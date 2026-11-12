@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-12T17:33:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T17:35:45Z",
+ "event_id": "FTR-20261112-20953205-73",
+ "evidence_basis": [
+  "verbatim_locator | proposition: genotypes confirmed by PCR; SFN in +/+ and -/- under TBI | Methods | \"Genotypes of Nrf2\u2212/\u2212 and Nrf2+/+ mice were confirmed by polymerase chain reaction (PCR) amplification of genomic DNA isolated from the blood.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/verify/verdicts.tsv"
+ ],
+ "prior_receipt": "FTR-20261112-20953205-74",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page (plain curl, default user agent, one request, HTTP 200, 2026-11-12T17:29Z); PMC4003325; figure legends read, images not opened.",
+ "study_id": {
+  "doi": "10.1038/aps.2010.101",
+  "pmid": "20953205"
+ },
+ "workflow": "SCI48 blind verifier V10 (claim actor nr-y), ORCH-SCI48-20261112. Staged for the integrator; the ledger was not appended at preparation time. Targeted reading of the animal/KO/SFN sections and the KO results; introduction and discussion not read in full; not a complete read."
+}

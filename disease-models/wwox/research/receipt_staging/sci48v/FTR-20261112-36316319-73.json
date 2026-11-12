@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-12T17:33:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T17:35:45Z",
+ "event_id": "FTR-20261112-36316319-73",
+ "evidence_basis": [
+  "verbatim_locator | proposition: KO versus WT only; no SFN-in-KO arm | Results, Knockout of Nrf2 | \"We employed Nrf2 KO mice and wild-type (WT) mice.\"",
+  "verbatim_locator | proposition: siRNA-Nrf2 is named only in a figure legend | Fig. 1 legend | \"BV2 cells treated with SFN or overexpressing Nrf2 and/or siRNA-Nrf2\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/verify/verdicts.tsv"
+ ],
+ "prior_receipt": "FTR-20261112-36316319-74",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for PMC9622811 (one request, HTTP 200, 2026-11-12T17:24Z); figure legends read, images not opened; supplementary figures not read.",
+ "study_id": {
+  "doi": "10.1038/s41398-022-02227-y",
+  "pmid": "36316319"
+ },
+ "workflow": "SCI48 blind verifier V10 (claim actor nr-y), ORCH-SCI48-20261112. Staged for the integrator; the ledger was not appended at preparation time."
+}
