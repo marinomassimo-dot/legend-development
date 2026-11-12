@@ -52,7 +52,7 @@ PANEL = re.compile(r"selectivity (interaction|assay)|\bpanel\b|\bPDSP\b|\bscreen
 def assay_descriptions():
     """(relation, parent chembl id) -> assay descriptions of the activity rows kept in a case folder (the IT44 activity tables are not committed: only the cases with a committed row file can be checked)"""
     out = {}
-    files = [(DR / "generation_it45_20261111/s10_dose/activity_rows.tsv", None), (DR / "generation_it45_20261111/s2_dose/activity_rows.tsv", None), (HERE / "s7_case/s7_activity_rows.tsv", "S7")]
+    files = [(DR / "generation_it45_20261111/s10_dose/activity_rows.tsv", None), (DR / "generation_it45_20261111/s2_dose/activity_rows.tsv", None), (HERE / "s7_case/s7_activity_rows.tsv", "S7"), (HERE / "s5_case/s5_pointer_rows.tsv", None)]
     for f, fixed in files:
         if not f.exists():
             continue
@@ -104,7 +104,7 @@ def build():
     # activity-only pointers have no row in the role table: give them one, with the same six fields (situation B)
     have = {(r["relation_id"], r["molecule"].replace("CAT:", "")) for r in R(DR / "generation_it44_20261110/entity_roles_it44.tsv")}
     seen = set(have)
-    srcs = [DR / "generation_it44_20261110/pointers_it44.tsv"] + [DR / d / "activity_molecules.tsv" for d in ("generation_it45_20261111/s10_dose", "generation_it45_20261111/s2_dose", "generation_it45_20261111/s12_reopen")]
+    srcs = [DR / "generation_it44_20261110/pointers_it44.tsv"] + [DR / d / "activity_molecules.tsv" for d in ("generation_it45_20261111/s10_dose", "generation_it45_20261111/s2_dose", "generation_it45_20261111/s12_reopen")] + [HERE / "s5_case/activity/activity_molecules_pointers.tsv"]
     for f in srcs:
         if not f.exists():
             continue
