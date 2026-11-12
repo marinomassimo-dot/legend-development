@@ -15,7 +15,7 @@
  "event_at": "2026-11-11T22:23:00Z",
  "event_id": "FTR-20261111-27552339-78",
  "evidence_basis": [
-  "verbatim_locator | proposition: kinase panel size and concentration | Results | \"ML385 (5 μM) did not exhibit significant inhibition of any of the ~170 kinases that were evaluated\"",
+  "verbatim_locator | proposition: kinase panel size and concentration | Results | \"ML385 (5 \u03bcM) did not exhibit significant inhibition of any of the ~170 kinases that were evaluated\"",
   "verbatim_locator | proposition: authors name an unstudied selectivity limit | Discussion | \"we did not evaluate the effects of ML385 on the activity of other transcription factors\""
  ],
  "evidence_depth": "partial_fulltext_read",

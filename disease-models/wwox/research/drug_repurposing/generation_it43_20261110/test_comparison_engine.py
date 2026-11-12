@@ -114,4 +114,16 @@ class CardRoles(unittest.TestCase):
         self.assertEqual(roles["dichloroacetate"], "control"); self.assertEqual(roles["AZD7545"], "known_requalified")
         self.assertTrue({x["role"] for x in cv["V16"]["roles"]} >= {"known_requalified", "unresolved"} or len({x["role"] for x in cv["V16"]["roles"]}) >= 2)
 
+    def test_a_statement_about_an_independent_route_does_not_raise_the_tier(self):
+        """IT46 P5 (SCI46 delta row 3): monomethyl fumarate was derived PRIMARY probe from a statement about a route independent of NRF2"""
+        import comparison_engine as ce
+        self.assertTrue(ce.INDEPENDENT_ROUTE.search("An NRF2-independent route exists for monomethyl fumarate in a microglial line"))
+        self.assertFalse(ce.INDEPENDENT_ROUTE.search("The binder raised NQO1 in a line with intact NRF2"))
+        import csv
+        rows = {(r["item_id"], r["name"]): r for r in csv.DictReader(open(ce.HERE / "compound_decisions_inv08_it44.tsv", encoding="utf-8"), delimiter="\t")}
+        self.assertEqual(("PRIMARY", "probe"), (rows[("V19", "KI-696")]["evidence_tier"], rows[("V19", "KI-696")]["role_derived"]))
+        self.assertEqual("unresolved", rows[("V19", "monomethyl fumarate")]["role_derived"])
+        self.assertEqual("unresolved", rows[("V19", "dimethyl fumarate")]["role_derived"])
+
+
 if __name__ == "__main__": unittest.main(verbosity=2)

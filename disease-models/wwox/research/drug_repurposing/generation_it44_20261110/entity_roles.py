@@ -23,12 +23,12 @@ def load():
     cat = {}
     with gzip.open(DR / "catalog/catalog.jsonl.gz", "rt") as f:
         for line in f:
-            e = json.loads(line); cat[e["id"]] = (e.get("status_class") or "", e.get("origin") or "")
+            e = json.loads(line); cat[e["id"]] = (e.get("status_class") or "", e.get("origin") or "", e.get("modality") or "")
     return lig, cat
 
-def role_of(gtype, status, rules):
+def role_of(gtype, status, rules, modality=""):
     for r in rules:
-        if (r["field"] == "gtopdb_type" and gtype == r["value"]) or (r["field"] == "catalogue_status" and status == r["value"]): return r["role"], r["rule_id"]
+        if (r["field"] == "gtopdb_type" and gtype == r["value"]) or (r["field"] == "catalogue_status" and status == r["value"]) or (r["field"] == "catalogue_modality" and modality == r["value"]): return r["role"], r["rule_id"]
     return "unqualified_entity", "default"   # HE45: no rule classified it. Not a candidate by omission: the engine verdict still lists it, the role only says that nothing qualified it
 
 def main():
@@ -40,8 +40,8 @@ def main():
     out = []
     for (rid, mol, name), rows in sorted(by.items()):
         gid = mol.split(":", 1)[1] if mol.startswith("GTOPDB:") else ""; gtype = lig.get(gid, "")
-        cid = rows[0].get("catalogue_id", ""); status, origin = cat.get(cid, ("", ""))
-        role, rule = role_of(gtype, status or ("tool_probe" if origin == "tool_probe" else ""), rules)
+        cid = rows[0].get("catalogue_id", ""); status, origin, modality = cat.get(cid, ("", "", ""))
+        role, rule = role_of(gtype, status or ("tool_probe" if origin == "tool_probe" else ""), rules, modality)
         verd = ";".join(sorted({r["qualification"] for r in rows})); o = over.get(name.lower()); final, basis = (role, rule)
         if o: final, basis = o["role"], "override: " + o["reason"][:120]
         out.append(dict(relation_id=rid, molecule=mol, name=name, gtopdb_type=gtype, catalogue_status=status, engine_verdicts=verd, rule_role=role, role=final, role_basis=basis if o else f"rule {rule}"))

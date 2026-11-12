@@ -4,6 +4,9 @@ R2	gtopdb_type	Metabolite	physiological_intervention	GtoPdb ligand type Metaboli
 R3	gtopdb_type	Antibody	unqualified_entity	modality outside small-molecule repurposing
 R4	gtopdb_type	Nucleic acid	unqualified_entity	modality outside small-molecule repurposing
 R5	gtopdb_type	Peptide	probe	peptide tool: a probe unless approved
+R9	catalogue_modality	protein_or_peptide	probe	IT46: catalogue modality protein_or_peptide with no GtoPdb row: a peptide or protein tool is a probe, as R5 does for GtoPdb peptides (a catalogue field no earlier rule read; found by the HE46 role reference check)
+R10	catalogue_modality	antibody	unqualified_entity	IT46: catalogue modality antibody: modality outside small-molecule repurposing (as R3)
+R11	catalogue_modality	oligonucleotide	unqualified_entity	IT46: catalogue modality oligonucleotide: modality outside small-molecule repurposing (as R4)
 R6	catalogue_status	tool_probe	probe	catalogue origin tool_probe
 R7	catalogue_status	approved_any_source	candidate	approved in any source and not another rule
 R8	catalogue_status	clinical_candidate	candidate	clinical stage and not another rule

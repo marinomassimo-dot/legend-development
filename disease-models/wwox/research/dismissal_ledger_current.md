@@ -334,6 +334,7 @@ the moment a fifth non-existent rule is cited from a live surface.
 - **PREMISE: DATO:** la fonte riporta un programma di espressione, senza misura di corrente inibitoria, cloruro o `E_GABA` in quell'analisi (manifest entry 12, audit B7).
 - **Confine:** un cambiamento funzionale resta possibile, non dimostrato da questo endpoint.
 - **`REVIVAL_TRIGGER`:** elettrofisiologia o misura di cloruro/`E_GABA` nello stesso modello e stadio.
+- **Check 2026-11-11 (IT46):** trigger **not fired**. No electrophysiology or `E_GABA` measurement exists in this model and stage; the closest primary values (other mouse models, pooled regions) are not the same model. The measurement is now a named question (IT46-Q01, `generation_it46_20261111/s7_case/result_it46.md`).
 
 ### DIS-018 — «L'eterozigote P47T è un comparatore fenotipicamente neutro» → ❌ **GENERALIZZAZIONE RESPINTA**
 - **PREMISE: DATO:** Fig. 2d di PMID 36828035 mostra un confronto significativo eterozigote–WT per sociabilità; il testo confronta i due genotipi anche su JSET. I numeri d'organo della tabella supplementare sono descrittivi e non bastano a stabilire differenze statistiche.

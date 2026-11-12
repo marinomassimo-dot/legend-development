@@ -1,0 +1,2 @@
+relation_id	case	action_label	target_symbols	wanted_actions	context	hypothesised_benefit	status	wanted_direction	site_policy	subunit_in	subunit_out
+S5	P11-family	GABA-A receptor positive modulation (restoring inhibition without changing glutamate receptor currents)	GABRA1;GABRA2;GABRA3;GABRA5;GABRB2;GABRB3;GABRG2	Positive;Agonist;Activator;Potentiat	burst slice, same preparation (alternative AB06, reduced inhibition)	bursts stop without any glutamate-receptor current change (IPOTESI, second biological family)	searched in P11 to test reuse	up	any		
