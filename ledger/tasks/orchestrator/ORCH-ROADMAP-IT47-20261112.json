@@ -15,7 +15,7 @@
      "step": "Close the previous cycle and fix the baseline: remote, checkout, record, deliveries, workflows (IT46 CI #660 and view publication #35 on cff57777, site check, IT46 record steps P7 and P10); distinguish battery candidate, integrated commit and published SHA",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "IT46 on main cff57777 (battery SHA 5a775909 PASS WITH SKIPS 244/11; integrated cfac505c refused by the publication gate for a markdown link, republished as cff57777). View publication #35 success; the five language editions checked on the public site (first-screen table and the GABA-A item present in EN, IT, FR, ES, DE). OPEN: Public release gate #660 on cff57777 in progress at the last check; phone readability not tested in a browser."
+     "evidence": "IT46 on main cff57777 (battery 5a775909 PASS WITH SKIPS 244/11; integrated cfac505c refused by the publication gate, republished cff57777). IT46 CI #660 success, view publication #35 success, five language editions checked. IT47 first increment: battery candidate 6991d539 = PASS WITH SKIPS (245 targets/11 skipped, verify_run 20261112-105142-1e955bfd); the landed commit is a later merge (HE47, SCI47 A and B, views, receipts) NOT covered by a battery: covered by targeted suites, view suite, lint, growth anchors, shareable audit and the push gate. OPEN: CI and site check on the IT47 landing SHA."
     }
    ]
   },
@@ -48,7 +48,7 @@
      "step": "Correct two possible jumps: the S5 amplitude/frequency wording (about a fifth read as to a fifth) and the inferences in p9_two_levers_it46.md (additivity, saturation, equal cellular variables vs equal network manipulations, E_GABA with conductance, threshold, time); coordinate with SCI47; propagate to live consumers with dated updates",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "disease-models/wwox/research/drug_repurposing/generation_it47_20261112/p3_corrections_it47.md: S5 wording fixed (explicit numbers, weaker inference) and the two-lever inferences corrected with dated updates in V21, IT46 README, s5 result, p9_two_levers, IT46-Q04. OPEN: SCI47 package A scientific verification (not delivered at the last check)."
+     "evidence": "Two jumps corrected (p3_corrections_it47.md). SCI47 A consumed (apply_it47_sci47.py; receipts -76/-77 recorded). SCI47 B consumed in part: KCNQ2 species-difference withdrawal as a dated update in the IT46 README, question IT47-Q04 (OPC specificity control for both bath levers), tail receipts -75 for 38116420 and 21964340 recorded (ledger 1,818). NOT applied here (conflict with branch task/it47b): the cell_context_it46.tsv note and V10 translation. B's inferences were not independently verified by SCI47; no pharmacological-prediction claim."
     }
    ]
   },
@@ -123,7 +123,7 @@
   "1_mandate_association": "marker emitted as a message of its own; mandate_watch check --json: state RUNNING, session 4325d70d (verified 2026-11-12).",
   "2_record": "statuses and evidence updated from the actual results; open items kept (CI #660, phone check, SCI47 A/B).",
   "3_cell_meaning": "IN_PROGRESS: separate observation, recorded support and falsifiable prediction in the NRF2 mapping; rows of a package are not all rivals.",
-  "4_sci47": "WAITING: consume A/B when delivered; corrections already applied vs new deltas will be listed; no pharmacological-prediction claim from new rows.",
+  "4_sci47": "A and B consumed; tail receipts recorded. Corrections already applied by A (S5 wording, two-lever inferences) listed apart from B's new deltas (KCNQ2 low human value not a species difference; OPC plausible alternative; four NRF2 wording corrections already as dated updates by SCI47). No prediction claim.",
   "5_cost": "DONE: GSK3 reader cost replaced by the transcript census (output 44,189; cache written 206,000; cache read 5,261,125; peak context 214,695; 47 turns); other readers corrected by dated notes."
  },
  "VERIFICATION_EVIDENCE": [
