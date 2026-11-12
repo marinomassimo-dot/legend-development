@@ -1,0 +1,106 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-SCI47-20261112",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Operator mandate SCI47 2026-11-12 (about ten hours): firmer physiological premises and more discriminating pharmacological hypotheses. Package A: which inhibitory defect is truly supported (primary source PMID 34634460, IT46 s5_case/s7_case, p9_two_levers, INV-10/INV-18), reconstruct from the original data, matrix observation -> compatible explanations -> weakened -> discriminating measure -> decision it would change, conditional lever comparison, review of the two-lever design. Package B: cellular context and development, one narrow case chosen before searching, corrected wording of nrf2_expression_sci46. Then a selective tail. Deliver A as soon as verified.",
+ "START_UTC": "2026-11-12T03:00:00Z",
+ "BASELINE": "main 940182af (SCI46 landed and verified). Worktree .claude/worktrees/sci47, branch task/sci47. IT46 package not yet on main: read read-only from worktree it46 (task/it46 cfac505c). Coordinates with IT47 (integrator of shared consumers). The pasted HE47 mandate was for the plan actor, not this session; ignored by the operator's statement.",
+ "CURRENT_PACKAGE": {
+  "id": "A",
+  "state": "start",
+  "delegate_active": "none",
+  "updated": "2026-11-12"
+ },
+ "RESUME": "Start: bind marker, check existing reads and receipts for PMID 34634460, read IT46 s5_case/s7_case/p9_two_levers, then brief the producer for package A.",
+ "DECISIONS_TAKEN": [],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "AUTHORISED_QUEUE_20261112A": {
+  "MANDATE_STATE": "CONTINUE",
+  "OBJ_A": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Bind marker; check prior readings and receipts of 34634460; read IT46 s5/s7/p9 and INV-10/INV-18",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "Frame and priors for package A written before reading the source",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "Producer for package A (original data reconstruction, inversion check, matrix, lever comparison)",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "Blind verifier on decisive premises and numbers, recheck of substantive corrections",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "Review of p9 two-lever design, minimal design, consumer_delta, deliver A (gate, LINT, receipts, growth, verify_run on frozen SHA, task_close, safe_push)",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_B": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Choose the single highest-value case and fix question, panel, comparison and contrary result before any search",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "Public processed resource analysis or stated perimeter; correct nrf2_expression_sci46 wording",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "Verification and delivery of B",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_C": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Selective tail: one or two items that change a consumer (text/supplements of an open NRF2 question; IT45 debts 38116420 and 21964340 as effective-coverage receipts; adequacy criterion; compensatory lever)",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_D": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Self-evaluation, DREAM, capability scout, takeaways, cleanup of own rebuildable temporaries, final short report",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ },
+ "VERIFICATION_EVIDENCE": []
+}
