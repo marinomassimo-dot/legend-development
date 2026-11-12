@@ -46,9 +46,9 @@
    "steps": [
     {
      "step": "Make the remaining hypotheses act: recompute the unmapped KH/HY state from the manifest and readers; smallest coherent set; cells kept per hypothesis (observation and source, relation, cell context/development/preparation, pharmacological action, unresolved premise, declared rivals, discriminating measure, reopening/abandonment condition); KH1 carries the IT48 SCI43 corrections; show consumption by running the path",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Recomputed from the manifest: unmapped set = KH1-KH5 and HY1-HY3. PKG_MAP entries for both packages (per-row context join, reopen_or_abandon cell), generator rows 16 -> 24, unmapped {} ; reader rows KH1-K and HY1-HCN in five languages (twelve passages translated by a sonnet delegate, 41,781 subagent tokens, checker: identifiers and numbers); KH1 premise carries the IT48 and IT49 limits; test_stage_it49.py (6 tests), test_stage_it47 updated to the new state (a 16-row and an unmapped-8 assertion became 24 and {}); generation_it49_20261112/README.md. No direction invented; favourable/opposite cells are measure and reopen, not expected result."
     }
    ]
   },
@@ -57,9 +57,9 @@
    "steps": [
     {
      "step": "One bounded generalisation case chosen before looking, not used to build the mapping: simple target search vs previous path vs path with hypotheses, context and premises; independent reference only if adequate; retrospective case claims no predictive superiority",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Case INV-02 fixed by a rule before any row was read (prereg 9cba43c8); arms run; result_it49.md: hypothesis layouts generalise by manifest row + mapping entry, design-only packages do not (IT49-Q03 to Harness); arm 1: 0 rows for eIF2B activation, 6 of 12 not primary-target; cell join unknown for 11 ISR genes; first experiment unchanged, plate content changed; no predictive claim; one retrospective case scored by its builder."
     }
    ]
   },
@@ -68,9 +68,9 @@
    "steps": [
     {
      "step": "Return results to the research loop: SCI49 when available (no duplication); open questions with decision, result, residual uncertainty, next step, reason; readable-now vs reanalysis vs measurement; dashboard shows the filone, the comparison made more interpretable, the premise blocking a proposal, the result that would change the decision; no parallel register",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "SCI49 not delivered at the time (no commit on development/main). Questions: IT49-Q01 (wet), IT49-Q02 (reanalysis possible), IT49-Q03 (engine), IT48-Q01..Q04; dashboard: two reader rows; first-screen table unchanged (no new kind of next step). No parallel register."
     }
    ]
   },
@@ -79,7 +79,7 @@
    "steps": [
     {
      "step": "Closure: derivatives regenerated after the last receipts/data, browser verified in the real runtime, batteries attributed by SHA, landing, CI, cleanup of own temporaries; final report in Italian",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "evidence": ""
     }
