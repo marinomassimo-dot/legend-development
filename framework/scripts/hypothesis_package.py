@@ -38,7 +38,7 @@ that calls `record_for` / `comparison_for` shows it is consumed.
 A decisive proposition answers several questions that must not be read from one another: the depth of the reading
 (`depth`), what it measures (`class` and the readout in the conditions cell), how that measure relates to the mechanism the
 comparison tests (`relation`: mechanism / other_route / context), the direction of the evidence (`direction`: supports / opposes /
-null / mixed), the role of the reagent (derived by the comparison engine, never written here) and any support for a proposal
+null / mixed / not_applicable), the role of the reagent (derived by the comparison engine, never written here) and any support for a proposal
 (the hypotheses layer). `relation` and `direction` are optional columns of decisive.tsv, written by the package's author; a blank or a
 missing column reads as `unclassified`, a value outside the vocabulary as `unrecognised:<value>` and is a validation defect. No
 facet is inferred from the statement text. Direction never changes a reading depth or a tier: a probe that gives a negative result is
@@ -68,7 +68,7 @@ MANIFEST_FIELDS = ("package", "dir", "role", "inv_id", "why")
 LINK_FIELDS = ("hyp_id", "kind", "need_id", "inv_id", "card_ids", "link_state", "carried_check", "source")
 LINK_STATES = ("PROPOSED_NOT_APPLIED", "CARRIED_IN_TEXT")
 PROP_RELATIONS = ("mechanism", "other_route", "context")   # relation of what a proposition measures to the mechanism the comparison tests
-PROP_DIRECTIONS = ("supports", "opposes", "null", "mixed")  # direction of the measured result for the proposal the row serves
+PROP_DIRECTIONS = ("supports", "opposes", "null", "mixed", "not_applicable")  # direction of the measured result for the proposal the row serves; null is a measured null result, not_applicable says the question does not arise
 UNCLASSIFIED = "unclassified"
 INV_TABLES = ("investigations_it20.tsv", "investigations.tsv")
 INV_DIR = DR / "ranking_it8_p9_20261029"

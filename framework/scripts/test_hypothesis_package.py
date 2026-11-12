@@ -388,6 +388,10 @@ class PropositionFacets(unittest.TestCase):
     def test_cells_are_read_as_written(self):
         self.assertEqual(hp.prop_facets({"relation": "other_route", "direction": "null"}), {"relation": "other_route", "direction": "null"})
 
+    def test_not_applicable_is_stated_and_differs_from_nothing_said_and_from_a_measured_null(self):
+        f = [hp.prop_facets({"direction": v})["direction"] for v in ("not_applicable", "", "null")]
+        self.assertEqual(f, ["not_applicable", "unclassified", "null"])
+
     def test_blank_or_absent_is_unclassified_and_not_an_error(self):
         self.assertEqual(hp.prop_facets({"relation": " ", "direction": ""}), {"relation": "unclassified", "direction": "unclassified"})
         self.assertEqual(hp.prop_facets({"prop_id": "D01"}), {"relation": "unclassified", "direction": "unclassified"})

@@ -15,7 +15,7 @@ import tarfile
 import tempfile
 import time
 import unittest
-from contextlib import redirect_stdout
+from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -255,6 +255,36 @@ class WhatIsKept(Base):
             vr.main(["reap"])
         self.assertIn("0 run(s) examined", out.getvalue())
         self.assertEqual(self.manifest()[1]["cleanup"]["state"], "KEPT")
+
+    def test_a_shared_actor_id_does_not_authorise_reaping_another_sessions_run(self):
+        """HE47 H6: two sessions may both be `plan`; the actor names a role, not an owner."""
+        self.run_cmd("import subprocess; subprocess.Popen(['sleep', '60'], start_new_session=True)", "--actor", "plan")
+        run_dir, m = self.manifest()
+        for pid in vr.processes_using(Path(m["box"])):
+            os.kill(int(pid.split()[0]), signal.SIGKILL)               # the run is now finished and its clone removable
+        os.environ["CLAUDE_CODE_SESSION_ID"] = "session-B"
+        out = io.StringIO()
+        with redirect_stdout(out), redirect_stderr(io.StringIO()):
+            vr.main(["reap", "--actor", "plan"])
+        self.assertTrue(Path(m["box"]).is_dir(), "the other session's clone was removed on the strength of the actor alone")
+        self.assertIn("session-A", out.getvalue())                       # named, so its owner (or the operator, by exact session id) can reap it
+        os.environ["CLAUDE_CODE_SESSION_ID"] = "session-A"
+        with redirect_stdout(io.StringIO()):
+            vr.main(["reap"])
+        self.assertFalse(Path(m["box"]).exists())
+
+    def test_reaping_a_named_session_is_exact(self):
+        self.run_cmd("import subprocess; subprocess.Popen(['sleep', '60'], start_new_session=True)")
+        run_dir, m = self.manifest()
+        for pid in vr.processes_using(Path(m["box"])):
+            os.kill(int(pid.split()[0]), signal.SIGKILL)
+        os.environ["CLAUDE_CODE_SESSION_ID"] = "session-B"
+        with redirect_stdout(io.StringIO()):
+            vr.main(["reap", "--session", "session-C"])
+        self.assertTrue(Path(m["box"]).is_dir())
+        with redirect_stdout(io.StringIO()):
+            vr.main(["reap", "--session", "session-A"])
+        self.assertFalse(Path(m["box"]).exists())
 
 
 class Interruption(Base):
