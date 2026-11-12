@@ -17,7 +17,7 @@
  "evidence_basis": [
   "verbatim_locator | proposition: authors state independence could not be excluded because of apparent insufficient knockdown | Discussion | \"Due to an apparent insufficient Nrf2-knockdown, we were not capable to definitely exclude the existence of an alternative protection mechanism independent of Nrf2 activation.\"",
   "verbatim_locator | proposition: the Results call the same knockdown successful | Results last paragraph | \"Treatment with Nrf2 siRNA successfully downregulated the transcriptional levels of\"",
-  "verbatim_locator | proposition: enantiomers from Orion Pharma, no structure given | Methods Pharmacological treatments | \"The enantiomers Ki 696–1 and Ki 696–2, and the compound HPP-D were kindly provided by Orion Pharma\"",
+  "verbatim_locator | proposition: enantiomers from Orion Pharma, no structure given | Methods Pharmacological treatments | \"The enantiomers Ki 696\u20131 and Ki 696\u20132, and the compound HPP-D were kindly provided by Orion Pharma\"",
   "verbatim_locator | proposition: Costa links the name Ki 696 to Davies by citation only | Introduction | \"non-electrophilic Nrf2-activators (e.g. Ki 696), which weaken KEAP1-Nrf2 binding\""
  ],
  "evidence_depth": "partial_fulltext_read",

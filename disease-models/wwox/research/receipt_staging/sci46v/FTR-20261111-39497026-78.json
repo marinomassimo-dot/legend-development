@@ -18,7 +18,7 @@
   "verbatim_locator | proposition: C7 equals KI-696 per the document, citing Davies | Introduction | \"Compound 7 (C7), also known as KI-696, a highly potent and selective inhibitor of the Keap1-Nrf2 interaction\"",
   "verbatim_locator | proposition: knockdown efficiency is declared, not shown as a number | Methods shRNA | \"Over 95% Nrf2/Keap1 knockdown in the stable cells was confirmed by western blotting and qPCR analyses.\"",
   "verbatim_locator | proposition: 10 Gy in Methods versus 5 Gy in Results; 50 Gy in vivo | Methods Irradiation | \"cells in this research were irradiated with a single dose of 10 Gy\"",
-  "verbatim_locator | proposition: occlusion arm | Results 5 | \"C7 (1 μM) failed to further increase Nrf2 activation\""
+  "verbatim_locator | proposition: occlusion arm | Results 5 | \"C7 (1 \u03bcM) failed to further increase Nrf2 activation\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [
