@@ -1,0 +1,35 @@
+{
+ "analysis_time_precision": "minute",
+ "record_kind": "contemporaneous_receipt",
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "source_kind": "fulltext_local",
+ "workflow": "SCI47 tail (ORCH-SCI47-20261112), Orchestrator targeted read of preserved bytes for the IT45 reading debt (HE46 H5, IT46 P6); prepared as a JSON file for the integrator; the ledger was not written by the preparing actor.",
+ "analysis_at": "2026-11-12T09:30:00Z",
+ "event_at": "2026-11-12T09:45:00Z",
+ "event_id": "FTR-20261112-21964340-75",
+ "study_id": {
+  "pmid": "21964340"
+ },
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/rescued_from_scratch_he46/08a575e0c750__PMID21964340_nat.xml (PMC author-manuscript XML, main text; bytes preserved by HE46; SHA-256 in source_fingerprint)",
+ "source_fingerprint": "08a575e0c7507fd03598c403bd118403b011651b07088ce04c1a2e9a59b689f3",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "results": "read",
+  "discussion": "read",
+  "methods": "read",
+  "limitations": "not_present",
+  "tables": "not_present",
+  "figures": "captions_only",
+  "supplementary": "unavailable",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/tail_sci47_20261112/README.md"
+ ],
+ "evidence_basis": [
+  "Main text of the preserved author-manuscript XML (29,630 characters after tag stripping) read through the passages on BET complexes, I-BET762 bead pull-down, the I-BET151 selectivity profile and the Methods Summary. No figure image was opened (figure legends only); the Supplementary tables and figures named in the text were not available (listed in the supplementary material section, not downloaded). The targeted passage: bead-immobilised acetylated histone peptides captured 27 bromodomain proteins from HL60 nuclear extracts, and excess I-BET151 or I-BET762 blocked capture of Brd2, Brd3, Brd4 and Brd9 and none of 23 others including MLL; this is a read of the main text only."
+ ]
+}
