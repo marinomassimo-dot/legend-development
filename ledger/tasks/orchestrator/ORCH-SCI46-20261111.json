@@ -8,18 +8,19 @@
  "START_UTC": "2026-11-11T22:00:00Z",
  "BASELINE": "main 142f6c5f (IT45 COMPLETE; SCI45 P1/Q1/N1 consumed in IT45: 54 receipts recorded, ledger 1,787, IT45-Q05..Q08). Worktree .claude/worktrees/sci46, branch task/sci46. IT46 registered (legend-development-4e); asks for comparison rows in the engine shape plus consumer_delta and the landing SHA.",
  "CURRENT_PACKAGE": {
-  "id": "Q-nrf2-expression",
+  "id": "closed",
   "state": "landing",
   "delegate_active": "none",
   "updated": "2026-11-12"
  },
- "RESUME": "S0/S1 and briefs on task/sci46; producer P then blind verifier V8; corrections rechecked; engine-shape tables by script; consumer_delta; gate/LINT/receipts/growth, battery on a fresh clone, task_close, safe_push, message IT46. Then one queue item.",
+ "RESUME": "Both SCI46 packages landed (central e0317fec; queue below). Staged receipts for IT46: sci46 (12, -79), sci46v (15, -78). Clones /tmp/sci46_batt_* and /tmp/sci46q_batt_* remain; worktrees sci46, sci46q and sci45n remain pending operator authorisation.",
  "DECISIONS_TAKEN": [
   "2026-11-11 Winkel 2015 full text: Europe PMC HTTP 500 on two attempts, tool empty; not retried by another route; abstract-level row D20 only.",
   "2026-11-11 verifier's SMILES line removed from verify/audit.md (the release gate read its brackets as a link).",
   "2026-11-11 battery verdict PASS WITH SKIPS (239 targets) attributed to frozen SHA 5ee09044; this record update is closure-only.",
   "2026-11-12 queue item 3 dropped as a duplicate of IT46 P4 on the message of the IT46 Orchestrator (generation_it46_20261111/p4_audit_it46.md read-only: same R5 verdict, animal unit, matched resistance change); my draft was not landed.",
-  "2026-11-12 Hcar2 scored on the table symbol Niacr1 (UniProt: one mouse protein with Hcar2, Gpr109a, Niacr1): stated deviation from the preregistered symbol."
+  "2026-11-12 Hcar2 scored on the table symbol Niacr1 (UniProt: one mouse protein with Hcar2, Gpr109a, Niacr1): stated deviation from the preregistered symbol.",
+  "2026-11-12 battery on frozen SHA 48e4852a (fresh --no-hardlinks clone, files hard-linked): PASS WITH SKIPS, 239 targets, 11 skipped; gate PASS, LINT WARN no BLOCK, receipts OK (1787), growth PASS; this record update is closure-only."
  ],
  "DELEGATIONS": [
   "P producer og-y: asked sonnet/medium; read back medium x84; 84 turns; output 104,391; cache read 13,384,762; 13 sources; staged receipts -79 (12)",
@@ -29,7 +30,7 @@
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
  "AUTHORISED_QUEUE_20261111C": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_A1": {
    "order": 1,
    "steps": [
