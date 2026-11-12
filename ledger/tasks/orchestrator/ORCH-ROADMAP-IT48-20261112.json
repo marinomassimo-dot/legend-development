@@ -63,5 +63,19 @@
     }
    ]
   }
+ },
+ "PILOT_STAGE_A_1": {
+  "campaign_boundary": "first Stage A dispatch 2026-11-12T20:50Z (approx.; exact time in A1/meta.json) to at most +24h; earlier when two increments and the report are done; no renewal",
+  "owner_session": "4325d70d-8bea-4789-8046-d7a9ee74c97f (legend-development-4e, orchestrator)",
+  "repo_sha": "eb424cd06bc63439be5f26a8de6ccba171e3cbda (task/it48 on main b67d209a)",
+  "uncommitted_inputs": "none at snapshot; sealed folder not yet committed",
+  "dashboard_source_revision": "package commit 3870f5457705917940530f9fa896b4697af9793a; the live page has no build stamp; publication #38 and CI #672 for b67d209a pending at the last check",
+  "scientific_baseline": "IT47 delivered: generator reads three hypotheses_only packages (16 rows, 8 reachable rows unmapped and listed); GSK3/eIF2B case with blind reader (7/8 supported, 1 partly); SCI46/SCI47 consumed with corrections; B1 cell-class rows (12/17 predictions held); open questions IT47-Q01..Q04; no rank, sign or qualification changed",
+  "intended_action_sealed": {
+   "path": "disease-models/wwox/research/drug_repurposing/advisor_campaign_it48_20261112/advisor_sealed/INTENDED_ACTION_1.md",
+   "sha256": "cf739080b3d5d7d5aae06d9b5d1b470bc4f58b0097d90fa7bf3f31dd33c77973",
+   "note": "written and sealed before any assessment was read; kept out of the brief"
+  },
+  "constraints_and_dependencies": "see advisor_campaign_it48_20261112/inputs/constraints.md; SCI48 delivery optional; browser tests need CHROME_BIN=/snap/chromium/3583/...; mandate binding verified RUNNING"
  }
 }
