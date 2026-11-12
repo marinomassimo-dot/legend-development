@@ -9,18 +9,18 @@
  "BASELINE": "main 0bed3857 (SCI47 landed; IT47 d280c7c3 consumed SCI47 A, B and tail in part). Worktree .claude/worktrees/sci48, branch task/sci48. IT46-Q06 and IT46-Q09 still OPEN and unassigned on 2026-11-12. Folder disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/.",
  "MANDATE_STATE": "OPEN",
  "CURRENT_PACKAGE": {
-  "id": "P-corr",
-  "state": "producer correction round running",
-  "delegate_active": "nr-z (resumed)",
+  "id": "landing",
+  "state": "pre-freeze checks",
+  "delegate_active": "none",
   "updated": "2026-11-12"
  },
- "RESUME": "Producer correction round running (verifier corrections, 5 more openings, CORRECTIONS.tsv). On return: census, narrow verifier recheck of changed/new rows (resume ab28c0d5), then README/final matrix/consumer_delta.",
+ "RESUME": "Main package written and verified. Next: pre-freeze suites, gate, LINT, receipts verify, growth, freeze SHA, verify_run battery, task_close, safe_push; then message the integrator (delivery with SHA), then the optional tail IT46-Q02 only if cheap; then self-eval, DREAM, report.",
  "DECISIONS_TAKEN": [
   "2026-11-12 18:35 widening of the sulforaphane perimeter (S0 addendum 2): at most five further sources opened beyond abstract, chosen by PMC id, closeness to a WWOX-relevant preparation and SFN in both genotypes; reason: the verifier found the producer list incomplete (error class: candidate list), the cap of 8 assumed completeness; reversible: unopened candidates stay at the depth the verifier read. Narrow recheck of changed rows by the same verifier follows."
  ],
  "DELEGATIONS": [
-  "P producer nr-z (agent aa8b34b0): asked sonnet/medium; read back sonnet x-all, effort medium; three runs (first, two bounded extensions by SendMessage); see COST_NOTE for final census. Outputs: winkel_table, sfn_table, matrix 29 rows (probe 2, comparator 11, not interpretable 13, conditional 3), 10 staged receipts (-74) validated. Extension 1: four abstracts could not be opened (no PMC id); extension 2: Mao 2019 read from the PMC page fetched once by the Orchestrator (new mode, no block bypassed)",
-  "V verifier nr-y (agent ab28c0d5): asked sonnet/high; read back sonnet x58, effort high x58; 58 turns, output 108,884, cache read 11,462,530, birth context 18,604; verdicts 100 rows (Winkel 31/33 correct, 1 minor defect, 1 unverifiable; SFN rows 22/23; absence claims 1 of 3 correct; matrix 23/29), 25 staged receipts (-73) validated. Found 9+ neural SFN-in-null studies missing from the producer list"
+  "P producer nr-z (agent aa8b34b0, legend-delegate): asked sonnet/medium; read back sonnet x78, medium x78; 78 turns in 4 launches (dispatch + 3 resumes), output 138,695, cache read 15,327,360, birth context 18,572; files: winkel_table 33 rows, sfn_table 38 rows, matrix 44 rows, evidence, figures, queries, 12 staged receipts (-74)",
+  "V verifier nr-y (agent ab28c0d5, legend-delegate): asked sonnet/high; read back sonnet x73, high x73; 73 turns in 2 launches (dispatch + recheck), output 132,527, cache read 16,781,645, birth context 18,604; verdicts 137 rows, 25 staged receipts (-73)"
  ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
@@ -58,8 +58,9 @@
     },
     {
      "step": "One blind verifier (sonnet high) with full originals; corrections applied to the decisive propositions only",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "verifier nr-y: Winkel 31/33 correct (1 minor defect, 1 unverifiable), sfn rows 22/23, absence claims 1 of 3, matrix 23/29; corrections applied (apply_v10_corrections.py + CORRECTIONS.tsv) and rechecked narrowly (10/10 cells, 26 new rows 22 correct, defects in Zhao/TBI/answer clauses fixed)"
     }
    ]
   },
@@ -68,8 +69,9 @@
    "steps": [
     {
      "step": "Matrix, minimal comparison, hypotheses/limits, README answer first, consumer_delta",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "README answer-first, matrix_compact.tsv (12 rows), output/minimum_comparison.md, engine/ (decisive N01-N13 with relation/direction, comparison, new_measurements, id_map), consumer_delta.md (10 rows, state column), COST_NOTE.md; dated update to the SCI46 README"
     },
     {
      "step": "Message the integrator with the delivery and deltas (applied vs consumed kept apart)",
