@@ -1338,6 +1338,21 @@ class CdpStartup(unittest.TestCase):
             with patch.dict(os.environ, {"CHROME_BIN": configured}), patch.object(rv, "CHROMIUM_CANDIDATES", [sys.executable]):
                 self.assertEqual(rv.find_chromium(), configured)
 
+    def test_snap_internal_executable_is_the_last_default_candidate(self):
+        names = list(rv.CHROMIUM_CANDIDATES)
+        snap = [i for i, b in enumerate(names) if b.startswith("/snap/chromium/current/")]
+        self.assertEqual(snap, [len(names) - 1])
+        self.assertTrue(all(not b.startswith("/snap/") for b in names[:-1]))
+
+    def test_a_candidate_that_cannot_start_is_skipped(self):
+        import os
+        from unittest.mock import patch
+        with tempfile.TemporaryDirectory() as td:
+            broken = self.browser(td, "import sys\nsys.exit(1)\n")
+            with patch.dict(os.environ, {}, clear=False), patch.object(rv, "CHROMIUM_CANDIDATES", [broken, sys.executable]):
+                os.environ.pop("CHROME_BIN", None)
+                self.assertEqual(rv.find_chromium(), sys.executable)
+
     def test_unavailable_configured_browser_keeps_portable_fallback(self):
         import os
         from unittest.mock import patch
