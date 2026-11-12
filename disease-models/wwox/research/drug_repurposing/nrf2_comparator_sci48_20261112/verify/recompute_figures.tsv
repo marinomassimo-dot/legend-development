@@ -1,0 +1,21 @@
+calc_id	source	quantity	my_value	range_or_unit	method	producer_value	agreement
+R01	Winkel Fig. 6	siKeap1-1 total probe sets	322	121+133+59+9; exact (printed counts)	sum of Venn regions	322 (Venn); text says 292	agrees with figure; text order reversed (confirmed)
+R02	Winkel Fig. 6	siKeap1-2 total probe sets	292	97+133+59+3; exact	sum of Venn regions	292 (Venn); text says 322	agrees
+R03	Winkel Fig. 6	both siRNAs / RA839 total / RA839-only	192 / 105 / 34 (32.4% of 105)	exact	133+59; 34+9+59+3; 34/105	192 / 105 / 34	agrees
+R04	Winkel Fig. 6	RA839 probe sets shared with both / any siRNA	56.2% / 67.6%	59/105; 71/105	division	56% / 68%	agrees
+R05	Winkel Table 2	DeltaG from tabulated DeltaH and TDeltaS, RA839	-6 kcal/mol -> Kd about 40 uM at 298 K	propagated error of TDeltaS +/-5 kcal/mol makes this uninformative; printed 6 uM = DeltaG -7.1	DeltaH - TDeltaS; Kd=exp(DeltaG/RT), RT=0.5925	not computed	new observation (mine): internal tension inside the source, not a producer error
+R06	Winkel Table 2	same check, ETGE peptide	DeltaG -10 -> Kd about 46 nM (printed 38 nM)	consistent	same	not computed	consistent, so the RA839 row is the loose one
+R07	Winkel	array concentration over ITC Kd and over FP IC50	1.67 x and 71.4 x	10/6; 10/0.14	division of printed values	1.7 x and 71 x	agrees; would be lower with the DeltaG-implied Kd (R05)
+R08	Winkel	NO/Nos2 concentration 20 uM over Kd and over FP IC50	3.3 x and 143 x	20/6; 20/0.14	division	3.3 x (FP multiple not given)	agrees
+R09	Winkel	reporter EC500 49 uM; translocation EC50 1.2 uM over Kd	8.2 x ; 0.2 x	49/6; 1.2/6	division	8 x	agrees; translocation EC50 is below the ITC Kd and about 9 x the FP IC50
+R10	Winkel Fig. 7A	NO reduction of the LPS-induced increment by RA839 at 5, 10, 20 uM (2.5 uM point also present)	about 20%, 57%, 88% (2.5 uM about 8%)	+/-5 percentage points (A540 read +/-0.03)	(LPS-vehicle 0.57 - value)/(0.57 - 0.06 no-LPS)	values 0.47/0.28/0.12 only; note says 2.5 uM absent	values agree; 2.5 uM point exists (W22 defect)
+R11	Winkel Fig. 7C,D	Nos2 fall and Nqo1 rise	Nos2 -93% (23 to 1.5); Nqo1 x3.7 (RA839) and x4.6 (CDDO-Me) over LPS-vehicle 12	+/-15% of the bar	ratios of read bars	values agree	agrees; Nqo1 on-target match exists in WT for both reagents
+R12	Winkel Fig. 8	NO and NOS2 fall under siKeap1	NO -84% and -76%; NOS2 -84% and -78%; Nqo1 x31 and x17 (no LPS), x7 (LPS, siKeap1-1)	+/-5 points	ratios of read bars	values agree	agrees
+R13	Winkel Fig. 8B	Keap1 mRNA after siKeap1-1/-2	no LPS 80% and 90%; LPS bars 83% and 86% versus LPS control, 73% and 78% versus no-LPS control	+/-5 points	1 - bar	printed 75 and 80%	printed text fits the LPS bars versus the no-LPS control; protein never measured
+R14	Winkel Fig. 9	liver mRNA, RA839+ABT versus control	GCLC 2.0, NQO1 3.3, NRF2 1.15, KEAP1 1.0; ABT alone 0.96/0.95/1.27/0.76	+/-0.15	bar read	same	agrees
+R15	Mao Fig. 2d,e	SFN protection of neurons under OGD, and what remains with sh-Nrf2	dead cells: 69 -> 41 (28 points); with sh-Nrf2 62 (7 points left = 25%); LDH: 86 -> 47 (39 points); with sh-Nrf2 70 (16 points left = 41%)	+/-3 points	differences of read bars; no OGD+sh-Nrf2 arm exists, so the baseline under loss is unknown	41 vs 69 and 62; 'largely abolished but not to the OGD level'	agrees; fraction retained is mine
+R16	Mao Fig. 6d,e	SFN gain in sh-Sc versus sh-Nrf2 endothelial cells under OGD	live cells 26 vs 19 points (73% retained); LDH 15 vs 11 points (73% retained)	+/-3 points	differences of read bars	about 19 vs about 26 points	agrees; the LDH 73% is mine
+R17	Mao Fig. 6f,g	leakage sh-Nrf2/sh-Sc at 2, 6, 24 h; CLD5 promoter ratio	x2.0, x1.7, x1.26; promoter 0.65 (0.55/0.84)	+/-0.2	ratios of read points	25/75/190 vs 50/125/240; 0.84 vs 0.55	agrees
+R18	Mao Fig. 5	nuclear Nrf2 and HO-1, 2VO+Sfn over 2VO	Nrf2 x1.8 (3 d), x2.1 (7 d); HO-1 x3.4 (3 d), x1.8 (7 d)	+/-0.3	ratios of read bars	9 vs 5; 11.5 vs 5.5; 13 vs 3.8; 12.5 vs 7	agrees
+R19	Mao Fig. 1b,d	rotarod 6 w; target quadrant	Sfn 195 s vs 2VO 108 s (+81%); quadrant 30.5 vs 21 %	+/-10 s; +/-2 points	read	195/108/290; 30/21/39	agrees
+R20	Li 2022 / Yao 2021 / He 2022	n and statistics	taken from legends only: Yao slices 10-11 neurons from 3 mice (DG), 9-10 (mPFC); KO behaviour n=8; N2a n=3; He BV2 n=4; Li female n=8	n/a	legend text	same	agrees; images not opened for these three
