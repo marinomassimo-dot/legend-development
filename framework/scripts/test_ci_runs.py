@@ -34,7 +34,15 @@ class Verdict(unittest.TestCase):
         self.assertEqual(ci_runs.main(["status", "not-a-sha"]), 2)
 
     def test_the_repository_is_read_from_the_remote(self):
-        self.assertRegex(ci_runs.slug(), r"^[\w.-]+/[\w.-]+$")
+        import subprocess
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            subprocess.run(["git", "init", "-q", d], check=True)
+            self.assertRaises(SystemExit, ci_runs.slug, "development", Path(d))                     # a repository with no GitHub remote is named as such
+            subprocess.run(["git", "-C", d, "remote", "add", "origin", "git@github.com:owner/some-repo.git"], check=True)
+            self.assertEqual(ci_runs.slug("development", Path(d)), "owner/some-repo")                # falls back to origin
+            subprocess.run(["git", "-C", d, "remote", "add", "development", "https://github.com/other/name.git"], check=True)
+            self.assertEqual(ci_runs.slug("development", Path(d)), "other/name")
 
 
 if __name__ == "__main__":

@@ -113,6 +113,16 @@ class Lifecycle(Base):
         self.assertEqual("2", (self.runs()[0] / "run.log").read_text().strip())     # the clone really shared the file
         self.assertEqual((original.read_bytes(), original.stat().st_nlink), (b"corpus" * 1000, 1))
 
+    def test_a_worktree_source_gets_the_corpus_of_its_main_checkout(self):
+        wt = self.t / "wt"
+        sh(self.src, "git", "worktree", "add", "-q", "-b", "side", str(wt), self.sha)
+        out = io.StringIO()
+        with redirect_stdout(out):
+            vr.main(["run", "--sha", self.sha, "--repo", str(wt), "--label", "t", "--", PY, "-c", "import os; print(os.path.exists('files/corpus.bin'))"])
+        run_dir, m = self.manifest()
+        self.assertEqual((run_dir / "run.log").read_text().strip(), "True")                 # without it a battery skips every corpus suite and says PASS
+        self.assertEqual(m["files_linked_from"], str(self.src / "files"))
+
     def test_a_second_call_changes_nothing(self):
         self.run_cmd("print('x')")
         run_dir, before = self.manifest()

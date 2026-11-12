@@ -244,6 +244,16 @@ def tree_size(clone: Path, paths: list[str]) -> int:
     return total
 
 
+def corpus_of(source: Path) -> Path | None:
+    """The untracked `files/` corpus the run needs: the source's own, else the one of the checkout the source is a worktree of (a worktree has none of its own; a run
+    without it silently skips every suite that reads the corpus, and its verdict would not mean what a full one means)."""
+    if (source / "files").is_dir():
+        return source / "files"
+    common = git(source, "rev-parse", "--path-format=absolute", "--git-common-dir").stdout.strip()
+    main = Path(common).parent if common else None
+    return main / "files" if main and (main / "files").is_dir() else None
+
+
 # ---------------------------------------------------------------------------------------------- conclusion
 def remove_box(box: Path) -> None:
     """rmtree that never follows a symlink and loosens permissions only on directories inside the box."""
@@ -383,8 +393,11 @@ def cmd_run(a) -> int:
     try:
         for step in (["git", "clone", "-q", "--no-hardlinks", str(source), str(clone)], ["git", "-C", str(clone), "checkout", "-q", sha]):
             subprocess.run(step, check=True, capture_output=True, timeout=1800)
-        if a.files == "link" and (source / "files").is_dir():
-            subprocess.run(["cp", "-al", str(source / "files"), str(clone / "files")], check=True, capture_output=True, timeout=1800)
+        corpus = corpus_of(source) if a.files == "link" else None
+        if corpus is not None:
+            subprocess.run(["cp", "-al", str(corpus), str(clone / "files")], check=True, capture_output=True, timeout=1800)
+        m["files_linked_from"] = str(corpus) if corpus else None
+        save(run_dir, m)
     except (subprocess.SubprocessError, OSError) as exc:
         m.update(state="CONCLUDED", exit_code=125, finished=now(), verdict_lines=[f"setup failed: {exc}"])
         save(run_dir, m)

@@ -12,11 +12,11 @@
  "branch": "task/he46",
  "CURRENT_STATE": "IN_PROGRESS",
  "CHECKPOINT": {
-  "last_verified_result": "targeted suites for H1-H8; battery on 33428d06 running (log /tmp/he46_bat2.log)",
-  "first_incomplete_work": "H7 cost, H9 DREAM, H10 battery/landing",
-  "active_processes": "battery clone /tmp/he46_batb_220916 pid 2926912; class timing /tmp/he46_classtime.log",
+  "last_verified_result": "targeted suites for H1-H12 pass; battery on 33428d06 stopped at 218 suites with no failure before it (verbosity failure of bd4befd1 fixed); final battery via verify_run on c0789939 running",
+  "first_incomplete_work": "H10/H11 battery verdict, landing, push, cleanup",
+  "active_processes": "verify_run supervisor pid in /tmp/he46_sup.pid, run 20261111-230442-37a1b947, evidence /tmp/legend-verify-keep/20261111-230442-37a1b947",
   "real_dependencies": "IT46 (ORCH-ROADMAP-IT46-20261111) consumes conditions and engine; SCI46 pharmacology",
-  "next_executable_step": "H7 measure test_repurposing_view per class; then H9; battery verdict; land"
+  "next_executable_step": "wait on the supervisor pid; on PASS land via task_close.py and safe_push.py; report"
  },
  "AUTHORISED_QUEUE_20261111": {
   "MANDATE_STATE": "OPEN",
@@ -110,9 +110,9 @@
    "steps": [
     {
      "step": "Cost: one real circumscribed activity, dominant factor measured, proportionate fix",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "README 8: dominant factor measured (view suite 38 percent; ShareableAudit 637 s of 1,689 s); memoised audit identical but ~6 percent CPU, reverted (CHANGE = NONE); failed-late battery avoided by pre-freeze checks"
     }
    ]
   },
@@ -134,9 +134,9 @@
    "steps": [
     {
      "step": "DREAM, simplification, retrieval on a new question; external scouting only for an uncovered need",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "README 7: DREAM run, two stale documents repaired, 19 hypotheses reachable, glun2b pH propositions unregistered (named), no revival trigger fired, retrieval test, no scouting"
     }
    ]
   },
@@ -146,11 +146,47 @@
    "steps": [
     {
      "step": "Queue order, delegation budget, batteries by SHA, landing, push, cleanup, final report",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
      "evidence": ""
     }
    ]
+  },
+  "OBJ_H11": {
+   "order": 12,
+   "title": "Operator addition: verification clones removed where created (verify_run.py), evidence kept, mandate record pointed at it",
+   "steps": [
+    {
+     "step": "Operator addition: verification clones removed where created (verify_run.py), evidence kept, mandate record pointed at it",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": "c0789939 verify_run.py + 17 fixture tests; the real proof is the final battery run through it (run 20261111-230442-37a1b947), pending"
+    }
+   ]
+  },
+  "OBJ_H12": {
+   "order": 13,
+   "title": "Operator addition (urgent): session-mandate association for IT46 and SCI46, monitor classification, general diagnosis",
+   "steps": [
+    {
+     "step": "Operator addition (urgent): session-mandate association for IT46 and SCI46, monitor classification, general diagnosis",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "owners emitted plain markers; mandate_watch check --root <worktree> --deliver none: IT46 session 4325d70d RUNNING/NONE, SCI46 session 9400b253 RUNNING/NONE; near-marker diagnosis + 2 tests (c0789939); cross_session_transport section 12; README 10"
+    }
+   ]
   }
- }
+ },
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261111-230442-37a1b947",
+   "label": "battery",
+   "sha": "c078993983a80bfb5c4fd156cba8e6d5fccaa473",
+   "state": "CONCLUDED",
+   "exit_code": 1,
+   "evidence_dir": "/tmp/legend-verify-keep/20261111-230442-37a1b947",
+   "log_sha256": "4598a97f908c3ac28a534f2ffac31a3a7d5d1859e849967eee9ac3609d1df0fd",
+   "clone": "REMOVED"
+  }
+ ]
 }

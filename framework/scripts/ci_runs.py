@@ -26,12 +26,14 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 
 
-def slug(remote: str = "development") -> str:
-    url = subprocess.run(["git", "-C", str(REPO), "remote", "get-url", remote], capture_output=True, text=True).stdout.strip()
-    m = re.search(r"github\.com[:/]([^/]+/[^/.]+?)(?:\.git)?$", url)
-    if not m:
-        raise SystemExit(f"cannot read a GitHub repository from remote {remote!r}: {url!r}")
-    return m.group(1)
+def slug(remote: str = "development", repo: Path = REPO) -> str:
+    """owner/name of the GitHub repository behind `remote` (a clone of a local path has no GitHub remote: say so, do not guess)."""
+    for name in dict.fromkeys((remote, "origin")):
+        url = subprocess.run(["git", "-C", str(repo), "remote", "get-url", name], capture_output=True, text=True).stdout.strip()
+        m = re.search(r"github\.com[:/]([^/]+/[^/.]+?)(?:\.git)?$", url)
+        if m:
+            return m.group(1)
+    raise SystemExit(f"no GitHub repository behind remote {remote!r} or 'origin' in {repo}")
 
 
 def fetch_runs(sha: str, repo: str) -> list[dict]:
