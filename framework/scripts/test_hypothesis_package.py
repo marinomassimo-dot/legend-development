@@ -379,5 +379,46 @@ class HypothesesOwnLayout(unittest.TestCase):
                 self.assertEqual(n, sum(1 for _ in csv.DictReader(f, delimiter="\t")), d)
 
 
+class PropositionFacets(unittest.TestCase):
+    """HE47 H1: relation and direction are optional cells of decisive.tsv, read as written; a blank is `unclassified`, a stray value is
+    reported, and nothing is taken from the statement text."""
+    D = "prop_id\tstatement\trelation\tdirection\n"
+    H, M, pkg = ComparisonSource.H, ComparisonSource.M, ComparisonSource.pkg
+
+    def test_cells_are_read_as_written(self):
+        self.assertEqual(hp.prop_facets({"relation": "other_route", "direction": "null"}), {"relation": "other_route", "direction": "null"})
+
+    def test_blank_or_absent_is_unclassified_and_not_an_error(self):
+        self.assertEqual(hp.prop_facets({"relation": " ", "direction": ""}), {"relation": "unclassified", "direction": "unclassified"})
+        self.assertEqual(hp.prop_facets({"prop_id": "D01"}), {"relation": "unclassified", "direction": "unclassified"})
+
+    def test_statement_wording_is_never_consulted(self):
+        row = {"statement": "An NRF2-independent route exists for monomethyl fumarate"}
+        self.assertEqual(hp.prop_facets(row)["relation"], "unclassified")
+
+    def test_value_outside_the_vocabulary_is_kept_visible_and_validated(self):
+        self.assertEqual(hp.prop_facets({"relation": "off-target"})["relation"], "unrecognised:off-target")
+        d = self.pkg([("output", "comparison.tsv", self.H + "R1\talpha\tno\n"), ("output", "new_measurements.tsv", self.M),
+                      ("output", "decisive.tsv", self.D + "D01\tx\toff-target\t\nD02\ty\tother_route\tsupports\n")])
+        pkg = dict(hp.load_comparison(d), role="pharmacological_comparison", inv_id="INV-05")
+        errs = hp.validate(pkg, needs=set(), invs={"INV-05": {}}, cards=d)
+        bad = [e for e in errs if "vocabulary" in e]
+        self.assertEqual(len(bad), 1)
+        self.assertTrue(bad[0].endswith("proposition D01 relation 'off-target' is not in the vocabulary"), bad)
+
+    def test_package_without_the_columns_is_unchanged(self):
+        d = self.pkg([("output", "comparison.tsv", self.H + "R1\talpha\tno\n"), ("output", "new_measurements.tsv", self.M),
+                      ("output", "decisive.tsv", "prop_id\tstatement\nD01\tx\n")])
+        pkg = dict(hp.load_comparison(d), role="pharmacological_comparison", inv_id="INV-05")
+        self.assertEqual([e for e in hp.validate(pkg, needs=set(), invs={"INV-05": {}}, cards=d) if "vocabulary" in e], [])
+        self.assertEqual(hp.prop_facets(pkg["dec"]["D01"]), {"relation": "unclassified", "direction": "unclassified"})
+
+    def test_committed_packages_use_only_the_vocabulary(self):
+        for p in hp.load_all():
+            if p["role"] == "pharmacological_comparison":
+                for k, r in p["dec"].items():
+                    self.assertFalse(any(v.startswith("unrecognised") for v in hp.prop_facets(r).values()), (p["dir"].parent.name, k))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

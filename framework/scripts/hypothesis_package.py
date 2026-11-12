@@ -35,6 +35,15 @@ PROBE_NAME (named in the package's probes.tsv), BROKEN_REFERENCE (the id family 
 UNCLASSIFIED. Only BROKEN_REFERENCE is a defect. Naming a term in a cell shows it is named; only the output of a path
 that calls `record_for` / `comparison_for` shows it is consumed.
 
+A decisive proposition answers several questions that must not be read from one another: the depth of the reading
+(`depth`), what it measures (`class` and the readout in the conditions cell), how that measure relates to the mechanism the
+comparison tests (`relation`: mechanism / other_route / context), the direction of the evidence (`direction`: supports / opposes /
+null / mixed), the role of the reagent (derived by the comparison engine, never written here) and any support for a proposal
+(the hypotheses layer). `relation` and `direction` are optional columns of decisive.tsv, written by the package's author; a blank or a
+missing column reads as `unclassified`, a value outside the vocabulary as `unrecognised:<value>` and is a validation defect. No
+facet is inferred from the statement text. Direction never changes a reading depth or a tier: a probe that gives a negative result is
+still a probe, and the counter-evidence stays visible to whoever needs it (`prop_facets`).
+
 A missing link is UNLINKED, and a missing experiment is NO_EXPERIMENT: both mean "not stated here", never
 "tested and absent", and never evidence against a compound.
 
@@ -58,6 +67,9 @@ HYP_KEY_COLUMNS = ("hyp_id", "hypothesis_id", "id")   # the key column of a hypo
 MANIFEST_FIELDS = ("package", "dir", "role", "inv_id", "why")
 LINK_FIELDS = ("hyp_id", "kind", "need_id", "inv_id", "card_ids", "link_state", "carried_check", "source")
 LINK_STATES = ("PROPOSED_NOT_APPLIED", "CARRIED_IN_TEXT")
+PROP_RELATIONS = ("mechanism", "other_route", "context")   # relation of what a proposition measures to the mechanism the comparison tests
+PROP_DIRECTIONS = ("supports", "opposes", "null", "mixed")  # direction of the measured result for the proposal the row serves
+UNCLASSIFIED = "unclassified"
 INV_TABLES = ("investigations_it20.tsv", "investigations.tsv")
 INV_DIR = DR / "ranking_it8_p9_20261029"
 REF_CLASSES = ("AGE", "CARD_ID", "PROBE_NAME", "BROKEN_REFERENCE", "UNCLASSIFIED")
@@ -264,6 +276,16 @@ def alt_columns(pkg: dict) -> dict[str, str]:
     return {a: r["matrix_column"].strip() for a, r in pkg["alts"].items() if (r.get("matrix_column") or "").strip()}
 
 
+def prop_facets(row: dict) -> dict:
+    """The two optional facets of a decisive row, each its vocabulary value, `unclassified` (blank or no such column: the author said nothing)
+    or `unrecognised:<value>` (never mapped to a near word). Read from the cells only; the statement text is not consulted."""
+    out = {}
+    for field, vocab in (("relation", PROP_RELATIONS), ("direction", PROP_DIRECTIONS)):
+        raw = (row.get(field) or "").strip()
+        out[field] = UNCLASSIFIED if not raw else raw if raw in vocab else f"unrecognised:{raw}"
+    return out
+
+
 def validate(pkg: dict, needs: set[str] | None = None, invs: dict | None = None, cards: Path | None = None) -> list[str]:
     needs = _need_ids() if needs is None else needs
     invs = _inv_rows() if invs is None else invs
@@ -278,6 +300,8 @@ def validate(pkg: dict, needs: set[str] | None = None, invs: dict | None = None,
         for k, r in pkg["meas"].items():
             blocked = _blocked_keys(r["blocks_which_comparison_row"], pkg["cmp"])
             errs += [f"{w}: measurement {k} blocks {b!r}, not a comparison row key" for b in blocked if b not in pkg["cmp"]]
+        for k, r in pkg["dec"].items():
+            errs += [f"{w}: proposition {k} {f} {v.split(':', 1)[1]!r} is not in the vocabulary" for f, v in prop_facets(r).items() if v.startswith("unrecognised:")]
         return errs
     if pkg.get("role") == "hypotheses_only":
         w = f"{pkg['dir'].parent.name} hypotheses"
@@ -486,7 +510,7 @@ def _brief(rec: dict) -> str:
 def _brief_cmp(rec: dict) -> str:
     L = [f"{rec['inv_id']} pharmacological comparison: {rec['state']}"]
     for r in rec["rows"]:
-        L.append(f"  {r['key']} [{r['package']}] measurements={','.join(m['meas_id'] for m in r['new_measurements']) or '-'} decisive={','.join(d['prop_id'] for d in r['decisive_cited']) or '-'} broken={','.join(r['broken_decisive_refs']) or '-'} ref={r['source_refs']['cmp:' + r['key']]}")
+        L.append(f"  {r['key']} [{r['package']}] measurements={','.join(m['meas_id'] for m in r['new_measurements']) or '-'} decisive={','.join(d['prop_id'] + ''.join(f"[{v}]" for v in prop_facets(d).values() if v != UNCLASSIFIED) for d in r['decisive_cited']) or '-'} broken={','.join(r['broken_decisive_refs']) or '-'} ref={r['source_refs']['cmp:' + r['key']]}")
     return "\n".join(L)
 
 
