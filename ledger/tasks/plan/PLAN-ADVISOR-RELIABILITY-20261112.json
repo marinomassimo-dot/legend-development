@@ -10,13 +10,13 @@
   "OBJECTIVE": "Follow-up to the Strategic Advisor Phase 1, limited to problems observed in the first real use (IT48 pilot): input availability (SCI48 package absent from the advisor's snapshot), capture/exposure/model read-back, cost diagnosis, browser preflight, derived-output preparation. No rebuild, no new gate, no permanent service, no new Stage A or B invocation.",
   "worktree": ".claude/worktrees/adv2",
   "branch": "task/adv2",
-  "CURRENT_STATE": "RUNNING",
+  "CURRENT_STATE": "OPEN",
   "CHECKPOINT": {
     "last_verified_result": "none yet",
     "first_incomplete_work": "OBJ_1_INSPECT"
   },
   "AUTHORISED_QUEUE_20261112": {
-    "MANDATE_STATE": "RUNNING",
+    "MANDATE_STATE": "OPEN",
     "OBJ_1_INSPECT": {
       "order": 1,
       "title": "Inspect build report, IT48 pilot artefacts, Chromium selection changes, derived-output incidents; separate built / invoked / consumed / useful",
@@ -115,5 +115,5 @@
     }
   },
   "VERIFICATION_EVIDENCE": [],
-  "MANDATE_STATE": "RUNNING"
+  "MANDATE_STATE": "OPEN"
 }
