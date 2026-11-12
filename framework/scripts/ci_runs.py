@@ -10,7 +10,7 @@ the run ever ended. The supported way to hold such a wait is a BLOCKED step whos
 
 Exit codes: 0 every run on the commit concluded success · 1 a run concluded with anything else · 3 no run seen for the commit · 124 the deadline passed with a run
 still in progress (or none yet) · 2 invalid invocation or the API unreadable. No token is used (the repository is public; the unauthenticated limit is 60 requests an
-hour, so `wait` polls once a minute). `no run seen` is not `success`: a push whose workflow has not started yet reads exit 3, and `wait` keeps polling it.
+hour, so `wait` polls once a minute and, when the limit is reached, sleeps until the reset the API announces, inside its deadline). `no run seen` is not `success`: a push whose workflow has not started yet reads exit 3, and `wait` keeps polling it.
 """
 from __future__ import annotations
 
@@ -20,6 +20,7 @@ import re
 import subprocess
 import sys
 import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -34,6 +35,16 @@ def slug(remote: str = "development", repo: Path = REPO) -> str:
         if m:
             return m.group(1)
     raise SystemExit(f"no GitHub repository behind remote {remote!r} or 'origin' in {repo}")
+
+
+def reset_wait(headers, now: float) -> float | None:
+    """Seconds to wait before the unauthenticated rate limit (60 requests an hour) opens again, from the `X-RateLimit-Reset` header; None when it is not a rate-limit answer."""
+    try:
+        if str(headers.get("X-RateLimit-Remaining", "")) != "0":
+            return None
+        return max(0.0, float(headers.get("X-RateLimit-Reset")) - now) + 2
+    except (TypeError, ValueError):
+        return None
 
 
 def fetch_runs(sha: str, repo: str) -> list[dict]:
@@ -76,7 +87,14 @@ def main(argv=None) -> int:
     while True:
         try:
             runs = fetch_runs(a.sha, repo)
-        except Exception as exc:  # network or rate limit: say so, never read it as "no run"
+        except urllib.error.HTTPError as exc:
+            pause = reset_wait(exc.headers, time.time()) if exc.code in (403, 429) else None
+            if pause is not None and a.cmd == "wait" and time.time() + pause < end:
+                time.sleep(pause)               # the limit is a pause, not a verdict: wait for the reset inside the deadline
+                continue
+            print(f"cannot read the API: {exc}" + (f" (rate limit; resets in {pause / 60:.0f} min)" if pause is not None else ""), file=sys.stderr)
+            return 124 if pause is not None and a.cmd == "wait" else 2
+        except Exception as exc:  # network: say so, never read it as "no run"
             print(f"cannot read the API: {exc}", file=sys.stderr)
             return 2
         code, lines = verdict(runs)

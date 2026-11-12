@@ -44,6 +44,11 @@ class Verdict(unittest.TestCase):
             subprocess.run(["git", "-C", d, "remote", "add", "development", "https://github.com/other/name.git"], check=True)
             self.assertEqual(ci_runs.slug("development", Path(d)), "other/name")
 
+    def test_a_rate_limit_answer_is_a_pause_until_the_reset_not_a_verdict(self):
+        self.assertEqual(ci_runs.reset_wait({"X-RateLimit-Remaining": "0", "X-RateLimit-Reset": "1000"}, 940.0), 62.0)
+        self.assertIsNone(ci_runs.reset_wait({"X-RateLimit-Remaining": "7", "X-RateLimit-Reset": "1000"}, 940.0))     # a 403 with quota left is something else
+        self.assertIsNone(ci_runs.reset_wait({}, 940.0))
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
