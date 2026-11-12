@@ -12,7 +12,7 @@
  "branch": "task/he46",
  "CURRENT_STATE": "DONE",
  "CHECKPOINT": {
-  "last_verified_result": "battery f5ef610f PASS WITH SKIPS (242 targets, 11 skipped); landed 36eb86fb on main; push pending verification",
+  "last_verified_result": "published d493afb8: gate PASS, ls-remote verified, CI #657 success",
   "first_incomplete_work": "none",
   "active_processes": "none",
   "real_dependencies": "IT46 (ORCH-ROADMAP-IT46-20261111) consumes conditions and engine; SCI46 pharmacology",
@@ -173,6 +173,18 @@
      "status": "DONE",
      "owner": "plan",
      "evidence": "owners emitted plain markers; mandate_watch check --root <worktree> --deliver none: IT46 session 4325d70d RUNNING/NONE, SCI46 session 9400b253 RUNNING/NONE; near-marker diagnosis + 2 tests (c0789939); cross_session_transport section 12; README 10"
+    }
+   ]
+  },
+  "OBJ_H13": {
+   "order": 14,
+   "title": "CI confirmation of the published landing d493afb8",
+   "steps": [
+    {
+     "step": "Public release gate run #657 on d493afb8 concludes success",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "Public release gate run #657 on d493afb8e8b6b3a6e570ee4e93a6068f49dcf8f6: completed success (ci_runs.py wait, exit 0); the closure commit's own run is not awaited"
     }
    ]
   }
