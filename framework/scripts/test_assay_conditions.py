@@ -227,5 +227,39 @@ class PhAndTemperature(unittest.TestCase):
         self.assertEqual(r["partial"][0]["field"], "composition")
 
 
+class StructuredCells(unittest.TestCase):
+    """Cells written as key=value (SCI46 decisive tables): readout class, loss arm, whether the loss was verified, cell type."""
+    D07 = "species=Homo sapiens (female-derived cell line); system=annonacin 20 nM, glucose-reduced medium; cell=LUHMES differentiated; time=48 h; compound conc=40 uM; readout=calcein viability and Tuj-1 neurite; knockdown=none in this panel"
+    D10 = "species=Rattus norvegicus; system=irradiated primary microglia (neonatal spinal cord) stable shRNA or CRISPR lines; cell=microglia; time=72 h after radiation, drug pre-treatment; compound conc=1 uM; readout=mRNA, CCK-8, TUNEL; knockdown=shRNA about 0.1 and KO about 0.05 Nrf2 mRNA (figure-read)"
+
+    def test_the_labels_are_read_from_the_cell(self):
+        a, b = ac.parse(self.D07)["fields"], ac.parse(self.D10)["fields"]
+        self.assertEqual((a["readout_class"]["values"], a["nrf2_loss_arm"]["values"], "nrf2_loss_verified" in a), (["viability", "function"], ["none"], False))
+        self.assertEqual((b["readout_class"]["values"], b["nrf2_loss_arm"]["values"], b["nrf2_loss_verified"]["values"]), (["mRNA", "viability"], ["shRNA", "knockout"], ["yes"]))
+        self.assertEqual((a["system"]["values"], b["system"]["values"]), (["cultured_cells"], ["cultured_cells"]))     # the system strings now parse
+
+    def test_a_loss_arm_against_no_loss_arm_is_a_documented_incompatibility(self):
+        r = ac.compare(self.D07, self.D10)
+        self.assertEqual(r["state"], ac.INCOMPATIBILITY)
+        self.assertEqual([d["field"] for d in r["differ"]], ["nrf2_loss_arm"])
+
+    def test_reporter_and_enzyme_readouts_are_not_one_assay(self):
+        a = "system=U2OS cell line; readout=ARE reporter; knockdown=none; cell=U2OS"
+        b = "system=U2OS cell line; readout=NQO1 enzyme activity; knockdown=none; cell=U2OS"
+        self.assertEqual(state(a, b), ac.INCOMPATIBILITY)
+        self.assertEqual(state(a, a), ac.AGREEMENT)
+
+    def test_cell_type_wording_alone_never_makes_an_incompatibility(self):
+        a = "system=cell line; readout=mRNA; knockdown=siRNA verified; cell=differentiated neuron-like"
+        b = "system=cell line; readout=mRNA; knockdown=siRNA verified; cell=LUHMES differentiated"
+        r = ac.compare(a, b)
+        self.assertEqual(r["state"], ac.INSUFFICIENT)
+        self.assertEqual(r["partial"][0]["field"], "cell")
+
+    def test_unverified_and_incomplete_losses_are_not_verified(self):
+        for kd, want in (("NRF2 siRNA, unverified in the record", "unstated"), ("siRNA incomplete at protein level", "no"), ("shRNA over 95 % knockdown declared", "yes")):
+            self.assertEqual(ac.parse(f"system=cell line; readout=mRNA; knockdown={kd}")["fields"]["nrf2_loss_verified"]["values"], [want], kd)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

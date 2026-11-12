@@ -49,6 +49,7 @@ SYSTEMS = (  # ordered: the first pattern that matches names the system; a cell 
     ("HEK", r"\bHEK"),
     ("slice", r"\bslices?\b"),
     ("neurons", r"(?<!no )\bneurons?\b|primary culture|cultured|\bDIV\b"),
+    ("cultured_cells", r"\bLUHMES\b|\bmicroglia\b|\bastrocytes?\b|\bNHBE\b|BEAS-?2B|\bA549\b|\bH460\b|\bH1299\b|SH-SY5Y|HaCaT|\bmacrophages?\b|\bcell lines?\b|\bU2OS\b|\bTHP-1\b|\bHUVEC\b"),
     ("purified_protein", r"purified|crystal|cryo-EM|DELFIA|radiolabel|(?:kinase|enzyme|activity|coupled) assay|in vitro enzyme|circular dichroism|recombinant (?:human |rat |mouse )?(?:SUMO-)?PDK\d|recombinant [\w-]+ (?:kinase|enzyme)"),
 )
 SOLUTES = (  # canonical name, pattern of how it is written
@@ -82,7 +83,8 @@ _SIDE_IN = re.compile(r"pipette|internal|intracellular|cytosol|patch solution", 
 _SIDE_EX = re.compile(r"extracellular|external|\bbath|aCSF|recording solution|perfus|medium|buffer|bicarbonate|Ringer", re.I)
 _NS = r"(?:not (?:stated|named|reported|given|read|measured)|unread|unknown|not in (?:the |any )?(?:abstract|text|file))"
 PH_FIELDS = ("pH", "pH_extracellular", "pH_intracellular")
-NON_CONC = ("system", "scaffold", "composition", "holding_potential_mV", "temperature_C", "pH_step", "pH_delta") + PH_FIELDS
+LABEL_FIELDS = ("system", "scaffold", "composition", "readout_class", "nrf2_loss_arm", "nrf2_loss_verified", "cell")   # values are labels, compared as sets
+NON_CONC = LABEL_FIELDS + ("holding_potential_mV", "temperature_C", "pH_step", "pH_delta") + PH_FIELDS
 _FREE = re.compile(r"\b(Mg|Ca|Zn)(?:2\+)?(?:/(Mg|Ca|Zn)(?:2\+)?)?[- ]free\b", re.I)
 
 
@@ -186,6 +188,65 @@ def _read_ph_temperature(s: str, fields: dict, unplaced: list, contrast: list) -
             fields[name] = {"state": "NOT_APPLICABLE", "values": [], "text": []}
 
 
+_KEY = re.compile(r"(?:^|;\s+)([a-z][a-z ]*?)=")
+READOUTS = (   # ordered; a readout cell can name several classes ("mRNA and enzyme activity")
+    ("binding", r"\bbinding\b|\bKd\b|\bITC\b|\bSPR\b|\bfluorescence polarization\b|\bFP\b"),
+    ("translocation", r"translocation|nuclear (?:NRF2|Nrf2)"),
+    ("reporter", r"reporter|\bARE\b|luciferase"),
+    ("enzyme_activity", r"enzyme activity|NQO1 activity|activity \(NQO1\)"),
+    ("mRNA", r"mRNA|RT-?PCR|qPCR|microarray"),
+    ("protein", r"western|immunoblot|(?<!nuclear )(?<!nuclear NRF2 )\bprotein level|\bHO-1 protein"),
+    ("viability", r"viability|CCK-8|\bMTT\b|calcein|TUNEL|apoptosis|cell death|cytotox|GSH depletion"),
+    ("function", r"clinical score|histolog|neurite|morphology|behaviou?r|survival score"),
+)
+LOSS_ARMS = (("siRNA", r"\bsiRNA\b"), ("shRNA", r"\bshRNA\b"), ("knockout", r"knock-?out|\bKO\b|CRISPR|germline [A-Za-z0-9]+ deficiency|\bdeficien"), ("dominant_negative", r"dominant[- ]negative"), ("inhibitor", r"pharmacological|\binhibitor\b"))
+
+
+def _read_structured(s: str, fields: dict, unplaced: list) -> None:
+    """Cells written as `key=value; key=value` (the SCI46 decisive tables): the readout class, the loss arm and whether the loss was verified, and the cell type."""
+    keys = list(_KEY.finditer(s))
+    if len(keys) < 2:
+        return
+    parts = {}
+    for i, m in enumerate(keys):
+        end = keys[i + 1].start() if i + 1 < len(keys) else len(s)
+        parts[m.group(1).strip()] = s[m.end():end].strip().rstrip(";")
+    if "readout" in parts and not _NOT_STATED.search(parts["readout"]):
+        found = [name for name, pat in READOUTS if re.search(pat, parts["readout"], re.I)]
+        if found:
+            fields["readout_class"] = {"state": "STATED", "values": found, "text": [parts["readout"]]}
+        else:
+            unplaced.append(f"readout {parts['readout'][:60]!r} names no readout class")
+    kd = parts.get("knockdown")
+    if kd is not None:
+        if re.fullmatch(r"n/a|na|", kd.strip(), re.I):
+            fields["nrf2_loss_arm"] = {"state": "NOT_APPLICABLE", "values": [], "text": []}
+        else:
+            arms = [name for name, pat in LOSS_ARMS if re.search(pat, kd, re.I)]
+            if not arms and re.match(r"none\b", kd.strip(), re.I):
+                arms = ["none"]
+            if arms:
+                fields["nrf2_loss_arm"] = {"state": "STATED", "values": arms, "text": [kd]}
+                if arms != ["none"]:
+                    efficiency = re.search(r"about \d+(?:\.\d+)?|over \d+ ?%|\d+ ?% knockdown", kd, re.I)
+                    if re.search(r"incomplete|inadequate|insufficient|partial", kd, re.I):
+                        v = "no"
+                    elif re.search(r"unverified|not stated|unstated|verification not", kd, re.I):
+                        v = "unstated"
+                    elif efficiency or re.search(r"(?<!un)verified", kd, re.I):
+                        v = "yes"
+                    else:
+                        v = "unstated"
+                    fields["nrf2_loss_verified"] = {"state": "STATED", "values": [v], "text": [kd]}
+            else:
+                unplaced.append(f"knockdown {kd[:60]!r} names no loss arm")
+    cell = parts.get("cell")
+    if cell and not re.fullmatch(r"n/a|na|whole animal", cell.strip(), re.I):
+        names = sorted({c.strip().lower() for c in re.split(r",|/|\band\b|\bor\b|;", cell) if c.strip() and c.strip().lower() not in ("others", "n/a")})
+        if names:
+            fields["cell"] = {"state": "STATED", "values": names, "text": [cell]}
+
+
 _INHERIT = re.compile(r"^\s*As (D\d+)\b|[Cc]onditions as (D\d+)\b")
 
 
@@ -263,6 +324,7 @@ def parse(text: str, cells: dict[str, str] | None = None, _seen: tuple = ()) -> 
             if "holding_potential_mV" not in fields and re.search(r"holding potential", clause, re.I):
                 fields["holding_potential_mV"] = {"state": "NOT_STATED", "values": [], "text": []}
     _read_ph_temperature(s, fields, unplaced, contrast)
+    _read_structured(s, fields, unplaced)
     ref = _INHERIT.search(text or "")
     inherited, ref_state = "", "NONE"
     if ref and cells is not None:
@@ -286,7 +348,7 @@ def parse(text: str, cells: dict[str, str] | None = None, _seen: tuple = ()) -> 
 
 
 def _fmt(field: str, values) -> str:
-    if field in ("system", "scaffold", "composition"):
+    if field in LABEL_FIELDS:
         return "/".join(values)
     out = []
     for v in values:
@@ -304,16 +366,20 @@ def _fmt(field: str, values) -> str:
 
 def _show(field: str, f: dict) -> str:
     """The original wording when the field has one (it is the provenance), the normalised value otherwise."""
-    return "; ".join(f["text"]) if f["text"] and field not in ("system", "scaffold", "composition") else _fmt(field, f["values"])
+    return "; ".join(f["text"]) if f["text"] and field not in LABEL_FIELDS else _fmt(field, f["values"])
 
 
 def _same(field: str, a: list, b: list) -> str:
     """'equal' | 'disjoint' | 'overlap' for two lists of values of one field."""
     if field == "pH_step":
         return "equal" if set(a) == set(b) else "disjoint"
-    if field in ("system", "scaffold", "composition") or "none" in a or "none" in b:
+    if field in LABEL_FIELDS or "none" in a or "none" in b:
         sa, sb = set(a), set(b)
-        return "equal" if sa == sb else "disjoint" if not sa & sb else "overlap"
+        if sa == sb:
+            return "equal"
+        if field == "cell":          # cell-type wording varies ("LUHMES differentiated", "differentiated neuron-like"): different words are not a documented difference
+            return "overlap"
+        return "disjoint" if not sa & sb else "overlap"
     def eq(x, y): return abs(x - y) <= 1e-9 * max(1.0, abs(x), abs(y))
     if len(a) == len(b) and all(eq(x[0], y[0]) and eq(x[1], y[1]) for x, y in zip(sorted(a), sorted(b))):
         return "equal"
