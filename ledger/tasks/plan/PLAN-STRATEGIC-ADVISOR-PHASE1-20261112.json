@@ -13,10 +13,10 @@
   "CURRENT_STATE": "IN_PROGRESS",
   "CHECKPOINT": {
     "last_verified_result": "battery on 2513fe1f FAIL for two preexisting causes (kept); targeted reruns pass; tip 286c8c8b",
-    "first_incomplete_work": "OBJ_6_LAND, OBJ_7_HANDOFF, OBJ_8_REPORT",
+    "first_incomplete_work": "OBJ_7_HANDOFF (message to the Orchestrator session), OBJ_8_REPORT",
     "active_processes": "none",
     "real_dependencies": "Orchestrator session 4e idle; delivery by message with durable pointer",
-    "next_executable_step": "task_close, safe_push, BUILD_SHA line, deliver handoff"
+    "next_executable_step": "push the BUILD_SHA commit, send the durable-pointer message to legend-development-4e, record delivery state"
   },
   "AUTHORISED_QUEUE_20261112": {
     "MANDATE_STATE": "OPEN",
@@ -86,8 +86,9 @@
       "steps": [
         {
           "step": "Quick suites, battery on a frozen candidate, land on main, publish to development, CI",
-          "status": "IN_PROGRESS",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "integration and publication 4633abf7e18b65be0b51dde8c5dc47c89de6872e, gate PASS, ls-remote verified; battery on 2513fe1f FAIL kept (two preexisting causes), targeted reruns pass"
         }
       ]
     },
@@ -97,7 +98,7 @@
       "steps": [
         {
           "step": "Add factual build metadata to the Pilot Mandate, deliver to the active main Orchestrator via existing transport, record handoff state",
-          "status": "TODO",
+          "status": "IN_PROGRESS",
           "owner": "plan"
         }
       ]
