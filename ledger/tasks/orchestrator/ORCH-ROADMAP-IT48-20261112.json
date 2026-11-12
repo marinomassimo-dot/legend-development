@@ -13,9 +13,9 @@
    "steps": [
     {
      "step": "Close IT47 without redoing it: CI and site on the delivered SHAs; concurrent cell-context changes reconciled; unmapped generator proposals visible with the reason; public view states updates and limits; record separates demonstrated from proposed",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Delivered on main: d280c7c3 (CI #666 FAIL, stale ranking.json), 3b877bfc+4ff3ced5 (CI #667 success), 2afd1eea (CI #670 success), b67d209a (B1 cell-class rows, Kv7 clause in five languages; CI #672 and view publication #38 pending at the last check). Batteries by SHA: 6991d539 PASS WITH SKIPS; 90cc8a91 FAIL on test_repurposing_view_i18n (a changed curated passage missing from the inventory; fixed in 3870f545, targeted suite OK); the landed b67d209a has no full battery of its own, only the CI gate. The Snap Chromium launcher fails in turbovnc-desktop.service shells; CHROME_BIN=/snap/chromium/3583/usr/lib/chromium-browser/chrome works."
+     "evidence": "Delivered on main: d280c7c3 (CI #666 FAIL, stale ranking.json), 3b877bfc+4ff3ced5 (CI #667 success), 2afd1eea (CI #670 success), b67d209a (B1 cell-class rows, Kv7 clause in five languages; CI #672 and view publication #38 pending at the last check). Batteries by SHA: 6991d539 PASS WITH SKIPS; 90cc8a91 FAIL on test_repurposing_view_i18n (a changed curated passage missing from the inventory; fixed in 3870f545, targeted suite OK); the landed b67d209a has no full battery of its own, only the CI gate. The Snap Chromium launcher fails in turbovnc-desktop.service shells; CHROME_BIN=/snap/chromium/3583/usr/lib/chromium-browser/chrome works. UPDATE: CI #672 (Public release gate) and view publication #38 on b67d209a both succeeded. Also landed: 2afd1eea (find_chromium skips a candidate that cannot start). The 12 content decisions: consumers of the SCI47-B inference still not independently verified (open)."
     }
    ]
   },
@@ -24,9 +24,9 @@
    "steps": [
     {
      "step": "Pilot start at the safe boundary: read PILOT_MANDATE.md and the skill; record boundary, owner session, SHA, baseline and the sealed intended action before each Stage A",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "PILOT_STAGE_A_1/_2 and PILOT_DECISION_1/_2 blocks; sealed intended actions 1 and 2 (sha256 in the blocks); mandate binding RUNNING."
     }
    ]
   },
@@ -46,9 +46,9 @@
    "steps": [
     {
      "step": "Record the updated intended action independently; Stage A #2, Stage B #2, increment 2 to its consumer",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Increment 2 chain: problem (SCI48 delivered, verified, unconsumed; the SCI46 sentence that RA839 reaches C1/C2 at abstract depth live in consumers) -> choice (my sealed action accepted; A2 recommended the SCI47-B verification; B2, after reading my plan, ranked consumption first: agreement after exposure, not independent) -> work (37 receipts recorded after a trial, ledger 1,855; V19, INV-08 X1-X3, IT46-Q06/Q09 concluded, IT48-Q02..Q04 opened, aliases, package registered, engine rerun, five-language passages; README generation_it48_20261112) -> verified result (engine before/after: sulforaphane NONE->PRIMARY, RA839 absent->PRIMARY, bardoxolone methyl one row->two; plus an error found: the engine derives 'probe' for two comparator reagents; disclosed in V19 and handed to Harness) -> consumers updated -> next decision (engine needs a comparator role; SCI47-B verification remains the open public-text risk). Corrections of my own: verdict counts 4->5 SUPPORTED; shareable audit forced descriptors instead of catalogue names."
     }
    ]
   },
@@ -57,7 +57,7 @@
    "steps": [
     {
      "step": "Closure: verify_run on the final candidate, landing, CI/site, cleanup of own temporaries, final evidence report in Italian with the six pilot answers and Session Takeaway",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "evidence": ""
     }
@@ -116,5 +116,14 @@
   "stage_b": "B2 saved (sonnet/medium claude-sonnet-5-5, 1 turn, output 3,100): after seeing my sealed action it ranks consuming SCI48 first, SCI47-B verification second/parallel. Recorded as agreement after exposure to the plan, not as independent confirmation; its reasons (stale RA839 sentence live; use the verifier's version; no rank change to show an effect) are checked against the SCI48 files before use",
   "decision": "ACCEPTED my sealed intended action for increment 2 (consume SCI48), with the advisor's refinements: verifier's reading as source for every row; receipts in event-ID order after a trial; closures of IT46-Q06/Q09 by dated pointer; two cheap writes (S7_coda status, increment-1 framing corrections). SCI47-B verification not run in parallel (one delegate at a time; no delegate needed for the integration) - left open as the next item",
   "alternatives_not_pursued": "SCI47-B inference verification (published, unverified: remains the most important open public-text risk), IT48-Q01 drug-name half, unmapped KH/HY rows, IT47-Q02"
+ },
+ "PILOT_BALANCE_PROVISIONAL": {
+  "configured_vs_invoked_vs_consumed_vs_improved": "configured: yes; invoked: A1,B1,A2,B2 (ceiling reached; no further invocation); consumed: A1/B1 changed increment 1 (the sealed action differed from the advice and the advice was adapted and executed); A2/B2 did not change increment 2 (my sealed action stood); improved outcome: not shown",
+  "useful_difference_observed": "increment 1: a different question was chosen than the sealed one, and its result (8 rows verified, juvenile Ba2+ share still unmeasured) corrected two framings of the branch ('adult' label, access premise) and removed an unverified premise from KH1; the advisor's claim 'never executed' was partly wrong (SCI44 package C already ran part) and I checked before accepting",
+  "no_difference": "increment 2: same action as sealed; B2 agreed only after reading the plan",
+  "harm_or_cost": "A1/A2 run on opus with a runtime model_refusal_fallback to opus-5 mid-run (per Harness, saved transcripts); A2 could not read SCI48 (checkout 54b985c7 predates 3f12c196, input-availability fault; Harness task separate); A2 exposed to PILOT_DECISION_1 and to the record line 'SCI48 delivered, not consumed' (not independent); one arithmetic error of mine (4 vs 5 SUPPORTED) propagated to five places before correction; no rank, sign or qualification changed",
+  "human_interventions": "two operator integration messages after pilot start were not needed to continue (Chromium diagnosis before the pilot; IT49 queue message): optional steering, none required to continue; environment limit: Snap Chromium launcher fails in turbovnc-desktop shells",
+  "measured_cost": "A1 output 31,031 / cache read 2,315,013; B1 output 3,197; A2 output 18,451 / cache read 857,096; B2 output 3,100; increment-1 verifier 199,009 subagent tokens, 14.3 min",
+  "provisional": "self-evaluation, not independent validation"
  }
 }
