@@ -1,0 +1,119 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+  "TASK_ID": "PLAN-ADVISOR-RELIABILITY-20261112",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "plan",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-11-12",
+  "OBJECTIVE": "Follow-up to the Strategic Advisor Phase 1, limited to problems observed in the first real use (IT48 pilot): input availability (SCI48 package absent from the advisor's snapshot), capture/exposure/model read-back, cost diagnosis, browser preflight, derived-output preparation. No rebuild, no new gate, no permanent service, no new Stage A or B invocation.",
+  "worktree": ".claude/worktrees/adv2",
+  "branch": "task/adv2",
+  "CURRENT_STATE": "RUNNING",
+  "CHECKPOINT": {
+    "last_verified_result": "none yet",
+    "first_incomplete_work": "OBJ_1_INSPECT"
+  },
+  "AUTHORISED_QUEUE_20261112": {
+    "MANDATE_STATE": "RUNNING",
+    "OBJ_1_INSPECT": {
+      "order": 1,
+      "title": "Inspect build report, IT48 pilot artefacts, Chromium selection changes, derived-output incidents; separate built / invoked / consumed / useful",
+      "steps": [
+        {
+          "step": "Inspect build report, IT48 pilot artefacts, Chromium selection changes, derived-output incidents; separate built / invoked / consumed / useful",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_2_INPUT_AVAILABILITY": {
+      "order": 2,
+      "title": "Reproduce the SCI48 absent-package case; distinguish announced / present in snapshot / accessible / read; minimal fix plus targeted regression",
+      "steps": [
+        {
+          "step": "Reproduce the SCI48 absent-package case; distinguish announced / present in snapshot / accessible / read; minimal fix plus targeted regression",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_3_CAPTURE_EXPOSURE_MODEL": {
+      "order": 3,
+      "title": "Verify capture, runtime/transcript match, Stage A/B separation, declared exposure and per-turn model on the real assessments (no new calls)",
+      "steps": [
+        {
+          "step": "Verify capture, runtime/transcript match, Stage A/B separation, declared exposure and per-turn model on the real assessments (no new calls)",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_4_COST_DIAGNOSIS": {
+      "order": 4,
+      "title": "Recompute census from current metadata; find the loads that dominate context; one small fix only if a cause is observed",
+      "steps": [
+        {
+          "step": "Recompute census from current metadata; find the loads that dominate context; one small fix only if a cause is observed",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_5_BROWSER_PREFLIGHT": {
+      "order": 5,
+      "title": "Executable / --version / headless start / DevTools / dashboard tests as separate states; fix only the residual reproducible limit",
+      "steps": [
+        {
+          "step": "Executable / --version / headless start / DevTools / dashboard tests as separate states; fix only the residual reproducible limit",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_6_DERIVED_OUTPUTS": {
+      "order": 6,
+      "title": "Find the release-preparation step that let ranking.json and the translation inventory go stale; call the existing generators at the right moment",
+      "steps": [
+        {
+          "step": "Find the release-preparation step that let ranking.json and the translation inventory go stale; call the existing generators at the right moment",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_7_INTEGRATION": {
+      "order": 7,
+      "title": "Agree file ownership with the Orchestrator; deliver and integrate; keep record and session binding current; clean own temporaries and worktrees",
+      "steps": [
+        {
+          "step": "Agree file ownership with the Orchestrator; deliver and integrate; keep record and session binding current; clean own temporaries and worktrees",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_8_REPORT": {
+      "order": 8,
+      "title": "Final report in Italian opening with the required question",
+      "steps": [
+        {
+          "step": "Final report in Italian opening with the required question",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    }
+  },
+  "VERIFICATION_EVIDENCE": [],
+  "MANDATE_STATE": "RUNNING"
+}
