@@ -1,0 +1,11 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+VQ01	paper_packet.py claim	--pmid 34634460 --actor ib-y --note ORCH-SCI47-20261112	2026-11-12T08:39Z	claim recorded	other claims exist, including ib-z (the producer)
+VQ02	Europe PMC fullTextXML (plain curl)	PMC8609180/fullTextXML	2026-11-12T08:40Z	HTTP 200, 156866 bytes, sha256 934b4e1a42ac...906aa	text read in scratch; fingerprint equals the earlier receipt
+VQ03	Europe PMC supplementaryFiles (plain curl, used once as the brief allows)	PMC8609180/supplementaryFiles	2026-11-12T08:40Z	HTTP 200, 2701927 bytes after a slow transfer (about 7 minutes)	zip with main figure JPEGs gr1-gr6, thumbnails and mmc1.docx; no retry needed
+VQ04	local strings on full text and Supp text	bicuculline gabazine picrotoxin SR95531 DNQX CNQX NBQX AP5 perforated gramicidin paired-pulse E_GABA GABA-A mIPSC exclu*	2026-11-12T08:47Z	all 0	absence claims confirmed for the perimeter stated in audit.md
+VQ05	local strings	TTX 5, tetrodotoxin 2, miniature 3, mEPSC 15, evoked 17, reversal 8, antagonist 1, isolated 1, Kolmogorov 1, KS test 4, KS-test 1, ecdf 1	2026-11-12T08:47Z	counts as listed	contexts read; all TTX and miniature occurrences are excitatory
+VQ06	PubMed tool: article metadata	PMIDs 16783415, 35429480, 21956725	2026-11-12T08:50Z	3 abstracts	diazepam, ganaxolone and clobazam numbers checked
+VQ07	PubMed tool: full text	PMC6470170 (Yuan 2019)	2026-11-12T08:51Z	full text returned on the second call (first call rate limited)	E_GABA values, temperature, pooling checked
+VQ08	registry_records.py get	--pmid 34634460 --hops 1	2026-11-12T08:44Z	record read; no hit with a frequency-versus-amplitude ordering statement	two large registries not grepped
+VQ09	git grep in the sci47 tree (two large registries excluded)	patterns for fifth, "to a fifth", frequency with more/larger than amplitude, GABA content per event	2026-11-12T08:45Z	hits in view/i18n content files (5), 19 rendered view pages, generation_it46_20261111 README and s5_case/result, generation_it41 compound_view V21, plus files of this package	found places missing from inversion_check.md
+VQ10	staged_receipt_check.py --check-doi	producer receipt -77 and mine -76	2026-11-12T08:55Z	both OK	mine first refused as complete_fulltext_read because references not_read; changed to partial_fulltext_read

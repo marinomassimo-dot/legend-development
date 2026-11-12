@@ -1,0 +1,17 @@
+figure	panel	opened	what_it_shows	values_read_or_inferred	range_or_note	caveat
+Fig 1	A-E	no (caption only)	LFP bursts L2/3 and L5, hippocampus, burst detection, PAC	none taken from the image	n/a	incidence 36/42, 4/23, 0/11 from text
+Fig 2	A-E	no (caption only)	L2/3 to L5 lag	none taken from the image	n/a	lag medians from text
+Fig 3	A-D	no (caption only)	burst reversal potential; d-APV, CBX, BB-FCF	none taken from the image	n/a	values from text and legend
+Fig 4	A-D (mEPSC)	yes, 708x675 raster	mEPSC traces, cumulative amplitude and frequency; inset average mEPSC	mEPSC average peak roughly -8 to -12 pA, KO somewhat larger (inferred_from_figure)	low precision: raster, overlapping curves	mean values not printed in text; KS p from legend
+Fig 4	E-F (sEPSC)	yes	sEPSC traces; average waveform; cumulative amplitude with KO leftward shift, frequency curves superimposed	average sEPSC peak about -14 to -17 pA CTL, about -16 to -19 pA KO (inferred_from_figure)	+/- 3 pA	printed means 23.3 and 24.7 pA are event means, waveform peaks are averages of detected events
+Fig 4	G (sIPSC traces and average)	yes	7 s example traces and average sIPSC waveform	average peak about -40 to -50 pA control, about -17 to -23 pA KO; example traces: about 50-60 marked events control, about 12-18 KO (inferred_from_figure)	+/- 5 pA; examples not group measures	KO example shows far fewer marked events than the 18% group frequency fall would predict: one trace, not representative
+Fig 4	H h1 (sIPSC amplitude cdf)	yes	control curve broad to about -150 pA; KO curve narrow, few events beyond about -50 pA	median control about -50 to -60 pA, KO about -25 to -30 pA (inferred_from_figure)	+/- 5 pA	pooled events; supports loss of large events or smaller events (not separable)
+Fig 4	H h2 (sIPSC frequency cdf)	yes	curves close, KO above control at low frequency, converging above about 20 Hz	no value taken	n/a	x axis to 50 Hz; instantaneous-frequency-type distribution (inference); KS only
+Fig 5	A-D	no (caption only)	hippocampal evoked field	none	n/a	from text
+Fig 6	A (traces)	yes, 708x554 raster	pyramidal and interneuron voltage responses to current steps	none	n/a	interneuron KO example shows lower AP amplitude, consistent with Table 1
+Fig 6	B (sag)	yes	sag average waveforms and bars: WT about 1.2, HT about 2.0, KO about 2.6 mV	matches Table 1 (1.18, 2.04, 2.57 mV)	bars read +/- 0.2 mV	SEM per legend
+Fig 6	C (rebound)	yes	rebound waveforms and bars: WT about 0.9, HT about 1.2, KO about 1.85 mV	matches Table 1 (0.96, 1.24, 1.86 mV)	+/- 0.2 mV	WT-HT p 0.249, WT-KO 0.0039 per legend
+Supp S1	A-G	no (caption only; Supp text read)	time-frequency and PAC statistics	none	n/a	Table S1 text read: baseline burst frequency 0.84 bursts/min [0.57-1.53]
+Supp S2	LFP + whole-cell at -70, -30, 0 mV	yes (TIFF converted)	inward burst current at -70 mV several hundred pA (scale bars 130-260 pA); outward component at 0 mV	scale bars only	order of 100-400 pA	internal solution not stated; shows that a burst inside a recorded epoch would dwarf a 27-57 pA sIPSC
+Supp S3	A-C	no (caption only)	delayed NMDAR field response	none	n/a	n=6 slices 3 animals (legend) vs 6 animals (text)
+Supp S4	a1-a2, b1-b2	yes	pyramidal F-I (KO higher at 4 current steps, slopes after shift equal); interneuron F-I (large error bars, rightward shift of KO curve)	pyramidal about 23 vs 17 Hz at the top step (inferred_from_figure)	+/- 3 Hz	interneurons 5/4 vs 6/5 cells/animals
