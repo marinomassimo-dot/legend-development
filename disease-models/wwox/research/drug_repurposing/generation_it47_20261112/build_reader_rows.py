@@ -5,10 +5,11 @@ import csv
 from pathlib import Path
 HERE = Path(__file__).resolve().parent; DR = HERE.parent
 csv.field_size_limit(10**9)
-SHOW = {"ph_k2p_sci45_20261111::KP1": "KP1", "nrf2_inv08_20261107::H1": "NRF2-H1", "nrf2_inv08_20261107::H2": "NRF2-H2", "gsk3_eif2b_20261107::H1": "GSK3-H1", "gsk3_eif2b_20261107::H4": "GSK3-H4"}
+SHOW = {"ph_k2p_sci45_20261111::KP1": "KP1", "nrf2_inv08_20261107::H1": "NRF2-H1", "nrf2_inv08_20261107::H2": "NRF2-H2", "gsk3_eif2b_20261107::H1": "GSK3-H1"}
 import re
-PFX = re.compile(r"^[a-z_]+: ")
+PFX = re.compile(r"^[A-Za-z_]+: ")
 clean = lambda t: PFX.sub("", t.strip())
+short = lambda t, n=150: t if len(t) <= n else t[: n - 1].rsplit(" ", 1)[0] + "…"
 
 
 def main():
@@ -20,8 +21,8 @@ def main():
             continue
         r = pk[key]
         rel = clean(r["premise_and_action"].split(" || ")[0].replace("relation: ", "", 1))
-        rivals = r["competing_explanations"].split("rival rows of the same package: ", 1)[-1].strip(" |")
-        rows.append(dict(hyp_id=hid, inv_id=r["inv_id"], label=(r["package_title"] or rel)[:160], observed=clean(r["starting_observation_and_chain"].split(" [source")[0]),
+        rivals = " || ".join(short(x.strip(), 140) for x in r["competing_explanations"].split("rival rows of the same package: ", 1)[-1].strip(" |").split(" || ") if x.strip())
+        rows.append(dict(hyp_id=hid, inv_id=r["inv_id"], label=short(r["package_title"] or rel), observed=clean(r["starting_observation_and_chain"].split(" [source")[0]),
                          hypothesised=(rel if rel != r["package_title"] else r["package_title"]) + ". Exploratory: the package states no therapeutic direction.", alternatives=rivals, strengthen=clean(r["expected_result_by_explanation"]),
                          weaken=clean(r["decision_measure"]), source_rows=r["package_ref"]))
         added += 1

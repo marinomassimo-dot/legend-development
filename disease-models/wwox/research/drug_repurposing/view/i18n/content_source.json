@@ -495,10 +495,6 @@
   "src": "en",
   "text": "position unchanged from IT20 (rank 1): IT28 challenge CH-IT28-ISR-ROLE (batches on the neuronal and the glial/myelin literature) changes what the test must measure and which result would discriminate, not the position."
  },
- "3cbb7f17a1d6": {
-  "src": "en",
-  "text": "A selective inhibitor of the named kinase beside the non-selective agent in the same WWOX-system assay, with the second need's readout measured in the same experiment. IT21 addition: include an arm with the inositol precursor added back, which tests the second action in the same experiment. [IT36] selectivity is biochemical and does not carry to cells (4-6-fold in live cells); attribution needs an isogenic isoform-knockout check per compound or convergent pharmacology. [IT36] in rat organotypic CA1 the GSK3-PI4KIIalpha branch sets synaptic NMDAR current; compare GSK3-route compounds with d-APV at matched NMDAR-current reduction; double GSK3A/B depletion needed."
- },
  "3cefd82cdb00": {
   "src": "en",
   "text": "Block of AMPA and kainate receptors with a noncompetitive 2,3-benzodiazepine and, as the independent partner, the competitive NBQX; perampanel shares the benzodiazepine's pocket and serves as a same-site cross-check."
@@ -606,10 +602,6 @@
  "46f1eae52d16": {
   "src": "en",
   "text": "The chain as written: that BTK acts in the NPY-producing cell of the WWOX-deficient systems that carry the seed."
- },
- "47168ee4071b": {
-  "src": "en",
-  "text": "EXECUTED 2026-11-05: the published same-genotype cases with both a symptomatic and a developmental endpoint were assembled (6 children with both endpoints; a discordance rate is not computable at n below 10, so counts are given instead). Vigabatrin fired the 5-or-more branch (counts with sources); hormonal therapy, diet and cannabidiol fired the fewer-than-5 branch (not computable from the public record). Next: read these counts against the stratum base rates in un registro del repository (non incluso in questo pacchetto) section 1.3; only a WWOX-DEE responder rate with a favourable or improving developmental course clearly above the genetic-DEE base rate would be a WWOX finding. Denominator request, without contact: for each WWOX-DEE series that reports an intervention, the number exposed, the response definition, and a dated developmental instrument before and after a sustained response; where a source gives one, compare within-child continuous scores, since a cut at 70 cannot discriminate. The five-patient series and Choi 2026 come first, and the seven-child series (PMID 42721537) is read when an open route exists. No new exposure is proposed. [IT36] the 12-child series (2 seizure-free, 9 continuing, 1 death) is unread for treatment; its two seizure-free children are the first candidates for a sustained response. [IT46] For the mechanism question (S7): measure the GABA reversal potential by genotype at P13 to P17 against rest, threshold and conductance before any compound arm; then a GABA-supply arm against an unrelated arm of equal measured effect (compound view V20)."
  },
  "477e046ff842": {
   "src": "en",
@@ -754,6 +746,10 @@
  "5cd356f84317": {
   "src": "en",
   "text": "position unchanged from IT20 (rank 5): Position unchanged from IT20. The ten-row ceiling does not displace a row that carries a risk flag or human clinical reports in favour of a conditional probe (the rule stated in the curation block of the context), so this row stays at rank 5 and the two new IT21 conditional probes sit at rank 6, below the line. New IT21 input: the inositol-monophosphatase route to the lithium effect is DISFAVOURED_BY_SIGN_PRECEDENT (an analogy from the lithium-pilocarpine model, not a measurement in the Wwox assay; see what the generator rules out). That result is not what supports this row's concern that the effect is not specific to WWOX loss: the concern comes from the +/+ arm of Cheng 2020 Figure 7d, where lithium suppresses the seizure stage as in the null. Cheng 2020 also ran a pilocarpine model in Wwox mice, so the objection that the two provocations differ is testable in the same system; the inositol arm of that proposal is folded into this row's next test."
+ },
+ "5dd0c8528ba5": {
+  "src": "en",
+  "text": "In WWOX-deficient neural cells with raised GSK3 activity, GSK3 inhibition lowers phospho-Ser535 (human Ser540) of eIF2B epsilon and raises exchange…"
  },
  "5df4b57bf708": {
   "src": "en",
@@ -986,10 +982,6 @@
  "72f2870c7a45": {
   "src": "en",
   "text": "Whether the halved inhibitory current is a supply deficit; the direction depends on the chloride gradient of the preparation, which is unmeasured."
- },
- "7369cdf09af7": {
-  "src": "en",
-  "text": "separates a GSK3-site mechanism from the generic ISR mechanism, which is the question asked"
  },
  "74417f544e31": {
   "src": "en",
@@ -1227,10 +1219,6 @@
   "src": "en",
   "text": "Use only after V02 shows a removable fraction; read the fraction at the burst, not in oocytes."
  },
- "8f5e81ea6863": {
-  "src": "en",
-  "text": "In WWOX-deficient neural cells with raised GSK3 activity, GSK3 inhibition lowers phospho-Ser535 (human Ser540) of eIF2B epsilon and raises exchange activity and"
- },
  "8f8b3380a169": {
   "src": "en",
   "text": "Cytokine transcripts up in two mouse Wwox-deficient preparations (one significant in the null hippocampus)."
@@ -1255,10 +1243,6 @@
   "src": "en",
   "text": "Generated by LEGEND: the compound-to-WWOX path found a curated inhibitor row on HSPA8 that the compound-to-need route had filed as not evaluable (IT21 P3b, proposal G01, broad-recovery path, track B)."
  },
- "917e1b8cd2ba": {
-  "src": "en",
-  "text": "ISRIB (an eIF2B activator) is a discriminating probe, not an assumed rescue: if the defect is a GSK3-site lesion independent of phospho-eIF2, ISRIB is predicted"
- },
  "918960204483": {
   "src": "it",
   "text": "Solo segni non risolti: nel topo cala in tutti e quattro i contrasti ma la differenza poggia in parte sul gruppo di controllo; non è una misura dell'attività."
@@ -1282,10 +1266,6 @@
  "92ea76c9db7b": {
   "src": "it",
   "text": "sconosciute. Le sconosciute sono lacune, non zeri. Contando i modelli e non le colonne, i sistemi indipendenti sono circa"
- },
- "92eb524deb9b": {
-  "src": "en",
-  "text": "H2: The relevant GSK3 isoform in WWOX-deficient neurons is beta, as in retinal ganglion cells, so a beta-directed knock-down reproduces the compound effect and an alpha-directed one does not || H3: Replacing eIF2B epsilon by the Ser-to-Ala form (species numbering checked: human 540, mouse 536, rat 535) restores translation in WWOX-deficient cells to the corrected level, and the catalytically dead epsilon (E572A, as used in 26974342) removes it || H4: ISRIB (an eIF2B activator) is a discriminating probe, not an assumed rescue: if the defect is a GSK3-site lesion independent of phospho-eIF2, ISRIB is predicted to give little correction; if a stability or conformational component is present, it may give some [IT38] ISRIB giving little is also the expected result when phospho-eIF2 alpha is not raised, and without an engagement control and effective exposure it is uninformative; it does not by itself separate the GSK3 serine from other explanations (IT37 audit). || H5: The GSK3 route is not engaged in WWOX-deficient neurons and ISR changes, if any, come from another input"
  },
  "93f1ef260d11": {
   "src": "en",
@@ -1430,6 +1410,10 @@
  "a0da570946e1": {
   "src": "en",
   "text": "Per-animal parvalbumin cell counts by immunostaining in neuron-targeted Wwox deletion against Cre-only controls, at least 3 animals per arm (reopening condition (c) of NP3A1), read together with a maturation and identity marker panel in the same animals, and, where the data holders allow, intrinsic-property and inhibitory-input recordings from labelled parvalbumin cells and a circuit-level read. Alternatives that also reopen it: a deposited library or animal index for GSE158684, or an independent neuron-targeted deletion dataset with at least 3 animals per arm and a parvalbumin-enriched capture. The result is read as six separate rows (number, identity and maturation, marker expression, intrinsic properties, synaptic input, circuit function); a change in one is not carried to another. In every animal used (P14 to P17, matching the phenotype window), on the same sections: a parvalbumin marker, the Rosa26 tdTomato reporter and a Wwox read-out, reporting per animal the fraction of parvalbumin cells reporter-positive, the fraction Wwox-negative and their concordance, beside cell number, identity and marker expression; transcript, protein, activity, cell number and circuit function stay separate results. [SCI42] Order of the inhibitory minimum experiment: M03 (re-record sIPSC with glutamate block, fixed threshold, per-animal summary), then M01 (E_GABA by gramicidin perforated patch, knockout, heterozygote and wild-type littermates), then M02 (age series with a survivor-selection control); M05 and M06 if M03 confirms the amplitude loss."
+ },
+ "a2faba19d938": {
+  "src": "en",
+  "text": "A selective inhibitor of the named kinase beside the non-selective agent in the same WWOX-system assay, with the second need's readout measured in the same experiment. IT21 addition: include an arm with the inositol precursor added back, which tests the second action in the same experiment. [IT36] selectivity is biochemical and does not carry to cells (4-6-fold in live cells); attribution needs an isogenic isoform-knockout check per compound or convergent pharmacology. [IT36] in rat organotypic CA1 the GSK3-PI4KIIalpha branch sets synaptic NMDAR current; compare GSK3-route compounds with d-APV at matched NMDAR-current reduction; double GSK3A/B depletion needed. [IT47 package] Hypotheses read by the generator from the GSK3 and eIF2B package (five rows, no direction asserted, no repurposing candidate named): before any compound arm, the baseline of eIF2B epsilon Ser535 phosphorylation (human Ser540) with total GSK3 and replicate lanes in the WWOX-deficient cells against corrected controls; the isoform (beta or alpha) by genetic knock-down; a phospho-resistant epsilon (Ser to Ala) and a catalytically dead epsilon as epistasis, with two limits found by the independent reader: Ser to Ala cannot separate GSK3 from DYRK2 acting at the priming serine, and the catalytically dead form needs its own control in tissue with intact Gsk3b; an eIF2B activator only as a discriminating probe, with an engagement control; the null (the GSK3 route is not engaged) stated before the measurement. Lithium stays a labelled non-specific comparator. Source: un registro del repository (non incluso in questo pacchetto)."
  },
  "a32410816420": {
   "src": "it",
@@ -1587,10 +1571,6 @@
   "src": "it",
   "text": "Calo robusto nei progenitori shRNA ma segni opposti altrove; la composizione del tessuto può spiegarlo. Il documento P4 lo legge come non risolto."
  },
- "b40a165b4eda": {
-  "src": "en",
-  "text": "H1: In WWOX-deficient neural cells with raised GSK3 activity, GSK3 inhibition lowers phospho-Ser535 (human Ser540) of eIF2B epsilon and raises exchange activity and new-protein labelling beyond what the same compound does in the isogenic corrected cells || H2: The relevant GSK3 isoform in WWOX-deficient neurons is beta, as in retinal ganglion cells, so a beta-directed knock-down reproduces the compound effect and an alpha-directed one does not || H3: Replacing eIF2B epsilon by the Ser-to-Ala form (species numbering checked: human 540, mouse 536, rat 535) restores translation in WWOX-deficient cells to the corrected level, and the catalytically dead epsilon (E572A, as used in 26974342) removes it || H5: The GSK3 route is not engaged in WWOX-deficient neurons and ISR changes, if any, come from another input"
- },
  "b422ec117b63": {
   "src": "en",
   "text": "Lithium"
@@ -1675,6 +1655,10 @@
   "src": "en",
   "text": "A clinical-stage compound (catalogue maximum phase 2) that could serve as the in-slice modulator once the tool result is in."
  },
+ "bee21d3b4855": {
+  "src": "en",
+  "text": "In WWOX-deficient neural cells with raised GSK3 activity, GSK3 inhibition lowers phospho-Ser535 (human Ser540) of eIF2B epsilon and raises exchange activity and new-protein labelling beyond what the same compound does in the isogenic corrected cells. Exploratory: the package states no therapeutic direction."
+ },
  "bf214653e458": {
   "src": "en",
   "text": "Conditional hypothesis: the WWOX-side pattern was read in IT14; the drug-side precedent was read at abstract level only; no WWOX-deficient measurement shows that the block responds to the receptor (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
@@ -1682,10 +1666,6 @@
  "bf7ea87f82fb": {
   "src": "it",
   "text": "Ogni caso risponde alle stesse domande. Il livello dice che tipo di sostegno esiste, non quanto il composto sia promettente: nessun livello è un punteggio di efficacia e la copertura di un percorso descrive collegamenti, non una quota di malattia trattata. Una misura funzionale può essere non specifica (per esempio ridurre le crisi anche nel tipo selvatico). Sconosciuto non significa negativo."
- },
- "bfb773821fdf": {
-  "src": "en",
-  "text": "statement_IPOTESI: ISRIB (an eIF2B activator) is a discriminating probe, not an assumed rescue: if the defect is a GSK3-site lesion independent of phospho-eIF2, ISRIB is predicted to give little correction; if a stability or conformational component is present, it may give some [IT38] ISRIB giving little is also the expected result when phospho-eIF2 alpha is not raised, and without an engagement control and effective exposure it is uninformative; it does not by itself separate the GSK3 serine from other explanations (IT37 audit).. Exploratory: the package states no therapeutic direction."
  },
  "bfd77a0d95dc": {
   "src": "en",
@@ -1714,6 +1694,10 @@
  "c1de3928fd74": {
   "src": "en",
   "text": "Driver, marker or consequence. If the MYC difference vanishes within cell-cycle and potency strata it is a marker and this observation alone justifies no lever; if genetic lowering of MYC moves the progenitor shift it is a driver, and the timing of any window is a separate question, not assumed to be prenatal only. MYC dose is two-sided in cortex and the record holds no safe pharmacological formulation for a developing compartment. Raised MYC cannot be called harmful and lowering it cannot be called therapeutic on this evidence; a MYC-directed lever carries an unmeasured risk in a developing compartment."
+ },
+ "c1e670c69d6e": {
+  "src": "en",
+  "text": "H2: The relevant GSK3 isoform in WWOX-deficient neurons is beta, as in retinal ganglion cells, so a beta-directed knock-down reproduces… || H3: Replacing eIF2B epsilon by the Ser-to-Ala form (species numbering checked: human 540, mouse 536, rat 535) restores translation in… || H4: ISRIB (an eIF2B activator) is a discriminating probe, not an assumed rescue: if the defect is a GSK3-site lesion independent of… || H5: The GSK3 route is not engaged in WWOX-deficient neurons and ISR changes, if any, come from another input"
  },
  "c2d4c1ce61dd": {
   "src": "en",
@@ -1766,6 +1750,10 @@
  "c9f8d6f8ad54": {
   "src": "en",
   "text": "Whether any part of the carded effect is attributable to the named kinase rather than to the agent's other actions, and whether the opposing push on the second need is tolerable. [IT39] An inositol-depletion arm is not GSK-3-free (GSK-3 alpha inactivated, beta not significantly altered; one paper, one isoform); the S9A cross is not an attribution control; time-gated dosing has no timing source."
+ },
+ "c9fa97d1c04d": {
+  "src": "en",
+  "text": "EXECUTED 2026-11-05: the published same-genotype cases with both a symptomatic and a developmental endpoint were assembled (6 children with both endpoints; a discordance rate is not computable at n below 10, so counts are given instead). Vigabatrin fired the 5-or-more branch (counts with sources); hormonal therapy, diet and cannabidiol fired the fewer-than-5 branch (not computable from the public record). Next: read these counts against the stratum base rates in un registro del repository (non incluso in questo pacchetto) section 1.3; only a WWOX-DEE responder rate with a favourable or improving developmental course clearly above the genetic-DEE base rate would be a WWOX finding. Denominator request, without contact: for each WWOX-DEE series that reports an intervention, the number exposed, the response definition, and a dated developmental instrument before and after a sustained response; where a source gives one, compare within-child continuous scores, since a cut at 70 cannot discriminate. The five-patient series and Choi 2026 come first, and the seven-child series (PMID 42721537) is read when an open route exists. No new exposure is proposed. [IT36] the 12-child series (2 seizure-free, 9 continuing, 1 death) is unread for treatment; its two seizure-free children are the first candidates for a sustained response. [IT46] For the mechanism question (S7): measure the GABA reversal potential by genotype at P13 to P17 against rest, threshold and conductance before any compound arm; then a GABA-supply arm against an unrelated arm of equal measured effect (compound view V20). [IT47 layers] For any antiseizure drug named on this thread three layers are kept apart: clinical evidence (what is recorded in children with WWOX-related disease; here single reports without an instrument), preclinical rationale (what an experiment in a WWOX model shows) and untested hypothesis (a mechanism proposed from outside WWOX). An antiseizure effect does not by itself support a preference or a better development; a drug already in clinical use may deserve a comparison only if a WWOX-specific rationale emerges. The order of the investigations is an investment in research, not an expected benefit for a child."
  },
  "ca1a44149841": {
   "src": "en",
@@ -1863,10 +1851,6 @@
   "src": "en",
   "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate. [IT40] A4 Report access resistance, bridge balance and capacitance by genotype; add a Ba2+- or Kv7-blocker-sensitive difference current with its zero-crossing against E_K (about -97 to -98 mV from the declared solutions; the recorded potentials need a junction correction of about -13 mV that 34634460 did not measure, which puts the estimated sag peaks about 16-21 mV below E_K, so the prediction applies to the voltage-clamp difference current, not to the sag peak). [SCI43] Order of arms: (0) capacitance measured directly by genotype and the cell-selection rule stated (pyramidal identity was confirmed from Rin and tau); (1) the same cells with and without synaptic blockers, in bursting and non-bursting slices; (2) Ba2+-sensitive current per pF and Rin share (a low micromolar concentration; a higher concentration and a K2P-blocker group as 2b); (3) XE-991-sensitive current at about −55 to −45 mV, not at rest, with a second Kv7 blocker; (4) current sensitive to an Ih blocker, repeated with a second Ih blocker; (5) dynamic-clamp leak of about 2.7 nS as sufficiency only, with a control leak at the WT rest; (6) an opener only after step 3. An implied reversal near E_K does not separate a K+ loss from a smaller cell with a shunt. [SCI44] Add a KATP arm to step 2b: perforated or cell-attached recording with ATP undisturbed, diazoxide and a sulfonylurea in KO and wild type, lactate or pyruvate add-back; state pipette ATP and glucose. Juvenile barrel-cortex neurons show KATP modulation of Vm, Rin and firing and lactate-driven KATP closure (34766906); this is a conditional metabolic upstream of the K branch (PH4), not a repair. [SCI44-C] The KATP arm of step 2b carries a size expectation: in juvenile barrel cortex the KATP share of resting conductance is about 11-17 percent (INFERENZA, upper bound, ATP-free whole-cell, glutamatergic regular-spiking cells, species and temperature unstated), so a KATP deficit alone would not account for 28 percent; state pipette ATP, record per-cell temperature and cell identity. The Wwox whole-cell internal solution contains 2 mM Na2ATP, so a lactate-closed KATP conductance is weakened for the published values and kept for ATP-undisturbed recordings. [IT45 from SCI45] Add a pHo arm: pHo step (7.4 to 7.1, with 7.7) per cell, whole-cell (pHi clamped by 10 mM HEPES) and sibling perforated-patch cells; pH-sensitive current per pF by genotype; both K2P family-level tools at both pHo. Stop criterion: a genotype difference in interstitial pHo below 0.1 unit stops the pH route; a larger one makes it a partial contributor only (TREK-1 Imin 0.25). Source: un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto). IPOTESI. [IT45 from SCI45-N1] Add burst incidence and the NMDAR-dependent component to the pHo-step arm; a lower pHo in the knock-out may be a protective state against bursts (IPOTESI). Vehicle and d-APV are run at each pH: GluN2B-containing receptors are themselves proton-inhibited (pH IC50 7.3-7.6 in recombinant diheteromers, a further 21-36 percent loss for 7.4 to 7.2; oocytes, magnesium-free), so an apparent drug-by-pH interaction is read against that baseline. Source: nmda_asic_ph_sci45_20261111 (un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto)). [IT46 audit] The IT45 comparison of an opener in the bath with an equal injected current does not hold on burst incidence (a slice-level event that one injected cell cannot change; a direct current also leaves input resistance unchanged while an opener lowers it). Corrected: R5a, the opener lowers the burst rate within each slice against a vehicle time control and the effect is reversed or occluded by a Kv7 blocker (or reproduced by a second opener of another chemotype); R5b, a non-Kv7 hyperpolarising manipulation of the slice is compared at matched shift of the recorded cells' membrane potential and matched input-resistance change, at three or more levels; single-cell comparisons use dynamic clamp on cell-level endpoints only; the animal is the statistical unit. A Kv7-blocker-sensitive current that is not smaller in the knockout does not refute an opener lever (it tests a deficit, not the lever). Useful in general and specific to the Wwox lesion are separate tests: the second needs a genotype-by-drug interaction against a non-Wwox hyperexcitable preparation matched on baseline burst rate. Source: un registro del repository (non incluso in questo pacchetto); un registro del repository (non incluso in questo pacchetto)."
  },
- "d441d5531cec": {
-  "src": "en",
-  "text": "statement_IPOTESI: In WWOX-deficient neural cells with raised GSK3 activity, GSK3 inhibition lowers phospho-Ser535 (human Ser540) of eIF2B epsilon and raises exchange activity and new-protein labelling beyond what the same compound does in the isogenic corrected cells. Exploratory: the package states no therapeutic direction."
- },
  "d456e9186e46": {
   "src": "en",
   "text": "Is there a PDH block in a WWOX-deficient human neural cell at all, and does its direction match the one this lever assumes?"
@@ -1902,10 +1886,6 @@
  "d7efa24460cc": {
   "src": "en",
   "text": "The position of this thread rests on a single laboratory and a single paper in which the comparison drug acted better, and the specificity flag is an unknown rather than a clean reading. The thread is already ordered, so the result changes a standing position rather than adding a new one."
- },
- "d89f9395b733": {
-  "src": "en",
-  "text": "ISRIB corrects equally with and without phospho-eIF2 alpha: then it acts by a route not described in the sources read"
  },
  "d8af2b70ef80": {
   "src": "en",
