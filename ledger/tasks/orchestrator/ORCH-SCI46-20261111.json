@@ -21,7 +21,8 @@
   "2026-11-12 queue item 3 dropped as a duplicate of IT46 P4 on the message of the IT46 Orchestrator (generation_it46_20261111/p4_audit_it46.md read-only: same R5 verdict, animal unit, matched resistance change); my draft was not landed.",
   "2026-11-12 Hcar2 scored on the table symbol Niacr1 (UniProt: one mouse protein with Hcar2, Gpr109a, Niacr1): stated deviation from the preregistered symbol.",
   "2026-11-12 battery on frozen SHA 48e4852a (fresh --no-hardlinks clone, files hard-linked): PASS WITH SKIPS, 239 targets, 11 skipped; gate PASS, LINT WARN no BLOCK, receipts OK (1787), growth PASS; this record update is closure-only.",
-  "2026-11-12 both SCI46 packages are on development/main d493afb8 (Harness published after fixing a gate false positive in its own fixture); session self-evaluation added under research/session_evaluations (Part 1 PASS)."
+  "2026-11-12 both SCI46 packages are on development/main d493afb8 (Harness published after fixing a gate false positive in its own fixture); session self-evaluation added under research/session_evaluations (Part 1 PASS).",
+  "2026-11-12 battery on frozen SHA 6f0ffeac through verify_run (evidence outside the clone): PASS WITH SKIPS, 242 targets, 11 skipped; gate PASS, LINT WARN, receipts OK, growth PASS; this record update is closure-only."
  ],
  "DELEGATIONS": [
   "P producer og-y: asked sonnet/medium; read back medium x84; 84 turns; output 104,391; cache read 13,384,762; 13 sources; staged receipts -79 (12)",
@@ -83,5 +84,17 @@
     }
    ]
   }
- }
+ },
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261112-013417-a1f9a66c",
+   "label": "battery",
+   "sha": "6f0ffeac155ebe2ba2e29a52ee6a2cb75467fc06",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-013417-a1f9a66c",
+   "log_sha256": "18b7a424bd98d39d00c2daaa7714950b547737044fc4d0f092a1f1f00dc2c67c",
+   "clone": "REMOVED"
+  }
+ ]
 }
