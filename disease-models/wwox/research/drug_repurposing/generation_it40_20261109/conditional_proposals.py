@@ -88,7 +88,7 @@ PKG_MAP = {
     # `requires_first` names a prerequisite (premise), not the discriminating measure; the discriminating outcomes are in `refuted_or_replaced_by`. The preregistered run read the measure from `requires_first` (rows kept in p4_gsk3/rows_preregistered_mapping.tsv).
     "gsk3_eif2b_20261107": dict(inv="INV-09", relation_ids=[], symbols=["GSK3B", "GSK3A", "EIF2B5"],  # symbols added after the case: the preregistered run left them empty, so the context join was not tried (prediction c was untested, then wrong)
                                  observation=[], relation=["statement_IPOTESI"], context=["context"], action=["documented_action_on_the_node"], compound=["compound_or_tool", "tool_or_candidate"],
-                                premise=["requires_first"], competing=[], expected=["benefit_if_true"], measure=["refuted_or_replaced_by"], title="statement_IPOTESI", sibling_cell="statement_IPOTESI"),
+                                premise=["requires_first"], competing=["refuted_or_replaced_by"], expected=["benefit_if_true"], measure=["refuted_or_replaced_by"], title="statement_IPOTESI", sibling_cell="statement_IPOTESI"),
     "nrf2_inv08_20261107": dict(inv="INV-08", relation_ids=["S10"], observation=[], support=["what_supports"], relation=["hypothesis"], context=["transfer_note"], action=[], compound=[],
                                 premise=["status", "what_refutes"], expected=[], measure=["what_separates"], title="hypothesis", sibling_cell="hypothesis", action_from_relation="S10"),
 }
