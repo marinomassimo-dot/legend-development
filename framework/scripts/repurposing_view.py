@@ -5578,7 +5578,8 @@ def build(dr: Path = DEFAULT_DR, source: str = "full", lang: str | None = None) 
 
 # ------------------------------------------------------------------ real viewport emulation (Chromium DevTools Protocol, stdlib only)
 VIEWPORTS = [(360, 780, True), (390, 844, True), (768, 1024, False), (1280, 900, False)]   # (width, height, mobile emulation)
-CHROMIUM_CANDIDATES = ["/snap/chromium/current/usr/lib/chromium-browser/chrome", "chromium", "chromium-browser", "google-chrome"]
+# Installed launchers first: the Snap-internal executable bypasses the launcher's runtime and can abort on missing GLIBC (VPS, 2026-11-12).
+CHROMIUM_CANDIDATES = ["/usr/bin/chromium-browser", "chromium", "chromium-browser", "google-chrome", "/snap/chromium/current/usr/lib/chromium-browser/chrome"]
 
 
 def find_chromium() -> str | None:
