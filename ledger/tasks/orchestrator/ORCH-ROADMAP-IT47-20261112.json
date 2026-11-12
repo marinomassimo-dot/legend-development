@@ -1,0 +1,122 @@
+{
+  "_schema": "orchestrator-task-v1",
+  "TASK_ID": "ORCH-ROADMAP-IT47-20261112",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "P0",
+  "START_UTC": "2026-11-12T07:40:00Z",
+  "OBJECTIVE": "IT47: from the available hypotheses to effective pharmacological generation: make the generator consume the hypotheses HE46 made accessible (two packages of different structure), consume all of SCI46 including the expression follow-up with reviewed wording, correct two reasoning jumps in the IT46 experimental text, prove the change on a new case against an independent reference, show what to investigate first (five languages, phone), prepare the Claude Science comparison entry point, DREAM with an effect on the next work. Drug repurposing for WWOX loss of function; gene therapy outside the pharmacological proposals.",
+  "AUTHORISED_QUEUE_20261108": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_P0": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Close the previous cycle and fix the baseline: remote, checkout, record, deliveries, workflows (IT46 CI #660 and view publication #35 on cff57777, site check, IT46 record steps P7 and P10); distinguish battery candidate, integrated commit and published SHA",
+          "status": "IN_PROGRESS",
+          "owner": "orchestrator",
+          "evidence": "IT46 landed on development/main at cff57777 (battery SHA 5a775909 PASS WITH SKIPS 244/11; first push at cfac505c REFUSED by the publication gate for a markdown link, fixed). CI #660 and view publication #35 in progress at registration. Dependencies: P1-P3 independent of CI; P4 after P1; P5 after P1-P4; P9 waits for batteries and CI."
+        }
+      ]
+    },
+    "OBJ_P1": {
+      "order": 2,
+      "steps": [
+        {
+          "step": "Make the generator consume the hypotheses_only packages through hypotheses_for (one INV-18 package, one INV-08 package): explicit cell mapping to observation/source, relation, context, action, unresolved premise, competing explanations, discriminating measure; before/after by running the generator; boundary with Harness",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P2": {
+      "order": 3,
+      "steps": [
+        {
+          "step": "Consume all of SCI46 including the expression follow-up: what IT46 already took, remaining deltas with before/after, readouts for neurons, astrocytes and microglia, RNA vs protein vs localisation vs activity vs function, review of over-strong wording, no automatic ranking change",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P3": {
+      "order": 4,
+      "steps": [
+        {
+          "step": "Correct two possible jumps: the S5 amplitude/frequency wording (about a fifth read as to a fifth) and the inferences in p9_two_levers_it46.md (additivity, saturation, equal cellular variables vs equal network manipulations, E_GABA with conductance, threshold, time); coordinate with SCI47; propagate to live consumers with dated updates",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P4": {
+      "order": 5,
+      "steps": [
+        {
+          "step": "New case not used to build the change: question and selection rule, snapshot and inputs, simple baseline, expected difference, failure outcomes, independent reference not made of engine labels; compare simple target search / previous path / path with hypothesis and context consumption; measure useful proposals, wrong links, explicit premises, next-experiment change, cost and time",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P5": {
+      "order": 6,
+      "steps": [
+        {
+          "step": "Make visible what to investigate first (investigations and open-questions map): question, decision, reason, in-silico work, indispensable new measurement, outcome that would change the pharmacological proposal; hypothesis / probe / compound to compare / intervention with functional evidence; AED separation of clinical evidence, preclinical rationale and untested hypothesis; five languages and phone",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P6": {
+      "order": 7,
+      "steps": [
+        {
+          "step": "Claude Science comparison: documented entry point only unless complete artefacts arrive (phase A frozen independent vs phase B); no summary taken as full evidence",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P7": {
+      "order": 8,
+      "steps": [
+        {
+          "step": "DREAM with an effect on the next work: source -> relation -> alternatives -> discriminating test -> consumer updated; revival triggers checked, not forced",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P8": {
+      "order": 9,
+      "steps": [
+        {
+          "step": "Autonomous queue after the first complete increment: second unconsumed package, a lost proposal by representation limit, two levers with a common endpoint, a duplicate removed, a short next-batch brief",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P9": {
+      "order": 10,
+      "steps": [
+        {
+          "step": "Closure: verify_run batteries by SHA, land and publish, remote/CI/site for the relevant SHAs, cleanup of rebuildable temporaries, no cron or monitor added; pending checks stay open in the record",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    }
+  }
+}
