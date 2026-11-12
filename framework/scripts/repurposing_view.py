@@ -5582,7 +5582,16 @@ VIEWPORTS = [(360, 780, True), (390, 844, True), (768, 1024, False), (1280, 900,
 CHROMIUM_CANDIDATES = ["/usr/bin/chromium-browser", "chromium", "chromium-browser", "google-chrome", "/snap/chromium/current/usr/lib/chromium-browser/chrome"]
 
 
+def _browser_starts(binary: str) -> bool:
+    import subprocess
+    try:
+        return subprocess.run([binary, "--version"], capture_output=True, timeout=30).returncode == 0
+    except (OSError, subprocess.SubprocessError):
+        return False
+
+
 def find_chromium() -> str | None:
+    import glob
     import os
     import shutil
     # Hosted Ubuntu supplies packaged Chrome with its AppArmor profile via CHROME_BIN.
@@ -5590,7 +5599,10 @@ def find_chromium() -> str | None:
     configured = os.environ.get("CHROME_BIN")
     if configured and shutil.which(configured):
         return configured
-    return next((b for b in CHROMIUM_CANDIDATES if shutil.which(b) or Path(b).exists()), None)
+    # A candidate that exists but cannot start (a Snap revision needing a newer GLIBC) is skipped; older installed revisions come last.
+    older = sorted(glob.glob("/snap/chromium/[0-9]*/usr/lib/chromium-browser/chrome"), key=lambda p: int(p.split("/")[3]), reverse=True)
+    found = [b for b in [*CHROMIUM_CANDIDATES, *older] if shutil.which(b) or Path(b).exists()]
+    return next((b for b in found if _browser_starts(b)), found[0] if found else None)
 
 
 class Cdp:
