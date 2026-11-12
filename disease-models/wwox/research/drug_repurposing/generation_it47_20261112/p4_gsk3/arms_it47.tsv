@@ -1,0 +1,13 @@
+symbol	catalogue_id	name	action_type	status_class	modality
+GSK3A	CAT:CHEMBL1200826	LITHIUM CARBONATE	INHIBITOR	approved_any_source	small_molecule
+GSK3A	CAT:CHEMBL1969664	AZD-1080	INHIBITOR	clinical_candidate	small_molecule
+GSK3A	CAT:CHEMBL2103738	LITHIUM CITRATE	INHIBITOR	approved_any_source	small_molecule
+GSK3A	CAT:CHEMBL362558	LY-2090314	INHIBITOR	clinical_candidate	small_molecule
+GSK3B	CAT:CHEMBL1200826	LITHIUM CARBONATE	INHIBITOR	approved_any_source	small_molecule
+GSK3B	CAT:CHEMBL1969664	AZD-1080	INHIBITOR	clinical_candidate	small_molecule
+GSK3B	CAT:CHEMBL2103738	LITHIUM CITRATE	INHIBITOR	approved_any_source	small_molecule
+GSK3B	CAT:CHEMBL3545157	TIDEGLUSIB	INHIBITOR	clinical_candidate	small_molecule
+GSK3B	CAT:CHEMBL362558	LY-2090314	INHIBITOR	clinical_candidate	small_molecule
+GSK3B	CAT:CHEMBL483465	ELRAGLUSIB	INHIBITOR	clinical_candidate	small_molecule
+IMPA1	CAT:CHEMBL1200826	LITHIUM CARBONATE	INHIBITOR	approved_any_source	small_molecule
+IMPA1	CAT:CHEMBL2103738	LITHIUM CITRATE	INHIBITOR	approved_any_source	small_molecule

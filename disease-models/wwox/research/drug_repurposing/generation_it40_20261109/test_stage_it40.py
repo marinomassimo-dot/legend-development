@@ -77,13 +77,19 @@ class ReaderView(unittest.TestCase):
         linked = set()
         for pkg in ("ampa_nmda_discrim_20261108", "membrane_hypotheses_20261108"):
             linked |= {r["hyp_id"] for r in tsv(DR / pkg / "output/consumer_links.tsv")}
-        self.assertEqual(ids, linked)
+        # IT47 P1: rows built from the hypotheses_only packages (generation_it47_20261112/build_reader_rows.py SHOW) are the second, declared source of the reader table
+        sys.path.insert(0, str(DR / "generation_it47_20261112")); import build_reader_rows as brr
+        self.assertEqual(ids, linked | set(brr.SHOW.values()))
         for r in rows:
             self.assertIsNone(NAMES.search(" ".join(r[k] for k in rv.PHYSIO_FIELDS)), r["hyp_id"])
 
     def test_view_map_by_investigation(self):
         m = rv.physiological_view(DR)
-        self.assertEqual({k: len(v) for k, v in m.items()}, {"INV-05": 3, "INV-18": 3})
+        import collections, build_reader_rows as brr
+        pk = {r["hyp_id"]: r["inv_id"] for r in tsv(DR / rv.PHYSIO_FILE)}
+        extra = collections.Counter(pk[h] for h in brr.SHOW.values())
+        expect = collections.Counter({"INV-05": 3, "INV-18": 3}) + extra
+        self.assertEqual({k: len(v) for k, v in m.items()}, dict(expect))
 
 class Rendered(unittest.TestCase):
     """The built pages: both editions, all five languages, carry the block under both investigations, with the language's own heading and no compound name."""

@@ -13,10 +13,11 @@ class PackageRows(unittest.TestCase):
     def setUpClass(cls):
         cls.rows, cls.unmapped = cp.package_rows()
 
-    def test_eleven_rows_from_two_packages_of_different_structure(self):
+    def test_sixteen_rows_from_three_packages_of_different_structure(self):
         ids = sorted(r["proposal_id"] for r in self.rows)
-        self.assertEqual(11, len(ids))
-        self.assertEqual({"INV-18", "INV-08"}, {r["inv_id"] for r in self.rows})
+        self.assertEqual(16, len(ids))
+        self.assertEqual({"INV-18", "INV-08", "INV-09"}, {r["inv_id"] for r in self.rows})
+        self.assertEqual(5, sum(1 for r in self.rows if "gsk3_eif2b" in r["proposal_id"]))
         self.assertEqual(5, sum(1 for r in self.rows if "ph_k2p" in r["proposal_id"]))
         self.assertEqual(6, sum(1 for r in self.rows if "nrf2_inv08" in r["proposal_id"]))
 
@@ -39,6 +40,13 @@ class PackageRows(unittest.TestCase):
         h5 = [r for r in self.rows if r["proposal_id"].endswith("nrf2_inv08_20261107::H5")][0]
         for k in ("H1", "H2", "H3", "H4", "H6"):
             self.assertIn(k + ":", h5["competing_explanations"])
+
+    def test_gsk3_package_prerequisite_is_a_premise_and_the_refuting_outcomes_are_the_measure(self):
+        """reader R0 (IT47 P4): requires_first names a prerequisite, refuted_or_replaced_by the discriminating outcomes"""
+        for r in [x for x in self.rows if "gsk3_eif2b" in x["proposal_id"]]:
+            self.assertIn("requires_first:", r["premise_and_action"])
+            self.assertTrue(r["decision_measure"].startswith("refuted_or_replaced_by:"), r["proposal_id"])
+            self.assertIn("none", r["direction_stated"])
 
     def test_cell_context_changes_the_k2p_proposal(self):
         kp1 = [r for r in self.rows if r["proposal_id"].endswith("ph_k2p_sci45_20261111::KP1")][0]

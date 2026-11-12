@@ -5,7 +5,7 @@ import csv
 from pathlib import Path
 HERE = Path(__file__).resolve().parent; DR = HERE.parent
 csv.field_size_limit(10**9)
-SHOW = {"ph_k2p_sci45_20261111::KP1": "KP1", "nrf2_inv08_20261107::H1": "NRF2-H1", "nrf2_inv08_20261107::H2": "NRF2-H2"}
+SHOW = {"ph_k2p_sci45_20261111::KP1": "KP1", "nrf2_inv08_20261107::H1": "NRF2-H1", "nrf2_inv08_20261107::H2": "NRF2-H2", "gsk3_eif2b_20261107::H1": "GSK3-H1", "gsk3_eif2b_20261107::H4": "GSK3-H4"}
 import re
 PFX = re.compile(r"^[a-z_]+: ")
 clean = lambda t: PFX.sub("", t.strip())

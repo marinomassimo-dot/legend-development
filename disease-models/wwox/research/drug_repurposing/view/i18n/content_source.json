@@ -11,10 +11,6 @@
   "src": "en",
   "text": "The percent of the isolated current removed in the Wwox slice (not measured) and the maximum on triheteromers (not reached in any text read)."
  },
- "01fb1707fc10": {
-  "src": "en",
-  "text": "In the neuron-specific knockout slices at P13 to P17 the spontaneous inhibitory currents of layer II/III pyramidal cells are reduced, in amplitude by about half and in frequency by about a fifth (high-chloride pipette, no evoked-current experiment). A fall larger in amplitude than in frequency points at the receptor response or the GABA content of each event rather than at interneuron number (inference, with caveats). The catalogue lists over a hundred rows for this relation; their regulatory status is a separate catalogue field and is not assessed here, and each is qualified and kept visible with its next step (IPOTESI)."
- },
  "01fe147e4f17": {
   "src": "en",
   "text": "A peptide inhibitor of the chaperone HSC70 (HSPA8) used as a cell-level probe, with lysosomal and genetic controls (identified by its ChEMBL record below)"
@@ -71,6 +67,10 @@
   "src": "en",
   "text": "A blocker response shows contribution as in normal cortex, not a defect; the passive-size reading is the rival; a sodium-current block is reported for one tool in thalamic neurons (abstract level)."
  },
+ "0889898ec613": {
+  "src": "en",
+  "text": "H1: Response insufficient for the stress (low NRF2 tone or reserve) || H3: Benefit mediated by astrocytes or another compartment || H4: Differences between cell types or developmental phases || H5: Compound benefit independent of NRF2 || H6: No benefit or worsening"
+ },
  "098bc6a615c5": {
   "src": "en",
   "text": "That an inhibitor of the DNA-damage response is a lever for a WWOX-deficient developing brain."
@@ -102,6 +102,10 @@
  "0d10657f347d": {
   "src": "en",
   "text": "PDH activity and flux in a WWOX-deficient human neural cell against an isogenic control, with the glycolytic readout measured in the same material. [IT36] ECAR is not a lactate readout without an oxygen correction; measure lactate and pyruvate directly with redox state. [IT43] The isogenic pair and the oxygen series of INV-19 can carry this measurement: amount and phosphorylation of the step at all three sites, activity before and after dephosphorylation, and the four kinase transcripts, read next to BNIP3 from the same lysates. Reading (IPOTESI): BNIP3, kinase and phosphorylation all up supports a HIF-linked restraint and keeps the kinase lever conditional on it; BNIP3 up with the step unrestrained leaves the lever down while INV-19 stands; neither up points to the culture or oxygen condition. The compound arms follow only after a restraint is measured. [SCI44] Read the step on marker-resolved or sorted material; the dominant kinase RNA differs by class and species (mouse neurons PDK2; human neurons PDK3; astrocytes PDK4 in both species; human oligodendrocytes PDK4): include PDK2-4 transcript and protein per class, a genetic knockdown of the dominant isoform before any compound, and the scaffold condition of any tool that acts through the enzyme-complex scaffold. A restraint measured in one class does not transfer to another."
+ },
+ "0d345265b169": {
+  "src": "en",
+  "text": "Genetic KEAP1 lowering with a functional readout in the WWOX-deficient neural system, isogenic control, before any electrophile is compared. [IT36] precedent for a non-cell-autonomous (astrocyte) route exists in another system with an Nrf2-null control and rescue; KEAP1 knockdown needs an NFE2L2-loss cross; composition is not astrocyte-mediated benefit. [IT46 audit] The covalent and the non-covalent compound are not compared at equal concentration and time (the electrophile is consumed by thiols and persists after washout): a phase 0 matches exposure on a proximal NRF2 reading (concentration-response, time-course, cytotoxicity, glutathione, washout) first; at least two independent NFE2L2-knockdown reagents with measured efficiency; an NRF2-independent control gene set beside the target set; a WWOX genotype factor, since the pair speaks to the NRF2 pathway and not yet to the WWOX hypotheses; neuron and astrocyte cultures have no network, so a network outcome is a second phase. Source: un registro del repository (non incluso in questo pacchetto); un registro del repository (non incluso in questo pacchetto). [IT46 SCI46] Reagent pair named (SCI46): the non-covalent KEAP1 Kelch binder (a catalogue tool probe) against a covalent comparator, in one neural cell class at a time. X0: nuclear NRF2, two target genes (G6PD may be one), NQO1 enzyme activity and a risk panel (glutathione, GPX4, lipid peroxidation); the same lysates serve INV-07 step 1 and INV-19 (a shared preparation, not a shared cause). X1: a graded occupancy ladder matched on on-target response, not on concentration. X2: an adequacy criterion for NFE2L2 and KEAP1 loss fixed before the experiment, a KEAP1-loss occlusion arm, and a panel or array whose survivors after loss are read beyond NQO1. X3: neuron-only and astrocyte-only loss. Viability is read beside a function endpoint. Source: un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto) (NH1-NH4). [IT46 SCI46q] Readouts by cell class (SCI46 queue item, RNA class means, mouse P7 and P17 oligodendrocyte-lineage, one human neuron sample; not protein or activity): a neuron-readable target panel (Gclm, Txnrd1, Gpx4, G6pdx, Srxn1, Gclc) beside nuclear NRF2; NQO1 and HMOX1 as induced-state readouts with the per-class baseline (NQO1 is at the floor in mouse neurons, 0.84 FPKM, and low in astrocytes, 3.02; HMOX1 is 2.43 in neurons, 14.85 in astrocytes and 260.42 in microglia); HMOX1, NFE2L2 and SLC7A11 are astrocyte-biased, so a bulk transcript readout can move with cell composition alone; the HCAR2 route of a fumarate needs a microglia-like cell (Hcar2 18.12 FPKM in microglia against 0.10 in neurons and astrocytes). Source: un registro del repository (non incluso in questo pacchetto). [IT47 reading limits] RNA class means do not say what a cell can do: a low value is not an absent function, a gene readable in neurons is not thereby an NRF2-specific readout (other regulators act on each), and KEAP1 RNA in a class does not show that the protein is available to a binder. The held RNA reads Hcar2 only in microglia, so a culture without microglia is not expected to test the HCAR2 route of a fumarate unless Hcar2 protein is shown in the cells used."
  },
  "0d49c490f477": {
   "src": "en",
@@ -190,6 +194,14 @@
  "19df3deb1317": {
   "src": "en",
   "text": "A residual fall beyond a control matched to the same measured current reduction, together with a loss of coupling, keeps the connexin question open."
+ },
+ "1a8e28bd3b5e": {
+  "src": "en",
+  "text": "NFE2L2 and NQO1 transcripts lower in W01, NFE2L2 lower in W02; ROS higher in fly and late-passage MEF [Audit: the two ROS supports come from systems with no NRF2 measure.]"
+ },
+ "1a95d88bc7d0": {
+  "src": "en",
+  "text": "induced target activity plus a functional deficit that further NRF2 raising corrects (or does not)"
  },
  "1ac2249b3bbf": {
   "src": "it",
@@ -339,6 +351,10 @@
   "src": "en",
   "text": "Sag and rebound are larger in the knockout; no Ih-blocker arm and no voltage-clamp current exist in the records read. In normal cortex an Ih blocker reduces sag."
  },
+ "2da954910fab": {
+  "src": "en",
+  "text": "not stated by the package"
+ },
  "2dae8e3c14af": {
   "src": "en",
   "text": "It separates a deficit of GABA supply from a postsynaptic or chloride-gradient deficit: only the first is helped by more GABA."
@@ -458,6 +474,10 @@
  "38eda86f16db": {
   "src": "en",
   "text": "Up: a current blocked at low micromolar Ba2+ and smaller per pF in the mutant (the opener route is then narrow). Down: a Ba2+-sensitive share only at millimolar concentrations, equal per pF, or a lower capacitance with flat time constant."
+ },
+ "3a799fb7e396": {
+  "src": "en",
+  "text": "Response insufficient for the stress (low NRF2 tone or reserve)"
  },
  "3b261fe99e59": {
   "src": "it",
@@ -591,6 +611,10 @@
   "src": "en",
   "text": "EXECUTED 2026-11-05: the published same-genotype cases with both a symptomatic and a developmental endpoint were assembled (6 children with both endpoints; a discordance rate is not computable at n below 10, so counts are given instead). Vigabatrin fired the 5-or-more branch (counts with sources); hormonal therapy, diet and cannabidiol fired the fewer-than-5 branch (not computable from the public record). Next: read these counts against the stratum base rates in un registro del repository (non incluso in questo pacchetto) section 1.3; only a WWOX-DEE responder rate with a favourable or improving developmental course clearly above the genetic-DEE base rate would be a WWOX finding. Denominator request, without contact: for each WWOX-DEE series that reports an intervention, the number exposed, the response definition, and a dated developmental instrument before and after a sustained response; where a source gives one, compare within-child continuous scores, since a cut at 70 cannot discriminate. The five-patient series and Choi 2026 come first, and the seven-child series (PMID 42721537) is read when an open route exists. No new exposure is proposed. [IT36] the 12-child series (2 seizure-free, 9 continuing, 1 death) is unread for treatment; its two seizure-free children are the first candidates for a sustained response. [IT46] For the mechanism question (S7): measure the GABA reversal potential by genotype at P13 to P17 against rest, threshold and conductance before any compound arm; then a GABA-supply arm against an unrelated arm of equal measured effect (compound view V20)."
  },
+ "477e046ff842": {
+  "src": "en",
+  "text": "KP2: A TASK-3 closure by acid explains the pair (the coda's DREAM chain) || KP3: A lactate-driven intracellular acidification acts on these channels in the recorded cell || KP4: A tool-by-pH interaction is the discriminating action: an occlusion test of the closed share || KP5: Metabolic change without relevant acidification acts through a K+ conductance not set by pH (KATP, or a direct lactate action on TREK1)"
+ },
  "47f65be4fc58": {
   "src": "it",
   "text": "Più alta in organoide, topo e P47T e negli organoidi di pazienti: letture diverse, stessa direzione."
@@ -618,6 +642,14 @@
  "4ae99e2edac2": {
   "src": "en",
   "text": "E3 - card reviewed with assertions; no WWOX-side result read beyond abstract"
+ },
+ "4cedce94df8a": {
+  "src": "en",
+  "text": "Response insufficient for the stress (low NRF2 tone or reserve). Exploratory: the package states no therapeutic direction."
+ },
+ "4d5b8eceabfd": {
+  "src": "en",
+  "text": "a correction of translation and one functional read-out specific to the null (not seen in controls)"
  },
  "4d6578e29718": {
   "src": "en",
@@ -654,10 +686,6 @@
  "51ab244c307d": {
   "src": "en",
   "text": "Repeat the spontaneous inhibitory-current measurement with a physiological-chloride pipette and a GABA-A antagonist to confirm the events, add evoked inhibitory currents and the GABA reversal potential in the same cells; only then a modulator arm and a reuptake-block arm at the dose that restores the same fraction of the amplitude, against a non-specific arm at matched cellular effect, with the genotype interaction as the Wwox-specific reading."
- },
- "53b69ac992e9": {
-  "src": "en",
-  "text": "A compound benefit can be independent of NRF2 (the readout was raised by compounds that do not bind KEAP1); the only catalogued NRF2-lowering row lowers many proteins and is not a control; no neuron or astrocyte data exist for any of these compounds; a binding assay at the Kelch domain cannot see covalent modifiers. [IT46 SCI46] No source has the binder in primary neurons or astrocytes with an NRF2-loss arm. Where a loss was verified (primary rat microglia, shRNA and knockout) the binder's induction and protection were lost and KEAP1 knockout occluded them; in a human neuronal line a partial NRF2 loss left the effect unchanged, which is uninterpretable; one human neuronal use on a KEAP1-overexpressing, already NRF2-high background moved ferroptosis markers in the harmful direction (no loss arm). The Davies source's own siRNA arms are categorical labels in the database copy, with no numbers and no knockdown efficiency, and the covalent bardoxolone methyl sits in the same design."
  },
  "53e618810345": {
   "src": "it",
@@ -815,6 +843,10 @@
   "src": "en",
   "text": "The chain that motivates this lever predicts a PDH block, and the two available data point the other way: the kinase transcript is down and the one human activity measurement shows no difference. Ordering the compound before the premise is measured is how a plausible chain becomes a wasted experiment."
  },
+ "63eefa8357cd": {
+  "src": "en",
+  "text": "NRF2 nuclear protein, NQO1 activity and ROS before and after a fixed challenge, per genotype and clone"
+ },
  "6443c1796cd7": {
   "src": "en",
   "text": "Whether the absence is a catalogue coverage limit, a target-listing limit, or a genuine absence of pharmacology. This package did not separate those three."
@@ -911,6 +943,10 @@
   "src": "en",
   "text": "Neuronal culture and epileptic-mouse data only; protection by the entry block is not benefit; the fuel's effect was measured as enzyme activity, not flux."
  },
+ "6edb952352a5": {
+  "src": "en",
+  "text": "In the neuron-specific knockout slices at P13 to P17 the spontaneous inhibitory currents of layer II/III pyramidal cells are reduced: the printed mean amplitude falls by about half (57.3 to 27.5 pA, a fall of 52 percent) and the printed mean frequency falls by about a fifth (10.3 to 8.4 Hz, a fall of 18 percent, with spread as large as the mean); high-chloride pipette, no evoked-current experiment. Whether the amplitude fell more than the frequency is not shown by these means: event detection, pooling of events and the spread leave the receptor response, the GABA content of each event and the interneuron output all open (inference, weak). The catalogue lists over a hundred rows for this relation; their regulatory status is a separate catalogue field and is not assessed here, and each is qualified and kept visible with its next step (IPOTESI)."
+ },
  "6ee3608f2a55": {
   "src": "en",
   "text": "The Methods drug list contains no synaptic blocker, so the intrinsic recordings were probably made with synapses intact, while most knockout slices burst."
@@ -951,6 +987,10 @@
   "src": "en",
   "text": "Whether the halved inhibitory current is a supply deficit; the direction depends on the chloride gradient of the preparation, which is unmeasured."
  },
+ "7369cdf09af7": {
+  "src": "en",
+  "text": "separates a GSK3-site mechanism from the generic ISR mechanism, which is the question asked"
+ },
  "74417f544e31": {
   "src": "en",
   "text": "The HDAC5 to SLC2A1 thread rests on one muscle knockdown observation and has been carried as a limit, not a veto; the premise measurement it needs is the one open step of the IT28 challenge (WO-30). It sits at rank 7 because no neural line with the constructs is held and the readout does not change another row today."
@@ -971,6 +1011,10 @@
   "src": "it",
   "text": "Capire se, prima della prima scarica, la densità gliale in un cervello privo di Wwox è sotto, pari o sopra il selvatico: il segno è discordante tra specie e la scheda J01 si astiene."
  },
+ "779ae6bd875d": {
+  "src": "en",
+  "text": "equal pHo (|difference| below 0.1) and equal pH-sensitive current per pF in the same cells"
+ },
  "7876a323a562": {
   "src": "en",
   "text": "In vitro tool compound only"
@@ -978,6 +1022,10 @@
  "78dcd1c540d0": {
   "src": "it",
   "text": "Misurato solo nella mosca (più alto solo con amiloide): nessuna misura in sistemi neurali umani o murini."
+ },
+ "79027af1461b": {
+  "src": "en",
+  "text": "Response already induced but functionally insufficient"
  },
  "79a188d2a6e2": {
   "src": "en",
@@ -1059,6 +1107,10 @@
   "src": "it",
   "text": "Esplorativo: un risultato computazionale non è efficacia terapeutica."
  },
+ "82455c2f9cfb": {
+  "src": "en",
+  "text": "HMOX1, SRXN1, GSR higher; MEF early redox transcripts higher; P47T Hmox1/Srxn1 up"
+ },
  "825be1bb0bc3": {
   "src": "en",
   "text": "Measure the tissue pH; if this compound is used, run the ifenprodil-site tool and the full competitive antagonist at the same two controlled pH values, with its recombinant maximum at each pH known first."
@@ -1074,6 +1126,10 @@
  "8469c8e9d812": {
   "src": "en",
   "text": "None; kept so the filing is not mistaken for evidence: the registry row is not evidence of GluN2B potency in nanomolar."
+ },
+ "855a9b7923c9": {
+  "src": "en",
+  "text": "If E1 holds: the genotype difference in Rin shrinks at acid pHo (occlusion) and the pH-sensitive current per pF is larger in wild type"
  },
  "85aad315b6fd": {
   "src": "it",
@@ -1135,6 +1191,10 @@
   "src": "en",
   "text": "Selective tool compounds exist; the assay is the carded one."
  },
+ "8a15b0645082": {
+  "src": "en",
+  "text": "extracellular acid closes both channels (recombinant pH50 7.3-7.5); closure removes a K+ conductance (INFERENZA). Exploratory: the package states no therapeutic direction."
+ },
  "8b798c978bad": {
   "src": "en",
   "text": "In the repository's own records raising GABAergic tone is unresolved (an irreversible inactivator of GABA transaminase resolved spasms in one of two children, partly in the other, with null reports elsewhere, and carries a brain-imaging signal); a compensatory change in tonic inhibition or transporter expression could mask the effect."
@@ -1167,6 +1227,10 @@
   "src": "en",
   "text": "Use only after V02 shows a removable fraction; read the fraction at the burst, not in oocytes."
  },
+ "8f5e81ea6863": {
+  "src": "en",
+  "text": "In WWOX-deficient neural cells with raised GSK3 activity, GSK3 inhibition lowers phospho-Ser535 (human Ser540) of eIF2B epsilon and raises exchange activity and"
+ },
  "8f8b3380a169": {
   "src": "en",
   "text": "Cytokine transcripts up in two mouse Wwox-deficient preparations (one significant in the null hippocampus)."
@@ -1191,6 +1255,10 @@
   "src": "en",
   "text": "Generated by LEGEND: the compound-to-WWOX path found a curated inhibitor row on HSPA8 that the compound-to-need route had filed as not evaluable (IT21 P3b, proposal G01, broad-recovery path, track B)."
  },
+ "917e1b8cd2ba": {
+  "src": "en",
+  "text": "ISRIB (an eIF2B activator) is a discriminating probe, not an assumed rescue: if the defect is a GSK3-site lesion independent of phospho-eIF2, ISRIB is predicted"
+ },
  "918960204483": {
   "src": "it",
   "text": "Solo segni non risolti: nel topo cala in tutti e quattro i contrasti ma la differenza poggia in parte sul gruppo di controllo; non è una misura dell'attività."
@@ -1214,6 +1282,10 @@
  "92ea76c9db7b": {
   "src": "it",
   "text": "sconosciute. Le sconosciute sono lacune, non zeri. Contando i modelli e non le colonne, i sistemi indipendenti sono circa"
+ },
+ "92eb524deb9b": {
+  "src": "en",
+  "text": "H2: The relevant GSK3 isoform in WWOX-deficient neurons is beta, as in retinal ganglion cells, so a beta-directed knock-down reproduces the compound effect and an alpha-directed one does not || H3: Replacing eIF2B epsilon by the Ser-to-Ala form (species numbering checked: human 540, mouse 536, rat 535) restores translation in WWOX-deficient cells to the corrected level, and the catalytically dead epsilon (E572A, as used in 26974342) removes it || H4: ISRIB (an eIF2B activator) is a discriminating probe, not an assumed rescue: if the defect is a GSK3-site lesion independent of phospho-eIF2, ISRIB is predicted to give little correction; if a stability or conformational component is present, it may give some [IT38] ISRIB giving little is also the expected result when phospho-eIF2 alpha is not raised, and without an engagement control and effective exposure it is uninformative; it does not by itself separate the GSK3 serine from other explanations (IT37 audit). || H5: The GSK3 route is not engaged in WWOX-deficient neurons and ISR changes, if any, come from another input"
  },
  "93f1ef260d11": {
   "src": "en",
@@ -1338,6 +1410,10 @@
  "9e1c38e4e909": {
   "src": "it",
   "text": "Capire se l'attività di GSK3 è davvero aumentata quando WWOX manca (oggi c'è solo un blot di fosfo-Ser9) e in che direzione ogni classe di inibitore sposta la via Wnt; i composti trovati sono strumenti per questo esperimento, non candidati."
+ },
+ "9e23b85183ac": {
+  "src": "en",
+  "text": "Rin +39 percent, rest +5.6 mV, implied E_K-like reversal (SCI43); adult TREK1-/- doubles Rin in S1 layers 2-4; TASK-1/3 double knock-out removes 26 percent of the holding current in P9-15 layer V"
  },
  "9e70920e9815": {
   "src": "en",
@@ -1511,6 +1587,10 @@
   "src": "it",
   "text": "Calo robusto nei progenitori shRNA ma segni opposti altrove; la composizione del tessuto può spiegarlo. Il documento P4 lo legge come non risolto."
  },
+ "b40a165b4eda": {
+  "src": "en",
+  "text": "H1: In WWOX-deficient neural cells with raised GSK3 activity, GSK3 inhibition lowers phospho-Ser535 (human Ser540) of eIF2B epsilon and raises exchange activity and new-protein labelling beyond what the same compound does in the isogenic corrected cells || H2: The relevant GSK3 isoform in WWOX-deficient neurons is beta, as in retinal ganglion cells, so a beta-directed knock-down reproduces the compound effect and an alpha-directed one does not || H3: Replacing eIF2B epsilon by the Ser-to-Ala form (species numbering checked: human 540, mouse 536, rat 535) restores translation in WWOX-deficient cells to the corrected level, and the catalytically dead epsilon (E572A, as used in 26974342) removes it || H5: The GSK3 route is not engaged in WWOX-deficient neurons and ISR changes, if any, come from another input"
+ },
  "b422ec117b63": {
   "src": "en",
   "text": "Lithium"
@@ -1526,6 +1606,10 @@
  "b5adb8d69b29": {
   "src": "it",
   "text": "Più bassi nei quattro contrasti murini, che sono un solo modello; nessun altro contesto è stato calcolato."
+ },
+ "b607075b73e6": {
+  "src": "en",
+  "text": "A TREK-1 (and TASK-1) pool closed by a lower interstitial pH is part of the Wwox Rin and rest pair"
  },
  "b642851c0b57": {
   "src": "it",
@@ -1599,6 +1683,10 @@
   "src": "it",
   "text": "Ogni caso risponde alle stesse domande. Il livello dice che tipo di sostegno esiste, non quanto il composto sia promettente: nessun livello è un punteggio di efficacia e la copertura di un percorso descrive collegamenti, non una quota di malattia trattata. Una misura funzionale può essere non specifica (per esempio ridurre le crisi anche nel tipo selvatico). Sconosciuto non significa negativo."
  },
+ "bfb773821fdf": {
+  "src": "en",
+  "text": "statement_IPOTESI: ISRIB (an eIF2B activator) is a discriminating probe, not an assumed rescue: if the defect is a GSK3-site lesion independent of phospho-eIF2, ISRIB is predicted to give little correction; if a stability or conformational component is present, it may give some [IT38] ISRIB giving little is also the expected result when phospho-eIF2 alpha is not raised, and without an engagement control and effective exposure it is uninformative; it does not by itself separate the GSK3 serine from other explanations (IT37 audit).. Exploratory: the package states no therapeutic direction."
+ },
  "bfd77a0d95dc": {
   "src": "en",
   "text": "Whether BNIP3 is raised at protein level in WWOX-deficient neural cells, whether the rise is HIF-driven, HIF-independent or a culture-state artefact, and whether the function is protective or harmful there; until then no pharmacological direction at BNIP3 is sustainable and no compound is proposed."
@@ -1638,6 +1726,10 @@
  "c3e2690b7bed": {
   "src": "en",
   "text": "A lactate-side probe: the sign depends on the cell compartment"
+ },
+ "c3e7a4f7a0c5": {
+  "src": "en",
+  "text": "(a) pS535 not raised at baseline: the chain breaks at L1 or L2; (b) pS535 falls but exchange and translation do not move (the CHO result, E06): site not sufficient; (c) effect also in corrected cells or unchanged by S535A: off-target (E07); (d) effect disappears when phospho-eIF2 alpha is lowered: the ISR route"
  },
  "c49c9b6c64b0": {
   "src": "en",
@@ -1771,6 +1863,10 @@
   "src": "en",
   "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate. [IT40] A4 Report access resistance, bridge balance and capacitance by genotype; add a Ba2+- or Kv7-blocker-sensitive difference current with its zero-crossing against E_K (about -97 to -98 mV from the declared solutions; the recorded potentials need a junction correction of about -13 mV that 34634460 did not measure, which puts the estimated sag peaks about 16-21 mV below E_K, so the prediction applies to the voltage-clamp difference current, not to the sag peak). [SCI43] Order of arms: (0) capacitance measured directly by genotype and the cell-selection rule stated (pyramidal identity was confirmed from Rin and tau); (1) the same cells with and without synaptic blockers, in bursting and non-bursting slices; (2) Ba2+-sensitive current per pF and Rin share (a low micromolar concentration; a higher concentration and a K2P-blocker group as 2b); (3) XE-991-sensitive current at about −55 to −45 mV, not at rest, with a second Kv7 blocker; (4) current sensitive to an Ih blocker, repeated with a second Ih blocker; (5) dynamic-clamp leak of about 2.7 nS as sufficiency only, with a control leak at the WT rest; (6) an opener only after step 3. An implied reversal near E_K does not separate a K+ loss from a smaller cell with a shunt. [SCI44] Add a KATP arm to step 2b: perforated or cell-attached recording with ATP undisturbed, diazoxide and a sulfonylurea in KO and wild type, lactate or pyruvate add-back; state pipette ATP and glucose. Juvenile barrel-cortex neurons show KATP modulation of Vm, Rin and firing and lactate-driven KATP closure (34766906); this is a conditional metabolic upstream of the K branch (PH4), not a repair. [SCI44-C] The KATP arm of step 2b carries a size expectation: in juvenile barrel cortex the KATP share of resting conductance is about 11-17 percent (INFERENZA, upper bound, ATP-free whole-cell, glutamatergic regular-spiking cells, species and temperature unstated), so a KATP deficit alone would not account for 28 percent; state pipette ATP, record per-cell temperature and cell identity. The Wwox whole-cell internal solution contains 2 mM Na2ATP, so a lactate-closed KATP conductance is weakened for the published values and kept for ATP-undisturbed recordings. [IT45 from SCI45] Add a pHo arm: pHo step (7.4 to 7.1, with 7.7) per cell, whole-cell (pHi clamped by 10 mM HEPES) and sibling perforated-patch cells; pH-sensitive current per pF by genotype; both K2P family-level tools at both pHo. Stop criterion: a genotype difference in interstitial pHo below 0.1 unit stops the pH route; a larger one makes it a partial contributor only (TREK-1 Imin 0.25). Source: un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto). IPOTESI. [IT45 from SCI45-N1] Add burst incidence and the NMDAR-dependent component to the pHo-step arm; a lower pHo in the knock-out may be a protective state against bursts (IPOTESI). Vehicle and d-APV are run at each pH: GluN2B-containing receptors are themselves proton-inhibited (pH IC50 7.3-7.6 in recombinant diheteromers, a further 21-36 percent loss for 7.4 to 7.2; oocytes, magnesium-free), so an apparent drug-by-pH interaction is read against that baseline. Source: nmda_asic_ph_sci45_20261111 (un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto)). [IT46 audit] The IT45 comparison of an opener in the bath with an equal injected current does not hold on burst incidence (a slice-level event that one injected cell cannot change; a direct current also leaves input resistance unchanged while an opener lowers it). Corrected: R5a, the opener lowers the burst rate within each slice against a vehicle time control and the effect is reversed or occluded by a Kv7 blocker (or reproduced by a second opener of another chemotype); R5b, a non-Kv7 hyperpolarising manipulation of the slice is compared at matched shift of the recorded cells' membrane potential and matched input-resistance change, at three or more levels; single-cell comparisons use dynamic clamp on cell-level endpoints only; the animal is the statistical unit. A Kv7-blocker-sensitive current that is not smaller in the knockout does not refute an opener lever (it tests a deficit, not the lever). Useful in general and specific to the Wwox lesion are separate tests: the second needs a genotype-by-drug interaction against a non-Wwox hyperexcitable preparation matched on baseline burst rate. Source: un registro del repository (non incluso in questo pacchetto); un registro del repository (non incluso in questo pacchetto)."
  },
+ "d441d5531cec": {
+  "src": "en",
+  "text": "statement_IPOTESI: In WWOX-deficient neural cells with raised GSK3 activity, GSK3 inhibition lowers phospho-Ser535 (human Ser540) of eIF2B epsilon and raises exchange activity and new-protein labelling beyond what the same compound does in the isogenic corrected cells. Exploratory: the package states no therapeutic direction."
+ },
  "d456e9186e46": {
   "src": "en",
   "text": "Is there a PDH block in a WWOX-deficient human neural cell at all, and does its direction match the one this lever assumes?"
@@ -1807,6 +1903,14 @@
   "src": "en",
   "text": "The position of this thread rests on a single laboratory and a single paper in which the comparison drug acted better, and the specificity flag is an unknown rather than a clean reading. The thread is already ordered, so the result changes a standing position rather than adding a new one."
  },
+ "d89f9395b733": {
+  "src": "en",
+  "text": "ISRIB corrects equally with and without phospho-eIF2 alpha: then it acts by a route not described in the sources read"
+ },
+ "d8af2b70ef80": {
+  "src": "en",
+  "text": "A compound benefit can be independent of NRF2 (the readout was raised by compounds that do not bind KEAP1); the only catalogued NRF2-lowering row lowers many proteins and is not a control; no neuron or astrocyte data exist for any of these compounds; a binding assay at the Kelch domain cannot see covalent modifiers. [IT46 SCI46] No source has the binder in primary neurons or astrocytes with an NRF2-loss arm. Where a loss was verified (primary rat microglia, shRNA and knockout) the binder's induction and protection were lost and KEAP1 knockout occluded them; in a human neuronal line a partial NRF2 loss left the effect unchanged, which is uninterpretable; one human neuronal use on a KEAP1-overexpressing, already NRF2-high background moved ferroptosis markers in the harmful direction (no loss arm). The Davies source's own siRNA arms are categorical labels in the database copy, with no numbers and no knockdown efficiency, and the covalent bardoxolone methyl sits in the same design. [IT47 correction] The sentence above that no neuron or astrocyte data exist for any of these compounds is too strong for the covalent class: the SCI46 value table holds abstract-level data in primary mixed neuron-astrocyte cortical cultures with an Nrf2-knockout arm for one electrophile (the knockout result of a second electrophile is not stated in the abstract), data in neurons and astrocytes without a loss arm for the two fumarates, and a neurotoxicity series for a covalent triterpenoid in a human neuronal line. For the non-covalent binder the statement stands: no primary neuron or astrocyte datum, and the one neuronal line has a partial or inadequate loss. Source: un registro del repository (non incluso in questo pacchetto) (rows A36, A47-A53), counted by un registro del repository (non incluso in questo pacchetto)."
+ },
  "d8bcf6b0301e": {
   "src": "en",
   "text": "Known in the WWOX system: the parvalbumin marker deficit is already a named need observation and the NP3A1 reopening trigger; the row restates the open question as six separable layers (IT13b, IT14 P1a, IT14 P1b, reopening table row NP3A1)."
@@ -1834,6 +1938,10 @@
  "dae4a2481281": {
   "src": "it",
   "text": "Capire se la fosforilazione di PDH è più alta nelle cellule neurali prive di WWOX e se un inibitore di PDK la modifica in modo dipendente dal genotipo, aggiungendo un inibitore nanomolare pan-isoforma accanto al dicloroacetato (con riserve su selettività e disponibilità). In più (IT9 P6): un esperimento condizionale sull'asse HIF (proteina HIF-1alfa e HIF-2alfa nelle cellule neurali prive di WWOX, poi knockdown genetico e una leva di classe PX-478 contro un controllo di direzione), proposto e non eseguito. Restato (IT10 P2.1/P5): la direzione del cambiamento di HIF non è stabilita (condizionale); controllo genetico per primo; ossigeno fisiologico al 5% come condizione primaria; bracci per attività, MYC e stato di coltura. IT12: nel cervello P47T adulto (solo trascritti) lo spostamento e' ampio e modesto, guidato dagli enzimi glicolitici, e non riproduce il profilo selettivo dell'organoide; restano separate tre ipotesi (stato dell'organoide, attivita', composizione); aggiunti ancoraggio in vivo e pannello genico."
+ },
+ "daffbaf3ffa5": {
+  "src": "en",
+  "text": "Response already induced but functionally insufficient. Exploratory: the package states no therapeutic direction."
  },
  "dc449159abf1": {
   "src": "en",
@@ -1902,10 +2010,6 @@
  "e36a2bbd6799": {
   "src": "en",
   "text": "Neuron-driven developmental myelin deficit with precursors up and mature cells down; maturation block favoured over loss but not demonstrated (IT14)."
- },
- "e3a6cc9d9abd": {
-  "src": "en",
-  "text": "Genetic KEAP1 lowering with a functional readout in the WWOX-deficient neural system, isogenic control, before any electrophile is compared. [IT36] precedent for a non-cell-autonomous (astrocyte) route exists in another system with an Nrf2-null control and rescue; KEAP1 knockdown needs an NFE2L2-loss cross; composition is not astrocyte-mediated benefit. [IT46 audit] The covalent and the non-covalent compound are not compared at equal concentration and time (the electrophile is consumed by thiols and persists after washout): a phase 0 matches exposure on a proximal NRF2 reading (concentration-response, time-course, cytotoxicity, glutathione, washout) first; at least two independent NFE2L2-knockdown reagents with measured efficiency; an NRF2-independent control gene set beside the target set; a WWOX genotype factor, since the pair speaks to the NRF2 pathway and not yet to the WWOX hypotheses; neuron and astrocyte cultures have no network, so a network outcome is a second phase. Source: un registro del repository (non incluso in questo pacchetto); un registro del repository (non incluso in questo pacchetto). [IT46 SCI46] Reagent pair named (SCI46): the non-covalent KEAP1 Kelch binder (a catalogue tool probe) against a covalent comparator, in one neural cell class at a time. X0: nuclear NRF2, two target genes (G6PD may be one), NQO1 enzyme activity and a risk panel (glutathione, GPX4, lipid peroxidation); the same lysates serve INV-07 step 1 and INV-19 (a shared preparation, not a shared cause). X1: a graded occupancy ladder matched on on-target response, not on concentration. X2: an adequacy criterion for NFE2L2 and KEAP1 loss fixed before the experiment, a KEAP1-loss occlusion arm, and a panel or array whose survivors after loss are read beyond NQO1. X3: neuron-only and astrocyte-only loss. Viability is read beside a function endpoint. Source: un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto) (NH1-NH4). [IT46 SCI46q] Readouts by cell class (SCI46 queue item, RNA class means, mouse P7 and P17 oligodendrocyte-lineage, one human neuron sample; not protein or activity): a neuron-readable target panel (Gclm, Txnrd1, Gpx4, G6pdx, Srxn1, Gclc) beside nuclear NRF2; NQO1 and HMOX1 as induced-state readouts with the per-class baseline (NQO1 is at the floor in mouse neurons, 0.84 FPKM, and low in astrocytes, 3.02; HMOX1 is 2.43 in neurons, 14.85 in astrocytes and 260.42 in microglia); HMOX1, NFE2L2 and SLC7A11 are astrocyte-biased, so a bulk transcript readout can move with cell composition alone; the HCAR2 route of a fumarate needs a microglia-like cell (Hcar2 18.12 FPKM in microglia against 0.10 in neurons and astrocytes). Source: un registro del repository (non incluso in questo pacchetto)."
  },
  "e3d5181822f1": {
   "src": "en",
@@ -2158,6 +2262,10 @@
  "ff88b54a40c8": {
   "src": "en",
   "text": "Up: lactate raised in the knockout and a burst fall that tracks lactate supply. Down: lactate unchanged, or a fall explained by GABA-A potentiation or pH."
+ },
+ "ffbae3956896": {
+  "src": "en",
+  "text": "H2: Response already induced but functionally insufficient || H3: Benefit mediated by astrocytes or another compartment || H4: Differences between cell types or developmental phases || H5: Compound benefit independent of NRF2 || H6: No benefit or worsening"
  },
  "ffe61ba5c2e6": {
   "src": "en",
