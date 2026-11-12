@@ -1,0 +1,10 @@
+row_id	source	benzodiazepine_as_recorded	what_the_cell_says	class	same_patient_note
+A1-03	PMID 30361190	clobazam (with valproate, phenobarbital, vigabatrin)	co-therapy; outcome not stated for the benzodiazepine	co_therapy_no_outcome	none_known
+A1-08	PMID 36537114	clobazam (with vigabatrin, zonisamide)	seizures poorly controlled on the regimen at 2 years	not_effective_in_regimen	possible overlap with A1-09/A1-10
+A1-13	PMID 37583270	nitrazepam	the response after relapse is attributed to it; agent otherwise unnamed	response_single_child	none_known
+A1-18	PMID 35573960	clonazepam, clobazam	listed as ineffective; current regimen adds clobazam and clonazepam	not_effective	A1-19 is the same child
+A1-19	PMID 35573960	clonazepam, clobazam	listed as ineffective (same sentence)	not_effective	same child as A1-18
+A1-22	PMID 42092735	clobazam (later, with valproate)	the EEGs precede and follow the clobazam step; no instrument for the step	co_therapy_no_outcome	A1-23 is the same child
+A1-23	PMID 42092735	clobazam (added to valproate after vigabatrin failed)	spasms completely subsided; hypokinetic movement disorder persisted; one child; no instrument	response_single_child	same child as A1-22
+A1-31	PMID 35792847	clonazepam (also clobazam listed in Table 3)	refractory to phenobarbital, clonazepam and topiramate	not_effective	possible earlier report of the same child
+A1-33	PMID 35792847	clonazepam (with valproic acid, topiramate)	already on it when vigabatrin was added; profound delay and regression	co_therapy_no_outcome	none_known
