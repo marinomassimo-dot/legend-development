@@ -23,7 +23,7 @@ sys.path.insert(0, str(HERE.parents[4] / "framework/scripts"))
 import hypothesis_package as hp  # noqa: E402
 import assay_conditions as ac  # noqa: E402
 
-ALIASES = {"d-apv": ["d-apv", "d-ap5", "apv"], "ro 25-6981": ["ro 25-6981", "ro25-6981", "ro 25 6981"], "uk-5099": ["uk-5099", "uk5099", "uk 5099"], "oxamate": ["oxamate", "sodium oxamate"]}
+ALIASES = {"d-apv": ["d-apv", "d-ap5", "apv"], "ro 25-6981": ["ro 25-6981", "ro25-6981", "ro 25 6981"], "uk-5099": ["uk-5099", "uk5099", "uk 5099"], "oxamate": ["oxamate", "sodium oxamate"], "ki-696": ["ki-696", "ki696", "l6i"], "dimethyl fumarate": ["dimethyl fumarate", "dmf"], "monomethyl fumarate": ["monomethyl fumarate", "mmf"]}
 OUT_FIELDS = ["item_id", "name", "evidence_tier", "tier_props", "role_derived", "role_reason", "comparison_state", "premise_needed", "discriminating_measure", "public_source_work", "relaunch_question"]
 
 def names_of(name_full: str) -> list[str]:
@@ -32,6 +32,11 @@ def names_of(name_full: str) -> list[str]:
 def pattern(name: str):
     forms = ALIASES.get(name.lower(), [name.lower()])
     return re.compile(r"(?<![\w-])(" + "|".join(re.escape(f) for f in forms) + r")(?![\w-])", re.I)
+
+# IT46 P5 (SCI46 delta row 3): a statement about an independent route (the compound acts, but not through the target under study) names the compound without being a measurement of the mechanism under study;
+# the engine reads names, not meaning, so the guard is a narrow text rule on the statement, and the limit stays stated: other wordings of the same idea are not caught.
+INDEPENDENT_ROUTE = re.compile(r"\bindependent route\b|\bNRF2-independent\b|\bindependent of NRF2\b", re.I)
+
 
 def tier_of(props: list[dict]) -> str:
     """props already carry `shared` (names another compound: a class statement, never a per-molecule measurement)."""
@@ -59,7 +64,7 @@ def derive(items: list[dict], pkg: dict, tag: str = "") -> list[dict]:
             pat = pattern(nm)
             limited = {m.group(1) for p in dec.values() if pat.search(p["statement"]) for m in re.finditer(r"limit of (D\d{2})", p["statement"])}
             props = [dict(p, shared=any(o != nm and pattern(o).search(p["statement"]) for o in universe)) for p in dec.values()
-                     if pat.search(p["statement"]) and not p["class"].startswith("absence") and p["prop_id"] not in limited and "limit of D" not in p["statement"][:40]]
+                     if pat.search(p["statement"]) and not p["class"].startswith("absence") and p["prop_id"] not in limited and "limit of D" not in p["statement"][:40] and not INDEPENDENT_ROUTE.search(p["statement"])]
             rows = {k: r for k, r in cmp_.items() if pat.search(next((v for c, v in r.items() if c.startswith("compound_or_probe")), ""))}
             ref = any(re.search(re.escape(nm) + r"[^.]*\bis the reference\b", next((v for c, v in r.items() if c.startswith(("pharmacological_action", "action_context"))), ""), re.I) for r in cmp_.values()) or any(re.search(r"\bd-apv\b", nm, re.I) and "reference" in v for r in cmp_.values() for c, v in r.items() if c.startswith("pharmacological_action"))
             tier = tier_of(props)
