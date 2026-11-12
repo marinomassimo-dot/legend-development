@@ -19,3 +19,6 @@ Non-canonical working note. Not medical advice; no dose, schedule or route. Refe
 
 ## Limits
 The engine comparison state for the binder is a vocabulary limit (system strings), not a finding about the binder; the Davies text and Supporting Information were not reached; 5 of the SCI46 receipts are abstract level; a later SCI queue item (NRF2-axis RNA by cell class: Nqo1 at the floor in every mouse class, readable neuronal Gclm, Txnrd1, Gpx4, G6pdx, Srxn1; Hcar2 microglia-only) is not landed and not consumed here.
+
+## Follow-up after HE46 landed (main 36eb86fb, condition reader with pH, temperature and the SCI46 keys)
+Regenerating the INV-08 decisions with the new reader changes one state: the binder's comparison (potency statements D07 and D10) moves from CONDITIONS_INSUFFICIENT to **NOT_COMPARABLE**, documented by the loss-arm key (none against shRNA or knockout) and by the cell set (values overlap without being equal). That is the SCI46 request (readout class and loss arm as comparability keys) working in the generator; it is a documented incompatibility, not insufficiency. Roles and tiers are unchanged; two other lines in the INV-05 and INV-07 decision files differ only in the comparison-state text (regenerated, no role or tier change).
