@@ -85,5 +85,36 @@
   "checks_before_accepting": "(a) the SCI43 next brief exists and its question is the premise of KH1 (read); (b) the claim 'never executed' is partly wrong: SCI44 package C already searched juvenile shares (KATP measured; K2P no selective share) - what remains is the Kir2 drug-name route and the eight producer-read rows; (c) the reopen condition FIRED by one plain request each on 2026-11-12: bioRxiv preprint HTTP 200 (337,811 bytes), Europe PMC lists PMC5242407 for 28100740; (d) the Q01 classification differs between my map (literature_executable) and my BRIEFS (wet): the advisor's reading is the more careful one",
   "decision": "ADAPTED: increment 1 = second independent reading of the eight SCI43 rows (verifier delegate sonnet/high, originals in full) followed by the Kir2 drug-name route only if the rows leave the juvenile share open; the result goes into KH1, INV-18 next_test, the ladder and an open-questions row; no rank, sign or qualification changes. INV-09 Q01/Q02 not pursued now (Q02 stays open).",
   "alternatives_not_pursued": "INV-09 Q01/Q02 (continuity, wording only); unmapped KH/HY rows (after the SCI43 result); condition record and SCI47-B verification are candidates for increment 2"
+ },
+ "PILOT_STAGE_A_2": {
+  "campaign_boundary": "first Stage A dispatch 2026-11-12T20:42Z; window ends at most 2026-11-13T20:42Z; two increments then the evidence report",
+  "owner_session": "4325d70d-8bea-4789-8046-d7a9ee74c97f (orchestrator)",
+  "repo_sha_and_dispatch": "54b985c707f21d5f2fdc422c33f1503aadfd8301 at 2026-11-12T21:19:43Z",
+  "uncommitted_inputs": [
+   {
+    "status": "??",
+    "path": "disease-models/wwox/research/drug_repurposing/advisor_campaign_it48_20261112/advisor_sealed/INTENDED_ACTION_2.md",
+    "sha256": "8abc08afc9f2bc32f0d35862110a20ec0c493be26a131aee774a1d0274514ddc"
+   },
+   {
+    "status": "??",
+    "path": "disease-models/wwox/research/drug_repurposing/advisor_campaign_it48_20261112/inputs/constraints2.md",
+    "sha256": "4bf6141cb92588abd032cbd6b262c7f81601f599eb25ac2a0b783cfb5c0cc691"
+   }
+  ],
+  "dashboard_source_revision": "54b985c707f21d5f2fdc422c33f1503aadfd8301 2026-11-12T21:19:28+00:00",
+  "scientific_baseline": "increment 1 done (eight SCI43 rows reread: 4 supported, 3 partly; KH1/INV-18/README/IT48-Q01 updated; juvenile Ba2+ share still unmeasured); SCI48 delivered on main, not consumed (37 receipts unrecorded, consumer rows proposed); IT47 closed except CI #672 and site check on b67d209a",
+  "intended_action_sealed": {
+   "path": "disease-models/wwox/research/drug_repurposing/advisor_campaign_it48_20261112/advisor_sealed/INTENDED_ACTION_2.md",
+   "sha256": "8abc08afc9f2bc32f0d35862110a20ec0c493be26a131aee774a1d0274514ddc",
+   "note": "written and sealed before Stage A #2; recorded independently of A1/B1 content"
+  },
+  "constraints_and_dependencies": "advisor_campaign_it48_20261112/inputs/constraints2.md"
+ },
+ "PILOT_DECISION_2": {
+  "stage_a": "A2 saved (opus/high requested; read-back 2 turns claude-opus-5 and 18 claude-opus-5-5, changed_mid_run true; 20 turns, output 18,451): lead = independent verification of the SCI47-B inferences; alternatives: IT48-Q01 drug-name half, unmapped KH/HY rows; withdrew the condition-record candidate (applied in prediction_matrix.tsv M01). A2 declares exposure to PILOT_DECISION_1 (my shortlist) and to the record's line 'SCI48 delivered, not consumed' - so A2 is not independent of those",
+  "stage_b": "B2 saved (sonnet/medium claude-sonnet-5-5, 1 turn, output 3,100): after seeing my sealed action it ranks consuming SCI48 first, SCI47-B verification second/parallel. Recorded as agreement after exposure to the plan, not as independent confirmation; its reasons (stale RA839 sentence live; use the verifier's version; no rank change to show an effect) are checked against the SCI48 files before use",
+  "decision": "ACCEPTED my sealed intended action for increment 2 (consume SCI48), with the advisor's refinements: verifier's reading as source for every row; receipts in event-ID order after a trial; closures of IT46-Q06/Q09 by dated pointer; two cheap writes (S7_coda status, increment-1 framing corrections). SCI47-B verification not run in parallel (one delegate at a time; no delegate needed for the integration) - left open as the next item",
+  "alternatives_not_pursued": "SCI47-B inference verification (published, unverified: remains the most important open public-text risk), IT48-Q01 drug-name half, unmapped KH/HY rows, IT47-Q02"
  }
 }
