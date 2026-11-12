@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Apply the V9 verifier's substantive corrections to the producer files (idempotent; each rule replaces a string only when it is present)."""
-import csv, json, pathlib
+import csv, json, pathlib, sys
+if "--help" in sys.argv or "-h" in sys.argv:
+    print(__doc__); sys.exit(0)
 H = pathlib.Path(__file__).parent
 log = []
 

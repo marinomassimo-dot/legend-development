@@ -27,3 +27,6 @@ Table S1 versus Results for burst frequency (above); burst counts 119/126/102+41
 
 ## Limits
 One paper read in depth (partial full text: body, legends, Methods, Table 1, supplement text; Figures 4 and 6 and Supp S2 and S4 opened; the others as captions; the reference list not read). Raw event data unavailable: no animal-level reanalysis. Figures are 708-px rasters; values read from them carry the stated ranges. Everything about other systems is transferred and named. One route note: the PMC supplement URL answered with a "Preparing to download" page and was recorded unreachable; the Europe PMC supplementaryFiles request had been issued before it and delivered the supplement (producer Q06/Q09; verifier used it once, no retry).
+
+## Snapshot of the IT46 inputs
+The delegates read copies of the IT46 notes (`inputs_it46/`, taken at cfac505c, before IT46 landed at cff57777). They are stored with the original names and relative layout; `inputs_it46/PATH_MAP.tsv` maps every flat name cited in `output/` and `verify/` (for example `inputs_it46/it46_README.md`) to the snapshot path, the original path and the SHA-256 against the landed file (all identical today); `SOURCE_SHA.txt` carries the dated notes (one quotation changed in the s5 reader file; the 12-column serialisation of the open-question extract with the original field counts).
