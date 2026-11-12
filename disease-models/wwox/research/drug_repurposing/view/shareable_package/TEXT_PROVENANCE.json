@@ -8,14 +8,14 @@
  ],
  "bibliographic_title_runs": 186,
  "corpus_by_extension": {
-  "html": 46,
+  "html": 53,
   "json": 4,
-  "pdf": 195,
+  "pdf": 196,
   "txt": 210,
-  "xml": 592
+  "xml": 593
  },
- "corpus_files": 1047,
- "corpus_words": 14337997,
+ "corpus_files": 1056,
+ "corpus_words": 14401055,
  "failures": 0,
  "method": "every string of the shareable data object against the third-party texts held locally (full texts, abstracts, openFDA label JSON), longest verbatim run in words (shingle 7); limits: unquoted phrase <= 25 words, marked quotation <= 12 words, or <= 30 words with an attribution phrase",
  "not_covered": "third-party texts not held locally; label sections that were not fetched",
@@ -57,5 +57,5 @@
    "words": 7
   }
  ],
- "unquoted_runs_within_limit": 31
+ "unquoted_runs_within_limit": 32
 }

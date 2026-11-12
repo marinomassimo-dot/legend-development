@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T17:33:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "captions_only",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T17:35:45Z",
+ "event_id": "FTR-20261112-36244590-73",
+ "evidence_basis": [
+  "verbatim_locator | proposition: Sfn given to WT and global KO mice under the same dMCAO; KO had a larger infarct | Results 3.3 | \"KO mice exhibited a larger infarct volume at 3 d compared with WT mice\"",
+  "verbatim_locator | proposition: no verification of the KO is printed; the KO source is a vendor line | Methods 2.1 | \"global Nrf2 knockout mice\"",
+  "verbatim_locator | proposition: cell-specific origin not examined | Discussion | \"we did not examine cell-specific mechanisms regarding Nrf2 activation\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/verify/verdicts.tsv"
+ ],
+ "prior_receipt": "FTR-20261112-36244590-74",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC12335009 via the PubMed PMC full-text tool (one call; text only, main-figure legends and images absent from the returned text; supplementary figure legends present).",
+ "study_id": {
+  "doi": "10.1016/j.freeradbiomed.2022.10.001",
+  "pmid": "36244590"
+ },
+ "workflow": "SCI48 blind verifier V10 (claim actor nr-y), ORCH-SCI48-20261112. Staged for the integrator; the ledger was not appended at preparation time."
+}

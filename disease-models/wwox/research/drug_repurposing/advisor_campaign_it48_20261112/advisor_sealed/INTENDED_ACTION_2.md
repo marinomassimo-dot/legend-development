@@ -1,0 +1,4 @@
+Updated intended action without a second assessment (recorded 2026-11-12 after increment 1, before Stage A #2).
+Increment 2: consume the delivered SCI48 package (KEAP1/NRF2 comparator, INV-08): record its 37 staged receipts (producer -74 first, then verifier -73), apply consumer rows 1-7 and 9 (open questions IT46-Q06/Q09 and new rows; V19 name_full/counter; INV-08 X1-X3 wording; engine decisive rows N01-N13 replacing SCI46 row D20 in the comparison engine; Harness aliases ra839, sulforaphane, cddo-me; identity declarations), show before/after by running the engine and the generator, five languages for public text.
+Reason: delivered, verified, zero-spend, and it removes a stale statement (the SCI46 sentence that RA839 reaches C1/C2) from live consumers; it is also the only increment whose effect on the generator can be shown by running it.
+Alternative I would take if it proved empty: verification of the SCI47-B inferences by an independent reader.
