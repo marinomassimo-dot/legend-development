@@ -12,11 +12,11 @@
   "branch": "task/he47",
   "CURRENT_STATE": "IN_PROGRESS",
   "CHECKPOINT": {
-    "last_verified_result": "H1-H5, H7, H8 committed on task/he47; targeted suites pass; battery by SHA pending",
-    "first_incomplete_work": "H6 (battery through verify_run on the frozen SHA, continuity read of IT47/SCI47), then landing",
+    "last_verified_result": "battery on 353015299e48 PASS WITH SKIPS; later commits (card link b4cbf00d, package ea6468e8, recipe 3b2fac58) covered by targeted suites only",
+    "first_incomplete_work": "landing, publication, CI",
     "active_processes": "none of mine except neighbouring suites",
     "real_dependencies": "task/sci47 carries the same cells as cf1f39b0 (cherry-picked here); IT47 owns generator consumption",
-    "next_executable_step": "freeze and run the battery with verify_run"
+    "next_executable_step": "task_close, safe_push, ci_runs"
   },
   "AUTHORISED_QUEUE_20261112": {
     "MANDATE_STATE": "OPEN",
@@ -86,9 +86,9 @@
       "steps": [
         {
           "step": "Verification, temporaries and continuity: verify_run in the three sessions, actor-sharing safety, no indiscriminate cleanup; continuity on IT47 and SCI47 (marker, record location, live-process wait, no duplicate restart, pending verification as open step); ci_runs single wait per workflow/SHA and API reset respected",
-          "status": "IN_PROGRESS",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": "verify_run reap exact by session (defect reproduced by test); ci_runs shared read, 120 s poll; continuity of IT47/SCI47 and the real battery through verify_run pending"
+          "evidence": "reap exact by session (defect reproduced, fixed); ci_runs shared read; battery 353015299e48 through verify_run: PASS WITH SKIPS (245 targets, 12 skipped), evidence /tmp/legend-verify-keep/20261112-092042-363cf8c6; IT47 association RUNNING session 4325d70d on the checkout holding its record; SCI47 recipe row added; README 3, 9"
         }
       ]
     },
@@ -117,5 +117,16 @@
       ]
     }
   },
-  "VERIFICATION_EVIDENCE": []
+  "VERIFICATION_EVIDENCE": [
+    {
+      "run_id": "20261112-092042-363cf8c6",
+      "label": "battery",
+      "sha": "353015299e488de4c0a68a4f17d6c6ec72fb8065",
+      "state": "CONCLUDED",
+      "exit_code": 0,
+      "evidence_dir": "/tmp/legend-verify-keep/20261112-092042-363cf8c6",
+      "log_sha256": "8b57db254fe9fcec2000c9b5bf6e2b2e2347638d936876c030813279f7c31d33",
+      "clone": "REMOVED"
+    }
+  ]
 }

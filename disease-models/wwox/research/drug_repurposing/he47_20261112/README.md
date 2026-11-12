@@ -130,3 +130,24 @@ No dedicated path exists; the Orchestrator's standing practice is "material eval
 * **The Auto-mode problem** belongs to the external runtime. Nothing here relaxes a permission, adds an allowlist or promises that a prompt removes requests.
 
 Not shown: that any external artefact has been compared; no access to the external session is claimed.
+
+## 9 · Integration (after the mandate addendum): what is called, by whom, and what proves it
+
+Three SHAs are kept apart. **Battery:** `353015299e48` (run 20261112-092042-363cf8c6, `verify_run`, PASS WITH SKIPS, 245 targets, 12 skipped for the local catalogue cache or the public inputs; clone removed, 0.98 GB freed, evidence kept). **Commits after it, covered by targeted suites only:**
+the card link (b4cbf00d: view suite full run, one class failed because the distributable package was stale; ea6468e8 regenerated it and that class passed), the freeze recipe row (3b2fac58: routing and documented-command suites) and this text. **Integration and publication:** recorded in the mandate record when they exist.
+
+| component | real caller | result that changed | consumer | proof |
+|---|---|---|---|---|
+| `relation` / `direction` cells, `prop_facets` | `comparison_engine.derive`, `hypothesis_package.validate` and `show` | an unclassified, other-route or context proposition is read as itself, not by wording | the engine, and Science's cells for 21 INV-08 propositions | 21 + 50 tests; INV-08 before/after (section 1) |
+| `counter_props`, `uncounted_props`, `unclassified_props` columns | `comparison_engine.main` writes them | KI-696 shows D21 as counter-evidence and D01/D02/D07/D21 as context; MMF is named as "other_route (D14)" | **the compound card** (`repurposing_view.py`, counts only): 7 cards say the role rests on propositions with no stated relation, "not a qualified mechanism"; 2 cards say the comparison lists counter-evidence | pages and distributable package regenerated in five languages; `audit-shareable` PASS; view suite |
+| pair counts in the comparison state | engine | "5 incompatible, 1 agreeing, of 6" instead of a bare NOT_COMPARABLE | decision files (the card reads roles and tiers, not this text) | engine tests; section 2 |
+| `AMBIGUOUS_KEY`, one folder for several investigations | `hypothesis_package.load_hypotheses_only`, `hypotheses_for` | no silent pick between two id-like columns | **IT47's `conditional_proposals.py`** (`package_rows`, three mapped packages) | combined he47 + it47 tree: merge without conflict, `conditional_proposals.py` reruns to bytes equal to what IT47 committed (16 package rows), `test_stage_it40` 12/12, `test_stage_it47` 9/9 |
+| `verify_run reap` by session | every battery, publication or receipt run | a shared ACTOR_ID can no longer remove another session's clone | the three sessions' runs | defect reproduced by a test, then fixed; the HE47 battery ran through it |
+| `ci_runs` shared read and 120 s poll | any wait on a commit | one API read per commit for all waiters on the machine, one declared rate-limit pause | CI waits at closure | 4 tests; run #658 read twice with one request |
+| `rna_class_means.py` | three extractions (SCI44, SCI46, IT46) | one command, a missing-not-zero report | future gene lists | 6 of 6 outputs byte-identical to the committed files |
+| freeze recipe row (`framework/scripts/README.md`, section 13) | the candidate-preparation step | the four quick suites run in order before the battery | SCI47 and any later candidate | routing and documented-command suites; not run by SCI47 yet |
+| `session_model_census.py --carry` | on demand | a proxy of what the context carries | the cost habit row | one test; **a proxy, not a saving**; nothing truncates an original |
+
+**Association of IT47.** Checked on the checkout that holds the record: `RUNNING`, session 4325d70d (the IT46 owner's). From a checkout without the record the same command returns `UNKNOWN` / `NO_RECORD` and still names the session, so the earlier UNKNOWN came from the root, not from the marker. No marker was written for it and nothing in the reader was changed.
+
+**Not shown.** That IT47's views use the new columns beyond the card note; that a candidate prepared with the recipe row passes the battery first time; that the card note changes a decision of any reader; the pages of IT47's own regeneration (it regenerates when it merges).
