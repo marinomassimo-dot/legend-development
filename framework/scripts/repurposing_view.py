@@ -5605,6 +5605,49 @@ def find_chromium() -> str | None:
     return next((b for b in found if _browser_starts(b)), found[0] if found else None)
 
 
+def browser_preflight(out=print) -> int:
+    """One short, honest probe before a long browser-dependent run: five different facts, each stated apart, stopping at the first that fails.
+    A pass here proves the browser only; no view has been measured. Run it in the shell that will run the suite (a launcher that works in one shell can fail in the desktop service's)."""
+    import os
+    import subprocess
+    import tempfile
+    import time
+    import shutil
+    out(f"1. CHROME_BIN: {os.environ.get('CHROME_BIN') or 'unset'}")
+    binary = find_chromium()
+    if not binary:
+        out("2. executable present: NO. No candidate exists; browser-dependent tests SKIP and measure nothing (a skip is not a verification)")
+        return 1
+    out(f"2. executable present: {binary}")
+    for cand in [*CHROMIUM_CANDIDATES, *sorted(__import__("glob").glob("/snap/chromium/[0-9]*/usr/lib/chromium-browser/chrome"), reverse=True)]:
+        if cand != binary and (shutil.which(cand) or Path(cand).exists()):
+            try:
+                done = subprocess.run([cand, "--version"], capture_output=True, text=True, timeout=30)
+                note = "starts" if done.returncode == 0 else f"--version rc={done.returncode}: {(done.stderr or done.stdout).strip().splitlines()[-1][:110] if (done.stderr or done.stdout).strip() else ''}"
+            except (OSError, subprocess.SubprocessError) as exc:
+                note = f"--version error: {type(exc).__name__}"
+            out(f"   other candidate {cand}: {note}")
+    try:
+        done = subprocess.run([binary, "--version"], capture_output=True, text=True, timeout=30)
+    except (OSError, subprocess.SubprocessError) as exc:
+        out(f"3. --version: FAILED ({type(exc).__name__}: {exc})")
+        return 1
+    if done.returncode != 0:
+        out(f"3. --version: FAILED rc={done.returncode}: {(done.stderr or done.stdout).strip()[-200:]}")
+        return 1
+    out(f"3. --version: {done.stdout.strip()}")
+    started = time.monotonic()
+    with tempfile.TemporaryDirectory() as td:
+        try:
+            Cdp(binary, td, startup_timeout=30).close()
+        except Exception as exc:  # the message already carries the binary, the exit code and the browser's own stderr
+            out(f"4. headless start and DevTools endpoint: FAILED. {str(exc)[:400]}")
+            return 1
+    out(f"4. headless start and DevTools endpoint: OK ({time.monotonic() - started:.1f}s)")
+    out("5. dashboard tests: not run here. This proves the browser, not any view; the suite's own result is the evidence for a view.")
+    return 0
+
+
 class Cdp:
     """A minimal websocket client (RFC 6455, text frames) for one Chromium page target. Launches the browser WITHOUT any sandbox-bypass flag.
     The window size is irrelevant: Emulation.setDeviceMetricsOverride sets the real layout viewport, which is then MEASURED, not assumed."""
@@ -5961,6 +6004,13 @@ def i18n_check(dr: Path) -> int:
     ui, content = i18n_collect(dr)
     load_translations(dr)
     rc = 0
+    # The committed inventory (what the translators and the i18n suite read) must equal a fresh collection: this is the same assertion `test_the_inventory_is_current`
+    # makes, stated where the actor already runs this command, with the fix. 2026-11-12: an edited passage passed `check` and this command and failed the suite only in the battery.
+    for name, fresh in (("ui_source.json", ui), ("content_source.json", content)):
+        path = dr / "view" / I18N_SUBDIR / name
+        if not path.exists() or json.loads(path.read_text(encoding="utf-8")) != fresh:
+            print(f"inventory STALE: view/{I18N_SUBDIR}/{name} differs from a fresh collection; run: python3 -B framework/scripts/repurposing_view.py i18n --what collect, then translate what is new")
+            rc = 1
     for lang in ("en", "fr", "es", "de"):
         t = TRANS.get(lang, {}).get("ui", {})
         miss = [k for k in ui if k not in t]
@@ -5992,7 +6042,7 @@ def main(argv=None) -> int:
         import repurposing_shareable_package as _m
         return _m.main(argv[1:])
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0], formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", nargs="?", choices=["run", "check", "positions", "titles", "viewports", "i18n"], help="(also: audit-shareable, package: see the module docstring) run: write the view; check: exit 1 if a file is stale; positions: print one TSV line per card x need with the inputs and the position (for re-derivation); titles: report (or with --refresh, fill) the source-title cache; viewports: measure the page at 360/390/768/1280 px with a real device-metrics emulation")
+    ap.add_argument("command", nargs="?", choices=["run", "check", "positions", "titles", "viewports", "i18n", "browser"], help="(also: audit-shareable, package: see the module docstring) browser: one short probe of the Chromium this shell would use (present, --version, headless + DevTools), to run before a long browser-dependent suite; run: write the view; check: exit 1 if a file is stale; positions: print one TSV line per card x need with the inputs and the position (for re-derivation); titles: report (or with --refresh, fill) the source-title cache; viewports: measure the page at 360/390/768/1280 px with a real device-metrics emulation")
     ap.add_argument("--dr", type=Path, default=DEFAULT_DR, help="drug_repurposing directory (default: the module)")
     ap.add_argument("--source", choices=list(SOURCES), default=None,
                     help="run: full (default) embeds every row, written to view/index.html; shareable embeds only allowlisted rows (view/shareable_sources.json), written to view/index_shareable.html. check: both unless given")
@@ -6006,6 +6056,8 @@ def main(argv=None) -> int:
     if not a.command:
         ap.print_help()
         return 0
+    if a.command == "browser":
+        return browser_preflight()
     if a.command == "titles":
         ids = referenced_pmids(a.dr)
         if a.refresh:

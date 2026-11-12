@@ -40,6 +40,35 @@ def mask(x, key=""):
 
 
 @unittest.skipUnless(HAVE, "module data or translation files absent")
+class InventoryIsCheckedWhereTheActorRunsIt(unittest.TestCase):
+    """2026-11-12: a curated passage was edited, `i18n --what check` passed, and only the suite found the stale inventory in the battery."""
+
+    def test_a_passage_missing_from_the_committed_inventory_fails_the_check_with_its_fix(self):
+        import contextlib
+        import io
+        from unittest import mock
+        ui = json.loads((DR / "view/i18n/ui_source.json").read_text(encoding="utf-8"))
+        content = json.loads((DR / "view/i18n/content_source.json").read_text(encoding="utf-8"))
+        edited = {**content, "0" * 12: {"src": "en", "text": "a passage the inventory does not hold yet"}}
+        out = io.StringIO()
+        with mock.patch.object(rv, "i18n_collect", return_value=(ui, edited)), contextlib.redirect_stdout(out):
+            self.assertEqual(rv.i18n_check(DR), 1)
+        self.assertIn("inventory STALE: view/i18n/content_source.json", out.getvalue())
+        self.assertIn("i18n --what collect", out.getvalue())
+        self.assertNotIn("ui_source.json differs", out.getvalue())  # the part that is current is not blamed
+
+    def test_a_current_inventory_adds_nothing_to_the_check(self):
+        import contextlib
+        import io
+        from unittest import mock
+        ui = json.loads((DR / "view/i18n/ui_source.json").read_text(encoding="utf-8"))
+        content = json.loads((DR / "view/i18n/content_source.json").read_text(encoding="utf-8"))
+        out = io.StringIO()
+        with mock.patch.object(rv, "i18n_collect", return_value=(ui, content)), contextlib.redirect_stdout(out):
+            self.assertEqual(rv.i18n_check(DR), 0)
+        self.assertNotIn("inventory STALE", out.getvalue())
+
+
 class FiveLanguages(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

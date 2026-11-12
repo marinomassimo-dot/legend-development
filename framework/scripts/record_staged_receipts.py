@@ -199,6 +199,9 @@ def main(argv=None) -> int:
     print("  python3 framework/scripts/pathograph.py --disease wwox --out disease-models/wwox/analysis/"
           "pathograph_inventory.md --export disease-models/wwox/analysis/data/pathograph_export.jsonl "
           "--inputs-dirty-because '<reason>'")
+    ranking = "disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/ranking_it8.py"
+    if (root / ranking).exists():  # the drug-repurposing ranking embeds the ledger's line count; once after the LAST recording, not after each one
+        print(f"  python3 -B {ranking} check     # about 15 s; if it says STALE: ... run")
     return 0
 
 
