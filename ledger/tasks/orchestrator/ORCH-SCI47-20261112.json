@@ -9,11 +9,11 @@
  "BASELINE": "main 940182af (SCI46 landed and verified). Worktree .claude/worktrees/sci47, branch task/sci47. IT46 package not yet on main: read read-only from worktree it46 (task/it46 cfac505c). Coordinates with IT47 (integrator of shared consumers). The pasted HE47 mandate was for the plan actor, not this session; ignored by the operator's statement.",
  "CURRENT_PACKAGE": {
   "id": "A",
-  "state": "A fix candidate; B and tail produced",
+  "state": "landing B",
   "delegate_active": "none",
   "updated": "2026-11-12"
  },
- "RESUME": "A: fixed candidate on task/sci47 (745a8967 + record); run verify_run battery on the exact frozen SHA, land A (task_close, safe_push). B and tail: task/sci47b (merged with A fixes); deliver after A with the stated limits (inference verification absent). Staged receipts: -77, -76 (A), -75 x2 (tail).",
+ "RESUME": "B: freeze, battery via verify_run on the frozen SHA, land (task_close, safe_push), tell IT47 (receipts -75 x2 after -77, -76). Then close: capability outcome, takeaways, final report; cleanup of own rebuildable temporaries only.",
  "DECISIONS_TAKEN": [
   "2026-11-12 operator integration: first battery on frozen 28adb148 failed three suites (reader journey on copied IT46 notes, shebang without exec bit, TSV widths 10/12); fixed in 745a8967 (snapshot stored in its original layout with PATH_MAP and hashes, extract re-serialised with the 12-column header and original field counts, script mode 755 with a safe --help); the three suites pass; the 28adb148 verdict stays attributed to that SHA and is not extended to the next candidate.",
   "2026-11-12 package B calibrated: HPA origin not verified (static pages carry no methods; candidate source PMID 37824663 not opened), OPC involvement plausible not shown, KCNQ2 discrepancy shows no species difference and no technical cause is asserted; numerical reproduction and inference verification kept apart."
@@ -56,9 +56,9 @@
     },
     {
      "step": "Review of p9 two-lever design, minimal design, consumer_delta, deliver A (gate, LINT, receipts, growth, verify_run on frozen SHA, task_close, safe_push)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "battery2 on 6c9750b7 PASS WITH SKIPS 244/11; battery on 28adb148 kept as FAIL (3 suites, fixed); next: merge origin/main, task_close, safe_push"
+     "evidence": "A landed main bd6b0333 (task_close, safe_push gate PASS, ls-remote verified); frozen 6c9750b7 battery2 PASS WITH SKIPS 244/11; 28adb148 FAIL kept; IT47 messaged with receipts -77, -76 and the delta"
     }
    ]
   },
@@ -79,9 +79,9 @@
     },
     {
      "step": "Verification and delivery of B",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "numerical reproduction done (rerun on hashes; awk cross-check); verification of the biological inferences NOT done (no independent reader); delivery follows package A on task/sci47b"
+     "evidence": "B delivered on task/sci47b after calibration; numerical reproduction done, verification of the biological inferences NOT done (stated limit); battery on its frozen SHA recorded in VERIFICATION_EVIDENCE"
     }
    ]
   },
@@ -101,9 +101,9 @@
    "steps": [
     {
      "step": "Self-evaluation, DREAM, capability scout, takeaways, cleanup of own rebuildable temporaries, final short report",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "self-evaluation Part 1 PASS and written (self_eval_orchestrator_sci47_20261112.md); DREAM chain in cell_context README; capability scout and takeaways in the final report"
     }
    ]
   }
@@ -140,6 +140,27 @@
    "evidence_dir": "/tmp/legend-verify-keep/20261112-095002-c776e639",
    "log_sha256": "27d3150ec96fb51444c4360db9579ead875405569fa1131ef8bdf842b8a04fdd",
    "scope": "package A candidate; pre-freeze gate PASS, LINT WARN no BLOCK, receipts OK 1814, growth PASS; later commits closure-only; merge of origin/main is the landing"
+  },
+  {
+   "run_id": "20261112-115503-2cdb1b1a",
+   "label": "batteryB",
+   "sha": "6f4c04fe8c0abebdc7bfed63f1f1cff673426325",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-115503-2cdb1b1a",
+   "log_sha256": "f88c5dbfd1a88dd8ef902a9f12448528dae409fcc2932bd91a76659f5855b237",
+   "clone": "REMOVED"
+  },
+  {
+   "run_id": "20261112-115503-2cdb1b1a",
+   "label": "batteryB",
+   "sha": "6f4c04fe8c0abebdc7bfed63f1f1cff673426325",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "verdict": "PASS WITH SKIPS (245 targets, 12 skipped: local corpus artefacts, catalogue cache, case-sensitive filesystem, Stop hook absent in the clone)",
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-115503-2cdb1b1a",
+   "log_sha256": "f88c5dbfd1a88dd8ef902a9f12448528dae409fcc2932bd91a76659f5855b237",
+   "scope": "package B and tail candidate; pre-freeze four suites OK, gate PASS, LINT WARN no BLOCK, receipts OK 1814, growth PASS; later commits closure-only"
   }
  ]
 }
