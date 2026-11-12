@@ -1,6 +1,6 @@
 # IT47 P4: result of the new case (the GSK3 / eIF2B hypotheses package, INV-09), against the pre-registration
 
-Non-canonical working note. Not medical advice; no dose, schedule or route. Reference genotype class only. Nothing here nominates a compound. Pre-registration: `prereg_it47.md` (committed before the package rows were read). Blind reader: `verify/VERDICTS.md` (sonnet, high; 71 tool calls, about 217k tokens, about 10 minutes). The reader's full report was read, not a summary.
+Non-canonical working note. Not medical advice; no dose, schedule or route. Reference genotype class only. Nothing here nominates a compound. Pre-registration: `prereg_it47.md` (committed before the package rows were read). Blind reader: `verify/VERDICTS.md` (sonnet, effort high read back on all 47 turns; cost in the section below). The reader's full report was read, not a summary.
 
 ## Counts on the same data
 | Measure | 1 Simple target search | 2 Previous path | 3 Path with the package and the context |
@@ -30,7 +30,7 @@ Non-canonical working note. Not medical advice; no dose, schedule or route. Refe
 Shows: with the package consumed, a thread whose card named a compound arm now starts from a baseline measurement and from controls that the card lacked; the independent check found one package gap and one error of the mapping that the tests could not see. Does not show: a better pharmacological prediction, a favourable compound, novelty against the literature, or that the gain would persist on a case chosen by someone else; one case, chosen by a rule fixed beforehand, whose rows I had not read.
 
 ## Cost and time observed
-Reader: 71 tool calls, about 217k tokens (own estimate), about 10 minutes; generator run seconds; mapping, test and dashboard rows about 40 minutes of the session.
+Reader, from `session_model_census.py` on its transcript (measured, not the reader's own estimate): 47 turns on one model (sonnet) with effort high read back ×47; the harness notice also reported 71 tool uses and 10.2 minutes of duration; **output 44,189 tokens**; **context written to the cache 206,000**; **context re-read from the cache 5,261,125** (cache reads are not new work: the start context of 18,328 tokens is re-read on each turn); peak context 214,695. The "216,891 tokens" figure of the harness notice is close to the peak context, not to the work done, and the earlier phrase "about 217k tokens" is withdrawn. Generator run: seconds; mapping, test and dashboard rows: about 40 minutes of the session (not measured by a tool).
 
 ## Limits
 Reader depth is abstract for three papers; the package's author is a Scientist session and the rows are hypotheses; the context cells of four rows are references to H1; dashboard rows for H1 and H4 were added from the same mapping; translations are the assistant's.

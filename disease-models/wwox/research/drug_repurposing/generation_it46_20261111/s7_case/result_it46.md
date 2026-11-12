@@ -41,3 +41,5 @@ Result against the stated expectation: items 1, 2 and 3 of the predicted differe
 
 ## Limits
 Five of the seven reader items rest on abstract or database-copy depth for several documents (paywalled); EGABA values are from other mouse models and pooled regions; the proposal is conditional and unmeasured; the S7 relation was framed in IT42 and the chloride-conditional direction was already in the relation row (disclosed in the pre-registration); one case, chosen by a rule, scored by the session that built the method with an independent reader for the premises only (the arm counts are mine).
+
+**Cost correction 2026-11-12 (IT47).** The token figure written above for the reader was the harness notice's total or the reader's own estimate. From the transcript census (`session_model_census.py`; output / context written to the cache / context re-read from the cache / peak context / turns): S7 reader: output 68,102 / cache written 254,539 / cache read 11,318,317 / peak 263,234 / 79 turns (sonnet, effort high ×79); replaces "about 96 tool calls, 266k tokens".. Cache re-reads repeat the same context and are not new work.

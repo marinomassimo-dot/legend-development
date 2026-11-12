@@ -21,9 +21,9 @@ def main():
             continue
         r = pk[key]
         rel = clean(r["premise_and_action"].split(" || ")[0].replace("relation: ", "", 1))
-        rivals = " || ".join(short(x.strip(), 140) for x in r["competing_explanations"].split("rival rows of the same package: ", 1)[-1].strip(" |").split(" || ") if x.strip())
-        rows.append(dict(hyp_id=hid, inv_id=r["inv_id"], label=short(r["package_title"] or rel), observed=clean(r["starting_observation_and_chain"].split(" [source")[0]),
-                         hypothesised=(rel if rel != r["package_title"] else r["package_title"]) + ". Exploratory: the package states no therapeutic direction.", alternatives=rivals, strengthen=clean(r["expected_result_by_explanation"]),
+        rivals = " || ".join(short(x.strip(), 140) for x in r["competing_explanations"].split("rivals, complementary or compatible): ", 1)[-1].strip(" |").split(" || ") if x.strip())
+        rows.append(dict(hyp_id=hid, inv_id=r["inv_id"], label=short(r["package_title"] or rel), observed=(clean(r["starting_observation_and_chain"].split(" [source")[0]) if not r["starting_observation_and_chain"].startswith("not stated") else ("Recorded support, not a new observation (it may include the package's own audit remarks): " + clean(r["recorded_support"]) if r["recorded_support"] else "Not stated by the package as an observation.")),
+                         hypothesised=(rel if rel != r["package_title"] else r["package_title"]) + ". Exploratory: the package states no therapeutic direction.", alternatives=(("Alternatives the package states: " + clean(r["competing_explanations"].split(" || other rows of the same package")[0]) + " || ") if r["competing_explanations"].split(" || other rows of the same package")[0].strip() else "") + "Other rows of the package, not classified by it as rivals, complementary or compatible: " + rivals, strengthen=(clean(r["expected_result_by_explanation"]) if not r["expected_result_by_explanation"].startswith("not stated") else "Not stated by the package (missing): a falsifiable prediction is not given."),
                          weaken=clean(r["decision_measure"]), source_rows=r["package_ref"]))
         added += 1
     with open(f, "w", encoding="utf-8", newline="") as fh:

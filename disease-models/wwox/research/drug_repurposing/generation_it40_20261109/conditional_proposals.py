@@ -89,10 +89,10 @@ PKG_MAP = {
     "gsk3_eif2b_20261107": dict(inv="INV-09", relation_ids=[], symbols=["GSK3B", "GSK3A", "EIF2B5"],  # symbols added after the case: the preregistered run left them empty, so the context join was not tried (prediction c was untested, then wrong)
                                  observation=[], relation=["statement_IPOTESI"], context=["context"], action=["documented_action_on_the_node"], compound=["compound_or_tool", "tool_or_candidate"],
                                 premise=["requires_first"], competing=[], expected=["benefit_if_true"], measure=["refuted_or_replaced_by"], title="statement_IPOTESI", sibling_cell="statement_IPOTESI"),
-    "nrf2_inv08_20261107": dict(inv="INV-08", relation_ids=["S10"], observation=["what_supports"], relation=["hypothesis"], context=["transfer_note"], action=[], compound=[],
-                                premise=["status", "what_refutes"], expected=["what_supports"], measure=["what_separates"], title="hypothesis", sibling_cell="hypothesis", action_from_relation="S10"),
+    "nrf2_inv08_20261107": dict(inv="INV-08", relation_ids=["S10"], observation=[], support=["what_supports"], relation=["hypothesis"], context=["transfer_note"], action=[], compound=[],
+                                premise=["status", "what_refutes"], expected=[], measure=["what_separates"], title="hypothesis", sibling_cell="hypothesis", action_from_relation="S10"),
 }
-PKG_FIELDS = FIELDS + ["package_ref", "direction_stated", "unmapped_cells", "package_title"]
+PKG_FIELDS = FIELDS + ["package_ref", "direction_stated", "unmapped_cells", "package_title", "recorded_support"]
 
 
 def _relation_action(rid):
@@ -122,7 +122,7 @@ def package_rows():
             for x in rws:
                 r = x["row"]; sib = [y for y in rws if y is not x]
                 rivals = " || ".join(f"{y['key']}: {y['row'].get(m['sibling_cell'], '')}" for y in sib)
-                used = set(m["observation"] + m["relation"] + m["context"] + m["action"] + m["compound"] + m["premise"] + m.get("competing", []) + m["expected"] + m["measure"] + [m["title"]])
+                used = set(m["observation"] + m.get("support", []) + m["relation"] + m["context"] + m["action"] + m["compound"] + m["premise"] + m.get("competing", []) + m["expected"] + m["measure"] + [m["title"]])
                 action = cells(r, m["action"])
                 if not action and m.get("action_from_relation"):
                     action = "not stated by the package; taken from relation " + m["action_from_relation"] + " (" + _relation_action(m["action_from_relation"]) + ")"
@@ -132,14 +132,14 @@ def package_rows():
                 unmapped = [c for c in x["columns"] if c not in used and c not in ("id", "hyp_id", "hypothesis_id", m["title"]) and r.get(c)]
                 symbols = m.get("symbols") or (rel.get(m["relation_ids"][0], []) if m["relation_ids"] else [])
                 out.append(dict(corrections_it40="", proposal_id="CP-" + x["id"], kind="conditional_hypothesis_from_package", need_id="", inv_id=inv, cards="", status="exploratory (IPOTESI); the package row is not an approval",
-                                starting_observation_and_chain=(cells(r, m["observation"]) or "not stated by the package") + " [source: " + x["source_ref"] + "]", context=cells(r, m["context"]) or "not stated by the package",
-                                competing_explanations=cells(r, m.get("competing", [])) + (" || rival rows of the same package: " + rivals if rivals else ""),
+                                starting_observation_and_chain=(cells(r, m["observation"]) or "not stated by the package as an observation") + " [source: " + x["source_ref"] + "]", context=cells(r, m["context"]) or "not stated by the package",
+                                competing_explanations=cells(r, m.get("competing", [])) + (" || other rows of the same package (the package does not classify them as rivals, complementary or compatible): " + rivals if rivals else ""),
                                 premise_and_action="relation: " + cells(r, m["relation"]) + " || action: " + action + " || unresolved premise: " + prem,
                                 compound_or_probe_named_by_package=cells(r, m["compound"]) or "none named", catalogue_by_action="", cell_context=(cc.context_for(symbols, (m["relation_ids"] or [pkg])[0])[1] if symbols else "not joined (no relation symbols for this package)"),
                                 source_and_limits="package row, verbatim cells; no direction asserted; labels of the package kept: " + cells(r, [c for c in ("class", "status", "label") if r.get(c)]),
-                                expected_result_by_explanation=cells(r, m["expected"]), decision_measure=cells(r, m["measure"]) or "not stated by the package: a question, not an experiment",
+                                expected_result_by_explanation=cells(r, m["expected"]) or "not stated by the package (missing): its recorded support and counter-evidence are not a falsifiable prediction", decision_measure=cells(r, m["measure"]) or "not stated by the package: a question, not an experiment",
                                 experiments="", unresolved_refs="", nomination="CONDITIONAL; named compounds are the package's, not ranked; no therapeutic direction asserted",
-                                package_ref=x["id"] + " @ " + x["source_ref"], direction_stated="none (the package states no therapeutic direction)", unmapped_cells=",".join(unmapped), package_title=r.get(m["title"], "")))
+                                package_ref=x["id"] + " @ " + x["source_ref"], direction_stated="none (the package states no therapeutic direction)", unmapped_cells=",".join(unmapped), package_title=r.get(m["title"], ""), recorded_support=cells(r, m.get("support", []))))
     return out, seen_unmapped
 
 

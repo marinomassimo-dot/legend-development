@@ -96,15 +96,17 @@ class Rendered(unittest.TestCase):
     HEAD = {"it": "Ipotesi fisiologiche condizionali", "en": "Conditional physiological hypotheses", "fr": "Hypothèses physiologiques conditionnelles", "es": "Hipótesis fisiológicas condicionales", "de": "Bedingte physiologische Hypothesen"}
 
     def test_pages(self):
+        # one block per investigation that has reader rows (IT47: INV-08 and INV-09 joined INV-05 and INV-18 through the hypotheses_only packages)
+        n_inv = len({r["inv_id"] for r in tsv(DR / rv.PHYSIO_FILE)})
         seen = set()
         for p in sorted((DR / "view").glob("index*.html")):
             h = p.read_text(encoding="utf-8")
             lang = re.search(r'<html lang="(\w+)"', h).group(1)
             seen.add((p.name.startswith("index_shareable"), lang))
-            self.assertEqual(h.count('class="inv-phys"'), 2, p.name)
+            self.assertEqual(h.count('class="inv-phys"'), n_inv, p.name)
             self.assertIn(self.HEAD[lang], h, p.name)
             blocks = re.findall(r'<details class="inv-phys">.*?</details>', h, re.S)
-            self.assertEqual(len(blocks), 2)
+            self.assertEqual(len(blocks), n_inv)
             for b in blocks:
                 self.assertIsNone(NAMES.search(re.sub(r"<[^>]+>", " ", b)), p.name)
         self.assertEqual(len(seen), 10, sorted(seen))

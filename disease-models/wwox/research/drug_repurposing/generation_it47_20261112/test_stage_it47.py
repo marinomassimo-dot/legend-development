@@ -36,10 +36,18 @@ class PackageRows(unittest.TestCase):
         h = [r for r in self.rows if r["proposal_id"].endswith("nrf2_inv08_20261107::H1")][0]
         self.assertIn("not stated by the package; taken from relation S10", h["premise_and_action"])
 
-    def test_the_rival_rows_of_the_same_package_are_the_competing_explanations(self):
+    def test_other_rows_are_listed_without_calling_them_rivals(self):
         h5 = [r for r in self.rows if r["proposal_id"].endswith("nrf2_inv08_20261107::H5")][0]
         for k in ("H1", "H2", "H3", "H4", "H6"):
             self.assertIn(k + ":", h5["competing_explanations"])
+        self.assertIn("does not classify them as rivals, complementary or compatible", h5["competing_explanations"])
+
+    def test_nrf2_observation_support_and_prediction_are_kept_apart(self):
+        """IT47 integration: what_supports is recorded support (with audit remarks), not an observation and not a prediction; a missing prediction is declared missing"""
+        for r in [x for x in self.rows if "nrf2_inv08" in x["proposal_id"]]:
+            self.assertTrue(r["starting_observation_and_chain"].startswith("not stated by the package as an observation"), r["proposal_id"])
+            self.assertTrue(r["recorded_support"].startswith("what_supports:"), r["proposal_id"])
+            self.assertTrue(r["expected_result_by_explanation"].startswith("not stated by the package (missing)"), r["proposal_id"])
 
     def test_gsk3_package_prerequisite_is_a_premise_and_the_refuting_outcomes_are_the_measure(self):
         """reader R0 (IT47 P4): requires_first names a prerequisite, refuted_or_replaced_by the discriminating outcomes"""
@@ -57,10 +65,10 @@ class PackageRows(unittest.TestCase):
 class DashboardRows(unittest.TestCase):
     def test_reader_rows_exist_with_their_source_and_no_compound_name(self):
         rows = {r["hyp_id"]: r for r in csv.DictReader(open(DR / "generation_it40_20261109/reader_view.tsv", encoding="utf-8"), delimiter="\t")}
-        for k, inv in (("KP1", "INV-18"), ("NRF2-H1", "INV-08"), ("NRF2-H2", "INV-08")):
+        for k, inv in (("KP1", "INV-18"), ("NRF2-H1", "INV-08"), ("NRF2-H2", "INV-08"), ("GSK3-H1", "INV-09")):
             self.assertEqual(inv, rows[k]["inv_id"])
             self.assertIn("hypotheses.tsv:", rows[k]["source_rows"])
-            self.assertNotRegex(" ".join(rows[k].values()), r"ML365|PK-THPP|ONO-TR|fumarate|bardoxolone|KI-696|sulforaphane")
+            self.assertNotRegex(" ".join(rows[k].values()), r"ML365|PK-THPP|ONO-TR|fumarate|bardoxolone|KI-696|sulforaphane|LY-2090314|laduviglusib|TDZD-8|SB-216763|SB-415286")
 
 
 if __name__ == "__main__":
