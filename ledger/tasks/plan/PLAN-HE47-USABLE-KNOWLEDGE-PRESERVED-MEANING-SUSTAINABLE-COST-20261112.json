@@ -10,13 +10,13 @@
   "OBJECTIVE": "HE47 (full mandate H1-H8 received 2026-11-12): capabilities already built are actually used; scientific meaning of inputs preserved; repeated work, context cost and useless temporaries reduced.",
   "worktree": ".claude/worktrees/he47",
   "branch": "task/he47",
-  "CURRENT_STATE": "IN_PROGRESS",
+  "CURRENT_STATE": "COMPLETE",
   "CHECKPOINT": {
-    "last_verified_result": "battery on 353015299e48 PASS WITH SKIPS; later commits (card link b4cbf00d, package ea6468e8, recipe 3b2fac58) covered by targeted suites only",
-    "first_incomplete_work": "landing, publication, CI",
-    "active_processes": "none of mine except neighbouring suites",
-    "real_dependencies": "task/sci47 carries the same cells as cf1f39b0 (cherry-picked here); IT47 owns generator consumption",
-    "next_executable_step": "task_close, safe_push, ci_runs"
+    "last_verified_result": "battery on 353015299e488de4c0a68a4f17d6c6ec72fb8065 PASS WITH SKIPS (245 targets, 12 skipped); integration and publication 8541f097fa6ca3fa61326d962106614c3506d331 (gate PASS, ls-remote verified); CI on 8541f097: Public release gate #661 success, shareable view #36 success",
+    "first_incomplete_work": "none for HE47; IT47 and SCI47 land after this and the later lander regenerates the view pages",
+    "active_processes": "none",
+    "real_dependencies": "none open for HE47",
+    "next_executable_step": "none"
   },
   "AUTHORISED_QUEUE_20261112": {
     "MANDATE_STATE": "OPEN",
@@ -127,6 +127,14 @@
       "evidence_dir": "/tmp/legend-verify-keep/20261112-092042-363cf8c6",
       "log_sha256": "8b57db254fe9fcec2000c9b5bf6e2b2e2347638d936876c030813279f7c31d33",
       "clone": "REMOVED"
+    },
+    {
+      "label": "ci",
+      "sha": "8541f097fa6ca3fa61326d962106614c3506d331",
+      "state": "CONCLUDED",
+      "result": "Public release gate #661 success; Publish the shareable view #36 success",
+      "note": "commits b4cbf00d, ea6468e8, 3b2fac58 and a81c064f came after the battery SHA and were covered by targeted suites only"
     }
-  ]
+  ],
+  "MANDATE_STATE": "COMPLETE"
 }
