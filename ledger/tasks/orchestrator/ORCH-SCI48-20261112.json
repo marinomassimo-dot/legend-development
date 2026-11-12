@@ -10,7 +10,7 @@
  "MANDATE_STATE": "OPEN",
  "CURRENT_PACKAGE": {
   "id": "landing",
-  "state": "second candidate: quick suites then battery",
+  "state": "battery PASS WITH SKIPS on 2d6de16a; landing",
   "delegate_active": "none",
   "updated": "2026-11-12"
  },
@@ -118,6 +118,17 @@
    "log_sha256": "988274565edb3f7413eb0996879f1eca7774bfaa69287bdc5b5d1948ee5a3833",
    "clone": "REMOVED",
    "attribution": "FAIL on e2b0ce41 only: 2 suites (ranking_it8 test_regeneration_is_byte_identical: committed ranking.json receipt_ledger_lines 1816 against 1818 fresh, stale at the base 0bed3857 and regenerated on main by 3b877bfc; repurposing_view: 4 Chromium DevTools errors from the Snap-internal binary, fixed on main by 4ff3ced5). Neither touches files of this package. The FAIL is kept and not extended to the next candidate."
+  },
+  {
+   "run_id": "20261112-192047-76867013",
+   "label": "battery",
+   "sha": "2d6de16af4f335d5d4e7f28bf1442748912a61a1",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-192047-76867013",
+   "log_sha256": "c2d5bd7524e1db84bb8794805700c9436b8ff577b86700a5f5c69789e1f0777f",
+   "clone": "REMOVED",
+   "attribution": "PASS WITH SKIPS (247 targets, 12 skipped), on the merge candidate 2d6de16a; verdict attributed to that SHA only; later commits are closure-only (record, tail note)"
   }
  ]
 }
