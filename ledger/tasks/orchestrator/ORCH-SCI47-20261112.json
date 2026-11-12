@@ -9,12 +9,15 @@
  "BASELINE": "main 940182af (SCI46 landed and verified). Worktree .claude/worktrees/sci47, branch task/sci47. IT46 package not yet on main: read read-only from worktree it46 (task/it46 cfac505c). Coordinates with IT47 (integrator of shared consumers). The pasted HE47 mandate was for the plan actor, not this session; ignored by the operator's statement.",
  "CURRENT_PACKAGE": {
   "id": "A",
-  "state": "freeze",
+  "state": "A fix candidate; B and tail produced",
   "delegate_active": "none",
   "updated": "2026-11-12"
  },
- "RESUME": "Freeze package A, run verify_run battery on the frozen SHA, task_close, safe_push, message the integrator; then package B (preregister the single case before any search).",
- "DECISIONS_TAKEN": [],
+ "RESUME": "A: fixed candidate on task/sci47 (745a8967 + record); run verify_run battery on the exact frozen SHA, land A (task_close, safe_push). B and tail: task/sci47b (merged with A fixes); deliver after A with the stated limits (inference verification absent). Staged receipts: -77, -76 (A), -75 x2 (tail).",
+ "DECISIONS_TAKEN": [
+  "2026-11-12 operator integration: first battery on frozen 28adb148 failed three suites (reader journey on copied IT46 notes, shebang without exec bit, TSV widths 10/12); fixed in 745a8967 (snapshot stored in its original layout with PATH_MAP and hashes, extract re-serialised with the 12-column header and original field counts, script mode 755 with a safe --help); the three suites pass; the 28adb148 verdict stays attributed to that SHA and is not extended to the next candidate.",
+  "2026-11-12 package B calibrated: HPA origin not verified (static pages carry no methods; candidate source PMID 37824663 not opened), OPC involvement plausible not shown, KCNQ2 discrepancy shows no species difference and no technical cause is asserted; numerical reproduction and inference verification kept apart."
+ ],
  "DELEGATIONS": [
   "P producer ib-z: asked sonnet/medium; read back medium x52; 52 turns; output 81,955; cache read 5,912,703; 1 source; staged receipt -77 (1)",
   "V9 verifier ib-y: asked sonnet/high; read back high x64; 64 turns; output 75,469; cache read 8,510,813; staged receipt -76 (1)"
@@ -55,7 +58,7 @@
      "step": "Review of p9 two-lever design, minimal design, consumer_delta, deliver A (gate, LINT, receipts, growth, verify_run on frozen SHA, task_close, safe_push)",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "README, consumer_delta (8 rows), COST_NOTE written; gate PASS, LINT no BLOCK, receipts OK 1814, growth PASS before freeze; battery next"
+     "evidence": "battery2 on 6c9750b7 PASS WITH SKIPS 244/11; battery on 28adb148 kept as FAIL (3 suites, fixed); next: merge origin/main, task_close, safe_push"
     }
    ]
   },
@@ -64,21 +67,21 @@
    "steps": [
     {
      "step": "Choose the single highest-value case and fix question, panel, comparison and contrary result before any search",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "cell_context_sci47_20261112/PREREGISTRATION.md committed d798781b before the new table was read: case KCNQ2 (mouse P7 vs held human table), rule and contrary result fixed"
     },
     {
      "step": "Public processed resource analysis or stated perimeter; correct nrf2_expression_sci46 wording",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "HPA single-nuclei table (5,254,086 bytes, SHA-256 b24e46d4...) read; rule not met in its pre-registered form because OPC KCNQ2 is 0.73 of the neuronal maximum; calibrated after the operator integration (HPA source dataset not verified, OPC plausible not shown, no technical cause asserted); wording corrections to nrf2_expression_sci46 as dated update; on task/sci47b b72d819f"
     },
     {
      "step": "Verification and delivery of B",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "numerical reproduction done (rerun on hashes; awk cross-check); verification of the biological inferences NOT done (no independent reader); delivery follows package A on task/sci47b"
     }
    ]
   },
@@ -87,9 +90,9 @@
    "steps": [
     {
      "step": "Selective tail: one or two items that change a consumer (text/supplements of an open NRF2 question; IT45 debts 38116420 and 21964340 as effective-coverage receipts; adequacy criterion; compensatory lever)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "tail_sci47_20261112: staged receipts FTR-20261112-38116420-75 and FTR-20261112-21964340-75 (targeted partial reads, validated, not recorded); Winkel retry HTTP 500 again (technical block, not retried by another route); other tail items deliberately not done (reasons in the README); on task/sci47b 7e5af5d0"
     }
    ]
   },
@@ -105,5 +108,38 @@
    ]
   }
  },
- "VERIFICATION_EVIDENCE": []
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261112-090930-5522aeb0",
+   "label": "battery",
+   "sha": "28adb14845d5cf2303a777ff044d09210ff7ae5e",
+   "state": "CONCLUDED",
+   "exit_code": 1,
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-090930-5522aeb0",
+   "log_sha256": "44b934cc6017dacc2b113c9d674763564487f332f8c70c6389f0bce83b358418",
+   "clone": "REMOVED",
+   "verdict": "FAIL: three suites failed (scripts/test_fresh_clone_reader_journey.py, scripts/test_release_surface.py, scripts/test_structured_data_integrity.py); kept as a FAIL attributed to 28adb148 only; fixed in 745a8967"
+  },
+  {
+   "run_id": "20261112-095002-c776e639",
+   "label": "battery2",
+   "sha": "6c9750b7c96ce23a87a63c72d4f35fc063b5bf1c",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-095002-c776e639",
+   "log_sha256": "27d3150ec96fb51444c4360db9579ead875405569fa1131ef8bdf842b8a04fdd",
+   "clone": "REMOVED"
+  },
+  {
+   "run_id": "20261112-095002-c776e639",
+   "label": "battery2",
+   "sha": "6c9750b7c96ce23a87a63c72d4f35fc063b5bf1c",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "verdict": "PASS WITH SKIPS (244 targets, 11 skipped: case-sensitive filesystem, local corpus artefacts, catalogue cache, Stop hook absent in the clone)",
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-095002-c776e639",
+   "log_sha256": "27d3150ec96fb51444c4360db9579ead875405569fa1131ef8bdf842b8a04fdd",
+   "scope": "package A candidate; pre-freeze gate PASS, LINT WARN no BLOCK, receipts OK 1814, growth PASS; later commits closure-only; merge of origin/main is the landing"
+  }
+ ]
 }
