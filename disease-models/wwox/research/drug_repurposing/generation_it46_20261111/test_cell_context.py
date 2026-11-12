@@ -67,6 +67,12 @@ class RealTables(unittest.TestCase):
         _, text = cc.context_for(["SLC12A5", "SLC12A2"])
         self.assertIn("SLC12A5 (mouse neuron-enriched, human neuron-enriched)", text)
 
+    def test_nrf2_axis_genes_as_held(self):
+        s = {(r["gene"], r["table"]): r["state"] for r in cc.join(["NFE2L2", "KEAP1", "NQO1", "HMOX1"])}
+        self.assertEqual("OTHER_ENRICHED", s[("NFE2L2", "mouse_nrf2")])   # astrocytes 11.87 against neurons 2.11
+        self.assertEqual("OTHER_ENRICHED", s[("HMOX1", "mouse_nrf2")])    # microglia 260 against neurons 2.4
+        self.assertIn(s[("NQO1", "mouse_nrf2")], ("OTHER_ENRICHED", "NOT_DETECTED_IN_TABLE", "SHARED"))   # at or near the floor in every class
+
     def test_the_kv7_relation_is_not_assignable_to_neurons_from_these_tables(self):
         _, text = cc.context_for(["KCNQ2", "KCNQ3", "KCNQ4", "KCNQ5"])
         self.assertIn("cannot be assigned to neurons", text)

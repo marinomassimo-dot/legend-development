@@ -13,7 +13,11 @@ V19N = (MARK + " Interpretable pair: each reagent with and without a verified NF
 EDITS = [(DR / "ranking_it8_p9_20261029/investigations_it20.tsv", "inv_id", "INV-08", "next_test", STEPS), (DR / "ranking_it8_p9_20261029/investigations.tsv", "inv_id", "INV-08", "next_test", STEPS),
          (DR / "ranking_it8_p9_20261029/investigations_it20.tsv", "inv_id", "INV-08", "decisive_uncertainty", UNC), (DR / "ranking_it8_p9_20261029/investigations.tsv", "inv_id", "INV-08", "decisive_uncertainty", UNC),
          (DR / "generation_it41_20261109/compound_view.tsv", "item_id", "V19", "next_test", V19N),
+         (DR / "ranking_it8_p9_20261029/investigations_it20.tsv", "inv_id", "INV-08", "next_test", RNA), (DR / "ranking_it8_p9_20261029/investigations.tsv", "inv_id", "INV-08", "next_test", RNA),
          (DR / "batch_sci_20261105/map/open_questions_map.tsv", "qid", "IT45-Q03", "blocking_reason", " " + MARK + " Reagent pair named: binder KI-696; covalent comparators dimethyl fumarate and monomethyl fumarate, bardoxolone methyl conditional. The Davies arm exists only as categorical database labels; verified NRF2 dependence exists in primary microglia, not in neurons.")]
+RNA = ("[IT46 SCI46q] Readouts by cell class (SCI46 queue item, RNA class means, mouse P7 and P17 oligodendrocyte-lineage, one human neuron sample; not protein or activity): a neuron-readable target panel (Gclm, Txnrd1, Gpx4, G6pdx, Srxn1, Gclc) beside nuclear NRF2; NQO1 and HMOX1 as induced-state readouts with the per-class baseline "
+       "(NQO1 is at the floor in mouse neurons, 0.84 FPKM, and low in astrocytes, 3.02; HMOX1 is 2.43 in neurons, 14.85 in astrocytes and 260.42 in microglia); HMOX1, NFE2L2 and SLC7A11 are astrocyte-biased, so a bulk transcript readout can move with cell composition alone; "
+       "the HCAR2 route of a fumarate needs a microglia-like cell (Hcar2 18.12 FPKM in microglia against 0.10 in neurons and astrocytes). Source: nrf2_expression_sci46_20261111/README.md.")
 S = "keap1_nrf2_sci46_20261111/consumer_delta.md"
 NEWQ = [("IT46-Q05", "Davies 2016 Supporting Information: the numbers behind the categorical NRF2-siRNA labels of the non-covalent binder and bardoxolone methyl (closed access; no contact is made). DATO gap.", "Decides whether the source's own knockdown arm can be read as numbers.", "data_access_blocked", "Closed access, no repository copy.", "no"),
         ("IT46-Q06", "Winkel 2015 full text and its knock-out verification for the second non-covalent binder (abstract reached only). Reading task.", "Decides whether a second binder meets the knockdown criterion.", "literature_executable", "Full text returned an error twice; not retried by another route.", "yes"),
@@ -31,7 +35,7 @@ def main(check=False):
                 continue
             i, c = h.index(idc), h.index(col)
             for r in rows[1:]:
-                if r[i] == idv and MARK not in r[c]:
+                if r[i] == idv and txt.lstrip().split("]")[0] + "]" not in r[c]:
                     r[c] = (r[c] + (txt if txt.startswith(" ") else " " + txt)).strip(); changed += 1
         if f.name == "open_questions_map.tsv":
             have = {r[0] for r in rows}
