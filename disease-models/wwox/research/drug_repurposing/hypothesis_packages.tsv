@@ -10,3 +10,4 @@ potassium_conductances_sci43_20261110	potassium_conductances_sci43_20261110	hypo
 ph_k2p_sci45_20261111	ph_k2p_sci45_20261111	hypotheses_only	INV-18	INV-18 pH/K2P hypotheses KP1-KP5 (SCI45; key column id; KP2 and KP3 recorded as refuted for their scope in the package), returned verbatim; HE46 registration
 hcn_20261107	hcn_20261107	hypotheses_only	INV-18	INV-18 Ih/HCN hypotheses HY1-HY3 (key column hypothesis_id), returned verbatim; HE46 registration
 nrf2_inv08_20261107	nrf2_inv08_20261107	hypotheses_only	INV-08	INV-08 NRF2/KEAP1 hypotheses (own layout: hypothesis, what_supports, what_refutes, what_separates...), returned verbatim; HE46 registration
+gsk3_eif2b_20261107	gsk3_eif2b_20261107	hypotheses_only	INV-09	INV-09 lithium / GSK3 and eIF2B hypotheses (5 rows, own layout: statement_IPOTESI, compound_or_tool, documented_action_on_the_node, context, requires_first); registered in IT47 for INV-09, the subject; its README names INV-02 once
