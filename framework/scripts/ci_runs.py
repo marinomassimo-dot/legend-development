@@ -6,16 +6,17 @@ the run ever ended. The supported way to hold such a wait is a BLOCKED step whos
 (cross_session_transport.md section 12); this tool reads the conclusion so that the step can be closed with evidence (run number, workflow, SHA, conclusion).
 
     python3 framework/scripts/ci_runs.py status <sha>                 # one line per workflow run on that commit
-    python3 framework/scripts/ci_runs.py wait <sha> --timeout 1800    # polls every 60 s; exit 0 all runs concluded success
+    python3 framework/scripts/ci_runs.py wait <sha> --timeout 1800    # polls every 120 s, one shared read per commit; exit 0 all runs concluded success
 
 Exit codes: 0 every run on the commit concluded success · 1 a run concluded with anything else · 3 no run seen for the commit · 124 the deadline passed with a run
 still in progress (or none yet) · 2 invalid invocation or the API unreadable. No token is used (the repository is public; the unauthenticated limit is 60 requests an
-hour, so `wait` polls once a minute and, when the limit is reached, sleeps until the reset the API announces, inside its deadline). `no run seen` is not `success`: a push whose workflow has not started yet reads exit 3, and `wait` keeps polling it.
+hour, so `wait` polls every two minutes, shares one answer per commit with every other waiter on the machine (a cache under $TMPDIR, five seconds shorter than the interval) and, when the limit is reached, sleeps until the reset the API announces, inside its deadline). `no run seen` is not `success`: a push whose workflow has not started yet reads exit 3, and `wait` keeps polling it.
 """
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
@@ -53,6 +54,44 @@ def fetch_runs(sha: str, repo: str) -> list[dict]:
         return json.load(r)["workflow_runs"]
 
 
+POLL = 120   # seconds between reads: a publication run lasts about an hour, so one-minute polling alone used the whole unauthenticated hour (60 requests)
+
+
+def cache_dir() -> Path:
+    return Path(os.environ.get("TMPDIR") or "/tmp") / f"legend-ci-runs-{os.getuid()}"
+
+
+def read_shared(sha: str, repo: str, ttl: float, now: float):
+    """One read of the API serves every waiter on this machine: a recent answer for the same repository and commit is reused, and a declared rate-limit
+    pause is honoured by all of them without another request. Returns ('runs', list) | ('pause', seconds) | None (nothing fresh: ask the API)."""
+    d = cache_dir()
+    try:
+        until = float(json.loads((d / "ratelimit.json").read_text())["until"])
+        if until > now:
+            return "pause", until - now
+    except (OSError, ValueError, KeyError):
+        pass
+    try:
+        got = json.loads((d / f"{repo.replace('/', '_')}_{sha}.json").read_text())
+        if now - float(got["at"]) < ttl:
+            return "runs", got["runs"]
+    except (OSError, ValueError, KeyError):
+        pass
+    return None
+
+
+def write_shared(sha: str, repo: str, runs: list[dict] | None, now: float, pause: float | None = None) -> None:
+    d = cache_dir()
+    try:
+        d.mkdir(mode=0o700, exist_ok=True)
+        if pause is not None:
+            (d / "ratelimit.json").write_text(json.dumps({"until": now + pause}))
+        elif runs is not None:
+            (d / f"{repo.replace('/', '_')}_{sha}.json").write_text(json.dumps({"at": now, "runs": runs}))
+    except OSError:
+        pass        # a cache that cannot be written only costs a request
+
+
 def verdict(runs: list[dict]) -> tuple[int, list[str]]:
     """(exit code, lines) from the workflow_runs of one commit."""
     if not runs:
@@ -85,10 +124,17 @@ def main(argv=None) -> int:
     repo = slug(a.remote)
     end = time.time() + (a.timeout if a.cmd == "wait" else 0)
     while True:
+        fresh = read_shared(a.sha, repo, POLL - 5 if a.cmd == "wait" else 30, time.time())
         try:
-            runs = fetch_runs(a.sha, repo)
+            if fresh and fresh[0] == "pause":
+                raise urllib.error.HTTPError("", 403, "rate limit declared by another reader", {"X-RateLimit-Remaining": "0", "X-RateLimit-Reset": str(time.time() + fresh[1] - 2)}, None)
+            runs = fresh[1] if fresh else fetch_runs(a.sha, repo)
+            if not fresh:
+                write_shared(a.sha, repo, runs, time.time())
         except urllib.error.HTTPError as exc:
             pause = reset_wait(exc.headers, time.time()) if exc.code in (403, 429) else None
+            if pause is not None:
+                write_shared(a.sha, repo, None, time.time(), pause)
             if pause is not None and a.cmd == "wait" and time.time() + pause < end:
                 time.sleep(pause)               # the limit is a pause, not a verdict: wait for the reset inside the deadline
                 continue
@@ -101,7 +147,7 @@ def main(argv=None) -> int:
         if a.cmd == "status" or code in (0, 1) or time.time() >= end:
             print("\n".join(lines))
             return code if not (a.cmd == "wait" and code == 3) else 124
-        time.sleep(60)
+        time.sleep(POLL)
 
 
 if __name__ == "__main__":

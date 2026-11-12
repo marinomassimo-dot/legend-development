@@ -9,7 +9,7 @@ them in one place. This module is that place. It builds on `owned_scratch.py` (a
 nothing) and adds the lifecycle around it:
 
     python3 framework/scripts/verify_run.py run --sha <sha> --label battery --mandate <TASK_ID> [--task-record <record.json>] -- python3 -B scripts/run_release_regressions.py
-    python3 framework/scripts/verify_run.py reap          # conclude and remove this session's earlier finished or interrupted runs (idempotent)
+    python3 framework/scripts/verify_run.py reap          # conclude and remove this session's earlier finished or interrupted runs (idempotent); --session ID names another owner exactly
     python3 framework/scripts/verify_run.py status [RUN_ID]
     python3 framework/scripts/verify_run.py unrecognised  # LIST ONLY: clone-like directories in the temp dir with no manifest of ours
 
@@ -377,7 +377,7 @@ def cmd_run(a) -> int:
     if not command:
         print("verify_run: no command given after --", file=sys.stderr)
         return 2
-    cleanup_previous(os.environ.get("CLAUDE_CODE_SESSION_ID", ""), None)            # an interrupted earlier run of this session is concluded first
+    cleanup_previous(os.environ.get("CLAUDE_CODE_SESSION_ID", ""))            # an interrupted earlier run of this session is concluded first
     run_id = time.strftime("%Y%m%d-%H%M%S", time.gmtime()) + "-" + uuid.uuid4().hex[:8]
     run_dir = keep_root() / run_id
     run_dir.mkdir(parents=True)
@@ -438,33 +438,45 @@ def finish(run_dir: Path, m: dict, code: int) -> int:
     return code
 
 
-def cleanup_previous(session: str, actor: str | None) -> list[dict]:
-    """Conclude earlier runs of this session (or, with an actor, of that actor) that are finished or whose processes are gone. Others are never touched."""
+def cleanup_previous(session: str) -> list[dict]:
+    """Conclude earlier runs of exactly this session that are finished or whose processes are gone. Others are never touched: two sessions may share an
+    ACTOR_ID, which names a role and not an owner (HE47 H6)."""
     done = []
     root = keep_root()
-    if not root.is_dir():
+    if not root.is_dir() or not session:
         return done
     for run_dir in sorted(p for p in root.iterdir() if p.is_dir()):
         m = load(run_dir)
-        if not m or (m.get("cleanup") or {}).get("state") == "REMOVED":
-            continue
-        mine = (bool(session) and m.get("session") == session) or (actor is not None and bool(actor) and m.get("actor") == actor)
-        if not mine:
+        if not m or (m.get("cleanup") or {}).get("state") == "REMOVED" or m.get("session") != session:
             continue
         done.append(conclude(run_dir))
     return done
 
 
+def other_sessions_of(actor: str, own: str) -> list[dict]:
+    """Unremoved runs that carry this actor but belong to another session: listed so their owner can reap them, never concluded here."""
+    root = keep_root()
+    found = []
+    for run_dir in sorted(p for p in root.iterdir() if p.is_dir()) if root.is_dir() else []:
+        m = load(run_dir)
+        if m and (m.get("cleanup") or {}).get("state") != "REMOVED" and actor and m.get("actor") == actor and m.get("session") != own:
+            found.append(m)
+    return found
+
+
 def cmd_reap(a) -> int:
-    session = os.environ.get("CLAUDE_CODE_SESSION_ID", "")
-    if not session and not a.actor:
-        print("verify_run: no session id in the environment; pass --actor to reap by role", file=sys.stderr)
+    own = os.environ.get("CLAUDE_CODE_SESSION_ID", "")
+    session = a.session or own
+    if not session:
+        print("verify_run: no session id in the environment; pass --session with the exact id of the owner", file=sys.stderr)
         return 2
-    results = cleanup_previous(session, a.actor)
+    results = cleanup_previous(session)
     for m in results:
         cl = m.get("cleanup", {})
         print(f"{m.get('run_id')} {m.get('state')} -> clone {cl.get('state')}" + ("; " + "; ".join(cl.get("reasons", [])) if cl.get("state") == "KEPT" else ""))
     print(f"{len(results)} run(s) examined")
+    for m in other_sessions_of(a.actor, own) if a.actor else []:
+        print(f"NOT TOUCHED {m.get('run_id')} actor {m.get('actor')} belongs to session {m.get('session')}; its owner reaps it, or reap --session {m.get('session')}")
     return 0
 
 
@@ -514,7 +526,8 @@ def main(argv=None) -> int:
     r.add_argument("--max-archive-mb", type=int, default=50)
     r.add_argument("command", nargs=argparse.REMAINDER)
     p = sub.add_parser("reap")
-    p.add_argument("--actor", default="", help="also conclude earlier runs of this actor from other sessions")
+    p.add_argument("--session", default="", help="exact session id whose runs to conclude (default: this session)")
+    p.add_argument("--actor", default="", help="list, without touching, runs of this actor that belong to other sessions")
     s = sub.add_parser("status")
     s.add_argument("run_id", nargs="?", default="")
     sub.add_parser("unrecognised")

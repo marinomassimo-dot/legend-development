@@ -134,6 +134,38 @@ def census(path: Path, since: str = "") -> dict[str, Any]:
     }
 
 
+def carry(path: Path, since: str = "", cap: int = 3000, early: int = 50) -> dict[str, Any]:
+    """Which tool results the context carries longest: bytes of each result times the assistant turns that followed it (a proxy for what is read again every turn,
+    not a token count, and blind to a compaction in between, which makes an early result look more expensive than it was)."""
+    turns, results, names = 0, [], {}
+    for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
+        try:
+            row = json.loads(line)
+        except ValueError:
+            continue
+        if since and (row.get("timestamp") or "") < since:
+            continue
+        content = (row.get("message") or {}).get("content")
+        if row.get("type") == "assistant":
+            turns += 1
+            names.update({c["id"]: c.get("name", "?") for c in content if isinstance(content, list) and c.get("type") == "tool_use"})
+        elif row.get("type") == "user" and isinstance(content, list):
+            for c in content:
+                if c.get("type") == "tool_result":
+                    x = c.get("content")
+                    results.append((names.get(c.get("tool_use_id"), "?"), len(x if isinstance(x, str) else json.dumps(x)), turns))
+    carried = sum(n * (turns - t) for _, n, t in results) or 1
+    big = [(n, t) for _, n, t in results if n > cap]
+    by_tool: dict[str, int] = {}
+    for tool, n, t in results:
+        by_tool[tool] = by_tool.get(tool, 0) + n * (turns - t)
+    return {"transcript": path.name, "turns": turns, "tool_results": len(results), "bytes": sum(n for _, n, _ in results),
+            "share_of_carried_by_tool": {k: round(100 * v / carried) for k, v in sorted(by_tool.items(), key=lambda kv: -kv[1])[:4]},
+            f"results_over_{cap}_bytes": len(big), f"share_of_carried_in_results_over_{cap}_bytes": round(100 * sum(n * (turns - t) for n, t in big) / carried),
+            f"share_of_carried_if_each_were_capped_at_{cap}_bytes": round(100 * sum((n - cap) * (turns - t) for n, t in big) / carried),
+            f"share_of_carried_read_in_the_first_{early}_turns": round(100 * sum(n * (turns - t) for _, n, t in results if t <= early) / carried)}
+
+
 def render(rows: list[dict[str, Any]]) -> str:
     lines = ["SESSION MODEL CENSUS — read from the transcripts, never from the dispatch", ""]
     for row in rows:
@@ -193,6 +225,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("transcripts", nargs="*", help="transcript .jsonl files")
     parser.add_argument("--dir", default="", help="a directory of transcripts")
     parser.add_argument("--json", action="store_true")
+    parser.add_argument("--carry", action="store_true", help="instead of the model census: which tool results the context carries longest (bytes x following turns; a proxy, not tokens)")
     parser.add_argument("--since", default="", help="count only turns at or after this ISO timestamp (a mandate's slice of a long session)")
     args = parser.parse_args(argv)
 
@@ -203,6 +236,9 @@ def main(argv: list[str] | None = None) -> int:
     if not paths:
         parser.error("name at least one transcript, or a --dir that holds some")
 
+    if args.carry:
+        print(json.dumps([carry(path, args.since) for path in paths], indent=1))
+        return 0
     rows = [census(path, args.since) for path in paths]
     print(json.dumps(rows, indent=1, ensure_ascii=False) if args.json else render(rows))
     return 1 if any(row.get("changed_mid_run") or row.get("asked_not_ran") for row in rows) else 0

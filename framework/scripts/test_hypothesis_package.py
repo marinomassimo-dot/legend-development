@@ -379,5 +379,82 @@ class HypothesesOwnLayout(unittest.TestCase):
                 self.assertEqual(n, sum(1 for _ in csv.DictReader(f, delimiter="\t")), d)
 
 
+class PropositionFacets(unittest.TestCase):
+    """HE47 H1: relation and direction are optional cells of decisive.tsv, read as written; a blank is `unclassified`, a stray value is
+    reported, and nothing is taken from the statement text."""
+    D = "prop_id\tstatement\trelation\tdirection\n"
+    H, M, pkg = ComparisonSource.H, ComparisonSource.M, ComparisonSource.pkg
+
+    def test_cells_are_read_as_written(self):
+        self.assertEqual(hp.prop_facets({"relation": "other_route", "direction": "null"}), {"relation": "other_route", "direction": "null"})
+
+    def test_not_applicable_is_stated_and_differs_from_nothing_said_and_from_a_measured_null(self):
+        f = [hp.prop_facets({"direction": v})["direction"] for v in ("not_applicable", "", "null")]
+        self.assertEqual(f, ["not_applicable", "unclassified", "null"])
+
+    def test_blank_or_absent_is_unclassified_and_not_an_error(self):
+        self.assertEqual(hp.prop_facets({"relation": " ", "direction": ""}), {"relation": "unclassified", "direction": "unclassified"})
+        self.assertEqual(hp.prop_facets({"prop_id": "D01"}), {"relation": "unclassified", "direction": "unclassified"})
+
+    def test_statement_wording_is_never_consulted(self):
+        row = {"statement": "An NRF2-independent route exists for monomethyl fumarate"}
+        self.assertEqual(hp.prop_facets(row)["relation"], "unclassified")
+
+    def test_value_outside_the_vocabulary_is_kept_visible_and_validated(self):
+        self.assertEqual(hp.prop_facets({"relation": "off-target"})["relation"], "unrecognised:off-target")
+        d = self.pkg([("output", "comparison.tsv", self.H + "R1\talpha\tno\n"), ("output", "new_measurements.tsv", self.M),
+                      ("output", "decisive.tsv", self.D + "D01\tx\toff-target\t\nD02\ty\tother_route\tsupports\n")])
+        pkg = dict(hp.load_comparison(d), role="pharmacological_comparison", inv_id="INV-05")
+        errs = hp.validate(pkg, needs=set(), invs={"INV-05": {}}, cards=d)
+        bad = [e for e in errs if "vocabulary" in e]
+        self.assertEqual(len(bad), 1)
+        self.assertTrue(bad[0].endswith("proposition D01 relation 'off-target' is not in the vocabulary"), bad)
+
+    def test_package_without_the_columns_is_unchanged(self):
+        d = self.pkg([("output", "comparison.tsv", self.H + "R1\talpha\tno\n"), ("output", "new_measurements.tsv", self.M),
+                      ("output", "decisive.tsv", "prop_id\tstatement\nD01\tx\n")])
+        pkg = dict(hp.load_comparison(d), role="pharmacological_comparison", inv_id="INV-05")
+        self.assertEqual([e for e in hp.validate(pkg, needs=set(), invs={"INV-05": {}}, cards=d) if "vocabulary" in e], [])
+        self.assertEqual(hp.prop_facets(pkg["dec"]["D01"]), {"relation": "unclassified", "direction": "unclassified"})
+
+    def test_committed_packages_use_only_the_vocabulary(self):
+        for p in hp.load_all():
+            if p["role"] == "pharmacological_comparison":
+                for k, r in p["dec"].items():
+                    self.assertFalse(any(v.startswith("unrecognised") for v in hp.prop_facets(r).values()), (p["dir"].parent.name, k))
+
+
+class HypothesesTwoInvestigations(unittest.TestCase):
+    """HE47 H2: one hypotheses folder serves several investigations by one manifest row each (the current format); an ambiguous key is a state, not a pick."""
+    def setUp(self):
+        self.d = Path(tempfile.mkdtemp(prefix="hp_multi_"))
+        self.addCleanup(lambda: __import__("shutil").rmtree(self.d, ignore_errors=True))
+
+    def folder(self, name, header, rows):
+        out = self.d / name / "output"
+        out.mkdir(parents=True)
+        (out / "hypotheses.tsv").write_text(header + "\n" + "\n".join(rows) + "\n", encoding="utf-8")
+        return self.d / name
+
+    def test_the_same_folder_listed_for_two_investigations_is_read_for_each(self):
+        f = self.folder("shared", "hyp_id\tstatement", ["H1\tx", "H2\ty"])
+        pk = [dict(hp.load_hypotheses_only(f), name=f"shared_{i}", inv_id=i) for i in ("INV-01", "INV-02")]
+        a, b = hp.hypotheses_for(pk, "INV-01"), hp.hypotheses_for(pk, "INV-02")
+        self.assertEqual(([r["id"] for r in a["rows"]], [r["inv_id"] for r in a["rows"]]), (["shared::H1", "shared::H2"], ["INV-01"] * 2))
+        self.assertEqual([r["id"] for r in b["rows"]], ["shared::H1", "shared::H2"])
+        self.assertEqual(hp.hypotheses_for(pk, "INV-03")["state"], "NO_HYPOTHESES_LISTED")
+
+    def test_two_id_like_columns_make_the_key_ambiguous_and_nothing_is_picked(self):
+        p = hp.load_hypotheses_only(self.folder("amb", "id\thyp_id\tstatement", ["1\tH1\tx"]))
+        self.assertTrue(p["state"].startswith("AMBIGUOUS_KEY"))
+        self.assertEqual((p["hyps"], p["key_column"]), ({}, ""))
+
+    def test_an_empty_table_an_absent_table_and_a_table_without_a_key_are_three_states(self):
+        e = hp.load_hypotheses_only(self.folder("empty", "hyp_id\tstatement", []))
+        n = hp.load_hypotheses_only(self.folder("nokey", "name\tstatement", ["a\tb"]))
+        a = hp.load_hypotheses_only(self.d / "absent")
+        self.assertEqual((e["state"], n["state"], a["state"]), ("EMPTY", "NO_KEY_COLUMN", "MISSING"))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
