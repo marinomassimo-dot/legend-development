@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3622,
+    "forbidden-name": 3626,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -463,7 +463,7 @@
  ],
  "data": {
   "catalogue_generated": "2026-10-31T07:28:37Z",
-  "data_date": "2026-11-11",
+  "data_date": "2026-11-12",
   "dgidb_export": "2024-06-10",
   "view_schema": "legend.wwox.repurposing_view/2"
  },
@@ -541,7 +541,7 @@
   },
   "README.md": {
    "bytes": 5072,
-   "sha256": "e04f98421f7b41124c6bbc6892d66ae2bacc02f63aa6ba820e5fb04c7a059764"
+   "sha256": "9172c025e8629ff56fbef8e578ffaf9ccca492b65fb963010b8956b98ffa37f2"
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2000,
@@ -560,24 +560,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5181796,
-   "sha256": "2ea3422ab10f5ae1130107075885ae72567c5c788a9fbe291ce790d435201283"
+   "bytes": 5184263,
+   "sha256": "ed15f030fa7b5756384ae29eed2df27691cdd694711b1554d5fec6bd3bb2dc0c"
   },
   "es.html": {
-   "bytes": 5167821,
-   "sha256": "eda54a12d6ed1fd45c14e00e91f221417f563569a516d0cfd43ed29eeedb4930"
+   "bytes": 5170272,
+   "sha256": "e4f767be84689e733190b1d988163869d214cc1347a66dda3e9fb8f987dd0e83"
   },
   "fr.html": {
-   "bytes": 5197955,
-   "sha256": "8639f6d4c568e77967f6eb55dc56c93e2ca668c9f4a0ab2d087ed48fda2a4142"
+   "bytes": 5200400,
+   "sha256": "04c53f345b71d0d7499af6addf74698f339c8744dafe54b581970c6985bfdcb9"
   },
   "index.html": {
-   "bytes": 5083678,
-   "sha256": "30bbd639d47ddf84464ec45339b661e924a397ca2d5f05aa1940e6fdcc883aea"
+   "bytes": 5086086,
+   "sha256": "ddb0936f96315f8a1e192461a5b2a2754668ad9325f1a25b813a28664a7d74a5"
   },
   "it.html": {
-   "bytes": 5144021,
-   "sha256": "4e09dd23186ebfbf01d33a9f6b18b5f1cc2a8ae98261a91805ae84a48315e3bb"
+   "bytes": 5146668,
+   "sha256": "5811c13e891ea0e41d36de1993aa6bb7334bf00278c4a0909cabeafb48f621a5"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
