@@ -39,7 +39,7 @@ class Verdict(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             subprocess.run(["git", "init", "-q", d], check=True)
             self.assertRaises(SystemExit, ci_runs.slug, "development", Path(d))                     # a repository with no GitHub remote is named as such
-            subprocess.run(["git", "-C", d, "remote", "add", "origin", "git@github.com:owner/some-repo.git"], check=True)
+            subprocess.run(["git", "-C", d, "remote", "add", "origin", "https://github.com/owner/some-repo.git"], check=True)
             self.assertEqual(ci_runs.slug("development", Path(d)), "owner/some-repo")                # falls back to origin
             subprocess.run(["git", "-C", d, "remote", "add", "development", "https://github.com/other/name.git"], check=True)
             self.assertEqual(ci_runs.slug("development", Path(d)), "other/name")
