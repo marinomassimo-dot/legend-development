@@ -12,7 +12,7 @@ Non-canonical research material. Not medical advice; no dose, schedule or clinic
 1. Non-covalent KEAP1 binder versus its inactive scaffold analogue (Winkel RA889/RA912 are the only such controls read; neither was run under loss).
 2. An electrophile comparator already in use (sulforaphane or bardoxolone methyl) in the same cells, at a matched on-target response rather than a matched concentration (Winkel: 50 nM versus 20 uM; DATO).
 3. A genetic Keap1 loss arm (siRNA, two independent sequences), the Winkel design, which gives the expected on-target response without any reagent.
-4. The same four conditions under NRF2 loss.
+4. The same four conditions under NRF2 loss. Include the loss-alone arm under the same challenge and the reagent-alone arm: Mao 2019 (neurons) showed OGD+Sfn+sh-Nrf2 but no OGD+sh-Nrf2 arm and no Sfn-alone arm, so a harm from the loss itself cannot be separated from loss of the Sfn effect.
 
 **Control on the target.** Loss adequacy criterion (written before the experiment): NRF2 protein and mRNA reduced at the endpoint time, and loss of the matched target-gene induction by the Keap1-loss arm. Occlusion: Keap1 loss must not add to a reagent effect that is NRF2-dependent, and NRF2 loss must remove the Keap1-loss effect. Prefer acute loss (siRNA or inducible) over germline loss, which is compensated; a germline arm only as an additional arm.
 

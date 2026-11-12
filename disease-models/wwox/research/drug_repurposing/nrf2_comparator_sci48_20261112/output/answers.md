@@ -26,3 +26,16 @@ The four sources the extension named (Innamorato 2008, Bergstrom 2011, Zhang 202
 - S6 re-score: unchanged (partly). The microglia and astrocyte part is still untested at text depth; Innamorato and Bergstrom would be the sources to test it.
 - S7 re-score: unchanged (partly).
 - No source read shows sulforaphane in both wild-type and loss arms under the same challenge with a verified loss.
+
+## Extension 2 (2026-11-12): Mao 2019 read in full (stored PMC page, six figures opened)
+DATO: Mao 2019 (29533123) is now read at partial_fulltext_read (text, all six figures; no supplement exists; cited methods papers, refs 44 and 45, not read). Rows S13, S19-S23, M14, M27-M29, E18, E27-E31, F13-F18, Q17.
+- In vitro neurons (rat E17 cortical, sh-Nrf2 lentivirus, Sfn 1.5 uM 24 h before OGD): Sfn lowered OGD death (about 41 versus 69 % dead, inferred_from_figure) and sh-Nrf2 largely removed it (about 62 %). Arms shown: Ctrl, OGD, OGD+Sfn, OGD+Sfn+sh-Nrf2. No OGD+sh-Nrf2 arm; sh-Sc+Sfn "data not shown"; no Sfn-alone arm. Viability endpoint only.
+- In vitro mouse brain endothelial cells (neurovascular, not neuron or glia): Sfn in BOTH sh-Sc and sh-Nrf2 arms under Ctrl, OGD, OGD+Sfn; protection reduced, not abolished (about 84 versus 58 % live in sh-Sc; about 69 versus 50 % in sh-Nrf2; my difference about 26 versus 19 points). OGD lasted 10 h in transduced cells versus 16 h in untransduced cells. sh-Nrf2 alone raised BBB leakage and lowered CLD5 promoter activity (no Sfn arm).
+- In vivo rat (2VO, 10 mg/kg ip; no loss arm, authors: no Nrf2 KO rats): function (rotarod, water maze), molecular (nuclear Nrf2 and HO-1 raised by Sfn at 3 d, 7 d, 6 weeks) and histology improved by Sfn in treated animals only.
+- Loss verification as printed: none. No Nrf2 protein or mRNA after sh-Nrf2 in any figure or sentence; only "72-96 h after the transduction". Indirect only (CLD5 promoter and leakage changes in endothelium).
+- Is this the first source with Sfn in both arms and a verified neural loss? No. Sfn in both arms: yes for endothelium (and partly for neurons); verified neural loss: no. Li 2022 (KO, Sfn in both arms, loss unverified in print) already had the both-arm design.
+- Same group: inferred, the same laboratory as Li 2022 (Li calls the chronic-ischemia Sfn study "our previous study"; shared supplier and methods). Not independent confirmation.
+- S5 re-score: partly, still (functional endpoints only in vivo and without loss in Mao; in vitro endpoints are viability and molecular; no verified loss anywhere).
+- S6 re-score: partly, still. Neuronal viability protection lost under loss held again (Mao neurons, Li neurons); endothelial protection partly retained; microglia and astrocyte still untested.
+- S7 re-score: partly. Mao 1.5 uM in vitro and 10 mg/kg ip, as Li; the persistence of a partial effect under an unverified loss (endothelium) cannot be assigned without a second reagent class, none present.
+- S8 unchanged.

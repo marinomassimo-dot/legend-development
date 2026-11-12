@@ -9,15 +9,15 @@
  "BASELINE": "main 0bed3857 (SCI47 landed; IT47 d280c7c3 consumed SCI47 A, B and tail in part). Worktree .claude/worktrees/sci48, branch task/sci48. IT46-Q06 and IT46-Q09 still OPEN and unassigned on 2026-11-12. Folder disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/.",
  "MANDATE_STATE": "OPEN",
  "CURRENT_PACKAGE": {
-  "id": "P-ext",
-  "state": "producer extension running",
-  "delegate_active": "nr-z (resumed)",
+  "id": "V",
+  "state": "verifier dispatching",
+  "delegate_active": "nr-y (sonnet high)",
   "updated": "2026-11-12"
  },
- "RESUME": "Producer extension running (Innamorato, Bergstrom, Zhang, Qiu opened beyond abstract). On return: census read-back (both runs), write VERIFIER_BRIEF.md (full originals incl. stored Winkel copy; blind to answers.md; receipts -73, label nr-y), dispatch verifier sonnet high.",
+ "RESUME": "Verifier nr-y running (VERIFIER_BRIEF.md; receipts -73; blind to answers.md/phase_note/minimum_comparison). On return: census read-back, apply corrections to decisive propositions only (script, idempotent), then README/matrix final/minimum comparison/consumer_delta.",
  "DECISIONS_TAKEN": [],
  "DELEGATIONS": [
-  "P producer nr-z (agent aa8b34b0): asked sonnet/medium; read back claude-sonnet-5-5 x50, effort medium x50; first run 50 turns, output 85,424, cache read 7,147,449, birth context 18,572; outputs winkel 33 rows, sfn 18, matrix 26, 10 staged receipts (-74) validated. Resumed once (SendMessage) for a bounded extension: four sulforaphane abstracts opened beyond abstract (within S0 limit of 8 opened); census to be re-read after return"
+  "P producer nr-z (agent aa8b34b0): asked sonnet/medium; read back sonnet x-all, effort medium; three runs (first, two bounded extensions by SendMessage); see COST_NOTE for final census. Outputs: winkel_table, sfn_table, matrix 29 rows (probe 2, comparator 11, not interpretable 13, conditional 3), 10 staged receipts (-74) validated. Extension 1: four abstracts could not be opened (no PMC id); extension 2: Mao 2019 read from the PMC page fetched once by the Orchestrator (new mode, no block bypassed)"
  ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
@@ -49,12 +49,13 @@
     },
     {
      "step": "Briefs; one producer (sonnet medium) reads sources into tables; staged receipts validated",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "producer nr-z output committed 7319528a plus extensions; 10 staged receipts validated with --check-doi; Winkel 33 rows, sfn_table 24 rows, matrix 29 rows"
     },
     {
      "step": "One blind verifier (sonnet high) with full originals; corrections applied to the decisive propositions only",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator"
     }
    ]
