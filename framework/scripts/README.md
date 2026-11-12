@@ -257,6 +257,7 @@ refs or observe clones on other hosts. A missing or
 |---|---|
 | the public structural-context analyser | `scripts/legend/residue_context.py` |
 | the public KFERQ geometry analyser | `scripts/legend/kferq_geometry.py` |
+| **class means of gene RNA in the two local public GEO tables** (mouse purified cell classes GSE52564, human cell groups GSE73721): any gene list, input hashes kept, a gene absent from a table reported as missing and never as zero, a duplicated symbol reported; reproduces the SCI44, SCI46 and IT46 outputs byte for byte — do not copy the extractor again | `framework/scripts/rna_class_means.py --genes G1,G2 --prefix NAME --mouse-raw DIR --human-csv F --out DIR` |
 
 > Both need `numpy` (`requirements-analysis.txt`). The rest of this table is standard library.
 
