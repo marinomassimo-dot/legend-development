@@ -44,3 +44,5 @@ The first-screen table is in the compound view of the published page (five langu
 
 ## Limits
 Reader depth is abstract or database copy for most documents of S7; translations are the assistant's, not native-reviewed; RNA tables are P7 mouse neurons and P17 oligodendrocyte-lineage classes with two pools each and one human neuron sample; no biological prediction is validated by these comparisons; the mouse against human KCNQ2 neuron difference (30.68 against 0.10) is unexplained.
+
+**Update 2026-11-12 (IT47 P3, SCI47 package A).** Wording and strength, with the paper rechecked: sIPSC frequency falls **by** about 18 percent (10.3 to 8.4 Hz) and amplitude **by** about 52 percent (57.3 to 27.5 pA); neither is a fall *to* a fifth. The order of the two falls does not by itself point to the receptor response or to the GABA content per event: the frequency change is shown only by a distribution test on pooled events, detected frequency depends on amplitude, and event identity is not shown. The K-gluconate pipette of the excitatory-current recordings holds about 12 mM chloride. See `../inhibitory_defect_sci47_20261112/`.

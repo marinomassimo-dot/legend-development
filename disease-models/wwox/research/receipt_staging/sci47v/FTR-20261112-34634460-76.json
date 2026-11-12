@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-12T08:41:00Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-12T08:53:45Z",
+ "event_id": "FTR-20261112-34634460-76",
+ "evidence_basis": [
+  "Europe PMC fullTextXML of PMC8609180 read through in text form: abstract, introduction, Results 2.1-2.6, Table 1 (cell by cell against the producer's rows), all figure legends, Discussion 3.1-3.6, Methods 5.1-6.7. Supplementary mmc1.docx text read (Table S1, legends S1-S4). Figure images opened and looked at: main Figures 1, 2, 3, 4, 5, 6 (JPEG rasters from the Europe PMC supplementaryFiles archive, about 708 px wide) and Supplementary Figures S1, S2, S3, S4 (TIFF rasters embedded in mmc1.docx). Values read from rasters are inferred_from_figure with a stated range. Fig 1D inter-burst interval histogram and the two Fig 4G example traces were cropped and enlarged.",
+  "verbatim_locator | proposition: Table S1 baseline burst frequency differs from the Results value for the same 119 bursts | Supplementary Table S1 | \".84 [.57-.1.53]; min 0.36, max 3.89\"",
+  "verbatim_locator | proposition: the sIPSC recordings were not isolated pharmacologically | Methods 5.3 | \"Spontaneous EPSCs and IPSCs were isolated by voltage-clamping pyramidal neurons at -70 mV in K-Gluconate or KCl intracellular solution respectively.\"",
+  "verbatim_locator | proposition: the authors rank amplitude above frequency | Results 2.5 | \"primarily through an impairment in the amplitude of the inhibitory currents\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/verify/recompute_figures.tsv"
+ ],
+ "prior_receipt": "FTR-20260810-34634460-02",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "934b4e1a42ac19f5cd8912994fb171beabdeb94a6631b23d9a383dab1db906aa",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for PMC8609180 and supplementaryFiles archive (plain curl, default user agent, 2026-11-12); bytes in the scratchpad only, not stored in the repository",
+ "study_id": {
+  "doi": "10.1016/j.nbd.2021.105529",
+  "pmid": "34634460"
+ },
+ "workflow": "SCI47 package A blind verifier V9 (ORCH-SCI47-20261112), claim label ib-y. Re-derived the source numbers from the paper before reading the producer's answers; the reference list was not read (the only section not read, which is why the depth is partial and not complete). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
