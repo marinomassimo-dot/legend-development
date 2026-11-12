@@ -1,0 +1,7 @@
+fig_id	source	figure_or_table	viewed	what_would_be_needed	note
+F01	21615117	Table 1 (selectivity), Fig 3 (pH dependence)	table read as text; figures not viewed	image inspection of Fig 3 dose-response curves	values taken from the text and legend
+F02	22275899	Fig 2 (oocyte percent block), Fig 3, Fig 4	captions only	Fig 2F bar values for each concentration, including Ba2+ reference blocks	Ba2+ isoform data in Fig 2F were not read, so no Ba2+ reference row was made
+F03	36311015	Fig 4D (I-V of Ba2+-sensitive IRK)	captions only	WT current at a stated voltage to give a number	Part 3 row has no value
+F04	38411613	Fig 3 supplement 3 (BaCl2, conductance, RMP)	captions only	concentration of BaCl2 and conductance change in percent	Part 3 row has no value
+F05	28542320	Fig 7 (CHO Kir2.1/2.2/2.3 under hypoxia)	captions only; numbers from the text	whether the inward component is unchanged on the figure	text states the inward component was not affected
+F06	40959251	Table 3 and Table 4	read as text	supporting information (counter-screen) not requested	no selectivity table found in the main text

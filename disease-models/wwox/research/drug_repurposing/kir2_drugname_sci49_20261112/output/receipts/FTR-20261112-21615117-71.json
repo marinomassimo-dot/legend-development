@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-12T22:40:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-12T23:08:00Z",
+ "event_id": "FTR-20261112-21615117-71",
+ "evidence_basis": [
+  "Results: Table 1 selectivity (Kir2.1-2.3, 2.6, 4.1, 6.2, 7.1, 1.1), pH dependence, inside-out patch, SAR, pore-block mechanism, DMPK; Methods in part; figures not viewed.",
+  "verbatim_locator | ML133 IC50 | Abstract | \"IC 50 of 1.8 \u03bcM at pH 7.4 and 290 nM at pH 8.5\"",
+  "verbatim_locator | Kir6.2 not discriminated | Results Table 1 | \"rKir6.2 ... 7.7\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/output/compounds.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "83f22834c0b9e6ff84350f3e241305c78f745d0c476c3f79cdee9b49f2e3bc19",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page (author manuscript) https://pmc.ncbi.nlm.nih.gov/articles/PMC3177608/; fetched 2026-11-12; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1021/cb200146a",
+  "pmid": "21615117"
+ },
+ "workflow": "SCI49 package B producer kz-z (ORCH-SCI49-20261112), staged for the integrator; ledger not written."
+}
