@@ -10,6 +10,7 @@ import csv, json, sys
 from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[4]
+DR = HERE.parent
 sys.path.insert(0, str(ROOT / "framework/scripts"))
 import hypothesis_package as hp  # noqa: E402
 sys.path.insert(0, str(HERE.parent / "generation_it46_20261111"))
@@ -75,6 +76,68 @@ def rows(link=True):
                 nomination="ABSTAIN" if nominated.lower().startswith(("none", "no ")) else "NAMED_BY_PACKAGE_ONLY (no ranking, no claim)"))
     return out
 
+
+# IT47 P1: the hypotheses HE46 made reachable (manifest role `hypotheses_only`, own layout per package) are read through hp.hypotheses_for and mapped, cell by cell, onto the seven things a
+# conditional proposal keeps. The mapping is the reviewable part (which cell answers which question); the loader maps nothing. A slot with no cell says so; no direction is invented.
+# slot -> package cells (joined in order, each labelled with its own column name). `action_from_relation` names a relation of the IT41/IT43 tables to take the action from when the package has none.
+PKG_MAP = {
+    "ph_k2p_sci45_20261111": dict(inv="INV-18", relation_ids=[], symbols=["KCNK2", "KCNK3", "KCNK9"],  # the channels the package names (TREK-1, TASK-1, TASK-3)
+                                   observation=["initial_observation"], relation=["mechanistic_relation"], context=["context"], action=["action"], compound=["compound_or_class"],
+                                  premise=["counter_evidence"], expected=["possible_functional_outcome"], measure=["experiment_that_rejects_it"], title="hypothesis", sibling_cell="hypothesis"),
+    "nrf2_inv08_20261107": dict(inv="INV-08", relation_ids=["S10"], observation=["what_supports"], relation=["hypothesis"], context=["transfer_note"], action=[], compound=[],
+                                premise=["status", "what_refutes"], expected=["what_supports"], measure=["what_separates"], title="hypothesis", sibling_cell="hypothesis", action_from_relation="S10"),
+}
+PKG_FIELDS = FIELDS + ["package_ref", "direction_stated", "unmapped_cells", "package_title"]
+
+
+def _relation_action(rid):
+    import csv as _csv
+    for f in sorted(DR.glob("generation_it4[1-9]_*/relations*.tsv")):
+        for r in _csv.DictReader(open(f, encoding="utf-8"), delimiter="\t"):
+            if r.get("relation_id") == rid and r.get("action_label"):
+                return r["action_label"]
+    return ""
+
+
+def package_rows():
+    """One conditional proposal per hypothesis row of the mapped packages. Returns (rows, report) where report lists packages reachable but not mapped."""
+    pk = hp.load_all(); out = []; seen_unmapped = {}
+    rel = cc.relations()
+    for inv in ("INV-18", "INV-08"):
+        res = hp.hypotheses_for(pk, inv)
+        by_pkg = {}
+        for x in res["rows"]:
+            by_pkg.setdefault(x["package"], []).append(x)
+        for pkg, rws in by_pkg.items():
+            m = PKG_MAP.get(pkg)
+            if not m:
+                seen_unmapped[(inv, pkg)] = len(rws); continue
+            def cells(row, names):
+                return " | ".join(f"{n}: {row[n]}" for n in names if row.get(n)) or ""
+            for x in rws:
+                r = x["row"]; sib = [y for y in rws if y is not x]
+                rivals = " || ".join(f"{y['key']}: {y['row'].get(m['sibling_cell'], '')}" for y in sib)
+                used = set(m["observation"] + m["relation"] + m["context"] + m["action"] + m["compound"] + m["premise"] + m["expected"] + m["measure"] + [m["title"]])
+                action = cells(r, m["action"])
+                if not action and m.get("action_from_relation"):
+                    action = "not stated by the package; taken from relation " + m["action_from_relation"] + " (" + _relation_action(m["action_from_relation"]) + ")"
+                if not action:
+                    action = "not stated by the package"
+                prem = cells(r, m["premise"])
+                unmapped = [c for c in x["columns"] if c not in used and c not in ("id", "hyp_id", "hypothesis_id", m["title"]) and r.get(c)]
+                symbols = m.get("symbols") or (rel.get(m["relation_ids"][0], []) if m["relation_ids"] else [])
+                out.append(dict(corrections_it40="", proposal_id="CP-" + x["id"], kind="conditional_hypothesis_from_package", need_id="", inv_id=inv, cards="", status="exploratory (IPOTESI); the package row is not an approval",
+                                starting_observation_and_chain=cells(r, m["observation"]) + " [source: " + x["source_ref"] + "]", context=cells(r, m["context"]) or "not stated by the package",
+                                competing_explanations=(cells(r, ["counter_evidence"]) if "counter_evidence" not in m["premise"] else "") + (" || rival rows of the same package: " + rivals if rivals else ""),
+                                premise_and_action="relation: " + cells(r, m["relation"]) + " || action: " + action + " || unresolved premise: " + prem,
+                                compound_or_probe_named_by_package=cells(r, m["compound"]) or "none named", catalogue_by_action="", cell_context=(cc.context_for(symbols, (m["relation_ids"] or [pkg])[0])[1] if symbols else "not joined (no relation symbols for this package)"),
+                                source_and_limits="package row, verbatim cells; no direction asserted; labels of the package kept: " + cells(r, [c for c in ("class", "status", "label") if r.get(c)]),
+                                expected_result_by_explanation=cells(r, m["expected"]), decision_measure=cells(r, m["measure"]) or "not stated by the package: a question, not an experiment",
+                                experiments="", unresolved_refs="", nomination="CONDITIONAL; named compounds are the package's, not ranked; no therapeutic direction asserted",
+                                package_ref=x["id"] + " @ " + x["source_ref"], direction_stated="none (the package states no therapeutic direction)", unmapped_cells=",".join(unmapped), package_title=r.get(m["title"], "")))
+    return out, seen_unmapped
+
+
 if __name__ == "__main__":
     link = "--no-link" not in sys.argv
     r = rows(link)
@@ -82,3 +145,8 @@ if __name__ == "__main__":
     with open(HERE / name, "w", newline="") as f:
         w = csv.DictWriter(f, FIELDS, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(r)
     print(len(r), "rows ->", name)
+    if link:
+        pr, unm = package_rows()
+        with open(HERE / "conditional_proposals_packages_it47.tsv", "w", newline="") as f:
+            w = csv.DictWriter(f, PKG_FIELDS, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(pr)
+        print(len(pr), "package rows -> conditional_proposals_packages_it47.tsv; reachable but not mapped:", {f"{i}:{p}": n for (i, p), n in unm.items()})
