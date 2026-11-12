@@ -107,3 +107,26 @@ That is arithmetic on a transcript, **not a saving**: the capped text was text t
 **CHANGE for the cost itself: none demonstrated.** A correction made while writing this: a first pass of the measurement filtered the wrong time window (the timestamp contained a colon that the loop split on) and gave 3,509 and 3,865 turns; the table above is the corrected run.
 
 **Remove.** Delete the `--carry` option and the README row.
+
+## 7 · H7 — what the DREAM pass found, and where behaviour changes
+
+| Finding | Kind | Where it changes behaviour |
+|---|---|---|
+| `compound_decisions_inv07_it44.tsv` carried a comparison reason one HE46 reader improvement behind (VER-246608 "system: values overlap ...") | a correction that had not reached its consumer | regenerated in the H1/H3 commit; the freshness test compares roles only, so it could not have noticed (not changed: it is the Orchestrator's test) |
+| `hypotheses_for` is called by nothing but `show` | a capability available and not called | H2 section 5; the generator that should call it is IT47's |
+| KI-696 was PRIMARY partly through D21, a proposition that opposes the proposal in a transfer system, and through identity statements D01/D02 | an association that changes the next brief | `counter_props` of the KI-696 row names D21 (opposes), `uncounted_props` names D01, D02, D07, D21 (context): a brief written from the row now sees the counter-evidence |
+| three copies of one extractor, differing in a gene list | a habit that repeats work | `rna_class_means.py` (H4); the README row says not to copy it again |
+| the first cost measurement filtered the wrong window and gave 3,509 and 3,865 turns | a first draft overturned by its own check | corrected table in section 6; the filter bug was a colon inside a timestamp split by a shell loop |
+
+Nothing was written to a new memory, graph or score. The new card view was **not** extended to show `counter_props` (the shareable payload has its own wording rules): the columns reach the files and the Orchestrator's test, not yet the cards. Not shown: that any brief has been rewritten from them.
+
+## 8 · H8 — Claude Science comparison (light)
+
+No dedicated path exists; the Orchestrator's standing practice is "material evaluated whole, with separate provenance" (IT44, IT45 records). Nothing was built. When complete artefacts arrive, reuse what exists:
+
+* **Intake as a package.** A pharmacological claim list becomes a `decisive.tsv` in the existing layout (`depth`, `class`, conditions cell, and the new `relation` / `direction`), registered by one `hypothesis_packages.tsv` row whose `why` names the source system and the snapshot; hypotheses in their own layout use the role `hypotheses_only`. The engine, the reader and the receipts then apply unchanged.
+* **Retrieval, inference, proposal, validation** are kept apart by cells that exist: `depth` (what was read), `class` (DATO or inference), `relation` (does it measure the mechanism), `direction`; a proposal is a hypothesis row, never a decisive row; validation means a measurement in a WWOX-relevant preparation, which nothing external supplies.
+* **To record per artefact:** snapshot identifier and date, the originals the tool says it read (compare by SHA-256 with the corpus), tools actually used (from its own log, not its prose), code and parameters, and the output files whole. Anything missing is a state ("not supplied"), not a defect of the comparison.
+* **The Auto-mode problem** belongs to the external runtime. Nothing here relaxes a permission, adds an allowlist or promises that a prompt removes requests.
+
+Not shown: that any external artefact has been compared; no access to the external session is claimed.
