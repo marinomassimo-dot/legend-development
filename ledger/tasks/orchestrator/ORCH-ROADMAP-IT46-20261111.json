@@ -1,155 +1,165 @@
 {
-  "_schema": "orchestrator-task-v1",
-  "TASK_ID": "ORCH-ROADMAP-IT46-20261111",
-  "OWNER": "orchestrator",
-  "ACTOR_ID": "orchestrator",
-  "PRIORITY": "P0",
-  "START_UTC": "2026-11-11T20:00:00Z",
-  "OBJECTIVE": "IT46: from hand-built combinations to a reusable generative capability: measure how much of the IT45 generation was executable, make one missing step operational with a real consumer, keep exploration visible without artificial favourability, prove on a new case fixed in advance, audit the decisive causal comparisons, consume SCI46 to the generator, close reading debts, priority dashboard. Drug repurposing for WWOX loss of function; gene therapy outside the pharmacological proposals.",
-  "AUTHORISED_QUEUE_20261108": {
-    "MANDATE_STATE": "OPEN",
-    "OBJ_P0": {
-      "order": 1,
-      "steps": [
-        {
-          "step": "Reconcile on real state (remote head, IT45 residuals, HE45/SCI45 consumed), verify unit/loader/cache/role-fallback usage without redoing; register IT46 with steps, checkpoints, real dependencies; session-mandate association verified",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "Remote head 142f6c5f at start, then a092e709/4cbc8ba4 (SCI45), 36eb86fb and later (HE46), e0317fec (SCI46); IT45 residuals closed (CI #654/#655 success, record COMPLETE, own worktrees removed); IT46 registered; MANDATE_BOUND verified RUNNING by Harness mandate_watch."
-        }
-      ]
-    },
-    "OBJ_P1": {
-      "order": 2,
-      "steps": [
-        {
-          "step": "Provenance of the IT45 S10 and Kv7 paths (code / reader / agent decision / manual / narrative only); make the highest-value non-reusable step operational in the existing path with a real consumer",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it46_20261111/p1_provenance_it46.md; cell_context.py (+ tests) consumed by conditional_proposals.py and by the V10/INV-18 text (apply_it46_context.py); it corrected the IT45 statement that the Kv7 genes are neuron-enriched."
-        }
-      ]
-    },
-    "OBJ_P2": {
-      "order": 3,
-      "steps": [
-        {
-          "step": "Four situations through generation (known compound with action; activity-only compound; discriminating probe; unresolved verifiable premise) with explicit roles and limits; unqualified_entity must not hide them",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it46_20261111/ladder.py/ladder_it46.tsv (580 rows = 512 families, six separated fields, activity-only pointers given rows, selectivity-panel rows flagged); role rules R9-R11 on catalogue modality; test_ladder.py (9)."
-        }
-      ]
-    },
-    "OBJ_P3": {
-      "order": 4,
-      "steps": [
-        {
-          "step": "New case not used to build the method: need, snapshot, reason, simple baseline, expected difference and failure outcomes fixed before execution; compare simple target search / evidence / qualification / contextualised combination; measure and report, simplify if no value",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it46_20261111/p3_case_prereg_it46.md (committed before counts) and s7_case/result_it46.md; blind reader verify_s7/VERDICTS.md; method added a next-experiment change and refined premise, no molecule, context join added nothing; failure outcomes checked."
-        }
-      ]
-    },
-    "OBJ_P4": {
-      "order": 5,
-      "steps": [
-        {
-          "step": "Targeted audit of the decisive causal comparisons (Kv7 slice drug vs single-cell current injection; same unit, level, local vs whole, exposure, cell vs network, alternatives); independent verification and propagation of substantive corrections",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it46_20261111/p4_audit_it46.md; blind reviewer verify_p4/VERDICTS.md; Kv7 R5 corrected to R5a/R5b, KEAP1 pair needs exposure phase 0; propagated by apply_it46_audit.py to INV-18, INV-08, V10, V19, IT45-Q01."
-        }
-      ]
-    },
-    "OBJ_P5": {
-      "order": 6,
-      "steps": [
-        {
-          "step": "Consume SCI46 NRF2/KEAP1 to the generator when verified (inputs, engine, regenerate roles/premises/questions, show change against IT45); continue P1-P4 while waiting",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it46_20261111/p5_sci46_it46.md: SCI46 e0317fec consumed down to the generator (manifest row, aliases, INV-08 decisions derived, false role guard, V19/INV-08 texts, IT46-Q05..Q09), 27 receipts recorded (ledger 1,814)."
-        }
-      ]
-    },
-    "OBJ_P6": {
-      "order": 7,
-      "steps": [
-        {
-          "step": "Close reading and provenance debts: three IT45 readings not persisted as receipts (link, protocol with stated nature, or keep the debt and schedule the read); Harness for the mechanical part",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it46_20261111/p6_reading_debt_it46.md: the three IT45 S10 full readings stay reading debt (quotes do not verify in the preserved bytes, Harness H5); no receipt made from a report."
-        }
-      ]
-    },
-    "OBJ_P7": {
-      "order": 8,
-      "steps": [
-        {
-          "step": "Priority dashboard: hypothesis to explore / tool to qualify / priority experiment / in-silico question / indispensable new measurement; first screen; per-investigation fields; stability explained; five languages, phone, site verified; README links; no new registry",
-          "status": "IN_PROGRESS",
-          "owner": "orchestrator",
-          "evidence": "First-screen table \"where to begin\" in the compound view (five kinds of next step, rule on the page, UI strings in five languages); V20, V21; per-investigation fields already carried by the cards; site and phone check after publication."
-        }
-      ]
-    },
-    "OBJ_P8": {
-      "order": 9,
-      "steps": [
-        {
-          "step": "DREAM generation-oriented after material results; each kept connection must change a search, comparison, proposal or consumer",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it46_20261111/README.md (P8): cell-context follow-up with predictions scored (p8_chloride_*), DIS-017 revival trigger checked (not fired), shared measurement of two levers (p9_two_levers_it46.md, IT46-Q04)."
-        }
-      ]
-    },
-    "OBJ_P9": {
-      "order": 10,
-      "steps": [
-        {
-          "step": "Autonomous queue after the first verified increment: second new case, pointer on another relation, two-lever comparison, lost proposal by representation limit, revival trigger update, duplicate simplification, new brief",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it46_20261111/s5_case (second new case, prereg before counts, two frame errors disclosed), p9_hcn1_probe_it46.md (pointer on another relation), p9_two_levers_it46.md (two levers one outcome), ladder duplication and identity-by-family simplification, benzodiazepine_mentions_a1.tsv."
-        }
-      ]
-    },
-    "OBJ_P10": {
-      "order": 11,
-      "steps": [
-        {
-          "step": "Execution and closure: delegation budget, batteries by SHA in unique clones, land, push, CI, site; distinguish battery SHA / merge SHA / published SHA; ordinary cleanup; no artificial consumption of time",
-          "status": "IN_PROGRESS",
-          "owner": "orchestrator",
-          "evidence": "Battery 50cec56c = FAIL (shebang entrypoints without executable mode; two suites calling unittest.main without verbosity=2), kept attributed; fixed on a later SHA; two interrupted runs without verdict (4d43c262 stopped for a content change). Final battery, landing, CI and site check pending."
-        }
-      ]
+ "_schema": "orchestrator-task-v1",
+ "TASK_ID": "ORCH-ROADMAP-IT46-20261111",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "START_UTC": "2026-11-11T20:00:00Z",
+ "OBJECTIVE": "IT46: from hand-built combinations to a reusable generative capability: measure how much of the IT45 generation was executable, make one missing step operational with a real consumer, keep exploration visible without artificial favourability, prove on a new case fixed in advance, audit the decisive causal comparisons, consume SCI46 to the generator, close reading debts, priority dashboard. Drug repurposing for WWOX loss of function; gene therapy outside the pharmacological proposals.",
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Reconcile on real state (remote head, IT45 residuals, HE45/SCI45 consumed), verify unit/loader/cache/role-fallback usage without redoing; register IT46 with steps, checkpoints, real dependencies; session-mandate association verified",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Remote head 142f6c5f at start, then a092e709/4cbc8ba4 (SCI45), 36eb86fb and later (HE46), e0317fec (SCI46); IT45 residuals closed (CI #654/#655 success, record COMPLETE, own worktrees removed); IT46 registered; MANDATE_BOUND verified RUNNING by Harness mandate_watch."
     }
+   ]
   },
-  "VERIFICATION_EVIDENCE": [
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
     {
-      "run_id": "20261112-020736-dbffff0f",
-      "label": "battery",
-      "sha": "4d43c2623ac9b04a67fe8f70400b1017772f4bb0",
-      "state": "CONCLUDED",
-      "exit_code": -15,
-      "evidence_dir": "/tmp/legend-verify-keep/20261112-020736-dbffff0f",
-      "log_sha256": "8b0b4a5f836cee01194533ee058193240b22a7c4d63464320b2632c996ada07a",
-      "clone": "REMOVED"
-    },
-    {
-      "run_id": "20261112-020835-c089ba59",
-      "label": "battery2",
-      "sha": "4d43c2623ac9b04a67fe8f70400b1017772f4bb0",
-      "state": "CONCLUDED",
-      "exit_code": -15,
-      "evidence_dir": "/tmp/legend-verify-keep/20261112-020835-c089ba59",
-      "log_sha256": "857b22ac1a7c59138b74e52e0032f3a45bc5f28e2b6f5c5f807d6b4867412f4c",
-      "clone": "KEPT"
+     "step": "Provenance of the IT45 S10 and Kv7 paths (code / reader / agent decision / manual / narrative only); make the highest-value non-reusable step operational in the existing path with a real consumer",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "disease-models/wwox/research/drug_repurposing/generation_it46_20261111/p1_provenance_it46.md; cell_context.py (+ tests) consumed by conditional_proposals.py and by the V10/INV-18 text (apply_it46_context.py); it corrected the IT45 statement that the Kv7 genes are neuron-enriched."
     }
-  ]
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Four situations through generation (known compound with action; activity-only compound; discriminating probe; unresolved verifiable premise) with explicit roles and limits; unqualified_entity must not hide them",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "disease-models/wwox/research/drug_repurposing/generation_it46_20261111/ladder.py/ladder_it46.tsv (580 rows = 512 families, six separated fields, activity-only pointers given rows, selectivity-panel rows flagged); role rules R9-R11 on catalogue modality; test_ladder.py (9)."
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "New case not used to build the method: need, snapshot, reason, simple baseline, expected difference and failure outcomes fixed before execution; compare simple target search / evidence / qualification / contextualised combination; measure and report, simplify if no value",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "disease-models/wwox/research/drug_repurposing/generation_it46_20261111/p3_case_prereg_it46.md (committed before counts) and s7_case/result_it46.md; blind reader verify_s7/VERDICTS.md; method added a next-experiment change and refined premise, no molecule, context join added nothing; failure outcomes checked."
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Targeted audit of the decisive causal comparisons (Kv7 slice drug vs single-cell current injection; same unit, level, local vs whole, exposure, cell vs network, alternatives); independent verification and propagation of substantive corrections",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "disease-models/wwox/research/drug_repurposing/generation_it46_20261111/p4_audit_it46.md; blind reviewer verify_p4/VERDICTS.md; Kv7 R5 corrected to R5a/R5b, KEAP1 pair needs exposure phase 0; propagated by apply_it46_audit.py to INV-18, INV-08, V10, V19, IT45-Q01."
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "Consume SCI46 NRF2/KEAP1 to the generator when verified (inputs, engine, regenerate roles/premises/questions, show change against IT45); continue P1-P4 while waiting",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "disease-models/wwox/research/drug_repurposing/generation_it46_20261111/p5_sci46_it46.md: SCI46 e0317fec consumed down to the generator (manifest row, aliases, INV-08 decisions derived, false role guard, V19/INV-08 texts, IT46-Q05..Q09), 27 receipts recorded (ledger 1,814)."
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "Close reading and provenance debts: three IT45 readings not persisted as receipts (link, protocol with stated nature, or keep the debt and schedule the read); Harness for the mechanical part",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "disease-models/wwox/research/drug_repurposing/generation_it46_20261111/p6_reading_debt_it46.md: the three IT45 S10 full readings stay reading debt (quotes do not verify in the preserved bytes, Harness H5); no receipt made from a report."
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "Priority dashboard: hypothesis to explore / tool to qualify / priority experiment / in-silico question / indispensable new measurement; first screen; per-investigation fields; stability explained; five languages, phone, site verified; README links; no new registry",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "First-screen table \"where to begin\" in the compound view (five kinds of next step, rule on the page, UI strings in five languages); V20, V21; per-investigation fields already carried by the cards; site and phone check after publication."
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "DREAM generation-oriented after material results; each kept connection must change a search, comparison, proposal or consumer",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "disease-models/wwox/research/drug_repurposing/generation_it46_20261111/README.md (P8): cell-context follow-up with predictions scored (p8_chloride_*), DIS-017 revival trigger checked (not fired), shared measurement of two levers (p9_two_levers_it46.md, IT46-Q04)."
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "Autonomous queue after the first verified increment: second new case, pointer on another relation, two-lever comparison, lost proposal by representation limit, revival trigger update, duplicate simplification, new brief",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "disease-models/wwox/research/drug_repurposing/generation_it46_20261111/s5_case (second new case, prereg before counts, two frame errors disclosed), p9_hcn1_probe_it46.md (pointer on another relation), p9_two_levers_it46.md (two levers one outcome), ladder duplication and identity-by-family simplification, benzodiazepine_mentions_a1.tsv."
+    }
+   ]
+  },
+  "OBJ_P10": {
+   "order": 11,
+   "steps": [
+    {
+     "step": "Execution and closure: delegation budget, batteries by SHA in unique clones, land, push, CI, site; distinguish battery SHA / merge SHA / published SHA; ordinary cleanup; no artificial consumption of time",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Battery 50cec56c = FAIL (shebang entrypoints without executable mode; two suites calling unittest.main without verbosity=2), kept attributed; fixed on a later SHA; two interrupted runs without verdict (4d43c262 stopped for a content change). Final battery, landing, CI and site check pending."
+    }
+   ]
+  }
+ },
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261112-020736-dbffff0f",
+   "label": "battery",
+   "sha": "4d43c2623ac9b04a67fe8f70400b1017772f4bb0",
+   "state": "CONCLUDED",
+   "exit_code": -15,
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-020736-dbffff0f",
+   "log_sha256": "8b0b4a5f836cee01194533ee058193240b22a7c4d63464320b2632c996ada07a",
+   "clone": "REMOVED"
+  },
+  {
+   "run_id": "20261112-020835-c089ba59",
+   "label": "battery2",
+   "sha": "4d43c2623ac9b04a67fe8f70400b1017772f4bb0",
+   "state": "CONCLUDED",
+   "exit_code": -15,
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-020835-c089ba59",
+   "log_sha256": "857b22ac1a7c59138b74e52e0032f3a45bc5f28e2b6f5c5f807d6b4867412f4c",
+   "clone": "REMOVED"
+  },
+  {
+   "run_id": "20261112-032650-ef6151b8",
+   "label": "battery3",
+   "sha": "83a32867bcf4d98529fa8e45fba77851bea83b35",
+   "state": "CONCLUDED",
+   "exit_code": 1,
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-032650-ef6151b8",
+   "log_sha256": "4907485f1b35e6679b55dd154ad3b83b8a79d03c6f706b929000bd841b13ad5d",
+   "clone": "REMOVED"
+  }
+ ]
 }

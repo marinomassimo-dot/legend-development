@@ -11,6 +11,10 @@
   "src": "en",
   "text": "The percent of the isolated current removed in the Wwox slice (not measured) and the maximum on triheteromers (not reached in any text read)."
  },
+ "01fb1707fc10": {
+  "src": "en",
+  "text": "In the neuron-specific knockout slices at P13 to P17 the spontaneous inhibitory currents of layer II/III pyramidal cells are reduced, in amplitude by about half and in frequency by about a fifth (high-chloride pipette, no evoked-current experiment). A fall larger in amplitude than in frequency points at the receptor response or the GABA content of each event rather than at interneuron number (inference, with caveats). The catalogue lists over a hundred rows for this relation; their regulatory status is a separate catalogue field and is not assessed here, and each is qualified and kept visible with its next step (IPOTESI)."
+ },
  "01fe147e4f17": {
   "src": "en",
   "text": "A peptide inhibitor of the chaperone HSC70 (HSPA8) used as a cell-level probe, with lysosomal and genetic controls (identified by its ChEMBL record below)"
@@ -1502,10 +1506,6 @@
  "b1e450d2e658": {
   "src": "en",
   "text": "In vitro after step 0"
- },
- "b35a0632e3c5": {
-  "src": "en",
-  "text": "In the neuron-specific knockout slices at P13 to P17 the spontaneous inhibitory currents of layer II/III pyramidal cells are reduced, in amplitude by about half and in frequency by about a fifth (high-chloride pipette, no evoked-current experiment). A fall larger in amplitude than in frequency points at the receptor response or the GABA content of each event rather than at interneuron number (inference, with caveats). Many approved modulators exist; the catalogue lists over a hundred rows for this relation, qualified and kept visible with their next step (IPOTESI)."
  },
  "b3a38e83ad32": {
   "src": "it",
