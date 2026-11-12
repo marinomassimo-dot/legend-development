@@ -9,7 +9,7 @@
  "BASELINE": "main 940182af (SCI46 landed and verified). Worktree .claude/worktrees/sci47, branch task/sci47. IT46 package not yet on main: read read-only from worktree it46 (task/it46 cfac505c). Coordinates with IT47 (integrator of shared consumers). The pasted HE47 mandate was for the plan actor, not this session; ignored by the operator's statement.",
  "CURRENT_PACKAGE": {
   "id": "A",
-  "state": "B freeze",
+  "state": "landing B",
   "delegate_active": "none",
   "updated": "2026-11-12"
  },
@@ -140,6 +140,27 @@
    "evidence_dir": "/tmp/legend-verify-keep/20261112-095002-c776e639",
    "log_sha256": "27d3150ec96fb51444c4360db9579ead875405569fa1131ef8bdf842b8a04fdd",
    "scope": "package A candidate; pre-freeze gate PASS, LINT WARN no BLOCK, receipts OK 1814, growth PASS; later commits closure-only; merge of origin/main is the landing"
+  },
+  {
+   "run_id": "20261112-115503-2cdb1b1a",
+   "label": "batteryB",
+   "sha": "6f4c04fe8c0abebdc7bfed63f1f1cff673426325",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-115503-2cdb1b1a",
+   "log_sha256": "f88c5dbfd1a88dd8ef902a9f12448528dae409fcc2932bd91a76659f5855b237",
+   "clone": "REMOVED"
+  },
+  {
+   "run_id": "20261112-115503-2cdb1b1a",
+   "label": "batteryB",
+   "sha": "6f4c04fe8c0abebdc7bfed63f1f1cff673426325",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "verdict": "PASS WITH SKIPS (245 targets, 12 skipped: local corpus artefacts, catalogue cache, case-sensitive filesystem, Stop hook absent in the clone)",
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-115503-2cdb1b1a",
+   "log_sha256": "f88c5dbfd1a88dd8ef902a9f12448528dae409fcc2932bd91a76659f5855b237",
+   "scope": "package B and tail candidate; pre-freeze four suites OK, gate PASS, LINT WARN no BLOCK, receipts OK 1814, growth PASS; later commits closure-only"
   }
  ]
 }
