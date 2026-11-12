@@ -1,0 +1,33 @@
+source	figure_or_locator	quantity	my_value_or_range	producer_value	kind	note
+Breton 2021	Results 2.5	sIPSC amplitude control, KO (pA)	57.3 +/- 31.0 ; 27.5 +/- 19.4	57.3 ; 27.5	printed	dispersion label absent in the sIPSC sentence
+Breton 2021	Results 2.5 (own arithmetic)	sIPSC amplitude change	-52.0% (ratio 0.480)	-52.0%	own arithmetic	27.5/57.3
+Breton 2021	Results 2.5	sIPSC frequency control, KO (Hz)	10.3 +/- 11.5 ; 8.4 +/- 10.0	10.3 ; 8.4	printed	SD larger than the mean in both groups
+Breton 2021	Results 2.5 (own arithmetic)	sIPSC frequency change	-18.4% (ratio 0.8155)	-18.4%	own arithmetic	8.4/10.3; by about a fifth, not to a fifth
+Breton 2021	Results 2.5 (own arithmetic)	relative size of the two falls	amplitude fall about 2.8 times the frequency fall	amplitude larger	own arithmetic	52.0/18.4
+Breton 2021	Results 2.5	sEPSC amplitude control, KO (pA)	23.3 +/- 12.0 ; 24.7 +/- 13.6 (+6.0%)	23.3 ; 24.7 (+6%)	printed	labelled mean +/- SD in this sentence
+Breton 2021	Results 2.5	sEPSC frequency control, KO (Hz)	9.9 +/- 11.8 ; 10.1 +/- 12.1	9.9 ; 10.1	printed	
+Breton 2021	Fig 4 legend	sIPSC n control, KO	14 cells/7 animals ; 9 cells/5 animals; components WT 7/4, HET 7/4 (cells sum to 14, animals to 8)	14/7 ; 9/5 ; components 7+7, 4+4 (animals 8 not 7)	printed	cells do sum
+Breton 2021	Fig 4 legend	sEPSC n	S-CTL 18/10, S-KO 17/10; components WT 14/5, HET 17/8 (31 cells and 13 animals)	same	printed	components do not sum
+Breton 2021	Fig 4 legend	mEPSC n	10/4, 10/5, 10/5 (WT, HT, KO)	same	printed	
+Breton 2021	Fig 4H legend	KS p sIPSC amplitude, frequency	9.22e-135 (pooled), 1.8341e-100 and 2.5249e-69 ; 9.42e-8, 6.1628e-08 and 4.5624e-05	same	printed	
+Breton 2021	own arithmetic	exact KS floor with one value per cell, sIPSC 14 v 9 and 7 v 9	2.4e-6 and 1.7e-4	2.5e-6 (14 v 9)	own arithmetic	printed p values lie below both floors, so the unit is events or intervals
+Breton 2021	own arithmetic from printed means and SD, cells as units (assumption)	two-sample t if SD were across cells: amplitude, frequency	about 2.8 and about 0.4	about 2.8 and about 0.4	own arithmetic	the source does not say what the SD describe
+Breton 2021	Fig 4G right (enlarged)	mean sIPSC waveform peak (pA)	control about -42 to -46 ; KO about -17 to -22	about -40 to -50 ; about -17 to -23	inferred_from_figure	range +/- 4 pA
+Breton 2021	Fig 4H h1 (enlarged), cumulative probability 0.5	sIPSC amplitude median (pA)	control about -38 to -50 ; KO about -15 to -24	about -50 to -60 ; about -25 to -30	inferred_from_figure	producer range too high by about 10 pA; ratio about 0.4-0.5 unchanged
+Breton 2021	Fig 4H h1	control tail	to about -150 pA	to about -150 pA	inferred_from_figure	agrees
+Breton 2021	Fig 4G left (enlarged), 7 s traces	marked events in the example traces	control about 40-55 (about 6-8 Hz) ; KO about 13-16 (about 2 Hz)	control about 50-60 ; KO about 12-18	inferred_from_figure	one trace per genotype, not group data; KO example rate well below printed 8.4 Hz
+Breton 2021	Fig 1D lower panel (enlarged) and Table S1	median inter-burst interval	about 60-95 s from the histogram (101 intervals), i.e. about 0.6-1.0 bursts/min	26.2 s = 2.29 bursts/min (Results) ; 0.84 bursts/min (Table S1)	inferred_from_figure	Table S1 0.84/min = 71 s agrees with the figure; 26.2 s does not; 60/26.2 = 2.29
+Breton 2021	Table S1 vs Results 2.2 (own arithmetic)	carbenoxolone effect on frequency	0.03/0.84 = -96% from medians ; -87% printed in Results	-87% (with S1 medians in parentheses)	own arithmetic	not the same statistic
+Breton 2021	Table 1	pyramidal AP amplitude, S-WT (mV)	76.30 +/- 2.2	76.30 +/- 2.26	printed	producer transcription error (extra digit)
+Breton 2021	Table 1 (every other cell of rows SR25-SR42 compared by script)	remaining Table 1 values, N, asterisks	all equal to the printed cells	same	printed	only the AP amplitude cell differs
+Breton 2021	Table 1 (own arithmetic)	input resistance KO vs WT; rest KO vs WT	+39.0% (143.03/102.88) ; 5.63 mV depolarised	+39% ; 5.6 mV	own arithmetic	
+Breton 2021	Table 1 (own arithmetic)	interneuron AP amplitude change	-25.9% (45.03/60.78)	-26%	own arithmetic	
+Breton 2021	Results 2.1	burst incidence	0/11 (7 animals); 4/23 (14); 36/42 (24); 36/42 = 85.7%, 4/23 = 17.4%	same	printed	
+Breton 2021	Fig 3 legend	d-APV experiment	51 bursts, 5 slices, 3 animals	same	printed	
+Breton 2021	Methods 5.3 (own arithmetic)	K-gluconate pipette chloride	1 mM MgCl2 + 10 mM NaCl + 0.0001 mM CaCl2 = about 12 mM Cl	about 2 mM Cl	own arithmetic	producer error in 27 rows
+Breton 2021	Methods 5.3 and 5.2 (own arithmetic)	E_Cl at 35 C, external Cl about 129.5 mM (123 NaCl + 3.5 KCl + 1.5 CaCl2 x 2)	K-gluconate pipette about -63 mV ; KCl pipette about +3 mV ; (2 mM would give about -111 mV)	KCl about 0 mV ; K-gluconate not stated	own arithmetic	no junction-potential correction in the source
+Yuan 2019 (PMC6470170)	Results, E_GABA section	WT E_GABA at P13-17	-66.7 +/- 5.6 mV (SEM), n = 5, gramicidin perforated, cortex and hippocampus pooled, 22-25 C, Scn1b WT littermates	about -67 mV, n = 5, pooled	printed	producer cell correct; temperature and SEM not stated
+Yuan 2019 (PMC6470170)	Results, E_GABA section	Scn1b null at P13-17	-51.1 +/- 3.6 mV, n = 12	not used	printed	depolarised gradient in a DEE model
+Campo-Soria 2006 abstract	abstract	GABA EC50 without and with 1 uM diazepam	41.0 +/- 3.0 and 21.7 +/- 2.7 uM, rat alpha1beta2gamma2, oocytes	41.0 to 21.7 uM, oocytes	printed	correct
+Knight 2022 abstract	abstract	ganaxolone vs placebo, median change in 28-day major motor seizures	-30.7% (IQR -49.5 to -1.9) vs -6.9% (-24.1 to 39.7), p = 0.0036, CDKL5 deficiency disorder, n = 101	30.7% against 6.9%	printed	neuroactive steroid, not benzodiazepine-site
+Ng 2011 abstract	abstract	clobazam LGS drop seizures	placebo -12.1% vs -41.2%, -49.4%, -68.3% for the three arms	placebo -12.1% vs -68.3%	printed	68.3% is the top-dose arm

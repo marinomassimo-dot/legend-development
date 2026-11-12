@@ -1,0 +1,41 @@
+{
+  "analysis_at": "2026-11-12T08:25:30Z",
+  "analysis_time_precision": "second",
+  "coverage": {
+    "abstract": "read",
+    "discussion": "read",
+    "figures": "captions_only",
+    "introduction": "read",
+    "limitations": "not_present",
+    "methods": "read",
+    "references": "not_read",
+    "results": "read",
+    "supplementary": "captions_only",
+    "tables": "read"
+  },
+  "event_at": "2026-11-12T08:38:30Z",
+  "event_id": "FTR-20261112-34634460-77",
+  "evidence_basis": [
+    "Europe PMC fullTextXML of PMC8609180 read through: abstract, introduction, Results 2.1-2.6, Table 1, all figure legends, Discussion, Methods 5.1-6.7. Supplementary mmc1.docx text read (Table S1, legends S1-S4). Figure images opened: Fig 4 and Fig 6 (main), Supplementary Figures S2 and S4; Figures 1, 2, 3, 5 and Supplementary Figures S1 and S3 not opened (captions only), so figures is recorded as captions_only, the conservative state. Values read from rasters are inferred_from_figure.",
+    "verbatim_locator | proposition: sIPSC amplitude and frequency are both reduced, amplitude being the principal change | Results 2.5 | \"In contrast, the sIPSCs were reduced in both amplitude and frequency\"",
+    "verbatim_locator | proposition: sIPSC isolation by chloride reversal at -70 mV, no antagonist named | Methods 5.3 | \"Spontaneous EPSCs and IPSCs were isolated by voltage-clamping pyramidal neurons at -70 mV in K-Gluconate or KCl intracellular solution respectively.\""
+  ],
+  "evidence_depth": "partial_fulltext_read",
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/source_table.tsv",
+    "disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/inversion_check.md",
+    "disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv",
+    "disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/evidence.tsv"
+  ],
+  "prior_receipt": "FTR-20260810-34634460-02",
+  "record_kind": "contemporaneous_receipt",
+  "reread_reason": "adversarial_reanalysis",
+  "source_fingerprint": "934b4e1a42ac19f5cd8912994fb171beabdeb94a6631b23d9a383dab1db906aa",
+  "source_kind": "fulltext_remote",
+  "source_locator": "Europe PMC fullTextXML for PMC8609180 and supplementaryFiles archive (plain curl, 2026-11-12); bytes in scratch only, not stored in the repository",
+  "study_id": {
+    "doi": "10.1016/j.nbd.2021.105529",
+    "pmid": "34634460"
+  },
+  "workflow": "SCI47 package A producer P (ORCH-SCI47-20261112), claim label ib-z. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
