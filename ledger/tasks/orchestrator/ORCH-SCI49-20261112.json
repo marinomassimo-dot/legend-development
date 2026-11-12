@@ -1,0 +1,87 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-SCI49-20261112",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Operator mandate SCI49 2026-11-12 (about ten hours from effective start): (A) independent verification by a blind verifier of the biological inferences of SCI47 package B already used by consumers (KCNQ2 low human value; OPC participation in a bath-applied Kv7 manipulation; functional data needed; HPA provenance and independence; necessity of the OPC-aware control); (B) drug-name pharmacological search on the Kir2 route left open after IT48 (IT48-Q01): which compounds or probes have documented pharmacology sufficient to make a Kir2 lever testable in WWOX physiology; up to three conditional hypotheses, or none. Deliver each package as soon as verified. Producer sonnet/medium, verifier sonnet/high, one delegate at a time, each resume counts as a launch. Zero spend, no contact, no personal data, no clinical recommendation, no new framework. Final report in Italian opens with: Quale attribuzione biologica \u00e8 diventata pi\u00f9 affidabile e quale confronto farmacologico possiamo ora mettere alla prova?",
+ "START_UTC": "2026-11-12T23:30:00Z",
+ "BASELINE": "main 182d3b1b (SCI48 closure published). Worktree .claude/worktrees/sci49, branch task/sci49. IT48 (integrator) works on task/it48, not yet on main; it already applied SCI48 deltas there (commit 8fe57179): consumption on main to be verified after it lands. IT47-Q04 and IT48-Q01 OPEN and unassigned.",
+ "MANDATE_STATE": "OPEN",
+ "CURRENT_PACKAGE": {
+  "id": "S0",
+  "state": "frames written",
+  "delegate_active": "none",
+  "updated": "2026-11-12"
+ },
+ "RESUME": "S0 for A and B written; next: commit, bind marker, verifier brief for A, dispatch.",
+ "DECISIONS_TAKEN": [],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "AUTHORISED_QUEUE_20261112C": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_A": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Bind marker; reconcile SCI48 closure, IT47/IT48 state, IT47-Q04 and IT48-Q01",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "S0 for A (propositions) and B (frame, priors, stop) written and committed before any reading",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Verifier brief A; one blind verifier (sonnet high) with the originals; staged receipts validated",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Apply corrections to the decisive propositions only; README answer-first for A; consumer_delta A; deliver A to the integrator",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_B": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Producer brief B; one producer (sonnet medium); staged receipts validated",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "One blind verifier (sonnet high) with its own strings; corrections and a narrow recheck",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "README answer-first for B (hypotheses at most three or none), minimum test, consumer_delta B; deliver B",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_C": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Landing per package: pre-freeze suites, gate, LINT, receipts, growth, verify_run on the frozen SHA, task_close, safe_push; clean own temporaries",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Self-evaluation, DREAM, capability scout, takeaways, final Italian report",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ },
+ "VERIFICATION_EVIDENCE": []
+}
