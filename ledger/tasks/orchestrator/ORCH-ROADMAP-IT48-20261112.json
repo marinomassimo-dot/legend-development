@@ -1,0 +1,67 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "TASK_ID": "ORCH-ROADMAP-IT48-20261112",
+ "START_UTC": "2026-11-12T20:30:00Z",
+ "OBJECTIVE": "LEGEND IT48 (operator mandate, queued after IT47; no second copy of IT47): close IT47 residuals, then run the Strategic Advisor Pilot Mandate (advisor_build_20261112/PILOT_MANDATE.md, applied verbatim: at most 24 hours from the first Stage A dispatch, two Stage A and two Stage B assessments, two bounded increments, no renewal) as its operational container. Improves WWOX loss-of-function drug-repurposing research choices; no ranking, sign or qualification is changed to show an effect; no predictive-improvement claim from better access to knowledge. Final report in Italian opens with: 'Quale scelta di ricerca e migliorata, oppure non e migliorata, grazie a questo ciclo?'.",
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Close IT47 without redoing it: CI and site on the delivered SHAs; concurrent cell-context changes reconciled; unmapped generator proposals visible with the reason; public view states updates and limits; record separates demonstrated from proposed",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Delivered on main: d280c7c3 (CI #666 FAIL, stale ranking.json), 3b877bfc+4ff3ced5 (CI #667 success), 2afd1eea (CI #670 success), b67d209a (B1 cell-class rows, Kv7 clause in five languages; CI #672 and view publication #38 pending at the last check). Batteries by SHA: 6991d539 PASS WITH SKIPS; 90cc8a91 FAIL on test_repurposing_view_i18n (a changed curated passage missing from the inventory; fixed in 3870f545, targeted suite OK); the landed b67d209a has no full battery of its own, only the CI gate. The Snap Chromium launcher fails in turbovnc-desktop.service shells; CHROME_BIN=/snap/chromium/3583/usr/lib/chromium-browser/chrome works."
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Pilot start at the safe boundary: read PILOT_MANDATE.md and the skill; record boundary, owner session, SHA, baseline and the sealed intended action before each Stage A",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Stage A #1 (headless, opus/high), Stage B #1 (sonnet/medium), decision accepted/adapted/rejected with reason, increment 1 to its consumer",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Record the updated intended action independently; Stage A #2, Stage B #2, increment 2 to its consumer",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Closure: verify_run on the final candidate, landing, CI/site, cleanup of own temporaries, final evidence report in Italian with the six pilot answers and Session Takeaway",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}
