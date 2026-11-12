@@ -13,7 +13,7 @@ The procedure around it is `.claude/skills/legend-strategic-advisor/SKILL.md`.
     python3 framework/scripts/strategic_advisor.py entrypoints
     python3 framework/scripts/strategic_advisor.py snapshot
     python3 framework/scripts/strategic_advisor.py seal   --campaign DIR --index N --text-file F
-    python3 framework/scripts/strategic_advisor.py brief  --stage A --campaign DIR --mission-file F --constraints-file F [--task-record P]
+    python3 framework/scripts/strategic_advisor.py brief  --stage A --campaign DIR --mission-file F --constraints-file F [--task-record P] [--expect SHA[:FOLDER] ...]
     python3 framework/scripts/strategic_advisor.py brief  --stage B --campaign DIR --assessment A.md --sealed-intended S.md --constraints-file F
     python3 framework/scripts/strategic_advisor.py run    --stage A|B|S --campaign DIR --brief FILE --model opus --effort high
     python3 framework/scripts/strategic_advisor.py extract --transcript T.jsonl --out FILE
@@ -24,7 +24,7 @@ WHAT IS MECHANICAL AND WHAT IS NOT
 Mechanical (this tool, or the runtime flags it passes): the tool list the advisor is born with
 (read from the runtime's init event), a deny rule on the sealed folder, the saved assessment
 being the result event verbatim (and cross-checked against the persisted session transcript),
-the model read back per turn, and a per-campaign attempt log that counts every launch, failed
+the model read back per turn (with the runtime's own record of a fallback, and the model of the final turn), whether each announced delivery is in the snapshot and reachable (and how much of it the advisor read), and a per-campaign attempt log that counts every launch, failed
 ones included.
 Procedural only: the attempt ceilings are enforced by this tool for runs launched through it and
 by nothing else; calling `claude` directly bypasses them. Whether the advisor obeys its brief,
@@ -42,6 +42,7 @@ import datetime as dt
 import hashlib
 import json
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -96,9 +97,11 @@ ENTRY_POINTS: list[tuple[str, str, list[str]]] = [
 ]
 
 
-def _git(*args: str) -> str:
+def _git(*args: str, strip: bool = True) -> str:
     done = subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True)
-    return done.stdout.strip() if done.returncode == 0 else ""
+    if done.returncode != 0:
+        return ""
+    return done.stdout.strip() if strip else done.stdout.rstrip("\n")  # `status --porcelain` starts with a space: strip() would eat it and shift every slice
 
 
 def sha256_file(path: Path) -> str:
@@ -124,14 +127,41 @@ def entrypoints() -> list[dict[str, Any]]:
         matches = [p for pattern in patterns for p in _resolve(pattern)]
         rel = [str(p.relative_to(ROOT)) for p in matches if ROOT in p.parents]
         last = _git("log", "-1", "--format=%cI", "--", *rel[:200]) if rel else ""
-        rows.append({"id": key, "what": what, "patterns": patterns, "matches": len(matches), "last_commit": last})
+        sized = [(p.stat().st_size, p) for p in matches if p.is_file()]
+        biggest = max(sized, default=(0, None), key=lambda pair: pair[0])
+        rows.append({"id": key, "what": what, "patterns": patterns, "matches": len(matches), "last_commit": last,
+                     "largest_chars": biggest[0], "largest": (str(biggest[1].relative_to(ROOT)) if biggest[1] and ROOT in biggest[1].parents else str(biggest[1] or ""))})
     return rows
 
 
-def snapshot(extra: list[str] | None = None) -> dict[str, Any]:
-    """Repository state at dispatch: SHA, time, uncommitted paths with digests, dashboard revision."""
+def main_ahead() -> list[dict[str, Any]]:
+    """Commits on main that this checkout does not contain, and the folders they add: material the advisor cannot read from here."""
+    seen, out = set(), []
+    for ref in ("development/main", "main"):
+        tip = _git("rev-parse", "--verify", "--quiet", ref)
+        count = _git("rev-list", "--count", f"HEAD..{ref}")
+        if not tip or tip in seen or not count.isdigit() or int(count) == 0:
+            continue
+        seen.add(tip)
+        added = _git("diff", "--name-only", "--diff-filter=A", f"HEAD...{ref}").splitlines()
+        folders = sorted({"/".join(path.split("/")[:-1][:5]) for path in added if "/" in path})
+        out.append({"ref": ref, "tip": tip[:12], "commits": int(count), "new_folders": folders[:12], "new_folders_total": len(folders)})
+    return out
+
+
+def delivery(spec: str) -> dict[str, Any]:
+    """One delivery the caller announces, as `REF[:PATH]`: announced, in this snapshot, accessible from the advisor's working directory. 'Read' is filled after the run."""
+    ref, _, path = spec.partition(":")
+    commit = _git("rev-parse", "--verify", "--quiet", f"{ref}^{{commit}}")
+    contained = bool(commit) and subprocess.run(["git", "merge-base", "--is-ancestor", commit, "HEAD"], cwd=ROOT, capture_output=True).returncode == 0
+    return {"announced": spec, "ref": ref, "path": path, "ref_known": bool(commit), "in_snapshot": contained,
+            "accessible": (ROOT / path).exists() if path else None}
+
+
+def snapshot(extra: list[str] | None = None, expect: list[str] | None = None) -> dict[str, Any]:
+    """Repository state at dispatch: SHA, time, uncommitted paths with digests, dashboard revision, what main holds that this checkout lacks."""
     dirty = []
-    for line in _git("status", "--porcelain", "--untracked-files=all").splitlines()[:200]:
+    for line in _git("status", "--porcelain", "--untracked-files=all", strip=False).splitlines()[:200]:
         rel = line[3:].strip().strip('"')
         path = ROOT / rel
         dirty.append({"status": line[:2].strip() or "?", "path": rel, "sha256": sha256_file(path) if path.is_file() else ""})
@@ -143,6 +173,8 @@ def snapshot(extra: list[str] | None = None) -> dict[str, Any]:
         "dispatch_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "uncommitted": dirty,
         "uncommitted_note": "the advisor reads the working tree: a path listed here is read as it is on disk, not as committed",
+        "main_ahead": main_ahead(),
+        "deliveries": [delivery(spec) for spec in expect or []],
         "dashboard": {
             "url": DASHBOARD_URL,
             "package_manifest_sha256": sha256_file(manifest) if manifest.exists() else "",
@@ -160,25 +192,42 @@ def render_snapshot(snap: dict[str, Any]) -> str:
         lines += [f"  - `{d['path']}` ({d['status']}) sha256 `{d['sha256'][:16]}`" for d in snap["uncommitted"][:40]]
     else:
         lines.append("- Uncommitted paths: none")
+    for ahead in snap.get("main_ahead", []):
+        more = f" (first {len(ahead['new_folders'])} of {ahead['new_folders_total']})" if ahead["new_folders_total"] > len(ahead["new_folders"]) else ""
+        lines.append(f"- `{ahead['ref']}` is ahead of this snapshot by {ahead['commits']} commit(s) (tip `{ahead['tip']}`); folders added there and absent here{more}: "
+                     + (", ".join(f"`{f}`" for f in ahead["new_folders"]) or "none") + ". Material delivered only through those commits is not readable by the advisor.")
+    if snap.get("deliveries"):
+        lines += ["- Deliveries the caller announces (announced ≠ in this snapshot ≠ reachable by your tools ≠ read; 'read' is recorded after the run):",
+                  "", "  | announced | in this snapshot | reachable from your working directory |", "  |---|---|---|"]
+        for d in snap["deliveries"]:
+            reach = "n/a (no path given)" if d["accessible"] is None else ("YES" if d["accessible"] else "NO")
+            lines.append(f"  | `{d['announced']}` | {'YES' if d['in_snapshot'] else 'NO' + ('' if d['ref_known'] else ' (ref unknown here)')} | {reach} |")
+        missing = [d["announced"] for d in snap["deliveries"] if not d["in_snapshot"] or d["accessible"] is False]
+        if missing:
+            lines.append(f"- **Not available to you:** {', '.join(f'`{m}`' for m in missing)}. Do not describe their content from memory or from the brief's wording; "
+                         "list them under 'Not reached' and say what that leaves unchecked. The sibling checkout is outside your tools.")
     dash = snap["dashboard"]
     lines.append(f"- Dashboard: {dash['url']} · source revision {dash['package_last_commit'] or 'unknown'} · {dash['note']}")
     return "\n".join(lines)
 
 
 def render_entrypoints(rows: list[dict[str, Any]]) -> str:
-    out = ["| id | what | patterns (relative to the repository root unless absolute) | matches now | last commit |", "|---|---|---|---|---|"]
+    out = ["| id | what | patterns (relative to the repository root unless absolute) | matches now | last commit | largest file |", "|---|---|---|---|---|---|"]
     for r in rows:
-        out.append(f"| {r['id']} | {r['what']} | {'<br>'.join('`' + p + '`' for p in r['patterns'])} | {r['matches']} | {r['last_commit'][:10]} |")
+        big = f"`{r['largest']}` ({r['largest_chars']:,} bytes)" if r["largest_chars"] >= 20000 else ""  # only where it matters: a whole read of it is a large load every later turn pays again
+        out.append(f"| {r['id']} | {r['what']} | {'<br>'.join('`' + p + '`' for p in r['patterns'])} | {r['matches']} | {r['last_commit'][:10]} | {big} |")
     return "\n".join(out)
 
 
 CONTRACT = ("Return one assessment with the headings given in your definition. Name every file or page you opened under "
-            "'Inspected'. You cannot write, run commands or start agents. The entry points are starting places; follow references past them.")
+            "'Inspected'. You cannot write, run commands or start agents. The entry points are starting places; follow references past them. "
+            "This brief is your prompt: the copy saved in the campaign folder is the same text, so do not open it. A file the table marks over 20,000 bytes is paid for again on every later turn: "
+            "Grep for the heading or id you need and read that range, and open the whole file when the question needs all of it; never re-read a range you already hold.")
 
 
 def build_brief(stage: str, campaign: Path, mission: str, constraints: str, task_record: str = "",
-                assessment: Path | None = None, intended: Path | None = None) -> str:
-    snap = snapshot()
+                assessment: Path | None = None, intended: Path | None = None, expect: list[str] | None = None) -> str:
+    snap = snapshot(expect=expect)
     parts = [f"# Strategic Advisor brief — Stage {stage}", "", "## Snapshot", render_snapshot(snap), "",
              "## Mission and limits (verbatim from the caller)", mission.strip(), "",
              "## Operational constraints", constraints.strip(), ""]
@@ -203,6 +252,8 @@ def parse_stream(path: Path) -> dict[str, Any]:
     calls: list[dict[str, Any]] = []
     models: dict[str, int] = {}
     seen: set[str] = set()
+    fallbacks: list[dict[str, Any]] = []
+    final_model = ""
     for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
         try:
             event = json.loads(line)
@@ -217,6 +268,8 @@ def parse_stream(path: Path) -> dict[str, Any]:
             if ident and ident not in seen:
                 seen.add(ident)
                 models[str(message.get("model"))] = models.get(str(message.get("model")), 0) + 1
+            if message.get("model"):
+                final_model = str(message["model"])
             for block in message.get("content") or []:
                 if isinstance(block, dict) and block.get("type") == "tool_use":
                     calls.append({"name": block.get("name"), "input": block.get("input"), "id": block.get("id")})
@@ -228,9 +281,12 @@ def parse_stream(path: Path) -> dict[str, Any]:
                             call["is_error"] = bool(block.get("is_error"))
                             text = block.get("content")
                             call["result_head"] = (text if isinstance(text, str) else json.dumps(text))[:160]
+        elif kind == "system" and event.get("subtype") == "model_refusal_fallback":
+            # the runtime's own record of a model change: which model, which category; the withheld text is not kept
+            fallbacks.append({k: event.get(k) for k in ("originalModel", "fallbackModel", "trigger", "apiRefusalCategory", "scope", "direction")})
         elif kind == "result":
             result = event
-    return {"init": init, "result": result, "calls": calls, "turn_models": models}
+    return {"init": init, "result": result, "calls": calls, "turn_models": models, "fallbacks": fallbacks, "final_turn_model": final_model}
 
 
 def extract_transcript(path: Path) -> str:
@@ -249,6 +305,25 @@ def extract_transcript(path: Path) -> str:
             last_id, blocks = ident, []
         blocks += [b.get("text", "") for b in message.get("content") or [] if isinstance(b, dict) and b.get("type") == "text"]
     return "".join(blocks)
+
+
+DELIVERY_ROW = re.compile(r"^\s*\| `([^`]+)` \| (YES|NO)[^|]*\| ([^|]+?) \|\s*$")
+
+
+def deliveries_read(brief_text: str, calls: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """The four states of each announced delivery: announced and in-snapshot/reachable come from the brief, 'read' from the calls the runtime recorded."""
+    rows = []
+    for line in brief_text.splitlines():
+        found = DELIVERY_ROW.match(line)
+        if not found:
+            continue
+        announced, in_snapshot, reach = found.groups()
+        path = announced.partition(":")[2]
+        done = [c for c in calls if not c.get("is_error")]
+        files = [c for c in done if c.get("name") == "Read" and path and path in str((c.get("input") or {}).get("file_path") or "")]
+        looked = [c for c in done if c.get("name") in ("Grep", "Glob") and path and path in json.dumps(c.get("input") or {})]
+        rows.append({"announced": announced, "in_snapshot": in_snapshot == "YES", "reachable": reach.strip(), "files_read": len(files), "listed_or_searched": len(looked)})
+    return rows
 
 
 def _transcript_for(session_id: str) -> Path | None:
@@ -335,6 +410,7 @@ def run(stage: str, campaign: Path, brief: Path, model: str, effort: str, timeou
             "runtime_readback": {"init_tools": facts["init"].get("tools"), "init_mcp_servers": facts["init"].get("mcp_servers"), "init_model": facts["init"].get("model"),
                                  "init_permission_mode": facts["init"].get("permissionMode"), "turn_models": facts["turn_models"],
                                  "model_usage": result.get("modelUsage"), "usage": result.get("usage"), "num_turns": result.get("num_turns"),
+                                 "final_turn_model": facts["final_turn_model"], "refusal_fallbacks": facts["fallbacks"],
                                  "total_cost_usd": result.get("total_cost_usd"), "census": census},
             "capture": {"method": "runtime result event of the headless stream (stream-json), saved verbatim", "source_session_id": session,
                         "raw_stream": str(raw), "raw_stream_sha256": sha256_file(raw), "assessment_sha256": sha256_text(text) if ok else "",
@@ -342,6 +418,7 @@ def run(stage: str, campaign: Path, brief: Path, model: str, effort: str, timeou
                         "published": "assessment.md and this file only; the raw stream and the session transcript stay local"},
             "tool_calls": [{k: c.get(k) for k in ("name", "input", "is_error", "result_head")} for c in facts["calls"]],
             "context": {"brief_chars": len(brief.read_text(encoding="utf-8"))},
+            "deliveries": deliveries_read(brief.read_text(encoding="utf-8"), facts["calls"]),
         }
         (out / "meta.json").write_text(json.dumps(meta, indent=2, sort_keys=True), encoding="utf-8")
         outcome, code = ("OK" if ok else "FAILED"), (0 if ok else 1)
@@ -382,8 +459,17 @@ def check(campaign: Path) -> int:
             problems.append(f"{meta_path.parent.name}: assessment.md no longer matches the captured digest")
         if meta["capture"].get("transcript_cross_check") is False:
             problems.append(f"{meta_path.parent.name}: result event and session transcript disagree")
-        if meta["runtime_readback"].get("census", {}).get("changed_mid_run"):
-            problems.append(f"{meta_path.parent.name}: the model changed mid-run")
+        readback = meta["runtime_readback"]
+        if readback.get("census", {}).get("changed_mid_run"):
+            fell = readback.get("refusal_fallbacks") or []
+            if fell:  # explained by the runtime: disclose it, name the model that wrote the answer, do not call it a failure of the saved record
+                print(f"NOTE: {meta_path.parent.name}: model changed mid-run by runtime fallback ({fell[0].get('originalModel')} → {fell[0].get('fallbackModel')}, "
+                      f"{fell[0].get('trigger')}/{fell[0].get('apiRefusalCategory')}); per-turn {readback['census'].get('models')}; final turn on {readback.get('final_turn_model')}; the assessment is not a single-model product")
+            else:
+                problems.append(f"{meta_path.parent.name}: the model changed mid-run, and the runtime recorded no reason")
+        for d in meta.get("deliveries", []):
+            if not d["in_snapshot"] or d["reachable"].startswith("NO"):
+                print(f"NOTE: {meta_path.parent.name}: announced delivery {d['announced']} was not available to the advisor (read {d['files_read']} file(s), searched {d['listed_or_searched']} time(s))")
         # an attempt the runtime refused (is_error) is the deny rule working; only a call that went through counts as having opened it
         opened = {str((c.get("input") or {}).get("file_path") or (c.get("input") or {}).get("path") or "") for c in meta["tool_calls"] if not c.get("is_error")}
         text = assessment.read_text(encoding="utf-8")
@@ -417,6 +503,7 @@ def main(argv: list[str] | None = None) -> int:
     b = sub.add_parser("brief"); b.add_argument("--stage", choices=["A", "B"], required=True); b.add_argument("--campaign", required=True)
     b.add_argument("--mission-file"); b.add_argument("--constraints-file"); b.add_argument("--task-record", default="")
     b.add_argument("--assessment"); b.add_argument("--sealed-intended"); b.add_argument("--out")
+    b.add_argument("--expect", action="append", default=[], metavar="REF[:PATH]", help="a delivery the mission text announces (SHA or ref, optionally the folder it adds); the brief states whether it is in this snapshot and reachable")
     r = sub.add_parser("run"); r.add_argument("--stage", choices=["A", "B", "S"], required=True); r.add_argument("--campaign", required=True)
     r.add_argument("--brief", required=True); r.add_argument("--model", required=True); r.add_argument("--effort", required=True, choices=["low", "medium", "high"])
     r.add_argument("--timeout", type=int, default=3600)
@@ -441,10 +528,13 @@ def main(argv: list[str] | None = None) -> int:
         if args.stage == "A" and args.sealed_intended:
             print("Stage A takes no intended action: that is Stage B's input.", file=sys.stderr); return 2
         text = build_brief(args.stage, campaign, mission, constraints, args.task_record,
-                           Path(args.assessment) if args.assessment else None, Path(args.sealed_intended) if args.sealed_intended else None)
+                           Path(args.assessment) if args.assessment else None, Path(args.sealed_intended) if args.sealed_intended else None, args.expect)
         out = Path(args.out) if args.out else campaign / f"brief_{args.stage}.md"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(text, encoding="utf-8")
+        for line in text.splitlines():  # say it now, before a launch is spent: the brief itself carries the same statement
+            if "is ahead of this snapshot" in line or line.startswith("- **Not available to you:**"):
+                print("WARNING:", line.lstrip("- "), file=sys.stderr)
         print(f"{out} sha256 {sha256_file(out)}"); return 0
     if args.cmd == "run":
         return run(args.stage, Path(args.campaign), Path(args.brief), args.model, args.effort, args.timeout, LIMITS, args.extra_attempt)

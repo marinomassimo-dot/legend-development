@@ -11,6 +11,10 @@
   "src": "en",
   "text": "The percent of the isolated current removed in the Wwox slice (not measured) and the maximum on triheteromers (not reached in any text read)."
  },
+ "01748cb6d0c0": {
+  "src": "en",
+  "text": "A Ba2+-sensitive resting K+ conductance (Kir2-type and/or a K2P-type leak; not separable with Ba2+) carries about 23 percent of the resting…"
+ },
  "01fe147e4f17": {
   "src": "en",
   "text": "A peptide inhibitor of the chaperone HSC70 (HSPA8) used as a cell-level probe, with lysosomal and genetic controls (identified by its ChEMBL record below)"
@@ -30,6 +34,10 @@
  "0476613c7243": {
   "src": "en",
   "text": "Nothing moves it: kept so the filing is not mistaken for evidence. Reopen if the primary paper assigns the value to GluN2B."
+ },
+ "048da5e8ce2e": {
+  "src": "en",
+  "text": "Alternatives the package states: Ba2+-sensitive current per pF equal across genotypes; or the contrast shrinks under blockade or matched access resistance; or capacitance is lower and tau scales so that the pair follows from cell size; or the implied reversal after the measured junction correction is outside K+ range. || Other rows of the package, not classified by it as rivals, complementary or compatible: KH2: Kv7 current starts near -70 mV (D03); the Kv7 tool blocker has no effect at -70 mV on a recombinant channel and half-inhibits near -51 mV, so a null… || KH3: Ih carries about 6 percent of the resting conductance in WT L2/3 and its block lowers sag from 1.8 to 1.0 mV and hyperpolarises 4.7… || KH4: If the K+ conductance change were produced by network activity (extracellular K+ or activity-dependent regulation), the HT, which… || KH5: A maturation delay would raise Rin and depolarise rest like the Wwox pair, but the implied reversal of the developmental conductance…"
  },
  "050ae835269e": {
   "src": "en",
@@ -98,10 +106,6 @@
  "0d10657f347d": {
   "src": "en",
   "text": "PDH activity and flux in a WWOX-deficient human neural cell against an isogenic control, with the glycolytic readout measured in the same material. [IT36] ECAR is not a lactate readout without an oxygen correction; measure lactate and pyruvate directly with redox state. [IT43] The isogenic pair and the oxygen series of INV-19 can carry this measurement: amount and phosphorylation of the step at all three sites, activity before and after dephosphorylation, and the four kinase transcripts, read next to BNIP3 from the same lysates. Reading (IPOTESI): BNIP3, kinase and phosphorylation all up supports a HIF-linked restraint and keeps the kinase lever conditional on it; BNIP3 up with the step unrestrained leaves the lever down while INV-19 stands; neither up points to the culture or oxygen condition. The compound arms follow only after a restraint is measured. [SCI44] Read the step on marker-resolved or sorted material; the dominant kinase RNA differs by class and species (mouse neurons PDK2; human neurons PDK3; astrocytes PDK4 in both species; human oligodendrocytes PDK4): include PDK2-4 transcript and protein per class, a genetic knockdown of the dominant isoform before any compound, and the scaffold condition of any tool that acts through the enzyme-complex scaffold. A restraint measured in one class does not transfer to another."
- },
- "0d345265b169": {
-  "src": "en",
-  "text": "Genetic KEAP1 lowering with a functional readout in the WWOX-deficient neural system, isogenic control, before any electrophile is compared. [IT36] precedent for a non-cell-autonomous (astrocyte) route exists in another system with an Nrf2-null control and rescue; KEAP1 knockdown needs an NFE2L2-loss cross; composition is not astrocyte-mediated benefit. [IT46 audit] The covalent and the non-covalent compound are not compared at equal concentration and time (the electrophile is consumed by thiols and persists after washout): a phase 0 matches exposure on a proximal NRF2 reading (concentration-response, time-course, cytotoxicity, glutathione, washout) first; at least two independent NFE2L2-knockdown reagents with measured efficiency; an NRF2-independent control gene set beside the target set; a WWOX genotype factor, since the pair speaks to the NRF2 pathway and not yet to the WWOX hypotheses; neuron and astrocyte cultures have no network, so a network outcome is a second phase. Source: un registro del repository (non incluso in questo pacchetto); un registro del repository (non incluso in questo pacchetto). [IT46 SCI46] Reagent pair named (SCI46): the non-covalent KEAP1 Kelch binder (a catalogue tool probe) against a covalent comparator, in one neural cell class at a time. X0: nuclear NRF2, two target genes (G6PD may be one), NQO1 enzyme activity and a risk panel (glutathione, GPX4, lipid peroxidation); the same lysates serve INV-07 step 1 and INV-19 (a shared preparation, not a shared cause). X1: a graded occupancy ladder matched on on-target response, not on concentration. X2: an adequacy criterion for NFE2L2 and KEAP1 loss fixed before the experiment, a KEAP1-loss occlusion arm, and a panel or array whose survivors after loss are read beyond NQO1. X3: neuron-only and astrocyte-only loss. Viability is read beside a function endpoint. Source: un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto) (NH1-NH4). [IT46 SCI46q] Readouts by cell class (SCI46 queue item, RNA class means, mouse P7 and P17 oligodendrocyte-lineage, one human neuron sample; not protein or activity): a neuron-readable target panel (Gclm, Txnrd1, Gpx4, G6pdx, Srxn1, Gclc) beside nuclear NRF2; NQO1 and HMOX1 as induced-state readouts with the per-class baseline (NQO1 is at the floor in mouse neurons, 0.84 FPKM, and low in astrocytes, 3.02; HMOX1 is 2.43 in neurons, 14.85 in astrocytes and 260.42 in microglia); HMOX1, NFE2L2 and SLC7A11 are astrocyte-biased, so a bulk transcript readout can move with cell composition alone; the HCAR2 route of a fumarate needs a microglia-like cell (Hcar2 18.12 FPKM in microglia against 0.10 in neurons and astrocytes). Source: un registro del repository (non incluso in questo pacchetto). [IT47 reading limits] RNA class means do not say what a cell can do: a low value is not an absent function, a gene readable in neurons is not thereby an NRF2-specific readout (other regulators act on each), and KEAP1 RNA in a class does not show that the protein is available to a binder. The held RNA reads Hcar2 only in microglia, so a culture without microglia is not expected to test the HCAR2 route of a fumarate unless Hcar2 protein is shown in the cells used."
  },
  "0d49c490f477": {
   "src": "en",
@@ -327,6 +331,10 @@
   "src": "en",
   "text": "Measure the axonal activity-dependent myelination signal in the WWOX-deficient system against an isogenic control, before any compound; then decide whether the class is orderable. IT29: add an arm in Wwox-null precursor monoculture or the Wwox-null neuron co-culture, with a lipid-synthesis comparator beside the muscarinic one, crossed with a neuronal-activity manipulation. [IT36] existing co-culture separates neither contact or substrate integrity nor a soluble product; peripheral seizure-free DRG neurons; add a fixed-neuron arm and a factor arm."
  },
+ "2b748d947515": {
+  "src": "en",
+  "text": "That NRF2 is under-active and compartment-specific in a WWOX-deficient neural system: no NRF2 protein, nuclear NRF2 or target-gene measurement exists there. Reporter and translocation values come from different cell lines and documents and are not comparable; induction of one enzyme can occur without NRF2. [IT46 SCI46] What an adequate NRF2 loss means in a neuron is not fixed; neuronal permeability of an acid binder and brain exposure are unknown. [SCI48] An adequate loss is verified as protein and mRNA at the endpoint time, not by an allele PCR; a germline loss is not an acute loss."
+ },
  "2bbdf11dd6e5": {
   "src": "it",
   "text": "Capire se vigabatrin o CPP-115 aggiungono danno alla mielina in un modello giovanile privo di Wwox."
@@ -438,6 +446,10 @@
  "368203a08734": {
   "src": "en",
   "text": "Smaller cells with a fixed seal leak, a larger Ih, selection by input-resistance criteria, maturation delay, and a cell-type mix."
+ },
+ "368b1d402b8e": {
+  "src": "en",
+  "text": "A Ba2+-sensitive resting K+ conductance (Kir2-type and/or a K2P-type leak; not separable with Ba2+) carries about 23 percent of the resting conductance of a WT L2/3 neuron (D01, S01) and Ba2+ block raises Rin about 30 percent with a small depolarisation and a lower rheobase (S01); the Wwox pair implies a net lost conductance of about 28 percent (2.7 nS); the arithmetic of its implied reversal (point -93.7 KO and -88.8 HT on the recorded scale; 95 percent intervals -143 to -77 and -149 to -66) is a constraint, not a discriminator: it is reproduced exactly by a smaller membrane plus a fixed shunt (verifier), it lies 4-12 mV below E_K on the recorded scale for a junction offset of 8-16 mV, and its interval reaches the maturation values (IR, MC); a known Ba2+-sensitive current gain (Fmr1 KO, preprint, digits not verifiable by the verifier) gives the mirror pattern (Rin -28 percent, rest -3.7 mV) (D13, S02-S04).. Exploratory: the package states no therapeutic direction. Unresolved premise: The Ba2+-sensitive share is the same in this preparation (P13-P17, layer II/III, neocortex with the area not stated in the Wwox paper, 35 C) as in the adult auditory-cortex source; Ba2+ at 60 uM is neuron-autonomous (Ba2+ block of astroglial Kir4.1 is reported at abstract level, 19515915, so a glial contribution to a bath-Ba2+ effect is not excluded). [IT48 update] The eight SCI43 rows that stood producer-read only were read again against the original full texts by a distinct verifier: 5 supported, 3 partly, none unsupported, 13 files kept with SHA-256 (sci43_reopen_it48_20261112/verify). The 23 percent figure survives as printed arithmetic but is the increment of one 60 uM Ba2+ dose in P28-P42 mouse auditory cortex (the preprint itself calls that age juvenile), not a measured Kir2 share; the cohorts of the Ba2+ and Ih panels are different cells. No row measures a Ba2+-sensitive resting conductance in layer II/III at about P13-P17; the juvenile evidence is Kv7 only (about 20 percent at a rest of -67 mV with synaptic blockers at room temperature, one study; the developmental Kv7 difference is not significant). The size of a resting lever in the juvenile slice therefore stays a transfer from an older age, not a measurement; the Kir2 drug-name search has not been run. No rank, sign or qualification changed. [IT49 update] Three limits travel with this row. (1) A Ba2+ response does not identify Kir2: 60 uM Ba2+ blocks Kir2-type channels, K2P-type leak channels and astroglial Kir4.1 alike. (2) Shares measured in different preparations or cohorts (here the Ba2+ and the Ih panels, different cells) are not additive and are not a decomposition of one resting conductance. (3) No measurement exists in the pertinent age band and layer (about P13-P17, layer II/III): the premise is unresolved, neither supported nor refuted, and the 23 percent figure is a transfer from an older age."
  },
  "375c36b55dc4": {
   "src": "en",
@@ -859,6 +871,10 @@
   "src": "it",
   "text": "Rete con segno (solo risorse esterne) contro riferimento senza segno"
  },
+ "669b635d98c1": {
+  "src": "en",
+  "text": "At matched potential KO keeps a larger sag or Ih (then HY3 opens), or a component insensitive to the Ih tool blocker carries the difference. || Run the package steps X1-X3. If HY1 holds, put the K+/leak identity (Kv7 versus other leak) ahead of any HCN lever; if it fails, go to HY2/HY3."
+ },
  "674effb47745": {
   "src": "en",
   "text": "INV-18"
@@ -999,10 +1015,6 @@
   "src": "it",
   "text": "via della firma trascrizionale: opposizione del modulo in cellule simili ai progenitori, valutata in cellule simili ai neuroni"
  },
- "777e41efa01a": {
-  "src": "en",
-  "text": "That NRF2 is under-active and compartment-specific in a WWOX-deficient neural system: no NRF2 protein, nuclear NRF2 or target-gene measurement exists there. Reporter and translocation values come from different cell lines and documents and are not comparable; induction of one enzyme can occur without NRF2. [IT46 SCI46] What an adequate NRF2 loss means in a neuron is not fixed; neuronal permeability of an acid binder and brain exposure are unknown."
- },
  "777f53f919ef": {
   "src": "it",
   "text": "Capire se, prima della prima scarica, la densità gliale in un cervello privo di Wwox è sotto, pari o sopra il selvatico: il segno è discordante tra specie e la scheda J01 si astiene."
@@ -1026,6 +1038,10 @@
  "79a188d2a6e2": {
   "src": "en",
   "text": "A selective EZH2 (PRC2) inhibitor, a tool compound for mouse glial systems"
+ },
+ "79d77b3ec822": {
+  "src": "en",
+  "text": "Ba2+-sensitive current per pF equal across genotypes; or the contrast shrinks under blockade or matched access resistance; or capacitance is lower and tau scales so that the pair follows from cell size; or the implied reversal after the measured junction correction is outside K+ range."
  },
  "7a468e0dc06b": {
   "src": "en",
@@ -1439,6 +1455,10 @@
   "src": "en",
   "text": "New compound routes for the Q8 question; the NRF2 axis and its step 0 were already a carded thread since IT10; the molecule is in an earlier exclusion list"
  },
+ "a59ce24bd04f": {
+  "src": "en",
+  "text": "Not stated by the package (missing): a falsifiable prediction is not given. What would favour it (a measurement outcome, not a prediction): At matched starting potential and matched peak excursion the genotypes show the same sag (current clamp) and the same Ih amplitude and V1/2 (voltage clamp), while Rin and rest still differ."
+ },
  "a5a33bf563ba": {
   "src": "it",
   "text": "Elettrofisiologia su fette del knockout neurone-specifico del laboratorio d'origine: la linea non è disponibile qui, se sia ottenibile non nota."
@@ -1539,6 +1559,10 @@
   "src": "en",
   "text": "Known thread re-emitted with a corrected counter-evidence and a new hazard"
  },
+ "aeac1b563a79": {
+  "src": "en",
+  "text": "Recruitment: sag and rebound are enlarged mainly because the same current step drives a more resistive, more depolarised cell about 8 mV further and about 4-5 mV more negative, while HCN density and gating are unchanged. Missing bridge: no voltage-clamp Ih and no matched-excursion current clamp exists in any WWOX preparation.. Exploratory: the package states no therapeutic direction. Unresolved premise: no voltage-clamp Ih and no matched-excursion current clamp exists in any WWOX preparation."
+ },
  "aed91b9c5ada": {
   "src": "en",
   "text": "That an assembly record means subunit selectivity: it names where the mechanism was attached, not how selective the molecule is."
@@ -1590,6 +1614,10 @@
  "b4c4c771fbc1": {
   "src": "en",
   "text": "Carded axis: the NRF2/KEAP1 need with two conditional arms."
+ },
+ "b4cb69affe56": {
+  "src": "en",
+  "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate. [IT40] A4 Report access resistance, bridge balance and capacitance by genotype; add a Ba2+- or Kv7-blocker-sensitive difference current with its zero-crossing against E_K (about -97 to -98 mV from the declared solutions; the recorded potentials need a junction correction of about -13 mV that 34634460 did not measure, which puts the estimated sag peaks about 16-21 mV below E_K, so the prediction applies to the voltage-clamp difference current, not to the sag peak). [SCI43] Order of arms: (0) capacitance measured directly by genotype and the cell-selection rule stated (pyramidal identity was confirmed from Rin and tau); (1) the same cells with and without synaptic blockers, in bursting and non-bursting slices; (2) Ba2+-sensitive current per pF and Rin share (a low micromolar concentration; a higher concentration and a K2P-blocker group as 2b); (3) XE-991-sensitive current at about −55 to −45 mV, not at rest, with a second Kv7 blocker; (4) current sensitive to an Ih blocker, repeated with a second Ih blocker; (5) dynamic-clamp leak of about 2.7 nS as sufficiency only, with a control leak at the WT rest; (6) an opener only after step 3. An implied reversal near E_K does not separate a K+ loss from a smaller cell with a shunt. [SCI44] Add a KATP arm to step 2b: perforated or cell-attached recording with ATP undisturbed, diazoxide and a sulfonylurea in KO and wild type, lactate or pyruvate add-back; state pipette ATP and glucose. Juvenile barrel-cortex neurons show KATP modulation of Vm, Rin and firing and lactate-driven KATP closure (34766906); this is a conditional metabolic upstream of the K branch (PH4), not a repair. [SCI44-C] The KATP arm of step 2b carries a size expectation: in juvenile barrel cortex the KATP share of resting conductance is about 11-17 percent (INFERENZA, upper bound, ATP-free whole-cell, glutamatergic regular-spiking cells, species and temperature unstated), so a KATP deficit alone would not account for 28 percent; state pipette ATP, record per-cell temperature and cell identity. The Wwox whole-cell internal solution contains 2 mM Na2ATP, so a lactate-closed KATP conductance is weakened for the published values and kept for ATP-undisturbed recordings. [IT45 from SCI45] Add a pHo arm: pHo step (7.4 to 7.1, with 7.7) per cell, whole-cell (pHi clamped by 10 mM HEPES) and sibling perforated-patch cells; pH-sensitive current per pF by genotype; both K2P family-level tools at both pHo. Stop criterion: a genotype difference in interstitial pHo below 0.1 unit stops the pH route; a larger one makes it a partial contributor only (TREK-1 Imin 0.25). Source: un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto). IPOTESI. [IT45 from SCI45-N1] Add burst incidence and the NMDAR-dependent component to the pHo-step arm; a lower pHo in the knock-out may be a protective state against bursts (IPOTESI). Vehicle and d-APV are run at each pH: GluN2B-containing receptors are themselves proton-inhibited (pH IC50 7.3-7.6 in recombinant diheteromers, a further 21-36 percent loss for 7.4 to 7.2; oocytes, magnesium-free), so an apparent drug-by-pH interaction is read against that baseline. Source: nmda_asic_ph_sci45_20261111 (un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto)). [IT46 audit] The IT45 comparison of an opener in the bath with an equal injected current does not hold on burst incidence (a slice-level event that one injected cell cannot change; a direct current also leaves input resistance unchanged while an opener lowers it). Corrected: R5a, the opener lowers the burst rate within each slice against a vehicle time control and the effect is reversed or occluded by a Kv7 blocker (or reproduced by a second opener of another chemotype); R5b, a non-Kv7 hyperpolarising manipulation of the slice is compared at matched shift of the recorded cells' membrane potential and matched input-resistance change, at three or more levels; single-cell comparisons use dynamic clamp on cell-level endpoints only; the animal is the statistical unit. A Kv7-blocker-sensitive current that is not smaller in the knockout does not refute an opener lever (it tests a deficit, not the lever). Useful in general and specific to the Wwox lesion are separate tests: the second needs a genotype-by-drug interaction against a non-Wwox hyperexcitable preparation matched on baseline burst rate. Source: un registro del repository (non incluso in questo pacchetto); un registro del repository (non incluso in questo pacchetto). [IT48 update] The eight SCI43 rows that stood producer-read only were read again against the original full texts by a distinct verifier: 5 supported, 3 partly, none unsupported, 13 files kept with SHA-256 (sci43_reopen_it48_20261112/verify). The 23 percent figure survives as printed arithmetic but is the increment of one 60 uM Ba2+ dose in P28-P42 mouse auditory cortex (the preprint itself calls that age juvenile), not a measured Kir2 share; the cohorts of the Ba2+ and Ih panels are different cells. No row measures a Ba2+-sensitive resting conductance in layer II/III at about P13-P17; the juvenile evidence is Kv7 only (about 20 percent at a rest of -67 mV with synaptic blockers at room temperature, one study; the developmental Kv7 difference is not significant). The size of a resting lever in the juvenile slice therefore stays a transfer from an older age, not a measurement; the Kir2 drug-name search has not been run. No rank, sign or qualification changed."
  },
  "b5adb8d69b29": {
   "src": "it",
@@ -1670,6 +1698,10 @@
  "bf214653e458": {
   "src": "en",
   "text": "Conditional hypothesis: the WWOX-side pattern was read in IT14; the drug-side precedent was read at abstract level only; no WWOX-deficient measurement shows that the block responds to the receptor (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
+ },
+ "bf37f79fc9c1": {
+  "src": "en",
+  "text": "Genetic KEAP1 lowering with a functional readout in the WWOX-deficient neural system, isogenic control, before any electrophile is compared. [IT36] precedent for a non-cell-autonomous (astrocyte) route exists in another system with an Nrf2-null control and rescue; KEAP1 knockdown needs an NFE2L2-loss cross; composition is not astrocyte-mediated benefit. [IT46 audit] The covalent and the non-covalent compound are not compared at equal concentration and time (the electrophile is consumed by thiols and persists after washout): a phase 0 matches exposure on a proximal NRF2 reading (concentration-response, time-course, cytotoxicity, glutathione, washout) first; at least two independent NFE2L2-knockdown reagents with measured efficiency; an NRF2-independent control gene set beside the target set; a WWOX genotype factor, since the pair speaks to the NRF2 pathway and not yet to the WWOX hypotheses; neuron and astrocyte cultures have no network, so a network outcome is a second phase. Source: un registro del repository (non incluso in questo pacchetto); un registro del repository (non incluso in questo pacchetto). [IT46 SCI46] Reagent pair named (SCI46): the non-covalent KEAP1 Kelch binder (a catalogue tool probe) against a covalent comparator, in one neural cell class at a time. X0: nuclear NRF2, two target genes (G6PD may be one), NQO1 enzyme activity and a risk panel (glutathione, GPX4, lipid peroxidation); the same lysates serve INV-07 step 1 and INV-19 (a shared preparation, not a shared cause). X1: a graded occupancy ladder matched on on-target response, not on concentration. X2: an adequacy criterion for NFE2L2 and KEAP1 loss fixed before the experiment, a KEAP1-loss occlusion arm, and a panel or array whose survivors after loss are read beyond NQO1. X3: neuron-only and astrocyte-only loss. Viability is read beside a function endpoint. Source: un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto) (NH1-NH4). [IT46 SCI46q] Readouts by cell class (SCI46 queue item, RNA class means, mouse P7 and P17 oligodendrocyte-lineage, one human neuron sample; not protein or activity): a neuron-readable target panel (Gclm, Txnrd1, Gpx4, G6pdx, Srxn1, Gclc) beside nuclear NRF2; NQO1 and HMOX1 as induced-state readouts with the per-class baseline (NQO1 is at the floor in mouse neurons, 0.84 FPKM, and low in astrocytes, 3.02; HMOX1 is 2.43 in neurons, 14.85 in astrocytes and 260.42 in microglia); HMOX1, NFE2L2 and SLC7A11 are astrocyte-biased, so a bulk transcript readout can move with cell composition alone; the HCAR2 route of a fumarate needs a microglia-like cell (Hcar2 18.12 FPKM in microglia against 0.10 in neurons and astrocytes). Source: un registro del repository (non incluso in questo pacchetto). [IT47 reading limits] RNA class means do not say what a cell can do: a low value is not an absent function, a gene readable in neurons is not thereby an NRF2-specific readout (other regulators act on each), and KEAP1 RNA in a class does not show that the protein is available to a binder. The held RNA reads Hcar2 only in microglia, so a culture without microglia is not expected to test the HCAR2 route of a fumarate unless Hcar2 protein is shown in the cells used. [SCI48] Step X2 adds: loss verified as protein and mRNA at the endpoint time (not an allele PCR); the electrophile inside the loss arm beside the binder; loss-alone and reagent-alone arms under the same challenge; two electrophile exposures matched on a proximal on-target response (one target gene is not enough). Step X1 adds the inactive analogue of the binder as a control. IPOTESI; does not speak to WWOX; conditional on X0."
  },
  "bf7ea87f82fb": {
   "src": "it",
@@ -1851,10 +1883,6 @@
   "src": "en",
   "text": "position unchanged from IT20 (rank 5): Position unchanged from IT20. The ten-row ceiling does not displace a row with real human clinical reports in favour of a conditional probe (curation rule), so this row stays at rank 5 and the two new IT21 conditional probes sit at rank 6, below the line. This row is a record-level analysis that needs no experiment budget and can proceed alongside."
  },
- "d4220aa3b76f": {
-  "src": "en",
-  "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate. [IT40] A4 Report access resistance, bridge balance and capacitance by genotype; add a Ba2+- or Kv7-blocker-sensitive difference current with its zero-crossing against E_K (about -97 to -98 mV from the declared solutions; the recorded potentials need a junction correction of about -13 mV that 34634460 did not measure, which puts the estimated sag peaks about 16-21 mV below E_K, so the prediction applies to the voltage-clamp difference current, not to the sag peak). [SCI43] Order of arms: (0) capacitance measured directly by genotype and the cell-selection rule stated (pyramidal identity was confirmed from Rin and tau); (1) the same cells with and without synaptic blockers, in bursting and non-bursting slices; (2) Ba2+-sensitive current per pF and Rin share (a low micromolar concentration; a higher concentration and a K2P-blocker group as 2b); (3) XE-991-sensitive current at about −55 to −45 mV, not at rest, with a second Kv7 blocker; (4) current sensitive to an Ih blocker, repeated with a second Ih blocker; (5) dynamic-clamp leak of about 2.7 nS as sufficiency only, with a control leak at the WT rest; (6) an opener only after step 3. An implied reversal near E_K does not separate a K+ loss from a smaller cell with a shunt. [SCI44] Add a KATP arm to step 2b: perforated or cell-attached recording with ATP undisturbed, diazoxide and a sulfonylurea in KO and wild type, lactate or pyruvate add-back; state pipette ATP and glucose. Juvenile barrel-cortex neurons show KATP modulation of Vm, Rin and firing and lactate-driven KATP closure (34766906); this is a conditional metabolic upstream of the K branch (PH4), not a repair. [SCI44-C] The KATP arm of step 2b carries a size expectation: in juvenile barrel cortex the KATP share of resting conductance is about 11-17 percent (INFERENZA, upper bound, ATP-free whole-cell, glutamatergic regular-spiking cells, species and temperature unstated), so a KATP deficit alone would not account for 28 percent; state pipette ATP, record per-cell temperature and cell identity. The Wwox whole-cell internal solution contains 2 mM Na2ATP, so a lactate-closed KATP conductance is weakened for the published values and kept for ATP-undisturbed recordings. [IT45 from SCI45] Add a pHo arm: pHo step (7.4 to 7.1, with 7.7) per cell, whole-cell (pHi clamped by 10 mM HEPES) and sibling perforated-patch cells; pH-sensitive current per pF by genotype; both K2P family-level tools at both pHo. Stop criterion: a genotype difference in interstitial pHo below 0.1 unit stops the pH route; a larger one makes it a partial contributor only (TREK-1 Imin 0.25). Source: un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto). IPOTESI. [IT45 from SCI45-N1] Add burst incidence and the NMDAR-dependent component to the pHo-step arm; a lower pHo in the knock-out may be a protective state against bursts (IPOTESI). Vehicle and d-APV are run at each pH: GluN2B-containing receptors are themselves proton-inhibited (pH IC50 7.3-7.6 in recombinant diheteromers, a further 21-36 percent loss for 7.4 to 7.2; oocytes, magnesium-free), so an apparent drug-by-pH interaction is read against that baseline. Source: nmda_asic_ph_sci45_20261111 (un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto)). [IT46 audit] The IT45 comparison of an opener in the bath with an equal injected current does not hold on burst incidence (a slice-level event that one injected cell cannot change; a direct current also leaves input resistance unchanged while an opener lowers it). Corrected: R5a, the opener lowers the burst rate within each slice against a vehicle time control and the effect is reversed or occluded by a Kv7 blocker (or reproduced by a second opener of another chemotype); R5b, a non-Kv7 hyperpolarising manipulation of the slice is compared at matched shift of the recorded cells' membrane potential and matched input-resistance change, at three or more levels; single-cell comparisons use dynamic clamp on cell-level endpoints only; the animal is the statistical unit. A Kv7-blocker-sensitive current that is not smaller in the knockout does not refute an opener lever (it tests a deficit, not the lever). Useful in general and specific to the Wwox lesion are separate tests: the second needs a genotype-by-drug interaction against a non-Wwox hyperexcitable preparation matched on baseline burst rate. Source: un registro del repository (non incluso in questo pacchetto); un registro del repository (non incluso in questo pacchetto)."
- },
  "d456e9186e46": {
   "src": "en",
   "text": "Is there a PDH block in a WWOX-deficient human neural cell at all, and does its direction match the one this lever assumes?"
@@ -1862,6 +1890,10 @@
  "d480d04437a2": {
   "src": "en",
   "text": "Generated by LEGEND from the qualified need path: the direction of the integrated stress response is unresolved (IT20)."
+ },
+ "d4e9093ee220": {
+  "src": "en",
+  "text": "A compound benefit can be independent of NRF2 (the readout was raised by compounds that do not bind KEAP1); the only catalogued NRF2-lowering row lowers many proteins and is not a control; no neuron or astrocyte data exist for any of these compounds; a binding assay at the Kelch domain cannot see covalent modifiers. [IT46 SCI46] No source has the binder in primary neurons or astrocytes with an NRF2-loss arm. Where a loss was verified (primary rat microglia, shRNA and knockout) the binder's induction and protection were lost and KEAP1 knockout occluded them; in a human neuronal line a partial NRF2 loss left the effect unchanged, which is uninterpretable; one human neuronal use on a KEAP1-overexpressing, already NRF2-high background moved ferroptosis markers in the harmful direction (no loss arm). The Davies source's own siRNA arms are categorical labels in the database copy, with no numbers and no knockdown efficiency, and the covalent bardoxolone methyl sits in the same design. [IT47 correction] The sentence above that no neuron or astrocyte data exist for any of these compounds is too strong for the covalent class: the SCI46 value table holds abstract-level data in primary mixed neuron-astrocyte cortical cultures with an Nrf2-knockout arm for one electrophile (the knockout result of a second electrophile is not stated in the abstract), data in neurons and astrocytes without a loss arm for the two fumarates, and a neurotoxicity series for a covalent triterpenoid in a human neuronal line. For the non-covalent binder the statement stands: no primary neuron or astrocyte datum, and the one neuronal line has a partial or inadequate loss. Source: un registro del repository (non incluso in questo pacchetto) (rows A36, A47-A53), counted by un registro del repository (non incluso in questo pacchetto). [SCI48] The second non-covalent Kelch binder (Winkel 2015; text and nine figures read, supplement unreachable) is a second non-covalent Kelch binder with myeloid-cell data only: in germline Nrf2-knockout bone-marrow macrophages 2 of 105 probe sets persisted, but no check of the knockout is printed and the covalent triterpenoid comparator is in no knockout arm, so the paper does not meet the loss criterion as printed; it is a comparator for a survivor set, not a probe. The earlier statement that it reaches the first two comparisons at abstract depth is replaced. The commonest covalent electrophile has germline-null neural designs in at least four independent groups (benefit lost in the nulls; one partial persistence at 50 mg/kg): a comparator, not a probe (loss germline or unverified, no KEAP1-loss arm, no binder partner); that line is at mixed depth (three texts, abstracts). No reagent is a probe in a neuron or astrocyte; the one probe row is the catalogued binder in rat microglia. No acute NFE2L2 loss verified at the endpoint time exists in any neural source read. The label 'probe' that the comparison engine now derives for these two reagents only means that their mechanism was read in primary texts; the package role of both is comparator (germline or unverified loss, the binder in myeloid cells only), and the engine has no comparator role yet (open with Harness)."
  },
  "d54033a186d2": {
   "src": "en",
@@ -1890,10 +1922,6 @@
  "d7efa24460cc": {
   "src": "en",
   "text": "The position of this thread rests on a single laboratory and a single paper in which the comparison drug acted better, and the specificity flag is an unknown rather than a clean reading. The thread is already ordered, so the result changes a standing position rather than adding a new one."
- },
- "d8af2b70ef80": {
-  "src": "en",
-  "text": "A compound benefit can be independent of NRF2 (the readout was raised by compounds that do not bind KEAP1); the only catalogued NRF2-lowering row lowers many proteins and is not a control; no neuron or astrocyte data exist for any of these compounds; a binding assay at the Kelch domain cannot see covalent modifiers. [IT46 SCI46] No source has the binder in primary neurons or astrocytes with an NRF2-loss arm. Where a loss was verified (primary rat microglia, shRNA and knockout) the binder's induction and protection were lost and KEAP1 knockout occluded them; in a human neuronal line a partial NRF2 loss left the effect unchanged, which is uninterpretable; one human neuronal use on a KEAP1-overexpressing, already NRF2-high background moved ferroptosis markers in the harmful direction (no loss arm). The Davies source's own siRNA arms are categorical labels in the database copy, with no numbers and no knockdown efficiency, and the covalent bardoxolone methyl sits in the same design. [IT47 correction] The sentence above that no neuron or astrocyte data exist for any of these compounds is too strong for the covalent class: the SCI46 value table holds abstract-level data in primary mixed neuron-astrocyte cortical cultures with an Nrf2-knockout arm for one electrophile (the knockout result of a second electrophile is not stated in the abstract), data in neurons and astrocytes without a loss arm for the two fumarates, and a neurotoxicity series for a covalent triterpenoid in a human neuronal line. For the non-covalent binder the statement stands: no primary neuron or astrocyte datum, and the one neuronal line has a partial or inadequate loss. Source: un registro del repository (non incluso in questo pacchetto) (rows A36, A47-A53), counted by un registro del repository (non incluso in questo pacchetto)."
  },
  "d8bcf6b0301e": {
   "src": "en",
@@ -2007,6 +2035,10 @@
   "src": "en",
   "text": "Whether an AMPA-dependent component exists at all; the 90 percent design value of the block is at the edge of what the tool gives in tissue (80-89 percent at 10 uM)."
  },
+ "e406a9f7a12a": {
+  "src": "en",
+  "text": "Pyramidal neurons: Rin +40 percent, rest +4 to +6 mV, absolute sag and KO-only rebound larger (Table 1, PMID34634460). Rin up with a depolarised rest is what fewer open K+/leak channels give; extra open HCN would lower Rin."
+ },
  "e42d8e04d9a5": {
   "src": "it",
   "text": "Capire se la proteina Q230P viene prodotta e poi eliminata, per quale via, e se quella che torna è funzionante."
@@ -2038,6 +2070,10 @@
  "e608a22e6da1": {
   "src": "en",
   "text": "A lever on the other side of the node from the kinase: if lactate supply to neurons matters, lowering it could help or harm depending on the compartment."
+ },
+ "e619a1161554": {
+  "src": "en",
+  "text": "Rin, rest and rheobase may move toward WT (the paper reports no gain difference, so gain has nothing to restore); an effect on bursts is open. HT matches KO on Rin by point estimate and rarely bursts, but the HT rest and sag asterisks are not reproducible from the printed values, so no sufficiency argument is drawn from HT. What would favour it (a measurement outcome, not a prediction): A Ba2+-sensitive current (Kir2-type) per pF smaller in KO and HT than in WT, with reversal near the corrected E_K, measured with synaptic transmission blocked and the junction potential measured; capacitance and access resistance reported; (dynamic-clamp re-addition that restores Rin and rest shows sufficiency only, not a lesion). Measure: Difference-current ladder (K-EXP step 2), then dynamic clamp (step 5)."
  },
  "e6aa39a1f3a3": {
   "src": "en",
@@ -2107,6 +2143,10 @@
   "src": "en",
   "text": "NMDA-receptor-regenerative drive (GluN2B- or GluN2A-weighted), a general loss of excitatory drive, and a recording-state artefact. Kainate receptors are not separated from AMPA receptors by the usual tools."
  },
+ "eda8a3da4d64": {
+  "src": "en",
+  "text": "Alternatives the package states: (a) more HCN conductance; (b) different HCN gating or distribution; (c) HCN plus K+ plus T-type together; (d) an excitation-dependent compensation. Not mutually exclusive. [Audit: a smaller cell (capacitance 180/131/149 pF) is not listed as a competing alternative; holding the WT sag fraction fixed explains only about 53 percent of the HT sag increase and about 33 percent of the KO increase; the sag fraction rise (5.5 to 8.3 percent) is about 1.5 standard errors on the printed errors, so it is not shown to differ; HT and KO are about 8 mV further from rest but only 4 to 5 mV more negative in absolute potential.] || Other rows of the package, not classified by it as rivals, complementary or compatible: HY2: Sag/rebound (HCN, with a T-type component) shapes the cell response that starts or spreads bursts; direction of benefit unknown:… || HY3: Nested origin of one phenomenon: if Ih itself differs (HY1 fails), the change could be in channel number, surface fraction, subunit…"
+ },
  "ee335183c025": {
   "src": "en",
   "text": "Is there an axonal signal left for a pro-myelinating agent to act on, before any such agent is ordered?"
@@ -2159,6 +2199,10 @@
   "src": "en",
   "text": "Net-negative on the myelin axis if both EZH1 and EZH2 are inhibited (oligodendrocyte differentiation blocked in mouse knockouts); cytokines rose after EZH2 suppression in tumour cells."
  },
+ "f3477bd920b6": {
+  "src": "en",
+  "text": "Recruitment: sag and rebound are enlarged mainly because the same current step drives a more resistive, more depolarised cell about 8 mV further and…"
+ },
  "f34e67309e90": {
   "src": "en",
   "text": "GABA-transaminase block: affinities of irreversible inhibitors are not a potency ranking"
@@ -2190,6 +2234,10 @@
  "f8c40246e1de": {
   "src": "en",
   "text": "A protein measurement on material the module already reasons about; no new model and no compound needed."
+ },
+ "f92adb789e1f": {
+  "src": "en",
+  "text": "WT to KO: Rin 102.9 to 143.0 MOhm (+39 percent), rest -79.3 to -73.6 mV, tau 18.6 to 21.3 ms; HT equals KO on Rin and is intermediate on rest; bursts in 36/42 KO, 4/23 HT, 0/11 WT slices (34634460 Table 1; hcn physiology Y01-Y03)."
  },
  "f948bf663b3e": {
   "src": "en",

@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T17:33:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T17:35:45Z",
+ "event_id": "FTR-20261112-29533123-73",
+ "evidence_basis": [
+  "verbatim_locator | proposition: knock-down timing is the only loss descriptor; no verification of sh-Nrf2 is printed | Methods, In vitro Nrf2 knockdown | \"Experiments were performed 72-96 h after the transduction.\"",
+  "verbatim_locator | proposition: neuronal arms are OGD+Sfn and OGD+Sfn+sh-Nrf2 only | Results, Sfn reduces neuronal death | \"sh-Nrf2 largely abolished the protection of Sfn\"",
+  "verbatim_locator | proposition: Sfn thiol reactivity beyond Keap1 is not excluded | Discussion | \"we could not exclude the possibility that Sfn might protect via additional mechanisms\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/verify/verdicts.tsv"
+ ],
+ "prior_receipt": "FTR-20261112-29533123-74",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "0b35481c9250fc0a353964a4359964bef9bc21749394bdccb36f9bded1ccbfc4",
+ "source_kind": "fulltext_local",
+ "source_locator": "stored PMC article page /home/desktop/legend-development/files/fulltext/PMC6365596_PMID29533123_pmc_html_2026-11-12.html (sha256 as in source_fingerprint); figures 1, 2, 5 and 6 opened with the Read tool, figures 3 and 4 not opened (legends read), hence captions_only for the figure coverage.",
+ "study_id": {
+  "doi": "10.1177/0271678X18764083",
+  "pmid": "29533123"
+ },
+ "workflow": "SCI48 blind verifier V10 (claim actor nr-y), ORCH-SCI48-20261112. Staged for the integrator; the ledger was not appended at preparation time."
+}

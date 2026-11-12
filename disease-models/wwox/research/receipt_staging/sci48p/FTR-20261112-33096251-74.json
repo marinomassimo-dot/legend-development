@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-12T17:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-12T17:16:29Z",
+ "event_id": "FTR-20261112-33096251-74",
+ "evidence_basis": [
+  "verbatim_locator | proposition: reversible KEAP1 binder compared head to head with sulforaphane in primary neurons and astrocytes | Abstract | \"When tested head to head with sulforaphane, a covalent KEAP1 binder, Compound 2 had a similar ability to induce the expression of genes\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/sfn_table.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/matrix.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "Europe PMC search record abstract (no PMC copy per the ID converter)",
+ "study_id": {
+  "doi": "10.1016/j.freeradbiomed.2020.10.022",
+  "pmid": "33096251"
+ },
+ "workflow": "SCI48 producer P (nr-z): Moretti 2021 abstract only. Staged for the integrator; the ledger was not appended at preparation time."
+}

@@ -15,14 +15,14 @@ class PackageRows(unittest.TestCase):
 
     def test_sixteen_rows_from_three_packages_of_different_structure(self):
         ids = sorted(r["proposal_id"] for r in self.rows)
-        self.assertEqual(16, len(ids))
+        self.assertEqual(16, len([i for i in ids if "potassium_conductances_sci43" not in i and "hcn_20261107" not in i]))   # IT49: the two later packages are counted in test_stage_it49
         self.assertEqual({"INV-18", "INV-08", "INV-09"}, {r["inv_id"] for r in self.rows})
         self.assertEqual(5, sum(1 for r in self.rows if "gsk3_eif2b" in r["proposal_id"]))
         self.assertEqual(5, sum(1 for r in self.rows if "ph_k2p" in r["proposal_id"]))
         self.assertEqual(6, sum(1 for r in self.rows if "nrf2_inv08" in r["proposal_id"]))
 
     def test_packages_reachable_but_not_mapped_are_reported_not_hidden(self):
-        self.assertEqual({("INV-18", "potassium_conductances_sci43_20261110"): 5, ("INV-18", "hcn_20261107"): 3}, self.unmapped)
+        self.assertEqual({}, self.unmapped)   # IT49 mapped the last eight; the report mechanism stays (a new unmapped package would appear here)
 
     def test_every_slot_is_filled_or_says_it_is_not_stated(self):
         for r in self.rows:

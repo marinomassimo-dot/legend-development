@@ -1,0 +1,136 @@
+# Strategic Advisor brief — Stage B
+
+## Snapshot
+- Repository SHA: `54b985c707f21d5f2fdc422c33f1503aadfd8301` (branch `task/it48`)
+- Dispatch time (UTC): 2026-11-12T21:24:31Z
+- Uncommitted paths (8; read as on disk):
+  - `isease-models/wwox/research/drug_repurposing/advisor_campaign_it48_20261112/invocations.jsonl` (M) sha256 ``
+  - `ledger/tasks/orchestrator/ORCH-ROADMAP-IT48-20261112.json` (M) sha256 `3efcdc96a321e366`
+  - `disease-models/wwox/research/drug_repurposing/advisor_campaign_it48_20261112/A2/assessment.md` (??) sha256 `dd3a031d5e09da69`
+  - `disease-models/wwox/research/drug_repurposing/advisor_campaign_it48_20261112/A2/brief.md` (??) sha256 `a0fce2e7ac126798`
+  - `disease-models/wwox/research/drug_repurposing/advisor_campaign_it48_20261112/A2/meta.json` (??) sha256 `457f5f65aad0ce87`
+  - `disease-models/wwox/research/drug_repurposing/advisor_campaign_it48_20261112/advisor_sealed/INTENDED_ACTION_2.md` (??) sha256 `8abc08afc9f2bc32`
+  - `disease-models/wwox/research/drug_repurposing/advisor_campaign_it48_20261112/brief_A2.md` (??) sha256 `a0fce2e7ac126798`
+  - `disease-models/wwox/research/drug_repurposing/advisor_campaign_it48_20261112/inputs/constraints2.md` (??) sha256 `4bf6141cb92588ab`
+- Dashboard: https://marinomassimo-dot.github.io/legend-development/ · source revision 54b985c707f21d5f2fdc422c33f1503aadfd8301 2026-11-12T21:19:28+00:00 · the public page shows no build stamp; the package commit above is the source revision it is generated from. Publication date of the live page was not checked.
+
+## Mission and limits (verbatim from the caller)
+
+
+## Operational constraints
+Constraints: unchanged from inputs/constraints.md (zero spend, no contact, public edition, not medical advice, no rank/sign/qualification change to show an effect, one scientific delegate at a time with a distinct verifier).
+Changes since Stage A #1: increment 1 is done and consumed (see the task record, OBJ_P2 and PILOT_DECISION_1; its question IT48-Q01 is open). The SCI48 science package has been delivered to development/main (merge 3f12c196); it is an available input, not a constraint. CI for the last delivered main commit may still be completing. Time: this is the second Stage A of at most two; the campaign window runs to 24 hours after the first Stage A dispatch (2026-11-12T20:42Z).
+
+## Saved Stage A assessment (complete, verbatim)
+sha256 `dd3a031d5e09da69b37ff89cf4b07cae5e26d1b2538e6a284f8fabf801f3f65b`
+
+## 1 · Principal decision
+
+Which single remaining bounded increment the IT48 campaign should buy with its second slot, now that increment 1 (second reading of the eight SCI43 rows) is done and consumed: a third consecutive step inside the K/excitability branch, a premise shared by several investigations, held-but-unused hypothesis rows, or a published-but-unverified inference.
+
+## 2 · Leading recommendation
+
+**Buy the independent verification of the SCI47 package B biological inferences — the OPC contribution to a bath-applied Kv7 lever, the reading of the low held human KCNQ2 value, and the provenance of the HPA nuclei table — with a distinct verifier delegate.**
+
+Facts it rests on:
+
+- `cell_context_sci47_20261112/README.md` §"Verification: two things kept apart", item 2 (line 23): numerical reproduction is done; "Verification of the biological inferences (not done). No independent reader checked the inferences (OPC plausibility, the reading of the held-table discrepancy, the decision paragraph); no delegate was used." They "stay conditional until a reader tests them against the sources."
+- Those same inferences are already live outside the module. The task record `ORCH-ROADMAP-IT48-20261112.json`, OBJ_P0 evidence (line 18), records `b67d209a` as "B1 cell-class rows, Kv7 clause in five languages" landed on `main`.
+- They also carry a design requirement used by four investigations, not one. `next_batch_it47_20261112/BRIEFS.md` B2 (lines 10–11): "Every arm in a slice or mixed culture names the cell classes that carry its target (from `cell_context`) and includes either a cell-restricted perturbation, a purified preparation or the target protein by class. Used by: INV-18 R5a/R5b, INV-10 S5/S7, INV-08 X1-X3, INV-09 baseline."
+- The package names its own weakest joint and leaves it open: §"Origin of the HPA table (checked; the result is partial)" (lines 26–28) states that neither the file nor the retrievable static pages say which dataset the nuclei come from, that a resembling atlas (PMID 37824663) was found by title search, and that "**that this is the source of the HPA table was not verified**" — the paper was not opened. Line 28 adds that independence from the held Zhang table is "likely but **not documented here**".
+- `batch_sci_20261105/map/open_questions_map.tsv` line 157 (IT47-Q04) carries the dependency explicitly in its source field: "`cell_context_sci47_20261112/README.md` rows 4 and 6 (package B, RNA only; inferences not independently verified)".
+
+Interpretation: this is the one item where a claim that has already left the module and been published in five languages rests on inferences the module itself marks unverified, and where a single verifier serves a premise four investigations' arms depend on.
+
+Strategic judgment: with one slot left, a verification that can correct a public statement *and* a four-arm design requirement is worth more than a third consecutive literature step in the branch increment 1 just worked. Increment 1 was itself a verification of the K branch; spending slot 2 there too would make the campaign a single-branch campaign and would leave the one published unverified inference standing.
+
+## 3 · Relevant alternatives
+
+- **The case for staying in the K branch — IT48-Q01's drug-name half, and it is strong.** `open_questions_map.tsv` line 158 (IT48-Q01, `literature_executable`, OPEN, zero-spend yes) asks both whether any juvenile (~P13–P17) layer II/III Ba²⁺-sensitive share exists in any cortex or laboratory, and whether a drug-name-led search for Kir2 blockers or openers has been made; its blocking reason is "The Kir2 drug-name route of the SCI43 brief was not run in IT48 increment 1." Its disposition is pre-written: it decides whether the first INV-18 arm needs a K2P or high-Ba²⁺ step (ladder step 2b) or reduces to the Kv7 spiking-range arm. `potassium_conductances_sci43_20261110/consumer_delta.md` row 9 records the catalogue state the drug-name route would test: Kir2 one row (a blocker), GIRK one, K2P twelve; and row 7 records that `azetukalner` is reached by name only, zero target rows. **If the Orchestrator wants to close the K branch rather than widen it, run the drug-name half alone** — it is the part with no access risk, and a confirmed absence of any reachable Kir2 *opener* would make the share question a ladder question rather than a drug question, which is a cleaner closure than another share sweep. My reason for not leading with it: increment 1's closing paragraph already states that none of the eight rows measures a juvenile P13–P17 Ba²⁺-sensitive share, so the share half would be a second bounded negative on a premise already marked as a transfer, while the drug half changes one investigation's arm, against four for the leading item.
+- **The eight unmapped hypothesis rows, now unblocked.** `generation_it47_20261112/p1_hypotheses_it47.md` line 20: SCI43 KH1–KH5 and HCN HY1–HY3 are "reachable and **not mapped**"; line 6 records 19 reachable rows, 0 used before IT47, and lines 25–31 show 11 of 19 now mapped and reaching `reader_view.tsv` and the dashboard cards. Stage A #1 argued this should follow the SCI43 result; that result now exists, so the dependency is cleared and the path (`PKG_MAP`) is built. This is the cheapest item that delivers held-but-unused knowledge to a real consumer. I rank it third only because it must carry increment 1's limit, and that limit is a *text* addition the leading or the K-branch increment can make anyway. **If delegate access risk is judged high, this is the item certain to finish.**
+- **The condition record — withdrawn as a candidate, with a correction.** Stage A #1 proposed it as the safe slot and described it as unapplied, citing `S7_coda.md` §4 ("proposed in `consumer_delta.md` row 11; **not applied**", status "known … but unused"). On disk it is applied: `ampa_nmda_discrim_20261108/output/prediction_matrix.tsv`, row M01, `readouts_specific`, carries the `[SCI43]` clause verbatim (capacitance measured directly, access resistance and bridge balance by genotype, measured liquid junction potential, cell-selection rule), alongside later `[IT44]`, `[SCI44]` and `[SCI44-C]` additions. Interpretation: the increment is spent; what remains is a stale status sentence in `S7_coda.md` §4, worth a dated one-line correction inside whichever increment runs, not a slot. (Strategic judgment, offered for checking: a record that still says "unused" after its consumer took the row is the kind of drift that makes a later session re-buy work already done — compare memory *check-integrator-before-queue-item.md*, where SCI46 duplicated an IT46 package.)
+- **IT47-Q01/Q02 (the GSK3 / eIF2B thread).** Not re-argued here: Stage B #1 settled it and the Orchestrator accepted the reasoning. `open_questions_map.tsv` line 154 classifies Q01 `literature_executable` with the note "a new experiment is needed only if no other source has it", and line 155 gives Q02's state (two abstract-level searches found no Ser535 phosphomimetic; DYRK2 shown only in cardiomyocytes). Q02 remains a legitimate reduced slot; it changes the wording of two prerequisites inside one investigation, which is below both items above.
+- **Other zero-spend rows in other branches.** `open_questions_map.tsv` lines 144 (IT46-Q02, ABAT panel identity), 148 (IT46-Q06, Winkel full text), 151 (IT46-Q09, sulforaphane null arm), 145 and 153 (IT46-Q03, Q11, base rate and benzodiazepine reports) are all OPEN and zero-spend. Note a dependency the Orchestrator should check before choosing any of them: memory *sci48-pitfalls.md* records that SCI48 reached Winkel and Mao full text through the PMC article page and that its verifier found nine missing neural sulforaphane null designs and reversed a headline — so IT46-Q06 and IT46-Q09 may be partly or wholly answered by the delivered SCI48 package. I could not confirm this (see §9).
+
+## 4 · Why now
+
+- This is the last slot of a campaign whose window ends 2026-11-13T20:42Z, and the leading item is a verification with a bounded source set already named in the package (two RNA tables with recorded hashes, the mouse and HPA values, and one atlas paper to open). That shape finishes inside the window; a wide literature sweep may not.
+- The exposure is current, not hypothetical: the Kv7 clause and the cell-class rows are on `main` in five languages now, and the task record itself lists CI #672 and the site publication as pending at last check. A correction found later costs a second public update.
+- The one dependency that would have made me defer has resolved in the opposite direction: Stage A #1 said it would switch away from the K branch if SCI48 covered the K-branch shares. It did not (memory *sci48-pitfalls.md* describes a sulforaphane/NRF2-side package), so IT48-Q01 survives as a real alternative rather than being removed — which is why I present it as a live choice rather than dismissing it.
+
+## 5 · Evidence and uncertainty
+
+**Facts.** Increment 1's verdict counts are 4 SUPPORTED (D01, D04, D07, D08), 3 PARTLY (D02, D03, D11), 0 NOT_SUPPORTED, 0 STILL_UNVERIFIABLE, against the earlier verifier's UNVERIFIABLE on all eight (`sci43_reopen_it48_20261112/verify/VERDICTS.md`, "Counts" line and Final table). Its closing paragraph states that the 23 % survives as printed arithmetic (172.7 → 223.8 MΩ, 26 neurons, paired, p < 0.001; 1.32 of 5.79 nS) but is "a Ba²⁺ (60 µM) increment, not a measured Kir2 share", that the source labels its P28–P42 mice *juvenile* rather than adult, and that "None of the other rows measures a Ba²⁺-sensitive resting conductance in juvenile layer II/III neurons at about P13–P17". Two corrections of the branch's own framing therefore came out of increment 1: the "adult auditory-cortex" label used in `S7_coda.md` §1 is the Orchestrator's, not the source's (VERDICTS D01, point 1), and the access premise was wrong — bioRxiv returned 200 after about 90 s and Day came through the PMC `?report=classic` variant (VERDICTS, "How the sources were reached").
+
+**Uncertainty.** (a) The leading item's verifier may find the inferences sound; that is a result, not a failure, and it converts a conditional public statement into a verified one. (b) It may find them wrong in either direction — memory *contest-a-verifier-with-the-source.md* records that a negative finding can itself be false, so the verifier's own strings and two routes on any absence claim must be required (memory *sci48-pitfalls.md*, *delegation-budget-settings.md*). (c) The HPA provenance may stay unresolved if the portal documentation is a script-rendered page; memory *sci47-pitfalls.md* records that such tails close as "not resolved, routes recorded", which sharpens the blocking reason and is an acceptable outcome. (d) Whatever the verifier finds, it cannot be allowed to move a rank, a sign or a qualification; the OPC item is explicitly "plausible, not shown" (`open_questions_map.tsv` line 157) and must stay a control to be added, not an established action.
+
+**What would not count as success:** a reaffirmation written as independent when it reused the Orchestrator's own reasoning; a molecule; a novelty claim.
+
+## 6 · Next bounded action
+
+**Principal question:** *Do the three SCI47 package B biological inferences survive an independent reading against their sources — namely (i) that OPC carrying KCNQ2 RNA in the mouse P17 and HPA adult tables makes an OPC contribution to a bath-applied Kv7 modulator plausible but unshown, (ii) that the held human KCNQ2 value of 0.1 is a table-wide low that does not support "human neurons lack KCNQ2", and (iii) which dataset the HPA nuclei table actually comes from?*
+
+Shape: one verifier delegate with its own search strings, reading the originals in full, told to state two routes for any absence claim, and to treat PMID 37824663 as a candidate provenance to confirm or refuse rather than to assume.
+
+**Result that would count:** a per-inference verdict (supported / partly / not supported / unverifiable) with locators, written into `cell_context_sci47_20261112/README.md` §Verification item 2 as a dated update, into the source field of `open_questions_map.tsv` IT47-Q04 (which currently reads "inferences not independently verified"), and into the SCI47-B consumer rows — plus, if any inference fails, a dated correction of the public passage. Either disposition is a success; a failure is the more valuable, because it removes an unverified claim from a published page and from a requirement four investigations' arms share.
+
+## 7 · What would change my view
+
+- **A verifier finding the SCI47-B inferences already independently checked somewhere I did not reach** (a receipt, a verdicts file under `inhibitory_defect_sci47_20261112/`): then IT48-Q01's drug-name half becomes the leading item.
+- **Evidence that the delivered SCI48 package already answers IT46-Q06 and IT46-Q09**: that does not change my lead, but it should be checked before anyone picks those rows, and it would mean two OPEN zero-spend rows can be closed as a by-product of integration rather than as an increment.
+- **A Kir2 opener appearing in any catalogue route**: then the K-branch share question becomes drug-relevant again and IT48-Q01 outranks the leading item.
+- **Wet capability or funded collaboration**: then INV-02's ISR sign and INV-08's genetic arm outrank every literature item here, as Stage A #1 argued from their own rows.
+- **A public deposit of a juvenile layer II/III K⁺ dataset or the Wwox raw traces**: that replaces reading with analysis and outranks both.
+
+## 8 · Resource implications
+
+One delegate for the increment plus a distinct verifier, strictly sequential, consistent with the stated constraint. Zero spend; no contact address to any service (memory *never-send-operator-email-to-services.md*); no browser-header spoofing (memory *he43-he44-pitfalls.md*); no new dependency, registry, gate or scheduler. PMC article pages by plain curl are an allowed route and the `?report=classic` variant worked in increment 1.
+
+Integration cost to budget explicitly: edits to `open_questions_map.tsv`, the investigations tables or the hypotheses tables stale generated dossiers — `build_questions.py --write` plus the touched-folder suites before any battery (memory *regenerate-dossiers-before-freezing.md*, failures in IT40/IT43); merge `development/main` before freezing a candidate (memory *sci48-pitfalls.md*); browser suites need `CHROME_BIN` on this host, and the task record's own evidence line names `/snap/chromium/3583/...` while memory *strategic-advisor-pitfalls.md* records 3593 — check the path that exists before relying on either.
+
+Two cheap writes to fold into whichever increment runs, not to buy as slots: the stale "not applied" status in `S7_coda.md` §4, and increment 1's two corrections to the branch's own framing (the "adult" label, and the measured access routes) wherever the branch text still carries the old version.
+
+## 9 · Inspected
+
+Opened in full: `ledger/tasks/orchestrator/ORCH-ROADMAP-IT48-20261112.json`; `advisor_campaign_it48_20261112/inputs/constraints2.md`, `A2/brief.md`, `A1/assessment.md`, `B1/assessment.md`; `sci43_reopen_it48_20261112/verify/VERDICTS.md`; `potassium_conductances_sci43_20261110/S7_coda.md` and `consumer_delta.md`; `cell_context_sci47_20261112/README.md`; `generation_it47_20261112/p1_hypotheses_it47.md`; `next_batch_it47_20261112/BRIEFS.md`; `batch_sci_20261105/map/open_questions_map.tsv` lines 140–159 (IT45-Q06 … IT48-Q01) read as whole rows; `ampa_nmda_discrim_20261108/output/prediction_matrix.tsv` rows M01–M02; memory `MEMORY.md` index and `sci48-pitfalls.md` in full, with the other memory entries cited from the index paraphrase only.
+
+Not reached: the delivered SCI48 package itself — a repository-wide search for "SCI48" returns only the advisor campaign files, the task record and `constraints2.md`, and a glob for a `*sci48*` package directory returns nothing on this branch, so **my statements about SCI48's content come from memory *sci48-pitfalls.md* and the brief, not from its records**; two attempts to look at the sibling checkout `/home/desktop/legend-development/` were denied by the tool permission mode, so I could not confirm whether the merge is present there. Also not reached: `advisor_campaign_it48_20261112/A1/meta.json`, `B1/meta.json`, `invocations.jsonl`, `brief_A2.md`; `sci43_reopen_it48_20261112/verify/BRIEF.md` and its `READ_LOG.tsv`; the IT48 edits themselves in `hypotheses.tsv`, the investigations tables and the ladder (I read increment 1's verdicts and the task record's account of the consumer writes, not the updated rows); `inhibitory_defect_sci47_20261112/`; `keap1_nrf2_sci46_20261111/`; `session_evaluations/`; `dismissal_ledger_current.md` and `discovery_ledger_current.md`; the radar entry point (`capability_scout_log.md`, `SKILLS.md`, `CAPABILITIES.md`, `HARNESS-SCOUT-*`) — so I make no claim about a public tool or dataset that could substitute for the reading above; `advisor_build_20261112/PILOT_MANDATE.md`.
+
+## 10 · Freshness and exposure
+
+- **Uncommitted inputs read as on disk:** the task record (modified) and `inputs/constraints2.md`. The brief lists `advisor_sealed/INTENDED_ACTION_2.md` as the third; the task record states it was written and sealed before Stage A #2 and recorded independently — **I deliberately did not open it.** I also did not open `INTENDED_ACTION_1.md`.
+- **Exposure I do have, and it is larger than at Stage A #1.** The task record's `PILOT_DECISION_1` names the Orchestrator's own shortlist for this slot: "condition record and SCI47-B verification are candidates for increment 2", with "unmapped KH/HY rows (after the SCI43 result)" also listed. My leading recommendation falls inside that set, and I reached it after reading that line, so I cannot claim independence from it. What I can say is that I checked both named candidates against their records and found one of them (the condition record) already applied in `prediction_matrix.tsv` M01, contrary to `S7_coda.md` §4 and to Stage A #1's description — so the shortlist is reduced by a fact, not by preference. The record also exposed increment 1's full result chain and `PILOT_STAGE_A_2`'s baseline line, including "SCI48 delivered on main, not consumed (37 receipts unrecorded, consumer rows proposed)".
+- **Dashboard: not fetched in this assessment.** I made no request to the public page and no visual inspection; I therefore carry no observation of my own about it. Stage A #1 reported one unresolved count (fetched text appeared to enumerate 21 investigations against 19 rows in `investigations.tsv`) from a partial fetch of roughly the first 100 k of ~619 k characters; that remains unchecked and unsettled, and I repeat it only as its author's open observation, not as a defect claim.
+- **Staleness.** CI for the last delivered `main` commit may still be completing (brief and `constraints2.md`); the task record still shows CI #672 and view publication #38 as pending at the last check, and `b67d209a` as having no full battery of its own. I verified none of this. The `CHROME_BIN` path differs between the task record (3583) and memory (3593).
+- Nothing in this assessment reproduces a private identifier, an address or any individual-level record, and I sent no request to any external service.
+
+## Orchestrator's intended action (complete, verbatim)
+sha256 `8abc08afc9f2bc32f0d35862110a20ec0c493be26a131aee774a1d0274514ddc`
+
+Updated intended action without a second assessment (recorded 2026-11-12 after increment 1, before Stage A #2).
+Increment 2: consume the delivered SCI48 package (KEAP1/NRF2 comparator, INV-08): record its 37 staged receipts (producer -74 first, then verifier -73), apply consumer rows 1-7 and 9 (open questions IT46-Q06/Q09 and new rows; V19 name_full/counter; INV-08 X1-X3 wording; engine decisive rows N01-N13 replacing SCI46 row D20 in the comparison engine; Harness aliases ra839, sulforaphane, cddo-me; identity declarations), show before/after by running the engine and the generator, five languages for public text.
+Reason: delivered, verified, zero-spend, and it removes a stale statement (the SCI46 sentence that RA839 reaches C1/C2) from live consumers; it is also the only increment whose effect on the generator can be shown by running it.
+Alternative I would take if it proved empty: verification of the SCI47-B inferences by an independent reader.
+
+Begin with 'Response to the intended action': refinements, alternatives or a justified disagreement.
+
+## Neutral entry points
+| id | what | patterns (relative to the repository root unless absolute) | matches now | last commit |
+|---|---|---|---|---|
+| limits | Authorised mission and resource limits: the task record named in the brief, and its siblings | `ledger/tasks/*/*.json` | 197 | 2026-11-12 |
+| invariants | Canonical project invariants and the operating rules | `CLAUDE.md`<br>`ARCHITECTURE.md`<br>`framework/master/harness_development_principles.md`<br>`framework/master/designed_for_growth.md`<br>`framework/master/gold_is_in_the_details.md`<br>`framework/instruction/LEGEND_CORE.md`<br>`framework/instruction/epistemic_discipline.md`<br>`disease-models/wwox/mission.md` | 8 | 2026-11-12 |
+| repurposing_method | Drug-repurposing roadmap and Standing method | `disease-models/wwox/research/drug_repurposing/roadmap_current.md`<br>`framework/protocols/repurposing_adapter_convention.md` | 2 | 2026-11-07 |
+| dashboard | Dashboard: source records of the public page (the page is a map, the records are the facts) | `disease-models/wwox/research/drug_repurposing/view/README.md`<br>`disease-models/wwox/research/drug_repurposing/view/shareable_package/manifest.json`<br>`disease-models/wwox/research/drug_repurposing/view/shareable_package/README.md`<br>`disease-models/wwox/research/drug_repurposing/view/DEPLOY.md` | 4 | 2026-11-12 |
+| investigations | Investigations (research investment, not efficacy), needs and cards | `disease-models/wwox/research/drug_repurposing/ranking_it*/investigations.tsv`<br>`disease-models/wwox/research/drug_repurposing/ranking_it*/ranking.json`<br>`disease-models/wwox/research/drug_repurposing/needs/needs.md`<br>`disease-models/wwox/research/drug_repurposing/cards/*` | 65 | 2026-11-12 |
+| open_questions | Open-question maps and rows | `disease-models/wwox/research/drug_repurposing/**/open_questions*` | 3 | 2026-11-12 |
+| candidates | Candidates, comparisons and hypothesis packages | `disease-models/wwox/research/drug_repurposing/generation_it*/`<br>`disease-models/wwox/research/drug_repurposing/**/compound_decisions*.tsv`<br>`disease-models/wwox/research/drug_repurposing/**/hypotheses*` | 46 | 2026-11-12 |
+| packages | Completed packages and their consumer notes | `disease-models/wwox/research/drug_repurposing/*/README.md`<br>`disease-models/wwox/research/drug_repurposing/**/CONSUMER_NOTE.md` | 227 | 2026-11-12 |
+| diagnoses | Diagnoses, evaluations and DREAM | `disease-models/wwox/research/session_evaluations/*`<br>`disease-models/wwox/research/drug_repurposing/diagnosis_*/*`<br>`disease-models/wwox/research/dream*/README.md` | 192 | 2026-11-12 |
+| memory_dismissals | Dismissal and discovery ledgers, memory index (outside the repository) | `disease-models/wwox/research/dismissal_ledger_current.md`<br>`disease-models/wwox/research/discovery_ledger_current.md`<br>`/home/desktop/.claude/projects/-home-desktop-legend-development/memory/MEMORY.md` | 3 | 2026-11-12 |
+| radar | Radar findings and capability gaps | `governance/candidates/HARNESS-SCOUT-*.md`<br>`disease-models/wwox/research/capability_scout_log.md`<br>`SKILLS.md`<br>`CAPABILITIES.md` | 4 | 2026-11-12 |
+| tools | Which tool answers which question (the advisor has no shell; this explains what the records came from) | `framework/scripts/README.md` | 1 | 2026-11-12 |
+
+Memory directory (read-only): `/home/desktop/.claude/projects/-home-desktop-legend-development/memory`
+
+## Output
+Return one assessment with the headings given in your definition. Name every file or page you opened under 'Inspected'. You cannot write, run commands or start agents. The entry points are starting places; follow references past them.
