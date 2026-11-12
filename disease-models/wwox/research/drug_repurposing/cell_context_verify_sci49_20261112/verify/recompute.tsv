@@ -1,0 +1,867 @@
+prop	dataset	item	my_value	unit_or_note	input_sha256
+A1	GSE73721 human+mouse table	KCNQ2 | col 1 | 59yo tumor periphery astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 2 | 59yo tumor core astro	6.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 3 | 64yo tumor core astro	1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 4 | 65yo tumor core astro	2.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 5 | 21yo Hippocampus astro	1.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 6 | 22yo Hippocampus astro	0.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 7 | 53yo A Hippocampus astro	3.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 8 | 53yo B Hippocampus astro	1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 9 | Fetal ctx 1 astro	5.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 10 | Fetal ctx 2 astro	2.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 11 | Fetal ctx 3 astro	7.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 12 | Fetal ctx 4 astro	3.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 13 | Fetal ctx 5 astro	6.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 14 | Fetal ctx 6 astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 15 | 8yo ctx astro	2.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 16 | 13yo ctx astro	1.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 17 | 16yo ctx astro	0.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 18 | 21yo ctx astro	0.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 19 | 22yo ctx astro	0.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 20 | 35yo ctx astro	1.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 21 | 47yo ctx astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 22 | 51yo ctx astro	0.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 23 | 53yo ctx astro	0.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 24 | 60yo ctx astro	0.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 25 | 63yo ctx 1 astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 26 | 63yo ctx 2 astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 27 | 25yo ctx neuron	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 28 | 22yo ctx oligo	0.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 29 | 63yo ctx A oligo	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 30 | 63yo ctx B oligo	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 31 | 47yo ctx oligo	0.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 32 | 63yo ctx 3 oligo	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 33 | 45yo ctx myeloid	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 34 | 51yo ctx myeloid	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 35 | 63 yo ctx myeloid	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 36 | 47 yo ctx endo	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 37 | 13yo ctx endo	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 38 | 45yo whole cortex	1.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 39 | 63yo whole cortex	0.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 40 | 25yo whole cortex	0.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 41 | 53yo whole cortex	0.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 42 | Mouse 1 month astro	0.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 43 | Mouse 4 month astro	1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 44 | Mouse 7 month astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ2 | col 45 | Mouse 9 month astro	0.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 1 | 59yo tumor periphery astro	2.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 2 | 59yo tumor core astro	0.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 3 | 64yo tumor core astro	0.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 4 | 65yo tumor core astro	0.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 5 | 21yo Hippocampus astro	2.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 6 | 22yo Hippocampus astro	2.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 7 | 53yo A Hippocampus astro	1.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 8 | 53yo B Hippocampus astro	2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 9 | Fetal ctx 1 astro	13.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 10 | Fetal ctx 2 astro	6.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 11 | Fetal ctx 3 astro	18.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 12 | Fetal ctx 4 astro	6.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 13 | Fetal ctx 5 astro	17.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 14 | Fetal ctx 6 astro	8.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 15 | 8yo ctx astro	3.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 16 | 13yo ctx astro	1.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 17 | 16yo ctx astro	2.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 18 | 21yo ctx astro	6.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 19 | 22yo ctx astro	3.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 20 | 35yo ctx astro	5.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 21 | 47yo ctx astro	3.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 22 | 51yo ctx astro	6.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 23 | 53yo ctx astro	3.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 24 | 60yo ctx astro	3.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 25 | 63yo ctx 1 astro	3.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 26 | 63yo ctx 2 astro	2.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 27 | 25yo ctx neuron	16.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 28 | 22yo ctx oligo	2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 29 | 63yo ctx A oligo	0.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 30 | 63yo ctx B oligo	1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 31 | 47yo ctx oligo	1.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 32 | 63yo ctx 3 oligo	0.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 33 | 45yo ctx myeloid	15.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 34 | 51yo ctx myeloid	9.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 35 | 63 yo ctx myeloid	10.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 36 | 47 yo ctx endo	0.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 37 | 13yo ctx endo	1.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 38 | 45yo whole cortex	13.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 39 | 63yo whole cortex	13.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 40 | 25yo whole cortex	11.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 41 | 53yo whole cortex	11.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 42 | Mouse 1 month astro	2.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 43 | Mouse 4 month astro	2.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 44 | Mouse 7 month astro	3.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	KCNQ3 | col 45 | Mouse 9 month astro	3.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 1 | 59yo tumor periphery astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 2 | 59yo tumor core astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 3 | 64yo tumor core astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 4 | 65yo tumor core astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 5 | 21yo Hippocampus astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 6 | 22yo Hippocampus astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 7 | 53yo A Hippocampus astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 8 | 53yo B Hippocampus astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 9 | Fetal ctx 1 astro	2.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 10 | Fetal ctx 2 astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 11 | Fetal ctx 3 astro	0.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 12 | Fetal ctx 4 astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 13 | Fetal ctx 5 astro	1.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 14 | Fetal ctx 6 astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 15 | 8yo ctx astro	0.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 16 | 13yo ctx astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 17 | 16yo ctx astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 18 | 21yo ctx astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 19 | 22yo ctx astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 20 | 35yo ctx astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 21 | 47yo ctx astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 22 | 51yo ctx astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 23 | 53yo ctx astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 24 | 60yo ctx astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 25 | 63yo ctx 1 astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 26 | 63yo ctx 2 astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 27 | 25yo ctx neuron	0.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 28 | 22yo ctx oligo	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 29 | 63yo ctx A oligo	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 30 | 63yo ctx B oligo	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 31 | 47yo ctx oligo	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 32 | 63yo ctx 3 oligo	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 33 | 45yo ctx myeloid	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 34 | 51yo ctx myeloid	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 35 | 63 yo ctx myeloid	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 36 | 47 yo ctx endo	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 37 | 13yo ctx endo	0.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 38 | 45yo whole cortex	1.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 39 | 63yo whole cortex	0.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 40 | 25yo whole cortex	1.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 41 | 53yo whole cortex	0.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 42 | Mouse 1 month astro	0.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 43 | Mouse 4 month astro	0.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 44 | Mouse 7 month astro	0.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	RBFOX3 | col 45 | Mouse 9 month astro	0.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 1 | 59yo tumor periphery astro	22.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 2 | 59yo tumor core astro	1.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 3 | 64yo tumor core astro	1.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 4 | 65yo tumor core astro	11.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 5 | 21yo Hippocampus astro	2.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 6 | 22yo Hippocampus astro	6.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 7 | 53yo A Hippocampus astro	4.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 8 | 53yo B Hippocampus astro	7.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 9 | Fetal ctx 1 astro	2.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 10 | Fetal ctx 2 astro	8.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 11 | Fetal ctx 3 astro	7.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 12 | Fetal ctx 4 astro	2.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 13 | Fetal ctx 5 astro	2.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 14 | Fetal ctx 6 astro	3.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 15 | 8yo ctx astro	7.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 16 | 13yo ctx astro	7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 17 | 16yo ctx astro	10.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 18 | 21yo ctx astro	16.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 19 | 22yo ctx astro	5.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 20 | 35yo ctx astro	7.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 21 | 47yo ctx astro	10.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 22 | 51yo ctx astro	11.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 23 | 53yo ctx astro	11.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 24 | 60yo ctx astro	4.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 25 | 63yo ctx 1 astro	7.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 26 | 63yo ctx 2 astro	23.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 27 | 25yo ctx neuron	692.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 28 | 22yo ctx oligo	13.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 29 | 63yo ctx A oligo	12.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 30 | 63yo ctx B oligo	16.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 31 | 47yo ctx oligo	34.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 32 | 63yo ctx 3 oligo	18.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 33 | 45yo ctx myeloid	7.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 34 | 51yo ctx myeloid	1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 35 | 63 yo ctx myeloid	3.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 36 | 47 yo ctx endo	20.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 37 | 13yo ctx endo	21.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 38 | 45yo whole cortex	174.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 39 | 63yo whole cortex	191.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 40 | 25yo whole cortex	159.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 41 | 53yo whole cortex	147.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 42 | Mouse 1 month astro	18.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 43 | Mouse 4 month astro	51.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 44 | Mouse 7 month astro	17.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	SNAP25 | col 45 | Mouse 9 month astro	59.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 1 | 59yo tumor periphery astro	80.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 2 | 59yo tumor core astro	189.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 3 | 64yo tumor core astro	108.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 4 | 65yo tumor core astro	173	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 5 | 21yo Hippocampus astro	38.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 6 | 22yo Hippocampus astro	165.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 7 | 53yo A Hippocampus astro	67.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 8 | 53yo B Hippocampus astro	59.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 9 | Fetal ctx 1 astro	40	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 10 | Fetal ctx 2 astro	30.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 11 | Fetal ctx 3 astro	21.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 12 | Fetal ctx 4 astro	48.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 13 | Fetal ctx 5 astro	30.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 14 | Fetal ctx 6 astro	35.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 15 | 8yo ctx astro	145	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 16 | 13yo ctx astro	24.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 17 | 16yo ctx astro	46.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 18 | 21yo ctx astro	43.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 19 | 22yo ctx astro	304.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 20 | 35yo ctx astro	47.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 21 | 47yo ctx astro	378.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 22 | 51yo ctx astro	133.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 23 | 53yo ctx astro	47.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 24 | 60yo ctx astro	34.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 25 | 63yo ctx 1 astro	138.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 26 | 63yo ctx 2 astro	92.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 27 | 25yo ctx neuron	6.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 28 | 22yo ctx oligo	17.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 29 | 63yo ctx A oligo	4.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 30 | 63yo ctx B oligo	4.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 31 | 47yo ctx oligo	41.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 32 | 63yo ctx 3 oligo	5.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 33 | 45yo ctx myeloid	0.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 34 | 51yo ctx myeloid	2.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 35 | 63 yo ctx myeloid	1.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 36 | 47 yo ctx endo	4.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 37 | 13yo ctx endo	4.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 38 | 45yo whole cortex	7.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 39 | 63yo whole cortex	1.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 40 | 25yo whole cortex	19.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 41 | 53yo whole cortex	4.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 42 | Mouse 1 month astro	40.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 43 | Mouse 4 month astro	23.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 44 | Mouse 7 month astro	27.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GFAP | col 45 | Mouse 9 month astro	31.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 1 | 59yo tumor periphery astro	674.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 2 | 59yo tumor core astro	3.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 3 | 64yo tumor core astro	9.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 4 | 65yo tumor core astro	7.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 5 | 21yo Hippocampus astro	488.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 6 | 22yo Hippocampus astro	1003.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 7 | 53yo A Hippocampus astro	632.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 8 | 53yo B Hippocampus astro	452.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 9 | Fetal ctx 1 astro	2.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 10 | Fetal ctx 2 astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 11 | Fetal ctx 3 astro	2.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 12 | Fetal ctx 4 astro	2.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 13 | Fetal ctx 5 astro	2.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 14 | Fetal ctx 6 astro	0.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 15 | 8yo ctx astro	121.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 16 | 13yo ctx astro	189.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 17 | 16yo ctx astro	114.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 18 | 21yo ctx astro	156.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 19 | 22yo ctx astro	249.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 20 | 35yo ctx astro	79.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 21 | 47yo ctx astro	256.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 22 | 51yo ctx astro	173.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 23 | 53yo ctx astro	340	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 24 | 60yo ctx astro	44.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 25 | 63yo ctx 1 astro	272.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 26 | 63yo ctx 2 astro	189.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 27 | 25yo ctx neuron	25.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 28 | 22yo ctx oligo	1339.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 29 | 63yo ctx A oligo	1364	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 30 | 63yo ctx B oligo	2661.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 31 | 47yo ctx oligo	1867.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 32 | 63yo ctx 3 oligo	2730.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 33 | 45yo ctx myeloid	6.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 34 | 51yo ctx myeloid	11.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 35 | 63 yo ctx myeloid	35.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 36 | 47 yo ctx endo	104	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 37 | 13yo ctx endo	243.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 38 | 45yo whole cortex	266.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 39 | 63yo whole cortex	17.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 40 | 25yo whole cortex	55.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 41 | 53yo whole cortex	21.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 42 | Mouse 1 month astro	1503	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 43 | Mouse 4 month astro	601	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 44 | Mouse 7 month astro	1064.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	MBP | col 45 | Mouse 9 month astro	1351.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 1 | 59yo tumor periphery astro	0.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 2 | 59yo tumor core astro	4.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 3 | 64yo tumor core astro	4.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 4 | 65yo tumor core astro	81.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 5 | 21yo Hippocampus astro	11	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 6 | 22yo Hippocampus astro	38.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 7 | 53yo A Hippocampus astro	46	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 8 | 53yo B Hippocampus astro	41.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 9 | Fetal ctx 1 astro	0.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 10 | Fetal ctx 2 astro	11.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 11 | Fetal ctx 3 astro	6.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 12 | Fetal ctx 4 astro	6.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 13 | Fetal ctx 5 astro	1.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 14 | Fetal ctx 6 astro	1.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 15 | 8yo ctx astro	1.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 16 | 13yo ctx astro	1.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 17 | 16yo ctx astro	0.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 18 | 21yo ctx astro	5.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 19 | 22yo ctx astro	2.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 20 | 35yo ctx astro	1.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 21 | 47yo ctx astro	5.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 22 | 51yo ctx astro	7.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 23 | 53yo ctx astro	4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 24 | 60yo ctx astro	0.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 25 | 63yo ctx 1 astro	1.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 26 | 63yo ctx 2 astro	5.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 27 | 25yo ctx neuron	2.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 28 | 22yo ctx oligo	58.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 29 | 63yo ctx A oligo	3.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 30 | 63yo ctx B oligo	19.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 31 | 47yo ctx oligo	90.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 32 | 63yo ctx 3 oligo	15.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 33 | 45yo ctx myeloid	0.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 34 | 51yo ctx myeloid	0.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 35 | 63 yo ctx myeloid	1.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 36 | 47 yo ctx endo	0.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 37 | 13yo ctx endo	1.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 38 | 45yo whole cortex	4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 39 | 63yo whole cortex	1.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 40 | 25yo whole cortex	5.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 41 | 53yo whole cortex	2.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 42 | Mouse 1 month astro	1.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 43 | Mouse 4 month astro	6.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 44 | Mouse 7 month astro	0.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	PDGFRA | col 45 | Mouse 9 month astro	3.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 1 | 59yo tumor periphery astro	227.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 2 | 59yo tumor core astro	830.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 3 | 64yo tumor core astro	321.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 4 | 65yo tumor core astro	263.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 5 | 21yo Hippocampus astro	309.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 6 | 22yo Hippocampus astro	270.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 7 | 53yo A Hippocampus astro	648.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 8 | 53yo B Hippocampus astro	315.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 9 | Fetal ctx 1 astro	320.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 10 | Fetal ctx 2 astro	456	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 11 | Fetal ctx 3 astro	497.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 12 | Fetal ctx 4 astro	623.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 13 | Fetal ctx 5 astro	396.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 14 | Fetal ctx 6 astro	380.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 15 | 8yo ctx astro	298.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 16 | 13yo ctx astro	166.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 17 | 16yo ctx astro	220.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 18 | 21yo ctx astro	176.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 19 | 22yo ctx astro	321.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 20 | 35yo ctx astro	237.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 21 | 47yo ctx astro	203.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 22 | 51yo ctx astro	188.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 23 | 53yo ctx astro	137.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 24 | 60yo ctx astro	198.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 25 | 63yo ctx 1 astro	236.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 26 | 63yo ctx 2 astro	145.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 27 | 25yo ctx neuron	206.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 28 | 22yo ctx oligo	562.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 29 | 63yo ctx A oligo	238.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 30 | 63yo ctx B oligo	424	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 31 | 47yo ctx oligo	301.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 32 | 63yo ctx 3 oligo	167.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 33 | 45yo ctx myeloid	279.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 34 | 51yo ctx myeloid	721.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 35 | 63 yo ctx myeloid	992.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 36 | 47 yo ctx endo	162.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 37 | 13yo ctx endo	133.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 38 | 45yo whole cortex	44.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 39 | 63yo whole cortex	7.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 40 | 25yo whole cortex	45.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 41 | 53yo whole cortex	11.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 42 | Mouse 1 month astro	209.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 43 | Mouse 4 month astro	237.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 44 | Mouse 7 month astro	268	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	ACTB | col 45 | Mouse 9 month astro	207.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 1 | 59yo tumor periphery astro	194	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 2 | 59yo tumor core astro	1029.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 3 | 64yo tumor core astro	113.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 4 | 65yo tumor core astro	77.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 5 | 21yo Hippocampus astro	206.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 6 | 22yo Hippocampus astro	295.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 7 | 53yo A Hippocampus astro	381.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 8 | 53yo B Hippocampus astro	114.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 9 | Fetal ctx 1 astro	139.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 10 | Fetal ctx 2 astro	185.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 11 | Fetal ctx 3 astro	139.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 12 | Fetal ctx 4 astro	160.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 13 | Fetal ctx 5 astro	121.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 14 | Fetal ctx 6 astro	177.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 15 | 8yo ctx astro	645	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 16 | 13yo ctx astro	122.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 17 | 16yo ctx astro	277.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 18 | 21yo ctx astro	240.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 19 | 22yo ctx astro	576.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 20 | 35yo ctx astro	279.8	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 21 | 47yo ctx astro	213	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 22 | 51yo ctx astro	184.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 23 | 53yo ctx astro	196.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 24 | 60yo ctx astro	103.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 25 | 63yo ctx 1 astro	235.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 26 | 63yo ctx 2 astro	176.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 27 | 25yo ctx neuron	158.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 28 | 22yo ctx oligo	86.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 29 | 63yo ctx A oligo	71.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 30 | 63yo ctx B oligo	131.2	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 31 | 47yo ctx oligo	156.6	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 32 | 63yo ctx 3 oligo	51.7	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 33 | 45yo ctx myeloid	15.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 34 | 51yo ctx myeloid	105.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 35 | 63 yo ctx myeloid	77.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 36 | 47 yo ctx endo	183.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 37 | 13yo ctx endo	50	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 38 | 45yo whole cortex	13.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 39 | 63yo whole cortex	1.5	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 40 | 25yo whole cortex	13.9	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 41 | 53yo whole cortex	2.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 42 | Mouse 1 month astro	75.4	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 43 | Mouse 4 month astro	98.1	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 44 | Mouse 7 month astro	124.3	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	GAPDH | col 45 | Mouse 9 month astro	88	FPKM as stored (floor 0.1)	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 1 59yo tumor periphery astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 7444 / 0.495	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 2 59yo tumor core astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 4731 / 0.315	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 3 64yo tumor core astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5065 / 0.337	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 4 65yo tumor core astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 4900 / 0.326	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 5 21yo Hippocampus astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 4818 / 0.320	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 6 22yo Hippocampus astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5303 / 0.353	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 7 53yo A Hippocampus astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 4333 / 0.288	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 8 53yo B Hippocampus astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 4679 / 0.311	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 9 Fetal ctx 1 astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 6386 / 0.425	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 10 Fetal ctx 2 astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 6999 / 0.465	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 11 Fetal ctx 3 astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 4585 / 0.305	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 12 Fetal ctx 4 astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 6935 / 0.461	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 13 Fetal ctx 5 astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 7627 / 0.507	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 14 Fetal ctx 6 astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 7246 / 0.482	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 15 8yo ctx astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 4979 / 0.331	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 16 13yo ctx astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5202 / 0.346	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 17 16yo ctx astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5299 / 0.352	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 18 21yo ctx astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5089 / 0.338	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 19 22yo ctx astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5034 / 0.335	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 20 35yo ctx astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5040 / 0.335	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 21 47yo ctx astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5637 / 0.375	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 22 51yo ctx astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5466 / 0.363	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 23 53yo ctx astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5155 / 0.343	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 24 60yo ctx astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5755 / 0.383	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 25 63yo ctx 1 astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5461 / 0.363	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 26 63yo ctx 2 astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5285 / 0.351	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 27 25yo ctx neuron: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 4814 / 0.320	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 28 22yo ctx oligo: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5514 / 0.367	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 29 63yo ctx A oligo: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 6143 / 0.408	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 30 63yo ctx B oligo: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5427 / 0.361	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 31 47yo ctx oligo: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 4906 / 0.326	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 32 63yo ctx 3 oligo: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 6101 / 0.406	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 33 45yo ctx myeloid: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 7280 / 0.484	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 34 51yo ctx myeloid: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 6236 / 0.415	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 35 63 yo ctx myeloid: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5779 / 0.384	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 36 47 yo ctx endo: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5640 / 0.375	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 37 13yo ctx endo: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5055 / 0.336	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 38 45yo whole cortex: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 5010 / 0.333	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 39 63yo whole cortex: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 6565 / 0.436	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 40 25yo whole cortex: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 4960 / 0.330	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 41 53yo whole cortex: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 6118 / 0.407	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 42 Mouse 1 month astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 4609 / 0.306	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 43 Mouse 4 month astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 4488 / 0.298	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 44 Mouse 7 month astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 4834 / 0.321	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	column 45 Mouse 9 month astro: n_genes / min / n_equal_0 / n_equal_0.1 / fraction_at_0.1	15041 / 0.1 / 0 / 4521 / 0.301	all genes in the table	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human+mouse table	cells at exactly 0.1 among the 12 producer genes x 43 columns (astro, neuron, oligo, myeloid, whole cortex, mouse astro; genes present: 12)	100 of 516	P2RY12 row presence per table; compare producer figure 100 of 516	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human table	KCNQ2/SNAP25 ratio col 27 25yo ctx neuron	0.0001	FPKM ratio	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human table	KCNQ2/SNAP25 ratio col 38 45yo whole cortex	0.0086	FPKM ratio	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human table	KCNQ2/SNAP25 ratio col 39 63yo whole cortex	0.0010	FPKM ratio	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human table	KCNQ2/SNAP25 ratio col 40 25yo whole cortex	0.0038	FPKM ratio	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A1	GSE73721 human table	KCNQ2/SNAP25 ratio col 41 53yo whole cortex	0.0041	FPKM ratio	140f376a5162b4d739a0e4224ce5757e7399b24fb2fce1c5f9bf0eb438d2fcef
+A2	HPA single-nuclei cluster table	KCNQ2 | astrocytes	21.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | bergmann glia	23.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | brainstem vglut2+ excitatory	60.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | ca1-3 excitatory	164.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | ca4 excitatory	142.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | cerebellar granular cells	87.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | cerebellar purkinje cells	69.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | cge derived interneurons	82.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | cholinergic	57.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | choroid plexus epithelial cells	16.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | dentate gyrus excitatory	121.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | dopaminergic	43.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | ependymal cells	4.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | fibroblasts	3.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | forebrain excitatory	116.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | forebrain projection neurons	151.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | hypothalamic vglut2+ neurons	57.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | lamp5+ glycinergic inhibitory	62.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | lower rhombic lip-derived neurons	40.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | lymphocytes	4.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | macrophages & monocytes	1.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | medium spiny neurons (msn)	113.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | mge derived interneuron	89.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | microglia	3.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | midbrain derived inhibitory neurons	88.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | midbrain–hindbrain inhibitory neurons	52.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | monoaminergic	40.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | msn-like neurons	110.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | neurosecretory	37.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | noradrenergic	4.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | oligodendrocyte progenitor cells	111.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | oligodendrocytes	3.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | orexinergic	112.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | other excitatory neurons	90.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | other inhibitory	72.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | other neuron	82.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | pericytes	3.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | pvalb+ excitatory neurons	45.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | schwann cells	0.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | serotonergic	52.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | spinal peptidergic excitatory neurons	65.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | subcortical vglut2+ excitatory	58.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | tfap2b+ inhibitory	54.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | thalamic projection neurons	73.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | upper rhombic lip-derived neurons	68.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | vascular endothelial cells	4.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | vascular smooth muscle cells	6.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ2 | vglut3 neuron	54.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | astrocytes	77.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | bergmann glia	17.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | brainstem vglut2+ excitatory	524.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | ca1-3 excitatory	477.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | ca4 excitatory	576.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | cerebellar granular cells	3.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | cerebellar purkinje cells	1102.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | cge derived interneurons	876.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | cholinergic	659.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | choroid plexus epithelial cells	51.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | dentate gyrus excitatory	1037.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | dopaminergic	1017.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | ependymal cells	23.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | fibroblasts	55.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | forebrain excitatory	846.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | forebrain projection neurons	838.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | hypothalamic vglut2+ neurons	17.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | lamp5+ glycinergic inhibitory	465.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | lower rhombic lip-derived neurons	882.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | lymphocytes	86.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | macrophages & monocytes	490.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | medium spiny neurons (msn)	847.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | mge derived interneuron	810.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | microglia	2632.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | midbrain derived inhibitory neurons	257.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | midbrain–hindbrain inhibitory neurons	907.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | monoaminergic	274.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | msn-like neurons	705.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | neurosecretory	621.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | noradrenergic	1070.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | oligodendrocyte progenitor cells	164.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | oligodendrocytes	36.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | orexinergic	1670.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | other excitatory neurons	577.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | other inhibitory	494.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | other neuron	254.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | pericytes	37.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | pvalb+ excitatory neurons	284.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | schwann cells	17.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | serotonergic	659.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | spinal peptidergic excitatory neurons	721.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | subcortical vglut2+ excitatory	550.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | tfap2b+ inhibitory	312.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | thalamic projection neurons	1455.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | upper rhombic lip-derived neurons	13.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | vascular endothelial cells	15.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | vascular smooth muscle cells	91.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ3 | vglut3 neuron	485.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | astrocytes	41.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | bergmann glia	45.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | brainstem vglut2+ excitatory	696.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | ca1-3 excitatory	1404.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | ca4 excitatory	5409.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | cerebellar granular cells	7.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | cerebellar purkinje cells	2.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | cge derived interneurons	1761.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | cholinergic	439.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | choroid plexus epithelial cells	83.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | dentate gyrus excitatory	1005.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | dopaminergic	121.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | ependymal cells	21.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | fibroblasts	42.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | forebrain excitatory	1971.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | forebrain projection neurons	1943.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | hypothalamic vglut2+ neurons	255.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | lamp5+ glycinergic inhibitory	868.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | lower rhombic lip-derived neurons	5428.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | lymphocytes	469.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | macrophages & monocytes	20.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | medium spiny neurons (msn)	3629.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | mge derived interneuron	860.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | microglia	92.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | midbrain derived inhibitory neurons	428.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | midbrain–hindbrain inhibitory neurons	399.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | monoaminergic	153.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | msn-like neurons	1850.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | neurosecretory	40.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | noradrenergic	804.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | oligodendrocyte progenitor cells	57.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | oligodendrocytes	20.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | orexinergic	1324.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | other excitatory neurons	1576.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | other inhibitory	826.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | other neuron	1060.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | pericytes	20.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | pvalb+ excitatory neurons	140.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | schwann cells	17.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | serotonergic	1364.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | spinal peptidergic excitatory neurons	1900.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | subcortical vglut2+ excitatory	623.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | tfap2b+ inhibitory	1191.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | thalamic projection neurons	270.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | upper rhombic lip-derived neurons	101.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | vascular endothelial cells	21.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | vascular smooth muscle cells	53.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	KCNQ5 | vglut3 neuron	438.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	SNAP25 | oligodendrocyte progenitor cells	242.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	SNAP25 | astrocytes	120.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	SNAP25 | microglia	47.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	SNAP25 | oligodendrocytes	51.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	SNAP25 | forebrain projection neurons	1243.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	SNAP25 | forebrain excitatory	1152.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	SNAP25 | cge derived interneurons	627.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	RBFOX3 | oligodendrocyte progenitor cells	4.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	RBFOX3 | astrocytes	11.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	RBFOX3 | microglia	4.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	RBFOX3 | oligodendrocytes	4.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	RBFOX3 | forebrain projection neurons	437.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	RBFOX3 | forebrain excitatory	318.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	RBFOX3 | cge derived interneurons	269.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GFAP | oligodendrocyte progenitor cells	41.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GFAP | astrocytes	1795.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GFAP | microglia	34.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GFAP | oligodendrocytes	20.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GFAP | forebrain projection neurons	1.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GFAP | forebrain excitatory	1.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GFAP | cge derived interneurons	3.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	MBP | oligodendrocyte progenitor cells	243.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	MBP | astrocytes	61.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	MBP | microglia	366.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	MBP | oligodendrocytes	5528.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	MBP | forebrain projection neurons	77.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	MBP | forebrain excitatory	82.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	MBP | cge derived interneurons	92.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	PDGFRA | oligodendrocyte progenitor cells	321.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	PDGFRA | astrocytes	0.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	PDGFRA | microglia	1.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	PDGFRA | oligodendrocytes	0.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	PDGFRA | forebrain projection neurons	0.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	PDGFRA | forebrain excitatory	0.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	PDGFRA | cge derived interneurons	11.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	CSPG4 | oligodendrocyte progenitor cells	113.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	CSPG4 | astrocytes	1.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	CSPG4 | microglia	0.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	CSPG4 | oligodendrocytes	0.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	CSPG4 | forebrain projection neurons	0.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	CSPG4 | forebrain excitatory	0.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	CSPG4 | cge derived interneurons	0.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GAD1 | oligodendrocyte progenitor cells	133.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GAD1 | astrocytes	12.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GAD1 | microglia	6.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GAD1 | oligodendrocytes	5.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GAD1 | forebrain projection neurons	3.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GAD1 | forebrain excitatory	3.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GAD1 | cge derived interneurons	451.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	SLC17A7 | oligodendrocyte progenitor cells	2.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	SLC17A7 | astrocytes	3.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	SLC17A7 | microglia	4.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	SLC17A7 | oligodendrocytes	3.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	SLC17A7 | forebrain projection neurons	162.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	SLC17A7 | forebrain excitatory	138.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	SLC17A7 | cge derived interneurons	3.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	P2RY12 | oligodendrocyte progenitor cells	16.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	P2RY12 | astrocytes	11.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	P2RY12 | microglia	1860.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	P2RY12 | oligodendrocytes	5.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	P2RY12 | forebrain projection neurons	4.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	P2RY12 | forebrain excitatory	5.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	P2RY12 | cge derived interneurons	4.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	AQP4 | oligodendrocyte progenitor cells	9.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	AQP4 | astrocytes	963.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	AQP4 | microglia	10.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	AQP4 | oligodendrocytes	5.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	AQP4 | forebrain projection neurons	2.8	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	AQP4 | forebrain excitatory	2.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	AQP4 | cge derived interneurons	2.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	OLIG2 | oligodendrocyte progenitor cells	280.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	OLIG2 | astrocytes	4.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	OLIG2 | microglia	2.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	OLIG2 | oligodendrocytes	59.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	OLIG2 | forebrain projection neurons	0.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	OLIG2 | forebrain excitatory	0.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	OLIG2 | cge derived interneurons	0.5	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	ACTB | oligodendrocyte progenitor cells	333.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	ACTB | astrocytes	243.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	ACTB | microglia	595.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	ACTB | oligodendrocytes	545.6	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	ACTB | forebrain projection neurons	145.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	ACTB | forebrain excitatory	138.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	ACTB | cge derived interneurons	205.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GAPDH | oligodendrocyte progenitor cells	266.9	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GAPDH | astrocytes	379.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GAPDH | microglia	164.2	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GAPDH | oligodendrocytes	447.7	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GAPDH | forebrain projection neurons	159.4	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GAPDH | forebrain excitatory	150.1	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	GAPDH | cge derived interneurons	352.0	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA single-nuclei cluster table	number of neuronal cluster types used (48 types minus 14 non-neuronal)	34	my classification	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA	KCNQ2 neuronal maximum cluster and value	ca1-3 excitatory 164.3	nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ2 oligodendrocyte progenitor cells / forebrain projection neurons	0.734	neuron reference 151.9 nCPM; producer-style (OPC 0.73, astro 1/6.9, microglia 1/41)	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ2 oligodendrocyte progenitor cells / neuronal maximum (ca1-3 excitatory)	0.679	neuron reference 164.3 nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ2 oligodendrocyte progenitor cells / forebrain excitatory	0.954	116.9 nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ3 oligodendrocyte progenitor cells / forebrain projection neurons	0.196	838.2 nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ5 oligodendrocyte progenitor cells / forebrain projection neurons	0.030	1943.2 nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ2 astrocytes / forebrain projection neurons	0.144	neuron reference 151.9 nCPM; producer-style (OPC 0.73, astro 1/6.9, microglia 1/41)	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ2 astrocytes / neuronal maximum (ca1-3 excitatory)	0.133	neuron reference 164.3 nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ2 astrocytes / forebrain excitatory	0.187	116.9 nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ3 astrocytes / forebrain projection neurons	0.092	838.2 nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ5 astrocytes / forebrain projection neurons	0.021	1943.2 nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ2 microglia / forebrain projection neurons	0.024	neuron reference 151.9 nCPM; producer-style (OPC 0.73, astro 1/6.9, microglia 1/41)	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ2 microglia / neuronal maximum (ca1-3 excitatory)	0.023	neuron reference 164.3 nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ2 microglia / forebrain excitatory	0.032	116.9 nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ3 microglia / forebrain projection neurons	3.141	838.2 nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ5 microglia / forebrain projection neurons	0.047	1943.2 nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ2 oligodendrocytes / forebrain projection neurons	0.024	neuron reference 151.9 nCPM; producer-style (OPC 0.73, astro 1/6.9, microglia 1/41)	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ2 oligodendrocytes / neuronal maximum (ca1-3 excitatory)	0.022	neuron reference 164.3 nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ2 oligodendrocytes / forebrain excitatory	0.031	116.9 nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ3 oligodendrocytes / forebrain projection neurons	0.044	838.2 nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ5 oligodendrocytes / forebrain projection neurons	0.011	1943.2 nCPM	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	KCNQ2/SNAP25 in forebrain projection neurons	0.122	nCPM ratio	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	SNAP25 OPC / forebrain projection neurons	0.195	neuron-marker carry-over indicator	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	GAD1 OPC / cge derived interneurons	0.296	neuron-marker carry-over indicator	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	HPA ratio	RBFOX3 OPC / forebrain projection neurons	0.010	neuron-marker carry-over indicator	b24e46d48e12a8c2944cfe3c48191d62b1c93f207cd8f78d6a942d5ed7870edf
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Cspg4 | GSM1269903_Astrocyte1	1.1648	FPKM	5f6ec837b135b637b4096c5412df501fddf4b6d89e27da80081071a52a2f9000
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gad1 | GSM1269903_Astrocyte1	1.2718	FPKM	5f6ec837b135b637b4096c5412df501fddf4b6d89e27da80081071a52a2f9000
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq2 | GSM1269903_Astrocyte1	0.2041	FPKM	5f6ec837b135b637b4096c5412df501fddf4b6d89e27da80081071a52a2f9000
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq3 | GSM1269903_Astrocyte1	0.1464	FPKM	5f6ec837b135b637b4096c5412df501fddf4b6d89e27da80081071a52a2f9000
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq5 | GSM1269903_Astrocyte1	0.1000	FPKM	5f6ec837b135b637b4096c5412df501fddf4b6d89e27da80081071a52a2f9000
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Pdgfra | GSM1269903_Astrocyte1	0.1172	FPKM	5f6ec837b135b637b4096c5412df501fddf4b6d89e27da80081071a52a2f9000
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Rbfox3 | GSM1269903_Astrocyte1	0.1527	FPKM	5f6ec837b135b637b4096c5412df501fddf4b6d89e27da80081071a52a2f9000
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Snap25 | GSM1269903_Astrocyte1	1.1475	FPKM	5f6ec837b135b637b4096c5412df501fddf4b6d89e27da80081071a52a2f9000
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Cspg4 | GSM1269904_Astrocyte2	1.4093	FPKM	9376dc73e6df1f88cf1c3f923cc16cf41bc97de7ca083d0eb4575bcf2fc95f35
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gad1 | GSM1269904_Astrocyte2	1.3229	FPKM	9376dc73e6df1f88cf1c3f923cc16cf41bc97de7ca083d0eb4575bcf2fc95f35
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq2 | GSM1269904_Astrocyte2	0.2431	FPKM	9376dc73e6df1f88cf1c3f923cc16cf41bc97de7ca083d0eb4575bcf2fc95f35
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq3 | GSM1269904_Astrocyte2	0.3255	FPKM	9376dc73e6df1f88cf1c3f923cc16cf41bc97de7ca083d0eb4575bcf2fc95f35
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq5 | GSM1269904_Astrocyte2	0.1000	FPKM	9376dc73e6df1f88cf1c3f923cc16cf41bc97de7ca083d0eb4575bcf2fc95f35
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Pdgfra | GSM1269904_Astrocyte2	0.1329	FPKM	9376dc73e6df1f88cf1c3f923cc16cf41bc97de7ca083d0eb4575bcf2fc95f35
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Rbfox3 | GSM1269904_Astrocyte2	0.3816	FPKM	9376dc73e6df1f88cf1c3f923cc16cf41bc97de7ca083d0eb4575bcf2fc95f35
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Snap25 | GSM1269904_Astrocyte2	2.9962	FPKM	9376dc73e6df1f88cf1c3f923cc16cf41bc97de7ca083d0eb4575bcf2fc95f35
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Cspg4 | GSM1269905_Neuron1	7.6773	FPKM	59247a2f936974660955dd605afd195765d87ef7b56bcf70c5d02ca129efe0e0
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gad1 | GSM1269905_Neuron1	75.4076	FPKM	59247a2f936974660955dd605afd195765d87ef7b56bcf70c5d02ca129efe0e0
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq2 | GSM1269905_Neuron1	29.6294	FPKM	59247a2f936974660955dd605afd195765d87ef7b56bcf70c5d02ca129efe0e0
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq3 | GSM1269905_Neuron1	4.6730	FPKM	59247a2f936974660955dd605afd195765d87ef7b56bcf70c5d02ca129efe0e0
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq5 | GSM1269905_Neuron1	8.1193	FPKM	59247a2f936974660955dd605afd195765d87ef7b56bcf70c5d02ca129efe0e0
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Pdgfra | GSM1269905_Neuron1	2.5632	FPKM	59247a2f936974660955dd605afd195765d87ef7b56bcf70c5d02ca129efe0e0
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Rbfox3 | GSM1269905_Neuron1	19.3102	FPKM	59247a2f936974660955dd605afd195765d87ef7b56bcf70c5d02ca129efe0e0
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Snap25 | GSM1269905_Neuron1	116.7926	FPKM	59247a2f936974660955dd605afd195765d87ef7b56bcf70c5d02ca129efe0e0
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Cspg4 | GSM1269906_Neuron2	9.5749	FPKM	85599612df16bf87568d1ecd78ea0db9da493724d37eecc6005c7330645b1bf2
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gad1 | GSM1269906_Neuron2	58.4683	FPKM	85599612df16bf87568d1ecd78ea0db9da493724d37eecc6005c7330645b1bf2
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq2 | GSM1269906_Neuron2	31.7242	FPKM	85599612df16bf87568d1ecd78ea0db9da493724d37eecc6005c7330645b1bf2
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq3 | GSM1269906_Neuron2	3.8669	FPKM	85599612df16bf87568d1ecd78ea0db9da493724d37eecc6005c7330645b1bf2
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq5 | GSM1269906_Neuron2	10.6888	FPKM	85599612df16bf87568d1ecd78ea0db9da493724d37eecc6005c7330645b1bf2
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Pdgfra | GSM1269906_Neuron2	15.1415	FPKM	85599612df16bf87568d1ecd78ea0db9da493724d37eecc6005c7330645b1bf2
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Rbfox3 | GSM1269906_Neuron2	16.7902	FPKM	85599612df16bf87568d1ecd78ea0db9da493724d37eecc6005c7330645b1bf2
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Snap25 | GSM1269906_Neuron2	178.8144	FPKM	85599612df16bf87568d1ecd78ea0db9da493724d37eecc6005c7330645b1bf2
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Cspg4 | GSM1269907_OPC1	100.4152	FPKM	d32fe75dd3c2ab57d375f67389a44135b2af846b9bd8bd725e9334bb25f272d7
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gad1 | GSM1269907_OPC1	12.6802	FPKM	d32fe75dd3c2ab57d375f67389a44135b2af846b9bd8bd725e9334bb25f272d7
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq2 | GSM1269907_OPC1	8.9020	FPKM	d32fe75dd3c2ab57d375f67389a44135b2af846b9bd8bd725e9334bb25f272d7
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq3 | GSM1269907_OPC1	3.7613	FPKM	d32fe75dd3c2ab57d375f67389a44135b2af846b9bd8bd725e9334bb25f272d7
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq5 | GSM1269907_OPC1	0.8220	FPKM	d32fe75dd3c2ab57d375f67389a44135b2af846b9bd8bd725e9334bb25f272d7
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Pdgfra | GSM1269907_OPC1	627.3239	FPKM	d32fe75dd3c2ab57d375f67389a44135b2af846b9bd8bd725e9334bb25f272d7
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Rbfox3 | GSM1269907_OPC1	1.6484	FPKM	d32fe75dd3c2ab57d375f67389a44135b2af846b9bd8bd725e9334bb25f272d7
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Snap25 | GSM1269907_OPC1	36.9556	FPKM	d32fe75dd3c2ab57d375f67389a44135b2af846b9bd8bd725e9334bb25f272d7
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Cspg4 | GSM1269908_OPC2	131.1616	FPKM	1ff277e8efea8292b6f6651e8ea8cb5c4ef35fc072d6443cb7d32afeae3f2fbf
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gad1 | GSM1269908_OPC2	9.5332	FPKM	1ff277e8efea8292b6f6651e8ea8cb5c4ef35fc072d6443cb7d32afeae3f2fbf
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq2 | GSM1269908_OPC2	12.4538	FPKM	1ff277e8efea8292b6f6651e8ea8cb5c4ef35fc072d6443cb7d32afeae3f2fbf
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq3 | GSM1269908_OPC2	1.8245	FPKM	1ff277e8efea8292b6f6651e8ea8cb5c4ef35fc072d6443cb7d32afeae3f2fbf
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq5 | GSM1269908_OPC2	0.8543	FPKM	1ff277e8efea8292b6f6651e8ea8cb5c4ef35fc072d6443cb7d32afeae3f2fbf
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Pdgfra | GSM1269908_OPC2	562.7001	FPKM	1ff277e8efea8292b6f6651e8ea8cb5c4ef35fc072d6443cb7d32afeae3f2fbf
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Rbfox3 | GSM1269908_OPC2	3.7760	FPKM	1ff277e8efea8292b6f6651e8ea8cb5c4ef35fc072d6443cb7d32afeae3f2fbf
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Snap25 | GSM1269908_OPC2	17.3647	FPKM	1ff277e8efea8292b6f6651e8ea8cb5c4ef35fc072d6443cb7d32afeae3f2fbf
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Cspg4 | GSM1269909_NFO1	20.7031	FPKM	b801ee52444560c901c895a6ddf8b0a6614c5a95ad46a5b8282b063b98ea0de9
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gad1 | GSM1269909_NFO1	1.9577	FPKM	b801ee52444560c901c895a6ddf8b0a6614c5a95ad46a5b8282b063b98ea0de9
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq2 | GSM1269909_NFO1	2.0437	FPKM	b801ee52444560c901c895a6ddf8b0a6614c5a95ad46a5b8282b063b98ea0de9
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq3 | GSM1269909_NFO1	6.1999	FPKM	b801ee52444560c901c895a6ddf8b0a6614c5a95ad46a5b8282b063b98ea0de9
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq5 | GSM1269909_NFO1	1.2138	FPKM	b801ee52444560c901c895a6ddf8b0a6614c5a95ad46a5b8282b063b98ea0de9
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Pdgfra | GSM1269909_NFO1	89.0530	FPKM	b801ee52444560c901c895a6ddf8b0a6614c5a95ad46a5b8282b063b98ea0de9
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Rbfox3 | GSM1269909_NFO1	0.2766	FPKM	b801ee52444560c901c895a6ddf8b0a6614c5a95ad46a5b8282b063b98ea0de9
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Snap25 | GSM1269909_NFO1	8.3507	FPKM	b801ee52444560c901c895a6ddf8b0a6614c5a95ad46a5b8282b063b98ea0de9
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Cspg4 | GSM1269910_NFO2	25.0276	FPKM	3f154d3a677186166195ad4d7d1863b714b5a855d31ff597b3ba655172d01fd5
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gad1 | GSM1269910_NFO2	2.2708	FPKM	3f154d3a677186166195ad4d7d1863b714b5a855d31ff597b3ba655172d01fd5
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq2 | GSM1269910_NFO2	2.6095	FPKM	3f154d3a677186166195ad4d7d1863b714b5a855d31ff597b3ba655172d01fd5
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq3 | GSM1269910_NFO2	2.9350	FPKM	3f154d3a677186166195ad4d7d1863b714b5a855d31ff597b3ba655172d01fd5
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq5 | GSM1269910_NFO2	0.7470	FPKM	3f154d3a677186166195ad4d7d1863b714b5a855d31ff597b3ba655172d01fd5
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Pdgfra | GSM1269910_NFO2	69.8463	FPKM	3f154d3a677186166195ad4d7d1863b714b5a855d31ff597b3ba655172d01fd5
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Rbfox3 | GSM1269910_NFO2	0.5077	FPKM	3f154d3a677186166195ad4d7d1863b714b5a855d31ff597b3ba655172d01fd5
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Snap25 | GSM1269910_NFO2	4.2771	FPKM	3f154d3a677186166195ad4d7d1863b714b5a855d31ff597b3ba655172d01fd5
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Cspg4 | GSM1269911_MO1	0.2003	FPKM	4952adfa049a65d51b3f5bf8c181b1a1af1add6b69f7285ea92b849007bc90fa
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gad1 | GSM1269911_MO1	0.2215	FPKM	4952adfa049a65d51b3f5bf8c181b1a1af1add6b69f7285ea92b849007bc90fa
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq2 | GSM1269911_MO1	0.5473	FPKM	4952adfa049a65d51b3f5bf8c181b1a1af1add6b69f7285ea92b849007bc90fa
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq3 | GSM1269911_MO1	0.7060	FPKM	4952adfa049a65d51b3f5bf8c181b1a1af1add6b69f7285ea92b849007bc90fa
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq5 | GSM1269911_MO1	0.1000	FPKM	4952adfa049a65d51b3f5bf8c181b1a1af1add6b69f7285ea92b849007bc90fa
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Pdgfra | GSM1269911_MO1	0.4173	FPKM	4952adfa049a65d51b3f5bf8c181b1a1af1add6b69f7285ea92b849007bc90fa
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Rbfox3 | GSM1269911_MO1	0.7555	FPKM	4952adfa049a65d51b3f5bf8c181b1a1af1add6b69f7285ea92b849007bc90fa
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Snap25 | GSM1269911_MO1	5.5182	FPKM	4952adfa049a65d51b3f5bf8c181b1a1af1add6b69f7285ea92b849007bc90fa
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Cspg4 | GSM1269912_MO2	0.4304	FPKM	b98bf5b990263326b5b582b04d29e2186d986d7e318929ecc97132097ddd3b09
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gad1 | GSM1269912_MO2	1.5981	FPKM	b98bf5b990263326b5b582b04d29e2186d986d7e318929ecc97132097ddd3b09
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq2 | GSM1269912_MO2	2.1051	FPKM	b98bf5b990263326b5b582b04d29e2186d986d7e318929ecc97132097ddd3b09
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq3 | GSM1269912_MO2	1.1167	FPKM	b98bf5b990263326b5b582b04d29e2186d986d7e318929ecc97132097ddd3b09
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq5 | GSM1269912_MO2	0.4914	FPKM	b98bf5b990263326b5b582b04d29e2186d986d7e318929ecc97132097ddd3b09
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Pdgfra | GSM1269912_MO2	1.0281	FPKM	b98bf5b990263326b5b582b04d29e2186d986d7e318929ecc97132097ddd3b09
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Rbfox3 | GSM1269912_MO2	3.8144	FPKM	b98bf5b990263326b5b582b04d29e2186d986d7e318929ecc97132097ddd3b09
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Snap25 | GSM1269912_MO2	14.0770	FPKM	b98bf5b990263326b5b582b04d29e2186d986d7e318929ecc97132097ddd3b09
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Cspg4 | GSM1269913_Microglia1	0.1785	FPKM	6e8e5e720c77d85122d74e64ab9c34b99c1e987dcec3e9b430a7a39412624bb6
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gad1 | GSM1269913_Microglia1	0.2145	FPKM	6e8e5e720c77d85122d74e64ab9c34b99c1e987dcec3e9b430a7a39412624bb6
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq2 | GSM1269913_Microglia1	1.5195	FPKM	6e8e5e720c77d85122d74e64ab9c34b99c1e987dcec3e9b430a7a39412624bb6
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq3 | GSM1269913_Microglia1	0.1000	FPKM	6e8e5e720c77d85122d74e64ab9c34b99c1e987dcec3e9b430a7a39412624bb6
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq5 | GSM1269913_Microglia1	0.1000	FPKM	6e8e5e720c77d85122d74e64ab9c34b99c1e987dcec3e9b430a7a39412624bb6
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Pdgfra | GSM1269913_Microglia1	0.3250	FPKM	6e8e5e720c77d85122d74e64ab9c34b99c1e987dcec3e9b430a7a39412624bb6
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Rbfox3 | GSM1269913_Microglia1	2.0219	FPKM	6e8e5e720c77d85122d74e64ab9c34b99c1e987dcec3e9b430a7a39412624bb6
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Snap25 | GSM1269913_Microglia1	3.4755	FPKM	6e8e5e720c77d85122d74e64ab9c34b99c1e987dcec3e9b430a7a39412624bb6
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Cspg4 | GSM1269914_Microglia2	0.1861	FPKM	9b7d53f6141e0bd027d27e55ef3736aec15c2dd24a4571d4ace0738cad70fc28
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gad1 | GSM1269914_Microglia2	0.1653	FPKM	9b7d53f6141e0bd027d27e55ef3736aec15c2dd24a4571d4ace0738cad70fc28
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq2 | GSM1269914_Microglia2	2.5391	FPKM	9b7d53f6141e0bd027d27e55ef3736aec15c2dd24a4571d4ace0738cad70fc28
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq3 | GSM1269914_Microglia2	0.1000	FPKM	9b7d53f6141e0bd027d27e55ef3736aec15c2dd24a4571d4ace0738cad70fc28
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq5 | GSM1269914_Microglia2	0.1000	FPKM	9b7d53f6141e0bd027d27e55ef3736aec15c2dd24a4571d4ace0738cad70fc28
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Pdgfra | GSM1269914_Microglia2	0.3126	FPKM	9b7d53f6141e0bd027d27e55ef3736aec15c2dd24a4571d4ace0738cad70fc28
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Rbfox3 | GSM1269914_Microglia2	2.9388	FPKM	9b7d53f6141e0bd027d27e55ef3736aec15c2dd24a4571d4ace0738cad70fc28
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Snap25 | GSM1269914_Microglia2	3.6790	FPKM	9b7d53f6141e0bd027d27e55ef3736aec15c2dd24a4571d4ace0738cad70fc28
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Cspg4 | GSM1269915_Endothelial1	3.0757	FPKM	e1ce328368cb24c9a694e915290f0842111083dd86e1fb4121eaf6120c39c5bf
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gad1 | GSM1269915_Endothelial1	0.9970	FPKM	e1ce328368cb24c9a694e915290f0842111083dd86e1fb4121eaf6120c39c5bf
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq2 | GSM1269915_Endothelial1	0.1000	FPKM	e1ce328368cb24c9a694e915290f0842111083dd86e1fb4121eaf6120c39c5bf
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq3 | GSM1269915_Endothelial1	0.1000	FPKM	e1ce328368cb24c9a694e915290f0842111083dd86e1fb4121eaf6120c39c5bf
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq5 | GSM1269915_Endothelial1	0.1000	FPKM	e1ce328368cb24c9a694e915290f0842111083dd86e1fb4121eaf6120c39c5bf
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Pdgfra | GSM1269915_Endothelial1	0.4173	FPKM	e1ce328368cb24c9a694e915290f0842111083dd86e1fb4121eaf6120c39c5bf
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Rbfox3 | GSM1269915_Endothelial1	0.4841	FPKM	e1ce328368cb24c9a694e915290f0842111083dd86e1fb4121eaf6120c39c5bf
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Snap25 | GSM1269915_Endothelial1	1.9605	FPKM	e1ce328368cb24c9a694e915290f0842111083dd86e1fb4121eaf6120c39c5bf
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Cspg4 | GSM1269916_Endothelial2	3.8935	FPKM	0a753205071c61ff31b550d8bb2e143d46964a2b3042bce484830b32fd164945
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gad1 | GSM1269916_Endothelial2	0.7879	FPKM	0a753205071c61ff31b550d8bb2e143d46964a2b3042bce484830b32fd164945
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq2 | GSM1269916_Endothelial2	0.3608	FPKM	0a753205071c61ff31b550d8bb2e143d46964a2b3042bce484830b32fd164945
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq3 | GSM1269916_Endothelial2	0.1000	FPKM	0a753205071c61ff31b550d8bb2e143d46964a2b3042bce484830b32fd164945
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq5 | GSM1269916_Endothelial2	0.1000	FPKM	0a753205071c61ff31b550d8bb2e143d46964a2b3042bce484830b32fd164945
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Pdgfra | GSM1269916_Endothelial2	0.3669	FPKM	0a753205071c61ff31b550d8bb2e143d46964a2b3042bce484830b32fd164945
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Rbfox3 | GSM1269916_Endothelial2	0.5166	FPKM	0a753205071c61ff31b550d8bb2e143d46964a2b3042bce484830b32fd164945
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Snap25 | GSM1269916_Endothelial2	2.0548	FPKM	0a753205071c61ff31b550d8bb2e143d46964a2b3042bce484830b32fd164945
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Cspg4 | GSM1269917_WC1	17.7943	FPKM	e154198dec246c3af6d42558c094f07d3e5f68c24fea8b2c49d55d6dda2de3c8
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gad1 | GSM1269917_WC1	22.9971	FPKM	e154198dec246c3af6d42558c094f07d3e5f68c24fea8b2c49d55d6dda2de3c8
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq2 | GSM1269917_WC1	18.5086	FPKM	e154198dec246c3af6d42558c094f07d3e5f68c24fea8b2c49d55d6dda2de3c8
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq3 | GSM1269917_WC1	4.5497	FPKM	e154198dec246c3af6d42558c094f07d3e5f68c24fea8b2c49d55d6dda2de3c8
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq5 | GSM1269917_WC1	4.9214	FPKM	e154198dec246c3af6d42558c094f07d3e5f68c24fea8b2c49d55d6dda2de3c8
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Pdgfra | GSM1269917_WC1	78.2303	FPKM	e154198dec246c3af6d42558c094f07d3e5f68c24fea8b2c49d55d6dda2de3c8
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Rbfox3 | GSM1269917_WC1	26.2961	FPKM	e154198dec246c3af6d42558c094f07d3e5f68c24fea8b2c49d55d6dda2de3c8
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Snap25 | GSM1269917_WC1	97.5709	FPKM	e154198dec246c3af6d42558c094f07d3e5f68c24fea8b2c49d55d6dda2de3c8
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Cspg4 | GSM1269918_WC2	18.1973	FPKM	2c0cc46492254191ff9131ff315097e131ed2d35d7313017862e9151c0c860a7
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gad1 | GSM1269918_WC2	18.6384	FPKM	2c0cc46492254191ff9131ff315097e131ed2d35d7313017862e9151c0c860a7
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq2 | GSM1269918_WC2	18.2786	FPKM	2c0cc46492254191ff9131ff315097e131ed2d35d7313017862e9151c0c860a7
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq3 | GSM1269918_WC2	6.2129	FPKM	2c0cc46492254191ff9131ff315097e131ed2d35d7313017862e9151c0c860a7
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq5 | GSM1269918_WC2	5.0619	FPKM	2c0cc46492254191ff9131ff315097e131ed2d35d7313017862e9151c0c860a7
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Pdgfra | GSM1269918_WC2	71.5009	FPKM	2c0cc46492254191ff9131ff315097e131ed2d35d7313017862e9151c0c860a7
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Rbfox3 | GSM1269918_WC2	31.1790	FPKM	2c0cc46492254191ff9131ff315097e131ed2d35d7313017862e9151c0c860a7
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Snap25 | GSM1269918_WC2	107.4152	FPKM	2c0cc46492254191ff9131ff315097e131ed2d35d7313017862e9151c0c860a7
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Cspg4 | GSM1269919_WC3	16.1121	FPKM	ffb1bf17e31d6fa391818061a7043f3d2b44b025218adfddb9d4378fdd54f0f3
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gad1 | GSM1269919_WC3	20.7656	FPKM	ffb1bf17e31d6fa391818061a7043f3d2b44b025218adfddb9d4378fdd54f0f3
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq2 | GSM1269919_WC3	19.1948	FPKM	ffb1bf17e31d6fa391818061a7043f3d2b44b025218adfddb9d4378fdd54f0f3
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq3 | GSM1269919_WC3	4.1639	FPKM	ffb1bf17e31d6fa391818061a7043f3d2b44b025218adfddb9d4378fdd54f0f3
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Kcnq5 | GSM1269919_WC3	5.2767	FPKM	ffb1bf17e31d6fa391818061a7043f3d2b44b025218adfddb9d4378fdd54f0f3
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Pdgfra | GSM1269919_WC3	76.8362	FPKM	ffb1bf17e31d6fa391818061a7043f3d2b44b025218adfddb9d4378fdd54f0f3
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Rbfox3 | GSM1269919_WC3	23.7177	FPKM	ffb1bf17e31d6fa391818061a7043f3d2b44b025218adfddb9d4378fdd54f0f3
+A2	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Snap25 | GSM1269919_WC3	94.4827	FPKM	ffb1bf17e31d6fa391818061a7043f3d2b44b025218adfddb9d4378fdd54f0f3
+A2	GSE52564 mouse class means	Kcnq2 neuron (P7, n=2) mean / OPC (P17, n=2) mean / OPC over neuron	30.68 / 10.68 / 0.348	FPKM; ages differ; n=2 per class	see per-file hashes
+A2	GSE52564 mouse class means	Kcnq3 neuron (P7, n=2) mean / OPC (P17, n=2) mean / OPC over neuron	4.27 / 2.79 / 0.654	FPKM; ages differ; n=2 per class	see per-file hashes
+A2	GSE52564 mouse class means	Kcnq5 neuron (P7, n=2) mean / OPC (P17, n=2) mean / OPC over neuron	9.40 / 0.84 / 0.089	FPKM; ages differ; n=2 per class	see per-file hashes
+A2	GSE52564 mouse class means	Snap25 OPC over neuron (carry-over indicator)	0.184	FPKM	see per-file hashes
+A2	GSE52564 mouse class means	Gad1 OPC over neuron (carry-over indicator)	0.166	FPKM	see per-file hashes
+A2	GSE52564 mouse class means	Rbfox3 OPC over neuron (carry-over indicator)	0.150	FPKM	see per-file hashes
+A1	GSE52564 mouse whole cortex	Kcnq2 WC mean n=3 (WC, WC3 files)	18.66	FPKM; whole cortex includes WC1-3	see per-file hashes
+A1	cross-dataset	Kcnq2/Snap25 mouse whole cortex	0.187	FPKM ratio, 3 samples pooled	see per-file hashes
+A1	cross-dataset	Kcnq2/Snap25 mouse neurons P7	0.208	FPKM ratio	see per-file hashes
+A3	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gabra1 neuron P7 (two samples; mean) / OPC P17 (two samples; mean)	6.278, 4.698 (5.49) / 4.465, 2.743 (3.60)	FPKM; reproduces the IT46 R4.2 figures 3.60 and 5.49	see per-file hashes
+A3	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gabrb3 neuron P7 / OPC P17	24.455, 24.6 (24.53) / 26.918, 16.671 (21.79)	FPKM; reproduces 21.79 and 24.53	see per-file hashes
+A3	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gabrg2 neuron P7 / OPC P17	20.484, 27.784 (24.13) / 4.157, 3.233 (3.70)	FPKM; gamma2 is the synaptic-type subunit in the abstracts	see per-file hashes
+A3	GSE52564 per-sample FPKM (Zhang 2014 mouse)	Gabra5 neuron P7 / OPC P17	6.092, 5.678 (5.88) / 0.466, 0.698 (0.58)	FPKM; Balia abstract reports alpha5 at OPC synapses in week 2	see per-file hashes

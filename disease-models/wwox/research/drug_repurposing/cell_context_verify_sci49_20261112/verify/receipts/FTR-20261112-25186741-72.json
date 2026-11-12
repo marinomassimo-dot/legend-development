@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T22:36Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T22:52Z",
+ "event_id": "FTR-20261112-25186741-72",
+ "evidence_basis": [
+  "Read the neuron purification paragraph, the statement of ages (P7 neurons, astrocytes and endothelium; P17 oligodendrocyte lineage), the FPKM threshold section and the legend of the fold-enrichment panel; the rest of the Results and the Discussion not read end to end; figure images not opened.",
+  "verbatim_locator | proposition: FPKM values below 0.1 are set to 0.1 | Figure legend, relationship between fold enrichment and expression level | \"we set any FPKM value <0.1 to 0.1 to avoid ratio inflation in fold enrichment calculations\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cell_context_verify_sci49_20261112/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/cell_context_verify_sci49_20261112/verify/verdicts.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-25186741-97",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page for PMC4152602 fetched on 2026-11-12 with plain curl, article text extracted after markup removal (the PubMed full-text tool returned an empty body for this article); bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.1860-14.2014",
+  "pmid": "25186741"
+ },
+ "workflow": "SCI49 package A blind verifier V11 (ORCH-SCI49-20261112, actor cx-y), verification of the biological inferences of SCI47 package B; prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

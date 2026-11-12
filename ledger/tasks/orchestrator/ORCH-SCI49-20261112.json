@@ -9,14 +9,16 @@
  "BASELINE": "main 182d3b1b (SCI48 closure published). Worktree .claude/worktrees/sci49, branch task/sci49. IT48 (integrator) works on task/it48, not yet on main; it already applied SCI48 deltas there (commit 8fe57179): consumption on main to be verified after it lands. IT47-Q04 and IT48-Q01 OPEN and unassigned.",
  "MANDATE_STATE": "OPEN",
  "CURRENT_PACKAGE": {
-  "id": "S0",
-  "state": "frames written",
+  "id": "A-delivery",
+  "state": "README and consumer_delta written; landing A",
   "delegate_active": "none",
   "updated": "2026-11-12"
  },
- "RESUME": "S0 for A and B written; next: commit, bind marker, verifier brief for A, dispatch.",
+ "RESUME": "Package A written (README, consumer_delta, SCI47 README dated update applied). Next: pre-freeze suites, merge main, gate, battery on the frozen SHA, land A, message integrator; then package B producer (BRIEF_P.md).",
  "DECISIONS_TAKEN": [],
- "DELEGATIONS": [],
+ "DELEGATIONS": [
+  "V11 verifier cx-y (agent ab6ff61c, legend-delegate): asked sonnet/high; read back sonnet x88, high x88; 88 turns, output 94,807, cache read 12,930,454, birth context 18,658; A1-A5 all supported with corrected formulations; 10 staged receipts (-72)"
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
@@ -27,22 +29,25 @@
    "steps": [
     {
      "step": "Bind marker; reconcile SCI48 closure, IT47/IT48 state, IT47-Q04 and IT48-Q01",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "marker recognised; SCI48 closure published 182d3b1b; IT48 integrator read-only: it applied SCI48 deltas on task/it48 (8fe57179), not on main; IT47-Q04 and IT48-Q01 OPEN and unassigned"
     },
     {
      "step": "S0 for A (propositions) and B (frame, priors, stop) written and committed before any reading",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "S0_before_verification.md and S0_before_search.md committed 95877b97 before any reading"
     },
     {
      "step": "Verifier brief A; one blind verifier (sonnet high) with the originals; staged receipts validated",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "verifier V11 ab6ff61c: sonnet/high read back high x88; 88 turns, output 94,807, cache read 12,930,454; verdicts 33 rows (13 numbers reproduced, 20 interpretations), 10 staged receipts (-72) validated"
     },
     {
      "step": "Apply corrections to the decisive propositions only; README answer-first for A; consumer_delta A; deliver A to the integrator",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator"
     }
    ]
