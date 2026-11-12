@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T17:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-12T17:16:29Z",
+ "event_id": "FTR-20261112-33627628-74",
+ "evidence_basis": [
+  "verbatim_locator | proposition: SFN effect on BDNF and repressors blocked by siRNA-Nrf2 in Neuro-2a | Results first section | \"However, these effects by SFN were blocked by siRNA-Nrf2.\"",
+  "verbatim_locator | proposition: SFN alone had no effect in control mice, so the KO arm is unmatched | Results, LPS model | \"However, SFN alone did not affect the immobility time during the TST and FST in control mice\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/sfn_table.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/matrix.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC7904924 via Europe PMC REST fullTextXML (plain curl, default user agent, HTTP 200); text and figure legends read; figure images not opened; Supplementary Information (behaviour and electrophysiology details) not read.",
+ "study_id": {
+  "doi": "10.1038/s41398-021-01261-6",
+  "pmid": "33627628"
+ },
+ "workflow": "SCI48 producer P (nr-z): Yao 2021 text read from the Europe PMC XML; figures not opened. Staged for the integrator; the ledger was not appended at preparation time."
+}

@@ -9,19 +9,21 @@
  "BASELINE": "main 0bed3857 (SCI47 landed; IT47 d280c7c3 consumed SCI47 A, B and tail in part). Worktree .claude/worktrees/sci48, branch task/sci48. IT46-Q06 and IT46-Q09 still OPEN and unassigned on 2026-11-12. Folder disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/.",
  "MANDATE_STATE": "OPEN",
  "CURRENT_PACKAGE": {
-  "id": "P",
-  "state": "producer running",
-  "delegate_active": "nr-z (sonnet medium)",
+  "id": "P-ext",
+  "state": "producer extension running",
+  "delegate_active": "nr-z (resumed)",
   "updated": "2026-11-12"
  },
- "RESUME": "Producer nr-z running (Winkel table, sulforaphane table, matrix, minimum comparison). On return: census read-back, check outputs, write VERIFIER_BRIEF.md (full originals, blind to answers.md), dispatch verifier nr-y (sonnet high, receipts -73).",
+ "RESUME": "Producer extension running (Innamorato, Bergstrom, Zhang, Qiu opened beyond abstract). On return: census read-back (both runs), write VERIFIER_BRIEF.md (full originals incl. stored Winkel copy; blind to answers.md; receipts -73, label nr-y), dispatch verifier sonnet high.",
  "DECISIONS_TAKEN": [],
  "DELEGATIONS": [
-  "P producer nr-z: asked sonnet/medium; dispatched 2026-11-12 17:20Z; brief BRIEF_P.md; staged receipts end -74"
+  "P producer nr-z (agent aa8b34b0): asked sonnet/medium; read back claude-sonnet-5-5 x50, effort medium x50; first run 50 turns, output 85,424, cache read 7,147,449, birth context 18,572; outputs winkel 33 rows, sfn 18, matrix 26, 10 staged receipts (-74) validated. Resumed once (SendMessage) for a bounded extension: four sulforaphane abstracts opened beyond abstract (within S0 limit of 8 opened); census to be re-read after return"
  ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
- "DEFAULTS_TAKEN": [],
+ "DEFAULTS_TAKEN": [
+  "producer exceeded the 40-candidate screening limit (100 titles displayed, 20 abstracts read, 4 opened) and had one query defect; kept: opened-beyond-abstract count (4) is within the S0 limit, so no result is discarded; stated in the README limits"
+ ],
  "AUTHORISED_QUEUE_20261112B": {
   "MANDATE_STATE": "OPEN",
   "OBJ_A": {

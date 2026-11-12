@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-12T17:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "unavailable",
+  "results": "unavailable",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-12T17:16:29Z",
+ "event_id": "FTR-20261112-29533123-74",
+ "evidence_basis": [
+  "verbatim_locator | proposition: Nrf2 dependence stated for neuronal and endothelial death after OGD; loss design not in the abstract | Abstract | \"in an Nrf2 dependent manner\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/sfn_table.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/matrix.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "Europe PMC search record abstract and PubMed record; full text unreachable: Europe PMC fullTextXML for PMC6365596 returned HTTP 500 and the PubMed PMC full-text tool returned an empty full_text; not retried by another route",
+ "study_id": {
+  "doi": "10.1177/0271678X18764083",
+  "pmid": "29533123"
+ },
+ "workflow": "SCI48 producer P (nr-z): Mao 2019 abstract only; technical block at text depth recorded. Staged for the integrator; the ledger was not appended at preparation time."
+}
