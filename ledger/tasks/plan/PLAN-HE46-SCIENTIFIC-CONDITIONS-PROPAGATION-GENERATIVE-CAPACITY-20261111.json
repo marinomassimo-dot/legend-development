@@ -10,16 +10,16 @@
  "OBJECTIVE": "HE46: pH/temperature conditions, propagation of a correction to consumers, one unused capability made visible, references/compositions, reading debts, evaluation without circular truth, one cost factor, continuity.",
  "worktree": ".claude/worktrees/he46",
  "branch": "task/he46",
- "CURRENT_STATE": "DONE",
+ "CURRENT_STATE": "IN_PROGRESS",
  "CHECKPOINT": {
-  "last_verified_result": "battery f5ef610f PASS WITH SKIPS (242 targets, 11 skipped); landed 36eb86fb on main; push pending verification",
-  "first_incomplete_work": "none",
-  "active_processes": "none",
+  "last_verified_result": "published d493afb8 (gate PASS, ls-remote verified); CI #657 pending",
+  "first_incomplete_work": "OBJ_H13 CI confirmation",
+  "active_processes": "ci_runs wait on d493afb8 (monitor in session)",
   "real_dependencies": "IT46 (ORCH-ROADMAP-IT46-20261111) consumes conditions and engine; SCI46 pharmacology",
-  "next_executable_step": "none; open follow-up with IT46: SCI46 delta rows 2 and 3 on comparison_engine.py after task/it46 lands"
+  "next_executable_step": "wait for run #657; on success mark OBJ_H13 DONE with the run number and set MANDATE_STATE COMPLETE (closure-only commit)"
  },
  "AUTHORISED_QUEUE_20261111": {
-  "MANDATE_STATE": "COMPLETE",
+  "MANDATE_STATE": "OPEN",
   "OBJ_H0": {
    "order": 1,
    "title": "Verify real use of HE45 components (reader calls, insufficiency consumption, aggregation, cache, unqualified roles, loader, consumers)",
@@ -173,6 +173,20 @@
      "status": "DONE",
      "owner": "plan",
      "evidence": "owners emitted plain markers; mandate_watch check --root <worktree> --deliver none: IT46 session 4325d70d RUNNING/NONE, SCI46 session 9400b253 RUNNING/NONE; near-marker diagnosis + 2 tests (c0789939); cross_session_transport section 12; README 10"
+    }
+   ]
+  },
+  "OBJ_H13": {
+   "order": 14,
+   "title": "CI confirmation of the published landing d493afb8",
+   "steps": [
+    {
+     "step": "Public release gate run #657 on d493afb8 concludes success",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "blocker": "GitHub Actions run #657 (Public release gate, about 60 minutes) on d493afb8 is in progress",
+     "unblock": "python3 framework/scripts/ci_runs.py status d493afb8e8b6b3a6e570ee4e93a6068f49dcf8f6 prints success for every run",
+     "evidence": ""
     }
    ]
   }
