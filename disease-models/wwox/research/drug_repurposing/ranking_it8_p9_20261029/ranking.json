@@ -74,7 +74,7 @@
   },
   {
    "chembl_ids": "",
-   "decisive_uncertainty": "Branch A, compensatory Ih: blocking it worsens or leaves bursts; weakened if bursts fall. Branch B, pro-excitatory Ih through the depolarised resting potential: blocking it lowers bursts at matched membrane potential; weakened if bursts do not fall. Branch C, bystander: no effect on bursts although sag falls; weakened by any burst change. The sag itself must first be shown to be Ih (sensitive to the blocker), and a blocker that shifts the resting potential acts on the premises of A and B at once. Branch D, added from an unguided expansion (IT35): the higher input resistance of the knockout and the heterozygote is the opposite of what a larger Ih alone would give (in a rat cortical dysplasia model reduced Ih came with a higher input resistance, reversed by an Ih blocker, PMID 21795624; there the resting potential is hyperpolarised, so it is not a mirror image), so a second or alternative change, such as loss of a resting potassium conductance (Kir, K2P or Kv7 channels), is a rival explanation; weakened if blocker-sensitive potassium currents do not differ. [IT40] A3 Whether the excess sag and rebound persist at matched potential and matched deflection, whether capacitance differs, and whether the recordings were under synaptic blockade; only then whether a blocker-sensitive current differs. A blocker response shows that the current contributes, not that it is defective in Wwox cells. [SCI43] Measured shares in wild-type neurons of other preparations: a Ba2+-sensitive resting conductance about 23 percent (adult mouse L2/3 auditory cortex, one preprint, verifier could not open it), a KCNQ2-dependent share about 20 percent when the cell rests near −67 mV (P15–P20), Ih about 6 percent (same preprint), Kv7 expected small at the Wwox rest (activation near −70 mV; XE-991 weak at hyperpolarised potentials). The Wwox pair implies a net loss of about 28 percent of the resting conductance (2.7 nS). A blocker effect shows contribution, not alteration. [IT44] Which family carries a lost resting conductance decides whether any opener is relevant: the TREK and TRAAK channels are blocked only at millimolar Ba2+ (a source reports no effect at 0.8 mM), so a current lost at 200 micromolar Ba2+ or less points to Kir-type channels (or TWIK-1), whereas the openers found in the catalogue act on the Ba2+-weak K2P subfamily; the only Kir2 opener reached is Kir2.1-only with no neuronal data; TASK-1, TASK-3 and THIK-1 were not reached. [IT45 from SCI45] A pH-closed TREK-1 pool is weakly Ba2+-sensitive (IC50 0.56 mM), so it would not appear in the 60 uM Ba2+ difference current; the TASK-3 element is refuted as quantitatively sufficient (pH50 6.3-6.5); 'lactate lowers tissue pH' is demoted. No K2P tool has been tested at two pH. A pH effect only in perforated patch points to the KATP route (PH4). Source: ph_k2p_sci45_20261111/consumer_delta.md rows 1,5,6,11. [IT45 from SCI45-N1] The K2P route (partial at best) and the NMDAR proton route have opposite signs on excitability; the net sign across K2P, NMDAR and ASIC is not defined (different axes). ASIC1a does not open for 7.4 to 7.2.",
+   "decisive_uncertainty": "Branch A, compensatory Ih: blocking it worsens or leaves bursts; weakened if bursts fall. Branch B, pro-excitatory Ih through the depolarised resting potential: blocking it lowers bursts at matched membrane potential; weakened if bursts do not fall. Branch C, bystander: no effect on bursts although sag falls; weakened by any burst change. The sag itself must first be shown to be Ih (sensitive to the blocker), and a blocker that shifts the resting potential acts on the premises of A and B at once. Branch D, added from an unguided expansion (IT35): the higher input resistance of the knockout and the heterozygote is the opposite of what a larger Ih alone would give (in a rat cortical dysplasia model reduced Ih came with a higher input resistance, reversed by an Ih blocker, PMID 21795624; there the resting potential is hyperpolarised, so it is not a mirror image), so a second or alternative change, such as loss of a resting potassium conductance (Kir, K2P or Kv7 channels), is a rival explanation; weakened if blocker-sensitive potassium currents do not differ. [IT40] A3 Whether the excess sag and rebound persist at matched potential and matched deflection, whether capacitance differs, and whether the recordings were under synaptic blockade; only then whether a blocker-sensitive current differs. A blocker response shows that the current contributes, not that it is defective in Wwox cells. [SCI43] Measured shares in wild-type neurons of other preparations: a Ba2+-sensitive resting conductance about 23 percent (adult mouse L2/3 auditory cortex, one preprint, verifier could not open it), a KCNQ2-dependent share about 20 percent when the cell rests near −67 mV (P15–P20), Ih about 6 percent (same preprint), Kv7 expected small at the Wwox rest (activation near −70 mV; XE-991 weak at hyperpolarised potentials). The Wwox pair implies a net loss of about 28 percent of the resting conductance (2.7 nS). A blocker effect shows contribution, not alteration. [IT44] Which family carries a lost resting conductance decides whether any opener is relevant: the TREK and TRAAK channels are blocked only at millimolar Ba2+ (a source reports no effect at 0.8 mM), so a current lost at 200 micromolar Ba2+ or less points to Kir-type channels (or TWIK-1), whereas the openers found in the catalogue act on the Ba2+-weak K2P subfamily; the only Kir2 opener reached is Kir2.1-only with no neuronal data; TASK-1, TASK-3 and THIK-1 were not reached. [IT45 from SCI45] A pH-closed TREK-1 pool is weakly Ba2+-sensitive (IC50 0.56 mM), so it would not appear in the 60 uM Ba2+ difference current; the TASK-3 element is refuted as quantitatively sufficient (pH50 6.3-6.5); 'lactate lowers tissue pH' is demoted. No K2P tool has been tested at two pH. A pH effect only in perforated patch points to the KATP route (PH4). Source: ph_k2p_sci45_20261111/consumer_delta.md rows 1,5,6,11. [IT45 from SCI45-N1] The K2P route (partial at best) and the NMDAR proton route have opposite signs on excitability; the net sign across K2P, NMDAR and ASIC is not defined (different axes). ASIC1a does not open for 7.4 to 7.2. [IT47 SCI47] Unit-of-analysis note for the Wwox slice paper: the change in inhibitory-current frequency is shown only by a distribution test on pooled events (no per-cell or per-animal test); the pipette of the excitatory-current recordings holds about 12 mM chloride (E_Cl about -63 mV), so their isolation at -70 mV is not chloride-free; burst frequency differs between the Results (median interval 26.2 s) and the supplementary table (0.84 per minute); animal counts do not sum (4+4 against 7). Source: inhibitory_defect_sci47_20261112/output/source_table.tsv.",
    "direction_state": "unresolved",
    "evidence_available": "WWOX-system, one preparation read in full and re-extracted (PMID 34634460, Table 1 and Figure 6): resting potential -79.25, -75.51, -73.62 mV and sag at a fixed -200 pA step 1.18, 2.04, 2.57 mV grade with gene dose, input resistance saturates at one allele, rebound is marked larger only in the knockout (the printed p cannot be reproduced from the Table 1 means and dispersion under stated assumptions), and bursts occur in 36 of 42 knockout, 4 of 23 heterozygote and 0 of 11 wild-type slices; the authors name control of the resting membrane potential as a factor underlying the hyperexcitability (the frequency-current slope does not differ once the curves are shifted to one step below rheobase; supplement not read) and cite discordant Ih-blocker precedents, including worsening of 4-AP events. Compound side: Ih-acting tools exist in the catalogue (a clinically used HCN blocker and several research blockers, identities resolved), found by the need search without naming any; their cellular potency in a cortical pyramidal neuron and their selectivity among HCN isoforms were not assessed here. No Ih-blocker experiment in a Wwox-deficient preparation is recorded in the entries read. [IT39] Ivabradine blocks sag and hyperpolarises cortical L5 and L6 neurons in normal rat slices, and injection into somatosensory cortex cut absence-seizure time by 96 percent against 40 percent in thalamic VB (abstract); the GAERS authors read Ih as not an adaptive response to spike-wave discharges (input resistance fell, resting potential and sag unchanged), which sits beside the discordant precedents. [IT40] A7 Tool notes: the research Ih blocker used in thalamic neurons (20 umol/L: about 17 mV hyperpolarisation, sag 0.4-2.1 mV left) is reported to block sodium and T-type current (abstract level for those papers); the Kv7 openers (a withdrawn antiseizure drug and a research compound) were read at abstract level only; K2P and Kir tool papers exist but none is shown to work in layer II/III pyramidal neurons.",
    "evidence_depth": "Conditional hypothesis: the observations are verified, the sign of the intervention is open in all three branches, and no Ih-blocker experiment exists in the system. (no ranked unit, so no evaluation depth applies: this is not a depth of zero)",
@@ -1662,7 +1662,7 @@
    "below_the_line": "",
    "below_the_line_reason": "",
    "chembl_ids": "",
-   "decisive_uncertainty": "Whether the separation of symptomatic response and development seen in WWOX-DEE cases differs from the base rate of genetic and structural DEEs, in which a responder with poor development is the expected case (in unknown aetiology the two are coupled, so the base rate does not extend to DEE generally); whether any WWOX-DEE case shows a change on a continuous developmental measure after a symptomatic response; whether a sustained response, which no published child achieved, is followed by gain; and whether the separation holds for residual-function alleles. The earlier contradiction with the mechanism argument is not unexplained: other genetic DEE cohorts (STXBP1, Dravet, KCNQ2; partial full-text and abstract depth, not WWOX evidence) report a developmental component independent of seizure control. [IT36] caregiver-rated global improvement anchored at about 31 percent reduction (slight) and 49.6 percent (much) in Lennox-Gastaut; not WWOX evidence. [IT46] Correction to the base-rate wording: the cohorts support 'a majority outcome in infantile-spasm cohorts' (72 and 65 percent), not 'near-universal in genetic strata' (the genetic bound counts children who were not responders; one stratum has trisomy 21 in five of nine; two KCNQ2 cohorts show 67 and 80 percent); in the largest cohort 145 of 175 responders also received prednisolone, and in another 39 of 61 responders relapsed. Separately, a GABA-raising lever can aggravate absence-type seizures, so any effect is seizure-type dependent before it is lesion-specific. Source: generation_it46_20261111/verify_s7/VERDICTS.md (R6, R7).",
+   "decisive_uncertainty": "Whether the separation of symptomatic response and development seen in WWOX-DEE cases differs from the base rate of genetic and structural DEEs, in which a responder with poor development is the expected case (in unknown aetiology the two are coupled, so the base rate does not extend to DEE generally); whether any WWOX-DEE case shows a change on a continuous developmental measure after a symptomatic response; whether a sustained response, which no published child achieved, is followed by gain; and whether the separation holds for residual-function alleles. The earlier contradiction with the mechanism argument is not unexplained: other genetic DEE cohorts (STXBP1, Dravet, KCNQ2; partial full-text and abstract depth, not WWOX evidence) report a developmental component independent of seizure control. [IT36] caregiver-rated global improvement anchored at about 31 percent reduction (slight) and 49.6 percent (much) in Lennox-Gastaut; not WWOX evidence. [IT46] Correction to the base-rate wording: the cohorts support 'a majority outcome in infantile-spasm cohorts' (72 and 65 percent), not 'near-universal in genetic strata' (the genetic bound counts children who were not responders; one stratum has trisomy 21 in five of nine; two KCNQ2 cohorts show 67 and 80 percent); in the largest cohort 145 of 175 responders also received prednisolone, and in another 39 of 61 responders relapsed. Separately, a GABA-raising lever can aggravate absence-type seizures, so any effect is seizure-type dependent before it is lesion-specific. Source: generation_it46_20261111/verify_s7/VERDICTS.md (R6, R7). [IT47 SCI47] Unit-of-analysis note for the Wwox slice paper: the change in inhibitory-current frequency is shown only by a distribution test on pooled events (no per-cell or per-animal test); the pipette of the excitatory-current recordings holds about 12 mM chloride (E_Cl about -63 mV), so their isolation at -70 mV is not chloride-free; burst frequency differs between the Results (median interval 26.2 s) and the supplementary table (0.84 per minute); animal counts do not sum (4+4 against 7). Source: inhibitory_defect_sci47_20261112/output/source_table.tsv.",
    "direction_state": "resolved",
    "direction_state_label": "the need states an up/down intervention direction",
    "evidence_available": "Clinical reports only. Children counted once across 14 reports: 36 to 38 exposed to at least one of vigabatrin, hormonal therapy, ketogenic diet or cannabidiol (partial full-text depth in 11 reports, one source at abstract level). Both a symptomatic and a developmental outcome are recorded for 6. In 4 of them, a partial or transient improvement came with no developmental progress recorded; in 2, neither moved. No sustained, instrumented response is recorded, and no developmental gain follows any of the four classes. Vigabatrin: 5 children with both endpoints in 4 reports (4 discordant, 1 concordant non-response); these are not independent of the other classes, since three of the five also supply them and all five were on co-therapy. Children with both endpoints, by class, of those exposed: hormonal 3 of 11; ketogenic diet 2 of 12; cannabidiol 1 of 7. Counts only, no percentage (n below 10). Developmental statements are clinical narratives without a scale. A brain-imaging safety signal is recorded beside them in two children (abstract level, a report selected for the finding), so it is not a frequency. No WWOX child is recorded with a developmental gain after a symptomatic improvement. Four children in three reports (two of them in one report) had a partial, transient or clinically-defined improvement with development not progressing; two had neither. That is what the baseline in other genetic and structural early-onset encephalopathies predicts (a responder with poor development is the majority outcome in infantile spasms and near-universal in genetic strata), so it is not by itself a WWOX-specific feature. The comparison holds only as a binary: the baseline uses standardised scores with a cut, every WWOX developmental statement is a clinician narrative, and no WWOX child had a sustained, instrumented response. Non-WWOX DEE baseline (batch_sci_20261105 a2_baseline; not WWOX evidence): in a prospective IESS cohort read at partial full-text depth, 72 percent of responders (126 of 175, computed from its Table 1) were below the developmental cut at 3 years, and no genetic-aetiology child reached a favourable outcome (0 of 49, a count over all genetic-aetiology children, not a responder rate). In two randomised IESS trials (abstract level), arms that raised early spasm cessation by 15 to 19 points showed no demonstrated developmental difference, with about one chance in four of detecting the difference that full mediation would predict. In TSC, two randomised trials of pre-onset prevention changed seizure endpoints without changing development to 36 months; they test prevention before onset, not response after onset. The person-level association (ICISS, abstract level: 15.9 VABS points higher with early cessation) is carried by unknown aetiology and a normal first neurological examination. [IT36] the 2024 vigabatrin case: developmental statements uninstrumented, stall from spasm onset before drug; seizure-free at home while video-EEG still showed events. [IT39] The transfer from KCNQ2 and TSC is analogy; genotype stratification is established for mortality only; lithium is not the only existing-drug node (ethosuximide was also tested).",
@@ -5193,7 +5193,7 @@
    "could_rise": "already at the top group; it holds while no null, unfavourable or mixed WWOX-system result appears beside it | further questions: an overexpression or ceiling endpoint and a tumour-surveillance endpoint (none exists); whether the organoid radial-glia and SATB2 findings (same-laboratory human-system results, PMID 34268881 and 42397075, context only, not separate positions) hold | stored work-order statement: Quantified myelination would add a controlled row on the same need; a failure would move the card to C2 by rule; a treated-after-onset arm would show whether the word recovery may be used for that endpoint. A post-onset arm that moved a circuit readout but not quantified sheath structure would match the precedents. The reverse pattern would be the first of…",
    "counter_evidence_statements": "Rescue is not normalisation: unmyelinated axons per field remain about 52 versus about 26 in wild type. | The neuron-promoter vector corrected neuronal function without correcting radial-glia abnormalities (organoid arm); SATB2 mRNA overshoots wild type up to about eleven-fold in treated organoids. | No ceiling is measured and no tumour-surveillance or overexpression-toxicity endpoint exists in the mouse study; applied recombinant WWOX lowered viability of human ESC-derived cortical neurons in a preprint. More is not safer.",
    "depth_of_evidence": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
-   "evaluated_on": "2026-11-11",
+   "evaluated_on": "2026-11-12",
    "evaluation_depth": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -5242,7 +5242,7 @@
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no reading-limit flag (found: graphical_reading); a favourable WWOX readout carries no design-limit flag (found: one_experiment); one and the same readout meets all four | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
    "counter_evidence_statements": "IT12 P2.2 figure audit (dated 2026-10-31, PMID 37275776 Fig 7B, image viewed): the stored statement that the GIRK2 crossings lie inside the therapeutic band is wrong on one clause. In oocytes the GIRK2 homomer activated by Gbeta-gamma is half-maximally inhibited at about 0.03 to 0.06 mM, about 4 to 8 times BELOW the shaded band (about 0.25 to 0.9 mM), while the brain-predominant GIRK1/2 plus Gbeta-gamma channel crosses at about 0.4 to 1 mM, inside it (partial block, about 20 to 60 percent). So a measured non-T-type target exists at labelled exposure, and the wording 'T-type potency is weak against the labelled range' is not the whole story: the ethosuximide result in the WWOX mouse (PTZ seizure score) cannot be attributed to T-type mediation. An oocyte datum, not a WWOX mechanism; the authors say neuronal GIRK2 homomer abundance is unknown. In a genetic absence model the relay-neuron T-type current is smaller than control and the burst-threshold difference follows Ih (PMID 24953239 Figs 5 and 6). No group or member evidence changes. | IT13 P3a (2026-10-31): ethosuximide's attribution to T-type channels is not supported by any measurement in Wwox tissue: the catalogue mechanism record lists T-type only, the source paper's own oocyte data show GIRK block near the labelled band (a GIRK route would predict the opposite sign; prior knowledge), the two PTZ-alone null cohorts of the figure differ by about the size of the drug effect, no interaction test, and P17 Cacna1g/h/Kcnj6 transcripts are inside the control-line background. The late-phase effect stays one experiment in one laboratory; the group is unchanged.",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
-   "evaluated_on": "2026-11-11",
+   "evaluated_on": "2026-11-12",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -5284,7 +5284,7 @@
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: nonspecific_also_in_wild_type, one_experiment_N6_arm); one and the same readout meets all four | further questions: GSK3beta/IMPase engagement at the exposure reached at tolerated levels (no activity row exists for lithium) | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
-   "evaluated_on": "2026-11-11",
+   "evaluated_on": "2026-11-12",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -5326,7 +5326,7 @@
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: one_experiment_n5_slices, tool_compound_d-APV); one and the same readout meets all four | further questions: gap-junction dependence (carbenoxolone, 87 percent reduction) and bursting in heterozygote slices as rival explanations of the d-APV result | stored work-order statement: E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand. A silencer that lowers firing without raising CTIP2/SATB2 would be read…",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
-   "evaluated_on": "2026-11-11",
+   "evaluated_on": "2026-11-12",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evidence_of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level; a tool-compound result supports the evaluation of the MECHANISM only, not of any clinical agent",
    "evidence_of_molecule": "d-APV (competitive NMDAR block; a tool compound, not a candidate drug): tested in a WWOX system (1 assertion(s): 1 benefit)",
@@ -5380,7 +5380,7 @@
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: If MYC difference vanishes within cell-cycle and potency strata, MYC is a marker and the need moves to inert for lever purposes. If genetic MYC lowering moves neuronal fractions in knockout beyond corrected cells and cell counts hold, the driver reading advances to a second model and the development question (a prenatal window) becomes the limit. If progeni…",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract",
-   "evaluated_on": "2026-11-11",
+   "evaluated_on": "2026-11-12",
    "evaluation_depth": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -5421,7 +5421,7 @@
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
-   "evaluated_on": "2026-11-11",
+   "evaluated_on": "2026-11-12",
    "evaluation_depth": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -5467,7 +5467,7 @@
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
-   "evaluated_on": "2026-11-11",
+   "evaluated_on": "2026-11-12",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "evidence_of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
    "evidence_of_molecule": "Vigabatrin: tested in a WWOX system (7 assertion(s): 2 benefit, 3 null, 1 partial_benefit, 1 unresolved)",
@@ -5552,7 +5552,7 @@
    "could_rise": "would rise to F2/F1 with a first signed result of the intervention in a WWOX system against an untreated same-genotype comparator; criteria not met now: a signed result of the intervention in a WWOX system exists; an outside-WWOX harm or null signal stands without a favourable outside signal; the signed rows behind this position were read beyond abstract, query or unknown depth (found: 2 row(s)) | further questions: a T-type measurement in the Wwox model, to test whether the ethosuximide sensitivity is T-type mediated at all | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
    "counter_evidence_statements": "IT12 P2.2 (dated 2026-10-31): the only WWOX link of apinocaltamide is the ethosuximide result, and that result should not be carried to apinocaltamide as T-type evidence: ethosuximide has a measured non-T-type target (GIRK) inside or below the labelled plasma range in oocytes (PMID 37275776 Fig 7B), and T-type mediation is not measured in any Wwox system. Group G4a is unchanged.",
    "depth_of_evidence": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
-   "evaluated_on": "2026-11-11",
+   "evaluated_on": "2026-11-12",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -5593,7 +5593,7 @@
    "could_rise": "already at the top group; it holds while no null, unfavourable or mixed WWOX-system result appears beside it | further questions: an overexpression or ceiling endpoint and a tumour-surveillance endpoint (none exists); whether the organoid radial-glia and SATB2 findings (same-laboratory human-system results, PMID 34268881 and 42397075, context only, not separate positions) hold | stored work-order statement: Quantified myelination would add a controlled row on the same need; a failure would move the card to C2 by rule; a treated-after-onset arm would show whether the word recovery may be used for that endpoint. A post-onset arm that moved a circuit readout but not quantified sheath structure would match the precedents. The reverse pattern would be the first of…",
    "counter_evidence_statements": "Rescue is not normalisation: unmyelinated axons per field remain about 52 versus about 26 in wild type. | The neuron-promoter vector corrected neuronal function without correcting radial-glia abnormalities (organoid arm); SATB2 mRNA overshoots wild type up to about eleven-fold in treated organoids. | No ceiling is measured and no tumour-surveillance or overexpression-toxicity endpoint exists in the mouse study; applied recombinant WWOX lowered viability of human ESC-derived cortical neurons in a preprint. More is not safer.",
    "depth_of_evidence": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
-   "evaluated_on": "2026-11-11",
+   "evaluated_on": "2026-11-12",
    "evaluation_depth": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -5642,7 +5642,7 @@
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no reading-limit flag (found: graphical_reading); a favourable WWOX readout carries no design-limit flag (found: one_experiment); one and the same readout meets all four | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
    "counter_evidence_statements": "IT12 P2.2 figure audit (dated 2026-10-31, PMID 37275776 Fig 7B, image viewed): the stored statement that the GIRK2 crossings lie inside the therapeutic band is wrong on one clause. In oocytes the GIRK2 homomer activated by Gbeta-gamma is half-maximally inhibited at about 0.03 to 0.06 mM, about 4 to 8 times BELOW the shaded band (about 0.25 to 0.9 mM), while the brain-predominant GIRK1/2 plus Gbeta-gamma channel crosses at about 0.4 to 1 mM, inside it (partial block, about 20 to 60 percent). So a measured non-T-type target exists at labelled exposure, and the wording 'T-type potency is weak against the labelled range' is not the whole story: the ethosuximide result in the WWOX mouse (PTZ seizure score) cannot be attributed to T-type mediation. An oocyte datum, not a WWOX mechanism; the authors say neuronal GIRK2 homomer abundance is unknown. In a genetic absence model the relay-neuron T-type current is smaller than control and the burst-threshold difference follows Ih (PMID 24953239 Figs 5 and 6). No group or member evidence changes. | IT13 P3a (2026-10-31): ethosuximide's attribution to T-type channels is not supported by any measurement in Wwox tissue: the catalogue mechanism record lists T-type only, the source paper's own oocyte data show GIRK block near the labelled band (a GIRK route would predict the opposite sign; prior knowledge), the two PTZ-alone null cohorts of the figure differ by about the size of the drug effect, no interaction test, and P17 Cacna1g/h/Kcnj6 transcripts are inside the control-line background. The late-phase effect stays one experiment in one laboratory; the group is unchanged.",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
-   "evaluated_on": "2026-11-11",
+   "evaluated_on": "2026-11-12",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -5684,7 +5684,7 @@
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: nonspecific_also_in_wild_type, one_experiment_N6_arm); one and the same readout meets all four | further questions: GSK3beta/IMPase engagement at the exposure reached at tolerated levels (no activity row exists for lithium) | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
-   "evaluated_on": "2026-11-11",
+   "evaluated_on": "2026-11-12",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -5726,7 +5726,7 @@
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: one_experiment_n5_slices, tool_compound_d-APV); one and the same readout meets all four | further questions: gap-junction dependence (carbenoxolone, 87 percent reduction) and bursting in heterozygote slices as rival explanations of the d-APV result | stored work-order statement: E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand. A silencer that lowers firing without raising CTIP2/SATB2 would be read…",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
-   "evaluated_on": "2026-11-11",
+   "evaluated_on": "2026-11-12",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evidence_of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level; a tool-compound result supports the evaluation of the MECHANISM only, not of any clinical agent",
    "evidence_of_molecule": "d-APV (competitive NMDAR block; a tool compound, not a candidate drug): tested in a WWOX system (1 assertion(s): 1 benefit)",
@@ -5780,7 +5780,7 @@
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: If MYC difference vanishes within cell-cycle and potency strata, MYC is a marker and the need moves to inert for lever purposes. If genetic MYC lowering moves neuronal fractions in knockout beyond corrected cells and cell counts hold, the driver reading advances to a second model and the development question (a prenatal window) becomes the limit. If progeni…",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract",
-   "evaluated_on": "2026-11-11",
+   "evaluated_on": "2026-11-12",
    "evaluation_depth": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -5821,7 +5821,7 @@
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | further questions: an overexpression or ceiling endpoint and a tumour-surveillance endpoint (none exists); whether the organoid radial-glia and SATB2 findings (same-laboratory human-system results, PMID 34268881 and 42397075, context only, not separate positions) hold | stored work-order statement: It would resolve the two glucose rows and either remove the C2 or make it a C1.",
    "counter_evidence_statements": "Rescue is not normalisation: unmyelinated axons per field remain about 52 versus about 26 in wild type. | The neuron-promoter vector corrected neuronal function without correcting radial-glia abnormalities (organoid arm); SATB2 mRNA overshoots wild type up to about eleven-fold in treated organoids. | No ceiling is measured and no tumour-surveillance or overexpression-toxicity endpoint exists in the mouse study; applied recombinant WWOX lowered viability of human ESC-derived cortical neurons in a preprint. More is not safer.",
    "depth_of_evidence": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
-   "evaluated_on": "2026-11-11",
+   "evaluated_on": "2026-11-12",
    "evaluation_depth": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -5870,7 +5870,7 @@
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
-   "evaluated_on": "2026-11-11",
+   "evaluated_on": "2026-11-12",
    "evaluation_depth": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -5916,7 +5916,7 @@
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
-   "evaluated_on": "2026-11-11",
+   "evaluated_on": "2026-11-12",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "evidence_of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
    "evidence_of_molecule": "Vigabatrin: tested in a WWOX system (7 assertion(s): 2 benefit, 3 null, 1 partial_benefit, 1 unresolved)",
@@ -6001,7 +6001,7 @@
    "could_rise": "would rise to F2/F1 with a first signed result of the intervention in a WWOX system against an untreated same-genotype comparator; criteria not met now: a signed result of the intervention in a WWOX system exists; an outside-WWOX harm or null signal stands without a favourable outside signal; the signed rows behind this position were read beyond abstract, query or unknown depth (found: 2 row(s)) | further questions: a T-type measurement in the Wwox model, to test whether the ethosuximide sensitivity is T-type mediated at all | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
    "counter_evidence_statements": "IT12 P2.2 (dated 2026-10-31): the only WWOX link of apinocaltamide is the ethosuximide result, and that result should not be carried to apinocaltamide as T-type evidence: ethosuximide has a measured non-T-type target (GIRK) inside or below the labelled plasma range in oocytes (PMID 37275776 Fig 7B), and T-type mediation is not measured in any Wwox system. Group G4a is unchanged.",
    "depth_of_evidence": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
-   "evaluated_on": "2026-11-11",
+   "evaluated_on": "2026-11-12",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -6032,7 +6032,7 @@
   }
  ],
  "summary": {
-  "as_of": "2026-11-11",
+  "as_of": "2026-11-12",
   "classes": {
    "EXCL": "EXCLUDED FROM A SPECIFIC COMPARISON WITH REASON",
    "INSUFF": "STILL INSUFFICIENTLY EVALUATED",
@@ -6087,7 +6087,7 @@
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 1814
+   "receipt_ledger_lines": 1816
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -12895,7 +12895,7 @@
    "inputs": {
     "T1_cards": "596a99745ac51844",
     "T2_pertinence": "40d3f822d9a26184",
-    "T3_receipts": "5dc987892c7f2381",
+    "T3_receipts": "eb004e5634728cb4",
     "T4_needs": "98de133ad523d5dd",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "30921a9013e88d22"
@@ -13156,7 +13156,7 @@
     "42735667",
     "9168839"
    ],
-   "receipts_on_cited_pmids": 124,
+   "receipts_on_cited_pmids": 126,
    "research_objective": "",
    "tracks": [
     "A"
@@ -13457,7 +13457,7 @@
    "inputs": {
     "T1_cards": "567af33d373d3063",
     "T2_pertinence": "4744af9e5e721d31",
-    "T3_receipts": "1d37fe697bc85f82",
+    "T3_receipts": "d844ff95674cf62d",
     "T4_needs": "a9f2ecba72fedb1c",
     "T5_pharmacology": "83e16cf80f0d93c6",
     "T6_identity": "d72dab466f7f0934"
@@ -13714,7 +13714,7 @@
     "42837646",
     "9872743"
    ],
-   "receipts_on_cited_pmids": 38,
+   "receipts_on_cited_pmids": 40,
    "research_objective": "useful_partial_benefit",
    "tracks": [
     "A"
@@ -14164,7 +14164,7 @@
    "inputs": {
     "T1_cards": "7bfd38ca77fdd7b3",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "14653802d47ed514",
+    "T3_receipts": "b8f44c83af0a1330",
     "T4_needs": "6607eb58bf62a894",
     "T5_pharmacology": "4cfc018740c85d41",
     "T6_identity": "c8a9075059e82981"
@@ -14268,7 +14268,7 @@
     "35292925",
     "36828035"
    ],
-   "receipts_on_cited_pmids": 46,
+   "receipts_on_cited_pmids": 48,
    "research_objective": "",
    "tracks": [
     "A"
@@ -15486,7 +15486,7 @@
    "inputs": {
     "T1_cards": "31e63eae733b7b80",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "68ac0e50cc4834d9",
+    "T3_receipts": "8d94277621893cfd",
     "T4_needs": "a9f2ecba72fedb1c",
     "T5_pharmacology": "219331179cc8894b",
     "T6_identity": "bafc117d5dd84908"
@@ -15580,7 +15580,7 @@
     "36967744",
     "41489401"
    ],
-   "receipts_on_cited_pmids": 21,
+   "receipts_on_cited_pmids": 23,
    "research_objective": "useful_partial_benefit",
    "tracks": [
     "A"

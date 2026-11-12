@@ -1,129 +1,141 @@
 {
-  "_schema": "orchestrator-task-v1",
-  "TASK_ID": "ORCH-ROADMAP-IT47-20261112",
-  "OWNER": "orchestrator",
-  "ACTOR_ID": "orchestrator",
-  "PRIORITY": "P0",
-  "START_UTC": "2026-11-12T07:40:00Z",
-  "OBJECTIVE": "IT47: from the available hypotheses to effective pharmacological generation: make the generator consume the hypotheses HE46 made accessible (two packages of different structure), consume all of SCI46 including the expression follow-up with reviewed wording, correct two reasoning jumps in the IT46 experimental text, prove the change on a new case against an independent reference, show what to investigate first (five languages, phone), prepare the Claude Science comparison entry point, DREAM with an effect on the next work. Drug repurposing for WWOX loss of function; gene therapy outside the pharmacological proposals.",
-  "AUTHORISED_QUEUE_20261108": {
-    "MANDATE_STATE": "OPEN",
-    "OBJ_P0": {
-      "order": 1,
-      "steps": [
-        {
-          "step": "Close the previous cycle and fix the baseline: remote, checkout, record, deliveries, workflows (IT46 CI #660 and view publication #35 on cff57777, site check, IT46 record steps P7 and P10); distinguish battery candidate, integrated commit and published SHA",
-          "status": "IN_PROGRESS",
-          "owner": "orchestrator",
-          "evidence": "IT46 on main cff57777 (battery SHA 5a775909 PASS WITH SKIPS 244/11; integrated cfac505c refused by the publication gate for a markdown link, republished as cff57777). View publication #35 success; the five language editions checked on the public site (first-screen table and the GABA-A item present in EN, IT, FR, ES, DE). OPEN: Public release gate #660 on cff57777 in progress at the last check; phone readability not tested in a browser."
-        }
-      ]
-    },
-    "OBJ_P1": {
-      "order": 2,
-      "steps": [
-        {
-          "step": "Make the generator consume the hypotheses_only packages through hypotheses_for (one INV-18 package, one INV-08 package): explicit cell mapping to observation/source, relation, context, action, unresolved premise, competing explanations, discriminating measure; before/after by running the generator; boundary with Harness",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it47_20261112/p1_hypotheses_it47.md; conditional_proposals.py hypotheses_for + PKG_MAP (ph_k2p, nrf2, gsk3); 16 rows; reader rows KP1, NRF2-H1/H2, GSK3-H1; test_stage_it47.py. Cell-meaning review of the NRF2 mapping in progress (see INTEGRATION)."
-        }
-      ]
-    },
-    "OBJ_P2": {
-      "order": 3,
-      "steps": [
-        {
-          "step": "Consume all of SCI46 including the expression follow-up: what IT46 already took, remaining deltas with before/after, readouts for neurons, astrocytes and microglia, RNA vs protein vs localisation vs activity vs function, review of over-strong wording, no automatic ranking change",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it47_20261112/p2_sci46_it47.md: every SCI46 delta row classed; assay_rows_summary.py (first consumer of the 57-row value table); a live sentence corrected (V19 counter); reading limits clause on INV-08; no ranking change."
-        }
-      ]
-    },
-    "OBJ_P3": {
-      "order": 4,
-      "steps": [
-        {
-          "step": "Correct two possible jumps: the S5 amplitude/frequency wording (about a fifth read as to a fifth) and the inferences in p9_two_levers_it46.md (additivity, saturation, equal cellular variables vs equal network manipulations, E_GABA with conductance, threshold, time); coordinate with SCI47; propagate to live consumers with dated updates",
-          "status": "IN_PROGRESS",
-          "owner": "orchestrator",
-          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it47_20261112/p3_corrections_it47.md: S5 wording fixed (explicit numbers, weaker inference) and the two-lever inferences corrected with dated updates in V21, IT46 README, s5 result, p9_two_levers, IT46-Q04. OPEN: SCI47 package A scientific verification (not delivered at the last check)."
-        }
-      ]
-    },
-    "OBJ_P4": {
-      "order": 5,
-      "steps": [
-        {
-          "step": "New case not used to build the change: question and selection rule, snapshot and inputs, simple baseline, expected difference, failure outcomes, independent reference not made of engine labels; compare simple target search / previous path / path with hypothesis and context consumption; measure useful proposals, wrong links, explicit premises, next-experiment change, cost and time",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it47_20261112/p4_gsk3/prereg_it47.md (before rows read), result_it47.md, blind reader verify/VERDICTS.md; rows from the package consumed; one wrong link of mine (measure slot) and one wrong prediction (context) disclosed; reader cost from the transcript census."
-        }
-      ]
-    },
-    "OBJ_P5": {
-      "order": 6,
-      "steps": [
-        {
-          "step": "Make visible what to investigate first (investigations and open-questions map): question, decision, reason, in-silico work, indispensable new measurement, outcome that would change the pharmacological proposal; hypothesis / probe / compound to compare / intervention with functional evidence; AED separation of clinical evidence, preclinical rationale and untested hypothesis; five languages and phone",
-          "status": "IN_PROGRESS",
-          "owner": "orchestrator",
-          "evidence": "First-screen table (IT46) and cards INV-08, INV-09, INV-10, INV-18 with the new clauses and the layers separation for antiseizure drugs, five languages. OPEN: verification on a phone in a browser; the \"what changed\" view is carried by the cards, not by a new section."
-        }
-      ]
-    },
-    "OBJ_P6": {
-      "order": 7,
-      "steps": [
-        {
-          "step": "Claude Science comparison: documented entry point only unless complete artefacts arrive (phase A frozen independent vs phase B); no summary taken as full evidence",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it47_20261112/claude_science_entry_it47.md (entry point only; no artefact had arrived)."
-        }
-      ]
-    },
-    "OBJ_P7": {
-      "order": 8,
-      "steps": [
-        {
-          "step": "DREAM with an effect on the next work: source -> relation -> alternatives -> discriminating test -> consumer updated; revival triggers checked, not forced",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it47_20261112/dream_it47.md; relation_context_summary.py (75 pairs: 5 attributable, 22 not assignable, 48 unknown); DIS-017 and DIS-009 checked, not fired; next_batch_it47_20261112/BRIEFS.md."
-        }
-      ]
-    },
-    "OBJ_P8": {
-      "order": 9,
-      "steps": [
-        {
-          "step": "Autonomous queue after the first complete increment: second unconsumed package, a lost proposal by representation limit, two levers with a common endpoint, a duplicate removed, a short next-batch brief",
-          "status": "IN_PROGRESS",
-          "owner": "orchestrator",
-          "evidence": "Done: the GSK3 case. Queue left: B1 cell-class coverage of the 48 unknown targets (same hashed inputs, predictions first); SCI47 A/B consumption when delivered."
-        }
-      ]
-    },
-    "OBJ_P9": {
-      "order": 10,
-      "steps": [
-        {
-          "step": "Closure: verify_run batteries by SHA, land and publish, remote/CI/site for the relevant SHAs, cleanup of rebuildable temporaries, no cron or monitor added; pending checks stay open in the record",
-          "status": "TODO",
-          "owner": "orchestrator",
-          "evidence": "Battery on the final candidate by verify_run, landing, CI, site check, cleanup."
-        }
-      ]
+ "_schema": "orchestrator-task-v1",
+ "TASK_ID": "ORCH-ROADMAP-IT47-20261112",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "START_UTC": "2026-11-12T07:40:00Z",
+ "OBJECTIVE": "IT47: from the available hypotheses to effective pharmacological generation: make the generator consume the hypotheses HE46 made accessible (two packages of different structure), consume all of SCI46 including the expression follow-up with reviewed wording, correct two reasoning jumps in the IT46 experimental text, prove the change on a new case against an independent reference, show what to investigate first (five languages, phone), prepare the Claude Science comparison entry point, DREAM with an effect on the next work. Drug repurposing for WWOX loss of function; gene therapy outside the pharmacological proposals.",
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Close the previous cycle and fix the baseline: remote, checkout, record, deliveries, workflows (IT46 CI #660 and view publication #35 on cff57777, site check, IT46 record steps P7 and P10); distinguish battery candidate, integrated commit and published SHA",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "IT46 on main cff57777 (battery 5a775909 PASS WITH SKIPS 244/11; integrated cfac505c refused by the publication gate, republished cff57777). IT46 CI #660 success, view publication #35 success, five language editions checked. IT47 first increment: battery candidate 6991d539 = PASS WITH SKIPS (245 targets/11 skipped, verify_run 20261112-105142-1e955bfd); the landed commit is a later merge (HE47, SCI47 A and B, views, receipts) NOT covered by a battery: covered by targeted suites, view suite, lint, growth anchors, shareable audit and the push gate. OPEN: CI and site check on the IT47 landing SHA."
     }
+   ]
   },
-  "INTEGRATION_20261112": {
-    "1_mandate_association": "marker emitted as a message of its own; mandate_watch check --json: state RUNNING, session 4325d70d (verified 2026-11-12).",
-    "2_record": "statuses and evidence updated from the actual results; open items kept (CI #660, phone check, SCI47 A/B).",
-    "3_cell_meaning": "IN_PROGRESS: separate observation, recorded support and falsifiable prediction in the NRF2 mapping; rows of a package are not all rivals.",
-    "4_sci47": "WAITING: consume A/B when delivered; corrections already applied vs new deltas will be listed; no pharmacological-prediction claim from new rows.",
-    "5_cost": "DONE: GSK3 reader cost replaced by the transcript census (output 44,189; cache written 206,000; cache read 5,261,125; peak context 214,695; 47 turns); other readers corrected by dated notes."
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Make the generator consume the hypotheses_only packages through hypotheses_for (one INV-18 package, one INV-08 package): explicit cell mapping to observation/source, relation, context, action, unresolved premise, competing explanations, discriminating measure; before/after by running the generator; boundary with Harness",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "disease-models/wwox/research/drug_repurposing/generation_it47_20261112/p1_hypotheses_it47.md; conditional_proposals.py hypotheses_for + PKG_MAP (ph_k2p, nrf2, gsk3); 16 rows; reader rows KP1, NRF2-H1/H2, GSK3-H1; test_stage_it47.py. Cell-meaning review of the NRF2 mapping in progress (see INTEGRATION)."
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Consume all of SCI46 including the expression follow-up: what IT46 already took, remaining deltas with before/after, readouts for neurons, astrocytes and microglia, RNA vs protein vs localisation vs activity vs function, review of over-strong wording, no automatic ranking change",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "disease-models/wwox/research/drug_repurposing/generation_it47_20261112/p2_sci46_it47.md: every SCI46 delta row classed; assay_rows_summary.py (first consumer of the 57-row value table); a live sentence corrected (V19 counter); reading limits clause on INV-08; no ranking change."
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Correct two possible jumps: the S5 amplitude/frequency wording (about a fifth read as to a fifth) and the inferences in p9_two_levers_it46.md (additivity, saturation, equal cellular variables vs equal network manipulations, E_GABA with conductance, threshold, time); coordinate with SCI47; propagate to live consumers with dated updates",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Two jumps corrected (p3_corrections_it47.md). SCI47 A consumed (apply_it47_sci47.py; receipts -76/-77 recorded). SCI47 B consumed in part: KCNQ2 species-difference withdrawal as a dated update in the IT46 README, question IT47-Q04 (OPC specificity control for both bath levers), tail receipts -75 for 38116420 and 21964340 recorded (ledger 1,818). NOT applied here (conflict with branch task/it47b): the cell_context_it46.tsv note and V10 translation. B's inferences were not independently verified by SCI47; no pharmacological-prediction claim."
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "New case not used to build the change: question and selection rule, snapshot and inputs, simple baseline, expected difference, failure outcomes, independent reference not made of engine labels; compare simple target search / previous path / path with hypothesis and context consumption; measure useful proposals, wrong links, explicit premises, next-experiment change, cost and time",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "disease-models/wwox/research/drug_repurposing/generation_it47_20261112/p4_gsk3/prereg_it47.md (before rows read), result_it47.md, blind reader verify/VERDICTS.md; rows from the package consumed; one wrong link of mine (measure slot) and one wrong prediction (context) disclosed; reader cost from the transcript census."
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "Make visible what to investigate first (investigations and open-questions map): question, decision, reason, in-silico work, indispensable new measurement, outcome that would change the pharmacological proposal; hypothesis / probe / compound to compare / intervention with functional evidence; AED separation of clinical evidence, preclinical rationale and untested hypothesis; five languages and phone",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "First-screen table (IT46) and cards INV-08, INV-09, INV-10, INV-18 with the new clauses and the layers separation for antiseizure drugs, five languages. OPEN: verification on a phone in a browser; the \"what changed\" view is carried by the cards, not by a new section."
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "Claude Science comparison: documented entry point only unless complete artefacts arrive (phase A frozen independent vs phase B); no summary taken as full evidence",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "disease-models/wwox/research/drug_repurposing/generation_it47_20261112/claude_science_entry_it47.md (entry point only; no artefact had arrived)."
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "DREAM with an effect on the next work: source -> relation -> alternatives -> discriminating test -> consumer updated; revival triggers checked, not forced",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "disease-models/wwox/research/drug_repurposing/generation_it47_20261112/dream_it47.md; relation_context_summary.py (75 pairs: 5 attributable, 22 not assignable, 48 unknown); DIS-017 and DIS-009 checked, not fired; next_batch_it47_20261112/BRIEFS.md."
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "Autonomous queue after the first complete increment: second unconsumed package, a lost proposal by representation limit, two levers with a common endpoint, a duplicate removed, a short next-batch brief",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Done: the GSK3 case. Queue left: B1 cell-class coverage of the 48 unknown targets (same hashed inputs, predictions first); SCI47 A/B consumption when delivered."
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "Closure: verify_run batteries by SHA, land and publish, remote/CI/site for the relevant SHAs, cleanup of rebuildable temporaries, no cron or monitor added; pending checks stay open in the record",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": "Battery on the final candidate by verify_run, landing, CI, site check, cleanup."
+    }
+   ]
   }
+ },
+ "INTEGRATION_20261112": {
+  "1_mandate_association": "marker emitted as a message of its own; mandate_watch check --json: state RUNNING, session 4325d70d (verified 2026-11-12).",
+  "2_record": "statuses and evidence updated from the actual results; open items kept (CI #660, phone check, SCI47 A/B).",
+  "3_cell_meaning": "IN_PROGRESS: separate observation, recorded support and falsifiable prediction in the NRF2 mapping; rows of a package are not all rivals.",
+  "4_sci47": "A and B consumed; tail receipts recorded. Corrections already applied by A (S5 wording, two-lever inferences) listed apart from B's new deltas (KCNQ2 low human value not a species difference; OPC plausible alternative; four NRF2 wording corrections already as dated updates by SCI47). No prediction claim.",
+  "5_cost": "DONE: GSK3 reader cost replaced by the transcript census (output 44,189; cache written 206,000; cache read 5,261,125; peak context 214,695; 47 turns); other readers corrected by dated notes."
+ },
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261112-105142-1e955bfd",
+   "label": "battery1",
+   "sha": "6991d53936c5d164196021d138a80dfda1c46eff",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-105142-1e955bfd",
+   "log_sha256": "1ec33980494e6ab4e8d291de88fcc0de980c4b1b49eb713901f43de489aef640",
+   "clone": "REMOVED"
+  }
+ ]
 }

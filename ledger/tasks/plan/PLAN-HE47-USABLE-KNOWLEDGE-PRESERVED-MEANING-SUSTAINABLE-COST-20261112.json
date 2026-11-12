@@ -1,0 +1,140 @@
+{
+  "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+  "TASK_ID": "PLAN-HE47-USABLE-KNOWLEDGE-PRESERVED-MEANING-SUSTAINABLE-COST-20261112",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "plan",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-11-12",
+  "OBJECTIVE": "HE47 (full mandate H1-H8 received 2026-11-12): capabilities already built are actually used; scientific meaning of inputs preserved; repeated work, context cost and useless temporaries reduced.",
+  "worktree": ".claude/worktrees/he47",
+  "branch": "task/he47",
+  "CURRENT_STATE": "COMPLETE",
+  "CHECKPOINT": {
+    "last_verified_result": "battery on 353015299e488de4c0a68a4f17d6c6ec72fb8065 PASS WITH SKIPS (245 targets, 12 skipped); integration and publication 8541f097fa6ca3fa61326d962106614c3506d331 (gate PASS, ls-remote verified); CI on 8541f097: Public release gate #661 success, shareable view #36 success",
+    "first_incomplete_work": "none for HE47; IT47 and SCI47 land after this and the later lander regenerates the view pages",
+    "active_processes": "none",
+    "real_dependencies": "none open for HE47",
+    "next_executable_step": "none"
+  },
+  "AUTHORISED_QUEUE_20261112": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_H1": {
+      "order": 1,
+      "title": "Explicit structured intention replaces the textual 'independent route' guard in the IT46 comparison engine; keep apart source reading depth, what the proposition measures, relation to the mechanism, direction of evidence, reagent role in the comparison, support for a therapeutic proposal; counter-evidence kept, a mention does not promote a role, unclassified case explicit, old packages still readable, no new gate; fields agreed with IT47 and Science; proven on two packages of different mechanisms",
+      "steps": [
+        {
+          "step": "Explicit structured intention replaces the textual 'independent route' guard in the IT46 comparison engine; keep apart source reading depth, what the proposition measures, relation to the mechanism, direction of evidence, reagent role in the comparison, support for a therapeutic proposal; counter-evidence kept, a mention does not promote a role, unclassified case explicit, old packages still readable, no new gate; fields agreed with IT47 and Science; proven on two packages of different mechanisms",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "relation/direction cells (contract in hypothesis_package.py, agreed with IT46 Orchestrator and Science); engine replaces INDEPENDENT_ROUTE; INV-08 before/after (MMF, KI-696, DMF); INV-05/INV-07 unchanged; he47 README 1"
+        }
+      ]
+    },
+    "OBJ_H2": {
+      "order": 2,
+      "title": "From reader to real consumer: support IT47 at the technical boundary (qualified local ids, cell provenance, explicit ambiguity and missing columns, empty vs absent file, no silent equivalence); verify one real generator run; examine the GSK3/eIF2B multi-investigation package with minimum reuse of the current format",
+      "steps": [
+        {
+          "step": "From reader to real consumer: support IT47 at the technical boundary (qualified local ids, cell provenance, explicit ambiguity and missing columns, empty vs absent file, no silent equivalence); verify one real generator run; examine the GSK3/eIF2B multi-investigation package with minimum reuse of the current format",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "technical boundary: AMBIGUOUS_KEY state, folder for several investigations pinned by test; NOT shown: a real generator run (no generator calls hypotheses_for; IT47's); GSK3/eIF2B needs one manifest row per investigation, choice left to owners; README 5"
+        }
+      ]
+    },
+    "OBJ_H3": {
+      "order": 3,
+      "title": "Comparisons keep scope and uncertainty: find a concretely misleading comparison_engine output first (valid comparison hidden by an incompatible one, pair-not-comparable vs compound-not-usable, verified perturbation vs endpoint adequacy, endpoint/time/cell/unit association); parser assumptions (room temperature, conventional range, pHo/pHi/pH shift/difference, inherited reference provenance and overrides)",
+      "steps": [
+        {
+          "step": "Comparisons keep scope and uncertainty: find a concretely misleading comparison_engine output first (valid comparison hidden by an incompatible one, pair-not-comparable vs compound-not-usable, verified perturbation vs endpoint adequacy, endpoint/time/cell/unit association); parser assumptions (room temperature, conventional range, pHo/pHi/pH shift/difference, inherited reference provenance and overrides)",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "pair-count scope in comparison states; RT-qPCR no longer room temperature (13 reasons, 0 states over 1108 pairs); by_convention flag; unplaced pH wording; README 2"
+        }
+      ]
+    },
+    "OBJ_H4": {
+      "order": 4,
+      "title": "Reuse public RNA-table loading: measure real duplication across SCI44/SCI46/IT46; implement one parametric function only if it removes copies without losing provenance, else document the command and declare CHANGE = NONE; reproduce two concluded analyses and one small input with missing/ambiguous ids",
+      "steps": [
+        {
+          "step": "Reuse public RNA-table loading: measure real duplication across SCI44/SCI46/IT46; implement one parametric function only if it removes copies without losing provenance, else document the command and declare CHANGE = NONE; reproduce two concluded analyses and one small input with missing/ambiguous ids",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "rna_class_means.py reproduces 6 of 6 committed outputs byte for byte; missing-not-zero report; README 4"
+        }
+      ]
+    },
+    "OBJ_H5": {
+      "order": 5,
+      "title": "Cost: one demonstrable dominant factor, comparable task measured before/after, correctness and coverage preserved; no re-proposal of the withdrawn audit memoisation without new evidence",
+      "steps": [
+        {
+          "step": "Cost: one demonstrable dominant factor, comparable task measured before/after, correctness and coverage preserved; no re-proposal of the withdrawn audit memoisation without new evidence",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "measurement only (session_model_census --carry) and a doc-only habit row; CHANGE for the cost itself: none demonstrated; README 6"
+        }
+      ]
+    },
+    "OBJ_H6": {
+      "order": 6,
+      "title": "Verification, temporaries and continuity: verify_run in the three sessions, actor-sharing safety, no indiscriminate cleanup; continuity on IT47 and SCI47 (marker, record location, live-process wait, no duplicate restart, pending verification as open step); ci_runs single wait per workflow/SHA and API reset respected",
+      "steps": [
+        {
+          "step": "Verification, temporaries and continuity: verify_run in the three sessions, actor-sharing safety, no indiscriminate cleanup; continuity on IT47 and SCI47 (marker, record location, live-process wait, no duplicate restart, pending verification as open step); ci_runs single wait per workflow/SHA and API reset respected",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "reap exact by session (defect reproduced, fixed); ci_runs shared read; battery 353015299e48 through verify_run: PASS WITH SKIPS (245 targets, 12 skipped), evidence /tmp/legend-verify-keep/20261112-092042-363cf8c6; IT47 association RUNNING session 4325d70d on the checkout holding its record; SCI47 recipe row added; README 3, 9"
+        }
+      ]
+    },
+    "OBJ_H7": {
+      "order": 7,
+      "title": "DREAM oriented to use: recent correction not reaching a consumer, capability available but not called, association that changes the next brief, habit that repeats work; show where behaviour changes; System One optional",
+      "steps": [
+        {
+          "step": "DREAM oriented to use: recent correction not reaching a consumer, capability available but not called, association that changes the next brief, habit that repeats work; show where behaviour changes; System One optional",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "README 7"
+        }
+      ]
+    },
+    "OBJ_H8": {
+      "order": 8,
+      "title": "Claude Science comparison preparation, light: reuse existing path, snapshot/originals/tools/code/parameters, retrieval vs inference vs proposal vs validation; Auto mode issue belongs to the external runtime",
+      "steps": [
+        {
+          "step": "Claude Science comparison preparation, light: reuse existing path, snapshot/originals/tools/code/parameters, retrieval vs inference vs proposal vs validation; Auto mode issue belongs to the external runtime",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "README 8; nothing built, existing package layout reused"
+        }
+      ]
+    }
+  },
+  "VERIFICATION_EVIDENCE": [
+    {
+      "run_id": "20261112-092042-363cf8c6",
+      "label": "battery",
+      "sha": "353015299e488de4c0a68a4f17d6c6ec72fb8065",
+      "state": "CONCLUDED",
+      "exit_code": 0,
+      "evidence_dir": "/tmp/legend-verify-keep/20261112-092042-363cf8c6",
+      "log_sha256": "8b57db254fe9fcec2000c9b5bf6e2b2e2347638d936876c030813279f7c31d33",
+      "clone": "REMOVED"
+    },
+    {
+      "label": "ci",
+      "sha": "8541f097fa6ca3fa61326d962106614c3506d331",
+      "state": "CONCLUDED",
+      "result": "Public release gate #661 success; Publish the shareable view #36 success",
+      "note": "commits b4cbf00d, ea6468e8, 3b2fac58 and a81c064f came after the battery SHA and were covered by targeted suites only"
+    }
+  ],
+  "MANDATE_STATE": "COMPLETE"
+}

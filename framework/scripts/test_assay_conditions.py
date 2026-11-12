@@ -261,5 +261,38 @@ class StructuredCells(unittest.TestCase):
             self.assertEqual(ac.parse(f"system=cell line; readout=mRNA; knockdown={kd}")["fields"]["nrf2_loss_verified"]["values"], [want], kd)
 
 
+class ParserAssumptions(unittest.TestCase):
+    """HE47 H3: a convention is flagged as one, an assay name is not a temperature, a pH wording the reader cannot place stays visible."""
+    def test_rt_qpcr_is_an_assay_and_not_room_temperature(self):
+        r = ac.parse("system=cultured_cells; HT22 line, 1 percent O2 6 to 72 h, RT-qPCR and western blot")
+        self.assertNotIn("temperature_C", r["fields"])
+        self.assertIn("temperature_C", ac.parse("system=cultured_cells; recordings at RT")["fields"])
+
+    def test_room_temperature_is_an_interval_the_reader_supplied_and_says_so(self):
+        f = ac.parse("system=cultured_cells; room temperature")["fields"]["temperature_C"]
+        self.assertEqual(f["convention"], [ac.ROOM_C])
+        self.assertNotIn("convention", ac.parse("system=cultured_cells; 22-24 C")["fields"]["temperature_C"])
+        self.assertNotIn("convention", ac.parse("system=cultured_cells; room temperature (22-24 C)")["fields"]["temperature_C"])
+
+    def test_an_incompatibility_that_rests_on_the_convention_is_marked(self):
+        r = ac.compare("system=cultured_cells; room temperature", "system=cultured_cells; 36 C")
+        self.assertEqual((r["state"], r["differ"][0].get("by_convention")), (ac.INCOMPATIBILITY, True))
+        r = ac.compare("system=cultured_cells; 22 C", "system=cultured_cells; 36 C")
+        self.assertNotIn("by_convention", r["differ"][0])
+
+    def test_pH_wording_the_reader_cannot_place_is_listed_and_never_becomes_a_value(self):
+        r = ac.parse("system=cultured_cells; pH jump 7.4 to 6.5")
+        self.assertFalse([k for k in r["fields"] if k.startswith("pH")])
+        self.assertTrue(any("pH wording not recognised" in u for u in r["unplaced"]))
+
+    def test_a_pH_with_a_concentration_next_to_it_is_not_flagged(self):
+        r = ac.parse("system=cultured_cells; pH-dependent block at 2 uM")
+        self.assertFalse(any("pH wording" in u for u in r["unplaced"]))
+
+    def test_pHo_pHi_step_and_difference_stay_four_fields(self):
+        f = ac.parse("system=cultured_cells; pHo 7.4, pHi 7.2, step from pH 7.4 to 6.0 and a pH change of 0.5 units")["fields"]
+        self.assertTrue({"pH_extracellular", "pH_intracellular", "pH_delta"} <= set(f))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

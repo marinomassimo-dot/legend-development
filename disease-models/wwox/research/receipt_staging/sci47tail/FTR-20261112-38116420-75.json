@@ -1,0 +1,35 @@
+{
+ "analysis_time_precision": "minute",
+ "record_kind": "contemporaneous_receipt",
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "source_kind": "fulltext_local",
+ "workflow": "SCI47 tail (ORCH-SCI47-20261112), Orchestrator targeted read of preserved bytes for the IT45 reading debt (HE46 H5, IT46 P6); prepared as a JSON file for the integrator; the ledger was not written by the preparing actor.",
+ "analysis_at": "2026-11-12T09:30:00Z",
+ "event_at": "2026-11-12T09:45:00Z",
+ "event_id": "FTR-20261112-38116420-75",
+ "study_id": {
+  "pmid": "38116420"
+ },
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/rescued_from_scratch_he46/b14bd8a1e330__PMID38116420_pmc_html.txt (PMC10726478 HTML text, bytes preserved by HE46; SHA-256 in source_fingerprint)",
+ "source_fingerprint": "b14bd8a1e33014527df41a0e4b736abe1f77e6152989635d8ed8b1d9012b5182",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "results": "read",
+  "discussion": "read",
+  "methods": "not_present",
+  "limitations": "not_present",
+  "tables": "not_read",
+  "figures": "captions_only",
+  "supplementary": "unavailable",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/tail_sci47_20261112/README.md"
+ ],
+ "evidence_basis": [
+  "Whole preserved text read from the Abstract to the Supporting Information note (lines 189-1037): introduction, Results (Nrf2 translocation and IL-23 assays, glutathione stability, Figure 2 mechanism, Ames, off-target panel, liver microsomes, mouse PK, EAE), Discussion. Figure images 1, 2, 3, 4 and Scheme 1 opened (Figures 1-4 and Scheme 1 of the eight extracted images); images 6-8 not opened, so figures is captions_only. The cell values of Table 1 are not in the preserved text and were not obtained, so tables is not_read (Table 2, the PK table, is inline text and was read). Supporting Information is gated and was not reached. This is a targeted read for the question 'does the paper carry a sulforaphane Nrf2 value, and which cells and assays carry Nrf2 readouts', not a complete read."
+ ]
+}
