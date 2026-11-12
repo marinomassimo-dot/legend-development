@@ -46,9 +46,9 @@
    "steps": [
     {
      "step": "Correct two possible jumps: the S5 amplitude/frequency wording (about a fifth read as to a fifth) and the inferences in p9_two_levers_it46.md (additivity, saturation, equal cellular variables vs equal network manipulations, E_GABA with conductance, threshold, time); coordinate with SCI47; propagate to live consumers with dated updates",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Two jumps corrected (p3_corrections_it47.md). SCI47 A consumed (apply_it47_sci47.py; receipts -76/-77 recorded). SCI47 B consumed in part: KCNQ2 species-difference withdrawal as a dated update in the IT46 README, question IT47-Q04 (OPC specificity control for both bath levers), tail receipts -75 for 38116420 and 21964340 recorded (ledger 1,818). NOT applied here (conflict with branch task/it47b): the cell_context_it46.tsv note and V10 translation. B's inferences were not independently verified by SCI47; no pharmacological-prediction claim."
+     "evidence": "Two jumps corrected (generation_it47_20261112/p3_corrections_it47.md). SCI47 A consumed (apply_it47_sci47.py) and B consumed: KCNQ2 species-difference withdrawal (IT46 README update, V10/INV-18 clause 'IT47 update 2' in five languages), IT47-Q04, tail receipts -75 recorded (ledger 1,818). B's inferences were not independently verified by SCI47; no pharmacological-prediction claim; a low RNA value is not a species difference and OPC involvement is plausible, not shown."
     }
    ]
   },
@@ -68,9 +68,9 @@
    "steps": [
     {
      "step": "Make visible what to investigate first (investigations and open-questions map): question, decision, reason, in-silico work, indispensable new measurement, outcome that would change the pharmacological proposal; hypothesis / probe / compound to compare / intervention with functional evidence; AED separation of clinical evidence, preclinical rationale and untested hypothesis; five languages and phone",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "First-screen table (IT46) and cards INV-08, INV-09, INV-10, INV-18 with the new clauses and the layers separation for antiseizure drugs, five languages. OPEN: verification on a phone in a browser; the \"what changed\" view is carried by the cards, not by a new section."
+     "evidence": "Priorities visible in the investigations and open-questions map (IT47-Q01..Q04), dashboard first-screen table and V10/V19/V21 in five languages; phone widths covered by RealViewports at 360/390 px in the view suite (223 tests OK with a working Chromium revision, see P9)."
     }
    ]
   },
@@ -101,9 +101,9 @@
    "steps": [
     {
      "step": "Autonomous queue after the first complete increment: second unconsumed package, a lost proposal by representation limit, two levers with a common endpoint, a duplicate removed, a short next-batch brief",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Done: the GSK3 case. Queue left: B1 cell-class coverage of the 48 unknown targets (same hashed inputs, predictions first); SCI47 A/B consumption when delivered."
+     "evidence": "Queue item B1 (cell-class rows for 30 target genes, predictions fixed before the run; 12 of 17 held; coverage recounted; relation_context_summary) on branch task/it47b, merged with main and the SCI47 B qualification; RNA is not function."
     }
    ]
   },
@@ -112,9 +112,9 @@
    "steps": [
     {
      "step": "Closure: verify_run batteries by SHA, land and publish, remote/CI/site for the relevant SHAs, cleanup of rebuildable temporaries, no cron or monitor added; pending checks stay open in the record",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "Battery on the final candidate by verify_run, landing, CI, site check, cleanup."
+     "evidence": "Landed so far: d280c7c3 (CI #666 FAIL: stale ranking.json, my miss), 3b877bfc+4ff3ced5 (ranking fix, Chromium launcher order; CI #667 pending), 2afd1eea (find_chromium skips a candidate that cannot start; view suite 223 OK with the working Snap revision 3583). Batteries: 6991d539 PASS WITH SKIPS (earlier candidate only). The Snap launcher fails in turbovnc-desktop.service shells (Harness and mine): environment limit, not a content failure. OPEN: B1 candidate battery with CHROME_BIN=/snap/chromium/3583/..., landing, CI and site on the final SHAs."
     }
    ]
   }
