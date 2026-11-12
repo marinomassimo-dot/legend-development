@@ -133,6 +133,16 @@
    "log_sha256": "c2d5bd7524e1db84bb8794805700c9436b8ff577b86700a5f5c69789e1f0777f",
    "clone": "REMOVED",
    "attribution": "PASS WITH SKIPS (247 targets, 12 skipped), on the merge candidate 2d6de16a; verdict attributed to that SHA only; later commits are closure-only (record, tail note)"
+  },
+  {
+   "run_id": "20261112-205956-e81247da",
+   "label": "battery",
+   "sha": "e1a854fd7cf0bb077b7e203caef6a5383a7d3804",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-205956-e81247da",
+   "log_sha256": "24dc7e2a55c46f57df6ab6ce8776a8be3aa12839fbb8afe09f05569f7239db8c",
+   "clone": "KEPT"
   }
  ]
 }
