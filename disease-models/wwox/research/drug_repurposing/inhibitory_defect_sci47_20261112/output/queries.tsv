@@ -1,0 +1,12 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q01	paper_packet.py claim	--pmid 34634460 --actor ib-z --note ORCH-SCI47-20261112	2026-11-12T08:25Z	claim recorded	other claims (vf-10, vf-15, vf-18, vf-an, vf-mh) exist from earlier tasks
+Q02	fulltext_receipts.py status	--pmid 34634460	2026-11-12T08:25Z	10+ prior events; prior_receipt used FTR-20260810-34634460-02	ledger lookup
+Q03	Europe PMC REST search	query=EXT_ID:34634460 (core, json)	2026-11-12T08:25Z	1	identity: PMC8609180, DOI 10.1016/j.nbd.2021.105529
+Q04	NCBI BioC pmcoa (plain curl)	pmcoa.cgi/BioC_xml/34634460/unicode	2026-11-12T08:25Z	899-byte stub	no text; not used
+Q05	Europe PMC fullTextXML	PMC8609180/fullTextXML	2026-11-12T08:25Z	HTTP 200, 156866 bytes	full text read in scratch
+Q06	Europe PMC supplementaryFiles	PMC8609180/supplementaryFiles	2026-11-12T08:25Z	first request slow; killed by the session (pkill) at about 08:28 when it was at 389 KB; request repeated on the same route	second request HTTP 200, 2701927 bytes (zip: mmc1.docx and figure files); supplement text and figures read
+Q07	PMC CDN blobs (figures)	cdn.ncbi.nlm.nih.gov/pmc/blobs/079f/8609180/<hash from the XML>/gr4.jpg and gr6.jpg	2026-11-12T08:28Z	HTTP 200 (first attempt with a wrong hash path returned an HTML 404 page)	Fig 4 and Fig 6 rasters
+Q08	PMC CDN blobs (supplement)	cdn.ncbi.nlm.nih.gov/pmc/blobs/079f/8609180/61c353e21928/mmc1.docx	2026-11-12T08:29Z	HTTP 404 HTML page	unreachable by this URL; not pursued
+Q09	PMC article instance bin	pmc.ncbi.nlm.nih.gov/articles/instance/8609180/bin/mmc1.docx	2026-11-12T08:29Z	interstitial page 'Preparing to download' (browser-style check)	recorded as unreachable by that route; not retried or evaded. The Europe PMC supplementary request (Q06) had been issued before this and was completed on its own route; the Orchestrator may judge whether Q06 counts as 'another route'
+Q10	PubMed search (tool)	Repudi Wwox neuronal deletion hypomyelination epilepsy Synapsin Cre	2026-11-12T08:30Z	0	no new source taken (the Repudi 2021 paper is PMID 33914858, already read by an earlier verifier)
+Q11	git grep, main tree and inputs_it46	strings fifth, 18%, '20 percent', 'more than', sIPSC with frequency/amplitude	2026-11-12T08:27Z	see inversion_check.md	absence statements are bounded to this perimeter; two large registries not grepped
