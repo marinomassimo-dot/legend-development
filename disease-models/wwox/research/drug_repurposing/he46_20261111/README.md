@@ -187,3 +187,15 @@ Who creates the clones: nobody in code. `run_release_regressions.py` only runs t
 | classification verified | `RUNNING` by recent activity for both today; a long idle battery wait stays `RUNNING` only through a registered `mandate_watch job` or recent background-task output (existing tests cover both, one fixture was added for the near-miss) |
 | resume request supported | `RESUME` is requested only for an absent or idle silent session with work left, under its own id, once per record change, and never for a live session (existing tests) |
 | resume proven | not proven here and not claimed: it needs a live runtime, a trusted workspace and the bound id; no live session was stopped to test it |
+
+## 11. Verification by SHA, landing and removal (H10)
+
+| What | SHA | Verdict |
+|---|---|---|
+| battery by hand, first try | bd4befd1 | stopped after `test_release_runner_verdict.py` failed: a new test without `verbosity=2` (fixed) |
+| battery by hand, H1-H3 | 33428d06 | stopped at 218 of about 240 suites, no failure before it; superseded by the next row; clone removed by hand after the log was copied to `/tmp/he46_keep/` |
+| battery through `verify_run.py`, run 20261111-230442-37a1b947 | c0789939 | FAIL: `test_ci_runs.py` (one test needed a GitHub remote) and no corpus linked from a worktree source; both fixed; clone removed by the tool (0.91 GB), log and manifest kept |
+| battery through `verify_run.py`, run 20261112-000627-eaec0a83 | f5ef610f | **PASS WITH SKIPS (242 targets, 11 skipped)**; clone removed by the tool (0.91 GB freed); evidence `/tmp/legend-verify-keep/20261112-000627-eaec0a83/` (`run.log` 8,032 lines, `manifest.json`, `clone_state.txt`), pointer in the mandate record (`VERIFICATION_EVIDENCE`, log SHA-256) |
+| after f5ef610f, not covered by a battery | 3ce701d5 (structured-cell keys, identity declarations, ChEMBL recipe) and two merges of `main` (SCI46 documents and scripts only) | targeted suites (`test_assay_conditions` 42, `test_hypothesis_package` 35, `test_compound_identity` 26, `test_verify_run` 18, `test_ci_runs` 7, `test_mandate_watch` 29, `test_mandate_continuity`, `test_comparison_engine` 16, routing, release surface, runner verdict, section references, link targets), lint WARN (pre-existing), receipts chain OK (1,787), growth anchors PASS, generated surfaces FRESH on the merge result, push gate (run by `safe_push.py`) |
+
+Landed on `main` as 36eb86fb (`task_close.py`, `--no-ff`); worktree detached, branch deleted. Removal of the upgrades: each section above ends with its own "Remove" line; the shortest summary: revert the commits of `assay_conditions.py` (sections 1 and the structured keys), delete the four `hypotheses_only` rows of `hypothesis_packages.tsv` (section 3), delete `verify_run.py`, `ci_runs.py` and their tests (sections 5 and 9), revert the `find_near_marker` addition of `mandate_watch.py` (section 10). The preserved copies in `files/fulltext/rescued_from_scratch_he46/` are copies and may be removed when the operator wishes.
