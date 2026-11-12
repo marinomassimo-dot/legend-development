@@ -73,9 +73,10 @@ _STOP = {"and", "plus", "with", "for", "at", "in", "from", "each", "or", "then"}
 _NUMPH = r"\d{1,2}(?:[.,]\d+)?"
 _PH_STEP = re.compile(rf"\s*(?:step\b\W{{0,8}}|from\s+(?:pH\s*)?)(?P<a>{_NUMPH})\s*(?:to|→|->)\s*(?P<b>{_NUMPH})", re.I)
 _PH_SERIES = re.compile(rf"\s*(?:of |=|:|at |\()?\s*(?P<a>{_NUMPH})(?!\d|[.,]\d)(?:\s*(?P<sep>to|-|–)\s*(?P<b>{_NUMPH})(?!\d|[.,]\d)|(?P<more>(?:\s*(?:,|or|and)\s*{_NUMPH}(?!\d|[.,]\d)(?!\s*(?:[pnuµμm]M\b|mV\b|C\b)))+))?")
+_PH_NUMBER_NEAR = re.compile(r"(?<![\w.])\d{1,2}(?:[.,]\d+)?(?!\d)(?!\s*(?:[pnuµμm]M\b|mV\b|°?\s*C\b|%|min\b|h\b|s\b))")
 _PH_DELTA = re.compile(r"(?P<lo>\d+(?:\.\d+)?)(?:\s*(?:to|-|–)\s*(?P<hi>\d+(?:\.\d+)?))?\s*(?:pH\s*)?units?\b", re.I)
 _TEMP = re.compile(rf"(?<![\w.])(?P<lo>{NUM})(?:\s*(?:to|-|–)\s*(?P<hi>{NUM}))?\s*(?:°\s*C|º\s*C|˚\s*C|C)(?![\w+/-])")
-_ROOM = re.compile(r"\broom temperature\b|\bambient temperature\b|\bRT\b", re.I)
+_ROOM = re.compile(r"\broom temperature\b|\bambient temperature\b|\bRT\b(?![-/\w])", re.I)   # "RT-qPCR" and "RT/PCR" are assays, not a temperature
 ROOM_C = (18.0, 26.0)
 _CONTRAST = re.compile(r"\btransfer\b|\buntested\b|\bnot tested\b|\bnot measured\b|\bunlike\b|\bwhereas\b|\bin contrast\b|\bversus\b|\bcompared with\b|\bas opposed to\b", re.I)
 _NOT_ASSAY_TEMP = re.compile(r"loading|incubat|slicing|\bsliced\b|storage|stored|recover|housed|housing|rearing|reared|culture medium", re.I)
@@ -149,6 +150,8 @@ def _read_ph_temperature(s: str, fields: dict, unplaced: list, contrast: list) -
                 continue
             sv = _PH_SERIES.match(after)
             if not sv:
+                if _PH_NUMBER_NEAR.search(after[:30]):
+                    unplaced.append(f"pH{m.group(1) or ''} {after.strip()[:40]} (pH wording not recognised: not read as a value, a step or a series)")
                 continue
             lo = _f(sv.group("a"))
             name = {"extracellular": "pH_extracellular", "intracellular": "pH_intracellular"}.get(_side(clause, m.start(), m.group(1)), "pH")
@@ -179,6 +182,8 @@ def _read_ph_temperature(s: str, fields: dict, unplaced: list, contrast: list) -
                 _add(fields, "temperature_C", (lo, hi), m.group(0))
         if room and not temps:
             _add(fields, "temperature_C", ROOM_C, f"{room.group(0)} (read as {ROOM_C[0]:g}-{ROOM_C[1]:g} C)")
+            if fields.get("temperature_C", {}).get("state") == "STATED" and ROOM_C in fields["temperature_C"]["values"]:
+                fields["temperature_C"]["convention"] = [ROOM_C]      # an interval the reader supplied, not one the source gave
     for name, key in (("pH", r"\bpH\b"), ("temperature_C", r"\btemperature\b")):
         if name in fields or (name == "pH" and any(f in fields for f in PH_FIELDS)):
             continue
@@ -414,9 +419,9 @@ def compare(a: dict, b: dict) -> dict:
                     px, py = x["values"][0][0], y["values"][0][0]
                     if px and py and any(abs(px / py - r) <= 0.05 * r or abs(py / px - r) <= 0.05 * r for r in (1e3, 1e6)):
                         note = " (ratio is a power of 1000: read both originals for a unit slip)"
-                differ.append({"field": field, "a": _show(field, x), "b": _show(field, y) + note})
+                differ.append({"field": field, "a": _show(field, x), "b": _show(field, y) + note, **({"by_convention": True} if x.get("convention") or y.get("convention") else {})})
             else:
-                partial.append({"field": field, "a": _show(field, x), "b": _show(field, y)})
+                partial.append({"field": field, "a": _show(field, x), "b": _show(field, y), **({"by_convention": True} if x.get("convention") or y.get("convention") else {})})
         elif sx or sy:
             side, f = ("a", x) if sx else ("b", y)
             other = x if sy else y

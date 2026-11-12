@@ -114,16 +114,41 @@ class CardRoles(unittest.TestCase):
         self.assertEqual(roles["dichloroacetate"], "control"); self.assertEqual(roles["AZD7545"], "known_requalified")
         self.assertTrue({x["role"] for x in cv["V16"]["roles"]} >= {"known_requalified", "unresolved"} or len({x["role"] for x in cv["V16"]["roles"]}) >= 2)
 
-    def test_a_statement_about_an_independent_route_does_not_raise_the_tier(self):
-        """IT46 P5 (SCI46 delta row 3): monomethyl fumarate was derived PRIMARY probe from a statement about a route independent of NRF2"""
+    def test_a_proposition_that_does_not_measure_the_mechanism_does_not_raise_the_tier(self):
+        """IT46 P5 / HE47 H1: monomethyl fumarate was derived PRIMARY probe from a statement about a route other than NRF2. The package author's `relation` cell says so; the wording is not consulted."""
         import comparison_engine as ce
-        self.assertTrue(ce.INDEPENDENT_ROUTE.search("An NRF2-independent route exists for monomethyl fumarate in a microglial line"))
-        self.assertFalse(ce.INDEPENDENT_ROUTE.search("The binder raised NQO1 in a line with intact NRF2"))
-        import csv
+        self.assertFalse(hasattr(ce, "INDEPENDENT_ROUTE"))
         rows = {(r["item_id"], r["name"]): r for r in csv.DictReader(open(ce.HERE / "compound_decisions_inv08_it44.tsv", encoding="utf-8"), delimiter="\t")}
         self.assertEqual(("PRIMARY", "probe"), (rows[("V19", "KI-696")]["evidence_tier"], rows[("V19", "KI-696")]["role_derived"]))
-        self.assertEqual("unresolved", rows[("V19", "monomethyl fumarate")]["role_derived"])
+        mmf = rows[("V19", "monomethyl fumarate")]
+        self.assertEqual(("unresolved", "NONE"), (mmf["role_derived"], mmf["evidence_tier"]))
+        self.assertIn("D14 other_route", mmf["role_reason"])                       # named, not 'no proposition in the package names it'
+        self.assertIn("keap1:D14=other_route", mmf["uncounted_props"])
+        self.assertIn("keap1:D14=opposes", mmf["counter_props"])                    # the counter-evidence stays for the consumers that need it
         self.assertEqual("unresolved", rows[("V19", "dimethyl fumarate")]["role_derived"])
+
+    def test_direction_never_changes_the_tier_and_a_negative_probe_is_still_a_probe(self):
+        nega = prop("D01", "Compound Zed at 10 uM did not change the current (n = 6)")
+        nega.update(relation="mechanism", direction="null")
+        r = ce.derive([item("V1", "Zed")], pkg([nega]))[0]
+        self.assertEqual((r["evidence_tier"], r["role_derived"], r["counter_props"]), ("PRIMARY", "probe", ":D01=null"))
+
+    def test_a_mention_marked_context_or_other_route_is_listed_not_counted(self):
+        a = prop("D01", "Zed is the compound used in the study"); a.update(relation="context")
+        b = prop("D02", "Zed acts through a second receptor"); b.update(relation="other_route", direction="not_applicable")
+        r = ce.derive([item("V1", "Zed")], pkg([a, b]))[0]
+        self.assertEqual((r["evidence_tier"], r["tier_props"], r["uncounted_props"]), ("NONE", "", ":D01=context,:D02=other_route"))
+        self.assertIn("D01 context", r["role_reason"])
+
+    def test_an_unclassified_proposition_counts_as_before_and_is_named(self):
+        r = ce.derive([item("V1", "Zed")], pkg([prop("D01", "Zed inhibits the current with IC50 5 uM")]))[0]
+        self.assertEqual((r["evidence_tier"], r["unclassified_props"]), ("PRIMARY", ":D01"))
+
+    def test_a_state_names_the_failing_pairs_and_how_many_pairs_there_were(self):
+        mk = lambda i, sysm: prop(i, "Zed inhibits the current with IC50 5 uM", system=sysm)
+        r = ce.derive([item("V1", "Zed")], pkg([mk("D01", "Xenopus oocytes, -40 mV, 50 uM glycine"), mk("D02", "Xenopus oocytes, -40 mV, 50 uM glycine"), mk("D03", "HEK293 cells, -70 mV, 10 uM glycine")]))[0]
+        self.assertTrue(r["comparison_state"].startswith("NOT_COMPARABLE:"))
+        self.assertTrue(r["comparison_state"].endswith("[pairs: 2 incompatible, 0 insufficient, 1 agreeing, of 3]"), r["comparison_state"])
 
 
 if __name__ == "__main__": unittest.main(verbosity=2)

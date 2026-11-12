@@ -119,5 +119,23 @@ class Census(unittest.TestCase):
             self.assertEqual(row["asked_not_ran"], "")
 
 
+class Carry(unittest.TestCase):
+    """HE47 H5: the carried-bytes proxy counts a result by its size times the turns that followed it."""
+    def test_a_large_early_result_dominates_a_small_late_one(self):
+        rows = []
+        for i, size in enumerate((10000, 100, 100)):
+            rows.append({"type": "assistant", "message": {"content": [{"type": "tool_use", "id": f"t{i}", "name": "Bash"}]}})
+            rows.append({"type": "user", "message": {"content": [{"type": "tool_result", "tool_use_id": f"t{i}", "content": "x" * size}]}})
+        rows.append({"type": "assistant", "message": {"content": [{"type": "text", "text": "done"}]}})
+        with tempfile.TemporaryDirectory() as d:
+            p = Path(d) / "t.jsonl"
+            p.write_text("\n".join(json.dumps(r) for r in rows), encoding="utf-8")
+            c = smc.carry(p, cap=3000, early=1)
+        self.assertEqual((c["turns"], c["tool_results"], c["results_over_3000_bytes"]), (4, 3, 1))
+        self.assertEqual(c["share_of_carried_by_tool"], {"Bash": 100})
+        self.assertGreater(c["share_of_carried_in_results_over_3000_bytes"], 95)
+        self.assertGreater(c["share_of_carried_read_in_the_first_1_turns"], 95)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
