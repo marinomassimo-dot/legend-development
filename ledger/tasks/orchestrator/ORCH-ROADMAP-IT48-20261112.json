@@ -77,5 +77,13 @@
    "note": "written and sealed before any assessment was read; kept out of the brief"
   },
   "constraints_and_dependencies": "see advisor_campaign_it48_20261112/inputs/constraints.md; SCI48 delivery optional; browser tests need CHROME_BIN=/snap/chromium/3583/...; mandate binding verified RUNNING"
+ },
+ "PILOT_DECISION_1": {
+  "stage_a": "A1 saved (opus/high requested; read-back: 18 turns claude-opus-5 and 7 claude-opus-5-5, changed_mid_run true; 25 turns, output 31,031, cache written 262,691, cache read 2,315,013); recommendation: SCI43 next brief (juvenile Ba2+-sensitive share; Kir2 drug-name route; second reading of eight rows), companion: the unapplied single condition record, or the SCI47-B inference verification",
+  "stage_b": "B1 saved (sonnet/medium read back claude-sonnet-5-5, 3 turns, output 3,197): keeps the SCI43 item first; says IT47-Q01 is wet in substance (BRIEFS B3), Q02 only wording; if staying on INV-09, run Q02 alone",
+  "sealed_intended_action_vs_advice": "the sealed action (continue INV-09: IT47-Q01 and Q02) differed from the advice",
+  "checks_before_accepting": "(a) the SCI43 next brief exists and its question is the premise of KH1 (read); (b) the claim 'never executed' is partly wrong: SCI44 package C already searched juvenile shares (KATP measured; K2P no selective share) - what remains is the Kir2 drug-name route and the eight producer-read rows; (c) the reopen condition FIRED by one plain request each on 2026-11-12: bioRxiv preprint HTTP 200 (337,811 bytes), Europe PMC lists PMC5242407 for 28100740; (d) the Q01 classification differs between my map (literature_executable) and my BRIEFS (wet): the advisor's reading is the more careful one",
+  "decision": "ADAPTED: increment 1 = second independent reading of the eight SCI43 rows (verifier delegate sonnet/high, originals in full) followed by the Kir2 drug-name route only if the rows leave the juvenile share open; the result goes into KH1, INV-18 next_test, the ladder and an open-questions row; no rank, sign or qualification changes. INV-09 Q01/Q02 not pursued now (Q02 stays open).",
+  "alternatives_not_pursued": "INV-09 Q01/Q02 (continuity, wording only); unmapped KH/HY rows (after the SCI43 result); condition record and SCI47-B verification are candidates for increment 2"
  }
 }
