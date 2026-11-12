@@ -1,1 +1,2 @@
 cfac505c94d897106d73ce8eb9e6e83738ed7379
+Dated note 2026-11-12: one quotation in s5_verify_VERDICTS.md line 85 was changed to the wording of the landed IT46 file (cff57778) because the release gate read the bracketed string as a link; no other change.

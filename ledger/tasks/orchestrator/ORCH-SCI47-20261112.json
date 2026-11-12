@@ -9,14 +9,15 @@
  "BASELINE": "main 940182af (SCI46 landed and verified). Worktree .claude/worktrees/sci47, branch task/sci47. IT46 package not yet on main: read read-only from worktree it46 (task/it46 cfac505c). Coordinates with IT47 (integrator of shared consumers). The pasted HE47 mandate was for the plan actor, not this session; ignored by the operator's statement.",
  "CURRENT_PACKAGE": {
   "id": "A",
-  "state": "verifier",
-  "delegate_active": "verifier ib-y (sonnet/high asked)",
+  "state": "freeze",
+  "delegate_active": "none",
   "updated": "2026-11-12"
  },
- "RESUME": "Wait for verifier notification; census read-back; validate receipts -76; apply substantive corrections to producer files (Orchestrator recheck in the paper); then README, consumer_delta (IT46 wording fix, HE47 columns already written), COST_NOTE, deliver A.",
+ "RESUME": "Freeze package A, run verify_run battery on the frozen SHA, task_close, safe_push, message the integrator; then package B (preregister the single case before any search).",
  "DECISIONS_TAKEN": [],
  "DELEGATIONS": [
-  "P producer ib-z: asked sonnet/medium; read back medium x52; 52 turns; output 81,955; cache read 5,912,703; 1 source; staged receipt -77 (1)"
+  "P producer ib-z: asked sonnet/medium; read back medium x52; 52 turns; output 81,955; cache read 5,912,703; 1 source; staged receipt -77 (1)",
+  "V9 verifier ib-y: asked sonnet/high; read back high x64; 64 turns; output 75,469; cache read 8,510,813; staged receipt -76 (1)"
  ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
@@ -46,15 +47,15 @@
     },
     {
      "step": "Blind verifier on decisive premises and numbers, recheck of substantive corrections",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "verifier ib-y asked sonnet/high, dispatched"
+     "evidence": "verifier ib-y asked sonnet/high, read back high x64; 91 verdict rows; source_table 47 checked, 17 correct, 30 defective (27 one chloride class); substantive: K-gluconate pipette 12 mM Cl (E_Cl about -63 mV), counts, burst frequency, O01 E6, design review (d); receipts -76 validated; corrections applied by output/apply_v9_corrections.py and rechecked by the Orchestrator in Methods 5.3 and the Fig 4 legend"
     },
     {
      "step": "Review of p9 two-lever design, minimal design, consumer_delta, deliver A (gate, LINT, receipts, growth, verify_run on frozen SHA, task_close, safe_push)",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "README, consumer_delta (8 rows), COST_NOTE written; gate PASS, LINT no BLOCK, receipts OK 1814, growth PASS before freeze; battery next"
     }
    ]
   },
