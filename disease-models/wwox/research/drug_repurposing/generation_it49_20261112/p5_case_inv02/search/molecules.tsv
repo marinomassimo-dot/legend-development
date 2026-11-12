@@ -1,0 +1,13 @@
+relation_id	molecule	names	sources	n_source_rows	directions	species	sites
+I2	CAT:DGIDB:e832bd86f121	GSK2606414	GtoPdb interaction	1	down	Human	
+I2	GTOPDB:13275	HC-5404	GtoPdb interaction	1	down	Human	
+I2	GTOPDB:9544	GSK2656157	GtoPdb interaction	1	down	Human	
+I3	CAT:DGIDB:1d49dc0cf8d3	Cdk2 inhibitor IV	GtoPdb interaction	1	down	Human	
+I3	CAT:DGIDB:444819c349e6	compound 39 [PMID: 36127295]	GtoPdb interaction	1	down	Human	
+I3	CAT:DGIDB:7d2f9e6defd8	compound A127 [WO2013110309]	GtoPdb interaction	1	down	Human	
+I3	CAT:DGIDB:8eda59711492	compound 27 [PMID: 19854648]	GtoPdb interaction	1	down	Human	
+I3	CAT:DGIDB:c0bb37d17114	RIPK1 inhibitor 22b	GtoPdb interaction	1	down	Human	
+I3	CAT:DGIDB:caf143670019	PKR inhibitor	GtoPdb interaction	1	down	Human	
+I3	CAT:DGIDB:d2d2a13c770a	indirubin derivative E804	GtoPdb interaction	1	down	Human	
+I3	GTOPDB:13340	HC-7366	GtoPdb interaction	1	up	Human	
+I3	GTOPDB:14086	NXP800	GtoPdb interaction	1	up	Human	
