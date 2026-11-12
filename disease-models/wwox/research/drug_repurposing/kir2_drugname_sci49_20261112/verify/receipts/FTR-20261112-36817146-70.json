@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T23:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T23:29:00Z",
+ "event_id": "FTR-20261112-36817146-70",
+ "evidence_basis": [
+  "Introduction, Methods, Results, Discussion read; figures captions only",
+  "verbatim_locator | sildenafil Kir2.2 | Results | \"In contrast, a pure steady-state activation was apparent at 10 µM sildenafil\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/audit.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "bfa54f7a2640196b922f4893db838ddb7839db5ef3bad69e8fbfdb993c67e9eb",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PubMed MCP get_full_text_article for PMC9932908 (2026-11-12); fingerprint is of the Europe PMC full-text XML of the same article fetched separately for fingerprinting",
+ "study_id": {
+  "doi": "10.3389/fphar.2023.1136272",
+  "pmid": "36817146"
+ },
+ "workflow": "SCI49 package B blind verifier V12 kz-y (ORCH-SCI49-20261112), staged for the integrator; ledger not written; no claim recorded (the claim command was refused by the session classifier)."
+}

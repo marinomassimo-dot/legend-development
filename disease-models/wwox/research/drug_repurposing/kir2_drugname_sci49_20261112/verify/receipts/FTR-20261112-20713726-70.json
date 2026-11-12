@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T23:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T23:29:00Z",
+ "event_id": "FTR-20261112-20713726-70",
+ "evidence_basis": [
+  "Results and Discussion read in full; Methods and SI not read; figures captions only",
+  "verbatim_locator | heteromers | Results | \"demonstrating that its effects were only apparent in channels composed of four Kir2.1 subunits\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261112-20713726-71",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "1b5e1574c88b8481c348b0ce34bc3375592c088a8da7f15329158d929b7648e9",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page https://pmc.ncbi.nlm.nih.gov/articles/PMC2932566/ (plain curl, one request, 2026-11-12); bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1073/pnas.1004021107",
+  "pmid": "20713726"
+ },
+ "workflow": "SCI49 package B blind verifier V12 kz-y (ORCH-SCI49-20261112), staged for the integrator; ledger not written; no claim recorded (the claim command was refused by the session classifier)."
+}

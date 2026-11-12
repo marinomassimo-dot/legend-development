@@ -6,3 +6,4 @@
 * ChEMBL by name returned 0 activity rows for 14 names on the four Kir2 targets; PubChem hERG deposit contradicts "clean hERG".
 * Part 3: nothing at P13-P17; nearest P21 and P26-P51; Ba2+ concentration of the mTOR source not read.
 * Receipts: 12 staged (-71), all OK under staged_receipt_check; not recorded.
+* Correction round 2026-11-12: compounds.tsv now 27 rows (10 producer-read plus C16-C27 from the verifier census at verifier depth, not producer-read); 34 cells edited and 28 rows added (CORRECTIONS.tsv); open_questions.tsv 8 rows; C04, C05 and the VU6080824 role are single-reader, unverified by the blind reader.

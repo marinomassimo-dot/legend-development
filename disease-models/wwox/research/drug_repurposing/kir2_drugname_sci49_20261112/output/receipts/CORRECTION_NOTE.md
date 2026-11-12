@@ -1,0 +1,2 @@
+# Receipts note (2026-11-12, after V12)
+The 12 staged receipts (-71) are unchanged. 40959251 (VU6080824) stays a single-reader receipt: the blind verifier could not open it (bot check), so C04, C05 and the VU6080824 role are marked unverified by the blind reader. The PubChem hERG deposit (AIDs 504555/504693, one dataset) and the ChEMBL rows have no receipt (assay summary and API rows only). Compounds C16-C27 were read by the verifier, whose staged receipts are in ../../verify/receipts/; the producer made none for them.

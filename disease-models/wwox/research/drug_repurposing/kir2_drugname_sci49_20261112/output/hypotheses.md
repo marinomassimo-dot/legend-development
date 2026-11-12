@@ -44,3 +44,29 @@ Non-canonical research material. Not medical advice; no dose, schedule, route or
 
 ## Adjacent literature (stated with transfer limits)
 Kir2.1 loss or gain in Andersen-Tawil or short QT contexts (cardiac, CHO and cardiomyocyte data above) informs the pharmacology of the channel only, not Wwox cortex; Kir4.1 astrocytic pharmacology (VU0134992 paper) informs H3 only; mTOR-pathway mouse models report Ba2+-sensitive currents in L2/3 mPFC pyramidal neurons at P26-P51 and cite Kir2.1 overexpression as a genetic arm (38411613, copied).
+
+## Revised after V12 (2026-11-12; text above kept as the original generation)
+Verdict items 4: H1 retained with changes, H2 dropped, H3 reduced to a design note. Generation remains separate from checking.
+
+### H1 (revised) — a Kir2-family share of the Ba2+-sensitive resting conductance can be attributed with ML133, given a positive control
+* Chain: observation (Ba2+ share about 23 percent, one 60 uM dose, not an isoform, not P13-P17; carried, unverified by V12) -> IPOTESI that part of the difference is Kir2-type -> lever: family-level Kir2 block -> probe: ML133 (IC50 1.9-4.0 uM Kir2.1-2.3/2.6 at pH 7.4 in HEK cells) -> prediction: ML133 removes part, not all, of the Ba2+ difference current and raises Rin, occluding part of the Ba2+ effect -> experiment: Ba2+, ML133, then Ba2+ on top in the same WT neurons.
+* Changes: the pH 6.5 arm is dropped as a control (pH acts on drug permeation; a TASK-type K2P share is acid-sensitive, so the Ba2+ share and Rin change with pH under the alternative). Added: a slice positive control that ML133 reaches and blocks Kir2 in the preparation (a null at pH 7.4 is otherwise uninterpretable; the HEK steady state at 3 uM took about 20 min).
+* Strongest alternatives, now named: a K2P/TASK or other Kir share; Kir2.1 in astrocytes or microglia, so an ML133 effect on neuronal Rin can be indirect through glial K+ handling; off-target hERG and Kir6.2 within about 2.5-4-fold of the Kir2 IC50 (hERG like-for-like about 2.7-fold more potent than Kir2.1 on the automated platform).
+* Expectation under H1: ML133 effect smaller than the Ba2+ effect and occluded by it. Under the alternative: no effect beyond vehicle with a positive control present, or a glia-dependent effect that persists with a Kir2 blocker applied intracellularly or fails to occlude Ba2+.
+* Would reject it: no ML133 effect beyond vehicle with the positive control working.
+* Decision it changes: whether the first INV-18 arm needs a Kir2-directed step (ladder 2b) or only a K2P/high-Ba2+ step.
+* Premise unresolved: none for the test (a blocker); direction of benefit not used.
+* Transfer limits (added): slice temperature (HEK data are not at 34 C), extracellular K+ and ML133 K+ knock-off at 140 mM K+ in HEK, more than 99 percent protein binding (a slice has none), pH-dependent access, no K2P data, the test runs in WT so it does not test the Wwox difference; species, age, disease as before.
+* Counter-evidence kept: little discrimination among Kir2 isoforms; high clearance; authors limit ML133 to in vitro use.
+* Novelty: (a) fair; (b) not checked (a Kir2 family blocker with a Ba2+ difference current is a standard design, so (a) is the only defensible claim); (c) unvalidated.
+
+### H2 — dropped
+Reasons recorded in gaps.md (heteromers insensitive in the source, class Ic Na+ channel blockers, direction premise unresolved so no decision value, ML133 occlusion cannot test Cys311, Cys311 genetics unavailable in slices).
+
+### H3 — reduced to a design note
+VU0134992 acts equally on Kir3.1/3.2, Kir3.1/3.4 and Kir4.2 and is abstract-level; a neuronal Vm or Rin change with it can be neuronal GIRK block (36311015 isolates a GIRK current in L5 mPFC neurons). The natural pair is VU6036720 (Kir4.1/5.1, abstract) to split homomeric from heteromeric Kir4.1. Not stated as a hypothesis with a compound.
+
+<!-- v12-recheck -->
+
+## Recheck by V12 and final form of H1 (Orchestrator, 2026-11-12; the sections above are kept)
+The blind verifier's recheck found H1 not yet fully discriminating. Final form handed on as a **conditional hypothesis, family-level mechanism test, direction of benefit unused**: (1) **KATP arm** - Kir6.2/SUR1 is Ba2+-sensitive and ML133-sensitive (7.7 uM; the ML133 paper itself advises removing KATP with glibenclamide first), so 'the ML133 effect is occluded by Ba2+' does not separate Kir2 from KATP; the test is run with glibenclamide present; (2) **hERG** is within about 2.7-fold of Kir2.1 on the same automated platform: report the voltage range and keep the test in the subthreshold range; (3) **positive control** defined: a preparation in which Kir2 is established (Kir2.1-expressing cells, or an identified Kir2-dominant native cell) recorded the same day with the same bath ML133 solution, readout the ML133-sensitive inwardly rectifying current; (4) **bath versus pipette logic, corrected**: a blocker in the pipette reaches only the recorded neuron, so an effect that persists with pipette delivery is neuronal, and bath-only delivery cannot separate neuron from glia (whether pipette delivery of ML133 works is not verified; it depends on the site of action); (5) the pH 6.5 arm stays withdrawn. Alternatives named: K2P/TASK, KATP, glial Kir4.1/Kir2.1 with indirect action through K+ handling. Rejected by: no ML133-sensitive part of the Ba2+ difference once KATP is removed, or a positive control that fails. Decision changed: whether ladder step 2b needs a Kir2-directed step. Novelty: (a) new combination for LEGEND, (b) not checked, (c) unvalidated.

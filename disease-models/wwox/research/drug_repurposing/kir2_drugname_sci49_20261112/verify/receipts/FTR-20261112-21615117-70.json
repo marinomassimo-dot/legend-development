@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T23:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-12T23:29:00Z",
+ "event_id": "FTR-20261112-21615117-70",
+ "evidence_basis": [
+  "Results, Discussion, Methods and Table 1 read; Fig 3 legend read; figures not viewed; supplement not present",
+  "verbatim_locator | ML133 limit | Results | \"Thus, the utility of ML133 is limited to in vitro studies of the K ir 2.x family.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261112-21615117-71",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "8e359189ded4db21dacb701ced6e7455e8449c1cd50368d9d234e9db1b5fafad",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page https://pmc.ncbi.nlm.nih.gov/articles/PMC3177608/ (plain curl, one request, 2026-11-12) plus PubMed MCP get_full_text_article; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1021/cb200146a",
+  "pmid": "21615117"
+ },
+ "workflow": "SCI49 package B blind verifier V12 kz-y (ORCH-SCI49-20261112), staged for the integrator; ledger not written; no claim recorded (the claim command was refused by the session classifier)."
+}

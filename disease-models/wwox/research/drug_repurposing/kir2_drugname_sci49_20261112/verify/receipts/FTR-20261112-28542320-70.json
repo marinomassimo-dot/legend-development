@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T23:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-12T23:29:00Z",
+ "event_id": "FTR-20261112-28542320-70",
+ "evidence_basis": [
+  "Introduction, Methods (electrophysiology, solutions), Results, Discussion read; animal tables skimmed; figures captions only; supplement datasets not opened",
+  "verbatim_locator | zacopride CHO | Results | \"The efficacy of zacopride was maximized at 100 μmol/L, with a mean increase of 28.8% in the outward current\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261112-28542320-71",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "7fe32a2ab575a0dc4c3c9d4d235abd709432d23447feb74a0f2be3c0f1062356",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PubMed MCP get_full_text_article for PMC5436763 (2026-11-12); fingerprint is of the Europe PMC full-text XML of the same article fetched separately for fingerprinting",
+ "study_id": {
+  "doi": "10.1371/journal.pone.0177600",
+  "pmid": "28542320"
+ },
+ "workflow": "SCI49 package B blind verifier V12 kz-y (ORCH-SCI49-20261112), staged for the integrator; ledger not written; no claim recorded (the claim command was refused by the session classifier)."
+}

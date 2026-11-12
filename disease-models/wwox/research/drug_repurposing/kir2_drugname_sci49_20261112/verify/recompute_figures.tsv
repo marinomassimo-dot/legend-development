@@ -1,0 +1,19 @@
+fig_id	quantity	inputs	formula	recomputed	producer_value	verdict	note
+RF01	ML133 Kir1.1 window at pH 7.4	Kir1.1 >300 uM; Kir2.1 1.9 uM (Table 1)	300/1.9	>157.9	not stated as ratio	consistent	lower bound; Kir1.1 no effect to 300 uM
+RF02	ML133 Kir4.1 window at pH 7.4	76.0 / 1.9	76.0/1.9	40.0	not stated as ratio	consistent	
+RF03	ML133 Kir7.1 window at pH 7.4	32.9 / 1.9	32.9/1.9	17.3	not stated as ratio	consistent	
+RF04	ML133 Kir6.2/SUR1 window at pH 7.4	7.7 / 1.9; 7.7 / 4.0 (Kir2.3)	7.7/1.9; 7.7/4.0	4.05; 1.93	about 4-fold (own arithmetic)	consistent	window versus the least sensitive Kir2.x is under 2-fold
+RF05	ML133 pH 6.5 versus 8.5 shift (whole cell)	10.0 uM / 0.290 uM	10.0/0.29	34.5	34-fold (paper text)	consistent	paper reports 34-fold; permeation model predicts 70-fold
+RF06	Producer hERG window (cross-platform)	hERG 4.98994 uM (IonWorks hERG); Kir2.1 0.284 uM (manual patch)	4.98994/0.284	17.57	about 17.6 at pH 8.5	arithmetic correct, comparison defective	manual versus automated platform; pH of hERG value not stated by the deposit
+RF07	hERG versus Kir2.1 on the matching automated platform	hERG 4.98994 uM; Kir2.1 IonWorks IC50 13.63 uM (AID 2581)	4.98994/13.63	0.366	not reported	new	hERG is about 2.7-fold more potent than Kir2.1 on IonWorks; value IC50(hERG)/IC50(Kir2.1)
+RF08	hERG versus Kir2.1 Tl+ flux	hERG 4.98994; Kir2.1 Tl+ EC50 10.617 uM (AID 504557)	4.98994/10.617	0.470	not reported	new	different assay formats; for context only
+RF09	hERG versus Kir2.1-2.3 at pH 7.4 (paper)	hERG 4.99 uM (pH unknown); Kir2.1 1.9, 2.2 2.9, 2.3 4.0	4.99/1.9; 4.99/2.9; 4.99/4.0	2.63; 1.72; 1.25	not reported	new	upper bound of window if the hERG value at pH 7.4 were the same as in the deposit; pH dependence of the hERG block unknown
+RF10	hERG % inhibition at 10 uM	percentage field -52.15 (sign convention 100*(Ipost-Ipre)/Ipre)	abs(-52.15)	52.2 percent inhibition	not reported	new	n=4 repeats; 30 uM: 102.6 percent
+RF11	Zacopride CHO increase	5.8 to 7.4 pA/pF at -60 mV	(7.4-5.8)/5.8	27.6 percent	28.8 percent (paper)	consistent	rounding of the printed currents; paper prints 28.8 percent
+RF12	Zacopride CHO versus myocyte concentration	100 uM (CHO maximum) vs 1 uM (myocytes, optimal)	100/1	100-fold	not reported	new	potency discrepancy between recombinant and native assay in the same paper
+RF13	Flecainide gain at -120 and -50 mV (1 uM)	16.5 and 45.8 percent (n=8)	45.8/16.5	2.78	not reported	new	gain is 2.8-fold larger at -50 mV than at -120 mV; Emax 53.9 vs 22 percent
+RF14	Chloroquine whole-cell AP-clamp versus inside-out	8.7 uM versus 1.1 uM (WT)	8.7/1.1	7.9	not reported	new	extracellular application takes about 8 min vs 15 s inside-out; whole-cell value is not a resting potency
+RF15	VU573 Kir2.3 versus Kir2.1 in oocytes (50 uM)	80.9 vs 30.2 percent block (Kir2.1 after 25 min)	80.9/30.2	2.68	not reported	new	kinetics differ (tau 154 s vs 735 s); Kir2.1 not at steady state
+RF16	Sildenafil Kir2.2 versus Kir2.1 at 10 uM (CHO, 37 C)	Kir2.2 activation +34.1 percent (-50 mV); Kir2.1 inhibition -15.0 percent	+34.1; -15.0	opposite sign	not reported	new	new candidate; mechanism unknown
+RF17	ChEMBL activity counts	CHEMBL1914276 / 1293290 / 6196089 / 2146347	count	59 / 11 / 1 / 8	59; 11; 1; 8 (written 59; 11; 1; 8 in the order of Q20)	consistent	
+RF18	Tetramisole at 30 uM in rat ventricular myocytes	inward +66.4 percent at -120 mV; outward +60.4 percent at -50 mV	read	as printed	not examined	new	maximal efficacy at 30 uM; 100 uM slightly less
