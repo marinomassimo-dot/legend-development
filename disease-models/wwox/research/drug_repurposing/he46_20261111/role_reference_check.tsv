@@ -1,0 +1,485 @@
+relation_id	molecule	name	role	role_basis	reference_class	modality	molecule_type	verdict
+S1	CAT:CHEMBL1094	FELBAMATE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL1201293	ACAMPROSATE CALCIUM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL1207366	GW468816	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL1255840	NEBOGLAMINE	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL17350	TRAXOPRODIL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL17350	TRAXOPRODIL MESYLATE	unqualified_entity	rule default	SMALL_MOLECULE	small_molecule	Small molecule	rules_left_a_small_molecule_unqualified
+S1	CAT:CHEMBL182066	RADIPRODIL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL2068839	RISLENEMDAZ	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL2107771	RALFINAMIDE	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL2110814	DELUCEMINE	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL2110814	DELUCEMINE HYDROCHLORIDE	unqualified_entity	rule default	SMALL_MOLECULE	small_molecule	Small molecule	rules_left_a_small_molecule_unqualified
+S1	CAT:CHEMBL2110954	NERAMEXANE MESYLATE	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL3544917	RAPASTINEL	candidate	rule R8	NOT_SMALL_MOLECULE	protein_or_peptide	Protein	DISAGREES
+S1	CAT:CHEMBL3545350	EVT-101	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL3545351	AV-101	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL3707355	AZD8108	candidate	rule R8	UNKNOWN	unknown	Unknown	unverified
+S1	CAT:CHEMBL3707400	INDANTADOL	candidate	rule R8	UNKNOWN	unknown	Unknown	unverified
+S1	CAT:CHEMBL395091	ESKETAMINE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL395091	ESKETAMINE HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL3989872	APIMOSTINEL	candidate	rule R8	NOT_SMALL_MOLECULE	protein_or_peptide	Protein	DISAGREES
+S1	CAT:CHEMBL41306	CNS-5161	unqualified_entity	rule default	SMALL_MOLECULE	small_molecule	Small molecule	rules_left_a_small_molecule_unqualified
+S1	CAT:CHEMBL452461	PERZINFOTEL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL467084	LANICEMINE	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL5095254	NP10679	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL660	AMANTADINE HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL742	KETAMINE HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL807	MEMANTINE HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL900	ORPHENADRINE CITRATE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:CHEMBL900	ORPHENADRINE HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S1	CAT:DGIDB:11dcd9a41857	d-CCPene	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S1	CAT:DGIDB:357b0cb8489b	NVP-AAM077	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S1	CAT:DGIDB:3aa598685369	homoquinolinic acid	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S1	CAT:DGIDB:42d5d5465a4d	5,7-dichlorokynurenic acid	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S1	CAT:DGIDB:52d01b8327f7	CGP37849	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S1	CAT:DGIDB:79d9fde1e294	UBP141	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S1	CAT:DGIDB:80f00139fe06	S-deschloroketamine	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S1	CAT:DGIDB:a4e912f8d9f7	(+)-HA966	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S1	CAT:DGIDB:b0ca5cf2303c	d-AP5	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S1	CAT:DGIDB:c074cb76e927	conantokin-G	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S1	CAT:DGIDB:ca0cbcf4f1e9	GV196771A	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S1	CAT:DGIDB:f5aacf22df23	LY233053	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S1	CAT:DGIDB:f9ecb57f1990	L701324	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S1	GTOPDB:12050	SAGE-718	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:12156	onfasprodil	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:2403	dizocilpine	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:3309	L-aspartic acid	physiological_intervention	rule R2	NO_REFERENCE			silent
+S1	GTOPDB:4068	(RS)-(tetrazol-5-yl)glycine	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:4078	[3H]CGP39653	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:4079	[3H]CGP61594	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:4080	[3H]CGS19755	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:4082	[3H]CPP	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:4084	[3H]glycine	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:4086	[3H]L689560	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:4088	[3H]MDL105519	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:4089	[3H]dizocilpine	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:4128	amantadine	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:4155	selfotel	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:4171	D-serine	physiological_intervention	rule R2	NO_REFERENCE			silent
+S1	GTOPDB:4233	ketamine	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:4239	L689560	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:4260	N1-dansyl-spermine	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:4268	NMDA	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:4282	phencyclidine	unqualified_entity	rule default	NO_REFERENCE			silent
+S1	GTOPDB:6511	D-aspartic acid	physiological_intervention	rule R2	NO_REFERENCE			silent
+S1	GTOPDB:708	Mg2+	physiological_intervention	override: Bath magnesium is the manipulation of the state hypothesis and a measured condition of the isolated NMDA-receptor arms (	NO_REFERENCE			silent
+S1	GTOPDB:727	glycine	physiological_intervention	rule R2	NO_REFERENCE			silent
+S1	GTOPDB:7843	DQP-1105	unqualified_entity	rule default	NO_REFERENCE			silent
+S10	CAT:CHEMBL1762621	BARDOXOLONE METHYL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S10	CAT:CHEMBL2107333	DIMETHYL FUMARATE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S10	CAT:CHEMBL3989944	DIROXIMEL FUMARATE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S10	CAT:CHEMBL4303525	OMAVELOXOLONE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S10	CAT:CHEMBL589586	MONOMETHYL FUMARATE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S10	CAT:DGIDB:2e72a357680d	CPUY192018	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S10	CAT:DGIDB:91f99ec2ae1d	Nrf2 peptide [PMID: 23647822]	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S10	CAT:DGIDB:a2a5a1a977f2	RA839	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S10	CAT:DGIDB:a3d03ae2ef6c	ML385	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S10	CAT:DGIDB:b48d9bd9a42b	compound 10 [PMID: 31411465]	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S10	CAT:DGIDB:fa1dd12aa22a	isoquinoline 17 [PMID: 30122040]	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S10	GTOPDB:13066	biKEAP1	unqualified_entity	rule default	NO_REFERENCE			silent
+S10	GTOPDB:2717	bardoxolone	unqualified_entity	rule default	NO_REFERENCE			silent
+S10	GTOPDB:7573	omaveloxolone	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	CAT:CHEMBL1200694	SEVOFLURANE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S11	CAT:CHEMBL1200733	DESFLURANE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S11	CAT:CHEMBL1256	ISOFLURANE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S11	CAT:CHEMBL1257	ENFLURANE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S11	CAT:CHEMBL1754	DOXAPRAM HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S11	CAT:CHEMBL184412	DRONEDARONE HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S11	CAT:CHEMBL931	HALOTHANE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S11	CAT:DGIDB:3e6764ccb88c	BL-1249	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S11	CAT:DGIDB:4a75dc7e0832	magnolol	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S11	CAT:DGIDB:586e6db3aff7	GI‐530159	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S11	CAT:DGIDB:95aa9b8f0940	AVE1231	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S11	CAT:DGIDB:b30f50adb672	ruthenium red	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S11	GTOPDB:10069	A-769662	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:1051	docosahexaenoic acid	physiological_intervention	rule R2	NO_REFERENCE			silent
+S11	GTOPDB:1052	linoleic acid	physiological_intervention	rule R2	NO_REFERENCE			silent
+S11	GTOPDB:13373	CVN293	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:14093	LPS2336	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:14094	ONO-2920632	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:14095	ONO-TR-772	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:14096	Cpd8l [PMID: 40040241]	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:14097	KU124	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:14098	benzimidazole 991	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:14099	Nb-Activator-67	unqualified_entity	rule R3	NO_REFERENCE			silent
+S11	GTOPDB:14100	Nb-Activator-76	unqualified_entity	rule R3	NO_REFERENCE			silent
+S11	GTOPDB:14101	Nb-Inhibitor-61	unqualified_entity	rule R3	NO_REFERENCE			silent
+S11	GTOPDB:208	norfluoxetine	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:2326	riluzole	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:2342	quinidine	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:2343	tetraethylammonium	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:2344	Ba2+	control_or_reagent	rule R1	NO_REFERENCE			silent
+S11	GTOPDB:2346	H+	control_or_reagent	rule R1	NO_REFERENCE			silent
+S11	GTOPDB:2356	Cs+	control_or_reagent	rule R1	NO_REFERENCE			silent
+S11	GTOPDB:2364	anandamide	physiological_intervention	rule R2	NO_REFERENCE			silent
+S11	GTOPDB:2386	oleoyl-CoA	physiological_intervention	rule R2	NO_REFERENCE			silent
+S11	GTOPDB:2387	PIP2	physiological_intervention	rule R2	NO_REFERENCE			silent
+S11	GTOPDB:2388	putrescine	physiological_intervention	rule R2	NO_REFERENCE			silent
+S11	GTOPDB:2389	Rb+	control_or_reagent	rule R1	NO_REFERENCE			silent
+S11	GTOPDB:2390	spermidine	physiological_intervention	rule R2	NO_REFERENCE			silent
+S11	GTOPDB:2391	arachidonic acid	physiological_intervention	rule R2	NO_REFERENCE			silent
+S11	GTOPDB:2393	rose bengal (photoactivated)	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:2395	tenidap	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:2401	halothane	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:2503	chloroform	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:2504	angiotensin II	probe	rule R5	NO_REFERENCE			no_reference
+S11	GTOPDB:2505	isoflurane	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:2506	R-(+)-methanandamide	unqualified_entity	rule default	NO_REFERENCE			silent
+S11	GTOPDB:2508	lysophosphatidylcholine	physiological_intervention	rule R2	NO_REFERENCE			silent
+S11	GTOPDB:566	Zn2+	physiological_intervention	override: Tonic extracellular zinc changes the maximal inhibition of triheteromers (D03) and is unmeasured in the slice: a physiol	NO_REFERENCE			silent
+S11	GTOPDB:708	Mg2+	physiological_intervention	override: Bath magnesium is the manipulation of the state hypothesis and a measured condition of the isolated NMDA-receptor arms (	NO_REFERENCE			silent
+S11	GTOPDB:710	spermine	physiological_intervention	rule R2	NO_REFERENCE			silent
+S11	GTOPDB:943	SCH-23390	unqualified_entity	rule default	NO_REFERENCE			silent
+S12	CAT:DGIDB:f13709431732	VU0134992	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S12	GTOPDB:2344	Ba2+	control_or_reagent	rule R1	NO_REFERENCE			silent
+S12	GTOPDB:2346	H+	control_or_reagent	rule R1	NO_REFERENCE			silent
+S12	GTOPDB:2356	Cs+	control_or_reagent	rule R1	NO_REFERENCE			silent
+S12	GTOPDB:2404	nortriptyline	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	CAT:CHEMBL1094	FELBAMATE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL1201293	ACAMPROSATE CALCIUM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL1207366	GW468816	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL1255840	NEBOGLAMINE	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL17350	TRAXOPRODIL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL17350	TRAXOPRODIL MESYLATE	unqualified_entity	rule default	SMALL_MOLECULE	small_molecule	Small molecule	rules_left_a_small_molecule_unqualified
+S13	CAT:CHEMBL182066	RADIPRODIL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL2068839	RISLENEMDAZ	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL2107771	RALFINAMIDE	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL2110814	DELUCEMINE	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL2110814	DELUCEMINE HYDROCHLORIDE	unqualified_entity	rule default	SMALL_MOLECULE	small_molecule	Small molecule	rules_left_a_small_molecule_unqualified
+S13	CAT:CHEMBL2110954	NERAMEXANE MESYLATE	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL3544917	RAPASTINEL	candidate	rule R8	NOT_SMALL_MOLECULE	protein_or_peptide	Protein	DISAGREES
+S13	CAT:CHEMBL3545350	EVT-101	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL3545351	AV-101	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL3707355	AZD8108	candidate	rule R8	UNKNOWN	unknown	Unknown	unverified
+S13	CAT:CHEMBL3707400	INDANTADOL	candidate	rule R8	UNKNOWN	unknown	Unknown	unverified
+S13	CAT:CHEMBL395091	ESKETAMINE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL395091	ESKETAMINE HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL3989872	APIMOSTINEL	candidate	rule R8	NOT_SMALL_MOLECULE	protein_or_peptide	Protein	DISAGREES
+S13	CAT:CHEMBL41306	CNS-5161	unqualified_entity	rule default	SMALL_MOLECULE	small_molecule	Small molecule	rules_left_a_small_molecule_unqualified
+S13	CAT:CHEMBL452461	PERZINFOTEL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL467084	LANICEMINE	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL5095254	NP10679	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL52440	DEXTROMETHORPHAN HYDROBROMIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL52440	DEXTROMETHORPHAN POLISTIREX	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL660	AMANTADINE HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL742	KETAMINE HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL807	MEMANTINE HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL900	ORPHENADRINE CITRATE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:CHEMBL900	ORPHENADRINE HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S13	CAT:DGIDB:11dcd9a41857	d-CCPene	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S13	CAT:DGIDB:357b0cb8489b	NVP-AAM077	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S13	CAT:DGIDB:3aa598685369	homoquinolinic acid	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S13	CAT:DGIDB:3edafe18a179	TCN-201	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S13	CAT:DGIDB:42d5d5465a4d	5,7-dichlorokynurenic acid	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S13	CAT:DGIDB:4de972be2747	compound 8 [PMID: 17562362}	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S13	CAT:DGIDB:52d01b8327f7	CGP37849	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S13	CAT:DGIDB:79d9fde1e294	UBP141	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S13	CAT:DGIDB:80f00139fe06	S-deschloroketamine	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S13	CAT:DGIDB:a4e912f8d9f7	(+)-HA966	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S13	CAT:DGIDB:b0ca5cf2303c	d-AP5	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S13	CAT:DGIDB:c074cb76e927	conantokin-G	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S13	CAT:DGIDB:ca0cbcf4f1e9	GV196771A	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S13	CAT:DGIDB:f5aacf22df23	LY233053	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S13	CAT:DGIDB:f9ecb57f1990	L701324	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S13	GTOPDB:11289	NYX-2925	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:11700	TCN-213	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:12050	SAGE-718	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:12051	plazinemdor	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:12156	onfasprodil	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:2403	dizocilpine	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:3309	L-aspartic acid	physiological_intervention	rule R2	NO_REFERENCE			silent
+S13	GTOPDB:4068	(RS)-(tetrazol-5-yl)glycine	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:4078	[3H]CGP39653	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:4079	[3H]CGP61594	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:4080	[3H]CGS19755	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:4082	[3H]CPP	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:4084	[3H]glycine	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:4086	[3H]L689560	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:4088	[3H]MDL105519	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:4089	[3H]dizocilpine	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:4128	amantadine	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:4155	selfotel	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:4171	D-serine	physiological_intervention	rule R2	NO_REFERENCE			silent
+S13	GTOPDB:4233	ketamine	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:4239	L689560	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:4253	memantine	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:4260	N1-dansyl-spermine	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:4268	NMDA	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:4282	phencyclidine	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:6511	D-aspartic acid	physiological_intervention	rule R2	NO_REFERENCE			silent
+S13	GTOPDB:6953	dextromethorphan	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:708	Mg2+	physiological_intervention	override: Bath magnesium is the manipulation of the state hypothesis and a measured condition of the isolated NMDA-receptor arms (	NO_REFERENCE			silent
+S13	GTOPDB:727	glycine	physiological_intervention	rule R2	NO_REFERENCE			silent
+S13	GTOPDB:7595	levorphanol	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:7843	DQP-1105	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:7845	QNZ 46	unqualified_entity	rule default	NO_REFERENCE			silent
+S13	GTOPDB:9052	dextrorphan	unqualified_entity	rule default	NO_REFERENCE			silent
+S2	CAT:CHEMBL184412	DRONEDARONE HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S2	CAT:CHEMBL2107085	cyclic AMP	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S2	CAT:CHEMBL471737	IVABRADINE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S2	CAT:CHEMBL471737	IVABRADINE HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S2	CAT:DGIDB:5dad25f2b336	ZD7288	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S2	CAT:DGIDB:822c79170ace	MEL57A	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S2	CAT:DGIDB:92f1a44459a2	EC18	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S2	CAT:DGIDB:d6d8c1fe321f	cyclic GMP	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S2	GTOPDB:2355	cilobradine	unqualified_entity	rule default	NO_REFERENCE			silent
+S2	GTOPDB:2356	Cs+	control_or_reagent	rule R1	NO_REFERENCE			silent
+S2	GTOPDB:2357	ivabradine	unqualified_entity	rule default	NO_REFERENCE			silent
+S2	GTOPDB:2358	zatebradine	unqualified_entity	rule default	NO_REFERENCE			silent
+S2	GTOPDB:2387	PIP2	physiological_intervention	rule R2	NO_REFERENCE			silent
+S2	GTOPDB:516	clonidine	unqualified_entity	rule default	NO_REFERENCE			silent
+S2	GTOPDB:5464	propofol	unqualified_entity	rule default	NO_REFERENCE			silent
+S2	GTOPDB:6261	cyclic CMP	unqualified_entity	rule default	NO_REFERENCE			silent
+S2	GTOPDB:708	Mg2+	physiological_intervention	override: Bath magnesium is the manipulation of the state hypothesis and a measured condition of the isolated NMDA-receptor arms (	NO_REFERENCE			silent
+S3	CAT:CHEMBL113461	TEDISAMIL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S3	CAT:CHEMBL113461	TEDISAMIL SESQUIFUMARATE	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S3	CAT:CHEMBL1356238	zinc pyrithione	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S3	CAT:CHEMBL2107762	NERISPIRDINE	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S3	CAT:CHEMBL2164048	ML252	probe	rule R6	INORGANIC_FLAG	small_molecule	Small molecule	DISAGREES
+S3	CAT:CHEMBL266510	FLINDOKALNER	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S3	CAT:CHEMBL284348	DALFAMPRIDINE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S3	CAT:CHEMBL354077	AMIFAMPRIDINE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S3	CAT:CHEMBL354077	AMIFAMPRIDINE PHOSPHATE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S3	CAT:CHEMBL41355	EZOGABINE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S3	CAT:CHEMBL821	GUANIDINE HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S3	CAT:DGIDB:03de5423ac6d	NC00075159	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S3	CAT:DGIDB:0ece3f999b25	QO-58	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S3	CAT:DGIDB:2908937e0365	ML213	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S3	CAT:DGIDB:45c82cc94b86	retigabine derivative 10g	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S3	CAT:DGIDB:6067b4b58fc4	XE991	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S3	CAT:DGIDB:8712206499e2	(S)-N-[1-(3-morpholin-4-yl-phenyl)-ethyl]-3-phenyl-acrylamide	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S3	CAT:DGIDB:af9ba6795d38	ICA-27243	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S3	CAT:DGIDB:c4e4873faa15	L735821	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S3	GTOPDB:12650	azetukalner	unqualified_entity	rule default	NO_REFERENCE			silent
+S3	GTOPDB:14111	ICA-069673	unqualified_entity	rule default	NO_REFERENCE			silent
+S3	GTOPDB:14136	JNJ-37822681	unqualified_entity	rule default	NO_REFERENCE			silent
+S3	GTOPDB:14475	opakalim	unqualified_entity	rule default	NO_REFERENCE			silent
+S3	GTOPDB:2307	flindokalner	unqualified_entity	rule default	NO_REFERENCE			silent
+S3	GTOPDB:2337	bepridil	unqualified_entity	rule default	NO_REFERENCE			silent
+S3	GTOPDB:2343	tetraethylammonium	unqualified_entity	rule default	NO_REFERENCE			silent
+S3	GTOPDB:2387	PIP2	physiological_intervention	rule R2	NO_REFERENCE			silent
+S3	GTOPDB:2598	flupirtine	unqualified_entity	rule default	NO_REFERENCE			silent
+S3	GTOPDB:2599	linopirdine	unqualified_entity	rule default	NO_REFERENCE			silent
+S3	GTOPDB:2601	retigabine	unqualified_entity	rule default	NO_REFERENCE			silent
+S3	GTOPDB:5483	gabapentin	unqualified_entity	rule default	NO_REFERENCE			silent
+S4	GTOPDB:13604	EG-2184	unqualified_entity	rule default	NO_REFERENCE			silent
+S4	GTOPDB:2447	flufenamic acid	unqualified_entity	rule default	NO_REFERENCE			silent
+S4	GTOPDB:4151	carbenoxolone	unqualified_entity	rule default	NO_REFERENCE			silent
+S4	GTOPDB:4278	octanol	control_or_reagent	override: A lipophilic alcohol used as a chemical gap-junction uncoupler in the cited papers; the registry type Metabolite is a cl	NO_REFERENCE			silent
+S4	GTOPDB:707	Ca2+	physiological_intervention	override: Extracellular calcium is a recording condition of the same preparation, a physiological variable	NO_REFERENCE			silent
+S5	CAT:CHEMBL1102	GLUTETHIMIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL12	DIAZEPAM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL1200472	QUAZEPAM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL1200694	SEVOFLURANE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL1200733	DESFLURANE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL1200790	METHYPRYLON	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL1200802	TALBUTAL	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL1201293	ACAMPROSATE CALCIUM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL1201317	TRICLOFOS SODIUM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL1213252	CLORAZEPATE DIPOTASSIUM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL1256	ISOFLURANE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL1257	ENFLURANE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL13280	FLUNITRAZEPAM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL1341	METHOXYFLURANE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL135400	ZOPICLONE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL1521	ZALEPLON	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL1522	ESZOPICLONE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL1568698	GANAXOLONE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL1697737	CLOTIAZEPAM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL1783256	AZD6280	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL1783282	AZD7325	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL207538	BREXANOLONE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL2103791	ADIPIPLON	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL2104745	PAGOCLONE	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL2105527	TETRAZEPAM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL2106227	ETIFOXINE	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL2107801	RESEQUINIL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL220492	TOPIRAMATE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL262075	INDIPLON	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL277062	BROMAZEPAM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL282052	METHAQUALONE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL282052	METHAQUALONE HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL285674	ESTAZOLAM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL312443	GABOXADOL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL315795	CLOMETHIAZOLE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL356388	ETAZOLATE	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL356388	ETAZOLATE HYDROCHLORIDE	unqualified_entity	rule default	SMALL_MOLECULE	small_molecule	Small molecule	rules_left_a_small_molecule_unqualified
+S5	CAT:CHEMBL3647536	DARIGABAT	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL3989949	CENOBAMATE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL407	FLUMAZENIL	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL4094894	CIPEPOFOL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL4105630	ZURANOLONE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL4297255	ABP-700	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL4297521	PADSEVONIL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL4297526	REMIMAZOLAM BESYLATE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL4303403	LOREDIPLON	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL440	THIAMYLAL SODIUM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL441	THIOPENTAL SODIUM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL447	SECOBARBITAL SODIUM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL448	PENTOBARBITAL	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL448	PENTOBARBITAL SODIUM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL449	BUTABARBITAL SODIUM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL450	METHARBITAL	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL451	CHLORDIAZEPOXIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL451	CHLORDIAZEPOXIDE HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL452	CLONAZEPAM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL454	BUTALBITAL	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL526	PROPOFOL	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL568	OXAZEPAM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL580	LORAZEPAM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL591	ETHCHLORVYNOL	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL646	TRIAZOLAM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL655	MIDAZOLAM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL655	MIDAZOLAM HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL655	MIDAZOLAM MALEATE	unqualified_entity	rule default	SMALL_MOLECULE	small_molecule	Small molecule	rules_left_a_small_molecule_unqualified
+S5	CAT:CHEMBL661	ALPRAZOLAM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL681	ETOMIDATE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL70418	CLOBAZAM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL7413	METHOHEXITAL SODIUM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL856	PRIMIDONE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL911	ZOLPIDEM TARTRATE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL931	HALOTHANE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL967	TEMAZEPAM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL968	FLURAZEPAM HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL969	PRAZEPAM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL970	HALAZEPAM	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:CHEMBL979	MEPROBAMATE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S5	CAT:DGIDB:0b8d4dab26d5	tetrahydrodeoxycorticosterone	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:26cf687d06ed	isonipecotic acid	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:2d977c42affa	L838417	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:490d48d164f9	&alpha;5IA	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:60e9ed3b5551	RY024	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:671a539afc5b	ONO-8590580	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:7aa02f4f447c	compound 20 [PMID: 35584373]	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:a1c0a843ebca	gabazine	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:b38ed95ceb80	MRK016	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:b700ab89f270	piperidine-4-sulphonic acid	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:c41282e1dd2e	ZK93426	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:c4d693e729d1	bicuculline	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:c73a21e5eddc	TP003	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:d5491b8998f7	&alpha;3IA	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:e3d240bd97a6	Ro19-4603	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:e8ebcce39b2b	isoguvacine	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:f145992f79fd	ZK93423	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:f61dce56c78f	Ro15-4513	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	CAT:DGIDB:f975183cfdf2	DMCM	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S5	GTOPDB:10427	basmisanil	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:11942	ganaxolone	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:3364	diazepam	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4051	picrotoxin	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4083	[3H]gabazine	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4090	[3H]muscimol	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4108	5&alpha;-pregnan-3&alpha;-ol-20-one	physiological_intervention	rule R2	NO_REFERENCE			silent
+S5	GTOPDB:4146	bretazenil	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4156	CGS8216	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4192	flumazenil	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4193	flunitrazepam	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4221	indiplon	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4238	L655708	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4259	muscimol	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4277	ocinaplon	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4299	RO4938581	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4320	TBPS	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4322	gaboxadol	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4327	TPA023	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4348	zolpidem	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4360	[3H]flunitrazepam	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4362	[3H]zolpidem	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4363	[3H]L655708	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4364	[3H]RY80	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4366	[3H]CGS8216	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4367	[11C]flumazenil	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4368	[18F]fluoroethylflumazenil	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:4369	[35S]TBPS	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:566	Zn2+	physiological_intervention	override: Tonic extracellular zinc changes the maximal inhibition of triheteromers (D03) and is unmeasured in the slice: a physiol	NO_REFERENCE			silent
+S5	GTOPDB:6963	clonazepam	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:7111	alprazolam	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:7313	triazolam	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:7336	etazolate	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:7712	AZD7325	unqualified_entity	rule default	NO_REFERENCE			silent
+S5	GTOPDB:9798	darigabat	unqualified_entity	rule default	NO_REFERENCE			silent
+S6	CAT:DGIDB:ce51fb98be2e	VU0240551	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S6	GTOPDB:13840	IAMA-6	unqualified_entity	rule default	NO_REFERENCE			silent
+S6	GTOPDB:4589	DIOA	unqualified_entity	rule default	NO_REFERENCE			silent
+S6	GTOPDB:4742	piretanide	unqualified_entity	rule default	NO_REFERENCE			silent
+S6	GTOPDB:4837	bumetanide	unqualified_entity	rule default	NO_REFERENCE			silent
+S6	GTOPDB:4839	furosemide	unqualified_entity	rule default	NO_REFERENCE			silent
+S7	CAT:CHEMBL1027	TIAGABINE HYDROCHLORIDE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S7	CAT:CHEMBL89598	VIGABATRIN	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S7	CAT:DGIDB:1ed8821eb3f7	SKF89976A	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S7	CAT:DGIDB:50d46a0f452e	4-acryloylphenol	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S7	CAT:DGIDB:6312c9709928	(R)-EF-1520	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S7	CAT:DGIDB:8be37a5ba9d4	CI-966	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S7	CAT:DGIDB:c75ed65ed37e	NNC-711	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S7	CAT:DGIDB:ea834d6e5109	(R/S) EF-1500	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S7	CAT:DGIDB:fe68f5f47407	(S)-EF-1520	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S7	GTOPDB:14485	E2730	unqualified_entity	rule default	NO_REFERENCE			silent
+S7	GTOPDB:4685	[3H]tiagabine	unqualified_entity	rule default	NO_REFERENCE			silent
+S7	GTOPDB:4756	LU32-176B	unqualified_entity	rule default	NO_REFERENCE			silent
+S7	GTOPDB:4818	tiagabine	unqualified_entity	rule default	NO_REFERENCE			silent
+S7	GTOPDB:4821	vigabatrin	unqualified_entity	rule default	NO_REFERENCE			silent
+S7	GTOPDB:8284	CPP-115	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	CAT:CHEMBL119625	ZONAMPANEL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S8	CAT:CHEMBL1214124	PERAMPANEL	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S8	CAT:CHEMBL1276138	FARAMPATOR	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S8	CAT:CHEMBL1277001	MIBAMPATOR	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S8	CAT:CHEMBL14935	TEZAMPANEL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S8	CAT:CHEMBL2103869	DASOLAMPANEL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S8	CAT:CHEMBL220492	TOPIRAMATE	candidate	rule R7	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S8	CAT:CHEMBL29741	IRAMPANEL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S8	CAT:CHEMBL3545042	SELURAMPANEL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S8	CAT:CHEMBL3707399	CX1739	candidate	rule R8	UNKNOWN	unknown	Unknown	unverified
+S8	CAT:CHEMBL3707401	MK-8777	candidate	rule R8	UNKNOWN	unknown	Unknown	unverified
+S8	CAT:CHEMBL3989682	BECAMPANEL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S8	CAT:CHEMBL4594403	OSAVAMPATOR	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S8	CAT:CHEMBL5095022	PESAMPATOR	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S8	CAT:CHEMBL61872	TALAMPANEL	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S8	CAT:DGIDB:1593ee971c0c	LY339434	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:230c371b9bf5	argiotoxin	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:5f82c75ae4c0	LY382884	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:6b2efd0aa438	CX546	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:7b4e4169ab34	4‐BCCA	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:7dddea50fc40	LY503430	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:7fd52929a5ea	IDRA-21	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:8111763ff62c	GYKI53655	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:911f4aea2fe2	2,4-epi-neodysiherbaine	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:9abeaf54a97b	GYKI53784	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:9b3dc0b36bf7	S18986	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:a1f6ed083a85	joro spider toxin	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:a422eb95aefb	UBP302	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:ae8741c6373e	MSVIII-19	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:c16439d7b98f	8-deoxy-neodysiherbaine	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:c82dd39a32d8	UBP310	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:c90c235374de	NS3763	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:ca4c6814d8f6	NBQX	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:e1a5ca5593c0	concanavalin A	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:e20d717f9484	LY466195	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:e8d7c0c70a91	LY392098	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:eca0f4b4983f	domoic acid	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:ef7702afc3e6	ATPO	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	CAT:DGIDB:fea4e278b586	LY404187	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S8	GTOPDB:13392	BPAM344	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4069	(S)-4-AHCP	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4070	(S)-5-fluorowillardiine	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4071	(S)-5-iodowillardiine	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4075	[3H]SYM2081	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4077	[3H]AMPA	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4081	[3H]CNQX	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4085	[3H]kainate	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4092	[3H]UBP310	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4123	ACET	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4131	AMPA	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4133	aniracetam	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4140	ATPA	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4165	CX516	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4167	cyclothiazide	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4185	dysiherbaine	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4231	kainate	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4245	tezampanel	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4288	piracetam	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:4317	SYM2081	unqualified_entity	rule default	NO_REFERENCE			silent
+S8	GTOPDB:8279	talampanel	unqualified_entity	rule default	NO_REFERENCE			silent
+S9	CAT:CHEMBL306823	SODIUM DICHLOROACETATE	candidate	rule R8	SMALL_MOLECULE	small_molecule	Small molecule	agrees
+S9	CAT:DGIDB:111f25d9cc39	VER-246608	unqualified_entity	rule default	UNKNOWN	unknown		silent
+S9	CAT:DGIDB:6dce3f58cbc3	AZD7545	unqualified_entity	rule default	UNKNOWN	unknown		silent
