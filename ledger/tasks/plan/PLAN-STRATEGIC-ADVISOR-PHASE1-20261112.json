@@ -10,16 +10,16 @@
   "OBJECTIVE": "Phase 1 of the Strategic Advisor: a callable, read-only strategic perspective (agent definition plus one invocation procedure) wired into the Orchestrator's planning loop, with captured assessments, a Stage A/Stage B protocol, and the Pilot Mandate delivered to the active main Orchestrator. Phase 2 (the bounded research pilot) belongs to the Orchestrator and is not executed here.",
   "worktree": ".claude/worktrees/sadv",
   "branch": "task/sadv",
-  "CURRENT_STATE": "IN_PROGRESS",
+  "CURRENT_STATE": "COMPLETE",
   "CHECKPOINT": {
-    "last_verified_result": "battery on 2513fe1f FAIL for two preexisting causes (kept); targeted reruns pass; tip 286c8c8b",
-    "first_incomplete_work": "OBJ_7_HANDOFF (message to the Orchestrator session), OBJ_8_REPORT",
+    "last_verified_result": "build published 4633abf7e18b65be0b51dde8c5dc47c89de6872e; handoff commit b51d0e99863044575da10c18644b032b2511bd11 gate PASS, CI #669 success; battery on 2513fe1f FAIL kept (two preexisting causes)",
+    "first_incomplete_work": "none for Phase 1; Phase 2 belongs to the Orchestrator and is not started by me",
     "active_processes": "none",
-    "real_dependencies": "Orchestrator session 4e idle; delivery by message with durable pointer",
-    "next_executable_step": "push the BUILD_SHA commit, send the durable-pointer message to legend-development-4e, record delivery state"
+    "real_dependencies": "handoff delivered to the 4e session inbox; its reading and acceptance are unconfirmed",
+    "next_executable_step": "none"
   },
   "AUTHORISED_QUEUE_20261112": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_1_INSPECT": {
       "order": 1,
       "title": "Inspect current instruction chain, agent/skill formats, DREAM, radar, transport, dashboard source records",
@@ -98,8 +98,9 @@
       "steps": [
         {
           "step": "Add factual build metadata to the Pilot Mandate, deliver to the active main Orchestrator via existing transport, record handoff state",
-          "status": "IN_PROGRESS",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "PILOT_MANDATE.md at b51d0e99863044575da10c18644b032b2511bd11 sent to session legend-development-4e (owner of ORCH-ROADMAP-IT47, the active main Orchestrator) with a durable pointer; send reported success; read and acceptance NOT confirmed"
         }
       ]
     },
@@ -109,8 +110,9 @@
       "steps": [
         {
           "step": "Italian implementation report: components, mechanisms reused, mechanical vs procedural, smoke, SHAs, handoff, removal",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "Italian report in the final chat message; build report in advisor_build_20261112/README.md"
         }
       ]
     }
@@ -143,6 +145,13 @@
       "sha": "286c8c8b9a505c45481d67ae6811aac65fc20817",
       "state": "PASS",
       "result": "test_ranking_it8 74 tests OK after merging 3b877bfc and 4ff3ced5 from development/main; not a battery run"
+    },
+    {
+      "label": "ci",
+      "sha": "b51d0e99863044575da10c18644b032b2511bd11",
+      "state": "CONCLUDED",
+      "result": "Public release gate #669 success"
     }
-  ]
+  ],
+  "MANDATE_STATE": "COMPLETE"
 }
