@@ -10,13 +10,14 @@
  "MANDATE_STATE": "OPEN",
  "CURRENT_PACKAGE": {
   "id": "landing",
-  "state": "pre-freeze checks",
+  "state": "second candidate: quick suites then battery",
   "delegate_active": "none",
   "updated": "2026-11-12"
  },
  "RESUME": "Main package written and verified. Next: pre-freeze suites, gate, LINT, receipts verify, growth, freeze SHA, verify_run battery, task_close, safe_push; then message the integrator (delivery with SHA), then the optional tail IT46-Q02 only if cheap; then self-eval, DREAM, report.",
  "DECISIONS_TAKEN": [
-  "2026-11-12 18:35 widening of the sulforaphane perimeter (S0 addendum 2): at most five further sources opened beyond abstract, chosen by PMC id, closeness to a WWOX-relevant preparation and SFN in both genotypes; reason: the verifier found the producer list incomplete (error class: candidate list), the cap of 8 assumed completeness; reversible: unopened candidates stay at the depth the verifier read. Narrow recheck of changed rows by the same verifier follows."
+  "2026-11-12 18:35 widening of the sulforaphane perimeter (S0 addendum 2): at most five further sources opened beyond abstract, chosen by PMC id, closeness to a WWOX-relevant preparation and SFN in both genotypes; reason: the verifier found the producer list incomplete (error class: candidate list), the cap of 8 assumed completeness; reversible: unopened candidates stay at the depth the verifier read. Narrow recheck of changed rows by the same verifier follows.",
+  "2026-11-12 first battery on e2b0ce41 FAIL (two pre-existing base failures, fixed on main); merged development/main (832d7d43) into task/sci48 and re-run the four quick suites and the battery on the merge candidate; no scientific guard weakened"
  ],
  "DELEGATIONS": [
   "P producer nr-z (agent aa8b34b0, legend-delegate): asked sonnet/medium; read back sonnet x78, medium x78; 78 turns in 4 launches (dispatch + 3 resumes), output 138,695, cache read 15,327,360, birth context 18,572; files: winkel_table 33 rows, sfn_table 38 rows, matrix 44 rows, evidence, figures, queries, 12 staged receipts (-74)",
@@ -106,5 +107,17 @@
    ]
   }
  },
- "VERIFICATION_EVIDENCE": []
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261112-175935-cbb802c5",
+   "label": "battery",
+   "sha": "e2b0ce416683dcd3143eee530986b8851a6ef7a4",
+   "state": "CONCLUDED",
+   "exit_code": 1,
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-175935-cbb802c5",
+   "log_sha256": "988274565edb3f7413eb0996879f1eca7774bfaa69287bdc5b5d1948ee5a3833",
+   "clone": "REMOVED",
+   "attribution": "FAIL on e2b0ce41 only: 2 suites (ranking_it8 test_regeneration_is_byte_identical: committed ranking.json receipt_ledger_lines 1816 against 1818 fresh, stale at the base 0bed3857 and regenerated on main by 3b877bfc; repurposing_view: 4 Chromium DevTools errors from the Snap-internal binary, fixed on main by 4ff3ced5). Neither touches files of this package. The FAIL is kept and not extended to the next candidate."
+  }
+ ]
 }
