@@ -27,3 +27,13 @@ Dispositions in `../generation_it48_20261112/README.md`; the pilot balance is in
 
 ## Limits
 Translations are the assistant's (a sonnet delegate produced the twelve new passages; the checker verified identifiers and numbers, not fluency). Reader rows for six of the eight new rows exist only in the generator table, not on the page. The dashboard still shows the first-screen "where to begin" table unchanged: no new kind of next step appeared.
+
+## 5. The generative reading (operator integration, 2026-11-12)
+Four questions asked of this cycle's work, answered from what exists on disk; the count of rows consumed measures accessibility, not benefit.
+| Question | Answer | Evidence still missing |
+|---|---|---|
+| Which previously unused knowledge now permits a hypothesis? | KH1-KH5 and HY1-HY3 (eight conditional INV-18 hypotheses, each with observation and source, relation, preparation and cell context, premise, rivals the packages declare, a measure, a reopen or abandon condition) are rows the generator reads and the dashboard shows two of; KH1 carries three limits that stop it being read as a Kir2 share | that the rows change a later choice |
+| Which compound, probe or comparison becomes pertinent? | HY2: an Ih tool blocker with a second structurally different blocker and a separate T-type arm, always with engagement shown; KH2: a Kv7 opener as a mechanism comparator in the spiking range, not for resting Rin; KH1: **no** tool exists (no Kir2 activator in the catalogue), so the honest output is a measurement first; INV-08: two reagents become comparators (SCI48) | that any of these separates a mechanism in a Wwox preparation |
+| Which experiment separates the rival explanations? | HY1: matched starting potential and excursion, sag and Ih (recruitment against more or different HCN); KH1: Ba2+-sensitive current per pF with synaptic blockers and a measured junction potential (difference-current ladder), then dynamic clamp (sufficiency only); KH5: capacitance, tau and age (maturation delay against a K conductance lesion); HY2: sag removal with engagement, then bursts | a slice measurement (IT49-Q01) |
+| Which new questions deserve depth? | IT49-Q01 (wet), IT49-Q02 (reanalysis), IT49-Q03 (engine), IT48-Q01 (literature still executable: Kir2 drug-name search; the share itself is a measurement), IT48-Q02..Q04 | priority by value of the next discriminating test, unchanged |
+A favourable result would also feed the return loop (a thread that survives its own refuting measure can merit depth); none of the eight rows has such a result yet. Permanent home of the orientation: the standing method of `roadmap_current.md` (one bullet added).
