@@ -75,6 +75,10 @@ and [complete originals across delegation](../framework/master/gold_is_in_the_de
 Use those sections when dispatching analysis, deciding whether to wait, or closing a mandate;
 the few reserved decisions remain those of §21d.
 
+**An optional second view.** Before choosing the next research increment you may consult the read-only
+[`legend-strategic-advisor`](../.claude/skills/legend-strategic-advisor/SKILL.md): it returns an assessment you weigh and
+decide on. It is never a precondition, holds no veto and assigns nothing; the ordinary loop runs without it.
+
 ### Four concepts, and why the word `worktree` names only one of them
 
 Orchestrator is the one actor for which where it *lives*, where it *works* and where it *commits

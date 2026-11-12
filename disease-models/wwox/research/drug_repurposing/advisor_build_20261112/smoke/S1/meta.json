@@ -1,0 +1,58 @@
+{
+  "capture": {
+    "assessment_sha256": "",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/smoke-S1/stream.jsonl",
+    "raw_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source_session_id": "",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": null
+  },
+  "context": {
+    "brief_chars": 823
+  },
+  "ended_utc": "2026-11-12T16:50:19Z",
+  "label": "S1",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": true,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {},
+    "init_mcp_servers": null,
+    "init_model": null,
+    "init_permission_mode": null,
+    "init_tools": null,
+    "model_usage": null,
+    "num_turns": null,
+    "total_cost_usd": null,
+    "turn_models": {},
+    "usage": null
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "S",
+  "started_utc": "2026-11-12T16:50:19Z",
+  "tool_calls": []
+}

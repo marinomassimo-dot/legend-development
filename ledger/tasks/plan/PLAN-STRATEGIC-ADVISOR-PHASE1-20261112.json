@@ -12,11 +12,11 @@
   "branch": "task/sadv",
   "CURRENT_STATE": "IN_PROGRESS",
   "CHECKPOINT": {
-    "last_verified_result": "HE47 closed and published fefbf6a0; main at d280c7c3 when this mandate was registered",
-    "first_incomplete_work": "OBJ_1_INSPECT",
+    "last_verified_result": "battery on 2513fe1f FAIL for two preexisting causes (kept); targeted reruns pass; tip 286c8c8b",
+    "first_incomplete_work": "OBJ_7_HANDOFF (message to the Orchestrator session), OBJ_8_REPORT",
     "active_processes": "none",
-    "real_dependencies": "a new .claude/agents file is invisible to the running session (smoke needs a fresh process); Pilot Mandate delivery needs the active Orchestrator session",
-    "next_executable_step": "read the DREAM, radar, transport and dashboard entry points; probe the runtime restrictions"
+    "real_dependencies": "Orchestrator session 4e idle; delivery by message with durable pointer",
+    "next_executable_step": "push the BUILD_SHA commit, send the durable-pointer message to legend-development-4e, record delivery state"
   },
   "AUTHORISED_QUEUE_20261112": {
     "MANDATE_STATE": "OPEN",
@@ -26,8 +26,9 @@
       "steps": [
         {
           "step": "Inspect current instruction chain, agent/skill formats, DREAM, radar, transport, dashboard source records",
-          "status": "IN_PROGRESS",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "instruction chain, agent/skill formats, entry points and runtime read in this session; see advisor_build_20261112/README.md sections 1-2"
         }
       ]
     },
@@ -37,8 +38,9 @@
       "steps": [
         {
           "step": "Verify what the runtime actually restricts for a custom agent profile (tools, model, effort, context isolation, new-agent visibility)",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "advisor_build_20261112/README.md sections 3-5 (init tools, sealed deny, new-agent visibility, --restricted hides agents, inherited context)"
         }
       ]
     },
@@ -48,8 +50,9 @@
       "steps": [
         {
           "step": "Agent definition (800-1200 words), invocation procedure/skill, snapshot+capture helper, minimal routing",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "commits ce020eaa, 27a77c3f, f27d42e3 on task/sadv: agent definition, skill, strategic_advisor.py, routing lines listed in README section 1"
         }
       ]
     },
@@ -59,8 +62,9 @@
       "steps": [
         {
           "step": "Fixture tests for plumbing (snapshot, capture, Stage B reads saved Stage A), ordinary execution without advisor, removal",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "framework/scripts/test_strategic_advisor.py 17 tests OK; quick suites OK on f27d42e3; no-advisor test pins that no other script imports the tool"
         }
       ]
     },
@@ -70,8 +74,9 @@
       "steps": [
         {
           "step": "One authorised smoke invocation with the actual profile; record result, model/effort read-back, capture fidelity, limits",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "advisor_build_20261112/smoke: S1 refused at launch (0 tokens), S2 OK on opus-5-5/high; one recorded extra attempt; Stage B profile not exercised"
         }
       ]
     },
@@ -81,8 +86,9 @@
       "steps": [
         {
           "step": "Quick suites, battery on a frozen candidate, land on main, publish to development, CI",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "integration and publication 4633abf7e18b65be0b51dde8c5dc47c89de6872e, gate PASS, ls-remote verified; battery on 2513fe1f FAIL kept (two preexisting causes), targeted reruns pass"
         }
       ]
     },
@@ -92,7 +98,7 @@
       "steps": [
         {
           "step": "Add factual build metadata to the Pilot Mandate, deliver to the active main Orchestrator via existing transport, record handoff state",
-          "status": "TODO",
+          "status": "IN_PROGRESS",
           "owner": "plan"
         }
       ]
@@ -109,5 +115,34 @@
       ]
     }
   },
-  "VERIFICATION_EVIDENCE": []
+  "VERIFICATION_EVIDENCE": [
+    {
+      "run_id": "20261112-165935-8c9321fb",
+      "label": "battery",
+      "sha": "2513fe1fb7552058681a64e4d535677a00e38776",
+      "state": "CONCLUDED",
+      "exit_code": 1,
+      "evidence_dir": "/tmp/legend-verify-keep/20261112-165935-8c9321fb",
+      "log_sha256": "3b3261a3d93ce7504b1b59b9ab245d6473c1ce58bdbb3c681b5bc3f133849672",
+      "clone": "REMOVED"
+    },
+    {
+      "label": "battery-note",
+      "sha": "2513fe1fb7552058681a64e4d535677a00e38776",
+      "state": "FAIL kept",
+      "result": "REGRESSION VERDICT FAIL: test_ranking_it8 (receipt_ledger_lines 1816 vs 1818, identical on base main 0bed3857) and test_repurposing_view (4 browser errors, snap Chromium 3593 needs GLIBC 2.42, host has 2.39); 245 suites, 12 skipped; nothing else red"
+    },
+    {
+      "label": "view-suite-with-working-chromium",
+      "sha": "2513fe1fb7552058681a64e4d535677a00e38776",
+      "state": "PASS",
+      "result": "221 tests OK, CHROME_BIN=/snap/chromium/3583/usr/lib/chromium-browser/chrome; not a battery run"
+    },
+    {
+      "label": "ranking-after-merge",
+      "sha": "286c8c8b9a505c45481d67ae6811aac65fc20817",
+      "state": "PASS",
+      "result": "test_ranking_it8 74 tests OK after merging 3b877bfc and 4ff3ced5 from development/main; not a battery run"
+    }
+  ]
 }

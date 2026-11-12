@@ -95,6 +95,7 @@ The operational capability set, genericized:
 | `legend-capability-scout` | Post-session capability-growth radar |
 | `legend-dream` | Light reconsider-connect-deliver pass over recent work (called from self-eval) |
 | `legend-harness-scout` | Weekly harness radar (GitHub, Hugging Face, Nature portfolio) for the Junior Harness Engineer; candidates implemented at T0 by Harness Engineering |
+| `legend-strategic-advisor` | Optional read-only strategic consultation for the Orchestrator (Stage A independent, Stage B dialogue); advises, never gates |
 | `legend-session-takeaways` | Compact end-of-session synthesis |
 | `legend-commit` | Executes a batch commit end-to-end with LINT gate + snapshot/restore |
 | `legend-lint-repair-plan` | Turns LINT output into a safe repair plan |

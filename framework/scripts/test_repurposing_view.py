@@ -1344,6 +1344,15 @@ class CdpStartup(unittest.TestCase):
         self.assertEqual(snap, [len(names) - 1])
         self.assertTrue(all(not b.startswith("/snap/") for b in names[:-1]))
 
+    def test_a_candidate_that_cannot_start_is_skipped(self):
+        import os
+        from unittest.mock import patch
+        with tempfile.TemporaryDirectory() as td:
+            broken = self.browser(td, "import sys\nsys.exit(1)\n")
+            with patch.dict(os.environ, {}, clear=False), patch.object(rv, "CHROMIUM_CANDIDATES", [broken, sys.executable]):
+                os.environ.pop("CHROME_BIN", None)
+                self.assertEqual(rv.find_chromium(), sys.executable)
+
     def test_unavailable_configured_browser_keeps_portable_fallback(self):
         import os
         from unittest.mock import patch
