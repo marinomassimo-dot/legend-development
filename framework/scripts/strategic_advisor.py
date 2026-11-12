@@ -274,16 +274,24 @@ def _append(campaign: Path, row: dict[str, Any]) -> None:
 def claude_command(model: str, effort: str) -> list[str]:
     binary = os.environ.get("LEGEND_ADVISOR_CLAUDE", "claude")
     cmd = [binary, "-p", "--agent", AGENT, "--model", model, "--effort", effort, "--output-format", "stream-json", "--verbose",
-           "--tools", ",".join(TOOLS), "--allowedTools", *TOOLS, "--disallowedTools", *DENIED,
-           "--permission-mode", "dontAsk", "--strict-mcp-config", "--disable-slash-commands", "--restricted"]
+           "--tools", ",".join(TOOLS), "--allowedTools", "WebFetch", "--disallowedTools", *DENIED,
+           "--permission-mode", "dontAsk", "--strict-mcp-config", "--disable-slash-commands"]
+    # Not --restricted: it also hides the project agents (measured 2026-11-12, `--agent` not found). Reads outside the working directory and the added memory directory
+    # are not allowed by any rule, so dontAsk denies them; that is the runtime's default behaviour, checked in the smoke record.
     if MEMORY_DIR.is_dir():
         cmd += ["--add-dir", str(MEMORY_DIR)]
     return cmd
 
 
-def run(stage: str, campaign: Path, brief: Path, model: str, effort: str, timeout: int, limits: dict[str, int]) -> int:
+def run(stage: str, campaign: Path, brief: Path, model: str, effort: str, timeout: int, limits: dict[str, int], extra_reason: str = "") -> int:
     used = {a["index"] for a in _attempts(campaign) if a.get("stage") == stage}  # a log row is written at launch and again at the end: count attempts once
-    if len(used) >= limits[stage]:
+    extra = False
+    if len(used) >= limits[stage] and extra_reason:
+        # one recorded extra attempt per stage, and only when every earlier attempt of the stage produced no assessment
+        concluded = [a for a in _attempts(campaign) if a.get("stage") == stage and a["outcome"] not in ("STARTED", "OK")]
+        if len(concluded) == len(used) and not any(a.get("extra") for a in _attempts(campaign) if a.get("stage") == stage):
+            extra = True
+    if len(used) >= limits[stage] and not extra:
         print(f"CEILING: stage {stage} already has {len(used)} attempt(s) in {campaign} (limit {limits[stage]}); failed attempts count. "
               "This ceiling is procedural: it binds runs launched through this tool only.", file=sys.stderr)
         return 2
@@ -298,6 +306,8 @@ def run(stage: str, campaign: Path, brief: Path, model: str, effort: str, timeou
     started = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     row = {"stage": stage, "index": index, "label": label, "started_utc": started, "model_asked": model, "effort_asked": effort,
            "brief_sha256": sha256_file(brief), "outcome": "STARTED"}
+    if extra:
+        row.update(extra=True, extra_reason=extra_reason)
     _append(campaign, row)  # logged before the launch: a crash or a timeout still counts
     outcome, code = "FAILED", 1
     try:
@@ -321,7 +331,7 @@ def run(stage: str, campaign: Path, brief: Path, model: str, effort: str, timeou
         meta = {
             "stage": stage, "label": label, "snapshot_note": "see the brief for the dispatch snapshot", "started_utc": started,
             "ended_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "profile": {"agent": AGENT, "model_asked": model, "effort_asked": effort, "tools_flag": TOOLS, "denied": DENIED, "restricted": True, "permission_mode": "dontAsk"},
+            "profile": {"agent": AGENT, "model_asked": model, "effort_asked": effort, "tools_flag": TOOLS, "denied": DENIED, "restricted": False, "permission_mode": "dontAsk"},
             "runtime_readback": {"init_tools": facts["init"].get("tools"), "init_mcp_servers": facts["init"].get("mcp_servers"), "init_model": facts["init"].get("model"),
                                  "init_permission_mode": facts["init"].get("permissionMode"), "turn_models": facts["turn_models"],
                                  "model_usage": result.get("modelUsage"), "usage": result.get("usage"), "num_turns": result.get("num_turns"),
@@ -358,13 +368,15 @@ def check(campaign: Path) -> int:
             problems.append(f"{a['label']}: started and never concluded (counts as an attempt)")
     for stage in LIMITS:
         n = len({a["index"] for a in attempts if a["stage"] == stage})
-        if n > LIMITS[stage]:
+        extras = len({a["index"] for a in attempts if a["stage"] == stage and a.get("extra")})
+        if n > LIMITS[stage] + extras:
             problems.append(f"stage {stage}: {n} attempts exceed the ceiling {LIMITS[stage]}")
     for meta_path in sorted(campaign.glob("*/meta.json")):
         meta = json.loads(meta_path.read_text(encoding="utf-8"))
         assessment = meta_path.parent / "assessment.md"
         if not assessment.exists():
-            problems.append(f"{meta_path.parent.name}: meta without assessment")
+            if not any(a["label"] == meta_path.parent.name and a["outcome"] in ("FAILED", "TIMEOUT") for a in attempts):
+                problems.append(f"{meta_path.parent.name}: meta without assessment")
             continue
         if sha256_file(assessment) != meta["capture"]["assessment_sha256"]:
             problems.append(f"{meta_path.parent.name}: assessment.md no longer matches the captured digest")
@@ -386,6 +398,9 @@ def check(campaign: Path) -> int:
             saved = {sha256_file(p) for p in campaign.glob("A*/assessment.md")}
             if not any(d.split("`")[1] in saved for d in digests):
                 problems.append(f"{b.name}: its brief does not embed any saved Stage A assessment")
+    for a in attempts:
+        if a.get("extra") and a["outcome"] == "STARTED":
+            print(f"NOTE: {a['label']} was an extra attempt beyond the ceiling — {a['extra_reason']}")
     for p in problems:
         print("PROBLEM:", p)
     print("check: " + ("OK" if not problems else f"{len(problems)} problem(s)"), f"· attempts: " + ", ".join(f"{s}={len({a['index'] for a in attempts if a['stage'] == s})}" for s in LIMITS))
@@ -404,6 +419,7 @@ def main(argv: list[str] | None = None) -> int:
     r = sub.add_parser("run"); r.add_argument("--stage", choices=["A", "B", "S"], required=True); r.add_argument("--campaign", required=True)
     r.add_argument("--brief", required=True); r.add_argument("--model", required=True); r.add_argument("--effort", required=True, choices=["low", "medium", "high"])
     r.add_argument("--timeout", type=int, default=3600)
+    r.add_argument("--extra-attempt", default="", help="reason; allows one recorded attempt beyond the ceiling when every earlier attempt of the stage failed")
     e = sub.add_parser("extract"); e.add_argument("--transcript", required=True); e.add_argument("--out", required=True)
     c = sub.add_parser("check"); c.add_argument("--campaign", required=True)
     args = ap.parse_args(argv)
@@ -430,7 +446,7 @@ def main(argv: list[str] | None = None) -> int:
         out.write_text(text, encoding="utf-8")
         print(f"{out} sha256 {sha256_file(out)}"); return 0
     if args.cmd == "run":
-        return run(args.stage, Path(args.campaign), Path(args.brief), args.model, args.effort, args.timeout, LIMITS)
+        return run(args.stage, Path(args.campaign), Path(args.brief), args.model, args.effort, args.timeout, LIMITS, args.extra_attempt)
     if args.cmd == "extract":
         text = extract_transcript(Path(args.transcript))
         Path(args.out).write_text(text, encoding="utf-8")

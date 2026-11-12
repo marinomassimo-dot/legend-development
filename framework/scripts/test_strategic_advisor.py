@@ -120,6 +120,15 @@ class Ceilings(Base):
         self.assertEqual(self.run_stage("S"), 2)
         self.assertEqual(self.run_stage("A"), 0)
 
+    def test_one_recorded_extra_attempt_after_a_failure_only(self) -> None:
+        os.environ["FAKE_MODE"] = "fail"
+        self.assertEqual(self.run_stage("S"), 1)
+        self.assertEqual(sa.run("S", self.campaign, self.brief, "opus", "high", 60, sa.LIMITS), 2)      # no reason: refused
+        os.environ.pop("FAKE_MODE")
+        self.assertEqual(sa.run("S", self.campaign, self.brief, "opus", "high", 60, sa.LIMITS, "S1 failed before any model call"), 0)
+        self.assertEqual(sa.run("S", self.campaign, self.brief, "opus", "high", 60, sa.LIMITS, "again"), 2)  # one extra only
+        self.assertEqual(sa.check(self.campaign), 0)
+
     def test_unfinished_attempt_is_reported_by_check(self) -> None:
         sa._append(self.campaign, {"stage": "A", "index": 1, "label": "A1", "outcome": "STARTED"})
         self.assertEqual(sa.check(self.campaign), 1)
@@ -162,7 +171,8 @@ class Profile(unittest.TestCase):
         joined = " ".join(cmd)
         self.assertIn("--agent legend-strategic-advisor", joined)
         self.assertIn("--tools Read,Glob,Grep,WebFetch", joined)
-        self.assertIn("--restricted", cmd)
+        self.assertNotIn("--restricted", cmd)  # it hides the project agents: measured
+        self.assertEqual(cmd[cmd.index("--allowedTools") + 1], "WebFetch")
         self.assertIn("--strict-mcp-config", cmd)
         self.assertNotIn("--bare", cmd)  # --bare would require an API key: new spend
         self.assertNotIn("--dangerously-skip-permissions", cmd)
