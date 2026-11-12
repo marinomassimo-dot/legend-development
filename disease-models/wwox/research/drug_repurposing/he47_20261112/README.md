@@ -87,3 +87,23 @@ because the raw tables are not in the repository.
 * Added: a table with **two** id-like columns (`id` and `hyp_id`) was read through the first one silently; it is now the state `AMBIGUOUS_KEY` and no row is returned. No real table is affected (checked on all committed tables).
 * GSK3/eIF2B (`gsk3_eif2b_20261107`, 5 hypotheses, pertinent to several investigations): the current format already serves it, one manifest row per investigation with the same folder
   (pinned by a test with a folder listed for two investigations). No code change is needed; which investigations get a row is for their owners.
+
+## 6 · H5 — cost: what the context carries longest
+
+**Measured, not estimated** (`session_model_census.py --carry`, new; a proxy: bytes of a tool result times the assistant turns after it, so not tokens and blind to compaction).
+Two long sessions since 2026-11-11T20:00 (this one: 818 turns; SCI46: 353 turns):
+
+| | this session | SCI46 session |
+|---|---|---|
+| tool results | 427 (690 kB) | 176 (409 kB) |
+| results over 3 kB | 72, carrying 63% of carried bytes | 44, carrying 82% |
+| tool carrying most | Bash | Bash 64%, Read 29% |
+| read in the first 50 turns | 21% of carried bytes | 50% |
+
+**Dominant factor:** a few large results read early (files, logs, listings) are re-read by every later turn. Counterfactual: a 3 kB cap per result would have removed an estimated 29% and 50% of the carried bytes.
+That is arithmetic on a transcript, **not a saving**: the capped text was text those turns used, no comparable task was re-run, and a compaction resets what is carried.
+
+**Change.** Measurement (`--carry`, one test) and one doc-only habit row in `framework/scripts/README.md` section 13. No startup file was widened or shortened, no output is capped by any tool, and no report was replaced by a brief.
+**CHANGE for the cost itself: none demonstrated.** A correction made while writing this: a first pass of the measurement filtered the wrong time window (the timestamp contained a colon that the loop split on) and gave 3,509 and 3,865 turns; the table above is the corrected run.
+
+**Remove.** Delete the `--carry` option and the README row.
