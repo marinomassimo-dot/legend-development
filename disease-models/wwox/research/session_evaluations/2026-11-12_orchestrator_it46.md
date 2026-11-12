@@ -5,7 +5,7 @@ Non-canonical. Process diagnosis for the IT46 mandate (from hand-built combinati
 ## Scope and executable verdict
 * Session: IT46 P0-P10 on branch task/it46, after closing the IT45 residuals (CI #654/#655 success, record COMPLETE).
 * `session_self_eval.py`: PASS (the declared gaps listed are historical). Structural lint: 0 BLOCK. Growth anchors: PASS. Receipts: 1,814 chained (27 SCI46 receipts recorded this session after a trial; 3 retrospective receipts for the IT45 reader were staged and removed before recording).
-* Batteries by SHA: 50cec56c = **FAIL** (new scripts with shebangs but no executable mode; two new suites calling `unittest.main()` without verbosity=2; kept attributed to that SHA, never rewritten). 4d43c262 was stopped by me with no verdict (content changed). The final candidate and its verdict: see the task record (written after the run).
+* Batteries by SHA (each verdict stays with its SHA): 50cec56c = **FAIL** (new scripts with shebangs but no executable mode; two new suites calling `unittest.main()` without verbosity=2). 4d43c262 = stopped by me, no verdict (content changed under it). 83a32867 = **FAIL** on one suite, `test_stage_it42` (the IT42 rule forbids the word "approved" without its catalogue scope; my new V21 text used it; I had run the IT39-IT41 stage tests but not IT42). 5a775909 = **PASS WITH SKIPS** (244 targets, 11 skipped for absent corpus or catalogue cache), through `verify_run`; this is the candidate that was landed, plus closure-only record and evaluation commits.
 
 ## Content diagnosis
 | Dimension | Answer | Grade | Debt |
@@ -19,7 +19,7 @@ Non-canonical. Process diagnosis for the IT46 mandate (from hand-built combinati
 ## Process diagnosis
 * **What the machine caught that I missed:** the battery (shebang modes; verbosity of the new suites; I had a documented lesson on shebangs in memory and did not apply it to the new files); the shareable audit (a catalogue name in public text, then an Italian conjunction plus a number matching a catalogue synonym); the ladder tests (a missing S7 identity); a stale generated identity-join file after a new view item.
 * **What a peer caught:** Harness found that the three S10 readings could not become receipts (byte check), that `verify_run` had linked an empty `files/` directory I had created (I removed it and restarted), and the mandate-binding line format; SCI46 pointed at the NRF2 queue item.
-* **Mistakes of mine:** an empty `files/` directory left in the worktree from a receipt trial; two interrupted batteries; DOI strings I first typed into a staged receipt from memory (caught before any check, removed); a table of counts in a result written from memory then verified before saving (the numbers were corrected once).
+* **Mistakes of mine:** two of three battery failures came from running only part of the phase tests before freezing (the IT42 stage rule; the new suites' verbosity); an empty `files/` directory left in the worktree from a receipt trial; two interrupted batteries; DOI strings I first typed into a staged receipt from memory (caught before any check, removed); a table of counts in a result written from memory then verified before saving (the numbers were corrected once).
 * **External dependency:** the public ChEMBL service returned errors for several hours; the S5 activity read waited and was made later, stated in the result.
 
 ## Micro-upgrades (the answers, not promises)
