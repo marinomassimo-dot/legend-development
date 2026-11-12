@@ -1,0 +1,655 @@
+{
+ "_release": {
+  "directory": "ChEMBL_37",
+  "basis": "status_endpoint"
+ },
+ "CHEMBL1907597": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 37,
+   "total_count": 37,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL1962": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 421,
+   "total_count": 421,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 7,
+   "error": ""
+  }
+ },
+ "CHEMBL2094121": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 1000,
+   "total_count": 1000,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 10,
+   "error": ""
+  }
+ },
+ "CHEMBL2095172": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 509,
+   "total_count": 509,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 7,
+   "error": ""
+  }
+ },
+ "CHEMBL2111392": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 34,
+   "total_count": 34,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL3885570": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 4,
+   "total_count": 4,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL4106151": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 6,
+   "total_count": 6,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL4296044": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 8,
+   "total_count": 8,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL4523638": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 1,
+   "total_count": 1,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL5303741": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 0,
+   "total_count": 0,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 2,
+   "error": ""
+  }
+ },
+ "CHEMBL2094130": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 781,
+   "total_count": 781,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 8,
+   "error": ""
+  }
+ },
+ "CHEMBL2111413": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 145,
+   "total_count": 145,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL3885571": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 3,
+   "total_count": 3,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL4296064": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 0,
+   "total_count": 0,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 2,
+   "error": ""
+  }
+ },
+ "CHEMBL4956": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 157,
+   "total_count": 157,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL5291949": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 2,
+   "total_count": 2,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL2094120": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 879,
+   "total_count": 879,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 9,
+   "error": ""
+  }
+ },
+ "CHEMBL2111339": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 81,
+   "total_count": 81,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL3026": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 85,
+   "total_count": 85,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL3885572": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 3,
+   "total_count": 3,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL3885573": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 1,
+   "total_count": 1,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL3885574": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 1,
+   "total_count": 1,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL3885575": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 1,
+   "total_count": 1,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL2094122": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 954,
+   "total_count": 954,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 9,
+   "error": ""
+  }
+ },
+ "CHEMBL3885576": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 3,
+   "total_count": 3,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL3885577": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 1,
+   "total_count": 1,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL4296057": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 0,
+   "total_count": 0,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 2,
+   "error": ""
+  }
+ },
+ "CHEMBL4523641": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 65,
+   "total_count": 65,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL5112": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 538,
+   "total_count": 538,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 6,
+   "error": ""
+  }
+ },
+ "CHEMBL1920": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 1,
+   "total_count": 1,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL2111370": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 27,
+   "total_count": 27,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL4296045": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 14,
+   "total_count": 14,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL4296046": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 1,
+   "total_count": 1,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL4523640": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 26,
+   "total_count": 26,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL1847": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 23,
+   "total_count": 23,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL2095190": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 336,
+   "total_count": 336,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 5,
+   "error": ""
+  }
+ },
+ "CHEMBL2111366": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 86,
+   "total_count": 86,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL3430899": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 51,
+   "total_count": 51,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL3885578": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 3,
+   "total_count": 3,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 4,
+   "error": ""
+  }
+ },
+ "CHEMBL4106157": {
+  "dose_response": {
+   "types": [
+    "IC50",
+    "EC50",
+    "Kd",
+    "Ki"
+   ],
+   "coverage": "COMPLETE",
+   "retrieved": 0,
+   "total_count": 0,
+   "source_version": "ChEMBL_37 2026-05-01",
+   "requests": 2,
+   "error": ""
+  }
+ },
+ "_symbols": {
+  "S5:GABRA1": "TARGETS_FOUND",
+  "S5:GABRA2": "TARGETS_FOUND",
+  "S5:GABRA3": "TARGETS_FOUND",
+  "S5:GABRA5": "TARGETS_FOUND",
+  "S5:GABRB2": "TARGETS_FOUND",
+  "S5:GABRB3": "TARGETS_FOUND",
+  "S5:GABRG2": "TARGETS_FOUND"
+ }
+}

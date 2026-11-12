@@ -1,0 +1,25 @@
+symbol	molecule	molecule_chembl_id	type	relation	value	units	document	assay	assay_description	organism	assay_type
+ABAT	VIGABATRIN	CHEMBL89598	Ki	=	850000.0	nM	CHEMBL1135615	CHEMBL678638	Concentration dependent inactivation of Gamma-amino-N-butyrate transaminase	Homo sapiens	B
+ABAT	PAROXYPROPIONE	CHEMBL312311	IC50	=	176000.0	nM	CHEMBL1149409	CHEMBL867027	Inhibitory activity against GABAT	Homo sapiens	B
+ABAT	VANILLIN	CHEMBL13883	IC50	=	17100.0	nM	CHEMBL1149409	CHEMBL867027	Inhibitory activity against GABAT	Homo sapiens	B
+ABAT	AMINOBENZOIC ACID	CHEMBL542	IC50	>	1000000.0	nM	CHEMBL1149409	CHEMBL867027	Inhibitory activity against GABAT	Homo sapiens	B
+ABAT	VIGABATRIN	CHEMBL89598	Ki	=	3200000.0	nM	CHEMBL2203122	CHEMBL2214167	Inactivation of GABA-AT	Homo sapiens	B
+ABAT	BAICALEIN	CHEMBL8260	IC50	=	12800000.0	nM	CHEMBL3351502	CHEMBL3367274	Inhibition of GABA transaminase (unknown origin)	Homo sapiens	B
+ABAT	IPP/CNRS-A017	CHEMBL3589752	Ki	=	2100.0	nM	CHEMBL5465560	CHEMBL5476659	Selectivity interaction (GPCR panel (PDSP screen)) EUB0000276b ABAT	Homo sapiens	B
+ABAT	BAY-3827	CHEMBL4580220	Ki	=	222.4	nM	CHEMBL5465560	CHEMBL5476318	Selectivity interaction (GPCR panel (PDSP screen)) EUB0000311b ABAT	Homo sapiens	B
+ABAT	BI 2545	CHEMBL4165749	Ki	=	2560.0	nM	CHEMBL5465560	CHEMBL5476369	Selectivity interaction (GPCR panel (PDSP screen)) EUB0000318b ABAT	Homo sapiens	B
+ABAT	BI-605906	CHEMBL4522930	Ki	=	2622.51	nM	CHEMBL5465560	CHEMBL5479831	Selectivity interaction (GPCR panel (PDSP screen)) EUB0001492b ABAT	Homo sapiens	B
+ABAT	VIGABATRIN	CHEMBL89598	Ki	=	3200000.0	nM	CHEMBL5726210	CHEMBL5732295	Biochemical assay: Biochemical assays were performed using a Biotek Synergy H1 microplate reader. Prior to their evaluation, initial experiments were performed to confirm the synthesized analogues do 	Homo sapiens	B
+SLC6A1	TIAGABINE	CHEMBL1027	IC50	=	70.0	nM	CHEMBL1127589	CHEMBL806333	Inhibitory activity against human GABA transporter-1 (hGAT1)	Homo sapiens	B
+SLC6A1	GAMMA-AMINOBUTYRIC ACID	CHEMBL96	IC50	=	5000.0	nM	CHEMBL1127589	CHEMBL806333	Inhibitory activity against human GABA transporter-1 (hGAT1)	Homo sapiens	B
+SLC6A1	TIAGABINE	CHEMBL1027	IC50	=	280.0	nM	CHEMBL1148561	CHEMBL862288	Inhibition of GAT1 transport activity	Homo sapiens	B
+SLC6A1	TIAGABINE	CHEMBL1027	Ki	=	16.98	nM	CHEMBL1641586	CHEMBL1647445	Displacement of [3H]Tiagabine from human recombinant GAT1 expressed in HEK293 cells by equilibrium binding assay	Homo sapiens	B
+SLC6A1	TIAGABINE	CHEMBL1027	IC50	=	380.19	nM	CHEMBL3396951	CHEMBL3399460	Inhibition of human GAT1 expressed in HEK293 cells by [3H]GABA uptake assay	Homo sapiens	B
+SLC6A1	TIAGABINE	CHEMBL1027	Ki	=	47.86	nM	CHEMBL3396951	CHEMBL3399462	Binding affinity to human GAT1 expressed in HEK293 cells using NO71156 as unlabelled marker by LC-ESI-MS-MS based competitive MS binding assay	Homo sapiens	B
+SLC6A1	GAMMA-AMINOBUTYRIC ACID	CHEMBL96	IC50	=	3311.31	nM	CHEMBL4028872	CHEMBL4031696	Inhibition of human GAT1 expresses in tsA201 cells assessed as reduction in [3H]GABA uptake after 3 mins by scintillation counting method	Homo sapiens	B
+SLC6A1	GAMMA-AMINOBUTYRIC ACID	CHEMBL96	IC50	=	3000.0	nM	CHEMBL4028872	CHEMBL4031696	Inhibition of human GAT1 expresses in tsA201 cells assessed as reduction in [3H]GABA uptake after 3 mins by scintillation counting method	Homo sapiens	B
+SLC6A1	TIAGABINE	CHEMBL1027	Kd	=	40.5	nM	CHEMBL4371014	CHEMBL4371745	Competitive inhibition of human GAT1 expressed in COS cells assessed as reduction in [2H6]GABA uptake by measuring [2H6]GABA Kd(app) at 100 nM preincubated for 25 mins followed by [2H6]GABA addition a	Homo sapiens	B
+SLC6A1	TIAGABINE	CHEMBL1027	Kd	=	146.8	nM	CHEMBL4371014	CHEMBL4371747	Competitive inhibition of human GAT1 expressed in COS cells assessed as reduction in [2H6]GABA uptake by measuring [2H6]GABA Kd(app) at 1 uM preincubated for 25 mins followed by [2H6]GABA addition and	Homo sapiens	B
+SLC6A1	TIAGABINE	CHEMBL1027	IC50	=	154.88	nM	CHEMBL4371014	CHEMBL4371753	Inhibition of NO711 binding to human GAT1 expressed in COS cell membranes preincubated for 25 mins by LC-ESI-MS/MS analysis	Homo sapiens	B
+SLC6A1	GAMMA-AMINOBUTYRIC ACID	CHEMBL96	IC50	=	10000.0	nM	CHEMBL4396887	CHEMBL4398052	Inhibition of human GAT1 expressed in Flp-In CHO cells assessed as reduction in [3H]GABA uptake incubated for 3 mins by liquid scintillation counting method	Homo sapiens	B
+SLC6A1	GAMMA-AMINOBUTYRIC ACID	CHEMBL96	IC50	=	5000.0	nM	CHEMBL4400545	CHEMBL4401736	Inhibition of human GAT1 expressed in COS cells assessed as decrease in [3H]GABA uptake after 10 mins by scintillation counting analysis	Homo sapiens	B

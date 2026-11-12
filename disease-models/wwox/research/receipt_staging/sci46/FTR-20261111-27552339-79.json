@@ -15,8 +15,8 @@
  "event_at": "2026-11-11T22:11:00Z",
  "event_id": "FTR-20261111-27552339-79",
  "evidence_basis": [
-  "verbatim_locator | proposition: A549 lysates | Results, KiNativ | \"ML385 (5 μM) did not exhibit significant inhibition of any of the ~170 kinases that were evaluated\"",
-  "verbatim_locator | proposition: NRF2-MAFG complex on ARE DNA; biochemical | Results, FP assay | \"with an IC50 of 1.9 μM\"",
+  "verbatim_locator | proposition: A549 lysates | Results, KiNativ | \"ML385 (5 \u03bcM) did not exhibit significant inhibition of any of the ~170 kinases that were evaluated\"",
+  "verbatim_locator | proposition: NRF2-MAFG complex on ARE DNA; biochemical | Results, FP assay | \"with an IC50 of 1.9 \u03bcM\"",
   "verbatim_locator | proposition: Cancer cell lines; no neural cell | Results, isogenic H460 pair | \"Treatment with ML385 lead to a significant reduction in NRF2 and downstream target gene expression selectively in KEAP1 mutant H460 cells\""
  ],
  "evidence_depth": "partial_fulltext_read",

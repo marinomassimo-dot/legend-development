@@ -1,0 +1,14 @@
+# IT46 P9: qualification of the HCN1-selective probe pointer (relation S2, question IT45-Q04)
+
+Non-canonical working note. Not medical advice; no dose, schedule or route. Reference genotype class only. Labels DATO / INFERENZA / IPOTESI.
+
+**What IT45 held.** A pointer (catalogue record CHEMBL6195028) whose only source was a data deposit (ChEMBL document CHEMBL6193877, "Data for DCP probe RO-275"): HCN1 IC50 about 43 to 49 nM, higher values on the other isoforms (IT45 `s2_dose/result_it45.md`); no paper had been named.
+
+**What IT46 found (public records, no new spend).**
+* DATO (ChEMBL REST, document CHEMBL6193877, release 37): the deposit is an SGC Frankfurt donated-chemical-probe record, probe donated by Roche, **with a named negative-control compound**, and it cites one primary paper: Harde et al., Cell Chemical Biology 2023;31(3):577-592 (PMID 38042151, DOI 10.1016/j.chembiol.2023.11.004). The deposit's table carries the three patch-clamp conditions (-80, -100, -120 mV pulses) of the human HCN1 cell assay (HEK293, tetracycline-inducible, automated patch clamp).
+* DATO (PubMed, abstract only): a primary-carboxamide series of potent, selective HCN1 inhibitors found by automated electrophysiology; selective inhibition of native HCN1 enhanced excitatory postsynaptic potential summation in cognition-relevant circuits; working memory was recovered in rats; no change of cardiac physiology in human atrial cardiomyocytes or rats; keywords include epilepsy.
+* **Reach:** closed access (PubMed copyright record: all rights reserved, not in PMC). The full text was **not** read. Selectivity and the mode of action are the authors' statements as printed in the abstract, not checked against the paper's tables.
+
+**What it changes (INFERENZA).** The pointer is no longer a bare deposit: it has a primary paper and a negative-control compound, which is what a tool arm needs for an isoform question (a control that is structurally close and inactive). The identity is qualified at deposit level (the record names the probe and its control); the action on HCN1 is supported by the deposit's own numbers; transfer to a Wwox slice (layer II/III, P13-P17) is **unknown**: the authors worked in other circuits and species. The probe still has no tier above "probe" and is not a candidate treatment.
+
+**Open and executable.** Read the full text through a lawful route (author deposit, interlibrary route, a publisher copy the operator holds) to check the selectivity table and the off-target panel; until then IT45-Q04 stays OPEN with its source named. The deposit alone does not settle whether the probe separates the HCN1-carried from the HCN2-carried part of the knockout sag (the held cell-class table reads HCN1 neuron-enriched in both species and HCN2 higher in myelinating oligodendrocytes in the mouse: `cell_context_it46.tsv`).

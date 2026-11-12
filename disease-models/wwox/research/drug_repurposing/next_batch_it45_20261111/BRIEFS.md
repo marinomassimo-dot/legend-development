@@ -25,3 +25,5 @@ Non-canonical working note. Not medical advice; no dose, schedule or route. Refe
 * **Indispensable measurement:** Kir4.1-dependent current and extracellular K+ clearance in Wwox-deficient astrocytes.
 * **Favours the alternatives:** a reduced Kir4.1 current or slower clearance favours the buffering explanation; normal values leave K+ buffering out of the model.
 * **Stop criterion:** stop when a dataset answers expression, or when no dataset exists and the search strings are stated.
+
+**Update 2026-11-11 (IT46 P4).** B2: the 'equal current-injection hyperpolarisation' arm is replaced (see `../generation_it46_20261111/p4_audit_it46.md`). B1: add an exposure-matching phase 0, a second knockdown reagent, an NRF2-independent control gene set and a WWOX genotype factor to the SCI46 comparison rows.

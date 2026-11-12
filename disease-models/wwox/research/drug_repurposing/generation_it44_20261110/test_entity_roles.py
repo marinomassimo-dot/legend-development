@@ -25,4 +25,13 @@ class Roles(unittest.TestCase):
         self.assertEqual([r["name"] for r in rows() if r["role"] == "candidate" and r["role_basis"] == "rule default"], [])
     def test_every_role_is_in_the_vocabulary(self):
         ok = {"candidate", "probe", "control_or_reagent", "physiological_intervention", "unqualified_entity"}; self.assertTrue(all(r["role"] in ok for r in rows()))
+
+    def test_a_peptide_known_only_by_catalogue_modality_is_a_probe(self):
+        import entity_roles as er
+        rules = er.tsv(er.HERE / "role_rules_it44.tsv")
+        self.assertEqual(("probe", "R9"), er.role_of("", "clinical_candidate", rules, "protein_or_peptide"))   # was a candidate by rule R8
+        self.assertEqual(("unqualified_entity", "R10"), er.role_of("", "clinical_candidate", rules, "antibody"))
+        self.assertEqual(("candidate", "R8"), er.role_of("", "clinical_candidate", rules, "small_molecule"))
+
+
 if __name__ == "__main__": unittest.main(verbosity=2)
