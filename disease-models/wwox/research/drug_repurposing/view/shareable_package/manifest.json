@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 13265,
+    "values": 13329,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -193,7 +193,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 1481,
+    "values": 1483,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -471,11 +471,11 @@
   "BIBLIO": 2696,
   "COUNT": 12405,
   "ID": 4861,
-  "OWN": 90105,
+  "OWN": 90169,
   "ROWNAME": 2408,
   "SRC_A": 189,
   "SRC_META": 261,
-  "UI": 1481
+  "UI": 1483
  },
  "embedded_sources": [
   {
@@ -560,24 +560,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5179634,
-   "sha256": "20f21bd114856bd47bae4289b8e66be4c7ae473932bc923e8c86cb10812a285c"
+   "bytes": 5181796,
+   "sha256": "2ea3422ab10f5ae1130107075885ae72567c5c788a9fbe291ce790d435201283"
   },
   "es.html": {
-   "bytes": 5165631,
-   "sha256": "f019f98edd6227388872f96fa195b0436718c819409e5b6249cda7ea4f345bf4"
+   "bytes": 5167821,
+   "sha256": "eda54a12d6ed1fd45c14e00e91f221417f563569a516d0cfd43ed29eeedb4930"
   },
   "fr.html": {
-   "bytes": 5195632,
-   "sha256": "7b8625205d4f0805bd680f831b44fd89cf1fb35e773fd2b168a6369753325b33"
+   "bytes": 5197955,
+   "sha256": "8639f6d4c568e77967f6eb55dc56c93e2ca668c9f4a0ab2d087ed48fda2a4142"
   },
   "index.html": {
-   "bytes": 5081612,
-   "sha256": "9681ae175032aca2f0c372f35f1c2c5701a5dc2336827406ed95c56840202044"
+   "bytes": 5083678,
+   "sha256": "30bbd639d47ddf84464ec45339b661e924a397ca2d5f05aa1940e6fdcc883aea"
   },
   "it.html": {
-   "bytes": 5141839,
-   "sha256": "d321e0043d849ddbda8ea8b7e5574b1a1875d31fbacccf51aab88a5c3283c8ce"
+   "bytes": 5144021,
+   "sha256": "4e09dd23186ebfbf01d33a9f6b18b5f1cc2a8ae98261a91805ae84a48315e3bb"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
