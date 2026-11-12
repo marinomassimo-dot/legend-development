@@ -12,11 +12,11 @@
   "branch": "task/he47",
   "CURRENT_STATE": "IN_PROGRESS",
   "CHECKPOINT": {
-    "last_verified_result": "HE46 published 4e453e1b, CI #657 success on d493afb8; he46 worktree removed",
-    "first_incomplete_work": "H1",
-    "active_processes": "none",
-    "real_dependencies": "task/it46 holds the textual guard in comparison_engine.py and is not on main; SCI46 delta rows 2-3 wait for it",
-    "next_executable_step": "read the real guard and the package fields in the it46 worktree"
+    "last_verified_result": "H1-H5, H7, H8 committed on task/he47; targeted suites pass; battery by SHA pending",
+    "first_incomplete_work": "H6 (battery through verify_run on the frozen SHA, continuity read of IT47/SCI47), then landing",
+    "active_processes": "none of mine except neighbouring suites",
+    "real_dependencies": "task/sci47 carries the same cells as cf1f39b0 (cherry-picked here); IT47 owns generator consumption",
+    "next_executable_step": "freeze and run the battery with verify_run"
   },
   "AUTHORISED_QUEUE_20261112": {
     "MANDATE_STATE": "OPEN",
@@ -26,8 +26,9 @@
       "steps": [
         {
           "step": "Explicit structured intention replaces the textual 'independent route' guard in the IT46 comparison engine; keep apart source reading depth, what the proposition measures, relation to the mechanism, direction of evidence, reagent role in the comparison, support for a therapeutic proposal; counter-evidence kept, a mention does not promote a role, unclassified case explicit, old packages still readable, no new gate; fields agreed with IT47 and Science; proven on two packages of different mechanisms",
-          "status": "IN_PROGRESS",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "relation/direction cells (contract in hypothesis_package.py, agreed with IT46 Orchestrator and Science); engine replaces INDEPENDENT_ROUTE; INV-08 before/after (MMF, KI-696, DMF); INV-05/INV-07 unchanged; he47 README 1"
         }
       ]
     },
@@ -37,8 +38,9 @@
       "steps": [
         {
           "step": "From reader to real consumer: support IT47 at the technical boundary (qualified local ids, cell provenance, explicit ambiguity and missing columns, empty vs absent file, no silent equivalence); verify one real generator run; examine the GSK3/eIF2B multi-investigation package with minimum reuse of the current format",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "technical boundary: AMBIGUOUS_KEY state, folder for several investigations pinned by test; NOT shown: a real generator run (no generator calls hypotheses_for; IT47's); GSK3/eIF2B needs one manifest row per investigation, choice left to owners; README 5"
         }
       ]
     },
@@ -48,8 +50,9 @@
       "steps": [
         {
           "step": "Comparisons keep scope and uncertainty: find a concretely misleading comparison_engine output first (valid comparison hidden by an incompatible one, pair-not-comparable vs compound-not-usable, verified perturbation vs endpoint adequacy, endpoint/time/cell/unit association); parser assumptions (room temperature, conventional range, pHo/pHi/pH shift/difference, inherited reference provenance and overrides)",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "pair-count scope in comparison states; RT-qPCR no longer room temperature (13 reasons, 0 states over 1108 pairs); by_convention flag; unplaced pH wording; README 2"
         }
       ]
     },
@@ -59,8 +62,9 @@
       "steps": [
         {
           "step": "Reuse public RNA-table loading: measure real duplication across SCI44/SCI46/IT46; implement one parametric function only if it removes copies without losing provenance, else document the command and declare CHANGE = NONE; reproduce two concluded analyses and one small input with missing/ambiguous ids",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "rna_class_means.py reproduces 6 of 6 committed outputs byte for byte; missing-not-zero report; README 4"
         }
       ]
     },
@@ -70,8 +74,9 @@
       "steps": [
         {
           "step": "Cost: one demonstrable dominant factor, comparable task measured before/after, correctness and coverage preserved; no re-proposal of the withdrawn audit memoisation without new evidence",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "measurement only (session_model_census --carry) and a doc-only habit row; CHANGE for the cost itself: none demonstrated; README 6"
         }
       ]
     },
@@ -81,8 +86,9 @@
       "steps": [
         {
           "step": "Verification, temporaries and continuity: verify_run in the three sessions, actor-sharing safety, no indiscriminate cleanup; continuity on IT47 and SCI47 (marker, record location, live-process wait, no duplicate restart, pending verification as open step); ci_runs single wait per workflow/SHA and API reset respected",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "IN_PROGRESS",
+          "owner": "plan",
+          "evidence": "verify_run reap exact by session (defect reproduced by test); ci_runs shared read, 120 s poll; continuity of IT47/SCI47 and the real battery through verify_run pending"
         }
       ]
     },
@@ -92,8 +98,9 @@
       "steps": [
         {
           "step": "DREAM oriented to use: recent correction not reaching a consumer, capability available but not called, association that changes the next brief, habit that repeats work; show where behaviour changes; System One optional",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "README 7"
         }
       ]
     },
@@ -103,8 +110,9 @@
       "steps": [
         {
           "step": "Claude Science comparison preparation, light: reuse existing path, snapshot/originals/tools/code/parameters, retrieval vs inference vs proposal vs validation; Auto mode issue belongs to the external runtime",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "README 8; nothing built, existing package layout reused"
         }
       ]
     }
