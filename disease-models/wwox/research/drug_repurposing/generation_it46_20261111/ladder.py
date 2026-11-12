@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT46 P2: one row per molecule that any relation reached, with the six things that must stay apart (reached / identity /
 action / transfer to the context / possible benefit / what verification is next) and where, downstream, it is mentioned.
 Built only from held tables; a field that no table carries says so. Nothing here ranks and nothing is an exclusion:

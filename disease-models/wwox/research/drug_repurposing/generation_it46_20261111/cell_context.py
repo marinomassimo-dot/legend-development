@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT46 P1: join a relation's target symbols to a held cell-class expression table.
 
   cell_context.py            -> writes cell_context_it46.tsv (every relation of the IT40 search and the IT43/IT44 relation tables)

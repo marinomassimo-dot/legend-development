@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT46 P5: the SCI46 KEAP1/NRF2 delivery reaches its consumers (idempotent; marker "[IT46 SCI46]"). Rows 1, 2, 5, 6, 9, 10 of keap1_nrf2_sci46_20261111/consumer_delta.md.
 V19 name and counter were edited in the table directly with the manifest row and the engine aliases; this script adds the INV-08 and V19 step texts and the open-question rows.
 Not applied here (stated in p5_sci46_it46.md): row 7 (needs.json is an input digest of the ranking), rows 3, 4, 8, 11 (Harness). python3 apply_it46_sci46.py [--check]"""

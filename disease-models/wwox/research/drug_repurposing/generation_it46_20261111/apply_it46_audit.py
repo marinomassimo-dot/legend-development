@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT46 P4: the corrected designs of the two audited comparisons reach their consumers (idempotent; marker "[IT46 audit]").
 Kv7 (R5 -> R5a/R5b, with the reviewer's additions): investigations INV-18 next_test, compound view V10 next_test, open question IT45-Q01.
 KEAP1 reagent pair (S10): investigations INV-08 next_test, compound view V19 next_test.

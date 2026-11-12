@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT46 P1: the cell-context join reaches the two consumers that carried the IT45 sentence "the Kv7 genes are neuron-enriched"
 (compound_view V10 next_test; investigations INV-18 feasibility). The correction text is built from cell_context.py rows, not typed.
 Idempotent: a row that already holds the marker is left alone.  python3 apply_it46_context.py [--check]"""
