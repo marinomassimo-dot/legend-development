@@ -12,8 +12,8 @@
   "branch": "task/adv2",
   "CURRENT_STATE": "OPEN",
   "CHECKPOINT": {
-    "last_verified_result": "none yet",
-    "first_incomplete_work": "OBJ_1_INSPECT"
+    "last_verified_result": "battery PASS WITH SKIPS on 5deeb1ad",
+    "first_incomplete_work": "OBJ_7_INTEGRATION"
   },
   "AUTHORISED_QUEUE_20261112": {
     "MANDATE_STATE": "OPEN",
@@ -23,9 +23,9 @@
       "steps": [
         {
           "step": "Inspect build report, IT48 pilot artefacts, Chromium selection changes, derived-output incidents; separate built / invoked / consumed / useful",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "IT48 campaign artefacts, raw streams and transcripts read; built/invoked/consumed/useful separated in advisor_followup_20261112 section 1"
         }
       ]
     },
@@ -35,9 +35,9 @@
       "steps": [
         {
           "step": "Reproduce the SCI48 absent-package case; distinguish announced / present in snapshot / accessible / read; minimal fix plus targeted regression",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "SCI48 case reproduced on 54b985c7 (3f12c196 not an ancestor); porcelain first-character defect found; brief --expect + main-ahead lines + NOTE in check; regressions in test_strategic_advisor (24 pass)"
         }
       ]
     },
@@ -47,9 +47,9 @@
       "steps": [
         {
           "step": "Verify capture, runtime/transcript match, Stage A/B separation, declared exposure and per-turn model on the real assessments (no new calls)",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "four assessments equal result event and transcript; sealed folder unopened; fallback cause from model_refusal_fallback rows (bio); meta final_turn_model and refusal_fallbacks; check NOTE vs PROBLEM"
         }
       ]
     },
@@ -59,9 +59,9 @@
       "steps": [
         {
           "step": "Recompute census from current metadata; find the loads that dominate context; one small fix only if a cause is observed",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "totals recomputed (55,779 / 463,657 / 3,224,722); loads by file; own-brief duplicate; cache rebuild after fallback; one change: largest-file marker and prompt note, saving expected not measured"
         }
       ]
     },
@@ -71,9 +71,9 @@
       "steps": [
         {
           "step": "Executable / --version / headless start / DevTools / dashboard tests as separate states; fix only the residual reproducible limit",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "selector from 4ff3ced5 reused; repurposing_view.py browser probe added and run in two configurations; CdpStartup tests"
         }
       ]
     },
@@ -83,9 +83,9 @@
       "steps": [
         {
           "step": "Find the release-preparation step that let ranking.json and the translation inventory go stale; call the existing generators at the right moment",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "i18n check now compares the committed inventory; ranking check named once after last recording in the freeze row and in record_staged_receipts; registering ranking in candidate_tree_freshness considered and declined (revival: third stale cycle)"
         }
       ]
     },
@@ -97,7 +97,7 @@
           "step": "Agree file ownership with the Orchestrator; deliver and integrate; keep record and session binding current; clean own temporaries and worktrees",
           "status": "PENDING",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "coordination note sent once to the Orchestrator (4e); no peer edits on the shared files; landing, push and CI recorded below"
         }
       ]
     },
@@ -109,11 +109,31 @@
           "step": "Final report in Italian opening with the required question",
           "status": "PENDING",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "Italian final report with the required opening question"
         }
       ]
     }
   },
-  "VERIFICATION_EVIDENCE": [],
+  "VERIFICATION_EVIDENCE": [
+    {
+      "run_id": "20261112-220201-b9fcd09c",
+      "label": "battery",
+      "sha": "5deeb1adce0681cc73950a9f7b6c256a9741cf49",
+      "state": "CONCLUDED",
+      "exit_code": 0,
+      "evidence_dir": "/tmp/legend-verify-keep/20261112-220201-b9fcd09c",
+      "log_sha256": "72d92e8169756d13314cc9bf5d40e5699d13ec7130ed2f5a81f8bcc026802a4c",
+      "clone": "REMOVED"
+    },
+    {
+      "run_id": "20261112-220201-b9fcd09c",
+      "label": "battery",
+      "sha": "5deeb1adce0681cc73950a9f7b6c256a9741cf49",
+      "state": "CONCLUDED",
+      "exit_code": 0,
+      "result": "REGRESSION VERDICT PASS WITH SKIPS (247 targets, 12 skipped); view suite ran 1433 s, no browser skip",
+      "evidence_dir": "/tmp/legend-verify-keep/20261112-220201-b9fcd09c"
+    }
+  ],
   "MANDATE_STATE": "OPEN"
 }

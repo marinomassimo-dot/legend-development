@@ -140,3 +140,29 @@ assertion now runs in that command (the collection is already done there, so no 
 * The inventory check: delete the four-line block at the top of `i18n_check` and its test class.
 * The checklist text and the one printed line: delete the added sentences in `framework/scripts/README.md` and in `record_staged_receipts.py`.
 * This folder: delete it; nothing reads it.
+
+## 9. From the technical problem to what can now be formulated
+
+Chain per improvement: available knowledge → obstacle observed → minimal correction → consumption actually seen → hypothesis, comparison or experiment now formulable. The level reached is stated for each; none is a pharmacological benefit, and counts of tools, lines or links are not offered as evidence of better generation.
+
+| Improvement | Knowledge | Obstacle observed | Consumption seen | Now formulable | Level reached |
+|---|---|---|---|---|---|
+| Delivery states, main-ahead lines | the SCI48 comparator package, delivered on main | absent from the advisor's snapshot; Stage A #2 argued a branch-switch dependency ("would SCI48 cover the K-branch shares?") from a short memory paraphrase of it, and said so | none yet: no advisor run was made after the correction | the same dependency can be answered from the package's records, and a missing package is stated instead of replaced by memory | technical; the next real Stage A is the only test, and it is the Orchestrator's to run |
+| Model and fallback read-back | two Stage A assessments | a runtime safeguard stopped the first-choice model's response (category bio) and another model answered; what was withheld is not kept | the Orchestrator already carries the change in its decision record and will cite the cause | a reader can weigh an assessment knowing which model wrote it; a proposal lost in the withheld response cannot be recovered or even sized | disclosure only |
+| Large-file marker, prompt note | wide investigation rows, long ledgers | volume, not meaning, was the problem; originals were needed whole | not observed | none new; the risk is the opposite one, that a range read drops a relation or an alternative the rest of the file held, so the contract keeps whole reads allowed | expected cost only; judge it by the advisor's "Inspected" and "Not reached" lists, never by a smaller token count |
+| Browser probe, inventory check, ranking check | the dashboard and its translations | a stale order, a missing passage or an unmeasured view would show the readers a different map than the records | not applicable | none: they protect what is shown, they do not add a hypothesis | technical |
+
+**What the readers, memory and DREAM did with meaning, in the four saved assessments.** Stage A #1 opened the dismissal ledger and recorded a rejection together with its premise and its revival trigger (so a negative is a claim with a condition, not a closed door), and opened the IT47 DREAM note
+(opened; the assessment shows no use of it beyond listing it, which is not proof it was not used). Stage A #2 used memory notes as sources nine times, each time labelled as memory rather than as the record it described, and corrected Stage A #1 by reading the record: the single condition record was already applied in a prediction matrix.
+Memory carried lessons here (a negative finding can be false; no contact address to a service), not facts about the disease.
+
+**Wrong proposals and useful ones that access or representation may have lost.**
+* Wrong, and caught: Stage A #1 called the condition record unapplied (Stage A #2 read the matrix and withdrew it); Stage A #1 said a juvenile resting-K share had never been searched (the Orchestrator found a package that had already searched it, and that the question had narrowed). Both were caught by reading originals, not by the advisor's own limits.
+* Possibly lost, not measurable: Stage A #1 did not reach 342 lines of the dismissal ledger, the discovery ledger, the radar entry point or over a hundred session evaluations, and it made no claim about public tools or datasets for that reason; Stage A #2 did not reach the SCI48 package. What a fuller reading would have proposed is unknown, and no extra run was made to find out.
+* A representation limit seen by a peer, not mine and not patched here: the comparison engine derives the role "probe" for two compounds the SCI48 package states as comparators, because its tier rule reads depth and class, not meaning; the label is disclosed beside the display and the engine has no comparator role. It is the same shape as the problems above: the knowledge existed, a tool flattened it.
+
+## 10. Verification
+
+* Release battery on commit 5deeb1ad (clone, own evidence directory): REGRESSION VERDICT PASS WITH SKIPS, 247 targets, 12 skipped, none of the skips concerning this work. The view suite ran in full (1,433 s) with no browser skip: the selector chose the older installed Snap revision on its own in the battery's shell, which is evidence for that shell on that day, not a promise about the next one.
+* Targeted: 24 advisor tests (7 new); 8 `CdpStartup` tests (2 new); the inventory regression (2 new); the browser probe run for real in two configurations (default: passes at revision 3583; `CHROME_BIN` set to the Snap shim: fails at `--version` with the shim's own message).
+* Not run: a new advisor invocation (the allowance was spent and none was needed); a battery on the final merge commit that includes later landings of other sessions, only the landing gate and CI.
