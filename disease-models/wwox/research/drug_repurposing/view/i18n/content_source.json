@@ -1,8 +1,4 @@
 {
- "000a7c69c00d": {
-  "src": "en",
-  "text": "A compound benefit can be independent of NRF2 (the readout was raised by compounds that do not bind KEAP1); the only catalogued NRF2-lowering row lowers many proteins and is not a control; no neuron or astrocyte data exist for any of these compounds; a binding assay at the Kelch domain cannot see covalent modifiers."
- },
  "002544584dfc": {
   "src": "en",
   "text": "Conditional hypothesis: the drug-side action is curated and its one reference was read at abstract level; no measurement in a WWOX-deficient neural cell connects the lysosomal step to the allele (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
@@ -439,6 +435,10 @@
   "src": "en",
   "text": "Its strongest documented actions are on other deacetylases than the one the chain needs, the single reference for the edge is a knockdown in non-neural cells, so the attribution fails as written. (The two transcripts also move in opposite directions in the organoid, but that is a descriptive ratio that says nothing about enzyme activity and is not a reason.) This says nothing about whether the compound is inactive."
  },
+ "37f19d7a93fb": {
+  "src": "en",
+  "text": "Genetic arm first (KEAP1 lowering or NFE2L2 raising, with NFE2L2 knockdown as the dependence control); then one covalent and one non-covalent compound, each with and without the knockdown, read on a target-gene set, in neurons and astrocytes separately, under one oxidative challenge. [IT46 audit] The covalent and the non-covalent compound are not compared at equal concentration and time (the electrophile is consumed by thiols and persists after washout): a phase 0 matches exposure on a proximal NRF2 reading (concentration-response, time-course, cytotoxicity, glutathione, washout) first; at least two independent NFE2L2-knockdown reagents with measured efficiency; an NRF2-independent control gene set beside the target set; a WWOX genotype factor, since the pair speaks to the NRF2 pathway and not yet to the WWOX hypotheses; neuron and astrocyte cultures have no network, so a network outcome is a second phase. Source: un registro del repository (non incluso in questo pacchetto); un registro del repository (non incluso in questo pacchetto). [IT46 SCI46] Interpretable pair: each reagent with and without a verified NFE2L2 loss in the same neural cell, a KEAP1-loss occlusion arm, reagents matched on on-target response, a readout beyond NQO1 (survivors after loss) and viability beside function; the engine derives the binder as a primary-read probe with a comparison that is not yet interpretable (system strings not recognised)."
+ },
  "37f4c5f1dd66": {
   "src": "en",
   "text": "Up: a removable fraction already shown by the tool. Down: a ceiling like the tool's, which adds a chemotype and nothing else."
@@ -458,10 +458,6 @@
  "3b261fe99e59": {
   "src": "it",
   "text": "Rete con quattro archi HIF1A duplicati (già presenti nella rete esterna) contro rete solo esterna (non verifica la conoscenza WWOX; nessun valore aggiunto misurabile)"
- },
- "3b947f3ee14e": {
-  "src": "en",
-  "text": "Genetic arm first (KEAP1 lowering or NFE2L2 raising, with NFE2L2 knockdown as the dependence control); then one covalent and one non-covalent compound, each with and without the knockdown, read on a target-gene set, in neurons and astrocytes separately, under one oxidative challenge. [IT46 audit] The covalent and the non-covalent compound are not compared at equal concentration and time (the electrophile is consumed by thiols and persists after washout): a phase 0 matches exposure on a proximal NRF2 reading (concentration-response, time-course, cytotoxicity, glutathione, washout) first; at least two independent NFE2L2-knockdown reagents with measured efficiency; an NRF2-independent control gene set beside the target set; a WWOX genotype factor, since the pair speaks to the NRF2 pathway and not yet to the WWOX hypotheses; neuron and astrocyte cultures have no network, so a network outcome is a second phase. Source: un registro del repository (non incluso in questo pacchetto); un registro del repository (non incluso in questo pacchetto)."
  },
  "3c554cdbf4d7": {
   "src": "en",
@@ -599,6 +595,10 @@
   "src": "en",
   "text": "Development feasibility: low as a drug (a peptide whose one distribution study shows lungs and spleen, with no CNS exposure) and high as a cell-level probe. It depends on the allele and cannot serve a variant that makes no protein."
  },
+ "49106effab63": {
+  "src": "en",
+  "text": "Genetic KEAP1 lowering with a functional readout in the WWOX-deficient neural system, isogenic control, before any electrophile is compared. [IT36] precedent for a non-cell-autonomous (astrocyte) route exists in another system with an Nrf2-null control and rescue; KEAP1 knockdown needs an NFE2L2-loss cross; composition is not astrocyte-mediated benefit. [IT46 audit] The covalent and the non-covalent compound are not compared at equal concentration and time (the electrophile is consumed by thiols and persists after washout): a phase 0 matches exposure on a proximal NRF2 reading (concentration-response, time-course, cytotoxicity, glutathione, washout) first; at least two independent NFE2L2-knockdown reagents with measured efficiency; an NRF2-independent control gene set beside the target set; a WWOX genotype factor, since the pair speaks to the NRF2 pathway and not yet to the WWOX hypotheses; neuron and astrocyte cultures have no network, so a network outcome is a second phase. Source: un registro del repository (non incluso in questo pacchetto); un registro del repository (non incluso in questo pacchetto). [IT46 SCI46] Reagent pair named (SCI46): the non-covalent KEAP1 Kelch binder KI-696 against a covalent comparator, in one neural cell class at a time. X0: nuclear NRF2, two target genes (G6PD may be one), NQO1 enzyme activity and a risk panel (glutathione, GPX4, lipid peroxidation); the same lysates serve INV-07 step 1 and INV-19 (a shared preparation, not a shared cause). X1: a graded occupancy ladder matched on on-target response, not on concentration. X2: an adequacy criterion for NFE2L2 and KEAP1 loss fixed before the experiment, a KEAP1-loss occlusion arm, and a panel or array whose survivors after loss are read beyond NQO1. X3: neuron-only and astrocyte-only loss. Viability is read beside a function endpoint. Source: un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto) (NH1-NH4)."
+ },
  "49d1235d69a9": {
   "src": "en",
   "text": "Queried: the search layer over every target of all 23 needs. Three needs returned zero associations and one carries no target. That is a measured property of this catalogue and this target list on this date, not a statement that no pharmacology exists for these processes."
@@ -650,6 +650,14 @@
  "50b28c98d057": {
   "src": "en",
   "text": "position unchanged from IT20 (rank 3): No IT21 input changes the position."
+ },
+ "51ab244c307d": {
+  "src": "en",
+  "text": "Repeat the spontaneous inhibitory-current measurement with a physiological-chloride pipette and a GABA-A antagonist to confirm the events, add evoked inhibitory currents and the GABA reversal potential in the same cells; only then a modulator arm and a reuptake-block arm at the dose that restores the same fraction of the amplitude, against a non-specific arm at matched cellular effect, with the genotype interaction as the Wwox-specific reading."
+ },
+ "53b69ac992e9": {
+  "src": "en",
+  "text": "A compound benefit can be independent of NRF2 (the readout was raised by compounds that do not bind KEAP1); the only catalogued NRF2-lowering row lowers many proteins and is not a control; no neuron or astrocyte data exist for any of these compounds; a binding assay at the Kelch domain cannot see covalent modifiers. [IT46 SCI46] No source has the binder in primary neurons or astrocytes with an NRF2-loss arm. Where a loss was verified (primary rat microglia, shRNA and knockout) the binder's induction and protection were lost and KEAP1 knockout occluded them; in a human neuronal line a partial NRF2 loss left the effect unchanged, which is uninterpretable; one human neuronal use on a KEAP1-overexpressing, already NRF2-high background moved ferroptosis markers in the harmful direction (no loss arm). The Davies source's own siRNA arms are categorical labels in the database copy, with no numbers and no knockdown efficiency, and the covalent bardoxolone methyl sits in the same design."
  },
  "53e618810345": {
   "src": "it",
@@ -718,6 +726,10 @@
  "5cd356f84317": {
   "src": "en",
   "text": "position unchanged from IT20 (rank 5): Position unchanged from IT20. The ten-row ceiling does not displace a row that carries a risk flag or human clinical reports in favour of a conditional probe (the rule stated in the curation block of the context), so this row stays at rank 5 and the two new IT21 conditional probes sit at rank 6, below the line. New IT21 input: the inositol-monophosphatase route to the lithium effect is DISFAVOURED_BY_SIGN_PRECEDENT (an analogy from the lithium-pilocarpine model, not a measurement in the Wwox assay; see what the generator rules out). That result is not what supports this row's concern that the effect is not specific to WWOX loss: the concern comes from the +/+ arm of Cheng 2020 Figure 7d, where lithium suppresses the seizure stage as in the null. Cheng 2020 also ran a pilocarpine model in Wwox mice, so the objection that the two provocations differ is testable in the same system; the inositol arm of that proposal is folded into this row's next test."
+ },
+ "5df4b57bf708": {
+  "src": "en",
+  "text": "Whether the axis is engaged at all in a WWOX-deficient neural cell, and whether engaging it helps or harms. No compound in the record acts in such a cell. IT22: the AhR-target transcript is higher in the knockout while NFE2L2 is lower, so engagement of the axis is not even directionally clear. [IT45] Induction of one enzyme can occur without NRF2 (reported for compounds that do not bind KEAP1), a Kelch-domain binding assay cannot see covalent modifiers, and the one catalogued NRF2-lowering row lowers protein synthesis in general: none of these is a control for an NRF2-independent benefit. [IT46 SCI46] Where an NRF2 loss was verified (primary rat microglia) the binder's effect was lost and KEAP1 loss occluded it; in a human neuronal line a partial loss left the effect unchanged (uninterpretable); one human neuronal use on an already NRF2-high background moved ferroptosis markers in the harmful direction; the source's own siRNA arms are categorical labels in the database copy. Nothing is measured in a WWOX-deficient neural system. Source: un registro del repository (non incluso in questo pacchetto)."
  },
  "5e1261630425": {
   "src": "it",
@@ -931,6 +943,10 @@
   "src": "en",
   "text": "Ethosuximide (see its card) and the carded T-type thread"
  },
+ "7216201733fb": {
+  "src": "en",
+  "text": "Whether the reduced current is a receptor, a GABA-content or an interneuron-output deficit, and whether GABA is hyperpolarising in these cells at P13 to P17 (the recording could not report the reversal potential). A bath-applied modulator also acts on oligodendrocyte-precursor cells, which carry functional GABA-A receptors in mouse cortex."
+ },
  "72f2870c7a45": {
   "src": "en",
   "text": "Whether the halved inhibitory current is a supply deficit; the direction depends on the chloride gradient of the preparation, which is unmeasured."
@@ -943,13 +959,13 @@
   "src": "en",
   "text": "Whether an interaction term survives; a wild-type effect of the same size would move this thread out of its group without any new compound being involved."
  },
- "75b9787411ed": {
-  "src": "en",
-  "text": "That NRF2 is under-active and compartment-specific in a WWOX-deficient neural system: no NRF2 protein, nuclear NRF2 or target-gene measurement exists there. Reporter and translocation values come from different cell lines and documents and are not comparable; induction of one enzyme can occur without NRF2."
- },
  "775302e45683": {
   "src": "it",
   "text": "via della firma trascrizionale: opposizione del modulo in cellule simili ai progenitori, valutata in cellule simili ai neuroni"
+ },
+ "777e41efa01a": {
+  "src": "en",
+  "text": "That NRF2 is under-active and compartment-specific in a WWOX-deficient neural system: no NRF2 protein, nuclear NRF2 or target-gene measurement exists there. Reporter and translocation values come from different cell lines and documents and are not comparable; induction of one enzyme can occur without NRF2. [IT46 SCI46] What an adequate NRF2 loss means in a neuron is not fixed; neuronal permeability of an acid binder and brain exposure are unknown."
  },
  "777f53f919ef": {
   "src": "it",
@@ -1067,10 +1083,6 @@
   "src": "en",
   "text": "Reached from the T-type calcium need through the catalogue path; the proposed pair is a proposal to verify (IT20)."
  },
- "8620d0b088a1": {
-  "src": "en",
-  "text": "Genetic KEAP1 lowering with a functional readout in the WWOX-deficient neural system, isogenic control, before any electrophile is compared. [IT36] precedent for a non-cell-autonomous (astrocyte) route exists in another system with an Nrf2-null control and rescue; KEAP1 knockdown needs an NFE2L2-loss cross; composition is not astrocyte-mediated benefit. [IT46 audit] The covalent and the non-covalent compound are not compared at equal concentration and time (the electrophile is consumed by thiols and persists after washout): a phase 0 matches exposure on a proximal NRF2 reading (concentration-response, time-course, cytotoxicity, glutathione, washout) first; at least two independent NFE2L2-knockdown reagents with measured efficiency; an NRF2-independent control gene set beside the target set; a WWOX genotype factor, since the pair speaks to the NRF2 pathway and not yet to the WWOX hypotheses; neuron and astrocyte cultures have no network, so a network outcome is a second phase. Source: un registro del repository (non incluso in questo pacchetto); un registro del repository (non incluso in questo pacchetto)."
- },
  "8705174d767d": {
   "src": "en",
   "text": "None found by open routes (a patent and two clinical papers read; an analogue paper not reached); the measurement is the removable fraction in the isolated NMDA-receptor current, after the ifenprodil-site tool."
@@ -1166,6 +1178,10 @@
  "8fb812a48744": {
   "src": "en",
   "text": "INV-11"
+ },
+ "8fe38467e282": {
+  "src": "en",
+  "text": "Positive modulation of the GABA-A receptor: spontaneous inhibition is measured as reduced in the recorded cells, its cause and its sign are not"
  },
  "901192e89719": {
   "src": "it",
@@ -1491,6 +1507,10 @@
   "src": "en",
   "text": "In vitro after step 0"
  },
+ "b35a0632e3c5": {
+  "src": "en",
+  "text": "In the neuron-specific knockout slices at P13 to P17 the spontaneous inhibitory currents of layer II/III pyramidal cells are reduced, in amplitude by about half and in frequency by about a fifth (high-chloride pipette, no evoked-current experiment). A fall larger in amplitude than in frequency points at the receptor response or the GABA content of each event rather than at interneuron number (inference, with caveats). Many approved modulators exist; the catalogue lists over a hundred rows for this relation, qualified and kept visible with their next step (IPOTESI)."
+ },
  "b3a38e83ad32": {
   "src": "it",
   "text": "Calo robusto nei progenitori shRNA ma segni opposti altrove; la composizione del tessuto può spiegarlo. Il documento P4 lo legge come non risolto."
@@ -1711,6 +1731,10 @@
   "src": "en",
   "text": "Human knockout organoid shows a lower NFE2L2 transcript (0.75x), role unknown; the second system failed its control."
  },
+ "cf425bf9a52c": {
+  "src": "en",
+  "text": "Up: a reduced inhibitory current that a modulator restores in the knockout more than in wild type, with a hyperpolarising reversal potential. Down: depolarising GABA beyond threshold, or an effect equal to a non-specific arm. Reopens: an effect confined to one seizure type."
+ },
  "d07824ef936c": {
   "src": "en",
   "text": "HDAC5-specific lowering of SLC2A1 at concentrations that engage HDAC5, or class I inhibition changing SLC2A1 in either direction (then a different proposal)."
@@ -1718,6 +1742,10 @@
  "d0fbc49638e3": {
   "src": "en",
   "text": "The reference has a family record only; the two others rest on one assay each; one of them is an activator when the assay lacks the scaffold core and an inhibitor when it has it; two isoforms have no row for one compound (unknown, not zero). Lowering the kinases is also a risk arm: harm directions are documented (a proconvulsant effect at abstract level, benefit only for a combination in a rat seizure model, a fall of peripheral myelin proteins, nerve toxicity in the one randomised human trial) and a lactate-supply role makes the net direction by class unknown. Nothing is known about brain exposure."
+ },
+ "d1eec9f4f4a0": {
+  "src": "en",
+  "text": "Amplifying the response of the GABA-A receptor to GABA already released, with a benzodiazepine-site modulator or a tonic-selective (neurosteroid-type) one."
  },
  "d25fa8478abe": {
   "src": "en",
@@ -1778,10 +1806,6 @@
  "d71a4eb39ca3": {
   "src": "en",
   "text": "Carded thread: lithium."
- },
- "d769097da323": {
-  "src": "en",
-  "text": "Whether the axis is engaged at all in a WWOX-deficient neural cell, and whether engaging it helps or harms. No compound in the record acts in such a cell. IT22: the AhR-target transcript is higher in the knockout while NFE2L2 is lower, so engagement of the axis is not even directionally clear. [IT45] Induction of one enzyme can occur without NRF2 (reported for compounds that do not bind KEAP1), a Kelch-domain binding assay cannot see covalent modifiers, and the one catalogued NRF2-lowering row lowers protein synthesis in general: none of these is a control for an NRF2-independent benefit."
  },
  "d7efa24460cc": {
   "src": "en",
@@ -1982,6 +2006,10 @@
  "ebea0e6c4579": {
   "src": "en",
   "text": "Negative allosteric modulation of GluN2B-containing receptors at the interface site, as a second tool of the same site."
+ },
+ "ec4b8778780d": {
+  "src": "en",
+  "text": "A modulator amplifies only the GABA that is released: with little GABA it adds little, and where GABA is depolarising beyond threshold it can worsen excitation (animal studies disagree on the age). Benzodiazepine-type drugs reduce seizures in several encephalopathies whatever the cause, which would make any effect generic; tolerance is documented. In the WWOX reports held, two single children are described as responding and three groups as not responding to a benzodiazepine, with no instrument and no cohort."
  },
  "ed04c567319d": {
   "src": "en",
