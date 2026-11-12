@@ -33,3 +33,9 @@ NP1 held (Nfe2l2 and Keap1 detected in all four classes). NP2 held (Nqo1 astrocy
 ## Files
 
 `PREREGISTRATION.md`; `nrf2_expression.py`; `nrf2_expression_mouse.tsv`, `nrf2_expression_human.tsv`; `score_predictions.py`; `predictions_scored.tsv`; `neuron_readability.tsv`.
+
+## Update 2026-11-12 (SCI47 package B): wording corrections; the text above is kept as written
+* Item 4 and consumer row 4 ("has no expressing cell class"): HCAR2 is low in the pooled purified classes examined (two pools each; 0.10 is the table's floor value), not shown absent from any cell; the human table has no HCAR2 row.
+* "At or near the floor" and "readable (at least 5 FPKM)": 5 FPKM was this note's working threshold, not a detection limit or a universal rule.
+* "Neuron-readable target panel": the genes are measurable in neuron RNA; their NRF2 specificity was neither sourced nor tested here. A well-measured gene is not by that fact a specific NRF2 readout.
+* RNA presence does not show functional protein, nuclear NRF2 or a pharmacological response. Details: `../cell_context_sci47_20261112/README.md`.
