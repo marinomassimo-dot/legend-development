@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """ci_runs.py: the verdict over the workflow runs of one commit (no network)."""
+import contextlib
+import io
+import os
+import shutil
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -48,6 +53,46 @@ class Verdict(unittest.TestCase):
         self.assertEqual(ci_runs.reset_wait({"X-RateLimit-Remaining": "0", "X-RateLimit-Reset": "1000"}, 940.0), 62.0)
         self.assertIsNone(ci_runs.reset_wait({"X-RateLimit-Remaining": "7", "X-RateLimit-Reset": "1000"}, 940.0))     # a 403 with quota left is something else
         self.assertIsNone(ci_runs.reset_wait({}, 940.0))
+
+
+class SharedRead(unittest.TestCase):
+    """HE47 H6: waiters on one machine share a single API read per commit and one declared rate-limit pause."""
+    def setUp(self):
+        self.d = tempfile.mkdtemp(prefix="ci_cache_")
+        self.old = os.environ.get("TMPDIR")
+        os.environ["TMPDIR"] = self.d
+        self.addCleanup(lambda: (os.environ.__setitem__("TMPDIR", self.old) if self.old else os.environ.pop("TMPDIR", None), shutil.rmtree(self.d, ignore_errors=True)))
+
+    def test_a_second_reader_inside_the_interval_reuses_the_answer(self):
+        self.assertIsNone(ci_runs.read_shared("a" * 40, "o/r", 115, 1000.0))
+        ci_runs.write_shared("a" * 40, "o/r", [{"run_number": 1}], 1000.0)
+        self.assertEqual(ci_runs.read_shared("a" * 40, "o/r", 115, 1100.0), ("runs", [{"run_number": 1}]))
+        self.assertIsNone(ci_runs.read_shared("a" * 40, "o/r", 115, 1200.0))                    # older than the interval: ask again
+        self.assertIsNone(ci_runs.read_shared("b" * 40, "o/r", 115, 1100.0))                    # another commit shares nothing
+
+    def test_a_declared_rate_limit_pause_stops_every_reader_until_the_reset(self):
+        ci_runs.write_shared("a" * 40, "o/r", None, 1000.0, pause=600.0)
+        self.assertEqual(ci_runs.read_shared("c" * 40, "o/r", 115, 1100.0), ("pause", 500.0))
+        self.assertIsNone(ci_runs.read_shared("c" * 40, "o/r", 115, 1700.0))
+
+    def test_an_unwritable_cache_costs_a_request_not_a_failure(self):
+        os.environ["TMPDIR"] = "/proc/none"
+        ci_runs.write_shared("a" * 40, "o/r", [], 1.0)
+        self.assertIsNone(ci_runs.read_shared("a" * 40, "o/r", 115, 2.0))
+
+    def test_the_wait_reads_the_api_once_for_two_loops_inside_the_interval(self):
+        calls = []
+        runs = [{"run_number": 5, "name": "gate", "status": "completed", "conclusion": "success", "head_sha": "a" * 40}]
+        orig = ci_runs.fetch_runs
+        ci_runs.fetch_runs = lambda sha, repo: calls.append(sha) or runs
+        self.addCleanup(lambda: setattr(ci_runs, "fetch_runs", orig))
+        orig_slug = ci_runs.slug
+        ci_runs.slug = lambda *a, **k: "o/r"
+        self.addCleanup(lambda: setattr(ci_runs, "slug", orig_slug))
+        for _ in range(2):
+            with contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(ci_runs.main(["wait", "a" * 40, "--timeout", "10"]), 0)
+        self.assertEqual(len(calls), 1)
 
 
 if __name__ == "__main__":
