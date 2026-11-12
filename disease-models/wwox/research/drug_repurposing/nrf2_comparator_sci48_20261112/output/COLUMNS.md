@@ -42,3 +42,11 @@ Plain snake_case names in the TSV headers; the original header text, with its vo
 - `locator`: locator
 - `depth`: depth
 - `kind`: kind
+
+## Explanations H1-H6 (defined elsewhere; pointer added 2026-11-12)
+
+The H1-H6 labels used in `matrix.tsv` (`explanation_supported`, `explanation_weakened`) and in `answers.md` are the table in `../../keap1_nrf2_sci46_20261111/S0_S1_before_search.md` (section with the heading row "Explanation | A result that favours it | The choice it changes"): H1 insufficient response; H2 induced, still insufficient; H3 compartment; H4 cell type or stage; H5 compound benefit independent of NRF2; H6 no benefit or worsening. S0 of this package (section 5) refers to them without defining them.
+
+## Role rules used in the matrix
+
+Rule 1 probe; rule 2 comparator; rule 3 conditional pharmacological hypothesis; rule 4 not interpretable: as in BRIEF_P.md Part C.

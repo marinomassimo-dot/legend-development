@@ -9,3 +9,5 @@ FTR-20261112-34699582-74	34699582	abstract_only	null	yes
 FTR-20261112-37254290-74	37254290	abstract_only	null	yes
 FTR-20261112-33096251-74	33096251	abstract_only	null	yes
 FTR-20261112-20888844-74	20888844	abstract_only	null	yes
+FTR-20261112-25328080-74	25328080	partial_fulltext_read	null	yes
+FTR-20261112-20953205-74	20953205	abstract_only	null	yes
