@@ -58,7 +58,7 @@
      "step": "Review of p9 two-lever design, minimal design, consumer_delta, deliver A (gate, LINT, receipts, growth, verify_run on frozen SHA, task_close, safe_push)",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "README, consumer_delta (8 rows), COST_NOTE written; gate PASS, LINT no BLOCK, receipts OK 1814, growth PASS before freeze; battery next"
+     "evidence": "battery2 on 6c9750b7 PASS WITH SKIPS 244/11; battery on 28adb148 kept as FAIL (3 suites, fixed); next: merge origin/main, task_close, safe_push"
     }
    ]
   },
@@ -113,9 +113,33 @@
    "run_id": "20261112-090930-5522aeb0",
    "label": "battery",
    "sha": "28adb14845d5cf2303a777ff044d09210ff7ae5e",
-   "state": "RUNNING at record time",
+   "state": "CONCLUDED",
+   "exit_code": 1,
    "evidence_dir": "/tmp/legend-verify-keep/20261112-090930-5522aeb0",
-   "note": "three failures already in the log (see DECISIONS_TAKEN); verdict to be attributed to this SHA only"
+   "log_sha256": "44b934cc6017dacc2b113c9d674763564487f332f8c70c6389f0bce83b358418",
+   "clone": "REMOVED",
+   "verdict": "FAIL: three suites failed (scripts/test_fresh_clone_reader_journey.py, scripts/test_release_surface.py, scripts/test_structured_data_integrity.py); kept as a FAIL attributed to 28adb148 only; fixed in 745a8967"
+  },
+  {
+   "run_id": "20261112-095002-c776e639",
+   "label": "battery2",
+   "sha": "6c9750b7c96ce23a87a63c72d4f35fc063b5bf1c",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-095002-c776e639",
+   "log_sha256": "27d3150ec96fb51444c4360db9579ead875405569fa1131ef8bdf842b8a04fdd",
+   "clone": "REMOVED"
+  },
+  {
+   "run_id": "20261112-095002-c776e639",
+   "label": "battery2",
+   "sha": "6c9750b7c96ce23a87a63c72d4f35fc063b5bf1c",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "verdict": "PASS WITH SKIPS (244 targets, 11 skipped: case-sensitive filesystem, local corpus artefacts, catalogue cache, Stop hook absent in the clone)",
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-095002-c776e639",
+   "log_sha256": "27d3150ec96fb51444c4360db9579ead875405569fa1131ef8bdf842b8a04fdd",
+   "scope": "package A candidate; pre-freeze gate PASS, LINT WARN no BLOCK, receipts OK 1814, growth PASS; later commits closure-only; merge of origin/main is the landing"
   }
  ]
 }
