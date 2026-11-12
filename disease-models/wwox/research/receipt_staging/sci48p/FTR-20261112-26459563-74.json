@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-12T17:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-12T17:16:29Z",
+ "event_id": "FTR-20261112-26459563-74",
+ "evidence_basis": [
+  "verbatim_locator | proposition: knock-out arm of the array carries RA839 only; two probe sets survive | Results, Selectivity | \"RA839 significantly regulated only two genes, Zfp192 and Pank1, in BMDM derived from Nrf2 knock-out animals\"",
+  "verbatim_locator | proposition: loss produced by germline knock-out BMDM, no verification printed | Experimental Procedures, Incubations of BMDM | \"BMDM were generated from total bone marrow of 12-week-old Nrf2+/+ and Nrf2-/- mice in the C57BL/6J background\"",
+  "verbatim_locator | proposition: no immunoblot for the NO endpoint protein | Discussion | \"Because of scarcity of sample material, we were not able to perform immunoblotting for Nos2.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/winkel_table.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/matrix.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/evidence.tsv"
+ ],
+ "prior_receipt": "FTR-20261111-26459563-78",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "cb96315bfc147075be418c0b423c1eb70d2c6bc42e4aef44af01c738f120cfea",
+ "source_kind": "fulltext_local",
+ "source_locator": "stored PMC article page /home/desktop/legend-development/files/fulltext/PMC4653701_PMID26459563_pmc_html_2026-11-12.html (sha256 as in source_fingerprint) and nine figure images in files/fulltext/PMC4653701_winkel2015_figures/, all opened with the Read tool. Supplement Tables S1-S4 not reached: PMC supplement interstitial (not requested), Europe PMC supplementaryFiles returned \"not open access\" once, fullTextXML HTTP 500 (S0 addendum). Reference list not read.",
+ "study_id": {
+  "doi": "10.1074/jbc.M115.678136",
+  "pmid": "26459563"
+ },
+ "workflow": "SCI48 producer P (claim actor nr-z), ORCH-SCI48-20261112: Winkel 2015 whole text and all nine figures read from the stored copy; supplement not reached. Prior abstract-only receipt FTR-20261111-26459563-78 (SCI46 verifier) is not a text reading; reread_reason first_read for the text. Staged for the integrator; the ledger was not appended at preparation time."
+}

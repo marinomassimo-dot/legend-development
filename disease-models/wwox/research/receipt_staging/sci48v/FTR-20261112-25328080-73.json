@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-12T17:33:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T17:35:45Z",
+ "event_id": "FTR-20261112-25328080-73",
+ "evidence_basis": [
+  "verbatim_locator | proposition: SF did not enhance hematoma cleanup in Nrf2-KO mice | Results, Fig. 4 | \"treatment with SF did not result in enhanced hematoma cleanup in the Nrf2-KO mice\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/verify/verdicts.tsv"
+ ],
+ "prior_receipt": "FTR-20261112-25328080-74",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page (plain curl, default user agent, one request, HTTP 200, 2026-11-12T17:29Z); PMC4361377; figure legends read, images not opened.",
+ "study_id": {
+  "doi": "10.1111/jnc.12974",
+  "pmid": "25328080"
+ },
+ "workflow": "SCI48 blind verifier V10 (claim actor nr-y), ORCH-SCI48-20261112. Staged for the integrator; the ledger was not appended at preparation time. Targeted reading of the animal/KO/SFN sections and the KO results; introduction and discussion not read in full; not a complete read."
+}

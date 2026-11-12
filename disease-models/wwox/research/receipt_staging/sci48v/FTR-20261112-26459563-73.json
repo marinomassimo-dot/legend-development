@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T17:33:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "read"
+ },
+ "event_at": "2026-11-12T17:35:45Z",
+ "event_id": "FTR-20261112-26459563-73",
+ "evidence_basis": [
+  "verbatim_locator | proposition: no check of the Nrf2 knock-out is printed; the two surviving genes are named | Results, Selectivity | \"RA839 significantly regulated only two genes, Zfp192 and Pank1, in BMDM derived from Nrf2 knock-out animals\"",
+  "verbatim_locator | proposition: CDDO-Me appears only in wild-type BMDM; the loss arm carries RA839 only | Discussion | \"The only two genes (Zfp192 and Pank1) that were regulated by RA839 in Nrf2 knock-out cells were not activated in wild-type BMDM.\"",
+  "verbatim_locator | proposition: siRNA timing and unselective effects | Discussion | \"unselective effects of the siRNAs cannot be fully excluded\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/verify/verdicts.tsv"
+ ],
+ "prior_receipt": "FTR-20261112-26459563-74",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "cb96315bfc147075be418c0b423c1eb70d2c6bc42e4aef44af01c738f120cfea",
+ "source_kind": "fulltext_local",
+ "source_locator": "stored PMC article page /home/desktop/legend-development/files/fulltext/PMC4653701_PMID26459563_pmc_html_2026-11-12.html (sha256 as in source_fingerprint); all nine figure images in PMC4653701_winkel2015_figures opened with the Read tool; supplement not requested (interstitial; the page lists four xlsx and one docx); reference list not read.",
+ "study_id": {
+  "doi": "10.1074/jbc.M115.678136",
+  "pmid": "26459563"
+ },
+ "workflow": "SCI48 blind verifier V10 (claim actor nr-y), ORCH-SCI48-20261112. Staged for the integrator; the ledger was not appended at preparation time. Whole text searched for knock-out, genotyp, Western, immunoblot, Nqo1, Hmox1; every row of the producer's winkel_table re-derived."
+}

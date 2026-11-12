@@ -1,0 +1,178 @@
+{
+  "capture": {
+    "assessment_sha256": "5c462874c0f959d7c16beb620dc7c9b2597c4855abb8075d920ecf58bed3e621",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_campaign_it48_20261112-B1/stream.jsonl",
+    "raw_stream_sha256": "d25777b39e22cb00428f09df2a1deec3c53abe05ad22b87103d9146b8159555c",
+    "source_session_id": "82f0cb27-ebff-411e-b9ba-345ace270d17",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 23792
+  },
+  "ended_utc": "2026-11-12T20:50:56Z",
+  "label": "B1",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "medium",
+    "model_asked": "sonnet",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": false,
+      "efforts": {
+        "medium": 3
+      },
+      "first_turn_context": 23657,
+      "models": {
+        "claude-sonnet-5-5": 3
+      },
+      "peak_context": 28071,
+      "totals": {
+        "cache_creation": 28069,
+        "cache_read": 47903,
+        "output": 3197
+      },
+      "turns": 3
+    },
+    "init_mcp_servers": [],
+    "init_model": "claude-sonnet-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.0010819,
+        "inputTokens": 10694,
+        "maxOutputTokens": 128000,
+        "outputTokens": 25,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-sonnet-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 28069,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 28069,
+        "cacheReadInputTokens": 47903,
+        "canonicalModel": "claude-sonnet-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.1490483,
+        "inputTokens": 6,
+        "maxOutputTokens": 128000,
+        "outputTokens": 3197,
+        "provider": "firstParty",
+        "thinkingTokens": 122,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 4,
+    "total_cost_usd": 0.1501302,
+    "turn_models": {
+      "claude-sonnet-5-5": 3
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 28069,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 28069,
+      "cache_read_input_tokens": 47903,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 6,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 3821,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 3821,
+          "cache_read_input_tokens": 24248,
+          "input_tokens": 2,
+          "output_tokens": 2599,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 3197,
+      "output_tokens_details": {
+        "thinking_tokens": 122
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "B",
+  "started_utc": "2026-11-12T20:50:30Z",
+  "tool_calls": [
+    {
+      "input": {
+        "head_limit": 20,
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/.claude/worktrees/it48/disease-models/wwox/research/drug_repurposing",
+        "pattern": "IT47-Q0[1-4]"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 7 files\ndisease-models/wwox/research/drug_repurposing/advisor_campaign_it48_20261112/B1/brief.md\ndisease-models/wwox/research/drug_repurposing/advisor_cam"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/.claude/worktrees/it48/disease-models/wwox/research/drug_repurposing/generation_it47_20261112/p4_gsk3/result_it47.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# IT47 P4: result of the new case (the GSK3 / eIF2B hypotheses package, INV-09), against the pre-registration\n2\t\n3\tNon-canonical working note. Not medical adv"
+    },
+    {
+      "input": {
+        "-C": 3,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/.claude/worktrees/it48/disease-models/wwox/research/drug_repurposing/next_batch_it47_20261112/BRIEFS.md",
+        "pattern": "IT47-Q0[1-4]"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "1-# Priority questions as usable briefs (IT47)\n2-\n3:Non-canonical working note. Not medical advice; no dose, schedule or route. Reuses the investigations table "
+    }
+  ]
+}
