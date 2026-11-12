@@ -1,0 +1,47 @@
+{
+  "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+  "TASK_ID": "PLAN-HE47-USABLE-KNOWLEDGE-PRESERVED-MEANING-SUSTAINABLE-COST-20261112",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "plan",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-11-12",
+  "OBJECTIVE": "HE47: capabilities already built are actually used; scientific meaning of inputs is preserved; repeated work, context cost and useless temporaries go down. First increment H1: replace the textual 'independent route' recognition in the IT46 comparison engine with an explicit structured intention.",
+  "worktree": ".claude/worktrees/he47",
+  "branch": "task/he47",
+  "CURRENT_STATE": "IN_PROGRESS",
+  "CHECKPOINT": {
+    "last_verified_result": "HE46 published 4e453e1b, CI #657 success on d493afb8; he46 worktree removed",
+    "first_incomplete_work": "H1",
+    "active_processes": "none",
+    "real_dependencies": "task/it46 holds the textual guard in comparison_engine.py and is not on main; SCI46 delta rows 2-3 wait for it",
+    "next_executable_step": "read the real guard and the package fields in the it46 worktree"
+  },
+  "AUTHORISED_QUEUE_20261112": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_H1": {
+      "order": 1,
+      "title": "H1: structured intention replaces the textual 'independent route' guard; keep separate source reading depth, what the proposition measures, relation to the target (the operator message was cut after the third item)",
+      "steps": [
+        {
+          "step": "H1: structured intention replaces the textual 'independent route' guard; keep separate source reading depth, what the proposition measures, relation to the target (the operator message was cut after the third item)",
+          "status": "IN_PROGRESS",
+          "owner": "plan"
+        }
+      ]
+    },
+    "OBJ_RECEIVED": {
+      "order": 2,
+      "title": "Operator message received only through H1 (list cut at 'relazione'); H2+ not received - ask nothing, work H1, report the gap",
+      "steps": [
+        {
+          "step": "Operator message received only through H1 (list cut at 'relazione'); H2+ not received - ask nothing, work H1, report the gap",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    }
+  },
+  "VERIFICATION_EVIDENCE": []
+}
