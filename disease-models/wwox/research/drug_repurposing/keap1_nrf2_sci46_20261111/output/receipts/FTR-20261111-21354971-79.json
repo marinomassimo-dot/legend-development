@@ -1,0 +1,35 @@
+{
+ "analysis_at": "2026-11-11T22:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T22:11:00Z",
+ "event_id": "FTR-20261111-21354971-79",
+ "evidence_basis": [
+  "verbatim_locator | proposition: In vivo EAE, Nrf2-deficient mice; not a cell-level arm | Abstract | \"the dimethylfumarate mediated beneficial effects on clinical course, axon preservation and astrocyte activation were almost completely abolished\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/output/decisive.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "Europe PMC search record abstract (article not in PMC)",
+ "study_id": {
+  "doi": "10.1093/brain/awq386",
+  "pmid": "21354971"
+ },
+ "workflow": "SCI46 producer P (og-y), ORCH-SCI46-20261111: Linker 2011: DMF in Nrf2-deficient mice; abstract only. Staged for the integrator; the ledger was not written by the preparing actor."
+}

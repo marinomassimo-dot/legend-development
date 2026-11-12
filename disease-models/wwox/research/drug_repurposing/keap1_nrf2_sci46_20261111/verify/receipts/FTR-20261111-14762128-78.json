@@ -1,0 +1,35 @@
+{
+ "analysis_at": "2026-11-11T22:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "unavailable",
+  "results": "unavailable",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T22:23:00Z",
+ "event_id": "FTR-20261111-14762128-78",
+ "evidence_basis": [
+  "verbatim_locator | proposition: Nrf2 knock-out cultures lose ARE activation and neuroprotection | Abstract | \"tBHQ treatment of cultures from Nrf2 knock-out animals resulted in neither ARE activation nor neuroprotection.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261111-14762128-79",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed abstract via the metadata tool only; full text not requested (producer-listed unreachable)",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.3817-03.2004",
+  "pmid": "14762128"
+ },
+ "workflow": "Blind verifier V8 (ks-y): D12 wording checked against the abstract. Staged for the integrator; the ledger was not written by the preparing actor."
+}

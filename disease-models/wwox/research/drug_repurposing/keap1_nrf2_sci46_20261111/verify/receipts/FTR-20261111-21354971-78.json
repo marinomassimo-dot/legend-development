@@ -1,0 +1,35 @@
+{
+ "analysis_at": "2026-11-11T22:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "unavailable",
+  "results": "unavailable",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T22:23:00Z",
+ "event_id": "FTR-20261111-21354971-78",
+ "evidence_basis": [
+  "verbatim_locator | proposition: DMF benefit almost completely lost in Nrf2-deficient mice | Abstract | \"were almost completely abolished thus proving the functional relevance of this transcription factor\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261111-21354971-79",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed abstract via the metadata tool only; body not requested (producer-listed unreachable)",
+ "study_id": {
+  "doi": "10.1093/brain/awq386",
+  "pmid": "21354971"
+ },
+ "workflow": "Blind verifier V8 (ks-y): D13 wording checked against the abstract. Staged for the integrator; the ledger was not written by the preparing actor."
+}
