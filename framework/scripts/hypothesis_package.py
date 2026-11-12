@@ -230,8 +230,9 @@ def load_hypotheses_only(pkg: Path) -> dict:
     if path.is_file():
         with open(path, newline="", encoding="utf-8") as f:
             header = next(csv.reader(f, delimiter="\t"), [])
-        key = next((c for c in HYP_KEY_COLUMNS if c in header), "")
-        state = "NO_KEY_COLUMN" if not key else "OK"
+        keys = [c for c in HYP_KEY_COLUMNS if c in header]
+        key = keys[0] if len(keys) == 1 else ""
+        state = "NO_KEY_COLUMN" if not keys else f"AMBIGUOUS_KEY ({' and '.join(keys)}: name the key in the table)" if len(keys) > 1 else "OK"   # a silent pick between two id-like columns would change which rows exist
         for r, ref in (_tsv_lined(path) if key else []):
             k = (r[key] or "").strip()
             if k in rows:

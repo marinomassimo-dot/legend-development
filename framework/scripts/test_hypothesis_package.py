@@ -424,5 +424,37 @@ class PropositionFacets(unittest.TestCase):
                     self.assertFalse(any(v.startswith("unrecognised") for v in hp.prop_facets(r).values()), (p["dir"].parent.name, k))
 
 
+class HypothesesTwoInvestigations(unittest.TestCase):
+    """HE47 H2: one hypotheses folder serves several investigations by one manifest row each (the current format); an ambiguous key is a state, not a pick."""
+    def setUp(self):
+        self.d = Path(tempfile.mkdtemp(prefix="hp_multi_"))
+        self.addCleanup(lambda: __import__("shutil").rmtree(self.d, ignore_errors=True))
+
+    def folder(self, name, header, rows):
+        out = self.d / name / "output"
+        out.mkdir(parents=True)
+        (out / "hypotheses.tsv").write_text(header + "\n" + "\n".join(rows) + "\n", encoding="utf-8")
+        return self.d / name
+
+    def test_the_same_folder_listed_for_two_investigations_is_read_for_each(self):
+        f = self.folder("shared", "hyp_id\tstatement", ["H1\tx", "H2\ty"])
+        pk = [dict(hp.load_hypotheses_only(f), name=f"shared_{i}", inv_id=i) for i in ("INV-01", "INV-02")]
+        a, b = hp.hypotheses_for(pk, "INV-01"), hp.hypotheses_for(pk, "INV-02")
+        self.assertEqual(([r["id"] for r in a["rows"]], [r["inv_id"] for r in a["rows"]]), (["shared::H1", "shared::H2"], ["INV-01"] * 2))
+        self.assertEqual([r["id"] for r in b["rows"]], ["shared::H1", "shared::H2"])
+        self.assertEqual(hp.hypotheses_for(pk, "INV-03")["state"], "NO_HYPOTHESES_LISTED")
+
+    def test_two_id_like_columns_make_the_key_ambiguous_and_nothing_is_picked(self):
+        p = hp.load_hypotheses_only(self.folder("amb", "id\thyp_id\tstatement", ["1\tH1\tx"]))
+        self.assertTrue(p["state"].startswith("AMBIGUOUS_KEY"))
+        self.assertEqual((p["hyps"], p["key_column"]), ({}, ""))
+
+    def test_an_empty_table_an_absent_table_and_a_table_without_a_key_are_three_states(self):
+        e = hp.load_hypotheses_only(self.folder("empty", "hyp_id\tstatement", []))
+        n = hp.load_hypotheses_only(self.folder("nokey", "name\tstatement", ["a\tb"]))
+        a = hp.load_hypotheses_only(self.d / "absent")
+        self.assertEqual((e["state"], n["state"], a["state"]), ("EMPTY", "NO_KEY_COLUMN", "MISSING"))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
