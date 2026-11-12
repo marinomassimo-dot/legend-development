@@ -8,8 +8,8 @@
  "START_UTC": "2026-11-11T22:00:00Z",
  "BASELINE": "main 142f6c5f (IT45 COMPLETE; SCI45 P1/Q1/N1 consumed in IT45: 54 receipts recorded, ledger 1,787, IT45-Q05..Q08). Worktree .claude/worktrees/sci46, branch task/sci46. IT46 registered (legend-development-4e); asks for comparison rows in the engine shape plus consumer_delta and the landing SHA.",
  "CURRENT_PACKAGE": {
-  "id": "P1-central",
-  "state": "landing",
+  "id": "Q-cell-vs-slice",
+  "state": "writing",
   "delegate_active": "none",
   "updated": "2026-11-11"
  },
@@ -64,7 +64,7 @@
      "step": "Gate, LINT, receipts, growth, battery on a fresh clone, task_close, safe_push, message IT46 with the landing SHA",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "frozen SHA 5ee09044: gate PASS (0 blocks), LINT WARN (no BLOCK), receipts verify OK (1787), growth PASS; battery on a fresh --no-hardlinks clone with files hard-linked: PASS WITH SKIPS, 239 targets, 11 skipped (catalogue cache, corpus artefacts, Stop hook absent in the clone); later commits closure-only"
+     "evidence": "frozen SHA 5ee09044: gate PASS (0 blocks), LINT WARN (no BLOCK), receipts verify OK (1787), growth PASS; battery on a fresh --no-hardlinks clone with files hard-linked: PASS WITH SKIPS, 239 targets, 11 skipped (catalogue cache, corpus artefacts, Stop hook absent in the clone); later commits closure-only; landed main e0317fec (task_close, safe_push gate PASS, ls-remote verified); IT46 messaged"
     }
    ]
   },
@@ -73,9 +73,9 @@
    "steps": [
     {
      "step": "One selective queue item chosen by use after delivery (S8)",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "item 3 chosen (cell versus slice, Kv7 R5): folder cell_vs_slice_sci46_20261111, branch task/sci46q"
     }
    ]
   }
