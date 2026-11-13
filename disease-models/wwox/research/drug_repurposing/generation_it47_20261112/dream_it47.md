@@ -8,3 +8,6 @@ Non-canonical working note. Not medical advice. Started from `dream_pass.py` (no
 **Discriminating test.** For each pharmacological arm in a mixed preparation: the effect in a cell-type-restricted perturbation or in a purified preparation against the mixed one; or the target protein measured by class in the preparation used.
 **Consumer updated.** The next-batch brief `next_batch_it47_20261112/BRIEFS.md` (B1: cell-class coverage of the 48 targets with no row, by the same hash-recorded inputs, predictions fixed first; B2: the cell-specific control as a design requirement of every slice or mixed-culture arm). No ranking, direction or need changed.
 **Revival triggers checked, none forced.** DIS-017 (GABA enrichment is not functional inhibition): not fired (no E_GABA or electrophysiology in this model and stage). DIS-009 (a WWOX-mimetic more selective than lithium): the re-audit hook was touched by the isoform-resolved datum of the GSK3 package; neither trigger fired.
+
+## Update 2026-11-12 (IT49)
+The row "one shared OPC-aware specificity control for both bath levers" is restated as a conditional addition tied to the attribution (SCI49 A, A5): required only to say that the effect is neuronal; an identified NG2-cell recording in the same slices is the cheapest first step; the GABA-A lever's OPC premise rests on abstracts.

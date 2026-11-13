@@ -70,7 +70,7 @@
      "step": "Return results to the research loop: SCI49 when available (no duplication); open questions with decision, result, residual uncertainty, next step, reason; readable-now vs reanalysis vs measurement; dashboard shows the filone, the comparison made more interpretable, the premise blocking a proposal, the result that would change the decision; no parallel register",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "SCI49 not delivered at the time (no commit on development/main). Questions: IT49-Q01 (wet), IT49-Q02 (reanalysis possible), IT49-Q03 (engine), IT48-Q01..Q04; dashboard: two reader rows; first-screen table unchanged (no new kind of next step). No parallel register."
+     "evidence": "SCI49 not delivered at the time (no commit on development/main). Questions: IT49-Q01 (wet), IT49-Q02 (reanalysis possible), IT49-Q03 (engine), IT48-Q01..Q04; dashboard: two reader rows; first-screen table unchanged (no new kind of next step). No parallel register. UPDATE: SCI49 package A (cc9302ef) consumed: 10 receipts recorded (ledger 1,865); rows 2-6 and 8 applied (update 3 clause on V10 and INV-18 in five languages, IT47-Q04 question/decision/evidence, new IT49-Q04, IT46 README and DREAM dated notes); row 4's generated cell_context_it46.tsv left as generated (the caveat is carried by the README note); row 8 superseded by update 3; SCI49 package B (Kir2 drug-name route) not delivered yet. No rank, sign or qualification changed."
     }
    ]
   },

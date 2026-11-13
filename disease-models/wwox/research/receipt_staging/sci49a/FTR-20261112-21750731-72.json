@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-12T22:37Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "captions_only"
+ },
+ "event_at": "2026-11-12T22:52Z",
+ "event_id": "FTR-20261112-21750731-72",
+ "evidence_basis": [
+  "Full text read as returned by the tool (Introduction, Results, Discussion, Methods); figure legends only. Cultured rat OPC, XE991-sensitive M-type current, immunostaining in rat cortex slices; no slice current and no opener.",
+  "verbatim_locator | proposition: M-type current peaks near -40 mV in cultured OPC | Results | \"the maximal Iamplitude (61.16\u00b16.32 pA) was measured at \u221240 mV\"",
+  "verbatim_locator | proposition: XE991 sensitivity in OPC | Results | \"The IC50 for XE991 was 13.3 \u00b5M\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cell_context_verify_sci49_20261112/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/cell_context_verify_sci49_20261112/verify/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PubMed full-text tool text of PMC3130044 fetched 2026-11-12; text only, figure images not opened; bytes not saved",
+ "study_id": {
+  "doi": "10.1371/journal.pone.0021792",
+  "pmid": "21750731"
+ },
+ "workflow": "SCI49 package A blind verifier V11 (ORCH-SCI49-20261112, actor cx-y), verification of the biological inferences of SCI47 package B; prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
