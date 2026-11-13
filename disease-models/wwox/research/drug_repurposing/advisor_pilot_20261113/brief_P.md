@@ -1,10 +1,10 @@
 # Strategic Advisor brief — Stage P (proactive evaluation)
 
 ## Snapshot
-- Repository SHA: `40b9be1cca2bf20a40cf5e93c4d8b0f37e2ebcc5` (branch `main`)
-- Dispatch time (UTC): 2026-11-13T18:29:20Z
+- Repository SHA: `dbf00b732691606ed046538c51f43e5df9feb8b4` (branch `main`)
+- Dispatch time (UTC): 2026-11-13T21:15:02Z
 - Uncommitted paths: none
-- Dashboard: https://marinomassimo-dot.github.io/legend-development/ · source revision ddee87d4b87dfd35b7cb5854a42a68558f9a68ec 2026-11-13T18:17:37+00:00 · the public page shows no build stamp; the package commit above is the source revision it is generated from. Publication date of the live page was not checked.
+- Dashboard: https://marinomassimo-dot.github.io/legend-development/ · source revision dbf00b732691606ed046538c51f43e5df9feb8b4 2026-11-13T20:53:38+00:00 · the public page shows no build stamp; the package commit above is the source revision it is generated from. Publication date of the live page was not checked.
 
 ## Operator roadmap (authoritative; operator instructions prevail over any automatic plan)
 **Mission.** Improve LEGEND's ability to turn verifiable scientific knowledge into more useful pharmacological hypotheses, comparisons and experiments for WWOX loss of function, keeping the
@@ -36,8 +36,8 @@ not targets. Exhausting the Advisor's budget stops its evaluations only; the wor
  "events": [],
  "open_mandates": [
   "INTAKE-OVERNIGHT-20261002",
+  "ORCH-ADVISOR-PILOT-20261113",
   "ORCH-METABOLIC-BATCH-20261019",
-  "ORCH-ROADMAP-IT50-20261113",
   "PLAN-HE47-USABLE-KNOWLEDGE-PRESERVED-MEANING-SUSTAINABLE-COST-20261112",
   "PLAN-PROACTIVE-ADVISOR-20261113"
  ],
@@ -54,23 +54,34 @@ not targets. Exhausting the Advisor's budget stops its evaluations only; the wor
 }
 
 ## Assignments already drafted, with their evidence level (do not duplicate; follow what was taken in charge)
-{}
+{
+ "ADV-001": {
+  "recipient": "Science",
+  "key": "ebp-reannotation-it29",
+  "highest": "EXECUTED"
+ },
+ "ADV-002": {
+  "recipient": "Harness",
+  "key": "blocked-artefact-route",
+  "highest": "EXECUTED"
+ }
+}
 
 ## Previous assessment
-none
+P1: `disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P1/assessment.md` (read it; reuse it when nothing relevant changed)
 
 ## Neutral entry points
 | id | what | patterns (relative to the repository root unless absolute) | matches now | last commit | largest file |
 |---|---|---|---|---|---|
-| limits | Authorised mission and resource limits: the task record named in the brief, and its siblings | `ledger/tasks/*/*.json` | 208 | 2026-11-13 | `ledger/tasks/scientist-a/AQEILAN-FT-A-001.json` (35,910 bytes) |
+| limits | Authorised mission and resource limits: the task record named in the brief, and its siblings | `ledger/tasks/*/*.json` | 210 | 2026-11-13 | `ledger/tasks/scientist-a/AQEILAN-FT-A-001.json` (35,910 bytes) |
 | invariants | Canonical project invariants and the operating rules | `CLAUDE.md`<br>`ARCHITECTURE.md`<br>`framework/master/harness_development_principles.md`<br>`framework/master/designed_for_growth.md`<br>`framework/master/gold_is_in_the_details.md`<br>`framework/instruction/LEGEND_CORE.md`<br>`framework/instruction/epistemic_discipline.md`<br>`disease-models/wwox/mission.md` | 8 | 2026-11-13 | `framework/instruction/LEGEND_CORE.md` (35,123 bytes) |
 | repurposing_method | Drug-repurposing roadmap and Standing method | `disease-models/wwox/research/drug_repurposing/roadmap_current.md`<br>`framework/protocols/repurposing_adapter_convention.md` | 2 | 2026-11-13 | `disease-models/wwox/research/drug_repurposing/roadmap_current.md` (47,529 bytes) |
 | dashboard | Dashboard: source records of the public page (the page is a map, the records are the facts) | `disease-models/wwox/research/drug_repurposing/view/README.md`<br>`disease-models/wwox/research/drug_repurposing/view/shareable_package/manifest.json`<br>`disease-models/wwox/research/drug_repurposing/view/shareable_package/README.md`<br>`disease-models/wwox/research/drug_repurposing/view/DEPLOY.md` | 4 | 2026-11-13 | `disease-models/wwox/research/drug_repurposing/view/README.md` (35,880 bytes) |
-| investigations | Investigations (research investment, not efficacy), needs and cards | `disease-models/wwox/research/drug_repurposing/ranking_it*/investigations.tsv`<br>`disease-models/wwox/research/drug_repurposing/ranking_it*/ranking.json`<br>`disease-models/wwox/research/drug_repurposing/needs/needs.md`<br>`disease-models/wwox/research/drug_repurposing/cards/*` | 65 | 2026-11-13 | `disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/ranking.json` (1,100,785 bytes) |
-| open_questions | Open-question maps and rows | `disease-models/wwox/research/drug_repurposing/**/open_questions*` | 5 | 2026-11-13 | `disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv` (169,048 bytes) |
+| investigations | Investigations (research investment, not efficacy), needs and cards | `disease-models/wwox/research/drug_repurposing/ranking_it*/investigations.tsv`<br>`disease-models/wwox/research/drug_repurposing/ranking_it*/ranking.json`<br>`disease-models/wwox/research/drug_repurposing/needs/needs.md`<br>`disease-models/wwox/research/drug_repurposing/cards/*` | 65 | 2026-11-13 | `disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/ranking.json` (1,101,419 bytes) |
+| open_questions | Open-question maps and rows | `disease-models/wwox/research/drug_repurposing/**/open_questions*` | 5 | 2026-11-13 | `disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv` (171,301 bytes) |
 | candidates | Candidates, comparisons and hypothesis packages | `disease-models/wwox/research/drug_repurposing/generation_it*/`<br>`disease-models/wwox/research/drug_repurposing/**/compound_decisions*.tsv`<br>`disease-models/wwox/research/drug_repurposing/**/hypotheses*` | 52 | 2026-11-13 |  |
-| packages | Completed packages and their consumer notes | `disease-models/wwox/research/drug_repurposing/*/README.md`<br>`disease-models/wwox/research/drug_repurposing/**/CONSUMER_NOTE.md` | 241 | 2026-11-13 | `disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/README.md` (65,530 bytes) |
-| diagnoses | Diagnoses, evaluations and DREAM | `disease-models/wwox/research/session_evaluations/*`<br>`disease-models/wwox/research/drug_repurposing/diagnosis_*/*`<br>`disease-models/wwox/research/dream*/README.md` | 197 | 2026-11-13 | `disease-models/wwox/research/session_evaluations/2026-10-04_BATCH_20261004_001.md` (60,878 bytes) |
+| packages | Completed packages and their consumer notes | `disease-models/wwox/research/drug_repurposing/*/README.md`<br>`disease-models/wwox/research/drug_repurposing/**/CONSUMER_NOTE.md` | 242 | 2026-11-13 | `disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/README.md` (65,530 bytes) |
+| diagnoses | Diagnoses, evaluations and DREAM | `disease-models/wwox/research/session_evaluations/*`<br>`disease-models/wwox/research/drug_repurposing/diagnosis_*/*`<br>`disease-models/wwox/research/dream*/README.md` | 198 | 2026-11-13 | `disease-models/wwox/research/session_evaluations/2026-10-04_BATCH_20261004_001.md` (60,878 bytes) |
 | memory_dismissals | Dismissal and discovery ledgers, memory index (outside the repository) | `disease-models/wwox/research/dismissal_ledger_current.md`<br>`disease-models/wwox/research/discovery_ledger_current.md`<br>`/home/desktop/.claude/projects/-home-desktop-legend-development/memory/MEMORY.md` | 3 | 2026-11-12 | `disease-models/wwox/research/discovery_ledger_current.md` (926,660 bytes) |
 | radar | Radar findings and capability gaps | `governance/candidates/HARNESS-SCOUT-*.md`<br>`disease-models/wwox/research/capability_scout_log.md`<br>`SKILLS.md`<br>`CAPABILITIES.md` | 4 | 2026-11-13 | `disease-models/wwox/research/capability_scout_log.md` (184,962 bytes) |
 | tools | Which tool answers which question (the advisor has no shell; this explains what the records came from) | `framework/scripts/README.md` | 1 | 2026-11-13 | `framework/scripts/README.md` (55,620 bytes) |

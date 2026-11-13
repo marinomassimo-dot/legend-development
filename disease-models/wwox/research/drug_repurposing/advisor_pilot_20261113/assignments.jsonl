@@ -2,3 +2,4 @@
 {"assessment": "P1", "id": "ADV-002", "key": "blocked-artefact-route", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-13T18:34:18Z"}
 {"evidence": "SendMessage to live session SCI (idle per claude agents --json), msg_id 935068d5-9d55-45cf-9000-1aa8d0b5a558, pointer to assignments/ADV-001.md on main 65557d1b; delivery accepted into inbox, not yet read", "id": "ADV-001", "state": "SENT", "utc": "2026-11-13T18:39:52Z"}
 {"evidence": "Recipient Harness is the session that runs the schedule; no inter-session transport used. Assignment text on main 65557d1b; take-in-charge to be recorded in ledger/tasks/plan/PLAN-PROACTIVE-ADVISOR-20261113.json", "id": "ADV-002", "state": "SENT", "utc": "2026-11-13T18:39:52Z"}
+{"assessment": "P2", "id": "ADV-003", "key": "isr-target-route-retest", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-13T21:18:10Z"}

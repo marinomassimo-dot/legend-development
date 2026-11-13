@@ -1,0 +1,82 @@
+# Strategic assessment — Stage P, tick 2 (2026-11-13T21:15Z)
+
+## 1 · Principal decision
+
+Both assignments of tick 1 have been executed and disposed. The decision now is what the **last** of the three campaign assignment slots should buy, with roughly 21 h of campaign window left and one invocation after this one: more depth on the sterol/receptor-attribution thread, another prioritised question of the module, a harness item, or nothing at all.
+
+## 2 · Leading recommendation
+
+**Facts.**
+- ADV-001 was taken in charge, executed and landed (`ledger/tasks/orchestrator/ORCH-ADV001-20261113.json`, `MANDATE_STATE: COMPLETE`; package `ebp_reannotation_adv001_20261113/README.md`). Its seven consumer-delta rows were disposed row by row by the integrator (`ORCH-ADVISOR-PILOT-20261113.json`, OBJ_P4: rows 2, 4, 5, 7 APPLIED; row 3 partly; rows 1 and 3b DEFERRED with revival conditions; row 6 applied by the package in its own files). `IT51-Q05` is `CONCLUDED` and three new rows `IT51-Q06..Q08` exist (`batch_sci_20261105/map/open_questions_map.tsv` lines 188–190).
+- ADV-002 was executed (`advisor_pilot_20261113/ADV-002_result.md`, disposed in OBJ_P5): one artefact partly reached through an open full-text XML route, one recorded as having **no permitted route**. Both outcomes are now in the questions map.
+- In passing, ADV-002 recorded that the external activity database **answered HTTP 200 on 2026-11-13**, after the HTTP 500 that had been recorded earlier the same day. The integrator propagated this into `generation_it50_20261113/README.md` line 33: "the by-target activity route for the eIF2B subunits **can be tried; it was not run here**", while line 30 of the same file still states the route "remains blocked by the ChEMBL API outage". The same outage is the basis of `CONSULTATION_DECISION.checks_before_accepting` in `ORCH-ROADMAP-IT50-20261113.json` (line 162).
+
+**Interpretation.** The constraint I named in tick 1 — retrieval access, not biology or method — has partially lifted, and it lifted on the branch that was *not* the newest thread. INV-02's probe arm is recorded as having "0 rows by target search; no row in the generator" (`generation_it50_20261113/README.md` line 8), an absence established while the route was failing. An absence measured through a broken route is not an absence.
+
+**Judgment.** Spend the last slot on **Science**: run the by-target activity route for the ISR/eIF2B targets now that the service responds, and report whether the zero-row state is a true absence in the public resource or an artefact of the outage window — with the limit sentence in the IT50 README corrected either way. It is zero spend, in silico, bounded to one short session, and it discharges a published limit that currently contradicts itself in the same file.
+
+I do **not** recommend further depth on the attribution thread this cycle: of its live questions, two are wet measurements and one needs a figure route that returned HTTP 403 (`ADV-002_result.md`; map lines 189–190).
+
+## 3 · Relevant alternatives
+
+- **Stay on the attribution thread (the case for the current branch).** Its in-silico content is now spent: `IT51-Q05` is CONCLUDED, and `IT51-Q06`/`Q07` are `wet_lab_measurement`, `IT51-Q08` `data_access_blocked`. Only a cheap re-count of evidence rows by paper remains (named in the package's own "Open questions"), which is a half-hour of integrator work, not an assignment.
+- **The deferred card-identity qualification (roadmap priority 5).** Real: the user-facing card identity text still carries no qualification, because the edit belongs in the card build script (OBJ_P4 row 1, DEFERRED with revival "the next card-regeneration batch"); meanwhile the qualification is carried by the INV-06 clause and its `next_test`. This is a correctness-of-the-map item with a stated revival condition and an owner. Worth doing in the next regeneration batch; not worth the campaign's last slot.
+- **Housekeeping, not an assignment (unchanged from tick 1).** `INTAKE-OVERNIGHT-20261002` and `ORCH-METABOLIC-BATCH-20261019` are still listed OPEN while their own records describe them as blocked or pool-exhausted. They inflate the open-mandate signal every tick. One line each from the Orchestrator at a safe boundary.
+- **Draft nothing and reserve the slot.** Defensible — a ceiling is not a target — but the campaign expires 2026-11-14T18:22:36Z and SCI is idle now; an unspent slot at expiry buys nothing, whereas this item is small and decision-bearing.
+
+## 4 · Why now
+
+Roadmap priority 1 is closed for this cycle: both delivered packages are consumed with per-row dispositions. Priority 3 asks for a comparison rather than momentum, and the comparison now has a new input that did not exist at tick 1 — an external route that was the stated blocker of a different branch has reopened, and the repository records it as untried. SCI is idle; HE is busy and should not be pre-empted; the Orchestrator still owes the pilot report (OBJ_P3, TODO, due at expiry).
+
+## 5 · Evidence and uncertainty
+
+**Facts.** The reopening is a single observation by one session on one endpoint ("status and one molecule"), explicitly **not** a test of the by-target routes (`ADV-002_result.md` line 20). The prior zero-row result was obtained by a search tool whose cached release was also absent at the time.
+
+**Uncertainty I would not hide from the executing session.** (i) A single 200 on a status endpoint does not prove the activity endpoints work; the honest first step is to establish the service state before concluding anything about rows. (ii) If rows are returned, their existence is a *representation* fact — it says the public resource holds measured activity against those targets, not that any arm becomes pursuable; no direction, rank or candidate state may move on it. (iii) If zero rows come back from a service that demonstrably responds, that is a **stronger, publishable negative** than the current sentence and retires the "outage" explanation permanently. (iv) ADV-001's own history is the cautionary note: its blind verifier overturned eleven statements of the first README (`ORCH-ADV001-20261113.json`, OBJ_A step 3). A small item still needs its counts stated with denominators and its absence statements scoped to what was queried and when.
+
+**Interpretation.** This is the cheapest available test of whether a branch's emptiness is biology, representation, or infrastructure — the distinction the mission depends on, and the one the module has twice resolved wrongly in the optimistic direction.
+
+## 6 · Next bounded action
+
+**One principal question:** *with the external activity service in a state established and recorded at run time, does a by-target query against the ISR/eIF2B subunit targets return activity rows, and is the IT50 statement "0 rows by target search" a true absence in the public resource or an artefact of the outage window?*
+
+**The result that would count:** the service state recorded before and after; the exact target identifiers and the query actually issued; a row count with its denominator and date; and one of two written outcomes — "absence confirmed under a responding service, scope: these identifiers, this date" or "N rows exist, previously unreachable" — plus the corrected limit sentence for the IT50 README, with no rank, sign, direction, need or candidate state changed by the package itself.
+
+## 7 · What would change my view
+
+- If the by-target endpoints are still failing on the first attempts, the item should stop there and be recorded as "service partly available, route still unavailable" — not escalated, not retried against any protection.
+- If the Orchestrator reports that the pilot report (OBJ_P3) will not fit before expiry, writing that report outranks this assignment: an unreported pilot is a worse loss than an untried query.
+- If rows do come back in quantity, the follow-up is **not** a new arm but a representation question for the integrator, and it belongs to the next normal batch, not to this campaign.
+- If the operator adds a dated line to the roadmap section, this assessment is superseded.
+
+## 8 · Resource implications
+
+Zero external spend; one public, free service already in the module's standing method; no new dependency, no infrastructure. One short Science session, smaller than ADV-001 (no verifier needed if the output is a query, a count and a date; the session decides). HE's running work is untouched. After this draft the campaign's three assignment slots are spent and one invocation of three remains — that last invocation should be an assessment only, or be left unused if nothing material changes.
+
+## 9 · Inspected
+
+Opened in full: `advisor_pilot_20261113/P1/assessment.md`; `advisor_pilot_20261113/budget.json`, `invocations.jsonl`, `assignments.jsonl`, `ADV-002_result.md`; `ebp_reannotation_adv001_20261113/README.md` and `consumer_delta.md`; `ledger/tasks/orchestrator/ORCH-ADV001-20261113.json`; `ledger/tasks/orchestrator/ORCH-ADVISOR-PILOT-20261113.json`; `generation_it50_20261113/README.md` and `apply_adv001.py`. Read by targeted grep with the matched lines in hand: `batch_sci_20261105/map/open_questions_map.tsv` (rows IT51-Q07 and IT51-Q08 in full; rows 185–188 matched but returned as "omitted long line" — my statements about Q03/Q04/Q05/Q06 rest on the dispositions in OBJ_P4/OBJ_P5 and on `apply_adv001.py`, which writes them, not on the TSV cells themselves); `ORCH-ROADMAP-IT50-20261113.json` lines 162–193; a count-only grep over `cards/`.
+
+**Not reached this tick:** the live dashboard page (I did not fetch it; I rely on tick 1's fetch and on the package revision in the brief — I make no claim about the page as published today); `roadmap_current.md` (I used the operator roadmap as given in this brief plus tick 1's reading); SCI51's `verify/` files; `needs/needs.json` line 4480; the card build script; the IT29 signed-layer tables (unchanged since tick 1 and not edited by ADV-001).
+
+## 10 · Freshness and exposure
+
+- The mechanical block reports `commits_since_last_tick: 0` and `events: []`, yet the snapshot SHA moved from tick 1's `40b9be1c` to `dbf00b73` and an entire package landed in between. **The tick counters are unreliable this round**; everything above comes from repository records, not from the event stream. Uncommitted paths: none.
+- **Stale/contradictory record:** `generation_it50_20261113/README.md` states the route "remains blocked" at line 30 and "can be tried" at line 33. That contradiction inside one consumer file is part of what the assignment closes.
+- **Exposure:** the reopening and the words "can be tried" are already written in the IT50 README by the integrator, and `ORCH-ADVISOR-PILOT` OBJ_P2 records "one assignment slot left, **none planned**". So my lead is not blind to the laboratory's own notes, and it runs mildly against the integrator's stated expectation rather than with it. I saw no sealed intended-action file; none was offered at this stage.
+
+## Assignments
+
+### ASSIGNMENT 3
+key: isr-target-route-retest
+recipient: Science
+question: With the external activity service's state established and recorded at run time, does a by-target query against the ISR/eIF2B subunit targets return activity rows — and is the recorded "0 rows by target search" for that arm a true absence in the public resource or an artefact of the outage window in which it was established?
+why_now: ADV-002 observed the service answering HTTP 200 on 2026-11-13 after the HTTP 500 that is the stated blocker in `generation_it50_20261113/README.md` line 30 and in `ORCH-ROADMAP-IT50-20261113.json` line 162; the integrator propagated the observation (line 33) and explicitly did not run the route. SCI is idle, HE is busy, the campaign expires 2026-11-14T18:22:36Z, and this is the only decision-bearing item in the module that is executable in silico at zero spend this cycle.
+roadmap_link: Operator priority 2 (knowledge already held producing a better comparison) and priority 3 (compare depth on the current thread against the module's other prioritised questions — the attribution thread has only wet or route-blocked questions left); roadmap R9 (selective adoption, provenance, removal path) for the route itself.
+related_work: ORCH-ROADMAP-IT50-20261113 (owner of the generator, the investigations rows and the receipt ledger — no consumer edit without it); ORCH-ADVISOR-PILOT-20261113 OBJ_P3 (the pilot report is the Orchestrator's and outranks this if time is short); ADV-002 (`advisor_pilot_20261113/ADV-002_result.md`, the source of the service observation); must not pre-empt HE's running mandate.
+sources: `disease-models/wwox/research/drug_repurposing/generation_it50_20261113/README.md` (lines 8, 30, 33 and the surrounding table) in full; `disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/ADV-002_result.md` in full; `ledger/tasks/orchestrator/ORCH-ROADMAP-IT50-20261113.json` block `CONSULTATION_DECISION` including `checks_before_accepting`; `framework/scripts/README.md` for the shipped activity/search tools and their cached-release behaviour; the INV-02 rows of `disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations.tsv`; the ISR hypothesis rows and `conditional_design_steps_it50.tsv` in `generation_it50_20261113/` for the target identifiers actually in use.
+decision_changed_by_result: Whether INV-02's probe arm has a populatable evidence layer in the public resource at all, or whether its emptiness is a confirmed absence under a responding service — which settles how that arm is described in the IT50 consumer text and whether any later batch should re-attempt the route; it also tells the module whether other "blocked by outage" statements made that day need re-testing before being carried forward.
+perimeter_and_budget: One short package in its own folder; zero external spend; no new paid or contact-requiring service, no new dependency or infrastructure; never place the operator's address or any contact identifier in a request, header, URL or prompt — use a generic client name; no bot-check circumvention and no invented client identity; no edit to any shared consumer, ranking, need, registry, card or the receipt ledger (propose, do not apply); no change to any rank, sign, direction, candidate state or qualification; sized well below ADV-001 and must leave HE's running work its resources.
+method_autonomy: The session chooses the tool and the query form (shipped script, cached release, or a direct query), chooses the target identifiers and must name them, and chooses whether a blind verifier is proportionate — for a query-count-date result it probably is not, but absence statements must be scoped to the identifiers queried and the date, and counts given with denominators. A confirmed zero under a responding service is a full and welcome result, as is "the service answers on status but not on the activity endpoints". Competing explanations are welcome, including that the original zero was a tool or identifier-mapping problem rather than an outage. Report the service state observed before and after, not inferred.
+deliver_to: Orchestrator (for disposition and for the corrected limit sentence in `generation_it50_20261113/README.md`, which is its file), with the outcome recorded against the INV-02 route statement; consumers to review only if the result is material: the INV-02 rows in `investigations*.tsv` and any generated view copy, through the integrator.
+duplicate_check: `generation_it50_20261113/README.md` line 33 states in writing that the route was **not** run; `ORCH-ADVISOR-PILOT-20261113.json` OBJ_P2 records "one assignment slot left, none planned"; the tick's open-mandate list (INTAKE-OVERNIGHT-20261002, ORCH-ADVISOR-PILOT, ORCH-METABOLIC-BATCH, PLAN-HE47, PLAN-PROACTIVE-ADVISOR) contains no retrieval or activity-route item; the campaign's drafted set is ADV-001 (EBP re-annotation, COMPLETE) and ADV-002 (blocked-artefact routes, COMPLETE), neither of which covers the ISR targets; `ADV-002_result.md` line 20 states explicitly that whether the by-target routes work was not tested; the three new questions added by ADV-001 (IT51-Q06..Q08) are two wet measurements and one blocked figure route, none of them this.

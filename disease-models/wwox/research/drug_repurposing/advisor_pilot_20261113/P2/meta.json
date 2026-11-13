@@ -1,0 +1,357 @@
+{
+  "capture": {
+    "assessment_sha256": "1f59505d321fa1f303c363d249605e4592172c56de391d4b669cce7fe6bab512",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P2/stream.jsonl",
+    "raw_stream_sha256": "9fad2bf4f2d4575047e5ba2894ecb99ca9ee89f01f2d76cda7a10346df643f28",
+    "source_session_id": "f37a094e-0c43-409f-b355-53068d08ad6a",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 9608
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-13T21:18:10Z",
+  "label": "P2",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": true,
+      "efforts": {
+        "high": 12
+      },
+      "first_turn_context": 18936,
+      "models": {
+        "claude-opus-5": 1,
+        "claude-opus-5-5": 11
+      },
+      "peak_context": 54496,
+      "totals": {
+        "cache_creation": 54562,
+        "cache_read": 440084,
+        "output": 12609
+      },
+      "turns": 12
+    },
+    "final_turn_model": "claude-opus-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.0005216,
+        "inputTokens": 5101,
+        "maxOutputTokens": 128000,
+        "outputTokens": 23,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5": {
+        "cacheCreationEphemeral1hInputTokens": 68,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 68,
+        "cacheReadInputTokens": 53366,
+        "canonicalModel": "claude-opus-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.25190799999999997,
+        "inputTokens": 4,
+        "maxOutputTokens": 64000,
+        "outputTokens": 8981,
+        "provider": "firstParty",
+        "thinkingTokens": 3154,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 54562,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 54562,
+        "cacheReadInputTokens": 441212,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.6073424,
+        "inputTokens": 26,
+        "maxOutputTokens": 128000,
+        "outputTokens": 4125,
+        "provider": "firstParty",
+        "thinkingTokens": 1679,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 22,
+    "refusal_fallbacks": [
+      {
+        "apiRefusalCategory": null,
+        "direction": "retry",
+        "fallbackModel": null,
+        "originalModel": null,
+        "scope": "session",
+        "trigger": "refusal"
+      }
+    ],
+    "total_cost_usd": 0.859772,
+    "turn_models": {
+      "claude-opus-5": 1,
+      "claude-opus-5-5": 12
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 54562,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 54562,
+      "cache_read_input_tokens": 440084,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 26,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 68,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 68,
+          "cache_read_input_tokens": 53366,
+          "input_tokens": 4,
+          "output_tokens": 8981,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 12609,
+      "output_tokens_details": {
+        "thinking_tokens": 4336
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-13T21:15:02Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P1/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Strategic assessment \u2014 Stage P, tick 1 (2026\u201111\u201113T18:29Z)\n2\t\n3\t## 1 \u00b7 Principal decision\n4\t\n5\tNow that SCI51 has landed and been consumed into the publishe"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/**"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/PILOT_CAMPAIGN.md\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/budg"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/ADV-002_result.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# ADV-002 result (Harness): routes to the two SCI51-blocked artefacts\n2\t\n3\tTaken in charge by Harness in `ledger/tasks/plan/PLAN-PROACTIVE-ADVISOR-20261113.js"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/assignments.jsonl"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\"assessment\": \"P1\", \"id\": \"ADV-001\", \"key\": \"ebp-reannotation-it29\", \"recipient\": \"Science\", \"state\": \"DRAFTED\", \"utc\": \"2026-11-13T18:34:18Z\"}\n2\t{\"assessmen"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/invocations.jsonl"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\"brief_sha256\": \"7817f60c9de4bfd64a8467c097563012c715a6e898ba83c9989e67901b3770a4\", \"effort_asked\": \"high\", \"index\": 1, \"label\": \"P1\", \"model_asked\": \"opus\","
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/budget.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t \"activated_utc\": \"2026-11-13T18:22:36Z\",\n3\t \"expires_utc\": \"2026-11-14T18:22:36Z\",\n4\t \"max_assignments\": 3,\n5\t \"max_invocations\": 3,\n6\t \"recipients\": {\n7"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development",
+        "pattern": "ADV-001|ebp-reannotation|IT51-Q05"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 64 files\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P2/brief.md\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_2026"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ebp_reannotation_adv001_20261113/README.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# ADV-001 (IT51-Q05) \u2014 re-annotation of the IT29 case-1 compounds by documented EBP (sterol isomerase) status (2026-11-13)\n2\t\n3\tNon-canonical research materia"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADV001-20261113.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t \"_schema\": \"task record, Annex A.1c\",\n3\t \"TASK_ID\": \"ORCH-ADV001-20261113\",\n4\t \"OWNER\": \"orchestrator\",\n5\t \"ACTOR_ID\": \"orchestrator\",\n6\t \"PRIORITY\": \"NO"
+    },
+    {
+      "input": {
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ROADMAP-IT50-20261113.json",
+        "pattern": "ADV-00|adv001|ADV001"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No matches found"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ebp_reannotation_adv001_20261113/consumer_delta.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# ADV-001 (IT51-Q05) \u2014 consumer delta (proposals; 2026-11-13)\n2\t\n3\tNon-canonical. Not medical advice. This package edits no IT29 file and no shared consumer, "
+    },
+    {
+      "input": {
+        "glob": "{**/investigations.tsv,cards/*,needs/needs.json,**/open_questions_map.tsv,glia_maturation_it14_p4_20261101/README.md,phenotype_first_it29_20261105/README.md}",
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "ADV-001"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv:185:[Omitted long matching line]\ndisease-models/wwox/research/drug_r"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/generation_it50_20261113/apply_adv001.py"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t\"\"\"ADV-001 (IT51-Q05) consumer rows: INV-06 evidence clause, question rows, dated lines in two READMEs (idempotent; originals kept; public text without catalo"
+    },
+    {
+      "input": {
+        "output_mode": "count",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/cards",
+        "pattern": "EBP|sterol"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/cards/I01_pdk_inhibition_dca_premise_seizure_glycaemia.card.json:1\ndisease-models/wwox/research/drug_repurposing/c"
+    },
+    {
+      "input": {
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "pattern": "IT51-Q0[3-8]"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "185:[Omitted long matching line]\n186:[Omitted long matching line]\n187:[Omitted long matching line]\n188:[Omitted long matching line]\n189:IT51-Q07\tebp_reannotatio"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/ledger/tasks",
+        "pattern": "apply_adv001|F02"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 6 files\nledger/tasks/orchestrator/ORCH-ADVISOR-PILOT-20261113.json\nledger/tasks/orchestrator/ORCH-ROADMAP-IT38-20261108.json\nledger/tasks/orchestrator/ORC"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADVISOR-PILOT-20261113.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t \"_schema\": \"orchestrator-task-v1\",\n3\t \"OWNER\": \"orchestrator\",\n4\t \"ACTOR_ID\": \"orchestrator\",\n5\t \"PRIORITY\": \"P0\",\n6\t \"TASK_ID\": \"ORCH-ADVISOR-PILOT-2026"
+    },
+    {
+      "input": {
+        "-n": true,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/generation_it50_20261113/README.md",
+        "pattern": "ChEMBL|HTTP 500|by-target|ISR"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "8:| INV-02: an eIF2B activator as a research probe, with its blocking premise | 0 rows by target search; no row in the generator | 3 hypothesis rows (ISR1-ISR3)"
+    },
+    {
+      "input": {
+        "-n": true,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ROADMAP-IT50-20261113.json",
+        "pattern": "OBJ_P3|HTTP 500|ISR|by-target"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "33:  \"OBJ_P3\": {\n40:[Omitted long matching line]\n51:[Omitted long matching line]\n73:[Omitted long matching line]\n162:  \"checks_before_accepting\": \"A1's artefact"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/generation_it50_20261113/README.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# IT50: from accessible knowledge to useful therapeutic hypotheses\n2\t\n3\tNon-canonical working note. Not medical advice. Reference genotype class only. IPOTESI"
+    }
+  ]
+}
