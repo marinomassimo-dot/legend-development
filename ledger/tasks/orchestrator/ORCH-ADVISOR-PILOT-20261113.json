@@ -26,7 +26,7 @@
      "step": "For each ADV-nnn delivered by Harness: record a take-in-charge line with its id (executed, adapted with a reason, or deferred with a revival condition); sent is not taken",
      "status": "TODO",
      "owner": "orchestrator",
-     "evidence": "Dependency: a Stage P evaluation must draft an assignment and Harness must deliver it (no ADV drafted yet). Revival condition: a cross-session message naming ADV-nnn; check strategic_advisor.py status --campaign advisor_pilot_20261113 at each safe boundary. No assignment is taken before it exists."
+     "evidence": "Dependency: a Stage P evaluation must draft an assignment and Harness must deliver it (no ADV drafted yet). Revival condition: a cross-session message naming ADV-nnn; check strategic_advisor.py status --campaign advisor_pilot_20261113 at each safe boundary. No assignment is taken before it exists. ADV-001 and ADV-002 TAKEN IN CHARGE 2026-11-13 (lines in OBJ_P4 and OBJ_P5); one assignment slot left, none planned."
     }
    ]
   },
@@ -38,6 +38,28 @@
      "status": "TODO",
      "owner": "orchestrator",
      "evidence": "Due at expiry or when the advisor's budget is exhausted."
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "ADV-001 (Science: IT51-Q05, EBP re-annotation of the IT29 signed rows): take in charge the coordination of its consumers; record the disposition per row on delivery",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": "TAKEN IN CHARGE as ADV-001 (assignment sent to SCI by Harness, 2026-11-13). Method not changed or reordered: the assignment is accepted as drafted (it names IT51-Q05, which I opened from the SCI51 delta, so there is no duplicate on my side). My part: no edit of consumers before the package arrives; on delivery apply / reject with reason / defer with revival condition per consumer_delta row; candidate consumers if the result is material: the INV-06 clause, the pro-myelinating entry in the published view (coordinate with Harness for the restyle copy), the SCI50 and SCI51 READMEs by dated line; ranking, needs and qualifications unchanged. Dependency: SCI delivers; revival condition: a message from SCI or a package folder on main naming ADV-001/IT51-Q05."
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "ADV-002 (Harness: open permitted route to the two SCI51-blocked artefacts, IT51-Q03 and IT51-Q04): record the outcome against those questions on delivery",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "TAKEN IN CHARGE as ADV-002 (Harness takes the work in its own record; no bot-check circumvention, no spoofing). My part: record the outcome on IT51-Q03/Q04 (closed from the public record, or recorded as unreachable with the routes tried) and decide any consumer consequence; Science reads and extracts the scientific content if an artefact is reached; receipts through the normal ledger path, none claimed by me on a delegate's behalf. Method not changed. Dependency: Harness delivery; revival condition: a message from Harness or a note on main naming ADV-002. DISPOSITION 2026-11-13 (result a8508495): IT51-Q03 partly reached (text and legends via Europe PMC fullTextXML; per-compound heatmap values and the names unreached; Science reads the locator), IT51-Q04 unreachable by the routes tried (no permitted route); both recorded in the open-questions map; no consumer text changed (a negative result is not an absence); the by-target ChEMBL route noted as possibly runnable again (dated line in the IT50 README, not run). No receipts claimed by me."
     }
    ]
   }
