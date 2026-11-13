@@ -1,0 +1,13 @@
+gene	uniprot	target_chembl_id_or_state	type_name_organism
+EIF2B1	Q14232	CHEMBL6066508	SINGLE PROTEIN; Translation initiation factor eIF2B subunit alpha; Homo sapiens
+EIF2B2	P49770	CHEMBL6067331	SINGLE PROTEIN; Translation initiation factor eIF2B subunit beta; Homo sapiens
+EIF2B3	Q9NR50	CHEMBL4295961	SINGLE PROTEIN; Translation initiation factor eIF2B subunit gamma; Homo sapiens
+EIF2B4	Q9UI10	CHEMBL6067328	SINGLE PROTEIN; Translation initiation factor eIF2B subunit delta; Homo sapiens
+EIF2B5	Q13144	CHEMBL5725120	SINGLE PROTEIN; Translation initiation factor eIF2B subunit epsilon; Homo sapiens
+EIF2AK1	Q9BQI3	CHEMBL6029	SINGLE PROTEIN; Eukaryotic translation initiation factor 2-alpha kinase 1; Homo sapiens
+EIF2AK2	P19525	CHEMBL5785	SINGLE PROTEIN; Interferon-induced, double-stranded RNA-activated protein kinase; Homo sapiens
+EIF2AK3	Q9NZJ5	CHEMBL6030	SINGLE PROTEIN; Eukaryotic translation initiation factor 2-alpha kinase 3; Homo sapiens
+EIF2AK4	Q9P2K8	CHEMBL5358	SINGLE PROTEIN; eIF-2-alpha kinase GCN2; Homo sapiens
+EIF2S1	P05198	CHEMBL1255131	SINGLE PROTEIN; Eukaryotic translation initiation factor 2 subunit 1; Homo sapiens
+PPP1R15A	O75807	CHEMBL4630805	SINGLE PROTEIN; Protein phosphatase 1 regulatory subunit 15A; Homo sapiens
+PPP1R15B	Q5SWA1	CHEMBL4630830	SINGLE PROTEIN; Protein phosphatase 1 regulatory subunit 15B; Homo sapiens
