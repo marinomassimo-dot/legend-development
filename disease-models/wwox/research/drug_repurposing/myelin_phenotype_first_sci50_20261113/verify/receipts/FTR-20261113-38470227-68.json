@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-13T08:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-13T08:03:24Z",
+ "event_id": "FTR-20261113-38470227-68",
+ "evidence_basis": [
+  "Abstract read (Dorel 2024, J Med Chem); no method, count or figure detail used.",
+  "verbatim_locator | proposition: a brain-penetrant EBP inhibitor showed brain target engagement by zymostenol accumulation and enhanced oligodendrocyte formation in human cortical organoids | abstract | \"demonstrated strongtarget engagement in the brain, as illustrated by the accumulation of EBP substrate zymostenol after repeated dosing\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_phenotype_first_sci50_20261113/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_phenotype_first_sci50_20261113/verify/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 38470227 via the PubMed tool, 2026-11-13",
+ "study_id": {
+  "doi": "10.1021/acs.jmedchem.3c02396",
+  "pmid": "38470227"
+ },
+ "workflow": "SCI50 blind verifier V13 (myelin_phenotype_first_sci50_20261113/verify), actor mp-y. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. paper_packet.py claim was refused by the session permission classifier, so no claim was made for this PMID."
+}

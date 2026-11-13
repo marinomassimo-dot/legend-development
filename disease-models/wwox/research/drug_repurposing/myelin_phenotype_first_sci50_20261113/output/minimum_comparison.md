@@ -1,3 +1,5 @@
+> **READ THE REVISED SECTIONS AT THE FOOT FIRST.** The text from the top is the generation-phase text, kept for history; the sections dated after V13 supersede it, and the last one (V13 recheck, final form) is the handover form.
+
 # SCI50 producer P: minimum comparison (one page; non-canonical research; not medical advice)
 
 **Question.** DATO/IPOTESI. Which pharmacological perturbation can raise a functional component of myelination while the neuronal defect persists, and does a limit sit with the neuron or axon or with an intrinsic block of the oligodendrocyte?
@@ -23,3 +25,21 @@ Unit of analysis: independent neuron-OPC preparations (embryos or litters), not 
 **Inconclusive if.** Marker rises with no sheath read; no sterol engagement; T3 baseline not measured; no positive effect in wild-type neurons (no assay window); coverslips counted as n; the null-neuron deficit is not reproduced in the preparation used.
 
 **Decision changed.** Whether NEED-MYELINATION can order a genotype-by-intervention comparison with an interpretable reagent pair or stays at INV-06's premise measurement. Cost and ordering relative to INV-06's step (measure the neuronal signal first) are for the Orchestrator.
+
+---
+## Revised after V13 (2026-11-13; one page; earlier text kept above)
+
+**Fit of the preparation.** The DRG co-culture asks whether neuron genotype changes OPC maturation in a seizure-free system; it does not speak to a cortical or callosal axon deficit (peripheral axons, normally myelinated by Schwann cells). The published Wwox readout is MBP morphology classes (myelinating-class versus premyelinating-class share), not internodes, thickness or compaction; sheath structure needs EM or MBP/Caspr internode scoring on the same coverslips. Add a primary cortical neuron-OPC assay with an MBP/Tuj1 segment-length index (the PIPE-307 format) to the first block.
+
+**Indispensable.** (1) Neuron genotype factor with one OPC pool. (2) Reverse pairing (Wwox-null OPC on wild-type neurons) in block 1. (3) OPC-intrinsic reagent set: PIPE-307 (M1-selective), an EBP inhibitor without M1 affinity, clemastine as comparator; dose-response and a monoculture ceiling per preparation; T3 co-arm. (4) Vehicle and time controls; prevention (from plating) and recovery kept apart. (5) Target engagement: sterol profile; M1 and ACh tone in the preparation. (6) Conditioned-medium arm: null versus wild-type neuron medium on OPC monoculture, matched for neuron number and viability, with a positive-control medium and neutralisation of a candidate. (7) Unit: independent preparations. (8) T3 and T4 measured in the complete medium first.
+**Conditional or decoration:** the Chrm1-null enhancer arm as written (replace by the additivity contrast); the neuregulin/BDNF with NMDAR-block factorial (doubles the design; medium-dependent); the supply arm (no reagent).
+
+**Endpoint.** Marker level (MBP+ share) beside sheath structure (internode scoring or EM) with axon length as denominator; the next level named, not claimed.
+
+**Expected.** Intrinsic or permissive block: after maximal stimulation the gap closes and the reverse pairing shows the OPC genotype carries it. Neuron-carried limit: the residual gap follows the neuron in the reverse pairing. Soluble inhibitor: the medium arm reproduces the deficit and the positive control works. Contact or substrate: no medium effect, deficit in co-culture only. Inconclusive: no positive-control effect; no wild-type reagent response; interaction scale not pre-specified; coverslips counted as n.
+
+**Decision changed.** Whether NEED-MYELINATION can order a genotype-by-intervention comparison with an interpretable reagent pair, and whether a medium arm answers INV-06's soluble-product item first.
+
+<!-- v13-recheck -->
+## Note after the V13 recheck (2026-11-13)
+The final minimum comparison is in `../README.md` (one page). This file keeps the earlier text for history; it exceeds the page limit and lists arms that the recheck judged not indispensable (the clemastine comparator, neutralisation of a candidate that does not exist, M1/acetylcholine tone as a gate rather than an arm, the overlap of the T3 co-arm with the T3/T4 step, a second cortical preparation in block 1).

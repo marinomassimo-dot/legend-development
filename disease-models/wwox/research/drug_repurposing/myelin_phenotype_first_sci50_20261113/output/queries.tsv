@@ -22,3 +22,7 @@ PM4	PubMed tool search_articles	Genetic Gabrd Deficiency Drives Compensatory Mye
 PM5	PubMed tool get_article_metadata	PMIDs 40674686, 27717881, 41317319, 22131434, 27059609 (abstracts)	2026-11-13T07:41:00Z	5	Abstracts read; receipts abstract_only
 PM6	PubMed tool get_full_text_article	PMC10393406, PMC5446120, PMC6570703	2026-11-13T07:41:30Z	3	Text layer read; PMC5446120 output saved to scratchpad and read in part
 PMC1	PMC article page, plain curl, default user agent	https://pmc.ncbi.nlm.nih.gov/articles/PMC6423962/ (PMID 30046109)	2026-11-13T07:41:20Z	1	HTTP 200 but the body was a reCAPTCHA challenge page: recorded as unreachable; no other route tried for this article; the PMC page route not used for any other article
+G1	repository git grep (correction round, no new fetch)	-i -E 'PIPE-307|PIPE307' under drug_repurposing excluding files/, receipts/, sci50	2026-11-13	0	absent
+G2	repository git grep	-i -E 'CTGF|CCN2|connective tissue growth' same scope plus excluding .gz/.html/.json/.png	2026-11-13	expression and drug-target rows only	no myelination-signal use
+G3	repository git grep	-i -E 'rapamycin|RAD001|everolimus|Tsc1|Tsc2|18495876|Meikle|J4|ENT1' same scope	2026-11-13	R50 in batch_sci_20261105 r1; J4 hits are GSK-J4	represented (rapamycin/RAD001); J4 ENT1 and Ercan absent
+G4	repository git grep	-i mct8 same scope	2026-11-13	it36 evidence N14 and others	represented

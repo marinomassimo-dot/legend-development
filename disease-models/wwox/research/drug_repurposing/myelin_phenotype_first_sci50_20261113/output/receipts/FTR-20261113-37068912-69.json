@@ -19,7 +19,8 @@
   "full text served as plain text by the PubMed PMC full-text tool (PMC10393406); figure legends read, figure images not viewed, genotype symbols lost in the text layer (Tcf4 groups read from context), supplement not read",
   "verbatim_locator | proposition: clemastine-treated Tcf4 mutants show increased N1/N2 callosal CAP ratio (conduction level) | Results, Clemastine rescues electrophysiological deficits | \"Two-week clemastine treatment of mice was effective at increasing the N1/N2 ratio\"",
   "verbatim_locator | proposition: total myelinated axon density in the mutant was not restored by clemastine | Results, Clemastine increases myelination activity | \"was unable to restore the levels of total myelinated axon (compacted + uncompacted) density\"",
-  "verbatim_locator | proposition: authors state the Tcf4 oligodendrocyte reduction is cell autonomous | Introduction | \"reductions in myelination due to mutations are cell autonomous\""
+  "verbatim_locator | proposition: authors state the Tcf4 oligodendrocyte reduction is cell autonomous | Introduction | \"reductions in myelination due to mutations are cell autonomous\"",
+  "Correction round 2026-11-13: Methods give clemastine and sobetirome in culture as 10 uM; Results and legends give 1 uM; unresolved source conflict (V13 verdict P01/P06). Tcf4 is a global heterozygous allele; the authors call the oligodendrocyte reduction cell-autonomous."
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

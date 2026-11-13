@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-13T07:51:30Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-13T07:59:45Z",
+ "event_id": "FTR-20261113-37068912-68",
+ "evidence_basis": [
+  "Full text served as plain text by the PubMed PMC full-text tool; figure legends read, figure images not viewed, genotype symbols lost in the text layer, supplement not available through the tool. Methods state 10 uM for clemastine and sobetirome in culture; Results and legends state 1 uM.",
+  "verbatim_locator | proposition: clemastine did not restore total myelinated axon density in the Tcf4 het callosum | Results, Clemastine increases myelination activity | \"was unable to restore the levels of total myelinated axon (compacted + uncompacted) density\"",
+  "verbatim_locator | proposition: Tcf4 het cell-autonomy is stated in the Introduction as background, not tested here | Introduction | \"reductions in myelination due to mutations are cell autonomous\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_phenotype_first_sci50_20261113/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_phenotype_first_sci50_20261113/verify/verdicts.tsv"
+ ],
+ "prior_receipt": "FTR-20261113-37068912-69",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC10393406 full text via the PubMed PMC full-text tool, 2026-11-13 (one request)",
+ "study_id": {
+  "doi": "10.1093/brain/awad057",
+  "pmid": "37068912"
+ },
+ "workflow": "SCI50 blind verifier V13 (myelin_phenotype_first_sci50_20261113/verify), actor mp-y. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. paper_packet.py claim was refused by the session permission classifier, so no claim was made for this PMID."
+}
