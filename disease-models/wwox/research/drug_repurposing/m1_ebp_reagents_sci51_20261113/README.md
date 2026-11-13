@@ -35,3 +35,7 @@ Producer, sonnet, effort medium, read back medium ×50: 50 turns in two launches
 
 ## Files
 `S0_before_search.md`; `BRIEF_P.md`, `VERIFIER_BRIEF.md`; `output/` (`reagents.tsv` 21+ rows, `activities.tsv` 60, `conditions.tsv` 13, `outcomes.md`, `answer.md`, `evidence.tsv`, `figure_notes.tsv`, `queries.tsv`, `phase_note.md`, `CORRECTIONS.tsv`, `receipts/` 5 staged, ending -66); `verify/` (audit, verdicts, queries, receipts 8 staged, ending -65, no claim); `consumer_delta.md`.
+
+## Update 2026-11-13 (ADV-001; the text above is kept)
+
+The IT29 case-1 compounds were re-annotated by documented EBP status (`../ebp_reannotation_adv001_20261113/README.md`): of 15 favourable compounds 4 (5 with ifenprodil, binding-only) have documented EBP activity (benztropine, clemastine, tamoxifen, quetiapine), 3 have indirect sterol-profile negatives (clobetasol, liothyronine, bexarotene), 3 act on another sterol enzyme with EBP unmeasured (amorolfine, miconazole, ketoconazole) and 4 are EBP-unmeasured (atropine, ipratropium, oxybutynin, sobetirome). **Design consequence:** every amine CNS compound with a non-sterol stated target needs a sterol-profile (zymostenol/zymosterol) arm before any target attribution; receptor-agonist routes with measured sterol-profile negatives do not; the muscarinic antagonists atropine, ipratropium and oxybutynin are EBP-unmeasured, not inactive.
