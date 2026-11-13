@@ -12,8 +12,8 @@
   "branch": "task/he50",
   "CURRENT_STATE": "OPEN",
   "CHECKPOINT": {
-    "last_verified_result": "none yet",
-    "first_incomplete_work": "OBJ_1_RECONCILE"
+    "last_verified_result": "targeted suites green: hypothesis_package 51, design rows 9, engine 33, identity 27, isr 3",
+    "first_incomplete_work": "rebase on IT50, battery, landing"
   },
   "AUTHORISED_QUEUE_20261113": {
     "MANDATE_STATE": "OPEN",
@@ -23,9 +23,9 @@
       "steps": [
         {
           "step": "Reconcile advisor_followup_20261112 and IT49/SCI49 results; read the named packages and readers; agree the shared-file boundary with the Orchestrator",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "advisor_followup and IT49/SCI49 reconciled; ISR package, readers, engine, SCI48/SCI49 packages read; boundary agreed with the Orchestrator (message) and SCI (myelin levers read-only, INV-12)"
         }
       ]
     },
@@ -35,9 +35,9 @@
       "steps": [
         {
           "step": "Smallest link that lets the generator consume a design-only package (steps, controls, branches) through existing readers; ISR case plus one differently shaped package; before/after diff",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "role design_only in hypothesis_package.py; DESIGN_MAP and design_rows in conditional_proposals.py; manifest rows for isrib_discrim (INV-02) and myelin levers_bc (INV-12); output conditional_design_steps_it50.tsv; tests 6 + 9; rebase on IT50 pending"
         }
       ]
     },
@@ -47,9 +47,9 @@
       "steps": [
         {
           "step": "Check RA839/sulforaphane, KI-696, ML133 family-level, Kir2 activators on the real path; fix only the demonstrated defect",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "engine reads package role tables (SCI46, SCI48): RA839 and sulforaphane comparator, KI-696 probe with contexts; 12 tests; display unchanged (page group is 'probe or comparator'); V19 sentence delta proposed to the Orchestrator"
         }
       ]
     },
@@ -59,9 +59,9 @@
       "steps": [
         {
           "step": "Complete the relevant technical deltas of SCI48/SCI49 after checking what the Orchestrator applied; recognition vs reconciliation",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "declarations for ML133 (CHEMBL1620289) and RA839 (CHEMBL3899754) with bases; aliases applied earlier by the Orchestrator verified; mention-vs-identity tests; SCI48 row 7 and SCI49 row 5 closed"
         }
       ]
     },
@@ -71,9 +71,9 @@
       "steps": [
         {
           "step": "IT49-Q02 ISR gene extraction from the cellular tables, only if not done or assigned elsewhere",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "IT49-Q02: twelve ISR genes from the case text (declared eleven), existing extraction made parametric, 18 registered inputs re-hashed, join states in isr_cellclass_he50_20261113; values for the scientific owners"
         }
       ]
     },
@@ -85,7 +85,7 @@
           "step": "Tests for the concrete failure modes with real examples and small fixtures; show the consuming command",
           "status": "PENDING",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "battery on the landing candidate after rebase on IT50"
         }
       ]
     },
