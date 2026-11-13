@@ -1,12 +1,32 @@
 {
  "activated_utc": "2026-11-13T18:22:36Z",
  "expires_utc": "2026-11-14T18:22:36Z",
- "max_assignments": 3,
- "max_invocations": 3,
+ "max_assignments": 6,
+ "max_invocations": 5,
  "recipients": {
   "Harness": "HE",
   "Orchestrator": "IT Orchestrator",
   "Science": "SCI"
  },
- "turn_limit": 20
+ "turn_limit": 20,
+ "amendments": [
+  {
+   "utc": "2026-11-13T23:33:00Z",
+   "source": "operator instruction to the ADV session (bounded night mission), recorded in the Operator roadmap section of roadmap_current.md",
+   "max_invocations": 5,
+   "max_assignments": 6,
+   "turn_limit": 20,
+   "used_before_amendment": {
+    "invocations": 2,
+    "assignments_drafted": 3
+   },
+   "autonomy_window_utc": [
+    "2026-11-13T23:33:00Z",
+    "2026-11-14T09:33:00Z"
+   ],
+   "expires_utc_unchanged": "2026-11-14T18:22:36Z",
+   "no_external_spend": true,
+   "note": "Totals include everything already used and any failed attempt. No new campaign, no activate, no counter reset, no renewal of the original expiry. The 3/3 evidence of the first period is historical. The ten-hour window is procedural; the code enforces only the totals and the expiry."
+  }
+ ]
 }
