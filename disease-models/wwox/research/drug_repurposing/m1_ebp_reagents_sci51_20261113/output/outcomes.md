@@ -15,3 +15,12 @@ Labels DATO / INFERENZA / IPOTESI. Arms: **A** vehicle; **B** M1-selective reage
 **Inconclusive when:** the assay window is not open (T3 or ketoconazole fail to produce the positive control); tone below a measurable level; a dose ladder lacks the in-assay EC50 (CW3388 had no floor in the source); saturation (Hubler: no additivity at a maximal ketoconazole dose) so non-additivity is read as same-pathway; the Chrm1-null contrast (the null baseline is about 4 to 5-fold above WT, as large as the drug effect), which is interpretable only when positive; wells counted as independent preparations; a drug effect that is partly microglial or in vivo only.
 
 **Three claims, kept apart.** (1) *Acts through its target in OPC*: needs the cross-activity profile (reagents.tsv, activities.tsv) and the sterol or tone gate; DATO from sources only for TASIN-1/CW (EBP) and clemastine/benztropine (both). (2) *Useful with a neuronal defect*: needs the genotype crossing; no source tests it; INFERENZA. (3) *Transfer to a proposal*: not supported by anything here; no dose, no ranking, no candidate nominated.
+
+---
+## Revised after V14 (2026-11-13; earlier text above kept)
+- **Outcome 1 ("D equals B"):** not discriminating as written, because a ceiling also gives it. Needs submaximal doses of both reagents on one plate and a T3 headroom arm (Hubler: non-additivity only at a maximal ketoconazole dose; T3 stayed additive).
+- **Outcome 2 ("C acts, B does not"):** add an arm C plus agonist (ACh or carbachol) add-back. CW3388 has an M1 residue (about 18-19% of clemastine at 1 uM, single point; OPC-dose value unmeasured). A pure EBP effect should not shrink under add-back; shrinkage is the discriminating observation.
+- **Outcome 4 (B acts and sterols accumulate on B):** the M1 arm cannot be PIPE-307 (structure withheld; notices PMID 39432800, 40512803). A classical or peptide (MT7) M1 arm needs its own EBP check; confirm with sgEBP plus B.
+- **Tone gate:** ACh in conditioned medium scales with plating density (12, 5, 2 nM at 60,000, 40,000, 30,000 cells per well); measure tone at the density used.
+- **Decoration for this question:** outcomes 6 and 7, CD08 and CD13 rest on no source in this package; CHO-versus-OPC and species caveats are real but not decisive.
+- **CD09:** the Chrm1-null baseline (about 4 v 16 per field) sits below drug-treated WT (about 21-29): occlusion is a weaker confound than first stated.

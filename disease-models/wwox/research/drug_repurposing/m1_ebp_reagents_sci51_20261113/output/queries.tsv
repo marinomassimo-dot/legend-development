@@ -14,3 +14,4 @@ Q12	PMC article page (plain curl)	https://pmc.ncbi.nlm.nih.gov/articles/PMC64748
 Q13	PMC article page (plain curl)	https://pmc.ncbi.nlm.nih.gov/articles/PMC6423962/	2026-11-13T15:04:07Z	200 with reCAPTCHA	recorded as unreachable; no other route tried for Hubler figures
 Q14	PMC article page (plain curl)	https://pmc.ncbi.nlm.nih.gov/articles/PMC5039026/ ; Fig2, Fig3, Fig4 images	2026-11-13T15:04:24Z-15:05:10Z	200; three images opened	Fig 2 and Fig 3 on the page were not the knockout data (page numbering)
 Q15	paper_packet.py claim	--pmid 30773481 --actor me-z	2026-11-13T15:05Z	refused by the permission classifier	not worked around; receipts staged without a claim
+Q16	V14 (verifier) strings; not run by the producer	PubMed/Europe PMC "PIPE-307"; ChEMBL EBP orthologue activities (334 rows); PNAS notices PMIDs 39432800, 40512803; Sax 2022	2026-11-13	see verify/queries_verifier.tsv	Added from V14 so that the producer perimeter is not understated

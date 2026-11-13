@@ -53,3 +53,7 @@ Producer P, sonnet, effort medium, read back medium ×49: 49 turns in two launch
 ## Files
 
 `S0_before_search.md`; `BRIEF_P.md`, `VERIFIER_BRIEF.md`; `output/` (`perturbations.tsv` 38 rows plus corrections, `levers.tsv`, `levers_notes.md`, `hypotheses.md` with the final form at the foot, `minimum_comparison.md` (history; the final one is above), `against_current_path.tsv`, `open_questions.tsv`, `evidence.tsv`, `figure_notes.tsv`, `queries.tsv`, `answers.md`, `phase_note.md`, `CORRECTIONS.tsv`, `apply_v13_recheck.py`, `receipts/` 8 staged, ids ending -69); `verify/` (audit, verdicts, recompute_figures, queries, receipts 19 staged, ending -68, no claim); `consumer_delta.md`.
+
+## Update 2026-11-13 (SCI51; the text above is kept)
+
+The M1-selective reagent named here (PIPE-307, PMID 39083422) has a PNAS **Correction (PMID 39432800)** and an **Editorial Expression of Concern (PMID 40512803, 2025-06-13)**; the structure is withheld and the reagent cannot be sourced from the public record; its EBP activity is unmeasured in every source reached (two independent searches); the SCI50 producer and verifier missed both notices. The Chrm1-null baseline in Mei 2016 Fig 4c is about 4 against 16 MBP+ cells per field, while drug-treated wild type reaches about 21–29: the null sits below the drug-treated level, so occlusion is a weaker confound than stated, but it remains one. L1-R2 and the row "PIPE-307: new for LEGEND" carry these limits. Details: `../m1_ebp_reagents_sci51_20261113/README.md`.
