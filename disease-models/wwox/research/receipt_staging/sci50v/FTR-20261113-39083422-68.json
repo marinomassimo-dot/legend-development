@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-13T07:53:30Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-13T07:59:45Z",
+ "event_id": "FTR-20261113-39083422-68",
+ "evidence_basis": [
+  "Full text served as plain text; figure images and the SI appendix not read.",
+  "verbatim_locator | proposition: acetylcholine inhibits OPC differentiation so an antagonist needs a ligand | Results, PIPE-307 promotes OPC differentiation | \"adding ACh inhibited OPC differentiation at an IC\"",
+  "verbatim_locator | proposition: selective M1 antagonism raised a myelination index in a primary rat cortical neuron-OPC assay | Results | \"a dose-dependent increase in myelination index\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_phenotype_first_sci50_20261113/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_phenotype_first_sci50_20261113/verify/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC11317586 full text via the PubMed PMC full-text tool, 2026-11-13 (one request)",
+ "study_id": {
+  "doi": "10.1073/pnas.2407974121",
+  "pmid": "39083422"
+ },
+ "workflow": "SCI50 blind verifier V13 (myelin_phenotype_first_sci50_20261113/verify), actor mp-y. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. paper_packet.py claim was refused by the session permission classifier, so no claim was made for this PMID."
+}

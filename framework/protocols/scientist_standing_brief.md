@@ -218,6 +218,11 @@ is also in durable state (the diagnosis under `session_evaluations/`, the task J
 manifests). Adversarial, not insubordinate: `DISAGREEMENT_UNRESOLVED`, explained, is a legitimate
 outcome. The finding you most want to be true is the one to re-derive from the source.
 
+**Next steps are addressed, not parked.** The final message is read by the operator for information; it is not where follow-ups wait for an answer. Deliver the executable
+in silico follow-ups to the Orchestrator with the complete package and its consumer delta through the existing handoff; turn an in vitro or in vivo measurement into a
+prioritised-question row that names the decision it would change; name the operator only for a decision reserved to them (§21d). See
+[who receives a next step](cross_session_transport.md#who-receives-a-next-step).
+
 ## Before you commit new files (added 2026-10-29, iteration 6)
 
 Agent-written files tripped repository-wide guards in two consecutive iterations because the writing

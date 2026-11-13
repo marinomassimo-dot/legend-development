@@ -7,7 +7,7 @@
  "START_UTC": "2026-11-13T08:30:00Z",
  "OBJECTIVE": "LEGEND IT50 (operator mandate, queued after IT49; window at most ten hours from effective start, no automatic renewal): improve generative capacity - turn available evidence, relations and verified deliveries into pharmacological hypotheses, discriminating comparisons and useful experiments for WWOX loss of function; verification accompanies it. One new strategic consultation (at most one Stage A and one Stage B, existing procedure, configuration verified, no new spend; a failed attempt counts). Not an extension of the IT48 pilot. Science session has a generative mission starting from myelination: coordinate, do not duplicate. Design-only packages: Harness builds a minimal link; no competing reader. No ranking/sign/qualification change to show an effect; no predictive claim from better access. Final report in Italian opens with: 'Quale ipotesi, confronto farmacologico o esperimento LEGEND riesce ora a formulare meglio?'.",
  "AUTHORISED_QUEUE_20261108": {
-  "MANDATE_STATE": "COMPLETE",
+  "MANDATE_STATE": "OPEN",
   "OBJ_P1": {
    "order": 1,
    "steps": [
@@ -48,7 +48,7 @@
      "step": "Design-only knowledge: give Harness the scientific meaning of the fields and a real case (INV-02); when the link lands, show what it makes usable; no competing reader",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "design_fields_it50.md (scientific meaning of design.tsv fields, one real case) given to Harness, with refinements by message; Harness builds design_only role (HE50) and will add one consumer function after IT50 lands; the link has not landed yet: nothing claimed about what it makes usable beyond the restatement. CLOSED FOR THIS MANDATE'S OWN PART: the field meanings and the real case were delivered and confirmed to Harness; the design_only link (HE50) had not landed when the window closed, so what it makes usable is NOT shown here (open step on Harness's side, no competing reader built)."
+     "evidence": "design_fields_it50.md (scientific meaning of design.tsv fields, one real case) given to Harness, with refinements by message; Harness builds design_only role (HE50) and will add one consumer function after IT50 lands; the link has not landed yet: nothing claimed about what it makes usable beyond the restatement. CLOSED FOR THIS MANDATE'S OWN PART: the field meanings and the real case were delivered and confirmed to Harness; the design_only link (HE50) had not landed when the window closed, so what it makes usable is NOT shown here (open step on Harness's side, no competing reader built). UPDATE: HE50's design_only role landed (655b5c6b); shown by running the generator: 13 design rows (6 ISR, 7 myelin read-only); what it adds beside ISR1-ISR3 and what it does not is in generation_it50_20261113/README.md; no changed question or experiment is claimed."
     }
    ]
   },
@@ -70,7 +70,7 @@
      "step": "Complete the loop: consume SCI50 when available with a disposition per delta; update the question homes (decision, importance, work done, next step, reopening condition); dashboard: hypotheses to test, comparisons, priority questions, favourable and contrary evidence, in-silico vs indispensable measurement",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "SCI50 not delivered at the time of writing; questions: IT49-Q07/Q09 evidence updated; dashboard: ISR1 reader row, INV-18 clause; no ranking change. To do on delivery: a disposition per SCI50 delta. SCI50 had not been delivered when the window closed (no commit on development/main): nothing to dispose; to be consumed when it arrives with a disposition per delta."
+     "evidence": "SCI50 not delivered at the time of writing; questions: IT49-Q07/Q09 evidence updated; dashboard: ISR1 reader row, INV-18 clause; no ranking change. To do on delivery: a disposition per SCI50 delta. SCI50 had not been delivered when the window closed (no commit on development/main): nothing to dispose; to be consumed when it arrives with a disposition per delta. UPDATE: SCI50 consumed (dispositions in generation_it50_20261113/README.md): INV-06 clause in five languages, IT50-Q01..Q09, 27 receipts (ledger 1,930), identities not applied; IT49-Q02 values registered in cell_context.TABLES (12 ISR genes: none neuron-enriched)."
     }
    ]
   },
@@ -79,9 +79,9 @@
    "steps": [
     {
      "step": "Delivery: derivatives regenerated after the last data and receipts, browser verified in the real runtime, landing, CI per SHA, final report in Italian",
-     "status": "DONE",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": " 4e4e3e01 landed (gate PASS, ls-remote verified); CI #684 and view publication #43 succeeded; derivatives regenerated after the last data (no receipts this mandate; ledger 1,903); full view suite 225 tests OK (older Snap revision selected automatically), phase sweep clean apart from two output-format false alarms; site checked in five languages earlier in the cycle. Not done: worktree/temporary cleanup (needs operator authorisation / classifier refused)."
+     "evidence": " 4e4e3e01 landed (gate PASS, ls-remote verified); CI #684 and view publication #43 succeeded; derivatives regenerated after the last data (no receipts this mandate; ledger 1,903); full view suite 225 tests OK (older Snap revision selected automatically), phase sweep clean apart from two output-format false alarms; site checked in five languages earlier in the cycle. Not done: worktree/temporary cleanup (needs operator authorisation / classifier refused). REOPENED for the late deliveries (SCI50, HE50): landing and CI pending for the second increment. Second increment: full view suite 225 tests OK, phase sweep clean (two output-format false alarms), shareable audit 10/10; landing and CI pending."
     }
    ]
   }
@@ -107,5 +107,42 @@
   "checks_before_accepting": "A1's artefact claims checked against cell_context_it46.tsv: KCNJ2 OTHER_ENRICHED in mouse (0.74 neurons P7 vs 41.80 endothelium) and human (1.40 vs 6.64, n=1): confirmed. B1's claim that consumer_delta row 1 of SCI49 B is still PROPOSED is wrong (applied in IT49, 387f6ae4). ChEMBL API returns HTTP 500 (external) and activity_search finds no cached release: the by-target activity route for eIF2B cannot be run now",
   "decision": "ACCEPTED my sealed action as the principal increment (INV-02 lost eIF2B-probe proposal made representable), ADAPTED by B1: before/after diff must differ only by the new rows, ISR sign stays an unmet precondition, no reader, reusable layout; the Kir2 cell-class propagation (A1 lead) is done as a small second item without a delegate (values are committed rows, no new scientific proposition)",
   "alternatives_not_pursued": "IT49-Q06 (ML133 hERG, route blocked), myelination (science session), exclusion-ladder consolidation"
+ },
+ "TAKE_IN_CHARGE_HE50": {
+  "package": "HE50 (655b5c6b): design rows, roles, ISR values, deltas",
+  "recorded": "2026-11-13",
+  "items": [
+   {
+    "item": "design_only role and rows (6 ISR steps INV-02, 7 myelin EX1-EX7 INV-12 read-only)",
+    "action": "RUN",
+    "evidence": "conditional_proposals.py run; effect described in generation_it50_20261113/README.md (nothing claimed beyond visibility)"
+   },
+   {
+    "item": "comparison_engine roles from the packages' own role tables (RA839, sulforaphane comparator; V19 closing sentence rewritten by Harness)",
+    "action": "READ AND ACCEPTED",
+    "evidence": "V19 counter sentence read; consistent with SCI48 (germline or unverified loss; myeloid only); the engine can only lower a derived role"
+   },
+   {
+    "item": "ISR gene cell-class values (12 genes; none neuron-enriched)",
+    "action": "RUN",
+    "evidence": "registered in cell_context.TABLES (mouse_isr, human_isr); symbol list of ISR1-ISR3 now has PPP1R15B; the five GSK3 rows changed only in their cell_context cell (unknown to states)"
+   },
+   {
+    "item": "ML133 and RA839 identity declarations; aliases",
+    "action": "RECEIVED, NOT RE-VERIFIED HERE",
+    "evidence": "no numbered aliases; no public text uses reagent names"
+   },
+   {
+    "item": "isrib grid.tsv reachable but not mapped",
+    "action": "DEFERRED",
+    "reason": "the grid rows hold corrected outcome grids for the ISRIB/GSK3 chain; mapping needs the owner of that package to say which cells are hypotheses and which are design",
+    "revival": "when the owner confirms the cells or a decision depends on the grid"
+   },
+   {
+    "item": "myelin levers_bc and SCI50 minimum_comparison.md as design_only packages",
+    "action": "DEFERRED (science session owns them)",
+    "revival": "when the science session confirms registration"
+   }
+  ]
  }
 }

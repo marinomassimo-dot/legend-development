@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-13T07:52:40Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-13T07:59:45Z",
+ "event_id": "FTR-20261113-30046109-68",
+ "evidence_basis": [
+  "Text layer served by the PubMed PMC tool; the antimuscarinic, EBP, microfibre and additivity paragraphs and the figure legends were read by targeted extraction, not a sequential read of the whole article; no figure image viewed; one compound name is missing from the text layer sentence on the four enhancers.",
+  "verbatim_locator | proposition: only clemastine and benztropine of six antimuscarinics inhibited EBP in OPCs and enhanced oligodendrocyte formation | Results, SAR paragraph | \"only clemastine and benztropine inhibited EBP in OPCs, and only clemastine and benztropine enhanced oligodendrocyte formation\"",
+  "verbatim_locator | proposition: the six antimuscarinics were tested for M1, M3 and M5 inhibition in CHO reporter cells, not in OPCs | Figure legend, Extended Data | \"inhibition of muscarinic receptor isoforms M1, M3, and M5 by the indicated small molecules (2 \u03bcM) assayed using GeneBLAzer NFAT-CHO-K1 cells\""
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_phenotype_first_sci50_20261113/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_phenotype_first_sci50_20261113/verify/verdicts.tsv"
+ ],
+ "prior_receipt": "FTR-20261105-30046109-06",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC6423962 full text via the PubMed PMC full-text tool, 2026-11-13 (one request; the producer met a captcha on the PMC page, a different route that this delegate did not use)",
+ "study_id": {
+  "doi": "10.1038/s41586-018-0360-3",
+  "pmid": "30046109"
+ },
+ "workflow": "SCI50 blind verifier V13 (myelin_phenotype_first_sci50_20261113/verify), actor mp-y. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. paper_packet.py claim was refused by the session permission classifier, so no claim was made for this PMID."
+}

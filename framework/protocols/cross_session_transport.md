@@ -534,6 +534,22 @@ into a record that later closes describes the moment it was written: replace it 
 not leave it as the last word. Wait for the event with `ci_runs.py wait <sha> --timeout N` or a process identity
 (`process_wait.py`), never by polling a name, and add no second monitor.
 
+### Who receives a next step
+
+A report to the operator is informative. Its being read or answered is not a dependency for work already authorised, and the operator's silence neither blocks nor approves
+anything. Every follow-up in a report therefore names, beside it, the operational destination that actually receives it:
+
+| Follow-up | Destination | What closes it |
+|---|---|---|
+| Executable in silico (a reading, an extraction, a comparison, a regeneration, a consumer edit) | the Orchestrator, through the existing handoff of §8: the complete package with its consumer delta in a durable artifact, and a message carrying the pointer | the Orchestrator records taking it in charge in its task record, and decides to run it, assign it, or defer it with a reason and a revival condition |
+| In vitro or in vivo measurement | the prioritised experimental questions the researchers read (the open-questions map: one row, the decision the result would change, why it is blocked) | the row exists and names that decision; the operator is involved only when the measurement needs a reserved external decision (§21d: spend, contact, publication) |
+| Choosing between going deeper and changing direction | the Orchestrator, who may consult the read-only Strategic Advisor within its existing limits | the Orchestrator's recorded decision; the consultation is optional and never a precondition |
+| A decision reserved to the operator (§21d) | the operator, once, with the default that proceeds meanwhile | the operator's answer, or the default taking effect |
+
+The correction is verified when a follow-up has an effective destination: a handoff that meets §8, an acceptance in the Orchestrator's record, an open-questions row.
+Rewriting a report so that it names a recipient does not show the passage. Nothing here adds a register, a gate or an approval; it uses the handoff, the task record and the
+open-questions map that already exist.
+
 ### Decision table — apply it before ending any turn
 
 | Observed condition | Action |

@@ -29,6 +29,9 @@ TABLES = [
     # IT47 queue B1: the 30 target genes that had no row (generation_it47_20261112/b1_cellclass), same inputs and extraction
     dict(key="mouse_targets", species="mouse", path=DR / "generation_it47_20261112/b1_cellclass/targets_expression_mouse.tsv", cls="cell_class", val="mean_fpkm", n="n_samples", neuron=r"^neurons?\b", skip=r"^$"),
     dict(key="human_targets", species="human", path=DR / "generation_it47_20261112/b1_cellclass/targets_expression_human.tsv", cls="group", val="mean_fpkm", n="n_columns", neuron=r"^neuron_", skip=r"^(whole_cortex|mouse_astro)$"),
+    # IT50: the ISR genes (HE50 isr_cellclass_he50_20261113, the extraction IT49-Q02 asked for), same inputs and extraction, registered here as the HE50 note left to the Orchestrator
+    dict(key="mouse_isr", species="mouse", path=DR / "isr_cellclass_he50_20261113/isr_expression_mouse.tsv", cls="cell_class", val="mean_fpkm", n="n_samples", neuron=r"^neurons?\b", skip=r"^$"),
+    dict(key="human_isr", species="human", path=DR / "isr_cellclass_he50_20261113/isr_expression_human.tsv", cls="group", val="mean_fpkm", n="n_columns", neuron=r"^neuron_", skip=r"^(whole_cortex|mouse_astro)$"),
     dict(key="human_gaba", species="human", path=HERE / "expr/chloride_gaba_expression_human.tsv", cls="group", val="mean_fpkm", n="n_columns", neuron=r"^neuron_", skip=r"^(whole_cortex|mouse_astro)$"),
 ]
 FIELDS = ["relation_id", "gene", "table", "species", "state", "neuron_class", "neuron_fpkm", "best_other_class", "best_other_fpkm", "n_samples_neuron", "attributable_to_neuron", "caveat"]

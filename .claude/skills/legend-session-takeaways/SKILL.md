@@ -120,4 +120,4 @@ Every LEGEND session final response must include at least:
 - 0-3 useful leads for the disease model or the strategy — if none emerged, say so;
 - the self-diagnosis verdict and any declared gap;
 - micro-upgrade/capability gained, if any;
-- recommended next step.
+- the next step, **with its destination**: the Orchestrator through the existing handoff (executable in silico), a prioritised-question row (in vitro or in vivo, naming the decision it would change), or the operator only for a reserved decision (§21d). This closing is informative; its reading or an answer to it is not a dependency for work already authorised. See [who receives a next step](../../../framework/protocols/cross_session_transport.md#who-receives-a-next-step).
