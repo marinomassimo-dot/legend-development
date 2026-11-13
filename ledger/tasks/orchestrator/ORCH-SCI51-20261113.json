@@ -7,14 +7,14 @@
  "OBJECTIVE": "SCI51 (assigned by the integrator session on 2026-11-13, stated as operator-authorised; authorisation not verified by this session; operator told in chat): one deepening, at most three hours, zero spend, no renewal. Can the comparison between M1 antagonism and EBP inhibition (INV-06 X3 reagent pair) be built with interpretable reagents: identity of each reagent from primaries, measured versus unknown cross-activities kept apart, the conditions that make the comparison informative, the discriminating outcomes. Deliver a qualified comparison, an improved design, or the precise statement of what prevents it, with a consumer_delta; one producer (sonnet medium), one blind verifier (sonnet high), sequential; no claim workaround; no ranking or qualification change.",
  "START_UTC": "2026-11-13T15:05:00Z",
  "BASELINE": "main e6bba05e+ (SCI50 consumed by IT50, 8d00e3d1/98a91a8f). Worktree .claude/worktrees/sci51, branch task/sci51. Folder m1_ebp_reagents_sci51_20261113/.",
- "MANDATE_STATE": "OPEN",
+ "MANDATE_STATE": "COMPLETE",
  "CURRENT_PACKAGE": {
-  "id": "landing",
-  "state": "pre-freeze checks",
+  "id": "closed",
+  "state": "landed; integrator to consume",
   "delegate_active": "none",
   "updated": "2026-11-13"
  },
- "RESUME": "Package verified and rechecked; run pre-freeze suites, freeze, battery, land, push, message the integrator, final report.",
+ "RESUME": "SCI51 landed. Pending outside this session: integrator consumption of consumer_delta rows 1-8 and recording of receipts -66 then -65; HE50 design_only registration; worktrees sci51, sci50, sci49, sci49a, sci48 and older need written operator authorisation to remove; /tmp/legend-verify-keep evidence kept.",
  "DECISIONS_TAKEN": [
   "2026-11-13 accepted the assignment as a request of the integrator session (the operator authorisation is stated by the peer, not verified); reversible: the operator can stop it",
   "2026-11-13 flagged to the integrator, before landing, that the M1 reagent of SCI50 has an Expression of Concern (a dated clause follows in the delta); corrected the wording of that flag after the recheck (availability not stated)"
@@ -29,7 +29,7 @@
   "assignment accepted from the integrator session on its statement of operator authorisation (not verified by this session); operator informed in chat"
  ],
  "AUTHORISED_QUEUE_20261113B": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_A": {
    "order": 1,
    "steps": [
@@ -64,8 +64,9 @@
    "steps": [
     {
      "step": "Landing: pre-freeze suites, gate, LINT, receipts, growth, battery on the frozen SHA, task_close, safe_push; clean own temporaries",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "pre-freeze four suites OK, gate PASS, LINT WARN no BLOCK, receipts OK 1930, growth PASS; battery 4de7d608 PASS WITH SKIPS 251/12 (clone REMOVED by verify_run); task_close and safe_push in the next step"
     },
     {
      "step": "Self-evaluation, DREAM, capability scout, final report",
@@ -76,5 +77,17 @@
    ]
   }
  },
- "VERIFICATION_EVIDENCE": []
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261113-154131-f17f13ab",
+   "label": "battery",
+   "sha": "4de7d608d58b3cb0f2aaea8c98ad4fb7705e3000",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261113-154131-f17f13ab",
+   "log_sha256": "402c9bdc84ec12909986c1eb4d2aa9ad38475004de5a379960ef170e5a673f80",
+   "clone": "REMOVED",
+   "attribution": "PASS WITH SKIPS (251 targets, 12 skipped) on the SCI51 candidate 4de7d608 (README, outputs, verifier output and recheck corrections, self-evaluation, scout entry); attributed to that SHA only; later commits are closure-only (this record)"
+  }
+ ]
 }
