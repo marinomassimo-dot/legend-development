@@ -30,13 +30,13 @@
      "step": "Create this session's hourly recall (CronCreate, session-only) on the same campaign, from the root checkout; verify its first automatic fire is recognised and tell HE the result",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Cron d463d57c created 2026-11-13 (hourly at :17, session-only, canonical `strategic_advisor.py recall` text, run from the root checkout); HE informed (message e3ed40e7). Remaining: the first AUTOMATIC fire (23:42) and its verdict."
     },
     {
      "step": "Bind this record to the session (MANDATE_BOUND marker) and read the monitor's association (session id, record_verdict, state) with mandate_watch.py check --task ORCH-ADV-PRESIDIO-20261113 --deliver none --json",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "MANDATE_BOUND marker written as its own message; mandate_watch.py check --task ORCH-ADV-PRESIDIO-20261113 --root /home/desktop/legend-development --deliver none --json -> session e6526331-6b7c-4631-8c9b-9e9d79867e90 (this session), record_verdict CONTINUE, state RUNNING."
     }
    ]
   },
@@ -46,9 +46,9 @@
    "steps": [
     {
      "step": "Record directions A-G and the dated instruction line in the Operator roadmap section of roadmap_current.md (addition, not a change of priorities 1-5); the roadmap edit is an operator instruction and is landed at once",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Landed on main aa960024 (commit 45e97740): roadmap_current.md Operator roadmap section now carries Strategic direction A-G and a dated instruction line; priorities 1-5 unchanged. Side effect noted: the roadmap digest changed, so the next tick reports EVALUATE (see OBJ_4 step 1: held with a reason)."
     }
    ]
   },
@@ -58,9 +58,9 @@
    "steps": [
     {
      "step": "Verify, without starting new research, which strategic tools have current accessible outputs (dashboard, radars, DREAM, scouting, open questions, candidate cards) and which links are incomplete; route a missing link to HE",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "2026-11-13 read-only check, no new research. Dashboard page: HTTP 200, last-modified 2026-11-13T20:58Z; its source records (view/*) last commit 20:53Z; page text not inspected graphically. Radar: the radar_* packages in the repository are IT15-IT19 of 2026-11-01/02 (old); the live feed is the daily scout (host cron 05:20, briefing at ~/.local/state/legend/scout_daily_briefing.md written 2026-11-13T05:21Z, outside the repository, embedded in the P brief by HE). Gaps: the briefing's CONTEXT line reads roadmap_current as dated 2026-11-01 (it does not read the Operator roadmap section dated 2026-11-13); the weekly harness-scout tables stop at 2026-W40 (2026-09-28); one plan surface (diagnosis_it28) parsed 0 items. DREAM/diagnoses: last commit 19:08Z today. Capability scout log: last commit 15:35Z today. Candidates, cards, open-questions map, investigations: current (commits 20:53-21:57Z today)."
     },
     {
      "step": "Report to the operator in chat (Italian), briefly, the four items",
@@ -76,9 +76,10 @@
    "steps": [
     {
      "step": "Third (last) strategic invocation: decide whether it is due. Triggers coalesce: the ADV-003 delivery (SCI, package expected on main about 22:40-23:10Z, disposed by the IT Orchestrator) and the roadmap edit of OBJ_2. Run strategic_advisor.py evaluate only if the delivery or the new directions make a decision useful; otherwise record why the previous assessment stands. Never renew, never a fourth assignment (budget.json: max_assignments 3, drafted 3)",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "HELD, not declined. Reason: ADV-003 is EXECUTED in SCI's worktree (README and consumer_delta read in full: the by-target route works, 28 rows on EIF2B1-5 none an activator, the zero is confirmed at that scope, ISRIB is filed under other targets) but is not on main yet and not yet disposed by the IT Orchestrator; the third invocation can draft no assignment (3/3 drafted, the register refuses more), so it can only be an assessment, and it is worth most once it can see the delivery consumed and the new directions A-G together. Revival: ADV-003 landed on main and disposed in ORCH-ADVISOR-PILOT OBJ_P6, or 2026-11-14T10:00Z at the latest (leaves 8 h of window for consumption feedback and the report), or an operator line in the roadmap, whichever comes first.",
+     "revival": "ADV-003 landed and disposed, or 2026-11-14T10:00Z, or an operator line"
     },
     {
      "step": "Follow ADV-003 from SENT to TAKEN (ORCH-ADV003-20261113) to EXECUTED to CONSUMED (disposition in ORCH-ADVISOR-PILOT-20261113 OBJ_P6) and say which of the four levels each has reached; usefulness is not judged by these levels",
