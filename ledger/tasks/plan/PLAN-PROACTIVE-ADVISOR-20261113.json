@@ -121,8 +121,17 @@
     "status": "EXECUTED_BOUNDED",
     "taken_utc": "2026-11-13",
     "evidence": "result in disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/ADV-002_result.md; IT51-Q03 text and legends reached via Europe PMC fullTextXML, heatmap values and IT51-Q04 supplement not reached; no circumvention"
+   },
+   "ADV-001": {
+    "status": "EXECUTED",
+    "evidence": "sent to SCI 2026-11-13 (msg 935068d5), taken in ORCH-ADV001-20261113, delivered at 65f3c6a8, consumed by the Orchestrator per row at dbf00b73 (ORCH-ADVISOR-PILOT OBJ_P4)"
+   },
+   "ADV-003": {
+    "status": "TAKEN",
+    "evidence": "drafted by invocation P2 (triggered by the ADV-001 delivery, i.e. the autonomous re-evaluation), sent to SCI (msg 791de89b), taken in ORCH-ADV003-20261113 and in ORCH-ADVISOR-PILOT-20261113; probe done, package not yet landed"
    }
-  }
+  },
+  "PILOT_DEFECT_FOUND_AND_FIXED": "Second pilot brief showed commits_since_last_tick 0 and no events: tick saved the advanced state before evaluate observed. Fixed in ce98d377 (tick stores pending_events/pending_commits, evaluate merges and clears them); regression assertion fails without the fix (negative control), 34 tests OK."
  },
  "VERIFICATION_EVIDENCE": [],
  "MANDATE_STATE": "OPEN"
