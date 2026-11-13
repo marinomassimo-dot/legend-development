@@ -81,3 +81,6 @@ The decisive link is E09 plus E23: whether a Wwox-null neuron (or a Wwox-null OP
 ## 7. Limits
 
 Figure values are hand-read from rendered pages. Supplement figures (Suppl 5-8 of the Brain paper) were not opened; E03, E04, E10, E11 rest on the text. Precedent papers in Section 3 (5) were read at abstract level only; clemastine safety in a seizure-prone infant brain and benztropine human myelin data were not looked up (label lookup not attempted). Absence of an iPSC-oligodendrocyte hit in title/abstract searches is not absence of data. The in vivo labs behind E01-E19 are one group; counting them as independent would be an error. The sample size of every WWOX myelin readout is 3 animals per arm or smaller, and the statistics are Student t tests on fields, sections or axons.
+
+## Update 2026-11-13 (ADV-001; the text above is kept)
+The muscarinic-class statements used for C1 and C2 attribute the clemastine/benztropine effect to a stated class without an EBP qualification. Two routes are documented for those two drugs (M1 genetics in culture; EBP inhibition with zymostenol accumulation in mouse OPC sterol profiling) and their attribution is unsettled; the qualification must not claim that EBP explains the muscarinic route or that M1 is irrelevant (`../ebp_reannotation_adv001_20261113/README.md`).

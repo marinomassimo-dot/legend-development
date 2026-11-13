@@ -545,7 +545,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2000,
-   "sha256": "4e299de48321c98253fa66e4a3c314b38a958a4aac39ac5a729059e6d895c918"
+   "sha256": "5aef615c0efe432ff269c6edfd9165d51685d03733a2aeca43695183bd325d97"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -560,24 +560,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5256014,
-   "sha256": "5f38219e21a49f1dcca233ef33bd2b974d7954f5b5f535cf74baf18df2be545a"
+   "bytes": 5257380,
+   "sha256": "4b89ba7d31b0dbcb0ee47d9f4114b97fc0ac3f02353861db8d01c161b143933d"
   },
   "es.html": {
-   "bytes": 5241313,
-   "sha256": "961cc85f7a6e3de35481e3c4d8268695d050d5cd8c51aab8cc227a2e2218c57b"
+   "bytes": 5242679,
+   "sha256": "e66f50d6a73d7022920247487a7f03b641e2df193988aa5e4b68e304ed06d9ac"
   },
   "fr.html": {
-   "bytes": 5272960,
-   "sha256": "3e91153f3fa782114af84eece570ca785ac8b6652e0c4a2b9f027da31407ed1b"
+   "bytes": 5274412,
+   "sha256": "5cc7938934a65a7366f712ae60dc1e257d46a798fc4b4c265cfd240b1196bea0"
   },
   "index.html": {
-   "bytes": 5154896,
-   "sha256": "04228ecd1c411d9f070640e3f283a2152439c9d4cb828694717c41dd52c95f87"
+   "bytes": 5156164,
+   "sha256": "3ff2d31a22d358b61c85dcc8e7b16c10f420a5a2ff6c032b79581b3f769b052d"
   },
   "it.html": {
-   "bytes": 5219144,
-   "sha256": "c14e79d201b343cc2569b47970dfd9801a73043d812840d007571de7cd3cfd9d"
+   "bytes": 5220496,
+   "sha256": "82778e7860bf3d83bd4db55a48399380f384d665cfeb083db555d60a2647a418"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

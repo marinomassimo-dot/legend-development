@@ -46,3 +46,6 @@ Arm A (current) abstains on the seizure need (91 associations: action not stated
 
 ## Limits
 Partial or abstract-level reading throughout (every receipt states its depth); search tool errors forced Europe PMC and E-utilities routes, so the searches are bounded, not systematic; zebrafish serotonergic rows share a laboratory; direction labels in the evidence tables are the readers' and are verified only by the independent check of P14.
+
+## Update 2026-11-13 (ADV-001; the text above is kept)
+A companion annotation of the 20-compound comparison by documented EBP status exists: `../ebp_reannotation_adv001_20261113/annotation_compounds.tsv` (and `annotation_signed_rows.tsv` for the 31-row layer). The 216-row layer quoted above is not committed and no number is reproduced on it; the signed layer is not edited.

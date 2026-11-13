@@ -1971,6 +1971,10 @@
   "src": "en",
   "text": "Response already induced but functionally insufficient. Exploratory: the package states no therapeutic direction."
  },
+ "dbfd258dff55": {
+  "src": "en",
+  "text": "WWOX-system: the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window; the treated arms of the source are unquantified, and whether an established deficit re-myelinates is unmeasured. IT29: perturbation evidence from other systems signs several intrinsic precursor-differentiation routes (muscarinic-receptor, lipid-synthesis, thyroid- and RXR-type receptor) in wild-type or injury settings and none in a neuron-driven hypomyelination model; HDAC3 loss is adverse for maturation; an independent screen disagrees with some signs. [IT36] GSK3 sign on oligodendrocyte differentiation is divided (inhibitors raise it in one source, lower it in another after Foxg1 knockdown; genetic loss in mature cells changed survival); recorded as undetermined. [IT39] GSK3 context rows: a GSK3 inhibitor run after Foxg1 knockdown goes the opposite way to the inhibitor-raises-differentiation reports, and a 2026 review holds both directions; the slice paper's finding is neuron-specific wording, not oligodendrocyte-wide. [ADV-001] The muscarinic-receptor route rests on genetic rows (culture; abstract level) with a ceiling caveat; for two antimuscarinic drugs of the class the drug-class support carries a documented EBP-inhibition route whose attribution is unsettled, and EBP activity is unmeasured for the other antimuscarinics named. A profile of the pathway intermediates per compound before target attribution is a design position (INFERENZA); this does not say that EBP explains the muscarinic route, that unmeasured compounds act through EBP, or that M1 is irrelevant. The 216-row signed layer is not committed and no number is reproduced on it."
+ },
  "dc449159abf1": {
   "src": "en",
   "text": "The thread is carried by one paper from one laboratory, the agent is non-selective, and it pushes the canonical Wnt readout in the direction this module's other need wants lowered. The question now is whether to keep it, not what to measure next with it: that is a decision a single interaction test can settle."
@@ -1994,10 +1998,6 @@
  "dd59c554d642": {
   "src": "en",
   "text": "Only worth running if sag and rebound stay larger at matched potential and deflection."
- },
- "dd79afec8e2f": {
-  "src": "en",
-  "text": "WWOX-system: the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window; the treated arms of the source are unquantified, and whether an established deficit re-myelinates is unmeasured. IT29: perturbation evidence from other systems signs several intrinsic precursor-differentiation routes (muscarinic-receptor, lipid-synthesis, thyroid- and RXR-type receptor) in wild-type or injury settings and none in a neuron-driven hypomyelination model; HDAC3 loss is adverse for maturation; an independent screen disagrees with some signs. [IT36] GSK3 sign on oligodendrocyte differentiation is divided (inhibitors raise it in one source, lower it in another after Foxg1 knockdown; genetic loss in mature cells changed survival); recorded as undetermined. [IT39] GSK3 context rows: a GSK3 inhibitor run after Foxg1 knockdown goes the opposite way to the inhibitor-raises-differentiation reports, and a 2026 review holds both directions; the slice paper's finding is neuron-specific wording, not oligodendrocyte-wide."
  },
  "ddbea3abe552": {
   "src": "en",
