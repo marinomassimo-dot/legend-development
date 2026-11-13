@@ -1,0 +1,83 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+  "TASK_ID": "PLAN-WORKTREE-CLEANUP-20261113",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "plan",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-11-13",
+  "OBJECTIVE": "Restore autonomous worktree cleanup (LEGEND_CORE 21e item 3): closed, integrated worktrees are removed without waiting for a written operator authorisation; the session home and unique material are kept; a past classifier refusal is not a standing rule. Coordinate with SCI; reuse existing tools.",
+  "worktree": "root checkout (record only)",
+  "branch": "main",
+  "CURRENT_STATE": "OPEN",
+  "CHECKPOINT": {
+    "last_verified_result": "none yet",
+    "first_incomplete_work": "OBJ_1_INVENTORY"
+  },
+  "AUTHORISED_QUEUE_20261113": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_1_INVENTORY": {
+      "order": 1,
+      "title": "Inventory every worktree: live sessions and processes, integration of commits, tracked changes, untracked and ignored material",
+      "steps": [
+        {
+          "step": "Inventory every worktree: live sessions and processes, integration of commits, tracked changes, untracked and ignored material",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_2_COORDINATE": {
+      "order": 2,
+      "title": "Coordinate with the scientific session (SCI) and the Orchestrator: homes, unique material, correction of the local memory that treats a past refusal as a standing rule",
+      "steps": [
+        {
+          "step": "Coordinate with the scientific session (SCI) and the Orchestrator: homes, unique material, correction of the local memory that treats a past refusal as a standing rule",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_3_REMOVE": {
+      "order": 3,
+      "title": "Remove unused integrated worktrees autonomously after deleting only verified-regenerable caches; keep the session home and any unique material; delete merged local task branches",
+      "steps": [
+        {
+          "step": "Remove unused integrated worktrees autonomously after deleting only verified-regenerable caches; keep the session home and any unique material; delete merged local task branches",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_4_TOOL": {
+      "order": 4,
+      "title": "Correct only a real tool limit if one appears; no new gate, register or approval",
+      "steps": [
+        {
+          "step": "Correct only a real tool limit if one appears; no new gate, register or approval",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_5_REPORT": {
+      "order": 5,
+      "title": "Italian report: removed, kept and why",
+      "steps": [
+        {
+          "step": "Italian report: removed, kept and why",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    }
+  },
+  "VERIFICATION_EVIDENCE": [],
+  "MANDATE_STATE": "OPEN"
+}
