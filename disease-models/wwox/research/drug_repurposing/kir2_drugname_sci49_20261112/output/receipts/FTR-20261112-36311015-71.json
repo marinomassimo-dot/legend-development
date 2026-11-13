@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T22:40:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T23:08:00Z",
+ "event_id": "FTR-20261112-36311015-71",
+ "evidence_basis": [
+  "Methods (solutions, Ba2+ 200 uM, room temperature) and Results on Ba2+-sensitive IRK currents, P21 L5 mPFC; figures not viewed.",
+  "verbatim_locator | Ba2+ concentration | Methods | \"isolated in the presence of 200 \u03bcM BaCl 2 -2H 2 O and 1 \u03bcM TTX\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/output/compounds.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "585f6881238591610f431c88e1dacefda62b1aed65dd42ce911179541d46d7b7",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page https://pmc.ncbi.nlm.nih.gov/articles/PMC9613442/; fetched 2026-11-12; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.3389/fnmol.2022.856262",
+  "pmid": "36311015"
+ },
+ "workflow": "SCI49 package B producer kz-z (ORCH-SCI49-20261112), staged for the integrator; ledger not written."
+}

@@ -7,23 +7,31 @@
  "OBJECTIVE": "Operator mandate SCI49 2026-11-12 (about ten hours from effective start): (A) independent verification by a blind verifier of the biological inferences of SCI47 package B already used by consumers (KCNQ2 low human value; OPC participation in a bath-applied Kv7 manipulation; functional data needed; HPA provenance and independence; necessity of the OPC-aware control); (B) drug-name pharmacological search on the Kir2 route left open after IT48 (IT48-Q01): which compounds or probes have documented pharmacology sufficient to make a Kir2 lever testable in WWOX physiology; up to three conditional hypotheses, or none. Deliver each package as soon as verified. Producer sonnet/medium, verifier sonnet/high, one delegate at a time, each resume counts as a launch. Zero spend, no contact, no personal data, no clinical recommendation, no new framework. Final report in Italian opens with: Quale attribuzione biologica \u00e8 diventata pi\u00f9 affidabile e quale confronto farmacologico possiamo ora mettere alla prova?",
  "START_UTC": "2026-11-12T23:30:00Z",
  "BASELINE": "main 182d3b1b (SCI48 closure published). Worktree .claude/worktrees/sci49, branch task/sci49. IT48 (integrator) works on task/it48, not yet on main; it already applied SCI48 deltas there (commit 8fe57179): consumption on main to be verified after it lands. IT47-Q04 and IT48-Q01 OPEN and unassigned.",
- "MANDATE_STATE": "OPEN",
+ "MANDATE_STATE": "COMPLETE",
  "CURRENT_PACKAGE": {
-  "id": "A-landed",
-  "state": "package A battery PASS WITH SKIPS; landing",
+  "id": "closed",
+  "state": "A landed cc9302ef (consumed by IT49 2454a3ac); B landing",
   "delegate_active": "none",
   "updated": "2026-11-13"
  },
- "RESUME": "Package A written (README, consumer_delta, SCI47 README dated update applied). Next: pre-freeze suites, merge main, gate, battery on the frozen SHA, land A, message integrator; then package B producer (BRIEF_P.md).",
- "DECISIONS_TAKEN": [],
+ "RESUME": "A published and consumed by the integrator (2454a3ac); B lands now; the integrator takes B when it lands. Pending outside this session: B consumer rows and receipts -71, -70 (staged, ids order -71 then -70); worktrees sci49, sci49a, sci48 and older need written operator authorisation to remove; /tmp/legend-verify-keep evidence kept.",
+ "DECISIONS_TAKEN": [
+  "2026-11-12 package A landed from a separate worktree (task/sci49a) while B ran in task/sci49, the record left untouched in the second worktree until A landed; reversible: both merged to main"
+ ],
  "DELEGATIONS": [
-  "V11 verifier cx-y (agent ab6ff61c, legend-delegate): asked sonnet/high; read back sonnet x88, high x88; 88 turns, output 94,807, cache read 12,930,454, birth context 18,658; A1-A5 all supported with corrected formulations; 10 staged receipts (-72)"
+  "V11 verifier cx-y (agent ab6ff61c, legend-delegate): asked sonnet/high; read back sonnet x88, high x88; 88 turns, output 94,807, cache read 12,930,454, birth context 18,658; A1-A5 all supported with corrected formulations; 10 staged receipts (-72)",
+  "P producer kz-z (agent a5927db5, legend-delegate): asked sonnet/medium; read back sonnet x71, medium x71; 71 turns in 2 launches (dispatch + correction round), output 90,905, cache read 7,978,999, birth context 18,571; 12 staged receipts (-71)",
+  "V12 verifier kz-y (agent a3fb8ddb, legend-delegate): asked sonnet/high; read back sonnet x80, high x80; 80 turns in 2 launches (dispatch + recheck), output 122,380, cache read 15,602,160, birth context 18,606; 26 staged receipts staged without a claim (permission classifier refused paper_packet.py claim)",
+  "V11 second launch (SendMessage, adversarial review of generation_A.md): 13 turns; V11 total 101 turns in 2 launches, output 115,073, cache read 16,449,646",
+  "STRAY LAUNCH: one SendMessage (\"ignore\") addressed by mistake to the finished SCI48 producer (aa8b34b0) resumed it for one empty turn (1 tool use, ~5 s, no file changed); recorded as an additional launch, no effect"
  ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
- "DEFAULTS_TAKEN": [],
+ "DEFAULTS_TAKEN": [
+  "V11 exceeded the three-request limit of its adversarial review (five PubMed calls, no block): kept, recorded in QV24; the V12 verifier could not claim PMIDs (classifier refusal): receipts staged without a claim, no workaround"
+ ],
  "AUTHORISED_QUEUE_20261112C": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_A": {
    "order": 1,
    "steps": [
@@ -47,8 +55,9 @@
     },
     {
      "step": "Apply corrections to the decisive propositions only; README answer-first for A; consumer_delta A; deliver A to the integrator",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "A landed cc9302ef (verified ea0a0665, battery PASS WITH SKIPS 247/12); README answer-first, consumer_delta rows 1-10, dated SCI47 B update applied; message to legend-development-4e; generation note revised after adversarial review (GA1 conditional, GA2 dropped)"
     }
    ]
   },
@@ -57,18 +66,21 @@
    "steps": [
     {
      "step": "Producer brief B; one producer (sonnet medium); staged receipts validated",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "producer kz-z a5927db5: sonnet/medium read back medium x71 in 2 launches; 12 staged receipts (-71) validated; compounds, roles, gaps, ba_share, hypotheses (3), open_questions (8)"
     },
     {
      "step": "One blind verifier (sonnet high) with its own strings; corrections and a narrow recheck",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "verifier V12 a3fb8ddb: sonnet/high read back high x80 in 2 launches; 60 rows 34 correct 20 defective 5 unverifiable; corrections 34 cells + 12 rows (producer) and residual set by apply_v12_recheck.py; recheck 34/34 cells correct; H1 kept conditional, H2 dropped, H3 note"
     },
     {
      "step": "README answer-first for B (hypotheses at most three or none), minimum test, consumer_delta B; deliver B",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "kir2_drugname_sci49_20261112/README.md answer first, consumer_delta rows 1-6, dated SCI43 update applied"
     }
    ]
   },
@@ -77,13 +89,15 @@
    "steps": [
     {
      "step": "Landing per package: pre-freeze suites, gate, LINT, receipts, growth, verify_run on the frozen SHA, task_close, safe_push; clean own temporaries",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "A: pre-freeze suites, gate PASS, battery ea0a0665 PASS WITH SKIPS 247/12, task_close cc9302ef, safe_push PUBLISHED; B: same on 08641e5d battery PASS WITH SKIPS 248/12; own batteries removed by verify_run (CONCLUDED, clone REMOVED)"
     },
     {
      "step": "Self-evaluation, DREAM, capability scout, takeaways, final Italian report",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "self_eval_orchestrator_sci49_20261112.md (Part 1 PASS); DREAM chain below in the report and README; capability scout GAP-NEW (claim refused to a delegate) logged; memory sci49-pitfalls; takeaways in the final report"
     }
    ]
   }
@@ -99,6 +113,17 @@
    "log_sha256": "8f008c5d497c37495e2e1891eec64d995946559055f5bce30133fb77bb9f31b4",
    "clone": "REMOVED",
    "attribution": "PASS WITH SKIPS (247 targets, 12 skipped) on the package A candidate ea0a0665 (A README, consumer delta, verifier output, S0 files and briefs, dated SCI47 update); attributed to that SHA only; later commits are closure-only"
+  },
+  {
+   "run_id": "20261113-002945-7e668058",
+   "label": "battery",
+   "sha": "08641e5da165e350887b4594ab1aa09e09e92881",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261113-002945-7e668058",
+   "log_sha256": "d23681bde695615f9cf42a687350023158c1df6d6e564e58e3b8a2c4cbe61a72",
+   "clone": "REMOVED",
+   "attribution": "PASS WITH SKIPS (248 targets, 12 skipped) on the package B candidate 08641e5d (B README, outputs, verifier output, generation note, self-evaluation, scout entry); attributed to that SHA only; later commits are closure-only (this record)"
   }
  ]
 }

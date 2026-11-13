@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T22:40:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T23:08:00Z",
+ "event_id": "FTR-20261112-28542320-71",
+ "evidence_basis": [
+  "Abstract and the CHO cell Kir2.1/2.2/2.3 hypoxia section plus the Discussion paragraph on Ba2+; whole-animal sections skimmed only; figures not viewed.",
+  "verbatim_locator | zacopride Kir2 selectivity | Abstract | \"zacopride activated the Kir2.1 homomeric channel but not the Kir2.2 or Kir2.3 channels\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/output/compounds.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "a233e6779d572d2185250bc63cfc7e46751649563bfbd409ca5970230da9c8b6",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page https://pmc.ncbi.nlm.nih.gov/articles/PMC5436763/; fetched 2026-11-12; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1371/journal.pone.0177600",
+  "pmid": "28542320"
+ },
+ "workflow": "SCI49 package B producer kz-z (ORCH-SCI49-20261112), staged for the integrator; ledger not written."
+}

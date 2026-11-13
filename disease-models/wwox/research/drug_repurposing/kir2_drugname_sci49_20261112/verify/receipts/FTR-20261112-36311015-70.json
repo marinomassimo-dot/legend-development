@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T23:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T23:29:00Z",
+ "event_id": "FTR-20261112-36311015-70",
+ "evidence_basis": [
+  "Methods (Ba2+ protocol) and the Results section on IRK read; other sections not read; figure 4 caption only (WT mean not in text)",
+  "verbatim_locator | Ba2+ protocol | Results | \"subtracting current responses after the Bablock (200 μM) from basal currents\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261112-36311015-71",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "5d0fb6030d6d5d016224c646d7c0b36b3d0fd5c5a59e15023801dfbfdd7aff0e",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PubMed MCP get_full_text_article for PMC9613442 (2026-11-12); text held in the scratchpad only",
+ "study_id": {
+  "doi": "10.3389/fnmol.2022.856262",
+  "pmid": "36311015"
+ },
+ "workflow": "SCI49 package B blind verifier V12 kz-y (ORCH-SCI49-20261112), staged for the integrator; ledger not written; no claim recorded (the claim command was refused by the session classifier)."
+}

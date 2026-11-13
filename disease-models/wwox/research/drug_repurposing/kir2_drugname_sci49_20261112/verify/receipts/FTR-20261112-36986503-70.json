@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T23:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T23:29:00Z",
+ "event_id": "FTR-20261112-36986503-70",
+ "evidence_basis": [
+  "Introduction, Results 2.1-2.4, Discussion, Methods read; figures captions only",
+  "verbatim_locator | propafenone | Results 2.1 | \"propafenone can increase the expression levels of K2.1 and K2.2 proteins dose-dependently\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/audit.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "5ee147a7510d461dae7c8fdf0e3452a5a9ea70b1af5b92a06bfb3e8fcc350525",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PubMed MCP get_full_text_article for PMC10056987 (2026-11-12); fingerprint is of the Europe PMC full-text XML of the same article fetched separately for fingerprinting",
+ "study_id": {
+  "doi": "10.3390/ph16030404",
+  "pmid": "36986503"
+ },
+ "workflow": "SCI49 package B blind verifier V12 kz-y (ORCH-SCI49-20261112), staged for the integrator; ledger not written; no claim recorded (the claim command was refused by the session classifier)."
+}

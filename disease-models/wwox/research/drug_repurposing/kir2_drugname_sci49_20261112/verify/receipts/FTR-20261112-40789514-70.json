@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T23:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T23:29:00Z",
+ "event_id": "FTR-20261112-40789514-70",
+ "evidence_basis": [
+  "Abstract only; no other section opened.",
+  "verbatim_locator | abstract opening | Abstract | \"Alzheimer's disease (AD) is a progressive neurodegenerative disorder characterized by cognitive dysfunction, with spatial memory impairments among the earliest detectable\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261112-40789514-71",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "3498dae6853ba2eeb97939819774bc3624743f4d7efb81653824c5b13407224b",
+ "source_kind": "abstract",
+ "source_locator": "Europe PMC REST record (core, abstract field) for PMID 40789514, fetched 2026-11-12 by plain curl; abstract text held in memory only",
+ "study_id": {
+  "doi": "10.1016/j.neuroscience.2025.08.011",
+  "pmid": "40789514"
+ },
+ "workflow": "SCI49 package B blind verifier V12 kz-y (ORCH-SCI49-20261112), staged for the integrator; ledger not written; no claim recorded (the claim command was refused by the session classifier)."
+}
