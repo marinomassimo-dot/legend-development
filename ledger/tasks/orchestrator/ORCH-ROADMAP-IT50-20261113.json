@@ -1,0 +1,89 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "TASK_ID": "ORCH-ROADMAP-IT50-20261113",
+ "START_UTC": "2026-11-13T08:30:00Z",
+ "OBJECTIVE": "LEGEND IT50 (operator mandate, queued after IT49; window at most ten hours from effective start, no automatic renewal): improve generative capacity - turn available evidence, relations and verified deliveries into pharmacological hypotheses, discriminating comparisons and useful experiments for WWOX loss of function; verification accompanies it. One new strategic consultation (at most one Stage A and one Stage B, existing procedure, configuration verified, no new spend; a failed attempt counts). Not an extension of the IT48 pilot. Science session has a generative mission starting from myelination: coordinate, do not duplicate. Design-only packages: Harness builds a minimal link; no competing reader. No ranking/sign/qualification change to show an effect; no predictive claim from better access. Final report in Italian opens with: 'Quale ipotesi, confronto farmacologico o esperimento LEGEND riesce ora a formulare meglio?'.",
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Reconcile the baseline: IT49, SCI49, advisor_followup_20261112; published vs worktree vs regenerated consumers; correct current references without reopening concluded readings",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "One strategic consultation: record the intended action before Stage A (sealed, outside the brief), refresh the snapshot at a safe boundary, verify announced packages are present and reachable (use the --expect availability option), Stage A then Stage B once each; record initial model, effective models and runtime limits; decision accepted/adapted/rejected with reasons",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Principal generative increment to a concrete research possibility (unrepresented lever / discriminating reagent comparison / proposal lost to catalogue or representation / knowledge combination that changes an experiment); observation -> explanation -> hypothesised action -> compound or probe -> prediction -> discriminating result kept apart",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Design-only knowledge: give Harness the scientific meaning of the fields and a real case (INV-02); when the link lands, show what it makes usable; no competing reader",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Comparison on one bounded case fixed before execution (question, input, simple reference path, current path, expected improvement, no-benefit conditions); measure corrections/false links/alternatives kept/premises/next experiment; distinguish new for LEGEND, novel against literature, validated prediction",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "Complete the loop: consume SCI50 when available with a disposition per delta; update the question homes (decision, importance, work done, next step, reopening condition); dashboard: hypotheses to test, comparisons, priority questions, favourable and contrary evidence, in-silico vs indispensable measurement",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "Delivery: derivatives regenerated after the last data and receipts, browser verified in the real runtime, landing, CI per SHA, final report in Italian",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}
