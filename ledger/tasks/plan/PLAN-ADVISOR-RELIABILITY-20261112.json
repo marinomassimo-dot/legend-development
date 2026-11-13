@@ -10,13 +10,13 @@
   "OBJECTIVE": "Follow-up to the Strategic Advisor Phase 1, limited to problems observed in the first real use (IT48 pilot): input availability (SCI48 package absent from the advisor's snapshot), capture/exposure/model read-back, cost diagnosis, browser preflight, derived-output preparation. No rebuild, no new gate, no permanent service, no new Stage A or B invocation.",
   "worktree": ".claude/worktrees/adv2",
   "branch": "task/adv2",
-  "CURRENT_STATE": "OPEN",
+  "CURRENT_STATE": "COMPLETE",
   "CHECKPOINT": {
-    "last_verified_result": "battery PASS WITH SKIPS on 5deeb1ad",
-    "first_incomplete_work": "OBJ_7_INTEGRATION"
+    "last_verified_result": "landed c0c3d902, CI #677 success",
+    "first_incomplete_work": "none"
   },
   "AUTHORISED_QUEUE_20261112": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_1_INSPECT": {
       "order": 1,
       "title": "Inspect build report, IT48 pilot artefacts, Chromium selection changes, derived-output incidents; separate built / invoked / consumed / useful",
@@ -95,9 +95,9 @@
       "steps": [
         {
           "step": "Agree file ownership with the Orchestrator; deliver and integrate; keep record and session binding current; clean own temporaries and worktrees",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": "coordination note sent once to the Orchestrator (4e); no peer edits on the shared files; landing, push and CI recorded below"
+          "evidence": "coordination note sent once to the Orchestrator; no peer edits on shared files; landed c0c3d902641345268ff2345d9580ef31677d2531 (task_close, surfaces FRESH), published with gate PASS and ls-remote verified, CI #677 Public release gate success; own worktree and temporaries removed"
         }
       ]
     },
@@ -107,9 +107,9 @@
       "steps": [
         {
           "step": "Final report in Italian opening with the required question",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": "Italian final report with the required opening question"
+          "evidence": "final report delivered in Italian"
         }
       ]
     }
@@ -133,7 +133,13 @@
       "exit_code": 0,
       "result": "REGRESSION VERDICT PASS WITH SKIPS (247 targets, 12 skipped); view suite ran 1433 s, no browser skip",
       "evidence_dir": "/tmp/legend-verify-keep/20261112-220201-b9fcd09c"
+    },
+    {
+      "label": "landing",
+      "sha": "c0c3d902641345268ff2345d9580ef31677d2531",
+      "state": "CONCLUDED",
+      "result": "gate PASS, ls-remote verified; CI #677 Public release gate success"
     }
   ],
-  "MANDATE_STATE": "OPEN"
+  "MANDATE_STATE": "COMPLETE"
 }

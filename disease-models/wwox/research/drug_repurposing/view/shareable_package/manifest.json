@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3641,
+    "forbidden-name": 3643,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -560,24 +560,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5212363,
-   "sha256": "a657e5032d959aa8ceeb38261c4ee5fa4bf5d52df91986332a879620bbe0d786"
+   "bytes": 5216031,
+   "sha256": "0f201c1b3f1719ca3b7dc6271f252deb5f579cfdb31c46f2b588ae673a9d9e41"
   },
   "es.html": {
-   "bytes": 5198382,
-   "sha256": "5f2735c4f60b6a8f2e6bd4668371ffa19ede51dfefe65b542d2405401f75b378"
+   "bytes": 5202050,
+   "sha256": "f7b3b8eac19e7a9907b4e49c8ce7e7831266961018c0256d2e79235f113b6644"
   },
   "fr.html": {
-   "bytes": 5229078,
-   "sha256": "bfdef32bfe3c0550cfc3ffbb096503456a5f041b8888e2615a67013a975b5891"
+   "bytes": 5232746,
+   "sha256": "4ae9d1030f6f84fc9713c9774b9f026b28b285d7f8bb54cb6370f003c3258878"
   },
   "index.html": {
-   "bytes": 5112890,
-   "sha256": "3e931e40a7eb411f1f2fd2b4d1d081bad10700c5ddbb85c37bc7909c6b3750bd"
+   "bytes": 5116558,
+   "sha256": "c9a736eca8598f2f11c30098d7405824a64aeaa8b3c04a8163363d659997b421"
   },
   "it.html": {
-   "bytes": 5175546,
-   "sha256": "1800dabc400712e96a39d84a9801dee96dc49c140acf173abf4045e1ce8e3bc5"
+   "bytes": 5179608,
+   "sha256": "89ee4f0c3922439cbcb63be8056c289c0f422829c4238f43a3e3f211e4a7c18f"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
