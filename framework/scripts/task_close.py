@@ -3,7 +3,7 @@
 
 Run from your own task worktree after the required checks (LEGEND_CORE §21e).
 The default keeps that worktree for the next task. --remove-worktree is for a closed chat
-and is refused while the worktree holds untracked OR ignored files, or is locked.
+and is refused while the worktree holds untracked OR other ignored files, or is locked. Python bytecode caches (`__pycache__/`, `*.pyc`) are the one ignored material that does not count: they are regenerable, `git worktree remove` deletes them with the worktree, and without this exception every worktree that ever ran a test refused removal.
 On success it prints `MERGED_MAIN <full object ID>` before `TASK_CLOSED`: the identity to compare
 when verifying "the tested commit is the one about to be pushed" — the full ID, never a prefix and
 never a hash typed from an abbreviated display.
@@ -32,6 +32,7 @@ unverifiable surface (CHECK_ERROR) still refuses; its override is a stated reaso
 from __future__ import annotations
 
 import argparse
+import re
 import os
 import shlex
 import subprocess
@@ -42,11 +43,16 @@ from branch_hygiene import GitError, git, repo_root, worktrees
 import candidate_tree_freshness as freshness
 
 
+CACHE_ONLY = re.compile(r"^!! (?:.*/)?__pycache__/$|^!! .*\.pyc$")     # regenerable bytecode: not "material" a removal must preserve
+
+
 def clean(path: Path, include_ignored: bool = False) -> None:
     flags = ["status", "--porcelain", "--untracked-files=all", "--ignore-submodules=none"]
     if include_ignored:
         flags.append("--ignored")
     state = git(flags, path).strip()
+    if include_ignored and state:
+        state = "\n".join(line for line in state.splitlines() if not CACHE_ONLY.match(line.rstrip())).strip()
     if state:
         # 🔴 THE REFUSAL NAMES THE PATHS, because the directory alone does not say what to do.
         # On 2026-09-28 one untracked file in the root checkout — another actor's in-progress
