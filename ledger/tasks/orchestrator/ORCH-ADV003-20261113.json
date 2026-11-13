@@ -7,14 +7,14 @@
  "OBJECTIVE": "ADV-003 (advisor pilot, relayed by the Harness session on 2026-11-13; authority relayed by a peer, not verified; operator told in chat): with the external activity service state recorded at run time, does a by-target ChEMBL query on the ISR/eIF2B subunit targets return activity rows, and is IT50's '0 rows by target search' a true absence or an outage artefact; in silico, zero spend, one short package, no verifier unless proportionate; scope any absence to identifiers and date; propose, do not apply, any consumer edit.",
  "START_UTC": "2026-11-13T21:10:00Z",
  "BASELINE": "main f5f9c14e; worktree .claude/worktrees/adv003, branch task/adv003; folder isr_target_route_adv003_20261113/; take-in-charge message to HE citing ADV-003.",
- "MANDATE_STATE": "OPEN",
+ "MANDATE_STATE": "COMPLETE",
  "CURRENT_PACKAGE": {
-  "id": "landing",
-  "state": "probe run, README and delta written",
+  "id": "closed",
+  "state": "landed; Orchestrator to dispose",
   "delegate_active": "none",
   "updated": "2026-11-13"
  },
- "RESUME": "Probe run (service UP, 62/62 HTTP 200); README and consumer_delta written; next pre-freeze checks, battery, landing, message to HE.",
+ "RESUME": "ADV-003 landed. Pending outside this session: Orchestrator disposition of consumer_delta rows 1-4 (generation_it50 README limit sentence, INV-02 wording).",
  "DECISIONS_TAKEN": [
   "2026-11-13 ADV-003 taken in charge (this record cites it); no blind verifier: a query-count-date result with raw tables kept, the single inference (origin of the IT49 zero) read from the IT49 result file"
  ],
@@ -23,7 +23,7 @@
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
  "AUTHORISED_QUEUE_20261113D": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_A": {
    "order": 1,
    "steps": [
@@ -46,16 +46,30 @@
    "steps": [
     {
      "step": "Landing: pre-freeze suites, gate, LINT, receipts, growth, battery, task_close, safe_push",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "pre-freeze four suites OK, gate PASS, LINT WARN no BLOCK, receipts OK 1949, growth PASS; battery b6a807c7 PASS WITH SKIPS 251/12; no delegate and no verifier (a query-count-date result); landing and push next"
     },
     {
      "step": "Self-evaluation note in the README cost section; final report",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "pre-freeze four suites OK, gate PASS, LINT WARN no BLOCK, receipts OK 1949, growth PASS; battery b6a807c7 PASS WITH SKIPS 251/12; no delegate and no verifier (a query-count-date result); landing and push next"
     }
    ]
   }
  },
- "VERIFICATION_EVIDENCE": []
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261113-213137-209a9198",
+   "label": "battery",
+   "sha": "b6a807c733caf3f5bf6a366a3a9c91375762f652",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261113-213137-209a9198",
+   "log_sha256": "b2eac71ae2f92385f7f78d66d89eac90320f795c1bc66022e51b5608fb0d862c",
+   "clone": "REMOVED",
+   "attribution": "PASS WITH SKIPS (251 targets, 12 skipped) on the ADV-003 candidate b6a807c7 (probe script, README, tables, delta, task record); attributed to that SHA only; later commits are closure-only (this record)"
+  }
+ ]
 }
