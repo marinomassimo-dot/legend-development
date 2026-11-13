@@ -456,5 +456,78 @@ class HypothesesTwoInvestigations(unittest.TestCase):
         self.assertEqual((e["state"], n["state"], a["state"]), ("EMPTY", "NO_KEY_COLUMN", "MISSING"))
 
 
+class DesignOnly(unittest.TestCase):
+    """role design_only (HE50): a package whose knowledge is steps, controls and decision branches is reachable verbatim; design is never read as result."""
+    ISR = hp.DR / "isrib_discrim_20261108"
+
+    def setUp(self):
+        self.d = Path(tempfile.mkdtemp(prefix="hp_design_"))
+        self.addCleanup(lambda: __import__("shutil").rmtree(self.d, ignore_errors=True))
+
+    def folder(self, name, files):
+        out = self.d / name / "output"
+        out.mkdir(parents=True)
+        for fname, (header, rows) in files.items():
+            (out / fname).write_text(header + "\n" + "".join(r + "\n" for r in rows), encoding="utf-8")
+        return self.d / name
+
+    def test_the_real_isr_design_is_unreachable_until_listed_then_read_verbatim_with_every_branch(self):
+        self.assertEqual(hp.unlisted_design_counts().get("isrib_discrim_20261108"), 6)            # the steps nobody could reach, counted where they sit
+        p = dict(hp.load_design_only(self.ISR), name="isr", inv_id="INV-02")
+        rec = hp.design_for([p], "INV-02")
+        steps = {r["key"].split(" ")[0]: r for r in rec["rows"] if r["table"] == "design.tsv"}
+        self.assertEqual(sorted(steps), ["0", "1", "2", "3", "3b", "4"])
+        first_fork = steps["1"]["row"]["if_result_X_then"]
+        for branch in ("(a) phospho-eIF2alpha raised and ISRIB restores translation", "(b) phospho-eIF2alpha not raised and translation lowered: go to step 2",
+                       "(c) translation not lowered: stop", "(d) engagement control fails: uninformative"):
+            self.assertIn(branch, first_fork)                                                    # the contrary and the uninformative branches travel with the favourable one
+        on_disk = (self.ISR / "output/design.tsv").read_text(encoding="utf-8").split("\n")
+        path, _, line = steps["1"]["source_ref"].rpartition(":")
+        self.assertEqual(Path(hp.REPO / path).read_text(encoding="utf-8").split("\n")[int(line) - 1], on_disk[int(line) - 1])
+        self.assertEqual(steps["1"]["row"]["condition_on"], "step 0 passed")                    # the premise stays the package's own words
+        self.assertTrue(all(r["gene_arc"] is False and r["kind"] == "design_row_verbatim" for r in rec["rows"]))
+
+    def test_design_is_not_merged_into_hypotheses_comparison_or_observation(self):
+        p = dict(hp.load_design_only(self.ISR), name="isr", inv_id="INV-02")
+        self.assertEqual(hp.hypotheses_for([p], "INV-02")["state"], "NO_HYPOTHESES_LISTED")
+        self.assertEqual(hp.comparison_for([p], "INV-02")["state"], "NO_COMPARISON_LISTED")
+        self.assertEqual(hp.record_for([p], "INV-02")["state"], "UNLINKED")
+        row = hp.design_for([p], "INV-02")["rows"][0]["row"]
+        self.assertFalse({"observation", "result", "observed", "hypothesis"} & set(row))         # no observed-result field is invented for a design
+
+    def test_a_column_the_package_lacks_is_absent_not_filled(self):
+        f = self.folder("lean", {"design.tsv": ("step\tquestion\tif_result_X_then", ["S1\tdoes A change B?\tif yes go on; if no stop"])})
+        p = dict(hp.load_design_only(f), name="lean", inv_id="INV-9")
+        row = hp.design_for([p], "INV-9")["rows"][0]["row"]
+        self.assertEqual(list(row), ["step", "question", "if_result_X_then"])                   # no controls column: none appears, none is invented
+        self.assertEqual(hp.validate(p, invs={"INV-9": {}}), [])
+
+    def test_a_second_design_layout_with_other_key_and_columns_reaches_the_same_path(self):
+        f = self.folder("other", {"experiments.tsv": ("exp_id\thyp_id\tdesign\tmechanism_control\tdecision_it_changes\tweakened_by",
+                                                       ["EX1\tH1\tplate A\tvehicle arm\twhether lever B is worth a plate\tno shift in the marker"])})
+        p = dict(hp.load_design_only(f), name="other", inv_id="INV-9")
+        rec = hp.design_for([p], "INV-9")
+        self.assertEqual([r["id"] for r in rec["rows"]], ["other::experiments.tsv::EX1"])
+        self.assertEqual(rec["rows"][0]["row"]["weakened_by"], "no shift in the marker")        # the contrary condition is a cell of its own and is kept
+
+    def test_a_table_that_cannot_be_read_is_not_an_empty_design(self):
+        nokey = dict(hp.load_design_only(self.folder("nokey", {"design.tsv": ("question\tarms", ["x\ty"])})), name="nokey", inv_id="INV-9")
+        empty = dict(hp.load_design_only(self.folder("empty", {"design.tsv": ("step\tquestion", [])})), name="empty", inv_id="INV-9")
+        dup = dict(hp.load_design_only(self.folder("dup", {"design.tsv": ("step\tquestion", ["S1\ta", "S1\tb"])})), name="dup", inv_id="INV-9")
+        none = hp.load_design_only(self.d / "absent")
+        self.assertEqual((nokey["state"], empty["state"], none["state"]), ("NO_KEY_COLUMN (step)", "EMPTY", "MISSING"))
+        self.assertEqual(hp.design_for([dict(nokey, inv_id="INV-9")], "INV-9")["state"], "DESIGN_NOT_READ")
+        invs = {"INV-9": {}}
+        self.assertTrue(any("NO_KEY_COLUMN" in e for e in hp.validate(nokey, invs=invs)))
+        self.assertTrue(any("more than once" in e for e in hp.validate(dup, invs=invs)))
+        self.assertEqual(hp.design_for([], "INV-9")["state"], "NO_DESIGN_LISTED")
+
+    def test_a_package_already_readable_in_another_role_is_unchanged(self):
+        pk = hp.load_all()
+        self.assertEqual(hp.validate_manifest(), [])
+        self.assertEqual(hp.hypotheses_for(pk, "INV-18")["state"], "HYPOTHESES_PRESENT")
+        self.assertEqual(hp.design_for(pk, "INV-18")["state"], "NO_DESIGN_LISTED")                # listing nothing as design leaves every earlier answer as it was
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

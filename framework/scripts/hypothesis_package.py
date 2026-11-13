@@ -44,6 +44,12 @@ missing column reads as `unclassified`, a value outside the vocabulary as `unrec
 facet is inferred from the statement text. Direction never changes a reading depth or a tier: a probe that gives a negative result is
 still a probe, and the counter-evidence stays visible to whoever needs it (`prop_facets`).
 
+A fourth role, `design_only`, is for a package whose knowledge is a design, not a set of hypotheses: steps with their controls and the decision each possible outcome
+would trigger (`design.tsv`), outcome patterns (`grid.tsv`) or experiment rows (`experiments.tsv`). Each such table present in the folder is returned verbatim, rows keyed by the key column the table
+names (`step`, `pattern_id`, `exp_id`), with its own columns: the reader maps no cell to another and invents no field, so a possible outcome is never an observation, a control is never a hypothesis, and a
+column the package does not have is simply not in the row. Which cell answers which question of a consumer (step, premise, control, possible outcome, conditioned decision) is that consumer's reviewable
+choice (`DESIGN_MAP` in `conditional_proposals.py`), confirmed by the package's scientific owners, never inferred from the words of a cell.
+
 A missing link is UNLINKED, and a missing experiment is NO_EXPERIMENT: both mean "not stated here", never
 "tested and absent", and never evidence against a compound.
 
@@ -62,7 +68,8 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 DR = REPO / "disease-models/wwox/research/drug_repurposing"
 MANIFEST = DR / "hypothesis_packages.tsv"
-ROLES = ("physiological_hypotheses", "pharmacological_comparison", "hypotheses_only")
+ROLES = ("physiological_hypotheses", "pharmacological_comparison", "hypotheses_only", "design_only")
+DESIGN_TABLES = {"design.tsv": "step", "grid.tsv": "pattern_id", "experiments.tsv": "exp_id"}   # a design package's tables by file name, each with its key column
 HYP_KEY_COLUMNS = ("hyp_id", "hypothesis_id", "id")   # the key column of a hypotheses table differs by producer; the first one present is the key
 MANIFEST_FIELDS = ("package", "dir", "role", "inv_id", "why")
 LINK_FIELDS = ("hyp_id", "kind", "need_id", "inv_id", "card_ids", "link_state", "carried_check", "source")
@@ -245,6 +252,33 @@ def load_hypotheses_only(pkg: Path) -> dict:
             "columns": list(next(iter(rows.values()))) if rows else []}
 
 
+def load_design_only(pkg: Path) -> dict:
+    """The design tables of a package kept as a design: each present table verbatim (key cell, file:line, columns), duplicates and an empty or keyless table stated.
+    Nothing is mapped, joined or completed: a column the table lacks is not in its rows."""
+    pkg = Path(pkg)
+    out = pkg / "output" if (pkg / "output").is_dir() else pkg
+    tables = {}
+    for name, key in DESIGN_TABLES.items():
+        path = out / name
+        if not path.is_file():
+            continue
+        with open(path, newline="", encoding="utf-8") as f:
+            header = next(csv.reader(f, delimiter="\t"), [])
+        rows, refs, dup = {}, {}, []
+        state = "OK" if key in header else f"NO_KEY_COLUMN ({key})"
+        for r, ref in (_tsv_lined(path) if state == "OK" else []):
+            k = (r[key] or "").strip()
+            if k in rows:
+                dup.append(k)
+            rows[k] = r
+            refs[k] = ref
+        if state == "OK" and not rows:
+            state = "EMPTY"
+        tables[name] = {"key_column": key, "rows": rows, "refs": refs, "duplicates": dup, "state": state, "columns": header}
+    state = "MISSING" if not tables else "OK" if any(t["state"] == "OK" for t in tables.values()) else next(iter(tables.values()))["state"]
+    return {"role": "design_only", "dir": out, "tables": tables, "state": state}
+
+
 def _need_ids() -> set[str]:
     with open(DR / "needs/needs.json", encoding="utf-8") as f:
         return {n["id"] for n in json.load(f)["needs"]}
@@ -266,7 +300,7 @@ def load_all(manifest: Path = MANIFEST) -> list[dict]:
     out = []
     for m in read_manifest(manifest):
         d = DR / m["dir"]
-        p = (load_package(d) if m["role"] == "physiological_hypotheses" else load_hypotheses_only(d) if m["role"] == "hypotheses_only" else load_comparison(d))
+        p = (load_package(d) if m["role"] == "physiological_hypotheses" else load_hypotheses_only(d) if m["role"] == "hypotheses_only" else load_design_only(d) if m["role"] == "design_only" else load_comparison(d))
         p.update({"name": m["package"], "inv_id": m.get("inv_id") or "", "why": m.get("why") or ""})
         out.append(p)
     return out
@@ -303,6 +337,17 @@ def validate(pkg: dict, needs: set[str] | None = None, invs: dict | None = None,
             errs += [f"{w}: measurement {k} blocks {b!r}, not a comparison row key" for b in blocked if b not in pkg["cmp"]]
         for k, r in pkg["dec"].items():
             errs += [f"{w}: proposition {k} {f} {v.split(':', 1)[1]!r} is not in the vocabulary" for f, v in prop_facets(r).items() if v.startswith("unrecognised:")]
+        return errs
+    if pkg.get("role") == "design_only":
+        w = f"{pkg['dir'].parent.name} design"
+        if pkg["state"] != "OK":
+            errs.append(f"{w}: {pkg['state']} (none of {', '.join(DESIGN_TABLES)} is a readable table in {pkg['dir'].name}/)")
+        if pkg.get("inv_id") not in invs:
+            errs.append(f"{w}: manifest inv_id {pkg.get('inv_id')!r} not in the investigations table")
+        for name, t in pkg["tables"].items():
+            if t["state"] != "OK":
+                errs.append(f"{w}: {name} is {t['state']}")
+            errs += [f"{w}: {name} key {k!r} appears more than once ({t['key_column']}); the later row would hide the earlier" for k in dict.fromkeys(t["duplicates"])]
         return errs
     if pkg.get("role") == "hypotheses_only":
         w = f"{pkg['dir'].parent.name} hypotheses"
@@ -354,7 +399,7 @@ def validate_manifest(manifest: Path = MANIFEST) -> list[str]:
             errs.append(f"{w}: role {m.get('role')!r}")
         if not (DR / (m.get("dir") or "x")).is_dir():
             errs.append(f"{w}: directory {m.get('dir')!r} not found")
-        if m.get("role") in ("pharmacological_comparison", "hypotheses_only") and not (m.get("inv_id") or "").strip():
+        if m.get("role") in ("pharmacological_comparison", "hypotheses_only", "design_only") and not (m.get("inv_id") or "").strip():
             errs.append(f"{w}: this role names the investigation the package belongs to")
     return errs
 
@@ -364,7 +409,7 @@ def unlisted_packages(manifest: Path = MANIFEST) -> list[str]:
     listed = {m["dir"] for m in read_manifest(manifest)}
     found = []
     for out in sorted(DR.glob("*/output")):
-        if (out / "hypotheses.tsv").exists() or (out / "comparison.tsv").exists():
+        if (out / "hypotheses.tsv").exists() or (out / "comparison.tsv").exists() or (out / "design.tsv").exists():
             d = out.parent.name
             if d not in listed:
                 found.append(d)
@@ -467,6 +512,35 @@ def unlisted_hypothesis_counts(manifest: Path = MANIFEST) -> dict[str, int]:
     return out
 
 
+def unlisted_design_counts(manifest: Path = MANIFEST) -> dict[str, int]:
+    """Rows of a `design.tsv` in the folders the manifest does not name: steps nobody can reach."""
+    out = {}
+    for d in unlisted_packages(manifest):
+        p = load_design_only(DR / d)
+        t = p["tables"].get("design.tsv")
+        if t and t["state"] == "OK":
+            out[d] = len(t["rows"])
+    return out
+
+
+def design_for(pkgs: list[dict], inv_id: str) -> dict:
+    """Rows of the `design_only` packages the manifest ties to this investigation, verbatim, each as `package::table::key`, with the columns the table really has.
+    A different kind of record from hypotheses and comparison rows: nothing is mapped, joined or completed, and a design row is not an observation, a hypothesis or a result."""
+    out, sources = [], []
+    for pkg in (p for p in pkgs if p.get("role") == "design_only" and p.get("inv_id") == inv_id):
+        name = pkg["dir"].parent.name
+        for tname, t in pkg["tables"].items():
+            sources.append({"package": name, "table": tname, "state": t["state"], "key_column": t["key_column"], "rows": len(t["rows"])})
+            for k, r in t["rows"].items():
+                out.append({"id": f"{name}::{tname}::{k}", "key": k, "table": tname, "package": name, "kind": "design_row_verbatim", "gene_arc": False, "inv_id": inv_id,
+                            "row": r, "columns": t["columns"], "key_column": t["key_column"], "source_ref": t["refs"][k]})
+        if not pkg["tables"]:
+            sources.append({"package": name, "table": "", "state": pkg["state"], "key_column": "", "rows": 0})
+    unread = [x for x in sources if x["state"] != "OK"]
+    state = "DESIGN_PRESENT" if out else "DESIGN_NOT_READ" if unread else "NO_DESIGN_LISTED"   # a design that could not be read is not a package with no design
+    return {"inv_id": inv_id, "state": state, "rows": out, "sources": sources}
+
+
 def hypotheses_for(pkgs: list[dict], inv_id: str) -> dict:
     """Hypotheses of the `hypotheses_only` packages the manifest ties to this investigation, verbatim, each as `package::key`. A different kind of record from
     `record_for` (no alternatives, experiments or arms are joined, none is invented) and from the comparison rows."""
@@ -486,6 +560,13 @@ def _brief_hyp(rec: dict) -> str:
     L = [f"{rec['inv_id']} hypotheses in their own layout: {rec['state']}"]
     for r in rec["rows"]:
         L.append(f"  {r['id']} columns={len(r['columns'])} key_column={r['key_column']} at {r['source_ref']}")
+    return "\n".join(L)
+
+
+def _brief_design(rec: dict) -> str:
+    L = [f"{rec['inv_id']} design rows in their own layout: {rec['state']}"]
+    for r in rec["rows"]:
+        L.append(f"  {r['id'][:90]} columns={len(r['columns'])} key_column={r['key_column']} at {r['source_ref']}")
     return "\n".join(L)
 
 
@@ -535,17 +616,22 @@ def main(argv=None) -> int:
         for inv in {p["inv_id"] for p in pkgs if p["role"] == "hypotheses_only"}:
             ids = [r["id"] for r in hypotheses_for(pkgs, inv)["rows"]]
             broken += [f"{i}: hypothesis id appears in more than one package for {inv}" for i in dict.fromkeys(ids) if ids.count(i) > 1]
+        for inv in {p["inv_id"] for p in pkgs if p["role"] == "design_only"}:
+            ids = [r["id"] for r in design_for(pkgs, inv)["rows"]]
+            broken += [f"{i}: design row id appears in more than one package for {inv}" for i in dict.fromkeys(ids) if ids.count(i) > 1]
         for inv in {p["inv_id"] for p in pkgs if p["role"] == "pharmacological_comparison"}:
             for r in comparison_for(pkgs, inv)["rows"]:
                 broken += [f"{r['package']} {r['key']}: BROKEN_REFERENCE {t}" for t in r["broken_decisive_refs"]]
-        n = sum(len(p.get("links", [])) + len(p.get("cmp", {})) + len(p.get("hyps", {})) * (p["role"] == "hypotheses_only") for p in pkgs)
+        n = sum(len(p.get("links", [])) + len(p.get("cmp", {})) + len(p.get("hyps", {})) * (p["role"] == "hypotheses_only")
+                + sum(len(t["rows"]) for t in p.get("tables", {}).values()) for p in pkgs)
         print("\n".join(errs + [f"WARN {b}" for b in broken]) if errs or broken else f"OK: {n} rows over {len(pkgs)} manifest packages")
-        counts = unlisted_hypothesis_counts()
+        counts, dcounts = unlisted_hypothesis_counts(), unlisted_design_counts()
         for d in unlisted_packages():
-            print(f"INFO not in manifest, not read: {d}" + (f" ({counts[d]} hypotheses unreachable)" if counts.get(d) else ""))
+            print(f"INFO not in manifest, not read: {d}" + (f" ({counts[d]} hypotheses unreachable)" if counts.get(d) else "") + (f" ({dcounts[d]} design steps unreachable)" if dcounts.get(d) else ""))
         return 1 if errs else 0
-    rec, cmp_, own = record_for(pkgs, a.inv), comparison_for(pkgs, a.inv), hypotheses_for(pkgs, a.inv)
-    print(json.dumps({"hypotheses": rec, "comparison": cmp_, "hypotheses_own_layout": own}, indent=1, ensure_ascii=False) if a.json else _brief(rec) + "\n" + _brief_hyp(own) + "\n" + _brief_cmp(cmp_))
+    rec, cmp_, own, des = record_for(pkgs, a.inv), comparison_for(pkgs, a.inv), hypotheses_for(pkgs, a.inv), design_for(pkgs, a.inv)
+    print(json.dumps({"hypotheses": rec, "comparison": cmp_, "hypotheses_own_layout": own, "design_own_layout": des}, indent=1, ensure_ascii=False) if a.json
+          else _brief(rec) + "\n" + _brief_hyp(own) + "\n" + _brief_cmp(cmp_) + "\n" + _brief_design(des))
     return 0
 
 

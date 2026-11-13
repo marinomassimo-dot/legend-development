@@ -1,0 +1,25 @@
+relation_id	gene	table	species	state	neuron_class	neuron_fpkm	best_other_class	best_other_fpkm	n_samples_neuron	attributable_to_neuron	caveat
+IT49-Q02	EIF2AK1	mouse_isr	mouse	SHARED	neurons (P7)	10.74	OPC (P17)	15.38	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2AK2	mouse_isr	mouse	OTHER_ENRICHED	neurons (P7)	0.37	astrocytes (P7)	4.55	2	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2AK3	mouse_isr	mouse	SHARED	neurons (P7)	4.49	OPC (P17)	11.71	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2AK4	mouse_isr	mouse	SHARED	neurons (P7)	3.93	astrocytes (P7)	7.55	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2B1	mouse_isr	mouse	SHARED	neurons (P7)	7.69	newly formed oligodendrocytes (P17)	12.62	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2B2	mouse_isr	mouse	SHARED	neurons (P7)	18.98	endothelium	38.10	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2B3	mouse_isr	mouse	SHARED	neurons (P7)	5.09	endothelium	9.14	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2B4	mouse_isr	mouse	SHARED	neurons (P7)	12.53	microglia	15.47	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2B5	mouse_isr	mouse	SHARED	neurons (P7)	11.77	endothelium	24.60	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	PPP1R15A	mouse_isr	mouse	OTHER_ENRICHED	neurons (P7)	47.96	microglia	377.64	2	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	PPP1R15B	mouse_isr	mouse	SHARED	neurons (P7)	20.11	newly formed oligodendrocytes (P17)	27.16	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2S1	mouse_isr	mouse	SHARED	neurons (P7)	5.11	endothelium	13.20	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2AK1	human_isr	human	SHARED	neuron_ctx	10.90	astro_tumor	14.07	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2AK2	human_isr	human	SHARED	neuron_ctx	7.60	astro_tumor	8.95	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2AK3	human_isr	human	SHARED	neuron_ctx	3.70	myeloid_ctx	9.83	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2AK4	human_isr	human	SHARED	neuron_ctx	3.70	astro_tumor	2.95	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2B1	human_isr	human	SHARED	neuron_ctx	8.20	astro_tumor	11.38	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2B2	human_isr	human	SHARED	neuron_ctx	5.70	astro_mature_ctx	6.83	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2B3	human_isr	human	SHARED	neuron_ctx	6.00	astro_hippocampus_epilepsy_region	4.78	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2B4	human_isr	human	SHARED	neuron_ctx	3.60	astro_fetal_ctx	4.92	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2B5	human_isr	human	SHARED	neuron_ctx	3.70	astro_fetal_ctx	3.17	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	PPP1R15A	human_isr	human	OTHER_ENRICHED	neuron_ctx	3.70	myeloid_ctx	24.90	1	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	PPP1R15B	human_isr	human	OTHER_ENRICHED	neuron_ctx	4.80	myeloid_ctx	24.27	1	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+IT49-Q02	EIF2S1	human_isr	human	SHARED	neuron_ctx	10.90	astro_tumor	10.35	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
