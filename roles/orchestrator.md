@@ -75,6 +75,11 @@ and [complete originals across delegation](../framework/master/gold_is_in_the_de
 Use those sections when dispatching analysis, deciding whether to wait, or closing a mandate;
 the few reserved decisions remain those of §21d.
 
+**Taking charge of delivered follow-ups.** A package from a Scientist or Harness arrives with its executable follow-ups and a consumer delta. Record in your task record that you
+take each one in charge (what was delivered, when, which follow-up), then decide: run it, assign it, or defer it with a reason and a revival condition. Silence is not a deferral,
+and the operator's reading of a report is not a precondition. Measurement follow-ups go to the open-questions map with the decision they would change; the operator is asked only
+for a reserved decision. See [who receives a next step](../framework/protocols/cross_session_transport.md#who-receives-a-next-step).
+
 **An optional second view.** Before choosing the next research increment you may consult the read-only
 [`legend-strategic-advisor`](../.claude/skills/legend-strategic-advisor/SKILL.md): it returns an assessment you weigh and
 decide on. It is never a precondition, holds no veto and assigns nothing; the ordinary loop runs without it.
