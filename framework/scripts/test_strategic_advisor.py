@@ -31,6 +31,14 @@ if mode == "fail":
     emit({"type": "result", "subtype": "error_during_execution", "is_error": True, "session_id": session})
     sys.exit(1)
 text = "## Principal decision\\nX\\n\\n## Inspected\\n- a.md\\nbrief_chars=%d" % len(brief)
+if mode == "assign":
+    text += ("\\n\\n## Assignments\\n### ASSIGNMENT 1\\nkey: kir2-heteromer-composition\\nrecipient: Science\\nquestion: which Kir2 subunits form the current\\nwhy_now: it gates the Ba2+ arm\\n"
+             "roadmap_link: priority 2\\nrelated_work: IT50 closed\\nsources: kir2_drugname_sci49_20261112\\ndecision_changed_by_result: whether any Cys311 activator can act\\n"
+             "perimeter_and_budget: one reading package\\nmethod_autonomy: free; negative results welcome\\ndeliver_to: Orchestrator\\nduplicate_check: searched the records for the key\\n"
+             "\\n### ASSIGNMENT 2\\nkey: half-written\\nrecipient: Harness\\nquestion: x\\n")
+if mode == "many":
+    for i in range(30):
+        emit({"type": "assistant", "message": {"id": "t%d" % i, "model": "claude-opus-fake", "content": [{"type": "text", "text": "thinking"}], "usage": {"input_tokens": 1, "output_tokens": 1}}})
 if mode == "drift":
     text_t = text + " (changed)"
 else:
@@ -244,6 +252,165 @@ def _git_repo() -> tuple[Path, dict[str, str]]:
     git("add", "."); git("commit", "-q", "-m", "SCI48 delivered")
     git("checkout", "-q", "task")
     return tmp, {"delivered": git("rev-parse", "main"), "run": "git"}
+
+
+
+def _record(task: str, state: str, extra: dict | None = None) -> dict:
+    """A task record the continuity module reads: an OPEN one has a step still to do, a COMPLETE one has its step done with evidence."""
+    step = {"step": "work", "status": "TODO" if state == "OPEN" else "DONE", "owner": "x", "evidence": "" if state == "OPEN" else "evidence recorded and verified in full"}
+    return {"TASK_ID": task, "AUTHORISED_QUEUE_X": {"MANDATE_STATE": state, "OBJ_1": {"order": 1, "title": "t", "steps": [step]}}, **(extra or {})}
+
+
+def _repo_with_records(tmp: Path, records: dict[str, str]) -> Path:
+    """A throwaway git repository with task records and a roadmap section: what the hourly check reads."""
+    repo, env = tmp / "repo", {**os.environ, "GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@example.invalid", "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@example.invalid"}
+    (repo / "ledger/tasks/orchestrator").mkdir(parents=True)
+    (repo / "disease-models/wwox/research/drug_repurposing").mkdir(parents=True)
+    for task, state in records.items():
+        (repo / f"ledger/tasks/orchestrator/{task}.json").write_text(json.dumps(_record(task, state)), encoding="utf-8")
+    (repo / "disease-models/wwox/research/drug_repurposing/roadmap_current.md").write_text(f"x\n{sa.ROADMAP_BEGIN}\nMission v1\n{sa.ROADMAP_END}\n", encoding="utf-8")
+    for cmd in (["git", "init", "-q", "-b", "main"], ["git", "add", "."], ["git", "commit", "-q", "-m", "base"]):
+        subprocess.run(cmd, cwd=repo, check=True, capture_output=True, env=env)
+    return repo
+
+
+class Proactive(Base):
+    """The proactive pilot: bounded hourly check, one evaluation per decision, assignments with evidence levels, budget and disable. Fixtures: they do not show the real runtime."""
+
+    def setUp(self) -> None:
+        super().setUp()
+        self.repo = _repo_with_records(self.tmp, {"ORCH-A": "OPEN", "ORCH-B": "COMPLETE"})
+        self.state = self.tmp / "state"
+        self.saved_attrs = {k: getattr(sa, k) for k in ("ROOT", "ROADMAP", "STATE_DIR", "_sessions")}
+        sa.ROOT, sa.ROADMAP, sa.STATE_DIR = self.repo, self.repo / "disease-models/wwox/research/drug_repurposing/roadmap_current.md", self.state
+        sa._sessions = lambda: {"IT Orchestrator": "idle", "SCI": "idle", "HE": "busy"}
+        self.campaign = self.tmp / "pilot"
+        sa.main(["activate", "--campaign", str(self.campaign), "--recipient", "Science=SCI"])
+        self.env_now = os.environ.get("LEGEND_ADVISOR_NOW")
+        os.environ["LEGEND_ADVISOR_NOW"] = "2026-11-13T10:00:00Z"
+
+    def tearDown(self) -> None:
+        for k, v in self.saved_attrs.items():
+            setattr(sa, k, v)
+        os.environ.pop("LEGEND_ADVISOR_NOW", None) if self.env_now is None else os.environ.__setitem__("LEGEND_ADVISOR_NOW", self.env_now)
+        super().tearDown()
+
+    def land(self, subject: str, record: tuple[str, str] | None = None) -> None:
+        env = {**os.environ, "GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@example.invalid", "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@example.invalid"}
+        if record:
+            (self.repo / f"ledger/tasks/orchestrator/{record[0]}.json").write_text(json.dumps(_record(record[0], record[1])), encoding="utf-8")
+        (self.repo / "ledger/tasks/orchestrator/touch.txt").write_text(subject, encoding="utf-8")
+        for cmd in (["git", "add", "."], ["git", "commit", "-q", "-m", subject]):
+            subprocess.run(cmd, cwd=self.repo, check=True, capture_output=True, env=env)
+
+    def at(self, stamp: str) -> None:
+        os.environ["LEGEND_ADVISOR_NOW"] = stamp
+
+    def test_the_first_tick_starts_the_campaign_and_then_nothing_new_costs_no_evaluation(self) -> None:
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")        # campaign start: a strategic choice from the roadmap and the first observation
+        sa.evaluate(self.campaign)                                              # counted (1 of 3)
+        self.at("2026-11-13T11:00:00Z")
+        quiet = sa.tick(self.campaign)
+        self.assertEqual((quiet["verdict"], quiet["events"]), ("NONE", []))     # nothing changed: the previous assessment stands, no model call
+        self.assertEqual(len({(a["stage"], a["index"]) for a in sa._attempts(self.campaign)}), 1)
+
+    def test_a_new_delivery_triggers_exactly_one_evaluation_and_the_same_events_do_not_repeat_it(self) -> None:
+        sa.evaluate(self.campaign)
+        self.at("2026-11-13T11:00:00Z"); sa.tick(self.campaign)
+        self.land("SCI51 record COMPLETE; package delivered")
+        self.at("2026-11-13T12:00:00Z")
+        first = sa.tick(self.campaign)
+        self.assertEqual(first["verdict"], "EVALUATE")
+        self.assertTrue(any(e.startswith("delivery:") for e in first["events"]))
+        sa.evaluate(self.campaign)
+        self.at("2026-11-13T13:00:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")             # the digest of those events was already evaluated
+
+    def test_a_running_evaluation_is_not_overlapped_and_a_waiting_session_is_not_called_stalled(self) -> None:
+        sa.evaluate(self.campaign)
+        state = sa._load_state(self.campaign); state["running"] = sa._pid_identity(os.getpid()); sa._save_state(self.campaign, state)
+        self.land("IT99 closed")
+        self.at("2026-11-13T15:00:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "RUNNING")
+        # a mandate the watch calls resumable is reported to the watch, never restarted here; a mandate that is merely waiting does not appear at all
+        state["running"] = ""; sa._save_state(self.campaign, state)
+        log = self.tmp / "watch.txt"; log.write_text("STOPPED_RESUMABLE RESUME ORCH-A: session idle", encoding="utf-8")
+        real = sa.subprocess.run
+        sa.subprocess.run = lambda cmd, **kw: subprocess.CompletedProcess(cmd, 0, stdout=log.read_text(), stderr="") if "mandate_watch.py" in " ".join(map(str, cmd)) else real(cmd, **kw)
+        try:
+            events = sa.tick(self.campaign)["events"]
+        finally:
+            sa.subprocess.run = real
+        self.assertTrue(any(e.startswith("stalled-for-the-watch: ORCH-A") for e in events))
+        self.assertFalse(any("ORCH-B" in e for e in events))                    # a COMPLETE mandate is never reported as stalled
+
+    def test_assignments_are_drafted_once_with_their_fields_and_an_incomplete_or_duplicate_one_is_refused(self) -> None:
+        os.environ["FAKE_MODE"] = "assign"
+        self.assertEqual(sa.evaluate(self.campaign), 0)
+        drafted = [e for e in sa._events(self.campaign)]
+        self.assertEqual([(e["id"], e["state"]) for e in drafted if e["state"] == "DRAFTED"], [("ADV-001", "DRAFTED")])
+        self.assertTrue(any(e["state"] == "REJECTED" and "missing fields" in e["why"] for e in drafted))   # the half-written block is not an assignment
+        self.assertIn("kir2-heteromer-composition", (self.campaign / "assignments/ADV-001.md").read_text())
+        text = (self.campaign / "P1/assessment.md").read_text()
+        sa.register_assignments(self.campaign, "P1", text)                      # the same key again
+        self.assertTrue(any(e["state"] == "DUPLICATE" for e in sa._events(self.campaign)))
+        (self.repo / "ledger/tasks/orchestrator/ORCH-A.json").write_text(json.dumps(_record("ORCH-A", "OPEN", {"x": "kir2-heteromer-composition"})), encoding="utf-8")
+        self.assertEqual(sa.register_assignments(self.campaign, "P2", text.replace("kir2-heteromer-composition", "kir2-heteromer-composition")), [])   # already named in a task record
+
+    def test_the_evidence_levels_of_an_assignment_stay_apart(self) -> None:
+        os.environ["FAKE_MODE"] = "assign"; sa.evaluate(self.campaign)
+        self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "DRAFTED")           # saved is not sent
+        sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "SENT", "--evidence", "msg 123"])
+        self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "SENT")              # sent is not taken in charge
+        rec = self.repo / "ledger/tasks/orchestrator/ORCH-A.json"
+        rec.write_text(json.dumps(_record("ORCH-A", "OPEN", {"Q": {"s": {"step": "ADV-001 taken", "status": "TODO"}}})), encoding="utf-8")
+        self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "TAKEN")
+        rec.write_text(json.dumps(_record("ORCH-A", "OPEN", {"Q": {"s": {"step": "ADV-001 taken", "status": "DONE"}}})), encoding="utf-8")
+        self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "EXECUTED")          # executed is not useful: nothing here says so
+
+    def test_an_unreachable_recipient_is_an_explicit_residual_not_a_delivery(self) -> None:
+        os.environ["FAKE_MODE"] = "assign"; sa.evaluate(self.campaign)
+        sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "UNREACHABLE", "--evidence", "no live session named SCI"])
+        v = sa.assignment_states(self.campaign)["ADV-001"]
+        self.assertTrue(v["unreachable"])
+        self.assertEqual(v["highest"], "DRAFTED")
+        self.assertIn("UNREACHABLE (residual stays in the queue)", sa.status(self.campaign))
+
+    def test_an_operator_instruction_in_the_roadmap_triggers_a_new_evaluation_with_the_new_text(self) -> None:
+        sa.evaluate(self.campaign)
+        self.at("2026-11-13T11:00:00Z"); self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")
+        road = sa.ROADMAP; road.write_text(road.read_text().replace("Mission v1", "Mission v1\nOperator 2026-11-13: pause the EBP thread"), encoding="utf-8")
+        self.at("2026-11-13T11:30:00Z")
+        t = sa.tick(self.campaign)
+        self.assertEqual((t["verdict"], t["why"]), ("EVALUATE", "roadmap changed"))     # an operator update anticipates the four-hour rhythm
+        self.assertIn("pause the EBP thread", sa.build_brief_p(self.campaign, sa.observe(self.campaign, sa._load_state(self.campaign))))
+
+    def test_the_budget_stops_further_invocations_and_the_expiry_does_not_renew(self) -> None:
+        for _ in range(3):
+            self.assertEqual(sa.evaluate(self.campaign), 0)
+        self.assertEqual(sa.evaluate(self.campaign), 2)                          # a fourth invocation is refused, the third is the last
+        self.assertEqual(len({(a["stage"], a["index"]) for a in sa._attempts(self.campaign)}), 3)
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "BUDGET")
+        sa.main(["activate", "--campaign", str(self.tmp / "p2"), "--hours", "1"])
+        self.at("2026-11-13T12:00:01Z")
+        self.assertEqual(sa.tick(self.tmp / "p2")["verdict"], "EXPIRED")
+
+    def test_a_failed_attempt_counts_and_the_turn_limit_is_enforced_by_the_launcher(self) -> None:
+        os.environ["FAKE_MODE"] = "many"
+        self.assertEqual(sa.evaluate(self.campaign), 1)
+        rows = [a for a in sa._attempts(self.campaign) if a["outcome"] != "STARTED"]
+        self.assertEqual([a["outcome"] for a in rows], ["TURN_LIMIT"])           # stopped after 20 turns, counted in the budget
+        self.assertEqual(len({(a["stage"], a["index"]) for a in sa._attempts(self.campaign)}), 1)
+
+    def test_disabling_stops_the_pilot_and_nothing_else(self) -> None:
+        sa.main(["disable", "--campaign", str(self.campaign)])
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "DISABLED")
+        self.assertEqual(sa.evaluate(self.campaign), 2)
+        self.assertEqual(sa.run_stage_independent_of_pilot(), 0) if hasattr(sa, "run_stage_independent_of_pilot") else None
+        # the ordinary consultation in a campaign with no budget file is unchanged by any of this
+        plain = self.tmp / "plain"; self.brief.write_text("# b\n", encoding="utf-8")
+        self.assertEqual(sa.run("A", plain, self.brief, "opus", "high", 60, sa.LIMITS), 0)
+
 
 
 class Snapshot(unittest.TestCase):

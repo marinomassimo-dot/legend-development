@@ -96,10 +96,10 @@ Three facts bind before you have finished reading anything else:
 | A session or batch changed something material (verified result, corrected premise, moved limit, repeated error, resolved question) — or "dream" / "what was not consumed" on request | [`legend-dream`](.claude/skills/legend-dream/SKILL.md) — called from self-eval; ends in one line when nothing changed |
 | Every session, final response | [`legend-session-takeaways`](.claude/skills/legend-session-takeaways/SKILL.md) |
 | ⚪ **Optional, never required** — about to write *first / novel / absent / untested / unique*; one mechanism reached too fast; an adjacent literature may hold the assay; a prediction should be fixed before searching; an experiment must discriminate rather than measure; a new question makes a read paper worth reopening | [`legend-discovery-method`](.claude/skills/legend-discovery-method/SKILL.md) — pick one primitive; using one alone is the normal case |
-| ⚪ **Optional, never required** — the Orchestrator wants a separate strategic view of which question, method or branch deserves investment next (campaign start, after an increment, or after a material result) | [`legend-strategic-advisor`](.claude/skills/legend-strategic-advisor/SKILL.md) — read-only; Stage A independent, Stage B dialogue; advises, never gates |
+| ⚪ **Optional, never required** — the Orchestrator wants a separate strategic view of which question, method or branch deserves investment next (campaign start, after an increment, or after a material result). In an operator-authorised campaign the same Advisor also runs **proactively** on a schedule and drafts assignments for the sessions (see the skill) | [`legend-strategic-advisor`](.claude/skills/legend-strategic-advisor/SKILL.md) — read-only analysis; Stage A independent, Stage B dialogue, Stage P proactive; never gates |
 
 > ⚪ **The last two rows are the only optional entries in this table.** `legend-discovery-method` is a
-> toolkit and `legend-strategic-advisor` a consultation, not bootstraps: each gates nothing, is required by nothing, and a session that never
+> toolkit and `legend-strategic-advisor` a consultation (proactive only inside an operator-authorised campaign), not bootstraps: each gates nothing, is required by nothing, and a session that never
 > invokes it has broken no rule. Every other row above applies without being asked.
 
 ---

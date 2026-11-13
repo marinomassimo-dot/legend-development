@@ -1,5 +1,34 @@
 # Drug repurposing — current development roadmap
 
+## Operator roadmap (authoritative; read this first)
+
+The roadmap below is the operator's. It defines the mission and the priorities; the dashboard, the open questions, DREAM and the radar help the Strategic Advisor and the sessions choose
+*how* to pursue them and *when* to propose an adaptation. The operator may add or change a line here at any time: a new instruction in this section prevails over any automatic plan in
+the parts where they conflict, and the Advisor re-evaluates when this section changes. There is no second plan: the rest of this file, the task records and the dashboard serve this one.
+
+<!-- OPERATOR_ROADMAP:BEGIN -->
+**Mission.** Improve LEGEND's ability to turn verifiable scientific knowledge into more useful pharmacological hypotheses, comparisons and experiments for WWOX loss of function, keeping the
+return from open questions to research active.
+
+**Current priorities** (revisable; a reasoned proposal to change them is allowed, a silent change is not):
+1. Finish consuming the scientific and Harness deliveries already available, including the SCI51 corrections, keeping results, limits and work actually done apart.
+2. Find where knowledge already held can produce a better pharmacological comparison, conditional hypothesis or experiment.
+3. Compare going deeper on the current thread with the other prioritised questions of the module, by marginal benefit, cost and concrete chance of progress. The newest thread earns no priority by being newest; the EBP connections from SCI51 are an opportunity to compare, not a direction already imposed.
+4. Assess Harness micro-upgrades when they unblock a scientific capability, remove useless work or improve the use of the tools already available.
+5. Keep the dashboard as the map of research opportunities, correct and readable.
+
+**Exploration allowed.** Anything inside the mission that uses material already in the repository or public, free sources: reading, extraction, comparison, conditional hypotheses, experiment designs, tool and identity work.
+
+**Exclusions.** Clinical recommendations, doses, gene-therapy development, individual or private data, external contacts, new paid services, infrastructure growth without a concrete need.
+
+**Pilot campaign** (first Proactive Strategic Advisor pilot): 24 hours from its effective activation (`advisor_pilot_20261113/budget.json`), no automatic renewal; at most three real strategic
+invocations in total (dialogue and failed attempts included), at most three new executive assignments across the three sessions, no recursive delegation, no external spend. These are ceilings,
+not targets. Exhausting the Advisor's budget stops its evaluations only; the work already authorised to the sessions goes on.
+
+**Recent operator instructions** (newest first; add a dated line to change direction, or write "stop" or "pause" to suspend the pilot):
+- 2026-11-13: the roadmap above; the Advisor may act without being asked, the Orchestrator keeps operational coordination; the operator can intervene at any time by editing this section.
+<!-- OPERATOR_ROADMAP:END -->
+
 Updated 2026-11-01 by `orchestrator`, runtime Codex, following the operator's requests to
 consolidate the Unravel/BioNAV/rareSHIFT and ALS discussion, state the guiding principle
 explicitly and define balanced, priority-driven external discovery in this roadmap.

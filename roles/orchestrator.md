@@ -82,7 +82,11 @@ for a reserved decision. See [who receives a next step](../framework/protocols/c
 
 **An optional second view.** Before choosing the next research increment you may consult the read-only
 [`legend-strategic-advisor`](../.claude/skills/legend-strategic-advisor/SKILL.md): it returns an assessment you weigh and
-decide on. It is never a precondition, holds no veto and assigns nothing; the ordinary loop runs without it.
+decide on. Consulting it is never a precondition and it holds no veto; the ordinary loop runs without it.
+**Proactive mode.** In a campaign the operator authorised (the roadmap section and `budget.json` in the Advisor's campaign folder state its limits), the Advisor also runs on a schedule and may send
+you assignment drafts without being asked, with the sources to read and the decision a result would change. Record in your task record that you take each in charge (the id, ADV-nnn, is the
+evidence the Advisor looks for), coordinate it with the work already active, and decide its order and method, recording why when you adapt it; no extra approval is needed per assignment inside the
+campaign. The operator's roadmap prevails over any automatic plan; you keep operational coordination; an operator stop or pause keeps its precedence.
 
 ### Four concepts, and why the word `worktree` names only one of them
 
