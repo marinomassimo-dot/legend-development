@@ -19,7 +19,7 @@ Non-canonical working note. Not medical advice. Reference genotype class only. I
 |---|---|---|
 | 1 INV-06 conditioned-medium arm: candidate (neuron-secreted CTGF, the authors' in vitro claim) and the missing controls | applied as a dated clause (five languages); IPOTESI, no Wwox datum | `investigations*.tsv` INV-06 `next_test` |
 | 2 X3 variant: an M1-selective antagonist and an EBP inhibitor without M1 affinity, crossed with neuron genotype, behind gate 0; reading rules | applied inside the same clause (the experiment file of the IT36/IT37 package is not edited) | same |
-| 3 open questions | applied: IT50-Q01..Q08 from the package's own `open_questions.tsv` (OQ3 duplicates INV-12 step 0 and is skipped; OQ9 is not in the delta's list and is not added); IT50-Q09 (EBP activity of the comparator) added from the delta's text | `open_questions_map.tsv` |
+| 3 open questions | applied: IT50-Q01..Q08 from the package's own `open_questions.tsv` (OQ3 duplicates INV-12 step 0 and is skipped; OQ9 (the core H4 question) was omitted from the delta list by mistake and is added as IT50-Q10 at the author's request); IT50-Q09 (EBP activity of the comparator) added from the delta's text | `open_questions_map.tsv` |
 | 4 identities and aliases | not applied: the identities must be looked up in primary papers before any alias; reagent names stay out of public text | — |
 | 5 register `minimum_comparison.md` as a design_only package | Harness's, relayed | — |
 | 6 the false sentence "no source tests a compound in a neuron-driven hypomyelination" | none found in the tree to correct; the corrected form is kept in the package README | — |
