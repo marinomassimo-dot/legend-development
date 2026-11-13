@@ -28,7 +28,7 @@ No figure, Extended Data image, per-compound heatmap value or supplement was rea
 Three receptor-agonist compounds with indirect sterol-profile negatives (clobetasol, liothyronine, bexarotene) are the layer's only internal contrast to the EBP-documented compounds, at no new cost: "markers rise with sterol change" versus "markers rise without it" is already in the held rows. It does not show that the receptor mediates the effect (Sax calls these targets uncertain) and says nothing about the 216-row layer. IPOTESI; relation **already known but unused**.
 
 ## Cost (session_model_census; read back from the transcripts)
-Verifier V15, sonnet, effort high, read back high: first launch 69 turns, 95,258 output tokens, cache read 10,158,173; recheck launch 9 further tool calls (census at the end). No producer (the join and tables were mechanical, by script and by me). Zero spend, no contact, no personal data.
+Verifier V15, sonnet, effort high, read back high: two launches (dispatch and recheck), read back from the transcript at closing (see the task record). No producer (the join and tables were mechanical, by script and by me). Zero spend, no contact, no personal data.
 
 ## Files
 `S0_before_analysis.md` (dated addendum on the 9 compound rows); `ebp_pull.py`, `ebp_activity_rows.tsv` (334), `name_resolution.tsv`; `annotation_compounds.tsv`, `annotation_signed_rows.tsv`; `hubler_fulltext_note.md`; `apply_v15_corrections.py`, `apply_v15_recheck.py`, `CORRECTIONS.tsv`; `VERIFIER_BRIEF.md`; `verify/` (audit, verdicts, queries, receipts 6 staged, ending -64, no claim); `consumer_delta.md`.
