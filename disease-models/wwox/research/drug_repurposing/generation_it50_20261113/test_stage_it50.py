@@ -29,8 +29,9 @@ class IsrRows(unittest.TestCase):
     def test_the_isr_sign_is_an_unresolved_premise_and_the_join_is_unknown(self):
         for r in self.isr.values():
             self.assertRegex(r["premise_and_action"], r"(?i)protein.level|sign")
-            self.assertIn("open question, not an answer", r["cell_context"])
-        self.assertNotRegex(" ".join(r["cell_context"] for r in self.isr.values()), r"(?i)\blow\b")
+            self.assertIn("PPP1R15B", r["cell_context"])          # the twelfth symbol of IT49-Q02 is joined
+            self.assertIn("cannot be assigned to neurons", r["cell_context"])   # no ISR gene is neuron-enriched in either held table (HE50 values)
+        self.assertNotRegex(" ".join(r["cell_context"] for r in self.isr.values()), r"neuron-enriched in every")
 
     def test_kinase_panel_rows_of_the_target_search_are_not_carried_as_hits(self):
         t = self.isr["ISR2"]["compound_or_probe_named_by_package"]

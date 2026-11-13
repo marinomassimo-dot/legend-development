@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-13T07:57:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-13T07:59:45Z",
+ "event_id": "FTR-20261113-35372341-68",
+ "evidence_basis": [
+  "Full text served as plain text; figure images not viewed. The Figure 1 legend writes 50 ug/kg where the Methods and Results state 50 mg/kg.",
+  "verbatim_locator | proposition: neonatal wild-type clemastine slowed callosal N1 conduction while node number and myelinated-axon number fell | Results | \"action potentials transmission was significantly slower in myelinated axons (N1) of clemastine treated mice\"",
+  "verbatim_locator | proposition: internode length tended to increase but not significantly | Results | \"clemastine treatment tended to increase internode length, although the differences were not significant\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_phenotype_first_sci50_20261113/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_phenotype_first_sci50_20261113/verify/verdicts.tsv"
+ ],
+ "prior_receipt": "FTR-20261021-35372341-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC8970281 full text via the PubMed PMC full-text tool, 2026-11-13 (one request)",
+ "study_id": {
+  "doi": "10.3389/fcell.2022.841548",
+  "pmid": "35372341"
+ },
+ "workflow": "SCI50 blind verifier V13 (myelin_phenotype_first_sci50_20261113/verify), actor mp-y. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. paper_packet.py claim was refused by the session permission classifier, so no claim was made for this PMID."
+}
