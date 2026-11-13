@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Operator directive of 2026-10-19: launch a new multi-hour research batch on metabolic themes in WWOX loss of function while the operator is away; at most four Scientists (registry-read cost); authorised on everything inside the section 21d limits. Identity orchestrator is a stated assumption (AGENTS.md section 4). Standing authorisations (procedi sempre) and the section 21d reserved list still bind.",
  "TASK_ID": "ORCH-METABOLIC-BATCH-20261019",
  "DIRECTIVE_VERSION": 1,
@@ -173,8 +173,8 @@
   {
    "what": "N9 registry scale: option A (trigger re-founded on measured cost, all three surfaces watched) plus the discovery-ledger change-log move to a history file; B/C/D rejected, E deferred to the new trigger",
    "why": "no cost measured in the metabolic batch is attributable to file size (context 0, record lookup 0.83s, record-scoped edit 0.17s, depth screen 0.62s, LINT 7.85s); the append conflict the batch really paid is size-independent and sharding by record range does not cure it; a split costs ~20 tools, ~26 tests, ~370 linking documents once, for nothing measured",
-   "alternatives_rejected": "B shard by record range, C shard by year, D event store \u2014 days to weeks of work against no measured harm; E cold/hot split deferred, not refused",
-   "who_consulted": "Harness Engineering (plan) measurement packet governance/design_records/registry_scale_decision_packet_20261020.md; Mirror A7 asked only that no third byte deferral be renewed by an agent \u2014 this does not renew it, it replaces the trigger",
+   "alternatives_rejected": "B shard by record range, C shard by year, D event store — days to weeks of work against no measured harm; E cold/hot split deferred, not refused",
+   "who_consulted": "Harness Engineering (plan) measurement packet governance/design_records/registry_scale_decision_packet_20261020.md; Mirror A7 asked only that no third byte deferral be renewed by an agent — this does not renew it, it replaces the trigger",
    "authority": "operator delegated this decision to the Orchestrator on 2026-10-20, explicitly",
    "reversibility": "high",
    "how_to_revert": "restore the byte trigger in growth_anchors.py and move the change-log block back from discovery_ledger_history.md (both are single commits)"
@@ -213,5 +213,6 @@
  "REFERRED_TO_OPERATOR": [
   "PDF wishlist (closing report)",
   "review SUPERSEDED_ARTIFACTS harness decision (ceiling 15 to 9 by reclassification)"
- ]
+ ],
+ "STANDING_STEP_NOTE_20261113": "2026-11-13 (Orchestrator): the single BLOCKED step OBJ_STANDING_NEXT_WAVES is a standing rule of the operator, not an executable deliverable, and it is not open work for the proactive pilot or any monitor. Unblock condition: the operator supplies PDFs (wishlist in the closing report) or a new WWOX/WOREE/SCAR12/EIEE28 paper appears (selectable lawful pool exhausted). It stays INCOMPLETE by design; no executable step remains."
 }
