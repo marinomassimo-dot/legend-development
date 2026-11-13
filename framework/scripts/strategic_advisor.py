@@ -699,6 +699,8 @@ def tick(campaign: Path) -> dict[str, Any]:
     state.update(main_sha=obs["main_sha"], mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"], last_tick_utc=_utc(now))
     if verdict == "EVALUATE":
         state["pending_digest"] = digest
+        state["pending_events"] = obs["events"]            # the tick advances main_sha and the mandate states below; the evaluation that follows must still see what triggered it
+        state["pending_commits"] = obs["commits_since_last_tick"]
     _save_state(campaign, state)
     return {"verdict": verdict, "why": why, "events": obs["events"][:12], "open_mandates": obs["open_mandates"], "sessions": obs["sessions"], "digest": digest,
             "hours_since_last_evaluation": None if hours is None else round(hours, 1)}
@@ -829,6 +831,8 @@ def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout:
     state["running"] = _pid_identity(os.getpid()); _save_state(campaign, state)
     try:
         obs = observe(campaign, state)
+        obs["events"] = list(dict.fromkeys(list(state.get("pending_events") or []) + obs["events"]))
+        obs["commits_since_last_tick"] += int(state.get("pending_commits") or 0)
         brief = campaign / "brief_P.md"
         brief.write_text(build_brief_p(campaign, obs), encoding="utf-8")
         code = run("P", campaign, brief, model, effort, timeout, LIMITS)
@@ -838,7 +842,7 @@ def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout:
             made = register_assignments(campaign, label, assessment.read_text(encoding="utf-8"))
             print(f"{label}: {len(made)} assignment draft(s) registered: " + ", ".join(m["id"] for m in made))
         state = _load_state(campaign)
-        state.update(last_evaluation_utc=_utc(_now()), last_digest=state.get("pending_digest", state.get("last_digest")), running="")
+        state.update(last_evaluation_utc=_utc(_now()), last_digest=state.get("pending_digest", state.get("last_digest")), running="", pending_events=[], pending_commits=0)
         _save_state(campaign, state)
         return code
     finally:
