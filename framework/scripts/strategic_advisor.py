@@ -68,6 +68,7 @@ def _memory_dir() -> Path:
 
 
 MEMORY_DIR = _memory_dir()
+STATE_HOME = Path(os.environ.get("LEGEND_STATE_HOME", str(Path.home() / ".local/state/legend")))
 
 # The entry map. One home. Starting places, not a shortlist: a glob is counted here and listed by the advisor.
 ENTRY_POINTS: list[tuple[str, str, list[str]]] = [
@@ -80,7 +81,9 @@ ENTRY_POINTS: list[tuple[str, str, list[str]]] = [
         "disease-models/wwox/research/drug_repurposing/roadmap_current.md", "framework/protocols/repurposing_adapter_convention.md"]),
     ("dashboard", "Dashboard: source records of the public page (the page is a map, the records are the facts)", [
         "disease-models/wwox/research/drug_repurposing/view/README.md", "disease-models/wwox/research/drug_repurposing/view/shareable_package/manifest.json",
-        "disease-models/wwox/research/drug_repurposing/view/shareable_package/README.md", "disease-models/wwox/research/drug_repurposing/view/DEPLOY.md"]),
+        "disease-models/wwox/research/drug_repurposing/view/shareable_package/README.md", "disease-models/wwox/research/drug_repurposing/view/DEPLOY.md",
+        "disease-models/wwox/research/drug_repurposing/view/evidence_graph.json", "disease-models/wwox/research/drug_repurposing/view/work_order.json",
+        "disease-models/wwox/research/drug_repurposing/view/context_verdicts.json", "disease-models/wwox/research/drug_repurposing/view/i18n/content_en.json"]),
     ("investigations", "Investigations (research investment, not efficacy), needs and cards", [
         "disease-models/wwox/research/drug_repurposing/ranking_it*/investigations.tsv", "disease-models/wwox/research/drug_repurposing/ranking_it*/ranking.json",
         "disease-models/wwox/research/drug_repurposing/needs/needs.md", "disease-models/wwox/research/drug_repurposing/cards/*"]),
@@ -90,13 +93,18 @@ ENTRY_POINTS: list[tuple[str, str, list[str]]] = [
         "disease-models/wwox/research/drug_repurposing/**/hypotheses*"]),
     ("packages", "Completed packages and their consumer notes", [
         "disease-models/wwox/research/drug_repurposing/*/README.md", "disease-models/wwox/research/drug_repurposing/**/CONSUMER_NOTE.md"]),
-    ("diagnoses", "Diagnoses, evaluations and DREAM", [
-        "disease-models/wwox/research/session_evaluations/*", "disease-models/wwox/research/drug_repurposing/diagnosis_*/*", "disease-models/wwox/research/dream*/README.md"]),
+    ("diagnoses", "Diagnoses, evaluations and DREAM (a connection DREAM proposes is a question, not biological evidence)", [
+        "disease-models/wwox/research/session_evaluations/*", "disease-models/wwox/research/drug_repurposing/diagnosis_*/*", "disease-models/wwox/research/dream*/README.md",
+        "disease-models/wwox/research/drug_repurposing/dream*/README.md"]),
     ("memory_dismissals", "Dismissal and discovery ledgers, memory index (outside the repository)", [
         "disease-models/wwox/research/dismissal_ledger_current.md", "disease-models/wwox/research/discovery_ledger_current.md", str(MEMORY_DIR / "MEMORY.md")]),
-    ("radar", "Radar findings and capability gaps", [
-        "governance/candidates/HARNESS-SCOUT-*.md", "disease-models/wwox/research/capability_scout_log.md", "SKILLS.md", "CAPABILITIES.md"]),
-    ("tools", "Which tool answers which question (the advisor has no shell; this explains what the records came from)", ["framework/scripts/README.md"]),
+    ("radar_science", "Scientific, pharmacological, data and method radars (opportunities, not evidence)", [
+        "disease-models/wwox/research/drug_repurposing/radar_*/README.md", "disease-models/wwox/research/capability_scout_log.md"]),
+    ("harness_scouting", "Harness scouting and repository mining. The weekly candidate tables stop at their last week (see `last commit`); the live feed is the daily scout, whose host cache is outside the repository and is embedded in the Stage P brief by the caller", [
+        "governance/candidates/HARNESS-SCOUT-*.md", str(STATE_HOME / "scout_daily_briefing.md")]),
+    ("capability_surface", "What the system claims it can do, with maturity", ["SKILLS.md", "CAPABILITIES.md"]),
+    ("tools", "Which tool answers which question, and what the shipped censuses and cost tools measure (the advisor has no shell; this explains what the records came from)", [
+        "framework/scripts/README.md", "framework/protocols/delegation_budget.md"]),
 ]
 
 
@@ -130,6 +138,10 @@ def entrypoints() -> list[dict[str, Any]]:
         matches = [p for pattern in patterns for p in _resolve(pattern)]
         rel = [str(p.relative_to(ROOT)) for p in matches if ROOT in p.parents]
         last = _git("log", "-1", "--format=%cI", "--", *rel[:200]) if rel else ""
+        outside = [p for p in matches if p.is_file() and ROOT not in p.parents]
+        if outside:                                          # a host-cache file has no commit: say its modification time and that it is one
+            stamp = max(dt.datetime.fromtimestamp(p.stat().st_mtime, dt.timezone.utc) for p in outside).strftime("%Y-%m-%d") + " (file time, outside the repository)"
+            last = f"{last[:10]}; {stamp}" if last else stamp
         sized = [(p.stat().st_size, p) for p in matches if p.is_file()]
         biggest = max(sized, default=(0, None), key=lambda pair: pair[0])
         rows.append({"id": key, "what": what, "patterns": patterns, "matches": len(matches), "last_commit": last,
@@ -218,8 +230,31 @@ def render_entrypoints(rows: list[dict[str, Any]]) -> str:
     out = ["| id | what | patterns (relative to the repository root unless absolute) | matches now | last commit | largest file |", "|---|---|---|---|---|---|"]
     for r in rows:
         big = f"`{r['largest']}` ({r['largest_chars']:,} bytes)" if r["largest_chars"] >= 20000 else ""  # only where it matters: a whole read of it is a large load every later turn pays again
-        out.append(f"| {r['id']} | {r['what']} | {'<br>'.join('`' + p + '`' for p in r['patterns'])} | {r['matches']} | {r['last_commit'][:10]} | {big} |")
+        out.append(f"| {r['id']} | {r['what']} | {'<br>'.join('`' + p + '`' for p in r['patterns'])} | {r['matches']} | {r['last_commit'][:48]} | {big} |")
     return "\n".join(out)
+
+
+RECALL_PROMPT = ("Proactive Strategic Advisor pilot, hourly mechanical check. Run: cd {root} && python3 framework/scripts/strategic_advisor.py tick --campaign {campaign}. "
+                 "If the verdict is NONE, DEFERRED, RUNNING or DISABLED/EXPIRED/BUDGET, reply in one line and do nothing else. If EVALUATE, start `strategic_advisor.py evaluate --campaign {campaign}` "
+                 "in the background (run_in_background), and when it finishes read the drafted assignments with `status`, check each recipient is listed live by `claude agents --json`, "
+                 "deliver each with SendMessage (durable artifact path plus pointer), record `deliver --state SENT` or `UNREACHABLE`, and later verify the take-in-charge in the recipient's task record. "
+                 "Never invent work; never write to transcripts; no more than the campaign budget.")
+RECALL_MARK = "Proactive Strategic Advisor pilot, hourly mechanical check"   # what a session looks for in CronList before creating the recall: one copy only
+
+
+def recall_prompt(campaign: Path) -> str:
+    """The one text of the recall. The campaign is named relative to the primary checkout so every session that restores it creates the same job."""
+    rel = Path(campaign)
+    rel = rel.relative_to(ROOT) if rel.is_absolute() and ROOT in rel.parents else rel
+    return RECALL_PROMPT.format(root=ROOT, campaign=rel)
+
+
+def primary_refusal() -> str:
+    """A linked worktree has its own copy of the campaign folder, so its budget and counters would be a second campaign; the state directory is keyed by name and would be shared."""
+    if (ROOT / ".git").is_file():
+        return (f"REFUSED: {ROOT} is a linked worktree. The campaign (budget.json, invocations, assignments) lives in the primary checkout; run this from "
+                "the primary checkout so there is one campaign with one budget.")
+    return ""
 
 
 CONTRACT = ("Return one assessment with the headings given in your definition. Name every file or page you opened under "
@@ -802,6 +837,16 @@ def assignment_states(campaign: Path) -> dict[str, dict[str, Any]]:
     return out
 
 
+def scout_briefing(limit: int = 6000) -> str:
+    """The daily scout's latest briefing from the host cache (outside the repository, so outside the advisor's reach): read here by the caller, dated, shortened, addresses removed."""
+    path = STATE_HOME / "scout_daily_briefing.md"
+    if not path.is_file():
+        return "(no live scouting briefing found on this host: harness and repository opportunities cannot be assessed from the weekly tables, whose last week is old)"
+    text = re.sub(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+", "[address removed]", path.read_text(encoding="utf-8", errors="replace"))
+    stamp = dt.datetime.fromtimestamp(path.stat().st_mtime, dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
+    return f"file time {stamp}; {'first %d of %d characters' % (limit, len(text)) if len(text) > limit else 'complete'}\n\n" + text[:limit]
+
+
 def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
     campaign = Path(campaign)
     states = assignment_states(campaign)
@@ -813,6 +858,7 @@ def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
              "## Assignments already drafted, with their evidence level (do not duplicate; follow what was taken in charge)",
              json.dumps({k: {"recipient": v["recipient"], "key": v["key"], "highest": v["highest"]} for k, v in states.items()}, indent=1) or "none", "",
              f"## Previous assessment\n{prior[-1].parent.name}: `{prior[-1]}` (read it; reuse it when nothing relevant changed)" if prior else "## Previous assessment\nnone", "",
+             "## Live harness scouting (daily scout briefing, read by the caller: a feed of opportunities, not of evidence; the weekly candidate tables are stale)", scout_briefing(), "",
              "## Neutral entry points", render_entrypoints(entrypoints()), "", f"Memory directory (read-only): `{MEMORY_DIR}`", "", "## Output", CONTRACT,
              "Give the usual headings, then `## Assignments`: either `none: <reason>` (continuing the plan can be the best decision) or one `### ASSIGNMENT n` block per assignment with exactly these "
              "`field: value` lines: " + ", ".join(ASSIGNMENT_FIELDS) + ". recipient is Orchestrator, Science or Harness. At most as many blocks as the campaign allows; none to show independence.", ""]
@@ -886,6 +932,7 @@ def main(argv: list[str] | None = None) -> int:
     ac = sub.add_parser("activate", help="write the campaign budget (24 h by default, no renewal)"); ac.add_argument("--campaign", required=True)
     ac.add_argument("--hours", type=int, default=24); ac.add_argument("--max-invocations", type=int, default=3); ac.add_argument("--max-assignments", type=int, default=3)
     ac.add_argument("--turn-limit", type=int, default=20); ac.add_argument("--recipient", action="append", default=[], help="role=session name, e.g. Orchestrator='IT Orchestrator'")
+    rc = sub.add_parser("recall", help="print the one canonical text of the hourly recall (what to pass to CronCreate when restoring it); CronList first, so there is one copy only"); rc.add_argument("--campaign", required=True)
     dis = sub.add_parser("disable", help="stop the pilot: later ticks and runs refuse; ordinary scheduling and the sessions' work continue"); dis.add_argument("--campaign", required=True)
     args = ap.parse_args(argv)
 
@@ -922,6 +969,10 @@ def main(argv: list[str] | None = None) -> int:
     if args.cmd == "check":
         return check(Path(args.campaign))
     campaign = Path(args.campaign)
+    if args.cmd in ("recall", "tick", "evaluate", "deliver", "activate", "disable") and primary_refusal():
+        print(primary_refusal(), file=sys.stderr); return 2
+    if args.cmd == "recall":
+        print(recall_prompt(campaign)); return 0
     if args.cmd == "tick":
         print(json.dumps(tick(campaign), indent=1)); return 0
     if args.cmd == "evaluate":
