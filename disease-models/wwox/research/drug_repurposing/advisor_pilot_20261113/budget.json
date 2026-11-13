@@ -1,0 +1,12 @@
+{
+ "activated_utc": "2026-11-13T18:22:36Z",
+ "expires_utc": "2026-11-14T18:22:36Z",
+ "max_assignments": 3,
+ "max_invocations": 3,
+ "recipients": {
+  "Harness": "HE",
+  "Orchestrator": "IT Orchestrator",
+  "Science": "SCI"
+ },
+ "turn_limit": 20
+}
