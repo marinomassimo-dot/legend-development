@@ -102,6 +102,11 @@ PKG_MAP = {
                          observation=["wwox_observation"], relation=["mechanism_and_missing_bridge"], context=["action_cell_context"], action=[], compound=["probe_or_qualified_compound"],
                          premise=["mechanism_and_missing_bridge"], competing=["competing_alternative"], expected=[], measure=["favourable_result"], reopen=["weakening_result", "next_decision"],
                          title="mechanism_and_missing_bridge", sibling_cell="mechanism_and_missing_bridge"),
+    # IT50: the INV-02 ISR hypotheses written from the INV-02 row and the audited ISR package (layout like the HCN package). The package states no prediction, so the expected slot says so.
+    "isr_inv02_it50_20261113": dict(inv="INV-02", relation_ids=[], symbols=["EIF2AK1", "EIF2AK2", "EIF2AK3", "EIF2AK4", "EIF2B1", "EIF2B2", "EIF2B3", "EIF2B4", "EIF2B5", "PPP1R15A", "EIF2S1"],
+                                    observation=["wwox_observation"], relation=["explanation_and_rivals"], context=["preparation_context"], action=["hypothesised_action"], compound=["probe_or_compound"],
+                                    premise=["unresolved_premise"], competing=["explanation_and_rivals"], expected=["prediction_stated"], measure=["discriminating_result"], reopen=["reopen_or_abandon"],
+                                    title="hypothesised_action", sibling_cell="hypothesised_action"),
 }
 PKG_FIELDS = FIELDS + ["package_ref", "direction_stated", "unmapped_cells", "package_title", "recorded_support", "reopen_or_abandon"]
 
@@ -119,7 +124,12 @@ def package_rows():
     """One conditional proposal per hypothesis row of the mapped packages. Returns (rows, report) where report lists packages reachable but not mapped."""
     pk = hp.load_all(); out = []; seen_unmapped = {}
     rel = cc.relations()
-    for inv in ("INV-18", "INV-08", "INV-09"):
+    # IT50: the investigations are read from the manifest (every INV with a hypotheses_only package), not from a fixed list; the three earlier ones keep their order so existing rows stay byte-identical.
+    order = ["INV-18", "INV-08", "INV-09"]
+    for p in pk:
+        if p.get("role") == "hypotheses_only" and p.get("inv_id") and p["inv_id"] not in order:
+            order.append(p["inv_id"])
+    for inv in order:
         res = hp.hypotheses_for(pk, inv)
         by_pkg = {}
         for x in res["rows"]:

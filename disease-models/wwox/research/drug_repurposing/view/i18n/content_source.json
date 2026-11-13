@@ -67,6 +67,10 @@
   "src": "it",
   "text": "Lavoro su animali; linea con delezione neurone-specifica non disponibile (non nota); denominatori di RM solo a livello di abstract (2 su 2 esposti, in un rapporto selezionato per il reperto; frequenza, non rischio attribuibile); il denominatore di una coorte di 64 bambini è probabilmente quello che li comprende, non verificato."
  },
+ "0760a5aefb92": {
+  "src": "en",
+  "text": "Weakened if phospho-eIF2alpha is not raised and ISRIB with a working engagement control gives full translation restoration (then ISRIB acts by a route not described in the sources read) (CARD-A1 result_that_would_weaken_it); repeat step 0 if the engagement control fails."
+ },
  "0838f09e6cea": {
   "src": "en",
   "text": "position unchanged from IT20 (rank 2): No IT21 input changes the position. IT29: epilepsy-model screens in other genotypes give no corroboration for this agent (absence of corroboration is not refutation); the position rests on the single pup experiment."
@@ -611,6 +615,10 @@
   "src": "it",
   "text": "Più alta in organoide, topo e P47T e negli organoidi di pazienti: letture diverse, stessa direzione."
  },
+ "489bc8cbb8a6": {
+  "src": "en",
+  "text": "Two readings of a translation difference in WWOX-deficient cells: (1) phospho-eIF2alpha is the brake (ISR route); (2) if not, a GSK3-site brake exists (CARD-A1 inferred_steps). Within reading (2) the sources record further branches: GSK3-other through the mTOR branch, or an unnamed substrate (un registro del repository (non incluso in questo pacchetto) step 3b). Counter-evidence on ISRIB itself: an effect at basal state in some sources and none in others, no ATF4 change in rat cortical cultures, no benefit in one toxic-protein model (CARD-A1 main_counterevidence). A probe response separates (1) from (2) only if the engagement control works and phospho-eIF2alpha is measured.. Exploratory: the package states no therapeutic direction. Unresolved premise: The sign of the ISR at protein level in a WWOX-deficient human neural cell is unmeasured (INV-02 decisive_uncertainty); until it is, an attenuating and a potentiating compound remain equally defensible. Step 0 must first show that the readouts and an engagement control (eIF2B assembly shift by sedimentation, not ATF4 in neurons) can be read in the…"
+ },
  "48a152b1b896": {
   "src": "en",
   "text": "Development feasibility: low as a drug (a peptide whose one distribution study shows lungs and spleen, with no CNS exposure) and high as a cell-level probe. It depends on the allele and cannot serve a variant that makes no protein."
@@ -750,6 +758,10 @@
  "5cd356f84317": {
   "src": "en",
   "text": "position unchanged from IT20 (rank 5): Position unchanged from IT20. The ten-row ceiling does not displace a row that carries a risk flag or human clinical reports in favour of a conditional probe (the rule stated in the curation block of the context), so this row stays at rank 5 and the two new IT21 conditional probes sit at rank 6, below the line. New IT21 input: the inositol-monophosphatase route to the lithium effect is DISFAVOURED_BY_SIGN_PRECEDENT (an analogy from the lithium-pilocarpine model, not a measurement in the Wwox assay; see what the generator rules out). That result is not what supports this row's concern that the effect is not specific to WWOX loss: the concern comes from the +/+ arm of Cheng 2020 Figure 7d, where lithium suppresses the seizure stage as in the null. Cheng 2020 also ran a pilocarpine model in Wwox mice, so the objection that the two provocations differ is testable in the same system; the inositol arm of that proposal is folded into this row's next test."
+ },
+ "5d29c19f1ea2": {
+  "src": "en",
+  "text": "Alternatives the package states: Two readings of a translation difference in WWOX-deficient cells: (1) phospho-eIF2alpha is the brake (ISR route); (2) if not, a GSK3-site brake exists (CARD-A1 inferred_steps). Within reading (2) the sources record further branches: GSK3-other through the mTOR branch, or an unnamed substrate (un registro del repository (non incluso in questo pacchetto) step 3b). Counter-evidence on ISRIB itself: an effect at basal state in some sources and none in others, no ATF4 change in rat cortical cultures, no benefit in one toxic-protein model (CARD-A1 main_counterevidence). A probe response separates (1) from (2) only if the engagement control works and phospho-eIF2alpha is measured. || Other rows of the package, not classified by it as rivals, complementary or compatible: ISR2: Only if the protein-level sign is high, a pre-registered panel (INV-02 next_test): an eIF2B activator and kinase-level loss against… || ISR3: INV-02 next_test (IT30 design hypothesis): if a potentiation arm is tried, make it genetic (a PPP1R15B knockdown) or chemical with…"
  },
  "5dd0c8528ba5": {
   "src": "en",
@@ -987,6 +999,10 @@
   "src": "en",
   "text": "Whether the reduced current is a receptor, a GABA-content or an interneuron-output deficit, and whether GABA is hyperpolarising in these cells at P13 to P17 (the recording could not report the reversal potential). A bath-applied modulator also acts on oligodendrocyte-precursor cells, which carry functional GABA-A receptors in mouse cortex."
  },
+ "721f9359b236": {
+  "src": "en",
+  "text": "None for ISRIB or eIF2B in a WWOX system (un registro del repository (non incluso in questo pacchetto) CARD-A1, wwox_starting_observation). INV-02 evidence_available: WWOX-system transcript-level only and contradictory: the knockout organoid shows the ISR target set lower, one shRNA library per arm shows it higher, and the designs are not comparable; no ATF4 protein and no eIF2-alpha phosphorylation measurement exists in the sources read (un registro del repository (non incluso in questo pacchetto), INV-02)."
+ },
  "72f2870c7a45": {
   "src": "en",
   "text": "Whether the halved inhibitory current is a supply deficit; the direction depends on the chloride gradient of the preparation, which is unmeasured."
@@ -1138,10 +1154,6 @@
  "85ab04c15263": {
   "src": "en",
   "text": "Reached from the T-type calcium need through the catalogue path; the proposed pair is a proposal to verify (IT20)."
- },
- "867502496261": {
-  "src": "en",
-  "text": "Ex vivo slice electrophysiology in an existing Wwox neuron-deleted line; tool compounds only; no brain-exposure statement is carried here and none is implied for any clinically used member. [IT41] Decision: whether any HCN-directed tool arm is run. Possible in silico: an ortholog and isoform census of the tools. New measure: sag and rebound at matched potential and deflection, with capacitance and access resistance by genotype. Reopen if: the excess sag persists at matched conditions. Priority: after the matched recording and after INV-05's minimum experiment; no HCN compound is nominated before it. [IT45] Possible in silico: done: the Kv7 lever joined to the cell class (neuron-enriched RNA for the Kv7 genes against astrocytic Kir4.1) fixes the order of difference currents. New measure: the Ba2+-, Kv7-blocker- and Ih-blocker-sensitive difference currents in the same slices, and a Kv7 opener arm only against an equal current-injection hyperpolarisation. Reopen if: Kv7 expression at P13-17 layer II/III, or the Kv7 current at rest, is measured. [IT46 cell context] The IT45 join compared neurons with astrocytes only. Against every class of the held tables the Kv7 genes are not cleanly neuronal: KCNQ2 is highest in P7 mouse neurons (30.68 FPKM) but OPC (P17) reaches 10.68 (under the 3-fold convention, so 'shared'); KCNQ3 is 4.27 in neurons against 4.57 in newly formed oligodendrocytes (P17) (shared); the one human neuron sample reads KCNQ2 at 0.10 against 4.30 in astro_fetal_ctx; KCNQ4 and KCNQ5 were not queried (unknown). A Kv7-blocker-sensitive difference current therefore needs a cell-specific control too, as a Ba2+-sensitive one does; RNA class means, P7, not current. Machine reading (un registro del repository (non incluso in questo pacchetto)): KCNQ2 (mouse shared, human enriched elsewhere); KCNQ3 (mouse shared, human shared); not in any table (unknown): KCNQ4, KCNQ5. An effect or difference current attributed to KCNQ2, KCNQ3 cannot be assigned to neurons from these tables (shared, elsewhere, not detected, or the tables disagree): it needs a cell-specific control. [IT47 update] KCNQ4 and KCNQ5 are now queried (RNA class means, same inputs): KCNQ5 is neuron-enriched in both tables (mouse 9.40 against 0.98 in the oligodendrocyte lineage; human sample 15.00), KCNQ4 is shared in mouse and not detected in the human sample. Of the four Kv7 genes only KCNQ5 is neuron-enriched in every table that carries it; the statement that a Kv7-blocker-sensitive current needs a cell-specific control stands for KCNQ2 and KCNQ3. RNA is not current. Source: un registro del repository (non incluso in questo pacchetto). [IT47 update 2] The held human KCNQ2 value (0.1 in one neuron sample, 0.2-1.5 in whole cortex) is low across that table and its cause is unknown: it is not a species difference. A second human nuclei table (source dataset not verified) gives neuronal KCNQ2 with OPC at 0.73 of the neuronal maximum, so an OPC contribution to a bath-applied opener is a plausible alternative to control, not shown. RNA is not current. [SCI49 update 3] Verified by an independent reader: the second human table is the HPA single-nuclei brain table, which the HPA documentation attributes to Siletti et al. 2023 (about 2.6 million nuclei, 11 regions, 48 cell types; the paper itself was not reached). OPC KCNQ2 RNA is 0.73 of forebrain projection neurons (0.68 of the highest neuronal cluster; 8th of 48 clusters; mouse P17 OPC 0.35 of P7 neurons). The held human 0.1 is a reporting floor, not a measured level. A Kv7-blocker-sensitive current in OPC is reported in one study in cultured rat cells; nothing is known in slice or at P13-P17. An OPC control is required only to state that a bath-applied opener acts through neurons (identified NG2-cell recordings in the same slices; a cell-restricted Kcnq2 manipulation if a current exists), not to report the bath effect, its Kv7 dependence or a genotype-by-drug component. RNA is not protein or current."
  },
  "8705174d767d": {
   "src": "en",
@@ -1743,6 +1755,10 @@
   "src": "en",
   "text": "Measure the achieved block and the NMDA-receptor current at the working concentration; test survival of the bursts under a verified block; d-APV only if bursts persist."
  },
+ "c3d830b22849": {
+  "src": "en",
+  "text": "Ex vivo slice electrophysiology in an existing Wwox neuron-deleted line; tool compounds only; no brain-exposure statement is carried here and none is implied for any clinically used member. [IT41] Decision: whether any HCN-directed tool arm is run. Possible in silico: an ortholog and isoform census of the tools. New measure: sag and rebound at matched potential and deflection, with capacitance and access resistance by genotype. Reopen if: the excess sag persists at matched conditions. Priority: after the matched recording and after INV-05's minimum experiment; no HCN compound is nominated before it. [IT45] Possible in silico: done: the Kv7 lever joined to the cell class (neuron-enriched RNA for the Kv7 genes against astrocytic Kir4.1) fixes the order of difference currents. New measure: the Ba2+-, Kv7-blocker- and Ih-blocker-sensitive difference currents in the same slices, and a Kv7 opener arm only against an equal current-injection hyperpolarisation. Reopen if: Kv7 expression at P13-17 layer II/III, or the Kv7 current at rest, is measured. [IT46 cell context] The IT45 join compared neurons with astrocytes only. Against every class of the held tables the Kv7 genes are not cleanly neuronal: KCNQ2 is highest in P7 mouse neurons (30.68 FPKM) but OPC (P17) reaches 10.68 (under the 3-fold convention, so 'shared'); KCNQ3 is 4.27 in neurons against 4.57 in newly formed oligodendrocytes (P17) (shared); the one human neuron sample reads KCNQ2 at 0.10 against 4.30 in astro_fetal_ctx; KCNQ4 and KCNQ5 were not queried (unknown). A Kv7-blocker-sensitive difference current therefore needs a cell-specific control too, as a Ba2+-sensitive one does; RNA class means, P7, not current. Machine reading (un registro del repository (non incluso in questo pacchetto)): KCNQ2 (mouse shared, human enriched elsewhere); KCNQ3 (mouse shared, human shared); not in any table (unknown): KCNQ4, KCNQ5. An effect or difference current attributed to KCNQ2, KCNQ3 cannot be assigned to neurons from these tables (shared, elsewhere, not detected, or the tables disagree): it needs a cell-specific control. [IT47 update] KCNQ4 and KCNQ5 are now queried (RNA class means, same inputs): KCNQ5 is neuron-enriched in both tables (mouse 9.40 against 0.98 in the oligodendrocyte lineage; human sample 15.00), KCNQ4 is shared in mouse and not detected in the human sample. Of the four Kv7 genes only KCNQ5 is neuron-enriched in every table that carries it; the statement that a Kv7-blocker-sensitive current needs a cell-specific control stands for KCNQ2 and KCNQ3. RNA is not current. Source: un registro del repository (non incluso in questo pacchetto). [IT47 update 2] The held human KCNQ2 value (0.1 in one neuron sample, 0.2-1.5 in whole cortex) is low across that table and its cause is unknown: it is not a species difference. A second human nuclei table (source dataset not verified) gives neuronal KCNQ2 with OPC at 0.73 of the neuronal maximum, so an OPC contribution to a bath-applied opener is a plausible alternative to control, not shown. RNA is not current. [SCI49 update 3] Verified by an independent reader: the second human table is the HPA single-nuclei brain table, which the HPA documentation attributes to Siletti et al. 2023 (about 2.6 million nuclei, 11 regions, 48 cell types; the paper itself was not reached). OPC KCNQ2 RNA is 0.73 of forebrain projection neurons (0.68 of the highest neuronal cluster; 8th of 48 clusters; mouse P17 OPC 0.35 of P7 neurons). The held human 0.1 is a reporting floor, not a measured level. A Kv7-blocker-sensitive current in OPC is reported in one study in cultured rat cells; nothing is known in slice or at P13-P17. An OPC control is required only to state that a bath-applied opener acts through neurons (identified NG2-cell recordings in the same slices; a cell-restricted Kcnq2 manipulation if a current exists), not to report the bath effect, its Kv7 dependence or a genotype-by-drug component. RNA is not protein or current. [IT50 cell class] In the held RNA class tables no Kir2-family subunit gene is neuron-enriched: KCNJ2 is enriched in other classes in both tables (mouse neurons P7 0.74 FPKM against an endothelial class 41.80; the one human neuron sample 1.40 against an oligodendrocyte-class sample 6.64, n=1); KCNJ4 and KCNJ12 are shared in the mouse table and not detected in the human one; KCNJ14 is in no held table (unknown, not low). The astrocytic Kir gene KCNJ10 is enriched in astrocytes in both tables (mouse 184.76 against 8.12 in neurons; human 126.02 against 9.00). So a Ba2+- or Kir2-directed effect cannot be assigned to neurons from these tables: the glial (Kir4.1) arm is required for the statement that a Ba2+ share is neuronal, and a native-cell positive control for a Kir2 probe is not identifiable from them (a heterologous control is the default). RNA class means of different ages; not protein, current or subunit composition."
+ },
  "c3e2690b7bed": {
   "src": "en",
   "text": "A lactate-side probe: the sign depends on the cell compartment"
@@ -1882,6 +1898,10 @@
  "d456e9186e46": {
   "src": "en",
   "text": "Is there a PDH block in a WWOX-deficient human neural cell at all, and does its direction match the one this lever assumes?"
+ },
+ "d4779fc24bab": {
+  "src": "en",
+  "text": "ISRIB: eIF2B activator that binds the beta-delta interface and stabilises the decamer; it offsets phospho-eIF2 inhibition and does not stop…"
  },
  "d480d04437a2": {
   "src": "en",
@@ -2090,6 +2110,10 @@
  "e84067150d3f": {
   "src": "en",
   "text": "E2 - card reviewed, abstention (premise named, no test designed)"
+ },
+ "e94dbed009cd": {
+  "src": "en",
+  "text": "none claimed: the probe gives information, it is not assumed to rescue (CARD-A1 hypothesised_benefit) Measure: un registro del repository (non incluso in questo pacchetto) step 1 (condition: step 0 passed): (a) phospho-eIF2alpha raised and ISRIB restores translation: ISR route in this preparation, go to step 4, GSK3 branch deprioritised but not refuted; (b) phospho-eIF2alpha not raised and translation lowered: go to step 2 (GSK3 contribution); (c) translation not lowered: stop, change stage or cell type before concluding; (d) engagement control fails: uninformative, repeat step 0."
  },
  "e9520227b9c9": {
   "src": "en",
