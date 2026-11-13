@@ -1,0 +1,530 @@
+{
+  "capture": {
+    "assessment_sha256": "30daf4ce4a43594508d9aa45191087fb6fc359f8a2e00f3770c0961175841751",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P1/stream.jsonl",
+    "raw_stream_sha256": "e151b49a03eb3c6c78d9ebd6a0a9cc5919bd46707a19bed370424712961938d3",
+    "source_session_id": "2b97044e-4516-45c5-a20a-24048f997336",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 9265
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-13T18:34:18Z",
+  "label": "P1",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": true,
+      "efforts": {
+        "high": 19
+      },
+      "first_turn_context": 18772,
+      "models": {
+        "claude-opus-5": 13,
+        "claude-opus-5-5": 6
+      },
+      "peak_context": 84952,
+      "totals": {
+        "cache_creation": 149850,
+        "cache_read": 1091676,
+        "output": 20104
+      },
+      "turns": 19
+    },
+    "final_turn_model": "claude-opus-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.00566,
+        "inputTokens": 41205,
+        "maxOutputTokens": 128000,
+        "outputTokens": 3079,
+        "provider": "firstParty",
+        "thinkingTokens": 2467,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5": {
+        "cacheCreationEphemeral1hInputTokens": 85309,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 85309,
+        "cacheReadInputTokens": 900247,
+        "canonicalModel": "claude-opus-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 1.7452534999999998,
+        "inputTokens": 28,
+        "maxOutputTokens": 64000,
+        "outputTokens": 17676,
+        "provider": "firstParty",
+        "thinkingTokens": 7050,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 65013,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 65013,
+        "cacheReadInputTokens": 255970,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.621962,
+        "inputTokens": 16,
+        "maxOutputTokens": 128000,
+        "outputTokens": 2530,
+        "provider": "firstParty",
+        "thinkingTokens": 894,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 40,
+    "refusal_fallbacks": [
+      {
+        "apiRefusalCategory": null,
+        "direction": "retry",
+        "fallbackModel": null,
+        "originalModel": null,
+        "scope": "session",
+        "trigger": "refusal"
+      }
+    ],
+    "total_cost_usd": 2.3728755,
+    "turn_models": {
+      "claude-opus-5": 13,
+      "claude-opus-5-5": 7
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 149850,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 149850,
+      "cache_read_input_tokens": 1091676,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 40,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 1420,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 1420,
+          "cache_read_input_tokens": 83530,
+          "input_tokens": 2,
+          "output_tokens": 10529,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 20104,
+      "output_tokens_details": {
+        "thinking_tokens": 7842
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-13T18:29:20Z",
+  "tool_calls": [
+    {
+      "input": {
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/roadmap_current.md",
+        "pattern": "^#{1,3} "
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "1:# Drug repurposing \u2014 current development roadmap\n3:## Operator roadmap (authoritative; read this first)\n43:## Guiding principle\n52:## Research objectives\n66:#"
+    },
+    {
+      "input": {
+        "pattern": "ledger/tasks/*/*20261113*.json"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "ledger/tasks/orchestrator/ORCH-SCI50-20261113.json\nledger/tasks/plan/PLAN-HE50-DESIGN-ONLY-PHARMACOLOGY-20261113.json\nledger/tasks/plan/PLAN-DASHBOARD-READABILI"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/.claude/projects/-home-desktop-legend-development/memory/sci51-pitfalls.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t---\n2\tname: sci51-pitfalls\n3\tdescription: SCI51 lessons \u2014 check journal notices (Correction, Expression of Concern) for any reagent paper before building a de"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/.claude/projects/-home-desktop-legend-development/memory/strategic-advisor-pitfalls.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t---\n2\tname: strategic-advisor-pitfalls\n3\tdescription: Strategic Advisor build + first real use (2026-11-12) runtime facts \u2014 opus 5.5 `bio` refusal fallback to"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/roadmap_current.md",
+        "limit": 135
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Drug repurposing \u2014 current development roadmap\n2\t\n3\t## Operator roadmap (authoritative; read this first)\n4\t\n5\tThe roadmap below is the operator's. It define"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-SCI51-20261113.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t \"_schema\": \"task record, Annex A.1c\",\n3\t \"TASK_ID\": \"ORCH-SCI51-20261113\",\n4\t \"OWNER\": \"orchestrator\",\n5\t \"ACTOR_ID\": \"orchestrator\",\n6\t \"PRIORITY\": \"HIG"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ROADMAP-IT50-20261113.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t \"_schema\": \"orchestrator-task-v1\",\n3\t \"OWNER\": \"orchestrator\",\n4\t \"ACTOR_ID\": \"orchestrator\",\n5\t \"PRIORITY\": \"P0\",\n6\t \"TASK_ID\": \"ORCH-ROADMAP-IT50-20261"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/**"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/BRIEF_P.md\ndisease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_2026"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/plan/PLAN-PROACTIVE-ADVISOR-20261113.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t  \"_schema\": \"LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT\",\n3\t  \"TASK_ID\": \"PLAN-PROACTIVE-ADVISOR-20261113\",\n4\t  \"DIRECTIVE_VERSION\": 1,\n5\t  \"GE"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/plan/PLAN-HE50-DESIGN-ONLY-PHARMACOLOGY-20261113.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t  \"_schema\": \"LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT\",\n3\t  \"TASK_ID\": \"PLAN-HE50-DESIGN-ONLY-PHARMACOLOGY-20261113\",\n4\t  \"DIRECTIVE_VERSION\""
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/plan/PLAN-DASHBOARD-READABILITY-20261113.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t  \"_schema\": \"LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT\",\n3\t  \"TASK_ID\": \"PLAN-DASHBOARD-READABILITY-20261113\",\n4\t  \"DIRECTIVE_VERSION\": 1,\n5\t "
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/README.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# SCI51 \u2014 can the M1-antagonism versus EBP-inhibition comparison be built with interpretable reagents? (2026-11-13)\n2\t\n3\tNon-canonical research material. Not "
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/consumer_delta.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# SCI51 \u2014 consumer delta (proposals; 2026-11-13)\n2\t\n3\tNon-canonical. Not medical advice. The Orchestrator of SCI51 edits no shared consumer, ranking, registry"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "IT51-Q0"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 2 files\ndisease-models/wwox/research/drug_repurposing/generation_it50_20261113/apply_it51_sci51.py\ndisease-models/wwox/research/drug_repurposing/batch_sci"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/plan/PLAN-HE47-USABLE-KNOWLEDGE-PRESERVED-MEANING-SUSTAINABLE-COST-20261112.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t  \"_schema\": \"LEGEND governance v3.1.1 \\u00b7 Annex A.1 TASK_ASSIGNMENT\",\n3\t  \"TASK_ID\": \"PLAN-HE47-USABLE-KNOWLEDGE-PRESERVED-MEANING-SUSTAINABLE-COST-20"
+    },
+    {
+      "input": {
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_s",
+        "pattern": "IT51-Q0|IT50-Q0[349]"
+      },
+      "is_error": true,
+      "name": "Grep",
+      "result_head": "Interrupted: the response that made this tool call was stopped by a safety classifier while the call was running; it may have partially or fully completed."
+    },
+    {
+      "input": {
+        "-n": true,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "pattern": "IT51-Q"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "176:[Omitted long matching line]\n181:[Omitted long matching line]\n183:[Omitted long matching line]\n184:IT51-Q02\tm1_ebp_reagents_sci51_20261113/README.md open qu"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "limit": 14,
+        "offset": 174
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "174\tIT50-Q02\tmyelin_phenotype_first_sci50_20261113/output/open_questions.tsv OQ11\tDoes the null-neuron medium effect survive neuron purification, mixing with wi"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/SELECTION.md\ndisease-models/wwox/research/drug_repurposing/phenotype_first_it29_2026"
+    },
+    {
+      "input": {
+        "head_limit": 40,
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "EBP"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 40 files limit: 40\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P1/brief.md\ndisease-models/wwox/research/drug_repurposing/advisor_"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/signed_rows_case1_it29.tsv",
+        "limit": 6
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\trow_id\tevidence_row\ttarget_symbol\taction_on_target\tdirection_on_endpoint\tattribution\tintervention_type\tmeasure_level\tcomposition_or_autonomous\tsource_id\tcurat"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/output/activities.tsv",
+        "limit": 5
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\trow_id\treagent\ttarget\tassay\tsystem\tvalue_and_unit_and_conditions\tmeasured_status\tcross_activity_note\tsource\tlocator\tdepth\tkind\n2\tAC001\tclemastine\tM1\tfunctiona"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/comparison_case1_it29.tsv",
+        "limit": 4
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tcompound\tevidence_direction\tevidence_rows\tsign_source_is_reference\tin_catalogue_B\tarm_A_labels\tarm_A_verdict\tarm_C_labels\tarm_C_verdict\n2\tbenztropine\tfavourab"
+    },
+    {
+      "input": {
+        "-n": true,
+        "head_limit": 30,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/README.md",
+        "pattern": "216|191 famil|signed_rows"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "7:[Omitted long matching line]\n13:[Omitted long matching line]\n19:| Data available but not represented | signed target-to-endpoint couplings (now `signed_rows_c"
+    },
+    {
+      "input": {
+        "output_mode": "count",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/comparison_case1_it29.tsv",
+        "pattern": "^"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/comparison_case1_it29.tsv:21\n\nFound 21 total occurrences across 1 file."
+    },
+    {
+      "input": {
+        "output_mode": "count",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/signed_rows_case1_it29.tsv",
+        "pattern": "^"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/signed_rows_case1_it29.tsv:32\n\nFound 32 total occurrences across 1 file."
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/README.md",
+        "limit": 20,
+        "offset": 1
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# IT29: phenotype-first generation, compared with the current path (P2 to P8)\n2\t\n3\tNon-canonical research material, not medical advice. Public edition, WWOX-D"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/generation_it29_p5_20261105/**"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/generation_it29_p5_20261105/results_s10/carried_prior_decisions.tsv\ndisease-models/wwox/research/drug_repurposing/"
+    },
+    {
+      "input": {
+        "head_limit": 10,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/generation_it29_p5_20261105/results_s10/summary_it21.json",
+        "pattern": "216"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No matches found"
+    },
+    {
+      "input": {
+        "head_limit": 20,
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "216 signed|216 rows|signed rows"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 20 files limit: 20\ndisease-models/wwox/research/drug_repurposing/view/shareable_package/it.html\ndisease-models/wwox/research/drug_repurposing/view/shareab"
+    },
+    {
+      "input": {
+        "pattern": "ledger/tasks/**/*METABOLIC*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "ledger/tasks/plan/PLAN-HARNESS-FROM-METABOLIC-BATCH-20261020.json\nledger/tasks/orchestrator/ORCH-METABOLIC-BATCH-20261019.json"
+    },
+    {
+      "input": {
+        "pattern": "ledger/tasks/**/*INTAKE-OVERNIGHT*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "ledger/tasks/orchestrator/INTAKE-OVERNIGHT-20261002.json"
+    },
+    {
+      "input": {
+        "head_limit": 12,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-METABOLIC-BATCH-20261019.json",
+        "pattern": "MANDATE_STATE|CURRENT_STATE|RESUME|OBJECTIVE|next_executable_step|first_incomplete_work"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "10: \"OBJECTIVE\": \"Run a metabolic-themes literature batch for WWOX loss of function (lipids, simple carbohydrates and fructose, very-long-chain fatty acids, mit"
+    },
+    {
+      "input": {
+        "head_limit": 12,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks/orchestrator/INTAKE-OVERNIGHT-20261002.json",
+        "pattern": "MANDATE_STATE|CURRENT_STATE|RESUME|OBJECTIVE|next_executable_step|first_incomplete_work"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "10:  \"OBJECTIVE\": \"Run successive intake waves of three Scientists each: select studies from the queue by abstract plus a real full-text body check, dispatch, i"
+    },
+    {
+      "input": {
+        "output_mode": "count",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/view/shareable_package/index.html",
+        "pattern": "design role"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/view/shareable_package/index.html:2\n\nFound 2 total occurrences across 1 file."
+    },
+    {
+      "input": {
+        "output_mode": "count",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations.tsv",
+        "pattern": "SCI51|design role|sterol isomerase"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations.tsv:1\n\nFound 1 total occurrence across 1 file."
+    },
+    {
+      "input": {
+        "-n": true,
+        "head_limit": 25,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/generation_it50_20261113/README.md",
+        "pattern": "IT51|next batch|re-annotat"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No matches found"
+    },
+    {
+      "input": {
+        "prompt": "List the headings of the first screen and the titles of the investigations shown in the priority list. Quote any sentence that mentions a muscarinic M1 arm, a reagent pair, or a \"design role\" qualification. Do not summarise beyond what is on the page.",
+        "url": "https://marinomassimo-dot.github.io/legend-development/"
+      },
+      "is_error": false,
+      "name": "WebFetch",
+      "result_head": "**Headings on the first screen**\n\n- WWOX: what to study, and on what evidence\n- Main investigations to pursue\n- Research priorities\n- Biology and mechanisms\n- C"
+    }
+  ]
+}

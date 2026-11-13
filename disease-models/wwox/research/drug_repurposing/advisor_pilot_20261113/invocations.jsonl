@@ -1,0 +1,2 @@
+{"brief_sha256": "7817f60c9de4bfd64a8467c097563012c715a6e898ba83c9989e67901b3770a4", "effort_asked": "high", "index": 1, "label": "P1", "model_asked": "opus", "outcome": "STARTED", "stage": "P", "started_utc": "2026-11-13T18:29:20Z"}
+{"brief_sha256": "7817f60c9de4bfd64a8467c097563012c715a6e898ba83c9989e67901b3770a4", "effort_asked": "high", "ended_utc": "2026-11-13T18:34:18Z", "index": 1, "label": "P1", "model_asked": "opus", "outcome": "OK", "stage": "P", "started_utc": "2026-11-13T18:29:20Z"}
