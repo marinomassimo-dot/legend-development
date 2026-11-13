@@ -23,7 +23,7 @@
    "steps": [
     {
      "step": "Read the canonical instructions, the proactive implementation and the current campaign; state budget, expiry, invocations used, assignments produced/delivered/executed/consumed, the hosting session and its scheduled recall, and defects already fixed; no activate, no new campaign, no counter reset",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "plan",
      "evidence": ""
     }
@@ -35,7 +35,7 @@
    "steps": [
     {
      "step": "One campaign path and one operational state shared by HE and ADV: copies in worktrees must not become independent campaigns with separate budgets; make that structural where cheap, otherwise state it",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "plan",
      "evidence": ""
     }
@@ -47,7 +47,7 @@
    "steps": [
     {
      "step": "Continuity of the ADV presidio: session-bound cron, what survives compaction/resume/termination, restore-on-restart without a second copy, one canonical recall prompt, monitor association of the ADV mandate; declare unresolved limits; no new permanent service",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "plan",
      "evidence": ""
     }
@@ -59,7 +59,7 @@
    "steps": [
     {
      "step": "Make the Advisor's strategic inputs concretely reachable: roadmap, dashboard and source data, open questions, harness scouting/mining reports, radars, DREAM and memory, unused-capability diagnoses and costs, invariants; fix existing indices, no new registry; stale or missing pointers stay visible limits; DREAM connections are not evidence",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "plan",
      "evidence": ""
     }
@@ -71,7 +71,7 @@
    "steps": [
     {
      "step": "Hand the presidio to the dedicated ADV session: verify its identity in the runtime (not from a title), brief it (campaign, roadmap, state, procedure, delivery, limits, deactivation), then deactivate only the HE-hosted Advisor recall once ADV has verified its own on the same state; record the transfer; inform IT and SCI; one active presidio at the end",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "plan",
      "evidence": ""
     }
@@ -83,7 +83,7 @@
    "steps": [
     {
      "step": "Targeted verification: HE recall off and ADV recall on, no double evaluation on one event, budget and expiry preserved, a test message received by the right session, ADV mandate recognised by the monitor, strategic sources reachable with freshness limits declared; no new real evaluation unless needed",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "plan",
      "evidence": ""
     }
@@ -95,7 +95,7 @@
    "steps": [
     {
      "step": "Integrate and publish with the existing procedures; Italian report: who hosts the presidio, which recalls verified, which sources linked and which incomplete, residual budget and expiry, behaviour after interruption and open limits; keep disable/modify/remove simple",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "plan",
      "evidence": ""
     }
