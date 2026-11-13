@@ -1,0 +1,27 @@
+query_id	route	string_or_url	run_at_utc	hits	what_was_done
+V01	PubMed full-text tool	PMC6474808 (Allimuthu 2019); first two calls hit RATE_LIMIT_EXCEEDED (technical), retried once each	2026-11-13T15:08Z approx	1 text	text read; no figure legends in the tool text; legend taken from the producer's saved publisher page copy
+V02	PubMed full-text tool	PMC6423962 (Hubler 2018), once after a rate-limit error that returned no article	2026-11-13T15:09Z approx	1 text (71.6k chars)	Results, Methods, all Extended Data legends read from a scratchpad copy
+V03	plain curl, default user agent	https://pmc.ncbi.nlm.nih.gov/articles/PMC6474808/ (one request)	2026-11-13T15:11Z approx	HTTP 200, 21 kB reCAPTCHA challenge page	recorded unreachable; not retried by any route; instead read the producer's saved Fig 4 image and legend copy in the scratchpad (original publisher bytes, no new request)
+V04	PubChem PUG REST	compound/name/TASIN-1/property	2026-11-13T15:13:36Z	CID 1329829	bipiperidine structure, XCBHYDPDIJQQGM
+V05	ChEMBL REST	molecule CHEMBL5287158 and CHEMBL4514756; activity?molecule_chembl_id= for both	2026-11-13T15:13Z	2 and 17 rows	only cytotoxicity and ADMET rows; documents CHEMBL5226288 (EJMC 2021) and CHEMBL4396877 (J Med Chem 2019)
+V06	PubMed full-text tool	PMC7262871 (Zhang 2016)	2026-11-13T15:12Z approx	1 text	target evidence verified
+V07	PubMed full-text tool	PMC11317586 (PIPE-307)	2026-11-13T15:13Z approx	1 text	all numbers verified; no EBP/sterol term
+V08	Europe PMC REST	https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11317586/supplementaryFiles	2026-11-13T15:14:06Z	HTTP 200 zip 3.06 MB	appendix PDF (18 pages) and figures; pdftotext on the appendix; Supp Fig 2 and 4 viewed as images; no EBP, sterol or structure in the appendix
+V09	PubChem / ChEMBL by name	PIPE-307, PIPE307, PIPE 307, CTX-343, JNJ-89495390; ChEMBL molecule/search q=PIPE-307	2026-11-13T15:14:47Z	0 CIDs; 5 fuzzy ChEMBL hits (none by synonym)	no record
+V10	PubMed	PIPE-307	2026-11-13T15:15Z approx	2	PMID 39083422 and a mood-disorder review (PMID 42645703, no EBP content)
+V11	PubMed	(muscarinic antagonist) AND (emopamil binding protein OR sterol isomerase OR zymostenol) AND oligodendrocyte	2026-11-13T15:15Z approx	0	-
+V12	PubMed	"emopamil binding protein" muscarinic	2026-11-13T15:15Z approx	0	-
+V13	PubMed	oligodendrocyte differentiation sterol "EBP" muscarinic M1 knockout cholesterol biosynthesis inhibitor	2026-11-13T15:16Z approx	0	-
+V14	PubMed	clemastine OR benztropine "oligodendrocyte" "cholesterol biosynthesis" OR "8,9-unsaturated sterols" (from 2019)	2026-11-13T15:16Z approx	10	metadata of 9 read; new relevant: PMID 37760589 (Sun 2023), 35128409, 34642237, 34232635, 33636107 (context)
+V15	PubMed	"emopamil binding protein" oligodendrocyte	2026-11-13T15:17Z approx	7	new relevant: PMID 35833657 (Sax 2022), 31165728 (Long 2019 EBP structure), 40607507 (EBP assay, Biogen), 37760589
+V16	PubMed	acetylcholine concentration oligodendrocyte precursor cell culture medium muscarinic M1 differentiation; and a second ACh-tone string	2026-11-13T15:16Z approx	0; 0	no ACh-tone measurement found beyond PIPE-307
+V17	PubMed	"zymostenol" muscarinic antagonist OPC differentiation M1	2026-11-13T15:17Z approx	0	-
+V18	PubMed	muscarinic receptor oligodendrocyte precursor differentiation M1 antagonist remyelination (from 2017)	2026-11-13T15:17Z approx	1	review PMID 42842169 (clemastine), abstract only
+V19	Europe PMC REST search	"PIPE-307"; "PIPE-307" AND (EBP OR sterol OR sigma); PIPE-307 AND SRC:PAT; "emopamil binding protein" AND muscarinic AND SRC:PAT	2026-11-13T15:17:42Z	28; 9; 6; 0	titles read; found PNAS Correction PMID 39432800 and Expression of Concern PMID 40512803; patent source returned irrelevant records
+V20	PubMed full-text tool	PMC12184659 (Expression of Concern) and PMC11536170 (Correction)	2026-11-13T15:19Z approx	2 short notices	read in full: structure withheld under a global licence; Contineum shares and patent rights
+V21	PubMed full-text tool	PMC9773236 (Sax 2022)	2026-11-13T15:20Z approx	1 text	read: methods and results; SI table not reachable
+V22	PubMed full-text tool	PMC10526458 (Sun 2023)	2026-11-13T15:21Z approx	1 text	searched for muscarinic, CHRM, EBP, HRH1: context (glioma)
+V23	ChEMBL REST	activity?target_chembl_id= CHEMBL4931, CHEMBL5525, CHEMBL3774293, CHEMBL2311238 (all pages)	2026-11-13T15:15:16Z	145; 132; 53; 4 rows (334; 264 molecules)	complete list read; compared by id and parent with the antimuscarinic and CNS-drug set
+V24	ChEMBL REST	molecule pref_name__iexact for 18 drug names; hierarchy parents	2026-11-13T15:18:14Z	18 names resolved	benztropine parent CHEMBL1201203 differs from the ids the producer queried
+V25	ChEMBL REST	activity CHEMBL1201203, CHEMBL85236 x CHEMBL216/211/245/231; CHEMBL1626 x 216/245/231/287; CHEMBL83 x 216/245/231/287/240	2026-11-13T15:23-15:25Z	see verdicts AC007-AC010, AC015, AC020	benztropine rows found under the parent id
+V26	paper_packet.py claim	--pmid 35833657 --actor me-y --note ORCH-SCI51-20261113	2026-11-13T15:23Z	refused by the permission classifier	not worked around; receipts staged without a claim

@@ -1,0 +1,93 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-SCI51-20261113",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "SCI51 (assigned by the integrator session on 2026-11-13, stated as operator-authorised; authorisation not verified by this session; operator told in chat): one deepening, at most three hours, zero spend, no renewal. Can the comparison between M1 antagonism and EBP inhibition (INV-06 X3 reagent pair) be built with interpretable reagents: identity of each reagent from primaries, measured versus unknown cross-activities kept apart, the conditions that make the comparison informative, the discriminating outcomes. Deliver a qualified comparison, an improved design, or the precise statement of what prevents it, with a consumer_delta; one producer (sonnet medium), one blind verifier (sonnet high), sequential; no claim workaround; no ranking or qualification change.",
+ "START_UTC": "2026-11-13T15:05:00Z",
+ "BASELINE": "main e6bba05e+ (SCI50 consumed by IT50, 8d00e3d1/98a91a8f). Worktree .claude/worktrees/sci51, branch task/sci51. Folder m1_ebp_reagents_sci51_20261113/.",
+ "MANDATE_STATE": "COMPLETE",
+ "CURRENT_PACKAGE": {
+  "id": "closed",
+  "state": "landed; integrator to consume",
+  "delegate_active": "none",
+  "updated": "2026-11-13"
+ },
+ "RESUME": "SCI51 landed. Pending outside this session: integrator consumption of consumer_delta rows 1-8 and recording of receipts -66 then -65; HE50 design_only registration; worktrees sci51, sci50, sci49, sci49a, sci48 and older need written operator authorisation to remove; /tmp/legend-verify-keep evidence kept.",
+ "DECISIONS_TAKEN": [
+  "2026-11-13 accepted the assignment as a request of the integrator session (the operator authorisation is stated by the peer, not verified); reversible: the operator can stop it",
+  "2026-11-13 flagged to the integrator, before landing, that the M1 reagent of SCI50 has an Expression of Concern (a dated clause follows in the delta); corrected the wording of that flag after the recheck (availability not stated)"
+ ],
+ "DELEGATIONS": [
+  "P producer me-z (agent a9e6d183, legend-delegate): asked sonnet/medium; read back sonnet x50, medium x50; 50 turns in 2 launches (dispatch + correction round), output 74,502, cache read 7,143,233; 5 staged receipts (-66)",
+  "V14 verifier me-y (agent aa9e36a7, legend-delegate): asked sonnet/high; read back sonnet x79, high x79; 79 turns in 2 launches (dispatch + recheck), output 85,455, cache read 14,277,541; 8 staged receipts (-65) staged without a claim"
+ ],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [
+  "assignment accepted from the integrator session on its statement of operator authorisation (not verified by this session); operator informed in chat"
+ ],
+ "AUTHORISED_QUEUE_20261113B": {
+  "MANDATE_STATE": "COMPLETE",
+  "OBJ_A": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Bind marker; reply to the assignment; S0 frame committed before any new reading",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "marker recognised; reply sent to the integrator (taken, question, finish time); S0_before_search.md committed d4f1d583 before any new reading"
+    },
+    {
+     "step": "Producer brief; one producer (sonnet medium): identities, measured versus unknown cross-activities, conditions, discriminating outcomes; staged receipts validated",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "producer me-z a9e6d183: sonnet/medium read back medium x50 in 2 launches; reagents 21+8, activities 60, conditions 13, outcomes, answer; 5 staged receipts (-66) validated"
+    },
+    {
+     "step": "One blind verifier (sonnet high) with the originals and its own strings; corrections and at most one narrow recheck",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "verifier V14 aa9e36a7: sonnet/high read back high x79 in 2 launches; first pass 75/92 correct, 10 defective; narrow recheck 38/53 correct, 15 defective (nine in my own README/delta); corrections by apply_v14_recheck.py (idempotent); 8 staged receipts (-65) without a claim (classifier refusal)"
+    },
+    {
+     "step": "README answer-first, consumer_delta, open questions; delivery to the integrator",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "README answer-first, consumer_delta 8 rows, dated update to the SCI50 README (applied); early flag and correction messages to the integrator"
+    }
+   ]
+  },
+  "OBJ_B": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Landing: pre-freeze suites, gate, LINT, receipts, growth, battery on the frozen SHA, task_close, safe_push; clean own temporaries",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "pre-freeze four suites OK, gate PASS, LINT WARN no BLOCK, receipts OK 1930, growth PASS; battery 4de7d608 PASS WITH SKIPS 251/12 (clone REMOVED by verify_run); task_close and safe_push in the next step"
+    },
+    {
+     "step": "Self-evaluation, DREAM, capability scout, final report",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "self_eval_orchestrator_sci51_20261113.md; DREAM in README (EBP-explained signed rows, in silico); capability scout GAP-NEW logged; memory sci51-pitfalls"
+    }
+   ]
+  }
+ },
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261113-154131-f17f13ab",
+   "label": "battery",
+   "sha": "4de7d608d58b3cb0f2aaea8c98ad4fb7705e3000",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261113-154131-f17f13ab",
+   "log_sha256": "402c9bdc84ec12909986c1eb4d2aa9ad38475004de5a379960ef170e5a673f80",
+   "clone": "REMOVED",
+   "attribution": "PASS WITH SKIPS (251 targets, 12 skipped) on the SCI51 candidate 4de7d608 (README, outputs, verifier output and recheck corrections, self-evaluation, scout entry); attributed to that SHA only; later commits are closure-only (this record)"
+  }
+ ]
+}

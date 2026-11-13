@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-13T15:02:30Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-13T15:10:30Z",
+ "event_id": "FTR-20261113-39083422-66",
+ "evidence_basis": [
+  "Full main text and Methods read; figures not viewed; Appendix 01 not requested. No EBP, sterol or zymostenol statement in the text; structure not given. Earlier SCI50 staging of this PMID (event FTR-20261113-39083422-68) exists in a different package and is not in the ledger, so prior_receipt is null.",
+  "verbatim_locator | proposition: ACh tone limits OPC differentiation | Results | \"adding ACh inhibited OPC differentiation\"",
+  "verbatim_locator | proposition: 47-target panel at 10 uM found nothing above 50% | Results | \"did not result in greater than 50% inhibition or activation of any of the nonmuscarinic targets tested\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/output/reagents.tsv",
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/output/activities.tsv",
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/output/conditions.tsv",
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC full text PMC11317586 via the PubMed full-text tool, fetched 2026-11-13 (main text, legends, Methods; appendix not read)",
+ "study_id": {
+  "doi": "10.1073/pnas.2407974121",
+  "pmid": "39083422"
+ },
+ "workflow": "SCI51 producer P (m1_ebp_reagents_sci51_20261113), actor label me-z. Question-driven reading of reagent identity and cross-activity. Prepared as a staged JSON file for the Orchestrator; the claim step was refused by the permission classifier and was not worked around."
+}

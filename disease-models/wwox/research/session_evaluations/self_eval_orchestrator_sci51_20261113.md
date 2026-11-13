@@ -1,0 +1,17 @@
+# Self-evaluation - Orchestrator (SCI51 scientist session), M1 antagonist versus EBP inhibitor reagents, 2026-11-13
+
+Verdict: Part 1 returned PASS. The package is on task/sci51 and lands after its battery. The question was assigned by the integrator session (authorisation stated, not verified by me; the operator was told in chat). The blind readers found two things that matter beyond the package: the M1 reagent named in SCI50 has an Expression of Concern, and my own README overstated what the notices say.
+
+1. **What the blind readers changed.** First pass: 75 of 92 rows correct, 10 defective (benztropine's ChEMBL rows sat under a different parent id; a 300 nM experiment attributed to the wrong preparation; the Chrm1-null occlusion numbers; the TASIN-1 identity conflict resolved to the bipiperidine; the missed PNAS Correction and Expression of Concern for PIPE-307 and a withheld structure; CW3388's M1 residue). The narrow recheck then found 15 of 53 rows defective, **nine of them in the README, answer and delta that I wrote**: I had written "cannot be sourced or built from the public record", "for no other M1 antagonist is there an EBP datum", "the CW compounds are not M1-clean", "unmeasurable from outside" and read the Hubler fourth-preparation legend as a result; each was an overstatement of what was read, two echoing the verifier's own first-pass wording (retracted by it).
+2. **My own errors, and who caught them.** (a) The overstatements above (blind auditor, in the recheck I chose to run although the budget could have skipped it). (b) My early flag to the integrator repeated "cannot currently be sourced from the primary" (blind auditor; corrected by message). (c) The first version of my correction script was not idempotent (a replacement whose new text contained its old text duplicated a label on the second run): caught by my own check and fixed. (d) I accepted the assignment from a peer message stating operator authorisation: low risk (research, zero spend) but unverified; disclosed.
+3. **What was not reached.** Hubler's heatmap and the names of the four inert antimuscarinics (a reCAPTCHA twice, not retried); the CW structures (Allimuthu Figs 2B/3, Data S1/S2); Zhang 2016's TASIN-1 drawing; the PIPE-307 main-text figures; the Sax 2022 tables; whether PIPE-307 can be obtained from its developer (not stated in anything read).
+4. **Process grade versus outcome grade.** Outcome: a clear, bounded answer (an improved design, not build-ready; two decisive gaps) and a correction to a consumed claim, plus one connection for a new batch (EBP-explained signed rows). Process: good on bounding and on running the recheck; the slip was writing the README before the recheck instead of after.
+5. **Cost.** Producer sonnet/medium 50 turns in two launches, 74,502 output, 7,143,233 cache read; verifier V14 sonnet/high 79 turns in two launches, 85,455 output, 14,277,541 cache read (read back equal to the dispatch). One delegate at a time; no spend; no contact.
+
+Micro-upgrade (the answer, not the promise): `output/apply_v14_recheck.py` (idempotent) and `CORRECTIONS.tsv`; the README states what the notices say and no more; the lesson (write the answer-first after the verifier's recheck, and quote what a notice says, not what it implies) is in memory (`sci51-pitfalls`).
+
+ATTRIBUTION_CENSUS
+incidents: 9
+machine: 0   blind_auditor: 7   peer: 0   self: 2
+severity_high: 1   of which self: 0
+undetected_known: 0

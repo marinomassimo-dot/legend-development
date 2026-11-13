@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-13T15:02:30Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-13T15:10:30Z",
+ "event_id": "FTR-20261113-30046109-66",
+ "evidence_basis": [
+  "Results, Methods and legends read from the tool text layer; no figure image seen (heatmap of M1/M3/M5 and the names of the six antimuscarinics not reached); several italic compound names are missing from the text layer.",
+  "verbatim_locator | proposition: six antimuscarinics inhibited M1, M3 and M5 in CHO reporter cells at 2 uM | Results | \"all showed near-completed inhibition of the M1, M3, and M5 muscarinic receptor subtypes at the HTS dose of 2 μM\"",
+  "verbatim_locator | proposition: only clemastine and benztropine inhibited EBP and enhanced formation among the six | Results | \"only clemastine and benztropine inhibited EBP in OPCs, and only clemastine and benztropine enhanced oligodendrocyte formation\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/output/reagents.tsv",
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/output/activities.tsv",
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/output/conditions.tsv",
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/output/evidence.tsv"
+ ],
+ "prior_receipt": "FTR-20261105-30046109-06",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "b3a815e841a894c134014d4ec0159313307069feda83abbdcf784207f2f2532b",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC full text PMC6423962 via the PubMed full-text tool, fetched 2026-11-13 (Results, Methods, figure legends; PMC article page returned a reCAPTCHA and was not retried)",
+ "study_id": {
+  "doi": "10.1038/s41586-018-0360-3",
+  "pmid": "30046109"
+ },
+ "workflow": "SCI51 producer P (m1_ebp_reagents_sci51_20261113), actor label me-z. Question-driven reading of reagent identity and cross-activity. Prepared as a staged JSON file for the Orchestrator; the claim step was refused by the permission classifier and was not worked around."
+}

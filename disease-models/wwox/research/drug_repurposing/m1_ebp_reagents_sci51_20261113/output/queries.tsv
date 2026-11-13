@@ -1,0 +1,17 @@
+query_id	route	string_or_url	run_at_utc	hits	what_was_done
+Q01	PubMed ID converter (tool)	PMIDs 30046109, 30773481, 39083422, 27671734, 38470227	2026-11-13T14:58:29Z	4 PMCIDs; 38470227 none	PMC ids obtained
+Q02	PubMed search (tool)	TASIN-1 EBP emopamil binding protein inhibitor	2026-11-13T14:58Z	0	no hit; retried with a descriptive string
+Q03	PubMed search (tool)	truncated adenomatous polyposis TASIN colon cancer cholesterol biosynthesis	2026-11-13T14:58Z	3	chose PMID 27798265 (discovery) and 31070915 (analogues)
+Q04	PubMed search (tool)	EBP inhibitor J Med Chem brain penetrant zymostenol	2026-11-13T14:58Z	1	PMID 38470227, no successor found
+Q05	PubMed full-text tool	PMC6423962 (once), PMC6474808, PMC11317586, PMC7262871, PMC5039026	2026-11-13T14:58-15:00Z	5 texts returned	Hubler tool text was complete in Results/Methods (figures absent); tool outputs kept in the scratchpad only
+Q06	PubMed search (tool)	emopamil binding protein EBP sigma-1 ligand sterol isomerase drug binding	2026-11-13T15:00Z	4	abstracts of PMIDs 22497960, 16033255, 12569389, 9760173 read as context (not full text)
+Q07	PubMed search (tool)	Zhang L Shay JW Lu W ... TASIN-1; Selective Targeting of Cholesterol Biosynthesis colon cancer APC	2026-11-13T14:59Z	0; 2	found the Zhang 2016 primary
+Q08	ChEMBL REST molecule search	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=PIPE-307 (also TASIN-1, CW9956, clemastine, benztropine, tamoxifen, ketoconazole)	2026-11-13T14:59:29Z	PIPE-307: 3 fuzzy hits, none accepted; CW9956: none	synonym match not found for PIPE-307 or CW9956
+Q09	PubChem PUG REST	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/<name>/property/InChIKey,CanonicalSMILES,MolecularFormula/JSON	2026-11-13T14:59:52Z	hits for TASIN-1, clemastine, benztropine, tamoxifen, ketoconazole, U-50488, toremifene; NotFound for PIPE-307, CW9956, CW3388	identity pointers only
+Q10	ChEMBL REST activity	target CHEMBL4931/CHEMBL5525/CHEMBL3774293/CHEMBL2311238 (EBP orthologues)	2026-11-13T15:00:22Z	145; 132; 53; 4 rows	first 60 rows of CHEMBL4931 read by eye; no clemastine, benztropine, PIPE-307 rows
+Q11	ChEMBL REST activity/molecule/document	molecules CHEMBL1626, 1200383, 85236, 83, 4514756, 5287158; targets M1-M5, H1, hERG, sigma-1; documents CHEMBL5518221, 3774374, 4396877, 5226288	2026-11-13T15:00:53Z-15:03:10Z	see activities.tsv	panel and screening-deposit rows flagged
+Q12	PMC article page (plain curl)	https://pmc.ncbi.nlm.nih.gov/articles/PMC6474808/ ; figure Fig 4 image	2026-11-13T15:03:31Z	200; image opened	one request per article
+Q13	PMC article page (plain curl)	https://pmc.ncbi.nlm.nih.gov/articles/PMC6423962/	2026-11-13T15:04:07Z	200 with reCAPTCHA	recorded as unreachable; no other route tried for Hubler figures
+Q14	PMC article page (plain curl)	https://pmc.ncbi.nlm.nih.gov/articles/PMC5039026/ ; Fig2, Fig3, Fig4 images	2026-11-13T15:04:24Z-15:05:10Z	200; three images opened	Fig 2 and Fig 3 on the page were not the knockout data (page numbering)
+Q15	paper_packet.py claim	--pmid 30773481 --actor me-z	2026-11-13T15:05Z	refused by the permission classifier	not worked around; receipts staged without a claim
+Q16	V14 (verifier) strings; not run by the producer	PubMed/Europe PMC "PIPE-307"; ChEMBL EBP orthologue activities (334 rows); PNAS notices PMIDs 39432800, 40512803; Sax 2022	2026-11-13	see verify/queries_verifier.tsv	Added from V14 so that the producer perimeter is not understated
