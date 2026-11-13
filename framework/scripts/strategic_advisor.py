@@ -48,12 +48,15 @@ import sys
 from pathlib import Path
 from typing import Any
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import mandate_continuity as mc  # noqa: E402  the existing reader of task-record queues
+
 ROOT = Path(__file__).resolve().parents[2]
 AGENT = "legend-strategic-advisor"
 TOOLS = ["Read", "Glob", "Grep", "WebFetch"]
 DENIED = ["Bash", "Write", "Edit", "NotebookEdit", "Agent", "Task", "WebSearch", "SendMessage", "Skill", "Read(**/advisor_sealed/**)"]
 SEALED = "advisor_sealed"
-LIMITS = {"A": 2, "B": 2, "S": 1}
+LIMITS = {"A": 2, "B": 2, "S": 1, "P": 3}
 DASHBOARD_URL = "https://marinomassimo-dot.github.io/legend-development/"
 
 
@@ -358,7 +361,45 @@ def claude_command(model: str, effort: str) -> list[str]:
     return cmd
 
 
+class _Done:
+    def __init__(self, returncode: int, turn_limit_hit: bool) -> None:
+        self.returncode, self.turn_limit_hit = returncode, turn_limit_hit
+
+
+def _launch_limited(cmd: list[str], text: str, stream, err, timeout: int, turn_limit: int) -> _Done:
+    """Run the advisor and stop it ourselves when it exceeds `turn_limit` assistant turns. `claude -p` has no turn-limit flag on this host (checked 2026-11-13), so this limit is
+    enforced by the launcher that owns the child process, not configured in the runtime; the attempt counts, and the stream up to the stop is kept."""
+    import threading
+    proc = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=err, text=True, cwd=ROOT)
+    timer = threading.Timer(timeout, proc.terminate)
+    timer.start()
+    proc.stdin.write(text); proc.stdin.close()
+    seen: set[str] = set(); hit = False
+    for line in proc.stdout:
+        stream.write(line); stream.flush()
+        try:
+            event = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if event.get("type") == "assistant":
+            ident = (event.get("message") or {}).get("id")
+            if ident:
+                seen.add(ident)
+            if len(seen) > turn_limit:
+                hit = True
+                proc.terminate()
+                break
+    code = proc.wait()
+    timer.cancel()
+    return _Done(code, hit)
+
+
 def run(stage: str, campaign: Path, brief: Path, model: str, effort: str, timeout: int, limits: dict[str, int], extra_reason: str = "") -> int:
+    refusal = budget_refusal(campaign)
+    if refusal:
+        print(f"CEILING: {refusal}. This ceiling is procedural: it binds runs launched through this tool only.", file=sys.stderr)
+        return 2
+    turn_limit = int(_budget(campaign).get("turn_limit") or 0)
     used = {a["index"] for a in _attempts(campaign) if a.get("stage") == stage}  # a log row is written at launch and again at the end: count attempts once
     extra = False
     if len(used) >= limits[stage] and extra_reason:
@@ -387,8 +428,11 @@ def run(stage: str, campaign: Path, brief: Path, model: str, effort: str, timeou
     outcome, code = "FAILED", 1
     try:
         with raw.open("w", encoding="utf-8") as stream, (raw_dir / "stderr.txt").open("w", encoding="utf-8") as err:
-            done = subprocess.run(claude_command(model, effort), input=brief.read_text(encoding="utf-8"), text=True, stdout=stream, stderr=err,
-                                  cwd=ROOT, timeout=timeout)
+            if turn_limit:
+                done = _launch_limited(claude_command(model, effort), brief.read_text(encoding="utf-8"), stream, err, timeout, turn_limit)
+            else:
+                done = subprocess.run(claude_command(model, effort), input=brief.read_text(encoding="utf-8"), text=True, stdout=stream, stderr=err,
+                                      cwd=ROOT, timeout=timeout)
         facts = parse_stream(raw)
         result = facts["result"]
         text = result.get("result") if isinstance(result.get("result"), str) else ""
@@ -422,6 +466,8 @@ def run(stage: str, campaign: Path, brief: Path, model: str, effort: str, timeou
         }
         (out / "meta.json").write_text(json.dumps(meta, indent=2, sort_keys=True), encoding="utf-8")
         outcome, code = ("OK" if ok else "FAILED"), (0 if ok else 1)
+        if getattr(done, "turn_limit_hit", False):
+            outcome = "TURN_LIMIT"
         if not ok:
             print(f"run failed: returncode={done.returncode} subtype={result.get('subtype')} — see {raw_dir}/stderr.txt and {raw}", file=sys.stderr)
     except subprocess.TimeoutExpired:
@@ -494,6 +540,323 @@ def check(campaign: Path) -> int:
     return 0 if not problems else 1
 
 
+# ---- the proactive pilot: observe, decide whether an evaluation is due, prepare assignments, follow them ----------------------------------------------------
+# One schedule drives it (an hourly in-session cron that runs `tick`), because delivery to a live session needs a session that can send a message; the host crontab already
+# runs the mandate watch and this tool does not repeat it. Everything here is derived from files that already exist: the roadmap section, the task records, the commits of
+# main, the mandate watch's own event log and the runtime's list of sessions. The advisor stays read-only; its assignments are text this tool saves.
+ROADMAP = ROOT / "disease-models/wwox/research/drug_repurposing/roadmap_current.md"
+ROADMAP_BEGIN, ROADMAP_END = "<!-- OPERATOR_ROADMAP:BEGIN -->", "<!-- OPERATOR_ROADMAP:END -->"
+STATE_DIR = Path(os.environ.get("LEGEND_ADVISOR_STATE", str(Path.home() / ".local/state/legend/advisor_pilot")))
+ASSIGNMENT_FIELDS = ("key", "recipient", "question", "why_now", "roadmap_link", "related_work", "sources", "decision_changed_by_result", "perimeter_and_budget",
+                     "method_autonomy", "deliver_to", "duplicate_check")
+OPEN_VERDICTS = ("CONTINUE", "ALL_BLOCKED", "COMPLETE_PENDING")
+EVENT_SUBJECT = re.compile(r"COMPLETE|closed|closure|integrate task|delivered|consumed|landed", re.I)
+
+
+def _now() -> dt.datetime:
+    forced = os.environ.get("LEGEND_ADVISOR_NOW")
+    return dt.datetime.fromisoformat(forced.replace("Z", "+00:00")) if forced else dt.datetime.now(dt.timezone.utc)
+
+
+def _utc(when: dt.datetime) -> str:
+    return when.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def _budget(campaign: Path) -> dict[str, Any]:
+    path = Path(campaign) / "budget.json"
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+
+
+def budget_refusal(campaign: Path) -> str:
+    """Why no further invocation may start in this campaign, or '' (no budget file: the earlier per-stage ceilings apply alone)."""
+    b = _budget(campaign)
+    if not b:
+        return ""
+    if (Path(campaign) / "DISABLED").exists():
+        return "the campaign is disabled"
+    if b.get("expires_utc") and _now() >= dt.datetime.fromisoformat(b["expires_utc"].replace("Z", "+00:00")):
+        return f"the campaign expired at {b['expires_utc']} (no automatic renewal)"
+    used = len({(a["stage"], a["index"]) for a in _attempts(Path(campaign))})
+    if used >= int(b.get("max_invocations", 10**9)):
+        return f"the campaign has used its {used} of {b['max_invocations']} strategic invocations (failed attempts count)"
+    return ""
+
+
+def roadmap_text() -> str:
+    text = ROADMAP.read_text(encoding="utf-8") if ROADMAP.exists() else ""
+    if ROADMAP_BEGIN in text and ROADMAP_END in text:
+        return text.split(ROADMAP_BEGIN, 1)[1].split(ROADMAP_END, 1)[0].strip()
+    return ""
+
+
+def _state_path(campaign: Path) -> Path:
+    return STATE_DIR / Path(campaign).name / "state.json"
+
+
+def _load_state(campaign: Path) -> dict[str, Any]:
+    path = _state_path(campaign)
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+
+
+def _save_state(campaign: Path, state: dict[str, Any]) -> None:
+    path = _state_path(campaign)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(state, indent=1, sort_keys=True), encoding="utf-8")
+
+
+def _pid_identity(pid: int) -> str:
+    try:
+        return f"{pid}:{Path(f'/proc/{pid}/stat').read_text().rsplit(')', 1)[1].split()[19]}"
+    except (OSError, IndexError):
+        return ""
+
+
+def _running(state: dict[str, Any]) -> bool:
+    ident = state.get("running") or ""
+    return bool(ident) and _pid_identity(int(ident.split(":")[0])) == ident
+
+
+def _records() -> dict[str, dict[str, Any]]:
+    """Task id -> {state, owner, objective} from the task records; a mandate that carries no state reads as unknown, never as open."""
+    out = {}
+    for path in sorted((ROOT / "ledger" / "tasks").glob("*/*.json")):
+        try:
+            d = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if isinstance(d, dict) and d.get("TASK_ID"):
+            try:
+                state = str(mc.verdict(d)["verdict"])        # the continuity module's own reading of the queue, not a second one
+            except Exception:  # noqa: BLE001 — a record the module cannot read is reported as such
+                state = "UNREADABLE"
+            out[d["TASK_ID"]] = {"state": "OPEN" if state in OPEN_VERDICTS else state, "owner": path.parent.name, "path": str(path.relative_to(ROOT))}
+    return out
+
+
+def _sessions() -> dict[str, str] | None:
+    try:
+        done = subprocess.run([os.environ.get("LEGEND_ADVISOR_CLAUDE", "claude"), "agents", "--json"], capture_output=True, text=True, timeout=25)
+        return {str(x.get("name")): str(x.get("status")) for x in json.loads(done.stdout)} if done.returncode == 0 else None
+    except (OSError, subprocess.SubprocessError, json.JSONDecodeError):
+        return None
+
+
+def observe(campaign: Path, state: dict[str, Any]) -> dict[str, Any]:
+    """The bounded facts a decision needs, read mechanically: roadmap digest, commits since the last tick, mandate transitions, stalled mandates reported by the watch, sessions."""
+    main_sha = _git("rev-parse", "main")
+    last = state.get("main_sha") or main_sha
+    commits = [c for c in _git("log", "--format=%h %s", f"{last}..main", "--", "ledger/tasks", "disease-models/wwox/research/drug_repurposing").splitlines()[:60] if c.strip()]
+    recs = _records()
+    before = state.get("mandates") or {}
+    transitions = [f"{t}: {before[t]} -> {r['state']}" for t, r in recs.items() if t in before and before[t] != r["state"]]
+    opened = [t for t in recs if before and t not in before and recs[t]["state"] == "OPEN"]
+    stalled = []
+    try:
+        watch = subprocess.run([sys.executable, str(ROOT / "framework/scripts/mandate_watch.py"), "events", "--last", "30"], capture_output=True, text=True, timeout=30).stdout
+        stalled = sorted({m.group(1) for m in re.finditer(r"RESUME ((?:[A-Z0-9]+-)+[A-Z0-9]+)", watch) if recs.get(m.group(1), {}).get("state") == "OPEN"})
+    except (OSError, subprocess.SubprocessError):
+        pass
+    events = ([f"delivery: {c}" for c in commits if EVENT_SUBJECT.search(c)] + [f"mandate: {t}" for t in transitions] + [f"opened: {t}" for t in opened]
+              + [f"stalled-for-the-watch: {t}" for t in stalled])
+    rm = roadmap_text()
+    return {"main_sha": main_sha, "roadmap_sha256": sha256_text(rm) if rm else "", "commits_since_last_tick": len(commits), "events": events,
+            "open_mandates": sorted(t for t, r in recs.items() if r["state"] == "OPEN"), "mandates": {t: r["state"] for t, r in recs.items()},
+            "sessions": _sessions()}
+
+
+def tick(campaign: Path) -> dict[str, Any]:
+    """The hourly check: mostly mechanical, no model. Verdicts: NONE (nothing new: reuse the previous assessment), EVALUATE (one strategic evaluation is due), and the reasons it is not
+    (RUNNING, DISABLED, EXPIRED, BUDGET, DEFERRED). A stalled mandate is reported, not restarted: recovery stays with the mandate watch."""
+    campaign = Path(campaign)
+    state = _load_state(campaign)
+    now = _now()
+    obs = observe(campaign, state)
+    first = not state
+    refusal = budget_refusal(campaign)
+    anticipating = [e for e in obs["events"] if e.startswith(("delivery:", "mandate:", "stalled"))] or ([f"roadmap changed"] if state.get("roadmap_sha256") not in (None, obs["roadmap_sha256"]) else [])
+    changed = state.get("roadmap_sha256") not in (None, obs["roadmap_sha256"])
+    digest = sha256_text(obs["roadmap_sha256"] + "|" + "|".join(sorted(obs["events"])))
+    last_eval = dt.datetime.fromisoformat(state["last_evaluation_utc"].replace("Z", "+00:00")) if state.get("last_evaluation_utc") else None
+    hours = (now - last_eval).total_seconds() / 3600 if last_eval else None
+    verdict, why = "NONE", "nothing new: the previous assessment stands"
+    if (campaign / "DISABLED").exists():
+        verdict, why = "DISABLED", "the campaign is disabled"
+    elif refusal:
+        verdict, why = ("EXPIRED" if "expired" in refusal else "BUDGET"), refusal
+    elif first and (campaign / "budget.json").exists():
+        verdict, why = "EVALUATE", "campaign start: the roadmap and the first observation"
+    elif first:
+        why = "first tick: baseline recorded, no evaluation from history"
+    elif _running(state):
+        verdict, why = "RUNNING", "an evaluation is already running (same process identity)"
+    elif obs["events"] or changed:
+        if digest == state.get("last_digest"):
+            why = "the same events were already evaluated"
+        elif changed or (anticipating and (hours is None or hours >= 1)) or (hours is None or hours >= 4):
+            verdict, why = "EVALUATE", ("roadmap changed" if changed else "; ".join(anticipating[:3] or obs["events"][:3]))
+        else:
+            verdict, why = "DEFERRED", f"events present but the last evaluation was {hours:.1f} h ago and none is anticipating"
+    state.update(main_sha=obs["main_sha"], mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"], last_tick_utc=_utc(now))
+    if verdict == "EVALUATE":
+        state["pending_digest"] = digest
+    _save_state(campaign, state)
+    return {"verdict": verdict, "why": why, "events": obs["events"][:12], "open_mandates": obs["open_mandates"], "sessions": obs["sessions"], "digest": digest,
+            "hours_since_last_evaluation": None if hours is None else round(hours, 1)}
+
+
+def parse_assignments(text: str) -> list[dict[str, str]]:
+    """The `### ASSIGNMENT n` blocks of an assessment: `field: value` lines (a value may continue on the following lines). A block missing a required field is kept and flagged."""
+    out = []
+    for block in re.split(r"^### ASSIGNMENT\b.*$", text, flags=re.M)[1:]:
+        block = block.split("\n## ", 1)[0]
+        fields, cur = {}, None
+        for line in block.splitlines():
+            m = re.match(r"^([a-z_]+):\s*(.*)$", line)
+            if m and m.group(1) in ASSIGNMENT_FIELDS:
+                cur = m.group(1); fields[cur] = m.group(2).strip()
+            elif cur and line.strip():
+                fields[cur] += " " + line.strip()
+        fields["_missing"] = ",".join(f for f in ASSIGNMENT_FIELDS if not fields.get(f))
+        fields["_text"] = block.strip()
+        out.append(fields)
+    return out
+
+
+def _events(campaign: Path) -> list[dict[str, Any]]:
+    path = Path(campaign) / "assignments.jsonl"
+    return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()] if path.exists() else []
+
+
+def _log_assignment(campaign: Path, row: dict[str, Any]) -> None:
+    with (Path(campaign) / "assignments.jsonl").open("a", encoding="utf-8") as handle:
+        handle.write(json.dumps({**row, "utc": _utc(_now())}, sort_keys=True) + "\n")
+
+
+def register_assignments(campaign: Path, label: str, text: str) -> list[dict[str, str]]:
+    """Save the drafts of an assessment as `assignments/ADV-nnn.md`, within the campaign's assignment budget and without duplicating a key already drafted or already named in a task record."""
+    campaign = Path(campaign)
+    cap = int(_budget(campaign).get("max_assignments", 10**9))
+    known = _events(campaign)
+    drafted = {e["id"]: e for e in known if e["state"] == "DRAFTED"}
+    records = "\n".join((ROOT / r["path"]).read_text(encoding="utf-8", errors="replace") for r in _records().values() if "PROACTIVE-ADVISOR" not in r["path"])
+    made = []
+    for block in parse_assignments(text):
+        key = block.get("key", "").strip()
+        if not key or block["_missing"]:
+            _log_assignment(campaign, {"id": "", "state": "REJECTED", "key": key, "why": f"missing fields: {block['_missing'] or 'key'}", "assessment": label}); continue
+        if any(e["key"] == key for e in drafted.values()) or key in records:
+            _log_assignment(campaign, {"id": "", "state": "DUPLICATE", "key": key, "why": "key already drafted or already named in a task record", "assessment": label}); continue
+        if len(drafted) >= cap:
+            _log_assignment(campaign, {"id": "", "state": "OVER_BUDGET", "key": key, "why": f"the campaign allows {cap} assignments", "assessment": label}); continue
+        ident = f"ADV-{len(drafted) + 1:03d}"
+        out = campaign / "assignments"
+        out.mkdir(exist_ok=True)
+        (out / f"{ident}.md").write_text(f"# {ident} (assessment {label}, campaign {campaign.name})\n\nRecipient: {block['recipient']}\n\n{block['_text']}\n", encoding="utf-8")
+        row = {"id": ident, "state": "DRAFTED", "key": key, "recipient": block["recipient"], "assessment": label}
+        _log_assignment(campaign, row); drafted[ident] = row; made.append({"id": ident, **block})
+    return made
+
+
+def assignment_states(campaign: Path) -> dict[str, dict[str, Any]]:
+    """Per assignment, the evidence levels kept apart: DRAFTED (saved) -> SENT (the channel accepted a message: recorded by the sender) -> TAKEN (its id is in a task record) -> EXECUTED (a
+    DONE step in a record carries its id) . UNREACHABLE and the other rows are states of their own. None of them says the result was useful."""
+    out: dict[str, dict[str, Any]] = {}
+    for e in _events(campaign):
+        if e.get("id"):
+            out.setdefault(e["id"], {"recipient": e.get("recipient", ""), "key": e.get("key", ""), "levels": []})["levels"].append(e["state"])
+    taken, done = set(), set()
+    def walk(node: Any, ident: str) -> tuple[bool, bool]:
+        hit, ok = False, False
+        if isinstance(node, dict):
+            blob = json.dumps(node)
+            if ident in blob and str(node.get("status", "")).upper() == "DONE":
+                ok = True
+            for v in node.values():
+                h, o = walk(v, ident); hit, ok = hit or h, ok or o
+        elif isinstance(node, list):
+            for v in node:
+                h, o = walk(v, ident); hit, ok = hit or h, ok or o
+        elif isinstance(node, str) and ident in node:
+            hit = True
+        return hit, ok
+    if out:
+        for path in (ROOT / "ledger" / "tasks").glob("*/*.json"):
+            try:
+                d = json.loads(path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                continue
+            for ident in out:
+                h, o = walk(d, ident)
+                if "PROACTIVE-ADVISOR" in path.name:
+                    continue                                      # the campaign's own record names the drafts: that is not a recipient taking one in charge
+                if h and "TAKEN" not in out[ident]["levels"]:
+                    out[ident]["levels"].append("TAKEN")
+                if o and "EXECUTED" not in out[ident]["levels"]:
+                    out[ident]["levels"].append("EXECUTED")
+    for v in out.values():
+        order = ["DRAFTED", "SENT", "TAKEN", "EXECUTED"]
+        v["highest"] = max((x for x in v["levels"] if x in order), key=order.index, default="")
+        v["unreachable"] = "UNREACHABLE" in v["levels"] and v["highest"] in ("", "DRAFTED")
+    return out
+
+
+def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
+    campaign = Path(campaign)
+    states = assignment_states(campaign)
+    prior = sorted(campaign.glob("P*/assessment.md"))
+    parts = ["# Strategic Advisor brief — Stage P (proactive evaluation)", "", "## Snapshot", render_snapshot(snapshot()), "",
+             "## Operator roadmap (authoritative; operator instructions prevail over any automatic plan)", roadmap_text() or "(no roadmap section found: say so, and propose nothing beyond keeping the plan)", "",
+             "## Campaign limits", json.dumps({k: v for k, v in _budget(campaign).items() if k in ("expires_utc", "max_invocations", "max_assignments", "turn_limit")}), "",
+             "## Observed state (mechanical, this tick)", json.dumps({k: obs[k] for k in ("events", "open_mandates", "sessions", "commits_since_last_tick")}, indent=1), "",
+             "## Assignments already drafted, with their evidence level (do not duplicate; follow what was taken in charge)",
+             json.dumps({k: {"recipient": v["recipient"], "key": v["key"], "highest": v["highest"]} for k, v in states.items()}, indent=1) or "none", "",
+             f"## Previous assessment\n{prior[-1].parent.name}: `{prior[-1]}` (read it; reuse it when nothing relevant changed)" if prior else "## Previous assessment\nnone", "",
+             "## Neutral entry points", render_entrypoints(entrypoints()), "", f"Memory directory (read-only): `{MEMORY_DIR}`", "", "## Output", CONTRACT,
+             "Give the usual headings, then `## Assignments`: either `none: <reason>` (continuing the plan can be the best decision) or one `### ASSIGNMENT n` block per assignment with exactly these "
+             "`field: value` lines: " + ", ".join(ASSIGNMENT_FIELDS) + ". recipient is Orchestrator, Science or Harness. At most as many blocks as the campaign allows; none to show independence.", ""]
+    return "\n".join(parts)
+
+
+def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout: int = 3600) -> int:
+    """One strategic evaluation: brief, run (counted in the campaign budget), save, register the assignment drafts. Returns the run's exit code."""
+    campaign = Path(campaign)
+    refusal = budget_refusal(campaign)
+    if refusal:
+        print(f"REFUSED: {refusal}", file=sys.stderr); return 2
+    state = _load_state(campaign)
+    if _running(state):
+        print("REFUSED: an evaluation is already running", file=sys.stderr); return 2
+    state["running"] = _pid_identity(os.getpid()); _save_state(campaign, state)
+    try:
+        obs = observe(campaign, state)
+        brief = campaign / "brief_P.md"
+        brief.write_text(build_brief_p(campaign, obs), encoding="utf-8")
+        code = run("P", campaign, brief, model, effort, timeout, LIMITS)
+        label = f"P{max((a['index'] for a in _attempts(campaign) if a['stage'] == 'P'), default=0)}"
+        assessment = campaign / label / "assessment.md"
+        if code == 0 and assessment.exists():
+            made = register_assignments(campaign, label, assessment.read_text(encoding="utf-8"))
+            print(f"{label}: {len(made)} assignment draft(s) registered: " + ", ".join(m["id"] for m in made))
+        state = _load_state(campaign)
+        state.update(last_evaluation_utc=_utc(_now()), last_digest=state.get("pending_digest", state.get("last_digest")), running="")
+        _save_state(campaign, state)
+        return code
+    finally:
+        state = _load_state(campaign); state["running"] = ""; _save_state(campaign, state)
+
+
+def status(campaign: Path) -> str:
+    campaign = Path(campaign)
+    b = _budget(campaign)
+    att = _attempts(campaign)
+    n = len({(a["stage"], a["index"]) for a in att})
+    lines = [f"campaign {campaign.name}: activated {b.get('activated_utc', '-')}, expires {b.get('expires_utc', '-')}, invocations {n}/{b.get('max_invocations', '-')}, "
+             f"assignments drafted {len([1 for e in _events(campaign) if e['state'] == 'DRAFTED'])}/{b.get('max_assignments', '-')}, {'DISABLED' if (campaign / 'DISABLED').exists() else 'enabled'}"]
+    for ident, v in sorted(assignment_states(campaign).items()):
+        lines.append(f"  {ident} [{v['recipient']}] {v['key']}: highest evidence {v['highest'] or 'none'}; levels {','.join(v['levels'])}" + ("; UNREACHABLE (residual stays in the queue)" if v["unreachable"] else ""))
+    return "\n".join(lines)
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0], formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -504,12 +867,22 @@ def main(argv: list[str] | None = None) -> int:
     b.add_argument("--mission-file"); b.add_argument("--constraints-file"); b.add_argument("--task-record", default="")
     b.add_argument("--assessment"); b.add_argument("--sealed-intended"); b.add_argument("--out")
     b.add_argument("--expect", action="append", default=[], metavar="REF[:PATH]", help="a delivery the mission text announces (SHA or ref, optionally the folder it adds); the brief states whether it is in this snapshot and reachable")
-    r = sub.add_parser("run"); r.add_argument("--stage", choices=["A", "B", "S"], required=True); r.add_argument("--campaign", required=True)
+    r = sub.add_parser("run"); r.add_argument("--stage", choices=["A", "B", "S", "P"], required=True); r.add_argument("--campaign", required=True)
     r.add_argument("--brief", required=True); r.add_argument("--model", required=True); r.add_argument("--effort", required=True, choices=["low", "medium", "high"])
     r.add_argument("--timeout", type=int, default=3600)
     r.add_argument("--extra-attempt", default="", help="reason; allows one recorded attempt beyond the ceiling when every earlier attempt of the stage failed")
     e = sub.add_parser("extract"); e.add_argument("--transcript", required=True); e.add_argument("--out", required=True)
     c = sub.add_parser("check"); c.add_argument("--campaign", required=True)
+    t = sub.add_parser("tick", help="the hourly bounded check (no model unless you then run `evaluate`)"); t.add_argument("--campaign", required=True)
+    ev = sub.add_parser("evaluate", help="one strategic evaluation, counted in the campaign budget"); ev.add_argument("--campaign", required=True)
+    ev.add_argument("--model", default="opus"); ev.add_argument("--effort", default="high", choices=["low", "medium", "high"]); ev.add_argument("--timeout", type=int, default=3600)
+    st = sub.add_parser("status", help="budget and the evidence level of every assignment"); st.add_argument("--campaign", required=True)
+    dl = sub.add_parser("deliver", help="record what the channel did with an assignment (SENT with the message id, or UNREACHABLE with the reason)"); dl.add_argument("--campaign", required=True)
+    dl.add_argument("--id", required=True); dl.add_argument("--state", choices=["SENT", "UNREACHABLE"], required=True); dl.add_argument("--evidence", required=True)
+    ac = sub.add_parser("activate", help="write the campaign budget (24 h by default, no renewal)"); ac.add_argument("--campaign", required=True)
+    ac.add_argument("--hours", type=int, default=24); ac.add_argument("--max-invocations", type=int, default=3); ac.add_argument("--max-assignments", type=int, default=3)
+    ac.add_argument("--turn-limit", type=int, default=20); ac.add_argument("--recipient", action="append", default=[], help="role=session name, e.g. Orchestrator='IT Orchestrator'")
+    dis = sub.add_parser("disable", help="stop the pilot: later ticks and runs refuse; ordinary scheduling and the sessions' work continue"); dis.add_argument("--campaign", required=True)
     args = ap.parse_args(argv)
 
     if args.cmd == "entrypoints":
@@ -542,7 +915,24 @@ def main(argv: list[str] | None = None) -> int:
         text = extract_transcript(Path(args.transcript))
         Path(args.out).write_text(text, encoding="utf-8")
         print(f"{args.out}: {len(text)} chars sha256 {sha256_text(text)} (extracted from {args.transcript})"); return 0 if text else 1
-    return check(Path(args.campaign))
+    if args.cmd == "check":
+        return check(Path(args.campaign))
+    campaign = Path(args.campaign)
+    if args.cmd == "tick":
+        print(json.dumps(tick(campaign), indent=1)); return 0
+    if args.cmd == "evaluate":
+        return evaluate(campaign, args.model, args.effort, args.timeout)
+    if args.cmd == "status":
+        print(status(campaign)); return 0
+    if args.cmd == "deliver":
+        _log_assignment(campaign, {"id": args.id, "state": args.state, "evidence": args.evidence}); print(f"{args.id}: {args.state} recorded"); return 0
+    if args.cmd == "activate":
+        now = _now()
+        campaign.mkdir(parents=True, exist_ok=True)
+        data = {"activated_utc": _utc(now), "expires_utc": _utc(now + dt.timedelta(hours=args.hours)), "max_invocations": args.max_invocations, "max_assignments": args.max_assignments,
+                "turn_limit": args.turn_limit, "recipients": dict(r.split("=", 1) for r in args.recipient)}
+        (campaign / "budget.json").write_text(json.dumps(data, indent=1, sort_keys=True) + "\n", encoding="utf-8"); print(json.dumps(data)); return 0
+    (campaign / "DISABLED").write_text(_utc(_now()) + "\n", encoding="utf-8"); print("disabled"); return 0
 
 
 if __name__ == "__main__":

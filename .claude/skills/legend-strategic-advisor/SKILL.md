@@ -1,12 +1,13 @@
 ---
 name: legend-strategic-advisor
-description: Optional strategic perspective for the Orchestrator. Calls the read-only legend-strategic-advisor twice, Stage A (independent assessment, no preferred plan) then Stage B (dialogue on the Orchestrator's intended action), saves each complete assessment, and returns it to the planning loop. Use at campaign start, after an operational increment, or when a material result changes a candidate, premise or research decision. Advisory only; gates nothing.
+description: 'Strategic perspective for LEGEND, consulted or proactive. Consulted by the Orchestrator: Stage A (independent assessment, no preferred plan) then Stage B (dialogue on its intended action). Proactive pilot (Stage P): an hourly bounded check and a roughly four-hourly evaluation, driven by the operator''s roadmap, that drafts assignments for the Orchestrator, Science and Harness and follows them to a result. Saves every complete assessment. Use when a material result changes a premise or opportunity, a queue ends, or the operator edits the roadmap. Read-only analysis; gates nothing.'
 ---
 
 # legend-strategic-advisor — a second, separate view on what to invest in next
 
-An **optional** consultation. It gates nothing, approves nothing and assigns nothing; the Orchestrator
-decides after reading it, and the ordinary research loop runs the same without it. The reasoning is in
+A strategic perspective that is **consulted** (the Orchestrator asks: Stages A and B, optional, never a precondition) or **proactive** (Stage P, on a schedule, inside a campaign the
+operator authorised: see "Proactive pilot" below). It gates nothing and approves nothing, its analysis is read-only, and the ordinary research loop runs the same without it. The Orchestrator keeps
+operational coordination and decides how and in what order an assignment is run, recording why when it adapts one. The reasoning is in
 the agent definition ([`.claude/agents/legend-strategic-advisor.md`](../../agents/legend-strategic-advisor.md));
 this file owns discovery, invocation, persistence and handoff. Principles stay in their canonical homes
 ([harness principles](../../../framework/master/harness_development_principles.md),
@@ -98,3 +99,35 @@ The raw stream and the session transcript stay local and are not published; the 
 Disable: stop calling it; nothing depends on it. Remove: delete `.claude/agents/legend-strategic-advisor.md`, this
 folder, `framework/scripts/strategic_advisor.py` and its test, the row in `framework/scripts/README.md`, the
 `run_release_regressions.py` entry, the route-registry lines, and the router rows in `CLAUDE.md` §2 and `SKILLS.md`.
+
+## Proactive pilot (Stage P)
+
+**What it is.** The operator's roadmap (the marked section at the top of `disease-models/wwox/research/drug_repurposing/roadmap_current.md`) defines the mission and the priorities; the
+dashboard, the open questions, DREAM and the radar help the Advisor choose how to pursue them. Without waiting to be asked it observes the laboratory, compares directions, and may draft
+assignments (`### ASSIGNMENT` blocks) for the Orchestrator, Science or Harness. A new operator line in the roadmap prevails over any automatic plan and triggers a re-evaluation. The Advisor
+cannot change a conclusion, ranking or qualification, and has no new mission or budget of its own.
+
+**The two levels, one schedule.** An hourly in-session cron (the one scheduling mechanism a live session can use and the one that can also *deliver*: the host crontab already runs the mandate watch
+and is not repeated) runs `python3 framework/scripts/strategic_advisor.py tick --campaign <DIR>`. `tick` is mechanical and makes no model call: it reads the roadmap digest, the commits of `main`
+since the last tick, the task records, the mandate watch's own event log and the runtime's list of sessions, and answers `NONE` (nothing new: the previous assessment stands), `EVALUATE`,
+or why not (`RUNNING`, `DEFERRED`, `BUDGET`, `EXPIRED`, `DISABLED`). On `EVALUATE` run, in the background, `strategic_advisor.py evaluate --campaign <DIR>` (opus, effort `high`, the existing
+fallback if the account does not serve it, declared in `meta.json`). Evaluations are about four hours apart, earlier when a delivery, a closed mandate, a stalled mandate or a roadmap edit
+anticipates one; the same events are never evaluated twice (a digest), an evaluation that is still running is not overlapped (process identity), and a session waiting for a CI run, a battery or
+a delegate is not "stalled": only the mandate watch calls a mandate resumable, and recovery stays with it.
+
+**Assignments and their evidence.** `evaluate` saves the assessment verbatim and registers each complete draft as `<DIR>/assignments/ADV-nnn.md` (a block missing a required field, a key already
+drafted or already named in a task record, and anything over the campaign's assignment budget are logged and refused). Then the session that holds the cron delivers: check the recipient is a live
+named session (`claude agents --json`), send the pointer with the supported cross-session message (SendMessage), and record `strategic_advisor.py deliver --id ADV-nnn --state SENT --evidence <message id>`;
+an unreachable recipient is recorded `UNREACHABLE` and stays an explicit residual (the assignment file is in the repository, and the hourly mandate watch and the recipients' own checks are the
+existing retry). `status --campaign <DIR>` keeps four things apart: **drafted** (saved), **sent** (the channel accepted a message), **taken in charge** (its id is in a recipient's task record),
+**executed** (a DONE step carries its id). None of them says the result was useful; that is judged against the continuation that would have happened anyway. Never write into a transcript to
+simulate a message and never start a copy of a live session to make it resume.
+
+**Budget, and what enforces it.** `activate` writes `<DIR>/budget.json` (24 hours, no renewal, at most three real strategic invocations in total, failed attempts and dialogue included, at most
+three assignments, a turn limit of 20). *Code-enforced for runs launched through this tool:* the invocation total, the expiry, the assignment count, the disable flag, the turn limit (`claude -p` has
+no turn-limit flag on this host, so the launcher stops the child it started and the attempt counts). *Procedural:* that the cron keeps running (it is session-only, fires only while the session is idle,
+and expires after seven days) and that deliveries are made; the account's total consumption is not controlled by any of this. Exhausting this budget stops the Advisor's evaluations only; the
+sessions' already authorised work continues.
+
+**Disable.** `strategic_advisor.py disable --campaign <DIR>` (or delete the cron with CronDelete, or write "stop" in the roadmap's instruction log): later ticks and runs refuse, and ordinary
+scheduling, the mandate watch and the sessions' work are untouched. Remove the capability: delete the Stage P code paths, the roadmap section markers and the campaign folder; Stages A and B are independent of them.
