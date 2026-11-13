@@ -9,9 +9,9 @@
  "BASELINE": "main 65557d1b (ADV-001 text) ; worktree .claude/worktrees/adv001, branch task/adv001; folder ebp_reannotation_adv001_20261113/; take-in-charge message sent to HE (ADV-001).",
  "MANDATE_STATE": "OPEN",
  "CURRENT_PACKAGE": {
-  "id": "recheck",
-  "state": "narrow recheck of README and delta",
-  "delegate_active": "V15 (resumed)",
+  "id": "landing",
+  "state": "pre-freeze checks",
+  "delegate_active": "none",
   "updated": "2026-11-13"
  },
  "RESUME": "S0 written; next: pull EBP-orthologue rows by script, resolve names, join, counts, verifier, README, delta.",
@@ -20,7 +20,7 @@
   "2026-11-13 read the open Hubler full text from Europe PMC (route given by the Harness session) myself, keyword-directed, to check the ifenprodil/amorolfine/antimuscarinic statements; no receipt claimed for that reading (verifier receipts cover the text layer)"
  ],
  "DELEGATIONS": [
-  "V15 verifier ea-y (agent a28cd245, legend-delegate): asked sonnet/high; read back sonnet x69, high x69; 69 turns in the first launch, output 95,258, cache read 10,158,173, birth context n/a; 36 rows 24 correct 12 defective; 6 staged receipts (-64) without a claim; narrow recheck of README/delta launched as a second launch (census to be re-read)"
+  "V15 verifier ea-y (agent a28cd245, legend-delegate): asked sonnet/high; read back sonnet x76, high x76; 76 turns in 2 launches (dispatch + recheck), output 124,507, cache read 12,203,446; 6 staged receipts (-64) staged without a claim (classifier refusal)"
  ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
@@ -44,13 +44,15 @@
     },
     {
      "step": "One blind verifier (sonnet high) on the decisive per-compound statements and the denominators; corrections",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "verifier V15 ea-y: first pass 24/36 correct, 12 defective; recheck of my README/delta/annotation 12/27 correct, 15 defective; corrections applied (apply_v15_corrections.py 12, apply_v15_recheck.py 14); README and delta rewritten to the accepted wording (not rechecked a third time, disclosed)"
     },
     {
      "step": "README answer-first, consumer_delta, open questions; delivery to the Orchestrator",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "README answer-first with substrate stated first, consumer_delta 7 rows, dated design-position lines appended to the SCI50 and SCI51 READMEs (own files)"
     }
    ]
   },
@@ -59,13 +61,14 @@
    "steps": [
     {
      "step": "Landing: pre-freeze suites, gate, LINT, receipts, growth, battery on the frozen SHA, task_close, safe_push",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator"
     },
     {
      "step": "Self-evaluation, DREAM, final report",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "self_eval_orchestrator_adv001_20261113.md; DREAM in README; no capability scout entry beyond the recorded repeats (claim refusal to a delegate repeated); no memory entry (lessons covered by sci51-pitfalls)"
     }
    ]
   }
