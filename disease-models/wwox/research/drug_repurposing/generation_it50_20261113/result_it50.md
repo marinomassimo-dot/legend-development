@@ -21,3 +21,6 @@ One case, retrospective, scored by its builder with an independent reader for ce
 
 ## Cost
 Software: seconds. Reader: sonnet, high, 62,025 subagent tokens, 9 tool uses, about 2.5 minutes. Translator: one sonnet delegate for six passages. Orchestrator time about two hours (not measured by a tool).
+
+## Update 2026-11-13 (ADV-003)
+The by-target activity route that this note records as not runnable (HTTP 500) was run later the same day under a responding service (ChEMBL_37): 28 rows on the eIF2B subunits, none an eIF2B activator; 0 curated-mechanism rows; an activator is found by molecule, not by target (`../isr_target_route_adv003_20261113/README.md`). The dependency is lifted; the conclusion of this note (representability, no predictive claim) is unchanged.
