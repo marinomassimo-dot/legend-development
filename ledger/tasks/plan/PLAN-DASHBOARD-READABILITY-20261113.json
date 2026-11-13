@@ -10,13 +10,13 @@
   "OBJECTIVE": "Public dashboard readability and visual design (GitHub Pages): a scientifically serious, clear, airy page where a clinician, researcher or family member finds an interesting research question, understands it and reaches the evidence; scientific editorial layout (serif editorial text, sans navigation), existing graphs and matrices valued, progressive disclosure, five languages; zero external spend; existing stack; Orchestrator verifies meaning-changing rewrites.",
   "worktree": ".claude/worktrees/dash",
   "branch": "task/dash",
-  "CURRENT_STATE": "OPEN",
+  "CURRENT_STATE": "COMPLETE",
   "CHECKPOINT": {
-    "last_verified_result": "view suite OK on 3236add6",
-    "first_incomplete_work": "landing, push, CI, deployed-site check"
+    "last_verified_result": "CI #691 success on 37095177; live site matches",
+    "first_incomplete_work": "none"
   },
   "AUTHORISED_QUEUE_20261113": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_1_INSPECT": {
       "order": 1,
       "title": "Inspect the live page and the generator in a real browser; Dismech reference; screenshots before; coordinate view text and file ownership with the Orchestrator",
@@ -107,9 +107,9 @@
       "steps": [
         {
           "step": "Real-browser checks: first screen desktop and phone, navigation, evidence, graph selection, filters, no clipped text, five languages; before/after screenshots; publication and check of the deployed site",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": "battery on f8f4ac91 FAIL kept (one view test: one-page print became two pages because the screen typography applied to print); fixed (screen-only), view suite 225 tests OK on 3236add6 (1,503 s); real-browser interaction checks and before/after screenshots in dashboard_restyle_20261113; landing, CI and deployed-site check pending"
+          "evidence": "battery on f8f4ac91 FAIL kept (one print test, fixed); view suite 225 OK on 3236add6; real-browser interaction checks; landed 37095177d9c0207fe12a0897af0cfbff44788f6a (gate PASS, ls-remote verified); CI #691 Public release gate success; publication #46 success; deployed site fetched: index.html and it/fr/es/de.html equal the committed package by sha256; live page opened in Chromium: first investigation at 1,001 px (desktop) / 1,771 (phone), chains at 6,374 / 10,029, no horizontal overflow; worktrees removed"
         }
       ]
     },
@@ -119,9 +119,9 @@
       "steps": [
         {
           "step": "Italian report opening with the required question",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": "Italian final report"
+          "evidence": "Italian final report delivered"
         }
       ]
     }
@@ -171,7 +171,13 @@
       "state": "CONCLUDED",
       "exit_code": 0,
       "result": "225 tests OK"
+    },
+    {
+      "label": "landing",
+      "sha": "37095177d9c0207fe12a0897af0cfbff44788f6a",
+      "state": "CONCLUDED",
+      "result": "gate PASS, ls-remote verified; CI #691 success; publication #46 success; deployed pages equal the package digests"
     }
   ],
-  "MANDATE_STATE": "OPEN"
+  "MANDATE_STATE": "COMPLETE"
 }
