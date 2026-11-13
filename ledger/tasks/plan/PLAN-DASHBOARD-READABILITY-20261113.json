@@ -1,152 +1,177 @@
 {
- "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
- "TASK_ID": "PLAN-DASHBOARD-READABILITY-20261113",
- "DIRECTIVE_VERSION": 1,
- "GENERATION": 1,
- "OWNER": "orchestrator",
- "ACTOR_ID": "plan",
- "PRIORITY": "HIGH",
- "assigned_on": "2026-11-13",
- "OBJECTIVE": "Public dashboard readability and visual design (GitHub Pages): a scientifically serious, clear, airy page where a clinician, researcher or family member finds an interesting research question, understands it and reaches the evidence; scientific editorial layout (serif editorial text, sans navigation), existing graphs and matrices valued, progressive disclosure, five languages; zero external spend; existing stack; Orchestrator verifies meaning-changing rewrites.",
- "worktree": ".claude/worktrees/dash",
- "branch": "task/dash",
- "CURRENT_STATE": "OPEN",
- "CHECKPOINT": {
-  "last_verified_result": "none yet",
-  "first_incomplete_work": "OBJ_1_INSPECT"
- },
- "AUTHORISED_QUEUE_20261113": {
-  "MANDATE_STATE": "OPEN",
-  "OBJ_1_INSPECT": {
-   "order": 1,
-   "title": "Inspect the live page and the generator in a real browser; Dismech reference; screenshots before; coordinate view text and file ownership with the Orchestrator",
-   "steps": [
-    {
-     "step": "Inspect the live page and the generator in a real browser; Dismech reference; screenshots before; coordinate view text and file ownership with the Orchestrator",
-     "status": "PENDING",
-     "owner": "plan",
-     "evidence": ""
-    }
-   ]
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+  "TASK_ID": "PLAN-DASHBOARD-READABILITY-20261113",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "plan",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-11-13",
+  "OBJECTIVE": "Public dashboard readability and visual design (GitHub Pages): a scientifically serious, clear, airy page where a clinician, researcher or family member finds an interesting research question, understands it and reaches the evidence; scientific editorial layout (serif editorial text, sans navigation), existing graphs and matrices valued, progressive disclosure, five languages; zero external spend; existing stack; Orchestrator verifies meaning-changing rewrites.",
+  "worktree": ".claude/worktrees/dash",
+  "branch": "task/dash",
+  "CURRENT_STATE": "OPEN",
+  "CHECKPOINT": {
+    "last_verified_result": "view suite OK on 3236add6",
+    "first_incomplete_work": "landing, push, CI, deployed-site check"
   },
-  "OBJ_2_FIRST_SCREEN": {
-   "order": 2,
-   "title": "First screen: what LEGEND studies, which investigations deserve attention, how to explore, how to reach evidence; selection of priority investigations with the full list; ties and the meaning of the order kept",
-   "steps": [
-    {
-     "step": "First screen: what LEGEND studies, which investigations deserve attention, how to explore, how to reach evidence; selection of priority investigations with the full list; ties and the meaning of the order kept",
-     "status": "PENDING",
-     "owner": "plan",
-     "evidence": ""
+  "AUTHORISED_QUEUE_20261113": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_1_INSPECT": {
+      "order": 1,
+      "title": "Inspect the live page and the generator in a real browser; Dismech reference; screenshots before; coordinate view text and file ownership with the Orchestrator",
+      "steps": [
+        {
+          "step": "Inspect the live page and the generator in a real browser; Dismech reference; screenshots before; coordinate view text and file ownership with the Orchestrator",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "live page and generator inspected in the real Chromium; baseline screenshots; Dismech hierarchy used; view text and file ownership agreed with the Orchestrator (two messages; their views landed 8d00e3d1, rebased and regenerated)"
+        }
+      ]
+    },
+    "OBJ_2_FIRST_SCREEN": {
+      "order": 2,
+      "title": "First screen: what LEGEND studies, which investigations deserve attention, how to explore, how to reach evidence; selection of priority investigations with the full list; ties and the meaning of the order kept",
+      "steps": [
+        {
+          "step": "First screen: what LEGEND studies, which investigations deserve attention, how to explore, how to reach evidence; selection of priority investigations with the full list; ties and the meaning of the order kept",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "title, lead, three entry points, one general note; priority list first, five rows open and five compact, ties and the research-priority sentence kept; first investigation row 4,420 -> 993 px (desktop), 8,997 -> 1,763 (phone)"
+        }
+      ]
+    },
+    "OBJ_3_TYPOGRAPHY": {
+      "order": 3,
+      "title": "Scientific editorial design: serif editorial text with sans navigation/controls, 16-18 px body, generous leading and spacing, fewer nested boxes and badges, WWOX colour identity, status readable without colour",
+      "steps": [
+        {
+          "step": "Scientific editorial design: serif editorial text with sans navigation/controls, 16-18 px body, generous leading and spacing, fewer nested boxes and badges, WWOX colour identity, status readable without colour",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "editorial.css: serif reading text, sans navigation and controls, 17/16.5 px, 1.6 leading, flat sections, lighter badges, status by word and border style; system fonts only"
+        }
+      ]
+    },
+    "OBJ_4_DISCLOSURE": {
+      "order": 4,
+      "title": "Progressive disclosure: question, why it matters, what we know, next step; sources, counter-evidence, methods and identifiers reachable; qualifications that change meaning stay visible; direct links, search, comparisons, exports preserved",
+      "steps": [
+        {
+          "step": "Progressive disclosure: question, why it matters, what we know, next step; sources, counter-evidence, methods and identifiers reachable; qualifications that change meaning stay visible; direct links, search, comparisons, exports preserved",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "question, reason, solidity, uncertainty, next test; rest behind one opening; clamp with explicit button (whole text stays in the page); permalinks, filters and search kept; long-tail rows use the same card"
+        }
+      ]
+    },
+    "OBJ_5_GRAPH": {
+      "order": 5,
+      "title": "At least one existing graph or comparative matrix placed usefully; observation, mechanism, intervention to study, experiment; keyboard and touch; text alternative; no implied causality",
+      "steps": [
+        {
+          "step": "At least one existing graph or comparative matrix placed usefully; observation, mechanism, intervention to study, experiment; keyboard and touch; text alternative; no implied causality",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "existing evidence chains placed after the priority list and linked from the first screen (90,743 -> 6,366 px desktop; 195,051 -> 10,021 phone); keyboard/click selection verified; edge table stacks on a phone with the edge type in the page language"
+        }
+      ]
+    },
+    "OBJ_6_MEANING": {
+      "order": 6,
+      "title": "Scientific meaning kept (observation vs hypothesis, WWOX vs transfer, candidate vs probe vs control, missing vs negative, research priority vs efficacy); Orchestrator verifies rewrites",
+      "steps": [
+        {
+          "step": "Scientific meaning kept (observation vs hypothesis, WWOX vs transfer, candidate vs probe vs control, missing vs negative, research priority vs efficacy); Orchestrator verifies rewrites",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "no curated passage rewritten; conditional marks, origin, kind and identity words kept; the Orchestrator was told what changes (structure and typography only) and asked to verify any meaning-changing rewrite: none arose"
+        }
+      ]
+    },
+    "OBJ_7_LANGUAGES": {
+      "order": 7,
+      "title": "Five languages, text lengths, translation inventory regenerated",
+      "steps": [
+        {
+          "step": "Five languages, text lengths, translation inventory regenerated",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "3 new UI strings in 5 languages, inventory regenerated and clean; first screens built and screenshotted in en, it, fr, es, de"
+        }
+      ]
+    },
+    "OBJ_8_VERIFY": {
+      "order": 8,
+      "title": "Real-browser checks: first screen desktop and phone, navigation, evidence, graph selection, filters, no clipped text, five languages; before/after screenshots; publication and check of the deployed site",
+      "steps": [
+        {
+          "step": "Real-browser checks: first screen desktop and phone, navigation, evidence, graph selection, filters, no clipped text, five languages; before/after screenshots; publication and check of the deployed site",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": "battery on f8f4ac91 FAIL kept (one view test: one-page print became two pages because the screen typography applied to print); fixed (screen-only), view suite 225 tests OK on 3236add6 (1,503 s); real-browser interaction checks and before/after screenshots in dashboard_restyle_20261113; landing, CI and deployed-site check pending"
+        }
+      ]
+    },
+    "OBJ_9_REPORT": {
+      "order": 9,
+      "title": "Italian report opening with the required question",
+      "steps": [
+        {
+          "step": "Italian report opening with the required question",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": "Italian final report"
+        }
+      ]
     }
-   ]
   },
-  "OBJ_3_TYPOGRAPHY": {
-   "order": 3,
-   "title": "Scientific editorial design: serif editorial text with sans navigation/controls, 16-18 px body, generous leading and spacing, fewer nested boxes and badges, WWOX colour identity, status readable without colour",
-   "steps": [
+  "VERIFICATION_EVIDENCE": [
     {
-     "step": "Scientific editorial design: serif editorial text with sans navigation/controls, 16-18 px body, generous leading and spacing, fewer nested boxes and badges, WWOX colour identity, status readable without colour",
-     "status": "PENDING",
-     "owner": "plan",
-     "evidence": ""
-    }
-   ]
-  },
-  "OBJ_4_DISCLOSURE": {
-   "order": 4,
-   "title": "Progressive disclosure: question, why it matters, what we know, next step; sources, counter-evidence, methods and identifiers reachable; qualifications that change meaning stay visible; direct links, search, comparisons, exports preserved",
-   "steps": [
+      "run_id": "20261113-122528-bf70b93e",
+      "label": "view-suite",
+      "sha": "fc2bda6c69e881c16c47790d885354e60420c854",
+      "state": "CONCLUDED",
+      "exit_code": 1,
+      "evidence_dir": "/tmp/legend-verify-keep/20261113-122528-bf70b93e",
+      "log_sha256": "82171825757e50af1b4dddd97e0fe44031a6204c5fbd2b6a8237586cbcb48294",
+      "clone": "REMOVED"
+    },
     {
-     "step": "Progressive disclosure: question, why it matters, what we know, next step; sources, counter-evidence, methods and identifiers reachable; qualifications that change meaning stay visible; direct links, search, comparisons, exports preserved",
-     "status": "PENDING",
-     "owner": "plan",
-     "evidence": ""
-    }
-   ]
-  },
-  "OBJ_5_GRAPH": {
-   "order": 5,
-   "title": "At least one existing graph or comparative matrix placed usefully; observation, mechanism, intervention to study, experiment; keyboard and touch; text alternative; no implied causality",
-   "steps": [
+      "run_id": "20261113-132939-f6164307",
+      "label": "battery",
+      "sha": "f8f4ac91f0dc8c64ddf718a558df79d42f077102",
+      "state": "CONCLUDED",
+      "exit_code": 1,
+      "evidence_dir": "/tmp/legend-verify-keep/20261113-132939-f6164307",
+      "log_sha256": "db9c791a60c23617835211af5dcba6a867d797b39e342bc1e3c6f2e29e325978",
+      "clone": "REMOVED"
+    },
     {
-     "step": "At least one existing graph or comparative matrix placed usefully; observation, mechanism, intervention to study, experiment; keyboard and touch; text alternative; no implied causality",
-     "status": "PENDING",
-     "owner": "plan",
-     "evidence": ""
-    }
-   ]
-  },
-  "OBJ_6_MEANING": {
-   "order": 6,
-   "title": "Scientific meaning kept (observation vs hypothesis, WWOX vs transfer, candidate vs probe vs control, missing vs negative, research priority vs efficacy); Orchestrator verifies rewrites",
-   "steps": [
+      "run_id": "20261113-150641-df3d8768",
+      "label": "view-suite",
+      "sha": "3236add6575c0a9f2393ee06f7a496d0400f7a30",
+      "state": "CONCLUDED",
+      "exit_code": 0,
+      "evidence_dir": "/tmp/legend-verify-keep/20261113-150641-df3d8768",
+      "log_sha256": "c28ac7c26f277361f33979351e059412ce9486fdd59a48bad993a5812d4f1851",
+      "clone": "REMOVED"
+    },
     {
-     "step": "Scientific meaning kept (observation vs hypothesis, WWOX vs transfer, candidate vs probe vs control, missing vs negative, research priority vs efficacy); Orchestrator verifies rewrites",
-     "status": "PENDING",
-     "owner": "plan",
-     "evidence": ""
-    }
-   ]
-  },
-  "OBJ_7_LANGUAGES": {
-   "order": 7,
-   "title": "Five languages, text lengths, translation inventory regenerated",
-   "steps": [
+      "run_id": "20261113-132939-f6164307",
+      "label": "battery",
+      "sha": "f8f4ac91f0dc8c64ddf718a558df79d42f077102",
+      "state": "CONCLUDED FAIL kept",
+      "result": "REGRESSION VERDICT FAIL: test_repurposing_view only (the one-page print of the ranking summary printed on 2 pages: the screen typography applied to print); fixed on 3236add6"
+    },
     {
-     "step": "Five languages, text lengths, translation inventory regenerated",
-     "status": "PENDING",
-     "owner": "plan",
-     "evidence": ""
+      "run_id": "20261113-150641-df3d8768",
+      "label": "view-suite",
+      "sha": "3236add6575c0a9f2393ee06f7a496d0400f7a30",
+      "state": "CONCLUDED",
+      "exit_code": 0,
+      "result": "225 tests OK"
     }
-   ]
-  },
-  "OBJ_8_VERIFY": {
-   "order": 8,
-   "title": "Real-browser checks: first screen desktop and phone, navigation, evidence, graph selection, filters, no clipped text, five languages; before/after screenshots; publication and check of the deployed site",
-   "steps": [
-    {
-     "step": "Real-browser checks: first screen desktop and phone, navigation, evidence, graph selection, filters, no clipped text, five languages; before/after screenshots; publication and check of the deployed site",
-     "status": "PENDING",
-     "owner": "plan",
-     "evidence": ""
-    }
-   ]
-  },
-  "OBJ_9_REPORT": {
-   "order": 9,
-   "title": "Italian report opening with the required question",
-   "steps": [
-    {
-     "step": "Italian report opening with the required question",
-     "status": "PENDING",
-     "owner": "plan",
-     "evidence": ""
-    }
-   ]
-  }
- },
- "VERIFICATION_EVIDENCE": [
-  {
-   "run_id": "20261113-122528-bf70b93e",
-   "label": "view-suite",
-   "sha": "fc2bda6c69e881c16c47790d885354e60420c854",
-   "state": "CONCLUDED",
-   "exit_code": 1,
-   "evidence_dir": "/tmp/legend-verify-keep/20261113-122528-bf70b93e",
-   "log_sha256": "82171825757e50af1b4dddd97e0fe44031a6204c5fbd2b6a8237586cbcb48294",
-   "clone": "REMOVED"
-  },
-  {
-   "run_id": "20261113-132939-f6164307",
-   "label": "battery",
-   "sha": "f8f4ac91f0dc8c64ddf718a558df79d42f077102",
-   "state": "CONCLUDED",
-   "exit_code": 1,
-   "evidence_dir": "/tmp/legend-verify-keep/20261113-132939-f6164307",
-   "log_sha256": "db9c791a60c23617835211af5dcba6a867d797b39e342bc1e3c6f2e29e325978",
-   "clone": "REMOVED"
-  }
- ],
- "MANDATE_STATE": "OPEN"
+  ],
+  "MANDATE_STATE": "OPEN"
 }
