@@ -4819,6 +4819,17 @@ def render_investigations(P: dict) -> str:
                       f'<dt>{E(U["iv_ph_str"])}</dt><dd>{lx(h["strengthen"])}</dd><dt>{E(U["iv_ph_weak"])}</dt><dd>{lx(h["weaken"])}</dd></dl></li>' for h in hs)
         return f'<dt>{E(U["iv_ph_h"])}</dt><dd><details class="inv-phys"><summary>{E(U["iv_ph_sum"].format(n=len(hs)))}</summary><p class="mini mut">{E(U["iv_ph_note"])}</p><ul class="inv-phys-list">{lis}</ul></details></dd>'
 
+    def card_dl(r, spec, tail_html=""):
+        """The reading card of a row of the long tail: the question first, then why it matters, what is known, what is uncertain and the next test behind one opening, and the remaining fields behind the scientific details."""
+        glance_keys = ("question", "why_now", "evidence_depth", "decisive_uncertainty", "next_test")
+        lab = {f: k for k, f in spec}
+        have = [f for f in glance_keys if f in lab and str(r.get(f) or "").strip()]
+        q = f'<dt>{E(U[lab["question"]])}</dt><dd>{lx(r["question"])}</dd>' if "question" in have else ""
+        rest = "".join(f'<dt>{E(U[lab[f]])}</dt><dd>{lx(r[f])}</dd>' for f in have if f != "question")
+        more = "".join(f'<dt>{E(U[k])}</dt><dd>{lx(r[f])}</dd>' for k, f in spec if f not in glance_keys and str(r.get(f) or "").strip())
+        return (f'<dl class="qk-dl inv-glance">{q}' + (f'<dt class="inv-gl-rest-dt"></dt><dd class="inv-gl-rest-dd"><details class="inv-gl-rest"><summary>{E(U["iv_glance_more"])}</summary><dl class="qk-dl">{rest}</dl></details></dd>' if rest else "") + '</dl>'
+                + f'<details class="inv-more"><summary>{E(U["iv_more"])}</summary><dl class="qk-dl">{more}{tail_html}</dl></details>')
+
     head = f'<section id="investigations" class="inv" aria-labelledby="h-inv"><h2 id="h-inv">{E(U["iv_h"])}</h2>'
     if rows is None:
         return head + f'<p class="note" data-state="pending">{E(U["iv_pending"])}</p></section>'
@@ -4877,14 +4888,14 @@ def render_investigations(P: dict) -> str:
         for r in conds:
             cspec = [("iv_cond_id", "inv_id"), ("iv_q", "question"), ("iv_h_origin", "origin_detail"), ("iv_why", "why_now"), ("iv_ev", "evidence_available"),
                      ("iv_depth", "evidence_depth"), ("iv_unc", "decisive_uncertainty"), ("iv_next", "next_test"), ("iv_h_feas", "feasibility"), ("iv_nov", "novelty_perimeter")]
-            cdl = "".join(f'<dt>{E(U[k])}</dt><dd>{lx(r[f])}</dd>' for k, f in cspec if str(r.get(f) or "").strip())
+            cdl = ""
             cids = [x for x in str(r.get("chembl_ids") or "").split(";") if x]
             if cids:
                 cdl += f'<dt>{E(U["iv_h_chembl"])}</dt><dd><span class="mini">{E(", ".join(cids))}</span> <span class="mini mut">({E(U["iv_chembl_full"] if full else U["iv_chembl_share"])}).</span></dd>'
-            cdl += cmp_dt(r["inv_id"]) + phys_dt(r["inv_id"])
+            tail_c = cdl + cmp_dt(r["inv_id"]) + phys_dt(r["inv_id"])
             ci.append(f'<li class="inv-row inv-cond" id="{E(r["inv_id"])}" data-inv="{E(r["inv_id"])}" data-origin="{E(r["origin_class"])}" data-cmp="{cmp_state(r["inv_id"])}" data-status="conditional_hypothesis"><div class="inv-h">'
                       f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span> '
-                      f'<span class="stt stt-conditional_hypothesis">{E(U["iv_st_conditional_hypothesis"])}</span></div><dl class="qk-dl">{cdl}</dl></li>')
+                      f'<span class="stt stt-conditional_hypothesis">{E(U["iv_st_conditional_hypothesis"])}</span></div>{card_dl(r, cspec, tail_c)}</li>')
         out += (f'<section id="inv-conditional" class="inl" aria-labelledby="h-inv-cond"><h3 id="h-inv-cond">{E(U["iv_cond_h"])} ({len(conds)})</h3>'
                 f'<p class="note">{E(U["iv_cond_lead"])}</p><ul class="inv-list inv-cond-list">{"".join(ci)}</ul></section>')
     furs = rk.get("further_investigations") or []
@@ -4893,16 +4904,16 @@ def render_investigations(P: dict) -> str:
         for r in furs:
             fspec = [("iv_cond_id", "inv_id"), ("iv_q", "question"), ("iv_h_origin", "origin_detail"), ("iv_why", "why_now"), ("iv_ev", "evidence_available"),
                      ("iv_depth", "evidence_depth"), ("iv_unc", "decisive_uncertainty"), ("iv_next", "next_test"), ("iv_h_feas", "feasibility"), ("iv_nov", "novelty_perimeter")]
-            fdl = "".join(f'<dt>{E(U[k])}</dt><dd>{lx(r[f])}</dd>' for k, f in fspec if str(r.get(f) or "").strip())
+            fdl = ""
             fids = [x for x in str(r.get("chembl_ids") or "").split(";") if x]
             if fids:
                 fdl += f'<dt>{E(U["iv_h_chembl"])}</dt><dd><span class="mini">{E(", ".join(fids))}</span> <span class="mini mut">({E(U["iv_chembl_full"] if full else U["iv_chembl_share"])}).</span></dd>'
-            fdl += cmp_dt(r["inv_id"]) + phys_dt(r["inv_id"])
+            tail_f = fdl + cmp_dt(r["inv_id"]) + phys_dt(r["inv_id"])
             st = r.get("status")
             fb = f' <span class="stt stt-{E(st)}">{E(U["iv_st_" + st])}</span>' if st in ("carded_thread", "premise_measurement") else ""
             fi.append(f'<li class="inv-row inv-further" id="{E(r["inv_id"])}" data-inv="{E(r["inv_id"])}" data-origin="{E(r["origin_class"])}" data-cmp="{cmp_state(r["inv_id"])}" data-status="{E(str(st))}"><div class="inv-h">'
                       f'<span class="inv-pos" aria-label="{E(U["iv_pos"])} {E(str(r["position"]))}">{E(str(r["position"]))}</span> <span class="mini">({E(U["iv_fur_pos"])})</span> '
-                      f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span>{fb}</div><dl class="qk-dl">{fdl}</dl></li>')
+                      f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span>{fb}</div>{card_dl(r, fspec, tail_f)}</li>')
         out += (f'<section id="inv-further" class="inl" aria-labelledby="h-inv-fur"><h3 id="h-inv-fur">{E(U["iv_fur_h"])} ({len(furs)})</h3>'
                 f'<p class="note">{E(U["iv_fur_lead"])}</p><ul class="inv-list inv-fur-list">{"".join(fi)}</ul></section>')
     if rows is not None:
@@ -5863,7 +5874,7 @@ class Cdp:
 MEASURE_JS = r"""(function(){var iw=__REQ__,de=document.documentElement,off=[];
 function scrolls(e){for(var p=e.parentElement;p&&p!==document.body;p=p.parentElement){var o=getComputedStyle(p).overflowX;if(o==='auto'||o==='scroll'||o==='hidden')return true}return false}
 var all=document.body.getElementsByTagName('*');for(var i=0;i<all.length&&off.length<6;i++){var e=all[i],r=e.getBoundingClientRect();if(r.width&&r.right>iw+1&&getComputedStyle(e).position!=='fixed'&&!scrolls(e)&&e.offsetParent!==null)off.push(e.tagName.toLowerCase()+(e.id?'#'+e.id:'')+(e.className&&e.className.baseVal===undefined?'.'+String(e.className).split(' ')[0]:'')+' right='+Math.round(r.right))}
-return {legendBottom:(function(){var e=document.querySelector('.legendrow');return e?Math.round(e.getBoundingClientRect().bottom+window.scrollY):null})(),innerWidth:window.innerWidth,scrollWidth:de.scrollWidth,bodyScrollWidth:document.body.scrollWidth,clientWidth:de.clientWidth,visualViewportWidth:window.visualViewport?Math.round(window.visualViewport.width):null,ready:document.body.getAttribute('data-cur-ready'),offenders:off}})()"""
+return {entryBottom:(function(){var e=document.querySelector('.hero-go');return e?Math.round(e.getBoundingClientRect().bottom+window.scrollY):null})(),noteTop:(function(){var e=document.querySelector('.gen-note');return e?Math.round(e.getBoundingClientRect().top+window.scrollY):null})(),innerWidth:window.innerWidth,scrollWidth:de.scrollWidth,bodyScrollWidth:document.body.scrollWidth,clientWidth:de.clientWidth,visualViewportWidth:window.visualViewport?Math.round(window.visualViewport.width):null,ready:document.body.getAttribute('data-cur-ready'),offenders:off}})()"""
 
 
 def brief_chars(c: dict) -> int:
@@ -6081,7 +6092,7 @@ def main(argv=None) -> int:
             return 0
         res = measure_viewports(out.resolve(), a.shots)
         print("requested\tmobile_emulation\tinnerWidth\tscrollWidth\tvisualViewport\toverflow\tscenario\tnote")
-        print("# first screen: bottom of the F/C/P legend (css px from the top) against the viewport height: " + ", ".join(f'{m["requested"]}x{h}: {m["legendBottom"]}' for m in res for (w, h, _mob) in VIEWPORTS if m["scenario"] == "first_screen" and m["mobile"] and w == m["requested"] and m["requested"] <= 390))
+        print("# first screen: bottom of the start-here row and top of the general note (css px from the top) against the viewport height: " + ", ".join(f'{m["requested"]}x{h}: {m["entryBottom"]}/{m["noteTop"]}' for m in res for (w, h, _mob) in VIEWPORTS if m["scenario"] == "first_screen" and m["mobile"] and w == m["requested"] and m["requested"] <= 390))
         bad = 0
         for m in res:
             bad += bool(m["overflow"])

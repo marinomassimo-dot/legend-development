@@ -694,6 +694,7 @@ document.body.setAttribute('data-cur-ready', '1');
 (function () {
   'use strict';
   try {
+    var T = JSON.parse(document.getElementById('data').textContent).ui;
     var LIM = 520;
     document.querySelectorAll('.inv-glance > dd, .inv-cv-dd').forEach(function (dd, i) {
       if (dd.dataset.edDone || dd.textContent.length < LIM || dd.querySelector('details')) return;
