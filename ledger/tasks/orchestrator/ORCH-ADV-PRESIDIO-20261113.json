@@ -28,9 +28,9 @@
     },
     {
      "step": "Create this session's hourly recall (CronCreate, session-only) on the same campaign, from the root checkout; verify its first automatic fire is recognised and tell HE the result",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Cron d463d57c created 2026-11-13 (hourly at :17, session-only, canonical `strategic_advisor.py recall` text, run from the root checkout); HE informed (message e3ed40e7). Remaining: the first AUTOMATIC fire (23:42) and its verdict."
+     "evidence": "First AUTOMATIC fire of cron d463d57c: the cron-enqueued prompt arrived 2026-11-13T23:43:47Z (not typed); tick verdict DEFERRED (last evaluation 0.0 h ago), no model call; monitor read-back mandate_watch.py check --task ORCH-ADV-PRESIDIO-20261113 --deliver none --self-call --json: session e6526331-6b7c-4631-8c9b-9e9d79867e90, record_verdict CONTINUE, state RUNNING. HE told by message 458b6d8d, so it can close the transfer. The manual tick at 23:34Z before evaluate is not counted as the fire."
     },
     {
      "step": "Bind this record to the session (MANDATE_BOUND marker) and read the monitor's association (session id, record_verdict, state) with mandate_watch.py check --task ORCH-ADV-PRESIDIO-20261113 --deliver none --json",
@@ -134,6 +134,13 @@
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "evidence": ""
+    },
+    {
+     "step": "HE bounded correction: strategic_advisor.py assignment_states counts the presidio's own record as a recipient taking an id in charge and as a DONE step (status showed ADV-004/005 EXECUTED one minute after SENT); fix before invocation 4 builds its brief, with one test case",
+     "status": "BLOCKED",
+     "owner": "orchestrator",
+     "blocker": "HE has to land the fix (message 458b6d8d, 2026-11-13T23:4xZ); the wrong level would otherwise enter the next Stage P brief and the operator report",
+     "unblock": "HE's fix on main and `strategic_advisor.py status` showing ADV-004/005 as SENT until a recipient's own record names them; until then levels are read from the recipients' records, not from status"
     },
     {
      "step": "On each result: read the original delivery, say what it strengthens, weakens, leaves unchanged or opens, hand the consumer delta to the IT Orchestrator by message with the folder path, verify the disposition on main, then decide: deepen, change thread, or suspend with a reopening condition",
