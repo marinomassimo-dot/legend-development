@@ -1,0 +1,69 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ADV001-20261113",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "ADV-001 (advisor pilot, relayed by the Harness session on 2026-11-13; authority relayed by a peer, not verified; operator told in chat): re-annotate the IT29 case-1 signed rows by documented EBP (sterol isomerase) status (IT51-Q05, in silico, zero spend): how many favourable rows are attributable to documented EBP inhibition rather than the stated target, and does a consumer sentence about pro-myelinating agents have to change; substrate stated first (31 curated rows and the 20-compound comparison; the 216-row layer is not committed); categories documented/sterol-non-EBP/absence/unmeasured kept apart; one blind verifier; no edit to IT29 files or shared consumers; result to the Orchestrator for disposition.",
+ "START_UTC": "2026-11-13T18:10:00Z",
+ "BASELINE": "main 65557d1b (ADV-001 text) ; worktree .claude/worktrees/adv001, branch task/adv001; folder ebp_reannotation_adv001_20261113/; take-in-charge message sent to HE (ADV-001).",
+ "MANDATE_STATE": "OPEN",
+ "CURRENT_PACKAGE": {
+  "id": "S0",
+  "state": "substrate and categories written",
+  "delegate_active": "none",
+  "updated": "2026-11-13"
+ },
+ "RESUME": "S0 written; next: pull EBP-orthologue rows by script, resolve names, join, counts, verifier, README, delta.",
+ "DECISIONS_TAKEN": [
+  "2026-11-13 ADV-001 taken in charge (cited here as the take-in-charge record); accepted as a request relayed by the Harness session; reversible by the operator"
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "AUTHORISED_QUEUE_20261113C": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_A": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Take in charge ADV-001; substrate, categories, priors and stop rule written before the join",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Pull the EBP-orthologue rows by script, resolve the compound names, join to the 20 compounds and 11 compound rows, counts with denominators, locate consumer sentences",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "One blind verifier (sonnet high) on the decisive per-compound statements and the denominators; corrections",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "README answer-first, consumer_delta, open questions; delivery to the Orchestrator",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_B": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Landing: pre-freeze suites, gate, LINT, receipts, growth, battery on the frozen SHA, task_close, safe_push",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Self-evaluation, DREAM, final report",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ },
+ "VERIFICATION_EVIDENCE": []
+}
