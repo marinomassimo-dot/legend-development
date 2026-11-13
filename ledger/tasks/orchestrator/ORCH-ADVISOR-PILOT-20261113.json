@@ -1,0 +1,45 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "TASK_ID": "ORCH-ADVISOR-PILOT-20261113",
+ "START_UTC": "2026-11-13T18:30:00Z",
+ "OBJECTIVE": "Operational coordination of the first proactive Strategic Advisor pilot campaign (advisor_pilot_20261113): 24 h from 2026-11-13T18:22:36Z, at most three strategic invocations and three assignments in total, no recursion, no spend; the Advisor drafts assignments, Harness delivers them, the Orchestrator takes each in charge with its ADV id in this record (adapting order or method with a written reason, or deferring with a revival condition) and owes the pilot report. Authority read from the operator's roadmap section (roadmap_current.md, dated line 2026-11-13) and PILOT_CAMPAIGN.md as delivered by Harness; the operator prompt itself was not seen by this session. Disable: strategic_advisor.py disable --campaign ... or 'stop' in the roadmap log; an operator stop prevails.",
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "ACK: take the campaign in charge (Harness phase done, campaign stays open)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "ACK recorded 2026-11-13; ceilings read from budget.json (3 invocations, 3 assignments, 24 h); status: strategic_advisor.py status shows invocations 0/3, drafted 0/3."
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "For each ADV-nnn delivered by Harness: record a take-in-charge line with its id (executed, adapted with a reason, or deferred with a revival condition); sent is not taken",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": "Dependency: a Stage P evaluation must draft an assignment and Harness must deliver it (no ADV drafted yet). Revival condition: a cross-session message naming ADV-nnn; check strategic_advisor.py status --campaign advisor_pilot_20261113 at each safe boundary. No assignment is taken before it exists."
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Pilot report (due by the campaign expiry 2026-11-14T18:22:36Z): decisions advanced without a new operator prompt, usefulness against the continuation that would have happened anyway, work avoided, interference, interventions asked of the operator, actual cost; configured/invoked/consumed/improved kept apart; provisional, not independent validation",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": "Due at expiry or when the advisor's budget is exhausted."
+    }
+   ]
+  }
+ }
+}
