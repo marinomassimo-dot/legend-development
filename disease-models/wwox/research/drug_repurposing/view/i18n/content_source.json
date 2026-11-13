@@ -11,6 +11,10 @@
   "src": "en",
   "text": "The percent of the isolated current removed in the Wwox slice (not measured) and the maximum on triheteromers (not reached in any text read)."
  },
+ "01748cb6d0c0": {
+  "src": "en",
+  "text": "A Ba2+-sensitive resting K+ conductance (Kir2-type and/or a K2P-type leak; not separable with Ba2+) carries about 23 percent of the resting…"
+ },
  "01fe147e4f17": {
   "src": "en",
   "text": "A peptide inhibitor of the chaperone HSC70 (HSPA8) used as a cell-level probe, with lysosomal and genetic controls (identified by its ChEMBL record below)"
@@ -30,6 +34,10 @@
  "0476613c7243": {
   "src": "en",
   "text": "Nothing moves it: kept so the filing is not mistaken for evidence. Reopen if the primary paper assigns the value to GluN2B."
+ },
+ "048da5e8ce2e": {
+  "src": "en",
+  "text": "Alternatives the package states: Ba2+-sensitive current per pF equal across genotypes; or the contrast shrinks under blockade or matched access resistance; or capacitance is lower and tau scales so that the pair follows from cell size; or the implied reversal after the measured junction correction is outside K+ range. || Other rows of the package, not classified by it as rivals, complementary or compatible: KH2: Kv7 current starts near -70 mV (D03); the Kv7 tool blocker has no effect at -70 mV on a recombinant channel and half-inhibits near -51 mV, so a null… || KH3: Ih carries about 6 percent of the resting conductance in WT L2/3 and its block lowers sag from 1.8 to 1.0 mV and hyperpolarises 4.7… || KH4: If the K+ conductance change were produced by network activity (extracellular K+ or activity-dependent regulation), the HT, which… || KH5: A maturation delay would raise Rin and depolarise rest like the Wwox pair, but the implied reversal of the developmental conductance…"
  },
  "050ae835269e": {
   "src": "en",
@@ -438,6 +446,10 @@
  "368203a08734": {
   "src": "en",
   "text": "Smaller cells with a fixed seal leak, a larger Ih, selection by input-resistance criteria, maturation delay, and a cell-type mix."
+ },
+ "368b1d402b8e": {
+  "src": "en",
+  "text": "A Ba2+-sensitive resting K+ conductance (Kir2-type and/or a K2P-type leak; not separable with Ba2+) carries about 23 percent of the resting conductance of a WT L2/3 neuron (D01, S01) and Ba2+ block raises Rin about 30 percent with a small depolarisation and a lower rheobase (S01); the Wwox pair implies a net lost conductance of about 28 percent (2.7 nS); the arithmetic of its implied reversal (point -93.7 KO and -88.8 HT on the recorded scale; 95 percent intervals -143 to -77 and -149 to -66) is a constraint, not a discriminator: it is reproduced exactly by a smaller membrane plus a fixed shunt (verifier), it lies 4-12 mV below E_K on the recorded scale for a junction offset of 8-16 mV, and its interval reaches the maturation values (IR, MC); a known Ba2+-sensitive current gain (Fmr1 KO, preprint, digits not verifiable by the verifier) gives the mirror pattern (Rin -28 percent, rest -3.7 mV) (D13, S02-S04).. Exploratory: the package states no therapeutic direction. Unresolved premise: The Ba2+-sensitive share is the same in this preparation (P13-P17, layer II/III, neocortex with the area not stated in the Wwox paper, 35 C) as in the adult auditory-cortex source; Ba2+ at 60 uM is neuron-autonomous (Ba2+ block of astroglial Kir4.1 is reported at abstract level, 19515915, so a glial contribution to a bath-Ba2+ effect is not excluded). [IT48 update] The eight SCI43 rows that stood producer-read only were read again against the original full texts by a distinct verifier: 5 supported, 3 partly, none unsupported, 13 files kept with SHA-256 (sci43_reopen_it48_20261112/verify). The 23 percent figure survives as printed arithmetic but is the increment of one 60 uM Ba2+ dose in P28-P42 mouse auditory cortex (the preprint itself calls that age juvenile), not a measured Kir2 share; the cohorts of the Ba2+ and Ih panels are different cells. No row measures a Ba2+-sensitive resting conductance in layer II/III at about P13-P17; the juvenile evidence is Kv7 only (about 20 percent at a rest of -67 mV with synaptic blockers at room temperature, one study; the developmental Kv7 difference is not significant). The size of a resting lever in the juvenile slice therefore stays a transfer from an older age, not a measurement; the Kir2 drug-name search has not been run. No rank, sign or qualification changed. [IT49 update] Three limits travel with this row. (1) A Ba2+ response does not identify Kir2: 60 uM Ba2+ blocks Kir2-type channels, K2P-type leak channels and astroglial Kir4.1 alike. (2) Shares measured in different preparations or cohorts (here the Ba2+ and the Ih panels, different cells) are not additive and are not a decomposition of one resting conductance. (3) No measurement exists in the pertinent age band and layer (about P13-P17, layer II/III): the premise is unresolved, neither supported nor refuted, and the 23 percent figure is a transfer from an older age."
  },
  "375c36b55dc4": {
   "src": "en",
@@ -859,6 +871,10 @@
   "src": "it",
   "text": "Rete con segno (solo risorse esterne) contro riferimento senza segno"
  },
+ "669b635d98c1": {
+  "src": "en",
+  "text": "At matched potential KO keeps a larger sag or Ih (then HY3 opens), or a component insensitive to the Ih tool blocker carries the difference. || Run the package steps X1-X3. If HY1 holds, put the K+/leak identity (Kv7 versus other leak) ahead of any HCN lever; if it fails, go to HY2/HY3."
+ },
  "674effb47745": {
   "src": "en",
   "text": "INV-18"
@@ -1022,6 +1038,10 @@
  "79a188d2a6e2": {
   "src": "en",
   "text": "A selective EZH2 (PRC2) inhibitor, a tool compound for mouse glial systems"
+ },
+ "79d77b3ec822": {
+  "src": "en",
+  "text": "Ba2+-sensitive current per pF equal across genotypes; or the contrast shrinks under blockade or matched access resistance; or capacitance is lower and tau scales so that the pair follows from cell size; or the implied reversal after the measured junction correction is outside K+ range."
  },
  "7a468e0dc06b": {
   "src": "en",
@@ -1435,6 +1455,10 @@
   "src": "en",
   "text": "New compound routes for the Q8 question; the NRF2 axis and its step 0 were already a carded thread since IT10; the molecule is in an earlier exclusion list"
  },
+ "a59ce24bd04f": {
+  "src": "en",
+  "text": "Not stated by the package (missing): a falsifiable prediction is not given. What would favour it (a measurement outcome, not a prediction): At matched starting potential and matched peak excursion the genotypes show the same sag (current clamp) and the same Ih amplitude and V1/2 (voltage clamp), while Rin and rest still differ."
+ },
  "a5a33bf563ba": {
   "src": "it",
   "text": "Elettrofisiologia su fette del knockout neurone-specifico del laboratorio d'origine: la linea non è disponibile qui, se sia ottenibile non nota."
@@ -1534,6 +1558,10 @@
  "ad96dba77e60": {
   "src": "en",
   "text": "Known thread re-emitted with a corrected counter-evidence and a new hazard"
+ },
+ "aeac1b563a79": {
+  "src": "en",
+  "text": "Recruitment: sag and rebound are enlarged mainly because the same current step drives a more resistive, more depolarised cell about 8 mV further and about 4-5 mV more negative, while HCN density and gating are unchanged. Missing bridge: no voltage-clamp Ih and no matched-excursion current clamp exists in any WWOX preparation.. Exploratory: the package states no therapeutic direction. Unresolved premise: no voltage-clamp Ih and no matched-excursion current clamp exists in any WWOX preparation."
  },
  "aed91b9c5ada": {
   "src": "en",
@@ -2007,6 +2035,10 @@
   "src": "en",
   "text": "Whether an AMPA-dependent component exists at all; the 90 percent design value of the block is at the edge of what the tool gives in tissue (80-89 percent at 10 uM)."
  },
+ "e406a9f7a12a": {
+  "src": "en",
+  "text": "Pyramidal neurons: Rin +40 percent, rest +4 to +6 mV, absolute sag and KO-only rebound larger (Table 1, PMID34634460). Rin up with a depolarised rest is what fewer open K+/leak channels give; extra open HCN would lower Rin."
+ },
  "e42d8e04d9a5": {
   "src": "it",
   "text": "Capire se la proteina Q230P viene prodotta e poi eliminata, per quale via, e se quella che torna è funzionante."
@@ -2038,6 +2070,10 @@
  "e608a22e6da1": {
   "src": "en",
   "text": "A lever on the other side of the node from the kinase: if lactate supply to neurons matters, lowering it could help or harm depending on the compartment."
+ },
+ "e619a1161554": {
+  "src": "en",
+  "text": "Rin, rest and rheobase may move toward WT (the paper reports no gain difference, so gain has nothing to restore); an effect on bursts is open. HT matches KO on Rin by point estimate and rarely bursts, but the HT rest and sag asterisks are not reproducible from the printed values, so no sufficiency argument is drawn from HT. What would favour it (a measurement outcome, not a prediction): A Ba2+-sensitive current (Kir2-type) per pF smaller in KO and HT than in WT, with reversal near the corrected E_K, measured with synaptic transmission blocked and the junction potential measured; capacitance and access resistance reported; (dynamic-clamp re-addition that restores Rin and rest shows sufficiency only, not a lesion). Measure: Difference-current ladder (K-EXP step 2), then dynamic clamp (step 5)."
  },
  "e6aa39a1f3a3": {
   "src": "en",
@@ -2107,6 +2143,10 @@
   "src": "en",
   "text": "NMDA-receptor-regenerative drive (GluN2B- or GluN2A-weighted), a general loss of excitatory drive, and a recording-state artefact. Kainate receptors are not separated from AMPA receptors by the usual tools."
  },
+ "eda8a3da4d64": {
+  "src": "en",
+  "text": "Alternatives the package states: (a) more HCN conductance; (b) different HCN gating or distribution; (c) HCN plus K+ plus T-type together; (d) an excitation-dependent compensation. Not mutually exclusive. [Audit: a smaller cell (capacitance 180/131/149 pF) is not listed as a competing alternative; holding the WT sag fraction fixed explains only about 53 percent of the HT sag increase and about 33 percent of the KO increase; the sag fraction rise (5.5 to 8.3 percent) is about 1.5 standard errors on the printed errors, so it is not shown to differ; HT and KO are about 8 mV further from rest but only 4 to 5 mV more negative in absolute potential.] || Other rows of the package, not classified by it as rivals, complementary or compatible: HY2: Sag/rebound (HCN, with a T-type component) shapes the cell response that starts or spreads bursts; direction of benefit unknown:… || HY3: Nested origin of one phenomenon: if Ih itself differs (HY1 fails), the change could be in channel number, surface fraction, subunit…"
+ },
  "ee335183c025": {
   "src": "en",
   "text": "Is there an axonal signal left for a pro-myelinating agent to act on, before any such agent is ordered?"
@@ -2159,6 +2199,10 @@
   "src": "en",
   "text": "Net-negative on the myelin axis if both EZH1 and EZH2 are inhibited (oligodendrocyte differentiation blocked in mouse knockouts); cytokines rose after EZH2 suppression in tumour cells."
  },
+ "f3477bd920b6": {
+  "src": "en",
+  "text": "Recruitment: sag and rebound are enlarged mainly because the same current step drives a more resistive, more depolarised cell about 8 mV further and…"
+ },
  "f34e67309e90": {
   "src": "en",
   "text": "GABA-transaminase block: affinities of irreversible inhibitors are not a potency ranking"
@@ -2190,6 +2234,10 @@
  "f8c40246e1de": {
   "src": "en",
   "text": "A protein measurement on material the module already reasons about; no new model and no compound needed."
+ },
+ "f92adb789e1f": {
+  "src": "en",
+  "text": "WT to KO: Rin 102.9 to 143.0 MOhm (+39 percent), rest -79.3 to -73.6 mV, tau 18.6 to 21.3 ms; HT equals KO on Rin and is intermediate on rest; bursts in 36/42 KO, 4/23 HT, 0/11 WT slices (34634460 Table 1; hcn physiology Y01-Y03)."
  },
  "f948bf663b3e": {
   "src": "en",

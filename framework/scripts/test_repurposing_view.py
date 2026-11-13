@@ -1359,6 +1359,51 @@ class CdpStartup(unittest.TestCase):
         with patch.dict(os.environ, {"CHROME_BIN": "/missing-legend-browser-fixture"}), patch.object(rv, "CHROMIUM_CANDIDATES", [sys.executable]):
             self.assertEqual(rv.find_chromium(), sys.executable)
 
+    def preflight(self, candidates, env=None):
+        import os
+        from unittest.mock import patch
+        lines = []
+        with patch.dict(os.environ, env or {}, clear=False), patch.object(rv, "CHROMIUM_CANDIDATES", candidates):
+            if not env:
+                os.environ.pop("CHROME_BIN", None)
+            with patch("glob.glob", return_value=[]):
+                code = rv.browser_preflight(out=lines.append)
+        return code, "\n".join(lines)
+
+    def test_preflight_keeps_five_states_apart_and_stops_at_the_first_failure(self):
+        with tempfile.TemporaryDirectory() as td:
+            code, text = self.preflight(["/missing-legend-browser-fixture"])
+            self.assertEqual(code, 1)
+            self.assertIn("2. executable present: NO", text)
+            self.assertIn("a skip is not a verification", text)
+            version_fails = self.browser(td, "import sys\nprint('cannot run here', file=sys.stderr)\nsys.exit(46)\n")
+            code, text = self.preflight([version_fails])
+            self.assertEqual(code, 1)
+            self.assertIn("2. executable present: " + version_fails, text)  # present is not the same as working
+            self.assertIn("3. --version: FAILED rc=46", text)
+            self.assertNotIn("4. headless", text)
+            starts_then_dies = self.browser(td, "import sys\nif '--version' in sys.argv:\n    print('Chromium fixture')\n    sys.exit(0)\nprint('no display', file=sys.stderr)\nsys.exit(9)\n")
+            code, text = self.preflight([starts_then_dies])
+            self.assertEqual(code, 1)
+            self.assertIn("3. --version: Chromium fixture", text)  # --version working is not the same as starting headless
+            self.assertIn("4. headless start and DevTools endpoint: FAILED", text)
+            self.assertIn("no display", text)
+
+    def test_preflight_success_says_it_proves_the_browser_and_not_a_view(self):
+        from unittest.mock import patch
+
+        class FakeCdp:
+            def __init__(self, binary, tmpdir, startup_timeout=60.0):
+                pass
+
+            def close(self):
+                pass
+        with patch.object(rv, "Cdp", FakeCdp):
+            code, text = self.preflight([sys.executable])
+        self.assertEqual(code, 0)
+        self.assertIn("4. headless start and DevTools endpoint: OK", text)
+        self.assertIn("5. dashboard tests: not run here", text)
+
     def test_exited_browser_reports_its_stderr_and_exit_code_without_waiting(self):
         import time
         with tempfile.TemporaryDirectory() as td:

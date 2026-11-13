@@ -38,11 +38,21 @@ scientific work → repurposing results → candidates, counter-evidence, open q
    best-effort (see limits).
 2. Write the mission and the constraints as two plain files (mission, scope, exclusions, time, ceilings;
    no preferred plan). Then:
-   `python3 framework/scripts/strategic_advisor.py brief --stage A --campaign <DIR> --mission-file <F> --constraints-file <F> --task-record <PATH>`
+   `python3 framework/scripts/strategic_advisor.py brief --stage A --campaign <DIR> --mission-file <F> --constraints-file <F> --task-record <PATH> [--expect <SHA>:<folder> ...]`
+   For every delivery the mission text announces ("X is on main"), pass `--expect` with its SHA and, when it adds a folder, that folder. A date or a SHA in a record does not put the
+   material in the advisor's checkout: the brief states four things apart, **announced ≠ in this snapshot ≠ reachable by the advisor's tools ≠ read** (the last is filled in `meta.json`
+   after the run). The brief also lists, unasked, the commits `main` holds that this branch lacks and the folders they add, and `brief` prints a WARNING when something announced is missing.
+   If it is missing, merge `development/main` into the task branch at a safe boundary (clean tree, the usual merge) and rebuild the brief — rebuilding costs nothing, only `run` counts.
+   If the merge is not safe now, run anyway: the limitation is in the brief and the advisor must say it did not read that material. Never point the advisor at a sibling checkout:
+   it is outside its tools, and widening them is not the remedy.
 3. Run it in the background (it can take tens of minutes):
    `python3 framework/scripts/strategic_advisor.py run --stage A --campaign <DIR> --brief <DIR>/brief_A.md --model opus --effort high`
    Use `opus` only if the account serves it without new spend; otherwise `sonnet` + `high`, and say it was
-   a fallback. A model flag is a request: read the model back from `A<n>/meta.json`.
+   a fallback. A model flag is a request: read the model back from `A<n>/meta.json`, which keeps four things apart: the alias asked, `init_model` (the model the run started on),
+   the model of every turn (`census.models`) and `final_turn_model` (the model that wrote the answer). The runtime may change model mid-run and records why
+   (`refusal_fallbacks`: original and fallback model, trigger, category — never the withheld text). Both Stage A runs of the first campaign did so (2026-11-12, category `bio`);
+   one ran 18 of 25 turns, and wrote its answer, on the fallback model. Say which model wrote an assessment from `final_turn_model`, never from the alias, and do not call a run
+   single-model when `check` prints a NOTE about a fallback. A silent change with no recorded reason is still a PROBLEM.
 4. The complete assessment is `A<n>/assessment.md`: the runtime result event, saved verbatim, with
    `meta.json` (tools the advisor was born with, model per turn, files it opened, usage, digests).
    Persist it **before** summarising or acting. Never retype it. If the run fails, the attempt still counts.
@@ -52,7 +62,8 @@ scientific work → repurposing results → candidates, counter-evidence, open q
 `brief --stage B --campaign <DIR> --assessment <DIR>/A<n>/assessment.md --sealed-intended <DIR>/advisor_sealed/INTENDED_ACTION_<N>.md --constraints-file <F>`, then
 `run --stage B … --model sonnet --effort medium`. It is a second, fresh invocation that reads the saved Stage A
 in full; no live continuation is assumed. Decide, and record why the advice was accepted, adapted or rejected.
-Consensus is not required.
+Consensus is not required. A Stage B that agrees after reading the plan shows agreement, not independence: independence is claimed for Stage A only, and only as far as its
+`Freshness and exposure` section says. The advisor's inherited memory and the earlier assessments a later Stage A reads are exposure to declare, not something to strip to earn a "blind" label.
 
 ## Capture methods, in order of preference
 
@@ -74,6 +85,9 @@ The raw stream and the session transcript stay local and are not published; the 
 * **Procedural:** the ceilings bind only runs launched through this tool; direct `claude` calls bypass them. That
   the advisor follows its brief, opens what it should, or reports truthfully what it opened is not enforced.
   The advisor inherits project instructions and the memory index; do not call it isolated from them.
+  Whether the runtime falls back to another model mid-run is not controllable from here; it is read back and disclosed.
+* **Cost:** the entry-point table marks files over 20,000 bytes, and the contract tells the advisor to Grep for a range before opening a large file whole. That is a nudge, not a limit, and the
+  saving it may bring is expected, not measured: no extra invocation was made to prove it. The first-turn context (about 17k tokens: instructions, memory index, tools) is paid on every turn.
 * **Dashboard:** a plain page fetch returns the rendered text in 100,000-character pages, with no build stamp. Use
   the repository records for fact and the page for presentation.
 * The Agent-tool path (`subagent_type: legend-strategic-advisor`) works only in a session started after the
