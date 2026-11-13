@@ -102,6 +102,13 @@
      "evidence": ""
     }
    ]
+  },
+  "ADV_ASSIGNMENTS": {
+   "ADV-005": {
+    "status": "TAKEN",
+    "taken_utc": "2026-11-13",
+    "evidence": "Taken in charge by Harness (plan) citing ADV-005 (advisor_pilot_20261113/assignments/ADV-005.md, main 08299c4e): activity_search.py cache dependency vs the substitute scout-feed defects; one of the two only; adapting nothing yet; result and the choice with its reason follow on main."
+   }
   }
  },
  "VERIFICATION_EVIDENCE": [],
