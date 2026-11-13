@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T23:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T23:29:00Z",
+ "event_id": "FTR-20261112-23625347-70",
+ "evidence_basis": [
+  "Abstract only; no other section opened.",
+  "verbatim_locator | abstract opening | Abstract | \"AimsIn excitable cells, KIR2.x ion-channel-carried inward rectifier current (IK\u2081) is thought to set the negative and stable resting membrane potential,\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261112-23625347-71",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "51f1053d44054299aa88b9f8227c9d2dce4a6147a057aa9d80f579bd46ad316d",
+ "source_kind": "abstract",
+ "source_locator": "Europe PMC REST record (core, abstract field) for PMID 23625347, fetched 2026-11-12 by plain curl; abstract text held in memory only",
+ "study_id": {
+  "doi": "10.1093/cvr/cvt103",
+  "pmid": "23625347"
+ },
+ "workflow": "SCI49 package B blind verifier V12 kz-y (ORCH-SCI49-20261112), staged for the integrator; ledger not written; no claim recorded (the claim command was refused by the session classifier)."
+}

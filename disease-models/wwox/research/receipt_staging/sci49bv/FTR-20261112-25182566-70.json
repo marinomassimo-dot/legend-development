@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T23:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T23:29:00Z",
+ "event_id": "FTR-20261112-25182566-70",
+ "evidence_basis": [
+  "Abstract only; no other section opened.",
+  "verbatim_locator | abstract opening | Abstract | \"Dronedarone is a novel class III antiarrhythmic drug that is widely used in atrial fibrillation. It has been shown in\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/audit.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "7d70639dd5795d61afab99ba3295c469366b013fefa48c8307d5304317544943",
+ "source_kind": "abstract",
+ "source_locator": "Europe PMC REST record (core, abstract field) for PMID 25182566, fetched 2026-11-12 by plain curl; abstract text held in memory only",
+ "study_id": {
+  "doi": "10.1007/s00210-014-1045-6",
+  "pmid": "25182566"
+ },
+ "workflow": "SCI49 package B blind verifier V12 kz-y (ORCH-SCI49-20261112), staged for the integrator; ledger not written; no claim recorded (the claim command was refused by the session classifier)."
+}

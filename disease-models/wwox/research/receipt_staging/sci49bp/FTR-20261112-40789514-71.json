@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T22:40:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T23:08:00Z",
+ "event_id": "FTR-20261112-40789514-71",
+ "evidence_basis": [
+  "Abstract: ML133 in APP/PS1 mouse dentate adult-born granule cells.",
+  "verbatim_locator | ML133 neuron | Abstract | \"Pharmacological inhibition of Kir 2.1 using ML133 significantly ameliorated spatial memory impairment\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/output/compounds.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "9ab7d1245995806a9d60d118e8d13600139f59038ed25ed85f6b83d6406676c5",
+ "source_kind": "abstract",
+ "source_locator": "Europe PMC REST abstract record fetched with plain curl; no full text reached; fetched 2026-11-12; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.neuroscience.2025.08.011",
+  "pmid": "40789514"
+ },
+ "workflow": "SCI49 package B producer kz-z (ORCH-SCI49-20261112), staged for the integrator; ledger not written."
+}

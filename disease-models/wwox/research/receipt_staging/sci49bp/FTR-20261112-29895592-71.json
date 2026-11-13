@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T22:40:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T23:08:00Z",
+ "event_id": "FTR-20261112-29895592-71",
+ "evidence_basis": [
+  "Abstract used for the Kir4.1 selectivity statement; the page text was retrieved, Results not read.",
+  "verbatim_locator | VU0134992 selectivity | Abstract | \"greater than 30-fold selective for Kir4.1 over Kir1.1, Kir2.1, and Kir2.2\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/output/compounds.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "abd8818c55e8c25cd616cf4594e8d5ac7d682bf84178cb9110374898e88a42c3",
+ "source_kind": "abstract",
+ "source_locator": "PMC article page https://pmc.ncbi.nlm.nih.gov/articles/PMC6041953/; fetched 2026-11-12; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1124/mol.118.112359",
+  "pmid": "29895592"
+ },
+ "workflow": "SCI49 package B producer kz-z (ORCH-SCI49-20261112), staged for the integrator; ledger not written."
+}

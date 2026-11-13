@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T22:40:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-12T23:08:00Z",
+ "event_id": "FTR-20261112-40959251-71",
+ "evidence_basis": [
+  "Main text and Tables 3-4 (manual patch clamp, rat PK); supporting information not requested; no counter-screen table found in the main text.",
+  "verbatim_locator | 5s potency | Table 3 | \"5s 0.35 100\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/output/compounds.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "db0cadc0d8e6dc5e705084f3c0ca77b90b7b11071119eb3a4399a5096e71b4a6",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page https://pmc.ncbi.nlm.nih.gov/articles/PMC12434521/; fetched 2026-11-12; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1021/acsmedchemlett.5c00297",
+  "pmid": "40959251"
+ },
+ "workflow": "SCI49 package B producer kz-z (ORCH-SCI49-20261112), staged for the integrator; ledger not written."
+}

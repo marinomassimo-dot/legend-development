@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T23:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T23:29:00Z",
+ "event_id": "FTR-20261112-22275899-70",
+ "evidence_basis": [
+  "Results read in full (GIRK, oocyte TEVC, patch clamp, Tl+ flux); Discussion and Methods not read; figures captions only",
+  "verbatim_locator | VU573 Kir2.1 | Results | \"After 25 min of constant bath perfusion, 50 \u03bcM VU573 inhibited Kir2.1 by only 30.2 \u00b1 9.4%.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261112-22275899-71",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "89c33f80766b8c1c92cc68455b0bdc37badd296f87e0ccf4edeb31b341493165",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PubMed MCP get_full_text_article for PMC3254186 (2026-11-12); text held in the scratchpad only",
+ "study_id": {
+  "doi": "10.3389/fphar.2011.00075",
+  "pmid": "22275899"
+ },
+ "workflow": "SCI49 package B blind verifier V12 kz-y (ORCH-SCI49-20261112), staged for the integrator; ledger not written; no claim recorded (the claim command was refused by the session classifier)."
+}

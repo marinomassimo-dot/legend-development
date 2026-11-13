@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T23:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T23:29:00Z",
+ "event_id": "FTR-20261112-20705896-70",
+ "evidence_basis": [
+  "Abstract only; no other section opened.",
+  "verbatim_locator | abstract opening | Abstract | \"Fast-spiking (FS) cells are a prominent subtype of neocortical \u03b3-aminobutyric acidergic interneurons that mediate feed-forward inhibition and the temporal sculpting\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/audit.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "b525ae4235500ebe2e44b68a3bb72c0b534d0a79dc337a500085e4028833abae",
+ "source_kind": "abstract",
+ "source_locator": "Europe PMC REST record (core, abstract field) for PMID 20705896, fetched 2026-11-12 by plain curl; abstract text held in memory only",
+ "study_id": {
+  "doi": "10.1093/cercor/bhq138",
+  "pmid": "20705896"
+ },
+ "workflow": "SCI49 package B blind verifier V12 kz-y (ORCH-SCI49-20261112), staged for the integrator; ledger not written; no claim recorded (the claim command was refused by the session classifier)."
+}

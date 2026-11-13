@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T22:40:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T23:08:00Z",
+ "event_id": "FTR-20261112-20713726-71",
+ "evidence_basis": [
+  "Abstract and the first Results paragraphs (Kir2.1 increase in CHO, EC50) and atrial versus ventricular IK1; other sections not read.",
+  "verbatim_locator | flecainide EC50 | Results | \"averaged 0.8 \u00b1 0.01 \u03bcM (n H = 1.6 \u00b1 0.4) and 22 \u00b1 1.9% at \u2212120 mV\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/output/compounds.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "ee04b3c4d9a595a8c62e4baf42bffb92beb5c45e0d5996ff3c54a25a3334241b",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page https://pmc.ncbi.nlm.nih.gov/articles/PMC2932566/; fetched 2026-11-12; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1073/pnas.1004021107",
+  "pmid": "20713726"
+ },
+ "workflow": "SCI49 package B producer kz-z (ORCH-SCI49-20261112), staged for the integrator; ledger not written."
+}

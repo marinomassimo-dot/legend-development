@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T23:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T23:29:00Z",
+ "event_id": "FTR-20261112-18216262-70",
+ "evidence_basis": [
+  "Results, Methods (recordings) and parts of the Discussion read; SI not present in the page; figures captions only",
+  "verbatim_locator | chloroquine potency | Results | \"The IC 50 of Kir2.1 current elicited by the action potential voltage clamp was 8.7 \u00b1 0.9 \u03bcM with a Hill coefficient of 1.0\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261112-18216262-71",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "97f50f60402d6820757df584986b3adf134dfeef99ebac1219d5383655d40bf5",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page https://pmc.ncbi.nlm.nih.gov/articles/PMC2234144/ (plain curl, one request, 2026-11-12); bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1073/pnas.0708153105",
+  "pmid": "18216262"
+ },
+ "workflow": "SCI49 package B blind verifier V12 kz-y (ORCH-SCI49-20261112), staged for the integrator; ledger not written; no claim recorded (the claim command was refused by the session classifier)."
+}

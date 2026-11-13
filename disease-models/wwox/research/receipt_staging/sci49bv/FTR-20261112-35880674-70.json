@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T23:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T23:29:00Z",
+ "event_id": "FTR-20261112-35880674-70",
+ "evidence_basis": [
+  "Results 3.1-3.3 and 3.8, Discussion 4.2 and Methods patch clamp read; in vivo sections skimmed; figures captions only",
+  "verbatim_locator | tetramisole potency | Results 3.1 | \"The maximal efficacy appeared at 30 \u03bcmol/L, with a mean increase of 66.4% in the inward current\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/kir2_drugname_sci49_20261112/verify/audit.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "bbc9df5e93620c908f66bd10cbe6721650f4c9e5eb6dfe29844fcbdf21a3e72d",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PubMed MCP get_full_text_article for PMC9316008 (2026-11-12); text held in the scratchpad only",
+ "study_id": {
+  "doi": "10.1002/prp2.992",
+  "pmid": "35880674"
+ },
+ "workflow": "SCI49 package B blind verifier V12 kz-y (ORCH-SCI49-20261112), staged for the integrator; ledger not written; no claim recorded (the claim command was refused by the session classifier)."
+}
