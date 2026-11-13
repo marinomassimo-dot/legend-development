@@ -28,3 +28,6 @@ SCI50's own answer is kept apart from the science session's mission: nothing her
 
 ## Limits
 Translations are the assistant's; the IT50 consultation (one Stage A, one Stage B) changed a secondary item, not the principal one; the case is retrospective and scored by its builder. The by-target activity route for eIF2B remains blocked by the ChEMBL API outage.
+
+## Update 2026-11-13 (late)
+The ChEMBL REST API answered HTTP 200 on 2026-11-13 (Harness, ADV-002 note), after the HTTP 500 recorded above: the by-target activity route for the eIF2B subunits can be tried; it was not run here (whether the by-target routes work was not tested).

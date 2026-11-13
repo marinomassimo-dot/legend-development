@@ -57,9 +57,9 @@
    "steps": [
     {
      "step": "ADV-002 (Harness: open permitted route to the two SCI51-blocked artefacts, IT51-Q03 and IT51-Q04): record the outcome against those questions on delivery",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "TAKEN IN CHARGE as ADV-002 (Harness takes the work in its own record; no bot-check circumvention, no spoofing). My part: record the outcome on IT51-Q03/Q04 (closed from the public record, or recorded as unreachable with the routes tried) and decide any consumer consequence; Science reads and extracts the scientific content if an artefact is reached; receipts through the normal ledger path, none claimed by me on a delegate's behalf. Method not changed. Dependency: Harness delivery; revival condition: a message from Harness or a note on main naming ADV-002."
+     "evidence": "TAKEN IN CHARGE as ADV-002 (Harness takes the work in its own record; no bot-check circumvention, no spoofing). My part: record the outcome on IT51-Q03/Q04 (closed from the public record, or recorded as unreachable with the routes tried) and decide any consumer consequence; Science reads and extracts the scientific content if an artefact is reached; receipts through the normal ledger path, none claimed by me on a delegate's behalf. Method not changed. Dependency: Harness delivery; revival condition: a message from Harness or a note on main naming ADV-002. DISPOSITION 2026-11-13 (result a8508495): IT51-Q03 partly reached (text and legends via Europe PMC fullTextXML; per-compound heatmap values and the names unreached; Science reads the locator), IT51-Q04 unreachable by the routes tried (no permitted route); both recorded in the open-questions map; no consumer text changed (a negative result is not an absence); the by-target ChEMBL route noted as possibly runnable again (dated line in the IT50 README, not run). No receipts claimed by me."
     }
    ]
   }
