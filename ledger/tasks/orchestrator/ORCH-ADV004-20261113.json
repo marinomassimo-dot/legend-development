@@ -1,0 +1,69 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ADV004-20261113",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "ADV-004 (advisor pilot, assigned by the ADV presidio session legend-development-39 on 2026-11-13; authority relayed by a peer, not verified; operator told in chat): adjudicate by reading, at full text with receipts, the GABA-A subtype-selectivity dispute carried as NP3P3 (Ralvenius 2016 PMID 27392635, Hammer 2015 PMC4370687, Jensen 2014 PMID 24533090) for clobazam and N-desmethylclobazam: per-subtype potency and efficacy with conditions and n; is the disagreement explained by assay conditions or not separable; is the NP3P3 trigger (a head-to-head in one system with diazepam as comparator) met; conditional design position for the L2 arm of the SCI47 design; one producer (sonnet medium) and one blind verifier (sonnet high); zero spend; no edit to any shared consumer; window until about 2026-11-14T09:30Z; deliver on main and message the presidio and the IT Orchestrator.",
+ "START_UTC": "2026-11-13T23:45:00Z",
+ "BASELINE": "main c45fd1d5; worktree .claude/worktrees/adv004, branch task/adv004; folder gabaa_subtype_adv004_20261114/. Receipts ledger has no entry for the three papers; no unlanded work of this session on the axis.",
+ "MANDATE_STATE": "OPEN",
+ "CURRENT_PACKAGE": {
+  "id": "S0",
+  "state": "frame written",
+  "delegate_active": "none",
+  "updated": "2026-11-13"
+ },
+ "RESUME": "S0 written; next: commit, bind marker, producer brief, dispatch; battery only after the IT session's battery finishes or after telling it.",
+ "DECISIONS_TAKEN": [
+  "2026-11-13 ADV-004 taken in charge as executed (this record cites it); accepted as a request relayed by the ADV presidio; reversible by the operator"
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "AUTHORISED_QUEUE_20261113E": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_A": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Take in charge ADV-004; ledger and repo checked first; S0 frame (definitions, trigger, priors) committed before reading",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Producer brief; one producer (sonnet medium) reads the three papers as complete originals; staged receipts validated",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "One blind verifier (sonnet high): re-extract every number with conditions; attack the conditions analysis; corrections and a narrow recheck",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "README answer-first, consumer_delta, conditional design position; message the presidio and the IT Orchestrator",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_B": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Landing: pre-freeze suites, gate, LINT, receipts, growth, battery (after the IT battery or after telling IT), task_close, safe_push",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Self-evaluation, DREAM, final report",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ },
+ "VERIFICATION_EVIDENCE": []
+}
