@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-13T18:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-13T18:59:00Z",
+ "event_id": "FTR-20261113-30046109-64",
+ "evidence_basis": [
+  "Question: is ifenprodil an EBP inhibitor in Hubler, which antimuscarinics were tested, which compounds have a sterol-profile negative. Hubler attributes ifenprodil to TM7SF2 and tamoxifen to EBP; liothyronine and bexarotene show minimal sterol effects; the four inert antimuscarinics are not named in Results; quetiapine, atropine, ipratropium, oxybutynin, clobetasol are not in the text.",
+  "verbatim_locator | proposition: Hubler attributes ifenprodil to TM7SF2, not EBP | Results, in vivo lesion experiment | \"brain-penetrant molecules with affinity for TM7SF2 (ifenprodil) and EBP (tamoxifen)\"",
+  "verbatim_locator | proposition: liothyronine and bexarotene do not accumulate sterol intermediates in OPCs | Results | \"liothyronine and bexarotene showed minimal effects on sterol levels in OPCs\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ebp_reannotation_adv001_20261113/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/ebp_reannotation_adv001_20261113/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/ebp_reannotation_adv001_20261113/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261113-30046109-66",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC6423962 via the PubMed full-text tool 2026-11-13 (text layer only, once; the PMC page was not requested). Read by targeted search and passage reading: Results on sterol profiling, the antimuscarinic panel, the in vivo lesion experiment, Methods reagent list, in vivo and sterol-profiling methods, Extended Data legends. Introduction, Discussion, tables and references not read; figure panels not viewed.",
+ "study_id": {
+  "doi": "10.1038/s41586-018-0360-3",
+  "pmid": "30046109"
+ },
+ "workflow": "ADV-001 blind verifier V15 (ebp_reannotation_adv001_20261113), actor label ea-y, task ORCH-ADV001-20261113. Staged JSON for the Orchestrator; not recorded. The paper_packet claim step was refused by the permission classifier and was not worked around."
+}

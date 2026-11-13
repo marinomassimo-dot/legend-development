@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-13T18:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-13T18:59:00Z",
+ "event_id": "FTR-20261113-16033255-64",
+ "evidence_basis": [
+  "An abstract is not a reading; the Ki values come from the ChEMBL curation of this paper and are database pointers.",
+  "verbatim_locator | proposition: EBP, ERG2 and sigma-1 share high affinity for diverse compounds | Abstract | \"share high affinity for various structurally diverse compounds\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ebp_reannotation_adv001_20261113/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/ebp_reannotation_adv001_20261113/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/ebp_reannotation_adv001_20261113/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through Europe PMC REST 2026-11-13; abstract only; ChEMBL assay CHEMBL829736 rows (tamoxifen, ifenprodil stereoisomer, fenpropimorph Ki at human EBP in yeast) also read.",
+ "study_id": {
+  "doi": "10.1021/jm049073+",
+  "pmid": "16033255"
+ },
+ "workflow": "ADV-001 blind verifier V15 (ebp_reannotation_adv001_20261113), actor label ea-y, task ORCH-ADV001-20261113. Staged JSON for the Orchestrator; not recorded. The paper_packet claim step was refused by the permission classifier and was not worked around."
+}
