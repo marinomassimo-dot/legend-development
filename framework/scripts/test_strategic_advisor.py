@@ -323,6 +323,9 @@ class Proactive(Base):
         self.assertEqual(first["verdict"], "EVALUATE")
         self.assertTrue(any(e.startswith("delivery:") for e in first["events"]))
         sa.evaluate(self.campaign)
+        brief = (self.campaign / "brief_P.md").read_text(encoding="utf-8")
+        self.assertIn("delivery:", brief)                                       # the tick advanced its own state; the brief must still carry what triggered the evaluation (seen empty in the first pilot)
+        self.assertNotIn('"commits_since_last_tick": 0', brief)
         self.at("2026-11-13T13:00:00Z")
         self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")             # the digest of those events was already evaluated
 
