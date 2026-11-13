@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 13349,
+    "values": 13357,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -471,7 +471,7 @@
   "BIBLIO": 2696,
   "COUNT": 12405,
   "ID": 4861,
-  "OWN": 90189,
+  "OWN": 90197,
   "ROWNAME": 2408,
   "SRC_A": 189,
   "SRC_META": 261,
@@ -560,24 +560,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5217893,
-   "sha256": "e26bd1580ab0f65f54b8b987392371c1bcbf9d6e98332159858acf887d4e2db7"
+   "bytes": 5228797,
+   "sha256": "cefc00071f0e5e0ac17fe9fb9198752578773c1e64eaac164da5ddd7e5f1261f"
   },
   "es.html": {
-   "bytes": 5203925,
-   "sha256": "ee840f915e44baaf7527193e39d74399301aed5d8758c26b93537dc106a8b129"
+   "bytes": 5214702,
+   "sha256": "c98c3612666d4dd9a35025b4bb5536a851aae036ef966ebdfb01da227d0111d2"
   },
   "fr.html": {
-   "bytes": 5234652,
-   "sha256": "ba9a5d865daab8dcb0848c00167ff23069092bddede92f1491de932b20bb69e5"
+   "bytes": 5245617,
+   "sha256": "b25c7e6ef8c4c391260f5c9895bd85fef691855525e42d2308fd99983ce4eea0"
   },
   "index.html": {
-   "bytes": 5118352,
-   "sha256": "84a184466c5581fd4280bc38fd26a4b37e2e0971de764da658240b382e505791"
+   "bytes": 5128684,
+   "sha256": "8666e9d56a8607cef1d474636271679c8747eff365730d2755389bc5b39067cb"
   },
   "it.html": {
-   "bytes": 5181559,
-   "sha256": "d08563edc2de2eb259f9ad682bad5559f7340394764d6fb11fdd1f5c0cf7f673"
+   "bytes": 5192654,
+   "sha256": "c5964cdca4ea7bb01a586d8172cf1e0a009c7373de8f007925fde84f19abdf7c"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

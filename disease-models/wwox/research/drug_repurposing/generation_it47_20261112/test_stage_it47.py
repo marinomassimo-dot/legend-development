@@ -15,8 +15,8 @@ class PackageRows(unittest.TestCase):
 
     def test_sixteen_rows_from_three_packages_of_different_structure(self):
         ids = sorted(r["proposal_id"] for r in self.rows)
-        self.assertEqual(16, len([i for i in ids if "potassium_conductances_sci43" not in i and "hcn_20261107" not in i]))   # IT49: the two later packages are counted in test_stage_it49
-        self.assertEqual({"INV-18", "INV-08", "INV-09"}, {r["inv_id"] for r in self.rows})
+        self.assertEqual(16, len([i for i in ids if "potassium_conductances_sci43" not in i and "hcn_20261107" not in i and "isr_inv02_it50" not in i]))   # IT49: the two later packages are counted in test_stage_it49
+        self.assertEqual({"INV-18", "INV-08", "INV-09", "INV-02"}, {r["inv_id"] for r in self.rows})   # IT50 added INV-02
         self.assertEqual(5, sum(1 for r in self.rows if "gsk3_eif2b" in r["proposal_id"]))
         self.assertEqual(5, sum(1 for r in self.rows if "ph_k2p" in r["proposal_id"]))
         self.assertEqual(6, sum(1 for r in self.rows if "nrf2_inv08" in r["proposal_id"]))

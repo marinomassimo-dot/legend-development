@@ -1,0 +1,111 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "TASK_ID": "ORCH-ROADMAP-IT50-20261113",
+ "START_UTC": "2026-11-13T08:30:00Z",
+ "OBJECTIVE": "LEGEND IT50 (operator mandate, queued after IT49; window at most ten hours from effective start, no automatic renewal): improve generative capacity - turn available evidence, relations and verified deliveries into pharmacological hypotheses, discriminating comparisons and useful experiments for WWOX loss of function; verification accompanies it. One new strategic consultation (at most one Stage A and one Stage B, existing procedure, configuration verified, no new spend; a failed attempt counts). Not an extension of the IT48 pilot. Science session has a generative mission starting from myelination: coordinate, do not duplicate. Design-only packages: Harness builds a minimal link; no competing reader. No ranking/sign/qualification change to show an effect; no predictive claim from better access. Final report in Italian opens with: 'Quale ipotesi, confronto farmacologico o esperimento LEGEND riesce ora a formulare meglio?'.",
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Reconcile the baseline: IT49, SCI49, advisor_followup_20261112; published vs worktree vs regenerated consumers; correct current references without reopening concluded readings",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Baseline reconciled: IT49 published (a1cd5750, 2454a3ac, 387f6ae4; CI #676, #680, #683 success), SCI49 A and B consumed, advisor_followup_20261112 on main (input availability: brief --expect, used), worktree it49 clean; dated update line added to the IT49 README (its 'SCI49 not delivered' line is historical); no concluded reading reopened."
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "One strategic consultation: record the intended action before Stage A (sealed, outside the brief), refresh the snapshot at a safe boundary, verify announced packages are present and reachable (use the --expect availability option), Stage A then Stage B once each; record initial model, effective models and runtime limits; decision accepted/adapted/rejected with reasons",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "One Stage A (opus/high requested; 26 turns opus-5 + 14 turns opus-5-5, changed_mid_run true) and one Stage B (sonnet/medium, 1 turn); the three announced packages were in the snapshot and reachable (--expect); intended action sealed before (sha256 d418f3ad...), kept out of the brief; A1 recommended a different increment (Kir2 cell-class propagation); B1, after reading my plan, preferred mine with four refinements (agreement after exposure); decision: accepted mine, adapted by B1, and did the A1 item as a small second item. Ceiling used: no further invocation."
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Principal generative increment to a concrete research possibility (unrepresented lever / discriminating reagent comparison / proposal lost to catalogue or representation / knowledge combination that changes an experiment); observation -> explanation -> hypothesised action -> compound or probe -> prediction -> discriminating result kept apart",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Principal increment: the lost eIF2B-probe proposal of INV-02 made representable: isr_inv02_it50_20261113 (ISR1-ISR3, hypotheses layout, every cell sourced), manifest row, mapping entry, investigations list read from the manifest, generator rerun (24 earlier rows and the six earlier rows byte-identical; 3 added), reader row ISR1 in five languages, tests (test_stage_it50). Independent reader: 14 supported, 12 partly, 1 not supported over 27 cells; twelve corrections applied; reader's conclusion: restatements, no new proposition; ISR3 is access not generation. Secondary: Kir-gene cell-class states carried into INV-18 (five languages). Not shown: a better prediction, a changed later choice. By-target activity route for eIF2B not run (ChEMBL API HTTP 500, no cached release)."
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Design-only knowledge: give Harness the scientific meaning of the fields and a real case (INV-02); when the link lands, show what it makes usable; no competing reader",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "design_fields_it50.md (scientific meaning of design.tsv fields, one real case) given to Harness, with refinements by message; Harness builds design_only role (HE50) and will add one consumer function after IT50 lands; the link has not landed yet: nothing claimed about what it makes usable beyond the restatement."
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Comparison on one bounded case fixed before execution (question, input, simple reference path, current path, expected improvement, no-benefit conditions); measure corrections/false links/alternatives kept/premises/next experiment; distinguish new for LEGEND, novel against literature, validated prediction",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Case fixed before execution (prereg_it50.md 575b0dc6); result_it50.md scores E1-E5: held except E5 partly (one stated code change); evidence level: new for LEGEND as representation, not novel against literature, no validated prediction."
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "Complete the loop: consume SCI50 when available with a disposition per delta; update the question homes (decision, importance, work done, next step, reopening condition); dashboard: hypotheses to test, comparisons, priority questions, favourable and contrary evidence, in-silico vs indispensable measurement",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "SCI50 not delivered at the time of writing; questions: IT49-Q07/Q09 evidence updated; dashboard: ISR1 reader row, INV-18 clause; no ranking change. To do on delivery: a disposition per SCI50 delta."
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "Delivery: derivatives regenerated after the last data and receipts, browser verified in the real runtime, landing, CI per SHA, final report in Italian",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ },
+ "CONSULTATION_STAGE_A": {
+  "ceiling": "one Stage A and one Stage B for IT50; a failed attempt counts; the IT48 pilot ceiling is separate and spent",
+  "campaign_boundary": "IT50 window at most ten hours from the effective start (2026-11-13T07:30Z); no automatic renewal",
+  "owner_session": "4325d70d-8bea-4789-8046-d7a9ee74c97f (orchestrator)",
+  "repo_sha": "d8baa78d780dbef74721ea1d232b05e3356946aa (task/it50 on main 387f6ae4); dispatch 2026-11-13T07:37:03Z",
+  "dashboard_source_revision": "387f6ae49edb6e8aa8259703336fc7f25cd7bda9 2026-11-13T02:22:05+00:00",
+  "scientific_baseline": "IT49 landed (a1cd5750, 2454a3ac, 387f6ae4; CI #676, #680, #683 success); generator reads 24 package rows with no unmapped package; SCI49 A and B consumed (receipts 1,903); INV-02 case: design-only packages are not consumed (Harness has a separate link task); SCI50 not delivered; open questions IT48-Q01..Q04, IT49-Q01..Q11; no rank, sign or qualification changed",
+  "intended_action_sealed": {
+   "path": "disease-models/wwox/research/drug_repurposing/advisor_campaign_it50_20261113/advisor_sealed/INTENDED_ACTION_1.md",
+   "sha256": "d418f3adf3e0904ba6d59e9eaa01864050f6b17394c0b117ccd8a67a28ebab31",
+   "note": "written and sealed before any IT50 assessment; kept out of the brief"
+  },
+  "constraints_and_dependencies": "advisor_campaign_it50_20261113/inputs/constraints.md",
+  "announced_deliveries_checked": "advisor_followup_20261112, cell_context_verify_sci49_20261112, kir2_drugname_sci49_20261112 passed through brief --expect"
+ },
+ "CONSULTATION_DECISION": {
+  "stage_a": "A1 saved (opus/high requested; read-back 26 turns claude-opus-5 and 14 claude-opus-5-5, changed_mid_run true, 40 turns, output 29,261, cache written 203,465, cache read 3,239,536): recommends propagating the held Kir-subunit cell-class rows into the INV-18 Ba2+/Kir2 arm; exposure declared (task record baseline names the INV-02 case)",
+  "stage_b": "B1 saved (sonnet/medium claude-sonnet-5-5, 1 turn, output 2,019): after reading my sealed action it prefers INV-02 representation with four refinements (representable is not supported; no reader; reusable fields; cheap items) and queues the Kir2 propagation next. Agreement after exposure, not independent",
+  "checks_before_accepting": "A1's artefact claims checked against cell_context_it46.tsv: KCNJ2 OTHER_ENRICHED in mouse (0.74 neurons P7 vs 41.80 endothelium) and human (1.40 vs 6.64, n=1): confirmed. B1's claim that consumer_delta row 1 of SCI49 B is still PROPOSED is wrong (applied in IT49, 387f6ae4). ChEMBL API returns HTTP 500 (external) and activity_search finds no cached release: the by-target activity route for eIF2B cannot be run now",
+  "decision": "ACCEPTED my sealed action as the principal increment (INV-02 lost eIF2B-probe proposal made representable), ADAPTED by B1: before/after diff must differ only by the new rows, ISR sign stays an unmet precondition, no reader, reusable layout; the Kir2 cell-class propagation (A1 lead) is done as a small second item without a delegate (values are committed rows, no new scientific proposition)",
+  "alternatives_not_pursued": "IT49-Q06 (ML133 hERG, route blocked), myelination (science session), exclusion-ladder consolidation"
+ }
+}
