@@ -1,0 +1,69 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-SCI51-20261113",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "SCI51 (assigned by the integrator session on 2026-11-13, stated as operator-authorised; authorisation not verified by this session; operator told in chat): one deepening, at most three hours, zero spend, no renewal. Can the comparison between M1 antagonism and EBP inhibition (INV-06 X3 reagent pair) be built with interpretable reagents: identity of each reagent from primaries, measured versus unknown cross-activities kept apart, the conditions that make the comparison informative, the discriminating outcomes. Deliver a qualified comparison, an improved design, or the precise statement of what prevents it, with a consumer_delta; one producer (sonnet medium), one blind verifier (sonnet high), sequential; no claim workaround; no ranking or qualification change.",
+ "START_UTC": "2026-11-13T15:05:00Z",
+ "BASELINE": "main e6bba05e+ (SCI50 consumed by IT50, 8d00e3d1/98a91a8f). Worktree .claude/worktrees/sci51, branch task/sci51. Folder m1_ebp_reagents_sci51_20261113/.",
+ "MANDATE_STATE": "OPEN",
+ "CURRENT_PACKAGE": {
+  "id": "S0",
+  "state": "frame written",
+  "delegate_active": "none",
+  "updated": "2026-11-13"
+ },
+ "RESUME": "S0 written; next: commit, bind marker, producer brief, dispatch; planned finish of the package about 17:15 UTC, landing after the battery.",
+ "DECISIONS_TAKEN": [
+  "2026-11-13 accepted the assignment as a request of the integrator session (the operator authorisation is stated by the peer, not verified); reversible: the operator can stop it"
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "AUTHORISED_QUEUE_20261113B": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_A": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Bind marker; reply to the assignment; S0 frame committed before any new reading",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Producer brief; one producer (sonnet medium): identities, measured versus unknown cross-activities, conditions, discriminating outcomes; staged receipts validated",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "One blind verifier (sonnet high) with the originals and its own strings; corrections and at most one narrow recheck",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "README answer-first, consumer_delta, open questions; delivery to the integrator",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_B": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Landing: pre-freeze suites, gate, LINT, receipts, growth, battery on the frozen SHA, task_close, safe_push; clean own temporaries",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Self-evaluation, DREAM, capability scout, final report",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ },
+ "VERIFICATION_EVIDENCE": []
+}
