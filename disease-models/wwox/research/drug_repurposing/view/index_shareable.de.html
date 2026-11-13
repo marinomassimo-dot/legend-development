@@ -292,6 +292,8 @@ nav .navmain>a:hover{background:var(--accbg)}
    Additive and removable: delete this file and the one line in repurposing_view.render that appends it, and the page reads as before.
    Serif for the reading text, sans-serif for navigation, labels and controls; system fonts only (no download, no external request).
    Colour only orients (the WWOX blue accent is unchanged); every status keeps its word, border style or letter, so none depends on colour. */
+/* Everything below applies to the screen only: the one-page print of the ranking summary keeps its own compact styling (curated.css). */
+@media screen{
 :root{--serif:"Charter","Bitstream Charter","Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,Cambria,"Noto Serif","Source Serif 4","Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--measure:42rem;--gap:clamp(2.2rem,5vw,3.6rem)}
 body{font:17px/1.65 var(--serif);font-kerning:normal;text-rendering:optimizeLegibility;-webkit-text-size-adjust:100%}
 @media (max-width:560px){body{font-size:16.5px;line-height:1.6}}
@@ -361,7 +363,6 @@ select,input[type=search],button{border-radius:6px;font-size:.9rem;padding:.45re
  .inv-h{font-size:1.1rem}main{padding:0 16px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-@media print{body{font-size:11pt}nav,.langsel,.warnbar{display:none}}
 /* start-here row of the header and the compact rows */
 .hero-lead{font-size:clamp(1.15rem,2.2vw,1.32rem);line-height:1.55;max-width:44rem;margin:.2rem 0 1rem}
 .hero-go{display:flex;flex-wrap:wrap;gap:.5rem .8rem;margin:.6rem 0 1.1rem;font-family:var(--sans)}
@@ -397,7 +398,6 @@ body header{padding-bottom:.2rem}
 :root[data-theme=dark] .ed-clamp::after{background:linear-gradient(rgba(20,23,27,0),var(--bg))}
 .ed-clamp.ed-open{max-height:none}.ed-clamp.ed-open::after{display:none}
 .ed-more{font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--acc);background:none;border:0;padding:.2rem 0;margin:0 0 .4rem;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
-@media print{.ed-clamp{max-height:none}.ed-clamp::after,.ed-more{display:none}}
 
 details>summary{list-style-position:inside}
 .ed-more{display:block}
@@ -409,6 +409,8 @@ details>summary{list-style-position:inside}
 }
 /* the evidence chains are a major block of their own, even when they sit inside the investigations section */
 section#investigations>section#chains{border-top:1px solid var(--line);padding-top:var(--gap);margin-top:var(--gap)}
+}
+@media print{.ed-clamp{max-height:none}.ed-clamp::after,.ed-more{display:none}.hero-go,.langsel,.warnbar{display:none}}
 </style></head><body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
 <header><div class="in"><div class="hdr-top"><p class="brand"><span class="brand-name">LEGEND</span><span class="brand-ctx">Wirkstoff-Repositionierung · WWOX-bedingte Enzephalopathie</span><span class="brand-state" title="Die Prioritäten sind kuratiert und in Überprüfung: Sie sagen, welcher unterscheidende Test sich lohnt, nicht wie gut eine Behandlung wirkt.">Forschungsvorschau, in Entwicklung</span></p><nav class="langsel" aria-label="Sprache" title="Sprache der Seite wechseln"><span class="lbl">Sprache</span><a href="index.html" data-file="index.html" data-lang="en" hreflang="en" lang="en" title="English">EN</a><a href="it.html" data-file="it.html" data-lang="it" hreflang="it" lang="it" title="Italiano">IT</a><a href="fr.html" data-file="fr.html" data-lang="fr" hreflang="fr" lang="fr" title="Français">FR</a><a href="es.html" data-file="es.html" data-lang="es" hreflang="es" lang="es" title="Español">ES</a><a href="de.html" data-file="de.html" data-lang="de" hreflang="de" lang="de" title="Deutsch" aria-current="true">DE</a></nav><script>(function(){var K='legend.lang';try{var cur=document.documentElement.lang;var L=document.querySelectorAll('.langsel a');

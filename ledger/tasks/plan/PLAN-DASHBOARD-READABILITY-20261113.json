@@ -136,6 +136,16 @@
    "evidence_dir": "/tmp/legend-verify-keep/20261113-122528-bf70b93e",
    "log_sha256": "82171825757e50af1b4dddd97e0fe44031a6204c5fbd2b6a8237586cbcb48294",
    "clone": "REMOVED"
+  },
+  {
+   "run_id": "20261113-132939-f6164307",
+   "label": "battery",
+   "sha": "f8f4ac91f0dc8c64ddf718a558df79d42f077102",
+   "state": "CONCLUDED",
+   "exit_code": 1,
+   "evidence_dir": "/tmp/legend-verify-keep/20261113-132939-f6164307",
+   "log_sha256": "db9c791a60c23617835211af5dcba6a867d797b39e342bc1e3c6f2e29e325978",
+   "clone": "REMOVED"
   }
  ],
  "MANDATE_STATE": "OPEN"
