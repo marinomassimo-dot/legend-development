@@ -4477,7 +4477,7 @@
     },
     {
      "symbol": "CHRM1",
-     "role": "muscarinic receptor (clemastine/benztropine-class pro-myelinating route in the card)",
+     "role": "muscarinic receptor (clemastine/benztropine-class pro-myelinating route in the card; EBP inhibition is also documented for the two drugs and the attribution is unsettled)",
      "hgnc_id": "HGNC:1950",
      "hgnc_name": "cholinergic receptor muscarinic 1",
      "target_kind": "intervention_target"

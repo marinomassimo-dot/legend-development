@@ -23042,6 +23042,93 @@
  {
   "axis": "all",
   "claims_named": [],
+  "digest": "604976b743cde611",
+  "kind": "lead",
+  "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
+  "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
+  "origin_id": "DL-MECH-179",
+  "origin_line": 4618,
+  "origin_title": "DL-MECH-179 — MYC level versus MYC occupancy at early-neuron genes across the knockout, SCAR12-class and corrected organoid lines: a readout that separates a MYC driver from a disengaged MYC level (cross-line contrast, no compound)",
+  "papers_named": [],
+  "pmids": [
+   "42397075"
+  ],
+  "query_id": "Q-DL-MECH-179",
+  "terms": [
+   "MECH",
+   "MYC",
+   "SCAR12",
+   "INV"
+  ]
+ },
+ {
+  "axis": "all",
+  "claims_named": [],
+  "digest": "1075c0b9b3d08ef1",
+  "kind": "lead",
+  "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
+  "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
+  "origin_id": "DL-MECH-180",
+  "origin_line": 4628,
+  "origin_title": "DL-MECH-180 — One measurement set in the existing Wwox-null / neuronal-rescue mouse cohort that separates an endocrine IGF-1 deficit from growth failure secondary to seizures, feeding or metabolic derangement, and from a tissue-autonomous effect: serum IGF-1 and GH read against weight-matched contro",
+  "papers_named": [],
+  "pmids": [
+   "17803050",
+   "22479346",
+   "28763065",
+   "34747138"
+  ],
+  "query_id": "Q-DL-MECH-180",
+  "terms": [
+   "MECH",
+   "IGF",
+   "WWOX"
+  ]
+ },
+ {
+  "axis": "all",
+  "claims_named": [],
+  "digest": "4de23d32cfcbbd4f",
+  "kind": "lead",
+  "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
+  "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
+  "origin_id": "DL-MECH-181",
+  "origin_line": 4638,
+  "origin_title": "DL-MECH-181 — Composition-graded versus allele-general signatures across axes in WWOX-deficient human organoids: within-radial-glia contrasts across knockout, SCAR12-class and WOREE-class lines separate a signature that scales with the progenitor fraction from one that does not",
+  "papers_named": [],
+  "pmids": [
+   "42397075"
+  ],
+  "query_id": "Q-DL-MECH-181",
+  "terms": [
+   "MECH",
+   "WWOX",
+   "SCAR12",
+   "WOREE",
+   "MYC"
+  ]
+ },
+ {
+  "axis": "all",
+  "claims_named": [],
   "digest": "73bd30832d71e26c",
   "kind": "lead",
   "leads_named": [],

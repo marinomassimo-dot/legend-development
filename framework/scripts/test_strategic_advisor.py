@@ -323,8 +323,37 @@ class Proactive(Base):
         self.assertEqual(first["verdict"], "EVALUATE")
         self.assertTrue(any(e.startswith("delivery:") for e in first["events"]))
         sa.evaluate(self.campaign)
+        brief = (self.campaign / "brief_P.md").read_text(encoding="utf-8")
+        self.assertIn("delivery:", brief)                                       # the tick advanced its own state; the brief must still carry what triggered the evaluation (seen empty in the first pilot)
+        self.assertNotIn('"commits_since_last_tick": 0', brief)
         self.at("2026-11-13T13:00:00Z")
         self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")             # the digest of those events was already evaluated
+
+    def test_a_linked_worktree_refuses_to_become_a_second_campaign_and_the_recall_text_is_one(self) -> None:
+        wt = self.tmp / "linked"; wt.mkdir(); (wt / ".git").write_text("gitdir: /elsewhere\n", encoding="utf-8")
+        saved, sa.ROOT = sa.ROOT, wt
+        try:
+            for cmd in ("tick", "evaluate", "deliver", "activate", "disable", "recall"):
+                self.assertTrue(sa.primary_refusal(), cmd)
+            self.assertEqual(sa.main(["tick", "--campaign", str(self.campaign)]), 2)      # refused before it touches any state
+        finally:
+            sa.ROOT = saved
+        self.assertEqual(sa.primary_refusal(), "")                                   # the primary checkout has a .git directory
+        text = sa.recall_prompt(self.campaign)
+        self.assertIn(sa.RECALL_MARK, text)
+        self.assertEqual(text.count("--campaign"), 2)                                   # tick and evaluate, the same campaign
+
+    def test_the_live_scout_briefing_reaches_the_brief_dated_without_addresses_and_absence_is_stated(self) -> None:
+        saved = sa.STATE_HOME
+        try:
+            sa.STATE_HOME = self.tmp / "no_such_cache"
+            self.assertIn("no live scouting briefing", sa.scout_briefing())
+            sa.STATE_HOME = self.tmp / "cache"; sa.STATE_HOME.mkdir()
+            (sa.STATE_HOME / "scout_daily_briefing.md").write_text("RADAR BRIEFING\nNEXT STEP: read x (contact " + "someone" + chr(64) + "example.org" + ")\n" + "z" * 7000, encoding="utf-8")
+            text = sa.scout_briefing()
+            self.assertIn("file time", text); self.assertIn("first 6000", text); self.assertNotIn("someone" + chr(64), text); self.assertIn("[address removed]", text)
+        finally:
+            sa.STATE_HOME = saved
 
     def test_a_running_evaluation_is_not_overlapped_and_a_waiting_session_is_not_called_stalled(self) -> None:
         sa.evaluate(self.campaign)
@@ -479,9 +508,13 @@ class Snapshot(unittest.TestCase):
 
     def test_entry_points_cover_the_required_sources_and_resolve(self) -> None:
         rows = {r["id"]: r for r in sa.entrypoints()}
-        for key in ("limits", "invariants", "dashboard", "investigations", "open_questions", "candidates", "packages", "diagnoses", "memory_dismissals", "radar"):
+        for key in ("limits", "invariants", "dashboard", "investigations", "open_questions", "candidates", "packages", "diagnoses", "memory_dismissals", "radar_science", "harness_scouting", "capability_surface"):
             self.assertIn(key, rows)
         self.assertGreater(rows["invariants"]["matches"], 0)
+        # the weekly scouting tables are one stale pattern and the live feed an absolute host-cache path: they must be told apart, not blended into SKILLS.md's date
+        self.assertTrue(any(p.endswith("scout_daily_briefing.md") for p in rows["harness_scouting"]["patterns"]))
+        self.assertTrue(any("dream" in p and "drug_repurposing" in p for p in rows["diagnoses"]["patterns"]))
+        self.assertTrue(any("radar_" in p for p in rows["radar_science"]["patterns"]))
 
     def test_a_large_file_is_marked_with_its_size_and_a_small_one_is_not(self) -> None:
         tmp, _ = _git_repo()

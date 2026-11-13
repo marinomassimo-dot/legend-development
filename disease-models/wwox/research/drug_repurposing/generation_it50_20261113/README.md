@@ -27,7 +27,7 @@ Non-canonical working note. Not medical advice. Reference genotype class only. I
 SCI50's own answer is kept apart from the science session's mission: nothing here duplicates its work.
 
 ## Limits
-Translations are the assistant's; the IT50 consultation (one Stage A, one Stage B) changed a secondary item, not the principal one; the case is retrospective and scored by its builder. The by-target activity route for eIF2B remains blocked by the ChEMBL API outage.
+Translations are the assistant's; the IT50 consultation (one Stage A, one Stage B) changed a secondary item, not the principal one; the case is retrospective and scored by its builder. The by-target activity route for eIF2B was blocked by a ChEMBL API outage on the morning of 2026-11-13 (HTTP 500, no cached release); the service answered HTTP 200 later that day (late update below), so the route can be tried and is assigned as ADV-003; the INV-02 'zero rows by target search' is therefore not yet shown to be a true absence.
 
 ## Update 2026-11-13 (late)
 The ChEMBL REST API answered HTTP 200 on 2026-11-13 (Harness, ADV-002 note), after the HTTP 500 recorded above: the by-target activity route for the eIF2B subunits can be tried; it was not run here (whether the by-target routes work was not tested).
