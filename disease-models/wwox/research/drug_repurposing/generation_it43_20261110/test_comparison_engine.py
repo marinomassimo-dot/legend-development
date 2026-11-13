@@ -219,4 +219,41 @@ class StatedRoles(unittest.TestCase):
         self.assertEqual(rows["bardoxolone methyl"]["role_derived"], "unresolved")                    # lower than the package's comparator: a ceiling is not lifted
 
 
+class MentionIsNotIdentity(unittest.TestCase):
+    """HE50: recognising a mention is not reconciling an identity: aliases are spelling variants of one name, never an article's local number, an ambiguous abbreviation or a different stereoisomer."""
+    def test_no_alias_is_a_bare_number_a_local_compound_number_or_an_ambiguous_abbreviation(self):
+        forms = [f for fs in ce.ALIASES.values() for f in fs]
+        self.assertFalse([f for f in forms if re.fullmatch(r"[\W\d]+", f) or re.fullmatch(r"(compound|cmpd|c)[ -]?\d+\w?", f)])
+        self.assertNotIn("sfn", forms)                                              # a gene symbol and an abbreviation with other meanings
+
+    def test_a_gene_symbol_an_inactive_analogue_and_an_enantiomer_do_not_borrow_a_compounds_evidence(self):
+        for text in ("SFN (stratifin) is expressed in the cortex at 12 FPKM", "RA889 did not change Nqo1", "Ki-696-1 was not protective at 40 uM", "KI696X is unrelated"):
+            for name in ("sulforaphane", "RA839", "KI-696"):
+                self.assertIsNone(ce.pattern(name).search(text), (name, text))
+        self.assertTrue(ce.pattern("RA839").search("RA-839 lowered Nos2"))           # a spelling variant of the same name does match
+
+
+class RolesKeepTheirContextInTheRealRows(unittest.TestCase):
+    """HE50: the qualifications the verified packages attach to a role are still in the rows the page and the generator read (a regeneration that flattened them would fail here)."""
+    DR = HERE.parent
+
+    def row(self, path, key, val):
+        with open(self.DR / path, encoding="utf-8", newline="") as fh:
+            return next(r for r in csv.DictReader(fh, delimiter="\t") if r[key] == val)
+
+    def test_kir2_activators_keep_recombinant_and_the_subunit_limit_and_the_blocker_keeps_family_level(self):
+        v14 = self.row("generation_it41_20261109/compound_view.tsv", "item_id", "V14")["open_premise"]
+        for part in ("recombinant cells", "none is tested in neurons", "heteromers", "direction of benefit unresolved"):
+            self.assertIn(part, v14)
+        step = self.row("ranking_it8_p9_20261029/investigations_it20.tsv", "inv_id", "INV-18")["next_test"]
+        for part in ("testable at family level", "cannot separate Kir2 isoforms", "cannot separate neuron from glia"):
+            self.assertIn(part, step)
+
+    def test_a_reagent_with_myeloid_data_only_is_not_shown_as_a_neural_probe(self):
+        v19 = self.row("generation_it41_20261109/compound_view.tsv", "item_id", "V19")
+        self.assertIn("myeloid-cell data only", v19["name_full"])
+        self.assertIn("catalogue id not reconciled", v19["name_full"])               # recognised by name, not reconciled with the paper's structure
+        self.assertIn("a comparator for a survivor set, not a probe", v19["counter"])
+
+
 if __name__ == "__main__": unittest.main(verbosity=2)
