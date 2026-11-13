@@ -250,6 +250,16 @@ class Committed(unittest.TestCase):
             self.assertTrue(r["basis"] and r["retrieved_on"], r)
             self.assertIn(r["role"], ("identity", "salt_or_parent", "distinct_from", "label_conflict"))
 
+    def test_a_declared_identity_stands_without_a_catalogue_record_and_claims_no_role(self):
+        """HE50: ML133 and RA839 (SCI49 and SCI48 deltas): an identity is declared with its two keys and its basis; a name with no catalogue record is DECLARED, not erased, and an identity row says nothing of the compound's role."""
+        decl = {r["query_name"]: r for r in ci._rows(ci.DECLARATIONS) if r["role"] == "identity"}
+        for name, chembl, key in (("ML133", "CHEMBL1620289", "GIFYKGIODMXYNT-UHFFFAOYSA-N"), ("RA839", "CHEMBL3899754", "BVYWIQHJXAEJOD-IBGZPJMESA-N")):
+            self.assertEqual((decl[name]["chembl_id"], decl[name]["inchikey"]), (chembl, key))
+            self.assertRegex(decl[name]["inchikey"], r"^[A-Z]{14}-[A-Z]{10}-[A-Z]$")
+        self.assertEqual(ci.resolve([], "ML133")["identity_state"], "DECLARED")        # no catalogue entry at all: the declaration alone carries it, and says nothing against the compound's pharmacology
+        self.assertIn("by hand", decl["RA839"]["basis"])                                # the weaker basis is stated where it is used
+        self.assertIn("comparator", decl["RA839"]["note"])                              # the package's role is not changed by an identity
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
