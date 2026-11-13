@@ -1,0 +1,469 @@
+{
+  "capture": {
+    "assessment_sha256": "287a83d18fc848d240db82276a09557adf103b93db5a060fce83d49a3b29f43d",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P3/stream.jsonl",
+    "raw_stream_sha256": "2cd8e400cd20ad73b517e433272e2288e40f7da4fade9882df962e089ac2aa31",
+    "source_session_id": "65b034d5-64a1-439d-a61a-92bf060bbfa1",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 22463
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-13T23:41:33Z",
+  "label": "P3",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": true,
+      "efforts": {
+        "high": 19
+      },
+      "first_turn_context": 23922,
+      "models": {
+        "claude-opus-5": 11,
+        "claude-opus-5-5": 8
+      },
+      "peak_context": 101277,
+      "totals": {
+        "cache_creation": 188817,
+        "cache_read": 1086952,
+        "output": 29190
+      },
+      "turns": 19
+    },
+    "final_turn_model": "claude-opus-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.0011413,
+        "inputTokens": 10023,
+        "maxOutputTokens": 128000,
+        "outputTokens": 278,
+        "provider": "firstParty",
+        "thinkingTokens": 253,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5": {
+        "cacheCreationEphemeral1hInputTokens": 121351,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 121351,
+        "cacheReadInputTokens": 821621,
+        "canonicalModel": "claude-opus-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 2.2918055,
+        "inputTokens": 22,
+        "maxOutputTokens": 64000,
+        "outputTokens": 26695,
+        "provider": "firstParty",
+        "thinkingTokens": 14869,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 87542,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 87542,
+        "cacheReadInputTokens": 312790,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.8150660000000001,
+        "inputTokens": 18,
+        "maxOutputTokens": 128000,
+        "outputTokens": 2605,
+        "provider": "firstParty",
+        "thinkingTokens": 1046,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 32,
+    "refusal_fallbacks": [
+      {
+        "apiRefusalCategory": null,
+        "direction": "retry",
+        "fallbackModel": null,
+        "originalModel": null,
+        "scope": "session",
+        "trigger": "refusal"
+      }
+    ],
+    "total_cost_usd": 3.108012800000001,
+    "turn_models": {
+      "claude-opus-5": 11,
+      "claude-opus-5-5": 9
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 188817,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 188817,
+      "cache_read_input_tokens": 1086952,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 38,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 818,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 818,
+          "cache_read_input_tokens": 100457,
+          "input_tokens": 2,
+          "output_tokens": 13070,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 29190,
+      "output_tokens_details": {
+        "thinking_tokens": 15805
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-13T23:34:17Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P2/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Strategic assessment \u2014 Stage P, tick 2 (2026-11-13T21:15Z)\n2\t\n3\t## 1 \u00b7 Principal decision\n4\t\n5\tBoth assignments of tick 1 have been executed and disposed. T"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/**"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P1/brief.md\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P1/assessm"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/budget.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t \"activated_utc\": \"2026-11-13T18:22:36Z\",\n3\t \"expires_utc\": \"2026-11-14T18:22:36Z\",\n4\t \"max_assignments\": 6,\n5\t \"max_invocations\": 5,\n6\t \"recipients\": {\n7"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/assignments.jsonl"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\"assessment\": \"P1\", \"id\": \"ADV-001\", \"key\": \"ebp-reannotation-it29\", \"recipient\": \"Science\", \"state\": \"DRAFTED\", \"utc\": \"2026-11-13T18:34:18Z\"}\n2\t{\"assessmen"
+    },
+    {
+      "input": {
+        "glob": "!**/view/**",
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development",
+        "pattern": "ADV-003|isr-target-route|isr_route|adv003"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 18 files\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P3/brief.md\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_2026"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/isr_target_route_adv003_20261113/README.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# ADV-003 \u2014 does a by-target query on the ISR/eIF2B targets return activity rows, and is the recorded \"0 rows by target search\" a true absence or an outage ar"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/isr_target_route_adv003_20261113/consumer_delta.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# ADV-003 \u2014 consumer delta (proposals; 2026-11-13)\n2\t\n3\tNon-canonical. The Orchestrator owns `generation_it50_20261113/README.md`, the INV-02 rows and the rec"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADV-PRESIDIO-20261113.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t \"_schema\": \"orchestrator-task-v1\",\n3\t \"OWNER\": \"orchestrator\",\n4\t \"ACTOR_ID\": \"orchestrator\",\n5\t \"PRIORITY\": \"P0\",\n6\t \"TASK_ID\": \"ORCH-ADV-PRESIDIO-20261"
+    },
+    {
+      "input": {
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADVISOR-PILOT-20261113.json",
+        "pattern": "OBJ_P6|OBJ_P3|IT52-Q01|\"MANDATE_STATE\""
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "10:  \"MANDATE_STATE\": \"OPEN\",\n33:  \"OBJ_P3\": {\n66:  \"OBJ_P6\": {\n73:[Omitted long matching line]"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADVISOR-PILOT-20261113.json",
+        "limit": 120,
+        "offset": 1
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t \"_schema\": \"orchestrator-task-v1\",\n3\t \"OWNER\": \"orchestrator\",\n4\t \"ACTOR_ID\": \"orchestrator\",\n5\t \"PRIORITY\": \"P0\",\n6\t \"TASK_ID\": \"ORCH-ADVISOR-PILOT-2026"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/ranking_it*/investigations*.tsv"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations.tsv\ndisease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/i"
+    },
+    {
+      "input": {
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/roadmap_current.md",
+        "pattern": "^#+ "
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "1:# Drug repurposing \u2014 current development roadmap\n3:## Operator roadmap (authoritative; read this first)\n52:## Guiding principle\n61:## Research objectives\n75:#"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/roadmap_current.md",
+        "limit": 92,
+        "offset": 52
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "52\t## Guiding principle\n53\t\n54\t> **Rendere durevole la capacit\u00e0 di lavorare e migliorarsi, mantenendo semplice cambiare direzione.**\n55\t\n56\tKeep improvements le"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations.tsv"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\trank\ttie_group\tinv_id\tintervention\tquestion\twhy_now\tevidence_available\tevidence_depth\tdecisive_uncertainty\tnext_test\tfeasibility\torigin_class\torigin_detail\tst"
+    },
+    {
+      "input": {
+        "-n": true,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "pattern": "IT52-Q01|IT51-Q0[6-8]"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "188:[Omitted long matching line]\n189:IT51-Q07\tebp_reannotation_adv001_20261113/consumer_delta.md row 5 (d)\tWhat is the direct EBP activity of the 14-reductase i"
+    },
+    {
+      "input": {
+        "head_limit": 40,
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "d-APV|removable fraction|AMPA tool"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 40 files limit: 40\ndisease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv\ndisease-models/wwox/research/drug_repurposi"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/*/README.md"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/cards_early/README.md\ndisease-models/wwox/research/drug_repurposing/p5/README.md\ndisease-models/wwox/research/drug"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/*_2026111[0-3]/README.md"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/fly_wwox_feasibility_it41_20261110/README.md\ndisease-models/wwox/research/drug_repurposing/glun2b_comparators_sci4"
+    },
+    {
+      "input": {
+        "-o": true,
+        "head_limit": 40,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations.tsv",
+        "pattern": "INV-\\d+\\t[^\\t]{0,70}"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "2:INV-01\tAAV9-delivered human WWOX (gene addition)\n3:INV-02\tIntegrated-stress-response modulators (class)\n4:INV-03\tT-type calcium blockade, proposed isoform-rea"
+    },
+    {
+      "input": {
+        "glob": "!**/view/**",
+        "head_limit": 30,
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "NBQX|GYKI|kainate"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 30 files limit: 30\ndisease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv\ndisease-models/wwox/research/drug_repurposi"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/README.md",
+        "limit": 70
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# SCI47 package A \u2014 which inhibitory defect is supported by PMID 34634460, and which comparison stays interpretable\n2\t\n3\tNon-canonical research material. Not "
+    },
+    {
+      "input": {
+        "-n": true,
+        "head_limit": 30,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "pattern": "GABA-A|sIPSC"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "15:[Omitted long matching line]\n16:[Omitted long matching line]\n18:[Omitted long matching line]\n119:[Omitted long matching line]\n122:[Omitted long matching line"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations.tsv",
+        "limit": 1,
+        "offset": 11
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "11\t5\t5 (tie of 2)\tINV-10\tGABA-aminotransferase inactivators (the carded clinical thread)\tWhat does the published symptomatic response predict, and what does it "
+    },
+    {
+      "input": {
+        "glob": "**/README.md",
+        "head_limit": 30,
+        "output_mode": "count",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "vigabatrin|Vigabatrin"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/README.md:6\ndisease-models/wwox/research/drug_repurposing/network_comparison_it7_p3_20261029/README.md:2\ndisease-m"
+    },
+    {
+      "input": {
+        "-n": true,
+        "head_limit": 20,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/README.md",
+        "pattern": "GABA"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "1:[Omitted long matching line]\n11:[Omitted long matching line]\n19:[Omitted long matching line]\n26:**Question.** In the Wwox neuron-deleted neocortex, is the los"
+    },
+    {
+      "input": {
+        "head_limit": 20,
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development",
+        "pattern": "chembl_activity"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 15 files\ndisease-models/wwox/research/drug_repurposing/isr_target_route_adv003_20261113/README.md\ndisease-models/wwox/research/drug_repurposing/generation"
+    },
+    {
+      "input": {
+        "head_limit": 25,
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development",
+        "pattern": "27392635|Ralvenius|4370687"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 8 files\ndisease-models/wwox/research/drug_repurposing/review_it15_20261101/README.md\ndisease-models/wwox/research/drug_repurposing/function_pharm_verify_i"
+    },
+    {
+      "input": {
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv",
+        "pattern": "NP3P2|NP3P3"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "3:[Omitted long matching line]\n4:[Omitted long matching line]"
+    },
+    {
+      "input": {
+        "-n": true,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/function_pharm_verify_it14_p3v_20261101/README.md",
+        "pattern": "Ralvenius|Hammer|27392635"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "10:[Omitted long matching line]"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tid\titem\tverdict\tdecisive_datum\tqueries_and_sources\ttrigger_to_reopen\towner_or_route\n2\tNP3P1\tHeterozygote versus wild-type sIPSC (amplitude and charge) in the "
+    }
+  ]
+}

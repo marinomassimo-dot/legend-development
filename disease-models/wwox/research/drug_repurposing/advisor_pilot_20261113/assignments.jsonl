@@ -4,3 +4,5 @@
 {"evidence": "Recipient Harness is the session that runs the schedule; no inter-session transport used. Assignment text on main 65557d1b; take-in-charge to be recorded in ledger/tasks/plan/PLAN-PROACTIVE-ADVISOR-20261113.json", "id": "ADV-002", "state": "SENT", "utc": "2026-11-13T18:39:52Z"}
 {"assessment": "P2", "id": "ADV-003", "key": "isr-target-route-retest", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-13T21:18:10Z"}
 {"evidence": "SendMessage to live session SCI (idle per claude agents --json) with pointer to assignments/ADV-003.md on main f5f9c14e; accepted into inbox, not yet read", "id": "ADV-003", "state": "SENT", "utc": "2026-11-13T21:23:33Z"}
+{"assessment": "P3", "id": "ADV-004", "key": "gabaa-subtype-same-system", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-13T23:41:33Z"}
+{"assessment": "P3", "id": "ADV-005", "key": "activity-route-usable", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-13T23:41:33Z"}
