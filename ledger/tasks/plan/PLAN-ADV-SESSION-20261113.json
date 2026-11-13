@@ -1,0 +1,107 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-ADV-SESSION-20261113",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "assigned_on": "2026-11-13",
+ "OBJECTIVE": "HE — Dedicated ADV session and complete strategic inputs: transfer the Strategic Advisor presidio (roadmap, scheduled recalls, assignment delivery) from the HE session to a dedicated ADV session that the operator assigns ACTOR_ID orchestrator with a mandate distinct from IT; keep one campaign and one state (no renewal, no new budget, no fourth assignment); verify continuity and the strategic input pointers. Implementation task closure, ADV presidio and IT's scientific consumers stay distinct.",
+ "worktree": ".claude/worktrees/padv3",
+ "branch": "task/padv3",
+ "CURRENT_STATE": "OPEN",
+ "CHECKPOINT": {
+  "last_verified_result": "none yet",
+  "first_incomplete_work": "OBJ_1_STATE"
+ },
+ "AUTHORISED_QUEUE_20261113C": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1_STATE": {
+   "order": 1,
+   "title": "Read the canonical instructions, the proactive implementation and the current campaign; state budget, expiry, invocations used, assignments produced/delivered/executed/consumed, the hosting session and its scheduled recall, and defects already fixed; no activate, no new campaign, no counter reset",
+   "steps": [
+    {
+     "step": "Read the canonical instructions, the proactive implementation and the current campaign; state budget, expiry, invocations used, assignments produced/delivered/executed/consumed, the hosting session and its scheduled recall, and defects already fixed; no activate, no new campaign, no counter reset",
+     "status": "PENDING",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_2_ONE_CAMPAIGN": {
+   "order": 2,
+   "title": "One campaign path and one operational state shared by HE and ADV: copies in worktrees must not become independent campaigns with separate budgets; make that structural where cheap, otherwise state it",
+   "steps": [
+    {
+     "step": "One campaign path and one operational state shared by HE and ADV: copies in worktrees must not become independent campaigns with separate budgets; make that structural where cheap, otherwise state it",
+     "status": "PENDING",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_3_CONTINUITY": {
+   "order": 3,
+   "title": "Continuity of the ADV presidio: session-bound cron, what survives compaction/resume/termination, restore-on-restart without a second copy, one canonical recall prompt, monitor association of the ADV mandate; declare unresolved limits; no new permanent service",
+   "steps": [
+    {
+     "step": "Continuity of the ADV presidio: session-bound cron, what survives compaction/resume/termination, restore-on-restart without a second copy, one canonical recall prompt, monitor association of the ADV mandate; declare unresolved limits; no new permanent service",
+     "status": "PENDING",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_4_STRATEGIC_INPUTS": {
+   "order": 4,
+   "title": "Make the Advisor's strategic inputs concretely reachable: roadmap, dashboard and source data, open questions, harness scouting/mining reports, radars, DREAM and memory, unused-capability diagnoses and costs, invariants; fix existing indices, no new registry; stale or missing pointers stay visible limits; DREAM connections are not evidence",
+   "steps": [
+    {
+     "step": "Make the Advisor's strategic inputs concretely reachable: roadmap, dashboard and source data, open questions, harness scouting/mining reports, radars, DREAM and memory, unused-capability diagnoses and costs, invariants; fix existing indices, no new registry; stale or missing pointers stay visible limits; DREAM connections are not evidence",
+     "status": "PENDING",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_5_TRANSFER": {
+   "order": 5,
+   "title": "Hand the presidio to the dedicated ADV session: verify its identity in the runtime (not from a title), brief it (campaign, roadmap, state, procedure, delivery, limits, deactivation), then deactivate only the HE-hosted Advisor recall once ADV has verified its own on the same state; record the transfer; inform IT and SCI; one active presidio at the end",
+   "steps": [
+    {
+     "step": "Hand the presidio to the dedicated ADV session: verify its identity in the runtime (not from a title), brief it (campaign, roadmap, state, procedure, delivery, limits, deactivation), then deactivate only the HE-hosted Advisor recall once ADV has verified its own on the same state; record the transfer; inform IT and SCI; one active presidio at the end",
+     "status": "PENDING",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_6_VERIFY": {
+   "order": 6,
+   "title": "Targeted verification: HE recall off and ADV recall on, no double evaluation on one event, budget and expiry preserved, a test message received by the right session, ADV mandate recognised by the monitor, strategic sources reachable with freshness limits declared; no new real evaluation unless needed",
+   "steps": [
+    {
+     "step": "Targeted verification: HE recall off and ADV recall on, no double evaluation on one event, budget and expiry preserved, a test message received by the right session, ADV mandate recognised by the monitor, strategic sources reachable with freshness limits declared; no new real evaluation unless needed",
+     "status": "PENDING",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_7_DELIVER": {
+   "order": 7,
+   "title": "Integrate and publish with the existing procedures; Italian report: who hosts the presidio, which recalls verified, which sources linked and which incomplete, residual budget and expiry, behaviour after interruption and open limits; keep disable/modify/remove simple",
+   "steps": [
+    {
+     "step": "Integrate and publish with the existing procedures; Italian report: who hosts the presidio, which recalls verified, which sources linked and which incomplete, residual budget and expiry, behaviour after interruption and open limits; keep disable/modify/remove simple",
+     "status": "PENDING",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  }
+ },
+ "VERIFICATION_EVIDENCE": [],
+ "MANDATE_STATE": "OPEN"
+}
