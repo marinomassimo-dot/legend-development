@@ -23,11 +23,12 @@
    "steps": [
     {
      "step": "Read the canonical instructions, the proactive implementation and the current campaign; state budget, expiry, invocations used, assignments produced/delivered/executed/consumed, the hosting session and its scheduled recall, and defects already fixed; no activate, no new campaign, no counter reset",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "Read at 2026-11-13T22:2xZ: budget 24 h from 18:22:36Z (expires 2026-11-14T18:22:36Z), invocations 2/3 (P1 18:34Z, P2 21:18Z), assignments 3/3 drafted (ADV-001/002 EXECUTED, ADV-003 TAKEN), recall hosted in HE (cron 4280e75d, hourly :07), no evaluation running, fixed defect ce98d377 (events lost in the brief). No activate, no reset."
     }
-   ]
+   ],
+   "status": "DONE"
   },
   "OBJ_2_ONE_CAMPAIGN": {
    "order": 2,
@@ -35,11 +36,12 @@
    "steps": [
     {
      "step": "One campaign path and one operational state shared by HE and ADV: copies in worktrees must not become independent campaigns with separate budgets; make that structural where cheap, otherwise state it",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "strategic_advisor.py: tick/evaluate/deliver/activate/disable/recall refuse from a linked worktree (campaign folder and budget are per checkout, the state dir is keyed by name); test test_a_linked_worktree_refuses_to_become_a_second_campaign_and_the_recall_text_is_one; ADV told to run from /home/desktop/legend-development."
     }
-   ]
+   ],
+   "status": "DONE"
   },
   "OBJ_3_CONTINUITY": {
    "order": 3,
