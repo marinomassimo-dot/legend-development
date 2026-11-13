@@ -130,6 +130,20 @@ class TaskClosure(unittest.TestCase):
             tc.close_task(self.wt, remove_worktree=True)
         self.assertTrue((self.wt / "private-cache").exists())
 
+    def test_bytecode_caches_alone_do_not_prevent_removal(self):
+        """2026-11-13: every worktree that ran a test holds __pycache__, so `--remove-worktree` refused all of them; the caches are regenerable, other ignored material still refuses."""
+        (self.wt / ".gitignore").write_text("__pycache__/\n*.pyc\nprivate-cache\n")
+        run(["add", ".gitignore"], self.wt)
+        run(["commit", "-m", "ignore caches"], self.wt)
+        (self.wt / "pkg" / "__pycache__").mkdir(parents=True)
+        (self.wt / "pkg" / "__pycache__" / "m.cpython-312.pyc").write_bytes(b"x")
+        (self.wt / "private-cache").write_text("keep")
+        with self.assertRaises(tc.GitError):                      # a real ignored file next to the caches still refuses
+            tc.close_task(self.wt, remove_worktree=True)
+        (self.wt / "private-cache").unlink()
+        tc.close_task(self.wt, remove_worktree=True)              # only the caches left: landed and removed
+        self.assertFalse(self.wt.exists())
+
     def test_landing_never_overwrites_ignored_material_on_main(self):
         commit(self.repo, ".gitignore", "local-data")
         (self.repo / "local-data").write_text("preserve this ignored file")
