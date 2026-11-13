@@ -794,7 +794,7 @@ def register_assignments(campaign: Path, label: str, text: str) -> list[dict[str
     return made
 
 
-SENDER_RECORDS = ("PROACTIVE-ADVISOR", "ADV-PRESIDIO", "ADV-SESSION")   # the records of the sessions that draft and deliver: their naming a draft or its delivery is not a recipient taking it in charge
+SENDER_RECORDS = ("PROACTIVE-ADVISOR", "ADV-PRESIDIO")   # the records of the sessions that draft and deliver (the pilot implementation, the presidio): their naming a draft or its delivery is not a recipient taking it in charge. Harness is also a recipient: its own record (PLAN-ADV-SESSION) is NOT excluded
 
 
 def assignment_states(campaign: Path) -> dict[str, dict[str, Any]]:
