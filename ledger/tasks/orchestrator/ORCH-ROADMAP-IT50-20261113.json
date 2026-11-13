@@ -13,9 +13,9 @@
    "steps": [
     {
      "step": "Reconcile the baseline: IT49, SCI49, advisor_followup_20261112; published vs worktree vs regenerated consumers; correct current references without reopening concluded readings",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Baseline reconciled: IT49 published (a1cd5750, 2454a3ac, 387f6ae4; CI #676, #680, #683 success), SCI49 A and B consumed, advisor_followup_20261112 on main (input availability: brief --expect, used), worktree it49 clean; dated update line added to the IT49 README (its 'SCI49 not delivered' line is historical); no concluded reading reopened."
     }
    ]
   },
@@ -24,9 +24,9 @@
    "steps": [
     {
      "step": "One strategic consultation: record the intended action before Stage A (sealed, outside the brief), refresh the snapshot at a safe boundary, verify announced packages are present and reachable (use the --expect availability option), Stage A then Stage B once each; record initial model, effective models and runtime limits; decision accepted/adapted/rejected with reasons",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "One Stage A (opus/high requested; 26 turns opus-5 + 14 turns opus-5-5, changed_mid_run true) and one Stage B (sonnet/medium, 1 turn); the three announced packages were in the snapshot and reachable (--expect); intended action sealed before (sha256 d418f3ad...), kept out of the brief; A1 recommended a different increment (Kir2 cell-class propagation); B1, after reading my plan, preferred mine with four refinements (agreement after exposure); decision: accepted mine, adapted by B1, and did the A1 item as a small second item. Ceiling used: no further invocation."
     }
    ]
   },
@@ -35,9 +35,9 @@
    "steps": [
     {
      "step": "Principal generative increment to a concrete research possibility (unrepresented lever / discriminating reagent comparison / proposal lost to catalogue or representation / knowledge combination that changes an experiment); observation -> explanation -> hypothesised action -> compound or probe -> prediction -> discriminating result kept apart",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Principal increment: the lost eIF2B-probe proposal of INV-02 made representable: isr_inv02_it50_20261113 (ISR1-ISR3, hypotheses layout, every cell sourced), manifest row, mapping entry, investigations list read from the manifest, generator rerun (24 earlier rows and the six earlier rows byte-identical; 3 added), reader row ISR1 in five languages, tests (test_stage_it50). Independent reader: 14 supported, 12 partly, 1 not supported over 27 cells; twelve corrections applied; reader's conclusion: restatements, no new proposition; ISR3 is access not generation. Secondary: Kir-gene cell-class states carried into INV-18 (five languages). Not shown: a better prediction, a changed later choice. By-target activity route for eIF2B not run (ChEMBL API HTTP 500, no cached release)."
     }
    ]
   },
@@ -46,9 +46,9 @@
    "steps": [
     {
      "step": "Design-only knowledge: give Harness the scientific meaning of the fields and a real case (INV-02); when the link lands, show what it makes usable; no competing reader",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "design_fields_it50.md (scientific meaning of design.tsv fields, one real case) given to Harness, with refinements by message; Harness builds design_only role (HE50) and will add one consumer function after IT50 lands; the link has not landed yet: nothing claimed about what it makes usable beyond the restatement."
     }
    ]
   },
@@ -57,9 +57,9 @@
    "steps": [
     {
      "step": "Comparison on one bounded case fixed before execution (question, input, simple reference path, current path, expected improvement, no-benefit conditions); measure corrections/false links/alternatives kept/premises/next experiment; distinguish new for LEGEND, novel against literature, validated prediction",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Case fixed before execution (prereg_it50.md 575b0dc6); result_it50.md scores E1-E5: held except E5 partly (one stated code change); evidence level: new for LEGEND as representation, not novel against literature, no validated prediction."
     }
    ]
   },
@@ -68,9 +68,9 @@
    "steps": [
     {
      "step": "Complete the loop: consume SCI50 when available with a disposition per delta; update the question homes (decision, importance, work done, next step, reopening condition); dashboard: hypotheses to test, comparisons, priority questions, favourable and contrary evidence, in-silico vs indispensable measurement",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "SCI50 not delivered at the time of writing; questions: IT49-Q07/Q09 evidence updated; dashboard: ISR1 reader row, INV-18 clause; no ranking change. To do on delivery: a disposition per SCI50 delta."
     }
    ]
   },
@@ -79,7 +79,7 @@
    "steps": [
     {
      "step": "Delivery: derivatives regenerated after the last data and receipts, browser verified in the real runtime, landing, CI per SHA, final report in Italian",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "evidence": ""
     }
