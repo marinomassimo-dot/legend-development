@@ -688,3 +688,26 @@ document.body.setAttribute('data-cur-ready', '1');
   }
   window.addEventListener('hashchange', open); open();
 })();
+
+/* Editorial reading (2026-11-13): a long field of an investigation row is shown clamped with an explicit opening; without script the full text is shown.
+   Nothing is removed from the page, so search, anchors and export see the whole text; the button says what it does and carries aria-expanded. */
+(function () {
+  'use strict';
+  try {
+    var LIM = 520;
+    document.querySelectorAll('.inv-glance > dd, .inv-cv-dd').forEach(function (dd, i) {
+      if (dd.dataset.edDone || dd.textContent.length < LIM || dd.querySelector('details')) return;
+      dd.dataset.edDone = '1';
+      var id = 'ed-' + i;
+      var body = document.createElement('div'); body.className = 'ed-body'; body.id = id; body.classList.add('ed-clamp');
+      while (dd.firstChild) body.appendChild(dd.firstChild);
+      dd.appendChild(body);
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'ed-more'; b.setAttribute('aria-expanded', 'false'); b.setAttribute('aria-controls', id);
+      b.textContent = T.ed_more;
+      b.addEventListener('click', function () { var on = body.classList.toggle('ed-open'); b.setAttribute('aria-expanded', on ? 'true' : 'false'); b.textContent = on ? T.ed_less : T.ed_more; });
+      dd.appendChild(b);
+    });
+    document.querySelectorAll('.inv-row details.inv-more').forEach(function (d) { d.addEventListener('toggle', function () { /* keep the clamped fields of a newly opened row measurable */ }); });
+  } catch (e) { /* the page reads in full without this */ }
+})();
+
