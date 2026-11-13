@@ -7,7 +7,7 @@
  "START_UTC": "2026-11-13T08:30:00Z",
  "OBJECTIVE": "LEGEND IT50 (operator mandate, queued after IT49; window at most ten hours from effective start, no automatic renewal): improve generative capacity - turn available evidence, relations and verified deliveries into pharmacological hypotheses, discriminating comparisons and useful experiments for WWOX loss of function; verification accompanies it. One new strategic consultation (at most one Stage A and one Stage B, existing procedure, configuration verified, no new spend; a failed attempt counts). Not an extension of the IT48 pilot. Science session has a generative mission starting from myelination: coordinate, do not duplicate. Design-only packages: Harness builds a minimal link; no competing reader. No ranking/sign/qualification change to show an effect; no predictive claim from better access. Final report in Italian opens with: 'Quale ipotesi, confronto farmacologico o esperimento LEGEND riesce ora a formulare meglio?'.",
  "AUTHORISED_QUEUE_20261108": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P1": {
    "order": 1,
    "steps": [
@@ -46,9 +46,9 @@
    "steps": [
     {
      "step": "Design-only knowledge: give Harness the scientific meaning of the fields and a real case (INV-02); when the link lands, show what it makes usable; no competing reader",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "design_fields_it50.md (scientific meaning of design.tsv fields, one real case) given to Harness, with refinements by message; Harness builds design_only role (HE50) and will add one consumer function after IT50 lands; the link has not landed yet: nothing claimed about what it makes usable beyond the restatement."
+     "evidence": "design_fields_it50.md (scientific meaning of design.tsv fields, one real case) given to Harness, with refinements by message; Harness builds design_only role (HE50) and will add one consumer function after IT50 lands; the link has not landed yet: nothing claimed about what it makes usable beyond the restatement. CLOSED FOR THIS MANDATE'S OWN PART: the field meanings and the real case were delivered and confirmed to Harness; the design_only link (HE50) had not landed when the window closed, so what it makes usable is NOT shown here (open step on Harness's side, no competing reader built)."
     }
    ]
   },
@@ -68,9 +68,9 @@
    "steps": [
     {
      "step": "Complete the loop: consume SCI50 when available with a disposition per delta; update the question homes (decision, importance, work done, next step, reopening condition); dashboard: hypotheses to test, comparisons, priority questions, favourable and contrary evidence, in-silico vs indispensable measurement",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "SCI50 not delivered at the time of writing; questions: IT49-Q07/Q09 evidence updated; dashboard: ISR1 reader row, INV-18 clause; no ranking change. To do on delivery: a disposition per SCI50 delta."
+     "evidence": "SCI50 not delivered at the time of writing; questions: IT49-Q07/Q09 evidence updated; dashboard: ISR1 reader row, INV-18 clause; no ranking change. To do on delivery: a disposition per SCI50 delta. SCI50 had not been delivered when the window closed (no commit on development/main): nothing to dispose; to be consumed when it arrives with a disposition per delta."
     }
    ]
   },
@@ -79,9 +79,9 @@
    "steps": [
     {
      "step": "Delivery: derivatives regenerated after the last data and receipts, browser verified in the real runtime, landing, CI per SHA, final report in Italian",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": " 4e4e3e01 landed (gate PASS, ls-remote verified); CI #684 and view publication #43 succeeded; derivatives regenerated after the last data (no receipts this mandate; ledger 1,903); full view suite 225 tests OK (older Snap revision selected automatically), phase sweep clean apart from two output-format false alarms; site checked in five languages earlier in the cycle. Not done: worktree/temporary cleanup (needs operator authorisation / classifier refused)."
     }
    ]
   }
