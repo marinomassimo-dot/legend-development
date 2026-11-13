@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-13T15:13:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-13T15:27:00Z",
+ "event_id": "FTR-20261113-39083422-65",
+ "evidence_basis": [
+  "Main text, Methods and the full appendix read; Safety47 panel (Supp Fig 2) viewed: no EBP, sigma or sterol enzyme among about 80 readouts; no chemical structure in main text or appendix.",
+  "verbatim_locator | proposition: panel at 10 uM did not exceed 50 percent on non-muscarinic targets | Results | \"did not result in greater than 50% inhibition or activation of any of the nonmuscarinic targets tested\"",
+  "verbatim_locator | proposition: ACh in OPC conditioned medium and its inhibition of differentiation | Results | \"we ascertained the concentration of acetylcholine to be 12 nM\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261113-39083422-66",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC11317586 via the PubMed full-text tool 2026-11-13; appendix PDF (18 pages, Supp Figs 1-7 and Methods) obtained from the Europe PMC supplementaryFiles service (HTTP 200) and read by pdftotext plus Supp Fig 2 and 4 viewed as images; main-text figures not viewed",
+ "study_id": {
+  "doi": "10.1073/pnas.2407974121",
+  "pmid": "39083422"
+ },
+ "workflow": "SCI51 blind verifier V14 (m1_ebp_reagents_sci51_20261113), actor label me-y. Verification of decisive rows and identity; the claim step was refused by the permission classifier and was not worked around. Staged JSON for the Orchestrator; not recorded."
+}

@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-13T15:02:30Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-13T15:10:30Z",
+ "event_id": "FTR-20261113-27671734-66",
+ "evidence_basis": [
+  "Full text and Methods read; page Figure 4 (knockout OPC cultures) viewed and fold changes estimated; other figures not opened.",
+  "verbatim_locator | proposition: Chrm1 knockout abolishes the drug effect in OPCs | Results | \"knockout of the Chrm1 completely abolished the effects of the anti-muscarinic compounds\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/output/reagents.tsv",
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/output/activities.tsv",
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/output/conditions.tsv",
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/output/evidence.tsv"
+ ],
+ "prior_receipt": "FTR-20261105-27671734-06",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC full text PMC5039026 via the PubMed full-text tool, fetched 2026-11-13; PMC article page fetched once for figure images (page Figures 2, 3 and 4 viewed)",
+ "study_id": {
+  "doi": "10.7554/eLife.18246",
+  "pmid": "27671734"
+ },
+ "workflow": "SCI51 producer P (m1_ebp_reagents_sci51_20261113), actor label me-z. Question-driven reading of reagent identity and cross-activity. Prepared as a staged JSON file for the Orchestrator; the claim step was refused by the permission classifier and was not worked around."
+}
