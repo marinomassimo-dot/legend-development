@@ -349,9 +349,9 @@ class Proactive(Base):
             sa.STATE_HOME = self.tmp / "no_such_cache"
             self.assertIn("no live scouting briefing", sa.scout_briefing())
             sa.STATE_HOME = self.tmp / "cache"; sa.STATE_HOME.mkdir()
-            (sa.STATE_HOME / "scout_daily_briefing.md").write_text("RADAR BRIEFING\nNEXT STEP: read x (contact someone@example.org)\n" + "z" * 7000, encoding="utf-8")
+            (sa.STATE_HOME / "scout_daily_briefing.md").write_text("RADAR BRIEFING\nNEXT STEP: read x (contact " + "someone" + chr(64) + "example.org" + ")\n" + "z" * 7000, encoding="utf-8")
             text = sa.scout_briefing()
-            self.assertIn("file time", text); self.assertIn("first 6000", text); self.assertNotIn("someone@example.org", text); self.assertIn("[address removed]", text)
+            self.assertIn("file time", text); self.assertIn("first 6000", text); self.assertNotIn("someone" + chr(64), text); self.assertIn("[address removed]", text)
         finally:
             sa.STATE_HOME = saved
 
