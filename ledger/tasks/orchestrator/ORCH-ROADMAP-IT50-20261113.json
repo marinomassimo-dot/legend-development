@@ -85,5 +85,27 @@
     }
    ]
   }
+ },
+ "CONSULTATION_STAGE_A": {
+  "ceiling": "one Stage A and one Stage B for IT50; a failed attempt counts; the IT48 pilot ceiling is separate and spent",
+  "campaign_boundary": "IT50 window at most ten hours from the effective start (2026-11-13T07:30Z); no automatic renewal",
+  "owner_session": "4325d70d-8bea-4789-8046-d7a9ee74c97f (orchestrator)",
+  "repo_sha": "d8baa78d780dbef74721ea1d232b05e3356946aa (task/it50 on main 387f6ae4); dispatch 2026-11-13T07:37:03Z",
+  "dashboard_source_revision": "387f6ae49edb6e8aa8259703336fc7f25cd7bda9 2026-11-13T02:22:05+00:00",
+  "scientific_baseline": "IT49 landed (a1cd5750, 2454a3ac, 387f6ae4; CI #676, #680, #683 success); generator reads 24 package rows with no unmapped package; SCI49 A and B consumed (receipts 1,903); INV-02 case: design-only packages are not consumed (Harness has a separate link task); SCI50 not delivered; open questions IT48-Q01..Q04, IT49-Q01..Q11; no rank, sign or qualification changed",
+  "intended_action_sealed": {
+   "path": "disease-models/wwox/research/drug_repurposing/advisor_campaign_it50_20261113/advisor_sealed/INTENDED_ACTION_1.md",
+   "sha256": "d418f3adf3e0904ba6d59e9eaa01864050f6b17394c0b117ccd8a67a28ebab31",
+   "note": "written and sealed before any IT50 assessment; kept out of the brief"
+  },
+  "constraints_and_dependencies": "advisor_campaign_it50_20261113/inputs/constraints.md",
+  "announced_deliveries_checked": "advisor_followup_20261112, cell_context_verify_sci49_20261112, kir2_drugname_sci49_20261112 passed through brief --expect"
+ },
+ "CONSULTATION_DECISION": {
+  "stage_a": "A1 saved (opus/high requested; read-back 26 turns claude-opus-5 and 14 claude-opus-5-5, changed_mid_run true, 40 turns, output 29,261, cache written 203,465, cache read 3,239,536): recommends propagating the held Kir-subunit cell-class rows into the INV-18 Ba2+/Kir2 arm; exposure declared (task record baseline names the INV-02 case)",
+  "stage_b": "B1 saved (sonnet/medium claude-sonnet-5-5, 1 turn, output 2,019): after reading my sealed action it prefers INV-02 representation with four refinements (representable is not supported; no reader; reusable fields; cheap items) and queues the Kir2 propagation next. Agreement after exposure, not independent",
+  "checks_before_accepting": "A1's artefact claims checked against cell_context_it46.tsv: KCNJ2 OTHER_ENRICHED in mouse (0.74 neurons P7 vs 41.80 endothelium) and human (1.40 vs 6.64, n=1): confirmed. B1's claim that consumer_delta row 1 of SCI49 B is still PROPOSED is wrong (applied in IT49, 387f6ae4). ChEMBL API returns HTTP 500 (external) and activity_search finds no cached release: the by-target activity route for eIF2B cannot be run now",
+  "decision": "ACCEPTED my sealed action as the principal increment (INV-02 lost eIF2B-probe proposal made representable), ADAPTED by B1: before/after diff must differ only by the new rows, ISR sign stays an unmet precondition, no reader, reusable layout; the Kir2 cell-class propagation (A1 lead) is done as a small second item without a delegate (values are committed rows, no new scientific proposition)",
+  "alternatives_not_pursued": "IT49-Q06 (ML133 hERG, route blocked), myelination (science session), exclusion-ladder consolidation"
  }
 }
