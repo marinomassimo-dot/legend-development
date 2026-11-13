@@ -164,6 +164,47 @@ def package_rows():
     return out, seen_unmapped
 
 
+# HE50: design-only packages (manifest role `design_only`): steps, controls and decision branches, returned verbatim by hp.design_for and mapped here, cell by cell, onto what a design keeps apart.
+# The mapping is the reviewable part and is confirmed by the package's scientific owners; the reader maps nothing and no word of a cell is interpreted. A slot with no column, or an empty cell, says so.
+# What each slot is NOT (owners' wording, 2026-11-13): `precondition` stays unmet until the step before it has been run, never assumed true; `controls` are the controls the package documents, some entries say a control is
+# NOT qualified, and ids in them refer to module evidence, not to observations of this design; `outcomes` hold possible outcomes together with the conditions and cautions written beside them, never data;
+# `decision` is written for several outcomes in one cell and is not collapsed to a favourable branch; an observation does not exist in a design.
+DESIGN_MAP = {
+    "isrib_discrim_20261108": {"design.tsv": dict(step=["question", "arms", "readouts"], precondition=["condition_on"], controls=["controls_already_qualified_in_module"],
+                                                  outcomes=["if_result_X_then"], decision=["decision_it_changes"], scope=[], link=[])},
+    "myelin_generative_it36_20261108/levers_bc": {"experiments.tsv": dict(step=["question", "design", "endpoint"], precondition=[], controls=["comparator", "mechanism_control", "engagement_check"],
+                                           outcomes=["weakened_by"], decision=["decision_it_changes"], scope=["endpoint_scope", "not_a_substitute_for"], link=["hyp_id"])},
+}
+DESIGN_FIELDS = ["design_row_id", "package", "table", "inv_id", "source_ref", "step", "precondition_unmet_until_the_step_before_is_run", "controls_as_documented_by_the_package",
+                 "possible_outcomes_conditions_and_cautions_not_observed", "conditioned_decision", "scope_and_what_the_result_is_not", "hypothesis_link", "observation", "unmapped_cells"]
+ABSENT = "not stated by the package (no such column)"
+EMPTY = "not stated by the package (empty cell)"
+
+
+def design_rows():
+    """One row per design row of the mapped `design_only` packages. Returns (rows, unmapped) where unmapped lists reachable tables with no mapping."""
+    pk = hp.load_all(); out = []; unmapped = {}
+    for inv in sorted({p["inv_id"] for p in pk if p.get("role") == "design_only"}):
+        for x in hp.design_for(pk, inv)["rows"]:
+            m = (DESIGN_MAP.get(x["package"]) or {}).get(x["table"])
+            if not m:
+                unmapped[(inv, x["package"], x["table"])] = unmapped.get((inv, x["package"], x["table"]), 0) + 1
+                continue
+            r, cols = x["row"], x["columns"]
+
+            def slot(names):
+                if not names:
+                    return ABSENT
+                return " | ".join(f"{n}: {r[n]}" if n in cols and r.get(n) else f"{n}: {EMPTY if n in cols else ABSENT}" for n in names)
+            used = {c for names in m.values() for c in names} | {x["key_column"]}
+            out.append(dict(design_row_id=x["id"], package=x["package"], table=x["table"], inv_id=inv, source_ref=x["source_ref"],
+                            step=f"{x['key_column']}: {x['key']} | " + slot(m["step"]), precondition_unmet_until_the_step_before_is_run=slot(m["precondition"]),
+                            controls_as_documented_by_the_package=slot(m["controls"]), possible_outcomes_conditions_and_cautions_not_observed=slot(m["outcomes"]),
+                            conditioned_decision=slot(m["decision"]), scope_and_what_the_result_is_not=slot(m["scope"]), hypothesis_link=slot(m["link"]),
+                            observation="absent: a design states no observation; its outcome cells are possible results, not data", unmapped_cells=",".join(c for c in cols if c not in used and r.get(c))))
+    return out, unmapped
+
+
 if __name__ == "__main__":
     link = "--no-link" not in sys.argv
     r = rows(link)
@@ -176,3 +217,7 @@ if __name__ == "__main__":
         with open(HERE / "conditional_proposals_packages_it47.tsv", "w", newline="") as f:
             w = csv.DictWriter(f, PKG_FIELDS, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(pr)
         print(len(pr), "package rows -> conditional_proposals_packages_it47.tsv; reachable but not mapped:", {f"{i}:{p}": n for (i, p), n in unm.items()})
+        dr_, dunm = design_rows()
+        with open(HERE / "conditional_design_steps_it50.tsv", "w", newline="") as f:
+            w = csv.DictWriter(f, DESIGN_FIELDS, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(dr_)
+        print(len(dr_), "design rows -> conditional_design_steps_it50.tsv; reachable but not mapped:", {f"{i}:{p}:{t}": n for (i, p, t), n in dunm.items()})

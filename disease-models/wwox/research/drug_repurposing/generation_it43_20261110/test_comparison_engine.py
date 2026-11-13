@@ -151,4 +151,109 @@ class CardRoles(unittest.TestCase):
         self.assertTrue(r["comparison_state"].endswith("[pairs: 2 incompatible, 0 insufficient, 1 agreeing, of 3]"), r["comparison_state"])
 
 
+class StatedRoles(unittest.TestCase):
+    """HE50: a package's own role table can lower a derived role, never raise it; context travels with the role; a row about several compounds is assigned to none."""
+    def table(self, rows, tmp=None):
+        import tempfile
+        from unittest import mock
+        d = Path(tempfile.mkdtemp(prefix="ce_roles_"))
+        self.addCleanup(lambda: __import__("shutil").rmtree(d, ignore_errors=True))
+        (d / "zedpkg" / "engine").mkdir(parents=True); (d / "zedpkg" / "output").mkdir()
+        (d / "zedpkg" / "output" / "roles.tsv").write_text("row_id\treagent\trole\tsystem\n" + "".join("\t".join(r) + "\n" for r in rows), encoding="utf-8")
+        m = mock.patch.dict(ce.ROLE_TABLES, {"zedpkg": ("output/roles.tsv", "reagent", "role", ("system",))})
+        m.start(); self.addCleanup(m.stop)
+        return {"dec": {}, "cmp": {}, "meas": {}, "dir": d / "zedpkg" / "engine"}
+
+    def run_zed(self, rows, props=None):
+        pk = self.table(rows); pk["dec"] = {x["prop_id"]: x for x in (props or [prop("D01", "Zed inhibits the current with IC50 5 uM", system="mouse BMDM")])}
+        return ce.merge(ce.derive([item("V1", "Zed")], pk))[0]
+
+    def test_a_comparator_the_tier_would_call_a_probe_is_shown_as_a_comparator(self):
+        r = self.run_zed([["M1", "Zed", "comparator (rule 2: class myeloid, loss unverified)", "mouse BMDM; molecular"]])
+        self.assertEqual((r["evidence_tier"], r["role_derived"]), ("PRIMARY", "comparator"))
+        self.assertIn("capped from probe to comparator", r["role_reason"])
+        self.assertIn("M1 comparator", r["package_roles"]); self.assertIn("mouse BMDM", r["package_roles"])   # the system it was stated for travels with it
+
+    def test_the_package_never_raises_a_role_above_what_the_evidence_tier_carries(self):
+        r = self.run_zed([["M1", "Zed", "probe (rule 1)", "primary rat microglia"]], props=[prop("D01", "Zed inhibits the current with IC50 5 uM", depth="abstract_only")])
+        self.assertEqual((r["evidence_tier"], r["role_derived"]), ("ABSTRACT", "unresolved"))
+        self.assertIn("M1 probe", r["package_roles"])                                 # the disagreement is visible, not resolved upward
+
+    def test_a_probe_in_one_system_keeps_the_other_systems_beside_it(self):
+        r = self.run_zed([["M1", "Zed", "probe (rule 1: loss verified, glial class)", "primary rat microglia; molecular"],
+                          ["M2", "Zed", "comparator (rule 2: partial loss)", "LUHMES line; viability"],
+                          ["M3", "Zed", "not interpretable (rule 4)", "NHBE; molecular"]])
+        self.assertEqual(r["role_derived"], "probe")
+        for part in ("M1 probe", "primary rat microglia", "M2 comparator", "LUHMES line", "M3 unresolved", "NHBE"):
+            self.assertIn(part, r["package_roles"])
+
+    def test_a_row_naming_several_compounds_is_assigned_to_none(self):
+        r = self.run_zed([["M1", "Zed and Beta", "comparator (Zed unqualified here)", "cortical cultures"]])
+        self.assertEqual(r["role_derived"], "probe")                                  # the tier stands: the shared row does not cap it
+        self.assertIn("shared row, not assigned", r["package_roles"])
+
+    def test_a_similar_name_does_not_lend_its_role(self):
+        r = self.run_zed([["M1", "Zed-2 (an enantiomer)", "unqualified", "LUHMES"]])
+        self.assertEqual((r["role_derived"], r["package_roles"]), ("probe", ""))
+
+    def test_an_unrecognised_leading_word_is_an_unresolved_role_not_a_guess(self):
+        r = self.run_zed([["M1", "Zed", "tentatively useful as a probe (not shown)", "x"]])
+        self.assertEqual(r["role_derived"], "unresolved")
+        self.assertEqual(ce.role_word("probe (conditional: with a loss arm)"), "probe")  # only the leading word is read; the rest of the cell is carried, not interpreted
+        self.assertEqual(ce.role_word("conditional pharmacological hypothesis"), "unresolved")
+
+    def test_a_package_without_a_role_table_reads_as_before(self):
+        pk = pkg([prop("D01", "Zed inhibits the current with IC50 5 uM")])
+        r = ce.merge(ce.derive([item("V1", "Zed")], pk))[0]
+        self.assertEqual((r["role_derived"], r["package_roles"]), ("probe", ""))
+
+    def test_the_real_nrf2_case_keeps_comparators_comparators_and_the_probe_in_its_context(self):
+        with open(HERE / "compound_decisions_inv08_it44.tsv", encoding="utf-8", newline="") as fh:
+            rows = {r["name"]: r for r in csv.DictReader(fh, delimiter="\t")}
+        self.assertEqual((rows["RA839"]["role_derived"], rows["sulforaphane"]["role_derived"]), ("comparator", "comparator"))
+        ki = rows["KI-696"]
+        self.assertEqual(ki["role_derived"], "probe")
+        self.assertIn("probe (conditional: with a verified NRF2-loss arm", ki["package_roles"])      # the package's condition is not dropped
+        self.assertIn("primary rat microglia", ki["package_roles"]); self.assertIn("comparator", ki["package_roles"])
+        self.assertIn("shared row, not assigned", rows["dimethyl fumarate"]["package_roles"])
+        self.assertEqual(rows["bardoxolone methyl"]["role_derived"], "unresolved")                    # lower than the package's comparator: a ceiling is not lifted
+
+
+class MentionIsNotIdentity(unittest.TestCase):
+    """HE50: recognising a mention is not reconciling an identity: aliases are spelling variants of one name, never an article's local number, an ambiguous abbreviation or a different stereoisomer."""
+    def test_no_alias_is_a_bare_number_a_local_compound_number_or_an_ambiguous_abbreviation(self):
+        forms = [f for fs in ce.ALIASES.values() for f in fs]
+        self.assertFalse([f for f in forms if re.fullmatch(r"[\W\d]+", f) or re.fullmatch(r"(compound|cmpd|c)[ -]?\d+\w?", f)])
+        self.assertNotIn("sfn", forms)                                              # a gene symbol and an abbreviation with other meanings
+
+    def test_a_gene_symbol_an_inactive_analogue_and_an_enantiomer_do_not_borrow_a_compounds_evidence(self):
+        for text in ("SFN (stratifin) is expressed in the cortex at 12 FPKM", "RA889 did not change Nqo1", "Ki-696-1 was not protective at 40 uM", "KI696X is unrelated"):
+            for name in ("sulforaphane", "RA839", "KI-696"):
+                self.assertIsNone(ce.pattern(name).search(text), (name, text))
+        self.assertTrue(ce.pattern("RA839").search("RA-839 lowered Nos2"))           # a spelling variant of the same name does match
+
+
+class RolesKeepTheirContextInTheRealRows(unittest.TestCase):
+    """HE50: the qualifications the verified packages attach to a role are still in the rows the page and the generator read (a regeneration that flattened them would fail here)."""
+    DR = HERE.parent
+
+    def row(self, path, key, val):
+        with open(self.DR / path, encoding="utf-8", newline="") as fh:
+            return next(r for r in csv.DictReader(fh, delimiter="\t") if r[key] == val)
+
+    def test_kir2_activators_keep_recombinant_and_the_subunit_limit_and_the_blocker_keeps_family_level(self):
+        v14 = self.row("generation_it41_20261109/compound_view.tsv", "item_id", "V14")["open_premise"]
+        for part in ("recombinant cells", "none is tested in neurons", "heteromers", "direction of benefit unresolved"):
+            self.assertIn(part, v14)
+        step = self.row("ranking_it8_p9_20261029/investigations_it20.tsv", "inv_id", "INV-18")["next_test"]
+        for part in ("testable at family level", "cannot separate Kir2 isoforms", "cannot separate neuron from glia"):
+            self.assertIn(part, step)
+
+    def test_a_reagent_with_myeloid_data_only_is_not_shown_as_a_neural_probe(self):
+        v19 = self.row("generation_it41_20261109/compound_view.tsv", "item_id", "V19")
+        self.assertIn("myeloid-cell data only", v19["name_full"])
+        self.assertIn("catalogue id not reconciled", v19["name_full"])               # recognised by name, not reconciled with the paper's structure
+        self.assertIn("a comparator for a survivor set, not a probe", v19["counter"])
+
+
 if __name__ == "__main__": unittest.main(verbosity=2)

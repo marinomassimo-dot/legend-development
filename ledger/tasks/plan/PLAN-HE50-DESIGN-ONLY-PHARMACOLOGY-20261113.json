@@ -12,8 +12,8 @@
   "branch": "task/he50",
   "CURRENT_STATE": "OPEN",
   "CHECKPOINT": {
-    "last_verified_result": "none yet",
-    "first_incomplete_work": "OBJ_1_RECONCILE"
+    "last_verified_result": "3 stale-view tests green after regeneration on the merge tree",
+    "first_incomplete_work": "landing, push, CI"
   },
   "AUTHORISED_QUEUE_20261113": {
     "MANDATE_STATE": "OPEN",
@@ -23,9 +23,9 @@
       "steps": [
         {
           "step": "Reconcile advisor_followup_20261112 and IT49/SCI49 results; read the named packages and readers; agree the shared-file boundary with the Orchestrator",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "advisor_followup and IT49/SCI49 reconciled; ISR package, readers, engine, SCI48/SCI49 packages read; boundary agreed with the Orchestrator (message) and SCI (myelin levers read-only, INV-12)"
         }
       ]
     },
@@ -35,9 +35,9 @@
       "steps": [
         {
           "step": "Smallest link that lets the generator consume a design-only package (steps, controls, branches) through existing readers; ISR case plus one differently shaped package; before/after diff",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "role design_only in hypothesis_package.py; DESIGN_MAP and design_rows in conditional_proposals.py; manifest rows for isrib_discrim (INV-02) and myelin levers_bc (INV-12); output conditional_design_steps_it50.tsv; tests 6 + 9; rebase on IT50 pending"
         }
       ]
     },
@@ -47,9 +47,9 @@
       "steps": [
         {
           "step": "Check RA839/sulforaphane, KI-696, ML133 family-level, Kir2 activators on the real path; fix only the demonstrated defect",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "engine reads package role tables (SCI46, SCI48): RA839 and sulforaphane comparator, KI-696 probe with contexts; 12 tests; display unchanged (page group is 'probe or comparator'); V19 sentence delta proposed to the Orchestrator"
         }
       ]
     },
@@ -59,9 +59,9 @@
       "steps": [
         {
           "step": "Complete the relevant technical deltas of SCI48/SCI49 after checking what the Orchestrator applied; recognition vs reconciliation",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "declarations for ML133 (CHEMBL1620289) and RA839 (CHEMBL3899754) with bases; aliases applied earlier by the Orchestrator verified; mention-vs-identity tests; SCI48 row 7 and SCI49 row 5 closed"
         }
       ]
     },
@@ -71,9 +71,9 @@
       "steps": [
         {
           "step": "IT49-Q02 ISR gene extraction from the cellular tables, only if not done or assigned elsewhere",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "IT49-Q02: twelve ISR genes from the case text (declared eleven), existing extraction made parametric, 18 registered inputs re-hashed, join states in isr_cellclass_he50_20261113; values for the scientific owners"
         }
       ]
     },
@@ -83,9 +83,9 @@
       "steps": [
         {
           "step": "Tests for the concrete failure modes with real examples and small fixtures; show the consuming command",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "battery on 31b4bdc1 FAIL kept (views stale after the role change, 3 tests); fixed on the merge tree with IT50: views, package, i18n inventory regenerated; the 3 tests green; CI runs the full suite on the pushed SHA"
         }
       ]
     },
@@ -102,6 +102,24 @@
       ]
     }
   },
-  "VERIFICATION_EVIDENCE": [],
+  "VERIFICATION_EVIDENCE": [
+    {
+      "run_id": "20261113-081108-165fb10d",
+      "label": "battery",
+      "sha": "31b4bdc13cf871086778e2c70df04acc7236b081",
+      "state": "CONCLUDED",
+      "exit_code": 1,
+      "evidence_dir": "/tmp/legend-verify-keep/20261113-081108-165fb10d",
+      "log_sha256": "e1ce2bf582f068544f1e99741cd697bf7513426d9372c791fd49988fe2ba78ab",
+      "clone": "REMOVED"
+    },
+    {
+      "run_id": "20261113-081108-165fb10d",
+      "label": "battery",
+      "sha": "31b4bdc13cf871086778e2c70df04acc7236b081",
+      "state": "CONCLUDED FAIL kept",
+      "result": "REGRESSION VERDICT FAIL: test_repurposing_view only (3 tests: committed views, package and check stale after the engine role change); everything else green. Cause: the views embed engine roles; fixed by regenerating the views, the package and the V19 passage on the merged tree; the 3 tests rerun green (294 s); verdict stays on its SHA"
+    }
+  ],
   "MANDATE_STATE": "OPEN"
 }
