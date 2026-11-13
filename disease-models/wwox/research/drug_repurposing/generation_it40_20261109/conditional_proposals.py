@@ -103,7 +103,7 @@ PKG_MAP = {
                          premise=["mechanism_and_missing_bridge"], competing=["competing_alternative"], expected=[], measure=["favourable_result"], reopen=["weakening_result", "next_decision"],
                          title="mechanism_and_missing_bridge", sibling_cell="mechanism_and_missing_bridge"),
     # IT50: the INV-02 ISR hypotheses written from the INV-02 row and the audited ISR package (layout like the HCN package). The package states no prediction, so the expected slot says so.
-    "isr_inv02_it50_20261113": dict(inv="INV-02", relation_ids=[], symbols=["EIF2AK1", "EIF2AK2", "EIF2AK3", "EIF2AK4", "EIF2B1", "EIF2B2", "EIF2B3", "EIF2B4", "EIF2B5", "PPP1R15A", "EIF2S1"],
+    "isr_inv02_it50_20261113": dict(inv="INV-02", relation_ids=[], symbols=["EIF2AK1", "EIF2AK2", "EIF2AK3", "EIF2AK4", "EIF2B1", "EIF2B2", "EIF2B3", "EIF2B4", "EIF2B5", "PPP1R15A", "PPP1R15B", "EIF2S1"],   # the twelve symbols of IT49-Q02 (the first staged list lacked PPP1R15B)
                                     observation=["wwox_observation"], relation=["explanation_and_rivals"], context=["preparation_context"], action=["hypothesised_action"], compound=["probe_or_compound"],
                                     premise=["unresolved_premise"], competing=["explanation_and_rivals"], expected=["prediction_stated"], measure=["discriminating_result"], reopen=["reopen_or_abandon"],
                                     title="hypothesised_action", sibling_cell="hypothesised_action"),

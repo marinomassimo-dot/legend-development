@@ -327,10 +327,6 @@
   "src": "en",
   "text": "Open or occlude ATP-sensitive K+ channels to test whether a lactate-closed resting conductance contributes to input resistance."
  },
- "2a932a164144": {
-  "src": "en",
-  "text": "Measure the axonal activity-dependent myelination signal in the WWOX-deficient system against an isogenic control, before any compound; then decide whether the class is orderable. IT29: add an arm in Wwox-null precursor monoculture or the Wwox-null neuron co-culture, with a lipid-synthesis comparator beside the muscarinic one, crossed with a neuronal-activity manipulation. [IT36] existing co-culture separates neither contact or substrate integrity nor a soluble product; peripheral seizure-free DRG neurons; add a fixed-neuron arm and a factor arm."
- },
  "2b748d947515": {
   "src": "en",
   "text": "That NRF2 is under-active and compartment-specific in a WWOX-deficient neural system: no NRF2 protein, nuclear NRF2 or target-gene measurement exists there. Reporter and translocation values come from different cell lines and documents and are not comparable; induction of one enzyme can occur without NRF2. [IT46 SCI46] What an adequate NRF2 loss means in a neuron is not fixed; neuronal permeability of an acid binder and brain exposure are unknown. [SCI48] An adequate loss is verified as protein and mRNA at the endpoint time, not by an allele PCR; a germline loss is not an acute loss."
@@ -610,6 +606,10 @@
  "46f1eae52d16": {
   "src": "en",
   "text": "The chain as written: that BTK acts in the NPY-producing cell of the WWOX-deficient systems that carry the seed."
+ },
+ "472e695afc15": {
+  "src": "en",
+  "text": "Measure the axonal activity-dependent myelination signal in the WWOX-deficient system against an isogenic control, before any compound; then decide whether the class is orderable. IT29: add an arm in Wwox-null precursor monoculture or the Wwox-null neuron co-culture, with a lipid-synthesis comparator beside the muscarinic one, crossed with a neuronal-activity manipulation. [IT36] existing co-culture separates neither contact or substrate integrity nor a soluble product; peripheral seizure-free DRG neurons; add a fixed-neuron arm and a factor arm. [SCI50 update] The conditioned-medium arm needs a fresh-medium baseline, a mixing arm, neuron purity, a dilution series, the B27/T3 caveat, a positive control and a detection limit taken from the monoculture's own variance; neuron-secreted CTGF is reported as necessary and sufficient to block OPC maturation in neuron-specific Tsc models (the authors' in vitro claim; no Wwox datum). Variant of step X3 behind gate 0 (T3 and T4 in the medium, blind reproduction of the null-neuron deficit, an OPC window with M1 tone): an M1-selective muscarinic antagonist and an EBP inhibitor without M1 affinity, crossed with neuron genotype; null contrasts are read only when positive; a persisting gap is predicted both by a neuronal ceiling on sheath structure and by an OPC-intrinsic block. The M1/EBP premise is unresolved. IPOTESI; the Wwox-CTGF link is unsupported."
  },
  "47f65be4fc58": {
   "src": "it",

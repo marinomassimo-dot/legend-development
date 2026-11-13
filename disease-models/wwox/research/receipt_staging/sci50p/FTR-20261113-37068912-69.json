@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-13T07:44:10Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "unavailable",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-13T07:52:10Z",
+ "event_id": "FTR-20261113-37068912-69",
+ "evidence_basis": [
+  "full text served as plain text by the PubMed PMC full-text tool (PMC10393406); figure legends read, figure images not viewed, genotype symbols lost in the text layer (Tcf4 groups read from context), supplement not read",
+  "verbatim_locator | proposition: clemastine-treated Tcf4 mutants show increased N1/N2 callosal CAP ratio (conduction level) | Results, Clemastine rescues electrophysiological deficits | \"Two-week clemastine treatment of mice was effective at increasing the N1/N2 ratio\"",
+  "verbatim_locator | proposition: total myelinated axon density in the mutant was not restored by clemastine | Results, Clemastine increases myelination activity | \"was unable to restore the levels of total myelinated axon (compacted + uncompacted) density\"",
+  "verbatim_locator | proposition: authors state the Tcf4 oligodendrocyte reduction is cell autonomous | Introduction | \"reductions in myelination due to mutations are cell autonomous\"",
+  "Correction round 2026-11-13: Methods give clemastine and sobetirome in culture as 10 uM; Results and legends give 1 uM; unresolved source conflict (V13 verdict P01/P06). Tcf4 is a global heterozygous allele; the authors call the oligodendrocyte reduction cell-autonomous."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_phenotype_first_sci50_20261113/output/perturbations.tsv",
+  "disease-models/wwox/research/drug_repurposing/myelin_phenotype_first_sci50_20261113/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC full text for PMID 37068912 via the PubMed PMC full-text tool, 2026-11-13",
+ "study_id": {
+  "doi": "10.1093/brain/awad057",
+  "pmid": "37068912"
+ },
+ "workflow": "SCI50 producer P (myelin_phenotype_first_sci50_20261113), actor mp-z. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

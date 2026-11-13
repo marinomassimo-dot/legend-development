@@ -250,7 +250,7 @@
    "forbidden_names": 126040,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 161,
+    "count": 163,
     "names": [
      "act 709478",
      "apinocaltamide",
@@ -265,7 +265,7 @@
      "px 478",
      "sulfopin"
     ],
-    "unchecked_without_corpus": 161
+    "unchecked_without_corpus": 163
    },
    "suppressed_by_exemption": {
     "bibliographic journal name (validated against the journals of the cache)": 4,
@@ -463,7 +463,7 @@
  ],
  "data": {
   "catalogue_generated": "2026-10-31T07:28:37Z",
-  "data_date": "2026-11-12",
+  "data_date": "2026-11-13",
   "dgidb_export": "2024-06-10",
   "view_schema": "legend.wwox.repurposing_view/2"
  },
@@ -541,7 +541,7 @@
   },
   "README.md": {
    "bytes": 5072,
-   "sha256": "9172c025e8629ff56fbef8e578ffaf9ccca492b65fb963010b8956b98ffa37f2"
+   "sha256": "bd159e69eb05b0e15dcb87bafa5e7d57b17545008ecec4e161d1e8241e9068fc"
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2000,
@@ -560,24 +560,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5228664,
-   "sha256": "27a62c176e25ce8efa6205827193f8d18c310fd3c4dfe640423d0e7aa83b881d"
+   "bytes": 5230537,
+   "sha256": "695fd0ed6ceff943dd56f81fe4262492167b67ef7640a2e81f78735438a87c36"
   },
   "es.html": {
-   "bytes": 5214569,
-   "sha256": "ea41a4d3997e2c2ace728354ba9637a8c29b0d5068c2830917da9d4e633f2f57"
+   "bytes": 5216488,
+   "sha256": "53f28c9a502b98dde276581465934dd62e7186cf5c612115837d673377f3afb7"
   },
   "fr.html": {
-   "bytes": 5245484,
-   "sha256": "f9cc617dc06d244b4338bf4eb988ecd9078624b1bbe2aaa86c1dff845eb63e64"
+   "bytes": 5247443,
+   "sha256": "3aab26a7acf562368998f947de8afe93cb0196a8bef2e95be5b27ea542acdcec"
   },
   "index.html": {
-   "bytes": 5128551,
-   "sha256": "e7d123d2e29d37956b50f0a351af36afe40e5f9c41e43669d0deb843228b8aba"
+   "bytes": 5130281,
+   "sha256": "9545b5554fef50322c0d68a1ac0d6ffc7141911fe7124cc2545050b4c91520a1"
   },
   "it.html": {
-   "bytes": 5192512,
-   "sha256": "f8d555693e16f79976d264082803ce2ed2d30a7a2f4d9e0d87858369a696e021"
+   "bytes": 5194399,
+   "sha256": "7d303962589ca39675f7cadc5f7252a8412ffe0cd636a175090c2a530b5896be"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
