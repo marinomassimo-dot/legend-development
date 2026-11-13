@@ -7,14 +7,14 @@
  "OBJECTIVE": "Operator mandate SCI49 2026-11-12 (about ten hours from effective start): (A) independent verification by a blind verifier of the biological inferences of SCI47 package B already used by consumers (KCNQ2 low human value; OPC participation in a bath-applied Kv7 manipulation; functional data needed; HPA provenance and independence; necessity of the OPC-aware control); (B) drug-name pharmacological search on the Kir2 route left open after IT48 (IT48-Q01): which compounds or probes have documented pharmacology sufficient to make a Kir2 lever testable in WWOX physiology; up to three conditional hypotheses, or none. Deliver each package as soon as verified. Producer sonnet/medium, verifier sonnet/high, one delegate at a time, each resume counts as a launch. Zero spend, no contact, no personal data, no clinical recommendation, no new framework. Final report in Italian opens with: Quale attribuzione biologica \u00e8 diventata pi\u00f9 affidabile e quale confronto farmacologico possiamo ora mettere alla prova?",
  "START_UTC": "2026-11-12T23:30:00Z",
  "BASELINE": "main 182d3b1b (SCI48 closure published). Worktree .claude/worktrees/sci49, branch task/sci49. IT48 (integrator) works on task/it48, not yet on main; it already applied SCI48 deltas there (commit 8fe57179): consumption on main to be verified after it lands. IT47-Q04 and IT48-Q01 OPEN and unassigned.",
- "MANDATE_STATE": "OPEN",
+ "MANDATE_STATE": "COMPLETE",
  "CURRENT_PACKAGE": {
-  "id": "B-landing",
-  "state": "B and generation note ready; pre-freeze, battery, landing",
+  "id": "closed",
+  "state": "A landed cc9302ef (consumed by IT49 2454a3ac); B landing",
   "delegate_active": "none",
   "updated": "2026-11-13"
  },
- "RESUME": "Package A landed cc9302ef. B + generation note + self-eval on task/sci49: run pre-freeze suites, freeze, battery, land, push, message the integrator, final report.",
+ "RESUME": "A published and consumed by the integrator (2454a3ac); B lands now; the integrator takes B when it lands. Pending outside this session: B consumer rows and receipts -71, -70 (staged, ids order -71 then -70); worktrees sci49, sci49a, sci48 and older need written operator authorisation to remove; /tmp/legend-verify-keep evidence kept.",
  "DECISIONS_TAKEN": [
   "2026-11-12 package A landed from a separate worktree (task/sci49a) while B ran in task/sci49, the record left untouched in the second worktree until A landed; reversible: both merged to main"
  ],
@@ -31,7 +31,7 @@
   "V11 exceeded the three-request limit of its adversarial review (five PubMed calls, no block): kept, recorded in QV24; the V12 verifier could not claim PMIDs (classifier refusal): receipts staged without a claim, no workaround"
  ],
  "AUTHORISED_QUEUE_20261112C": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_A": {
    "order": 1,
    "steps": [
@@ -89,8 +89,9 @@
    "steps": [
     {
      "step": "Landing per package: pre-freeze suites, gate, LINT, receipts, growth, verify_run on the frozen SHA, task_close, safe_push; clean own temporaries",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "A: pre-freeze suites, gate PASS, battery ea0a0665 PASS WITH SKIPS 247/12, task_close cc9302ef, safe_push PUBLISHED; B: same on 08641e5d battery PASS WITH SKIPS 248/12; own batteries removed by verify_run (CONCLUDED, clone REMOVED)"
     },
     {
      "step": "Self-evaluation, DREAM, capability scout, takeaways, final Italian report",
@@ -112,6 +113,17 @@
    "log_sha256": "8f008c5d497c37495e2e1891eec64d995946559055f5bce30133fb77bb9f31b4",
    "clone": "REMOVED",
    "attribution": "PASS WITH SKIPS (247 targets, 12 skipped) on the package A candidate ea0a0665 (A README, consumer delta, verifier output, S0 files and briefs, dated SCI47 update); attributed to that SHA only; later commits are closure-only"
+  },
+  {
+   "run_id": "20261113-002945-7e668058",
+   "label": "battery",
+   "sha": "08641e5da165e350887b4594ab1aa09e09e92881",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261113-002945-7e668058",
+   "log_sha256": "d23681bde695615f9cf42a687350023158c1df6d6e564e58e3b8a2c4cbe61a72",
+   "clone": "REMOVED",
+   "attribution": "PASS WITH SKIPS (248 targets, 12 skipped) on the package B candidate 08641e5d (B README, outputs, verifier output, generation note, self-evaluation, scout entry); attributed to that SHA only; later commits are closure-only (this record)"
   }
  ]
 }
