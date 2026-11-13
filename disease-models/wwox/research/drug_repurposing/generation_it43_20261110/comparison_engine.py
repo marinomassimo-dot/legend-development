@@ -15,6 +15,9 @@ Role ceiling: only PRIMARY may be a probe or comparator; every other tier is 'un
 A reference control is assigned by the comparison design (the row's action cell calls it the reference), not by tier.
 Two potency propositions of one compound are NOT_COMPARABLE when a recording condition stated on both sides differs (system, holding potential, glycine, glutamate, ATP, scaffold...); CONDITIONS_INSUFFICIENT when the conditions are missing on one side or the system is not recognised (a premise to name, not a block); COMPARABLE only when the conditions are documented and equal (framework/scripts/assay_conditions.py).
 Relation (HE47 H1): a proposition whose `relation` cell says other_route or context names the compound without measuring the mechanism the comparison tests; it is listed (`uncounted_props`) and never raises the tier. `counter_props` lists propositions whose `direction` cell is opposes, null or mixed: counter-evidence stays visible and never changes a tier (a probe with a negative result is still a probe). `unclassified_props` lists counted propositions whose relation is not stated. A state names failing pairs; its bracket gives their number among all potency pairs.
+Stated roles (HE50): a package's own role table (`ROLE_TABLES`: file, compound column, role column, context columns) is read verbatim. It can only LOWER a derived role, never raise one: the tier says what the evidence could carry, the package says what its authors assign
+for a system and an endpoint. A row that names more than one compound is listed as shared and assigned to none; a compound's role is the highest its own rows state, and every row (role, context, source row) travels in `package_roles`, so a probe in one system is not read as a probe in another and a
+comparator is not shown as a probe. The leading word of the role cell is looked up (probe, comparator, control; anything else is an unresolved role); no other word of the cell is interpreted. Packages without a role table read as before.
 A premise that no source resolves keeps the role conditional: the engine never writes 'weakened' without an explicit ABSENCE or measured-negative row."""
 from __future__ import annotations
 import csv, re, sys
@@ -25,7 +28,12 @@ import hypothesis_package as hp  # noqa: E402
 import assay_conditions as ac  # noqa: E402
 
 ALIASES = {"d-apv": ["d-apv", "d-ap5", "apv"], "ro 25-6981": ["ro 25-6981", "ro25-6981", "ro 25 6981"], "uk-5099": ["uk-5099", "uk5099", "uk 5099"], "oxamate": ["oxamate", "sodium oxamate"], "ki-696": ["ki-696", "ki696", "l6i"], "dimethyl fumarate": ["dimethyl fumarate", "dmf"], "monomethyl fumarate": ["monomethyl fumarate", "mmf"], "ra839": ["ra839", "ra-839", "ra 839"], "sulforaphane": ["sulforaphane", "r-sulforaphane"], "bardoxolone methyl": ["bardoxolone methyl", "cddo-me"]}
-OUT_FIELDS = ["item_id", "name", "evidence_tier", "tier_props", "role_derived", "role_reason", "comparison_state", "premise_needed", "discriminating_measure", "public_source_work", "relaunch_question", "uncounted_props", "counter_props", "unclassified_props"]
+ROLE_TABLES = {   # package folder -> (file in the folder, compound column, role column, context columns); the layouts are the packages' own, declared here and nowhere inferred
+    "keap1_nrf2_sci46_20261111": ("output/tools_roles.tsv", "tool", "role_supported", ("measured_in",)),
+    "nrf2_comparator_sci48_20261112": ("output/matrix.tsv", "reagent", "role", ("cell_class_and_system", "what_was_measured")),
+}
+ROLE_RANK = {"probe": 3, "comparator": 2, "unresolved": 1}
+OUT_FIELDS = ["item_id", "name", "evidence_tier", "tier_props", "role_derived", "role_reason", "comparison_state", "premise_needed", "discriminating_measure", "public_source_work", "relaunch_question", "uncounted_props", "counter_props", "unclassified_props", "package_roles"]
 
 def names_of(name_full: str) -> list[str]:
     return [re.sub(r"\s*\(.*?\)", "", n).strip() for n in name_full.split(";") if n.strip() and "different structure" not in n and "tool arm" not in n or n.strip().startswith("GYKI")]
@@ -38,6 +46,44 @@ def counts_toward_tier(p: dict) -> bool:
     """HE47 H1: a proposition that names the compound but, by its author's `relation` cell, does not measure the mechanism the comparison tests (other_route, context)
     is listed with the compound and never raises its tier. An unclassified one counts as it always did: older packages read as before. Nothing is read from the statement text."""
     return hp.prop_facets(p)["relation"] not in ("other_route", "context")
+
+
+def role_word(cell: str) -> str:
+    """The role a package states, from the leading word of its role cell; any other leading word is an unresolved role (no keyword search in the rest of the cell)."""
+    w = re.match(r"\s*([A-Za-z]+)", cell or "")
+    return {"probe": "probe", "comparator": "comparator"}.get(w.group(1).lower() if w else "", "unresolved")
+
+
+def stated_roles(pkg: dict, nm: str, universe: list[str]) -> list[dict]:
+    """The rows of the package's own role table that name this compound and no other: role word, the cell verbatim, context, source row. Shared rows are returned apart, assigned to none."""
+    folder = pkg["dir"].parent if pkg.get("dir") else None          # a package built in memory (the synthetic callers) has no folder and no role table
+    spec = ROLE_TABLES.get(folder.name) if folder else None
+    if not spec or not (folder / spec[0]).is_file():
+        return []
+    path, ccol, rcol, ctx = spec
+    pat, out = pattern(nm), []
+    with open(folder / path, encoding="utf-8", newline="") as fh:
+        table = list(csv.DictReader(fh, delimiter="\t"))
+    for r in table:
+        cell = r.get(ccol, "")
+        if not pat.search(cell):
+            continue
+        listed = [x for x in re.split(r"\s+and\s+|;|,", re.sub(r"\s*\(.*?\)", "", cell)) if x.strip()]   # a compound cell that lists several names (outside parentheses) is one row about several compounds
+        shared = len(listed) > 1 or any(o != nm and pattern(o).search(cell) for o in universe)
+        out.append({"src": f"{folder.name.split('_')[0]}:{next(iter(r.values()))}", "word": role_word(r[rcol]), "cell": r[rcol].strip(), "context": " ; ".join(r.get(c, "")[:90] for c in ctx if r.get(c)), "shared": shared})
+    return out
+
+
+def apply_stated(row: dict) -> dict:
+    """Cap a derived role by the highest role its own package rows state; never raise it. `package_roles` carries every row, shared ones marked and not counted."""
+    own = [x for x in row.get("_stated", []) if not x["shared"]]
+    if own and row["role_derived"] in ROLE_RANK:
+        best = max(own, key=lambda x: ROLE_RANK[x["word"]])["word"]
+        if ROLE_RANK[best] < ROLE_RANK[row["role_derived"]]:
+            row["role_reason"] += f"; capped from {row['role_derived']} to {best}: the package states no higher role for this compound ({', '.join(x['src'] for x in own if x['word'] == best)})"
+            row["role_derived"] = best
+    row["package_roles"] = " | ".join(f"{x['src']} {x['word']}{' (shared row, not assigned)' if x['shared'] else ''}: {x['cell'][:110]} [{x['context'][:130]}]" for x in row.get("_stated", []))
+    return row
 
 
 def tier_of(props: list[dict]) -> str:
@@ -93,7 +139,8 @@ def derive(items: list[dict], pkg: dict, tag: str = "") -> list[dict]:
                         "relaunch_question": first["why_no_literature_can_substitute"] if first else "",
                         "uncounted_props": ",".join(f"{tag}:{p['prop_id']}={hp.prop_facets(p)['relation']}" for p in side),
                         "counter_props": ",".join(f"{tag}:{p['prop_id']}={hp.prop_facets(p)['direction']}" for p in named if hp.prop_facets(p)["direction"] in ("opposes", "null", "mixed")),
-                        "unclassified_props": ",".join(f"{tag}:{p['prop_id']}" for p in props if hp.prop_facets(p)["relation"] == hp.UNCLASSIFIED)})
+                        "unclassified_props": ",".join(f"{tag}:{p['prop_id']}" for p in props if hp.prop_facets(p)["relation"] == hp.UNCLASSIFIED),
+                        "_stated": stated_roles(pkg, nm, universe)})
     return out
 
 def _STATE_RANK(state: str) -> int:
@@ -114,8 +161,9 @@ def merge(rows: list[dict]) -> list[dict]:
         if "control" in (m["role_derived"], r["role_derived"]): best = m if m["role_derived"] == "control" else r
         for f in ("evidence_tier", "role_derived", "role_reason", "public_source_work"): m[f] = best[f]
         for f in ("discriminating_measure", "relaunch_question"): m[f] = m[f] or r[f]
+        m["_stated"] = m.get("_stated", []) + [x for x in r.get("_stated", []) if x not in m.get("_stated", [])]
         m["comparison_state"] = max(m["comparison_state"], r["comparison_state"], key=_STATE_RANK)
-    return list(by.values())
+    return [apply_stated(r) for r in by.values()]
 
 def main():
     inv = (sys.argv[sys.argv.index("--inv") + 1] if "--inv" in sys.argv else "INV-05")
@@ -124,7 +172,7 @@ def main():
     res = merge([r for p in pkgs for r in derive(items, p, p["dir"].parent.name.split("_")[0])])
     out = HERE / ("compound_decisions_it43.tsv" if inv == "INV-05" else f"compound_decisions_{inv.lower().replace('-', '')}_it44.tsv")
     with open(out, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, OUT_FIELDS, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(res)
+        w = csv.DictWriter(f, OUT_FIELDS, delimiter="\t", lineterminator="\n", extrasaction="ignore"); w.writeheader(); w.writerows(res)
     for r in res: print(r["item_id"], r["name"], r["evidence_tier"], r["role_derived"], "|", r["comparison_state"][:70], "|", r["premise_needed"])
 
 if __name__ == "__main__": main()
