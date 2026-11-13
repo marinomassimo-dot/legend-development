@@ -59,11 +59,12 @@
    "steps": [
     {
      "step": "Hourly bounded mechanical check and four-hourly strategic evaluation on the existing scheduling; no overlap, no duplicate triggers, reuse of the previous assessment when nothing changed",
-     "status": "PENDING",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "Real cron-driven recall verified: job 4280e75d fired 2026-11-13T19:14:51Z unprompted by a user message and ran tick; verdict DEFERRED ('events present but the last evaluation was 0.7 h ago and none is anticipating'); no model call. First tick at campaign start returned EVALUATE. Session-only cron, expires after 7 days; procedural, not code-guaranteed."
     }
-   ]
+   ],
+   "status": "DONE"
   },
   "OBJ_5_ASSIGNMENTS": {
    "order": 5,
@@ -71,11 +72,12 @@
    "steps": [
     {
      "step": "Assignment drafts with the required fields; delivery through the supported intersession channel; saved, sent, taken in charge, executed kept apart; unreachable recipient stays an explicit residual",
-     "status": "PENDING",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "Invocation P1 (opus, effort high, 19 turns) drafted ADV-001 (Science) and ADV-002 (Harness); ADV-001 sent by SendMessage to live SCI (msg 935068d5), taken in ORCH-ADV001-20261113 (SCI worktree, to land with its package); ADV-002 taken and executed by Harness, disposition recorded by the Orchestrator at 3f31bad3. Evidence levels kept apart in status. ADV-001 result pending."
     }
-   ]
+   ],
+   "status": "DONE"
   },
   "OBJ_6_TESTS": {
    "order": 6,
@@ -95,11 +97,12 @@
    "steps": [
     {
      "step": "Activate the pilot (24 h, at most 3 invocations, 3 assignments), verify a real automatic recall and a real delivery to a live session, hand operational coordination to the Orchestrator",
-     "status": "PENDING",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "Activated 2026-11-13T18:22:36Z; handed to the Orchestrator: ORCH-ADVISOR-PILOT-20261113 on main (ACK 1f3fc033); one real strategic invocation (1/3) and one automatic recall verified; pilot usefulness not judged here."
     }
-   ]
+   ],
+   "status": "DONE"
   },
   "OBJ_8_PUBLISH": {
    "order": 8,
