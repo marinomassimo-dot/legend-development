@@ -9,19 +9,25 @@
  "BASELINE": "main e6bba05e+ (SCI50 consumed by IT50, 8d00e3d1/98a91a8f). Worktree .claude/worktrees/sci51, branch task/sci51. Folder m1_ebp_reagents_sci51_20261113/.",
  "MANDATE_STATE": "OPEN",
  "CURRENT_PACKAGE": {
-  "id": "S0",
-  "state": "frame written",
+  "id": "landing",
+  "state": "pre-freeze checks",
   "delegate_active": "none",
   "updated": "2026-11-13"
  },
- "RESUME": "S0 written; next: commit, bind marker, producer brief, dispatch; planned finish of the package about 17:15 UTC, landing after the battery.",
+ "RESUME": "Package verified and rechecked; run pre-freeze suites, freeze, battery, land, push, message the integrator, final report.",
  "DECISIONS_TAKEN": [
-  "2026-11-13 accepted the assignment as a request of the integrator session (the operator authorisation is stated by the peer, not verified); reversible: the operator can stop it"
+  "2026-11-13 accepted the assignment as a request of the integrator session (the operator authorisation is stated by the peer, not verified); reversible: the operator can stop it",
+  "2026-11-13 flagged to the integrator, before landing, that the M1 reagent of SCI50 has an Expression of Concern (a dated clause follows in the delta); corrected the wording of that flag after the recheck (availability not stated)"
  ],
- "DELEGATIONS": [],
+ "DELEGATIONS": [
+  "P producer me-z (agent a9e6d183, legend-delegate): asked sonnet/medium; read back sonnet x50, medium x50; 50 turns in 2 launches (dispatch + correction round), output 74,502, cache read 7,143,233; 5 staged receipts (-66)",
+  "V14 verifier me-y (agent aa9e36a7, legend-delegate): asked sonnet/high; read back sonnet x79, high x79; 79 turns in 2 launches (dispatch + recheck), output 85,455, cache read 14,277,541; 8 staged receipts (-65) staged without a claim"
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
- "DEFAULTS_TAKEN": [],
+ "DEFAULTS_TAKEN": [
+  "assignment accepted from the integrator session on its statement of operator authorisation (not verified by this session); operator informed in chat"
+ ],
  "AUTHORISED_QUEUE_20261113B": {
   "MANDATE_STATE": "OPEN",
   "OBJ_A": {
@@ -29,23 +35,27 @@
    "steps": [
     {
      "step": "Bind marker; reply to the assignment; S0 frame committed before any new reading",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "marker recognised; reply sent to the integrator (taken, question, finish time); S0_before_search.md committed d4f1d583 before any new reading"
     },
     {
      "step": "Producer brief; one producer (sonnet medium): identities, measured versus unknown cross-activities, conditions, discriminating outcomes; staged receipts validated",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "producer me-z a9e6d183: sonnet/medium read back medium x50 in 2 launches; reagents 21+8, activities 60, conditions 13, outcomes, answer; 5 staged receipts (-66) validated"
     },
     {
      "step": "One blind verifier (sonnet high) with the originals and its own strings; corrections and at most one narrow recheck",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "verifier V14 aa9e36a7: sonnet/high read back high x79 in 2 launches; first pass 75/92 correct, 10 defective; narrow recheck 38/53 correct, 15 defective (nine in my own README/delta); corrections by apply_v14_recheck.py (idempotent); 8 staged receipts (-65) without a claim (classifier refusal)"
     },
     {
      "step": "README answer-first, consumer_delta, open questions; delivery to the integrator",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "README answer-first, consumer_delta 8 rows, dated update to the SCI50 README (applied); early flag and correction messages to the integrator"
     }
    ]
   },
@@ -54,13 +64,14 @@
    "steps": [
     {
      "step": "Landing: pre-freeze suites, gate, LINT, receipts, growth, battery on the frozen SHA, task_close, safe_push; clean own temporaries",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator"
     },
     {
      "step": "Self-evaluation, DREAM, capability scout, final report",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "self_eval_orchestrator_sci51_20261113.md; DREAM in README (EBP-explained signed rows, in silico); capability scout GAP-NEW logged; memory sci51-pitfalls"
     }
    ]
   }
