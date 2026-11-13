@@ -1,0 +1,123 @@
+/* Editorial layer (dashboard readability, 2026-11-13): the layout of a scientific report with the readability of a good public site.
+   Additive and removable: delete this file and the one line in repurposing_view.render that appends it, and the page reads as before.
+   Serif for the reading text, sans-serif for navigation, labels and controls; system fonts only (no download, no external request).
+   Colour only orients (the WWOX blue accent is unchanged); every status keeps its word, border style or letter, so none depends on colour. */
+/* Everything below applies to the screen only: the one-page print of the ranking summary keeps its own compact styling (curated.css). */
+@media screen{
+:root{--serif:"Charter","Bitstream Charter","Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,Cambria,"Noto Serif","Source Serif 4","Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--measure:42rem;--gap:clamp(2.2rem,5vw,3.6rem)}
+body{font:17px/1.65 var(--serif);font-kerning:normal;text-rendering:optimizeLegibility;-webkit-text-size-adjust:100%}
+@media (max-width:560px){body{font-size:16.5px;line-height:1.6}}
+/* sans for everything that is navigation, label, control or status */
+nav,nav a,summary,button,select,input,label,dt,.brand,.langsel,.plink,.inv-pos,.org,.stt,.grp,.lvl,.chip,.st,.dp,.lv,.sc,.cv-kind,.cv-id,.unit,.mini,.mut,.cnt,.kv,.tile .u,.tile .d,.warnbar,th,.tbl,.lbl,.cc,.go,.skip,.btns,.bar-actions,figcaption,.eg-note{font-family:var(--sans)}
+.mini,.mut{font-size:.86rem;line-height:1.5}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.25;letter-spacing:-.005em;color:var(--fg)}
+h1{font-size:clamp(1.9rem,4.4vw,2.6rem);margin:.15em 0 .35em}
+h2{font-size:clamp(1.45rem,3vw,1.85rem);margin:0 0 .6em}
+h3{font-size:1.2rem;margin:1.8em 0 .5em}
+/* header: a title page, not a toolbar */
+header{padding:clamp(1.4rem,4vw,2.4rem) 0 .4rem}
+header .brand{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;display:flex;flex-wrap:wrap;gap:.2rem .8rem;align-items:baseline;margin:0}
+header .brand-name{font-weight:700;color:var(--acc);letter-spacing:.16em}
+header .brand-state{text-transform:none;letter-spacing:0;font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:0 .6rem;background:none;color:var(--mut)}
+header .subline{font-family:var(--serif);font-size:1.05rem;color:var(--mut);max-width:var(--measure);margin:.2rem 0 .6rem}
+.langsel{margin:.6rem 0 0;gap:.4rem}.langsel a{min-width:44px;min-height:40px;line-height:40px;padding:0 .7rem;font-size:.85rem;border-radius:6px}
+/* source status: a quiet line, still present */
+.warnbar{background:none;border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:.55rem 16px;font-size:.84rem;color:var(--mut)}
+.warnbar b{color:var(--fg);font-weight:600}.warnbar .st{font-size:.74rem;margin:0 .15rem}
+nav{background:var(--bg)}nav .in{padding-top:.5rem;padding-bottom:.5rem;gap:.2rem 1.4rem;font-size:.9rem}nav a{text-decoration:none;padding:.2rem 0;border-bottom:2px solid transparent}nav a:hover,nav a:focus{border-bottom-color:var(--acc)}
+/* flat sections separated by space and a hairline, not nested boxes */
+main{padding:0 20px}
+section{background:none;border:0;border-radius:0;border-top:1px solid var(--line);padding:var(--gap) 0 0;margin:var(--gap) 0 0}
+section#overview{border-top:0;padding-top:1.2rem;margin-top:0}
+section section,section.inl,.inl{border-top:0;padding:0;margin:1.6rem 0 0}
+section .lead,section>p,section dd,section li{max-width:none}
+.lead,section>p:not(.mini):not(.mut),dd,.note,.warnstrip,.inv-purpose{max-width:var(--measure)}
+.lead{font-size:1.12rem;line-height:1.6;margin:.4em 0 .9em}
+p{margin:.7em 0}
+/* notes: one quiet rule, not a coloured box */
+.note,.warnstrip{background:none;border:0;border-left:3px solid var(--line);border-radius:0;padding:.1rem 0 .1rem 1rem;margin:1.1rem 0;font-size:.95rem;color:var(--fg)}
+.warnstrip b{font-family:var(--sans);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
+/* investigations: a numbered reading list */
+.inv-list{display:block;margin:1rem 0}
+.inv-row{border:0;border-top:1px solid var(--line);border-radius:0;padding:1.6rem 0 1.4rem;background:none}
+.inv-row:first-child{border-top:0}
+.inv-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:.3rem .7rem;margin:0 0 .6rem;font-size:1.18rem;line-height:1.35}
+.inv-h b{font-family:var(--serif);font-weight:600}
+.inv-pos{border:0;border-bottom:3px solid var(--acc);border-radius:0;padding:0 .15rem;min-width:1.6em;font-size:1.05rem;color:var(--acc)}
+.org,.stt{margin:0;border-radius:4px;font-size:.72rem;letter-spacing:.02em}
+.org{border:1px solid var(--line);background:none;color:var(--mut)}
+.plink{opacity:.45;margin-left:auto;text-decoration:none}.inv-row:hover .plink,.plink:focus{opacity:1}
+.qk-dl{display:grid;grid-template-columns:minmax(8.5rem,11rem) minmax(0,1fr);gap:.55rem 1.4rem;font-size:1rem}
+.qk-dl dt{font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);padding-top:.35em}
+.qk-dl dd{margin:0;max-width:var(--measure);line-height:1.6}
+.inv-glance{font-size:1rem;gap:.7rem 1.4rem}
+.inv-glance dt:first-of-type+dd{font-weight:600}                 /* the question first, in bold: the one selective emphasis of the row */
+.inv-more{border-top:0;margin-top:1rem;padding-top:0}
+.inv-more>summary,details.inl>summary,.inv-gl-rest>summary{font-size:.88rem;font-weight:600;padding:.3rem 0;list-style-position:outside}
+.inv-gl-rest{margin:.2rem 0 0}.inv-gl-rest>.qk-dl{margin-top:.6rem}
+.inv-compact .inv-h{margin-bottom:.3rem;font-size:1.08rem}
+/* compound and hypothesis cards, thread cards, tiles: lists with rules instead of boxes */
+.cv-i,.item,.ncard,.thread,.tile,.goal{border:0;border-top:1px solid var(--line);border-radius:0;background:none;padding:1.1rem 0}
+.tiles{gap:0 1.6rem}.tile{border-top:2px solid var(--line)}.tile .big{font-size:1.9rem;font-family:var(--serif)}
+.threads{gap:0 2.2rem}.thread h3{margin-top:.2rem}
+/* controls stay compact and sans */
+select,input[type=search],button{border-radius:6px;font-size:.9rem;padding:.45rem .6rem}
+/* the legend of the evidence graph and figures: a caption, not a card */
+.eg-legend,.legend{border:0;border-left:3px solid var(--line);border-radius:0;background:none;padding:.2rem 0 .2rem 1rem}
+.eg-fig,.wo-fig{border:0;background:none;padding:.4rem 0}
+.chain{border:0;border-top:1px solid var(--line);border-radius:0;padding:1.6rem 0 1rem;background:none}
+.chain h3{margin-top:0}
+/* phone: the label of each cell is carried by the existing stacked-table rule (.tbl.stk); the definition lists stack too */
+@media (max-width:700px){
+ .qk-dl{grid-template-columns:1fr;gap:.1rem 0}.qk-dl dt{padding-top:.7rem}.qk-dl dd{padding-bottom:.1rem}
+ .inv-h{font-size:1.1rem}main{padding:0 16px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* start-here row of the header and the compact rows */
+.hero-lead{font-size:clamp(1.15rem,2.2vw,1.32rem);line-height:1.55;max-width:44rem;margin:.2rem 0 1rem}
+.hero-go{display:flex;flex-wrap:wrap;gap:.5rem .8rem;margin:.6rem 0 1.1rem;font-family:var(--sans)}
+.hero-go a{display:inline-block;padding:.5rem .9rem;border:1px solid var(--acc);border-radius:6px;text-decoration:none;font-size:.92rem;font-weight:600;color:var(--acc);background:none}
+.hero-go a:hover,.hero-go a:focus{background:var(--accbg)}
+.gen-note{max-width:44rem;font-size:.9rem;color:var(--mut);border-left:3px solid var(--line);padding-left:.9rem;margin:.4rem 0 .8rem}
+.gen-note b{font-family:var(--sans);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--fg)}
+.inv-gl-rest-dt{display:none}.inv-gl-rest-dd{grid-column:1/-1;margin:0}
+/* specificity: the earlier compact rules (curated.css) are overridden here, not edited */
+body header h1{font-size:clamp(1.9rem,4.6vw,2.7rem);line-height:1.15;margin:.5rem 0 .6rem}
+body #overview h2,body .inv h2{font-size:clamp(1.45rem,3vw,1.85rem);margin:0 0 .5em}
+body .inv{border:0;border-radius:0;padding:0;margin:0;background:none}
+body section#overview{padding-top:.6rem}
+.hdr-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.6rem 1.2rem}
+.hdr-top .brand{margin:0}.hdr-top .langsel{margin:0}.hdr-top .langsel .lbl{display:none}
+.inv-purpose{font-family:var(--serif);font-size:1.05rem;font-weight:400}.inv-purpose b{font-weight:600}
+@media (max-width:560px){
+ body header h1{font-size:1.75rem;line-height:1.2}.hero-lead{font-size:1.06rem;line-height:1.5}
+ .hero-go{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}.hero-go a{text-align:center;padding:.55rem .4rem;font-size:.85rem}
+ .hdr-top .brand-ctx{display:none}
+}
+/* the sticky bar is a slim line of text links; on a phone it scrolls sideways instead of stacking boxes */
+body nav .navmain{display:flex;flex-wrap:nowrap;align-items:center;overflow-x:auto;gap:.2rem 1.3rem;scrollbar-width:thin}
+body nav .navmain>a,body nav .navmain summary{border:0;background:none;padding:.5rem 0;white-space:nowrap;font-size:.88rem;border-radius:0;min-height:0}
+body nav .navmain>a{border-bottom:2px solid transparent}
+body nav .navall{margin:0;position:static}
+.gen-note{font-size:.86rem;max-width:56rem}.hero-lead{margin-bottom:.8rem}
+body header{padding-bottom:.2rem}
+/* clamped long fields (see the end of curated.js): readable without script, never cut in print */
+.ed-clamp{max-height:10.5em;overflow:hidden;position:relative}
+.ed-clamp::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3em;background:linear-gradient(rgba(251,250,247,0),var(--bg))}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .ed-clamp::after{background:linear-gradient(rgba(20,23,27,0),var(--bg))}}
+:root[data-theme=dark] .ed-clamp::after{background:linear-gradient(rgba(20,23,27,0),var(--bg))}
+.ed-clamp.ed-open{max-height:none}.ed-clamp.ed-open::after{display:none}
+.ed-more{font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--acc);background:none;border:0;padding:.2rem 0;margin:0 0 .4rem;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+
+details>summary{list-style-position:inside}
+.ed-more{display:block}
+@media (min-width:900px){
+ header .in{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(15rem,1fr);column-gap:3rem;align-items:start}
+ header .hdr-top,header h1{grid-column:1/-1}
+ header .hero-lead,header .hero-go{grid-column:1}
+ header .gen-note{grid-column:2;grid-row:3/5;margin:.3rem 0 0}
+}
+/* the evidence chains are a major block of their own, even when they sit inside the investigations section */
+section#investigations>section#chains{border-top:1px solid var(--line);padding-top:var(--gap);margin-top:var(--gap)}
+}
+@media print{.ed-clamp{max-height:none}.ed-clamp::after,.ed-more{display:none}.hero-go,.langsel,.warnbar{display:none}}

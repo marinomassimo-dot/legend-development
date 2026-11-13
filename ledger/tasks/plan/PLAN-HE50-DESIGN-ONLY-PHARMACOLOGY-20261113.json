@@ -10,13 +10,13 @@
   "OBJECTIVE": "HE50: make design-only knowledge (steps, controls, branches) consumable by the generator and keep pharmacological roles (probe, comparator, hypothesis, candidate support) in context, reusing existing fields and readers; no new framework, ontology, gate or advisor invocation.",
   "worktree": ".claude/worktrees/he50",
   "branch": "task/he50",
-  "CURRENT_STATE": "OPEN",
+  "CURRENT_STATE": "COMPLETE",
   "CHECKPOINT": {
-    "last_verified_result": "3 stale-view tests green after regeneration on the merge tree",
-    "first_incomplete_work": "landing, push, CI"
+    "last_verified_result": "CI #686 success on 655b5c6b",
+    "first_incomplete_work": "none"
   },
   "AUTHORISED_QUEUE_20261113": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_1_RECONCILE": {
       "order": 1,
       "title": "Reconcile advisor_followup_20261112 and IT49/SCI49 results; read the named packages and readers; agree the shared-file boundary with the Orchestrator",
@@ -95,9 +95,9 @@
       "steps": [
         {
           "step": "Integration, publication, CI, cleanup; final report in Italian",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "landed 655b5c6b1eb67baaa8c3f0a42fb34b4128f2ac94 (task_close, surfaces FRESH), published gate PASS ls-remote verified; CI #686 Public release gate success and #44 publish success; the Orchestrator recorded taking the follow-ups in charge (design rows run and shown, roles read and V19 sentence accepted, ISR values registered in cell_context.TABLES, grid.tsv deferred with a revival condition); operator-integration on next-step ownership landed 77d87d80 (transport section 12 Who receives a next step, Scientist brief section 5, Orchestrator role, takeaways skill); own worktree removed"
         }
       ]
     }
@@ -119,7 +119,13 @@
       "sha": "31b4bdc13cf871086778e2c70df04acc7236b081",
       "state": "CONCLUDED FAIL kept",
       "result": "REGRESSION VERDICT FAIL: test_repurposing_view only (3 tests: committed views, package and check stale after the engine role change); everything else green. Cause: the views embed engine roles; fixed by regenerating the views, the package and the V19 passage on the merged tree; the 3 tests rerun green (294 s); verdict stays on its SHA"
+    },
+    {
+      "label": "landing",
+      "sha": "655b5c6b1eb67baaa8c3f0a42fb34b4128f2ac94",
+      "state": "CONCLUDED",
+      "result": "gate PASS, ls-remote verified; CI #686 success; publication #44 success"
     }
   ],
-  "MANDATE_STATE": "OPEN"
+  "MANDATE_STATE": "COMPLETE"
 }

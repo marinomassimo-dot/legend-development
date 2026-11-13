@@ -193,7 +193,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 1483,
+    "values": 1486,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -206,7 +206,7 @@
    "PMID": 154
   },
   "links": {
-   "distinct_hrefs": 221,
+   "distinct_hrefs": 222,
    "external_public": 103,
    "hosts": [
     "civicdb.org",
@@ -220,7 +220,7 @@
     "www.wikidata.org",
     "www.wwox.org"
    ],
-   "internal_anchors": 113
+   "internal_anchors": 114
   },
   "reference": {
    "catalogue_records": 44211,
@@ -475,7 +475,7 @@
   "ROWNAME": 2408,
   "SRC_A": 189,
   "SRC_META": 261,
-  "UI": 1483
+  "UI": 1486
  },
  "embedded_sources": [
   {
@@ -560,24 +560,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5230537,
-   "sha256": "695fd0ed6ceff943dd56f81fe4262492167b67ef7640a2e81f78735438a87c36"
+   "bytes": 5253610,
+   "sha256": "158ae27d39bc754a7e906bd1ca9bcecc40219dd053bb48a35654b72d8447671c"
   },
   "es.html": {
-   "bytes": 5216488,
-   "sha256": "53f28c9a502b98dde276581465934dd62e7186cf5c612115837d673377f3afb7"
+   "bytes": 5238909,
+   "sha256": "7c9112c864e9101249915aca198f55a67280c7c6c59603a07f98c3ac11e7dc0e"
   },
   "fr.html": {
-   "bytes": 5247443,
-   "sha256": "3aab26a7acf562368998f947de8afe93cb0196a8bef2e95be5b27ea542acdcec"
+   "bytes": 5270382,
+   "sha256": "5a6a5d6b6c379916b6797a355b8e262b3ad29722097efd6c1147f3b7f94a3228"
   },
   "index.html": {
-   "bytes": 5130281,
-   "sha256": "9545b5554fef50322c0d68a1ac0d6ffc7141911fe7124cc2545050b4c91520a1"
+   "bytes": 5152684,
+   "sha256": "d9fffd8e3ca543f3160c6c7a226b1cb5c7ed9192bc8d487effea6d818aba2ec5"
   },
   "it.html": {
-   "bytes": 5194399,
-   "sha256": "7d303962589ca39675f7cadc5f7252a8412ffe0cd636a175090c2a530b5896be"
+   "bytes": 5216713,
+   "sha256": "8aa9c4faf77e8ff1f8c8df89167883296327fca2d8f2f3dc4a5bbf915236d9b1"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

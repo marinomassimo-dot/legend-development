@@ -1260,7 +1260,7 @@ class Italian(unittest.TestCase):
         page = rv.build(DR, "shareable", "it")
         head = page[:page.index('id="charts"')]
         for must in ("Panoramica", "Filoni biologici", "Motivo della priorità", "Tipo di evidenza osservata nei bisogni", "Lacuna decisiva", "Composti e interventi da studiare",
-                     "Recupero ampio e duraturo", "Beneficio parziale utile", "Track (campo separato)", "non consiglio medico", "Dettagli tecnici"):
+                     "Recupero ampio e duraturo", "Beneficio parziale utile", "Track (campo separato)", "non è un consiglio medico", "Dettagli tecnici"):
             self.assertIn(must, head)
         # versions, hashes and regeneration live only in the drill-down
         first = page[:page.index('<details id="technical"')]
@@ -1486,7 +1486,7 @@ class WaitPolls(unittest.TestCase):
 class RealViewports(unittest.TestCase):
     """Device-metrics emulation over the DevTools protocol (no sandbox flag): the page's own innerWidth and scrollWidth are measured at 360 and 390 px."""
 
-    def test_the_legend_sits_above_the_fold_on_a_phone_in_every_language(self):
+    def test_the_start_here_row_and_the_general_note_sit_above_the_fold_on_a_phone_in_every_language(self):
         # found on the served site (IT30): the check above builds Italian only; French and German were 19 px over at 360x780
         if not rv.find_chromium():
             self.skipTest("no Chromium binary: the legend was NOT measured")
@@ -1500,12 +1500,12 @@ class RealViewports(unittest.TestCase):
                         try:
                             c.call("Page.enable"); c.call("Emulation.setDeviceMetricsOverride", width=w, height=h, deviceScaleFactor=1, mobile=True)
                             c.call("Page.navigate", url="file://" + str(f)); c.wait_for("!!document.querySelector('[data-cur-ready]')", 60); c.settle()
-                            b = c.evaluate("Math.round(document.querySelector('.legendrow').getBoundingClientRect().bottom+scrollY)")
+                            b = c.evaluate("Math.max(Math.round(document.querySelector('.hero-go').getBoundingClientRect().bottom+scrollY), Math.round(document.querySelector('.gen-note').getBoundingClientRect().top+scrollY))")
                         finally:
                             c.close()
                     except Exception as e:
                         self.skipTest("viewport emulation unavailable: " + str(e)[:120])
-                    self.assertLess(b, h, f"{lang} {w}x{h}: the F/C/P legend must sit above the fold")
+                    self.assertLess(b, h, f"{lang} {w}x{h}: the start-here row must end, and the general note begin, above the fold")
 
     def test_the_kind_filter_hides_rows_across_the_queue_and_a_stable_id_link_reopens_the_row(self):
         """IT35 P9, in the browser: the kind-of-row filter hides rows in every list; #INV-nn then shows a hidden row again; the lists stay complete without a click."""
@@ -1599,7 +1599,7 @@ class RealViewports(unittest.TestCase):
             if m["scenario"] in ("brief", "evidence_graph", "work_order"):
                 self.assertEqual(m["ready"], "1", m)      # IT6 P13 scenarios are exercised at every viewport
             if m["scenario"] == "first_screen" and m["mobile"]:
-                self.assertLess(m["legendBottom"], dict((w, h) for w, h, _ in rv.VIEWPORTS)[m["requested"]], "the F/C/P legend must sit above the fold")
+                self.assertLess(max(m["entryBottom"], m["noteTop"]), dict((w, h) for w, h, _ in rv.VIEWPORTS)[m["requested"]], "the start-here row must end, and the general note begin, above the fold")
         names = {m["scenario"] for m in res}
         self.assertTrue({"brief", "evidence_graph", "work_order", "print_brief", "print_brief_all", "selection", "hypotheses", "predictive", "contexts", "section_selection", "section_predictive",
                          "print_section_selection", "print_section_hypotheses", "print_section_predictive"} <= names, names)
@@ -2382,7 +2382,7 @@ class It7P7Data(unittest.TestCase):
         self.assertIn("details>summary{padding:3px 0;min-height:24px}", css)
         for t in re.findall(r'<table class="tbl[^"]*stk">.*?</table>', self.h, re.S):
             self.assertIn("data-label=", t)
-        self.assertEqual(len(re.findall(r'<table class="tbl[^"]*stk">', self.h)), 3 + 2 * len(self.cur["ranking"]["units"]) + 4 + 2)     # (IT19 P6: +2, the counts-per-need table and the pairs table of the matching-direction block) (IT10 P5: +1, the IT10 qualification records table) three IT7 tables; IT8 P9: one pathway and one member-evidence table per ranked entry, the uncarded items and the triggers
+        self.assertEqual(len(re.findall(r'<table class="tbl[^"]*stk">', self.h)), 3 + 2 * len(self.cur["ranking"]["units"]) + 4 + 2 + len(self.cur["evidence_graph"]["chains"]))     # (dashboard restyle: the edge table of each evidence chain stacks on a phone too; IT19 P6: +2, the counts-per-need table and the pairs table of the matching-direction block) (IT10 P5: +1, the IT10 qualification records table) three IT7 tables; IT8 P9: one pathway and one member-evidence table per ranked entry, the uncarded items and the triggers
 
     def test_p4_matrix_checker_passes(self):
         r = subprocess.run([sys.executable, "-I", str(DR / rv.P4_DIR / "check_context_matrix.py")], capture_output=True, text=True, timeout=120)
