@@ -7,14 +7,14 @@
  "OBJECTIVE": "ADV-001 (advisor pilot, relayed by the Harness session on 2026-11-13; authority relayed by a peer, not verified; operator told in chat): re-annotate the IT29 case-1 signed rows by documented EBP (sterol isomerase) status (IT51-Q05, in silico, zero spend): how many favourable rows are attributable to documented EBP inhibition rather than the stated target, and does a consumer sentence about pro-myelinating agents have to change; substrate stated first (31 curated rows and the 20-compound comparison; the 216-row layer is not committed); categories documented/sterol-non-EBP/absence/unmeasured kept apart; one blind verifier; no edit to IT29 files or shared consumers; result to the Orchestrator for disposition.",
  "START_UTC": "2026-11-13T18:10:00Z",
  "BASELINE": "main 65557d1b (ADV-001 text) ; worktree .claude/worktrees/adv001, branch task/adv001; folder ebp_reannotation_adv001_20261113/; take-in-charge message sent to HE (ADV-001).",
- "MANDATE_STATE": "OPEN",
+ "MANDATE_STATE": "COMPLETE",
  "CURRENT_PACKAGE": {
-  "id": "landing",
-  "state": "pre-freeze checks",
+  "id": "closed",
+  "state": "landed; Orchestrator to dispose",
   "delegate_active": "none",
   "updated": "2026-11-13"
  },
- "RESUME": "S0 written; next: pull EBP-orthologue rows by script, resolve names, join, counts, verifier, README, delta.",
+ "RESUME": "ADV-001 landed. Pending outside this session: Orchestrator disposition of consumer_delta rows 1-5 and 7 (receipts -64), IT51-Q05 status; the worktree adv001 may be removed by HE under 21e item 3.",
  "DECISIONS_TAKEN": [
   "2026-11-13 ADV-001 taken in charge (cited here as the take-in-charge record); accepted as a request relayed by the Harness session; reversible by the operator",
   "2026-11-13 read the open Hubler full text from Europe PMC (route given by the Harness session) myself, keyword-directed, to check the ifenprodil/amorolfine/antimuscarinic statements; no receipt claimed for that reading (verifier receipts cover the text layer)"
@@ -26,7 +26,7 @@
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
  "AUTHORISED_QUEUE_20261113C": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_A": {
    "order": 1,
    "steps": [
@@ -61,8 +61,9 @@
    "steps": [
     {
      "step": "Landing: pre-freeze suites, gate, LINT, receipts, growth, battery on the frozen SHA, task_close, safe_push",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "pre-freeze four suites OK, gate PASS, LINT WARN no BLOCK, receipts OK 1943, growth PASS; battery 56b2a9c2 PASS WITH SKIPS 251/12 (clone REMOVED by verify_run); task_close and safe_push next"
     },
     {
      "step": "Self-evaluation, DREAM, final report",
@@ -73,5 +74,17 @@
    ]
   }
  },
- "VERIFICATION_EVIDENCE": []
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261113-191232-cad2fe4f",
+   "label": "battery",
+   "sha": "56b2a9c2a5520ef8123b01dd16edb6d1873870bf",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261113-191232-cad2fe4f",
+   "log_sha256": "d2353fafd53776256c3c4e7e3893ae33d4def8742f7fb8356d5033cd973a3a78",
+   "clone": "REMOVED",
+   "attribution": "PASS WITH SKIPS (251 targets, 12 skipped) on the ADV-001 candidate 56b2a9c2 (README, annotation tables, verifier output, self-evaluation); attributed to that SHA only; later commits are closure-only (this record)"
+  }
+ ]
 }
