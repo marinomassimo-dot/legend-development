@@ -64,3 +64,5 @@ Stop calling it: nothing depends on it, and `test_no_other_script_imports_the_ad
 ## 8 · Not shown
 
 That the advisor improves strategy; that Stage A is formed before a plan is known when the Orchestrator's preferences are readable elsewhere in the repository (the sealed folder covers only the text placed there); that Grep and Glob refusals hold for every path form (one Grep was tested); that the Stage B profile runs; that the Agent-tool path runs; that a long assessment is captured as faithfully as a short one (the code path is the same). A negative control for obedience does not exist.
+
+**Update 2026-11-12 (follow-up).** The first real use (the IT48 campaign) found problems this build did not cover: a delivery announced in the brief was absent from the advisor's snapshot, a snapshot path lost its first character, a runtime model fallback changed the model mid-run, and no short command separated the browser facts. They and their corrections are in [`../advisor_followup_20261112/README.md`](../advisor_followup_20261112/README.md). The text above is unchanged.

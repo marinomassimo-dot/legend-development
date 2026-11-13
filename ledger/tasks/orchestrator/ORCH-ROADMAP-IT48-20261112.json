@@ -57,9 +57,9 @@
    "steps": [
     {
      "step": "Closure: verify_run on the final candidate, landing, CI/site, cleanup of own temporaries, final evidence report in Italian with the six pilot answers and Session Takeaway",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Landed 6882ef56 (gate PASS, ls-remote verified). Battery attribution: the IT48 content candidate has no full release battery of its own; verified by targeted suites (phase sweep, ranking, comparison engine, i18n) and the full view suite with the older Snap revision (223 tests OK, default selection); CI run on 6882ef56 pending at the time of writing (a failure or success there is the verdict of that SHA). Cleanup deferred to IT49 closure (worktrees it44.. etc., /tmp temporaries). MANDATE_STATE stays OPEN until the CI verdict is read."
     }
    ]
   }
