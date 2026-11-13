@@ -48,7 +48,7 @@ The Tsc/mTOR and CTGF finding links two threads LEGEND held apart: INV-06's "sol
 
 ## Cost (session_model_census; read back from the transcripts)
 
-Producer P, sonnet, effort medium, read back medium ×49: 49 turns in two launches (39 + 10), 97,765 output tokens, cache read 5,987,751. Verifier V13, sonnet, effort high, read back high ×81: 81 turns in two launches (73 + 8 net), 144,368 output tokens, cache read 19,258,335. Total delegates 130 turns, 242,133 output tokens, about 25.2 million cache read. Zero spend, no contact, no personal data.
+Producer P, sonnet, effort medium, read back medium ×49: 49 turns in two launches (39 + 10), 97,765 output tokens, cache read 5,987,751. Verifier V13, sonnet, effort high, read back high ×81: 81 turns in two launches, 144,368 output tokens, cache read 19,258,335. Total delegates 130 turns, 242,133 output tokens, about 25.2 million cache read. Zero spend, no contact, no personal data.
 
 ## Files
 
