@@ -7,14 +7,14 @@
  "OBJECTIVE": "Operator mandate SCI50 2026-11-13 (about ten hours): phenotype-first pharmacological hypothesis generation from a functional defect and the perturbations that modify it; start INV-06/INV-12 (impaired myelination after neuronal WWOX loss): which pharmacological perturbation could improve a functional component of myelination while the neuronal defect persists, and which comparison separates a limit of the neuronal signal from an intrinsic oligodendrocyte block. Narrow to one system and endpoint before searching; at most three conditional hypotheses; separate generation from adversarial verification; test the generative value against the current path; consumer_delta, open questions, minimum comparison; one producer (sonnet medium) and one blind verifier (sonnet high), sequential; zero spend, no contact, no personal data, no clinical recommendation, no gene therapy, no new framework. Final report in Italian opens with: Quale nuova possibilit\u00e0 farmacologica possiamo ora mettere alla prova, e quale risultato la farebbe abbandonare?",
  "START_UTC": "2026-11-13T05:30:00Z",
  "BASELINE": "main 4e55ca72+ (SCI49 A and B published and consumed by IT49, 2454a3ac and 387f6ae4). Worktree .claude/worktrees/sci50, branch task/sci50. No session has assigned the myelin line (IT49 record names none). Folder myelin_phenotype_first_sci50_20261113/.",
- "MANDATE_STATE": "OPEN",
+ "MANDATE_STATE": "COMPLETE",
  "CURRENT_PACKAGE": {
-  "id": "landing",
-  "state": "pre-freeze checks",
+  "id": "closed",
+  "state": "landed on main; integrator to consume",
   "delegate_active": "none",
   "updated": "2026-11-13"
  },
- "RESUME": "Package written and verified; run pre-freeze suites, freeze, battery, land, push, message the integrator, final report.",
+ "RESUME": "SCI50 landed. Pending outside this session: integrator consumption of consumer_delta rows 1-7 and recording of receipts -69 then -68; HE50 design_only registration; worktrees sci50, sci49, sci49a, sci48 and older need written operator authorisation to remove; /tmp/legend-verify-keep evidence kept.",
  "DECISIONS_TAKEN": [
   "2026-11-13 answered HE50 (design_only registration of the IT36 experiments table, read-only): yes, INV-12 for EX1-EX4 only, EX5-EX7 are H2; reversible"
  ],
@@ -28,7 +28,7 @@
   "integrator 4e unreachable when the duplication check was sent: proceeded after reading the IT49 record (no myelin work); Strategic Advisor not invoked (optional, not an approval)"
  ],
  "AUTHORISED_QUEUE_20261113A": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_A": {
    "order": 1,
    "steps": [
@@ -69,8 +69,9 @@
    "steps": [
     {
      "step": "Landing: pre-freeze suites, gate, LINT, receipts, growth, battery on the frozen SHA, task_close, safe_push; clean own temporaries",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "pre-freeze four suites OK, gate PASS, LINT WARN no BLOCK, receipts OK 1903, growth PASS; battery 462144ea PASS WITH SKIPS 248/12 (clone REMOVED by verify_run); task_close and safe_push follow in the final record line"
     },
     {
      "step": "Self-evaluation, DREAM, capability scout, takeaways, final Italian report",
@@ -81,5 +82,17 @@
    ]
   }
  },
- "VERIFICATION_EVIDENCE": []
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261113-082136-d58b1302",
+   "label": "battery",
+   "sha": "462144ea6174f459587c33068105a98d10669a66",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261113-082136-d58b1302",
+   "log_sha256": "c8586b43b2d9a54e6c49e7075c62a45c630a56f159319f867cdddf98b7d250c9",
+   "clone": "REMOVED",
+   "attribution": "PASS WITH SKIPS (248 targets, 12 skipped) on the SCI50 candidate 462144ea (README, outputs, verifier output, self-evaluation, scout entry); attributed to that SHA only; later commits are closure-only (this record)"
+  }
+ ]
 }
