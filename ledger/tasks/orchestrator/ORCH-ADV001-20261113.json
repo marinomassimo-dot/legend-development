@@ -1,0 +1,90 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ADV001-20261113",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "ADV-001 (advisor pilot, relayed by the Harness session on 2026-11-13; authority relayed by a peer, not verified; operator told in chat): re-annotate the IT29 case-1 signed rows by documented EBP (sterol isomerase) status (IT51-Q05, in silico, zero spend): how many favourable rows are attributable to documented EBP inhibition rather than the stated target, and does a consumer sentence about pro-myelinating agents have to change; substrate stated first (31 curated rows and the 20-compound comparison; the 216-row layer is not committed); categories documented/sterol-non-EBP/absence/unmeasured kept apart; one blind verifier; no edit to IT29 files or shared consumers; result to the Orchestrator for disposition.",
+ "START_UTC": "2026-11-13T18:10:00Z",
+ "BASELINE": "main 65557d1b (ADV-001 text) ; worktree .claude/worktrees/adv001, branch task/adv001; folder ebp_reannotation_adv001_20261113/; take-in-charge message sent to HE (ADV-001).",
+ "MANDATE_STATE": "COMPLETE",
+ "CURRENT_PACKAGE": {
+  "id": "closed",
+  "state": "landed; Orchestrator to dispose",
+  "delegate_active": "none",
+  "updated": "2026-11-13"
+ },
+ "RESUME": "ADV-001 landed. Pending outside this session: Orchestrator disposition of consumer_delta rows 1-5 and 7 (receipts -64), IT51-Q05 status; the worktree adv001 may be removed by HE under 21e item 3.",
+ "DECISIONS_TAKEN": [
+  "2026-11-13 ADV-001 taken in charge (cited here as the take-in-charge record); accepted as a request relayed by the Harness session; reversible by the operator",
+  "2026-11-13 read the open Hubler full text from Europe PMC (route given by the Harness session) myself, keyword-directed, to check the ifenprodil/amorolfine/antimuscarinic statements; no receipt claimed for that reading (verifier receipts cover the text layer)"
+ ],
+ "DELEGATIONS": [
+  "V15 verifier ea-y (agent a28cd245, legend-delegate): asked sonnet/high; read back sonnet x76, high x76; 76 turns in 2 launches (dispatch + recheck), output 124,507, cache read 12,203,446; 6 staged receipts (-64) staged without a claim (classifier refusal)"
+ ],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "AUTHORISED_QUEUE_20261113C": {
+  "MANDATE_STATE": "COMPLETE",
+  "OBJ_A": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Take in charge ADV-001; substrate, categories, priors and stop rule written before the join",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "take-in-charge message to HE; S0_before_analysis.md committed acabbc4b before the join; dated addendum on the 9 compound rows"
+    },
+    {
+     "step": "Pull the EBP-orthologue rows by script, resolve the compound names, join to the 20 compounds and 11 compound rows, counts with denominators, locate consumer sentences",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "ebp_pull.py pulled 334 rows on four EBP-orthologue targets (reproduces the SCI51 verifier count); name resolution kept; annotation_compounds.tsv (20) and annotation_signed_rows.tsv (9); consumer sentences located by git grep"
+    },
+    {
+     "step": "One blind verifier (sonnet high) on the decisive per-compound statements and the denominators; corrections",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "verifier V15 ea-y: first pass 24/36 correct, 12 defective; recheck of my README/delta/annotation 12/27 correct, 15 defective; corrections applied (apply_v15_corrections.py 12, apply_v15_recheck.py 14); README and delta rewritten to the accepted wording (not rechecked a third time, disclosed)"
+    },
+    {
+     "step": "README answer-first, consumer_delta, open questions; delivery to the Orchestrator",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "README answer-first with substrate stated first, consumer_delta 7 rows, dated design-position lines appended to the SCI50 and SCI51 READMEs (own files)"
+    }
+   ]
+  },
+  "OBJ_B": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Landing: pre-freeze suites, gate, LINT, receipts, growth, battery on the frozen SHA, task_close, safe_push",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "pre-freeze four suites OK, gate PASS, LINT WARN no BLOCK, receipts OK 1943, growth PASS; battery 56b2a9c2 PASS WITH SKIPS 251/12 (clone REMOVED by verify_run); task_close and safe_push next"
+    },
+    {
+     "step": "Self-evaluation, DREAM, final report",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "self_eval_orchestrator_adv001_20261113.md; DREAM in README; no capability scout entry beyond the recorded repeats (claim refusal to a delegate repeated); no memory entry (lessons covered by sci51-pitfalls)"
+    }
+   ]
+  }
+ },
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261113-191232-cad2fe4f",
+   "label": "battery",
+   "sha": "56b2a9c2a5520ef8123b01dd16edb6d1873870bf",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261113-191232-cad2fe4f",
+   "log_sha256": "d2353fafd53776256c3c4e7e3893ae33d4def8742f7fb8356d5033cd973a3a78",
+   "clone": "REMOVED",
+   "attribution": "PASS WITH SKIPS (251 targets, 12 skipped) on the ADV-001 candidate 56b2a9c2 (README, annotation tables, verifier output, self-evaluation); attributed to that SHA only; later commits are closure-only (this record)"
+  }
+ ]
+}

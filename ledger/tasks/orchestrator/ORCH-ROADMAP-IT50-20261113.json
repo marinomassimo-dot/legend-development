@@ -7,7 +7,7 @@
  "START_UTC": "2026-11-13T08:30:00Z",
  "OBJECTIVE": "LEGEND IT50 (operator mandate, queued after IT49; window at most ten hours from effective start, no automatic renewal): improve generative capacity - turn available evidence, relations and verified deliveries into pharmacological hypotheses, discriminating comparisons and useful experiments for WWOX loss of function; verification accompanies it. One new strategic consultation (at most one Stage A and one Stage B, existing procedure, configuration verified, no new spend; a failed attempt counts). Not an extension of the IT48 pilot. Science session has a generative mission starting from myelination: coordinate, do not duplicate. Design-only packages: Harness builds a minimal link; no competing reader. No ranking/sign/qualification change to show an effect; no predictive claim from better access. Final report in Italian opens with: 'Quale ipotesi, confronto farmacologico o esperimento LEGEND riesce ora a formulare meglio?'.",
  "AUTHORISED_QUEUE_20261108": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P1": {
    "order": 1,
    "steps": [
@@ -134,9 +134,9 @@
    "steps": [
     {
      "step": "Final verification and landing: derivatives regenerated after the last receipts and data, view suite and shareable audit, landing, CI per SHA",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Verdicts stay with their SHAs. phase sweep and full view suite running on the candidate; landing and CI per SHA pending. Sweep clean (two output-format false alarms), full view suite 225 tests OK, shareable audit 10/10, derivatives current; landing next, CI verdict per SHA to follow."
+     "evidence": "Verdicts stay with their SHAs. phase sweep and full view suite running on the candidate; landing and CI per SHA pending. Sweep clean (two output-format false alarms), full view suite 225 tests OK, shareable audit 10/10, derivatives current; landing next, CI verdict per SHA to follow. FINAL: 35a07963 landed (gate PASS, ls-remote verified); CI #696 and view publication #47 succeeded. Verdicts by SHA: 4e4e3e01 #684, 8d00e3d1 #688, 98a91a8f #689, e08aca97 #690, d17cd40e #692, 35a07963 #696, all success; no full release battery of its own for these SHAs (CI gate, targeted suites, full view suite 225 tests OK on the candidates). Evidence of success of the SCI51 pass: request received and taken in charge, deepening executed (package 0813df3f), result taken by the consumer (dispositions recorded)."
     }
    ]
   }
