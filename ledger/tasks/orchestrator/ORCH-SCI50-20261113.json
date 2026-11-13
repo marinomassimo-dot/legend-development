@@ -1,0 +1,72 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-SCI50-20261113",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Operator mandate SCI50 2026-11-13 (about ten hours): phenotype-first pharmacological hypothesis generation from a functional defect and the perturbations that modify it; start INV-06/INV-12 (impaired myelination after neuronal WWOX loss): which pharmacological perturbation could improve a functional component of myelination while the neuronal defect persists, and which comparison separates a limit of the neuronal signal from an intrinsic oligodendrocyte block. Narrow to one system and endpoint before searching; at most three conditional hypotheses; separate generation from adversarial verification; test the generative value against the current path; consumer_delta, open questions, minimum comparison; one producer (sonnet medium) and one blind verifier (sonnet high), sequential; zero spend, no contact, no personal data, no clinical recommendation, no gene therapy, no new framework. Final report in Italian opens with: Quale nuova possibilit\u00e0 farmacologica possiamo ora mettere alla prova, e quale risultato la farebbe abbandonare?",
+ "START_UTC": "2026-11-13T05:30:00Z",
+ "BASELINE": "main 4e55ca72+ (SCI49 A and B published and consumed by IT49, 2454a3ac and 387f6ae4). Worktree .claude/worktrees/sci50, branch task/sci50. No session has assigned the myelin line (IT49 record names none). Folder myelin_phenotype_first_sci50_20261113/.",
+ "MANDATE_STATE": "OPEN",
+ "CURRENT_PACKAGE": {
+  "id": "S0",
+  "state": "frame written",
+  "delegate_active": "none",
+  "updated": "2026-11-13"
+ },
+ "RESUME": "S0 written; next: commit, bind marker, brief the producer, dispatch.",
+ "DECISIONS_TAKEN": [],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "AUTHORISED_QUEUE_20261113A": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_A": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Bind marker; reconcile SCI49 consumption and the existing INV-06/INV-12 packages; brief confrontation with the main session",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "S0 frame (narrowed question, levels, priors, perimeter) committed before any new search",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Producer brief; one producer (sonnet medium): perturbation-evidence table, chosen levers, hypotheses (at most three), minimum comparison, open questions, comparison with the current path; staged receipts validated",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "One blind verifier (sonnet high) with its own strings; corrections and a narrow recheck",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Generation kept apart from verification; README answer-first, minimum comparison, consumer_delta, open questions; delivery to the integrator",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_B": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Landing: pre-freeze suites, gate, LINT, receipts, growth, battery on the frozen SHA, task_close, safe_push; clean own temporaries",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Self-evaluation, DREAM, capability scout, takeaways, final Italian report",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ },
+ "VERIFICATION_EVIDENCE": []
+}
