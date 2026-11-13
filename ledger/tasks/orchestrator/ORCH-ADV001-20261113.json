@@ -9,16 +9,19 @@
  "BASELINE": "main 65557d1b (ADV-001 text) ; worktree .claude/worktrees/adv001, branch task/adv001; folder ebp_reannotation_adv001_20261113/; take-in-charge message sent to HE (ADV-001).",
  "MANDATE_STATE": "OPEN",
  "CURRENT_PACKAGE": {
-  "id": "S0",
-  "state": "substrate and categories written",
-  "delegate_active": "none",
+  "id": "recheck",
+  "state": "narrow recheck of README and delta",
+  "delegate_active": "V15 (resumed)",
   "updated": "2026-11-13"
  },
  "RESUME": "S0 written; next: pull EBP-orthologue rows by script, resolve names, join, counts, verifier, README, delta.",
  "DECISIONS_TAKEN": [
-  "2026-11-13 ADV-001 taken in charge (cited here as the take-in-charge record); accepted as a request relayed by the Harness session; reversible by the operator"
+  "2026-11-13 ADV-001 taken in charge (cited here as the take-in-charge record); accepted as a request relayed by the Harness session; reversible by the operator",
+  "2026-11-13 read the open Hubler full text from Europe PMC (route given by the Harness session) myself, keyword-directed, to check the ifenprodil/amorolfine/antimuscarinic statements; no receipt claimed for that reading (verifier receipts cover the text layer)"
  ],
- "DELEGATIONS": [],
+ "DELEGATIONS": [
+  "V15 verifier ea-y (agent a28cd245, legend-delegate): asked sonnet/high; read back sonnet x69, high x69; 69 turns in the first launch, output 95,258, cache read 10,158,173, birth context n/a; 36 rows 24 correct 12 defective; 6 staged receipts (-64) without a claim; narrow recheck of README/delta launched as a second launch (census to be re-read)"
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
@@ -29,17 +32,19 @@
    "steps": [
     {
      "step": "Take in charge ADV-001; substrate, categories, priors and stop rule written before the join",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "take-in-charge message to HE; S0_before_analysis.md committed acabbc4b before the join; dated addendum on the 9 compound rows"
     },
     {
      "step": "Pull the EBP-orthologue rows by script, resolve the compound names, join to the 20 compounds and 11 compound rows, counts with denominators, locate consumer sentences",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "ebp_pull.py pulled 334 rows on four EBP-orthologue targets (reproduces the SCI51 verifier count); name resolution kept; annotation_compounds.tsv (20) and annotation_signed_rows.tsv (9); consumer sentences located by git grep"
     },
     {
      "step": "One blind verifier (sonnet high) on the decisive per-compound statements and the denominators; corrections",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator"
     },
     {

@@ -1,0 +1,17 @@
+# Self-evaluation - Orchestrator (ADV-001 / IT51-Q05 session), EBP re-annotation of the IT29 case-1 compounds, 2026-11-13
+
+Verdict: Part 1 returned PASS. The package lands after its battery. ADV-001 reached me as a peer message from the Harness session (the pilot's Strategic Advisor assignment); I took it in charge as a request, recorded it in the task record, and told the operator in chat.
+
+1. **What the blind reader changed.** The first pass held 24 of 36 rows: ifenprodil is binding-only and Hubler attributes it to TM7SF2, not EBP; clobetasol, liothyronine and bexarotene have indirect sterol-profile negatives (not "not applicable"); the HDAC inhibitors, neostigmine and sobetirome are "unmeasured" under my own definition; "11 of 22" depends on whether R08 is counted; neither share is a stand-alone summary; the INV-06 sentence sits in a different field than I said and is not stronger than the layer taken whole; the amorolfine isomerase inhibition is real only in fungi.
+2. **My own errors, and who caught them.** (a) My S0 counted 11 compound rows and 20 genetic ones: 9 and 22 (my own check while building the table, recorded as a dated addendum). (b) I labelled three compounds NOT_APPLICABLE although S0 defines it narrowly and a sterol-profile negative existed (blind auditor). (c) I took "ifenprodil in R36/R37" as an EBP row before reading Hubler; the open full text (route given by the Harness session) and the verifier both corrected it. (d) The premise "the INV-06 sentence is stronger than the layer" was the assignment's, and I carried it into the brief; the verifier showed it holds only against the compound rows (blind auditor). (e) A first-pass table was edited by script rather than by hand, with a rename I had to add after reading the verdicts (self).
+3. **What was not reached.** Hubler, Sax and Allimuthu figures, Extended Data images and per-compound values; Sax's tables and supplement; the names of the four inert antimuscarinics (not in the text); the Allimuthu data supplement (no permitted route); the 216-row layer (not committed).
+4. **Process grade versus outcome grade.** Outcome: a bounded, mostly negative-to-moderate answer with a four-way split instead of a headline share, three consumer locators and a clear decision on where an EBP-confound limit applies. Process: good on stating the substrate first and on using the verifier for the decisive statements; the recheck on my README was run again because of the SCI51 lesson.
+5. **Cost.** Verifier V15 sonnet/high 69 turns in one launch (plus a narrow recheck launch), 95,258 output tokens, 10,158,173 cache read; no producer (a script and my own tables); one delegate at a time; no spend; no contact.
+
+Micro-upgrade (the answer, not the promise): `ebp_pull.py` is a re-runnable pull (334 rows reproduced the verifier's count exactly) and `apply_v15_corrections.py` keeps every changed cell with its reason; the substrate statement ("the 216-row layer is not a committed artefact") is in the first paragraph of the README so no later sentence quotes a number it cannot reproduce.
+
+ATTRIBUTION_CENSUS
+incidents: 8
+machine: 0   blind_auditor: 5   peer: 0   self: 3
+severity_high: 0   of which self: 0
+undetected_known: 0
