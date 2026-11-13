@@ -21,11 +21,21 @@ return from open questions to research active.
 
 **Exclusions.** Clinical recommendations, doses, gene-therapy development, individual or private data, external contacts, new paid services, infrastructure growth without a concrete need.
 
+**Strategic direction** (operator, 2026-11-13, given with the ADV session mandate; it supplements the priorities above and changes none of them; the operator may be absent for the whole campaign and new instructions simply update the direction when given):
+- A. *Raise generative capacity.* Find knowledge LEGEND holds but does not combine or use; find pharmacological levers, competing explanations, comparisons and experiments the current path misses. Keep apart novelty for LEGEND, novelty against the literature, and predictive capacity actually demonstrated.
+- B. *Carry science through to drug repurposing.* Assess every substantial result for what it implies: does it strengthen, weaken or leave unchanged the candidates, comparisons, premises and open questions? A conditional proposal is useful when it states the conditions to verify; no favourable candidates and no quantity of hypotheses are imposed.
+- C. *Return questions to research.* Promising, contrary and inconclusive results alike orient further work. A question says which decision a given answer would change and separates in silico work from measurements that are indispensable in vitro or in vivo.
+- D. *Compare depth with a change of direction.* Weigh the marginal benefit of one more batch on the current thread against the other prioritised opportunities. Keep suspended branches, with the conditions that would make them interesting again. The most recent thread is not automatically the most important.
+- E. *Look beyond the WWOX keyword when pertinent.* Use adjacent systems and literatures for transferable methods, perturbations and explanations; keep species, cell type, development, genotype, endpoint and the limits of the transfer.
+- F. *Improve the Harness in the service of the science.* Prefer small interventions that unblock a capability, improve the use of the tools already available, remove duplication or make a change of direction easier. Assess scouting and mining by licence, cost, real availability and ease of removal; the reputation of a repository does not show that its pattern is useful.
+- G. *Measure the benefit.* Look for observable differences: a better comparison, a more discriminating experiment, a useful connection, a recovered proposal, a resolved question, or useless work avoided. The number of prompts, agents, nodes or open activities is not progress by itself.
+
 **Pilot campaign** (first Proactive Strategic Advisor pilot): 24 hours from its effective activation (`advisor_pilot_20261113/budget.json`), no automatic renewal; at most three real strategic
 invocations in total (dialogue and failed attempts included), at most three new executive assignments across the three sessions, no recursive delegation, no external spend. These are ceilings,
 not targets. Exhausting the Advisor's budget stops its evaluations only; the work already authorised to the sessions goes on.
 
 **Recent operator instructions** (newest first; add a dated line to change direction, or write "stop" or "pause" to suspend the pilot):
+- 2026-11-13 (later): the operator assigned the session "ADV — Strategic Advisor" (ACTOR_ID `orchestrator`) as the standing strategic presidio of this pilot, with no new budget and no renewal: it talks with the operator, keeps this section, hosts the recall and forwards assignments to IT, SCI and HE. The strategic direction A-G above was added from that mandate; priorities 1-5 are unchanged. No instruction to stop or pause.
 - 2026-11-13: the roadmap above; the Advisor may act without being asked, the Orchestrator keeps operational coordination; the operator can intervene at any time by editing this section.
 <!-- OPERATOR_ROADMAP:END -->
 

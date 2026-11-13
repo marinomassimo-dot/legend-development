@@ -1,0 +1,126 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "TASK_ID": "ORCH-ADV-PRESIDIO-20261113",
+ "START_UTC": "2026-11-13T22:18:00Z",
+ "SESSION_NAME": "ADV — Strategic Advisor",
+ "SESSION_BINDING": {
+  "session_id": "e6526331-6b7c-4631-8c9b-9e9d79867e90",
+  "pid_at_start": 1238811,
+  "runtime": "Claude Code (VS Code extension), model claude-sonnet-5-5",
+  "identity_source": "operator assignment in the opening prompt of this session (ACTOR_ID orchestrator, function: proactive strategic coordination); not inferred from the directory, the title or the runtime",
+  "run_from": "root checkout only: a worktree copy has its own budget.json and invocations.jsonl and would be an independent campaign"
+ },
+ "OBJECTIVE": "Operational presidio of the Strategic Advisor on the operator's roadmap, for the existing pilot advisor_pilot_20261113 (no new campaign, no renewal, no counter reset, no new budget): dialogue with the operator, keep the Operator roadmap section current, host the hourly recall and the roughly four-hourly evaluation, forward the Advisor's assignments to IT, SCI and HE through the existing channels, follow each one from sent to taken in charge to executed to consumed, and put the next decision on the result. Distinct from ORCH-ADVISOR-PILOT-20261113 (IT Orchestrator: take-in-charge and disposition of each ADV and the pilot report), which this record neither replaces nor edits. Cost of this session's recalls is accounted apart from the Advisor's invocations and from the assigned batches. Authority: the operator's prompt of 2026-11-13 to this session, plus roadmap_current.md (Operator roadmap) and PILOT_CAMPAIGN.md. An operator stop or pause prevails.",
+ "AUTHORISED_QUEUE_20261113": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1_TRANSFER": {
+   "order": 1,
+   "title": "Take over the Advisor's recall from HE: one active recall at any time",
+   "steps": [
+    {
+     "step": "HE deletes its recall (cron 4280e75d) and hands over the shared state",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "HE message 2026-11-13T22:21Z (cross-session): job deleted, CronList empty on its side; last tick 22:14:54Z verdict NONE, last evaluation 21:18:10Z (P2), budget 2/3 invocations and 3/3 assignments, expires 2026-11-14T18:22:36Z, ADV-003 TAKEN by SCI in ORCH-ADV003-20261113. Shared state: ~/.local/state/legend/advisor_pilot/advisor_pilot_20261113/state.json (keyed by campaign name)."
+    },
+    {
+     "step": "Create this session's hourly recall (CronCreate, session-only) on the same campaign, from the root checkout; verify its first automatic fire is recognised and tell HE the result",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "Bind this record to the session (MANDATE_BOUND marker) and read the monitor's association (session id, record_verdict, state) with mandate_watch.py check --task ORCH-ADV-PRESIDIO-20261113 --deliver none --json",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_2_ROADMAP": {
+   "order": 2,
+   "title": "Make the operator's initial strategic direction explicit in the one durable roadmap; keep it current as the operator speaks",
+   "steps": [
+    {
+     "step": "Record directions A-G and the dated instruction line in the Operator roadmap section of roadmap_current.md (addition, not a change of priorities 1-5); the roadmap edit is an operator instruction and is landed at once",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_3_FIRST_REPORT": {
+   "order": 3,
+   "title": "First report to the operator: roadmap read and priorities, campaign state and budget, recall transfer, strategic tools with accessible current sources and open links (no new research to produce it)",
+   "steps": [
+    {
+     "step": "Verify, without starting new research, which strategic tools have current accessible outputs (dashboard, radars, DREAM, scouting, open questions, candidate cards) and which links are incomplete; route a missing link to HE",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "Report to the operator in chat (Italian), briefly, the four items",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_4_STANDING": {
+   "order": 4,
+   "title": "Standing function until the campaign window ends or its budget is exhausted: hourly mechanical check, evaluation when a decision is due, forwarding, follow-up to consumption",
+   "steps": [
+    {
+     "step": "Third (last) strategic invocation: decide whether it is due. Triggers coalesce: the ADV-003 delivery (SCI, package expected on main about 22:40-23:10Z, disposed by the IT Orchestrator) and the roadmap edit of OBJ_2. Run strategic_advisor.py evaluate only if the delivery or the new directions make a decision useful; otherwise record why the previous assessment stands. Never renew, never a fourth assignment (budget.json: max_assignments 3, drafted 3)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "Follow ADV-003 from SENT to TAKEN (ORCH-ADV003-20261113) to EXECUTED to CONSUMED (disposition in ORCH-ADVISOR-PILOT-20261113 OBJ_P6) and say which of the four levels each has reached; usefulness is not judged by these levels",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "At expiry (2026-11-14T18:22:36Z) or earlier if the pilot is stopped: delete this session's own recall, hand the Orchestrator (IT) the advisor-side inputs of the pilot report (invocation costs from meta.json, recall counts, deliveries), and record the sequence roadmap -> choice -> assignment -> result -> consumption -> re-evaluation as it actually happened, including where it did not",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_5_COST": {
+   "order": 5,
+   "title": "Account this session's own cost apart from the Advisor's invocations and the assigned batches",
+   "steps": [
+    {
+     "step": "Count recalls fired, ticks run, deliveries made and tokens of this session (usage from the session transcript, read at report time, not estimated); state that it is subscription use, not money",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ },
+ "DECISIONS_TAKEN": [
+  {
+   "what": "Use a distinct mandate record for the presidio instead of editing ORCH-ADVISOR-PILOT-20261113",
+   "alternatives_rejected": "adding steps to the IT Orchestrator's record (would blur two owners and make the monitor attribute my work to its session)",
+   "consulted": "HE (transfer message), the operator's prompt",
+   "reversibility": "full: the record can be set CANCELLED",
+   "how_to_revert": "set MANDATE_STATE to CANCELLED"
+  },
+  {
+   "what": "Work in the worktree .claude/worktrees/adv on branch task/adv for edits; run every campaign command from the root checkout",
+   "alternatives_rejected": "committing on main from the root (allowed by 21e for a finished change, but the roadmap and this record are two edits and the root must stay clean for the other sessions' landings)",
+   "consulted": "HE (root-only rule for the campaign state)",
+   "reversibility": "full",
+   "how_to_revert": "git worktree remove"
+  }
+ ]
+}
