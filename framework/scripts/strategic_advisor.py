@@ -794,6 +794,9 @@ def register_assignments(campaign: Path, label: str, text: str) -> list[dict[str
     return made
 
 
+SENDER_RECORDS = ("PROACTIVE-ADVISOR", "ADV-PRESIDIO", "ADV-SESSION")   # the records of the sessions that draft and deliver: their naming a draft or its delivery is not a recipient taking it in charge
+
+
 def assignment_states(campaign: Path) -> dict[str, dict[str, Any]]:
     """Per assignment, the evidence levels kept apart: DRAFTED (saved) -> SENT (the channel accepted a message: recorded by the sender) -> TAKEN (its id is in a task record) -> EXECUTED (a
     DONE step in a record carries its id) . UNREACHABLE and the other rows are states of their own. None of them says the result was useful."""
@@ -824,8 +827,8 @@ def assignment_states(campaign: Path) -> dict[str, dict[str, Any]]:
                 continue
             for ident in out:
                 h, o = walk(d, ident)
-                if "PROACTIVE-ADVISOR" in path.name:
-                    continue                                      # the campaign's own record names the drafts: that is not a recipient taking one in charge
+                if any(tag in path.name for tag in SENDER_RECORDS):
+                    continue                                      # the sender's own records name the drafts and their delivery (a DONE delivery step included): that is not a recipient taking one in charge
                 if h and "TAKEN" not in out[ident]["levels"]:
                     out[ident]["levels"].append("TAKEN")
                 if o and "EXECUTED" not in out[ident]["levels"]:
