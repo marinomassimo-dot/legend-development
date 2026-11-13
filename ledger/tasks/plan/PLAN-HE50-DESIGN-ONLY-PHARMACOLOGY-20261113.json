@@ -1,0 +1,107 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+  "TASK_ID": "PLAN-HE50-DESIGN-ONLY-PHARMACOLOGY-20261113",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "plan",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-11-13",
+  "OBJECTIVE": "HE50: make design-only knowledge (steps, controls, branches) consumable by the generator and keep pharmacological roles (probe, comparator, hypothesis, candidate support) in context, reusing existing fields and readers; no new framework, ontology, gate or advisor invocation.",
+  "worktree": ".claude/worktrees/he50",
+  "branch": "task/he50",
+  "CURRENT_STATE": "OPEN",
+  "CHECKPOINT": {
+    "last_verified_result": "none yet",
+    "first_incomplete_work": "OBJ_1_RECONCILE"
+  },
+  "AUTHORISED_QUEUE_20261113": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_1_RECONCILE": {
+      "order": 1,
+      "title": "Reconcile advisor_followup_20261112 and IT49/SCI49 results; read the named packages and readers; agree the shared-file boundary with the Orchestrator",
+      "steps": [
+        {
+          "step": "Reconcile advisor_followup_20261112 and IT49/SCI49 results; read the named packages and readers; agree the shared-file boundary with the Orchestrator",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_2_DESIGN_ONLY": {
+      "order": 2,
+      "title": "Smallest link that lets the generator consume a design-only package (steps, controls, branches) through existing readers; ISR case plus one differently shaped package; before/after diff",
+      "steps": [
+        {
+          "step": "Smallest link that lets the generator consume a design-only package (steps, controls, branches) through existing readers; ISR case plus one differently shaped package; before/after diff",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_3_ROLES": {
+      "order": 3,
+      "title": "Check RA839/sulforaphane, KI-696, ML133 family-level, Kir2 activators on the real path; fix only the demonstrated defect",
+      "steps": [
+        {
+          "step": "Check RA839/sulforaphane, KI-696, ML133 family-level, Kir2 activators on the real path; fix only the demonstrated defect",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_4_IDENTITIES": {
+      "order": 4,
+      "title": "Complete the relevant technical deltas of SCI48/SCI49 after checking what the Orchestrator applied; recognition vs reconciliation",
+      "steps": [
+        {
+          "step": "Complete the relevant technical deltas of SCI48/SCI49 after checking what the Orchestrator applied; recognition vs reconciliation",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_5_REANALYSIS": {
+      "order": 5,
+      "title": "IT49-Q02 ISR gene extraction from the cellular tables, only if not done or assigned elsewhere",
+      "steps": [
+        {
+          "step": "IT49-Q02 ISR gene extraction from the cellular tables, only if not done or assigned elsewhere",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_6_VERIFY": {
+      "order": 6,
+      "title": "Tests for the concrete failure modes with real examples and small fixtures; show the consuming command",
+      "steps": [
+        {
+          "step": "Tests for the concrete failure modes with real examples and small fixtures; show the consuming command",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_7_DELIVERY": {
+      "order": 7,
+      "title": "Integration, publication, CI, cleanup; final report in Italian",
+      "steps": [
+        {
+          "step": "Integration, publication, CI, cleanup; final report in Italian",
+          "status": "PENDING",
+          "owner": "plan",
+          "evidence": ""
+        }
+      ]
+    }
+  },
+  "VERIFICATION_EVIDENCE": [],
+  "MANDATE_STATE": "OPEN"
+}
