@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-12T22:37Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "unavailable",
+  "references": "not_read",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-12T22:52Z",
+ "event_id": "FTR-20261112-37824663-72",
+ "evidence_basis": [
+  "Abstract: three postmortem donors, about 100 dissections, more than three million nuclei, 461 clusters and 3313 subclusters. The paper's cluster and supercluster names were not compared with the HPA names."
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cell_context_verify_sci49_20261112/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/cell_context_verify_sci49_20261112/verify/verdicts.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-37824663-97",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record abstract (efetch) read 2026-11-12; the Science page answered with a bot check (HTTP 403) and no PMCID exists, so the full text was not reached; provenance of the HPA table taken from the HPA brain resource page, not from the paper",
+ "study_id": {
+  "doi": "10.1126/science.add7046",
+  "pmid": "37824663"
+ },
+ "workflow": "SCI49 package A blind verifier V11 (ORCH-SCI49-20261112, actor cx-y), verification of the biological inferences of SCI47 package B; prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

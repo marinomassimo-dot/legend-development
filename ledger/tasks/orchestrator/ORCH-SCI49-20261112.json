@@ -1,0 +1,104 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-SCI49-20261112",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Operator mandate SCI49 2026-11-12 (about ten hours from effective start): (A) independent verification by a blind verifier of the biological inferences of SCI47 package B already used by consumers (KCNQ2 low human value; OPC participation in a bath-applied Kv7 manipulation; functional data needed; HPA provenance and independence; necessity of the OPC-aware control); (B) drug-name pharmacological search on the Kir2 route left open after IT48 (IT48-Q01): which compounds or probes have documented pharmacology sufficient to make a Kir2 lever testable in WWOX physiology; up to three conditional hypotheses, or none. Deliver each package as soon as verified. Producer sonnet/medium, verifier sonnet/high, one delegate at a time, each resume counts as a launch. Zero spend, no contact, no personal data, no clinical recommendation, no new framework. Final report in Italian opens with: Quale attribuzione biologica \u00e8 diventata pi\u00f9 affidabile e quale confronto farmacologico possiamo ora mettere alla prova?",
+ "START_UTC": "2026-11-12T23:30:00Z",
+ "BASELINE": "main 182d3b1b (SCI48 closure published). Worktree .claude/worktrees/sci49, branch task/sci49. IT48 (integrator) works on task/it48, not yet on main; it already applied SCI48 deltas there (commit 8fe57179): consumption on main to be verified after it lands. IT47-Q04 and IT48-Q01 OPEN and unassigned.",
+ "MANDATE_STATE": "OPEN",
+ "CURRENT_PACKAGE": {
+  "id": "A-landed",
+  "state": "package A battery PASS WITH SKIPS; landing",
+  "delegate_active": "none",
+  "updated": "2026-11-13"
+ },
+ "RESUME": "Package A written (README, consumer_delta, SCI47 README dated update applied). Next: pre-freeze suites, merge main, gate, battery on the frozen SHA, land A, message integrator; then package B producer (BRIEF_P.md).",
+ "DECISIONS_TAKEN": [],
+ "DELEGATIONS": [
+  "V11 verifier cx-y (agent ab6ff61c, legend-delegate): asked sonnet/high; read back sonnet x88, high x88; 88 turns, output 94,807, cache read 12,930,454, birth context 18,658; A1-A5 all supported with corrected formulations; 10 staged receipts (-72)"
+ ],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "AUTHORISED_QUEUE_20261112C": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_A": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Bind marker; reconcile SCI48 closure, IT47/IT48 state, IT47-Q04 and IT48-Q01",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "marker recognised; SCI48 closure published 182d3b1b; IT48 integrator read-only: it applied SCI48 deltas on task/it48 (8fe57179), not on main; IT47-Q04 and IT48-Q01 OPEN and unassigned"
+    },
+    {
+     "step": "S0 for A (propositions) and B (frame, priors, stop) written and committed before any reading",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "S0_before_verification.md and S0_before_search.md committed 95877b97 before any reading"
+    },
+    {
+     "step": "Verifier brief A; one blind verifier (sonnet high) with the originals; staged receipts validated",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "verifier V11 ab6ff61c: sonnet/high read back high x88; 88 turns, output 94,807, cache read 12,930,454; verdicts 33 rows (13 numbers reproduced, 20 interpretations), 10 staged receipts (-72) validated"
+    },
+    {
+     "step": "Apply corrections to the decisive propositions only; README answer-first for A; consumer_delta A; deliver A to the integrator",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_B": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Producer brief B; one producer (sonnet medium); staged receipts validated",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "One blind verifier (sonnet high) with its own strings; corrections and a narrow recheck",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "README answer-first for B (hypotheses at most three or none), minimum test, consumer_delta B; deliver B",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_C": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Landing per package: pre-freeze suites, gate, LINT, receipts, growth, verify_run on the frozen SHA, task_close, safe_push; clean own temporaries",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Self-evaluation, DREAM, capability scout, takeaways, final Italian report",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ },
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261112-225751-28cac147",
+   "label": "battery",
+   "sha": "ea0a06656e6409ef5259dce8cc2e336e028021f6",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-225751-28cac147",
+   "log_sha256": "8f008c5d497c37495e2e1891eec64d995946559055f5bce30133fb77bb9f31b4",
+   "clone": "REMOVED",
+   "attribution": "PASS WITH SKIPS (247 targets, 12 skipped) on the package A candidate ea0a0665 (A README, consumer delta, verifier output, S0 files and briefs, dated SCI47 update); attributed to that SHA only; later commits are closure-only"
+  }
+ ]
+}
