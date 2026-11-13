@@ -25,3 +25,6 @@ ChEMBL REST (plain curl; answered HTTP 200 on 2026-11-13): activity rows on the 
 
 ## 6 · Perimeter, depth and stop
 The join and the counts are mechanical (script, tables kept); one blind verifier (sonnet, high) on the decisive per-compound statements and on the denominator; no recursion; no edit to IT29 files or any shared consumer, ranking, need, registry or the receipt ledger; consumer sentences are located by `git grep` (not the two large registries) and proposed, not edited. Stop when the 20 compounds and 11 compound rows carry a category with a source, or the reason a category cannot be assigned is stated.
+
+## Addendum 2026-11-13 (dated; sections above unedited)
+Counting error in section 2: the 31-row layer has **9 compound rows and 22 genetic rows**, not "11 and 20" (S1-02, S1-04, S1-05, S1-06, S1-07, S1-08, S1-09, S1-10, S1-11 are the compound rows). The denominator used below is 9.

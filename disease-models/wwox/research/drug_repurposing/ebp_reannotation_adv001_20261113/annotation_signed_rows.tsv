@@ -1,0 +1,10 @@
+row_id	evidence_row	target_symbol	action	direction	intervention_type	source_id	ebp_relation	consequence
+S1-02	R33	CHRM1	inhibit	context_dependent	compound	30046109	muscarinic target; the compound class includes documented EBP inhibitors (benztropine, clemastine)	already context_dependent in IT29 (attribution contested): no new limit
+S1-04	R33	CHRM3	inhibit	context_dependent	compound	30046109	muscarinic target; the compound class includes documented EBP inhibitors (benztropine, clemastine)	already context_dependent in IT29 (attribution contested): no new limit
+S1-05	R30	CYP51A1	inhibit	favourable	compound	30046109	sterol-pathway enzyme other than EBP	sterol-pathway by design; EBP unmeasured for these compounds
+S1-06	R31	EBP	inhibit	favourable	compound	30046109	EBP is the stated target	EBP route by design: not a confound
+S1-07	R38	EBP	inhibit	favourable	compound	30773481	EBP is the stated target	EBP route by design: not a confound
+S1-08	R31	TM7SF2	inhibit	favourable	compound	30046109	sterol-pathway enzyme other than EBP	sterol-pathway by design; EBP unmeasured for these compounds
+S1-09	R26	NR3C1	activate	favourable	compound	25896324	receptor agonist; no sterol claim; EBP unmeasured	no EBP re-attribution
+S1-10	R42	RXRA	activate	favourable	compound	21131950	receptor agonist; no sterol claim; EBP unmeasured	no EBP re-attribution
+S1-11	R42	RXRG	activate	favourable	compound	21131950	receptor agonist; no sterol claim; EBP unmeasured	no EBP re-attribution
