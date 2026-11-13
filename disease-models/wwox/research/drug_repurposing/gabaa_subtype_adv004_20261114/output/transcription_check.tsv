@@ -1,0 +1,39 @@
+check_id	it14_item	it14_value	your_value	match	note
+T01	Ralvenius clobazam alpha1 EC50	0.61 uM	0.61 uM (SD in source)	yes	IT14 omits SD and n
+T02	Ralvenius clobazam alpha1 Emax	171 percent	171 percent (SD in source)	yes	number matches; the 100 percent reference is not defined in the paper text, and IT14 gives no definition either
+T03	Ralvenius clobazam alpha2 EC50	0.39 uM	0.39 uM (SD in source)	yes	IT14 omits SD and n
+T04	Ralvenius clobazam alpha2 Emax	134 percent	134 percent (SD in source)	yes	number matches; the 100 percent reference is not defined in the paper text, and IT14 gives no definition either
+T05	Ralvenius clobazam alpha3 EC50	1.10 uM	1.10 uM (SD in source)	yes	IT14 omits SD and n
+T06	Ralvenius clobazam alpha3 Emax	317 percent	317 percent (SD in source)	yes	number matches; the 100 percent reference is not defined in the paper text, and IT14 gives no definition either
+T07	Ralvenius clobazam alpha5 EC50	0.50 uM	0.50 uM (SD in source)	yes	IT14 omits SD and n
+T08	Ralvenius clobazam alpha5 Emax	157 percent	157 percent (SD in source)	yes	number matches; the 100 percent reference is not defined in the paper text, and IT14 gives no definition either
+T09	Ralvenius N-desmethylclobazam alpha1 EC50	0.57 uM	0.57 uM (SD in source)	yes	IT14 omits SD and n
+T10	Ralvenius N-desmethylclobazam alpha1 Emax	143 percent	143 percent (SD in source)	yes	number matches; the 100 percent reference is not defined in the paper text, and IT14 gives no definition either
+T11	Ralvenius N-desmethylclobazam alpha2 EC50	0.49 uM	0.49 uM (SD in source)	yes	IT14 omits SD and n
+T12	Ralvenius N-desmethylclobazam alpha2 Emax	253 percent	253 percent (SD in source)	yes	number matches; the 100 percent reference is not defined in the paper text, and IT14 gives no definition either
+T13	Ralvenius N-desmethylclobazam alpha3 EC50	0.81 uM	0.81 uM (SD in source)	yes	IT14 omits SD and n
+T14	Ralvenius N-desmethylclobazam alpha3 Emax	245 percent	245 percent (SD in source)	yes	number matches; the 100 percent reference is not defined in the paper text, and IT14 gives no definition either
+T15	Ralvenius N-desmethylclobazam alpha5 EC50	0.58 uM	0.58 uM (SD in source)	yes	IT14 omits SD and n
+T16	Ralvenius N-desmethylclobazam alpha5 Emax	148 percent	148 percent (SD in source)	yes	number matches; the 100 percent reference is not defined in the paper text, and IT14 gives no definition either
+T17	Ralvenius alpha2/alpha1 efficacy ratio diazepam	0.88	0.88 (SD 0.13)	yes	ratio is Emax(alpha2)/Emax(alpha1) per Table 1 footnote a
+T18	Ralvenius alpha2/alpha1 efficacy ratio clobazam	0.78	0.78 (SD 0.12)	yes	ratio is Emax(alpha2)/Emax(alpha1) per Table 1 footnote a
+T19	Ralvenius alpha2/alpha1 efficacy ratio N-desmethylclobazam	1.77	1.77 (SD 0.28)	yes	ratio is Emax(alpha2)/Emax(alpha1) per Table 1 footnote a
+T20	Hammer clobazam alpha1 EC50 nM	132	132 nM	yes	IT14 omits pEC50 SEM, Imax and N
+T21	Hammer clobazam alpha2 EC50 nM	138	138 nM	yes	IT14 omits pEC50 SEM, Imax and N
+T22	Hammer clobazam alpha3 EC50 nM	240	240 nM	yes	IT14 omits pEC50 SEM, Imax and N
+T23	Hammer clobazam alpha5 EC50 nM	174	174 nM	yes	IT14 omits pEC50 SEM, Imax and N; n = 2 applies only to alpha5 (alpha1-3 n 5-6); IT14 table header 'n=2' sits beside alpha5 only, consistent
+T24	Hammer N-desmethylclobazam alpha1 EC50 nM	151	151 nM	yes	IT14 omits pEC50 SEM, Imax and N
+T25	Hammer N-desmethylclobazam alpha2 EC50 nM	138	138 nM	yes	IT14 omits pEC50 SEM, Imax and N
+T26	Hammer N-desmethylclobazam alpha3 EC50 nM	282	282 nM	yes	IT14 omits pEC50 SEM, Imax and N
+T27	Hammer N-desmethylclobazam alpha5 EC50 nM	98 (n=2)	98 (123 and 79), n=2 nM	yes	IT14 omits pEC50 SEM, Imax and N; n = 2 applies only to alpha5 (alpha1-3 n 5-6); IT14 table header 'n=2' sits beside alpha5 only, consistent
+T28	Hammer system/readout	human receptors, Xenopus oocytes, GABA EC20, EC50 nM	human subunits, oocytes, TEVC, GABA EC20 re-determined daily, EC50 nM	yes	
+T29	Hammer authors conclude non-selective	authors conclude non-selective	Conclusion: non-selective in potency and efficacy	yes	but Table 3 reports significant Imax differences for N-desmethylclobazam (alpha1 lower than alpha2 and alpha3, P<0.05) that the authors call not pertinent
+T30	Jensen clobazam Ki range	205 to 753 overall	205 (alpha2) to 753 (alpha3) nM	yes	
+T31	Jensen N-desmethylclobazam Ki range	147 to 668	147 (alpha2) to 668 (alpha3) nM	yes	
+T32	Jensen order	alpha2 < alpha5 < alpha1 < alpha3 (alpha2 highest affinity)	alpha2<alpha5<alpha1<alpha3 for both compounds (Ki)	yes	order read on Ki increasing = affinity decreasing
+T33	Jensen rat brain Ki clobazam	151	151 nM	yes	
+T34	Jensen rat brain Ki N-desmethylclobazam	133	133 nM	yes	
+T35	Jensen Lundbeck employees	Lundbeck employees	All authors Lundbeck employees; fully funded by Lundbeck	yes	
+T36	Jensen binding system	binding, Ki nM	human alpha_xb2g2 in HEK293 homogenates, [3H]flumazenil, 4 C	yes	IT14 does not state species (human) or beta2
+T37	Ralvenius system	rat subunits, HEK293, GABA EC10; EC50 uM / Emax percent	as stated	yes	IT14 omits that beta isoform differs between alpha subtypes and Table 1 vs Methods alpha5 beta label
+T38	IT14 omissions	(no value)	Ralvenius diazepam EC50/Emax at four subtypes; Hammer Imax, clonazepam, diazepam 3 uM and zolpidem points; Jensen clonazepam, zolpidem, pKi, n	not_in_source	not a transcription error; the IT14 table is a subset

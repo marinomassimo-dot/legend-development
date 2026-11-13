@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-13T23:48:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "tables": "read",
+  "figures": "captions_only",
+  "discussion": "read",
+  "limitations": "read",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-13T23:51:00Z",
+ "event_id": "FTR-20261113-27392635-62",
+ "evidence_basis": [
+  "verbatim_locator | proposition: Table 1 gives EC50 and Emax of diazepam, clobazam and N-desmethylclobazam at four rat GABA-A subtypes in HEK293 cells | Results 3.1 | \"NDMC potentiated α2 and α3GABAARs to a considerably higher degree (253 and 245%) than α1 and α5 (143 and 148%)\"",
+  "verbatim_locator | proposition: GABA at EC10 per subtype, co-application without preincubation, room temperature, -60 mV | Methods 2.4 | \"were co-applied with GABA without preincubation\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/output/numbers.tsv",
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/output/conditions.tsv",
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/output/answer.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4981430 full text via Europe PMC fullTextXML fetched 2026-11-13 (one request); text, Methods, Tables 1-2, figure legends read; figures not viewed because the PMC article page returned a reCAPTCHA challenge (recorded unreachable, not retried by another route); supplement (Figs S1, S2) not reached; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.neuropharm.2016.07.004",
+  "pmid": "27392635"
+ },
+ "workflow": "ADV-004 producer P (gp-z): complete-original reading of the three GABA-A primaries behind NP3P3; staged for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,9 @@
+query_id	route	string_or_url	run_at_utc	hits	what_was_done
+Q01	fulltext_receipts.py status	--pmid 27392635 / 25798598 / 24533090	2026-11-13	0 receipts each	ledger check before reading
+Q02	PubMed ID converter	PMC4370687	2026-11-13	1	PMID 25798598, DOI 10.1371/journal.pone.0120239
+Q03	paper_packet.py claim	three PMIDs, actor gp-z	2026-11-13	3 claimed	claimed
+Q04	Europe PMC fullTextXML (plain curl)	PMC4981430, PMC4370687, PMC3922815	2026-11-13	3 x HTTP 200	one request each; text, tables, captions
+Q05	PMC article page (plain curl, one request each, spaced)	PMC4981430	2026-11-13	reCAPTCHA challenge	recorded unreachable; not retried
+Q06	PMC article page	PMC4370687	2026-11-13	HTTP 200	figure links; Figs 3 and 4 downloaded to scratchpad and viewed
+Q07	PMC article page	PMC3922815	2026-11-13	reCAPTCHA challenge	recorded unreachable; not retried
+Q08	Europe PMC supplementaryFiles	PMC4370687 and PMC3922815	2026-11-13	archive of figure images	not unpacked; not retried; not requested for PMC4981430 (blocked)
