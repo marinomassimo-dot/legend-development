@@ -7,15 +7,15 @@
  "START_UTC": "2026-11-12T07:40:00Z",
  "OBJECTIVE": "IT47: from the available hypotheses to effective pharmacological generation: make the generator consume the hypotheses HE46 made accessible (two packages of different structure), consume all of SCI46 including the expression follow-up with reviewed wording, correct two reasoning jumps in the IT46 experimental text, prove the change on a new case against an independent reference, show what to investigate first (five languages, phone), prepare the Claude Science comparison entry point, DREAM with an effect on the next work. Drug repurposing for WWOX loss of function; gene therapy outside the pharmacological proposals.",
  "AUTHORISED_QUEUE_20261108": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0": {
    "order": 1,
    "steps": [
     {
      "step": "Close the previous cycle and fix the baseline: remote, checkout, record, deliveries, workflows (IT46 CI #660 and view publication #35 on cff57777, site check, IT46 record steps P7 and P10); distinguish battery candidate, integrated commit and published SHA",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "IT46 on main cff57777 (battery 5a775909 PASS WITH SKIPS 244/11; integrated cfac505c refused by the publication gate, republished cff57777). IT46 CI #660 success, view publication #35 success, five language editions checked. IT47 first increment: battery candidate 6991d539 = PASS WITH SKIPS (245 targets/11 skipped, verify_run 20261112-105142-1e955bfd); the landed commit is a later merge (HE47, SCI47 A and B, views, receipts) NOT covered by a battery: covered by targeted suites, view suite, lint, growth anchors, shareable audit and the push gate. OPEN: CI and site check on the IT47 landing SHA."
+     "evidence": "IT46 on main cff57777 (battery 5a775909 PASS WITH SKIPS 244/11; integrated cfac505c refused by the publication gate, republished cff57777). IT46 CI #660 success, view publication #35 success, five language editions checked. IT47 first increment: battery candidate 6991d539 = PASS WITH SKIPS (245 targets/11 skipped, verify_run 20261112-105142-1e955bfd); the landed commit is a later merge (HE47, SCI47 A and B, views, receipts) NOT covered by a battery: covered by targeted suites, view suite, lint, growth anchors, shareable audit and the push gate. OPEN: CI and site check on the IT47 landing SHA. CI #672 and view publication #38 on b67d209a succeeded; 4ff3ced5 (#667) and 6882ef56 (#675), a1cd5750 (#676), 2454a3ac (#680) succeeded."
     }
    ]
   },
@@ -112,9 +112,9 @@
    "steps": [
     {
      "step": "Closure: verify_run batteries by SHA, land and publish, remote/CI/site for the relevant SHAs, cleanup of rebuildable temporaries, no cron or monitor added; pending checks stay open in the record",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Landed so far: d280c7c3 (CI #666 FAIL: stale ranking.json, my miss), 3b877bfc+4ff3ced5 (ranking fix, Chromium launcher order; CI #667 pending), 2afd1eea (find_chromium skips a candidate that cannot start; view suite 223 OK with the working Snap revision 3583). Batteries: 6991d539 PASS WITH SKIPS (earlier candidate only). The Snap launcher fails in turbovnc-desktop.service shells (Harness and mine): environment limit, not a content failure. OPEN: B1 candidate battery with CHROME_BIN=/snap/chromium/3583/..., landing, CI and site on the final SHAs."
+     "evidence": "Landed so far: d280c7c3 (CI #666 FAIL: stale ranking.json, my miss), 3b877bfc+4ff3ced5 (ranking fix, Chromium launcher order; CI #667 pending), 2afd1eea (find_chromium skips a candidate that cannot start; view suite 223 OK with the working Snap revision 3583). Batteries: 6991d539 PASS WITH SKIPS (earlier candidate only). The Snap launcher fails in turbovnc-desktop.service shells (Harness and mine): environment limit, not a content failure. OPEN: B1 candidate battery with CHROME_BIN=/snap/chromium/3583/..., landing, CI and site on the final SHAs. Landed d280c7c3 (CI #666 FAIL, stale ranking.json, my miss, fixed 3b877bfc), 4ff3ced5, 2afd1eea, b67d209a; batteries by SHA: 6991d539 PASS WITH SKIPS; 90cc8a91 FAIL (i18n inventory, fixed 3870f545). The landed commits have CI verdicts, not full batteries of their own. Worktrees and /tmp temporaries not removed (cleanup needs authorisation / classifier refused)."
     }
    ]
   }

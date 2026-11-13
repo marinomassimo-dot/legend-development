@@ -7,7 +7,7 @@
  "START_UTC": "2026-11-12T20:30:00Z",
  "OBJECTIVE": "LEGEND IT48 (operator mandate, queued after IT47; no second copy of IT47): close IT47 residuals, then run the Strategic Advisor Pilot Mandate (advisor_build_20261112/PILOT_MANDATE.md, applied verbatim: at most 24 hours from the first Stage A dispatch, two Stage A and two Stage B assessments, two bounded increments, no renewal) as its operational container. Improves WWOX loss-of-function drug-repurposing research choices; no ranking, sign or qualification is changed to show an effect; no predictive-improvement claim from better access to knowledge. Final report in Italian opens with: 'Quale scelta di ricerca e migliorata, oppure non e migliorata, grazie a questo ciclo?'.",
  "AUTHORISED_QUEUE_20261108": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0": {
    "order": 1,
    "steps": [
@@ -59,7 +59,7 @@
      "step": "Closure: verify_run on the final candidate, landing, CI/site, cleanup of own temporaries, final evidence report in Italian with the six pilot answers and Session Takeaway",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Landed 6882ef56 (gate PASS, ls-remote verified). Battery attribution: the IT48 content candidate has no full release battery of its own; verified by targeted suites (phase sweep, ranking, comparison engine, i18n) and the full view suite with the older Snap revision (223 tests OK, default selection); CI run on 6882ef56 pending at the time of writing (a failure or success there is the verdict of that SHA). Cleanup deferred to IT49 closure (worktrees it44.. etc., /tmp temporaries). MANDATE_STATE stays OPEN until the CI verdict is read."
+     "evidence": "Landed 6882ef56 (gate PASS, ls-remote verified). Battery attribution: the IT48 content candidate has no full release battery of its own; verified by targeted suites (phase sweep, ranking, comparison engine, i18n) and the full view suite with the older Snap revision (223 tests OK, default selection); CI run on 6882ef56 pending at the time of writing (a failure or success there is the verdict of that SHA). Cleanup deferred to IT49 closure (worktrees it44.. etc., /tmp temporaries). MANDATE_STATE stays OPEN until the CI verdict is read. UPDATE: CI #675 on 6882ef56 succeeded; MANDATE_STATE COMPLETE."
     }
    ]
   }

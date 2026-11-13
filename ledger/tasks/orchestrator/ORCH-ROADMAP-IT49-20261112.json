@@ -7,7 +7,7 @@
  "START_UTC": "2026-11-12T23:00:00Z",
  "OBJECTIVE": "LEGEND IT49 (operator mandate, queued after IT48): turn available knowledge and verified deliveries into better pharmacological hypotheses, comparisons and experimental decisions; test whether the capability generalises on one bounded case. Indicative window up to ten hours from the effective start; finish earlier when done. The Strategic Advisor ceiling (A1,B1,A2,B2) is reached: no further invocation. No ranking, sign or qualification changes to show an effect; no predictive-improvement claim from better access to knowledge. Final report in Italian opens with: 'Quale capacita generativa e diventata utilizzabile, e quale decisione farmacologica o sperimentale cambia?'.",
  "AUTHORISED_QUEUE_20261108": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P1": {
    "order": 1,
    "steps": [
@@ -79,9 +79,9 @@
    "steps": [
     {
      "step": "Closure: derivatives regenerated after the last receipts/data, browser verified in the real runtime, batteries attributed by SHA, landing, CI, cleanup of own temporaries; final report in Italian",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Derivatives regenerated after the last receipts (ledger 1,865) and data; browser verified in the real runtime: full view suite 223 tests OK with the older Snap revision selected automatically (the Snap launcher itself fails in turbovnc-desktop shells); landed 2454a3ac; CI #680 and view publication #41 succeeded; five-language site checked (HTTP 200, new reader rows present in it.html). Not done: removal of finished worktrees and /tmp temporaries (needs operator authorisation / classifier refused)."
     }
    ]
   }
