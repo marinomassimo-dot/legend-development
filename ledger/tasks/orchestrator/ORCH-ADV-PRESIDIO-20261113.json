@@ -133,14 +133,13 @@
      "step": "Follow ADV-004 and ADV-005 from SENT to TAKEN (the id in the recipient's task record) to EXECUTED; if a recipient is silent for a full hourly cycle, re-check liveness and re-send once through the supported channel",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "ADV-004: SENT (msg cd0215f1) -> TAKEN: SCI message 2026-11-13 and its record ORCH-ADV004-20261113 (worktree adv004, MANDATE_STATE OPEN, read by this session: objective names ADV-004, frame S0 committed, one producer sonnet/medium, one blind verifier, no wet work, delivery within the 09:30Z window, landing battery only after IT's battery). ADV-005: SENT (msg 4daef0fc) -> TAKEN: HE record PLAN-ADV-SESSION-20261113 ADV_ASSIGNMENTS block (on main); HE does one of activity_search.py or the scout CONTEXT defect and reports the choice. Execution of both pending."
     },
     {
      "step": "HE bounded correction: strategic_advisor.py assignment_states counts the presidio's own record as a recipient taking an id in charge and as a DONE step (status showed ADV-004/005 EXECUTED one minute after SENT); fix before invocation 4 builds its brief, with one test case",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "orchestrator",
-     "blocker": "HE has to land the fix (message 458b6d8d, 2026-11-13T23:4xZ); the wrong level would otherwise enter the next Stage P brief and the operator report",
-     "unblock": "HE's fix on main and `strategic_advisor.py status` showing ADV-004/005 as SENT until a recipient's own record names them; until then levels are read from the recipients' records, not from status"
+     "evidence": "HE landed the fix on main af549c19 (message 2026-11-13, gate PASS): assignment_states ignores the sender's records (PROACTIVE-ADVISOR and ADV-PRESIDIO); negative-control test. HE did not exclude ADV-SESSION as I had suggested, correctly: Harness is a recipient and records ADV-005 there. Verified: status now reads ADV-004 SENT, ADV-005 TAKEN, ADV-001..003 EXECUTED. Residual stated by HE and accepted: the Orchestrator's pilot record names ids it disposes, which counts as TAKEN for any recipient (harmless for the levels, to be said in the pilot report). Second residual found by me: status reads only ledger/tasks on the checkout, so a recipient's record that lives in an unmerged worktree (SCI's ORCH-ADV004) shows SENT until it lands."
     },
     {
      "step": "On each result: read the original delivery, say what it strengthens, weakens, leaves unchanged or opens, hand the consumer delta to the IT Orchestrator by message with the folder path, verify the disposition on main, then decide: deepen, change thread, or suspend with a reopening condition",
