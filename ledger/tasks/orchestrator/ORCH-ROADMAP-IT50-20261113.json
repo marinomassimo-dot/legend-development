@@ -7,7 +7,7 @@
  "START_UTC": "2026-11-13T08:30:00Z",
  "OBJECTIVE": "LEGEND IT50 (operator mandate, queued after IT49; window at most ten hours from effective start, no automatic renewal): improve generative capacity - turn available evidence, relations and verified deliveries into pharmacological hypotheses, discriminating comparisons and useful experiments for WWOX loss of function; verification accompanies it. One new strategic consultation (at most one Stage A and one Stage B, existing procedure, configuration verified, no new spend; a failed attempt counts). Not an extension of the IT48 pilot. Science session has a generative mission starting from myelination: coordinate, do not duplicate. Design-only packages: Harness builds a minimal link; no competing reader. No ranking/sign/qualification change to show an effect; no predictive claim from better access. Final report in Italian opens with: 'Quale ipotesi, confronto farmacologico o esperimento LEGEND riesce ora a formulare meglio?'.",
  "AUTHORISED_QUEUE_20261108": {
-  "MANDATE_STATE": "COMPLETE",
+  "MANDATE_STATE": "OPEN",
   "OBJ_P1": {
    "order": 1,
    "steps": [
@@ -84,6 +84,61 @@
      "evidence": " 4e4e3e01 landed (gate PASS, ls-remote verified); CI #684 and view publication #43 succeeded; derivatives regenerated after the last data (no receipts this mandate; ledger 1,903); full view suite 225 tests OK (older Snap revision selected automatically), phase sweep clean apart from two output-format false alarms; site checked in five languages earlier in the cycle. Not done: worktree/temporary cleanup (needs operator authorisation / classifier refused). REOPENED for the late deliveries (SCI50, HE50): landing and CI pending for the second increment. Second increment: full view suite 225 tests OK, phase sweep clean (two output-format false alarms), shareable audit 10/10; landing and CI pending. FINAL: 4e4e3e01 (CI #684 success, publication #43), 8d00e3d1 (CI #688 success, publication #45), 98a91a8f (CI #689 success); records commit pending its own CI. Cleanup of worktrees and /tmp temporaries not done (operator authorisation / classifier refusal). Dashboard restyle belongs to Harness (task/dash): I do not touch views or the package on main until they land."
     }
    ]
+  },
+  "OBJ_P8": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "Receive the SCI51 package (m1_ebp_reagents_sci51_20261113, main 0813df3f) and its later corrections",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Delivered by SCI 2026-11-13 (message after battery PASS WITH SKIPS 251/12 on 4de7d608); the early-flag correction (structure not public, availability not stated, EBP activity unmeasured) read in the package README."
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "Read the whole package: README answer, conditions, outcomes, CORRECTIONS (15 of 53 rows defective, nine in SCI's own README/delta, corrected), consumer_delta rows 1-8",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Reading now; the three qualifications are kept apart in public text: no public structure / availability not stated / EBP activity unmeasured (unmeasured is not inactive). READ: README answer, conditions and outcomes headline, CORRECTIONS (15 of 53 rows defective at the recheck; nine in SCI's own README/delta), consumer_delta rows 1-8. The three qualifications are kept apart in public text: no public structure (a licence agreement withheld it) / availability not stated / EBP activity unmeasured (unmeasured is not inactive). I did not re-read the primaries; SCI's blind verifier did (75 of 92 rows correct at first pass, corrections applied and rechecked)."
+    }
+   ]
+  },
+  "OBJ_P10": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "Disposition per consumer_delta row (applied / rejected with reason / deferred with revival condition)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Planned: 1 applied (INV-06 clause, design role), 2 applied (IT50-Q03/Q04/Q09 notes), 3 applied (new rows IT51-Q01..Q05), 4 applied by SCI, 5 deferred to Harness (identities, no alias for the unpublished structure), 6 becomes IT51-Q05, 7 Harness (design_only registration), 8 applied (13 receipts). Dispositions: row 1 APPLIED (INV-06 X3 clause: the M1-selective arm is a design role; five languages); row 2 APPLIED (notes on IT50-Q03, Q04, Q09); row 3 APPLIED (IT51-Q01..Q05: Q01 wet, Q02 wet, Q03 and Q04 reading debts with blocked access, Q05 in silico re-annotation of the IT29 case-1 signed rows by EBP status, executable in a later batch); row 4 APPLIED by SCI (its own README); row 5 DEFERRED to Harness (identity declarations: TASIN-1 resolved to CHEMBL4514756/CID 1329829, benztropine parent CHEMBL1201203; no identity and no alias for the unpublished-structure reagent) with revival: when Harness registers identities; row 6 becomes IT51-Q05; row 7 DEFERRED to Harness (register the SCI50 README comparison and, if wanted, SCI51 outcomes.md read-only as design_only), revival: when Harness takes it; row 8 APPLIED (13 receipts: producer -66 then verifier -65, lineage declared for 39083422, no claim made on the delegate's behalf)."
+    }
+   ]
+  },
+  "OBJ_P11": {
+   "order": 11,
+   "steps": [
+    {
+     "step": "Update the consumers: INV-06 clause in five languages (coordinated with the restyle already on main: merge main first, regenerate from there), open questions, 13 receipts through the writer, derivatives",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Merge development/main (restyle 37095177) before regenerating; no copy older than main is regenerated over it. Consumers updated on top of main 0813df3f (the restyle 37095177 included; views and package regenerated from that tree, never from an older copy; shareable audit 10/10 after replacing a catalogue word by a descriptor in the public clause); 13 receipts recorded (ledger 1,943); ranking order digest unchanged."
+    }
+   ]
+  },
+  "OBJ_P12": {
+   "order": 12,
+   "steps": [
+    {
+     "step": "Final verification and landing: derivatives regenerated after the last receipts and data, view suite and shareable audit, landing, CI per SHA",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Verdicts stay with their SHAs. phase sweep and full view suite running on the candidate; landing and CI per SHA pending. Sweep clean (two output-format false alarms), full view suite 225 tests OK, shareable audit 10/10, derivatives current; landing next, CI verdict per SHA to follow."
+    }
+   ]
   }
  },
  "CONSULTATION_STAGE_A": {
@@ -155,6 +210,7 @@
   "expected": "qualified comparison, improved design, or the precise statement of what prevents it, with the sources tried; no ranking or qualification change",
   "disposition_pending": "on delivery: applied / rejected with reason / deferred with a revival condition; update open questions IT50-Q03, Q04, Q09 and the INV-06 consumers at the next safe boundary",
   "early_flag_2026-11-13": "SCI reports before landing: the M1-selective reagent named in SCI50 has a published Correction (PMID 39432800, 2024-10-21) and an Editorial Expression of Concern (PMID 40512803, 2025-06-13), both missed by the SCI50 producer and verifier; per the SCI51 verifier's reading of the notice its structure is not public and no EBP/sigma/Kir datum exists in the paper, so the reagent cannot be sourced or tested from the public record. NOT verified by me (PubMed metadata existence confirmed by SCI only). Treatment until SCI51 lands: the 'M1-selective reagent' of the INV-06 X3 variant clause (five languages, descriptors only, already published) and of IT50-Q04/Q09 is a DESIGN ROLE, not a purchasable reagent; no view text is changed now (the dashboard restyle by Harness is pending; a dated clause will follow with the SCI51 consumer_delta).",
-  "early_flag_correction_2026-11-13": "SCI withdrew the stronger sentence after a narrow recheck: the Editorial Expression of Concern (PMID 40512803, June 2025) states that a global licence and development agreement prevented inclusion of the structure; the Correction (PMID 39432800) concerns competing interests. Supported statement: no public structure; availability not stated in anything read; EBP activity unmeasured in every source reached. The X3 reagent-pair variant stands as a design role (the M1-selective arm) until a reagent of disclosed structure has its EBP activity measured. Also corrected by SCI: 'no M1-selective antagonist has an EBP datum in the sources reached' (the two clinical antimuscarinic drugs have positive EBP data; four unnamed antimuscarinics were EBP-negative in one OPC line); the CW compounds are 'M1-low in one single-point assay, not shown M1-clean'. Not verified by me; to be read in the SCI51 package."
+  "early_flag_correction_2026-11-13": "SCI withdrew the stronger sentence after a narrow recheck: the Editorial Expression of Concern (PMID 40512803, June 2025) states that a global licence and development agreement prevented inclusion of the structure; the Correction (PMID 39432800) concerns competing interests. Supported statement: no public structure; availability not stated in anything read; EBP activity unmeasured in every source reached. The X3 reagent-pair variant stands as a design role (the M1-selective arm) until a reagent of disclosed structure has its EBP activity measured. Also corrected by SCI: 'no M1-selective antagonist has an EBP datum in the sources reached' (the two clinical antimuscarinic drugs have positive EBP data; four unnamed antimuscarinics were EBP-negative in one OPC line); the CW compounds are 'M1-low in one single-point assay, not shown M1-clean'. Not verified by me; to be read in the SCI51 package.",
+  "queue_representation": "IT50 queue steps OBJ_P8..OBJ_P12 (operator integration 2026-11-13): the residual was first only a descriptive block outside the queue; the monitor reads the queue."
  }
 }

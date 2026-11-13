@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-13T15:13:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-13T15:27:00Z",
+ "event_id": "FTR-20261113-27798265-65",
+ "evidence_basis": [
+  "Main text and Methods read; EBP identified by rescue, knockdown and overexpression; direct binding not shown; no structure in text.",
+  "verbatim_locator | proposition: direct binding of TASIN-1 to EBP not established | Discussion | \"will be necessary to assess the direct interaction between TASIN-1 and EBP protein\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC7262871 via the PubMed full-text tool 2026-11-13; figures and supplementary figures S1-S13 not opened (TASIN-1 structure drawing in the paper not seen)",
+ "study_id": {
+  "doi": "10.1126/scitranslmed.aaf8127",
+  "pmid": "27798265"
+ },
+ "workflow": "SCI51 blind verifier V14 (m1_ebp_reagents_sci51_20261113), actor label me-y. Verification of decisive rows and identity; the claim step was refused by the permission classifier and was not worked around. Staged JSON for the Orchestrator; not recorded."
+}

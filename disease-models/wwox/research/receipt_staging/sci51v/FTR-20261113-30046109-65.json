@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-13T15:13:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-13T15:27:00Z",
+ "event_id": "FTR-20261113-30046109-65",
+ "evidence_basis": [
+  "Main text, Methods and all Extended Data legends read; heatmap, structures and bar charts not seen. Mouse primary OPC panels (300 nM TASIN-1) found in ED5 legend; four inert antimuscarinics not named.",
+  "verbatim_locator | proposition: six antimuscarinics inhibit M1, M3, M5 at the HTS dose; only clemastine and benztropine inhibit EBP and enhance formation | Results | \"only clemastine and benztropine inhibited EBP in OPCs, and only clemastine and benztropine enhanced oligodendrocyte formation\"",
+  "verbatim_locator | proposition: ketoconazole at a maximally effective dose is non-additive with the EBP-inhibiting enhancers | Results | \"did not enhance differentiation above levels seen for ketoconazole alone\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261105-30046109-06",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC6423962 via the PubMed full-text tool, fetched once 2026-11-13 (71.6k characters incl. all Extended Data legends); the PMC page was NOT requested by this verifier (reCAPTCHA to both earlier readers); no figure image seen",
+ "study_id": {
+  "doi": "10.1038/s41586-018-0360-3",
+  "pmid": "30046109"
+ },
+ "workflow": "SCI51 blind verifier V14 (m1_ebp_reagents_sci51_20261113), actor label me-y. Verification of decisive rows and identity; the claim step was refused by the permission classifier and was not worked around. Staged JSON for the Orchestrator; not recorded."
+}
