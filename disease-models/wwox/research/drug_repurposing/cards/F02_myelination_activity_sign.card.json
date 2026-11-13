@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "c04f88dba9a3073ff5602248f770c24d254d7aadc8f6a8aa2bb2a0d7c8bdafad",
+  "input_sha256": "1eccfd424460eb8a8554f20e8c9d352ed7a9909f924600b0adde8b5a0ac27cca",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -124,7 +124,7 @@
       }
     },
     "p4_card": {
-      "identity": "Pro-myelinating agents (muscarinic-antagonist class such as clemastine and benztropine, thyroid-hormone and antipsychotic routes) and, as a separate question, activity manipulation as a myelin lever.",
+      "identity": "Pro-myelinating agents (muscarinic-antagonist class such as clemastine and benztropine, thyroid-hormone and antipsychotic routes) and, as a separate question, activity manipulation as a myelin lever. [ADV-001] For clemastine and benztropine two routes are documented (M1 genetics in culture; EBP inhibition with zymostenol accumulation in mouse OPC sterol profiling) and their attribution is unsettled; tamoxifen has documented EBP inhibition and quetiapine one main-text report of it; EBP is unmeasured for the other antimuscarinics named. A profile of the pathway intermediates per compound before target attribution is a design position (INFERENZA), not a result. This does not say that EBP explains the muscarinic route, that unmeasured compounds act through EBP, or that M1 is irrelevant (ebp_reannotation_adv001_20261113).",
       "indication_and_transfer": "Only IF the Wwox-deficient oligodendrocyte lineage is itself the limiting compartment, which the neuron-versus-oligodendrocyte genetic arms argue against. Transfer unmeasured.",
       "novelty_for_woree": "N-13 stands. New: the earlier record (DL-MECH-031 point 2) proposed that reducing seizure load might itself improve myelination because myelination is activity-dependent. The best-matched non-WWOX datum points the other way for a seizing network: Knowles 2022, Nat Neurosci (PMID 35501379, abstract read; absence-seizure models, not WWOX) reports that seizure-driven activity increases oligodendrogenesis and myelination in the seizure network, is prevented by seizure suppression, and that blocking activity-dependent myelination lowers seizure burden. The Wwox-null brain is hypomyelinated despite bursting, so neither simple sign is established. Also found: the 'near-complete MBP rescue' of the neuronal AAV is image-only (DA-W2-011).",
       "state_of_known_roads": "map N-13, DL-MECH-031, HYP-20260709-07, N-15.",
