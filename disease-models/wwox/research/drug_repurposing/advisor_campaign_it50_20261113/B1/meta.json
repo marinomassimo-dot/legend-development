@@ -1,0 +1,150 @@
+{
+  "capture": {
+    "assessment_sha256": "d900a522239232dde7c4bb854148d6436d26b77c12d0095458a695398a37f883",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_campaign_it50_20261113-B1/stream.jsonl",
+    "raw_stream_sha256": "6ea6dc12a7bb64da6017f75c86d3e009c17bab10f324a65d3b52b974f9f9f692",
+    "source_session_id": "c46c8c8d-5efb-4910-ac79-c7cab7e623e8",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 21052
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-13T07:45:39Z",
+  "label": "B1",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "medium",
+    "model_asked": "sonnet",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": false,
+      "efforts": {
+        "medium": 1
+      },
+      "first_turn_context": 22859,
+      "models": {
+        "claude-sonnet-5-5": 1
+      },
+      "peak_context": 22859,
+      "totals": {
+        "cache_creation": 22857,
+        "cache_read": 0,
+        "output": 2019
+      },
+      "turns": 1
+    },
+    "final_turn_model": "claude-sonnet-5-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-sonnet-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.0009851,
+        "inputTokens": 9691,
+        "maxOutputTokens": 128000,
+        "outputTokens": 32,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-sonnet-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 22857,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 22857,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-sonnet-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.111622,
+        "inputTokens": 2,
+        "maxOutputTokens": 128000,
+        "outputTokens": 2019,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 1,
+    "refusal_fallbacks": [],
+    "total_cost_usd": 0.1126071,
+    "turn_models": {
+      "claude-sonnet-5-5": 1
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 22857,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 22857,
+      "cache_read_input_tokens": 0,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 22857,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 22857,
+          "cache_read_input_tokens": 0,
+          "input_tokens": 2,
+          "output_tokens": 2019,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 2019,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "B",
+  "started_utc": "2026-11-13T07:45:21Z",
+  "tool_calls": []
+}

@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-13T07:56:30Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-13T07:59:45Z",
+ "event_id": "FTR-20261113-22131434-68",
+ "evidence_basis": [
+  "Abstract read (Winters 2011); no method, count or figure detail used.",
+  "verbatim_locator | proposition: neuron-specific Fig4 expression rescues CNS myelination in the Fig4 null mouse | abstract | \"there is rescue of CNS myelination and tremor in transgenic mice with neuron-specific expression of Fig4\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_phenotype_first_sci50_20261113/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_phenotype_first_sci50_20261113/verify/verdicts.tsv"
+ ],
+ "prior_receipt": "FTR-20261113-22131434-69",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 22131434 via the PubMed tool, 2026-11-13",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.1482-11.2011",
+  "pmid": "22131434"
+ },
+ "workflow": "SCI50 blind verifier V13 (myelin_phenotype_first_sci50_20261113/verify), actor mp-y. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. paper_packet.py claim was refused by the session permission classifier, so no claim was made for this PMID."
+}

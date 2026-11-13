@@ -1,0 +1,5 @@
+source	figure_scope	viewed	note	status
+PMID 37068912	Figs 1-8 (legends read)	none viewed	text layer only through the PubMed PMC full-text tool; no figure images requested (the PMC page route was blocked, see queries PMC1); all numbers are from legends and text; shares and values in the panels are not read	no image read
+PMID 28549068	Figs 1-8 (legends read in part)	none viewed	text layer only; legends for Figs 1-4 and 8 partly read; HFD rescue stated in text, no panel values	no image read
+PMID 30919030	Figs 1-4 (legends not read)	none viewed	text layer only; the numeric values of g-ratio and CAP are in figure panels not read	no image read
+PMID 30046109	Fig 1-4, Extended Data	none viewed	PMC page returned a captcha; Hubler remains at the earlier ledger depth (partial_fulltext_read, figures not read)	unreachable by the PMC page route; not retried

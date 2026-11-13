@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-13T07:54:10Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-13T07:59:45Z",
+ "event_id": "FTR-20261113-18495876-68",
+ "evidence_basis": [
+  "Abstract read (Meikle 2008); no method, count or figure detail used.",
+  "verbatim_locator | proposition: rapamycin and RAD001 improved myelination in a neuron-specific Tsc1 knockout model (the PMC full text returned empty through the tool) | abstract | \"Neurofilament abnormalities, myelination, and cell enlargement are all improved by the treatment\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_phenotype_first_sci50_20261113/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_phenotype_first_sci50_20261113/verify/verdicts.tsv"
+ ],
+ "prior_receipt": "FTR-20261105-18495876-24",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 18495876 via the PubMed tool, 2026-11-13",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.0955-08.2008",
+  "pmid": "18495876"
+ },
+ "workflow": "SCI50 blind verifier V13 (myelin_phenotype_first_sci50_20261113/verify), actor mp-y. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. paper_packet.py claim was refused by the session permission classifier, so no claim was made for this PMID."
+}
