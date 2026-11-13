@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-12T22:38Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "unavailable",
+  "references": "not_read",
+  "results": "unavailable",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T22:52Z",
+ "event_id": "FTR-20261112-20484634-72",
+ "evidence_basis": [
+  "Abstract only: barrel cortex NG2 cells, GABAergic spontaneous and miniature activity decreases after the second postnatal week, extrasynaptic GABA-A and spillover in the adult."
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cell_context_verify_sci49_20261112/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/cell_context_verify_sci49_20261112/verify/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record abstract (efetch) read 2026-11-12; PMC article page PMC6632644 answered with a reCAPTCHA bot check and was not retried by another route",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.0238-10.2010",
+  "pmid": "20484634"
+ },
+ "workflow": "SCI49 package A blind verifier V11 (ORCH-SCI49-20261112, actor cx-y), verification of the biological inferences of SCI47 package B; prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

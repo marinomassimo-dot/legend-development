@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T22:38Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T22:52Z",
+ "event_id": "FTR-20261112-25387269-72",
+ "evidence_basis": [
+  "Passages on NG2 ablation and LTP, AMPA receptor inward rectification, basal sEPSC recorded in picrotoxin and AP5, and the absence of any inhibitory current measurement were read; slice age in the recordings was not found in the text inspected.",
+  "verbatim_locator | proposition: basal glutamatergic transmission unchanged in NG2-ablated mice | Results | \"We found no differences in NG2mice compared to WT\""
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cell_context_verify_sci49_20261112/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/cell_context_verify_sci49_20261112/verify/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PubMed full-text tool text of PMC4227637 fetched 2026-11-12 (57,455 characters); keyword-directed passages inspected (IPSC, GABA, age, LTP, AMPA rectification, sEPSC), no section read end to end; bytes not saved",
+ "study_id": {
+  "doi": "10.1371/journal.pbio.1001993",
+  "pmid": "25387269"
+ },
+ "workflow": "SCI49 package A blind verifier V11 (ORCH-SCI49-20261112, actor cx-y), verification of the biological inferences of SCI47 package B; prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

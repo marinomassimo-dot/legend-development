@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-12T22:36Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-12T22:52Z",
+ "event_id": "FTR-20261112-26687838-72",
+ "evidence_basis": [
+  "Read the Results section on the acutely purified human transcriptomes (patient numbers, correlation, dissociation control) and the Methods on purification, RNA-seq library construction and read mapping; figures not opened; supplementary tables not read; the GEO records were read for the neuron sample (Thy1 positive cells, 25 years, adult temporal lobe).",
+  "verbatim_locator | proposition: the neuron class is one patient | Results | \"N=12, 1, 5, 3, and 2 patients for astrocytes, neurons, oligodendrocytes, microglia, and endothelial cells, respectively.\"",
+  "verbatim_locator | proposition: neurons were harvested with anti-Thy1 | Methods, purification | \"anti-Thy1 (CD90) to harvest neurons\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cell_context_verify_sci49_20261112/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/cell_context_verify_sci49_20261112/verify/verdicts.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-26687838-97",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PubMed full-text tool text of PMC4707064 fetched 2026-11-12 (49,770 characters), plus GEO series GSE73721 text and the sample records GSM1901333 (neuron) and GSM1901344 (whole cortex) by plain curl, plus the stored processed table by script; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.neuron.2015.11.013",
+  "pmid": "26687838"
+ },
+ "workflow": "SCI49 package A blind verifier V11 (ORCH-SCI49-20261112, actor cx-y), verification of the biological inferences of SCI47 package B; prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
