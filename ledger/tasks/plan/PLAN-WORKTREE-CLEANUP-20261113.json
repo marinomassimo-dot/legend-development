@@ -10,22 +10,22 @@
   "OBJECTIVE": "Restore autonomous worktree cleanup (LEGEND_CORE 21e item 3): closed, integrated worktrees are removed without waiting for a written operator authorisation; the session home and unique material are kept; a past classifier refusal is not a standing rule. Coordinate with SCI; reuse existing tools.",
   "worktree": "root checkout (record only)",
   "branch": "main",
-  "CURRENT_STATE": "OPEN",
+  "CURRENT_STATE": "COMPLETE",
   "CHECKPOINT": {
-    "last_verified_result": "none yet",
-    "first_incomplete_work": "OBJ_1_INVENTORY"
+    "last_verified_result": "43 worktrees removed, 4 kept with reasons",
+    "first_incomplete_work": "none"
   },
   "AUTHORISED_QUEUE_20261113": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_1_INVENTORY": {
       "order": 1,
       "title": "Inventory every worktree: live sessions and processes, integration of commits, tracked changes, untracked and ignored material",
       "steps": [
         {
           "step": "Inventory every worktree: live sessions and processes, integration of commits, tracked changes, untracked and ignored material",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "47 worktrees inventoried: processes by /proc cwd, ancestry of HEAD in main (all 47), tracked changes, untracked files compared byte-for-byte with main, ignored material (only __pycache__ and hard links of the root files/, inodes compared); stale processes found in it41 (hung `grep ^DONE` waiter of 2026-11-10), it42 and it47 (orphan headless Chromium of 2026-11-10 and 2026-11-12); it50 is the Orchestrator's live work"
         }
       ]
     },
@@ -35,9 +35,9 @@
       "steps": [
         {
           "step": "Coordinate with the scientific session (SCI) and the Orchestrator: homes, unique material, correction of the local memory that treats a past refusal as a standing rule",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "SCI agreed (its worktrees clean, none its home; the shared memory note already carries the corrected rule); the Orchestrator had no objection (nothing unique in it46..it49; keep it50 and the shared files/); my own memory note corrected (the old text said written authorisation was needed)"
         }
       ]
     },
@@ -47,9 +47,9 @@
       "steps": [
         {
           "step": "Remove unused integrated worktrees autonomously after deleting only verified-regenerable caches; keep the session home and any unique material; delete merged local task branches",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "removed 43 worktrees with git worktree remove (sci43b with 23 untracked files all identical to main; sci44b after archiving its 6 differing drafts to ~/.local/state/legend/worktree_archive/sci44b_unique_20261113.tar.gz) and 7 merged local task branches with git branch -d; kept it50 (live), it41, it42, it47 (stale processes hold them as cwd; my attempt to stop those four PIDs was denied by the runtime classifier and was not repeated or worked around), backup/vps-main-2026-09-25 (unmerged unique backup)"
         }
       ]
     },
@@ -59,9 +59,9 @@
       "steps": [
         {
           "step": "Correct only a real tool limit if one appears; no new gate, register or approval",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "task_close --remove-worktree refused any ignored file, so it refused every worktree that had run a test; it now ignores __pycache__ and *.pyc only (regression added, 34 tests); landed b883bb9e (gate PASS, ls-remote verified) and dogfooded: its own worktree was removed by the corrected tool; README row states that routine cleanup is authorised and how to verify"
         }
       ]
     },
@@ -71,13 +71,20 @@
       "steps": [
         {
           "step": "Italian report: removed, kept and why",
-          "status": "PENDING",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": ""
+          "evidence": "Italian report delivered"
         }
       ]
     }
   },
-  "VERIFICATION_EVIDENCE": [],
-  "MANDATE_STATE": "OPEN"
+  "VERIFICATION_EVIDENCE": [
+    {
+      "label": "landing",
+      "sha": "b883bb9ef8bc4f4edd5c3c65af3222e011ba4907",
+      "state": "CONCLUDED",
+      "result": "gate PASS, ls-remote verified; task_close, branch_hygiene, safe_push, freshness, release-surface and section-reference suites OK"
+    }
+  ],
+  "MANDATE_STATE": "COMPLETE"
 }
