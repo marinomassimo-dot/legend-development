@@ -37,7 +37,7 @@
      "step": "Pilot report (due by the campaign expiry 2026-11-14T18:22:36Z): decisions advanced without a new operator prompt, usefulness against the continuation that would have happened anyway, work avoided, interference, interventions asked of the operator, actual cost; configured/invoked/consumed/improved kept apart; provisional, not independent validation",
      "status": "TODO",
      "owner": "orchestrator",
-     "evidence": "Due at expiry or when the advisor's budget is exhausted."
+     "evidence": "Due at expiry or when the advisor's budget is exhausted. Open-mandate signal: the two standing-rule records INTAKE-OVERNIGHT-20261002 and ORCH-METABOLIC-BATCH-20261019 now carry an explicit note (a BLOCKED standing rule, not executable work) with their unblock conditions."
     }
    ]
   },
@@ -60,6 +60,17 @@
      "status": "DONE",
      "owner": "orchestrator",
      "evidence": "TAKEN IN CHARGE as ADV-002 (Harness takes the work in its own record; no bot-check circumvention, no spoofing). My part: record the outcome on IT51-Q03/Q04 (closed from the public record, or recorded as unreachable with the routes tried) and decide any consumer consequence; Science reads and extracts the scientific content if an artefact is reached; receipts through the normal ledger path, none claimed by me on a delegate's behalf. Method not changed. Dependency: Harness delivery; revival condition: a message from Harness or a note on main naming ADV-002. DISPOSITION 2026-11-13 (result a8508495): IT51-Q03 partly reached (text and legends via Europe PMC fullTextXML; per-compound heatmap values and the names unreached; Science reads the locator), IT51-Q04 unreachable by the routes tried (no permitted route); both recorded in the open-questions map; no consumer text changed (a negative result is not an absence); the by-target ChEMBL route noted as possibly runnable again (dated line in the IT50 README, not run). No receipts claimed by me."
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "ADV-003 (Science: run the by-target ISR/eIF2B activity route now that the ChEMBL service answers; say whether INV-02's '0 rows by target search' is a true absence or an outage artefact): take in charge and dispose on delivery",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": "TAKEN IN CHARGE as ADV-003 2026-11-13 (sent to SCI by Harness; pilot invocation 2/3). Method unchanged. My part: dispose on delivery (apply / reject with reason / defer with revival); the README limit sentence in generation_it50_20261113 was contradictory (line 30 'remains blocked', line 33 'can be tried') and is corrected now with its date. Priority: the pilot report outranks ADV-003 if time is short (per the assessment). Dependency: SCI delivery; revival condition: a message or a package folder on main naming ADV-003."
     }
    ]
   }
