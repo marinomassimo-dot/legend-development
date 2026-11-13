@@ -1,119 +1,126 @@
 {
-  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
-  "TASK_ID": "PLAN-PROACTIVE-ADVISOR-20261113",
-  "DIRECTIVE_VERSION": 1,
-  "GENERATION": 1,
-  "OWNER": "orchestrator",
-  "ACTOR_ID": "plan",
-  "PRIORITY": "HIGH",
-  "assigned_on": "2026-11-13",
-  "OBJECTIVE": "Proactive Strategic Advisor: from a capability consulted by the Orchestrator to a scheduled one that observes the laboratory, compares directions against the operator's roadmap and prepares assignments for the relevant sessions without being asked; first pilot 24 h, at most 3 strategic invocations and 3 assignments, no external spend, no change to scientific guarantees. Implementation evidence is kept apart from the pilot result; the campaign stays open with the Orchestrator as verified operational owner.",
-  "worktree": ".claude/worktrees/padv",
-  "branch": "task/padv",
-  "CURRENT_STATE": "OPEN",
-  "CHECKPOINT": {
-    "last_verified_result": "none yet",
-    "first_incomplete_work": "OBJ_1_INSPECT"
-  },
-  "AUTHORISED_QUEUE_20261113B": {
-    "MANDATE_STATE": "OPEN",
-    "OBJ_1_INSPECT": {
-      "order": 1,
-      "title": "Read the canonical instructions and the existing advisor chain; separate implemented, executed and useful in the earlier campaigns; verify which schedulers and intersession channels really exist on this host",
-      "steps": [
-        {
-          "step": "Read the canonical instructions and the existing advisor chain; separate implemented, executed and useful in the earlier campaigns; verify which schedulers and intersession channels really exist on this host",
-          "status": "PENDING",
-          "owner": "plan",
-          "evidence": ""
-        }
-      ]
-    },
-    "OBJ_2_ROADMAP": {
-      "order": 2,
-      "title": "Place the operator roadmap in one existing home (mission, priorities, permitted exploration, exclusions, budget and duration, recent operator instructions); operator updates override automatic plans",
-      "steps": [
-        {
-          "step": "Place the operator roadmap in one existing home (mission, priorities, permitted exploration, exclusions, budget and duration, recent operator instructions); operator updates override automatic plans",
-          "status": "PENDING",
-          "owner": "plan",
-          "evidence": ""
-        }
-      ]
-    },
-    "OBJ_3_BEHAVIOUR": {
-      "order": 3,
-      "title": "Update the agent definition, the procedure and the linked texts from consulted-only to proactive within the pilot limits; read-only analysis kept; no recommendation changes scientific conclusions, rankings or qualifications",
-      "steps": [
-        {
-          "step": "Update the agent definition, the procedure and the linked texts from consulted-only to proactive within the pilot limits; read-only analysis kept; no recommendation changes scientific conclusions, rankings or qualifications",
-          "status": "PENDING",
-          "owner": "plan",
-          "evidence": ""
-        }
-      ]
-    },
-    "OBJ_4_TICK": {
-      "order": 4,
-      "title": "Hourly bounded mechanical check and four-hourly strategic evaluation on the existing scheduling; no overlap, no duplicate triggers, reuse of the previous assessment when nothing changed",
-      "steps": [
-        {
-          "step": "Hourly bounded mechanical check and four-hourly strategic evaluation on the existing scheduling; no overlap, no duplicate triggers, reuse of the previous assessment when nothing changed",
-          "status": "PENDING",
-          "owner": "plan",
-          "evidence": ""
-        }
-      ]
-    },
-    "OBJ_5_ASSIGNMENTS": {
-      "order": 5,
-      "title": "Assignment drafts with the required fields; delivery through the supported intersession channel; saved, sent, taken in charge, executed kept apart; unreachable recipient stays an explicit residual",
-      "steps": [
-        {
-          "step": "Assignment drafts with the required fields; delivery through the supported intersession channel; saved, sent, taken in charge, executed kept apart; unreachable recipient stays an explicit residual",
-          "status": "PENDING",
-          "owner": "plan",
-          "evidence": ""
-        }
-      ]
-    },
-    "OBJ_6_TESTS": {
-      "order": 6,
-      "title": "Targeted verification of the nine behaviours; code-guaranteed vs procedural; fixtures do not prove the runtime",
-      "steps": [
-        {
-          "step": "Targeted verification of the nine behaviours; code-guaranteed vs procedural; fixtures do not prove the runtime",
-          "status": "PENDING",
-          "owner": "plan",
-          "evidence": ""
-        }
-      ]
-    },
-    "OBJ_7_ACTIVATE": {
-      "order": 7,
-      "title": "Activate the pilot (24 h, at most 3 invocations, 3 assignments), verify a real automatic recall and a real delivery to a live session, hand operational coordination to the Orchestrator",
-      "steps": [
-        {
-          "step": "Activate the pilot (24 h, at most 3 invocations, 3 assignments), verify a real automatic recall and a real delivery to a live session, hand operational coordination to the Orchestrator",
-          "status": "PENDING",
-          "owner": "plan",
-          "evidence": ""
-        }
-      ]
-    },
-    "OBJ_8_PUBLISH": {
-      "order": 8,
-      "title": "Integrate, publish, CI; simple deactivation; Italian report separating implemented, scheduled-and-verified, delivered, consumed, benefit",
-      "steps": [
-        {
-          "step": "Integrate, publish, CI; simple deactivation; Italian report separating implemented, scheduled-and-verified, delivered, consumed, benefit",
-          "status": "PENDING",
-          "owner": "plan",
-          "evidence": ""
-        }
-      ]
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-PROACTIVE-ADVISOR-20261113",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "assigned_on": "2026-11-13",
+ "OBJECTIVE": "Proactive Strategic Advisor: from a capability consulted by the Orchestrator to a scheduled one that observes the laboratory, compares directions against the operator's roadmap and prepares assignments for the relevant sessions without being asked; first pilot 24 h, at most 3 strategic invocations and 3 assignments, no external spend, no change to scientific guarantees. Implementation evidence is kept apart from the pilot result; the campaign stays open with the Orchestrator as verified operational owner.",
+ "worktree": ".claude/worktrees/padv",
+ "branch": "task/padv",
+ "CURRENT_STATE": "OPEN",
+ "CHECKPOINT": {
+  "last_verified_result": "none yet",
+  "first_incomplete_work": "OBJ_1_INSPECT"
+ },
+ "AUTHORISED_QUEUE_20261113B": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1_INSPECT": {
+   "order": 1,
+   "title": "Read the canonical instructions and the existing advisor chain; separate implemented, executed and useful in the earlier campaigns; verify which schedulers and intersession channels really exist on this host",
+   "steps": [
+    {
+     "step": "Read the canonical instructions and the existing advisor chain; separate implemented, executed and useful in the earlier campaigns; verify which schedulers and intersession channels really exist on this host",
+     "status": "PENDING",
+     "owner": "plan",
+     "evidence": ""
     }
+   ]
   },
-  "VERIFICATION_EVIDENCE": [],
-  "MANDATE_STATE": "OPEN"
+  "OBJ_2_ROADMAP": {
+   "order": 2,
+   "title": "Place the operator roadmap in one existing home (mission, priorities, permitted exploration, exclusions, budget and duration, recent operator instructions); operator updates override automatic plans",
+   "steps": [
+    {
+     "step": "Place the operator roadmap in one existing home (mission, priorities, permitted exploration, exclusions, budget and duration, recent operator instructions); operator updates override automatic plans",
+     "status": "PENDING",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_3_BEHAVIOUR": {
+   "order": 3,
+   "title": "Update the agent definition, the procedure and the linked texts from consulted-only to proactive within the pilot limits; read-only analysis kept; no recommendation changes scientific conclusions, rankings or qualifications",
+   "steps": [
+    {
+     "step": "Update the agent definition, the procedure and the linked texts from consulted-only to proactive within the pilot limits; read-only analysis kept; no recommendation changes scientific conclusions, rankings or qualifications",
+     "status": "PENDING",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_4_TICK": {
+   "order": 4,
+   "title": "Hourly bounded mechanical check and four-hourly strategic evaluation on the existing scheduling; no overlap, no duplicate triggers, reuse of the previous assessment when nothing changed",
+   "steps": [
+    {
+     "step": "Hourly bounded mechanical check and four-hourly strategic evaluation on the existing scheduling; no overlap, no duplicate triggers, reuse of the previous assessment when nothing changed",
+     "status": "PENDING",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_5_ASSIGNMENTS": {
+   "order": 5,
+   "title": "Assignment drafts with the required fields; delivery through the supported intersession channel; saved, sent, taken in charge, executed kept apart; unreachable recipient stays an explicit residual",
+   "steps": [
+    {
+     "step": "Assignment drafts with the required fields; delivery through the supported intersession channel; saved, sent, taken in charge, executed kept apart; unreachable recipient stays an explicit residual",
+     "status": "PENDING",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_6_TESTS": {
+   "order": 6,
+   "title": "Targeted verification of the nine behaviours; code-guaranteed vs procedural; fixtures do not prove the runtime",
+   "steps": [
+    {
+     "step": "Targeted verification of the nine behaviours; code-guaranteed vs procedural; fixtures do not prove the runtime",
+     "status": "PENDING",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_7_ACTIVATE": {
+   "order": 7,
+   "title": "Activate the pilot (24 h, at most 3 invocations, 3 assignments), verify a real automatic recall and a real delivery to a live session, hand operational coordination to the Orchestrator",
+   "steps": [
+    {
+     "step": "Activate the pilot (24 h, at most 3 invocations, 3 assignments), verify a real automatic recall and a real delivery to a live session, hand operational coordination to the Orchestrator",
+     "status": "PENDING",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_8_PUBLISH": {
+   "order": 8,
+   "title": "Integrate, publish, CI; simple deactivation; Italian report separating implemented, scheduled-and-verified, delivered, consumed, benefit",
+   "steps": [
+    {
+     "step": "Integrate, publish, CI; simple deactivation; Italian report separating implemented, scheduled-and-verified, delivered, consumed, benefit",
+     "status": "PENDING",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "ADV_ASSIGNMENTS": {
+   "ADV-002": {
+    "status": "EXECUTED_BOUNDED",
+    "taken_utc": "2026-11-13",
+    "evidence": "result in disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/ADV-002_result.md; IT51-Q03 text and legends reached via Europe PMC fullTextXML, heatmap values and IT51-Q04 supplement not reached; no circumvention"
+   }
+  }
+ },
+ "VERIFICATION_EVIDENCE": [],
+ "MANDATE_STATE": "OPEN"
 }
