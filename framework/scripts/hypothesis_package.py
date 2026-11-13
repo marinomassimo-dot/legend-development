@@ -523,12 +523,20 @@ def unlisted_design_counts(manifest: Path = MANIFEST) -> dict[str, int]:
     return out
 
 
+def _rel_name(folder: Path) -> str:
+    """A package's name: its folder relative to the drug_repurposing directory, so a package kept in a subfolder (`parent/child`) is not mistaken for another `child`."""
+    try:
+        return str(Path(folder).relative_to(DR))
+    except ValueError:
+        return Path(folder).name
+
+
 def design_for(pkgs: list[dict], inv_id: str) -> dict:
     """Rows of the `design_only` packages the manifest ties to this investigation, verbatim, each as `package::table::key`, with the columns the table really has.
     A different kind of record from hypotheses and comparison rows: nothing is mapped, joined or completed, and a design row is not an observation, a hypothesis or a result."""
     out, sources = [], []
     for pkg in (p for p in pkgs if p.get("role") == "design_only" and p.get("inv_id") == inv_id):
-        name = pkg["dir"].parent.name
+        name = _rel_name(pkg["dir"].parent)
         for tname, t in pkg["tables"].items():
             sources.append({"package": name, "table": tname, "state": t["state"], "key_column": t["key_column"], "rows": len(t["rows"])})
             for k, r in t["rows"].items():

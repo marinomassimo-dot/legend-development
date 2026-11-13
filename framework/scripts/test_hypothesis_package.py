@@ -14,6 +14,7 @@ import sys
 import csv
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -238,7 +239,7 @@ class Reader(unittest.TestCase):
 
     def test_only_manifest_packages_are_read(self):
         listed = {m["dir"] for m in hp.read_manifest()}
-        self.assertEqual({p["dir"].parent.name for p in hp.load_all()}, listed)
+        self.assertEqual({hp._rel_name(p["dir"].parent) for p in hp.load_all()}, listed)
         self.assertTrue(set(hp.unlisted_packages()).isdisjoint(listed))
 
     def test_manifest_validation_refuses_a_missing_reason_or_inv(self):
@@ -471,8 +472,10 @@ class DesignOnly(unittest.TestCase):
             (out / fname).write_text(header + "\n" + "".join(r + "\n" for r in rows), encoding="utf-8")
         return self.d / name
 
-    def test_the_real_isr_design_is_unreachable_until_listed_then_read_verbatim_with_every_branch(self):
-        self.assertEqual(hp.unlisted_design_counts().get("isrib_discrim_20261108"), 6)            # the steps nobody could reach, counted where they sit
+    def test_the_isr_design_is_read_verbatim_with_every_branch_and_an_unlisted_design_is_counted_where_it_sits(self):
+        f = self.folder("unlisted_design", {"design.tsv": ("step\tquestion", ["S1\ta", "S2\tb"])})
+        with mock.patch.object(hp, "DR", self.d), mock.patch.object(hp, "read_manifest", return_value=[]):
+            self.assertEqual(hp.unlisted_design_counts(), {"unlisted_design": 2})                # steps nobody could reach, counted where they sit
         p = dict(hp.load_design_only(self.ISR), name="isr", inv_id="INV-02")
         rec = hp.design_for([p], "INV-02")
         steps = {r["key"].split(" ")[0]: r for r in rec["rows"] if r["table"] == "design.tsv"}
