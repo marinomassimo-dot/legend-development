@@ -1,0 +1,165 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-HE-AUTONOMY-RADAR-20261114",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "assigned_on": "2026-11-14",
+ "OBJECTIVE": "HE — Continuous autonomy and useful radar inputs: make LEGEND's autonomy durable within the roadmap (persistent revocable operator authorisation distinct from bounded pilot limits; the presidio survives the end of an assignment; operator control by integration/roadmap/urgent/stop), manage shared resources honestly, and improve the path from radar opportunities to strategic decisions and scientific results by correcting demonstrated defects only. Queued behind useful work; frozen candidates are not invalidated. ADV leads strategy, IT coordinates, SCI keeps method autonomy.",
+ "worktree": ".claude/worktrees/hrk3",
+ "branch": "task/hrk3",
+ "CURRENT_STATE": "IN_PROGRESS",
+ "CHECKPOINT": {
+  "last_verified_result": "none yet",
+  "first_incomplete_work": "OBJ_1_STATE"
+ },
+ "AUTHORISED_QUEUE_20261114B": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1_STATE": {
+   "order": 1,
+   "title": "Read the actual state: pilot budget/counters/limits, presidio and recall, resource tools (census, delegation budget), the three radar functions, the scout trace; state what is observed versus assumed",
+   "steps": [
+    {
+     "step": "Read the actual state: pilot budget/counters/limits, presidio and recall, resource tools (census, delegation budget), the three radar functions, the scout trace; state what is observed versus assumed",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "IN_PROGRESS"
+  },
+  "OBJ_2_CONTINUOUS_AUTHORISATION": {
+   "order": 2,
+   "title": "Distinguish a bounded pilot from a persistent, revocable operator authorisation to continue within the roadmap; keep historical counters, results and failures; small explicit removable configuration in the existing tool, no second campaign system",
+   "steps": [
+    {
+     "step": "Distinguish a bounded pilot from a persistent, revocable operator authorisation to continue within the roadmap; keep historical counters, results and failures; small explicit removable configuration in the existing tool, no second campaign system",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  },
+  "OBJ_3_PRESIDIO_CONTINUITY": {
+   "order": 3,
+   "title": "Distinguish end of an assignment, end of a turn, legitimate wait, resource suspension and end of authorisation; an assignment's end does not close the presidio; verify compaction, restart and loss of recall (executed / expected / runtime limits); one presidio, no daemon",
+   "steps": [
+    {
+     "step": "Distinguish end of an assignment, end of a turn, legitimate wait, resource suspension and end of authorisation; an assignment's end does not close the presidio; verify compaction, restart and loss of recall (executed / expected / runtime limits); one presidio, no daemon",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  },
+  "OBJ_4_OPERATOR_CONTROL": {
+   "order": 4,
+   "title": "Integration, roadmap, urgent, stop/pause reach the durable operational context through the canonical seats; none needs a confirmation or cancels valid work by itself",
+   "steps": [
+    {
+     "step": "Integration, roadmap, urgent, stop/pause reach the durable operational context through the canonical seats; none needs a confirmation or cancels valid work by itself",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  },
+  "OBJ_5_SHARED_RESOURCES": {
+   "order": 5,
+   "title": "Shared (IT/SCI/HE/ADV and delegates) weekly allocation configurable when the usable limit is known, declared unknown otherwise; measured versus estimated versus not exposed; cost of coordinator recalls stated, not called free",
+   "steps": [
+    {
+     "step": "Shared (IT/SCI/HE/ADV and delegates) weekly allocation configurable when the usable limit is known, declared unknown otherwise; measured versus estimated versus not exposed; cost of coordinator recalls stated, not called free",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  },
+  "OBJ_6_RADAR_FUNCTIONS": {
+   "order": 6,
+   "title": "Map the three radar functions (capability mining and scouting; drug-repurposing research radar; critical LEGEND observer) onto what exists; name concrete gaps; no new agents or scripts for their own sake",
+   "steps": [
+    {
+     "step": "Map the three radar functions (capability mining and scouting; drug-repurposing research radar; critical LEGEND observer) onto what exists; name concrete gaps; no new agents or scripts for their own sake",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  },
+  "OBJ_7_FAIR_COMPARISON": {
+   "order": 7,
+   "title": "Small declared sample comparing discovery (what each source intercepts) and analysis (how each process evaluates the same inputs), with the available operator reports; unknown versus not-happened kept apart; existing trace and capability log only",
+   "steps": [
+    {
+     "step": "Small declared sample comparing discovery (what each source intercepts) and analysis (how each process evaluates the same inputs), with the available operator reports; unknown versus not-happened kept apart; existing trace and capability log only",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  },
+  "OBJ_8_RADAR_FIXES": {
+   "order": 8,
+   "title": "Fix only defects the sample demonstrates (roadmap-derived searches, empty vs error vs uninterpreted, question-result match, provenance, repeated resolved conditions), keeping exploration and adjacent literatures open",
+   "steps": [
+    {
+     "step": "Fix only defects the sample demonstrates (roadmap-derived searches, empty vs error vs uninterpreted, question-result match, provenance, repeated resolved conditions), keeping exploration and adjacent literatures open",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  },
+  "OBJ_9_ADV_USE_AND_LOOP": {
+   "order": 9,
+   "title": "Make ADV's inputs (roadmap, dashboard, open questions, candidates, radars, DREAM, costs, invariants) accessible and current; one signal followed to a verifiable decision with ADV; result returns to the drug-repurposing consumers",
+   "steps": [
+    {
+     "step": "Make ADV's inputs (roadmap, dashboard, open questions, candidates, radars, DREAM, costs, invariants) accessible and current; one signal followed to a verifiable decision with ADV; result returns to the drug-repurposing consumers",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  },
+  "OBJ_10_OPERATIONAL_CHECK": {
+   "order": 10,
+   "title": "Operational test with ADV: bounded behaviour intact, continued authorisation without counter reset, assignment end not closing presidio, stop respected, no duplicate recall or evaluation, resumption after a supported interruption, ceilings versus executed activity",
+   "steps": [
+    {
+     "step": "Operational test with ADV: bounded behaviour intact, continued authorisation without counter reset, assignment end not closing presidio, stop respected, no duplicate recall or evaluation, resumption after a supported interruption, ceilings versus executed activity",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  },
+  "OBJ_11_DELIVER": {
+   "order": 11,
+   "title": "Integrate and publish by the existing procedures; short report answering the seven questions in Italian; modification/removal procedure; negative results and limits kept",
+   "steps": [
+    {
+     "step": "Integrate and publish by the existing procedures; short report answering the seven questions in Italian; modification/removal procedure; negative results and limits kept",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  }
+ },
+ "MANDATE_STATE": "OPEN"
+}
