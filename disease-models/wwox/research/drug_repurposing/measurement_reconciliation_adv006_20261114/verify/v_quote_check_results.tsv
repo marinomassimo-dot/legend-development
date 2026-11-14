@@ -104,6 +104,7 @@ crosswalk	CC-EGABA-CLOSURE#Q5vsQ4	1	section 1, 'The discriminator the prior plan
 crosswalk	CC-CLAIM002#section6	1	section 6 'Smallest decisive experiment'	True	None	None	
 crosswalk	CC-ADVERSARIAL#E_GABA-human	1	item 4 of the open-experiment list (around line 738)	True	None	None	
 crosswalk	CC-ADVERSARIAL#AAV9	1	item 2 of the open-experiment list (around line 725)	True	None	None	
+crosswalk	map#open_questions_map:IT45-Q05	1	IT45-Q05, column question_text_max300	True	True	True	
 conflict	CF01	A	M03:measurement	True	True	True	
 conflict	CF01	B	Minimum design, Phase 0	True	None	None	
 conflict	CF02	A	M03:design_choice_not_finding	True	True	True	
@@ -152,3 +153,5 @@ conflict	CF21	A	M01:required_from_start	True	True	True
 conflict	CF21	B	O14:discriminating_measure	True	True	True	
 conflict	CF22	A	M05:required_from_start	True	True	True	
 conflict	CF22	B	Minimum design, Phase 0, item (iv)	True	None	None	
+conflict	CF23	A	M10:measurement	True	True	True	
+conflict	CF23	B	L1:functional_comparator	True	True	True	
