@@ -57,7 +57,7 @@
      "step": "CI concluded green on ba0283130",
      "status": "BLOCKED",
      "owner": "plan",
-     "blocker": "CI run in progress for ba0283130; ci_runs.py wait"
+     "blocker": "CI runs #738-#743 in progress; ci_runs.py wait"
     }
    ],
    "status": "IN_PROGRESS"
@@ -68,12 +68,12 @@
    "steps": [
     {
      "step": "Second build of the mechanical items; the two false sentences replaced by a neutral, true pointer (no owner choice made); deliver SHA and entry point to IT and ADV",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "coded and tested locally; landing"
+     "evidence": "Published 00feda1c8 (gate PASS): conflict content with both quotes, L3/L6 package_row_dropped_by_the_package + NOT PROPOSED, preparation/age/cohort of joined rows, id crosswalk, two false sentences replaced by a neutral true pointer; delivered by separate sends to IT (msg f0788644) and ADV (msg 4037985c). Waiting for SCI by ADV's scoping: mapping confirmation, matrix attachment, CF01/CF03. No third iteration."
     }
    ],
-   "status": "IN_PROGRESS"
+   "status": "DONE"
   }
  },
  "MANDATE_STATE": "OPEN"

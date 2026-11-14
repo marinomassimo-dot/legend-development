@@ -238,7 +238,7 @@ RECALL_PROMPT = ("Proactive Strategic Advisor pilot, hourly mechanical check. Ru
                  "If the verdict is NONE, DEFERRED, RUNNING, PAUSED, RESOURCES or DISABLED/EXPIRED/BUDGET, reply in one line (a NONE or DEFERRED in continuous mode is a legitimate wait, not the end of the mandate) and do nothing else. If EVALUATE, start `strategic_advisor.py evaluate --campaign {campaign}` "
                  "in the background (run_in_background), and when it finishes read the drafted assignments with `status`, check each recipient is listed live by `claude agents --json`, "
                  "deliver each with SendMessage (durable artifact path plus pointer), record `deliver --state SENT --to <the session named in the send's receipt>` or `UNREACHABLE`, and later verify the take-in-charge in the recipient's task record. "
-                 "Never invent work; never write to transcripts; no more than the campaign budget.")
+                 "An assignment already drafted and authorised is delivered in the turn that reads it, not at the next recall. Never invent work; never write to transcripts; no more than the campaign budget.")
 RECALL_MARK = "Proactive Strategic Advisor pilot, hourly mechanical check"   # what a session looks for in CronList before creating the recall: one copy only
 
 
@@ -586,6 +586,7 @@ ROADMAP_BEGIN, ROADMAP_END = "<!-- OPERATOR_ROADMAP:BEGIN -->", "<!-- OPERATOR_R
 STATE_DIR = Path(os.environ.get("LEGEND_ADVISOR_STATE", str(Path.home() / ".local/state/legend/advisor_pilot")))
 ASSIGNMENT_FIELDS = ("key", "recipient", "question", "why_now", "roadmap_link", "related_work", "sources", "decision_changed_by_result", "perimeter_and_budget",
                      "method_autonomy", "deliver_to", "duplicate_check")
+OPTIONAL_FIELDS = ("mode", "start_condition", "interferes_with", "obsolete_if")   # HE54: what a recipient needs to place a follow-through: independent | queued | conditional, when it can start, what it may disturb, what makes it useless
 OPEN_VERDICTS = ("CONTINUE", "ALL_BLOCKED", "COMPLETE_PENDING")
 EVENT_SUBJECT = re.compile(r"COMPLETE|closed|closure|integrate task|delivered|consumed|landed", re.I)
 
@@ -765,6 +766,24 @@ def _sessions() -> dict[str, str] | None:
         return None
 
 
+def _waits() -> list[dict[str, str]]:
+    """What the open mandates are waiting for, from their own records: every BLOCKED step with its named blocker (a battery, a CI run, a delivery, an answer). One cheap read of the task records: no transcript,
+    no process listing. A step whose `unblock_when` is already met is not a wait (the continuity check counts it executable)."""
+    out = []
+    for path in sorted((ROOT / "ledger" / "tasks").glob("*/*.json")):
+        try:
+            rec = json.loads(path.read_text(encoding="utf-8"))
+            if not isinstance(rec, dict) or not rec.get("TASK_ID") or mc.verdict(rec)["verdict"] not in OPEN_VERDICTS or any(m in rec["TASK_ID"] for m in SENDER_RECORDS):
+                continue                                          # the presidio's own wait for events is the wait itself, not something to anticipate during
+            for _, queue in mc.load_active_queues(rec):
+                for st in mc.iter_steps(queue):
+                    if st["status"] == "BLOCKED":
+                        out.append({"task": rec["TASK_ID"], "step": st["step"][:80], "blocker": str(st.get("blocker") or "")[:160]})
+        except Exception:  # noqa: BLE001 — a record the continuity module cannot read is not a wait
+            continue
+    return out
+
+
 def observe(campaign: Path, state: dict[str, Any]) -> dict[str, Any]:
     """The bounded facts a decision needs, read mechanically: roadmap digest, commits since the last tick, mandate transitions, stalled mandates reported by the watch, sessions."""
     main_sha = _git("rev-parse", "main")
@@ -780,11 +799,14 @@ def observe(campaign: Path, state: dict[str, Any]) -> dict[str, Any]:
         stalled = sorted({m.group(1) for m in re.finditer(r"RESUME ((?:[A-Z0-9]+-)+[A-Z0-9]+)", watch) if recs.get(m.group(1), {}).get("state") == "OPEN"})
     except (OSError, subprocess.SubprocessError):
         pass
+    waits = _waits()
+    seen_waits = set(state.get("waits_seen") or [])
+    new_waits = [w for w in waits if sha256_text(w["task"] + "|" + w["blocker"])[:12] not in seen_waits] if state.get("waits_seen") is not None else []   # the first tick records the waits as they are; only a NEW wait is an event
     events = ([f"delivery: {c}" for c in commits if EVENT_SUBJECT.search(c)] + [f"mandate: {t}" for t in transitions] + [f"opened: {t}" for t in opened]
-              + [f"stalled-for-the-watch: {t}" for t in stalled])
+              + [f"stalled-for-the-watch: {t}" for t in stalled] + [f"waiting: {w['task']}: {w['blocker'][:100]}" for w in new_waits])
     rm = roadmap_text()
     return {"main_sha": main_sha, "roadmap_sha256": sha256_text(rm) if rm else "", "commits_since_last_tick": len(commits), "events": events,
-            "open_mandates": sorted(t for t, r in recs.items() if r["state"] == "OPEN"), "mandates": {t: r["state"] for t, r in recs.items()},
+            "open_mandates": sorted(t for t, r in recs.items() if r["state"] == "OPEN"), "mandates": {t: r["state"] for t, r in recs.items()}, "waits": waits,
             "sessions": _sessions()}
 
 
@@ -837,7 +859,8 @@ def tick(campaign: Path) -> dict[str, Any]:
             verdict, why = "EVALUATE", ("roadmap changed" if changed else "; ".join(anticipating[:3] or obs["events"][:3]))
         else:
             verdict, why = "DEFERRED", f"events present but the last evaluation was {hours:.1f} h ago and none is anticipating"
-    state.update(main_sha=obs["main_sha"], mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"], last_tick_utc=_utc(now))
+    state.update(main_sha=obs["main_sha"], mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"], last_tick_utc=_utc(now),
+                 waits_seen=sorted({sha256_text(w["task"] + "|" + w["blocker"])[:12] for w in obs["waits"]}))
     if verdict == "EVALUATE":
         state["pending_digest"] = digest
         state["pending_events"] = obs["events"]            # the tick advances main_sha and the mandate states below; the evaluation that follows must still see what triggered it
@@ -846,7 +869,8 @@ def tick(campaign: Path) -> dict[str, Any]:
     ctl = operator_controls()
     return {"verdict": verdict, "why": why, "mode": "continuous" if cont else "pilot", "presidio": presidio_state(verdict, why, bool(cont)),
             "operator_controls": [f"{c['kind']}: {c['text']}" for c in (active_suspensions(ctl) + [c for c in ctl if c["kind"] in ("URGENT", "INTEGRATION")])[-6:]],
-            "events": obs["events"][:12], "open_mandates": obs["open_mandates"], "sessions": obs["sessions"], "digest": digest,
+            "events": obs["events"][:12], "open_mandates": obs["open_mandates"], "waiting_on": [f"{w['task']}: {w['blocker'][:70]}" for w in obs["waits"]][:4] + ([f"... {len(obs['waits'])} in all"] if len(obs["waits"]) > 4 else []),
+            "sessions": obs["sessions"], "digest": digest,
             "hours_since_last_evaluation": None if hours is None else round(hours, 1)}
 
 
@@ -858,7 +882,7 @@ def parse_assignments(text: str) -> list[dict[str, str]]:
         fields, cur = {}, None
         for line in block.splitlines():
             m = re.match(r"^([a-z_]+):\s*(.*)$", line)
-            if m and m.group(1) in ASSIGNMENT_FIELDS:
+            if m and m.group(1) in ASSIGNMENT_FIELDS + OPTIONAL_FIELDS:
                 cur = m.group(1); fields[cur] = m.group(2).strip()
             elif cur and line.strip():
                 fields[cur] += " " + line.strip()
@@ -898,7 +922,7 @@ def _log_assignment(campaign: Path, row: dict[str, Any]) -> None:
 def register_assignments(campaign: Path, label: str, text: str) -> list[dict[str, str]]:
     """Save the drafts of an assessment as `assignments/ADV-nnn.md`, within the campaign's assignment budget and without duplicating a key already drafted or already named in a task record."""
     campaign = Path(campaign)
-    cap = int(_budget(campaign).get("max_assignments", 10**9))
+    cap = 10**9 if continuous(campaign) else int(_budget(campaign).get("max_assignments", 10**9))      # the pilot's assignment cap is history in continuous operation
     known = _events(campaign)
     drafted = {e["id"]: e for e in known if e["state"] == "DRAFTED"}
     records = "\n".join((ROOT / r["path"]).read_text(encoding="utf-8", errors="replace") for r in _records().values() if "PROACTIVE-ADVISOR" not in r["path"])
@@ -920,7 +944,7 @@ def register_assignments(campaign: Path, label: str, text: str) -> list[dict[str
     return made
 
 
-SENDER_RECORDS = ("PROACTIVE-ADVISOR", "ADV-PRESIDIO")   # the records of the sessions that draft and deliver (the pilot implementation, the presidio): their naming a draft or its delivery is not a recipient taking it in charge. Harness is also a recipient: its own record (PLAN-ADV-SESSION) is NOT excluded
+SENDER_RECORDS = ("PROACTIVE-ADVISOR", "ADV-PRESIDIO", "ADV-FOLLOWTHROUGH")   # the records of the sessions that draft and deliver (the pilot implementation, the presidio): their naming a draft or its delivery is not a recipient taking it in charge. Harness is also a recipient: its own record (PLAN-ADV-SESSION) is NOT excluded
 
 
 def assignment_states(campaign: Path) -> dict[str, dict[str, Any]]:
@@ -985,18 +1009,29 @@ def turn_limit_text(campaign: Path) -> str:
             f"stop opening files by turn {max(n - 6, 1)} at the latest and write the assessment (with the Assignments section) in your last turns; a partial assessment is better than none.")
 
 
+def followthrough_text() -> str:
+    """HE54: what an evaluation does with a wait. A judgment, never a duty to fill every wait: `none: <reason>` is a complete answer when waiting is the cheaper choice."""
+    return ("## Waiting and follow-through\nWhen sessions or a chain of dependencies wait for a battery, a CI run, a delivery or another answer (see `waits` above; an expected long wait can be enough, you need not wait until every session is idle), "
+            "judge whether to: (independent) anticipate an activity that does not depend on the awaited result, does not touch the candidate or the clones, processes and directories under verification, and that the shared resources allow; "
+            "(queued) prepare an assignment to run after the current work, which the recipient holds as a BLOCKED step with `unblock_when` in its own record; (conditional) prepare only the question or the alternative that depends on the expected result, "
+            "never executing every branch ahead; or keep waiting because nothing would justify its cost or risk. Say which, and why. An assignment names why it is useful, its `mode`, `start_condition`, the result expected and the decision it touches, "
+            "`interferes_with` and `obsolete_if` (optional fields; no new contract). The recipient may anticipate part, keep it queued, reorder it or declare it superseded, giving the reason in its own record, without asking anyone; reconcile a queued "
+            "assignment with the results that arrived before you propose to start it. A new integration that needs changes to a frozen candidate is a later increment, not an edit of the proof. Keep queues short and reviewable. "
+            "Group events and reuse an assessment that is still pertinent; do not turn every WAITING into an expensive evaluation. An assignment already drafted and authorised is delivered in the turn that reads it.")
+
+
 def operating_mode_text(campaign: Path) -> str:
     """The brief's statement of the operating mode. In continuous operation the pilot's ceilings are history and the one thing that binds the run is the turn limit; nothing here asks for work to be invented."""
     cont = continuous(campaign)
     if not cont:
-        return "## Operating mode\nbounded pilot: the limits above are the rule."
+        return "## Operating mode\nbounded pilot: the limits above are the rule.\n\n" + followthrough_text()
     week = weekly_state(campaign)
     ctl = [f"{c['kind']}: {c['text']}" for c in operator_controls()][-8:]
     return ("## Operating mode\ncontinuous: the operator authorised the Advisor to continue inside the roadmap, the existing boundaries and the available resources (authorisation of "
             f"{cont['authorised_utc']}; the pilot's totals and expiry above are history). An assignment that ends does not end the presidio. Waiting for an event is a valid outcome and `none: <reason>` "
             "is a complete answer; do not invent work to stay busy. Radar and scouting items are opportunities to compare with the current thread, the other open questions, the promising comparisons, "
             "knowledge already held and concrete obstacles; they are not orders and not a second roadmap, and nothing is installed because a radar recommends it. "
-            f"Shared weekly allocation: {week['state']} ({week.get('note', 'measured and enforced for this presidio')}). Operator control lines in the roadmap section (most recent last): {json.dumps(ctl)}.")
+            f"Shared weekly allocation: {week['state']} ({week.get('note', 'measured and enforced for this presidio')}). Operator control lines in the roadmap section (most recent last): {json.dumps(ctl)}.\n\n" + followthrough_text())
 
 
 def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
@@ -1007,7 +1042,7 @@ def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
              "## Operator roadmap (authoritative; operator instructions prevail over any automatic plan)", roadmap_text() or "(no roadmap section found: say so, and propose nothing beyond keeping the plan)", "",
              "## Campaign limits", json.dumps({k: v for k, v in _budget(campaign).items() if k in ("expires_utc", "max_invocations", "max_assignments", "turn_limit")}), "",
              operating_mode_text(campaign), "",
-             "## Observed state (mechanical, this tick)", json.dumps({k: obs[k] for k in ("events", "open_mandates", "sessions", "commits_since_last_tick")}, indent=1), "",
+             "## Observed state (mechanical, this tick)", json.dumps({k: obs[k] for k in ("events", "open_mandates", "waits", "sessions", "commits_since_last_tick")}, indent=1), "",
              "## Assignments already drafted, with their evidence level (do not duplicate; follow what was taken in charge)",
              json.dumps({k: {"recipient": v["recipient"], "key": v["key"], "highest": v["highest"]} for k, v in states.items()}, indent=1) or "none", "",
              f"## Previous assessment\n{prior[-1].parent.name}: `{prior[-1]}` (read it; reuse it when nothing relevant changed)" if prior else "## Previous assessment\nnone", "",

@@ -210,7 +210,32 @@
      "step": "CI concluded green on the last published SHA of this integration (ba0283130)",
      "status": "BLOCKED",
      "owner": "plan",
-     "blocker": "CI run in progress for ba0283130; ci_runs.py wait"
+     "blocker": "CI runs #738-#743 in progress (a6db5e9ef, ba0283130, c4efc7f29, 00feda1c8); waiting with ci_runs.py wait"
+    }
+   ],
+   "status": "IN_PROGRESS"
+  },
+  "OBJ_13_FOLLOW_THROUGH_DURING_WAITS": {
+   "order": 13,
+   "title": "Integration 2026-11-14: ADV anticipates useful work during waits (independent / queued / conditional / keep waiting); recipient autonomy; frozen candidates protected; minimal home; proportionate verification; benefit measured without a busyness criterion",
+   "steps": [
+    {
+     "step": "Principle in the shared home (cross_session_transport section 12), call-outs in ADV's definition and skill, tick/brief support (waits as events, optional assignment lines, no assignment cap in continuous mode)",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "strategic_advisor.py: _waits (blockers of open records, one cheap read), a NEW wait is an event, standing waits are not re-evaluated, tick `waiting_on`, brief `waits` + follow-through paragraph, optional lines mode/start_condition/interferes_with/obsolete_if, continuous mode lifts the pilot's assignment cap, ADV's own records excluded from waits; section 12 subsection; agent definition and skill sections. 3 new tests (Continuous) + 1 (mandate_continuity queued/superseded)."
+    },
+    {
+     "step": "Verification: independent anticipation during a verification, queued dependent stays queued, superseded follow-up closes with its reason, frozen candidate protected, no duplication, wait kept when no useful work, delivery and take-in-charge",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "Mechanical: new wait -> EVALUATE once, standing wait -> NONE with waiting_on, brief states keep-waiting valid and the protection of what is under verification; queued step BLOCKED with unblock_when stays ALL_BLOCKED until the awaited file holds the condition, then CONTINUE; superseded = DONE with reason; deliver --to refuses a wrong receipt (HE53). Real data: on this checkout the records hold 5 real waits (two older mandates with exhausted pools, my CI waits, ADV's presidio); tick 1 EVALUATE, tick 2 NONE with the same waits (copy of the campaign, real records). Real case: the lever thread, iteration 2 prepared and published (00feda1c8) while IT's reader and SCI's mapping confirmation were pending, candidate ba0283130 untouched; the SCI-dependent part (mapping, matrix attachment, CF01/CF03) stayed queued by ADV's scoping."
+    },
+    {
+     "step": "Benefit measured, not busyness: useful work concluded or prepared during the wait, time to usable result, extra consumption, interference, activity later useless",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": "Observed so far: iteration 2 mechanical items done during the wait for IT's rerun and SCI; interference none observed; useless: not known yet (depends on IT's decision to reread); time to usable result and consumption: to be read from transcripts after the cycle (session_model_census --since). Not claimed: that agents will behave this way because the text says so."
     }
    ],
    "status": "IN_PROGRESS"
@@ -227,5 +252,10 @@
   "clarification_verbatim": "B. L'autorizzazione dell'operatore alla modalità continua è stata documentata nella roadmap e comunicata ad ADV, che l'ha letta ma richiede ancora una conferma nella propria chat. Il codice consente la continuità; il comportamento mantiene un collo di bottiglia umano. L'operatore ha ora chiarito esplicitamente che il mandato sistemico comprende ADV e che non richiede ripetizioni individuali.",
   "shared_instruction_rule_verbatim": "l'ambito di un'istruzione può comprendere più sessioni; la sessione che la riceve inizialmente non ne limita automaticamente l'ambito; una nuova istruzione documentata dell'operatore va riconciliata con quelle precedenti secondo provenienza, ambito e ordine temporale; una semplice dichiarazione di un agente non basta ad ampliare l'autorità; un'istruzione sistemica verificata non richiede approvazioni individuali ripetute.",
   "scope": "permanent integration to the open mandate (autonomy and radars); applies at the first safe boundary; no new governance project, no signatures, no authorisation register, no new gate"
+ },
+ "OPERATOR_TEXT_INTEGRATION_FOLLOWTHROUGH_2026-11-14": {
+  "source": "user message to HE 2026-11-14, pasted prompt 'HE — PERMANENT PROACTIVE FOLLOW-THROUGH DURING WAITS' (Italian)",
+  "principle_verbatim": "L'operatore autorizza il principio per l'intero sistema: ADV può anticipare lavoro utile durante le attese e predisporre incarichi successivi, lasciando alle sessioni destinatarie la scelta del momento operativo.",
+  "scope": "whole system; folded into the open autonomy and strategic-inputs work, no separate project"
  }
 }

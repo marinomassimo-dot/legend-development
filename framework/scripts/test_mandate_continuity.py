@@ -94,6 +94,26 @@ class Verdicts(unittest.TestCase):
             finally:
                 mc.ROOT = saved
 
+    def test_a_queued_assignment_waits_for_its_dependency_and_a_superseded_one_closes_with_its_reason(self) -> None:
+        """HE54: a queued follow-through is a BLOCKED step with unblock_when in the recipient's record; no new state."""
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); (root / "out").mkdir()
+            saved, mc.ROOT = mc.ROOT, root
+            try:
+                queued = {"step": "ADV-007 after the battery", "status": "BLOCKED", "blocker": "waiting for battery 77", "unblock_when": {"path": "out/battery_77_verdict.txt", "contains": "PASS"}}
+                running = {"step": "independent work", "status": "DONE", "evidence": "e1 recorded and verified"}
+                v = lambda steps: mc.verdict(record(queue({"OBJ_1": steps})))
+                self.assertEqual(v([queued, running])["verdict"], "ALL_BLOCKED")                                       # the dependent assignment stays queued
+                (root / "out/battery_77_verdict.txt").write_text("FAIL\n", encoding="utf-8")
+                self.assertEqual(v([queued, running])["verdict"], "ALL_BLOCKED")                                       # the awaited file exists but does not hold the condition
+                (root / "out/battery_77_verdict.txt").write_text("PASS\n", encoding="utf-8")
+                self.assertEqual(v([queued, running])["verdict"], "CONTINUE")                                          # the dependency landed: it starts without a recall noticing
+                superseded = dict(queued, status="DONE", evidence="superseded: the battery failed, the follow-up question is moot (see record)")
+                self.assertEqual(v([superseded, running])["verdict"], "COMPLETE_PENDING")                              # declared superseded, with the reason, closes it
+            finally:
+                mc.ROOT = saved
+
     def test_blocked_without_blocker_is_not_a_block(self) -> None:
         v = mc.verdict(record(queue({"OBJ_1": [{"step": "x", "status": "BLOCKED"}]})))
         self.assertEqual(v["verdict"], "CONTINUE")
