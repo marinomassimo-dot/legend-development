@@ -452,6 +452,15 @@ class Proactive(Base):
         (self.campaign / "budget.json").unlink()
         self.assertEqual(sa.check(self.campaign), 1)                                                # without a budget file the same five attempts do exceed P=3
 
+    def test_the_brief_says_what_the_turn_limit_means_with_the_campaign_value(self) -> None:
+        sa.evaluate(self.campaign)
+        text = (self.campaign / "brief_P.md").read_text(encoding="utf-8")
+        self.assertIn("turn_limit is 20, a hard stop: at turn 21 the run is killed", text); self.assertIn("by turn 14 at the latest", text)
+        budget = self.campaign / "budget.json"; data = json.loads(budget.read_text(encoding="utf-8")); data["turn_limit"] = 12; budget.write_text(json.dumps(data), encoding="utf-8")
+        self.assertIn("turn_limit is 12, a hard stop: at turn 13", sa.turn_limit_text(self.campaign))      # the sentence follows the budget, not a constant
+        data.pop("turn_limit"); budget.write_text(json.dumps(data), encoding="utf-8")
+        self.assertEqual(sa.turn_limit_text(self.campaign), "")                                             # no limit configured: no sentence
+
     def test_a_failed_attempt_counts_and_the_turn_limit_is_enforced_by_the_launcher(self) -> None:
         os.environ["FAKE_MODE"] = "many"
         self.assertEqual(sa.evaluate(self.campaign), 1)

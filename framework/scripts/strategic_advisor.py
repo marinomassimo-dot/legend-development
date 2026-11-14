@@ -859,6 +859,15 @@ def scout_briefing(limit: int = 6000) -> str:
     return f"file time {stamp}; {'first %d of %d characters' % (limit, len(text)) if len(text) > limit else 'complete'}\n\n" + text[:limit]
 
 
+def turn_limit_text(campaign: Path) -> str:
+    """What the launcher's turn limit means for the run, from the campaign's own value: the advisor saw it only as a number inside the limits JSON and P4 spent all its turns reading (2026-11-14)."""
+    n = int(_budget(campaign).get("turn_limit") or 0)
+    if not n:
+        return ""
+    return (f"## Turn limit\nturn_limit is {n}, a hard stop: at turn {n + 1} the run is killed, counts as one of the campaign's invocations and returns nothing. Count your turns; "
+            f"stop opening files by turn {max(n - 6, 1)} at the latest and write the assessment (with the Assignments section) in your last turns; a partial assessment is better than none.")
+
+
 def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
     campaign = Path(campaign)
     states = assignment_states(campaign)
@@ -871,6 +880,7 @@ def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
              json.dumps({k: {"recipient": v["recipient"], "key": v["key"], "highest": v["highest"]} for k, v in states.items()}, indent=1) or "none", "",
              f"## Previous assessment\n{prior[-1].parent.name}: `{prior[-1]}` (read it; reuse it when nothing relevant changed)" if prior else "## Previous assessment\nnone", "",
              "## Live harness scouting (daily scout briefing, read by the caller: a feed of opportunities, not of evidence; the weekly candidate tables are stale)", scout_briefing(), "",
+             turn_limit_text(campaign), "",
              "## Neutral entry points", render_entrypoints(entrypoints()), "", f"Memory directory (read-only): `{MEMORY_DIR}`", "", "## Output", CONTRACT,
              "Give the usual headings, then `## Assignments`: either `none: <reason>` (continuing the plan can be the best decision) or one `### ASSIGNMENT n` block per assignment with exactly these "
              "`field: value` lines: " + ", ".join(ASSIGNMENT_FIELDS) + ". recipient is Orchestrator, Science or Harness. At most as many blocks as the campaign allows; none to show independence.", ""]
