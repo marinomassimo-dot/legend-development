@@ -62,7 +62,8 @@ def design_pointer(inv, pk):
         (mapped if DESIGN_MAP.get(r["package"], {}).get(r["table"]) else unmapped).setdefault((r["package"], r["table"]), []).append(r["key"])
     if not mapped and not unmapped:
         return f"none listed for {inv} ({rec['state']}): no design is registered for it, which does not say that none exists"
-    keys = lambda d: "; ".join(f"{pkg} {tab} [{', '.join(k.split(' ')[0] for k in ks)}]" for (pkg, tab), ks in d.items())
+    # package-qualified ids, exactly the design_row_id of the file: a bare M16 here would read as the M16 of another package in the same row (IT51 residual)
+    keys = lambda d: "; ".join(f"{pkg}::{tab}::{k.split(' ')[0]}" for (pkg, tab), ks in d.items() for k in ks)
     out = (f"{sum(map(len, mapped.values()))} design rows are in conditional_design_steps_it50.tsv for {inv}, read from the manifest's inv_id and not linked to this hypothesis by any package (a design is not an observation): " + keys(mapped)) if mapped else f"no mapped design rows for {inv}"
     return out + (f" || reachable and not mapped, so not in that file: {keys(unmapped)}" if unmapped else "")
 
