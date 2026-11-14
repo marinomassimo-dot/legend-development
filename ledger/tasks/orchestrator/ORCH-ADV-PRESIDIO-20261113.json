@@ -15,7 +15,7 @@
  },
  "OBJECTIVE": "Operational presidio of the Strategic Advisor on the operator's roadmap, for the existing pilot advisor_pilot_20261113 (no new campaign, no renewal, no counter reset, no new budget): dialogue with the operator, keep the Operator roadmap section current, host the hourly recall and the roughly four-hourly evaluation, forward the Advisor's assignments to IT, SCI and HE through the existing channels, follow each one from sent to taken in charge to executed to consumed, and put the next decision on the result. Distinct from ORCH-ADVISOR-PILOT-20261113 (IT Orchestrator: take-in-charge and disposition of each ADV and the pilot report), which this record neither replaces nor edits. Cost of this session's recalls is accounted apart from the Advisor's invocations and from the assigned batches. Authority: the operator's prompt of 2026-11-13 to this session, plus roadmap_current.md (Operator roadmap) and PILOT_CAMPAIGN.md. An operator stop or pause prevails.",
  "AUTHORISED_QUEUE_20261113": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_1_TRANSFER": {
    "order": 1,
    "title": "Take over the Advisor's recall from HE: one active recall at any time",
@@ -89,9 +89,9 @@
     },
     {
      "step": "At expiry (2026-11-14T18:22:36Z) or earlier if the pilot is stopped: delete this session's own recall, hand the Orchestrator (IT) the advisor-side inputs of the pilot report (invocation costs from meta.json, recall counts, deliveries), and record the sequence roadmap -> choice -> assignment -> result -> consumption -> re-evaluation as it actually happened, including where it did not",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Done earlier than expiry because the Advisor's budget is exhausted (5/5, 6/6) and every assignment is executed and consumed: this session's recall d463d57c DELETED 2026-11-14T05:5xZ (CronList afterwards: no job); HE's recall was deleted at 22:21Z the evening before, so no Advisor recall remains. Advisor-side inputs of the pilot report sent to IT (msg 295378dd): cost kept apart, the sequence as it happened including where it did not hold, defects, usefulness (provisional), residuals. No evaluation is possible without a new operator extension; the campaign, its counters and expiry (2026-11-14T18:22:36Z) were left untouched."
     }
    ]
   },
@@ -143,9 +143,9 @@
     },
     {
      "step": "On each result: read the original delivery, say what it strengthens, weakens, leaves unchanged or opens, hand the consumer delta to the IT Orchestrator by message with the folder path, verify the disposition on main, then decide: deepen, change thread, or suspend with a reopening condition",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "ADV-005: read, handed to IT, DISPOSED by IT (IT52-Q01 route note, ORCH-ADVISOR-PILOT OBJ_P7, main 1a65a1d6). ADV-004: read, handed to IT (msg f773bb48); IT states it has room and will consume rows 1-6 itself once SCI lands it on main, and asks that nobody else applies rows 1, 2, 3, 5 (my fallback offer is therefore withdrawn); the INV-05 clause was sent to IT as well. SCI told (msg 21f88bc4) that IT's battery finished and it may start its landing battery. CI state, from IT's message 2026-11-14: CI #711 (8c1a60f6) and #714 (16c0a6d5) FAILED in the Regression tests step; cause reproduced locally (227 suites, only test_repurposing_view.py: committed views not regenerated after the F02 packet identity qualification of ADV-001, a consumption-side defect, not environment); fix on main 17fd1bcd (views regenerated, audit-shareable PASS, gate PASS); CI for 17fd1bcd pending (about 1-1.5 h). For the pilot report as an interference/slowdown caused by consuming an assignment: one red CI cycle on two SHAs. | ADV-006 read in full (README, consumer_delta) on 2026-11-14: strengthens (the module already held the E_GABA specification of CC-20260826, uncited by SCI42 and SCI47; 104 rows reduce to 28 measurements, about nine core recordings; one preparation closes 4 rows fully and 3 partly), weakens the Advisor's hypothesis in part (antagonist identity, unit and age bin are not conflicts; the thread is not to be suspended; no generic generator mapping), leaves ranking, needs, directions and states unchanged, opens six genuine design conflicts (CF01, CF03, CF05b, CF23, CF04, CF05a). Own checks: CLAIM002 section 6 is the smallest decisive experiment; neither SCI42 nor SCI47 cites any CC-20260826 file; IT42-Q01 cites the pH M01. Handed to IT (msg 6c54d2f9), row 7 as FYI to HE (msg c233ecc1, no action requested, PLAN-ADV-SESSION closed)."
+     "evidence": "ADV-005: read, handed to IT, DISPOSED by IT (IT52-Q01 route note, ORCH-ADVISOR-PILOT OBJ_P7, main 1a65a1d6). ADV-004: read, handed to IT (msg f773bb48); IT states it has room and will consume rows 1-6 itself once SCI lands it on main, and asks that nobody else applies rows 1, 2, 3, 5 (my fallback offer is therefore withdrawn); the INV-05 clause was sent to IT as well. SCI told (msg 21f88bc4) that IT's battery finished and it may start its landing battery. CI state, from IT's message 2026-11-14: CI #711 (8c1a60f6) and #714 (16c0a6d5) FAILED in the Regression tests step; cause reproduced locally (227 suites, only test_repurposing_view.py: committed views not regenerated after the F02 packet identity qualification of ADV-001, a consumption-side defect, not environment); fix on main 17fd1bcd (views regenerated, audit-shareable PASS, gate PASS); CI for 17fd1bcd pending (about 1-1.5 h). For the pilot report as an interference/slowdown caused by consuming an assignment: one red CI cycle on two SHAs. | ADV-006 read in full (README, consumer_delta) on 2026-11-14: strengthens (the module already held the E_GABA specification of CC-20260826, uncited by SCI42 and SCI47; 104 rows reduce to 28 measurements, about nine core recordings; one preparation closes 4 rows fully and 3 partly), weakens the Advisor's hypothesis in part (antagonist identity, unit and age bin are not conflicts; the thread is not to be suspended; no generic generator mapping), leaves ranking, needs, directions and states unchanged, opens six genuine design conflicts (CF01, CF03, CF05b, CF23, CF04, CF05a). Own checks: CLAIM002 section 6 is the smallest decisive experiment; neither SCI42 nor SCI47 cites any CC-20260826 file; IT42-Q01 cites the pH M01. Handed to IT (msg 6c54d2f9), row 7 as FYI to HE (msg c233ecc1, no action requested, PLAN-ADV-SESSION closed). | CONSUMED 2026-11-14: IT applied rows 1-6 of ADV-006 as dated notes and pointers on main 2a18966d (gate PASS, ls-remote verified; no conflict adjudicated; row 7 HE's; row 8 pilot-report evidence; ranking digest unchanged; no receipts); IT's pilot record OBJ_P9 DONE. CI #727 (gate) and #51 (publication) on 2a18966d were in progress at 05:50Z, owned by IT. New decision after ADV-006: no further assignment (budget exhausted, 6/6 and 5/5); residuals listed in the operator report."
     },
     {
      "step": "Use invocation 4 (and the 6th assignment) only if a result makes a decision useful; keep invocation 5 for the pilot report's advisor-side inputs; run nothing to fill the night",
@@ -155,8 +155,9 @@
     },
     {
      "step": "Morning report to the operator (Italian, short, linked to evidence): direction chosen and alternative deferred, assignments and results, concrete change in comparisons/hypotheses/experiments/open questions, consumed vs waiting, CI and presidio state, resources used and budget left, next assigned action or the precise reason for none; keep apart observed generative improvement, better experiment formulation and validated predictive capacity",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Reported to the operator in chat (Italian) as this session's final message of 2026-11-14 (about 05:55Z), before the 09:33Z return; the advisor-side inputs of the pilot report were sent to the IT Orchestrator (msg 295378dd) for its report due 2026-11-14T18:22Z."
     }
    ]
   }
@@ -176,5 +177,25 @@
    "reversibility": "full",
    "how_to_revert": "git worktree remove"
   }
- ]
+ ],
+ "CLOSURE": {
+  "utc": "2026-11-14T05:55:00Z",
+  "reason": "every step evidenced; night-mission window (to 2026-11-14T09:33Z) not needed to its end because the budget is exhausted and all six assignments are executed and consumed; recall deleted",
+  "DEFAULTS_TAKEN": [
+   {
+    "condition": "third invocation hold vs SCI idle",
+    "default": "held until the Advisor could read ADV-004 on main, relaxed at 02:03Z when SCI was idle and IT consumption was under way",
+    "why safe": "an evaluation adds nothing to a result the Advisor cannot read; ADV-004 landed first",
+    "what would have differed": "an earlier P4 would have been blind to ADV-004"
+   },
+   {
+    "condition": "ADV-005 scout-feed substitute",
+    "default": "not assigned (no slot used) after HE judged it out of proportion for a closed record",
+    "why safe": "known limit recorded by HE; the Advisor discounted the stale feed in P3 and P5",
+    "what would have differed": "a fixed CONTEXT line in later briefs"
+   }
+  ],
+  "STOP_LOG": [],
+  "DECISIONS_TAKEN_NOTE": "see DECISIONS_TAKEN above and the OBJ_6 evidence: direction chosen by P3/P5 after my own checks of the originals, assignments adapted with reasons, no assignment taken from a premise I could not check"
+ }
 }
