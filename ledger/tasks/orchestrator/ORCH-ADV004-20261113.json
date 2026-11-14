@@ -65,5 +65,16 @@
    ]
   }
  },
- "VERIFICATION_EVIDENCE": []
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261114-002156-3b13d027",
+   "label": "adv004",
+   "sha": "87e9c4c70933eac72a4d1492ada72bdea70b6b55",
+   "state": "INTERRUPTED",
+   "exit_code": -15,
+   "evidence_dir": "/tmp/legend-verify-keep/20261114-002156-3b13d027",
+   "log_sha256": "fc29033d31ecb464e650e8f5f55dfd09950292c514b19d043c3892c0bc7d455b",
+   "clone": "REMOVED"
+  }
+ ]
 }
