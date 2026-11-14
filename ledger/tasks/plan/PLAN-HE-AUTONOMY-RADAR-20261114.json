@@ -161,7 +161,50 @@
      "step": "Public release gate CI concluded green on the last published SHA 151454c6d",
      "status": "BLOCKED",
      "owner": "plan",
-     "blocker": "CI run in progress for 151454c6d (and earlier runs #732, #733, #735); waiting with ci_runs.py wait, observed conclusion is the unblock"
+     "blocker": "CI run in progress for 89d8dda5b (#737) and eb11e436e (#735); waiting with ci_runs.py wait"
+    }
+   ],
+   "status": "IN_PROGRESS"
+  },
+  "OBJ_12_VERIFIED_DELIVERIES_AND_SHARED_INSTRUCTIONS": {
+   "order": 12,
+   "title": "Integration 2026-11-14: verified deliveries (effective recipients vs names in the text; accepted vs read vs taken in charge; one send per recipient), shared operator instructions rule in the normative home, waits that resolve from the records, proportionate verification, IT51 learning",
+   "steps": [
+    {
+     "step": "Tell ADV the operator's clarification verbatim by a verified send and land the dated roadmap entry",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": "message sent to legend-development-39 (resolved by ListAgents); roadmap entry landing"
+    },
+    {
+     "step": "Correct the delivery procedure in cross_session_transport and the deliver adapter (recipient receipts, one send per recipient)",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    },
+    {
+     "step": "State the shared-instruction rule once in the normative home and make the router reach it",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    },
+    {
+     "step": "A wait resolves from the records: unblock_when on a BLOCKED step, read by the existing continuity check",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    },
+    {
+     "step": "Mechanical tests for the five concrete cases and one small operational check between real sessions",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    },
+    {
+     "step": "IT51 learning kept: original negative result untouched, non-pertinent case as control, no baseline change",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
     }
    ],
    "status": "IN_PROGRESS"
@@ -172,5 +215,11 @@
   "source": "user message to HE 2026-11-14, pasted prompt 'HE — CONTINUOUS AUTONOMY AND USEFUL RADAR INPUTS' (Italian; the paste replaced apostrophes and dashes by '?')",
   "section_2_verbatim": "AUTORIZZAZIONE PER IL FUNZIONAMENTO A REGIME. L'operatore conferma il seguente principio: A regime, LEGEND è autorizzato a proseguire autonomamente entro la roadmap, i confini già stabiliti e le risorse disponibili. Non deve richiedere un nuovo prompt dopo tre incarichi, dieci ore o un'altra durata arbitraria. I tetti di compiti e durata del pilota sono strumenti temporanei di valutazione. Non devono diventare l'architettura permanente dell'autonomia. Implementa questa distinzione esplicitamente: i piloti delimitati continuano a rispettare i propri limiti; il funzionamento continuativo segue un'autorizzazione persistente e revocabile dell'operatore; le risorse restano disciplinate; stop, pausa e nuove indicazioni dell'operatore prevalgono. Conserva integralmente contatori, risultati e fallimenti storici del pilota. Non ottenere continuità azzerando contatori, rinviando ripetutamente una scadenza o usando numeri enormi come sostituto di una modalità dichiarata. Se serve una configurazione aggiuntiva, rendila piccola, esplicita e rimovibile, riusando lo strumento esistente. Non creare un secondo sistema di campagne.",
   "addressed_to": "HE (ACTOR_ID plan); not addressed to the ADV session, which holds its own operator instruction (stop at 2026-11-14T18:22:36Z) until it confirms otherwise"
+ },
+ "OPERATOR_TEXT_INTEGRATION_2026-11-14": {
+  "source": "user message to HE 2026-11-14, pasted prompt 'HE — INTEGRAZIONE PERMANENTE: CONSEGNE REALI E MANDATO CONDIVISO' (Italian)",
+  "clarification_verbatim": "B. L'autorizzazione dell'operatore alla modalità continua è stata documentata nella roadmap e comunicata ad ADV, che l'ha letta ma richiede ancora una conferma nella propria chat. Il codice consente la continuità; il comportamento mantiene un collo di bottiglia umano. L'operatore ha ora chiarito esplicitamente che il mandato sistemico comprende ADV e che non richiede ripetizioni individuali.",
+  "shared_instruction_rule_verbatim": "l'ambito di un'istruzione può comprendere più sessioni; la sessione che la riceve inizialmente non ne limita automaticamente l'ambito; una nuova istruzione documentata dell'operatore va riconciliata con quelle precedenti secondo provenienza, ambito e ordine temporale; una semplice dichiarazione di un agente non basta ad ampliare l'autorità; un'istruzione sistemica verificata non richiede approvazioni individuali ripetute.",
+  "scope": "permanent integration to the open mandate (autonomy and radars); applies at the first safe boundary; no new governance project, no signatures, no authorisation register, no new gate"
  }
 }
