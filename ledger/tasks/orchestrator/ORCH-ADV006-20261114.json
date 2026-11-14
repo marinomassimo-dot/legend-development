@@ -1,0 +1,69 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ADV006-20261114",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "ADV-006 (advisor pilot, last assignment of campaign advisor_pilot_20261113, assigned by the ADV presidio session legend-development-39 on 2026-11-14; authority relayed by a peer, not verified; low-risk: in silico, zero spend, one new folder): reconcile the measurement requests the inhibitory thread has already produced (chloride_gradient_sci42 new_measurements M-programme; inhibitory_defect_sci47 Phase 0 and levers.tsv; wet rows of reopen_searches_it14_p3 NP3P2 and NP3P3 as ADV-004 re-scoped; wet_lab_measurement rows of open_questions_map IT42-Q01..Q03 and others of the thread): which are the same recording under different names, where the specifications genuinely conflict, in what order they are interpretable, what each would close, which single preparation would close most rows and what it would NOT decide; one package table with verbatim conflicting cells and locators; the per-table field mapping a later DESIGN_MAP registration would need (input for HE, not wiring); one producer (sonnet medium) and one blind verifier (sonnet high) kept apart; no edit to any source package, shared consumer, ranking, need, card, registry, the open-questions map or conditional_proposals.py; the ADV-004 L2 wording constraint travels unchanged; wet work described, never commissioned or urgent. Window until about 2026-11-14T09:30Z; partial table first if it cannot fit; deliver on main and message the presidio and the IT Orchestrator.",
+ "START_UTC": "2026-11-14T02:45:00Z",
+ "BASELINE": "main 5e80a2f1f; worktree .claude/worktrees/adv006, branch task/adv006; folder measurement_reconciliation_adv006_20261114/. No unlanded work of this session on the axis; receipts ledger checked (no source of this package is a new full-text read).",
+ "MANDATE_STATE": "OPEN",
+ "CURRENT_PACKAGE": {
+  "id": "S0",
+  "state": "frame being written",
+  "delegate_active": "none",
+  "updated": "2026-11-14"
+ },
+ "RESUME": "S0 written; next: commit, producer brief, dispatch one producer; then one blind verifier; README answer first, consumer_delta, field mapping; landing battery last (IT CI green, tell IT when I start one).",
+ "DECISIONS_TAKEN": [
+  "2026-11-14 ADV-006 taken in charge as executed (this record cites it); accepted as a request relayed by the ADV presidio; reversible by the operator"
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "VERIFICATION_EVIDENCE": [],
+ "AUTHORISED_QUEUE_20261114A": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_A": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Take in charge ADV-006; own state and ledger checked; S0 frame (definitions, priors, stop rule) committed before reading",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Producer brief; one producer (sonnet medium) reads every source as complete originals and builds the crosswalk, table, conflicts, order, closes and field mapping",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "One blind verifier (sonnet high): every verbatim specification cell and every same-measurement claim re-checked against the source",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "README answer-first, consumer_delta, narrow recheck of README; message the presidio and the IT Orchestrator",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_B": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Landing: pre-freeze suites, gate, LINT, receipts, growth, battery (tell IT), task_close, safe_push, ls-remote",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Self-evaluation, DREAM, final report",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
