@@ -23,12 +23,12 @@
    "steps": [
     {
      "step": "Diagnose whether SCI47 levers.tsv (key lever_id, L1-L6, L3 and L6 kept as dropped) fits the hypotheses_only reader as INV-05 hypotheses, and whether each lever joins the ADV-006 rows by declared keys only (requests_merged token sci47_inhibitory#levers:<id>; the gating rows named in interpretable_after; M15 co-requirement; conflicts.tsv m_id); stop at the diagnosis with the cost if the smallest route is not small",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "Diagnosis: levers.tsv fits hypotheses_only with two small changes: the reader's table list gains levers.tsv (key lever_id, HYP_TABLES) and PKG_MAP gets an entry (mapping drafted from column names, NOT yet confirmed by SCI). Join by declared keys (one hop): requests_merged token sci47_inhibitory#levers:<id> (L1->M16, L2->M17, L3->M05+M20, L4->M18, L5->M19, L6 none); the id list that STARTS interpretable_after (M02,M04,M05); the rows whose lever_or_comparison_gated names the row id as a whole token (M15); conflicts.tsv m_id. Cost: about 90 lines of code, 6 tests, 3 older count assertions adjusted. Not small only for the second hop (M04->M01), which may carry a priority order: listed, not followed."
     }
    ],
-   "status": "IN_PROGRESS"
+   "status": "DONE"
   },
   "OBJ_2_BUILD_AFTER_BEFORE": {
    "order": 2,
@@ -36,9 +36,9 @@
    "steps": [
     {
      "step": "After IT lands the BEFORE and its criteria: build the declared-key link, no side chosen on the six conflicts, ADV-004 L2 wording untouched, two id spaces and two M01 apart, no ranking/sign/qualification change; SCI42 explanations.tsv not registered",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "IT landed BEFORE and criteria (generation_it52_20261114 at 5119526a1); built per ADV's message, not tuned to the criteria; landing."
     }
    ],
    "status": "TODO"

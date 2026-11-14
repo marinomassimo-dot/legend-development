@@ -174,5 +174,73 @@ class ReconciledMeasurements(unittest.TestCase):
         self.assertIn("none listed for INV-05", cp.design_pointer("INV-05", pk))
 
 
+class LeverJoin(unittest.TestCase):
+    """HE53 (ADV's assignment): SCI47's levers are INV-05 hypotheses in their own layout and each joins the ADV-006 rows through keys the packages declare, one hop, nothing read from prose beyond a list that starts a cell."""
+    PKG = "inhibitory_defect_sci47_20261112"
+
+    @classmethod
+    def setUpClass(cls):
+        cls.rows, cls.unm = cp.package_rows()
+        cls.by = {r["package_ref"].split(" @ ")[0]: r for r in cls.rows}
+        with open(HERE.parent / cls.PKG / "output" / "levers.tsv", encoding="utf-8", newline="") as f:
+            cls.src = {r["lever_id"]: r for r in csv.DictReader(f, delimiter="\t")}
+
+    def lever(self, k):
+        return self.by[f"{self.PKG}::{k}"]
+
+    def test_six_levers_travel_verbatim_and_the_dropped_ones_stay_dropped(self):
+        self.assertEqual(sorted(k.split("::")[1] for k in self.by if k.startswith(self.PKG)), [f"L{n}" for n in range(1, 7)])
+        self.assertEqual(self.unm, {})
+        for k, src in self.src.items():
+            row = self.lever(k)
+            self.assertIn(src["status"], row["premise_and_action"])
+            self.assertIn(src["result_that_would_reject_it"], row["decision_measure"])
+            self.assertIn(src["counter_evidence"], row["competing_explanations"])
+        self.assertIn("status: dropped as a drug arm now", self.lever("L3")["premise_and_action"])
+        self.assertIn("status: dropped", self.lever("L6")["premise_and_action"])
+        self.assertTrue(all(r["expected_result_by_explanation"].startswith("not stated by the package (missing)") for r in (self.lever(k) for k in self.src)))   # no prediction is invented
+
+    def test_l1_and_l2_reach_their_measurement_rows_gating_rows_comparator_and_genuine_conflicts_by_declared_keys(self):
+        for k, m in (("L1", "M16"), ("L2", "M17")):
+            j = self.lever(k)["design_join"]
+            self.assertIn(f"{cp.ADV006}::measurements.tsv::{m} (declared by sci47_inhibitory#levers:{k}", j)
+            self.assertIn("rows named at the start of that cell: M02, M04, M05", j)
+            self.assertRegex(j, r"M15 'every drug arm \(M16, M17, M18, M19, M20\)'")                      # the comparator co-requirement, in its own cell's words
+            for cf in ("CF04", "CF05a", "CF05b", "CF23"):
+                self.assertIn(cf, j.split("conflicts of type genuine")[1].split(";")[0])
+            self.assertIn("listed and NOT followed", j); self.assertIn("M01; genuine conflicts on them, for the reader to weigh: CF01, CF03", j)   # reachable only on a second hop, said as such
+            self.assertIn("no side is chosen on any conflict; no order here is a result", j)
+            self.assertIn("not an observation", j)
+
+    def test_a_lever_no_row_declares_is_not_joined_and_the_absence_says_so(self):
+        j = self.lever("L6")["design_join"]
+        self.assertIn("not joined (not stated is not tested and absent)", j)
+
+    def test_an_id_inside_a_quotation_is_not_a_pointer_and_the_two_id_spaces_stay_apart(self):
+        m20 = {"x": 1}
+        rows = [dict(package=cp.ADV006, table="measurements.tsv", key="M20", row=dict(requests_merged="sci47_inhibitory#levers:L3 ; map#open_questions_map:IT46-Q04", interpretable_after='M05 ("E_GABA measured before and after (M01)" (conditional_prediction.tsv))', lever_or_comparison_gated="E-chloride")),
+                dict(package=cp.ADV006, table="measurements.tsv", key="M05", row=dict(requests_merged="x", interpretable_after="unordered", lever_or_comparison_gated="L3")),
+                dict(package=cp.ADV006, table="measurements.tsv", key="M01", row=dict(requests_merged="sci42_chloride#new_measurements:M01", interpretable_after="none", lever_or_comparison_gated="")),
+                dict(package=cp.ADV006, table="conflicts.tsv", key="CF99", row=dict(m_id="M01", type="genuine"))]
+        j = cp.design_join(self.PKG, "L3", rows)
+        self.assertIn("rows named at the start of that cell: M05", j)
+        self.assertNotIn("CF99", j.split("second-hop")[0])                                           # M01 sits inside a quotation (SCI42's own M01): never read as ADV-006's M01
+        self.assertNotIn("M01", j.split("rows named at the start of that cell: ")[1].split(" |")[0])
+        self.assertEqual(cp.design_join("some_other_package", "L1", rows), "")                       # a package without a declared alias gets no join
+        self.assertIn("not registered", cp.design_join(self.PKG, "L1", []))                          # without the ADV-006 package the earlier behaviour stays: said, not guessed
+
+    def test_the_earlier_packages_rows_carry_no_join_and_adv004_wording_is_untouched(self):
+        self.assertTrue(all(r["design_join"] == "" for r in self.rows if self.PKG not in r["package_ref"]))
+        l2 = self.lever("L2")
+        self.assertIn(self.src["L2"]["functional_comparator"], l2["decision_measure"])               # the dated ADV-004/ADV-006 notes travel in the owners' own words
+        self.assertNotIn("preferring", l2["design_join"].lower())                                    # nothing here carries a subtype preference
+        self.assertTrue(all(r["direction_stated"].startswith("none") for r in self.rows if self.PKG in r["package_ref"]))
+
+    def test_the_committed_table_is_what_the_generator_writes(self):
+        with open(HERE / "conditional_proposals_packages_it47.tsv", encoding="utf-8", newline="") as f:
+            committed = list(csv.DictReader(f, delimiter="\t"))
+        self.assertEqual(committed, [dict(r) for r in self.rows])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

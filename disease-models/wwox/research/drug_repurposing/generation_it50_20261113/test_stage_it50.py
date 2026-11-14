@@ -17,7 +17,7 @@ class IsrRows(unittest.TestCase):
         self.assertEqual({"ISR1", "ISR2", "ISR3"}, set(self.isr))
         self.assertEqual({}, self.unmapped)
         invs = [r["inv_id"] for r in self.rows]
-        self.assertEqual(["INV-18"] * 13 + ["INV-08"] * 6 + ["INV-09"] * 5 + ["INV-02"] * 3, invs)   # the earlier order is unchanged; the new investigation is appended
+        self.assertEqual(["INV-18"] * 13 + ["INV-08"] * 6 + ["INV-09"] * 5 + ["INV-02"] * 3 + ["INV-05"] * 6, invs)   # the earlier order is unchanged; the new investigation is appended (HE53: INV-05 holds the six SCI47 levers)
 
     def test_no_direction_no_prediction_no_favourable_compound(self):
         for r in self.isr.values():

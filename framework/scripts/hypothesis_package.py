@@ -71,6 +71,7 @@ MANIFEST = DR / "hypothesis_packages.tsv"
 ROLES = ("physiological_hypotheses", "pharmacological_comparison", "hypotheses_only", "design_only")
 DESIGN_TABLES = {"design.tsv": "step", "grid.tsv": "pattern_id", "experiments.tsv": "exp_id", "measurements.tsv": "m_id", "conflicts.tsv": "conflict_id"}   # a design package's tables by file name, each with its key column
 HYP_KEY_COLUMNS = ("hyp_id", "hypothesis_id", "id")   # the key column of a hypotheses table differs by producer; the first one present is the key
+HYP_TABLES = {"hypotheses.tsv": HYP_KEY_COLUMNS, "levers.tsv": ("lever_id",)}   # a hypotheses package's table by file name (the first one present is read), each with its key column(s): SCI47's levers are hypotheses in their own layout
 MANIFEST_FIELDS = ("package", "dir", "role", "inv_id", "why")
 LINK_FIELDS = ("hyp_id", "kind", "need_id", "inv_id", "card_ids", "link_state", "carried_check", "source")
 LINK_STATES = ("PROPOSED_NOT_APPLIED", "CARRIED_IN_TEXT")
@@ -229,15 +230,16 @@ def load_comparison(pkg: Path) -> dict:
 
 
 def load_hypotheses_only(pkg: Path) -> dict:
-    """hypotheses.tsv of a package kept in its own layout: rows verbatim, the key column named, duplicates and an empty table stated."""
+    """hypotheses.tsv (or levers.tsv, key lever_id) of a package kept in its own layout: rows verbatim, the key column named, duplicates and an empty table stated."""
     pkg = Path(pkg)
     out = pkg / "output" if (pkg / "output").is_dir() else pkg
-    path = out / "hypotheses.tsv"
+    name = next((n for n in HYP_TABLES if (out / n).is_file()), "hypotheses.tsv")
+    path = out / name
     state, rows, refs, dup, key = "MISSING", {}, {}, [], ""
     if path.is_file():
         with open(path, newline="", encoding="utf-8") as f:
             header = next(csv.reader(f, delimiter="\t"), [])
-        keys = [c for c in HYP_KEY_COLUMNS if c in header]
+        keys = [c for c in HYP_TABLES[name] if c in header]
         key = keys[0] if len(keys) == 1 else ""
         state = "NO_KEY_COLUMN" if not keys else f"AMBIGUOUS_KEY ({' and '.join(keys)}: name the key in the table)" if len(keys) > 1 else "OK"   # a silent pick between two id-like columns would change which rows exist
         for r, ref in (_tsv_lined(path) if key else []):
