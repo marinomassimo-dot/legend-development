@@ -12,8 +12,8 @@
  "branch": "task/hrk7",
  "CURRENT_STATE": "IN_PROGRESS",
  "CHECKPOINT": {
-  "last_verified_result": "none yet",
-  "first_incomplete_work": "OBJ_1_DIAGNOSE"
+  "last_verified_result": "lever thread built and delivered; IT52 improved",
+  "first_incomplete_work": "CI conclusion on the last SHAs, then set COMPLETE"
  },
  "AUTHORISED_QUEUE_20261114C": {
   "MANDATE_STATE": "OPEN",
@@ -102,7 +102,27 @@
      "step": "Mark preparation of every conflict side; one hop label for M01; reason and consequence verbatim; CF01 on L2 with the owners' reason; replace the O10 sentence; L3 token tag and CF15; M06 as a row naming L1",
      "status": "DONE",
      "owner": "plan",
-     "evidence": "Built on 4c45ab039 per ADV (message 2026-11-14) and IT's go; 31 LeverJoin tests incl. test_it52_second_reader_points_one_pass; the 14 generation suites and test_hypothesis_package OK. Added beyond the five (said so to IT/ADV): L3's M20 O03/O14 tag and CF15 (same kind), M06 as a row naming L1 (listed with its words, conflicts not followed). Not added: the reader's residual items (O03 K-gluconate, -67 mV conditions, O18/O16, M06 for L1 beyond the listing, P11/M08, slice-nested design, M18, ADV-004 third 'may not'). Landing and sends follow."
+     "evidence": "Built on 4c45ab039 per ADV (message 2026-11-14) and IT's go; 31 LeverJoin tests incl. test_it52_second_reader_points_one_pass; the 14 generation suites and test_hypothesis_package OK. Added beyond the five (said so to IT/ADV): L3's M20 O03/O14 tag and CF15 (same kind), M06 as a row naming L1 (listed with its words, conflicts not followed). Not added: the reader's residual items (O03 K-gluconate, -67 mV conditions, O18/O16, M06 for L1 beyond the listing, P11/M08, slice-nested design, M18, ADV-004 third 'may not'). Landing and sends follow. Delivered 4c3d2d5bb (IT's same reader: harm closed, iteration 2 improved)."
+    }
+   ],
+   "status": "IN_PROGRESS"
+  },
+  "OBJ_7_LAST_LIST": {
+   "order": 7,
+   "title": "ADV's last mechanical list after the recheck: one statement for M01 on L2; M06 off L1; M14 in full with provenance; L3 reduced only if lossless; then close the thread",
+   "steps": [
+    {
+     "step": "Build the last list and close the thread",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "(1) L2: one statement in both columns (the owners' reading, no declared key reaches M01, M03); (2) M06 removed from L1 (a text token in its own cell, not a declared key; revival: SCI states M06 attaches to L1); (3) August design context = M14 verbatim (name, preparation, age_bin, cohort) with the provenance sentence and conflicts.tsv's m_id, printed once per cell; (4) the dropped lever L3 reduced losslessly (conflicts as id, type, m_id and a pointer to the design row that holds both sides; CF15 kept in full): L3 design_join 29 KB -> 17 KB, lever_attachments 23 KB -> 17 KB; stated limit: L1's lever_attachments stays about 21 KB (each attached matrix row verbatim), a separate choice if the reader needs it shorter. 32 LeverJoin tests, 14 generation suites, test_hypothesis_package OK. No further build on this thread unless ADV or IT opens it."
+    },
+    {
+     "step": "Public release gate CI concluded green on the SHA of the last list (and on 4c3d2d5bb)",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "blocker": "CI runs in progress (#749 for 4c3d2d5bb and the run of the last-list SHA); ci_runs.py wait",
+     "unblock": "both conclude success"
     }
    ],
    "status": "IN_PROGRESS"
