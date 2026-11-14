@@ -63,7 +63,7 @@
      "evidence": "2026-11-14T08:0xZ: CronList showed no scheduled job; recall text printed by strategic_advisor.py recall; exactly one CronCreate, job 3382bb86 hourly at :17 (session-only). First AUTOMATIC fire delivered to the session by the scheduler at 08:23:06Z (a manual tick is not counted): verdict EVALUATE, reason 'roadmap changed' (my own dated roadmap line recording the operator's instruction), events list the landed deliveries and the two new records; held, see OBJ_5. Result told to HE. CronList: one job."
     },
     {
-     "step": "At the expiry 2026-11-14T18:22:36Z start no evaluation or assignment, state the state of the authorised work, and delete the recall (CronDelete, CronList empty)",
+     "step": "At the pilot expiry 2026-11-14T18:22:36Z: do NOT delete the recall (operator clarification, in the roadmap seat); read presidio and mode in the tick; start no evaluation or assignment that is not due; state the state of the authorised work in the report",
      "status": "TODO",
      "owner": "orchestrator"
     }
@@ -81,9 +81,9 @@
     },
     {
      "step": "Decide with a reason whether the one remaining Advisor-drafted scientific assignment is used: only for a precise question that HE or IT identify, with question, originals, decision affected, perimeter, resources and recipients; no assignment is required",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Open 2026-11-14T10:05Z: neutral question to IT (b293a943) whether, after the after-run, it names the authored link for CP-BH1/BH2 as a precise question or stops at 'improved in access'. HE's stated view: an owner-authored link is a scientific choice; HE needs no draft. P6: hold. No assignment is required; the operator's condition (HE or IT identify the question) is not yet met."
+     "evidence": "2026-11-14T11:3xZ. The remaining scientific slot is not used as an Advisor draft: IT's durable disposition (ORCH-VERIFY-GENDIFF-20261114 key DISPOSITION_AFTER_ADV_QUESTION_20261114, main 0f1193b7c) stops on CP-BH1/BH2; I verified in the originals that CP-BH1 = AMPA/kainate gain, CP-BH2 = NMDAR subunit/matched current, CP-BH3 = gap junctions, all NEED-EXCITATORY-GAIN, so the IT51 case was unsuited. A different decision follows (OBJ_8). No assignments.jsonl entry: the new work is a presidio decision, not an Advisor draft and not operator-given."
     },
     {
      "step": "Follow each delivery along result -> comparison/hypothesis/experiment -> consumer -> new question -> next choice; every deferral gets a concrete reason, a recipient and a revival condition",
@@ -111,7 +111,30 @@
      "step": "Standing wait: roadmap change, delivery, mandate transition, operator control line; one recall only",
      "status": "BLOCKED",
      "owner": "orchestrator",
-     "blocker": "waiting for: a roadmap change, a delivery, a mandate transition or an operator control line; recall job 3382bb86 (hourly :17). Continuation past the unchanged expiry 2026-11-14T18:22:36Z is conditional on the operator confirming to this session that the continuous mode of the campaign (CONTINUOUS.json, authorised 09:50:42Z by an instruction addressed to HE, quoted by HE) applies to this presidio; asked in chat 2026-11-14T10:0xZ. Without that confirmation the operator's instruction to this session stands: at the expiry no evaluation or assignment, state the authorised work, delete the recall."
+     "blocker": "waiting for: a roadmap change, a delivery, a mandate transition or an operator control line; recall job 3382bb86 (hourly :17). Continuous mode applies to this presidio (operator's own message to this session 2026-11-14 ~10:3xZ, recorded in the roadmap seat); the pilot expiry 2026-11-14T18:22:36Z no longer ends it."
+    }
+   ]
+  },
+  "OBJ_8_INHIBITORY_CASE": {
+   "order": 8,
+   "title": "A fairer test: the inhibitory thread's own pharmacological levers reach the generator",
+   "steps": [
+    {
+     "step": "Decide the next step from the originals, comparing a pertinent inhibitory-thread case, another concrete generative limit, another roadmap question, and no further investment",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-14T11:3xZ, no evaluation spent. Examined: CP rows (CP-BH1/2/3 = excitatory), hypothesis_packages.tsv (no inhibitory hypotheses registered), conditional_proposals_packages_it47.tsv (no INV-05 package rows), SCI42 explanations.tsv and SCI47 levers.tsv, ADV-006 measurements.tsv/conflicts.tsv, IT's result_it51.md and durable disposition, view/work_order.json entries. Chosen: SCI47 levers L1/L2 (GABA availability; postsynaptic GABA-A positive modulation) joined by declared keys (requests_merged token L1->M16, L2->M17; interpretable_after M02,M04,M05; M15 comparator; conflicts m_id CF01,CF03,CF04,CF05a/b,CF23), with IT before/after and an independent scorer. Deferred, with reasons: SCI42 explanations (two declared keys disagree for 7 of 7: source_names vs requests_merged); other roadmap questions (remaining in-silico headroom is small per P6 and wet; compared from records, not the dashboard page); stop (kept as the outcome if the diagnosis shows the route is not small or the after-run shows no difference)."
+    },
+    {
+     "step": "Direct messages to the actual recipients; verify take-in-charge in their records (IT: baseline first; HE: diagnose, build after the baseline)",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Sent 2026-11-14T11:3xZ: IT msg fcef0823, HE msg fbfc18de (also carries the addressing-defect report). Take-in-charge: pending in their new records."
+    },
+    {
+     "step": "Read IT's before/after and HE's delivery in the originals; decide with a reason whether to deepen (L3-L6, explanations), change thread or stop; evaluation 7 only if it can change that choice",
+     "status": "TODO",
+     "owner": "orchestrator"
     }
    ]
   }
@@ -130,6 +153,13 @@
    "consulted": "the operator's prompt",
    "reversibility": "full",
    "how_to_revert": "restore the previous numbers in budget.json"
+  },
+  {
+   "what": "Treat the continuous mode as applying to this presidio from the operator's own message, not from the peer relay",
+   "alternatives_rejected": "acting on the HE relay alone (a peer cannot extend authority); asking again after the operator's message (the operator asked not to)",
+   "consulted": "HE's relay, the operator's message to this session",
+   "reversibility": "full",
+   "how_to_revert": "end-continuous or a PAUSE/STOP line in the roadmap section"
   }
  ],
  "STOP_LOG": []
