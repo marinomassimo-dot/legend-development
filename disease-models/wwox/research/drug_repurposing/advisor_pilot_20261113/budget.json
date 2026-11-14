@@ -1,8 +1,8 @@
 {
  "activated_utc": "2026-11-13T18:22:36Z",
  "expires_utc": "2026-11-14T18:22:36Z",
- "max_assignments": 6,
- "max_invocations": 5,
+ "max_assignments": 9,
+ "max_invocations": 7,
  "recipients": {
   "Harness": "HE",
   "Orchestrator": "IT Orchestrator",
@@ -27,6 +27,20 @@
    "expires_utc_unchanged": "2026-11-14T18:22:36Z",
    "no_external_spend": true,
    "note": "Totals include everything already used and any failed attempt. No new campaign, no activate, no counter reset, no renewal of the original expiry. The 3/3 evidence of the first period is historical. The ten-hour window is procedural; the code enforces only the totals and the expiry."
+  },
+  {
+   "utc": "2026-11-14T07:58:00Z",
+   "source": "operator instruction to the ADV session (generative capacity follow-through), recorded in the Operator roadmap section of roadmap_current.md",
+   "max_invocations": 7,
+   "max_assignments": 9,
+   "turn_limit": 20,
+   "used_before_amendment": {
+    "invocations": 5,
+    "assignments_drafted": 6
+   },
+   "expires_utc_unchanged": "2026-11-14T18:22:36Z",
+   "no_external_spend": true,
+   "note": "Totals include everything already used. No new campaign, no activate, no counter reset, no renewal of the original expiry; turn limit per invocation unchanged, no automatic escalation of effort. Of the nine assignments, two are given by the operator directly to HE and IT (not Advisor drafts, so they do not appear in assignments.jsonl and are not counted by the code); the technical counter counts only drafts produced by the Advisor, so the code now allows up to three more drafts while the operator authorises at most ONE further Advisor draft (six drafted so far, seven at most). The residual is respected procedurally; nothing was added to make operator-given assignments look like Advisor proposals."
   }
  ]
 }
