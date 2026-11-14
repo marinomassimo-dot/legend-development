@@ -72,3 +72,8 @@ DATO within the perimeter in `queries_verifier.tsv` (PubMed tool and Europe PMC 
 
 Net: the producer's position is conditional and mostly within the evidence; points 1-4 are the ones to soften or qualify before it reaches a consumer.
 
+
+
+## Correction 2026-11-14 (after the README recheck)
+
+§4 wording corrected by V16's recheck (`recheck_readme.md`, C4): clobazam is about 1 or below (0.78 Ralvenius; 1.02 Hammer), not "at or below 1"; "potency shows no alpha selectivity in either paper (concordant)" should read "alpha1, alpha2 and alpha5 EC50 lie within about 1.6-fold in both papers; alpha3 is the least potent"; "non-selective is relative to clonazepam" should read "Hammer says they share non-selectivity with clonazepam". The text above is kept.
