@@ -1,0 +1,93 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+  "TASK_ID": "PLAN-HE-VALUE-CONTINUITY-20261114",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "plan",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-11-14",
+  "OBJECTIVE": "Permanent value-driven continuity and portfolio selection: when the executable queue is exhausted, the presidio decides what comes next from the portfolio without waiting for a new radar, event or instruction; every wait states the relevant alternatives excluded, the reason and the resume condition; a situation already evaluated is not re-evaluated; the advisor's own updates do not trigger it. One principle in its normative home, linked; no new service, scheduler, gate or registry. The 24 h autonomy trial (start 2026-11-14T15:29:29Z) continues with its counters.",
+  "worktree": ".claude/worktrees/hrk20",
+  "branch": "task/hrk20",
+  "CURRENT_STATE": "IN_PROGRESS",
+  "CHECKPOINT": {
+    "last_verified_result": "diagnosis done",
+    "first_incomplete_work": "OBJ_2"
+  },
+  "AUTHORISED_QUEUE_20261114D": {
+    "OBJ_1_DIAGNOSIS": {
+      "order": 1,
+      "title": "Diagnosis before code: what leaves ADV waiting after the queue is exhausted",
+      "steps": [
+        {
+          "step": "Read tick/observe/evaluate and the brief",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "strategic_advisor.tick is purely event-driven: with no event and no roadmap change the verdict is NONE and presidio_state says WAITING (legitimate) until a roadmap change, a delivery, a mandate transition or a stalled mandate. An evaluation that ends in `none: <reason>` leaves no structured outcome, so the wait has no stated alternatives, reason or resume condition and nothing can resume it. observe() counts the advisor's own folder commits (P*/assessment, assignments, invocations: 2 of the last 23 commits of the folder match EVENT_SUBJECT) and the transitions of the sender records as events (self-triggers)."
+        }
+      ]
+    },
+    "OBJ_2_PRINCIPLE_ONCE": {
+      "order": 2,
+      "title": "Write the principle once in its normative home and link it",
+      "steps": [
+        {
+          "step": "cross_session_transport section 12 subsection + one decision-table row for the exhausted queue",
+          "status": "TODO",
+          "owner": "plan"
+        },
+        {
+          "step": "Links: CLAUDE.md router row, the Advisor agent definition and skill, the brief of the evaluation (no role file is edited: orchestrator.md already points at section 12 and fingerprints stay)",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    },
+    "OBJ_3_RECALL_BEHAVIOUR": {
+      "order": 3,
+      "title": "The recall decides what is next without waiting for a radar, and does not re-evaluate the same thing",
+      "steps": [
+        {
+          "step": "Evaluation states its outcome (continue | switch | assign | queue | wait) with excluded alternatives, reason and resume_when; the tick records and reads it",
+          "status": "TODO",
+          "owner": "plan"
+        },
+        {
+          "step": "Tick: queue exhausted visible; a met resume condition or a missing outcome after an evaluation triggers one evaluation; a stated wait is not re-evaluated; own updates and sender records are not events",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    },
+    "OBJ_4_VERIFY": {
+      "order": 4,
+      "title": "Four cases verified, plus a replay on the real state",
+      "steps": [
+        {
+          "step": "Tests: exhausted queue with an opportunity evaluated without a radar; same situation not re-evaluated; only blocked or disproportionate -> motivated wait; a new pertinent result reconsiders the earlier choice",
+          "status": "TODO",
+          "owner": "plan"
+        },
+        {
+          "step": "Four quick suites, release gate, CI per SHA",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    },
+    "OBJ_5_COMMUNICATE": {
+      "order": 5,
+      "title": "Tell ADV and the other recipients what changed and what limits remain; record the intervention in the 24 h trial without touching its start or counters",
+      "steps": [
+        {
+          "step": "Messages with effective recipients; the intervention is one line in my record and is sent to ADV, which owns TRIAL_24H",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    }
+  },
+  "MANDATE_STATE": "OPEN",
+  "OPERATOR_TEXT_2026-11-14": "PERMANENT IMPLEMENTATION — Value-driven continuity and portfolio selection\nL’operatore richiede un comportamento durevole, indipendente dal prompt corrente e dalla sessione. Integra questa consegna nel lavoro esistente, senza riavviare la prova di autonomia né cancellarne i risultati.\nPrincipio approvato\nFinché esistono obiettivi autorizzati e attività utili eseguibili, LEGEND cerca e seleziona la prossima opportunità nel portafoglio disponibile. La chiusura di un incarico, una coda vuota o l’assenza di nuovi radar non esauriscono automaticamente il lavoro. Ogni prosecuzione e ogni attesa derivano da una valutazione proporzionata di priorità, beneficio atteso, fattibilità e costo.\nQuesto principio riguarda tutti gli agenti nel rispettivo perimetro. ADV mantiene la visione dell’intero portafoglio; Orchestrator e Scientist mantengono i propri cicli di approfondimento, consegna e ritorno delle domande.\nRagionamento rapido permanente\nQuando occorre scegliere il seguito, considera le opportunità pertinenti fra: roadmap dell’operatore e obiettivi ancora perseguibili; open questions (quale risposta cambierebbe una decisione e quale parte è affrontabile ora); filoni scientifici (premesse irrisolte, spiegazioni concorrenti, risultati promettenti o contrari); dashboard e record sorgente (candidati, confronti, esperimenti e linee tematiche che meritano investimento); conoscenza già disponibile ma non consumata o combinata; DREAM, quando nuove associazioni possono orientare una domanda concreta; radar precedenti ancora da valutare, oltre ai nuovi segnali; ostacoli dell’harness e strumenti esistenti utilizzati male o poco; invarianti di progetto (rigidità, duplicazioni, costi, complessità e occasioni di semplificazione).\nSono strumenti di ragionamento, non una checklist da compilare integralmente a ogni turno. Una domanda sperimentale ancora aperta non obbliga a continuare la bibliografia; una miglioria possibile non diventa automaticamente un incarico.\nUsa gli indici e lo stato disponibili per individuare le opportunità. Approfondisci gli originali pertinenti alla decisione selezionata, rispettando la disciplina del testo completo.\nPriorità\nOrdina le opportunità considerando: importanza della decisione scientifica o farmacologica; probabilità concreta di avanzare con i mezzi disponibili; beneficio marginale rispetto a quanto già fatto; conoscenza o lavoro che l’esito potrebbe sbloccare; costo complessivo e risorse condivise; coerenza con roadmap, flessibilità, semplicità e reversibilità.\nBasta una graduatoria motivata. Non introdurre punteggi numerici arbitrari o un nuovo sistema obbligatorio di scoring.\nComportamento effettivo\nVerifica e correggi il percorso che oggi può lasciare ADV in attesa di nuovi eventi dopo l’esaurimento della coda.\nLa chiusura delle attività eseguibili deve consentire una decisione sul seguito anche senza nuovi radar, dati o istruzioni umane. Distingui: 1. risultato consegnato e consumato; 2. decisione su dove investire successivamente.\nIl richiamo può riusare una valutazione ancora valida. Evita valutazioni costose ripetute degli stessi elementi, autoinneschi dovuti ai propri aggiornamenti e duplicazione degli incarichi.\nGli esiti ammessi sono: proseguire, cambiare filone, assegnare lavoro indipendente, accodare un seguito condizionato oppure attendere motivatamente. L’attesa indica le alternative pertinenti escluse, il motivo e la condizione di ripresa.\nRestano rispettati pause dell’operatore, limiti effettivi delle risorse, atti riservati, vincoli scientifici e dipendenze reali. Non inventare lavoro per mantenere occupate le sessioni.\nPersistenza e verifica\nRiusa le sedi canoniche e lo stato esistenti. Scrivi il principio una volta e collegalo alla definizione degli agenti, alla procedura ADV e al comportamento del richiamo. Nessun nuovo servizio, scheduler, gate o registro parallelo.\nVerifica almeno questi casi: coda esaurita e opportunità utile già disponibile: viene valutato il seguito senza attendere un radar; stessa situazione già valutata: nessuna rivalutazione costosa ripetuta; sole attività realmente bloccate o sproporzionate: attesa motivata; nuovo risultato o cambiamento pertinente: la precedente scelta viene riconsiderata.\nComunica direttamente ad ADV e agli altri destinatari interessati cosa è cambiato e quali limiti rimangono. Registra l’intervento nella prova delle 24 ore, mantenendo orario iniziale e contatori.\nIl successo è una decisione utile seguita da lavoro pertinente, oppure lavoro inutile evitato con motivazione verificabile."
+}
