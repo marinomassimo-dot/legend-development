@@ -12,8 +12,8 @@
  "branch": "task/hrk3",
  "CURRENT_STATE": "IN_PROGRESS",
  "CHECKPOINT": {
-  "last_verified_result": "mode landed (eb11e436e); scout filter tested offline; radar README written",
-  "first_incomplete_work": "OBJ_8 land; OBJ_3/OBJ_9/OBJ_10 operational check with ADV and the final report"
+  "last_verified_result": "151454c6d published, gate PASS; operational check on a copy",
+  "first_incomplete_work": "OBJ_11 CI conclusion on 151454c6d"
  },
  "AUTHORISED_QUEUE_20261114B": {
   "MANDATE_STATE": "OPEN",
@@ -49,12 +49,12 @@
    "steps": [
     {
      "step": "Distinguish end of an assignment, end of a turn, legitimate wait, resource suspension and end of authorisation; an assignment's end does not close the presidio; verify compaction, restart and loss of recall (executed / expected / runtime limits); one presidio, no daemon",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "mode + presidio state WAITING + skill section landed; ADV records its standing objective (it said it will); operational check pending."
+     "evidence": "eb11e436e: WAITING (legitimate) state in tick/presidio field, recall text names it, skill section 'Continuous operation' (what survives compaction, restart, lost recall; one presidio; restore by CronList then recall); tested on a copy of the real campaign (radar_inputs_he52_20261114/operational_check.md). Compaction survival of the in-session cron NOT observed (expected: process continues); a lost process or machine is restored only by the next session. ADV records its standing objective itself and treats the mode as pending its own confirmation."
     }
    ],
-   "status": "IN_PROGRESS"
+   "status": "DONE"
   },
   "OBJ_4_OPERATOR_CONTROL": {
    "order": 4,
@@ -114,12 +114,12 @@
    "steps": [
     {
      "step": "Fix only defects the sample demonstrates (roadmap-derived searches, empty vs error vs uninterpreted, question-result match, provenance, repeated resolved conditions), keeping exploration and adjacent literatures open",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "scout filter + HF object term + self-repo exclusion coded with 83 tests; retrospective 64 items; to land."
+     "evidence": "151454c6d published (gate PASS, ls-remote): whole-word object filter with dropped hits counted and named, Hugging Face term is the object, own repo excluded, operator roadmap named in the plan, IT28 diagnosis layout read, parser-version re-read; 83 scout tests; retrospective on 64 filterable items (kept 9, dropped 55; one R lost, named). Effective at the next daily run."
     }
    ],
-   "status": "IN_PROGRESS"
+   "status": "DONE"
   },
   "OBJ_9_ADV_USE_AND_LOOP": {
    "order": 9,
@@ -127,12 +127,12 @@
    "steps": [
     {
      "step": "Make ADV's inputs (roadmap, dashboard, open questions, candidates, radars, DREAM, costs, invariants) accessible and current; one signal followed to a verifiable decision with ADV; result returns to the drug-repurposing consumers",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "Inputs: entry points re-indexed earlier (PLAN-ADV-SESSION-20261113), scout briefing now names the operator roadmap and the dropped hits; skill states radars are opportunities not orders. Followed to a verifiable decision: NP3P3 (scout row -> ADV P3 -> ADV-004 executed and consumed: NP3P3 re-scoped not closed, L2 wording, WO-16, IT53-Q01) and SEPT9 code (examined, defer, traced); IT51 closed the harness-to-generator path (improved in access, not consumption). Loop to drug repurposing stays with ADV/IT."
     }
    ],
-   "status": "TODO"
+   "status": "DONE"
   },
   "OBJ_10_OPERATIONAL_CHECK": {
    "order": 10,
@@ -140,12 +140,12 @@
    "steps": [
     {
      "step": "Operational test with ADV: bounded behaviour intact, continued authorisation without counter reset, assignment end not closing presidio, stop respected, no duplicate recall or evaluation, resumption after a supported interruption, ceilings versus executed activity",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "operational_check.md: scenarios on a copy of the real campaign and state (bounded pilot unchanged; continuous after expiry without counter change; quiet hour = WAITING; PAUSE advisor -> PAUSED; RESUME lifts; PAUSE other scope shown not applied). Live ADV session not touched (its evaluation 6 was running; it holds its own 18:22:36Z instruction). Not exercised on the live runtime: compaction, restart, duplicate recall under a real restore."
     }
    ],
-   "status": "TODO"
+   "status": "DONE"
   },
   "OBJ_11_DELIVER": {
    "order": 11,
@@ -153,12 +153,18 @@
    "steps": [
     {
      "step": "Integrate and publish by the existing procedures; short report answering the seven questions in Italian; modification/removal procedure; negative results and limits kept",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "Messages sent to ADV and IT (mode, text of the operator authorisation, radar limits); final report in chat (Italian)."
+    },
+    {
+     "step": "Public release gate CI concluded green on the last published SHA 151454c6d",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "blocker": "CI run in progress for 151454c6d (and earlier runs #732, #733, #735); waiting with ci_runs.py wait, observed conclusion is the unblock"
     }
    ],
-   "status": "TODO"
+   "status": "IN_PROGRESS"
   }
  },
  "MANDATE_STATE": "OPEN",

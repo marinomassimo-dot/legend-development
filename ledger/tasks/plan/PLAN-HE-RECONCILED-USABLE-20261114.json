@@ -12,8 +12,8 @@
  "branch": "task/hrk",
  "CURRENT_STATE": "IN_PROGRESS",
  "CHECKPOINT": {
-  "last_verified_result": "link built, battery PASS WITH SKIPS, gate exit 0",
-  "first_incomplete_work": "OBJ_6_DELIVER: land on main, send IT and ADV the SHA and entry point"
+  "last_verified_result": "link delivered and consumed-in-access by IT51",
+  "first_incomplete_work": "OBJ_6 CI conclusion on 49da57433"
  },
  "AUTHORISED_QUEUE_20261114": {
   "MANDATE_STATE": "OPEN",
@@ -88,12 +88,18 @@
    "steps": [
     {
      "step": "Integrate and publish with the existing procedures; send IT and ADV the technical choice, alternatives, sources, before/after, limits, verification and the off-switch",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "Published a33c39a90 then 72ecb912e (49da57433; gate PASS, ls-remote); IT and ADV messaged with SHA, entry point, choice, discarded alternatives, limits, verification, off switch; IT51 result: improved in access, not consumption (IT stopped by its own decision); residual (package-qualified ids in the pointer) fixed in 72ecb912e."
+    },
+    {
+     "step": "Public release gate CI concluded on 49da57433 (the SHA of the delivered link)",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "blocker": "CI run #733 in progress for 49da5743; waiting with ci_runs.py"
     }
    ],
-   "status": "TODO"
+   "status": "IN_PROGRESS"
   }
  },
  "MANDATE_STATE": "OPEN"
