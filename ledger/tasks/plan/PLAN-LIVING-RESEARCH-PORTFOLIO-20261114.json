@@ -56,16 +56,49 @@
   "RUNTIME": "Codex",
   "SCIENTIFIC_DELTA": "NONE: opportunities and procedural routing only; no scientific claims or ranking changed",
   "CHECKPOINT": {
-    "last_verified_result": "Implementation landed and used in live ADV P9; 226 suites completed without nonzero exits before browser namespace failure was diagnosed. Original battery explicitly interrupted without verdict.",
-    "first_incomplete_work": "Complete fresh-clone retry on b6270eab80d7d14894573768fc351975cceb3253 with accessible TMPDIR, then final release and cleanup."
+    "last_verified_result": "Browser suite 225 PASS; outside-repository TMPDIR passes both synthetic browser load and 62 privacy plus 20 runner tests. Earlier interrupted attempts and failed suites preserved.",
+    "first_incomplete_work": "Complete the standard 251-target inventory on f5cba5948fa8e241811c79c141c8236bf5838a46 with the checked external TMPDIR; release and clean own artifacts."
   },
-  "VALIDATION_INCIDENT": {
-    "original_candidate": "614db32d7",
-    "status": "INTERRUPTED_WITHOUT_VERDICT",
-    "completed_suites": 226,
-    "local_log": "/tmp/legend-portfolio-battery.log",
-    "reason": "Browser could not see host /tmp HTML in its Snap namespace; identical synthetic fixture loaded from project tmp. Only this actor owned runner and descendants were stopped by checked PID:start identity.",
-    "retry_candidate": "b6270eab80d7d14894573768fc351975cceb3253",
-    "retry_log": "/tmp/legend-portfolio-battery-valid.log"
-  }
+  "VALIDATION_ATTEMPTS": [
+    {
+      "utc": "2026-11-14T23:03:14.228273+00:00",
+      "candidate": "614db32d734cb5b9f20538793a71d72ce6093f19",
+      "status": "INTERRUPTED_WITHOUT_VERDICT",
+      "completed_suites": 226,
+      "reason": "Snap Chromium could not see host /tmp HTML; same synthetic fixture loads in project tmp. Repeat with TMPDIR accessible in the browser namespace.",
+      "runner_identity": "2209462:152470421",
+      "owned_process_count": 11
+    },
+    {
+      "utc": "2026-11-14T23:27:21.450577+00:00",
+      "candidate": "b6270eab80d7d14894573768fc351975cceb3253",
+      "status": "INTERRUPTED_WITH_FAILED_SUITES",
+      "completed": 18,
+      "failed_suites": [
+        [
+          "scripts/test_public_release_gate.py",
+          "0.9",
+          "1"
+        ],
+        [
+          "scripts/test_release_runner_verdict.py",
+          "7.4",
+          "1"
+        ]
+      ],
+      "browser_suite": "PASS, 225 tests",
+      "reason": "TMPDIR nested in ignored project tmp made privacy and inventory fixtures inherit the outer repository ignore context. Both browser file access and privacy fixtures are tested separately with a dedicated external-home TMPDIR before the next full run.",
+      "identity": "2265854:152860699"
+    },
+    {
+      "TMPDIR": "/home/desktop/legend-portfolio-verification-57qpx74w",
+      "privacy_suite_exit": 0,
+      "clone": "/tmp/legend-portfolio-battery-final-02egp5ec",
+      "candidate": "f5cba5948fa8e241811c79c141c8236bf5838a46",
+      "browser_fixture_loaded": true,
+      "runner_fixture_suite": "20 tests PASS",
+      "status": "IN_PROGRESS",
+      "log": "/tmp/legend-portfolio-battery-final.log"
+    }
+  ]
 }

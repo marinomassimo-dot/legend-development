@@ -70,8 +70,8 @@ Session: PLAN-LIVING-RESEARCH-PORTFOLIO-20261114 · Date: 2026-11-14 · ACTOR_ID
 | Field | Observed result |
 |---|---|
 | WORK COMPLETED | One persisted opportunity portfolio, update command, recall input and assessment return path, routed through the existing Advisor. |
-| PROBLEMS | The first targeted checks caught an oversized agent definition; the first live proposal relied on a mistaken duplicate-check premise. |
-| SOLUTION | Shortened the definition without relaxing the limit. The hosting ADV checked the originals, declined the proposal and corrected the portfolio. |
+| PROBLEMS | The first targeted checks caught an oversized agent definition; the first live proposal relied on a mistaken duplicate-check premise. My temporary-directory choices also caused a browser visibility failure and then ignored privacy fixtures. |
+| SOLUTION | Shortened the definition without relaxing the limit. The hosting ADV checked the originals, declined the proposal and corrected the portfolio. Checked both browser access and privacy/inventory fixtures before repeating with a non-ignored temporary directory outside repositories. |
 | LEARNING | A durable pointer and a tested consumer are necessary; successful consultation still does not establish good strategic selection. |
 | MICRO-UPGRADE | Reused the existing evaluation and recall rather than creating another scheduler or task authority. |
 | IMPACT | Twenty initial opportunities became retrievable inputs; three were fed back by a real assessment. No scientific claim or ranking change is attributed to this implementation. |
@@ -85,4 +85,8 @@ Session: PLAN-LIVING-RESEARCH-PORTFOLIO-20261114 · Date: 2026-11-14 · ACTOR_ID
 
 The first complete-inventory attempt on 614db32d7 completed 226 suites without a nonzero suite exit, then accumulated browser waits. The page file existed on the host but not under the running Snap Chromium process's filesystem root. A separate synthetic HTML fixture loaded successfully with the same installed browser from the project's ignored `tmp/` directory. Browser startup and a working DevTools endpoint had not established access to the workload's files.
 
-Only this actor's runner and its checked descendant identities were stopped. That attempt is **INTERRUPTED WITHOUT VERDICT**, not PASS. Its original log and interruption receipt remain local. The complete inventory is repeated on b6270eab80d7d14894573768fc351975cceb3253 with an accessible `TMPDIR`; the browser suite runs first, with every inventory target included once. No sandbox-bypass flag, new browser installation or weakened assertion is used. RP-020 records the small workload-probe opportunity for ADV to assess; no additional gate or service was implemented.
+Only this actor's runner and its checked descendant identities were stopped. That attempt is **INTERRUPTED WITHOUT VERDICT**, not PASS. Its original log and interruption receipt remain local.
+
+The second attempt on b6270eab80d7d14894573768fc351975cceb3253 ran the browser suite first: 225 tests PASS. My choice of an ignored temporary directory inside the project then caused fixture discovery failures in `test_public_release_gate.py` and `test_release_runner_verdict.py`. Those failed suite results remain recorded; the attempt was interrupted, not relabelled PASS.
+
+A dedicated, non-ignored temporary directory outside all repositories passed the synthetic browser-file probe, 62 privacy tests and 20 runner tests. The standard complete inventory is repeated in a fresh clone of f5cba5948fa8e241811c79c141c8236bf5838a46 with that `TMPDIR`. No sandbox-bypass flag, new browser installation or weakened assertion is used. RP-020 records the small workload-probe opportunity for ADV to assess; no additional gate or service was implemented.
