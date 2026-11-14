@@ -35,9 +35,9 @@
    "steps": [
     {
      "step": "Pilot report (due by the campaign expiry 2026-11-14T18:22:36Z): decisions advanced without a new operator prompt, usefulness against the continuation that would have happened anyway, work avoided, interference, interventions asked of the operator, actual cost; configured/invoked/consumed/improved kept apart; provisional, not independent validation",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Due at expiry or when the advisor's budget is exhausted. Open-mandate signal: the two standing-rule records INTAKE-OVERNIGHT-20261002 and ORCH-METABOLIC-BATCH-20261019 now carry an explicit note (a BLOCKED standing rule, not executable work) with their unblock conditions."
+     "evidence": "Due at expiry or when the advisor's budget is exhausted. Open-mandate signal: the two standing-rule records INTAKE-OVERNIGHT-20261002 and ORCH-METABOLIC-BATCH-20261019 now carry an explicit note (a BLOCKED standing rule, not executable work) with their unblock conditions. REPORT 2026-11-14: disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/PILOT_REPORT.md (provisional; Italian version delivered to the operator in chat)."
     }
    ]
   },
