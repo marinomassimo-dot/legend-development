@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-14T00:02:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "tables": "read",
+  "figures": "captions_only",
+  "discussion": "read",
+  "limitations": "read",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-14T00:03:00Z",
+ "event_id": "FTR-20261114-25798598-60",
+ "evidence_basis": [
+  "verbatim_locator | proposition: Imax is percent of the GABA EC20 response, which is 100 percent | Methods, Electrophysiological recordings | \"the EC20 response was defined as 100%\"",
+  "verbatim_locator | proposition: clobazam at alpha1 and NDMC at alpha2 were smaller than diazepam at the same receptors | Results, Investigations section | \"slightly but significantly smaller than those mediated by diazepam\"",
+  "verbatim_locator | proposition: authors call the statistically significant Imax and pEC50 differences not pertinent | Discussion para 1 | \"these differences are not considered pertinent from a biological perspective\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/verify/recompute.tsv",
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261113-25798598-62",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4370687 full text via Europe PMC fullTextXML fetched 2026-11-13 (one request); text, Methods, Tables 1-3, legends read; my single PMC article-page request returned a reCAPTCHA challenge (recorded unreachable, not retried), so Figs 3 and 4 were not opened; supplement not requested; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1371/journal.pone.0120239",
+  "pmid": "25798598"
+ },
+ "workflow": "ADV-004 blind verifier V16 (gv-y): adversarial re-extraction of the numbers and conditions; staged for the integrator; the ledger was not written by the preparing actor."
+}

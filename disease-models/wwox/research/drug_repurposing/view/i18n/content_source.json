@@ -19,10 +19,6 @@
   "src": "en",
   "text": "A peptide inhibitor of the chaperone HSC70 (HSPA8) used as a cell-level probe, with lysosomal and genetic controls (identified by its ChEMBL record below)"
  },
- "028c442d8086": {
-  "src": "en",
-  "text": "WWOX-system: blocking NMDAR abolished the burst in the WWOX-deficient slice, one drug, one preparation. The recording bath magnesium is not stated in the source, and the incubation solution already contains magnesium. [IT36] Memantine block of extrasynaptic current was about 1.9-fold that of synaptic in one autaptic design; a later paper in culture found little extrasynaptic selectivity at 2 uM; preference is not exclusion and the minutes-scale premise is untested at WWOX burst durations. [IT36] burst duration median 0.66 s (Supplementary Table S1), intermediate between a synaptic pulse and the minutes-scale activation of the memantine premise; the premise is untested at this scale. [IT39] Selfotel: the head-injury trial was stopped after a signal in a stroke study, and a later analysis did not confirm excess mortality in head injury (abstract level). Perzinfotel is NR2A-preferring. The carbenoxolone half of the gap-junction logic carries its own caveat (it is not specific to gap junctions)."
- },
  "03f48d9b64a8": {
   "src": "it",
   "text": "Capire se l'aumento di MYC nella glia radiale e' una causa, un marcatore dello stato progenitore o una conseguenza del ciclo cellulare, e se il deficit dei marcatori di strato corretto dal gene nei neuroni indica un compartimento raggiungibile dopo la nascita."
@@ -1538,6 +1534,10 @@
  "ab1a6c5c29fc": {
   "src": "it",
   "text": "contrasto D del modulo"
+ },
+ "ab413f07016b": {
+  "src": "en",
+  "text": "WWOX-system: blocking NMDAR abolished the burst in the WWOX-deficient slice, one drug, one preparation. The recording bath magnesium is not stated in the source, and the incubation solution already contains magnesium. [IT36] Memantine block of extrasynaptic current was about 1.9-fold that of synaptic in one autaptic design; a later paper in culture found little extrasynaptic selectivity at 2 uM; preference is not exclusion and the minutes-scale premise is untested at WWOX burst durations. [IT36] burst duration median 0.66 s (Supplementary Table S1), intermediate between a synaptic pulse and the minutes-scale activation of the memantine premise; the premise is untested at this scale. [IT39] Selfotel: the head-injury trial was stopped after a signal in a stroke study, and a later analysis did not confirm excess mortality in head injury (abstract level). Perzinfotel is NR2A-preferring. The carbenoxolone half of the gap-junction logic carries its own caveat (it is not specific to gap junctions). [ADV-004 2026-11-14] The WWOX-side evidence of this row comes from the same Wwox slice paper whose unit-of-analysis limits are recorded under INV-10 [IT47 SCI47]: the change in inhibitory-current frequency rests on a distribution test on pooled events (no per-cell or per-animal test), the excitatory-current pipette holds about 12 mM chloride so isolation at -70 mV is not chloride-free, and burst frequency differs between the Results and the supplementary table (un registro del repository (non incluso in questo pacchetto))."
  },
  "ab86d6c60dfe": {
   "src": "en",

@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-13T23:48:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "tables": "read",
+  "figures": "captions_only",
+  "discussion": "read",
+  "limitations": "read",
+  "references": "not_read",
+  "supplementary": "not_present"
+ },
+ "event_at": "2026-11-13T23:51:00Z",
+ "event_id": "FTR-20261113-25798598-62",
+ "evidence_basis": [
+  "verbatim_locator | proposition: clobazam and N-desmethylclobazam EC50 and Imax at four human alpha subtypes in oocytes, GABA EC20 | Table 2 | \"Clobazam and N-desmethylclobazam displayed EC50 values within the 100\u2013300 nM range at all four receptors\"",
+  "verbatim_locator | proposition: diazepam compared as a single 3 uM point, bar chart | Fig 4A (image viewed) | \"Potentiation of the response elicited by GABA EC20 by 3 \u03bcM diazepam\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/output/numbers.tsv",
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/output/conditions.tsv",
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/output/answer.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4370687 full text via Europe PMC fullTextXML (one request) and PMC article page (one request, HTTP 200) 2026-11-13; Figs 3 and 4 opened as images (read bar and curve geometry, inferred_from_figure); Figs 1, 2, 5, 6 captions only; Europe PMC supplementaryFiles returned figure images only, no supplementary data file; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1371/journal.pone.0120239",
+  "pmid": "25798598"
+ },
+ "workflow": "ADV-004 producer P (gp-z): complete-original reading of the three GABA-A primaries behind NP3P3; staged for the integrator; the ledger was not written by the preparing actor."
+}
