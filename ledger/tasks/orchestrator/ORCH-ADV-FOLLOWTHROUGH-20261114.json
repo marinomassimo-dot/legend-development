@@ -64,8 +64,9 @@
     },
     {
      "step": "At the pilot expiry 2026-11-14T18:22:36Z: do NOT delete the recall (operator clarification, in the roadmap seat); read presidio and mode in the tick; start no evaluation or assignment that is not due; state the state of the authorised work in the report",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-14T18:23Z: the pilot expiry 18:22:36Z passed; tick at 18:23:12Z returned mode continuous, presidio 'WAITING (legitimate)', verdict NONE (not EXPIRED); CronList shows exactly one job, 3382bb86; the recall was not deleted; no evaluation or assignment was started because of the expiry."
     }
    ]
   },
@@ -187,9 +188,9 @@
     },
     {
      "step": "PRESIDIO-003 followed to its disposition: delivered (SCI 1a432bb6f); unchanged result; consumption pending (IT: IT43-Q01 status access-limited with revival trigger; HE: V18 wording, its choice); verify at the next ticks that both happened, nudge only if absent",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "SCI's delivery read in the original (README answers 1-4, limits); not independently re-read by a blind check (disclosed by SCI)."
+     "evidence": "SCI's delivery read in the original (README answers 1-4, limits); not independently re-read by a blind check (disclosed by SCI). CLOSED 2026-11-14T17:5xZ: IT recorded IT43-Q01 as access-limited with a revival trigger (ab4e56398) and re-checked on efetch bytes that Hansen 2014 never mentions Ro 25-6981 (a second, independent reading of the key absence); HE declined the V18 wording change with a reason (the phrase is the engine's generic PRIMARY text; M-R1/M-R2 carry the unmeasured part; no reader has failed on it; reopen if a real reader misses the limit); SCI, IT and HE accepted. Result UNCHANGED (no tier or rank change): the useful effect is a closed question and a radar that stops re-asking, at SCI cost 0 subagent tokens and about 71 minutes of waiting on a battery."
     },
     {
      "step": "Standing: at each tick or delivery ask once whether an independent item can be anticipated, queue it with the rule's wording if yes, and review the queue (supersede items whose usefulness changed); the queue now holds PRESIDIO-003 only",
@@ -312,6 +313,18 @@
    {
     "utc": "2026-11-14T16:3xZ",
     "event": "SCI noted that the repository corroborates the trial window but not the authorisation of my assignments: the operator's activation is now recorded as a dated line in the Operator roadmap section (verifiable by every session)"
+   },
+   {
+    "utc": "2026-11-14T17:23Z",
+    "event": "tick EVALUATE caused by my own roadmap line (trial activation); held with the reason; HE asked for a one-line V18 decision"
+   },
+   {
+    "utc": "2026-11-14T17:4xZ",
+    "event": "HE: V18 wording change declined with reason; PRESIDIO-003 disposition complete (assigned ~14:45Z, delivered ~16:3xZ, consumed by IT ab4e56398)"
+   },
+   {
+    "utc": "2026-11-14T18:23Z",
+    "event": "pilot expiry passed; continuous mode kept the presidio, recall unchanged; CI #751 green (HE record complete f67a9a270); no interruption, restart or additional human intervention since the activation"
    }
   ]
  }
