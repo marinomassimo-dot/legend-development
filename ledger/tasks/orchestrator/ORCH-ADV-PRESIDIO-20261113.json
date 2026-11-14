@@ -64,9 +64,9 @@
     },
     {
      "step": "Report to the operator in chat (Italian), briefly, the four items",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Given in chat (Italian) as the reply after initialisation, 2026-11-13 about 22:50Z: roadmap read and priorities (1-5 unchanged, A-G added), campaign 2/3 and 3/3 with the open delivery, transfer of the recall done except the first automatic fire, tools with accessible current sources and the incomplete links (radar packages old, daily scout live, CONTEXT line, weekly tables). Missed when COMPLETE was first written at 05:55Z (INCONSISTENT_COMPLETE on main 11b5e87e); corrected here."
     }
    ]
   },
