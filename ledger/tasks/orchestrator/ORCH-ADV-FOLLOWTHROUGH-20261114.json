@@ -34,8 +34,9 @@
    "steps": [
     {
      "step": "Amend budget.json to 7 invocations and 9 assignments in total (amendments[] entry, used-before 5 and 6), unchanged expiry and turn limit; note that the code counts only Advisor drafts and that the two operator-given assignments are not counted, so at most one further Advisor draft; add the dated line to the Operator roadmap and the paragraph to PILOT_CAMPAIGN.md; land on main",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Landed on main d77923ac (task close of task/adv-r13, commit 530be5d21): budget.json max_invocations 7, max_assignments 9, amendments[] entry with used-before 5 and 6, expiry 2026-11-14T18:22:36Z and turn limit 20 unchanged, note on operator-given assignments not being Advisor drafts; roadmap_current.md dated line and Pilot-campaign paragraph; PILOT_CAMPAIGN.md paragraph. Read back from the root checkout: 'invocations 5/7, assignments drafted 6/9, enabled'. No activate, no reset, no renewal."
     }
    ]
   },
@@ -45,8 +46,9 @@
    "steps": [
     {
      "step": "Send HE and IT one short coordination message each (what each owns, what the other owns, the shared read-only inputs, the ADV-006 originals, who consumes what), then verify each took the assignment in charge in its own record",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Messages sent 2026-11-14T07:5xZ: to HE (msg 6649ffc8) and IT (msg 60aaf98e), ack to IT (d7e21a51). IT: take-in-charge recorded in ORCH-VERIFY-GENDIFF-20261114 (on main, baseline ea02afa81 with prereg_it51.md fixing improvement / no difference / worse before the comparison; IT confirmed no scientific question yet for the remaining assignment, cost kept apart from mine). HE: PLAN-HE-RECONCILED-USABLE-20261114 (reported by HE; read in its worktree .claude/worktrees/hrk: OBJ_1 diagnosis IN_PROGRESS, OBJ_3 link planned as registration plus mapping, no renamed tables); HE reported no recall of its own, no blocker, no battery, no evaluation 6 needed; adopted: no tuning to IT's criteria, six conflicts carried unresolved, two M01 kept apart. Duplication check: IT = baseline, after-run, harms, consumption; HE = link and scout input; ADV = presidio only. Step stays open until HE's delivery is read."
     }
    ]
   },
@@ -56,8 +58,9 @@
    "steps": [
     {
      "step": "Restore exactly one hourly recall with the existing procedure (CronList first, strategic_advisor.py recall for the text), then verify its first automatic fire and tell HE the result",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-14T08:0xZ: CronList showed no scheduled job; recall text printed by strategic_advisor.py recall; exactly one CronCreate, job 3382bb86 hourly at :17 (session-only). First AUTOMATIC fire delivered to the session by the scheduler at 08:23:06Z (a manual tick is not counted): verdict EVALUATE, reason 'roadmap changed' (my own dated roadmap line recording the operator's instruction), events list the landed deliveries and the two new records; held, see OBJ_5. Result told to HE. CronList: one job."
     },
     {
      "step": "At the expiry 2026-11-14T18:22:36Z start no evaluation or assignment, state the state of the authorised work, and delete the recall (CronDelete, CronList empty)",
@@ -73,7 +76,8 @@
     {
      "step": "Read the HE diagnosis and the IT baseline in their originals; decide with a reason whether evaluation 6 is due (candidate moment: after the baseline and the technical diagnosis, to choose between the link, an alternative representation or another opportunity); evaluation 7 only after a consumed result and only if it can change the choice between going deeper, changing thread or investing no more",
      "status": "TODO",
-     "owner": "orchestrator"
+     "owner": "orchestrator",
+     "evidence": "HOLD 2026-11-14T08:23Z with a reason: the EVALUATE of the first automatic tick comes from my own roadmap edit recording work the operator already assigned to HE and IT; an evaluation to approve it is excluded by the operator. Decisions not yet due: HE's diagnosis (route and INV-05 choice) is not delivered and HE asks for no evaluation 6. Revival: HE's diagnosis names a real choice between the link, an alternative representation or another opportunity; or IT's after-run lands; evaluation 7 only after a consumed result and only if it can change deepen / change thread / stop. Budget now 5/7, drafted 6/9."
     },
     {
      "step": "Decide with a reason whether the one remaining Advisor-drafted scientific assignment is used: only for a precise question that HE or IT identify, with question, originals, decision affected, perimeter, resources and recipients; no assignment is required",
