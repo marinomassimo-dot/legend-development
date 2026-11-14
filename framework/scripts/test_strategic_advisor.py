@@ -764,6 +764,18 @@ class ValueContinuity(Continuous):
         self.assertIn("not one of event", sa._load_state(self.campaign)["last_outcome"]["problem"])
         self.at("2026-11-13T22:00:00Z"); self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")
 
+    def test_a_resume_on_a_record_that_does_not_exist_cannot_strand_the_wait_and_other_outcomes_ignore_resume_when(self) -> None:
+        self.started(); self.complete("ORCH-A")
+        self.at("2026-11-13T12:00:00Z"); sa.tick(self.campaign)
+        self.evaluate_with(self.WAIT % "record:ORCH-NOT-YET-CREATED=COMPLETE")
+        out = sa._load_state(self.campaign)["last_outcome"]
+        self.assertEqual(out["resume_when"], "event"); self.assertIn("does not exist", out["problem"])
+        self.evaluate_with("outcome: assign|resume_when: record:ORCH-NOT-YET-CREATED=COMPLETE")        # P8: not a wait, so the id is never read
+        self.at("2026-11-13T22:00:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")
+        brief = (sa._state_path(self.campaign).parent / "brief_P.md").read_text(encoding="utf-8")
+        self.assertIn("read only for a wait", brief)
+
     def test_a_wait_without_its_alternatives_or_reason_is_not_a_stated_outcome(self) -> None:
         got = sa.parse_outcome("## Outcome\noutcome: wait\nreason: nothing to do\nresume_when: event\n")
         self.assertFalse(got["stated"]); self.assertIn("must say what it excluded", got["problem"])
