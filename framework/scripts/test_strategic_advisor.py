@@ -439,6 +439,19 @@ class Proactive(Base):
         self.at("2026-11-13T12:00:01Z")
         self.assertEqual(sa.tick(self.tmp / "p2")["verdict"], "EXPIRED")
 
+    def test_the_campaign_total_governs_the_stage_ceiling_when_a_budget_exists(self) -> None:
+        self.assertEqual(sa.stage_limits(self.tmp / "no_budget_here")["P"], 3)                      # no budget file: the per-stage ceilings are the whole rule
+        budget = self.campaign / "budget.json"; data = json.loads(budget.read_text(encoding="utf-8"))
+        self.assertEqual(sa.stage_limits(self.campaign)["P"], 3)                                    # budget 3: unchanged
+        data["max_invocations"] = 5; budget.write_text(json.dumps(data), encoding="utf-8")          # the operator's amendment to a total of 5
+        for _ in range(5):
+            self.assertEqual(sa.evaluate(self.campaign), 0)                                         # the fourth and fifth Stage P runs were refused by the stale per-stage 3
+        self.assertEqual(sa.evaluate(self.campaign), 2)                                             # the total is still the ceiling
+        self.assertEqual(len({(a["stage"], a["index"]) for a in sa._attempts(self.campaign)}), 5)
+        self.assertEqual(sa.check(self.campaign), 0)                                                # check no longer calls five Stage P attempts a breach of the stale ceiling
+        (self.campaign / "budget.json").unlink()
+        self.assertEqual(sa.check(self.campaign), 1)                                                # without a budget file the same five attempts do exceed P=3
+
     def test_a_failed_attempt_counts_and_the_turn_limit_is_enforced_by_the_launcher(self) -> None:
         os.environ["FAKE_MODE"] = "many"
         self.assertEqual(sa.evaluate(self.campaign), 1)

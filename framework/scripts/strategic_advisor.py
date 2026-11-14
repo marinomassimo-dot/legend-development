@@ -430,6 +430,7 @@ def _launch_limited(cmd: list[str], text: str, stream, err, timeout: int, turn_l
 
 
 def run(stage: str, campaign: Path, brief: Path, model: str, effort: str, timeout: int, limits: dict[str, int], extra_reason: str = "") -> int:
+    limits = stage_limits(Path(campaign), limits)
     refusal = budget_refusal(campaign)
     if refusal:
         print(f"CEILING: {refusal}. This ceiling is procedural: it binds runs launched through this tool only.", file=sys.stderr)
@@ -524,11 +525,12 @@ def check(campaign: Path) -> int:
     for a in started:
         if (a["stage"], a["index"]) not in ended:
             problems.append(f"{a['label']}: started and never concluded (counts as an attempt)")
+    ceilings = stage_limits(campaign)
     for stage in LIMITS:
         n = len({a["index"] for a in attempts if a["stage"] == stage})
         extras = len({a["index"] for a in attempts if a["stage"] == stage and a.get("extra")})
-        if n > LIMITS[stage] + extras:
-            problems.append(f"stage {stage}: {n} attempts exceed the ceiling {LIMITS[stage]}")
+        if n > ceilings[stage] + extras:
+            problems.append(f"stage {stage}: {n} attempts exceed the ceiling {ceilings[stage]}")
     for meta_path in sorted(campaign.glob("*/meta.json")):
         meta = json.loads(meta_path.read_text(encoding="utf-8"))
         assessment = meta_path.parent / "assessment.md"
@@ -600,6 +602,13 @@ def _utc(when: dt.datetime) -> str:
 def _budget(campaign: Path) -> dict[str, Any]:
     path = Path(campaign) / "budget.json"
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+
+
+def stage_limits(campaign: Path, limits: dict[str, int] = LIMITS) -> dict[str, int]:
+    """The per-stage attempt ceilings. They are the whole rule only without a budget file; with one, the campaign's total (`budget_refusal` counts every stage together, expiry and the disable
+    flag included) governs, so a stage may use up to that total: the operator's amendment to 5 invocations was refused at the fourth Stage P run by the stale per-stage 3 (2026-11-14)."""
+    total = int(_budget(campaign).get("max_invocations") or 0)
+    return {stage: max(n, total) for stage, n in limits.items()} if total else dict(limits)
 
 
 def budget_refusal(campaign: Path) -> str:
