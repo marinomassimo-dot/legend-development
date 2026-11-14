@@ -1,6 +1,6 @@
 # ADV-006 blind audit (verifier V, sonnet, effort high)
 
-Non-canonical. Not medical advice; no ranking, no recommendation, no dose, no wet work commissioned or urgent. Paths are relative to `disease-models/wwox/research/drug_repurposing/` unless they start with `../commit_candidates/`. Stage A files (`stageA_own_reading.tsv`, `stageA_pairs.md`) were written before any `output/` file was opened. Labels: measured (a test I ran), copied (verbatim from a source), my inference.
+Non-canonical. Not medical advice; no ranking, no recommendation, no dose, no wet work commissioned or urgent. Paths are relative to `disease-models/wwox/research/drug_repurposing/` unless they start with `disease-models/wwox/research/commit_candidates/`. Stage A files (`stageA_own_reading.tsv`, `stageA_pairs.md`) were written before any `output/` file was opened. Labels: measured (a test I ran), copied (verbatim from a source), my inference.
 
 ## Answer first: the counts
 * **Quotes checked: 176; wrong: 0** (105 `crosswalk.tsv` verbatim parts + 48 `conflicts.tsv` quotes, tested in file, row and column by my own script, `v_quote_check.py`; plus 23 `measurement_quotes.tsv` quotes, `v_mq_check.py`). One quote is verbatim but selective (CF07 A).
@@ -13,7 +13,7 @@ Non-canonical. Not medical advice; no ranking, no recommendation, no dose, no we
 * **Priors G1-G6 (producer / mine):** G1 partly / partly; G2 held / held; G3 partly / partly; G4 held / **partly**; G5 held / held; G6 partly / partly.
 * **Verdict totals** (`verdicts.tsv`, 72 rows): correct 46, overstated 22, missed 4, wrong 0, unverifiable 0.
 
-My own Stage A gap, stated: I searched the repository for the August "EGABA" candidates by name and missed `../commit_candidates/CC-20260826-CLAIM002-01.md` section 6 ("Smallest decisive experiment": gramicidin-perforated-patch E_GABA in layer II/III pyramidal neurons, S-KO vs S-CTL, P13-P17, n >= 10 cells from >= 5 animals, animal as unit, primary outcomes E_GABA and E_GABA minus V_rest). The producer found it; I checked it and it is real (copied above; my `stageA_pairs.md` is left unedited). Everything else in the repository answer of Stage A (prior full specification of part of the thread in August, no consolidation of SCI42/SCI47) was confirmed.
+My own Stage A gap, stated: I searched the repository for the August "EGABA" candidates by name and missed `disease-models/wwox/research/commit_candidates/CC-20260826-CLAIM002-01.md` section 6 ("Smallest decisive experiment": gramicidin-perforated-patch E_GABA in layer II/III pyramidal neurons, S-KO vs S-CTL, P13-P17, n >= 10 cells from >= 5 animals, animal as unit, primary outcomes E_GABA and E_GABA minus V_rest). The producer found it; I checked it and it is real (copied above; my `stageA_pairs.md` is left unedited). Everything else in the repository answer of Stage A (prior full specification of part of the thread in August, no consolidation of SCI42/SCI47) was confirmed.
 
 ## 1. Verbatim cells
 | Test | Items | Result |

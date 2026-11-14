@@ -22,7 +22,18 @@
  "ESCALATIONS": [],
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
- "VERIFICATION_EVIDENCE": [],
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261114-030259-b14f0798",
+   "label": "adv006",
+   "sha": "bce47698c52d2be0b73733d2418f9964e27fe452",
+   "state": "CONCLUDED",
+   "exit_code": 1,
+   "evidence_dir": "/tmp/legend-verify-keep/20261114-030259-b14f0798",
+   "log_sha256": "c187b5d89939f803cde0c550a05e5433cd53ddab87ed9359d62a315da56a9698",
+   "clone": "REMOVED"
+  }
+ ],
  "AUTHORISED_QUEUE_20261114A": {
   "MANDATE_STATE": "OPEN",
   "OBJ_A": {
