@@ -102,6 +102,13 @@
      "evidence": ""
     }
    ]
+  },
+  "ADV_ASSIGNMENTS": {
+   "ADV-005": {
+    "status": "EXECUTED_BOUNDED",
+    "taken_utc": "2026-11-13",
+    "evidence": "Chosen the activity-tool item, not the scout-feed substitute; cause = gitignored per-checkout cache; clear error message + routing row + regression test; result advisor_pilot_20261113/ADV-005_result.md. Taken 2026-11-13, executed 2026-11-14."
+   }
   }
  },
  "VERIFICATION_EVIDENCE": [],

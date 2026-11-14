@@ -28,9 +28,9 @@
     },
     {
      "step": "Create this session's hourly recall (CronCreate, session-only) on the same campaign, from the root checkout; verify its first automatic fire is recognised and tell HE the result",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Cron d463d57c created 2026-11-13 (hourly at :17, session-only, canonical `strategic_advisor.py recall` text, run from the root checkout); HE informed (message e3ed40e7). Remaining: the first AUTOMATIC fire (23:42) and its verdict."
+     "evidence": "First AUTOMATIC fire of cron d463d57c: the cron-enqueued prompt arrived 2026-11-13T23:43:47Z (not typed); tick verdict DEFERRED (last evaluation 0.0 h ago), no model call; monitor read-back mandate_watch.py check --task ORCH-ADV-PRESIDIO-20261113 --deliver none --self-call --json: session e6526331-6b7c-4631-8c9b-9e9d79867e90, record_verdict CONTINUE, state RUNNING. HE told by message 458b6d8d, so it can close the transfer. The manual tick at 23:34Z before evaluate is not counted as the fire."
     },
     {
      "step": "Bind this record to the session (MANDATE_BOUND marker) and read the monitor's association (session id, record_verdict, state) with mandate_watch.py check --task ORCH-ADV-PRESIDIO-20261113 --deliver none --json",
@@ -76,16 +76,16 @@
    "steps": [
     {
      "step": "Third (last) strategic invocation: decide whether it is due. Triggers coalesce: the ADV-003 delivery (SCI, package expected on main about 22:40-23:10Z, disposed by the IT Orchestrator) and the roadmap edit of OBJ_2. Run strategic_advisor.py evaluate only if the delivery or the new directions make a decision useful; otherwise record why the previous assessment stands. Never renew, never a fourth assignment (budget.json: max_assignments 3, drafted 3)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "HELD, not declined. Reason: ADV-003 is EXECUTED in SCI's worktree (README and consumer_delta read in full: the by-target route works, 28 rows on EIF2B1-5 none an activator, the zero is confirmed at that scope, ISRIB is filed under other targets) but is not on main yet and not yet disposed by the IT Orchestrator; the third invocation can draft no assignment (3/3 drafted, the register refuses more), so it can only be an assessment, and it is worth most once it can see the delivery consumed and the new directions A-G together. Revival: ADV-003 landed on main and disposed in ORCH-ADVISOR-PILOT OBJ_P6, or 2026-11-14T10:00Z at the latest (leaves 8 h of window for consumption feedback and the report), or an operator line in the roadmap, whichever comes first.",
+     "evidence": "Hold released 2026-11-13: ADV-003 landed (5884e3ef) and disposed by IT (16c0a6d5, pilot assignments all disposed); the operator's amendment (23:33Z) raised the ceilings to 5 invocations / 6 assignments, so the 'assessment only' expectation was superseded. Invocation 3/5 run at 23:34Z (P3, opus, effort high, exit 0): advisor_pilot_20261113/P3/assessment.md, drafts ADV-004 (Science) and ADV-005 (Harness) registered. Read in full; premises of ADV-004 checked in the originals by this session (see OBJ_6).",
      "revival": "ADV-003 landed and disposed, or 2026-11-14T10:00Z, or an operator line"
     },
     {
      "step": "Follow ADV-003 from SENT to TAKEN (ORCH-ADV003-20261113) to EXECUTED to CONSUMED (disposition in ORCH-ADVISOR-PILOT-20261113 OBJ_P6) and say which of the four levels each has reached; usefulness is not judged by these levels",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "ADV-003: SENT -> TAKEN (SCI, ORCH-ADV003-20261113) -> EXECUTED (5884e3ef on main) -> CONSUMED (IT, 16c0a6d5: limit sentence corrected with scope, INV-02 probe cells updated, IT52-Q01 created, pilot assignments all disposed). Usefulness: the module's own contradiction (line 30 vs 33) is gone and the target-route question is closed at its scope; not a change of any ranking."
     },
     {
      "step": "At expiry (2026-11-14T18:22:36Z) or earlier if the pilot is stopped: delete this session's own recall, hand the Orchestrator (IT) the advisor-side inputs of the pilot report (invocation costs from meta.json, recall counts, deliveries), and record the sequence roadmap -> choice -> assignment -> result -> consumption -> re-evaluation as it actually happened, including where it did not",
@@ -104,6 +104,57 @@
      "status": "TODO",
      "owner": "orchestrator",
      "evidence": ""
+    }
+   ]
+  },
+  "OBJ_6_NIGHT": {
+   "order": 6,
+   "title": "Operator night mission (ten hours from 2026-11-13T23:33Z, never past the campaign expiry): coordinate IT, SCI and HE and close at least one useful research -> drug-repurposing cycle",
+   "steps": [
+    {
+     "step": "Reconcile the real state before choosing (running, delivered and consumed, waiting with a resume condition, technical blocks, available sessions)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-13T23:3xZ: IT busy on the CI #711 diagnosis with a full battery running (run_release_regressions.py, log /tmp/it53_ci.log); ADV-003 consumed by IT (16c0a6d5, on the remote main and on task/it53, fast-forwarded into the root main); SCI idle with ORCH-SCI50 COMPLETE; HE idle with PLAN-HE50-DESIGN-ONLY-PHARMACOLOGY COMPLETE and PLAN-ADV-SESSION OPEN; the watch-log RESUME lines for SCI50/HE50 were stale. My earlier hold condition had already been met."
+    },
+    {
+     "step": "Amend the campaign limits in their current homes without reactivating it",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "main e0c63de9 (5a5e8926): budget.json max_invocations 5, max_assignments 6, amendments[] with used-before values and the ten-hour window; roadmap_current.md Pilot campaign paragraph and a dated night-mission line; PILOT_CAMPAIGN.md amendment. strategic_advisor.py status shows 3/5 and 5/6 afterwards. No activate, no counter reset, original expiry unchanged."
+    },
+    {
+     "step": "Choose the direction among the four required alternatives and assign: ADV-004 (Science, principal) and ADV-005 (Harness); one assignment slot left deliberately unspent for a result-driven follow-up",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P3 compared deepening ISR (rejected: IT52-Q01 low priority by its own author, real blocker is a protein-level wet measurement), INV-05 NMDAR (lower marginal benefit, decisive items are measurements), a propagation gap (one integrator line, not an assignment), the scout-feed defects (kept as the HE substitution) and drafting nothing. Chosen: the unadjudicated GABA-A subtype dispute (knowledge held but not used by the generator). Checked by this session in the originals: function_pharm_it14_p3 README section 3 and line 123, reopen_searches NP3P3 row, receipts ledger has 0 hits for the three papers' identifiers, only the IT14 package files cite them; activity_search.py reads catalog/cache which the checkout does not hold. Delivered by SendMessage: ADV-004 to SCI (msg cd0215f1), ADV-005 to HE (msg 4daef0fc); SENT recorded in assignments.jsonl (main after 08299c4e)."
+    },
+    {
+     "step": "Follow ADV-004 and ADV-005 from SENT to TAKEN (the id in the recipient's task record) to EXECUTED; if a recipient is silent for a full hourly cycle, re-check liveness and re-send once through the supported channel",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "ADV-004: SENT (msg cd0215f1) -> TAKEN: SCI message 2026-11-13 and its record ORCH-ADV004-20261113 (worktree adv004, MANDATE_STATE OPEN, read by this session: objective names ADV-004, frame S0 committed, one producer sonnet/medium, one blind verifier, no wet work, delivery within the 09:30Z window, landing battery only after IT's battery). ADV-005: SENT (msg 4daef0fc) -> TAKEN: HE record PLAN-ADV-SESSION-20261113 ADV_ASSIGNMENTS block (on main); HE does one of activity_search.py or the scout CONTEXT defect and reports the choice. Execution of both pending."
+    },
+    {
+     "step": "HE bounded correction: strategic_advisor.py assignment_states counts the presidio's own record as a recipient taking an id in charge and as a DONE step (status showed ADV-004/005 EXECUTED one minute after SENT); fix before invocation 4 builds its brief, with one test case",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "HE landed the fix on main af549c19 (message 2026-11-13, gate PASS): assignment_states ignores the sender's records (PROACTIVE-ADVISOR and ADV-PRESIDIO); negative-control test. HE did not exclude ADV-SESSION as I had suggested, correctly: Harness is a recipient and records ADV-005 there. Verified: status now reads ADV-004 SENT, ADV-005 TAKEN, ADV-001..003 EXECUTED. Residual stated by HE and accepted: the Orchestrator's pilot record names ids it disposes, which counts as TAKEN for any recipient (harmless for the levels, to be said in the pilot report). Second residual found by me: status reads only ledger/tasks on the checkout, so a recipient's record that lives in an unmerged worktree (SCI's ORCH-ADV004) shows SENT until it lands."
+    },
+    {
+     "step": "On each result: read the original delivery, say what it strengthens, weakens, leaves unchanged or opens, hand the consumer delta to the IT Orchestrator by message with the folder path, verify the disposition on main, then decide: deepen, change thread, or suspend with a reopening condition",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Use invocation 4 (and the 6th assignment) only if a result makes a decision useful; keep invocation 5 for the pilot report's advisor-side inputs; run nothing to fill the night",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Morning report to the operator (Italian, short, linked to evidence): direction chosen and alternative deferred, assignments and results, concrete change in comparisons/hypotheses/experiments/open questions, consumed vs waiting, CI and presidio state, resources used and budget left, next assigned action or the precise reason for none; keep apart observed generative improvement, better experiment formulation and validated predictive capacity",
+     "status": "TODO",
+     "owner": "orchestrator"
     }
    ]
   }

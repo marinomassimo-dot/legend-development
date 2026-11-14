@@ -397,6 +397,21 @@ class Proactive(Base):
         rec.write_text(json.dumps(_record("ORCH-A", "OPEN", {"Q": {"s": {"step": "ADV-001 taken", "status": "DONE"}}})), encoding="utf-8")
         self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "EXECUTED")          # executed is not useful: nothing here says so
 
+    def test_the_senders_own_records_never_count_as_a_recipient_taking_or_executing_an_assignment(self) -> None:
+        os.environ["FAKE_MODE"] = "assign"; sa.evaluate(self.campaign)
+        sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "SENT", "--evidence", "msg 123"])
+        for name in ("ORCH-ADV-PRESIDIO-X", "PLAN-PROACTIVE-ADVISOR-X"):
+            (self.repo / f"ledger/tasks/orchestrator/{name}.json").write_text(
+                json.dumps(_record(name, "OPEN", {"Q": {"s": {"step": "ADV-001 delivered by message", "status": "DONE"}}})), encoding="utf-8")   # the delivery step of the sender: DONE, naming the id
+        self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "SENT")              # seen as EXECUTED a minute after SENT in the pilot
+        (self.repo / "ledger/tasks/orchestrator/ORCH-RECIPIENT.json").write_text(
+            json.dumps(_record("ORCH-RECIPIENT", "OPEN", {"Q": {"s": {"step": "ADV-001 taken", "status": "TODO"}}})), encoding="utf-8")
+        self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "TAKEN")             # a recipient's own record still counts
+        (self.repo / "ledger/tasks/orchestrator/ORCH-RECIPIENT.json").unlink()
+        (self.repo / "ledger/tasks/orchestrator/PLAN-ADV-SESSION-X.json").write_text(                          # Harness is a recipient too: its record is not a sender record
+            json.dumps(_record("PLAN-ADV-SESSION-X", "OPEN", {"Q": {"s": {"step": "ADV-001 taken", "status": "TODO"}}})), encoding="utf-8")
+        self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "TAKEN")
+
     def test_an_unreachable_recipient_is_an_explicit_residual_not_a_delivery(self) -> None:
         os.environ["FAKE_MODE"] = "assign"; sa.evaluate(self.campaign)
         sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "UNREACHABLE", "--evidence", "no live session named SCI"])
