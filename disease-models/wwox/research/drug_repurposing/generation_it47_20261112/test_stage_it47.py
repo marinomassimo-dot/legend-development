@@ -29,7 +29,7 @@ class PackageRows(unittest.TestCase):
             for f in ("starting_observation_and_chain", "context", "competing_explanations", "premise_and_action", "decision_measure", "package_ref"):
                 self.assertTrue(r[f].strip(), (r["proposal_id"], f))
             self.assertTrue(r["direction_stated"].startswith("none"))
-            self.assertTrue("CONDITIONAL" in r["nomination"] or r["nomination"].startswith("NOT PROPOSED: the package drops this row"))   # HE53: a row the package itself drops is labelled so, not proposed
+            self.assertTrue("CONDITIONAL" in r["nomination"] or r["nomination"].startswith(("NOT PROPOSED: the package drops this row", "the package's own status: ")))   # HE53: a row the package drops is labelled so; HE54: SCI47's levers follow their own status
             self.assertNotRegex(" ".join(r.values()), r"HGNC:\d|gene_arc\s*=\s*True")
 
     def test_a_missing_action_is_taken_from_a_named_relation_and_labelled(self):

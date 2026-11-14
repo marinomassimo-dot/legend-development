@@ -12,8 +12,8 @@
  "branch": "task/hrk3",
  "CURRENT_STATE": "IN_PROGRESS",
  "CHECKPOINT": {
-  "last_verified_result": "follow-through published (6ad9b8dae); lever build prepared on task/hrk12, not landed; CI of the integration SHAs pending",
-  "first_incomplete_work": "OBJ_11/OBJ_12 CI conclusion; OBJ_13 benefit reading after the cycle; OBJ_5 of the lever record (waits on SCI)"
+  "last_verified_result": "integrations 1-2 green on CI; follow-through published; lever build on task/hrk12 adapted to SCI's blind-reader corrections, not landed",
+  "first_incomplete_work": "OBJ_13: CI #744/#745; benefit reading after the lever cycle completes"
  },
  "AUTHORISED_QUEUE_20261114B": {
   "MANDATE_STATE": "OPEN",
@@ -208,12 +208,12 @@
     },
     {
      "step": "CI concluded green on the last published SHA of this integration (ba0283130)",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "plan",
-     "blocker": "CI runs #738-#745 in progress for a6db5e9ef, ba0283130, c4efc7f29, 00feda1c8, 922f1a30a, 6ad9b8dae; waiting with ci_runs.py wait"
+     "evidence": "CI: #738 success (a6db5e9ef, the verified-delivery integration), #739 success (ba0283130), #740 success (c4efc7f29); earlier #736/#737 success; checked with ci_runs.py status 2026-11-14."
     }
    ],
-   "status": "IN_PROGRESS"
+   "status": "DONE"
   },
   "OBJ_13_FOLLOW_THROUGH_DURING_WAITS": {
    "order": 13,
@@ -229,13 +229,20 @@
      "step": "Verification: independent anticipation during a verification, queued dependent stays queued, superseded follow-up closes with its reason, frozen candidate protected, no duplication, wait kept when no useful work, delivery and take-in-charge",
      "status": "DONE",
      "owner": "plan",
-     "evidence": "Mechanical: new wait -> EVALUATE once, standing wait -> NONE with waiting_on, brief states keep-waiting valid and the protection of what is under verification; queued step BLOCKED with unblock_when stays ALL_BLOCKED until the awaited file holds the condition, then CONTINUE; superseded = DONE with reason; deliver --to refuses a wrong receipt (HE53). Real data: on this checkout the records hold 5 real waits (two older mandates with exhausted pools, my CI waits, ADV's presidio); tick 1 EVALUATE, tick 2 NONE with the same waits (copy of the campaign, real records). Real case: the lever thread, iteration 2 prepared and published (00feda1c8) while IT's reader and SCI's mapping confirmation were pending, candidate ba0283130 untouched; the SCI-dependent part (mapping, matrix attachment, CF01/CF03) stayed queued by ADV's scoping."
+     "evidence": "Mechanical: new wait -> EVALUATE once, standing wait -> NONE with waiting_on, brief states keep-waiting valid and the protection of what is under verification; queued step BLOCKED with unblock_when stays ALL_BLOCKED until the awaited file holds the condition, then CONTINUE; superseded = DONE with reason; deliver --to refuses a wrong receipt (HE53). Real data: on this checkout the records hold 5 real waits (two older mandates with exhausted pools, my CI waits, ADV's presidio); tick 1 EVALUATE, tick 2 NONE with the same waits (copy of the campaign, real records). Real case: the lever thread, iteration 2 prepared and published (00feda1c8) while IT's reader and SCI's mapping confirmation were pending, candidate ba0283130 untouched; the SCI-dependent part (mapping, matrix attachment, CF01/CF03) stayed queued by ADV's scoping. OBSERVED LIVE (2026-11-14): the lever record's waiting step with unblock_when on ORCH-PRESIDIO001-20261114 COMPLETE flipped from ALL_BLOCKED to CONTINUE by itself when SCI's record closed on main, with no message needed to notice it."
     },
     {
      "step": "Benefit measured, not busyness: useful work concluded or prepared during the wait, time to usable result, extra consumption, interference, activity later useless",
      "status": "IN_PROGRESS",
      "owner": "plan",
      "evidence": "Observed so far: iteration 2 mechanical items done during the wait for IT's rerun and SCI; interference none observed; useless: not known yet (depends on IT's decision to reread); time to usable result and consumption: to be read from transcripts after the cycle (session_model_census --since). Not claimed: that agents will behave this way because the text says so. Published 6ad9b8dae (gate PASS, ls-remote). A live unblock_when is in use: PLAN-HE-LEVERS-INV05-20261114 OBJ_5 waits on ORCH-PRESIDIO001-20261114 COMPLETE (record state), not on anyone's remembering."
+    },
+    {
+     "step": "CI concluded green on 6ad9b8dae (the follow-through landing) and 3147f722d",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "blocker": "CI runs #744 (6ad9b8da) and #745 (3147f722) in progress; ci_runs.py wait",
+     "unblock": "both conclude success"
     }
    ],
    "status": "IN_PROGRESS"

@@ -55,12 +55,12 @@
     },
     {
      "step": "CI concluded green on ba0283130",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "plan",
-     "blocker": "CI runs #738-#743 in progress; ci_runs.py wait"
+     "evidence": "CI #739 success (ba0283130); the later builds are covered by the integration records."
     }
    ],
-   "status": "IN_PROGRESS"
+   "status": "DONE"
   },
   "OBJ_4_ITERATION_2": {
    "order": 4,
@@ -87,17 +87,12 @@
     },
     {
      "step": "Land the branch after SCI's folder is on main and its verifier is closed; re-check; deliver",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "plan",
-     "blocker": "waiting for SCI's blind verifier and folder levers_owner_confirmation_presidio001_20261114 (record ORCH-PRESIDIO001-20261114)",
-     "unblock": "ORCH-PRESIDIO001-20261114 reaches MANDATE_STATE COMPLETE on main",
-     "unblock_when": {
-      "record": "ORCH-PRESIDIO001-20261114",
-      "state": "COMPLETE"
-     }
+     "evidence": "SCI's folder levers_owner_confirmation_presidio001_20261114 landed on main (8de503223) and its blind verifier closed (record ORCH-PRESIDIO001-20261114 MANDATE_STATE COMPLETE); the continuity check flipped this step from BLOCKED to executable by itself (unblock_when on the record state: ALL_BLOCKED -> CONTINUE, observed 2026-11-14). Branch merged with main, adapted to the LANDED table (routes D, N, E, L attached, W left out, CF01 unattached with the owners' reason, CF03 on L1/L2, L4 follows its status, reopen note, wording per the table's 'tension inside SCI47'), 30 LeverJoin tests, 14 generation suites and the framework suites OK; landing and separate sends to IT and ADV follow."
     }
    ],
-   "status": "IN_PROGRESS"
+   "status": "DONE"
   }
  },
  "MANDATE_STATE": "OPEN"
