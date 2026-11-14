@@ -93,5 +93,34 @@
         }
       ]
     }
+  },
+  "READER_TOKEN_TOTALS_20261114": {
+    "source": "framework/scripts/session_model_census.py on the subagent transcripts (measured)",
+    "first_run_reader_accb7fc379312e833": {
+      "turns": 18,
+      "output": 43085,
+      "cache_written": 132685,
+      "cache_read": 1254144
+    },
+    "second_run_reader_ab05cd0d643d4f2ea_whole_incl_recheck": {
+      "turns": 37,
+      "model": "claude-sonnet-5-5",
+      "effort_read_back": "high x37",
+      "output": 100546,
+      "cache_written": 457218,
+      "cache_read": 5001859,
+      "peak_context": 249162
+    },
+    "of_which_before_recheck": {
+      "turns": 23,
+      "output": 78513
+    },
+    "recheck_increment": {
+      "turns": 14,
+      "output": 22033
+    },
+    "waits_interruptions_human_interventions": [
+      "wait: reader runs and push monitors; no interruption, restart or human intervention recorded for IT52"
+    ]
   }
 }
