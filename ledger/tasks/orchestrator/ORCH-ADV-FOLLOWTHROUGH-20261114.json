@@ -1,0 +1,119 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "TASK_ID": "ORCH-ADV-FOLLOWTHROUGH-20261114",
+ "START_UTC": "2026-11-14T07:55:00Z",
+ "SESSION_NAME": "ADV — Strategic Advisor",
+ "SESSION_BINDING": {
+  "session_id": "e6526331-6b7c-4631-8c9b-9e9d79867e90",
+  "pid_at_start": 1238811,
+  "runtime": "Claude Code (VS Code extension), model claude-sonnet-5-5",
+  "identity_source": "operator assignment (ACTOR_ID orchestrator, function: proactive strategic coordination), re-stated in the opening prompt of the 2026-11-14 increment; not inferred from the directory, the title or the runtime",
+  "run_from": "root checkout only for every campaign command (tick, evaluate, deliver, recall); edits in .claude/worktrees/adv on task/adv-r13"
+ },
+ "OBJECTIVE": "Generative-capacity follow-through of the pilot advisor_pilot_20261113 (operator increment 2026-11-14), inside the same campaign with counters and history kept: coordinate the two assignments the operator gave directly (HE: minimum useful link between the ADV-006 measurement knowledge and a real generation path; IT: baseline, before/after scientific effect, consumption), hold the presidio with one recall until the unchanged expiry 2026-11-14T18:22:36Z, spend an evaluation only where it can change a decision, use the one remaining Advisor-drafted assignment only for a precise scientific question that HE or IT identify, follow every delivery to its disposition, and report what is now used that was isolated, which output changed, what stayed unchanged, the tools really used and the observed cost. Distinct from ORCH-ADV-PRESIDIO-20261113 (COMPLETE, RELEASED; its report and outcome stay historical, not rewritten) and from ORCH-ADVISOR-PILOT-20261113 (IT Orchestrator: take-in-charge and disposition). The operator-given assignments are declared as operator-given and are not recorded as Advisor drafts. No renewal, no reset, no activate, no new service or spend, no new register, counter, gate, scheduler or approval level.",
+ "AUTHORISED_QUEUE_20261114": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1_RECONCILE": {
+   "order": 1,
+   "title": "Reconcile the real state after the night report before acting",
+   "steps": [
+    {
+     "step": "Check remote and CI, what was consumed and what was deferred, which sessions are available, the recall state, and any work already started on the ADV-006 follow-up",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-14T07:55-07:58Z. main = origin/main = bd6ff283 (0 ahead, 0 behind; the seven record commits of the night were pushed by another session); CI: #727/#728 success earlier, #729 Public release gate in progress on bd6ff283 (record-only commit). CronList: no scheduled job (my recall deleted at the night closure); one recall to restore. Campaign status (read from the root checkout): invocations 5/5, assignments drafted 6/6, ADV-001..006 all EXECUTED, expires 2026-11-14T18:22:36Z, enabled. ListAgents: HE, IT Orchestrator and SCI are interactive and idle; no commit, task record or dirty worktree after 06:52Z; the new HE and IT task records do not exist yet (operator prompts to them accompany this message). Deferred and still open from the night: HE's choice on registering inhibitory-thread tables in DESIGN_MAP (consumer_delta row 7 of ADV-006), the six design conflicts of ADV-006 (CF01, CF03, CF05b, CF23, CF04, CF05a) for whoever designs the recording, the scout CONTEXT defect (known limit). Not read as stalled: nothing is waiting on a battery."
+    }
+   ]
+  },
+  "OBJ_2_BUDGET": {
+   "order": 2,
+   "title": "Record the increment in the existing campaign without reactivating it",
+   "steps": [
+    {
+     "step": "Amend budget.json to 7 invocations and 9 assignments in total (amendments[] entry, used-before 5 and 6), unchanged expiry and turn limit; note that the code counts only Advisor drafts and that the two operator-given assignments are not counted, so at most one further Advisor draft; add the dated line to the Operator roadmap and the paragraph to PILOT_CAMPAIGN.md; land on main",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_3_COORDINATE": {
+   "order": 3,
+   "title": "Coordinate HE and IT, verify take-in-charge, prevent duplication",
+   "steps": [
+    {
+     "step": "Send HE and IT one short coordination message each (what each owns, what the other owns, the shared read-only inputs, the ADV-006 originals, who consumes what), then verify each took the assignment in charge in its own record",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_4_RECALL": {
+   "order": 4,
+   "title": "Presidio: one recall, quiet, until the unchanged expiry",
+   "steps": [
+    {
+     "step": "Restore exactly one hourly recall with the existing procedure (CronList first, strategic_advisor.py recall for the text), then verify its first automatic fire and tell HE the result",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "At the expiry 2026-11-14T18:22:36Z start no evaluation or assignment, state the state of the authorised work, and delete the recall (CronDelete, CronList empty)",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_5_FOLLOW": {
+   "order": 5,
+   "title": "Follow each delivery to its disposition; spend an evaluation only where it can change a decision",
+   "steps": [
+    {
+     "step": "Read the HE diagnosis and the IT baseline in their originals; decide with a reason whether evaluation 6 is due (candidate moment: after the baseline and the technical diagnosis, to choose between the link, an alternative representation or another opportunity); evaluation 7 only after a consumed result and only if it can change the choice between going deeper, changing thread or investing no more",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Decide with a reason whether the one remaining Advisor-drafted scientific assignment is used: only for a precise question that HE or IT identify, with question, originals, decision affected, perimeter, resources and recipients; no assignment is required",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Follow each delivery along result -> comparison/hypothesis/experiment -> consumer -> new question -> next choice; every deferral gets a concrete reason, a recipient and a revival condition",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_6_REPORT": {
+   "order": 6,
+   "title": "Short report to the operator",
+   "steps": [
+    {
+     "step": "Report: what is now used that was isolated; which scientific output changed; what stayed unchanged; strategic tools really used (examined, received in the brief, only available); observed cost split into presidio, evaluations and executive work (operator-given work declared as such); the next decision, already assigned when authorised. Keep apart observed generative improvement, better experiment formulation and validated predictive capacity",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ },
+ "DECISIONS_TAKEN": [
+  {
+   "what": "Open a new task record for this increment instead of editing ORCH-ADV-PRESIDIO-20261113",
+   "alternatives_rejected": "reopening the COMPLETE record (would rewrite the verdict the operator asked to keep as historical evidence)",
+   "consulted": "the operator's prompt",
+   "reversibility": "full",
+   "how_to_revert": "set MANDATE_STATE to CANCELLED"
+  },
+  {
+   "what": "Set max_assignments to 9 in budget.json and keep the one-draft residual procedural, noted in amendments[]",
+   "alternatives_rejected": "setting 7 so the code enforces the residual (a new guard the operator excluded, and a number that contradicts the authorised 9)",
+   "consulted": "the operator's prompt",
+   "reversibility": "full",
+   "how_to_revert": "restore the previous numbers in budget.json"
+  }
+ ],
+ "STOP_LOG": []
+}
