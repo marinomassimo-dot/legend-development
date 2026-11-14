@@ -36,6 +36,9 @@ if mode == "assign":
              "roadmap_link: priority 2\\nrelated_work: IT50 closed\\nsources: kir2_drugname_sci49_20261112\\ndecision_changed_by_result: whether any Cys311 activator can act\\n"
              "perimeter_and_budget: one reading package\\nmethod_autonomy: free; negative results welcome\\ndeliver_to: Orchestrator\\nduplicate_check: searched the records for the key\\n"
              "\\n### ASSIGNMENT 2\\nkey: half-written\\nrecipient: Harness\\nquestion: x\\n")
+outcome = os.environ.get("FAKE_OUTCOME")
+if outcome:
+    text += "\\n\\n## Outcome\\n" + outcome.replace("|", "\\n")
 if mode == "many":
     for i in range(30):
         emit({"type": "assistant", "message": {"id": "t%d" % i, "model": "claude-opus-fake", "content": [{"type": "text", "text": "thinking"}], "usage": {"input_tokens": 1, "output_tokens": 1}}})
@@ -661,6 +664,139 @@ class Continuous(Proactive):
         sa.main(["activate", "--campaign", str(self.campaign)])
         self.assertEqual(sa.main(["authorise-continuous", "--campaign", str(self.campaign), "--source", "x", "--weekly-limit", "5"]), 2)
         self.assertFalse((self.campaign / sa.CONTINUOUS).exists())
+
+
+class ValueContinuity(Continuous):
+    """HE57: the end of the executable queue is a moment to choose what comes next, not to wait for an event. A wait states what it excluded and when it resumes; the same situation is not evaluated twice;
+    the advisor's own updates are not news. Fixtures: they do not show that a model writes the outcome block or ranks well."""
+
+    WAIT = "outcome: wait|excluded: continue the lever thread (no new result); a Harness refactor (cost above its benefit now)|reason: every open question waits on a recipient's reading|resume_when: %s"
+
+    def evaluate_with(self, block: str) -> None:
+        os.environ["FAKE_OUTCOME"] = block
+        try:
+            self.assertEqual(sa.evaluate(self.campaign), 0)
+        finally:
+            os.environ.pop("FAKE_OUTCOME", None)
+
+    def legacy(self) -> None:
+        st = sa._load_state(self.campaign)
+        st.pop("last_outcome", None); st.pop("unstated_streak", None)
+        sa._save_state(self.campaign, st)
+
+    def complete(self, task: str) -> None:
+        (self.repo / f"ledger/tasks/orchestrator/{task}.json").write_text(json.dumps(_record(task, "COMPLETE")), encoding="utf-8")
+
+    def started(self) -> None:
+        self.authorise()
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
+        sa.evaluate(self.campaign)
+
+    def test_an_exhausted_queue_with_no_radar_and_no_event_still_gets_one_decision_on_what_is_next(self) -> None:
+        self.started(); self.legacy()                                       # an evaluation made before the outcome existed
+        self.complete("ORCH-A")
+        self.at("2026-11-13T11:30:00Z")
+        closing = sa.tick(self.campaign)                                    # the closure itself is observed ...
+        self.assertEqual(closing["verdict"], "EVALUATE"); self.assertTrue(closing["queue"]["exhausted"])
+        self.at("2026-11-13T16:00:00Z")                                     # ... and nothing ran: no event now, no radar, no instruction
+        idle = sa.tick(self.campaign)
+        self.assertEqual(idle["verdict"], "EVALUATE")
+        self.assertIn("no executable work remains: decide what is next from the portfolio", idle["why"])
+        sa.evaluate(self.campaign)
+        brief = (sa._state_path(self.campaign).parent / "brief_P.md").read_text(encoding="utf-8")
+        self.assertIn("## Portfolio selection", brief); self.assertIn('"exhausted": true', brief)
+        self.assertIn("## Outcome", brief); self.assertIn("without it the wait is not motivated", brief)
+        self.assertIn("Do not repeat an evaluation that is still valid", brief)
+
+    def test_that_decision_is_asked_once_and_the_same_situation_is_not_evaluated_again(self) -> None:
+        self.started(); self.legacy(); self.complete("ORCH-A")
+        self.at("2026-11-13T11:30:00Z"); sa.tick(self.campaign)
+        self.at("2026-11-13T16:00:00Z"); self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
+        sa.evaluate(self.campaign)                                          # the stand-in model writes no outcome block
+        self.assertEqual(sa._load_state(self.campaign)["unstated_streak"], 1)
+        self.at("2026-11-13T23:00:00Z")
+        again = sa.tick(self.campaign)
+        self.assertEqual(again["verdict"], "NONE")                          # no second costly evaluation of the same situation
+        self.assertTrue(again["presidio"].startswith("IDLE without a stated outcome")); self.assertIn("not asked again", again["presidio"])
+
+    def test_a_stated_wait_is_motivated_visible_and_not_re_evaluated_while_nothing_changed(self) -> None:
+        self.started(); self.complete("ORCH-A")
+        self.write_waiting("ORCH-W", "battery run 77 in progress", other_step="DONE")
+        self.at("2026-11-13T12:00:00Z"); self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
+        self.evaluate_with(self.WAIT % "record:ORCH-W=COMPLETE")
+        self.at("2026-11-13T20:00:00Z")
+        quiet = sa.tick(self.campaign)
+        self.assertEqual(quiet["verdict"], "NONE")
+        self.assertTrue(quiet["queue"]["exhausted"]); self.assertEqual(quiet["queue"]["blocked_only"], ["ORCH-W"])
+        self.assertTrue(quiet["presidio"].startswith("WAITING (motivated)"))
+        for part in ("every open question waits on a recipient's reading", "a Harness refactor", "record:ORCH-W=COMPLETE"):
+            self.assertIn(part, quiet["presidio"])                          # the excluded alternatives, the reason and the resume condition are on the one line the recall reads
+
+    def test_a_met_resume_condition_a_passed_time_or_a_new_result_reconsiders_the_choice(self) -> None:
+        self.started(); self.complete("ORCH-A")
+        self.write_waiting("ORCH-W", "battery run 77 in progress", other_step="DONE")
+        self.at("2026-11-13T12:00:00Z"); sa.tick(self.campaign)
+        self.evaluate_with(self.WAIT % "record:ORCH-W=COMPLETE")
+        self.at("2026-11-13T14:00:00Z"); self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")
+        self.complete("ORCH-W")                                             # what the wait rested on arrived (the transition is also an event; the resume reason is shown first only when no event is)
+        self.at("2026-11-13T15:00:00Z")
+        met = sa.tick(self.campaign)
+        self.assertEqual(met["verdict"], "EVALUATE")
+        self.evaluate_with(self.WAIT % "after:2026-11-13T20:00:00Z")
+        self.at("2026-11-13T19:00:00Z"); self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")
+        self.at("2026-11-13T21:00:00Z")
+        late = sa.tick(self.campaign)
+        self.assertEqual(late["verdict"], "EVALUATE"); self.assertIn("resume condition", late["why"])
+        self.evaluate_with(self.WAIT % "event")
+        self.land("SCI52 record COMPLETE; package delivered")               # a new pertinent result arrives during a stated wait
+        self.at("2026-11-13T23:00:00Z")
+        new = sa.tick(self.campaign)
+        self.assertEqual(new["verdict"], "EVALUATE"); self.assertTrue(any(e.startswith("delivery:") for e in new["events"]))
+
+    def test_a_wait_that_is_over_the_moment_it_is_stated_or_names_an_unreadable_condition_cannot_loop(self) -> None:
+        self.started(); self.complete("ORCH-A")
+        self.at("2026-11-13T12:00:00Z"); sa.tick(self.campaign)
+        self.evaluate_with(self.WAIT % "after:2026-11-13T09:00:00Z")        # already past
+        out = sa._load_state(self.campaign)["last_outcome"]
+        self.assertEqual(out["resume_when"], "event"); self.assertIn("already met", out["problem"])
+        self.at("2026-11-13T18:00:00Z"); self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")
+        self.evaluate_with(self.WAIT % "when the weather is better")
+        self.assertIn("not one of event", sa._load_state(self.campaign)["last_outcome"]["problem"])
+        self.at("2026-11-13T22:00:00Z"); self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")
+
+    def test_a_wait_without_its_alternatives_or_reason_is_not_a_stated_outcome(self) -> None:
+        got = sa.parse_outcome("## Outcome\noutcome: wait\nreason: nothing to do\nresume_when: event\n")
+        self.assertFalse(got["stated"]); self.assertIn("must say what it excluded", got["problem"])
+        for kind in ("continue", "switch", "assign", "queue"):
+            self.assertTrue(sa.parse_outcome(f"## Outcome\noutcome: {kind}\n")["stated"])
+        self.assertFalse(sa.parse_outcome("## Outcome\noutcome: rest\n")["stated"])
+
+    def test_the_pilot_without_the_continuous_mode_does_not_gain_idle_evaluations(self) -> None:
+        sa.tick(self.campaign); sa.evaluate(self.campaign); self.legacy(); self.complete("ORCH-A")
+        self.at("2026-11-13T11:30:00Z"); sa.tick(self.campaign)
+        self.at("2026-11-13T18:00:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")
+
+    def test_the_advisors_own_updates_and_the_senders_records_are_not_news_but_a_recipients_result_is(self) -> None:
+        inside = self.repo / "disease-models/wwox/research/drug_repurposing/advisor_x"
+        (inside / "P1").mkdir(parents=True); (inside / "assignments").mkdir()
+        (self.repo / "ledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-X.json").write_text(json.dumps(_record("ORCH-ADV-FOLLOWTHROUGH-X", "OPEN")), encoding="utf-8")
+        specs = sa._own_updates(inside)
+        self.assertTrue(any("P[0-9]*" in x for x in specs)); self.assertTrue(any("ADV-FOLLOWTHROUGH" in x for x in specs))
+        state = {"main_sha": sa._git("rev-parse", "main")}
+        env = {**os.environ, "GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@example.invalid", "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@example.invalid"}
+
+        def commit(rel: str, subject: str) -> None:
+            (self.repo / rel).write_text(subject, encoding="utf-8")
+            for cmd in (["git", "add", "."], ["git", "commit", "-q", "-m", subject]):
+                subprocess.run(cmd, cwd=self.repo, check=True, capture_output=True, env=env)
+        base = "disease-models/wwox/research/drug_repurposing/advisor_x"
+        commit(f"{base}/P1/assessment.md", "ADV evaluation recorded; lever thread closed")
+        commit(f"{base}/assignments/ADV-001.md", "ADV draft delivered")
+        commit("ledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-X.json", "ADV record COMPLETE")
+        self.assertEqual(sa.observe(inside, state)["events"], [])           # three commits that match the delivery pattern, all the advisor's own
+        commit(f"{base}/ADV-002_result.md", "HE result delivered")
+        self.assertEqual(len([e for e in sa.observe(inside, state)["events"] if e.startswith("delivery:")]), 1)
 
 
 class Snapshot(unittest.TestCase):
