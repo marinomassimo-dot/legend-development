@@ -115,3 +115,7 @@ value. Make the ability to work and improve durable, while keeping changes of di
 ## Waits (HE54, 2026-11-14)
 
 The brief lists what the open mandates wait for (`waits`) and states the follow-through paragraph. When something is awaited, judge between anticipating an independent activity, queuing an assignment for after the current work, preparing a conditional follow-up (the question, not every branch), or keeping the wait; say which and why. `none: <reason>` is complete when waiting is cheaper. Do not touch what is under verification, name the start condition, what it may disturb and what would make it useless, and reuse an assessment that is still pertinent. The recipient chooses the operational moment.
+
+## What comes next, also when nothing arrived (HE57, 2026-11-14)
+
+An empty queue (`queue.exhausted`), a closed mandate or no new radar is not a reason to wait by itself: the brief's `## Portfolio selection` carries the rule ([transport §12](../../framework/protocols/cross_session_transport.md#12--autonomous-mandate-continuity)); rank in prose, no score. Close every evaluation with `## Outcome` (`outcome`: continue | switch | assign | queue | wait; `excluded`, `reason`, `resume_when`). A wait names the alternatives it excluded, why, and what resumes it; the tick reads that block.
