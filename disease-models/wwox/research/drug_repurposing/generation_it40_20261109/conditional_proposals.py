@@ -133,8 +133,11 @@ PKG_MAP = {
                                              attach=dict(matrix="matrix.tsv", notes="levers_notes.md"),
                                              owner_stated={"L2": {"CF03": "attached by the owners' reading (SCI, PRESIDIO-001, unverified when built): the E5 stratification side; no declared key of this row reaches it"}},
                                              unattached={"CF01": "SCI47 is not consistent on the sIPSC configuration (its Phase 0 item (i) asks a pipette-set chloride, its cohort sentence names perforated native chloride): stating the conflict for a lever needs a choice that is the owners'"},
-                                             rivals_note="other rows of the same package (this table does not classify them; matrix.tsv relates observations to explanations and levers_notes.md, rows E1-E6, relates explanations to the lever each makes interpretable; neither is registered whole)",
-                                             expected_missing="not in levers.tsv, the table registered here, for this row: the explanation-to-lever table is levers_notes.md (rows E1-E6) and the observation-to-explanation table is matrix.tsv; both are attached below by the ids this row names"),
+                                             rivals_note="other rows of the same package (their relations are stated in this table's own cells: L3's status says it gates L1 and L2, L4's functional_comparator names L5 and the GABA arms, L4 and L5 are labelled alternative levers; the explanation-to-lever table is levers_notes.md, rows E1-E6; matrix.tsv relates observations to explanations and some of its rows carry no lever id)",
+                                             expected_missing="this row's own cells in levers.tsv (status, adds_over_general_anticonvulsant_action, risk_of_acting_on_a_compensation) state by-explanation conditions; the explanation-to-lever table is levers_notes.md and the observation-to-explanation table is matrix.tsv: read them there, none is attached here beyond the ids this row names",
+                                             conflict_notes={"CF23": "owner note (SCI, PRESIDIO-001 blind reader): SCI47 design_review (b) reviews the IT46 p9 design and gives a reason against matching a reuptake arm on membrane potential and input resistance (the matched measure there is tonic current or sIPSC decay); it says nothing about SCI42's variable. A tension inside SCI47, incomplete, not wrong: the line above is printed as ADV-006 wrote it and no side is taken"},
+                                             owner_refs={"L1": ["levers_notes.md#Already-used antiseizure drugs", "design_review.md#(d)", "README.md#3", "matrix#O12"], "L2": ["levers_notes.md#Already-used antiseizure drugs", "design_review.md#(d)", "README.md#3", "matrix#O12"]},
+                                             owner_rows={"L2": {"M01": "owners' reading: first hop for the lever; no declared key of this row reaches it", "M03": "first hop through O01/O05 in ADV-006's M03; no declared key of this row reaches it"}}),
     # Owner reading (SCI, PRESIDIO-001, 2026-11-14; unverified until its blind reader reports): all cells faithful, with the slot corrections applied here: counter_evidence is evidence (limits), the 'adds over general anticonvulsant
     # action' cell is an outcome-to-lever condition (expected slot), only the rejection cell decides (measure), comparators are controls, the nomination follows the package's own status.
 }
@@ -205,7 +208,41 @@ def design_join(pkg, key, design_rows_all):
                      + f"; rows of other types (gap or synonym: not conflicts), same rule: {', '.join(others) or 'none'}"
                      + (f" | second-hop rows named by the gating rows, listed and NOT followed (an order of cost or priority may sit there): {', '.join(second)}; genuine conflicts on them, for the reader to weigh: "
                         + (", ".join(c for c, cr in conf.items() if cr["type"] == "genuine" and set(i.strip() for i in cr["m_id"].split(";")) & set(second) and c not in genuine) or "none beyond those above") if second else ""))
-    return " || ".join(parts) + " || no side is chosen on any conflict; no order here is a result"
+    notes = PKG_MAP.get(pkg, {}).get("conflict_notes", {})
+    shown = " ".join(parts)
+    extra = "".join(f" || {c}: {note}" for c, note in notes.items() if f"{c} [type:" in shown)
+    return " || ".join(parts) + extra + " || no side is chosen on any conflict; no order here is a result"
+
+
+def _section(path: Path, heading_start: str) -> tuple[str, int]:
+    """The text under a markdown heading that starts with `heading_start`, until the next heading of the same or a higher level, with the line it starts on."""
+    lines = path.read_text(encoding="utf-8").splitlines()
+    for i, line in enumerate(lines):
+        if re.match(r"#+\s", line) and line.lstrip("# ").startswith(heading_start):
+            level = len(line) - len(line.lstrip("#"))
+            body = []
+            for l2 in lines[i + 1:]:
+                if re.match(r"#+\s", l2) and len(l2) - len(l2.lstrip("#")) <= level:
+                    break
+                body.append(l2)
+            return "\n".join(body).strip(), i + 1
+    return "", 0
+
+
+def _owner_ref_text(ref, m):
+    out_dir = DR / "inhibitory_defect_sci47_20261112"
+    f, _, anchor = ref.partition("#")
+    if f == "matrix":
+        mr, loc = _matrix_rows(m).get(anchor, (None, ""))
+        return f"{loc}: matrix {anchor}: " + " | ".join(f"{c}: {mr[c]}" for c in ("observation", "what_each_outcome_would_favour", "pharmacological_decision_it_would_change")) if mr else f"matrix {anchor}: not found"
+    path = out_dir / "README.md" if f == "README.md" else out_dir / "output" / f
+    if f == "README.md":
+        for n, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+            if line.startswith(f"{anchor}. "):
+                return f"{path.relative_to(ROOT)}:{n}: {line}"
+        return f"{ref}: not found"
+    text, n = _section(path, anchor if f != "design_review.md" else "(d)")
+    return f"{path.relative_to(ROOT)}:{n}: {text}" if text else f"{ref}: not found"
 
 
 def _matrix_rows(m):
@@ -260,9 +297,21 @@ def lever_attachments(pkg, key, row, m, design_all):
         parts.append(f"ADV-006 rows whose requests_merged names an attached matrix row: {', '.join(reach)}; genuine conflicts on them: "
                      + ("; ".join(f"{c} [cell_type: {conf[c]['cell_type']}; {conf[c]['source_A']}: {conf[c]['quote_A']!r}; {conf[c]['source_B']}: {conf[c]['quote_B']!r}]" for c in gen if c not in held) or "none")
                      + "".join(f"; {c} NOT attached: {why}" for c, why in held.items()))
+    bullet = next((l for l in (DR / "inhibitory_defect_sci47_20261112" / "output" / m["attach"]["notes"]).read_text(encoding="utf-8").splitlines() if re.match(rf"\* \*\*{key}\b", l)), "")
+    if bullet:
+        parts.append(f"levers_notes bullet for {key} (this lever's id starts it; the 'Kept, with the reason' or 'Dropped' list): {bullet}")
+    for mid, why in (m.get("owner_rows") or {}).get(key, {}).items():
+        if mid in meas:
+            parts.append(f"ADV-006 row {mid} ({meas[mid]['name']}): {why} (owner-stated, SCI PRESIDIO-001)")
+    for ref in (m.get("owner_refs") or {}).get(key, []):
+        parts.append(f"owner-stated attachment (SCI, PRESIDIO-001; not reached by a declared key of this row) {ref}: {_owner_ref_text(ref, m)}")
     for c, why in (m.get("owner_stated") or {}).get(key, {}).items():
         if c in conf:
             parts.append(f"{c} [cell_type: {conf[c]['cell_type']}; {conf[c]['source_A']}: {conf[c]['quote_A']!r}; {conf[c]['source_B']}: {conf[c]['quote_B']!r}] {why}")
+    shown = " ".join(parts)
+    for c, note in (m.get("conflict_notes") or {}).items():
+        if c + " [" in shown:
+            parts.append(f"{c}: {note}")
     return " || ".join(parts) if parts else "no id named by this lever's cells, and no matrix token declared for it by ADV-006: nothing attached (a word-only link is not a link)"
 
 

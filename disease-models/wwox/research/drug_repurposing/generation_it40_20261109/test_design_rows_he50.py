@@ -257,6 +257,9 @@ class LeverJoin(unittest.TestCase):
         self.assertNotIn("not stated by the package (missing)", row["expected_result_by_explanation"])
         self.assertTrue(row["expected_result_by_explanation"].startswith("adds_over_general_anticonvulsant_action: "))     # the outcome-to-lever condition, under its own column name
         self.assertIn("levers_notes.md", row["competing_explanations"]); self.assertIn("matrix.tsv", row["competing_explanations"])   # both tables named, each for what it holds
+        for k in ("L3", "L4", "L5"):                                                                                 # SCI's reader: the levers table itself relates these rows, so the note says where
+            self.assertIn("their relations are stated in this table's own cells", self.lever(k)["competing_explanations"])
+            self.assertNotIn("the package does not classify them", self.lever(k)["competing_explanations"])
         self.assertNotIn("does not classify them as rivals, complementary or compatible", row["competing_explanations"])
         self.assertIn("PRESIDIO-001", row["nomination"])                                                           # the owners' reading is named, with its state when built
         other = next(r for r in self.rows if "hcn_20261107" in r["package_ref"])                                     # a package whose mapping the owners confirmed: its own wording is untouched
@@ -274,9 +277,24 @@ class LeverJoin(unittest.TestCase):
         l3 = self.lever("L3")["lever_attachments"]
         self.assertIn("matrix O03 [", l3); self.assertIn("matrix O14 [", l3); self.assertIn("declared for this lever", l3)   # through ADV-006's own tokens for L3
         self.assertIn("CF03 [", self.lever("L2")["lever_attachments"]); self.assertIn("owners' reading", self.lever("L2")["lever_attachments"])   # stated by the owners, not reached by a declared key
-        self.assertIn("nothing attached", self.lever("L6")["lever_attachments"])
+        l6 = self.lever("L6")["lever_attachments"]
+        self.assertTrue(l6.startswith("levers_notes bullet for L6") and "matrix O" not in l6 and "Carbenoxolone is non-specific" in l6)   # dropped: its own bullet only, no matrix row, no ADV-006 row
         self.assertTrue(self.lever("L4")["nomination"].startswith("the package's own status: 'kept, as the comparator and as a lever"))   # follows the status, not a generic CONDITIONAL
         self.assertNotIn("worth keeping only if M05", " ".join(self.lever(k)["lever_attachments"] + self.lever(k)["design_join"] for k in self.src))   # M02's own priority statement is never carried as a dependency
+
+    def test_sci_blind_reader_corrections_are_in_the_rows(self):
+        l1 = self.lever("L1")["design_join"]
+        self.assertIn("A tension inside SCI47, incomplete, not wrong", l1)                                           # CF23: printed as ADV-006 wrote it, with the owners' note, no side
+        self.assertNotIn("contradicted", l1)
+        a2 = self.lever("L2")["lever_attachments"]
+        self.assertIn("ADV-006 row M03", a2); self.assertIn("ADV-006 row M01", a2); self.assertIn("no declared key of this row reaches it", a2)   # stated by the owners, labelled as such
+        for k in ("L1", "L2"):
+            a = self.lever(k)["lever_attachments"]
+            self.assertIn("levers_notes bullet for " + k, a)                                                        # 'Kept, with the reason', reached by the lever's own id
+            for ref in ("levers_notes.md#Already-used antiseizure drugs", "design_review.md#(d)", "README.md#3", "matrix#O12"):
+                self.assertIn(ref, a)
+            self.assertNotIn(": not found", a)                                                                       # every owner-stated pointer resolved to real text
+        self.assertIn("M03", self.lever("L1")["lever_attachments"].split("genuine conflicts on them")[0])            # first hop for L1 through the declared O01/O05 tokens
 
     def test_the_committed_table_is_what_the_generator_writes(self):
         with open(HERE / "conditional_proposals_packages_it47.tsv", encoding="utf-8", newline="") as f:
