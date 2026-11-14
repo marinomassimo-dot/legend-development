@@ -65,6 +65,7 @@ Three facts bind before you have finished reading anything else:
 | Layers, modes, core invariants | [`ARCHITECTURE.md`](ARCHITECTURE.md) |
 | How to actually run a session; session types | [`framework/manuals/operator_manual.md`](framework/manuals/operator_manual.md) |
 | What the system can do, with maturity status | [`SKILLS.md`](SKILLS.md) · [`CAPABILITIES.md`](CAPABILITIES.md) · [`FAQ.md`](FAQ.md) |
+| Persistent opportunities for ADV and the sessions, with source and mandate links | [Living Research Portfolio](disease-models/wwox/research/drug_repurposing/research_portfolio.tsv) · `python3 framework/scripts/strategic_advisor.py portfolio` |
 | The disease-level model | [`disease-models/wwox/registries/working_model_current.md`](disease-models/wwox/registries/working_model_current.md) |
 
 ### The multi-agent laboratory

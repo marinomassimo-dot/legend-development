@@ -576,6 +576,25 @@ When a session, several sessions or a chain of dependencies wait for a battery, 
 
 ### Continuity is a choice of what comes next, not a wait for an event (HE57, 2026-11-14)
 
+**Persistent work instrument (operator request, 2026-11-14).** The
+[Living Research Portfolio](../../disease-models/wwox/research/drug_repurposing/research_portfolio.tsv)
+holds opportunities and next decisions, while the operator roadmap holds the mission and
+task records hold execution. Every actor feeds a pertinent opportunity at a material handoff:
+SCI contributes unresolved premises, hypotheses and follow-ups; IT contributes candidate,
+comparison and consumer gaps; HE contributes measured capability obstacles; ADV reconciles
+duplicates and priorities, radar opportunities and DREAM associations. A radar or association
+is a lead, never evidence. An operator instruction remains authoritative over all rows.
+
+ADV consults the portfolio at startup/resume and after compaction, before selecting work,
+after a material result, when the queue ends and before a portfolio-wide wait. The index
+finds the relevant rows; their complete sources support a substantive decision. Contributions
+use `strategic_advisor.py portfolio --upsert <JSON file>` from the primary checkout, or an
+ordinary edit to the same TSV; the read-only analyst proposes optional patches for its host
+procedure. Source and decision fields preserve provenance. Priorities are ordinal with a reason,
+not invented utility scores. Linked task records own execution state; the portfolio records the
+result's consumer, the next question or a suspension's revival condition, not a second task queue.
+No contribution quota, approval step or complete portfolio reread on every tick is introduced.
+
 While authorised objectives and useful executable work exist, LEGEND looks for the next opportunity in the portfolio it can reach; a closed mandate, an empty queue or the absence of a new radar does not end the work by itself. Every continuation and every wait comes from a proportionate judgement of priority, expected benefit, feasibility and cost. The principle binds every actor inside its own perimeter: the Strategic Advisor keeps the view of the whole portfolio; the Orchestrator and the Scientist keep their own cycles of deepening, delivery and return of questions.
 
 * **Two decisions, kept apart.** (1) A result is delivered and consumed (the existing loop). (2) A decision on where to invest next, taken even when nothing new arrived. The second is not an automatic consequence of the first, and it is not skipped because the first is finished.
