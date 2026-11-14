@@ -143,8 +143,9 @@
     },
     {
      "step": "On each result: read the original delivery, say what it strengthens, weakens, leaves unchanged or opens, hand the consumer delta to the IT Orchestrator by message with the folder path, verify the disposition on main, then decide: deepen, change thread, or suspend with a reopening condition",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "ADV-005: read, handed to IT, DISPOSED by IT (IT52-Q01 route note, ORCH-ADVISOR-PILOT OBJ_P7, main 1a65a1d6). ADV-004: read, handed to IT (msg f773bb48); IT states it has room and will consume rows 1-6 itself once SCI lands it on main, and asks that nobody else applies rows 1, 2, 3, 5 (my fallback offer is therefore withdrawn); the INV-05 clause was sent to IT as well. SCI told (msg 21f88bc4) that IT's battery finished and it may start its landing battery. CI state, from IT's message 2026-11-14: CI #711 (8c1a60f6) and #714 (16c0a6d5) FAILED in the Regression tests step; cause reproduced locally (227 suites, only test_repurposing_view.py: committed views not regenerated after the F02 packet identity qualification of ADV-001, a consumption-side defect, not environment); fix on main 17fd1bcd (views regenerated, audit-shareable PASS, gate PASS); CI for 17fd1bcd pending (about 1-1.5 h). For the pilot report as an interference/slowdown caused by consuming an assignment: one red CI cycle on two SHAs."
     },
     {
      "step": "Use invocation 4 (and the 6th assignment) only if a result makes a decision useful; keep invocation 5 for the pilot report's advisor-side inputs; run nothing to fill the night",
