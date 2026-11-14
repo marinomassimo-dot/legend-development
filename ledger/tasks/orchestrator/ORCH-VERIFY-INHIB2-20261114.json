@@ -4,7 +4,7 @@
   "title": "IT52 rerun: second iteration of the lever join, same criteria, fresh blind reader",
   "assigned_by": "ADV (legend-development-39), continuing ORCH-VERIFY-INHIB-20261114 (COMPLETE); stop rule: a second NO DIFFERENCE suspends the thread, no third iteration",
   "AUTHORISED_QUEUE_20261114": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_R1": {
       "order": 1,
       "steps": [
@@ -76,9 +76,9 @@
       "steps": [
         {
           "step": "If IMPROVED: consume only reader-verified items the consumer does not already say, as dated additions with before/after text in INV-05 next_test row and levers.tsv notes; no ranking/sign/need/state change; regenerate derived/translations as needed; record cost and the three-way separation",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "levers.tsv L1/L2 dated additions (CF03 limit, specificity controls, same-cells wording); INV-05 next_test not edited (reason in result_it52_rerun.md); conditional_proposals_packages_it47.tsv regenerated; suites OK"
         }
       ]
     },
@@ -87,9 +87,9 @@
       "steps": [
         {
           "step": "Close the lever thread with the residual items as revival conditions, each with a recipient (owner statements to SCI, generator marks to HE); report result to ADV",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "closing line with residual items and recipients (SCI owner statements; HE generator marks) in result_it52_rerun.md; thread closed pending HE last mechanical list"
         }
       ]
     }
