@@ -38,13 +38,17 @@ Exit codes: 0 ok · 1 a check failed or the run failed · 2 invalid invocation o
 from __future__ import annotations
 
 import argparse
+import csv
 import datetime as dt
+import fcntl
 import hashlib
+import io
 import json
 import os
 import re
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 from typing import Any
 
@@ -58,6 +62,133 @@ DENIED = ["Bash", "Write", "Edit", "NotebookEdit", "Agent", "Task", "WebSearch",
 SEALED = "advisor_sealed"
 LIMITS = {"A": 2, "B": 2, "S": 1, "P": 3}
 DASHBOARD_URL = "https://marinomassimo-dot.github.io/legend-development/"
+PORTFOLIO_REL = "disease-models/wwox/research/drug_repurposing/research_portfolio.tsv"
+PORTFOLIO_FIELDS = ("id", "theme", "opportunity", "decision", "priority", "why_now", "next_action", "status", "sources", "mandate_id", "resume_when", "outcome", "updated_utc")
+
+
+def portfolio_rows() -> tuple[list[dict[str, str]], list[str]]:
+    """The living work portfolio, not a second copy of evidence or task execution state."""
+    path = ROOT / PORTFOLIO_REL
+    if not path.exists():
+        return [], ["portfolio not present in this checkout"]
+    try:
+        with path.open(encoding="utf-8", newline="") as handle:
+            reader = csv.DictReader(handle, delimiter="\t")
+            if not reader.fieldnames or not {"id", "opportunity", "status"}.issubset(reader.fieldnames):
+                return [], ["portfolio needs id, opportunity and status columns"]
+            rows = [{k: (v or "").strip() for k, v in row.items() if k is not None} for row in reader if any(row.values())]
+        ids = [r["id"] for r in rows]
+        errors = ["portfolio has empty or duplicate ids"] if not all(ids) or len(ids) != len(set(ids)) else []
+        return rows, errors
+    except (OSError, csv.Error, UnicodeError) as exc:
+        return [], [f"portfolio unreadable: {exc}"]
+
+
+def portfolio_snapshot(records: dict[str, dict[str, Any]] | None = None) -> dict[str, Any]:
+    """Derive linked execution state and met dependencies; never write a second task status."""
+    rows, errors = portfolio_rows()
+    records = _records() if records is None else records
+    items = []
+    for row in rows:
+        item = dict(row)
+        status = row.get("status", "").lower()
+        task = row.get("mandate_id", "")
+        record = records.get(task, {})
+        item["execution"] = record.get("verdict", "UNKNOWN") if task else "unassigned"
+        item["task_path"] = record.get("path", "")
+        item["ready"] = not errors and status == "ready" and not task
+        item["review_due"] = not errors and bool(task) and item["execution"] == "RELEASED" and status not in ("done", "retired")
+        item["dependency_met"] = ""
+        if status == "waiting" and row.get("resume_when") and not task:
+            item["dependency_met"] = resume_met(row["resume_when"], _now())
+            item["ready"] = not errors and bool(item["dependency_met"])
+        items.append(item)
+    items.sort(key=lambda r: (r.get("priority", ""), r["id"]))
+    # Editorial timestamps, row ordering and whitespace do not wake a model. A new action,
+    # changed priority, completed linked mandate or met dependency can change the choice.
+    semantic = [{k: v for k, v in r.items() if k != "updated_utc"} for r in sorted(items, key=lambda r: r["id"])]
+    return {"path": PORTFOLIO_REL, "available": (ROOT / PORTFOLIO_REL).exists(), "items": items,
+            "actionable": [r["id"] for r in items if r["ready"] or r["review_due"]], "errors": errors,
+            "digest": sha256_text(json.dumps({"items": semantic, "errors": errors}, sort_keys=True))}
+
+
+def portfolio_update(patch: dict[str, Any]) -> dict[str, str]:
+    """Merge one opportunity by id; lock writers and replace atomically. Git keeps history."""
+    if not isinstance(patch, dict) or not str(patch.get("id", "")).strip():
+        raise ValueError("an update needs one opportunity id")
+    unknown = set(patch) - set(PORTFOLIO_FIELDS)
+    if unknown or any(not isinstance(v, str) for v in patch.values()):
+        raise ValueError("use text values and portfolio columns only: " + ", ".join(sorted(unknown)))
+    path = ROOT / PORTFOLIO_REL
+    lock = STATE_DIR / ("portfolio-" + sha256_text(str(path.resolve()))[:16] + ".lock")
+    lock.parent.mkdir(parents=True, exist_ok=True)
+    with lock.open("a") as guard:
+        fcntl.flock(guard, fcntl.LOCK_EX)
+        rows, errors = portfolio_rows()
+        if errors and path.exists():
+            raise ValueError("; ".join(errors))
+        ident = patch["id"].strip()
+        row = next((r for r in rows if r["id"] == ident), None)
+        if row is None:
+            row = dict.fromkeys(PORTFOLIO_FIELDS, "")
+            row.update(status="backlog")
+            rows.append(row)
+        row.update({k: v.strip() for k, v in patch.items()})
+        if not row.get("opportunity"):
+            raise ValueError("an opportunity needs a question or result sought")
+        row["updated_utc"] = _utc(_now())
+        # Preserve additional columns from a future/manual extension instead of dropping them.
+        fields = list(dict.fromkeys([*PORTFOLIO_FIELDS, *(k for r in rows for k in r)]))
+        output = io.StringIO(newline="")
+        writer = csv.DictWriter(output, fieldnames=fields, delimiter="\t", lineterminator="\n")
+        writer.writeheader(); writer.writerows(rows)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        tmp = None
+        try:
+            with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=path.parent, delete=False) as handle:
+                tmp = Path(handle.name); handle.write(output.getvalue())
+            os.replace(tmp, path)
+        finally:
+            if tmp is not None:
+                tmp.unlink(missing_ok=True)
+        return row
+
+
+def portfolio_brief(snapshot: dict[str, Any]) -> str:
+    """A compact index; the complete rows and original packages remain available to Read."""
+    lines = ["## Living Research Portfolio", f"Permanent source: `{PORTFOLIO_REL}`. Read on startup/resume and before choosing work or waiting.",
+             "The operator roadmap defines the mission; these rows are opportunities, not scientific evidence or automatic assignments.",
+             "Read the full selected row and its sources; linked task records own execution status. At handoff the host updates or adds the pertinent row with `strategic_advisor.py portfolio --upsert FILE.json`.",
+             "After a result: record its consumer and next question, link the mandate, or park it with a resume condition. No opportunity count is a target."]
+    if snapshot["errors"]:
+        lines.append("Availability limits: " + "; ".join(snapshot["errors"]))
+    for row in snapshot["items"]:
+        if row.get("status") in ("done", "retired"):
+            continue
+        state = "REVIEW RESULT" if row["review_due"] else "READY" if row["ready"] else row.get("status", "unknown")
+        lines.append(f"- {row['id']} [{row.get('priority', '?')}; {state}; {row['execution']}]: {row.get('opportunity', '')}; next: {row.get('next_action', '')}")
+    return "\n".join(lines)
+
+
+def apply_portfolio_updates(text: str) -> list[str]:
+    """Optional advisory updates from a saved assessment; not a scientific promotion or gate."""
+    block = re.search(r"^## Portfolio updates\s*\n```json\s*\n(.*?)\n```", text, re.M | re.S)
+    if not block:
+        return []
+    try:
+        updates = json.loads(block.group(1))
+        if not isinstance(updates, list):
+            raise ValueError("expected a list of opportunity patches")
+    except (ValueError, TypeError) as exc:
+        return [f"portfolio updates not applied: {exc}"]
+    messages = []
+    for patch in updates:
+        try:
+            row = portfolio_update(patch)
+            messages.append(f"portfolio {row['id']} updated")
+        except (OSError, ValueError) as exc:
+            messages.append(f"portfolio update not applied: {exc}")
+    return messages
 
 
 def _memory_dir() -> Path:
@@ -72,6 +203,7 @@ STATE_HOME = Path(os.environ.get("LEGEND_STATE_HOME", str(Path.home() / ".local/
 
 # The entry map. One home. Starting places, not a shortlist: a glob is counted here and listed by the advisor.
 ENTRY_POINTS: list[tuple[str, str, list[str]]] = [
+    ("research_portfolio", "Living Research Portfolio: persistent opportunities, priorities, dependencies and result pointers", [PORTFOLIO_REL]),
     ("limits", "Authorised mission and resource limits: the task record named in the brief, and its siblings", ["ledger/tasks/*/*.json"]),
     ("invariants", "Canonical project invariants and the operating rules", [
         "CLAUDE.md", "ARCHITECTURE.md", "framework/master/harness_development_principles.md", "framework/master/designed_for_growth.md",
@@ -874,10 +1006,13 @@ def observe(campaign: Path, state: dict[str, Any]) -> dict[str, Any]:
     new_waits = [w for w in waits if sha256_text(w["task"] + "|" + w["blocker"])[:12] not in seen_waits] if state.get("waits_seen") is not None else []   # the first tick records the waits as they are; only a NEW wait is an event
     events = ([f"delivery: {c}" for c in commits if EVENT_SUBJECT.search(c)] + [f"mandate: {t}" for t in transitions] + [f"opened: {t}" for t in opened]
               + [f"stalled-for-the-watch: {t}" for t in stalled] + [f"waiting: {w['task']}: {w['blocker'][:100]}" for w in new_waits])
+    portfolio = portfolio_snapshot(recs)
+    if (portfolio["available"] or state.get("portfolio_digest")) and portfolio["digest"] != state.get("portfolio_digest"):
+        events.append(f"portfolio: {portfolio['digest'][:16]} opportunities, priorities or executable dependencies changed")
     rm = roadmap_text()
     return {"main_sha": main_sha, "roadmap_sha256": sha256_text(rm) if rm else "", "commits_since_last_tick": len(commits), "events": events,
             "open_mandates": sorted(t for t, r in recs.items() if r["state"] == "OPEN"), "mandates": {t: r["state"] for t, r in recs.items()}, "waits": waits,
-            "queue": queue_state(recs), "sessions": _sessions()}
+            "queue": queue_state(recs), "sessions": _sessions(), "portfolio": portfolio}
 
 
 def presidio_state(verdict: str, why: str, is_continuous: bool, outcome: dict[str, Any] | None = None, exhausted: bool = False, streak: int = 0) -> str:
@@ -915,7 +1050,7 @@ def tick(campaign: Path) -> dict[str, Any]:
     first = not state
     refusal = budget_refusal(campaign)
     cont = continuous(campaign)
-    anticipating = [e for e in obs["events"] if e.startswith(("delivery:", "mandate:", "stalled"))] or ([f"roadmap changed"] if state.get("roadmap_sha256") not in (None, obs["roadmap_sha256"]) else [])
+    anticipating = [e for e in obs["events"] if e.startswith(("delivery:", "mandate:", "stalled", "portfolio:"))] or ([f"roadmap changed"] if state.get("roadmap_sha256") not in (None, obs["roadmap_sha256"]) else [])
     changed = state.get("roadmap_sha256") not in (None, obs["roadmap_sha256"])
     digest = sha256_text(obs["roadmap_sha256"] + "|" + "|".join(sorted(obs["events"])))
     last_eval = dt.datetime.fromisoformat(state["last_evaluation_utc"].replace("Z", "+00:00")) if state.get("last_evaluation_utc") else None
@@ -960,6 +1095,7 @@ def tick(campaign: Path) -> dict[str, Any]:
             "last_outcome": {k: outcome.get(k) for k in ("outcome", "reason", "excluded", "resume_when", "stated", "evaluation") if outcome.get(k) not in (None, "")}, "queue": obs["queue"],
             "operator_controls": [f"{c['kind']}: {c['text']}" for c in (active_suspensions(ctl) + [c for c in ctl if c["kind"] in ("URGENT", "INTEGRATION")])[-6:]],
             "events": obs["events"][:12], "open_mandates": obs["open_mandates"], "waiting_on": [f"{w['task']}: {w['blocker'][:70]}" for w in obs["waits"]][:4] + ([f"... {len(obs['waits'])} in all"] if len(obs["waits"]) > 4 else []),
+             "portfolio": {k: obs["portfolio"][k] for k in ("path", "available", "actionable", "errors")},
             "sessions": obs["sessions"], "digest": digest,
             "hours_since_last_evaluation": None if hours is None else round(hours, 1)}
 
@@ -1152,6 +1288,10 @@ def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
              "## Campaign limits", json.dumps({k: v for k, v in _budget(campaign).items() if k in ("expires_utc", "max_invocations", "max_assignments", "turn_limit")}), "",
              operating_mode_text(campaign), "",
              portfolio_text(), "",
+              portfolio_brief(obs.get("portfolio") or portfolio_snapshot()), "",
+              "For a material portfolio change you may add an optional `## Portfolio updates` section with a fenced json list of partial row objects (stable `id` required). The procedure saves the assessment verbatim, then applies these advisory patches. "
+              "No section is needed when nothing changes. Preserve sources, link the recipient's mandate when known, record the actual consumer and the next question; do not mark an opportunity done merely because an assignment was sent. "
+              "This does not alter the operator mission or promote any scientific conclusion.", "",
             "## Observed state (mechanical, this tick)", json.dumps({k: obs[k] for k in ("events", "open_mandates", "waits", "queue", "sessions", "commits_since_last_tick")}, indent=1), "",
             previous_outcome_text(campaign), "",
              "## Assignments already drafted, with their evidence level (do not duplicate; follow what was taken in charge)",
@@ -1192,6 +1332,8 @@ def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout:
             text = assessment.read_text(encoding="utf-8")
             made = register_assignments(campaign, label, text)
             print(f"{label}: {len(made)} assignment draft(s) registered: " + ", ".join(m["id"] for m in made))
+            for message in apply_portfolio_updates(text):
+                print(message)
             outcome = parse_outcome(text)
             if outcome["stated"] and outcome["outcome"] == "wait":
                 problem = resume_problem(outcome["resume_when"])
@@ -1202,6 +1344,7 @@ def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout:
         print(f"{label}: outcome {outcome['outcome'] or 'unstated'}" + (f" ({outcome['problem']})" if outcome["problem"] else ""))
         state = _load_state(campaign)
         state.update(last_evaluation_utc=_utc(_now()), last_digest=state.get("pending_digest", state.get("last_digest")), running="", pending_events=[], pending_commits=0,
+                     portfolio_digest=obs["portfolio"]["digest"],
                      last_outcome={**outcome, "evaluation": label, "utc": _utc(_now())}, unstated_streak=0 if outcome["stated"] else int(state.get("unstated_streak") or 0) + 1)
         _save_state(campaign, state)
         return code
@@ -1236,6 +1379,10 @@ def main(argv: list[str] | None = None) -> int:
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("entrypoints")
     sub.add_parser("snapshot")
+    pf = sub.add_parser("portfolio", help="read the permanent work portfolio, or merge one opportunity from a JSON object")
+    pf.add_argument("--upsert", metavar="FILE.json", help="patch by stable id; other fields are preserved")
+    pf.add_argument("--id", help="read one complete opportunity")
+    pf.add_argument("--json", action="store_true", help="read all rows and their derived execution states")
     s = sub.add_parser("seal"); s.add_argument("--campaign", required=True); s.add_argument("--index", required=True); s.add_argument("--text-file", required=True)
     b = sub.add_parser("brief"); b.add_argument("--stage", choices=["A", "B"], required=True); b.add_argument("--campaign", required=True)
     b.add_argument("--mission-file"); b.add_argument("--constraints-file"); b.add_argument("--task-record", default="")
@@ -1271,6 +1418,21 @@ def main(argv: list[str] | None = None) -> int:
         print(render_entrypoints(entrypoints())); return 0
     if args.cmd == "snapshot":
         print(json.dumps(snapshot(), indent=2)); return 0
+    if args.cmd == "portfolio":
+        if args.upsert:
+            if primary_refusal():
+                print(primary_refusal(), file=sys.stderr); return 2
+            try:
+                updated = portfolio_update(json.loads(Path(args.upsert).read_text(encoding="utf-8")))
+            except (OSError, ValueError) as exc:
+                print(f"Portfolio update not applied: {exc}", file=sys.stderr); return 2
+            print(json.dumps(updated, indent=1)); return 0
+        data = portfolio_snapshot()
+        if args.id:
+            item = next((r for r in data["items"] if r["id"] == args.id), None)
+            print(json.dumps(item, indent=1) if item else f"Opportunity {args.id!r} not found")
+            return 0 if item else 1
+        print(json.dumps(data, indent=1) if args.json else portfolio_brief(data)); return 0
     if args.cmd == "seal":
         target = Path(args.campaign) / SEALED / f"INTENDED_ACTION_{args.index}.md"
         target.parent.mkdir(parents=True, exist_ok=True)

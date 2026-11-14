@@ -36,6 +36,8 @@ if mode == "assign":
              "roadmap_link: priority 2\\nrelated_work: IT50 closed\\nsources: kir2_drugname_sci49_20261112\\ndecision_changed_by_result: whether any Cys311 activator can act\\n"
              "perimeter_and_budget: one reading package\\nmethod_autonomy: free; negative results welcome\\ndeliver_to: Orchestrator\\nduplicate_check: searched the records for the key\\n"
              "\\n### ASSIGNMENT 2\\nkey: half-written\\nrecipient: Harness\\nquestion: x\\n")
+if os.environ.get("FAKE_PORTFOLIO"):
+    text += "\\n\\n## Portfolio updates\\n```json\\n" + os.environ["FAKE_PORTFOLIO"] + "\\n```"
 outcome = os.environ.get("FAKE_OUTCOME")
 if outcome:
     text += "\\n\\n## Outcome\\n" + outcome.replace("|", "\\n")
@@ -797,6 +799,114 @@ class ValueContinuity(Continuous):
         self.assertEqual(sa.observe(inside, state)["events"], [])           # three commits that match the delivery pattern, all the advisor's own
         commit(f"{base}/ADV-002_result.md", "HE result delivered")
         self.assertEqual(len([e for e in sa.observe(inside, state)["events"] if e.startswith("delivery:")]), 1)
+
+
+class LivingPortfolio(Base):
+    """Permanent opportunities reach a real brief and wake decisions without a new radar."""
+
+    def setUp(self) -> None:
+        super().setUp()
+        self.repo = _repo_with_records(self.tmp, {"ORCH-A": "COMPLETE"})
+        self.saved_attrs = {k: getattr(sa, k) for k in ("ROOT", "ROADMAP", "STATE_DIR", "_sessions")}
+        sa.ROOT, sa.ROADMAP, sa.STATE_DIR = self.repo, self.repo / "disease-models/wwox/research/drug_repurposing/roadmap_current.md", self.tmp / "state"
+        sa._sessions = lambda: {"SCI": "idle"}
+        self.env_now = os.environ.get("LEGEND_ADVISOR_NOW")
+        os.environ["LEGEND_ADVISOR_NOW"] = "2026-11-13T10:00:00Z"
+        self.campaign = self.tmp / "pilot"
+        sa.main(["activate", "--campaign", str(self.campaign)])
+        sa.main(["authorise-continuous", "--campaign", str(self.campaign), "--source", "operator"])
+
+    def tearDown(self) -> None:
+        for k, v in self.saved_attrs.items():
+            setattr(sa, k, v)
+        if self.env_now is None:
+            os.environ.pop("LEGEND_ADVISOR_NOW", None)
+        else:
+            os.environ["LEGEND_ADVISOR_NOW"] = self.env_now
+        super().tearDown()
+
+    def add(self, **values: str) -> None:
+        sa.portfolio_update({"id": "RP-TEST", "opportunity": "Which comparison discriminates the new mechanism?", "status": "ready",
+                             "priority": "P1", "sources": "original.md", "next_action": "read the primary comparison", **values})
+
+    def test_upsert_preserves_sources_and_other_rows_and_editorial_timestamps_do_not_wake(self) -> None:
+        self.add()
+        before = sa.portfolio_snapshot({})["digest"]
+        sa.portfolio_update({"id": "RP-TEST", "outcome": "consumer now uses the limit"})
+        after = sa.portfolio_snapshot({})
+        self.assertNotEqual(before, after["digest"])
+        self.assertEqual(after["items"][0]["sources"], "original.md")
+        os.environ["LEGEND_ADVISOR_NOW"] = "2026-11-13T11:00:00Z"
+        sa.portfolio_update({"id": "RP-TEST"})
+        self.assertEqual(sa.portfolio_snapshot({})["digest"], after["digest"])
+        self.add(id="RP-OTHER", opportunity="A separate opportunity")
+        self.assertEqual(len(sa.portfolio_rows()[0]), 2)
+
+    def test_a_new_row_is_in_the_saved_brief_and_a_later_change_is_a_distinct_event(self) -> None:
+        self.add()
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
+        self.assertEqual(sa.evaluate(self.campaign), 0)
+        brief = (self.campaign / "P1/brief.md").read_text()
+        self.assertIn("## Living Research Portfolio", brief)
+        self.assertIn("RP-TEST", brief)
+        self.assertIn("read the primary comparison", brief)
+        self.assertNotIn("RP-TEST", sa.tick(self.campaign)["events"])
+        self.assertFalse(any(e.startswith("portfolio:") for e in sa.tick(self.campaign)["events"]))
+        self.add(next_action="a different comparison")
+        os.environ["LEGEND_ADVISOR_NOW"] = "2026-11-13T12:00:00Z"
+        tick = sa.tick(self.campaign)
+        self.assertEqual(tick["verdict"], "EVALUATE")
+        self.assertTrue(any(e.startswith("portfolio:") for e in tick["events"]))
+
+    def test_a_deferred_change_remains_visible_until_evaluated_and_pause_still_prevails(self) -> None:
+        self.add(); sa.tick(self.campaign); sa.evaluate(self.campaign)
+        self.add(next_action="new decisive source")
+        os.environ["LEGEND_ADVISOR_NOW"] = "2026-11-13T10:10:00Z"
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "DEFERRED")
+        os.environ["LEGEND_ADVISOR_NOW"] = "2026-11-13T11:10:00Z"
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
+        (self.campaign / "DISABLED").write_text("operator")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "DISABLED")
+
+    def test_linked_tasks_own_execution_and_release_requests_a_review_not_completion(self) -> None:
+        self.add(mandate_id="ORCH-A")
+        active = sa.portfolio_snapshot({"ORCH-A": {"verdict": "CONTINUE", "path": "task.json"}})
+        self.assertEqual(active["actionable"], [])
+        self.assertEqual(active["items"][0]["execution"], "CONTINUE")
+        released = sa.portfolio_snapshot({"ORCH-A": {"verdict": "RELEASED", "path": "task.json"}})
+        self.assertTrue(released["items"][0]["review_due"])
+        self.assertEqual(released["items"][0]["status"], "ready")
+        sa.portfolio_update({"id": "RP-TEST", "status": "done", "outcome": "consumer and next question recorded"})
+        self.assertEqual(sa.portfolio_snapshot({"ORCH-A": {"verdict": "RELEASED"}})["actionable"], [])
+
+    def test_a_resolved_dependency_becomes_actionable_without_a_radar(self) -> None:
+        self.add(status="waiting", resume_when="after:2026-11-13T12:00:00Z")
+        before = sa.portfolio_snapshot({})
+        self.assertEqual(before["actionable"], [])
+        os.environ["LEGEND_ADVISOR_NOW"] = "2026-11-13T12:01:00Z"
+        after = sa.portfolio_snapshot({})
+        self.assertEqual(after["actionable"], ["RP-TEST"])
+        self.assertNotEqual(before["digest"], after["digest"])
+
+    def test_saved_assessment_updates_feed_the_portfolio_without_rewriting_the_assessment(self) -> None:
+        patch = [{"id": "RP-FOLLOWUP", "opportunity": "Which follow-up separates the two explanations?", "status": "ready", "sources": "checked-result.md"}]
+        old = os.environ.get("FAKE_PORTFOLIO")
+        os.environ["FAKE_PORTFOLIO"] = json.dumps(patch)
+        try:
+            sa.tick(self.campaign)
+            self.assertEqual(sa.evaluate(self.campaign), 0)
+        finally:
+            if old is None:
+                os.environ.pop("FAKE_PORTFOLIO", None)
+            else:
+                os.environ["FAKE_PORTFOLIO"] = old
+        self.assertIn('"RP-FOLLOWUP"', (self.campaign / "P1/assessment.md").read_text())
+        self.assertEqual(sa.portfolio_snapshot({})["actionable"], ["RP-FOLLOWUP"])
+        self.assertEqual(sa.check(self.campaign), 0)
+        before = (sa.ROOT / sa.PORTFOLIO_REL).read_text()
+        warning = sa.apply_portfolio_updates('## Portfolio updates\n```json\n[{"id":"RP-FOLLOWUP","invalid":"x"}]\n```')
+        self.assertTrue(warning)
+        self.assertEqual((sa.ROOT / sa.PORTFOLIO_REL).read_text(), before)
 
 
 class Snapshot(unittest.TestCase):

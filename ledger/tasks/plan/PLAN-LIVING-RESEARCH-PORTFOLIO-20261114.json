@@ -1,0 +1,62 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+  "TASK_ID": "PLAN-LIVING-RESEARCH-PORTFOLIO-20261114",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-11-14",
+  "OBJECTIVE": "Implement the operator-requested permanent Living Research Portfolio, seeded with the agreed opportunities, read by the Strategic Advisor and its existing recall, and continuously updateable without duplicating scientific evidence or task execution state.",
+  "worktree": "/tmp/legend-portfolio-hjm3sbi7",
+  "branch": "codex/living-research-portfolio",
+  "CURRENT_STATE": "IN_PROGRESS",
+  "MANDATE_STATE": "OPEN",
+  "AUTHORISED_QUEUE_20261114": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_IMPLEMENT": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Implement the persistent portfolio, row update path, input routing and meaningful-change recall",
+          "status": "DONE",
+          "evidence": "research_portfolio.tsv; strategic_advisor.py portfolio, portfolio_snapshot, build_brief_p, observe and optional assessment updates"
+        },
+        {
+          "step": "Verify input consumption, semantic changes, deferred events, dependencies and legacy behaviour",
+          "status": "DONE",
+          "evidence": "108 Advisor tests PASS; section references 13 PASS; tool routing 7 PASS; release surface 11 PASS; initial suite word-count failure corrected without loosening the limit. The new tests exercise persistence, saved brief consumption, automatic follow-up patches, deferred events and dependency changes."
+        },
+        {
+          "step": "Land, run required release checks and clean the temporary worktree",
+          "status": "IN_PROGRESS"
+        }
+      ]
+    }
+  },
+  "DECISIONS_TAKEN": [
+    {
+      "what": "One TSV opportunity portfolio beside the operator roadmap; existing task records remain the execution authority",
+      "why": "The operator explicitly requested a durable register after static prompts proved insufficient",
+      "reversibility": "Remove the portfolio integration and TSV; existing Advisor modes continue without it"
+    },
+    {
+      "what": "Optional assessment patches are saved by the host; no new scheduler or approval",
+      "why": "The analyst remains read-only and the portfolio remains continuously feedable"
+    }
+  ],
+  "DEFAULTS_TAKEN": [
+    {
+      "condition": "Concurrent sessions may change main",
+      "default_taken": "Isolate this change in a temporary task worktree, then land and remove it",
+      "why_safe": "No other session files or verification candidates are modified"
+    }
+  ],
+  "STOP_LOG": [],
+  "RUNTIME": "Codex",
+  "SCIENTIFIC_DELTA": "NONE: opportunities and procedural routing only; no scientific claims or ranking changed",
+  "CHECKPOINT": {
+    "last_verified_result": "Targeted suites pass; freezing candidate for fresh-clone regressions",
+    "first_incomplete_work": "Full release regressions and landing"
+  }
+}

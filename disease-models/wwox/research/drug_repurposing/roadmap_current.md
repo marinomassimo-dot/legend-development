@@ -80,6 +80,19 @@ distinct. A low model rank alone establishes neither inefficacy nor harm.
 
 ## Work order
 
+The [Living Research Portfolio](research_portfolio.tsv) is the permanent, editable work instrument
+for ADV and the sessions. It starts with the operator's generation, EVAL, candidate, open-question,
+science, PubMed, tool, memory/DREAM, radar, dashboard and harness opportunities. It is continuously
+fed at material handoffs and consulted before choosing work or waiting; see
+[the operating procedure](../../../../.claude/skills/legend-strategic-advisor/SKILL.md#living-research-portfolio).
+The work-order rows below describe the strategic programmes; the portfolio links concrete
+opportunities to sources and existing mandates, and never changes the operator's mission.
+
+Read the portfolio with `python3 framework/scripts/strategic_advisor.py portfolio`;
+read one complete row with `portfolio --id RP-003`. Priorities and opportunities are revisable;
+the initial rows do not claim that a batch has begun, that a candidate works or that a question
+is answered. A closed assignment does not end the opportunity without a recorded disposition.
+
 Each row is an independently useful increment, normally sized for hours. Reorder when
 evidence changes. Reuse the module's catalogue, adapters, cards, needs, join, handoff and
 view; no new harness, agent role, general platform or approval layer is proposed.

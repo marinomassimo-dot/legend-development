@@ -148,6 +148,31 @@ than infer. A pointer that finds nothing or only old material is a visible limit
 **Disable.** `strategic_advisor.py disable --campaign <DIR>` (or delete the cron with CronDelete, or write "stop" in the roadmap's instruction log): later ticks and runs refuse, and ordinary
 scheduling, the mandate watch and the sessions' work are untouched. Remove the capability: delete the Stage P code paths, the roadmap section markers and the campaign folder; Stages A and B are independent of them.
 
+## Living Research Portfolio
+
+The permanent operational source is
+[`research_portfolio.tsv`](../../../disease-models/wwox/research/drug_repurposing/research_portfolio.tsv),
+linked from the roadmap's Work order. The canonical feeding/consultation habit lives in
+[cross-session transport §12](../../../framework/protocols/cross_session_transport.md#12--autonomous-mandate-continuity).
+`strategic_advisor.py portfolio` prints its index; `portfolio --id RP-003` reads a whole row;
+`portfolio --upsert /tmp/opportunity.json` merges a partial text-valued object by stable id,
+preserving the other fields and rows. Writes use a host-local lock and atomic replacement;
+use the primary checkout so writers share one file. No new service or approval is required.
+
+`observe` reads the rows and derives execution from linked mandate records. A changed
+opportunity/priority, released mandate needing consumption review or met dependency is a
+portfolio event even without a radar; it survives a DEFERRED tick until evaluated. Editorial
+timestamps and row ordering do not trigger an evaluation. The brief contains a compact index,
+the permanent path and the update route. An optional `## Portfolio updates` fenced JSON list
+in a saved assessment is applied by `evaluate`; malformed patches are reported and never
+become a gate on scientific work. The read-only advisor itself still writes nothing.
+
+An assignment is linked by `mandate_id` once taken in charge. Its execution status is derived,
+not copied into this file. `done` records actual disposition/consumption; a released mandate
+requests review rather than automatically marking an opportunity complete. New sources,
+follow-up questions and priority changes keep feeding the same file. The supplied rows are
+operator-requested research opportunities, not findings or proof that work has begun.
+
 ## Continuous operation (HE52, 2026-11-14)
 
 A pilot is bounded by its own limits; continuous operation is the operator's persistent, revocable authorisation to continue inside the roadmap. They are two modes of one campaign, never two campaigns.
