@@ -1,0 +1,366 @@
+{
+  "capture": {
+    "assessment_sha256": "0f5a7c5b22d97abe7bd42b37686d7dd1f503fd6907c2147604871c7ac8d352e8",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P9/stream.jsonl",
+    "raw_stream_sha256": "16f9a2a33b2939b8b441ca42aa4ceeb10e2e504a9f2aa9eab1f1aa7183ae0673",
+    "source_session_id": "b5142534-2fd6-44d4-bc1d-ac5b773ea2b4",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 45195
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-14T22:25:55Z",
+  "label": "P9",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": false,
+      "efforts": {
+        "high": 13
+      },
+      "first_turn_context": 32908,
+      "models": {
+        "claude-opus-5-5": 13
+      },
+      "peak_context": 76524,
+      "totals": {
+        "cache_creation": 76522,
+        "cache_read": 730607,
+        "output": 13261
+      },
+      "turns": 13
+    },
+    "final_turn_model": "claude-opus-5-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.0017986,
+        "inputTokens": 17856,
+        "maxOutputTokens": 128000,
+        "outputTokens": 26,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 76522,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 76522,
+        "cacheReadInputTokens": 730607,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 1.0236214000000001,
+        "inputTokens": 26,
+        "maxOutputTokens": 128000,
+        "outputTokens": 13261,
+        "provider": "firstParty",
+        "thinkingTokens": 4595,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 24,
+    "refusal_fallbacks": [],
+    "total_cost_usd": 1.0254200000000002,
+    "turn_models": {
+      "claude-opus-5-5": 13
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 76522,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 76522,
+      "cache_read_input_tokens": 730607,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 26,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 2522,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 2522,
+          "cache_read_input_tokens": 74000,
+          "input_tokens": 2,
+          "output_tokens": 7029,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 13261,
+      "output_tokens_details": {
+        "thinking_tokens": 4595
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-14T22:23:29Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/research_portfolio.tsv"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tid\ttheme\topportunity\tdecision\tpriority\twhy_now\tnext_action\tstatus\tsources\tmandate_id\tresume_when\toutcome\tupdated_utc\n2\tRP-001\tGeneration\tTurn unused qualified"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P8/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tI'll write the assessment now from what I have read, without reproducing the withheld content.\n2\t\n3\t## 1 \u00b7 Principal decision\n4\t\n5\tWhether the presidio should"
+    },
+    {
+      "input": {
+        "pattern": "ledger/tasks/*/*CTGF*.json"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "No files found"
+    },
+    {
+      "input": {
+        "pattern": "ledger/tasks/*/PLAN-LIVING-RESEARCH-PORTFOLIO-20261114.json"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "ledger/tasks/plan/PLAN-LIVING-RESEARCH-PORTFOLIO-20261114.json"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/ledger/tasks",
+        "pattern": "(?i)ctgf-held|ADV-007"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 2 files\nledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-20261114.json\nledger/tasks/orchestrator/ORCH-ADV007-20261114.json"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/plan/PLAN-LIVING-RESEARCH-PORTFOLIO-20261114.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t  \"_schema\": \"LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT\",\n3\t  \"TASK_ID\": \"PLAN-LIVING-RESEARCH-PORTFOLIO-20261114\",\n4\t  \"DIRECTIVE_VERSION\": 1,"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/*ctgf*/**"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/ctgf_held_data_adv007_20261114/consumer_delta.md\ndisease-models/wwox/research/drug_repurposing/ctgf_held_data_adv0"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ctgf_held_data_adv007_20261114/README.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# ADV-007 \u2014 is CTGF/CCN2 moved in the KO direction in the held WWOX-loss data, and does it survive composition and maturation? (2026-11-14)\n2\t\n3\tNon-canonical"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ctgf_held_data_adv007_20261114/consumer_delta.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# ADV-007 consumer delta (proposals for the integrator; nothing here was applied)\n2\t\n3\t| # | Consumer | Proposal | Ground |\n4\t|---|---|---|---|\n5\t| 1 | `ranki"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADV007-20261114.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t \"_schema\": \"task record, Annex A.1c\",\n3\t \"TASK_ID\": \"ORCH-ADV007-20261114\",\n4\t \"OWNER\": \"orchestrator\",\n5\t \"ACTOR_ID\": \"orchestrator\",\n6\t \"PRIORITY\": \"NO"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "ADV-007|adv007"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 10 files\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P9/brief.md\ndisease-models/wwox/research/drug_repurposing/signature_it23_202"
+    },
+    {
+      "input": {
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-20261114.json",
+        "pattern": "ADV-007|ADV007|CTGF|portfolio"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "163:[Omitted long matching line]\n178:     \"step\": \"Portfolio comparison at the operator's integration of 2026-11-14 ('continuous portfolio direction after the l"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-20261114.json",
+        "limit": 160,
+        "offset": 224
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "224\t   ]\n225\t  },\n226\t  \"OBJ_11_ADV007\": {\n227\t   \"order\": 11,\n228\t   \"title\": \"ADV-007 (Advisor draft from evaluation 8): CTGF/CCN2 in the held WWOX-KO express"
+    },
+    {
+      "input": {
+        "-C": 2,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/signature_it23_20261103/README.md",
+        "pattern": "ADV-007"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "85-13 files hard-code `/home/alex`, of which about 6 build the drug matrices (five are version converters and one is a single-cell reference script). The top-20"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/generation_it52_20261114/result_it52_rerun.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# IT52 rerun: the lever join on the build that carries the owners' reading (main 4c45ab039)\n2\t\n3\tNon-canonical working note. Not medical advice; no dose, sche"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/signature_it23_20261103/README.md",
+        "limit": 6,
+        "offset": 87
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "87\t## Update 2026-11-14 (IT, from ADV-007; no cell edited, nothing regenerated)\n88\t\n89\t`composition_class.tsv` has 15 of 834 rows with blank `log2fc` and no `rh"
+    },
+    {
+      "input": {
+        "glob": "*INTAKE-OVERNIGHT-20261002*",
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks",
+        "pattern": "\"(CURRENT_STATE|MANDATE_STATE|updated|last_harvest|RESUME)\"|harvest.*2026-1[01]"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "ledger/tasks/orchestrator/INTAKE-OVERNIGHT-20261002.json:12:  \"MANDATE_STATE\": \"OPEN\","
+    },
+    {
+      "input": {
+        "head_limit": 20,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks/orchestrator/INTAKE-OVERNIGHT-20261002.json",
+        "pattern": "2026-11-1[0-4]|pool exhausted|last (run|check|search)"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "134:     \"blocker\": \"neuro-WWOX new-literature pool exhausted and the decisive targets are paywalled or absent (356 declared artefacts absent; PMIDs 10786676, 1"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/INTAKE-OVERNIGHT-20261002.json",
+        "limit": 48,
+        "offset": 120
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "120\t    },\n121\t    {\n122\t     \"step\": \"BATCH_J wave 6 + Repudi\",\n123\t     \"status\": \"DONE\",\n124\t     \"evidence\": \"BATCH_20261003_005 70513cd; pushed\"\n125\t    }\n"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/ledger/tasks",
+        "pattern": "pubmed_corpus_harvest|fresh-literature scan|new WWOX (paper|stud)"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 3 files\nledger/tasks/orchestrator/INTAKE-OVERNIGHT-20261002.json\nledger/tasks/plan/HARNESS-SELFTEST-001.json\nledger/tasks/plan/HARNESS-SCREENS-001.json"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/**/*harvest*2026111*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "No files found"
+    },
+    {
+      "input": {
+        "glob": "*.md",
+        "head_limit": 15,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research",
+        "pattern": "(?i)(pubmed|literature) (harvest|census|scan).{0,80}2026-1[01]-\\d\\d|2026-1[01]-\\d\\d.{0,80}(pubmed|literature) (harvest|census|scan)"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No matches found"
+    },
+    {
+      "input": {
+        "glob": "radar_*/README.md",
+        "head_limit": 20,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "(?i)europe ?pmc|new (wwox )?(literature|papers|studies)|WOREE"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/radar_inputs_he52_20261114/README.md:11:[Omitted long matching line]\ndisease-models/wwox/research/drug_repurposing"
+    }
+  ]
+}
