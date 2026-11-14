@@ -211,7 +211,8 @@ class LeverJoin(unittest.TestCase):
             self.assertRegex(j, r"M15 'every drug arm \(M16, M17, M18, M19, M20\)'")                      # the comparator co-requirement, in its own cell's words
             for cf in ("CF04", "CF05a", "CF05b", "CF23"):
                 self.assertIn(f"{cf} [type: genuine", j.split("conflicts of type genuine")[1].split("rows of other types")[0])
-            self.assertIn("listed and NOT followed", j); self.assertIn("M01; genuine conflicts on them, for the reader to weigh: CF01, CF03", j)   # reachable only on a second hop, said as such
+            if k == "L2":
+                self.assertIn("listed and NOT followed", j); self.assertIn("M01; genuine conflicts on them, for the reader to weigh:", j)   # L2: M01 is reachable only on a second hop, said as such
             self.assertIn("no side is chosen on any conflict; no order here is a result", j)
             self.assertIn("not an observation", j)
 
@@ -271,7 +272,7 @@ class LeverJoin(unittest.TestCase):
         for o in ("O01", "O04", "O06"):
             self.assertIn(f"matrix {o} [", a)                                                                      # named in L1's own status, attached verbatim
         self.assertIn("levers_notes E2 [", a); self.assertIn("levers_notes E5 [", a)
-        self.assertIn("route E: its outcome cell names", a); self.assertIn("this route does not separate them", a)     # confirmed by the owners (PRESIDIO-001): attached, and said not to separate L1 from L2
+        self.assertIn("route E: its outcome cell names", a); self.assertIn("the other levers whose own cells name the same E-id:", a)   # confirmed by the owners (PRESIDIO-001): attached, with who else names the E-id computed, not asserted
         self.assertIn("levers.tsv row L3 names L1 in its own cell(s) (route L)", a)                                  # route L: L3's status "gates L1 and L2"
         self.assertIn("CF03 [", a); self.assertIn("CF01 NOT attached: SCI47 is not consistent", a)                  # CF01 stays unattached, with the reason; no side taken
         self.assertIn("M01", a.split("genuine conflicts on them")[0])                                               # M01 is reached through O06, a first hop for L1
@@ -313,6 +314,40 @@ class LeverJoin(unittest.TestCase):
         for k in ("O08", "O09", "O11", "O13", "O15", "O16", "O17", "O18"):                                           # efficacy or preference readings stay unattached: they would be the owners' choice
             for lv in ("L1", "L2"):
                 self.assertNotIn(f"matrix {k} [", self.lever(lv)["lever_attachments"])
+
+    def test_it52_second_reader_points_one_pass(self):
+        l1, l2, l3 = (self.lever(k) for k in ("L1", "L2", "L3"))
+        # (1) preparation context of every conflict side; the August design (global allele, CA3) is named where a conflict side is a file of the August candidates
+        for lv in (l1, l2):
+            j = lv["design_join"]
+            cf04 = j.split("CF04 [type: genuine")[1].split("CF05a [type")[0]
+            self.assertIn("the August candidate's preparation, ADV-006 M14 verbatim", cf04); self.assertIn("CA3 pyramidal", cf04); self.assertIn("Aqeilan allele", cf04)   # side B of CF04
+            self.assertIn("the preparation of the ADV-006 row(s) it is reconciled into", cf04)                                                             # side A (SCI47, Synapsin-Cre)
+        self.assertIn("inherited context", l2["design_join"]); self.assertIn("do not state it", l2["design_join"])                                          # L2's inherited P13-17 Synapsin-Cre context is marked
+        self.assertNotIn("inherited context: this preparation or age is ADV-006's for the row; L1's", l1["design_join"])                                   # L1 states it in its own cells
+        # (2) one hop label for M01: first hop for L1 in both columns, second hop (not followed) only for L2
+        self.assertNotIn("second-hop rows", l1["design_join"]); self.assertIn("first hop through the attachments (see lever_attachments), not second hop: M01", l1["design_join"])
+        self.assertIn("M01", l1["lever_attachments"].split("genuine conflicts on them")[0]); self.assertIn("second-hop rows named by the gating rows and not reached by the attachments", l2["design_join"])
+        # (3) reason and consequence verbatim from conflicts.tsv, no new content
+        with open(HERE.parent / ReconciledMeasurements.PKG / "output" / "conflicts.tsv", encoding="utf-8", newline="") as f:
+            conf = {r["conflict_id"]: r for r in csv.DictReader(f, delimiter="\t")}
+        for c in ("CF04", "CF05a", "CF05b", "CF23"):
+            self.assertIn(conf[c]["why_both_cannot_be_met_in_one_recording"], l1["design_join"])
+            self.assertIn(conf[c]["which_would_change_the_interpretation"], l1["design_join"])
+        self.assertIn(conf["CF03"]["why_both_cannot_be_met_in_one_recording"], l2["lever_attachments"])                                                  # CF03 for L2: the glutamate block removes the NMDAR-dependent burst
+        # (4) CF01 on L2: the owners' reason, like L1, never a bare id
+        for lv in (l1, l2):
+            txt = lv["design_join"] + lv["lever_attachments"]
+            self.assertIn("CF01 NOT attached: SCI47 is not consistent on the sIPSC configuration", txt)
+            self.assertNotIn("CF01 [type", txt)
+        # (5) the sentence that was false for O10 is replaced by who actually names the E-id
+        self.assertNotIn("same rows reach the other GABA lever", l1["lever_attachments"] + l2["lever_attachments"])
+        self.assertNotIn("this route does not separate them", l1["lever_attachments"] + l2["lever_attachments"])
+        self.assertRegex(l1["lever_attachments"], r"matrix O10 \[[^\]]*the other levers whose own cells name the same E-id: none\]")                # O10 names E5, which only L1's own cells name
+        # soft spots: L3's O03/O14 tag names only the row that holds the token, and its dropped-arm conflict CF15 is printed in full; rows naming the lever (M06 for L1)
+        self.assertIn("named in requests_merged of M05 (rows declared for this lever)", l3["lever_attachments"]); self.assertNotIn("named in requests_merged of M05, M20", l3["lever_attachments"])
+        self.assertIn("CF15 [type: gap", l3["design_join"] + l3["lever_attachments"])
+        self.assertIn("M06", l1["design_join"].split("rows whose `lever_or_comparison_gated` names L1 itself")[1].split("|")[0])                        # 'L1 readout'
 
     def test_the_committed_table_is_what_the_generator_writes(self):
         with open(HERE / "conditional_proposals_packages_it47.tsv", encoding="utf-8", newline="") as f:
