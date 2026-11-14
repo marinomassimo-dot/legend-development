@@ -75,14 +75,15 @@
    "steps": [
     {
      "step": "Read the HE diagnosis and the IT baseline in their originals; decide with a reason whether evaluation 6 is due (candidate moment: after the baseline and the technical diagnosis, to choose between the link, an alternative representation or another opportunity); evaluation 7 only after a consumed result and only if it can change the choice between going deeper, changing thread or investing no more",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "HOLD 2026-11-14T08:23Z with a reason: the EVALUATE of the first automatic tick comes from my own roadmap edit recording work the operator already assigned to HE and IT; an evaluation to approve it is excluded by the operator. Decisions not yet due: HE's diagnosis (route and INV-05 choice) is not delivered and HE asks for no evaluation 6. Revival: HE's diagnosis names a real choice between the link, an alternative representation or another opportunity; or IT's after-run lands; evaluation 7 only after a consumed result and only if it can change deepen / change thread / stop. Budget now 5/7, drafted 6/9."
+     "evidence": "Evaluation 6 (P6) run 2026-11-14T09:55:11Z-09:56:53Z after HE's delivery (a33c39a90) and IT's after-run (62c89eff1, 'improved in access, not in consumption'; missing step = owner-authored hypothesis-to-measurement link or declared-key join; resumption condition: link, then rerun the same case). Stage P, opus effort high, 9 turns (8 on claude-opus-5-5, 1 on claude-opus-5: runtime fallback, changed_mid_run true), output 7,476 tokens, cache read 378,913, cache creation 68,718, 0 drafts; invocations 6/7 (drafted 6/9). Read by the Advisor: P5, four task records, IT51 notes, SCI51 README, investigations_it20 INV-05; NOT read: HE's README update, ADV-006 originals, the CP tsv and baseline, the dashboard page, the scout feed used as stale. Result: HOLD, draft nothing. My reading, in the originals: the hold rests on 'IT recorded no question' (my own OBJ_3 line, written before the after-run) and on 'drafting would pre-empt the owners', which conflates sending an assignment to the owners with authoring; the conclusion stands until IT answers a neutral question (sent b293a943: names a precise question or stops at 'improved in access'). Comparison of other opportunities in P6 was made from records, not from the dashboard page. Revival: IT or HE name a precise question with originals and decision; otherwise no further assignment and the increment closes with the honest verdict. Evaluation 7 only after a consumed result."
     },
     {
      "step": "Decide with a reason whether the one remaining Advisor-drafted scientific assignment is used: only for a precise question that HE or IT identify, with question, originals, decision affected, perimeter, resources and recipients; no assignment is required",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Open 2026-11-14T10:05Z: neutral question to IT (b293a943) whether, after the after-run, it names the authored link for CP-BH1/BH2 as a precise question or stops at 'improved in access'. HE's stated view: an owner-authored link is a scientific choice; HE needs no draft. P6: hold. No assignment is required; the operator's condition (HE or IT identify the question) is not yet met."
     },
     {
      "step": "Follow each delivery along result -> comparison/hypothesis/experiment -> consumer -> new question -> next choice; every deferral gets a concrete reason, a recipient and a revival condition",
@@ -99,6 +100,18 @@
      "step": "Report: what is now used that was isolated; which scientific output changed; what stayed unchanged; strategic tools really used (examined, received in the brief, only available); observed cost split into presidio, evaluations and executive work (operator-given work declared as such); the next decision, already assigned when authorised. Keep apart observed generative improvement, better experiment formulation and validated predictive capacity",
      "status": "TODO",
      "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_7_STANDING": {
+   "order": 7,
+   "title": "Standing presidio: never closed by the end of a task; waits are valid",
+   "steps": [
+    {
+     "step": "Standing wait: roadmap change, delivery, mandate transition, operator control line; one recall only",
+     "status": "BLOCKED",
+     "owner": "orchestrator",
+     "blocker": "waiting for: a roadmap change, a delivery, a mandate transition or an operator control line; recall job 3382bb86 (hourly :17). Continuation past the unchanged expiry 2026-11-14T18:22:36Z is conditional on the operator confirming to this session that the continuous mode of the campaign (CONTINUOUS.json, authorised 09:50:42Z by an instruction addressed to HE, quoted by HE) applies to this presidio; asked in chat 2026-11-14T10:0xZ. Without that confirmation the operator's instruction to this session stands: at the expiry no evaluation or assignment, state the authorised work, delete the recall."
     }
    ]
   }

@@ -1,0 +1,295 @@
+{
+  "capture": {
+    "assessment_sha256": "2663d6c8926c77b59b22759c82b65d59daa5c027a00aa7e4523d13ee2735fe5d",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P6/stream.jsonl",
+    "raw_stream_sha256": "d46675b58b5422baef5423816060f78cac20a491d310efa332e8869ae532a2b8",
+    "source_session_id": "07a8cb09-0716-42bc-9627-b06dd8dbb0ff",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 26867
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-14T09:56:53Z",
+  "label": "P6",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": true,
+      "efforts": {
+        "high": 9
+      },
+      "first_turn_context": 25717,
+      "models": {
+        "claude-opus-5": 1,
+        "claude-opus-5-5": 8
+      },
+      "peak_context": 68652,
+      "totals": {
+        "cache_creation": 68718,
+        "cache_read": 378913,
+        "output": 7476
+      },
+      "turns": 9
+    },
+    "final_turn_model": "claude-opus-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.0011809,
+        "inputTokens": 11669,
+        "maxOutputTokens": 128000,
+        "outputTokens": 28,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5": {
+        "cacheCreationEphemeral1hInputTokens": 68,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 68,
+        "cacheReadInputTokens": 66520,
+        "canonicalModel": "claude-opus-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.13143500000000002,
+        "inputTokens": 4,
+        "maxOutputTokens": 64000,
+        "outputTokens": 3899,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 68718,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 68718,
+        "cacheReadInputTokens": 381043,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.6985726000000001,
+        "inputTokens": 20,
+        "maxOutputTokens": 128000,
+        "outputTokens": 3627,
+        "provider": "firstParty",
+        "thinkingTokens": 2237,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 16,
+    "refusal_fallbacks": [
+      {
+        "apiRefusalCategory": null,
+        "direction": "retry",
+        "fallbackModel": null,
+        "originalModel": null,
+        "scope": "session",
+        "trigger": "refusal"
+      }
+    ],
+    "total_cost_usd": 0.8311884999999999,
+    "turn_models": {
+      "claude-opus-5": 1,
+      "claude-opus-5-5": 9
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 68718,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 68718,
+      "cache_read_input_tokens": 378913,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 20,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 68,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 68,
+          "cache_read_input_tokens": 66520,
+          "input_tokens": 4,
+          "output_tokens": 3899,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 7476,
+      "output_tokens_details": {
+        "thinking_tokens": 2187
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-14T09:55:11Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P5/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Strategic assessment \u2014 Stage P, tick 5 (2026-11-14T02:21Z)\n2\t\n3\t## 1 \u00b7 Principal decision\n4\t\n5\tThis is invocation **5 of 5**: after it the campaign has no f"
+    },
+    {
+      "input": {
+        "pattern": "ledger/tasks/*/*20261114*.json"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "ledger/tasks/orchestrator/ORCH-ADV006-20261114.json\nledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-20261114.json\nledger/tasks/plan/PLAN-HE-RECONCILED-USABLE-2"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-20261114.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t \"_schema\": \"orchestrator-task-v1\",\n3\t \"OWNER\": \"orchestrator\",\n4\t \"ACTOR_ID\": \"orchestrator\",\n5\t \"PRIORITY\": \"P0\",\n6\t \"TASK_ID\": \"ORCH-ADV-FOLLOWTHROUGH-"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/plan/PLAN-HE-RECONCILED-USABLE-20261114.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t \"_schema\": \"LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT\",\n3\t \"TASK_ID\": \"PLAN-HE-RECONCILED-USABLE-20261114\",\n4\t \"DIRECTIVE_VERSION\": 1,\n5\t \"GEN"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-VERIFY-GENDIFF-20261114.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t  \"_schema\": \"orchestrator-task-v1\",\n3\t  \"OWNER\": \"orchestrator\",\n4\t  \"ACTOR_ID\": \"orchestrator\",\n5\t  \"PRIORITY\": \"P0\",\n6\t  \"TASK_ID\": \"ORCH-VERIFY-GENDIF"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/plan/PLAN-HE-AUTONOMY-RADAR-20261114.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t \"_schema\": \"LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT\",\n3\t \"TASK_ID\": \"PLAN-HE-AUTONOMY-RADAR-20261114\",\n4\t \"DIRECTIVE_VERSION\": 1,\n5\t \"GENERA"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/generation_it51_20261114/*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/generation_it51_20261114/baseline_before_conditional_proposals_it40.tsv\ndisease-models/wwox/research/drug_repurpos"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/generation_it51_20261114/result_it51.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# IT51 result: the same case after HE's link (revision a33c39a90)\n2\t\n3\tNon-canonical working note. Not medical advice; no dose, schedule or route. Reference g"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/generation_it51_20261114/prereg_it51.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# IT51 baseline and pre-registration: does the reconciled inhibitory-thread knowledge change a real comparison?\n2\t\n3\tNon-canonical working note. Not medical a"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "CP-BH[12]"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 10 files\ndisease-models/wwox/research/drug_repurposing/generation_it40_20261109/conditional_proposals_it40.tsv\ndisease-models/wwox/research/drug_repurposi"
+    },
+    {
+      "input": {
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations_it20.tsv",
+        "pattern": "^INV-05\\t"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "6:[Omitted long matching line]"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/*sci51*/README.md"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/README.md"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations_it20.tsv",
+        "limit": 6
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tinv_id\trank\tunit_id\tneed_id\tintervention\tquestion\twhy_now\tevidence_available\tdecisive_uncertainty\tnext_test\tfeasibility\torigin_class\tnovelty_perimeter\tdirecti"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/README.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# SCI51 \u2014 can the M1-antagonism versus EBP-inhibition comparison be built with interpretable reagents? (2026-11-13)\n2\t\n3\tNon-canonical research material. Not "
+    }
+  ]
+}
