@@ -10,13 +10,13 @@
  "OBJECTIVE": "HE — Make reconciled knowledge usable: verify and, when useful, build the minimum link that lets a real generation path use the ADV-006 reconciled measurement knowledge, with IT's before/after case; one accessory scouting fix if proportionate. The closed mandates (PLAN-ADV-SESSION-20261113) are not reopened.",
  "worktree": ".claude/worktrees/hrk",
  "branch": "task/hrk",
- "CURRENT_STATE": "IN_PROGRESS",
+ "CURRENT_STATE": "COMPLETE",
  "CHECKPOINT": {
-  "last_verified_result": "link delivered and consumed-in-access by IT51",
-  "first_incomplete_work": "OBJ_6 CI conclusion on 49da57433"
+  "last_verified_result": "link delivered, consumed in access (IT51), CI green on the delivered SHA",
+  "first_incomplete_work": "none"
  },
  "AUTHORISED_QUEUE_20261114": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_1_DIAGNOSE": {
    "order": 1,
    "title": "Read the ADV-006 package, the HE50 design-only reader and the actual consumers; decide the route (subset read, reader extension, local adaptation, or keep out) before code",
@@ -94,13 +94,13 @@
     },
     {
      "step": "Public release gate CI concluded on 49da57433 (the SHA of the delivered link)",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "plan",
-     "blocker": "CI run #733 in progress for 49da5743; waiting with ci_runs.py"
+     "evidence": "CI: #732 success (a33c39a90), #733 success (49da57433, the delivered link), #736 success (151454c6d), #737 success (89d8dda5b); checked with ci_runs.py status 2026-11-14."
     }
    ],
-   "status": "IN_PROGRESS"
+   "status": "DONE"
   }
  },
- "MANDATE_STATE": "OPEN"
+ "MANDATE_STATE": "COMPLETE"
 }

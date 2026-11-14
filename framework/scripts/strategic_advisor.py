@@ -237,7 +237,7 @@ def render_entrypoints(rows: list[dict[str, Any]]) -> str:
 RECALL_PROMPT = ("Proactive Strategic Advisor pilot, hourly mechanical check. Run: cd {root} && python3 framework/scripts/strategic_advisor.py tick --campaign {campaign}. "
                  "If the verdict is NONE, DEFERRED, RUNNING, PAUSED, RESOURCES or DISABLED/EXPIRED/BUDGET, reply in one line (a NONE or DEFERRED in continuous mode is a legitimate wait, not the end of the mandate) and do nothing else. If EVALUATE, start `strategic_advisor.py evaluate --campaign {campaign}` "
                  "in the background (run_in_background), and when it finishes read the drafted assignments with `status`, check each recipient is listed live by `claude agents --json`, "
-                 "deliver each with SendMessage (durable artifact path plus pointer), record `deliver --state SENT` or `UNREACHABLE`, and later verify the take-in-charge in the recipient's task record. "
+                 "deliver each with SendMessage (durable artifact path plus pointer), record `deliver --state SENT --to <the session named in the send's receipt>` or `UNREACHABLE`, and later verify the take-in-charge in the recipient's task record. "
                  "Never invent work; never write to transcripts; no more than the campaign budget.")
 RECALL_MARK = "Proactive Strategic Advisor pilot, hourly mechanical check"   # what a session looks for in CronList before creating the recall: one copy only
 
@@ -873,6 +873,23 @@ def _events(campaign: Path) -> list[dict[str, Any]]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()] if path.exists() else []
 
 
+def delivery_refusal(campaign: Path, ident: str, state: str, to: list[str]) -> str:
+    """SENT is a claim about a transport receipt, and the receipt names a recipient. An assignment's recipient role maps to a session in the campaign budget; a SENT whose receipts do not
+    include that session is refused (2026-11-14: a message headed 'to ADV and HE' was received by HE alone and ADV waited). UNREACHABLE needs no receipt."""
+    if state != "SENT":
+        return ""
+    row = next((e for e in _events(campaign) if e.get("id") == ident and e.get("state") == "DRAFTED"), None)
+    if row is None:
+        return f"{ident} is not a drafted assignment of this campaign"
+    session = (_budget(campaign).get("recipients") or {}).get(row.get("recipient", ""))
+    if not to:
+        return (f"SENT needs --to <session> for the real send(s): the receipt, not the text of the message, says who received it. {ident} is for {row.get('recipient')}"
+                + (f" = session {session!r}" if session else ""))
+    if session and session.lower() not in {t.strip().lower() for t in to}:
+        return f"the receipt names {', '.join(to)}; {ident} is for {row.get('recipient')} = session {session!r}. Send it to that session (one send per recipient) and record that receipt"
+    return ""
+
+
 def _log_assignment(campaign: Path, row: dict[str, Any]) -> None:
     with (Path(campaign) / "assignments.jsonl").open("a", encoding="utf-8") as handle:
         handle.write(json.dumps({**row, "utc": _utc(_now())}, sort_keys=True) + "\n")
@@ -1076,6 +1093,7 @@ def main(argv: list[str] | None = None) -> int:
     st = sub.add_parser("status", help="budget and the evidence level of every assignment"); st.add_argument("--campaign", required=True)
     dl = sub.add_parser("deliver", help="record what the channel did with an assignment (SENT with the message id, or UNREACHABLE with the reason)"); dl.add_argument("--campaign", required=True)
     dl.add_argument("--id", required=True); dl.add_argument("--state", choices=["SENT", "UNREACHABLE"], required=True); dl.add_argument("--evidence", required=True)
+    dl.add_argument("--to", action="append", default=[], help="SENT only: the session the transport receipt names, one per real send (an assignment's own recipient must be among them)")
     ac = sub.add_parser("activate", help="write the campaign budget (24 h by default, no renewal)"); ac.add_argument("--campaign", required=True)
     ac.add_argument("--hours", type=int, default=24); ac.add_argument("--max-invocations", type=int, default=3); ac.add_argument("--max-assignments", type=int, default=3)
     ac.add_argument("--turn-limit", type=int, default=20); ac.add_argument("--recipient", action="append", default=[], help="role=session name, e.g. Orchestrator='IT Orchestrator'")
@@ -1133,7 +1151,10 @@ def main(argv: list[str] | None = None) -> int:
     if args.cmd == "status":
         print(status(campaign)); return 0
     if args.cmd == "deliver":
-        _log_assignment(campaign, {"id": args.id, "state": args.state, "evidence": args.evidence}); print(f"{args.id}: {args.state} recorded"); return 0
+        refusal = delivery_refusal(campaign, args.id, args.state, args.to)
+        if refusal:
+            print("REFUSED: " + refusal, file=sys.stderr); return 2
+        _log_assignment(campaign, {"id": args.id, "state": args.state, "evidence": args.evidence, **({"to": args.to} if args.to else {})}); print(f"{args.id}: {args.state} recorded"); return 0
     if args.cmd == "activate":
         now = _now()
         campaign.mkdir(parents=True, exist_ok=True)

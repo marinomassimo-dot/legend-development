@@ -250,6 +250,15 @@ acceptance** — *"a refusal on arrival is silent to the sender"* — and promot
 into an `OPERATIONAL_PASS` is refused as `EVIDENCE_CLASS_MISMATCH: delivery is not acceptance`.
 This protocol adopts that receipt verbatim and extends it one boundary further, to handoff (§8).
 
+### The recipient is the send, not the text (HE53, 2026-11-14)
+
+A message whose first line says "IT to ADV and HE" is a claim about its recipients. The recipients are the sends actually made, and the message tool takes one `to` per send: **two recipients are two sends.**
+On 2026-11-14 one such message was received by HE alone, its receipt said so, and ADV waited. So:
+* resolve the recipient each time from a listing (`ListAgents`) or from `mandate_watch.py route --to <name or role>`, which resolves a role such as ADV through the `SESSION_NAME` / `SESSION_BINDING` of the task records and the runtime's own rows, and answers UNRESOLVED or AMBIGUOUS instead of guessing; never reuse the address of the last conversation for a different addressee, and never reuse a name that now belongs to another session;
+* before a message on which a decision, a resumption or a closure depends is called delivered, read the receipt: `mandate_watch.py route --to <recipient actually used> [--to ...] --first-line "<first line>"` prints MISMATCH when a declared recipient has no send or a send went to an undeclared one. Informative messages need no such check;
+* three facts stay apart: **accepted** (the transport receipt, for that recipient), **read** (the recipient answers or acts: a reply, a tick, a record), **taken in charge** (its own task record says so). Never write "ADV informed" on the strength of a receipt that names HE;
+* the Advisor's assignment delivery enforces it: `strategic_advisor.py deliver --state SENT --to <session>` is refused when the receipt does not include the session the assignment's recipient role maps to.
+
 ```
 GUARANTEE_PROVIDED             a sender that classifies its outcome into the table above has a
                                name for what happened, and the two failure classes it can
@@ -550,6 +559,13 @@ The correction is verified when a follow-up has an effective destination: a hand
 Rewriting a report so that it names a recipient does not show the passage. Nothing here adds a register, a gate or an approval; it uses the handoff, the task record and the
 open-questions map that already exist.
 
+### An operator instruction can span sessions (HE53, 2026-11-14)
+
+* The scope of an operator instruction may cover several sessions, and the session that happens to receive it does not limit that scope: an instruction given to one session about the system is the system's.
+* A new documented operator instruction is reconciled with the earlier ones by **provenance** (who wrote it and where it is recorded), **scope** (whom and what it covers) and **order in time**; the later, wider, documented one prevails over an earlier, narrower one where they conflict.
+* A statement by an agent about what the operator said does not widen anyone's authority; the documented instruction does. The Operator roadmap section is the durable seat: an instruction received in chat is transcribed there, and a session that doubts a peer's account reads that section.
+* A verified systemic instruction needs no repeated individual approvals: do not ask the operator to confirm it again in each session's chat.
+
 ### Decision table — apply it before ending any turn
 
 | Observed condition | Action |
@@ -582,6 +598,7 @@ summary.
 The mandate lives in the task record as an `AUTHORISED_QUEUE*` block (Annex A.1c):
 `MANDATE_STATE` plus, per objective, steps that each carry a `status` (`TODO`, `IN_PROGRESS`,
 `DONE` with `evidence`, `BLOCKED` with a named `blocker`).
+A `BLOCKED` step may carry `unblock_when` (`{"path": "<file>", "contains": "<text>"}` or `{"record": "<TASK_ID>", "state": "<MANDATE_STATE>"}`): when that one file or record already shows the answer, the check counts the step executable and the wait ends without anyone noticing it; a reply that leaves no durable trace keeps the wait.
 `python3 framework/scripts/mandate_continuity.py status --task <TASK_ID>` prints the verdict:
 `CONTINUE` with the next step, `ALL_BLOCKED`, `COMPLETE_PENDING`, `RELEASED`, or a hold
 (`EVIDENCE_PENDING`, `INCONSISTENT_COMPLETE`, `MALFORMED`). Run it at bootstrap, after every
