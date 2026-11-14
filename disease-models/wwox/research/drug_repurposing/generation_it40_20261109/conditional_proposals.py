@@ -127,13 +127,18 @@ PKG_MAP = {
     # comparators and the rejection result are the measure; no gene symbols are joined (the package names GAT-1, a transaminase and a receptor class, not symbols). `adv006` turns on the declared-key join below.
     "inhibitory_defect_sci47_20261112": dict(inv="INV-05", relation_ids=[], adv006=True, observation=["known_in_WWOX"], relation=["lever"], context=["transferred_from_other_systems_named"],
                                              action=["action_required_and_context"], compound=["compound_or_probe_sustained_by_a_document"], premise=["status"],
-                                             competing=["risk_of_acting_on_a_compensation", "counter_evidence"], expected=[], measure=["result_that_would_reject_it", "functional_comparator", "mechanism_comparator"],
-                                             support=["depth_of_support", "adds_over_general_anticonvulsant_action"], title="lever", sibling_cell="lever",
-                                             mapping_unconfirmed=True, dropped=("status", "dropped"),
-                                             rivals_note="other rows of the same package (this table does not classify them; the package relates its rows to explanations, with what each outcome would favour, in its matrix.tsv, which is not registered here)",
-                                             expected_missing="not in levers.tsv, the table registered here; the package states compatible and weakened explanations and what each outcome would favour in its matrix.tsv (not registered): not stated here, not absent"),
+                                             competing=["risk_of_acting_on_a_compensation"], limits=["counter_evidence"], expected=["adds_over_general_anticonvulsant_action"],
+                                             measure=["result_that_would_reject_it"], controls=["functional_comparator", "mechanism_comparator"], support=["depth_of_support"],
+                                             title="lever", sibling_cell="lever", mapping_unconfirmed=True, nomination_from_status=True, dropped=("status", "dropped"),
+                                             attach=dict(matrix="matrix.tsv", notes="levers_notes.md"),
+                                             owner_stated={"L2": {"CF03": "attached by the owners' reading (SCI, PRESIDIO-001, unverified when built): the E5 stratification side; no declared key of this row reaches it"}},
+                                             unattached={"CF01": "SCI47 is not consistent on the sIPSC configuration (its Phase 0 item (i) asks a pipette-set chloride, its cohort sentence names perforated native chloride): stating the conflict for a lever needs a choice that is the owners'"},
+                                             rivals_note="other rows of the same package (this table does not classify them; matrix.tsv relates observations to explanations and levers_notes.md, rows E1-E6, relates explanations to the lever each makes interpretable; neither is registered whole)",
+                                             expected_missing="not in levers.tsv, the table registered here, for this row: the explanation-to-lever table is levers_notes.md (rows E1-E6) and the observation-to-explanation table is matrix.tsv; both are attached below by the ids this row names"),
+    # Owner reading (SCI, PRESIDIO-001, 2026-11-14; unverified until its blind reader reports): all cells faithful, with the slot corrections applied here: counter_evidence is evidence (limits), the 'adds over general anticonvulsant
+    # action' cell is an outcome-to-lever condition (expected slot), only the rejection cell decides (measure), comparators are controls, the nomination follows the package's own status.
 }
-PKG_FIELDS = FIELDS + ["package_ref", "direction_stated", "unmapped_cells", "package_title", "recorded_support", "reopen_or_abandon", "design_join"]
+PKG_FIELDS = FIELDS + ["package_ref", "direction_stated", "unmapped_cells", "package_title", "recorded_support", "reopen_or_abandon", "design_join", "lever_attachments"]
 
 
 def _relation_action(rid):
@@ -203,6 +208,64 @@ def design_join(pkg, key, design_rows_all):
     return " || ".join(parts) + " || no side is chosen on any conflict; no order here is a result"
 
 
+def _matrix_rows(m):
+    path = DR / "inhibitory_defect_sci47_20261112" / "output" / m["attach"]["matrix"]
+    with open(path, encoding="utf-8", newline="") as f:
+        return {r["obs_id"]: (r, f"{path.relative_to(ROOT)}:{n}") for n, r in enumerate(csv.DictReader(f, delimiter="\t"), start=2)}
+
+
+def _notes_rows(m):
+    """Rows of the explanation-to-lever table of levers_notes.md, verbatim, keyed by the explanation id that starts their second cell."""
+    path = DR / "inhibitory_defect_sci47_20261112" / "output" / m["attach"]["notes"]
+    out = {}
+    for n, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if line.startswith("|") and len(cells) == 4 and re.match(r"E\d\b", cells[1]):
+            out[re.match(r"E\d", cells[1]).group(0)] = (cells, f"{path.relative_to(ROOT)}:{n}")
+    return out
+
+
+def lever_attachments(pkg, key, row, m, design_all):
+    """HE54 (SCI's owner reading, PRESIDIO-001): what a lever row DECLARES it relates to, attached verbatim and never widened. (1) O-ids and E-ids named in the lever's own cells: the matrix rows and the
+    explanation-to-lever rows of levers_notes.md. (2) The matrix tokens (`sci47_inhibitory#matrix:<O>`) of the ADV-006 rows declared for this lever. (3) The ADV-006 rows whose requests_merged names an attached matrix row,
+    and the genuine conflicts on them, except the ones the mapping records as the owners' unattached choice. The E-id route alone cannot separate one lever from another (the same matrix rows name E1-E3 for L1 and L2),
+    so the rows named only through an E-id are listed by id and not attached. A word in a cell is not a link."""
+    matrix, notes = _matrix_rows(m), _notes_rows(m)
+    alias = TOKEN_ALIASES.get(pkg, "")
+    meas = {x["key"]: x["row"] for x in design_all if x["package"] == ADV006 and x["table"] == "measurements.tsv"}
+    conf = {x["key"]: x["row"] for x in design_all if x["package"] == ADV006 and x["table"] == "conflicts.tsv"}
+    text = " ".join(str(v) for k, v in row.items() if k != "lever")
+    own_o = sorted(set(re.findall(r"\bO\d{2}\b", text)) & set(matrix))
+    own_e = sorted(set(re.findall(r"\bE\d\b", text)))
+    declared = [mid for mid, r in meas.items() if f"{alias}#levers:{key}" in [t.strip() for t in r["requests_merged"].split(";")]]
+    token_o = sorted({t.strip().split(":", 1)[1] for mid in declared for t in meas[mid]["requests_merged"].split(";") if t.strip().startswith(f"{alias}#matrix:")} & set(matrix) - set(own_o))
+    attached = own_o + token_o
+    fan = sorted({o for e in own_e for o, (mr, _) in matrix.items() if re.search(rf"\b{e}\b", mr["what_each_outcome_would_favour"])} - set(attached))
+    cols = ("observation", "compatible_explanations", "weakened_explanations", "discriminating_measure", "what_each_outcome_would_favour", "pharmacological_decision_it_would_change")
+    parts = []
+    for o in attached:
+        mr, ref = matrix[o]
+        via = "named in this lever's own cells" if o in own_o else f"named in requests_merged of {', '.join(declared)} (declared for this lever)"
+        parts.append(f"matrix {o} [{ref}; {via}]: " + " | ".join(f"{c}: {mr[c]}" for c in cols))
+    for e in own_e:
+        if e in notes:
+            cells, ref = notes[e]
+            parts.append(f"levers_notes {e} [{ref}; the explanation-to-lever table]: if the recordings show: {cells[0]} | explanation: {cells[1]} | lever that becomes interpretable: {cells[2]} | lever that does not: {cells[3]}")
+    if fan:
+        parts.append(f"matrix rows that name {', '.join(own_e)} in their outcome cell, listed and NOT attached (the E-id route cannot separate this lever from the others): {', '.join(fan)}")
+    reach = [mid for mid, r in meas.items() if any(f"{alias}#matrix:{o}" in [t.strip() for t in r["requests_merged"].split(";")] for o in attached)]
+    if reach:
+        gen = [c for c, cr in conf.items() if cr["type"] == "genuine" and set(i.strip() for i in cr["m_id"].split(";")) & set(reach)]
+        held = {c: m["unattached"][c] for c in gen if c in m.get("unattached", {})}
+        parts.append(f"ADV-006 rows whose requests_merged names an attached matrix row: {', '.join(reach)}; genuine conflicts on them: "
+                     + ("; ".join(f"{c} [cell_type: {conf[c]['cell_type']}; {conf[c]['source_A']}: {conf[c]['quote_A']!r}; {conf[c]['source_B']}: {conf[c]['quote_B']!r}]" for c in gen if c not in held) or "none")
+                     + "".join(f"; {c} NOT attached: {why}" for c, why in held.items()))
+    for c, why in (m.get("owner_stated") or {}).get(key, {}).items():
+        if c in conf:
+            parts.append(f"{c} [cell_type: {conf[c]['cell_type']}; {conf[c]['source_A']}: {conf[c]['quote_A']!r}; {conf[c]['source_B']}: {conf[c]['quote_B']!r}] {why}")
+    return " || ".join(parts) if parts else "no id named by this lever's cells, and no matrix token declared for it by ADV-006: nothing attached (a word-only link is not a link)"
+
+
 def package_rows():
     """One conditional proposal per hypothesis row of the mapped packages. Returns (rows, report) where report lists packages reachable but not mapped."""
     pk = hp.load_all(); out = []; seen_unmapped = {}
@@ -227,7 +290,7 @@ def package_rows():
             for x in rws:
                 r = x["row"]; sib = [y for y in rws if y is not x]
                 rivals = " || ".join(f"{y['key']}: {y['row'].get(m['sibling_cell'], '')}" for y in sib)
-                used = set(m["observation"] + m.get("support", []) + m["relation"] + m["context"] + m["action"] + m["compound"] + m["premise"] + m.get("competing", []) + m["expected"] + m["measure"] + m.get("reopen", []) + [m["title"]])
+                used = set(m["observation"] + m.get("support", []) + m["relation"] + m["context"] + m["action"] + m["compound"] + m["premise"] + m.get("competing", []) + m.get("limits", []) + m.get("controls", []) + m["expected"] + m["measure"] + m.get("reopen", []) + [m["title"]])
                 action = cells(r, m["action"])
                 if not action and m.get("action_from_relation"):
                     action = "not stated by the package; taken from relation " + m["action_from_relation"] + " (" + _relation_action(m["action_from_relation"]) + ")"
@@ -243,13 +306,14 @@ def package_rows():
                                 competing_explanations=cells(r, m.get("competing", [])) + (" || " + m.get("rivals_note", "other rows of the same package (the package does not classify them as rivals, complementary or compatible)") + ": " + rivals if rivals else ""),
                                 premise_and_action="relation: " + cells(r, m["relation"]) + " || action: " + action + " || unresolved premise: " + prem,
                                 compound_or_probe_named_by_package=cells(r, m["compound"]) or "none named", catalogue_by_action="", cell_context=(cc.context_for(symbols, (m["relation_ids"] or [pkg])[0])[1] if symbols else "not joined (no relation symbols for this package)"),
-                                source_and_limits="package row, verbatim cells; no direction asserted; labels of the package kept: " + cells(r, [c for c in ("class", "status", "label") if r.get(c)]),
+                                source_and_limits="package row, verbatim cells; no direction asserted; labels of the package kept: " + cells(r, [c for c in ("class", "status", "label") if r.get(c)]) + (" || counter-evidence as documented by the package (evidence, not an explanation): " + cells(r, m["limits"]) if m.get("limits") and cells(r, m["limits"]) else ""),
                                 expected_result_by_explanation=cells(r, m["expected"]) or m.get("expected_missing", "not stated by the package (missing): its recorded support and counter-evidence are not a falsifiable prediction"), decision_measure=cells(r, m["measure"]) or "not stated by the package: a question, not an experiment",
-                                experiments="", unresolved_refs="", nomination=(f"NOT PROPOSED: the package drops this row (its own status label: {r.get(dcol)!r}); kept so the drop is visible" if dropped else "CONDITIONAL; named compounds are the package's, not ranked; no therapeutic direction asserted")
-                                + ("; mapping drafted by HE from the column names and rows, not confirmed by the package's owners" if m.get("mapping_unconfirmed") else ""),
+                                experiments=("controls as documented by the package (controls, not outcomes): " + cells(r, m["controls"]) if m.get("controls") and cells(r, m["controls"]) else ""), unresolved_refs="", nomination=(f"NOT PROPOSED: the package drops this row (its own status label: {r.get(dcol)!r}); kept so the drop is visible" if dropped else (f"the package's own status: {r.get(dcol)!r}; named compounds are the package's, not ranked; no therapeutic direction asserted" if m.get("nomination_from_status") else "CONDITIONAL; named compounds are the package's, not ranked; no therapeutic direction asserted"))
+                                + ("; mapping drafted by HE and read by the owners (SCI, PRESIDIO-001, 2026-11-14), whose own blind reader had not reported when this was built" if m.get("mapping_unconfirmed") else ""),
                                 design_rows_same_investigation=("dropped by the package: the investigation-level list of design rows is not repeated for a row nobody proposes" if dropped else design_pointer(inv, pk)),
                                 package_ref=x["id"] + " @ " + x["source_ref"], direction_stated="none (the package states no therapeutic direction)", unmapped_cells=",".join(unmapped), package_title=r.get(m["title"], ""), reopen_or_abandon=cells(r, m.get("reopen", [])) or "not stated by the package", recorded_support=cells(r, m.get("support", [])),
-                                design_join=design_join(pkg, x["key"], design_all) if m.get("adv006") else ""))
+                                design_join=design_join(pkg, x["key"], design_all) if m.get("adv006") else "",
+                                lever_attachments=lever_attachments(pkg, x["key"], r, m, design_all) if m.get("attach") else ""))
     return out, seen_unmapped
 
 

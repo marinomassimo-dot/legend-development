@@ -194,11 +194,14 @@ class LeverJoin(unittest.TestCase):
         for k, src in self.src.items():
             row = self.lever(k)
             self.assertIn(src["status"], row["premise_and_action"])
-            self.assertIn(src["result_that_would_reject_it"], row["decision_measure"])
-            self.assertIn(src["counter_evidence"], row["competing_explanations"])
+            self.assertEqual(row["decision_measure"], "result_that_would_reject_it: " + src["result_that_would_reject_it"])            # only the rejection cell is the measure
+            self.assertIn(src["counter_evidence"], row["source_and_limits"])                                                    # counter-evidence is evidence, not an explanation
+            self.assertNotIn(src["counter_evidence"], row["competing_explanations"])
+            if src["functional_comparator"]:
+                self.assertIn(src["functional_comparator"], row["experiments"])                                                 # comparators are controls
         self.assertIn("status: dropped as a drug arm now", self.lever("L3")["premise_and_action"])
         self.assertIn("status: dropped", self.lever("L6")["premise_and_action"])
-        self.assertTrue(all("not stated here, not absent" in r["expected_result_by_explanation"] for r in (self.lever(k) for k in self.src)))   # no prediction is invented, and the absence is only of this table
+        self.assertTrue(all(r["expected_result_by_explanation"].startswith("adds_over_general_anticonvulsant_action: ") or "levers_notes.md" in r["expected_result_by_explanation"] for r in (self.lever(k) for k in self.src)))   # nothing invented: the owners' cell, or a pointer to where the package says it
 
     def test_l1_and_l2_reach_their_measurement_rows_gating_rows_comparator_and_genuine_conflicts_by_declared_keys(self):
         for k, m in (("L1", "M16"), ("L2", "M17")):
@@ -232,7 +235,7 @@ class LeverJoin(unittest.TestCase):
     def test_the_earlier_packages_rows_carry_no_join_and_adv004_wording_is_untouched(self):
         self.assertTrue(all(r["design_join"] == "" for r in self.rows if self.PKG not in r["package_ref"]))
         l2 = self.lever("L2")
-        self.assertIn(self.src["L2"]["functional_comparator"], l2["decision_measure"])               # the dated ADV-004/ADV-006 notes travel in the owners' own words
+        self.assertIn(self.src["L2"]["functional_comparator"], l2["experiments"])                    # the dated ADV-004/ADV-006 notes travel in the owners' own words, now in the controls slot
         self.assertNotIn("preferring", l2["design_join"].lower())                                    # nothing here carries a subtype preference
         self.assertTrue(all(r["direction_stated"].startswith("none") for r in self.rows if self.PKG in r["package_ref"]))
 
@@ -252,12 +255,28 @@ class LeverJoin(unittest.TestCase):
     def test_the_sentences_that_were_false_for_this_package_are_gone_and_the_mapping_says_it_is_unconfirmed(self):
         row = self.lever("L1")
         self.assertNotIn("not stated by the package (missing)", row["expected_result_by_explanation"])
-        self.assertIn("matrix.tsv", row["expected_result_by_explanation"])                                          # where the package does state what each outcome favours
+        self.assertTrue(row["expected_result_by_explanation"].startswith("adds_over_general_anticonvulsant_action: "))     # the outcome-to-lever condition, under its own column name
+        self.assertIn("levers_notes.md", row["competing_explanations"]); self.assertIn("matrix.tsv", row["competing_explanations"])   # both tables named, each for what it holds
         self.assertNotIn("does not classify them as rivals, complementary or compatible", row["competing_explanations"])
-        self.assertIn("not confirmed by the package's owners", row["nomination"])
+        self.assertIn("PRESIDIO-001", row["nomination"])                                                           # the owners' reading is named, with its state when built
         other = next(r for r in self.rows if "hcn_20261107" in r["package_ref"])                                     # a package whose mapping the owners confirmed: its own wording is untouched
         self.assertTrue(other["expected_result_by_explanation"].startswith("not stated by the package (missing)"))
         self.assertIn("the package does not classify them as rivals, complementary or compatible", other["competing_explanations"])
+
+    def test_attachments_are_the_ids_a_lever_names_and_nothing_a_word_suggests(self):
+        a = self.lever("L1")["lever_attachments"]
+        for o in ("O01", "O04", "O06"):
+            self.assertIn(f"matrix {o} [", a)                                                                      # named in L1's own status, attached verbatim
+        self.assertIn("levers_notes E2 [", a); self.assertIn("levers_notes E5 [", a)
+        self.assertIn("listed and NOT attached (the E-id route cannot separate this lever from the others)", a)       # O02, O05 ... name E1-E3 for L1 and L2 alike
+        self.assertIn("CF03 [", a); self.assertIn("CF01 NOT attached: SCI47 is not consistent", a)                  # CF01 stays unattached, with the reason; no side taken
+        self.assertIn("M01", a.split("genuine conflicts on them")[0])                                               # M01 is reached through O06, a first hop for L1
+        l3 = self.lever("L3")["lever_attachments"]
+        self.assertIn("matrix O03 [", l3); self.assertIn("matrix O14 [", l3); self.assertIn("declared for this lever", l3)   # through ADV-006's own tokens for L3
+        self.assertIn("CF03 [", self.lever("L2")["lever_attachments"]); self.assertIn("owners' reading", self.lever("L2")["lever_attachments"])   # stated by the owners, not reached by a declared key
+        self.assertIn("nothing attached", self.lever("L6")["lever_attachments"])
+        self.assertTrue(self.lever("L4")["nomination"].startswith("the package's own status: 'kept, as the comparator and as a lever"))   # follows the status, not a generic CONDITIONAL
+        self.assertNotIn("worth keeping only if M05", " ".join(self.lever(k)["lever_attachments"] + self.lever(k)["design_join"] for k in self.src))   # M02's own priority statement is never carried as a dependency
 
     def test_the_committed_table_is_what_the_generator_writes(self):
         with open(HERE / "conditional_proposals_packages_it47.tsv", encoding="utf-8", newline="") as f:
