@@ -7,14 +7,14 @@
  "OBJECTIVE": "ADV-004 (advisor pilot, assigned by the ADV presidio session legend-development-39 on 2026-11-13; authority relayed by a peer, not verified; operator told in chat): adjudicate by reading, at full text with receipts, the GABA-A subtype-selectivity dispute carried as NP3P3 (Ralvenius 2016 PMID 27392635, Hammer 2015 PMC4370687, Jensen 2014 PMID 24533090) for clobazam and N-desmethylclobazam: per-subtype potency and efficacy with conditions and n; is the disagreement explained by assay conditions or not separable; is the NP3P3 trigger (a head-to-head in one system with diazepam as comparator) met; conditional design position for the L2 arm of the SCI47 design; one producer (sonnet medium) and one blind verifier (sonnet high); zero spend; no edit to any shared consumer; window until about 2026-11-14T09:30Z; deliver on main and message the presidio and the IT Orchestrator.",
  "START_UTC": "2026-11-13T23:45:00Z",
  "BASELINE": "main c45fd1d5; worktree .claude/worktrees/adv004, branch task/adv004; folder gabaa_subtype_adv004_20261114/. Receipts ledger has no entry for the three papers; no unlanded work of this session on the axis.",
- "MANDATE_STATE": "OPEN",
+ "MANDATE_STATE": "COMPLETE",
  "CURRENT_PACKAGE": {
-  "id": "landing",
-  "state": "README, delta, recheck, self-evaluation committed; battery running on this SHA",
+  "id": "none",
+  "state": "landed pending push; battery 20261114-004219-85b2f6aa exit 0 on 6cc6ef493 (three environment skips); first run on 87e9c4c70 interrupted by me because main moved",
   "delegate_active": "none",
   "updated": "2026-11-14"
  },
- "RESUME": "Battery verdict into this record (verify_run --task-record); then task_close, safe_push development main, ls-remote; message presidio (legend-development-39) and IT Orchestrator with the SHA.",
+ "RESUME": "Complete. IT Orchestrator consumes consumer_delta rows 1-6; nothing further owed by this record.",
  "DECISIONS_TAKEN": [
   "2026-11-13 ADV-004 taken in charge as executed (this record cites it); accepted as a request relayed by the ADV presidio; reversible by the operator"
  ],
@@ -23,7 +23,7 @@
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
  "AUTHORISED_QUEUE_20261113E": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_A": {
    "order": 1,
    "steps": [
@@ -54,7 +54,7 @@
    "steps": [
     {
      "step": "Landing: pre-freeze suites, gate, LINT, receipts, growth, battery (after the IT battery or after telling IT), task_close, safe_push",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator"
     },
     {
@@ -74,6 +74,16 @@
    "exit_code": -15,
    "evidence_dir": "/tmp/legend-verify-keep/20261114-002156-3b13d027",
    "log_sha256": "fc29033d31ecb464e650e8f5f55dfd09950292c514b19d043c3892c0bc7d455b",
+   "clone": "REMOVED"
+  },
+  {
+   "run_id": "20261114-004219-85b2f6aa",
+   "label": "adv004b",
+   "sha": "6cc6ef493f56876b611096df1d774c096c691280",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261114-004219-85b2f6aa",
+   "log_sha256": "c0cc7d7ab468eebb35ce7a93a5df0bcb510701f05a00946ecd42ebcc18bae9bf",
    "clone": "REMOVED"
   }
  ]
