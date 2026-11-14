@@ -240,6 +240,18 @@
      "evidence": "Delivered to SCI 2026-11-14T19:0xZ (msg 9180c4a8; SENT recorded with --to SCI, landed 6d2f97a7b; premise corrections sent; my premise 2 was incomplete: novelty.tsv has 15 CCN2 rows, not CTGF, SCI found it). Taken in charge by SCI as ORCH-ADV007-20261114 (status message ~19:2xZ). DELIVERED 2026-11-14T~21:0xZ, landed 777144319: verdict (b) inconsistent or composition-explained: the one concordant table (human KO organoid GSE156243, CTGF log2FC 1.32, padj 0.00707, 4 v 2 libraries, exact permutation floor 0.13) is of the size a progenitor-state shift alone would carry (projection +1.21 vs observed +1.15), mouse bulk tables disagree in sign, the snRNA pool rise sits with a composition shift, the CAGE pair is uninformative; the SCI50 DREAM expression line is closed with this reason. Blind check: one sonnet-high verifier (44 turns, output 51,210, cache read 3,111,079), 32 claims: 26 confirmed, 3 narrowed (applied), 3 unverifiable, 0 contradicted; battery 20261114-193055-c1cc00a7 PASS WITH SKIPS (251 targets, 12 skips), 72-minute wait by PID, no interruption/restart/human intervention. Premise corrections confirmed by SCI: composition_class.tsv CCN2 flags are DEFAULTS (a rename lookup miss: 15 rows IRAG1, CCN2, DRC4, MNMIP1, POFUT4, MTCL2, ATOSB, HDIP1, BBLN, ADPRS, CIRSR, H1-2, H1-10, H4C15, ZNRD2). Consumption pending with IT (consumer_delta rows 1 optional INV-06 row 7 wording, 3 dated README note in signature_it23, 4 DREAM disposition appended by SCI); HE answered the tool defect: no harness change now (no shared alias helper; one same-class unrun pattern lincs_it2_null_sets.py:40 dec.get(g, 0); labelling needs regeneration, the owner's call; 'NA' marker if the owner regenerates; reopen if a reader takes a zero row as clean)."
     }
    ]
+  },
+  "OBJ_12_ADV008": {
+   "order": 12,
+   "title": "ADV-008 (Advisor draft from evaluation 9, RP-008): declined by the presidio after premise check",
+   "steps": [
+    {
+     "step": "Check the draft's decisive premises in the originals before sending; send, narrow or decline with the reason; correct the shared portfolio row so that it does not say 'assigned' for work that was not sent",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Declined 2026-11-14T22:3xZ: see TRIAL_24H.log; assignments.jsonl keeps ADV-008 at DRAFTED (never SENT, honest); RP-008 corrected by portfolio --upsert to backlog with the narrow residual and a resume_when; the Advisor's other portfolio updates (RP-017 outcome from ADV-007; RP-005 resume_when) kept as correct. Nothing was sent to IT: no wasted executive work."
+    }
+   ]
   }
  },
  "DECISIONS_TAKEN": [
@@ -363,6 +375,14 @@
    {
     "utc": "2026-11-14T21:0xZ",
     "event": "ADV-007 delivered (verdict b, negative and informative); the Advisor's framing ('the INV-06 sentence may be out of date in one direction') was tempered by the result; one tool defect found (silent default flags on renamed symbols), sized by HE: no harness change now"
+   },
+   {
+    "utc": "2026-11-14T22:23Z",
+    "event": "tick EVALUATE because a new input appeared: the operator-requested Living Research Portfolio (research_portfolio.tsv, 20 rows, 11 ready; PLAN-LIVING-RESEARCH-PORTFOLIO-20261114); evaluation 9 (P9) run: stage P, opus high, 13 turns all claude-opus-5-5, output 13,261, cache read 730,607, cache creation 76,522, complete, outcome assign: draft ADV-008 (a WWOX literature census since 2026-10-01, to the Orchestrator); invocation count 9, drafts 8 of the historical 9 (history in continuous mode)"
+   },
+   {
+    "utc": "2026-11-14T22:3xZ",
+    "event": "ADV-008 NOT dispatched, with the reasons, after checking its premises in the originals: (1) 'no dated genotype-name scan since 2026-10-05' is false in substance: framework/scripts/scout_daily.py runs PubMed queries wwox_any and wwox_dee (30 newest by pub_date) daily from the host cron 05:20 and reports new PMIDs as TO_TRIAGE (the log shows two hits, 42991897 ClinVar population variants and 43004178 pig meat-yield genetics: noise); (2) the 'WWOX paper that appeared after the pause', PMID 42941930, is an SH-SY5Y respiratory-inhibitor study, not a WWOX model, per radar_p4_it15 README. Residual gap (window before the scout's first baseline; correction/retraction/supplement notices) is small and low-yield: RP-008 set to backlog with that narrow next action and a resume_when, via the portfolio upsert. Premise accuracy of Advisor drafts in this trial: ADV-007 draft had 3 premises, 2 wrong or incomplete (blank flags ambiguity flagged by the Advisor itself; SCI51 consumption not pending); ADV-008 draft had 2 premises, both false: the presidio's check of a draft's decisive premises in the originals changed the outcome twice out of three drafts of this phase (ADV-006 earlier: premise partly wrong)"
    }
   ]
  }
