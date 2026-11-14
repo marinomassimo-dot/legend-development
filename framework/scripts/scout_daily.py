@@ -687,7 +687,7 @@ def parse_reopen(text: str, path: str) -> list[dict]:
 
 OPEN_VERDICT = re.compile(r"^(NEEDS-DATUM|PARTIAL|PARTLY|WATCH)", re.I)
 TABLE_NAME = re.compile(r"/(reopen_searches[^/]*|decisions)\.tsv$")
-PARSER_VERSION = "he51"   # bump when a surface parser or its notes change, so cached extracts of unchanged blobs are re-read
+PARSER_VERSION = "he52"   # bump when a surface parser or its notes change, so cached extracts of unchanged blobs are re-read
 TABLE_LIMIT = 12  # newest package tables read; each is blob-cached, so an unchanged table costs no read
 
 
@@ -770,8 +770,8 @@ def build_questions(items: list[dict]) -> tuple[list[dict], int]:
             continue
         plain = [t for t in terms if re.fullmatch(r"[a-z]{4,14}", t)]  # no hyphenated or rare tokens in a search string
         objs, methods = entities(it["text"])
-        if objs and not hf:
-            hf = objs[0]
+        if objs:
+            hf = objs[0]   # the object the priority names, not the hook's category word: "benchmark" and "bioactivity" searched Hugging Face names and returned mortgage and OCR benchmarks (14 Nov feed)
         if objs or methods:  # named objects lead; frequency words only fill what the text did not name
             plain = list(dict.fromkeys(objs + methods + [t for t in plain if t not in GENERIC]))[:3]
             # a category word ("compound database", "epilepsy") drowned the object; only a lone short acronym keeps a context word
@@ -780,7 +780,7 @@ def build_questions(items: list[dict]) -> tuple[list[dict], int]:
         kw = " ".join(([anchor] if anchor else []) + (plain or terms))
         q = {"id": f"{it['surface']}:{it['lid']}", "category": category or "scientific inputs",
              "gap": it["text"][:140], "decision": it["decision"], "weight": it["weight"], "kw": kw,
-             "gh": " ".join(((anchor + " " if anchor else "") + (plain or terms)[0]).split()[:3]), "hf": hf or max(plain or terms, key=len),
+             "gh": " ".join(((anchor + " " if anchor else "") + (plain or terms)[0]).split()[:3]), "hf": hf or max(plain or terms, key=len), "objects": objs,
              "epmc": " AND ".join(f'TITLE_ABS:"{w}"' if " " in w else f"TITLE_ABS:{w}"
                                   for w in (([anchor] if anchor else []) + plain)[:2]) if plain else None,
              "terms": terms, "plain": plain, "anchor": anchor,
@@ -1343,6 +1343,23 @@ def pick_owners(items: list[dict], follow: dict | None, explored: dict, now: dt.
     return [(k[0], k[1], why) for k, why in ok[:n]]
 
 
+SELF_REPOS = frozenset({"marinomassimo-dot/legend-development"})   # the repository itself is never a discovery of its own radar (it was reported on 2026-11-04)
+TERM_SUFFIXES = frozenset({"", "s", "a", "b", "r", "ar", "ergic", "ergics", "alpha", "beta"})   # a question term also matches GABAA, GABAergic, GSK3B, KCNQ2s; not 'gabarito' or 'nrf24l01'
+
+
+def _tokens(text: str) -> set[str]:
+    text = text or ""
+    spaced = re.sub(r"(?<=[A-Z])(?=[A-Z][a-z])", " ", re.sub(r"(?<=[a-z])(?=[A-Z])", " ", text))   # camelCase and ACRONYMWord: NMDARInhibitors -> NMDAR Inhibitors
+    return set(re.findall(r"[a-z0-9]+", spaced.lower())) | set(re.findall(r"[a-z0-9]+", text.lower()))   # the unsplit word stays too: GABAergic must not become GAB + Aergic
+
+
+def term_hit(terms: list[str], *texts: str) -> bool:
+    """Does any of the question's own distinctive terms occur as a WHOLE word of the item's name or description? A term inside another word (isr in israel, gaba in gabarito, nrf2 in nrf24l01)
+    is a lexical collision, not a hit: the 14 Nov feed showed them as discoveries. camelCase and punctuation split words; a few suffixes keep real variants (GABAA, GSK3B)."""
+    toks = set().union(*(_tokens(t) for t in texts))
+    return any(t == term or (t.startswith(term) and t[len(term):] in TERM_SUFFIXES) for term in terms for t in toks)
+
+
 def discover_theme(theme: dict, seen: dict, opener=http, now: dt.datetime | None = None,
                    known=frozenset(), budget: dict | None = None) -> dict:
     """One question across the channels: GitHub, Hugging Face (models, datasets, Spaces), Nature portfolio (Crossref
@@ -1373,10 +1390,19 @@ def discover_theme(theme: dict, seen: dict, opener=http, now: dt.datetime | None
     def owner_of(it):
         return it["ident"].split("/")[0] if it.get("ident") and "/" in it["ident"] else None
 
+    own_terms = [t.lower() for t in (theme.get("objects") or [])]   # the technical objects a priority names (symbols, drugs); a question without any, the fallback themes and the open slot are not filtered
+
     def take(chan: str, fresh: list[dict]) -> None:
         keep, local = [], {}
         for it in fresh:
             if it["key"] in seen:
+                continue
+            if (it.get("ident") or "") in SELF_REPOS:
+                chans[chan]["self"] = chans[chan].get("self", 0) + 1
+                continue
+            if own_terms and it.get("kind") != "paper" and not term_hit(own_terms, it.get("title", ""), it.get("description", "")):
+                chans[chan]["off_term"] = chans[chan].get("off_term", 0) + 1       # a search hit that does not contain the question's own words: counted and named, never shown as a discovery
+                chans[chan].setdefault("off_term_names", []).append(it.get("title", ""))
                 continue
             if it.get("ident") and it["ident"] in known:
                 chans[chan]["known"] += 1
@@ -1617,7 +1643,9 @@ def channel_summary(results: list[dict], duplicates: dict | None = None) -> dict
             outcome = "delta" if new else "no_news"
         summary[chan] = {"outcome": outcome, "calls": calls, "new": new, "errors": errors, "known_resources": known[:10],
                          "duplicates": (duplicates or {}).get(chan, 0),
-                         "owner_capped": sum(r["channels"][chan].get("capped", 0) for r in results)}
+                         "owner_capped": sum(r["channels"][chan].get("capped", 0) for r in results),
+                         "off_term": sum(r["channels"][chan].get("off_term", 0) for r in results),
+                         "off_term_names": [n for r in results for n in r["channels"][chan].get("off_term_names", [])][:6]}
     return summary
 
 
@@ -1788,6 +1816,7 @@ def briefing(report: dict, persisted: dict | None = None) -> str:
         lines.append("Channels: " + " | ".join(
             f"{c} {v['outcome']}" + (f" ({v['new']} new)" if v["outcome"] == "delta" else "")
             + (f" [{len(v['errors'])} error(s)]" if v["errors"] and v["outcome"] != "error" else "")
+            + (f" [{v['off_term']} hit(s) dropped, no whole-word match with the question's terms, e.g. {', '.join(v.get('off_term_names') or [])[:90]}]" if v.get("off_term") else "")
             for c, v in channels.items()))
         for q in (report.get("discovery") or {}).get("questions", []):
             lines.append(f"  question [{q['category']}] {q['question']} -> if confirmed: {q['decision']}")

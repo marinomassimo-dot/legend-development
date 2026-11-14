@@ -1,0 +1,43 @@
+# HE52: what the radars produced, what was used, and what was fixed (2026-11-14)
+
+Non-canonical working note. Not medical advice. Task record `ledger/tasks/plan/PLAN-HE-AUTONOMY-RADAR-20261114.json`. Every figure below says what it was measured on. Written for ADV, IT and SCI.
+
+## Limit stated first
+The operator's three radar prompts and the external reports (capability mining, drug-repurposing research radar, critical observer) are **not in the repository and not held by ADV or IT** (checked by messages 2026-11-14). Nothing here reconstructs them. The comparison below is therefore between what the repository holds: the daily scout feed, its trace, the capability log, and how ADV's Stage P evaluations used the feed. Claims about the operator's reports (the AMPA documentary contradiction, the fly radiosensitivity recall, the miscount of ceilings versus invocations) could not be checked; the ceilings-versus-executed distinction is now in `strategic_advisor.py status`.
+
+## The three functions and where each lives
+| Function | What exists | Concrete gap found |
+|---|---|---|
+| A. Capability mining and scouting | `scout_daily.py` (daily GitHub / Hugging Face / Crossref-Nature / Europe PMC; questions derived from the roadmap surfaces; an open slot; a follow list), `legend-harness-scout` (weekly tables stop at 2026-W40: the daily feed replaced them in practice), `capability_scout_log.md` | hits were not relevance-filtered (below); the state trace holds 229 signals and **0 examinations** (not observed, not "not happened"); "contribution vs existing" is printed as `unchecked` |
+| B. Drug-repurposing research radar | the scout's questions come from drug-repurposing surfaces (diagnosis, work orders, reopen tables); `radar_it15..19` packages were one-off IT work | no standing step that reads a change **in the context of a specific comparison or hypothesis**: in the one case followed (below) that step was ADV's evaluation, not the feed |
+| C. Critical LEGEND observer | pieces: self-evaluation and DREAM (consumption), `mandate_watch` (stalls), ADV's evaluations (what exists but is unused), the gates | no standing observer of available-but-unused capabilities or documentary contradictions; the cheapest representation is a section of ADV's brief, left to ADV |
+No new agent or script was added for any of the three.
+
+## Sample (declared) and what it shows
+**S1: all 152 items the daily scout logged between 2026-11-02 and 2026-11-14** (`scout_feed_sample.tsv`; GitHub 71, Hugging Face 80, Nature 1; Europe PMC items are in the trace only, 50, and were not labelled). Each item labelled R (clearly about the question's biology, assay or method), T (reusable method named), U (unrelated or a lexical collision), I (cannot tell from name and metadata). Two labelers on the name and metadata only, **no download**: HE (not blind to the origin) and a blind delegate (sonnet, effort low, 36k subagent tokens including context, read back from its report: it saw only the question, the name and the metadata). Exact agreement 103 of 152; the disagreement is almost all one thing: I labelled bioactivity-named student repositories U, the delegate T.
+| | R | T | U | I |
+|---|---|---|---|---|
+| themed questions, 92 items, HE | 6 | 3 | 79 | 4 |
+| themed questions, 92 items, blind | 4 | 22 | 64 | 2 |
+| open slot, 60 items, HE | 0 | 11 | 15 | 34 |
+| open slot, 60 items, blind | 0 | 28 | 23 | 9 |
+Examples of collisions shown as discoveries: *israel* for ISR, *gabarito* and *gabarita* (a Portuguese answer key) for GABA, *nrf24l01* for NRF2, *ldhawka* for LDH, and this repository itself (2026-11-04). The Hugging Face query was the hook's category word (`benchmark`, `bioactivity`) instead of the object the question names: mortgage and OCR benchmarks came back for GSK3 and GABA.
+**S2: three signals followed.**
+* **NP3P3 (scout reopen row, 12-14 Nov):** the feed's hits did not address it (gabarito, bioactivity reports); the row itself, re-asked daily, was read by ADV's Stage P3 as a watch nobody had adjudicated for twelve days; ADV-004 (Science) read the three primary sources, landed, and was consumed (NP3P3 re-scoped not closed, IT14 provenance, the L2 wording constraint, WO-16, IT53-Q01). Observed benefit: a premise corrected and a wording limit added; the value came from the question derivation and the evaluation, not from any hit.
+* **`spiliotislab/sept9-gsk3-phosphoswitch-code` (scout, 4 Nov, labelled R by both):** README read now (MIT; imaging code for a SEPT9 GSK3-phosphoswitch paper). Decision **defer**, recorded in the trace (examination, then decision): transferable at most as a neuronal GSK3-activity readout, paper unread; reopen if NEED-GSK3B-DEREPRESSION needs a downstream activity readout and the paper shows those phosphosites track GSK3 in neurons. No adoption, no benefit observed.
+* **Paper2Bench and AutoSciBench (named in the operator-side capability report; web search only, no paper read):** both generate benchmarks for scientific agents (Paper2Bench is a PyPI package; AutoSciBench is arXiv 2610.05140). LEGEND's `framework/eval/` holds internal checks of its own harness (claim-retrieval benchmark, input-surface benchmark, failure taxonomy, learned gates); no gap in them is named by any record. Decision: **not adopted, no gap shown**; reopen if a named need appears to measure agent performance on new papers.
+**Where discovery and analysis differ:** the deterministic feed intercepts by keyword and shows 4-7% R-level items on themed questions (6 of 92 by HE, 4 by the blind labeler); an LLM evaluation of the same feed (ADV P3, P5) discounted the hits as "not addressing the row" and used the question. Different work, context and cost: the feed costs no model; one Stage P run cost 19 turns and about 29k output tokens (P3 read-back). Complementary, not comparable on yield.
+**What was not found:** no item from the feed was adopted, tried or integrated anywhere in the repository between 2 and 14 November (0 examination records in the trace before today; the R-level items appear only inside ADV briefs). That is "not observed", not proof it did not happen elsewhere.
+
+## Fixes (defects the sample demonstrates only)
+`scout_daily.py` (tests in `test_scout_daily.py`, 83 OK):
+1. A hit must contain one of the question's own technical objects as a whole word of its name or description (camelCase and ACRONYMWord split; GABAA, GABAergic and GSK3B kept); the repository itself is excluded; what is dropped is **counted and named in the briefing** ("N hit(s) dropped, no whole-word match..."). Open slot, fallback themes and questions with no object are not filtered, and papers are not filtered. Retrospective test on the 64 filterable themed items: kept 9 (5 R by HE, 4 by the blind labeler; 3 homonyms still pass: an aviation tool named isr, a game named ldh, a company named gaba), dropped 55 (52 U by HE, 39 U by the blind labeler; the blind labeler called 14 of the dropped T, the bioactivity repositories). One R item was dropped (`iGluR-peptides`: a receptor class, not the question's object): a recall cost, visible in the dropped list. Name-level only; not yet observed on a live run.
+2. The Hugging Face search term is the object the question names, not the hook's category word.
+3. The operator roadmap section is named in the plan and the diagnosis layout of IT28 is read (previous commit 140962154); cached extracts are re-read when the parser changes.
+**No change made** to: the weekly tables (stale since W40; superseded in practice), the examination of signals (it needs a reader, not a field), or the open slot.
+
+## Cost of the coordinator, measured
+Census of the transcripts of this project directory from 2026-11-07 to 2026-11-14 (`session_model_census.py --dir ... --since`; top-level session files only, subagent transcripts not included): 17 files, 9,407 turns, 3.61 billion cache-read tokens, 7.74 million output tokens; the four long sessions account for almost all of it. The ADV session from 2026-11-13T22:30Z: 207 turns, about 49.9 million cache-read and 187 thousand output tokens in two windows, mean context 139-289 thousand tokens re-read on every turn; its hourly recall fires appear at :41:54 every hour in its transcript. So a recall is mechanical only in what it decides: each fire is a turn that re-reads the hosting context. Not converted to a share of any plan; the usable weekly limit is not exposed by the runtime.
+
+## Remove or revert
+Scout: revert `scout_daily.py` to commit 140962154 for the filter, or set `objects` empty (no filter). Sample: delete this folder. The trace entry for the SEPT9 repository lives in the host state file, not in the repository.
