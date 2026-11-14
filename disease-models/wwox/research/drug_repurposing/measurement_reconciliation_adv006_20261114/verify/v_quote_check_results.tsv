@@ -1,0 +1,154 @@
+kind	id	part	locator	in_file	in_row	in_named_col	note
+crosswalk	sci42_chloride#new_measurements:M03	1	M03, column measurement	True	True	True	
+crosswalk	sci42_chloride#new_measurements:M01	1	M01, column measurement	True	True	True	
+crosswalk	sci42_chloride#new_measurements:M02	1	M02, column measurement	True	True	True	
+crosswalk	sci42_chloride#new_measurements:M04	1	M04, column measurement	True	True	True	
+crosswalk	sci42_chloride#new_measurements:M05	1	M05, column measurement	True	True	True	
+crosswalk	sci42_chloride#new_measurements:M06	1	M06, column measurement	True	True	True	
+crosswalk	sci42_chloride#new_measurements:M07	1	M07, column measurement	True	True	True	
+crosswalk	sci42_chloride#new_measurements:M08	1	M08, column measurement	True	True	True	
+crosswalk	sci42_chloride#new_measurements:M09	1	M09, column measurement	True	True	True	
+crosswalk	sci42_chloride#new_measurements:M10	1	M10, column measurement	True	True	True	
+crosswalk	sci42_chloride#explanations:E-supply	1	E-supply, column needs_new_measurement	True	True	True	
+crosswalk	sci42_chloride#explanations:E-response	1	E-response, column needs_new_measurement	True	True	True	
+crosswalk	sci42_chloride#explanations:E-chloride	1	E-chloride, column needs_new_measurement	True	True	True	
+crosswalk	sci42_chloride#explanations:E-chloride-secondary	1	E-chloride-secondary, column needs_new_measurement	True	True	True	
+crosswalk	sci42_chloride#explanations:E-compensation	1	E-compensation, column needs_new_measurement	True	True	True	
+crosswalk	sci42_chloride#explanations:E-maturation	1	E-maturation, column needs_new_measurement	True	True	True	
+crosswalk	sci42_chloride#explanations:E-artefact	1	E-artefact, column needs_new_measurement	True	True	True	
+crosswalk	sci42_chloride#conditional_prediction:r01	1	row 1 (E-supply; synaptic-selective GABA-A positive modulator), column control_that_interprets_a_null	True	True	True	direct-row 1 (header excluded)
+crosswalk	sci42_chloride#conditional_prediction:r02	1	row 2 (E-supply; chloride-gradient manipulation (NKCC1-directed block or KCC2-directed enhancer, class), column control_that_interprets_a_null	True	True	True	direct-row 2 (header excluded)
+crosswalk	sci42_chloride#conditional_prediction:r03	1	row 3 (E-response; synaptic-selective GABA-A positive modulator), column control_that_interprets_a_null	True	True	True	direct-row 3 (header excluded)
+crosswalk	sci42_chloride#conditional_prediction:r04	1	row 4 (E-response; chloride-gradient manipulation (NKCC1-directed block or KCC2-directed enhancer, class), column control_that_interprets_a_null	True	True	True	direct-row 4 (header excluded)
+crosswalk	sci42_chloride#conditional_prediction:r05	1	row 5 (E-chloride; synaptic-selective GABA-A positive modulator), column control_that_interprets_a_null	True	True	True	direct-row 5 (header excluded)
+crosswalk	sci42_chloride#conditional_prediction:r06	1	row 6 (E-chloride; chloride-gradient manipulation (NKCC1-directed block or KCC2-directed enhancer, class), column control_that_interprets_a_null	True	True	True	direct-row 6 (header excluded)
+crosswalk	sci42_chloride#conditional_prediction:r07	1	row 7 (E-chloride-secondary; chloride-gradient manipulation (NKCC1-directed block or KCC2-directed enhancer, class), column control_that_interprets_a_null	True	True	True	direct-row 7 (header excluded)
+crosswalk	sci42_chloride#conditional_prediction:r08	1	row 8 (E-compensation; synaptic-selective GABA-A positive modulator), column control_that_interprets_a_null	True	True	True	direct-row 8 (header excluded)
+crosswalk	sci42_chloride#conditional_prediction:r09	1	row 9 (E-compensation; extrasynaptic or tonic-receptor-acting GABA-A positive modulator), column control_that_interprets_a_null	True	True	True	direct-row 9 (header excluded)
+crosswalk	sci42_chloride#conditional_prediction:r10	1	row 10 (E-maturation; synaptic-selective GABA-A positive modulator), column control_that_interprets_a_null	True	True	True	direct-row 10 (header excluded)
+crosswalk	sci42_chloride#conditional_prediction:r11	1	row 11 (E-maturation; chloride-gradient manipulation (NKCC1-directed block or KCC2-directed enhancer, class), column control_that_interprets_a_null	True	True	True	direct-row 11 (header excluded)
+crosswalk	sci42_chloride#conditional_prediction:r12	1	row 12 (E-artefact; synaptic-selective GABA-A positive modulator), column control_that_interprets_a_null	True	True	True	direct-row 12 (header excluded)
+crosswalk	sci42_chloride#conditional_prediction:r13	1	row 13 (E-artefact; chloride-gradient manipulation (NKCC1-directed block or KCC2-directed enhancer, class), column control_that_interprets_a_null	True	True	True	direct-row 13 (header excluded)
+crosswalk	sci47_inhibitory#design_review:Phase0-i	1	Minimum design, Phase 0, item (i)	True	None	None	
+crosswalk	sci47_inhibitory#design_review:Phase0-ii	1	Minimum design, Phase 0, item (ii)	True	None	None	
+crosswalk	sci47_inhibitory#design_review:Phase0-iii	1	Minimum design, Phase 0, item (iii)	True	None	None	
+crosswalk	sci47_inhibitory#design_review:Phase0-iv	1	Minimum design, Phase 0, item (iv)	True	None	None	
+crosswalk	sci47_inhibitory#design_review:Phase0-v	1	Minimum design, Phase 0, item (v)	True	None	None	
+crosswalk	sci47_inhibitory#design_review:Phase0-vi	1	Minimum design, Phase 0, item (vi)	True	None	None	
+crosswalk	sci47_inhibitory#design_review:Phase0-vii	1	Minimum design, Phase 0, item (vii)	True	None	None	
+crosswalk	sci47_inhibitory#design_review:Phase1	1	Minimum design, Phase 1 bullet	True	None	None	
+crosswalk	sci47_inhibitory#levers:L1	1	L1, column action_required_and_context	True	True	True	
+crosswalk	sci47_inhibitory#levers:L2	1	L2, column action_required_and_context	True	True	True	
+crosswalk	sci47_inhibitory#levers:L3	1	L3, column action_required_and_context	True	True	True	
+crosswalk	sci47_inhibitory#levers:L4	1	L4, column action_required_and_context	True	True	True	
+crosswalk	sci47_inhibitory#levers:L5	1	L5, column action_required_and_context	True	True	True	
+crosswalk	sci47_inhibitory#matrix:O01	1	O01, column discriminating_measure	True	True	True	
+crosswalk	sci47_inhibitory#matrix:O02	1	O02, column discriminating_measure	True	True	True	
+crosswalk	sci47_inhibitory#matrix:O03	1	O03, column discriminating_measure	True	True	True	
+crosswalk	sci47_inhibitory#matrix:O04	1	O04, column discriminating_measure	True	True	True	
+crosswalk	sci47_inhibitory#matrix:O05	1	O05, column discriminating_measure	True	True	True	
+crosswalk	sci47_inhibitory#matrix:O06	1	O06, column discriminating_measure	True	True	True	
+crosswalk	sci47_inhibitory#matrix:O07	1	O07, column discriminating_measure	True	True	True	
+crosswalk	sci47_inhibitory#matrix:O08	1	O08, column discriminating_measure	True	True	True	
+crosswalk	sci47_inhibitory#matrix:O09	1	O09, column discriminating_measure	True	True	True	
+crosswalk	sci47_inhibitory#matrix:O10	1	O10, column discriminating_measure	True	True	True	
+crosswalk	sci47_inhibitory#matrix:O11	1	O11, column discriminating_measure	True	True	True	
+crosswalk	sci47_inhibitory#matrix:O12	1	O12, column discriminating_measure	True	True	True	
+crosswalk	sci47_inhibitory#matrix:O14	1	O14, column discriminating_measure	True	True	True	
+crosswalk	sci47_inhibitory#matrix:O15	1	O15, column discriminating_measure	True	True	True	
+crosswalk	sci47_inhibitory#matrix:O16	1	O16, column discriminating_measure	True	True	True	
+crosswalk	sci47_inhibitory#matrix:O17	1	O17, column discriminating_measure	True	True	True	
+crosswalk	sci47_inhibitory#matrix:O18	1	O18, column discriminating_measure	True	True	True	
+crosswalk	it14_p3#reopen:NP3P1	1	NP3P1, columns item and decisive_datum	True	True	True	
+crosswalk	it14_p3#reopen:NP3P1	2	NP3P1, columns item and decisive_datum	True	True	True	
+crosswalk	it14_p3#reopen:NP3P2	1	NP3P2, columns item and trigger_to_reopen	True	True	True	
+crosswalk	it14_p3#reopen:NP3P2	2	NP3P2, columns item and trigger_to_reopen	True	True	True	
+crosswalk	it14_p3#reopen:NP3P3	1	NP3P3, column trigger_to_reopen	True	True	True	
+crosswalk	adv004#README:NP3P3-rescope	1	section 'NP3P3 and the decision', sentence 'A sharper trigger'	True	None	None	
+crosswalk	adv004#consumer_delta:row2	1	row 2, column Proposed change	True	None	None	
+crosswalk	map#open_questions_map:WO-14	1	WO-14, column question_text_max300	True	True	True	
+crosswalk	map#open_questions_map:WO-15	1	WO-15, column question_text_max300	True	True	True	
+crosswalk	map#open_questions_map:WO-16	1	WO-16, column question_text_max300	True	True	True	
+crosswalk	map#open_questions_map:WO-17	1	WO-17, column question_text_max300	True	True	True	
+crosswalk	map#open_questions_map:IT40-Q03	1	IT40-Q03, column question_text_max300	True	True	True	
+crosswalk	map#open_questions_map:IT42-Q01	1	IT42-Q01, column question_text_max300	True	True	True	
+crosswalk	map#open_questions_map:IT42-Q02	1	IT42-Q02, column question_text_max300	True	True	True	
+crosswalk	map#open_questions_map:IT42-Q03	1	IT42-Q03, column question_text_max300	True	True	True	
+crosswalk	map#open_questions_map:IT46-Q01	1	IT46-Q01, column question_text_max300	True	True	True	
+crosswalk	map#open_questions_map:IT46-Q04	1	IT46-Q04, column question_text_max300	True	True	True	
+crosswalk	map#open_questions_map:IT46-Q10	1	IT46-Q10, column question_text_max300	True	True	True	
+crosswalk	map#open_questions_map:IT47-Q04	1	IT47-Q04, column question_text_max300	True	True	True	
+crosswalk	map#open_questions_map:IT53-Q01	1	IT53-Q01, column question_text_max300	True	True	True	
+crosswalk	map#open_questions_map:WO-10	1	WO-10, column question_text_max300	True	True	True	
+crosswalk	map#open_questions_map:IT45-Q01	1	IT45-Q01, column question_text_max300	True	True	True	
+crosswalk	map#open_questions_map:IT43-Q04	1	IT43-Q04, column question_text_max300	True	True	True	
+crosswalk	glun2b_comparators_sci42#new_measurements:M01	1	M01, column measurement	True	True	True	
+crosswalk	glun2b_comparators_sci42#new_measurements:M07	1	M07, column measurement	True	True	True	
+crosswalk	nmda_composition_discrim#new_measurements:M-N1	1	M-N1, column measurement	True	True	True	
+crosswalk	ampa_comparison_it41#new_measurements:M-A3	1	M-A3, column measurement	True	True	True	
+crosswalk	pdh_pdk_sci44#engine/new_measurements:M-P3	1	M-P3, column measurement	True	True	True	
+crosswalk	glun2b_comparators_sci42#new_measurements:summary	1	whole file, first row M02	True	None	None	
+crosswalk	nmda_composition_discrim#new_measurements:summary	1	whole file, first row M-N2	True	None	None	
+crosswalk	ampa_comparison_it41#new_measurements:summary	1	whole file, first row M-A1	True	None	None	
+crosswalk	ro25_6981_sci44#new_measurements:summary	1	whole file, first row M-R1	True	None	None	
+crosswalk	hif1a_bnip3_it41#new_measurements:summary	1	whole file, first row M1	True	None	None	
+crosswalk	keap1_nrf2_sci46#new_measurements:summary	1	whole file, first row M-K1	True	None	None	
+crosswalk	nrf2_comparator_sci48#new_measurements:summary	1	whole file, first row M-N1	True	None	None	
+crosswalk	pdh_pdk_sci44#new_measurements:summary	1	whole file, first row M-P1	True	None	None	
+crosswalk	CC-EGABA-EXPERIMENT#RECORDING_MODE	1	section 2, heading RECORDING_MODE	True	None	None	
+crosswalk	CC-EGABA-EXPERIMENT#endpoint4	1	section 3b, 'Added endpoint 4'	True	None	None	
+crosswalk	CC-EGABA-EXPERIMENT#KCC2	1	section 2, KCC2/NKCC1_SECONDARY_READOUTS	True	None	None	
+crosswalk	CC-EGABA-EXPERIMENT#rescue	1	section 3b, RESCUE_CONTROL_LOGIC	True	None	None	
+crosswalk	CC-EGABA-ANALYSIS-PLAN#primary	1	section 1 PRIMARY_ENDPOINT	True	None	None	
+crosswalk	CC-EGABA-CLOSURE#Q5vsQ4	1	section 1, 'The discriminator the prior plan does not carry'	True	None	None	
+crosswalk	CC-CLAIM002#section6	1	section 6 'Smallest decisive experiment'	True	None	None	
+crosswalk	CC-ADVERSARIAL#E_GABA-human	1	item 4 of the open-experiment list (around line 738)	True	None	None	
+crosswalk	CC-ADVERSARIAL#AAV9	1	item 2 of the open-experiment list (around line 725)	True	None	None	
+conflict	CF01	A	M03:measurement	True	True	True	
+conflict	CF01	B	Minimum design, Phase 0	True	None	None	
+conflict	CF02	A	M03:design_choice_not_finding	True	True	True	
+conflict	CF02	B	Minimum design, Phase 0, item (i)	True	None	None	
+conflict	CF03	A	M03:measurement	True	True	True	
+conflict	CF03	B	Minimum design, Phase 0, item (vii)	True	None	None	
+conflict	CF04	A	Minimum design, Phase 0	True	None	None	
+conflict	CF04	B	section 3b, 'Added endpoint 4'	True	None	None	
+conflict	CF05a	A	section 3b, 'Added endpoint 4' note	True	None	None	
+conflict	CF05a	B	Minimum design, Phase 0	True	None	None	
+conflict	CF05b	A	IT46-Q10:question_text_max300	True	True	True	
+conflict	CF05b	B	Minimum design, Phase 0	True	None	None	
+conflict	CF06	A	section 2, MODEL	True	None	None	
+conflict	CF06	B	section 6	True	None	None	
+conflict	CF07	A	section 2, CELL_TYPE	True	None	None	
+conflict	CF07	B	M01:measurement	True	True	True	
+conflict	CF08	A	M01:required_from_start	True	True	True	
+conflict	CF08	B	section 1	True	None	None	
+conflict	CF09	A	M01:measurement	True	True	True	
+conflict	CF09	B	section 2, POSITIVE_CONTROL	True	None	None	
+conflict	CF10	A	M01:unit_of_replication	True	True	True	
+conflict	CF10	B	section 2, SAMPLE_STRUCTURE	True	None	None	
+conflict	CF11	A	Minimum design, Phase 0	True	None	None	
+conflict	CF11	B	(c) What can a one-cell measurement say about a slice burst?	True	None	None	
+conflict	CF12	A	M04:measurement	True	True	True	
+conflict	CF12	B	O06:discriminating_measure	True	True	True	
+conflict	CF12b	A	O06:discriminating_measure	True	True	True	
+conflict	CF12b	B	section 3, M1 row	True	None	None	
+conflict	CF13	A	Minimum design, Phase 0, item (v)	True	None	None	
+conflict	CF13	B	section 2, E_GABA_ENDPOINT	True	None	None	
+conflict	CF14	A	M01:measurement	True	True	True	
+conflict	CF14	B	section 2, E_GABA_ENDPOINT	True	None	None	
+conflict	CF15	A	row 6 (E-chloride, chloride-gradient manipulation), column manipulation	True	True	True	direct-row 6 (header excluded)
+conflict	CF15	B	L3:status	True	True	True	
+conflict	CF16	A	row 10 (E-maturation, synaptic-selective modulator), column predicted_sign_and_size_on_bursts	True	True	True	direct-row 10 (header excluded)
+conflict	CF16	B	(e) Controls that assess specificity	True	None	None	
+conflict	CF17	A	M04:separates	True	True	True	
+conflict	CF17	B	O04:pharmacological_decision_it_would_change	True	True	True	
+conflict	CF18	A	NP3P3:trigger_to_reopen	True	True	True	
+conflict	CF18	B	answer 5	True	None	None	
+conflict	CF19	A	NP3P1:item	True	True	True	
+conflict	CF19	B	M03:measurement	True	True	True	
+conflict	CF20	A	Minimum design, Phase 0	True	None	None	
+conflict	CF20	B	section 6	True	None	None	
+conflict	CF21	A	M01:required_from_start	True	True	True	
+conflict	CF21	B	O14:discriminating_measure	True	True	True	
+conflict	CF22	A	M05:required_from_start	True	True	True	
+conflict	CF22	B	Minimum design, Phase 0, item (iv)	True	None	None	

@@ -104,6 +104,7 @@ CC-EGABA-CLOSURE#Q5vsQ4	request_verbatim[1]	disease-models/wwox/research/commit_
 CC-CLAIM002#section6	request_verbatim[1]	disease-models/wwox/research/commit_candidates/CC-20260826-CLAIM002-01.md	yes
 CC-ADVERSARIAL#E_GABA-human	request_verbatim[1]	disease-models/wwox/research/commit_candidates/CC-20260825-ADVERSARIAL-FALSIFICATION-01.md	yes
 CC-ADVERSARIAL#AAV9	request_verbatim[1]	disease-models/wwox/research/commit_candidates/CC-20260825-ADVERSARIAL-FALSIFICATION-01.md	yes
+map#open_questions_map:IT45-Q05	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
 CF01	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv#M03:measurement	yes
 CF01	B	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md#Minimum design, Phase 0	yes
 CF02	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv#M03:design_choice_not_finding	yes
@@ -152,6 +153,8 @@ CF21	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_202
 CF21	B	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv#O14:discriminating_measure	yes
 CF22	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv#M05:required_from_start	yes
 CF22	B	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md#Minimum design, Phase 0, item (iv)	yes
+CF23	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv#M10:measurement	yes
+CF23	B	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/levers.tsv#L1:functional_comparator	yes
 *#q1	indispensable	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/README.md	yes
 *#q2	indispensable	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/README.md	yes
 M01#q3	order	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/README.md	yes
