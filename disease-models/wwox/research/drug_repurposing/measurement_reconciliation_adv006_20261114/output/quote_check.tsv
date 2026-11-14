@@ -1,0 +1,177 @@
+conflict_or_req_id	side	source	found
+sci42_chloride#new_measurements:M03	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	yes
+sci42_chloride#new_measurements:M01	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	yes
+sci42_chloride#new_measurements:M02	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	yes
+sci42_chloride#new_measurements:M04	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	yes
+sci42_chloride#new_measurements:M05	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	yes
+sci42_chloride#new_measurements:M06	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	yes
+sci42_chloride#new_measurements:M07	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	yes
+sci42_chloride#new_measurements:M08	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	yes
+sci42_chloride#new_measurements:M09	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	yes
+sci42_chloride#new_measurements:M10	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	yes
+sci42_chloride#explanations:E-supply	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv	yes
+sci42_chloride#explanations:E-response	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv	yes
+sci42_chloride#explanations:E-chloride	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv	yes
+sci42_chloride#explanations:E-chloride-secondary	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv	yes
+sci42_chloride#explanations:E-compensation	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv	yes
+sci42_chloride#explanations:E-maturation	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv	yes
+sci42_chloride#explanations:E-artefact	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv	yes
+sci42_chloride#conditional_prediction:r01	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv	yes
+sci42_chloride#conditional_prediction:r02	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv	yes
+sci42_chloride#conditional_prediction:r03	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv	yes
+sci42_chloride#conditional_prediction:r04	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv	yes
+sci42_chloride#conditional_prediction:r05	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv	yes
+sci42_chloride#conditional_prediction:r06	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv	yes
+sci42_chloride#conditional_prediction:r07	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv	yes
+sci42_chloride#conditional_prediction:r08	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv	yes
+sci42_chloride#conditional_prediction:r09	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv	yes
+sci42_chloride#conditional_prediction:r10	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv	yes
+sci42_chloride#conditional_prediction:r11	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv	yes
+sci42_chloride#conditional_prediction:r12	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv	yes
+sci42_chloride#conditional_prediction:r13	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv	yes
+sci47_inhibitory#design_review:Phase0-i	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md	yes
+sci47_inhibitory#design_review:Phase0-ii	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md	yes
+sci47_inhibitory#design_review:Phase0-iii	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md	yes
+sci47_inhibitory#design_review:Phase0-iv	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md	yes
+sci47_inhibitory#design_review:Phase0-v	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md	yes
+sci47_inhibitory#design_review:Phase0-vi	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md	yes
+sci47_inhibitory#design_review:Phase0-vii	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md	yes
+sci47_inhibitory#design_review:Phase1	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md	yes
+sci47_inhibitory#levers:L1	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/levers.tsv	yes
+sci47_inhibitory#levers:L2	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/levers.tsv	yes
+sci47_inhibitory#levers:L3	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/levers.tsv	yes
+sci47_inhibitory#levers:L4	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/levers.tsv	yes
+sci47_inhibitory#levers:L5	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/levers.tsv	yes
+sci47_inhibitory#matrix:O01	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+sci47_inhibitory#matrix:O02	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+sci47_inhibitory#matrix:O03	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+sci47_inhibitory#matrix:O04	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+sci47_inhibitory#matrix:O05	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+sci47_inhibitory#matrix:O06	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+sci47_inhibitory#matrix:O07	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+sci47_inhibitory#matrix:O08	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+sci47_inhibitory#matrix:O09	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+sci47_inhibitory#matrix:O10	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+sci47_inhibitory#matrix:O11	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+sci47_inhibitory#matrix:O12	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+sci47_inhibitory#matrix:O14	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+sci47_inhibitory#matrix:O15	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+sci47_inhibitory#matrix:O16	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+sci47_inhibitory#matrix:O17	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+sci47_inhibitory#matrix:O18	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+it14_p3#reopen:NP3P1	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv	yes
+it14_p3#reopen:NP3P1	request_verbatim[2]	disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv	yes
+it14_p3#reopen:NP3P2	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv	yes
+it14_p3#reopen:NP3P2	request_verbatim[2]	disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv	yes
+it14_p3#reopen:NP3P3	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv	yes
+adv004#README:NP3P3-rescope	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/README.md	yes
+adv004#consumer_delta:row2	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/consumer_delta.md	yes
+map#open_questions_map:WO-14	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
+map#open_questions_map:WO-15	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
+map#open_questions_map:WO-16	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
+map#open_questions_map:WO-17	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
+map#open_questions_map:IT40-Q03	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
+map#open_questions_map:IT42-Q01	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
+map#open_questions_map:IT42-Q02	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
+map#open_questions_map:IT42-Q03	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
+map#open_questions_map:IT46-Q01	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
+map#open_questions_map:IT46-Q04	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
+map#open_questions_map:IT46-Q10	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
+map#open_questions_map:IT47-Q04	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
+map#open_questions_map:IT53-Q01	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
+map#open_questions_map:WO-10	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
+map#open_questions_map:IT45-Q01	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
+map#open_questions_map:IT43-Q04	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
+glun2b_comparators_sci42#new_measurements:M01	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/new_measurements.tsv	yes
+glun2b_comparators_sci42#new_measurements:M07	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/new_measurements.tsv	yes
+nmda_composition_discrim#new_measurements:M-N1	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/nmda_composition_discrim_20261109/output/new_measurements.tsv	yes
+ampa_comparison_it41#new_measurements:M-A3	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/new_measurements.tsv	yes
+pdh_pdk_sci44#engine/new_measurements:M-P3	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/engine/new_measurements.tsv	yes
+glun2b_comparators_sci42#new_measurements:summary	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/new_measurements.tsv	yes
+nmda_composition_discrim#new_measurements:summary	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/nmda_composition_discrim_20261109/output/new_measurements.tsv	yes
+ampa_comparison_it41#new_measurements:summary	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/new_measurements.tsv	yes
+ro25_6981_sci44#new_measurements:summary	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/new_measurements.tsv	yes
+hif1a_bnip3_it41#new_measurements:summary	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/hif1a_bnip3_it41_20261109/output/new_measurements.tsv	yes
+keap1_nrf2_sci46#new_measurements:summary	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/engine/new_measurements.tsv	yes
+nrf2_comparator_sci48#new_measurements:summary	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/engine/new_measurements.tsv	yes
+pdh_pdk_sci44#new_measurements:summary	request_verbatim[1]	disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/engine/new_measurements.tsv	yes
+CC-EGABA-EXPERIMENT#RECORDING_MODE	request_verbatim[1]	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md	yes
+CC-EGABA-EXPERIMENT#endpoint4	request_verbatim[1]	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md	yes
+CC-EGABA-EXPERIMENT#KCC2	request_verbatim[1]	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md	yes
+CC-EGABA-EXPERIMENT#rescue	request_verbatim[1]	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md	yes
+CC-EGABA-ANALYSIS-PLAN#primary	request_verbatim[1]	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-ANALYSIS-PLAN-01.md	yes
+CC-EGABA-CLOSURE#Q5vsQ4	request_verbatim[1]	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-CLOSURE-01.md	yes
+CC-CLAIM002#section6	request_verbatim[1]	disease-models/wwox/research/commit_candidates/CC-20260826-CLAIM002-01.md	yes
+CC-ADVERSARIAL#E_GABA-human	request_verbatim[1]	disease-models/wwox/research/commit_candidates/CC-20260825-ADVERSARIAL-FALSIFICATION-01.md	yes
+CC-ADVERSARIAL#AAV9	request_verbatim[1]	disease-models/wwox/research/commit_candidates/CC-20260825-ADVERSARIAL-FALSIFICATION-01.md	yes
+CF01	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv#M03:measurement	yes
+CF01	B	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md#Minimum design, Phase 0	yes
+CF02	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv#M03:design_choice_not_finding	yes
+CF02	B	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md#Minimum design, Phase 0, item (i)	yes
+CF03	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv#M03:measurement	yes
+CF03	B	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md#Minimum design, Phase 0, item (vii)	yes
+CF04	A	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md#Minimum design, Phase 0	yes
+CF04	B	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md#section 3b, 'Added endpoint 4'	yes
+CF05a	A	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md#section 3b, 'Added endpoint 4' note	yes
+CF05a	B	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md#Minimum design, Phase 0	yes
+CF05b	A	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv#IT46-Q10:question_text_max300	yes
+CF05b	B	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md#Minimum design, Phase 0	yes
+CF06	A	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md#section 2, MODEL	yes
+CF06	B	disease-models/wwox/research/commit_candidates/CC-20260826-CLAIM002-01.md#section 6	yes
+CF07	A	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md#section 2, CELL_TYPE	yes
+CF07	B	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv#M01:measurement	yes
+CF08	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv#M01:required_from_start	yes
+CF08	B	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-ANALYSIS-PLAN-01.md#section 1	yes
+CF09	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv#M01:measurement	yes
+CF09	B	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md#section 2, POSITIVE_CONTROL	yes
+CF10	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv#M01:unit_of_replication	yes
+CF10	B	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md#section 2, SAMPLE_STRUCTURE	yes
+CF11	A	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md#Minimum design, Phase 0	yes
+CF11	B	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md#(c) What can a one-cell measurement say about a slice burst?	yes
+CF12	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv#M04:measurement	yes
+CF12	B	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv#O06:discriminating_measure	yes
+CF12b	A	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv#O06:discriminating_measure	yes
+CF12b	B	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-CLOSURE-01.md#section 3, M1 row	yes
+CF13	A	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md#Minimum design, Phase 0, item (v)	yes
+CF13	B	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md#section 2, E_GABA_ENDPOINT	yes
+CF14	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv#M01:measurement	yes
+CF14	B	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md#section 2, E_GABA_ENDPOINT	yes
+CF15	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv#row 6 (E-chloride, chloride-gradient manipulation), column manipulation	yes
+CF15	B	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/levers.tsv#L3:status	yes
+CF16	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv#row 10 (E-maturation, synaptic-selective modulator), column predicted_sign_and_size_on_bursts	yes
+CF16	B	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md#(e) Controls that assess specificity	yes
+CF17	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv#M04:separates	yes
+CF17	B	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv#O04:pharmacological_decision_it_would_change	yes
+CF18	A	disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv#NP3P3:trigger_to_reopen	yes
+CF18	B	disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/README.md#answer 5	yes
+CF19	A	disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv#NP3P1:item	yes
+CF19	B	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv#M03:measurement	yes
+CF20	A	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md#Minimum design, Phase 0	yes
+CF20	B	disease-models/wwox/research/commit_candidates/CC-20260826-CLAIM002-01.md#section 6	yes
+CF21	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv#M01:required_from_start	yes
+CF21	B	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv#O14:discriminating_measure	yes
+CF22	A	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv#M05:required_from_start	yes
+CF22	B	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/design_review.md#Minimum design, Phase 0, item (iv)	yes
+*#q1	indispensable	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/README.md	yes
+*#q2	indispensable	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/README.md	yes
+M01#q3	order	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/README.md	yes
+M02#q4	order	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	yes
+M03#q5	order	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/README.md	yes
+M03#q6	order	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	yes
+M05#q7	indispensable	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv	yes
+M05#q8	order	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	yes
+M07#q9	substitute	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	yes
+M08#q10	substitute	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv	yes
+M09#q11	substitute	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/decisive.tsv	yes
+M14#q12	indispensable	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md	yes
+M14#q13	order	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-ANALYSIS-PLAN-01.md	yes
+M15#q14	order	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	yes
+M16#q15	order	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/README.md	yes
+M17#q16	order	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/README.md	yes
+M20#q17	order	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv	yes
+M21#q18	substitute	disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv	yes
+M22#q19	indispensable	disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/new_measurements.tsv	yes
+M22#q20	indispensable	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	yes
+M23#q21	substitute	disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv	yes
+M26#q22	order	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md	yes
+M27#q23	order	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-ANALYSIS-PLAN-01.md	yes
