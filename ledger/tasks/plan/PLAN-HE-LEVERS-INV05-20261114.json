@@ -74,6 +74,30 @@
     }
    ],
    "status": "DONE"
+  },
+  "OBJ_5_LAND_AFTER_SCI": {
+   "order": 5,
+   "title": "ADV's anticipation rule: land the lever build prepared on task/hrk12 (SCI's owner reading) only after SCI's folder is on main and its blind verifier is closed; adapt the branch if the verifier changed an item; deliver SHA and entry point to IT and ADV (separate sends); IT reruns once; then no further iteration",
+   "steps": [
+    {
+     "step": "Prepare the build on a branch (not landed)",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "task/hrk12 6f979ede2: slots corrected per SCI, attachments by declared ids, CF01 unattached with reason, CF03 on L1 and (owner-stated) L2, L4 nomination follows status; 28 LeverJoin tests and the 14 generation suites pass."
+    },
+    {
+     "step": "Land the branch after SCI's folder is on main and its verifier is closed; re-check; deliver",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "blocker": "waiting for SCI's blind verifier and folder levers_owner_confirmation_presidio001_20261114 (record ORCH-PRESIDIO001-20261114)",
+     "unblock": "ORCH-PRESIDIO001-20261114 reaches MANDATE_STATE COMPLETE on main",
+     "unblock_when": {
+      "record": "ORCH-PRESIDIO001-20261114",
+      "state": "COMPLETE"
+     }
+    }
+   ],
+   "status": "IN_PROGRESS"
   }
  },
  "MANDATE_STATE": "OPEN"

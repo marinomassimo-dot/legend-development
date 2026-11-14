@@ -12,8 +12,8 @@
  "branch": "task/hrk3",
  "CURRENT_STATE": "IN_PROGRESS",
  "CHECKPOINT": {
-  "last_verified_result": "151454c6d published, gate PASS; operational check on a copy",
-  "first_incomplete_work": "OBJ_11 CI conclusion on 151454c6d"
+  "last_verified_result": "follow-through published (6ad9b8dae); lever build prepared on task/hrk12, not landed; CI of the integration SHAs pending",
+  "first_incomplete_work": "OBJ_11/OBJ_12 CI conclusion; OBJ_13 benefit reading after the cycle; OBJ_5 of the lever record (waits on SCI)"
  },
  "AUTHORISED_QUEUE_20261114B": {
   "MANDATE_STATE": "OPEN",
@@ -210,7 +210,7 @@
      "step": "CI concluded green on the last published SHA of this integration (ba0283130)",
      "status": "BLOCKED",
      "owner": "plan",
-     "blocker": "CI runs #738-#743 in progress (a6db5e9ef, ba0283130, c4efc7f29, 00feda1c8); waiting with ci_runs.py wait"
+     "blocker": "CI runs #738-#745 in progress for a6db5e9ef, ba0283130, c4efc7f29, 00feda1c8, 922f1a30a, 6ad9b8dae; waiting with ci_runs.py wait"
     }
    ],
    "status": "IN_PROGRESS"
@@ -223,7 +223,7 @@
      "step": "Principle in the shared home (cross_session_transport section 12), call-outs in ADV's definition and skill, tick/brief support (waits as events, optional assignment lines, no assignment cap in continuous mode)",
      "status": "DONE",
      "owner": "plan",
-     "evidence": "strategic_advisor.py: _waits (blockers of open records, one cheap read), a NEW wait is an event, standing waits are not re-evaluated, tick `waiting_on`, brief `waits` + follow-through paragraph, optional lines mode/start_condition/interferes_with/obsolete_if, continuous mode lifts the pilot's assignment cap, ADV's own records excluded from waits; section 12 subsection; agent definition and skill sections. 3 new tests (Continuous) + 1 (mandate_continuity queued/superseded)."
+     "evidence": "strategic_advisor.py: _waits (blockers of open records, one cheap read), a NEW wait is an event, standing waits are not re-evaluated, tick `waiting_on`, brief `waits` + follow-through paragraph, optional lines mode/start_condition/interferes_with/obsolete_if, continuous mode lifts the pilot's assignment cap, ADV's own records excluded from waits; section 12 subsection; agent definition and skill sections. 3 new tests (Continuous) + 1 (mandate_continuity queued/superseded). Published 6ad9b8dae."
     },
     {
      "step": "Verification: independent anticipation during a verification, queued dependent stays queued, superseded follow-up closes with its reason, frozen candidate protected, no duplication, wait kept when no useful work, delivery and take-in-charge",
@@ -235,7 +235,7 @@
      "step": "Benefit measured, not busyness: useful work concluded or prepared during the wait, time to usable result, extra consumption, interference, activity later useless",
      "status": "IN_PROGRESS",
      "owner": "plan",
-     "evidence": "Observed so far: iteration 2 mechanical items done during the wait for IT's rerun and SCI; interference none observed; useless: not known yet (depends on IT's decision to reread); time to usable result and consumption: to be read from transcripts after the cycle (session_model_census --since). Not claimed: that agents will behave this way because the text says so."
+     "evidence": "Observed so far: iteration 2 mechanical items done during the wait for IT's rerun and SCI; interference none observed; useless: not known yet (depends on IT's decision to reread); time to usable result and consumption: to be read from transcripts after the cycle (session_model_census --since). Not claimed: that agents will behave this way because the text says so. Published 6ad9b8dae (gate PASS, ls-remote). A live unblock_when is in use: PLAN-HE-LEVERS-INV05-20261114 OBJ_5 waits on ORCH-PRESIDIO001-20261114 COMPLETE (record state), not on anyone's remembering."
     }
    ],
    "status": "IN_PROGRESS"
