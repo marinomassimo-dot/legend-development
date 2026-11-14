@@ -73,6 +73,17 @@
      "evidence": "TAKEN IN CHARGE as ADV-003 2026-11-13 (sent to SCI by Harness; pilot invocation 2/3). Method unchanged. My part: dispose on delivery (apply / reject with reason / defer with revival); the README limit sentence in generation_it50_20261113 was contradictory (line 30 'remains blocked', line 33 'can be tried') and is corrected now with its date. Priority: the pilot report outranks ADV-003 if time is short (per the assessment). Dependency: SCI delivery; revival condition: a message or a package folder on main naming ADV-003. DISPOSITION 2026-11-13 (result 5884e3ef; package read in full: README answers 1-6, competing explanations, limits, consumer_delta rows 1-4; no verifier, a query-count-date result with raw tables): the three distinctions are kept apart in the text: (a) ABSENCE in the queried resource and scope (ChEMBL_37, 2026-11-13, EIF2B1-5, EIF2AK1-4, EIF2S1, PPP1R15A/B): 28 subunit rows, none an activator, 0 curated-mechanism rows: a true absence at that scope; (b) SERVICE UNAVAILABILITY: observed HTTP 500 that morning, 62 of 62 requests HTTP 200 later, lifted; (c) INFORMATION RECOVERABLE through another mode: an activator is found by molecule (the probe: 9 rows under other targets; the clinical activator: 0). Row 1 APPLIED (limit sentence and table cell of generation_it50 README corrected in place with scope, dated update line); row 2 APPLIED where the wording lives: the ISR1 and ISR2 probe cells of the INV-02 hypotheses package (generator rerun: 3 rows' text changed in the generator table only, earlier rows unchanged; stage tests OK) and a dated line in the IT50 result note; the INV-02 row of investigations carries no 'zero rows' phrase, so nothing to change there; row 3 APPLIED (IT52-Q01, by-molecule query, low priority, literature_executable); row 4 APPLIED to my own files (README, result note; the pre-registration's input line is a historical record of the state at the time) and left to other owners elsewhere. The shipped activity_search.py was not run (cached target file absent): a cache dependency, recorded, not worked around."
     }
    ]
+  },
+  "OBJ_P7": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "ADV-005 (Harness: the activity tool and its cache): dispose on delivery",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "DISPOSITION 2026-11-14 (result 7667730b, ADV-005_result.md read in full): the shipped activity_search.py needs the gitignored per-checkout catalog cache, so it runs in the primary checkout or in a worktree with LEGEND_CATALOG_CACHE set; my ADV-003 remark 'cache dependency, recorded' is a worktree artefact, qualified here. Harness fix (exit-2 message, one test, one routing row) accepted. APPLIED: a note on IT52-Q01 (route; tool takes target symbols not a molecule; target_activity.py by-molecule coverage untested). Scout-feed defects not done by Harness (assignment allowed one of two) and remain for the presidio. No ranking, need, candidate or qualification changed."
+    }
+   ]
   }
  }
 }
