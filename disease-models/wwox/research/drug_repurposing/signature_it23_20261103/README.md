@@ -83,3 +83,7 @@ Reproduce: `python3 -I reproduce_dseqr_cmap_comparison.py run <repo_root> <geo_f
 ## Corrections after the independent verification (IT23 P6)
 
 13 files hard-code `/home/alex`, of which about 6 build the drug matrices (five are version converters and one is a single-cell reference script). The top-20 lists hold 16-18 MCLF-library signatures, of which 14-17 at 4 uM and 6 h. The bucket returns 404 NoSuchBucket on 5 of 5 URLs re-checked. All 36 scenario Jaccards recompute exactly.
+
+## Update 2026-11-14 (IT, from ADV-007; no cell edited, nothing regenerated)
+
+`composition_class.tsv` has 15 of 834 rows with blank `log2fc` and no `rho_vs_log10_day`: IRAG1, CCN2, DRC4, MNMIP1, POFUT4, MTCL2, ATOSB, HDIP1, BBLN, ADPRS, CIRSR, H1-2, H1-10, H4C15, ZNRD2. Cause (ADV-007, `ctgf_held_data_adv007_20261114/output/symbol_trace.tsv`): the query sets carry current symbols while the authors' list keys the log2FC lookup by the old ones (CCN2 is CTGF there), so these rows carry default zero flags, not measured ones. Read a blank as "not looked up", not as "no change". Regenerating would change query QD/QF membership by up to 15 of 834 genes; that decision belongs to the package owner and is not taken here.
