@@ -222,6 +222,24 @@
      "owner": "orchestrator"
     }
    ]
+  },
+  "OBJ_11_ADV007": {
+   "order": 11,
+   "title": "ADV-007 (Advisor draft from evaluation 8): CTGF/CCN2 in the held WWOX-KO expression data, for SCI",
+   "steps": [
+    {
+     "step": "Read the assessment and the draft in the originals and verify the decisive facts before forwarding",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-14T19:1xZ. Verified in the originals: gse156243/derived/list_padj_le_0.05.tsv line 360 CTGF KO up, log2FC 1.32, p 0.00031, padj 0.00707 (protein_coding); SCI50 README DREAM section names the check; INV-06 row 7 carries 'the Wwox-CTGF link is unsupported'. Premises of the draft corrected before sending: (1) signature_it23_20261103/composition_class.tsv line 198 CCN2 row has blank log2fc and blank rho with the flag columns 0: probably NOT ASSESSED, not 'tested and clean' (the Advisor itself flagged the ambiguity); (2) relations_it23_p2_20261103/novelty.tsv has 0 CTGF hits by grep (the draft's '15 CTGF rows' is not in that file); (3) the SCI51 consumer delta is not pending: IT50 consumed it (ddee87d4b, verified 3a93267ba), the State column of the producer's delta file simply was never updated, so there is no priority-1 precedence conflict. The CTGF line of the incomplete P7 was not reconstructed; the assignment rests on repository files only (the Advisor declares its own exposure)."
+    },
+    {
+     "step": "Deliver to SCI (the effective recipient) with the queue wording; record SENT with --to; verify take-in-charge in SCI's record; follow to delivery and consumption (IT: INV-06 row 7 wording only if the verdict licenses it)",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Pending at the time of writing."
+    }
+   ]
   }
  },
  "DECISIONS_TAKEN": [
@@ -325,6 +343,18 @@
    {
     "utc": "2026-11-14T18:23Z",
     "event": "pilot expiry passed; continuous mode kept the presidio, recall unchanged; CI #751 green (HE record complete f67a9a270); no interruption, restart or additional human intervention since the activation"
+   },
+   {
+    "utc": "2026-11-14T19:00Z",
+    "event": "HE intervention (value-driven continuity, PLAN-HE-VALUE-CONTINUITY-20261114): tooling and text only, no new service, gate or registry: brief sections Portfolio selection / Previous outcome / queue; each evaluation ends with an Outcome block (continue|switch|assign|queue|wait, excluded, reason, resume_when); tick resumes a stated wait when resume_when is met"
+   },
+   {
+    "utc": "2026-11-14T19:0xZ",
+    "event": "local main diverged from origin (HE pushed 7b3cb29b5 after my landing); merged origin/main into main in the root (8b97f7d95), no conflict; tick then showed queue {executable: HE's continuity record; blocked_only: INTAKE, METABOLIC; exhausted: false}"
+   },
+   {
+    "utc": "2026-11-14T19:04Z",
+    "event": "evaluation 8 (P8) run on the portfolio question after the closure of PRESIDIO-003: stage P, opus high, 15 turns (14 on claude-opus-5-5, 1 on claude-opus-5, runtime fallback), output 14,762, cache read 759,370, cache creation 74,058; complete (no classifier stop); outcome assign; draft ADV-007 (drafts now 7 of 9); invocation count 8, above the pilot ceiling of 7, which is history in continuous mode (flagged by the Advisor, not hidden)"
    }
   ]
  }
