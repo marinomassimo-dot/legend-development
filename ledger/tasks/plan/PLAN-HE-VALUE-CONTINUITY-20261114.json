@@ -12,8 +12,8 @@
   "branch": "task/hrk20",
   "CURRENT_STATE": "IN_PROGRESS",
   "CHECKPOINT": {
-    "last_verified_result": "diagnosis done",
-    "first_incomplete_work": "OBJ_2"
+    "last_verified_result": "code and tests green locally; replay on a copy of the real state",
+    "first_incomplete_work": "OBJ_4 gate+CI, OBJ_5 communication"
   },
   "AUTHORISED_QUEUE_20261114D": {
     "OBJ_1_DIAGNOSIS": {
@@ -34,13 +34,15 @@
       "steps": [
         {
           "step": "cross_session_transport section 12 subsection + one decision-table row for the exhausted queue",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "cross_session_transport.md section 12: subsection 'Continuity is a choice of what comes next, not a wait for an event (HE57)' (two decisions kept apart, aids not a checklist, reasoned ranking without score, five outcomes, wait = excluded alternatives + reason + resume condition, no repeated evaluation, what still binds, where implemented) and one decision-table row for the exhausted queue."
         },
         {
           "step": "Links: CLAUDE.md router row, the Advisor agent definition and skill, the brief of the evaluation (no role file is edited: orchestrator.md already points at section 12 and fingerprints stay)",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "CLAUDE.md router row extended (what comes next when the queue is empty); Advisor agent definition (short section, word cap respected: 1357 of 1400) and skill (full mechanics, limit, removal); brief carries '## Portfolio selection' and '## Previous outcome'. roles/*.md not edited: orchestrator.md already points at section 12 (single home) and the fingerprints stay; the Scientist is reached by the router row."
         }
       ]
     },
@@ -50,13 +52,15 @@
       "steps": [
         {
           "step": "Evaluation states its outcome (continue | switch | assign | queue | wait) with excluded alternatives, reason and resume_when; the tick records and reads it",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "strategic_advisor.py: parse_outcome (stated only when complete; a wait needs excluded+reason), resume_problem/resume_met (record:/path: through mc.unblock_met, after: UTC), evaluate stores last_outcome + unstated_streak; an already-met or unreadable resume_when is stored as event with the problem named so it cannot loop."
         },
         {
           "step": "Tick: queue exhausted visible; a met resume condition or a missing outcome after an evaluation triggers one evaluation; a stated wait is not re-evaluated; own updates and sender records are not events",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "tick (continuous mode only): queue_state (non-sender records; CONTINUE = executable, ALL_BLOCKED = blocked_only) in observe and the tick output; a met resume condition -> EVALUATE; no stated outcome + queue exhausted + min_hours_between -> ONE evaluation, not asked again until an outcome is stated; stated wait/choice left alone and shown in presidio (WAITING (motivated) with excluded, reason, resume). Own updates: _own_updates pathspec excludes P<n>/, assignments, invocation log and the sender records from the delivery events; sender-record transitions/openings are not events (demonstrated: 2 of the last 23 commits of the campaign folder matched EVENT_SUBJECT)."
         }
       ]
     },
@@ -66,13 +70,15 @@
       "steps": [
         {
           "step": "Tests: exhausted queue with an opportunity evaluated without a radar; same situation not re-evaluated; only blocked or disproportionate -> motivated wait; a new pertinent result reconsiders the earlier choice",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "test_strategic_advisor.py class ValueContinuity (7 new tests, 102 in the suite incl. inherited): (1) exhausted queue, no radar and no event -> one evaluation, brief carries Portfolio selection and queue; (2) asked once, same situation not evaluated again, presidio says IDLE without a stated outcome; (3) stated wait with blocked-only mandates -> NONE, excluded/reason/resume on the presidio line; (4) met record, passed time, new delivery -> reconsidered; plus no-loop on an already-met/unreadable resume, wait without alternatives is unstated, pilot mode gains nothing, own updates are not news but a recipient's result is. Replay on a COPY of the real advisor state with the worktree records: verdict EVALUATE for the real deliveries (f67a9a270, opened PLAN-HE-VALUE-CONTINUITY), queue read from the real records: executable = this mandate, blocked_only = INTAKE-OVERNIGHT-20261002 and ORCH-METABOLIC-BATCH-20261019, the real state untouched. Not demonstrated: that a model writes the Outcome block or ranks the portfolio well."
         },
         {
           "step": "Four quick suites, release gate, CI per SHA",
           "status": "TODO",
-          "owner": "plan"
+          "owner": "plan",
+          "evidence": "test_tool_routing, test_section_references, test_mandate_continuity, test_strategic_advisor green locally; release gate and CI per SHA pending"
         }
       ]
     },
