@@ -158,12 +158,15 @@ class ReconciledMeasurements(unittest.TestCase):
             if r["inv_id"] == "INV-05":
                 ptr = r["design_rows_same_investigation"]
                 self.assertIn("53 design rows", ptr); self.assertIn("not linked to this hypothesis by any package", ptr)
-                self.assertIn("M16", ptr); self.assertIn("CF23", ptr)
+                self.assertIn(f"{self.PKG}::measurements.tsv::M16", ptr); self.assertIn(f"{self.PKG}::conflicts.tsv::CF23", ptr)
+                self.assertNotIn("[M01", ptr)                                                         # no bare key that could be read as another package's M01 or M16
+                ids = {i for i in ptr.split("design_row_id")[0].replace("; ", " ").split() if "::" in i}
+                self.assertTrue(set(i.strip(";") for i in ids) <= set(self.mine))                       # every id named exists as a row of the file
                 self.assertNotIn(r["proposal_id"], ptr)
             else:
                 self.assertIn("none listed", r["design_rows_same_investigation"])                           # INV-18 has no registered design: said, not left empty
         isr = next(r for r in cp.package_rows()[0] if r["inv_id"] == "INV-02")["design_rows_same_investigation"]
-        self.assertIn("not mapped, so not in that file: isrib_discrim_20261108 grid.tsv", isr)               # a reachable table the file does not hold is not advertised as in it
+        self.assertIn("not mapped, so not in that file: isrib_discrim_20261108::grid.tsv::G01", isr)               # a reachable table the file does not hold is not advertised as in it
         self.assertEqual(cp.rows(link=False)[0]["design_rows_same_investigation"], "")                      # the ablation still rebuilds what the generator held before
 
     def test_without_the_package_the_pointer_says_none(self):
