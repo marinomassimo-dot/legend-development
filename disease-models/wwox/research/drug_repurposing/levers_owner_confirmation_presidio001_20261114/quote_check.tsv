@@ -1,0 +1,136 @@
+item	fragment_index	found	start_of_fragment
+1.02	0	yes	is read as the unresolved premise, a dropped lever stays dro
+1.03	0	yes	kept, conditional on O01/O04/O06 mapping to E2 (and E_GABA n
+1.04	0	yes	kept, conditional on E3 (smaller mIPSC and smaller agonist r
+1.05	0	yes	dropped as a drug arm now; E_GABA kept as the measurement th
+1.06	0	yes	kept, as the comparator and as a lever with the only direct 
+1.07	0	yes	kept, conditional; shares the recorded cells with the E_GABA
+1.08	0	yes	dropped
+1.09	0	yes	"competing=[""risk_of_acting_on_a_compensation"", ""counter_evid"
+1.10	0	yes	"measure=[""result_that_would_reject_it"", ""functional_comparat"
+1.11	0	yes	a submaximal NMDAR block (d-APV) or a hyperpolarising manipu
+1.11	1	yes	"Endpoint: ""same measured cellular effect"" is a membrane-pote"
+1.11	2	yes	Fix: calibrate each arm on its own cellular readout and then
+1.12	0	yes	Nothing beyond general anticonvulsant action unless E2 is sh
+1.12	1	yes	no prediction of developmental benefit
+1.13	0	yes	Only if a receptor or amplitude deficit is confirmed in phys
+1.13	1	yes	no prediction of developmental benefit
+1.14	0	yes	KO E_GABA equal to control
+1.14	1	yes	no prediction of developmental benefit
+1.15	0	yes	d-APV abolishes bursts and the delayed field response (NMDAR
+1.15	1	yes	no prediction of developmental benefit
+1.16	0	yes	blocker-sensitive difference currents equal in KO and contro
+1.16	1	yes	no prediction of developmental benefit
+1.17	0	yes	dropped
+1.17	1	yes	no prediction of developmental benefit
+1.18	0	yes	| mIPSC amplitude down, agonist response normal | E2 (supply
+1.18	1	yes	| mIPSC amplitude down, agonist response down | E3 (receptor
+1.18	2	yes	A GABA-supply arm (L1) or a postsynaptic-modulation arm (L2)
+1.19	0	yes	| mIPSC amplitude down, agonist response down | E3 (receptor
+1.19	1	yes	| mIPSC amplitude down, agonist response normal | E2 (supply
+1.19	2	yes	as L1
+1.20	0	yes	dropped as a drug arm now; E_GABA kept as the measurement th
+1.20	1	yes	stays a **measurement** (E_GABA) that gates L1 and L2
+1.21	0	yes	kept, as the comparator and as a lever with the only direct 
+1.21	1	yes	matched hyperpolarisation (L5) and GABA arms (L1/L2) at equa
+1.21	2	yes	NMDAR dependence (L4, d-APV abolished bursts in 5 slices fro
+1.22	0	yes	kept, conditional; shares the recorded cells with the E_GABA
+1.22	1	yes	the lever outside GABA
+1.22	2	yes	| deficit only in bursting slices or only with age | E5 | le
+1.23	0	yes	dropped
+1.23	1	yes	* **L6 gap junction/pannexin.**
+1.24	0	yes	no reduction of bursts at a concentration that measurably ra
+1.25	0	yes	agonist response and mIPSC both normal (no receptor deficit)
+1.26	0	yes	dropped as a drug arm now; E_GABA kept as the measurement th
+1.27	0	yes	block removes bursts equally in non-Wwox hyperexcitable slic
+1.28	0	yes	blocker-sensitive difference currents equal in KO and contro
+1.29	0	yes	the repository withdrew the gap-junction half of the burst c
+1.30	0	yes	kept, conditional on O01/O04/O06 mapping to E2 (and E_GABA n
+1.31	0	yes	kept, conditional on E3 (smaller mIPSC and smaller agonist r
+1.32	0	yes	dropped as a drug arm now; E_GABA kept as the measurement th
+1.33	0	yes	kept, as the comparator and as a lever with the only direct 
+1.34	0	yes	kept, conditional; shares the recorded cells with the E_GABA
+1.35	0	yes	dropped
+1.36	0	yes	"support=[""depth_of_support"", ""adds_over_general_anticonvulsa"
+1.36	1	yes	Nothing beyond general anticonvulsant action unless E2 is sh
+1.36	2	yes	Only if a receptor or amplitude deficit is confirmed in phys
+1.37	0	yes	no gene symbols are joined (the package names GAT-1, a trans
+1.37	1	yes	Chloride transport (KCC2 enhancement, NKCC1 block)
+1.37	2	yes	class only: Kv7 opener (design R5a/R5b of IT46, reused); no 
+1.38	0	yes	No dose, schedule, route, ranking or recommendation; no pred
+1.39	0	yes	not linked to this hypothesis by any package
+2.01	0	yes	kept, conditional on O01/O04/O06 mapping to E2 (and E_GABA n
+2.02	0	yes	Smaller mIPSC with normal agonist response -> E2 (supply); s
+2.02	1	yes	Decides whether a supply lever (reuptake, transaminase) or a
+2.03	0	yes	see O01-O02
+2.03	1	yes	Required before any presynaptic (supply) versus postsynaptic
+2.04	0	yes	fraction blocked by a GABA-A antagonist differs by genotype 
+2.04	1	yes	Decides whether the defect reads GABA-A at all; without it n
+2.04	2	yes	bath gabazine or bicuculline on sIPSC; NBQX/APV on the same 
+2.05	0	yes	| mIPSC amplitude down, agonist response normal | E2 (supply
+2.06	0	yes	| deficit only in bursting slices or only with age | E5 | le
+2.06	1	yes	if the sIPSC fall is a consequence of the bursting network (
+2.07	0	yes	IPSC deficit also in non-bursting KO slices and in HT/KO bef
+2.07	1	yes	If E5, GABA or receptor levers treat a consequence; a lever 
+2.08	0	yes	Smaller mIPSC with normal agonist response -> E2 (supply); s
+2.09	0	yes	E_GABA more positive in KO than control -> E4/E5 (immature o
+2.09	1	yes	sets whether GABA potentiation (supply or receptor) is condi
+2.10	0	yes	| mIPSC amplitude down, agonist response down | E3 (receptor
+2.10	1	yes	kept, conditional on E3 (smaller mIPSC and smaller agonist r
+2.11	0	yes	| mIPSC frequency down, amplitude normal | E1 (fewer or less
+2.11	1	yes	| E_GABA at or above threshold in KO, not in control | E4 | 
+2.11	2	yes	if the amplitude fall is loss of inhibitory input (E1) a mod
+2.12	0	yes	Frequency unchanged at fixed threshold -> E1 weakened, E2/E3
+2.12	1	yes	low PPR/high failures -> E2 (release probability); normal PP
+2.12	2	yes	separates a release-probability lever from a receptor lever
+2.13	0	yes	dropped as a drug arm now; E_GABA kept as the measurement th
+2.13	1	yes	E_GABA near rest or above threshold in KO but not in control
+2.13	2	yes	Decides chloride-transport levers and the sign of any GABA-s
+2.14	0	yes	matched hyperpolarisation (L5) and GABA arms (L1/L2) at equa
+2.14	1	yes	It does not discriminate inhibitory explanations (O12) and i
+2.14	2	yes	NMDAR block is the one pharmacological arm already shown to 
+2.15	0	yes	No dose, schedule, route, ranking or recommendation; no pred
+2.16	0	yes	speaks to whether potentiating residual inhibition has somet
+2.16	1	yes	sets the strength with which any lever is anchored to this d
+2.17	0	yes	Not carried: 'alpha2-preferring' as established, or a 'subty
+3.01	0	yes	"M02, M04, M05 (""A GABA-supply arm (L1) or a postsynaptic-mod"
+3.01	1	yes	"M02, M04, M05 (""L2 stays gated by the Phase-0 measurements a"
+3.01	2	yes	dropped as a drug arm now; E_GABA kept as the measurement th
+3.01	3	yes	agonist response and mIPSC both normal (no receptor deficit)
+3.02	0	yes	A GABA-supply arm (L1) or a postsynaptic-modulation arm (L2)
+3.02	1	yes	kept, conditional on E3 (smaller mIPSC and smaller agonist r
+3.03	0	yes	Phase 1 only for the lever Phase 0 selects.
+3.03	1	yes	The question (which of input, postsynaptic response, chlorid
+3.04	0	yes	second-hop rows named by the gating rows, listed and NOT fol
+3.04	1	yes	sci47_inhibitory#matrix:O06
+3.04	2	yes	kept, conditional on O01/O04/O06 mapping to E2 (and E_GABA n
+3.05	0	yes	"M01 (SCI42: ""no (required if M03 confirms the amplitude loss"
+3.05	1	yes	(iv) response to a puffed or bath GABA-A agonist in TTX;
+3.05	2	yes	"AFTER does not state (b); it files M01 under ""may be cost or"
+3.06	0	yes	an experimenter-set low-chloride pipette (not native chlorid
+3.06	1	yes	a perforated-patch cohort for native-chloride sIPSC, mIPSC a
+3.06	2	yes	(i) sIPSC with a physiological-chloride pipette and with the
+3.06	3	yes	Amplify existing GABA signalling at receptors; needs GABA re
+3.07	0	yes	Re-record sIPSC with glutamate-receptor block, a fixed absol
+3.07	1	yes	(vii) KO slices that do and do not burst.
+3.07	2	yes	bath gabazine or bicuculline on sIPSC; NBQX/APV on the same 
+3.07	3	yes	sIPSC in KO slices that do not burst (6/42 in this dataset) 
+3.07	4	yes	if the sIPSC fall is a consequence of the bursting network (
+3.08	0	yes	(whole-cell, high-Cl⁻ internal, gabazine- reversible)
+3.08	1	yes	One cell yields both measurements only in this order
+3.08	2	yes	and what do evoked IPSCs and the GABA reversal potential sho
+3.08	3	yes	Amplify existing GABA signalling at receptors; needs GABA re
+3.09	0	yes	no (required if M03 confirms the amplitude loss)
+3.09	1	yes	(iv) response to a puffed or bath GABA-A agonist in TTX;
+3.10	0	yes	Matched non-GABAergic suppression of bursts titrated to the 
+3.10	1	yes	a submaximal NMDAR block (d-APV) or a hyperpolarising manipu
+3.10	2	yes	its matched measure would be a tonic current or sIPSC decay,
+4.01	0	yes	a perforated-patch cohort for native-chloride sIPSC, mIPSC a
+4.01	1	yes	(i) sIPSC with a physiological-chloride pipette and with the
+4.02	0	yes	yes: SCI42's own design_choice_not_finding cell calls the me
+4.02	1	yes	its matched measure would be a tonic current or sIPSC decay,
+4.03	0	yes	kept, conditional on O01/O04/O06 mapping to E2 (and E_GABA n
+4.03	1	yes	only after mIPSC, agonist response and E_GABA place the defi
+4.04	0	yes	"M04 (SCI42: ""partly redundant with M05 for the response arm:"
+4.04	1	yes	two of the producer's order entries (mIPSC kept only if the 
+cells		78 of 78	non-key cells of levers.tsv found verbatim in the generator rows
