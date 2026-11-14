@@ -59,6 +59,11 @@ item	fragment_index	found	start_of_fragment
 1.37	2	yes	class only: Kv7 opener (design R5a/R5b of IT46, reused); no 
 1.38	0	yes	No dose, schedule, route, ranking or recommendation; no pred
 1.39	0	yes	not linked to this hypothesis by any package
+1.40	0	yes	SCI47 does not give a reason
+1.40	1	yes	its matched measure would be a tonic current or sIPSC decay,
+1.41	0	yes	second-hop rows named by the gating rows, listed and NOT fol
+1.42	0	yes	not joined (not stated is not tested and absent)
+1.43	0	yes	"mapping_unconfirmed=True, dropped=(""status"", ""dropped"")"
 2.01	0	yes	kept, conditional on O01/O04/O06 mapping to E2 (and E_GABA n
 2.02	0	yes	Smaller mIPSC with normal agonist response -> E2 (supply); s
 2.02	1	yes	Decides whether a supply lever (reuptake, transaminase) or a
