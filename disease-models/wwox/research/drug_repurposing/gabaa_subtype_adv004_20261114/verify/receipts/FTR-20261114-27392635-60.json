@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-14T00:02:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "tables": "read",
+  "figures": "captions_only",
+  "discussion": "read",
+  "limitations": "read",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-14T00:03:00Z",
+ "event_id": "FTR-20261114-27392635-60",
+ "evidence_basis": [
+  "verbatim_locator | proposition: Table 1 prints alpha5 as beta3 while Methods list beta2 for alpha1 and alpha5 and beta3 for alpha2 and alpha3 | Methods, Electrophysiology | \"EC10 values of GABA were 1 μM, 5 μM, 8 μM, and 1 μM for the four GABAAR combinations\"",
+  "verbatim_locator | proposition: the Hammer ratios 1.33 and 1.02 are quoted by Ralvenius, not printed by Hammer | Discussion para 2 | \"improved α2/α1 selectivity ratio for NDMC of 1.33 ± 0.06 (versus 1.02 ± 0.05 for CBZ)\"",
+  "verbatim_locator | proposition: text and Table 1 differ for diazepam alpha3 | Results 3.1 | \"Potentiation by DZP was strongest for α3GABAARs (237%)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/verify/recompute.tsv",
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261113-27392635-62",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4981430 full text via Europe PMC fullTextXML fetched 2026-11-13 (one request; XML table cell-and-span structure inspected directly); text, Methods, Tables 1-2, figure legends read; Fig 1 and Figs S1-S2 not opened (the PMC page was not requested, per brief); bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.neuropharm.2016.07.004",
+  "pmid": "27392635"
+ },
+ "workflow": "ADV-004 blind verifier V16 (gv-y): adversarial re-extraction of the numbers and conditions; staged for the integrator; the ledger was not written by the preparing actor."
+}
