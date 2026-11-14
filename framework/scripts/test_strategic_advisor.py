@@ -389,7 +389,7 @@ class Proactive(Base):
     def test_the_evidence_levels_of_an_assignment_stay_apart(self) -> None:
         os.environ["FAKE_MODE"] = "assign"; sa.evaluate(self.campaign)
         self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "DRAFTED")           # saved is not sent
-        sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "SENT", "--evidence", "msg 123"])
+        sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "SENT", "--evidence", "msg 123", "--to", "SCI"])
         self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "SENT")              # sent is not taken in charge
         rec = self.repo / "ledger/tasks/orchestrator/ORCH-A.json"
         rec.write_text(json.dumps(_record("ORCH-A", "OPEN", {"Q": {"s": {"step": "ADV-001 taken", "status": "TODO"}}})), encoding="utf-8")
@@ -397,9 +397,23 @@ class Proactive(Base):
         rec.write_text(json.dumps(_record("ORCH-A", "OPEN", {"Q": {"s": {"step": "ADV-001 taken", "status": "DONE"}}})), encoding="utf-8")
         self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "EXECUTED")          # executed is not useful: nothing here says so
 
+    def test_a_receipt_for_another_session_is_not_a_delivery_and_a_missing_receipt_is_refused(self) -> None:
+        os.environ["FAKE_MODE"] = "assign"; sa.evaluate(self.campaign)
+        row = [e for e in sa._events(self.campaign) if e["id"] == "ADV-001"][0]
+        self.assertEqual(row["recipient"], "Science")                                                       # the budget maps Science to the session SCI
+        base = ["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "SENT", "--evidence", "msg 1"]
+        self.assertEqual(sa.main(base + ["--to", "HE"]), 2)                                                 # the receipt names HE: not a delivery to SCI
+        self.assertEqual(sa.main(base), 2)                                                                  # no receipt at all: the text of a message is not one
+        self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "DRAFTED")
+        self.assertEqual(sa.main(base + ["--to", "HE", "--to", "sci"]), 0)                                  # two real sends, one of them to the session in question
+        self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "SENT")
+        self.assertIn('"to": ["HE", "sci"]', (self.campaign / "assignments.jsonl").read_text(encoding="utf-8"))
+        self.assertEqual(sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "UNREACHABLE", "--evidence", "no live session"]), 0)   # no receipt exists for that
+        self.assertEqual(sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-099", "--state", "SENT", "--evidence", "x", "--to", "SCI"]), 2)   # not a drafted assignment
+
     def test_the_senders_own_records_never_count_as_a_recipient_taking_or_executing_an_assignment(self) -> None:
         os.environ["FAKE_MODE"] = "assign"; sa.evaluate(self.campaign)
-        sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "SENT", "--evidence", "msg 123"])
+        sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "SENT", "--evidence", "msg 123", "--to", "SCI"])
         for name in ("ORCH-ADV-PRESIDIO-X", "PLAN-PROACTIVE-ADVISOR-X"):
             (self.repo / f"ledger/tasks/orchestrator/{name}.json").write_text(
                 json.dumps(_record(name, "OPEN", {"Q": {"s": {"step": "ADV-001 delivered by message", "status": "DONE"}}})), encoding="utf-8")   # the delivery step of the sender: DONE, naming the id

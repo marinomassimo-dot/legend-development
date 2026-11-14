@@ -5,6 +5,7 @@ stopped while work remains, ask the bound session to continue.
     python3 framework/scripts/mandate_watch.py check --task ORCH-ROADMAP-IT4-20261028
     python3 framework/scripts/mandate_watch.py check --task <ID> --deliver none --json
     python3 framework/scripts/mandate_watch.py events [--last N]
+    python3 framework/scripts/mandate_watch.py route --to ADV [--to HE --first-line "IT to ADV and HE: ..."]
 
 One control, two triggers, no new coordinator:
 
@@ -126,6 +127,86 @@ def list_sessions() -> list[dict] | None:
         return data if isinstance(data, list) else None
     except (OSError, ValueError, subprocess.SubprocessError):
         return None
+
+
+# ---------------------------------------------------------------- routing: who a message really goes to
+UUID_RE = re.compile(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}", re.I)
+TO_LINE = re.compile(r"^\s*[\w .-]+?\s+to\s+(?P<who>[^:\n(]+?)\s*(?:\((?P<cc>[^)]*)\))?\s*[:\u2014\n]", re.I)
+
+
+def _tokens(text: str) -> set[str]:
+    return {t for t in re.findall(r"[a-z0-9]+", (text or "").lower()) if t}
+
+
+def declared_recipients(first_line: str) -> list[str]:
+    """The recipients a message's own first line names ("IT to ADV and HE: ...", "(cc SCI)"). A name in a text is a claim about the recipients, not an address."""
+    m = TO_LINE.match((first_line or "").strip() + "\n")
+    if not m:
+        return []
+    names = re.split(r"\s*(?:,|&|\+|/|\band\b)\s*", m.group("who"))
+    cc = re.sub(r"^\s*cc\s*", "", m.group("cc") or "", flags=re.I)
+    names += [n for n in re.split(r"\s*(?:,|&|\+|/|\band\b)\s*", cc) if n]
+    return [n.strip() for n in names if n.strip()]
+
+
+def route(target: str, sessions: list[dict] | None, root: Path = ROOT) -> dict:
+    """Resolve a name, a role alias ("ADV", "IT") or a session id to ONE live session, from the runtime's own listing and from the SESSION_NAME / SESSION_BINDING of the task records.
+    Never falls back to the last conversation's address: an unresolved or ambiguous target is reported as such, with the candidates."""
+    out = {"target": target, "status": "UNRESOLVED", "recipient": None, "session_id": None, "via": None, "candidates": []}
+    if sessions is None:
+        out["why"] = "the session listing could not be read"
+        return out
+    live = {str(x.get("sessionId")): x for x in sessions if x.get("sessionId")}
+    want = _tokens(target)
+    found: dict[str, str] = {}
+    for sid, x in live.items():                                                      # 1 the runtime's own name, whole name or whole-word alias; or a session id
+        name = str(x.get("name") or "")
+        if target.strip().lower() == name.lower() or (len(target.strip()) >= 6 and sid.startswith(target.strip().lower())):
+            found.setdefault(sid, "live name or id")
+        elif want and want <= _tokens(name):
+            found.setdefault(sid, "live name token")
+    bound_gone = []
+    for path in sorted((root / "ledger" / "tasks").glob("*/*.json")):                # 2 the binding a record states for the session that holds the role
+        try:
+            rec = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        if not isinstance(rec, dict) or not want or not want <= _tokens(str(rec.get("SESSION_NAME") or "")):
+            continue
+        bind = rec.get("SESSION_BINDING")
+        sid = (bind.get("session_id") if isinstance(bind, dict) else (UUID_RE.search(str(bind or "")) or [None])[0]) if bind else None
+        if sid and sid in live:
+            found.setdefault(sid, f"binding of {rec.get('TASK_ID')}")
+        elif sid:
+            bound_gone.append({"task": rec.get("TASK_ID"), "session_id": sid})
+    out["candidates"] = [{"recipient": live[sid].get("name"), "session_id": sid, "via": why} for sid, why in found.items()]
+    if len(found) == 1:
+        sid = next(iter(found))
+        out.update(status="RESOLVED", recipient=live[sid].get("name"), session_id=sid, via=found[sid])
+    elif len(found) > 1:
+        out.update(status="AMBIGUOUS", why="more than one live session answers to this name or role; none is chosen")
+    else:
+        out["why"] = ("the session a record binds to this role is not live under that id" if bound_gone else "no live session and no record binding answers to it")
+        out["bound_not_live"] = bound_gone
+    return out
+
+
+def check_recipients(first_line: str, used: list[str], sessions: list[dict] | None, root: Path = ROOT) -> dict:
+    """Compare who a message SAYS it is for with who it was actually sent to. `used` are the recipients of the real sends (one per send: the tool takes one `to`).
+    Verdict OK only when every declared recipient resolves to a session that was a real target and every real target was declared or is a stated copy."""
+    declared = declared_recipients(first_line)
+    decl = {d: route(d, sessions, root) for d in declared}
+    real = {u: route(u, sessions, root) for u in used}
+    real_ids = {r["session_id"] for r in real.values() if r["status"] == "RESOLVED"}
+    decl_ids = {r["session_id"] for r in decl.values() if r["status"] == "RESOLVED"}
+    missing = [d for d, r in decl.items() if r["status"] == "RESOLVED" and r["session_id"] not in real_ids]
+    unresolved = [d for d, r in decl.items() if r["status"] != "RESOLVED"] + [u for u, r in real.items() if r["status"] != "RESOLVED"]
+    stray = [u for u, r in real.items() if r["status"] == "RESOLVED" and decl_ids and r["session_id"] not in decl_ids]
+    ok = bool(declared) and not missing and not unresolved and not stray
+    return {"verdict": "OK" if ok else ("NO_DECLARED_RECIPIENT" if not declared else "MISMATCH"), "declared": declared, "used": used,
+            "missing_send_to": missing, "unresolved_or_ambiguous": unresolved, "sent_to_undeclared": stray,
+            "note": "a send is accepted when the transport says so; it is read when the recipient answers or acts; it is taken in charge when its record says so"}
+
 
 
 def find_bound_transcript(task: str, projects_dir: Path | None = None, max_age_days: int = 5) -> Path | None:
@@ -586,6 +667,10 @@ def main(argv: list[str] | None = None) -> int:
     jc = jsub.add_parser("collect", help="mark a finished job as collected")
     jc.add_argument("--task", required=True)
     jc.add_argument("--id", required=True)
+    rt = sub.add_parser("route", help="resolve a name, role alias or session id to one live session; with --first-line compare the recipients a message names with the sends actually made")
+    rt.add_argument("--to", action="append", required=True, help="a recipient actually used (repeat once per send), or the target to resolve")
+    rt.add_argument("--first-line", default="", help="the message's first line, e.g. 'IT to ADV and HE: ...'")
+    rt.add_argument("--root", default=str(ROOT))
     e = sub.add_parser("events", help="what the watch decided on this machine")
     e.add_argument("--last", type=int, default=20)
     a = ap.parse_args(argv)
@@ -601,6 +686,12 @@ def main(argv: list[str] | None = None) -> int:
         else:
             print("collected" if job_collect(a.task, a.id) else "not found")
         return 0
+    if a.cmd == "route":
+        sessions = list_sessions()
+        res = check_recipients(a.first_line, a.to, sessions, Path(a.root)) if a.first_line else {t: route(t, sessions, Path(a.root)) for t in a.to}
+        print(json.dumps(res, indent=1, sort_keys=True))
+        bad = res.get("verdict", "OK") != "OK" if a.first_line else any(r["status"] != "RESOLVED" for r in res.values())
+        return 2 if bad else 0
     if a.cmd == "events":
         p = state_dir() / EVENTS_FILE
         lines = p.read_text(encoding="utf-8").splitlines()[-a.last:] if p.exists() else []

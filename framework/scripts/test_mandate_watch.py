@@ -387,5 +387,54 @@ class BusyIsNotProgress(unittest.TestCase):
         self.assertEqual(out["why"], "session busy")
 
 
+
+class Routing(unittest.TestCase):
+    """HE53: a message's recipients are the sends actually made, resolved to live sessions; a name in the text is only a claim (IT answered 'IT to ADV and HE' and the transport receipt named HE alone)."""
+    ADV_ID = "e6526331-6b7c-4631-8c9b-9e9d79867e90"
+    OTHER_ID = "99999999-aaaa-bbbb-cccc-dddddddddddd"
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        (self.root / "ledger" / "tasks" / "orchestrator").mkdir(parents=True)
+        rec = {"TASK_ID": "ORCH-ADV-X", "SESSION_NAME": "ADV \u2014 Strategic Advisor", "SESSION_BINDING": {"session_id": self.ADV_ID, "pid_at_start": 1}}
+        (self.root / "ledger" / "tasks" / "orchestrator" / "ORCH-ADV-X.json").write_text(json.dumps(rec), encoding="utf-8")
+        self.live = [{"name": "HE", "sessionId": "11111111-0000-0000-0000-000000000001"}, {"name": "IT Orchestrator", "sessionId": "11111111-0000-0000-0000-000000000002"},
+                     {"name": "legend-development-39", "sessionId": self.ADV_ID}]
+
+    def test_a_role_resolves_to_the_session_the_record_binds_and_not_to_another_name(self):
+        r = mw.route("ADV", self.live, self.root)
+        self.assertEqual((r["status"], r["recipient"], r["session_id"]), ("RESOLVED", "legend-development-39", self.ADV_ID))
+        self.assertEqual(mw.route("IT", self.live, self.root)["recipient"], "IT Orchestrator")             # a whole-word alias of a live name
+        self.assertEqual(mw.route("legend-development-39", self.live, self.root)["session_id"], self.ADV_ID)
+
+    def test_two_recipients_declared_and_one_send_is_a_mismatch_naming_the_missing_one(self):
+        res = mw.check_recipients("IT to ADV and HE: baseline", ["HE"], self.live, self.root)       # the 14 Nov case: the receipt named HE only
+        self.assertEqual((res["verdict"], res["missing_send_to"]), ("MISMATCH", ["ADV"]))
+        self.assertEqual(mw.check_recipients("IT to ADV and HE: baseline", ["HE", "legend-development-39"], self.live, self.root)["verdict"], "OK")
+
+    def test_an_address_no_longer_associated_with_the_awaited_session_is_not_reused(self):
+        live = [dict(x) for x in self.live]
+        live[2] = {"name": "legend-development-39", "sessionId": self.OTHER_ID}                       # the name now belongs to another session
+        r = mw.route("ADV", live, self.root)
+        self.assertEqual((r["status"], r["recipient"]), ("UNRESOLVED", None))
+        self.assertEqual(r["bound_not_live"], [{"task": "ORCH-ADV-X", "session_id": self.ADV_ID}])    # said, not guessed
+        res = mw.check_recipients("HE to ADV: ping", ["legend-development-39"], live, self.root)
+        self.assertEqual(res["verdict"], "MISMATCH")
+
+    def test_two_live_sessions_answering_to_one_role_are_ambiguous_and_none_is_chosen(self):
+        live = self.live + [{"name": "IT scratch", "sessionId": "11111111-0000-0000-0000-000000000003"}]
+        r = mw.route("IT", live, self.root)
+        self.assertEqual((r["status"], r["recipient"]), ("AMBIGUOUS", None))
+        self.assertEqual(len(r["candidates"]), 2)
+
+    def test_an_unreadable_listing_is_not_a_guess_and_the_first_line_forms_are_read(self):
+        self.assertEqual(mw.route("ADV", None, self.root)["status"], "UNRESOLVED")
+        self.assertEqual(mw.declared_recipients("HE to ADV (cc IT): delivery"), ["ADV", "IT"])
+        self.assertEqual(mw.declared_recipients("ORCH to HE (cc ADV): BASELINE ACQUIRED."), ["HE", "ADV"])
+        self.assertEqual(mw.declared_recipients("no addressing line here"), [])
+        self.assertEqual(mw.check_recipients("no addressing line here", ["HE"], self.live, self.root)["verdict"], "NO_DECLARED_RECIPIENT")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

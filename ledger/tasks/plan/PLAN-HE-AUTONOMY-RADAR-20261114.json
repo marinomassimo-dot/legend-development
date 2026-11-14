@@ -159,12 +159,12 @@
     },
     {
      "step": "Public release gate CI concluded green on the last published SHA 151454c6d",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "plan",
-     "blocker": "CI run in progress for 89d8dda5b (#737) and eb11e436e (#735); waiting with ci_runs.py wait"
+     "evidence": "CI #736 success (151454c6d), #737 success (89d8dda5b); #735 (eb11e436e) in progress at the time, superseded by the later green runs on main."
     }
    ],
-   "status": "IN_PROGRESS"
+   "status": "DONE"
   },
   "OBJ_12_VERIFIED_DELIVERIES_AND_SHARED_INSTRUCTIONS": {
    "order": 12,
@@ -172,27 +172,27 @@
    "steps": [
     {
      "step": "Tell ADV the operator's clarification verbatim by a verified send and land the dated roadmap entry",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "message sent to legend-development-39 (resolved by ListAgents); roadmap entry landing"
+     "evidence": "Verified send to legend-development-39 (resolved by ListAgents) with the operator text verbatim; ADV replied that it keeps job 3382bb86 (its own message, read evidence); roadmap entry 6d6fabf88 (pushed)."
     },
     {
      "step": "Correct the delivery procedure in cross_session_transport and the deliver adapter (recipient receipts, one send per recipient)",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "mandate_watch.py route + check_recipients (5 tests); strategic_advisor deliver --to refusal (1 test); cross_session_transport section 5 added."
     },
     {
      "step": "State the shared-instruction rule once in the normative home and make the router reach it",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "cross_session_transport section 12 subsection written; router row mentions it."
     },
     {
      "step": "A wait resolves from the records: unblock_when on a BLOCKED step, read by the existing continuity check",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "mandate_continuity unblock_when (path/contains, record/state) with a test."
     },
     {
      "step": "Mechanical tests for the five concrete cases and one small operational check between real sessions",
@@ -202,9 +202,9 @@
     },
     {
      "step": "IT51 learning kept: original negative result untouched, non-pertinent case as control, no baseline change",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "design_roles_he50 README note: original IT51 result untouched, the AMPA/NMDAR case stays a control against improper transfer, generative gain needs a pertinent case (ADV assignment)."
     }
    ],
    "status": "IN_PROGRESS"

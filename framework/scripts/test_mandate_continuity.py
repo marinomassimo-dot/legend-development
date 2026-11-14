@@ -71,6 +71,29 @@ class Verdicts(unittest.TestCase):
         self.assertTrue(v["stop_allowed"])
         self.assertEqual(v["blockers"][0]["unblock"], "re-acquisition")
 
+    def test_a_wait_whose_answer_already_exists_resolves_itself_and_one_that_does_not_stays_blocked(self) -> None:
+        """HE53: a session waiting for a reply or a result recognises it from the records, with one file or one record read: no transcript, no listing."""
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); (root / "ledger/tasks/orchestrator").mkdir(parents=True); (root / "out").mkdir()
+            (root / "ledger/tasks/orchestrator/SCI-9.json").write_text(json.dumps({"TASK_ID": "SCI-9", "MANDATE_STATE": "COMPLETE"}), encoding="utf-8")
+            saved, mc.ROOT = mc.ROOT, root
+            try:
+                def v(spec):
+                    return mc.verdict(record(queue({"OBJ_1": [{"step": "use the reply", "status": "BLOCKED", "blocker": "waiting for SCI's reply", "unblock_when": spec}]})))
+                self.assertEqual(v({"path": "out/reply.md"})["verdict"], "ALL_BLOCKED")                                  # not there yet: a legitimate wait
+                (root / "out/reply.md").write_text("answer: yes\n", encoding="utf-8")
+                got = v({"path": "out/reply.md"})
+                self.assertEqual(got["verdict"], "CONTINUE")                                                            # the answer is in the records: the step is executable
+                self.assertTrue(any("unblock_when is met" in f for f in got["findings"]))
+                self.assertEqual(v({"path": "out/reply.md", "contains": "answer: no"})["verdict"], "ALL_BLOCKED")        # a file of the wrong content does not resolve it
+                self.assertEqual(v({"path": "../outside.md"})["verdict"], "ALL_BLOCKED")                                # nothing outside the checkout counts
+                self.assertEqual(v({"record": "SCI-9", "state": "COMPLETE"})["verdict"], "CONTINUE")
+                self.assertEqual(v({"record": "SCI-9", "state": "OPEN"})["verdict"], "ALL_BLOCKED")
+                self.assertEqual(v("a free sentence")["verdict"], "ALL_BLOCKED")                                       # a condition in prose is not evaluated
+            finally:
+                mc.ROOT = saved
+
     def test_blocked_without_blocker_is_not_a_block(self) -> None:
         v = mc.verdict(record(queue({"OBJ_1": [{"step": "x", "status": "BLOCKED"}]})))
         self.assertEqual(v["verdict"], "CONTINUE")

@@ -171,6 +171,31 @@ def _is_evidence(value) -> bool:
     return False
 
 
+def unblock_met(spec) -> str:
+    """Has the awaited thing already arrived? A BLOCKED step may carry `unblock_when` naming one cheap, durable fact: `{"path": "<file>", "contains": "<text, optional>"}` (a file that exists in the checkout,
+    and holds the text when one is given) or `{"record": "<TASK_ID>", "state": "<MANDATE_STATE>"}`. Returns why it is met, or ''. Nothing is searched: no transcript, no listing, one file or one record.
+    A reply that never leaves a durable trace cannot be seen this way and the step stays BLOCKED."""
+    if not isinstance(spec, dict):
+        return ""
+    try:
+        if isinstance(spec.get("path"), str) and spec["path"].strip():
+            f = (ROOT / spec["path"].strip()).resolve()
+            if ROOT.resolve() not in f.parents or not f.is_file():
+                return ""
+            want = spec.get("contains")
+            if isinstance(want, str) and want and want not in f.read_text(encoding="utf-8", errors="replace"):
+                return ""
+            return f"{spec['path']} exists" + (f" and contains {want!r}" if isinstance(want, str) and want else "")
+        if isinstance(spec.get("record"), str) and isinstance(spec.get("state"), str):
+            for path in (ROOT / "ledger" / "tasks").glob(f"*/{spec['record']}.json"):
+                rec = json.loads(path.read_text(encoding="utf-8"))
+                if str(rec.get("MANDATE_STATE") or "").strip().upper() == spec["state"].strip().upper():
+                    return f"record {spec['record']} is {spec['state']}"
+    except (OSError, ValueError):
+        return ""
+    return ""
+
+
 def _normalise_step(objective: str, index: int, raw) -> dict:
     if isinstance(raw, str):
         return {"objective": objective, "index": index, "step": raw, "status": "TODO",
@@ -188,6 +213,11 @@ def _normalise_step(objective: str, index: int, raw) -> dict:
     if status == "BLOCKED" and not str(step.get("blocker") or "").strip():
         step["blocked_without_blocker"] = True
         status = "TODO"
+    if status == "BLOCKED" and step.get("unblock_when"):
+        why = unblock_met(step["unblock_when"])
+        if why:
+            step["blocker_resolved"] = why
+            status = "TODO"                      # the answer is already in the records: the wait is over, the step is executable
     if status == "DONE" and not _is_evidence(step.get("evidence")):
         step["done_without_evidence"] = True
     step["status"] = status
@@ -289,6 +319,8 @@ def verdict(record) -> dict:
     findings = [f"{st['objective']}[{st['index']}] DONE without evidence" for st in unevidenced]
     findings += [f"{st['objective']}[{st['index']}] BLOCKED without a named blocker, counted TODO"
                  for st in steps if st.get("blocked_without_blocker")]
+    findings += [f"{st['objective']}[{st['index']}] was BLOCKED but its unblock_when is met ({st['blocker_resolved']}): counted executable"
+                 for st in steps if st.get("blocker_resolved")]
     findings += [f"{st['objective']}[{st['index']}] invalid status {st['invalid_status']!r}, counted TODO"
                  for st in steps if st.get("invalid_status")]
     unreconciled = sum(1 for st in steps if st.get("unreconciled"))
