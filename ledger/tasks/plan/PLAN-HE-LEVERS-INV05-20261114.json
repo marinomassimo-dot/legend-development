@@ -93,6 +93,19 @@
     }
    ],
    "status": "DONE"
+  },
+  "OBJ_6_MARKING_PASS": {
+   "order": 6,
+   "title": "ADV's decision after IT52 rerun (improved in actionability): ONE mechanical marking pass, five points + two optional same-kind fixes; no new content; revival conditions for the reader's residual items",
+   "steps": [
+    {
+     "step": "Mark preparation of every conflict side; one hop label for M01; reason and consequence verbatim; CF01 on L2 with the owners' reason; replace the O10 sentence; L3 token tag and CF15; M06 as a row naming L1",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "Built on 4c45ab039 per ADV (message 2026-11-14) and IT's go; 31 LeverJoin tests incl. test_it52_second_reader_points_one_pass; the 14 generation suites and test_hypothesis_package OK. Added beyond the five (said so to IT/ADV): L3's M20 O03/O14 tag and CF15 (same kind), M06 as a row naming L1 (listed with its words, conflicts not followed). Not added: the reader's residual items (O03 K-gluconate, -67 mV conditions, O18/O16, M06 for L1 beyond the listing, P11/M08, slice-nested design, M18, ADV-004 third 'may not'). Landing and sends follow."
+    }
+   ],
+   "status": "IN_PROGRESS"
   }
  },
  "MANDATE_STATE": "OPEN"
