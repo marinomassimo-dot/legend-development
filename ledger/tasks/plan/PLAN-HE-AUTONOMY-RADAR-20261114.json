@@ -12,8 +12,8 @@
  "branch": "task/hrk3",
  "CURRENT_STATE": "IN_PROGRESS",
  "CHECKPOINT": {
-  "last_verified_result": "integrations 1-2 green on CI; follow-through published; lever build on task/hrk12 adapted to SCI's blind-reader corrections, not landed",
-  "first_incomplete_work": "OBJ_13: CI #744/#745; benefit reading after the lever cycle completes"
+  "last_verified_result": "all integrations green on CI except the last (#751)",
+  "first_incomplete_work": "OBJ_14 CI #751; OBJ_13 benefit reading after the lever cycle (done in the final report)"
  },
  "AUTHORISED_QUEUE_20261114B": {
   "MANDATE_STATE": "OPEN",
@@ -239,10 +239,9 @@
     },
     {
      "step": "CI concluded green on 6ad9b8dae (the follow-through landing) and 3147f722d",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "plan",
-     "blocker": "CI runs #744 (6ad9b8da) and #745 (3147f722) in progress; ci_runs.py wait",
-     "unblock": "both conclude success"
+     "evidence": "CI per commit: #744 success (6ad9b8dae, the follow-through landing), #745 success (3147f722d); later runs on the same code: #747 (4c45ab039), #749 (4c3d2d5bb), #750 (e139cddda) success."
     }
    ],
    "status": "IN_PROGRESS"
@@ -262,9 +261,16 @@
      "status": "DONE",
      "owner": "plan",
      "evidence": "Found already covered in part (ci_runs.py had a per-commit shared cache and a declared rate-limit pause) but the path actually used still cost one request per commit per interval: with six commits in flight the unauthenticated 60 requests an hour were exhausted. Fixed in ci_runs.py: ONE read of the latest 100 runs feeds the per-commit entries of every commit; a concluded run is final in the cache (no request later); wait polls every 2, then 4, then 8 minutes; status during a declared pause shows the last answer as OLD with its age; each verdict lists only the runs whose head_sha is that commit. 4 new tests (16 in test_ci_runs). Single observer per shared verification agreed with ADV and IT (HE observes #744-#750 and successors; others do not poll)."
+    },
+    {
+     "step": "CI concluded green on the SHA of the coordination fixes (bff630afd)",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "blocker": "CI run #751 (bff630afd) in progress; ci_runs.py wait (new shared observer)",
+     "unblock": "#751 concludes success"
     }
    ],
-   "status": "DONE"
+   "status": "IN_PROGRESS"
   }
  },
  "MANDATE_STATE": "OPEN",
