@@ -6,6 +6,7 @@ import os
 import shutil
 import sys
 import tempfile
+import time
 import unittest
 from pathlib import Path
 
@@ -83,9 +84,9 @@ class SharedRead(unittest.TestCase):
     def test_the_wait_reads_the_api_once_for_two_loops_inside_the_interval(self):
         calls = []
         runs = [{"run_number": 5, "name": "gate", "status": "completed", "conclusion": "success", "head_sha": "a" * 40}]
-        orig = ci_runs.fetch_runs
-        ci_runs.fetch_runs = lambda sha, repo: calls.append(sha) or runs
-        self.addCleanup(lambda: setattr(ci_runs, "fetch_runs", orig))
+        orig = ci_runs.fetch_recent
+        ci_runs.fetch_recent = lambda repo: calls.append(repo) or runs
+        self.addCleanup(lambda: setattr(ci_runs, "fetch_recent", orig))
         orig_slug = ci_runs.slug
         ci_runs.slug = lambda *a, **k: "o/r"
         self.addCleanup(lambda: setattr(ci_runs, "slug", orig_slug))
@@ -93,6 +94,54 @@ class SharedRead(unittest.TestCase):
             with contextlib.redirect_stdout(io.StringIO()):
                 self.assertEqual(ci_runs.main(["wait", "a" * 40, "--timeout", "10"]), 0)
         self.assertEqual(len(calls), 1)
+
+
+    def patch(self, **fns):
+        for name, fn in fns.items():
+            orig = getattr(ci_runs, name)
+            setattr(ci_runs, name, fn)
+            self.addCleanup(lambda n=name, o=orig: setattr(ci_runs, n, o))
+
+    def test_one_list_read_serves_every_commit_in_flight_and_each_verdict_keeps_its_own_commit(self):
+        """HE56: six commits waited by several sessions used one request per commit per interval and exhausted the unauthenticated hour; one read of the latest runs serves them all."""
+        a, b = "a" * 40, "b" * 40
+        recent = [{"run_number": 7, "name": "gate", "status": "in_progress", "conclusion": None, "head_sha": a},
+                  {"run_number": 8, "name": "gate", "status": "completed", "conclusion": "success", "head_sha": b}]
+        calls = []
+        self.patch(fetch_recent=lambda repo: calls.append("list") or recent, fetch_runs=lambda sha, repo: calls.append("sha") or [], slug=lambda *x, **k: "o/r")
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            self.assertEqual(ci_runs.main(["status", a]), 124)          # a is still running
+            self.assertEqual(ci_runs.main(["status", b]), 0)            # b concluded: from the same read, no second request
+        self.assertEqual(calls, ["list"])
+        self.assertIn("#7 gate: in_progress (aaaaaaaa)", out.getvalue()); self.assertIn("#8 gate: completed success (bbbbbbbb)", out.getvalue())
+        self.assertNotIn("#8 gate: completed success (aaaaaaaa)", out.getvalue())                       # a run is never attributed to another commit
+
+    def test_a_concluded_verdict_is_final_and_costs_no_request_later(self):
+        ci_runs.write_shared("c" * 40, "o/r", [{"run_number": 3, "status": "completed", "conclusion": "success", "head_sha": "c" * 40}], 1000.0)
+        self.assertEqual(ci_runs.read_shared("c" * 40, "o/r", 115, 10**7)[0], "runs")             # far later, no TTL applies
+        ci_runs.write_shared("d" * 40, "o/r", [{"run_number": 4, "status": "in_progress", "head_sha": "d" * 40}], 1000.0)
+        self.assertIsNone(ci_runs.read_shared("d" * 40, "o/r", 115, 10**7))                          # a running one expires as before
+
+    def test_a_commit_older_than_the_latest_list_is_asked_alone_and_attention_is_progressive(self):
+        calls = []
+        old = [{"run_number": 1, "name": "gate", "status": "completed", "conclusion": "success", "head_sha": "e" * 40}]
+        self.patch(fetch_recent=lambda repo: calls.append("list") or [], fetch_runs=lambda sha, repo: calls.append("sha") or old, slug=lambda *x, **k: "o/r")
+        with contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(ci_runs.main(["status", "e" * 40]), 0)
+        self.assertEqual(calls, ["list", "sha"])
+        self.assertEqual([ci_runs.interval(w) for w in (0, 599, 600, 2399, 2400, 5000)], [120, 120, 240, 240, 480, 480])
+
+
+    def test_status_during_a_declared_pause_shows_the_last_answer_as_old_not_as_current(self):
+        sha = "f" * 40
+        ci_runs.write_shared(sha, "o/r", [{"run_number": 9, "name": "gate", "status": "in_progress", "conclusion": None, "head_sha": sha}], 1000.0)
+        ci_runs.write_shared(sha, "o/r", None, time.time(), pause=600.0)
+        self.patch(slug=lambda *x, **k: "o/r")
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            self.assertEqual(ci_runs.main(["status", sha]), 124)
+        self.assertIn("#9 gate: in_progress", out.getvalue()); self.assertIn("not current", out.getvalue())
 
 
 if __name__ == "__main__":

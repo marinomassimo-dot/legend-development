@@ -323,7 +323,7 @@ class Proactive(Base):
         self.assertEqual(first["verdict"], "EVALUATE")
         self.assertTrue(any(e.startswith("delivery:") for e in first["events"]))
         sa.evaluate(self.campaign)
-        brief = (self.campaign / "brief_P.md").read_text(encoding="utf-8")
+        brief = (sa._state_path(self.campaign).parent / "brief_P.md").read_text(encoding="utf-8")
         self.assertIn("delivery:", brief)                                       # the tick advanced its own state; the brief must still carry what triggered the evaluation (seen empty in the first pilot)
         self.assertNotIn('"commits_since_last_tick": 0', brief)
         self.at("2026-11-13T13:00:00Z")
@@ -468,7 +468,7 @@ class Proactive(Base):
 
     def test_the_brief_says_what_the_turn_limit_means_with_the_campaign_value(self) -> None:
         sa.evaluate(self.campaign)
-        text = (self.campaign / "brief_P.md").read_text(encoding="utf-8")
+        text = (sa._state_path(self.campaign).parent / "brief_P.md").read_text(encoding="utf-8")
         self.assertIn("turn_limit is 20, a hard stop: at turn 21 the run is killed", text); self.assertIn("by turn 14 at the latest", text)
         budget = self.campaign / "budget.json"; data = json.loads(budget.read_text(encoding="utf-8")); data["turn_limit"] = 12; budget.write_text(json.dumps(data), encoding="utf-8")
         self.assertIn("turn_limit is 12, a hard stop: at turn 13", sa.turn_limit_text(self.campaign))      # the sentence follows the budget, not a constant
@@ -531,12 +531,22 @@ class Continuous(Proactive):
         self.assertEqual(new["verdict"], "EVALUATE")                                         # a new wait changes what could be anticipated; grouped with the others, at the ordinary rhythm
         self.assertIn("waiting: ORCH-W2: CI run 740 in progress", new["events"])
         sa.evaluate(self.campaign)
-        brief = (self.campaign / "brief_P.md").read_text(encoding="utf-8")
+        brief = (sa._state_path(self.campaign).parent / "brief_P.md").read_text(encoding="utf-8")
         self.assertIn('"waits"', brief); self.assertIn("CI run 740 in progress", brief); self.assertIn("battery run 77 in progress", brief)
         self.assertIn("## Waiting and follow-through", brief)
         self.assertIn("keep waiting because nothing would justify its cost or risk", brief)      # waiting stays a valid outcome
         self.assertIn("does not touch the candidate or the clones, processes and directories under verification", brief)
         self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")                          # reused: the same waits are not re-evaluated
+
+    def test_the_working_brief_stays_outside_the_checkout_and_the_saved_one_keeps_the_run_reproducible(self) -> None:
+        """HE56: the scheduler regenerated brief_P.md inside the shared checkout and left the tree dirty during landings."""
+        sa.evaluate(self.campaign)
+        self.assertFalse((self.campaign / "brief_P.md").exists())                                                        # nothing regenerated in the campaign folder of the checkout
+        work = sa._state_path(self.campaign).parent / "brief_P.md"
+        self.assertTrue(work.is_file())                                                                                # the working copy is with the host state
+        saved = self.campaign / "P1" / "brief.md"
+        self.assertEqual(saved.read_text(encoding="utf-8"), work.read_text(encoding="utf-8"))                          # the brief of the run, byte for byte, is saved with its assessment and metadata
+        self.assertTrue((self.campaign / "P1" / "meta.json").is_file())
 
     def test_optional_follow_through_fields_travel_and_the_old_format_still_registers(self) -> None:
         text = ("### ASSIGNMENT 1\nkey: anticipated-reading-during-the-wait\nrecipient: Science\nquestion: q\nwhy_now: w\nroadmap_link: r\nrelated_work: rw\nsources: s\ndecision_changed_by_result: d\nperimeter_and_budget: p\n"
@@ -620,7 +630,7 @@ class Continuous(Proactive):
         self.assertNotEqual(t["verdict"], "PAUSED")
         self.assertIn("PAUSE: science \u2014 hold the SCI reading packages", t["operator_controls"])      # the evaluation still sees it
         sa.evaluate(self.campaign)
-        self.assertIn("PAUSE: science", (self.campaign / "brief_P.md").read_text(encoding="utf-8"))
+        self.assertIn("PAUSE: science", (sa._state_path(self.campaign).parent / "brief_P.md").read_text(encoding="utf-8"))
         sa.main(["disable", "--campaign", str(self.campaign)])
         self.assertEqual(sa.tick(self.campaign)["verdict"], "DISABLED")
 
