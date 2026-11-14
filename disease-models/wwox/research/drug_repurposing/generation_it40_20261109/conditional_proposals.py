@@ -128,7 +128,10 @@ PKG_MAP = {
     "inhibitory_defect_sci47_20261112": dict(inv="INV-05", relation_ids=[], adv006=True, observation=["known_in_WWOX"], relation=["lever"], context=["transferred_from_other_systems_named"],
                                              action=["action_required_and_context"], compound=["compound_or_probe_sustained_by_a_document"], premise=["status"],
                                              competing=["risk_of_acting_on_a_compensation", "counter_evidence"], expected=[], measure=["result_that_would_reject_it", "functional_comparator", "mechanism_comparator"],
-                                             support=["depth_of_support", "adds_over_general_anticonvulsant_action"], title="lever", sibling_cell="lever"),
+                                             support=["depth_of_support", "adds_over_general_anticonvulsant_action"], title="lever", sibling_cell="lever",
+                                             mapping_unconfirmed=True, dropped=("status", "dropped"),
+                                             rivals_note="other rows of the same package (this table does not classify them; the package relates its rows to explanations, with what each outcome would favour, in its matrix.tsv, which is not registered here)",
+                                             expected_missing="not in levers.tsv, the table registered here; the package states compatible and weakened explanations and what each outcome would favour in its matrix.tsv (not registered): not stated here, not absent"),
 }
 PKG_FIELDS = FIELDS + ["package_ref", "direction_stated", "unmapped_cells", "package_title", "recorded_support", "reopen_or_abandon", "design_join"]
 
@@ -145,6 +148,11 @@ def _relation_action(rid):
 ADV006 = "measurement_reconciliation_adv006_20261114"
 TOKEN_ALIASES = {"inhibitory_defect_sci47_20261112": "sci47_inhibitory"}   # the alias ADV-006's `requests_merged` writes for a source package: a reviewable declaration, not a guess
 LEADING_IDS = re.compile(r"^\s*(M\d{2}(?:\s*,\s*M\d{2})*)\s*(?:\(|$)")   # only a list that STARTS the cell is a declared pointer; an id inside a quotation (SCI42's own M01, say) is not
+
+
+def ids_declared(row, gating):
+    """The ids a cell declares as pointers: the list that starts `interpretable_after` (already read as `gating`) and nothing else."""
+    return list(gating)
 
 
 def design_join(pkg, key, design_rows_all):
@@ -179,11 +187,17 @@ def design_join(pkg, key, design_rows_all):
         cf = [c for c, cr in conf.items() if set(i.strip() for i in cr["m_id"].split(";")) & set(ids)]
         genuine = [c for c in cf if conf[c]["type"] == "genuine"]
         others = [f"{c} ({conf[c]['type']})" for c in cf if conf[c]["type"] != "genuine"]
-        parts.append(f"{ADV006}::measurements.tsv::{m} (declared by {token}; its `interpretable_after`, quoted, is the sources' conditional reading and not an observation: {r['interpretable_after']!r}; "
-                     f"its `lever_or_comparison_gated`: {r['lever_or_comparison_gated']!r}) | rows named at the start of that cell: {', '.join(gating) or 'none (no leading list in the cell)'} | "
+        cell = r["interpretable_after"]                                    # the quotation part of this cell cites the SOURCES' own ids (SCI42's M01 inside M05's cell); `lever_or_comparison_gated` is ADV-006's own text, its ids are its own
+        quoted = sorted(set(re.findall(r"\bM\d{2}\b", cell.split("(", 1)[1] if "(" in cell else "")) - set(ids_declared(r, gating)))
+        parts.append(f"{ADV006}::measurements.tsv::{m} (declared by {token}; preparation: {r['preparation']!r}; age_bin: {r['age_bin']!r}; cohort_and_genotype_arms: {r['cohort_and_genotype_arms']!r}; "
+                     f"its `interpretable_after`, quoted, is the sources' conditional reading and not an observation: {r['interpretable_after']!r}; its `lever_or_comparison_gated`: {r['lever_or_comparison_gated']!r}"
+                     + (f"; ids inside the quotation of `interpretable_after`, a source's own id space (SCI42's or SCI47's, not ADV-006 rows): {', '.join(quoted)}" if quoted else "")
+                     + f") | rows named at the start of that cell: {', '.join(gating) or 'none (no leading list in the cell)'} | "
                      f"rows whose `lever_or_comparison_gated` names {m} as a whole token (their own cell, quoted, says what the relation is): "
                      + ("; ".join(f"{c2} {meas[c2]['lever_or_comparison_gated']!r}" for c2 in coreq) or "none") + " | "
-                     f"conflicts of type genuine whose m_id names any of {', '.join(ids)}: {', '.join(genuine) or 'none'}; rows of other types (gap or synonym: not conflicts), same rule: {', '.join(others) or 'none'}"
+                     f"conflicts of type genuine whose m_id names any of {', '.join(ids)}: "
+                     + ("; ".join(f"{c} [type: {conf[c]['type']}; cell_type: {conf[c]['cell_type']}; {conf[c]['source_A']}: {conf[c]['quote_A']!r}; {conf[c]['source_B']}: {conf[c]['quote_B']!r}; adjudicable_from_the_packages: {conf[c]['adjudicable_from_the_packages']}]" for c in genuine) or "none")
+                     + f"; rows of other types (gap or synonym: not conflicts), same rule: {', '.join(others) or 'none'}"
                      + (f" | second-hop rows named by the gating rows, listed and NOT followed (an order of cost or priority may sit there): {', '.join(second)}; genuine conflicts on them, for the reader to weigh: "
                         + (", ".join(c for c, cr in conf.items() if cr["type"] == "genuine" and set(i.strip() for i in cr["m_id"].split(";")) & set(second) and c not in genuine) or "none beyond those above") if second else ""))
     return " || ".join(parts) + " || no side is chosen on any conflict; no order here is a result"
@@ -220,16 +234,20 @@ def package_rows():
                 if not action:
                     action = "not stated by the package"
                 prem = cells(r, m["premise"])
+                dcol, dpre = m.get("dropped", (None, None))
+                dropped = bool(dcol and str(r.get(dcol, "")).strip().lower().startswith(dpre))        # the package's own label, read at the start of its own status cell and declared in the mapping; no other word is read
                 unmapped = [c for c in x["columns"] if c not in used and c not in ("id", "hyp_id", "hypothesis_id", m["title"]) and r.get(c)]
                 symbols = (m.get("symbols_by_key") or {}).get(x["key"]) or m.get("symbols") or (rel.get(m["relation_ids"][0], []) if m["relation_ids"] else [])
-                out.append(dict(corrections_it40="", proposal_id="CP-" + x["id"], kind="conditional_hypothesis_from_package", need_id="", inv_id=inv, cards="", status="exploratory (IPOTESI); the package row is not an approval",
+                out.append(dict(corrections_it40="", proposal_id="CP-" + x["id"], kind="package_row_dropped_by_the_package" if dropped else "conditional_hypothesis_from_package", need_id="", inv_id=inv, cards="", status="exploratory (IPOTESI); the package row is not an approval",
                                 starting_observation_and_chain=(cells(r, m["observation"]) or "not stated by the package as an observation") + " [source: " + x["source_ref"] + "]", context=cells(r, m["context"]) or "not stated by the package",
-                                competing_explanations=cells(r, m.get("competing", [])) + (" || other rows of the same package (the package does not classify them as rivals, complementary or compatible): " + rivals if rivals else ""),
+                                competing_explanations=cells(r, m.get("competing", [])) + (" || " + m.get("rivals_note", "other rows of the same package (the package does not classify them as rivals, complementary or compatible)") + ": " + rivals if rivals else ""),
                                 premise_and_action="relation: " + cells(r, m["relation"]) + " || action: " + action + " || unresolved premise: " + prem,
                                 compound_or_probe_named_by_package=cells(r, m["compound"]) or "none named", catalogue_by_action="", cell_context=(cc.context_for(symbols, (m["relation_ids"] or [pkg])[0])[1] if symbols else "not joined (no relation symbols for this package)"),
                                 source_and_limits="package row, verbatim cells; no direction asserted; labels of the package kept: " + cells(r, [c for c in ("class", "status", "label") if r.get(c)]),
-                                expected_result_by_explanation=cells(r, m["expected"]) or "not stated by the package (missing): its recorded support and counter-evidence are not a falsifiable prediction", decision_measure=cells(r, m["measure"]) or "not stated by the package: a question, not an experiment",
-                                experiments="", unresolved_refs="", nomination="CONDITIONAL; named compounds are the package's, not ranked; no therapeutic direction asserted", design_rows_same_investigation=design_pointer(inv, pk),
+                                expected_result_by_explanation=cells(r, m["expected"]) or m.get("expected_missing", "not stated by the package (missing): its recorded support and counter-evidence are not a falsifiable prediction"), decision_measure=cells(r, m["measure"]) or "not stated by the package: a question, not an experiment",
+                                experiments="", unresolved_refs="", nomination=(f"NOT PROPOSED: the package drops this row (its own status label: {r.get(dcol)!r}); kept so the drop is visible" if dropped else "CONDITIONAL; named compounds are the package's, not ranked; no therapeutic direction asserted")
+                                + ("; mapping drafted by HE from the column names and rows, not confirmed by the package's owners" if m.get("mapping_unconfirmed") else ""),
+                                design_rows_same_investigation=("dropped by the package: the investigation-level list of design rows is not repeated for a row nobody proposes" if dropped else design_pointer(inv, pk)),
                                 package_ref=x["id"] + " @ " + x["source_ref"], direction_stated="none (the package states no therapeutic direction)", unmapped_cells=",".join(unmapped), package_title=r.get(m["title"], ""), reopen_or_abandon=cells(r, m.get("reopen", [])) or "not stated by the package", recorded_support=cells(r, m.get("support", [])),
                                 design_join=design_join(pkg, x["key"], design_all) if m.get("adv006") else ""))
     return out, seen_unmapped
