@@ -8,10 +8,60 @@
  "OBJECTIVE": "Operator mandate 'VERIFY A USEFUL GENERATIVE DIFFERENCE' (coordinated by ADV, with HE): measure whether using the reconciled knowledge of ADV-006 improves a pharmacological comparison, conditional hypothesis or discriminating experiment actually produced by LEGEND. Baseline before HE changes the path; same case after; show harms; no predictive claim; no ranking/sign/qualification change. Final answer: which comparison, hypothesis or experiment LEGEND now produces or uses better, with a short before/after with paths and SHA; if none, say which step is missing.",
  "AUTHORISED_QUEUE_20261114": {
   "MANDATE_STATE": "OPEN",
-  "OBJ_P1": {"order": 1, "steps": [{"step": "Reconcile remote, CI and deliveries (no repeat of the night work)", "status": "DONE", "owner": "orchestrator", "evidence": "main bd6ff283: CI #719 (17fd1bcd) success, #727 (2a18966d) success, #728 (3372ebac) success; #711 and #714 stay historical failures of their SHAs (views not regenerated, corrected); ADV-001..006 disposed; residual: generator reach of the inhibitory thread (HE's technical task now)."}]},
-  "OBJ_P2": {"order": 2, "steps": [{"step": "Baseline before the change: one real case, current path, inputs and revision, full current output, knowledge left out, criteria for improvement / no difference / worse; share with HE and ADV", "status": "IN_PROGRESS", "owner": "orchestrator", "evidence": "generation_it51_20261114/prereg_it51.md and baseline_before_conditional_proposals_it40.tsv at HEAD bd6ff283 (case: what precedes and what is matched for a GABA-A arm and its non-GABAergic comparator in the Wwox slice, INV-05 next_test)."}]},
-  "OBJ_P3": {"order": 3, "steps": [{"step": "After HE's link: repeat the same case, hold other inputs fixed, declare what moved; generate, then verify conditions, counter-evidence and rivals; harms checked (hard case: shared M01 id, CF23)", "status": "TODO", "owner": "orchestrator", "evidence": "Dependency: HE delivery of the link; revival: a message from HE or a commit naming it."}]},
-  "OBJ_P4": {"order": 4, "steps": [{"step": "Consume in the existing consumer if improved (comparison, investigation, open question), regenerate derived and translations, dashboard only if exposed content changes; if no difference, show result and probable cause", "status": "TODO", "owner": "orchestrator", "evidence": ""}]},
-  "OBJ_P5": {"order": 5, "steps": [{"step": "Close the loop directly with ADV: baseline, observed difference, limits and costs, consumer updated, new question or resumption condition; final report in Italian", "status": "TODO", "owner": "orchestrator", "evidence": ""}]}
+  "OBJ_P1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Reconcile remote, CI and deliveries (no repeat of the night work)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "main bd6ff283: CI #719 (17fd1bcd) success, #727 (2a18966d) success, #728 (3372ebac) success; #711 and #714 stay historical failures of their SHAs (views not regenerated, corrected); ADV-001..006 disposed; residual: generator reach of the inhibitory thread (HE's technical task now)."
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Baseline before the change: one real case, current path, inputs and revision, full current output, knowledge left out, criteria for improvement / no difference / worse; share with HE and ADV",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "generation_it51_20261114/prereg_it51.md and baseline_before_conditional_proposals_it40.tsv at HEAD bd6ff283 (case: what precedes and what is matched for a GABA-A arm and its non-GABAergic comparator in the Wwox slice, INV-05 next_test). ACQUIRED and landed on main ea02afa81; shared with HE (inv_id INV-05 agreed, route: ADV-006 measurements.tsv/conflicts.tsv as design_only, source tables not registered) and ADV. HE lands only after this."
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "After HE's link: repeat the same case, hold other inputs fixed, declare what moved; generate, then verify conditions, counter-evidence and rivals; harms checked (hard case: shared M01 id, CF23)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": "Dependency: HE delivery of the link; revival: a message from HE or a commit naming it."
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Consume in the existing consumer if improved (comparison, investigation, open question), regenerate derived and translations, dashboard only if exposed content changes; if no difference, show result and probable cause",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Close the loop directly with ADV: baseline, observed difference, limits and costs, consumer updated, new question or resumption condition; final report in Italian",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
  }
 }
