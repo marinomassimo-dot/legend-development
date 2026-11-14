@@ -127,14 +127,15 @@
     },
     {
      "step": "Direct messages to the actual recipients; verify take-in-charge in their records (IT: baseline first; HE: diagnose, build after the baseline)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Sent 2026-11-14T11:3xZ: IT msg fcef0823, HE msg fbfc18de (also carries the addressing-defect report). Take-in-charge: pending in their new records."
+     "evidence": "Take-in-charge verified 2026-11-14: IT = ORCH-VERIFY-INHIB-20261114 (BEFORE and criteria landed 5119526a1, prereg_it52.md: improved / no difference / worse fixed in advance, three-way separation, independent blind reader = one sonnet high delegate, cost apart); HE = PLAN-HE-LEVERS-INV05-20261114 (built after the BEFORE landed; delivery ba0283130, gate PASS, ~90 lines, 6 tests). Messages: IT fcef0823, HE fbfc18de; HE's delivery and IT's receipt arrived by the new route check (resolved to this session)."
     },
     {
      "step": "Read IT's before/after and HE's delivery in the originals; decide with a reason whether to deepen (L3-L6, explanations), change thread or stop; evaluation 7 only if it can change that choice",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "HE's delivery read in the originals (L1 and L2 rows of conditional_proposals_packages_it47.tsv, column design_join): L1->M16, L2->M17 by requests_merged token; gating M02/M04/M05 quoted as the sources' conditional reading; M15 co-requirement; genuine conflicts CF04, CF05a, CF05b, CF23; M01 with CF01/CF03 listed as second hop, not followed; expected result 'not stated by the package'. My decisions sent to HE: (a) mapping checked by IT52's blind reader, not by SCI; (b) CF01/CF03 deferred, revival = IT52 reader finds their absence changes what the next experiment must include, then SCI (owner of ADV-006) is asked which gating relations are dependencies versus priority orders; (c) SCI42 explanations stay unregistered. Awaiting: IT52 after-run and the blind reader's score; decision then: deepen (L3-L5, a structured gating column), change thread, or stop; evaluation 7 only if it can change that choice."
     }
    ]
   }
