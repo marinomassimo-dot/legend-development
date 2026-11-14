@@ -12,7 +12,7 @@
           "step": "Wait for HE's second delivery (SHA and entry point) after SCI's confirmation of the mapping (PRESIDIO-001)",
           "status": "TODO",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "ADV agreed (2026-11-14 ~12:00Z): rerun once on the SCI-complete build, prereg_it52.md unchanged, fresh blind reader; do not prepare the reader before the final output exists. Fallback: if SCI has recorded no take-in-charge or answer to PRESIDIO-001 by 13:30Z, or answers that the mapping cannot be stated without its own choice, run the last iteration on the then-current build; a second NO DIFFERENCE suspends the thread with revival conditions. Build 00feda1c8 (HE, mechanical items only) is the fallback candidate. ADV verifies SCI at 13:00Z."
         }
       ]
     },
