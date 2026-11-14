@@ -1303,7 +1303,8 @@ def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
              "Give the usual headings, then `## Assignments`: either `none: <reason>` (continuing the plan can be the best decision) or one `### ASSIGNMENT n` block per assignment with exactly these "
              "`field: value` lines: " + ", ".join(ASSIGNMENT_FIELDS) + ". recipient is Orchestrator, Science or Harness. At most as many blocks as the campaign allows; none to show independence.",
              "Finish with `## Outcome`, four `field: value` lines: `outcome:` one of " + ", ".join(OUTCOMES) + "; `excluded:` (for a wait: the relevant alternatives you left out, each with why); `reason:`; "
-             "`resume_when:` event | record:<TASK_ID>=<STATE> | path:<file>[~<text>] | after:<UTC>. The tick reads this block and nothing else of your decision: without it the wait is not motivated and one more evaluation is asked for.", ""]
+             "`resume_when:` event | record:<TASK_ID>=<STATE> | path:<file>[~<text>] | after:<UTC>; it is read only for a wait (write `event` for any other outcome), and `record:` only with an id that already exists in the records "
+             "(an id the recipient has not created yet is read as `event`). The tick reads this block and nothing else of your decision: without it the wait is not motivated and one more evaluation is asked for.", ""]
     return "\n".join(parts)
 
 
@@ -1337,6 +1338,8 @@ def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout:
             outcome = parse_outcome(text)
             if outcome["stated"] and outcome["outcome"] == "wait":
                 problem = resume_problem(outcome["resume_when"])
+                if not problem and outcome["resume_when"].startswith("record:") and not list((ROOT / "ledger" / "tasks").glob(f"*/{outcome['resume_when'][7:].split('=', 1)[0].strip()}.json")):
+                    problem = f"resume_when names a record that does not exist ({outcome['resume_when'][7:].split('=', 1)[0].strip()}); read as event"      # P8 (2026-11-14) wrote an id the recipient had not created yet: a wait on it would never resume
                 if problem:
                     outcome.update(resume_when="event", problem=problem)
                 elif resume_met(outcome["resume_when"], _now()):
