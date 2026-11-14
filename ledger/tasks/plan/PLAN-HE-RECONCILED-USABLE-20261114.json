@@ -1,0 +1,100 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-HE-RECONCILED-USABLE-20261114",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "assigned_on": "2026-11-14",
+ "OBJECTIVE": "HE — Make reconciled knowledge usable: verify and, when useful, build the minimum link that lets a real generation path use the ADV-006 reconciled measurement knowledge, with IT's before/after case; one accessory scouting fix if proportionate. The closed mandates (PLAN-ADV-SESSION-20261113) are not reopened.",
+ "worktree": ".claude/worktrees/hrk",
+ "branch": "task/hrk",
+ "CURRENT_STATE": "IN_PROGRESS",
+ "CHECKPOINT": {
+  "last_verified_result": "none yet",
+  "first_incomplete_work": "OBJ_1_DIAGNOSE"
+ },
+ "AUTHORISED_QUEUE_20261114": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1_DIAGNOSE": {
+   "order": 1,
+   "title": "Read the ADV-006 package, the HE50 design-only reader and the actual consumers; decide the route (subset read, reader extension, local adaptation, or keep out) before code",
+   "steps": [
+    {
+     "step": "Read the ADV-006 package, the HE50 design-only reader and the actual consumers; decide the route (subset read, reader extension, local adaptation, or keep out) before code",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "IN_PROGRESS"
+  },
+  "OBJ_2_BASELINE_WITH_IT": {
+   "order": 2,
+   "title": "Coordinate the case with IT (IT51, INV-05 next_test GABA-A arm and matched non-GABAergic comparator); IT acquires the baseline at bd6ff283a before the path changes on main",
+   "steps": [
+    {
+     "step": "Coordinate the case with IT (IT51, INV-05 next_test GABA-A arm and matched non-GABAergic comparator); IT acquires the baseline at bd6ff283a before the path changes on main",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  },
+  "OBJ_3_LINK": {
+   "order": 3,
+   "title": "Build the minimum link: registration plus mapping, no renamed tables, no inferred fields; six genuine conflicts kept unresolved; two M01 kept apart; no state or priority transfer",
+   "steps": [
+    {
+     "step": "Build the minimum link: registration plus mapping, no renamed tables, no inferred fields; six genuine conflicts kept unresolved; two M01 kept apart; no state or priority transfer",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  },
+  "OBJ_4_CHAIN_AND_REGRESSIONS": {
+   "order": 4,
+   "title": "Show source -> reader -> transformation -> generator output -> consumer on the case; regressions for the effective risks; regenerate derived files; run the existing suites",
+   "steps": [
+    {
+     "step": "Show source -> reader -> transformation -> generator output -> consumer on the case; regressions for the effective risks; regenerate derived files; run the existing suites",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  },
+  "OBJ_5_SCOUT_CONTEXT": {
+   "order": 5,
+   "title": "Check the scout briefing defect (Operator roadmap ignored, unparsed surface shown as no opportunity) in current code; small fix with targeted test, or a short diagnosis to ADV",
+   "steps": [
+    {
+     "step": "Check the scout briefing defect (Operator roadmap ignored, unparsed surface shown as no opportunity) in current code; small fix with targeted test, or a short diagnosis to ADV",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  },
+  "OBJ_6_DELIVER": {
+   "order": 6,
+   "title": "Integrate and publish with the existing procedures; send IT and ADV the technical choice, alternatives, sources, before/after, limits, verification and the off-switch",
+   "steps": [
+    {
+     "step": "Integrate and publish with the existing procedures; send IT and ADV the technical choice, alternatives, sources, before/after, limits, verification and the off-switch",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  }
+ },
+ "MANDATE_STATE": "OPEN"
+}
