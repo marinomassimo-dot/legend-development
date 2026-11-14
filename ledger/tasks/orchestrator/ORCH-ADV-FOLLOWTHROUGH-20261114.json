@@ -46,9 +46,9 @@
    "steps": [
     {
      "step": "Send HE and IT one short coordination message each (what each owns, what the other owns, the shared read-only inputs, the ADV-006 originals, who consumes what), then verify each took the assignment in charge in its own record",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Messages sent 2026-11-14T07:5xZ: to HE (msg 6649ffc8) and IT (msg 60aaf98e), ack to IT (d7e21a51). IT: take-in-charge recorded in ORCH-VERIFY-GENDIFF-20261114 (on main, baseline ea02afa81 with prereg_it51.md fixing improvement / no difference / worse before the comparison; IT confirmed no scientific question yet for the remaining assignment, cost kept apart from mine). HE: PLAN-HE-RECONCILED-USABLE-20261114 (reported by HE; read in its worktree .claude/worktrees/hrk: OBJ_1 diagnosis IN_PROGRESS, OBJ_3 link planned as registration plus mapping, no renamed tables); HE reported no recall of its own, no blocker, no battery, no evaluation 6 needed; adopted: no tuning to IT's criteria, six conflicts carried unresolved, two M01 kept apart. Duplication check: IT = baseline, after-run, harms, consumption; HE = link and scout input; ADV = presidio only. Step stays open until HE's delivery is read."
+     "evidence": "Messages sent 2026-11-14T07:5xZ: to HE (msg 6649ffc8) and IT (msg 60aaf98e), ack to IT (d7e21a51). IT: take-in-charge recorded in ORCH-VERIFY-GENDIFF-20261114 (on main, baseline ea02afa81 with prereg_it51.md fixing improvement / no difference / worse before the comparison; IT confirmed no scientific question yet for the remaining assignment, cost kept apart from mine). HE: PLAN-HE-RECONCILED-USABLE-20261114 (reported by HE; read in its worktree .claude/worktrees/hrk: OBJ_1 diagnosis IN_PROGRESS, OBJ_3 link planned as registration plus mapping, no renamed tables); HE reported no recall of its own, no blocker, no battery, no evaluation 6 needed; adopted: no tuning to IT's criteria, six conflicts carried unresolved, two M01 kept apart. Duplication check: IT = baseline, after-run, harms, consumption; HE = link and scout input; ADV = presidio only. Step stays open until HE's delivery is read. CLOSED 2026-11-14T14:3xZ: both take-ins-in-charge verified in their records (IT: ORCH-VERIFY-GENDIFF-20261114, then ORCH-VERIFY-INHIB-20261114 and ORCH-VERIFY-INHIB2-20261114; HE: PLAN-HE-RECONCILED-USABLE-20261114, PLAN-HE-LEVERS-INV05-20261114; SCI: ORCH-PRESIDIO001-20261114); no duplication observed; the obsolete 'pending' wording is superseded by OBJ_8."
     }
    ]
   },
@@ -87,8 +87,9 @@
     },
     {
      "step": "Follow each delivery along result -> comparison/hypothesis/experiment -> consumer -> new question -> next choice; every deferral gets a concrete reason, a recipient and a revival condition",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Followed to disposition 2026-11-14: ADV-006 follow-through -> HE link and IT52 (case unsuited, improved in access) -> fairer case SCI47 levers L1/L2 -> SCI owner confirmation (PRESIDIO-001/002 complete, landed 8de503223) -> HE builds -> IT52 rerun improved -> marking pass -> consumption 01d13e358 -> thread closed; deferrals: SCI50 levers and SCI42 explanations suspended (revival: gate 0 or the M1/EBP question for clemastine moves, or a cost report that changes the cost-benefit); lever residuals with SCI (owner statements) and HE (generator marks), recorded in result_it52_rerun.md."
     }
    ]
   },
@@ -98,8 +99,9 @@
    "steps": [
     {
      "step": "Report: what is now used that was isolated; which scientific output changed; what stayed unchanged; strategic tools really used (examined, received in the brief, only available); observed cost split into presidio, evaluations and executive work (operator-given work declared as such); the next decision, already assigned when authorised. Keep apart observed generative improvement, better experiment formulation and validated predictive capacity",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Report given in chat 2026-11-14T14:2xZ: what is now used, which output changed, what stayed, tools examined/received/only available, cost split (presidio 142 turns, 160,808 output tokens; evaluations 24 turns, 21,052 output; executive work as reported by the owners, operator-assigned declared), my errors, next decision; three-way separation kept (observed change yes; better experiment formulation yes; prediction none)."
     }
    ]
   },
@@ -111,7 +113,17 @@
      "step": "Standing wait: roadmap change, delivery, mandate transition, operator control line; one recall only",
      "status": "BLOCKED",
      "owner": "orchestrator",
-     "blocker": "waiting for: a roadmap change, a delivery, a mandate transition or an operator control line; recall job 3382bb86 (hourly :17). Continuous mode applies to this presidio (operator's own message to this session 2026-11-14 ~10:3xZ, recorded in the roadmap seat); the pilot expiry 2026-11-14T18:22:36Z no longer ends it."
+     "blocker": "waiting for: a roadmap change, a delivery, a mandate transition or an operator control line; recall job 3382bb86 (hourly :23). Continuous mode applies to this presidio (operator's message, recorded in the roadmap seat); the pilot expiry 2026-11-14T18:22:36Z no longer ends it. The earlier wait for SCI's answer to PRESIDIO-001/002 is closed."
+    },
+    {
+     "step": "HE's CI conclusion on the lever and follow-through SHAs (single observer: HE; the presidio does not poll the CI)",
+     "status": "BLOCKED",
+     "owner": "orchestrator",
+     "blocker": "waiting for: HE's record PLAN-HE-LEVERS-INV05-20261114 to reach COMPLETE (HE sets it when its CI conclusion arrives)",
+     "unblock_when": {
+      "record": "PLAN-HE-LEVERS-INV05-20261114",
+      "state": "COMPLETE"
+     }
     }
    ]
   },
@@ -162,10 +174,22 @@
      "evidence": "2026-11-14T12:0xZ: rule recorded in the Operator roadmap seat (dated line); assignments/PRESIDIO-002.md on main after landing; sent to SCI with the wording 'The current work keeps priority. Queue this assignment; you may anticipate its independent parts if resources and dependencies allow. Before starting it, check that results that arrived since have not changed its usefulness.'. Not started in parallel: both branches of the open decision (continue vs suspend the lever thread) are not both started. Checked and rejected as an anticipation: a dream pass or a new thread now (the lever thread has the priority and shared resources are unknown; a wait is not proof of available resources). Outcome 2026-11-14T12:4xZ: PRESIDIO-002 closed by SCI (no cell edit, dated note); its premise was my misreading; the queue is empty; the anticipation of HE's build behind SCI's verifier is the one real case of the rule on this thread (candidate ba0283130 untouched, prepared branch not landed)."
     },
     {
-     "step": "Standing: at each tick or delivery ask once whether an independent item can be anticipated, queue it with the rule's wording if yes, and review the queue (supersede items whose usefulness changed); the queue now holds PRESIDIO-002 only",
+     "step": "Portfolio comparison at the operator's integration of 2026-11-14 ('continuous portfolio direction after the lever thread'): distinguish 'this method does not deserve another iteration' from 'no other useful work exists'; choose among an independent assignment, a queued one or waiting; say which decision could change, why it prevails, which result makes continuing useless",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-14T14:4xZ. Inputs actually read: investigations_it20.tsv (19 investigations, ranks 1-7: nearly all next tests are wet, so the in-silico lever is formulation of experiments and tool facts), open_questions_map.tsv (191 rows: 163 OPEN; 57 open non-wet zero-spend rows, mostly tool-potency and primary-source readings and DC-* hygiene), ADV-002_result.md (route facts), ro25_6981_sci44 README via the map row, the earlier dashboard work_order.json and the unregistered-tables census; not read: the live dashboard page, DREAM (nothing pertinent found in recent DREAM files; no activity built to say it was used), radar (stale feed; HE's declared limit), candidate cards. Chosen: ONE queued assignment, PRESIDIO-003 (SCI): IT43-Q01 Ro 25-6981 primary sources, reachability first; decision it could change: whether Ro 25-6981 is named a PRIMARY-tier second tool of the ifenprodil site in the generator's compound decisions and INV-05 row C-RO1; why it prevails: already in output, sources named, no wet result needed, no repeat of the lever method; makes continuing useless: no named source lawfully reachable, or reachable sources do not state maximal inhibition/triheteromer; not chosen: lever method on SCI50/SCI42 (cost/benefit), other tool-potency rows (no named sources), DC-* hygiene (integrator), waiting alone (valid, but a cheap bounded independent item exists)."
+    },
+    {
+     "step": "Single observer per shared verification: HE observes the CI of the lever and follow-through SHAs and informs IT and the presidio; the others do not poll",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Told HE and IT 2026-11-14T14:4xZ; the presidio reads HE's record state through unblock_when instead of polling ci_runs."
+    },
+    {
+     "step": "Standing: at each tick or delivery ask once whether an independent item can be anticipated, queue it with the rule's wording if yes, and review the queue (supersede items whose usefulness changed); the queue now holds PRESIDIO-003 only",
      "status": "BLOCKED",
      "owner": "orchestrator",
-     "blocker": "waiting for: SCI's take-in-charge and answer to PRESIDIO-001 (then PRESIDIO-002 is SCI's to start or supersede), HE/IT delivery events; recall job 3382bb86"
+     "blocker": "waiting for: SCI's answer to PRESIDIO-003 (queued; SCI decides the moment, may decline or supersede); delivery events; recall job 3382bb86"
     }
    ]
   }
