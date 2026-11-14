@@ -19,3 +19,6 @@ Non-canonical research material. Not medical advice; no dose, schedule or clinic
 
 ## Files
 `output/` (decisive.tsv D01-D14, comparison.tsv C-RO1, new_measurements.tsv M-R1/M-R2, evidence, figure notes, queries, names_used, answers, receipts); `verify/` (V3 audit, verdicts, receipts); `engine_check.py`, `engine_check.tsv`; `consumer_delta.md`; `COST_NOTE.md`; staged receipts in `research/receipt_staging/sci44` (8 producer, suffix -96) and `sci44v` (8 verifier, suffix -99), valid under `staged_receipt_check.py --check-doi`, none recorded.
+
+## Update 2026-11-14 (PRESIDIO-003)
+The reopen sources named above were checked for lawful reach in `disease-models/wwox/research/drug_repurposing/ro25_6981_primary_sources_presidio003_20261114/README.md`. The text of Hedegaard 2012, Science 2017 and Hansen 2014 was re-read (two byte routes): no maximal inhibition of Ro 25-6981 and no triheteromer value is stated in the text; Hansen 2014 does not mention Ro 25-6981 at all; the triheteromer extent is in the Science 2017 Fig S1H panel, which was not reached. Fischer 1997 is access-blocked; no figure or supplement is reachable by a lawful route. No cell of this package was edited.
