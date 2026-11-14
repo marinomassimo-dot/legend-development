@@ -55,12 +55,12 @@
     },
     {
      "step": "CI concluded green on ba0283130",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "plan",
-     "blocker": "CI runs #738-#743 in progress; ci_runs.py wait"
+     "evidence": "CI #739 success (ba0283130); the later builds are covered by the integration records."
     }
    ],
-   "status": "IN_PROGRESS"
+   "status": "DONE"
   },
   "OBJ_4_ITERATION_2": {
    "order": 4,
