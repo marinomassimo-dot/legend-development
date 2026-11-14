@@ -23,3 +23,18 @@ No consumer updated (a harm is open; ADV's stop rule allows no third iteration).
 
 ## Not shown
 A better prediction, efficacy, or generality; one case chosen by ADV from my proposal; two readers, one per build, each on one pass.
+
+## Recheck after HE's marking pass (main 4c3d2d5bb), same reader resumed
+Report: `verify3/RECHECK_REPORT.md`. Reader census: same transcript as the first rerun reader, resumed; cost apart from mine (its own "effort low" is a self-report; the census reads back high).
+| Point | Recheck |
+|---|---|
+| 1 preparation and age of every conflict side; L2 inherited context | PARTLY, harm CLOSED: the August sides of CF04 and CF05a now carry M14's preparation and age verbatim (129 printed strings, 0 mismatches), L2's inherited context is marked, no conflict side sits unmarked on the Synapsin-Cre arm. Residual: M14 is the generator's mapping (conflicts.tsv gives m_id M02 for CF04); "global allele" is not printed; CF04 side A reads only "as M01"; the inherited L2 string is repeated unmarked 4 times (CF11, CF16); 13 gap/synonym rows are ids only |
+| 2 M01 hop label | L1 CLOSED; L2 OPEN, a new error: design_join says M01 is "second-hop ... not reached by the attachments" while lever_attachments says "owners' reading: first hop for the lever; no declared key of this row reaches it" (I confirmed both strings in the committed rows); the two columns sit about 6,000 characters apart |
+| 3 three cells verbatim | CLOSED |
+| 4 L2 CF01 | CLOSED |
+| 5 "same rows reach the other lever" | CLOSED; the replacement list is correct (O10, E5); one loss: O02 and O05 attached to both levers no longer printed |
+| L3 tags, CF15 | correct, verbatim, declared key (m_id "M20;M05") |
+| Beyond the points: M06 on L1 | verbatim from measurements.tsv but NEW CONTENT, attached by the text token "L1" in `lever_or_comparison_gated`, not by a declared key (M06's requests_merged names no lever); ADV decides whether it stays |
+| Beyond the points: CF15 on L3 | verbatim, declared key; L3 now prints 15 conflicts in full against 5 (L1) and 7 (L2) |
+| Length (observation) | design_join: L1 10,810, L2 14,716, L3 28,985 characters; about a third is repeated preparation blocks; the length hurts most in L3, a dropped lever |
+Reader's conclusion: harm closed yes (the unsaid move of context between preparations on printed conflict sides), apart from the residual under point 1; one new defect (L2 M01 hop). By ADV's rule the harm closing makes the iteration-2 verdict IMPROVED; I keep the L2 M01 label, the M06 attachment and the point-1 residuals as open items and consume none of them.

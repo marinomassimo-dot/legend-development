@@ -54,9 +54,9 @@
       "steps": [
         {
           "step": "ADV decision ~13:20Z: HE builds a mechanical correction pass (five marking points only; reader residuals NOT added, they become revival conditions); wait for HE SHA + entry point",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "HE 4c3d2d5bb (marking pass)"
         }
       ]
     },
@@ -65,9 +65,9 @@
       "steps": [
         {
           "step": "Resume the SAME reader (ab05cd0d643d4f2ea) on exactly the flagged points, cost apart; closed harm => IMPROVED, else no consumption",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "verify3/RECHECK_REPORT.md: harm closed yes; new defect: L2 M01 hop label contradicts across columns; M06 on L1 is new content by text token (ADV decides); result_it52_rerun.md addendum"
         }
       ]
     },
