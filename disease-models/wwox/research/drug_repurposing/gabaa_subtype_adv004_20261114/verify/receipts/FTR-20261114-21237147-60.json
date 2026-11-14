@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-14T00:02:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "tables": "unavailable",
+  "figures": "unavailable",
+  "discussion": "read",
+  "limitations": "read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-14T00:03:00Z",
+ "event_id": "FTR-20261114-21237147-60",
+ "evidence_basis": [
+  "verbatim_locator | proposition: clobazam and norclobazam at rat alpha3beta3gamma2L in HEK-293T whole-cell patch, same series as diazepam | Results 3.1.2 | \"norclobazam ... 270.5 ± 24.8% (N=4), compared to 487.3 ± 38.7% (N=4) for clobazam\"",
+  "verbatim_locator | proposition: subunits are rat | Methods 2.1 | \"Full-length cDNAs for rat GABAreceptor subunits in pCMV expression vectors\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/verify/recompute.tsv",
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/verify/audit.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC3656601 full text via the PubMed full-text tool (once; text only, figures and table cells not returned); EPMC fullTextXML returned HTTP 500 (technical error); coverage of tables and figures not obtained; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.ejphar.2010.12.037",
+  "pmid": "21237147"
+ },
+ "workflow": "ADV-004 blind verifier V16 (gv-y): adversarial re-extraction of the numbers and conditions; staged for the integrator; the ledger was not written by the preparing actor."
+}

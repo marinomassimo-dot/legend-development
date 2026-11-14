@@ -1,0 +1,15 @@
+stmt_id	paper	compound	statement_verbatim_max25w	locator	kind	note
+S01	Ralvenius 2016	N-desmethylclobazam	NDMC preferred α2GABAARs over α1GABAARs across a wide concentration range.	Abstract	declared	authors' selectivity statement (efficacy)
+S02	Ralvenius 2016	clobazam and diazepam	DZP and CBZ potentiated sedating α1GABAARs and antihyperalgesic α2GABAARs with similar efficacies	Abstract	declared	clobazam called non-differentiating for efficacy
+S03	Ralvenius 2016	clobazam	CBZ was rather non-specific at low concentrations and preferred α3GABAARs at high concentrations.	Results 3.1	declared	
+S04	Ralvenius 2016	diazepam	DZP preferred α1GABAARs at low concentrations and α3GABAARs at high concentrations.	Results 3.1	declared	diazepam statement
+S05	Ralvenius 2016	N-desmethylclobazam and diazepam	NDMC has a better α2/α1-GABAAR selectivity-profile than the parent compound CBZ and better than the canonical BDZ site agonist DZP.	Introduction last paragraph	declared	comparative statement against diazepam
+S06	Ralvenius 2016	all three	differences in affinity between the GABAAR subtypes were generally low	Results 3.1 (binding)	declared	binding alpha1 vs alpha2, rat subunits
+S07	Hammer 2015	clobazam and N-desmethylclobazam	they appear to be non-selective both in terms of potency and efficacy	Conclusion	declared	
+S08	Hammer 2015	clobazam, N-desmethylclobazam, clonazepam	these differences are not considered pertinent from a biological perspective	Discussion para 1	declared	the authors found statistically significant pEC50 and Imax differences (Table 3) and dismissed them as not pertinent
+S09	Hammer 2015	diazepam	A saturating concentration of the prototypic benzodiazepine diazepam was observed to induce comparable or slightly higher responses	Discussion para 4	declared	diazepam statement (single 3 uM point)
+S10	Hammer 2015	diazepam	diazepam, a 1,4-benzodiazepine often referred to as a “full benzodiazepine agonist”	Results (investigations section)	declared	diazepam wording
+S11	Hammer 2015	all	absolute degrees of potentiation exerted by the two 1,5-benzodiazepines at the receptors in other recording set-ups could potentially differ	Discussion para 4	declared	authors' own condition caveat
+S12	Jensen 2014	clobazam and N-desmethylclobazam	both CLB and N-CLB show significantly greater binding affinities for α2 over α1, whereas CLN does not show this particular subtype difference	Results (before Figure 2)	declared	binding only
+S13	Jensen 2014	clobazam and N-desmethylclobazam	This subtype preference was slightly more marked for N-CLB than for CLB.	Discussion para 1	declared	affinity statement
+S14	Jensen 2014	all	Although drawing clinical conclusions from in vitro and in vivo animal data is not feasible	Introduction	declared	authors' own limit

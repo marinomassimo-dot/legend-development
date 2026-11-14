@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-14T00:02:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "tables": "read",
+  "figures": "captions_only",
+  "discussion": "read",
+  "limitations": "read",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-14T00:03:00Z",
+ "event_id": "FTR-20261114-24533090-60",
+ "evidence_basis": [
+  "verbatim_locator | proposition: affinity only, efficacy not investigated | Discussion, last paragraph | \"our work did not investigate another important aspect of BZD function (i.e., efficacy\"",
+  "verbatim_locator | proposition: Ki order alpha2 < alpha5 < alpha1 < alpha3 for clobazam | Results | \"in the range of 205 nM to 753 nM (α2<α5<α1<α3)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/verify/recompute.tsv",
+  "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261113-24533090-62",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC3922815 full text via Europe PMC fullTextXML fetched 2026-11-13 (one request); text, Methods, Tables 1-4, legends read; figures not opened (no PMC page request for this article); bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1371/journal.pone.0088456",
+  "pmid": "24533090"
+ },
+ "workflow": "ADV-004 blind verifier V16 (gv-y): adversarial re-extraction of the numbers and conditions; staged for the integrator; the ledger was not written by the preparing actor."
+}
