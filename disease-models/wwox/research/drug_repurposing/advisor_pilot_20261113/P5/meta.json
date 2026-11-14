@@ -1,0 +1,384 @@
+{
+  "capture": {
+    "assessment_sha256": "fb5f3fb9880c396002626886fb6fe088347ad75a541e3b75a270bb99edcad407",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P5/stream.jsonl",
+    "raw_stream_sha256": "3dc2b7353be1354cc42b87ec26fad9cb4d2d94703c084e516aa95fce3aabcc4e",
+    "source_session_id": "73d44b34-3dbd-4884-b13c-f2208da3c392",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 22623
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-14T02:26:03Z",
+  "label": "P5",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": true,
+      "efforts": {
+        "high": 13
+      },
+      "first_turn_context": 24028,
+      "models": {
+        "claude-opus-5": 9,
+        "claude-opus-5-5": 4
+      },
+      "peak_context": 95499,
+      "totals": {
+        "cache_creation": 150181,
+        "cache_read": 780069,
+        "output": 21474
+      },
+      "turns": 13
+    },
+    "final_turn_model": "claude-opus-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.0010176000000000002,
+        "inputTokens": 10056,
+        "maxOutputTokens": 128000,
+        "outputTokens": 24,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5": {
+        "cacheCreationEphemeral1hInputTokens": 90091,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 90091,
+        "cacheReadInputTokens": 666535,
+        "canonicalModel": "claude-opus-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 1.7310025,
+        "inputTokens": 20,
+        "maxOutputTokens": 64000,
+        "outputTokens": 19869,
+        "provider": "firstParty",
+        "thinkingTokens": 9273,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 60158,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 60158,
+        "cacheReadInputTokens": 179098,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.5519316,
+        "inputTokens": 12,
+        "maxOutputTokens": 128000,
+        "outputTokens": 1740,
+        "provider": "firstParty",
+        "thinkingTokens": 820,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 24,
+    "refusal_fallbacks": [
+      {
+        "apiRefusalCategory": null,
+        "direction": "retry",
+        "fallbackModel": null,
+        "originalModel": null,
+        "scope": "session",
+        "trigger": "refusal"
+      }
+    ],
+    "total_cost_usd": 2.2839517000000003,
+    "turn_models": {
+      "claude-opus-5": 9,
+      "claude-opus-5-5": 5
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 150181,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 150181,
+      "cache_read_input_tokens": 780069,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 28,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 4010,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 4010,
+          "cache_read_input_tokens": 91487,
+          "input_tokens": 2,
+          "output_tokens": 10648,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 21474,
+      "output_tokens_details": {
+        "thinking_tokens": 9958
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-14T02:20:58Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P3/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Strategic assessment \u2014 Stage P, tick 3 (2026-11-13T23:34Z)\n2\t\n3\t## 1 \u00b7 Principal decision\n4\t\n5\tTick 2's assignment (ADV-003) is executed **and** consumed, s"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/budget.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t \"activated_utc\": \"2026-11-13T18:22:36Z\",\n3\t \"expires_utc\": \"2026-11-14T18:22:36Z\",\n4\t \"max_assignments\": 6,\n5\t \"max_invocations\": 5,\n6\t \"recipients\": {\n7"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/**/*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P1/brief.md\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P1/assessm"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/invocations.jsonl"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\"brief_sha256\": \"7817f60c9de4bfd64a8467c097563012c715a6e898ba83c9989e67901b3770a4\", \"effort_asked\": \"high\", \"index\": 1, \"label\": \"P1\", \"model_asked\": \"opus\","
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P4/meta.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t  \"capture\": {\n3\t    \"assessment_sha256\": \"\",\n4\t    \"method\": \"runtime result event of the headless stream (stream-json), saved verbatim\",\n5\t    \"publishe"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/ADV-005_result.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# ADV-005 result (Harness): the activity tool and its cache\n2\t\n3\tTaken in charge by Harness in `ledger/tasks/plan/PLAN-ADV-SESSION-20261113.json` (block `ADV_"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/*adv004*/**"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/consumer_delta.md\ndisease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/README.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# ADV-004 \u2014 the GABA-A subtype-selectivity dispute (clobazam, N-desmethylclobazam) read as text and tables (2026-11-14)\n2\t\n3\tNon-canonical research material. "
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/consumer_delta.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# ADV-004 \u2014 consumer delta (proposals; 2026-11-14)\n2\t\n3\tNon-canonical. Not medical advice; no clinical statement, no dose, no preference for any drug. This pa"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADV-PRESIDIO-20261113.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t \"_schema\": \"orchestrator-task-v1\",\n3\t \"OWNER\": \"orchestrator\",\n4\t \"ACTOR_ID\": \"orchestrator\",\n5\t \"PRIORITY\": \"P0\",\n6\t \"TASK_ID\": \"ORCH-ADV-PRESIDIO-20261"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/README.md",
+        "limit": 40
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# SCI47 package A \u2014 which inhibitory defect is supported by PMID 34634460, and which comparison stays interpretable\n2\t\n3\tNon-canonical research material. Not "
+    },
+    {
+      "input": {
+        "-n": true,
+        "head_limit": 40,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112",
+        "pattern": "chloride|KCC2|NKCC1|E_Cl|driving force|gramicidin|perforated"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/README.md:6:[Omitted long matching line]\ndisease-models/wwox/research/drug_repurp"
+    },
+    {
+      "input": {
+        "-n": true,
+        "-o": true,
+        "head_limit": 40,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "pattern": "E_GABA|EGABA|chloride"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "16:chloride\n19:E_GABA\n19:chloride\n19:chloride\n105:chloride\n113:E_GABA\n122:chloride\n122:E_GABA\n122:chloride\n122:chloride\n123:chloride\n123:chloride\n146:chloride\n1"
+    },
+    {
+      "input": {
+        "glob": "*/README.md",
+        "head_limit": 30,
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "E_GABA|EGABA|gramicidin|perforated.patch"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 14 files\ndisease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/README.md\ndisease-models/wwox/research/drug_repurposing/inhibitory_"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/README.md",
+        "limit": 45
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# SCI42 S6 \u2014 the chloride gradient first: what in the Wwox model separates a correctable inhibitory defect from a compensatory or a maturational effect (2026-"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "limit": 3,
+        "offset": 121
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "121\tIT42-Q01\tdisease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/new_measurements.tsv#M01\tWhat is the tissue pH of the Wwox-d"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/**/new_measurements.tsv"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/nmda_composition_discrim_20261109/output/new_measurements.tsv\ndisease-models/wwox/research/drug_repurposing/ampa_c"
+    },
+    {
+      "input": {
+        "-n": true,
+        "-o": true,
+        "head_limit": 60,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/roadmap_current.md",
+        "pattern": "^#+ |first experiment|measurement inventory|Phase 0|shared preparation"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "1:# \n3:## \n52:## \n61:## \n75:## \n96:## \n125:## \n144:## \n210:## \n306:## \n318:## \n342:## "
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/roadmap_current.md",
+        "limit": 50,
+        "offset": 96
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "96\t## First predictive experiment: bounded and reversible\n97\t\n98\tChoose the smallest question for which an interpretable comparison is possible. Inspect\n99\tavai"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/*{experiment,design,measure,phase0,phase_0}*/README.md"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/design_roles_he50_20261113/README.md"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/design_roles_he50_20261113/README.md",
+        "limit": 30
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# HE50: design-only knowledge and pharmacological roles that keep their context\n2\t\n3\tNon-canonical working note. Not medical advice. Task record `ledger/tasks"
+    },
+    {
+      "input": {
+        "-A": 14,
+        "-n": true,
+        "head_limit": 40,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "DESIGN_MAP"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/design_roles_he50_20261113/README.md:15:| Design-only knowledge is not consumed (IT49-Q03) | INV-02 `NO_DESIGN_LIS"
+    }
+  ]
+}
