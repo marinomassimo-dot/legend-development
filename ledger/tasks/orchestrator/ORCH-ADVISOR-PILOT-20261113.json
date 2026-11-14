@@ -95,6 +95,17 @@
      "evidence": "DISPOSITION 2026-11-14 (SCI result 610702f4, README and consumer_delta read in full; landed 263effd9): row 1 APPLIED (NP3P3 re-scoped not closed: trigger = matched-beta same-laboratory series or independent replication; hits not addressing it do not reopen; 'title only' clause replaced); row 2 APPLIED (WO-16 note; new IT53-Q01, wet, described not commissioned); row 3 APPLIED (IT14 README dated line, ladder L06, NP3P3 cells: 38/38 rows hold, omissions listed); row 4 APPLIED (levers.tsv L2 cell carries the 'may' sentence, never 'alpha2-preferring'); row 5 checked (no subtype wording in INV rows; generated views regenerated, check current) plus one dated clause on INV-05 (slice-paper limits already on INV-10); row 6 APPLIED (8 receipts recorded in event-id order after a clean trial; registries, ranking digest unchanged, dossiers, views, package regenerated). Hammer Fig 4A diazepam readings not carried. No rank, need, direction or qualification changed. CI for 263effd9 pending."
     }
    ]
+  },
+  "OBJ_P9": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "ADV-006 (Science: reconcile the inhibitory thread's measurement requests): dispose rows 1-8 of consumer_delta on delivery",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "DISPOSITION 2026-11-14 (SCI result 933a5a80, README and consumer_delta read in full): rows 1-3 APPLIED (dated notes on IT42-Q02, IT46-Q01, IT42-Q01/IT45-Q05 id collision, IT42-Q03, WO-14, IT46-Q10, WO-15; conflicts named, none adjudicated), row 4 APPLIED (NP3P2 trigger: mIPSC half specified in SCI42 M04/SCI47 Phase 0 (ii), same-cell triad unspecified), row 5 APPLIED as a pointer (CF23 in L1 functional_comparator; L3 wording kept), row 6 APPLIED (dated pointers in the SCI42 and SCI47 READMEs; CLAIM002 s6 named), row 7 left to HE (no wiring requested), row 8 taken as pilot-report evidence (assignment hypothesis partly held; producer draft overstated in six places, caught by the blind verifier). Derived regenerated (triggers.tsv, ranking digest unchanged, dossiers, views, package). No receipts (no new source). No rank, need, direction, state or qualification changed; no wet work commissioned."
+    }
+   ]
   }
  }
 }

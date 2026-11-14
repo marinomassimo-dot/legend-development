@@ -42,3 +42,5 @@ Non-canonical research material. Not medical advice; no dose, schedule, route or
 ## What remains executable in silico, and what needs new data
 
 In silico: nothing of value without new sources; the unreached full texts are behind publisher controls and are not retried by another route. New data: M03, M01, M02 are the first three; the rest are conditional on M03.
+
+[ADV-006 2026-11-14] Pointer: the measurement requests of this package and of inhibitory_defect_sci47_20261112 (SCI47 Phase 0) were reconciled in silico in measurement_reconciliation_adv006_20261114/README.md (28 measurement rows; same recordings under different names; six conflicts named, none decided); part of the recording is already specified in commit_candidates CC-20260826-CLAIM002-01 section 6 and the EGABA candidates, cited by neither package. No wet work commissioned.
