@@ -1,0 +1,61 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-HE-LEVERS-INV05-20261114",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "NORMAL",
+ "assigned_on": "2026-11-14",
+ "OBJECTIVE": "HE — assignment from ADV (its own, from the originals; not operator-given, not an Advisor draft): can the generator read SCI47 levers.tsv as hypotheses under INV-05 and join each lever to the ADV-006 rows by declared keys only. Queued behind IT's BEFORE and criteria. Constraints: no side on the six conflicts, ADV-004 L2 wording untouched, two id spaces and two M01 apart, no ranking, sign or qualification change.",
+ "worktree": ".claude/worktrees/hrk7",
+ "branch": "task/hrk7",
+ "CURRENT_STATE": "IN_PROGRESS",
+ "CHECKPOINT": {
+  "last_verified_result": "none yet",
+  "first_incomplete_work": "OBJ_1_DIAGNOSE"
+ },
+ "AUTHORISED_QUEUE_20261114C": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1_DIAGNOSE": {
+   "order": 1,
+   "title": "Diagnose whether SCI47 levers.tsv (key lever_id, L1-L6, L3 and L6 kept as dropped) fits the hypotheses_only reader as INV-05 hypotheses, and whether each lever joins the ADV-006 rows by declared keys only (requests_merged token sci47_inhibitory#levers:<id>; the gating rows named in interpretable_after; M15 co-requirement; conflicts.tsv m_id); stop at the diagnosis with the cost if the smallest route is not small",
+   "steps": [
+    {
+     "step": "Diagnose whether SCI47 levers.tsv (key lever_id, L1-L6, L3 and L6 kept as dropped) fits the hypotheses_only reader as INV-05 hypotheses, and whether each lever joins the ADV-006 rows by declared keys only (requests_merged token sci47_inhibitory#levers:<id>; the gating rows named in interpretable_after; M15 co-requirement; conflicts.tsv m_id); stop at the diagnosis with the cost if the smallest route is not small",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "IN_PROGRESS"
+  },
+  "OBJ_2_BUILD_AFTER_BEFORE": {
+   "order": 2,
+   "title": "After IT lands the BEFORE and its criteria: build the declared-key link, no side chosen on the six conflicts, ADV-004 L2 wording untouched, two id spaces and two M01 apart, no ranking/sign/qualification change; SCI42 explanations.tsv not registered",
+   "steps": [
+    {
+     "step": "After IT lands the BEFORE and its criteria: build the declared-key link, no side chosen on the six conflicts, ADV-004 L2 wording untouched, two id spaces and two M01 apart, no ranking/sign/qualification change; SCI42 explanations.tsv not registered",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  },
+  "OBJ_3_DELIVER": {
+   "order": 3,
+   "title": "Deliver SHA and exact entry point to IT and ADV by verified sends; publish by the existing procedures",
+   "steps": [
+    {
+     "step": "Deliver SHA and exact entry point to IT and ADV by verified sends; publish by the existing procedures",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  }
+ },
+ "MANDATE_STATE": "OPEN"
+}
