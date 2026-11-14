@@ -21,9 +21,9 @@
       "steps": [
         {
           "step": "HE route and SHA for registering/joining L1/L2 through the declared keys",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "HE: ba0283130, entry point conditional_proposals.py, design_join column, manifest row inhibitory_defect_sci47_20261112 (hypotheses_only, INV-05), PKG_MAP unconfirmed by owners"
         }
       ]
     },
@@ -32,9 +32,9 @@
       "steps": [
         {
           "step": "AFTER on HE's SHA with the same criteria; independent reader (sonnet, high) on the decisive propositions; cost apart",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "generation_it52_20261114/result_it52.md; verify/READER_REPORT.md (sonnet, effort high read back x18, 18 turns, output 43085); verdict NO DIFFERENCE in actionability; observed change in output yes"
         }
       ]
     },
@@ -43,9 +43,9 @@
       "steps": [
         {
           "step": "Consume in the existing consumer only if improved; otherwise name the missing step",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "not improved: no consumer updated; five missing steps named in result_it52.md"
         }
       ]
     },
@@ -54,9 +54,9 @@
       "steps": [
         {
           "step": "Close the loop with ADV and HE",
-          "status": "TODO",
+          "status": "IN_PROGRESS",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "message to ADV and HE pending landing"
         }
       ]
     }
