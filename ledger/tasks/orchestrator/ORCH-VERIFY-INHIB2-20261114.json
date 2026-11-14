@@ -10,7 +10,7 @@
       "steps": [
         {
           "step": "Wait for HE's second delivery (SHA and entry point) after SCI's confirmation of the mapping (PRESIDIO-001)",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
           "evidence": "ADV agreed (2026-11-14 ~12:00Z): rerun once on the SCI-complete build, prereg_it52.md unchanged, fresh blind reader; do not prepare the reader before the final output exists. Fallback: if SCI has recorded no take-in-charge or answer to PRESIDIO-001 by 13:30Z, or answers that the mapping cannot be stated without its own choice, run the last iteration on the then-current build; a second NO DIFFERENCE suspends the thread with revival conditions. Build 00feda1c8 (HE, mechanical items only) is the fallback candidate. ADV verifies SCI at 13:00Z. | UPDATE ~12:00Z: SCI took PRESIDIO-001 in charge (ORCH-PRESIDIO001-20261114, levers_owner_confirmation_presidio001_20261114/); the 13:30Z fallback is not in play. SCI finding: SCI47 design_review (b) gives tonic current or sIPSC decay as the matched measure for L1, so the L1 functional_comparator cell and ADV-006 CF23 note \"SCI47 does not give a reason\" are to be corrected by a dated note. In the rerun: prereg_it52.md unchanged; record that the CF23 source was corrected by the owner before the rerun; score criterion (c) and the side-chosen harm against the owner-corrected statement and say which was used. | UPDATE ~12:15Z (ADV, SCI): SCI table built on 00feda1c8, quote check 139/139, blind verifier then battery, folder on main ~14:30Z, then HE third build; single rerun on that. Owner reading, unverified until the blind check reports, usable only after the folder lands: CF01 cannot be stated without a choice (stays unattached to L1/L2 by the owner answer); CF03 belongs to L1 and L2; M02/M04/M05 are dependencies of interpretation, not an order of running. Score criterion (d) for CF01 against the owner answer and say so; score (c) and side-chosen against the corrected CF23 statement. | CORRECTION (ADV, after SCI blind reader 60/79 agreed, 10 overstated, 5 missed): the earlier word \"wrong\" for ADV-006 CF23 was SCI first unverified wording; the owner reading is that the L1 comparator cell is a TENSION inside SCI47 (design_review (b) gives a reason against Vm/Rin matching for a reuptake arm and does not address SCI42 variable) and CF23 is \"incomplete, not wrong\". M03 is first-hop for L1/L2 (via O01/O05); CF01 stays unattachable without a choice. PRESIDIO-002 closed with nothing for IT (one real gap M26 for SCI42 M02, one false hit M22, noted by SCI). Score (c) and side-chosen against the landed folder (~14:30Z) and say which text was used."
         }
@@ -21,9 +21,9 @@
       "steps": [
         {
           "step": "Rerun the same case with prereg_it52.md unchanged; fresh blind reader (not accb7fc379312e833), sonnet high, cost apart; yardstick: the reader's list of items neither BEFORE nor AFTER reached; keep apart observed change / better formulation / prediction",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "main 4c45ab039; generation_it52_20261114/result_it52_rerun.md; verify2/READER_REPORT2.md (fresh reader, sonnet, effort high read back x23, output 78513); IMPROVED IN ACTIONABILITY with one pre-registered harm triggered (unmarked preparation context on CF04/CF05a and L2; M01 hop inconsistency)"
         }
       ]
     },
@@ -32,9 +32,9 @@
       "steps": [
         {
           "step": "Consume only if improved; if NO DIFFERENCE again write the suspension with revival conditions",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "no consumer updated (harm open); mechanical corrections named for HE; ADV decides whether a correction pass without a new reader suffices"
         }
       ]
     },
@@ -43,9 +43,9 @@
       "steps": [
         {
           "step": "Close the loop with ADV and HE",
-          "status": "TODO",
+          "status": "IN_PROGRESS",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "message to ADV and HE pending landing"
         }
       ]
     }
