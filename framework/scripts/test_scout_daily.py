@@ -984,6 +984,35 @@ class VerifierRound2(unittest.TestCase):
         self.assertEqual("hit", again["cache"])
         self.assertTrue(any("parsed 0 items" in r for r in again["provisional"]))
 
+    def test_the_case_and_limit_layout_of_a_diagnosis_is_read_and_not_taken_for_an_empty_surface(self):
+        table = ("# Diagnosis\n\n| Case | Where the limit sits | Evidence | What was done |\n|---|---|---|---|\n"
+                 "| Lever with a pertinent measure: ROCK2 and SAR-407899 | Executed and compared; the residual is pharmacology qualification | x | y |\n"
+                 "| Knowledge present but not influencing the result | EZH2 tazemetostat is held but not combined | x | y |\n")
+        plan, _ = derive(plan_files(**{DIAG_P: table}))
+        ids = [k for k in by_id(plan) if k.startswith("diagnosis:")]
+        self.assertEqual(2, len(ids))
+        self.assertFalse(any("parsed 0 items" in r for r in plan["provisional"]))
+        self.assertIn("case / limit layout", by_id(plan)[ids[0]]["origin"]["locator"])
+
+    def test_the_operator_roadmap_is_named_in_the_plan_and_ranks_nothing(self):
+        road = ("# Roadmap\n\n## Operator roadmap (authoritative)\n\n<!-- OPERATOR_ROADMAP:BEGIN -->\n**Current priorities**\n1. First thing.\n2. Second thing.\n"
+                "**Strategic direction**\n- A. *Raise capacity.* text\n- B. *Carry through.* text\n<!-- OPERATOR_ROADMAP:END -->\n\n" + plan_files()[sd.SURFACE_PATHS["roadmap"]])
+        plan, _ = derive(plan_files(**{sd.SURFACE_PATHS["roadmap"]: road}))
+        note = [r for r in plan["provisional"] if "operator roadmap" in r]
+        self.assertEqual(1, len(note))
+        self.assertIn("2 current priorities and 2 strategic-direction lines", note[0])
+        self.assertIn("none is ranked by those priorities", note[0])
+        self.assertFalse([k for k in by_id(plan) if "operator" in k.lower()])            # nothing of it became a search question
+        self.assertEqual(set(by_id(plan)), set(by_id(derive()[0])))                      # the other questions are exactly those of the plan without the block
+
+    def test_a_cached_extract_made_by_an_older_parser_is_read_again(self):
+        files = plan_files()
+        plan, ex = derive(files)
+        stale = {k: {kk: vv for kk, vv in v.items() if kk != "parser"} for k, v in ex.items()}          # what an extract written before the parser tag looks like
+        again, _ = derive(files, plan, stale)
+        self.assertEqual("re-derived", again["cache"])
+        self.assertGreater(again["reread"], 0)
+
     def test_prose_and_heading_reopen_conditions_are_read_only_beside_a_watch_decision(self):
         prose = "# Pkg\n\n## Offline dump\n\nDecision: WATCH.\nReopens when the REST failures recur twice in a day. Other text.\n"
         plan, _ = derive(plan_files(**{PKG_P: prose}))
