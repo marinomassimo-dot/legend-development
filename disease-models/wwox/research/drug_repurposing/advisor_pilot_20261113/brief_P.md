@@ -1,8 +1,8 @@
 # Strategic Advisor brief — Stage P (proactive evaluation)
 
 ## Snapshot
-- Repository SHA: `eb11e436eded5ee644c2585d207ae3e67f188208` (branch `main`)
-- Dispatch time (UTC): 2026-11-14T09:55:11Z
+- Repository SHA: `e139cddda9a2c4d6e8eb72df1beab15a26bdc2e8` (branch `main`)
+- Dispatch time (UTC): 2026-11-14T14:17:36Z
 - Uncommitted paths: none
 - Dashboard: https://marinomassimo-dot.github.io/legend-development/ · source revision 2a18966dfc54e5f1a78508b4c385dbcc37830f92 2026-11-14T05:46:42+00:00 · the public page shows no build stamp; the package commit above is the source revision it is generated from. Publication date of the live page was not checked.
 
@@ -33,8 +33,10 @@ return from open questions to research active.
 **Pilot campaign** (first Proactive Strategic Advisor pilot): 24 hours from its effective activation (`advisor_pilot_20261113/budget.json`), no automatic renewal of that expiry; no recursive delegation, no external spend. **Current limits** (amended 2026-11-14, see the dated lines below and `budget.json` `amendments`): at most **seven** real strategic invocations and at most **nine** executive assignments in total, each invocation at most 20 turns, counting everything already used, failed attempts included (5 invocations and 6 assignments were used before the 2026-11-14 amendment; 2 invocations and 3 assignments before the 2026-11-13 one; the "3/3" and the "5/6" are historical, not the current limit). Two of the three new assignments are given by the operator directly to HE and IT and are not Advisor drafts; at most one further assignment may be an Advisor draft. These are ceilings, not targets. Exhausting the Advisor's budget stops its evaluations only; the work already authorised to the sessions goes on.
 
 **Recent operator instructions** (newest first; add a dated line to change direction; to suspend work add a control line as described in the 2026-11-14 entry below):
+- 2026-11-14 (permanent: anticipate useful work during waits; given to the ADV session and recorded here at the operator's request): while waiting for CI, batteries, deliveries or other dependencies, the presidio considers whether independent useful work can be anticipated or prepared, without waiting for every session to be idle. It may propose an independent anticipable activity, queue a later assignment, prepare a follow-up conditional on the expected result, or keep the wait when other work would not justify its cost (a motivated wait is a valid decision). It chooses through the roadmap, dashboard opportunities, open questions, candidates, results, DREAM and the pertinent radars, without consulting every tool at every wait. A delivered assignment says: "The current work keeps priority. Queue this assignment; you may anticipate its independent parts if resources and dependencies allow. Before starting it, check that results that arrived since have not changed its usefulness." The recipient decides the operational moment, may reorder or declare it superseded; no new approval inside the authorised perimeter. The queue is short and reviewable in the existing records; no long speculative sequences; never start both branches of a decision still open; frozen candidates and verifications in progress are protected; shared resources and model consumption count (a wait does not prove that resources are available); a delivery is real only when it reached the recipient, a mention in the text is not a send. Expected benefit: a useful result sooner at proportionate cost.
+- 2026-11-14 (permanent integration to the continuous-autonomy mandate; given to HE): the operator has clarified explicitly that the systemic mandate of the entry below includes ADV and requires no individual repetitions: no further confirmation in any session's chat is needed for it. Shared instructions: the scope of an operator instruction may cover several sessions and the session that first receives it does not limit that scope; a new documented operator instruction is reconciled with the earlier ones by provenance, scope and order in time; a statement by an agent does not widen authority; a verified systemic instruction does not need repeated individual approvals. Two defects the operator observed are corrected at the first safe boundary: messages whose text named several recipients but whose transport receipt named one, and a human confirmation step the code did not need.
 - 2026-11-14 (continuous autonomy and useful radar inputs; given to HE): at steady state LEGEND is authorised to continue on its own inside this roadmap, the boundaries already set and the available resources; no new prompt is needed after a number of assignments, hours or any other arbitrary duration. The pilot's numeric and time ceilings were temporary evaluation tools: their counters, results and failures stay as history (`advisor_pilot_20261113/budget.json` is neither edited nor renewed) and continuous operation is a declared, revocable mode of the same campaign (`advisor_pilot_20261113/CONTINUOUS.json`; `strategic_advisor.py end-continuous`, or deleting that file, returns to the bounded rules). An assignment that ends does not end the presidio; waiting for an event is a valid state, not an abandonment. Operator control: put in this section a line that begins with the word `PAUSE`, `STOP`, `RESUME`, `URGENT` or `INTEGRATION`, a colon and the scope; the scopes `all` and `advisor` suspend the Advisor presidio and `RESUME` lifts a suspension (`RESUME: all` lifts every one); other scopes are read by the sessions that own them; a plain dated line is an integration, a new Mission replaces the old one. Silence from the operator revokes nothing. Resources are shared by IT, SCI, HE, ADV and their delegates; the usable weekly limit is not exposed by the runtime and is not assumed: when the operator states it, it is configured as `delegation_budget.md` section 10 says. The three radars widen the opportunities and are not a second roadmap.
-- 2026-11-14 (generative capacity follow-through; the previous night mission and its report stay as historical evidence): the operator authorises a circumscribed increment inside the same campaign, with counters and history kept (7 invocations and 9 assignments in total, expiry 2026-11-14T18:22:36Z unchanged, no renewal, no external spend, no new service). Aim: turn the pilot's reconciled knowledge into an observable change in the scientific and pharmacological outputs. Two assignments are given by the operator directly: HE evaluates and builds the minimum link between the ADV-006 measurement knowledge and a real generation path; IT fixes a baseline, checks the before/after scientific effect and consumes the result. At most one further assignment, scientific, only if HE or IT identify a precise question whose answer could change a comparison or an experiment. The ADV session restores one recall and keeps the presidio until the expiry (forward, reconcile dependencies, check consumption, quiet when nothing actionable); at the expiry it starts no evaluation or assignment, states the state of the authorised work and removes the recall. Evaluations only where they can change a decision; no automatic escalation to max effort. A result counts only if it changes a comparison, hypothesis, experiment or research decision and reaches a consumer; operator-assigned work is declared as such. No new registers, gates, counters, schedulers or approval levels.
+- 2026-11-14 (generative capacity follow-through; the previous night mission and its report stay as historical evidence): the operator authorises a circumscribed increment inside the same campaign, with counters and history kept (7 invocations and 9 assignments in total, expiry 2026-11-14T18:22:36Z unchanged, no renewal, no external spend, no new service). Aim: turn the pilot's reconciled knowledge into an observable change in the scientific and pharmacological outputs. Two assignments are given by the operator directly: HE evaluates and builds the minimum link between the ADV-006 measurement knowledge and a real generation path; IT fixes a baseline, checks the before/after scientific effect and consumes the result. At most one further assignment, scientific, only if HE or IT identify a precise question whose answer could change a comparison or an experiment. The ADV session restores one recall and keeps the presidio until the expiry (forward, reconcile dependencies, check consumption, quiet when nothing actionable); at the expiry it starts no evaluation or assignment, states the state of the authorised work and removes the recall. [Reconciled 2026-11-14 by the ADV presidio: the operator's later message to the ADV session and the continuous mode supersede the removal of the recall at the expiry for the presidio; the recall stays, the expiry is history of the bounded operation, and evaluations and assignments follow their own conditions, not the expiry.] Evaluations only where they can change a decision; no automatic escalation to max effort. A result counts only if it changes a comparison, hypothesis, experiment or research decision and reaches a consumer; operator-assigned work is declared as such. No new registers, gates, counters, schedulers or approval levels.
 - 2026-11-13 (night mission, ten hours, ends 2026-11-14T09:33Z and never past the campaign expiry): the operator is away. The ADV session coordinates IT, SCI and HE on its own and aims to close at least one useful cycle between research and drug repurposing: roadmap -> strategic choice -> assignment -> result -> consumption in drug repurposing -> new decision. The campaign limits above were raised (5 invocations, 6 assignments in total, no new service or spend). Before choosing, reconcile the real state (running, delivered and consumed, waiting with a resume condition, technical blocks, available sessions) and compare at least four real alternatives: go deeper on the thread just followed; change to another prioritised question; use knowledge already present that the generator does not exploit; fix a small Harness problem that blocks a scientific result. Prefer one principal, bounded and deep scientific assignment; one independent Harness assignment only if a concrete obstacle exists; any follow-up chosen after results, not reserved to fill the night. Recipients keep methodological autonomy (they may correct the premise and propose competing explanations). Keep generation and adversarial verification apart; a wet-lab experiment is described (measurement, comparison, decision it changes), never commissioned or turned into an urgent request. A negative or unchanged result is valid. The IT CI diagnosis stays first for publication and must not freeze independent SCI and HE work. Quiet periodic checks. No new registers, hierarchies, contracts, gates or schedulers.
 - 2026-11-13 (later): the operator assigned the session "ADV — Strategic Advisor" (ACTOR_ID `orchestrator`) as the standing strategic presidio of this pilot, with no new budget and no renewal: it talks with the operator, keeps this section, hosts the recall and forwards assignments to IT, SCI and HE. The strategic direction A-G above was added from that mandate; priorities 1-5 are unchanged. No instruction to stop or pause.
 - 2026-11-13: the roadmap above; the Advisor may act without being asked, the Orchestrator keeps operational coordination; the operator can intervene at any time by editing this section.
@@ -45,28 +47,63 @@ return from open questions to research active.
 ## Operating mode
 continuous: the operator authorised the Advisor to continue inside the roadmap, the existing boundaries and the available resources (authorisation of 2026-11-14T09:50:42Z; the pilot's totals and expiry above are history). An assignment that ends does not end the presidio. Waiting for an event is a valid outcome and `none: <reason>` is a complete answer; do not invent work to stay busy. Radar and scouting items are opportunities to compare with the current thread, the other open questions, the promising comparisons, knowledge already held and concrete obstacles; they are not orders and not a second roadmap, and nothing is installed because a radar recommends it. Shared weekly allocation: unset (usable weekly limit not given by the operator and not exposed by the runtime: nothing is blocked and no value is assumed). Operator control lines in the roadmap section (most recent last): [].
 
+## Waiting and follow-through
+When sessions or a chain of dependencies wait for a battery, a CI run, a delivery or another answer (see `waits` above; an expected long wait can be enough, you need not wait until every session is idle), judge whether to: (independent) anticipate an activity that does not depend on the awaited result, does not touch the candidate or the clones, processes and directories under verification, and that the shared resources allow; (queued) prepare an assignment to run after the current work, which the recipient holds as a BLOCKED step with `unblock_when` in its own record; (conditional) prepare only the question or the alternative that depends on the expected result, never executing every branch ahead; or keep waiting because nothing would justify its cost or risk. Say which, and why. An assignment names why it is useful, its `mode`, `start_condition`, the result expected and the decision it touches, `interferes_with` and `obsolete_if` (optional fields; no new contract). The recipient may anticipate part, keep it queued, reorder it or declare it superseded, giving the reason in its own record, without asking anyone; reconcile a queued assignment with the results that arrived before you propose to start it. A new integration that needs changes to a frozen candidate is a later increment, not an edit of the proof. Keep queues short and reviewable. Group events and reuse an assessment that is still pertinent; do not turn every WAITING into an expensive evaluation. An assignment already drafted and authorised is delivered in the turn that reads it.
+
 ## Observed state (mechanical, this tick)
 {
  "events": [
-  "delivery: 7c5af7c6a IT51: close mandate record (loop closed with ADV and HE)",
-  "delivery: 49da57433 repository: integrate task",
-  "delivery: a33c39a90 repository: integrate task",
-  "mandate: ORCH-VERIFY-GENDIFF-20261114: OPEN -> RELEASED",
-  "opened: PLAN-HE-AUTONOMY-RADAR-20261114",
-  "opened: PLAN-HE-RECONCILED-USABLE-20261114"
+  "delivery: eb40cf9c4 HE54: records \u2014 follow-through delivered, lever landing waits on SCI's record by unblock_when",
+  "delivery: 922f1a30a repository: integrate task",
+  "delivery: 00feda1c8 repository: integrate task",
+  "delivery: ceed002f6 repository: integrate task",
+  "delivery: c4efc7f29 HE53: records \u2014 lever link delivered, verified-delivery integration done pending CI",
+  "delivery: a6db5e9ef repository: integrate task",
+  "mandate: PLAN-HE-RECONCILED-USABLE-20261114: OPEN -> RELEASED",
+  "opened: PLAN-HE-LEVERS-INV05-20261114",
+  "delivery: ca0a44930 IT52 rerun: recheck of the marking pass (harm closed; L2 M01 hop label open)",
+  "delivery: 4c3d2d5bb repository: integrate task",
+  "delivery: 299db32ec HE54: lever join follows SCI's landed owner table (routes D N E L, CF01 unattached with the owners' reason, L4 status, reopen note); records",
+  "delivery: 6c4183598 PRESIDIO-001/002: record complete; landing",
+  "delivery: eb981bf52 HE54: lever join adapted to SCI's blind-reader corrections (branch, not landed): wording, owner-stated attachments labelled as such, L6 bullet",
+  "delivery: 6f979ede2 HE54: lever join with SCI's owner reading \u2014 slots corrected, attachments by declared ids (branch, not landed until SCI's folder is on main and its verifier closed)",
+  "waiting: PLAN-HE-AUTONOMY-RADAR-20261114: CI runs #744 (6ad9b8da) and #745 (3147f722) in progress; ci_runs.py wait",
+  "waiting: PLAN-HE-LEVERS-INV05-20261114: CI runs in progress (#749 for 4c3d2d5bb and the run of the last-list SHA); ci_runs.py wait"
  ],
  "open_mandates": [
   "INTAKE-OVERNIGHT-20261002",
   "ORCH-ADV-FOLLOWTHROUGH-20261114",
   "ORCH-METABOLIC-BATCH-20261019",
   "PLAN-HE-AUTONOMY-RADAR-20261114",
-  "PLAN-HE-RECONCILED-USABLE-20261114",
+  "PLAN-HE-LEVERS-INV05-20261114",
   "PLAN-HE47-USABLE-KNOWLEDGE-PRESERVED-MEANING-SUSTAINABLE-COST-20261112",
   "PLAN-PROACTIVE-ADVISOR-20261113"
  ],
+ "waits": [
+  {
+   "task": "INTAKE-OVERNIGHT-20261002",
+   "step": "Operator rule of 2026-10-03: whenever a literature batch completes, the Orchestr",
+   "blocker": "neuro-WWOX new-literature pool exhausted and the decisive targets are paywalled or absent (356 declared artefacts absent; PMIDs 10786676, 11719429, 28001369, 38"
+  },
+  {
+   "task": "ORCH-METABOLIC-BATCH-20261019",
+   "step": "Further waves on the metabolic themes: pool exhausted (wave 4 selector found <12",
+   "blocker": "selectable lawful WWOX-direct pool exhausted; the decisive remaining targets have no lawful free route"
+  },
+  {
+   "task": "PLAN-HE-AUTONOMY-RADAR-20261114",
+   "step": "CI concluded green on 6ad9b8dae (the follow-through landing) and 3147f722d",
+   "blocker": "CI runs #744 (6ad9b8da) and #745 (3147f722) in progress; ci_runs.py wait"
+  },
+  {
+   "task": "PLAN-HE-LEVERS-INV05-20261114",
+   "step": "Public release gate CI concluded green on the SHA of the last list (and on 4c3d2",
+   "blocker": "CI runs in progress (#749 for 4c3d2d5bb and the run of the last-list SHA); ci_runs.py wait"
+  }
+ ],
  "sessions": {
   "q230p-tooluniverse-blind-38": "idle",
-  "HE": "busy",
+  "HE": "idle",
   "IT Orchestrator": "idle",
   "legend-development-e8": "idle",
   "SCI": "idle",
@@ -75,7 +112,7 @@ continuous: the operator authorised the Advisor to continue inside the roadmap, 
   "legend-development-38": "idle",
   "legend-development-39": "busy"
  },
- "commits_since_last_tick": 13
+ "commits_since_last_tick": 48
 }
 
 ## Assignments already drafted, with their evidence level (do not duplicate; follow what was taken in charge)
@@ -113,7 +150,7 @@ continuous: the operator authorised the Advisor to continue inside the roadmap, 
 }
 
 ## Previous assessment
-P5: `disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P5/assessment.md` (read it; reuse it when nothing relevant changed)
+P6: `disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P6/assessment.md` (read it; reuse it when nothing relevant changed)
 
 ## Live harness scouting (daily scout briefing, read by the caller: a feed of opportunities, not of evidence; the weekly candidate tables are stale)
 file time 2026-11-14T05:21Z; complete
@@ -157,20 +194,20 @@ turn_limit is 20, a hard stop: at turn 21 the run is killed, counts as one of th
 ## Neutral entry points
 | id | what | patterns (relative to the repository root unless absolute) | matches now | last commit | largest file |
 |---|---|---|---|---|---|
-| limits | Authorised mission and resource limits: the task record named in the brief, and its siblings | `ledger/tasks/*/*.json` | 219 | 2026-11-14T09:52:34+00:00 | `ledger/tasks/scientist-a/AQEILAN-FT-A-001.json` (35,910 bytes) |
-| invariants | Canonical project invariants and the operating rules | `CLAUDE.md`<br>`ARCHITECTURE.md`<br>`framework/master/harness_development_principles.md`<br>`framework/master/designed_for_growth.md`<br>`framework/master/gold_is_in_the_details.md`<br>`framework/instruction/LEGEND_CORE.md`<br>`framework/instruction/epistemic_discipline.md`<br>`disease-models/wwox/mission.md` | 8 | 2026-11-13T18:17:16+00:00 | `framework/instruction/LEGEND_CORE.md` (35,123 bytes) |
-| repurposing_method | Drug-repurposing roadmap and Standing method | `disease-models/wwox/research/drug_repurposing/roadmap_current.md`<br>`framework/protocols/repurposing_adapter_convention.md` | 2 | 2026-11-14T09:52:24+00:00 | `disease-models/wwox/research/drug_repurposing/roadmap_current.md` (55,491 bytes) |
+| limits | Authorised mission and resource limits: the task record named in the brief, and its siblings | `ledger/tasks/*/*.json` | 223 | 2026-11-14T14:11:29+00:00 | `ledger/tasks/scientist-a/AQEILAN-FT-A-001.json` (35,910 bytes) |
+| invariants | Canonical project invariants and the operating rules | `CLAUDE.md`<br>`ARCHITECTURE.md`<br>`framework/master/harness_development_principles.md`<br>`framework/master/designed_for_growth.md`<br>`framework/master/gold_is_in_the_details.md`<br>`framework/instruction/LEGEND_CORE.md`<br>`framework/instruction/epistemic_discipline.md`<br>`disease-models/wwox/mission.md` | 8 | 2026-11-14T11:28:20+00:00 | `framework/instruction/LEGEND_CORE.md` (35,123 bytes) |
+| repurposing_method | Drug-repurposing roadmap and Standing method | `disease-models/wwox/research/drug_repurposing/roadmap_current.md`<br>`framework/protocols/repurposing_adapter_convention.md` | 2 | 2026-11-14T11:57:58+00:00 | `disease-models/wwox/research/drug_repurposing/roadmap_current.md` (58,297 bytes) |
 | dashboard | Dashboard: source records of the public page (the page is a map, the records are the facts) | `disease-models/wwox/research/drug_repurposing/view/README.md`<br>`disease-models/wwox/research/drug_repurposing/view/shareable_package/manifest.json`<br>`disease-models/wwox/research/drug_repurposing/view/shareable_package/README.md`<br>`disease-models/wwox/research/drug_repurposing/view/DEPLOY.md`<br>`disease-models/wwox/research/drug_repurposing/view/evidence_graph.json`<br>`disease-models/wwox/research/drug_repurposing/view/work_order.json`<br>`disease-models/wwox/research/drug_repurposing/view/context_verdicts.json`<br>`disease-models/wwox/research/drug_repurposing/view/i18n/content_en.json` | 8 | 2026-11-14T05:46:42+00:00 | `disease-models/wwox/research/drug_repurposing/view/work_order.json` (51,423 bytes) |
 | investigations | Investigations (research investment, not efficacy), needs and cards | `disease-models/wwox/research/drug_repurposing/ranking_it*/investigations.tsv`<br>`disease-models/wwox/research/drug_repurposing/ranking_it*/ranking.json`<br>`disease-models/wwox/research/drug_repurposing/needs/needs.md`<br>`disease-models/wwox/research/drug_repurposing/cards/*` | 65 | 2026-11-14T02:17:22+00:00 | `disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/ranking.json` (1,101,944 bytes) |
 | open_questions | Open-question maps and rows | `disease-models/wwox/research/drug_repurposing/**/open_questions*` | 5 | 2026-11-14T05:46:42+00:00 | `disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv` (175,506 bytes) |
-| candidates | Candidates, comparisons and hypothesis packages | `disease-models/wwox/research/drug_repurposing/generation_it*/`<br>`disease-models/wwox/research/drug_repurposing/**/compound_decisions*.tsv`<br>`disease-models/wwox/research/drug_repurposing/**/hypotheses*` | 53 | 2026-11-14T09:35:37+00:00 |  |
-| packages | Completed packages and their consumer notes | `disease-models/wwox/research/drug_repurposing/*/README.md`<br>`disease-models/wwox/research/drug_repurposing/**/CONSUMER_NOTE.md` | 245 | 2026-11-14T08:03:35+00:00 | `disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/README.md` (65,530 bytes) |
-| diagnoses | Diagnoses, evaluations and DREAM (a connection DREAM proposes is a question, not biological evidence) | `disease-models/wwox/research/session_evaluations/*`<br>`disease-models/wwox/research/drug_repurposing/diagnosis_*/*`<br>`disease-models/wwox/research/dream*/README.md`<br>`disease-models/wwox/research/drug_repurposing/dream*/README.md` | 201 | 2026-11-14T03:02:36+00:00 | `disease-models/wwox/research/session_evaluations/2026-10-04_BATCH_20261004_001.md` (60,878 bytes) |
+| candidates | Candidates, comparisons and hypothesis packages | `disease-models/wwox/research/drug_repurposing/generation_it*/`<br>`disease-models/wwox/research/drug_repurposing/**/compound_decisions*.tsv`<br>`disease-models/wwox/research/drug_repurposing/**/hypotheses*` | 54 | 2026-11-14T14:11:29+00:00 |  |
+| packages | Completed packages and their consumer notes | `disease-models/wwox/research/drug_repurposing/*/README.md`<br>`disease-models/wwox/research/drug_repurposing/**/CONSUMER_NOTE.md` | 248 | 2026-11-14T12:15:47+00:00 | `disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/README.md` (65,530 bytes) |
+| diagnoses | Diagnoses, evaluations and DREAM (a connection DREAM proposes is a question, not biological evidence) | `disease-models/wwox/research/session_evaluations/*`<br>`disease-models/wwox/research/drug_repurposing/diagnosis_*/*`<br>`disease-models/wwox/research/dream*/README.md`<br>`disease-models/wwox/research/drug_repurposing/dream*/README.md` | 202 | 2026-11-14T12:15:47+00:00 | `disease-models/wwox/research/session_evaluations/2026-10-04_BATCH_20261004_001.md` (60,878 bytes) |
 | memory_dismissals | Dismissal and discovery ledgers, memory index (outside the repository) | `disease-models/wwox/research/dismissal_ledger_current.md`<br>`disease-models/wwox/research/discovery_ledger_current.md`<br>`/home/desktop/.claude/projects/-home-desktop-legend-development/memory/MEMORY.md` | 3 | 2026-11-12; 2026-11-14 (file time, outside the r | `disease-models/wwox/research/discovery_ledger_current.md` (926,660 bytes) |
-| radar_science | Scientific, pharmacological, data and method radars (opportunities, not evidence) | `disease-models/wwox/research/drug_repurposing/radar_*/README.md`<br>`disease-models/wwox/research/capability_scout_log.md` | 5 | 2026-11-13T15:35:45+00:00 | `disease-models/wwox/research/capability_scout_log.md` (184,962 bytes) |
+| radar_science | Scientific, pharmacological, data and method radars (opportunities, not evidence) | `disease-models/wwox/research/drug_repurposing/radar_*/README.md`<br>`disease-models/wwox/research/capability_scout_log.md` | 6 | 2026-11-14T10:02:09+00:00 | `disease-models/wwox/research/capability_scout_log.md` (184,962 bytes) |
 | harness_scouting | Harness scouting and repository mining. The weekly candidate tables stop at their last week (see `last commit`); the live feed is the daily scout, whose host cache is outside the repository and is embedded in the Stage P brief by the caller | `governance/candidates/HARNESS-SCOUT-*.md`<br>`/home/desktop/.local/state/legend/scout_daily_briefing.md` | 2 | 2026-09-28; 2026-11-14 (file time, outside the r | `governance/candidates/HARNESS-SCOUT-2026-W40.md` (34,158 bytes) |
 | capability_surface | What the system claims it can do, with maturity | `SKILLS.md`<br>`CAPABILITIES.md` | 2 | 2026-11-13T18:17:16+00:00 |  |
-| tools | Which tool answers which question, and what the shipped censuses and cost tools measure (the advisor has no shell; this explains what the records came from) | `framework/scripts/README.md`<br>`framework/protocols/delegation_budget.md` | 2 | 2026-11-14T09:52:24+00:00 | `framework/scripts/README.md` (56,927 bytes) |
+| tools | Which tool answers which question, and what the shipped censuses and cost tools measure (the advisor has no shell; this explains what the records came from) | `framework/scripts/README.md`<br>`framework/protocols/delegation_budget.md` | 2 | 2026-11-14T11:28:20+00:00 | `framework/scripts/README.md` (57,333 bytes) |
 
 Memory directory (read-only): `/home/desktop/.claude/projects/-home-desktop-legend-development/memory`
 
