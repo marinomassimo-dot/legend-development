@@ -53,6 +53,36 @@ The existing recall observes semantic changes, linked mandate outcomes and resol
 
 The tests use the repository's stand-in runtime: a new row reaches a saved Stage P brief, an assessment patch feeds a new follow-up back into the portfolio without rewriting the assessment, a deferred change is not lost, and a time-dependent opportunity becomes actionable without a radar. They also verify source-preserving updates and that task release is not mistaken for consumption.
 
-This proves the mechanical path, not that a future model selects the best scientific work or updates every row. Real delivery, uptake and scientific usefulness remain observed outcomes of the continuing trial. No new model invocation, subscription quota estimate or external spend is required by this implementation.
+This proves the mechanical path, not that a future model selects the best scientific work or updates every row. Real delivery, uptake and scientific usefulness remain observed outcomes of the continuing trial. The implementation uses the existing evaluation runtime and recall; it adds no service, external spend or estimate of subscription quota.
+
+## First live use
+
+The existing ADV recall started [assessment P9](../advisor_pilot_20261113/P9/assessment.md) at 2026-11-14 22:23:29 UTC and completed it at 22:25:55 UTC. Its [metadata](../advisor_pilot_20261113/P9/meta.json) records a read of the complete portfolio. The optional assessment updates were applied to RP-005, RP-008 and RP-017, demonstrating both input consumption and the return path.
+
+P9 drafted a literature census for RP-008. The hosting ADV session then checked the original scout implementation, declined the draft as duplicative on its stated premises, and revised RP-008 with the reason and a narrower reopening condition. The draft remains visible in the assignment history; it was not dispatched or taken in charge. This is evidence of actual use and correction, not evidence of improved scientific prediction or a new literature finding. The original 24-hour trial window remains unchanged.
 
 Removal: delete the portfolio branches, its entry point, TSV and routing paragraphs; existing consultation and proactive campaign modes remain usable. The original trial window and counters are untouched.
+
+## Session learning record
+
+Session: PLAN-LIVING-RESEARCH-PORTFOLIO-20261114 · Date: 2026-11-14 · ACTOR_ID: plan · Role: Harness Engineering · Task: same id, version 1, generation 1.
+
+| Field | Observed result |
+|---|---|
+| WORK COMPLETED | One persisted opportunity portfolio, update command, recall input and assessment return path, routed through the existing Advisor. |
+| PROBLEMS | The first targeted checks caught an oversized agent definition; the first live proposal relied on a mistaken duplicate-check premise. |
+| SOLUTION | Shortened the definition without relaxing the limit. The hosting ADV checked the originals, declined the proposal and corrected the portfolio. |
+| LEARNING | A durable pointer and a tested consumer are necessary; successful consultation still does not establish good strategic selection. |
+| MICRO-UPGRADE | Reused the existing evaluation and recall rather than creating another scheduler or task authority. |
+| IMPACT | Twenty initial opportunities became retrievable inputs; three were fed back by a real assessment. No scientific claim or ranking change is attributed to this implementation. |
+| CLASSIFICATION | Harness capability and observed procedural use. |
+| SCOPE | ADV consultation and material SCI/IT/HE handoffs; scientific evidence and execution remain in their existing records. |
+| EVIDENCE | Implementation 614db32d7, new LivingPortfolio tests, P9 assessment and metadata, and the corrected RP-008 outcome. Verification scope is recorded in the task record. |
+| LEARNING_ID | PLAN-LIVING-RESEARCH-PORTFOLIO-20261114-L1 |
+| CONFIRMATION_CLASS | Mechanical tests plus one live use; scientific decision benefit unmeasured. |
+
+## Verification environment incident
+
+The first complete-inventory attempt on 614db32d7 completed 226 suites without a nonzero suite exit, then accumulated browser waits. The page file existed on the host but not under the running Snap Chromium process's filesystem root. A separate synthetic HTML fixture loaded successfully with the same installed browser from the project's ignored `tmp/` directory. Browser startup and a working DevTools endpoint had not established access to the workload's files.
+
+Only this actor's runner and its checked descendant identities were stopped. That attempt is **INTERRUPTED WITHOUT VERDICT**, not PASS. Its original log and interruption receipt remain local. The complete inventory is repeated on b6270eab80d7d14894573768fc351975cceb3253 with an accessible `TMPDIR`; the browser suite runs first, with every inventory target included once. No sandbox-bypass flag, new browser installation or weakened assertion is used. RP-020 records the small workload-probe opportunity for ADV to assess; no additional gate or service was implemented.

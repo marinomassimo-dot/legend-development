@@ -1,5 +1,5 @@
 {
-  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+  "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
   "TASK_ID": "PLAN-LIVING-RESEARCH-PORTFOLIO-20261114",
   "DIRECTIVE_VERSION": 1,
   "GENERATION": 1,
@@ -56,7 +56,16 @@
   "RUNTIME": "Codex",
   "SCIENTIFIC_DELTA": "NONE: opportunities and procedural routing only; no scientific claims or ranking changed",
   "CHECKPOINT": {
-    "last_verified_result": "Targeted suites pass; freezing candidate for fresh-clone regressions",
-    "first_incomplete_work": "Full release regressions and landing"
+    "last_verified_result": "Implementation landed and used in live ADV P9; 226 suites completed without nonzero exits before browser namespace failure was diagnosed. Original battery explicitly interrupted without verdict.",
+    "first_incomplete_work": "Complete fresh-clone retry on b6270eab80d7d14894573768fc351975cceb3253 with accessible TMPDIR, then final release and cleanup."
+  },
+  "VALIDATION_INCIDENT": {
+    "original_candidate": "614db32d7",
+    "status": "INTERRUPTED_WITHOUT_VERDICT",
+    "completed_suites": 226,
+    "local_log": "/tmp/legend-portfolio-battery.log",
+    "reason": "Browser could not see host /tmp HTML in its Snap namespace; identical synthetic fixture loaded from project tmp. Only this actor owned runner and descendants were stopped by checked PID:start identity.",
+    "retry_candidate": "b6270eab80d7d14894573768fc351975cceb3253",
+    "retry_log": "/tmp/legend-portfolio-battery-valid.log"
   }
 }
