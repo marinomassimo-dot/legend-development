@@ -84,6 +84,17 @@
      "evidence": "DISPOSITION 2026-11-14 (result 7667730b, ADV-005_result.md read in full): the shipped activity_search.py needs the gitignored per-checkout catalog cache, so it runs in the primary checkout or in a worktree with LEGEND_CATALOG_CACHE set; my ADV-003 remark 'cache dependency, recorded' is a worktree artefact, qualified here. Harness fix (exit-2 message, one test, one routing row) accepted. APPLIED: a note on IT52-Q01 (route; tool takes target symbols not a molecule; target_activity.py by-molecule coverage untested). Scout-feed defects not done by Harness (assignment allowed one of two) and remain for the presidio. No ranking, need, candidate or qualification changed."
     }
    ]
+  },
+  "OBJ_P8": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "ADV-004 (Science: GABA-A subtype dispute, NP3P3): dispose rows 1-6 of consumer_delta on delivery",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "DISPOSITION 2026-11-14 (SCI result 610702f4, README and consumer_delta read in full; landed 263effd9): row 1 APPLIED (NP3P3 re-scoped not closed: trigger = matched-beta same-laboratory series or independent replication; hits not addressing it do not reopen; 'title only' clause replaced); row 2 APPLIED (WO-16 note; new IT53-Q01, wet, described not commissioned); row 3 APPLIED (IT14 README dated line, ladder L06, NP3P3 cells: 38/38 rows hold, omissions listed); row 4 APPLIED (levers.tsv L2 cell carries the 'may' sentence, never 'alpha2-preferring'); row 5 checked (no subtype wording in INV rows; generated views regenerated, check current) plus one dated clause on INV-05 (slice-paper limits already on INV-10); row 6 APPLIED (8 receipts recorded in event-id order after a clean trial; registries, ranking digest unchanged, dossiers, views, package regenerated). Hammer Fig 4A diazepam readings not carried. No rank, need, direction or qualification changed. CI for 263effd9 pending."
+    }
+   ]
   }
  }
 }
