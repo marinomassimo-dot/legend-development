@@ -1,0 +1,25 @@
+# IT52 pre-registration: SCI47 levers L1 and L2 read by the generator through the keys the packages state
+
+Non-canonical working note. Not medical advice; no dose, schedule or route. Reference genotype class only. Written before HE changes the generator path; nothing here nominates a compound or changes a ranking, sign or need. A targeted check of one known limit, not an independent benchmark and not a validation of the generator. Case chosen by ADV from my proposal (the chooser and the criteria author are the same session, so the decisive propositions of the after-run go to an independent reader).
+
+## Question (ADV, 2026-11-14)
+If the generator reads SCI47 levers L1 (GABA availability: acute GAT-1 reuptake block versus GABA-transaminase inactivation) and L2 (postsynaptic GABA-A positive modulation, benzodiazepine-site class) and joins them through the keys the packages declare, does its output for the GABA arm and its matched non-GABAergic comparator change in a way an independent reader finds actionable, with no side chosen?
+
+## BEFORE (held at HEAD 6d6fabf88a26d0577894b6c53533dafbc1134544)
+* Input: `inhibitory_defect_sci47_20261112/output/levers.tsv` (sha256 prefix 2f2fa131d7fdcfe5), rows L1, L2 (and L3, L6 for the dropped statuses) copied verbatim to `baseline_levers_L1_L2_L3_L6.tsv`. The L1 and L2 rows already carry the dated ADV-004 and ADV-006 notes (column `functional_comparator` and the transfer column) that this session added earlier; they are part of the state as held.
+* Absence in the generator, verified by search over the three generator outputs (`conditional_proposals_it40.tsv`, `conditional_proposals_packages_it47.tsv`, `conditional_design_steps_it50.tsv`) and `hypothesis_packages.tsv`: no row has levers.tsv or a SCI47 lever as its source; no CP row for L1 or L2; no package of the inhibitory thread is registered except `measurement_reconciliation_adv006_20261114` as design_only under INV-05 (53 design rows). That package mentions the levers only as source names (`requests_merged` token `sci47_inhibitory#levers:L1/L2`, `lever_or_comparison_gated` "is itself the lever L1/L2" in M16 and M17). A plain keyword hit for "benzodiazepine" in CP-BH1 is the 2,3-benzodiazepine AMPA tool of that row, not a GABA-A modulator.
+* So the generator output holds, for L1 and L2: no conditional row, no gating order, no co-requirement, no conflict. The knowledge sits in the lever rows (status, risk, counter-evidence, rejection result) and in the ADV-006 design rows, unjoined.
+
+## Declared keys (to be read, none invented)
+levers.tsv L1/L2 -> measurements.tsv M16/M17 (token `sci47_inhibitory#levers:L1/L2`; "is itself the lever") -> gating rows M02, M04, M05 in `interpretable_after`; M15 = comparator co-requirement of every drug arm; conflicts.tsv `m_id` links CF01 (M01;M03), CF03 (M01), CF04 (M02), CF05a (M01;M02;M05), CF05b (M01;M03;M05), CF23 (M15). Two id spaces: SCI42/SCI47 local ids (L1, O01..., M01 of SCI42) versus ADV-006 M01..M28; the two M01 stay two.
+
+## Criteria fixed now
+IMPROVED, all of: (a) rows for L1 and L2 exist in the generator output with the lever's own status, risk, counter-evidence and rejection result carried, and L3/L6 appear only as dropped (or not at all); (b) the E_GABA-first order (M02, M04, M05 before an L1 or L2 arm) is stated as the sources' conditional order, not as an observation, with its quotation; (c) M15 is stated as the co-requirement of the drug arm and CF23's two matching variables (percent evoked synaptic charge removed; Vm and Rin) are both named as unresolved with their sources; (d) the conflicts that change how an arm is read (CF01, CF03, CF04, CF05a, CF05b) are present through the declared m_id keys with both quotes and no side chosen; (e) an independent reader finds at least the decisive propositions of (b)-(d) supported by the originals and the output actionable (it changes what the next experiment must include or the order in which it is run).
+NO DIFFERENCE: rows exist but restate levers.tsv, or carry pointers without the gating order, the co-requirement or the conflicts; or the reader finds them not actionable.
+WORSE, any of: the two M01 merged or SCI42/SCI47 local ids read as ADV-006 ids (or the reverse); a side chosen on CF01/CF23/others; the E_GABA order or the gating written as an observation or as established; an order of cost or priority read as a dependency; ADV-004's L2 wording lost, or "alpha2-preferring" carried; the Synapsin-Cre layer II/III P13-17 context of L1 transferred to or from the global/CA3 preparation of M14 without saying so; L3 or L6 dropped statuses revived; a link beyond the declared keys; a compound recommended; a ranking, sign or need changed.
+
+## Kept apart in the result
+(1) an observed change in the generator output; (2) a better formulation of an experiment (what the reader finds the next experiment must now include); (3) any predictive capacity: none expected, none claimed.
+
+## Cost
+Reader: one delegate, sonnet, effort high, blind to these criteria, given only the proposition-quote-source triples and the originals; cost read back with `session_model_census.py` and reported apart from mine.

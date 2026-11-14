@@ -1,0 +1,64 @@
+{
+  "task_id": "ORCH-VERIFY-INHIB-20261114",
+  "actor": "orchestrator",
+  "title": "IT52: SCI47 levers L1/L2 read by the generator through declared keys, with independent reader",
+  "assigned_by": "ADV (legend-development-39), under the operator mandate IT - VERIFY A USEFUL GENERATIVE DIFFERENCE (record ORCH-VERIFY-GENDIFF-20261114, COMPLETE)",
+  "AUTHORISED_QUEUE_20261114": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_Q1": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "BEFORE with absence verified by search, criteria fixed in advance (generation_it52_20261114/prereg_it52.md, baseline_levers_L1_L2_L3_L6.tsv)",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "HEAD 6d6fabf88a26"
+        }
+      ]
+    },
+    "OBJ_Q2": {
+      "order": 2,
+      "steps": [
+        {
+          "step": "HE route and SHA for registering/joining L1/L2 through the declared keys",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_Q3": {
+      "order": 3,
+      "steps": [
+        {
+          "step": "AFTER on HE's SHA with the same criteria; independent reader (sonnet, high) on the decisive propositions; cost apart",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_Q4": {
+      "order": 4,
+      "steps": [
+        {
+          "step": "Consume in the existing consumer only if improved; otherwise name the missing step",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_Q5": {
+      "order": 5,
+      "steps": [
+        {
+          "step": "Close the loop with ADV and HE",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    }
+  }
+}
