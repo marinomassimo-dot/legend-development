@@ -10,13 +10,13 @@
  "OBJECTIVE": "HE — assignment from ADV (its own, from the originals; not operator-given, not an Advisor draft): can the generator read SCI47 levers.tsv as hypotheses under INV-05 and join each lever to the ADV-006 rows by declared keys only. Queued behind IT's BEFORE and criteria. Constraints: no side on the six conflicts, ADV-004 L2 wording untouched, two id spaces and two M01 apart, no ranking, sign or qualification change.",
  "worktree": ".claude/worktrees/hrk7",
  "branch": "task/hrk7",
- "CURRENT_STATE": "IN_PROGRESS",
+ "CURRENT_STATE": "COMPLETE",
  "CHECKPOINT": {
-  "last_verified_result": "lever thread built and delivered; IT52 improved",
-  "first_incomplete_work": "CI conclusion on the last SHAs, then set COMPLETE"
+  "last_verified_result": "lever thread delivered and verified; CI green on every lever SHA",
+  "first_incomplete_work": "none"
  },
  "AUTHORISED_QUEUE_20261114C": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_1_DIAGNOSE": {
    "order": 1,
    "title": "Diagnose whether SCI47 levers.tsv (key lever_id, L1-L6, L3 and L6 kept as dropped) fits the hypotheses_only reader as INV-05 hypotheses, and whether each lever joins the ADV-006 rows by declared keys only (requests_merged token sci47_inhibitory#levers:<id>; the gating rows named in interpretable_after; M15 co-requirement; conflicts.tsv m_id); stop at the diagnosis with the cost if the smallest route is not small",
@@ -119,14 +119,13 @@
     },
     {
      "step": "Public release gate CI concluded green on the SHA of the last list (and on 4c3d2d5bb)",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "plan",
-     "blocker": "CI runs in progress (#749 for 4c3d2d5bb and the run of the last-list SHA); ci_runs.py wait",
-     "unblock": "both conclude success"
+     "evidence": "Public release gate, verdict per commit (ci_runs.py, 2026-11-14): #739 success (ba0283130), #743 success (00feda1c8), #747 success (4c45ab039), #749 success (4c3d2d5bb, the marking pass), #750 success (e139cddda, the last list). Each verdict is the run whose head_sha is that commit."
     }
    ],
-   "status": "IN_PROGRESS"
+   "status": "DONE"
   }
  },
- "MANDATE_STATE": "OPEN"
+ "MANDATE_STATE": "COMPLETE"
 }
