@@ -6,8 +6,8 @@ item	fragment_index	found	start_of_fragment
 1.06	0	yes	kept, as the comparator and as a lever with the only direct 
 1.07	0	yes	kept, conditional; shares the recorded cells with the E_GABA
 1.08	0	yes	dropped
-1.09	0	yes	"competing=[""risk_of_acting_on_a_compensation"", ""counter_evid"
-1.10	0	yes	"measure=[""result_that_would_reject_it"", ""functional_comparat"
+1.09	0	no	"competing=[""risk_of_acting_on_a_compensation"", ""counter_evid"
+1.10	0	no	"measure=[""result_that_would_reject_it"", ""functional_comparat"
 1.11	0	yes	a submaximal NMDAR block (d-APV) or a hyperpolarising manipu
 1.11	1	yes	"Endpoint: ""same measured cellular effect"" is a membrane-pote"
 1.11	2	yes	Fix: calibrate each arm on its own cellular readout and then
@@ -56,7 +56,7 @@ item	fragment_index	found	start_of_fragment
 1.33	0	yes	kept, as the comparator and as a lever with the only direct 
 1.34	0	yes	kept, conditional; shares the recorded cells with the E_GABA
 1.35	0	yes	dropped
-1.36	0	yes	"support=[""depth_of_support"", ""adds_over_general_anticonvulsa"
+1.36	0	no	"support=[""depth_of_support"", ""adds_over_general_anticonvulsa"
 1.36	1	yes	Nothing beyond general anticonvulsant action unless E2 is sh
 1.36	2	yes	Only if a receptor or amplitude deficit is confirmed in phys
 1.37	0	yes	no gene symbols are joined (the package names GAT-1, a trans
@@ -66,9 +66,9 @@ item	fragment_index	found	start_of_fragment
 1.39	0	yes	not linked to this hypothesis by any package
 1.40	0	yes	SCI47 does not give a reason
 1.40	1	yes	its matched measure would be a tonic current or sIPSC decay,
-1.41	0	yes	second-hop rows named by the gating rows, listed and NOT fol
+1.41	0	no	second-hop rows named by the gating rows, listed and NOT fol
 1.42	0	yes	not joined (not stated is not tested and absent)
-1.43	0	yes	"mapping_unconfirmed=True, dropped=(""status"", ""dropped"")"
+1.43	0	no	"mapping_unconfirmed=True, dropped=(""status"", ""dropped"")"
 2.01	0	yes	kept, conditional on O01/O04/O06 mapping to E2 (and E_GABA n
 2.02	0	yes	Smaller mIPSC with normal agonist response -> E2 (supply); s
 2.02	1	yes	Decides whether a supply lever (reuptake, transaminase) or a
@@ -120,7 +120,7 @@ item	fragment_index	found	start_of_fragment
 3.02	1	yes	kept, conditional on E3 (smaller mIPSC and smaller agonist r
 3.03	0	yes	Phase 1 only for the lever Phase 0 selects.
 3.03	1	yes	The question (which of input, postsynaptic response, chlorid
-3.04	0	yes	second-hop rows named by the gating rows, listed and NOT fol
+3.04	0	no	second-hop rows named by the gating rows, listed and NOT fol
 3.04	1	yes	sci47_inhibitory#matrix:O06
 3.04	2	yes	kept, conditional on O01/O04/O06 mapping to E2 (and E_GABA n
 3.05	0	yes	"M01 (SCI42: ""no (required if M03 confirms the amplitude loss"
