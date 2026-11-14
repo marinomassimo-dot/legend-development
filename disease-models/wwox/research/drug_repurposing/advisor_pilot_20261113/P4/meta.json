@@ -1,0 +1,395 @@
+{
+  "capture": {
+    "assessment_sha256": "",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P4/stream.jsonl",
+    "raw_stream_sha256": "3d8df2f007547d16d3be796c6b17c846f0b95abd67a795cc2773589ece351984",
+    "source_session_id": "32a7d300-3d13-4f0c-b400-07bdbb004a2a",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": null
+  },
+  "context": {
+    "brief_chars": 25584
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-14T02:15:01Z",
+  "label": "P4",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": true,
+      "efforts": {
+        "high": 20
+      },
+      "first_turn_context": 25619,
+      "models": {
+        "claude-opus-5": 17,
+        "claude-opus-5-5": 3
+      },
+      "peak_context": 113102,
+      "totals": {
+        "cache_creation": 154431,
+        "cache_read": 1427506,
+        "output": 20473
+      },
+      "turns": 20
+    },
+    "final_turn_model": "claude-opus-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": null,
+    "num_turns": null,
+    "refusal_fallbacks": [
+      {
+        "apiRefusalCategory": null,
+        "direction": "retry",
+        "fallbackModel": null,
+        "originalModel": null,
+        "scope": "session",
+        "trigger": "refusal"
+      }
+    ],
+    "total_cost_usd": null,
+    "turn_models": {
+      "claude-opus-5": 18,
+      "claude-opus-5-5": 3
+    },
+    "usage": null
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-14T02:09:12Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P3/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Strategic assessment \u2014 Stage P, tick 3 (2026-11-13T23:34Z)\n2\t\n3\t## 1 \u00b7 Principal decision\n4\t\n5\tTick 2's assignment (ADV-003) is executed **and** consumed, s"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/**"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P1/brief.md\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P1/assessm"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/budget.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t \"activated_utc\": \"2026-11-13T18:22:36Z\",\n3\t \"expires_utc\": \"2026-11-14T18:22:36Z\",\n4\t \"max_assignments\": 6,\n5\t \"max_invocations\": 5,\n6\t \"recipients\": {\n7"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/invocations.jsonl"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\"brief_sha256\": \"7817f60c9de4bfd64a8467c097563012c715a6e898ba83c9989e67901b3770a4\", \"effort_asked\": \"high\", \"index\": 1, \"label\": \"P1\", \"model_asked\": \"opus\","
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/ADV-005_result.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# ADV-005 result (Harness): the activity tool and its cache\n2\t\n3\tTaken in charge by Harness in `ledger/tasks/plan/PLAN-ADV-SESSION-20261113.json` (block `ADV_"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/*adv004*/**"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/consumer_delta.md\ndisease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/README.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# ADV-004 \u2014 the GABA-A subtype-selectivity dispute (clobazam, N-desmethylclobazam) read as text and tables (2026-11-14)\n2\t\n3\tNon-canonical research material. "
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/consumer_delta.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# ADV-004 \u2014 consumer delta (proposals; 2026-11-14)\n2\t\n3\tNon-canonical. Not medical advice; no clinical statement, no dose, no preference for any drug. This pa"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/assignments.jsonl"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\"assessment\": \"P1\", \"id\": \"ADV-001\", \"key\": \"ebp-reannotation-it29\", \"recipient\": \"Science\", \"state\": \"DRAFTED\", \"utc\": \"2026-11-13T18:34:18Z\"}\n2\t{\"assessmen"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/ledger/tasks",
+        "pattern": "ADV004|ADV-004|gabaa_subtype_adv004"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 2 files\nledger/tasks/orchestrator/ORCH-ADV004-20261113.json\nledger/tasks/orchestrator/ORCH-ADV-PRESIDIO-20261113.json"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADV-PRESIDIO-20261113.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t \"_schema\": \"orchestrator-task-v1\",\n3\t \"OWNER\": \"orchestrator\",\n4\t \"ACTOR_ID\": \"orchestrator\",\n5\t \"PRIORITY\": \"P0\",\n6\t \"TASK_ID\": \"ORCH-ADV-PRESIDIO-20261"
+    },
+    {
+      "input": {
+        "head_limit": 60,
+        "output_mode": "count",
+        "path": "/home/desktop/legend-development/disease-models/wwox",
+        "pattern": "KCC2|SLC12A5|NKCC1|SLC12A2|bumetanide|chloride extrusion|E_Cl|EGABA"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/meta/meta_index_current.md:1\ndisease-models/wwox/meta/meta_gaba_paradox_current.md:6\ndisease-models/wwox/analysis/therapeutic_repair_candida"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox",
+        "pattern": "NP3P2"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 26 files\ndisease-models/wwox/research/drug_repurposing/view/index_shareable.de.html\ndisease-models/wwox/research/drug_repurposing/view/index_shareable.es."
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/meta/meta_gaba_paradox_current.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# META \u2014 GABA / GABA Paradox / Strategy Space\n2\t**Version:** v1.2\n3\t**Status:** emerging high-value / high-uncertainty / priority dossier\n4\t**Last update:** 2"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tid\titem\tverdict\tdecisive_datum\tqueries_and_sources\ttrigger_to_reopen\towner_or_route\n2\tNP3P1\tHeterozygote versus wild-type sIPSC (amplitude and charge) in the "
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/cards/F03_bumetanide_chloride_gradient.card.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t  \"schema_version\": 1,\n3\t  \"input_sha256\": \"379884fe237f3c7a8d01f0c2c0969610ccfb1b88a3a915da3964da71b300089e\",\n4\t  \"epistemic_status\": \"IPOTESI\",\n5\t  \"can"
+    },
+    {
+      "input": {
+        "-n": true,
+        "head_limit": 40,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/README.md",
+        "pattern": "decay|charge|saturat|amplitude|peak"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "1:[Omitted long matching line]\n3:[Omitted long matching line]\n11:[Omitted long matching line]\n12:[Omitted long matching line]\n13:[Omitted long matching line]\n26"
+    },
+    {
+      "input": {
+        "head_limit": 40,
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox",
+        "pattern": "meta_gaba_paradox"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 22 files\ndisease-models/wwox/research/discovery_ledger_current.md\ndisease-models/wwox/research/fulltext_dossiers/PMID30290271.md\ndisease-models/wwox/analy"
+    },
+    {
+      "input": {
+        "head_limit": 30,
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "gramicidin|perforated"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 30 files limit: 30\ndisease-models/wwox/research/drug_repurposing/view/shareable_package/it.html\ndisease-models/wwox/research/drug_repurposing/view/shareab"
+    },
+    {
+      "input": {
+        "-o": true,
+        "head_limit": 30,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations.tsv",
+        "pattern": "^(INV-[0-9]+)\\t([^\\t]*)\\t([^\\t]*)\\t([^\\t]*)"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No matches found"
+    },
+    {
+      "input": {
+        "-n": true,
+        "-o": true,
+        "head_limit": 40,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations.tsv",
+        "pattern": "INV-1[0-9]"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "6:INV-10\n8:INV-19\n8:INV-19\n9:INV-19\n11:INV-10\n12:INV-12\n13:INV-13\n14:INV-15\n15:INV-11\n16:INV-14\n17:INV-16\n18:INV-17\n19:INV-18\n20:INV-19"
+    },
+    {
+      "input": {
+        "-n": true,
+        "-o": true,
+        "head_limit": 20,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations.tsv",
+        "pattern": "INV-1[0-9]\\t[^\\t]{0,120}\\t[^\\t]{0,120}"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "11:INV-10\tGABA-aminotransferase inactivators (the carded clinical thread)\tWhat does the published symptomatic response predict, and what does it not predict, ab"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations.tsv",
+        "limit": 1,
+        "offset": 13
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "13\t6\t6 (tie of 3)\tINV-13\tHSC70 (HSPA8) inhibitor peptide forigerimod, with lysosomal and genetic controls\tIs a destabilised Q230P-class WWOX missense protein cl"
+    },
+    {
+      "input": {
+        "-i": true,
+        "head_limit": 40,
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "gate 0|gate0|shared measurement|one preparation|same preparation|measurement_inventory|first experiment"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 40 files limit: 40\ndisease-models/wwox/research/drug_repurposing/view/shareable_package/it.html\ndisease-models/wwox/research/drug_repurposing/view/shareab"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/m1_ebp_reagents_sci51_20261113/consumer_delta.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# SCI51 \u2014 consumer delta (proposals; 2026-11-13)\n2\t\n3\tNon-canonical. Not medical advice. The Orchestrator of SCI51 edits no shared consumer, ranking, registry"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/myelin_phenotype_first_sci50_20261113/output/open_questions.tsv"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\toq_id\tquestion\tdecision_it_changes\tkind\tpriority\tdecisive_measure_if_experimental\tlinked_lever_or_comparison\treopening_condition\n2\tOQ1\tDo M1 and EBP routes ac"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/ADV-002_result.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# ADV-002 result (Harness): routes to the two SCI51-blocked artefacts\n2\t\n3\tTaken in charge by Harness in `ledger/tasks/plan/PLAN-PROACTIVE-ADVISOR-20261113.js"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/*adv001*/**"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/ebp_reannotation_adv001_20261113/S0_before_analysis.md\ndisease-models/wwox/research/drug_repurposing/ebp_reannotat"
+    },
+    {
+      "input": {
+        "-n": true,
+        "-o": true,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "pattern": "IT51-Q03|IT51-Q04"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "185:IT51-Q03\n186:IT51-Q04"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ebp_reannotation_adv001_20261113/hubler_fulltext_note.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Hubler 2018 (PMID 30046109, PMC6423962): what the open full text says about the compounds of this re-annotation (2026-11-13)\n2\t\n3\tNon-canonical. Read by the"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "limit": 2,
+        "offset": 185
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "185\tIT51-Q03\tm1_ebp_reagents_sci51_20261113/README.md open question 5\tWhich four antimuscarinics were EBP-negative in one OPC line, and what are their per-compo"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ebp_reannotation_adv001_20261113/consumer_delta.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# ADV-001 (IT51-Q05) \u2014 consumer delta (proposals; 2026-11-13)\n2\t\n3\tNon-canonical. Not medical advice. This package edits no IT29 file and no shared consumer, "
+    }
+  ]
+}
