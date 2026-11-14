@@ -1,0 +1,19 @@
+{
+ "authorised_utc": "2026-11-14T09:50:42Z",
+ "min_hours_anticipating": 1.0,
+ "min_hours_between": 4.0,
+ "mode": "continuous",
+ "pilot_at_authorisation": {
+  "assignments_drafted": 6,
+  "expires_utc": "2026-11-14T18:22:36Z",
+  "invocations_executed": 5,
+  "max_assignments": 9,
+  "max_invocations": 7
+ },
+ "scope": "inside the Operator roadmap, the existing boundaries and exclusions, and the available resources; operator stop, pause and new instructions prevail",
+ "source": "Operator roadmap section, entry 2026-11-14 (continuous autonomy and useful radar inputs)",
+ "weekly_allocation": {
+  "note": "not given by the operator and not exposed by the runtime: declared unknown, never assumed",
+  "usable_limit": null
+ }
+}

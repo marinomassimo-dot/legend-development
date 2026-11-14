@@ -479,6 +479,118 @@ class Proactive(Base):
 
 
 
+class Continuous(Proactive):
+    """HE52: continuous operation under the operator's persistent authorisation is a mode of the existing campaign. The pilot's counters, results and failures stay; the pilot's ceilings stop being the rule;
+    an operator pause or stop prevails; resources stay disciplined. Fixtures: they do not show the real runtime."""
+
+    def exhaust_the_pilot(self) -> None:
+        for n in range(3):
+            self.at(f"2026-11-13T{11 + 2 * n}:00:00Z")
+            self.land(f"SCI5{n} record COMPLETE; package delivered")
+            self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
+            self.assertEqual(sa.evaluate(self.campaign), 0)
+
+    def authorise(self, *extra: str) -> None:
+        self.assertEqual(sa.main(["authorise-continuous", "--campaign", str(self.campaign), "--source", "Operator roadmap line, 2026-11-14", *extra]), 0)
+
+    def roadmap(self, *lines: str) -> None:
+        sa.ROADMAP.write_text(f"x\n{sa.ROADMAP_BEGIN}\nMission v1\n" + "\n".join(lines) + f"\n{sa.ROADMAP_END}\n", encoding="utf-8")
+
+    def test_the_pilot_ends_at_its_ceilings_and_continuous_mode_continues_without_resetting_anything(self) -> None:
+        self.exhaust_the_pilot()
+        self.land("SCI60 record COMPLETE; delivered"); self.at("2026-11-13T18:00:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "BUDGET")              # the bounded pilot keeps its own limits
+        budget_before = (self.campaign / "budget.json").read_text(encoding="utf-8")
+        rows_before = (self.campaign / "invocations.jsonl").read_text(encoding="utf-8")
+        self.authorise()
+        t = sa.tick(self.campaign)
+        self.assertEqual((t["verdict"], t["mode"]), ("EVALUATE", "continuous"))
+        self.assertEqual(sa.evaluate(self.campaign), 0)
+        self.assertEqual((self.campaign / "budget.json").read_text(encoding="utf-8"), budget_before)          # no reset, no renewal, no bigger number
+        self.assertTrue((self.campaign / "invocations.jsonl").read_text(encoding="utf-8").startswith(rows_before))   # the history is kept row for row
+        self.assertEqual(len({(a["stage"], a["index"]) for a in sa._attempts(self.campaign)}), 4)
+        data = json.loads((self.campaign / sa.CONTINUOUS).read_text(encoding="utf-8"))
+        self.assertEqual((data["pilot_at_authorisation"]["invocations_executed"], data["pilot_at_authorisation"]["max_invocations"]), (3, 3))
+        st = sa.status(self.campaign)
+        self.assertIn("pilot invocations 4/3", st); self.assertIn("CONTINUOUS", st); self.assertIn("are history, not the rule", st)   # ceilings and executed activity are told apart
+        self.assertEqual(sa.main(["check", "--campaign", str(self.campaign)]), 0)
+
+    def test_the_pilot_expiry_does_not_stop_continuous_operation_and_removing_the_mode_restores_it(self) -> None:
+        self.at("2026-12-01T10:00:00Z")                                                 # the fixture's pilot was activated at the real clock: a month later it has expired
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EXPIRED")
+        self.authorise()
+        self.land("SCI61 record COMPLETE; delivered"); self.at("2026-12-01T11:30:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
+        sa.main(["end-continuous", "--campaign", str(self.campaign), "--reason", "operator ended it"])
+        self.assertTrue((self.campaign / sa.CONTINUOUS).exists())                    # history kept
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EXPIRED")
+
+    def test_an_assignment_that_ends_does_not_end_the_presidio_and_a_quiet_wait_says_what_it_is(self) -> None:
+        self.authorise()
+        sa.evaluate(self.campaign)
+        self.at("2026-11-13T12:00:00Z")
+        quiet = sa.tick(self.campaign)
+        self.assertEqual(quiet["verdict"], "NONE")
+        self.assertTrue(quiet["presidio"].startswith("WAITING (legitimate)"))
+        self.assertNotIn("PILOT ENDED", quiet["presidio"])
+        self.assertIn("legitimate wait", sa.recall_prompt(self.campaign))
+
+    def test_operator_pause_and_stop_in_the_roadmap_prevail_and_resume_lifts_them(self) -> None:
+        self.authorise()
+        self.roadmap("PAUSE: advisor \u2014 the operator asked for a pause")
+        held = sa.tick(self.campaign)
+        self.assertEqual(held["verdict"], "PAUSED")
+        self.assertTrue(held["presidio"].startswith("SUSPENDED by the operator"))
+        self.assertEqual(sa.evaluate(self.campaign), 2)                              # the launcher refuses as well, not only the tick
+        self.assertEqual(len(sa._attempts(self.campaign)), 0)
+        self.roadmap("PAUSE: advisor \u2014 the operator asked for a pause", "RESUME: advisor")
+        self.assertNotEqual(sa.tick(self.campaign)["verdict"], "PAUSED")
+        self.roadmap("STOP: all", "URGENT: look at the AMPA contradiction first")
+        t = sa.tick(self.campaign)
+        self.assertEqual(t["verdict"], "PAUSED"); self.assertIn("URGENT: look at the AMPA contradiction first", t["operator_controls"])
+        self.roadmap("STOP: all", "RESUME: all")
+        self.assertNotEqual(sa.tick(self.campaign)["verdict"], "PAUSED")
+
+    def test_a_pause_for_another_perimeter_is_reported_and_not_applied_and_the_disable_flag_still_wins(self) -> None:
+        self.authorise()
+        self.roadmap("PAUSE: science \u2014 hold the SCI reading packages")
+        t = sa.tick(self.campaign)
+        self.assertNotEqual(t["verdict"], "PAUSED")
+        self.assertIn("PAUSE: science \u2014 hold the SCI reading packages", t["operator_controls"])      # the evaluation still sees it
+        sa.evaluate(self.campaign)
+        self.assertIn("PAUSE: science", (self.campaign / "brief_P.md").read_text(encoding="utf-8"))
+        sa.main(["disable", "--campaign", str(self.campaign)])
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "DISABLED")
+
+    def test_the_shared_weekly_allocation_blocks_only_when_the_operator_stated_it_and_the_use_is_measured(self) -> None:
+        self.authorise()
+        meta = self.campaign / "P1" / "meta.json"; meta.parent.mkdir()
+        meta.write_text(json.dumps({"started_utc": "2026-11-12T10:00:00Z", "runtime_readback": {"census": {"totals": {"output": 30000, "cache_read": 900000}}}}), encoding="utf-8")
+        self.assertEqual(sa.weekly_state(self.campaign)["state"], "unset")               # no value is assumed and nothing is blocked
+        self.assertEqual(sa.budget_refusal(self.campaign), "")
+        self.assertIn("not exposed by the runtime", sa.status(self.campaign))
+        self.assertEqual(sa.weekly_state(self.campaign)["measured_7d"], {"evaluations": 1, "output_tokens": 30000, "cache_read_tokens": 900000})
+        self.authorise("--weekly-limit", "100000", "--advisor-share", "0.25", "--unit", "output_tokens")       # cap 25,000: 30,000 measured
+        self.assertEqual(sa.weekly_state(self.campaign)["state"], "exhausted")
+        self.at("2026-11-13T12:00:00Z"); self.land("SCI62 record COMPLETE; delivered")
+        t = sa.tick(self.campaign)
+        self.assertEqual(t["verdict"], "RESOURCES"); self.assertIn("checkpoint, verify and deliver open work, no widening", t["why"])
+        self.assertEqual(sa.evaluate(self.campaign), 2)
+        self.authorise("--weekly-limit", "400000", "--advisor-share", "0.25", "--unit", "output_tokens")       # cap 100,000: 30,000 measured
+        self.assertEqual(sa.weekly_state(self.campaign)["state"], "ok")
+        self.assertEqual(json.loads((self.campaign / sa.CONTINUOUS).read_text(encoding="utf-8"))["authorised_utc"], "2026-11-13T12:00:00Z".replace("12", "10", 1))   # re-running keeps the original date
+        old = {"started_utc": "2026-11-01T10:00:00Z", "runtime_readback": {"census": {"totals": {"output": 10**9}}}}
+        (self.campaign / "P2").mkdir(); (self.campaign / "P2" / "meta.json").write_text(json.dumps(old), encoding="utf-8")
+        self.assertEqual(sa.weekly_state(self.campaign)["measured_7d"]["output_tokens"], 30000)           # only the last seven days count
+
+    def test_continuous_mode_needs_an_existing_campaign_and_a_stated_limit_needs_its_share_and_unit(self) -> None:
+        (self.campaign / "budget.json").unlink()
+        self.assertEqual(sa.main(["authorise-continuous", "--campaign", str(self.campaign), "--source", "x"]), 2)
+        sa.main(["activate", "--campaign", str(self.campaign)])
+        self.assertEqual(sa.main(["authorise-continuous", "--campaign", str(self.campaign), "--source", "x", "--weekly-limit", "5"]), 2)
+        self.assertFalse((self.campaign / sa.CONTINUOUS).exists())
+
+
 class Snapshot(unittest.TestCase):
     def test_a_modified_tracked_file_keeps_its_first_character(self) -> None:
         tmp, _ = _git_repo()

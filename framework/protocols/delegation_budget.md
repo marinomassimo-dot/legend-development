@@ -95,3 +95,19 @@ Before reading hits, write the query list; group OR clauses and read the hit cou
 
 Read depth, verbatim locators, blind audit, adversarial review, the receipt contract, §21c/§21d,
 the release gate and the battery. A package that is cheaper and less verified is not a result.
+
+## 10 · The shared weekly allocation (added 2026-11-14, HE52)
+
+IT, SCI, HE, ADV and their delegates draw on one account, so the sustainable pace is a property of all of them together, not a budget per session. What the system can say about it:
+
+| Kind of fact | Where it comes from | What is NOT done with it |
+|---|---|---|
+| **Measured use** | `session_model_census.py` on the transcripts (`--dir <projects dir> --since <ISO>`; output tokens, cache read, turns, per window of a session) and, for the Advisor's own evaluations, the runtime read-back saved in each `P<n>/meta.json` | not converted to a share of a plan; `subagent_tokens` is a total with context, not output; one response is counted once |
+| **Estimates** | the per-delegate figures of section 6 | never presented as measurements |
+| **The usable weekly limit** | **not exposed by the runtime.** It is the operator's to state. Until then it is declared unknown: nothing is blocked to obtain it and no value is assumed | no inference from past stops or from list prices |
+
+**Configuration, only when the limit is known.** The Advisor reads `weekly_allocation` in its `CONTINUOUS.json` (`strategic_advisor.py authorise-continuous ... --weekly-limit N --advisor-share F --unit output_tokens|cache_read_tokens`). With a value, the Advisor's measured use over the last seven days is compared with its share: near the cap the status says so; at the cap evaluations are suspended (`RESOURCES`), open work is verified and delivered, nothing is widened, and the tick keeps answering in one line until the week moves. The other sessions apply the same reading by hand with the census; there is no scheduler and no registry. To remove it: set `usable_limit` back to null (re-run the command without `--weekly-limit`).
+
+**Near an observed limit** (a usage-limit notice, a refused call): verify, correct and deliver what is open before widening; checkpoint to the record; resume after the reset with `SendMessage`; no tight retry of refused calls. Profiles and concurrency (sections 1-2) are unchanged.
+
+**The cost of a coordinator is not zero.** A recall that wakes a session re-reads that session's context. The tick itself spends no model, but the turn that runs it is a turn of the hosting session: measured for one mandate slice in section 6 (65% of the cache read was the context re-read every turn). A recall is therefore "mechanical" only in what it decides; its cost follows the length of the hosting context. Keep recalls to one hourly check, answer it in one line, and spend an evaluation only where it can change a decision.
