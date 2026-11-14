@@ -10,13 +10,13 @@
  "OBJECTIVE": "HE — Dedicated ADV session and complete strategic inputs: transfer the Strategic Advisor presidio (roadmap, scheduled recalls, assignment delivery) from the HE session to a dedicated ADV session that the operator assigns ACTOR_ID orchestrator with a mandate distinct from IT; keep one campaign and one state (no renewal, no new budget, no fourth assignment); verify continuity and the strategic input pointers. Implementation task closure, ADV presidio and IT's scientific consumers stay distinct.",
  "worktree": ".claude/worktrees/padv3",
  "branch": "task/padv3",
- "CURRENT_STATE": "OPEN",
+ "CURRENT_STATE": "COMPLETE",
  "CHECKPOINT": {
-  "last_verified_result": "none yet",
-  "first_incomplete_work": "OBJ_1_STATE"
+  "last_verified_result": "presidio transferred to ADV and verified by an automatic fire; one campaign; inputs re-indexed; defects fixed",
+  "first_incomplete_work": "none; the campaign itself stays open under ADV (ORCH-ADV-PRESIDIO-20261113) and the Orchestrator (ORCH-ADVISOR-PILOT-20261113)"
  },
  "AUTHORISED_QUEUE_20261113C": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_1_STATE": {
    "order": 1,
    "title": "Read the canonical instructions, the proactive implementation and the current campaign; state budget, expiry, invocations used, assignments produced/delivered/executed/consumed, the hosting session and its scheduled recall, and defects already fixed; no activate, no new campaign, no counter reset",
@@ -49,11 +49,12 @@
    "steps": [
     {
      "step": "Continuity of the ADV presidio: session-bound cron, what survives compaction/resume/termination, restore-on-restart without a second copy, one canonical recall prompt, monitor association of the ADV mandate; declare unresolved limits; no new permanent service",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "Documented in .claude/skills/legend-strategic-advisor/SKILL.md ('Who holds the presidio, and what survives'): the recall is session-only (CronCreate in memory, durable has no effect, 7-day expiry); restore on restart = CronList, create from `strategic_advisor.py recall` only if absent; ADV mandate ORCH-ADV-PRESIDIO-20261113 recognised by the monitor (session e6526331-6b7c-4631-8c9b-9e9d79867e90, record_verdict CONTINUE, RUNNING). Unresolved and declared: a compaction keeping the job was not verified; a termination or new-process resume drops it until ADV restores it; nothing restores it by itself."
     }
-   ]
+   ],
+   "status": "DONE"
   },
   "OBJ_4_STRATEGIC_INPUTS": {
    "order": 4,
@@ -61,11 +62,12 @@
    "steps": [
     {
      "step": "Make the Advisor's strategic inputs concretely reachable: roadmap, dashboard and source data, open questions, harness scouting/mining reports, radars, DREAM and memory, unused-capability diagnoses and costs, invariants; fix existing indices, no new registry; stale or missing pointers stay visible limits; DREAM connections are not evidence",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "entrypoints re-indexed in place (no new registry): radar_science, harness_scouting, capability_surface split out; DREAM dream6 and dashboard source data (evidence_graph, work_order, context_verdicts, content_en) added; delegation_budget in tools; live daily scout briefing from the host cache embedded in the P brief (dated, shortened, addresses removed). Limits kept visible: weekly HARNESS-SCOUT tables stop at 2026-W40; no standing cost or unused-capability report (tools and per-invocation meta.json only); dashboard page not fetched by HE; scout briefing CONTEXT line dated 2026-11-01 and one plan surface parsing 0 items left to the presidio (ADV-005 substitute not chosen)."
     }
-   ]
+   ],
+   "status": "DONE"
   },
   "OBJ_5_TRANSFER": {
    "order": 5,
@@ -73,11 +75,12 @@
    "steps": [
     {
      "step": "Hand the presidio to the dedicated ADV session: verify its identity in the runtime (not from a title), brief it (campaign, roadmap, state, procedure, delivery, limits, deactivation), then deactivate only the HE-hosted Advisor recall once ADV has verified its own on the same state; record the transfer; inform IT and SCI; one active presidio at the end",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "Runtime identity checked by claude agents --json (pid 1238811, sessionId e6526331-..., started 2026-11-13T22:18Z), not by title. No evaluation or delivery in flight; HE recall 4280e75d deleted 22:21Z (the only job in HE); ADV recall d463d57c created and its first AUTOMATIC fire arrived 23:43:47Z (tick DEFERRED, no model call), reported by ADV; one presidio. IT and SCI informed. Transfer recorded here and in ORCH-ADV-PRESIDIO-20261113."
     }
-   ]
+   ],
+   "status": "DONE"
   },
   "OBJ_6_VERIFY": {
    "order": 6,
@@ -85,11 +88,12 @@
    "steps": [
     {
      "step": "Targeted verification: HE recall off and ADV recall on, no double evaluation on one event, budget and expiry preserved, a test message received by the right session, ADV mandate recognised by the monitor, strategic sources reachable with freshness limits declared; no new real evaluation unless needed",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "HE recall off (CronList empty after delete); ADV recall verified by its automatic fire; invocations P1 18:29-18:34, P2 21:15-21:18, P3 23:34-23:41Z: sequential, one per trigger, none duplicated, running flag empty; budget and expiry preserved (amended by the operator to 5 invocations / 6 assignments, expiry 2026-11-14T18:22:36Z unchanged, recorded in budget.json); a message from the right session received (socket pid = verified pid); monitor recognises the ADV mandate; defects found and fixed: worktree guard (campaign refusal), status counted the sender's own records (af549c19). 37 tests OK with negative controls. A real evaluation by HE was not needed for the transfer."
     }
-   ]
+   ],
+   "status": "DONE"
   },
   "OBJ_7_DELIVER": {
    "order": 7,
@@ -97,11 +101,12 @@
    "steps": [
     {
      "step": "Integrate and publish with the existing procedures; Italian report: who hosts the presidio, which recalls verified, which sources linked and which incomplete, residual budget and expiry, behaviour after interruption and open limits; keep disable/modify/remove simple",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "Landed and published on main (last 7667730b, gate PASS, ls-remote verified); Italian report given in chat; ADV-005 executed (advisor_pilot_20261113/ADV-005_result.md). Disable/modify/remove stays one command: strategic_advisor.py disable, CronDelete of ADV's job, or 'stop' in the roadmap log."
     }
-   ]
+   ],
+   "status": "DONE"
   },
   "ADV_ASSIGNMENTS": {
    "ADV-005": {
@@ -111,6 +116,8 @@
    }
   }
  },
- "VERIFICATION_EVIDENCE": [],
- "MANDATE_STATE": "OPEN"
+ "VERIFICATION_EVIDENCE": [
+  "37 tests OK (test_strategic_advisor.py) with negative controls for the evaluation brief, the sender-record exclusion; 13 tests OK (test_activity_search.py); scripts/test_tool_routing.py OK; publication gate PASS on every landing; no recall owned by this mandate remains (HE's Advisor job deleted 2026-11-13T22:21Z)"
+ ],
+ "MANDATE_STATE": "COMPLETE"
 }
