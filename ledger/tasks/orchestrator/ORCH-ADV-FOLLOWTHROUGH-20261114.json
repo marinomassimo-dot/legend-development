@@ -117,13 +117,13 @@
     },
     {
      "step": "HE's CI conclusion on the lever and follow-through SHAs (single observer: HE; the presidio does not poll the CI)",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "orchestrator",
-     "blocker": "waiting for: HE's record PLAN-HE-LEVERS-INV05-20261114 to reach COMPLETE (HE sets it when its CI conclusion arrives)",
      "unblock_when": {
       "record": "PLAN-HE-LEVERS-INV05-20261114",
       "state": "COMPLETE"
-     }
+     },
+     "evidence": "HE's record PLAN-HE-LEVERS-INV05-20261114 COMPLETE on main 002535fc2 (unblock_when resolved by itself); CI green on the exact lever SHAs #739 ba0283130, #743 00feda1c8, #747 4c45ab039, #749 4c3d2d5bb, #750 e139cddda and on the follow-through SHAs #744, #745; the CI of the coordination fixes (#751, bff630afd) is observed by HE."
     }
    ]
   },
@@ -192,6 +192,29 @@
      "blocker": "waiting for: SCI's answer to PRESIDIO-003 (queued; SCI decides the moment, may decline or supersede); delivery events; recall job 3382bb86"
     }
    ]
+  },
+  "OBJ_10_TRIAL_24H": {
+   "order": 10,
+   "title": "24-hour continuous-autonomy trial (2026-11-14T15:29:29Z to 2026-11-15T15:29:29Z)",
+   "steps": [
+    {
+     "step": "Start: record the effective time, the window end, the baseline; confirm that the trial has begun; verify the recall and the session-mandate association",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "TRIAL_24H.started_utc 2026-11-14T15:29:29Z, ends 2026-11-15T15:29:29Z; baseline in TRIAL_24H.baseline_at_start; one recall job 3382bb86 and the route/binding verified, nothing duplicated or restored; the three sessions told and the operator told in chat."
+    },
+    {
+     "step": "During the trial: conduct work inside the roadmap without asking the operator for operational prompts; compare threads and opportunities through the pertinent inputs; assign proportionate work to IT, SCI and HE and verify take-in-charge, delivery and consumption; use waits for independent, queued, conditional work or a motivated wait; keep scientific and publication verification; one CI observer (HE); preserve frozen candidates; no external spend; keep TRIAL_24H.log with events, interruptions, restarts and human interventions",
+     "status": "BLOCKED",
+     "owner": "orchestrator",
+     "blocker": "waiting for: a roadmap change, a delivery (first: SCI's PRESIDIO-003), a mandate transition, HE's CI #751, an operator control line, or the end of the window; recall job 3382bb86"
+    },
+    {
+     "step": "At the end of the window (2026-11-15T15:29:29Z): measure consumption by the stated method and produce the compact report with the 48-72 hour recommendation",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
   }
  },
  "DECISIONS_TAKEN": [
@@ -217,5 +240,61 @@
    "how_to_revert": "end-continuous or a PAUSE/STOP line in the roadmap section"
   }
  ],
- "STOP_LOG": []
+ "STOP_LOG": [],
+ "TRIAL_24H": {
+  "what": "Operator-authorised 24-hour trial of continuous autonomy, on the existing campaign advisor_pilot_20261113, the current roadmap and the authorisations already recorded; the end of the window closes the observation, it does not revoke the continuous mode; later operator instructions and the existing boundaries prevail",
+  "started_utc": "2026-11-14T15:29:29Z",
+  "window_ends_utc": "2026-11-15T15:29:29Z",
+  "start_confirmed": "2026-11-14T15:3xZ: the trial has begun (effective take-in-charge by the ADV presidio at the time above; the operator's activation message arrived in chat a few minutes earlier)",
+  "baseline_at_start": {
+   "open_activities": [
+    "INTAKE-OVERNIGHT-20261002 (new-literature pool exhausted)",
+    "ORCH-METABOLIC-BATCH-20261019 (lawful WWOX-direct pool exhausted)",
+    "PLAN-HE-AUTONOMY-RADAR-20261114 (CI #751 on bff630afd, observed by HE)",
+    "PLAN-HE47-USABLE-KNOWLEDGE-PRESERVED-MEANING-SUSTAINABLE-COST-20261112",
+    "PLAN-PROACTIVE-ADVISOR-20261113",
+    "ORCH-ADV-FOLLOWTHROUGH-20261114 (this)",
+    "ORCH-PRESIDIO003-20261114 (SCI, in its worktree, at landing)"
+   ],
+   "pending_deliveries": [
+    "PRESIDIO-003 (SCI): note, access table and readings table written, quote check 10/10, no blind check (disclosed by SCI), battery next",
+    "CI #751 (bff630afd), single observer HE",
+    "next daily scout run with HE's filters"
+   ],
+   "queue": [
+    "PRESIDIO-003 only"
+   ],
+   "suspended_with_revival": [
+    "SCI50 levers and SCI42 explanations (revival: gate 0 or the M1/EBP question for clemastine moves, or a cost report that changes the cost-benefit)",
+    "lever residuals: owner statements to SCI, generator marks to HE (result_it52_rerun.md)",
+    "the 'CTGF question' in the incomplete P7: unfinished, not acted on"
+   ],
+   "sessions": "four sessions resolved by mandate_watch route: ADV (this, legend-development-39, via the binding of this record), HE, IT Orchestrator, SCI; all idle but ADV; SCI idle while waiting for its own battery (record RESUME), not stopped",
+   "recall_and_binding": "CronList: exactly one job, 3382bb86, hourly, session-only, canonical text unchanged; binding verified by route (ADV -> this session via this record) and by mandate_watch check (record verdict CONTINUE); nothing restored, no duplicate",
+   "remote": "main == origin/main before this record's own commits",
+   "campaign": "advisor_pilot_20261113: invocations 7 used (pilot ceilings are history in continuous mode), assignments drafted 6 (Advisor), presidio-decided PRESIDIO-001/002/003; evaluations P6 complete (hold) and P7 incomplete (classifier stop)",
+   "consumption_baseline": {
+    "unit": "main-session turns / output tokens / cache written / cache read, from session_model_census.py over each transcript, counted from 2026-11-14T00:00:00Z to the start; sonnet-5-5 in all four",
+    "ADV": "259 / 269,156 / 548,754 / 72,504,276 (effort read back xhigh)",
+    "HE": "467 / 420,556 / 1,336,514 / 207,175,978 (high, medium)",
+    "IT": "240 / 139,533 / 691,531 / 35,533,745 (medium)",
+    "SCI": "226 / 278,554 / 1,111,169 / 39,879,769 (high, max)",
+    "transcripts": "/home/desktop/.claude/projects/-home-desktop-legend-development/<session>.jsonl: ADV e6526331-6b7c-4631-8c9b-9e9d79867e90; HE 29e50812-fef0-4635-9c95-cfe7de2a8e2d; IT 4325d70d-8bea-4789-8046-d7a9ee74c97f; SCI 9400b253-25a0-4b03-8822-96361325fc16",
+    "advisor_evaluations": "read from P<n>/meta.json (P6 9 turns, output 7,476; P7 15 turns, output 13,576, incomplete); delegates and readers: subagent tokens as reported by the owners",
+    "subscription_remaining": "unknown: not exposed by the runtime and not assumed; no percentage or availability is inferred",
+    "end_of_window_method": "session_model_census.py --since 2026-11-14T15:29:29Z per transcript, meta.json for evaluations, owners' reported subagent totals; limits: the census counts main-session turns and cache-dominated reads, subagent usage is separate, a unit is not a quota"
+   }
+  },
+  "report_due": "at the end of the window: compact report with decisions and reasons; assignments given, completed and consumed; comparisons, experimental hypotheses or open questions improved; waits, interruptions, restarts and human interventions; observable cost and its limits; a reasoned recommendation on extending to 48-72 hours; unchanged results, errors and useless activity kept",
+  "log": [
+   {
+    "utc": "2026-11-14T15:29:29Z",
+    "event": "trial started; baseline recorded; recall and binding verified; no duplicate"
+   },
+   {
+    "utc": "2026-11-14T15:3xZ",
+    "event": "human intervention: the operator's activation message (the only operator input of this window so far)"
+   }
+  ]
+ }
 }
