@@ -565,10 +565,29 @@ def parse_roadmap(text: str, path: str) -> list[dict]:
     return out
 
 
+def operator_roadmap_note(text: str) -> list[str]:
+    """HE51: the operator's section of the roadmap (between the OPERATOR_ROADMAP markers) is authoritative, and the plan used to ignore it without saying so. It is not turned into search
+    questions (its priorities are about our own work, which nothing outside can answer); the briefing now states that it exists, how much it holds, and that no question is ranked by it."""
+    m = re.search(r"<!--\s*OPERATOR_ROADMAP:BEGIN\s*-->(.*?)<!--\s*OPERATOR_ROADMAP:END\s*-->", text, re.S)
+    if not m:
+        return []
+    block = m.group(1)
+    prio = len(re.findall(r"^\d+\.\s", block, re.M))
+    direction = len(re.findall(r"^-\s+[A-Z]\.\s", block, re.M))
+    return [f"the operator roadmap (authoritative; it prevails over this plan) is present: {prio} current priorities and {direction} strategic-direction lines. The questions below come from the R-table rows "
+            f"and the other surfaces, and none is ranked by those priorities: read that section first, and do not read a quiet plan as 'nothing to do'"]
+
+
 def parse_diagnosis(text: str, path: str) -> list[dict]:
     out = []
     for line in text.splitlines():
         cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) == 4 and line.lstrip().startswith("|") and cells[0] not in ("Case", "") and not set(cells[0]) <= set("-: "):
+            # HE51: the IT28 layout (Case | Where the limit sits | Evidence | What was done): the limit is the stated gap; it parsed to 0 items before and the whole surface read as "no opportunity"
+            limit = _plain(cells[1])
+            out.append({"surface": "diagnosis", "lid": _plain(cells[0]).lower().replace(" ", "-")[:40], "locator": f"row '{_plain(cells[0])[:60]}' (case / limit layout)",
+                        "weight": WEIGHT["diagnosis"], "text": f"{_plain(cells[0])} {limit}", "decision": f"{_plain(cells[0])[:60]}: closing '{limit[:130]}'"})
+            continue
         if len(cells) != 6 or cells[0] in ("Stage", "") or set(cells[0]) <= set("-: "):
             continue
         missing = _plain(cells[5])
@@ -668,6 +687,7 @@ def parse_reopen(text: str, path: str) -> list[dict]:
 
 OPEN_VERDICT = re.compile(r"^(NEEDS-DATUM|PARTIAL|PARTLY|WATCH)", re.I)
 TABLE_NAME = re.compile(r"/(reopen_searches[^/]*|decisions)\.tsv$")
+PARSER_VERSION = "he51"   # bump when a surface parser or its notes change, so cached extracts of unchanged blobs are re-read
 TABLE_LIMIT = 12  # newest package tables read; each is blob-cached, so an unchanged table costs no read
 
 
@@ -775,7 +795,7 @@ def _extract(path: str, text: str):
     """(items, links, notes) of one surface, by file kind."""
     name = path.rsplit("/", 1)[-1]
     if name == "roadmap_current.md":
-        return parse_roadmap(text, path), [], []
+        return parse_roadmap(text, path), [], operator_roadmap_note(text)
     if name == "work_order.json":
         return parse_work_order(text, path), [], []
     if name.startswith("ORCH-ROADMAP"):
@@ -869,7 +889,7 @@ def resolve_plan(cached: dict | None, extracts: dict | None, ctx: dict, runner=g
             reasons.append(f"surface {path} absent at this revision")
             continue
         old = extracts.get(path) or {}
-        if old.get("blob") != blob:
+        if old.get("blob") != blob or old.get("parser") != PARSER_VERSION:   # a changed reader re-reads an unchanged surface: its old 0 items or missing note must not outlive the fix
             code, text = runner(["show", f"{sha}:{path}"])
             try:
                 if code != 0:
@@ -883,7 +903,7 @@ def resolve_plan(cached: dict | None, extracts: dict | None, ctx: dict, runner=g
             except (ValueError, KeyError, TypeError, AttributeError) as exc:
                 reasons.append(f"surface {path} unreadable: {exc}")
                 continue
-            extracts[path] = old = {"blob": blob, "items": found, "links": links, "notes": notes}
+            extracts[path] = old = {"blob": blob, "parser": PARSER_VERSION, "items": found, "links": links, "notes": notes}
             reread += 1
         inputs[path] = {"surface": kind, "blob": blob}
         reasons += old.get("notes", [])  # stored with the blob, so a cached surface keeps its warnings

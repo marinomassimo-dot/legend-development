@@ -1,0 +1,100 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-HE-RECONCILED-USABLE-20261114",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "assigned_on": "2026-11-14",
+ "OBJECTIVE": "HE — Make reconciled knowledge usable: verify and, when useful, build the minimum link that lets a real generation path use the ADV-006 reconciled measurement knowledge, with IT's before/after case; one accessory scouting fix if proportionate. The closed mandates (PLAN-ADV-SESSION-20261113) are not reopened.",
+ "worktree": ".claude/worktrees/hrk",
+ "branch": "task/hrk",
+ "CURRENT_STATE": "IN_PROGRESS",
+ "CHECKPOINT": {
+  "last_verified_result": "link built, battery PASS WITH SKIPS, gate exit 0",
+  "first_incomplete_work": "OBJ_6_DELIVER: land on main, send IT and ADV the SHA and entry point"
+ },
+ "AUTHORISED_QUEUE_20261114": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1_DIAGNOSE": {
+   "order": 1,
+   "title": "Read the ADV-006 package, the HE50 design-only reader and the actual consumers; decide the route (subset read, reader extension, local adaptation, or keep out) before code",
+   "steps": [
+    {
+     "step": "Read the ADV-006 package, the HE50 design-only reader and the actual consumers; decide the route (subset read, reader extension, local adaptation, or keep out) before code",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "Route chosen from the code: existing design_only role reads verbatim tables; ADV-006 measurements.tsv (28 rows, key m_id) and conflicts.tsv (25 rows, key conflict_id, link m_id) have the slot columns; source SCI42/SCI47 tables not registered (one measurement, one row); no hypothesis-to-measurement mapping (no package states one). Alternatives dropped are in design_roles_he50_20261113/README.md (Update 2026-11-14)."
+    }
+   ],
+   "status": "DONE"
+  },
+  "OBJ_2_BASELINE_WITH_IT": {
+   "order": 2,
+   "title": "Coordinate the case with IT (IT51, INV-05 next_test GABA-A arm and matched non-GABAergic comparator); IT acquires the baseline at bd6ff283a before the path changes on main",
+   "steps": [
+    {
+     "step": "Coordinate the case with IT (IT51, INV-05 next_test GABA-A arm and matched non-GABAergic comparator); IT acquires the baseline at bd6ff283a before the path changes on main",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "Case = IT51 (INV-05 next_test, GABA-A arm + matched non-GABAergic comparator, CP-BH1/BH2). IT sent BASELINE ACQUIRED (main ea02afa81), agreed inv_id INV-05 and an INV-level pointer as the minimal link. Baseline rows checked: CP-BH1/BH2 differ from the baseline only in the new column design_rows_same_investigation."
+    }
+   ],
+   "status": "DONE"
+  },
+  "OBJ_3_LINK": {
+   "order": 3,
+   "title": "Build the minimum link: registration plus mapping, no renamed tables, no inferred fields; six genuine conflicts kept unresolved; two M01 kept apart; no state or priority transfer",
+   "steps": [
+    {
+     "step": "Build the minimum link: registration plus mapping, no renamed tables, no inferred fields; six genuine conflicts kept unresolved; two M01 kept apart; no state or priority transfer",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "c08c7e21f: DESIGN_TABLES +measurements.tsv/conflicts.tsv, manifest row (INV-05), DESIGN_MAP entry with column gloss (open_questions_closed is not a resolved state; interpretable_after quotes priority orders as not dependencies), pointer column. 53 design rows INV-05; six genuine conflicts CF01/CF03/CF04/CF05a/CF05b/CF23 carried with both quotes and no side chosen."
+    }
+   ],
+   "status": "DONE"
+  },
+  "OBJ_4_CHAIN_AND_REGRESSIONS": {
+   "order": 4,
+   "title": "Show source -> reader -> transformation -> generator output -> consumer on the case; regressions for the effective risks; regenerate derived files; run the existing suites",
+   "steps": [
+    {
+     "step": "Show source -> reader -> transformation -> generator output -> consumer on the case; regressions for the effective risks; regenerate derived files; run the existing suites",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "hypothesis_package.py show --inv INV-05: NO_DESIGN_LISTED -> DESIGN_PRESENT (53). 10 new regression tests (test_design_rows_he50.py, test_hypothesis_package.py): same-named ids package-qualified, missing fields explicit, conflicts survive, design not observation, priority order not a dependency, absence of the package keeps earlier rows (13), no source table registered, pointer. Engine outputs byte-identical; it40/it41/it46/it47/it50 suites OK. Battery in a no-hardlinks clone of 140962154: REGRESSION VERDICT PASS WITH SKIPS (251 targets, 12 skipped for absent local cache/hook); public_release_gate exit 0. Not consumed downstream by a decision or card: declared."
+    }
+   ],
+   "status": "DONE"
+  },
+  "OBJ_5_SCOUT_CONTEXT": {
+   "order": 5,
+   "title": "Check the scout briefing defect (Operator roadmap ignored, unparsed surface shown as no opportunity) in current code; small fix with targeted test, or a short diagnosis to ADV",
+   "steps": [
+    {
+     "step": "Check the scout briefing defect (Operator roadmap ignored, unparsed surface shown as no opportunity) in current code; small fix with targeted test, or a short diagnosis to ADV",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "140962154: confirmed in current code that (a) parse_roadmap never read the OPERATOR_ROADMAP block and (b) diagnosis_it28 README (4-column layout) parsed 0 items. Fixed: 4-column layout read (4 items), plan states the operator roadmap (5 priorities, 7 direction lines) and that no question is ranked by it, PARSER_VERSION re-reads cached extracts; 79 scout tests OK."
+    }
+   ],
+   "status": "DONE"
+  },
+  "OBJ_6_DELIVER": {
+   "order": 6,
+   "title": "Integrate and publish with the existing procedures; send IT and ADV the technical choice, alternatives, sources, before/after, limits, verification and the off-switch",
+   "steps": [
+    {
+     "step": "Integrate and publish with the existing procedures; send IT and ADV the technical choice, alternatives, sources, before/after, limits, verification and the off-switch",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ],
+   "status": "TODO"
+  }
+ },
+ "MANDATE_STATE": "OPEN"
+}

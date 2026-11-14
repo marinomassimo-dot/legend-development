@@ -72,5 +72,104 @@ class DesignRows(unittest.TestCase):
         self.assertEqual(committed, [dict(r) for r in self.rows])
 
 
+class ReconciledMeasurements(unittest.TestCase):
+    """HE51: the ADV-006 reconciliation reaches the generator as design rows (INV-05) without a measurement being listed twice, a conflict resolved, an order turned into a dependency or a design turned into an observation."""
+    PKG = "measurement_reconciliation_adv006_20261114"
+    SRC = HERE.parent / PKG / "output"
+
+    @classmethod
+    def setUpClass(cls):
+        cls.rows, cls.unmapped = cp.design_rows()
+        cls.mine = {r["design_row_id"]: r for r in cls.rows if r["package"] == cls.PKG}
+        def tsv(n):
+            with open(cls.SRC / n, encoding="utf-8", newline="") as f:
+                return list(csv.DictReader(f, delimiter="\t"))
+        cls.meas, cls.conf = tsv("measurements.tsv"), tsv("conflicts.tsv")
+
+    def row(self, table, key):
+        return self.mine[f"{self.PKG}::{table}::{key}"]
+
+    def test_every_measurement_and_every_conflict_of_the_package_travels_once_and_the_source_tables_are_not_registered(self):
+        self.assertEqual(len([i for i in self.mine if "::measurements.tsv::" in i]), len(self.meas))
+        self.assertEqual(len([i for i in self.mine if "::conflicts.tsv::" in i]), len(self.conf))
+        listed = {r["package"] for r in self.rows}
+        self.assertFalse({"chloride_gradient_sci42_20261110", "inhibitory_defect_sci47_20261112", "glun2b_comparators_sci42_20261110"} & listed)   # one measurement, one row: no second source of the same request
+        self.assertEqual({r["inv_id"] for r in self.mine.values()}, {"INV-05"})
+
+    def test_each_mapped_cell_is_the_source_cell_verbatim_with_its_own_column_name(self):
+        for m in self.meas:
+            r = self.row("measurements.tsv", m["m_id"])
+            for col in ("name", "source_names", "requests_merged", "preparation", "mode_and_configuration", "unit_of_analysis", "age_bin", "cohort_and_genotype_arms"):
+                if m[col]:
+                    self.assertIn(f"{col}: {m[col]}", r["step"])
+            self.assertIn(m["interpretable_after"], r["precondition_unmet_until_the_step_before_is_run"])
+            self.assertIn(m["not_decided_by_it"], r["scope_and_what_the_result_is_not"])
+
+    def test_missing_fields_stay_explicit_and_a_design_is_not_an_observation(self):
+        for i, r in self.mine.items():
+            self.assertTrue(r["observation"].startswith("absent"))
+            if r["table"] == "measurements.tsv":
+                self.assertEqual((r["controls_as_documented_by_the_package"], r["possible_outcomes_conditions_and_cautions_not_observed"], r["hypothesis_link"]), (cp.ABSENT,) * 3)
+
+    def test_open_questions_closed_is_never_a_resolved_state(self):
+        for m in self.meas:
+            d = self.row("measurements.tsv", m["m_id"])["conditioned_decision"]
+            self.assertIn("open_questions_closed [", d)
+            self.assertIn("no question is closed by this row", d)
+            self.assertIn(m["open_questions_closed"], d)
+
+    def test_the_six_genuine_conflicts_survive_with_both_quotes_and_no_side_chosen(self):
+        genuine = sorted(c["conflict_id"] for c in self.conf if c["type"] == "genuine")
+        self.assertEqual(genuine, ["CF01", "CF03", "CF04", "CF05a", "CF05b", "CF23"])
+        for c in self.conf:
+            r = self.row("conflicts.tsv", c["conflict_id"])
+            self.assertIn(f"type: {c['type']}", r["step"])
+            self.assertIn(c["quote_A"], r["step"]); self.assertIn(c["quote_B"], r["step"])
+            self.assertEqual(r["hypothesis_link"], f"m_id: {c['m_id']}")                       # the link is the package's own list ("M01;M03"), not re-split or chosen
+            self.assertIn("no side is chosen by this row", r["scope_and_what_the_result_is_not"])
+        cf23 = self.row("conflicts.tsv", "CF23")["step"]
+        self.assertIn("same percent of evoked synaptic charge removed", cf23); self.assertIn("membrane potential and input resistance", cf23)
+
+    def test_an_order_of_priority_is_not_carried_as_a_dependency_and_a_stated_dependency_is_carried_as_quoted(self):
+        first = self.row("measurements.tsv", "M01")["precondition_unmet_until_the_step_before_is_run"]
+        self.assertIn("none (first in SCI42's order)", first); self.assertIn("an order of cost or priority inside it is not a dependency", first)
+        self.assertIn("interpretable only after mIPSC, agonist response and E_GABA place the deficit", self.row("measurements.tsv", "M16")["precondition_unmet_until_the_step_before_is_run"])
+
+    def test_the_package_local_id_is_not_a_global_one(self):
+        other = Path(tempfile.mkdtemp(prefix="he51_")) / "other_pkg"
+        (other / "output").mkdir(parents=True)
+        (other / "output" / "measurements.tsv").write_text("m_id\tname\nM01\ttissue and bath pH\n", encoding="utf-8")
+        pk = hp.load_all() + [dict(hp.load_design_only(other), name="other_pkg", inv_id="INV-05")]
+        with mock.patch.object(hp, "load_all", return_value=pk), mock.patch.dict(cp.DESIGN_MAP, {"other_pkg": {"measurements.tsv": dict(step=["name"], precondition=[], controls=[], outcomes=[], decision=[], scope=[], link=[])}}):
+            rows, _ = cp.design_rows()
+        ids = [r["design_row_id"] for r in rows if r["table"] == "measurements.tsv" and r["step"].startswith("m_id: M01 ")]
+        self.assertEqual(len(ids), 2); self.assertEqual(len(set(ids)), 2)
+
+    def test_without_the_package_the_earlier_rows_are_unchanged(self):
+        pk = [p for p in hp.load_all() if p["dir"].parent.name != self.PKG]
+        with mock.patch.object(hp, "load_all", return_value=pk):
+            rows, _ = cp.design_rows()
+        self.assertEqual([r for r in rows], [r for r in self.rows if r["package"] != self.PKG])
+        self.assertEqual(len(rows), 13)
+        self.assertFalse([r for r in cp.package_rows()[0] if self.PKG in r["package_ref"]])      # nothing reached the hypothesis path
+
+    def test_the_investigation_pointer_names_the_design_rows_without_linking_them_to_a_hypothesis(self):
+        for r in cp.rows():
+            if r["inv_id"] == "INV-05":
+                ptr = r["design_rows_same_investigation"]
+                self.assertIn("53 design rows", ptr); self.assertIn("not linked to this hypothesis by any package", ptr)
+                self.assertIn("M16", ptr); self.assertIn("CF23", ptr)
+                self.assertNotIn(r["proposal_id"], ptr)
+            else:
+                self.assertIn("none listed", r["design_rows_same_investigation"])                           # INV-18 has no registered design: said, not left empty
+        isr = next(r for r in cp.package_rows()[0] if r["inv_id"] == "INV-02")["design_rows_same_investigation"]
+        self.assertIn("not mapped, so not in that file: isrib_discrim_20261108 grid.tsv", isr)               # a reachable table the file does not hold is not advertised as in it
+        self.assertEqual(cp.rows(link=False)[0]["design_rows_same_investigation"], "")                      # the ablation still rebuilds what the generator held before
+
+    def test_without_the_package_the_pointer_says_none(self):
+        pk = [p for p in hp.load_all() if p["dir"].parent.name != self.PKG]
+        self.assertIn("none listed for INV-05", cp.design_pointer("INV-05", pk))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
