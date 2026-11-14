@@ -235,7 +235,7 @@ def render_entrypoints(rows: list[dict[str, Any]]) -> str:
 
 
 RECALL_PROMPT = ("Proactive Strategic Advisor pilot, hourly mechanical check. Run: cd {root} && python3 framework/scripts/strategic_advisor.py tick --campaign {campaign}. "
-                 "If the verdict is NONE, DEFERRED, RUNNING or DISABLED/EXPIRED/BUDGET, reply in one line and do nothing else. If EVALUATE, start `strategic_advisor.py evaluate --campaign {campaign}` "
+                 "If the verdict is NONE, DEFERRED, RUNNING, PAUSED, RESOURCES or DISABLED/EXPIRED/BUDGET, reply in one line (a NONE or DEFERRED in continuous mode is a legitimate wait, not the end of the mandate) and do nothing else. If EVALUATE, start `strategic_advisor.py evaluate --campaign {campaign}` "
                  "in the background (run_in_background), and when it finishes read the drafted assignments with `status`, check each recipient is listed live by `claude agents --json`, "
                  "deliver each with SendMessage (durable artifact path plus pointer), record `deliver --state SENT` or `UNREACHABLE`, and later verify the take-in-charge in the recipient's task record. "
                  "Never invent work; never write to transcripts; no more than the campaign budget.")
@@ -438,12 +438,12 @@ def run(stage: str, campaign: Path, brief: Path, model: str, effort: str, timeou
     turn_limit = int(_budget(campaign).get("turn_limit") or 0)
     used = {a["index"] for a in _attempts(campaign) if a.get("stage") == stage}  # a log row is written at launch and again at the end: count attempts once
     extra = False
-    if len(used) >= limits[stage] and extra_reason:
+    if limits[stage] is not None and len(used) >= limits[stage] and extra_reason:
         # one recorded extra attempt per stage, and only when every earlier attempt of the stage produced no assessment
         concluded = [a for a in _attempts(campaign) if a.get("stage") == stage and a["outcome"] not in ("STARTED", "OK")]
         if len(concluded) == len(used) and not any(a.get("extra") for a in _attempts(campaign) if a.get("stage") == stage):
             extra = True
-    if len(used) >= limits[stage] and not extra:
+    if limits[stage] is not None and len(used) >= limits[stage] and not extra:
         print(f"CEILING: stage {stage} already has {len(used)} attempt(s) in {campaign} (limit {limits[stage]}); failed attempts count. "
               "This ceiling is procedural: it binds runs launched through this tool only.", file=sys.stderr)
         return 2
@@ -529,7 +529,7 @@ def check(campaign: Path) -> int:
     for stage in LIMITS:
         n = len({a["index"] for a in attempts if a["stage"] == stage})
         extras = len({a["index"] for a in attempts if a["stage"] == stage and a.get("extra")})
-        if n > ceilings[stage] + extras:
+        if ceilings[stage] is not None and n > ceilings[stage] + extras:
             problems.append(f"stage {stage}: {n} attempts exceed the ceiling {ceilings[stage]}")
     for meta_path in sorted(campaign.glob("*/meta.json")):
         meta = json.loads(meta_path.read_text(encoding="utf-8"))
@@ -604,9 +604,80 @@ def _budget(campaign: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
 
 
-def stage_limits(campaign: Path, limits: dict[str, int] = LIMITS) -> dict[str, int]:
+CONTINUOUS = "CONTINUOUS.json"
+CONTROL_LINE = re.compile(r"^\s*(?:[-*]\s*)?(PAUSE|STOP|RESUME|URGENT|INTEGRATION)\s*:\s*(.+?)\s*$", re.M)
+ADVISOR_SCOPES = ("all", "advisor", "adv", "presidio", "strategic advisor")
+ALLOCATION_UNITS = ("output_tokens", "cache_read_tokens")
+
+
+def continuous(campaign: Path) -> dict[str, Any]:
+    """The operator's persistent authorisation to continue inside the roadmap, or {} when there is none (or it was ended). It is a mode of the campaign, not a second campaign: the pilot's budget,
+    counters, results and failures stay exactly as they were, and removing the file returns the campaign to its bounded pilot rules."""
+    path = Path(campaign) / CONTINUOUS
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return {} if data.get("ended_utc") else data
+
+
+def operator_controls(text: str | None = None) -> list[dict[str, str]]:
+    """Operator control lines in the roadmap section, in order: `PAUSE: <scope> — why`, `STOP: <scope>`, `RESUME: <scope>` (lifts that scope; `RESUME: all` lifts every one), `URGENT: ...`, `INTEGRATION: ...`.
+    The roadmap section is the canonical seat of the operator's chat instructions (sessions transcribe them there); nothing here asks the operator for a second place."""
+    block = roadmap_text() if text is None else text
+    return [{"kind": m.group(1), "text": m.group(2), "scope": re.split(r"\s+[\u2014-]\s+|;|\(", m.group(2), maxsplit=1)[0].strip().lower()} for m in CONTROL_LINE.finditer(block)]
+
+
+def active_suspensions(controls: list[dict[str, str]]) -> list[dict[str, str]]:
+    live: list[dict[str, str]] = []
+    for c in controls:
+        if c["kind"] in ("PAUSE", "STOP"):
+            live.append(c)
+        elif c["kind"] == "RESUME":
+            live = [x for x in live if c["scope"] != "all" and x["scope"] != c["scope"]]
+    return live
+
+
+def advisor_suspension(campaign: Path) -> str:
+    """The text of an operator pause or stop that covers the Advisor presidio, or ''. A suspension scoped to another perimeter is reported to the evaluation, not applied here."""
+    mine = [c for c in active_suspensions(operator_controls()) if c["scope"] in ADVISOR_SCOPES or "advisor" in c["scope"]]
+    return f"{mine[-1]['kind']}: {mine[-1]['text']}" if mine else ""
+
+
+def measured_use(campaign: Path, since: dt.datetime) -> dict[str, int]:
+    """What the saved evaluations of this campaign measurably used since `since`, read from their own runtime read-back (never estimated, never converted to a share of a plan)."""
+    out = {"evaluations": 0, "output_tokens": 0, "cache_read_tokens": 0}
+    for meta in sorted(Path(campaign).glob("*/meta.json")):
+        try:
+            m = json.loads(meta.read_text(encoding="utf-8"))
+            started = dt.datetime.fromisoformat(m["started_utc"].replace("Z", "+00:00"))
+        except (OSError, json.JSONDecodeError, KeyError, ValueError):
+            continue
+        if started >= since:
+            totals = (m.get("runtime_readback") or {}).get("census", {}).get("totals", {})
+            out["evaluations"] += 1; out["output_tokens"] += int(totals.get("output", 0)); out["cache_read_tokens"] += int(totals.get("cache_read", 0))
+    return out
+
+
+def weekly_state(campaign: Path) -> dict[str, Any]:
+    """The Advisor's slice of the shared weekly allocation. The usable limit is the operator's to state (the runtime does not expose it): without a value the state is 'unset' and nothing is blocked."""
+    alloc = (continuous(campaign).get("weekly_allocation") or {})
+    used = measured_use(campaign, _now() - dt.timedelta(days=7))
+    limit, share, unit = alloc.get("usable_limit"), alloc.get("advisor_share"), alloc.get("unit")
+    if not (limit and share and unit in ALLOCATION_UNITS):
+        return {"state": "unset", "measured_7d": used, "note": "usable weekly limit not given by the operator and not exposed by the runtime: nothing is blocked and no value is assumed"}
+    cap = float(limit) * float(share)
+    spent = used[unit]
+    return {"state": "exhausted" if spent >= cap else "near" if spent >= 0.8 * cap else "ok", "measured_7d": used, "unit": unit, "advisor_cap": cap, "advisor_spent": spent}
+
+
+def stage_limits(campaign: Path, limits: dict[str, int] = LIMITS) -> dict[str, int | None]:
     """The per-stage attempt ceilings. They are the whole rule only without a budget file; with one, the campaign's total (`budget_refusal` counts every stage together, expiry and the disable
     flag included) governs, so a stage may use up to that total: the operator's amendment to 5 invocations was refused at the fourth Stage P run by the stale per-stage 3 (2026-11-14)."""
+    if continuous(campaign):
+        return {stage: None for stage in limits}            # a declared mode, not a big number: the pilot's per-stage ceilings are not the rule of continuous operation
     total = int(_budget(campaign).get("max_invocations") or 0)
     return {stage: max(n, total) for stage, n in limits.items()} if total else dict(limits)
 
@@ -618,6 +689,15 @@ def budget_refusal(campaign: Path) -> str:
         return ""
     if (Path(campaign) / "DISABLED").exists():
         return "the campaign is disabled"
+    if continuous(campaign):
+        # continuous operation: the pilot's expiry and total are historical and do not apply; what binds is the operator's pause or stop, and the shared weekly allocation when it is known
+        held = advisor_suspension(campaign)
+        if held:
+            return f"operator suspension in the roadmap section ({held}); lifted only by a RESUME line"
+        week = weekly_state(campaign)
+        if week["state"] == "exhausted":
+            return f"the Advisor's slice of the weekly allocation is spent ({week['advisor_spent']} of {week['advisor_cap']:.0f} {week['unit']}, measured): checkpoint, verify and deliver open work, no widening"
+        return ""
     if b.get("expires_utc") and _now() >= dt.datetime.fromisoformat(b["expires_utc"].replace("Z", "+00:00")):
         return f"the campaign expired at {b['expires_utc']} (no automatic renewal)"
     used = len({(a["stage"], a["index"]) for a in _attempts(Path(campaign))})
@@ -708,6 +788,22 @@ def observe(campaign: Path, state: dict[str, Any]) -> dict[str, Any]:
             "sessions": _sessions()}
 
 
+def presidio_state(verdict: str, why: str, is_continuous: bool) -> str:
+    """What the presidio is doing, in words that cannot be mistaken for having been abandoned: a wait is a state of the mandate, not its end and not a request for a new prompt."""
+    if verdict in ("EVALUATE", "RUNNING"):
+        return "ACTIVE: an evaluation is due or running"
+    if verdict in ("NONE", "DEFERRED"):
+        return ("WAITING (legitimate): no event needs a strategic choice; the next triggers are a roadmap change, a delivery, a mandate transition or a stalled mandate" if is_continuous
+                else "idle inside the pilot: nothing new")
+    if verdict == "PAUSED":
+        return f"SUSPENDED by the operator: {why}"
+    if verdict == "RESOURCES":
+        return f"SUSPENDED for resources: {why}"
+    if verdict == "DISABLED":
+        return "STOPPED: the campaign was disabled"
+    return "PILOT ENDED: " + why + " (no continuous authorisation is in force)"
+
+
 def tick(campaign: Path) -> dict[str, Any]:
     """The hourly check: mostly mechanical, no model. Verdicts: NONE (nothing new: reuse the previous assessment), EVALUATE (one strategic evaluation is due), and the reasons it is not
     (RUNNING, DISABLED, EXPIRED, BUDGET, DEFERRED). A stalled mandate is reported, not restarted: recovery stays with the mandate watch."""
@@ -717,6 +813,7 @@ def tick(campaign: Path) -> dict[str, Any]:
     obs = observe(campaign, state)
     first = not state
     refusal = budget_refusal(campaign)
+    cont = continuous(campaign)
     anticipating = [e for e in obs["events"] if e.startswith(("delivery:", "mandate:", "stalled"))] or ([f"roadmap changed"] if state.get("roadmap_sha256") not in (None, obs["roadmap_sha256"]) else [])
     changed = state.get("roadmap_sha256") not in (None, obs["roadmap_sha256"])
     digest = sha256_text(obs["roadmap_sha256"] + "|" + "|".join(sorted(obs["events"])))
@@ -726,7 +823,7 @@ def tick(campaign: Path) -> dict[str, Any]:
     if (campaign / "DISABLED").exists():
         verdict, why = "DISABLED", "the campaign is disabled"
     elif refusal:
-        verdict, why = ("EXPIRED" if "expired" in refusal else "BUDGET"), refusal
+        verdict, why = ("PAUSED" if refusal.startswith("operator suspension") else "RESOURCES" if "weekly allocation" in refusal else "EXPIRED" if "expired" in refusal else "BUDGET"), refusal
     elif first and (campaign / "budget.json").exists():
         verdict, why = "EVALUATE", "campaign start: the roadmap and the first observation"
     elif first:
@@ -736,7 +833,7 @@ def tick(campaign: Path) -> dict[str, Any]:
     elif obs["events"] or changed:
         if digest == state.get("last_digest"):
             why = "the same events were already evaluated"
-        elif changed or (anticipating and (hours is None or hours >= 1)) or (hours is None or hours >= 4):
+        elif changed or (anticipating and (hours is None or hours >= float(cont.get("min_hours_anticipating", 1)))) or (hours is None or hours >= float(cont.get("min_hours_between", 4))):
             verdict, why = "EVALUATE", ("roadmap changed" if changed else "; ".join(anticipating[:3] or obs["events"][:3]))
         else:
             verdict, why = "DEFERRED", f"events present but the last evaluation was {hours:.1f} h ago and none is anticipating"
@@ -746,7 +843,10 @@ def tick(campaign: Path) -> dict[str, Any]:
         state["pending_events"] = obs["events"]            # the tick advances main_sha and the mandate states below; the evaluation that follows must still see what triggered it
         state["pending_commits"] = obs["commits_since_last_tick"]
     _save_state(campaign, state)
-    return {"verdict": verdict, "why": why, "events": obs["events"][:12], "open_mandates": obs["open_mandates"], "sessions": obs["sessions"], "digest": digest,
+    ctl = operator_controls()
+    return {"verdict": verdict, "why": why, "mode": "continuous" if cont else "pilot", "presidio": presidio_state(verdict, why, bool(cont)),
+            "operator_controls": [f"{c['kind']}: {c['text']}" for c in (active_suspensions(ctl) + [c for c in ctl if c["kind"] in ("URGENT", "INTEGRATION")])[-6:]],
+            "events": obs["events"][:12], "open_mandates": obs["open_mandates"], "sessions": obs["sessions"], "digest": digest,
             "hours_since_last_evaluation": None if hours is None else round(hours, 1)}
 
 
@@ -868,6 +968,20 @@ def turn_limit_text(campaign: Path) -> str:
             f"stop opening files by turn {max(n - 6, 1)} at the latest and write the assessment (with the Assignments section) in your last turns; a partial assessment is better than none.")
 
 
+def operating_mode_text(campaign: Path) -> str:
+    """The brief's statement of the operating mode. In continuous operation the pilot's ceilings are history and the one thing that binds the run is the turn limit; nothing here asks for work to be invented."""
+    cont = continuous(campaign)
+    if not cont:
+        return "## Operating mode\nbounded pilot: the limits above are the rule."
+    week = weekly_state(campaign)
+    ctl = [f"{c['kind']}: {c['text']}" for c in operator_controls()][-8:]
+    return ("## Operating mode\ncontinuous: the operator authorised the Advisor to continue inside the roadmap, the existing boundaries and the available resources (authorisation of "
+            f"{cont['authorised_utc']}; the pilot's totals and expiry above are history). An assignment that ends does not end the presidio. Waiting for an event is a valid outcome and `none: <reason>` "
+            "is a complete answer; do not invent work to stay busy. Radar and scouting items are opportunities to compare with the current thread, the other open questions, the promising comparisons, "
+            "knowledge already held and concrete obstacles; they are not orders and not a second roadmap, and nothing is installed because a radar recommends it. "
+            f"Shared weekly allocation: {week['state']} ({week.get('note', 'measured and enforced for this presidio')}). Operator control lines in the roadmap section (most recent last): {json.dumps(ctl)}.")
+
+
 def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
     campaign = Path(campaign)
     states = assignment_states(campaign)
@@ -875,6 +989,7 @@ def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
     parts = ["# Strategic Advisor brief — Stage P (proactive evaluation)", "", "## Snapshot", render_snapshot(snapshot()), "",
              "## Operator roadmap (authoritative; operator instructions prevail over any automatic plan)", roadmap_text() or "(no roadmap section found: say so, and propose nothing beyond keeping the plan)", "",
              "## Campaign limits", json.dumps({k: v for k, v in _budget(campaign).items() if k in ("expires_utc", "max_invocations", "max_assignments", "turn_limit")}), "",
+             operating_mode_text(campaign), "",
              "## Observed state (mechanical, this tick)", json.dumps({k: obs[k] for k in ("events", "open_mandates", "sessions", "commits_since_last_tick")}, indent=1), "",
              "## Assignments already drafted, with their evidence level (do not duplicate; follow what was taken in charge)",
              json.dumps({k: {"recipient": v["recipient"], "key": v["key"], "highest": v["highest"]} for k, v in states.items()}, indent=1) or "none", "",
@@ -922,8 +1037,18 @@ def status(campaign: Path) -> str:
     b = _budget(campaign)
     att = _attempts(campaign)
     n = len({(a["stage"], a["index"]) for a in att})
-    lines = [f"campaign {campaign.name}: activated {b.get('activated_utc', '-')}, expires {b.get('expires_utc', '-')}, invocations {n}/{b.get('max_invocations', '-')}, "
-             f"assignments drafted {len([1 for e in _events(campaign) if e['state'] == 'DRAFTED'])}/{b.get('max_assignments', '-')}, {'DISABLED' if (campaign / 'DISABLED').exists() else 'enabled'}"]
+    cont = continuous(campaign)
+    drafted = len([1 for e in _events(campaign) if e['state'] == 'DRAFTED'])
+    lines = [f"campaign {campaign.name}: activated {b.get('activated_utc', '-')}, pilot expiry {b.get('expires_utc', '-')}{' (historical)' if cont else ''}, pilot invocations {n}/{b.get('max_invocations', '-')}, "
+             f"assignments drafted {drafted}/{b.get('max_assignments', '-')}, {'DISABLED' if (campaign / 'DISABLED').exists() else 'enabled'}"]
+    if cont:
+        since = [a for a in {(a['stage'], a['index']): a for a in att if a.get('started_utc', '') >= cont['authorised_utc']}.values()]
+        week = weekly_state(campaign)
+        held = advisor_suspension(campaign)
+        lines.append(f"  mode CONTINUOUS since {cont['authorised_utc']} ({cont.get('source', 'source not stated')}): {len(since)} evaluation(s) since; the pilot ceilings above were executed "
+                     f"{n}/{b.get('max_invocations', '-')} and {drafted}/{b.get('max_assignments', '-')} and are history, not the rule of this mode; "
+                     f"{'SUSPENDED: ' + held if held else 'no operator suspension'}; weekly allocation {week['state']} (measured 7 d: {week['measured_7d']['evaluations']} evaluation(s), "
+                     f"{week['measured_7d']['output_tokens']} output, {week['measured_7d']['cache_read_tokens']} cache-read tokens)" + ("" if week["state"] != "unset" else "; " + week["note"]))
     for ident, v in sorted(assignment_states(campaign).items()):
         lines.append(f"  {ident} [{v['recipient']}] {v['key']}: highest evidence {v['highest'] or 'none'}; levels {','.join(v['levels'])}" + ("; UNREACHABLE (residual stays in the queue)" if v["unreachable"] else ""))
     return "\n".join(lines)
@@ -955,6 +1080,12 @@ def main(argv: list[str] | None = None) -> int:
     ac.add_argument("--hours", type=int, default=24); ac.add_argument("--max-invocations", type=int, default=3); ac.add_argument("--max-assignments", type=int, default=3)
     ac.add_argument("--turn-limit", type=int, default=20); ac.add_argument("--recipient", action="append", default=[], help="role=session name, e.g. Orchestrator='IT Orchestrator'")
     rc = sub.add_parser("recall", help="print the one canonical text of the hourly recall (what to pass to CronCreate when restoring it); CronList first, so there is one copy only"); rc.add_argument("--campaign", required=True)
+    ec = sub.add_parser("authorise-continuous", help="record the operator's persistent authorisation to continue inside the roadmap (a mode of this campaign: budget, counters and history are untouched; `end-continuous` returns to the bounded pilot)")
+    ec.add_argument("--campaign", required=True); ec.add_argument("--source", required=True, help="where the operator's authorisation is recorded (the Operator roadmap line)")
+    ec.add_argument("--min-hours-between", type=float, default=4.0); ec.add_argument("--min-hours-anticipating", type=float, default=1.0)
+    ec.add_argument("--weekly-limit", type=float, help="the shared usable weekly limit in --unit, only when the operator has stated it"); ec.add_argument("--advisor-share", type=float, help="the Advisor's fraction of it, 0-1")
+    ec.add_argument("--unit", choices=ALLOCATION_UNITS)
+    en = sub.add_parser("end-continuous", help="end the continuous mode (history kept); the campaign then follows its bounded pilot rules"); en.add_argument("--campaign", required=True); en.add_argument("--reason", required=True)
     dis = sub.add_parser("disable", help="stop the pilot: later ticks and runs refuse; ordinary scheduling and the sessions' work continue"); dis.add_argument("--campaign", required=True)
     args = ap.parse_args(argv)
 
@@ -991,7 +1122,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.cmd == "check":
         return check(Path(args.campaign))
     campaign = Path(args.campaign)
-    if args.cmd in ("recall", "tick", "evaluate", "deliver", "activate", "disable") and primary_refusal():
+    if args.cmd in ("recall", "tick", "evaluate", "deliver", "activate", "disable", "authorise-continuous", "end-continuous") and primary_refusal():
         print(primary_refusal(), file=sys.stderr); return 2
     if args.cmd == "recall":
         print(recall_prompt(campaign)); return 0
@@ -1009,6 +1140,37 @@ def main(argv: list[str] | None = None) -> int:
         data = {"activated_utc": _utc(now), "expires_utc": _utc(now + dt.timedelta(hours=args.hours)), "max_invocations": args.max_invocations, "max_assignments": args.max_assignments,
                 "turn_limit": args.turn_limit, "recipients": dict(r.split("=", 1) for r in args.recipient)}
         (campaign / "budget.json").write_text(json.dumps(data, indent=1, sort_keys=True) + "\n", encoding="utf-8"); print(json.dumps(data)); return 0
+    if args.cmd == "authorise-continuous":
+        path = campaign / CONTINUOUS
+        prior = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+        b, att = _budget(campaign), _attempts(campaign)
+        if not b:
+            print("REFUSED: no campaign budget here; continuous operation is a mode of an existing campaign, not a new one", file=sys.stderr); return 2
+        data = {"mode": "continuous", "authorised_utc": prior.get("authorised_utc") or _utc(_now()), "source": args.source,
+                "scope": "inside the Operator roadmap, the existing boundaries and exclusions, and the available resources; operator stop, pause and new instructions prevail",
+                "pilot_at_authorisation": prior.get("pilot_at_authorisation") or {"invocations_executed": len({(a["stage"], a["index"]) for a in att}), "max_invocations": b.get("max_invocations"),
+                                                                                   "assignments_drafted": len([1 for e in _events(campaign) if e["state"] == "DRAFTED"]), "max_assignments": b.get("max_assignments"),
+                                                                                   "expires_utc": b.get("expires_utc")},
+                "min_hours_between": args.min_hours_between, "min_hours_anticipating": args.min_hours_anticipating}
+        if args.weekly_limit:
+            if not (args.advisor_share and args.unit and 0 < args.advisor_share <= 1):
+                print("REFUSED: a weekly limit needs --advisor-share (0-1] and --unit", file=sys.stderr); return 2
+            data["weekly_allocation"] = {"usable_limit": args.weekly_limit, "advisor_share": args.advisor_share, "unit": args.unit, "stated_by": "operator"}
+        else:
+            data["weekly_allocation"] = {"usable_limit": None, "note": "not given by the operator and not exposed by the runtime: declared unknown, never assumed"}
+        first = not path.exists()
+        path.write_text(json.dumps(data, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+        if first:                                           # the authorisation is itself recorded in the roadmap section: the next tick reads it as a roadmap change and evaluates once
+            state = _load_state(campaign)
+            if state:
+                state["roadmap_sha256"] = ""; _save_state(campaign, state)
+        print(json.dumps(data)); return 0
+    if args.cmd == "end-continuous":
+        path = campaign / CONTINUOUS
+        if not path.exists():
+            print("no continuous authorisation here"); return 0
+        data = json.loads(path.read_text(encoding="utf-8")); data.update(ended_utc=_utc(_now()), ended_reason=args.reason)
+        path.write_text(json.dumps(data, indent=1, sort_keys=True) + "\n", encoding="utf-8"); print("continuous mode ended; the bounded pilot rules apply again"); return 0
     (campaign / "DISABLED").write_text(_utc(_now()) + "\n", encoding="utf-8"); print("disabled"); return 0
 
 
