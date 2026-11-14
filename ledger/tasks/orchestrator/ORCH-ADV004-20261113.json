@@ -9,12 +9,12 @@
  "BASELINE": "main c45fd1d5; worktree .claude/worktrees/adv004, branch task/adv004; folder gabaa_subtype_adv004_20261114/. Receipts ledger has no entry for the three papers; no unlanded work of this session on the axis.",
  "MANDATE_STATE": "OPEN",
  "CURRENT_PACKAGE": {
-  "id": "S0",
-  "state": "frame written",
-  "delegate_active": "none",
-  "updated": "2026-11-13"
+  "id": "README",
+  "state": "README and delta committed; narrow V16 recheck running (agent a46e2897f92754e91)",
+  "delegate_active": "V16 (sonnet high)",
+  "updated": "2026-11-14"
  },
- "RESUME": "S0 written; next: commit, bind marker, producer brief, dispatch; battery only after the IT session's battery finishes or after telling it.",
+ "RESUME": "Apply recheck corrections (verify/recheck_readme.md) via an idempotent apply script; then pre-freeze suites; take the battery after the IT battery (it53_ci, pid 1291082) or after telling IT; close, task_close, safe_push, message presidio (legend-development-39) and IT Orchestrator.",
  "DECISIONS_TAKEN": [
   "2026-11-13 ADV-004 taken in charge as executed (this record cites it); accepted as a request relayed by the ADV presidio; reversible by the operator"
  ],
@@ -29,22 +29,22 @@
    "steps": [
     {
      "step": "Take in charge ADV-004; ledger and repo checked first; S0 frame (definitions, trigger, priors) committed before reading",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator"
     },
     {
      "step": "Producer brief; one producer (sonnet medium) reads the three papers as complete originals; staged receipts validated",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator"
     },
     {
      "step": "One blind verifier (sonnet high): re-extract every number with conditions; attack the conditions analysis; corrections and a narrow recheck",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator"
     },
     {
      "step": "README answer-first, consumer_delta, conditional design position; message the presidio and the IT Orchestrator",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator"
     }
    ]
