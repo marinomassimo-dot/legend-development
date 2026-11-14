@@ -1,0 +1,10 @@
+group	n_samples	min_fpkm	median_fpkm	max_fpkm
+human astrocyte, tumour	4	0.1	41.65	58.8
+human astrocyte, postnatal non-tumour	16	0.1	0.4	3.0
+human astrocyte, fetal	6	2.9	5.75	13.5
+human neuron (one sample)	1	12.5	12.5	12.5
+human oligodendrocyte	5	0.1	0.6	1.3
+human myeloid	3	0.3	0.4	0.7
+human endothelium	2	22.8	38.05	53.3
+human whole cortex	4	1.0	1.3	2.7
+mouse astrocyte, 1-9 months	4	0.2	0.25	0.8

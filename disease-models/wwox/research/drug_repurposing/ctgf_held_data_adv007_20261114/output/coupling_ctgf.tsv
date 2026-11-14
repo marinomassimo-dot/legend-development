@@ -1,0 +1,13 @@
+panel	marker	slope_ccn2_on_marker_within_line	r2_within_line	marker_ko_vs_wt_log2_shift	predicted_ccn2_shift_from_marker	observed_ccn2_shift
+progenitor	VIM	1.310	0.374	0.864	1.133	1.151
+progenitor	NES	1.162	0.612	1.316	1.530	1.151
+progenitor	SOX9	-0.574	0.110	0.542	-0.311	1.151
+progenitor	SOX2	1.120	0.240	0.511	0.573	1.151
+progenitor	PAX6	-0.017	0.000	0.144	-0.002	1.151
+progenitor	HES1	0.446	0.032	0.386	0.172	1.151
+neuronal	STMN2	-0.537	0.241	-0.411	0.221	1.151
+neuronal	MAP2	-0.856	0.275	-0.623	0.534	1.151
+neuronal	SYT1	-0.806	0.295	-0.502	0.405	1.151
+neuronal	RBFOX3	-0.899	0.569	0.038	-0.034	1.151
+neuronal	TUBB3	-0.550	0.089	-0.231	0.127	1.151
+neuronal	SNAP25	-0.732	0.562	-0.415	0.303	1.151

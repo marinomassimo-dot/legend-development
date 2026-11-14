@@ -1,0 +1,30 @@
+{
+ "proxy_transcript": "ENSMUST00000020171.11",
+ "rows_scanned": 111083,
+ "unique_row_within_85_to_100_percent_of_all_four_published_means": true,
+ "rows_within_70_to_105_percent_of_all_four_published_means": [
+  "ENSMUST00000155782.1",
+  "ENSMUST00000020171.11",
+  "ENSMUST00000118620.1"
+ ],
+ "status": "inference by number matching, not by annotation; no single row reproduces the published gene-level means exactly, so the gene value is a sum over several transcripts and the proxy is a lower bound",
+ "published_gene_level_means_N_Ctrl_N_KO_WT_nullKO": [
+  5.3,
+  9.9,
+  5.91,
+  2.73
+ ],
+ "proxy_means": [
+  4.638,
+  9.859,
+  5.721,
+  2.666
+ ],
+ "proxy_fraction_of_published": [
+  0.875,
+  0.996,
+  0.968,
+  0.977
+ ],
+ "reading": "the remaining 0.4 to 12.5 percent are other Ccn2 transcripts (not identified); the proxy undercounts the gene by about 0.4 to 12.5 percent in these four numbers, so absolute TPM is a lower bound and a ratio is slightly biased towards no change where a small transcript moves the other way"
+}

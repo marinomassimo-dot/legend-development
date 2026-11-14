@@ -10,10 +10,10 @@
   "OBJECTIVE": "Permanent value-driven continuity and portfolio selection: when the executable queue is exhausted, the presidio decides what comes next from the portfolio without waiting for a new radar, event or instruction; every wait states the relevant alternatives excluded, the reason and the resume condition; a situation already evaluated is not re-evaluated; the advisor's own updates do not trigger it. One principle in its normative home, linked; no new service, scheduler, gate or registry. The 24 h autonomy trial (start 2026-11-14T15:29:29Z) continues with its counters.",
   "worktree": ".claude/worktrees/hrk20",
   "branch": "task/hrk20",
-  "CURRENT_STATE": "IN_PROGRESS",
+  "CURRENT_STATE": "COMPLETE",
   "CHECKPOINT": {
-    "last_verified_result": "code and tests green locally; replay on a copy of the real state",
-    "first_incomplete_work": "OBJ_4 gate+CI, OBJ_5 communication"
+    "last_verified_result": "7b3cb29b5 gate PASS, CI #756 success; recipients told",
+    "first_incomplete_work": "none"
   },
   "AUTHORISED_QUEUE_20261114D": {
     "OBJ_1_DIAGNOSIS": {
@@ -76,9 +76,9 @@
         },
         {
           "step": "Four quick suites, release gate, CI per SHA",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "plan",
-          "evidence": "test_tool_routing, test_section_references, test_mandate_continuity, test_strategic_advisor green locally; release gate and CI per SHA pending"
+          "evidence": "Release gate PASS on publication; CI run #756 (7b3cb29b) completed success, read with the shared ci_runs.py wait. The closing record-only commit is observed separately and attributed to its own SHA."
         }
       ]
     },
@@ -88,12 +88,13 @@
       "steps": [
         {
           "step": "Messages with effective recipients; the intervention is one line in my record and is sent to ADV, which owns TRIAL_24H",
-          "status": "TODO",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "2026-11-14T19:02Z one message each, effective recipients by name from ListAgents: legend-development-39 (ADV), IT Orchestrator, SCI; each accepted into its inbox, reading not yet confirmed (no claim beyond that). ADV's carries what changed, the limits and the TRIAL_24H line (HE intervention at 2026-11-14T19:00Z, tooling and text change only; start 2026-11-14T15:29:29Z and counters unchanged; TRIAL_24H is ADV's record and not edited by HE). Roadmap seat: dated entry transcribed (it will count as a roadmap change for ADV's next tick, by design). Consumption of this item (coordinator, measured with session_model_census since 2026-11-14T18:30Z on this transcript): 44 turns, cache read 6,613,973, cache written 163,988, output 52,999, all one model (sonnet-5-5); delegate tokens: none (no subagent was used). Declared limits: the tick shows the plumbing, not that a model writes the Outcome block or ranks the portfolio well; the next real ADV evaluation is the first observation of it; resume_when needs a durable fact."
         }
       ]
     }
   },
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OPERATOR_TEXT_2026-11-14": "PERMANENT IMPLEMENTATION — Value-driven continuity and portfolio selection\nL’operatore richiede un comportamento durevole, indipendente dal prompt corrente e dalla sessione. Integra questa consegna nel lavoro esistente, senza riavviare la prova di autonomia né cancellarne i risultati.\nPrincipio approvato\nFinché esistono obiettivi autorizzati e attività utili eseguibili, LEGEND cerca e seleziona la prossima opportunità nel portafoglio disponibile. La chiusura di un incarico, una coda vuota o l’assenza di nuovi radar non esauriscono automaticamente il lavoro. Ogni prosecuzione e ogni attesa derivano da una valutazione proporzionata di priorità, beneficio atteso, fattibilità e costo.\nQuesto principio riguarda tutti gli agenti nel rispettivo perimetro. ADV mantiene la visione dell’intero portafoglio; Orchestrator e Scientist mantengono i propri cicli di approfondimento, consegna e ritorno delle domande.\nRagionamento rapido permanente\nQuando occorre scegliere il seguito, considera le opportunità pertinenti fra: roadmap dell’operatore e obiettivi ancora perseguibili; open questions (quale risposta cambierebbe una decisione e quale parte è affrontabile ora); filoni scientifici (premesse irrisolte, spiegazioni concorrenti, risultati promettenti o contrari); dashboard e record sorgente (candidati, confronti, esperimenti e linee tematiche che meritano investimento); conoscenza già disponibile ma non consumata o combinata; DREAM, quando nuove associazioni possono orientare una domanda concreta; radar precedenti ancora da valutare, oltre ai nuovi segnali; ostacoli dell’harness e strumenti esistenti utilizzati male o poco; invarianti di progetto (rigidità, duplicazioni, costi, complessità e occasioni di semplificazione).\nSono strumenti di ragionamento, non una checklist da compilare integralmente a ogni turno. Una domanda sperimentale ancora aperta non obbliga a continuare la bibliografia; una miglioria possibile non diventa automaticamente un incarico.\nUsa gli indici e lo stato disponibili per individuare le opportunità. Approfondisci gli originali pertinenti alla decisione selezionata, rispettando la disciplina del testo completo.\nPriorità\nOrdina le opportunità considerando: importanza della decisione scientifica o farmacologica; probabilità concreta di avanzare con i mezzi disponibili; beneficio marginale rispetto a quanto già fatto; conoscenza o lavoro che l’esito potrebbe sbloccare; costo complessivo e risorse condivise; coerenza con roadmap, flessibilità, semplicità e reversibilità.\nBasta una graduatoria motivata. Non introdurre punteggi numerici arbitrari o un nuovo sistema obbligatorio di scoring.\nComportamento effettivo\nVerifica e correggi il percorso che oggi può lasciare ADV in attesa di nuovi eventi dopo l’esaurimento della coda.\nLa chiusura delle attività eseguibili deve consentire una decisione sul seguito anche senza nuovi radar, dati o istruzioni umane. Distingui: 1. risultato consegnato e consumato; 2. decisione su dove investire successivamente.\nIl richiamo può riusare una valutazione ancora valida. Evita valutazioni costose ripetute degli stessi elementi, autoinneschi dovuti ai propri aggiornamenti e duplicazione degli incarichi.\nGli esiti ammessi sono: proseguire, cambiare filone, assegnare lavoro indipendente, accodare un seguito condizionato oppure attendere motivatamente. L’attesa indica le alternative pertinenti escluse, il motivo e la condizione di ripresa.\nRestano rispettati pause dell’operatore, limiti effettivi delle risorse, atti riservati, vincoli scientifici e dipendenze reali. Non inventare lavoro per mantenere occupate le sessioni.\nPersistenza e verifica\nRiusa le sedi canoniche e lo stato esistenti. Scrivi il principio una volta e collegalo alla definizione degli agenti, alla procedura ADV e al comportamento del richiamo. Nessun nuovo servizio, scheduler, gate o registro parallelo.\nVerifica almeno questi casi: coda esaurita e opportunità utile già disponibile: viene valutato il seguito senza attendere un radar; stessa situazione già valutata: nessuna rivalutazione costosa ripetuta; sole attività realmente bloccate o sproporzionate: attesa motivata; nuovo risultato o cambiamento pertinente: la precedente scelta viene riconsiderata.\nComunica direttamente ad ADV e agli altri destinatari interessati cosa è cambiato e quali limiti rimangono. Registra l’intervento nella prova delle 24 ore, mantenendo orario iniziale e contatori.\nIl successo è una decisione utile seguita da lavoro pertinente, oppure lavoro inutile evitato con motivazione verificabile."
 }

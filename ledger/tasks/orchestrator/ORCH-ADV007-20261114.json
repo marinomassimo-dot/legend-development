@@ -1,0 +1,60 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ADV007-20261114",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "ADV-007 (Advisor draft of evaluation 8 in the ADV presidio campaign advisor_pilot_20261113, relayed by the ADV presidio session legend-development-39 by message; not operator-given; authority relayed by a peer, not verified from the repository beyond the assignment file itself; low-risk: in silico reading of files already held, zero spend, no download, one new folder, no edit of any consumer): do the held WWOX-loss expression data (gse156243 derived lists and counts, signature_it23 composition tables, IT24/IT27 mouse bulk TPM, P47T, snRNA pools) show CTGF/CCN2 moved in the KO direction consistently, and does the signal survive the declared composition and maturation confounds? Verdict is one of: consistent and not composition-explained; inconsistent or composition-explained; not assessable. No edit of INV-06 row 7, X1 arm, ranking, need or receipt ledger: proposals in a dated folder with a consumer_delta for the integrator. Also bound by the standing continuity rule (cross_session_transport 12, HE57): taken as a chosen next opportunity, not as an event wait.",
+ "START_UTC": "2026-11-14T18:10:00Z",
+ "BASELINE": "local main b318ef732 (the assignment commit); worktree .claude/worktrees/adv007, branch task/adv007; folder ctgf_held_data_adv007_20261114/. Usefulness re-checked before starting: no session has run the SCI50 DREAM check (no CTGF row in SCI50 open_questions OQ9/OQ11, the two are wet); nothing since 2026-11-13 touches INV-06 row 7.",
+ "MANDATE_STATE": "IN_PROGRESS",
+ "CURRENT_PACKAGE": {
+  "id": "produced; blind check dispatched",
+  "state": "two scripts run, outputs in output/; verifier legend-delegate sonnet high dispatched with Stage A before Stage B",
+  "delegate_active": "verifier V-ADV007",
+  "updated": "2026-11-14"
+ },
+ "RESUME": "Read verify/verdicts.tsv and verify/report.md; apply every NARROWED/CONTRADICTED; write README (answer first), per_table.tsv, consumer_delta.md; self-evaluation; quick suites; battery on the landing SHA; task_close; safe_push; ls-remote; message ADV, IT, HE; remove worktree.",
+ "DECISIONS_TAKEN": [
+  "Took the item the same day: nothing claimed it; scope is reading only and zero spend.",
+  "Corrected the draft's premise on the all-zero flags before any reading: composition_class.tsv has blank log2fc and rho for CCN2 because the script looked the gene up under the current symbol in a table keyed by the older symbol CTGF; 15 of 15 blank rows are symbol renames. Flags were never computed.",
+  "Rebuilt the mouse gene-level Ccn2 value as a labelled proxy (one transcript row identified by four published means) because the Ensembl cDNA map used by IT24/IT27 is not held and a download is outside this perimeter.",
+  "One blind verifier (legend-delegate, sonnet, effort high), Stage A before Stage B: the verdict can reach INV-06 wording and earlier first drafts were overturned by blind checks.",
+  "Authority: the roadmap seat's dated entry of 2026-11-14 (24-hour continuous-autonomy trial, main b878812b5, roadmap_current.md line 36) was read from the repository; it authorises the ADV presidio to assign proportionate work to SCI, and leaves SCI its methodological autonomy and the right to decline. This replaces 'relayed by a peer, not verified' for ADV-007."
+ ],
+ "DELEGATIONS": [
+  {
+   "id": "V-ADV007",
+   "role": "blind verifier",
+   "agent": "legend-delegate",
+   "model_requested": "sonnet",
+   "effort_requested": "high",
+   "brief": "ctgf_held_data_adv007_20261114/VERIFIER_BRIEF.md",
+   "read_back": "session_model_census transcript read-back: model sonnet, effort high (44 turns; the delegate self-reported low, the transcript governs); output 51,210 tokens, cache read 3,111,079"
+  }
+ ],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261114-193055-c1cc00a7",
+   "label": "adv007-landing",
+   "sha": "a22d1007e2cf7bc8df7377e594a82dfa5fb11f6e",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261114-193055-c1cc00a7",
+   "log_sha256": "0ceaebf96df96eedc165cc9bfc8722cd5fdd0d47e16bcf55e4f728dea236fe59",
+   "clone": "REMOVED",
+   "battery_verdict": "REGRESSION VERDICT: PASS WITH SKIPS (251 targets, 12 skipped, environment-only skips listed in run.log)"
+  }
+ ],
+ "TRIAL_24H_OBSERVATIONS": {
+  "window": "2026-11-14T15:29:29Z to 2026-11-15T15:29:29Z, observation only, requested by the ADV presidio",
+  "delegates_and_blind_checkers": "V-ADV007, sonnet/high, 44 turns, output 51,210 tokens, cache read 3,111,079 (census read-back)",
+  "events": [
+   "2026-11-14T19:31Z-20:42Z wait: release battery 20261114-193055-c1cc00a7 (72 min) waited on its PID with process_wait.py; alternatives excluded: pgrep -f (matches the waiter), the launcher's own completion notice (false: nohup launcher exits at once); resume condition: PID exit, then verify_run status",
+   "interruption: none; restart: none; human intervention: none in this task"
+  ]
+ }
+}

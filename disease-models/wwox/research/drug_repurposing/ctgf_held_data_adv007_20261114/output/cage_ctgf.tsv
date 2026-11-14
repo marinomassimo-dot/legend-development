@@ -1,0 +1,3 @@
+cell_state	control_tpm	shWWOX_tpm	ratio	note
+progenitors_hNSC	181.285910544118	173.805556028464	0.96	the deposit's own WWOX control failed in progenitors (IT24 README row O6); one library per arm
+neurons_d14	0.795426469125154	1.42401171500065	1.79	sub-2 TPM, one library per arm, direction depends on normalisation (verifier read tag counts 26 v 58 with median shifts +0.19 and -1.43)
