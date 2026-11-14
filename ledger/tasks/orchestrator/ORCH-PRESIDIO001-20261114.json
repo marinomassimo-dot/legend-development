@@ -9,17 +9,24 @@
   "BASELINE": "main ceed002f6 plus later commits (bfb93a275 at start); worktree .claude/worktrees/pres001, branch task/pres001; folder levers_owner_confirmation_presidio001_20261114/. No S0 frame was written before reading: the sources are this session's own packages and the question is a confirmation, so priors were not preregistered (stated in the README).",
   "MANDATE_STATE": "OPEN",
   "CURRENT_PACKAGE": {
-    "id": "confirmation table",
-    "state": "table built and quote-checked (134 of 134 fragments, 78 of 78 cells); blind verifier next",
+    "id": "landing",
+    "state": "verifier corrections applied (79 rows); README, dated updates, self-evaluation committed; battery next",
     "delegate_active": "none",
     "updated": "2026-11-14"
   },
-  "RESUME": "Blind verifier (sonnet, high, Stage A own reading first), apply corrections, README answer-first, dated Update lines (ADV-006 and SCI47 READMEs), battery, task_close, safe_push, message presidio (record id ORCH-PRESIDIO001-20261114), HE and IT.",
+  "RESUME": "Merge main, battery on the landing SHA, task_close, safe_push, ls-remote; message presidio, HE, IT with SHA; worktree cleanup.",
   "DECISIONS_TAKEN": [
     "2026-11-14 PRESIDIO-001 taken in charge as executed (this record cites it); accepted as a request relayed by the ADV presidio, which says it is its own decision and not operator-given; reversible by the operator",
     "2026-11-14 PRESIDIO-002 taken in charge and its independent reading anticipated (operator's anticipation rule as relayed in the assignment); PRESIDIO-001 keeps priority; folder adv006_declared_keys_presidio002_20261114/"
   ],
-  "DELEGATIONS": [],
+  "DELEGATIONS": [
+    {
+      "role": "blind verifier V (PRESIDIO-001 table)",
+      "model": "sonnet",
+      "effort": "high",
+      "note": "first launch stopped within seconds when main moved; second launch reported 60 agreed, 3 disagreed, 10 overstated, 1 unverifiable, 5 missed of 74 rows plus 5 omissions; 36 tool uses, 191,333 subagent tokens"
+    }
+  ],
   "ESCALATIONS": [],
   "STOP_LOG": [],
   "DEFAULTS_TAKEN": [],
@@ -41,12 +48,12 @@
         },
         {
           "step": "One blind verifier (Stage A own reading before opening the table); corrections applied",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator"
         },
         {
           "step": "README answer first; dated Update lines on the ADV-006 and SCI47 READMEs; message presidio, HE, IT",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator"
         }
       ]
@@ -56,7 +63,7 @@
       "steps": [
         {
           "step": "Landing: quick suites, LINT, receipts, growth, battery, task_close, safe_push, ls-remote",
-          "status": "TODO",
+          "status": "IN_PROGRESS",
           "owner": "orchestrator"
         },
         {

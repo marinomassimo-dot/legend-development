@@ -19,8 +19,9 @@ item	fragment_index	found	start_of_fragment
 1.14	1	yes	no prediction of developmental benefit
 1.15	0	yes	d-APV abolishes bursts and the delayed field response (NMDAR
 1.15	1	yes	no prediction of developmental benefit
-1.16	0	yes	blocker-sensitive difference currents equal in KO and contro
-1.16	1	yes	no prediction of developmental benefit
+1.16	0	yes	A Kv7 opener already used for epilepsy in other disorders wo
+1.16	1	yes	blocker-sensitive difference currents equal in KO and contro
+1.16	2	yes	no prediction of developmental benefit
 1.17	0	yes	dropped
 1.17	1	yes	no prediction of developmental benefit
 1.18	0	yes	| mIPSC amplitude down, agonist response normal | E2 (supply
@@ -39,9 +40,13 @@ item	fragment_index	found	start_of_fragment
 1.22	2	yes	| deficit only in bursting slices or only with age | E5 | le
 1.23	0	yes	dropped
 1.23	1	yes	* **L6 gap junction/pannexin.**
-1.24	0	yes	no reduction of bursts at a concentration that measurably ra
+1.24	0	yes	seizure-type dependence (absence aggravation); GABA enrichme
+1.24	1	yes	no reduction of bursts at a concentration that measurably ra
 1.25	0	yes	agonist response and mIPSC both normal (no receptor deficit)
 1.26	0	yes	dropped as a drug arm now; E_GABA kept as the measurement th
+1.26	1	yes	Decides chloride-transport levers and the sign of any GABA-s
+1.26	2	yes	sets whether GABA potentiation (supply or receptor) is condi
+1.26	3	yes	| E_GABA at or above threshold in KO, not in control | E4 | 
 1.27	0	yes	block removes bursts equally in non-Wwox hyperexcitable slic
 1.28	0	yes	blocker-sensitive difference currents equal in KO and contro
 1.29	0	yes	the repository withdrew the gap-junction half of the burst c
@@ -98,6 +103,15 @@ item	fragment_index	found	start_of_fragment
 2.16	0	yes	speaks to whether potentiating residual inhibition has somet
 2.16	1	yes	sets the strength with which any lever is anchored to this d
 2.17	0	yes	Not carried: 'alpha2-preferring' as established, or a 'subty
+2.18	0	yes	If a GABA-transaminase inactivator or a benzodiazepine-site 
+2.19	0	yes	Burst reduction is therefore not evidence that the lever cor
+2.19	1	yes	a GABA-raising action may not reduce bursts at all and may a
+2.19	2	yes	Only one read on the burst endpoint with the defect measured
+2.20	0	yes	* **L1 GABA availability (conditional).** Kept because a pre
+2.20	1	yes	* **L2 Postsynaptic GABA-A modulation (conditional).** Kept 
+2.21	0	yes	If presynaptic, a postsynaptic receptor lever starts from no
+2.21	1	yes	E1/E2 (smaller presynaptic spikes could release less); E5 (m
+2.21	2	yes	| mIPSC amplitude down, agonist response normal | E2 (supply
 3.01	0	yes	"M02, M04, M05 (""A GABA-supply arm (L1) or a postsynaptic-mod"
 3.01	1	yes	"M02, M04, M05 (""L2 stays gated by the Phase-0 measurements a"
 3.01	2	yes	dropped as a drug arm now; E_GABA kept as the measurement th
@@ -130,6 +144,9 @@ item	fragment_index	found	start_of_fragment
 3.10	0	yes	Matched non-GABAergic suppression of bursts titrated to the 
 3.10	1	yes	a submaximal NMDAR block (d-APV) or a hyperpolarising manipu
 3.10	2	yes	its matched measure would be a tonic current or sIPSC decay,
+3.11	0	yes	sci42_chloride#new_measurements:M06 ; sci42_chloride#explana
+3.11	1	yes	M01;M03;M05
+3.11	2	yes	M04;M03
 4.01	0	yes	a perforated-patch cohort for native-chloride sIPSC, mIPSC a
 4.01	1	yes	(i) sIPSC with a physiological-chloride pipette and with the
 4.02	0	yes	yes: SCI42's own design_choice_not_finding cell calls the me
