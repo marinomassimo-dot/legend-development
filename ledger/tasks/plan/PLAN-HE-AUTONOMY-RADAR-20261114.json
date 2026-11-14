@@ -246,6 +246,25 @@
     }
    ],
    "status": "IN_PROGRESS"
+  },
+  "OBJ_14_COORDINATION_FIXES": {
+   "order": 14,
+   "title": "Integration 2026-11-14 (small coordination fixes during final verification): the scheduler's brief no longer dirties the shared checkout; one observer per verification, one shared read for all commits, progressive waits, per-commit attribution",
+   "steps": [
+    {
+     "step": "brief_P.md out of the checkout",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "strategic_advisor.evaluate writes the working brief to the host state directory (_state_path(campaign).parent/brief_P.md); the tracked campaign-folder copy is removed; P<n>/brief.md (saved by run, byte-identical) and P<n>/meta.json keep each run reproducible; test test_the_working_brief_stays_outside_the_checkout_and_the_saved_one_keeps_the_run_reproducible."
+    },
+    {
+     "step": "CI observation: one shared read, progressive attention, concluded verdicts final, per-commit attribution",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "Found already covered in part (ci_runs.py had a per-commit shared cache and a declared rate-limit pause) but the path actually used still cost one request per commit per interval: with six commits in flight the unauthenticated 60 requests an hour were exhausted. Fixed in ci_runs.py: ONE read of the latest 100 runs feeds the per-commit entries of every commit; a concluded run is final in the cache (no request later); wait polls every 2, then 4, then 8 minutes; status during a declared pause shows the last answer as OLD with its age; each verdict lists only the runs whose head_sha is that commit. 4 new tests (16 in test_ci_runs). Single observer per shared verification agreed with ADV and IT (HE observes #744-#750 and successors; others do not poll)."
+    }
+   ],
+   "status": "DONE"
   }
  },
  "MANDATE_STATE": "OPEN",
