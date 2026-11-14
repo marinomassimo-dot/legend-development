@@ -105,9 +105,9 @@
   },
   "ADV_ASSIGNMENTS": {
    "ADV-005": {
-    "status": "TAKEN",
+    "status": "EXECUTED_BOUNDED",
     "taken_utc": "2026-11-13",
-    "evidence": "Taken in charge by Harness (plan) citing ADV-005 (advisor_pilot_20261113/assignments/ADV-005.md, main 08299c4e): activity_search.py cache dependency vs the substitute scout-feed defects; one of the two only; adapting nothing yet; result and the choice with its reason follow on main."
+    "evidence": "Chosen the activity-tool item, not the scout-feed substitute; cause = gitignored per-checkout cache; clear error message + routing row + regression test; result advisor_pilot_20261113/ADV-005_result.md. Taken 2026-11-13, executed 2026-11-14."
    }
   }
  },

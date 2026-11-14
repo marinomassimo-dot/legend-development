@@ -79,7 +79,11 @@ def main(argv=None, fetch=None, release_fetch=None):
     ap = argparse.ArgumentParser(); ap.add_argument("--relations", required=True); ap.add_argument("--out", required=True)
     ap.add_argument("--types", default=",".join(TYPES)); ap.add_argument("--max-rows", type=int, default=5000); ap.add_argument("--max-potency-rows", type=int, default=1000)
     a = ap.parse_args(argv); out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
-    croot = Path(os.environ.get("LEGEND_CATALOG_CACHE", DR / "catalog/cache")); idx = target_index(croot); types = tuple(a.types.split(","))
+    croot = Path(os.environ.get("LEGEND_CATALOG_CACHE", DR / "catalog/cache"))
+    if not (croot / "chembl/targets.jsonl.gz").is_file():     # the cache is gitignored, so a worktree has none: ADV-003 took this for a tool that cannot run
+        print(f"no cached ChEMBL target file at {croot / 'chembl/targets.jsonl.gz'}: the catalogue cache exists per checkout (it is not in git). From a worktree, set "
+              "LEGEND_CATALOG_CACHE to the primary checkout's disease-models/wwox/research/drug_repurposing/catalog/cache; nothing was read", file=sys.stderr); return 2
+    idx = target_index(croot); types = tuple(a.types.split(","))
     dose, screen = tuple(t for t in types if t != "Potency"), tuple(t for t in types if t == "Potency")
     rdir, release_basis = release_dir(cache_root(), release_fetch) if fetch is None else (None, "INJECTED_FETCH")
     if fetch is None:

@@ -95,5 +95,17 @@ class Offline(unittest.TestCase):
         self.assertEqual(json.load(open(self.tmp / "outx/activity_manifest.json"))["_symbols"], {"SX:NOSUCHGENE": "UNRESOLVED_IN_CACHED_INDEX"})
     def test_unnamed_molecule_without_catalogue_row_is_status_none(self):
         m = self.run_path([act("CHEMBL_ZZ_NOT_IN_CATALOGUE", "", "Ki", "5", atype="B")])["CHEMBL_ZZ_NOT_IN_CATALOGUE"]; self.assertEqual((m["catalogue_status"], m["n_functional"]), ("none", "0"))
+    def test_a_checkout_without_the_cached_target_file_says_what_to_set_instead_of_a_traceback(self):
+        (self.tmp / "rel.tsv").write_text("relation_id\ttarget_symbols\nSX\tKCNQ2\n")
+        saved = os.environ.get("LEGEND_CATALOG_CACHE"); os.environ["LEGEND_CATALOG_CACHE"] = str(self.tmp / "no_cache_here")
+        try:
+            import io, contextlib
+            err = io.StringIO()
+            with contextlib.redirect_stderr(err):
+                code = A.main(["--relations", str(self.tmp / "rel.tsv"), "--out", str(self.tmp / "outy")], fetch=_http.make_fetch(get=Transport([])))
+        finally:
+            if saved is None: os.environ.pop("LEGEND_CATALOG_CACHE", None)
+            else: os.environ["LEGEND_CATALOG_CACHE"] = saved
+        self.assertEqual(code, 2); self.assertIn("LEGEND_CATALOG_CACHE", err.getvalue()); self.assertIn("nothing was read", err.getvalue())
 
 if __name__ == "__main__": unittest.main(verbosity=2)
