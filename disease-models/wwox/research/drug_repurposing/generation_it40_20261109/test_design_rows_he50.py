@@ -271,7 +271,8 @@ class LeverJoin(unittest.TestCase):
         for o in ("O01", "O04", "O06"):
             self.assertIn(f"matrix {o} [", a)                                                                      # named in L1's own status, attached verbatim
         self.assertIn("levers_notes E2 [", a); self.assertIn("levers_notes E5 [", a)
-        self.assertIn("listed and NOT attached (the E-id route cannot separate this lever from the others)", a)       # O02, O05 ... name E1-E3 for L1 and L2 alike
+        self.assertIn("route E: its outcome cell names", a); self.assertIn("this route does not separate them", a)     # confirmed by the owners (PRESIDIO-001): attached, and said not to separate L1 from L2
+        self.assertIn("levers.tsv row L3 names L1 in its own cell(s) (route L)", a)                                  # route L: L3's status "gates L1 and L2"
         self.assertIn("CF03 [", a); self.assertIn("CF01 NOT attached: SCI47 is not consistent", a)                  # CF01 stays unattached, with the reason; no side taken
         self.assertIn("M01", a.split("genuine conflicts on them")[0])                                               # M01 is reached through O06, a first hop for L1
         l3 = self.lever("L3")["lever_attachments"]
@@ -295,6 +296,23 @@ class LeverJoin(unittest.TestCase):
                 self.assertIn(ref, a)
             self.assertNotIn(": not found", a)                                                                       # every owner-stated pointer resolved to real text
         self.assertIn("M03", self.lever("L1")["lever_attachments"].split("genuine conflicts on them")[0])            # first hop for L1 through the declared O01/O05 tokens
+
+    def test_the_owners_landed_table_is_what_the_routes_follow(self):
+        conf = HERE.parent / "levers_owner_confirmation_presidio001_20261114" / "confirmation.tsv"
+        self.assertTrue(conf.is_file())                                                                             # the build follows the landed folder, not a relay
+        with open(conf, encoding="utf-8", newline="") as f:
+            routes = {r["route"].split(" ")[0].rstrip(":;(") for r in csv.DictReader(f, delimiter="\t") if r["part"] == "2"}
+        self.assertTrue({"D", "N", "E", "L", "W"} <= routes)
+        a1, a3 = self.lever("L1")["lever_attachments"], self.lever("L3")["lever_attachments"]
+        self.assertIn("named in this lever's own cells", a1)                                                          # D
+        self.assertIn("the explanation-to-lever table", a1)                                                          # N
+        self.assertIn("route E", a1); self.assertIn("(route L)", a1)                                                 # E, L
+        self.assertNotIn("route W", a1 + a3)                                                                         # W (lever words equated by a table): left out, said in the README
+        self.assertIn("O03", a3); self.assertIn("O14", a3)                                                           # L3 -> O03, O14 through ADV-006's own tokens
+        self.assertIn("revival trigger", self.lever("L1")["reopen_or_abandon"]); self.assertIn("E4", self.lever("L3")["reopen_or_abandon"])   # "not stated" was too wide for L1 and L3
+        for k in ("O08", "O09", "O11", "O13", "O15", "O16", "O17", "O18"):                                           # efficacy or preference readings stay unattached: they would be the owners' choice
+            for lv in ("L1", "L2"):
+                self.assertNotIn(f"matrix {k} [", self.lever(lv)["lever_attachments"])
 
     def test_the_committed_table_is_what_the_generator_writes(self):
         with open(HERE / "conditional_proposals_packages_it47.tsv", encoding="utf-8", newline="") as f:
