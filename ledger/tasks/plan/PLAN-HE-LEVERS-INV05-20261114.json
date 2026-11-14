@@ -61,6 +61,19 @@
     }
    ],
    "status": "IN_PROGRESS"
+  },
+  "OBJ_4_ITERATION_2": {
+   "order": 4,
+   "title": "IT52 reader's list, scoped by ADV: NOW (mechanical) conflict content, dropped-lever label, preparation and age of joined rows, id crosswalk; WAIT for SCI: the mapping, outcome-to-lever attachments (matrix.tsv), CF01/CF03. One iteration, no third.",
+   "steps": [
+    {
+     "step": "Second build of the mechanical items; the two false sentences replaced by a neutral, true pointer (no owner choice made); deliver SHA and entry point to IT and ADV",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": "coded and tested locally; landing"
+    }
+   ],
+   "status": "IN_PROGRESS"
   }
  },
  "MANDATE_STATE": "OPEN"

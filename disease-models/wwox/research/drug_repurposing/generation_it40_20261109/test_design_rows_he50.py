@@ -198,7 +198,7 @@ class LeverJoin(unittest.TestCase):
             self.assertIn(src["counter_evidence"], row["competing_explanations"])
         self.assertIn("status: dropped as a drug arm now", self.lever("L3")["premise_and_action"])
         self.assertIn("status: dropped", self.lever("L6")["premise_and_action"])
-        self.assertTrue(all(r["expected_result_by_explanation"].startswith("not stated by the package (missing)") for r in (self.lever(k) for k in self.src)))   # no prediction is invented
+        self.assertTrue(all("not stated here, not absent" in r["expected_result_by_explanation"] for r in (self.lever(k) for k in self.src)))   # no prediction is invented, and the absence is only of this table
 
     def test_l1_and_l2_reach_their_measurement_rows_gating_rows_comparator_and_genuine_conflicts_by_declared_keys(self):
         for k, m in (("L1", "M16"), ("L2", "M17")):
@@ -207,7 +207,7 @@ class LeverJoin(unittest.TestCase):
             self.assertIn("rows named at the start of that cell: M02, M04, M05", j)
             self.assertRegex(j, r"M15 'every drug arm \(M16, M17, M18, M19, M20\)'")                      # the comparator co-requirement, in its own cell's words
             for cf in ("CF04", "CF05a", "CF05b", "CF23"):
-                self.assertIn(cf, j.split("conflicts of type genuine")[1].split(";")[0])
+                self.assertIn(f"{cf} [type: genuine", j.split("conflicts of type genuine")[1].split("rows of other types")[0])
             self.assertIn("listed and NOT followed", j); self.assertIn("M01; genuine conflicts on them, for the reader to weigh: CF01, CF03", j)   # reachable only on a second hop, said as such
             self.assertIn("no side is chosen on any conflict; no order here is a result", j)
             self.assertIn("not an observation", j)
@@ -218,10 +218,10 @@ class LeverJoin(unittest.TestCase):
 
     def test_an_id_inside_a_quotation_is_not_a_pointer_and_the_two_id_spaces_stay_apart(self):
         m20 = {"x": 1}
-        rows = [dict(package=cp.ADV006, table="measurements.tsv", key="M20", row=dict(requests_merged="sci47_inhibitory#levers:L3 ; map#open_questions_map:IT46-Q04", interpretable_after='M05 ("E_GABA measured before and after (M01)" (conditional_prediction.tsv))', lever_or_comparison_gated="E-chloride")),
-                dict(package=cp.ADV006, table="measurements.tsv", key="M05", row=dict(requests_merged="x", interpretable_after="unordered", lever_or_comparison_gated="L3")),
-                dict(package=cp.ADV006, table="measurements.tsv", key="M01", row=dict(requests_merged="sci42_chloride#new_measurements:M01", interpretable_after="none", lever_or_comparison_gated="")),
-                dict(package=cp.ADV006, table="conflicts.tsv", key="CF99", row=dict(m_id="M01", type="genuine"))]
+        rows = [dict(package=cp.ADV006, table="measurements.tsv", key="M20", row=dict(preparation="p", age_bin="a", cohort_and_genotype_arms="c", requests_merged="sci47_inhibitory#levers:L3 ; map#open_questions_map:IT46-Q04", interpretable_after='M05 ("E_GABA measured before and after (M01)" (conditional_prediction.tsv))', lever_or_comparison_gated="E-chloride")),
+                dict(package=cp.ADV006, table="measurements.tsv", key="M05", row=dict(preparation="p", age_bin="a", cohort_and_genotype_arms="c", requests_merged="x", interpretable_after="unordered", lever_or_comparison_gated="L3")),
+                dict(package=cp.ADV006, table="measurements.tsv", key="M01", row=dict(preparation="p", age_bin="a", cohort_and_genotype_arms="c", requests_merged="sci42_chloride#new_measurements:M01", interpretable_after="none", lever_or_comparison_gated="")),
+                dict(package=cp.ADV006, table="conflicts.tsv", key="CF99", row=dict(m_id="M01", type="genuine", cell_type="t", source_A="a", quote_A="qa", source_B="b", quote_B="qb", adjudicable_from_the_packages="no"))]
         j = cp.design_join(self.PKG, "L3", rows)
         self.assertIn("rows named at the start of that cell: M05", j)
         self.assertNotIn("CF99", j.split("second-hop")[0])                                           # M01 sits inside a quotation (SCI42's own M01): never read as ADV-006's M01
@@ -235,6 +235,29 @@ class LeverJoin(unittest.TestCase):
         self.assertIn(self.src["L2"]["functional_comparator"], l2["decision_measure"])               # the dated ADV-004/ADV-006 notes travel in the owners' own words
         self.assertNotIn("preferring", l2["design_join"].lower())                                    # nothing here carries a subtype preference
         self.assertTrue(all(r["direction_stated"].startswith("none") for r in self.rows if self.PKG in r["package_ref"]))
+
+    def test_it52_findings_the_join_carries_conflict_content_preparation_and_age_and_a_dropped_lever_is_labelled(self):
+        j = self.lever("L1")["design_join"]
+        self.assertIn("cell_type: other (matching variable of the matched arm)", j)                                   # CF23's content, as the design file carries it, not only its id
+        self.assertIn("Matched non-GABAergic suppression of bursts titrated to the same percent of evoked synaptic charge removed", j)
+        self.assertIn("membrane potential and input resistance", j)                                                 # both quotes of CF23, side by side, none preferred
+        self.assertIn("preparation: ", j); self.assertIn("age_bin: ", j)                                            # each joined row's own preparation and age travel
+        l3 = self.lever("L3")
+        self.assertEqual((l3["kind"], self.lever("L6")["kind"]), ("package_row_dropped_by_the_package",) * 2)
+        self.assertTrue(l3["nomination"].startswith("NOT PROPOSED: the package drops this row"))
+        self.assertEqual(self.lever("L1")["kind"], "conditional_hypothesis_from_package")                            # an active lever keeps its label
+        self.assertTrue(l3["design_rows_same_investigation"].startswith("dropped by the package"))
+        self.assertIn("a source's own id space", l3["design_join"])                                                 # SCI42's M01 inside an ADV-006 cell is named as another id space
+
+    def test_the_sentences_that_were_false_for_this_package_are_gone_and_the_mapping_says_it_is_unconfirmed(self):
+        row = self.lever("L1")
+        self.assertNotIn("not stated by the package (missing)", row["expected_result_by_explanation"])
+        self.assertIn("matrix.tsv", row["expected_result_by_explanation"])                                          # where the package does state what each outcome favours
+        self.assertNotIn("does not classify them as rivals, complementary or compatible", row["competing_explanations"])
+        self.assertIn("not confirmed by the package's owners", row["nomination"])
+        other = next(r for r in self.rows if "hcn_20261107" in r["package_ref"])                                     # a package whose mapping the owners confirmed: its own wording is untouched
+        self.assertTrue(other["expected_result_by_explanation"].startswith("not stated by the package (missing)"))
+        self.assertIn("the package does not classify them as rivals, complementary or compatible", other["competing_explanations"])
 
     def test_the_committed_table_is_what_the_generator_writes(self):
         with open(HERE / "conditional_proposals_packages_it47.tsv", encoding="utf-8", newline="") as f:
