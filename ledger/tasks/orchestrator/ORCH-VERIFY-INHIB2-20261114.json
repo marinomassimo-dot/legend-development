@@ -43,9 +43,53 @@
       "steps": [
         {
           "step": "Close the loop with ADV and HE",
-          "status": "IN_PROGRESS",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": "message to ADV and HE pending landing"
+          "evidence": "result sent to ADV and HE; landed aafda2d3f"
+        }
+      ]
+    },
+    "OBJ_R5": {
+      "order": 5,
+      "steps": [
+        {
+          "step": "ADV decision ~13:20Z: HE builds a mechanical correction pass (five marking points only; reader residuals NOT added, they become revival conditions); wait for HE SHA + entry point",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_R6": {
+      "order": 6,
+      "steps": [
+        {
+          "step": "Resume the SAME reader (ab05cd0d643d4f2ea) on exactly the flagged points, cost apart; closed harm => IMPROVED, else no consumption",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_R7": {
+      "order": 7,
+      "steps": [
+        {
+          "step": "If IMPROVED: consume only reader-verified items the consumer does not already say, as dated additions with before/after text in INV-05 next_test row and levers.tsv notes; no ranking/sign/need/state change; regenerate derived/translations as needed; record cost and the three-way separation",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_R8": {
+      "order": 8,
+      "steps": [
+        {
+          "step": "Close the lever thread with the residual items as revival conditions, each with a recipient (owner statements to SCI, generator marks to HE); report result to ADV",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
         }
       ]
     }
