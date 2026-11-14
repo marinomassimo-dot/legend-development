@@ -1,29 +1,40 @@
 {
-  "_schema": "task record, Annex A.1c",
-  "TASK_ID": "ORCH-PRESIDIO003-20261114",
-  "OWNER": "orchestrator",
-  "ACTOR_ID": "orchestrator",
-  "PRIORITY": "NORMAL",
-  "OBJECTIVE": "PRESIDIO-003 (decision of the ADV presidio session legend-development-39, 2026-11-14, queued and relayed by message; not an Advisor draft, not operator-given; authority relayed by a peer, not verified; low-risk: reading of lawfully reachable sources, in silico, zero spend, one new folder, no edit of any source package): IT43-Q01, do primary sources give the maximum inhibition, site and conditions of Ro 25-6981 on GluN1/GluN2B and on triheteromers; first which of Hedegaard Fig 3, Science 2017 Fig 4A and supplement, Hansen 2014 supplement and Fischer 1997 are lawfully reachable (no bot-check circumvention, no paid access, no contact, generic client, never the operator's address); read only those; separate read in the original from inferred.",
-  "START_UTC": "2026-11-14T15:00:00Z",
-  "BASELINE": "local main 98b32eb7a (the assignment commit; development/main was 4 commits behind it); worktree .claude/worktrees/pres003, branch task/pres003; folder ro25_6981_primary_sources_presidio003_20261114/. Taken after PRESIDIO-001/002 landed (development/main 8de503223). Usefulness re-checked before starting: nothing since 2026-11-11 claims or answers IT43-Q01.",
-  "MANDATE_STATE": "OPEN",
-  "CURRENT_PACKAGE": {
-    "id": "landing",
-    "state": "note, access table and readings table written; quote check 10 of 10 in two byte routes; no blind check (disclosed); quick suites and battery next",
-    "delegate_active": "none",
-    "updated": "2026-11-14"
-  },
-  "RESUME": "Self-evaluation, quick suites, battery on the landing SHA, task_close, safe_push, ls-remote; message IT, HE, presidio with the SHA; worktree cleanup.",
-  "DECISIONS_TAKEN": [
-    "Took the item the same day: nothing claimed IT43-Q01 since 2026-11-11, scope is reading only and zero spend.",
-    "Stopped at one plain request to Fischer 1997's DOI: the publisher link page carries a text-and-data-mining reservation and SCI44 met a bot check earlier; recorded as access-blocked.",
-    "No blind check: small result; absences got two byte routes and every verbatim fragment was checked in both; disclosed in the README with an offer to run a bounded check on request.",
-    "No edit of V18 or any source package; the one observation on V18's role_reason wording is left to HE."
-  ],
-  "DELEGATIONS": [],
-  "ESCALATIONS": [],
-  "STOP_LOG": [],
-  "DEFAULTS_TAKEN": [],
-  "VERIFICATION_EVIDENCE": []
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-PRESIDIO003-20261114",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "PRESIDIO-003 (decision of the ADV presidio session legend-development-39, 2026-11-14, queued and relayed by message; not an Advisor draft, not operator-given; authority relayed by a peer, not verified; low-risk: reading of lawfully reachable sources, in silico, zero spend, one new folder, no edit of any source package): IT43-Q01, do primary sources give the maximum inhibition, site and conditions of Ro 25-6981 on GluN1/GluN2B and on triheteromers; first which of Hedegaard Fig 3, Science 2017 Fig 4A and supplement, Hansen 2014 supplement and Fischer 1997 are lawfully reachable (no bot-check circumvention, no paid access, no contact, generic client, never the operator's address); read only those; separate read in the original from inferred.",
+ "START_UTC": "2026-11-14T15:00:00Z",
+ "BASELINE": "local main 98b32eb7a (the assignment commit; development/main was 4 commits behind it); worktree .claude/worktrees/pres003, branch task/pres003; folder ro25_6981_primary_sources_presidio003_20261114/. Taken after PRESIDIO-001/002 landed (development/main 8de503223). Usefulness re-checked before starting: nothing since 2026-11-11 claims or answers IT43-Q01.",
+ "MANDATE_STATE": "OPEN",
+ "CURRENT_PACKAGE": {
+  "id": "landing",
+  "state": "note, access table and readings table written; quote check 10 of 10 in two byte routes; no blind check (disclosed); quick suites and battery next",
+  "delegate_active": "none",
+  "updated": "2026-11-14"
+ },
+ "RESUME": "Self-evaluation, quick suites, battery on the landing SHA, task_close, safe_push, ls-remote; message IT, HE, presidio with the SHA; worktree cleanup.",
+ "DECISIONS_TAKEN": [
+  "Took the item the same day: nothing claimed IT43-Q01 since 2026-11-11, scope is reading only and zero spend.",
+  "Stopped at one plain request to Fischer 1997's DOI: the publisher link page carries a text-and-data-mining reservation and SCI44 met a bot check earlier; recorded as access-blocked.",
+  "No blind check: small result; absences got two byte routes and every verbatim fragment was checked in both; disclosed in the README with an offer to run a bounded check on request.",
+  "No edit of V18 or any source package; the one observation on V18's role_reason wording is left to HE."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261114-151712-70440580",
+   "label": "pres003",
+   "sha": "684ed69908d6c0c0691bc87a703711a0e4afd81d",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261114-151712-70440580",
+   "log_sha256": "e25152630b099d90eda62056b9f452fe3485514dea7898fc278ced048b6f706b",
+   "clone": "REMOVED"
+  }
+ ]
 }
