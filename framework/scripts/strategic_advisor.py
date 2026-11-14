@@ -1068,7 +1068,8 @@ def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout:
         obs = observe(campaign, state)
         obs["events"] = list(dict.fromkeys(list(state.get("pending_events") or []) + obs["events"]))
         obs["commits_since_last_tick"] += int(state.get("pending_commits") or 0)
-        brief = campaign / "brief_P.md"
+        brief = _state_path(campaign).parent / "brief_P.md"       # the working copy lives with the host state, outside the checkout: regenerating it no longer dirties the tree during a landing; the brief that matters for reproducibility is saved in P<n>/brief.md by `run`
+        brief.parent.mkdir(parents=True, exist_ok=True)
         brief.write_text(build_brief_p(campaign, obs), encoding="utf-8")
         code = run("P", campaign, brief, model, effort, timeout, LIMITS)
         label = f"P{max((a['index'] for a in _attempts(campaign) if a['stage'] == 'P'), default=0)}"
