@@ -1,0 +1,24 @@
+m_id	field	source_path	locator	quote
+*	indispensable	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/README.md	'What the package does not settle'	the new recordings are indispensable and cannot be replaced by reading
+*	indispensable	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/README.md	last section	In silico: nothing of value without new sources
+M01	order	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/README.md	Decision this changes	(cheapest; decides whether the headline datum stands)
+M02	order	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	M04:separates	partly redundant with M05 for the response arm: worth keeping only if M05 is done
+M03	order	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/README.md	Decision this changes	then, if M03 confirms the amplitude loss, M05 agonist response under TTX and M06 evoked IPSC with failure rate, paired-pulse ratio and E/I ratio
+M03	order	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	M06:required_from_start	no (required if M03 confirms the amplitude loss)
+M05	indispensable	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv	E-chloride:resolvable_from_public_sources	no for WWOX (P13 absence;
+M05	order	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	M01:measurement	Interpretable alone at one age.
+M07	substitute	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/output/matrix.tsv	O08:observation	input resistance 102.88 -> 143.03 Mohm (+39%)
+M08	substitute	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv	E-maturation:resolvable_from_public_sources	partly (wild-type time courses exist in mouse: layer 2/3 mIPSC frequency, decay and amplitude P7-P24 in PBR1
+M09	substitute	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/decisive.tsv	P14:statement	PV-positive counts about 44 percent lower
+M14	indispensable	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md	section 0	The corpus contains zero measurements of the sign of GABA in any WWOX model.
+M14	order	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-ANALYSIS-PLAN-01.md	section 9	If Arm B is null with its positive control satisfied, Arms A and C are not run
+M15	order	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv	M10:required_from_start	yes (for any drug arm)
+M16	order	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/README.md	answer 3	A GABA-supply arm (L1) or a postsynaptic-modulation arm (L2) is interpretable only after mIPSC, agonist response and E_GABA place the deficit.
+M17	order	disease-models/wwox/research/drug_repurposing/inhibitory_defect_sci47_20261112/README.md	Update 2026-11-14	L2 stays gated by the Phase-0 measurements and is not ungated by this reading.
+M20	order	disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv	row 2, control_that_interprets_a_null	E_GABA measured in the same preparation before and after the manipulation (M01)
+M21	substitute	disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv	NP3P3:trigger_to_reopen	or an independent replication of the N-desmethylclobazam alpha2/alpha1 ratio
+M22	indispensable	disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/new_measurements.tsv	M01:why_no_literature_can_substitute	No source reports the pH of this preparation
+M22	indispensable	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv	IT42-Q01:blocking_reason	A new measurement in the burst preparation; not answerable from other preparations.
+M23	substitute	disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv	NP3P1:trigger_to_reopen	source data or a new report with the three genotypes separated
+M26	order	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md	section 2, KCC2/NKCC1_SECONDARY_READOUTS	direction of evidence runs from `DF_GABA` to the molecules, not back
+M27	order	disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-ANALYSIS-PLAN-01.md	section 9	and only if A shows covariation
