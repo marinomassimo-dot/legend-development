@@ -211,8 +211,9 @@ class LeverJoin(unittest.TestCase):
             self.assertRegex(j, r"M15 'every drug arm \(M16, M17, M18, M19, M20\)'")                      # the comparator co-requirement, in its own cell's words
             for cf in ("CF04", "CF05a", "CF05b", "CF23"):
                 self.assertIn(f"{cf} [type: genuine", j.split("conflicts of type genuine")[1].split("rows of other types")[0])
-            if k == "L2":
-                self.assertIn("listed and NOT followed", j); self.assertIn("M01; genuine conflicts on them, for the reader to weigh:", j)   # L2: M01 is reachable only on a second hop, said as such
+            if k == "L2":                                                                                                  # one statement about M01 on L2, the owners' reading, in both columns
+                self.assertIn("rows the owners read as first hop for this lever (SCI, PRESIDIO-001); no declared key of this row reaches them: M01", j)
+                self.assertNotIn("second-hop", j)
             self.assertIn("no side is chosen on any conflict; no order here is a result", j)
             self.assertIn("not an observation", j)
 
@@ -327,7 +328,8 @@ class LeverJoin(unittest.TestCase):
         self.assertNotIn("inherited context: this preparation or age is ADV-006's for the row; L1's", l1["design_join"])                                   # L1 states it in its own cells
         # (2) one hop label for M01: first hop for L1 in both columns, second hop (not followed) only for L2
         self.assertNotIn("second-hop rows", l1["design_join"]); self.assertIn("first hop through the attachments (see lever_attachments), not second hop: M01", l1["design_join"])
-        self.assertIn("M01", l1["lever_attachments"].split("genuine conflicts on them")[0]); self.assertIn("second-hop rows named by the gating rows and not reached by the attachments", l2["design_join"])
+        self.assertIn("M01", l1["lever_attachments"].split("genuine conflicts on them")[0])
+        self.assertIn("ADV-006 row M01", l2["lever_attachments"]); self.assertIn("first hop for the lever; no declared key of this row reaches it", l2["lever_attachments"])        # the same words as design_join: no contradiction between the columns
         # (3) reason and consequence verbatim from conflicts.tsv, no new content
         with open(HERE.parent / ReconciledMeasurements.PKG / "output" / "conflicts.tsv", encoding="utf-8", newline="") as f:
             conf = {r["conflict_id"]: r for r in csv.DictReader(f, delimiter="\t")}
@@ -347,7 +349,22 @@ class LeverJoin(unittest.TestCase):
         # soft spots: L3's O03/O14 tag names only the row that holds the token, and its dropped-arm conflict CF15 is printed in full; rows naming the lever (M06 for L1)
         self.assertIn("named in requests_merged of M05 (rows declared for this lever)", l3["lever_attachments"]); self.assertNotIn("named in requests_merged of M05, M20", l3["lever_attachments"])
         self.assertIn("CF15 [type: gap", l3["design_join"] + l3["lever_attachments"])
-        self.assertIn("M06", l1["design_join"].split("rows whose `lever_or_comparison_gated` names L1 itself")[1].split("|")[0])                        # 'L1 readout'
+        self.assertNotIn("names L1 itself", l1["design_join"]); self.assertNotIn("M06", l1["design_join"] + l1["lever_attachments"])                       # M06 came off L1: a text token in its own cell, not a declared key (revival: SCI states it attaches)
+
+    def test_last_list_august_context_in_full_with_provenance_one_statement_for_l2_and_a_compact_dropped_lever(self):
+        l1, l2, l3 = (self.lever(k) for k in ("L1", "L2", "L3"))
+        j = l1["design_join"]
+        self.assertIn("global Wwox allele, P47T; CA3 primary; four windows", j)                                          # M14's name, verbatim
+        self.assertIn("attribution by the generator's mapping from the August candidate files to M14; conflicts.tsv gives m_id M02 for this conflict", j)   # provenance, with CF04's own m_id
+        self.assertIn("Wwox-/- (Aqeilan allele), Wwox+/-, P47T/P47T", j)
+        self.assertEqual(j.count("attribution by the generator's mapping"), 1)                                            # printed in full once per cell, later uses point to it
+        self.assertIn("printed in full above in this cell", j)
+        # the dropped lever is shorter without losing an id, a type or a content pointer
+        self.assertLess(len(l3["design_join"]), 20000); self.assertLess(len(l3["lever_attachments"]), 20000)
+        self.assertIn("both sides in full: design row measurement_reconciliation_adv006_20261114::conflicts.tsv::CF05a of conditional_design_steps_it50.tsv", l3["design_join"])
+        self.assertIn("CF15 [type: gap", l3["design_join"])                                                              # kept in full: it names L3's own declared row
+        design = {x["design_row_id"]: x for x in cp.design_rows()[0]}
+        self.assertIn("measurement_reconciliation_adv006_20261114::conflicts.tsv::CF05a", design)                          # the pointer lands on a real design row
 
     def test_the_committed_table_is_what_the_generator_writes(self):
         with open(HERE / "conditional_proposals_packages_it47.tsv", encoding="utf-8", newline="") as f:

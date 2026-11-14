@@ -165,25 +165,41 @@ def ids_declared(row, gating):
     return list(gating)
 
 
-def _side_context(source, ids, meas):
-    """HE55 (IT52 reader): the preparation a conflict side is about, in the reconciliation's own words. A side that is a file of the August candidates takes the preparation and age of ADV-006's August-candidate row (M14:
-    global allele, CA3 primary); any other side takes the preparation and age of the ADV-006 rows the conflict names."""
+def _side_context(source, ids, meas, seen=None):
+    """HE55/HE56 (IT52 reader): the preparation a conflict side is about, in the reconciliation's own words. A side that is a file of the August candidates takes ADV-006's August-candidate row (M14) in full, verbatim
+    (name, preparation, age_bin, cohort_and_genotype_arms), labelled with where the attribution comes from: the generator's mapping from the source file to M14; conflicts.tsv itself gives only the m_id. Any other side
+    takes the preparation and age of the ADV-006 rows the conflict names. `seen` makes a repeat within one cell a pointer to the full text above, so nothing is lost and nothing is printed twice."""
     if "CC-20260826-" in source and "M14" in meas:
         r = meas["M14"]
-        return f"the August candidate's preparation, ADV-006 M14 verbatim: preparation {r['preparation']!r}; age_bin {r['age_bin']!r}"
+        if seen is not None and "M14" in seen:
+            return "the August candidate's preparation, ADV-006 M14, printed in full above in this cell"
+        if seen is not None:
+            seen.add("M14")
+        return (f"the August candidate's preparation, ADV-006 M14 verbatim (attribution by the generator's mapping from the August candidate files to M14; conflicts.tsv gives m_id {', '.join(ids)} for this conflict): "
+                f"name {r['name']!r}; preparation {r['preparation']!r}; age_bin {r['age_bin']!r}; cohort_and_genotype_arms {r['cohort_and_genotype_arms']!r}")
     rows = [i for i in ids if i in meas]
     return "the preparation of the ADV-006 row(s) it is reconciled into: " + ("; ".join(f"{i}: preparation {meas[i]['preparation']!r}; age_bin {meas[i]['age_bin']!r}" for i in rows) or "not stated")
 
 
-def _cf_text(c, conf, meas, unattached):
+def _cf_text(c, conf, meas, unattached, seen=None, compact=False):
     """One conflict, with everything conflicts.tsv says about it and nothing else: both sides with their sources, quotes and preparation context, the reason both cannot be met in one recording and what would change the reading.
-    A conflict the owners record as not attachable prints that reason instead and no content."""
+    A conflict the owners record as not attachable prints that reason instead and no content. A conflict already printed in full in the same cell is named with a pointer to it (lossless)."""
     if c in unattached:
+        if seen is not None and ("NA", c) in seen:
+            return f"{c} NOT attached (reason printed above in this cell)"
+        if seen is not None:
+            seen.add(("NA", c))
         return f"{c} NOT attached: {unattached[c]}"
+    if compact:                                   # a lever the package itself drops: id, type and m_id here; the full text of both sides is the design row, verbatim, in conditional_design_steps_it50.tsv (nothing is lost)
+        return f"{c} (type {conf[c]['type']}; m_id {conf[c]['m_id']}; both sides in full: design row {ADV006}::conflicts.tsv::{c} of conditional_design_steps_it50.tsv)"
+    if seen is not None and ("CF", c) in seen:
+        return f"{c} (printed in full above in this cell)"
+    if seen is not None:
+        seen.add(("CF", c))
     cr = conf[c]
     ids = [i.strip() for i in cr["m_id"].split(";")]
-    return (f"{c} [type: {cr['type']}; cell_type: {cr['cell_type']}; side A ({cr['source_A']}; context: {_side_context(cr['source_A'], ids, meas)}): {cr['quote_A']!r}; "
-            f"side B ({cr['source_B']}; context: {_side_context(cr['source_B'], ids, meas)}): {cr['quote_B']!r}; why_both_cannot_be_met_in_one_recording: {cr['why_both_cannot_be_met_in_one_recording']}; "
+    return (f"{c} [type: {cr['type']}; cell_type: {cr['cell_type']}; side A ({cr['source_A']}; context: {_side_context(cr['source_A'], ids, meas, seen)}): {cr['quote_A']!r}; "
+            f"side B ({cr['source_B']}; context: {_side_context(cr['source_B'], ids, meas, seen)}): {cr['quote_B']!r}; why_both_cannot_be_met_in_one_recording: {cr['why_both_cannot_be_met_in_one_recording']}; "
             f"which_would_change_the_interpretation: {cr['which_would_change_the_interpretation']}; adjudicable_from_the_packages: {cr['adjudicable_from_the_packages']}]")
 
 
@@ -222,19 +238,23 @@ def design_join(pkg, key, design_rows_all, row=None, m_map=None):
         return f"no ADV-006 measurement row declares {token} in requests_merged: not joined (not stated is not tested and absent)"
     unattached = (m_map or {}).get("unattached", {})
     first_hop = set(attached_reach(pkg, key, row, m_map, meas)[2])
+    owner_first = {i: why for i, why in ((m_map or {}).get("owner_rows") or {}).get(key, {}).items() if i in meas}      # rows the owners read as first hop for this lever without a declared key reaching them
+    seen = set()                                                                                               # what is already printed in full in this cell
+    dcol, dpre = (m_map or {}).get("dropped", (None, None))
+    is_dropped = bool(dcol and row and str(row.get(dcol, "")).strip().lower().startswith(dpre))
     parts = []
     for m in hit:
         r = meas[m]
         lead = LEADING_IDS.match(r["interpretable_after"])
         gating = [g.strip() for g in lead.group(1).split(",") if g.strip() in meas] if lead else []
         coreq = [m2 for m2, r2 in meas.items() if m2 != m and re.search(rf"\b{m}\b", r2["lever_or_comparison_gated"])]
-        naming_lever = [m2 for m2, r2 in meas.items() if m2 not in [m] + coreq and re.search(rf"\b{key}\b", r2["lever_or_comparison_gated"])]
         second = []
         for g in gating:
             lead2 = LEADING_IDS.match(meas[g]["interpretable_after"])
             second += [i.strip() for i in (lead2.group(1).split(",") if lead2 else []) if i.strip() in meas and i.strip() not in gating + [m] + coreq]
         first_labelled = sorted((set(gating) | set(second)) & first_hop)      # rows the gating rows name that the attachments ALSO reach in the first hop: one label, first hop
-        second = sorted(set(second) - first_hop)
+        owner_labelled = sorted(set(second) & set(owner_first) - first_hop)    # named by the gating rows and read as first hop by the owners, no declared key reaching them: said once, the same way as in lever_attachments
+        second = sorted(set(second) - first_hop - set(owner_first))
         ids = [m] + gating + coreq
         cf = [c for c, cr in conf.items() if set(i.strip() for i in cr["m_id"].split(";")) & set(ids)]
         genuine = [c for c in cf if conf[c]["type"] == "genuine"]
@@ -252,14 +272,14 @@ def design_join(pkg, key, design_rows_all, row=None, m_map=None):
                      + f") | rows named at the start of that cell: {', '.join(gating) or 'none (no leading list in the cell)'} | "
                      f"rows whose `lever_or_comparison_gated` names {m} as a whole token (their own cell, quoted, says what the relation is): "
                      + ("; ".join(f"{c2} {meas[c2]['lever_or_comparison_gated']!r}" for c2 in coreq) or "none") + " | "
-                     + (f"rows whose `lever_or_comparison_gated` names {key} itself (their words; their conflicts are not followed): " + "; ".join(f"{c2} {meas[c2]['lever_or_comparison_gated']!r}" for c2 in naming_lever) + " | " if naming_lever else "")
                      + f"conflicts of type genuine whose m_id names any of {', '.join(ids)}: "
-                     + ("; ".join(_cf_text(c, conf, meas, unattached) for c in genuine) or "none")
-                     + (f"; other-typed conflicts naming {m} itself (not conflicts: gap or synonym), in full: " + "; ".join(_cf_text(c, conf, meas, unattached) for c in own_other) if own_other else "")
+                     + ("; ".join(_cf_text(c, conf, meas, unattached, seen, compact=is_dropped) for c in genuine) or "none")
+                     + (f"; other-typed conflicts naming {m} itself (not conflicts: gap or synonym), in full: " + "; ".join(_cf_text(c, conf, meas, unattached, seen) for c in own_other) if own_other else "")
                      + f"; other-typed rows on the gating rows, ids only: {', '.join(others) or 'none'}"
                      + (f" | second-hop rows named by the gating rows and not reached by the attachments, listed and NOT followed (an order of cost or priority may sit there): {', '.join(second)}; genuine conflicts on them, for the reader to weigh: "
-                        + ("; ".join(_cf_text(c, conf, meas, unattached) for c, cr in conf.items() if cr["type"] == "genuine" and set(i.strip() for i in cr["m_id"].split(";")) & set(second) and c not in genuine) or "none beyond those above") if second else "")
-                     + (f" | first hop through the attachments (see lever_attachments), not second hop: {', '.join(first_labelled)}" if first_labelled else ""))
+                        + ("; ".join(_cf_text(c, conf, meas, unattached, seen, compact=is_dropped) for c, cr in conf.items() if cr["type"] == "genuine" and set(i.strip() for i in cr["m_id"].split(";")) & set(second) and c not in genuine) or "none beyond those above") if second else "")
+                     + (f" | first hop through the attachments (see lever_attachments), not second hop: {', '.join(first_labelled)}" if first_labelled else "")
+                     + (f" | rows the owners read as first hop for this lever (SCI, PRESIDIO-001); no declared key of this row reaches them: " + "; ".join(f"{i} ({owner_first[i]})" for i in owner_labelled) if owner_labelled else ""))
     notes = PKG_MAP.get(pkg, {}).get("conflict_notes", {})
     shown = " ".join(parts)
     extra = "".join(f" || {c}: {note}" for c, note in notes.items() if f"{c} [type:" in shown)
@@ -331,6 +351,9 @@ def lever_attachments(pkg, key, row, m, design_all):
     fan = sorted({o for e in own_e for o, (mr, _) in matrix.items() if re.search(rf"\b{e}\b", mr["what_each_outcome_would_favour"])} - set(attached))
     cols = ("observation", "compatible_explanations", "weakened_explanations", "discriminating_measure", "what_each_outcome_would_favour", "pharmacological_decision_it_would_change")
     parts = []
+    seen = set()
+    dcol, dpre = m.get("dropped", (None, None))
+    is_dropped = bool(dcol and str(row.get(dcol, "")).strip().lower().startswith(dpre))
     for o in attached:
         mr, ref = matrix[o]
         holders = [mid for mid in declared if f"{alias}#matrix:{o}" in [t.strip() for t in meas[mid]["requests_merged"].split(";")]]
@@ -357,8 +380,8 @@ def lever_attachments(pkg, key, row, m, design_all):
         held = m.get("unattached", {})
         other_named = [c for c, cr in conf.items() if cr["type"] != "genuine" and set(i.strip() for i in cr["m_id"].split(";")) & set(declared)]
         parts.append(f"ADV-006 rows whose requests_merged names an attached matrix row (first hop, also for M01 and M03 where listed): {', '.join(reach)}; genuine conflicts on them: "
-                     + ("; ".join(_cf_text(c, conf, meas, held) for c in gen) or "none")
-                     + (f"; other-typed conflicts naming this lever's own declared row(s) (gap or synonym, not conflicts), in full: " + "; ".join(_cf_text(c, conf, meas, held) for c in other_named) if other_named else ""))
+                     + ("; ".join(_cf_text(c, conf, meas, held, seen, compact=is_dropped) for c in gen) or "none")
+                     + (f"; other-typed conflicts naming this lever's own declared row(s) (gap or synonym, not conflicts), in full: " + "; ".join(_cf_text(c, conf, meas, held, seen) for c in other_named) if other_named else ""))
     bullet = next((l for l in (DR / "inhibitory_defect_sci47_20261112" / "output" / m["attach"]["notes"]).read_text(encoding="utf-8").splitlines() if re.match(rf"\* \*\*{key}\b", l)), "")
     if bullet:
         parts.append(f"levers_notes bullet for {key} (this lever's id starts it; the 'Kept, with the reason' or 'Dropped' list): {bullet}")
@@ -369,7 +392,7 @@ def lever_attachments(pkg, key, row, m, design_all):
         parts.append(f"owner-stated attachment (SCI, PRESIDIO-001; not reached by a declared key of this row) {ref}: {_owner_ref_text(ref, m)}")
     for c, why in (m.get("owner_stated") or {}).get(key, {}).items():
         if c in conf:
-            parts.append(f"{_cf_text(c, conf, meas, m.get('unattached', {}))} {why}")
+            parts.append(f"{_cf_text(c, conf, meas, m.get('unattached', {}), seen)} {why}")
     for c, why in m.get("unattached", {}).items():           # a conflict the owners cannot state for a lever is said not attached for every lever of the mapping that would otherwise list it
         if c in conf and key in (m.get("unattached_for") or {}).get(c, []):
             parts.append(f"{c} NOT attached: {why}")
