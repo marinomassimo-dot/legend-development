@@ -111,3 +111,7 @@ One assessment in English, with precise source locations (path and heading or li
 Stage B adds, first, **Response to the intended action**: refinements, alternatives or a
 justified disagreement. Keep it compact; the length of the assessment is not a measure of its
 value. Make the ability to work and improve durable, while keeping changes of direction simple.
+
+## Waits (HE54, 2026-11-14)
+
+The brief lists what the open mandates wait for (`waits`) and states the follow-through paragraph. When something is awaited, judge between anticipating an independent activity, queuing an assignment for after the current work, preparing a conditional follow-up (the question, not every branch), or keeping the wait; say which and why. `none: <reason>` is complete when waiting is cheaper. Do not touch what is under verification, name the start condition, what it may disturb and what would make it useless, and reuse an assessment that is still pertinent. The recipient chooses the operational moment.

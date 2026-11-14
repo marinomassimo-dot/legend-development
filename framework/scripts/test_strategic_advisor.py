@@ -510,6 +510,54 @@ class Continuous(Proactive):
     def roadmap(self, *lines: str) -> None:
         sa.ROADMAP.write_text(f"x\n{sa.ROADMAP_BEGIN}\nMission v1\n" + "\n".join(lines) + f"\n{sa.ROADMAP_END}\n", encoding="utf-8")
 
+    def write_waiting(self, task: str, blocker: str, other_step: str = "TODO") -> None:
+        rec = {"TASK_ID": task, "AUTHORISED_QUEUE_X": {"MANDATE_STATE": "OPEN", "OBJ_1": {"order": 1, "steps": [
+            {"step": "use the battery result", "status": "BLOCKED", "blocker": blocker, "owner": "x"},
+            {"step": "independent work", "status": other_step, "owner": "x", **({"evidence": "e1 recorded and verified"} if other_step == "DONE" else {})}]}}}
+        (self.repo / f"ledger/tasks/orchestrator/{task}.json").write_text(json.dumps(rec), encoding="utf-8")
+
+    def test_a_new_wait_is_an_event_a_standing_wait_is_not_and_the_wait_is_visible_without_an_evaluation(self) -> None:
+        self.write_waiting("ORCH-W1", "battery run 77 in progress")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")                     # first tick of the campaign
+        sa.evaluate(self.campaign)
+        self.at("2026-11-13T15:00:00Z")
+        quiet = sa.tick(self.campaign)                                                      # the same wait, still standing: nothing new
+        self.assertEqual((quiet["verdict"], quiet["events"]), ("NONE", []))
+        self.assertEqual(quiet["waiting_on"], ["ORCH-W1: battery run 77 in progress"])      # visible to the recall, which costs one line
+        self.assertTrue(quiet["presidio"].startswith(("idle inside the pilot", "WAITING")))
+        self.write_waiting("ORCH-W2", "CI run 740 in progress")
+        self.at("2026-11-13T20:00:00Z")
+        new = sa.tick(self.campaign)
+        self.assertEqual(new["verdict"], "EVALUATE")                                         # a new wait changes what could be anticipated; grouped with the others, at the ordinary rhythm
+        self.assertIn("waiting: ORCH-W2: CI run 740 in progress", new["events"])
+        sa.evaluate(self.campaign)
+        brief = (self.campaign / "brief_P.md").read_text(encoding="utf-8")
+        self.assertIn('"waits"', brief); self.assertIn("CI run 740 in progress", brief); self.assertIn("battery run 77 in progress", brief)
+        self.assertIn("## Waiting and follow-through", brief)
+        self.assertIn("keep waiting because nothing would justify its cost or risk", brief)      # waiting stays a valid outcome
+        self.assertIn("does not touch the candidate or the clones, processes and directories under verification", brief)
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")                          # reused: the same waits are not re-evaluated
+
+    def test_optional_follow_through_fields_travel_and_the_old_format_still_registers(self) -> None:
+        text = ("### ASSIGNMENT 1\nkey: anticipated-reading-during-the-wait\nrecipient: Science\nquestion: q\nwhy_now: w\nroadmap_link: r\nrelated_work: rw\nsources: s\ndecision_changed_by_result: d\nperimeter_and_budget: p\n"
+                "method_autonomy: m\ndeliver_to: Orchestrator\nduplicate_check: c\nmode: queued\nstart_condition: after the battery of ORCH-W1 concludes\ninterferes_with: nothing under verification\nobsolete_if: the battery fails\n")
+        parsed = sa.parse_assignments(text)[0]
+        self.assertEqual((parsed["mode"], parsed["obsolete_if"], parsed["_missing"]), ("queued", "the battery fails", ""))
+        self.assertEqual(sa.parse_assignments(text.split("mode: queued")[0])[0]["_missing"], "")      # without the optional fields nothing is missing
+        made = sa.register_assignments(self.campaign, "P9", text)
+        self.assertEqual(len(made), 1)
+        self.assertIn("start_condition: after the battery", (self.campaign / "assignments" / f"{made[0]['id']}.md").read_text(encoding="utf-8"))
+
+    def test_the_pilots_assignment_cap_is_history_in_continuous_operation(self) -> None:
+        budget = json.loads((self.campaign / "budget.json").read_text(encoding="utf-8")); budget["max_assignments"] = 1
+        (self.campaign / "budget.json").write_text(json.dumps(budget), encoding="utf-8")
+        mk = lambda k: ("### ASSIGNMENT 1\nkey: %s\nrecipient: Science\nquestion: q\nwhy_now: w\nroadmap_link: r\nrelated_work: rw\nsources: s\ndecision_changed_by_result: d\nperimeter_and_budget: p\n"
+                        "method_autonomy: m\ndeliver_to: Orchestrator\nduplicate_check: c\n") % k
+        self.assertEqual(len(sa.register_assignments(self.campaign, "P1", mk("one"))), 1)
+        self.assertEqual(len(sa.register_assignments(self.campaign, "P2", mk("two"))), 0)       # bounded pilot: over budget
+        self.authorise()
+        self.assertEqual(len(sa.register_assignments(self.campaign, "P3", mk("three"))), 1)     # continuous: no cap
+
     def test_the_pilot_ends_at_its_ceilings_and_continuous_mode_continues_without_resetting_anything(self) -> None:
         self.exhaust_the_pilot()
         self.land("SCI60 record COMPLETE; delivered"); self.at("2026-11-13T18:00:00Z")
