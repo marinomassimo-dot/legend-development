@@ -513,6 +513,13 @@ class DesignOnly(unittest.TestCase):
         self.assertEqual([r["id"] for r in rec["rows"]], ["other::experiments.tsv::EX1"])
         self.assertEqual(rec["rows"][0]["row"]["weakened_by"], "no shift in the marker")        # the contrary condition is a cell of its own and is kept
 
+    def test_the_reconciled_measurement_package_is_read_as_two_keyed_tables_with_package_local_ids(self):
+        pkg = hp.load_design_only(hp.DR / "measurement_reconciliation_adv006_20261114")
+        self.assertEqual({n: (t["state"], t["key_column"], t["duplicates"]) for n, t in pkg["tables"].items()},
+                         {"measurements.tsv": ("OK", "m_id", []), "conflicts.tsv": ("OK", "conflict_id", [])})
+        rec = hp.design_for([dict(pkg, name="m", inv_id="INV-05")], "INV-05")
+        self.assertTrue(all(r["id"].startswith("measurement_reconciliation_adv006_20261114::") and r["kind"] == "design_row_verbatim" for r in rec["rows"]))   # the id is package-qualified, never the bare M01
+
     def test_a_table_that_cannot_be_read_is_not_an_empty_design(self):
         nokey = dict(hp.load_design_only(self.folder("nokey", {"design.tsv": ("question\tarms", ["x\ty"])})), name="nokey", inv_id="INV-9")
         empty = dict(hp.load_design_only(self.folder("empty", {"design.tsv": ("step\tquestion", [])})), name="empty", inv_id="INV-9")

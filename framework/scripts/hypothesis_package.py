@@ -45,8 +45,8 @@ facet is inferred from the statement text. Direction never changes a reading dep
 still a probe, and the counter-evidence stays visible to whoever needs it (`prop_facets`).
 
 A fourth role, `design_only`, is for a package whose knowledge is a design, not a set of hypotheses: steps with their controls and the decision each possible outcome
-would trigger (`design.tsv`), outcome patterns (`grid.tsv`) or experiment rows (`experiments.tsv`). Each such table present in the folder is returned verbatim, rows keyed by the key column the table
-names (`step`, `pattern_id`, `exp_id`), with its own columns: the reader maps no cell to another and invents no field, so a possible outcome is never an observation, a control is never a hypothesis, and a
+would trigger (`design.tsv`), outcome patterns (`grid.tsv`), experiment rows (`experiments.tsv`), or reconciled measurement rows (`measurements.tsv`, key `m_id`) with the conflicts between their specifications (`conflicts.tsv`, key `conflict_id`). Each such table present in the folder is returned verbatim, rows keyed by the key column the table
+names (`step`, `pattern_id`, `exp_id`, `m_id`, `conflict_id`), with its own columns: the reader maps no cell to another and invents no field, so a possible outcome is never an observation, a control is never a hypothesis, and a
 column the package does not have is simply not in the row. Which cell answers which question of a consumer (step, premise, control, possible outcome, conditioned decision) is that consumer's reviewable
 choice (`DESIGN_MAP` in `conditional_proposals.py`), confirmed by the package's scientific owners, never inferred from the words of a cell.
 
@@ -69,7 +69,7 @@ REPO = Path(__file__).resolve().parents[2]
 DR = REPO / "disease-models/wwox/research/drug_repurposing"
 MANIFEST = DR / "hypothesis_packages.tsv"
 ROLES = ("physiological_hypotheses", "pharmacological_comparison", "hypotheses_only", "design_only")
-DESIGN_TABLES = {"design.tsv": "step", "grid.tsv": "pattern_id", "experiments.tsv": "exp_id"}   # a design package's tables by file name, each with its key column
+DESIGN_TABLES = {"design.tsv": "step", "grid.tsv": "pattern_id", "experiments.tsv": "exp_id", "measurements.tsv": "m_id", "conflicts.tsv": "conflict_id"}   # a design package's tables by file name, each with its key column
 HYP_KEY_COLUMNS = ("hyp_id", "hypothesis_id", "id")   # the key column of a hypotheses table differs by producer; the first one present is the key
 MANIFEST_FIELDS = ("package", "dir", "role", "inv_id", "why")
 LINK_FIELDS = ("hyp_id", "kind", "need_id", "inv_id", "card_ids", "link_state", "carried_check", "source")

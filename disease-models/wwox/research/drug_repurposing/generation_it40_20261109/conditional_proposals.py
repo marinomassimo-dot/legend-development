@@ -19,7 +19,7 @@ import cell_context as cc  # noqa: E402  IT46: relation targets joined to a held
 RELATIONS = {"MH1": ["R5"], "MH2": ["R4"], "MH3": [], "BH1": ["R3"], "BH2": ["R1", "R2"], "BH3": ["R6"]}
 INVS = ("INV-05", "INV-18")
 FIELDS = ["corrections_it40", "proposal_id", "kind", "need_id", "inv_id", "cards", "status", "starting_observation_and_chain", "context", "competing_explanations", "premise_and_action",
-          "compound_or_probe_named_by_package", "catalogue_by_action", "cell_context", "source_and_limits", "expected_result_by_explanation", "decision_measure", "experiments", "unresolved_refs", "nomination"]
+          "compound_or_probe_named_by_package", "catalogue_by_action", "cell_context", "source_and_limits", "expected_result_by_explanation", "decision_measure", "experiments", "unresolved_refs", "nomination", "design_rows_same_investigation"]
 
 CORR_ALL = (" Predictions in the arms are INFERENZA from the hypothesis definitions; no cell is a measured result.")
 CORRECTIONS = {
@@ -53,6 +53,20 @@ def cell_context_text(rels):
     return " | ".join(f"{rid}: " + cc.context_for(rel[rid], rid)[1] for rid in rels if rid in rel) or "no relation searched (no target genes to place)"
 
 
+def design_pointer(inv, pk):
+    """HE51: where the design rows of this investigation are. The link is the manifest's `inv_id` and nothing else: the packages state no link from a hypothesis to a measurement, so none is made here.
+    Keys only (the rows are in conditional_design_steps_it50.tsv, verbatim); a reachable table with no mapping is named as not in that file; absence is stated, not left empty."""
+    rec = hp.design_for(pk, inv)
+    mapped, unmapped = {}, {}
+    for r in rec["rows"]:
+        (mapped if DESIGN_MAP.get(r["package"], {}).get(r["table"]) else unmapped).setdefault((r["package"], r["table"]), []).append(r["key"])
+    if not mapped and not unmapped:
+        return f"none listed for {inv} ({rec['state']}): no design is registered for it, which does not say that none exists"
+    keys = lambda d: "; ".join(f"{pkg} {tab} [{', '.join(k.split(' ')[0] for k in ks)}]" for (pkg, tab), ks in d.items())
+    out = (f"{sum(map(len, mapped.values()))} design rows are in conditional_design_steps_it50.tsv for {inv}, read from the manifest's inv_id and not linked to this hypothesis by any package (a design is not an observation): " + keys(mapped)) if mapped else f"no mapped design rows for {inv}"
+    return out + (f" || reachable and not mapped, so not in that file: {keys(unmapped)}" if unmapped else "")
+
+
 def rows(link=True):
     ba = by_action(); pk = hp.load_all(); out = []
     for inv in INVS:
@@ -73,7 +87,7 @@ def rows(link=True):
                 premise_and_action=hyp["pharmacological_action"], compound_or_probe_named_by_package=nominated, catalogue_by_action=catalogue_summary(RELATIONS[hid], ba), cell_context=cell_context_text(RELATIONS[hid]),
                 source_and_limits=hyp["counter_evidence"] + " || weakening: " + hyp["weakening_result"], expected_result_by_explanation=" ;; ".join(expected) if link else "",
                 decision_measure=hyp["what_would_change_the_decision"], experiments=" ;; ".join(exps), unresolved_refs=",".join(h["unresolved_refs"]),
-                nomination="ABSTAIN" if nominated.lower().startswith(("none", "no ")) else "NAMED_BY_PACKAGE_ONLY (no ranking, no claim)"))
+                nomination="ABSTAIN" if nominated.lower().startswith(("none", "no ")) else "NAMED_BY_PACKAGE_ONLY (no ranking, no claim)", design_rows_same_investigation=design_pointer(inv, pk) if link else ""))
     return out
 
 
@@ -159,7 +173,7 @@ def package_rows():
                                 compound_or_probe_named_by_package=cells(r, m["compound"]) or "none named", catalogue_by_action="", cell_context=(cc.context_for(symbols, (m["relation_ids"] or [pkg])[0])[1] if symbols else "not joined (no relation symbols for this package)"),
                                 source_and_limits="package row, verbatim cells; no direction asserted; labels of the package kept: " + cells(r, [c for c in ("class", "status", "label") if r.get(c)]),
                                 expected_result_by_explanation=cells(r, m["expected"]) or "not stated by the package (missing): its recorded support and counter-evidence are not a falsifiable prediction", decision_measure=cells(r, m["measure"]) or "not stated by the package: a question, not an experiment",
-                                experiments="", unresolved_refs="", nomination="CONDITIONAL; named compounds are the package's, not ranked; no therapeutic direction asserted",
+                                experiments="", unresolved_refs="", nomination="CONDITIONAL; named compounds are the package's, not ranked; no therapeutic direction asserted", design_rows_same_investigation=design_pointer(inv, pk),
                                 package_ref=x["id"] + " @ " + x["source_ref"], direction_stated="none (the package states no therapeutic direction)", unmapped_cells=",".join(unmapped), package_title=r.get(m["title"], ""), reopen_or_abandon=cells(r, m.get("reopen", [])) or "not stated by the package", recorded_support=cells(r, m.get("support", []))))
     return out, seen_unmapped
 
@@ -174,6 +188,19 @@ DESIGN_MAP = {
                                                   outcomes=["if_result_X_then"], decision=["decision_it_changes"], scope=[], link=[])},
     "myelin_generative_it36_20261108/levers_bc": {"experiments.tsv": dict(step=["question", "design", "endpoint"], precondition=[], controls=["comparator", "mechanism_control", "engagement_check"],
                                            outcomes=["weakened_by"], decision=["decision_it_changes"], scope=["endpoint_scope", "not_a_substitute_for"], link=["hyp_id"])},
+    # HE51: the ADV-006 reconciliation of the inhibitory thread (INV-05 as registered; the SCI42/SCI47 source tables are deliberately NOT registered: one measurement, one row). `m_id` is package-local and the row id is
+    # package-qualified, so the pH M01 of another package and this package's chloride rows never meet. No column holds an outcome, a control or a hypothesis link, so those slots say so. `gloss` is appended to a column's own
+    # label where the label alone would mislead (the cell is kept verbatim): `open_questions_closed` is not a resolved state, `interpretable_after` quotes both dependencies and priority orders of the sources.
+    "measurement_reconciliation_adv006_20261114": {
+        "measurements.tsv": dict(step=["name", "source_names", "requests_merged", "preparation", "mode_and_configuration", "quantity_read", "conditions", "unit_of_analysis", "age_bin", "cohort_and_genotype_arms", "endpoint"],
+                                 precondition=["interpretable_after"], controls=[], outcomes=[], decision=["lever_or_comparison_gated", "open_questions_closed"],
+                                 scope=["not_decided_by_it"], link=[],
+                                 gloss={"open_questions_closed": "questions this measurement would inform if it were performed; no measurement exists and no question is closed by this row",
+                                        "interpretable_after": "as the sources state it, quoted; an order of cost or priority inside it is not a dependency"}),
+        "conflicts.tsv": dict(step=["type", "cell_type", "source_A", "quote_A", "source_B", "quote_B"], precondition=[], controls=[], outcomes=[],
+                              decision=["which_would_change_the_interpretation"], scope=["why_both_cannot_be_met_in_one_recording", "adjudicable_from_the_packages"], link=["m_id"],
+                              gloss={"adjudicable_from_the_packages": "whether the two source texts alone settle it; no side is chosen by this row"}),
+    },
 }
 DESIGN_FIELDS = ["design_row_id", "package", "table", "inv_id", "source_ref", "step", "precondition_unmet_until_the_step_before_is_run", "controls_as_documented_by_the_package",
                  "possible_outcomes_conditions_and_cautions_not_observed", "conditioned_decision", "scope_and_what_the_result_is_not", "hypothesis_link", "observation", "unmapped_cells"]
@@ -192,11 +219,14 @@ def design_rows():
                 continue
             r, cols = x["row"], x["columns"]
 
+            gloss = m.get("gloss", {})
+
             def slot(names):
                 if not names:
                     return ABSENT
-                return " | ".join(f"{n}: {r[n]}" if n in cols and r.get(n) else f"{n}: {EMPTY if n in cols else ABSENT}" for n in names)
-            used = {c for names in m.values() for c in names} | {x["key_column"]}
+                lab = lambda n: f"{n} [{gloss[n]}]" if n in gloss else n
+                return " | ".join(f"{lab(n)}: {r[n]}" if n in cols and r.get(n) else f"{lab(n)}: {EMPTY if n in cols else ABSENT}" for n in names)
+            used = {c for k, names in m.items() if k != "gloss" for c in names} | {x["key_column"]}
             out.append(dict(design_row_id=x["id"], package=x["package"], table=x["table"], inv_id=inv, source_ref=x["source_ref"],
                             step=f"{x['key_column']}: {x['key']} | " + slot(m["step"]), precondition_unmet_until_the_step_before_is_run=slot(m["precondition"]),
                             controls_as_documented_by_the_package=slot(m["controls"]), possible_outcomes_conditions_and_cautions_not_observed=slot(m["outcomes"]),
