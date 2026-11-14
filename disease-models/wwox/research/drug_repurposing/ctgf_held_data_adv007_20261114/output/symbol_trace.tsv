@@ -1,0 +1,7 @@
+check	symbol	result
+symbol in the authors' list (list_padj_le_0.05.tsv, key of the script's log2FC and ENSG lookups)	CTGF	True
+symbol in S1 up set (query_sets.json, after symbol validation)	CCN2	True
+old symbol in S1 up set	CTGF	False
+row in composition_class.tsv under the new symbol	CCN2	True
+row in composition_class.tsv under the old symbol	CTGF	False
+rows in composition_class.tsv with a blank log2fc	-	15

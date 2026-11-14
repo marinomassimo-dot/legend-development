@@ -1,0 +1,74 @@
+# Stage A — blind reading of CTGF/CCN2 in the held originals (V-ADV007, 2026-11-14)
+
+Written before opening `output/` or the two producer scripts. Not medical advice. Everything below is computed by me from the originals (my scratch scripts live in the session scratchpad); "read" = in the original, "inferred" = my reasoning.
+
+## 0. What the gene is called
+
+| Table | Symbol / id in the table | Note |
+|---|---|---|
+| GSE156243 count table, authors' lists, `list_padj_le_0.05.tsv`, `query_sets.json` ("CCN2" in S1/S2/S3 up) | `CTGF` in the count table and in `list_padj_le_0.05.tsv` (ENSG00000118523); `symbol_validation.tsv` marks it `previous_symbol->CCN2`; `query_sets.json` already carries `CCN2` (renamed). | read |
+| `composition_class.tsv` | `CCN2` (line 198) | read |
+| GSE150123 calibration | no symbol; matched by ENSG00000118523 via HGNC (`CCN2` in the HGNC map, `CTGF` is NOT) | read |
+| Mouse P17 bulk TPM | transcript rows `ENSMUST…`, no gene column | read |
+| Per-gene summaries (P17) | `Ctgf` ENSMUSG00000019997 | read |
+| P47T (`p1a_all_regions_own_results.tsv.gz`, `p47t_all_regions_tested_genes.tsv.gz`) | `Ccn2` ENSMUSG00000019997.11 | read |
+| GSE158684 features | `Ctgf` (row 14694 of 31053; ctrl and ko feature files byte-identical in content) | read |
+| GSE126075 | `CTGF` | read |
+| GSE73721 | `Ctgf` (mouse-style casing, human and mouse columns share it) | read |
+
+## 1. Human organoid, GSE156243 (4 KO v 2 WT libraries, one cell line WiBR3, 15 weeks)
+
+Read: raw Salmon counts, KO 390, 215, 467, 245; WT 127, 99. Authors' list: log2FC 1.32, p 3.1e-4, padj 7.07e-3, "up" (also listed in `GSE156243_CKO_CWT_1246_upregulated_genes.txt.gz`).
+Computed (median-of-ratios size factors, genes with no zero): size factors 1.06, 1.11, 1.10, 0.95 (KO) and 1.01, 0.81 (WT). Normalised CTGF: KO 369, 193, 424, 257 (mean 311); WT 126, 122 (mean 124). log2 ratio of means 1.32 (reproduces the authors' 1.32; geometric-mean version 1.26). Per-library log2 vs WT mean: +1.57, +0.64, +1.77, +1.05; WT -0.02, +0.02. Library-size CPM: KO 10.1, 5.2, 12.2, 7.2; WT 3.4, 3.3. log2((CPM+1)) shift 1.15. Lowest KO / highest WT = 1.53. Genome-wide, among 16,137 genes with mean normalised count >= 10 in WT, CTGF's log2 ratio is at the 96.7th percentile (median gene +0.001).
+Replicates: yes in numbers (4 v 2 separate libraries, all "15 weeks", one hESC line; GEO design says two further WT libraries failed QC and were dropped). Whether the 4 KO libraries are independent organoids from independent clones is NOT stated in the record I read, so "4 replicates" may be 4 organoids from one KO clone. Inferred: with 2 WT the WT variance is essentially unknown (the two WT libraries differ by 3%, KO libraries range 1.9-fold); the exact permutation floor with 4 v 2 is one-sided p = 1/15 = 0.067 (two-sided 2/15 = 0.133), so the authors' padj 0.007 rests on DESeq2's model-based dispersion, not on the design's resolving power. All four KO libraries are above both WT libraries, which is the strongest assumption-free statement.
+Direction: UP, effect size log2 +1.3 (about 2.5-fold), evidence moderate-weak (n = 2 WT).
+
+## 2. Composition and maturation flags for this gene — computed, or blank?
+
+Read in `composition_class.tsv` line 198: `CCN2  up  <blank log2fc>  0  0  <blank rho>  0  0  0  0`. The blanks in `log2fc` and `rho_vs_log10_day` are the signature of a lookup that failed. Reason (read in `reproduce_dseqr_cmap_comparison.py` lines 48, 80-84): log2FC comes from `list_padj_le_0.05.tsv` keyed by symbol, and the ENSG for the rho calculation likewise (`ens.get(sym)` then `continue` when None). That list carries the old symbol `CTGF`; S1 carries `CCN2`, so both lookups return nothing, CCN2 gets no rho, and the zeros in `in_declared_markers`, `broad_class`, `maturation_consistent`, `composition_class`, `in_L1000_12328_space`, `landmark_978` are defaults for "not found", not computed negatives. The same happens to all 15 renamed genes (`IRAG1, CCN2, DRC4, MNMIP1, POFUT4, MTCL2, ATOSB, HDIP1, BBLN, ADPRS, CIRSR, H1-2, H1-10, H4C15, ZNRD2`; I counted these 15 rows with blank log2fc and blank rho; 12 other blank-rho rows have another cause, probably the mean-count < 5 filter). CCN2 is also not in `marker_sets_declared.tsv`.
+Verdict on the flags: **never computed for this gene** (the declared-marker column is a true 0 by absence from the list; every other 0 is a default).
+
+If it had been computed (my own calculation in GSE150123, ENSG00000118523, 62 samples, six lines, day 25-652; mean count 155.6, so the >=5 expression filter would pass): Spearman rho with log10 day over all 62 = -0.009. By the declared rule (|rho| >= 0.6) it would not be flagged at all, and not at the broad 0.4 level either. But rho is the wrong summary for this gene:
+- within-line slope of log2 CPM+1 on log10 day: -0.69 (se 0.42; five informative lines; per line -3.39, -0.20, -0.55, -0.21, -2.27, all negative); line-cluster bootstrap 95% interval -1.83 to -0.30. Negative = lower with age; KO up is therefore the "less mature" direction.
+- shape is non-monotone: line-centred day-bin means: 25-60 d +1.61 (n 9); 60-110 -0.36 (13); 110-230 -1.03 (14); 230-400 -0.21 (17); 400-700 +0.91 (9). Restricted to day >= 60 the pooled slope is +1.37 (the sign flips). The 15-week (~105 d) organoid sits at the trough.
+So maturation time alone gives no stable sign across the window an organoid occupies.
+
+## 3. Can maturation / cell composition account for the size of the rise?
+
+Method (mine, extending the committed estimators in `maturation_calibration.py`, whose input digests verified): within-line regression of CCN2 log2 CPM+1 on each progenitor/neuronal marker in GSE150123, times the marker's own KO v WT shift in GSE156243 (log2 of mean CPM+1, as the script does). Observed CTGF shift on the same scale: +1.15.
+Per marker, predicted CTGF shift: VIM +1.13, NES +1.53, SOX9 -0.31, SOX2 +0.57, PAX6 0.00, HES1 +0.17, STMN2 +0.22, MAP2 +0.53, SYT1 +0.41, RBFOX3 -0.03, TUBB3 +0.13, SNAP25 +0.30. Median of the 12 = +0.26 (about 23% of +1.15); range -0.31 to +1.53; two markers (NES, VIM) predict essentially all of it, four to five predict nothing or the opposite sign.
+Composite (mean z of 6 progenitor markers minus mean z of 6 neuronal markers): calibration slope of CCN2 on the composite 0.94 (within-line R2 0.61); composite shift of the KO organoid 1.28 z-units; predicted CTGF shift +1.21 against observed +1.15. Multi-marker within-line regression (12 markers, 62 samples, R2 0.84, overfit risk): predicted +1.22.
+Reading: single markers say the confound explains a minority to all of the rise depending on which marker; the composite/multivariate projection says it could explain all of it. Inferred caveats: the calibration is unperturbed spheroid time-course, not KO v WT; the markers themselves shift in the KO organoid only by 0.4-1.3 log2; with 2 WT libraries those marker shifts are poorly constrained; CTGF follows NES/VIM (radial glia / reactive-type genes) tightly in calibration (R2 0.61, 0.37), so correlation with progenitor state is genuine. **The data held do not exclude that the rise is a progenitor-fraction/maturation effect; they do not show that it is one either.**
+Cell-type origin (GSE73721, read as the table, FPKM-like numbers; n of samples in brackets): human endothelial 38.1 (2), tumour-core/periphery astro 35.6 (4; range 0.1-58.8), neuron 12.5 (1), fetal astro 7.5 (6), hippocampal adult astro 1.95 (4), whole cortex 1.58 (4), oligo 0.66 (5), myeloid 0.47 (3), adult cortical astro 0.34 (12), mouse astro 0.38 (4). So CTGF is an endothelial/mural/fibroblast-type and immature-or-reactive astrocyte gene; in mature astrocytes, oligodendrocytes and microglia it is ~50-100x lower. Cerebral organoids have no endothelium, so a rise there is more plausibly immature/reactive glia or a stress/ECM state than a vascular fraction. Inferred, not shown.
+
+## 4. Mouse P17 bulk (GSE158681/2): animals, per-gene summary only
+
+Read: the TPM tables have transcript rows (`ENSMUST...`), arms: hippocampus S_Ctrl 2 v S_KO 3; N_Ctrl 2 v N_KO 2; WT 3 v null (KO) 2; cortex S_Ctrl 4 v S_KO 3. Columns are individual animals (one library per animal).
+The Ensembl cDNA map (transcript to gene) is not held. I tried to identify the Ctgf transcript rows by matching the committed per-gene means (H_N 9.90 v 5.30 TPM; H_null 2.73 v 5.91) to single transcript rows: no single row matches, so the gene value is a sum over transcripts and cannot be rebuilt from what is held. How I would handle it: fetch the Ensembl release matching the deposit (GRCm38 release 92 cDNA, as `analyse_it24_p4.py` names), parse `gene:` from the FASTA headers, sum TPM over a gene's transcripts per library, then compute contrasts at animal level; until then the P17 per-gene number is only checkable against the committed summaries. What it limits: I cannot confirm the committed Ctgf numbers or compute a missing contrast (H_S, C_S) from the originals; I can only read what the summaries list.
+Read in the committed summaries (`mouse_p17_descriptive_genes_cLFC_ge0.585_separated.tsv`, `p1b_own_contrasts_cLFC_ge0.585_separated.tsv`): H_N (2 v 2 animals) Ctgf mean TPM KO 9.90 v control 5.30, centred log2 ratio +1.11, not background-confounded; H_null (2 v 3) KO 2.73 v control 5.91, centred log2 ratio -0.77 (the verification table gives -0.99 uncentred, -0.77 centred, 5.905 v 2.727), not background-confounded. Ctgf appears in neither the H_S nor the C_S list: that means below 0.585, TPM < 1 or not separated; the lists cannot tell which. Wwox per summary: H_S/H_N/H_null fall 85-94% and cortex S 68%, so these are real loss models.
+Reading: opposite signs in two deletion alleles of the same hippocampal deposit, each n = 2 v 2-3; no replication at the level of a call. Descriptive, "inconsistent".
+
+## 5. Mouse P47T knock-in (GSE215425), 5 v 5 animals (CB 4 v 3)
+
+Read from `p1a_all_regions_own_results.tsv.gz` (own DESeq2, sex-adjusted): PFC log2FC -0.27 (padj 0.73); CTX +0.43 (padj 0.41); HPC +1.60 (p 0.0083, padj 0.16; no-sex +1.77, padj 0.094; OLS +1.42, p 0.053, FDR 0.47; pooled-4-region FDR 0.077); CB +0.10 (padj 0.88). The older table (`p47t_all_regions_tested_genes.tsv.gz`) agrees in sign (PFC -0.28, HPC +1.42 p 0.053 FDR 0.45, CTX +0.36, CB +0.15). Animal map: ten animals, each contributing up to four regions, one library per animal per region, so animals separate genotypes (no pseudoreplication within a region; regions share animals and are not independent of each other). Missense homozygote, Wwox mRNA unchanged: not a loss-of-transcript model.
+Reading: one of four regions (HPC) is up by ~2.7-3-fold with an unadjusted p of 0.008 but a non-significant adjusted p; PFC negative; CTX/CB null. Direction mixed, not consistent.
+
+## 6. snRNA GSE158684 (one pool per arm: ctrl 3182 nuclei, KO 2920 nuclei)
+
+Read the matrices (genes x barcodes; total UMI 18.48 M v 16.66 M). Ctgf: control 31 UMI in 24 nuclei (0.75% of nuclei), KO 125 UMI in 57 nuclei (1.95%); pseudobulk CPM 1.68 v 7.50 (ratio 4.5, log2 +2.2). Wwox pseudobulk CPM 110 v 12 (KO arm, nuclear Wwox falls 9-fold, so the arm is a real deletion).
+Cell-type context (my crude marker-score assignment, no clustering, ties/zero = unassigned; descriptive only): class shares ctrl v KO: neuron 52.6 v 57.5%, astro 13.4 v 16.4%, oligo 19.9 v 5.2% (the oligodendrocyte drop), micro 2.1 v 4.0%, vascular/mural/fibroblast-marker class 2.3 v 3.4% (73 v 100 nuclei). Ctgf UMI by class: neuron 17 v 17 (flat, with equal neuron numbers), astro 2 v 7, oligo 1 v 4, vascular-class 9 UMI in 8 nuclei v 92 UMI in 31 nuclei, i.e. ~74% of the KO Ctgf UMI come from the 3.4% of nuclei assigned to the vascular/mural/fibroblast class, whose Ctgf+ share rose from 11% to 31%.
+Replication: none (one pool per arm). With 156 UMIs in total, the result is a count of rare events; a nuclei-level test would be pseudoreplicated and I do not offer one.
+Reading: up (4.5x) but concentrated in a rare non-neuronal class (so a composition/cell-state signal in mouse hippocampus, not a neuronal one); uninformative about inter-animal variance.
+
+## 7. Human NSC shWWOX CAGE (GSE126075), one library per arm
+
+Read (TPM): hNSC 181.3, hNSC_WWOX_del 173.8 (log2 -0.06; tags 9247 v 2491; libraries 51.0 M v 14.3 M tags); Neurons 0.80, Neurons_WWOX_del 1.42 (log2 +0.84; tags 26 v 58). README section 2 O6 and `hnpc_gse126075_it5_20261029/RESULTS.md` section 1: WWOX is not lower in the shWWOX progenitor library per TPM (3.35 v 2.90), so the knockdown is not demonstrated there; in neurons WWOX falls (83 v 21 tags, 2.54 v 0.52 TPM). My median shift of genes with TPM >= 1 in both arms: +0.19 (progenitors), -1.43 (neurons; composition offset of the shWWOX neuron library, 9% of tags in the gene table).
+Reading: progenitors: flat, but the control failed so this is not an informative null either way; neurons: sub-1 TPM, 26 v 58 tags, n = 1; direction ambiguous to normalisation (up uncentred, more up after centring on the -1.43 median). Not assessable as a replication.
+
+## 8. Own verdict
+
+Per table: organoid UP +1.3 log2 (4 v 2, moderate-weak); P17 hippocampus N-allele UP +1.1 (2 v 2) but null-allele DOWN -0.8 (2 v 3), S-allele and cortex not listed; P47T mixed, HPC +1.4 to +1.6 (adj p not significant), PFC -0.3, CTX/CB ~0; snRNA UP 4.5x concentrated in a rare non-neuronal class (no replicate); CAGE progenitor flat but control failed, neurons ambiguous.
+Confound status: the shipped flags in `composition_class.tsv` were not computed for this gene (renamed symbol, default zeros, blank rho). Computed by me: rho = -0.009 (unflagged on the rule), within-line slope negative but non-monotone and sign-changing; marker-based projection predicts between about 0.2x (median of single markers) and about 1.0x (composite) of the observed organoid rise.
+**My verdict: (b) on both legs, with a precise statement about (c): the direction is not consistent across the held tables (P17 sign flip, P47T mixed, CAGE uninformative), and the organoid rise cannot be separated from a progenitor-state/maturation shift with the data held; the shipped composition flags for CCN2 are an artefact of a symbol rename (would read (c) if those flags were the only evidence).** The one-table-with-n=2-controls evidence (organoid) and the one-pool snRNA are the only places where CTGF is clearly up, and the snRNA says the rise sits in a rare cell class.
+What could change this: (i) a replicated organoid contrast with more than 2 WT; (ii) the cDNA map so the P17 S-allele and cortex contrasts for this gene can be read; (iii) cluster-resolved snRNA with replicate pools; (iv) an independent definition of organoid cell state (markers measured in the same libraries, not borrowed from time-course calibration).
+Not checked: the Ensembl-map-dependent P17 numbers (UNVERIFIABLE from originals); clone independence of KO organoids; the paper's own statements.

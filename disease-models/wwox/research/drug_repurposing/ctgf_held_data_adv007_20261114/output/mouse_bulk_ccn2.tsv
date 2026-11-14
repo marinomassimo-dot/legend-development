@@ -1,0 +1,8 @@
+contrast	description	proxy_ko_tpm_per_animal	proxy_control_tpm_per_animal	mean_ko	mean_ctl	log2_uncentred	median_shift_committed	log2_centred	committed_gene_level_centred_log2	animals_separate	n_ko	n_ctl	direction
+H_S	S deletion hippocampus (S_KO v S_Ctrl)	4.97;6.95;13.29	5.36;6.90	8.4	6.13	0.425	-0.389	0.815	not in the committed called list (below 0.585, not separated, or TPM < 1)	False	3	2	up
+H_N	N deletion hippocampus (N_KO v N_Ctrl)	13.35;6.37	4.52;4.76	9.86	4.64	1.012	-0.268	1.28	1.111	True	2	2	up
+H_null	null deletion hippocampus (KO v WT)	3.16;2.17	5.98;6.27;4.91	2.67	5.72	-0.974	-0.216	-0.758	-0.773	True	2	3	down
+C_S	S deletion cortex (S_KO v S_Ctrl)	24.53;18.57;51.81	25.47;30.39;29.53;26.23	31.64	27.9	0.178	-0.202	0.38	not in the committed called list (below 0.585, not separated, or TPM < 1)	False	3	4	up
+CC_WT_vs_SCtrl	control v control (no deletion contrast)	5.98;6.27;4.91	5.36;6.90	5.72	6.13	-0.092				False	3	2	first_group_lower
+CC_WT_vs_NCtrl	control v control (no deletion contrast)	5.98;6.27;4.91	4.52;4.76	5.72	4.64	0.276				True	3	2	first_group_higher
+CC_SCtrl_vs_NCtrl	control v control (no deletion contrast)	5.36;6.90	4.52;4.76	6.13	4.64	0.368				True	2	2	first_group_higher

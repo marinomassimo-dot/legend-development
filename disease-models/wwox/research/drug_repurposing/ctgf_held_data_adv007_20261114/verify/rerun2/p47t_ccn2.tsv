@@ -1,0 +1,5 @@
+region	deseq2_log2FC	deseq2_pvalue	deseq2_padj_within_region	deseq2_padj_pooled_4_regions	deseq2_log2FC_no_sex_term	deseq2_padj_no_sex_term	ols_lfc	ols_fdr
+PFC	-0.27021	0.47724	0.73236	0.74526	-0.15292	0.85677	-0.28093	0.71733
+CTX	0.43002	0.12472	0.40789	0.38538	0.39003	0.58747	0.3543	0.62694
+HPC	1.602	0.008293	0.16114	0.07745	1.7656	0.094103	1.4158	0.46955
+CB	0.10044	0.79311	0.88405	0.91871	0.12054	0.75269	0.15328	0.82928

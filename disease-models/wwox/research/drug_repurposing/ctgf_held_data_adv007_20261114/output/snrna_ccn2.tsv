@@ -1,0 +1,33 @@
+arm	gene	class_	nuclei	umi	nuclei_detected	frac_nuclei_detected	pseudobulk_cpm	total_umi
+ctrl	Ccn2	Ccn2/Ctgf	3182	31	24	0.0075	1.68	18482731
+ctrl	Wwox	Wwox	3182	2041	1017	0.3196	110.43	18482731
+ctrl	Snap25	neuron	3182	15329	2320	0.7291	829.37	18482731
+ctrl	Aqp4	astrocyte	3182	469	276	0.0867	25.38	18482731
+ctrl	Gfap	astrocyte/reactive	3182	299	206	0.0647	16.18	18482731
+ctrl	Slc1a3	astrocyte/radial glia	3182	3827	810	0.2546	207.06	18482731
+ctrl	Cldn5	endothelial	3182	166	83	0.0261	8.98	18482731
+ctrl	Flt1	endothelial	3182	660	91	0.0286	35.71	18482731
+ctrl	Pecam1	endothelial	3182	149	103	0.0324	8.06	18482731
+ctrl	Vim	progenitor/reactive/endothelial	3182	139	121	0.038	7.52	18482731
+ctrl	Nes	progenitor	3182	26	24	0.0075	1.41	18482731
+ctrl	Plp1	oligodendrocyte	3182	7253	1239	0.3894	392.42	18482731
+ctrl	Pdgfra	OPC	3182	271	159	0.05	14.66	18482731
+ctrl	Cx3cr1	microglia	3182	362	280	0.088	19.59	18482731
+ko	Ccn2	Ccn2/Ctgf	2920	125	57	0.0195	7.5	16657433
+ko	Wwox	Wwox	2920	204	141	0.0483	12.25	16657433
+ko	Snap25	neuron	2920	15462	2219	0.7599	928.23	16657433
+ko	Aqp4	astrocyte	2920	277	212	0.0726	16.63	16657433
+ko	Gfap	astrocyte/reactive	2920	677	323	0.1106	40.64	16657433
+ko	Slc1a3	astrocyte/radial glia	2920	6274	845	0.2894	376.65	16657433
+ko	Cldn5	endothelial	2920	660	207	0.0709	39.62	16657433
+ko	Flt1	endothelial	2920	1231	137	0.0469	73.9	16657433
+ko	Pecam1	endothelial	2920	190	113	0.0387	11.41	16657433
+ko	Vim	progenitor/reactive/endothelial	2920	258	198	0.0678	15.49	16657433
+ko	Nes	progenitor	2920	35	31	0.0106	2.1	16657433
+ko	Plp1	oligodendrocyte	2920	2260	535	0.1832	135.68	16657433
+ko	Pdgfra	OPC	2920	493	249	0.0853	29.6	16657433
+ko	Cx3cr1	microglia	2920	257	189	0.0647	15.43	16657433
+ctrl	OVERLAP	Ccn2+ nuclei carrying >=1 UMI of endothelial markers (Cldn5/Flt1/Pecam1) | of astro markers (Aqp4/Gfap/Slc1a3) | of neither	3182	31	24	8|7|12		18482731
+ctrl	Ccn2_in_nuclei_without_endothelial_marker_UMI	pseudobulk over nuclei with 0 UMI of Cldn5/Flt1/Pecam1	2980	22	16		1.27	17351998
+ko	OVERLAP	Ccn2+ nuclei carrying >=1 UMI of endothelial markers (Cldn5/Flt1/Pecam1) | of astro markers (Aqp4/Gfap/Slc1a3) | of neither	2920	125	57	35|19|13		16657433
+ko	Ccn2_in_nuclei_without_endothelial_marker_UMI	pseudobulk over nuclei with 0 UMI of Cldn5/Flt1/Pecam1	2580	38	22		2.59	14650968
