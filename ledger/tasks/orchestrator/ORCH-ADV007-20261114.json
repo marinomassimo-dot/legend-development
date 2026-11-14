@@ -30,16 +30,31 @@
    "model_requested": "sonnet",
    "effort_requested": "high",
    "brief": "ctgf_held_data_adv007_20261114/VERIFIER_BRIEF.md",
-   "read_back": "pending"
+   "read_back": "session_model_census transcript read-back: model sonnet, effort high (44 turns; the delegate self-reported low, the transcript governs); output 51,210 tokens, cache read 3,111,079"
   }
  ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
- "VERIFICATION_EVIDENCE": {},
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261114-193055-c1cc00a7",
+   "label": "adv007-landing",
+   "sha": "a22d1007e2cf7bc8df7377e594a82dfa5fb11f6e",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261114-193055-c1cc00a7",
+   "log_sha256": "0ceaebf96df96eedc165cc9bfc8722cd5fdd0d47e16bcf55e4f728dea236fe59",
+   "clone": "REMOVED",
+   "battery_verdict": "REGRESSION VERDICT: PASS WITH SKIPS (251 targets, 12 skipped, environment-only skips listed in run.log)"
+  }
+ ],
  "TRIAL_24H_OBSERVATIONS": {
   "window": "2026-11-14T15:29:29Z to 2026-11-15T15:29:29Z, observation only, requested by the ADV presidio",
-  "delegates_and_blind_checkers": "V-ADV007 (tokens to be read back)",
-  "events": []
+  "delegates_and_blind_checkers": "V-ADV007, sonnet/high, 44 turns, output 51,210 tokens, cache read 3,111,079 (census read-back)",
+  "events": [
+   "2026-11-14T19:31Z-20:42Z wait: release battery 20261114-193055-c1cc00a7 (72 min) waited on its PID with process_wait.py; alternatives excluded: pgrep -f (matches the waiter), the launcher's own completion notice (false: nohup launcher exits at once); resume condition: PID exit, then verify_run status",
+   "interruption: none; restart: none; human intervention: none in this task"
+  ]
  }
 }
