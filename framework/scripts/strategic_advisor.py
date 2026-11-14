@@ -589,6 +589,8 @@ ASSIGNMENT_FIELDS = ("key", "recipient", "question", "why_now", "roadmap_link", 
 OPTIONAL_FIELDS = ("mode", "start_condition", "interferes_with", "obsolete_if")   # HE54: what a recipient needs to place a follow-through: independent | queued | conditional, when it can start, what it may disturb, what makes it useless
 OPEN_VERDICTS = ("CONTINUE", "ALL_BLOCKED", "COMPLETE_PENDING")
 EVENT_SUBJECT = re.compile(r"COMPLETE|closed|closure|integrate task|delivered|consumed|landed", re.I)
+OUTCOMES = ("continue", "switch", "assign", "queue", "wait")        # HE57: the allowed endings of an evaluation; a wait is one of them, and states what it excluded and when it resumes
+OUTCOME_FIELDS = ("outcome", "excluded", "reason", "resume_when")
 
 
 def _now() -> dt.datetime:
@@ -754,7 +756,7 @@ def _records() -> dict[str, dict[str, Any]]:
                 state = str(mc.verdict(d)["verdict"])        # the continuity module's own reading of the queue, not a second one
             except Exception:  # noqa: BLE001 — a record the module cannot read is reported as such
                 state = "UNREADABLE"
-            out[d["TASK_ID"]] = {"state": "OPEN" if state in OPEN_VERDICTS else state, "owner": path.parent.name, "path": str(path.relative_to(ROOT))}
+            out[d["TASK_ID"]] = {"state": "OPEN" if state in OPEN_VERDICTS else state, "verdict": state, "owner": path.parent.name, "path": str(path.relative_to(ROOT))}
     return out
 
 
@@ -784,15 +786,83 @@ def _waits() -> list[dict[str, str]]:
     return out
 
 
+def _own_updates(campaign: Path) -> list[str]:
+    """Pathspecs that leave out what the Advisor itself writes (its saved assessments, its assignment and invocation logs, the sender records): a commit that touches only those is not news to the Advisor
+    (HE57: 2 of the last 23 commits of the campaign folder matched the delivery pattern). A recipient's result file in the folder is still news. Outside the repository there is nothing to exclude."""
+    try:
+        rel = Path(campaign).resolve().relative_to(ROOT.resolve())
+    except ValueError:
+        return []
+    return [f":(exclude,glob){rel}/P[0-9]*/**", f":(exclude){rel}/assignments", f":(exclude){rel}/assignments.jsonl", f":(exclude){rel}/invocations.jsonl",
+            *[f":(exclude,glob)ledger/tasks/*/*{m}*" for m in SENDER_RECORDS]]
+
+
+def _is_sender(task: str) -> bool:
+    return any(m in task for m in SENDER_RECORDS)
+
+
+def queue_state(recs: dict[str, dict[str, Any]]) -> dict[str, Any]:
+    """HE57: is there executable work left in the portfolio's records? The sender's own records (the presidio's standing objective) are not work to execute; a mandate with only blocked steps is not executable."""
+    mine = {t: r for t, r in recs.items() if not _is_sender(t)}
+    return {"executable": sorted(t for t, r in mine.items() if r.get("verdict") == "CONTINUE"),
+            "blocked_only": sorted(t for t, r in mine.items() if r.get("verdict") == "ALL_BLOCKED"),
+            "exhausted": not any(r.get("verdict") == "CONTINUE" for r in mine.values())}
+
+
+def parse_outcome(text: str) -> dict[str, Any]:
+    """The `## Outcome` block that closes an evaluation: `outcome` (continue | switch | assign | queue | wait) and, for a wait, `excluded` (the relevant alternatives left out, with why), `reason` and `resume_when`.
+    `stated` is true only when the block is complete for what it says; anything else is reported as unstated and never guessed."""
+    m = re.search(r"^## Outcome\b[^\n]*\n(.*?)(?=^## |\Z)", text or "", re.M | re.S)
+    fields: dict[str, str] = {}
+    cur = None
+    for line in (m.group(1) if m else "").splitlines():
+        f = re.match(r"^([a-z_]+):\s*(.*)$", line)
+        if f and f.group(1) in OUTCOME_FIELDS:
+            cur = f.group(1); fields[cur] = f.group(2).strip()
+        elif cur and line.strip():
+            fields[cur] += " " + line.strip()
+    kind = (fields.get("outcome", "").split() or [""])[0].strip("`*.,;:").lower()
+    out: dict[str, Any] = {"outcome": kind if kind in OUTCOMES else "", "excluded": fields.get("excluded", ""), "reason": fields.get("reason", ""), "resume_when": fields.get("resume_when", "").strip("` ") or "event"}
+    out["stated"] = bool(out["outcome"]) and (out["outcome"] != "wait" or bool(out["excluded"] and out["reason"]))
+    out["problem"] = "" if out["stated"] else ("no `## Outcome` block" if not m else "the outcome is not one of " + "/".join(OUTCOMES) if not out["outcome"] else "a wait must say what it excluded and why")
+    return out
+
+
+def resume_met(spec: str, now: dt.datetime) -> str:
+    """Has what a wait was resting on arrived? `event` is never met here (events are read by the tick itself). `record:<TASK>=<STATE>` and `path:<file>[~<text>]` use the continuity module's own reader of the same facts;
+    `after:<UTC>` is a time. Returns why it is met, or ''. A form this does not read is not met and is reported by `resume_problem`."""
+    spec = (spec or "").strip()
+    if spec.startswith("record:") and "=" in spec:
+        task, state = spec[7:].split("=", 1)
+        return mc.unblock_met({"record": task.strip(), "state": state.strip()})
+    if spec.startswith("path:"):
+        path, _, text = spec[5:].partition("~")
+        return mc.unblock_met({"path": path.strip(), **({"contains": text.strip()} if text.strip() else {})})
+    if spec.startswith("after:"):
+        try:
+            when = dt.datetime.fromisoformat(spec[6:].strip().replace("Z", "+00:00"))
+        except ValueError:
+            return ""
+        return f"the time {spec[6:].strip()} has passed" if now >= when else ""
+    return ""
+
+
+def resume_problem(spec: str) -> str:
+    spec = (spec or "").strip()
+    if spec == "event" or (spec.startswith("record:") and "=" in spec) or spec.startswith(("path:", "after:")):
+        return ""
+    return f"resume_when {spec!r} is not one of event | record:<TASK_ID>=<STATE> | path:<file>[~<text>] | after:<UTC>; read as event"
+
+
 def observe(campaign: Path, state: dict[str, Any]) -> dict[str, Any]:
     """The bounded facts a decision needs, read mechanically: roadmap digest, commits since the last tick, mandate transitions, stalled mandates reported by the watch, sessions."""
     main_sha = _git("rev-parse", "main")
     last = state.get("main_sha") or main_sha
-    commits = [c for c in _git("log", "--format=%h %s", f"{last}..main", "--", "ledger/tasks", "disease-models/wwox/research/drug_repurposing").splitlines()[:60] if c.strip()]
+    commits = [c for c in _git("log", "--format=%h %s", f"{last}..main", "--", "ledger/tasks", "disease-models/wwox/research/drug_repurposing", *_own_updates(campaign)).splitlines()[:60] if c.strip()]
     recs = _records()
     before = state.get("mandates") or {}
-    transitions = [f"{t}: {before[t]} -> {r['state']}" for t, r in recs.items() if t in before and before[t] != r["state"]]
-    opened = [t for t in recs if before and t not in before and recs[t]["state"] == "OPEN"]
+    transitions = [f"{t}: {before[t]} -> {r['state']}" for t, r in recs.items() if t in before and before[t] != r["state"] and not _is_sender(t)]       # HE57: the sender's own records changing are not an event
+    opened = [t for t in recs if before and t not in before and recs[t]["state"] == "OPEN" and not _is_sender(t)]
     stalled = []
     try:
         watch = subprocess.run([sys.executable, str(ROOT / "framework/scripts/mandate_watch.py"), "events", "--last", "30"], capture_output=True, text=True, timeout=30).stdout
@@ -807,16 +877,25 @@ def observe(campaign: Path, state: dict[str, Any]) -> dict[str, Any]:
     rm = roadmap_text()
     return {"main_sha": main_sha, "roadmap_sha256": sha256_text(rm) if rm else "", "commits_since_last_tick": len(commits), "events": events,
             "open_mandates": sorted(t for t, r in recs.items() if r["state"] == "OPEN"), "mandates": {t: r["state"] for t, r in recs.items()}, "waits": waits,
-            "sessions": _sessions()}
+            "queue": queue_state(recs), "sessions": _sessions()}
 
 
-def presidio_state(verdict: str, why: str, is_continuous: bool) -> str:
+def presidio_state(verdict: str, why: str, is_continuous: bool, outcome: dict[str, Any] | None = None, exhausted: bool = False, streak: int = 0) -> str:
     """What the presidio is doing, in words that cannot be mistaken for having been abandoned: a wait is a state of the mandate, not its end and not a request for a new prompt."""
     if verdict in ("EVALUATE", "RUNNING"):
         return "ACTIVE: an evaluation is due or running"
     if verdict in ("NONE", "DEFERRED"):
-        return ("WAITING (legitimate): no event needs a strategic choice; the next triggers are a roadmap change, a delivery, a mandate transition or a stalled mandate" if is_continuous
-                else "idle inside the pilot: nothing new")
+        if not is_continuous:
+            return "idle inside the pilot: nothing new"
+        outcome = outcome or {}
+        if outcome.get("stated") and outcome.get("outcome") == "wait":
+            return f"WAITING (motivated): {outcome.get('reason', '')[:140]}; excluded: {outcome.get('excluded', '')[:160]}; resumes when: {outcome.get('resume_when', 'event')}"
+        if outcome.get("stated"):
+            return f"ACTING ON the last choice ({outcome['outcome']}): {outcome.get('reason', '')[:140] or 'no event needs a new choice'}; the next triggers are a delivery, a mandate transition, a stalled mandate or a roadmap change"
+        if exhausted:
+            return ("IDLE without a stated outcome: the executable queue is exhausted and the last evaluation did not say what it chose or why it waits"
+                    + ("; it was already asked once, so it is not asked again until something changes" if streak else ""))
+        return "WAITING (legitimate): no event needs a strategic choice; the next triggers are a roadmap change, a delivery, a mandate transition or a stalled mandate"
     if verdict == "PAUSED":
         return f"SUSPENDED by the operator: {why}"
     if verdict == "RESOURCES":
@@ -859,6 +938,16 @@ def tick(campaign: Path) -> dict[str, Any]:
             verdict, why = "EVALUATE", ("roadmap changed" if changed else "; ".join(anticipating[:3] or obs["events"][:3]))
         else:
             verdict, why = "DEFERRED", f"events present but the last evaluation was {hours:.1f} h ago and none is anticipating"
+    outcome = state.get("last_outcome") or {}
+    streak = int(state.get("unstated_streak") or 0)
+    if verdict in ("NONE", "DEFERRED") and cont and not first and last_eval is not None:
+        # HE57: a quiet tick is not always a reason to wait. A wait that stated what it rests on is resumed when that arrives; an evaluation that left no outcome while nothing executable remains gets ONE more
+        # evaluation to decide what is next (it is not asked again until it says something); a stated wait or choice is otherwise left alone.
+        met = resume_met(outcome.get("resume_when", ""), now) if outcome.get("stated") and outcome.get("outcome") == "wait" else ""
+        if met:
+            verdict, why = "EVALUATE", f"the resume condition of the last wait is met: {met}"
+        elif not outcome.get("stated") and streak < 1 and obs["queue"]["exhausted"] and hours is not None and hours >= float(cont.get("min_hours_between", 4)):
+            verdict, why = "EVALUATE", "the last evaluation left no stated outcome and no executable work remains: decide what is next from the portfolio"
     state.update(main_sha=obs["main_sha"], mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"], last_tick_utc=_utc(now),
                  waits_seen=sorted({sha256_text(w["task"] + "|" + w["blocker"])[:12] for w in obs["waits"]}))
     if verdict == "EVALUATE":
@@ -867,7 +956,8 @@ def tick(campaign: Path) -> dict[str, Any]:
         state["pending_commits"] = obs["commits_since_last_tick"]
     _save_state(campaign, state)
     ctl = operator_controls()
-    return {"verdict": verdict, "why": why, "mode": "continuous" if cont else "pilot", "presidio": presidio_state(verdict, why, bool(cont)),
+    return {"verdict": verdict, "why": why, "mode": "continuous" if cont else "pilot", "presidio": presidio_state(verdict, why, bool(cont), outcome, obs["queue"]["exhausted"], streak),
+            "last_outcome": {k: outcome.get(k) for k in ("outcome", "reason", "excluded", "resume_when", "stated", "evaluation") if outcome.get(k) not in (None, "")}, "queue": obs["queue"],
             "operator_controls": [f"{c['kind']}: {c['text']}" for c in (active_suspensions(ctl) + [c for c in ctl if c["kind"] in ("URGENT", "INTEGRATION")])[-6:]],
             "events": obs["events"][:12], "open_mandates": obs["open_mandates"], "waiting_on": [f"{w['task']}: {w['blocker'][:70]}" for w in obs["waits"]][:4] + ([f"... {len(obs['waits'])} in all"] if len(obs["waits"]) > 4 else []),
             "sessions": obs["sessions"], "digest": digest,
@@ -1020,6 +1110,25 @@ def followthrough_text() -> str:
             "Group events and reuse an assessment that is still pertinent; do not turn every WAITING into an expensive evaluation. An assignment already drafted and authorised is delivered in the turn that reads it.")
 
 
+def portfolio_text() -> str:
+    """HE57: the principle in a few lines, with its single home named. The evaluation is where the choice of what comes next is made, also when no radar, result or instruction arrived."""
+    return ("## Portfolio selection (cross-session transport section 12, 'Continuity is a choice of what comes next')\n"
+            "A closed mandate, an empty queue or no new radar does not end the work by itself. When the executable queue is exhausted (see `queue` below), decide what is next from what you can reach: the roadmap and the "
+            "objectives still pursuable; open questions (which answer would change a decision, which part can be approached now); scientific threads (unresolved premises, rival explanations, promising or contrary results); the source "
+            "records and dashboards; knowledge held but not consumed or combined; the DREAM pass when new associations can orient a concrete question; earlier radars not yet evaluated; harness obstacles and tools used badly or little; "
+            "project invariants (rigidity, duplication, cost, complexity, a chance to simplify). Reasoning aids, not a checklist: an open experimental question does not oblige the bibliography to go on, a possible improvement is not a mission. "
+            "Rank in prose, no score: importance of the decision, concrete probability of progress, marginal benefit, what it could unblock, total and shared cost, coherence with the roadmap, simplicity, reversibility. "
+            "Read the originals that bear on the chosen decision. Outcomes: continue, switch thread, assign independent work, queue a conditional follow-up, or wait; a wait says which relevant alternatives it excluded and why, and when it resumes. "
+            "Do not repeat an evaluation that is still valid, do not draft what is already drafted or taken in charge, do not treat your own updates as news, and do not invent work to stay busy. Operator pauses, resource limits, reserved acts and real dependencies still bind.")
+
+
+def previous_outcome_text(campaign: Path) -> str:
+    o = _load_state(campaign).get("last_outcome") or {}
+    if not o:
+        return "## Previous outcome\nnone recorded (an evaluation before this field existed, or the first one)."
+    return "## Previous outcome (what the last evaluation decided; reconsider it when something that bears on it changed, reuse it when nothing did)\n" + json.dumps({k: o.get(k) for k in ("evaluation", "utc", "outcome", "reason", "excluded", "resume_when", "stated", "problem")}, indent=1)
+
+
 def operating_mode_text(campaign: Path) -> str:
     """The brief's statement of the operating mode. In continuous operation the pilot's ceilings are history and the one thing that binds the run is the turn limit; nothing here asks for work to be invented."""
     cont = continuous(campaign)
@@ -1042,7 +1151,9 @@ def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
              "## Operator roadmap (authoritative; operator instructions prevail over any automatic plan)", roadmap_text() or "(no roadmap section found: say so, and propose nothing beyond keeping the plan)", "",
              "## Campaign limits", json.dumps({k: v for k, v in _budget(campaign).items() if k in ("expires_utc", "max_invocations", "max_assignments", "turn_limit")}), "",
              operating_mode_text(campaign), "",
-             "## Observed state (mechanical, this tick)", json.dumps({k: obs[k] for k in ("events", "open_mandates", "waits", "sessions", "commits_since_last_tick")}, indent=1), "",
+             portfolio_text(), "",
+            "## Observed state (mechanical, this tick)", json.dumps({k: obs[k] for k in ("events", "open_mandates", "waits", "queue", "sessions", "commits_since_last_tick")}, indent=1), "",
+            previous_outcome_text(campaign), "",
              "## Assignments already drafted, with their evidence level (do not duplicate; follow what was taken in charge)",
              json.dumps({k: {"recipient": v["recipient"], "key": v["key"], "highest": v["highest"]} for k, v in states.items()}, indent=1) or "none", "",
              f"## Previous assessment\n{prior[-1].parent.name}: `{prior[-1]}` (read it; reuse it when nothing relevant changed)" if prior else "## Previous assessment\nnone", "",
@@ -1050,7 +1161,9 @@ def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
              turn_limit_text(campaign), "",
              "## Neutral entry points", render_entrypoints(entrypoints()), "", f"Memory directory (read-only): `{MEMORY_DIR}`", "", "## Output", CONTRACT,
              "Give the usual headings, then `## Assignments`: either `none: <reason>` (continuing the plan can be the best decision) or one `### ASSIGNMENT n` block per assignment with exactly these "
-             "`field: value` lines: " + ", ".join(ASSIGNMENT_FIELDS) + ". recipient is Orchestrator, Science or Harness. At most as many blocks as the campaign allows; none to show independence.", ""]
+             "`field: value` lines: " + ", ".join(ASSIGNMENT_FIELDS) + ". recipient is Orchestrator, Science or Harness. At most as many blocks as the campaign allows; none to show independence.",
+             "Finish with `## Outcome`, four `field: value` lines: `outcome:` one of " + ", ".join(OUTCOMES) + "; `excluded:` (for a wait: the relevant alternatives you left out, each with why); `reason:`; "
+             "`resume_when:` event | record:<TASK_ID>=<STATE> | path:<file>[~<text>] | after:<UTC>. The tick reads this block and nothing else of your decision: without it the wait is not motivated and one more evaluation is asked for.", ""]
     return "\n".join(parts)
 
 
@@ -1074,11 +1187,22 @@ def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout:
         code = run("P", campaign, brief, model, effort, timeout, LIMITS)
         label = f"P{max((a['index'] for a in _attempts(campaign) if a['stage'] == 'P'), default=0)}"
         assessment = campaign / label / "assessment.md"
+        outcome = parse_outcome("")
         if code == 0 and assessment.exists():
-            made = register_assignments(campaign, label, assessment.read_text(encoding="utf-8"))
+            text = assessment.read_text(encoding="utf-8")
+            made = register_assignments(campaign, label, text)
             print(f"{label}: {len(made)} assignment draft(s) registered: " + ", ".join(m["id"] for m in made))
+            outcome = parse_outcome(text)
+            if outcome["stated"] and outcome["outcome"] == "wait":
+                problem = resume_problem(outcome["resume_when"])
+                if problem:
+                    outcome.update(resume_when="event", problem=problem)
+                elif resume_met(outcome["resume_when"], _now()):
+                    outcome.update(resume_when="event", problem="the resume condition was already met when the wait was stated; read as event")     # a wait that is over the moment it starts would be evaluated again every hour
+        print(f"{label}: outcome {outcome['outcome'] or 'unstated'}" + (f" ({outcome['problem']})" if outcome["problem"] else ""))
         state = _load_state(campaign)
-        state.update(last_evaluation_utc=_utc(_now()), last_digest=state.get("pending_digest", state.get("last_digest")), running="", pending_events=[], pending_commits=0)
+        state.update(last_evaluation_utc=_utc(_now()), last_digest=state.get("pending_digest", state.get("last_digest")), running="", pending_events=[], pending_commits=0,
+                     last_outcome={**outcome, "evaluation": label, "utc": _utc(_now())}, unstated_streak=0 if outcome["stated"] else int(state.get("unstated_streak") or 0) + 1)
         _save_state(campaign, state)
         return code
     finally:
