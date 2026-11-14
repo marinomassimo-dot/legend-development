@@ -178,33 +178,39 @@
     },
     {
      "step": "Correct the delivery procedure in cross_session_transport and the deliver adapter (recipient receipts, one send per recipient)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "mandate_watch.py route + check_recipients (5 tests); strategic_advisor deliver --to refusal (1 test); cross_session_transport section 5 added."
+     "evidence": "a6db5e9ef (gate PASS): mandate_watch.py route/check_recipients (5 tests: two declared one send, binding not live, ambiguous, role alias, first-line forms); strategic_advisor deliver --to refusal (1 test); cross_session_transport section 5."
     },
     {
      "step": "State the shared-instruction rule once in the normative home and make the router reach it",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "cross_session_transport section 12 subsection written; router row mentions it."
+     "evidence": "cross_session_transport section 12 'An operator instruction can span sessions' (one home) + router row in CLAUDE.md; roadmap entry 6d6fabf88 records the operator's clarification; no register, signature or gate added."
     },
     {
      "step": "A wait resolves from the records: unblock_when on a BLOCKED step, read by the existing continuity check",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "mandate_continuity unblock_when (path/contains, record/state) with a test."
+     "evidence": "mandate_continuity unblock_when (path/contains, record/state), 1 test with 7 cases; section 12 sentence."
     },
     {
      "step": "Mechanical tests for the five concrete cases and one small operational check between real sessions",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "Mechanical: the cases above. Real sessions, small: route resolved ADV and IT live (via ORCH-ADV-FOLLOWTHROUGH binding), and a verified send to ADV was answered by ADV (it keeps job 3382bb86 under the operator's clarification) without touching its work or conclusions. Not exercised on a real wait that resolved itself (no live waiting step with an unblock_when yet)."
     },
     {
      "step": "IT51 learning kept: original negative result untouched, non-pertinent case as control, no baseline change",
      "status": "DONE",
      "owner": "plan",
      "evidence": "design_roles_he50 README note: original IT51 result untouched, the AMPA/NMDAR case stays a control against improper transfer, generative gain needs a pertinent case (ADV assignment)."
+    },
+    {
+     "step": "CI concluded green on the last published SHA of this integration (ba0283130)",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "blocker": "CI run in progress for ba0283130; ci_runs.py wait"
     }
    ],
    "status": "IN_PROGRESS"
