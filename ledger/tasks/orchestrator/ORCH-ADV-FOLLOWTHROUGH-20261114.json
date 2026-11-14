@@ -186,6 +186,12 @@
      "evidence": "Told HE and IT 2026-11-14T14:4xZ; the presidio reads HE's record state through unblock_when instead of polling ci_runs."
     },
     {
+     "step": "PRESIDIO-003 followed to its disposition: delivered (SCI 1a432bb6f); unchanged result; consumption pending (IT: IT43-Q01 status access-limited with revival trigger; HE: V18 wording, its choice); verify at the next ticks that both happened, nudge only if absent",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "SCI's delivery read in the original (README answers 1-4, limits); not independently re-read by a blind check (disclosed by SCI)."
+    },
+    {
      "step": "Standing: at each tick or delivery ask once whether an independent item can be anticipated, queue it with the rule's wording if yes, and review the queue (supersede items whose usefulness changed); the queue now holds PRESIDIO-003 only",
      "status": "BLOCKED",
      "owner": "orchestrator",
@@ -294,6 +300,18 @@
    {
     "utc": "2026-11-14T15:3xZ",
     "event": "human intervention: the operator's activation message (the only operator input of this window so far)"
+   },
+   {
+    "utc": "2026-11-14T16:23Z",
+    "event": "tick NONE (waiting legitimate); independent activities reconsidered, none justified; motivated wait kept (SCI battery, HE's CI #751)"
+   },
+   {
+    "utc": "2026-11-14T16:3xZ",
+    "event": "PRESIDIO-003 delivered by SCI (landed 1a432bb6f; assigned ~14:45Z, taken in charge ~14:55Z, one 71-minute wait on its battery, no interruption, restart or human intervention, subagent tokens 0, no blind check disclosed): UNCHANGED result: reachable text of Hedegaard 2012, Science 2017 and Hansen 2014 states neither a maximum inhibition nor a triheteromer value for Ro 25-6981 (Hansen 2014 never mentions it), Fischer 1997 access-blocked; no tier changes; consumption pending: IT records IT43-Q01 as access-limited with a revival trigger; HE decides a one-line wording of V18 role_reason (composition qualifier). Checked by me against the delivered README and readings, not by a second reader."
+   },
+   {
+    "utc": "2026-11-14T16:3xZ",
+    "event": "SCI noted that the repository corroborates the trial window but not the authorisation of my assignments: the operator's activation is now recorded as a dated line in the Operator roadmap section (verifiable by every session)"
    }
   ]
  }
