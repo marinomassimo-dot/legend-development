@@ -7,7 +7,7 @@
   "START_UTC": "2026-11-14T08:00:00Z",
   "OBJECTIVE": "Operator mandate 'VERIFY A USEFUL GENERATIVE DIFFERENCE' (coordinated by ADV, with HE): measure whether using the reconciled knowledge of ADV-006 improves a pharmacological comparison, conditional hypothesis or discriminating experiment actually produced by LEGEND. Baseline before HE changes the path; same case after; show harms; no predictive claim; no ranking/sign/qualification change. Final answer: which comparison, hypothesis or experiment LEGEND now produces or uses better, with a short before/after with paths and SHA; if none, say which step is missing.",
   "AUTHORISED_QUEUE_20261114": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_P1": {
       "order": 1,
       "steps": [
@@ -57,9 +57,9 @@
       "steps": [
         {
           "step": "Close the loop directly with ADV: baseline, observed difference, limits and costs, consumer updated, new question or resumption condition; final report in Italian",
-          "status": "IN_PROGRESS",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": "loop closure to ADV and HE sent; final answer pending"
+          "evidence": "loop closed with ADV and HE; landed 49da57433 gate PASS ls-remote verified; resumption condition: owner-authored link or declared-key join, then rerun the same case"
         }
       ]
     }
