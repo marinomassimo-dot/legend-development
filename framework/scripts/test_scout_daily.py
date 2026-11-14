@@ -680,6 +680,51 @@ def by_id(plan):
     return {q["id"]: q for q in plan["questions"]}
 
 
+class LexicalCollisions(unittest.TestCase):
+    """HE52: the 14 Nov feed showed 'discoveries' that only shared letters with the question (isr in israel, gaba in gabarito, nrf2 in nrf24l01, ldh in ldhawka) and the repository's own name."""
+    REAL_COLLISIONS = [("isr", "RokuIL/Live-From-Israel"), ("isr", "arielf-idra/notam-isr-x"), ("gaba", "BrenoKaffer/gabarita"), ("gaba", "Bronze012/gabarito-med"),
+                       ("nrf2", "kireol/nrf24l01SenderNodeMcu"), ("ldh", "ldhawka/ldhawka.github.io")]
+    REAL_HITS = [("gsk3", "r-universe/gsk3"), ("gsk3", "spiliotislab/sept9-gsk3-phosphoswitch-code"), ("gsk3", "x/GSK3Beta-tools"), ("gaba", "lab/GABAA-receptor-kit"),
+                 ("gaba", "lab/GABAergic-atlas"), ("nmdar", "BrainCircuitsBehaviorLab/NMDAR_paper"), ("nrf2", "lab/NRF2-KEAP1-screen")]
+
+    def test_a_term_inside_another_word_is_not_a_hit_and_a_real_variant_is(self):
+        self.assertFalse([n for t, n in self.REAL_COLLISIONS if n != "arielf-idra/notam-isr-x" and sd.term_hit([t], n)])
+        self.assertTrue(sd.term_hit(["isr"], "arielf-idra/notam-isr-x"))                      # 'isr' as its own word is a hit by the rule; the homonym itself (an aviation tool) is a limit stated, not solved
+        self.assertTrue(all(sd.term_hit([t], n) for t, n in self.REAL_HITS))
+        self.assertTrue(sd.term_hit(["gaba"], "unrelated/name", "A GABAergic interneuron atlas"))
+        self.assertTrue(sd.term_hit(["nmdar"], "kalpana/NMDARInhibitors"))                       # ACRONYMWord is split, and the unsplit word is kept too   # the description counts too
+
+    def test_a_themed_question_drops_collisions_counts_them_and_never_shows_them(self):
+        plan, _ = derive()
+        theme = dict(next(q for q in plan["questions"] if q.get("objects")))
+        term = theme["objects"][0]
+        op = channel_opener(gh_items=[gh_repo(f"a/{term}x9z-site"), gh_repo(f"a/{term}-kit"), gh_repo("marinomassimo-dot/legend-development")])
+        result, _ = sd.discover({}, [theme], op, NOW, per_run=1)
+        shown = [i["title"] for r in result["themes"] for i in r["items"] if i["channel"] == "github"]
+        self.assertEqual(shown, [f"a/{term}-kit"])
+        chan = result["channels"]["github"]
+        self.assertEqual((chan["off_term"], chan["off_term_names"]), (1, [f"a/{term}x9z-site"]))
+        summary = sd.channel_summary(result["themes"])["github"]
+        self.assertEqual((summary["off_term"], summary["off_term_names"]), (1, [f"a/{term}x9z-site"]))
+        rep = {"run_at": "x", "selected": [], "errors": [], "discovery": {"channels": result["channels"], "questions": []}}
+        rep["discovery"]["channels"] = sd.channel_summary(result["themes"])
+        self.assertIn("1 hit(s) dropped, no whole-word match", sd.briefing(rep, {"state": "ok"}))      # the briefing says what was left out, so an empty channel is not read as a quiet one
+
+    def test_the_open_slot_and_a_question_without_objects_are_not_filtered(self):
+        op = channel_opener(gh_items=[gh_repo("someone/unrelated-name")])
+        result, _ = sd.discover({}, sd.THEMES, op, NOW, per_run=1, open_slot=True)           # the fallback themes name no object: nothing to filter on
+        shown = {i["title"] for r in result["themes"] for i in r["items"] if i["channel"] == "github"}
+        self.assertEqual(shown, {"someone/unrelated-name"})                                    # exploration stays open: only the repository itself is excluded there
+        op2 = channel_opener(gh_items=[gh_repo("marinomassimo-dot/legend-development")])
+        r2, _ = sd.discover({}, sd.THEMES, op2, NOW, per_run=1, open_slot=True)
+        self.assertEqual([i["title"] for r in r2["themes"] for i in r["items"]], [])
+
+    def test_the_hugging_face_search_uses_the_object_a_priority_names_not_the_hook_word(self):
+        qs = {q["id"]: q for q in sd.build_questions([{"surface": "work_order", "lid": "N", "locator": "e", "weight": 3, "path": "p", "blob": "b" * 10, "sha": "s" * 12,
+                                                         "text": "Is GSK3 output raised in WWOX loss? benchmark of pharmacology potency selectivity assay", "decision": "d"}])[0]}
+        self.assertEqual(qs["work_order:N"]["hf"], "gsk3")                                  # was the hook's category word ('benchmark'/'bioactivity'): mortgage and OCR benchmarks came back
+
+
 class PlanFromPriorities(unittest.TestCase):
     def test_each_surface_generates_a_question_with_a_traceable_origin(self):
         plan, _ = derive()
@@ -784,7 +829,7 @@ class PlanFromPriorities(unittest.TestCase):
         asked = {f"{q['id']}|{sd.digest(q['kw'])}": "2026-11-01" for q in first}
         second = sd.pick_questions(qs, asked, T0, 2)
         self.assertFalse({q["id"] for q in first} & {q["id"] for q in second})
-        op = channel_opener(gh_items=[gh_repo("someone/tool-x")])
+        op = channel_opener(gh_items=[gh_repo(f"someone/{(first[0].get('objects') or first[0]['domain'])[0]}-tool-x")])      # a hit has to contain the question's own word to be shown (HE52)
         result, _ = sd.discover({}, first, op, NOW, per_run=2, open_slot=True)
         entries = sd.discovery_entries(result, "2026-11-01")
         text = sd.entry_markdown(entries[0], "2026-11-01T05:20:00")
@@ -924,7 +969,7 @@ class SignalToDecision(unittest.TestCase):
     def test_a_real_signal_reaches_a_traced_decision_with_evidence_that_exists(self):
         plan, _ = derive()
         picked = sd.pick_questions(plan["questions"], {}, T0, 1)
-        op = channel_opener(gh_items=[gh_repo("lab/chaperone-kit")])
+        op = channel_opener(gh_items=[gh_repo(f"lab/{(picked[0].get('objects') or picked[0]['domain'])[0]}-chaperone-kit")])
         result, _ = sd.discover({}, picked, op, NOW, per_run=1)
         item = result["themes"][0]["items"][0]
         with tempfile.TemporaryDirectory() as tmp:

@@ -1,0 +1,153 @@
+idx	first_seen_log_date	question_id	channel	item	label_he_name_level	label_blind_delegate	blind_reason
+0	2026-11-02	diagnosis:catalogue-use	dataset/huggingface	GreenNode/VieDocOCR-Benchmark	U	U	generic benchmark, off-domain
+1	2026-11-02	diagnosis:catalogue-use	dataset/huggingface	Digital-Divide-Data/DDD-Kenya-Kamba-Extending-Benchmarks	U	U	generic benchmark, off-domain
+2	2026-11-02	diagnosis:catalogue-use	dataset/huggingface	xinyi234/vulnmirage-benchmark	U	U	generic benchmark, off-domain
+3	2026-11-02	diagnosis:compound-target-action	dataset/huggingface	pdabrowskitumanski/lab4-compound-sources	I	T	compound source dataset; compound-target source comparison
+4	2026-11-02	diagnosis:compound-target-action	dataset/huggingface	CompoundAI/pe-bench	U	U	off-domain; lexical collision with compound
+5	2026-11-02	diagnosis:compound-target-action	dataset/huggingface	cora-health/compounded-injection-price-index	U	U	off-domain; lexical collision with compound
+6	2026-11-02	open-slot	repository/github	picspin/study-design-agent	I	U	study design agent, not drug repurposing
+7	2026-11-02	open-slot	repository/github	mbote-droid/bioeng-termbench	I	U	bioengineering term benchmark / vague, off-target
+8	2026-11-02	open-slot	repository/github	Ayesha037/biogenesis	I	U	bioengineering term benchmark / vague, off-target
+9	2026-11-02	open-slot	model/huggingface	Shicheng/biomedical-ai-resource-track-baseline	I	I	generic biomedical model, content unclear
+10	2026-11-02	open-slot	dataset/huggingface	nhminh107/vibiomir-biomedical-corpus	I	T	biomedical corpus; literature mining reuse
+11	2026-11-02	open-slot	model/huggingface	AI999X/biomedical-science-ai999x	I	I	generic biomedical model, content unclear
+12	2026-11-03	diagnosis:matching-evaluation	dataset/huggingface	gaia-benchmark/results_public	U	U	generic agent/RAG benchmark, no evaluation-of-evidence link
+13	2026-11-03	diagnosis:matching-evaluation	dataset/huggingface	Tushar29k/agent-guardrails-adversarial-benchmark	U	U	generic agent/RAG benchmark, no evaluation-of-evidence link
+14	2026-11-03	diagnosis:matching-evaluation	dataset/huggingface	syedhuq/multihop-rag-benchmark	U	U	generic agent/RAG benchmark, no evaluation-of-evidence link
+15	2026-11-03	diagnosis:provenance-through-intermediaries	repository/github	harshk242/burp	U	U	unrelated name
+16	2026-11-03	diagnosis:provenance-through-intermediaries	repository/github	MuhammadMuneeb007/drug-disease-mapping	T	T	drug-disease mapping tool; repurposing pipeline
+17	2026-11-03	diagnosis:provenance-through-intermediaries	repository/github	smolyanko/biomedical-ner-pipeline	T	T	biomedical NER for literature pipeline
+18	2026-11-03	open-slot	repository/github	ma3u/MinimumViableHealthDataspacev2	I	U	health dataspace infrastructure
+19	2026-11-03	open-slot	repository/github	aiswaryanandan24-cell/PharmGraph-Agentic-AI-Pipeline-for-Drug-Interaction-Discovery	T	T	drug interaction graph agent pipeline
+20	2026-11-03	open-slot	repository/github	orevid-org/orevid	I	U	unrelated or prediction off-domain
+21	2026-11-03	open-slot	model/huggingface	rav39439/next_token_prediction	U	U	unrelated or prediction off-domain
+22	2026-11-03	open-slot	dataset/huggingface	THEORACLEEEE/polymarket-predictions	U	U	prediction off-domain
+23	2026-11-03	open-slot	dataset/huggingface	Ciroc0/dmi-aarhus-predictions	U	U	prediction off-domain
+24	2026-11-04	work_order:NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	repository/github	JudyXChen/SpontaneousNMDAR	R	R	NMDAR spontaneous activity/inhibitors
+25	2026-11-04	work_order:NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	repository/github	kalpanapandyanmims1999/-kalpanapandya16-NMDARInhibitors	R	R	NMDAR spontaneous activity/inhibitors
+26	2026-11-04	work_order:NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	repository/github	KhondamirRustamov/iGluR-peptides	R	T	iGluR peptides; glutamate receptor method
+27	2026-11-04	work_order:NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	paper/nature	BME	I	I	metadata uninformative
+28	2026-11-04	work_order:NEED-GSK3B-DEREPRESSION	repository/github	r-universe/gsk3	R	T	GSK3 package; possibly GSK3 tooling
+29	2026-11-04	work_order:NEED-GSK3B-DEREPRESSION	repository/github	gauravkadupatil-png/GSK32	I	I	GSK32 name ambiguous
+30	2026-11-04	work_order:NEED-GSK3B-DEREPRESSION	repository/github	spiliotislab/sept9-gsk3-phosphoswitch-code	R	R	GSK3 phosphorylation code, direct GSK3 biology
+31	2026-11-04	work_order:NEED-GSK3B-DEREPRESSION	dataset/huggingface	DenyTranDFW/Benchmark_2026_B44_Mortgage_Trust_2160315	U	U	finance/ASR/safety benchmark, off-domain
+32	2026-11-04	work_order:NEED-GSK3B-DEREPRESSION	dataset/huggingface	AirCaps/a5s-small-v2-asr-benchmark-dataset	U	U	finance/ASR/safety benchmark, off-domain
+33	2026-11-04	work_order:NEED-GSK3B-DEREPRESSION	dataset/huggingface	crawlcheck/agent-safety-benchmark	U	U	finance/ASR/safety benchmark, off-domain
+34	2026-11-04	open-slot	repository/github	marinomassimo-dot/legend-development	I	U	repository of the project itself, no new tool
+35	2026-11-04	open-slot	repository/github	Dengyuemed/dengyuemed.github.io	U	U	personal website
+36	2026-11-04	open-slot	repository/github	api-evangelist/omass-therapeutics	I	I	therapeutics company API listing
+37	2026-11-04	open-slot	space/huggingface	danielenglish1996/ai-content-repurposing	U	U	content repurposing, lexical collision
+38	2026-11-04	open-slot	space/huggingface	RottenShadow/ailixir-drug-repurposing	T	T	drug repurposing app/agent
+39	2026-11-04	open-slot	space/huggingface	nexustech1/repurposingagent	T	T	drug repurposing app/agent
+40	2026-11-05	work_order:NEED-INHIBITORY-HYPOFUNCTION	repository/github	BrenoKaffer/gabarita	U	U	lexical collision gabarito/gabarita
+41	2026-11-05	work_order:NEED-INHIBITORY-HYPOFUNCTION	repository/github	Bronze012/gabarito-med	U	U	lexical collision gabarito/gabarita
+42	2026-11-05	work_order:NEED-INHIBITORY-HYPOFUNCTION	repository/github	lucasgenial/gabarito360	U	U	lexical collision gabarito/gabarita
+43	2026-11-05	work_order:NEED-INHIBITORY-HYPOFUNCTION	model/huggingface	georgeliu59/caption_qwen35_9b_trainset_retrieval_benchmark_110426	U	U	retrieval/vendor/voice benchmark, off-domain
+44	2026-11-05	work_order:NEED-INHIBITORY-HYPOFUNCTION	dataset/huggingface	crawlcheck/vendor-benchmark	U	U	retrieval/vendor/voice benchmark, off-domain
+45	2026-11-05	work_order:NEED-INHIBITORY-HYPOFUNCTION	dataset/huggingface	Tushar29k/voice-agent-adversarial-benchmark	U	U	retrieval/vendor/voice benchmark, off-domain
+46	2026-11-05	work_order:NEED-ISR-ATTENUATION	repository/github	6nguyen/cut-israel-ties	U	U	Israel lexical collision with ISR
+47	2026-11-05	work_order:NEED-ISR-ATTENUATION	repository/github	arielf-idra/notam-isr	U	U	Israel lexical collision with ISR
+48	2026-11-05	work_order:NEED-ISR-ATTENUATION	repository/github	RokuIL/Live-From-Israel	U	U	Israel lexical collision with ISR
+49	2026-11-05	work_order:NEED-ISR-ATTENUATION	model/huggingface	israel-adewuyi/AlphabetSort	U	U	Israel lexical collision with ISR
+50	2026-11-05	work_order:NEED-ISR-ATTENUATION	dataset/huggingface	israel-adewuyi/tinystories_african	U	U	Israel lexical collision with ISR
+51	2026-11-05	work_order:NEED-ISR-ATTENUATION	dataset/huggingface	Hebrish/Israeli-Name-Sentences	U	U	Israel lexical collision with ISR
+52	2026-11-06	work_order:NEED-LACTATE-LDH	repository/github	luccabruno3z/luccabruno3z.github.io	U	U	personal website, lexical LDH collision
+53	2026-11-06	work_order:NEED-LACTATE-LDH	repository/github	luccabruno3z/ldh-lol	U	U	ldh-lol game, lexical collision
+54	2026-11-06	work_order:NEED-LACTATE-LDH	repository/github	ldhawka/ldhawka.github.io	U	U	personal website, lexical LDH collision
+55	2026-11-06	work_order:NEED-LACTATE-LDH	model/huggingface	gschottlender/graphmatch-bioactivity-models	U	T	bioactivity prediction model/dataset; compound activity
+56	2026-11-06	work_order:NEED-LACTATE-LDH	model/huggingface	prime7781/drug-bioactivity-predictor	U	T	bioactivity prediction model/dataset; compound activity
+57	2026-11-06	work_order:NEED-LACTATE-LDH	dataset/huggingface	Sepideh2027/Bioactivity-Bench	U	T	bioactivity prediction model/dataset; compound activity
+58	2026-11-06	work_order:NEED-MYC-PROGENITOR-PROLIFERATION	repository/github	anttiluode/TheMycelialCortex	U	U	mycelial cortex, lexical MYC collision
+59	2026-11-06	work_order:NEED-MYC-PROGENITOR-PROLIFERATION	repository/github	GautamGripen/NeuronWiseLabs-MyCodeBackups	U	U	code backups, lexical collision
+60	2026-11-06	work_order:NEED-MYC-PROGENITOR-PROLIFERATION	space/huggingface	Sepideh2027/ligand-bioactivity-predictor	U	T	bioactivity prediction model/dataset; compound activity
+61	2026-11-06	work_order:NEED-MYC-PROGENITOR-PROLIFERATION	dataset/huggingface	Ni3SinghR/provbench-egfr-bioactivity	U	T	bioactivity prediction model/dataset; compound activity
+62	2026-11-06	work_order:NEED-MYC-PROGENITOR-PROLIFERATION	model/huggingface	JuliTech-001/Druglikeness-bioactivity-model	U	T	bioactivity prediction model/dataset; compound activity
+63	2026-11-06	open-slot	repository/github	Exynos-8890/gptr-bench	U	I	benchmark of unknown content
+64	2026-11-06	open-slot	repository/github	cw-jlu/Drug-Repurposing-Agent	T	T	drug repurposing agent
+65	2026-11-06	open-slot	repository/github	RyanWangZf/BioDSA	T	T	biomedical data science agent benchmark
+66	2026-11-06	open-slot	model/huggingface	SINAI/ALIA-es-biomedical-7B-Instruct	I	T	biomedical LLM for evidence/literature tasks
+67	2026-11-06	open-slot	model/huggingface	Alberto/ALIA-es-biomedical-7B-Instruct-gguf	I	T	biomedical LLM for evidence/literature tasks
+68	2026-11-06	open-slot	model/huggingface	mradermacher/Gemma4-Biomedical-E4B-GGUF	I	T	biomedical LLM for evidence/literature tasks
+69	2026-11-07	task_step:OBJ_P8/P8	repository/github	the-sunnyy/fx	U	U	unrelated code repositories
+70	2026-11-07	task_step:OBJ_P8/P8	repository/github	cecattot/tipos_abstratos_dados	U	U	unrelated code repositories
+71	2026-11-07	task_step:OBJ_P8/P8	repository/github	GersonPardim/Simulador_Interativo_de_-Arvores	U	U	unrelated code repositories
+72	2026-11-07	task_step:OBJ_P8/P8	model/huggingface	Shoriful025/molecular_bioactivity_predictor_gnn	U	T	bioactivity prediction model/dataset; compound activity
+73	2026-11-07	task_step:OBJ_P8/P8	model/huggingface	aksw/Bike-bioactivity	U	T	bioactivity prediction model/dataset; compound activity
+74	2026-11-07	task_step:OBJ_P8/P8	space/huggingface	fatmamattar/bioactivity-predictor	U	T	bioactivity prediction model/dataset; compound activity
+75	2026-11-07	open-slot	repository/github	AikyaKumar/hetionet-drug-repurposing	T	T	Hetionet KG repurposing
+76	2026-11-07	open-slot	repository/github	medical-device-design/FDA-kg	I	T	FDA knowledge graph, drug data
+77	2026-11-07	open-slot	repository/github	Harsheys27/BioLens	I	I	BioLens unclear
+78	2026-11-07	open-slot	dataset/huggingface	Venkat071989/superkart-sales-prediction	U	U	prediction off-domain
+79	2026-11-07	open-slot	space/huggingface	sadansabo/Nigerian_National_Flood_Prediction_System	U	U	prediction off-domain
+80	2026-11-07	open-slot	space/huggingface	soradash/stock-ai-prediction	U	U	prediction off-domain
+81	2026-11-08	work_order:NEED-NEUROINFLAMMATION-GLIA	model/huggingface	diamandislabii/ViT-Glial-Tumor-Classification	U	U	glial tumor image classifier, not density
+82	2026-11-08	work_order:NEED-PDH-PYRUVATE-AXIS	repository/github	pdh9311/pdh9311	U	U	lexical collision pdh9311
+83	2026-11-08	work_order:NEED-PDH-PYRUVATE-AXIS	repository/github	AmanSingh1812/btcusdt-scalper-paper-trading	U	U	trading bot
+84	2026-11-08	work_order:NEED-PDH-PYRUVATE-AXIS	repository/github	AmanSingh1812/btcusdt-scalper-highfreq-paper-trading	U	U	trading bot
+85	2026-11-08	work_order:NEED-PDH-PYRUVATE-AXIS	dataset/huggingface	MLL-Lab/MultiBBQ-perturbations	U	U	perturbation dataset, unrelated
+86	2026-11-08	work_order:NEED-PDH-PYRUVATE-AXIS	dataset/huggingface	ChicagoHAI/openaireview-perturbation	U	U	perturbation dataset, unrelated
+87	2026-11-08	work_order:NEED-PDH-PYRUVATE-AXIS	dataset/huggingface	anuosi666/Perturbation-response-identification	U	U	perturbation dataset, unrelated
+88	2026-11-08	open-slot	repository/github	carson-olaf/mva-hackathon-2026	I	U	hackathon code, off-domain
+89	2026-11-08	open-slot	repository/github	api-evangelist/healx	I	I	Healx API listing; repurposing company
+90	2026-11-08	open-slot	repository/github	neonbhai/mva-research	I	U	hackathon code, off-domain
+91	2026-11-08	open-slot	space/huggingface	Darkweb007/content-repurposing-pipeline	U	U	content repurposing
+92	2026-11-08	open-slot	space/huggingface	DiyaR2002/drug-repurposing	T	T	drug repurposing tool/dataset
+93	2026-11-08	open-slot	space/huggingface	vrindagotephd/Clinical_Trials_Drug_Repurposing_AI_Tool	T	T	drug repurposing tool/dataset
+94	2026-11-09	work_order:NEED-REDOX-NRF2	repository/github	kireol/nrf24l01SenderNodeMcu	U	U	nRF24 lexical collision with NRF2
+95	2026-11-09	work_order:NEED-REDOX-NRF2	repository/github	AtherNet29/BW-16-RTL8720DN-DEAUTHER-EVILTWIN-NRF24	U	U	nRF24 lexical collision with NRF2
+96	2026-11-09	work_order:NEED-REDOX-NRF2	repository/github	mrdulasolutions/MCAS.Opensource	U	U	MCAS, off-domain
+97	2026-11-09	work_order:NEED-REDOX-NRF2	dataset/huggingface	aikseng/Kras-Nrf2-Dataset	T	R	Nrf2 dataset, NRF2 target biology
+98	2026-11-09	work_order:NEED-SEIZURE-CONTROL-SYMPTOMATIC	dataset/huggingface	elsiddik/egypt-real-estate-prices-compounds-2026	U	U	pricing/compounding collision
+99	2026-11-09	work_order:NEED-SEIZURE-CONTROL-SYMPTOMATIC	dataset/huggingface	cora-health/peptide-compounding-status-index	U	U	pricing/compounding collision
+100	2026-11-09	work_order:NEED-SEIZURE-CONTROL-SYMPTOMATIC	dataset/huggingface	molport/In-stock-Screening-Compound-Database	U	T	screening compound catalogue; compound sourcing
+101	2026-11-10	work_order:NEED-SYSTEMIC-GLYCAEMIA-GROWTH	dataset/huggingface	wraith1337/knockout-cup-windows64	U	U	knockout lexical collision
+102	2026-11-10	work_order:NEED-SYSTEMIC-GLYCAEMIA-GROWTH	model/huggingface	reax-knockout/sn92-gen-a1	U	U	knockout lexical collision
+103	2026-11-10	work_order:NEED-SYSTEMIC-GLYCAEMIA-GROWTH	model/huggingface	suchirsalhan/polypythia-160m-knockout-continue	U	U	knockout lexical collision
+104	2026-11-10	open-slot	repository/github	rasel-isu/biomedical-AI-benchmark	I	T	biomedical AI benchmark
+105	2026-11-10	open-slot	repository/github	nithin-jella/RareDx-Agentic-Diagnostic-Assistant	I	T	rare disease agentic assistant
+106	2026-11-10	open-slot	repository/github	AI-in-Health/BioMedArena	I	T	biomedical AI benchmark
+107	2026-11-10	open-slot	dataset/huggingface	MohsinElis/biomedical-disease-mapping	I	T	biomedical disease mapping dataset
+108	2026-11-10	open-slot	model/huggingface	edh1/gemma4-biomedical-e4b-litertlm	I	T	biomedical LLM for evidence/literature tasks
+109	2026-11-10	open-slot	space/huggingface	fatenahaq/biomedical-research-ai	I	I	biomedical research AI, unclear
+110	2026-11-11	work_order:NEED-WWOX-GENE-ADDITION	repository/github	ipb-halle/MetFamily	I	U	metabolomics tool, off-topic
+111	2026-11-11	work_order:NEED-WWOX-GENE-ADDITION	repository/github	Ivan-Cheuk0/DSM5TR-NLP-Transdiagnostic	U	U	psychiatry NLP / imaging, off-domain
+112	2026-11-11	work_order:NEED-WWOX-GENE-ADDITION	repository/github	nepalanurag/Biomedical-Imaging-Analysis	U	U	psychiatry NLP / imaging, off-domain
+113	2026-11-11	work_order:NEED-WWOX-GENE-ADDITION	space/huggingface	Jeev321/Quantified_Self	U	U	quantified lexical collision with vector level
+114	2026-11-11	work_order:NEED-WWOX-GENE-ADDITION	space/huggingface	GatewayInc/gateway-wealth-bridge-quantified-gold-rush	U	U	quantified lexical collision with vector level
+115	2026-11-11	work_order:NEED-WWOX-GENE-ADDITION	space/huggingface	Quantified/Clip-Generator-V3-Server	U	U	quantified lexical collision with vector level
+116	2026-11-11	open-slot	repository/github	glusman-team/graph-monorepo	I	T	knowledge graph repo for repurposing
+117	2026-11-11	open-slot	repository/github	GKHarjithadithyha/medsafe	I	I	medsafe unclear
+118	2026-11-11	open-slot	repository/github	oncodash/oncodashkb	I	T	knowledge graph repo for repurposing
+119	2026-11-11	open-slot	dataset/huggingface	JiaxinShi/lychsim-genia-pasr-predictions-20261106	U	U	predictions, off-domain
+120	2026-11-11	open-slot	model/huggingface	Noor-Khan/dog-breed-prediction	U	U	prediction off-domain
+121	2026-11-11	open-slot	dataset/huggingface	LundAISociety/hot-building-predictions	U	U	prediction off-domain
+122	2026-11-12	reopen:biopathnet_it18_20261101/0	repository/github	Rameshsain070/Rameshsain070	U	U	unrelated to BioPathNet
+123	2026-11-12	reopen:biopathnet_it18_20261101/0	repository/github	Gnanasudharsan/ramp-accessibility-agent	U	U	unrelated to BioPathNet
+124	2026-11-12	reopen:biopathnet_it18_20261101/0	repository/github	ramazantufekci/ramazantufekci	U	U	unrelated to BioPathNet
+125	2026-11-12	reopen:biopathnet_it18_20261101/0	model/huggingface	realnewbiexvwu/pvz-agent-artifacts	U	U	unrelated to BioPathNet
+126	2026-11-12	reopen:biopathnet_it18_20261101/0	model/huggingface	hmkz-1981/gemma-4-e4b-agentic-rl-think-effort-GGUF	U	U	unrelated to BioPathNet
+127	2026-11-12	reopen:biopathnet_it18_20261101/0	model/huggingface	LoosiFR/qwen35-9b-agentic-v2.5-GGUF	U	U	unrelated to BioPathNet
+128	2026-11-12	open-slot	repository/github	BoukeliaAbdelbasset/MINT-KG	I	T	biomedical KG MINT-KG
+129	2026-11-12	open-slot	repository/github	stringtang/mva-hackathon-2026	I	U	hackathon code, off-domain
+130	2026-11-12	open-slot	repository/github	api-evangelist/axcelius-i-ii	I	I	API listing unclear
+131	2026-11-12	open-slot	dataset/huggingface	TheFamousHesham/drug-repurposing-pan	T	T	drug repurposing tool/dataset
+132	2026-11-12	open-slot	space/huggingface	Priyabhanderi2/drug-repurposing	T	T	drug repurposing tool/dataset
+133	2026-11-12	open-slot	space/huggingface	KiranKKT/Drug_Repurposing	T	T	drug repurposing tool/dataset
+134	2026-11-13	reopen:function_pharm_it14_p3_20261101/NP3P2	repository/github	nmdarksky/nmdarksky.github.io	U	U	lexical collision NMDAR in name
+135	2026-11-13	reopen:function_pharm_it14_p3_20261101/NP3P2	repository/github	BrainCircuitsBehaviorLab/NMDAR_paper	R	T	NMDAR paper code; receptor analysis code
+136	2026-11-13	reopen:function_pharm_it14_p3_20261101/NP3P2	repository/github	nmdarosa/nmdarosa.github.io	U	U	lexical collision NMDAR in name
+137	2026-11-13	reopen:function_pharm_it14_p3_20261101/NP3P3	repository/github	gabacorporation/gaba-corporation	U	U	lexical collision gaba
+138	2026-11-13	reopen:function_pharm_it14_p3_20261101/NP3P3	repository/github	RBPerez1701/saliksik-gabay-portal	U	U	lexical collision gaba
+139	2026-11-13	reopen:function_pharm_it14_p3_20261101/NP3P3	repository/github	rzamora-openit/GABAI	U	U	lexical collision gaba
+140	2026-11-13	reopen:function_pharm_it14_p3_20261101/NP3P3	dataset/huggingface	marissadolorfino/BIOINF595_BioactivityReport	U	T	bioactivity report dataset; compound activity
+141	2026-11-13	reopen:function_pharm_it14_p3_20261101/NP3P3	dataset/huggingface	Desp-ML/Bioactivity_report_QM9	U	T	bioactivity report dataset; compound activity
+142	2026-11-13	reopen:function_pharm_it14_p3_20261101/NP3P3	dataset/huggingface	Desp-ML/Bioactivity_Final_Project_QM9	U	T	bioactivity report dataset; compound activity
+143	2026-11-14	reopen:function_pharm_it14_p3_20261101/NP3P3	dataset/huggingface	luxuan-lulu/Bioactivity_Final_project	U	T	bioactivity report dataset; compound activity
+144	2026-11-14	reopen:function_pharm_it14_p3_20261101/NP3P3	model/huggingface	Brent1997/bioactivity_predictor_for_CHEMBL274_with_text_based_model	U	T	bioactivity prediction model/dataset; compound activity
+145	2026-11-14	reopen:function_pharm_it14_p3_20261101/NP3P3	dataset/huggingface	DanielShunom/ubiquitin-l1-hydrolase-bioactivity	U	T	bioactivity prediction model/dataset; compound activity
+146	2026-11-14	open-slot	repository/github	mbzuai-ai4bio/BioXArena-Pro	I	T	biomedical agent benchmark
+147	2026-11-14	open-slot	repository/github	xX-its-amit-Xx/biocalib	I	T	biomedical agent benchmark
+148	2026-11-14	open-slot	repository/github	boheling/skillbench	I	T	biomedical agent benchmark
+149	2026-11-14	open-slot	dataset/huggingface	healthcare-biomedical-ai/Trauma-Resuscitation-Constraint-Verification-Benchmark	U	U	clinical constraint benchmark, off-domain
+150	2026-11-14	open-slot	dataset/huggingface	healthcare-biomedical-ai/Specialty-Referral-Intake-Constraint-Validation-Benchmark	U	U	clinical constraint benchmark, off-domain
+151	2026-11-14	open-slot	model/huggingface	mradermacher/Bio-Medical-MultiModal-Llama-3-8B-V1-GGUF	I	T	biomedical LLM for evidence/literature tasks

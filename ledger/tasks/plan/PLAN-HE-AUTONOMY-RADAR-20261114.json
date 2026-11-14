@@ -12,8 +12,8 @@
  "branch": "task/hrk3",
  "CURRENT_STATE": "IN_PROGRESS",
  "CHECKPOINT": {
-  "last_verified_result": "none yet",
-  "first_incomplete_work": "OBJ_1_STATE"
+  "last_verified_result": "mode landed (eb11e436e); scout filter tested offline; radar README written",
+  "first_incomplete_work": "OBJ_8 land; OBJ_3/OBJ_9/OBJ_10 operational check with ADV and the final report"
  },
  "AUTHORISED_QUEUE_20261114B": {
   "MANDATE_STATE": "OPEN",
@@ -23,12 +23,12 @@
    "steps": [
     {
      "step": "Read the actual state: pilot budget/counters/limits, presidio and recall, resource tools (census, delegation budget), the three radar functions, the scout trace; state what is observed versus assumed",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "Pilot budget 7 invocations / 9 drafts, expiry 2026-11-14T18:22:36Z, 5 invocations executed and 6 drafts at authorisation; recall in ADV (job 3382bb86); census and delegation tools read; scout trace 229 signals, 0 examinations. Observed vs assumed kept apart in radar_inputs_he52_20261114/README.md."
     }
    ],
-   "status": "IN_PROGRESS"
+   "status": "DONE"
   },
   "OBJ_2_CONTINUOUS_AUTHORISATION": {
    "order": 2,
@@ -36,12 +36,12 @@
    "steps": [
     {
      "step": "Distinguish a bounded pilot from a persistent, revocable operator authorisation to continue within the roadmap; keep historical counters, results and failures; small explicit removable configuration in the existing tool, no second campaign system",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "eb11e436e (published, gate PASS): CONTINUOUS.json mode of the same campaign (budget.json untouched, pilot_at_authorisation recorded), stage ceilings None in the mode, expiry/total not applied, authorise-continuous / end-continuous, status shows pilot executed vs mode; 22 new tests (Continuous class) and 39 earlier unchanged. ADV treats the mode as pending its own confirmation (correct: its operator instruction stands)."
     }
    ],
-   "status": "TODO"
+   "status": "DONE"
   },
   "OBJ_3_PRESIDIO_CONTINUITY": {
    "order": 3,
@@ -49,12 +49,12 @@
    "steps": [
     {
      "step": "Distinguish end of an assignment, end of a turn, legitimate wait, resource suspension and end of authorisation; an assignment's end does not close the presidio; verify compaction, restart and loss of recall (executed / expected / runtime limits); one presidio, no daemon",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "mode + presidio state WAITING + skill section landed; ADV records its standing objective (it said it will); operational check pending."
     }
    ],
-   "status": "TODO"
+   "status": "IN_PROGRESS"
   },
   "OBJ_4_OPERATOR_CONTROL": {
    "order": 4,
@@ -62,12 +62,12 @@
    "steps": [
     {
      "step": "Integration, roadmap, urgent, stop/pause reach the durable operational context through the canonical seats; none needs a confirmation or cancels valid work by itself",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "eb11e436e: operator control lines (PAUSE/STOP/RESUME/URGENT/INTEGRATION + scope) in the Operator roadmap section; tick PAUSED, launcher refuses; RESUME lifts; other scopes shown to the evaluation; roadmap change evaluates at once. Roadmap entry dated 2026-11-14 records the convention."
     }
    ],
-   "status": "TODO"
+   "status": "DONE"
   },
   "OBJ_5_SHARED_RESOURCES": {
    "order": 5,
@@ -75,12 +75,12 @@
    "steps": [
     {
      "step": "Shared (IT/SCI/HE/ADV and delegates) weekly allocation configurable when the usable limit is known, declared unknown otherwise; measured versus estimated versus not exposed; cost of coordinator recalls stated, not called free",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "delegation_budget.md section 10: measured vs estimated vs not exposed; weekly_allocation configurable only when the operator states the limit (unset today: nothing blocked, nothing assumed); tests for unset/near/exhausted; coordinator cost measured from transcripts (radar_inputs README)."
     }
    ],
-   "status": "TODO"
+   "status": "DONE"
   },
   "OBJ_6_RADAR_FUNCTIONS": {
    "order": 6,
@@ -88,12 +88,12 @@
    "steps": [
     {
      "step": "Map the three radar functions (capability mining and scouting; drug-repurposing research radar; critical LEGEND observer) onto what exists; name concrete gaps; no new agents or scripts for their own sake",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "Mapped in radar_inputs_he52_20261114/README.md: A scout_daily/weekly/capability log, B scout questions + ADV evaluation, C pieces (self-eval, DREAM, watch, ADV); gaps named; no new agent or script."
     }
    ],
-   "status": "TODO"
+   "status": "DONE"
   },
   "OBJ_7_FAIR_COMPARISON": {
    "order": 7,
@@ -101,12 +101,12 @@
    "steps": [
     {
      "step": "Small declared sample comparing discovery (what each source intercepts) and analysis (how each process evaluates the same inputs), with the available operator reports; unknown versus not-happened kept apart; existing trace and capability log only",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "152 scout items 2026-11-02..14 labelled by HE and a blind delegate (agreement 103/152); three signals followed (NP3P3 -> ADV-004 consumed; SEPT9 code -> defer, traced; Paper2Bench/AutoSciBench -> no gap shown); operator reports absent: limit declared."
     }
    ],
-   "status": "TODO"
+   "status": "DONE"
   },
   "OBJ_8_RADAR_FIXES": {
    "order": 8,
@@ -114,12 +114,12 @@
    "steps": [
     {
      "step": "Fix only defects the sample demonstrates (roadmap-derived searches, empty vs error vs uninterpreted, question-result match, provenance, repeated resolved conditions), keeping exploration and adjacent literatures open",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "scout filter + HF object term + self-repo exclusion coded with 83 tests; retrospective 64 items; to land."
     }
    ],
-   "status": "TODO"
+   "status": "IN_PROGRESS"
   },
   "OBJ_9_ADV_USE_AND_LOOP": {
    "order": 9,
@@ -161,5 +161,10 @@
    "status": "TODO"
   }
  },
- "MANDATE_STATE": "OPEN"
+ "MANDATE_STATE": "OPEN",
+ "OPERATOR_TEXT": {
+  "source": "user message to HE 2026-11-14, pasted prompt 'HE — CONTINUOUS AUTONOMY AND USEFUL RADAR INPUTS' (Italian; the paste replaced apostrophes and dashes by '?')",
+  "section_2_verbatim": "AUTORIZZAZIONE PER IL FUNZIONAMENTO A REGIME. L'operatore conferma il seguente principio: A regime, LEGEND è autorizzato a proseguire autonomamente entro la roadmap, i confini già stabiliti e le risorse disponibili. Non deve richiedere un nuovo prompt dopo tre incarichi, dieci ore o un'altra durata arbitraria. I tetti di compiti e durata del pilota sono strumenti temporanei di valutazione. Non devono diventare l'architettura permanente dell'autonomia. Implementa questa distinzione esplicitamente: i piloti delimitati continuano a rispettare i propri limiti; il funzionamento continuativo segue un'autorizzazione persistente e revocabile dell'operatore; le risorse restano disciplinate; stop, pausa e nuove indicazioni dell'operatore prevalgono. Conserva integralmente contatori, risultati e fallimenti storici del pilota. Non ottenere continuità azzerando contatori, rinviando ripetutamente una scadenza o usando numeri enormi come sostituto di una modalità dichiarata. Se serve una configurazione aggiuntiva, rendila piccola, esplicita e rimovibile, riusando lo strumento esistente. Non creare un secondo sistema di campagne.",
+  "addressed_to": "HE (ACTOR_ID plan); not addressed to the ADV session, which holds its own operator instruction (stop at 2026-11-14T18:22:36Z) until it confirms otherwise"
+ }
 }
