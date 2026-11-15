@@ -6,7 +6,7 @@ Read-only. Per session transcript: main-session turns, output tokens, cache writ
 subagent transcripts. Per Advisor evaluation P<n>: the same figures from its meta.json, complete or incomplete
 (strategic_advisor.incomplete_run). From git and the ledger: commits, task records created and their final
 state, assignment ids by latest state, presidio-decided and operator-directed PRESIDIO-00n files, receipts
-appended to fulltext_read_receipts.jsonl. No threshold, no verdict, no file written unless --tsv names one.
+appended to fulltext_read_receipts.jsonl, and the host-recorded holds apart (holds.jsonl, never counted as evaluations). `--ref` names the git ref whose commits and records are counted (default main). No threshold, no verdict, no file written unless --tsv names one.
 
   python3 framework/scripts/trial_window_table.py --since 2026-11-14T15:29:29Z --until 2026-11-15T15:29:29Z
 """
@@ -137,6 +137,13 @@ def counts(root: Path, ref: str, campaign: Path, since: str, until: str) -> dict
         if first_commit and in_window(utc(first_commit[-1]), since, until):
             head = f.read_text(encoding="utf-8").splitlines()[0] if f.stat().st_size else ""
             presidio["operator_directed" if "OPERATOR-DIRECTED" in head.upper() else "presidio_decided"].append(f.stem)
+    holds = 0                                                       # HE64: a host-recorded hold is not an evaluation; it has its own line and never enters the evaluations above
+    hf = campaign / "holds.jsonl"
+    for line in hf.read_text(encoding="utf-8").splitlines() if hf.exists() else []:
+        try:
+            holds += 1 if in_window(str(json.loads(line).get("utc") or ""), since, until) else 0
+        except json.JSONDecodeError:
+            continue
     receipts, kinds = 0, {}
     rp = root / RECEIPTS
     if rp.exists():
@@ -149,7 +156,7 @@ def counts(root: Path, ref: str, campaign: Path, since: str, until: str) -> dict
                 receipts += 1
                 kinds[str(row.get("record_kind"))] = kinds.get(str(row.get("record_kind")), 0) + 1
     return {"ref": ref, "commits": len(shas), "merge_commits": len(merges), "task_records_created": len(created), "task_final_states": states,
-            "assignment_events_by_state": events, "assignment_ids_by_latest_state": by_latest, **presidio, "receipts_appended": receipts, "receipts_by_record_kind": kinds}
+            "assignment_events_by_state": events, "assignment_ids_by_latest_state": by_latest, "holds_recorded": holds, **presidio, "receipts_appended": receipts, "receipts_by_record_kind": kinds}
 
 
 def render(since: str, until: str, sess: list[dict], evals: list[dict], cnt: dict[str, Any]) -> str:
