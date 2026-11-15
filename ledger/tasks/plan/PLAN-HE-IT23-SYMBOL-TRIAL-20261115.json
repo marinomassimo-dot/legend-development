@@ -1,0 +1,47 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-HE-IT23-SYMBOL-TRIAL-20261115",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "assigned_on": "2026-11-15",
+ "OBJECTIVE": "PRESIDIO-004 part A (operator-directed 2026-11-15, roadmap seat dated line, ADV commit 6529d4831): an offline, reversible trial of the IT23 gene-symbol lookup in a NEW dated folder. Committed files and the IT23 package are untouched; deleting the folder undoes it. For all 834 rows keep the original symbol, the ENSG and every unresolved or ambiguous conversion as such; before/after table of direction and QD/QF membership for the 15 default-zero rows; the existing LINCS responses are kept and only queries whose membership changed are listed; no live query, no install, no download, no external request. Disposition rules are IT's (KEEP a verifiable conversion, DISCARD an ambiguous one, INCONCLUSIVE on the benefit until the comparison exists). SCI builds part B independently and compares afterwards; neither side adapts to the other. My 2026-11-14 answer stands for committed files: this trial regenerates nothing.",
+ "worktree": ".claude/worktrees/hrk24",
+ "branch": "task/hrk24",
+ "CURRENT_STATE": "IN_PROGRESS",
+ "CHECKPOINT": {
+  "last_verified_result": "none yet",
+  "first_incomplete_work": "OBJ_1_TRIAL"
+ },
+ "TAKEN_IN_CHARGE": {
+  "utc": "2026-11-15T07:33:58Z",
+  "provenance": "roadmap_current.md dated line 2026-11-15 and assignments/PRESIDIO-004.md (ADV commit 6529d4831 on main); relayed by the ADV session as a cross-session message",
+  "scope": "offline, zero spend, one new dated folder, no committed file changed"
+ },
+ "AUTHORISED_QUEUE_20261115": {
+  "OBJ_1_TRIAL": {
+   "order": 1,
+   "title": "Trial of the symbol lookup for the 15 default-zero rows",
+   "steps": [
+    {
+     "step": "Map every one of the 834 symbols to the authors' list symbol and ENSG through the HGNC previous-symbol/alias logic of validate_symbols.py, keeping ambiguous and unresolved as such",
+     "status": "TODO",
+     "owner": "plan"
+    },
+    {
+     "step": "Recompute log2FC, rho, composition and broad-class flags for the resolved rows with the reproduction script's own definitions; before/after table; list only queries whose membership changed",
+     "status": "TODO",
+     "owner": "plan"
+    },
+    {
+     "step": "Deliver to SCI (comparison), IT (disposition) and ADV; record cost (tool calls, wall time)",
+     "status": "TODO",
+     "owner": "plan"
+    }
+   ]
+  }
+ },
+ "MANDATE_STATE": "OPEN"
+}
