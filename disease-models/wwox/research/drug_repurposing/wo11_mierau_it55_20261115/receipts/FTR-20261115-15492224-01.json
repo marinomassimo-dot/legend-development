@@ -1,0 +1,46 @@
+{
+ "analysis_at": "2026-11-15T11:33Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-15T11:33Z",
+ "event_id": "FTR-20261115-15492224-01",
+ "evidence_basis": [
+  "Abstract, the slice-preparation, electrophysiology, drug-application, analysis and statistics paragraphs of Materials and Methods, the Results section on the NR2B (ifenprodil) component with the Fig. 3 legend, and the oldest-age paragraph, read from the PMC article web page of PMC524435 (PNAS 2004, Mierau et al.; one plain request on 2026-11-15, generic client, no contact parameter, HTTP 200, 161,814 bytes of HTML, an article and not an interstitial), converted to text. Introduction, Discussion and the rest of the Results (A/N ratio, decay times) were not read as a whole; figure images were not viewed (legends only); references not read.",
+  "Mechanical check: all 10 verbatim rows of verbatim.tsv were found in the saved page text (10/10).",
+  "verbatim_locator | proposition: the question's quantity: ifenprodil-sensitive share of the L4-evoked NMDA current in whisker-intact mouse L2/3 at P13-P15 | Results, Fig. 3 | \"During normal postnatal development, 3 μM ifenprodil reduced the NMDA-receptor-mediated current by 53% (C.I. 43–61%) at P6–P8 (control, n = 9; ifenprodil, n = 5) but only by 14% (C.I. 0–34%) at P13–P15 (control, n = 15; ifenprodil, n = 10)\"",
+  "verbatim_locator | proposition: stimulation and recording site (layer 4 stimulus, layer 2/3 pyramidal cell) | Abstract | \"recorded from layer 2/3 pyramidal cells in vitro during voltage-clamp in response to stimulation in layer 4\"",
+  "verbatim_locator | proposition: the interval is a bootstrap 2.5/97.5 percentile interval | Methods, statistics | \"The observed means and the empirical 2.5 and 97.5 percentiles are reported\"",
+  "verbatim_locator | proposition: temperature and Mg2+ of the recordings | Methods, electrophysiology | \"at room temperature\"",
+  "verbatim_locator | proposition: Mg2+ concentration of the superfusate | Methods, slice preparation | \"2 mM MgSO 4\"",
+  "verbatim_locator | proposition: ifenprodil is given by incubation, so treated and control are different cells | Methods, drug application | \"slices were incubated for at least 40 min in artificial cerebrospinal fluid with the NR2B subunit-selective antagonist ifenprodil (3 μM; Sigma) in the holding chamber before cells were patched and recorded\"",
+  "verbatim_locator | proposition: how the NMDA current was measured | Methods, analysis | \"The amplitude of the slower NMDA-receptor-mediated current was measured at 50 ms after stimulation\"",
+  "verbatim_locator | proposition: the NMDA current is read at +40 mV | Methods, analysis | \"the amplitude of NMDA-receptor-mediated current measured at 50 ms at a holding potential of +40 mV\"",
+  "verbatim_locator | proposition: the age-matched deprived group keeps a high share | Results, Fig. 3 | \"ifenprodil still significantly reduced the NMDA-receptor-mediated current by 49% (C.I. 24–71%; control, n = 7; ifenprodil, n = 6)\"",
+  "verbatim_locator | proposition: the oldest group | Results | \"the estimated ifenprodil-sensitive current was only 26% in P26–P33 whisker-deprived mice\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/wo11_mierau_it55_20261115/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "188c960441091af6134be7bae885ebe2c9273802c06535171c4f658bf045b6ff",
+ "source_kind": "fulltext_remote",
+ "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC524435/ (one plain request on 2026-11-15, generic client, no contact parameter; the page copy is kept under files/fulltext/wo11_mierau_20261115/ and is not in git)",
+ "study_id": {
+  "pmid": "15492224"
+ },
+ "workflow": "IT reading for ADV-012 part (b), open-question row WO-11: the row was chosen by reading the list of OPEN rows and the named decision it moves (selection reasoning in README), then one plain page request; the body was read from the PMC article page, quotes checked mechanically, figure images not viewed."
+}

@@ -1,0 +1,25 @@
+# WO-11: the ifenprodil-sensitive share of the L4-evoked NMDA current in mouse barrel-cortex L2/3 (IT, ADV-012 part b)
+
+Non-canonical working note. Not medical advice; no dose, schedule or route. Reference genotype class only. No ranking, need, tier, candidate state or frozen package was edited. Predictive capacity of this note: none.
+
+## Answer first
+Mierau 2004 (PMID 15492224, PMC524435, mouse barrel cortex, whole-cell recordings from layer 2/3 pyramidal cells, layer 4 stimulation) reports that 3 uM ifenprodil reduced the NMDA-receptor-mediated EPSC by **14% (bootstrap interval 0-34%) at P13-P15 in whisker-intact mice** (control n = 15, ifenprodil n = 10), against 53% (43-61%) at P6-P8 (control n = 9, ifenprodil n = 5). Whisker-deprived P13-P15: 49% (24-71%); whisker-deprived P26-P33: 26%.
+So the quantity the row asked for, the fraction f of the evoked synaptic NMDA current that a GluN2B-selective blocker removes at about P14, is **about 0.14 with an interval that includes zero and reaches 0.34**. It sits below the lowest value (0.2) of the IT15 occupancy arithmetic and its upper end is above it. WO-11 is answered as to the number; the number is not the isolated current in spontaneously bursting slices.
+
+## What the number is not (limits)
+* **Evoked synaptic current, not the quantity that decides the window.** The IT15 definition of f is the fractional reduction of the *isolated* NMDAR current by a saturating GluN2B blocker *in burst slices at P13-P17*. This paper measures an L4-evoked EPSC read at 50 ms and +40 mV, room temperature, 2 mM Mg2+, Cs-based internal with QX-314 and bicuculline. Extrasynaptic or tonic receptors, the burst-slice condition and physiological temperature are not covered. WO-10 stays open.
+* **Between-cell design.** Treated slices were pre-incubated with ifenprodil, so the 14% is a difference between group means (control n = 15, treated n = 10), not a paired effect; the interval is a bootstrap 2.5/97.5 percentile interval around a small-n mean.
+* **Not a saturation proof.** 3 uM is the only concentration; whether ifenprodil removed all of the GluN2B-containing current (triheteromers are only partly inhibited, per the IT15 note) is not tested here. The 14% is a floor on the GluN2B-containing share, not a measure of it.
+* **Species and region:** mouse somatosensory (barrel) cortex, not the model of the project's burst slices unless WO-10 matches them.
+* Depth: abstract, the methods paragraphs named, the Fig. 3 results and legend; the Introduction, Discussion and the A/N and decay-time results as a whole not read; figure images not viewed. Receipt `FTR-20261115-15492224-01` (partial, captions only). 10/10 verbatim rows found mechanically (`verbatim.tsv`).
+
+## What it moves (decision at stake)
+The row's decision: an upper bound f for the GluN2B-NAM window. At the IT15 arithmetic (an upper bound, not a prediction) the isolated-current reduction by a class-saturating GluN2B blocker would be small at f of about 0.14 and at most about a third at the interval's upper end, **if** the burst-slice composition resembles this evoked response. That is a conditional reading: the GluN2B-NAM lever has no measured basis for a large effect on the NMDAR current at P13-P17 in this region; it is not evidence about the burst, nor a statement that the lever fails. Premise to carry: the lever's size depends on a burst-slice measurement (WO-10), and the only published number in hand points low. Nothing was applied to any card.
+
+## Why this row, and what was not chosen
+Rows with a named decision and no blocker beyond access were screened (35 OPEN rows with `literature_executable` or `data_access_blocked` and zero-spend yes/partial). WO-11 was chosen because (1) the only stated block was an Europe PMC XML 500 on 2026-11-05, the PMC article page answers one plain request; (2) the decision (an f for a GluN2B-NAM window used in the IT15 occupancy arithmetic) is explicit; (3) it was not touched by any package after 2026-11-05 (git grep of PMID 15492224 and PMC524435: only the IT15 files, the map and a follow-through ledger mention). Not chosen: WO-12 (primary papers Hess 1996 and Fischer 1997, access not checked; the next candidate, needs a route test and possibly a Scientist batch), WO-06 (nothing blocks it, a search task), the IT44-IT49 rows (several sources "unreachable", not tested here). No rejection of any of them as decision-free.
+
+## Premise corrections to the ADV-012 draft
+* Count: 36 OPEN `literature_executable` rows (the draft's figure) and 15 OPEN `data_access_blocked`; with zero-spend yes/partial over both kinds I count 35 (the same as the Advisor's message).
+* The draft says the assignment is "on main"; at the time of my fetch `ADV-012.md` was in the root checkout only (root main ahead of development/main), not on `development/main`.
+* The route fact the draft leaves implicit: the PMC *article page* served the body of PMC524435 where Europe PMC XML (HTTP 500), the PDF route (403) and the OA service (404) did not; WO-11 was therefore "access-limited", not absent, as the row's own text said.

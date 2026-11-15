@@ -1,0 +1,11 @@
+proposition	locator	quote	found_in_saved_page
+the question's quantity: ifenprodil-sensitive share of the L4-evoked NMDA current in whisker-intact mouse L2/3 at P13-P15	Results, Fig. 3	During normal postnatal development, 3 μM ifenprodil reduced the NMDA-receptor-mediated current by 53% (C.I. 43–61%) at P6–P8 (control, n = 9; ifenprodil, n = 5) but only by 14% (C.I. 0–34%) at P13–P15 (control, n = 15; ifenprodil, n = 10)	yes
+stimulation and recording site (layer 4 stimulus, layer 2/3 pyramidal cell)	Abstract	recorded from layer 2/3 pyramidal cells in vitro during voltage-clamp in response to stimulation in layer 4	yes
+the interval is a bootstrap 2.5/97.5 percentile interval	Methods, statistics	The observed means and the empirical 2.5 and 97.5 percentiles are reported	yes
+temperature and Mg2+ of the recordings	Methods, electrophysiology	at room temperature	yes
+Mg2+ concentration of the superfusate	Methods, slice preparation	2 mM MgSO 4	yes
+ifenprodil is given by incubation, so treated and control are different cells	Methods, drug application	slices were incubated for at least 40 min in artificial cerebrospinal fluid with the NR2B subunit-selective antagonist ifenprodil (3 μM; Sigma) in the holding chamber before cells were patched and recorded	yes
+how the NMDA current was measured	Methods, analysis	The amplitude of the slower NMDA-receptor-mediated current was measured at 50 ms after stimulation	yes
+the NMDA current is read at +40 mV	Methods, analysis	the amplitude of NMDA-receptor-mediated current measured at 50 ms at a holding potential of +40 mV	yes
+the age-matched deprived group keeps a high share	Results, Fig. 3	ifenprodil still significantly reduced the NMDA-receptor-mediated current by 49% (C.I. 24–71%; control, n = 7; ifenprodil, n = 6)	yes
+the oldest group	Results	the estimated ifenprodil-sensitive current was only 26% in P26–P33 whisker-deprived mice	yes

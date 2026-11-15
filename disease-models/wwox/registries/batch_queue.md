@@ -82,10 +82,10 @@ time; it does not redistribute or license the article text.
 | Status | Records | Share |
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 259 | 37% |
-| **Catalogued, never processed** — the reading debt | 120 | 17% |
+| **Catalogued, never processed** — the reading debt | 119 | 17% |
 | Known to the tracking log only | 78 | 11% |
 | Processed from the abstract | 13 | 2% |
-| Partial full text read | 70 | 10% |
+| Partial full text read | 71 | 10% |
 | Full text read | 166 | 24% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
@@ -209,7 +209,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [19188760](https://pubmed.ncbi.nlm.nih.gov/19188760/) | 2009 | ✅ | Journal Article | catalogued only | Association between CpG island methylation of the WWOX gene and its expression in breast cancers. |
 | [19130459](https://pubmed.ncbi.nlm.nih.gov/19130459/) | 2009 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | catalogued only | Fragile histidine triad protein, WW domain-containing oxidoreductase protein Wwox, and activator protein 2gamma expression levels correlate with basal phenotype in breast cancer. |
 | [18629536](https://pubmed.ncbi.nlm.nih.gov/18629536/) | 2009 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | Loss of WWOX expression in human extrahepatic cholangiocarcinoma. |
-| [18620777](https://pubmed.ncbi.nlm.nih.gov/18620777/) | 2008 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | catalogued only | The JNK inhibitor SP600129 enhances apoptosis of HCC cells induced by the tumor suppressor WWOX. |
 | [17609426](https://pubmed.ncbi.nlm.nih.gov/17609426/) | 2007 | ✅ | Journal Article; Multicenter Study; Research Support, Non-U.S. Gov't | catalogued only | Gene mapping and expression analysis of 16q loss of heterozygosity identifies WWOX and CYLD as being important in determining clinical outcome in multiple myeloma. |
 | [15798093](https://pubmed.ncbi.nlm.nih.gov/15798093/) | 2005 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | Components of DNA damage checkpoint pathway regulate UV exposure-dependent alterations of gene expression of FHIT and WWOX at chromosome fragile sites. |
 | [15073846](https://pubmed.ncbi.nlm.nih.gov/15073846/) | 2004 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, P.H.S. | catalogued only | The fragile genes FHIT and WWOX are inactivated coordinately in invasive breast carcinoma. |
@@ -562,7 +561,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 457 outstanding records)*
+*(showing all 456 outstanding records)*
 
 ## Already processed from this seed
 
@@ -595,6 +594,7 @@ for an entirely unprocessed record.
 | [25649963](https://pubmed.ncbi.nlm.nih.gov/25649963/) | 2015 | ✅ | partial full text | receipt FTR-20261029-25649963-01 | Loss of wwox expression in zebrafish embryos causes edema and alters Ca(2+) dynamics. |
 | [25537520](https://pubmed.ncbi.nlm.nih.gov/25537520/) | 2014 | ✅ | partial full text | receipt FTR-20261002-25537520-01 | WW domain-containing oxidoreductase in neuronal injury and neurological diseases. |
 | [24308844](https://pubmed.ncbi.nlm.nih.gov/24308844/) | 2013 | ✅ | partial full text | receipt FTR-20261019-24308844-03 | Molecular origin of the binding of WWOX tumor suppressor to ErbB4 receptor tyrosine kinase. |
+| [18620777](https://pubmed.ncbi.nlm.nih.gov/18620777/) | 2008 | ✅ | partial full text | receipt FTR-20261115-18620777-01 | The JNK inhibitor SP600129 enhances apoptosis of HCC cells induced by the tumor suppressor WWOX. |
 | [11572989](https://pubmed.ncbi.nlm.nih.gov/11572989/) | 2001 | ✅ | partial full text | receipt FTR-20260927-11572989-01 | WWOX: a candidate tumor suppressor gene involved in multiple tumor types. |
 | [25738261](https://pubmed.ncbi.nlm.nih.gov/25738261/) | 2015 | — | partial full text | receipt FTR-20261115-25738261-01 | ACK1 promotes hepatocellular carcinoma progression via downregulating WWOX and activating AKT signaling. |
 | [16061658](https://pubmed.ncbi.nlm.nih.gov/16061658/) | 2005 | — | partial full text | receipt FTR-20260811-16061658-02 | WW domain-containing proteins, WWOX and YAP, compete for interaction with ErbB-4 and modulate its transcriptional function. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | full text | PAPER 244 | WWOX oxidoreductase--substrate and enzymatic characterization. |
 | [16288044](https://pubmed.ncbi.nlm.nih.gov/16288044/) | 2005 | — | full text | PAPER 569 | Activated tyrosine kinase Ack1 promotes prostate tumorigenesis: role of Ack1 in polyubiquitination of tumor suppressor Wwox. |
 
-*(showing all 249 processed records from the seed)*
+*(showing all 250 processed records from the seed)*
 
 ## How to work one
 

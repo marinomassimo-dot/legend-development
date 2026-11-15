@@ -1,541 +1,569 @@
 {
-  "_schema": "orchestrator-task-v1",
-  "OWNER": "orchestrator",
-  "ACTOR_ID": "orchestrator",
-  "PRIORITY": "P0",
-  "TASK_ID": "ORCH-ADV-FOLLOWTHROUGH-20261114",
-  "START_UTC": "2026-11-14T07:55:00Z",
-  "SESSION_NAME": "ADV — Strategic Advisor",
-  "SESSION_BINDING": {
-    "session_id": "e6526331-6b7c-4631-8c9b-9e9d79867e90",
-    "pid_at_start": 1238811,
-    "runtime": "Claude Code (VS Code extension), model claude-sonnet-5-5",
-    "identity_source": "operator assignment (ACTOR_ID orchestrator, function: proactive strategic coordination), re-stated in the opening prompt of the 2026-11-14 increment; not inferred from the directory, the title or the runtime",
-    "run_from": "root checkout only for every campaign command (tick, evaluate, deliver, recall); edits in .claude/worktrees/adv on task/adv-r13"
-  },
-  "OBJECTIVE": "Generative-capacity follow-through of the pilot advisor_pilot_20261113 (operator increment 2026-11-14), inside the same campaign with counters and history kept: coordinate the two assignments the operator gave directly (HE: minimum useful link between the ADV-006 measurement knowledge and a real generation path; IT: baseline, before/after scientific effect, consumption), hold the presidio with one recall until the unchanged expiry 2026-11-14T18:22:36Z, spend an evaluation only where it can change a decision, use the one remaining Advisor-drafted assignment only for a precise scientific question that HE or IT identify, follow every delivery to its disposition, and report what is now used that was isolated, which output changed, what stayed unchanged, the tools really used and the observed cost. Distinct from ORCH-ADV-PRESIDIO-20261113 (COMPLETE, RELEASED; its report and outcome stay historical, not rewritten) and from ORCH-ADVISOR-PILOT-20261113 (IT Orchestrator: take-in-charge and disposition). The operator-given assignments are declared as operator-given and are not recorded as Advisor drafts. No renewal, no reset, no activate, no new service or spend, no new register, counter, gate, scheduler or approval level.",
-  "AUTHORISED_QUEUE_20261114": {
-    "MANDATE_STATE": "OPEN",
-    "OBJ_1_RECONCILE": {
-      "order": 1,
-      "title": "Reconcile the real state after the night report before acting",
-      "steps": [
-        {
-          "step": "Check remote and CI, what was consumed and what was deferred, which sessions are available, the recall state, and any work already started on the ADV-006 follow-up",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "2026-11-14T07:55-07:58Z. main = origin/main = bd6ff283 (0 ahead, 0 behind; the seven record commits of the night were pushed by another session); CI: #727/#728 success earlier, #729 Public release gate in progress on bd6ff283 (record-only commit). CronList: no scheduled job (my recall deleted at the night closure); one recall to restore. Campaign status (read from the root checkout): invocations 5/5, assignments drafted 6/6, ADV-001..006 all EXECUTED, expires 2026-11-14T18:22:36Z, enabled. ListAgents: HE, IT Orchestrator and SCI are interactive and idle; no commit, task record or dirty worktree after 06:52Z; the new HE and IT task records do not exist yet (operator prompts to them accompany this message). Deferred and still open from the night: HE's choice on registering inhibitory-thread tables in DESIGN_MAP (consumer_delta row 7 of ADV-006), the six design conflicts of ADV-006 (CF01, CF03, CF05b, CF23, CF04, CF05a) for whoever designs the recording, the scout CONTEXT defect (known limit). Not read as stalled: nothing is waiting on a battery."
-        }
-      ]
-    },
-    "OBJ_2_BUDGET": {
-      "order": 2,
-      "title": "Record the increment in the existing campaign without reactivating it",
-      "steps": [
-        {
-          "step": "Amend budget.json to 7 invocations and 9 assignments in total (amendments[] entry, used-before 5 and 6), unchanged expiry and turn limit; note that the code counts only Advisor drafts and that the two operator-given assignments are not counted, so at most one further Advisor draft; add the dated line to the Operator roadmap and the paragraph to PILOT_CAMPAIGN.md; land on main",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "Landed on main d77923ac (task close of task/adv-r13, commit 530be5d21): budget.json max_invocations 7, max_assignments 9, amendments[] entry with used-before 5 and 6, expiry 2026-11-14T18:22:36Z and turn limit 20 unchanged, note on operator-given assignments not being Advisor drafts; roadmap_current.md dated line and Pilot-campaign paragraph; PILOT_CAMPAIGN.md paragraph. Read back from the root checkout: 'invocations 5/7, assignments drafted 6/9, enabled'. No activate, no reset, no renewal."
-        }
-      ]
-    },
-    "OBJ_3_COORDINATE": {
-      "order": 3,
-      "title": "Coordinate HE and IT, verify take-in-charge, prevent duplication",
-      "steps": [
-        {
-          "step": "Send HE and IT one short coordination message each (what each owns, what the other owns, the shared read-only inputs, the ADV-006 originals, who consumes what), then verify each took the assignment in charge in its own record",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "Messages sent 2026-11-14T07:5xZ: to HE (msg 6649ffc8) and IT (msg 60aaf98e), ack to IT (d7e21a51). IT: take-in-charge recorded in ORCH-VERIFY-GENDIFF-20261114 (on main, baseline ea02afa81 with prereg_it51.md fixing improvement / no difference / worse before the comparison; IT confirmed no scientific question yet for the remaining assignment, cost kept apart from mine). HE: PLAN-HE-RECONCILED-USABLE-20261114 (reported by HE; read in its worktree .claude/worktrees/hrk: OBJ_1 diagnosis IN_PROGRESS, OBJ_3 link planned as registration plus mapping, no renamed tables); HE reported no recall of its own, no blocker, no battery, no evaluation 6 needed; adopted: no tuning to IT's criteria, six conflicts carried unresolved, two M01 kept apart. Duplication check: IT = baseline, after-run, harms, consumption; HE = link and scout input; ADV = presidio only. Step stays open until HE's delivery is read. CLOSED 2026-11-14T14:3xZ: both take-ins-in-charge verified in their records (IT: ORCH-VERIFY-GENDIFF-20261114, then ORCH-VERIFY-INHIB-20261114 and ORCH-VERIFY-INHIB2-20261114; HE: PLAN-HE-RECONCILED-USABLE-20261114, PLAN-HE-LEVERS-INV05-20261114; SCI: ORCH-PRESIDIO001-20261114); no duplication observed; the obsolete 'pending' wording is superseded by OBJ_8."
-        }
-      ]
-    },
-    "OBJ_4_RECALL": {
-      "order": 4,
-      "title": "Presidio: one recall, quiet, until the unchanged expiry",
-      "steps": [
-        {
-          "step": "Restore exactly one hourly recall with the existing procedure (CronList first, strategic_advisor.py recall for the text), then verify its first automatic fire and tell HE the result",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "2026-11-14T08:0xZ: CronList showed no scheduled job; recall text printed by strategic_advisor.py recall; exactly one CronCreate, job 3382bb86 hourly at :17 (session-only). First AUTOMATIC fire delivered to the session by the scheduler at 08:23:06Z (a manual tick is not counted): verdict EVALUATE, reason 'roadmap changed' (my own dated roadmap line recording the operator's instruction), events list the landed deliveries and the two new records; held, see OBJ_5. Result told to HE. CronList: one job."
-        },
-        {
-          "step": "At the pilot expiry 2026-11-14T18:22:36Z: do NOT delete the recall (operator clarification, in the roadmap seat); read presidio and mode in the tick; start no evaluation or assignment that is not due; state the state of the authorised work in the report",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "2026-11-14T18:23Z: the pilot expiry 18:22:36Z passed; tick at 18:23:12Z returned mode continuous, presidio 'WAITING (legitimate)', verdict NONE (not EXPIRED); CronList shows exactly one job, 3382bb86; the recall was not deleted; no evaluation or assignment was started because of the expiry."
-        }
-      ]
-    },
-    "OBJ_5_FOLLOW": {
-      "order": 5,
-      "title": "Follow each delivery to its disposition; spend an evaluation only where it can change a decision",
-      "steps": [
-        {
-          "step": "Read the HE diagnosis and the IT baseline in their originals; decide with a reason whether evaluation 6 is due (candidate moment: after the baseline and the technical diagnosis, to choose between the link, an alternative representation or another opportunity); evaluation 7 only after a consumed result and only if it can change the choice between going deeper, changing thread or investing no more",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "Evaluation 6 (P6) run 2026-11-14T09:55:11Z-09:56:53Z after HE's delivery (a33c39a90) and IT's after-run (62c89eff1, 'improved in access, not in consumption'; missing step = owner-authored hypothesis-to-measurement link or declared-key join; resumption condition: link, then rerun the same case). Stage P, opus effort high, 9 turns (8 on claude-opus-5-5, 1 on claude-opus-5: runtime fallback, changed_mid_run true), output 7,476 tokens, cache read 378,913, cache creation 68,718, 0 drafts; invocations 6/7 (drafted 6/9). Read by the Advisor: P5, four task records, IT51 notes, SCI51 README, investigations_it20 INV-05; NOT read: HE's README update, ADV-006 originals, the CP tsv and baseline, the dashboard page, the scout feed used as stale. Result: HOLD, draft nothing. My reading, in the originals: the hold rests on 'IT recorded no question' (my own OBJ_3 line, written before the after-run) and on 'drafting would pre-empt the owners', which conflates sending an assignment to the owners with authoring; the conclusion stands until IT answers a neutral question (sent b293a943: names a precise question or stops at 'improved in access'). Comparison of other opportunities in P6 was made from records, not from the dashboard page. Revival: IT or HE name a precise question with originals and decision; otherwise no further assignment and the increment closes with the honest verdict. Evaluation 7 only after a consumed result."
-        },
-        {
-          "step": "Decide with a reason whether the one remaining Advisor-drafted scientific assignment is used: only for a precise question that HE or IT identify, with question, originals, decision affected, perimeter, resources and recipients; no assignment is required",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "2026-11-14T11:3xZ. The remaining scientific slot is not used as an Advisor draft: IT's durable disposition (ORCH-VERIFY-GENDIFF-20261114 key DISPOSITION_AFTER_ADV_QUESTION_20261114, main 0f1193b7c) stops on CP-BH1/BH2; I verified in the originals that CP-BH1 = AMPA/kainate gain, CP-BH2 = NMDAR subunit/matched current, CP-BH3 = gap junctions, all NEED-EXCITATORY-GAIN, so the IT51 case was unsuited. A different decision follows (OBJ_8). No assignments.jsonl entry: the new work is a presidio decision, not an Advisor draft and not operator-given."
-        },
-        {
-          "step": "Follow each delivery along result -> comparison/hypothesis/experiment -> consumer -> new question -> next choice; every deferral gets a concrete reason, a recipient and a revival condition",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "Followed to disposition 2026-11-14: ADV-006 follow-through -> HE link and IT52 (case unsuited, improved in access) -> fairer case SCI47 levers L1/L2 -> SCI owner confirmation (PRESIDIO-001/002 complete, landed 8de503223) -> HE builds -> IT52 rerun improved -> marking pass -> consumption 01d13e358 -> thread closed; deferrals: SCI50 levers and SCI42 explanations suspended (revival: gate 0 or the M1/EBP question for clemastine moves, or a cost report that changes the cost-benefit); lever residuals with SCI (owner statements) and HE (generator marks), recorded in result_it52_rerun.md."
-        }
-      ]
-    },
-    "OBJ_6_REPORT": {
-      "order": 6,
-      "title": "Short report to the operator",
-      "steps": [
-        {
-          "step": "Report: what is now used that was isolated; which scientific output changed; what stayed unchanged; strategic tools really used (examined, received in the brief, only available); observed cost split into presidio, evaluations and executive work (operator-given work declared as such); the next decision, already assigned when authorised. Keep apart observed generative improvement, better experiment formulation and validated predictive capacity",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "Report given in chat 2026-11-14T14:2xZ: what is now used, which output changed, what stayed, tools examined/received/only available, cost split (presidio 142 turns, 160,808 output tokens; evaluations 24 turns, 21,052 output; executive work as reported by the owners, operator-assigned declared), my errors, next decision; three-way separation kept (observed change yes; better experiment formulation yes; prediction none)."
-        }
-      ]
-    },
-    "OBJ_7_STANDING": {
-      "order": 7,
-      "title": "Standing strategic continuity inside the operator roadmap; genuine whole-portfolio waits remain explicit",
-      "steps": [
-        {
-          "step": "Maintain the useful research pipeline from the standing roadmap, portfolio, candidates/questions, DREAM, diagnoses and radars; select or prepare the next source-backed work after results; restore one canonical recall when needed; operator silence and a distant report are not dependencies",
-          "status": "IN_PROGRESS",
-          "owner": "orchestrator",
-          "evidence": "Operator correction implemented by ACTOR_ID plan on2026-11-15: cross-session transport section12, Strategic synthesis is executable work / Route useful signals. Supersedes the stale standing BLOCKED field, its concluded delivery and old recall reference; previous state remains in Git history. Current native recall is one477df2a9 after explicit reconciliation; restore by the canonical recall procedure if lost. This is a standing responsibility, not a requirement to spin or launch work without value. A genuine whole-portfolio wait must have current evidence and a real resumption condition. The timed trial-report step remains separate."
-        },
-        {
-          "step": "HE's CI conclusion on the lever and follow-through SHAs (single observer: HE; the presidio does not poll the CI)",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "unblock_when": {
-            "record": "PLAN-HE-LEVERS-INV05-20261114",
-            "state": "COMPLETE"
-          },
-          "evidence": "HE's record PLAN-HE-LEVERS-INV05-20261114 COMPLETE on main 002535fc2 (unblock_when resolved by itself); CI green on the exact lever SHAs #739 ba0283130, #743 00feda1c8, #747 4c45ab039, #749 4c3d2d5bb, #750 e139cddda and on the follow-through SHAs #744, #745; the CI of the coordination fixes (#751, bff630afd) is observed by HE."
-        }
-      ]
-    },
-    "OBJ_8_INHIBITORY_CASE": {
-      "order": 8,
-      "title": "A fairer test: the inhibitory thread's own pharmacological levers reach the generator",
-      "steps": [
-        {
-          "step": "Decide the next step from the originals, comparing a pertinent inhibitory-thread case, another concrete generative limit, another roadmap question, and no further investment",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "2026-11-14T11:3xZ, no evaluation spent. Examined: CP rows (CP-BH1/2/3 = excitatory), hypothesis_packages.tsv (no inhibitory hypotheses registered), conditional_proposals_packages_it47.tsv (no INV-05 package rows), SCI42 explanations.tsv and SCI47 levers.tsv, ADV-006 measurements.tsv/conflicts.tsv, IT's result_it51.md and durable disposition, view/work_order.json entries. Chosen: SCI47 levers L1/L2 (GABA availability; postsynaptic GABA-A positive modulation) joined by declared keys (requests_merged token L1->M16, L2->M17; interpretable_after M02,M04,M05; M15 comparator; conflicts m_id CF01,CF03,CF04,CF05a/b,CF23), with IT before/after and an independent scorer. Deferred, with reasons: SCI42 explanations (two declared keys disagree for 7 of 7: source_names vs requests_merged); other roadmap questions (remaining in-silico headroom is small per P6 and wet; compared from records, not the dashboard page); stop (kept as the outcome if the diagnosis shows the route is not small or the after-run shows no difference)."
-        },
-        {
-          "step": "Direct messages to the actual recipients; verify take-in-charge in their records (IT: baseline first; HE: diagnose, build after the baseline)",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "Take-in-charge verified 2026-11-14: IT = ORCH-VERIFY-INHIB-20261114 (BEFORE and criteria landed 5119526a1, prereg_it52.md: improved / no difference / worse fixed in advance, three-way separation, independent blind reader = one sonnet high delegate, cost apart); HE = PLAN-HE-LEVERS-INV05-20261114 (built after the BEFORE landed; delivery ba0283130, gate PASS, ~90 lines, 6 tests). Messages: IT fcef0823, HE fbfc18de; HE's delivery and IT's receipt arrived by the new route check (resolved to this session)."
-        },
-        {
-          "step": "Read IT's before/after and HE's delivery in the originals; decide with a reason whether to deepen (L3-L6, explanations), change thread or stop; evaluation 7 only if it can change that choice",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "IT52 closed 2026-11-14 (ORCH-VERIFY-INHIB-20261114, 921d875d6; revision ba0283130): NO DIFFERENCE in what an independent reader finds actionable; observed output change yes (6 lever rows, 53-row map, accurately quoted, no side chosen, no id in the wrong space); better experiment formulation not shown; prediction none. Read in the originals by me: result_it52.md, and SCI47 matrix.tsv O01-O06 (outcome-to-lever statements exist), which shows that the generator's 'expected result: not stated' and 'package does not classify the other rows' are false for the package; my earlier approval of the former as 'honest' rested on levers.tsv only (my error, told to HE and IT). Decision (mine, no evaluation 7, from the originals): ONE more iteration with a stop rule instead of stopping or changing thread: reasons: the reader's missing items (evoked IPSC tied to the L1-vs-L2 choice, outcome-to-lever table, conflict content, preparation/age) are mostly declared in SCI47/ADV-006 and mechanical or owner-confirmable; cost small (HE mechanical items, one SCI confirmation session, one fresh blind reader); the alternatives compared were: stop (valid; kept as outcome if the rerun shows no difference), other roadmap questions (remaining in-silico headroom small per P6, not re-read from the dashboard), SCI42 explanations (two declared keys disagree 7/7). Not an independent assessment: declared. Messages: SCI d2133d6f (PRESIDIO-001, assignments/PRESIDIO-001.md on ceed002f6), HE a3021777, IT b085b850; recipients resolved by mandate_watch.py route (RESOLVED)."
-        },
-        {
-          "step": "Second iteration: verify take-in-charge (SCI PRESIDIO-001, HE second build), read the confirmation table and HE's second delivery in the originals, IT's rerun with a fresh blind reader on the same criteria; stop rule: no third iteration, suspend with revival conditions if no difference",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "Sent 2026-11-14T12:2xZ; take-in-charge pending. Awaited events: SCI's confirmation table (a record id and a dated folder), HE's second SHA, IT's rerun note. Checked not yet occurred at send time. 2026-11-14T12:0xZ: HE delivered the mechanical second build 00feda1c8 (gate PASS: conflict content, L3/L6 'NOT PROPOSED', preparation/age, id-space note, the two false sentences replaced by a neutral pointer; waits for SCI: PKG_MAP confirmation, join to matrix.tsv outcome columns, CF01/CF03). IT (ORCH-VERIFY-INHIB2-20261114) proposes to rerun once on the SCI-complete build, not on 00feda1c8 now, because the reader's yardstick is made of the pending items: agreed. Fallback named: if SCI has not recorded a take-in-charge or answered by 13:30Z, or answers 'cannot be stated without a choice', IT runs the last iteration on the then-current build. SCI take-in-charge for PRESIDIO-001: not yet recorded at 11:57Z (sent about 11:50Z; route RESOLVED). 2026-11-14T12:4xZ: SCI took PRESIDIO-001 and PRESIDIO-002 in charge (record ORCH-PRESIDIO001-20261114, folder levers_owner_confirmation_presidio001_20261114/, landing about 14:30Z after a battery). Owner's reading, blind reader 60/79 agreed, 3 disagreed, 10 overstated, 1 unverifiable, 5 missed: mapping faithful with slot-label exceptions; L1 comparator = a tension inside SCI47, ADV-006 CF23 line 'incomplete, not wrong'; attachments by declared keys (L1: O01/O04/O06; E-id fan-out cannot separate L1 from L2; L3: O03/O14; M01 and M03 first-hop for L1/L2); M02/M04/M05 are dependencies of interpretation; CF03 attaches to L1 and L2; CF01 cannot be stated without a choice (SCI47 contradicts itself). HE prepared (not landed) one build on that reading (task/hrk12, 6f979ede2) and lands after the folder; IT reruns once after it (ORCH-VERIFY-INHIB2-20261114), criteria unchanged, fresh blind reader. My error recorded: PRESIDIO-002's premise (keys disagree 7 of 7) was my misreading of source_names, which lists merged components; SCI found the keys consistent by construction, one real gap (M26 for SCI42 M02) and one false hit (M22). My relay of SCI's first (unverified) wording ('contradicted', 'wrong') was corrected to HE and IT after the blind reader. Lesson for the report: ADV-006 passed a blind verifier and still carried errors that appeared only at the owner's depth of reading; a mechanical cross-check by the presidio is a prompt for the owner, not a finding. 2026-11-14T13:5xZ: SCI's folder landed 8de503223 (PRESIDIO-001 and 002 complete; read in the original); HE landed its build 4c45ab039 on the landed table (its blocked step flipped to CONTINUE by unblock_when: first real use); IT rerun landed aafda2d3f (ORCH-VERIFY-INHIB2-20261114; read in the original): IMPROVED IN ACTIONABILITY (six experiment-changing items found by a fresh blind reader: same-slice defect measurement and genotype-by-drug interaction, event identity before the sIPSC fall as L1 target, CF03 stratification vs glutamate block in one slice, cohort structure vs L2 'same cells', calibrating a reuptake arm on its own readout, non-Wwox and WT controls) WITH ONE PRE-REGISTERED HARM TRIGGERED (CF04/CF05a side B = August design, global allele, CA3, attached to the Synapsin-Cre layer II/III lever unmarked; L2 inherits P13-17 unmarked) and two inconsistencies (M01 hop label, O10 sentence). Kept apart: observed change in output yes; better experiment formulation yes (reader-tested); prediction none. My decision (13:5xZ, msgs IT fa59bd1c, HE 911dbacb): ONE mechanical marking pass by HE on five named points (no new content, residual items are revival conditions), verified by HE's tests and a narrow recheck by the SAME reader on the flagged points (my difference from IT's no-reader recommendation: the harm was pre-registered), then IT consumes only reader-verified items in the existing consumers (INV-05 next_test, levers.tsv notes), no ranking/sign/need/state change; then the thread closes. Completes the harm fix of iteration 2; no third iteration. CLOSED 2026-11-14T14:1xZ: HE's last mechanical list landed e139cddda (one M01 statement on L2, M06 off L1, M14 in full with provenance, L3 reduced losslessly 29->17 KB); IT spot-checked by string and consumed 01d13e358: dated additions in levers.tsv L1 and L2 action cells (the CF03 limit: glutamate block and burst-status stratification cannot both be met in one recording; the specificity controls of design_review (e): Cre-positive WT and heterozygous littermates, WT slices given the same drug, a non-Wwox hyperexcitable preparation at matched baseline burst rate; L2's 'same cells' vs the Phase 0 wording, not decided by the package); INV-05 next_test not edited (it concerns the NMDAR arms; an edit would force dashboard and four-language regeneration without a new statement about them). Iteration 2 = IMPROVED (observed change yes; better experiment formulation yes, six reader-tested items; prediction none). Residual items with recipients are in generation_it52_20261114/result_it52_rerun.md (SCI: owner statements; HE: generator marks). ORCH-VERIFY-INHIB2-20261114 COMPLETE. Reader cost (IT): 43,085 + 78,513 output tokens plus one resumed recheck; SCI blind verifier 191,333 subagent tokens; HE's own not stated."
-        },
-        {
-          "step": "After the thread closes: choose the next investment (deepen the lever residuals via owners, repeat the method on another thread, or stop) on updated premises; evaluation 7 only if it can change that choice",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "2026-11-14T14:2xZ. Evaluation 7 (P7), stage P, opus effort high, 15 turns all claude-opus-5-5, output 13,576, cache read 892,889, cache creation 88,906, 14:17:37Z-14:20:04Z: INCOMPLETE, a safety classifier stopped the text before the 'next bounded action' section; 0 drafts; it counts as an invocation (7 used). What it delivered and I use: the lever thread stays closed under its stop rule; registering the SCI50 myelin levers the same way stays suspended (it disagreed with my preferred candidate on cost and premise: revival when gate 0 or the muscarinic-versus-sterol (M1/EBP) question for clemastine moves, or when this report shows what the lever method cost); no reason has appeared to open the SCI42 explanations (my earlier reason, two keys disagreeing 7/7, was my own misreading) or the radar items NP3P3/NP3A1. A 'CTGF question' in its section 2 is an unfinished line of analysis, not acted on, left for a later evaluation or my own choice. Not retried now: the same brief would likely meet the same stop and the continuation would be a repeat, not new information. Not read by the Advisor: IT24 P4 README, the p47t line, the Repudi manifest, the live dashboard page. My decision, mine and stated as such: no further investment on the lever method now; SCI50 levers and SCI42 explanations suspended with the revival conditions above; the lever residuals stay with SCI (owner statements) and HE (generator marks); the presidio does not end: it waits for a roadmap change, a delivery, a mandate transition, HE's CI conclusion on the last SHAs or an operator line."
-        }
-      ]
-    },
-    "OBJ_9_ANTICIPATION": {
-      "order": 9,
-      "title": "Anticipate useful work during waits (operator's permanent rule of 2026-11-14): short, reviewable queue; no speculative sequences; motivated waits are valid",
-      "steps": [
-        {
-          "step": "Apply the rule to the lever thread's wait for SCI: queue one independent item for SCI after PRESIDIO-001 (PRESIDIO-002: the two declared keys of ADV-006 disagree for 7 of 7 SCI42 explanations; mechanical cross-check by the presidio, owner decides), with the rule's delivery wording; keep the thread's own wait otherwise",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "2026-11-14T12:0xZ: rule recorded in the Operator roadmap seat (dated line); assignments/PRESIDIO-002.md on main after landing; sent to SCI with the wording 'The current work keeps priority. Queue this assignment; you may anticipate its independent parts if resources and dependencies allow. Before starting it, check that results that arrived since have not changed its usefulness.'. Not started in parallel: both branches of the open decision (continue vs suspend the lever thread) are not both started. Checked and rejected as an anticipation: a dream pass or a new thread now (the lever thread has the priority and shared resources are unknown; a wait is not proof of available resources). Outcome 2026-11-14T12:4xZ: PRESIDIO-002 closed by SCI (no cell edit, dated note); its premise was my misreading; the queue is empty; the anticipation of HE's build behind SCI's verifier is the one real case of the rule on this thread (candidate ba0283130 untouched, prepared branch not landed)."
-        },
-        {
-          "step": "Portfolio comparison at the operator's integration of 2026-11-14 ('continuous portfolio direction after the lever thread'): distinguish 'this method does not deserve another iteration' from 'no other useful work exists'; choose among an independent assignment, a queued one or waiting; say which decision could change, why it prevails, which result makes continuing useless",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "2026-11-14T14:4xZ. Inputs actually read: investigations_it20.tsv (19 investigations, ranks 1-7: nearly all next tests are wet, so the in-silico lever is formulation of experiments and tool facts), open_questions_map.tsv (191 rows: 163 OPEN; 57 open non-wet zero-spend rows, mostly tool-potency and primary-source readings and DC-* hygiene), ADV-002_result.md (route facts), ro25_6981_sci44 README via the map row, the earlier dashboard work_order.json and the unregistered-tables census; not read: the live dashboard page, DREAM (nothing pertinent found in recent DREAM files; no activity built to say it was used), radar (stale feed; HE's declared limit), candidate cards. Chosen: ONE queued assignment, PRESIDIO-003 (SCI): IT43-Q01 Ro 25-6981 primary sources, reachability first; decision it could change: whether Ro 25-6981 is named a PRIMARY-tier second tool of the ifenprodil site in the generator's compound decisions and INV-05 row C-RO1; why it prevails: already in output, sources named, no wet result needed, no repeat of the lever method; makes continuing useless: no named source lawfully reachable, or reachable sources do not state maximal inhibition/triheteromer; not chosen: lever method on SCI50/SCI42 (cost/benefit), other tool-potency rows (no named sources), DC-* hygiene (integrator), waiting alone (valid, but a cheap bounded independent item exists)."
-        },
-        {
-          "step": "Single observer per shared verification: HE observes the CI of the lever and follow-through SHAs and informs IT and the presidio; the others do not poll",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "Told HE and IT 2026-11-14T14:4xZ; the presidio reads HE's record state through unblock_when instead of polling ci_runs."
-        },
-        {
-          "step": "PRESIDIO-003 followed to its disposition: delivered (SCI 1a432bb6f); unchanged result; consumption pending (IT: IT43-Q01 status access-limited with revival trigger; HE: V18 wording, its choice); verify at the next ticks that both happened, nudge only if absent",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "SCI's delivery read in the original (README answers 1-4, limits); not independently re-read by a blind check (disclosed by SCI). CLOSED 2026-11-14T17:5xZ: IT recorded IT43-Q01 as access-limited with a revival trigger (ab4e56398) and re-checked on efetch bytes that Hansen 2014 never mentions Ro 25-6981 (a second, independent reading of the key absence); HE declined the V18 wording change with a reason (the phrase is the engine's generic PRIMARY text; M-R1/M-R2 carry the unmeasured part; no reader has failed on it; reopen if a real reader misses the limit); SCI, IT and HE accepted. Result UNCHANGED (no tier or rank change): the useful effect is a closed question and a radar that stops re-asking, at SCI cost 0 subagent tokens and about 71 minutes of waiting on a battery."
-        },
-        {
-          "step": "At a tick, relevant incoming signal or delivery, assess whether independent, queued or conditional work is worthwhile; judge radar leads regardless of addressee; notify the responsible live actor with the original durable pointer and follow its response; reconcile the queue against current results",
-          "status": "IN_PROGRESS",
-          "owner": "orchestrator",
-          "evidence": "Operator correction implemented by ACTOR_ID plan on2026-11-15: cross-session transport section12, Strategic synthesis is executable work / Route useful signals. Supersedes the stale standing BLOCKED field, its concluded delivery and old recall reference; previous state remains in Git history. Current native recall is one477df2a9 after explicit reconciliation; restore by the canonical recall procedure if lost. This is a standing responsibility, not a requirement to spin or launch work without value. A genuine whole-portfolio wait must have current evidence and a real resumption condition. The timed trial-report step remains separate."
-        },
-        {
-          "step": "Portfolio comparison after ADV-009's consumption (the operator's 'continuous portfolio direction' rule): choose among assign, queue or a motivated wait with the decision it could change, why, and what would make continuing useless",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "2026-11-15T03:3xZ: motivated wait until the 05:20Z scout briefing; reasons and exclusions in TRIAL_24H.log; P11's own wait (degraded run, stale premise) not relied on. Resume conditions: the scout briefing with a signal that survives triage; a delivery or mandate transition; an operator line; the trial review after 15:29:29Z."
-        }
-      ]
-    },
-    "OBJ_10_TRIAL_24H": {
-      "order": 10,
-      "title": "24-hour continuous-autonomy trial (2026-11-14T15:29:29Z to 2026-11-15T15:29:29Z)",
-      "steps": [
-        {
-          "step": "Start: record the effective time, the window end, the baseline; confirm that the trial has begun; verify the recall and the session-mandate association",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "TRIAL_24H.started_utc 2026-11-14T15:29:29Z, ends 2026-11-15T15:29:29Z; baseline in TRIAL_24H.baseline_at_start; one recall job 3382bb86 and the route/binding verified, nothing duplicated or restored; the three sessions told and the operator told in chat."
-        },
-        {
-          "step": "During the trial: conduct work inside the roadmap without asking the operator for operational prompts; compare threads and opportunities through the pertinent inputs; assign proportionate work to IT, SCI and HE and verify take-in-charge, delivery and consumption; use waits for independent, queued, conditional work or a motivated wait; keep scientific and publication verification; one CI observer (HE); preserve frozen candidates; no external spend; keep TRIAL_24H.log with events, interruptions, restarts and human interventions",
-          "status": "IN_PROGRESS",
-          "owner": "orchestrator",
-          "evidence": "Operator correction implemented by ACTOR_ID plan on2026-11-15: cross-session transport section12, Strategic synthesis is executable work / Route useful signals. Supersedes the stale standing BLOCKED field, its concluded delivery and old recall reference; previous state remains in Git history. Current native recall is one477df2a9 after explicit reconciliation; restore by the canonical recall procedure if lost. This is a standing responsibility, not a requirement to spin or launch work without value. A genuine whole-portfolio wait must have current evidence and a real resumption condition. The timed trial-report step remains separate."
-        },
-        {
-          "step": "At the end of the window (2026-11-15T15:29:29Z): measure consumption by the stated method and produce the compact report with the 48-72 hour recommendation",
-          "status": "TODO",
-          "owner": "orchestrator"
-        }
-      ]
-    },
-    "OBJ_11_ADV007": {
-      "order": 11,
-      "title": "ADV-007 (Advisor draft from evaluation 8): CTGF/CCN2 in the held WWOX-KO expression data, for SCI",
-      "steps": [
-        {
-          "step": "Read the assessment and the draft in the originals and verify the decisive facts before forwarding",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "2026-11-14T19:1xZ. Verified in the originals: gse156243/derived/list_padj_le_0.05.tsv line 360 CTGF KO up, log2FC 1.32, p 0.00031, padj 0.00707 (protein_coding); SCI50 README DREAM section names the check; INV-06 row 7 carries 'the Wwox-CTGF link is unsupported'. Premises of the draft corrected before sending: (1) signature_it23_20261103/composition_class.tsv line 198 CCN2 row has blank log2fc and blank rho with the flag columns 0: probably NOT ASSESSED, not 'tested and clean' (the Advisor itself flagged the ambiguity); (2) relations_it23_p2_20261103/novelty.tsv has 0 CTGF hits by grep (the draft's '15 CTGF rows' is not in that file); (3) the SCI51 consumer delta is not pending: IT50 consumed it (ddee87d4b, verified 3a93267ba), the State column of the producer's delta file simply was never updated, so there is no priority-1 precedence conflict. The CTGF line of the incomplete P7 was not reconstructed; the assignment rests on repository files only (the Advisor declares its own exposure)."
-        },
-        {
-          "step": "Deliver to SCI (the effective recipient) with the queue wording; record SENT with --to; verify take-in-charge in SCI's record; follow to delivery and consumption (IT: INV-06 row 7 wording only if the verdict licenses it)",
-          "status": "IN_PROGRESS",
-          "owner": "orchestrator",
-          "evidence": "Delivered to SCI 2026-11-14T19:0xZ (msg 9180c4a8; SENT recorded with --to SCI, landed 6d2f97a7b; premise corrections sent; my premise 2 was incomplete: novelty.tsv has 15 CCN2 rows, not CTGF, SCI found it). Taken in charge by SCI as ORCH-ADV007-20261114 (status message ~19:2xZ). DELIVERED 2026-11-14T~21:0xZ, landed 777144319: verdict (b) inconsistent or composition-explained: the one concordant table (human KO organoid GSE156243, CTGF log2FC 1.32, padj 0.00707, 4 v 2 libraries, exact permutation floor 0.13) is of the size a progenitor-state shift alone would carry (projection +1.21 vs observed +1.15), mouse bulk tables disagree in sign, the snRNA pool rise sits with a composition shift, the CAGE pair is uninformative; the SCI50 DREAM expression line is closed with this reason. Blind check: one sonnet-high verifier (44 turns, output 51,210, cache read 3,111,079), 32 claims: 26 confirmed, 3 narrowed (applied), 3 unverifiable, 0 contradicted; battery 20261114-193055-c1cc00a7 PASS WITH SKIPS (251 targets, 12 skips), 72-minute wait by PID, no interruption/restart/human intervention. Premise corrections confirmed by SCI: composition_class.tsv CCN2 flags are DEFAULTS (a rename lookup miss: 15 rows IRAG1, CCN2, DRC4, MNMIP1, POFUT4, MTCL2, ATOSB, HDIP1, BBLN, ADPRS, CIRSR, H1-2, H1-10, H4C15, ZNRD2). Consumption pending with IT (consumer_delta rows 1 optional INV-06 row 7 wording, 3 dated README note in signature_it23, 4 DREAM disposition appended by SCI); HE answered the tool defect: no harness change now (no shared alias helper; one same-class unrun pattern lincs_it2_null_sets.py:40 dec.get(g, 0); labelling needs regeneration, the owner's call; 'NA' marker if the owner regenerates; reopen if a reader takes a zero row as clean)."
-        }
-      ]
-    },
-    "OBJ_12_ADV008": {
-      "order": 12,
-      "title": "ADV-008 (Advisor draft from evaluation 9, RP-008): declined by the presidio after premise check",
-      "steps": [
-        {
-          "step": "Check the draft's decisive premises in the originals before sending; send, narrow or decline with the reason; correct the shared portfolio row so that it does not say 'assigned' for work that was not sent",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "Declined 2026-11-14T22:3xZ: see TRIAL_24H.log; assignments.jsonl keeps ADV-008 at DRAFTED (never SENT, honest); RP-008 corrected by portfolio --upsert to backlog with the narrow residual and a resume_when; the Advisor's other portfolio updates (RP-017 outcome from ADV-007; RP-005 resume_when) kept as correct. Nothing was sent to IT: no wasted executive work."
-        }
-      ]
-    },
-    "OBJ_13_ADV009": {
-      "order": 13,
-      "title": "ADV-009 (Advisor draft from evaluation 10): INV-03 pair, matched isoform potencies and hERG/QT data (WO-25), for SCI",
-      "steps": [
-        {
-          "step": "Check the draft's decisive premises in the originals, then send with the queue wording; record SENT with --to; verify take-in-charge; follow delivery and consumption",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "Premises verified (see TRIAL_24H.log 01:5xZ). Landing the evidence now; SENT and the take-in-charge are recorded after the message. SENT 2026-11-15T01:28Z to SCI (msg 5946fa6d, route RESOLVED, --to SCI recorded, landed with this commit); take-in-charge pending. TAKEN by SCI as ORCH-ADV009-20261115 (record opened 01:29Z, one minute after SENT at 01:28Z). PRODUCED 01:43Z (commit a64f784dc, 15 minutes of work), then a battery wait of about 70 minutes; LANDED 02:54Z (development/main 466a0f2e3; battery PASS WITH SKIPS): the efonidipine/flunarizine pair of INV-03 stays a proposal, QUALIFIED: flunarizine one-assay triple (Santi 2002: Kd 530/3552/837 nM on Cav3.1/3.2/3.3), efonidipine Cav3.2 only (Perez-Reyes 2008: IC50 2.9/2.0/2.3 uM, flux assay) and an abstract-level oocyte pattern (Furukawa 2009), patterns in opposite directions from different assays; hERG: none for efonidipine, flunarizine 5.7 nM (abstract) vs 447-606 nM binding/screening, unreconciled; WO-25 narrowed; access results with SHA-256 per route (reCAPTCHA stop respected, no circumvention). SCI: no blind verifier (declared weak point), 16 of 16 quotes found by script, zero delegate tokens. CONSUMED by IT (585d8703a, 03:00Z) after IT's own independent re-read of the decisive numbers on the PMC pages (no delegate): applied as dated additions in compare_it28 (the '10^-8..10^-6 M' statement does not hold for this pair; sections 2b/6 superseded in part; hERG sentence carried conditionally; WO-25 OPEN with narrowed text and revival), left: INV-03 wording (optional, would regenerate ranking and four-language views) and the route fact for the scripts README (forwarded to HE). ERROR CAUGHT BY THE INTEGRATOR's re-read: SCI's 'human HEK tsa201 channels' was wrong (cloned RAT alpha1G/H/I in the human HEK cell line; efonidipine's Perez-Reyes assay used human Cav3.2a, so the pair also differs in channel species); the correction reached SCI (my message cde48714) and SCI appended a dated Correction section (b1d005d8f 03:01Z, on development/main 7c68e8228) saying what it replaces. Verdict unchanged. Observable cost: SCI about 1.5 hours wall time (15 minutes of work and about 70 minutes of battery wait), no delegate; IT re-read, no delegate; Advisor P10 17 turns, output 14,052."
-        }
-      ]
-    },
-    "OBJ_14_OPERATOR_NEXT": {
-      "order": 14,
-      "title": "Operator instruction of 2026-11-15: IT23 symbol lookup trial (NOW), CTGF closure with X1 conditional, Cav3 qualification (NEXT), IT52 reuse",
-      "steps": [
-        {
-          "step": "Record the instruction in the roadmap seat, the portfolio and the assignments; send to the actual recipients; verify take-in-charge",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "Recorded, sent (HE 0e9b067d, SCI 25e15631, IT 78882792), taken in charge by all three within minutes (HE PLAN-HE-IT23-SYMBOL-TRIAL-20261115, SCI ORCH-PRESIDIO004B-005-20261115, IT part C)."
-        },
-        {
-          "step": "Follow PRESIDIO-004 to its disposition (HE trial, SCI reference, IT KEEP/DISCARD/INCONCLUSIVE) and PRESIDIO-005 (queued) to delivery; IT applies the operator-directed INV-06 row 7 and INV-03 wording and narrows WO-25's blocking text",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "PRESIDIO-004 DISPOSED (see TRIAL_24H.log 08:0xZ); IT applied the INV-06, INV-03 and WO-25 wordings (bee8e7bed). Still open: PRESIDIO-005 (SCI: X1 first-question table, in its landing with a battery) and the landing of SCI's part B comparison; the question of the two live LINCS queries (S8/S9, 5 of 625 genes) belongs to the operator and is flagged for the report, not requested. CLOSED 2026-11-15T09:4xZ: PRESIDIO-004 (A, B, C) disposed; PRESIDIO-005 delivered and landed (the X1 first question answered in x1_discriminating_observations_presidio005_20261115/); the INV-06 and INV-03 wordings and WO-25 applied by IT (bee8e7bed); the two live LINCS queries (S8/S9) are not requested: for the operator's decision, recommended against (5 of 625 genes, no ranking effect shown)."
-        }
-      ]
-    },
-    "OBJ_15_ADV010": {
-      "order": 15,
-      "title": "ADV-010 (Advisor draft from evaluation 12, RP-008): reading-coverage census of older unread WWOX literature, for the Orchestrator",
-      "steps": [
-        {
-          "step": "Check the draft's premises in the originals, narrow it, send with the queue wording, record SENT with --to, verify take-in-charge, follow delivery and consumption",
-          "status": "DONE",
-          "owner": "orchestrator",
-          "evidence": "Premises checked and the draft narrowed (see TRIAL_24H.log 08:3xZ); sending after this landing. SENT 2026-11-15T08:3xZ to IT Orchestrator (msg f30483d2, --to recorded, landed with this commit); take-in-charge pending. TAKEN and DELIVERED by IT (ORCH-RP008-UNREAD-20261115, landed 1e113ed06 08:37:36Z; SENT 08:26:46Z, so about 11 minutes by git, not the 1 h 40 min IT first wrote from its nominal START_UTC 07:00Z; asked to correct). RESULT, negative and informative, read in README and census.tsv: of the 149 placeholders (30 with receipt depths, 119 without, 31/118 after one new receipt), 134 are Tier C LOW, 4 not applicable, 11 Tier B (4 MODERATE-HIGH, 7 MODERATE); among Tier B none is lawfully readable free (4 case reports outside PMC, flagged not open access; the rest with receipts or paywalled); the 47 with free text are all Tier C LOW oncology/DDR and none is named by an INV or open question; no Science batch selected; RP-008 parked with a revival trigger; the INTAKE and METABOLIC 'pool exhausted' blockers are SUPPORTED as defined (dated notes added, no step state changed); one declared-without-receipt reading (P304, ACK1) closed with a contemporaneous partial receipt whose file SHA-256 equals the IT11 declaration; FM-011 title screen of 115 unreceipted LOW items found no Tier A HIGH hiding (titles are not readings). No research decision changed; a representation loss closed; a blocker's meaning clarified. Cost reported by IT: no delegate, about 17 Europe PMC searches, 1 PDF download, 1 PMC page request, generic client. Not done: a broader declared-without-receipt scan beyond drug_repurposing/."
-        }
-      ]
-    },
-    "OBJ_16_ADV011": {
-      "order": 16,
-      "title": "ADV-011 (Advisor draft from evaluation 13, RP-004): one mechanism-first generative case from the mechanism lens, for the Orchestrator",
-      "steps": [
-        {
-          "step": "Check the draft's premises in the originals, correct the seed, send with the queue wording, record SENT with --to, verify take-in-charge, follow the selection and the Scientist batch to delivery and consumption",
-          "status": "IN_PROGRESS",
-          "owner": "orchestrator",
-          "evidence": "Premises checked and the seed corrected (TRIAL_24H.log 09:4xZ); sending after this landing. SENT 2026-11-15T09:4xZ to IT Orchestrator (--to recorded, landed with this commit); take-in-charge pending."
-        }
-      ]
+ "_schema": "orchestrator-task-v1",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "TASK_ID": "ORCH-ADV-FOLLOWTHROUGH-20261114",
+ "START_UTC": "2026-11-14T07:55:00Z",
+ "SESSION_NAME": "ADV — Strategic Advisor",
+ "SESSION_BINDING": {
+  "session_id": "e6526331-6b7c-4631-8c9b-9e9d79867e90",
+  "pid_at_start": 1238811,
+  "runtime": "Claude Code (VS Code extension), model claude-sonnet-5-5",
+  "identity_source": "operator assignment (ACTOR_ID orchestrator, function: proactive strategic coordination), re-stated in the opening prompt of the 2026-11-14 increment; not inferred from the directory, the title or the runtime",
+  "run_from": "root checkout only for every campaign command (tick, evaluate, deliver, recall); edits in .claude/worktrees/adv on task/adv-r13"
+ },
+ "OBJECTIVE": "Generative-capacity follow-through of the pilot advisor_pilot_20261113 (operator increment 2026-11-14), inside the same campaign with counters and history kept: coordinate the two assignments the operator gave directly (HE: minimum useful link between the ADV-006 measurement knowledge and a real generation path; IT: baseline, before/after scientific effect, consumption), hold the presidio with one recall until the unchanged expiry 2026-11-14T18:22:36Z, spend an evaluation only where it can change a decision, use the one remaining Advisor-drafted assignment only for a precise scientific question that HE or IT identify, follow every delivery to its disposition, and report what is now used that was isolated, which output changed, what stayed unchanged, the tools really used and the observed cost. Distinct from ORCH-ADV-PRESIDIO-20261113 (COMPLETE, RELEASED; its report and outcome stay historical, not rewritten) and from ORCH-ADVISOR-PILOT-20261113 (IT Orchestrator: take-in-charge and disposition). The operator-given assignments are declared as operator-given and are not recorded as Advisor drafts. No renewal, no reset, no activate, no new service or spend, no new register, counter, gate, scheduler or approval level.",
+ "AUTHORISED_QUEUE_20261114": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1_RECONCILE": {
+   "order": 1,
+   "title": "Reconcile the real state after the night report before acting",
+   "steps": [
+    {
+     "step": "Check remote and CI, what was consumed and what was deferred, which sessions are available, the recall state, and any work already started on the ADV-006 follow-up",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-14T07:55-07:58Z. main = origin/main = bd6ff283 (0 ahead, 0 behind; the seven record commits of the night were pushed by another session); CI: #727/#728 success earlier, #729 Public release gate in progress on bd6ff283 (record-only commit). CronList: no scheduled job (my recall deleted at the night closure); one recall to restore. Campaign status (read from the root checkout): invocations 5/5, assignments drafted 6/6, ADV-001..006 all EXECUTED, expires 2026-11-14T18:22:36Z, enabled. ListAgents: HE, IT Orchestrator and SCI are interactive and idle; no commit, task record or dirty worktree after 06:52Z; the new HE and IT task records do not exist yet (operator prompts to them accompany this message). Deferred and still open from the night: HE's choice on registering inhibitory-thread tables in DESIGN_MAP (consumer_delta row 7 of ADV-006), the six design conflicts of ADV-006 (CF01, CF03, CF05b, CF23, CF04, CF05a) for whoever designs the recording, the scout CONTEXT defect (known limit). Not read as stalled: nothing is waiting on a battery."
     }
+   ]
   },
-  "DECISIONS_TAKEN": [
+  "OBJ_2_BUDGET": {
+   "order": 2,
+   "title": "Record the increment in the existing campaign without reactivating it",
+   "steps": [
     {
-      "what": "Open a new task record for this increment instead of editing ORCH-ADV-PRESIDIO-20261113",
-      "alternatives_rejected": "reopening the COMPLETE record (would rewrite the verdict the operator asked to keep as historical evidence)",
-      "consulted": "the operator's prompt",
-      "reversibility": "full",
-      "how_to_revert": "set MANDATE_STATE to CANCELLED"
-    },
-    {
-      "what": "Set max_assignments to 9 in budget.json and keep the one-draft residual procedural, noted in amendments[]",
-      "alternatives_rejected": "setting 7 so the code enforces the residual (a new guard the operator excluded, and a number that contradicts the authorised 9)",
-      "consulted": "the operator's prompt",
-      "reversibility": "full",
-      "how_to_revert": "restore the previous numbers in budget.json"
-    },
-    {
-      "what": "Treat the continuous mode as applying to this presidio from the operator's own message, not from the peer relay",
-      "alternatives_rejected": "acting on the HE relay alone (a peer cannot extend authority); asking again after the operator's message (the operator asked not to)",
-      "consulted": "HE's relay, the operator's message to this session",
-      "reversibility": "full",
-      "how_to_revert": "end-continuous or a PAUSE/STOP line in the roadmap section"
+     "step": "Amend budget.json to 7 invocations and 9 assignments in total (amendments[] entry, used-before 5 and 6), unchanged expiry and turn limit; note that the code counts only Advisor drafts and that the two operator-given assignments are not counted, so at most one further Advisor draft; add the dated line to the Operator roadmap and the paragraph to PILOT_CAMPAIGN.md; land on main",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Landed on main d77923ac (task close of task/adv-r13, commit 530be5d21): budget.json max_invocations 7, max_assignments 9, amendments[] entry with used-before 5 and 6, expiry 2026-11-14T18:22:36Z and turn limit 20 unchanged, note on operator-given assignments not being Advisor drafts; roadmap_current.md dated line and Pilot-campaign paragraph; PILOT_CAMPAIGN.md paragraph. Read back from the root checkout: 'invocations 5/7, assignments drafted 6/9, enabled'. No activate, no reset, no renewal."
     }
-  ],
-  "STOP_LOG": [],
-  "TRIAL_24H": {
-    "what": "Operator-authorised 24-hour trial of continuous autonomy, on the existing campaign advisor_pilot_20261113, the current roadmap and the authorisations already recorded; the end of the window closes the observation, it does not revoke the continuous mode; later operator instructions and the existing boundaries prevail",
-    "started_utc": "2026-11-14T15:29:29Z",
-    "window_ends_utc": "2026-11-15T15:29:29Z",
-    "start_confirmed": "2026-11-14T15:3xZ: the trial has begun (effective take-in-charge by the ADV presidio at the time above; the operator's activation message arrived in chat a few minutes earlier)",
-    "baseline_at_start": {
-      "open_activities": [
-        "INTAKE-OVERNIGHT-20261002 (new-literature pool exhausted)",
-        "ORCH-METABOLIC-BATCH-20261019 (lawful WWOX-direct pool exhausted)",
-        "PLAN-HE-AUTONOMY-RADAR-20261114 (CI #751 on bff630afd, observed by HE)",
-        "PLAN-HE47-USABLE-KNOWLEDGE-PRESERVED-MEANING-SUSTAINABLE-COST-20261112",
-        "PLAN-PROACTIVE-ADVISOR-20261113",
-        "ORCH-ADV-FOLLOWTHROUGH-20261114 (this)",
-        "ORCH-PRESIDIO003-20261114 (SCI, in its worktree, at landing)"
-      ],
-      "pending_deliveries": [
-        "PRESIDIO-003 (SCI): note, access table and readings table written, quote check 10/10, no blind check (disclosed by SCI), battery next",
-        "CI #751 (bff630afd), single observer HE",
-        "next daily scout run with HE's filters"
-      ],
-      "queue": [
-        "PRESIDIO-003 only"
-      ],
-      "suspended_with_revival": [
-        "SCI50 levers and SCI42 explanations (revival: gate 0 or the M1/EBP question for clemastine moves, or a cost report that changes the cost-benefit)",
-        "lever residuals: owner statements to SCI, generator marks to HE (result_it52_rerun.md)",
-        "the 'CTGF question' in the incomplete P7: unfinished, not acted on"
-      ],
-      "sessions": "four sessions resolved by mandate_watch route: ADV (this, legend-development-39, via the binding of this record), HE, IT Orchestrator, SCI; all idle but ADV; SCI idle while waiting for its own battery (record RESUME), not stopped",
-      "recall_and_binding": "CronList: exactly one job, 3382bb86, hourly, session-only, canonical text unchanged; binding verified by route (ADV -> this session via this record) and by mandate_watch check (record verdict CONTINUE); nothing restored, no duplicate",
-      "remote": "main == origin/main before this record's own commits",
-      "campaign": "advisor_pilot_20261113: invocations 7 used (pilot ceilings are history in continuous mode), assignments drafted 6 (Advisor), presidio-decided PRESIDIO-001/002/003; evaluations P6 complete (hold) and P7 incomplete (classifier stop)",
-      "consumption_baseline": {
-        "unit": "main-session turns / output tokens / cache written / cache read, from session_model_census.py over each transcript, counted from 2026-11-14T00:00:00Z to the start; sonnet-5-5 in all four",
-        "ADV": "259 / 269,156 / 548,754 / 72,504,276 (effort read back xhigh)",
-        "HE": "467 / 420,556 / 1,336,514 / 207,175,978 (high, medium)",
-        "IT": "240 / 139,533 / 691,531 / 35,533,745 (medium)",
-        "SCI": "226 / 278,554 / 1,111,169 / 39,879,769 (high, max)",
-        "transcripts": "/home/desktop/.claude/projects/-home-desktop-legend-development/<session>.jsonl: ADV e6526331-6b7c-4631-8c9b-9e9d79867e90; HE 29e50812-fef0-4635-9c95-cfe7de2a8e2d; IT 4325d70d-8bea-4789-8046-d7a9ee74c97f; SCI 9400b253-25a0-4b03-8822-96361325fc16",
-        "advisor_evaluations": "read from P<n>/meta.json (P6 9 turns, output 7,476; P7 15 turns, output 13,576, incomplete); delegates and readers: subagent tokens as reported by the owners",
-        "subscription_remaining": "unknown: not exposed by the runtime and not assumed; no percentage or availability is inferred",
-        "end_of_window_method": "session_model_census.py --since 2026-11-14T15:29:29Z per transcript, meta.json for evaluations, owners' reported subagent totals; limits: the census counts main-session turns and cache-dominated reads, subagent usage is separate, a unit is not a quota"
-      }
+   ]
+  },
+  "OBJ_3_COORDINATE": {
+   "order": 3,
+   "title": "Coordinate HE and IT, verify take-in-charge, prevent duplication",
+   "steps": [
+    {
+     "step": "Send HE and IT one short coordination message each (what each owns, what the other owns, the shared read-only inputs, the ADV-006 originals, who consumes what), then verify each took the assignment in charge in its own record",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Messages sent 2026-11-14T07:5xZ: to HE (msg 6649ffc8) and IT (msg 60aaf98e), ack to IT (d7e21a51). IT: take-in-charge recorded in ORCH-VERIFY-GENDIFF-20261114 (on main, baseline ea02afa81 with prereg_it51.md fixing improvement / no difference / worse before the comparison; IT confirmed no scientific question yet for the remaining assignment, cost kept apart from mine). HE: PLAN-HE-RECONCILED-USABLE-20261114 (reported by HE; read in its worktree .claude/worktrees/hrk: OBJ_1 diagnosis IN_PROGRESS, OBJ_3 link planned as registration plus mapping, no renamed tables); HE reported no recall of its own, no blocker, no battery, no evaluation 6 needed; adopted: no tuning to IT's criteria, six conflicts carried unresolved, two M01 kept apart. Duplication check: IT = baseline, after-run, harms, consumption; HE = link and scout input; ADV = presidio only. Step stays open until HE's delivery is read. CLOSED 2026-11-14T14:3xZ: both take-ins-in-charge verified in their records (IT: ORCH-VERIFY-GENDIFF-20261114, then ORCH-VERIFY-INHIB-20261114 and ORCH-VERIFY-INHIB2-20261114; HE: PLAN-HE-RECONCILED-USABLE-20261114, PLAN-HE-LEVERS-INV05-20261114; SCI: ORCH-PRESIDIO001-20261114); no duplication observed; the obsolete 'pending' wording is superseded by OBJ_8."
+    }
+   ]
+  },
+  "OBJ_4_RECALL": {
+   "order": 4,
+   "title": "Presidio: one recall, quiet, until the unchanged expiry",
+   "steps": [
+    {
+     "step": "Restore exactly one hourly recall with the existing procedure (CronList first, strategic_advisor.py recall for the text), then verify its first automatic fire and tell HE the result",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-14T08:0xZ: CronList showed no scheduled job; recall text printed by strategic_advisor.py recall; exactly one CronCreate, job 3382bb86 hourly at :17 (session-only). First AUTOMATIC fire delivered to the session by the scheduler at 08:23:06Z (a manual tick is not counted): verdict EVALUATE, reason 'roadmap changed' (my own dated roadmap line recording the operator's instruction), events list the landed deliveries and the two new records; held, see OBJ_5. Result told to HE. CronList: one job."
     },
-    "report_due": "at the end of the window: compact report with decisions and reasons; assignments given, completed and consumed; comparisons, experimental hypotheses or open questions improved; waits, interruptions, restarts and human interventions; observable cost and its limits; a reasoned recommendation on extending to 48-72 hours; unchanged results, errors and useless activity kept",
-    "log": [
-      {
-        "utc": "2026-11-14T15:29:29Z",
-        "event": "trial started; baseline recorded; recall and binding verified; no duplicate"
-      },
-      {
-        "utc": "2026-11-14T15:3xZ",
-        "event": "human intervention: the operator's activation message (the only operator input of this window so far)"
-      },
-      {
-        "utc": "2026-11-14T16:23Z",
-        "event": "tick NONE (waiting legitimate); independent activities reconsidered, none justified; motivated wait kept (SCI battery, HE's CI #751)"
-      },
-      {
-        "utc": "2026-11-14T16:3xZ",
-        "event": "PRESIDIO-003 delivered by SCI (landed 1a432bb6f; assigned ~14:45Z, taken in charge ~14:55Z, one 71-minute wait on its battery, no interruption, restart or human intervention, subagent tokens 0, no blind check disclosed): UNCHANGED result: reachable text of Hedegaard 2012, Science 2017 and Hansen 2014 states neither a maximum inhibition nor a triheteromer value for Ro 25-6981 (Hansen 2014 never mentions it), Fischer 1997 access-blocked; no tier changes; consumption pending: IT records IT43-Q01 as access-limited with a revival trigger; HE decides a one-line wording of V18 role_reason (composition qualifier). Checked by me against the delivered README and readings, not by a second reader."
-      },
-      {
-        "utc": "2026-11-14T16:3xZ",
-        "event": "SCI noted that the repository corroborates the trial window but not the authorisation of my assignments: the operator's activation is now recorded as a dated line in the Operator roadmap section (verifiable by every session)"
-      },
-      {
-        "utc": "2026-11-14T17:23Z",
-        "event": "tick EVALUATE caused by my own roadmap line (trial activation); held with the reason; HE asked for a one-line V18 decision"
-      },
-      {
-        "utc": "2026-11-14T17:4xZ",
-        "event": "HE: V18 wording change declined with reason; PRESIDIO-003 disposition complete (assigned ~14:45Z, delivered ~16:3xZ, consumed by IT ab4e56398)"
-      },
-      {
-        "utc": "2026-11-14T18:23Z",
-        "event": "pilot expiry passed; continuous mode kept the presidio, recall unchanged; CI #751 green (HE record complete f67a9a270); no interruption, restart or additional human intervention since the activation"
-      },
-      {
-        "utc": "2026-11-14T19:00Z",
-        "event": "HE intervention (value-driven continuity, PLAN-HE-VALUE-CONTINUITY-20261114): tooling and text only, no new service, gate or registry: brief sections Portfolio selection / Previous outcome / queue; each evaluation ends with an Outcome block (continue|switch|assign|queue|wait, excluded, reason, resume_when); tick resumes a stated wait when resume_when is met"
-      },
-      {
-        "utc": "2026-11-14T19:0xZ",
-        "event": "local main diverged from origin (HE pushed 7b3cb29b5 after my landing); merged origin/main into main in the root (8b97f7d95), no conflict; tick then showed queue {executable: HE's continuity record; blocked_only: INTAKE, METABOLIC; exhausted: false}"
-      },
-      {
-        "utc": "2026-11-14T19:04Z",
-        "event": "evaluation 8 (P8) run on the portfolio question after the closure of PRESIDIO-003: stage P, opus high, 15 turns (14 on claude-opus-5-5, 1 on claude-opus-5, runtime fallback), output 14,762, cache read 759,370, cache creation 74,058; complete (no classifier stop); outcome assign; draft ADV-007 (drafts now 7 of 9); invocation count 8, above the pilot ceiling of 7, which is history in continuous mode (flagged by the Advisor, not hidden)"
-      },
-      {
-        "utc": "2026-11-14T19:23Z",
-        "event": "ADV-007 taken in charge by SCI (ORCH-ADV007-20261114) after being sent at 19:07Z; no interruption"
-      },
-      {
-        "utc": "2026-11-14T21:0xZ",
-        "event": "ADV-007 delivered (verdict b, negative and informative); the Advisor's framing ('the INV-06 sentence may be out of date in one direction') was tempered by the result; one tool defect found (silent default flags on renamed symbols), sized by HE: no harness change now"
-      },
-      {
-        "utc": "2026-11-14T22:23Z",
-        "event": "tick EVALUATE because a new input appeared: the operator-requested Living Research Portfolio (research_portfolio.tsv, 20 rows, 11 ready; PLAN-LIVING-RESEARCH-PORTFOLIO-20261114); evaluation 9 (P9) run: stage P, opus high, 13 turns all claude-opus-5-5, output 13,261, cache read 730,607, cache creation 76,522, complete, outcome assign: draft ADV-008 (a WWOX literature census since 2026-10-01, to the Orchestrator); invocation count 9, drafts 8 of the historical 9 (history in continuous mode)"
-      },
-      {
-        "utc": "2026-11-14T22:3xZ",
-        "event": "ADV-008 NOT dispatched, with the reasons, after checking its premises in the originals: (1) 'no dated genotype-name scan since 2026-10-05' is false in substance: framework/scripts/scout_daily.py runs PubMed queries wwox_any and wwox_dee (30 newest by pub_date) daily from the host cron 05:20 and reports new PMIDs as TO_TRIAGE (the log shows two hits, 42991897 ClinVar population variants and 43004178 pig meat-yield genetics: noise); (2) the 'WWOX paper that appeared after the pause', PMID 42941930, is an SH-SY5Y respiratory-inhibitor study, not a WWOX model, per radar_p4_it15 README. Residual gap (window before the scout's first baseline; correction/retraction/supplement notices) is small and low-yield: RP-008 set to backlog with that narrow next action and a resume_when, via the portfolio upsert. Premise accuracy of Advisor drafts in this trial: ADV-007 draft had 3 premises, 2 wrong or incomplete (blank flags ambiguity flagged by the Advisor itself; SCI51 consumption not pending); ADV-008 draft had 2 premises, both false: the presidio's check of a draft's decisive premises in the originals changed the outcome twice out of three drafts of this phase (ADV-006 earlier: premise partly wrong)"
-      },
-      {
-        "utc": "2026-11-15T01:23Z",
-        "event": "tick EVALUATE: PLAN-LIVING-RESEARCH-PORTFOLIO released and queue exhausted (the portfolio digest also moved by RP-020's own outcome text); two P1 ready rows (RP-001, RP-002) never examined; evaluation 10 (P10) run: stage P, opus high, 17 turns (16 on claude-opus-5-5, 1 on claude-opus-5; one classifier stop at the start, text continued), output 14,052, cache read 953,775, cache creation 78,214; outcome assign: draft ADV-009 (INV-03 matched-assay isoform potencies and hERG/QT data for efonidipine and flunarizine, WO-25, to Science); invocation count 10, drafts 9 of the historical 9. The Advisor read the presidio's own record, applied the premise lesson to its draft and named the one premise it could not verify (whether a route tried since 2026-11-05 would now succeed)"
-      },
-      {
-        "utc": "2026-11-15T01:5xZ",
-        "event": "ADV-009 premises checked in the originals before sending: WO-25 row (OPEN, literature_executable, executable_zero_spend partial, last touched 2026-11-05, one Europe PMC fullTextXML HTTP 500 on three PMC sources, 'No later record found'), INV-03 rank 2 (the pair is a proposal to verify; next_test still waits for matched potencies), and no record after 2026-11-05 gives the potencies (grep of efonidipine across the module: latest touches are bookkeeping or listings). All held. Sent to SCI with the queue wording."
-      },
-      {
-        "utc": "2026-11-15T01:29Z",
-        "event": "ADV-009 taken in charge by SCI (ORCH-ADV009-20261115, record opened 01:29Z), sent 01:28Z"
-      },
-      {
-        "utc": "2026-11-15T03:00Z",
-        "event": "ADV-009 produced 01:43Z and landed 02:54Z (SCI; about 70 minutes of battery wait), consumed 03:00Z by IT after its own independent re-read; one factual error in the producer's wording caught by the integrator (channel species) and corrected by the owner on main; verdict (qualified pair) unchanged; improvements: INV-03's comparator pair now qualified with sourced values, WO-25 narrowed, a statement in the frozen IT28 comparison corrected by a dated update, the hERG discrepancy named, an access-route fact recorded"
-      },
-      {
-        "utc": "2026-11-15T03:1xZ",
-        "event": "presidio's own error corrected: the timestamps I first wrote for ADV-009 (02:0xZ taken, 04:3xZ delivered) were estimates and the second was in the future; replaced with the commit times"
-      },
-      {
-        "utc": "2026-11-15T03:23Z",
-        "event": "tick EVALUATE (portfolio digest unchanged since the deferred 02:23 tick; queue exhausted; the last evaluation preceded ADV-009's delivery): evaluation 11 (P11) run, stage P, opus high, only 3 turns (2 on claude-opus-5-5, 1 on claude-opus-5), output 4,851, cache read 79,227, cache creation 38,654: DEGRADED (first line states the classifier stop; it read only the portfolio and P10, not the records it reasons from); outcome wait with resume_when after:2026-11-15T15:29:29Z; its decisive premise ('ADV-009 is in flight') was stale: ADV-009 had been delivered 02:54Z, consumed 03:00Z, corrected 03:01Z on main; it applied three portfolio updates, two of them false (RP-016 'in flight', RP-003 'one draw in flight'). Invocation count 11."
-      },
-      {
-        "utc": "2026-11-15T03:3xZ",
-        "event": "presidio decisions after P11: (1) the two false portfolio rows corrected by portfolio --upsert (RP-016 and RP-003 now state that ADV-009 is delivered and consumed, the branch's remaining residual and its revival); (2) the P11 wait is not relied on; my own decision: wait with a dated resume: the daily scout run at 05:20Z (first with HE's filters), because the other ready rows are large reads without a named decision (RP-002 first five units of the selection table: ethosuximide, lithium, d-APV class, A51, ketogenic diet, plus the AAV9 gene-addition unit excluded from drug repurposing; RP-003 the whole open-question map), literature routes blocked by lawful access, or event-gated (RP-017, RP-018); RP-005 (a prospective test of the generative method) resumes only with a new lever or measurement package (ADV-009's values table does not fit a design or comparison reader); (3) the pattern of degraded evaluation runs (P7 cut mid-text, P10 start, P11 3 turns) reported to HE with a suggestion to treat such a run as INCOMPLETE (no stated wait, no portfolio updates)"
-      },
-      {
-        "utc": "2026-11-15T07:3xZ",
-        "event": "human intervention (the second of this window): the operator's instruction to the ADV session, baseline main 9aa28b3, with a resource list: NOW one priority step, an offline reversible trial of the IT23 symbol lookup (15 of 834 rows with default zero flags), KEEP/DISCARD/INCONCLUSIVE rules; NEXT use ADV-007 (CTGF expression check closed, X1 stays conditional, first question: which observation separates soluble signal, composition and contact); NEXT use ADV-009 (the Cav3 pair stays a qualified proposal, narrow to the missing values and conditions, no clinical margin across assays); available: reuse IT52, no further generic linkage. The operator's roadmap revision 40 and register revision 73 are in a private ChatGPT library I cannot open: the repository facts and the operator's own summary were used."
-      },
-      {
-        "utc": "2026-11-15T07:5xZ",
-        "event": "recorded in the roadmap seat (dated line), the portfolio (RP-021 new, RP-017 and RP-016 updated by upsert) and two assignment files: PRESIDIO-004 (operator-directed: HE trial offline in a new dated folder; SCI independent manual mapping of the 15 rows BEFORE seeing the trial; IT disposition KEEP/DISCARD/INCONCLUSIVE and any regeneration) and PRESIDIO-005 (queued: SCI, the X1 first question as a table of discriminating observations from held files); the INV-06 row 7 and INV-03 wordings, left optional earlier by IT, are now operator-directed for IT"
-      },
-      {
-        "utc": "2026-11-15T07:5xZ",
-        "event": "human intervention (the third of this window): the operator pasted a capability-scout report addressed to PLAN (Contrastive Discovery, Skill2Query, Contrastive Hypothesis Replay and four other replays; claims are the authors', code not verified, no validation on LEGEND). Not an instruction to ADV: stored as received in radar_inputs_he52_20261114/operator_scout_report_20261115.md (HE had declared the operator's radar reports absent from the repository), linked to portfolio rows RP-001, RP-007 and RP-010, no assignment; PLAN (HE) decides the static audit; the priority next step remains the IT23 symbol-lookup trial (PRESIDIO-004)."
-      },
-      {
-        "utc": "2026-11-15T07:3xZ-08:0xZ",
-        "event": "PRESIDIO-004 (operator's NOW step, IT23 symbol lookup) in about 35 minutes of wall time from the message: HE taken (PLAN-HE-IT23-SYMBOL-TRIAL-20261115) and trial computed 07:38-07:40Z, held its landing until SCI's independent reference existed (a deadlock risk: I relayed the git-verified order, SCI's reference cc39da185 07:33:43Z before HE's first trial commit 07:38:19Z); SCI reference built by hand before seeing HE's output, then the row-by-row comparison (a7ec78e2f): 15/15 agree, 834/834 mechanical re-derivation agree, independence stated as weaker than it looks (same HGNC and data; two checks outside HGNC 15/15); IT re-derived the QF change itself (stdlib, offline, no delegate; all 15 rho equal to 3 decimals, 0 mismatches on committed rho, broad flag changes for exactly IRAG1, POFUT4, HDIP1, H1-2, H1-10, QF 365/260 to 363/257, class unchanged) and disposed (b2eb309fb): KEEP per row for the 15 conversions, rho and flags; DISCARD none; INCONCLUSIVE on benefit (no LINCS query run; only S8/S9 would repeat, 5 of 625 genes; no ranking effect measured or claimed); no regeneration; revival: a decision resting on S8/S9, or operator authorisation of two live queries"
-      },
-      {
-        "utc": "2026-11-15T07:5xZ",
-        "event": "IT consumed the operator-directed wordings (INV-06 CTGF clause replaced by the ADV-007 reading, INV-03 [ADV-009] dated clause without compound names because the shareable audit refuses them, WO-25 blocking_reason aligned, one regeneration of ranking, i18n and views: bee8e7bed); one incident: its first attempt failed the shareable audit and the chain was redone"
-      },
-      {
-        "utc": "2026-11-15T07:4xZ",
-        "event": "another PLAN session (branch codex/adv-continuity-20261115, record PLAN-ADV-CONTINUOUS-RESEARCH-20261115) corrected the Advisor's continuity rule and live portfolio rows (RP-003, RP-005, RP-008): invalidated the stale P11 wait without a model call, made selection follow deliveries as well as hourly recalls; its last steps (landing, observing my recall) are open"
-      },
-      {
-        "utc": "2026-11-15T08:0xZ",
-        "event": "HE's static audit of the operator's scout report delivered (8362ac92a, radar_inputs_he52_20261114/operator_scout_report_20261115_audit_he.md): competing explanations already covered at generation and proposal time; three pieces missing (MECE requirement, unknown-mechanism slot, a record of which rival a result favoured: observed absences, not a measured failure); Contrastive Discovery MONITOR, Skill2Query WATCH (no demonstrated retrieval defect; an API key dependency), the four other replays not audited; no harness change. Presidio decision: the read-only replay HE names (a Scientist, on INV-05 BH1-BH3 or the ADV-007 contrast, with a reader other than the writer of the rivals) is kept as an option in RP-001 and NOT assigned now: the cases are the most worked in the module, it changes no research decision (only whether a proposal-record slot deserves a trial), resources are unknown and the 24-hour report is due; revival after the report if a Scientist has free capacity, or if an existing rejection is seen to have lost information. Portfolio rows RP-001, RP-007, RP-010 point at the audit."
-      },
-      {
-        "utc": "2026-11-15T08:23Z",
-        "event": "tick EVALUATE: the PLAN session's continuity correction landed (P11 retroactively marked incomplete, its wait invalidated, last_incomplete shown), live portfolio rows rewritten (RP-003, RP-005, RP-008), executable queue holds the PLAN record; 7 hours since the last complete evaluation (P10). Evaluation 12 (P12) run: stage P, opus high, 11 turns all claude-opus-5-5, output 10,721, cache read 602,548, cache creation 72,058, complete; outcome assign: draft ADV-010 (RP-008: reconcile the corpus placeholders that unread_gold --all lists without a matched reading receipt, to the Orchestrator). The roadmap line it relies on is an operator instruction transcribed by the PLAN session ('assess the coverage of older unread WWOX literature as well as new PubMed hits: the daily newest-hit scout is not a full reading-coverage census'), which I read in roadmap_current.md. Invocation count 12, drafts 10."
-      },
-      {
-        "utc": "2026-11-15T08:3xZ",
-        "event": "ADV-010 premises checked before sending: the count holds (I re-ran unread_gold --all --json: 149 placeholders, 30 with receipt depths and 119 without, against the README's 27/122 of yesterday; the 3-item difference is receipts landed since) but the draft did not know the distribution: 134 of the 149 are Tier C, relevance LOW, 4 are 'not applicable, reading complete', and only 11 are Tier B (4 MODERATE-HIGH, 7 MODERATE); the default high-priority filter returns nothing. Draft narrowed accordingly before sending (the 11 Tier B items first; the 134 LOW sorted mechanically by tier and checked only by a small sample for mis-triage, the FM-011 failure mode)."
-      },
-      {
-        "utc": "2026-11-15T08:41Z",
-        "event": "ADV-010 delivered by IT 11 minutes after it was sent (git), unchanged-outcome class: RP-008 parked; the exhausted-pool claim supported; one receipt recorded; a unit-of-time error in IT's own note (1 h 40 min from a nominal START_UTC) corrected at my request. Presidio decision after it: no further assignment now: P12's own fallback (RP-002, the first five units of the selection table) was weighed and not assigned: the five units (ethosuximide, lithium, d-APV class, A51, ketogenic diet; plus the excluded AAV9 gene-addition unit) have their next steps wet-gated and have been through many iterations, so an in-silico reassessment expects 'parked' at best, and the operator's own rule parks a wet-gated branch; revisit only on an event (SCI's PRESIDIO-005 delivery, a scout signal that survives triage, an operator line)."
-      },
-      {
-        "utc": "2026-11-15T09:23Z",
-        "event": "tick EVALUATE: a new roadmap line landed (PLAN session, 08:45Z): mechanism discovery stays open beyond existing clinical investigations; the first coverage handoff is preparation, an existing INV or open-question citation is not required for a new question, use the mechanism lens and lawful full-text availability to select a small generative research case with transfer limits, competing explanations, a pharmacological comparison where justified and a rejecting experiment; canonical rule: cross-session transport section 12, 'Strategic synthesis is executable work'; and a host duty: reconcile the one existing Advisor recall with the canonical recall text, update only if stale."
-      },
-      {
-        "utc": "2026-11-15T09:2xZ",
-        "event": "recall reconciled with the canonical text (it was stale: no PAUSED/RESOURCES, no --to, no same-turn delivery, no 'prepare useful work' sentence): CronDelete 3382bb86 and CronCreate 477df2a9 in the same step, same cadence (hourly at :17), exactly one job (CronList), shared tick state untouched (host directory)."
-      },
-      {
-        "utc": "2026-11-15T09:3xZ",
-        "event": "evaluation 13 (P13) run: stage P, opus high, 12 turns all claude-opus-5-5, output 12,538, cache read 710,014, cache creation 72,672, complete; outcome assign: draft ADV-011 (RP-004: one mechanism-first generative case selected from unread_gold --mechanism, to the Orchestrator, one Scientist batch queued behind PRESIDIO-005). It disagreed with my 08:41Z no-assignment decision on the ground of PLAN's later correction, which is right. Invocation count 13, drafts 11."
-      },
-      {
-        "utc": "2026-11-15T09:4xZ",
-        "event": "ADV-011 premises checked before sending: the lens count holds (I re-ran unread_gold --mechanism --json: 74 items, 16 with receipt depths, 58 without; the draft quotes 74/60); the draft's SEED (the WWOX SDR substrate conflict, steroid oxidation PMID 21476439 against the 2015 retinal proposal PMID 25662954) is NOT unadjudicated in LEGEND: analysis/wwox_sdr_function_per_molecule_census_20260921.md section W2.1 found that the retinal proposal has no primary paper behind it, from that lab or any lab, and no independent literature; the draft itself named the September files as the first check and had not read them. Seed withdrawn as a pick, kept only as 'assessed in September'; P290 (declared read in the discovery ledger without a receipt) to be skipped or receipted, not re-read."
-      },
-      {
-        "utc": "2026-11-15T09:4xZ",
-        "event": "PRESIDIO-004 part B and PRESIDIO-005 delivered by SCI and landed (b88a2c251; battery 20261115-075847-b7fe7e15 PASS WITH SKIPS on 0e11973e4e; later merge checked by lint WARN, growth_anchors PASS, receipts OK, routing, section references, release gate PASS, not a second full battery: stated by SCI in its record). Part B: 15/15 agree with HE, 834/834 mechanical, independence weaker than it looks, two checks outside HGNC 15/15. PRESIDIO-005 (the operator's first question on X1): no single observation separates soluble signal, composition and contact; the smallest set is O0 the premise gate (null-neuron deficit reproduced blind, independent preparations, axon-density denominators), O1+O2 the soluble leg (conditioned medium on OPC monoculture, fresh-medium baseline, mixing arm, dilution series, matched neuron number and viability), O3 composition readouts in the same dishes (neuron number, viability, non-neuronal fraction, axon density and calibre, T3, T4 and a nutrient in conditioned versus fresh medium), O4 the contact leg (fixed null versus fixed wild-type neurons, held in INV-06, and a transwell, which is SCI's proposal with the it36 precedent, not text held in INV-06's X1 clause: IT's check caught that attribution and the README, TSV and delta now say so); O5 neutralisation identifies a candidate only inside the soluble explanation. No blind verifier on 005 (the weak point, stated by SCI). Consumer delta: 3 proposals, none applied; the INV-06 dated clause waits for a regeneration for another reason (IT's call), the optional OQ13 row (contact leg) and no change to the closed expression check. This answers the question in a repository table, not a prediction: an improved formulation of a conditional design, nothing measured."
-      },
-      {
-        "utc": "2026-11-15T09:4xZ",
-        "event": "ADV-011 taken by IT (ORCH-RP004-LENS-20261115, 743cdf741): case P287 (JNK inhibitor x WWOX gain and loss in HCC lines, meeting the INV-09 E04 lead in the opposite direction), seed withdrawn as I corrected; prediction F1-F7 and two case-level bets frozen at 09:28:28Z (45fadb00f) before the body was read; brief to SCI, queued behind PRESIDIO-005, which has now landed."
-      }
-    ]
+    {
+     "step": "At the pilot expiry 2026-11-14T18:22:36Z: do NOT delete the recall (operator clarification, in the roadmap seat); read presidio and mode in the tick; start no evaluation or assignment that is not due; state the state of the authorised work in the report",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-14T18:23Z: the pilot expiry 18:22:36Z passed; tick at 18:23:12Z returned mode continuous, presidio 'WAITING (legitimate)', verdict NONE (not EXPIRED); CronList shows exactly one job, 3382bb86; the recall was not deleted; no evaluation or assignment was started because of the expiry."
+    }
+   ]
+  },
+  "OBJ_5_FOLLOW": {
+   "order": 5,
+   "title": "Follow each delivery to its disposition; spend an evaluation only where it can change a decision",
+   "steps": [
+    {
+     "step": "Read the HE diagnosis and the IT baseline in their originals; decide with a reason whether evaluation 6 is due (candidate moment: after the baseline and the technical diagnosis, to choose between the link, an alternative representation or another opportunity); evaluation 7 only after a consumed result and only if it can change the choice between going deeper, changing thread or investing no more",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Evaluation 6 (P6) run 2026-11-14T09:55:11Z-09:56:53Z after HE's delivery (a33c39a90) and IT's after-run (62c89eff1, 'improved in access, not in consumption'; missing step = owner-authored hypothesis-to-measurement link or declared-key join; resumption condition: link, then rerun the same case). Stage P, opus effort high, 9 turns (8 on claude-opus-5-5, 1 on claude-opus-5: runtime fallback, changed_mid_run true), output 7,476 tokens, cache read 378,913, cache creation 68,718, 0 drafts; invocations 6/7 (drafted 6/9). Read by the Advisor: P5, four task records, IT51 notes, SCI51 README, investigations_it20 INV-05; NOT read: HE's README update, ADV-006 originals, the CP tsv and baseline, the dashboard page, the scout feed used as stale. Result: HOLD, draft nothing. My reading, in the originals: the hold rests on 'IT recorded no question' (my own OBJ_3 line, written before the after-run) and on 'drafting would pre-empt the owners', which conflates sending an assignment to the owners with authoring; the conclusion stands until IT answers a neutral question (sent b293a943: names a precise question or stops at 'improved in access'). Comparison of other opportunities in P6 was made from records, not from the dashboard page. Revival: IT or HE name a precise question with originals and decision; otherwise no further assignment and the increment closes with the honest verdict. Evaluation 7 only after a consumed result."
+    },
+    {
+     "step": "Decide with a reason whether the one remaining Advisor-drafted scientific assignment is used: only for a precise question that HE or IT identify, with question, originals, decision affected, perimeter, resources and recipients; no assignment is required",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-14T11:3xZ. The remaining scientific slot is not used as an Advisor draft: IT's durable disposition (ORCH-VERIFY-GENDIFF-20261114 key DISPOSITION_AFTER_ADV_QUESTION_20261114, main 0f1193b7c) stops on CP-BH1/BH2; I verified in the originals that CP-BH1 = AMPA/kainate gain, CP-BH2 = NMDAR subunit/matched current, CP-BH3 = gap junctions, all NEED-EXCITATORY-GAIN, so the IT51 case was unsuited. A different decision follows (OBJ_8). No assignments.jsonl entry: the new work is a presidio decision, not an Advisor draft and not operator-given."
+    },
+    {
+     "step": "Follow each delivery along result -> comparison/hypothesis/experiment -> consumer -> new question -> next choice; every deferral gets a concrete reason, a recipient and a revival condition",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Followed to disposition 2026-11-14: ADV-006 follow-through -> HE link and IT52 (case unsuited, improved in access) -> fairer case SCI47 levers L1/L2 -> SCI owner confirmation (PRESIDIO-001/002 complete, landed 8de503223) -> HE builds -> IT52 rerun improved -> marking pass -> consumption 01d13e358 -> thread closed; deferrals: SCI50 levers and SCI42 explanations suspended (revival: gate 0 or the M1/EBP question for clemastine moves, or a cost report that changes the cost-benefit); lever residuals with SCI (owner statements) and HE (generator marks), recorded in result_it52_rerun.md."
+    }
+   ]
+  },
+  "OBJ_6_REPORT": {
+   "order": 6,
+   "title": "Short report to the operator",
+   "steps": [
+    {
+     "step": "Report: what is now used that was isolated; which scientific output changed; what stayed unchanged; strategic tools really used (examined, received in the brief, only available); observed cost split into presidio, evaluations and executive work (operator-given work declared as such); the next decision, already assigned when authorised. Keep apart observed generative improvement, better experiment formulation and validated predictive capacity",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Report given in chat 2026-11-14T14:2xZ: what is now used, which output changed, what stayed, tools examined/received/only available, cost split (presidio 142 turns, 160,808 output tokens; evaluations 24 turns, 21,052 output; executive work as reported by the owners, operator-assigned declared), my errors, next decision; three-way separation kept (observed change yes; better experiment formulation yes; prediction none)."
+    }
+   ]
+  },
+  "OBJ_7_STANDING": {
+   "order": 7,
+   "title": "Standing strategic continuity inside the operator roadmap; genuine whole-portfolio waits remain explicit",
+   "steps": [
+    {
+     "step": "Maintain the useful research pipeline from the standing roadmap, portfolio, candidates/questions, DREAM, diagnoses and radars; select or prepare the next source-backed work after results; restore one canonical recall when needed; operator silence and a distant report are not dependencies",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Operator correction implemented by ACTOR_ID plan on2026-11-15: cross-session transport section12, Strategic synthesis is executable work / Route useful signals. Supersedes the stale standing BLOCKED field, its concluded delivery and old recall reference; previous state remains in Git history. Current native recall is one477df2a9 after explicit reconciliation; restore by the canonical recall procedure if lost. This is a standing responsibility, not a requirement to spin or launch work without value. A genuine whole-portfolio wait must have current evidence and a real resumption condition. The timed trial-report step remains separate."
+    },
+    {
+     "step": "HE's CI conclusion on the lever and follow-through SHAs (single observer: HE; the presidio does not poll the CI)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "unblock_when": {
+      "record": "PLAN-HE-LEVERS-INV05-20261114",
+      "state": "COMPLETE"
+     },
+     "evidence": "HE's record PLAN-HE-LEVERS-INV05-20261114 COMPLETE on main 002535fc2 (unblock_when resolved by itself); CI green on the exact lever SHAs #739 ba0283130, #743 00feda1c8, #747 4c45ab039, #749 4c3d2d5bb, #750 e139cddda and on the follow-through SHAs #744, #745; the CI of the coordination fixes (#751, bff630afd) is observed by HE."
+    }
+   ]
+  },
+  "OBJ_8_INHIBITORY_CASE": {
+   "order": 8,
+   "title": "A fairer test: the inhibitory thread's own pharmacological levers reach the generator",
+   "steps": [
+    {
+     "step": "Decide the next step from the originals, comparing a pertinent inhibitory-thread case, another concrete generative limit, another roadmap question, and no further investment",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-14T11:3xZ, no evaluation spent. Examined: CP rows (CP-BH1/2/3 = excitatory), hypothesis_packages.tsv (no inhibitory hypotheses registered), conditional_proposals_packages_it47.tsv (no INV-05 package rows), SCI42 explanations.tsv and SCI47 levers.tsv, ADV-006 measurements.tsv/conflicts.tsv, IT's result_it51.md and durable disposition, view/work_order.json entries. Chosen: SCI47 levers L1/L2 (GABA availability; postsynaptic GABA-A positive modulation) joined by declared keys (requests_merged token L1->M16, L2->M17; interpretable_after M02,M04,M05; M15 comparator; conflicts m_id CF01,CF03,CF04,CF05a/b,CF23), with IT before/after and an independent scorer. Deferred, with reasons: SCI42 explanations (two declared keys disagree for 7 of 7: source_names vs requests_merged); other roadmap questions (remaining in-silico headroom is small per P6 and wet; compared from records, not the dashboard page); stop (kept as the outcome if the diagnosis shows the route is not small or the after-run shows no difference)."
+    },
+    {
+     "step": "Direct messages to the actual recipients; verify take-in-charge in their records (IT: baseline first; HE: diagnose, build after the baseline)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Take-in-charge verified 2026-11-14: IT = ORCH-VERIFY-INHIB-20261114 (BEFORE and criteria landed 5119526a1, prereg_it52.md: improved / no difference / worse fixed in advance, three-way separation, independent blind reader = one sonnet high delegate, cost apart); HE = PLAN-HE-LEVERS-INV05-20261114 (built after the BEFORE landed; delivery ba0283130, gate PASS, ~90 lines, 6 tests). Messages: IT fcef0823, HE fbfc18de; HE's delivery and IT's receipt arrived by the new route check (resolved to this session)."
+    },
+    {
+     "step": "Read IT's before/after and HE's delivery in the originals; decide with a reason whether to deepen (L3-L6, explanations), change thread or stop; evaluation 7 only if it can change that choice",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "IT52 closed 2026-11-14 (ORCH-VERIFY-INHIB-20261114, 921d875d6; revision ba0283130): NO DIFFERENCE in what an independent reader finds actionable; observed output change yes (6 lever rows, 53-row map, accurately quoted, no side chosen, no id in the wrong space); better experiment formulation not shown; prediction none. Read in the originals by me: result_it52.md, and SCI47 matrix.tsv O01-O06 (outcome-to-lever statements exist), which shows that the generator's 'expected result: not stated' and 'package does not classify the other rows' are false for the package; my earlier approval of the former as 'honest' rested on levers.tsv only (my error, told to HE and IT). Decision (mine, no evaluation 7, from the originals): ONE more iteration with a stop rule instead of stopping or changing thread: reasons: the reader's missing items (evoked IPSC tied to the L1-vs-L2 choice, outcome-to-lever table, conflict content, preparation/age) are mostly declared in SCI47/ADV-006 and mechanical or owner-confirmable; cost small (HE mechanical items, one SCI confirmation session, one fresh blind reader); the alternatives compared were: stop (valid; kept as outcome if the rerun shows no difference), other roadmap questions (remaining in-silico headroom small per P6, not re-read from the dashboard), SCI42 explanations (two declared keys disagree 7/7). Not an independent assessment: declared. Messages: SCI d2133d6f (PRESIDIO-001, assignments/PRESIDIO-001.md on ceed002f6), HE a3021777, IT b085b850; recipients resolved by mandate_watch.py route (RESOLVED)."
+    },
+    {
+     "step": "Second iteration: verify take-in-charge (SCI PRESIDIO-001, HE second build), read the confirmation table and HE's second delivery in the originals, IT's rerun with a fresh blind reader on the same criteria; stop rule: no third iteration, suspend with revival conditions if no difference",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Sent 2026-11-14T12:2xZ; take-in-charge pending. Awaited events: SCI's confirmation table (a record id and a dated folder), HE's second SHA, IT's rerun note. Checked not yet occurred at send time. 2026-11-14T12:0xZ: HE delivered the mechanical second build 00feda1c8 (gate PASS: conflict content, L3/L6 'NOT PROPOSED', preparation/age, id-space note, the two false sentences replaced by a neutral pointer; waits for SCI: PKG_MAP confirmation, join to matrix.tsv outcome columns, CF01/CF03). IT (ORCH-VERIFY-INHIB2-20261114) proposes to rerun once on the SCI-complete build, not on 00feda1c8 now, because the reader's yardstick is made of the pending items: agreed. Fallback named: if SCI has not recorded a take-in-charge or answered by 13:30Z, or answers 'cannot be stated without a choice', IT runs the last iteration on the then-current build. SCI take-in-charge for PRESIDIO-001: not yet recorded at 11:57Z (sent about 11:50Z; route RESOLVED). 2026-11-14T12:4xZ: SCI took PRESIDIO-001 and PRESIDIO-002 in charge (record ORCH-PRESIDIO001-20261114, folder levers_owner_confirmation_presidio001_20261114/, landing about 14:30Z after a battery). Owner's reading, blind reader 60/79 agreed, 3 disagreed, 10 overstated, 1 unverifiable, 5 missed: mapping faithful with slot-label exceptions; L1 comparator = a tension inside SCI47, ADV-006 CF23 line 'incomplete, not wrong'; attachments by declared keys (L1: O01/O04/O06; E-id fan-out cannot separate L1 from L2; L3: O03/O14; M01 and M03 first-hop for L1/L2); M02/M04/M05 are dependencies of interpretation; CF03 attaches to L1 and L2; CF01 cannot be stated without a choice (SCI47 contradicts itself). HE prepared (not landed) one build on that reading (task/hrk12, 6f979ede2) and lands after the folder; IT reruns once after it (ORCH-VERIFY-INHIB2-20261114), criteria unchanged, fresh blind reader. My error recorded: PRESIDIO-002's premise (keys disagree 7 of 7) was my misreading of source_names, which lists merged components; SCI found the keys consistent by construction, one real gap (M26 for SCI42 M02) and one false hit (M22). My relay of SCI's first (unverified) wording ('contradicted', 'wrong') was corrected to HE and IT after the blind reader. Lesson for the report: ADV-006 passed a blind verifier and still carried errors that appeared only at the owner's depth of reading; a mechanical cross-check by the presidio is a prompt for the owner, not a finding. 2026-11-14T13:5xZ: SCI's folder landed 8de503223 (PRESIDIO-001 and 002 complete; read in the original); HE landed its build 4c45ab039 on the landed table (its blocked step flipped to CONTINUE by unblock_when: first real use); IT rerun landed aafda2d3f (ORCH-VERIFY-INHIB2-20261114; read in the original): IMPROVED IN ACTIONABILITY (six experiment-changing items found by a fresh blind reader: same-slice defect measurement and genotype-by-drug interaction, event identity before the sIPSC fall as L1 target, CF03 stratification vs glutamate block in one slice, cohort structure vs L2 'same cells', calibrating a reuptake arm on its own readout, non-Wwox and WT controls) WITH ONE PRE-REGISTERED HARM TRIGGERED (CF04/CF05a side B = August design, global allele, CA3, attached to the Synapsin-Cre layer II/III lever unmarked; L2 inherits P13-17 unmarked) and two inconsistencies (M01 hop label, O10 sentence). Kept apart: observed change in output yes; better experiment formulation yes (reader-tested); prediction none. My decision (13:5xZ, msgs IT fa59bd1c, HE 911dbacb): ONE mechanical marking pass by HE on five named points (no new content, residual items are revival conditions), verified by HE's tests and a narrow recheck by the SAME reader on the flagged points (my difference from IT's no-reader recommendation: the harm was pre-registered), then IT consumes only reader-verified items in the existing consumers (INV-05 next_test, levers.tsv notes), no ranking/sign/need/state change; then the thread closes. Completes the harm fix of iteration 2; no third iteration. CLOSED 2026-11-14T14:1xZ: HE's last mechanical list landed e139cddda (one M01 statement on L2, M06 off L1, M14 in full with provenance, L3 reduced losslessly 29->17 KB); IT spot-checked by string and consumed 01d13e358: dated additions in levers.tsv L1 and L2 action cells (the CF03 limit: glutamate block and burst-status stratification cannot both be met in one recording; the specificity controls of design_review (e): Cre-positive WT and heterozygous littermates, WT slices given the same drug, a non-Wwox hyperexcitable preparation at matched baseline burst rate; L2's 'same cells' vs the Phase 0 wording, not decided by the package); INV-05 next_test not edited (it concerns the NMDAR arms; an edit would force dashboard and four-language regeneration without a new statement about them). Iteration 2 = IMPROVED (observed change yes; better experiment formulation yes, six reader-tested items; prediction none). Residual items with recipients are in generation_it52_20261114/result_it52_rerun.md (SCI: owner statements; HE: generator marks). ORCH-VERIFY-INHIB2-20261114 COMPLETE. Reader cost (IT): 43,085 + 78,513 output tokens plus one resumed recheck; SCI blind verifier 191,333 subagent tokens; HE's own not stated."
+    },
+    {
+     "step": "After the thread closes: choose the next investment (deepen the lever residuals via owners, repeat the method on another thread, or stop) on updated premises; evaluation 7 only if it can change that choice",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-14T14:2xZ. Evaluation 7 (P7), stage P, opus effort high, 15 turns all claude-opus-5-5, output 13,576, cache read 892,889, cache creation 88,906, 14:17:37Z-14:20:04Z: INCOMPLETE, a safety classifier stopped the text before the 'next bounded action' section; 0 drafts; it counts as an invocation (7 used). What it delivered and I use: the lever thread stays closed under its stop rule; registering the SCI50 myelin levers the same way stays suspended (it disagreed with my preferred candidate on cost and premise: revival when gate 0 or the muscarinic-versus-sterol (M1/EBP) question for clemastine moves, or when this report shows what the lever method cost); no reason has appeared to open the SCI42 explanations (my earlier reason, two keys disagreeing 7/7, was my own misreading) or the radar items NP3P3/NP3A1. A 'CTGF question' in its section 2 is an unfinished line of analysis, not acted on, left for a later evaluation or my own choice. Not retried now: the same brief would likely meet the same stop and the continuation would be a repeat, not new information. Not read by the Advisor: IT24 P4 README, the p47t line, the Repudi manifest, the live dashboard page. My decision, mine and stated as such: no further investment on the lever method now; SCI50 levers and SCI42 explanations suspended with the revival conditions above; the lever residuals stay with SCI (owner statements) and HE (generator marks); the presidio does not end: it waits for a roadmap change, a delivery, a mandate transition, HE's CI conclusion on the last SHAs or an operator line."
+    }
+   ]
+  },
+  "OBJ_9_ANTICIPATION": {
+   "order": 9,
+   "title": "Anticipate useful work during waits (operator's permanent rule of 2026-11-14): short, reviewable queue; no speculative sequences; motivated waits are valid",
+   "steps": [
+    {
+     "step": "Apply the rule to the lever thread's wait for SCI: queue one independent item for SCI after PRESIDIO-001 (PRESIDIO-002: the two declared keys of ADV-006 disagree for 7 of 7 SCI42 explanations; mechanical cross-check by the presidio, owner decides), with the rule's delivery wording; keep the thread's own wait otherwise",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-14T12:0xZ: rule recorded in the Operator roadmap seat (dated line); assignments/PRESIDIO-002.md on main after landing; sent to SCI with the wording 'The current work keeps priority. Queue this assignment; you may anticipate its independent parts if resources and dependencies allow. Before starting it, check that results that arrived since have not changed its usefulness.'. Not started in parallel: both branches of the open decision (continue vs suspend the lever thread) are not both started. Checked and rejected as an anticipation: a dream pass or a new thread now (the lever thread has the priority and shared resources are unknown; a wait is not proof of available resources). Outcome 2026-11-14T12:4xZ: PRESIDIO-002 closed by SCI (no cell edit, dated note); its premise was my misreading; the queue is empty; the anticipation of HE's build behind SCI's verifier is the one real case of the rule on this thread (candidate ba0283130 untouched, prepared branch not landed)."
+    },
+    {
+     "step": "Portfolio comparison at the operator's integration of 2026-11-14 ('continuous portfolio direction after the lever thread'): distinguish 'this method does not deserve another iteration' from 'no other useful work exists'; choose among an independent assignment, a queued one or waiting; say which decision could change, why it prevails, which result makes continuing useless",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-14T14:4xZ. Inputs actually read: investigations_it20.tsv (19 investigations, ranks 1-7: nearly all next tests are wet, so the in-silico lever is formulation of experiments and tool facts), open_questions_map.tsv (191 rows: 163 OPEN; 57 open non-wet zero-spend rows, mostly tool-potency and primary-source readings and DC-* hygiene), ADV-002_result.md (route facts), ro25_6981_sci44 README via the map row, the earlier dashboard work_order.json and the unregistered-tables census; not read: the live dashboard page, DREAM (nothing pertinent found in recent DREAM files; no activity built to say it was used), radar (stale feed; HE's declared limit), candidate cards. Chosen: ONE queued assignment, PRESIDIO-003 (SCI): IT43-Q01 Ro 25-6981 primary sources, reachability first; decision it could change: whether Ro 25-6981 is named a PRIMARY-tier second tool of the ifenprodil site in the generator's compound decisions and INV-05 row C-RO1; why it prevails: already in output, sources named, no wet result needed, no repeat of the lever method; makes continuing useless: no named source lawfully reachable, or reachable sources do not state maximal inhibition/triheteromer; not chosen: lever method on SCI50/SCI42 (cost/benefit), other tool-potency rows (no named sources), DC-* hygiene (integrator), waiting alone (valid, but a cheap bounded independent item exists)."
+    },
+    {
+     "step": "Single observer per shared verification: HE observes the CI of the lever and follow-through SHAs and informs IT and the presidio; the others do not poll",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Told HE and IT 2026-11-14T14:4xZ; the presidio reads HE's record state through unblock_when instead of polling ci_runs."
+    },
+    {
+     "step": "PRESIDIO-003 followed to its disposition: delivered (SCI 1a432bb6f); unchanged result; consumption pending (IT: IT43-Q01 status access-limited with revival trigger; HE: V18 wording, its choice); verify at the next ticks that both happened, nudge only if absent",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "SCI's delivery read in the original (README answers 1-4, limits); not independently re-read by a blind check (disclosed by SCI). CLOSED 2026-11-14T17:5xZ: IT recorded IT43-Q01 as access-limited with a revival trigger (ab4e56398) and re-checked on efetch bytes that Hansen 2014 never mentions Ro 25-6981 (a second, independent reading of the key absence); HE declined the V18 wording change with a reason (the phrase is the engine's generic PRIMARY text; M-R1/M-R2 carry the unmeasured part; no reader has failed on it; reopen if a real reader misses the limit); SCI, IT and HE accepted. Result UNCHANGED (no tier or rank change): the useful effect is a closed question and a radar that stops re-asking, at SCI cost 0 subagent tokens and about 71 minutes of waiting on a battery."
+    },
+    {
+     "step": "At a tick, relevant incoming signal or delivery, assess whether independent, queued or conditional work is worthwhile; judge radar leads regardless of addressee; notify the responsible live actor with the original durable pointer and follow its response; reconcile the queue against current results",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Operator correction implemented by ACTOR_ID plan on2026-11-15: cross-session transport section12, Strategic synthesis is executable work / Route useful signals. Supersedes the stale standing BLOCKED field, its concluded delivery and old recall reference; previous state remains in Git history. Current native recall is one477df2a9 after explicit reconciliation; restore by the canonical recall procedure if lost. This is a standing responsibility, not a requirement to spin or launch work without value. A genuine whole-portfolio wait must have current evidence and a real resumption condition. The timed trial-report step remains separate."
+    },
+    {
+     "step": "Portfolio comparison after ADV-009's consumption (the operator's 'continuous portfolio direction' rule): choose among assign, queue or a motivated wait with the decision it could change, why, and what would make continuing useless",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-15T03:3xZ: motivated wait until the 05:20Z scout briefing; reasons and exclusions in TRIAL_24H.log; P11's own wait (degraded run, stale premise) not relied on. Resume conditions: the scout briefing with a signal that survives triage; a delivery or mandate transition; an operator line; the trial review after 15:29:29Z."
+    }
+   ]
+  },
+  "OBJ_10_TRIAL_24H": {
+   "order": 10,
+   "title": "24-hour continuous-autonomy trial (2026-11-14T15:29:29Z to 2026-11-15T15:29:29Z)",
+   "steps": [
+    {
+     "step": "Start: record the effective time, the window end, the baseline; confirm that the trial has begun; verify the recall and the session-mandate association",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "TRIAL_24H.started_utc 2026-11-14T15:29:29Z, ends 2026-11-15T15:29:29Z; baseline in TRIAL_24H.baseline_at_start; one recall job 3382bb86 and the route/binding verified, nothing duplicated or restored; the three sessions told and the operator told in chat."
+    },
+    {
+     "step": "During the trial: conduct work inside the roadmap without asking the operator for operational prompts; compare threads and opportunities through the pertinent inputs; assign proportionate work to IT, SCI and HE and verify take-in-charge, delivery and consumption; use waits for independent, queued, conditional work or a motivated wait; keep scientific and publication verification; one CI observer (HE); preserve frozen candidates; no external spend; keep TRIAL_24H.log with events, interruptions, restarts and human interventions",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Operator correction implemented by ACTOR_ID plan on2026-11-15: cross-session transport section12, Strategic synthesis is executable work / Route useful signals. Supersedes the stale standing BLOCKED field, its concluded delivery and old recall reference; previous state remains in Git history. Current native recall is one477df2a9 after explicit reconciliation; restore by the canonical recall procedure if lost. This is a standing responsibility, not a requirement to spin or launch work without value. A genuine whole-portfolio wait must have current evidence and a real resumption condition. The timed trial-report step remains separate."
+    },
+    {
+     "step": "At the end of the window (2026-11-15T15:29:29Z): measure consumption by the stated method and produce the compact report with the 48-72 hour recommendation",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_11_ADV007": {
+   "order": 11,
+   "title": "ADV-007 (Advisor draft from evaluation 8): CTGF/CCN2 in the held WWOX-KO expression data, for SCI",
+   "steps": [
+    {
+     "step": "Read the assessment and the draft in the originals and verify the decisive facts before forwarding",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-14T19:1xZ. Verified in the originals: gse156243/derived/list_padj_le_0.05.tsv line 360 CTGF KO up, log2FC 1.32, p 0.00031, padj 0.00707 (protein_coding); SCI50 README DREAM section names the check; INV-06 row 7 carries 'the Wwox-CTGF link is unsupported'. Premises of the draft corrected before sending: (1) signature_it23_20261103/composition_class.tsv line 198 CCN2 row has blank log2fc and blank rho with the flag columns 0: probably NOT ASSESSED, not 'tested and clean' (the Advisor itself flagged the ambiguity); (2) relations_it23_p2_20261103/novelty.tsv has 0 CTGF hits by grep (the draft's '15 CTGF rows' is not in that file); (3) the SCI51 consumer delta is not pending: IT50 consumed it (ddee87d4b, verified 3a93267ba), the State column of the producer's delta file simply was never updated, so there is no priority-1 precedence conflict. The CTGF line of the incomplete P7 was not reconstructed; the assignment rests on repository files only (the Advisor declares its own exposure)."
+    },
+    {
+     "step": "Deliver to SCI (the effective recipient) with the queue wording; record SENT with --to; verify take-in-charge in SCI's record; follow to delivery and consumption (IT: INV-06 row 7 wording only if the verdict licenses it)",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Delivered to SCI 2026-11-14T19:0xZ (msg 9180c4a8; SENT recorded with --to SCI, landed 6d2f97a7b; premise corrections sent; my premise 2 was incomplete: novelty.tsv has 15 CCN2 rows, not CTGF, SCI found it). Taken in charge by SCI as ORCH-ADV007-20261114 (status message ~19:2xZ). DELIVERED 2026-11-14T~21:0xZ, landed 777144319: verdict (b) inconsistent or composition-explained: the one concordant table (human KO organoid GSE156243, CTGF log2FC 1.32, padj 0.00707, 4 v 2 libraries, exact permutation floor 0.13) is of the size a progenitor-state shift alone would carry (projection +1.21 vs observed +1.15), mouse bulk tables disagree in sign, the snRNA pool rise sits with a composition shift, the CAGE pair is uninformative; the SCI50 DREAM expression line is closed with this reason. Blind check: one sonnet-high verifier (44 turns, output 51,210, cache read 3,111,079), 32 claims: 26 confirmed, 3 narrowed (applied), 3 unverifiable, 0 contradicted; battery 20261114-193055-c1cc00a7 PASS WITH SKIPS (251 targets, 12 skips), 72-minute wait by PID, no interruption/restart/human intervention. Premise corrections confirmed by SCI: composition_class.tsv CCN2 flags are DEFAULTS (a rename lookup miss: 15 rows IRAG1, CCN2, DRC4, MNMIP1, POFUT4, MTCL2, ATOSB, HDIP1, BBLN, ADPRS, CIRSR, H1-2, H1-10, H4C15, ZNRD2). Consumption pending with IT (consumer_delta rows 1 optional INV-06 row 7 wording, 3 dated README note in signature_it23, 4 DREAM disposition appended by SCI); HE answered the tool defect: no harness change now (no shared alias helper; one same-class unrun pattern lincs_it2_null_sets.py:40 dec.get(g, 0); labelling needs regeneration, the owner's call; 'NA' marker if the owner regenerates; reopen if a reader takes a zero row as clean)."
+    }
+   ]
+  },
+  "OBJ_12_ADV008": {
+   "order": 12,
+   "title": "ADV-008 (Advisor draft from evaluation 9, RP-008): declined by the presidio after premise check",
+   "steps": [
+    {
+     "step": "Check the draft's decisive premises in the originals before sending; send, narrow or decline with the reason; correct the shared portfolio row so that it does not say 'assigned' for work that was not sent",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Declined 2026-11-14T22:3xZ: see TRIAL_24H.log; assignments.jsonl keeps ADV-008 at DRAFTED (never SENT, honest); RP-008 corrected by portfolio --upsert to backlog with the narrow residual and a resume_when; the Advisor's other portfolio updates (RP-017 outcome from ADV-007; RP-005 resume_when) kept as correct. Nothing was sent to IT: no wasted executive work."
+    }
+   ]
+  },
+  "OBJ_13_ADV009": {
+   "order": 13,
+   "title": "ADV-009 (Advisor draft from evaluation 10): INV-03 pair, matched isoform potencies and hERG/QT data (WO-25), for SCI",
+   "steps": [
+    {
+     "step": "Check the draft's decisive premises in the originals, then send with the queue wording; record SENT with --to; verify take-in-charge; follow delivery and consumption",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Premises verified (see TRIAL_24H.log 01:5xZ). Landing the evidence now; SENT and the take-in-charge are recorded after the message. SENT 2026-11-15T01:28Z to SCI (msg 5946fa6d, route RESOLVED, --to SCI recorded, landed with this commit); take-in-charge pending. TAKEN by SCI as ORCH-ADV009-20261115 (record opened 01:29Z, one minute after SENT at 01:28Z). PRODUCED 01:43Z (commit a64f784dc, 15 minutes of work), then a battery wait of about 70 minutes; LANDED 02:54Z (development/main 466a0f2e3; battery PASS WITH SKIPS): the efonidipine/flunarizine pair of INV-03 stays a proposal, QUALIFIED: flunarizine one-assay triple (Santi 2002: Kd 530/3552/837 nM on Cav3.1/3.2/3.3), efonidipine Cav3.2 only (Perez-Reyes 2008: IC50 2.9/2.0/2.3 uM, flux assay) and an abstract-level oocyte pattern (Furukawa 2009), patterns in opposite directions from different assays; hERG: none for efonidipine, flunarizine 5.7 nM (abstract) vs 447-606 nM binding/screening, unreconciled; WO-25 narrowed; access results with SHA-256 per route (reCAPTCHA stop respected, no circumvention). SCI: no blind verifier (declared weak point), 16 of 16 quotes found by script, zero delegate tokens. CONSUMED by IT (585d8703a, 03:00Z) after IT's own independent re-read of the decisive numbers on the PMC pages (no delegate): applied as dated additions in compare_it28 (the '10^-8..10^-6 M' statement does not hold for this pair; sections 2b/6 superseded in part; hERG sentence carried conditionally; WO-25 OPEN with narrowed text and revival), left: INV-03 wording (optional, would regenerate ranking and four-language views) and the route fact for the scripts README (forwarded to HE). ERROR CAUGHT BY THE INTEGRATOR's re-read: SCI's 'human HEK tsa201 channels' was wrong (cloned RAT alpha1G/H/I in the human HEK cell line; efonidipine's Perez-Reyes assay used human Cav3.2a, so the pair also differs in channel species); the correction reached SCI (my message cde48714) and SCI appended a dated Correction section (b1d005d8f 03:01Z, on development/main 7c68e8228) saying what it replaces. Verdict unchanged. Observable cost: SCI about 1.5 hours wall time (15 minutes of work and about 70 minutes of battery wait), no delegate; IT re-read, no delegate; Advisor P10 17 turns, output 14,052."
+    }
+   ]
+  },
+  "OBJ_14_OPERATOR_NEXT": {
+   "order": 14,
+   "title": "Operator instruction of 2026-11-15: IT23 symbol lookup trial (NOW), CTGF closure with X1 conditional, Cav3 qualification (NEXT), IT52 reuse",
+   "steps": [
+    {
+     "step": "Record the instruction in the roadmap seat, the portfolio and the assignments; send to the actual recipients; verify take-in-charge",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Recorded, sent (HE 0e9b067d, SCI 25e15631, IT 78882792), taken in charge by all three within minutes (HE PLAN-HE-IT23-SYMBOL-TRIAL-20261115, SCI ORCH-PRESIDIO004B-005-20261115, IT part C)."
+    },
+    {
+     "step": "Follow PRESIDIO-004 to its disposition (HE trial, SCI reference, IT KEEP/DISCARD/INCONCLUSIVE) and PRESIDIO-005 (queued) to delivery; IT applies the operator-directed INV-06 row 7 and INV-03 wording and narrows WO-25's blocking text",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "PRESIDIO-004 DISPOSED (see TRIAL_24H.log 08:0xZ); IT applied the INV-06, INV-03 and WO-25 wordings (bee8e7bed). Still open: PRESIDIO-005 (SCI: X1 first-question table, in its landing with a battery) and the landing of SCI's part B comparison; the question of the two live LINCS queries (S8/S9, 5 of 625 genes) belongs to the operator and is flagged for the report, not requested. CLOSED 2026-11-15T09:4xZ: PRESIDIO-004 (A, B, C) disposed; PRESIDIO-005 delivered and landed (the X1 first question answered in x1_discriminating_observations_presidio005_20261115/); the INV-06 and INV-03 wordings and WO-25 applied by IT (bee8e7bed); the two live LINCS queries (S8/S9) are not requested: for the operator's decision, recommended against (5 of 625 genes, no ranking effect shown)."
+    }
+   ]
+  },
+  "OBJ_15_ADV010": {
+   "order": 15,
+   "title": "ADV-010 (Advisor draft from evaluation 12, RP-008): reading-coverage census of older unread WWOX literature, for the Orchestrator",
+   "steps": [
+    {
+     "step": "Check the draft's premises in the originals, narrow it, send with the queue wording, record SENT with --to, verify take-in-charge, follow delivery and consumption",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Premises checked and the draft narrowed (see TRIAL_24H.log 08:3xZ); sending after this landing. SENT 2026-11-15T08:3xZ to IT Orchestrator (msg f30483d2, --to recorded, landed with this commit); take-in-charge pending. TAKEN and DELIVERED by IT (ORCH-RP008-UNREAD-20261115, landed 1e113ed06 08:37:36Z; SENT 08:26:46Z, so about 11 minutes by git, not the 1 h 40 min IT first wrote from its nominal START_UTC 07:00Z; asked to correct). RESULT, negative and informative, read in README and census.tsv: of the 149 placeholders (30 with receipt depths, 119 without, 31/118 after one new receipt), 134 are Tier C LOW, 4 not applicable, 11 Tier B (4 MODERATE-HIGH, 7 MODERATE); among Tier B none is lawfully readable free (4 case reports outside PMC, flagged not open access; the rest with receipts or paywalled); the 47 with free text are all Tier C LOW oncology/DDR and none is named by an INV or open question; no Science batch selected; RP-008 parked with a revival trigger; the INTAKE and METABOLIC 'pool exhausted' blockers are SUPPORTED as defined (dated notes added, no step state changed); one declared-without-receipt reading (P304, ACK1) closed with a contemporaneous partial receipt whose file SHA-256 equals the IT11 declaration; FM-011 title screen of 115 unreceipted LOW items found no Tier A HIGH hiding (titles are not readings). No research decision changed; a representation loss closed; a blocker's meaning clarified. Cost reported by IT: no delegate, about 17 Europe PMC searches, 1 PDF download, 1 PMC page request, generic client. Not done: a broader declared-without-receipt scan beyond drug_repurposing/."
+    }
+   ]
+  },
+  "OBJ_16_ADV011": {
+   "order": 16,
+   "title": "ADV-011 (Advisor draft from evaluation 13, RP-004): one mechanism-first generative case from the mechanism lens, for the Orchestrator",
+   "steps": [
+    {
+     "step": "Check the draft's premises in the originals, correct the seed, send with the queue wording, record SENT with --to, verify take-in-charge, follow the selection and the Scientist batch to delivery and consumption",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Premises checked and the seed corrected (TRIAL_24H.log 09:4xZ); sending after this landing. SENT 2026-11-15T09:4xZ to IT Orchestrator (--to recorded, landed with this commit); take-in-charge pending."
+    }
+   ]
+  },
+  "OBJ_17_ADV012": {
+   "order": 17,
+   "title": "ADV-012 (Advisor draft from evaluation 14): one RP-003 draw, preferring rows whose stated blocker may have lapsed, for the Orchestrator",
+   "steps": [
+    {
+     "step": "Check the draft's premises, narrow it, send with the queue wording, record SENT with --to, verify take-in-charge, follow delivery and consumption",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Premises checked and the draft narrowed (TRIAL_24H.log 11:4xZ); sending after this landing. SENT 2026-11-15T11:4xZ to IT Orchestrator (--to recorded, landed with this commit); take-in-charge pending. TAKEN and DELIVERED by IT (ORCH-ADV012-RP003-WO11-20261115, COMPLETE; SENT record 11:30:46Z, landing c2859e5c3 11:34:18Z: about 4-5 minutes by git, no delegate, no interruption). RESULT: row WO-11 (Mierau 2004, PMID 15492224, in PMC, blocked only by a Europe PMC fullTextXML HTTP 500): the PMC article page served the body on one plain request; ifenprodil 3 uM reduced the L4-evoked NMDA EPSC in mouse barrel L2/3 by 14% (bootstrap 2.5-97.5 interval 0-34%) at P13-P15 whisker-intact (control n=15, treated n=10), 53% (43-61%) at P6-P8, 49% (24-71%) deprived P13-P15; limits: evoked current at +40 mV/50 ms, room temperature, 2 mM Mg, between-cell design with pre-incubation, one concentration (a floor on the GluN2B share), NOT the isolated burst-slice current (WO-10 stays open); reading conditional only; receipt FTR-20261115-15492224-01 (partial, figure captions only), 10/10 verbatim rows, receipts verify OK (1960). Consumption: a dated Update line in the IT15 package README (14%, 0-34%, 'conditional, not the burst-slice current', no cell edited) after my request (8b5c60dee); nothing applied to any card, ranking, need or candidate. WO-12 blocker text now carries the route fact (Fischer 1997 access-blocked per PRESIDIO-003); IT declined the Hess 1996 half (one side of a two-sided comparison, a census item), resume: a lawful Fischer route or a comparison that needs only the ifenprodil conditions. My own error: I wrote to IT that I would weigh the next draw 'after the report', contradicting the operator's rule that the report does not idle the laboratory; corrected in a follow-up message."
+    }
+   ]
   }
+ },
+ "DECISIONS_TAKEN": [
+  {
+   "what": "Open a new task record for this increment instead of editing ORCH-ADV-PRESIDIO-20261113",
+   "alternatives_rejected": "reopening the COMPLETE record (would rewrite the verdict the operator asked to keep as historical evidence)",
+   "consulted": "the operator's prompt",
+   "reversibility": "full",
+   "how_to_revert": "set MANDATE_STATE to CANCELLED"
+  },
+  {
+   "what": "Set max_assignments to 9 in budget.json and keep the one-draft residual procedural, noted in amendments[]",
+   "alternatives_rejected": "setting 7 so the code enforces the residual (a new guard the operator excluded, and a number that contradicts the authorised 9)",
+   "consulted": "the operator's prompt",
+   "reversibility": "full",
+   "how_to_revert": "restore the previous numbers in budget.json"
+  },
+  {
+   "what": "Treat the continuous mode as applying to this presidio from the operator's own message, not from the peer relay",
+   "alternatives_rejected": "acting on the HE relay alone (a peer cannot extend authority); asking again after the operator's message (the operator asked not to)",
+   "consulted": "HE's relay, the operator's message to this session",
+   "reversibility": "full",
+   "how_to_revert": "end-continuous or a PAUSE/STOP line in the roadmap section"
+  }
+ ],
+ "STOP_LOG": [],
+ "TRIAL_24H": {
+  "what": "Operator-authorised 24-hour trial of continuous autonomy, on the existing campaign advisor_pilot_20261113, the current roadmap and the authorisations already recorded; the end of the window closes the observation, it does not revoke the continuous mode; later operator instructions and the existing boundaries prevail",
+  "started_utc": "2026-11-14T15:29:29Z",
+  "window_ends_utc": "2026-11-15T15:29:29Z",
+  "start_confirmed": "2026-11-14T15:3xZ: the trial has begun (effective take-in-charge by the ADV presidio at the time above; the operator's activation message arrived in chat a few minutes earlier)",
+  "baseline_at_start": {
+   "open_activities": [
+    "INTAKE-OVERNIGHT-20261002 (new-literature pool exhausted)",
+    "ORCH-METABOLIC-BATCH-20261019 (lawful WWOX-direct pool exhausted)",
+    "PLAN-HE-AUTONOMY-RADAR-20261114 (CI #751 on bff630afd, observed by HE)",
+    "PLAN-HE47-USABLE-KNOWLEDGE-PRESERVED-MEANING-SUSTAINABLE-COST-20261112",
+    "PLAN-PROACTIVE-ADVISOR-20261113",
+    "ORCH-ADV-FOLLOWTHROUGH-20261114 (this)",
+    "ORCH-PRESIDIO003-20261114 (SCI, in its worktree, at landing)"
+   ],
+   "pending_deliveries": [
+    "PRESIDIO-003 (SCI): note, access table and readings table written, quote check 10/10, no blind check (disclosed by SCI), battery next",
+    "CI #751 (bff630afd), single observer HE",
+    "next daily scout run with HE's filters"
+   ],
+   "queue": [
+    "PRESIDIO-003 only"
+   ],
+   "suspended_with_revival": [
+    "SCI50 levers and SCI42 explanations (revival: gate 0 or the M1/EBP question for clemastine moves, or a cost report that changes the cost-benefit)",
+    "lever residuals: owner statements to SCI, generator marks to HE (result_it52_rerun.md)",
+    "the 'CTGF question' in the incomplete P7: unfinished, not acted on"
+   ],
+   "sessions": "four sessions resolved by mandate_watch route: ADV (this, legend-development-39, via the binding of this record), HE, IT Orchestrator, SCI; all idle but ADV; SCI idle while waiting for its own battery (record RESUME), not stopped",
+   "recall_and_binding": "CronList: exactly one job, 3382bb86, hourly, session-only, canonical text unchanged; binding verified by route (ADV -> this session via this record) and by mandate_watch check (record verdict CONTINUE); nothing restored, no duplicate",
+   "remote": "main == origin/main before this record's own commits",
+   "campaign": "advisor_pilot_20261113: invocations 7 used (pilot ceilings are history in continuous mode), assignments drafted 6 (Advisor), presidio-decided PRESIDIO-001/002/003; evaluations P6 complete (hold) and P7 incomplete (classifier stop)",
+   "consumption_baseline": {
+    "unit": "main-session turns / output tokens / cache written / cache read, from session_model_census.py over each transcript, counted from 2026-11-14T00:00:00Z to the start; sonnet-5-5 in all four",
+    "ADV": "259 / 269,156 / 548,754 / 72,504,276 (effort read back xhigh)",
+    "HE": "467 / 420,556 / 1,336,514 / 207,175,978 (high, medium)",
+    "IT": "240 / 139,533 / 691,531 / 35,533,745 (medium)",
+    "SCI": "226 / 278,554 / 1,111,169 / 39,879,769 (high, max)",
+    "transcripts": "/home/desktop/.claude/projects/-home-desktop-legend-development/<session>.jsonl: ADV e6526331-6b7c-4631-8c9b-9e9d79867e90; HE 29e50812-fef0-4635-9c95-cfe7de2a8e2d; IT 4325d70d-8bea-4789-8046-d7a9ee74c97f; SCI 9400b253-25a0-4b03-8822-96361325fc16",
+    "advisor_evaluations": "read from P<n>/meta.json (P6 9 turns, output 7,476; P7 15 turns, output 13,576, incomplete); delegates and readers: subagent tokens as reported by the owners",
+    "subscription_remaining": "unknown: not exposed by the runtime and not assumed; no percentage or availability is inferred",
+    "end_of_window_method": "session_model_census.py --since 2026-11-14T15:29:29Z per transcript, meta.json for evaluations, owners' reported subagent totals; limits: the census counts main-session turns and cache-dominated reads, subagent usage is separate, a unit is not a quota"
+   }
+  },
+  "report_due": "at the end of the window: compact report with decisions and reasons; assignments given, completed and consumed; comparisons, experimental hypotheses or open questions improved; waits, interruptions, restarts and human interventions; observable cost and its limits; a reasoned recommendation on extending to 48-72 hours; unchanged results, errors and useless activity kept",
+  "log": [
+   {
+    "utc": "2026-11-14T15:29:29Z",
+    "event": "trial started; baseline recorded; recall and binding verified; no duplicate"
+   },
+   {
+    "utc": "2026-11-14T15:3xZ",
+    "event": "human intervention: the operator's activation message (the only operator input of this window so far)"
+   },
+   {
+    "utc": "2026-11-14T16:23Z",
+    "event": "tick NONE (waiting legitimate); independent activities reconsidered, none justified; motivated wait kept (SCI battery, HE's CI #751)"
+   },
+   {
+    "utc": "2026-11-14T16:3xZ",
+    "event": "PRESIDIO-003 delivered by SCI (landed 1a432bb6f; assigned ~14:45Z, taken in charge ~14:55Z, one 71-minute wait on its battery, no interruption, restart or human intervention, subagent tokens 0, no blind check disclosed): UNCHANGED result: reachable text of Hedegaard 2012, Science 2017 and Hansen 2014 states neither a maximum inhibition nor a triheteromer value for Ro 25-6981 (Hansen 2014 never mentions it), Fischer 1997 access-blocked; no tier changes; consumption pending: IT records IT43-Q01 as access-limited with a revival trigger; HE decides a one-line wording of V18 role_reason (composition qualifier). Checked by me against the delivered README and readings, not by a second reader."
+   },
+   {
+    "utc": "2026-11-14T16:3xZ",
+    "event": "SCI noted that the repository corroborates the trial window but not the authorisation of my assignments: the operator's activation is now recorded as a dated line in the Operator roadmap section (verifiable by every session)"
+   },
+   {
+    "utc": "2026-11-14T17:23Z",
+    "event": "tick EVALUATE caused by my own roadmap line (trial activation); held with the reason; HE asked for a one-line V18 decision"
+   },
+   {
+    "utc": "2026-11-14T17:4xZ",
+    "event": "HE: V18 wording change declined with reason; PRESIDIO-003 disposition complete (assigned ~14:45Z, delivered ~16:3xZ, consumed by IT ab4e56398)"
+   },
+   {
+    "utc": "2026-11-14T18:23Z",
+    "event": "pilot expiry passed; continuous mode kept the presidio, recall unchanged; CI #751 green (HE record complete f67a9a270); no interruption, restart or additional human intervention since the activation"
+   },
+   {
+    "utc": "2026-11-14T19:00Z",
+    "event": "HE intervention (value-driven continuity, PLAN-HE-VALUE-CONTINUITY-20261114): tooling and text only, no new service, gate or registry: brief sections Portfolio selection / Previous outcome / queue; each evaluation ends with an Outcome block (continue|switch|assign|queue|wait, excluded, reason, resume_when); tick resumes a stated wait when resume_when is met"
+   },
+   {
+    "utc": "2026-11-14T19:0xZ",
+    "event": "local main diverged from origin (HE pushed 7b3cb29b5 after my landing); merged origin/main into main in the root (8b97f7d95), no conflict; tick then showed queue {executable: HE's continuity record; blocked_only: INTAKE, METABOLIC; exhausted: false}"
+   },
+   {
+    "utc": "2026-11-14T19:04Z",
+    "event": "evaluation 8 (P8) run on the portfolio question after the closure of PRESIDIO-003: stage P, opus high, 15 turns (14 on claude-opus-5-5, 1 on claude-opus-5, runtime fallback), output 14,762, cache read 759,370, cache creation 74,058; complete (no classifier stop); outcome assign; draft ADV-007 (drafts now 7 of 9); invocation count 8, above the pilot ceiling of 7, which is history in continuous mode (flagged by the Advisor, not hidden)"
+   },
+   {
+    "utc": "2026-11-14T19:23Z",
+    "event": "ADV-007 taken in charge by SCI (ORCH-ADV007-20261114) after being sent at 19:07Z; no interruption"
+   },
+   {
+    "utc": "2026-11-14T21:0xZ",
+    "event": "ADV-007 delivered (verdict b, negative and informative); the Advisor's framing ('the INV-06 sentence may be out of date in one direction') was tempered by the result; one tool defect found (silent default flags on renamed symbols), sized by HE: no harness change now"
+   },
+   {
+    "utc": "2026-11-14T22:23Z",
+    "event": "tick EVALUATE because a new input appeared: the operator-requested Living Research Portfolio (research_portfolio.tsv, 20 rows, 11 ready; PLAN-LIVING-RESEARCH-PORTFOLIO-20261114); evaluation 9 (P9) run: stage P, opus high, 13 turns all claude-opus-5-5, output 13,261, cache read 730,607, cache creation 76,522, complete, outcome assign: draft ADV-008 (a WWOX literature census since 2026-10-01, to the Orchestrator); invocation count 9, drafts 8 of the historical 9 (history in continuous mode)"
+   },
+   {
+    "utc": "2026-11-14T22:3xZ",
+    "event": "ADV-008 NOT dispatched, with the reasons, after checking its premises in the originals: (1) 'no dated genotype-name scan since 2026-10-05' is false in substance: framework/scripts/scout_daily.py runs PubMed queries wwox_any and wwox_dee (30 newest by pub_date) daily from the host cron 05:20 and reports new PMIDs as TO_TRIAGE (the log shows two hits, 42991897 ClinVar population variants and 43004178 pig meat-yield genetics: noise); (2) the 'WWOX paper that appeared after the pause', PMID 42941930, is an SH-SY5Y respiratory-inhibitor study, not a WWOX model, per radar_p4_it15 README. Residual gap (window before the scout's first baseline; correction/retraction/supplement notices) is small and low-yield: RP-008 set to backlog with that narrow next action and a resume_when, via the portfolio upsert. Premise accuracy of Advisor drafts in this trial: ADV-007 draft had 3 premises, 2 wrong or incomplete (blank flags ambiguity flagged by the Advisor itself; SCI51 consumption not pending); ADV-008 draft had 2 premises, both false: the presidio's check of a draft's decisive premises in the originals changed the outcome twice out of three drafts of this phase (ADV-006 earlier: premise partly wrong)"
+   },
+   {
+    "utc": "2026-11-15T01:23Z",
+    "event": "tick EVALUATE: PLAN-LIVING-RESEARCH-PORTFOLIO released and queue exhausted (the portfolio digest also moved by RP-020's own outcome text); two P1 ready rows (RP-001, RP-002) never examined; evaluation 10 (P10) run: stage P, opus high, 17 turns (16 on claude-opus-5-5, 1 on claude-opus-5; one classifier stop at the start, text continued), output 14,052, cache read 953,775, cache creation 78,214; outcome assign: draft ADV-009 (INV-03 matched-assay isoform potencies and hERG/QT data for efonidipine and flunarizine, WO-25, to Science); invocation count 10, drafts 9 of the historical 9. The Advisor read the presidio's own record, applied the premise lesson to its draft and named the one premise it could not verify (whether a route tried since 2026-11-05 would now succeed)"
+   },
+   {
+    "utc": "2026-11-15T01:5xZ",
+    "event": "ADV-009 premises checked in the originals before sending: WO-25 row (OPEN, literature_executable, executable_zero_spend partial, last touched 2026-11-05, one Europe PMC fullTextXML HTTP 500 on three PMC sources, 'No later record found'), INV-03 rank 2 (the pair is a proposal to verify; next_test still waits for matched potencies), and no record after 2026-11-05 gives the potencies (grep of efonidipine across the module: latest touches are bookkeeping or listings). All held. Sent to SCI with the queue wording."
+   },
+   {
+    "utc": "2026-11-15T01:29Z",
+    "event": "ADV-009 taken in charge by SCI (ORCH-ADV009-20261115, record opened 01:29Z), sent 01:28Z"
+   },
+   {
+    "utc": "2026-11-15T03:00Z",
+    "event": "ADV-009 produced 01:43Z and landed 02:54Z (SCI; about 70 minutes of battery wait), consumed 03:00Z by IT after its own independent re-read; one factual error in the producer's wording caught by the integrator (channel species) and corrected by the owner on main; verdict (qualified pair) unchanged; improvements: INV-03's comparator pair now qualified with sourced values, WO-25 narrowed, a statement in the frozen IT28 comparison corrected by a dated update, the hERG discrepancy named, an access-route fact recorded"
+   },
+   {
+    "utc": "2026-11-15T03:1xZ",
+    "event": "presidio's own error corrected: the timestamps I first wrote for ADV-009 (02:0xZ taken, 04:3xZ delivered) were estimates and the second was in the future; replaced with the commit times"
+   },
+   {
+    "utc": "2026-11-15T03:23Z",
+    "event": "tick EVALUATE (portfolio digest unchanged since the deferred 02:23 tick; queue exhausted; the last evaluation preceded ADV-009's delivery): evaluation 11 (P11) run, stage P, opus high, only 3 turns (2 on claude-opus-5-5, 1 on claude-opus-5), output 4,851, cache read 79,227, cache creation 38,654: DEGRADED (first line states the classifier stop; it read only the portfolio and P10, not the records it reasons from); outcome wait with resume_when after:2026-11-15T15:29:29Z; its decisive premise ('ADV-009 is in flight') was stale: ADV-009 had been delivered 02:54Z, consumed 03:00Z, corrected 03:01Z on main; it applied three portfolio updates, two of them false (RP-016 'in flight', RP-003 'one draw in flight'). Invocation count 11."
+   },
+   {
+    "utc": "2026-11-15T03:3xZ",
+    "event": "presidio decisions after P11: (1) the two false portfolio rows corrected by portfolio --upsert (RP-016 and RP-003 now state that ADV-009 is delivered and consumed, the branch's remaining residual and its revival); (2) the P11 wait is not relied on; my own decision: wait with a dated resume: the daily scout run at 05:20Z (first with HE's filters), because the other ready rows are large reads without a named decision (RP-002 first five units of the selection table: ethosuximide, lithium, d-APV class, A51, ketogenic diet, plus the AAV9 gene-addition unit excluded from drug repurposing; RP-003 the whole open-question map), literature routes blocked by lawful access, or event-gated (RP-017, RP-018); RP-005 (a prospective test of the generative method) resumes only with a new lever or measurement package (ADV-009's values table does not fit a design or comparison reader); (3) the pattern of degraded evaluation runs (P7 cut mid-text, P10 start, P11 3 turns) reported to HE with a suggestion to treat such a run as INCOMPLETE (no stated wait, no portfolio updates)"
+   },
+   {
+    "utc": "2026-11-15T07:3xZ",
+    "event": "human intervention (the second of this window): the operator's instruction to the ADV session, baseline main 9aa28b3, with a resource list: NOW one priority step, an offline reversible trial of the IT23 symbol lookup (15 of 834 rows with default zero flags), KEEP/DISCARD/INCONCLUSIVE rules; NEXT use ADV-007 (CTGF expression check closed, X1 stays conditional, first question: which observation separates soluble signal, composition and contact); NEXT use ADV-009 (the Cav3 pair stays a qualified proposal, narrow to the missing values and conditions, no clinical margin across assays); available: reuse IT52, no further generic linkage. The operator's roadmap revision 40 and register revision 73 are in a private ChatGPT library I cannot open: the repository facts and the operator's own summary were used."
+   },
+   {
+    "utc": "2026-11-15T07:5xZ",
+    "event": "recorded in the roadmap seat (dated line), the portfolio (RP-021 new, RP-017 and RP-016 updated by upsert) and two assignment files: PRESIDIO-004 (operator-directed: HE trial offline in a new dated folder; SCI independent manual mapping of the 15 rows BEFORE seeing the trial; IT disposition KEEP/DISCARD/INCONCLUSIVE and any regeneration) and PRESIDIO-005 (queued: SCI, the X1 first question as a table of discriminating observations from held files); the INV-06 row 7 and INV-03 wordings, left optional earlier by IT, are now operator-directed for IT"
+   },
+   {
+    "utc": "2026-11-15T07:5xZ",
+    "event": "human intervention (the third of this window): the operator pasted a capability-scout report addressed to PLAN (Contrastive Discovery, Skill2Query, Contrastive Hypothesis Replay and four other replays; claims are the authors', code not verified, no validation on LEGEND). Not an instruction to ADV: stored as received in radar_inputs_he52_20261114/operator_scout_report_20261115.md (HE had declared the operator's radar reports absent from the repository), linked to portfolio rows RP-001, RP-007 and RP-010, no assignment; PLAN (HE) decides the static audit; the priority next step remains the IT23 symbol-lookup trial (PRESIDIO-004)."
+   },
+   {
+    "utc": "2026-11-15T07:3xZ-08:0xZ",
+    "event": "PRESIDIO-004 (operator's NOW step, IT23 symbol lookup) in about 35 minutes of wall time from the message: HE taken (PLAN-HE-IT23-SYMBOL-TRIAL-20261115) and trial computed 07:38-07:40Z, held its landing until SCI's independent reference existed (a deadlock risk: I relayed the git-verified order, SCI's reference cc39da185 07:33:43Z before HE's first trial commit 07:38:19Z); SCI reference built by hand before seeing HE's output, then the row-by-row comparison (a7ec78e2f): 15/15 agree, 834/834 mechanical re-derivation agree, independence stated as weaker than it looks (same HGNC and data; two checks outside HGNC 15/15); IT re-derived the QF change itself (stdlib, offline, no delegate; all 15 rho equal to 3 decimals, 0 mismatches on committed rho, broad flag changes for exactly IRAG1, POFUT4, HDIP1, H1-2, H1-10, QF 365/260 to 363/257, class unchanged) and disposed (b2eb309fb): KEEP per row for the 15 conversions, rho and flags; DISCARD none; INCONCLUSIVE on benefit (no LINCS query run; only S8/S9 would repeat, 5 of 625 genes; no ranking effect measured or claimed); no regeneration; revival: a decision resting on S8/S9, or operator authorisation of two live queries"
+   },
+   {
+    "utc": "2026-11-15T07:5xZ",
+    "event": "IT consumed the operator-directed wordings (INV-06 CTGF clause replaced by the ADV-007 reading, INV-03 [ADV-009] dated clause without compound names because the shareable audit refuses them, WO-25 blocking_reason aligned, one regeneration of ranking, i18n and views: bee8e7bed); one incident: its first attempt failed the shareable audit and the chain was redone"
+   },
+   {
+    "utc": "2026-11-15T07:4xZ",
+    "event": "another PLAN session (branch codex/adv-continuity-20261115, record PLAN-ADV-CONTINUOUS-RESEARCH-20261115) corrected the Advisor's continuity rule and live portfolio rows (RP-003, RP-005, RP-008): invalidated the stale P11 wait without a model call, made selection follow deliveries as well as hourly recalls; its last steps (landing, observing my recall) are open"
+   },
+   {
+    "utc": "2026-11-15T08:0xZ",
+    "event": "HE's static audit of the operator's scout report delivered (8362ac92a, radar_inputs_he52_20261114/operator_scout_report_20261115_audit_he.md): competing explanations already covered at generation and proposal time; three pieces missing (MECE requirement, unknown-mechanism slot, a record of which rival a result favoured: observed absences, not a measured failure); Contrastive Discovery MONITOR, Skill2Query WATCH (no demonstrated retrieval defect; an API key dependency), the four other replays not audited; no harness change. Presidio decision: the read-only replay HE names (a Scientist, on INV-05 BH1-BH3 or the ADV-007 contrast, with a reader other than the writer of the rivals) is kept as an option in RP-001 and NOT assigned now: the cases are the most worked in the module, it changes no research decision (only whether a proposal-record slot deserves a trial), resources are unknown and the 24-hour report is due; revival after the report if a Scientist has free capacity, or if an existing rejection is seen to have lost information. Portfolio rows RP-001, RP-007, RP-010 point at the audit."
+   },
+   {
+    "utc": "2026-11-15T08:23Z",
+    "event": "tick EVALUATE: the PLAN session's continuity correction landed (P11 retroactively marked incomplete, its wait invalidated, last_incomplete shown), live portfolio rows rewritten (RP-003, RP-005, RP-008), executable queue holds the PLAN record; 7 hours since the last complete evaluation (P10). Evaluation 12 (P12) run: stage P, opus high, 11 turns all claude-opus-5-5, output 10,721, cache read 602,548, cache creation 72,058, complete; outcome assign: draft ADV-010 (RP-008: reconcile the corpus placeholders that unread_gold --all lists without a matched reading receipt, to the Orchestrator). The roadmap line it relies on is an operator instruction transcribed by the PLAN session ('assess the coverage of older unread WWOX literature as well as new PubMed hits: the daily newest-hit scout is not a full reading-coverage census'), which I read in roadmap_current.md. Invocation count 12, drafts 10."
+   },
+   {
+    "utc": "2026-11-15T08:3xZ",
+    "event": "ADV-010 premises checked before sending: the count holds (I re-ran unread_gold --all --json: 149 placeholders, 30 with receipt depths and 119 without, against the README's 27/122 of yesterday; the 3-item difference is receipts landed since) but the draft did not know the distribution: 134 of the 149 are Tier C, relevance LOW, 4 are 'not applicable, reading complete', and only 11 are Tier B (4 MODERATE-HIGH, 7 MODERATE); the default high-priority filter returns nothing. Draft narrowed accordingly before sending (the 11 Tier B items first; the 134 LOW sorted mechanically by tier and checked only by a small sample for mis-triage, the FM-011 failure mode)."
+   },
+   {
+    "utc": "2026-11-15T08:41Z",
+    "event": "ADV-010 delivered by IT 11 minutes after it was sent (git), unchanged-outcome class: RP-008 parked; the exhausted-pool claim supported; one receipt recorded; a unit-of-time error in IT's own note (1 h 40 min from a nominal START_UTC) corrected at my request. Presidio decision after it: no further assignment now: P12's own fallback (RP-002, the first five units of the selection table) was weighed and not assigned: the five units (ethosuximide, lithium, d-APV class, A51, ketogenic diet; plus the excluded AAV9 gene-addition unit) have their next steps wet-gated and have been through many iterations, so an in-silico reassessment expects 'parked' at best, and the operator's own rule parks a wet-gated branch; revisit only on an event (SCI's PRESIDIO-005 delivery, a scout signal that survives triage, an operator line)."
+   },
+   {
+    "utc": "2026-11-15T09:23Z",
+    "event": "tick EVALUATE: a new roadmap line landed (PLAN session, 08:45Z): mechanism discovery stays open beyond existing clinical investigations; the first coverage handoff is preparation, an existing INV or open-question citation is not required for a new question, use the mechanism lens and lawful full-text availability to select a small generative research case with transfer limits, competing explanations, a pharmacological comparison where justified and a rejecting experiment; canonical rule: cross-session transport section 12, 'Strategic synthesis is executable work'; and a host duty: reconcile the one existing Advisor recall with the canonical recall text, update only if stale."
+   },
+   {
+    "utc": "2026-11-15T09:2xZ",
+    "event": "recall reconciled with the canonical text (it was stale: no PAUSED/RESOURCES, no --to, no same-turn delivery, no 'prepare useful work' sentence): CronDelete 3382bb86 and CronCreate 477df2a9 in the same step, same cadence (hourly at :17), exactly one job (CronList), shared tick state untouched (host directory)."
+   },
+   {
+    "utc": "2026-11-15T09:3xZ",
+    "event": "evaluation 13 (P13) run: stage P, opus high, 12 turns all claude-opus-5-5, output 12,538, cache read 710,014, cache creation 72,672, complete; outcome assign: draft ADV-011 (RP-004: one mechanism-first generative case selected from unread_gold --mechanism, to the Orchestrator, one Scientist batch queued behind PRESIDIO-005). It disagreed with my 08:41Z no-assignment decision on the ground of PLAN's later correction, which is right. Invocation count 13, drafts 11."
+   },
+   {
+    "utc": "2026-11-15T09:4xZ",
+    "event": "ADV-011 premises checked before sending: the lens count holds (I re-ran unread_gold --mechanism --json: 74 items, 16 with receipt depths, 58 without; the draft quotes 74/60); the draft's SEED (the WWOX SDR substrate conflict, steroid oxidation PMID 21476439 against the 2015 retinal proposal PMID 25662954) is NOT unadjudicated in LEGEND: analysis/wwox_sdr_function_per_molecule_census_20260921.md section W2.1 found that the retinal proposal has no primary paper behind it, from that lab or any lab, and no independent literature; the draft itself named the September files as the first check and had not read them. Seed withdrawn as a pick, kept only as 'assessed in September'; P290 (declared read in the discovery ledger without a receipt) to be skipped or receipted, not re-read."
+   },
+   {
+    "utc": "2026-11-15T09:4xZ",
+    "event": "PRESIDIO-004 part B and PRESIDIO-005 delivered by SCI and landed (b88a2c251; battery 20261115-075847-b7fe7e15 PASS WITH SKIPS on 0e11973e4e; later merge checked by lint WARN, growth_anchors PASS, receipts OK, routing, section references, release gate PASS, not a second full battery: stated by SCI in its record). Part B: 15/15 agree with HE, 834/834 mechanical, independence weaker than it looks, two checks outside HGNC 15/15. PRESIDIO-005 (the operator's first question on X1): no single observation separates soluble signal, composition and contact; the smallest set is O0 the premise gate (null-neuron deficit reproduced blind, independent preparations, axon-density denominators), O1+O2 the soluble leg (conditioned medium on OPC monoculture, fresh-medium baseline, mixing arm, dilution series, matched neuron number and viability), O3 composition readouts in the same dishes (neuron number, viability, non-neuronal fraction, axon density and calibre, T3, T4 and a nutrient in conditioned versus fresh medium), O4 the contact leg (fixed null versus fixed wild-type neurons, held in INV-06, and a transwell, which is SCI's proposal with the it36 precedent, not text held in INV-06's X1 clause: IT's check caught that attribution and the README, TSV and delta now say so); O5 neutralisation identifies a candidate only inside the soluble explanation. No blind verifier on 005 (the weak point, stated by SCI). Consumer delta: 3 proposals, none applied; the INV-06 dated clause waits for a regeneration for another reason (IT's call), the optional OQ13 row (contact leg) and no change to the closed expression check. This answers the question in a repository table, not a prediction: an improved formulation of a conditional design, nothing measured."
+   },
+   {
+    "utc": "2026-11-15T09:4xZ",
+    "event": "ADV-011 taken by IT (ORCH-RP004-LENS-20261115, 743cdf741): case P287 (JNK inhibitor x WWOX gain and loss in HCC lines, meeting the INV-09 E04 lead in the opposite direction), seed withdrawn as I corrected; prediction F1-F7 and two case-level bets frozen at 09:28:28Z (45fadb00f) before the body was read; brief to SCI, queued behind PRESIDIO-005, which has now landed."
+   },
+   {
+    "utc": "2026-11-15T11:20Z",
+    "event": "ADV-011 closed by IT (ORCH-RP004-LENS-20261115 COMPLETE, 5f8ececb4): P-a and P-b NOT DETERMINABLE (the body has no neural cell and no tau readout), F1 F2 F3 F4 F6 held, F5 F7 not determinable, none missed; consumer delta rows 2, 3, 5 applied as a dated update in the case README (a fifth competing explanation: the inhibitor adds to a WWOX-caused apoptosis whose baseline is not separated; a third control in the rejecting experiment); row 6 (five figure panels) not now; NO new open-question row, NO INV-09 E04 note; nothing changed in ranking, need or candidate state; predictive capacity: none shown; git-measured span from my send record 09:26:56Z to IT's close 11:20:16Z about 113 minutes (SCI reading plus its battery about 98 of them). I had nudged IT at 11:25Z because its record still read OPEN while SCI's delivery had landed at 11:07Z (the answer already existed; the wait did not resolve itself): a small case of the wait-resolution gap the unblock_when mechanism is meant to close, not used by IT's record."
+   },
+   {
+    "utc": "2026-11-15T11:3xZ",
+    "event": "evaluation 14 (P14) run after the consumption: stage P, opus high, 14 turns all claude-opus-5-5, output 12,350, cache read 841,637, cache creation 76,723, complete; outcome switch: draft ADV-012 (a: decide whether the RP-004 contrast becomes an open-question row; b: one RP-003 draw among the OPEN executable rows of the map). Invocation count 14, drafts 12."
+   },
+   {
+    "utc": "2026-11-15T11:4xZ",
+    "event": "ADV-012 premises checked and the draft narrowed before sending: part (a) was already decided by IT in its close (no new open-question row, no INV-09 E04 note, because the paper does not touch the tau readout) and is dropped; part (b) narrowed: the pool is 35 OPEN literature_executable/data_access_blocked rows with zero-spend yes or partial (I counted; the draft says 36), 11 of which carry a blocker that names a route or access state that may have lapsed in light of routes learned in this trial (the PMC article page as one plain request, efetch XML, the PMC bucket text copy, ChEMBL by-target from the primary checkout): a filter the draft did not have; examples named without prescribing: WO-11 (PMC524435, free in PMC, blocked only by a Europe PMC fullTextXML HTTP 500), WO-06 (nothing blocks it, never scheduled), IT44-Q05, IT46-Q02, IT49-Q06/Q08."
+   },
+   {
+    "utc": "2026-11-15T11:4xZ",
+    "event": "ADV-012 delivered by IT in about 4-5 minutes (git): a published number with its interval for the GluN2B-sensitive share that the IT15 NAM occupancy arithmetic uses (14% (0-34%) at P13-P15, evoked current, not the burst-slice current), consumed as a dated update in the arithmetic's own package; a route-state blocker found lapsed (the PMC article page); WO-12 not taken (Fischer 1997 access-blocked; one side of a comparison would be a census item); the pool is not parked. A presidio slip corrected (a hold 'until the report', contrary to the operator's rule)."
+   }
+  ]
+ }
 }
