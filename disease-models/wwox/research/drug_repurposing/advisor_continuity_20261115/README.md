@@ -62,3 +62,19 @@ Implementation tests and the live recall outcome are recorded in
 `ledger/tasks/plan/PLAN-ADV-CONTINUOUS-RESEARCH-20261115.json`. Until that record carries the
 observed outcome, this report claims implementation and diagnosis only. A passed test does not
 establish better strategy, new pharmacological efficacy or multi-day autonomous reliability.
+
+
+## Scoped DREAM and self-diagnosis
+
+An **already held but unused operational relation**, not a biological discovery: the scope of a
+latest-hit scout or a default high-priority filter does not establish the absence of useful
+older literature. The rival explanations for an empty result are exhausted relevant evidence
+and a restrictive query/filter or unpropagated reading state. Comparing whole registry records
+with receipt annotations discriminates them. RP-008 now consumes that connection as an actionable
+coverage-and-question selection opportunity instead of waiting only for a new PMID. No extra
+scientific ledger entry or claim of literature novelty is warranted by this Harness finding.
+
+The correction addresses information that was kept and available but not acting: current
+mandates and numeric assessment recency now reach the brief; a rejected old outcome loses its
+scheduling effect; live opportunity fields no longer reserve all research capacity for a trial
+report. The remaining strategic benefit must be observed in actual assignments and consumers.
