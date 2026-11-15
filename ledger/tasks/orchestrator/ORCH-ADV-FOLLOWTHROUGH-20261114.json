@@ -295,9 +295,9 @@
    "steps": [
     {
      "step": "Check the draft's premises in the originals, narrow it, send with the queue wording, record SENT with --to, verify take-in-charge, follow delivery and consumption",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Premises checked and the draft narrowed (see TRIAL_24H.log 08:3xZ); sending after this landing. SENT 2026-11-15T08:3xZ to IT Orchestrator (msg f30483d2, --to recorded, landed with this commit); take-in-charge pending."
+     "evidence": "Premises checked and the draft narrowed (see TRIAL_24H.log 08:3xZ); sending after this landing. SENT 2026-11-15T08:3xZ to IT Orchestrator (msg f30483d2, --to recorded, landed with this commit); take-in-charge pending. TAKEN and DELIVERED by IT (ORCH-RP008-UNREAD-20261115, landed 1e113ed06 08:37:36Z; SENT 08:26:46Z, so about 11 minutes by git, not the 1 h 40 min IT first wrote from its nominal START_UTC 07:00Z; asked to correct). RESULT, negative and informative, read in README and census.tsv: of the 149 placeholders (30 with receipt depths, 119 without, 31/118 after one new receipt), 134 are Tier C LOW, 4 not applicable, 11 Tier B (4 MODERATE-HIGH, 7 MODERATE); among Tier B none is lawfully readable free (4 case reports outside PMC, flagged not open access; the rest with receipts or paywalled); the 47 with free text are all Tier C LOW oncology/DDR and none is named by an INV or open question; no Science batch selected; RP-008 parked with a revival trigger; the INTAKE and METABOLIC 'pool exhausted' blockers are SUPPORTED as defined (dated notes added, no step state changed); one declared-without-receipt reading (P304, ACK1) closed with a contemporaneous partial receipt whose file SHA-256 equals the IT11 declaration; FM-011 title screen of 115 unreceipted LOW items found no Tier A HIGH hiding (titles are not readings). No research decision changed; a representation loss closed; a blocker's meaning clarified. Cost reported by IT: no delegate, about 17 Europe PMC searches, 1 PDF download, 1 PMC page request, generic client. Not done: a broader declared-without-receipt scan beyond drug_repurposing/."
     }
    ]
   }
@@ -495,6 +495,10 @@
    {
     "utc": "2026-11-15T08:3xZ",
     "event": "ADV-010 premises checked before sending: the count holds (I re-ran unread_gold --all --json: 149 placeholders, 30 with receipt depths and 119 without, against the README's 27/122 of yesterday; the 3-item difference is receipts landed since) but the draft did not know the distribution: 134 of the 149 are Tier C, relevance LOW, 4 are 'not applicable, reading complete', and only 11 are Tier B (4 MODERATE-HIGH, 7 MODERATE); the default high-priority filter returns nothing. Draft narrowed accordingly before sending (the 11 Tier B items first; the 134 LOW sorted mechanically by tier and checked only by a small sample for mis-triage, the FM-011 failure mode)."
+   },
+   {
+    "utc": "2026-11-15T08:41Z",
+    "event": "ADV-010 delivered by IT 11 minutes after it was sent (git), unchanged-outcome class: RP-008 parked; the exhausted-pool claim supported; one receipt recorded; a unit-of-time error in IT's own note (1 h 40 min from a nominal START_UTC) corrected at my request. Presidio decision after it: no further assignment now: P12's own fallback (RP-002, the first five units of the selection table) was weighed and not assigned: the five units (ethosuximide, lithium, d-APV class, A51, ketogenic diet; plus the excluded AAV9 gene-addition unit) have their next steps wet-gated and have been through many iterations, so an in-silico reassessment expects 'parked' at best, and the operator's own rule parks a wet-gated branch; revisit only on an event (SCI's PRESIDIO-005 delivery, a scout signal that survives triage, an operator line)."
    }
   ]
  }
