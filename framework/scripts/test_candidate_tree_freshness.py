@@ -464,6 +464,15 @@ class TheRealDeclarations(unittest.TestCase):
                     self.assertEqual([changed], ctf.triggers_for(
                         ROOT, surface, script, ctf.expand_generators(ROOT)[script], [changed]))
 
+    def test_a_receipt_re_checks_the_ranking(self):
+        """HE62: ranking.json stamps the receipt ledger's length; a receipt landing without it turned the release workflow red three times in one day."""
+        ranking = "disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/ranking.json"
+        scripts = ctf.declared_surfaces(ROOT).get(ranking)
+        self.assertTrue(scripts, "the ranking is not a declared generated surface")
+        for script in scripts:
+            self.assertEqual(["disease-models/wwox/registries/fulltext_read_receipts.jsonl"], ctf.triggers_for(
+                ROOT, ranking, script, ctf.expand_generators(ROOT)[script], ["disease-models/wwox/registries/fulltext_read_receipts.jsonl"]))
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

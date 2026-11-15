@@ -1,0 +1,9 @@
+PMC12621189 len 111603 pH tokens 18
+  tool ONO-TR-772 occurrences 6 pH values within +-300 chars: []
+PMC3077598 len 46615 pH tokens 3
+  tool A1899 occurrences 108 pH values within +-300 chars: []
+PMC9970648 len 70641 pH tokens 168
+  tool A1899 occurrences 20 pH values within +-300 chars: ['pHo6.8', 'pHo7.3', 'pHo7.4']
+  tool PK-THPP occurrences 17 pH values within +-300 chars: ['pHo6.8', 'pHo7.3', 'pHo7.4']
+  tool ML365 occurrences 1 pH values within +-300 chars: []
+PMC6725198 len 69294 pH tokens 152

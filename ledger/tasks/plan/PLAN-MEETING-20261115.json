@@ -99,7 +99,7 @@
   "SESSION_LEARNING_REVIEW": {
     "lesson": "Alignment must preserve the distinction between a source-derived index, an actual actor update and delivered work. Periodic cadence is separate from whether a strategic model evaluation is needed.",
     "capability_outcome": "MEETING added through existing coordination paths; no external capability or installation required.",
-    "remaining_measurement": "Observe a native round table and downstream acceptance/consumption; assess its useful decisions and total cost, not meeting count."
+    "remaining_measurement": "Observe recurring/event follow-through and total coordination cost over time; the first native round has three actual replies and decisions, not evidence of improved biological predictions."
   },
   "NATIVE_OBSERVATION": {
     "opened_utc": "2026-11-15T15:21:59Z",
@@ -122,7 +122,22 @@
         "receipt": "7ad630d9-c29b-482d-93ee-e493e5ec8c93"
       }
     ],
-    "boundary": "Messages accepted by the recipients inboxes; replies/acceptance, closure and decision usefulness are not inferred."
+    "boundary": "Actual event-triggered round, three replies preserved verbatim and native follow-up requests observed. No six-hour timer firing, multi-day uptime or biological/predictive benefit inferred.",
+    "closed_utc": "2026-11-15T15:49:33Z",
+    "actual_replies": [
+      "IT Orchestrator",
+      "SCI",
+      "HE"
+    ],
+    "mirror": "No active session, explicitly not consulted",
+    "next_due_utc": "2026-11-15T21:21:59Z",
+    "decisions": [
+      "HE: repair receipt-derived ranking freshness through the existing landing check; keep the reproducibility test.",
+      "IT: consume the missing scientific proposal, then choose an authorised next open question or a supported wait.",
+      "SCI: proceed with NX1 experiment sizing and close the prior task with its actual consumer.",
+      "Decline prose-parsed K2P column; defer contrastive replay while SCI is occupied."
+    ],
+    "live_recall": "One existing hourly recall observed through a clipped list view; full prompt not verified from that display."
   },
   "PUBLICATION_METADATA": {
     "all_69_unit_records_unchanged": true,

@@ -1,0 +1,15 @@
++/+: x-axis y=299.92; 13 x ticks, 2.7956 pt/min, tick-line residual 0.011 pt; 7 y ticks, 10.1641 pt/stage, residual 0.021 pt
++/+ PTZ: 122 markers; anchor_offset_check vs polyline vertices (pt, median over 102): 0.000; max |offset| 0.001
++/+ PTZ: 1 marker(s) off the half-minute grid dropped (legend swatches); 121 kept
++/+ PTZ+LiCl: 122 markers; anchor_offset_check vs polyline vertices (pt, median over 91): -0.001; max |offset| 0.001
++/+ PTZ+LiCl: 1 marker(s) off the half-minute grid dropped (legend swatches); 121 kept
++/-: x-axis y=381.59; 13 x ticks, 2.7811 pt/min, tick-line residual 0.012 pt; 7 y ticks, 10.1644 pt/stage, residual 0.022 pt
++/- PTZ: 122 markers; anchor_offset_check vs polyline vertices (pt, median over 110): -0.000; max |offset| 0.002
++/- PTZ: 1 marker(s) off the half-minute grid dropped (legend swatches); 121 kept
++/- PTZ+LiCl: 122 markers; anchor_offset_check vs polyline vertices (pt, median over 92): -0.000; max |offset| 0.002
++/- PTZ+LiCl: 1 marker(s) off the half-minute grid dropped (legend swatches); 121 kept
+-/-: x-axis y=464.70; 13 x ticks, 2.7321 pt/min, tick-line residual 0.012 pt; 7 y ticks, 10.0029 pt/stage, residual 0.022 pt
+-/- PTZ: 122 markers; anchor_offset_check vs polyline vertices (pt, median over 109): -0.000; max |offset| 0.002
+-/- PTZ: 1 marker(s) off the half-minute grid dropped (legend swatches); 121 kept
+-/- PTZ+LiCl: 122 markers; anchor_offset_check vs polyline vertices (pt, median over 85): -0.001; max |offset| 0.002
+-/- PTZ+LiCl: 1 marker(s) off the half-minute grid dropped (legend swatches); 121 kept

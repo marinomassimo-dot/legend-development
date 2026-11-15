@@ -72,7 +72,22 @@ At **15:21:59 UTC (16:21:59 Europe/Rome)** the existing ADV host opened
 deployment signal. At 15:22:19,15:22:22 and15:22:26 it sent separate requests to the actual
 IT, SCI and HE named sessions, asking for pending priorities, blockers, prospects and
 corrections of its direction while explicitly preserving ongoing work. The three successful
-transport receipts are in the task record. Opening and inbox delivery are observed; replies,
-closure and useful decisions require their own evidence. No operator MEETING prompt was
-pasted into ADV. The shared publication metadata was also regenerated after the concurrent
-receipts: all69 scientific unit objects were unchanged; only ranking summary metadata moved.
+transport receipts are in the task record. No operator MEETING prompt was pasted into ADV.
+The host received all three replies and closed the round at **15:49:33 UTC (16:49:33
+Europe/Rome)**. The [actual minutes](../advisor_pilot_20261113/meetings/MEETING-20261115T152159Z-jaq44mq3.md)
+preserve those replies verbatim, explicitly record Mirror as unavailable, and distinguish
+decisions from delivered or completed work.
+
+Observed follow-through includes the existing landing check's receipt-derived ranking
+freshness repair assigned to HE, consumption of a missing scientific proposal assigned to
+IT, and NX1 experiment sizing assigned to SCI. The host declined a prose-parsed K2P column
+and deferred a replay while SCI was occupied. These are concrete coordination decisions,
+not evidence of better biological predictions. The next round is due **21:21:59 UTC
+(22:21:59 Europe/Rome)**, or earlier on a material event. This first round demonstrates the
+event route, not a six-hour timer firing or multi-day uptime. One existing hourly recall was
+observed; its list view clips the prompt, so that display alone does not verify its full text.
+
+The shared publication metadata was also regenerated after the concurrent receipts:
+all 69 scientific unit objects were unchanged; only ranking summary metadata moved. Later
+scientific changes merged from peers retain their own provenance and are not attributed to
+MEETING.

@@ -1,0 +1,32 @@
+check	genotype	series	scope	result
+B_pdf_vs_png	+/+	PTZ	measured pdf 37 png 36 both 36	mean diff -0.004; mean abs diff 0.006; max abs diff 0.039
+B_pdf_vs_png	+/+	PTZ+ETS	measured pdf 61 png 61 both 61	mean diff -0.008; mean abs diff 0.008; max abs diff 0.026
+B_pdf_vs_png	+/+	control	measured pdf 60 png 60 both 60	mean diff +0.006; mean abs diff 0.010; max abs diff 0.018
+A_control_is_zero	+/+	control	pdf	mean -0.000; min -0.009; max +0.013; n 60 (one minute may carry the one animal that scored above 0)
+A_control_is_zero	+/+	control	png	mean -0.006; min -0.026; max -0.005; n 60 (one minute may carry the one animal that scored above 0)
+B_pdf_vs_png	+/-	PTZ	measured pdf 27 png 36 both 26	mean diff -0.003; mean abs diff 0.010; max abs diff 0.038
+B_pdf_vs_png	+/-	PTZ+ETS	measured pdf 61 png 61 both 61	mean diff +0.002; mean abs diff 0.006; max abs diff 0.017
+B_pdf_vs_png	+/-	control	measured pdf 60 png 60 both 60	mean diff +0.002; mean abs diff 0.009; max abs diff 0.027
+A_control_is_zero	+/-	control	pdf	mean +0.001; min -0.014; max +0.008; n 60 (one minute may carry the one animal that scored above 0)
+A_control_is_zero	+/-	control	png	mean -0.001; min -0.019; max +0.002; n 60 (one minute may carry the one animal that scored above 0)
+B_pdf_vs_png	-/-	PTZ	measured pdf 54 png 54 both 54	mean diff +0.023; mean abs diff 0.025; max abs diff 0.049
+C_lattice	-/-	PTZ	pdf	54 points; median 0.07 step; share within 0.25 step 0.81
+C_lattice	-/-	PTZ	png	54 points; median 0.10 step; share within 0.25 step 0.85
+B_pdf_vs_png	-/-	PTZ+ETS	measured pdf 61 png 60 both 60	mean diff +0.004; mean abs diff 0.004; max abs diff 0.005
+C_lattice	-/-	PTZ+ETS	pdf	61 points; median 0.09 step; share within 0.25 step 0.98
+C_lattice	-/-	PTZ+ETS	png	60 points; median 0.06 step; share within 0.25 step 0.98
+B_pdf_vs_png	-/-	control	measured pdf 58 png 59 both 58	mean diff +0.022; mean abs diff 0.022; max abs diff 0.024
+A_control_is_zero	-/-	control	pdf	mean -0.004; min -0.024; max -0.002; n 58 (one minute may carry the one animal that scored above 0)
+A_control_is_zero	-/-	control	png	mean -0.016; min -0.026; max +0.557; n 59 (one minute may carry the one animal that scored above 0)
+D_7d_raster_vs_vector	+/+	PTZ	121 of 121 points	mean error -0.064; mean abs error 0.064; max abs 1.00
+D_7d_raster_vs_vector	+/+	PTZ+LiCl	59 of 121 points	mean error -0.031; mean abs error 0.037; max abs 0.27
+D_7d_raster_vs_vector	+/-	PTZ	95 of 121 points	mean error -0.012; mean abs error 0.087; max abs 0.68
+D_7d_raster_vs_vector	+/-	PTZ+LiCl	96 of 121 points	mean error -0.004; mean abs error 0.009; max abs 0.09
+D_7d_raster_vs_vector	-/-	PTZ	113 of 121 points	mean error -0.147; mean abs error 0.171; max abs 1.07
+D_7d_raster_vs_vector	-/-	PTZ+LiCl	104 of 121 points	mean error -0.062; mean abs error 0.062; max abs 0.33
+E_vector_lattice	+/+	PTZ	N 12	121 points; max distance to k/N 0.024 step; share within 0.1 step 1.00
+E_vector_lattice	+/+	PTZ+LiCl	N 8	121 points; max distance to k/N 0.016 step; share within 0.1 step 1.00
+E_vector_lattice	+/-	PTZ	N 12	121 points; max distance to k/N 0.024 step; share within 0.1 step 1.00
+E_vector_lattice	+/-	PTZ+LiCl	N 12	121 points; max distance to k/N 0.024 step; share within 0.1 step 1.00
+E_vector_lattice	-/-	PTZ	N 6	121 points; max distance to k/N 0.012 step; share within 0.1 step 1.00
+E_vector_lattice	-/-	PTZ+LiCl	N 7	121 points; max distance to k/N 0.014 step; share within 0.1 step 1.00

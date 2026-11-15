@@ -1,0 +1,25 @@
+query_id	database_or_route	string	date	hits	what_was_returned_and_done
+Q01	Europe PMC REST search (lite)	ML365 AND (TASK-1 OR TASK1 OR KCNK3)	2026-11-15	35	reviews, ML365/TWIK-2 papers, O'Donohoe 2018 (read earlier), Flaherty 2014 (PMC4160056, chosen), ML365 probe report (no PMC)
+Q02	Europe PMC REST search (lite)	("PK-THPP" OR "A1899") AND (TASK-1 OR TASK-3 OR TASK)	2026-11-15	68	O'Donohoe 2018; 36692168 (A1899/PK-THPP and acidosis, chosen); structure papers; not otherwise used
+Q03	Europe PMC REST search (lite)	(ABSTRACT:"pH" OR TITLE:"pH") AND (ABSTRACT:"A1899" OR "PK-THPP" OR "ML365" OR "spadin" OR "ONO-TR-772")	2026-11-15	11	36692168; 26729267 (Skarsfeldt, pH-dependent TASK-1 inhibition in whole hearts; chosen); 28026020 (low pHo, TASK-1 and BK, not a tool paper)
+Q04	Europe PMC REST search (lite)	title TASK/TREK/K2P AND title pH-dependent/dependence/sensitivity AND abstract IC50/EC50 AND abstract inhibitor/blocker/activator/antagonist	2026-11-15	0	empty
+Q05	Europe PMC REST search (core)	EXT_ID:26729267 OR EXT_ID:36692168	2026-11-15	2	abstracts read as census
+Q06	Europe PMC REST search (lite)	TITLE A1899 / TASK-1 open pore / PK-THPP / tetrahydropyrido+TASK	2026-11-15	4	Streit 2011 (PMC3077598, chosen); 28494157 A1899 docking (no PMC); O'Donohoe 2018; 31067753 SAR review of PK-THPP series (not opened)
+Q07	Europe PMC REST search (lite)	(TITLE BL-1249 OR spadin OR TREK-1 activator OR TREK fenamate) AND ABSTRACT pH	2026-11-15	0	empty
+Q08	Europe PMC REST search (lite)	AUTH:"Coburn CA" AND (TASK-3 OR TASK OR KCNK9 OR two pore)	2026-11-15	2	ChemMedChem 2012 PK-THPP series discovery (21916012, no PMC; not requested); a hypertension paper (not used)
+Q09	Europe PMC REST search (lite)	TASK-3/K2P9.1/KCNK9 in title AND zinc AND pH in abstract	2026-11-15	1	Clarke 2004 (15284350, no PMC; publisher page requested once: 403)
+Q10	Europe PMC REST search (lite)	EXT_ID of 40365404, 41104520, 15284350, 21916012	2026-11-15	4	PMCIDs: 40365404 = PMC12067145; 41104520 = PMC12621189
+Q11	Europe PMC REST search (lite)	GluN2B/NR2B AND proton/pH AND temperature/Mg2+ AND NMDA/GluN in title	2026-11-15	1	Banke 2005 (PMC6725198, chosen)
+Q12	Europe PMC REST search (lite)	TITLE triheteromeric/GluN1/GluN2A/GluN2B AND (proton OR pH) in abstract	2026-11-15	1	Cheriyan 2016 (already read by SCI45 N1; no new item)
+Q13	Europe PMC REST search (lite)	title NMDA/GluN2B/NR2B AND title proton/pH/acid/acidosis AND abstract layer 2/3, neocortical, slices	2026-11-15	49	screened by title: 30926548 (ASIC1a and NR1/NR2A/NR2B triheteromers; abstract census), 9554980 (hippocampal slices, synaptic NMDA current vs pH; abstract census), 10200236 (SD and pH, requested once: 202 empty); the rest off topic (kynurenic acid, glutamate etc.)
+Q14	Europe PMC REST search (lite)	title NMDA/GluN2B/NR2B/NR1 AND title proton/pH AND abstract temperature/35/physiological temperature	2026-11-15	0	empty
+Q15	Europe PMC REST search (lite)	title NMDA/NR2B AND title extracellular pH/acidosis/alkaline/acidic/proton AND abstract neocortical/cortical neurons/pyramidal/slice	2026-11-15	3	30978540 (human NR1/NR2A and NR1/NR2B, mild acidosis, Ca2+ permeability; requested once: link-resolver); 1967968 (1990 acidosis and neuronal injury, not opened)
+Q16	Europe PMC REST search (lite)	abstract NR2B/GluN2B AND proton/pH AND Mg2+ terms AND OPEN_ACCESS:y	2026-11-15	0	empty
+Q17	Europe PMC REST search (lite)	title NMDA/NR1/GluN1 AND proton/pH AND title magnesium/Mg/voltage-dependent block/temperature	2026-11-15	0	empty
+Q18	Europe PMC REST search (lite)	EXT_ID of 30978540, 30926548, 9554980, 10200236, 15634765	2026-11-15	5	no PMCIDs except 15634765
+Q19	Europe PMC REST search (core)	EXT_ID of 30978540, 30926548, 9554980, 10200236, 15634765, 15284350, 21916012	2026-11-15	7	abstracts saved as census (EPMC_ABSTRACTS)
+Q20	Europe PMC REST search (lite)	title NMDA AND title temperature AND abstract proton/pH	2026-11-15	0	empty
+Q21	Europe PMC REST search (lite)	title GluN2B/NR2B/triheteromeric AND abstract pH/proton AND abstract layer/cortical slices/neocortex	2026-11-15	0	empty
+Q22	Europe PMC REST search (lite)	title TREK/TASK/K2P AND title pH/protons/acidosis/alkalinization AND abstract IC50/EC50/potency/inhibitor/activator AND abstract drug/compound	2026-11-15	0	empty
+Q23	Europe PMC REST search (lite)	abstract TASK-1/TASK-3/TREK-1/K2P AND abstract pH-dependent/dependence AND abstract inhibition/block AND abstract IC50/potency/affinity	2026-11-15	0	empty
+Q24	Europe PMC REST search (lite), free text	"pH-dependent" AND (TASK-1 OR TASK-3 OR TREK-1 OR K2P) AND (IC50 OR potency) AND (block OR inhibition)	2026-11-15	746	first 25 screened by title; one on topic: 42848420 (2026 PNAS, intracellular pH gating and local anaesthetic inhibition of a K2P channel); not a named tool; not opened; the rest off topic
