@@ -277,14 +277,27 @@
    "steps": [
     {
      "step": "Record the instruction in the roadmap seat, the portfolio and the assignments; send to the actual recipients; verify take-in-charge",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Recorded (roadmap dated line, RP-021/RP-017/RP-016, assignments/PRESIDIO-004.md and PRESIDIO-005.md); messages to HE, SCI and IT follow this landing; take-in-charge pending."
+     "evidence": "Recorded, sent (HE 0e9b067d, SCI 25e15631, IT 78882792), taken in charge by all three within minutes (HE PLAN-HE-IT23-SYMBOL-TRIAL-20261115, SCI ORCH-PRESIDIO004B-005-20261115, IT part C)."
     },
     {
      "step": "Follow PRESIDIO-004 to its disposition (HE trial, SCI reference, IT KEEP/DISCARD/INCONCLUSIVE) and PRESIDIO-005 (queued) to delivery; IT applies the operator-directed INV-06 row 7 and INV-03 wording and narrows WO-25's blocking text",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "PRESIDIO-004 DISPOSED (see TRIAL_24H.log 08:0xZ); IT applied the INV-06, INV-03 and WO-25 wordings (bee8e7bed). Still open: PRESIDIO-005 (SCI: X1 first-question table, in its landing with a battery) and the landing of SCI's part B comparison; the question of the two live LINCS queries (S8/S9, 5 of 625 genes) belongs to the operator and is flagged for the report, not requested."
+    }
+   ]
+  },
+  "OBJ_15_ADV010": {
+   "order": 15,
+   "title": "ADV-010 (Advisor draft from evaluation 12, RP-008): reading-coverage census of older unread WWOX literature, for the Orchestrator",
+   "steps": [
+    {
+     "step": "Check the draft's premises in the originals, narrow it, send with the queue wording, record SENT with --to, verify take-in-charge, follow delivery and consumption",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Premises checked and the draft narrowed (see TRIAL_24H.log 08:3xZ); sending after this landing. SENT 2026-11-15T08:3xZ to IT Orchestrator (msg f30483d2, --to recorded, landed with this commit); take-in-charge pending."
     }
    ]
   }
@@ -458,6 +471,30 @@
    {
     "utc": "2026-11-15T07:5xZ",
     "event": "human intervention (the third of this window): the operator pasted a capability-scout report addressed to PLAN (Contrastive Discovery, Skill2Query, Contrastive Hypothesis Replay and four other replays; claims are the authors', code not verified, no validation on LEGEND). Not an instruction to ADV: stored as received in radar_inputs_he52_20261114/operator_scout_report_20261115.md (HE had declared the operator's radar reports absent from the repository), linked to portfolio rows RP-001, RP-007 and RP-010, no assignment; PLAN (HE) decides the static audit; the priority next step remains the IT23 symbol-lookup trial (PRESIDIO-004)."
+   },
+   {
+    "utc": "2026-11-15T07:3xZ-08:0xZ",
+    "event": "PRESIDIO-004 (operator's NOW step, IT23 symbol lookup) in about 35 minutes of wall time from the message: HE taken (PLAN-HE-IT23-SYMBOL-TRIAL-20261115) and trial computed 07:38-07:40Z, held its landing until SCI's independent reference existed (a deadlock risk: I relayed the git-verified order, SCI's reference cc39da185 07:33:43Z before HE's first trial commit 07:38:19Z); SCI reference built by hand before seeing HE's output, then the row-by-row comparison (a7ec78e2f): 15/15 agree, 834/834 mechanical re-derivation agree, independence stated as weaker than it looks (same HGNC and data; two checks outside HGNC 15/15); IT re-derived the QF change itself (stdlib, offline, no delegate; all 15 rho equal to 3 decimals, 0 mismatches on committed rho, broad flag changes for exactly IRAG1, POFUT4, HDIP1, H1-2, H1-10, QF 365/260 to 363/257, class unchanged) and disposed (b2eb309fb): KEEP per row for the 15 conversions, rho and flags; DISCARD none; INCONCLUSIVE on benefit (no LINCS query run; only S8/S9 would repeat, 5 of 625 genes; no ranking effect measured or claimed); no regeneration; revival: a decision resting on S8/S9, or operator authorisation of two live queries"
+   },
+   {
+    "utc": "2026-11-15T07:5xZ",
+    "event": "IT consumed the operator-directed wordings (INV-06 CTGF clause replaced by the ADV-007 reading, INV-03 [ADV-009] dated clause without compound names because the shareable audit refuses them, WO-25 blocking_reason aligned, one regeneration of ranking, i18n and views: bee8e7bed); one incident: its first attempt failed the shareable audit and the chain was redone"
+   },
+   {
+    "utc": "2026-11-15T07:4xZ",
+    "event": "another PLAN session (branch codex/adv-continuity-20261115, record PLAN-ADV-CONTINUOUS-RESEARCH-20261115) corrected the Advisor's continuity rule and live portfolio rows (RP-003, RP-005, RP-008): invalidated the stale P11 wait without a model call, made selection follow deliveries as well as hourly recalls; its last steps (landing, observing my recall) are open"
+   },
+   {
+    "utc": "2026-11-15T08:0xZ",
+    "event": "HE's static audit of the operator's scout report delivered (8362ac92a, radar_inputs_he52_20261114/operator_scout_report_20261115_audit_he.md): competing explanations already covered at generation and proposal time; three pieces missing (MECE requirement, unknown-mechanism slot, a record of which rival a result favoured: observed absences, not a measured failure); Contrastive Discovery MONITOR, Skill2Query WATCH (no demonstrated retrieval defect; an API key dependency), the four other replays not audited; no harness change. Presidio decision: the read-only replay HE names (a Scientist, on INV-05 BH1-BH3 or the ADV-007 contrast, with a reader other than the writer of the rivals) is kept as an option in RP-001 and NOT assigned now: the cases are the most worked in the module, it changes no research decision (only whether a proposal-record slot deserves a trial), resources are unknown and the 24-hour report is due; revival after the report if a Scientist has free capacity, or if an existing rejection is seen to have lost information. Portfolio rows RP-001, RP-007, RP-010 point at the audit."
+   },
+   {
+    "utc": "2026-11-15T08:23Z",
+    "event": "tick EVALUATE: the PLAN session's continuity correction landed (P11 retroactively marked incomplete, its wait invalidated, last_incomplete shown), live portfolio rows rewritten (RP-003, RP-005, RP-008), executable queue holds the PLAN record; 7 hours since the last complete evaluation (P10). Evaluation 12 (P12) run: stage P, opus high, 11 turns all claude-opus-5-5, output 10,721, cache read 602,548, cache creation 72,058, complete; outcome assign: draft ADV-010 (RP-008: reconcile the corpus placeholders that unread_gold --all lists without a matched reading receipt, to the Orchestrator). The roadmap line it relies on is an operator instruction transcribed by the PLAN session ('assess the coverage of older unread WWOX literature as well as new PubMed hits: the daily newest-hit scout is not a full reading-coverage census'), which I read in roadmap_current.md. Invocation count 12, drafts 10."
+   },
+   {
+    "utc": "2026-11-15T08:3xZ",
+    "event": "ADV-010 premises checked before sending: the count holds (I re-ran unread_gold --all --json: 149 placeholders, 30 with receipt depths and 119 without, against the README's 27/122 of yesterday; the 3-item difference is receipts landed since) but the draft did not know the distribution: 134 of the 149 are Tier C, relevance LOW, 4 are 'not applicable, reading complete', and only 11 are Tier B (4 MODERATE-HIGH, 7 MODERATE); the default high-priority filter returns nothing. Draft narrowed accordingly before sending (the 11 Tier B items first; the 134 LOW sorted mechanically by tier and checked only by a small sample for mis-triage, the FM-011 failure mode)."
    }
   ]
  }

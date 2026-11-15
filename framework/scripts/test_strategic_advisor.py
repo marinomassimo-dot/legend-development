@@ -889,6 +889,22 @@ class ValueContinuity(Continuous):
         self.assertIn('"verdict": "RELEASED"', brief)
         self.assertIn('ledger/tasks/orchestrator/ORCH-CASE.json', brief)
 
+    def test_an_invalidated_attempt_cannot_return_as_the_reusable_previous_assessment(self) -> None:
+        self.started()
+        for n in (9, 10, 11):
+            path = self.campaign / f"P{n}" / "assessment.md"
+            path.parent.mkdir(); path.write_text(f"assessment {n}")
+        (self.campaign / "P11/meta.json").write_text(json.dumps({"runtime_readback": {"refusal_fallbacks": [{"trigger": "refusal"}]}, "tool_calls": [{"name": "Read"}] * 4}))
+        state = sa._load_state(self.campaign)
+        state.update(last_outcome={}, last_invalidated_outcome={"outcome": {"evaluation": "P11", "outcome": "wait"}, "reason": "incomplete"})
+        sa._save_state(self.campaign, state)
+        brief = sa.build_brief_p(self.campaign, sa.observe(self.campaign, state))
+        previous = brief.split("## Previous assessment\n", 1)[1].split("\n", 1)[0]
+        self.assertTrue(previous.startswith("P10:"), previous)
+        self.assertIn("## Previous outcome superseded", brief)
+        self.assertIn('"P11":', brief.split("## Incomplete attempts", 1)[1])
+        self.assertEqual((self.campaign / "P11/assessment.md").read_text(), "assessment 11")
+
 
 class LivingPortfolio(Base):
     """Permanent opportunities reach a real brief and wake decisions without a new radar."""

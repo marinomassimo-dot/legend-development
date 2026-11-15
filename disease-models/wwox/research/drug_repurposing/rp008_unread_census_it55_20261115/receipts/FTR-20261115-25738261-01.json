@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-15T08:29:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-15T08:34:00Z",
+ "event_id": "FTR-20261115-25738261-01",
+ "evidence_basis": [
+  "Abstract, Introduction, Materials and methods, Results, Discussion and the Table I-III captions read from the publisher open PDF (10 pages) as text (pdftotext, reading order); figures: legends only, images not viewed; references (31 onward) not read; no supplement exists in the PDF. The bytes are identical (SHA-256 ef80c7d4b2889c6b4c03a5eab685eea6ba0a75503bde5b6bc4801c73d1c47bfd) to the file the IT11 package ack1_it11_p24_20261031 declared as read; that earlier declaration never had a receipt and is not counted here.",
+  "Seven verbatim locators of the IT11 locator table (E01, E02, E06 to E10) re-found in the text of these bytes by the Orchestrator on 2026-11-15; two small observations from this reading: the abstract says Pearson's correlation while Results say Spearman's, and one Results sentence names TPX2 where ACK1 is meant (an editing slip).",
+  "verbatim_locator | proposition: ACK1 protein high, p-ACK1 strong, WWOX undetectable in the same HCC tissue section | Figure 4 legend | \"In cases of high ACK1 protein expression (c), there was strong p-ACK1 protein expression (b), whereas there was no detectable WWOX protein expression (a) in the same tissue section.\"",
+  "verbatim_locator | proposition: ACK1 and WWOX protein expression are negatively correlated in 150 HCC samples (IHC) | Results, ACK1 is positively associated with p-ACK1 and negatively associated with WWOX | \"evident negative correlation between the expression level of ACK1 and WWOX (r= -0.454, P<0.01, Spearman's correlation test) (Fig. 4A and C)\"",
+  "verbatim_locator | proposition: ACK1 shRNA raises WWOX protein in one HCC line (MHCC-97H), one shRNA versus scrambled, steady state | Results, Knockdown of ACK1 is associated with upregulation of WWOX | \"Knockdown of ACK1 evidently increased the level of WWOX and attenuated the phosphorylation of ACK1 and AKT in MHCC-97H cells (P<0.01, Fig. 6C).\"",
+  "verbatim_locator | proposition: The WWOX blot after knockdown is Figure 6 panel C | Figure 6 legend | \"(C) MHCC-97H cells transfected with ACK1-shRNA or Control-shRNA, respectively, were subjected to western blotting for ACK1, p-ACK1, WWOX, AKT, p-AKT, MMP2 and MMP9 (P<0.01).\"",
+  "verbatim_locator | proposition: The knockdown design is one unique 29mer shRNA against a scrambled cassette | Methods, RNAi transfection | \"The non-effective 29-mer scrambled shRNA cassette in pRS Vector was transfected into MHCC-97H cells as the control cells.\"",
+  "verbatim_locator | proposition: The authors infer degradation of WWOX by ACK1 from the knockdown blot | Discussion | \"our study confirmed that ACK1 mediates the degradation of WWOX and activates AKT signaling in HCC\"",
+  "verbatim_locator | proposition: ACK1 protein across L-02 and five hepatoma lines | Figure 1 legend | \"(B) ACK1 protein expression in the immortalized normal human liver cell line L-02 and five hepatoma cell lines (SMMC-7721, BEL-7402, Huh-7, HepG2 and MHCC-97H) using immuno­ blotting (n=3, P<0.01).\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/rp008_unread_census_it55_20261115/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "ef80c7d4b2889c6b4c03a5eab685eea6ba0a75503bde5b6bc4801c73d1c47bfd",
+ "source_kind": "fulltext_remote",
+ "source_locator": "https://www.spandidos-publications.com/10.3892/ijo.2015.2910/download (open PDF link listed by Europe PMC, one plain request on 2026-11-15, generic client, no contact parameter); bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.3892/ijo.2015.2910",
+  "pmid": "25738261"
+ },
+ "workflow": "IT RP-008 (ADV-010) census: reading debt reconciliation of a declared-but-unreceipted reading; first contact of the Orchestrator with this text."
+}

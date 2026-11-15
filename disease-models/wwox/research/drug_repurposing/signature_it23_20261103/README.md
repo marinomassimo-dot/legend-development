@@ -87,3 +87,7 @@ Reproduce: `python3 -I reproduce_dseqr_cmap_comparison.py run <repo_root> <geo_f
 ## Update 2026-11-14 (IT, from ADV-007; no cell edited, nothing regenerated)
 
 `composition_class.tsv` has 15 of 834 rows with blank `log2fc` and no `rho_vs_log10_day`: IRAG1, CCN2, DRC4, MNMIP1, POFUT4, MTCL2, ATOSB, HDIP1, BBLN, ADPRS, CIRSR, H1-2, H1-10, H4C15, ZNRD2. Cause (ADV-007, `ctgf_held_data_adv007_20261114/output/symbol_trace.tsv`): the query sets carry current symbols while the authors' list keys the log2FC lookup by the old ones (CCN2 is CTGF there), so these rows carry default zero flags, not measured ones. Read a blank as "not looked up", not as "no change". Regenerating would change query QD/QF membership by up to 15 of 834 genes; that decision belongs to the package owner and is not taken here.
+
+## Update 2026-11-15 (IT, PRESIDIO-004 part C; the text above is kept)
+
+The 15 blank rows are converted and verified outside this folder: `it23_symbol_lookup_trial_he_20261115/` (HE, two routes) and `symbol_reference_presidio004b_20261115/` (SCI, hand-read reference), and IT re-derived rho and the query-set change (`generation_it55_20261115/it23_disposition_presidio004c.md`). KEEP for the 15 conversions, rho and flags; the committed tables here are not regenerated; the benefit of reversing them is INCONCLUSIVE (no query repeated). Effect if regenerated: broad flag 0 to 1 for IRAG1, POFUT4, HDIP1, H1-2, H1-10; QF_minus_broad_maturation 365/260 to 363/257; the other four queries and the primary composition class unchanged.
