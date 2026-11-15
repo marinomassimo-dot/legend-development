@@ -56,6 +56,11 @@
     {
       "decision": "Differentiate newest PubMed hits from coverage of older unread material",
       "reason": "149 eligible placeholders include 27 already read and 122 without matched partial/complete receipt depth; reconcile before selecting science, not 122 automatic tasks"
+    },
+    {
+      "decision": "Remove stale P11 capacity-reservation and new-package-only framing from RP-014/RP-005 and whole-map-first framing from RP-003",
+      "reason": "Live opportunity fields must carry the corrected decision, not keep an obsolete wait alive after its host outcome is invalidated; prior assessments preserve history",
+      "reversibility": "Ordinary portfolio field update; no scientific premise promoted"
     }
   ],
   "DEFAULTS_TAKEN": [
