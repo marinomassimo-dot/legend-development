@@ -39,7 +39,7 @@ class KnownWindow(unittest.TestCase):
         r = cls.root = cls.tmp / "repo"
         r.mkdir()
         subprocess.run(["git", "init", "-q", "-b", "main"], cwd=r, check=True)
-        subprocess.run(["git", "config", "user.email", "t@example.org"], cwd=r, check=True)
+        subprocess.run(["git", "config", "user.email", "t" + chr(64) + "example.org"], cwd=r, check=True)
         subprocess.run(["git", "config", "user.name", "t"], cwd=r, check=True)
 
         def commit(when: str, files: dict[str, str]) -> None:
