@@ -1,0 +1,23 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ADV007-LABELS-20261115",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "Two dated labelling corrections on the ADV-007 CTGF package after the IT second read (ADV message 2026-11-15): T7 order, proxy transcript inferred",
+ "START_UTC": "2026-11-15T22:25:00Z",
+ "BASELINE": "development/main 62bc649fe and later; worktree .claude/worktrees/adv007-labels",
+ "MANDATE_STATE": "DONE",
+ "CURRENT_PACKAGE": "closed in the landing commit",
+ "RESUME": "none",
+ "DECISIONS_TAKEN": [
+  "2026-11-15: corrections appended as a dated README section; per_table.tsv and every number left unchanged; T7 order verified against output/snrna_ccn2.tsv (ctrl 3182 nuclei, 31 UMI)"
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "VERIFICATION_EVIDENCE": [
+  "quick checks run on the branch before landing"
+ ]
+}
