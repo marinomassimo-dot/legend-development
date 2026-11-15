@@ -51,6 +51,9 @@ else:
 second = "claude-opus-fake-2" if mode in ("fallback", "silentswitch") else "claude-opus-fake"
 emit({"type": "assistant", "message": {"id": "m1", "model": "claude-opus-fake", "content": [{"type": "tool_use", "id": "t1", "name": "Read", "input": {"file_path": "a.md"}}], "usage": {"input_tokens": 3, "output_tokens": 2}}})
 emit({"type": "user", "message": {"content": [{"type": "tool_result", "tool_use_id": "t1", "content": "ok"}]}})
+for i in range(int(os.environ.get("FAKE_CALLS", "0"))):
+    emit({"type": "assistant", "message": {"id": "c%d" % i, "model": "claude-opus-fake", "content": [{"type": "tool_use", "id": "x%d" % i, "name": "Read", "input": {"file_path": "b%d.md" % i}}], "usage": {"input_tokens": 1, "output_tokens": 1}}})
+    emit({"type": "user", "message": {"content": [{"type": "tool_result", "tool_use_id": "x%d" % i, "content": "ok"}]}})
 if mode == "fallback":
     emit({"type": "system", "subtype": "model_refusal_fallback", "trigger": "refusal", "apiRefusalCategory": "bio", "scope": "session", "direction": "retry",
           "originalModel": "claude-opus-fake", "fallbackModel": second, "content": "withheld"})
@@ -811,6 +814,26 @@ class ValueContinuity(Continuous):
         self.assertEqual(sa.observe(inside, state)["events"], [])           # three commits that match the delivery pattern, all the advisor's own
         commit(f"{base}/ADV-002_result.md", "HE result delivered")
         self.assertEqual(len([e for e in sa.observe(inside, state)["events"] if e.startswith("delivery:")]), 1)
+
+    def test_a_run_cut_short_by_a_fallback_is_not_acted_on(self) -> None:
+        """HE59: P11 was stopped by a classifier after 4 calls and its portfolio updates and wait were applied. A short run with a recorded fallback takes nothing; a long one with the same fallback is used."""
+        self.started()
+        os.environ["FAKE_MODE"] = "fallback"
+        os.environ["FAKE_PORTFOLIO"] = json.dumps({"id": "RP-001", "status": "in flight"})
+        try:
+            self.evaluate_with(self.WAIT)
+            st = sa._load_state(self.campaign)
+            self.assertIn("refusal fallback", st["last_incomplete"]["reason"])
+            self.assertNotEqual(st["last_outcome"]["evaluation"], st["last_incomplete"]["evaluation"])        # the incomplete run took no outcome; the earlier one stands
+            self.assertEqual(sa.tick(self.campaign)["last_incomplete"]["evaluation"], st["last_incomplete"]["evaluation"])
+            os.environ["FAKE_CALLS"] = str(sa.MIN_CALLS_AFTER_FALLBACK)
+            self.evaluate_with(self.WAIT)
+            st = sa._load_state(self.campaign)
+            self.assertEqual(st["last_incomplete"], {})
+            self.assertTrue(st["last_outcome"]["stated"])
+        finally:
+            for k in ("FAKE_MODE", "FAKE_PORTFOLIO", "FAKE_CALLS"):
+                os.environ.pop(k, None)
 
 
 class LivingPortfolio(Base):
