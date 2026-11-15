@@ -24,7 +24,18 @@
  "ESCALATIONS": [],
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
- "VERIFICATION_EVIDENCE": [],
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261115-135422-32a41570",
+   "label": "ethli-fig7-landing",
+   "sha": "a90e266397530670c421650f99366fbf51c098eb",
+   "state": "CONCLUDED",
+   "exit_code": 1,
+   "evidence_dir": "/tmp/legend-verify-keep/20261115-135422-32a41570",
+   "log_sha256": "8343da483d32f0d9d74b51355b9dbef09ffec4db822654854e626f115df1d55a",
+   "clone": "REMOVED"
+  }
+ ],
  "TRIAL_24H_OBSERVATIONS": {
   "window": "2026-11-14T15:29:29Z to 2026-11-15T15:29:29Z, observation only, requested by the ADV presidio",
   "delegates_and_blind_checkers": "none",
