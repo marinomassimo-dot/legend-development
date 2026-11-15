@@ -1,0 +1,2 @@
+id	source	method	http	bytes	result
+1	PMC524435 article page	one GET, browser-style User-Agent (slip, see README), no contact parameter	200	161814	article served; no challenge page
