@@ -336,6 +336,24 @@
      "evidence": "Sent to IT 2026-11-15T12:3xZ (msg ef6172a1); DELIVERED by IT in about 10 minutes (its landing commit 12:33:18Z, 219dedf62; ORCH-PRESIDIO006-STALENESS-20261115 COMPLETE; IT could not anchor the start in git because no SENT record exists for a presidio decision, an honest limit of the unit). Result over 34 rows (my 35 minus WO-11): 2 ANSWERED (IT29-P12: IT30 c5a4c3ebb withdrew S1-32/S1-33; IT49-Q02: HE50 c6bab78d5 did the extraction), 8 NARROWED (WO-12, WO-25, WO-32 neuron/axon half closed by nb3_class_iia_it32, RS-R6 read in rs_r6_it30 with only the ORCS rows left, IT44-Q01, IT46-Q02, IT48-Q01 whose 'route not run' text was stale, IT49-Q06 whose ML133 numbers were read), 24 STILL OPEN; 11 rows carry dated notes in status_evidence or blocking_reason, no new register. Access tests (one plain request each): IT49-Q11 LAPSED (VU6080824 paper PMID 40959251, PMC12434521, OA, the PMC article page 200, supporting information named but not requested); IT45-Q04 (Harde 2023) and IT49-Q08 (2026 Kir2.1 HTS) confirmed closed (isOpenAccess N). Cheap candidates, ordered: IT49-Q11, WO-32 remainder (a search), IT49-Q06 remainder (pH of the hERG deposit). Corrections to MY premises: IT46-Q02 was not a lapsed blocker (SCI48 tested it on 2026-11-12), IT44-Q05 is not an access state, IT49-Q06 is mostly answered. Limit stated by IT: 'still open' for rows with no later identifier hit means unmentioned, not read; the scan keys on PMIDs, PMC and ChEMBL ids and row ids and would miss a result naming only a gene or a compound. Next: IT took IT49-Q11 by my reply (no assignment needed)."
     }
    ]
+  },
+  "OBJ_19_IDLE_CHECK": {
+   "order": 19,
+   "title": "Standing: at every recall and delivery check the execution; if most sessions are idle without a written reason, send continuation prompts in the best direction",
+   "steps": [
+    {
+     "step": "Apply the operator's permanent instruction now: send one continuation prompt to each idle session (SCI candidate deepening, IT its queue and next rows, HE the durable embedding of the rule plus one demonstrated harness defect), verify take-in-charge",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Instruction written in the roadmap seat; prompts sent after this landing."
+    },
+    {
+     "step": "Standing: each hourly tick and each delivery: read session states and commits; if two or more of IT, SCI, HE are idle and no written reason names an awaited event that has not occurred, send continuation prompts; record the check and the reasons in the trial log",
+     "status": "BLOCKED",
+     "owner": "orchestrator",
+     "blocker": "standing check; recall job 477df2a9 (hourly :17); resolves only on an operator PAUSE, STOP or a new instruction"
+    }
+   ]
   }
  },
  "DECISIONS_TAKEN": [
@@ -583,6 +601,10 @@
    {
     "utc": "2026-11-15T12:4xZ",
     "event": "PRESIDIO-006 delivered by IT in about 10 minutes: the open-question map's OPEN literature/data pool is shown as 2 answered, 8 narrowed, 24 open (of 34), with 11 rows annotated; one lapsed access blocker (IT49-Q11) found and handed to IT as a one-source item; three of the presidio's premises corrected by IT. Value measured as hygiene and a reliable next pool, not as a research decision changed. Honest limit: the scan finds later mentions by identifier, not later answers by meaning."
+   },
+   {
+    "utc": "2026-11-15T13:3xZ",
+    "event": "human intervention (the fourth of this window): the operator's permanent and durable instruction, to be written in the repository: do not let almost all sessions stand idle; check the execution and send prompts to continue the tasks in the direction judged best to improve the harness and the scientific work, deepen candidates and tackle open questions. Written in the Operator roadmap section (dated line, 'PERMANENT AND DURABLE'). Execution check at 13:27Z that prompted it: no commit on origin/main since IT's 12:40Z (47 minutes); IT, SCI and HE idle; IT had said it would continue with WO-32 and IT49-Q06 remainders and had not (no record, no commit). Prompts sent to the three sessions the same hour (see OBJ_19)."
    }
   ]
  }
