@@ -613,7 +613,8 @@ class Continuous(Proactive):
         self.assertEqual(quiet["verdict"], "NONE")
         self.assertTrue(quiet["presidio"].startswith("WAITING (legitimate)"))
         self.assertNotIn("PILOT ENDED", quiet["presidio"])
-        self.assertIn("legitimate wait", sa.recall_prompt(self.campaign))
+        # The recall routes the current policy; it no longer certifies that every
+        # mechanical NONE/DEFERRED means the whole portfolio should wait.
 
     def test_operator_pause_and_stop_in_the_roadmap_prevail_and_resume_lifts_them(self) -> None:
         self.authorise()
@@ -834,6 +835,59 @@ class ValueContinuity(Continuous):
         finally:
             for k in ("FAKE_MODE", "FAKE_PORTFOLIO", "FAKE_CALLS"):
                 os.environ.pop(k, None)
+
+    def test_a_legacy_incomplete_wait_is_superseded_without_rewriting_history(self) -> None:
+        self.started(); self.complete("ORCH-A")
+        folder = self.campaign / "P99"
+        folder.mkdir()
+        original = "## Outcome\noutcome: wait\nexcluded: other branches\nreason: review later\nresume_when: after:2026-11-14T20:00:00Z\n"
+        (folder / "assessment.md").write_text(original)
+        (folder / "meta.json").write_text(json.dumps({"runtime_readback": {"refusal_fallbacks": [{"trigger": "refusal"}]}, "tool_calls": [{"name": "Read"}] * 4}))
+        state = sa._load_state(self.campaign)
+        state["last_outcome"] = {**sa.parse_outcome(original), "evaluation": "P99"}
+        sa._save_state(self.campaign, state)
+        self.at("2026-11-13T10:15:00Z")
+        tick = sa.tick(self.campaign)
+        self.assertEqual(tick["verdict"], "EVALUATE")
+        self.assertIn("incomplete", tick["why"])
+        saved = sa._load_state(self.campaign)
+        self.assertEqual(saved["last_outcome"], {})
+        self.assertEqual(saved["last_invalidated_outcome"]["outcome"]["evaluation"], "P99")
+        self.assertEqual((folder / "assessment.md").read_text(), original)
+        self.assertEqual(sa._attempts(self.campaign)[-1]["label"], "P1")  # the repair made no model call
+        sa.ROADMAP.write_text(sa.ROADMAP.read_text().replace("Mission v1", "Mission v1\nPAUSE: advisor operator pause"))
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "PAUSED")
+
+    def test_a_short_complete_run_does_not_lose_its_supported_wait(self) -> None:
+        self.started()
+        folder = self.campaign / "P99"
+        folder.mkdir()
+        (folder / "meta.json").write_text(json.dumps({"runtime_readback": {"refusal_fallbacks": []}, "tool_calls": [{"name": "Read"}]}))
+        state = sa._load_state(self.campaign)
+        state["last_outcome"] = {**sa.parse_outcome("## Outcome\n" + (self.WAIT % "after:2026-11-14T20:00:00Z").replace("|", "\n")), "evaluation": "P99"}
+        sa._save_state(self.campaign, state)
+        self.at("2026-11-13T18:00:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")
+        self.assertEqual(sa._load_state(self.campaign)["last_outcome"]["evaluation"], "P99")
+
+    def test_brief_uses_numeric_assessment_order_and_current_recipient_state(self) -> None:
+        self.started()
+        for n in (9, 10, 11):
+            path = self.campaign / f"P{n}" / "assessment.md"
+            path.parent.mkdir(); path.write_text(f"assessment {n}")
+        sa._log_assignment(self.campaign, {"id": "ADV-001", "state": "DRAFTED", "recipient": "Science", "key": "case"})
+        record = _record("ORCH-CASE", "COMPLETE")
+        record["OBJECTIVE"] = "ADV-001 delivered; consumer checked separately"
+        (self.repo / "ledger/tasks/orchestrator/ORCH-CASE.json").write_text(json.dumps(record))
+        obs = sa.observe(self.campaign, sa._load_state(self.campaign))
+        brief = sa.build_brief_p(self.campaign, obs)
+        previous = brief.split("## Previous assessment\n", 1)[1].split("\n", 1)[0]
+        self.assertTrue(previous.startswith("P11:"), previous)
+        state = sa.assignment_states(self.campaign)["ADV-001"]
+        self.assertEqual(state["highest"], "TAKEN")  # historical evidence is not silently upgraded
+        self.assertEqual(state["mandates"][0]["verdict"], "RELEASED")
+        self.assertIn('"verdict": "RELEASED"', brief)
+        self.assertIn('ledger/tasks/orchestrator/ORCH-CASE.json', brief)
 
 
 class LivingPortfolio(Base):
