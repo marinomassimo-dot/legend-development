@@ -1048,6 +1048,20 @@ def _agents() -> list[dict[str, Any]] | None:
         return None
 
 
+def unpublished_main(now: dt.datetime) -> dict[str, Any]:
+    """HE62: commits that local `main` holds and the remote's `main` does not, with the age of the oldest. A peer waiting for 'the landing on development/main' cannot see that the awaited event exists on the root checkout's local
+    main (measured 2026-11-15: about 100 minutes). Offline: it compares with the last fetched remote ref and says how old that fetch is, never fetches."""
+    for ref in ("development/main", "origin/main"):
+        if _git("rev-parse", "--verify", "-q", ref):
+            break
+    else:
+        return {"available": False, "reason": "no remote main ref known offline"}
+    stamps = [t for t in _git("log", f"{ref}..main", "--format=%ct").split() if t.isdigit()]
+    fetch = Path(_git("rev-parse", "--path-format=absolute", "--git-common-dir") or ".") / "FETCH_HEAD"
+    return {"available": True, "against": ref, "commits": len(stamps), "oldest_min": round((now.timestamp() - min(int(t) for t in stamps)) / 60) if stamps else None,
+            "ref_checked_min_ago": round((now.timestamp() - fetch.stat().st_mtime) / 60) if fetch.exists() else None}
+
+
 def session_activity(now: dt.datetime, agents: list[dict[str, Any]] | None = None) -> dict[str, Any]:
     """HE60: who is working and who has been quiet, since when, so the operator's durable check (an idle share above half without a written reason is a prompt to send) is read, not rebuilt. Git cannot say it: every
     actor commits under one author. The runtime says each session's status and its transcript's last write; only that modification time is read, never the content. `quiet_min` is minutes since the transcript was
@@ -1055,8 +1069,9 @@ def session_activity(now: dt.datetime, agents: list[dict[str, Any]] | None = Non
     agents = _agents() if agents is None else agents
     last = _git("log", "-1", "--format=%ct", "main")
     main_quiet = round((now.timestamp() - int(last)) / 60) if last.isdigit() else None
+    published = unpublished_main(now)
     if not agents:
-        return {"available": False, "main_quiet_min": main_quiet}
+        return {"available": False, "main_quiet_min": main_quiet, "main_unpublished": published}
     rows = {}
     for a in agents:
         if not str(a.get("cwd") or "").startswith(str(ROOT)):
@@ -1065,7 +1080,7 @@ def session_activity(now: dt.datetime, agents: list[dict[str, Any]] | None = Non
         rows[str(a.get("name"))] = {"status": str(a.get("status")), "quiet_min": round((now.timestamp() - found[-1].stat().st_mtime) / 60) if found else None}
     live = [r for r in rows.values() if r["quiet_min"] is not None and r["quiet_min"] < STALE_SESSION_MIN]
     idle = sum(1 for r in live if r["status"] == "idle")
-    return {"available": True, "main_quiet_min": main_quiet, "sessions": rows, "idle_share": f"{idle}/{len(live)}", "idle_over_half": bool(live) and idle * 2 > len(live)}
+    return {"available": True, "main_quiet_min": main_quiet, "main_unpublished": published, "sessions": rows, "idle_share": f"{idle}/{len(live)}", "idle_over_half": bool(live) and idle * 2 > len(live)}
 
 
 def _waits() -> list[dict[str, str]]:
