@@ -106,12 +106,13 @@
     "landing_proof": "/tmp/legend-adv-continuity-landing.json",
     "shadow_replay": "/tmp/legend-adv-continuity-shadow.json; EVALUATE, invalidated P11, live state unchanged",
     "prospective_brief": "P11 selected by numeric order; the Cav3 comparison assignment historical TAKEN shown beside current NO_QUEUE record with its path (unknown execution is not inferred as in-flight); current operator integration present",
-    "full_inventory_candidate": "9506e1727887b8fa8920485a2f544fe75a22da30",
-    "full_inventory_log": "/tmp/legend-adv-continuity-battery.log",
-    "full_inventory_state": "REPLACED_WITHOUT_VERDICT",
+    "full_inventory_candidate": "f6e9abbfea8f44323c49c338a05a3e1e327400b2",
+    "full_inventory_log": "/tmp/legend-adv-continuity-battery-final.log",
+    "full_inventory_state": "RUNNING:226targetscompletedwithoutafailedsuiteat2026-11-15T09:07Z; browser suite running",
     "live_repair": "2026-11-15T08:13:34Z: supported tick superseded P11 in actual host state, preserving original outcome; EVALUATE pending, no model launched",
     "new_targeted_tests": "114 Advisor tests PASS, including the rejected previous-attempt context",
-    "final_prompt_tests": "114 Advisor tests PASS after the source-parity clarification; agent definition1099words (1385baseline); section references PASS"
+    "final_prompt_tests": "114 Advisor tests PASS after the source-parity clarification; agent definition1099words (1385baseline); section references PASS",
+    "final_targeted": "114 Advisor tests PASS; final source-parity definition1102words;74ranking tests PASS;i18n check PASS;package check PASS"
   },
   "SELF_DIAGNOSIS": {
     "verdict": "PASS with declared pre-existing scientific reading gaps; no full-text scientific read claimed by this Harness task",
@@ -141,5 +142,9 @@
     "repair": "Existing ranking_it8 run, full/shareable all-language view regeneration, package and package --check; current ranking check and i18n check PASS",
     "scientific_limit": "All37ranked unit objects are byte-equivalent at parsed JSON level; selection-table differences are evaluated_on date only; summaryreceiptcount1957to1958. No order, need direction or candidate state waschanged.",
     "permanent_clarification": "fulltext_read_receipt.md Persistence and canonical promotion now routes existing publication-boundary derived metadata checks; no new gate or service"
+  },
+  "CHECKPOINT": {
+    "last_verified_result": "Real scheduled P12 produced a taken-and-executed coverage task; a new discovery-eligibility failure was corrected permanently; full final inventory is at the browser suite without failed targets",
+    "first_incomplete_work": "Finish full verification, observe the next actual mechanism-first scientific dispatch, then publish exact main and verify CI; no operator response is a dependency"
   }
 }

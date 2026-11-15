@@ -82,8 +82,8 @@ research capacity for a distant review without a demonstrated resource conflict.
 
 No treatment recommendation, dose, route, schedule or patient-level analysis. Advice cannot
 promote a conclusion, ranking, need direction or candidate state: evidence and the existing
-scientific method govern that. No new gate, approval, scheduler or permanent session. No personal
-identifiers in files, assessments, URLs or fetch prompts. Operator pause/stop, real resource
+scientific method govern that. No new gate, approval, scheduler or permanent session. No private or patient
+identifiers or contact details in files, assessments, URLs or fetch prompts. Operator pause/stop, real resource
 limits, reserved acts and actual dependencies prevail. Unknown quota is not an observed limit.
 Protect frozen candidates and others' verification environments.
 
