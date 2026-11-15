@@ -239,3 +239,14 @@ Deferred observations remain in the existing `pending_events`/`pending_commits` 
 evaluation consumes them, even when no new radar or commit arrives. A tick during a running
 evaluation leaves its observation baseline unchanged, so later deliveries reach the next run.
 This reuses the existing state and digest; it adds no queue, scheduler or forced model launch.
+
+
+**A completed choice is not perpetual activity (continuous mode).** With no executable recipient
+work, pending delivery/mandate/portfolio signals can request a strategic evaluation without the
+ordinary coalescing interval. The single recall, duplicate digest, running check, real allocation
+and operator controls still apply; the tick itself launches no model. With no new signal, a
+previous `continue`, `switch`, `assign` or `queue` is revisited at the configured ordinary cadence
+when its executable queue is empty. A supported stated `wait` retains its real resumption
+condition. Thus next-work selection does not depend on a new radar, delivery or operator prompt,
+and the bounded pilot does not acquire these continuous-mode launches. Reassessment is a choice
+of useful work or a supported wait, never a duty to invent work.
