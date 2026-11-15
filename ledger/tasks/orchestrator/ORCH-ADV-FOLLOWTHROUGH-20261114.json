@@ -270,6 +270,23 @@
      "evidence": "Premises verified (see TRIAL_24H.log 01:5xZ). Landing the evidence now; SENT and the take-in-charge are recorded after the message. SENT 2026-11-15T01:28Z to SCI (msg 5946fa6d, route RESOLVED, --to SCI recorded, landed with this commit); take-in-charge pending. TAKEN by SCI as ORCH-ADV009-20261115 (record opened 01:29Z, one minute after SENT at 01:28Z). PRODUCED 01:43Z (commit a64f784dc, 15 minutes of work), then a battery wait of about 70 minutes; LANDED 02:54Z (development/main 466a0f2e3; battery PASS WITH SKIPS): the efonidipine/flunarizine pair of INV-03 stays a proposal, QUALIFIED: flunarizine one-assay triple (Santi 2002: Kd 530/3552/837 nM on Cav3.1/3.2/3.3), efonidipine Cav3.2 only (Perez-Reyes 2008: IC50 2.9/2.0/2.3 uM, flux assay) and an abstract-level oocyte pattern (Furukawa 2009), patterns in opposite directions from different assays; hERG: none for efonidipine, flunarizine 5.7 nM (abstract) vs 447-606 nM binding/screening, unreconciled; WO-25 narrowed; access results with SHA-256 per route (reCAPTCHA stop respected, no circumvention). SCI: no blind verifier (declared weak point), 16 of 16 quotes found by script, zero delegate tokens. CONSUMED by IT (585d8703a, 03:00Z) after IT's own independent re-read of the decisive numbers on the PMC pages (no delegate): applied as dated additions in compare_it28 (the '10^-8..10^-6 M' statement does not hold for this pair; sections 2b/6 superseded in part; hERG sentence carried conditionally; WO-25 OPEN with narrowed text and revival), left: INV-03 wording (optional, would regenerate ranking and four-language views) and the route fact for the scripts README (forwarded to HE). ERROR CAUGHT BY THE INTEGRATOR's re-read: SCI's 'human HEK tsa201 channels' was wrong (cloned RAT alpha1G/H/I in the human HEK cell line; efonidipine's Perez-Reyes assay used human Cav3.2a, so the pair also differs in channel species); the correction reached SCI (my message cde48714) and SCI appended a dated Correction section (b1d005d8f 03:01Z, on development/main 7c68e8228) saying what it replaces. Verdict unchanged. Observable cost: SCI about 1.5 hours wall time (15 minutes of work and about 70 minutes of battery wait), no delegate; IT re-read, no delegate; Advisor P10 17 turns, output 14,052."
     }
    ]
+  },
+  "OBJ_14_OPERATOR_NEXT": {
+   "order": 14,
+   "title": "Operator instruction of 2026-11-15: IT23 symbol lookup trial (NOW), CTGF closure with X1 conditional, Cav3 qualification (NEXT), IT52 reuse",
+   "steps": [
+    {
+     "step": "Record the instruction in the roadmap seat, the portfolio and the assignments; send to the actual recipients; verify take-in-charge",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Recorded (roadmap dated line, RP-021/RP-017/RP-016, assignments/PRESIDIO-004.md and PRESIDIO-005.md); messages to HE, SCI and IT follow this landing; take-in-charge pending."
+    },
+    {
+     "step": "Follow PRESIDIO-004 to its disposition (HE trial, SCI reference, IT KEEP/DISCARD/INCONCLUSIVE) and PRESIDIO-005 (queued) to delivery; IT applies the operator-directed INV-06 row 7 and INV-03 wording and narrows WO-25's blocking text",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
   }
  },
  "DECISIONS_TAKEN": [
@@ -429,6 +446,18 @@
    {
     "utc": "2026-11-15T03:3xZ",
     "event": "presidio decisions after P11: (1) the two false portfolio rows corrected by portfolio --upsert (RP-016 and RP-003 now state that ADV-009 is delivered and consumed, the branch's remaining residual and its revival); (2) the P11 wait is not relied on; my own decision: wait with a dated resume: the daily scout run at 05:20Z (first with HE's filters), because the other ready rows are large reads without a named decision (RP-002 first five units of the selection table: ethosuximide, lithium, d-APV class, A51, ketogenic diet, plus the AAV9 gene-addition unit excluded from drug repurposing; RP-003 the whole open-question map), literature routes blocked by lawful access, or event-gated (RP-017, RP-018); RP-005 (a prospective test of the generative method) resumes only with a new lever or measurement package (ADV-009's values table does not fit a design or comparison reader); (3) the pattern of degraded evaluation runs (P7 cut mid-text, P10 start, P11 3 turns) reported to HE with a suggestion to treat such a run as INCOMPLETE (no stated wait, no portfolio updates)"
+   },
+   {
+    "utc": "2026-11-15T07:3xZ",
+    "event": "human intervention (the second of this window): the operator's instruction to the ADV session, baseline main 9aa28b3, with a resource list: NOW one priority step, an offline reversible trial of the IT23 symbol lookup (15 of 834 rows with default zero flags), KEEP/DISCARD/INCONCLUSIVE rules; NEXT use ADV-007 (CTGF expression check closed, X1 stays conditional, first question: which observation separates soluble signal, composition and contact); NEXT use ADV-009 (the Cav3 pair stays a qualified proposal, narrow to the missing values and conditions, no clinical margin across assays); available: reuse IT52, no further generic linkage. The operator's roadmap revision 40 and register revision 73 are in a private ChatGPT library I cannot open: the repository facts and the operator's own summary were used."
+   },
+   {
+    "utc": "2026-11-15T07:5xZ",
+    "event": "recorded in the roadmap seat (dated line), the portfolio (RP-021 new, RP-017 and RP-016 updated by upsert) and two assignment files: PRESIDIO-004 (operator-directed: HE trial offline in a new dated folder; SCI independent manual mapping of the 15 rows BEFORE seeing the trial; IT disposition KEEP/DISCARD/INCONCLUSIVE and any regeneration) and PRESIDIO-005 (queued: SCI, the X1 first question as a table of discriminating observations from held files); the INV-06 row 7 and INV-03 wordings, left optional earlier by IT, are now operator-directed for IT"
+   },
+   {
+    "utc": "2026-11-15T07:5xZ",
+    "event": "human intervention (the third of this window): the operator pasted a capability-scout report addressed to PLAN (Contrastive Discovery, Skill2Query, Contrastive Hypothesis Replay and four other replays; claims are the authors', code not verified, no validation on LEGEND). Not an instruction to ADV: stored as received in radar_inputs_he52_20261114/operator_scout_report_20261115.md (HE had declared the operator's radar reports absent from the repository), linked to portfolio rows RP-001, RP-007 and RP-010, no assignment; PLAN (HE) decides the static audit; the priority next step remains the IT23 symbol-lookup trial (PRESIDIO-004)."
    }
   ]
  }
