@@ -24,6 +24,13 @@ for its own sake, a new gate, a new service or a task-count quota. A measured we
 parks its branch while other useful work proceeds. The 24-hour trial report due today is a
 parallel reporting obligation, not a reason to idle the laboratory for hours. Correct the stale
 P11 scheduling effect and follow the next useful assignment through acceptance and consumption.
+The first coverage handoff is preparation, not the end of discovery: the clinical Tier-B pool
+may be closed while lower-tier oncology or structural mechanisms remain worth investigating.
+An existing INV/open-question citation is not required to formulate a new question. Use the
+mechanism lens and actual lawful full-text availability to select a small generative research
+case, with transfer limits, competing explanations, a pharmacological comparison where justified
+and a rejecting experiment. Return new questions and findings to the existing repurposing loop;
+no operator-supplied paper is needed while useful lawful alternatives remain.
 At the next active boundary, reconcile the one existing Advisor recall with the canonical
 `strategic_advisor.py recall` text; update that job only if stale, preserving cadence and state.
 The canonical operational rule is cross-session transport section 12, "Strategic synthesis is

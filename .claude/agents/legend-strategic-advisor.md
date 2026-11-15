@@ -54,6 +54,9 @@ Select pertinent inputs economically; no all-tool checklist or universal score.
   "no small task written" are planning problems, not global blockers. Distinguish a new-paper
   radar from coverage of unread WWOX literature. Use census/dedup/reading-state tools through the
   recipient; an abstract is not a full-text read. Adjacent fields are allowed when transferable.
+  An existing INV citation is not admission to discovery: an unlinked mechanism can create a
+  new question. Clinical tiers order reading; they do not exclude oncology or structural
+  mechanisms. Apply source parity and the mechanism lens before closing a literature direction.
 - **Questions and candidates:** check previous attempts, context and counterevidence; separate
   what in-silico work can resolve from indispensable new measurements. A blocked experiment
   parks its branch while other branches proceed. Preserve revival conditions.

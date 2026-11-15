@@ -20,7 +20,9 @@ rows. Nevertheless, host `last_outcome` still carried P11's wait until 15:29 UTC
 future short refusal-fallback runs from being acted on but did not repair that historical state.
 
 A second implementation defect selected the previous assessment lexicographically: P9 sorted
-after P10 and P11. The repair sorts numeric invocation ids. The brief also shows current
+after P10 and P11. The repair sorts numeric invocation ids. Incomplete attempts remain indexed
+as history and are excluded from the reusable prior assessment; a superseded outcome is named
+explicitly rather than presented as if no earlier decision had existed. The brief also shows current
 recipient record verdicts and paths separately from historical TAKEN/EXECUTED evidence. A
 released task does not by itself prove scientific consumption.
 
@@ -35,6 +37,11 @@ On baseline `39e887fa2`, from the primary checkout:
 - `coverage_report.md` reports the broader known corpus and reading debt. It does not claim to
   enumerate every PubMed WWOX record, nor do its aggregate categories establish useful unread
   biology. Whole-record retrieval and receipt reconciliation precede a scientific batch.
+
+Receipt coverage and physical artefact availability use different populations and measure different
+things: 122 missing receipt depths do not, by themselves, contradict 356 absent artefacts or
+prove free access. Match populations before alleging a contradiction. Tier orders the queue;
+it does not make lower-tier mechanism papers irrelevant or remove the domain-parity lens.
 
 This supports a **coverage-and-question selection** opportunity in RP-008. It does not revive
 P9's false claim about a new WWOX-model paper. The recipient chooses a useful mechanism and

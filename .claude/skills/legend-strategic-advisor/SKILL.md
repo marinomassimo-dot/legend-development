@@ -206,3 +206,11 @@ A tick detects an outcome left by a historically incomplete run, preserves it as
 `last_invalidated_outcome`, removes its scheduling effect and requests a replacement evaluation
 within existing permissions. Assessments and failures remain intact. This also repairs P11's
 old wait after deployment; no manual edit of a transcript or second scheduler is involved.
+
+
+A clinical-coverage audit does not dispose of mechanistic discovery. If a result leaves
+unread oncology/structural sources or PMC identifiers, reconcile actual access and reading
+state, then select a mechanism-first discovery case or ask Orchestrator to select it. An
+existing INV/open-question citation is not a prerequisite for a new question. The full rule
+and source-parity reference live in cross-session transport section 12; no new screening gate,
+reading quota or mandatory adoption is added.
