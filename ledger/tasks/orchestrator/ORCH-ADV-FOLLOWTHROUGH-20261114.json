@@ -283,9 +283,9 @@
     },
     {
      "step": "Follow PRESIDIO-004 to its disposition (HE trial, SCI reference, IT KEEP/DISCARD/INCONCLUSIVE) and PRESIDIO-005 (queued) to delivery; IT applies the operator-directed INV-06 row 7 and INV-03 wording and narrows WO-25's blocking text",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "PRESIDIO-004 DISPOSED (see TRIAL_24H.log 08:0xZ); IT applied the INV-06, INV-03 and WO-25 wordings (bee8e7bed). Still open: PRESIDIO-005 (SCI: X1 first-question table, in its landing with a battery) and the landing of SCI's part B comparison; the question of the two live LINCS queries (S8/S9, 5 of 625 genes) belongs to the operator and is flagged for the report, not requested."
+     "evidence": "PRESIDIO-004 DISPOSED (see TRIAL_24H.log 08:0xZ); IT applied the INV-06, INV-03 and WO-25 wordings (bee8e7bed). Still open: PRESIDIO-005 (SCI: X1 first-question table, in its landing with a battery) and the landing of SCI's part B comparison; the question of the two live LINCS queries (S8/S9, 5 of 625 genes) belongs to the operator and is flagged for the report, not requested. CLOSED 2026-11-15T09:4xZ: PRESIDIO-004 (A, B, C) disposed; PRESIDIO-005 delivered and landed (the X1 first question answered in x1_discriminating_observations_presidio005_20261115/); the INV-06 and INV-03 wordings and WO-25 applied by IT (bee8e7bed); the two live LINCS queries (S8/S9) are not requested: for the operator's decision, recommended against (5 of 625 genes, no ranking effect shown)."
     }
    ]
   },
@@ -527,6 +527,14 @@
    {
     "utc": "2026-11-15T09:4xZ",
     "event": "ADV-011 premises checked before sending: the lens count holds (I re-ran unread_gold --mechanism --json: 74 items, 16 with receipt depths, 58 without; the draft quotes 74/60); the draft's SEED (the WWOX SDR substrate conflict, steroid oxidation PMID 21476439 against the 2015 retinal proposal PMID 25662954) is NOT unadjudicated in LEGEND: analysis/wwox_sdr_function_per_molecule_census_20260921.md section W2.1 found that the retinal proposal has no primary paper behind it, from that lab or any lab, and no independent literature; the draft itself named the September files as the first check and had not read them. Seed withdrawn as a pick, kept only as 'assessed in September'; P290 (declared read in the discovery ledger without a receipt) to be skipped or receipted, not re-read."
+   },
+   {
+    "utc": "2026-11-15T09:4xZ",
+    "event": "PRESIDIO-004 part B and PRESIDIO-005 delivered by SCI and landed (b88a2c251; battery 20261115-075847-b7fe7e15 PASS WITH SKIPS on 0e11973e4e; later merge checked by lint WARN, growth_anchors PASS, receipts OK, routing, section references, release gate PASS, not a second full battery: stated by SCI in its record). Part B: 15/15 agree with HE, 834/834 mechanical, independence weaker than it looks, two checks outside HGNC 15/15. PRESIDIO-005 (the operator's first question on X1): no single observation separates soluble signal, composition and contact; the smallest set is O0 the premise gate (null-neuron deficit reproduced blind, independent preparations, axon-density denominators), O1+O2 the soluble leg (conditioned medium on OPC monoculture, fresh-medium baseline, mixing arm, dilution series, matched neuron number and viability), O3 composition readouts in the same dishes (neuron number, viability, non-neuronal fraction, axon density and calibre, T3, T4 and a nutrient in conditioned versus fresh medium), O4 the contact leg (fixed null versus fixed wild-type neurons, held in INV-06, and a transwell, which is SCI's proposal with the it36 precedent, not text held in INV-06's X1 clause: IT's check caught that attribution and the README, TSV and delta now say so); O5 neutralisation identifies a candidate only inside the soluble explanation. No blind verifier on 005 (the weak point, stated by SCI). Consumer delta: 3 proposals, none applied; the INV-06 dated clause waits for a regeneration for another reason (IT's call), the optional OQ13 row (contact leg) and no change to the closed expression check. This answers the question in a repository table, not a prediction: an improved formulation of a conditional design, nothing measured."
+   },
+   {
+    "utc": "2026-11-15T09:4xZ",
+    "event": "ADV-011 taken by IT (ORCH-RP004-LENS-20261115, 743cdf741): case P287 (JNK inhibitor x WWOX gain and loss in HCC lines, meeting the INV-09 E04 lead in the opposite direction), seed withdrawn as I corrected; prediction F1-F7 and two case-level bets frozen at 09:28:28Z (45fadb00f) before the body was read; brief to SCI, queued behind PRESIDIO-005, which has now landed."
    }
   ]
  }
