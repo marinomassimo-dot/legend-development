@@ -1114,8 +1114,10 @@ def tick(campaign: Path) -> dict[str, Any]:
     elif obs["events"] or changed:
         if digest == state.get("last_digest"):
             why = "the same events were already evaluated"
-        elif changed or (anticipating and (hours is None or hours >= float(cont.get("min_hours_anticipating", 1)))) or (hours is None or hours >= float(cont.get("min_hours_between", 4))):
+        elif changed or (cont and anticipating and obs["queue"]["exhausted"]) or (anticipating and (hours is None or hours >= float(cont.get("min_hours_anticipating", 1)))) or (hours is None or hours >= float(cont.get("min_hours_between", 4))):
             verdict, why = "EVALUATE", ("roadmap changed" if changed else "; ".join(anticipating[:3] or obs["events"][:3]))
+            if cont and anticipating and obs["queue"]["exhausted"] and not changed:
+                why += "; idle pipeline: assess pending signals without a cadence gate"
         else:
             interval = float(cont.get("min_hours_anticipating", 1) if anticipating else cont.get("min_hours_between", 4))
             eligible = _utc(last_eval + dt.timedelta(hours=interval))
@@ -1130,6 +1132,8 @@ def tick(campaign: Path) -> dict[str, Any]:
             verdict, why = "EVALUATE", f"the resume condition of the last wait is met: {met}"
         elif not outcome.get("stated") and streak < 1 and obs["queue"]["exhausted"] and hours is not None and hours >= float(cont.get("min_hours_between", 4)):
             verdict, why = "EVALUATE", "the last evaluation left no stated outcome and no executable work remains: decide what is next from the portfolio"
+        elif outcome.get("stated") and outcome.get("outcome") in ("continue", "switch", "assign", "queue") and obs["queue"]["exhausted"] and hours is not None and hours >= float(cont.get("min_hours_between", 4)):
+            verdict, why = "EVALUATE", "the previous choice leaves no executable work: choose what is next from the standing portfolio"
     state["last_tick_utc"] = _utc(now)
     if verdict != "RUNNING":
         state.update(main_sha=obs["main_sha"], mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"],
