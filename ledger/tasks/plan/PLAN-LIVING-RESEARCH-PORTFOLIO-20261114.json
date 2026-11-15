@@ -10,10 +10,10 @@
   "OBJECTIVE": "Implement the operator-requested permanent Living Research Portfolio, seeded with the agreed opportunities, read by the Strategic Advisor and its existing recall, and continuously updateable without duplicating scientific evidence or task execution state.",
   "worktree": "/tmp/legend-portfolio-hjm3sbi7",
   "branch": "codex/living-research-portfolio",
-  "CURRENT_STATE": "IN_PROGRESS",
-  "MANDATE_STATE": "OPEN",
+  "CURRENT_STATE": "COMPLETE",
+  "MANDATE_STATE": "COMPLETE",
   "AUTHORISED_QUEUE_20261114": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_IMPLEMENT": {
       "order": 1,
       "steps": [
@@ -25,11 +25,12 @@
         {
           "step": "Verify input consumption, semantic changes, deferred events, dependencies and legacy behaviour",
           "status": "DONE",
-          "evidence": "108 Advisor tests PASS; section references 13 PASS; tool routing 7 PASS; release surface 11 PASS; initial suite word-count failure corrected without loosening the limit. The new tests exercise persistence, saved brief consumption, automatic follow-up patches, deferred events and dependency changes."
+          "evidence": "108 Advisor tests PASS; section references 13 PASS; tool routing 7 PASS; release surface 11 PASS; initial suite word-count failure corrected without loosening the limit. The new tests exercise persistence, saved brief consumption, automatic follow-up patches, deferred events and dependency changes. Final candidate f5cba5948 includes the concurrent wait-record correction: 109 Advisor tests PASS in the complete inventory."
         },
         {
           "step": "Land, run required release checks and clean the temporary worktree",
-          "status": "IN_PROGRESS"
+          "status": "DONE",
+          "evidence": "Landed implementation 614db32d7 via 6d4e02c25; original task branch and worktree removed. Fresh-clone standard inventory on f5cba5948fa8e241811c79c141c8236bf5838a46 PASS WITH SKIPS (251 targets, 43 skipped tests), all suite exits 0. LINT WARN without BLOCK; privacy scan has 0 BLOCK and no findings in changed files. Final safe_push and disposal of verification-only directories follow the closure commit in this session."
         }
       ]
     }
@@ -56,8 +57,8 @@
   "RUNTIME": "Codex",
   "SCIENTIFIC_DELTA": "NONE: opportunities and procedural routing only; no scientific claims or ranking changed",
   "CHECKPOINT": {
-    "last_verified_result": "Browser suite 225 PASS; outside-repository TMPDIR passes both synthetic browser load and 62 privacy plus 20 runner tests. Earlier interrupted attempts and failed suites preserved.",
-    "first_incomplete_work": "Complete the standard 251-target inventory on f5cba5948fa8e241811c79c141c8236bf5838a46 with the checked external TMPDIR; release and clean own artifacts."
+    "last_verified_result": "All implementation steps closed; full standard inventory PASS WITH SKIPS on the named candidate, real ADV read/update observed.",
+    "first_incomplete_work": "No implementation steps remain. Publish the closure SHA through safe_push and remove verification-only directories before the final response."
   },
   "VALIDATION_ATTEMPTS": [
     {
@@ -97,8 +98,101 @@
       "candidate": "f5cba5948fa8e241811c79c141c8236bf5838a46",
       "browser_fixture_loaded": true,
       "runner_fixture_suite": "20 tests PASS",
-      "status": "IN_PROGRESS",
-      "log": "/tmp/legend-portfolio-battery-final.log"
+      "status": "PASS_WITH_SKIPS",
+      "log": "/tmp/legend-portfolio-battery-final.log",
+      "verdict": "PASS WITH SKIPS",
+      "targets": 251,
+      "skipped_tests": 43,
+      "summed_suite_seconds": 3314.8,
+      "log_sha256": "658a155a6418f8fc097f971366d4912c71e2bb4ef03af03055c42371b4478419",
+      "runner_exit": 0,
+      "hosting_exec_exit": 143,
+      "hosting_note": "The tool transport reported exit 143 after printing BATTERY_EXIT=0. The runner log has its normal complete verdict, all 251 suite exits are 0, and its PID file was removed. Transport status is retained separately, not substituted for a suite verdict.",
+      "skip_details": [
+        "- scripts/test_repository_surface_determinism.py: case-sensitive filesystem: `.GIT` cannot impersonate `.git`",
+        "- framework/scripts/test_deepdive_manifest.py: PMID 38499540 supplement absent from this checkout",
+        "- framework/scripts/test_deepdive_manifest.py: no .pptx deposits in this checkout  [x2]",
+        "- framework/scripts/test_deepdive_manifest.py: PMID 21731849 article text absent from this checkout",
+        "- framework/scripts/test_deepdive_manifest.py: Retraction Watch snapshot unusable: snapshot retractionwatch_20261021.csv absent under files/retraction_watch/ (run: dependency_integrity.py fetch)",
+        "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 18460020: files/fulltext/PMID18460020_Nakayama2008_PMC.pdf (+13 more)  [x3]",
+        "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 42157447: files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml (+8 more)",
+        "- framework/scripts/test_paper_packet.py: no declared artefact is present in this checkout (e.g. files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml, files/fulltext/PMID29724996_AbuRemaileh2018_supplement.pdf, files/fulltext/PMID29724996_AbuRemaileh2018_supplement.txt) \u2014 `files/` is gitignored, so this case does not run in a fresh clone. It is skipped, never passed.",
+        "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 29724996: files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml (+14 more)  [x5]",
+        "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 34268881: files/fulltext/PMID34268881_Steinberg2021_PMC.xml (+22 more)",
+        "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 16223882: files/fulltext/PMID16223882_Fabbri2005_PMC.pdf (+20 more)  [x2]",
+        "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 38499540: files/fulltext/PMID38499540_BidanyMizrahi2024_PMC.xml (+13 more)",
+        "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 42422765: files/fulltext/PMID42422765_Obeid2026_assets/mmc1.pdf (+23 more)  [x4]",
+        "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 20146584: files/fulltext/PMID20146584_Salah2010_PMC.xml",
+        "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 28373548: files/fulltext/PMID28373548_EoC_PNAS2017.pdf (+6 more)",
+        "- framework/scripts/test_paper_packet.py: local figure corpus holds no png/jpg under files/figures",
+        "- framework/scripts/test_dependency_integrity.py: snapshot unusable: snapshot retractionwatch_20261021.csv absent under files/retraction_watch/ (run: dependency_integrity.py fetch)  [x2]",
+        "- framework/scripts/test_regenerate_adjudications.py: skipped: no recipe's source PDF is on this host (files/ is gitignored; 8 recipes looked at)",
+        "- framework/scripts/test_surface_census.py: local full-text corpus is gitignored and absent from this checkout  [x4]",
+        "- framework/scripts/test_figure_ppi_preflight.py: skipped: no PDF under files/fulltext on this host (files/ is gitignored)",
+        "- framework/scripts/test_recapture_snippets.py: skipped: no real manifest has its declared text artifact on this host (files/ is gitignored; 594 manifests looked at)",
+        "- disease-models/wwox/analysis/scripts/test_derive_dismech_sidecar.py: local full-text corpus not present in this checkout",
+        "- disease-models/wwox/research/drug_repurposing/generation_it21_p2_20261103/test_attribution_it21.py: catalogue cache absent",
+        "- disease-models/wwox/research/drug_repurposing/qualification_it21_p4a_20261103/test_qualify_p4a_it21.py: saved text is under the gitignored files/ tree of the checkout that fetched it",
+        "- framework/scripts/test_mandate_continuity.py: Stop hook not installed in .claude/settings.json on this checkout",
+        "- framework/scripts/test_repurposing_search_bridges.py: needs the local catalogue cache (not distributed)",
+        "- framework/scripts/test_rna_class_means.py: public inputs not given (RNA_REPRO_RAW, RNA_REPRO_CSV)",
+        "- framework/scripts/test_shareable_audit_languages.py: needs the local catalogue cache and the built editions"
+      ]
     }
-  ]
+  ],
+  "completed_utc": "2026-11-15T00:32:18.401660Z",
+  "REAL_USE": {
+    "assessment": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P9/assessment.md",
+    "metadata": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P9/meta.json",
+    "assessment_updates": [
+      "RP-005",
+      "RP-008",
+      "RP-017"
+    ],
+    "followthrough": "The ADV host checked originals, declined the draft ADV-008 and corrected RP-008; it was not dispatched. HE fed the measured environment diagnosis into RP-020 using the production update command.",
+    "scientific_decision_benefit": "UNMEASURED"
+  },
+  "FINAL_VALIDATION": {
+    "candidate": "f5cba5948fa8e241811c79c141c8236bf5838a46",
+    "verdict": "PASS WITH SKIPS",
+    "targets": 251,
+    "skipped_tests": 43,
+    "summed_suite_seconds": 3314.8,
+    "log": "/tmp/legend-portfolio-battery-final.log",
+    "log_sha256": "658a155a6418f8fc097f971366d4912c71e2bb4ef03af03055c42371b4478419",
+    "runner_exit": 0,
+    "hosting_exec_exit": 143,
+    "hosting_note": "The tool transport reported exit 143 after printing BATTERY_EXIT=0. The runner log has its normal complete verdict, all 251 suite exits are 0, and its PID file was removed. Transport status is retained separately, not substituted for a suite verdict.",
+    "skip_details": [
+      "- scripts/test_repository_surface_determinism.py: case-sensitive filesystem: `.GIT` cannot impersonate `.git`",
+      "- framework/scripts/test_deepdive_manifest.py: PMID 38499540 supplement absent from this checkout",
+      "- framework/scripts/test_deepdive_manifest.py: no .pptx deposits in this checkout  [x2]",
+      "- framework/scripts/test_deepdive_manifest.py: PMID 21731849 article text absent from this checkout",
+      "- framework/scripts/test_deepdive_manifest.py: Retraction Watch snapshot unusable: snapshot retractionwatch_20261021.csv absent under files/retraction_watch/ (run: dependency_integrity.py fetch)",
+      "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 18460020: files/fulltext/PMID18460020_Nakayama2008_PMC.pdf (+13 more)  [x3]",
+      "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 42157447: files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml (+8 more)",
+      "- framework/scripts/test_paper_packet.py: no declared artefact is present in this checkout (e.g. files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml, files/fulltext/PMID29724996_AbuRemaileh2018_supplement.pdf, files/fulltext/PMID29724996_AbuRemaileh2018_supplement.txt) \u2014 `files/` is gitignored, so this case does not run in a fresh clone. It is skipped, never passed.",
+      "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 29724996: files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml (+14 more)  [x5]",
+      "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 34268881: files/fulltext/PMID34268881_Steinberg2021_PMC.xml (+22 more)",
+      "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 16223882: files/fulltext/PMID16223882_Fabbri2005_PMC.pdf (+20 more)  [x2]",
+      "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 38499540: files/fulltext/PMID38499540_BidanyMizrahi2024_PMC.xml (+13 more)",
+      "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 42422765: files/fulltext/PMID42422765_Obeid2026_assets/mmc1.pdf (+23 more)  [x4]",
+      "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 20146584: files/fulltext/PMID20146584_Salah2010_PMC.xml",
+      "- framework/scripts/test_paper_packet.py: local corpus artefact absent for PMID 28373548: files/fulltext/PMID28373548_EoC_PNAS2017.pdf (+6 more)",
+      "- framework/scripts/test_paper_packet.py: local figure corpus holds no png/jpg under files/figures",
+      "- framework/scripts/test_dependency_integrity.py: snapshot unusable: snapshot retractionwatch_20261021.csv absent under files/retraction_watch/ (run: dependency_integrity.py fetch)  [x2]",
+      "- framework/scripts/test_regenerate_adjudications.py: skipped: no recipe's source PDF is on this host (files/ is gitignored; 8 recipes looked at)",
+      "- framework/scripts/test_surface_census.py: local full-text corpus is gitignored and absent from this checkout  [x4]",
+      "- framework/scripts/test_figure_ppi_preflight.py: skipped: no PDF under files/fulltext on this host (files/ is gitignored)",
+      "- framework/scripts/test_recapture_snippets.py: skipped: no real manifest has its declared text artifact on this host (files/ is gitignored; 594 manifests looked at)",
+      "- disease-models/wwox/analysis/scripts/test_derive_dismech_sidecar.py: local full-text corpus not present in this checkout",
+      "- disease-models/wwox/research/drug_repurposing/generation_it21_p2_20261103/test_attribution_it21.py: catalogue cache absent",
+      "- disease-models/wwox/research/drug_repurposing/qualification_it21_p4a_20261103/test_qualify_p4a_it21.py: saved text is under the gitignored files/ tree of the checkout that fetched it",
+      "- framework/scripts/test_mandate_continuity.py: Stop hook not installed in .claude/settings.json on this checkout",
+      "- framework/scripts/test_repurposing_search_bridges.py: needs the local catalogue cache (not distributed)",
+      "- framework/scripts/test_rna_class_means.py: public inputs not given (RNA_REPRO_RAW, RNA_REPRO_CSV)",
+      "- framework/scripts/test_shareable_audit_languages.py: needs the local catalogue cache and the built editions"
+    ]
+  },
+  "RELEASE_SCOPE": "The complete inventory belongs to f5cba5948fa8e241811c79c141c8236bf5838a46. Later changes are the portfolio follow-through, guide and this task record; targeted closure checks and the exact-SHA public release gate cover the published closure. Do not attribute the full inventory to that later SHA."
 }

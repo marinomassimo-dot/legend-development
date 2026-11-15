@@ -90,3 +90,11 @@ Only this actor's runner and its checked descendant identities were stopped. Tha
 The second attempt on b6270eab80d7d14894573768fc351975cceb3253 ran the browser suite first: 225 tests PASS. My choice of an ignored temporary directory inside the project then caused fixture discovery failures in `test_public_release_gate.py` and `test_release_runner_verdict.py`. Those failed suite results remain recorded; the attempt was interrupted, not relabelled PASS.
 
 A dedicated, non-ignored temporary directory outside all repositories passed the synthetic browser-file probe, 62 privacy tests and 20 runner tests. The standard complete inventory is repeated in a fresh clone of f5cba5948fa8e241811c79c141c8236bf5838a46 with that `TMPDIR`. No sandbox-bypass flag, new browser installation or weakened assertion is used. RP-020 records the small workload-probe opportunity for ADV to assess; no additional gate or service was implemented.
+
+## Final verification
+
+On 2026-11-15 the standard complete inventory on **f5cba5948fa8e241811c79c141c8236bf5838a46** finished **PASS WITH SKIPS: 251 targets, 43 skipped tests**, with every suite exit 0. This includes 109 Advisor tests, 225 dashboard tests and 14 language tests. The skips concern absent local corpus, caches, inputs or host-specific conditions; the [task record](../../../../../ledger/tasks/plan/PLAN-LIVING-RESEARCH-PORTFOLIO-20261114.json) retains the exact reasons, log digest and earlier attempts. LINT is WARN without BLOCK; the current privacy scan found no BLOCK and no findings in changed files.
+
+The runner returned 0 and removed its PID file. The hosting command transport nevertheless reported 143 after printing `BATTERY_EXIT=0`; that distinct observation is retained in the task record. It does not replace any suite result.
+
+The full-inventory verdict belongs to the named candidate. Subsequent changes concern this guide, the task record and portfolio follow-through; the publication uses targeted closure checks and the public release gate on its exact commit. The completed mechanical and live-use checks do not establish improved scientific prediction or strategic decision quality.
