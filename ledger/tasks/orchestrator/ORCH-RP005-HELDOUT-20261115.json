@@ -1,0 +1,19 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-RP005-HELDOUT-20261115",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "NORMAL",
+  "OBJECTIVE": "RP-005 held-out test: IT's predictions on SCI's Fig 7 quantification of PMID 32000863 (frozen 745d41415 before it existed), scoring, and a dated Update for the two top cards; ADV prompt 2026-11-15.",
+  "START_UTC": "2026-11-15T13:46:00Z",
+  "MANDATE_STATE": "COMPLETE",
+  "RESULT_SO_FAR": "Scored H1-H5 (scoring_pmid32000863.md): H4 and H1 held (per-animal clause not determinable; mid-hour reversal not predicted), H3 held as worded with a miss for Fig 7d (vector in the article PDF), H2 missed on the absolute reading, H5 half missed (a null-specific ethosuximide effect is not shown). Dated Update in cards_early/README.md (no cell edited). No receipt was provided by SCI for this package (it used files already held); none recorded by IT.",
+  "CLOSE_WHEN": "scored, wording proposed, landed.",
+  "AUTONOMY_TRIAL_NOTES": {
+    "delegates": "none by IT",
+    "tokens_of_delegates": 0,
+    "waits_interruptions_restarts_human_interventions": [
+      "IT's wait was premised on development/main; the result had landed on the root checkout's local main (ADV corrected it)"
+    ]
+  }
+}
