@@ -668,6 +668,15 @@ The coverage report and batch queue consume this ledger directly and fail closed
 missing or invalid. The receipt sink is the event history; those generated views are not
 the event history and must remain reconstructable from it.
 
+Receipt appends also change derived research-view metadata even when no scientific rank moves.
+At the publication boundary, batch the existing regeneration/check recipe in
+[the script catalogue](../scripts/README.md) after the last receipt or data edit, not after
+each append. "Do not change rankings or candidates" preserves scientific ordering and state;
+it does not exempt stale receipt counts or other derived metadata. If the recording session
+cannot update a shared consumer, hand that specific regeneration to its integrator and verify
+the result rather than reporting that no consumer change is needed. This uses existing tools
+and checks, with no new approval or gate.
+
 ## Historical reconstruction is not a contemporaneous receipt
 
 Never fabricate a past analysis timestamp or coverage map. A backfill inferred from old
