@@ -1,0 +1,21 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-RP008-UNREAD-20261115",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "NORMAL",
+  "OBJECTIVE": "RP-008 / ADV-010 (Advisor draft from evaluation 12, delivered by message; it answers the operator's line of 2026-11-15 in roadmap_current.md, 'assess the coverage of older unread WWOX literature'; low-risk: read-only census plus one receipt): reconcile the CORPUS placeholders listed by unread_gold.py --all into buckets (a) declared read without receipt, (b) lawfully accessible free and unread, (c) access-limited or absent, (d) not relevant; select a Science batch only if (b) holds items tied to a named investigation or open question; confirm or correct the 'pool exhausted' blockers. Free lawful routes only, zero spend, no contact parameter.",
+  "START_UTC": "2026-11-15T07:00:00Z",
+  "MANDATE_STATE": "COMPLETE",
+  "BASELINE": "main bd30f7892 (149 placeholders: 30 with receipt depths, 119 without; Tier B 11, Tier C LOW 134, 4 not applicable)",
+  "RESULT": "rp008_unread_census_it55_20261115/README.md answers first: Tier B bucket (b) empty (4 unreceipted case reports are not open access); 118 unreceipted placeholders: 1 bucket (a) item (P304, receipt FTR-20261115-25738261-01 recorded after the bytes matched the declared SHA-256), 47 with free text all LOW and none tied to a named decision; no Science batch; RP-008 parked with a revival trigger; the INTAKE and METABOLIC blockers confirmed as defined with a dated note.",
+  "AUTONOMY_TRIAL_NOTES": {
+    "delegates": "none",
+    "tokens_of_delegates": 0,
+    "waits_interruptions_restarts_human_interventions": [
+      "none in this item"
+    ],
+    "tool_calls_external": "about 17 Europe PMC searches, 1 open-PDF download, 1 PMC page request (generic client, no contact parameter)",
+    "wall_time": "about 1 h 40 min"
+  }
+}

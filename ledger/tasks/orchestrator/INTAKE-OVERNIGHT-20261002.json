@@ -162,5 +162,6 @@
    ]
   }
  },
- "STANDING_STEP_NOTE_20261113": "2026-11-13 (Orchestrator): the single BLOCKED step OBJ_STANDING_NEXT_WAVES is a standing rule of the operator, not an executable deliverable, and it is not open work for the proactive pilot or any monitor. Unblock condition: a new literature batch completes or the operator supplies papers/PDFs (the rule then proposes and dispatches the next wave by the emerging priorities). It stays INCOMPLETE by design; no executable step remains."
+ "STANDING_STEP_NOTE_20261113": "2026-11-13 (Orchestrator): the single BLOCKED step OBJ_STANDING_NEXT_WAVES is a standing rule of the operator, not an executable deliverable, and it is not open work for the proactive pilot or any monitor. Unblock condition: a new literature batch completes or the operator supplies papers/PDFs (the rule then proposes and dispatches the next wave by the emerging priorities). It stays INCOMPLETE by design; no executable step remains.",
+  "RP008_NOTE_20261115": "2026-11-15 (IT, ADV-010): the 'pool exhausted' wording holds for what it defined (no selectable lawful neuro-WWOX or metabolic study left: the unread Tier B placeholders are paywalled, the free unread ones are LOW oncology); it does not mean nothing is unread (118 placeholders without a receipt, 47 with free text, none tied to a named investigation or open question). Census and revival trigger: disease-models/wwox/research/drug_repurposing/rp008_unread_census_it55_20261115/README.md. No step state changed."
 }
