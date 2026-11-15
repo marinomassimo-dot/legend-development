@@ -471,6 +471,10 @@
    {
     "utc": "2026-11-15T07:4xZ",
     "event": "another PLAN session (branch codex/adv-continuity-20261115, record PLAN-ADV-CONTINUOUS-RESEARCH-20261115) corrected the Advisor's continuity rule and live portfolio rows (RP-003, RP-005, RP-008): invalidated the stale P11 wait without a model call, made selection follow deliveries as well as hourly recalls; its last steps (landing, observing my recall) are open"
+   },
+   {
+    "utc": "2026-11-15T08:0xZ",
+    "event": "HE's static audit of the operator's scout report delivered (8362ac92a, radar_inputs_he52_20261114/operator_scout_report_20261115_audit_he.md): competing explanations already covered at generation and proposal time; three pieces missing (MECE requirement, unknown-mechanism slot, a record of which rival a result favoured: observed absences, not a measured failure); Contrastive Discovery MONITOR, Skill2Query WATCH (no demonstrated retrieval defect; an API key dependency), the four other replays not audited; no harness change. Presidio decision: the read-only replay HE names (a Scientist, on INV-05 BH1-BH3 or the ADV-007 contrast, with a reader other than the writer of the rivals) is kept as an option in RP-001 and NOT assigned now: the cases are the most worked in the module, it changes no research decision (only whether a proposal-record slot deserves a trial), resources are unknown and the 24-hour report is due; revival after the report if a Scientist has free capacity, or if an existing rejection is seen to have lost information. Portfolio rows RP-001, RP-007, RP-010 point at the audit."
    }
   ]
  }
