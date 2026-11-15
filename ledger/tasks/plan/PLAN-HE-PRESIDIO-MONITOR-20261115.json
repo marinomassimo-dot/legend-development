@@ -10,10 +10,10 @@
  "OBJECTIVE": "Make the operator's permanent instruction of 2026-11-15 (roadmap_current.md, 'PERMANENT AND DURABLE' and its clarification) durable in the existing places: the transport rule (section 12), the Advisor skill and agent definition, the recall text, and a tick field showing who is idle and for how long. Plus one harness item from the trial's demonstrated defects (access class: proof-of-work page). No new gate, scheduler or registry.",
  "worktree": ".claude/worktrees/he60",
  "branch": "he60-idle-check",
- "CURRENT_STATE": "IN_PROGRESS",
+ "CURRENT_STATE": "COMPLETE",
  "CHECKPOINT": {
-  "last_verified_result": "strategic_advisor suite 127 OK, test_tool_routing OK, test_documented_commands OK in the worktree",
-  "first_incomplete_work": "gated publish, then tell ADV the recall text changed"
+  "last_verified_result": "published 4fa2664a2 (gate PASS, verified by ls-remote); suites OK; CI not yet observed",
+  "first_incomplete_work": "none; (b) SENT records for presidio decisions declined with a reason, (a) not picked"
  },
  "TAKEN_IN_CHARGE": {
   "utc": "2026-11-15T13:29:37Z",
@@ -51,5 +51,6 @@
     }
    ]
   }
- }
+ },
+ "MANDATE_STATE": "COMPLETE"
 }
