@@ -7,6 +7,27 @@ The roadmap below is the operator's. It defines the mission and the priorities; 
 the parts where they conflict, and the Advisor re-evaluates when this section changes. There is no second plan: the rest of this file, the task records and the dashboard serve this one.
 
 <!-- OPERATOR_ROADMAP:BEGIN -->
+
+**2026-11-15 — Standing operator integration: continuous useful research.** ADV is authorised
+and expected to maintain the research pipeline within this roadmap, without new operational
+prompts from the operator. Operator silence is not a dependency; intervention happens by
+override, integration, roadmap, urgency or stop. Once deliveries are consumed, select the next
+useful direction and prepare its first executable question, with Orchestrator choosing cases
+and methods when appropriate. A broad backlog is planning material, not a reason to wait.
+Use generation and comparative pharmacology, prospective EVAL, diagnosis of Scientist errors
+and consumer losses, existing tools/skills, scoped DREAM associations, old and new radars,
+candidate/open-question priorities and marginal benefit across dashboard branches. Assess the
+coverage of older unread WWOX literature as well as new PubMed hits: the daily newest-hit scout
+is not a full reading-coverage census. Read full originals for scientific analysis; keep abstract
+metadata separate. Protect real resource limits and frozen verifications; do not create activity
+for its own sake, a new gate, a new service or a task-count quota. A measured wet-lab dependency
+parks its branch while other useful work proceeds. The 24-hour trial report due today is a
+parallel reporting obligation, not a reason to idle the laboratory for hours. Correct the stale
+P11 scheduling effect and follow the next useful assignment through acceptance and consumption.
+The canonical operational rule is cross-session transport section 12, "Strategic synthesis is
+executable work"; it applies permanently to all sessions inside their respective roles.
+
+
 **Mission.** Improve LEGEND's ability to turn verifiable scientific knowledge into more useful pharmacological hypotheses, comparisons and experiments for WWOX loss of function, keeping the
 return from open questions to research active.
 

@@ -1,0 +1,92 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+  "TASK_ID": "PLAN-ADV-CONTINUOUS-RESEARCH-20261115",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-11-15",
+  "RUNTIME": "Codex",
+  "SESSION_PROFILE": "HARNESS",
+  "OBJECTIVE": "Correct the permanent Strategic Advisor behaviour and live state so that continuous, value-driven research follows the operator roadmap without waiting for new operator prompts, nonexistent deliveries or a distant trial report. Verify a real next research handoff and preserve scientific method, resource limits, autonomy of recipients and lean removable tooling.",
+  "AUTHORISATION": "Operator instruction in this session, 2026-11-15: direct implementation by ACTOR_ID plan, including the live correction and useful next work; no further operator response is a dependency.",
+  "CURRENT_STATE": "OPEN",
+  "MANDATE_STATE": "OPEN",
+  "AUTHORISED_QUEUE_20261115": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_REPAIR": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Diagnose the stale wait and permanent strategic selection gaps; implement the minimal repair",
+          "status": "DONE",
+          "evidence": "Canonical continuity rule, shorter agent definition, host procedure, operator roadmap and RP-008 grounded coverage opportunity; numeric prior-assessment ordering and current recipient verdicts; legacy incomplete outcome invalidation."
+        },
+        {
+          "step": "Test legacy outcome recovery, current recipient states and continuous planning with relevant negative controls",
+          "status": "DONE",
+          "evidence": "113 Advisor tests PASS; 13 section-reference, 6 skill-package, 7 tool-routing and 11 release-surface tests PASS. Legacy incomplete wait is removed without model call or history rewrite; short complete runs preserve valid waits; pauses prevail; current RELEASED recipient records are separate from historical TAKEN."
+        },
+        {
+          "step": "Land and publish the correction with required release verification",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "step": "Observe the existing ADV recall and a useful autonomous next handoff, then remove owned temporary artifacts",
+          "status": "TODO"
+        }
+      ]
+    }
+  },
+  "SCIENTIFIC_DELTA": "NONE: no scientific conclusion or candidate ranking is promoted by this Harness change",
+  "DECISIONS_TAKEN": [
+    {
+      "decision": "Repair a historically incomplete saved wait on the next tick, preserving the original assessment and superseded outcome",
+      "alternatives_rejected": [
+        "Manual state reset without provenance",
+        "A second scheduler or model call on every quiet heartbeat"
+      ],
+      "reversibility": "Ordinary revert; no scientific state changed"
+    },
+    {
+      "decision": "Keep the Advisor definition at 1058 words versus 1385 before, and put the repertoire rule in the existing protocol",
+      "reason": "Improve strategic breadth without adding a governance layer or inflating every context"
+    },
+    {
+      "decision": "Differentiate newest PubMed hits from coverage of older unread material",
+      "reason": "149 eligible placeholders include 27 already read and 122 without matched partial/complete receipt depth; reconcile before selecting science, not 122 automatic tasks"
+    }
+  ],
+  "DEFAULTS_TAKEN": [
+    {
+      "condition": "No native cross-session message tool in this Codex runtime",
+      "default": "Use the existing ADV hourly recall after the durable change lands; verify the actual downstream action",
+      "why_safe": "No transcript injection, duplicate session or private socket protocol"
+    }
+  ],
+  "STOP_LOG": [],
+  "VALIDATION_ATTEMPTS": [
+    {
+      "utc": "2026-11-15T07:37:19.403037+00:00",
+      "scope": "targeted Advisor suite before recall text update",
+      "verdict": "PASS",
+      "tests": 113
+    },
+    {
+      "scope": "targeted after recall text update",
+      "verdict": "FAIL",
+      "reason": "Two inherited text assertions required the old phrase legitimate wait in the recall. Removed the obsolete phrase assertion while retaining the functional valid-wait tests."
+    },
+    {
+      "scope": "targeted after test correction",
+      "verdict": "PASS",
+      "tests": 113
+    },
+    {
+      "scope": "concurrent portfolio merge",
+      "verdict": "CORRECTED_BEFORE_LANDING",
+      "reason": "The first field merge failed on a new concurrent RP-021 row; a following shell command committed unresolved markers on the task branch. Reconstructed all 21 rows from both parents, with per-field three-way selection, then asserted no markers and git diff --check. That intermediate commit was not landed or published."
+    }
+  ]
+}
