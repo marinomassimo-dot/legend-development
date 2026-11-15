@@ -1,0 +1,26 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-RP016-SCI-20261115",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "RP-016 (portfolio row, operator 2026-11-15 narrowing; mandate ORCH-ADV009-20261115; own pick under HE57, accepted by the ADV presidio with three guards): find the values still missing for the efonidipine/flunarizine pair (efonidipine Cav3.1 and Cav3.3, a same-assay comparison, hERG/QT); a number counts only with its assay, species, temperature, Ca/Ba and n; an interstitial or reCAPTCHA is a stop; absence by two routes is a complete result. Decision it can change: sharper verdict than qualified proposal for INV-03/WO-25, or the demotion trigger.",
+ "START_UTC": "2026-11-15T16:20:00Z",
+ "BASELINE": "development/main 224094b14; worktree .claude/worktrees/rp016, branch task/rp016-gaps.",
+ "MANDATE_STATE": "IN_PROGRESS",
+ "CURRENT_PACKAGE": {
+  "id": "gaps-written",
+  "state": "values, access, README, consumer_delta written; quick checks and landing next",
+  "delegate_active": "none",
+  "updated": "2026-11-15"
+ },
+ "RESUME": "Folder cav3_pair_gaps_rp016_sci_20261115/ complete. Remaining: quick checks, task_close, push (ls-remote before retry), message IT and ADV.",
+ "DECISIONS_TAKEN": [
+  "2026-11-15: no blind verifier (one reader; facts are abstract-level and labelled); no bodies attempted for publisher pages that met an interstitial in ADV-009; no spend, no contact parameter, PubMed tool and one open-access full text only; no ranking, card or frozen package edited. Verdict: no sharper verdict, no demotion; two new Cav3.1 rows; Cav3.3 and hERG/QT absent by two routes each."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "VERIFICATION_EVIDENCE": []
+}
