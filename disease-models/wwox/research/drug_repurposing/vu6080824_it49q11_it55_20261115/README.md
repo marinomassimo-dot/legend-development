@@ -1,0 +1,21 @@
+# IT49-Q11: second reading of the VU6080824 paper (PMID 40959251, PMC12434521) by a route that exists
+
+Non-canonical working note. Not medical advice; no dose, schedule or route; nothing here nominates a compound for use. Reference genotype class only. No ranking, need, tier, candidate state or frozen package was edited. Predictive capacity: none. Predictions frozen in commit d3f58d3b5 (`prediction_frozen.md`, 2026-11-15T12:37:52Z) before the body text was read.
+
+## Answer first
+**VU6080824 (5s) is, on what the main text gives, a Kir2.1 family-level inhibitor and a rodent tool, not a Kir2.1-isoform probe: the paper itself states 1-3-fold selectivity over Kir2.2 and Kir2.3 (for its deuterated analogs, said to be similar to 5s), and no counter-screen of 5s against hERG, Kir6.2 or Kir7.1 is in the main text.** The supporting information, where the full potency table sits, is listed on the PMC page but its request returned a proof-of-work check, which I did not solve; so the counter-screen of the question is still unread (supported abstention on the probe question).
+* **What the body gives for 5s:** manual patch clamp IC50 0.35 uM, Emax 100%, -120 mV normalised to 2 mM Ba2+, pH 7.4 (ML133 retested 1.51 uM in the same assay); thallium-flux IC50 below 6 uM; in thallium flux selective over Kir1.1 and Kir4.1 up to 10 uM (IC50 above 10 uM), with the authors' own caveat that true ratios need refinement given the modest potency in that assay; rat IV PK from one animal per compound (plasma clearance 17.7 mL/min/kg, t1/2 1.56 h, brain-to-plasma Kp 1.81 at a single early time, total not unbound). No native-neuron or slice recording with 5s.
+* **For the INV-18 Kir2 tool arms (the named decision):** a Kir2-directed step can use VU6080824 or ML133 only at family level; a claim that a Ba2+-sensitive current is Kir2.1 rather than Kir2.2/2.3 cannot be tested with either (the same limit as ML133 in SCI49 B). The gain is potency in MPC (about 4-fold over ML133 in the same paper) and a rodent PK; the selectivity outside Kir1.1/Kir4.1 (hERG, Kir6.2, Kir2.4, K2P) is unknown for 5s, and ML133's own off-targets (Kir6.2/SUR1 7.7 uM, hERG about 5 uM in one deposit) are the reason not to assume the profile carries over. Nothing applied to any card.
+
+## Prediction scores (`prediction_frozen.md`)
+| | Prediction | Result |
+|---|---|---|
+| F1 | main text gives 0.35 uM / pH 7.4 / MPC for 5s | HELD (Table 3: 0.35, Emax 100, -120 mV, pH 7.4) |
+| F2 | no counter-screen of 5s against Kir2.2, Kir2.3, Kir4.1, Kir6.2, Kir7.1 or hERG in the body | **MISSED in part:** the body states 5s is selective over Kir1.1 and Kir4.1 (>10 uM, thallium flux) and gives a qualitative 1-3-fold ratio for Kir2.2/Kir2.3 through its analogs; HELD for hERG, Kir6.2 and Kir7.1 (absent) |
+| F3 | SI is publisher-hosted, not retrievable by one request | **MISSED on hosting** (the SI file is PMC-hosted and listed on the page); HELD on retrieval (one request met a proof-of-work interstitial, 1,816 bytes of HTML, not solved) |
+| F4 | no native-neuron or slice recording with 5s | HELD |
+| F5 | abstention: comparator, not a probe, for INV-18 | HELD with a qualifier: the authors call it a Kir2.1 tool compound for rodents; for our question (isoform attribution) it is not one |
+The misses are in the direction of "more in the body than I expected" (selectivity statements), not of a different result.
+
+## Limits
+Depth: abstract, the Results passages on 5s, Table 3, the PK table, the supplementary entry and the Figure 1 caption; the Introduction, Discussion and chemistry not read as a whole; figure images not viewed; methods are in the SI (unread). Receipt `FTR-20261115-40959251-01` (partial, builds on `FTR-20261112-40959251-71`, reason inadequate prior coverage); 11/11 verbatim rows found mechanically. One reader, no blind verifier (the first reading's verifier was blocked by a bot check; this reading did not repeat it). Species and cell line of the channel assays are not given in the passages I read. The SCI49 B statement "no counter-screen found in the main text" stands for hERG, Kir6.2 and Kir7.1 and is corrected for Kir1.1, Kir4.1 and the qualitative Kir2.2/2.3 ratio.

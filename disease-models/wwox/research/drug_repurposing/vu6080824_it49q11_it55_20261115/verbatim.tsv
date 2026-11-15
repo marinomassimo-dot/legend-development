@@ -1,0 +1,12 @@
+proposition	locator	quote	found_in_saved_page
+5s MPC potency, Emax and conditions	Table 3 and footnote	5s 0.35 100	yes
+MPC pH for the 5s value	Results	(IC 50 = 0.35 μM, pH 7.4)	yes
+5s thallium-flux potency	Results, SAR	thallium flux IC 50 s < 6 μM for 5s and 5t	yes
+ML133 retest in the same assay	Results	Upon retesting, ML133 was found to have a potency value of 1.51 μM	yes
+5s selectivity statement in the thallium-flux assay	Results	VU6080824 was found to be selective relative to K ir 1.1 and K ir 4.1 up to 10 μM (K ir 1.1 and K ir 4.1 IC 50 s > 10 μM)	yes
+the authors' own caveat on that selectivity	Results	additional refinement will be necessary to understand the true selectivity ratios for each given the relatively modest pote	yes
+within-family selectivity for Kir2.2 and Kir2.3 is stated only for the deuterated analogs, as similar to 5s	Results	similar selectivity profiles relative to K ir 2.2 and K ir 2.3 (generally 1–3 fold selectivity; see the Supporting Information for full potency and PK details)	yes
+ML133 is already described as unselective within Kir2.x	Introduction	in the K ir 2. x family. Encouragingly, however, ML133 has appreciable selectivity against other K ir channels including K ir 1.1, K ir 4.1 and K ir 7.1	yes
+rat PK, single animal per compound	Results	K p = 1.81	yes
+the authors' framing as a rodent tool	Abstract	suitable for use as an improved K ir 2.1 tool compound in rodents	yes
+the supporting information is the PMC-hosted file ml5c00297_si_001.pdf	Supplementary Material	ml5c00297_si_001.pdf (757.9KB, pdf)	yes

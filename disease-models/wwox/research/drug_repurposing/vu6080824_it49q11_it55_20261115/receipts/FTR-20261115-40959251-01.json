@@ -1,0 +1,49 @@
+{
+ "analysis_at": "2026-11-15T12:38Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_present",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-15T12:38Z",
+ "event_id": "FTR-20261115-40959251-01",
+ "evidence_basis": [
+  "Abstract, the Results passages on 5s (potency, selectivity statements, PK), Table 3 (manual patch clamp), the pharmacokinetic table, the Supplementary Material entry and the figure 1 caption, read from the PMC article web page of PMC524435's sibling PMC12434521 (ACS Med Chem Lett 2025, CC-BY 4.0; one plain request on 2026-11-15, generic client, no contact parameter, HTTP 200, 192,000 bytes, an article). Introduction, Discussion and the synthetic chemistry not read as a whole; figure images not viewed; no methods in the main text (they are in the supporting information).",
+  "The supporting information file (ml5c00297_si_001.pdf, 757.9 KB) is listed on the PMC page; its one plain request returned a proof-of-work interstitial from the host (HTML, 1,816 bytes), not a PDF, and was not solved or retried: supplementary not read.",
+  "Mechanical check: all 11 verbatim rows of verbatim.tsv were found in the saved page text (11/11).",
+  "verbatim_locator | proposition: 5s MPC potency, Emax and conditions | Table 3 and footnote | \"5s 0.35 100\"",
+  "verbatim_locator | proposition: MPC pH for the 5s value | Results | \"(IC 50 = 0.35 μM, pH 7.4)\"",
+  "verbatim_locator | proposition: 5s thallium-flux potency | Results, SAR | \"thallium flux IC 50 s < 6 μM for 5s and 5t\"",
+  "verbatim_locator | proposition: ML133 retest in the same assay | Results | \"Upon retesting, ML133 was found to have a potency value of 1.51 μM\"",
+  "verbatim_locator | proposition: 5s selectivity statement in the thallium-flux assay | Results | \"VU6080824 was found to be selective relative to K ir 1.1 and K ir 4.1 up to 10 μM (K ir 1.1 and K ir 4.1 IC 50 s > 10 μM)\"",
+  "verbatim_locator | proposition: the authors' own caveat on that selectivity | Results | \"additional refinement will be necessary to understand the true selectivity ratios for each given the relatively modest pote\"",
+  "verbatim_locator | proposition: within-family selectivity for Kir2.2 and Kir2.3 is stated only for the deuterated analogs, as similar to 5s | Results | \"similar selectivity profiles relative to K ir 2.2 and K ir 2.3 (generally 1–3 fold selectivity; see the Supporting Information for full potency and PK details)\"",
+  "verbatim_locator | proposition: ML133 is already described as unselective within Kir2.x | Introduction | \"in the K ir 2. x family. Encouragingly, however, ML133 has appreciable selectivity against other K ir channels including K ir 1.1, K ir 4.1 and K ir 7.1\"",
+  "verbatim_locator | proposition: rat PK, single animal per compound | Results | \"K p = 1.81\"",
+  "verbatim_locator | proposition: the authors' framing as a rodent tool | Abstract | \"suitable for use as an improved K ir 2.1 tool compound in rodents\"",
+  "verbatim_locator | proposition: the supporting information is the PMC-hosted file ml5c00297_si_001.pdf | Supplementary Material | \"ml5c00297_si_001.pdf (757.9KB, pdf)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/vu6080824_it49q11_it55_20261115/README.md"
+ ],
+ "prior_receipt": "FTR-20261112-40959251-71",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "ce275ba19a764a8677e33da7c15b32e693fa2764f507c15c80b5f72559df28ae",
+ "source_kind": "fulltext_remote",
+ "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12434521/ (one plain request on 2026-11-15, generic client, no contact parameter; the page copy is kept under files/fulltext/it49q11_20261115/ and is not in git)",
+ "study_id": {
+  "doi": "10.1021/acsmedchemlett.5c00297",
+  "pmid": "40959251"
+ },
+ "workflow": "IT reading for IT49-Q11 (PRESIDIO-006 candidate, ADV go-ahead): five predictions were committed (d3f58d3b5) before the body text was read; the body was read from the PMC article page, quotes checked mechanically, the SI request was met by a proof-of-work check and stopped."
+}
