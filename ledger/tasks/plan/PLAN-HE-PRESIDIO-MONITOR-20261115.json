@@ -52,5 +52,13 @@
    ]
   }
  },
- "MANDATE_STATE": "COMPLETE"
+ "MANDATE_STATE": "COMPLETE",
+ "CI_OUTCOME_20261115": {
+  "red_runs": "#791 (1a6053b12), #794 (5027b8bb4), #795 (117ad22f6), #796 (373648b96), #797 (4a3a001b2): test_ranking_it8 'regeneration byte-identical' failed because ranking.json stamped receipt_ledger_lines 1960/1961 against 1969 after IT's receipts (one line; research order digest unchanged); read from the jobs and annotations API",
+  "second_cause": "#795 also failed framework/scripts/test_strategic_advisor.py test_no_other_script_imports_the_advisor_tool: my trial_window_table.py (HE61) imports strategic_advisor, which that guard forbade; I ran the advisor suite before adding the import, not after. Repaired at c848a3546 (15:18Z) by a peer, which permits the read-only trial measurement.",
+  "fix": "8cde2dc31 (ranking.json regenerated, gate PASS 15:49Z)",
+  "green": "#798 on 8cde2dc31 completed success at 2026-11-15T16:46:25Z, the first run on a ranking.json matching the receipts; #800 and #802 not concluded when written",
+  "prevention": "d70e8de25: ranking_it8 declared in candidate_tree_freshness.py GENERATORS, named in prompt_batch_commit.md Phase 4.7, test pins that a receipt re-checks it",
+  "run_duration": "CI runs take 48 to 81 minutes each (no concurrency group, one runner per run); the local gate takes about 6 minutes"
+ }
 }
