@@ -1,0 +1,47 @@
+{
+ "analysis_at": "2026-11-15T14:05Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-15T14:05Z",
+ "event_id": "FTR-20261115-15611021-01",
+ "evidence_basis": [
+  "Abstract, the Methods paragraphs on cRNA and oocytes, two-electrode voltage clamp and data presentation, and the Results passages on block by Ba2+ of the wild type and of the H98D and H98N mutants with the Figure 2, 3 and 6 legends, read from the PMC article web page of PMC1665531 (one plain request on 2026-11-15, generic client, no contact parameter, HTTP 200, 164,304 bytes, an article, no interstitial). The cation-selectivity and Cs+ results, the Discussion, the figures (not viewed; equations 2 and 3 and the KD-versus-voltage values of Fig. 6A are not in the page text) and the references were not read.",
+  "Mechanical check: the 10 verbatim rows cited here were found in the saved page text (verify_quotes.py, 46 of 46 over the whole verbatim.tsv).",
+  "verbatim_locator | proposition: TASK1 is relatively insensitive to Ba2+ (authors' abstract) | Abstract | \"Like many of the K2P channels, TASK1 is relatively insensitive to conventional channel blockers such as Ba2+.\"",
+  "verbatim_locator | proposition: TASK1 Ba2+ KD at 0 mV in 100 mM K+ | Abstract | \"In 100 mm K+, the KD at 0 mV for Ba2+ was 36 ± 10 mm(n = 6)\"",
+  "verbatim_locator | proposition: KD0 is a model extrapolation (no current at 0 mV in 100 mM K+) | Results, Block by Ba2+ of TASK1-WT | \"The KD at 0 mV (KD0) could not be determined experimentally because there were no currents at the equilibrium potential for K+ (0 mV in 100 mm K+ solution).\"",
+  "verbatim_locator | proposition: Ba2+ concentrations tested 0.3 to 10 mM (lowest tested concentration is above the 50-200 uM window) | Methods, Two-electrode voltage clamp | \"BaCl2 or CsCl was added to 100 mm K+ solution in concentrations between 0.3 and 10 mm.\"",
+  "verbatim_locator | proposition: External solution 100 mM K+, pH 8 | Methods, Two-electrode voltage clamp | \"Recordings were made in 100 mm K+ solution containing (mm): K+ 100 mm, MgCl2 1, CaCl2 2 and Hepes 10; adjusted to pH 8 with KOH.\"",
+  "verbatim_locator | proposition: Temperature | Methods, Data presentation | \"Experiments were performed at room temperature (22–24°C).\"",
+  "verbatim_locator | proposition: Murine TASK1 in Xenopus oocytes | Methods, mRNA and oocytes | \"Plasmids containing murine TASK1 (KCNK3) were linearized\"",
+  "verbatim_locator | proposition: Holding potential 0 mV, steps -100 to +20 mV | Figure 2 legend | \"Currents in response to voltage steps from –100 mV to +20 mV in 20 mV steps (holding potential, 0 mV)\"",
+  "verbatim_locator | proposition: Hill coefficient about 1; KD rises at positive voltages (KD(V) values are in Fig. 6A, not in the text) | Results, Block by Ba2+ of TASK1-WT | \"Hill coefficients (h) at different voltages were ∼1 (no significant difference between h at the different voltages). However the KD for Ba2+ block increased at more positive voltages (Fig. 6A).\"",
+  "verbatim_locator | proposition: Mutant KD0 values | Results, Effect of Ba2+ on H98D and H98N | \"Mean KD0 values for H98D and H98N were 0.44 ± 0.09 (n = 5) and 7.6 ± 3.4 mm Ba2+(n = 5), respectively.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/it44_k2p_primary_it55_20261115/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "cbd69c9a49169f8449050762f1bfcd94d37f732c941ad6c2903e48e60d8377fb",
+ "source_kind": "fulltext_remote",
+ "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1665531/ (one plain request on 2026-11-15, generic client, no contact parameter, HTTP 200, 164304 bytes; the page copy is kept outside git, SHA-256 given in source_fingerprint)",
+ "study_id": {
+  "doi": "10.1113/jphysiol.2004.079020",
+  "pmid": "15611021"
+ },
+ "workflow": "IT55 producer delegate for IT44-Q01 (K2P half) and IT44-Q02, context_policy QUESTION_DRIVEN: body read from the PMC article page, quotes checked mechanically; predictions frozen in a local commit before any body was opened."
+}

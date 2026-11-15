@@ -1,0 +1,58 @@
+V01 PMC6623616 yes
+V02 PMC6623616 yes
+V03 PMC6623616 yes
+V04 PMC6623616 yes
+V05 PMC6623616 yes
+V06 PMC6623616 yes
+V07 PMC6623616 yes
+V08 PMC6623616 yes
+V09 PMC6623616 yes
+V10 PMC6623616 yes
+V11 PMC6623616 yes
+V12 PMC6623616 yes
+V13 PMC6623616 yes
+V14 PMC6665656 yes
+V15 PMC6665656 yes
+V16 PMC6665656 yes
+V17 PMC6665656 yes
+V18 PMC6665656 yes
+V19 PMC6665656 yes
+V20 PMC6665656 yes
+V21 PMC6665656 yes
+V22 PMC6665656 yes
+V23 PMC6665656 yes
+V24 PMC1665531 yes
+V25 PMC1665531 yes
+V26 PMC1665531 yes
+V27 PMC1665531 yes
+V28 PMC1665531 yes
+V29 PMC1665531 yes
+V30 PMC1665531 yes
+V31 PMC1665531 yes
+V32 PMC1665531 yes
+V33 PMC1665531 yes
+V34 PMC1170668 yes
+V35 PMC1170668 yes
+V36 PMC1170668 yes
+V37 PMC1170177 yes
+V38 PMC1170177 yes
+V39 PMC2492388 yes
+V40 takahira2005 yes
+V41 takahira2005 yes
+V42 takahira2005 yes
+V43 duprat2000 yes
+V44 kim2000 yes
+V46 PMC6623616 yes
+V45 rajan2001 yes
+found 46 of 46
+-- term counts in the page text (for statements of absence)
+PMC1170177 14821 {'EC50': 0, 'Ba2\\+': 0, 'barium': 0, 'THIK': 0, 'TASK-?3': 0}
+PMC1170668 21627 {'EC50': 0, 'Ba2\\+': 1, 'barium': 0, 'THIK': 0, 'TASK-?3': 0}
+PMC1665531 37667 {'EC50': 0, 'Ba2\\+': 52, 'barium': 2, 'THIK': 0, 'TASK-?3': 3}
+PMC2492388 71122 {'EC50': 0, 'Ba2\\+': 1, 'barium': 0, 'THIK': 0, 'TASK-?3': 6}
+PMC6623616 76403 {'EC50': 1, 'Ba2\\+': 0, 'barium': 8, 'THIK': 4, 'TASK-?3': 4}
+PMC6665656 71964 {'EC50': 0, 'Ba2\\+': 21, 'barium': 1, 'THIK': 0, 'TASK-?3': 2}
+duprat2000 19 {'EC50': 0, 'Ba2\\+': 0, 'barium': 0, 'THIK': 0, 'TASK-?3': 0}
+kim2000 19 {'EC50': 0, 'Ba2\\+': 0, 'barium': 0, 'THIK': 0, 'TASK-?3': 0}
+rajan2001 19 {'EC50': 0, 'Ba2\\+': 0, 'barium': 0, 'THIK': 0, 'TASK-?3': 0}
+takahira2005 7171 {'EC50': 0, 'Ba2\\+': 0, 'barium': 0, 'THIK': 0, 'TASK-?3': 0}
