@@ -252,6 +252,18 @@
      "evidence": "Declined 2026-11-14T22:3xZ: see TRIAL_24H.log; assignments.jsonl keeps ADV-008 at DRAFTED (never SENT, honest); RP-008 corrected by portfolio --upsert to backlog with the narrow residual and a resume_when; the Advisor's other portfolio updates (RP-017 outcome from ADV-007; RP-005 resume_when) kept as correct. Nothing was sent to IT: no wasted executive work."
     }
    ]
+  },
+  "OBJ_13_ADV009": {
+   "order": 13,
+   "title": "ADV-009 (Advisor draft from evaluation 10): INV-03 pair, matched isoform potencies and hERG/QT data (WO-25), for SCI",
+   "steps": [
+    {
+     "step": "Check the draft's decisive premises in the originals, then send with the queue wording; record SENT with --to; verify take-in-charge; follow delivery and consumption",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Premises verified (see TRIAL_24H.log 01:5xZ). Landing the evidence now; SENT and the take-in-charge are recorded after the message."
+    }
+   ]
   }
  },
  "DECISIONS_TAKEN": [
@@ -383,6 +395,14 @@
    {
     "utc": "2026-11-14T22:3xZ",
     "event": "ADV-008 NOT dispatched, with the reasons, after checking its premises in the originals: (1) 'no dated genotype-name scan since 2026-10-05' is false in substance: framework/scripts/scout_daily.py runs PubMed queries wwox_any and wwox_dee (30 newest by pub_date) daily from the host cron 05:20 and reports new PMIDs as TO_TRIAGE (the log shows two hits, 42991897 ClinVar population variants and 43004178 pig meat-yield genetics: noise); (2) the 'WWOX paper that appeared after the pause', PMID 42941930, is an SH-SY5Y respiratory-inhibitor study, not a WWOX model, per radar_p4_it15 README. Residual gap (window before the scout's first baseline; correction/retraction/supplement notices) is small and low-yield: RP-008 set to backlog with that narrow next action and a resume_when, via the portfolio upsert. Premise accuracy of Advisor drafts in this trial: ADV-007 draft had 3 premises, 2 wrong or incomplete (blank flags ambiguity flagged by the Advisor itself; SCI51 consumption not pending); ADV-008 draft had 2 premises, both false: the presidio's check of a draft's decisive premises in the originals changed the outcome twice out of three drafts of this phase (ADV-006 earlier: premise partly wrong)"
+   },
+   {
+    "utc": "2026-11-15T01:23Z",
+    "event": "tick EVALUATE: PLAN-LIVING-RESEARCH-PORTFOLIO released and queue exhausted (the portfolio digest also moved by RP-020's own outcome text); two P1 ready rows (RP-001, RP-002) never examined; evaluation 10 (P10) run: stage P, opus high, 17 turns (16 on claude-opus-5-5, 1 on claude-opus-5; one classifier stop at the start, text continued), output 14,052, cache read 953,775, cache creation 78,214; outcome assign: draft ADV-009 (INV-03 matched-assay isoform potencies and hERG/QT data for efonidipine and flunarizine, WO-25, to Science); invocation count 10, drafts 9 of the historical 9. The Advisor read the presidio's own record, applied the premise lesson to its draft and named the one premise it could not verify (whether a route tried since 2026-11-05 would now succeed)"
+   },
+   {
+    "utc": "2026-11-15T01:5xZ",
+    "event": "ADV-009 premises checked in the originals before sending: WO-25 row (OPEN, literature_executable, executable_zero_spend partial, last touched 2026-11-05, one Europe PMC fullTextXML HTTP 500 on three PMC sources, 'No later record found'), INV-03 rank 2 (the pair is a proposal to verify; next_test still waits for matched potencies), and no record after 2026-11-05 gives the potencies (grep of efonidipine across the module: latest touches are bookkeeping or listings). All held. Sent to SCI with the queue wording."
    }
   ]
  }

@@ -1,0 +1,351 @@
+{
+  "capture": {
+    "assessment_sha256": "37e8e3af3cba4c507ec196c63ab953bfc93461d57d4117756fd5d2f2bbe85165",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P10/stream.jsonl",
+    "raw_stream_sha256": "a434998491991a98656c3a243bb2a103c8b6688c83480c386550e8eb8d82725f",
+    "source_session_id": "6948e757-23c7-42c9-b86e-1e6602d703b8",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 45017
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-15T01:27:06Z",
+  "label": "P10",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": true,
+      "efforts": {
+        "high": 17
+      },
+      "first_turn_context": 32803,
+      "models": {
+        "claude-opus-5": 1,
+        "claude-opus-5-5": 16
+      },
+      "peak_context": 78148,
+      "totals": {
+        "cache_creation": 78214,
+        "cache_read": 953775,
+        "output": 14052
+      },
+      "turns": 17
+    },
+    "final_turn_model": "claude-opus-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.0017885000000000002,
+        "inputTokens": 17755,
+        "maxOutputTokens": 128000,
+        "outputTokens": 26,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5": {
+        "cacheCreationEphemeral1hInputTokens": 68,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 68,
+        "cacheReadInputTokens": 73952,
+        "canonicalModel": "claude-opus-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.21212599999999998,
+        "inputTokens": 4,
+        "maxOutputTokens": 64000,
+        "outputTokens": 6978,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 78214,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 78214,
+        "cacheReadInputTokens": 957969,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.9611097999999999,
+        "inputTokens": 36,
+        "maxOutputTokens": 128000,
+        "outputTokens": 7183,
+        "provider": "firstParty",
+        "thinkingTokens": 4352,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 19,
+    "refusal_fallbacks": [
+      {
+        "apiRefusalCategory": null,
+        "direction": "retry",
+        "fallbackModel": null,
+        "originalModel": null,
+        "scope": "session",
+        "trigger": "refusal"
+      }
+    ],
+    "total_cost_usd": 1.1750243,
+    "turn_models": {
+      "claude-opus-5": 1,
+      "claude-opus-5-5": 17
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 78214,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 78214,
+      "cache_read_input_tokens": 953775,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 36,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 68,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 68,
+          "cache_read_input_tokens": 73952,
+          "input_tokens": 4,
+          "output_tokens": 6978,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 14052,
+      "output_tokens_details": {
+        "thinking_tokens": 4243
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-15T01:23:42Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P9/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tI've finished reading. Recommendation: send the Orchestrator one small assignment, a dated scan for new WWOX literature, because no scan has been found since "
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/research_portfolio.tsv"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tid\ttheme\topportunity\tdecision\tpriority\twhy_now\tnext_action\tstatus\tsources\tmandate_id\tresume_when\toutcome\tupdated_utc\n2\tRP-001\tGeneration\tTurn unused qualified"
+    },
+    {
+      "input": {
+        "-n": true,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-20261114.json",
+        "pattern": "ADV-008|P9|RP-003|next opportunity|queue"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "169:   \"title\": \"Anticipate useful work during waits (operator's permanent rule of 2026-11-14): short, reviewable queue; no speculative sequences; motivated wai"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-20261114.json",
+        "limit": 160,
+        "offset": 240
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "240\t     \"evidence\": \"Delivered to SCI 2026-11-14T19:0xZ (msg 9180c4a8; SENT recorded with --to SCI, landed 6d2f97a7b; premise corrections sent; my premise 2 wa"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "limit": 3
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tqid\tsource_ref\tquestion_text_max300\tdecision_at_stake_max200\tkind\tstatus\tpublished_on\tstatus_evidence\tlast_touched\tblocking_reason\texecutable_zero_spend\tclaim"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/**/open_questions*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/output/open_questions.tsv\ndisease-models/wwox/research/drug_repurposing/"
+    },
+    {
+      "input": {
+        "glob": "*.{md,py,json}",
+        "head_limit": 40,
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development",
+        "pattern": "open_questions_map|open-question map|executable_zero_spend"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 40 files limit: 40\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P10/brief.md\nledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-2026"
+    },
+    {
+      "input": {
+        "-o": true,
+        "head_limit": 60,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "pattern": "^[^\\t]+\\t[^\\t]+\\t[^\\t]+\\t[^\\t]+\\t[^\\t]+\\t(OPEN|PARTIAL|REOPENED)[^\\t]*\\t.*\\tyes\\t"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "7:[Omitted long matching line]\n24:[Omitted long matching line]\n33:[Omitted long matching line]\n47:[Omitted long matching line]\n54:[Omitted long matching line]\n6"
+    },
+    {
+      "input": {
+        "output_mode": "count",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "pattern": "^[^\\t]+\\t[^\\t]{0,60}[^\\t]*\\t[^\\t]{0,170}[^\\t]*\\t[^\\t]{0,110}[^\\t]*\\t[^\\t]+\\t(OPEN|PARTIAL|REOPENED)"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv:164\n\nFound 164 total occurrences across 1 file."
+    },
+    {
+      "input": {
+        "-o": true,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations.tsv",
+        "pattern": "^INV-\\d+\\t[^\\t]{0,140}"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No matches found"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations.tsv",
+        "limit": 4
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\trank\ttie_group\tinv_id\tintervention\tquestion\twhy_now\tevidence_available\tevidence_depth\tdecisive_uncertainty\tnext_test\tfeasibility\torigin_class\torigin_detail\tst"
+    },
+    {
+      "input": {
+        "-n": true,
+        "-o": true,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "pattern": "INV-03|efonidipine|flunarizine"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "26:INV-03\n26:INV-03\n26:efonidipine\n26:flunarizine\n26:efonidipine\n26:INV-03\n26:INV-03\n26:INV-03"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "limit": 1,
+        "offset": 26
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "26\tWO-25\tdisease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/ranking.json#investigations/INV-03\t[INV-03] What are the Cav3.1/3.2/3.3 potencies"
+    },
+    {
+      "input": {
+        "glob": "*.md",
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "efonidipine"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 3 files\ndisease-models/wwox/research/drug_repurposing/generation_it39_20261109/questions_it39.md\ndisease-models/wwox/research/drug_repurposing/comparators"
+    },
+    {
+      "input": {
+        "-n": true,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/comparators_it39_20261109/output/README.md",
+        "pattern": "efonidipine|flunarizine|Cav3\\.[123]|isoform"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "19:* In INV-03 the `mechanism_separating` rows are weak by the files' own account: the proposed pair (efonidipine, flunarizine) is a proposal to verify, ML218 a"
+    },
+    {
+      "input": {
+        "-n": true,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/compare_it28_p9_20261105/README.md",
+        "pattern": "efonidipine|flunarizine|PMC6758663|PMC1575949|PMC2880440|hERG"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "40:## 2. INV-03: T-type blockers (efonidipine, flunarizine; apinocaltamide is unit U25)\n42:Question carried by the row: which isoform carries the suppression of"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/compare_it28_p9_20261105/README.md",
+        "limit": 72,
+        "offset": 40
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "40\t## 2. INV-03: T-type blockers (efonidipine, flunarizine; apinocaltamide is unit U25)\n41\t\n42\tQuestion carried by the row: which isoform carries the suppressio"
+    }
+  ]
+}
