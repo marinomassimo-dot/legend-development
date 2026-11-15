@@ -401,6 +401,8 @@ python3 -B disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029
 
 It is declared in `candidate_tree_freshness.py` with its `check` (about 25 s); a change that only moves the count leaves the research order as it was.
 
+The one path that declaration does not cover is a receipt recorded by hand on its own (release run #817, 2026-11-15, the second time). `fulltext_receipts.py record` therefore runs the same declared check after the append, on a repository sink only, and prints `STALE: <surface>` with the command above (about 17 s; a check that fails or exceeds 120 s prints `NOT CHECKED`, never fresh). It regenerates nothing: run the printed command and commit the file with the receipt.
+
 **One generated surface is a sealed data file, and regenerating it breaks a seal on purpose.**
 The DisMech Phase-2 sidecar is derived from `CLAIM 016 / 024 / 035`'s registry blocks, so any
 batch that touches one of those claims drifts it:
