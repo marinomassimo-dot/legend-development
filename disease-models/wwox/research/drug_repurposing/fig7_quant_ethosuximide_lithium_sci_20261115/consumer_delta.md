@@ -1,0 +1,12 @@
+# Consumer delta: Fig 7 quantification (PMID 32000863), SCI 2026-11-15
+
+Non-canonical. Proposals for the integrator; nothing was applied. No ranking, card, packet or frozen package was edited. Not medical advice.
+
+| # | Consumer | Proposal | Standing |
+|---|---|---|---|
+| 1 | Ethosuximide card (EB-ETX-01 / unit U17), flag `graphical_reading` | Replace the by-eye wording with: effect read from the figure by calibrated extraction of the plotted means and SEMs (vector or pixel), error bounded by two source files (mean absolute difference 0.004 to 0.025 stage), no per-animal data. Whether the flag still counts as a reading-limit flag under the card's own rule is the integrator's decision; the extraction does not make the figure a primary data set. | proposal |
+| 2 | Same card, `late_phase_only` and `control_variability_comparable_to_effect` | State the measurement: null mice, gap +1.08 stage (58%) in minutes 30 to 60, +0.76 in 1 to 10, **-0.34 in 10 to 30 (treated arm higher)**; the late gap is 2.3 x the PTZ curve's own SD and 1.7 x its per-minute SEM, but the group-mean uncertainty is undecidable from means and SEMs (t 1.5 to 7.9 against 2.23). | proposal |
+| 3 | Same card, `no_drug_by_genotype_test` and `one_experiment` | Unchanged. The wild-type and heterozygous panels cannot exclude a proportional effect (late-phase PTZ levels 0.25 and 0.53; expected proportional gap 0.15 and 0.31; standard errors 0.05 to 0.28), so the "genotype-specific" wording in `analysis/locator_contract_live_test.md` lines 375 to 395 rests on the paper's n.s. marks, not on a test. | proposal |
+| 4 | Lithium card (G01 / unit U24), flags `nonspecific_also_in_wild_type`, `one_experiment_N6_arm` | Flags confirmed with magnitude (exact vector values): PTZ gap 54% (+/+), 62% (+/-), 82% (-/-) over the hour; the authors' **** in each genotype. The null arm is N=6 v 7. No flag removed. | proposal |
+| 5 | `could_rise` / `could_fall` of both units | On this extraction neither unit's group could rise, and neither must fall. NX1 (drug-by-genotype test with a same-day control) stays the one decisive step; a per-animal table from the authors, or a replication with a vehicle-injected PTZ arm for ethosuximide, would be the first thing to change a flag. | proposal |
+| 6 | Reading tool `framework/scripts` (not edited here) | The extraction code lives in this folder. If figure quantification recurs, a generic `figure_series.py` (tick calibration, lattice check, two-file agreement) would be a harness item; it was not built here. | open |

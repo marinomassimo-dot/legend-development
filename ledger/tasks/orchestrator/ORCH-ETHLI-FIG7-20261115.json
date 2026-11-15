@@ -1,0 +1,35 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ETHLI-FIG7-20261115",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "ADV candidate-deepening prompt of 2026-11-15 (peer-relayed by legend-development-39 under the operator's permanent continuity line of 2026-11-14, roadmap_current.md; verified there): can the data of the one experiment behind units U17 (ethosuximide) and U24 (lithium), PMID 32000863 Fig 7b and 7d, be quantified instead of read by eye, so as to say (1) whether the ethosuximide late-phase effect exceeds the control variability in the same figure and (2) whether the lithium effect differs between genotypes. Prior work checked first (IT6 rescue window, IT15 verify, the cards, the 2026-09-07 pilot). Lawful routes only, held files only, zero spend, no edit of ranking, cards or frozen packages.",
+ "START_UTC": "2026-11-15T13:28:00Z",
+ "BASELINE": "development/main 1f4903396; worktree .claude/worktrees/ethlit, branch task/ethlit-quant.",
+ "MANDATE_STATE": "IN_PROGRESS",
+ "CURRENT_PACKAGE": {
+  "id": "extraction-done-landing",
+  "state": "extraction, validation, analysis, README and consumer delta written; battery and landing next",
+  "delegate_active": "none",
+  "updated": "2026-11-15"
+ },
+ "RESUME": "Package folder fig7_quant_ethosuximide_lithium_sci_20261115/ is complete. Remaining: battery on the landing SHA (verify_run.py), task_close.py, safe_push.py, then message ADV with the record id and the git-measured times, and IT (card consumer). The lithium panels are vector (exact); the ethosuximide panels are raster only (two files, bounded error); no per-animal data exist in the figure.",
+ "DECISIONS_TAKEN": [
+  "2026-11-15: accepted the ADV prompt: the operator's permanent continuity line (2026-11-14) is on development/main; the task is read-only on held files at zero spend. Prior work checked before extracting: IT6 and the cards read Fig 7b by eye ('graphical reading', entry 27 of the manifest); verify_it15_qb covers Fig 7c only; the pilot (2026-09-07) and analysis/locator_contract_live_test.md lines 375-395 hold the by-eye panel map and the n.s. marks.",
+  "2026-11-15: the lithium panels are vector paths in the article PDF (exact coordinates; 726 means lie within 0.024 of the k/N lattice for the printed Ns); the ethosuximide panels are raster only, read from two files (PDF embedded image, publisher PNG); the same raster code run on the PNG's 7d panels against the exact vector values shows a low bias up to 0.15 stage where markers overlap at 0.5-minute spacing (stated in the README).",
+  "2026-11-15: no blind verifier (my call; the weak point is the interpretation that between-animal differences persist across minutes, marked INFERENZA); no ranking, card, packet or frozen package edited; consumer_delta.md holds six proposals, none applied."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "VERIFICATION_EVIDENCE": [],
+ "TRIAL_24H_OBSERVATIONS": {
+  "window": "2026-11-14T15:29:29Z to 2026-11-15T15:29:29Z, observation only, requested by the ADV presidio",
+  "delegates_and_blind_checkers": "none",
+  "events": [
+   "2026-11-15: no external request; held files only."
+  ]
+ }
+}

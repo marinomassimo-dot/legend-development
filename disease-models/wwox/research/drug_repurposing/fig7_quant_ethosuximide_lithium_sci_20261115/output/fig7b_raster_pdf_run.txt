@@ -1,0 +1,13 @@
++/+: y_zero 629.1px, 46.27 px/stage (7 tick groups, 7 ticks); x = 163.5 + 10.560*min, label residual 0.91px
+  swatch control/blue: body height 11 px, bottom - line centre 6.00 px
+  swatch PTZ/red: body height 9 px, bottom - line centre 5.00 px
+  swatch PTZ+ETS/green: body height 8 px, bottom - line centre 6.00 px
++/-: y_zero 1001.9px, 46.43 px/stage (7 tick groups, 7 ticks); x = 165.8 + 10.515*min, label residual 0.71px
+  swatch control/blue: body height 11 px, bottom - line centre 6.00 px
+  swatch PTZ/red: body height 10 px, bottom - line centre 5.50 px
+  swatch PTZ+ETS/green: body height 9 px, bottom - line centre 7.00 px
+-/-: y_zero 1379.4px, 46.23 px/stage (7 tick groups, 7 ticks); x = 164.6 + 10.557*min, label residual 1.92px
+  swatch control/blue: body height 10 px, bottom - line centre 6.00 px
+  swatch PTZ/red: body height 10 px, bottom - line centre 6.00 px
+  swatch PTZ+ETS/green: body height 8 px, bottom - line centre 7.00 px
+479 of 549 sample points measured; 70 without a visible body (occluded or absent)
