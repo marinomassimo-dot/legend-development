@@ -1,0 +1,7 @@
+genotype	arm	N_legend	minutes	mean_stage_30_60	sd_window_low(s_ind)	sd_window_high(s_corr)
++/+	PTZ	20	19	0.254	0.103	0.555
++/+	PTZ+ETS	16	31	0.362	0.131	0.713
++/-	PTZ	18	17	0.533	0.138	0.617
++/-	PTZ+ETS	12	31	0.478	0.133	0.729
+-/-	PTZ	6	30	1.874	0.307	1.564
+-/-	PTZ+ETS	6	31	0.813	0.132	0.708
