@@ -1720,5 +1720,85 @@ class TheCommandLineIsWhatActorsRun(unittest.TestCase):
         self.assertEqual(0, result.returncode, result.stderr)
         self.assertRegex(result.stdout, r"OK: \d+ chained receipt\(s\), tail anchored")
 
+class ARecordSaysWhichStampedSurfaceItStaled(unittest.TestCase):
+    """HE63: release run #817 was red because `record` left ranking.json one receipt behind, and nothing said so.
+
+    The check is the one `candidate_tree_freshness.GENERATORS` already declares; the record only runs it and prints
+    the surface and the command. Nothing is regenerated and no other file is written.
+    """
+
+    SCRIPT = "disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/ranking_it8.py"
+    SURFACE = "disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/ranking.json"
+
+    def root_with_stub(self, body: str) -> Path:
+        temporary = TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        root = Path(temporary.name)
+        stub = root / self.SCRIPT
+        stub.parent.mkdir(parents=True)
+        stub.write_text(body, encoding="utf-8")
+        (root / "disease-models/wwox/registries").mkdir(parents=True)
+        (root / "framework/state").mkdir(parents=True)
+        (root / "framework/state/state_manifest_current.md").write_text(
+            TheCommandLineIsWhatActorsRun.MANIFEST, encoding="utf-8")
+        return root
+
+    def test_a_stale_stamp_is_named_with_the_exact_command_and_nothing_is_written(self) -> None:
+        root = self.root_with_stub("import sys\nprint('ranking.json differs')\nsys.exit(1 if sys.argv[1:] == ['check'] else 3)\n")
+        before = sorted(p.relative_to(root).as_posix() for p in root.rglob("*") if p.is_file())
+        lines = receipts.stale_stamped_surfaces(root, "wwox")
+        self.assertEqual(1, len(lines), lines)
+        self.assertTrue(lines[0].startswith("STALE: " + self.SURFACE), lines[0])
+        self.assertIn(f"python3 -B {self.SCRIPT} run", lines[0])
+        self.assertEqual(before, sorted(p.relative_to(root).as_posix() for p in root.rglob("*") if p.is_file()))
+
+    def test_a_fresh_stamp_prints_nothing(self) -> None:
+        root = self.root_with_stub("import sys\nsys.exit(0)\n")
+        self.assertEqual([], receipts.stale_stamped_surfaces(root, "wwox"))
+
+    def test_a_check_that_cannot_finish_is_not_checked_never_fresh(self) -> None:
+        root = self.root_with_stub("import time\ntime.sleep(30)\n")
+        lines = receipts.stale_stamped_surfaces(root, "wwox", timeout=1.0)
+        self.assertEqual(1, len(lines), lines)
+        self.assertTrue(lines[0].startswith("NOT CHECKED"), lines[0])
+        self.assertIn(f"python3 -B {self.SCRIPT} run", lines[0])
+
+    def test_a_checkout_without_the_ranking_is_not_a_finding(self) -> None:
+        temporary = TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        self.assertEqual([], receipts.stale_stamped_surfaces(Path(temporary.name), "wwox"))
+
+    def test_the_record_prints_it_after_the_follow_up_on_a_repository_sink(self) -> None:
+        root = self.root_with_stub("import sys\nprint('ranking.json differs')\nsys.exit(1)\n")
+        ledger = root / "disease-models/wwox/registries/fulltext_read_receipts.jsonl"
+        manifest = root / "framework/state/state_manifest_current.md"
+        receipt = Path(root) / "receipt.json"
+        # partial depth: a complete read in a repository sink also demands a deep-dive work manifest
+        receipt.write_text(json.dumps(example("FTR-20260725-42193054-01") | {"evidence_depth": "partial_fulltext_read"}),
+                           encoding="utf-8")
+        done = subprocess.run(
+            [sys.executable, str(Path(receipts.__file__).resolve()), "--root", str(root), "--ledger", str(ledger),
+             "--manifest", str(manifest), "record", "--receipt", str(receipt)],
+            capture_output=True, text=True, cwd=root)
+        self.assertEqual(0, done.returncode, done.stderr)
+        self.assertIn("RECORDED: FTR-20260725-42193054-01", done.stdout)
+        self.assertLess(done.stdout.index("FOLLOW-UP"), done.stdout.index("STALE: " + self.SURFACE))
+        self.assertIn(f"python3 -B {self.SCRIPT} run", done.stdout)
+
+    def test_a_scratch_ledger_runs_no_check_at_all(self) -> None:
+        """The existing CLI cases record into a scratch ledger: they must not pay for, or print, a repository check."""
+        root = self.root_with_stub("import sys\nsys.exit(1)\n")
+        ledger, manifest = root / "scratch.jsonl", root / "m.md"
+        manifest.write_text(TheCommandLineIsWhatActorsRun.MANIFEST, encoding="utf-8")
+        receipt = root / "receipt.json"
+        receipt.write_text(json.dumps(example("FTR-20260725-42193054-01")), encoding="utf-8")
+        done = subprocess.run(
+            [sys.executable, str(Path(receipts.__file__).resolve()), "--ledger", str(ledger), "--manifest", str(manifest),
+             "record", "--receipt", str(receipt)], capture_output=True, text=True, cwd=root)
+        self.assertEqual(0, done.returncode, done.stderr)
+        self.assertNotIn("STALE", done.stdout)
+        self.assertNotIn("NOT CHECKED", done.stdout)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
