@@ -454,6 +454,10 @@
    {
     "utc": "2026-11-15T07:5xZ",
     "event": "recorded in the roadmap seat (dated line), the portfolio (RP-021 new, RP-017 and RP-016 updated by upsert) and two assignment files: PRESIDIO-004 (operator-directed: HE trial offline in a new dated folder; SCI independent manual mapping of the 15 rows BEFORE seeing the trial; IT disposition KEEP/DISCARD/INCONCLUSIVE and any regeneration) and PRESIDIO-005 (queued: SCI, the X1 first question as a table of discriminating observations from held files); the INV-06 row 7 and INV-03 wordings, left optional earlier by IT, are now operator-directed for IT"
+   },
+   {
+    "utc": "2026-11-15T07:5xZ",
+    "event": "human intervention (the third of this window): the operator pasted a capability-scout report addressed to PLAN (Contrastive Discovery, Skill2Query, Contrastive Hypothesis Replay and four other replays; claims are the authors', code not verified, no validation on LEGEND). Not an instruction to ADV: stored as received in radar_inputs_he52_20261114/operator_scout_report_20261115.md (HE had declared the operator's radar reports absent from the repository), linked to portfolio rows RP-001, RP-007 and RP-010, no assignment; PLAN (HE) decides the static audit; the priority next step remains the IT23 symbol-lookup trial (PRESIDIO-004)."
    }
   ]
  }
