@@ -142,6 +142,19 @@
       "verdict": "PASS",
       "tests": 123,
       "evidence": "/tmp/adv-idle-tests-final2.log"
+    },
+    {
+      "scope": "Self-echo and external-change controls before repair",
+      "verdict": "FAIL",
+      "tests": 2,
+      "failures": 1,
+      "evidence": "/tmp/adv-portfolio-echo-negative.log"
+    },
+    {
+      "scope": "Complete Advisor suite after all continuity, cadence, event and self-echo corrections",
+      "verdict": "PASS",
+      "tests": 125,
+      "evidence": "/tmp/adv-portfolio-echo-tests-final.log"
     }
   ],
   "OPERATIONS": {
@@ -158,14 +171,15 @@
     "final_prompt_tests": "114 Advisor tests PASS after the source-parity clarification; agent definition 1179 words (1385 baseline); section references PASS",
     "final_targeted": "115 Advisor tests,84scout,13section references,6skill packages,7tool routing,5link targets,3documented commands PASS;74ranking tests PASS before radar-only delta;current ranking check PASS;receipts1958OK;growthPASS;LINT WARN withoutBLOCK",
     "agent_words": 1222,
-    "final_publication_receipt": "/tmp/legend-adv-continuity-publication.json (created by the closing execution; exact SHA and remote readback; no self-referential commit hash asserted in this record)",
+    "final_publication_receipt": "/tmp/legend-adv-final-publication.json",
     "remaining_validation_at_record_commit": "Exact closing publication and its CI are observed outside the commit; no final-SHA CI success claimed here before it occurs.",
     "subsequent_targeted_tests": "123 Advisor tests PASS, plus84scout from producer repair; cadence/event controls and permanent next-choice cases included",
-    "subsequent_publication_receipt": "/tmp/legend-adv-cadence-publication.json"
+    "subsequent_publication_receipt": "/tmp/legend-adv-cadence-publication.json",
+    "final_targeted_advisor_tests": "125PASS;84scoutPASS;latest exact release CI observed in closing execution"
   },
   "SELF_DIAGNOSIS": {
     "verdict": "PASS with declared pre-existing scientific reading gaps; no full-text scientific read claimed by this Harness task",
-    "executed": "session_self_eval.py --workspace . --disease wwox exits 0; fulltext_receipts verify OK on1957 events; growth_anchors PASS; LINT WARN without BLOCK",
+    "executed": "125 Advisor and84scout tests PASS;13section,5links,6skills and prior routing/release checks PASS; actual native continuation through P14 and a solved next question; final exact CI still observed in closing execution",
     "capability_gap": "Repeated systemic instruction remained text-only while an old incomplete outcome still scheduled a distant wait. The fix belongs in tick, current-state context and live portfolio fields, not another approval step.",
     "micro_upgrade": "Numeric assessment recency, current recipient record facts, legacy outcome supersession, smaller strategic definition and source-backed coverage planning",
     "dream": "Known-but-unused operational relation: newest-hit/default-filter absence is not complete literature coverage; RP-008 now consumes the distinction. No biological lead or literature novelty asserted."
@@ -193,17 +207,37 @@
       "case": "P287 / PMID18620777; prediction frozen45fadb00f before body reading; brief sent to Science behind current work",
       "recall": "Exactly one477df2a9 replaces stale3382bb86; same cadence, state not reset",
       "limits": "Source-backed operational continuity after implementation and an explicit roadmap direction, not a blind strategic benchmark; new biology and multi-day reliability unproven."
+    },
+    "third_cycle": {
+      "scheduled_recall_utc": "2026-11-15T11:25Z",
+      "evaluation": "advisor_pilot_20261113/P14/assessment.md",
+      "started_utc": "2026-11-15T11:26:21Z",
+      "ended_utc": "2026-11-15T11:28:44Z",
+      "tool_calls": 19,
+      "outcome": "switch",
+      "delivered": "Native host sent the next open-question draw at11:30:45Z after checking and dropping an already-decided consumption substep",
+      "recipient_record": "ledger/tasks/orchestrator/ORCH-ADV012-RP003-WO11-20261115.json",
+      "result": "IT answered WO-11 from the lawful PMC body, qualified its context, recorded a partial receipt1960 and reported back by11:38Z; no new ranking/candidate/need promoted; about4-5min work by git, no delegate",
+      "limit": "Real continuation and direction change without a new operator prompt; no predictive advantage demonstrated"
     }
   },
   "CONSUMER_REGENERATION": {
     "observed_defect": "After the new receipt the live ledger had1958events while ranking.json summary stilldeclared1957; this repeats the known CI failure mode",
     "repair": "Existing ranking_it8 run, full/shareable all-language view regeneration, package and package --check; current ranking check and i18n check PASS",
     "scientific_limit": "All37ranked unit objects are byte-equivalent at parsed JSON level; selection-table differences are evaluated_on date only; summaryreceiptcount1957to1958. No order, need direction or candidate state waschanged.",
-    "permanent_clarification": "fulltext_read_receipt.md Persistence and canonical promotion now routes existing publication-boundary derived metadata checks; no new gate or service"
+    "permanent_clarification": "fulltext_read_receipt.md Persistence and canonical promotion now routes existing publication-boundary derived metadata checks; no new gate or service",
+    "latest_snapshot": {
+      "all_unit_records_unchanged": 69,
+      "ranked_interventions_unchanged": 37,
+      "old_receipts": 1959,
+      "new_receipts": 1960,
+      "scope": "Derived metadata after native WO11 receipt; unit objects unchanged"
+    },
+    "recurrence_note": "Separate repeated metadata coupling recorded in existing capability_scout_log; final snapshot repaired with existing tools, not claimed architecturally eliminated"
   },
   "CHECKPOINT": {
-    "last_verified_result": "Permanent role/source/state correction, real research take-in-charge, start-clock and event-retention repair, and executable next-work selection in continuous mode even without fresh inputs:123Advisor tests PASS",
-    "first_incomplete_work": "Closing execution publishes and verifies final idle-pipeline increment and removes its owned worktree; no operator reply needed."
+    "last_verified_result": "Durable source/runtime/state and input/relay correction; real scientific handoff; cadence and retained signals; next-work selection without new inputs; self-generated portfolio echo suppressed:125Advisor tests PASS",
+    "first_incomplete_work": "Publish exact final increment, observe CI, remove owned worktree; no operator response needed."
   },
   "RADAR_FOLLOW_UP": {
     "observed_failure": "The host07:32UTC message filed the supplied report because it addressed PLAN; ownership is not disposition or delivery",
@@ -267,5 +301,12 @@
     "validation": "123Advisor tests PASS; new idle-delivery and quiet-stated-choice controls first FAILED; bounded-pilot negative control and supported-wait preservation PASS",
     "evidence": "/tmp/adv-idle-negative.log; /tmp/adv-idle-tests-final2.log",
     "publication_receipt": "/tmp/legend-adv-idle-publication.json"
+  },
+  "SELF_ECHO_CONTROL": {
+    "observed": "Paired regression reproduced an own portfolio patch waking another evaluation; external-change control already passed",
+    "repair": "Consume own patch digest only when the shared portfolio has not changed since the observed snapshot; retain external-change signals",
+    "validation": "125Advisor tests PASS; own-patch negative check first FAILED, external change during the read preserved",
+    "evidence": "/tmp/adv-portfolio-echo-negative.log; /tmp/adv-portfolio-echo-tests-final.log",
+    "publication": "/tmp/legend-adv-final-publication.json"
   }
 }
