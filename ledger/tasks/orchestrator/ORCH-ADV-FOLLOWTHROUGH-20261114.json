@@ -405,12 +405,12 @@
     "event": "ADV-009 premises checked in the originals before sending: WO-25 row (OPEN, literature_executable, executable_zero_spend partial, last touched 2026-11-05, one Europe PMC fullTextXML HTTP 500 on three PMC sources, 'No later record found'), INV-03 rank 2 (the pair is a proposal to verify; next_test still waits for matched potencies), and no record after 2026-11-05 gives the potencies (grep of efonidipine across the module: latest touches are bookkeeping or listings). All held. Sent to SCI with the queue wording."
    },
    {
-    "utc": "2026-11-15T02:0xZ",
+    "utc": "2026-11-15T01:29Z",
     "event": "ADV-009 taken in charge by SCI (ORCH-ADV009-20261115, record opened 01:29Z), sent 01:28Z"
    },
    {
-    "utc": "2026-11-15T04:3xZ",
-    "event": "ADV-009 delivered (SCI), then consumed by IT after its own independent re-read; one factual error in the producer's wording caught by the integrator (channel species) and corrected by the owner on main; verdict (qualified pair) unchanged; improvements: INV-03's comparator pair now qualified with sourced values, WO-25 narrowed, a statement in the frozen IT28 comparison corrected by a dated update, the hERG discrepancy named, an access-route fact recorded"
+    "utc": "2026-11-15T03:00Z",
+    "event": "ADV-009 produced 01:43Z and landed 02:54Z (SCI; about 70 minutes of battery wait), consumed 03:00Z by IT after its own independent re-read; one factual error in the producer's wording caught by the integrator (channel species) and corrected by the owner on main; verdict (qualified pair) unchanged; improvements: INV-03's comparator pair now qualified with sourced values, WO-25 narrowed, a statement in the frozen IT28 comparison corrected by a dated update, the hERG discrepancy named, an access-route fact recorded"
    },
    {
     "utc": "2026-11-15T03:1xZ",
