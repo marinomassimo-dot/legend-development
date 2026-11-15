@@ -1,0 +1,6 @@
+query	up_before	up_after	down_before	down_after	membership_changed	genes_added_up	genes_removed_up	genes_added_down	genes_removed_down	stored_response_present	to_repeat_if_adopted
+QA_all	517	517	317	317	0					1	0
+QC_minus_declared	505	505	313	313	0					1	0
+QD_minus_composition	500	500	308	308	0					1	0
+QF_minus_broad_maturation	365	363	260	257	1		IRAG1,POFUT4		H1-10,H1-2,HDIP1	1	1
+QE_composition_flipped	509	509	325	325	0					1	0

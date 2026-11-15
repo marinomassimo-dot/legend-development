@@ -1,0 +1,16 @@
+query_symbol	ko_direction	conversion_status	authors_symbol	ensg	authors_list_direction	direction_agrees	log2fc_before	log2fc_after	rho_before	rho_after	declared_before	declared_after	composition_before	composition_after	broad_before	broad_after	in_L1000_space_before	in_L1000_space_after	landmark_before	landmark_after
+IRAG1	up	converted_two_routes_agree	MRVI1	ENSG00000072952	up	1		2.21		0.543	0	0	0	0	0	1	0	0	0	0
+CCN2	up	converted_two_routes_agree	CTGF	ENSG00000118523	up	1		1.32		-0.009	0	0	0	0	0	0	0	1	0	0
+DRC4	up	converted_two_routes_agree	GAS8	ENSG00000141013	up	1		1.03		0.044	0	0	0	0	0	0	0	1	0	0
+MNMIP1	up	converted_two_routes_agree	SH3D21	ENSG00000214193	up	1		1.00		-0.248	0	0	0	0	0	0	0	1	0	0
+POFUT4	up	converted_two_routes_agree	FUT11	ENSG00000196968	up	1		0.62		-0.549	0	0	0	0	0	1	0	0	0	0
+MTCL2	up	converted_two_routes_agree	SOGA1	ENSG00000149639	up	1		0.60		0.099	0	0	0	0	0	0	0	1	0	0
+ATOSB	up	converted_two_routes_agree	FAM214B	ENSG00000005238	up	1		0.49		0.128	0	0	0	0	0	0	0	1	0	0
+HDIP1	down	converted_two_routes_agree	C16orf87	ENSG00000155330	down	1		-0.76		-0.576	0	0	0	0	0	1	0	0	0	0
+BBLN	down	converted_two_routes_agree	C9orf16	ENSG00000171159	down	1		-0.47		0.278	0	0	0	0	0	0	0	1	0	0
+ADPRS	down	converted_two_routes_agree	ADPRHL2	ENSG00000116863	down	1		-0.53		0.058	0	0	0	0	0	0	0	0	0	0
+CIRSR	down	converted_two_routes_agree	CIR1	ENSG00000138433	down	1		-0.66		-0.317	0	0	0	0	0	0	0	1	0	0
+H1-2	down	converted_two_routes_agree	HIST1H1C	ENSG00000187837	down	1		-0.56		-0.454	0	0	0	0	0	1	0	1	0	0
+H1-10	down	converted_two_routes_agree	H1FX	ENSG00000184897	down	1		-0.55		-0.514	0	0	0	0	0	1	0	1	0	0
+H4C15	down	converted_two_routes_agree	HIST2H4B	ENSG00000270276	down	1		-0.93		-0.261	0	0	0	0	0	0	0	0	0	0
+ZNRD2	down	converted_two_routes_agree	SSSCA1	ENSG00000173465	down	1		-0.55		-0.177	0	0	0	0	0	0	0	1	0	0
