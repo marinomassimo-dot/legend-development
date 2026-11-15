@@ -1,0 +1,373 @@
+{
+  "capture": {
+    "assessment_sha256": "1dee8016a2a4b808e080adeec183e5052ead34185094096305029e327297ba8a",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P13/stream.jsonl",
+    "raw_stream_sha256": "d9adab61d4ba75d56540bb2d317c650f2fdc3ecbaaf6066db246d7117af3b117",
+    "source_session_id": "496c543b-b2fe-4768-9eac-fa13c31690c1",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 59180
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-15T09:25:47Z",
+  "label": "P13",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": false,
+      "efforts": {
+        "high": 12
+      },
+      "first_turn_context": 38731,
+      "models": {
+        "claude-opus-5-5": 12
+      },
+      "peak_context": 75688,
+      "totals": {
+        "cache_creation": 72672,
+        "cache_read": 710014,
+        "output": 12538
+      },
+      "turns": 12
+    },
+    "final_turn_model": "claude-opus-5-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.0023949,
+        "inputTokens": 23799,
+        "maxOutputTokens": 128000,
+        "outputTokens": 30,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 72672,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 72672,
+        "cacheReadInputTokens": 710014,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.9742348000000002,
+        "inputTokens": 24,
+        "maxOutputTokens": 128000,
+        "outputTokens": 12538,
+        "provider": "firstParty",
+        "thinkingTokens": 3851,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 23,
+    "refusal_fallbacks": [],
+    "total_cost_usd": 0.9766297,
+    "turn_models": {
+      "claude-opus-5-5": 12
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 72672,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 72672,
+      "cache_read_input_tokens": 710014,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 24,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 595,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 595,
+          "cache_read_input_tokens": 75091,
+          "input_tokens": 2,
+          "output_tokens": 6197,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 12538,
+      "output_tokens_details": {
+        "thinking_tokens": 3851
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-15T09:23:43Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P12/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t## 1 \u00b7 Principal decision\n2\t\n3\tWhat should the idle part of the lab work on next? Three operator steps have moved since my last complete assessment (P10):\n4\t-"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/research_portfolio.tsv"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tid\ttheme\topportunity\tdecision\tpriority\twhy_now\tnext_action\tstatus\tsources\tmandate_id\tresume_when\toutcome\tupdated_utc\n2\tRP-001\tGeneration\tTurn unused qualified"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-RP008-UNREAD-20261115.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t  \"_schema\": \"task record, Annex A.1c\",\n3\t  \"TASK_ID\": \"ORCH-RP008-UNREAD-20261115\",\n4\t  \"OWNER\": \"orchestrator\",\n5\t  \"ACTOR_ID\": \"orchestrator\",\n6\t  \"PRI"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/plan/PLAN-ADV-CONTINUOUS-RESEARCH-20261115.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t  \"_schema\": \"LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT\",\n3\t  \"TASK_ID\": \"PLAN-ADV-CONTINUOUS-RESEARCH-20261115\",\n4\t  \"DIRECTIVE_VERSION\": 1,\n5"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/rp008_unread_census_it55_20261115/README.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# RP-008 (ADV-010): reconciliation of the unread CORPUS placeholders (IT, 2026-11-15)\n2\t\n3\tNon-canonical working note. Not medical advice; no dose, schedule o"
+    },
+    {
+      "input": {
+        "head_limit": 30,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks",
+        "pattern": "RP-004|--mechanism|mechanism-lens|mechanism lens"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No matches found"
+    },
+    {
+      "input": {
+        "glob": "!**/files/**",
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development",
+        "pattern": "--mechanism"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 5 files\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P13/brief.md\ndisease-models/wwox/research/drug_repurposing/research_portfolio"
+    },
+    {
+      "input": {
+        "-A": 4,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-20261114.json",
+        "pattern": "\"utc\": \"2026-11-15T0[89]"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "488:    \"utc\": \"2026-11-15T08:0xZ\",\n489-[Omitted long context line]\n490-   },\n491-   {\n492:    \"utc\": \"2026-11-15T08:23Z\",\n493-[Omitted long context line]\n494- "
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-20261114.json",
+        "limit": 20,
+        "offset": 486
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "486\t   },\n487\t   {\n488\t    \"utc\": \"2026-11-15T08:0xZ\",\n489\t    \"event\": \"HE's static audit of the operator's scout report delivered (8362ac92a, radar_inputs_he5"
+    },
+    {
+      "input": {
+        "-C": 3,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/discovery_ledger_current.md",
+        "pattern": "--mechanism"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "1205-\n1206-- **Fonte:** Schuchardt, Mikles, Bhat, McDonald, **Sudol**, **Farooq** \u2014 *J Mol Recognit* 2015 \u2014 PMID 25703206 / PMC4376589 / DOI 10.1002/jmr.2419. *"
+    },
+    {
+      "input": {
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/rp008_unread_census_it55_20261115/census.tsv",
+        "pattern": "^(P287|P290|P376|P369|P257|P267|P349|P352|P325|P326|P396|P374|P231|P232|P239|P276|P302|P321|P361)\\b"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "17:P231\t29164763\t2018\tC\tLOW\tP5 \u2014 metabolism / mitochondria / redox\tnone\tTrue\t4\t3\t0\t\tTMEM207 hinders the tumour suppressor function of WWOX in oral squamous cell"
+    },
+    {
+      "input": {
+        "head_limit": 25,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/framework/scripts/unread_gold.py",
+        "pattern": "mechanism"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "13:    python3 framework/scripts/unread_gold.py [workspace] [--all] [--mechanism] [--json]\n94:# exactly the papers that carry the mechanism of the allele. This "
+    },
+    {
+      "input": {
+        "head_limit": 20,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-PRESIDIO004B-005-20261115.json",
+        "pattern": "MANDATE_STATE|RESULT|STATUS"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "10: \"MANDATE_STATE\": \"IN_PROGRESS\","
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/framework/scripts/unread_gold.py",
+        "limit": 55,
+        "offset": 88
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "88\t    return \"corpus placeholder\" in blob or \"no deep-dive performed\" in blob\n89\t\n90\t\n91\t# `DOMAIN_PARITY` lens (2026-07-12). The mechanistically actionable al"
+    },
+    {
+      "input": {
+        "head_limit": 30,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/discovery_ledger_current.md",
+        "pattern": "corpus placeholder.{0,40}(mai letto|never read)|audit `--mechanism`|mechanism audit|lente meccanismo"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "1208:- **Provenienza:** `corpus placeholder` mai letto, recuperato dall'audit `--mechanism` del 2026-07-12."
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox",
+        "pattern": "25662954|21476439"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 89 files\ndisease-models/wwox/research/drug_repurposing/view/shareable_package/it.html\ndisease-models/wwox/research/drug_repurposing/view/shareable_package"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/ledger",
+        "pattern": "25662954|21476439"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No files found"
+    },
+    {
+      "input": {
+        "glob": "{reading_state.md,working_model_current.md,fulltext_read_receipts.jsonl,batch_queue.md}",
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/registries",
+        "pattern": "25662954"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/registries/batch_queue.md:189:| [25662954](https://pubmed.ncbi.nlm.nih.gov/25662954/) | 2015 | \u2705 | Journal Article; Research Support, N.I.H."
+    },
+    {
+      "input": {
+        "glob": "{**/investigations.tsv,**/open_questions_map.tsv,wwox_function_reference_it6_20261029.md,supplement_diet_it6_p11_20261029/README.md}",
+        "head_limit": 20,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "retin(al|oid|oic|ol)"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv:154:[Omitted long matching line]"
+    },
+    {
+      "input": {
+        "-C": 1,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/wwox_function_reference_it6_20261029.md",
+        "pattern": "25662954|21476439|substrate"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "22-| 25649963 (zebrafish knockdown) | `partial_fulltext_read` (FTR-20261003-25649963-02) | Methods and Results sentences on morpholino, control morpholino and r"
+    },
+    {
+      "input": {
+        "-o": true,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "pattern": "retin(al|oid|oic|ol)"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "154:retinal\n154:retinal"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "limit": 1,
+        "offset": 154
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "154\tIT47-Q01\tgeneration_it47_20261112/p4_gsk3/result_it47.md\tDoes the catalytically dead eIF2B epsilon alter new-protein labelling in tissue with intact Gsk3b ("
+    }
+  ]
+}
