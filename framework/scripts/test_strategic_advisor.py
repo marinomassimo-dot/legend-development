@@ -1104,6 +1104,40 @@ class LivingPortfolio(Base):
         (self.campaign / "DISABLED").write_text("operator")
         self.assertEqual(sa.tick(self.campaign)["verdict"], "DISABLED")
 
+    def test_the_advisors_own_portfolio_patch_is_consumed_not_a_new_signal(self) -> None:
+        self.add()
+        sa.tick(self.campaign)
+        os.environ["FAKE_PORTFOLIO"] = json.dumps([{"id": "RP-TEST", "outcome": "examined; not adopted"}])
+        try:
+            self.assertEqual(sa.evaluate(self.campaign), 0)
+        finally:
+            os.environ.pop("FAKE_PORTFOLIO", None)
+        self.assertEqual(sa.portfolio_rows()[0][0]["outcome"], "examined; not adopted")
+        os.environ["LEGEND_ADVISOR_NOW"] = "2026-11-13T10:10:00Z"
+        result = sa.tick(self.campaign)
+        self.assertEqual(result["verdict"], "NONE")
+        self.assertFalse(any(e.startswith("portfolio:") for e in result["events"]))
+
+    def test_an_external_portfolio_change_during_evaluation_is_not_swallowed_with_its_patch(self) -> None:
+        self.add()
+        sa.tick(self.campaign)
+        original = sa.run
+        def changed(*args, **kwargs):
+            sa.portfolio_update({"id": "RP-TEST", "next_action": "external new source to inspect"})
+            return original(*args, **kwargs)
+        sa.run = changed
+        os.environ["FAKE_PORTFOLIO"] = json.dumps([{"id": "RP-TEST", "outcome": "advisory note"}])
+        try:
+            self.assertEqual(sa.evaluate(self.campaign), 0)
+        finally:
+            sa.run = original
+            os.environ.pop("FAKE_PORTFOLIO", None)
+        os.environ["LEGEND_ADVISOR_NOW"] = "2026-11-13T10:10:00Z"
+        result = sa.tick(self.campaign)
+        self.assertEqual(result["verdict"], "EVALUATE")
+        self.assertTrue(any(e.startswith("portfolio:") for e in result["events"]))
+        self.assertEqual(sa.portfolio_rows()[0][0]["next_action"], "external new source to inspect")
+
     def test_linked_tasks_own_execution_and_release_requests_a_review_not_completion(self) -> None:
         self.add(mandate_id="ORCH-A")
         active = sa.portfolio_snapshot({"ORCH-A": {"verdict": "CONTINUE", "path": "task.json"}})

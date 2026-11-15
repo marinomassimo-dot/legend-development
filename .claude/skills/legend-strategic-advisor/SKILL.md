@@ -250,3 +250,8 @@ when its executable queue is empty. A supported stated `wait` retains its real r
 condition. Thus next-work selection does not depend on a new radar, delivery or operator prompt,
 and the bounded pilot does not acquire these continuous-mode launches. Reassessment is a choice
 of useful work or a supported wait, never a duty to invent work.
+
+The evaluation consumes its own advisory portfolio patches; they are not new evidence for
+another evaluation. If the shared portfolio changed during the read, keep the old observation
+digest so the external change remains a signal. This protects continuity from self-generated
+busy work while preserving real recipient results and external inputs.

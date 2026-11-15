@@ -218,6 +218,16 @@ active queue or a time before the independent next-choice cadence; they no longe
 perpetual empty-queue wait. This is the permanent mechanism behind roadmap-driven next work,
 in addition to the standing behavioral instructions and radar handoffs.
 
+## Avoid self-generated activity
+
+A final paired check reproduced a self-echo: an evaluation's own semantic portfolio annotation
+was left behind the observed digest and could request another evaluation as if it were external
+news. The evaluation now consumes its own patches when the portfolio has not changed since its
+snapshot. If an external change arrived during the read, the old digest is preserved so that
+change remains a signal. The regression pair first failed only the self-echo case, then both
+passed; the complete suite passes **125 tests**. This complements idle-pipeline continuity:
+keep choosing useful work, without treating the Advisor's own notes as fresh evidence.
+
 ## Scoped DREAM and self-diagnosis
 
 An **already held but unused operational relation**, not a biological discovery: the scope of a

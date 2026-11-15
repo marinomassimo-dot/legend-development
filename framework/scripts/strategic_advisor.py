@@ -1413,6 +1413,7 @@ def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout:
         obs = observe(campaign, state)
         obs["events"] = list(dict.fromkeys(list(state.get("pending_events") or []) + obs["events"]))
         obs["commits_since_last_tick"] += int(state.get("pending_commits") or 0)
+        consumed_portfolio_digest = obs["portfolio"]["digest"]
         brief = _state_path(campaign).parent / "brief_P.md"       # the working copy lives with the host state, outside the checkout: regenerating it no longer dirties the tree during a landing; the brief that matters for reproducibility is saved in P<n>/brief.md by `run`
         brief.parent.mkdir(parents=True, exist_ok=True)
         brief.write_text(build_brief_p(campaign, obs), encoding="utf-8")
@@ -1431,8 +1432,11 @@ def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout:
             text = assessment.read_text(encoding="utf-8")
             made = register_assignments(campaign, label, text)
             print(f"{label}: {len(made)} assignment draft(s) registered: " + ", ".join(m["id"] for m in made))
+            unchanged_since_read = portfolio_snapshot()["digest"] == obs["portfolio"]["digest"]
             for message in apply_portfolio_updates(text):
                 print(message)
+            if unchanged_since_read:
+                consumed_portfolio_digest = portfolio_snapshot()["digest"]  # own annotations are not new evidence
             outcome = parse_outcome(text)
             if outcome["stated"] and outcome["outcome"] == "wait":
                 problem = resume_problem(outcome["resume_when"])
@@ -1445,7 +1449,7 @@ def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout:
         print(f"{label}: outcome {outcome['outcome'] or 'unstated'}" + (f" ({outcome['problem']})" if outcome["problem"] else ""))
         state = _load_state(campaign)
         state.update(last_evaluation_utc=_utc(_now()), last_evaluation_started_utc=started_utc, last_digest=state.get("pending_digest", state.get("last_digest")), running="", pending_events=[], pending_commits=0, last_incomplete={},
-                     portfolio_digest=obs["portfolio"]["digest"],
+                     portfolio_digest=consumed_portfolio_digest,
                      last_outcome={**outcome, "evaluation": label, "utc": _utc(_now())}, unstated_streak=0 if outcome["stated"] else int(state.get("unstated_streak") or 0) + 1)
         _save_state(campaign, state)
         return code
