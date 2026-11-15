@@ -166,6 +166,36 @@ checks/CI, not relabelled as that earlier complete run. No final-state full-batt
 made before its actual result. Disposable owned verification files were removed after verifying
 that their processes had exited; logs and receipts are retained.
 
+## Subsequent unattended recall: cadence and event-retention defects
+
+The refreshed recall fired at 10:25:23 UTC without a new operator prompt. Its tick at 10:25:38
+returned `DEFERRED` while observing deliveries, a released mandate and a portfolio change. P13
+had started at 09:23:43 and finished at 09:25:47: completion-based cadence missed one hour by
+**nine seconds**, postponing eligibility until another hourly recall. Its message falsely said
+no event was anticipating. The host checked the real Science battery and waited, so this was
+not claimed as another successful autonomous dispatch.
+
+The clock now measures intervals **start to start**, keeping completion time separately.
+Legacy start is recovered only when the saved runtime metadata matches the historical completion;
+otherwise the completion fallback is declared. A deferred verdict gives its real eligibility
+time. A same-state counterfactual at the observed failure time returned DEFERRED before and
+EVALUATE after, with live state unchanged and no model call (receipt hash/state proof in the task).
+
+Two additional regressions first failed: observing a delivery during a deferred tick advanced
+the baseline without retaining the event; a tick during a running evaluation could similarly
+consume a later delivery before the evaluation had read it. The fix reuses existing pending
+events/commit counts, clears them only upon actual evaluation consumption, and leaves the
+observation baseline untouched during a running evaluation. The source callback, campaign,
+constraints, counters and duplicate digest remain the same. No new scheduler or launch quota.
+
+The full Advisor suite now passes **120 tests**, including five new cases: the actual timing
+boundary, mismatched legacy metadata, separate new-run timestamps, deferred-event retention
+without a later commit, and a delivery arriving during a running evaluation. Two historical
+fixtures now actually consume the closure before testing a later event-free state; they no
+longer equate observation with consumption. These are runtime/plumbing results, not proof of
+strategic quality. The host-procedure wording also states its real judgment and follow-through
+duty directly, rather than describing it as only a tick/delivery wrapper.
+
 ## Scoped DREAM and self-diagnosis
 
 An **already held but unused operational relation**, not a biological discovery: the scope of a

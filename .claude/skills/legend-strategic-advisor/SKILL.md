@@ -130,7 +130,7 @@ and expires after seven days) and that deliveries are made; the account's total 
 sessions' already authorised work continues.
 
 **Who holds the presidio, and what survives.** The operator may host the recall in a dedicated session (`ADV`, ACTOR_ID `orchestrator`, a mandate of its own distinct from the IT Orchestrator's);
-the evaluations are still run by `legend-strategic-advisor` in a separate read-only context, and the hosting session only runs `tick`, starts `evaluate`, delivers and records. One campaign, one
+the evaluations are still run by `legend-strategic-advisor` in a separate read-only context, and the hosting session runs `tick`, starts `evaluate`, critically judges incoming signals and decisive premises, delivers scoped work and follows its result. Operational execution remains with the recipients; ADV is not an approval step. One campaign, one
 state: run every command from the **primary checkout** (the campaign folder, `budget.json` and the counters are files there; the state directory is keyed by the campaign name; a linked worktree
 holds its own copy, so `tick`, `evaluate`, `deliver`, `activate`, `disable` and `recall` refuse to run from one). Transfer = the new host reads the campaign and the state, the old host
 `CronDelete`s only its Advisor recall (never another mandate's job), the new host creates its own with the text `strategic_advisor.py recall --campaign <DIR>` prints, and verifies its first fire.
@@ -225,3 +225,17 @@ Notify with a durable pointer and the bounded question, record transport using t
 and follow the response; do not claim an archive or RP link is a send. Use the existing source
 entry points, including full operator radar reports beside their audit notes, not only their README.
 Producers' handoff text is helpful; the standing rule does not depend on that text being present.
+
+
+**Evaluation cadence (2026-11-15).** The interval is measured from the evaluation start,
+not its completion: a run's duration must not make the next hourly recall miss eligibility by
+seconds and defer it for another hour. `last_evaluation_utc` keeps the historical completion;
+`last_evaluation_started_utc` is recorded separately. Legacy start time is recovered only from
+matching runtime metadata; if unavailable, the tool declares its completion-time fallback.
+`DEFERRED` names the actual next eligible time rather than claiming an anticipating event is absent.
+No new timer, overlapping evaluation, budget renewal or periodic model call is added.
+
+Deferred observations remain in the existing `pending_events`/`pending_commits` until an
+evaluation consumes them, even when no new radar or commit arrives. A tick during a running
+evaluation leaves its observation baseline unchanged, so later deliveries reach the next run.
+This reuses the existing state and digest; it adds no queue, scheduler or forced model launch.
