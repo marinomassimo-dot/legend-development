@@ -1,0 +1,3 @@
+mouse class means: 84 rows compared, 0 discrepancies, max |difference| 0.0050 FPKM
+human group means: 108 rows compared, 0 discrepancies, max |difference| 0.0050 FPKM
+state rows: 24 of 24 reproduced (state, neuron FPKM, best other FPKM)

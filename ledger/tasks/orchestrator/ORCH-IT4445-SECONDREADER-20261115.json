@@ -7,14 +7,14 @@
  "OBJECTIVE": "Step 1 (list which statements of the IT44 and IT45 producer packages reached live text) and Step 2 (second-read at most three of the highest consequence from the originals) as proposed by the ADV presidio after the V14 second read; stop at three statements or the first reCAPTCHA or interstitial; absence claims need two routes.",
  "START_UTC": "2026-11-15T17:20:00Z",
  "BASELINE": "development/main 8b6e44c17 and later; worktree .claude/worktrees/it4445, branch task/it4445-second-reader.",
- "MANDATE_STATE": "IN_PROGRESS",
+ "MANDATE_STATE": "DONE",
  "CURRENT_PACKAGE": {
-  "id": "read-written",
-  "state": "README, step1 table, verbatim (7 of 7), access, consumer_delta written; landing next",
+  "id": "closed",
+  "state": "landed fa383b1f5, pushed 3e1bde7af; IT consumed (11cc4eb65); ADV accepted as a complete result",
   "delegate_active": "none",
   "updated": "2026-11-15"
  },
- "RESUME": "Folder second_reader_it44_it45_live_text_sci_20261115/ complete. Remaining: quick checks, task_close, push (ls-remote before retry), message IT and ADV; close ORCH-V14-SECONDREADER and ORCH-RP016 records DONE in the same landing.",
+ "RESUME": "Closed.",
  "DECISIONS_TAKEN": [
   "2026-11-15: seven statements reached live text; one read here (S2, original, 7 of 7 quotes); S3 and S4 stopped on a reCAPTCHA page (one plain request each, no retry, no other route); S5 and S7 are absence claims not attempted; no spend, no contact parameter; nothing edited in live text. Verdict: S2 numbers hold, wording needs the extrapolation and voltage-dependence note."
  ],
