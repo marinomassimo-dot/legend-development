@@ -1,0 +1,46 @@
+{
+ "analysis_at": "2026-11-15T14:34Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-15T14:34Z",
+ "event_id": "FTR-20261115-36692168-01",
+ "evidence_basis": [
+  "Abstract, the Methods paragraphs on cell isolation, Ca2+ imaging and patch-clamp solutions and temperature, the Results on pHo and TASK single-channel amplitude (Fig. 5) and on A1899 and PK-THPP (Fig. 6), and the Discussion sentences naming the two tools, read from the PMC article page PMC9970648 (one plain request on 2026-11-15, generic client, no contact parameter, HTTP 200, 216,944 bytes; author manuscript). The Ca2+-oscillation results other than those used, the hypoxia sections and the figures (not viewed) were not read.",
+  "Mechanical check: the 9 verbatim rows cited here were found in the saved page text (verify_quotes.py, 42 of 42 over the whole verbatim.tsv); absence_check.py output lists the pH values within 300 characters of each tool name.",
+  "verbatim_locator | proposition: Preparation: rat carotid body type-1 cells | Title | \"TASK inhibition by mild acidosis increases Ca2+ oscillations to mediate pH sensing in rat carotid body chemoreceptor cells\"",
+  "verbatim_locator | proposition: Patch-clamp bath solution (HCO3-/CO2) pH 7.4 | Methods, patch-clamp | \"Extracellular bath (physiological) solution contained (mM): 117 NaCl, 5 KCl, 23 mM NaHCO3, 1 MgCl2, 1 CaCl2, 10 HEPES, and 11 glucose (pH 7.4).\"",
+  "verbatim_locator | proposition: Recording temperature 36-37 C | Methods, patch-clamp | \"The temperature of the bath perfusion solution at the recording chamber was maintained at 36–37°C.\"",
+  "verbatim_locator | proposition: Native TASK single-channel amplitude falls with pHo (cell-attached, rat type-1 cells): 10.2 percent from 7.4 to 7.3 | Results, Measurement of Acidosis-Induced Cell Depolarization | \"When pHo was changed from 7.4 to 7.3, the mean TASK amplitude decreased by 10.2 ± 0.6% (see Fig. 5C)\"",
+  "verbatim_locator | proposition: Native TASK amplitude 22.1 percent lower at pHo 7.2 and 78 percent lower at 6.4 | Results, Measurement of Acidosis-Induced Cell Depolarization | \"At pHo7.2, TASK amplitude decreased by 22.1 ± 1.1%, indicating that a 13-mV depolarization was produced. Reducing the pHo to 6.4 caused 78.0 ± 4.0% decrease in TASK amplitude\"",
+  "verbatim_locator | proposition: A1899 and PK-THPP were applied at pHo 7.4 only | Results, TASK inhibitors Increase the Frequency of Ca2+ Oscillations | \"We applied the inhibitors to the bath solution (pHo7.4) perfusing cell-attached patches.\"",
+  "verbatim_locator | proposition: Tool concentration chosen for a mild effect; no concentration-response values printed | Results, TASK inhibitors Increase the Frequency of Ca2+ Oscillations | \"After testing different concentrations of A1899 and PK-THPP on TASK, we chose to use 0.3 µM A1899 and 0.1 µM PK-THPP that produced mild effects on TASK single-channel amplitude.\"",
+  "verbatim_locator | proposition: A1899 0.3 uM: 23 percent fall of native TASK activity at pHo 7.4 | Results | \"A1899 (0.3 µM) produced a reversible decrease in TASK activity by 23% (NPo: 0.22 ± 0.03 to 0.17 ± 0.02; means ± SD; P < 0.01; n = 5 patches; Fig. 6A).\"",
+  "verbatim_locator | proposition: PK-THPP 0.1 uM: 26 percent fall of native TASK activity at pHo 7.4 | Results | \"PK-THPP (0.1 µM) produced a reversible decrease in TASK activity in cell-attached patches by 26% (NPo: 0.23 ± 0.03 to 0.17 ± 0.02; P < 0.01; n = 5 patches; Fig. 6B).\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/it45_ph_series_it55_20261115/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "927af534f470ee0e8fe2b7ff90b6f5ea0dc120d097bf5d1c16c358fe4b093f6b",
+ "source_kind": "fulltext_remote",
+ "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9970648/ (one plain request on 2026-11-15, generic client, no contact parameter, HTTP 200, 216944 bytes; the page copy is kept outside git, SHA-256 given in source_fingerprint)",
+ "study_id": {
+  "doi": "10.1152/ajplung.00099.2022",
+  "pmid": "36692168"
+ },
+ "workflow": "IT55 producer delegate for IT45-Q06/Q07/Q08 (pH series), context_policy QUESTION_DRIVEN: body read from the PMC article page, quotes checked mechanically (verify_quotes.py, 42 of 42 over the whole verbatim.tsv); predictions frozen in a local commit before any body was opened."
+}

@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-15T14:34Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-15T14:34Z",
+ "event_id": "FTR-20261115-41104520-01",
+ "evidence_basis": [
+  "Abstract, Introduction, the Results paragraphs giving Tl+ flux and manual patch clamp (MPC) IC50 values of compounds 7, 10, 11 and 13d, the Supporting Information statement, and a term search of the whole page text for pH, temperature, patch (pH occurs only in synthesis procedures), read from the PMC article page PMC12621189 (one plain request on 2026-11-15, generic client, no contact parameter, HTTP 200, 285,670 bytes; CC-BY article). The Supporting Information PDF (which holds the patch-clamp protocols), the synthesis section and the figures were not read; the conditions of the manual patch clamp (temperature, pH, voltage, n) are therefore not stated in anything read.",
+  "Mechanical check: the 7 verbatim rows cited here were found in the saved page text (verify_quotes.py, 42 of 42 over the whole verbatim.tsv).",
+  "verbatim_locator | proposition: ONO-TR-772 is compound 5 of the follow-up series; the follow-up optimised it | Abstract | \"Optimization of ONO-TR-772 focused on replacements for the N-Boc aniline moiety\"",
+  "verbatim_locator | proposition: In the follow-up main text compound 5 (ONO-TR-772) carries only a Tl+ flux IC50 of 0.26 uM; it is a TREK-1/TREK-2 dual inhibitor | Introduction | \"scaffold-hop to the heterobiaryl acetylene 5 (TREK-1 Tl+ IC50 = 0.26 μM). ONO-TR-772 (5) proved to be a highly selective and CNS penetrant dual TREK-1 and TREK-2 inhibitor\"",
+  "verbatim_locator | proposition: Same series, enantiomer 13d: human manual patch clamp (MPC) IC50 is about ten times lower than its Tl+ flux IC50 (0.011 vs 0.11 uM; derived ratio 10); shows MPC and Tl+ values can differ by an order of magnitude within the series | Results, lead optimisation overview | \"13d was very potent on human TREK-1 (MPC IC50 = 0.011 μM), but weak against mouse TREK-1 (MPC IC50 = 1.2 μM)\"",
+  "verbatim_locator | proposition: Same series, 13d and 7 Tl+ flux values (human) | Results, lead optimisation overview | \"both the (R)-congener 13d and the (S)-congener 7 had comparable TREK-1 potencies in the human thallium flux assay (Tl+ IC50s of 0.11 μM and 0.21 μM, respectively)\"",
+  "verbatim_locator | proposition: Same series, compound 10: MPC and Tl+ values nearly equal (0.063 vs 0.067 uM) | Results, detailed profiles | \"Compound 10 is a potent TREK-1 inhibitor in both the human thallium flux assay (TREK-1 IC50 = 0.067 μM) and human manual patch clamp (TREK-1 IC50 = 0.063 μM)\"",
+  "verbatim_locator | proposition: Same series, compound 11: MPC 0.064 vs Tl+ 0.11 uM | Results, detailed profiles | \"Compound 11 is also a potent TREK-1 inhibitor in both the human thallium flux assay (TREK-1 IC50 = 0.11 μM) and human manual patch clamp (TREK-1 IC50 = 0.064 μM)\"",
+  "verbatim_locator | proposition: Manual patch clamp methods (temperature, pH, voltage, n) are not in the main text; the Supporting Information carries protocols | Supporting Information statement | \"Additional experimental details, characterization of all compounds (1H NMR, 13C NMR, 2D NMR, HRMS), in vitro and in vivo DMPK protocols (PDF)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/it45_ph_series_it55_20261115/README.md"
+ ],
+ "prior_receipt": "FTR-20261111-41104520-86",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "fb1bb5ecd870d95ae43574a11553659443b6685631f123d016173571ee627591",
+ "source_kind": "fulltext_remote",
+ "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12621189/ (one plain request on 2026-11-15, generic client, no contact parameter, HTTP 200, 285670 bytes; the page copy is kept outside git, SHA-256 given in source_fingerprint)",
+ "study_id": {
+  "doi": "10.1021/acs.jmedchem.5c02535",
+  "pmid": "41104520"
+ },
+ "workflow": "IT55 producer delegate for IT45-Q06/Q07/Q08 (pH series), context_policy QUESTION_DRIVEN: body read from the PMC article page, quotes checked mechanically (verify_quotes.py, 42 of 42 over the whole verbatim.tsv); predictions frozen in a local commit before any body was opened."
+}
