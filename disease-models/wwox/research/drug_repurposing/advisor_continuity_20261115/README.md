@@ -38,6 +38,11 @@ On baseline `39e887fa2`, from the primary checkout:
   enumerate every PubMed WWOX record, nor do its aggregate categories establish useful unread
   biology. Whole-record retrieval and receipt reconciliation precede a scientific batch.
 
+The follow-up's "30 with receipt" before the new ACK1 receipt counts **any depth**, including
+three abstract-only entries; the baseline 27 counted **partial/complete** depth. The difference
+is not evidence of three newly arrived readings. State the depth predicate with each count;
+abstract-only receipts do not clear substantive reading debt.
+
 Receipt coverage and physical artefact availability use different populations and measure different
 things: 122 missing receipt depths do not, by themselves, contradict 356 absent artefacts or
 prove free access. Match populations before alleging a contradiction. Tier orders the queue;
@@ -70,6 +75,35 @@ Implementation tests and the live recall outcome are recorded in
 observed outcome, this report claims implementation and diagnosis only. A passed test does not
 establish better strategy, new pharmacological efficacy or multi-day autonomous reliability.
 
+
+## Actual recall, and a second failure corrected
+
+The existing native hourly recall fired at **08:23 UTC (09:23 Europe/Rome)**. Its complete P12
+assessment (11 turns, 18 tool calls) produced a coverage assignment delivered to IT at 08:26 UTC.
+The actual recipient record, `ledger/tasks/orchestrator/ORCH-RP008-UNREAD-20261115.json`, accepted
+and completed it; the associated source/receipt reconciliation took about eleven minutes, not
+the nominal elapsed time initially estimated by the recipient. This is operational follow-through
+after an explicit operator coverage direction, not a blind demonstration of improved strategy.
+
+That pass did **not** exhaust scientific discovery. Its clinical subset was parked, but 47 records
+with PMC identifiers were excluded from a Science batch because they were lower clinical tier and
+not already linked to an investigation. Neither property is an eligibility condition for discovering
+a new mechanism. A PMC identifier also does not prove present, lawful full-text access. The
+canonical protocol, agent and procedure now distinguish clinical prioritisation from source parity
+and mechanism-first discovery. The portfolio exposes an actual Science-selection opportunity
+rather than reopening the same clinical census or waiting for a prewritten operator task.
+
+After the additional partial ACK1 receipt, the 149 eligible placeholders include 31 with **any**
+receipt, 28 with partial/complete depth and three with abstract/other-only depth. Thus 121 still
+lack matched partial/complete depth. These are reading-state counts, not 121 useful accessible
+studies or a quota of tasks. The separate mechanism lens yielded 74 candidates, 60 without
+matched partial/complete depth; selection still requires original-source relevance and access.
+
+The new receipt also exposed stale derived publication metadata (1,957 versus 1,958 ledger
+events). Existing regeneration tools repaired it. All 37 ranked unit objects were unchanged;
+selection-table differences were dates only. The receipt protocol now makes explicit that
+preserving scientific ranking still permits and requires its existing metadata regeneration.
+No new gate or component was added.
 
 ## Scoped DREAM and self-diagnosis
 

@@ -26,7 +26,7 @@
         {
           "step": "Test legacy outcome recovery, current recipient states and continuous planning with relevant negative controls",
           "status": "DONE",
-          "evidence": "113 Advisor tests PASS; 13 section-reference, 6 skill-package, 7 tool-routing and 11 release-surface tests PASS. Legacy incomplete wait is removed without model call or history rewrite; short complete runs preserve valid waits; pauses prevail; current RELEASED recipient records are separate from historical TAKEN."
+          "evidence": "114 Advisor tests PASS; 13 section-reference, 6 skill-package, 7 tool-routing and 11 release-surface tests PASS. Legacy incomplete wait is removed without model call or history rewrite; short complete runs preserve valid waits; pauses prevail; current recipient records remain separate from historical TAKEN. Rejected attempts are excluded from the reusable prior assessment, and numeric order selects the latest complete assessment."
         },
         {
           "step": "Land and publish the correction with required release verification",
@@ -34,7 +34,7 @@
         },
         {
           "step": "Observe the existing ADV recall and a useful autonomous next handoff, then remove owned temporary artifacts",
-          "status": "TODO"
+          "status": "IN_PROGRESS"
         }
       ]
     }
@@ -50,7 +50,7 @@
       "reversibility": "Ordinary revert; no scientific state changed"
     },
     {
-      "decision": "Keep the Advisor definition at 1058 words versus 1385 before, and put the repertoire rule in the existing protocol",
+      "decision": "Keep the Advisor definition at 1179 words versus 1385 before, and put the repertoire rule in the existing protocol",
       "reason": "Improve strategic breadth without adding a governance layer or inflating every context"
     },
     {
@@ -98,6 +98,16 @@
       "verdict": "INTERRUPTED_WITHOUT_VERDICT",
       "evidence": "/tmp/legend-adv-continuity-battery-interrupted.json",
       "reason": "The prospective brief still made the incomplete P11 a reusable prior; corrected before final validation, without modifying the frozen clone."
+    },
+    {
+      "scope": "Complete release inventory on frozen f6e9abbfea8f44323c49c338a05a3e1e327400b2",
+      "verdict": "PASS_WITH_SKIPS",
+      "targets": 251,
+      "evidence": "/tmp/legend-adv-continuity-battery-final.json",
+      "log_sha256": "95d98b81d9d45a10a9ecef1e9c0a57b23305f1dc41086cc7aae4303115695768",
+      "started_utc": "2026-11-15T08:17:59.518144+00:00",
+      "ended_utc": "2026-11-15T09:23:03.417282+00:00",
+      "limit": "This verdict belongs to the frozen SHA; later prompt/protocol/portfolio, evidence-record and derived publication metadata deltas are covered by targeted checks and the publication gate, not re-labelled as this complete run."
     }
   ],
   "OPERATIONS": {
@@ -105,14 +115,14 @@
     "method": "Disjoint-path ordinary Git merge while IT was regenerating 27 science/view paths; no peer file staged, stashed, reset or checked out",
     "landing_proof": "/tmp/legend-adv-continuity-landing.json",
     "shadow_replay": "/tmp/legend-adv-continuity-shadow.json; EVALUATE, invalidated P11, live state unchanged",
-    "prospective_brief": "P11 selected by numeric order; the Cav3 comparison assignment historical TAKEN shown beside current NO_QUEUE record with its path (unknown execution is not inferred as in-flight); current operator integration present",
+    "prospective_brief": "P10 is the newest complete reusable assessment; P11 is explicitly incomplete history and its old wait is marked superseded. Historical transport evidence and current recipient record verdicts/paths are separate; unknown execution is not inferred as in-flight.",
     "full_inventory_candidate": "f6e9abbfea8f44323c49c338a05a3e1e327400b2",
     "full_inventory_log": "/tmp/legend-adv-continuity-battery-final.log",
-    "full_inventory_state": "RUNNING:226targetscompletedwithoutafailedsuiteat2026-11-15T09:07Z; browser suite running",
+    "full_inventory_state": "PASS WITH SKIPS: 251 targets, exit 0; completed 2026-11-15T09:23:03Z; exact receipt and log hash recorded",
     "live_repair": "2026-11-15T08:13:34Z: supported tick superseded P11 in actual host state, preserving original outcome; EVALUATE pending, no model launched",
     "new_targeted_tests": "114 Advisor tests PASS, including the rejected previous-attempt context",
-    "final_prompt_tests": "114 Advisor tests PASS after the source-parity clarification; agent definition1099words (1385baseline); section references PASS",
-    "final_targeted": "114 Advisor tests PASS; final source-parity definition1102words;74ranking tests PASS;i18n check PASS;package check PASS"
+    "final_prompt_tests": "114 Advisor tests PASS after the source-parity clarification; agent definition 1179 words (1385 baseline); section references PASS",
+    "final_targeted": "114 Advisor tests PASS; 74 ranking tests PASS; i18n check PASS; package check PASS; link and documented-command checks PASS"
   },
   "SELF_DIAGNOSIS": {
     "verdict": "PASS with declared pre-existing scientific reading gaps; no full-text scientific read claimed by this Harness task",
