@@ -704,7 +704,8 @@ class ValueContinuity(Continuous):
         self.at("2026-11-13T11:30:00Z")
         closing = sa.tick(self.campaign)                                    # the closure itself is observed ...
         self.assertEqual(closing["verdict"], "EVALUATE"); self.assertTrue(closing["queue"]["exhausted"])
-        self.at("2026-11-13T16:00:00Z")                                     # ... and nothing ran: no event now, no radar, no instruction
+        sa.evaluate(self.campaign); self.legacy()  # consume the closure, then simulate an old run without an outcome
+        self.at("2026-11-13T16:00:00Z")                                     # no unconsumed event, radar or instruction
         idle = sa.tick(self.campaign)
         self.assertEqual(idle["verdict"], "EVALUATE")
         self.assertIn("no executable work remains: decide what is next from the portfolio", idle["why"])
@@ -791,7 +792,7 @@ class ValueContinuity(Continuous):
 
     def test_the_pilot_without_the_continuous_mode_does_not_gain_idle_evaluations(self) -> None:
         sa.tick(self.campaign); sa.evaluate(self.campaign); self.legacy(); self.complete("ORCH-A")
-        self.at("2026-11-13T11:30:00Z"); sa.tick(self.campaign)
+        self.at("2026-11-13T11:30:00Z"); sa.tick(self.campaign); sa.evaluate(self.campaign)
         self.at("2026-11-13T18:00:00Z")
         self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")
 
@@ -904,6 +905,96 @@ class ValueContinuity(Continuous):
         self.assertIn("## Previous outcome superseded", brief)
         self.assertIn('"P11":', brief.split("## Incomplete attempts", 1)[1])
         self.assertEqual((self.campaign / "P11/assessment.md").read_text(), "assessment 11")
+
+
+    def test_legacy_start_metadata_prevents_missing_the_hourly_recall_by_seconds(self) -> None:
+        self.started()
+        state = sa._load_state(self.campaign)
+        state.pop("last_evaluation_started_utc", None)
+        state["last_evaluation_utc"] = "2026-11-13T10:02:04Z"
+        state["last_outcome"] = {"evaluation": "P1", "stated": True, "outcome": "assign"}
+        sa._save_state(self.campaign, state)
+        path = self.campaign / "P1/meta.json"
+        meta = json.loads(path.read_text())
+        meta.update(started_utc="2026-11-13T10:00:00Z", ended_utc="2026-11-13T10:02:04Z")
+        path.write_text(json.dumps(meta))
+        self.land("SCI delivery: completed package")
+        self.at("2026-11-13T11:01:55Z")  # 61m55 from start, 59m51 from completion: the live failure
+        result = sa.tick(self.campaign)
+        self.assertEqual(result["verdict"], "EVALUATE")
+        self.assertEqual(result["evaluation_clock"]["source"], "matching legacy runtime metadata")
+        saved = sa._load_state(self.campaign)
+        self.assertEqual(saved["last_evaluation_utc"], "2026-11-13T10:02:04Z")
+        self.assertEqual(saved["last_evaluation_started_utc"], "2026-11-13T10:00:00Z")
+        self.assertEqual(len({(a["stage"], a["index"]) for a in sa._attempts(self.campaign)}), 1)  # tick never launches the model
+
+    def test_a_mismatched_legacy_runtime_does_not_invent_an_earlier_start(self) -> None:
+        self.started()
+        state = sa._load_state(self.campaign)
+        state.pop("last_evaluation_started_utc", None)
+        state["last_evaluation_utc"] = "2026-11-13T10:02:04Z"
+        state["last_outcome"] = {"evaluation": "P1", "stated": True, "outcome": "assign"}
+        sa._save_state(self.campaign, state)  # P1's actual metadata does not finish at 10:02:04
+        self.land("SCI delivery: completed package")
+        self.at("2026-11-13T11:01:55Z")
+        result = sa.tick(self.campaign)
+        self.assertEqual(result["verdict"], "DEFERRED")
+        self.assertEqual(result["evaluation_clock"]["source"], "legacy completion (start unavailable)")
+        self.assertIn("anticipating events pending", result["why"])
+        self.assertIn("11:02:04Z", result["why"])
+        self.assertNotIn("last_evaluation_started_utc", sa._load_state(self.campaign))
+
+    def test_a_new_run_records_start_and_finish_separately_for_its_cadence(self) -> None:
+        self.authorise()
+        sa.tick(self.campaign)
+        original = sa.run
+        def slower(*args, **kwargs):
+            self.at("2026-11-13T10:02:04Z")
+            return original(*args, **kwargs)
+        sa.run = slower
+        try:
+            self.assertEqual(sa.evaluate(self.campaign), 0)
+        finally:
+            sa.run = original
+        state = sa._load_state(self.campaign)
+        self.assertEqual(state["last_evaluation_started_utc"], "2026-11-13T10:00:00Z")
+        self.assertEqual(state["last_evaluation_utc"], "2026-11-13T10:02:04Z")
+        self.land("SCI delivery: completed package")
+        self.at("2026-11-13T11:01:55Z")
+        result = sa.tick(self.campaign)
+        self.assertEqual(result["verdict"], "EVALUATE")
+        self.assertEqual(result["evaluation_clock"]["source"], "recorded evaluation start")
+
+
+    def test_a_deferred_delivery_survives_the_tick_that_updates_the_observation(self) -> None:
+        self.started()
+        self.land("SCI52 record COMPLETE; package delivered")
+        self.at("2026-11-13T10:30:00Z")
+        early = sa.tick(self.campaign)
+        self.assertEqual(early["verdict"], "DEFERRED")
+        self.assertTrue(any(e.startswith("delivery:") for e in early["events"]))
+        self.at("2026-11-13T11:00:00Z")
+        due = sa.tick(self.campaign)  # no further commit, mandate transition or radar
+        self.assertEqual(due["verdict"], "EVALUATE")
+        self.assertTrue(any(e.startswith("delivery:") for e in due["events"]))
+        sa.evaluate(self.campaign)
+        self.at("2026-11-13T12:00:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")
+
+    def test_a_running_evaluation_does_not_consume_a_later_delivery(self) -> None:
+        self.started()
+        state = sa._load_state(self.campaign)
+        before = state["main_sha"]
+        state["running"] = sa._pid_identity(os.getpid())
+        sa._save_state(self.campaign, state)
+        self.land("SCI52 record COMPLETE; package delivered")
+        self.at("2026-11-13T11:00:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "RUNNING")
+        state = sa._load_state(self.campaign)
+        self.assertEqual(state["main_sha"], before)
+        state["running"] = ""
+        sa._save_state(self.campaign, state)
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
 
 
 class LivingPortfolio(Base):
@@ -1077,6 +1168,25 @@ class Snapshot(unittest.TestCase):
         self.assertEqual(len(snap["repo_sha"]), 40)
         self.assertEqual([d["path"] for d in snap["uncommitted"]], ["new.md"])
         self.assertEqual(snap["uncommitted"][0]["sha256"], sa.sha256_text("draft"))
+
+    def test_original_external_radars_are_discoverable_without_an_advisor_addressee(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="sadv_radar_") as name:
+            root = Path(name)
+            folder = root / "disease-models/wwox/research/drug_repurposing/radar_inputs_fixture"
+            folder.mkdir(parents=True)
+            addressed = folder / "operator_scout_report.md"
+            addressed.write_text("For Plan: compare a public method.\n", encoding="utf-8")
+            unaddressed = folder / "drug_report.md"
+            unaddressed.write_text("An unresolved mechanism and a possible comparison.\n", encoding="utf-8")
+            saved, sa.ROOT = sa.ROOT, root
+            try:
+                rows = {r["id"]: r for r in sa.entrypoints()}
+                discovered = {p for pattern in rows["radar_science"]["patterns"] for p in sa._resolve(pattern)}
+                self.assertEqual(rows["radar_science"]["matches"], 2)
+                self.assertIn(addressed, discovered)
+                self.assertIn(unaddressed, discovered)
+            finally:
+                sa.ROOT = saved
 
     def test_entry_points_cover_the_required_sources_and_resolve(self) -> None:
         rows = {r["id"]: r for r in sa.entrypoints()}

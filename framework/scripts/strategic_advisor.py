@@ -231,7 +231,9 @@ ENTRY_POINTS: list[tuple[str, str, list[str]]] = [
     ("memory_dismissals", "Dismissal and discovery ledgers, memory index (outside the repository)", [
         "disease-models/wwox/research/dismissal_ledger_current.md", "disease-models/wwox/research/discovery_ledger_current.md", str(MEMORY_DIR / "MEMORY.md")]),
     ("radar_science", "Scientific, pharmacological, data and method radars (opportunities, not evidence)", [
-        "disease-models/wwox/research/drug_repurposing/radar_*/README.md", "disease-models/wwox/research/capability_scout_log.md"]),
+        "disease-models/wwox/research/drug_repurposing/radar_*/README.md",
+        "disease-models/wwox/research/drug_repurposing/radar_*/*report*.md",
+        "disease-models/wwox/research/capability_scout_log.md"]),
     ("harness_scouting", "Harness scouting and repository mining. The weekly candidate tables stop at their last week (see `last commit`); the live feed is the daily scout, whose host cache is outside the repository and is embedded in the Stage P brief by the caller", [
         "governance/candidates/HARNESS-SCOUT-*.md", str(STATE_HOME / "scout_daily_briefing.md")]),
     ("capability_surface", "What the system claims it can do, with maturity", ["SKILLS.md", "CAPABILITIES.md"]),
@@ -1041,6 +1043,32 @@ def presidio_state(verdict: str, why: str, is_continuous: bool, outcome: dict[st
     return "PILOT ENDED: " + why + " (no continuous authorisation is in force)"
 
 
+def evaluation_clock(campaign: Path, state: dict[str, Any]) -> tuple[dt.datetime | None, str]:
+    """Start-to-start cadence; legacy completion times remain historical facts, not dispatch times."""
+    end_text = state.get("last_evaluation_utc")
+    if not end_text:
+        return None, "no previous evaluation"
+    end = dt.datetime.fromisoformat(end_text.replace("Z", "+00:00"))
+    try:
+        start = dt.datetime.fromisoformat(state["last_evaluation_started_utc"].replace("Z", "+00:00"))
+        if start.tzinfo is not None and start <= end:
+            return start, "recorded evaluation start"
+    except (KeyError, TypeError, ValueError, AttributeError):
+        pass
+    label = (state.get("last_outcome") or {}).get("evaluation", "")
+    if re.fullmatch(r"P\d+", label):
+        try:
+            meta = json.loads((campaign / label / "meta.json").read_text(encoding="utf-8"))
+            finish = dt.datetime.fromisoformat(meta["ended_utc"].replace("Z", "+00:00"))
+            start = dt.datetime.fromisoformat(meta["started_utc"].replace("Z", "+00:00"))
+            if finish == end and start.tzinfo is not None and start <= finish:
+                state["last_evaluation_started_utc"] = _utc(start)
+                return start, "matching legacy runtime metadata"
+        except (OSError, KeyError, TypeError, ValueError, AttributeError):
+            pass
+    return end, "legacy completion (start unavailable)"
+
+
 def tick(campaign: Path) -> dict[str, Any]:
     """The hourly check: mostly mechanical, no model. Verdicts: NONE (nothing new: reuse the previous assessment), EVALUATE (one strategic evaluation is due), and the reasons it is not
     (RUNNING, DISABLED, EXPIRED, BUDGET, DEFERRED). A stalled mandate is reported, not restarted: recovery stays with the mandate watch."""
@@ -1060,13 +1088,15 @@ def tick(campaign: Path) -> dict[str, Any]:
                          last_outcome={}, unstated_streak=0,
                          last_incomplete={"evaluation": label, "reason": invalidated, "utc": _utc(now)})
     obs = observe(campaign, state)
+    obs["events"] = list(dict.fromkeys(list(state.get("pending_events") or []) + obs["events"]))
+    obs["commits_since_last_tick"] += int(state.get("pending_commits") or 0)
     first = not state
     refusal = budget_refusal(campaign)
     cont = continuous(campaign)
     anticipating = [e for e in obs["events"] if e.startswith(("delivery:", "mandate:", "stalled", "portfolio:"))] or ([f"roadmap changed"] if state.get("roadmap_sha256") not in (None, obs["roadmap_sha256"]) else [])
     changed = state.get("roadmap_sha256") not in (None, obs["roadmap_sha256"])
     digest = sha256_text(obs["roadmap_sha256"] + "|" + "|".join(sorted(obs["events"])))
-    last_eval = dt.datetime.fromisoformat(state["last_evaluation_utc"].replace("Z", "+00:00")) if state.get("last_evaluation_utc") else None
+    last_eval, clock_source = evaluation_clock(campaign, state)
     hours = (now - last_eval).total_seconds() / 3600 if last_eval else None
     verdict, why = "NONE", "nothing new: the previous assessment stands"
     if (campaign / "DISABLED").exists():
@@ -1087,7 +1117,9 @@ def tick(campaign: Path) -> dict[str, Any]:
         elif changed or (anticipating and (hours is None or hours >= float(cont.get("min_hours_anticipating", 1)))) or (hours is None or hours >= float(cont.get("min_hours_between", 4))):
             verdict, why = "EVALUATE", ("roadmap changed" if changed else "; ".join(anticipating[:3] or obs["events"][:3]))
         else:
-            verdict, why = "DEFERRED", f"events present but the last evaluation was {hours:.1f} h ago and none is anticipating"
+            interval = float(cont.get("min_hours_anticipating", 1) if anticipating else cont.get("min_hours_between", 4))
+            eligible = _utc(last_eval + dt.timedelta(hours=interval))
+            verdict, why = "DEFERRED", f"{'anticipating' if anticipating else 'ordinary'} events pending; next eligible at {eligible} ({clock_source})"
     outcome = state.get("last_outcome") or {}
     streak = int(state.get("unstated_streak") or 0)
     if verdict in ("NONE", "DEFERRED") and cont and not first and last_eval is not None:
@@ -1098,11 +1130,15 @@ def tick(campaign: Path) -> dict[str, Any]:
             verdict, why = "EVALUATE", f"the resume condition of the last wait is met: {met}"
         elif not outcome.get("stated") and streak < 1 and obs["queue"]["exhausted"] and hours is not None and hours >= float(cont.get("min_hours_between", 4)):
             verdict, why = "EVALUATE", "the last evaluation left no stated outcome and no executable work remains: decide what is next from the portfolio"
-    state.update(main_sha=obs["main_sha"], mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"], last_tick_utc=_utc(now),
-                 waits_seen=sorted({sha256_text(w["task"] + "|" + w["blocker"])[:12] for w in obs["waits"]}))
-    if verdict == "EVALUATE":
+    state["last_tick_utc"] = _utc(now)
+    if verdict != "RUNNING":
+        state.update(main_sha=obs["main_sha"], mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"],
+                     waits_seen=sorted({sha256_text(w["task"] + "|" + w["blocker"])[:12] for w in obs["waits"]}))
+    # A deferred tick observes without consuming. While a run is active, leave its
+    # baseline alone so deliveries arriving after its snapshot reach the next run.
+    if verdict in ("EVALUATE", "DEFERRED"):
         state["pending_digest"] = digest
-        state["pending_events"] = obs["events"]            # the tick advances main_sha and the mandate states below; the evaluation that follows must still see what triggered it
+        state["pending_events"] = obs["events"]            # keep deferred observations until an evaluation actually consumes them
         state["pending_commits"] = obs["commits_since_last_tick"]
     _save_state(campaign, state)
     ctl = operator_controls()
@@ -1113,6 +1149,7 @@ def tick(campaign: Path) -> dict[str, Any]:
             "events": obs["events"][:12], "open_mandates": obs["open_mandates"], "waiting_on": [f"{w['task']}: {w['blocker'][:70]}" for w in obs["waits"]][:4] + ([f"... {len(obs['waits'])} in all"] if len(obs["waits"]) > 4 else []),
              "portfolio": {k: obs["portfolio"][k] for k in ("path", "available", "actionable", "errors")},
             "sessions": obs["sessions"], "digest": digest,
+            "evaluation_clock": {"utc": _utc(last_eval) if last_eval else None, "source": clock_source},
             "hours_since_last_evaluation": None if hours is None else round(hours, 1)}
 
 
@@ -1366,6 +1403,7 @@ def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout:
     state = _load_state(campaign)
     if _running(state):
         print("REFUSED: an evaluation is already running", file=sys.stderr); return 2
+    started_utc = _utc(_now())
     state["running"] = _pid_identity(os.getpid()); _save_state(campaign, state)
     try:
         obs = observe(campaign, state)
@@ -1382,7 +1420,7 @@ def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout:
         if incomplete:
             print(f"{label}: INCOMPLETE — {incomplete}; no assignment, portfolio update or outcome was taken from it")
             state = _load_state(campaign)
-            state.update(last_evaluation_utc=_utc(_now()), running="", last_incomplete={"evaluation": label, "utc": _utc(_now()), "reason": incomplete})      # the triggers stay pending: the next evaluation still has to see them
+            state.update(last_evaluation_utc=_utc(_now()), last_evaluation_started_utc=started_utc, running="", last_incomplete={"evaluation": label, "utc": _utc(_now()), "reason": incomplete})      # the triggers stay pending: the next evaluation still has to see them
             _save_state(campaign, state)
             return code
         if code == 0 and assessment.exists():
@@ -1402,7 +1440,7 @@ def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout:
                     outcome.update(resume_when="event", problem="the resume condition was already met when the wait was stated; read as event")     # a wait that is over the moment it starts would be evaluated again every hour
         print(f"{label}: outcome {outcome['outcome'] or 'unstated'}" + (f" ({outcome['problem']})" if outcome["problem"] else ""))
         state = _load_state(campaign)
-        state.update(last_evaluation_utc=_utc(_now()), last_digest=state.get("pending_digest", state.get("last_digest")), running="", pending_events=[], pending_commits=0, last_incomplete={},
+        state.update(last_evaluation_utc=_utc(_now()), last_evaluation_started_utc=started_utc, last_digest=state.get("pending_digest", state.get("last_digest")), running="", pending_events=[], pending_commits=0, last_incomplete={},
                      portfolio_digest=obs["portfolio"]["digest"],
                      last_outcome={**outcome, "evaluation": label, "utc": _utc(_now())}, unstated_streak=0 if outcome["stated"] else int(state.get("unstated_streak") or 0) + 1)
         _save_state(campaign, state)

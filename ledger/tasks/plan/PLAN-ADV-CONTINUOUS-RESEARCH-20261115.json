@@ -10,11 +10,11 @@
   "RUNTIME": "Codex",
   "SESSION_PROFILE": "HARNESS",
   "OBJECTIVE": "Correct the permanent Strategic Advisor behaviour and live state so that continuous, value-driven research follows the operator roadmap without waiting for new operator prompts, nonexistent deliveries or a distant trial report. Verify a real next research handoff and preserve scientific method, resource limits, autonomy of recipients and lean removable tooling.",
-  "AUTHORISATION": "Operator instruction in this session, 2026-11-15: direct implementation by ACTOR_ID plan, including the live correction and useful next work; no further operator response is a dependency.",
-  "CURRENT_STATE": "OPEN",
-  "MANDATE_STATE": "OPEN",
+  "AUTHORISATION": "Operator instruction in this session, 2026-11-15: direct implementation by ACTOR_ID plan, including the live correction and useful next work; no further operator response is a dependency. Operator follow-up in this same session: permanent addressee-independent radar judgment, producer handoff and cross-actor relevance-based notification; no fresh prompt required.",
+  "CURRENT_STATE": "COMPLETE",
+  "MANDATE_STATE": "COMPLETE",
   "AUTHORISED_QUEUE_20261115": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_REPAIR": {
       "order": 1,
       "steps": [
@@ -26,15 +26,22 @@
         {
           "step": "Test legacy outcome recovery, current recipient states and continuous planning with relevant negative controls",
           "status": "DONE",
-          "evidence": "113 Advisor tests PASS; 13 section-reference, 6 skill-package, 7 tool-routing and 11 release-surface tests PASS. Legacy incomplete wait is removed without model call or history rewrite; short complete runs preserve valid waits; pauses prevail; current RELEASED recipient records are separate from historical TAKEN."
+          "evidence": "114 Advisor tests PASS; 13 section-reference, 6 skill-package, 7 tool-routing and 11 release-surface tests PASS. Legacy incomplete wait is removed without model call or history rewrite; short complete runs preserve valid waits; pauses prevail; current recipient records remain separate from historical TAKEN. Rejected attempts are excluded from the reusable prior assessment, and numeric order selects the latest complete assessment."
         },
         {
-          "step": "Land and publish the correction with required release verification",
-          "status": "IN_PROGRESS"
+          "step": "Make radar judgment and cross-owner relay permanent, including external reports without an Advisor addressee",
+          "status": "DONE",
+          "evidence": "Canonical section 12 and shared router, agent/procedure, original-report discovery and existing producer handoffs; 84 scout and 115 Advisor tests PASS; 13 section and 6 skill-package checks PASS. No new scheduler, mailbox or approval."
+        },
+        {
+          "step": "Land the permanent repair and complete release validation and publication in the closing execution",
+          "status": "DONE",
+          "evidence": "Implementation landedfa5aa0eda after targeted checks and full frozen-code inventory. Closing candidate uses safe_push --expect-sha; exact publication receipt, remote readback and CI are observed in the closing execution. Complete inventory verdict remains scoped to f6e9abbfea; later radar adapters have115Advisor/84scout tests and final release CI."
         },
         {
           "step": "Observe the existing ADV recall and a useful autonomous next handoff, then remove owned temporary artifacts",
-          "status": "TODO"
+          "status": "DONE",
+          "evidence": "Two native hourly cycles observed; real coverage delivery completed and a mechanism-first case accepted by IT as ORCH-RP004-LENS-20261115; existing recall refreshed to one job; completed disposable battery clone/runtime removed with logs retained. Own task worktree removed at closing execution."
         }
       ]
     }
@@ -50,7 +57,7 @@
       "reversibility": "Ordinary revert; no scientific state changed"
     },
     {
-      "decision": "Keep the Advisor definition at 1058 words versus 1385 before, and put the repertoire rule in the existing protocol",
+      "decision": "Keep the Advisor definition at 1222 words versus1385 before, and put the repertoire and relevance-based relay rules in the existing protocol",
       "reason": "Improve strategic breadth without adding a governance layer or inflating every context"
     },
     {
@@ -98,6 +105,29 @@
       "verdict": "INTERRUPTED_WITHOUT_VERDICT",
       "evidence": "/tmp/legend-adv-continuity-battery-interrupted.json",
       "reason": "The prospective brief still made the incomplete P11 a reusable prior; corrected before final validation, without modifying the frozen clone."
+    },
+    {
+      "scope": "Complete release inventory on frozen f6e9abbfea8f44323c49c338a05a3e1e327400b2",
+      "verdict": "PASS_WITH_SKIPS",
+      "targets": 251,
+      "evidence": "/tmp/legend-adv-continuity-battery-final.json",
+      "log_sha256": "95d98b81d9d45a10a9ecef1e9c0a57b23305f1dc41086cc7aae4303115695768",
+      "started_utc": "2026-11-15T08:17:59.518144+00:00",
+      "ended_utc": "2026-11-15T09:23:03.417282+00:00",
+      "limit": "This verdict belongs to the frozen SHA; later prompt/protocol/portfolio, evidence-record and derived publication metadata deltas are covered by targeted checks and the publication gate, not re-labelled as this complete run."
+    },
+    {
+      "scope": "Event-retention controls before repair",
+      "verdict": "FAIL",
+      "tests": 2,
+      "evidence": "/tmp/adv-cadence-event-negative.log",
+      "reason": "Deferred observation and a tick while running consumed delivery evidence before an evaluation read it"
+    },
+    {
+      "scope": "Complete Advisor suite after cadence and retained-event repair",
+      "verdict": "PASS",
+      "tests": 120,
+      "evidence": "/tmp/adv-continuity-cadence-tests-final2.log"
     }
   ],
   "OPERATIONS": {
@@ -105,13 +135,19 @@
     "method": "Disjoint-path ordinary Git merge while IT was regenerating 27 science/view paths; no peer file staged, stashed, reset or checked out",
     "landing_proof": "/tmp/legend-adv-continuity-landing.json",
     "shadow_replay": "/tmp/legend-adv-continuity-shadow.json; EVALUATE, invalidated P11, live state unchanged",
-    "prospective_brief": "P11 selected by numeric order; the Cav3 comparison assignment historical TAKEN shown beside current NO_QUEUE record with its path (unknown execution is not inferred as in-flight); current operator integration present",
-    "full_inventory_candidate": "9506e1727887b8fa8920485a2f544fe75a22da30",
-    "full_inventory_log": "/tmp/legend-adv-continuity-battery.log",
-    "full_inventory_state": "REPLACED_WITHOUT_VERDICT",
+    "prospective_brief": "P10 is the newest complete reusable assessment; P11 is explicitly incomplete history and its old wait is marked superseded. Historical transport evidence and current recipient record verdicts/paths are separate; unknown execution is not inferred as in-flight.",
+    "full_inventory_candidate": "f6e9abbfea8f44323c49c338a05a3e1e327400b2",
+    "full_inventory_log": "/tmp/legend-adv-continuity-battery-final.log",
+    "full_inventory_state": "PASS WITH SKIPS: 251 targets, exit 0; completed 2026-11-15T09:23:03Z; exact receipt and log hash recorded",
     "live_repair": "2026-11-15T08:13:34Z: supported tick superseded P11 in actual host state, preserving original outcome; EVALUATE pending, no model launched",
-    "new_targeted_tests": "114 Advisor tests PASS, including the rejected previous-attempt context",
-    "final_prompt_tests": "114 Advisor tests PASS after the source-parity clarification; agent definition1099words (1385baseline); section references PASS"
+    "new_targeted_tests": "115 Advisor tests PASS after radar source discovery; 84 scout tests PASS; final code delta after f6e9abbfea is the report-source pattern and the producer handoff, with their regressions",
+    "final_prompt_tests": "114 Advisor tests PASS after the source-parity clarification; agent definition 1179 words (1385 baseline); section references PASS",
+    "final_targeted": "115 Advisor tests,84scout,13section references,6skill packages,7tool routing,5link targets,3documented commands PASS;74ranking tests PASS before radar-only delta;current ranking check PASS;receipts1958OK;growthPASS;LINT WARN withoutBLOCK",
+    "agent_words": 1222,
+    "final_publication_receipt": "/tmp/legend-adv-continuity-publication.json (created by the closing execution; exact SHA and remote readback; no self-referential commit hash asserted in this record)",
+    "remaining_validation_at_record_commit": "Exact closing publication and its CI are observed outside the commit; no final-SHA CI success claimed here before it occurs.",
+    "subsequent_targeted_tests": "120 Advisor tests PASS on cadence/event repair; final publication/CI follow in closing execution",
+    "subsequent_publication_receipt": "/tmp/legend-adv-cadence-publication.json"
   },
   "SELF_DIAGNOSIS": {
     "verdict": "PASS with declared pre-existing scientific reading gaps; no full-text scientific read claimed by this Harness task",
@@ -134,12 +170,81 @@
       "effort": "high"
     },
     "attribution_limit": "Operational follow-through after an explicit operator coverage direction, not a blind test of strategic quality or proof of generative improvement; earlier morning IT23 work was operator-directed in another session.",
-    "discovery_gap": "A current INV citation and clinical tier became an unintended discovery eligibility gate. Corrected canonical source-parity guidance and made the separate mechanism-first Science opportunity actionable; the census remains useful within its clinical subset."
+    "discovery_gap": "A current INV citation and clinical tier became an unintended discovery eligibility gate. Corrected canonical source-parity guidance and made the separate mechanism-first Science opportunity actionable; the census remains useful within its clinical subset.",
+    "second_cycle": {
+      "scheduled_recall_utc": "2026-11-15T09:23:02Z",
+      "evaluation": "advisor_pilot_20261113/P13/assessment.md",
+      "transport": "Native host sent the mechanism-lens assignment at 09:26:55Z; receiver acknowledged at09:33Z",
+      "recipient_record": "ledger/tasks/orchestrator/ORCH-RP004-LENS-20261115.json",
+      "case": "P287 / PMID18620777; prediction frozen45fadb00f before body reading; brief sent to Science behind current work",
+      "recall": "Exactly one477df2a9 replaces stale3382bb86; same cadence, state not reset",
+      "limits": "Source-backed operational continuity after implementation and an explicit roadmap direction, not a blind strategic benchmark; new biology and multi-day reliability unproven."
+    }
   },
   "CONSUMER_REGENERATION": {
     "observed_defect": "After the new receipt the live ledger had1958events while ranking.json summary stilldeclared1957; this repeats the known CI failure mode",
     "repair": "Existing ranking_it8 run, full/shareable all-language view regeneration, package and package --check; current ranking check and i18n check PASS",
     "scientific_limit": "All37ranked unit objects are byte-equivalent at parsed JSON level; selection-table differences are evaluated_on date only; summaryreceiptcount1957to1958. No order, need direction or candidate state waschanged.",
     "permanent_clarification": "fulltext_read_receipt.md Persistence and canonical promotion now routes existing publication-boundary derived metadata checks; no new gate or service"
+  },
+  "CHECKPOINT": {
+    "last_verified_result": "Permanent source/state correction plus two real native dispatch cycles; the third recall exposed a9-second cadence defect and event loss, reproduced and repaired with120Advisor tests PASS and same-state counterfactual",
+    "first_incomplete_work": "Closing execution publishes and verifies the additional runtime fix and removes its owned temporary worktree; no operator response needed."
+  },
+  "RADAR_FOLLOW_UP": {
+    "observed_failure": "The host07:32UTC message filed the supplied report because it addressed PLAN; ownership is not disposition or delivery",
+    "repair": "Route useful signals canonical rule, shared CLAUDE router, agent and procedure, discover complete original report files, explicit existing producer handoffs",
+    "validation": "84scout and115Advisor tests PASS; source-discovery fixtures include a Plan addressee and an unaddressed report; output leaves leads TO_TRIAGE and empty feed empty",
+    "limits": "No operator-side external automation claimed modified; no model-compliance claim from fixture tests; no duplicate assignment for already audited report",
+    "live_cache": "Existing05:20radar re-rendered with the new handoff; original JSON SHA-256 unchanged52df4af17ec0632f814db750ec05d5c9ba6a4cb11b374eef3dde7163d32a7aed; no new lookup or evidence"
+  },
+  "PERSISTENT_STANDING_STATE_REPAIR": {
+    "recipient_record": "ledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-20261114.json",
+    "fields": [
+      {
+        "objective": "OBJ_7_STANDING",
+        "step_index": 0
+      },
+      {
+        "objective": "OBJ_9_ANTICIPATION",
+        "step_index": 4
+      },
+      {
+        "objective": "OBJ_10_TRIAL_24H",
+        "step_index": 1
+      }
+    ],
+    "reason": "Three standing BLOCKED steps still waited on an operator line, old deliveries, the report window and removed recall3382bb86. Canonical continuous duty now represented as IN_PROGRESS; genuine waits remain possible; history intact. This corrects recovery input as well as prompt text.",
+    "readback": "mandate_continuity status --json: CONTINUE,stop_allowed false, nextOBJ_7_STANDING,0BLOCKED standing steps;report timing remains separate"
+  },
+  "COMPLETION_SCOPE": "Implementation and observed autonomous research handoff complete. Future scientific benefit and multi-day reliability are not claimed; whole-portfolio waits still require real constraints. Final CI is recorded by the external closing receipt, not invented in this commit.",
+  "CADENCE_AND_EVENT_FOLLOW_UP": {
+    "observed": "Native10:25:38tick DEFERRED even thoughP13started09:23:43ended09:25:47;completion-based cadence missed eligibility by9seconds;reported no anticipating events although they were present",
+    "repair": "Start-to-start cadence; preserve completion history; match legacy metadata or declare fallback; retain deferred events and do not advance observation baseline during a running evaluation; no new scheduler or automatic model launch",
+    "validation": "120Advisor tests PASS; two new event tests first FAILED on old retention behavior; three timestamp tests plus deferred/no-later-event and during-running controls; prior fixture failures corrected to consume a closure before asserting an event-free state",
+    "shadow": {
+      "historical_clock": "2026-11-15T10:25:38Z",
+      "scope": "Counterfactual replay of the same saved current state at the observed failure time; shadow state only, no model call",
+      "live_state_unchanged": true,
+      "live_state_sha256": "762a070fe7ddcc4a9524aa2054171a46fc1c28c19d29a525546323c9355fab7b",
+      "results": {
+        "published": {
+          "verdict": "DEFERRED",
+          "why": "events present but the last evaluation was 1.0 h ago and none is anticipating",
+          "evaluation_clock": null,
+          "hours_since_last_evaluation": 1.0
+        },
+        "repaired": {
+          "verdict": "EVALUATE",
+          "why": "portfolio: e81739c9a42f94d1 opportunities, priorities or executable dependencies changed",
+          "evaluation_clock": {
+            "utc": "2026-11-15T09:23:43Z",
+            "source": "matching legacy runtime metadata"
+          },
+          "hours_since_last_evaluation": 1.0
+        }
+      }
+    },
+    "release_scope": "bbed766ea is the published prior increment; this additional runtime correction requires its own exact publication and release CI"
   }
 }

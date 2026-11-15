@@ -1797,6 +1797,9 @@ def briefing(report: dict, persisted: dict | None = None) -> str:
         nxt = "none; nothing useful today"
     lines = [f"RADAR BRIEFING {report['run_at']} | remote main {(ctx.get('main_sha') or 'UNRESOLVED')[:12]} "
              f"(context {ctx.get('cache', '?')})", f"NEXT STEP: {nxt}"]
+    lines.append("STRATEGIC HANDOFF — Strategic Advisor: assess these leads against the standing roadmap and current work; "
+                 "use cross_session_transport.md section 12 (Route useful signals) to contact the relevant Harness or Science owner "
+                 "when worthwhile. The suggested addressee is not a reason to archive without judgment; no adoption is automatic.")
     if ctx.get("freshness_limit"):
         lines.append(f"FRESHNESS LIMIT: {ctx['freshness_limit']}")
     pl = report.get("plan")
