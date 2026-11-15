@@ -1,0 +1,21 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-NEXTDRAW-20261115",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "NORMAL",
+  "OBJECTIVE": "ADV follow-ups 2026-11-15: (1) dated 'superseded for specificity' pointers on DL-MECH-170 and on section b of the locator-contract note; (2) own next draw among the 24 open map rows under RP-003's rule, or a motivated wait.",
+  "START_UTC": "2026-11-15T15:40:00Z",
+  "MANDATE_STATE": "WAIT",
+  "RESULT_SO_FAR": "(1) DONE: append-only dated pointers added to DL-MECH-170 (a NOTE bullet before its closing line; tag IPOTESI, status open and the Causal statement unchanged) and under section b of analysis/locator_contract_live_test.md (original text untouched; no PMID listing added); other September files (AUTONOMOUS_SESSION_STATE item 5, census lines 56/395, crosswalk line 384, superior_node_search line 323) NOT touched: no reader would reach them without passing the card Update or the DL entry. (2) NO DRAW. Candidate considered: IT46-Q03 (named decision: whether the WWOX symptomatic-vs-development separation, 4 of 6 children with both endpoints, differs from the base rate of responders with poor development in Dravet/STXBP1, INV-10 decisive_uncertainty). Declined: with n=6 the discordance rate is not computable (n below 10 per INV-10 next_test), so even a clean cohort base rate cannot move that decision in either direction; the 23 other open rows have no named decision that outranks this one or are access-limited or wet-lab. Perimeter if ever taken: free lawful routes, one delegate, predictions first, 10 papers or the first proof-of-work/bot check as stop; stop result = counts per child where reported, else abstention.",
+  "CLOSE_WHEN": "WAIT ends when an awaited event occurs.",
+  "AWAITED_EVENT": "(a) a new WWOX case report with both a symptomatic and a developmental endpoint that brings the pooled count to 10 or more (INV-10 trigger), or (b) ADV/operator names a decision that outranks the rest, or (c) HE answers the owner question on the K2P rows/pH axis, or (d) a lawful route to a blocked decisive source (IT45-Q07 primary, VU6080824 SI) appears.",
+  "HOW_CHECKED": "each hourly recall: git fetch and look at portfolio radar rows and the open_questions_map last_touched dates; python3 framework/scripts/strategic_advisor.py portfolio; unread_gold.py --mechanism for new items.",
+  "AUTONOMY_TRIAL_NOTES": {
+    "delegates": "none",
+    "tokens_of_delegates": 0,
+    "waits_interruptions_restarts_human_interventions": [
+      "none"
+    ]
+  }
+}
