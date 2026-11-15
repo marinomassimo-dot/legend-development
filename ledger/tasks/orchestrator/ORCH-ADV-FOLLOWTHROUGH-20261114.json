@@ -348,7 +348,7 @@
      "evidence": "Instruction written in the roadmap seat; prompts sent after this landing."
     },
     {
-     "step": "Standing: each hourly tick and each delivery: read session states and commits; if two or more of IT, SCI, HE are idle and no written reason names an awaited event that has not occurred, send continuation prompts; record the check and the reasons in the trial log",
+     "step": "Standing, permanent (operator 2026-11-15, not tied to any prompt): at each recall and each delivery read the real state (sessions, last commit by actor, open records and awaited events); direct AND monitor AND help: if two or more of IT, SCI, HE are idle without a written reason naming an awaited event that has not occurred, send continuation prompts; find and remove what blocks a stuck session (stale record wait, wrong premise, missing input, duplicate, access state); address a role only if live (route), else keep a conditional request (Mirror: RP-022); record the check and its reasons in the trial log",
      "status": "BLOCKED",
      "owner": "orchestrator",
      "blocker": "standing check; recall job 477df2a9 (hourly :17); resolves only on an operator PAUSE, STOP or a new instruction"
@@ -605,6 +605,10 @@
    {
     "utc": "2026-11-15T13:3xZ",
     "event": "human intervention (the fourth of this window): the operator's permanent and durable instruction, to be written in the repository: do not let almost all sessions stand idle; check the execution and send prompts to continue the tasks in the direction judged best to improve the harness and the scientific work, deepen candidates and tackle open questions. Written in the Operator roadmap section (dated line, 'PERMANENT AND DURABLE'). Execution check at 13:27Z that prompted it: no commit on origin/main since IT's 12:40Z (47 minutes); IT, SCI and HE idle; IT had said it would continue with WO-32 and IT49-Q06 remainders and had not (no record, no commit). Prompts sent to the three sessions the same hour (see OBJ_19)."
+   },
+   {
+    "utc": "2026-11-15T13:5xZ",
+    "event": "human intervention (the fifth of this window): the operator, pleased with the proactive and directive behaviour, asks that it become a permanent and durable habit not tied to their prompt: to direct the team (Orchestrator, Scientist, Harness Engineer, Mirror) directives are not enough, the presidio monitors the execution and helps when sessions are stuck. Recorded in the roadmap seat (dated line), in the presidio's memory (feedback direct-and-monitor-the-team) and as a standing step (OBJ_19); HE asked to embed it in the skill, agent definition and recall text. Mirror: mandate_watch route says UNRESOLVED (no live session and no record bound to it; its only recorded task is an ex-post review of 2026-09-11); not prompted; a conditional ex-post review request was queued in the portfolio as RP-022 listing the landings consumed with one reader only."
    }
   ]
  }
