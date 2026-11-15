@@ -64,6 +64,21 @@
       "verdict": "PASS",
       "tests": 136,
       "log": "/tmp/legend-meeting-advisor-tests-final.log"
+    },
+    {
+      "scope": "Frozen a8b7b66961bab83c4430f53e150101f576279064 complete inventory",
+      "verdict": "INTERRUPTED_WITHOUT_VERDICT",
+      "started_targets": 56,
+      "completed_green_targets": 55,
+      "evidence": "/tmp/legend-meeting-battery.json"
+    },
+    {
+      "scope": "Integration of concurrent HE60 permanent monitoring and direct-help work",
+      "verdict": "PASS",
+      "advisor_tests": 138,
+      "section_reference_tests": 13,
+      "evidence": "/tmp/legend-meeting-merged-advisor.log",
+      "note": "Preserved session activity, direct-help routing, operator roadmap instructions and the existing recall while adding MEETING."
     }
   ],
   "SESSION_LEARNING_REVIEW": {

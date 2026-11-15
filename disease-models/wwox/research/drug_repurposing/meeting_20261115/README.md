@@ -35,8 +35,10 @@ The first Advisor test run failed three inherited text-count assertions because 
 now carries a third command. The tests now verify the actual tick/meeting/evaluate routes to
 one campaign and linked-worktree refusal rather than a fixed number of command mentions.
 
-Full frozen-candidate inventory, exact final publication and native meeting follow-through
-are recorded in `ledger/tasks/plan/PLAN-MEETING-20261115.json` as observed. No live meeting,
+The first full inventory on a8b7b6696 was interrupted without verdict after 55 green
+completed targets (56 started); its retained log is not a PASS. After integration of HE60,
+138 Advisor tests and 13 section-reference tests passed. Later full-inventory verification,
+exact final publication and native meeting follow-through are recorded in `ledger/tasks/plan/PLAN-MEETING-20261115.json` as observed. No live meeting,
 scientific benefit or final CI success is claimed by these fixture results.
 
 ## Boundaries and reversibility
