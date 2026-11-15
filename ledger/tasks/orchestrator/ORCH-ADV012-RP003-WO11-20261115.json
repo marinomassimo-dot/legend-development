@@ -1,0 +1,19 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-ADV012-RP003-WO11-20261115",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "NORMAL",
+  "OBJECTIVE": "ADV-012 (Advisor evaluation 14): (a) RP-004 contrast as an open-question row: answered by IT's close of ORCH-RP004-LENS (no row, no INV-09 E04 note; the paper has no tau readout); (b) one RP-003 draw from open_questions_map.tsv with a named decision, free lawful route, zero spend.",
+  "START_UTC": "2026-11-15T11:25:00Z",
+  "MANDATE_STATE": "COMPLETE",
+  "RESULT_SO_FAR": "Row WO-11 (Mierau 2004, PMID 15492224): the PMC article page served the body; ifenprodil-sensitive share of the L4-evoked NMDA EPSC in mouse barrel L2/3 at P13-P15 whisker-intact = 14% (interval 0-34%, n 15 control / 10 treated); P6-P8 53% (43-61%). Evoked synaptic current at room temperature, not the burst-slice isolated current: WO-10 stays open. WO-11 CONCLUDED; receipt FTR-20261115-15492224-01 partial; 10/10 quotes mechanical. Not chosen and why in wo11_mierau_it55_20261115/README.md. Premises corrected there. No ranking, need, candidate or frozen package touched.",
+  "CLOSE_WHEN": "WO-11 answered or abstained, receipt recorded, map row updated, landed.",
+  "AUTONOMY_TRIAL_NOTES": {
+    "delegates": "none",
+    "tokens_of_delegates": 0,
+    "waits_interruptions_restarts_human_interventions": [
+      "ADV-012.md absent from development/main (root checkout only); read from root; no human intervention"
+    ]
+  }
+}
