@@ -117,3 +117,6 @@ The raw ChEMBL, GtoPdb, DGIdb and DrugCentral responses of this package (35 MB) 
 
 ## Update 2026-11-15 (WO-11, ADV-012): a measured f, conditional
 Section 10 item 3 said f had "no P13-P17 value" and that Mierau 2004 (PMID 15492224) was read at abstract level only. The body was read on 2026-11-15 (`../wo11_mierau_it55_20261115/`, receipt `FTR-20261115-15492224-01`, partial): in whisker-intact mouse barrel cortex L2/3, 3 uM ifenprodil reduced the L4-evoked NMDA EPSC by **14% (bootstrap interval 0-34%) at P13-P15** (control n = 15, treated n = 10), against 53% (43-61%) at P6-P8. **Conditional, not the burst-slice current:** an evoked synaptic current read at 50 ms and +40 mV, room temperature, 2 mM Mg2+, between-cell design, one concentration; WO-10 (the isolated current in burst slices at P13-P17) stays open. No cell, percentage or card of this package was edited; the withdrawn percentages stay withdrawn.
+
+## Update 2026-11-15 (pointer to the WO-11 wording correction)
+Section 10 item 3 (above) carries "read at 50 ms and +40 mV". The 50 ms is stated for the NMDA amplitude and +40 mV only for the A/N ratio; the ifenprodil passage states no holding potential, and the drug was also in the bath during recording. See wo11_mierau_it55_20261115/README.md, Update 2026-11-15. The value itself is unchanged.
