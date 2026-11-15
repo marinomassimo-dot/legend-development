@@ -613,6 +613,10 @@
    {
     "utc": "2026-11-15T13:5xZ",
     "event": "HE60 landed the durable rule (section 12 'Monitor and help; do not only direct', skill and agent pointers, recall text, the tick's activity block with per-session status, quiet minutes and idle_share), and corrected two of my premises: git cannot give a last commit by actor (one author for every commit; the per-actor signal is the runtime session list plus the transcript mtime), and the 18-minute lag I attributed to an unresolved wait was IT's two refused pushes. Both corrected in the roadmap line, my memory and this record. I reconciled my cron job with the changed canonical recall text (CronDelete 477df2a9, CronCreate 228f2c33, same cadence). Activity block read at 13:5xZ: idle_share 1/4 (IT idle 0 min quiet), HE, SCI and ADV busy; two old sessions quiet 18,239 and 9,574 minutes are listed and not counted. HE declined presidio-decision SENT anchoring (b) and picked (c): README section 13 row routing the proof-of-work page to the existing pmc_pow_fetch.py (not run on the PMC12434521 SI: IT's retrieval)."
+   },
+   {
+    "utc": "2026-11-15T15:22Z",
+    "event": "MEETING (cross-session transport section 13, an operator instruction given in the Harness PLAN session, recorded in the roadmap) became due at the 15:21Z recall on a Harness event request (tick.meeting DUE, state independent of the evaluation verdict, which I held); opened with meeting --open: record advisor_pilot_20261113/meetings/MEETING-20261115T152159Z-jaq44mq3.md (agenda derived from existing records, no participant statements invented); invitations sent to IT, SCI and HE (routes RESOLVED) with four short questions each (priority-ordered pending work, blockers, prospects with first step and stop rule, corrections to the presidio's direction); Mirror route UNRESOLVED, not addressed, recorded as absent; replies asynchronous, none required; the round closes with --close and the notes verbatim. Next meeting due 21:21:59Z by the six-hour rule."
    }
   ]
  }
