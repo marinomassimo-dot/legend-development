@@ -1,0 +1,19 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-IT49Q11-VU6080824-20261115",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "NORMAL",
+  "OBJECTIVE": "IT49-Q11 (PRESIDIO-006 candidate, ADV go-ahead 2026-11-15): second reading of the VU6080824 paper (PMID 40959251, PMC12434521) by the PMC article page; named decision: the INV-18 Kir2 tool arms; predictions frozen before reading.",
+  "START_UTC": "2026-11-15T12:36:00Z",
+  "MANDATE_STATE": "COMPLETE",
+  "RESULT_SO_FAR": "Body read from the PMC page (11/11 verbatim rows); 5s: MPC IC50 0.35 uM (ML133 1.51 in the same assay), thallium-flux <6 uM, selective over Kir1.1/Kir4.1 up to 10 uM, 1-3-fold over Kir2.2/2.3 (stated for its analogs as similar), no hERG/Kir6.2/Kir7.1 in the main text, no neuron data: a family-level Kir2.1 inhibitor and rodent tool, not an isoform probe. SI is PMC-hosted but its request met a proof-of-work check (not solved): counter-screen unread. Scores F1 F4 HELD, F5 HELD with qualifier, F2 MISSED in part, F3 MISSED on hosting. Row IT49-Q11 NARROWED. Receipt FTR-20261115-40959251-01 (builds on -71).",
+  "CLOSE_WHEN": "body read, scored, receipt recorded, row noted, landed.",
+  "AUTONOMY_TRIAL_NOTES": {
+    "delegates": "none",
+    "tokens_of_delegates": 0,
+    "waits_interruptions_restarts_human_interventions": [
+      "one proof-of-work check on the SI request: stopped, not solved; receipt needed prior_receipt (first rejected dry-run), fixed"
+    ]
+  }
+}
