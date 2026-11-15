@@ -381,6 +381,8 @@ mouse"*.
 genotype-specific: Figure 7b marks it non-significant in +/+ and +/− and significant only in −/−.
 The drug with the specificity is the one the paper treats as the also-ran.
 
+> **Superseded for specificity (dated pointer, 2026-11-15, IT; the text above is unchanged).** A later quantification of the same figure (`research/drug_repurposing/fig7_quant_ethosuximide_lithium_sci_20261115/`) reads group means and SEMs only and does not show a null-specific ethosuximide effect: the wild-type and heterozygous panels cannot exclude a proportional effect, and no drug-by-genotype test exists. The current wording is the dated Update in `research/drug_repurposing/cards_early/README.md` ("one reading, interpretation inferred, not verified").
+
 **c. "Elevated" is the wrong word.** Figure 7c prints its densitometry: **total GSK3β is flat**
 (2.2–2.6 in every genotype and region); what falls is inhibitory Ser9 phosphorylation
 (cerebellum 2.7 → 1.3). GSK3β is **dis-inhibited, not more abundant.** CLAIM 016's Summary says

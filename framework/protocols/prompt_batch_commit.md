@@ -393,6 +393,14 @@ the exact tree they are about to land and refuse a STALE surface, naming the com
 that regenerates it. A new generated surface needs a declaration there too (its inputs and its
 check); until it has one, every landing reports it as CHECK_ERROR.
 
+**The drug-repurposing ranking is regenerated the same way (HE62, 2026-11-15).** `ranking.json` stamps the length of the receipt ledger, so every receipt that lands without it is a STALE surface and turned the release workflow red until a person refreshed it:
+
+```bash
+python3 -B disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/ranking_it8.py run
+```
+
+It is declared in `candidate_tree_freshness.py` with its `check` (about 25 s); a change that only moves the count leaves the research order as it was.
+
 **One generated surface is a sealed data file, and regenerating it breaks a seal on purpose.**
 The DisMech Phase-2 sidecar is derived from `CLAIM 016 / 024 / 035`'s registry blocks, so any
 batch that touches one of those claims drifts it:
