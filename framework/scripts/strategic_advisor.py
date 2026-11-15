@@ -1285,8 +1285,13 @@ def portfolio_text() -> str:
 
 
 def previous_outcome_text(campaign: Path) -> str:
-    o = _load_state(campaign).get("last_outcome") or {}
+    state = _load_state(campaign)
+    o = state.get("last_outcome") or {}
     if not o:
+        rejected = state.get("last_invalidated_outcome") or {}
+        if rejected:
+            return ("## Previous outcome superseded\nThe stored decision was invalidated, not silently forgotten. Do not reuse its recommendation.\n"
+                    + json.dumps(rejected, indent=1))
         return "## Previous outcome\nnone recorded (an evaluation before this field existed, or the first one)."
     return "## Previous outcome (what the last evaluation decided; reconsider it when something that bears on it changed, reuse it when nothing did)\n" + json.dumps({k: o.get(k) for k in ("evaluation", "utc", "outcome", "reason", "excluded", "resume_when", "stated", "problem")}, indent=1)
 
@@ -1308,7 +1313,9 @@ def operating_mode_text(campaign: Path) -> str:
 def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
     campaign = Path(campaign)
     states = assignment_states(campaign)
-    prior = sorted((p for p in campaign.glob("P*/assessment.md") if re.fullmatch(r"P\d+", p.parent.name)), key=lambda p: int(p.parent.name[1:]))
+    attempts = sorted((p for p in campaign.glob("P*/assessment.md") if re.fullmatch(r"P\d+", p.parent.name)), key=lambda p: int(p.parent.name[1:]))
+    incomplete = {p.parent.name: why for p in attempts if (why := incomplete_run(campaign, p.parent.name))}
+    prior = [p for p in attempts if p.parent.name not in incomplete]
     parts = ["# Strategic Advisor brief — Stage P (proactive evaluation)", "", "## Snapshot", render_snapshot(snapshot()), "",
              "## Operator roadmap (authoritative; operator instructions prevail over any automatic plan)", roadmap_text() or "(no roadmap section found: say so, and propose nothing beyond keeping the plan)", "",
              "## Campaign limits", json.dumps({k: v for k, v in _budget(campaign).items() if k in ("expires_utc", "max_invocations", "max_assignments", "turn_limit")}), "",
@@ -1325,6 +1332,7 @@ def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
              "Evidence levels are historical transport facts. Current mandate verdicts and their paths are listed separately: TAKEN does not mean still running, RELEASED does not prove consumption. Read the relevant complete record before relying on its state. "
              "The latest saved assessment is historical context; it is not evidence that its old premises remain true.", "",
              f"## Previous assessment\n{prior[-1].parent.name}: `{prior[-1]}` (read it; reuse it when nothing relevant changed)" if prior else "## Previous assessment\nnone", "",
+             "## Incomplete attempts (history, not reusable decisions)\n" + (json.dumps(incomplete, indent=1) if incomplete else "none"), "",
              "## Live harness scouting (daily scout briefing, read by the caller: a feed of opportunities, not of evidence; the weekly candidate tables are stale)", scout_briefing(), "",
              turn_limit_text(campaign), "",
              "## Neutral entry points", render_entrypoints(entrypoints()), "", f"Memory directory (read-only): `{MEMORY_DIR}`", "", "## Output", CONTRACT,

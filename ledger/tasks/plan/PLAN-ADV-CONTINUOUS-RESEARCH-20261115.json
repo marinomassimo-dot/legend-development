@@ -92,6 +92,12 @@
       "scope": "concurrent portfolio merge",
       "verdict": "CORRECTED_BEFORE_LANDING",
       "reason": "The first field merge failed on a new concurrent RP-021 row; a following shell command committed unresolved markers on the task branch. Reconstructed all 21 rows from both parents, with per-field three-way selection, then asserted no markers and git diff --check. That unresolved tree was never used as the main tip or a publication candidate; the failed checkpoint remains in history."
+    },
+    {
+      "scope": "First complete inventory on 9506e1727",
+      "verdict": "INTERRUPTED_WITHOUT_VERDICT",
+      "evidence": "/tmp/legend-adv-continuity-battery-interrupted.json",
+      "reason": "The prospective brief still made the incomplete P11 a reusable prior; corrected before final validation, without modifying the frozen clone."
     }
   ],
   "OPERATIONS": {
@@ -102,7 +108,9 @@
     "prospective_brief": "P11 selected by numeric order; ADV-009 historical TAKEN shown beside current NO_QUEUE record with its path (unknown execution is not inferred as in-flight); current operator integration present",
     "full_inventory_candidate": "9506e1727887b8fa8920485a2f544fe75a22da30",
     "full_inventory_log": "/tmp/legend-adv-continuity-battery.log",
-    "full_inventory_state": "RUNNING"
+    "full_inventory_state": "REPLACED_WITHOUT_VERDICT",
+    "live_repair": "2026-11-15T08:13:34Z: supported tick superseded P11 in actual host state, preserving original outcome; EVALUATE pending, no model launched",
+    "new_targeted_tests": "114 Advisor tests PASS, including the rejected previous-attempt context"
   },
   "SELF_DIAGNOSIS": {
     "verdict": "PASS with declared pre-existing scientific reading gaps; no full-text scientific read claimed by this Harness task",
