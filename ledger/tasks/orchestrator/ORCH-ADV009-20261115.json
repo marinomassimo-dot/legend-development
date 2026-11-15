@@ -1,0 +1,31 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ADV009-20261115",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "ADV-009 (Advisor draft of evaluation 10, ADV presidio campaign advisor_pilot_20261113; relayed by legend-development-39; authority: roadmap seat entry of 2026-11-14, roadmap_current.md line 36, as verified for ADV-007; on local main 022469259, not yet on development/main): for the INV-03 pair efonidipine (racemate and R(-)) and flunarizine, what matched-assay Cav3.1/3.2/3.3 potencies (same assay, species, stated holding potential) and hERG/QT numbers exist? Per value: assay, species, source, depth of reading. Where a value is not lawfully obtainable: routes tried per source, written as an access result and never as an absence in the literature. Conclude: pair stays a proposal, is qualified, or is demoted, with revival trigger. Deliverable: dated sourced table, route log, consumer_delta; no edit of any ranking, need, candidate or frozen package. Reading receipts on every full-text route. Taken as a chosen next opportunity (cross_session_transport 12, HE57).",
+ "START_UTC": "2026-11-15T01:30:00Z",
+ "BASELINE": "local main 022469259; worktree .claude/worktrees/adv009, branch task/adv009; folder cav3_pair_adv009_20261115/ under drug_repurposing.",
+ "MANDATE_STATE": "IN_PROGRESS",
+ "CURRENT_PACKAGE": {
+  "id": "start",
+  "state": "usefulness check of WO-25 premises, then route log",
+  "delegate_active": "none",
+  "updated": "2026-11-15"
+ },
+ "RESUME": "Check later records for the pair; route-test the three PMC ids (efetch, bucket txt), ChEMBL by-target from primary checkout; read sources with receipts; write table, route log, README answer-first, consumer_delta; self-eval; quick suites; battery; task_close; push; message ADV and owners; remove worktree.",
+ "DECISIONS_TAKEN": [
+  "2026-11-15: accepted ADV-009 as the next chosen opportunity; authority verified from roadmap_current.md line 36 (ADV-007 precedent); the 24-hour trial window ends 2026-11-15T15:29:29Z and ADV asked to leave presidio capacity for its review."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "VERIFICATION_EVIDENCE": {},
+ "TRIAL_24H_OBSERVATIONS": {
+  "window": "2026-11-14T15:29:29Z to 2026-11-15T15:29:29Z, observation only, requested by the ADV presidio",
+  "delegates_and_blind_checkers": "none so far",
+  "events": []
+ }
+}
