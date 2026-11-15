@@ -759,6 +759,10 @@
   "src": "en",
   "text": "position unchanged from IT20 (rank 5): Position unchanged from IT20. The ten-row ceiling does not displace a row that carries a risk flag or human clinical reports in favour of a conditional probe (the rule stated in the curation block of the context), so this row stays at rank 5 and the two new IT21 conditional probes sit at rank 6, below the line. New IT21 input: the inositol-monophosphatase route to the lithium effect is DISFAVOURED_BY_SIGN_PRECEDENT (an analogy from the lithium-pilocarpine model, not a measurement in the Wwox assay; see what the generator rules out). That result is not what supports this row's concern that the effect is not specific to WWOX loss: the concern comes from the +/+ arm of Cheng 2020 Figure 7d, where lithium suppresses the seizure stage as in the null. Cheng 2020 also ran a pilocarpine model in Wwox mice, so the objection that the two provocations differ is testable in the same system; the inositol arm of that proposal is folded into this row's next test."
  },
+ "5cf87de70e15": {
+  "src": "en",
+  "text": "That the lost current, if any, is Ba2+-sensitive and of a family an opener reaches: TREK and TRAAK are blocked only at millimolar Ba2+, and the one Kir2 opener reached is Kir2.1-only with no neuronal data; capacitance by genotype is unmeasured. [SCI49] Direct-mechanism Kir2.1 activators acting through a channel cysteine (Cys311) exist in recombinant cells (three marketed drugs, named in the package) and none is tested in neurons; one of them spares the Kir2.1+2.2 and 2.1+2.3 heteromers and is also a Na+ channel blocker; two are at abstract depth; the claimed opener listed here rests on one laboratory in hypoxic CHO cells; direction of benefit unresolved. [IT 2026-11-15] Ba2+ step: no primary Ba2+ concentration-response in the 50-200 micromolar window was found for TASK-1, TASK-3 or THIK-1 (TASK-1 was tested only from 0.3 to 10 millimolar); the family-level statement above is unchanged."
+ },
  "5d29c19f1ea2": {
   "src": "en",
   "text": "Alternatives the package states: Two readings of a translation difference in WWOX-deficient cells: (1) phospho-eIF2alpha is the brake (ISR route); (2) if not, a GSK3-site brake exists (CARD-A1 inferred_steps). Within reading (2) the sources record further branches: GSK3-other through the mTOR branch, or an unnamed substrate (un registro del repository (non incluso in questo pacchetto) step 3b). Counter-evidence on ISRIB itself: an effect at basal state in some sources and none in others, no ATF4 change in rat cortical cultures, no benefit in one toxic-protein model (CARD-A1 main_counterevidence). A probe response separates (1) from (2) only if the engagement control works and phospho-eIF2alpha is measured. || Other rows of the package, not classified by it as rivals, complementary or compatible: ISR2: Only if the protein-level sign is high, a pre-registered panel (INV-02 next_test): an eIF2B activator and kinase-level loss against… || ISR3: INV-02 next_test (IT30 design hypothesis): if a potentiation arm is tried, make it genetic (a PPP1R15B knockdown) or chemical with…"
@@ -1519,10 +1523,6 @@
   "src": "en",
   "text": "Premise measurement: the transcript deficit is observed in bulk and in one nuclear pool per arm; cell number, identity, intrinsic properties, synaptic input and circuit function are not measured at animal level by any file read here (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
  },
- "a98dc83eb0c1": {
-  "src": "en",
-  "text": "That the lost current, if any, is Ba2+-sensitive and of a family an opener reaches: TREK and TRAAK are blocked only at millimolar Ba2+, and the one Kir2 opener reached is Kir2.1-only with no neuronal data; capacitance by genotype is unmeasured. [SCI49] Direct-mechanism Kir2.1 activators acting through a channel cysteine (Cys311) exist in recombinant cells (three marketed drugs, named in the package) and none is tested in neurons; one of them spares the Kir2.1+2.2 and 2.1+2.3 heteromers and is also a Na+ channel blocker; two are at abstract depth; the claimed opener listed here rests on one laboratory in hypoxic CHO cells; direction of benefit unresolved."
- },
  "aa2f9a5c828a": {
   "src": "en",
   "text": "Add a perforated or cell-attached arm with ATP undisturbed to the potassium ladder, with an opener, a sulfonylurea and lactate or pyruvate add-back, stating pipette ATP and glucose."
@@ -1634,6 +1634,10 @@
  "b607075b73e6": {
   "src": "en",
   "text": "A TREK-1 (and TASK-1) pool closed by a lower interstitial pH is part of the Wwox Rin and rest pair"
+ },
+ "b6219c404c6e": {
+  "src": "en",
+  "text": "The glutamate-release modulator active on K2P channels also blocks sodium channels and glutamate release at lower concentrations and needs about 100 micromolar for the K2P effect; its activation of one family member is transient; some potencies rest on a review, not a primary paper; selectivity of the research activator against other channels is not fully reached. [IT 2026-11-15] The one primary EC50 reached for that modulator (139.4 micromolar) is a native current in mouse sympathetic neurons, attributed mainly to TREK-2, not a cloned TREK-1 or TRAAK value, and the link from the review row to that paper is an inference; the K2P tools are single-pH measurements, none tested at a second pH."
  },
  "b642851c0b57": {
   "src": "it",
@@ -2322,9 +2326,5 @@
  "ff88b54a40c8": {
   "src": "en",
   "text": "Up: lactate raised in the knockout and a burst fall that tracks lactate supply. Down: lactate unchanged, or a fall explained by GABA-A potentiation or pH."
- },
- "ffe61ba5c2e6": {
-  "src": "en",
-  "text": "The glutamate-release modulator active on K2P channels also blocks sodium channels and glutamate release at lower concentrations and needs about 100 micromolar for the K2P effect; its activation of one family member is transient; some potencies rest on a review, not a primary paper; selectivity of the research activator against other channels is not fully reached."
  }
 }

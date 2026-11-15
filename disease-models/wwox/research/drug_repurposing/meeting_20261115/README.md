@@ -85,9 +85,29 @@ and deferred a replay while SCI was occupied. These are concrete coordination de
 not evidence of better biological predictions. The next round is due **21:21:59 UTC
 (22:21:59 Europe/Rome)**, or earlier on a material event. This first round demonstrates the
 event route, not a six-hour timer firing or multi-day uptime. One existing hourly recall was
-observed; its list view clips the prompt, so that display alone does not verify its full text.
+observed running the current tick. Its creation payload predates the explicit MEETING clause;
+a live refresh to the current factory text was not observed. The permanent procedure handles
+`tick.meeting` independently and restores or replaces only the owned recall when its text changes.
 
 The shared publication metadata was also regenerated after the concurrent receipts:
 all 69 scientific unit objects were unchanged; only ranking summary metadata moved. Later
 scientific changes merged from peers retain their own provenance and are not attributed to
 MEETING.
+
+## Closing verification
+
+All **252 inventory targets** on frozen `a104be5f28db4c73276db6e22411b1704bc9040f`
+were executed successfully across two recorded runs: 226 green targets before the interrupted
+browser target, then that target and the remaining 25. The interrupted complete attempt stays
+`INTERRUPTED_ENVIRONMENT_WITHOUT_FULL_VERDICT`; the resumed 26-target tail is PASS WITH SKIPS.
+The aggregate records 43 individual skipped cases, mainly absent local corpus/cache/input
+fixtures and platform cases, with the raw logs' hashes in the task record. This is complete
+coverage across runs, not a new verdict for the interrupted attempt or the later integration.
+
+The browser limitation was measured: its Snap mount namespace could not see a host temporary
+HTML file. A private temporary directory under the browser's own common folder restored file
+access; the same browser read both a local probe and the dashboard with its sandbox enabled.
+No browser code, test or security setting was weakened. The final integration separately
+passed 139 Advisor tests and 30 freshness tests; subsequent peer scientific updates preserve
+that code and receive targeted publication/translation checks. Native rebuilt publication
+files are retained intact. Full final CI success is not inferred from these local results.

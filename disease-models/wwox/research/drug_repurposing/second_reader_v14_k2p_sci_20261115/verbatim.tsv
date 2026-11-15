@@ -1,0 +1,9 @@
+id	source_file	statement	quote
+Q1	PMC6623616.txt	EC50 stated in the text	a dose–response curve for riluzole in the blockers solution provided an EC 50 of 139.4 μ m (supplemental Fig. 1
+Q2	PMC6623616.txt	whole-cell attribution is TREK-1 and/or TREK-2, TRAAK not excluded	These initial results strongly suggested that I RIL was transported mainly through K2P TREK-1 and/or TREK-2 channels in SCG neurons, although the variability in the current decline over long-term exposure to riluzole prevented the involvement of TRAAK from being discarded.
+Q3	PMC6623616.txt	TREK-2 attribution rests on cell-attached patches	In 12 of these 16 patches (75%), a potassium channel was recorded with properties nearly identical with those reported for TREK-2
+Q4	PMC6623616.txt	denominator of the patches	In 16 of 32 cell-attached patches from mSCG neurons, we detected TREK-like channel activity
+Q5	PMC6623616.txt	authors' own summary sentence	we show here that the riluzole-activated current is mainly transported through TREK-2 channels in sympathetic neurons
+Q6	PMC6623616.txt	preparation and temperature	Electrophysiological recordings were performed under continuous perfusion (∼10 ml/min) at room temperature
+Q7	PMC6623616.txt	mouse SCG neurons, perforated patch	Perforated-patch whole-cell recording.
+Q8	PMC3972372.txt	THIK-1 Ba2+ single concentration	bupivacaine (100 μM), quinidine (50 μM) and Ba 2+ (3 mM) were the only three that produced ~50% or greater inhibition of THIK-1 current at the concentrations used
