@@ -9,24 +9,38 @@
  "BASELINE": "local main cda299783 (development/main same at fetch); worktree .claude/worktrees/p004b, branch task/presidio004b.",
  "MANDATE_STATE": "IN_PROGRESS",
  "CURRENT_PACKAGE": {
-  "id": "part-B-reference",
-  "state": "reference mapping built and committed (cc39da185) before any HE output existed on main; comparison waits for HE's trial folder; PRESIDIO-005 next",
+  "id": "part-B-compared-005-written",
+  "state": "part B compared (15/15 agree); 005 written; battery next",
   "delegate_active": "none",
   "updated": "2026-11-15"
  },
  "RESUME": "Part B comparison: when HE's trial folder is on main, read ONLY then, compare row by row with mapping_reference.tsv, write comparison_with_he_trial.md. PRESIDIO-005: note + consumer delta from held files. Then verify_run battery on the landing SHA waited by PID, record evidence, task_close, safe_push, ls-remote, message ADV, IT and HE separately; remove the worktree.",
  "DECISIONS_TAKEN": [
   "2026-11-15: accepted both assignments; part B first because it must precede HE's output. At build time main held no HE trial folder (listing of the drug_repurposing directory only; no HE file opened). All 15 rows resolve uniquely via ENSG, cross-checked via previous symbol and Entrez id; commit cc39da185 carries the time.",
-  "2026-11-15: no blind verifier and no delegate (assignments say none required; the comparator is the independence)."
+  "2026-11-15: no blind verifier and no delegate (assignments say none required; the comparator is the independence).",
+  "2026-11-15: HE's folder landed as e16c42b70; compared row by row (15 of 15 agree on authors' symbol, ENSG, direction, log2FC; no disagreement); comparison_with_he_trial.md and comparison_rows.tsv added to the part B folder. The first battery (948f71d810) was stopped by me (SIGTERM, INTERRUPTED) so that one battery covers the comparison files."
  ],
  "DELEGATIONS": [],
  "ESCALATIONS": [],
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
- "VERIFICATION_EVIDENCE": [],
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261115-073627-95c3fc7d",
+   "label": "presidio004b005-landing",
+   "sha": "948f71d8102e4484ee83aa825b4da100a55cd850",
+   "state": "INTERRUPTED",
+   "exit_code": -15,
+   "evidence_dir": "/tmp/legend-verify-keep/20261115-073627-95c3fc7d",
+   "log_sha256": "c14c2123465d01c8e128dcacd1039b093cea79c3ef8a9837a163605867ca670b",
+   "clone": "REMOVED"
+  }
+ ],
  "TRIAL_24H_OBSERVATIONS": {
   "window": "2026-11-14T15:29:29Z to 2026-11-15T15:29:29Z, observation only, requested by the ADV presidio",
   "delegates_and_blind_checkers": "none",
-  "events": []
+  "events": [
+   "2026-11-15: battery 20261115-073627-95c3fc7d on 948f71d810 interrupted by me at about 15 minutes (SIGTERM) to add the comparison files; relaunched on the new SHA."
+  ]
  }
 }
