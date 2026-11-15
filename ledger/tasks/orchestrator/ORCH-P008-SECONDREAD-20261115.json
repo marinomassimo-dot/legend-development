@@ -1,0 +1,26 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-P008-SECONDREAD-20261115",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "PRESIDIO-008 (queued by the ADV presidio 2026-11-15, not operator-given): second read of IT29-P12 (IT30 package) and IT49-Q02 (HE50 package), classed ANSWERED by the PRESIDIO-006 staleness pass, from the originals by a reader who wrote neither; first state what each map row asked against what the source answers; no map, ranking or card edit; deliver proposals to IT, HE and ADV informed.",
+ "START_UTC": "2026-11-15T17:40:00Z",
+ "BASELINE": "development/main 3e1bde7af and later; worktree .claude/worktrees/p008, branch task/p008-second-read.",
+ "MANDATE_STATE": "IN_PROGRESS",
+ "CURRENT_PACKAGE": {
+  "id": "read-written",
+  "state": "README, two recheck scripts with runs, consumer_delta written; landing next",
+  "delegate_active": "none",
+  "updated": "2026-11-15"
+ },
+ "RESUME": "Folder second_read_presidio008_sci_20261115/ complete. Remaining: quick checks, task_close, push (ls-remote before retry), message IT, HE and ADV; close ORCH-IT4445 record DONE in the same landing.",
+ "DECISIONS_TAKEN": [
+  "2026-11-15: accepted PRESIDIO-008 (no result since it was written changes its usefulness). Sources of the NCC read were not in the repository (the assignment assumed they were): they sit in another session's scratchpad, hash-matched, copied under files/fulltext/presidio008_20261115/ (gitignored); no outside request was made. No blind verifier (one reader, weak point named). Nothing edited in the map, ranking, cards or frozen packages. Verdict: IT49-Q02 holds; IT29-P12 holds for the first sentence, closure overstated (second sentence untouched; paper 1 Table 1 supplies six agreements incl. tamoxifen)."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "VERIFICATION_EVIDENCE": []
+}
