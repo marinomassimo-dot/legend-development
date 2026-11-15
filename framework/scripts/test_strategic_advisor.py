@@ -681,6 +681,102 @@ class Continuous(Proactive):
         self.assertFalse((self.campaign / sa.CONTINUOUS).exists())
 
 
+    # ---- HE64: a hold recorded by the host, without a model run -------------------------------------------------------------------------------------------------------------------------------
+
+    def held_campaign(self) -> None:
+        """A continuous campaign with one evaluation behind it and one unevaluated delivery pending: the state in which the real tick re-fired EVALUATE at every recall."""
+        self.authorise()
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
+        self.assertEqual(sa.evaluate(self.campaign), 0)
+        self.at("2026-11-13T16:00:00Z")
+        self.land("SCI70 record COMPLETE; package delivered")
+
+    def test_without_a_hold_the_same_pending_digest_re_fires_every_tick(self) -> None:
+        """The measured obstacle (2026-11-15, a copy of the real state): no evaluation completes, so last_digest never moves and every hourly tick says EVALUATE."""
+        self.held_campaign()
+        first = sa.tick(self.campaign)
+        self.at("2026-11-13T17:00:00Z")
+        second = sa.tick(self.campaign)
+        self.assertEqual((first["verdict"], second["verdict"]), ("EVALUATE", "EVALUATE"))
+        self.assertEqual(first["digest"], second["digest"])
+
+    def test_a_hold_consumes_what_it_lists_and_is_not_an_evaluation(self) -> None:
+        self.held_campaign()
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
+        attempts, last_eval = len(sa._attempts(self.campaign)), sa._load_state(self.campaign)["last_evaluation_utc"]
+        meeting = sa._state_path(self.campaign).with_name("meeting.json")
+        meeting_before = meeting.read_bytes() if meeting.exists() else None
+        self.at("2026-11-13T17:00:00Z")
+        self.assertEqual(sa.main(["hold", "--campaign", str(self.campaign), "--reason", "both intakes blocked, queue exhausted", "--resume-when", "record:ORCH-A=COMPLETE"]), 0)
+        rows = [json.loads(line) for line in (self.campaign / "holds.jsonl").read_text(encoding="utf-8").splitlines()]
+        self.assertEqual(len(rows), 1)
+        self.assertTrue(any("SCI70 record COMPLETE" in e for e in rows[0]["events_cleared"]), rows[0])        # nothing silently discarded: the cleared events are in the record
+        self.assertGreaterEqual(rows[0]["commits_cleared"], 1)
+        self.assertEqual((rows[0]["reason"], rows[0]["resume_when"]), ("both intakes blocked, queue exhausted", "record:ORCH-A=COMPLETE"))
+        self.at("2026-11-13T18:00:00Z")
+        quiet = sa.tick(self.campaign)
+        self.assertEqual((quiet["verdict"], quiet["events"]), ("NONE", []))
+        self.assertTrue(quiet["presidio"].startswith("HELD by host at 2026-11-13T17:00:00Z: both intakes blocked"), quiet["presidio"])
+        self.assertIn("resume_when record:ORCH-A=COMPLETE", quiet["presidio"])
+        self.assertEqual(len(sa._attempts(self.campaign)), attempts)                                          # no invocation, no P<n>, no budget
+        self.assertEqual(sa._load_state(self.campaign)["last_evaluation_utc"], last_eval)                     # the evaluation clock is untouched
+        self.assertEqual(sa._load_state(self.campaign)["last_outcome"]["evaluation"], "HOLD")
+        self.assertIn("holds recorded 1 (not evaluations", sa.status(self.campaign))
+        self.assertEqual(meeting.read_bytes() if meeting.exists() else None, meeting_before)                  # the meeting cache is not touched
+
+    def test_a_new_event_after_a_hold_re_fires_within_the_hour(self) -> None:
+        self.held_campaign()
+        self.at("2026-11-13T17:00:00Z")
+        self.assertEqual(sa.main(["hold", "--campaign", str(self.campaign), "--reason", "waiting for the intake record", "--resume-when", "record:ORCH-A=COMPLETE"]), 0)
+        self.at("2026-11-13T17:30:00Z")
+        self.land("SCI71 record COMPLETE; package delivered")
+        new = sa.tick(self.campaign)
+        self.assertEqual(new["verdict"], "EVALUATE")
+        self.assertEqual([e for e in new["events"] if e.startswith("delivery:")], [e for e in new["events"] if "SCI71" in e])     # only the new delivery, not the cleared one
+        self.assertFalse(any("SCI70" in e for e in new["events"]))
+
+    def test_a_hold_ends_at_its_resume_condition(self) -> None:
+        self.held_campaign()
+        self.at("2026-11-13T17:00:00Z")
+        self.assertEqual(sa.main(["hold", "--campaign", str(self.campaign), "--reason", "waiting for ORCH-A", "--resume-when", "record:ORCH-A=COMPLETE"]), 0)
+        self.at("2026-11-13T22:00:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")
+        (self.repo / "ledger/tasks/orchestrator/ORCH-A.json").write_text(json.dumps(_record("ORCH-A", "COMPLETE")), encoding="utf-8")
+        self.at("2026-11-13T23:00:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
+
+    def test_a_hold_is_refused_without_a_reason_an_external_form_a_pending_event_or_while_an_evaluation_runs(self) -> None:
+        def attempt(reason: str, resume: str) -> int:
+            with patch("sys.stderr", new=__import__("io").StringIO()):
+                return sa.main(["hold", "--campaign", str(self.campaign), "--reason", reason, "--resume-when", resume])
+        self.authorise()
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
+        sa.evaluate(self.campaign)
+        self.at("2026-11-13T16:00:00Z")
+        self.assertEqual(attempt("quiet", "record:ORCH-A=COMPLETE"), 2)                                       # nothing pending: nothing to hold
+        self.land("SCI72 record COMPLETE; package delivered")
+        self.assertEqual(attempt("  ", "record:ORCH-A=COMPLETE"), 2)                                         # no reason
+        self.assertEqual(attempt("r", "after:2026-11-14T00:00:00Z"), 2)                                       # a time alone would make a hold a timer for silence
+        self.assertEqual(attempt("r", "event"), 2)
+        self.assertEqual(attempt("r", "nonsense"), 2)
+        self.assertEqual(attempt("r", "record:ORCH-NOT-THERE=COMPLETE"), 2)                                   # a record that does not exist would never resume
+        state = sa._load_state(self.campaign); state["running"] = sa._pid_identity(os.getpid()); sa._save_state(self.campaign, state)
+        self.assertEqual(attempt("r", "record:ORCH-A=COMPLETE"), 2)                                           # an evaluation is running
+        self.assertFalse((self.campaign / "holds.jsonl").exists(), "every refusal must leave no record")
+        state["running"] = ""; sa._save_state(self.campaign, state)
+        self.assertEqual(attempt("r", "path:disease-models/wwox/research/drug_repurposing/roadmap_current.md~Mission v2"), 0)   # a named path with text is an external form
+
+    def test_the_test_never_touches_the_real_campaign_state(self) -> None:
+        self.assertTrue(str(sa.STATE_DIR).startswith(str(self.tmp)), sa.STATE_DIR)
+        real = Path.home() / ".local/state/legend/advisor_pilot"
+        before = sorted((p.as_posix(), p.stat().st_mtime_ns) for p in real.rglob("*") if p.is_file()) if real.exists() else []
+        self.held_campaign()
+        self.at("2026-11-13T17:00:00Z")
+        sa.main(["hold", "--campaign", str(self.campaign), "--reason", "r", "--resume-when", "record:ORCH-A=COMPLETE"])
+        after = sorted((p.as_posix(), p.stat().st_mtime_ns) for p in real.rglob("*") if p.is_file()) if real.exists() else []
+        self.assertEqual(before, after)
+
+
 class ValueContinuity(Continuous):
     """HE57: the end of the executable queue is a moment to choose what comes next, not to wait for an event. A wait states what it excluded and when it resumes; the same situation is not evaluated twice;
     the advisor's own updates are not news. Fixtures: they do not show that a model writes the outcome block or ranks well."""
