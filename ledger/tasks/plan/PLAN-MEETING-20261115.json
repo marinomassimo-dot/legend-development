@@ -131,6 +131,22 @@
       "tail_log_sha256": "c90e17d3a508f5fbd6f2f0f173e40acb475ddeef0c927c3f95539117dc8f2147",
       "evidence": "/tmp/legend-meeting-coverage.json",
       "boundary": "The interrupted complete attempt remains without a full verdict; the26-target resumed tail is PASS WITH SKIPS. Not a full inventory on the later native integration tree."
+    },
+    {
+      "scope": "Closing integration98afde3f3",
+      "verdict": "TARGETED_PASS_PACKAGE_STALE",
+      "translation_tests": 14,
+      "section_reference_tests": 13,
+      "ranking": "current",
+      "package": "STALE after native card updates; failure retained",
+      "evidence": "/tmp/legend-meeting-closing-package.log"
+    },
+    {
+      "scope": "Rebuild of all full/shareable views and package on98afde3f3",
+      "verdict": "PASS",
+      "ranking_bytes_unchanged": true,
+      "evidence": "/tmp/legend-meeting-closing-regeneration.json",
+      "disposition": "Superseded by the newer native complete rebuild on3e1bde7af, taken intact with its additional scientific corrections. Reproducible own generated output was discarded, not peer work."
     }
   ],
   "SESSION_LEARNING_REVIEW": {
@@ -186,9 +202,17 @@
   },
   "completed_on": "2026-11-15",
   "CLOSING_INTEGRATION": {
-    "native_base": "8b6e44c17186460ef1df341bc09f39025172cc82",
+    "native_base": "3e1bde7afb4d8abea64cb2130695e6ef319ceecc",
     "source_code_change_since_5996e0412": [],
     "derived_conflict_resolution": "Use the native rebuilt DEPLOY, manifest and text provenance intact; preserve all peer scientific updates.",
     "scope": "Final integration adds peer scientific data/translations and closing evidence, not a new MEETING code change."
+  },
+  "EVIDENCE_PACK": "/tmp/legend-verify-keep/meeting-20261115",
+  "OWNED_CLEANUP": {
+    "disposable_verification_clones": "removed after process and clean-tree checks",
+    "private_browser_TMPDIR": "removed after tail completion",
+    "evidence": "retained in EVIDENCE_PACK",
+    "task_worktree": "removed after exact publication in this closing execution",
+    "foreign_material_touched": false
   }
 }

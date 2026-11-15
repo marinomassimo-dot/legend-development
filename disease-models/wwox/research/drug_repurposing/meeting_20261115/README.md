@@ -111,3 +111,11 @@ No browser code, test or security setting was weakened. The final integration se
 passed 139 Advisor tests and 30 freshness tests; subsequent peer scientific updates preserve
 that code and receive targeted publication/translation checks. Native rebuilt publication
 files are retained intact. Full final CI success is not inferred from these local results.
+
+After a later native card update, the first closing package check correctly returned STALE.
+The existing full/shareable rebuild and package check passed with ranking bytes unchanged.
+During that rebuild, native main landed additional scientific corrections and its own complete
+rebuild; those newer generated files were taken intact. The final delta against native main is
+only this report and the task record. The frozen verification clone and private browser
+temporary folder were removed after checking no process still used them; raw evidence is
+retained under `/tmp/legend-verify-keep/meeting-20261115`.
