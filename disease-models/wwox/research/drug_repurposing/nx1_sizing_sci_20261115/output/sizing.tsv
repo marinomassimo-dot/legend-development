@@ -1,0 +1,9 @@
+test	genotype	gap_to_detect_stage	power	n_per_arm_if_minutes_independent	n_per_arm_if_minutes_correlated	ratio_high_over_low	meaning
+T1 null simple effect, observed gap	-/-	1.061	0.8	<3	22	11	A or B v C: is there any effect in the nulls
+T1 null simple effect, observed gap	-/-	1.061	0.9	3	29	10	A or B v C: is there any effect in the nulls
+T1 null simple effect, half the observed gap	-/-	0.530	0.8	5	84	17	same, allowing for an over-read single experiment
+T1 null simple effect, half the observed gap	-/-	0.530	0.9	6	112	19	same, allowing for an over-read single experiment
+T2 wt simple effect under B, from +/+ PTZ level	+/+	0.144	0.8	12	311	26	B v A: proportional effect in wild type, +/+ level
+T2 wt simple effect under B, from +/+ PTZ level	+/+	0.144	0.9	16	416	26	B v A: proportional effect in wild type, +/+ level
+T2 wt simple effect under B, from +/- PTZ level	+/-	0.302	0.8	5	80	16	B v A: proportional effect in wild type, +/- level
+T2 wt simple effect under B, from +/- PTZ level	+/-	0.302	0.9	6	107	18	B v A: proportional effect in wild type, +/- level
