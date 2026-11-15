@@ -1,0 +1,6 @@
+query	molecule_chembl_id	pref_name	max_phase	smiles_head
+efonidipine	CHEMBL2074922	EFONIDIPINE	2.0	CC1=C(C(=O)OCCN(Cc2ccccc2)c2ccccc2)C(c2cccc([N+](=O)[O-])c2)C(P2(=O)OCC(C)(C)CO2
+flunarizine	CHEMBL552659	FLUNARIZINE HYDROCHLORIDE	2.0	Cl.Cl.Fc1ccc(C(c2ccc(F)cc2)N2CCN(C/C=C/c3ccccc3)CC2)cc1
+flunarizine	CHEMBL30008	FLUNARIZINE	2.0	Fc1ccc(C(c2ccc(F)cc2)N2CCN(C/C=C/c3ccccc3)CC2)cc1
+flunarizine	CHEMBL1319373			Fc1ccc(C(c2ccc(F)cc2)N2CCN(C/C=C\c3ccccc3)CC2)cc1
+flunarizine	CHEMBL539027	FLUNARIZINE DIHYDROCHLORIDE		Cl.Fc1ccc(C(c2ccc(F)cc2)N2CCN(C/C=C/c3ccccc3)CC2)cc1

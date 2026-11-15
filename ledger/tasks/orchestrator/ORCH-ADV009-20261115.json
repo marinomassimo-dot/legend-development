@@ -9,14 +9,15 @@
  "BASELINE": "local main 022469259; worktree .claude/worktrees/adv009, branch task/adv009; folder cav3_pair_adv009_20261115/ under drug_repurposing.",
  "MANDATE_STATE": "IN_PROGRESS",
  "CURRENT_PACKAGE": {
-  "id": "start",
-  "state": "usefulness check of WO-25 premises, then route log",
+  "id": "produced",
+  "state": "folder cav3_pair_adv009_20261115/ complete; self-evaluation written; battery next",
   "delegate_active": "none",
   "updated": "2026-11-15"
  },
- "RESUME": "Check later records for the pair; route-test the three PMC ids (efetch, bucket txt), ChEMBL by-target from primary checkout; read sources with receipts; write table, route log, README answer-first, consumer_delta; self-eval; quick suites; battery; task_close; push; message ADV and owners; remove worktree.",
+ "RESUME": "Commit; verify_run battery on the landing SHA, waiting by PID; record VERIFICATION_EVIDENCE; task_close; safe_push; ls-remote; message ADV (verdict, SHA), IT (consumer_delta), and nobody else unless a correction; remove worktree adv009.",
  "DECISIONS_TAKEN": [
-  "2026-11-15: accepted ADV-009 as the next chosen opportunity; authority verified from roadmap_current.md line 36 (ADV-007 precedent); the 24-hour trial window ends 2026-11-15T15:29:29Z and ADV asked to leave presidio capacity for its review."
+  "2026-11-15: accepted ADV-009 as the next chosen opportunity; authority verified from roadmap_current.md line 36 (ADV-007 precedent); the 24-hour trial window ends 2026-11-15T15:29:29Z and ADV asked to leave presidio capacity for its review.",
+  "2026-11-15: no blind verifier (assignment left it to my judgement because nothing is promoted); mechanical quote check verify_quotes.py 16 of 16; interpretation is the producer's alone and is stated as the weak point in the self-evaluation. Verdict: pair stays a proposal, qualified (not matched, not demoted); WO-25 stays OPEN narrowed."
  ],
  "DELEGATIONS": [],
  "ESCALATIONS": [],
