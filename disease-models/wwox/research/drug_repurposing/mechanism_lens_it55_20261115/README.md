@@ -17,3 +17,11 @@ Non-canonical working note. Not medical advice; no dose, schedule or route; noth
 
 ## Cost and time (trial notes)
 No delegate. Calls: one `unread_gold.py --mechanism`, a handful of `git grep`, 5 Europe PMC core searches and 2 abstract fetches, one efetch and one PMC page request (generic client, no contact parameter). Wall time is measured from git when the record closes.
+
+## Update 2026-11-15 (after SCI's reading, `../jnk_hcc_reading_rp004_sci_20261115/`)
+Verdict: **contrast carried with limits.** Predictions F1, F2, F3, F4, F6 held; F5 and F7 not determinable from the delivered text; none missed (`prediction_scores.tsv`). The case-level bets P-a and P-b are not testable from this paper (no neural cell, no tau readout); they stay open bets, not scored. Predictive capacity: none shown.
+* **Competing explanations, one added (consumer row 2):** (v) the inhibitor adds to an apoptosis that WWOX already causes, with the baseline difference not separated (the paper's own wording "enhanced WWOX-induced apoptosis"). Items (i)-(iii) stand; the p53 difference between the two lines belongs under (i) line identity.
+* **Naming (row 3):** the paper writes SP600129 throughout; its reference 66 is the SP600125 paper, which supports the "[sic]" above.
+* **Rejecting experiment (row 5), design only:** keep the two controls (a second chemotype, a genetic JNK control) and add a third, a readout that separates inhibitor-specific death from the baseline of WWOX-null against rescued line (inhibitor against vehicle within each genotype, interaction tested).
+* **Figures (row 6):** five panels not requested now; the verdict would not change. Revival: a later comparison needs the inhibitor effect size or inhibitor-alone-by-status.
+* **Receipt:** `FTR-20261115-18620777-01` (partial, captions only) recorded by IT in event-ID order after landing 8c32ee2c0.
