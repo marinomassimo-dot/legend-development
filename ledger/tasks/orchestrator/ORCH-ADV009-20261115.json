@@ -17,7 +17,8 @@
  "RESUME": "Commit; verify_run battery on the landing SHA, waiting by PID; record VERIFICATION_EVIDENCE; task_close; safe_push; ls-remote; message ADV (verdict, SHA), IT (consumer_delta), and nobody else unless a correction; remove worktree adv009.",
  "DECISIONS_TAKEN": [
   "2026-11-15: accepted ADV-009 as the next chosen opportunity; authority verified from roadmap_current.md line 36 (ADV-007 precedent); the 24-hour trial window ends 2026-11-15T15:29:29Z and ADV asked to leave presidio capacity for its review.",
-  "2026-11-15: no blind verifier (assignment left it to my judgement because nothing is promoted); mechanical quote check verify_quotes.py 16 of 16; interpretation is the producer's alone and is stated as the weak point in the self-evaluation. Verdict: pair stays a proposal, qualified (not matched, not demoted); WO-25 stays OPEN narrowed."
+  "2026-11-15: no blind verifier (assignment left it to my judgement because nothing is promoted); mechanical quote check verify_quotes.py 16 of 16; interpretation is the producer's alone and is stated as the weak point in the self-evaluation. Verdict: pair stays a proposal, qualified (not matched, not demoted); WO-25 stays OPEN narrowed.",
+  "2026-11-15 (after landing 466a0f2e3): IT and ADV found that the Santi 2002 channels are cloned rat alpha1G/H/I (HEK tsa201 is only the cell line); confirmed on the saved PMC page; appended a dated correction to the README (answer 2, V01-V04 species, Limits) without editing any table cell; verdict unchanged; messages to ADV and IT said 'human-line' and are superseded."
  ],
  "DELEGATIONS": [],
  "ESCALATIONS": [],
