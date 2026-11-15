@@ -82,6 +82,11 @@
       "scope": "targeted after test correction",
       "verdict": "PASS",
       "tests": 113
+    },
+    {
+      "scope": "concurrent portfolio merge",
+      "verdict": "CORRECTED_BEFORE_LANDING",
+      "reason": "The first field merge failed on a new concurrent RP-021 row; a following shell command committed unresolved markers on the task branch. Reconstructed all 21 rows from both parents, with per-field three-way selection, then asserted no markers and git diff --check. That intermediate commit was not landed or published."
     }
   ]
 }
