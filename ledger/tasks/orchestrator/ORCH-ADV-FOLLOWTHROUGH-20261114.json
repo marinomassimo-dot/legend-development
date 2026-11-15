@@ -618,7 +618,8 @@
    {
     "utc": "2026-11-15T15:22Z",
     "event": "MEETING (cross-session transport section 13, an operator instruction given in the Harness PLAN session, recorded in the roadmap) became due at the 15:21Z recall on a Harness event request (tick.meeting DUE, state independent of the evaluation verdict, which I held); opened with meeting --open: record advisor_pilot_20261113/meetings/MEETING-20261115T152159Z-jaq44mq3.md (agenda derived from existing records, no participant statements invented); invitations sent to IT, SCI and HE (routes RESOLVED) with four short questions each (priority-ordered pending work, blockers, prospects with first step and stop rule, corrections to the presidio's direction); Mirror route UNRESOLVED, not addressed, recorded as absent; replies asynchronous, none required; the round closes with --close and the notes verbatim. Next meeting due 21:21:59Z by the six-hour rule."
-   }
+   },
+   "2026-11-15 after the report: IT scored RP-005 H1-H5 (4a3a001b2); its ~100 min wait for SCI's package rested on checking origin while the package sat on the root checkout's local main (landed 15:25:18Z, pushed 15:36:30Z); ADV found it from the tick/ledger, told IT the path; ADV's own estimate '~15:05Z landing' had been given to IT earlier. Not consumed by IT: SCI proposal 3 (September analysis files still say ethosuximide is 'the genotype-specific result': locator_contract_live_test.md section b, DL-MECH-170, AUTONOMOUS_SESSION_STATE item 5) and proposal 6 (figure_series.py) -- sent to IT and HE as bounded options."
   ],
   "report_delivered_utc": "2026-11-15T15:32Z (repository copy landed; chat report same turn)"
  }
