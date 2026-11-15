@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-15T18:49Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-15T18:49Z",
+ "event_id": "FTR-20261115-27592856-01",
+ "evidence_basis": [
+  "Table 1 (confirmed acute OL differentiation hits) read from the Europe PMC fullTextXML of PMC5011342 (CC BY; one request on 2026-11-15, HTTP 200, 123,569 bytes) converted to text, plus whole-text keyword counts for five compounds (clobetasol, ketoconazole, miconazole, liothyronine, mevastatin: zero occurrences). The rest of the paper was not read by IT in this item; the figure images, supplements and methods were not opened.",
+  "Mechanical check: all 7 verbatim rows of verbatim.tsv were found in the saved text (7/7).",
+  "verbatim_locator | proposition: Table 1 is the table of confirmed hits (not all tested compounds) | Table 1 title | \"Table 1 Confirmed acute OL differentiation hits from the NCC library screen Drug class Compound OL differentiation a EC 50 , μM\"",
+  "verbatim_locator | proposition: tamoxifen: confirmed hit | Table 1 | \"Tamoxifen 85 0.2\"",
+  "verbatim_locator | proposition: quetiapine: confirmed hit | Table 1 | \"Quetiapine 109 0.4\"",
+  "verbatim_locator | proposition: benztropine: confirmed hit | Table 1 | \"Benztropine 66 0.3\"",
+  "verbatim_locator | proposition: oxybutynin: confirmed hit | Table 1 | \"Oxybutynin 67 2.6\"",
+  "verbatim_locator | proposition: ipratropium (printed Ipatropium): confirmed hit | Table 1 | \"Ipatropium 58 8.5\"",
+  "verbatim_locator | proposition: ifenprodil: confirmed hit | Table 1 | \"Ifenprodil 93 0.4\""
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/it55_q02_signs_it55_20261115/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "08326cf5972b42f0af3f7a73d52fd815cb90388f2905c78a9d6f8b8f6e9c305f",
+ "source_kind": "fulltext_remote",
+ "source_locator": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5011342/fullTextXML (one request on 2026-11-15, no contact parameter; the page copy is kept under files/fulltext/it55q02_20261115/ and is not in git)",
+ "study_id": {
+  "pmid": "27592856"
+ },
+ "workflow": "IT reading for IT55-Q02 (ADV go-ahead 2026-11-15): the six hits' rows of Table 1 verified after SCI's second read; NOT blind (IT had seen the six rows while verifying, so no prediction was frozen)."
+}
