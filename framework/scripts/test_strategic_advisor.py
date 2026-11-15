@@ -8,6 +8,7 @@ call is the smoke invocation recorded in the build report.
 
 from __future__ import annotations
 
+import datetime as dt
 import json
 import ast
 import os
@@ -851,6 +852,35 @@ class ValueContinuity(Continuous):
         self.assertFalse(act["idle_over_half"])
         self.assertTrue(sa.session_activity(now, [agents[0], dict(agents[0], name="IT2")])["idle_over_half"])
         self.assertFalse(sa.session_activity(now, [])["available"])                 # no list from the runtime: said, not guessed
+
+    def test_local_commits_the_remote_does_not_hold_are_counted_with_their_age(self) -> None:
+        """HE62: 'the awaited event exists locally' is visible without a fetch; the figure is relative to the last fetched remote ref and says how old that fetch is."""
+        remote, clone = self.tmp / "remote.git", self.tmp / "clone"
+        run = lambda *a, cwd=clone: subprocess.run(["git", *a], cwd=cwd, check=True, capture_output=True, text=True)
+        subprocess.run(["git", "init", "-q", "--bare", "-b", "main", str(remote)], check=True)
+        subprocess.run(["git", "clone", "-q", str(remote), str(clone)], check=True, capture_output=True)
+        run("config", "user.email", "t" + chr(64) + "example.org"); run("config", "user.name", "t")
+        run("remote", "rename", "origin", "development")
+        for n, when in (("a", "2026-11-15T10:00:00+00:00"), ("b", "2026-11-15T11:00:00+00:00")):
+            (clone / n).write_text(n, encoding="utf-8"); run("add", n)
+            subprocess.run(["git", "commit", "-q", "-m", n], cwd=clone, check=True, env={**os.environ, "GIT_AUTHOR_DATE": when, "GIT_COMMITTER_DATE": when})
+        run("push", "-q", "development", "main"); run("fetch", "-q", "development")
+        for n, when in (("c", "2026-11-15T12:00:00+00:00"), ("d", "2026-11-15T13:00:00+00:00")):          # two local commits the remote does not hold
+            (clone / n).write_text(n, encoding="utf-8"); run("add", n)
+            subprocess.run(["git", "commit", "-q", "-m", n], cwd=clone, check=True, env={**os.environ, "GIT_AUTHOR_DATE": when, "GIT_COMMITTER_DATE": when})
+        saved = sa.ROOT
+        sa.ROOT = clone
+        try:
+            now = dt.datetime(2026, 11, 15, 14, 0, tzinfo=dt.timezone.utc)
+            got = sa.unpublished_main(now)
+            self.assertEqual((got["against"], got["commits"], got["oldest_min"]), ("development/main", 2, 120))
+            self.assertIsNotNone(got["ref_checked_min_ago"])
+            run("push", "-q", "development", "main"); run("fetch", "-q", "development")
+            self.assertEqual((sa.unpublished_main(now)["commits"], sa.unpublished_main(now)["oldest_min"]), (0, None))
+            run("remote", "remove", "development")
+            self.assertFalse(sa.unpublished_main(now)["available"])                                      # no remote ref offline: said, not guessed
+        finally:
+            sa.ROOT = saved
 
     def test_the_tick_carries_the_activity_block(self) -> None:
         sa.session_activity_saved = sa.session_activity
