@@ -105,12 +105,13 @@
     "method": "Disjoint-path ordinary Git merge while IT was regenerating 27 science/view paths; no peer file staged, stashed, reset or checked out",
     "landing_proof": "/tmp/legend-adv-continuity-landing.json",
     "shadow_replay": "/tmp/legend-adv-continuity-shadow.json; EVALUATE, invalidated P11, live state unchanged",
-    "prospective_brief": "P11 selected by numeric order; ADV-009 historical TAKEN shown beside current NO_QUEUE record with its path (unknown execution is not inferred as in-flight); current operator integration present",
+    "prospective_brief": "P11 selected by numeric order; the Cav3 comparison assignment historical TAKEN shown beside current NO_QUEUE record with its path (unknown execution is not inferred as in-flight); current operator integration present",
     "full_inventory_candidate": "9506e1727887b8fa8920485a2f544fe75a22da30",
     "full_inventory_log": "/tmp/legend-adv-continuity-battery.log",
     "full_inventory_state": "REPLACED_WITHOUT_VERDICT",
     "live_repair": "2026-11-15T08:13:34Z: supported tick superseded P11 in actual host state, preserving original outcome; EVALUATE pending, no model launched",
-    "new_targeted_tests": "114 Advisor tests PASS, including the rejected previous-attempt context"
+    "new_targeted_tests": "114 Advisor tests PASS, including the rejected previous-attempt context",
+    "final_prompt_tests": "114 Advisor tests PASS after the source-parity clarification; agent definition1099words (1385baseline); section references PASS"
   },
   "SELF_DIAGNOSIS": {
     "verdict": "PASS with declared pre-existing scientific reading gaps; no full-text scientific read claimed by this Harness task",
@@ -118,5 +119,21 @@
     "capability_gap": "Repeated systemic instruction remained text-only while an old incomplete outcome still scheduled a distant wait. The fix belongs in tick, current-state context and live portfolio fields, not another approval step.",
     "micro_upgrade": "Numeric assessment recency, current recipient record facts, legacy outcome supersession, smaller strategic definition and source-backed coverage planning",
     "dream": "Known-but-unused operational relation: newest-hit/default-filter absence is not complete literature coverage; RP-008 now consumes the distinction. No biological lead or literature novelty asserted."
+  },
+  "LIVE_OBSERVATION": {
+    "scheduled_recall_utc": "2026-11-15T08:23:02Z",
+    "evaluation": "advisor_pilot_20261113/P12/assessment.md",
+    "result": "Useful unread-coverage question drafted, source counts rechecked and scope narrowed by the host, delivered to IT at08:26:42Z",
+    "recipient_record": "ledger/tasks/orchestrator/ORCH-RP008-UNREAD-20261115.json",
+    "recipient_activity": "IT accepted at08:27:16Z and completed the coverage pass by08:39Z; its durable record is COMPLETE; the 47 PMC-id records were not made a Science batch because none had an existing INV link",
+    "evaluation_usage": {
+      "turns": 11,
+      "output_tokens": 10721,
+      "cache_read_tokens": 602548,
+      "model": "claude-opus-5-5",
+      "effort": "high"
+    },
+    "attribution_limit": "Operational follow-through after an explicit operator coverage direction, not a blind test of strategic quality or proof of generative improvement; earlier morning IT23 work was operator-directed in another session.",
+    "discovery_gap": "A current INV citation and clinical tier became an unintended discovery eligibility gate. Corrected canonical source-parity guidance and made the separate mechanism-first Science opportunity actionable; the census remains useful within its clinical subset."
   }
 }
