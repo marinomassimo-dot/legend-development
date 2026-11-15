@@ -82,10 +82,10 @@ time; it does not redistribute or license the article text.
 | Status | Records | Share |
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 259 | 37% |
-| **Catalogued, never processed** — the reading debt | 121 | 17% |
+| **Catalogued, never processed** — the reading debt | 120 | 17% |
 | Known to the tracking log only | 78 | 11% |
 | Processed from the abstract | 13 | 2% |
-| Partial full text read | 69 | 10% |
+| Partial full text read | 70 | 10% |
 | Full text read | 166 | 24% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
@@ -224,7 +224,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [27121845](https://pubmed.ncbi.nlm.nih.gov/27121845/) | 2016 | — | Journal Article | catalogued only | Novel mutations in WWOX, RARS2, and C10orf2 genes in consanguineous Arab families with intellectual disability. |
 | [25403906](https://pubmed.ncbi.nlm.nih.gov/25403906/) | 2015 | — | Case Reports; Journal Article; Research Support, Non-U.S. Gov't | catalogued only | A novel whole exon deletion in WWOX gene causes early epilepsy, intellectual disability and optic atrophy. |
 | [25720522](https://pubmed.ncbi.nlm.nih.gov/25720522/) | 2015 | — | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | Aberrant gene promoter methylation of p16, FHIT, CRBP1, WWOX, and DLC-1 in Epstein-Barr virus-associated gastric carcinomas. |
-| [25738261](https://pubmed.ncbi.nlm.nih.gov/25738261/) | 2015 | — | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | ACK1 promotes hepatocellular carcinoma progression via downregulating WWOX and activating AKT signaling. |
 | [25892250](https://pubmed.ncbi.nlm.nih.gov/25892250/) | 2015 | — | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | The role of WWOX tumor suppressor gene in the regulation of EMT process via regulation of CDH1-ZEB1-VIM expression in endometrial cancer. |
 | [26607080](https://pubmed.ncbi.nlm.nih.gov/26607080/) | 2015 | — | Journal Article | catalogued only | [Expressions of WWOX and CD133 in colorectal cancer and their clinical significance]. |
 | [23824713](https://pubmed.ncbi.nlm.nih.gov/23824713/) | 2014 | — | Comparative Study; Journal Article; Research Support, Non-U.S. Gov't | catalogued only | miR-134 induces oncogenicity and metastasis in head and neck carcinoma through targeting WWOX gene. |
@@ -563,7 +562,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 458 outstanding records)*
+*(showing all 457 outstanding records)*
 
 ## Already processed from this seed
 
@@ -597,6 +596,7 @@ for an entirely unprocessed record.
 | [25537520](https://pubmed.ncbi.nlm.nih.gov/25537520/) | 2014 | ✅ | partial full text | receipt FTR-20261002-25537520-01 | WW domain-containing oxidoreductase in neuronal injury and neurological diseases. |
 | [24308844](https://pubmed.ncbi.nlm.nih.gov/24308844/) | 2013 | ✅ | partial full text | receipt FTR-20261019-24308844-03 | Molecular origin of the binding of WWOX tumor suppressor to ErbB4 receptor tyrosine kinase. |
 | [11572989](https://pubmed.ncbi.nlm.nih.gov/11572989/) | 2001 | ✅ | partial full text | receipt FTR-20260927-11572989-01 | WWOX: a candidate tumor suppressor gene involved in multiple tumor types. |
+| [25738261](https://pubmed.ncbi.nlm.nih.gov/25738261/) | 2015 | — | partial full text | receipt FTR-20261115-25738261-01 | ACK1 promotes hepatocellular carcinoma progression via downregulating WWOX and activating AKT signaling. |
 | [16061658](https://pubmed.ncbi.nlm.nih.gov/16061658/) | 2005 | — | partial full text | receipt FTR-20260811-16061658-02 | WW domain-containing proteins, WWOX and YAP, compete for interaction with ErbB-4 and modulate its transcriptional function. |
 | [42082822](https://pubmed.ncbi.nlm.nih.gov/42082822/) | 2026 | ✅ | full text | CORPUS PMID 42082822 | The Role of WWOX Gene Variant in Hypospadias and 46,XY Disorders of Sexual Development. |
 | [39416860](https://pubmed.ncbi.nlm.nih.gov/39416860/) | 2024 | ✅ | full text | PAPER 093 | WWOX-related epileptic encephalopathy caused by a novel mutation in the WWOX gene: a case report. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | full text | PAPER 244 | WWOX oxidoreductase--substrate and enzymatic characterization. |
 | [16288044](https://pubmed.ncbi.nlm.nih.gov/16288044/) | 2005 | — | full text | PAPER 569 | Activated tyrosine kinase Ack1 promotes prostate tumorigenesis: role of Ack1 in polyubiquitination of tumor suppressor Wwox. |
 
-*(showing all 248 processed records from the seed)*
+*(showing all 249 processed records from the seed)*
 
 ## How to work one
 
