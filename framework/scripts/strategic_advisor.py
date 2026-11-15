@@ -1207,6 +1207,8 @@ def presidio_state(verdict: str, why: str, is_continuous: bool, outcome: dict[st
         if not is_continuous:
             return "idle inside the pilot: nothing new"
         outcome = outcome or {}
+        if outcome.get("evaluation") == "HOLD":
+            return f"HELD by host at {outcome.get('utc', '?')}: {outcome.get('reason', '')[:140]}; resume_when {outcome.get('resume_when', '?')}; ends at that condition, a roadmap change or the first new event (not an evaluation, no model run)"
         if outcome.get("stated") and outcome.get("outcome") == "wait":
             return f"WAITING (motivated): {outcome.get('reason', '')[:140]}; excluded: {outcome.get('excluded', '')[:160]}; resumes when: {outcome.get('resume_when', 'event')}"
         if outcome.get("stated"):
@@ -1643,6 +1645,57 @@ def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout:
         state = _load_state(campaign); state["running"] = ""; _save_state(campaign, state)
 
 
+def _holds(campaign: Path) -> list[dict[str, Any]]:
+    path = Path(campaign) / "holds.jsonl"
+    out = []
+    for line in path.read_text(encoding="utf-8").splitlines() if path.exists() else []:
+        try:
+            out.append(json.loads(line))
+        except json.JSONDecodeError:
+            continue
+    return out
+
+
+def hold(campaign: Path, reason: str, resume_when: str) -> int:
+    """HE64: record a hold WITHOUT a model run. Until now the pending digest was consumed only when an evaluation completed (`evaluate`, last_digest), so a hold decided by hand re-fired EVALUATE at every hourly tick
+    (measured on a copy of the real state, 2026-11-15: two ticks, same digest, 12 events carried, ten recalls since the last evaluation). A hold consumes what it lists and nothing else: the events and the commit count it clears
+    are written into holds.jsonl; it is not an evaluation (no invocation, no P<n> folder, no budget, last_evaluation_utc untouched); it ends at its resume_when (an external form), at a roadmap change or at the first NEW event."""
+    campaign = Path(campaign)
+    refusal = budget_refusal(campaign)
+    if refusal:
+        print(f"REFUSED: {refusal}", file=sys.stderr); return 2
+    state = _load_state(campaign)
+    if _running(state):
+        print("REFUSED: an evaluation is running; a hold would race its own consumption of the pending events", file=sys.stderr); return 2
+    if not (reason or "").strip():
+        print("REFUSED: a hold needs a reason (what makes waiting the right choice)", file=sys.stderr); return 2
+    spec = (resume_when or "").strip()
+    problem = resume_problem(spec)
+    if problem or not spec.startswith(("record:", "path:")):
+        print("REFUSED: resume_when must name an external event: `record:<TASK>=<STATE>` or `path:<file>[~<text>]` (a time or `event` alone would make a hold a timer for silence)" + (f"; {problem}" if problem else ""), file=sys.stderr); return 2
+    if spec.startswith("record:") and not list((ROOT / "ledger" / "tasks").glob(f"*/{spec[7:].split('=', 1)[0].strip()}.json")):
+        print(f"REFUSED: resume_when names a record that does not exist ({spec[7:].split('=', 1)[0].strip()}); a hold on it would never end", file=sys.stderr); return 2
+    if not state:
+        print("REFUSED: no tick state yet; the first tick records the baseline", file=sys.stderr); return 2
+    obs = observe(campaign, state)
+    events = list(dict.fromkeys(list(state.get("pending_events") or []) + obs["events"]))
+    commits = obs["commits_since_last_tick"] + int(state.get("pending_commits") or 0)
+    if not events:
+        print("REFUSED: nothing is pending, so there is nothing to hold; the verdict is already quiet", file=sys.stderr); return 2
+    digest = sha256_text(obs["roadmap_sha256"] + "|" + "|".join(sorted(events)))
+    now = _utc(_now())
+    record = {"utc": now, "reason": reason.strip(), "resume_when": spec, "digest": digest, "events_cleared": events, "commits_cleared": commits,
+              "previous_digest": state.get("last_digest", ""), "previous_outcome": {k: (state.get("last_outcome") or {}).get(k, "") for k in ("evaluation", "outcome", "utc")}, "main_sha": obs["main_sha"]}
+    with (campaign / "holds.jsonl").open("a", encoding="utf-8") as f:
+        f.write(json.dumps(record, sort_keys=True) + "\n")
+    state.update(main_sha=obs["main_sha"], mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"], waits_seen=sorted({sha256_text(w["task"] + "|" + w["blocker"])[:12] for w in obs["waits"]}),   # what a tick records as observed: the listed events must not be read again
+                 last_digest=digest, pending_digest=digest, pending_events=[], pending_commits=0, portfolio_digest=obs["portfolio"]["digest"], unstated_streak=0,
+                 last_outcome={"stated": True, "outcome": "wait", "reason": reason.strip(), "excluded": "", "problem": "", "resume_when": spec, "evaluation": "HOLD", "utc": now})
+    _save_state(campaign, state)
+    print(f"HOLD recorded {now}: {len(events)} event(s) and {commits} commit(s) cleared and listed in {campaign / 'holds.jsonl'}; resume_when {spec}")
+    return 0
+
+
 def status(campaign: Path) -> str:
     campaign = Path(campaign)
     b = _budget(campaign)
@@ -1660,6 +1713,10 @@ def status(campaign: Path) -> str:
                      f"{n}/{b.get('max_invocations', '-')} and {drafted}/{b.get('max_assignments', '-')} and are history, not the rule of this mode; "
                      f"{'SUSPENDED: ' + held if held else 'no operator suspension'}; weekly allocation {week['state']} (measured 7 d: {week['measured_7d']['evaluations']} evaluation(s), "
                      f"{week['measured_7d']['output_tokens']} output, {week['measured_7d']['cache_read_tokens']} cache-read tokens)" + ("" if week["state"] != "unset" else "; " + week["note"]))
+    held = _holds(campaign)
+    if held:
+        last = held[-1]
+        lines.append(f"  holds recorded {len(held)} (not evaluations, not counted above); last {last['utc']}: cleared {len(last['events_cleared'])} event(s) and {last['commits_cleared']} commit(s), resume_when {last['resume_when']}: {last['reason'][:160]}")
     for ident, v in sorted(assignment_states(campaign).items()):
         lines.append(f"  {ident} [{v['recipient']}] {v['key']}: highest evidence {v['highest'] or 'none'}; levels {','.join(v['levels'])}" + ("; UNREACHABLE (residual stays in the queue)" if v["unreachable"] else ""))
     return "\n".join(lines)
@@ -1687,6 +1744,7 @@ def main(argv: list[str] | None = None) -> int:
     c = sub.add_parser("check"); c.add_argument("--campaign", required=True)
     t = sub.add_parser("tick", help="the hourly bounded check (no model unless you then run `evaluate`)"); t.add_argument("--campaign", required=True)
     ev = sub.add_parser("evaluate", help="one strategic evaluation, counted in the campaign budget"); ev.add_argument("--campaign", required=True)
+    hd = sub.add_parser("hold", help="record a hold without a model run: consumes the pending digest, lists what it clears in holds.jsonl, is not an evaluation"); hd.add_argument("--campaign", required=True); hd.add_argument("--reason", required=True); hd.add_argument("--resume-when", required=True, help="record:<TASK>=<STATE> or path:<file>[~<text>]")
     ev.add_argument("--model", default="opus"); ev.add_argument("--effort", default="high", choices=["low", "medium", "high"]); ev.add_argument("--timeout", type=int, default=3600)
     st = sub.add_parser("status", help="budget and the evidence level of every assignment"); st.add_argument("--campaign", required=True)
     mt = sub.add_parser("meeting", help="six-hour/event alignment through the existing host; status unless one action is supplied")
@@ -1776,6 +1834,8 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps(result, indent=1)); return 0
     if args.cmd == "evaluate":
         return evaluate(campaign, args.model, args.effort, args.timeout)
+    if args.cmd == "hold":
+        return hold(campaign, args.reason, args.resume_when)
     if args.cmd == "status":
         print(status(campaign)); return 0
     if args.cmd == "deliver":
