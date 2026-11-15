@@ -321,7 +321,7 @@
      "step": "Check the draft's premises, narrow it, send with the queue wording, record SENT with --to, verify take-in-charge, follow delivery and consumption",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "Premises checked and the draft narrowed (TRIAL_24H.log 11:4xZ); sending after this landing."
+     "evidence": "Premises checked and the draft narrowed (TRIAL_24H.log 11:4xZ); sending after this landing. SENT 2026-11-15T11:4xZ to IT Orchestrator (--to recorded, landed with this commit); take-in-charge pending."
     }
    ]
   }
