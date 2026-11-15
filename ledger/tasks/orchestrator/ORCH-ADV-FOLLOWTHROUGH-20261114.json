@@ -331,9 +331,9 @@
    "steps": [
     {
      "step": "Send with the queue wording; verify take-in-charge; follow the pass to delivery and consumption (dated notes in the map, the table of evidence, the ordered list of genuinely open rows)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Written and landed 2026-11-15T12:3xZ; sending after the landing."
+     "evidence": "Sent to IT 2026-11-15T12:3xZ (msg ef6172a1); DELIVERED by IT in about 10 minutes (its landing commit 12:33:18Z, 219dedf62; ORCH-PRESIDIO006-STALENESS-20261115 COMPLETE; IT could not anchor the start in git because no SENT record exists for a presidio decision, an honest limit of the unit). Result over 34 rows (my 35 minus WO-11): 2 ANSWERED (IT29-P12: IT30 c5a4c3ebb withdrew S1-32/S1-33; IT49-Q02: HE50 c6bab78d5 did the extraction), 8 NARROWED (WO-12, WO-25, WO-32 neuron/axon half closed by nb3_class_iia_it32, RS-R6 read in rs_r6_it30 with only the ORCS rows left, IT44-Q01, IT46-Q02, IT48-Q01 whose 'route not run' text was stale, IT49-Q06 whose ML133 numbers were read), 24 STILL OPEN; 11 rows carry dated notes in status_evidence or blocking_reason, no new register. Access tests (one plain request each): IT49-Q11 LAPSED (VU6080824 paper PMID 40959251, PMC12434521, OA, the PMC article page 200, supporting information named but not requested); IT45-Q04 (Harde 2023) and IT49-Q08 (2026 Kir2.1 HTS) confirmed closed (isOpenAccess N). Cheap candidates, ordered: IT49-Q11, WO-32 remainder (a search), IT49-Q06 remainder (pH of the hERG deposit). Corrections to MY premises: IT46-Q02 was not a lapsed blocker (SCI48 tested it on 2026-11-12), IT44-Q05 is not an access state, IT49-Q06 is mostly answered. Limit stated by IT: 'still open' for rows with no later identifier hit means unmentioned, not read; the scan keys on PMIDs, PMC and ChEMBL ids and row ids and would miss a result naming only a gene or a compound. Next: IT took IT49-Q11 by my reply (no assignment needed)."
     }
    ]
   }
@@ -579,6 +579,10 @@
    {
     "utc": "2026-11-15T12:25Z",
     "event": "tick EVALUATE ('idle pipeline: assess pending signals without a cadence gate'; every session idle, queue exhausted, the portfolio digest moved by my own and IT's updates): I did not spend evaluation 15; I weighed the pool myself, as IT had left the draw to this tick: of the 35 OPEN literature/data rows, 11 name a possibly lapsed access blocker; IT declined WO-12 (Fischer 1997 access-blocked; Hess 1996 alone is one side of a comparison, a census item); checking the others I verified that IT29-P12 (PMID 27592856, 'methods unread, no receipt') is STALE: IT30 reconciled the screen on 2026-11-06 (rows S1-32 and S1-33 withdrawn, source files read with SHA-256) while the map row of 2026-11-05 was never updated: exactly the staleness risk P12 and P14 named without checking. Decision: PRESIDIO-006 to IT: a staleness pass over the 35 rows (answered, narrowed, still open with the blocker tested), dated notes in the existing cells, no reading beyond what classification needs; its value is open-question hygiene and a reliable pool for later draws (RP-003, RP-006)."
+   },
+   {
+    "utc": "2026-11-15T12:4xZ",
+    "event": "PRESIDIO-006 delivered by IT in about 10 minutes: the open-question map's OPEN literature/data pool is shown as 2 answered, 8 narrowed, 24 open (of 34), with 11 rows annotated; one lapsed access blocker (IT49-Q11) found and handed to IT as a one-source item; three of the presidio's premises corrected by IT. Value measured as hygiene and a reliable next pool, not as a research decision changed. Honest limit: the scan finds later mentions by identifier, not later answers by meaning."
    }
   ]
  }
