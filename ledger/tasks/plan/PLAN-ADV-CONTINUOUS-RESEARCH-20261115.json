@@ -115,6 +115,19 @@
       "started_utc": "2026-11-15T08:17:59.518144+00:00",
       "ended_utc": "2026-11-15T09:23:03.417282+00:00",
       "limit": "This verdict belongs to the frozen SHA; later prompt/protocol/portfolio, evidence-record and derived publication metadata deltas are covered by targeted checks and the publication gate, not re-labelled as this complete run."
+    },
+    {
+      "scope": "Event-retention controls before repair",
+      "verdict": "FAIL",
+      "tests": 2,
+      "evidence": "/tmp/adv-cadence-event-negative.log",
+      "reason": "Deferred observation and a tick while running consumed delivery evidence before an evaluation read it"
+    },
+    {
+      "scope": "Complete Advisor suite after cadence and retained-event repair",
+      "verdict": "PASS",
+      "tests": 120,
+      "evidence": "/tmp/adv-continuity-cadence-tests-final2.log"
     }
   ],
   "OPERATIONS": {
@@ -132,7 +145,9 @@
     "final_targeted": "115 Advisor tests,84scout,13section references,6skill packages,7tool routing,5link targets,3documented commands PASS;74ranking tests PASS before radar-only delta;current ranking check PASS;receipts1958OK;growthPASS;LINT WARN withoutBLOCK",
     "agent_words": 1222,
     "final_publication_receipt": "/tmp/legend-adv-continuity-publication.json (created by the closing execution; exact SHA and remote readback; no self-referential commit hash asserted in this record)",
-    "remaining_validation_at_record_commit": "Exact closing publication and its CI are observed outside the commit; no final-SHA CI success claimed here before it occurs."
+    "remaining_validation_at_record_commit": "Exact closing publication and its CI are observed outside the commit; no final-SHA CI success claimed here before it occurs.",
+    "subsequent_targeted_tests": "120 Advisor tests PASS on cadence/event repair; final publication/CI follow in closing execution",
+    "subsequent_publication_receipt": "/tmp/legend-adv-cadence-publication.json"
   },
   "SELF_DIAGNOSIS": {
     "verdict": "PASS with declared pre-existing scientific reading gaps; no full-text scientific read claimed by this Harness task",
@@ -173,8 +188,8 @@
     "permanent_clarification": "fulltext_read_receipt.md Persistence and canonical promotion now routes existing publication-boundary derived metadata checks; no new gate or service"
   },
   "CHECKPOINT": {
-    "last_verified_result": "Permanent source/runtime/state correction landed;two actual native recalls;mechanism-first task accepted and predictions frozen;radar routing source/template regressions PASS",
-    "first_incomplete_work": "None in implementation; closing execution performs exact publication/CI observation and removes the owned task worktree. All ongoing scientific work remains with its owners; no operator response is a dependency."
+    "last_verified_result": "Permanent source/state correction plus two real native dispatch cycles; the third recall exposed a9-second cadence defect and event loss, reproduced and repaired with120Advisor tests PASS and same-state counterfactual",
+    "first_incomplete_work": "Closing execution publishes and verifies the additional runtime fix and removes its owned temporary worktree; no operator response needed."
   },
   "RADAR_FOLLOW_UP": {
     "observed_failure": "The host07:32UTC message filed the supplied report because it addressed PLAN; ownership is not disposition or delivery",
@@ -202,5 +217,34 @@
     "reason": "Three standing BLOCKED steps still waited on an operator line, old deliveries, the report window and removed recall3382bb86. Canonical continuous duty now represented as IN_PROGRESS; genuine waits remain possible; history intact. This corrects recovery input as well as prompt text.",
     "readback": "mandate_continuity status --json: CONTINUE,stop_allowed false, nextOBJ_7_STANDING,0BLOCKED standing steps;report timing remains separate"
   },
-  "COMPLETION_SCOPE": "Implementation and observed autonomous research handoff complete. Future scientific benefit and multi-day reliability are not claimed; whole-portfolio waits still require real constraints. Final CI is recorded by the external closing receipt, not invented in this commit."
+  "COMPLETION_SCOPE": "Implementation and observed autonomous research handoff complete. Future scientific benefit and multi-day reliability are not claimed; whole-portfolio waits still require real constraints. Final CI is recorded by the external closing receipt, not invented in this commit.",
+  "CADENCE_AND_EVENT_FOLLOW_UP": {
+    "observed": "Native10:25:38tick DEFERRED even thoughP13started09:23:43ended09:25:47;completion-based cadence missed eligibility by9seconds;reported no anticipating events although they were present",
+    "repair": "Start-to-start cadence; preserve completion history; match legacy metadata or declare fallback; retain deferred events and do not advance observation baseline during a running evaluation; no new scheduler or automatic model launch",
+    "validation": "120Advisor tests PASS; two new event tests first FAILED on old retention behavior; three timestamp tests plus deferred/no-later-event and during-running controls; prior fixture failures corrected to consume a closure before asserting an event-free state",
+    "shadow": {
+      "historical_clock": "2026-11-15T10:25:38Z",
+      "scope": "Counterfactual replay of the same saved current state at the observed failure time; shadow state only, no model call",
+      "live_state_unchanged": true,
+      "live_state_sha256": "762a070fe7ddcc4a9524aa2054171a46fc1c28c19d29a525546323c9355fab7b",
+      "results": {
+        "published": {
+          "verdict": "DEFERRED",
+          "why": "events present but the last evaluation was 1.0 h ago and none is anticipating",
+          "evaluation_clock": null,
+          "hours_since_last_evaluation": 1.0
+        },
+        "repaired": {
+          "verdict": "EVALUATE",
+          "why": "portfolio: e81739c9a42f94d1 opportunities, priorities or executable dependencies changed",
+          "evaluation_clock": {
+            "utc": "2026-11-15T09:23:43Z",
+            "source": "matching legacy runtime metadata"
+          },
+          "hours_since_last_evaluation": 1.0
+        }
+      }
+    },
+    "release_scope": "bbed766ea is the published prior increment; this additional runtime correction requires its own exact publication and release CI"
+  }
 }
