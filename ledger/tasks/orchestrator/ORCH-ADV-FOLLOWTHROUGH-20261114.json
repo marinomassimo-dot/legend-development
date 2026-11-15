@@ -261,7 +261,7 @@
      "step": "Check the draft's decisive premises in the originals, then send with the queue wording; record SENT with --to; verify take-in-charge; follow delivery and consumption",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "Premises verified (see TRIAL_24H.log 01:5xZ). Landing the evidence now; SENT and the take-in-charge are recorded after the message."
+     "evidence": "Premises verified (see TRIAL_24H.log 01:5xZ). Landing the evidence now; SENT and the take-in-charge are recorded after the message. SENT 2026-11-15T01:28Z to SCI (msg 5946fa6d, route RESOLVED, --to SCI recorded, landed with this commit); take-in-charge pending."
     }
    ]
   }
