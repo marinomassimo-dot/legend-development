@@ -778,7 +778,7 @@ class ValueContinuity(Continuous):
         out = sa._load_state(self.campaign)["last_outcome"]
         self.assertEqual(out["resume_when"], "event"); self.assertIn("does not exist", out["problem"])
         self.evaluate_with("outcome: assign|resume_when: record:ORCH-NOT-YET-CREATED=COMPLETE")        # P8: not a wait, so the id is never read
-        self.at("2026-11-13T22:00:00Z")
+        self.at("2026-11-13T14:00:00Z")  # before the separate ordinary next-choice cadence
         self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")
         brief = (sa._state_path(self.campaign).parent / "brief_P.md").read_text(encoding="utf-8")
         self.assertIn("read only for a wait", brief)
@@ -997,6 +997,45 @@ class ValueContinuity(Continuous):
         self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
 
 
+    def test_an_empty_continuous_pipeline_can_assess_pending_delivery_without_a_cooldown_gate(self) -> None:
+        self.started()
+        self.complete("ORCH-A")
+        self.land("SCI53 record COMPLETE; package delivered")
+        self.at("2026-11-13T10:10:00Z")
+        result = sa.tick(self.campaign)
+        self.assertTrue(result["queue"]["exhausted"])
+        self.assertEqual(result["verdict"], "EVALUATE")
+        self.assertIn("idle pipeline", result["why"])
+        self.assertEqual(len({(a["stage"], a["index"]) for a in sa._attempts(self.campaign)}), 1)
+
+    def test_a_stated_choice_with_an_empty_queue_gets_a_next_decision_without_new_inputs(self) -> None:
+        self.started()
+        self.complete("ORCH-A")
+        self.at("2026-11-13T11:30:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
+        self.evaluate_with("outcome: assign")
+        self.at("2026-11-13T14:00:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")
+        self.at("2026-11-13T16:00:00Z")
+        result = sa.tick(self.campaign)
+        self.assertFalse(result["events"])
+        self.assertEqual(result["verdict"], "EVALUATE")
+        self.assertIn("previous choice", result["why"])
+        self.evaluate_with(self.WAIT % "after:2026-11-13T23:00:00Z")
+        self.at("2026-11-13T21:00:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")  # a supported stated wait is not busy work
+
+    def test_an_empty_bounded_pilot_keeps_its_existing_cadence_and_limits(self) -> None:
+        sa.tick(self.campaign); sa.evaluate(self.campaign)
+        self.complete("ORCH-A")
+        self.land("SCI53 record COMPLETE; package delivered")
+        self.at("2026-11-13T10:10:00Z")
+        result = sa.tick(self.campaign)
+        self.assertTrue(result["queue"]["exhausted"])
+        self.assertEqual(result["verdict"], "DEFERRED")
+        self.assertEqual(len({(a["stage"], a["index"]) for a in sa._attempts(self.campaign)}), 1)
+
+
 class LivingPortfolio(Base):
     """Permanent opportunities reach a real brief and wake decisions without a new radar."""
 
@@ -1055,6 +1094,7 @@ class LivingPortfolio(Base):
         self.assertTrue(any(e.startswith("portfolio:") for e in tick["events"]))
 
     def test_a_deferred_change_remains_visible_until_evaluated_and_pause_still_prevails(self) -> None:
+        (self.repo / "ledger/tasks/orchestrator/ORCH-A.json").write_text(json.dumps(_record("ORCH-A", "OPEN")))
         self.add(); sa.tick(self.campaign); sa.evaluate(self.campaign)
         self.add(next_action="new decisive source")
         os.environ["LEGEND_ADVISOR_NOW"] = "2026-11-13T10:10:00Z"

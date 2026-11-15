@@ -128,6 +128,20 @@
       "verdict": "PASS",
       "tests": 120,
       "evidence": "/tmp/adv-continuity-cadence-tests-final2.log"
+    },
+    {
+      "scope": "Idle pipeline controls before repair",
+      "verdict": "FAIL",
+      "tests": 3,
+      "failures": 2,
+      "evidence": "/tmp/adv-idle-negative.log",
+      "reason": "Idle pending delivery deferred and quiet stated assign remained NONE indefinitely; bounded pilot control passed"
+    },
+    {
+      "scope": "Complete Advisor suite including next-work selection without new input",
+      "verdict": "PASS",
+      "tests": 123,
+      "evidence": "/tmp/adv-idle-tests-final2.log"
     }
   ],
   "OPERATIONS": {
@@ -146,7 +160,7 @@
     "agent_words": 1222,
     "final_publication_receipt": "/tmp/legend-adv-continuity-publication.json (created by the closing execution; exact SHA and remote readback; no self-referential commit hash asserted in this record)",
     "remaining_validation_at_record_commit": "Exact closing publication and its CI are observed outside the commit; no final-SHA CI success claimed here before it occurs.",
-    "subsequent_targeted_tests": "120 Advisor tests PASS on cadence/event repair; final publication/CI follow in closing execution",
+    "subsequent_targeted_tests": "123 Advisor tests PASS, plus84scout from producer repair; cadence/event controls and permanent next-choice cases included",
     "subsequent_publication_receipt": "/tmp/legend-adv-cadence-publication.json"
   },
   "SELF_DIAGNOSIS": {
@@ -188,8 +202,8 @@
     "permanent_clarification": "fulltext_read_receipt.md Persistence and canonical promotion now routes existing publication-boundary derived metadata checks; no new gate or service"
   },
   "CHECKPOINT": {
-    "last_verified_result": "Permanent source/state correction plus two real native dispatch cycles; the third recall exposed a9-second cadence defect and event loss, reproduced and repaired with120Advisor tests PASS and same-state counterfactual",
-    "first_incomplete_work": "Closing execution publishes and verifies the additional runtime fix and removes its owned temporary worktree; no operator response needed."
+    "last_verified_result": "Permanent role/source/state correction, real research take-in-charge, start-clock and event-retention repair, and executable next-work selection in continuous mode even without fresh inputs:123Advisor tests PASS",
+    "first_incomplete_work": "Closing execution publishes and verifies final idle-pipeline increment and removes its owned worktree; no operator reply needed."
   },
   "RADAR_FOLLOW_UP": {
     "observed_failure": "The host07:32UTC message filed the supplied report because it addressed PLAN; ownership is not disposition or delivery",
@@ -246,5 +260,12 @@
       }
     },
     "release_scope": "bbed766ea is the published prior increment; this additional runtime correction requires its own exact publication and release CI"
+  },
+  "IDLE_PIPELINE_FOLLOW_UP": {
+    "need": "Continuous autonomy must not depend on a fresh prompt, radar or forever acting-on an earlier assign outcome once the queue is empty",
+    "repair": "Pending anticipating events with an empty executable pipeline may request assessment without the coalescing interval; a prior non-wait choice is periodically revisited at the configured ordinary cadence when no executable work remains. No forced task, new timer or model call inside tick. Bounded pilot and true resource/pause/wait limits remain.",
+    "validation": "123Advisor tests PASS; new idle-delivery and quiet-stated-choice controls first FAILED; bounded-pilot negative control and supported-wait preservation PASS",
+    "evidence": "/tmp/adv-idle-negative.log; /tmp/adv-idle-tests-final2.log",
+    "publication_receipt": "/tmp/legend-adv-idle-publication.json"
   }
 }

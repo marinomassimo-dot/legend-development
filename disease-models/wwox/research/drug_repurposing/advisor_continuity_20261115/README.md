@@ -196,6 +196,28 @@ longer equate observation with consumption. These are runtime/plumbing results, 
 strategic quality. The host-procedure wording also states its real judgment and follow-through
 duty directly, rather than describing it as only a tick/delivery wrapper.
 
+## Next-work selection is operational even without new input
+
+Two explicit idle-pipeline cases also failed before the correction: (1) a meaningful delivery
+was held behind the coalescing interval despite no executable recipient work; (2) a previously
+stated `assign` remained the last choice indefinitely when its queue was empty and no new radar,
+commit or operator prompt arrived. An earlier choice was incorrectly standing in for continued work.
+
+Continuous mode now requests an assessment of pending delivery/mandate/portfolio signals when
+the executable pipeline is empty without applying the ordinary cadence gate. With no new signal,
+a previous `continue`, `switch`, `assign` or `queue` is revisited at the existing configured
+ordinary cadence if no executable work remains. A supported stated wait keeps its real resumption
+condition; a measured allocation, pause, disable, running evaluation and duplicate digest still
+prevail. The bounded pilot keeps its original cadence and ceilings. This selects a decision,
+not a compulsory task, installs no timer and invokes no model inside `tick`.
+
+**123 Advisor tests pass.** The three new cases cover those two failures, no repeat before the
+ordinary cadence, preservation of a supported wait, and unchanged bounded-pilot behaviour.
+Existing cooldown and resume-condition fixtures now isolate their original properties using an
+active queue or a time before the independent next-choice cadence; they no longer encode a
+perpetual empty-queue wait. This is the permanent mechanism behind roadmap-driven next work,
+in addition to the standing behavioral instructions and radar handoffs.
+
 ## Scoped DREAM and self-diagnosis
 
 An **already held but unused operational relation**, not a biological discovery: the scope of a
