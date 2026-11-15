@@ -231,7 +231,9 @@ ENTRY_POINTS: list[tuple[str, str, list[str]]] = [
     ("memory_dismissals", "Dismissal and discovery ledgers, memory index (outside the repository)", [
         "disease-models/wwox/research/dismissal_ledger_current.md", "disease-models/wwox/research/discovery_ledger_current.md", str(MEMORY_DIR / "MEMORY.md")]),
     ("radar_science", "Scientific, pharmacological, data and method radars (opportunities, not evidence)", [
-        "disease-models/wwox/research/drug_repurposing/radar_*/README.md", "disease-models/wwox/research/capability_scout_log.md"]),
+        "disease-models/wwox/research/drug_repurposing/radar_*/README.md",
+        "disease-models/wwox/research/drug_repurposing/radar_*/*report*.md",
+        "disease-models/wwox/research/capability_scout_log.md"]),
     ("harness_scouting", "Harness scouting and repository mining. The weekly candidate tables stop at their last week (see `last commit`); the live feed is the daily scout, whose host cache is outside the repository and is embedded in the Stage P brief by the caller", [
         "governance/candidates/HARNESS-SCOUT-*.md", str(STATE_HOME / "scout_daily_briefing.md")]),
     ("capability_surface", "What the system claims it can do, with maturity", ["SKILLS.md", "CAPABILITIES.md"]),

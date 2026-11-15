@@ -136,6 +136,9 @@ literal `|` inside a table cell breaks the nine-column count and has the same ef
 ## Handoff
 Harness Engineering (ACTOR_ID `plan`) implements every ADOPT and TRIAL at T0 on Monday and
 lands them on `main`; this file is updated with the HE verdict column and the landed commit.
+Strategic Advisor: assess the leads against the standing roadmap and current work, using
+cross-session transport section 12 ("Route useful signals"); contact Harness or Science when
+worthwhile. This does not replace Harness ownership or make ADV an approval step.
 ```
 
 Verdict vocabulary: `ADOPT` (implement now), `TRIAL` (implement behind a switch or on a
