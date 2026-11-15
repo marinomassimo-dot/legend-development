@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-15T14:34Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-15T14:34Z",
+ "event_id": "FTR-20261115-21362619-01",
+ "evidence_basis": [
+  "Abstract, the Methods paragraph on two-electrode voltage clamp and recording solutions, the Results section on A1899 selectivity, Table 1, and the Figure 1 and 3 legends, read from the PMC article page PMC3077598 (one plain request on 2026-11-15, generic client, no contact parameter, HTTP 200, 184,859 bytes). The molecular-modelling and mutagenesis results, Discussion and the supplemental Experimental Procedures (not on the page; CHO recording conditions are therefore not stated in the page text) were not read.",
+  "Mechanical check: the 7 verbatim rows cited here were found in the saved page text (verify_quotes.py, 42 of 42 over the whole verbatim.tsv).",
+  "verbatim_locator | proposition: A1899 is a TASK-1 blocker; the paper is a primary pharmacology/structure paper | Abstract | \"We describe A1899 as a potent and highly selective blocker of the K2P channel TASK-1.\"",
+  "verbatim_locator | proposition: Streit 2011 TEVC temperature | Methods, Two-electrode Voltage Clamp | \"All two-electrode voltage clamp recordings were performed at room temperature (20–22 °C)\"",
+  "verbatim_locator | proposition: Streit 2011 recording solution has one pH, 7.5 | Methods, Two-electrode Voltage Clamp | \"Recording solution ND96 contained in mm: 96 NaCl, 2 KCl, 1.8 CaCl2, 1 MgCl2, 5 HEPES (pH 7.5).\"",
+  "verbatim_locator | proposition: A1899 IC50 on TASK-1 in oocytes at +40 mV | Results, A1899 Is a Selective Blocker | \"In oocytes, TASK-1 channels were blocked with an IC50 of 35.1 ± 3.8 nm, analyzed at +40 mV (Fig. 1B).\"",
+  "verbatim_locator | proposition: A1899 IC50 on TASK-1 and TASK-3 in CHO cells (conditions of the CHO recordings, including pH, not in the page text) | Results, A1899 Is a Selective Blocker | \"The IC50 of A1899 for TASK-1 channels expressed in CHO cells was only 7 nm (Table 1)\"",
+  "verbatim_locator | proposition: A1899 IC50 values for the K2P channels of the INV-18 arm (oocytes; CHO where stated) | Table 1 | \"TASK-1 | 0.035 ± 0.003 | TASK-3 | 0.318 ± 0.030 | TASK-1 CHO | 0.007 ± 0.001 | TASK-3 CHO | 0.070 ± 0.009 | TASK-2 | 12.0 ± 2.2 | TASK-4 | 8.1 ± 2.3 | TREK-1 | 23.8 ± 1.8 | TREK-2 | 8.4 ± 1.1 | TRAAK | >20 | THIK-1 | 2.2 ± 0.2 | TRESK | 0.9 ± 0.1 | Kv1.1 | 2.7 ± 0.3\"",
+  "verbatim_locator | proposition: Potency of A1899 depends on external K+ (2 mM vs symmetrical high K+), an open-channel-block signature; a condition other than pH | Results | \"the extent of block at +40 mV elicited by 400 nm A1899 in a bath solution with a high concentration of extracellular potassium was only 59.7% in comparison with about 90% in ND96 (Fig. 1, B and D), reflecting an almost 10-fold increase in IC50 of A1899\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/it45_ph_series_it55_20261115/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "1e65efff5c23e32b837ec758cf2b7a31c7b7376dc9459dd78fe5b0724f6661d9",
+ "source_kind": "fulltext_remote",
+ "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3077598/ (one plain request on 2026-11-15, generic client, no contact parameter, HTTP 200, 184859 bytes; the page copy is kept outside git, SHA-256 given in source_fingerprint)",
+ "study_id": {
+  "doi": "10.1074/jbc.m111.227884",
+  "pmid": "21362619"
+ },
+ "workflow": "IT55 producer delegate for IT45-Q06/Q07/Q08 (pH series), context_policy QUESTION_DRIVEN: body read from the PMC article page, quotes checked mechanically (verify_quotes.py, 42 of 42 over the whole verbatim.tsv); predictions frozen in a local commit before any body was opened."
+}

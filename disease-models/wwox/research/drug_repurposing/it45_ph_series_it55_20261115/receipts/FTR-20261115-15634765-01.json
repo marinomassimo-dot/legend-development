@@ -1,0 +1,45 @@
+{
+ "analysis_at": "2026-11-15T14:34Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-15T14:34Z",
+ "event_id": "FTR-20261115-15634765-01",
+ "evidence_basis": [
+  "Abstract, the Introduction paragraph on proton inhibition of native NMDA receptors, the Methods on cells, solutions, temperature and kinetic analysis, and the Results on macroscopic proton inhibition (Fig. 3) read from the PMC article page PMC6725198 (one plain request on 2026-11-15, generic client, no contact parameter, HTTP 200, 224,359 bytes). The single-channel analysis, the later Results and the Discussion were not read; an earlier package (SCI45 N1, queries Q27-Q30) recorded this article as an efetch stub and no receipt exists in the ledger.",
+  "Mechanical check: the 8 verbatim rows cited here were found in the saved page text (verify_quotes.py, 42 of 42 over the whole verbatim.tsv).",
+  "verbatim_locator | proposition: Banke 2005: recombinant rat NR1/NR2B in HEK 293 cells (GluN1-1a/GluN2B) | Results | \"outside-out patches containing multiple channels were pulled from HEK 293 cells expressing rat NR1/NR2B receptors\"",
+  "verbatim_locator | proposition: Banke 2005 external recording solution (no added Mg2+ listed), pH 7.4, 23 C | Methods, Electrophysiology | \"External recording solution for all experiments was composed of the following (in mm): 150 NaCl, 10 HEPES, 3 KCl, 0.7 CaCl2, and 0.2 EDTA, pH 7.4 (NaOH) (310-330 mOsm, 23°C).\"",
+  "verbatim_locator | proposition: Banke 2005 temperature 23 C | Methods, Electrophysiology | \"All experiments were performed at 23°C.\"",
+  "verbatim_locator | proposition: Banke 2005 whole-cell proton IC50 for NR1/NR2B, pH 6.9-7.1, Hill 0.8-1.0 | Results, Fig. 3E | \"IC50 values ranged between pH 6.9 and 7.1; the Hill slope ranged between 0.8 and 1.0.\"",
+  "verbatim_locator | proposition: Banke 2005 whole-cell IC50 with both coagonists at pH 7.1 | Results | \"with an IC50 corresponding to pH 7.1 in the presence of both coagonists and pH 6.9-7.1 in the presence of either coagonist\"",
+  "verbatim_locator | proposition: Banke 2005 kinetic Kd 77 nM = pH 7.2 | Methods, Data analysis | \"Fitted values for kon and koff were 1.42 × 109 m-1 sec-1 and 110 sec-1, which give a Kd value of 77 nm, corresponding to pH 7.2.\"",
+  "verbatim_locator | proposition: Banke 2005: Mg2+ appears only in culture medium and in the internal (pipette) solution | Methods, Electrophysiology | \"replaced and supplemented with 2-3 mm Mg2+ and 200 μm APV\"",
+  "verbatim_locator | proposition: Banke 2005: native-neuron proton IC50 range is quoted from earlier primaries (copied) | Introduction | \"NMDA receptors expressed by forebrain and cerebellar neurons are inhibited by protons with an IC50 value in the range of pH 6.9-7.3 [50-126 nm H+\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/it45_ph_series_it55_20261115/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "459384533333d00c3493a11b0765fde56c32f7173fc033d609f653b83b047127",
+ "source_kind": "fulltext_remote",
+ "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6725198/ (one plain request on 2026-11-15, generic client, no contact parameter, HTTP 200, 224359 bytes; the page copy is kept outside git, SHA-256 given in source_fingerprint)",
+ "study_id": {
+  "doi": "10.1523/jneurosci.3154-04.2005",
+  "pmid": "15634765"
+ },
+ "workflow": "IT55 producer delegate for IT45-Q06/Q07/Q08 (pH series), context_policy QUESTION_DRIVEN: body read from the PMC article page, quotes checked mechanically (verify_quotes.py, 42 of 42 over the whole verbatim.tsv); predictions frozen in a local commit before any body was opened."
+}

@@ -1,0 +1,26 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-IT45-PH-SERIES-20261115",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "NORMAL",
+  "OBJECTIVE": "IT45-Q06/Q07/Q08 (pH series): can a K2P or NMDAR tool arm be read across pH; one delegate under the prepared brief; ADV go-ahead 2026-11-15.",
+  "START_UTC": "2026-11-15T14:18:34Z",
+  "MANDATE_STATE": "COMPLETE",
+  "RESULT_SO_FAR": "Q06 not stated for every tool (single-pH values; native TASK baseline moves about 10% per 0.1 pH unit); Q07 unsettled (primary page behind reCAPTCHA, stop); Q08 supported abstention (11 queries). Ten sources requested (cap): 4 read partially with locators, 1 paywalled abstract, 2 reCAPTCHA, 1 HTTP 403, 2 not reached. Four receipts recorded. IT re-checked three decisive quotes; no blind verifier. Rows narrowed/still open, none concluded.",
+  "CLOSE_WHEN": "delegate result integrated, receipts recorded, rows noted, landed.",
+  "AUTONOMY_TRIAL_NOTES": {
+    "delegates": "one legend-delegate, sonnet, effort high read back x67 turns",
+    "tokens_of_delegates": {
+      "output": 74150,
+      "cache_written": 207623,
+      "cache_read": 8445660,
+      "peak_context": 207625,
+      "turns": 67,
+      "duration_ms": 1045372
+    },
+    "waits_interruptions_restarts_human_interventions": [
+      "two reCAPTCHA stops and one 403 inside the delegate, none worked around"
+    ]
+  }
+}
