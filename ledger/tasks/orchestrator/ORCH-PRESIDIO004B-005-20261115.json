@@ -1,0 +1,79 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-PRESIDIO004B-005-20261115",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "PRESIDIO-004 part B (operator-directed, carried out by the ADV presidio, relayed by legend-development-39): the independent reference mapping of the 15 blank-log2fc rows of signature_it23_20261103/composition_class.tsv, built BEFORE HE's trial output, then compared row by row with it; and PRESIDIO-005 (queued behind it): a short sourced table of the discriminating observations that separate a soluble signal from a composition difference and from cell contact in the INV-06 X1 design, from held files only. Perimeter: offline, zero spend, no edit of committed files, rankings, needs, candidates or frozen packages; a dated folder per part and a consumer delta for IT. Authority: the assignments of 2026-11-15 (assignments/PRESIDIO-004.md part B, PRESIDIO-005.md), which leave the moment and any decline or supersession to me.",
+ "START_UTC": "2026-11-15T07:20:00Z",
+ "BASELINE": "local main cda299783 (development/main same at fetch); worktree .claude/worktrees/p004b, branch task/presidio004b.",
+ "MANDATE_STATE": "IN_PROGRESS",
+ "CURRENT_PACKAGE": {
+  "id": "part-B-compared-005-written",
+  "state": "part B compared (15/15 agree); 005 written; battery next",
+  "delegate_active": "none",
+  "updated": "2026-11-15"
+ },
+ "RESUME": "Part B comparison: when HE's trial folder is on main, read ONLY then, compare row by row with mapping_reference.tsv, write comparison_with_he_trial.md. PRESIDIO-005: note + consumer delta from held files. Then verify_run battery on the landing SHA waited by PID, record evidence, task_close, safe_push, ls-remote, message ADV, IT and HE separately; remove the worktree.",
+ "DECISIONS_TAKEN": [
+  "2026-11-15: accepted both assignments; part B first because it must precede HE's output. At build time main held no HE trial folder (listing of the drug_repurposing directory only; no HE file opened). All 15 rows resolve uniquely via ENSG, cross-checked via previous symbol and Entrez id; commit cc39da185 carries the time.",
+  "2026-11-15: no blind verifier and no delegate (assignments say none required; the comparator is the independence).",
+  "2026-11-15: HE's folder landed as e16c42b70; compared row by row (15 of 15 agree on authors' symbol, ENSG, direction, log2FC; no disagreement); comparison_with_he_trial.md and comparison_rows.tsv added to the part B folder. The first battery (948f71d810) was stopped by me (SIGTERM, INTERRUPTED) so that one battery covers the comparison files.",
+  "2026-11-15: IT used part B in its disposition (b2eb309fb: KEEP the 15 conversions, INCONCLUSIVE on benefit; it re-derived all 15 rho and the QF change from my hand-read symbols) and corrected my O4 source: transwell is not in INV-06's text (my proposal with it36 precedent); no (a)(b)(c) labels exist. 005 files corrected; battery 20261115-075531-6bb306c0 stopped by me and relaunched so one battery covers the corrected files.",
+  "2026-11-15: battery 4 (run 20261115-075847-b7fe7e15, PASS WITH SKIPS, 251 targets, 12 skipped) is evidence for 0e11973e4e only. development/main then moved (b408d5b17; RP-008 census, ADV-010 assignment, strategic_advisor script and skill, state manifest) in files that do not overlap this package. I merged it and ran legend_lint (WARN), growth_anchors check (PASS), fulltext_receipts verify (OK), test_tool_routing, test_section_references and public_release_gate (PASS, 0 blocks) on the merged tree; the full battery was NOT rerun on the merged SHA. The landing therefore rests on the battery for the package plus quick checks for the merge."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261115-073627-95c3fc7d",
+   "label": "presidio004b005-landing",
+   "sha": "948f71d8102e4484ee83aa825b4da100a55cd850",
+   "state": "INTERRUPTED",
+   "exit_code": -15,
+   "evidence_dir": "/tmp/legend-verify-keep/20261115-073627-95c3fc7d",
+   "log_sha256": "c14c2123465d01c8e128dcacd1039b093cea79c3ef8a9837a163605867ca670b",
+   "clone": "REMOVED"
+  },
+  {
+   "run_id": "20261115-074551-d7816c2c",
+   "label": "presidio004b005-landing2",
+   "sha": "fdabdbe81053051bb030fcb070537f8c59cdcd56",
+   "state": "INTERRUPTED",
+   "exit_code": -15,
+   "evidence_dir": "/tmp/legend-verify-keep/20261115-074551-d7816c2c",
+   "log_sha256": "dc9a3ffd40999729a4a65e23ee6ac497866d1a37d61ca9c601c8ef17cea8a5d6",
+   "clone": "REMOVED"
+  },
+  {
+   "run_id": "20261115-075531-6bb306c0",
+   "label": "presidio004b005-landing3",
+   "sha": "a7ec78e2f877915a204ab5d278d5e39c4eb1b866",
+   "state": "INTERRUPTED",
+   "exit_code": -15,
+   "evidence_dir": "/tmp/legend-verify-keep/20261115-075531-6bb306c0",
+   "log_sha256": "25b3b93d281e28e138432cdeba4ef685369971d03ee1100632e73fce9881305b",
+   "clone": "REMOVED"
+  },
+  {
+   "run_id": "20261115-075847-b7fe7e15",
+   "label": "presidio004b005-landing4",
+   "sha": "0e11973e4e90bb84a01aac983946c217e0aae425",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261115-075847-b7fe7e15",
+   "log_sha256": "67746670ab21d410cb44daf452645cfb9580b59e78c7f088aa6ede6ba6641d00",
+   "clone": "REMOVED"
+  }
+ ],
+ "TRIAL_24H_OBSERVATIONS": {
+  "window": "2026-11-14T15:29:29Z to 2026-11-15T15:29:29Z, observation only, requested by the ADV presidio",
+  "delegates_and_blind_checkers": "none",
+  "events": [
+   "2026-11-15: battery 20261115-073627-95c3fc7d on 948f71d810 interrupted by me at about 15 minutes (SIGTERM) to add the comparison files; relaunched on the new SHA.",
+   "2026-11-15: batteries 073627-95c3fc7d, 074551-d7816c2c and 075531-6bb306c0 were each stopped by me (SIGTERM) before ending to add or correct files; the fourth run covers the landing SHA."
+  ]
+ }
+}

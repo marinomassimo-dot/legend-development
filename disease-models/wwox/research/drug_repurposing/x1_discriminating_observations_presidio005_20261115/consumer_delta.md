@@ -1,0 +1,7 @@
+# Consumer delta (PRESIDIO-005): proposals for the integrator; none applied
+
+| # | Consumer | Proposal | Ground |
+|---|---|---|---|
+| 1 | `ranking_it8_p9_20261029/investigations_it20.tsv` INV-06 `next_test`, if the integrator regenerates for another reason (regeneration cost is IT's call) | A dated clause: if X1 is ever reopened by a measured premise, its specification joins the soluble leg (fresh-medium baseline, mixing, dilution, matched neuron number and viability, positive control), the composition readouts (neuron number, purity, non-neuronal cells, axon density and calibre, T3/T4 and a nutrient in conditioned versus fresh medium) and the contact leg (fixed neurons, held in INV-06; a transwell is a proposal, not a held arm); a null is read only with a working positive control and a detection limit from the monoculture variance | README table; no new datum |
+| 2 | `myelin_phenotype_first_sci50_20261113/output/open_questions.tsv` | Optional new row OQ13 (contact leg): "Does the deficit persist on fixed null neurons or recover across a transwell, with fixed wild-type neurons shown to support OPC maturation?", kind wet_lab_measurement, reopening condition = the same as OQ11. A single row, no edit of OQ9/OQ11/OQ12 | contact leg absent from OQ9/OQ11/OQ12 |
+| 3 | `ctgf_held_data_adv007_20261114/consumer_delta.md` row 2 | No change: the expression check stays closed; a candidate named in a neutralisation arm is still grounded in the neuron-specific Tsc literature, not a Wwox datum | ADV-007; operator's closure |
