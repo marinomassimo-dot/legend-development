@@ -23,10 +23,23 @@
  "ESCALATIONS": [],
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
- "VERIFICATION_EVIDENCE": {},
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261115-014341-c8620446",
+   "label": "adv009-landing",
+   "sha": "a64f784dcaf5cecde25fb05581e9611aedd64967",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261115-014341-c8620446",
+   "log_sha256": "1e209fda5be17d35930fb7beb87e2a6c6b93e209f6d5877213f284360f5a053a",
+   "clone": "REMOVED"
+  }
+ ],
  "TRIAL_24H_OBSERVATIONS": {
   "window": "2026-11-14T15:29:29Z to 2026-11-15T15:29:29Z, observation only, requested by the ADV presidio",
-  "delegates_and_blind_checkers": "none so far",
-  "events": []
+  "delegates_and_blind_checkers": "none (no delegate, no blind verifier; weak point named in the session evaluation)",
+  "events": [
+   "2026-11-15: release battery on a64f784dca waited by supervisor PID 2387662, CONCLUDED exit 0, 'PASS WITH SKIPS (251 targets, 12 skipped)'; the status read-back, not the launcher notice, was the evidence."
+  ]
  }
 }
