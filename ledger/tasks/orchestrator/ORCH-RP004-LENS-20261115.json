@@ -6,14 +6,14 @@
   "PRIORITY": "NORMAL",
   "OBJECTIVE": "RP-004 / ADV-011 (Advisor draft from evaluation 13, delivered by message; carries the operator's roadmap line of 2026-11-15 on a mechanism-lens case; low-risk: selection, design and one focused reading by Science): from unread_gold.py --mechanism with no tier, relevance or INV filter choose ONE mechanism item (read and declared-read removed, lawful free full text confirmed) with the best chance of a new conditional pharmacological contrast or discriminating experiment for WWOX loss of function; freeze predictions before reading; one focused Scientist batch queued behind PRESIDIO-005; a supported abstention is acceptable.",
   "START_UTC": "2026-11-15T09:00:00Z",
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "RESULT_SO_FAR": "mechanism_lens_it55_20261115/README.md: item P287 (PMID 18620777, JNK inhibitor x WWOX gain/loss in HCC lines, PMC article page serves the body); predictions frozen in commit 45fadb00f; conditional contrast with rivals, transfer limits and a rejecting experiment; BRIEF_SCI.md sent to SCI. OPEN until SCI returns the reading; then score the predictions and close or abstain.",
   "CLOSE_WHEN": "SCI's reading of the body is returned and the frozen predictions are scored, or SCI declines/supersedes; then record the outcome and the git-measured times.",
   "AUTONOMY_TRIAL_NOTES": {
     "delegates": "none by IT; the reading is SCI's",
     "tokens_of_delegates": 0,
     "waits_interruptions_restarts_human_interventions": [
-      "none so far"
+      "SCI reading took ~98 min git-measured (IT brief commit 743cdf741 09:29:39Z to SCI landing 8c32ee2c0 11:07:22Z), including SCI battery; no restart, no human intervention"
     ]
   }
 }
