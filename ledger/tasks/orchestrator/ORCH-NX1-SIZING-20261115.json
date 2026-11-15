@@ -7,14 +7,14 @@
  "OBJECTIVE": "PRESIDIO-007 (queued by the ADV presidio, 2026-11-15, not operator-given): size NX1 (drug-by-genotype test with a same-day control) for ethosuximide from the Fig 7b extraction; summary choice first; ranges not points; no ranking, card or package edit; deliver to IT, ADV informed.",
  "START_UTC": "2026-11-15T15:45:00Z",
  "BASELINE": "development/main 4a3a001b2; worktree .claude/worktrees/nx1, branch task/nx1-sizing.",
- "MANDATE_STATE": "IN_PROGRESS",
+ "MANDATE_STATE": "DONE",
  "CURRENT_PACKAGE": {
-  "id": "sizing-written",
-  "state": "size_nx1.py, README, consumer_delta written; verification and landing next",
+  "id": "closed",
+  "state": "landed on development/main (merge 5e62427c3, 2026-11-15T15:55:33Z; push 224094b14); delivered to IT and ADV, ADV re-derived one row (wild type about 308 per arm)",
   "delegate_active": "none",
   "updated": "2026-11-15"
  },
- "RESUME": "Folder nx1_sizing_sci_20261115/ is complete. Remaining: quick checks (this is a small note; battery decision recorded), task_close, push, message IT and ADV.",
+ "RESUME": "Closed. IT owns the ranking-row wording.",
  "DECISIONS_TAKEN": [
   "2026-11-15: accepted PRESIDIO-007 (no change since it was written that alters its usefulness: IT consumed the Fig 7 reading, nobody sized NX1). The stop condition of the assignment was met for the wild-type question (bounds 16 to 26 times apart) and the answer was written with the arithmetic. No blind verifier (one reader; weak point is the within-animal persistence, marked unknown); no ranking, card or frozen package edited."
  ],
@@ -22,5 +22,9 @@
  "ESCALATIONS": [],
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
- "VERIFICATION_EVIDENCE": []
+ "VERIFICATION_EVIDENCE": [
+  {
+   "note": "no full battery run for this small note: quick checks on the merged tree (legend_lint exit 0, growth_anchors PASS, tool_routing, section_references, public_release_gate exit 0) before landing; one row independently re-derived by ADV"
+  }
+ ]
 }
