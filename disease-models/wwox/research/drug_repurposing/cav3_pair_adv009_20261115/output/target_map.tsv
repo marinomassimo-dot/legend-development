@@ -1,0 +1,19 @@
+gene	uniprot	target_chembl_id	target_type	pref_name
+CACNA1G	O43497	CHEMBL4641	SINGLE PROTEIN	Voltage-dependent T-type calcium channel subunit alpha-1G
+CACNA1G	O43497	CHEMBL2362995	PROTEIN FAMILY	Voltage-gated T-type calcium channel
+CACNA1G	O43497	CHEMBL2363032	PROTEIN COMPLEX GROUP	Voltage-gated calcium channel
+CACNA1H	O95180	CHEMBL1859	SINGLE PROTEIN	Voltage-dependent T-type calcium channel subunit alpha-1H
+CACNA1H	O95180	CHEMBL2362995	PROTEIN FAMILY	Voltage-gated T-type calcium channel
+CACNA1H	O95180	CHEMBL2363032	PROTEIN COMPLEX GROUP	Voltage-gated calcium channel
+CACNA1I	Q9P0X4	CHEMBL5558	SINGLE PROTEIN	Voltage-dependent T-type calcium channel subunit alpha-1I
+CACNA1I	Q9P0X4	CHEMBL2362995	PROTEIN FAMILY	Voltage-gated T-type calcium channel
+CACNA1I	Q9P0X4	CHEMBL2363032	PROTEIN COMPLEX GROUP	Voltage-gated calcium channel
+CACNA1C	Q13936	CHEMBL1940	SINGLE PROTEIN	Voltage-dependent L-type calcium channel subunit alpha-1C
+CACNA1C	Q13936	CHEMBL2095229	PROTEIN FAMILY	Voltage-gated L-type calcium channel
+CACNA1C	Q13936	CHEMBL2363032	PROTEIN COMPLEX GROUP	Voltage-gated calcium channel
+CACNA1C	Q13936	CHEMBL3988638	PROTEIN COMPLEX	Voltage-dependent L-type calcium channel alpha1C/alpha2delta/beta1b
+CACNA1C	Q13936	CHEMBL4106164	PROTEIN COMPLEX	L-type calcium channel alpha-1c/beta-2/alpha2delta-1
+CACNA1C	Q13936	CHEMBL6066567	PROTEIN COMPLEX	Voltage-dependent L-type calcium channel subunit alpha-1C/L-type calcium channel subunit beta-3/calcium channel subunit alpha-2/delta-1
+KCNH2	Q12809	CHEMBL240	SINGLE PROTEIN	Voltage-gated inwardly rectifying potassium channel KCNH2
+KCNH2	Q12809	CHEMBL2362996	PROTEIN FAMILY	Voltage-gated potassium channel
+KCNH2	Q12809	CHEMBL4106188	SELECTIVITY GROUP	Melanin-concentrating hormone receptor 2/HERG

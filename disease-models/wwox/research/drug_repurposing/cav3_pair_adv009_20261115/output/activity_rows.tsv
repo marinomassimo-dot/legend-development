@@ -1,0 +1,25 @@
+query	molecule	gene	target	standard_type	relation	value	units	assay_description	assay_type	document	organism
+efonidipine	CHEMBL2074922	CACNA1G	CHEMBL4641	NO_ACTIVITY_ROWS							
+efonidipine	CHEMBL2074922	CACNA1H	CHEMBL1859	NO_ACTIVITY_ROWS							
+efonidipine	CHEMBL2074922	CACNA1I	CHEMBL5558	NO_ACTIVITY_ROWS							
+efonidipine	CHEMBL2074922	CACNA1C	CHEMBL1940	NO_ACTIVITY_ROWS							
+efonidipine	CHEMBL2074922	KCNH2	CHEMBL240	NO_ACTIVITY_ROWS							
+flunarizine	CHEMBL552659	CACNA1G	CHEMBL4641	NO_ACTIVITY_ROWS							
+flunarizine	CHEMBL552659	CACNA1H	CHEMBL1859	NO_ACTIVITY_ROWS							
+flunarizine	CHEMBL552659	CACNA1I	CHEMBL5558	NO_ACTIVITY_ROWS							
+flunarizine	CHEMBL552659	CACNA1C	CHEMBL1940	NO_ACTIVITY_ROWS							
+flunarizine	CHEMBL552659	KCNH2	CHEMBL240	Potency		446.7	nM	PUBCHEM_BIOASSAY: qHTS Assay for Small Molecule Inhibitors of the Human hERG Channel Activity. (Class of assay: confirmatory) 	F	CHEMBL1201862	
+flunarizine	CHEMBL30008	CACNA1G	CHEMBL4641	Kd	=	530.0	nM	Inhibition of T-type Cav3.1 channel	B	CHEMBL1212879	
+flunarizine	CHEMBL30008	CACNA1G	CHEMBL4641	Kd	=	530.0	nM	Binding affinity to T-type alpha1G calcium channel	B	CHEMBL1641559	
+flunarizine	CHEMBL30008	CACNA1H	CHEMBL1859	Kd	=	3600.0	nM	Inhibition of T-type Cav3.2 channel	B	CHEMBL1212879	
+flunarizine	CHEMBL30008	CACNA1I	CHEMBL5558	Kd	=	840.0	nM	Inhibition of T-type Cav3.3 channel	B	CHEMBL1212879	
+flunarizine	CHEMBL30008	CACNA1I	CHEMBL5558	Kd	=	840.0	nM	Binding affinity to T-type alpha1I calcium channel	B	CHEMBL1641559	
+flunarizine	CHEMBL30008	CACNA1C	CHEMBL1940	NO_ACTIVITY_ROWS							
+flunarizine	CHEMBL30008	KCNH2	CHEMBL240	IC50	=	605.8	nM	DRUGMATRIX: Potassium Channel HERG radioligand binding (ligand: [3H] Astemizole)	B	CHEMBL1909046	
+flunarizine	CHEMBL30008	KCNH2	CHEMBL240	Ki	=	496.3	nM	DRUGMATRIX: Potassium Channel HERG radioligand binding (ligand: [3H] Astemizole)	B	CHEMBL1909046	
+flunarizine	CHEMBL30008	KCNH2	CHEMBL240	AC50	=	540.0	nM	Compound was evaluated for inhibition of human KCNH2 in an in vitro assay with cellular components measured by membrane filtration, radioactivity method	F	CHEMBL5291721	
+flunarizine	CHEMBL539027	CACNA1G	CHEMBL4641	NO_ACTIVITY_ROWS							
+flunarizine	CHEMBL539027	CACNA1H	CHEMBL1859	EC50		5620.0	nM	PUBCHEM_BIOASSAY: Inhibitors of T-Type Calcium Channel. (Class of assay: confirmatory) [Related pubchem assays (depositor defined):AID449739, AID463087, AID4930	F	CHEMBL1201862	
+flunarizine	CHEMBL539027	CACNA1I	CHEMBL5558	NO_ACTIVITY_ROWS							
+flunarizine	CHEMBL539027	CACNA1C	CHEMBL1940	NO_ACTIVITY_ROWS							
+flunarizine	CHEMBL539027	KCNH2	CHEMBL240	NO_ACTIVITY_ROWS							
