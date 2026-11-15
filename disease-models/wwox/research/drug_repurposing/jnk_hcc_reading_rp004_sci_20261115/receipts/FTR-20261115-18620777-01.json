@@ -1,0 +1,49 @@
+{
+ "analysis_at": "2026-11-15T09:38:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-15T09:39:00Z",
+ "event_id": "FTR-20261115-18620777-01",
+ "evidence_basis": [
+  "Abstract, Introduction, Materials and Methods, Results, Discussion, Table 1 (clinical characteristics of 109 participants) and the five figure legends read from the PMC article web page of the NIH author manuscript PMC2574998 (one plain request, generic client, HTTP 200, 236,983 bytes of HTML, an article and not an interstitial), converted to text; figures: legends only, the five images were not viewed, so error bars, replicate numbers shown in a panel and the numeric size of the inhibitor effect are not read; references: only entries 65, 66 and 68 were looked up for the identity of the compound and the assays, the rest not read; no supplement is described.",
+  "Mechanical check: all 26 verbatim rows of verbatim.tsv were found in the saved page by verify_quotes.py (PASS); the same script searched the body for six absent features and its hits were read one by one (see the README).",
+  "verbatim_locator | proposition: the gain arm (SNU387) and the loss arm (SNU449) are two different cell lines | Methods, Transient and stable transfections | \"HCC cell line SNU449, which has a high level of WWOX expression, and SNU387, which has a low level of WWOX expression, were selected for transfection.\"",
+  "verbatim_locator | proposition: the two lines carry different p53 alterations | Methods, Transient and stable transfections | \"SNU449 carries a G to A substitution at nucleotide 481 of the p53 gene, leading to an alanine to threonine mutation at codon 161 which is associated with nuclear p53 accumulation, while SNU387 has a truncated p53 gene due to an A to T substitution at nucleotide 490 which leads to a stop codon at position 164.\"",
+  "verbatim_locator | proposition: the loss arm is a partial knockdown with one shRNA | Results, Downregulation of WWOX in SNU449 | \"In SNU449 cells stably-transfected with the WWOX shRNA plasmid, real-time PCR showed 40% lower WWOX mRNA than in vector-transfected controls; Western immunoblotting also showed a 30% decrease in WWOX protein (Figure 3D).\"",
+  "verbatim_locator | proposition: high-expressing gain clones could not be selected; the stable clones come from a 12 to 16 week selection | Results, Restoration of WWOX expression | \"With this profound degree of cell killing it was impossible to select SNU387 clones expressing WWOX at high levels.\"",
+  "verbatim_locator | proposition: the only inhibitor concentration and duration stated in the text | Figure 5 legend, panel A | \"SNU387 clones (Vector, WWOX1 and WWOX3) were treated with 25 µM SP600129 for 6 hours\"",
+  "verbatim_locator | proposition: the paper's own citation for the inhibitor is the SP600125 paper | References, entry 66 | \"SP600125, an anthrapyrazolone inhibitor of Jun N-terminal kinase.\"",
+  "verbatim_locator | proposition: gain arm, inhibitor with WWOX clones | Results, The JNK inhibitor SP 600129 enhances WWOX-induced apoptosis and growth inhibition | \"SNU387 WWOX1 and SNU387 WWOX3 cells showed increased apoptosis when compared to vector-transfected cells. Apoptosis was significantly enhanced by SP600129 (Figure 5B).\"",
+  "verbatim_locator | proposition: loss arm, inhibitor with knockdown | Results, The JNK inhibitor SP 600129 enhances WWOX-induced apoptosis and growth inhibition | \"After downregulation of WWOX, SP600129-induced apoptosis was significantly decreased (Figure 5E).\"",
+  "verbatim_locator | proposition: knockdown also lowers baseline apoptosis, so the text does not separate an inhibitor-specific effect from the baseline | Results, Downregulation of WWOX in SNU449 | \"Suppression of WWOX expression resulted in a decrease in both baseline and staurosporine-induced apoptosis (Figure 3B and 3C).\"",
+  "verbatim_locator | proposition: the only JNK-pathway readout is phospho-ERK in the gain line | Results, The JNK inhibitor SP 600129 enhances WWOX-induced apoptosis and growth inhibition | \"As expected, treatment of SNU387 Vector cells with SP600129 substantially inhibited ERK phosphorylation. In addition, concurrent expression of WWOX further inhibited ERK phosphorylation (Figure 5D).\"",
+  "verbatim_locator | proposition: apoptosis is read by one morphological assay | Methods, Cell proliferation and apoptosis assays | \"Apoptosis was assessed by DAPI staining and fluorescence microscopy(68).\"",
+  "verbatim_locator | proposition: the authors state the JNK effect depends on the cell type | Discussion | \"Thus, JNK appears to mediate either pro-apoptotic or pro-survival effects depending on the cell type and system studied.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/jnk_hcc_reading_rp004_sci_20261115/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "7a7c651013fd7ce97e547a74fabc26aba34cf1b9c8f0869275ae2e8bf00fbd2a",
+ "source_kind": "fulltext_remote",
+ "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2574998/ (one plain request on 2026-11-15, generic client, no contact parameter; the page copy is kept under files/fulltext/rp004_lens_20261115/ and is not in git)",
+ "study_id": {
+  "doi": "10.1016/j.jhep.2008.05.015",
+  "pmid": "18620777"
+ },
+ "workflow": "SCI reading for RP-004 (ADV-011) mechanism-lens case P287: seven predictions were committed before the body was read and scored first; the body was read from the PMC article page, quotes were checked mechanically against the saved page, and the figure images were not viewed."
+}

@@ -1,0 +1,36 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-RP004-SCI-20261115",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "RP-004 (ADV-011), peer-relayed by the IT Orchestrator and carrying the operator's roadmap line of 2026-11-15: one focused reading of PMID 18620777 (JNK inhibitor x WWOX gain and loss in HCC lines; PMC2574998), seven predictions F1-F7 scored first from prediction_frozen.md (IT commit 45fadb00f), extraction items 3-4, one verdict. Free lawful route only, no contact parameter, no ranking/need/candidate/frozen-package edit, no treatment/dose/route content. IT scores the case predictions and closes ORCH-RP004-LENS-20261115. Zero spend.",
+ "START_UTC": "2026-11-15T09:30:00Z",
+ "BASELINE": "development/main 743cdf741; worktree .claude/worktrees/rp004, branch task/rp004-lens.",
+ "MANDATE_STATE": "IN_PROGRESS",
+ "CURRENT_PACKAGE": {
+  "id": "reading-done-landing",
+  "state": "reading, scores, extraction, receipt JSON (dry-run OK) and consumer delta written; battery and landing next",
+  "delegate_active": "none",
+  "updated": "2026-11-15"
+ },
+ "RESUME": "The reading is complete: package folder jnk_hcc_reading_rp004_sci_20261115/. Remaining: battery on the landing SHA (verify_run.py), task_close.py, safe_push.py, then tell IT the landed SHA and that receipts/FTR-20261115-18620777-01.json is for the integrator to append (not appended by SCI). The figure panels were not viewed (F5 and F7 not determinable); viewing them needs a decision by someone other than SCI.",
+ "DECISIONS_TAKEN": [
+  "2026-11-15: accepted RP-004 after PRESIDIO-005 landed (b88a2c251). Reading route: one plain request for the PMC article page, curl default client name, no contact parameter; HTTP 200, 236,983 bytes, an article (title, sections, legends, references), sha256 recorded in access.tsv; the five figure images were not requested (one request per item).",
+  "2026-11-15: scored F1-F7 from the body against the frozen text, wording untouched (checked by string match against prediction_frozen.md): F1 F2 F3 F4 F6 HELD, F5 F7 NOT DETERMINABLE, none MISSED. Verdict: contrast carried with limits.",
+  "2026-11-15: receipt FTR-20261115-18620777-01 prepared with depth partial_fulltext_read (figures captions only); dry-run OK; not appended by SCI (the integrator appends in event-ID order). No blind verifier, called by me; the quotes are checked mechanically (26 of 26 found).",
+  "2026-11-15: noted for IT that reference 66 of the paper is the SP600125 paper, which supports the brief's '[sic]'."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "VERIFICATION_EVIDENCE": [],
+ "TRIAL_24H_OBSERVATIONS": {
+  "window": "2026-11-14T15:29:29Z to 2026-11-15T15:29:29Z, observation only, requested by the ADV presidio",
+  "delegates_and_blind_checkers": "none",
+  "events": [
+   "2026-11-15: one PMC page request (236,983 bytes), no retry, no interstitial."
+  ]
+ }
+}
