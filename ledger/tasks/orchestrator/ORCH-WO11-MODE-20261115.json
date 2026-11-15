@@ -1,0 +1,24 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-WO11-MODE-20261115",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "Repair CI #821 red on test_release_surface: second_reader_wo11_sci_20261115/verify_quotes.py had a shebang but mode 100644 and an unsafe --help (HE report, ADV request, 2026-11-15)",
+ "START_UTC": "2026-11-15T22:55:00Z",
+ "BASELINE": "development/main bb8f82742",
+ "MANDATE_STATE": "DONE",
+ "CURRENT_PACKAGE": "closed in the landing commit",
+ "RESUME": "none; HE observes the CI run on the landed SHA",
+ "DECISIONS_TAKEN": [
+  "2026-11-15: my own miss: the file was created fresh with a heredoc, so it did not inherit the +x of the two earlier copies, and I ran quick checks but not test_release_surface.py before landing 4ccdfdb98; fixed mode and added a --help that prints usage and exits 0; audited the other 10 scripts of my recent packages (all 100755, --help prints a usage line)"
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "VERIFICATION_EVIDENCE": [
+  "scripts/test_release_surface.py: Ran 11 tests, OK, on the branch",
+  "verify_quotes.py still 15/15 found"
+ ]
+}

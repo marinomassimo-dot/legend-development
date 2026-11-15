@@ -23,4 +23,8 @@ def main(page, tsv):
     return 0 if ok == len(rows) else 1
 
 if __name__ == "__main__":
+    if len(sys.argv) != 3 or sys.argv[1] in ("-h", "--help"):
+        print(__doc__)
+        print("usage: verify_quotes.py PAGE_OR_TEXT VERBATIM_TSV")
+        sys.exit(0 if len(sys.argv) > 1 and sys.argv[1] in ("-h", "--help") else 2)
     sys.exit(main(sys.argv[1], sys.argv[2]))
