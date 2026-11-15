@@ -319,9 +319,9 @@
    "steps": [
     {
      "step": "Check the draft's premises, narrow it, send with the queue wording, record SENT with --to, verify take-in-charge, follow delivery and consumption",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Premises checked and the draft narrowed (TRIAL_24H.log 11:4xZ); sending after this landing. SENT 2026-11-15T11:4xZ to IT Orchestrator (--to recorded, landed with this commit); take-in-charge pending."
+     "evidence": "Premises checked and the draft narrowed (TRIAL_24H.log 11:4xZ); sending after this landing. SENT 2026-11-15T11:4xZ to IT Orchestrator (--to recorded, landed with this commit); take-in-charge pending. TAKEN and DELIVERED by IT (ORCH-ADV012-RP003-WO11-20261115, COMPLETE; SENT record 11:30:46Z, landing c2859e5c3 11:34:18Z: about 4-5 minutes by git, no delegate, no interruption). RESULT: row WO-11 (Mierau 2004, PMID 15492224, in PMC, blocked only by a Europe PMC fullTextXML HTTP 500): the PMC article page served the body on one plain request; ifenprodil 3 uM reduced the L4-evoked NMDA EPSC in mouse barrel L2/3 by 14% (bootstrap 2.5-97.5 interval 0-34%) at P13-P15 whisker-intact (control n=15, treated n=10), 53% (43-61%) at P6-P8, 49% (24-71%) deprived P13-P15; limits: evoked current at +40 mV/50 ms, room temperature, 2 mM Mg, between-cell design with pre-incubation, one concentration (a floor on the GluN2B share), NOT the isolated burst-slice current (WO-10 stays open); reading conditional only; receipt FTR-20261115-15492224-01 (partial, figure captions only), 10/10 verbatim rows, receipts verify OK (1960). Consumption: a dated Update line in the IT15 package README (14%, 0-34%, 'conditional, not the burst-slice current', no cell edited) after my request (8b5c60dee); nothing applied to any card, ranking, need or candidate. WO-12 blocker text now carries the route fact (Fischer 1997 access-blocked per PRESIDIO-003); IT declined the Hess 1996 half (one side of a two-sided comparison, a census item), resume: a lawful Fischer route or a comparison that needs only the ifenprodil conditions. My own error: I wrote to IT that I would weigh the next draw 'after the report', contradicting the operator's rule that the report does not idle the laboratory; corrected in a follow-up message."
     }
    ]
   }
@@ -559,6 +559,10 @@
    {
     "utc": "2026-11-15T11:4xZ",
     "event": "ADV-012 premises checked and the draft narrowed before sending: part (a) was already decided by IT in its close (no new open-question row, no INV-09 E04 note, because the paper does not touch the tau readout) and is dropped; part (b) narrowed: the pool is 35 OPEN literature_executable/data_access_blocked rows with zero-spend yes or partial (I counted; the draft says 36), 11 of which carry a blocker that names a route or access state that may have lapsed in light of routes learned in this trial (the PMC article page as one plain request, efetch XML, the PMC bucket text copy, ChEMBL by-target from the primary checkout): a filter the draft did not have; examples named without prescribing: WO-11 (PMC524435, free in PMC, blocked only by a Europe PMC fullTextXML HTTP 500), WO-06 (nothing blocks it, never scheduled), IT44-Q05, IT46-Q02, IT49-Q06/Q08."
+   },
+   {
+    "utc": "2026-11-15T11:4xZ",
+    "event": "ADV-012 delivered by IT in about 4-5 minutes (git): a published number with its interval for the GluN2B-sensitive share that the IT15 NAM occupancy arithmetic uses (14% (0-34%) at P13-P15, evoked current, not the burst-slice current), consumed as a dated update in the arithmetic's own package; a route-state blocker found lapsed (the PMC article page); WO-12 not taken (Fischer 1997 access-blocked; one side of a comparison would be a census item); the pool is not parked. A presidio slip corrected (a hold 'until the report', contrary to the operator's rule)."
    }
   ]
  }
