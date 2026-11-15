@@ -17,5 +17,6 @@
     "waits_interruptions_restarts_human_interventions": [
       "none"
     ]
-  }
+  },
+  "OWED_ITEM_DONE_20261115": "NX1 clause (a): one clause added to next_measure of the EB-ETX-01 packet and card (rebuilt by repurposing_bridge, check_cards PASS 9 packets): 'Read it on the proportional scale or as a wild-type simple effect; the 2026-11-15 figure extraction does not bound the size.' The U17 ranking row text did NOT change: its next_experiment_or_control comes from the need's work order (next_step uses ctx['wo'][need] before the card), a different question (T-type involvement), so ranking_it8.py run produced no diff and check is green. ranking snapshot: the 4 units flagged (U20, U21, U23, U27) are T3_receipts input changes since the 11-11 snapshot with the group unchanged; none of today's receipts is in their source PMID lists; wording moves of V14/INV-03/ETX/lithium are not among them; NOT a real change of assessment by IT: no snapshot taken (a human reads those receipts first; flagged, not mine)."
 }

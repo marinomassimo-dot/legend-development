@@ -115,7 +115,7 @@
     "verification_scope": "Supported by: one experiment (Cheng 2020). R2 re-read depth: partial. The R2 note has landed and three of its readings were blind-audited at its closure; the narrowing of the lead and of the CLAIM 016 framing, and the wording repairs, are unaudited: blind audit OWED. This card was blind-audited on 2026-10-22 (the sections this version repairs are unaudited).",
     "question_history": "DL-MECH-170 (open), CLAIM 016, FT-115, known-roads note 2.3, R2 note.",
     "predictions": "None. No engine was run.",
-    "next_measure": "Is the late-phase ethosuximide effect in the null reproduced, with a drug-by-genotype interaction test, a concurrent same-day PTZ-alone control in every cell and a per-genotype baseline stated? The R2 design sketch says power depends mainly on which control cohort is representative, not on N alone.",
+    "next_measure": "Is the late-phase ethosuximide effect in the null reproduced, with a drug-by-genotype interaction test, a concurrent same-day PTZ-alone control in every cell and a per-genotype baseline stated? Read it on the proportional scale or as a wild-type simple effect; the 2026-11-15 figure extraction does not bound the size. The R2 design sketch says power depends mainly on which control cohort is representative, not on N alone.",
     "status": "IPOTESI (open lead; the R2 note has landed, its narrowing and wording repairs are unaudited).",
     "value_added": "Replaces 'the drug the paper did not favour behaved genotype-specifically' with the time-resolved reading, the cohort-variability problem, the non-T-type mechanisms and a class-level developmental safety line."
   },
