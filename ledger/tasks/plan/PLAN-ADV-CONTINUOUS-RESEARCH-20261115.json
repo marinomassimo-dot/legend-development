@@ -56,6 +56,11 @@
     {
       "decision": "Differentiate newest PubMed hits from coverage of older unread material",
       "reason": "149 eligible placeholders include 27 already read and 122 without matched partial/complete receipt depth; reconcile before selecting science, not 122 automatic tasks"
+    },
+    {
+      "decision": "Remove stale P11 capacity-reservation and new-package-only framing from RP-014/RP-005 and whole-map-first framing from RP-003",
+      "reason": "Live opportunity fields must carry the corrected decision, not keep an obsolete wait alive after its host outcome is invalidated; prior assessments preserve history",
+      "reversibility": "Ordinary portfolio field update; no scientific premise promoted"
     }
   ],
   "DEFAULTS_TAKEN": [
@@ -86,7 +91,17 @@
     {
       "scope": "concurrent portfolio merge",
       "verdict": "CORRECTED_BEFORE_LANDING",
-      "reason": "The first field merge failed on a new concurrent RP-021 row; a following shell command committed unresolved markers on the task branch. Reconstructed all 21 rows from both parents, with per-field three-way selection, then asserted no markers and git diff --check. That intermediate commit was not landed or published."
+      "reason": "The first field merge failed on a new concurrent RP-021 row; a following shell command committed unresolved markers on the task branch. Reconstructed all 21 rows from both parents, with per-field three-way selection, then asserted no markers and git diff --check. That unresolved tree was never used as the main tip or a publication candidate; the failed checkpoint remains in history."
     }
-  ]
+  ],
+  "OPERATIONS": {
+    "integration": "9cead743f96a60e2e2702ac7642d312a69b20d3f",
+    "method": "Disjoint-path ordinary Git merge while IT was regenerating 27 science/view paths; no peer file staged, stashed, reset or checked out",
+    "landing_proof": "/tmp/legend-adv-continuity-landing.json",
+    "shadow_replay": "/tmp/legend-adv-continuity-shadow.json; EVALUATE, invalidated P11, live state unchanged",
+    "prospective_brief": "P11 selected by numeric order; ADV-009 historical TAKEN shown beside current NO_QUEUE record with its path (unknown execution is not inferred as in-flight); current operator integration present",
+    "full_inventory_candidate": "9506e1727887b8fa8920485a2f544fe75a22da30",
+    "full_inventory_log": "/tmp/legend-adv-continuity-battery.log",
+    "full_inventory_state": "RUNNING"
+  }
 }
