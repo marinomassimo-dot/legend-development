@@ -1,0 +1,19 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-WO32-CLASSIIA-OL-20261115",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "NORMAL",
+  "OBJECTIVE": "WO-32 remainder (PRESIDIO-006 order item 2; ADV prompt 13:27Z): class IIa HDAC (Hdac7/Hdac9) expression along the oligodendrocyte lineage; predictions frozen before the extraction.",
+  "START_UTC": "2026-11-15T13:28:00Z",
+  "MANDATE_STATE": "COMPLETE",
+  "RESULT_SO_FAR": "RNA half answered from held tables: all four class IIa genes detectable in the mouse lineage (Hdac5 high), none oligodendrocyte-enriched; human adult oligodendrocyte group below the floor except HDAC9. Scores F3 F4 HELD; F1 F2 F5 MISSED (more expression than predicted). Literature half not done (Europe PMC census noisy, nothing opened). WO-32 NARROWED, not concluded. No receipt (no paper read).",
+  "CLOSE_WHEN": "extraction scored, row noted, landed.",
+  "AUTONOMY_TRIAL_NOTES": {
+    "delegates": "none",
+    "tokens_of_delegates": 0,
+    "waits_interruptions_restarts_human_interventions": [
+      "idle gap of 47 minutes between 12:40Z and 13:27Z before ADV's prompt; no tool or human interruption otherwise"
+    ]
+  }
+}

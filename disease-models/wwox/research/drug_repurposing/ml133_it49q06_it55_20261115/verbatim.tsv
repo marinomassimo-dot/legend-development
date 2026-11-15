@@ -1,0 +1,7 @@
+proposition	locator	quote	found_in_saved_page
+ML133 on human Kir2.1, automated patch clamp: IC50 and Hill slope	Table 1	ML133 1.2 (1.1–1.3) 2.6 (2.2–3.1)	yes
+the external recording buffer pH	Methods	extracellular recording buffer contained (in mM) 2 CaCl 2 , 1 MgCl 2 , 10 HEPES, 4 KCl, 145 NaCl, and 10 Glucose (pH 7.4, 310 mOsm)	yes
+ML133 was applied for 15 min, non-cumulative, single concentrations per well	Results	Extension of the exposure duration to 15 min proved sufficient to reach stable inhibition for PA-6, ML133, and chloroquine	yes
+the paper compares with the manual patch clamp value	Results	ML133 showed an IC 50 value of 1.8 μM at −100 mV	yes
+Hill slope above one for ML133 is remarked on by the authors	Results	Hill coefficients were close to 1, except for ML133, suggesting a cooperative mechanism of action	yes
+the channel is human Kir2.1 in CHO	Title	Characterization of Human Inwardly Rectifying Kir2.1 Channels on an Automated Patch-Clamp Platform	yes

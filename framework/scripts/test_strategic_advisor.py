@@ -19,6 +19,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import strategic_advisor as sa  # noqa: E402
+sa._agents = lambda: None   # no test reads the real runtime's session list; the activity tests pass their own
 
 FAKE = '''#!/usr/bin/env python3
 import json, os, sys
@@ -350,6 +351,8 @@ class Proactive(Base):
         text = sa.recall_prompt(self.campaign)
         self.assertIn(sa.RECALL_MARK, text)
         self.assertEqual(text.count("--campaign"), 2)                                   # tick and evaluate, the same campaign
+        for must in ("idle share above half", "activity", "route --to <role>", "do not record a send that did not happen"):
+            self.assertIn(must, text)                                                   # HE60: monitor and help, and address only a live role
 
     def test_the_live_scout_briefing_reaches_the_brief_dated_without_addresses_and_absence_is_stated(self) -> None:
         saved = sa.STATE_HOME
@@ -816,6 +819,42 @@ class ValueContinuity(Continuous):
         self.assertEqual(sa.observe(inside, state)["events"], [])           # three commits that match the delivery pattern, all the advisor's own
         commit(f"{base}/ADV-002_result.md", "HE result delivered")
         self.assertEqual(len([e for e in sa.observe(inside, state)["events"] if e.startswith("delivery:")]), 1)
+
+    def test_session_activity_shows_who_is_idle_and_for_how_long(self) -> None:
+        """HE60: the idle share and each session's quiet time come from the runtime and the transcript mtime, only for this repository's sessions."""
+        proj = self.tmp / "projects" / "-x"
+        proj.mkdir(parents=True)
+        now = sa._now()
+        for sid, minutes in (("s-it", 47), ("s-sci", 3), ("s-old", 3000)):
+            f = proj / f"{sid}.jsonl"
+            f.write_text("{}\n", encoding="utf-8")
+            os.utime(f, (now.timestamp() - minutes * 60,) * 2)
+        agents = [{"name": "IT", "status": "idle", "cwd": str(sa.ROOT), "sessionId": "s-it"},
+                  {"name": "SCI", "status": "busy", "cwd": str(sa.ROOT) + "/.claude/worktrees/w", "sessionId": "s-sci"},
+                  {"name": "old", "status": "idle", "cwd": str(sa.ROOT), "sessionId": "s-old"},
+                  {"name": "elsewhere", "status": "idle", "cwd": "/home/other", "sessionId": "s-it"},
+                  {"name": "nofile", "status": "idle", "cwd": str(sa.ROOT), "sessionId": "s-missing"}]
+        saved = sa.PROJECTS_DIR
+        sa.PROJECTS_DIR = self.tmp / "projects"
+        self.addCleanup(setattr, sa, "PROJECTS_DIR", saved)
+        act = sa.session_activity(now, agents)
+        self.assertEqual(set(act["sessions"]), {"IT", "SCI", "old", "nofile"})      # another repository's session is not counted
+        self.assertEqual((act["sessions"]["IT"]["quiet_min"], act["sessions"]["SCI"]["quiet_min"]), (47, 3))
+        self.assertEqual(act["sessions"]["old"]["quiet_min"], 3000)                  # a stale session shows as stale
+        self.assertIsNone(act["sessions"]["nofile"]["quiet_min"])
+        self.assertEqual(act["idle_share"], "1/2")                                   # the stale and the unfound session are listed, not counted
+        self.assertFalse(act["idle_over_half"])
+        self.assertTrue(sa.session_activity(now, [agents[0], dict(agents[0], name="IT2")])["idle_over_half"])
+        self.assertFalse(sa.session_activity(now, [])["available"])                 # no list from the runtime: said, not guessed
+
+    def test_the_tick_carries_the_activity_block(self) -> None:
+        sa.session_activity_saved = sa.session_activity
+        sa.session_activity = lambda now, agents=None: {"available": True, "idle_share": "0/0", "idle_over_half": False, "main_quiet_min": 5}
+        try:
+            out = sa.tick(self.campaign)
+        finally:
+            sa.session_activity = sa.session_activity_saved
+        self.assertEqual(out["activity"]["main_quiet_min"], 5)
 
     def test_a_run_cut_short_by_a_fallback_is_not_acted_on(self) -> None:
         """HE59: P11 was stopped by a classifier after 4 calls and its portfolio updates and wait were applied. A short run with a recorded fallback takes nothing; a long one with the same fallback is used."""

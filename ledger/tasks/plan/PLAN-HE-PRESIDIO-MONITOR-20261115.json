@@ -1,0 +1,56 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-HE-PRESIDIO-MONITOR-20261115",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "assigned_on": "2026-11-15",
+ "OBJECTIVE": "Make the operator's permanent instruction of 2026-11-15 (roadmap_current.md, 'PERMANENT AND DURABLE' and its clarification) durable in the existing places: the transport rule (section 12), the Advisor skill and agent definition, the recall text, and a tick field showing who is idle and for how long. Plus one harness item from the trial's demonstrated defects (access class: proof-of-work page). No new gate, scheduler or registry.",
+ "worktree": ".claude/worktrees/he60",
+ "branch": "he60-idle-check",
+ "CURRENT_STATE": "COMPLETE",
+ "CHECKPOINT": {
+  "last_verified_result": "published 4fa2664a2 (gate PASS, verified by ls-remote); suites OK; CI not yet observed",
+  "first_incomplete_work": "none; (b) SENT records for presidio decisions declined with a reason, (a) not picked"
+ },
+ "TAKEN_IN_CHARGE": {
+  "utc": "2026-11-15T13:29:37Z",
+  "provenance": "roadmap_current.md dated lines 2026-11-15 on local main (verified in the repository); relayed by the ADV session as two cross-session messages",
+  "scope": "offline, no external request, no spend"
+ },
+ "AUTHORISED_QUEUE_20261115": {
+  "OBJ_1_DURABLE_MONITORING": {
+   "order": 1,
+   "title": "Monitor and help, embedded",
+   "steps": [
+    {
+     "step": "Rule once in cross_session_transport section 12; skill, agent definition and recall text point to it",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "'Monitor and help; do not only direct' paragraph; recall text carries the idle-share prompt, bounded help and the live-role check; test asserts the four phrases"
+    },
+    {
+     "step": "Tick field `activity`: session status, minutes quiet from the transcript mtime, idle share, minutes since the last commit on main",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "session_activity() plus two tests; live read-only run showed the two sessions quiet for 12 and 6 days, hence a one-day staleness bound outside the share"
+    }
+   ]
+  },
+  "OBJ_2_ACCESS_CLASS": {
+   "order": 2,
+   "title": "README section 13 row for the proof-of-work page",
+   "steps": [
+    {
+     "step": "Row routing the symptom to the existing proof-of-work fetch tool, naming the stops that remain",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "routing and documented-commands tests OK; not re-run against the live PMC page"
+    }
+   ]
+  }
+ },
+ "MANDATE_STATE": "COMPLETE"
+}
