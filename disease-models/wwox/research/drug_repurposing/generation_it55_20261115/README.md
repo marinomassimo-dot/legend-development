@@ -1,0 +1,8 @@
+# IT55: operator-directed wording (roadmap 2026-11-15, items 2 and 3)
+
+Non-canonical working note. Not medical advice; no dose, schedule or route. Reference genotype class only. No ranking, need, candidate state, tier or direction was changed.
+
+* `apply_op_wording.py` (idempotent, `--check`): INV-06 `next_test` replaces "IPOTESI; the Wwox-CTGF link is unsupported." by the ADV-007 reading (data neither support nor reverse the link and do not separate it from composition; expression is not secretion; the check is closed and not repeated; CTGF is not a demonstrated neuronal WWOX product; X1 stays conditional, reopened only with a pertinent measured premise, OQ11). INV-03 `decisive_uncertainty` gains a dated [ADV-009] clause (qualified proposal stands; question narrowed to the values and conditions still missing; rat HEK versus human Cav3.2a, different assays; no margin across assays; no compound names, because the shareable audit refuses them). INV-04 is unchanged: its question is the drug-by-genotype interaction, not the pair. WO-25 `blocking_reason` now agrees with its `status_evidence`.
+* `translate_op_wording.py`: the two changed cells in it, fr, es, de (assistant translations, not native-reviewed).
+* Regenerated once, together: `ranking_it8.py run`, `repurposing_view.py i18n --what collect`, `run --lang all`, `run --source shareable --lang all`, `package`. Checks: i18n 0 stale; shareable audit PASS on every page; `test_investigations.py` (52), `test_ranking_it8.py` (74), `test_stage_it39.py` (7), `test_view_research_date.py` OK.
+* First attempt failed the shareable audit (a ChEMBL-named compound in public text); rewritten without names and the chain redone from a clean state.

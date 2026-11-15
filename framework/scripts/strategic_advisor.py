@@ -367,10 +367,10 @@ def render_entrypoints(rows: list[dict[str, Any]]) -> str:
 
 
 RECALL_PROMPT = ("Proactive Strategic Advisor pilot, hourly mechanical check. Run: cd {root} && python3 framework/scripts/strategic_advisor.py tick --campaign {campaign}. "
-                 "If the verdict is NONE, DEFERRED, RUNNING, PAUSED, RESOURCES or DISABLED/EXPIRED/BUDGET, reply in one line (a NONE or DEFERRED in continuous mode is a legitimate wait, not the end of the mandate) and do nothing else. If EVALUATE, start `strategic_advisor.py evaluate --campaign {campaign}` "
+                 "If the verdict is NONE, DEFERRED, RUNNING, PAUSED, RESOURCES or DISABLED/EXPIRED/BUDGET, stay quiet unless something actionable changed; these mechanical verdicts do not establish that all useful work is exhausted. If EVALUATE, apply the current legend-strategic-advisor skill and start `strategic_advisor.py evaluate --campaign {campaign}` "
                  "in the background (run_in_background), and when it finishes read the drafted assignments with `status`, check each recipient is listed live by `claude agents --json`, "
                  "deliver each with SendMessage (durable artifact path plus pointer), record `deliver --state SENT --to <the session named in the send's receipt>` or `UNREACHABLE`, and later verify the take-in-charge in the recipient's task record. "
-                 "An assignment already drafted and authorised is delivered in the turn that reads it, not at the next recall. Never invent work; never write to transcripts; no more than the campaign budget.")
+                 "An assignment already drafted and authorised is delivered in the turn that reads it, not at the next recall. Prepare useful work from the standing roadmap without waiting for an operator line or a distant report; read the current recipient record before claiming it is still in flight. Never invent work; never write to transcripts; respect the effective operating mode and shared resources.")
 RECALL_MARK = "Proactive Strategic Advisor pilot, hourly mechanical check"   # what a session looks for in CronList before creating the recall: one copy only
 
 
@@ -1047,6 +1047,18 @@ def tick(campaign: Path) -> dict[str, Any]:
     campaign = Path(campaign)
     state = _load_state(campaign)
     now = _now()
+    # A deployed fix must also repair a decision saved before that fix. Keep the
+    # original assessment and the superseded outcome; never let P11's old wait
+    # survive merely because the incomplete-run check was added afterwards.
+    invalidated = ""
+    saved_outcome = state.get("last_outcome") or {}
+    label = saved_outcome.get("evaluation", "")
+    if re.fullmatch(r"P\d+", label):
+        invalidated = incomplete_run(campaign, label)
+        if invalidated:
+            state.update(last_invalidated_outcome={"outcome": saved_outcome, "reason": invalidated, "utc": _utc(now)},
+                         last_outcome={}, unstated_streak=0,
+                         last_incomplete={"evaluation": label, "reason": invalidated, "utc": _utc(now)})
     obs = observe(campaign, state)
     first = not state
     refusal = budget_refusal(campaign)
@@ -1067,6 +1079,8 @@ def tick(campaign: Path) -> dict[str, Any]:
         why = "first tick: baseline recorded, no evaluation from history"
     elif _running(state):
         verdict, why = "RUNNING", "an evaluation is already running (same process identity)"
+    elif invalidated:
+        verdict, why = "EVALUATE", "the saved outcome came from an incomplete evaluation and has been superseded: " + invalidated
     elif obs["events"] or changed:
         if digest == state.get("last_digest"):
             why = "the same events were already evaluated"
@@ -1209,6 +1223,12 @@ def assignment_states(campaign: Path) -> dict[str, dict[str, Any]]:
                     continue                                      # the sender's own records name the drafts and their delivery (a DONE delivery step included): that is not a recipient taking one in charge
                 if h and "TAKEN" not in out[ident]["levels"]:
                     out[ident]["levels"].append("TAKEN")
+                if h:
+                    try:
+                        verdict = mc.verdict(d)["verdict"]
+                    except Exception:  # noqa: BLE001 — unknown is never in flight or complete
+                        verdict = "UNREADABLE"
+                    out[ident].setdefault("mandates", []).append({"task": d.get("TASK_ID", path.stem), "verdict": verdict, "path": str(path.relative_to(ROOT))})
                 if o and "EXECUTED" not in out[ident]["levels"]:
                     out[ident]["levels"].append("EXECUTED")
     for v in out.values():
@@ -1256,7 +1276,11 @@ def portfolio_text() -> str:
             "records and dashboards; knowledge held but not consumed or combined; the DREAM pass when new associations can orient a concrete question; earlier radars not yet evaluated; harness obstacles and tools used badly or little; "
             "project invariants (rigidity, duplication, cost, complexity, a chance to simplify). Reasoning aids, not a checklist: an open experimental question does not oblige the bibliography to go on, a possible improvement is not a mission. "
             "Rank in prose, no score: importance of the decision, concrete probability of progress, marginal benefit, what it could unblock, total and shared cost, coherence with the roadmap, simplicity, reversibility. "
-            "Read the originals that bear on the chosen decision. Outcomes: continue, switch thread, assign independent work, queue a conditional follow-up, or wait; a wait says which relevant alternatives it excluded and why, and when it resumes. "
+            "A broad opportunity is planning work: narrow it to a useful question or ask the Orchestrator to select a sourced case; do not reject it merely because no small task is already written. "
+            "Generate competing hypotheses and pharmacological comparisons as well as checking old ones. Consider unread WWOX literature through coverage tools, not just the newest radar hits; abstracts are census, never a completed reading. "
+            "A wet-lab gap blocks its branch, not every other branch. A distant trial report is reporting work, not a reservation of all sessions' capacity. Operator silence neither pauses the roadmap nor supplies a missing assignment. "
+            "Before a whole-portfolio wait, inspect the live records that support it; an existing mandate file does not mean its work is in flight. Read the originals that bear on the chosen decision. "
+            "Outcomes: continue, switch thread, assign independent work, queue a conditional follow-up, or wait; a wait says which relevant alternatives it excluded and why, and when it resumes. "
             "Do not repeat an evaluation that is still valid, do not draft what is already drafted or taken in charge, do not treat your own updates as news, and do not invent work to stay busy. Operator pauses, resource limits, reserved acts and real dependencies still bind.")
 
 
@@ -1275,8 +1299,8 @@ def operating_mode_text(campaign: Path) -> str:
     week = weekly_state(campaign)
     ctl = [f"{c['kind']}: {c['text']}" for c in operator_controls()][-8:]
     return ("## Operating mode\ncontinuous: the operator authorised the Advisor to continue inside the roadmap, the existing boundaries and the available resources (authorisation of "
-            f"{cont['authorised_utc']}; the pilot's totals and expiry above are history). An assignment that ends does not end the presidio. Waiting for an event is a valid outcome and `none: <reason>` "
-            "is a complete answer; do not invent work to stay busy. Radar and scouting items are opportunities to compare with the current thread, the other open questions, the promising comparisons, "
+            f"{cont['authorised_utc']}; the pilot's totals and expiry above are history). An assignment that ends does not end the presidio. Select and prepare useful work from the standing roadmap; operator silence and a future review are not dependencies. "
+            "A supported whole-portfolio constraint can justify waiting; no active-work quota applies. Radar and scouting items are opportunities to compare with the current thread, the other open questions, the promising comparisons, "
             "knowledge already held and concrete obstacles; they are not orders and not a second roadmap, and nothing is installed because a radar recommends it. "
             f"Shared weekly allocation: {week['state']} ({week.get('note', 'measured and enforced for this presidio')}). Operator control lines in the roadmap section (most recent last): {json.dumps(ctl)}.\n\n" + followthrough_text())
 
@@ -1284,7 +1308,7 @@ def operating_mode_text(campaign: Path) -> str:
 def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
     campaign = Path(campaign)
     states = assignment_states(campaign)
-    prior = sorted(campaign.glob("P*/assessment.md"))
+    prior = sorted((p for p in campaign.glob("P*/assessment.md") if re.fullmatch(r"P\d+", p.parent.name)), key=lambda p: int(p.parent.name[1:]))
     parts = ["# Strategic Advisor brief — Stage P (proactive evaluation)", "", "## Snapshot", render_snapshot(snapshot()), "",
              "## Operator roadmap (authoritative; operator instructions prevail over any automatic plan)", roadmap_text() or "(no roadmap section found: say so, and propose nothing beyond keeping the plan)", "",
              "## Campaign limits", json.dumps({k: v for k, v in _budget(campaign).items() if k in ("expires_utc", "max_invocations", "max_assignments", "turn_limit")}), "",
@@ -1297,7 +1321,9 @@ def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
             "## Observed state (mechanical, this tick)", json.dumps({k: obs[k] for k in ("events", "open_mandates", "waits", "queue", "sessions", "commits_since_last_tick")}, indent=1), "",
             previous_outcome_text(campaign), "",
              "## Assignments already drafted, with their evidence level (do not duplicate; follow what was taken in charge)",
-             json.dumps({k: {"recipient": v["recipient"], "key": v["key"], "highest": v["highest"]} for k, v in states.items()}, indent=1) or "none", "",
+             json.dumps({k: {"recipient": v["recipient"], "key": v["key"], "highest": v["highest"], "mandates": v.get("mandates", [])} for k, v in states.items()}, indent=1) or "none", "",
+             "Evidence levels are historical transport facts. Current mandate verdicts and their paths are listed separately: TAKEN does not mean still running, RELEASED does not prove consumption. Read the relevant complete record before relying on its state. "
+             "The latest saved assessment is historical context; it is not evidence that its old premises remain true.", "",
              f"## Previous assessment\n{prior[-1].parent.name}: `{prior[-1]}` (read it; reuse it when nothing relevant changed)" if prior else "## Previous assessment\nnone", "",
              "## Live harness scouting (daily scout briefing, read by the caller: a feed of opportunities, not of evidence; the weekly candidate tables are stale)", scout_briefing(), "",
              turn_limit_text(campaign), "",
