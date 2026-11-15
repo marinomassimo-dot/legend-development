@@ -309,7 +309,7 @@
      "step": "Check the draft's premises in the originals, correct the seed, send with the queue wording, record SENT with --to, verify take-in-charge, follow the selection and the Scientist batch to delivery and consumption",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "Premises checked and the seed corrected (TRIAL_24H.log 09:4xZ); sending after this landing."
+     "evidence": "Premises checked and the seed corrected (TRIAL_24H.log 09:4xZ); sending after this landing. SENT 2026-11-15T09:4xZ to IT Orchestrator (--to recorded, landed with this commit); take-in-charge pending."
     }
    ]
   }
