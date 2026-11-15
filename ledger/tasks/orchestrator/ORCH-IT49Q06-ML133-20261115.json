@@ -1,0 +1,19 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-IT49Q06-ML133-20261115",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "NORMAL",
+  "OBJECTIVE": "IT49-Q06 remainder (ADV prompt 13:27Z): pH of the ML133 hERG deposit, Kir2.4, K2P; one source at a time, free lawful routes.",
+  "START_UTC": "2026-11-15T13:35:00Z",
+  "MANDATE_STATE": "COMPLETE",
+  "RESULT_SO_FAR": "Independent ML133 IC50 on human Kir2.1 (CHO, automated patch, pH 7.4, 15-min exposure): 1.2 uM (1.1-1.3), Hill 2.6, from PMC6479253 (PMID 30835490); with 1.51 and 1.9 uM three values. hERG deposit pH, Kir2.4 and K2P not resolvable by a free route found. IT49-Q06 NARROWED, not concluded. Receipt FTR-20261115-30835490-01. No predictions frozen (a source search of unknown outcome; stated).",
+  "CLOSE_WHEN": "source read, receipt recorded, row noted, landed.",
+  "AUTONOMY_TRIAL_NOTES": {
+    "delegates": "none",
+    "tokens_of_delegates": 0,
+    "waits_interruptions_restarts_human_interventions": [
+      "none"
+    ]
+  }
+}
