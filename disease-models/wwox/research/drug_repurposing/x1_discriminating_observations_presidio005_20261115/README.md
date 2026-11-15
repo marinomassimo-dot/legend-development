@@ -4,14 +4,14 @@ Written for: the ADV presidio and the IT Orchestrator (the owner of INV-06). Non
 
 ## Answer first
 
-**Partly answered already, and the missing piece is a join, not new biology.** The held rows already carry most of the controls of the soluble leg (OQ9, OQ11: a fresh-medium baseline, a mixing arm, a dilution series, purified-neuron medium, a positive-control medium, a detection limit from the monoculture variance). The contact leg lives somewhere else (INV-06 `next_test`: "add a fixed-neuron arm and a factor arm"; it36 `comparison.tsv` ALT2: X1 is conditioned medium, transwell and fixed null neurons) and is in none of OQ9, OQ11 or OQ12. No held row says what each outcome would favour, and none joins the three legs. That table is below (`discriminating_observations.tsv` has the same content with sources per row).
+**Partly answered already, and the missing piece is a join, not new biology.** The held rows already carry most of the controls of the soluble leg (OQ9, OQ11: a fresh-medium baseline, a mixing arm, a dilution series, purified-neuron medium, a positive-control medium, a detection limit from the monoculture variance). The contact leg lives somewhere else: INV-06's own `next_test` clause holds "add a fixed-neuron arm and a factor arm" (the IT Orchestrator confirmed this is the original X1 text, with no (a)(b)(c) labels); a **transwell is not in that clause**, it appears only in the it36 documents' own description of X1 (`comparison.tsv` ALT2, `experiments.tsv`), so here it is **my proposal with that precedent, not a held arm**. The contact leg is in none of OQ9, OQ11 or OQ12. No held row says what each outcome would favour, and none joins the three legs. That table is below (`discriminating_observations.tsv` has the same content with sources per row).
 
 **No single observation separates the three explanations.** The smallest set is four things on one preparation, read in this order:
 
 1. **O0, the premise (gate):** the null-neuron deficit reproduced blind, independent preparations, axon-density denominators (OQ12). Without it, nothing below can be read.
 2. **O1 + O2, the soluble leg:** conditioned medium on OPC monoculture, null versus wild-type, matched for neuron number and viability, with a fresh-medium baseline, a mixing arm and a dilution series.
 3. **O3, the composition readouts taken in the same dishes:** neuron number, viability, fraction of non-neuronal cells (they carry the null genotype too), axon density and calibre, T3, T4 and a nutrient in conditioned versus fresh medium.
-4. **O4, the contact leg:** OPCs on fixed null versus fixed wild-type neurons, and a transwell arm (shared medium, no contact).
+4. **O4, the contact leg:** OPCs on fixed null versus fixed wild-type neurons (held in INV-06), and a transwell arm (shared medium, no contact; **my proposal**, not in INV-06's text).
 
 O5 (neutralisation of a named candidate) only identifies a candidate inside the soluble explanation and separates nothing between the three; it comes after a positive O1.
 
@@ -42,7 +42,7 @@ O5 (neutralisation of a named candidate) only identifies a candidate inside the 
 
 ## Sources read (held files, in this session)
 
-`myelin_phenotype_first_sci50_20261113/README.md` and `output/hypotheses.md` (H4, its strongest alternatives, the final form), `output/open_questions.tsv` (OQ7, OQ9, OQ11, OQ12), `ctgf_held_data_adv007_20261114/README.md` and `per_table.tsv`, the INV-06 row of `ranking_it8_p9_20261029/investigations_it20.tsv` (next_test clause), and `myelin_generative_it36_20261108/levers_bc/output/comparison.tsv` (ALT2 row, read as a single line). The INV-06 X1 arm text itself (the original (a), (b), (c) statement) was not found in the files searched; its description here comes from those two lines and is second-hand.
+`myelin_phenotype_first_sci50_20261113/README.md` and `output/hypotheses.md` (H4, its strongest alternatives, the final form), `output/open_questions.tsv` (OQ7, OQ9, OQ11, OQ12), `ctgf_held_data_adv007_20261114/README.md` and `per_table.tsv`, the INV-06 row of `ranking_it8_p9_20261029/investigations_it20.tsv` (next_test clause), and `myelin_generative_it36_20261108/levers_bc/output/comparison.tsv` (ALT2 row, read as a single line). **Correction after the IT Orchestrator's check (2026-11-15):** the original X1 text is the IT36 clause in INV-06 `next_test` ("existing co-culture separates neither contact or substrate integrity nor a soluble product; peripheral seizure-free DRG neurons; add a fixed-neuron arm and a factor arm"); it has no (a)(b)(c) labels, and the SCI50 clause adds the soluble-leg controls. My earlier statement that the (a)(b)(c) text was not found stands corrected: there is no such text. The transwell is the it36 batch's description and my proposal.
 
 ## Limits
 

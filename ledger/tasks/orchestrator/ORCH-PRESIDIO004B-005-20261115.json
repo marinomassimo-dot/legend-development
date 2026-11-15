@@ -18,7 +18,8 @@
  "DECISIONS_TAKEN": [
   "2026-11-15: accepted both assignments; part B first because it must precede HE's output. At build time main held no HE trial folder (listing of the drug_repurposing directory only; no HE file opened). All 15 rows resolve uniquely via ENSG, cross-checked via previous symbol and Entrez id; commit cc39da185 carries the time.",
   "2026-11-15: no blind verifier and no delegate (assignments say none required; the comparator is the independence).",
-  "2026-11-15: HE's folder landed as e16c42b70; compared row by row (15 of 15 agree on authors' symbol, ENSG, direction, log2FC; no disagreement); comparison_with_he_trial.md and comparison_rows.tsv added to the part B folder. The first battery (948f71d810) was stopped by me (SIGTERM, INTERRUPTED) so that one battery covers the comparison files."
+  "2026-11-15: HE's folder landed as e16c42b70; compared row by row (15 of 15 agree on authors' symbol, ENSG, direction, log2FC; no disagreement); comparison_with_he_trial.md and comparison_rows.tsv added to the part B folder. The first battery (948f71d810) was stopped by me (SIGTERM, INTERRUPTED) so that one battery covers the comparison files.",
+  "2026-11-15: IT used part B in its disposition (b2eb309fb: KEEP the 15 conversions, INCONCLUSIVE on benefit; it re-derived all 15 rho and the QF change from my hand-read symbols) and corrected my O4 source: transwell is not in INV-06's text (my proposal with it36 precedent); no (a)(b)(c) labels exist. 005 files corrected; battery 20261115-075531-6bb306c0 stopped by me and relaunched so one battery covers the corrected files."
  ],
  "DELEGATIONS": [],
  "ESCALATIONS": [],
@@ -44,13 +45,24 @@
    "evidence_dir": "/tmp/legend-verify-keep/20261115-074551-d7816c2c",
    "log_sha256": "dc9a3ffd40999729a4a65e23ee6ac497866d1a37d61ca9c601c8ef17cea8a5d6",
    "clone": "REMOVED"
+  },
+  {
+   "run_id": "20261115-075531-6bb306c0",
+   "label": "presidio004b005-landing3",
+   "sha": "a7ec78e2f877915a204ab5d278d5e39c4eb1b866",
+   "state": "INTERRUPTED",
+   "exit_code": -15,
+   "evidence_dir": "/tmp/legend-verify-keep/20261115-075531-6bb306c0",
+   "log_sha256": "25b3b93d281e28e138432cdeba4ef685369971d03ee1100632e73fce9881305b",
+   "clone": "REMOVED"
   }
  ],
  "TRIAL_24H_OBSERVATIONS": {
   "window": "2026-11-14T15:29:29Z to 2026-11-15T15:29:29Z, observation only, requested by the ADV presidio",
   "delegates_and_blind_checkers": "none",
   "events": [
-   "2026-11-15: battery 20261115-073627-95c3fc7d on 948f71d810 interrupted by me at about 15 minutes (SIGTERM) to add the comparison files; relaunched on the new SHA."
+   "2026-11-15: battery 20261115-073627-95c3fc7d on 948f71d810 interrupted by me at about 15 minutes (SIGTERM) to add the comparison files; relaunched on the new SHA.",
+   "2026-11-15: batteries 073627-95c3fc7d, 074551-d7816c2c and 075531-6bb306c0 were each stopped by me (SIGTERM) before ending to add or correct files; the fourth run covers the landing SHA."
   ]
  }
 }
