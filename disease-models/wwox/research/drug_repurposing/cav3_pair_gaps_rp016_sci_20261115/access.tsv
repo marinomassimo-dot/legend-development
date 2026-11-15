@@ -1,0 +1,10 @@
+query	route	result
+efonidipine[Title/Abstract] AND (hERG OR "QT interval" OR IKr OR "delayed rectifier" OR "action potential duration")	PubMed tool search_articles	1 hit: PMID 9371541 (rabbit sinus node, action potential duration not prolonged by efonidipine; no hERG/IKr measurement)
+(efonidipine OR NZ-105) AND (hERG OR "human ether-a-go-go" OR "rapid delayed rectifier" OR "QT prolongation" OR torsade)	PubMed tool	0 hits
+efonidipine[Title/Abstract] AND ("potassium current" OR "K+ current" OR "cardiac safety" OR proarrhythmic OR electrocardiogram OR QTc)	PubMed tool	1 hit: PMID 12547996 (clinical heart-rate and autonomic study; no QT or QTc value in the abstract)
+efonidipine[Title/Abstract] AND (Cav3.1 OR Cav3.3 OR alpha1G OR alpha1I OR "T-type" OR CACNA1G OR CACNA1I)	PubMed tool	86 hits, first 25 listed; 12 abstracts read
+efonidipine[Title/Abstract] AND (oocyte OR HEK293 OR "patch clamp" OR "whole-cell" OR IC50) AND (alpha1G OR alpha1H OR alpha1I OR Cav3 OR "T-type")	PubMed tool	19 hits; 13 abstracts read here (the rest were in ADV-009 or irrelevant to the pair); the numbers they carry are the rows of values.tsv, none of which ADV-009 held
+(efonidipine OR NZ-105) AND (Cav3.3 OR alpha1I OR Ca(v)3.3 OR CACNA1I)	PubMed tool	1 hit: PMID 19401195 (Furukawa 2009, abstract only, already in ADV-009); no other paper names the isoform
+efonidipine AND flunarizine in title or abstract	PubMed tool	3 hits (18278483, 7557732, 7824075); none gives a Cav3 isoform value for both agents
+PMC7690142 full text	PubMed tool get_full_text_article (pmc_ids)	full text returned, open access; no interstitial; used for the Hara row
+Tanaka 2010 body, Furukawa 2009 body, Furukawa 2004 body	not attempted again	ADV-009 recorded an Elsevier interstitial and a bot check for this publisher family; ADV's guard: an interstitial is a stop, not worked around
