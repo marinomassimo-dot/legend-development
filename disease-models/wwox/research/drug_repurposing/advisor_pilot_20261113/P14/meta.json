@@ -1,0 +1,326 @@
+{
+  "capture": {
+    "assessment_sha256": "95c92fe6e9b2b537114b520ffab7625cac922f7b69f4e79c21f24dc5265ef1de",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P14/stream.jsonl",
+    "raw_stream_sha256": "de8750b429c8e1205ca8fab04f394a3448d06ab700a8fd39f00f844e685c34f1",
+    "source_session_id": "8f47fa04-16b9-4b20-92f0-74b083919194",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 59449
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-15T11:28:44Z",
+  "label": "P14",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": false,
+      "efforts": {
+        "high": 14
+      },
+      "first_turn_context": 39128,
+      "models": {
+        "claude-opus-5-5": 14
+      },
+      "peak_context": 76725,
+      "totals": {
+        "cache_creation": 76723,
+        "cache_read": 841637,
+        "output": 12350
+      },
+      "turns": 14
+    },
+    "final_turn_model": "claude-opus-5-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.004159100000000001,
+        "inputTokens": 29556,
+        "maxOutputTokens": 128000,
+        "outputTokens": 2407,
+        "provider": "firstParty",
+        "thinkingTokens": 1358,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 76723,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 76723,
+        "cacheReadInputTokens": 841637,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 1.0292234,
+        "inputTokens": 28,
+        "maxOutputTokens": 128000,
+        "outputTokens": 12350,
+        "provider": "firstParty",
+        "thinkingTokens": 5139,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 20,
+    "refusal_fallbacks": [],
+    "total_cost_usd": 1.0333825,
+    "turn_models": {
+      "claude-opus-5-5": 14
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 76723,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 76723,
+      "cache_read_input_tokens": 841637,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 28,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 1455,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 1455,
+          "cache_read_input_tokens": 75268,
+          "input_tokens": 2,
+          "output_tokens": 5528,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 12350,
+      "output_tokens_details": {
+        "thinking_tokens": 5139
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-15T11:26:21Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P13/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tI'm drafting one assignment to the Orchestrator: run a mechanism-first case under RP-004, which no one has assigned yet. It isn't limited to the clinical tier"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/research_portfolio.tsv"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tid\ttheme\topportunity\tdecision\tpriority\twhy_now\tnext_action\tstatus\tsources\tmandate_id\tresume_when\toutcome\tupdated_utc\n2\tRP-001\tGeneration\tTurn unused qualified"
+    },
+    {
+      "input": {
+        "pattern": "ledger/tasks/*/*20261115*.json"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "ledger/tasks/orchestrator/ORCH-ADV009-20261115.json\nledger/tasks/plan/PLAN-HE-IT23-SYMBOL-TRIAL-20261115.json\nledger/tasks/orchestrator/ORCH-RP008-UNREAD-202611"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-RP004-LENS-20261115.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t  \"_schema\": \"task record, Annex A.1c\",\n3\t  \"TASK_ID\": \"ORCH-RP004-LENS-20261115\",\n4\t  \"OWNER\": \"orchestrator\",\n5\t  \"ACTOR_ID\": \"orchestrator\",\n6\t  \"PRIOR"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-RP004-SCI-20261115.json"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t{\n2\t \"_schema\": \"task record, Annex A.1c\",\n3\t \"TASK_ID\": \"ORCH-RP004-SCI-20261115\",\n4\t \"OWNER\": \"orchestrator\",\n5\t \"ACTOR_ID\": \"orchestrator\",\n6\t \"PRIORITY\": "
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/{mechanism_lens_it55_20261115,jnk_hcc_reading_rp004_sci_20261115}/*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/mechanism_lens_it55_20261115/prediction_frozen.md\ndisease-models/wwox/research/drug_repurposing/mechanism_lens_it5"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/mechanism_lens_it55_20261115/README.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# RP-004 (ADV-011): one mechanism-lens case, chosen by lawful full-text availability (IT, 2026-11-15)\n2\t\n3\tNon-canonical working note. Not medical advice; no "
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/jnk_hcc_reading_rp004_sci_20261115/README.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# RP-004 (ADV-011): SCI reading of PMID 18620777, JNK inhibitor x WWOX gain and loss in HCC lines (2026-11-15)\n2\t\n3\tNon-canonical research material. Not medic"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/jnk_hcc_reading_rp004_sci_20261115/consumer_delta.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Consumer delta: RP-004 reading of PMID 18620777 (SCI, 2026-11-15)\n2\t\n3\tNon-canonical. Proposals for the integrator; nothing here was applied, and no ranking"
+    },
+    {
+      "input": {
+        "glob": "*it47*/**",
+        "head_limit": 20,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "Sze 2004|Sze et al|E04"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/generation_it47_20261112/p4_gsk3/verify/VERDICTS.md:40:| R2 | E04 | 15126504 | ABSTRACT | SUPPORTED at abstract le"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/mechanism_lens_it55_20261115/prediction_frozen.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# RP-004 (ADV-011): predictions frozen BEFORE the body text of the chosen paper is read\n2\t\n3\tNon-canonical working note. Not medical advice; no dose, schedule"
+    },
+    {
+      "input": {
+        "prompt": "Report: title, journal, year, pmcid (if any), isOpenAccess, inEPMC, inPMC, hasPDF, fullTextUrlList entries (availability and URL), and the complete abstract text verbatim. Note specifically any mention of JNK, SP600125, inhibitor, tau phosphorylation, GSK-3beta, ERK.",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:15126504%20AND%20SRC:MED&format=json&resultType=core"
+      },
+      "is_error": false,
+      "name": "WebFetch",
+      "result_head": "**Bibliographic details**\n\n- **Title:** \"Down-regulation of WW domain-containing oxidoreductase induces Tau phosphorylation in vitro.\" (The title continues with"
+    },
+    {
+      "input": {
+        "glob": "{**/investigations.tsv,**/open_questions*,needs/needs.md,**/consumer_links.tsv}",
+        "output_mode": "count",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "JNK|SP600125|18620777"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No matches found\n\nFound 0 total occurrences across 0 files."
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/mechanism_lens_it55_20261115/selection_table.tsv"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\titem\tpmid\tpmc\tlawful_free_full_text\twhat_it_offers\tverdict\treason\n2\tP287\t18620777\tPMC2574998\tYES (NIHPA manuscript; PMC article page serves the body; efetch i"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/**/open_questions*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/output/open_questions.tsv\ndisease-models/wwox/research/drug_repurposing/"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "limit": 3
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tqid\tsource_ref\tquestion_text_max300\tdecision_at_stake_max200\tkind\tstatus\tpublished_on\tstatus_evidence\tlast_touched\tblocking_reason\texecutable_zero_spend\tclaim"
+    },
+    {
+      "input": {
+        "output_mode": "count",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "pattern": "\\t(literature_executable|in_silico[a-z_]*|data_executable)\\tOPEN\\t"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv:36\n\nFound 36 total occurrences across 1 file."
+    },
+    {
+      "input": {
+        "output_mode": "count",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "pattern": "^[A-Za-z0-9_.-]+\\t[^\\t]{0,0}|\\t(literature_executable|in_silico\\w*|data_executable)\\tOPEN\\t"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv:193\n\nFound 193 total occurrences across 1 file."
+    },
+    {
+      "input": {
+        "-i": false,
+        "-n": true,
+        "-o": true,
+        "glob": "open_questions_map.tsv",
+        "head_limit": 0,
+        "multiline": false,
+        "offset": 0,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "pattern": "^[A-Za-z0-9_.-]+\\t[^\\t]*\\t[^\\t]{0,170}",
+        "type": "csv"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "<persisted-output>\nOutput too large (50.1KB). Full output saved to: /home/desktop/.claude/projects/-home-desktop-legend-development/8f47fa04-16b9-4b20-92f0-74b0"
+    }
+  ]
+}
