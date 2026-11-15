@@ -1,0 +1,52 @@
+{
+ "before_reproduces_committed_table": {
+  "mismatching_rows": 0,
+  "rows": []
+ },
+ "converted_rows": [
+  "IRAG1",
+  "CCN2",
+  "DRC4",
+  "MNMIP1",
+  "POFUT4",
+  "MTCL2",
+  "ATOSB",
+  "HDIP1",
+  "BBLN",
+  "ADPRS",
+  "CIRSR",
+  "H1-2",
+  "H1-10",
+  "H4C15",
+  "ZNRD2"
+ ],
+ "down": 317,
+ "hgnc_file": "files/geo/GSE156243/hgnc_complete_set_20261022.json",
+ "live_queries_run": 0,
+ "non_converted_unresolved_or_ambiguous": [],
+ "queries_with_changed_membership": [
+  "QF_minus_broad_maturation"
+ ],
+ "rows": 834,
+ "rows_whose_composition_or_broad_flag_changed": [
+  "IRAG1",
+  "POFUT4",
+  "HDIP1",
+  "H1-2",
+  "H1-10"
+ ],
+ "rows_with_blank_log2fc_committed": 15,
+ "same_symbol_rows_with_ignored_alias_hits": [
+  "MAGEA2B",
+  "GPNMB",
+  "CELSR1",
+  "CACNA1A",
+  "TGFBRAP1"
+ ],
+ "samples_in_maturation_series": 62,
+ "status_counts": {
+  "converted_two_routes_agree": 15,
+  "same_symbol": 819
+ },
+ "up": 517
+}
