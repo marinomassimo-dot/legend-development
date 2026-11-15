@@ -115,6 +115,8 @@ fallback if the account does not serve it, declared in `meta.json`). Evaluations
 anticipates one; the same events are never evaluated twice (a digest), an evaluation that is still running is not overlapped (process identity), and a session waiting for a CI run, a battery or
 a delegate is not "stalled": only the mandate watch calls a mandate resumable, and recovery stays with it.
 
+**A hold is not an evaluation (HE64, 2026-11-15).** The pending digest is consumed only when an evaluation completes, so a hold decided by hand re-fired `EVALUATE` at every recall. When the right choice is to wait, record it without a model run: `strategic_advisor.py hold --campaign <DIR> --reason "<why waiting is right>" --resume-when record:<TASK>=<STATE>` (or `path:<file>~<text>`; a time or `event` alone is refused, so a hold cannot become a timer for silence). It lists the events and commits it clears in `<DIR>/holds.jsonl` and `status`, spends no invocation and no budget, and ends at its `resume_when`, a roadmap change or the first NEW event. The tick then reports `HELD by host at <utc>: <reason>`.
+
 **Assignments and their evidence.** `evaluate` saves the assessment verbatim and registers each complete draft as `<DIR>/assignments/ADV-nnn.md` (a block missing a required field, a key already
 drafted or already named in a task record, and anything over the campaign's assignment budget are logged and refused). Then the session that holds the cron delivers: check the recipient is a live
 named session (`claude agents --json`), send the pointer with the supported cross-session message (SendMessage), and record `strategic_advisor.py deliver --id ADV-nnn --state SENT --evidence <message id>`;

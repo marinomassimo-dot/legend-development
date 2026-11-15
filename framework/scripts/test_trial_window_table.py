@@ -61,6 +61,7 @@ class KnownWindow(unittest.TestCase):
         census = {"turns": 2, "totals": {"output": 10, "cache_creation": 20, "cache_read": 30}}
         write(r / CAMPAIGN / "P1/meta.json", json.dumps({"started_utc": "2026-11-14T20:00:00Z", "capture": {"source_session_id": "sidP1"}, "tool_calls": [1] * 9, "runtime_readback": {"census": census, "refusal_fallbacks": []}}))
         write(r / CAMPAIGN / "P2/meta.json", json.dumps({"started_utc": "2026-11-15T01:00:00Z", "capture": {}, "tool_calls": [1] * 2, "runtime_readback": {"census": census, "refusal_fallbacks": [{"x": 1}]}}))
+        write(r / CAMPAIGN / "holds.jsonl", jsonl([{"utc": "2026-11-14T10:00:00Z", "reason": "before"}, {"utc": "2026-11-15T12:00:00Z", "reason": "inside"}, {"utc": "2026-11-16T01:00:00Z", "reason": "after"}]))   # HE64
         write(r / CAMPAIGN / "P0/meta.json", json.dumps({"started_utc": "2026-11-13T01:00:00Z", "runtime_readback": {"census": census}}))
         pr = cls.projects = cls.tmp / "projects" / "-home-desktop-legend-development"
         write(pr / "sid1.jsonl", jsonl([turn("m3", "2026-11-14T10:00:00Z", 999, 9, 9), turn("m1", "2026-11-14T16:00:00Z", 100, 10, 1000), turn("m2", "2026-11-15T10:00:00Z", 50, 5, 2000),
@@ -86,6 +87,11 @@ class KnownWindow(unittest.TestCase):
     def test_evaluations_by_hand(self) -> None:
         _, ev, _ = self.table()
         self.assertEqual([(e["evaluation"], e["state"], e["output"]) for e in ev], [("P1", "complete", 10), ("P2", "incomplete", 10)])   # P0 is before the window
+
+    def test_a_hold_is_counted_on_its_own_line_and_never_as_an_evaluation(self) -> None:
+        _, ev, c = self.table()
+        self.assertEqual(c["holds_recorded"], 1)                                                                    # only the one inside the window
+        self.assertEqual([e["evaluation"] for e in ev], ["P1", "P2"])                                                 # evaluations read P<n>/meta.json; holds.jsonl never enters
 
     def test_counts_by_hand(self) -> None:
         _, _, c = self.table()
