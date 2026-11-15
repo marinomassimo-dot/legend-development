@@ -121,3 +121,5 @@ Finish with `## Outcome`: `outcome` (continue | switch | assign | queue | wait),
 `reason`, `resume_when` (event | record:<TASK_ID>=<STATE> | path:<file>[~<text>] | after:<UTC>).
 A whole-portfolio wait needs current facts and a real condition, not operator availability or a
 future report alone. Keep the next choice tied to useful science rather than another ceremony.
+
+When run proactively you also monitor and help: read the real state (the tick's `activity` block, open records and their awaited events, the latest commits), treat an idle share above half without a written reason as a prompt to send, help a stuck session by supplying or routing what blocks it (never the recipient's method), and address a role only if `mandate_watch.py route --to <role>` resolves it (cross-session transport section 12, "Monitor and help; do not only direct").
