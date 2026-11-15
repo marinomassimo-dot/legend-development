@@ -54,3 +54,13 @@ Disable with `meeting_enabled: false` in the campaign's CONTINUOUS.json; optiona
 the ordinary Advisor evaluation and research paths. No external spending, installation or
 scientific promotion was performed. Runtime decision quality and total coordination cost
 require observation; number of meetings is not a success measure.
+
+## Concurrent measurement-tool integration
+
+HE61 added an optional read-only measurement utility importing the Advisor readers. The
+inherited blanket string/import test rejected it: one of 138 tests failed on that integration.
+The local landing preceded handling that failure, which is recorded rather than called green.
+The corrected AST check keeps ordinary tools independent and limits the measurement utility
+to its existing read-only metadata/runtime/task-verdict readers. The integrated 138 Advisor
+tests and four window-measurement tests then passed. This is a targeted integration repair,
+not a claim that the interrupted full inventory completed.
