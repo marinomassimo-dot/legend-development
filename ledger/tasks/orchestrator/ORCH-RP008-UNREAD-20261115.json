@@ -16,6 +16,6 @@
       "none in this item"
     ],
     "tool_calls_external": "about 17 Europe PMC searches, 1 open-PDF download, 1 PMC page request (generic client, no contact parameter)",
-    "wall_time": "about 1 h 40 min"
+    "wall_time": "about 11 minutes, git-measured: ADV send record 2026-11-15T08:26:46Z to landing commit 1e113ed06 at 08:37:36Z (corrected at the ADV presidio's request); the first figure, about 1 h 40 min, was an estimate from the nominal START_UTC and is withdrawn; START_UTC 07:00:00Z in this record is nominal"
   }
 }
