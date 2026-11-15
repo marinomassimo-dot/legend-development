@@ -224,8 +224,9 @@
     },
     {
      "step": "At the end of the window (2026-11-15T15:29:29Z): measure consumption by the stated method and produce the compact report with the 48-72 hour recommendation",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-15T15:3xZ: window table run on main (trial_window_table.py, identical to my census), report written (advisor_pilot_20261113/TRIAL_24H_REPORT.md) and given to the operator in chat; recommendation: extend to 72 hours with five conditions; the window end closes the observation and does not revoke the continuous mode."
     }
    ]
   },
@@ -618,6 +619,7 @@
     "utc": "2026-11-15T15:22Z",
     "event": "MEETING (cross-session transport section 13, an operator instruction given in the Harness PLAN session, recorded in the roadmap) became due at the 15:21Z recall on a Harness event request (tick.meeting DUE, state independent of the evaluation verdict, which I held); opened with meeting --open: record advisor_pilot_20261113/meetings/MEETING-20261115T152159Z-jaq44mq3.md (agenda derived from existing records, no participant statements invented); invitations sent to IT, SCI and HE (routes RESOLVED) with four short questions each (priority-ordered pending work, blockers, prospects with first step and stop rule, corrections to the presidio's direction); Mirror route UNRESOLVED, not addressed, recorded as absent; replies asynchronous, none required; the round closes with --close and the notes verbatim. Next meeting due 21:21:59Z by the six-hour rule."
    }
-  ]
+  ],
+  "report_delivered_utc": "2026-11-15T15:3xZ"
  }
 }
