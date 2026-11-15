@@ -1567,6 +1567,46 @@ def require_work_manifest(
         )
 
 
+#: Generated surfaces that stamp the length of the ledger and that the FOLLOW-UP below does not name. A key of
+#: `candidate_tree_freshness.GENERATORS`; the check and the regeneration command are read from there, once.
+LEDGER_STAMPED_GENERATORS = (
+    "disease-models/{disease}/research/drug_repurposing/ranking_it8_p9_20261029/ranking_it8.py",
+)
+STAMP_CHECK_TIMEOUT = 120.0
+
+
+def stale_stamped_surfaces(root: Path, disease: str, *, generators: Optional[dict] = None,
+                           timeout: float = STAMP_CHECK_TIMEOUT) -> list[str]:
+    """Lines naming each ledger-stamped surface the record just staled, with the command; nothing is regenerated.
+
+    HE63, 2026-11-15: ranking.json stamps `receipt_ledger_lines`, and a receipt recorded by hand reached main with
+    the stamp one behind (release run #817 on 5e19a748b, the second time after IT's receipts of 12:39Z): this path
+    is the one `legend_commit.sh` and `task_close.py` do not cover. It runs the same declared check on the working
+    tree and says what it found; a check that cannot run or exceeds `timeout` is reported as not checked, with the
+    command, never as fresh.
+    """
+    import candidate_tree_freshness as freshness
+    table = freshness.GENERATORS if generators is None else generators
+    lines: list[str] = []
+    for key in LEDGER_STAMPED_GENERATORS:
+        generator = table.get(key)
+        if generator is None or generator.check is None:
+            continue
+        script = key.format(disease=disease)
+        for surface in generator.surfaces:
+            surface = surface.format(disease=disease)
+            command = generator.regenerate.format(surface=surface, disease=disease)
+            if not (root / script).is_file():
+                continue
+            status, detail, seconds = freshness.run_check(root, surface, script, generator, timeout)
+            if status == freshness.FRESH:
+                continue
+            what = "STALE" if status == freshness.STALE else f"NOT CHECKED ({detail})"
+            lines.append(f"{what}: {surface} (checked in {seconds:.0f}s). This receipt moved the ledger length it "
+                         f"stamps; regenerate it and commit it with the receipt:\n  {command}")
+    return lines
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description=__doc__,
@@ -1703,6 +1743,13 @@ def main() -> int:
                   f"  python3 framework/scripts/candidate_tree_freshness.py --paths {ledger} "
                   f"{manifest} {registries / 'reading_state.md'} "
                   f"{registries / 'coverage_report.md'}   # what else the commit stales")
+            context = _authoritative_context(ledger)
+            if context is not None:
+                try:
+                    for line in stale_stamped_surfaces(context[0], context[1]):
+                        print(line)
+                except Exception as exc:  # the receipt is recorded; a failed check must not turn that into an error
+                    print(f"NOT CHECKED: the ledger-stamped surfaces ({type(exc).__name__}: {exc})")
             return 0
         if args.command == "rechain":
             base_path = Path(args.onto)
