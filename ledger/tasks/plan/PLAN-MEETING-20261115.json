@@ -11,8 +11,8 @@
   "assigned_on": "2026-11-15",
   "OBJECTIVE": "Implement a lightweight permanent MEETING alignment pattern: six-hour recall through the existing Advisor clock, meaningful event requests, asynchronous participant updates and actionable strategic/operational follow-through without quorum, approval gates or interruption of ongoing research.",
   "AUTHORISATION": "Operator instruction in this session, 2026-11-15: improve the raw MEETING idea and implement directly as Harness Engineering PLAN.",
-  "CURRENT_STATE": "IN_PROGRESS",
-  "MANDATE_STATE": "OPEN",
+  "CURRENT_STATE": "COMPLETE",
+  "MANDATE_STATE": "COMPLETE",
   "DECISIONS_TAKEN": [
     {
       "decision": "Reuse the hourly recall for six-hour and meaningful-event alignment; host makes the round table asynchronously",
@@ -30,7 +30,7 @@
   "STOP_LOG": [],
   "SCIENTIFIC_DELTA": "NONE; a coordination pattern does not promote scientific evidence, candidates or ranking.",
   "AUTHORISED_QUEUE_20261115": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_MEETING": {
       "order": 1,
       "steps": [
@@ -46,7 +46,8 @@
         },
         {
           "step": "Publish verified changes and observe a real native meeting handoff; close and clean owned worktree",
-          "status": "IN_PROGRESS"
+          "status": "DONE",
+          "evidence": "Permanent implementation already published on remote main (8d3291f3ba93f640203102740d5d4f704a44eec6); actual native round closed with three replies and follow-through. All252 frozen inventory targets covered across the preserved226-prefix and26-tail runs; final native data integration receives targeted checks and exact publication gate. Closing record and owned cleanup are completed by the same closing execution."
         }
       ]
     }
@@ -94,11 +95,136 @@
       "window_table_tests": 4,
       "evidence": "/tmp/legend-meeting-integrated-advisor-final.log",
       "boundary": "Ordinary tools cannot import the Advisor; the optional trial measurement utility may reuse only runtime names, incomplete-run metadata and the existing task verdict reader."
+    },
+    {
+      "scope": "Final integration with native HE62 monitoring and receipt freshness dependency",
+      "verdict": "PASS",
+      "commit": "5996e0412",
+      "advisor_tests": 139,
+      "freshness_tests": 30,
+      "shareable_package": "current",
+      "evidence": [
+        "/tmp/legend-meeting-final-advisor.log",
+        "/tmp/legend-meeting-final-freshness.log",
+        "/tmp/legend-meeting-final-package.log"
+      ]
+    },
+    {
+      "scope": "Frozen a104 complete inventory interrupted by proven Snap temporary-file isolation",
+      "verdict": "INTERRUPTED_ENVIRONMENT_WITHOUT_FULL_VERDICT",
+      "candidate": "a104be5f28db4c73276db6e22411b1704bc9040f",
+      "completed_green_targets": 226,
+      "started_targets": 227,
+      "evidence": "/tmp/legend-meeting-full-retry.json",
+      "cause": "The host temporary HTML existed; it was absent from the browser mount namespace. Same browser read a local fixture under its own common directory, sandbox enabled.",
+      "continuation": "Run only the interrupted target and remaining25 targets on the same unchanged frozen clone with an isolated Snap-readable TMPDIR; no full PASS attributed to this interrupted run."
+    },
+    {
+      "scope": "Frozen a104 inventory coverage across preserved prefix and resumed tail",
+      "verdict": "ALL_252_TARGETS_EXECUTED_SUCCESSFULLY_ACROSS_RECORDED_RUNS_WITH_SKIPS",
+      "candidate": "a104be5f28db4c73276db6e22411b1704bc9040f",
+      "targets": 252,
+      "prefix": 226,
+      "resumed_tail": 26,
+      "individual_skip_reasons_observed": 43,
+      "prefix_log_sha256": "b4f39ad90c9daa0f0f885d71978c93e8f99982a3d24508c6415f26ae1a1e022d",
+      "tail_log_sha256": "c90e17d3a508f5fbd6f2f0f173e40acb475ddeef0c927c3f95539117dc8f2147",
+      "evidence": "/tmp/legend-meeting-coverage.json",
+      "boundary": "The interrupted complete attempt remains without a full verdict; the26-target resumed tail is PASS WITH SKIPS. Not a full inventory on the later native integration tree."
+    },
+    {
+      "scope": "Closing integration98afde3f3",
+      "verdict": "TARGETED_PASS_PACKAGE_STALE",
+      "translation_tests": 14,
+      "section_reference_tests": 13,
+      "ranking": "current",
+      "package": "STALE after native card updates; failure retained",
+      "evidence": "/tmp/legend-meeting-closing-package.log"
+    },
+    {
+      "scope": "Rebuild of all full/shareable views and package on98afde3f3",
+      "verdict": "PASS",
+      "ranking_bytes_unchanged": true,
+      "evidence": "/tmp/legend-meeting-closing-regeneration.json",
+      "disposition": "Superseded by the newer native complete rebuild on3e1bde7af, taken intact with its additional scientific corrections. Reproducible own generated output was discarded, not peer work."
+    },
+    {
+      "scope": "Latest native3e1bde7af integrated; final checked tree18ac2e15c",
+      "verdict": "PASS",
+      "package": "current",
+      "translation_tests": 14,
+      "landing_dry_run": "FRESH,3 generated surfaces checked",
+      "evidence": [
+        "/tmp/legend-meeting-merged-final-package.log",
+        "/tmp/legend-meeting-merged-final-i18n.log"
+      ],
+      "boundary": "MEETING implementation code unchanged from the139-test integration; no complete inventory on this later data tree."
     }
   ],
   "SESSION_LEARNING_REVIEW": {
     "lesson": "Alignment must preserve the distinction between a source-derived index, an actual actor update and delivered work. Periodic cadence is separate from whether a strategic model evaluation is needed.",
     "capability_outcome": "MEETING added through existing coordination paths; no external capability or installation required.",
-    "remaining_measurement": "Observe a native round table and downstream acceptance/consumption; assess its useful decisions and total cost, not meeting count."
+    "remaining_measurement": "Periodic/event follow-through, upgrade/restart restoration of the native recall, and total coordination cost over time. First actual round observed; no biological/predictive improvement inferred.",
+    "environment_lesson": "Browser startup alone does not prove it can read the test fixture. Snap private /tmp hid the generated pages; a private TMPDIR under the browser common folder restored access without disabling its sandbox. A future preflight improvement can test that fact before a long inventory."
+  },
+  "NATIVE_OBSERVATION": {
+    "opened_utc": "2026-11-15T15:21:59Z",
+    "record": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261115T152159Z-jaq44mq3.md",
+    "trigger": "Harness deployment request registered15:19:32Z; actual ADV hosting session opened it without an operator MEETING prompt to ADV",
+    "messages_sent": [
+      {
+        "to": "IT Orchestrator",
+        "utc": "2026-11-15T15:22:19Z",
+        "receipt": "b7941015-2e51-46e9-b96a-f81c54f5c346"
+      },
+      {
+        "to": "SCI",
+        "utc": "2026-11-15T15:22:22Z",
+        "receipt": "4d81afdf-c06c-471a-82f2-acf9f10a9641"
+      },
+      {
+        "to": "HE",
+        "utc": "2026-11-15T15:22:26Z",
+        "receipt": "7ad630d9-c29b-482d-93ee-e493e5ec8c93"
+      }
+    ],
+    "boundary": "Actual event-triggered round, three replies preserved verbatim and native follow-up requests observed. No six-hour timer firing, multi-day uptime or biological/predictive benefit inferred.",
+    "closed_utc": "2026-11-15T15:49:33Z",
+    "actual_replies": [
+      "IT Orchestrator",
+      "SCI",
+      "HE"
+    ],
+    "mirror": "No active session, explicitly not consulted",
+    "next_due_utc": "2026-11-15T21:21:59Z",
+    "decisions": [
+      "HE: repair receipt-derived ranking freshness through the existing landing check; keep the reproducibility test.",
+      "IT: consume the missing scientific proposal, then choose an authorised next open question or a supported wait.",
+      "SCI: proceed with NX1 experiment sizing and close the prior task with its actual consumer.",
+      "Decline prose-parsed K2P column; defer contrastive replay while SCI is occupied."
+    ],
+    "live_recall": "One existing hourly recall runs the current tick. The observed creation payload predates the explicit MEETING clause; its full in-memory refresh was not observed. The current factory includes MEETING, the permanent skill inspects tick.meeting independently, and its upgrade/restart rule replaces only the owned recall when its text differs."
+  },
+  "PUBLICATION_METADATA": {
+    "all_69_unit_records_unchanged": true,
+    "changed_ranking_keys": [
+      "summary"
+    ],
+    "evidence": "/tmp/legend-meeting-current-regeneration.json"
+  },
+  "completed_on": "2026-11-15",
+  "CLOSING_INTEGRATION": {
+    "native_base": "3e1bde7afb4d8abea64cb2130695e6ef319ceecc",
+    "source_code_change_since_5996e0412": [],
+    "derived_conflict_resolution": "Use the native rebuilt DEPLOY, manifest and text provenance intact; preserve all peer scientific updates.",
+    "scope": "Final integration adds peer scientific data/translations and closing evidence, not a new MEETING code change."
+  },
+  "EVIDENCE_PACK": "/tmp/legend-verify-keep/meeting-20261115",
+  "OWNED_CLEANUP": {
+    "disposable_verification_clones": "removed after process and clean-tree checks",
+    "private_browser_TMPDIR": "removed after tail completion",
+    "evidence": "retained in EVIDENCE_PACK",
+    "task_worktree": "removed after exact publication in this closing execution",
+    "foreign_material_touched": false
   }
 }

@@ -64,3 +64,58 @@ The corrected AST check keeps ordinary tools independent and limits the measurem
 to its existing read-only metadata/runtime/task-verdict readers. The integrated 138 Advisor
 tests and four window-measurement tests then passed. This is a targeted integration repair,
 not a claim that the interrupted full inventory completed.
+
+## First native round observed
+
+At **15:21:59 UTC (16:21:59 Europe/Rome)** the existing ADV host opened
+`advisor_pilot_20261113/meetings/MEETING-20261115T152159Z-jaq44mq3.md` on the Harness
+deployment signal. At 15:22:19,15:22:22 and15:22:26 it sent separate requests to the actual
+IT, SCI and HE named sessions, asking for pending priorities, blockers, prospects and
+corrections of its direction while explicitly preserving ongoing work. The three successful
+transport receipts are in the task record. No operator MEETING prompt was pasted into ADV.
+The host received all three replies and closed the round at **15:49:33 UTC (16:49:33
+Europe/Rome)**. The [actual minutes](../advisor_pilot_20261113/meetings/MEETING-20261115T152159Z-jaq44mq3.md)
+preserve those replies verbatim, explicitly record Mirror as unavailable, and distinguish
+decisions from delivered or completed work.
+
+Observed follow-through includes the existing landing check's receipt-derived ranking
+freshness repair assigned to HE, consumption of a missing scientific proposal assigned to
+IT, and NX1 experiment sizing assigned to SCI. The host declined a prose-parsed K2P column
+and deferred a replay while SCI was occupied. These are concrete coordination decisions,
+not evidence of better biological predictions. The next round is due **21:21:59 UTC
+(22:21:59 Europe/Rome)**, or earlier on a material event. This first round demonstrates the
+event route, not a six-hour timer firing or multi-day uptime. One existing hourly recall was
+observed running the current tick. Its creation payload predates the explicit MEETING clause;
+a live refresh to the current factory text was not observed. The permanent procedure handles
+`tick.meeting` independently and restores or replaces only the owned recall when its text changes.
+
+The shared publication metadata was also regenerated after the concurrent receipts:
+all 69 scientific unit objects were unchanged; only ranking summary metadata moved. Later
+scientific changes merged from peers retain their own provenance and are not attributed to
+MEETING.
+
+## Closing verification
+
+All **252 inventory targets** on frozen `a104be5f28db4c73276db6e22411b1704bc9040f`
+were executed successfully across two recorded runs: 226 green targets before the interrupted
+browser target, then that target and the remaining 25. The interrupted complete attempt stays
+`INTERRUPTED_ENVIRONMENT_WITHOUT_FULL_VERDICT`; the resumed 26-target tail is PASS WITH SKIPS.
+The aggregate records 43 individual skipped cases, mainly absent local corpus/cache/input
+fixtures and platform cases, with the raw logs' hashes in the task record. This is complete
+coverage across runs, not a new verdict for the interrupted attempt or the later integration.
+
+The browser limitation was measured: its Snap mount namespace could not see a host temporary
+HTML file. A private temporary directory under the browser's own common folder restored file
+access; the same browser read both a local probe and the dashboard with its sandbox enabled.
+No browser code, test or security setting was weakened. The final integration separately
+passed 139 Advisor tests and 30 freshness tests; subsequent peer scientific updates preserve
+that code and receive targeted publication/translation checks. Native rebuilt publication
+files are retained intact. Full final CI success is not inferred from these local results.
+
+After a later native card update, the first closing package check correctly returned STALE.
+The existing full/shareable rebuild and package check passed with ranking bytes unchanged.
+During that rebuild, native main landed additional scientific corrections and its own complete
+rebuild; those newer generated files were taken intact. The final delta against native main is
+only this report and the task record. The frozen verification clone and private browser
+temporary folder were removed after checking no process still used them; raw evidence is
+retained under `/tmp/legend-verify-keep/meeting-20261115`.
