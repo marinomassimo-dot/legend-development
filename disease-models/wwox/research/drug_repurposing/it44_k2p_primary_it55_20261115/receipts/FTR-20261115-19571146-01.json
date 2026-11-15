@@ -1,0 +1,47 @@
+{
+ "analysis_at": "2026-11-15T14:05Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-15T14:05Z",
+ "event_id": "FTR-20261115-19571146-01",
+ "evidence_basis": [
+  "Abstract, the Methods paragraphs on cDNA, CHO recording and slice recording, and the Results section on quinine, low pH and barium with the Figure 7 legend, read from the PMC article web page of PMC6665656 (one plain request on 2026-11-15, generic client, no contact parameter, HTTP 200, 228,579 bytes, an article, no interstitial). The other Results (selectivity, Cs+ permeability, immunocytochemistry), the Discussion, the figures (not viewed) and the references were not read. Earlier ledger events for this PMID are abstract_only.",
+  "Mechanical check: the 10 verbatim rows cited here were found in the saved page text (verify_quotes.py, 46 of 46 over the whole verbatim.tsv).",
+  "verbatim_locator | proposition: Rat TWIK-1 (K274E) in CHO: Ba2+ 800 uM inhibits about 50 percent, IC50 960 uM | Results, Sensitivity to quinine, low pH and barium | \"800 μm extracellular Ba2+ inhibited only 50% of TWIK-1 K+ channel whole-cell currents with an IC50 value of 960 μm (Fig. 7C)\"",
+  "verbatim_locator | proposition: IC50 fit parameters for TWIK-1 Ba2+ | Figure 7 legend | \"yielding an IC50 of 960 ± 9.8 μm with h = 0.84\"",
+  "verbatim_locator | proposition: Rat TREK-1 in CHO: Ba2+ 800 uM no effect | Results, Sensitivity to quinine, low pH and barium | \"800 μm extracellular Ba2+ had no effect on whole-cell currents of TREK-1 channels expressed in CHO cells\"",
+  "verbatim_locator | proposition: Astrocyte passive conductance: 1.2 mM Ba2+ inhibits 17 percent at +20 mV | Results | \"The whole-cell currents at a command voltage of +20 mV was inhibited only by 17 ± 6% (n = 6)\"",
+  "verbatim_locator | proposition: The TWIK-1 construct is the K274E mutant, rat | Methods, cDNA | \"Rat TWIK-1·K274E mutation was created by pfu-based mutagenesis kits\"",
+  "verbatim_locator | proposition: CHO recordings: pipette K+ 140 mM, pH 7.4; voltage ramp | Methods, CHO recording | \"The pipette solution contained the following (in mm): 140 KCl, 1 MgCl2, 10 EGTA, 1 K2-ATP, and 5 HEPES. The pH was adjusted to 7.4 with KOH.\"",
+  "verbatim_locator | proposition: CHO recordings: voltage ramp | Methods, CHO recording | \"recorded with a standard voltage ramp from −140 mV to +80 mV (2.2 s)\"",
+  "verbatim_locator | proposition: Bath for the cation-selectivity runs only (Ba2+ bath not stated) | Methods, CHO recording | \"the bath solution contained (in mm) 135 XCl, 5 KCl, 2 CaCl2, 1 MgCl2, and 10 HEPES\"",
+  "verbatim_locator | proposition: Room temperature statement sits in the slice-recording paragraph | Methods, slice recording | \"All the experiments were conducted at room temperature (20–22°C).\"",
+  "verbatim_locator | proposition: K2P channels are much less Ba2+-sensitive than Kir (review statement the paper cites) | Results | \"Mammalian K2P channels with four transmembrane segments per subunit are much less sensitive to extracellular Ba2+ than inward rectifier K+ channels with two transmembrane segments per subunit (Lotshaw, 2007).\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/it44_k2p_primary_it55_20261115/README.md"
+ ],
+ "prior_receipt": "FTR-20261111-19571146-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "f1b51fb579db4a08e9bc23e3c9dc10e388d4b0dfeff73c8273ce489cc1505099",
+ "source_kind": "fulltext_remote",
+ "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6665656/ (one plain request on 2026-11-15, generic client, no contact parameter, HTTP 200, 228579 bytes; the page copy is kept outside git, SHA-256 given in source_fingerprint)",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.5784-08.2009",
+  "pmid": "19571146"
+ },
+ "workflow": "IT55 producer delegate for IT44-Q01 (K2P half) and IT44-Q02, context_policy QUESTION_DRIVEN: body read from the PMC article page, quotes checked mechanically; predictions frozen in a local commit before any body was opened."
+}
