@@ -51,7 +51,7 @@ def _asked_not_ran(meta: dict[str, Any], models: dict[str, int]) -> str:
     return ""
 
 
-def census(path: Path, since: str = "") -> dict[str, Any]:
+def census(path: Path, since: str = "", until: str = "") -> dict[str, Any]:
     """Per-turn model and context, from the assistant turns' own usage blocks."""
     turns: list[dict[str, Any]] = []
     prompt_chars = 0
@@ -95,6 +95,8 @@ def census(path: Path, since: str = "") -> dict[str, Any]:
             efforts[str(row["effort"])] = efforts.get(str(row["effort"]), 0) + 1
     if since:
         turns = [turn for turn in turns if turn["at"] >= since]
+    if until:
+        turns = [turn for turn in turns if turn["at"] < until]            # a window's end; with --since it makes the half-open window [since, until)
     meta = _dispatch_meta(path)
     if not turns:
         return {"transcript": str(path), "turns": 0, "models": {}, "changed_mid_run": False}
@@ -227,6 +229,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--json", action="store_true")
     parser.add_argument("--carry", action="store_true", help="instead of the model census: which tool results the context carries longest (bytes x following turns; a proxy, not tokens)")
     parser.add_argument("--since", default="", help="count only turns at or after this ISO timestamp (a mandate's slice of a long session)")
+    parser.add_argument("--until", default="", help="count only turns before this ISO timestamp")
     args = parser.parse_args(argv)
 
     paths = [Path(item).resolve() for item in args.transcripts]
@@ -239,7 +242,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.carry:
         print(json.dumps([carry(path, args.since) for path in paths], indent=1))
         return 0
-    rows = [census(path, args.since) for path in paths]
+    rows = [census(path, args.since, args.until) for path in paths]
     print(json.dumps(rows, indent=1, ensure_ascii=False) if args.json else render(rows))
     return 1 if any(row.get("changed_mid_run") or row.get("asked_not_ran") for row in rows) else 0
 
