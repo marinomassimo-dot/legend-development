@@ -372,7 +372,7 @@ RECALL_PROMPT = ("Proactive Strategic Advisor pilot, hourly mechanical check. Ru
                  "If the verdict is NONE, DEFERRED, RUNNING, PAUSED, RESOURCES or DISABLED/EXPIRED/BUDGET, stay quiet unless something actionable changed; these mechanical verdicts do not establish that all useful work is exhausted. If EVALUATE, apply the current legend-strategic-advisor skill and start `strategic_advisor.py evaluate --campaign {campaign}` "
                  "in the background (run_in_background), and when it finishes read the drafted assignments with `status`, check each recipient is listed live by `claude agents --json`, "
                  "deliver each with SendMessage (durable artifact path plus pointer), record `deliver --state SENT --to <the session named in the send's receipt>` or `UNREACHABLE`, and later verify the take-in-charge in the recipient's task record. "
-                 "An assignment already drafted and authorised is delivered in the turn that reads it, not at the next recall. Prepare useful work from the standing roadmap without waiting for an operator line or a distant report; read the current recipient record before claiming it is still in flight. Never invent work; never write to transcripts; respect the effective operating mode and shared resources.")
+                 "An assignment already drafted and authorised is delivered in the turn that reads it, not at the next recall. Prepare useful work from the standing roadmap without waiting for an operator line or a distant report; read the current recipient record before claiming it is still in flight. Whatever the verdict, also read the real state (the tick's `activity` block, open records and their awaited events, the latest commits): an idle share above half without a written reason is a prompt to send, not a quiet verdict. Help a stuck session in a bounded way (find what blocks it, supply or route the input, correct your own wrong premise; never the recipient's method) and address a role only if `mandate_watch.py route --to <role>` resolves it, else keep a conditional request in the portfolio and do not record a send that did not happen. Never invent work; never write to transcripts; respect the effective operating mode and shared resources.")
 RECALL_MARK = "Proactive Strategic Advisor pilot, hourly mechanical check"   # what a session looks for in CronList before creating the recall: one copy only
 
 
@@ -896,11 +896,41 @@ def _records() -> dict[str, dict[str, Any]]:
 
 
 def _sessions() -> dict[str, str] | None:
+    agents = _agents()
+    return None if agents is None else {str(x.get("name")): str(x.get("status")) for x in agents}
+
+
+STALE_SESSION_MIN = 1440   # a session whose transcript has not been written for a day is listed but not counted in the idle share: measured, two such sessions were 12 and 6 days quiet
+PROJECTS_DIR = Path.home() / ".claude" / "projects"   # where each session's transcript lives; only its modification time is read
+
+
+def _agents() -> list[dict[str, Any]] | None:
     try:
         done = subprocess.run([os.environ.get("LEGEND_ADVISOR_CLAUDE", "claude"), "agents", "--json"], capture_output=True, text=True, timeout=25)
-        return {str(x.get("name")): str(x.get("status")) for x in json.loads(done.stdout)} if done.returncode == 0 else None
+        data = json.loads(done.stdout) if done.returncode == 0 else None
+        return data if isinstance(data, list) else None
     except (OSError, subprocess.SubprocessError, json.JSONDecodeError):
         return None
+
+
+def session_activity(now: dt.datetime, agents: list[dict[str, Any]] | None = None) -> dict[str, Any]:
+    """HE60: who is working and who has been quiet, since when, so the operator's durable check (an idle share above half without a written reason is a prompt to send) is read, not rebuilt. Git cannot say it: every
+    actor commits under one author. The runtime says each session's status and its transcript's last write; only that modification time is read, never the content. `quiet_min` is minutes since the transcript was
+    last written (None when it is not found), `idle_share` counts this repository's sessions written within the last day (older ones are listed, not counted). Facts, not a verdict: a written reason is still read by the presidio."""
+    agents = _agents() if agents is None else agents
+    last = _git("log", "-1", "--format=%ct", "main")
+    main_quiet = round((now.timestamp() - int(last)) / 60) if last.isdigit() else None
+    if not agents:
+        return {"available": False, "main_quiet_min": main_quiet}
+    rows = {}
+    for a in agents:
+        if not str(a.get("cwd") or "").startswith(str(ROOT)):
+            continue
+        found = sorted(PROJECTS_DIR.glob(f"*/{a.get('sessionId')}.jsonl")) if a.get("sessionId") else []
+        rows[str(a.get("name"))] = {"status": str(a.get("status")), "quiet_min": round((now.timestamp() - found[-1].stat().st_mtime) / 60) if found else None}
+    live = [r for r in rows.values() if r["quiet_min"] is not None and r["quiet_min"] < STALE_SESSION_MIN]
+    idle = sum(1 for r in live if r["status"] == "idle")
+    return {"available": True, "main_quiet_min": main_quiet, "sessions": rows, "idle_share": f"{idle}/{len(live)}", "idle_over_half": bool(live) and idle * 2 > len(live)}
 
 
 def _waits() -> list[dict[str, str]]:
@@ -1152,7 +1182,7 @@ def tick(campaign: Path) -> dict[str, Any]:
             "operator_controls": [f"{c['kind']}: {c['text']}" for c in (active_suspensions(ctl) + [c for c in ctl if c["kind"] in ("URGENT", "INTEGRATION")])[-6:]],
             "events": obs["events"][:12], "open_mandates": obs["open_mandates"], "waiting_on": [f"{w['task']}: {w['blocker'][:70]}" for w in obs["waits"]][:4] + ([f"... {len(obs['waits'])} in all"] if len(obs["waits"]) > 4 else []),
              "portfolio": {k: obs["portfolio"][k] for k in ("path", "available", "actionable", "errors")},
-            "sessions": obs["sessions"], "digest": digest,
+            "sessions": obs["sessions"], "activity": session_activity(now), "digest": digest,
             "evaluation_clock": {"utc": _utc(last_eval) if last_eval else None, "source": clock_source},
             "hours_since_last_evaluation": None if hours is None else round(hours, 1)}
 
