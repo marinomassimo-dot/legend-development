@@ -12,8 +12,8 @@
  "branch": "task/hrk24",
  "CURRENT_STATE": "IN_PROGRESS",
  "CHECKPOINT": {
-  "last_verified_result": "none yet",
-  "first_incomplete_work": "OBJ_1_TRIAL"
+  "last_verified_result": "OBJ_1 landed e16c42b70, gate PASS; waiting for SCI comparison and IT disposition (not mine)",
+  "first_incomplete_work": "OBJ_2_SCOUT_AUDIT"
  },
  "TAKEN_IN_CHARGE": {
   "utc": "2026-11-15T07:33:58Z",
@@ -27,16 +27,46 @@
    "steps": [
     {
      "step": "Map every one of the 834 symbols to the authors' list symbol and ENSG through the HGNC previous-symbol/alias logic of validate_symbols.py, keeping ambiguous and unresolved as such",
-     "status": "TODO",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "symbol_mapping_834.tsv: 819 same_symbol, 15 converted by two agreeing routes (symbol/previous symbol and ENSG), 0 unresolved, 0 ambiguous; the before side reproduces the committed composition_class.tsv in 834 of 834 rows"
     },
     {
      "step": "Recompute log2FC, rho, composition and broad-class flags for the resolved rows with the reproduction script's own definitions; before/after table; list only queries whose membership changed",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "15 rows: direction agrees with the authors' list in 15 of 15; composition class unchanged; broad class moves for 5 (IRAG1, POFUT4, HDIP1, H1-2, H1-10); one of five queries changes membership (QF_minus_broad_maturation, 365/260 -> 363/257); no live query"
+    },
+    {
+     "step": "Deliver to SCI (comparison), IT (disposition) and ADV; record cost (tool calls, wall time)",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "landed e16c42b70 (gate PASS); SCI told with the path (part B reference cc39da185 predates the output by about 5 minutes, verified in git, content not opened); IT told, disposition is IT's"
+    }
+   ],
+   "cost": {
+    "tool_calls": "25 counted from the session transcript between 2026-11-15T07:33:58Z and 07:44:54Z, of which 3 belong to the audit below",
+    "wall_time": "07:33:58Z taking in charge to 07:40:18Z landing commit (about 6.5 minutes), 07:44Z with the messages",
+    "delegate_tokens": 0,
+    "model_tokens": "not stated: the transcript repeats usage per streamed block"
+   }
+  },
+  "OBJ_2_SCOUT_AUDIT": {
+   "order": 2,
+   "title": "Static audit of the operator's capability-scout report of 2026-11-15 (radar input stored by ADV on main, cda299783)",
+   "steps": [
+    {
+     "step": "Coverage first: does LEGEND already hold a competing-explanations comparison (conditional proposals competing_explanations and expected_result_by_explanation, discovery-method diverge_hypotheses, hypothesis-forge generation)?",
      "status": "TODO",
      "owner": "plan"
     },
     {
-     "step": "Deliver to SCI (comparison), IT (disposition) and ADV; record cost (tool calls, wall time)",
+     "step": "Check the two primary sources and the licence by reading only (no install)",
+     "status": "TODO",
+     "owner": "plan"
+    },
+    {
+     "step": "Verdict per item with a stated limit; the four other replays are not audited here",
      "status": "TODO",
      "owner": "plan"
     }
