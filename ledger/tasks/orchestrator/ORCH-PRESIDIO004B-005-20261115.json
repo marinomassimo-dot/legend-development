@@ -55,6 +55,16 @@
    "evidence_dir": "/tmp/legend-verify-keep/20261115-075531-6bb306c0",
    "log_sha256": "25b3b93d281e28e138432cdeba4ef685369971d03ee1100632e73fce9881305b",
    "clone": "REMOVED"
+  },
+  {
+   "run_id": "20261115-075847-b7fe7e15",
+   "label": "presidio004b005-landing4",
+   "sha": "0e11973e4e90bb84a01aac983946c217e0aae425",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261115-075847-b7fe7e15",
+   "log_sha256": "67746670ab21d410cb44daf452645cfb9580b59e78c7f088aa6ede6ba6641d00",
+   "clone": "REMOVED"
   }
  ],
  "TRIAL_24H_OBSERVATIONS": {
