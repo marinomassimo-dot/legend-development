@@ -197,6 +197,12 @@
      "status": "BLOCKED",
      "owner": "orchestrator",
      "blocker": "waiting for: SCI's answer to PRESIDIO-003 (queued; SCI decides the moment, may decline or supersede); delivery events; recall job 3382bb86"
+    },
+    {
+     "step": "Portfolio comparison after ADV-009's consumption (the operator's 'continuous portfolio direction' rule): choose among assign, queue or a motivated wait with the decision it could change, why, and what would make continuing useless",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-15T03:3xZ: motivated wait until the 05:20Z scout briefing; reasons and exclusions in TRIAL_24H.log; P11's own wait (degraded run, stale premise) not relied on. Resume conditions: the scout briefing with a signal that survives triage; a delivery or mandate transition; an operator line; the trial review after 15:29:29Z."
     }
    ]
   },
@@ -415,6 +421,14 @@
    {
     "utc": "2026-11-15T03:1xZ",
     "event": "presidio's own error corrected: the timestamps I first wrote for ADV-009 (02:0xZ taken, 04:3xZ delivered) were estimates and the second was in the future; replaced with the commit times"
+   },
+   {
+    "utc": "2026-11-15T03:23Z",
+    "event": "tick EVALUATE (portfolio digest unchanged since the deferred 02:23 tick; queue exhausted; the last evaluation preceded ADV-009's delivery): evaluation 11 (P11) run, stage P, opus high, only 3 turns (2 on claude-opus-5-5, 1 on claude-opus-5), output 4,851, cache read 79,227, cache creation 38,654: DEGRADED (first line states the classifier stop; it read only the portfolio and P10, not the records it reasons from); outcome wait with resume_when after:2026-11-15T15:29:29Z; its decisive premise ('ADV-009 is in flight') was stale: ADV-009 had been delivered 02:54Z, consumed 03:00Z, corrected 03:01Z on main; it applied three portfolio updates, two of them false (RP-016 'in flight', RP-003 'one draw in flight'). Invocation count 11."
+   },
+   {
+    "utc": "2026-11-15T03:3xZ",
+    "event": "presidio decisions after P11: (1) the two false portfolio rows corrected by portfolio --upsert (RP-016 and RP-003 now state that ADV-009 is delivered and consumed, the branch's remaining residual and its revival); (2) the P11 wait is not relied on; my own decision: wait with a dated resume: the daily scout run at 05:20Z (first with HE's filters), because the other ready rows are large reads without a named decision (RP-002 first five units of the selection table: ethosuximide, lithium, d-APV class, A51, ketogenic diet, plus the AAV9 gene-addition unit excluded from drug repurposing; RP-003 the whole open-question map), literature routes blocked by lawful access, or event-gated (RP-017, RP-018); RP-005 (a prospective test of the generative method) resumes only with a new lever or measurement package (ADV-009's values table does not fit a design or comparison reader); (3) the pattern of degraded evaluation runs (P7 cut mid-text, P10 start, P11 3 turns) reported to HE with a suggestion to treat such a run as INCOMPLETE (no stated wait, no portfolio updates)"
    }
   ]
  }
