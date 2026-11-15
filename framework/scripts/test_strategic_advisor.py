@@ -1078,6 +1078,25 @@ class Snapshot(unittest.TestCase):
         self.assertEqual([d["path"] for d in snap["uncommitted"]], ["new.md"])
         self.assertEqual(snap["uncommitted"][0]["sha256"], sa.sha256_text("draft"))
 
+    def test_original_external_radars_are_discoverable_without_an_advisor_addressee(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="sadv_radar_") as name:
+            root = Path(name)
+            folder = root / "disease-models/wwox/research/drug_repurposing/radar_inputs_fixture"
+            folder.mkdir(parents=True)
+            addressed = folder / "operator_scout_report.md"
+            addressed.write_text("For Plan: compare a public method.\n", encoding="utf-8")
+            unaddressed = folder / "drug_report.md"
+            unaddressed.write_text("An unresolved mechanism and a possible comparison.\n", encoding="utf-8")
+            saved, sa.ROOT = sa.ROOT, root
+            try:
+                rows = {r["id"]: r for r in sa.entrypoints()}
+                discovered = {p for pattern in rows["radar_science"]["patterns"] for p in sa._resolve(pattern)}
+                self.assertEqual(rows["radar_science"]["matches"], 2)
+                self.assertIn(addressed, discovered)
+                self.assertIn(unaddressed, discovered)
+            finally:
+                sa.ROOT = saved
+
     def test_entry_points_cover_the_required_sources_and_resolve(self) -> None:
         rows = {r["id"]: r for r in sa.entrypoints()}
         for key in ("limits", "invariants", "dashboard", "investigations", "open_questions", "candidates", "packages", "diagnoses", "memory_dismissals", "radar_science", "harness_scouting", "capability_surface"):

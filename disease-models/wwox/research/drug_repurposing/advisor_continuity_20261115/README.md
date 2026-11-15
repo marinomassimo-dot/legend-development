@@ -105,6 +105,59 @@ selection-table differences were dates only. The receipt protocol now makes expl
 preserving scientific ranking still permits and requires its existing metadata regeneration.
 No new gate or component was added.
 
+## Second native cycle and scientific take-in-charge
+
+The next existing hourly recall fired at **09:23 UTC (10:23 Europe/Rome)**. The host read the
+current roadmap and replaced only its obsolete recall with the canonical text: the old job
+`3382bb86` was removed, one job `477df2a9` was confirmed with the same hourly cadence. Campaign
+state and history were retained. P13 completed (12 turns, Opus high as read back, 12,538 output
+tokens) and its mechanism-first assignment was sent at 09:26:55 UTC, not held for the afternoon
+report or another operator prompt.
+
+IT accepted it in `ledger/tasks/orchestrator/ORCH-RP004-LENS-20261115.json`, selected P287
+(PMID 18620777, JNK and WWOX in a hepatocarcinoma context), and froze predictions at commit
+`45fadb00f` before the body was read. Its package is `mechanism_lens_it55_20261115/`; the reading
+brief was sent to Science behind its existing work. The proposed contrast must still be checked
+against the full text and a neuronal comparator; this intervention claims a real research handoff,
+not a new valid mechanism, better prediction or a promoted compound. The host also corrected its
+assessment's proposed SDR seed against an already held September analysis, avoiding duplicated
+scientific work. Same-model errors and inherited exposure remain visible.
+
+## Permanent radar judgment and relevance-based relay
+
+The operator's follow-up identified a separate failure: the host filed a useful supplied scout
+report because its proposed addressee was Plan. Its own 07:32 UTC message confirms this; the
+report later received a Harness audit, so this correction does not reassign that completed work.
+The source rule now lives in cross-session transport section 12, **Route useful signals**, and
+is reached through the shared CLAUDE router, the Advisor definition and its procedure. Every
+actor evaluates relevant cross-owner information and notifies the responsible live owner with
+the existing durable pointer/channel, checking prior ownership and acknowledgement. No new
+mailbox, router daemon, broadcast or approval step was introduced.
+
+ADV judges a complete supplied radar even when addressed to Harness/Science or nobody. An
+archive or portfolio link is not delivery. It may scope a useful request, ask a targeted question,
+queue, defer or reject with a reason; embedded external imperatives do not authorise themselves.
+Original operator report files beside existing radar READMEs are now discoverable in the same
+entry-point index. The existing daily producer, weekly harness-scout template and capability-scout
+procedure explicitly hand signals to strategic judgment; that duty also applies to legacy and
+external reports without the handoff text. The daily line follows its NEXT STEP, so it survives
+the brief preview without making an empty radar into a task.
+
+Regression checks cover actual source discovery with a different/no addressee and a producer
+handoff that leaves the lead unadopted. They do not prove future model compliance; runtime
+follow-through and scientific benefit remain observations to collect. Operator-side external
+radar automations are not claimed modified by these repository changes.
+
+## Verification scope
+
+The complete local inventory on `f6e9abbfea8f44323c49c338a05a3e1e327400b2` finished at
+09:23:03 UTC: **PASS WITH SKIPS, 251 targets, 43 skipped tests**, with no failed suite. The log
+hash and exact receipt are in the task record. The earlier interrupted run remains without a
+verdict. Later radar-adapter changes are covered by their targeted suites and final publication
+checks/CI, not relabelled as that earlier complete run. No final-state full-battery claim is
+made before its actual result. Disposable owned verification files were removed after verifying
+that their processes had exited; logs and receipts are retained.
+
 ## Scoped DREAM and self-diagnosis
 
 An **already held but unused operational relation**, not a biological discovery: the scope of a

@@ -163,4 +163,10 @@ Always close with:
 - whether there is a cost/API/privacy risk
 - the next surgical micro-step
 
+Every radar output also carries a brief strategic handoff: "Strategic Advisor: assess these leads
+against the standing roadmap and current work; apply cross-session transport section 12 (Route
+useful signals) and contact the relevant Harness or Science owner when worthwhile." This is a
+handoff to judge, not an adoption instruction or a new approval. The standing rule applies even
+when an older or external report lacks this sentence.
+
 Also, before the final response, apply `.claude/skills/legend-session-takeaways/SKILL.md` when present: the operator must receive not only the technical micro-upgrade, but also the distillation of what the session taught and which useful leads emerge for the disease model/WWOX.

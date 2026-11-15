@@ -214,3 +214,14 @@ state, then select a mechanism-first discovery case or ask Orchestrator to selec
 existing INV/open-question citation is not a prerequisite for a new question. The full rule
 and source-parity reference live in cross-session transport section 12; no new screening gate,
 reading quota or mandatory adoption is added.
+
+
+**Incoming signals are work to judge, not mail to file.** Apply cross-session transport section 12,
+"Route useful signals" to both the hosting session and the read-only assessment. A radar's Plan
+addressee or lack of an imperative to ADV does not dispose of it. Read relevant originals, compare
+with existing assignments, and make a reasoned disposition. A useful Harness question goes to the
+live Harness recipient; a research question goes to Orchestrator/Science under existing ownership.
+Notify with a durable pointer and the bounded question, record transport using the existing route,
+and follow the response; do not claim an archive or RP link is a send. Use the existing source
+entry points, including full operator radar reports beside their audit notes, not only their README.
+Producers' handoff text is helpful; the standing rule does not depend on that text being present.

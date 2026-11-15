@@ -492,6 +492,21 @@ class DedupTraceAndPersistence(unittest.TestCase):
             self.assertTrue(sd.save_text(p, "two\n", append=True)[0])
             self.assertEqual("one\ntwo\n", p.read_text(), "append preserves earlier entries")
 
+    def test_radar_handoff_survives_a_different_addressee_without_adopting_the_lead(self):
+        item = {"id": "external-lead", "wwox_question": "For PLAN: compare a retrieval method",
+                "decision": "test only if worthwhile", "detail": "Public source to verify",
+                "outcome": "TO_TRIAGE"}
+        rep = {"run_at": "2026-11-15T00:00:00+00:00", "selected": [item], "errors": []}
+        text = sd.briefing(rep)
+        self.assertIn("For PLAN: compare a retrieval method", text)
+        self.assertTrue(text.splitlines()[2].startswith("STRATEGIC HANDOFF — Strategic Advisor:"))
+        self.assertIn("cross_session_transport.md section 12", text)
+        self.assertEqual(item["outcome"], "TO_TRIAGE")
+        quiet = sd.briefing(dict(rep, selected=[]))
+        self.assertIn("NEXT STEP: none; nothing useful today", quiet)
+        self.assertIn("No material delta.", quiet)
+        self.assertNotIn("Delta 1:", quiet)
+
     def test_briefing_puts_one_next_step_first_and_lists_deltas_with_decision(self):
         item = {"id": "Discovery:q1", "wwox_question": "gap one", "decision": "d1", "roadmap": "R3", "detail": "[repository/github] a/b",
                 "estimated_cost": "minutes", "licence": "per part", "outcome": "TO_TRIAGE", "test": "reproduce one result"}
