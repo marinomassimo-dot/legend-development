@@ -142,6 +142,14 @@ GENERATORS: dict[str, Generator] = {
     # derivation suite reported it only after the batch had closed — the omission this
     # declaration closes on the landing path. Regenerating it breaks the Phase-2 seal by
     # design; re-seal with `reseal_dismech_baseline.py` after committing (Phase 4.7).
+    # HE62, 2026-11-15: ranking.json stamps the length of the receipt ledger, and nothing on the landing path
+    # re-checked it, so every receipt turned the release workflow red until someone refreshed it by hand (three
+    # manual refreshes and two red runs the same day). `check` regenerates in memory and compares every file.
+    "disease-models/{disease}/research/drug_repurposing/ranking_it8_p9_20261029/ranking_it8.py": Generator(
+        inputs=("disease-models/{disease}/registries/", "disease-models/{disease}/research/"),
+        check=("check",),
+        regenerate="python3 -B disease-models/{disease}/research/drug_repurposing/ranking_it8_p9_20261029/ranking_it8.py run",
+        surfaces=("disease-models/{disease}/research/drug_repurposing/ranking_it8_p9_20261029/ranking.json",)),
     "disease-models/{disease}/analysis/scripts/derive_dismech_sidecar.py": Generator(
         inputs=("disease-models/{disease}/registries/",
                 "disease-models/{disease}/analysis/data/dismech_authored_assertions.json"),
