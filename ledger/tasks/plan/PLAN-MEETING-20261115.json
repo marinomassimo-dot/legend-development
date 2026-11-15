@@ -79,6 +79,21 @@
       "section_reference_tests": 13,
       "evidence": "/tmp/legend-meeting-merged-advisor.log",
       "note": "Preserved session activity, direct-help routing, operator roadmap instructions and the existing recall while adding MEETING."
+    },
+    {
+      "scope": "After integrating HE61 window measurement tool",
+      "verdict": "FAIL",
+      "tests": 138,
+      "failures": 1,
+      "reason": "The inherited broad no-import assertion also rejected the new optional read-only trial measurement utility. This failure was inadvertently landed locally before it was acted on; no publication is attributed to that landing."
+    },
+    {
+      "scope": "Dependency check corrected to AST imports plus a limited measurement-reader exception",
+      "verdict": "PASS",
+      "advisor_tests": 138,
+      "window_table_tests": 4,
+      "evidence": "/tmp/legend-meeting-integrated-advisor-final.log",
+      "boundary": "Ordinary tools cannot import the Advisor; the optional trial measurement utility may reuse only runtime names, incomplete-run metadata and the existing task verdict reader."
     }
   ],
   "SESSION_LEARNING_REVIEW": {
