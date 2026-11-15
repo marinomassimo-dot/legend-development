@@ -1,0 +1,150 @@
+id	pmid	year	tier	relevance	pathway	receipt	pmc_in_ident	files_citing_any	files_citing_drug_repurposing	declared_fulltext_lines_in_drug_repurposing	declaring_files_first3	title
+P295	19936220	2009	B	MODERATE	P5 — metabolism / mitochondria / redox	complete_fulltext_read	True	17	3	1	disease-models/wwox/research/drug_repurposing/rescue_window_it6_20261029.md	Generation and characterization of mice carrying a conditional allele of the Wwox tumor suppressor gene
+P301	27121845	2016	B	MODERATE	unassigned — triage only	none	False	0	0	0		Novel mutations in WWOX, RARS2, and C10orf2 genes in consanguineous Arab families with intellectual disability
+P318	25649963	2015	B	MODERATE	oncology / tumor suppressor biology	partial_fulltext_read	True	37	30	15	disease-models/wwox/research/drug_repurposing/view/index.de.html;disease-models/wwox/research/drug_repurposing/view/index.en.html;disease-models/wwox/research/drug_repurposing/view/index.es.html	Loss of wwox expression in zebrafish embryos causes edema and alters Ca(2+) dynamics
+P362	25403906	2015	B	MODERATE	clinical spectrum / SCAR12	none	False	1	0	0		A novel whole exon deletion in WWOX gene causes early epilepsy, intellectual disability and optic atrophy
+P363	19500159	2009	B	MODERATE	P5 — metabolism / mitochondria / redox	complete_fulltext_read	False	33	3	0		A spontaneous mutation of the Wwox gene and audiogenic seizures in rats with lethal dwarfism and epilepsy
+P372	36498839	2022	B	MODERATE	P9 — immune / glia / inflammation	partial_fulltext_read	True	8	2	0		Zfra Inhibits the TRAPPC6AΔ-Initiated Pathway of Neurodegeneration
+P395	26355344	2015	B	MODERATE	P5 — metabolism / mitochondria / redox	complete_fulltext_read+partial_fulltext_read	True	8	3	0		A cascade of protein aggregation bombards mitochondria for neurodegeneration and apoptosis under WWOX deficien
+P221	20074932	2010	C	LOW	oncology / tumor suppressor biology	none	False	1	0	0		WWOX tumour suppressor gene polymorphisms and ovarian cancer pathology and prognosis
+P223	24330824	2013	C	LOW	P8 — bone / RUNX2 axis	none	True	0	0	0		Correlation of WWOX, RUNX2 and VEGFA protein expression in human osteosarcoma
+P224	19896763	2010	C	LOW	P8 — bone / RUNX2 axis	none	False	1	1	0		Deletion of the WWOX gene and frequent loss of its protein expression in human osteosarcoma
+P226	22226915	2012	C	LOW	oncology / tumor suppressor biology	none	False	1	0	0		A WWOX-binding molecule, transmembrane protein 207, is related to the invasiveness of gastric signet-ring cell
+P227	19352382	2009	C	LOW	oncology / tumor suppressor biology	none	True	0	0	0		Hypermethylation-mediated reduction of WWOX expression in intraductal papillary mucinous neoplasms of the panc
+P228	31966760	2017	C	LOW	oncology / tumor suppressor biology	none	True	0	0	0		Expression of ORAOV1, CD133 and WWOX correlate with metastasis and prognosis in gastric adenocarcinoma
+P229	27339895	2016	C	LOW	P5 — metabolism / mitochondria / redox	partial_fulltext_read	True	7	3	0		Role of WW Domain-containing Oxidoreductase WWOX in Driving T Cell Acute Lymphoblastic Leukemia Maturation
+P230	24299313	2014	C	LOW	oncology / tumor suppressor biology	none	False	0	0	0		Molecular alterations of the WWOX gene in nasopharyngeal carcinoma
+P231	29164763	2018	C	LOW	P5 — metabolism / mitochondria / redox	none	True	4	3	0		TMEM207 hinders the tumour suppressor function of WWOX in oral squamous cell carcinoma
+P232	20535528	2011	C	LOW	oncology / tumor suppressor biology	none	True	2	1	0		Molecular analysis of WWOX expression correlation with proliferation and apoptosis in glioblastoma multiforme
+P233	23381945	2013	C	LOW	P6 — DDR / genome stability	none	False	0	0	0		Wwox expression may predict benefit from adjuvant tamoxifen in randomized breast cancer patients
+P234	33536174	2021	C	LOW	animal model — pathway variable	none	True	0	0	0		Angiomotin Counteracts the Negative Regulatory Effect of Host WWOX on Viral PPxY-Mediated Egress
+P235	36336217	2022	C	LOW	P6 — DDR / genome stability	none	False	0	0	0		Exosomal miR-625-3p secreted by cancer-associated fibroblasts in colorectal cancer promotes EMT and chemothera
+P236	27190995	2016	C	LOW	oncology / tumor suppressor biology	none	True	0	0	0		WWOX CNV-67048 Functions as a Risk Factor for Epithelial Ovarian Cancer in Chinese Women by Negatively Interac
+P237	25789010	2015	C	LOW	P6 — DDR / genome stability	none	True	0	0	0		Ectopic expression of the WWOX gene suppresses stemness of human ovarian cancer stem cells
+P238	24938873	2014	C	LOW	P6 — DDR / genome stability	none	True	0	0	0		Diverse effect of WWOX overexpression in HT29 and SW480 colon cancer cell lines
+P239	31123603	2019	C	LOW	oncology / tumor suppressor biology	none	True	2	1	0		Strategies by which WWOX-deficient metastatic cancer cells utilize to survive via dodging, compromising, and c
+P240	14695174	2003	C	LOW	P5 — metabolism / mitochondria / redox	none	False	29	27	15	disease-models/wwox/research/drug_repurposing/view/index.de.html;disease-models/wwox/research/drug_repurposing/view/index.en.html;disease-models/wwox/research/drug_repurposing/view/index.es.html	An opposing view on WWOX protein function as a tumor suppressor
+P241	31933749	2019	C	LOW	P6 — DDR / genome stability	none	True	0	0	0		The correlation of the expressions of WWOX, LGR5 and vasohibin-1 in epithelial ovarian cancer and their clinic
+P243	24137446	2013	C	LOW	P6 — DDR / genome stability	none	True	0	0	0		Gene expression of WWOX, FHIT and p73 in acute lymphoblastic leukemia
+P245	10786676	2000	C	LOW	P5 — metabolism / mitochondria / redox	none	False	9	9	0		WWOX, a novel WW domain-containing protein mapping to human chromosome 16q23.3-24.1, a region frequently affec
+P246	25892250	2015	C	LOW	oncology / tumor suppressor biology	none	False	1	0	0		The role of WWOX tumor suppressor gene in the regulation of EMT process via regulation of CDH1-ZEB1-VIM expres
+P247	25502636	2014	C	LOW	oncology / tumor suppressor biology	none	False	2	2	1	disease-models/wwox/research/drug_repurposing/gsk3_eif2b_20261107/output/README.md	WWOX suppresses cell growth and induces cell apoptosis via inhibition of P38 nuclear translocation in cholangi
+P248	19465938	2009	C	LOW	oncology / tumor suppressor biology	none	False	14	8	1	disease-models/wwox/research/drug_repurposing/knowledge_contribution_trial_20261027/answer_b.md	Inhibition of the Wnt/beta-catenin pathway by the WWOX tumor suppressor protein
+P249	21332605	2011	C	LOW	oncology / tumor suppressor biology	none	False	0	0	0		Impact of WWOX alterations on p73, ΔNp73, p53, cell proliferation and DNA ploidy in salivary gland neoplasms
+P250	19950548	2009	C	LOW	oncology / tumor suppressor biology	none	False	0	0	0		[Effects of WWOX on ovarian cancer cell attachment in vitro]
+P251	21983861	2012	C	LOW	P6 — DDR / genome stability	none	False	2	0	0		Genetic alterations of the WWOX gene in breast cancer
+P252	26120275	2015	C	LOW	oncology / tumor suppressor biology	none	True	0	0	0		Expression of WW domain-containing oxidoreductase WWOX in pterygium
+P254	24473991	2014	C	LOW	P8 — bone / RUNX2 axis	none	False	0	0	0		New syngeneic inflammatory-related lung cancer metastatic model harboring double KRAS/WWOX alterations
+P255	31966369	2017	C	LOW	oncology / tumor suppressor biology	none	True	0	0	0		Exogenous WWOX enhances apoptosis and weakens metastasis in CNE2 nasopharyngeal carcinoma cells through the in
+P256	31456594	2019	C	LOW	oncology / tumor suppressor biology	none	True	1	0	0		Circular RNA CircMTO1 Inhibits Proliferation of Glioblastoma Cells via miR-92/WWOX Signaling Pathway
+P257	25627656	2015	C	LOW	oncology / tumor suppressor biology	none	True	0	0	0		Tyrosine phosphorylation of WW proteins
+P258	38282791	2024	C	LOW	oncology / tumor suppressor biology	none	True	0	0	0		LncRNA HOTAIRM1 Inhibits the Proliferation and Invasion of Lung Adenocarcinoma Cells via the miR-498/WWOX Axis
+P259	32132039	2020	C	LOW	oncology / tumor suppressor biology	none	False	0	0	0		miR-187* Enhances SiHa Cervical Cancer Cell Oncogenicity Via Suppression of WWOX
+P262	23618899	2013	C	LOW	P6 — DDR / genome stability	none	False	0	0	0		Expression of WWOX and FHIT is downregulated by exposure to arsenite in human uroepithelial cells
+P265	32101017	2020	C	LOW	P6 — DDR / genome stability	none	True	0	0	0		MiR-214 Mediates Cell Proliferation and Apoptosis of Nasopharyngeal Carcinoma Through Targeting Both WWOX and 
+P266	22213016	2013	C	LOW	P6 — DDR / genome stability	none	False	1	0	0		Decreased expression of WWOX in the development of esophageal squamous cell carcinoma
+P267	31056747	2019	C	LOW	oncology / tumor suppressor biology	none	False	2	0	0		Germline mutation and aberrant transcripts of WWOX in a syndrome with multiple primary tumors
+P269	15073846	2004	C	LOW	P6 — DDR / genome stability	none	False	0	0	0		The fragile genes FHIT and WWOX are inactivated coordinately in invasive breast carcinoma
+P270	26302329	2015	C	LOW	P5 — metabolism / mitochondria / redox	complete_fulltext_read+partial_fulltext_read	True	27	22	3	disease-models/wwox/research/drug_repurposing/fly_wwox_feasibility_it41_20261110/README.md;disease-models/wwox/research/drug_repurposing/modifiers_it12_p1b_20261031/usability_table.tsv;disease-models/wwox/research/drug_repurposing/recovery_it10_p23_20261031/paths_verdicts.tsv	Tumor Suppressor WWOX Contributes to the Elimination of Tumorigenic Cells in Drosophila melanogaster
+P271	18629536	2009	C	LOW	P6 — DDR / genome stability	none	True	0	0	0		Loss of WWOX expression in human extrahepatic cholangiocarcinoma
+P273	28769061	2017	C	LOW	P5 — metabolism / mitochondria / redox	none	True	0	0	0		PARTICLE triplexes cluster in the tumor suppressor WWOX and may extend throughout the human genome
+P274	25488911	2015	C	LOW	oncology / tumor suppressor biology	none	True	0	0	0		Strategies of oncogenic microbes to deal with WW domain-containing oxidoreductase
+P275	21466786	2011	C	LOW	oncology / tumor suppressor biology	none	False	0	0	0		Helicobacter pylori infection promotes methylation of WWOX gene in human gastric cancer
+P276	29662317	2018	C	LOW	animal model — pathway variable	none	True	2	1	0		Association between WWOX and the risk of malignant tumor, especially among Asians: evidence from a meta-analys
+P277	17909041	2007	C	LOW	oncology / tumor suppressor biology	abstract_only	False	4	4	0		Association of Wwox with ErbB4 in breast cancer
+P278	32764489	2020	C	LOW	oncology / tumor suppressor biology	partial_fulltext_read	True	12	6	0		Therapeutic Zfra4-10 or WWOX7-21 Peptide Induces Complex Formation of WWOX with Selective Protein Targets in O
+P279	18953870	2008	C	LOW	oncology / tumor suppressor biology	none	False	0	0	0		[Effects of WWOX gene transfection on cell growth of epithelial ovarian cancer]
+P280	15548692	2004	C	LOW	oncology / tumor suppressor biology	none	False	3	3	0		Physical and functional interactions between the Wwox tumor suppressor protein and the AP-2gamma transcription
+P281	17200365	2007	C	LOW	P6 — DDR / genome stability	none	False	1	0	0		Inhibition of breast cancer cell growth in vitro and in vivo: effect of restoration of Wwox expression
+P283	25612104	2015	C	LOW	oncology / tumor suppressor biology	partial_fulltext_read	True	3	2	0		Epigenetic and genetic alterations affect the WWOX gene in head and neck squamous cell carcinoma
+P285	19188760	2009	C	LOW	P6 — DDR / genome stability	none	False	0	0	0		Association between CpG island methylation of the WWOX gene and its expression in breast cancers
+P287	18620777	2008	C	LOW	P6 — DDR / genome stability	none	True	0	0	0		The JNK inhibitor SP600129 enhances apoptosis of HCC cells induced by the tumor suppressor WWOX
+P288	20942981	2010	C	LOW	P5 — metabolism / mitochondria / redox	complete_fulltext_read	True	1	0	0		WWOX gene is associated with HDL cholesterol and triglyceride levels
+P289	41141138	2025	C	LOW	P6 — DDR / genome stability	partial_fulltext_read	True	1	0	0		Intertwined Relationship of WWOX and RUNX2 Proteins as a Biomarker for Predicting Response and Survival in Pat
+P290	25703206	2015	C	LOW	P5 — metabolism / mitochondria / redox	none	True	4	2	0		Allostery mediates ligand binding to WWOX tumor suppressor via a conformational switch
+P291	33691672	2021	C	LOW	P5 — metabolism / mitochondria / redox	none	True	0	0	0		In vitro and in silico assessment of the effect of WWOX expression on invasiveness pathways associated with AP
+P292	14638866	2003	C	LOW	P6 — DDR / genome stability	none	False	0	0	0		Expression of FRA16D/WWOX and FRA3B/FHIT genes in hematopoietic malignancies
+P293	23197378	2013	C	LOW	P6 — DDR / genome stability	none	False	1	0	0		Genetic and epigenetic alterations of WWOX in the development of gastric cardia adenocarcinoma
+P296	24899407	2014	C	LOW	P5 — metabolism / mitochondria / redox	none	False	2	2	0		Upregulation of the putative oncogene COTE1 contributes to human hepatocarcinogenesis through modulation of WW
+P297	21892104	2011	C	LOW	P9 — immune / glia / inflammation	none	False	0	0	0		Functional and clinical characterization of the putative tumor suppressor WWOX in non-small cell lung cancer
+P299	24308844	2013	C	LOW	oncology / tumor suppressor biology	abstract_only+partial_fulltext_read	True	16	9	0		Molecular origin of the binding of WWOX tumor suppressor to ErbB4 receptor tyrosine kinase
+P302	28523049	2017	C	LOW	oncology / tumor suppressor biology	none	True	1	1	0		Expression of CD133, E-cadherin and WWOX in colorectal cancer and related analysis
+P304	25738261	2015	C	LOW	oncology / tumor suppressor biology	none	False	25	25	31	disease-models/wwox/research/drug_repurposing/ack1_it11_p24_20261031/README.md;disease-models/wwox/research/drug_repurposing/ack1_it11_p24_20261031/evidence_locators_it11_p24.tsv;disease-models/wwox/research/drug_repurposing/ack1_it11_p24_20261031/search_log_it11_p24.tsv	ACK1 promotes hepatocellular carcinoma progression via downregulating WWOX and activating AKT signaling
+P307	16061658	2005	C	LOW	P6 — DDR / genome stability	partial_fulltext_read+retrieved_not_read	False	9	7	1	disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/output/README.md	WW domain-containing proteins, WWOX and YAP, compete for interaction with ErbB-4 and modulate its transcriptio
+P311	28521426	2017	C	LOW	oncology / tumor suppressor biology	none	True	0	0	0		Exploring the mechanism of WWOX growth inhibitory effects on oral squamous cell carcinoma
+P313	30335523	2018	C	LOW	P6 — DDR / genome stability	none	True	0	0	0		The downregulation of WWOX induces epithelial-mesenchymal transition and enhances stemness and chemoresistance
+P314	24455756	2014	C	LOW	oncology / tumor suppressor biology	none	False	0	0	0		The correlation analysis of WWOX expression and cancer related genes in neuroblastoma- a real time RT-PCR stud
+P315	26902998	2016	C	LOW	animal model — pathway variable	none	True	0	0	0		The role of WWOX polymorphisms on COPD susceptibility and pulmonary function traits in Chinese: a case-control
+P316	22842668	2012	C	LOW	P6 — DDR / genome stability	partial_fulltext_read	False	1	0	0		Genetic alterations of WWOX in Wilms' tumor are involved in its carcinogenesis
+P317	11956080	2002	C	LOW	P6 — DDR / genome stability	none	False	1	1	0		Genetic alterations of the tumor suppressor gene WWOX in esophageal squamous cell carcinoma
+P319	22693020	2013	C	LOW	oncology / tumor suppressor biology	none	False	0	0	0		The polymorphisms and haplotypes of WWOX gene are associated with the risk of lung cancer in southern and east
+P320	24044959	2013	C	LOW	P9 — immune / glia / inflammation	none	False	0	0	0		Upregulation of tumor suppressor WWOX promotes immune response in glioma
+P321	21685375	2011	C	LOW	P6 — DDR / genome stability	none	True	1	1	0		Tumor suppressor genes FHIT and WWOX are deleted in primary effusion lymphoma (PEL) cell lines
+P322	23824713	2014	C	LOW	oncology / tumor suppressor biology	none	False	0	0	0		miR-134 induces oncogenicity and metastasis in head and neck carcinoma through targeting WWOX gene
+P323	34058790	2021	C	LOW	P6 — DDR / genome stability	none	False	6	6	2	disease-models/wwox/research/drug_repurposing/gsk3_eif2b_20261107/CONSUMER_NOTE.md;disease-models/wwox/research/drug_repurposing/gsk3_eif2b_20261107/output/README.md	Synergistic effect of toosendanin and regorafenib against cell proliferation and migration by regulating WWOX 
+P325	22615609	2010	C	LOW	P6 — DDR / genome stability	none	True	0	0	0		Primary WWOX phosphorylation and JNK activation during etoposide induces cytotoxicity in HEK293 cells
+P326	24969559	2014	C	LOW	oncology / tumor suppressor biology	none	False	0	0	0		SENP2 regulated the stability of β-catenin through WWOX in hepatocellular carcinoma cell
+P328	25678599	2015	C	LOW	oncology / tumor suppressor biology	none	False	14	13	0		The Tumor-Suppressor WWOX and HDAC3 Inhibit the Transcriptional Activity of the β-Catenin Coactivator BCL9-2 i
+P329	20401669	2011	C	LOW	P6 — DDR / genome stability	none	True	0	0	0		The prognostic significance of WWOX expression in patients with breast cancer and its association with the bas
+P330	19484134	2009	C	LOW	oncology / tumor suppressor biology	complete_fulltext_read+partial_fulltext_read	True	8	1	1	disease-models/wwox/research/drug_repurposing/pv_inv15_20261107/verify/audit_p.md	Complement C1q activates tumor suppressor WWOX to induce apoptosis in prostate cancer cells
+P331	33191002	2021	C	LOW	oncology / tumor suppressor biology	none	False	1	0	0		Virus-encoded miR-155 ortholog in Marek's disease virus promotes cell proliferation via suppressing apoptosis 
+P332	11896615	2002	C	LOW	P6 — DDR / genome stability	none	False	2	0	0		Alternative transcripts of the candidate tumor suppressor gene, WWOX, are expressed at high levels in human br
+P334	23459853	2013	C	LOW	oncology / tumor suppressor biology	none	True	0	0	0		Tumor Suppressor WWOX and p53 Alterations and Drug Resistance in Glioblastomas
+P335	20016169	2009	C	LOW	P6 — DDR / genome stability	none	False	0	0	0		Comparative mapping and genomic annotation of the bovine oncosuppressor gene WWOX
+P336	22736928	2012	C	LOW	oncology / tumor suppressor biology	none	True	0	0	0		WWOX induces apoptosis and inhibits proliferation of human hepatoma cell line SMMC-7721
+P338	22317867	2012	C	LOW	P6 — DDR / genome stability	none	False	0	0	0		Aberrant expression of WWOX protein in epithelial ovarian cancer: a clinicopathologic and immunohistochemical 
+P339	28695683	2018	C	LOW	P6 — DDR / genome stability	none	False	0	0	0		Combinations of single nucleotide polymorphisms WWOX-rs13338697, GALNT14-rs9679162 and rs6025211 effectively s
+P340	20060354	2010	C	LOW	P6 — DDR / genome stability	none	False	0	0	0		Study of FHIT and WWOX expression in mucoepidermoid carcinoma and adenoid cystic carcinoma of salivary gland
+P341	27655721	2016	C	LOW	oncology / tumor suppressor biology	complete_fulltext_read	True	5	3	0		Functional genetic variant in the Kozak sequence of WW domain-containing oxidoreductase (WWOX) gene is associa
+P342	26929649	2016	C	LOW	P8 — bone / RUNX2 axis	none	True	0	0	0		Association of polymorphisms in WWOX gene with risk and outcome of osteosarcoma in a sample of the young Chine
+P344	16007179	2005	C	LOW	P6 — DDR / genome stability	abstract_only	False	23	19	6	disease-models/wwox/research/drug_repurposing/fly_wwox_feasibility_it41_20261110/README.md;disease-models/wwox/research/drug_repurposing/fly_wwox_feasibility_it41_20261110/consumer_delta.md;disease-models/wwox/research/drug_repurposing/modifiers_it12_p1b_20261031/usability_table.tsv	FRA16D common chromosomal fragile site oxido-reductase (FOR/WWOX) protects against the effects of ionizing rad
+P345	29152092	2017	C	LOW	P6 — DDR / genome stability	none	True	0	0	0		The long non-coding RNA PARTICLE is associated with WWOX and the absence of FRA16D breakage in osteosarcoma pa
+P347	26607080	2015	C	LOW	oncology / tumor suppressor biology	none	False	0	0	0		[Expressions of WWOX and CD133 in colorectal cancer and their clinical significance]
+P348	41124647	2025	C	LOW	P6 — DDR / genome stability	partial_fulltext_read+queried_not_full_read	True	79	55	51	disease-models/wwox/research/drug_repurposing/ack1_it11_p24_20261031/evidence_locators_it11_p24.tsv;disease-models/wwox/research/drug_repurposing/ack1_it11_p24_20261031/step_table_it11_p24.tsv;disease-models/wwox/research/drug_repurposing/generation_it22_p1_20261103/inputs_it22/seeds.tsv	Genetic and Functional Evidence Links Germline Biallelic Inactivating Variants in WWOX to Histological Mixed-T
+P349	22071891	2012	C	LOW	P6 — DDR / genome stability	none	True	5	0	0		A multi-exon deletion within WWOX is associated with a 46,XY disorder of sex development
+P350	19957554	2009	C	LOW	oncology / tumor suppressor biology	none	False	0	0	0		[Effect of WWOX gene on the attachment and adhesion of ovarian cancer cells]
+P351	25295115	2014	C	LOW	oncology / tumor suppressor biology	none	True	0	0	0		Alternating expression levels of WWOX tumor suppressor and cancer-related genes in patients with bladder cance
+P352	18273838	2008	C	LOW	clinical spectrum / WWOX-DEE	none	False	1	0	0		Homozygous deletions may be markers of nearby heterozygous mutations: The complex deletion at FRA16D in the HC
+P353	28426730	2017	C	LOW	oncology / tumor suppressor biology	complete_fulltext_read	True	4	2	0		Functional genetic variant of WW domain-containing oxidoreductase (WWOX) gene is associated with hepatocellula
+P354	20510001	2010	C	LOW	oncology / tumor suppressor biology	none	False	0	0	0		[The relationship between FHIT and WWOX expression and clinicopathological features in hepatocellular carcinom
+P355	30242144	2018	C	LOW	oncology / tumor suppressor biology	none	True	0	0	0		Expression of B Cell-Specific Moloney Murine Leukemia Virus Integration Site 1 (BMI-1) and WW Domain-Containin
+P357	19366691	2009	C	LOW	oncology / tumor suppressor biology	partial_fulltext_read	True	27	26	15	disease-models/wwox/research/drug_repurposing/view/index.de.html;disease-models/wwox/research/drug_repurposing/view/index.en.html;disease-models/wwox/research/drug_repurposing/view/index.es.html	Transforming growth factor beta1 signaling via interaction with cell surface Hyal-2 and recruitment of WWOX/WO
+P360	22479346	2012	C	LOW	P5 — metabolism / mitochondria / redox	partial_fulltext_read	True	3	2	0		Identification of IGF1, SLC4A4, WWOX, and SFMBT1 as hypertension susceptibility genes in Han Chinese with a ge
+P361	25891642	2015	C	LOW	P6 — DDR / genome stability	none	True	1	1	0		Effect of the WWOX gene on the regulation of the cell cycle and apoptosis in human ovarian cancer stem cells
+P364	20367991	2010	C	LOW	oncology / tumor suppressor biology	none	False	0	0	0		Reversing effect of exogenous WWOX gene expression on malignant phenotype of primary cultured lung carcinoma c
+P366	24648952	2013	C	LOW	oncology / tumor suppressor biology	none	True	0	0	0		Methylation status of WWOX gene promoter CpG islands in epithelial ovarian cancer and its clinical significanc
+P368	25720522	2015	C	LOW	P6 — DDR / genome stability	none	False	1	0	0		Aberrant gene promoter methylation of p16, FHIT, CRBP1, WWOX, and DLC-1 in Epstein-Barr virus-associated gastr
+P369	25710931	2015	C	LOW	animal model — pathway variable	none	True	0	0	0		Versatile communication strategies among tandem WW domain repeats
+P370	16288044	2005	C	LOW	P6 — DDR / genome stability	complete_fulltext_read	False	38	35	25	disease-models/wwox/research/drug_repurposing/ack1_it11_p24_20261031/README.md;disease-models/wwox/research/drug_repurposing/ack1_it11_p24_20261031/design_it11_p24.md;disease-models/wwox/research/drug_repurposing/ack1_it11_p24_20261031/evidence_locators_it11_p24.tsv	Activated tyrosine kinase Ack1 promotes prostate tumorigenesis: role of Ack1 in polyubiquitination of tumor su
+P371	15674328	2005	C	LOW	P6 — DDR / genome stability	none	False	0	0	0		Fragile genes as biomarkers: epigenetic control of WWOX and FHIT in lung, breast and bladder cancer
+P373	22555346	2013	C	LOW	oncology / tumor suppressor biology	none	False	0	0	0		WWOX protein expression varies among RCC histotypes and downregulation of WWOX protein correlates with less-fa
+P374	23765596	2013	C	LOW	P5 — metabolism / mitochondria / redox	none	False	5	0	0		Common chromosomal fragile site FRA16D tumor suppressor WWOX gene expression and metabolic reprograming in cel
+P375	26910372	2016	C	LOW	oncology / tumor suppressor biology	none	True	0	0	0		Genetic association study identifies a functional CNV in the WWOX gene contributes to the risk of intracranial
+P376	25662954	2015	C	LOW	P5 — metabolism / mitochondria / redox	none	True	2	0	0		Structural insights into the functional versatility of WW domain-containing oxidoreductase tumor suppressor
+P377	17140807	2007	C	LOW	P6 — DDR / genome stability	none	False	0	0	0		Large common fragile site genes and cancer
+P379	25708809	2015	C	LOW	oncology / tumor suppressor biology	partial_fulltext_read	True	2	0	0		MicroRNA-153 promotes Wnt/β-catenin activation in hepatocellular carcinoma through suppression of WWOX
+P380	17609426	2007	C	LOW	oncology / tumor suppressor biology	none	False	1	1	0		Gene mapping and expression analysis of 16q loss of heterozygosity identifies WWOX and CYLD as being important
+P381	24585490	2014	C	LOW	P6 — DDR / genome stability	none	False	0	0	0		Association study of a functional copy number variation in the WWOX gene with risk of gliomas among Chinese pe
+P382	22869583	2012	C	LOW	unassigned — triage only	none	False	2	1	0		Frequent PVT1 rearrangement and novel chimeric genes PVT1-NBEA and PVT1-WWOX occur in multiple myeloma with 8q
+P384	23339925	2013	C	LOW	P6 — DDR / genome stability	none	False	0	0	0		A functional copy number variation in the WWOX gene is associated with lung cancer risk in Chinese
+P386	22248280	2012	C	LOW	P6 — DDR / genome stability	none	False	0	0	0		Cigarette smoking extract causes hypermethylation and inactivation of WWOX gene in T-24 human bladder cancer c
+P387	20556583	2010	C	LOW	oncology / tumor suppressor biology	none	False	0	0	0		Cloning of WWOX gene and its growth-inhibiting effects on ovarian cancer cells
+P388	15798093	2005	C	LOW	clinical spectrum / SCAR12	none	False	0	0	0		Components of DNA damage checkpoint pathway regulate UV exposure-dependent alterations of gene expression of F
+P389	16378185	2006	C	LOW	P6 — DDR / genome stability	none	False	0	0	0		Common fragile genes and digestive tract cancers
+P390	16242840	2006	C	LOW	P6 — DDR / genome stability	none	False	2	0	0		Common chromosomal fragile sites and cancer: focus on FRA16D
+P391	23534718	2013	C	LOW	P6 — DDR / genome stability	none	False	0	0	0		Expression of fragile histidine triad (FHIT) and WW-domain oxidoreductase gene (WWOX) in nasopharyngeal carcin
+P392	30307120	2018	C	LOW	oncology / tumor suppressor biology	none	True	0	0	0		Inhibition of miR-24 suppresses malignancy of human non-small cell lung cancer cells by targeting WWOX in vitr
+P393	28724435	2017	C	LOW	P6 — DDR / genome stability	none	True	0	0	0		WW domain-binding protein 2: an adaptor protein closely linked to the development of breast cancer
+P394	22717556	2013	C	LOW	P5 — metabolism / mitochondria / redox	none	False	0	0	0		Bone metastatic process of breast cancer involves methylation state affecting E-cadherin expression through TA
+P396	23566416	2013	C	LOW	P5 — metabolism / mitochondria / redox	none	False	1	1	0		Hypoxia inducible factor-1 is activated by transcriptional co-activator with PDZ-binding motif (TAZ) versus WW
+P398	21520031	2011	C	LOW	oncology / tumor suppressor biology	none	False	1	0	0		Evidences that the polymorphism Pro-282-Ala within the tumor suppressor gene WWOX is a new risk factor for dif
+P399	16116962	2005	C	LOW	oncology / tumor suppressor biology	none	False	0	0	0		Deletion and mutation of WWOX exons 6-8 in human non-small cell lung cancer
+P400	19130459	2009	C	LOW	P6 — DDR / genome stability	none	True	0	0	0		Fragile histidine triad protein, WW domain-containing oxidoreductase protein Wwox, and activator protein 2gamm
+P022	31075076	2019	n	LOW	none on-axis — BLBC/TNBC oncology, ER si	complete_fulltext_read	True	6	2	0		Decoding the link between WWOX and p53 in aggressive breast cancer
+P027	38182577	2024	n	LOW	P8 — bone / RUNX2 axis	complete_fulltext_read+partial_fulltext_read	True	40	32	18	disease-models/wwox/research/drug_repurposing/nb1_myc_20261107/output/evidence.tsv;disease-models/wwox/research/drug_repurposing/view/index.de.html;disease-models/wwox/research/drug_repurposing/view/index.en.html	WWOX promotes osteosarcoma development via upregulation of Myc
+P113	38499540	2024	n	LOW	P6 — DDR / genome stability	complete_fulltext_read+partial_fulltext_read	True	13	2	0		Unveiling the relationship between WWOX and BRCA1 in mammary tumorigenicity and in DNA repair pathway selectio
+P123	27308504	2015	n	LOW	P6 — DDR / genome stability	complete_fulltext_read	True	7	3	0		WWOX guards genome stability by activating ATM
+P225	38407561	2024	B	MODERATE-HIGH	clinical spectrum / WWOX-DEE	abstract_only	False	23	13	1	disease-models/wwox/research/drug_repurposing/batch_sci_20261105/verify/audit_A1/audit_A1.tsv	Identification of a novel splice-site WWOX variant with paternal uniparental isodisomy in a patient with infan
+P253	30746283	2018	B	MODERATE-HIGH	clinical spectrum / WWOX-DEE	complete_fulltext_read	True	3	3	0		Novel Homozygous Mutation in the WWOX Gene Causes Seizures and Global Developmental Delay: Report and Review
+P309	31669195	2019	B	MODERATE-HIGH	clinical spectrum / WWOX-DEE	none	False	2	1	0		Novel compound heterozygous mutations in the WWOX gene cause early infantile epileptic encephalopathy
+P327	32037574	2020	B	MODERATE-HIGH	clinical spectrum / WWOX-DEE	none	False	2	0	0		Early onset epileptic encephalopathy caused by novel compound heterozygous mutation of WWOX gene
