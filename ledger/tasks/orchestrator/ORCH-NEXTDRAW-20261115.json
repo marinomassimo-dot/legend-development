@@ -28,5 +28,6 @@
     "cells_and_groups": "no cell of the four units carries a statement the receipts qualify: U21's d-APV n (5 slices, 3 animals) and carbenoxolone 87 percent match the source; U20, U23, U27 carry no chloride-pipette, amplitude or frequency statement from this paper; U23 states E_GABA as a proposed discriminating measurement, consistent with the paper not measuring it; groups G3 (U20), G2b (U21) unchanged",
     "decision": "DECLINE the snapshot: the four units differ only by two receipt counts on a source whose consequences did not reach their cells, limits or groups; not a real change of assessment. The snapshot flag will persist until someone takes one for another reason; no dated Update on the units needed.",
     "limits": "one reader (IT); the cards' text was searched by keyword for the qualified statements, not read in full; U23 and U27 are not in the 17-row selection table, so their ranking rows were not read"
-  }
+  },
+  "VIEW_TEST_RERUN_20261115": "test_repurposing_view.py on the tree at 870d4789c (the V14 commit): Ran 225 tests in 1595.203s, OK, exit 0 (first run had stopped at my 1500 s timeout, exit 124, with no failure; the rerun used a 7000 s limit). The suite takes about 27 minutes."
 }
