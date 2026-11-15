@@ -707,6 +707,10 @@
   "src": "en",
   "text": "NRF2 tone and redox state"
  },
+ "5503cedd4034": {
+  "src": "en",
+  "text": "The glutamate-release modulator active on K2P channels also blocks sodium channels and glutamate release at lower concentrations and needs about 100 micromolar for the K2P effect; its activation of one family member is transient; some potencies rest on a review, not a primary paper; selectivity of the research activator against other channels is not fully reached. [IT 2026-11-15] The one primary EC50 reached for that modulator (139.4 micromolar) is a native whole-cell current in mouse sympathetic neurons, carried by TREK-1 and/or TREK-2 (TRAAK not excluded; the single-channel patches point mainly to TREK-2, 12 of 16 TREK-like patches), not a cloned-channel value, and the link from the review row to that paper is an inference; the K2P tool values read are on cloned channels at one pH; one cell-level report (abstract only), in cancer cells adapted to various pH, describes a voltage effect of the modulator that is most likely through pH-sensitive K+ channels such as TREK-1, which is not a channel-resolved pH series."
+ },
  "5561cde28ac2": {
   "src": "en",
   "text": "AAV9 gene addition of human WWOX (gene therapy; see the gene-addition cards)"
@@ -758,10 +762,6 @@
  "5cd356f84317": {
   "src": "en",
   "text": "position unchanged from IT20 (rank 5): Position unchanged from IT20. The ten-row ceiling does not displace a row that carries a risk flag or human clinical reports in favour of a conditional probe (the rule stated in the curation block of the context), so this row stays at rank 5 and the two new IT21 conditional probes sit at rank 6, below the line. New IT21 input: the inositol-monophosphatase route to the lithium effect is DISFAVOURED_BY_SIGN_PRECEDENT (an analogy from the lithium-pilocarpine model, not a measurement in the Wwox assay; see what the generator rules out). That result is not what supports this row's concern that the effect is not specific to WWOX loss: the concern comes from the +/+ arm of Cheng 2020 Figure 7d, where lithium suppresses the seizure stage as in the null. Cheng 2020 also ran a pilocarpine model in Wwox mice, so the objection that the two provocations differ is testable in the same system; the inositol arm of that proposal is folded into this row's next test."
- },
- "5cf87de70e15": {
-  "src": "en",
-  "text": "That the lost current, if any, is Ba2+-sensitive and of a family an opener reaches: TREK and TRAAK are blocked only at millimolar Ba2+, and the one Kir2 opener reached is Kir2.1-only with no neuronal data; capacitance by genotype is unmeasured. [SCI49] Direct-mechanism Kir2.1 activators acting through a channel cysteine (Cys311) exist in recombinant cells (three marketed drugs, named in the package) and none is tested in neurons; one of them spares the Kir2.1+2.2 and 2.1+2.3 heteromers and is also a Na+ channel blocker; two are at abstract depth; the claimed opener listed here rests on one laboratory in hypoxic CHO cells; direction of benefit unresolved. [IT 2026-11-15] Ba2+ step: no primary Ba2+ concentration-response in the 50-200 micromolar window was found for TASK-1, TASK-3 or THIK-1 (TASK-1 was tested only from 0.3 to 10 millimolar); the family-level statement above is unchanged."
  },
  "5d29c19f1ea2": {
   "src": "en",
@@ -978,6 +978,10 @@
  "6fb9853d33bc": {
   "src": "en",
   "text": "That the burst needs NMDA-receptor activity does not show a gain of receptor function."
+ },
+ "70727009821c": {
+  "src": "en",
+  "text": "That the lost current, if any, is Ba2+-sensitive and of a family an opener reaches: TREK and TRAAK are blocked only at millimolar Ba2+, and the one Kir2 opener reached is Kir2.1-only with no neuronal data; capacitance by genotype is unmeasured. [SCI49] Direct-mechanism Kir2.1 activators acting through a channel cysteine (Cys311) exist in recombinant cells (three marketed drugs, named in the package) and none is tested in neurons; one of them spares the Kir2.1+2.2 and 2.1+2.3 heteromers and is also a Na+ channel blocker; two are at abstract depth; the claimed opener listed here rests on one laboratory in hypoxic CHO cells; direction of benefit unresolved. [IT 2026-11-15] Ba2+ step: no primary Ba2+ concentration-response in the 50-200 micromolar window was found for TASK-1, TASK-3 or THIK-1 (TASK-1 was tested only from 0.3 to 10 millimolar); the family-level statement above is unchanged; the nearest concentration-response is a native TASK-like current in rat dorsal vagal neurones (IC50 465 micromolar, abstract only)."
  },
  "714571f82c43": {
   "src": "it",
@@ -1634,10 +1638,6 @@
  "b607075b73e6": {
   "src": "en",
   "text": "A TREK-1 (and TASK-1) pool closed by a lower interstitial pH is part of the Wwox Rin and rest pair"
- },
- "b6219c404c6e": {
-  "src": "en",
-  "text": "The glutamate-release modulator active on K2P channels also blocks sodium channels and glutamate release at lower concentrations and needs about 100 micromolar for the K2P effect; its activation of one family member is transient; some potencies rest on a review, not a primary paper; selectivity of the research activator against other channels is not fully reached. [IT 2026-11-15] The one primary EC50 reached for that modulator (139.4 micromolar) is a native current in mouse sympathetic neurons, attributed mainly to TREK-2, not a cloned TREK-1 or TRAAK value, and the link from the review row to that paper is an inference; the K2P tools are single-pH measurements, none tested at a second pH."
  },
  "b642851c0b57": {
   "src": "it",

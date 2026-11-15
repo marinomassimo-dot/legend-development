@@ -7,14 +7,14 @@
  "OBJECTIVE": "Second reader for IT's V14 edit of 2026-11-15 (K2P row, compound_view.tsv, counter text; one producer delegate) as proposed by the ADV presidio, accepted as my HE57 pick: statement 1 (139.4 uM riluzole EC50 in mouse SCG neurons, mainly TREK-2) from the open-access original, statement 2 (no Ba2+ concentration-response 50-200 uM for TASK-1/TASK-3/THIK-1) by two routes for one channel, statement 3 (K2P tools single-pH); stop at any interstitial; no contact-address service; no spend.",
  "START_UTC": "2026-11-15T17:00:00Z",
  "BASELINE": "development/main 89be91c34; worktree .claude/worktrees/v14, branch task/v14-second-reader.",
- "MANDATE_STATE": "IN_PROGRESS",
+ "MANDATE_STATE": "DONE",
  "CURRENT_PACKAGE": {
-  "id": "read-written",
-  "state": "README, verbatim (8 of 8 quotes found), access, consumer_delta written; landing next",
+  "id": "closed",
+  "state": "landed 8b6e44c17 (2026-11-15T17:01:07Z); delivered to IT, ADV accepted with a narrowing of item 3",
   "delegate_active": "none",
   "updated": "2026-11-15"
  },
- "RESUME": "Folder second_reader_v14_k2p_sci_20261115/ complete. Remaining: quick checks, task_close, push (ls-remote before retry), message IT and ADV.",
+ "RESUME": "Closed.",
  "DECISIONS_TAKEN": [
   "2026-11-15: no blind verifier (one reader; statement 3 is abstract-level and stated so); no interstitial met (two PMC article pages, plain GET, no contact parameter); publisher pages for the originals of TASK-3 and THIK-1 not attempted; no spend; nothing edited in compound_view.tsv, ranking, cards or frozen packages. Verdict: statement 1 holds with a wording refinement (whole-cell TREK-1 and/or TREK-2; TREK-2 weight from single-channel patches), statement 2 holds, statement 3 too strong."
  ],
