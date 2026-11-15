@@ -1,0 +1,29 @@
+gene	cell_class	n_samples	mean_fpkm	values	samples	input_sha256_first
+Hdac4	OPC (P17)	2	2.82	2.62;3.03	GSM1269907_OPC1.xls.gz;GSM1269908_OPC2.xls.gz	d32fe75dd3c2ab57d375f67389a44135b2af846b9bd8bd725e9334bb25f272d7
+Hdac4	astrocytes (P7)	2	3.99	4.17;3.80	GSM1269903_Astrocyte1.xls.gz;GSM1269904_Astrocyte2.xls.gz	5f6ec837b135b637b4096c5412df501fddf4b6d89e27da80081071a52a2f9000
+Hdac4	endothelium	2	2.07	2.25;1.88	GSM1269915_Endothelial1.xls.gz;GSM1269916_Endothelial2.xls.gz	e1ce328368cb24c9a694e915290f0842111083dd86e1fb4121eaf6120c39c5bf
+Hdac4	microglia	2	1.26	1.21;1.32	GSM1269913_Microglia1.xls.gz;GSM1269914_Microglia2.xls.gz	6e8e5e720c77d85122d74e64ab9c34b99c1e987dcec3e9b430a7a39412624bb6
+Hdac4	myelinating oligodendrocytes (P17)	2	0.89	0.60;1.18	GSM1269911_MO1.xls.gz;GSM1269912_MO2.xls.gz	4952adfa049a65d51b3f5bf8c181b1a1af1add6b69f7285ea92b849007bc90fa
+Hdac4	neurons (P7)	2	4.02	4.28;3.76	GSM1269905_Neuron1.xls.gz;GSM1269906_Neuron2.xls.gz	59247a2f936974660955dd605afd195765d87ef7b56bcf70c5d02ca129efe0e0
+Hdac4	newly formed oligodendrocytes (P17)	2	1.33	1.30;1.36	GSM1269909_NFO1.xls.gz;GSM1269910_NFO2.xls.gz	b801ee52444560c901c895a6ddf8b0a6614c5a95ad46a5b8282b063b98ea0de9
+Hdac5	OPC (P17)	2	18.58	13.21;23.94	GSM1269907_OPC1.xls.gz;GSM1269908_OPC2.xls.gz	d32fe75dd3c2ab57d375f67389a44135b2af846b9bd8bd725e9334bb25f272d7
+Hdac5	astrocytes (P7)	2	17.76	16.07;19.45	GSM1269903_Astrocyte1.xls.gz;GSM1269904_Astrocyte2.xls.gz	5f6ec837b135b637b4096c5412df501fddf4b6d89e27da80081071a52a2f9000
+Hdac5	endothelium	2	13.58	13.80;13.35	GSM1269915_Endothelial1.xls.gz;GSM1269916_Endothelial2.xls.gz	e1ce328368cb24c9a694e915290f0842111083dd86e1fb4121eaf6120c39c5bf
+Hdac5	microglia	2	39.50	34.98;44.01	GSM1269913_Microglia1.xls.gz;GSM1269914_Microglia2.xls.gz	6e8e5e720c77d85122d74e64ab9c34b99c1e987dcec3e9b430a7a39412624bb6
+Hdac5	myelinating oligodendrocytes (P17)	2	39.26	39.66;38.85	GSM1269911_MO1.xls.gz;GSM1269912_MO2.xls.gz	4952adfa049a65d51b3f5bf8c181b1a1af1add6b69f7285ea92b849007bc90fa
+Hdac5	neurons (P7)	2	50.58	43.26;57.89	GSM1269905_Neuron1.xls.gz;GSM1269906_Neuron2.xls.gz	59247a2f936974660955dd605afd195765d87ef7b56bcf70c5d02ca129efe0e0
+Hdac5	newly formed oligodendrocytes (P17)	2	29.69	28.18;31.20	GSM1269909_NFO1.xls.gz;GSM1269910_NFO2.xls.gz	b801ee52444560c901c895a6ddf8b0a6614c5a95ad46a5b8282b063b98ea0de9
+Hdac7	OPC (P17)	2	4.47	4.40;4.54	GSM1269907_OPC1.xls.gz;GSM1269908_OPC2.xls.gz	d32fe75dd3c2ab57d375f67389a44135b2af846b9bd8bd725e9334bb25f272d7
+Hdac7	astrocytes (P7)	2	14.14	14.98;13.31	GSM1269903_Astrocyte1.xls.gz;GSM1269904_Astrocyte2.xls.gz	5f6ec837b135b637b4096c5412df501fddf4b6d89e27da80081071a52a2f9000
+Hdac7	endothelium	2	24.94	26.54;23.34	GSM1269915_Endothelial1.xls.gz;GSM1269916_Endothelial2.xls.gz	e1ce328368cb24c9a694e915290f0842111083dd86e1fb4121eaf6120c39c5bf
+Hdac7	microglia	2	1.19	0.91;1.46	GSM1269913_Microglia1.xls.gz;GSM1269914_Microglia2.xls.gz	6e8e5e720c77d85122d74e64ab9c34b99c1e987dcec3e9b430a7a39412624bb6
+Hdac7	myelinating oligodendrocytes (P17)	2	1.89	1.30;2.48	GSM1269911_MO1.xls.gz;GSM1269912_MO2.xls.gz	4952adfa049a65d51b3f5bf8c181b1a1af1add6b69f7285ea92b849007bc90fa
+Hdac7	neurons (P7)	2	13.65	12.40;14.90	GSM1269905_Neuron1.xls.gz;GSM1269906_Neuron2.xls.gz	59247a2f936974660955dd605afd195765d87ef7b56bcf70c5d02ca129efe0e0
+Hdac7	newly formed oligodendrocytes (P17)	2	3.15	3.39;2.92	GSM1269909_NFO1.xls.gz;GSM1269910_NFO2.xls.gz	b801ee52444560c901c895a6ddf8b0a6614c5a95ad46a5b8282b063b98ea0de9
+Hdac9	OPC (P17)	2	2.35	2.71;2.00	GSM1269907_OPC1.xls.gz;GSM1269908_OPC2.xls.gz	d32fe75dd3c2ab57d375f67389a44135b2af846b9bd8bd725e9334bb25f272d7
+Hdac9	astrocytes (P7)	2	4.42	3.71;5.12	GSM1269903_Astrocyte1.xls.gz;GSM1269904_Astrocyte2.xls.gz	5f6ec837b135b637b4096c5412df501fddf4b6d89e27da80081071a52a2f9000
+Hdac9	endothelium	2	1.11	1.15;1.07	GSM1269915_Endothelial1.xls.gz;GSM1269916_Endothelial2.xls.gz	e1ce328368cb24c9a694e915290f0842111083dd86e1fb4121eaf6120c39c5bf
+Hdac9	microglia	2	1.39	1.83;0.94	GSM1269913_Microglia1.xls.gz;GSM1269914_Microglia2.xls.gz	6e8e5e720c77d85122d74e64ab9c34b99c1e987dcec3e9b430a7a39412624bb6
+Hdac9	myelinating oligodendrocytes (P17)	2	1.71	1.54;1.87	GSM1269911_MO1.xls.gz;GSM1269912_MO2.xls.gz	4952adfa049a65d51b3f5bf8c181b1a1af1add6b69f7285ea92b849007bc90fa
+Hdac9	neurons (P7)	2	3.56	2.92;4.20	GSM1269905_Neuron1.xls.gz;GSM1269906_Neuron2.xls.gz	59247a2f936974660955dd605afd195765d87ef7b56bcf70c5d02ca129efe0e0
+Hdac9	newly formed oligodendrocytes (P17)	2	1.72	2.35;1.09	GSM1269909_NFO1.xls.gz;GSM1269910_NFO2.xls.gz	b801ee52444560c901c895a6ddf8b0a6614c5a95ad46a5b8282b063b98ea0de9

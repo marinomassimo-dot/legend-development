@@ -6,7 +6,7 @@ Actor: `plan` (Harness Engineering); runtime: Codex; profile: HARNESS.
 
 The operator requested a periodic team round table to surface pending work, priority-ordered
 TO-DOs and prospects across ADV, Orchestrator, Science, Harness and Mirror. The permanent
-practice lives once in [cross-session transport section 14](../../../../../framework/protocols/cross_session_transport.md#14--meeting).
+practice lives once in [cross-session transport section 13](../../../../../framework/protocols/cross_session_transport.md#13--meeting).
 The shared router, persistent-session bootstrap, Advisor procedure/definition and tool index
 point to it. The operator's authorisation is in the existing roadmap instruction log.
 

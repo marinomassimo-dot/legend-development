@@ -37,7 +37,7 @@
         {
           "step": "Reuse the existing recall, task records and transport; implement due/event handling and permanent practice",
           "status": "DONE",
-          "evidence": "Existing Advisor CLI/tick/recall, shared protocol section14, bootstrap, roadmap and source index; no new scheduler/model/service."
+          "evidence": "Existing Advisor CLI/tick/recall, shared protocol section13, bootstrap, roadmap and source index; no new scheduler/model/service."
         },
         {
           "step": "Verify cadence, event retention, deduplication, missing participants and real suspension controls",

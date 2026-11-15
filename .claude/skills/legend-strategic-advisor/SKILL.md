@@ -151,7 +151,7 @@ scheduling, the mandate watch and the sessions' work are untouched. Remove the c
 ## MEETING
 
 **MEETING is part of the existing recall**, with its one rule in
-[cross-session transport §14](../../../framework/protocols/cross_session_transport.md#14--meeting).
+[cross-session transport §13](../../../framework/protocols/cross_session_transport.md#13--meeting).
 Inspect `tick.meeting` independently of the ordinary evaluation verdict. When actionable,
 the hosting session opens/resumes `strategic_advisor.py meeting --campaign <DIR> --open`,
 asks the live relevant participants for their prioritised deltas via SendMessage, and makes
@@ -272,3 +272,7 @@ The evaluation consumes its own advisory portfolio patches; they are not new evi
 another evaluation. If the shared portfolio changed during the read, keep the old observation
 digest so the external change remains a signal. This protects continuity from self-generated
 busy work while preserving real recipient results and external inputs.
+
+## Monitor and help (operator, 2026-11-15, permanent)
+
+The rule lives once, in cross-session transport section 12 ("Monitor and help; do not only direct"). Here: at every recall and every delivery read `tick`'s `activity` block (session status, minutes quiet, idle share, minutes since the last commit on `main`) with the open records and their awaited events, not the verdict alone. An idle share above half without a written reason is a prompt to send. Help a stuck session by finding what blocks it and supplying or routing the input; correct your own premise first; never take over the recipient's method. Address a role only after `mandate_watch.py route --to <role>` resolves it; for an unresolved role (Mirror today) say so and keep a conditional request in the portfolio.
