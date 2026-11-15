@@ -1,0 +1,12 @@
+# Consumer delta: RP-004 reading of PMID 18620777 (SCI, 2026-11-15)
+
+Non-canonical. Proposals for the integrator; nothing here was applied, and no ranking, need, candidate state or frozen package was edited. Not medical advice.
+
+| # | Consumer | Proposal | Standing |
+|---|---|---|---|
+| 1 | `ORCH-RP004-LENS-20261115` case (IT scores the case predictions) | Use the verdict "contrast carried with limits" and the seven scores in `prediction_scores.tsv` (F1, F2, F3, F4, F6 HELD; F5, F7 NOT DETERMINABLE; none MISSED). The case's unresolved premise ("whether the HCC pair is a WWOX effect at all") stays unresolved: the body adds the two within-line contrasts but not a baseline-normalised or second-line one. The paper does not test P-a or P-b. | proposal |
+| 2 | `mechanism_lens_it55_20261115/README.md` item 4 competing explanations | Add one: (v) the inhibitor adds to an apoptosis that WWOX already causes, with the baseline difference not separated (paper's own wording "enhanced WWOX-induced apoptosis"). Items (i) line identity, (ii) off-target and (iii) WWOX-JNK1 interaction stand; the paper's p53 difference between the lines (SNU449 codon 161 Ala to Thr, SNU387 truncated at codon 164) belongs under (i). | proposal |
+| 3 | Naming | The paper writes SP600129 throughout; its reference 66 is the SP600125 paper. A dated correction line wherever the case says "SP600129 [sic]" can cite reference 66 as the paper's own support for the "[sic]". | proposal |
+| 4 | Full-text receipt ledger | `receipts/FTR-20261115-18620777-01.json` (`partial_fulltext_read`, figures captions only), dry-run OK, not appended by SCI; the integrator appends it in event-ID order. After it P287 has a receipt; whether it then leaves the RP-008 census count is IT's check. | proposal |
+| 5 | The rejecting experiment (design only) | The reading supports keeping its two controls (a second chemotype and a genetic JNK control) and adds a third: a readout that separates inhibitor-specific cell death from the baseline of the WWOX-null against rescued line (inhibitor against vehicle within each genotype, with the interaction tested). | proposal |
+| 6 | Figures | A look at the five figure panels (n, error bars, vehicle against inhibitor by line, concentrations for SNU449) could move F5 and F7. It is five more requests to a service whose rule here is one request per item; it needs a decision by someone other than me. | open |
