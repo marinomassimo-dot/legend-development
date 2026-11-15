@@ -64,3 +64,15 @@ The corrected AST check keeps ordinary tools independent and limits the measurem
 to its existing read-only metadata/runtime/task-verdict readers. The integrated 138 Advisor
 tests and four window-measurement tests then passed. This is a targeted integration repair,
 not a claim that the interrupted full inventory completed.
+
+## First native round observed
+
+At **15:21:59 UTC (16:21:59 Europe/Rome)** the existing ADV host opened
+`advisor_pilot_20261113/meetings/MEETING-20261115T152159Z-jaq44mq3.md` on the Harness
+deployment signal. At 15:22:19,15:22:22 and15:22:26 it sent separate requests to the actual
+IT, SCI and HE named sessions, asking for pending priorities, blockers, prospects and
+corrections of its direction while explicitly preserving ongoing work. The three successful
+transport receipts are in the task record. Opening and inbox delivery are observed; replies,
+closure and useful decisions require their own evidence. No operator MEETING prompt was
+pasted into ADV. The shared publication metadata was also regenerated after the concurrent
+receipts: all69 scientific unit objects were unchanged; only ranking summary metadata moved.

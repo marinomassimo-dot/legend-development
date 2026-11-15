@@ -100,5 +100,35 @@
     "lesson": "Alignment must preserve the distinction between a source-derived index, an actual actor update and delivered work. Periodic cadence is separate from whether a strategic model evaluation is needed.",
     "capability_outcome": "MEETING added through existing coordination paths; no external capability or installation required.",
     "remaining_measurement": "Observe a native round table and downstream acceptance/consumption; assess its useful decisions and total cost, not meeting count."
+  },
+  "NATIVE_OBSERVATION": {
+    "opened_utc": "2026-11-15T15:21:59Z",
+    "record": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261115T152159Z-jaq44mq3.md",
+    "trigger": "Harness deployment request registered15:19:32Z; actual ADV hosting session opened it without an operator MEETING prompt to ADV",
+    "messages_sent": [
+      {
+        "to": "IT Orchestrator",
+        "utc": "2026-11-15T15:22:19Z",
+        "receipt": "b7941015-2e51-46e9-b96a-f81c54f5c346"
+      },
+      {
+        "to": "SCI",
+        "utc": "2026-11-15T15:22:22Z",
+        "receipt": "4d81afdf-c06c-471a-82f2-acf9f10a9641"
+      },
+      {
+        "to": "HE",
+        "utc": "2026-11-15T15:22:26Z",
+        "receipt": "7ad630d9-c29b-482d-93ee-e493e5ec8c93"
+      }
+    ],
+    "boundary": "Messages accepted by the recipients inboxes; replies/acceptance, closure and decision usefulness are not inferred."
+  },
+  "PUBLICATION_METADATA": {
+    "all_69_unit_records_unchanged": true,
+    "changed_ranking_keys": [
+      "summary"
+    ],
+    "evidence": "/tmp/legend-meeting-current-regeneration.json"
   }
 }
