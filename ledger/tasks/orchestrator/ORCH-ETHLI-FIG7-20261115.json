@@ -10,7 +10,7 @@
  "MANDATE_STATE": "IN_PROGRESS",
  "CURRENT_PACKAGE": {
   "id": "extraction-done-landing",
-  "state": "extraction, validation, analysis, README and consumer delta written; battery and landing next",
+  "state": "battery evidence recorded (one inherited red suite); merged main; landing",
   "delegate_active": "none",
   "updated": "2026-11-15"
  },
@@ -18,7 +18,8 @@
  "DECISIONS_TAKEN": [
   "2026-11-15: accepted the ADV prompt: the operator's permanent continuity line (2026-11-14) is on development/main; the task is read-only on held files at zero spend. Prior work checked before extracting: IT6 and the cards read Fig 7b by eye ('graphical reading', entry 27 of the manifest); verify_it15_qb covers Fig 7c only; the pilot (2026-09-07) and analysis/locator_contract_live_test.md lines 375-395 hold the by-eye panel map and the n.s. marks.",
   "2026-11-15: the lithium panels are vector paths in the article PDF (exact coordinates; 726 means lie within 0.024 of the k/N lattice for the printed Ns); the ethosuximide panels are raster only, read from two files (PDF embedded image, publisher PNG); the same raster code run on the PNG's 7d panels against the exact vector values shows a low bias up to 0.15 stage where markers overlap at 0.5-minute spacing (stated in the README).",
-  "2026-11-15: no blind verifier (my call; the weak point is the interpretation that between-animal differences persist across minutes, marked INFERENZA); no ranking, card, packet or frozen package edited; consumer_delta.md holds six proposals, none applied."
+  "2026-11-15: no blind verifier (my call; the weak point is the interpretation that between-animal differences persist across minutes, marked INFERENZA); no ranking, card, packet or frozen package edited; consumer_delta.md holds six proposals, none applied.",
+  "2026-11-15: battery on a90e266397 (run 20261115-135422-32a41570) ended FAIL on one suite of 251: ranking_it8_p9_20261029/test_ranking_it8.py (Reproducible), ranking.json stamps receipt_ledger_lines 1960 while the ledger has 1962 in that clone and 1969 on development/main today; the same stamp is on development/main, so the failure is inherited, not caused by this package (which touches no ranking file). I did not regenerate ranking.json (assignment: no edit of ranking). Main then moved (IT44/IT45/HE61); merged it; quick checks on the merged tree PASS (legend_lint exit 0, growth_anchors, fulltext_receipts verify 1969, tool_routing, section_references, public_release_gate exit 0). The FULL battery was NOT rerun on the merged SHA. IT (owner of the ranking) is told to regenerate."
  ],
  "DELEGATIONS": [],
  "ESCALATIONS": [],
