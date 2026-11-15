@@ -20,7 +20,8 @@
   "2026-11-15: scored F1-F7 from the body against the frozen text, wording untouched (checked by string match against prediction_frozen.md): F1 F2 F3 F4 F6 HELD, F5 F7 NOT DETERMINABLE, none MISSED. Verdict: contrast carried with limits.",
   "2026-11-15: receipt FTR-20261115-18620777-01 prepared with depth partial_fulltext_read (figures captions only); dry-run OK; not appended by SCI (the integrator appends in event-ID order). No blind verifier, called by me; the quotes are checked mechanically (26 of 26 found).",
   "2026-11-15: noted for IT that reference 66 of the paper is the SP600125 paper, which supports the brief's '[sic]'.",
-  "2026-11-15: IT decided NOT to read the five figure panels now (verdict would not change; revival if a later comparison needs the inhibitor effect size or the inhibitor-alone-by-status comparison). IT appends FTR-20261115-18620777-01 after the landing SHA and scores P-a and P-b."
+  "2026-11-15: IT decided NOT to read the five figure panels now (verdict would not change; revival if a later comparison needs the inhibitor effect size or the inhibitor-alone-by-status comparison). IT appends FTR-20261115-18620777-01 after the landing SHA and scores P-a and P-b.",
+  "2026-11-15: battery 20261115-094445-13f0685d (PASS WITH SKIPS, 251 targets, 12 skipped) is evidence for 566250ce8f. development/main then moved again (scout_daily, strategic_advisor, skills, CLAUDE.md, cross_session_transport; none overlap this package); merged, and legend_lint (WARN), growth_anchors (PASS), receipts verify (OK), routing, section references and the release gate (PASS, 0 blocks) were run on the merged tree; the full battery was NOT rerun on the merged SHA."
  ],
  "DELEGATIONS": [],
  "ESCALATIONS": [],
