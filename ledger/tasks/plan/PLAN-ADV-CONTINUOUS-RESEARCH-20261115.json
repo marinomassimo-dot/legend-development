@@ -11,10 +11,10 @@
   "SESSION_PROFILE": "HARNESS",
   "OBJECTIVE": "Correct the permanent Strategic Advisor behaviour and live state so that continuous, value-driven research follows the operator roadmap without waiting for new operator prompts, nonexistent deliveries or a distant trial report. Verify a real next research handoff and preserve scientific method, resource limits, autonomy of recipients and lean removable tooling.",
   "AUTHORISATION": "Operator instruction in this session, 2026-11-15: direct implementation by ACTOR_ID plan, including the live correction and useful next work; no further operator response is a dependency. Operator follow-up in this same session: permanent addressee-independent radar judgment, producer handoff and cross-actor relevance-based notification; no fresh prompt required.",
-  "CURRENT_STATE": "OPEN",
-  "MANDATE_STATE": "OPEN",
+  "CURRENT_STATE": "COMPLETE",
+  "MANDATE_STATE": "COMPLETE",
   "AUTHORISED_QUEUE_20261115": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_REPAIR": {
       "order": 1,
       "steps": [
@@ -34,8 +34,9 @@
           "evidence": "Canonical section 12 and shared router, agent/procedure, original-report discovery and existing producer handoffs; 84 scout and 115 Advisor tests PASS; 13 section and 6 skill-package checks PASS. No new scheduler, mailbox or approval."
         },
         {
-          "step": "Land and publish the correction with required release verification",
-          "status": "IN_PROGRESS"
+          "step": "Land the permanent repair and complete release validation and publication in the closing execution",
+          "status": "DONE",
+          "evidence": "Implementation landedfa5aa0eda after targeted checks and full frozen-code inventory. Closing candidate uses safe_push --expect-sha; exact publication receipt, remote readback and CI are observed in the closing execution. Complete inventory verdict remains scoped to f6e9abbfea; later radar adapters have115Advisor/84scout tests and final release CI."
         },
         {
           "step": "Observe the existing ADV recall and a useful autonomous next handoff, then remove owned temporary artifacts",
@@ -128,8 +129,10 @@
     "live_repair": "2026-11-15T08:13:34Z: supported tick superseded P11 in actual host state, preserving original outcome; EVALUATE pending, no model launched",
     "new_targeted_tests": "115 Advisor tests PASS after radar source discovery; 84 scout tests PASS; final code delta after f6e9abbfea is the report-source pattern and the producer handoff, with their regressions",
     "final_prompt_tests": "114 Advisor tests PASS after the source-parity clarification; agent definition 1179 words (1385 baseline); section references PASS",
-    "final_targeted": "114 Advisor tests PASS; 74 ranking tests PASS; i18n check PASS; package check PASS; link and documented-command checks PASS",
-    "agent_words": 1222
+    "final_targeted": "115 Advisor tests,84scout,13section references,6skill packages,7tool routing,5link targets,3documented commands PASS;74ranking tests PASS before radar-only delta;current ranking check PASS;receipts1958OK;growthPASS;LINT WARN withoutBLOCK",
+    "agent_words": 1222,
+    "final_publication_receipt": "/tmp/legend-adv-continuity-publication.json (created by the closing execution; exact SHA and remote readback; no self-referential commit hash asserted in this record)",
+    "remaining_validation_at_record_commit": "Exact closing publication and its CI are observed outside the commit; no final-SHA CI success claimed here before it occurs."
   },
   "SELF_DIAGNOSIS": {
     "verdict": "PASS with declared pre-existing scientific reading gaps; no full-text scientific read claimed by this Harness task",
@@ -170,13 +173,34 @@
     "permanent_clarification": "fulltext_read_receipt.md Persistence and canonical promotion now routes existing publication-boundary derived metadata checks; no new gate or service"
   },
   "CHECKPOINT": {
-    "last_verified_result": "Full frozen-code inventory PASS WITH SKIPS; two actual native cycles, accepted scientific case; permanent radar/relay correction and targeted checks PASS",
-    "first_incomplete_work": "Publish final exact commit with release checks, verify its CI, remove own worktree; no operator reply is a dependency"
+    "last_verified_result": "Permanent source/runtime/state correction landed;two actual native recalls;mechanism-first task accepted and predictions frozen;radar routing source/template regressions PASS",
+    "first_incomplete_work": "None in implementation; closing execution performs exact publication/CI observation and removes the owned task worktree. All ongoing scientific work remains with its owners; no operator response is a dependency."
   },
   "RADAR_FOLLOW_UP": {
     "observed_failure": "The host07:32UTC message filed the supplied report because it addressed PLAN; ownership is not disposition or delivery",
     "repair": "Route useful signals canonical rule, shared CLAUDE router, agent and procedure, discover complete original report files, explicit existing producer handoffs",
     "validation": "84scout and115Advisor tests PASS; source-discovery fixtures include a Plan addressee and an unaddressed report; output leaves leads TO_TRIAGE and empty feed empty",
-    "limits": "No operator-side external automation claimed modified; no model-compliance claim from fixture tests; no duplicate assignment for already audited report"
-  }
+    "limits": "No operator-side external automation claimed modified; no model-compliance claim from fixture tests; no duplicate assignment for already audited report",
+    "live_cache": "Existing05:20radar re-rendered with the new handoff; original JSON SHA-256 unchanged52df4af17ec0632f814db750ec05d5c9ba6a4cb11b374eef3dde7163d32a7aed; no new lookup or evidence"
+  },
+  "PERSISTENT_STANDING_STATE_REPAIR": {
+    "recipient_record": "ledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-20261114.json",
+    "fields": [
+      {
+        "objective": "OBJ_7_STANDING",
+        "step_index": 0
+      },
+      {
+        "objective": "OBJ_9_ANTICIPATION",
+        "step_index": 4
+      },
+      {
+        "objective": "OBJ_10_TRIAL_24H",
+        "step_index": 1
+      }
+    ],
+    "reason": "Three standing BLOCKED steps still waited on an operator line, old deliveries, the report window and removed recall3382bb86. Canonical continuous duty now represented as IN_PROGRESS; genuine waits remain possible; history intact. This corrects recovery input as well as prompt text.",
+    "readback": "mandate_continuity status --json: CONTINUE,stop_allowed false, nextOBJ_7_STANDING,0BLOCKED standing steps;report timing remains separate"
+  },
+  "COMPLETION_SCOPE": "Implementation and observed autonomous research handoff complete. Future scientific benefit and multi-day reliability are not claimed; whole-portfolio waits still require real constraints. Final CI is recorded by the external closing receipt, not invented in this commit."
 }

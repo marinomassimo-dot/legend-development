@@ -148,6 +148,14 @@ handoff that leaves the lead unadopted. They do not prove future model complianc
 follow-through and scientific benefit remain observations to collect. Operator-side external
 radar automations are not claimed modified by these repository changes.
 
+The persistent ADV mandate also held three obsolete standing `BLOCKED` fields (OBJ_7,
+OBJ_9 and the activity step of OBJ_10), referring to an operator line, delivered packages and
+the removed recall. These are corrected to the existing continuous responsibility `IN_PROGRESS`,
+with the canonical rule and prior state retained in history. The timed report stays a separate
+step. This keeps recovery input consistent with instructions; it does not require busy looping
+or remove genuine supported waits. The already saved 05:20 radar was re-rendered with the new
+handoff; the original JSON digest and run time were preserved, so no fresh scouting is claimed.
+
 ## Verification scope
 
 The complete local inventory on `f6e9abbfea8f44323c49c338a05a3e1e327400b2` finished at
