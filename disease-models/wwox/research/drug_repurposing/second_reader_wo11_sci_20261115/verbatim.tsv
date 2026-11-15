@@ -1,0 +1,16 @@
+id	locator	quote
+Q1	Results, Fig. 3 text	During normal postnatal development, 3 μM ifenprodil reduced the NMDA-receptor-mediated current by 53% (C.I. 43–61%) at P6–P8 (control, n = 9; ifenprodil, n = 5) but only by 14% (C.I. 0–34%) at P13–P15 (control, n = 15; ifenprodil, n = 10)
+Q2	Results, Fig. 3 text	ifenprodil still significantly reduced the NMDA-receptor-mediated current by 49% (C.I. 24–71%; control, n = 7; ifenprodil, n = 6)
+Q3	Results, P26-P33	the estimated ifenprodil-sensitive current was only 26% in P26–P33 whisker-deprived mice (control, n = 8; ifenprodil, n = 6)
+Q4	Methods, interval	The observed means and the empirical 2.5 and 97.5 percentiles are reported
+Q5	Methods, drug protocol	slices were incubated for at least 40 min in artificial cerebrospinal fluid with the NR2B subunit-selective antagonist ifenprodil (3 μM; Sigma) in the holding chamber before cells were patched and recorded
+Q6	Methods, drug protocol	Ifenprodil also was added to the superfusate during recording.
+Q7	Methods, bath	2 mM MgSO 4
+Q8	Methods, bath	All recordings were made in the presence of 5 μM bicuculline methiodide
+Q9	Methods, A/N	The amplitude of the slower NMDA-receptor-mediated current was measured at 50 ms after stimulation
+Q10	Methods, A/N	dividing the peak AMPA-receptor-mediated current measured at -60 mV by the amplitude of NMDA-receptor-mediated current measured at 50 ms at a holding potential of +40 mV
+Q11	Methods, pipette	140 mM CsCl, 0.2 mM EGTA, 10 mM Hepes, 2 mM ATP-Mg, 0.3 mM GTP, 5 mM QX-314
+Q12	Methods, temperature	at room temperature
+Q13	Fig. 3 legend	Currents are scaled to the same peak amplitude AMPA current for comparison.
+Q14	Fig. 3 legend	Percent ifenprodil-sensitive current (mean ± C.I.) in P6–P8, whisker-intact P13–P15, and whisker-deprived P13–P15 mice.
+Q15	Discussion	From P7 and P14 whisker-deprived animals, more than half of the total NMDA-receptor-mediated response was blocked by ifenprodil, an NR2B subunit-selective antagonist, compared with a significantly lower proportion at P14 in whisker-intact animals.

@@ -1,0 +1,25 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-WO11-SECONDREAD-20261115",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "Self-selected second read of the WO-11 number (Mierau 2004, PMC524435), written by IT in c2859e5c3; proposed in the SCI reply to the 2026-11-15T21:35:25Z MEETING (single-reader landing without a second reader)",
+ "START_UTC": "2026-11-15T21:50:00Z",
+ "BASELINE": "development/main 93907087c; worktree .claude/worktrees/wo11-sr, branch task/wo11-second-read",
+ "MANDATE_STATE": "DONE",
+ "CURRENT_PACKAGE": "closed in the landing commit",
+ "RESUME": "none; if IT answers, record how the three wording points were applied or declined",
+ "DECISIONS_TAKEN": [
+  "2026-11-15: took the second read without an assignment, named to ADV in the MEETING reply; stop rule was a challenge page or small body (not met)",
+  "2026-11-15: access slip recorded: browser-style User-Agent on one GET; page served, content unaffected; not repeated"
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "VERIFICATION_EVIDENCE": [
+  "15/15 quotes found in output/verify_output.txt",
+  "quick checks on the branch: legend_lint (no new findings), tool routing OK, section references OK, growth_anchors PASS, receipts verify OK (1970), public_release_gate exit 0; full battery not run (note-only package)"
+ ]
+}
