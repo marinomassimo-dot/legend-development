@@ -1,0 +1,32 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-PRESIDIO004B-005-20261115",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "PRESIDIO-004 part B (operator-directed, carried out by the ADV presidio, relayed by legend-development-39): the independent reference mapping of the 15 blank-log2fc rows of signature_it23_20261103/composition_class.tsv, built BEFORE HE's trial output, then compared row by row with it; and PRESIDIO-005 (queued behind it): a short sourced table of the discriminating observations that separate a soluble signal from a composition difference and from cell contact in the INV-06 X1 design, from held files only. Perimeter: offline, zero spend, no edit of committed files, rankings, needs, candidates or frozen packages; a dated folder per part and a consumer delta for IT. Authority: the assignments of 2026-11-15 (assignments/PRESIDIO-004.md part B, PRESIDIO-005.md), which leave the moment and any decline or supersession to me.",
+ "START_UTC": "2026-11-15T07:20:00Z",
+ "BASELINE": "local main cda299783 (development/main same at fetch); worktree .claude/worktrees/p004b, branch task/presidio004b.",
+ "MANDATE_STATE": "IN_PROGRESS",
+ "CURRENT_PACKAGE": {
+  "id": "part-B-reference",
+  "state": "reference mapping built and committed (cc39da185) before any HE output existed on main; comparison waits for HE's trial folder; PRESIDIO-005 next",
+  "delegate_active": "none",
+  "updated": "2026-11-15"
+ },
+ "RESUME": "Part B comparison: when HE's trial folder is on main, read ONLY then, compare row by row with mapping_reference.tsv, write comparison_with_he_trial.md. PRESIDIO-005: note + consumer delta from held files. Then verify_run battery on the landing SHA waited by PID, record evidence, task_close, safe_push, ls-remote, message ADV, IT and HE separately; remove the worktree.",
+ "DECISIONS_TAKEN": [
+  "2026-11-15: accepted both assignments; part B first because it must precede HE's output. At build time main held no HE trial folder (listing of the drug_repurposing directory only; no HE file opened). All 15 rows resolve uniquely via ENSG, cross-checked via previous symbol and Entrez id; commit cc39da185 carries the time.",
+  "2026-11-15: no blind verifier and no delegate (assignments say none required; the comparator is the independence)."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "VERIFICATION_EVIDENCE": [],
+ "TRIAL_24H_OBSERVATIONS": {
+  "window": "2026-11-14T15:29:29Z to 2026-11-15T15:29:29Z, observation only, requested by the ADV presidio",
+  "delegates_and_blind_checkers": "none",
+  "events": []
+ }
+}
