@@ -1,0 +1,8 @@
+id	source_file	statement	quote
+Q1	PMC1665531.txt	KD at 0 mV in 100 mM K+ with n	In 100 m m K +, the K D at 0 mV for Ba 2+ was 36 ± 10 m m (n = 6)
+Q2	PMC1665531.txt	KD0 is an extrapolation	The K D at 0 mV (K D0) could not be determined experimentally because there were no currents at the equilibrium potential for K + (0 mV in 100 m m K + solution). Therefore, eqn (2) was again used to estimate this value for each oocyte.
+Q3	PMC1665531.txt	concentrations tested and solution pH	BaCl 2 or CsCl was added to 100 m m K + solution in concentrations between 0.3 and 10 m m.
+Q4	PMC1665531.txt	pH 8 recording solution	adjusted to pH 8 with KOH
+Q5	PMC1665531.txt	voltage dependence, binding depth	Ba 2+ binds approximately 60% of the way across the membrane electric field
+Q6	PMC1665531.txt	temperature	Experiments were performed at room temperature (22–24°C)
+Q7	PMC1665531.txt	voltage-dependent blockade	Blockade by Ba 2+ and Cs + was voltage-dependent, indicating that both ions block within the pore.

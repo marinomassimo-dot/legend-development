@@ -1,0 +1,4 @@
+attempt	target	what_came_back	decision	sha256
+one plain GET, generic client, no contact parameter	PMC1665531 (O'Connell 2005, TASK1 Ba2+)	HTTP 200, 164,304 bytes, an article	read	2fd6c039d3340c74e172c15dda671d9eae25ec2494e90bfd7349c273878b79a9 (saved under files/fulltext/k2p_second_reader_20261115/, gitignored)
+one plain GET, same client	PMC3077598 (Streit 2011, A1899)	HTTP 200 but a 166-character page titled "Checking your browser - reCAPTCHA"	STOP (no retry, no other route used)	de8a6fa10c020d05c73808b2340054cc533cb9f955d34f79719d5c193591e943
+one plain GET, same client	PMC9970648 (Kim 2023, carotid body TASK)	HTTP 200 but the same reCAPTCHA page	STOP (no retry, no other route used)	7dc74bd0134a003a3404c9fb37e65f4ccb180182cd4b8cafd2a238b82e40e3a1
