@@ -103,5 +103,12 @@
     "full_inventory_candidate": "9506e1727887b8fa8920485a2f544fe75a22da30",
     "full_inventory_log": "/tmp/legend-adv-continuity-battery.log",
     "full_inventory_state": "RUNNING"
+  },
+  "SELF_DIAGNOSIS": {
+    "verdict": "PASS with declared pre-existing scientific reading gaps; no full-text scientific read claimed by this Harness task",
+    "executed": "session_self_eval.py --workspace . --disease wwox exits 0; fulltext_receipts verify OK on1957 events; growth_anchors PASS; LINT WARN without BLOCK",
+    "capability_gap": "Repeated systemic instruction remained text-only while an old incomplete outcome still scheduled a distant wait. The fix belongs in tick, current-state context and live portfolio fields, not another approval step.",
+    "micro_upgrade": "Numeric assessment recency, current recipient record facts, legacy outcome supersession, smaller strategic definition and source-backed coverage planning",
+    "dream": "Known-but-unused operational relation: newest-hit/default-filter absence is not complete literature coverage; RP-008 now consumes the distinction. No biological lead or literature novelty asserted."
   }
 }
