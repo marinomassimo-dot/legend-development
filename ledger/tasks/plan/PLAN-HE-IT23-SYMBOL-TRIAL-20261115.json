@@ -10,10 +10,10 @@
  "OBJECTIVE": "PRESIDIO-004 part A (operator-directed 2026-11-15, roadmap seat dated line, ADV commit 6529d4831): an offline, reversible trial of the IT23 gene-symbol lookup in a NEW dated folder. Committed files and the IT23 package are untouched; deleting the folder undoes it. For all 834 rows keep the original symbol, the ENSG and every unresolved or ambiguous conversion as such; before/after table of direction and QD/QF membership for the 15 default-zero rows; the existing LINCS responses are kept and only queries whose membership changed are listed; no live query, no install, no download, no external request. Disposition rules are IT's (KEEP a verifiable conversion, DISCARD an ambiguous one, INCONCLUSIVE on the benefit until the comparison exists). SCI builds part B independently and compares afterwards; neither side adapts to the other. My 2026-11-14 answer stands for committed files: this trial regenerates nothing.",
  "worktree": ".claude/worktrees/hrk24",
  "branch": "task/hrk24",
- "CURRENT_STATE": "IN_PROGRESS",
+ "CURRENT_STATE": "COMPLETE",
  "CHECKPOINT": {
-  "last_verified_result": "OBJ_1 landed e16c42b70, gate PASS; waiting for SCI comparison and IT disposition (not mine)",
-  "first_incomplete_work": "OBJ_2_SCOUT_AUDIT"
+  "last_verified_result": "OBJ_1 landed e16c42b70 (gate PASS), SCI comparison 15 of 15 agree; OBJ_2 audit written; IT disposition is not mine",
+  "first_incomplete_work": "none"
  },
  "TAKEN_IN_CHARGE": {
   "utc": "2026-11-15T07:33:58Z",
@@ -41,7 +41,7 @@
      "step": "Deliver to SCI (comparison), IT (disposition) and ADV; record cost (tool calls, wall time)",
      "status": "DONE",
      "owner": "plan",
-     "evidence": "landed e16c42b70 (gate PASS); SCI told with the path (part B reference cc39da185 predates the output by about 5 minutes, verified in git, content not opened); IT told, disposition is IT's"
+     "evidence": "landed e16c42b70 (gate PASS); SCI told with the path (part B reference cc39da185 predates the output by about 5 minutes, verified in git, content not opened); IT told, disposition is IT's; SCI's comparison (read after landing, committed on its branch, lands with its battery): 15 of 15 rows agree on authors' symbol, ENSG, direction and log2FC, no disagreement, two alias-only ambiguities flagged that neither route uses; rho, flags and query membership are beyond part B and unchecked by SCI except CCN2 rho -0.009; both sides used the same HGNC release and authors' data"
     }
    ],
    "cost": {
@@ -57,21 +57,25 @@
    "steps": [
     {
      "step": "Coverage first: does LEGEND already hold a competing-explanations comparison (conditional proposals competing_explanations and expected_result_by_explanation, discovery-method diverge_hypotheses, hypothesis-forge generation)?",
-     "status": "TODO",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "radar_inputs_he52_20261114/operator_scout_report_20261115_audit_he.md: the principle is covered at generation and proposal time (forge, discovery method, competing_explanations and expected_result_by_explanation); not covered: mutual exclusivity/exhaustiveness, an unknown-mechanism slot, and a record of which rival a result favoured"
     },
     {
      "step": "Check the two primary sources and the licence by reading only (no install)",
-     "status": "TODO",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "both papers exist and the abstract numbers match; Skill2Query README declares MIT, execution verifier not implemented, needs an OpenAI key; paper body and code not read"
     },
     {
      "step": "Verdict per item with a stated limit; the four other replays are not audited here",
-     "status": "TODO",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "Contrastive Discovery: MONITOR, replay by a Scientist only if a slot is free, no harness change; Skill2Query: WATCH, no defect demonstrated; four other replays not audited"
     }
    ]
   }
  },
- "MANDATE_STATE": "OPEN"
+ "MANDATE_STATE": "COMPLETE",
+ "cost_note": "OBJ_1 cost is in AUTHORISED_QUEUE_20261115.OBJ_1_TRIAL.cost; OBJ_2 added about 8 tool calls (reads, two searches, three page fetches)"
 }
