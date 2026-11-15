@@ -1,0 +1,89 @@
+{
+  "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+  "TASK_ID": "PLAN-MEETING-20261115",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+  "RUNTIME": "Codex",
+  "SESSION_PROFILE": "HARNESS",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-11-15",
+  "OBJECTIVE": "Implement a lightweight permanent MEETING alignment pattern: six-hour recall through the existing Advisor clock, meaningful event requests, asynchronous participant updates and actionable strategic/operational follow-through without quorum, approval gates or interruption of ongoing research.",
+  "AUTHORISATION": "Operator instruction in this session, 2026-11-15: improve the raw MEETING idea and implement directly as Harness Engineering PLAN.",
+  "CURRENT_STATE": "IN_PROGRESS",
+  "MANDATE_STATE": "OPEN",
+  "DECISIONS_TAKEN": [
+    {
+      "decision": "Reuse the hourly recall for six-hour and meaningful-event alignment; host makes the round table asynchronously",
+      "reason": "Avoid a second schedule, compulsory model context or quorum while making participant input and follow-through inspectable.",
+      "reversibility": "meeting_enabled false in the existing CONTINUOUS.json; ordinary research and evaluation unchanged."
+    }
+  ],
+  "DEFAULTS_TAKEN": [
+    {
+      "condition": "Codex has no native Claude SendMessage or CronCreate capability",
+      "default": "Land the permanent implementation and observe the existing live host recall; do not inject transcripts or duplicate a session.",
+      "why_safe": "Uses the existing supported transport/recovery path and keeps real delivery observable."
+    }
+  ],
+  "STOP_LOG": [],
+  "SCIENTIFIC_DELTA": "NONE; a coordination pattern does not promote scientific evidence, candidates or ranking.",
+  "AUTHORISED_QUEUE_20261115": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_MEETING": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Reuse the existing recall, task records and transport; implement due/event handling and permanent practice",
+          "status": "DONE",
+          "evidence": "Existing Advisor CLI/tick/recall, shared protocol section13, bootstrap, roadmap and source index; no new scheduler/model/service."
+        },
+        {
+          "step": "Verify cadence, event retention, deduplication, missing participants and real suspension controls",
+          "status": "DONE",
+          "evidence": "136 Advisor tests PASS;13 section/5links/6skill/7routing/3documented/11release-surface PASS;LINT WARN noBLOCK."
+        },
+        {
+          "step": "Publish verified changes and observe a real native meeting handoff; close and clean owned worktree",
+          "status": "IN_PROGRESS"
+        }
+      ]
+    }
+  },
+  "VALIDATION_ATTEMPTS": [
+    {
+      "scope": "First targeted Advisor run",
+      "verdict": "FAIL",
+      "tests": 134,
+      "failures": 3,
+      "reason": "Inherited exact two-command recall text assertion; the new meeting command makes three. All nine initial meeting controls passed."
+    },
+    {
+      "scope": "Advisor suite after checking actual same-campaign command routing and two additional controls",
+      "verdict": "PASS",
+      "tests": 136,
+      "log": "/tmp/legend-meeting-advisor-tests-final.log"
+    },
+    {
+      "scope": "Frozen a8b7b66961bab83c4430f53e150101f576279064 complete inventory",
+      "verdict": "INTERRUPTED_WITHOUT_VERDICT",
+      "started_targets": 56,
+      "completed_green_targets": 55,
+      "evidence": "/tmp/legend-meeting-battery.json"
+    },
+    {
+      "scope": "Integration of concurrent HE60 permanent monitoring and direct-help work",
+      "verdict": "PASS",
+      "advisor_tests": 138,
+      "section_reference_tests": 13,
+      "evidence": "/tmp/legend-meeting-merged-advisor.log",
+      "note": "Preserved session activity, direct-help routing, operator roadmap instructions and the existing recall while adding MEETING."
+    }
+  ],
+  "SESSION_LEARNING_REVIEW": {
+    "lesson": "Alignment must preserve the distinction between a source-derived index, an actual actor update and delivered work. Periodic cadence is separate from whether a strategic model evaluation is needed.",
+    "capability_outcome": "MEETING added through existing coordination paths; no external capability or installation required.",
+    "remaining_measurement": "Observe a native round table and downstream acceptance/consumption; assess its useful decisions and total cost, not meeting count."
+  }
+}

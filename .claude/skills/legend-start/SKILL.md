@@ -28,6 +28,9 @@ Paths are relative to the repo root.
    including completion of the authorised objective and partial-delivery semantics. Reconcile
    an existing mandate with `mandate_continuity.py status --task <TASK_ID>`; a bounded delegate
    follows its dispatch scope rather than inventing a second parent mandate.
+   Persistent participants also follow [MEETING](../../../framework/protocols/cross_session_transport.md#13--meeting):
+   contribute a priority-ordered delta when asked, or request alignment after a material
+   cross-role event through the existing message channel. Keep current work running.
 4. If the operator provided studies/papers/PMIDs/DOIs/titles:
    - if they want to start the process, use `.claude/skills/legend/SKILL.md` as autopilot;
    - if they ask only for dedup/screening, activate `.claude/skills/legend-study-intake-triage/SKILL.md`.

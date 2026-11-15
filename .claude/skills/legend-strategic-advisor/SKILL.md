@@ -148,6 +148,23 @@ than infer. A pointer that finds nothing or only old material is a visible limit
 **Disable.** `strategic_advisor.py disable --campaign <DIR>` (or delete the cron with CronDelete, or write "stop" in the roadmap's instruction log): later ticks and runs refuse, and ordinary
 scheduling, the mandate watch and the sessions' work are untouched. Remove the capability: delete the Stage P code paths, the roadmap section markers and the campaign folder; Stages A and B are independent of them.
 
+## MEETING
+
+**MEETING is part of the existing recall**, with its one rule in
+[cross-session transport §13](../../../framework/protocols/cross_session_transport.md#13--meeting).
+Inspect `tick.meeting` independently of the ordinary evaluation verdict. When actionable,
+the hosting session opens/resumes `strategic_advisor.py meeting --campaign <DIR> --open`,
+asks the live relevant participants for their prioritised deltas via SendMessage, and makes
+source-backed decisions with Orchestrator at safe boundaries. An ordinary `NONE` does not
+swallow a due alignment; a headless evaluation or a second cron is unnecessary. Record
+actual replies, unavailable participants and assignments in closing notes, then
+`meeting --campaign <DIR> --close <NOTES.md>`. Follow through with existing delivery/task
+records; closing minutes alone is not delivery. A significant incoming request is registered
+with `meeting --request <reason> --source <original pointer> --actor <participant role>`.
+Continuous mode defaults to six hours between meeting starts. Set `meeting_enabled: false`
+in its existing CONTINUOUS.json to remove the periodic/event meeting path; ordinary research,
+the portfolio and the Advisor's evaluations keep their existing behaviour.
+
 ## Living Research Portfolio
 
 The permanent operational source is

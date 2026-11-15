@@ -717,3 +717,88 @@ cannot write the active settings file, and are right not to.
 alive, measure quota, or start anything: no supervisor, scheduler or watchdog is installed by
 this section, in line with the prior-art decision that rejected external heartbeats. Repository
 tests show the hook's logic, not that a Claude-hosted actor keeps working.
+
+## 13 · MEETING
+
+**Purpose (operator instruction, 2026-11-15).** A short, asynchronous team round table turns
+distributed pending work, priorities, obstacles and promising prospects into useful decisions.
+It is a recurring working habit, not an approval, a quorum, a new authority or a replacement
+for direct actor-to-actor communication. Existing work continues throughout it.
+
+**Direction and execution.** ADV chairs strategic choices inside the operator's roadmap:
+compare threads, marginal value, generative pharmacology, open questions, evidence gaps,
+DREAM associations, radar leads and project invariants. Orchestrator brings its own backlog
+upward to ADV and coordinates operational follow-through with Science, Harness and Mirror.
+Scientific meaning, Harness ownership, independent verification and Mirror's ex-post role
+retain their existing boundaries. Participants can correct a premise, disagree, decline a
+proposed assignment with a reason, or propose a better route. A meeting cannot authorise a
+reserved act, spending, private-data exposure or a scientific promotion.
+
+**When.** In an authorised continuous campaign the existing hourly Advisor recall checks
+`tick.meeting` independently of the ordinary evaluation verdict. A meeting is due six hours
+after the previous meeting **started** (first anchor: continuous authorisation); an event may
+anticipate it. It is handled at the next supported recall or safe session boundary, not
+guaranteed at an exact wall-clock second. Use one existing recall, never another cron,
+supervisor or model call just to hold a meeting. Pause, stop, disabled mode, measured resource
+limits and an evaluation already running defer it; ongoing research is not interrupted.
+
+Any participant can send `MEETING REQUEST` to live ADV or Orchestrator, with the original
+source/version, what changed, why other roles need to know, and which decision could change.
+Examples: a corrected shared premise, a result opening a new pharmacological comparison, a
+shared blocker, duplicated work, a missing consumer or a useful cross-role capability.
+An ordinary commit, finished test or interesting link is not automatically a team meeting.
+The receiver judges relevance and handles a purely local issue directly. If both coordinators
+receive the same request, relay its original pointer and inspect the existing meeting before
+opening anything. A request is a signal to assess, not an instruction to adopt an external idea.
+
+**Host procedure.** Run commands from the primary checkout and existing campaign:
+
+1. `strategic_advisor.py meeting --campaign <DIR>` reads status. Register a useful incoming
+   request with `--request <coordination reason> --source <durable pointer> --actor
+   adv|orchestrator|science|harness|mirror`. The role names identify meeting participants,
+   not new actor identities. Sources and reasoning remain accessible in full.
+2. When actionable, `meeting --campaign <DIR> --open` creates one source-linked agenda in
+   `<DIR>/meetings/`; if already open it returns that same record. The source index is derived
+   from task records and portfolio pointers, **not a claim that anyone was consulted**.
+3. Check actual live named recipients. ADV, Orchestrator, Science, Harness and Mirror each
+   provide a concise delta, ordered by priority: pending/TO-DO items and their real next step;
+   blockers with owner and resumption condition; promising prospects and the decision they
+   could change. Include original task/source pointers, cost/resource concerns and useful
+   alternatives. Reuse an already delivered current update rather than ask for the same text
+   again. An unchanged participant can say so. Ask the Science session to consolidate its
+   delegated work; do not wake every Scientist merely to repeat the same report.
+4. Use existing SendMessage/transport. Busy participants reply at their next safe boundary;
+   missing Mirror or another offline participant is recorded **not consulted/unreachable**.
+   Sent, received, taken and executed stay distinct. Proceed with available evidence, explicitly
+   provisional where a missing input matters; no roll-call barrier or pressure to interrupt CI,
+   a battery, reading or verification. Late substantive input updates the open decision or is
+   carried to the next relevant boundary, not a duplicate meeting for every reply.
+   Make a real round-table pass: reuse current attributed updates or request and check for
+   replies at a natural work boundary. A derived snapshot alone is not a participant update;
+   if closing partially, name the unanswered material question and its existing follow-up owner.
+5. ADV and Orchestrator choose what to continue, deepen, switch, queue, combine, defer or
+   discard, with a brief reason. Prefer improved comparisons, testable rival hypotheses,
+   discriminating experiments and tractable questions, including positive leads. Do not
+   manufacture tasks or unanimous agreement. A no-change result with reasons is valid.
+6. Put actual attributed replies/limits, decisions, responsible recipient, source/task pointers
+   and existing send/acceptance evidence in a small closing-notes file. Save it verbatim with
+   `meeting --campaign <DIR> --close <NOTES.md>`, then land the minutes ordinarily. Send the
+   agreed work through existing assignment/mandate routes and verify take-in-charge and later
+   consumption. A closed meeting is not a completed research task or proof of better decisions.
+
+**Durability and cost.** Canonical rule: this section. Minutes: one record per actual round
+table in the existing campaign, not a new task registry; task records and the portfolio remain
+their current sources. The small host cache keeps cadence and deduplicated pending signals
+separate from evaluation state. New requests during an open round survive its closure. After
+a process restart the same cache is reused; if absent, existing minutes recover cadence and
+the latest open record, while unsaved pending signals require source/transport reconciliation.
+The recall remains session-bound and needs the existing restart/expiry restoration procedure.
+These compensations do not guarantee delivery, model compliance or multi-day uptime.
+
+No new paid API, service, permanent agent context, mandatory review or waiting for the
+operator. A coordinator unavailable at the event does not stop the sender's useful work;
+Orchestrator can conduct operational alignment and relay strategic questions to ADV when
+reachable. `meeting_enabled: false` in CONTINUOUS.json disables the path; an optional positive
+`meeting_interval_hours` changes its cadence. Removing MEETING leaves ordinary research and
+the existing Advisor evaluation loop intact. Judge it by resolved coordination problems and
+better decisions against its total cost, not meeting count or volume of minutes.
