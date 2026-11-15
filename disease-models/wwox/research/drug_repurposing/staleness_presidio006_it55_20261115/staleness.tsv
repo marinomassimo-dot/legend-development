@@ -1,0 +1,35 @@
+qid	class	evidence_after_last_touched	remaining_or_blocker_today	access_test
+WO-06	STILL OPEN	no result-like file names the row after 2026-11-05 (only date-string noise)	nothing blocks it; a search task, unscheduled	none needed
+WO-12	NARROWED	this row, dated notes 2026-11-15 (WO-11 package; ADV route fact)	Fischer 1997 half access-blocked (PRESIDIO-003 access.tsv); Hess 1996 untested	not re-tested (per PRESIDIO-003)
+WO-23	STILL OPEN	no result-like file after 2026-11-01 names the row (briefs only)	a quantitative same-system pairing not found	none needed
+WO-25	NARROWED	this row, dated note 2026-11-15 (ADV-009)	matched potencies per isoform pair	PMC article pages used 2026-11-15
+WO-32	NARROWED	nb3_class_iia_it32_20261107/output/README.md item 10 @ 83047c7b2 (2026-11-07): neuron/axon half closed	oligodendrocyte-lineage Hdac7/Hdac9 expression not searched; Europe PMC answered normally 2026-11-05	none needed (search task)
+RS-R6	NARROWED	rs_r6_it30_20261106/README.md @ a65e4f1fe (2026-11-10): Alliance, MGI, IMPC, DepMap read or computed; no genetic suppressor found	BioGRID ORCS rows not extracted (bulk blocked; page lists WWOX in 16 of 1408 screens)	Alliance key-less answered 2026-11-05; ORCS bulk blocked
+IT29-P12	ANSWERED	phenotype_first_it29_20261105/ncc_reconciliation_it30/README.md @ c5a4c3ebb (2026-11-06): supplements read with SHA-256; endpoint is primary viability (% quetiapine); rows S1-32 and S1-33 withdrawn (withdrawn_rows_it30.tsv)	none for this question; cause of the table's assignment unknown (stated there)	not needed
+IT30-CQ1	STILL OPEN	only the index row names it	conditional question, no reader assigned	none needed
+IT30-CQ3	STILL OPEN	only the index row names it	conditional question, no reader assigned	none needed
+IT41-Q04	STILL OPEN	no result-like file after 2026-11-10	public-data reconciliation of two sleep datasets	none needed
+IT44-Q01	NARROWED	kir2_drugname_sci49_20261112/README.md @ bdbe0ae33 (2026-11-12): no Kir2.2 or Kir2.3 opener found (not an absence claim)	Ba2+ concentration-response of TASK-1, TASK-3 and THIK-1 still unread	not tested
+IT44-Q02	STILL OPEN	only the script that wrote the row names it	primary papers for TRAAK/TREK-1 EC50 and conditions unread	not tested
+IT44-Q05	STILL OPEN	no result-like file after 2026-11-11	RNA share to protein share not measured	none needed
+IT45-Q04	STILL OPEN	generation_it46_20261111/README.md names PMID 38042151 (2026-11-13) with abstract depth only	Harde 2023 full text not read: Europe PMC record shows isOpenAccess N and no PMCID	one Europe PMC search request, 2026-11-15
+IT45-Q06	STILL OPEN	no result-like file after 2026-11-11	tools' pH dependence unread	not tested
+IT45-Q07	STILL OPEN	no result-like file after 2026-11-11	species label and pH series unsupported	not tested
+IT45-Q08	STILL OPEN	no result-like file after 2026-11-11	no source at physiological temperature and Mg2+	not tested
+IT46-Q02	NARROWED	tail_sci48_20261112/README.md @ 29993be80 (2026-11-12): ChEMBL label-only mapping (target by symbol, confidence 9); the map cell was never updated	primary documentation unreachable by plain routes: SGC probe page is a single-page application, PDSP Ki download HTTP 403 (not retried); not a lapsed blocker	tested by SCI48 2026-11-12
+IT46-Q03	STILL OPEN	only the IT46 result names it	INV-10 Dravet/STXBP1 base-rate sources not re-read	not tested
+IT46-Q11	STILL OPEN	only the IT46 README names it	benzodiazepine class primary reports not re-read	not tested
+IT47-Q01	STILL OPEN	no result-like file after 2026-11-12	epistasis arm: retinal paper has none; other sources not searched	none needed
+IT47-Q02	STILL OPEN	no result-like file after 2026-11-12	Ser535 phosphomimetic searches were abstract level	none needed
+IT48-Q01	NARROWED	kir2_drugname_sci49_20261112/README.md @ bdbe0ae33 and the row's own status_evidence: drug-name half concluded	juvenile (P13-P17) Ba2+-sensitive share not found by two string sets (not an absence claim); the blocking_reason text 'route not run' is stale	none needed
+IT48-Q04	STILL OPEN	hypothesis_packages.tsv and catalog files cite the package, no reading of the full texts	depth artefact of abstract-level comparator rows	not tested
+IT49-Q02	ANSWERED	isr_cellclass_he50_20261113/README.md and isr_cell_class_states.tsv @ c6bab78d5 (2026-11-13): 12 symbols, 24 state rows, per-gene check, byte-identical default output	none for the extraction; RNA is not protein or function (stated there)	not needed
+IT49-Q04	STILL OPEN	status_evidence already carries the SCI49 note	KCNQ3 protein or current in microglia unmeasured (RNA only)	none needed
+IT49-Q06	NARROWED	kir2_drugname_sci49_20261112/README.md item 1 @ bdbe0ae33: ML133 IC50 on Kir2.1/2.2/2.3/2.6 at pH 7.4, Kir6.2/SUR1 7.7 uM, hERG about 5 uM in one automated-patch deposit of unstated pH	pH of the hERG deposit; Kir2.4 untested; no K2P test	not tested
+IT49-Q08	STILL OPEN	status_evidence already carries SCI49 B	2026 Kir2.1 HTS paper (PMID 41701551): Europe PMC record shows isOpenAccess N, no PMCID: access-limited today, abstract is census	one Europe PMC search request, 2026-11-15
+IT49-Q09	STILL OPEN	status_evidence already carries the [IT50] note	Kir2 subunit composition of the Ba2+-sensitive current unread	not tested
+IT49-Q11	STILL OPEN, BLOCKER LAPSED	kir2_drugname_sci49_20261112 recorded a bot check on its request; the paper is PMID 40959251, PMC12434521 (isOpenAccess Y)	none on access: the PMC article page answered one plain request with HTTP 200, 192,000 bytes, an article (42,636 characters of text, VU6080824 named 11 times, a Supporting Information section named); the supporting file itself was not requested	one plain request to the PMC article page, 2026-11-15
+IT50-Q07	STILL OPEN	no result-like file after 2026-11-13	conduction readout needed beyond the search perimeter	none needed
+IT50-Q08	STILL OPEN	no result-like file after 2026-11-13	compensatory-myelination context unread	none needed
+IT50-Q09	STILL OPEN	no result-like file after 2026-11-13	comparator identity and EBP activity not verified from a primary paper	not tested
+IT52-Q01	STILL OPEN	ADV-005_result.md (2026-11-14) delivered the route; the row's own note carries it	evidence layer of the INV-02 probe arm: by-molecule query can add rows	none needed

@@ -1,0 +1,19 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-PRESIDIO006-STALENESS-20261115",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "NORMAL",
+  "OBJECTIVE": "PRESIDIO-006 (Advisor): staleness pass over the OPEN literature/data rows of open_questions_map.tsv (zero-spend yes/partial): classify ANSWERED/NARROWED/STILL OPEN from the repository after each row's last_touched; test access states by one plain request; record dated notes in the existing cells; one evidence table; no answers, no ranking/need/candidate edits.",
+  "START_UTC": "2026-11-15T11:50:00Z",
+  "MANDATE_STATE": "COMPLETE",
+  "RESULT_SO_FAR": "34 rows (35 minus WO-11 concluded today): 2 ANSWERED (IT29-P12, IT49-Q02, marked CONCLUDED with the answer's path), 8 NARROWED, 24 STILL OPEN of which IT49-Q11 has a lapsed blocker (VU6080824 paper PMC12434521 served by the PMC article page). Access confirmed blocked for IT45-Q04 and IT49-Q08. Candidate order: IT49-Q11, WO-32 remainder, IT49-Q06 remainder. Table staleness_presidio006_it55_20261115/staleness.tsv. Limit: rows with no later identifier hit are STILL OPEN by absence of mention, not by reading.",
+  "CLOSE_WHEN": "table written, map notes applied, landed.",
+  "AUTONOMY_TRIAL_NOTES": {
+    "delegates": "none",
+    "tokens_of_delegates": 0,
+    "waits_interruptions_restarts_human_interventions": [
+      "none"
+    ]
+  }
+}
