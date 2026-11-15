@@ -225,6 +225,8 @@ ENTRY_POINTS: list[tuple[str, str, list[str]]] = [
         "disease-models/wwox/research/drug_repurposing/**/hypotheses*"]),
     ("packages", "Completed packages and their consumer notes", [
         "disease-models/wwox/research/drug_repurposing/*/README.md", "disease-models/wwox/research/drug_repurposing/**/CONSUMER_NOTE.md"]),
+    ("meetings", "MEETING round tables: attributed updates, coordination decisions and original task/source pointers; not scientific evidence or proof of delivery", [
+        "disease-models/wwox/research/drug_repurposing/**/meetings/MEETING-*.md"]),
     ("diagnoses", "Diagnoses, evaluations and DREAM (a connection DREAM proposes is a question, not biological evidence)", [
         "disease-models/wwox/research/session_evaluations/*", "disease-models/wwox/research/drug_repurposing/diagnosis_*/*", "disease-models/wwox/research/dream*/README.md",
         "disease-models/wwox/research/drug_repurposing/dream*/README.md"]),
@@ -369,6 +371,7 @@ def render_entrypoints(rows: list[dict[str, Any]]) -> str:
 
 
 RECALL_PROMPT = ("Proactive Strategic Advisor pilot, hourly mechanical check. Run: cd {root} && python3 framework/scripts/strategic_advisor.py tick --campaign {campaign}. "
+                 "First inspect the independent meeting field: when actionable, apply cross-session transport section 13 (MEETING) and run `strategic_advisor.py meeting --campaign {campaign} --open` or resume its existing record. The ordinary verdict NONE does not cancel a due meeting. Use the hosting session, existing messages and current sources; no extra evaluation or cron is required. "
                  "If the verdict is NONE, DEFERRED, RUNNING, PAUSED, RESOURCES or DISABLED/EXPIRED/BUDGET, stay quiet unless something actionable changed; these mechanical verdicts do not establish that all useful work is exhausted. If EVALUATE, apply the current legend-strategic-advisor skill and start `strategic_advisor.py evaluate --campaign {campaign}` "
                  "in the background (run_in_background), and when it finishes read the drafted assignments with `status`, check each recipient is listed live by `claude agents --json`, "
                  "deliver each with SendMessage (durable artifact path plus pointer), record `deliver --state SENT --to <the session named in the send's receipt>` or `UNREACHABLE`, and later verify the take-in-charge in the recipient's task record. "
@@ -866,6 +869,138 @@ def _save_state(campaign: Path, state: dict[str, Any]) -> None:
     path.write_text(json.dumps(state, indent=1, sort_keys=True), encoding="utf-8")
 
 
+# MEETING reuses the existing host and hourly recall. Its small host cache is separate
+# from evaluation state, so an evaluation finishing cannot erase a later meeting request.
+MEETING_ROLES = ("adv", "orchestrator", "science", "harness", "mirror")
+
+
+def _meeting_saved(campaign: Path) -> dict[str, Any]:
+    path = _state_path(campaign).with_name("meeting.json")
+    if path.exists():
+        saved = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(saved, dict):
+            raise ValueError("MEETING cache must be an object; reconcile it with existing minutes")
+        active = saved.get("active") or ""
+        if active and (Path(active).name != active or not (campaign / "meetings" / active).is_file()):
+            raise ValueError("MEETING's open record is missing or invalid; reconcile its original before reopening")
+        return saved
+    # A move to a new host can recover the cadence/open record from committed minutes.
+    # Requests not yet put in minutes remain a host-cache/transport recovery limit.
+    rows = []
+    for p in (campaign / "meetings").glob("MEETING-*.md"):
+        text = p.read_text(encoding="utf-8")
+        stamp = re.search(r"^Started UTC: (\S+)$", text, re.M)
+        if stamp:
+            rows.append((stamp[1], p.stat().st_mtime_ns, p.name, bool(re.search(r"^Closed UTC: \S+$", text, re.M))))
+    if not rows:
+        return {}
+    started, _, name, closed = max(rows)
+    return {"last_started_utc": started, "active": "" if closed else name,
+            "recovered_from_minutes": True}
+
+
+def meeting_status(campaign: Path, saved: dict[str, Any] | None = None) -> dict[str, Any]:
+    """Read-only six-hour/event alignment status; no model, message or task launch."""
+    saved = _meeting_saved(campaign) if saved is None else saved
+    mode = continuous(campaign)
+    interval = float(mode.get("meeting_interval_hours", 6))
+    if interval <= 0 or not interval < float("inf"):
+        raise ValueError("meeting_interval_hours must be a finite positive number")
+    anchor = saved.get("last_started_utc") or mode.get("authorised_utc") or _budget(campaign).get("activated_utc")
+    due_at = (dt.datetime.fromisoformat(anchor.replace("Z", "+00:00")) + dt.timedelta(hours=interval)) if anchor else _now()
+    requests = saved.get("requests") or []
+    active = saved.get("active") or ""
+    held = "disabled outside continuous operation" if not mode or mode.get("meeting_enabled") is False else budget_refusal(campaign)
+    if (campaign / "DISABLED").exists():
+        held = "campaign disabled"
+    if not held and _running(_load_state(campaign)):
+        held = "a strategic evaluation is running; align at its next safe boundary"
+    ready = bool(active or requests or _now() >= due_at)
+    return {"state": "HELD" if held else "OPEN" if active else "DUE" if ready else "IDLE",
+            "actionable": ready and not held, "why": held or ("resume the existing round table" if active else "meaningful event request" if requests else "six-hour alignment" if ready else "not due"),
+            "next_due_utc": _utc(due_at), "interval_hours": interval,
+            "record": str(campaign / "meetings" / active) if active else "",
+            "requests": requests, "recovery": saved.get("recovered_from_minutes", False)}
+
+
+def meeting(campaign: Path, *, request: str = "", source: str = "", actor: str = "",
+            open_round: bool = False, close_file: Path | None = None) -> dict[str, Any]:
+    """Host-owned alignment, not a second work queue. Peers request it via SendMessage.
+
+    The host records the request, opens one source-linked agenda, then closes it with
+    actual participant replies/decisions supplied verbatim. Sending and acceptance are
+    evidenced by existing transport, never inferred from opening or closing minutes.
+    """
+    campaign = Path(campaign)
+    actions = int(bool(request)) + int(open_round) + int(close_file is not None)
+    if actions > 1:
+        raise ValueError("choose one meeting action")
+    if not actions:
+        return meeting_status(campaign)
+    if request and (actor not in MEETING_ROLES or not source.strip() or not request.strip()):
+        raise ValueError("a request needs a participant role, a durable source and its coordination reason")
+    cache = _state_path(campaign).with_name("meeting.json")
+    cache.parent.mkdir(parents=True, exist_ok=True)
+    with cache.with_suffix(".lock").open("a") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        saved = _meeting_saved(campaign)
+        if request:
+            key = sha256_text(source.strip() + "|" + request.strip())[:20]
+            # Active and already considered signals coalesce; a material new event
+            # needs a new source revision/reason. An old message is not a new meeting.
+            known = {r["key"] for r in saved.get("requests", [])} | set(saved.get("handled_keys", []))
+            if key not in known:
+                saved.setdefault("requests", []).append({"key": key, "actor": actor, "source": source.strip(), "reason": request.strip(), "utc": _utc(_now())})
+        elif open_round:
+            status = meeting_status(campaign, saved)
+            if status["state"] == "OPEN":
+                return status
+            if not status["actionable"]:
+                return status
+            folder = campaign / "meetings"
+            folder.mkdir(parents=True, exist_ok=True)
+            stamp = _utc(_now())
+            fd, filename = tempfile.mkstemp(prefix="MEETING-" + _now().strftime("%Y%m%dT%H%M%SZ") + "-", suffix=".md", dir=folder)
+            os.close(fd)
+            path = Path(filename)
+            records = _records()
+            tasks = [f"- {t}: {r['owner']}; {r['verdict']}; `{r['path']}`" for t, r in records.items() if r.get("state") == "OPEN"]
+            signals = [f"- {r['actor']}: {r['reason']} — {r['source']}" for r in saved.get("requests", [])]
+            text = (f"# MEETING — {stamp}\n\nStarted UTC: {stamp}\nSnapshot SHA: {_git('rev-parse', 'HEAD')}\n"
+                    "Coordination: ADV (direction), Orchestrator (execution and upward report).\n\n"
+                    "## Trigger and source index\n" + "\n".join(signals or ["- Six-hour alignment."]) + "\n\n"
+                    "## Derived agenda — not participant statements\n"
+                    f"Roadmap: `{ROADMAP.relative_to(ROOT)}`\nPortfolio: `{PORTFOLIO_REL}`\n"
+                    "Read current priority, pending steps and source material through these existing records; this index does not reprioritise or replace them.\n"
+                    + "\n".join(tasks or ["- No open task record found; this does not prove no useful work remains."]) + "\n\n"
+                    "## Round table and decisions\n"
+                    "Opening state under cross-session transport section 13: ADV, Orchestrator, Science, Harness and Mirror are not yet consulted. Closing notes below record actual follow-through. "
+                    "Use live named recipients and actual replies; unavailable or late participants do not block decisions.\n")
+            path.write_text(text, encoding="utf-8")
+            saved.update(active=path.name, last_started_utc=stamp,
+                         active_keys=[r["key"] for r in saved.get("requests", [])])
+        else:
+            active = saved.get("active") or ""
+            if not active:
+                raise ValueError("no open meeting to close")
+            notes = Path(close_file).read_text(encoding="utf-8")
+            if not notes.strip():
+                raise ValueError("closing notes must state actual replies, decisions or an explicit no-change/partial result")
+            path = campaign / "meetings" / active
+            # Append the host's notes exactly; no model rewrite and no false ACK.
+            with path.open("a", encoding="utf-8") as handle:
+                handle.write("\n## Host closing notes (supplied verbatim)\n\n" + notes + "\n\nClosed UTC: " + _utc(_now()) + "\n")
+            consumed = set(saved.get("active_keys", []))
+            saved["requests"] = [r for r in saved.get("requests", []) if r["key"] not in consumed]
+            saved["handled_keys"] = sorted(set(saved.get("handled_keys", [])) | consumed)
+            saved.update(active="", active_keys=[], last_record=str(path))
+        with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=cache.parent, delete=False) as handle:
+            tmp = Path(handle.name)
+            handle.write(json.dumps(saved, indent=1, sort_keys=True) + "\n")
+        os.replace(tmp, cache)
+        return meeting_status(campaign, saved)
+
+
 def _pid_identity(pid: int) -> str:
     try:
         return f"{pid}:{Path(f'/proc/{pid}/stat').read_text().rsplit(')', 1)[1].split()[19]}"
@@ -929,6 +1064,7 @@ def _own_updates(campaign: Path) -> list[str]:
     except ValueError:
         return []
     return [f":(exclude,glob){rel}/P[0-9]*/**", f":(exclude){rel}/assignments", f":(exclude){rel}/assignments.jsonl", f":(exclude){rel}/invocations.jsonl",
+            f":(exclude,glob){rel}/meetings/**",
             *[f":(exclude,glob)ledger/tasks/*/*{m}*" for m in SENDER_RECORDS]]
 
 
@@ -1146,7 +1282,12 @@ def tick(campaign: Path) -> dict[str, Any]:
         state["pending_commits"] = obs["commits_since_last_tick"]
     _save_state(campaign, state)
     ctl = operator_controls()
+    try:
+        alignment = meeting_status(campaign)
+    except (OSError, ValueError, TypeError, KeyError) as exc:
+        alignment = {"state": "ERROR", "actionable": False, "why": str(exc)}
     return {"verdict": verdict, "why": why, "mode": "continuous" if cont else "pilot", "presidio": presidio_state(verdict, why, bool(cont), outcome, obs["queue"]["exhausted"], streak),
+            "meeting": alignment,
             "last_outcome": {k: outcome.get(k) for k in ("outcome", "reason", "excluded", "resume_when", "stated", "evaluation") if outcome.get(k) not in (None, "")}, "queue": obs["queue"],
             "last_incomplete": state.get("last_incomplete") or {},
             "operator_controls": [f"{c['kind']}: {c['text']}" for c in (active_suspensions(ctl) + [c for c in ctl if c["kind"] in ("URGENT", "INTEGRATION")])[-6:]],
@@ -1503,6 +1644,14 @@ def main(argv: list[str] | None = None) -> int:
     ev = sub.add_parser("evaluate", help="one strategic evaluation, counted in the campaign budget"); ev.add_argument("--campaign", required=True)
     ev.add_argument("--model", default="opus"); ev.add_argument("--effort", default="high", choices=["low", "medium", "high"]); ev.add_argument("--timeout", type=int, default=3600)
     st = sub.add_parser("status", help="budget and the evidence level of every assignment"); st.add_argument("--campaign", required=True)
+    mt = sub.add_parser("meeting", help="six-hour/event alignment through the existing host; status unless one action is supplied")
+    mt.add_argument("--campaign", required=True)
+    action = mt.add_mutually_exclusive_group()
+    action.add_argument("--request", help="why a material event needs cross-role coordination")
+    action.add_argument("--open", action="store_true", help="open the due round table, or return the existing one")
+    action.add_argument("--close", metavar="NOTES.md", help="close with actual replies/decisions from this file, saved verbatim")
+    mt.add_argument("--source", default="", help="durable original/event pointer for a request")
+    mt.add_argument("--actor", choices=MEETING_ROLES, default="", help="requesting participant role, not a new actor identity")
     dl = sub.add_parser("deliver", help="record what the channel did with an assignment (SENT with the message id, or UNREACHABLE with the reason)"); dl.add_argument("--campaign", required=True)
     dl.add_argument("--id", required=True); dl.add_argument("--state", choices=["SENT", "UNREACHABLE"], required=True); dl.add_argument("--evidence", required=True)
     dl.add_argument("--to", action="append", default=[], help="SENT only: the session the transport receipt names, one per real send (an assignment's own recipient must be among them)")
@@ -1567,12 +1716,19 @@ def main(argv: list[str] | None = None) -> int:
     if args.cmd == "check":
         return check(Path(args.campaign))
     campaign = Path(args.campaign)
-    if args.cmd in ("recall", "tick", "evaluate", "deliver", "activate", "disable", "authorise-continuous", "end-continuous") and primary_refusal():
+    if args.cmd in ("recall", "tick", "evaluate", "meeting", "deliver", "activate", "disable", "authorise-continuous", "end-continuous") and primary_refusal():
         print(primary_refusal(), file=sys.stderr); return 2
     if args.cmd == "recall":
         print(recall_prompt(campaign)); return 0
     if args.cmd == "tick":
         print(json.dumps(tick(campaign), indent=1)); return 0
+    if args.cmd == "meeting":
+        try:
+            result = meeting(campaign, request=args.request or "", source=args.source, actor=args.actor,
+                             open_round=args.open, close_file=Path(args.close) if args.close else None)
+        except (OSError, ValueError, TypeError, KeyError) as exc:
+            print("MEETING: " + str(exc), file=sys.stderr); return 2
+        print(json.dumps(result, indent=1)); return 0
     if args.cmd == "evaluate":
         return evaluate(campaign, args.model, args.effort, args.timeout)
     if args.cmd == "status":

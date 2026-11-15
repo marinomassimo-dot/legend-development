@@ -16,6 +16,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import strategic_advisor as sa  # noqa: E402
@@ -341,15 +342,18 @@ class Proactive(Base):
         wt = self.tmp / "linked"; wt.mkdir(); (wt / ".git").write_text("gitdir: /elsewhere\n", encoding="utf-8")
         saved, sa.ROOT = sa.ROOT, wt
         try:
-            for cmd in ("tick", "evaluate", "deliver", "activate", "disable", "recall"):
+            for cmd in ("tick", "evaluate", "meeting", "deliver", "activate", "disable", "recall"):
                 self.assertTrue(sa.primary_refusal(), cmd)
             self.assertEqual(sa.main(["tick", "--campaign", str(self.campaign)]), 2)      # refused before it touches any state
+            self.assertEqual(sa.main(["meeting", "--campaign", str(self.campaign), "--open"]), 2)
         finally:
             sa.ROOT = saved
         self.assertEqual(sa.primary_refusal(), "")                                   # the primary checkout has a .git directory
         text = sa.recall_prompt(self.campaign)
         self.assertIn(sa.RECALL_MARK, text)
-        self.assertEqual(text.count("--campaign"), 2)                                   # tick and evaluate, the same campaign
+        for cmd in ("tick", "meeting", "evaluate"):
+            self.assertIn(f"strategic_advisor.py {cmd} --campaign {self.campaign}", text)
+        self.assertEqual(text.count(sa.RECALL_MARK), 1)
 
     def test_the_live_scout_briefing_reaches_the_brief_dated_without_addresses_and_absence_is_stated(self) -> None:
         saved = sa.STATE_HOME
@@ -1283,6 +1287,171 @@ class Snapshot(unittest.TestCase):
             sa.ROOT = saved
         self.assertIn("`big.md` (25,000 bytes)", text)
         self.assertEqual(text.count("bytes)"), 1)  # tracked.md is far below the threshold
+
+
+class Meeting(unittest.TestCase):
+    """Behavioural controls: cadence/event retention without a model or new scheduler."""
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory(prefix="legend_meeting_test_")
+        self.addCleanup(self.tmp.cleanup)
+        root = Path(self.tmp.name)
+        self.campaign = root / "campaign"
+        self.campaign.mkdir()
+        self.roadmap = root / "roadmap.md"
+        self.roadmap.write_text(sa.ROADMAP_BEGIN + "\nResearch\n" + sa.ROADMAP_END)
+        for name, value in {"ROOT": root, "ROADMAP": self.roadmap, "STATE_DIR": root / "state",
+                            "_git": lambda *a: "snapshot-sha", "_records": lambda: {"SCI-X": {
+                                "owner": "scientist-a", "state": "OPEN", "verdict": "CONTINUE", "path": "ledger/tasks/scientist-a/SCI-X.json"}}}.items():
+            replacement = patch.object(sa, name, value)
+            replacement.start(); self.addCleanup(replacement.stop)
+        clock = patch.dict(os.environ, {"LEGEND_ADVISOR_NOW": "2026-11-15T01:00:00Z"})
+        clock.start(); self.addCleanup(clock.stop)
+        (self.campaign / "budget.json").write_text(json.dumps({"activated_utc": "2026-11-15T00:00:00Z", "max_invocations": 3}))
+        self.mode = self.campaign / sa.CONTINUOUS
+        self.mode.write_text(json.dumps({"authorised_utc": "2026-11-15T00:00:00Z"}))
+
+    def at(self, stamp: str) -> None:
+        os.environ["LEGEND_ADVISOR_NOW"] = stamp
+
+    def request(self, source: str = "package/result.md", reason: str = "a shared premise changed") -> dict:
+        return sa.meeting(self.campaign, request=reason, source=source, actor="science")
+
+    def close(self, notes: str = "Science replied; Harness not consulted. Continue SCI-X; no new assignment.") -> dict:
+        path = Path(self.tmp.name) / "notes.md"
+        path.write_text(notes)
+        return sa.meeting(self.campaign, close_file=path)
+
+    def test_exact_six_hour_boundary_and_next_cadence_is_from_start_not_close(self) -> None:
+        self.at("2026-11-15T05:59:59Z")
+        self.assertEqual(sa.meeting_status(self.campaign)["state"], "IDLE")
+        self.at("2026-11-15T06:00:00Z")
+        self.assertTrue(sa.meeting_status(self.campaign)["actionable"])
+        sa.meeting(self.campaign, open_round=True)
+        self.at("2026-11-15T07:00:00Z")
+        self.close()
+        self.at("2026-11-15T11:59:59Z")
+        self.assertEqual(sa.meeting_status(self.campaign)["state"], "IDLE")
+        self.at("2026-11-15T12:00:00Z")
+        self.assertEqual(sa.meeting_status(self.campaign)["state"], "DUE")
+
+    def test_event_anticipates_cadence_and_duplicate_sends_do_not_multiply_rounds(self) -> None:
+        first = self.request()
+        self.assertEqual(first["state"], "DUE")
+        self.assertEqual(self.request()["requests"], first["requests"])
+        record = sa.meeting(self.campaign, open_round=True)["record"]
+        self.assertEqual(sa.meeting(self.campaign, open_round=True)["record"], record)
+        self.assertEqual(len(list((self.campaign / "meetings").glob("*.md"))), 1)
+        self.close()
+        self.assertEqual(self.request()["state"], "IDLE")
+        self.assertEqual(self.request("package/revised.md")["state"], "DUE")
+
+    def test_new_request_during_round_survives_closure(self) -> None:
+        self.request()
+        sa.meeting(self.campaign, open_round=True)
+        later = self.request("harness/issue.md", "a second shared blocker")
+        self.assertEqual(len(later["requests"]), 2)
+        result = self.close()
+        self.assertEqual(result["state"], "DUE")
+        self.assertEqual([r["source"] for r in result["requests"]], ["harness/issue.md"])
+
+    def test_concurrent_signals_and_an_evaluation_save_do_not_erase_requests(self) -> None:
+        from concurrent.futures import ThreadPoolExecutor
+        with ThreadPoolExecutor(max_workers=3) as pool:
+            list(pool.map(lambda n: self.request(f"result/{n}.md"), [0, 1, 2, 0, 1, 2]))
+        sa._save_state(self.campaign, {"last_outcome": {"outcome": "continue"}})
+        self.assertEqual(len(sa.meeting_status(self.campaign)["requests"]), 3)
+
+    def test_round_table_is_derived_not_a_false_consultation_or_task_completion(self) -> None:
+        self.request()
+        opened = sa.meeting(self.campaign, open_round=True)
+        text = Path(opened["record"]).read_text()
+        self.assertIn("not participant statements", text)
+        self.assertIn("not yet consulted", text)
+        self.assertIn("ledger/tasks/scientist-a/SCI-X.json", text)
+        notes = "  Science: read result.\nHarness: unavailable.\nDecision: retain SCI-X.\n"
+        self.close(notes)
+        self.assertIn(notes, Path(opened["record"]).read_text())
+        self.assertFalse((self.campaign / "assignments.jsonl").exists())
+
+    def test_pause_disabled_resources_and_running_evaluation_preserve_pending_signal(self) -> None:
+        self.request()
+        for name, change in (
+            ("pause", lambda: self.roadmap.write_text(sa.ROADMAP_BEGIN + "\nPAUSE: all — test\n" + sa.ROADMAP_END)),
+            ("disabled", lambda: (self.campaign / "DISABLED").write_text("test")),
+            ("off", lambda: self.mode.write_text(json.dumps({"authorised_utc": "2026-11-15T00:00:00Z", "meeting_enabled": False}))),
+        ):
+            with self.subTest(name=name):
+                change()
+                self.assertEqual(sa.meeting(self.campaign, open_round=True)["state"], "HELD")
+                self.assertFalse((self.campaign / "meetings").exists())
+                self.roadmap.write_text(sa.ROADMAP_BEGIN + "\nResearch\n" + sa.ROADMAP_END)
+                (self.campaign / "DISABLED").unlink(missing_ok=True)
+                self.mode.write_text(json.dumps({"authorised_utc": "2026-11-15T00:00:00Z"}))
+        with patch.object(sa, "weekly_state", return_value={"state": "exhausted", "advisor_spent": 10, "advisor_cap": 10, "unit": "output_tokens"}):
+            self.assertEqual(sa.meeting(self.campaign, open_round=True)["state"], "HELD")
+        with patch.object(sa, "_running", return_value=True):
+            self.assertEqual(sa.meeting(self.campaign, open_round=True)["state"], "HELD")
+        self.assertEqual(len(sa.meeting_status(self.campaign)["requests"]), 1)
+        self.assertEqual(sa.meeting(self.campaign, open_round=True)["state"], "OPEN")
+
+    def test_bounded_pilot_is_not_extended_and_counters_are_not_changed(self) -> None:
+        before = (self.campaign / "budget.json").read_text()
+        self.mode.unlink()
+        self.at("2026-11-16T00:00:00Z")
+        self.request()
+        self.assertEqual(sa.meeting(self.campaign, open_round=True)["state"], "HELD")
+        self.assertEqual((self.campaign / "budget.json").read_text(), before)
+        self.assertFalse((self.campaign / "invocations.jsonl").exists())
+
+    def test_new_host_recovers_open_and_closed_rounds_from_minutes(self) -> None:
+        self.request()
+        opened = sa.meeting(self.campaign, open_round=True)
+        cache = sa._state_path(self.campaign).with_name("meeting.json")
+        cache.unlink()
+        recovered = sa.meeting(self.campaign, open_round=True)
+        self.assertEqual(recovered["record"], opened["record"])
+        self.assertTrue(recovered["recovery"])
+        self.close()
+        cache.unlink()
+        self.assertEqual(sa.meeting_status(self.campaign)["state"], "IDLE")
+
+    def test_recovery_selects_the_latest_round_even_with_two_starts_in_one_second(self) -> None:
+        self.request()
+        first = sa.meeting(self.campaign, open_round=True)["record"]
+        self.close()
+        self.request("result/revised.md")
+        second = sa.meeting(self.campaign, open_round=True)["record"]
+        self.assertNotEqual(first, second)
+        sa._state_path(self.campaign).with_name("meeting.json").unlink()
+        self.assertEqual(sa.meeting_status(self.campaign)["record"], second)
+
+    def test_empty_notes_invalid_requests_and_missing_open_record_are_honest_errors(self) -> None:
+        with self.assertRaises(ValueError):
+            sa.meeting(self.campaign, request="event", actor="science")
+        self.request()
+        opened = sa.meeting(self.campaign, open_round=True)
+        with self.assertRaises(ValueError):
+            self.close(" ")
+        Path(opened["record"]).unlink()
+        with self.assertRaisesRegex(ValueError, "missing or invalid"):
+            sa.meeting(self.campaign, open_round=True)
+
+    def test_due_meeting_survives_an_ordinary_none_without_launching_a_model(self) -> None:
+        sa._save_state(self.campaign, {"last_evaluation_utc": "2026-11-15T00:00:00Z", "last_outcome": {
+            "stated": True, "outcome": "wait", "reason": "real resource outside this branch", "resume_when": "event"}})
+        obs = {"main_sha": "snapshot-sha", "roadmap_sha256": "r", "commits_since_last_tick": 0, "events": [],
+               "open_mandates": [], "mandates": {}, "waits": [], "queue": {"exhausted": True}, "sessions": {},
+               "portfolio": {"path": "p", "available": False, "actionable": [], "errors": []}}
+        self.at("2026-11-15T06:00:00Z")
+        with patch.object(sa, "observe", return_value=obs), patch.object(sa, "run", side_effect=AssertionError("must not launch")):
+            tick = sa.tick(self.campaign)
+        self.assertEqual(tick["verdict"], "NONE")
+        self.assertEqual(tick["meeting"]["state"], "DUE")
+        cache = sa._state_path(self.campaign).with_name("meeting.json")
+        cache.write_text("invalid JSON")
+        with patch.object(sa, "observe", return_value=obs):
+            self.assertEqual(sa.tick(self.campaign)["meeting"]["state"], "ERROR")
 
 
 class OrdinaryWorkDoesNotNeedIt(unittest.TestCase):
