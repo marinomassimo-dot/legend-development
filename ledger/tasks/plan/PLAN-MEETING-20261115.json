@@ -147,6 +147,18 @@
       "ranking_bytes_unchanged": true,
       "evidence": "/tmp/legend-meeting-closing-regeneration.json",
       "disposition": "Superseded by the newer native complete rebuild on3e1bde7af, taken intact with its additional scientific corrections. Reproducible own generated output was discarded, not peer work."
+    },
+    {
+      "scope": "Latest native3e1bde7af integrated; final checked tree18ac2e15c",
+      "verdict": "PASS",
+      "package": "current",
+      "translation_tests": 14,
+      "landing_dry_run": "FRESH,3 generated surfaces checked",
+      "evidence": [
+        "/tmp/legend-meeting-merged-final-package.log",
+        "/tmp/legend-meeting-merged-final-i18n.log"
+      ],
+      "boundary": "MEETING implementation code unchanged from the139-test integration; no complete inventory on this later data tree."
     }
   ],
   "SESSION_LEARNING_REVIEW": {
