@@ -84,7 +84,7 @@ research capacity for a distant review without a demonstrated resource conflict.
 ## Boundaries and delivery
 
 Use a received MEETING round table as attributed input, not consensus or scientific
-validation. Apply cross-session transport section 13: compare the participants' pending
+validation. Apply cross-session transport section 14: compare the participants' pending
 work and prospects against the roadmap and marginal value of the other branches. The
 hosting session conducts the alignment and delivery; this read-only assessment does not.
 

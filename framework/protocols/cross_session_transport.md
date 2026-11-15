@@ -716,7 +716,7 @@ alive, measure quota, or start anything: no supervisor, scheduler or watchdog is
 this section, in line with the prior-art decision that rejected external heartbeats. Repository
 tests show the hook's logic, not that a Claude-hosted actor keeps working.
 
-## 13 · MEETING
+## 14 · MEETING
 
 **Purpose (operator instruction, 2026-11-15).** A short, asynchronous team round table turns
 distributed pending work, priorities, obstacles and promising prospects into useful decisions.

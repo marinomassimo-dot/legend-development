@@ -371,7 +371,7 @@ def render_entrypoints(rows: list[dict[str, Any]]) -> str:
 
 
 RECALL_PROMPT = ("Proactive Strategic Advisor pilot, hourly mechanical check. Run: cd {root} && python3 framework/scripts/strategic_advisor.py tick --campaign {campaign}. "
-                 "First inspect the independent meeting field: when actionable, apply cross-session transport section 13 (MEETING) and run `strategic_advisor.py meeting --campaign {campaign} --open` or resume its existing record. The ordinary verdict NONE does not cancel a due meeting. Use the hosting session, existing messages and current sources; no extra evaluation or cron is required. "
+                 "First inspect the independent meeting field: when actionable, apply cross-session transport section 14 (MEETING) and run `strategic_advisor.py meeting --campaign {campaign} --open` or resume its existing record. The ordinary verdict NONE does not cancel a due meeting. Use the hosting session, existing messages and current sources; no extra evaluation or cron is required. "
                  "If the verdict is NONE, DEFERRED, RUNNING, PAUSED, RESOURCES or DISABLED/EXPIRED/BUDGET, stay quiet unless something actionable changed; these mechanical verdicts do not establish that all useful work is exhausted. If EVALUATE, apply the current legend-strategic-advisor skill and start `strategic_advisor.py evaluate --campaign {campaign}` "
                  "in the background (run_in_background), and when it finishes read the drafted assignments with `status`, check each recipient is listed live by `claude agents --json`, "
                  "deliver each with SendMessage (durable artifact path plus pointer), record `deliver --state SENT --to <the session named in the send's receipt>` or `UNREACHABLE`, and later verify the take-in-charge in the recipient's task record. "
@@ -974,7 +974,7 @@ def meeting(campaign: Path, *, request: str = "", source: str = "", actor: str =
                     "Read current priority, pending steps and source material through these existing records; this index does not reprioritise or replace them.\n"
                     + "\n".join(tasks or ["- No open task record found; this does not prove no useful work remains."]) + "\n\n"
                     "## Round table and decisions\n"
-                    "Opening state under cross-session transport section 13: ADV, Orchestrator, Science, Harness and Mirror are not yet consulted. Closing notes below record actual follow-through. "
+                    "Opening state under cross-session transport section 14: ADV, Orchestrator, Science, Harness and Mirror are not yet consulted. Closing notes below record actual follow-through. "
                     "Use live named recipients and actual replies; unavailable or late participants do not block decisions.\n")
             path.write_text(text, encoding="utf-8")
             saved.update(active=path.name, last_started_utc=stamp,

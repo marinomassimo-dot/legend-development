@@ -151,7 +151,7 @@ scheduling, the mandate watch and the sessions' work are untouched. Remove the c
 ## MEETING
 
 **MEETING is part of the existing recall**, with its one rule in
-[cross-session transport §13](../../../framework/protocols/cross_session_transport.md#13--meeting).
+[cross-session transport §14](../../../framework/protocols/cross_session_transport.md#14--meeting).
 Inspect `tick.meeting` independently of the ordinary evaluation verdict. When actionable,
 the hosting session opens/resumes `strategic_advisor.py meeting --campaign <DIR> --open`,
 asks the live relevant participants for their prioritised deltas via SendMessage, and makes

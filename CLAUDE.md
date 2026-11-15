@@ -66,7 +66,7 @@ Three facts bind before you have finished reading anything else:
 | How to actually run a session; session types | [`framework/manuals/operator_manual.md`](framework/manuals/operator_manual.md) |
 | What the system can do, with maturity status | [`SKILLS.md`](SKILLS.md) · [`CAPABILITIES.md`](CAPABILITIES.md) · [`FAQ.md`](FAQ.md) |
 | Persistent opportunities for ADV and the sessions, with source and mandate links | [Living Research Portfolio](disease-models/wwox/research/drug_repurposing/research_portfolio.tsv) · `python3 framework/scripts/strategic_advisor.py portfolio` |
-| **MEETING** — six-hour or significant-event team alignment; priority-ordered pending work and prospects, actual participant replies, strategic and operational decisions | [cross-session transport §13](framework/protocols/cross_session_transport.md#13--meeting) · `strategic_advisor.py meeting --campaign <DIR>` |
+| **MEETING** — six-hour or significant-event team alignment; priority-ordered pending work and prospects, actual participant replies, strategic and operational decisions | [cross-session transport §14](framework/protocols/cross_session_transport.md#14--meeting) · `strategic_advisor.py meeting --campaign <DIR>` |
 | The disease-level model | [`disease-models/wwox/registries/working_model_current.md`](disease-models/wwox/registries/working_model_current.md) |
 
 ### The multi-agent laboratory
