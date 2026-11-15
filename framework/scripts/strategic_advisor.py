@@ -723,6 +723,7 @@ OPEN_VERDICTS = ("CONTINUE", "ALL_BLOCKED", "COMPLETE_PENDING")
 EVENT_SUBJECT = re.compile(r"COMPLETE|closed|closure|integrate task|delivered|consumed|landed", re.I)
 OUTCOMES = ("continue", "switch", "assign", "queue", "wait")        # HE57: the allowed endings of an evaluation; a wait is one of them, and states what it excluded and when it resumes
 OUTCOME_FIELDS = ("outcome", "excluded", "reason", "resume_when")
+MIN_CALLS_AFTER_FALLBACK = 8        # a run the runtime cut short by a refusal fallback and that opened fewer files than this reasoned from almost nothing (P11, 2026-11-15: 4 calls; P10 went on to 17 and was usable)
 
 
 def _now() -> dt.datetime:
@@ -1093,6 +1094,7 @@ def tick(campaign: Path) -> dict[str, Any]:
     ctl = operator_controls()
     return {"verdict": verdict, "why": why, "mode": "continuous" if cont else "pilot", "presidio": presidio_state(verdict, why, bool(cont), outcome, obs["queue"]["exhausted"], streak),
             "last_outcome": {k: outcome.get(k) for k in ("outcome", "reason", "excluded", "resume_when", "stated", "evaluation") if outcome.get(k) not in (None, "")}, "queue": obs["queue"],
+            "last_incomplete": state.get("last_incomplete") or {},
             "operator_controls": [f"{c['kind']}: {c['text']}" for c in (active_suspensions(ctl) + [c for c in ctl if c["kind"] in ("URGENT", "INTEGRATION")])[-6:]],
             "events": obs["events"][:12], "open_mandates": obs["open_mandates"], "waiting_on": [f"{w['task']}: {w['blocker'][:70]}" for w in obs["waits"]][:4] + ([f"... {len(obs['waits'])} in all"] if len(obs["waits"]) > 4 else []),
              "portfolio": {k: obs["portfolio"][k] for k in ("path", "available", "actionable", "errors")},
@@ -1308,6 +1310,19 @@ def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
     return "\n".join(parts)
 
 
+def incomplete_run(campaign: Path, label: str) -> str:
+    """Why a finished run must not be acted on, or "". P11 (2026-11-15) was cut short by a classifier stop after 4 tool calls, did not read the records it reasoned from and believed a delivery was still in flight; evaluate applied its portfolio updates and took its wait. The test is two measured facts: the runtime recorded a refusal fallback AND the run made fewer than MIN_CALLS_AFTER_FALLBACK tool calls."""
+    try:
+        meta = json.loads((campaign / label / "meta.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return ""
+    fell = (meta.get("runtime_readback") or {}).get("refusal_fallbacks") or []
+    calls = len(meta.get("tool_calls") or [])
+    if fell and calls < MIN_CALLS_AFTER_FALLBACK:
+        return f"a runtime refusal fallback ({fell[0].get('apiRefusalCategory')}) cut the run short after {calls} tool call(s), fewer than {MIN_CALLS_AFTER_FALLBACK}"
+    return ""
+
+
 def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout: int = 3600) -> int:
     """One strategic evaluation: brief, run (counted in the campaign budget), save, register the assignment drafts. Returns the run's exit code."""
     campaign = Path(campaign)
@@ -1329,6 +1344,13 @@ def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout:
         label = f"P{max((a['index'] for a in _attempts(campaign) if a['stage'] == 'P'), default=0)}"
         assessment = campaign / label / "assessment.md"
         outcome = parse_outcome("")
+        incomplete = incomplete_run(campaign, label) if code == 0 and assessment.exists() else ""
+        if incomplete:
+            print(f"{label}: INCOMPLETE — {incomplete}; no assignment, portfolio update or outcome was taken from it")
+            state = _load_state(campaign)
+            state.update(last_evaluation_utc=_utc(_now()), running="", last_incomplete={"evaluation": label, "utc": _utc(_now()), "reason": incomplete})      # the triggers stay pending: the next evaluation still has to see them
+            _save_state(campaign, state)
+            return code
         if code == 0 and assessment.exists():
             text = assessment.read_text(encoding="utf-8")
             made = register_assignments(campaign, label, text)
@@ -1346,7 +1368,7 @@ def evaluate(campaign: Path, model: str = "opus", effort: str = "high", timeout:
                     outcome.update(resume_when="event", problem="the resume condition was already met when the wait was stated; read as event")     # a wait that is over the moment it starts would be evaluated again every hour
         print(f"{label}: outcome {outcome['outcome'] or 'unstated'}" + (f" ({outcome['problem']})" if outcome["problem"] else ""))
         state = _load_state(campaign)
-        state.update(last_evaluation_utc=_utc(_now()), last_digest=state.get("pending_digest", state.get("last_digest")), running="", pending_events=[], pending_commits=0,
+        state.update(last_evaluation_utc=_utc(_now()), last_digest=state.get("pending_digest", state.get("last_digest")), running="", pending_events=[], pending_commits=0, last_incomplete={},
                      portfolio_digest=obs["portfolio"]["digest"],
                      last_outcome={**outcome, "evaluation": label, "utc": _utc(_now())}, unstated_streak=0 if outcome["stated"] else int(state.get("unstated_streak") or 0) + 1)
         _save_state(campaign, state)
