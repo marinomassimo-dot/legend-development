@@ -1,0 +1,44 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-HE-WINDOW-TABLE-20261115",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "NORMAL",
+ "assigned_on": "2026-11-15",
+ "OBJECTIVE": "One deterministic, read-only script that prints the trial's measurement table for a window [T0, T1) (ADV request, operator's 'consumption in explicit units'): per session turns, output, cache written and read, subagent totals apart, Advisor evaluations complete or incomplete, and git and ledger counts. No interpretation, no new register.",
+ "worktree": ".claude/worktrees/he60",
+ "branch": "he60-idle-check",
+ "CURRENT_STATE": "COMPLETE",
+ "MANDATE_STATE": "COMPLETE",
+ "CHECKPOINT": {
+  "last_verified_result": "trial_window_table.py plus a hand-count test on a fixture repository (4 tests OK); routing, documented-commands, release-surface and structured-data suites OK; census suite OK",
+  "first_incomplete_work": "none; gated publish and CI observation follow"
+ },
+ "TAKEN_IN_CHARGE": {
+  "utc": "2026-11-15T14:22:00Z",
+  "provenance": "cross-session message from the ADV session; the measurement requirement is in roadmap_current.md (24-hour trial entry, 'consumption in explicit units')",
+  "scope": "offline, read-only, no spend"
+ },
+ "AUTHORISED_QUEUE_20261115": {
+  "OBJ_1_TABLE": {
+   "order": 1,
+   "title": "Window measurement table",
+   "steps": [
+    {
+     "step": "Add --until to the census and build the table script from the census, the Advisor's own incomplete-run test and git and ledger reads",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "trial_window_table.py; test_trial_window_table.py hand counts"
+    },
+    {
+     "step": "Route it in README and hand it to ADV with the limits",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "README tool table row; message to ADV"
+    }
+   ]
+  }
+ }
+}

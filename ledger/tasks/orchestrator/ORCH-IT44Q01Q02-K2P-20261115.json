@@ -1,0 +1,26 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-IT44Q01Q02-K2P-20261115",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "NORMAL",
+  "OBJECTIVE": "IT44-Q01 (TASK/THIK Ba2+) and IT44-Q02 (primary EC50 of the K2P openers) from primary papers; one delegate under the prepared brief; ADV go-ahead 2026-11-15.",
+  "START_UTC": "2026-11-15T13:55:00Z",
+  "MANDATE_STATE": "COMPLETE",
+  "RESULT_SO_FAR": "Both rows NARROWED, neither concluded. 10 papers reached, 3 read with locators, 7 abstract/PMC-abstract/link-resolver only. Riluzole 139.4 uM in the review rows matches a native mouse SCG-neuron current (PMC6623616), not cloned TREK-1/TRAAK; fenamate: one 100 uM concentration, abstract only; TASK-1 Ba2+ only 0.3-10 mM; TASK-3 and THIK-1 not reached. Three receipts recorded. IT re-checked three decisive quotes; no blind verifier.",
+  "CLOSE_WHEN": "delegate result integrated, receipts recorded, rows noted, landed.",
+  "AUTONOMY_TRIAL_NOTES": {
+    "delegates": "one legend-delegate, sonnet, effort high read back x59 turns",
+    "tokens_of_delegates": {
+      "output": 73060,
+      "cache_written": 175795,
+      "cache_read": 5675647,
+      "peak_context": 175797,
+      "turns": 59,
+      "duration_ms": 877829
+    },
+    "waits_interruptions_restarts_human_interventions": [
+      "none"
+    ]
+  }
+}
