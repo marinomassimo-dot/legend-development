@@ -300,6 +300,18 @@
      "evidence": "Premises checked and the draft narrowed (see TRIAL_24H.log 08:3xZ); sending after this landing. SENT 2026-11-15T08:3xZ to IT Orchestrator (msg f30483d2, --to recorded, landed with this commit); take-in-charge pending. TAKEN and DELIVERED by IT (ORCH-RP008-UNREAD-20261115, landed 1e113ed06 08:37:36Z; SENT 08:26:46Z, so about 11 minutes by git, not the 1 h 40 min IT first wrote from its nominal START_UTC 07:00Z; asked to correct). RESULT, negative and informative, read in README and census.tsv: of the 149 placeholders (30 with receipt depths, 119 without, 31/118 after one new receipt), 134 are Tier C LOW, 4 not applicable, 11 Tier B (4 MODERATE-HIGH, 7 MODERATE); among Tier B none is lawfully readable free (4 case reports outside PMC, flagged not open access; the rest with receipts or paywalled); the 47 with free text are all Tier C LOW oncology/DDR and none is named by an INV or open question; no Science batch selected; RP-008 parked with a revival trigger; the INTAKE and METABOLIC 'pool exhausted' blockers are SUPPORTED as defined (dated notes added, no step state changed); one declared-without-receipt reading (P304, ACK1) closed with a contemporaneous partial receipt whose file SHA-256 equals the IT11 declaration; FM-011 title screen of 115 unreceipted LOW items found no Tier A HIGH hiding (titles are not readings). No research decision changed; a representation loss closed; a blocker's meaning clarified. Cost reported by IT: no delegate, about 17 Europe PMC searches, 1 PDF download, 1 PMC page request, generic client. Not done: a broader declared-without-receipt scan beyond drug_repurposing/."
     }
    ]
+  },
+  "OBJ_16_ADV011": {
+   "order": 16,
+   "title": "ADV-011 (Advisor draft from evaluation 13, RP-004): one mechanism-first generative case from the mechanism lens, for the Orchestrator",
+   "steps": [
+    {
+     "step": "Check the draft's premises in the originals, correct the seed, send with the queue wording, record SENT with --to, verify take-in-charge, follow the selection and the Scientist batch to delivery and consumption",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Premises checked and the seed corrected (TRIAL_24H.log 09:4xZ); sending after this landing."
+    }
+   ]
   }
  },
  "DECISIONS_TAKEN": [
@@ -499,6 +511,22 @@
    {
     "utc": "2026-11-15T08:41Z",
     "event": "ADV-010 delivered by IT 11 minutes after it was sent (git), unchanged-outcome class: RP-008 parked; the exhausted-pool claim supported; one receipt recorded; a unit-of-time error in IT's own note (1 h 40 min from a nominal START_UTC) corrected at my request. Presidio decision after it: no further assignment now: P12's own fallback (RP-002, the first five units of the selection table) was weighed and not assigned: the five units (ethosuximide, lithium, d-APV class, A51, ketogenic diet; plus the excluded AAV9 gene-addition unit) have their next steps wet-gated and have been through many iterations, so an in-silico reassessment expects 'parked' at best, and the operator's own rule parks a wet-gated branch; revisit only on an event (SCI's PRESIDIO-005 delivery, a scout signal that survives triage, an operator line)."
+   },
+   {
+    "utc": "2026-11-15T09:23Z",
+    "event": "tick EVALUATE: a new roadmap line landed (PLAN session, 08:45Z): mechanism discovery stays open beyond existing clinical investigations; the first coverage handoff is preparation, an existing INV or open-question citation is not required for a new question, use the mechanism lens and lawful full-text availability to select a small generative research case with transfer limits, competing explanations, a pharmacological comparison where justified and a rejecting experiment; canonical rule: cross-session transport section 12, 'Strategic synthesis is executable work'; and a host duty: reconcile the one existing Advisor recall with the canonical recall text, update only if stale."
+   },
+   {
+    "utc": "2026-11-15T09:2xZ",
+    "event": "recall reconciled with the canonical text (it was stale: no PAUSED/RESOURCES, no --to, no same-turn delivery, no 'prepare useful work' sentence): CronDelete 3382bb86 and CronCreate 477df2a9 in the same step, same cadence (hourly at :17), exactly one job (CronList), shared tick state untouched (host directory)."
+   },
+   {
+    "utc": "2026-11-15T09:3xZ",
+    "event": "evaluation 13 (P13) run: stage P, opus high, 12 turns all claude-opus-5-5, output 12,538, cache read 710,014, cache creation 72,672, complete; outcome assign: draft ADV-011 (RP-004: one mechanism-first generative case selected from unread_gold --mechanism, to the Orchestrator, one Scientist batch queued behind PRESIDIO-005). It disagreed with my 08:41Z no-assignment decision on the ground of PLAN's later correction, which is right. Invocation count 13, drafts 11."
+   },
+   {
+    "utc": "2026-11-15T09:4xZ",
+    "event": "ADV-011 premises checked before sending: the lens count holds (I re-ran unread_gold --mechanism --json: 74 items, 16 with receipt depths, 58 without; the draft quotes 74/60); the draft's SEED (the WWOX SDR substrate conflict, steroid oxidation PMID 21476439 against the 2015 retinal proposal PMID 25662954) is NOT unadjudicated in LEGEND: analysis/wwox_sdr_function_per_molecule_census_20260921.md section W2.1 found that the retinal proposal has no primary paper behind it, from that lab or any lab, and no independent literature; the draft itself named the September files as the first check and had not read them. Seed withdrawn as a pick, kept only as 'assessed in September'; P290 (declared read in the discovery ledger without a receipt) to be skipped or receipted, not re-read."
    }
   ]
  }
