@@ -1,0 +1,19 @@
+counts re-derived from the sealed extraction equal IT's printed counts for all 10 classes IT printed: True
+
+observed ordering 'partial_counts'
+  F1_per_thread_sum: here 0.90 on 5 pairs (5 classifiable of 21); IT 0.90 on 5 pairs; AGREE
+  F1_origin_collapsed: here 0.90 on 5 pairs (5 classifiable of 21); IT 0.90 on 5 pairs; AGREE
+  F2: here 0.83 on 3 pairs (5 classifiable of 21); IT 0.83 on 3 pairs; AGREE
+  baseline_i_PTZ: here not scorable on 0 pairs (5 classifiable of 21); IT n/a; AGREE
+  baseline_ii_frequency: here 0.60 on 5 pairs (5 classifiable of 21); IT 0.60 on 5 pairs; AGREE
+  baseline_iii_uniform: here 0.50 on 5 pairs (5 classifiable of 21); IT 0.50 on 5 pairs; AGREE
+
+observed ordering 'resolved_only'
+  F1_per_thread_sum: here 0.73 on 15 pairs (15 classifiable of 21); IT 0.73 on 15 pairs; AGREE
+  F1_origin_collapsed: here 0.70 on 15 pairs (15 classifiable of 21); IT 0.70 on 15 pairs; AGREE
+  F2: here 0.83 on 3 pairs (15 classifiable of 21); IT 0.83 on 3 pairs; AGREE
+  baseline_i_PTZ: here 0.64 on 7 pairs (15 classifiable of 21); IT 0.64 on 7 pairs; AGREE
+  baseline_ii_frequency: here 0.47 on 15 pairs (15 classifiable of 21); IT 0.47 on 15 pairs; AGREE
+  baseline_iii_uniform: here 0.50 on 15 pairs (15 classifiable of 21); IT 0.50 on 15 pairs; AGREE
+
+VERDICT: the two computations agree
