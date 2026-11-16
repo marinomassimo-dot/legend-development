@@ -1,0 +1,342 @@
+{
+  "capture": {
+    "assessment_sha256": "6ae5db4ffb71884f4a0d128c1d7cd9fb5a9e6576f78b905157f8072472fc028c",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P15/stream.jsonl",
+    "raw_stream_sha256": "72fe516c501a7351eac332b25f55fcbe76a5a277d8548e74c7a07a3a48553c2d",
+    "source_session_id": "598d90ab-7d0d-47a3-baeb-430391a475f1",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 65674
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-16T07:10:00Z",
+  "label": "P15",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": false,
+      "efforts": {
+        "high": 13
+      },
+      "first_turn_context": 42035,
+      "models": {
+        "claude-opus-5-5": 13
+      },
+      "peak_context": 78967,
+      "totals": {
+        "cache_creation": 78965,
+        "cache_read": 762290,
+        "output": 13521
+      },
+      "turns": 13
+    },
+    "final_turn_model": "claude-opus-5-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.0026562,
+        "inputTokens": 26432,
+        "maxOutputTokens": 128000,
+        "outputTokens": 26,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 78965,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 78965,
+        "cacheReadInputTokens": 762290,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 1.054702,
+        "inputTokens": 26,
+        "maxOutputTokens": 128000,
+        "outputTokens": 13521,
+        "provider": "firstParty",
+        "thinkingTokens": 3692,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 21,
+    "refusal_fallbacks": [],
+    "total_cost_usd": 1.0573582,
+    "turn_models": {
+      "claude-opus-5-5": 13
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 78965,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 78965,
+      "cache_read_input_tokens": 762290,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 26,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 422,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 422,
+          "cache_read_input_tokens": 78543,
+          "input_tokens": 2,
+          "output_tokens": 7012,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 13521,
+      "output_tokens_details": {
+        "thinking_tokens": 3692
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-16T07:07:30Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261116T070702Z-f4lqagml.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# MEETING \u2014 2026-11-16T07:07:02Z\n2\t\n3\tStarted UTC: 2026-11-16T07:07:02Z\n4\tSnapshot SHA: fa81fd50aea9be7112409a551aa749b6db53ab4a\n5\tCoordination: ADV (directio"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/**"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ADV_SEED.md"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P14/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tI'm assigning the Orchestrator one RP-003 open-question draw, together with the step that gets the RP-004 contrast into the open-question map. RP-004 itself g"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ADV_SEED.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Brainstorm of 2026-11-16: ADV seed (non-canonical; INFERENZA unless a source is named; not medical advice)\n2\t\n3\tWritten for: the IT Orchestrator, Science an"
+    },
+    {
+      "input": {
+        "head_limit": 40,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADV012-RP003-WO11-20261115.json",
+        "pattern": "\"(state|status|verdict|step|updated_utc|next)\"\\s*:"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No matches found"
+    },
+    {
+      "input": {
+        "head_limit": 30,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADV012-RP003-WO11-20261115.json",
+        "pattern": "COMPLETE|BLOCKED|unblock_when|DONE|consum"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "9:  \"MANDATE_STATE\": \"COMPLETE\","
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/*20261115*/README.md"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/cav3_pair_adv009_20261115/README.md\ndisease-models/wwox/research/drug_repurposing/generation_it55_20261115/README."
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/aed_compare_it31_20261107/**"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/aed_compare_it31_20261107/BRIEF.md\ndisease-models/wwox/research/drug_repurposing/aed_compare_it31_20261107/output/"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/aed_compare_it31_20261107/output/README.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Antiseizure comparators for the seizure-control cards (P8, IT31)\n2\t\n3\tNot medical advice. No dose, schedule or preference between agents. Three columns are "
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/nx1_sizing_sci_20261115/README.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# NX1 sizing for ethosuximide from the Fig 7b extraction (PMID 32000863), SCI, 2026-11-15\n2\t\n3\tNon-canonical research material. Not medical advice; no dose, r"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/meeting_20261115/README.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# MEETING \u2014 implementation and observation, 15 November 2026\n2\t\n3\tActor: `plan` (Harness Engineering); runtime: Codex; profile: HARNESS.\n4\t\n5\t## Problem and i"
+    },
+    {
+      "input": {
+        "glob": "!**/view/**",
+        "head_limit": 60,
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "antiseizure|AED|valpro|vigabatrin|sodium.channel|Dravet|loss-of-inhibition|aggravat"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 60 files limit: 60\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P15/brief.md\ndisease-models/wwox/research/drug_repurposing/roadmap"
+    },
+    {
+      "input": {
+        "glob": "!**/view/**",
+        "head_limit": 25,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox",
+        "pattern": "coded classes|worsen|aggravat|exacerbat"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/registries/fulltext_read_receipts.jsonl:360:[Omitted long matching line]\ndisease-models/wwox/registries/fulltext_read_receipts.jsonl:578:[Om"
+    },
+    {
+      "input": {
+        "glob": "*.tsv",
+        "head_limit": 30,
+        "output_mode": "count",
+        "path": "/home/desktop/legend-development/disease-models/wwox",
+        "pattern": "(?i)levetiracetam"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/reach_it31_20261107/catalogue_ids_it32.tsv:3\ndisease-models/wwox/research/drug_repurposing/reach_it31_20261107/rea"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/denominators_a1.tsv"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tintervention_class\tsource_id\tn_patients_in_report\tn_tried\tn_continued\tn_stopped\tn_symptomatic_response\tn_no_response\tn_with_developmental_outcome\tn_with_both_"
+    },
+    {
+      "input": {
+        "output_mode": "count",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/cases_a1.tsv",
+        "pattern": "(?i)levetiracetam|valpro|vigabatrin|carbamazep|oxcarbaz|phenyto|lamotrig|ketogenic|topiram"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/cases_a1.tsv:42\n\nFound 42 total occurrences across 1 file."
+    },
+    {
+      "input": {
+        "-o": true,
+        "head_limit": 20,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations.tsv",
+        "pattern": "^INV-\\d+\\t[^\\t]*\\t[^\\t]*"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No matches found"
+    },
+    {
+      "input": {
+        "-o": true,
+        "head_limit": 14,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations.tsv",
+        "pattern": "INV-(0[1-9]|1[0-2])\\b.{0,140}"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "2:INV-01\tAAV9-delivered human WWOX (gene addition)\tDoes neuronal WWOX restoration started AFTER symptom onset recover any endpoint, or only prevent \n3:INV-02\tIn"
+    },
+    {
+      "input": {
+        "pattern": "ledger/tasks/*/*2026111[56]*.json"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "ledger/tasks/orchestrator/ORCH-ADV009-20261115.json\nledger/tasks/plan/PLAN-HE-IT23-SYMBOL-TRIAL-20261115.json\nledger/tasks/orchestrator/ORCH-RP008-UNREAD-202611"
+    },
+    {
+      "input": {
+        "head_limit": 12,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-RP005-HELDOUT-20261115.json",
+        "pattern": "MANDATE_STATE|\"title\"|\"objective\"|held.out|hit rate|frozen"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "7:  \"OBJECTIVE\": \"RP-005 held-out test: IT's predictions on SCI's Fig 7 quantification of PMID 32000863 (frozen 745d41415 before it existed), scoring, and a dat"
+    }
+  ]
+}

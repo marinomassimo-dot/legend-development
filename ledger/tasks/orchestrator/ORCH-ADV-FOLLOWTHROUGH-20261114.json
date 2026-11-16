@@ -355,6 +355,47 @@
      "blocker": "standing check; recall job 477df2a9 (hourly :17); resolves only on an operator PAUSE, STOP or a new instruction"
     }
    ]
+  },
+  "OBJ_20_OPERATOR_PROGRAMME_20261116": {
+   "status": "IN_PROGRESS",
+   "source": "operator chat 2026-11-16 ~07:05Z, written in roadmap_current.md (line 2026-11-16) and advisor_pilot_20261113/brainstorm_20261116/ADV_SEED.md",
+   "instruction": "MEETING with three agenda items (predictive-generative capacity; which thread for a new batch; antiseizure-agent mechanism matching, not literature-only), brainstorm with linear and divergent thinking, nobody extraneous, then plans and prompts for IT, SCI and HE, direct and check execution, tasks for at least eight hours.",
+   "timeline_utc": {
+    "07:07": "MEETING f4lqagml opened, invitations to IT, SCI, HE with seed",
+    "07:08": "Advisor evaluation P15 started in the background (batch-thread view)",
+    "by 08:00": "contributions due (ideas item 1, top-3 threads scored item 2, matrix and leaps item 3)",
+    "08:00-08:30": "ADV consolidates: PLAN_8H.md, rubric aggregation, matrix freeze rule; closing notes of the round",
+    "08:30": "execution prompts to IT, SCI, HE (PRESIDIO-009 onwards), predictions frozen by commit hash before any outcome table is opened",
+    "hourly recalls 09:17 .. 15:17": "check each owner's record against the plan's checkpoint; send a prompt to any session idle without a written reason; help the stuck",
+    "~11:30": "mid review: first deliverables (ledger baseline, matrix v1, thread ranking) read by a second actor",
+    "~14:30": "scoring and second reads; blind check where a claim changes a row",
+    "15:30-16:00": "closing synthesis and report to the operator (what moved, what did not, cost in explicit units), then decide the next programme",
+    "not before": "2026-11-16T15:15Z (eight hours after the programme start)"
+   },
+   "constraints": "mechanism matching only; no dose, schedule or recommendation to use any agent; BLOCK-1 before any candidate row; reference genotype class only; generic client; reCAPTCHA or interstitial = stop; no spend; second reader or blind check before any consumed claim changes a card or row.",
+   "steps": [
+    {
+     "n": 1,
+     "what": "open the round and invite",
+     "status": "DONE",
+     "evidence": "meeting record 20261116T070702Z; messages accepted by IT, SCI, HE at 07:09Z"
+    },
+    {
+     "n": 2,
+     "what": "consolidate contributions into PLAN_8H.md and launch prompts",
+     "status": "TODO"
+    },
+    {
+     "n": 3,
+     "what": "monitor hourly against the plan checkpoints",
+     "status": "TODO"
+    },
+    {
+     "n": 4,
+     "what": "closing synthesis and operator report",
+     "status": "TODO"
+    }
+   ]
   }
  },
  "DECISIONS_TAKEN": [
