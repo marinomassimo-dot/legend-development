@@ -64,27 +64,29 @@ print(json.dumps(cal, indent=1))
 if a.stage == "calibrate": sys.exit(0)
 # ---- stage 2: medians (cumulative probability 0.5) of the black (S-WT), blue (S-HT) and red (S-KO) curves, exactly as the preregistration and Amendment 1 fix them
 import math, itertools, csv
-INSET = (345, 425, 20, 110)                       # panel B inset (x0, x1, y0, y1): excluded
+EXCL = {"B": [(316, 430, 18, 112)], "C": [(470, 560, 205, 270)]}     # Amendment 2: the inset with its labels (B) and the legend (C)
 CLASS = {"S-WT": dark, "S-HT": blue, "S-KO": red}
 res = {}
 for name, P in PANEL.items():
     c = cal[name]; x0, x1, y0, y1 = P["box"]; xt = P["xticks"]; xmin, xmax = xt[0], xt[-1]
-    base_y = c["baseline_row"] + 0.5; top = c["top_of_y_axis"]; row50 = base_y - 0.5 * (base_y - top)
+    base_y = c["baseline_row"] + 0.5; top = c["top_of_y_axis"]; hgt = base_y - top
     span = c["right_end"] - c["left_col"]; unit = (xmax - xmin) / span
-    out = {"row_p50": row50, "unit_per_px": unit, "genotypes": {}}
+    out = {"row_p50": base_y - 0.5 * hgt, "unit_per_px": unit, "genotypes": {}}
     for g, m in CLASS.items():
-        pts = []
-        for y in range(int(math.floor(row50 - 1)), int(math.ceil(row50 + 1)) + 1):
-            if abs(y - row50) > 1.0: continue
-            for x in range(c["left_col"] + 2, c["right_end"] - 1):
-                if name == "B" and INSET[0] <= x <= INSET[1] and INSET[2] <= y <= INSET[3]: continue
-                if m[y, x]: pts.append(x)
-        if not pts:
-            out["genotypes"][g] = {"status": "hidden (no pixel of the class in the band)"}; continue
-        px = float(np.mean(pts)); u = (px - c["left_col"]) / span
-        val = xmin + (px - c["left_col"]) * unit
-        unc_px = math.sqrt(1.5 ** 2 + (2 * (1 - u)) ** 2 + (2 * u) ** 2)
-        out["genotypes"][g] = {"status": "read", "pixels_in_band": len(pts), "median_px": round(px, 2), "median_value": round(val, 3), "uncertainty_value": round(unc_px * unit, 3)}
+        rows_p, rows_x = [], []
+        for y in range(int(top), int(base_y) + 1):
+            pr = (base_y - y) / hgt
+            if not 0.40 <= pr <= 0.60: continue
+            xs_ = [x for x in range(c["left_col"] + 2, c["right_end"] - 1) if m[y, x] and not any(e[0] <= x <= e[1] and e[2] <= y <= e[3] for e in EXCL[name])]
+            if xs_: rows_p.append(pr); rows_x.append(float(np.mean(xs_)))
+        if len(rows_p) < 5:
+            out["genotypes"][g] = {"status": f"hidden (only {len(rows_p)} rows with the class between p 0.40 and 0.60)"}; continue
+        A = np.vstack([rows_p, np.ones(len(rows_p))]).T; coef, resid, _, _ = np.linalg.lstsq(A, np.array(rows_x), rcond=None)
+        px = float(coef[0] * 0.5 + coef[1]); n = len(rows_p)
+        se = float(math.sqrt(resid[0] / (n - 2) * (1 / n + (0.5 - np.mean(rows_p)) ** 2 / np.sum((np.array(rows_p) - np.mean(rows_p)) ** 2)))) if n > 2 and len(resid) else 0.0
+        u = (px - c["left_col"]) / span; val = xmin + (px - c["left_col"]) * unit
+        unc_px = math.sqrt(se ** 2 + 1.5 ** 2 + (2 * (1 - u)) ** 2 + (2 * u) ** 2)
+        out["genotypes"][g] = {"status": "read", "rows_used": n, "median_px": round(px, 2), "median_value": round(val, 3), "uncertainty_value": round(unc_px * unit, 3), "fit_se_px": round(se, 2)}
     # f = (S-HT - S-KO)/(S-WT - S-KO) with the extremes of the uncertainty band; amplitude is read as magnitude (more negative = larger)
     gs = out["genotypes"]
     if all(gs[g]["status"] == "read" for g in CLASS):
@@ -93,8 +95,8 @@ for name, P in PANEL.items():
         f = (v["S-HT"] - v["S-KO"]) / (v["S-WT"] - v["S-KO"]) if v["S-WT"] != v["S-KO"] else float("nan")
         fs = []
         for sg in itertools.product((-1, 1), repeat=3):
-            a, b2, k = (v["S-WT"] + sg[0] * d["S-WT"], v["S-HT"] + sg[1] * d["S-HT"], v["S-KO"] + sg[2] * d["S-KO"])
-            if a != k: fs.append((b2 - k) / (a - k))
+            w_, h_, k_ = (v["S-WT"] + sg[0] * d["S-WT"], v["S-HT"] + sg[1] * d["S-HT"], v["S-KO"] + sg[2] * d["S-KO"])   # (a bug fix after the commit: these names shadowed the argparse object `a`; no change of method)
+            if w_ != k_: fs.append((h_ - k_) / (w_ - k_))
         sep = abs(v["S-WT"] - v["S-KO"]) > math.sqrt(d["S-WT"] ** 2 + d["S-KO"] ** 2)
         cls = lambda x: "near controls" if x >= 0.75 else ("midway" if x >= 0.25 else "near knockout")
         labels = {cls(x) for x in fs + [f]}

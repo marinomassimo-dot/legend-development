@@ -1,0 +1,120 @@
+{
+ "B": {
+  "baseline_row": 136,
+  "left_col": 315,
+  "right_end": 545,
+  "top_of_y_axis": 23,
+  "label_cross_check": [
+   {
+    "label_value": -50,
+    "predicted_px": 315.0,
+    "nearest_label_cluster_px": 317.0
+   },
+   {
+    "label_value": -45,
+    "predicted_px": 338.0,
+    "nearest_label_cluster_px": 338.1
+   },
+   {
+    "label_value": -40,
+    "predicted_px": 361.0,
+    "nearest_label_cluster_px": 359.2
+   },
+   {
+    "label_value": -35,
+    "predicted_px": 384.0,
+    "nearest_label_cluster_px": 382.8
+   },
+   {
+    "label_value": -30,
+    "predicted_px": 407.0,
+    "nearest_label_cluster_px": 405.5
+   },
+   {
+    "label_value": -25,
+    "predicted_px": 430.0,
+    "nearest_label_cluster_px": 430.1
+   },
+   {
+    "label_value": -20,
+    "predicted_px": 453.0,
+    "nearest_label_cluster_px": 451.2
+   },
+   {
+    "label_value": -15,
+    "predicted_px": 476.0,
+    "nearest_label_cluster_px": 473.0
+   },
+   {
+    "label_value": -10,
+    "predicted_px": 499.0,
+    "nearest_label_cluster_px": 499.2
+   },
+   {
+    "label_value": -5,
+    "predicted_px": 522.0,
+    "nearest_label_cluster_px": 521.2
+   },
+   {
+    "label_value": 0,
+    "predicted_px": 545.0,
+    "nearest_label_cluster_px": 544.5
+   }
+  ],
+  "largest_label_deviation_px": 3.0
+ },
+ "C": {
+  "baseline_row": 277,
+  "left_col": 315,
+  "right_end": 545,
+  "top_of_y_axis": 173,
+  "label_cross_check": [
+   {
+    "label_value": 0,
+    "predicted_px": 315.0,
+    "nearest_label_cluster_px": 314.5
+   },
+   {
+    "label_value": 10,
+    "predicted_px": 343.8,
+    "nearest_label_cluster_px": 343.5
+   },
+   {
+    "label_value": 20,
+    "predicted_px": 372.5,
+    "nearest_label_cluster_px": 373.0
+   },
+   {
+    "label_value": 30,
+    "predicted_px": 401.2,
+    "nearest_label_cluster_px": 401.0
+   },
+   {
+    "label_value": 40,
+    "predicted_px": 430.0,
+    "nearest_label_cluster_px": 429.2
+   },
+   {
+    "label_value": 50,
+    "predicted_px": 458.8,
+    "nearest_label_cluster_px": 458.0
+   },
+   {
+    "label_value": 60,
+    "predicted_px": 487.5,
+    "nearest_label_cluster_px": 487.5
+   },
+   {
+    "label_value": 70,
+    "predicted_px": 516.2,
+    "nearest_label_cluster_px": 516.0
+   },
+   {
+    "label_value": 80,
+    "predicted_px": 545.0,
+    "nearest_label_cluster_px": 544.5
+   }
+  ],
+  "largest_label_deviation_px": 0.8000000000000114
+ }
+}

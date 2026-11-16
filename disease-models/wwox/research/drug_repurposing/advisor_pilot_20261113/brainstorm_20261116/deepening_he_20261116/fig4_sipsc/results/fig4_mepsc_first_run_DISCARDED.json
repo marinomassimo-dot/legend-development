@@ -1,0 +1,59 @@
+{
+ "B": {
+  "row_p50": 79.75,
+  "unit_per_px": 0.21739130434782608,
+  "genotypes": {
+   "S-WT": {
+    "status": "read",
+    "pixels_in_band": 3,
+    "median_px": 325.0,
+    "median_value": -47.826,
+    "uncertainty_value": 0.529
+   },
+   "S-HT": {
+    "status": "read",
+    "pixels_in_band": 3,
+    "median_px": 481.33,
+    "median_value": -13.841,
+    "uncertainty_value": 0.469
+   },
+   "S-KO": {
+    "status": "read",
+    "pixels_in_band": 2,
+    "median_px": 474.5,
+    "median_value": -15.326,
+    "uncertainty_value": 0.464
+   }
+  },
+  "f": {
+   "nominal": -0.046,
+   "range_min": -0.077,
+   "range_max": -0.016,
+   "separable": true,
+   "classification": "near knockout"
+  }
+ },
+ "C": {
+  "row_p50": 225.25,
+  "unit_per_px": 0.34782608695652173,
+  "genotypes": {
+   "S-WT": {
+    "status": "read",
+    "pixels_in_band": 6,
+    "median_px": 445.5,
+    "median_value": 45.391,
+    "uncertainty_value": 0.72
+   },
+   "S-HT": {
+    "status": "hidden (no pixel of the class in the band)"
+   },
+   "S-KO": {
+    "status": "read",
+    "pixels_in_band": 1,
+    "median_px": 326.0,
+    "median_value": 3.826,
+    "uncertainty_value": 0.844
+   }
+  }
+ }
+}
