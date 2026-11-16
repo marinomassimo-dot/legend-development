@@ -194,7 +194,7 @@ def check_row(root: Path, row: dict[str, str], receipts: Path) -> tuple[list[str
     if row["kind"] == "paper_content":
         warn.append("memory of the paper not excluded")
     freeze = row["freeze_commit"]
-    statement = row["statement_ref"].split("#", 1)[0]
+    statement = re.split(r"[#\s]", row["statement_ref"].strip(), maxsplit=1)[0]   # `path#anchor` or `path anchor`: repository paths hold no space
     if not freeze or not statement:
         return bad + ["freeze_commit and statement_ref are required"], warn, order
     if not git_ok(root, "cat-file", "-e", f"{freeze}^{{commit}}"):
@@ -209,7 +209,7 @@ def check_row(root: Path, row: dict[str, str], receipts: Path) -> tuple[list[str
     now_blob = blob_at(root, "HEAD", statement)
     if frozen_blob is not None and now_blob is not None and now_blob != frozen_blob:
         warn.append("EDITED: the statement file differs from its frozen blob")
-    outcome = row["outcome_ref"].split("#", 1)[0]
+    outcome = re.split(r"[#\s]", row["outcome_ref"].strip(), maxsplit=1)[0]
     if outcome and blob_at(root, freeze, outcome) is not None:
         if blindness == "declared":
             warn.append(f"outcome_in_tree_at_freeze = yes (blindness declared, not shown): {outcome}")
