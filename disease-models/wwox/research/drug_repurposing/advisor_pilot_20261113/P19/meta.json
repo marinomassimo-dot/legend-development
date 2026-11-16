@@ -1,0 +1,393 @@
+{
+  "capture": {
+    "assessment_sha256": "048ec754839537204514e572c6d5835741570beeb70331024ee7158c5ee9d60b",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P19/stream.jsonl",
+    "raw_stream_sha256": "9ad1ae6027aac8f5fd71e1df4f892804e84644daa7cae95052c916f8dde1fe8e",
+    "source_session_id": "04854b0d-99d1-493b-9031-6f95ffc4d417",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 73867
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-16T22:22:37Z",
+  "label": "P19",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": false,
+      "efforts": {
+        "high": 16
+      },
+      "first_turn_context": 45257,
+      "models": {
+        "claude-opus-5-5": 16
+      },
+      "peak_context": 86348,
+      "totals": {
+        "cache_creation": 80133,
+        "cache_read": 1006825,
+        "output": 14248
+      },
+      "turns": 16
+    },
+    "final_turn_model": "claude-opus-5-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.0029251,
+        "inputTokens": 29136,
+        "maxOutputTokens": 128000,
+        "outputTokens": 23,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 80133,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 80133,
+        "cacheReadInputTokens": 1006825,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 1.127525,
+        "inputTokens": 34,
+        "maxOutputTokens": 128000,
+        "outputTokens": 14248,
+        "provider": "firstParty",
+        "thinkingTokens": 5193,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 26,
+    "refusal_fallbacks": [],
+    "total_cost_usd": 1.1304501,
+    "turn_models": {
+      "claude-opus-5-5": 16
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 80133,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 80133,
+      "cache_read_input_tokens": 1006825,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 34,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 5876,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 5876,
+          "cache_read_input_tokens": 80468,
+          "input_tokens": 4,
+          "output_tokens": 448,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 14248,
+      "output_tokens_details": {
+        "thinking_tokens": 5193
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-16T22:19:51Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P18/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tI've finished checking the records. My recommendation is to keep the queued plan as it is: no new assignment and no wait. My assessment follows.\n2\t\n3\t## Asses"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-*.md"
+      },
+      "is_error": true,
+      "name": "Glob",
+      "result_head": "Ripgrep search timed out after 20 seconds. The search may have matched files but did not complete in time. Try searching a more specific path or pattern."
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/**/*.md"
+      },
+      "is_error": true,
+      "name": "Glob",
+      "result_head": "Ripgrep search timed out after 20 seconds. The search may have matched files but did not complete in time. Try searching a more specific path or pattern."
+    },
+    {
+      "input": {
+        "output_mode": "count",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings",
+        "pattern": "closing|Decision|decision"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261115T213525Z-dd63awrt.md:11\ndisease-models/wwox/research/drug_repurpos"
+    },
+    {
+      "input": {
+        "head_limit": 20,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-20261114.json",
+        "pattern": "ADV-016|D5b|bisection"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No matches found"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261116T210134Z-hbv5df2s.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# MEETING \u2014 2026-11-16T21:01:34Z\n2\t\n3\tStarted UTC: 2026-11-16T21:01:34Z\n4\tSnapshot SHA: 7935b43e3b8906041aa9f8a9255bedc173c8e355\n5\tCoordination: ADV (directio"
+    },
+    {
+      "input": {
+        "glob": "*.tsv",
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116",
+        "pattern": "missense"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 8 files\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_i2_semiology_20261116/addendum_pass/children_addendum."
+    },
+    {
+      "input": {
+        "glob": "IT_TASK_RECORD_20261116.md",
+        "head_limit": 40,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116",
+        "pattern": "ADV-016|P4|variant list|arm-table freeze|22:|21:4|21:5"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No matches found"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113",
+        "pattern": "ADV-016"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 6 files\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261116T210134Z-hbv5df2s.md\ndisease-models/wwox/research/dr"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/research_portfolio.tsv",
+        "limit": 3,
+        "offset": 1
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tid\ttheme\topportunity\tdecision\tpriority\twhy_now\tnext_action\tstatus\tsources\tmandate_id\tresume_when\toutcome\tupdated_utc\n2\tRP-001\tGeneration\tTurn unused qualified"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113",
+        "pattern": "variant_domain_map|P4 step|missense-only"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 3 files\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261116T210134Z-hbv5df2s.md\ndisease-models/wwox/research/dr"
+    },
+    {
+      "input": {
+        "head_limit": 15,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-20261114.json",
+        "pattern": "2026-11-16T2[12]:"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No matches found"
+    },
+    {
+      "input": {
+        "head_limit": 40,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/TASK_RECORD_SCI_20261116.md",
+        "pattern": "P4|missense|22:|23:00|arm|BLOCKED|unblock|waiting|idle"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "2:[Omitted long matching line]\n4:* OPEN (own): missense functional-evidence table (needs IT's list); harness bisection by HE; full-text coverage of Carver and R"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/variant_domain_map/CLASSES_FIXED_BEFORE_THE_JOIN.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Variant-to-domain map for WWOX: classes fixed before any variant is joined (HE, 2026-11-16; non-canonical; mechanism level; reference genotype class only; n"
+    },
+    {
+      "input": {
+        "head_limit": 3,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "pattern": "RS-R6"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "47:[Omitted long matching line]"
+    },
+    {
+      "input": {
+        "head_limit": 12,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116",
+        "pattern": "seizure-induced|seizure-driven|consequence of seizures|secondary to seizure|Peng 2004|pilocarpine"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No matches found"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "limit": 1,
+        "offset": 47
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "47\tRS-R6\tdisease-models/wwox/research/drug_repurposing/recovery_it10_p23_20261031/reopen_searches.tsv#R6 ; disease-models/wwox/research/drug_repurposing/ranking"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116",
+        "pattern": "reverse|cause or consequence|seizure burden|Gfap|reactiv"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 72 files\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/DOSSIER_I20_PROTEIN_RETAINING_LIN"
+    },
+    {
+      "input": {
+        "-i": true,
+        "head_limit": 20,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/RESULT_GABRD_COMPOSITION_SCI.md",
+        "pattern": "seizure|epilep|cause|direction of|downstream|next"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "13:## Next, split with HE (ADV's proposal; no duplicate)"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/RESULT_GABRD_COMPOSITION_SCI.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Does the Gabrd fall in P47T track composition and cell-class scores? Per-animal result (SCI, 2026-11-16; composition rival R2 of I20, with ADV's interneuron"
+    },
+    {
+      "input": {
+        "head_limit": 12,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/DOSSIER_I13_TONIC_INHIBITION_SCI.md",
+        "pattern": "Npy|activity-dependent|homeostatic|organoid|pre-onset|before onset"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "56:[Omitted long matching line]\n82:[Omitted long matching line]"
+    },
+    {
+      "input": {
+        "head_limit": 10,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/leap_sci_20261116",
+        "pattern": "Gabrd|GABRD"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No matches found"
+    },
+    {
+      "input": {
+        "-o": true,
+        "head_limit": 6,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/DOSSIER_I13_TONIC_INHIBITION_SCI.md",
+        "pattern": ".{0,300}(Npy|activity-dependent|homeostatic|organoid|pre-onset|before onset).{0,300}"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "56:[Omitted long matching line]\n82:In the public P47T counts the Gabrd fall (-0.89 CTX, -0.74 PFC, -1.02 HPC) is not absorbed by neuron, astrocyte, microglia, P"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/DOSSIER_I13_TONIC_INHIBITION_SCI.md",
+        "limit": 1,
+        "offset": 56
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "56\tI1: the cliff sizes. I3: the tonic route is route 3 of four; the sustainer route (Grin2b -72% in S-line hippocampus) is **not reproduced in P47T** (HPC log2 "
+    }
+  ]
+}
