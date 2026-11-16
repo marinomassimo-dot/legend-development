@@ -1,0 +1,51 @@
+row	quantity	value
+M04	Mbp H_null KO/control TPM ratio (hippocampus null)	0.2474
+M04	Mbp cortex null contrast	no cortex null contrast in the held table (cortex has C_S only)
+M04	Mbp C_S ratio (information only; not the rule's contrast)	0.438
+M04	Mobp H_null KO/control TPM ratio (hippocampus null)	0.218
+M04	Mobp cortex null contrast	no cortex null contrast in the held table (cortex has C_S only)
+M04	Mobp C_S ratio (information only; not the rule's contrast)	0.4627
+M08	GRIN2B observed / projected log2	0.358 / -0.756
+M08	GRIN2A observed / projected log2	1.105 / -1.658
+M08	SLC12A2 observed / projected log2	0.037 / 0.027
+M08	SLC12A5 observed / projected log2	0.727 / -0.136
+M08	KCNK2 observed / projected log2	0.066 / -0.395
+M08	KCNK3 observed / projected log2	-0.171 / -0.071
+M08	KCNK9 observed / projected log2	0.244 / -0.274
+M08	CCN2 observed / projected log2	1.151 / 0.340
+M08	(a) genes in agreement (excluding CCN2)	4 of 7
+M08	(a) met (fewer than half agree)	False
+M08	(b) named genes opposite to projection with |obs|>=0.5	2 of 4 (GRIN2A, SLC12A5)
+M08	(b) met (>=3 of 4)	False
+M08	(c) Spearman observed v projected, 7 genes without CCN2 / 8 with CCN2	-0.714 / -0.143
+M08	(c) met (<=0)	True
+M10	P47T HPC hallmark MTORC1 NES / BH q (IT12 reimplementation)	2.06 / 0.00254
+M10	P47T CTX hallmark MTORC1 NES / BH q (IT12 reimplementation)	1.78 / 0.00848
+M10	P47T PFC hallmark MTORC1 NES / BH q (IT12 reimplementation)	1.54 / 0.00809
+M10	P47T CB hallmark MTORC1 NES / BH q (IT12 reimplementation)	2.02 / 0.00694
+M10	organoid and mouse P17 hallmark GSEA	not held: the hallmark GMT (mh.gmt) is not on this host and no organoid or P17 hallmark result is held; composite-adjusted enrichment cannot be computed
+M11	valproic acid family O_E; rank from the most negative (of 256)	-1.2768 ; rank 29
+M11	valproic acid neuron-like (context E) signature scores	-1.048; -0.746; -1.505; -1.659
+M11	negative neuron-like signatures	4 of 4
+M12	P47T CTX Erbb4 log2FC centred (ratio 0.85); >= -0.15	-0.24 ; False
+M12	P47T HPC Erbb4 log2FC centred (ratio 1.06); >= -0.15	0.08 ; True
+M12	P47T PFC Erbb4 log2FC centred (ratio 0.91); >= -0.15	-0.13 ; True
+M12	P47T CB Erbb4 log2FC centred (ratio 1.06); >= -0.15	0.08 ; True
+M12	table 5 condition (>=3 of 4 regions at ratio>=0.90)	3 of 4
+M12	table 3 null contrast, both regions	Erbb4 is not among the |cLFC|>=0.585 rows of any mouse contrast (change < 1.5-fold either way or not expressed); the committed table holds no TPM below that cut and no cortex null contrast, so a ratio >= 0.90 cannot be tested
+M17	Npy C_S KO/control TPM; log2	926.35/474.79; 0.96; flag background-confounded=NA
+M17	Npy H_S KO/control TPM; log2	536.70/93.69; 2.52; flag background-confounded=1
+M17	Npy C_N KO/control TPM; log2	not among rows / not held
+M17	Npy H_N KO/control TPM; log2	223.99/138.49; 0.69; flag background-confounded=1
+M17	S line: cortical log2 rise minus hippocampal log2 rise (reject if >= -0.5)	-1.55 ; reject=False
+M23	children with both endpoints	6
+M23	children whose imaging is explicitly stated as before treatment	2 (first child (Table 1 case 1), the patient (single case))
+M23	contradicting (discordant+normal imaging, or concordant+structural abnormality), all 6 / confirming	2 / 4
+M29	ctrl Snap25-positive nuclei / nuclei	2320 / 3182 = 0.7291
+M29	ko Snap25-positive nuclei / nuclei	2219 / 2920 = 0.7599
+M29	KO minus control fraction ; -2 SE	0.0308 ; -0.0223
+M29	reject (diff >= -2 SE)	True
+M30	mouse Slc6a1 neuron / astrocyte FPKM (neuron/astrocyte ratio)	128.67 / 419.72 (0.31)
+M30	mouse Slc6a11 neuron / astrocyte FPKM (neuron/astrocyte ratio)	35.11 / 557.37 (0.06)
+M30	human SLC6A1 neuron(n=1) / adult-astrocyte(n=16) FPKM (ratio)	79.60 / 50.88 (1.56)
+M30	human SLC6A11 neuron(n=1) / adult-astrocyte(n=16) FPKM (ratio)	2.10 / 8.93 (0.24)
