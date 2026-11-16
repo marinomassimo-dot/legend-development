@@ -19,7 +19,8 @@
   "2026-11-16: no outcome table opened; clinical-outcome threads T6 and T10-series excluded; exposure disclosed in README and FREEZE_PREDICTIONS.md",
   "2026-11-16: units in the form are the nearest of cells/animals/children, the true unit stays in output/cells.tsv",
   "2026-11-16: froze against rule.json v1 sha256 679a6089 (HE 2c170d8ff) at f5b71a3f4; no outcome table opened",
-  "2026-11-16: official generator agrees with my per-thread sum in 75/75 rows; origin-level collapse exists only in my draft scorer (reported to HE/ADV)"
+  "2026-11-16: official generator agrees with my per-thread sum in 75/75 rows; origin-level collapse exists only in my draft scorer (reported to HE/ADV)",
+  "2026-11-16: IT second read of 25 cells: all six findings accepted (CORRECTIONS_20261116.md); POST-HOC v1.1 run with the official generator: top set unchanged (5 of 15, tie_set_weak); frozen files untouched"
  ],
  "DELEGATIONS": [],
  "ESCALATIONS": [],
