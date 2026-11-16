@@ -225,6 +225,65 @@ class unittest_patch_cap:
         am.PAIR_RUN_CAP = self.old
 
 
+class TopSetStability(Base):
+    TIE = [cell("a", "T1", "c1", tier=2, directness=2, axis="X", origin="o1"),
+           cell("b", "T2", "c2", tier=2, directness=2, axis="Y", origin="o2"),
+           cell("c", "T3", "c3", tier=1, directness=2, axis="Z", origin="o3")]
+
+    def test_set_stability_is_reported_for_a_two_way_tie(self):
+        st = am.set_stability(self.TIE, ["c1", "c2", "c3"], RULE)
+        self.assertEqual(st["base"], {"c1", "c2"})
+        self.assertEqual(st["runs"], 2 + 2 * 3)
+        # all+1 keeps {c1,c2} (3 and 3 vs 2); all-1 keeps {c1,c2}; a +1 on one of c1/c2 leaves the other alone, -1 on one of them leaves one alone
+        self.assertEqual((st["kmin"], st["kmax"]), (1, 3))   # c3 +1 joins the tie; c1 -1 leaves c2 alone
+        self.assertGreater(st["inside"]["c1"], 0)
+        self.assertLess(st["same"], st["runs"])
+
+    def test_columns_and_note_carry_the_set_not_a_single_class(self):
+        out = self.score(self.TIE)[1]
+        r = self.row(out, "seizure", "pooled", "c1")
+        self.assertEqual(r["top_set_size"], "2")
+        self.assertNotEqual(r["top_set_same_share"], "")
+        self.assertNotEqual(self.row(out, "seizure", "pooled", "c3")["top_set_membership_share"], "")
+        self.assertIn("top SET {c1,c2} stays the top set in", out)
+        self.assertIn("secondary: with several classes tied on top this 'top class' is a tie-break artefact", out)
+
+    def test_a_single_top_class_has_no_secondary_remark(self):
+        self.assertNotIn("tie-break artefact", self.score()[1])
+
+    def test_a_not_scorable_window_has_blank_stability(self):
+        out = self.score([c for c in CELLS if c["endpoint"] == "seizure"])[1]
+        r = [x for x in table(out) if x["endpoint"] == "development" and x["window"] == "pooled"][0]
+        self.assertEqual((r["top_set_same_share"], r["top_set_membership_share"]), ("", ""))
+
+
+class OriginCollapsed(Base):
+    # one origin, three axes (the case of a single paper read on several axes)
+    ROWS = [cell("a", "T1", "c1", tier=3, directness=3, axis="glu", origin="B"),
+            cell("b", "T2", "c1", tier=2, directness=3, axis="gaba", origin="B"),
+            cell("c", "T3", "c1", tier=1, directness=3, axis="intr", origin="B"),
+            cell("d", "T4x", "c2", tier=2, directness=3, axis="glu", origin="P")]
+
+    def test_best_axis_per_origin_differs_from_the_axis_origin_key_sum(self):
+        out = self.score(self.ROWS)[1]
+        c1 = self.row(out, "seizure", "pooled", "c1")
+        self.assertEqual((c1["score_all"], c1["score_per_thread_sum"], c1["score_origin_collapsed"]), ("18", "18", "9"))
+        self.assertEqual(self.row(out, "seizure", "pooled", "c2")["score_origin_collapsed"], "6")
+
+    def test_a_change_of_the_top_set_is_named_and_rank_by_is_untouched(self):
+        rows = [cell("a", "T1", "c1", tier=2, directness=3, axis="glu", origin="B"),
+                cell("b", "T2", "c1", tier=2, directness=3, axis="gaba", origin="B"),
+                cell("c", "T3", "c1", tier=1, directness=3, axis="intr", origin="B"),
+                cell("d", "T4x", "c2", tier=3, directness=3, axis="glu", origin="P")]
+        out = self.score(rows)[1]
+        self.assertEqual(self.row(out, "seizure", "pooled", "c1")["rank"], "1")          # score_all 15 vs 9: unchanged ranking basis
+        self.assertEqual(self.row(out, "seizure", "pooled", "c2")["rank_origin_collapsed"], "1")
+        self.assertIn("best axis per origin changes the top set: score_all {c1} -> score_origin_collapsed {c2}", out)
+
+    def test_a_single_origin_row_set_collapses_to_one_value_per_class(self):
+        self.assertEqual(am.origin_collapsed_sums(self.ROWS), {"c1": 9, "c2": 6})
+
+
 class Determinism(Base):
     def test_two_runs_are_byte_identical(self):
         first, second = self.score()[1], self.score()[1]
