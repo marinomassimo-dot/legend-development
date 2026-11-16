@@ -1,0 +1,41 @@
+id	class	magnitude	rate_per_min	n_bursts	int_q1	int_med	int_q3	int_shape	dur_q1	dur_med	dur_q3	dur_shape
+BASE	baseline	-	1.846	443	16.402	27.404	43.538	1.836	0.300	0.716	0.840	4.206
+C1	T-type-like blockade	x0.75	1.421	341	21.520	33.884	53.964	2.085	0.608	0.776	0.864	6.013
+C1	T-type-like blockade	x0.5	1.000	240	27.122	45.108	78.177	1.781	0.407	0.760	0.888	4.639
+C1	T-type-like blockade	x0.25	0.708	170	30.996	63.234	107.709	1.400	0.261	0.740	0.867	3.614
+C2	NMDAR-active, strong	x0.95	1.550	372	16.155	27.008	50.594	1.310	0.231	0.592	0.760	3.433
+C2	NMDAR-active, strong	x0.9	1.242	298	21.349	34.514	64.530	1.594	0.164	0.442	0.675	2.815
+C2	NMDAR-active, strong	x0.85	0.983	236	21.018	43.690	80.297	1.418	0.140	0.250	0.484	2.275
+C3	GABA-A positive modulation	pam0.3	0.067	16	158.138	215.872	274.461	1.982	0.130	0.178	0.281	2.490
+C3	GABA-A positive modulation	pam0.6	0.000	0	NA	NA	NA	NA	NA	NA	NA	NA
+C3	GABA-A positive modulation	pam1.0	0.000	0	NA	NA	NA	NA	NA	NA	NA	NA
+C4	KCC2 enhancement	x0.75	1.908	458	15.507	24.168	40.184	1.576	0.267	0.708	0.848	3.895
+C4	KCC2 enhancement	x0.5	1.733	416	16.646	25.392	43.621	1.683	0.274	0.696	0.832	4.084
+C4	KCC2 enhancement	x0.35	1.729	415	16.842	27.800	43.272	1.625	0.312	0.708	0.840	4.135
+C5	KCC2 inhibition / chloride loading	x1.5	1.833	440	17.303	25.392	41.834	1.815	0.298	0.720	0.861	4.035
+C5	KCC2 inhibition / chloride loading	x2	1.962	471	15.094	24.144	38.534	1.830	0.422	0.740	0.872	4.829
+C5	KCC2 inhibition / chloride loading	x3	2.212	531	14.922	22.444	36.726	2.214	0.514	0.760	0.876	5.404
+C6	adenosine augmentation	x1.15	1.692	406	16.780	26.280	45.483	1.516	0.269	0.686	0.824	4.014
+C6	adenosine augmentation	x1.3	1.592	382	16.733	29.788	49.387	1.779	0.224	0.642	0.787	3.709
+C6	adenosine augmentation	x1.4	1.663	399	16.786	28.112	43.384	1.649	0.232	0.644	0.792	3.604
+C6b	adenosine A1 antagonism	x0.8	1.958	470	15.689	24.172	37.783	1.994	0.391	0.756	0.888	4.434
+C6b	adenosine A1 antagonism	x0.6	2.179	523	14.362	22.892	35.418	2.132	0.408	0.780	0.912	4.640
+C6b	adenosine A1 antagonism	x0.4	2.304	553	13.372	21.640	32.284	1.988	0.524	0.852	0.980	4.753
+C7	HCN blockade	0.3	1.054	253	23.684	42.056	73.912	1.887	0.280	0.692	0.816	4.033
+C7	HCN blockade	0.6	0.583	140	36.289	58.396	112.385	1.144	0.361	0.648	0.782	4.760
+C7	HCN blockade	1.0	0.254	61	37.711	88.458	182.016	0.847	0.156	0.444	0.652	2.791
+C8	presynaptic brake (NPY-like)	0.03	1.475	354	17.168	30.976	50.613	1.317	0.217	0.616	0.756	3.420
+C8	presynaptic brake (NPY-like)	0.06	1.117	268	21.894	37.442	67.781	1.245	0.195	0.422	0.664	2.931
+C8	presynaptic brake (NPY-like)	0.10	0.858	206	27.611	49.102	85.761	1.150	0.156	0.292	0.535	2.499
+C8b	brake removal (NPY-pathway blocker)	-0.03	2.033	488	15.347	23.618	36.265	1.952	0.643	0.796	0.908	5.614
+C8b	brake removal (NPY-pathway blocker)	-0.06	2.279	547	15.534	21.960	32.028	2.605	0.730	0.876	0.970	7.660
+C8b	brake removal (NPY-pathway blocker)	-0.10	2.667	640	14.115	19.386	26.809	3.147	0.812	0.920	1.020	10.267
+C9	persistent-sodium-type reduction	x0.9	0.975	234	25.530	45.448	79.389	1.526	0.604	0.770	0.901	5.510
+C9	persistent-sodium-type reduction	x0.8	0.362	87	45.962	117.124	225.400	1.296	0.728	0.840	0.920	10.664
+C9	persistent-sodium-type reduction	x0.7	0.125	30	114.295	207.802	472.185	1.670	0.735	0.812	0.915	9.897
+C10	tonic GABA increase only	x1.2	0.613	147	37.646	70.024	111.560	1.035	0.292	0.624	0.764	4.221
+C10	tonic GABA increase only	x1.5	0.100	24	51.394	89.280	429.264	0.950	0.120	0.238	0.558	1.974
+C10	tonic GABA increase only	x2	0.000	0	NA	NA	NA	NA	NA	NA	NA	NA
+C11	metabolic: slower resource depletion	x0.8	2.054	493	15.868	24.836	37.632	2.307	0.692	0.892	1.020	5.766
+C11	metabolic: slower resource depletion	x0.6	2.083	500	16.628	24.356	35.645	2.207	0.906	1.124	1.252	5.140
+C11	metabolic: slower resource depletion	x0.4	2.017	484	17.993	25.934	38.925	3.198	1.288	1.504	1.648	8.876
