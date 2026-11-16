@@ -17,7 +17,9 @@ CELLS.tsv, one row per (thread, class, optional agent) with columns
   cell_id, thread_id, class_id, agent_id, endpoint, age, sign, evidence_tier, link_directness,
   axis, origin_id, has_genotype_contrast, has_drug_by_genotype, unit, source_locator
   sign in {match, neutral, aggravation, unknown}; tier and directness are integers 0-3;
-  endpoint, age, class_id and thread_id in the rule's closed lists; has_* in {yes, no}.
+  endpoint, age and class_id in the rule's closed lists; has_* in {yes, no}. The thread set is DATA:
+  any thread_id is accepted, but every cell needs a source_locator, an axis and an origin_id, and
+  the run prints the final thread list's sha256 so a freeze can record it.
   A thread in the rule's never_specific_threads is scored as generic whatever its cell says;
   a thread in zero_directness_threads must carry directness 0 or the run is refused.
 RULE.json holds the formula's parameters and the written rubric (see check_rule). Its sha256 is
@@ -34,7 +36,17 @@ WHAT IT COMPUTES, per endpoint (never summed across endpoints) and per age windo
   - a degree-preserving permutation null (the class labels of the match cells are permuted among
     the match cells of the endpoint, so every class keeps its number of cells; the permutation is
     a function of the seed and the cell ids, identical on every run and Python version);
-  - rank stability: the top class under every single-cell tier +-1 change and the all +-1 change.
+  - rank stability: the top class under every single-cell tier +-1 change and the all +-1 change,
+    and under every PAIR of match cells moved by +-1 (bounded two-cell enumeration, capped at a fixed
+    number of runs and reported as not run above it); full 3^n enumeration is not feasible;
+  - the top set, its size k out of the rule's classes, informativeness 1 - k/N and a label:
+    `discriminating` (k = 1), `tie_set_weak` (k above 1 and within the rule's share of the classes),
+    `not_discriminating` (above it), `no_scored_class`; a window with no match cell is emitted as a
+    frozen null ordering (`not_scorable_null_ordering`, all classes tied), never as a neutral;
+  - `null undefined` instead of a p-value when the null is degenerate (equal tiers, no match cell,
+    zero variance across permutations);
+  - the per-thread sum (every match cell, no origin collapse) with its rank next to the origin-collapsed
+    score, and a note when collapsing changes the top set or one origin carries every match cell.
 An agent ranking is printed only for the top class and only when some (axis, origin) key carries
 a match for one agent of that class and not for another.
 
@@ -59,8 +71,9 @@ SIGNS = ("match", "neutral", "aggravation", "unknown")
 YESNO = ("yes", "no")
 SCORES = ("score_all", "score_specific", "score_drug_by_genotype")
 OUT_COLUMNS = ["endpoint", "window", "class_id", "rank", "score_all", "score_specific",
-               "score_drug_by_genotype", "aggravation_score", "match_keys", "neutral_cells",
-               "unknown_cells", "null_mean", "excess", "null_ge_fraction", "tied_with"]
+               "score_drug_by_genotype", "aggravation_score", "match_keys", "score_per_thread_sum",
+               "rank_per_thread_sum", "neutral_cells", "unknown_cells", "null_mean", "excess",
+               "null_ge_fraction", "top_set_size", "informativeness", "top_set_label", "tied_with"]
 POOLED = "pooled"
 
 
@@ -70,8 +83,8 @@ class Invalid(Exception):
 
 def check_rule(rule: dict) -> None:
     for key in ("rule_version", "tier_rubric", "directness_rubric", "endpoints", "age_windows", "classes",
-                "threads", "never_specific_threads", "zero_directness_threads", "rank_by",
-                "permutations", "seed"):
+                "never_specific_threads", "zero_directness_threads", "discriminating_top_set_max_share",
+                "rank_by", "permutations", "seed"):
         if key not in rule:
             raise Invalid(f"rule lacks {key!r}")
     for rubric in ("tier_rubric", "directness_rubric"):
@@ -79,12 +92,15 @@ def check_rule(rule: dict) -> None:
             raise Invalid(f"{rubric} must describe 0, 1, 2 and 3 in words")
     if not rule["endpoints"] or not all(isinstance(e, str) and e for e in rule["endpoints"]):
         raise Invalid("endpoints must be a non-empty list of names")
-    for key in ("endpoints", "age_windows", "classes", "threads"):
+    for key in ("endpoints", "age_windows", "classes"):
         if not rule[key] or len(set(rule[key])) != len(rule[key]):
             raise Invalid(f"{key} must be a non-empty list without repeats")
     for key in ("never_specific_threads", "zero_directness_threads"):
-        if not set(rule[key]) <= set(rule["threads"]):
-            raise Invalid(f"{key} names a thread that is not in threads")
+        if not isinstance(rule[key], list) or not all(isinstance(t, str) and t for t in rule[key]):
+            raise Invalid(f"{key} must be a list of thread ids")
+    share = rule["discriminating_top_set_max_share"]
+    if not (isinstance(share, list) and len(share) == 2 and all(isinstance(n, int) and n > 0 for n in share)):
+        raise Invalid("discriminating_top_set_max_share must be [numerator, denominator], positive integers")
     if rule["rank_by"] not in SCORES:
         raise Invalid(f"rank_by must be one of {SCORES}")
     if not (isinstance(rule["permutations"], int) and 0 <= rule["permutations"] <= 10000):
@@ -103,7 +119,7 @@ def read_cells(path: Path, rule: dict) -> list[dict]:
     seen = set()
     for n, row in enumerate(rows, 2):
         where = f"row {n} ({row['cell_id'] or 'no cell_id'})"
-        for req in ("cell_id", "thread_id", "class_id", "endpoint", "age", "axis", "origin_id"):
+        for req in ("cell_id", "thread_id", "class_id", "endpoint", "age", "axis", "origin_id", "source_locator"):
             if not row[req]:
                 raise Invalid(f"{where}: {req} is required")
         if row["cell_id"] in seen:
@@ -111,8 +127,7 @@ def read_cells(path: Path, rule: dict) -> list[dict]:
         seen.add(row["cell_id"])
         if row["sign"] not in SIGNS:
             raise Invalid(f"{where}: sign {row['sign']!r} not in {SIGNS}")
-        for col, key in (("endpoint", "endpoints"), ("age", "age_windows"), ("class_id", "classes"),
-                         ("thread_id", "threads")):
+        for col, key in (("endpoint", "endpoints"), ("age", "age_windows"), ("class_id", "classes")):
             if row[col] not in rule[key]:
                 raise Invalid(f"{where}: {col} {row[col]!r} not in the rule's {key}")
         if row["thread_id"] in rule["zero_directness_threads"] and row["link_directness"] != "0":
@@ -136,14 +151,13 @@ def value(row: dict, shift: int = 0) -> int:
     return tier * int(row["link_directness"])
 
 
-def class_scores(rows: list[dict], sign: str, shift_all: int = 0, shift_cell: tuple[str, int] | None = None):
+def class_scores(rows: list[dict], sign: str, shift_all: int = 0, shifts: dict[str, int] | None = None):
     """class_id -> {score name -> sum over distinct (axis, origin) of the largest cell value}."""
     best: dict[str, dict[str, dict[tuple, int]]] = {}
     for row in rows:
         if row["sign"] != sign:
             continue
-        shift = shift_all + (shift_cell[1] if shift_cell and shift_cell[0] == row["cell_id"] else 0)
-        val = value(row, shift)
+        val = value(row, shift_all + (shifts or {}).get(row["cell_id"], 0))
         key = (row["axis"], row["origin_id"])
         for name, ok in (("score_all", True), ("score_specific", row["has_genotype_contrast"] == "yes"),
                          ("score_drug_by_genotype", row["has_drug_by_genotype"] == "yes")):
@@ -151,6 +165,15 @@ def class_scores(rows: list[dict], sign: str, shift_all: int = 0, shift_cell: tu
                 slot = best.setdefault(row["class_id"], {}).setdefault(name, {})
                 slot[key] = max(slot.get(key, 0), val)
     return {c: {n: sum(v.values()) for n, v in names.items()} for c, names in best.items()}
+
+
+def per_thread_sums(rows: list[dict]) -> dict[str, int]:
+    """class_id -> sum of tier x directness over EVERY match cell (no origin collapse)."""
+    sums: dict[str, int] = {}
+    for row in rows:
+        if row["sign"] == "match":
+            sums[row["class_id"]] = sums.get(row["class_id"], 0) + value(row)
+    return sums
 
 
 def ranked(classes: list[str], scores: dict, by: str) -> list[tuple[str, int]]:
@@ -166,20 +189,24 @@ def permuted(rows: list[dict], seed: int, index: int) -> list[dict]:
     return [dict(r, class_id=moved[r["cell_id"]]) if r["cell_id"] in moved else r for r in rows]
 
 
-def null_for(rows: list[dict], classes: list[str], rule: dict) -> dict[str, tuple[float, float]]:
+def null_for(rows: list[dict], classes: list[str], rule: dict):
+    """-> ({class: (null mean, fraction of permutations >= observed)}, reason the null is undefined or '')."""
     n = rule["permutations"]
-    if n == 0 or not any(r["sign"] == "match" for r in rows):
-        return {c: (0.0, 0.0) for c in classes}
+    match = [r for r in rows if r["sign"] == "match"]
+    if n == 0:
+        return {}, "no permutations requested"
+    if not match:
+        return {}, "no match cell"
+    if len({r["evidence_tier"] for r in match}) == 1:
+        return {}, "equal tiers: the ordering rests on the declared directness judgements"
     observed = class_scores(rows, "match")
-    total = {c: 0 for c in classes}
-    ge = {c: 0 for c in classes}
-    for k in range(n):
-        sim = class_scores(permuted(rows, rule["seed"], k), "match")
-        for c in classes:
-            s = sim.get(c, {}).get("score_all", 0)
-            total[c] += s
-            ge[c] += s >= observed.get(c, {}).get("score_all", 0)
-    return {c: (total[c] / n, ge[c] / n) for c in classes}
+    sims = [class_scores(permuted(rows, rule["seed"], k), "match") for k in range(n)]
+    out, spread = {}, False
+    for c in classes:
+        values = [sim.get(c, {}).get("score_all", 0) for sim in sims]
+        spread = spread or len(set(values)) > 1
+        out[c] = (sum(values) / n, sum(v >= observed.get(c, {}).get("score_all", 0) for v in values) / n)
+    return (out, "") if spread else ({}, "zero variance across permutations")
 
 
 def stability(rows: list[dict], classes: list[str], rule: dict) -> tuple[str, int, int, list[str]]:
@@ -188,7 +215,7 @@ def stability(rows: list[dict], classes: list[str], rule: dict) -> tuple[str, in
     top = base[0][0]
     tied = [c for c, s in base if s == base[0][1]]
     runs = [("all+1", dict(shift_all=1)), ("all-1", dict(shift_all=-1))]
-    runs += [(f"{r['cell_id']}{s:+d}", dict(shift_cell=(r["cell_id"], s)))
+    runs += [(f"{r['cell_id']}{s:+d}", dict(shifts={r["cell_id"]: s}))
              for r in sorted(rows, key=lambda r: r["cell_id"]) if r["sign"] == "match" for s in (1, -1)]
     keep, moved = 0, []
     for label, kw in runs:
@@ -198,6 +225,29 @@ def stability(rows: list[dict], classes: list[str], rule: dict) -> tuple[str, in
         else:
             moved.append(label)
     return top, keep, len(runs), moved if len(tied) == 1 else moved + [f"tie at baseline: {','.join(tied)}"]
+
+
+PAIR_RUN_CAP = 200000
+
+
+def stability_pairs(rows: list[dict], classes: list[str], rule: dict) -> str:
+    """Every PAIR of match cells moved by (+-1, +-1): a bounded two-cell enumeration (deterministic cap)."""
+    cells = sorted(r["cell_id"] for r in rows if r["sign"] == "match")
+    total = len(cells) * (len(cells) - 1) // 2 * 4
+    if total == 0:
+        return "two-cell tier enumeration: fewer than two match cells"
+    if total > PAIR_RUN_CAP:
+        return f"two-cell tier enumeration not run: {total} runs exceed the cap {PAIR_RUN_CAP}"
+    by = rule["rank_by"]
+    base = ranked(classes, class_scores(rows, "match"), by)
+    top, keep = base[0][0], 0
+    for i, a in enumerate(cells):
+        for b in cells[i + 1:]:
+            for sa in (1, -1):
+                for sb in (1, -1):
+                    w = ranked(classes, class_scores(rows, "match", shifts={a: sa, b: sb}), by)
+                    keep += w[0][0] == top and w[0][1] > w[1][1]
+    return f"two-cell tier enumeration: top class kept in {keep} of {total} runs"
 
 
 def agent_ranking(rows: list[dict], top: str, by: str) -> str:
@@ -217,39 +267,85 @@ def agent_ranking(rows: list[dict], top: str, by: str) -> str:
     return "agent scores inside the top class: " + "; ".join(f"{a}={s}" for a, s in pairs)
 
 
-def windows_of(rows: list[dict]) -> list[str]:
-    return [POOLED] + sorted({r["age"] for r in rows})
+def top_set(order: list[tuple[str, int]]) -> list[str]:
+    best = order[0][1]
+    return [c for c, s in order if s == best] if best > 0 else []
+
+
+def tie_label(k: int, n_classes: int, share: list[int]) -> str:
+    if k == 0:
+        return "no_scored_class"
+    if k == 1:
+        return "discriminating"
+    return "tie_set_weak" if k * share[1] <= n_classes * share[0] else "not_discriminating"
 
 
 def score_endpoint(rows: list[dict], endpoint: str, rule: dict):
     mine = [r for r in rows if r["endpoint"] == endpoint]
-    classes = sorted({r["class_id"] for r in mine})
+    classes = list(rule["classes"])
     table, notes = [], []
-    for window in windows_of(mine):
+    for window in [POOLED] + list(rule["age_windows"]):
         part = mine if window == POOLED else [r for r in mine if r["age"] == window]
-        match, agg = class_scores(part, "match"), class_scores(part, "aggravation")
-        null = null_for(part, classes, rule)
+        tag = f"[{endpoint} {window}]"
+        if not any(r["sign"] == "match" for r in part):
+            for c in classes:
+                table.append({"endpoint": endpoint, "window": window, "class_id": c, "rank": "null",
+                              **{k: "0" for k in ("score_all", "score_specific", "score_drug_by_genotype",
+                                                  "aggravation_score", "match_keys", "score_per_thread_sum")},
+                              "rank_per_thread_sum": "null",
+                              "neutral_cells": str(sum(r["class_id"] == c and r["sign"] == "neutral" for r in part)),
+                              "unknown_cells": str(sum(r["class_id"] == c and r["sign"] == "unknown" for r in part)),
+                              "null_mean": "undefined", "excess": "undefined", "null_ge_fraction": "undefined",
+                              "top_set_size": str(len(classes)), "informativeness": "0.000",
+                              "top_set_label": "not_scorable_null_ordering", "tied_with": ""})
+            notes.append(f"{tag} not scorable: no class links to any thread here; frozen as a null ordering "
+                         f"(all {len(classes)} classes tied, informativeness 0)")
+            continue
+        match, agg, sums = class_scores(part, "match"), class_scores(part, "aggravation"), per_thread_sums(part)
+        null, why = null_for(part, classes, rule)
+        order = ranked(classes, match, rule["rank_by"])
+        rank_sum = {c: i for i, (c, _) in enumerate(sorted(((c, sums.get(c, 0)) for c in classes),
+                                                           key=lambda t: (-t[1], t[0])), 1)}
+        top = top_set(order)
+        k = len(top)
+        label = tie_label(k, len(classes), rule["discriminating_top_set_max_share"])
+        info = f"{1 - k / len(classes):.3f}" if k else "0.000"
         keys = {c: len({(r["axis"], r["origin_id"]) for r in part if r["class_id"] == c and r["sign"] == "match"})
                 for c in classes}
-        order = ranked(classes, match, rule["rank_by"])
         for place, (cls, score) in enumerate(order, 1):
-            tied = [c for c, s in order if s == score and c != cls]
+            tied = [c for c, sc in order if sc == score and c != cls]
             table.append({"endpoint": endpoint, "window": window, "class_id": cls, "rank": str(place),
                           "score_all": str(match.get(cls, {}).get("score_all", 0)),
                           "score_specific": str(match.get(cls, {}).get("score_specific", 0)),
                           "score_drug_by_genotype": str(match.get(cls, {}).get("score_drug_by_genotype", 0)),
                           "aggravation_score": str(agg.get(cls, {}).get("score_all", 0)),
-                          "match_keys": str(keys[cls]),
+                          "match_keys": str(keys[cls]), "score_per_thread_sum": str(sums.get(cls, 0)),
+                          "rank_per_thread_sum": str(rank_sum[cls]),
                           "neutral_cells": str(sum(r["class_id"] == cls and r["sign"] == "neutral" for r in part)),
                           "unknown_cells": str(sum(r["class_id"] == cls and r["sign"] == "unknown" for r in part)),
-                          "null_mean": f"{null[cls][0]:.3f}",
-                          "excess": f"{match.get(cls, {}).get('score_all', 0) - null[cls][0]:.3f}",
-                          "null_ge_fraction": f"{null[cls][1]:.3f}", "tied_with": ",".join(tied)})
-        if window == POOLED and any(r["sign"] == "match" for r in part):
-            top, keep, total, moved = stability(part, classes, rule)
-            notes.append(f"[{endpoint}] top class {top}; kept in {keep} of {total} tier perturbations"
+                          "null_mean": f"{null[cls][0]:.3f}" if null else "undefined",
+                          "excess": f"{match.get(cls, {}).get('score_all', 0) - null[cls][0]:.3f}" if null else "undefined",
+                          "null_ge_fraction": f"{null[cls][1]:.3f}" if null else "undefined",
+                          "top_set_size": str(k), "informativeness": info, "top_set_label": label,
+                          "tied_with": ",".join(tied)})
+        notes.append(f"{tag} top set {{{','.join(top)}}} size {k} of {len(classes)}, informativeness {info}: {label}")
+        if not null:
+            notes.append(f"{tag} null undefined ({why}); no p-value is reported")
+        by_sum = [c for c, _ in sorted(((c, sums.get(c, 0)) for c in classes), key=lambda t: (-t[1], t[0]))
+                  if sums.get(c, 0) == max(sums.values())]
+        if set(by_sum) != set(top):
+            notes.append(f"{tag} origin collapse changes the top set: per-thread sum {{{','.join(by_sum)}}} "
+                         f"-> origin-collapsed {{{','.join(top)}}}")
+        origins = {(r["axis"], r["origin_id"]) for r in part if r["sign"] == "match"}
+        if len(origins) == 1:
+            notes.append(f"{tag} single origin {sorted(origins)[0][1]} carries every match cell: "
+                         "the per-thread sum and the collapsed ranking must both be read")
+        if window == POOLED:
+            t, keep, total, moved = stability(part, classes, rule)
+            notes.append(f"[{endpoint}] top class {t}; kept in {keep} of {total} tier perturbations"
                          + (f"; moved or tied under: {', '.join(moved)}" if moved else ""))
-            notes.append(f"[{endpoint}] {agent_ranking(part, top, rule['rank_by'])}")
+            notes.append(f"[{endpoint}] {stability_pairs(part, classes, rule)}")
+            notes.append(f"[{endpoint}] {agent_ranking(part, t, rule['rank_by'])}")
     return table, notes
 
 
@@ -283,17 +379,19 @@ def run(cells_path: Path, rule_path: Path, out: Path | None, pin: str | None, ro
     except (Invalid, OSError, ValueError, csv.Error) as exc:
         print(f"invalid: {exc}", file=sys.stderr)
         return 2
+    threads = sorted({r["thread_id"] for r in rows})
     print(f"rule {rule['rule_version']} sha256 {digest}; rule committed before cells: {order}; "
           f"cells {len(rows)}; rank_by {rule['rank_by']}; permutations {rule['permutations']} seed {rule['seed']}")
+    print(f"threads {len(threads)} sha256 {hashlib.sha256(chr(10).join(threads).encode()).hexdigest()}: "
+          + ",".join(threads))
     if not rows:
         print("no cells: nothing to score")
         return 0
     table, notes = [], []
     for endpoint in rule["endpoints"]:
-        if any(r["endpoint"] == endpoint for r in rows):
-            t, n = score_endpoint(rows, endpoint, rule)
-            table += t
-            notes += n
+        t, n = score_endpoint(rows, endpoint, rule)
+        table += t
+        notes += n
     lines = ["\t".join(OUT_COLUMNS)] + ["\t".join(r[c] for c in OUT_COLUMNS) for r in table]
     text = "\n".join(lines) + "\n"
     if out:
