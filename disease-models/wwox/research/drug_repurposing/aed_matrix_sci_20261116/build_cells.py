@@ -117,14 +117,16 @@ link("T11", "GluN2B NAMs", "unknown", 3, "better match early only if NMDAR-depen
 link("T11", "NMDAR pore blockers", "neutral", 0, "subunit-agnostic: composition does not change the class")
 # Aggravation hypotheses (recorded apart, never netted), endpoint-specific
 AGG = [
-    ("AH1", "sodium-channel", "seizure", "P13-P15", "unknown", 1, "O-AH", "inhibition-deficit logic transferred from Nav1.1 DEEs; needs interneuron firing to depend on Nav (LEAP-1); no held statement",
+    ("T12", "sodium-channel", "seizure", "P13-P15", "unknown", 0, 1, "O-AH1", "inhibition-deficit logic transferred from Nav1.1 DEEs; needs interneuron firing to depend on Nav (LEAP-1); no held statement",
      "analysis/mechanism_intervention_map.md line 101 (M3); PV interneuron data RP-019 open"),
-    ("AH2", "NMDAR pore blockers", "development", "P6-P8", "aggravation", 1, "O-IKON99", "NMDAR block in early neonatal rodents triggered apoptotic neurodegeneration (abstract-only premise, not WWOX)",
+    ("T16", "NMDAR pore blockers", "development", "P6-P8", "aggravation", 1, 3, "O-IKON99", "NMDAR block in early neonatal rodents triggered apoptotic neurodegeneration (abstract-only premise, not WWOX)",
      DR + "nmdar_pharmacology_it6_p9_20261029/README.md line 169 (Ikonomidou 1999, PMID 9872743)"),
-    ("AH3", "GABA-A PAM (non-benzodiazepine)", "seizure", "P6-P8", "unknown", 1, "O-AH", "GABA response and chloride gradient unmeasured in WWOX models; GABA may be depolarising early",
+    ("T17", "GABA-A PAM (non-benzodiazepine)", "seizure", "P6-P8", "unknown", 0, 3, "O-RC001", "GABA response and chloride gradient unmeasured in WWOX models; GABA may be depolarising early",
      "analysis/mechanism_intervention_map.md lines 138-139 (RC-001, NKCC1/KCC2)"),
-    ("AH4", "benzodiazepines", "seizure", "P6-P8", "unknown", 1, "O-AH", "same premise as AH3", "analysis/mechanism_intervention_map.md lines 138-139 (RC-001)"),
+    ("T17", "benzodiazepines", "seizure", "P6-P8", "unknown", 0, 3, "O-RC001", "same premise as T17 for GABA-A PAM", "analysis/mechanism_intervention_map.md lines 138-139 (RC-001)"),
 ]
+
+AGG_IDS = {a[0] for a in AGG}
 
 def build_cells():
     rows = []
@@ -144,10 +146,38 @@ def build_cells():
         if r["window"] == "P13-P15" and r["endpoint"] == "seizure":
             q = dict(r); q["window"] = "later/unspecified"; q["transfer"] = 1; extra.append(q)
     rows += extra
-    for aid, cls, ep, win, sign, d, origin, why, loc in AGG:
-        rows.append(dict(thread=aid, cls=cls, endpoint=ep, window=win, sign=sign, tier=1, directness=d, axis="aggravation", origin=origin,
+    for aid, cls, ep, win, sign, tier, d, origin, why, loc in AGG:
+        rows.append(dict(thread=aid, cls=cls, endpoint=ep, window=win, sign=sign, tier=tier, directness=d, axis="aggravation-" + aid, origin=origin,
                          has_genotype_contrast=0, has_drug_by_genotype=0, unit="n/a", locator=loc, why=why, transfer=0))
     return rows
+
+CLASS_ID = {"sodium-channel": "sodium_channel", "T-type calcium": "t_type_calcium", "SV2A": "sv2a", "AMPA antagonists": "ampa_antagonist",
+            "NMDAR pore blockers": "nmdar_pore_blocker", "GluN2B NAMs": "glun2b_nam", "GABA-A PAM (non-benzodiazepine)": "gabaa_pam_nonbzd",
+            "benzodiazepines": "benzodiazepine", "GABA-AT/GAT": "gaba_at_gat", "Kv7 openers": "kv7_opener",
+            "carbonic-anhydrase/multi-target": "carbonic_anhydrase_multitarget", "valproate-type": "valproate_type", "steroid/ACTH": "steroid_acth",
+            "ketogenic diet": "ketogenic_diet", "cannabidiol/fenfluramine-type": "cbd_fenfluramine"}
+
+# The form's unit is one of cells, animals, children: the nearest category of the evidence's unit of observation (true unit stays in cells.tsv).
+FORM_UNIT = {"T1": "cells", "T2": "cells", "T13": "cells", "T3": "animals", "T4": "animals", "T5": "cells", "T7": "cells", "T8": "cells",
+             "T9": "cells", "T10": "animals", "T11": "cells", "T14": "cells", "T15": "animals", "T12": "animals", "T16": "animals", "T17": "animals"}
+
+def export_form(rows, outdir):
+    """cells_form.tsv in the column set of framework/scripts/aed_matrix.py (HE's form), plus threads.tsv (the declared thread list)."""
+    cols = ["cell_id", "thread_id", "class_id", "agent_id", "endpoint", "age", "sign", "evidence_tier", "link_directness", "axis", "origin_id",
+            "has_genotype_contrast", "has_drug_by_genotype", "unit", "source_locator"]
+    with open(os.path.join(outdir, "cells_form.tsv"), "w", newline="") as f:
+        w = csv.writer(f, delimiter="\t", lineterminator="\n"); w.writerow(cols)
+        for r in rows:
+            age = r["window"].replace("/", "_")
+            cid = f"{r['thread']}-{CLASS_ID[r['cls']]}-{r['endpoint']}-{age}"
+            w.writerow([cid, r["thread"], CLASS_ID[r["cls"]], "", r["endpoint"], age, r["sign"], r["tier"], r["directness"], r["axis"], r["origin"],
+                        "yes" if r["has_genotype_contrast"] else "no", "yes" if r["has_drug_by_genotype"] else "no", FORM_UNIT[r["thread"]], r["locator"]])
+    used = sorted({r["thread"] for r in rows}, key=lambda t: int(t[1:]))
+    with open(os.path.join(outdir, "threads.tsv"), "w", newline="") as f:
+        w = csv.writer(f, delimiter="\t", lineterminator="\n"); w.writerow(["thread_id", "name", "origin", "axis", "tier"])
+        for t in used:
+            th = THREADS.get(t)
+            w.writerow([t, th["name"] if th else "aggravation premise (see cells)", th["origin"] if th else "", th["axis"] if th else "", th["tier"] if th else ""])
 
 def scores(rows, tier_shift=None, collapse=False):
     out = {}
@@ -155,7 +185,7 @@ def scores(rows, tier_shift=None, collapse=False):
         for c in CLASSES:
             pairs, agg, unk = {}, 0, 0
             for r in rows:
-                if (r["endpoint"], r["window"], r["cls"]) != (ep, win, c) or r["thread"].startswith("AH"):
+                if (r["endpoint"], r["window"], r["cls"]) != (ep, win, c) or r["thread"] in AGG_IDS:
                     if (r["endpoint"], r["window"], r["cls"]) == (ep, win, c) and r["sign"] == "aggravation":
                         agg += r["tier"] * r["directness"]
                     continue
@@ -182,7 +212,7 @@ def permutation_null(rows, ep, win, draws=5000, seed=20261116):
     """Class-degree-preserving null: each class's (directness, sign) multiset over the threads of the window is shuffled
     across those threads (tiers stay with the thread). Excess = observed - null mean; p = P(null >= observed)."""
     rng = random.Random(seed)
-    ths = sorted({r["thread"] for r in rows if (r["endpoint"], r["window"]) == (ep, win) and not r["thread"].startswith("AH")})
+    ths = sorted({r["thread"] for r in rows if (r["endpoint"], r["window"]) == (ep, win) and not r["thread"] in AGG_IDS})
     tier = {r["thread"]: r["tier"] for r in rows if (r["endpoint"], r["window"]) == (ep, win)}
     cell = {(r["thread"], r["cls"]): r for r in rows if (r["endpoint"], r["window"]) == (ep, win)}
     obs = scores(rows)
@@ -203,7 +233,7 @@ def voi(rows, ep, win):
     base_top, base_best = top_set(scores(rows), ep, win)
     res = []
     keys = [i for i, r in enumerate(rows) if (r["endpoint"], r["window"]) == (ep, win) and r["sign"] == "match" and r["directness"] > 0
-            and not r["thread"].startswith("AH")]
+            and not r["thread"] in AGG_IDS]
     for i in keys:
         r = rows[i]
         for dd in (-1, 1):
@@ -216,7 +246,7 @@ def voi(rows, ep, win):
     return base_top, base_best, res
 
 def stability(rows, ep, win):
-    ths = sorted({r["thread"] for r in rows if (r["endpoint"], r["window"]) == (ep, win) and r["tier"] > 0 and not r["thread"].startswith("AH")})
+    ths = sorted({r["thread"] for r in rows if (r["endpoint"], r["window"]) == (ep, win) and r["tier"] > 0 and not r["thread"] in AGG_IDS})
     combos = list(itertools.product((-1, 0, 1), repeat=len(ths)))
     freq = {c: 0 for c in CLASSES}
     for combo in combos:
@@ -235,6 +265,7 @@ def main(outdir):
     with open(os.path.join(outdir, "cells.tsv"), "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=cols, delimiter="\t", lineterminator="\n", extrasaction="ignore")
         w.writeheader(); w.writerows(rows)
+    export_form(rows, outdir)
     sc, scc = scores(rows), scores(rows, collapse=True)
     lines = []
     with open(os.path.join(outdir, "scores.tsv"), "w", newline="") as f:

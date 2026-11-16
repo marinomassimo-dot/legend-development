@@ -1,0 +1,17 @@
+thread_id	name	origin	axis	tier
+T1	NMDAR-dependent neocortical bursts, neuron-targeted Wwox loss	O-BRETON21	glutamatergic-excitation	3
+T2	reduced spontaneous inhibition in L2/3 pyramidal cells	O-BRETON21	GABAergic-inhibition	3
+T3	PTZ-provoked seizure score, ethosuximide late phase, Wwox-null pups	O-CHENG20	PTZ-generic	0
+T4	lithium acts in all three genotypes	O-CHENG20	GSK3-nonspecific	0
+T5	T-type calcium route (Cav3), channel unmeasured in Wwox tissue	O-TTYPE	Cav3	1
+T7	K channel arms (K2P, Kir2, Kv7), tool pharmacology outside WWOX	O-KARMS	K-channel	1
+T8	ISR / eIF2B	O-ISR	ISR	1
+T9	myelin / OPC (CTGF unresolved)	O-CTGF	myelin	1
+T10	metabolic route (PDH/lactate)	O-I7	metabolic	0
+T11	GluN2B share of evoked NMDAR EPSC falls with age (wild-type barrel cortex)	O-MIERAU04	GluN2B-ontogeny	1
+T12	aggravation premise (see cells)			
+T13	intrinsic excitability: depolarisation, firing, sag, post-inhibitory rebound (SCI addition)	O-BRETON21	intrinsic-excitability	3
+T14	organoid GABAergic markers up (GAD1/2) with GABA-A receptor components down (GABRB2/3)	O-STEINBERG	GABAergic-markers	2
+T15	parvalbumin marker loss (-44% whole hippocampus)	O-PVMARKER	PV-interneuron	2
+T16	aggravation premise (see cells)			
+T17	aggravation premise (see cells)			
