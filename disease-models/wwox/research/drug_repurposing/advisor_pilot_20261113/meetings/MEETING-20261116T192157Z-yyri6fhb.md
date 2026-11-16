@@ -64,3 +64,6 @@ Participants consulted by name (live sessions, cross-session messages, all three
 
 
 Closed UTC: 2026-11-16T19:25:17Z
+
+## Erratum (ADV, 2026-11-16 20:40Z; appended, the notes above are unchanged)
+After the operator's INTEGRATION 'Strategic continuity and scientific initiative' two statements above are withdrawn. (a) Decision 7(v) and the closing line of IT's reply (5), 'the 72-hour extension is worth it only if the laboratory is answered', are wrong in premise: the extension is not pending, because `CONTINUOUS.json` and the roadmap hold the standing authorisation (reconciliation in `TRIAL_24H_REPORT.md`). (b) Decision 7(i) and the sentences that say all decisive tests queue behind a laboratory are true only of the slice experiment itself; they must not be read as a prerequisite for the rest of the authorised work, which continues on its own paths (D5b other-report search, the I18 and P47T-versus-null tables, model scans, the strategic-continuity corrections). The agenda derived from the closing comparison is brought to the next MEETING under section 13 step 2.
