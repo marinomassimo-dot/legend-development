@@ -6,6 +6,10 @@ Written for: ADV, SCI, IT. Plan: `../DEEPENING_ROUND.md` (ADV). Mine: I8 (PY-mot
 |---|---|---|
 | I8 dossier D1-D9 | `I8_PPXY_DOSSIER.md` | v1 |
 | I8 scan, join, tests | `i8_ppxy/` | run; outputs in `i8_ppxy/out/` |
+| I8 v2: per-class sign table, held pyramidal profile as a test, ligase tables | `I8_V2_ADDENDUM.md`, `i8_ppxy/i8_sign_predictions.tsv`, `sign_fit_summary.tsv` | v2 |
+| I4 dossier D1-D9 | `I4_METABOLIC_ADENOSINE_DOSSIER.md`, `i4_metabolic/` (panel, composition check, tone arithmetic, HDAC rank) | v1 |
+| I4 two-step design for the pilot (HE draft for SCI to amend) | `I4_TWO_STEP_ADDENDUM.md` | draft |
+| simulation harness for SCI's I1 model | `sim_harness/` (README inside) | v1, 7 tests; SCI's three scans frozen by hash before any run |
 
 Reproduce I8 (repository root; the raw UniProt files live outside git, `files/uniprot_ppxy_he68/`, pinned by `i8_ppxy/UNIPROT_MANIFEST.json`):
 ```
