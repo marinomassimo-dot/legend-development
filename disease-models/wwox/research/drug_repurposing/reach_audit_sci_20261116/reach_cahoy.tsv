@@ -1,6 +1,6 @@
 gene	probe	Neurons P7	Neurons P16	Neurons P26	Astros P7	Astros P8	Astros P17
 Scn1a	1450120_at	9.52 (n4)	9.92 (n3)	9.49 (n1)	5.28 (n2)	4.95 (n1)	4.80 (n5)
-Scn2a	no probe
+Scn2a	no probe	no probe	no probe	no probe	no probe	no probe	no probe
 Scn3a	1439204_at	9.59 (n4)	8.94 (n3)	7.93 (n1)	4.52 (n2)	4.82 (n1)	4.10 (n5)
 Scn8a	1423515_at	10.18 (n4)	10.98 (n3)	10.53 (n1)	8.40 (n2)	8.35 (n1)	8.61 (n5)
 Scn1b	1418738_at	8.50 (n4)	9.84 (n3)	9.43 (n1)	7.80 (n2)	7.88 (n1)	8.35 (n5)

@@ -34,7 +34,7 @@ GENES = ["Scn1a", "Scn2a", "Scn3a", "Scn8a", "Scn1b", "Scn2b", "Slc6a1", "Slc6a1
 rows = []
 for g in GENES:
     probes = [p for p, s in ann.items() if g.lower() in [x.strip().lower() for x in re.split("///|;", s)] and p in data]
-    if not probes: rows.append((g, "no probe")); continue
+    if not probes: rows.append((g, "no probe", *(["no probe"] * len(groups)))); continue
     best = max(probes, key=lambda p: statistics.mean(x for x in data[p] if x == x))
     out = [g, best]
     for gr, idx in groups.items():
