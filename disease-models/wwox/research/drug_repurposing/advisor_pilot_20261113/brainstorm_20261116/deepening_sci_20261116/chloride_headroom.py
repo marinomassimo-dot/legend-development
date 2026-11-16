@@ -5,15 +5,15 @@ proportional to the driving force (V - E_Cl(c)); between and during bursts a fir
 E_Cl = -26.7 mV * ln(Cl_o / c) (Nernst at ~35 C, Cl_o = 130 mM: ASSUMED slice ACSF). V is the membrane potential of the cell during the burst (V_burst, ASSUMED -55 mV).
 delta0 = the chloride rise (mM) produced by one baseline burst (pam 0) starting at c_eq = 6 mM: UNKNOWN, so it is scanned (0.5 to 8 mM).
     python3 chloride_headroom.py --help
-    python3 chloride_headroom.py run <out_tsv>
+    python3 chloride_headroom.py run <out_tsv> [V_rest_mV]   (default -65; the held S-WT and S-KO values are -79.25 and -73.62)
 Outputs, per (c_eq, tau_c, delta0, pam): E_Cl at burst onset, at burst end, whether GABA-A has become depolarising relative to V_burst
 (E_Cl > V_REF = -65 mV, i.e. depolarising from rest; influx stops at E_Cl = V_burst so E_Cl can approach but not pass V_burst), and the time inside the burst at which it crosses; plus the pre-burst chloride in the repeating regime (burst every 26.2 s)."""
 import sys
-if len(sys.argv) != 3 or sys.argv[1] != "run":
+if len(sys.argv) not in (3, 4) or sys.argv[1] != "run":
     print(__doc__); raise SystemExit(0)
 import math
 CL_O, VB, D, T_INT = 130.0, -55.0, 0.66, 26.2
-V_REF = -65.0   # resting potential used by the I1 model: GABA-A is depolarising from rest when E_Cl > V_REF
+V_REF = float(sys.argv[3]) if len(sys.argv) == 4 else -65.0   # resting potential used by the I1 model: GABA-A is depolarising from rest when E_Cl > V_REF
 E = lambda c: -26.7 * math.log(CL_O / c)
 def influx_const(delta0, ref_c=6.0, g=1.0):
     # chloride rise over D at pam 0 starting at ref_c, ignoring extrusion: delta0 = k*(VB-E(c))*D approx; calibrate k with the ref driving force
