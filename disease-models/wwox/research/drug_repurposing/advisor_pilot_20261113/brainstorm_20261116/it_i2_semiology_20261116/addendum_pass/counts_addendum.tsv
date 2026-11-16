@@ -1,0 +1,31 @@
+metric	value	comment
+children_with_domain_token:SDR	3	a child with two domains is counted under each
+children_with_domain_token:WW1	1	a child with two domains is counted under each
+children_with_domain_token:WW2	0	a child with two domains is counted under each
+children_with_domain_token:deletion	15	a child with two domains is counted under each
+children_with_domain_token:not_stated	11	a child with two domains is counted under each
+children_with_domain_token:other	2	a child with two domains is counted under each
+children_with_domain_token:splice	7	a child with two domains is counted under each
+children_with_domain_token:truncating	14	a child with two domains is counted under each
+children_by_exact_domain_set:SDR	2	
+children_by_exact_domain_set:SDR|deletion	1	
+children_by_exact_domain_set:WW1|splice	1	
+children_by_exact_domain_set:deletion	8	
+children_by_exact_domain_set:deletion|splice	1	
+children_by_exact_domain_set:deletion|truncating	5	
+children_by_exact_domain_set:not_stated	11	
+children_by_exact_domain_set:other|truncating	2	
+children_by_exact_domain_set:splice	4	
+children_by_exact_domain_set:splice|truncating	1	
+children_by_exact_domain_set:truncating	6	
+children_protein_stated:absent_or_truncated	4	
+children_protein_stated:not_stated	38	
+children_protein_stated:present	0	
+children_with_sleep_wake_timing_stated	3	asleep=1; mixed=2
+children_sleep_wake_not_stated	39	
+exposure_rows_by_line_of_therapy:first_line	4	170 exposures.tsv rows (incl. the agent=none row)
+exposure_rows_by_line_of_therapy:add_on	9	170 exposures.tsv rows (incl. the agent=none row)
+exposure_rows_by_line_of_therapy:later_line	7	170 exposures.tsv rows (incl. the agent=none row)
+exposure_rows_by_line_of_therapy:not_stated	150	170 exposures.tsv rows (incl. the agent=none row)
+children_missense_with_protein_present	0	no child has protein stated as present
+children_with_protein_absent_or_truncated_and_a_missense_allele_stated	1	JO2 (Johannsen Patient 2): missense, protein not detectable in fibroblasts
