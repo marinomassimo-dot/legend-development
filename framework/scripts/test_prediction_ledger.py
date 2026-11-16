@@ -144,6 +144,30 @@ class CheckSeparatesWhatGitProves(Fixture):
         bad, _, _ = self.check(outcome_study_id="456")
         self.assertEqual(bad, [])
 
+    def test_a_receipt_before_the_freeze_names_the_study_and_is_a_warning_when_blindness_is_declared(self):
+        (self.root / RECEIPTS).write_text(json.dumps({"event_at": "2026-11-09T09:00:00+00:00", "event_id": "FTR-1",
+                                                       "record_kind": "legacy_reconstruction",
+                                                       "study_id": {"pmid": "123", "doi": None}}) + "\n")
+        bad, _, _ = self.check(outcome_study_id="PMID 123; PMID 9")
+        self.assertTrue(any("1 outcome source(s)" in b and "123" in b and "FTR-1" in b and "legacy_reconstruction" in b for b in bad), bad)
+        bad, warn, _ = self.check(outcome_study_id="PMID 123", blindness="declared")
+        self.assertEqual(bad, [])
+        self.assertTrue(any("blindness declared, not shown" in w and "123" in w for w in warn), warn)
+
+    def test_a_public_outcome_in_the_tree_is_a_warning_only_when_blindness_is_declared(self):
+        bad, warn, _ = self.check(outcome_ref=f"{UNDER}/predictions_frozen.md", blindness="declared")
+        self.assertEqual(bad, [])
+        self.assertTrue(any("outcome_in_tree_at_freeze = yes (blindness declared, not shown)" in w for w in warn))
+        bad, _, _ = self.check(blindness="maybe")
+        self.assertTrue(any("blindness" in b for b in bad))
+
+    def test_several_outcome_sources_are_checked_and_prefixes_are_normalised(self):
+        self.assertEqual(pl.study_ids("PMID 123; doi:10.1/X ;; PMID: 45"), ["123", "10.1/x", "45"])
+        (self.root / RECEIPTS).write_text(json.dumps({"event_at": "2026-11-09T09:00:00+00:00",
+                                                       "study_id": {"pmid": "45", "doi": None}}) + "\n")
+        bad, _, _ = self.check(outcome_study_id="PMID 123; PMID 45")
+        self.assertTrue(any("read receipt" in b for b in bad))
+
     def test_same_actor_as_predictor_and_scorer_is_a_violation(self):
         bad, _, _ = self.check(scorer="sci")
         self.assertTrue(any("same actor" in b for b in bad))
