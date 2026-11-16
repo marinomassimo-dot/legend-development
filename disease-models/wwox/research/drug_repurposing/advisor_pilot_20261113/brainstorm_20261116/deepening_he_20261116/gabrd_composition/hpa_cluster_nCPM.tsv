@@ -1,0 +1,49 @@
+cluster_type	GABRD	LAMP5	SST	NPY	CCK	PVALB	VIP	SLC17A7	GAD1
+astrocytes	9.0	8.9	8.3	4.0	11.6	6.4	0.9	3.9	12.5
+bergmann glia	15.9	106.2	0.0	0.6	0.0	17.4	0.0	3.9	8.4
+brainstem vglut2+ excitatory	3.4	27.1	92.3	9.7	61.9	13.3	0.5	0.8	18.3
+ca1-3 excitatory	9.0	25.3	3.3	3.8	43.3	0.2	6.1	188.8	1.8
+ca4 excitatory	5.5	14.3	2.1	2.5	187.5	0.2	0.8	181.3	1.4
+cerebellar granular cells	223.2	1.2	0.0	0.0	0.1	7.8	0.8	165.0	4.8
+cerebellar purkinje cells	26.2	0.0	0.0	0.0	0.0	553.6	0.0	16.7	427.1
+cge derived interneurons	46.3	100.2	97.8	31.0	1414.6	14.5	354.3	3.8	451.1
+cholinergic	2.0	2.6	12.4	10.3	59.9	1.9	0.5	15.6	95.7
+choroid plexus epithelial cells	1.0	5.5	4.2	2.0	33.6	5.4	0.8	18.4	23.7
+dentate gyrus excitatory	60.0	46.8	2.7	5.2	20.7	0.2	1.2	206.0	89.1
+dopaminergic	0.2	1.3	49.3	0.6	135.5	4.4	108.5	0.2	2.6
+ependymal cells	9.0	3.9	6.9	3.0	8.7	4.4	0.5	2.6	5.8
+fibroblasts	2.8	5.5	11.4	4.6	28.3	7.6	1.1	4.1	6.3
+forebrain excitatory	29.0	36.4	4.7	5.6	297.6	0.1	1.4	138.9	3.0
+forebrain projection neurons	32.9	23.9	3.8	6.4	136.2	0.3	1.7	162.5	3.9
+hypothalamic vglut2+ neurons	2.4	0.5	6.8	0.7	4.5	59.7	0.6	0.0	21.9
+lamp5+ glycinergic inhibitory	1.9	127.0	197.7	98.3	63.1	13.5	1.6	1.0	237.8
+lower rhombic lip-derived neurons	37.2	33.8	9.9	0.9	2.8	27.8	0.0	71.0	2.2
+lymphocytes	4.4	2.8	9.3	2.0	14.9	7.6	1.6	4.3	6.6
+macrophages & monocytes	3.0	3.2	7.6	2.9	16.0	6.9	1.6	4.4	4.6
+medium spiny neurons (msn)	58.7	144.8	12.0	6.6	40.9	0.4	2.4	1.8	118.4
+mge derived interneuron	61.1	77.1	518.8	602.1	222.7	13.9	2.5	5.0	524.3
+microglia	3.6	4.0	12.1	3.8	16.7	7.5	1.5	4.3	6.1
+midbrain derived inhibitory neurons	0.7	5.9	17.5	1.6	4.4	9.7	0.1	0.8	530.6
+midbrain–hindbrain inhibitory neurons	1.9	5.6	676.6	15.6	17.0	66.3	0.6	0.3	337.4
+monoaminergic	0.3	0.8	12.9	3.0	3.2	0.9	1.2	0.0	346.3
+msn-like neurons	51.8	127.4	238.0	10.3	41.4	0.3	8.3	2.3	183.4
+neurosecretory	1.3	0.7	227.7	41.2	139.4	0.2	16.1	0.0	4.2
+noradrenergic	1.9	1.4	129.3	40.7	2.9	1.6	0.2	1.4	2.6
+oligodendrocyte progenitor cells	3.4	24.5	6.0	2.2	7.6	4.7	0.7	2.9	133.5
+oligodendrocytes	2.6	2.7	12.4	4.8	17.5	6.2	1.7	3.9	5.7
+orexinergic	0.7	0.7	10.4	3.3	4.6	0.0	0.0	0.0	90.8
+other excitatory neurons	22.8	18.8	506.6	4.0	92.0	5.9	0.2	141.1	8.4
+other inhibitory	10.6	16.9	238.2	118.5	57.9	1.3	2.9	0.7	246.5
+other neuron	7.9	20.3	50.8	32.3	134.4	0.8	10.1	35.2	41.9
+pericytes	3.9	2.1	8.3	3.2	12.8	7.5	0.9	3.6	5.8
+pvalb+ excitatory neurons	1.7	22.8	32.9	1.0	14.3	336.7	0.0	2.1	4.5
+schwann cells	0.0	17.7	26.6	17.7	0.0	17.7	0.0	0.0	0.0
+serotonergic	2.6	7.5	17.7	12.2	27.6	0.7	1.7	3.0	101.6
+spinal peptidergic excitatory neurons	0.4	63.0	1327.3	1.5	21.6	34.5	0.0	0.1	3.3
+subcortical vglut2+ excitatory	5.8	10.5	73.2	4.0	127.8	6.5	6.0	5.9	9.6
+tfap2b+ inhibitory	51.9	27.5	3.9	1.3	1.4	412.0	0.0	1.6	472.8
+thalamic projection neurons	44.4	2.0	2.5	1.0	150.4	244.1	0.1	0.1	8.7
+upper rhombic lip-derived neurons	173.5	2.2	12.9	2.4	2.7	8.0	0.7	129.1	4.6
+vascular endothelial cells	3.3	2.1	8.0	5.7	8.0	8.0	9.4	5.0	4.8
+vascular smooth muscle cells	6.2	3.4	6.8	3.5	18.7	14.1	2.7	12.8	17.9
+vglut3 neuron	1.2	7.6	1007.0	0.3	18.6	1.4	0.0	1.0	26.9

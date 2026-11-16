@@ -38,6 +38,17 @@ class Committed(unittest.TestCase):
     def rec(self, inv):
         return hp.record_for(self.pkgs, inv)
 
+    def test_a_passing_check_names_the_downstream_readers_of_the_registry(self):
+        """2026-11-16: the HB1 package passed `check` and went red in five reader suites for 14 CI runs; the check now says which suites to run next (found by what they read, not from a list)."""
+        import io, contextlib
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            self.assertEqual(hp.main(["check"]), 0)
+        out = buf.getvalue()
+        self.assertIn("NEXT before the push", out)
+        for suite in ("test_design_rows_he50.py", "test_stage_it47.py", "test_stage_it50.py"):
+            self.assertIn(suite, out)
+
     def test_committed_links_validate(self):
         self.assertEqual(hp.validate_manifest(), [])
         self.assertEqual([e for p in self.pkgs for e in hp.validate(p)], [])

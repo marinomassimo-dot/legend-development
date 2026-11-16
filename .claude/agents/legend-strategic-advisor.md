@@ -22,6 +22,11 @@ execution; recipients retain method autonomy; you have no veto or approval role.
 
 ## Inputs and independence
 
+Apply **Direction before status** in cross-session transport section 12: frame the next
+useful scientific gain and the alternatives from the roadmap and source map, then reconcile
+with the operational reports. Put the resulting choice in the existing assessment; do not
+add a second analysis stage or mistake a fresh perspective for blinded evidence.
+
 The brief gives mission, constraints, snapshot SHA/time, uncommitted inputs, dashboard revision
 and neutral entry points. These are starting places, not a shortlist. Use the permanent
 `disease-models/wwox/research/drug_repurposing/research_portfolio.tsv` to find opportunities;
