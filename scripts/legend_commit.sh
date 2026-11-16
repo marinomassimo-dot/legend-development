@@ -12,6 +12,7 @@
 #   exit:  0 committed / nothing to commit · 2 usage · 3 lock timeout · 4 directory pathspec
 #          5 generated surfaces unverifiable (or stale under a refused override) on the candidate commit
 #          6 committed on main, but regenerating the stale surfaces afterwards failed
+#          7 a named TSV/CSV/JSON file is structurally broken (ragged rows, unparsable JSON, empty file); LEGEND_STRUCTURE_BECAUSE overrides
 #
 # Concurrent actors share one checkout, so every commit takes an exclusive lock:
 # `git commit` races on .git/index.lock. The commit is path-scoped, so an actor can
@@ -93,6 +94,21 @@ Stale-surfaces-because: $LEGEND_STALE_SURFACES_BECAUSE"
     fi
   fi
 fi
+
+# Structure of the machine-readable files this commit names (2026-11-16: a TSV row with 2 cells in an 8-column table reached main and kept the publication workflow red for 19 runs, ~1,200 CI
+# minutes; the check existed and was only run by the gate). The same tests, restricted to the named files: ragged TSV/CSV rows, JSON that does not parse, empty or non-UTF-8 files.
+case " $* " in
+  *.tsv*|*.csv*|*.json*)
+    STRUCT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/scripts/test_structured_data_integrity.py"
+    if [ -f "$STRUCT" ] && [ -z "${LEGEND_STRUCTURE_BECAUSE:-}" ]; then
+      REL="$(for p in "$@"; do [ -f "$p" ] && realpath "$p"; done)"                 # absolute paths: the wrapper's own checkout and the repository it commits to need not be the same
+      if ! SOUT="$(LEGEND_STRUCT_PATHS="$REL" python3 "$STRUCT" 2>&1)"; then
+        printf '%s\n' "$SOUT" | tail -12 >&2
+        echo "refused: a named machine-readable file is structurally broken (see above). Fix it, or set LEGEND_STRUCTURE_BECAUSE=\"<reason>\"." >&2
+        exit 7
+      fi
+    fi;;
+esac
 
 git add -- "$@"
 if git diff --cached --quiet -- "$@"; then
