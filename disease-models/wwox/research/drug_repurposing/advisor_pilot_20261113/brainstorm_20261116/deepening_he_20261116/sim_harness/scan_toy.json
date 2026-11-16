@@ -1,0 +1,2 @@
+{"design": "grid", "grid": {"pam": [0.0, 1.0], "J_T": [0.5, 1.0]}, "fixed": {}, "silent_metric": "n_bursts", "silent_below": 5,
+ "predictions": [{"id": "T1", "statement": "pam 1 gives a longer median interval than pam 0 at J_T 1", "metric": "isi_median_s", "a": "J_T=1|pam=1", "b": "J_T=1|pam=0", "expect": "a_gt_b", "min_fraction": 0.8}]}
