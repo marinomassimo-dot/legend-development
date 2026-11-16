@@ -1,0 +1,17 @@
+arm	n_astrocyte_like_nuclei	gene	CPM	frac_detected
+ctrl	395	Kcnj10	71.52	0.1494
+ctrl	395	Slc1a2	4580.16	0.6911
+ctrl	395	Slc1a3	2041.84	0.9215
+ctrl	395	Atp1a2	1249.98	0.6608
+ctrl	395	Aqp4	223.88	0.2835
+ctrl	395	Gja1	304.72	0.3975
+ctrl	395	Gfap	145.11	0.2228
+ctrl	395	Slc6a11	154.43	0.2582
+ko	396	Kcnj10	73.34	0.1414
+ko	396	Slc1a2	6210.13	0.7273
+ko	396	Slc1a3	3539.37	0.9116
+ko	396	Atp1a2	850.79	0.5505
+ko	396	Aqp4	113.16	0.2096
+ko	396	Gja1	174.98	0.2551
+ko	396	Gfap	327.95	0.3485
+ko	396	Slc6a11	146.69	0.2247
