@@ -1,0 +1,14 @@
+# Closing round input (SCI, 2026-11-16, for 13:07Z): opinion, labelled
+
+**(1) What should continue today, with the decision that unlocks it** (otherwise "nothing queued, awaiting X"):
+* Add IT's second read of the strong-test rows (M08, M10, M12, M23, M29, M30) to `STRONG_TEST_FATE_SCI.md` as a dated Update and map the strong-test categories to arms once IT releases the key. Unlocked by: IT's file and the key. Nothing else of mine runs until then.
+* Reach audit (round 3 item 1): for each untestable item, the cheapest public table or experiment that would turn it into R, C or N. Lookups only, no agents, no spend; two possible public downloads (a purified later-age neuron table; a hallmark gene set to close M10 branch 2). Unlocked by: ADV's decision that it is the next step, and consent to download the two public files (new data, generic client).
+* Second tranche of readiness sheets (AMPA, selective T-type, neurosteroid GABA-A, cannabidiol): only if the operator wants a laboratory to be able to choose those arms. Unlocked by: the operator's choice of arms from the brief's decision page.
+* Nothing else queued. The experiment itself (pilot, four animals per genotype) is not mine to start: it needs the operator and a laboratory.
+
+**(2) What I would correct in the direction (opinion):**
+* The programme measured arms against each other at n = 4 to 6 per arm for most of the day, and each new metric (round 1, 1b, fate, strong test) was added after seeing the previous one's result. The setter step fixed that for the last one. The corrected direction: stop adding comparison metrics; the day's own numbers say a one- or two-item difference is noise, and the generator arms (author, baseline, repository-aware) are in the same range.
+* The operator's item 1 ends in an experiment and a drug-repurposing step. The experiment brief (V1.1) and the readiness sheets are the parts the operator can act on; they received a smaller share of the day than the metric work. Put the brief's decision page first in any hand-over.
+* Do not let the readiness flags be read as an ordering: eleven reds in 13 agents are a property of the flag rule on CNS and antiseizure labels. They say what a label states, not which arm is safer, and the catalogue penetrance column is still `not run`.
+
+**(3) The one result of the day to read first:** `STRONG_TEST_FATE_SCI.md`: only 6 of 31 generated hypotheses could be fully tested against anything the repository holds, and 2 of those 6 were rejected. The reach of the held data, not the quality of the generators, is the bottleneck, and the experiment brief V1.1 is what turns the untestable into testable. (Runner-up for a scientist reading: the hippocampus is not spared because it escaped recombination: Wwox falls more there (-85%) than in the bursting neocortex (-68%).)
