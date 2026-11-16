@@ -1,0 +1,23 @@
+endpoint	window	ranking	rank	tie_set_size_k	informativeness_1_minus_k_over_15	claimable_as_discriminating	classes
+development	P6-P8	per_thread_sum	-	15	0.0	0	NULL ORDERING FROZEN: no thread links any class; all 15 tied at 0
+development	P6-P8	origin_collapsed	-	15	0.0	0	NULL ORDERING FROZEN: no thread links any class; all 15 tied at 0
+development	later/unspecified	per_thread_sum	-	15	0.0	0	NULL ORDERING FROZEN: no thread links any class; all 15 tied at 0
+development	later/unspecified	origin_collapsed	-	15	0.0	0	NULL ORDERING FROZEN: no thread links any class; all 15 tied at 0
+seizure	P13-P15	per_thread_sum	1	5	0.667	1	sodium-channel; NMDAR pore blockers; GABA-A PAM (non-benzodiazepine); benzodiazepines; valproate-type (score 9)
+seizure	P13-P15	per_thread_sum	2	5	0.667	0	T-type calcium; AMPA antagonists; GluN2B NAMs; GABA-AT/GAT; carbonic-anhydrase/multi-target (score 6)
+seizure	P13-P15	per_thread_sum	3	3	0.8	0	SV2A; Kv7 openers; cannabidiol/fenfluramine-type (score 3)
+seizure	P13-P15	per_thread_sum	4	2	0.867	0	steroid/ACTH; ketogenic diet (score 0)
+seizure	P13-P15	origin_collapsed	1	3	0.8	1	NMDAR pore blockers; GABA-A PAM (non-benzodiazepine); benzodiazepines (score 9)
+seizure	P13-P15	origin_collapsed	2	5	0.667	0	sodium-channel; T-type calcium; AMPA antagonists; GluN2B NAMs; GABA-AT/GAT (score 6)
+seizure	P13-P15	origin_collapsed	3	5	0.667	0	SV2A; Kv7 openers; carbonic-anhydrase/multi-target; valproate-type; cannabidiol/fenfluramine-type (score 3)
+seizure	P13-P15	origin_collapsed	4	2	0.867	0	steroid/ACTH; ketogenic diet (score 0)
+seizure	P6-P8	per_thread_sum	-	15	0.0	0	NULL ORDERING FROZEN: no thread links any class; all 15 tied at 0
+seizure	P6-P8	origin_collapsed	-	15	0.0	0	NULL ORDERING FROZEN: no thread links any class; all 15 tied at 0
+seizure	later/unspecified	per_thread_sum	1	5	0.667	1	sodium-channel; NMDAR pore blockers; GABA-A PAM (non-benzodiazepine); benzodiazepines; valproate-type (score 9)
+seizure	later/unspecified	per_thread_sum	2	5	0.667	0	T-type calcium; AMPA antagonists; GluN2B NAMs; GABA-AT/GAT; carbonic-anhydrase/multi-target (score 6)
+seizure	later/unspecified	per_thread_sum	3	3	0.8	0	SV2A; Kv7 openers; cannabidiol/fenfluramine-type (score 3)
+seizure	later/unspecified	per_thread_sum	4	2	0.867	0	steroid/ACTH; ketogenic diet (score 0)
+seizure	later/unspecified	origin_collapsed	1	3	0.8	1	NMDAR pore blockers; GABA-A PAM (non-benzodiazepine); benzodiazepines (score 9)
+seizure	later/unspecified	origin_collapsed	2	5	0.667	0	sodium-channel; T-type calcium; AMPA antagonists; GluN2B NAMs; GABA-AT/GAT (score 6)
+seizure	later/unspecified	origin_collapsed	3	5	0.667	0	SV2A; Kv7 openers; carbonic-anhydrase/multi-target; valproate-type; cannabidiol/fenfluramine-type (score 3)
+seizure	later/unspecified	origin_collapsed	4	2	0.867	0	steroid/ACTH; ketogenic diet (score 0)

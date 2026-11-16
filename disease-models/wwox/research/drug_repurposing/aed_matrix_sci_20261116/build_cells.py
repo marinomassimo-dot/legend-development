@@ -189,12 +189,13 @@ def permutation_null(rows, ep, win, draws=5000, seed=20261116):
     out = {}
     for c in CLASSES:
         vec = [(cell[(t, c)]["directness"], cell[(t, c)]["sign"]) for t in ths]
-        tot, cnt = 0.0, 0
+        tot, cnt, seen = 0.0, 0, set()
         for _ in range(draws):
             v = vec[:]; rng.shuffle(v)
             sc = sum(tier[t] * d for t, (d, sg) in zip(ths, v) if sg == "match")
-            tot += sc; cnt += sc >= obs[(ep, win, c)]["match"]
-        out[c] = (obs[(ep, win, c)]["match"], tot / draws, cnt / draws)
+            tot += sc; cnt += sc >= obs[(ep, win, c)]["match"]; seen.add(sc)
+        # RULE_AMENDMENTS 3: a degenerate null (one value only) is "null undefined", never a p-value
+        out[c] = (obs[(ep, win, c)]["match"], tot / draws, cnt / draws if len(seen) > 1 else "null undefined")
     return out
 
 def voi(rows, ep, win):
@@ -246,11 +247,25 @@ def main(outdir):
             for c in sorted(CLASSES, key=lambda x: -sc[(ep, win, x)]["match"]):
                 s = sc[(ep, win, c)]
                 w.writerow([ep, win, c, s["match"], scc[(ep, win, c)]["match"], s["aggravation"], s["unknown"], s["n_pairs"],
-                            round(nul[c][1], 2), round(nul[c][2], 3), round(stab[c], 3),
+                            round(nul[c][1], 2), nul[c][2] if isinstance(nul[c][2], str) else round(nul[c][2], 3), round(stab[c], 3),
                             round(s["match"] / s["n_pairs"], 2) if s["n_pairs"] else 0])
             top, best = top_set(sc, ep, win)
             lines.append(f"{ep} {win}: top score {best}; tied top classes: {', '.join(sorted(top)) if best else 'none (no scorable thread)'}; "
                          f"tier enumeration {ncomb} combos over {','.join(ths) or 'no thread'}")
+    with open(os.path.join(outdir, "rankings.tsv"), "w", newline="") as f:
+        w = csv.writer(f, delimiter="\t", lineterminator="\n")
+        w.writerow(["endpoint", "window", "ranking", "rank", "tie_set_size_k", "informativeness_1_minus_k_over_15", "claimable_as_discriminating", "classes"])
+        for ep, win in sorted({(r["endpoint"], r["window"]) for r in rows}):
+            for name, scd in (("per_thread_sum", sc), ("origin_collapsed", scc)):
+                best = max(scd[(ep, win, c)]["match"] for c in CLASSES)
+                if best == 0:
+                    w.writerow([ep, win, name, "-", 15, 0.0, 0, "NULL ORDERING FROZEN: no thread links any class; all 15 tied at 0"])
+                    continue
+                levels = sorted({scd[(ep, win, c)]["match"] for c in CLASSES}, reverse=True)
+                for rk, lv in enumerate(levels, 1):
+                    cls = [c for c in CLASSES if scd[(ep, win, c)]["match"] == lv]
+                    k = len(cls)
+                    w.writerow([ep, win, name, rk, k, round(1 - k / 15, 3), int(rk == 1 and k <= 5), "; ".join(cls) + f" (score {lv})"])
     with open(os.path.join(outdir, "voi.tsv"), "w", newline="") as f:
         w = csv.writer(f, delimiter="\t", lineterminator="\n")
         w.writerow(["endpoint", "window", "single_input_change", "top_set_changes", "new_top_set", "new_top_score", "partner_direction_also_changes"])
