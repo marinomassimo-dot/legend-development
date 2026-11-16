@@ -682,6 +682,30 @@ class Concordance(unittest.TestCase):
                 self.assertEqual(am.main(["compare", str(pred), str(counts), "--pred-column", "nope"]), 2)
 
 
+V2_CELLS = Path(__file__).resolve().parents[2] / "disease-models/wwox/research/drug_repurposing/matrix_v2_cells_sci_20261116/output/cells_v2_form.tsv"
+V2_SCORES = V2_CELLS.with_name("scores_v2.tsv")
+
+
+@unittest.skipUnless(V2_CELLS.exists() and V2_SCORES.exists(), "the filled v2 matrix is not in this checkout")
+class TheFilledMatrixIsReproducible(unittest.TestCase):
+    """H5: the generator is a function of two committed files. Two runs on the filled v2 cells are byte-identical, and equal to the committed scores."""
+
+    def run_once(self, out):
+        with contextlib.redirect_stdout(io.StringIO()) as printed:
+            code = am.main(["score", str(V2_CELLS), str(RULE_V2), "--expect-rule-sha256", RULE_V2_SHA256, "--out", str(out)])
+        return code, printed.getvalue()
+
+    def test_two_runs_are_byte_identical_and_equal_the_committed_scores(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            a, b = Path(tmp) / "a.tsv", Path(tmp) / "b.tsv"
+            (code_a, text_a), (code_b, text_b) = self.run_once(a), self.run_once(b)
+            self.assertEqual((code_a, code_b), (0, 0))
+            self.assertEqual(a.read_bytes(), b.read_bytes())
+            self.assertEqual(text_a, text_b)
+            self.assertEqual(a.read_bytes(), V2_SCORES.read_bytes(),
+                             "the committed scores_v2.tsv is not what the generator makes of the committed cells under the pinned rule")
+
+
 class HelpIsSafe(unittest.TestCase):
     def test_help_prints_usage_and_exits_zero(self):
         with contextlib.redirect_stdout(io.StringIO()) as out, self.assertRaises(SystemExit) as stop:

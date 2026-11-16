@@ -1,0 +1,30 @@
+{
+ "K01": {
+  "arm": "PLANTED_NOVEL",
+  "orig": "J25"
+ },
+ "K02": {
+  "arm": "ARMB",
+  "orig": "H-C2"
+ },
+ "K03": {
+  "arm": "ARMB",
+  "orig": "H-C4"
+ },
+ "K04": {
+  "arm": "PLANTED_EXISTING",
+  "orig": "J26"
+ },
+ "K05": {
+  "arm": "ARMB",
+  "orig": "H-C5"
+ },
+ "K06": {
+  "arm": "ARMB",
+  "orig": "H-C3"
+ },
+ "K07": {
+  "arm": "ARMB",
+  "orig": "H-C1"
+ }
+}

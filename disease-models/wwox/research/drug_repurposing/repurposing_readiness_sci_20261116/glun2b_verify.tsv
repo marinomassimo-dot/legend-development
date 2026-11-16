@@ -1,0 +1,16 @@
+agent	field	result	quote_start
+ifenprodil	mechanism_sentence	FOUND PMID 39067562	Furthermore, the GluN2B-specific inhibitors ifenprodil and Ro 25-6981 significantly reduced cell viability and
+ifenprodil	flag_basis	NOT FOUND	Yellow set by the sentence in signals.tsv row 1 that names extrapyramidal effects for many NMDA receptor antag
+ifenprodil	flag_basis	NOT FOUND	doubt resolved upward. The other sentence (low side-effect profiles) points the other way.
+Ro 25-6981	mechanism_sentence	FOUND PMID 42117259	Furthermore, treatment with a specific GluN2B antagonist Ro 25-6981 significantly abolished the beneficial eff
+Ro 25-6981	flag_basis	NOT FOUND	Nothing about tolerability, safety or interactions for Ro 25-6981 was stated in the abstracts read (42117259, 
+radiprodil	mechanism_sentence	FOUND PMID 42596612	Radiprodil is a GluN2B subunit selective NMDA receptor negative allosteric modulator which is currently under 
+radiprodil	pediatric_label_statement	FOUND PMID 42596612	Radiprodil is a GluN2B subunit selective NMDA receptor negative allosteric modulator which is currently under 
+radiprodil	flag_basis	NOT FOUND	Yellow set by the sentence in signals.tsv row 1 (extrapyramidal effects named for many NMDA receptor antagonis
+radiprodil	flag_basis	NOT FOUND	doubt resolved upward. Development stage per PMID 42470359: radiprodil, a negative allosteric modulator that b
+ifenprodil	signals:tolerability	FOUND PMID 38794209	However, challenges, such as blood-brain barrier penetration and adverse effects, such as extrapyramidal effec
+ifenprodil	signals:other	FOUND PMID 38794209	Despite their low side-effect profiles, selective GluN2B antagonists like ifenprodil and radiprodil have encou
+Ro 25-6981	signals:other	NOT FOUND	none found (abstracts read: 42117259, 39067562)
+radiprodil	signals:tolerability	FOUND PMID 38794209	However, challenges, such as blood-brain barrier penetration and adverse effects, such as extrapyramidal effec
+radiprodil	signals:other	FOUND PMID 38794209	Despite their low side-effect profiles, selective GluN2B antagonists like ifenprodil and radiprodil have encou
+radiprodil	signals:other	FOUND PMID 42470359	This article summarizes data for 13 investigational treatments for which at least preliminary seizure outcome 
