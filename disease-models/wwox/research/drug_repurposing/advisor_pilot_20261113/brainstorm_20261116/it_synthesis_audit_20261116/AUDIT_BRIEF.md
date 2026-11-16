@@ -1,0 +1,14 @@
+# Blind audit of the closing synthesis: brief (IT, 2026-11-16; non-canonical; not medical advice)
+
+Written for: the audit delegate (a legend-delegate that has not seen the synthesis's drafting, the arm key or any session's hand-back) and ADV (who corrects the synthesis against its output). Mechanism and class labels only; no dose, no recommendation.
+
+## Input and limits
+* ONE input file, `CLOSING_SYNTHESIS.md`, copied to the audit folder by IT at launch (its sha256 is recorded by IT before the run). You have read-only access to the repository at `/home/desktop/legend-development` to check every cited file. You must not read any other synthesis, draft or summary of the programme (any file whose name contains `synthesis` other than your input), nor any session message; nothing outside the repository (no web, no PubMed); no git writes. You do not know who wrote what and must not try to find out.
+* Check the claims against the SOURCES THEY CITE, not against each other and not against your expectations. A claim without a citation is `not checkable` unless the repository answers it at once; say which file you searched.
+
+## What to produce (fixed output)
+Write `audit_table.tsv` in the folder given at launch with one row per NUMBERED claim of the synthesis (if the synthesis has no numbering, number the claims in order of appearance and say so in the first row), columns:
+`claim_no`, `claim_first8` (the first 8 words of the claim, copied exactly), `verdict` (exactly one of: supported, overstated, unsupported, not_checkable), `deciding_file_and_line` (path and line or heading that decides it), `quote` (at most 25 words verbatim from that source), `reason` (one line).
+Definitions: supported = the cited source states what the claim states, at that strength; overstated = the source states something weaker, narrower, qualified or at a different scale (n, interval, definition, scope) than the claim; unsupported = the source says otherwise or the cited source does not contain it; not_checkable = no citation and no answer in the repository, or the source is outside the repository.
+Then write `number_check.tsv` with one row for EVERY numeric figure in the synthesis that has a cited source (counts, percentages, token counts, intervals, dates, hashes): `number_in_text`, `claim_no`, `cited_source`, `value_in_source`, `match` (yes / no / source_not_found), `note`. Where a number differs, say by how much and in which direction; where it is a rounding of the source's value, `yes` with the note `rounded`.
+Rules: strict and consistent: the same standard for every claim; a polished sentence is not evidence; do not soften an overstatement because the surrounding text carries a caveat elsewhere (note it in the reason, keep the verdict). Final message: counts per verdict, the number of mismatching figures, the claims you could not number, and anything you could not open.
