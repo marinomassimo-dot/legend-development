@@ -1,0 +1,317 @@
+{
+  "capture": {
+    "assessment_sha256": "2aafe1a308c7ddda1fd7e8d06f7d944e64a1f8aba92736419e8abbe72834874d",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P17/stream.jsonl",
+    "raw_stream_sha256": "8d5f0b81cf77c68e48d05ca7ab0ea659ea56a6ab163fa5a61d881d1ae19b88b9",
+    "source_session_id": "9703881d-3729-48bd-9d36-df42d605d449",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 67672
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-16T20:38:22Z",
+  "label": "P17",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": false,
+      "efforts": {
+        "high": 11
+      },
+      "first_turn_context": 43007,
+      "models": {
+        "claude-opus-5-5": 11
+      },
+      "peak_context": 79054,
+      "totals": {
+        "cache_creation": 79052,
+        "cache_read": 622508,
+        "output": 11775
+      },
+      "turns": 11
+    },
+    "final_turn_model": "claude-opus-5-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.015500600000000002,
+        "inputTokens": 91711,
+        "maxOutputTokens": 128000,
+        "outputTokens": 12659,
+        "provider": "firstParty",
+        "thinkingTokens": 7698,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 79052,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 79052,
+        "cacheReadInputTokens": 622508,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.9925056000000001,
+        "inputTokens": 22,
+        "maxOutputTokens": 128000,
+        "outputTokens": 11775,
+        "provider": "firstParty",
+        "thinkingTokens": 4731,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 20,
+    "refusal_fallbacks": [],
+    "total_cost_usd": 1.0080061999999999,
+    "turn_models": {
+      "claude-opus-5-5": 11
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 79052,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 79052,
+      "cache_read_input_tokens": 622508,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 22,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 1414,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 1414,
+          "cache_read_input_tokens": 77638,
+          "input_tokens": 2,
+          "output_tokens": 5192,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 11775,
+      "output_tokens_details": {
+        "thinking_tokens": 4731
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-16T20:35:11Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P16/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tThe rest of this assessment was stopped by a safety classifier and is not complete. The host should record this Stage P run as incomplete, like the P11 entry,"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/**/*.md"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_a1_feasibility_20261116/README.md\ndisease-models/wwox/research/drug_"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/DEEPENING_ROUND.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# DEEPENING ROUND (ADV; operator instruction of 2026-11-16 ~16:35Z; non-canonical; hypotheses, not findings; not medical advice)\n2\t\n3\t## Principle\n4\tThe opera"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening*/**"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_adv_20261116/I10_SLEEP_THALAMOCORTICAL.md\ndisease-models/wwox"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/**/{ideas_portfolio.tsv,*I1_*,*I2_*,*I3_*,*I4_*,*I8_*,*DOSSIER*}"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "No files found"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_adv_20261116/UNIFIED_MODEL_U1_AND_IDEA_ARM_TABLE.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# U1 and the idea-by-arm prediction table (ADV; HYPOTHESIS; not medical advice)\n2\tAnswer first: the ideas of the round fit one picture, 'REBOUND IGNITION UNDE"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/**/meetings/MEETING-*.md"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261115T152159Z-jaq44mq3.md\ndisease-models/wwox/research/drug_repurposing"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_adv_20261116/I9_PNN_PV_MATURATION.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# I9 Perineuronal nets and PV maturation: 'present but immature' (ADV; HYPOTHESIS; not medical advice)\n2\tAnswer first: PV cells may not be LOST in the Wwox-nu"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261116T132146Z-ctit3nmc.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# MEETING \u2014 2026-11-16T13:21:46Z\n2\t\n3\tStarted UTC: 2026-11-16T13:21:46Z\n4\tSnapshot SHA: a0f9d20244087e38d9b3f48f29a22f98a9137c4a\n5\tCoordination: ADV (directio"
+    },
+    {
+      "input": {
+        "prompt": "List every file and folder name shown in this directory listing, with the latest commit message/time for each if shown. Also report the latest commit hash and time shown for the directory.",
+        "url": "https://github.com/marinomassimo-dot/legend-development/tree/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116"
+      },
+      "is_error": false,
+      "name": "WebFetch",
+      "result_head": "The directory listing does not show any commit messages, commit times, or commit hashes. The \"Latest commit\" section is empty, and the per-item commit columns h"
+    },
+    {
+      "input": {
+        "prompt": "Return the full content verbatim (it is a TSV table). If too long, return every row's id, title, owner, status, depth, last test columns verbatim.",
+        "url": "https://raw.githubusercontent.com/marinomassimo-dot/legend-development/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ideas_portfolio.tsv"
+      },
+      "is_error": false,
+      "name": "WebFetch",
+      "result_head": "I can't return the table verbatim because several `last_test` entries exceed the 125-character limit on quoted source text. Below are all 18 rows with the id, t"
+    },
+    {
+      "input": {
+        "prompt": "List every file name in this directory listing.",
+        "url": "https://github.com/marinomassimo-dot/legend-development/tree/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_attacks_it_20261116"
+      },
+      "is_error": false,
+      "name": "WebFetch",
+      "result_head": "The directory listing shows six files. Each appears twice on the page, so I've listed them once:\n\n1. ATTACK_ADV_DOSSIERS_IT.md\n2. ATTACK_I13_IT.md\n3. ATTACK_I15"
+    },
+    {
+      "input": {
+        "prompt": "List every file and subfolder name in this directory listing.",
+        "url": "https://github.com/marinomassimo-dot/legend-development/tree/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116"
+      },
+      "is_error": false,
+      "name": "WebFetch",
+      "result_head": "The directory listing shows these subfolders:\n\n- attack_i13\n- attack_i6\n- fig4_sipsc\n- i18_proteome\n- i4_metabolic\n- i8_ppxy\n- sim_harness\n- v21_generator\n\nIt s"
+    },
+    {
+      "input": {
+        "prompt": "List every file and subfolder name in this directory listing.",
+        "url": "https://github.com/marinomassimo-dot/legend-development/tree/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116"
+      },
+      "is_error": false,
+      "name": "WebFetch",
+      "result_head": "**Subfolders (2):**\n- run1_signbug\n- scan_out\n\n**Files (100):**\n\n1. DECISION_RULES_SHT_SIPSC_FROZEN_BEFORE_HE_READS.md\n2. DOSSIER_I13_TONIC_INHIBITION_SCI.md\n3."
+    },
+    {
+      "input": {
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/research_portfolio.tsv",
+        "pattern": "^RP-005\\t"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "6:[Omitted long matching line]"
+    },
+    {
+      "input": {
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "pattern": "IT56-Q0[12]"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "195:[Omitted long matching line]\n196:[Omitted long matching line]"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/research_portfolio.tsv",
+        "limit": 6,
+        "offset": 1
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tid\ttheme\topportunity\tdecision\tpriority\twhy_now\tnext_action\tstatus\tsources\tmandate_id\tresume_when\toutcome\tupdated_utc\n2\tRP-001\tGeneration\tTurn unused qualified"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "limit": 2,
+        "offset": 195
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "195\tIT56-Q01\tdisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/leap_sci_20261116/JUDGED_ITEMS_CHEAP_TESTS_SCI.md; disease"
+    },
+    {
+      "input": {
+        "prompt": "Report the header row verbatim, the number of rows, the list of arm names (row labels) and idea columns, and whether any row or note mentions freezing, a hash, existing investigations (INV-), candidates, open-question ids, or agents outside the antiseizure set. Quote short fragments only.",
+        "url": "https://raw.githubusercontent.com/marinomassimo-dot/legend-development/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ideas_arm_table.tsv"
+      },
+      "is_error": false,
+      "name": "WebFetch",
+      "result_head": "**Header row (verbatim):**\n\n```\narm\tidea\tsign\tvalue3\tstatus\towner_confirmed\tnote\n```\n\n**Number of rows:** 58 data rows (excluding the header).\n\n**Arm names (row"
+    }
+  ]
+}
