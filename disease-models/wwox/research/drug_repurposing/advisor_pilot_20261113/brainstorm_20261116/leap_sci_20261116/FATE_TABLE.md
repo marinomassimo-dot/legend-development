@@ -56,3 +56,15 @@ Independence of the pre-tests: baseline 5 of 5 independent; HE 4 of 4; ADV 4 of 
 - U is not a failure of the hypothesis: it marks where a new measurement (the experiment brief) is the only test. It is the largest category (7 of 24), the same size as the whole of R plus C (6).
 - Own-arm bias: my five items carry two C and no R; I tested them most carefully, so the arm that I wrote is the one most exposed to rejection. Read the SCI row with that in mind.
 - This is the held-data fate, not the judge's metric; the two can and do differ (e.g. J11, the baseline survivor, is P here).
+
+## Update 2026-11-16 (round 2): arm B row (IT's H-C1 to H-C5, frozen de2dd121a)
+
+Same categories and labels; pre-tests in `ARMB_HYPOTHESES_PRETEST_SCI.md` (`armb_pretests.py`, `armb_pretest_output/`); rows `R2-C1` to `R2-C5` appended to `FATE_TABLE.tsv`, row "arm B" appended to `FATE_COUNTS.tsv` (the "all" row stays the 24 round-1 items). All five pre-tests are independent of the hypothesis (the delegate opened none of the tables).
+
+| arm | n | R | C | N | P | U |
+|---|---|---|---|---|---|---|
+| arm B (repository knowledge, no perspective instruction) | 5 | 0 | 0 | 1 | 1 | 3 |
+
+H-C1 U, H-C2 U, H-C3 P, H-C4 U, H-C5 N. Against round 1: the baseline A row was [1,1,0,2,1] and the authors' rows add to [R 2, C 2, N 5, P 4, U 6] over 19 items. Arm B has no rejection and no counter-signal, but three of five are U (60%), against 6 of 19 (32%) for the authors and 1 of 5 for baseline A: the held tables reach arm B's mechanisms less often, which is a statement about the tables, not about the hypotheses. Read with the limits above; n is 5.
+
+Second read wanted for: H-C5 (N or U: a presence condition passed is a weak test; same biology as J23, where the same numbers gave R because ADV named a transcript level), H-C3 (P or C), H-C1 (U or P).

@@ -1,0 +1,603 @@
+arm	nuclei_set	n_nuclei	gene	CPM	frac_detected
+ctrl	all nuclei	3182	Grin1	331.12	0.5849
+ctrl	neuron-like (Snap25)	2320	Grin1	363.57	0.7578
+ctrl	excitatory-like	1221	Grin1	387.52	0.8878
+ctrl	interneuron-like (Gad1/Gad2)	534	Grin1	323.91	0.7903
+ctrl	astrocyte-like	395	Grin1	46.64	0.0962
+ctrl	all nuclei	3182	Grin2a	2010.31	0.6383
+ctrl	neuron-like (Snap25)	2320	Grin2a	2217.56	0.8099
+ctrl	excitatory-like	1221	Grin2a	2530.11	0.9451
+ctrl	interneuron-like (Gad1/Gad2)	534	Grin2a	1800.39	0.8034
+ctrl	astrocyte-like	395	Grin2a	150.29	0.1266
+ctrl	all nuclei	3182	Grin2b	1579.26	0.7231
+ctrl	neuron-like (Snap25)	2320	Grin2b	1727.73	0.8862
+ctrl	excitatory-like	1221	Grin2b	1874.73	0.9681
+ctrl	interneuron-like (Gad1/Gad2)	534	Grin2b	1548.27	0.9363
+ctrl	astrocyte-like	395	Grin2b	307.83	0.3342
+ctrl	all nuclei	3182	Grin3a	110.86	0.2332
+ctrl	neuron-like (Snap25)	2320	Grin3a	106.11	0.2539
+ctrl	excitatory-like	1221	Grin3a	71.11	0.2285
+ctrl	interneuron-like (Gad1/Gad2)	534	Grin3a	186.17	0.3614
+ctrl	astrocyte-like	395	Grin3a	215.59	0.2481
+ctrl	all nuclei	3182	Srr	87.22	0.3614
+ctrl	neuron-like (Snap25)	2320	Srr	86.76	0.4267
+ctrl	excitatory-like	1221	Srr	82.97	0.4775
+ctrl	interneuron-like (Gad1/Gad2)	534	Srr	89.31	0.4644
+ctrl	astrocyte-like	395	Srr	90.17	0.1823
+ctrl	all nuclei	3182	Dao	0.11	0.0006
+ctrl	neuron-like (Snap25)	2320	Dao	0.12	0.0009
+ctrl	excitatory-like	1221	Dao	0.19	0.0016
+ctrl	interneuron-like (Gad1/Gad2)	534	Dao	0.24	0.0019
+ctrl	astrocyte-like	395	Dao	0.0	0.0
+ctrl	all nuclei	3182	Slc6a9	7.85	0.0421
+ctrl	neuron-like (Snap25)	2320	Slc6a9	6.78	0.044
+ctrl	excitatory-like	1221	Slc6a9	5.78	0.0475
+ctrl	interneuron-like (Gad1/Gad2)	534	Slc6a9	7.79	0.0524
+ctrl	astrocyte-like	395	Slc6a9	19.69	0.0456
+ctrl	all nuclei	3182	Slc6a11	28.35	0.1232
+ctrl	neuron-like (Snap25)	2320	Slc6a11	21.98	0.1194
+ctrl	excitatory-like	1221	Slc6a11	16.4	0.1204
+ctrl	interneuron-like (Gad1/Gad2)	534	Slc6a11	23.36	0.1348
+ctrl	astrocyte-like	395	Slc6a11	154.43	0.2582
+ctrl	all nuclei	3182	Slc1a4	12.66	0.0682
+ctrl	neuron-like (Snap25)	2320	Slc1a4	11.36	0.0733
+ctrl	excitatory-like	1221	Slc1a4	9.1	0.0721
+ctrl	interneuron-like (Gad1/Gad2)	534	Slc1a4	14.6	0.0955
+ctrl	astrocyte-like	395	Slc1a4	39.39	0.0937
+ctrl	all nuclei	3182	Slc7a10	21.32	0.082
+ctrl	neuron-like (Snap25)	2320	Slc7a10	13.07	0.0599
+ctrl	excitatory-like	1221	Slc7a10	8.34	0.0459
+ctrl	interneuron-like (Gad1/Gad2)	534	Slc7a10	12.17	0.0581
+ctrl	astrocyte-like	395	Slc7a10	166.87	0.2759
+ctrl	all nuclei	3182	Gcat	0.0	0.0
+ctrl	neuron-like (Snap25)	2320	Gcat	0.0	0.0
+ctrl	excitatory-like	1221	Gcat	0.0	0.0
+ctrl	interneuron-like (Gad1/Gad2)	534	Gcat	0.0	0.0
+ctrl	astrocyte-like	395	Gcat	0.0	0.0
+ctrl	all nuclei	3182	Pdxp	18.5	0.1021
+ctrl	neuron-like (Snap25)	2320	Pdxp	16.91	0.1134
+ctrl	excitatory-like	1221	Pdxp	15.55	0.1278
+ctrl	interneuron-like (Gad1/Gad2)	534	Pdxp	17.28	0.1199
+ctrl	astrocyte-like	395	Pdxp	26.95	0.0633
+ctrl	not in matrix	0	Dldh		
+ctrl	all nuclei	3182	Grid1	508.91	0.6996
+ctrl	neuron-like (Snap25)	2320	Grid1	527.98	0.8267
+ctrl	excitatory-like	1221	Grid1	532.97	0.9083
+ctrl	interneuron-like (Gad1/Gad2)	534	Grid1	475.04	0.839
+ctrl	astrocyte-like	395	Grid1	361.73	0.3848
+ctrl	all nuclei	3182	Grid2	963.49	0.7077
+ctrl	neuron-like (Snap25)	2320	Grid2	866.95	0.7461
+ctrl	excitatory-like	1221	Grid2	717.01	0.7772
+ctrl	interneuron-like (Gad1/Gad2)	534	Grid2	1042.32	0.779
+ctrl	astrocyte-like	395	Grid2	1815.89	0.7342
+ctrl	all nuclei	3182	Scn1a	221.5	0.4648
+ctrl	neuron-like (Snap25)	2320	Scn1a	244.27	0.6056
+ctrl	excitatory-like	1221	Scn1a	236.85	0.7093
+ctrl	interneuron-like (Gad1/Gad2)	534	Scn1a	321.72	0.7154
+ctrl	astrocyte-like	395	Scn1a	31.09	0.0608
+ctrl	all nuclei	3182	Scn2a	323.71	0.6182
+ctrl	neuron-like (Snap25)	2320	Scn2a	348.98	0.769
+ctrl	excitatory-like	1221	Scn2a	360.97	0.8829
+ctrl	interneuron-like (Gad1/Gad2)	534	Scn2a	345.09	0.8146
+ctrl	astrocyte-like	395	Scn2a	83.95	0.1747
+ctrl	all nuclei	3182	Scn3a	134.72	0.423
+ctrl	neuron-like (Snap25)	2320	Scn3a	143.41	0.5349
+ctrl	excitatory-like	1221	Scn3a	139.67	0.6331
+ctrl	interneuron-like (Gad1/Gad2)	534	Scn3a	142.85	0.5506
+ctrl	astrocyte-like	395	Scn3a	40.42	0.0785
+ctrl	all nuclei	3182	Scn8a	375.05	0.6464
+ctrl	neuron-like (Snap25)	2320	Scn8a	399.28	0.7862
+ctrl	excitatory-like	1221	Scn8a	424.78	0.8878
+ctrl	interneuron-like (Gad1/Gad2)	534	Scn8a	356.52	0.8146
+ctrl	astrocyte-like	395	Scn8a	152.36	0.2329
+ctrl	all nuclei	3182	Scn9a	19.75	0.0688
+ctrl	neuron-like (Snap25)	2320	Scn9a	21.67	0.0901
+ctrl	excitatory-like	1221	Scn9a	17.64	0.0876
+ctrl	interneuron-like (Gad1/Gad2)	534	Scn9a	49.16	0.2041
+ctrl	astrocyte-like	395	Scn9a	3.11	0.0076
+ctrl	all nuclei	3182	Scn1b	58.76	0.2498
+ctrl	neuron-like (Snap25)	2320	Scn1b	60.14	0.3026
+ctrl	excitatory-like	1221	Scn1b	63.34	0.3726
+ctrl	interneuron-like (Gad1/Gad2)	534	Scn1b	59.62	0.2959
+ctrl	astrocyte-like	395	Scn1b	44.57	0.1038
+ctrl	all nuclei	3182	Scn2b	23.32	0.1238
+ctrl	neuron-like (Snap25)	2320	Scn2b	23.26	0.1483
+ctrl	excitatory-like	1221	Scn2b	23.33	0.1843
+ctrl	interneuron-like (Gad1/Gad2)	534	Scn2b	22.15	0.1517
+ctrl	astrocyte-like	395	Scn2b	32.13	0.0785
+ctrl	all nuclei	3182	Scn3b	83.75	0.2935
+ctrl	neuron-like (Snap25)	2320	Scn3b	89.93	0.3806
+ctrl	excitatory-like	1221	Scn3b	100.03	0.4857
+ctrl	interneuron-like (Gad1/Gad2)	534	Scn3b	72.28	0.3315
+ctrl	astrocyte-like	395	Scn3b	20.73	0.0405
+ctrl	all nuclei	3182	Scn4b	1.14	0.0063
+ctrl	neuron-like (Snap25)	2320	Scn4b	1.22	0.0082
+ctrl	excitatory-like	1221	Scn4b	1.04	0.009
+ctrl	interneuron-like (Gad1/Gad2)	534	Scn4b	1.22	0.0094
+ctrl	astrocyte-like	395	Scn4b	1.04	0.0025
+ctrl	all nuclei	3182	Fgf14	2859.86	0.7872
+ctrl	neuron-like (Snap25)	2320	Fgf14	3110.09	0.9207
+ctrl	excitatory-like	1221	Fgf14	3210.9	0.9738
+ctrl	interneuron-like (Gad1/Gad2)	534	Fgf14	3080.72	0.9569
+ctrl	astrocyte-like	395	Fgf14	735.89	0.4684
+ctrl	all nuclei	3182	Fgf13	281.34	0.4428
+ctrl	neuron-like (Snap25)	2320	Fgf13	283.28	0.4991
+ctrl	excitatory-like	1221	Fgf13	171.05	0.5348
+ctrl	interneuron-like (Gad1/Gad2)	534	Fgf13	685.55	0.6217
+ctrl	astrocyte-like	395	Fgf13	270.52	0.3139
+ctrl	all nuclei	3182	Ank3	1770.46	0.8136
+ctrl	neuron-like (Snap25)	2320	Ank3	1807.22	0.928
+ctrl	excitatory-like	1221	Ank3	1830.16	0.9771
+ctrl	interneuron-like (Gad1/Gad2)	534	Ank3	1664.11	0.9719
+ctrl	astrocyte-like	395	Ank3	868.56	0.3722
+ctrl	all nuclei	3182	Cacna1h	48.53	0.2014
+ctrl	neuron-like (Snap25)	2320	Cacna1h	53.3	0.2672
+ctrl	excitatory-like	1221	Cacna1h	55.28	0.3366
+ctrl	interneuron-like (Gad1/Gad2)	534	Cacna1h	44.05	0.2322
+ctrl	astrocyte-like	395	Cacna1h	4.15	0.0076
+ctrl	all nuclei	3182	Adk	180.17	0.5145
+ctrl	neuron-like (Snap25)	2320	Adk	156.84	0.5496
+ctrl	excitatory-like	1221	Adk	145.45	0.5995
+ctrl	interneuron-like (Gad1/Gad2)	534	Adk	155.75	0.5974
+ctrl	astrocyte-like	395	Adk	609.44	0.5975
+ctrl	all nuclei	3182	Adora1	38.79	0.1722
+ctrl	neuron-like (Snap25)	2320	Adora1	39.56	0.2103
+ctrl	excitatory-like	1221	Adora1	43.9	0.2793
+ctrl	interneuron-like (Gad1/Gad2)	534	Adora1	26.53	0.1648
+ctrl	astrocyte-like	395	Adora1	42.5	0.0886
+ctrl	all nuclei	3182	Adora2a	0.27	0.0016
+ctrl	neuron-like (Snap25)	2320	Adora2a	0.24	0.0017
+ctrl	excitatory-like	1221	Adora2a	0.19	0.0016
+ctrl	interneuron-like (Gad1/Gad2)	534	Adora2a	0.24	0.0019
+ctrl	astrocyte-like	395	Adora2a	1.04	0.0025
+ctrl	all nuclei	3182	Adora2b	1.19	0.0069
+ctrl	neuron-like (Snap25)	2320	Adora2b	0.98	0.0069
+ctrl	excitatory-like	1221	Adora2b	0.76	0.0066
+ctrl	interneuron-like (Gad1/Gad2)	534	Adora2b	1.46	0.0112
+ctrl	astrocyte-like	395	Adora2b	4.15	0.0101
+ctrl	all nuclei	3182	Adora3	0.0	0.0
+ctrl	neuron-like (Snap25)	2320	Adora3	0.0	0.0
+ctrl	excitatory-like	1221	Adora3	0.0	0.0
+ctrl	interneuron-like (Gad1/Gad2)	534	Adora3	0.0	0.0
+ctrl	astrocyte-like	395	Adora3	0.0	0.0
+ctrl	all nuclei	3182	Kcnj3	570.37	0.6408
+ctrl	neuron-like (Snap25)	2320	Kcnj3	616.51	0.7987
+ctrl	excitatory-like	1221	Kcnj3	647.6	0.9165
+ctrl	interneuron-like (Gad1/Gad2)	534	Kcnj3	580.9	0.809
+ctrl	astrocyte-like	395	Kcnj3	136.81	0.1696
+ctrl	all nuclei	3182	Kcnj6	303.42	0.5317
+ctrl	neuron-like (Snap25)	2320	Kcnj6	333.35	0.7013
+ctrl	excitatory-like	1221	Kcnj6	357.46	0.8378
+ctrl	interneuron-like (Gad1/Gad2)	534	Kcnj6	330.24	0.7228
+ctrl	astrocyte-like	395	Kcnj6	19.69	0.0304
+ctrl	all nuclei	3182	Kcnj9	29.27	0.1464
+ctrl	neuron-like (Snap25)	2320	Kcnj9	31.93	0.1935
+ctrl	excitatory-like	1221	Kcnj9	31.57	0.231
+ctrl	interneuron-like (Gad1/Gad2)	534	Kcnj9	32.37	0.2154
+ctrl	astrocyte-like	395	Kcnj9	6.22	0.0152
+ctrl	all nuclei	3182	Kcnj2	2.38	0.0138
+ctrl	neuron-like (Snap25)	2320	Kcnj2	2.01	0.0142
+ctrl	excitatory-like	1221	Kcnj2	1.8	0.0156
+ctrl	interneuron-like (Gad1/Gad2)	534	Kcnj2	2.43	0.0187
+ctrl	astrocyte-like	395	Kcnj2	3.11	0.0076
+ctrl	all nuclei	3182	Entpd1	23.97	0.0918
+ctrl	neuron-like (Snap25)	2320	Entpd1	11.36	0.0565
+ctrl	excitatory-like	1221	Entpd1	7.02	0.0418
+ctrl	interneuron-like (Gad1/Gad2)	534	Entpd1	7.54	0.0412
+ctrl	astrocyte-like	395	Entpd1	127.49	0.2025
+ctrl	all nuclei	3182	Nt5e	7.9	0.0412
+ctrl	neuron-like (Snap25)	2320	Nt5e	7.51	0.0474
+ctrl	excitatory-like	1221	Nt5e	7.49	0.0565
+ctrl	interneuron-like (Gad1/Gad2)	534	Nt5e	8.76	0.0655
+ctrl	astrocyte-like	395	Nt5e	10.36	0.0228
+ctrl	all nuclei	3182	Ada	0.38	0.0022
+ctrl	neuron-like (Snap25)	2320	Ada	0.31	0.0022
+ctrl	excitatory-like	1221	Ada	0.47	0.0041
+ctrl	interneuron-like (Gad1/Gad2)	534	Ada	0.0	0.0
+ctrl	astrocyte-like	395	Ada	0.0	0.0
+ctrl	all nuclei	3182	Slc29a1	6.93	0.0387
+ctrl	neuron-like (Snap25)	2320	Slc29a1	6.35	0.0431
+ctrl	excitatory-like	1221	Slc29a1	6.26	0.0516
+ctrl	interneuron-like (Gad1/Gad2)	534	Slc29a1	9.25	0.0693
+ctrl	astrocyte-like	395	Slc29a1	9.33	0.0203
+ctrl	all nuclei	3182	Slc28a3	1.03	0.0053
+ctrl	neuron-like (Snap25)	2320	Slc28a3	0.73	0.0043
+ctrl	excitatory-like	1221	Slc28a3	0.66	0.0057
+ctrl	interneuron-like (Gad1/Gad2)	534	Slc28a3	0.24	0.0019
+ctrl	astrocyte-like	395	Slc28a3	2.07	0.0051
+ctrl	all nuclei	3182	Gfap	16.18	0.0647
+ctrl	neuron-like (Snap25)	2320	Gfap	9.71	0.0509
+ctrl	excitatory-like	1221	Gfap	7.78	0.0491
+ctrl	interneuron-like (Gad1/Gad2)	534	Gfap	8.52	0.0431
+ctrl	astrocyte-like	395	Gfap	145.11	0.2228
+ctrl	all nuclei	3182	Aqp4	25.38	0.0867
+ctrl	neuron-like (Snap25)	2320	Aqp4	15.45	0.0707
+ctrl	excitatory-like	1221	Aqp4	13.46	0.0713
+ctrl	interneuron-like (Gad1/Gad2)	534	Aqp4	20.2	0.0843
+ctrl	astrocyte-like	395	Aqp4	223.88	0.2835
+ctrl	all nuclei	3182	Erbb4	1406.12	0.3325
+ctrl	neuron-like (Snap25)	2320	Erbb4	1255.73	0.2935
+ctrl	excitatory-like	1221	Erbb4	438.72	0.2056
+ctrl	interneuron-like (Gad1/Gad2)	534	Erbb4	4295.82	0.5375
+ctrl	astrocyte-like	395	Erbb4	1576.47	0.3418
+ctrl	all nuclei	3182	Erbb2	0.22	0.0013
+ctrl	neuron-like (Snap25)	2320	Erbb2	0.12	0.0009
+ctrl	excitatory-like	1221	Erbb2	0.19	0.0016
+ctrl	interneuron-like (Gad1/Gad2)	534	Erbb2	0.0	0.0
+ctrl	astrocyte-like	395	Erbb2	2.07	0.0051
+ctrl	all nuclei	3182	Erbb3	7.09	0.0299
+ctrl	neuron-like (Snap25)	2320	Erbb3	2.69	0.0147
+ctrl	excitatory-like	1221	Erbb3	0.85	0.0057
+ctrl	interneuron-like (Gad1/Gad2)	534	Erbb3	1.7	0.0075
+ctrl	astrocyte-like	395	Erbb3	23.84	0.0405
+ctrl	all nuclei	3182	Egfr	30.08	0.0981
+ctrl	neuron-like (Snap25)	2320	Egfr	21.86	0.0832
+ctrl	excitatory-like	1221	Egfr	10.15	0.0557
+ctrl	interneuron-like (Gad1/Gad2)	534	Egfr	41.61	0.1573
+ctrl	astrocyte-like	395	Egfr	190.71	0.2759
+ctrl	all nuclei	3182	Nrg1	1108.66	0.594
+ctrl	neuron-like (Snap25)	2320	Nrg1	1193.46	0.6858
+ctrl	excitatory-like	1221	Nrg1	1308.48	0.7568
+ctrl	interneuron-like (Gad1/Gad2)	534	Nrg1	640.28	0.618
+ctrl	astrocyte-like	395	Nrg1	335.82	0.3392
+ctrl	all nuclei	3182	Nrg2	155.17	0.4136
+ctrl	neuron-like (Snap25)	2320	Nrg2	164.23	0.5177
+ctrl	excitatory-like	1221	Nrg2	146.02	0.5348
+ctrl	interneuron-like (Gad1/Gad2)	534	Nrg2	206.13	0.6498
+ctrl	astrocyte-like	395	Nrg2	55.97	0.1089
+ctrl	all nuclei	3182	Nrg3	6673.15	0.8014
+ctrl	neuron-like (Snap25)	2320	Nrg3	7357.77	0.9306
+ctrl	excitatory-like	1221	Nrg3	7891.55	0.9795
+ctrl	interneuron-like (Gad1/Gad2)	534	Nrg3	6755.97	0.97
+ctrl	astrocyte-like	395	Nrg3	586.64	0.4177
+ctrl	all nuclei	3182	Nrg4	7.36	0.0361
+ctrl	neuron-like (Snap25)	2320	Nrg4	8.06	0.0478
+ctrl	excitatory-like	1221	Nrg4	6.92	0.0508
+ctrl	interneuron-like (Gad1/Gad2)	534	Nrg4	12.9	0.0824
+ctrl	astrocyte-like	395	Nrg4	1.04	0.0025
+ctrl	all nuclei	3182	Pvalb	3.79	0.0167
+ctrl	neuron-like (Snap25)	2320	Pvalb	3.6	0.0181
+ctrl	excitatory-like	1221	Pvalb	1.52	0.0115
+ctrl	interneuron-like (Gad1/Gad2)	534	Pvalb	10.46	0.0506
+ctrl	astrocyte-like	395	Pvalb	7.26	0.0177
+ctrl	all nuclei	3182	Gad1	46.37	0.1571
+ctrl	neuron-like (Snap25)	2320	Gad1	47.87	0.1858
+ctrl	excitatory-like	1221	Gad1	20.58	0.1196
+ctrl	interneuron-like (Gad1/Gad2)	534	Gad1	190.8	0.8071
+ctrl	astrocyte-like	395	Gad1	33.17	0.0785
+ctrl	all nuclei	3182	Gad2	47.07	0.0977
+ctrl	neuron-like (Snap25)	2320	Gad2	50.67	0.1198
+ctrl	excitatory-like	1221	Gad2	15.64	0.0614
+ctrl	interneuron-like (Gad1/Gad2)	534	Gad2	201.99	0.5206
+ctrl	astrocyte-like	395	Gad2	15.55	0.0304
+ctrl	all nuclei	3182	Sst	12.01	0.06
+ctrl	neuron-like (Snap25)	2320	Sst	10.44	0.0625
+ctrl	excitatory-like	1221	Sst	6.45	0.0508
+ctrl	interneuron-like (Gad1/Gad2)	534	Sst	17.77	0.0974
+ctrl	astrocyte-like	395	Sst	20.73	0.043
+ctrl	all nuclei	3182	Vip	3.79	0.0145
+ctrl	neuron-like (Snap25)	2320	Vip	3.54	0.0147
+ctrl	excitatory-like	1221	Vip	1.99	0.0139
+ctrl	interneuron-like (Gad1/Gad2)	534	Vip	9.98	0.0356
+ctrl	astrocyte-like	395	Vip	7.26	0.0177
+ctrl	all nuclei	3182	Wwox	110.43	0.3196
+ctrl	neuron-like (Snap25)	2320	Wwox	100.49	0.3397
+ctrl	excitatory-like	1221	Wwox	78.79	0.3333
+ctrl	interneuron-like (Gad1/Gad2)	534	Wwox	147.72	0.4532
+ctrl	astrocyte-like	395	Wwox	192.78	0.281
+ctrl	all nuclei	3182	Snap25	829.37	0.7291
+ctrl	neuron-like (Snap25)	2320	Snap25	935.88	1.0
+ctrl	excitatory-like	1221	Snap25	967.14	1.0
+ctrl	interneuron-like (Gad1/Gad2)	534	Snap25	880.48	1.0
+ctrl	astrocyte-like	395	Snap25	0.0	0.0
+ctrl	all nuclei	3182	Slc17a7	138.35	0.4243
+ctrl	neuron-like (Snap25)	2320	Slc17a7	147.44	0.5263
+ctrl	excitatory-like	1221	Slc17a7	228.98	1.0
+ctrl	interneuron-like (Gad1/Gad2)	534	Slc17a7	91.75	0.3521
+ctrl	astrocyte-like	395	Slc17a7	64.26	0.1443
+ctrl	all nuclei	3182	Slc1a3	207.06	0.2546
+ctrl	neuron-like (Snap25)	2320	Slc1a3	113.37	0.1922
+ctrl	excitatory-like	1221	Slc1a3	70.54	0.1736
+ctrl	interneuron-like (Gad1/Gad2)	534	Slc1a3	100.51	0.1873
+ctrl	astrocyte-like	395	Slc1a3	2041.84	0.9215
+ko	all nuclei	2920	Grin1	483.45	0.6113
+ko	neuron-like (Snap25)	2219	Grin1	521.08	0.7454
+ko	excitatory-like	934	Grin1	568.82	0.9004
+ko	interneuron-like (Gad1/Gad2)	529	Grin1	462.74	0.794
+ko	astrocyte-like	396	Grin1	71.25	0.1212
+ko	all nuclei	2920	Grin2a	2010.27	0.6671
+ko	neuron-like (Snap25)	2219	Grin2a	2186.83	0.7945
+ko	excitatory-like	934	Grin2a	2604.94	0.9304
+ko	interneuron-like (Gad1/Gad2)	529	Grin2a	1712.67	0.7996
+ko	astrocyte-like	396	Grin2a	173.93	0.1843
+ko	all nuclei	2920	Grin2b	1443.56	0.7185
+ko	neuron-like (Snap25)	2219	Grin2b	1558.02	0.8364
+ko	excitatory-like	934	Grin2b	1748.48	0.9272
+ko	interneuron-like (Gad1/Gad2)	529	Grin2b	1363.79	0.8866
+ko	astrocyte-like	396	Grin2b	255.66	0.3232
+ko	all nuclei	2920	Grin3a	118.33	0.239
+ko	neuron-like (Snap25)	2219	Grin3a	115.28	0.2578
+ko	excitatory-like	934	Grin3a	78.56	0.2559
+ko	interneuron-like (Gad1/Gad2)	529	Grin3a	213.43	0.3516
+ko	astrocyte-like	396	Grin3a	156.12	0.1995
+ko	all nuclei	2920	Srr	48.39	0.2158
+ko	neuron-like (Snap25)	2219	Srr	47.52	0.2492
+ko	excitatory-like	934	Srr	43.71	0.2891
+ko	interneuron-like (Gad1/Gad2)	529	Srr	50.43	0.2836
+ko	astrocyte-like	396	Srr	62.87	0.1313
+ko	all nuclei	2920	Dao	0.18	0.001
+ko	neuron-like (Snap25)	2219	Dao	0.13	0.0009
+ko	excitatory-like	934	Dao	0.0	0.0
+ko	interneuron-like (Gad1/Gad2)	529	Dao	0.0	0.0
+ko	astrocyte-like	396	Dao	1.05	0.0025
+ko	all nuclei	2920	Slc6a9	7.26	0.038
+ko	neuron-like (Snap25)	2219	Slc6a9	5.88	0.0352
+ko	excitatory-like	934	Slc6a9	6.23	0.0493
+ko	interneuron-like (Gad1/Gad2)	529	Slc6a9	5.72	0.034
+ko	astrocyte-like	396	Slc6a9	19.91	0.048
+ko	all nuclei	2920	Slc6a11	28.88	0.1267
+ko	neuron-like (Snap25)	2219	Slc6a11	22.12	0.1221
+ko	excitatory-like	934	Slc6a11	20.24	0.1488
+ko	interneuron-like (Gad1/Gad2)	529	Slc6a11	21.06	0.1285
+ko	astrocyte-like	396	Slc6a11	146.69	0.2247
+ko	all nuclei	2920	Slc1a4	13.03	0.0671
+ko	neuron-like (Snap25)	2219	Slc1a4	9.42	0.0586
+ko	excitatory-like	934	Slc1a4	7.42	0.0578
+ko	interneuron-like (Gad1/Gad2)	529	Slc1a4	9.62	0.0643
+ko	astrocyte-like	396	Slc1a4	70.2	0.1439
+ko	all nuclei	2920	Slc7a10	19.87	0.0723
+ko	neuron-like (Snap25)	2219	Slc7a10	9.76	0.0469
+ko	excitatory-like	934	Slc7a10	7.19	0.045
+ko	interneuron-like (Gad1/Gad2)	529	Slc7a10	9.36	0.0416
+ko	astrocyte-like	396	Slc7a10	185.46	0.2525
+ko	all nuclei	2920	Gcat	0.0	0.0
+ko	neuron-like (Snap25)	2219	Gcat	0.0	0.0
+ko	excitatory-like	934	Gcat	0.0	0.0
+ko	interneuron-like (Gad1/Gad2)	529	Gcat	0.0	0.0
+ko	astrocyte-like	396	Gcat	0.0	0.0
+ko	all nuclei	2920	Pdxp	18.43	0.0955
+ko	neuron-like (Snap25)	2219	Pdxp	16.84	0.1018
+ko	excitatory-like	934	Pdxp	12.69	0.0964
+ko	interneuron-like (Gad1/Gad2)	529	Pdxp	18.72	0.1115
+ko	astrocyte-like	396	Pdxp	32.48	0.0758
+ko	not in matrix	0	Dldh		
+ko	all nuclei	2920	Grid1	567.91	0.7226
+ko	neuron-like (Snap25)	2219	Grid1	576.75	0.8103
+ko	excitatory-like	934	Grid1	569.18	0.8951
+ko	interneuron-like (Gad1/Gad2)	529	Grid1	567.25	0.8733
+ko	astrocyte-like	396	Grid1	503.98	0.4571
+ko	all nuclei	2920	Grid2	937.72	0.6524
+ko	neuron-like (Snap25)	2219	Grid2	886.44	0.6909
+ko	excitatory-like	934	Grid2	724.13	0.7612
+ko	interneuron-like (Gad1/Gad2)	529	Grid2	1245.51	0.7618
+ko	astrocyte-like	396	Grid2	1782.26	0.6313
+ko	all nuclei	2920	Scn1a	255.38	0.4589
+ko	neuron-like (Snap25)	2219	Scn1a	275.34	0.5602
+ko	excitatory-like	934	Scn1a	272.43	0.6949
+ko	interneuron-like (Gad1/Gad2)	529	Scn1a	366.55	0.6276
+ko	astrocyte-like	396	Scn1a	67.06	0.1263
+ko	all nuclei	2920	Scn2a	336.55	0.5986
+ko	neuron-like (Snap25)	2219	Scn2a	358.81	0.7143
+ko	excitatory-like	934	Scn2a	374.58	0.8565
+ko	interneuron-like (Gad1/Gad2)	529	Scn2a	352.52	0.7467
+ko	astrocyte-like	396	Scn2a	107.92	0.2045
+ko	all nuclei	2920	Scn3a	158.73	0.4658
+ko	neuron-like (Snap25)	2219	Scn3a	165.47	0.5561
+ko	excitatory-like	934	Scn3a	153.28	0.6274
+ko	interneuron-like (Gad1/Gad2)	529	Scn3a	169.24	0.6181
+ko	astrocyte-like	396	Scn3a	59.72	0.1111
+ko	all nuclei	2920	Scn8a	399.64	0.6192
+ko	neuron-like (Snap25)	2219	Scn8a	423.5	0.731
+ko	excitatory-like	934	Scn8a	469.18	0.8801
+ko	interneuron-like (Gad1/Gad2)	529	Scn8a	379.29	0.7618
+ko	astrocyte-like	396	Scn8a	137.26	0.2146
+ko	all nuclei	2920	Scn9a	9.55	0.0418
+ko	neuron-like (Snap25)	2219	Scn9a	10.23	0.0527
+ko	excitatory-like	934	Scn9a	6.95	0.0471
+ko	interneuron-like (Gad1/Gad2)	529	Scn9a	24.18	0.1248
+ko	astrocyte-like	396	Scn9a	2.1	0.0051
+ko	all nuclei	2920	Scn1b	75.16	0.3055
+ko	neuron-like (Snap25)	2219	Scn1b	76.05	0.3551
+ko	excitatory-like	934	Scn1b	76.4	0.4529
+ko	interneuron-like (Gad1/Gad2)	529	Scn1b	74.87	0.3308
+ko	astrocyte-like	396	Scn1b	64.96	0.149
+ko	all nuclei	2920	Scn2b	9.49	0.0507
+ko	neuron-like (Snap25)	2219	Scn2b	9.02	0.0563
+ko	excitatory-like	934	Scn2b	6.95	0.0578
+ko	interneuron-like (Gad1/Gad2)	529	Scn2b	14.3	0.087
+ko	astrocyte-like	396	Scn2b	13.62	0.0328
+ko	all nuclei	2920	Scn3b	81.83	0.2818
+ko	neuron-like (Snap25)	2219	Scn3b	86.68	0.3488
+ko	excitatory-like	934	Scn3b	95.92	0.4818
+ko	interneuron-like (Gad1/Gad2)	529	Scn3b	67.33	0.3214
+ko	astrocyte-like	396	Scn3b	24.1	0.053
+ko	all nuclei	2920	Scn4b	0.6	0.0034
+ko	neuron-like (Snap25)	2219	Scn4b	0.67	0.0045
+ko	excitatory-like	934	Scn4b	0.84	0.0075
+ko	interneuron-like (Gad1/Gad2)	529	Scn4b	1.04	0.0076
+ko	astrocyte-like	396	Scn4b	0.0	0.0
+ko	all nuclei	2920	Fgf14	2670.1	0.8134
+ko	neuron-like (Snap25)	2219	Fgf14	2857.47	0.9049
+ko	excitatory-like	934	Fgf14	2868.51	0.97
+ko	interneuron-like (Gad1/Gad2)	529	Fgf14	2974.29	0.966
+ko	astrocyte-like	396	Fgf14	785.83	0.5101
+ko	all nuclei	2920	Fgf13	268.53	0.4753
+ko	neuron-like (Snap25)	2219	Fgf13	267.99	0.525
+ko	excitatory-like	934	Fgf13	164.18	0.5364
+ko	interneuron-like (Gad1/Gad2)	529	Fgf13	508.5	0.6163
+ko	astrocyte-like	396	Fgf13	300.71	0.3384
+ko	all nuclei	2920	Ank3	1978.88	0.8089
+ko	neuron-like (Snap25)	2219	Ank3	2049.89	0.9036
+ko	excitatory-like	934	Ank3	2087.14	0.9604
+ko	interneuron-like (Gad1/Gad2)	529	Ank3	1894.65	0.9546
+ko	astrocyte-like	396	Ank3	781.64	0.4192
+ko	all nuclei	2920	Cacna1h	61.65	0.2339
+ko	neuron-like (Snap25)	2219	Cacna1h	65.96	0.2929
+ko	excitatory-like	934	Cacna1h	71.25	0.3887
+ko	interneuron-like (Gad1/Gad2)	529	Cacna1h	57.71	0.2647
+ko	astrocyte-like	396	Cacna1h	13.62	0.0303
+ko	all nuclei	2920	Adk	150.14	0.4339
+ko	neuron-like (Snap25)	2219	Adk	126.71	0.4507
+ko	excitatory-like	934	Adk	112.33	0.5021
+ko	interneuron-like (Gad1/Gad2)	529	Adk	118.29	0.4631
+ko	astrocyte-like	396	Adk	534.36	0.4949
+ko	all nuclei	2920	Adora1	19.81	0.0973
+ko	neuron-like (Snap25)	2219	Adora1	19.25	0.1109
+ko	excitatory-like	934	Adora1	21.56	0.1585
+ko	interneuron-like (Gad1/Gad2)	529	Adora1	12.48	0.0681
+ko	astrocyte-like	396	Adora1	28.29	0.0631
+ko	all nuclei	2920	Adora2a	1.56	0.0079
+ko	neuron-like (Snap25)	2219	Adora2a	0.6	0.0041
+ko	excitatory-like	934	Adora2a	0.48	0.0043
+ko	interneuron-like (Gad1/Gad2)	529	Adora2a	0.0	0.0
+ko	astrocyte-like	396	Adora2a	4.19	0.0101
+ko	all nuclei	2920	Adora2b	0.9	0.0051
+ko	neuron-like (Snap25)	2219	Adora2b	0.4	0.0027
+ko	excitatory-like	934	Adora2b	0.48	0.0043
+ko	interneuron-like (Gad1/Gad2)	529	Adora2b	0.0	0.0
+ko	astrocyte-like	396	Adora2b	7.33	0.0177
+ko	all nuclei	2920	Adora3	0.0	0.0
+ko	neuron-like (Snap25)	2219	Adora3	0.0	0.0
+ko	excitatory-like	934	Adora3	0.0	0.0
+ko	interneuron-like (Gad1/Gad2)	529	Adora3	0.0	0.0
+ko	astrocyte-like	396	Adora3	0.0	0.0
+ko	all nuclei	2920	Kcnj3	420.53	0.5753
+ko	neuron-like (Snap25)	2219	Kcnj3	450.7	0.6886
+ko	excitatory-like	934	Kcnj3	478.29	0.8448
+ko	interneuron-like (Gad1/Gad2)	529	Kcnj3	402.17	0.6919
+ko	astrocyte-like	396	Kcnj3	100.59	0.1818
+ko	all nuclei	2920	Kcnj6	295.3	0.4976
+ko	neuron-like (Snap25)	2219	Kcnj6	319.25	0.6224
+ko	excitatory-like	934	Kcnj6	354.22	0.7966
+ko	interneuron-like (Gad1/Gad2)	529	Kcnj6	266.73	0.6011
+ko	astrocyte-like	396	Kcnj6	34.58	0.0606
+ko	all nuclei	2920	Kcnj9	26.11	0.1253
+ko	neuron-like (Snap25)	2219	Kcnj9	28.2	0.1591
+ko	excitatory-like	934	Kcnj9	29.58	0.2184
+ko	interneuron-like (Gad1/Gad2)	529	Kcnj9	22.1	0.1267
+ko	astrocyte-like	396	Kcnj9	4.19	0.0101
+ko	all nuclei	2920	Kcnj2	2.22	0.0106
+ko	neuron-like (Snap25)	2219	Kcnj2	1.87	0.0117
+ko	excitatory-like	934	Kcnj2	1.68	0.015
+ko	interneuron-like (Gad1/Gad2)	529	Kcnj2	1.56	0.0113
+ko	astrocyte-like	396	Kcnj2	1.05	0.0025
+ko	all nuclei	2920	Entpd1	20.83	0.087
+ko	neuron-like (Snap25)	2219	Entpd1	11.7	0.0586
+ko	excitatory-like	934	Entpd1	6.59	0.0428
+ko	interneuron-like (Gad1/Gad2)	529	Entpd1	12.48	0.0491
+ko	astrocyte-like	396	Entpd1	126.78	0.2121
+ko	all nuclei	2920	Nt5e	6.3	0.0342
+ko	neuron-like (Snap25)	2219	Nt5e	6.08	0.0388
+ko	excitatory-like	934	Nt5e	5.87	0.0493
+ko	interneuron-like (Gad1/Gad2)	529	Nt5e	9.1	0.0605
+ko	astrocyte-like	396	Nt5e	10.48	0.0253
+ko	all nuclei	2920	Ada	0.42	0.0024
+ko	neuron-like (Snap25)	2219	Ada	0.47	0.0032
+ko	excitatory-like	934	Ada	0.24	0.0021
+ko	interneuron-like (Gad1/Gad2)	529	Ada	0.0	0.0
+ko	astrocyte-like	396	Ada	0.0	0.0
+ko	all nuclei	2920	Slc29a1	9.79	0.0517
+ko	neuron-like (Snap25)	2219	Slc29a1	9.02	0.0559
+ko	excitatory-like	934	Slc29a1	6.35	0.0514
+ko	interneuron-like (Gad1/Gad2)	529	Slc29a1	10.4	0.0662
+ko	astrocyte-like	396	Slc29a1	11.53	0.0253
+ko	all nuclei	2920	Slc28a3	0.66	0.0038
+ko	neuron-like (Snap25)	2219	Slc28a3	0.74	0.005
+ko	excitatory-like	934	Slc28a3	0.48	0.0043
+ko	interneuron-like (Gad1/Gad2)	529	Slc28a3	0.52	0.0038
+ko	astrocyte-like	396	Slc28a3	0.0	0.0
+ko	all nuclei	2920	Gfap	40.64	0.1106
+ko	neuron-like (Snap25)	2219	Gfap	24.33	0.0834
+ko	excitatory-like	934	Gfap	15.21	0.0707
+ko	interneuron-like (Gad1/Gad2)	529	Gfap	18.72	0.0681
+ko	astrocyte-like	396	Gfap	327.95	0.3485
+ko	all nuclei	2920	Aqp4	16.63	0.0726
+ko	neuron-like (Snap25)	2219	Aqp4	11.29	0.0581
+ko	excitatory-like	934	Aqp4	8.74	0.0621
+ko	interneuron-like (Gad1/Gad2)	529	Aqp4	11.18	0.0529
+ko	astrocyte-like	396	Aqp4	113.16	0.2096
+ko	all nuclei	2920	Erbb4	1185.24	0.3473
+ko	neuron-like (Snap25)	2219	Erbb4	1147.68	0.3425
+ko	excitatory-like	934	Erbb4	329.32	0.2784
+ko	interneuron-like (Gad1/Gad2)	529	Erbb4	3800.21	0.5501
+ko	astrocyte-like	396	Erbb4	1252.09	0.3384
+ko	all nuclei	2920	Erbb2	0.54	0.0027
+ko	neuron-like (Snap25)	2219	Erbb2	0.2	0.0014
+ko	excitatory-like	934	Erbb2	0.24	0.0021
+ko	interneuron-like (Gad1/Gad2)	529	Erbb2	0.0	0.0
+ko	astrocyte-like	396	Erbb2	4.19	0.0101
+ko	all nuclei	2920	Erbb3	3.78	0.0144
+ko	neuron-like (Snap25)	2219	Erbb3	2.47	0.0099
+ko	excitatory-like	934	Erbb3	1.44	0.0086
+ko	interneuron-like (Gad1/Gad2)	529	Erbb3	2.86	0.0151
+ko	astrocyte-like	396	Erbb3	14.67	0.0278
+ko	all nuclei	2920	Egfr	29.24	0.0805
+ko	neuron-like (Snap25)	2219	Egfr	17.04	0.0563
+ko	excitatory-like	934	Egfr	6.95	0.0343
+ko	interneuron-like (Gad1/Gad2)	529	Egfr	34.84	0.0907
+ko	astrocyte-like	396	Egfr	229.46	0.2601
+ko	all nuclei	2920	Nrg1	1506.59	0.7428
+ko	neuron-like (Snap25)	2219	Nrg1	1581.01	0.8071
+ko	excitatory-like	934	Nrg1	1622.98	0.8715
+ko	interneuron-like (Gad1/Gad2)	529	Nrg1	1127.22	0.794
+ko	astrocyte-like	396	Nrg1	683.15	0.4848
+ko	all nuclei	2920	Nrg2	140.96	0.3781
+ko	neuron-like (Snap25)	2219	Nrg2	146.16	0.4507
+ko	excitatory-like	934	Nrg2	128.25	0.4679
+ko	interneuron-like (Gad1/Gad2)	529	Nrg2	186.4	0.5728
+ko	astrocyte-like	396	Nrg2	70.2	0.1162
+ko	all nuclei	2920	Nrg3	8141.17	0.9092
+ko	neuron-like (Snap25)	2219	Nrg3	8769.36	0.9558
+ko	excitatory-like	934	Nrg3	9654.08	0.9818
+ko	interneuron-like (Gad1/Gad2)	529	Nrg3	7737.43	0.9811
+ko	astrocyte-like	396	Nrg3	1380.96	0.7197
+ko	all nuclei	2920	Nrg4	7.44	0.0353
+ko	neuron-like (Snap25)	2219	Nrg4	7.95	0.0442
+ko	excitatory-like	934	Nrg4	6.23	0.0503
+ko	interneuron-like (Gad1/Gad2)	529	Nrg4	10.66	0.0548
+ko	astrocyte-like	396	Nrg4	2.1	0.0051
+ko	all nuclei	2920	Pvalb	2.22	0.0113
+ko	neuron-like (Snap25)	2219	Pvalb	1.94	0.0126
+ko	excitatory-like	934	Pvalb	1.44	0.0128
+ko	interneuron-like (Gad1/Gad2)	529	Pvalb	3.9	0.0265
+ko	astrocyte-like	396	Pvalb	6.29	0.0076
+ko	all nuclei	2920	Gad1	56.55	0.1682
+ko	neuron-like (Snap25)	2219	Gad1	58.01	0.1933
+ko	excitatory-like	934	Gad1	22.87	0.1296
+ko	interneuron-like (Gad1/Gad2)	529	Gad1	225.65	0.811
+ko	astrocyte-like	396	Gad1	30.39	0.0631
+ko	all nuclei	2920	Gad2	56.19	0.1021
+ko	neuron-like (Snap25)	2219	Gad2	60.01	0.1226
+ko	excitatory-like	934	Gad2	18.8	0.0739
+ko	interneuron-like (Gad1/Gad2)	529	Gad2	233.45	0.5142
+ko	astrocyte-like	396	Gad2	16.76	0.0404
+ko	all nuclei	2920	Sst	21.55	0.0986
+ko	neuron-like (Snap25)	2219	Sst	19.71	0.1027
+ko	excitatory-like	934	Sst	11.98	0.0867
+ko	interneuron-like (Gad1/Gad2)	529	Sst	34.32	0.1418
+ko	astrocyte-like	396	Sst	39.82	0.0909
+ko	all nuclei	2920	Vip	8.16	0.0295
+ko	neuron-like (Snap25)	2219	Vip	7.55	0.0311
+ko	excitatory-like	934	Vip	3.71	0.0246
+ko	interneuron-like (Gad1/Gad2)	529	Vip	18.98	0.0548
+ko	astrocyte-like	396	Vip	11.53	0.0278
+ko	all nuclei	2920	Wwox	12.25	0.0483
+ko	neuron-like (Snap25)	2219	Wwox	11.7	0.0536
+ko	excitatory-like	934	Wwox	7.42	0.0546
+ko	interneuron-like (Gad1/Gad2)	529	Wwox	18.46	0.0888
+ko	astrocyte-like	396	Wwox	16.76	0.0328
+ko	all nuclei	2920	Snap25	928.23	0.7599
+ko	neuron-like (Snap25)	2219	Snap25	1033.33	1.0
+ko	excitatory-like	934	Snap25	1108.06	1.0
+ko	interneuron-like (Gad1/Gad2)	529	Snap25	936.14	1.0
+ko	astrocyte-like	396	Snap25	0.0	0.0
+ko	all nuclei	2920	Slc17a7	108.3	0.3531
+ko	neuron-like (Snap25)	2219	Slc17a7	112.74	0.4209
+ko	excitatory-like	934	Slc17a7	202.02	1.0
+ko	interneuron-like (Gad1/Gad2)	529	Slc17a7	81.11	0.3176
+ko	astrocyte-like	396	Slc17a7	69.15	0.1465
+ko	all nuclei	2920	Slc1a3	376.65	0.2894
+ko	neuron-like (Snap25)	2219	Slc1a3	193.54	0.2181
+ko	excitatory-like	934	Slc1a3	114.6	0.1831
+ko	interneuron-like (Gad1/Gad2)	529	Slc1a3	189.78	0.2287
+ko	astrocyte-like	396	Slc1a3	3539.37	0.9116
