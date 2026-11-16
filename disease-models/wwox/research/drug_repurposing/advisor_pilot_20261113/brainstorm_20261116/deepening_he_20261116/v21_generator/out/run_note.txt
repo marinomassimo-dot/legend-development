@@ -1,3 +1,4 @@
+PERIMETER: V2.1 has NO allowed outcome table yet (the sealed A1 table and the I2 rows existed before the merge commit); this is an instrument description, not a score.
 A reproduces scores_v2.tsv byte for byte: True
 rule sha256 2cb4a908002aae48c6d4cc68baa9f8451e4bbb287fe6f47b4ccd6f7c5785f112 (checked by the generator)
 V21_CELLS_SCI.tsv sha256 84ee23328219ae2a08f142ebe9af7b1e78a71c704c6a83fb6e2f1ad94519fe0b (checked here)

@@ -6,6 +6,7 @@
 
 Inputs: matrix_v2_cells_sci_20261116/output/cells_v2_form.tsv, deepening_sci_20261116/V21_CELLS_SCI.tsv (blob sha256 84ee2332..., frozen in ADV's V21_MERGE_NOTE_ADV.md), rule_v2.json
 (sha256 2cb4a908...). Origin mapping (ADV's note): O-BULK-S-LINES -> O-REPUDI21 for T26; for T23 and T27 (both datasets) the composite O-REPUDI21+O-P47T-GSE215425, one origin.
+TIER (ADV, after the first run): ADV corrected the evidence tier of the T23 cells from 2 to 1 (matrix precedent: transcript-only threads are tier 1). The PRIMARY runs set the T23 cells' evidence_tier to 1; the runs at SCI's tier 2 (the frozen blob as it is) are kept as SENSITIVITY and reported side by side. The first report at tier 2 was written before that decision.
 C: every origin that shares the S-line (O-BRETON21, O-REPUDI21 and the composite) becomes one id, O-SLINE-S, in the v2 and V2.1 cells alike (ADV's sensitivity). The output describes the instrument; it scores no agent and recommends none. Not medical advice.
 """
 import argparse, csv, hashlib, subprocess, sys
@@ -30,31 +31,27 @@ def write(p, rows):
     with open(p, "w", newline="") as fh:
         w = csv.DictWriter(fh, cols, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(rows)
 SLINE = {"O-BRETON21", "O-REPUDI21", COMPOSITE}
-b = v2 + v21; c = [dict(r, origin_id="O-SLINE-S") if r["origin_id"] in SLINE else dict(r) for r in b]; ca = [dict(r, origin_id="O-SLINE-S") if r["origin_id"] in SLINE else dict(r) for r in v2]
-for name, rows in (("A_v2", v2), ("B_v2_plus_V21", b), ("C_sline_collapsed", c), ("Ac_v2_sline_collapsed", ca)):
+def with_tier(rows, tier):
+    return [dict(r, evidence_tier=str(tier)) if r["thread_id"] == "T23" else dict(r) for r in rows]
+SLINE = {"O-BRETON21", "O-REPUDI21", COMPOSITE}
+collapse = lambda rows: [dict(r, origin_id="O-SLINE-S") if r["origin_id"] in SLINE else dict(r) for r in rows]
+RUNS = {"A_v2": v2, "B_tier1_primary": v2 + with_tier(v21, 1), "C_tier1_sline_collapsed": collapse(v2 + with_tier(v21, 1)), "B_tier2_sensitivity": v2 + v21, "C_tier2_sline_collapsed": collapse(v2 + v21)}
+for name, rows in RUNS.items():
     write(out / f"cells_{name}.tsv", rows)
     r = subprocess.run([sys.executable, str(repo / "framework/scripts/aed_matrix.py"), "score", str(out / f"cells_{name}.tsv"), str(RULE), "--expect-rule-sha256", RULE_SHA, "--out", str(out / f"scores_{name}.tsv")], capture_output=True, text=True)
     if r.returncode: sys.exit(r.stderr)
 ref = D / "matrix_v2_cells_sci_20261116/output/scores_v2.tsv"
 same = (out / "scores_A_v2.tsv").read_bytes() == ref.read_bytes()
-def top(name):
-    t = {}
-    for r in read(out / f"scores_{name}.tsv"):
-        k = (r["endpoint"], r["window"])
-        if r["rank"] == "1" or k not in t: pass
-    # top set = every class whose rank-by-score_all equals the maximum score_all
-    for r in read(out / f"scores_{name}.tsv"):
-        k = (r["endpoint"], r["window"]); t.setdefault(k, []).append((float(r["score_all"]), r["class_id"], r.get("top_set_size", ""), r.get("tie_label", r.get("top_set_label", ""))))
-    res = {}
-    for k, v in t.items():
-        mx = max(x[0] for x in v); res[k] = (mx, sorted(x[1] for x in v if x[0] == mx), v[0][2], v[0][3])
-    return res
-tops = {n: top(n) for n in ("A_v2", "B_v2_plus_V21", "C_sline_collapsed", "Ac_v2_sline_collapsed")}
+def num(x):
+    try: return int(x)
+    except ValueError: return 99
 with open(out / "top_sets_compared.tsv", "w", newline="") as fh:
-    w = csv.writer(fh, delimiter="\t", lineterminator="\n"); w.writerow(["endpoint", "window", "run", "max_score_all", "top_set_size_by_score", "top_set", "generator_top_set_size", "generator_label"])
-    for k in sorted(tops["A_v2"]):
-        for n in tops:
-            mx, ts, gsz, lab = tops[n].get(k, ("", [], "", ""))
-            w.writerow([k[0], k[1], n, mx, len(ts), ",".join(ts), gsz, lab])
-(out / "run_note.txt").write_text(f"A reproduces scores_v2.tsv byte for byte: {same}\nrule sha256 {RULE_SHA} (checked by the generator)\nV21_CELLS_SCI.tsv sha256 {V21_SHA} (checked here)\n")
+    w = csv.writer(fh, delimiter="\t", lineterminator="\n"); w.writerow(["endpoint", "window", "run", "max_score_all", "top_set_size", "top_set", "label", "neurosteroid_score_all", "neurosteroid_origin_collapsed", "neurosteroid_rank_origin_collapsed", "origin_collapsed_top3"])
+    for name in RUNS:
+        rows = read(out / f"scores_{name}.tsv")
+        for ep, win in sorted({(r["endpoint"], r["window"]) for r in rows}):
+            rr = [r for r in rows if r["endpoint"] == ep and r["window"] == win]; mx = max(float(x["score_all"]) for x in rr); ts = sorted(x["class_id"] for x in rr if float(x["score_all"]) == mx)
+            n = [x for x in rr if x["class_id"] == "gabaa_neurosteroid_extrasynaptic"][0]; oc = sorted(rr, key=lambda x: num(x["rank_origin_collapsed"]))[:3]
+            w.writerow([ep, win, name, f"{mx:g}", len(ts), ",".join(ts), rr[0]["top_set_label"], n["score_all"], n["score_origin_collapsed"], n["rank_origin_collapsed"], "; ".join(f"{x['class_id']}={x['score_origin_collapsed']}" for x in oc)])
+(out / "run_note.txt").write_text(f"PERIMETER: V2.1 has NO allowed outcome table yet (the sealed A1 table and the I2 rows existed before the merge commit); this is an instrument description, not a score.\nA reproduces scores_v2.tsv byte for byte: {same}\nrule sha256 {RULE_SHA} (checked by the generator)\nV21_CELLS_SCI.tsv sha256 {V21_SHA} (checked here)\n")
 print(open(out / "run_note.txt").read())

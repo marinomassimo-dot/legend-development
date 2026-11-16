@@ -1,21 +1,33 @@
-# V2.1 through the v2 generator (HE, 2026-11-16; a description of the instrument, not a score; no agent is recommended; not medical advice)
+# V2.1 through the v2 generator (HE, 2026-11-16; revised after ADV's tier decision; a description of the instrument, NOT a score; no agent is recommended; not medical advice)
 
-Written for: ADV, SCI, IT. Rule `rule_v2.json` sha256 2cb4a908... (checked by the generator); V2.1 cells = `V21_CELLS_SCI.tsv` blob sha256 84ee2332... (the frozen blob of ADV's merge note, checked by the script); origin ids mapped as ADV's note says (T26 to O-REPUDI21; T23 and T27 to the composite O-REPUDI21+O-P47T-GSE215425, one origin). Run A reproduces `scores_v2.tsv` byte for byte (run_note.txt). Reproduce: `python3 run_v21.py --repo . --out out`. Files in `out/`: cells and scores for A (v2 only), B (v2 + V2.1, mapped), C (B with O-BRETON21, O-REPUDI21 and the composite collapsed to one id, O-SLINE-S); `top_sets_compared.tsv`.
+Written for: ADV, SCI, IT. Rule `rule_v2.json` sha256 2cb4a908... (checked by the generator); V2.1 cells = `V21_CELLS_SCI.tsv`, the frozen blob sha256 84ee2332... (checked by the script; the tier change below is applied by the script to a copy, never to the blob). Origin ids mapped as ADV's merge note says (T26 to O-REPUDI21; T23 and T27 to the composite O-REPUDI21+O-P47T-GSE215425, one origin). Run A reproduces `scores_v2.tsv` byte for byte (`run_note.txt`). Reproduce: `python3 run_v21.py --repo . --out out`.
 
-## The two numbers
-| seizure endpoint | A: v2 only | B: v2 + V2.1 (mapped) | C: B, S-line overlap collapsed |
+**Disclosure.** My first report of this run used SCI's evidence tier 2 for the T23 cells and was sent before ADV decided the tier. ADV then corrected T23 to tier 1 (transcript-only threads are tier 1 in the matrix; IT, blind on T23, also read 1). The PRIMARY runs below use tier 1; the tier-2 runs are kept as sensitivity. **The decision moved the top set** (table).
+
+**Perimeter.** V2.1 has no allowed outcome table yet: the sealed A1 table (08:11:55Z) and the I2 rows (17:43Z) existed before the merge commit (IT's confirmation). This output is an instrument description, not a score; nothing was compared with any outcome table.
+
+## Side by side (seizure endpoint; P6-P8 and the development endpoint are not scorable in every run)
+| | A: v2 only | B-primary: v2 + V2.1, T23 tier 1 | B-sensitivity: v2 + V2.1, T23 tier 2 (SCI's) |
 |---|---|---|---|
-| pooled, top set by score_all | **4**: benzodiazepine, nmdar_pore_blocker, sodium_channel, valproate_type (all 9); label tie_set_weak | **1**: gabaa_neurosteroid_extrasynaptic (10 against 9 for five classes); label discriminating, informativeness 0.929, 14 scorable classes | **1**, same class, score_all 10 |
-| P13-P15, top set | 4, same classes, tie_set_weak | 1, the same class | 1, the same class |
-| later_unspecified, top set | 4, same classes | **5**: benzodiazepine, gabaa_pam_synaptic_selective, nmdar_pore_blocker, sodium_channel, valproate_type (all 9); not_discriminating | 5, same |
-| P6-P8 and the development endpoint, every window | not scorable (null ordering) | not scorable | not scorable |
-| origin-collapsed ranking, pooled | benzodiazepine 9, nmdar_pore_blocker 9, ampa_antagonist 6 | **neurosteroid 10**, benzodiazepine 9, synaptic-selective 9 | **benzodiazepine 9, synaptic-selective 9, nmdar_pore_blocker 9; neurosteroid falls to 6 (rank 6)** |
+| pooled and P13-P15 top set by score_all | **4**: benzodiazepine, nmdar_pore_blocker, sodium_channel, valproate_type (9); tie_set_weak | **5**: the same four plus gabaa_pam_synaptic_selective (9); **not_discriminating**; informativeness 0.643 | **1**: gabaa_neurosteroid_extrasynaptic (10 against 9 for five classes); discriminating; informativeness 0.929 |
+| later_unspecified top set | 4, same classes | 5, same five; not_discriminating | 5, same five; not_discriminating |
+| neurosteroid class: score_all and rank | 0, unscorable (no cells) | **8, rank 6** | 10, rank 1 |
+| neurosteroid class: origin-collapsed score and rank | unscorable | 8, rank 4 | 10, rank 1 |
+| neurosteroid class against its degree-preserving null (null_ge_fraction, excess) | n/a | 0.998, −9.6 | 0.978, −8.2 |
+| origin-collapsed top three, pooled | benzodiazepine 9, nmdar_pore_blocker 9, ampa_antagonist 6 | benzodiazepine 9, synaptic-selective 9, nmdar_pore_blocker 9 | neurosteroid 10, benzodiazepine 9, synaptic-selective 9 |
 
-## What the numbers are made of (read before using them)
-1. **The new top class is a class that entered the table.** In A both split classes (gabaa_neurosteroid_extrasynaptic and gabaa_pam_synaptic_selective) have no scorable cells (score 0, rank unscorable). V2.1 gives them their first cells (T23: two neurosteroid-type agents `match` at directness 2, two synaptic-selective agents `neutral`), which is exactly what R3 asked for. The top set shrinking from 4 to 1 is the instrument registering one more class with a match link, not an agent beating others.
-2. **Against its degree-preserving null the new top class is not above chance:** null_ge_fraction 0.978 and excess −8.2 (the null mean is 18.2 against an observed 10), the same pattern as valproate_type (0.999), sodium_channel (0.968) and the synaptic-selective class (0.975). Only benzodiazepine (0.643) and nmdar_pore_blocker (0.682) sit near their null. So "discriminating" here means a one-point lead in a rank, not an excess over what the table's structure alone would give.
-3. **The lead depends on whether the S-line is one origin.** C collapses the S-line deposits (Breton 2021 electrophysiology and Repudi 2021 transcripts, same consortium and line, ADV's caveat): the official score_all rank is unchanged (10), but the origin-collapsed ranking drops the neurosteroid class from 1 to 6 (score 6), because its only evidence now shares an origin with evidence the other classes already have (INFERRED from the rank change). The per-thread-sum view puts gabaa_pam_synaptic_selective first (36), neurosteroid second (32), benzodiazepine third (18): three views, three firsts.
-4. **No outcome table was opened.** This run reads only the cell files and the frozen rule; nothing was compared with the sealed A1 table or any extraction (ADV's scoring perimeter).
+| S-line collapsed (Breton, Repudi and the composite as one origin, O-SLINE-S) | C-primary (tier 1) | C-sensitivity (tier 2) |
+|---|---|---|
+| pooled top set by score_all | 5, same as B-primary; not_discriminating | 1, neurosteroid 10; discriminating |
+| neurosteroid origin-collapsed | 6 (rank 6) | 6 (rank 6) |
+| origin-collapsed top three | benzodiazepine 9, synaptic-selective 9, nmdar_pore_blocker 9 | the same three |
+
+## Reading (instrument, not result)
+1. **The tier decision decides whether the top set narrows.** At tier 1 the neurosteroid class enters the table at 8, below the nine-point class tie, and the top set GROWS from 4 to 5 (the synaptic-selective class also enters, at 9) and stays not discriminating; at tier 2 it enters at 10 and the top set shrinks to 1. Nothing else in the cells changed.
+2. **In neither case is a new class above its null:** the neurosteroid class has null_ge_fraction 0.998 (tier 1) and 0.978 (tier 2); the synaptic-selective class 0.957 to 0.975; only benzodiazepine (0.595 to 0.643) sits at its null.
+3. **Both split classes had no scorable cells in v2**: V2.1 is what makes them rows of the table, which is exactly what rule R3 asked for; the narrowing at tier 2 was the instrument registering a class that had been absent.
+4. **S-line collapse:** the official score_all is unchanged; the origin-collapsed ranking puts the neurosteroid class at rank 6 in both tier settings, so its lead at tier 2 depends on counting the S-line transcripts as an independent origin from Breton.
+5. Per-thread-sum ranks the synaptic-selective class first (36) in both settings (tier 1: neurosteroid 28).
 
 ## Limits
-The V2.1 cells carry the axis `GABAergic-tonic` and the thread evidence tier 2 as SCI wrote them; the generator takes them as given. The S-line collapse is ADV's sensitivity, applied to every cell with those origins in v2 and V2.1 alike (A with the same collapse is byte-identical to A: v2 has no composite). Developmental windows stay unscorable because no V2.1 cell carries a window other than P13-P15.
+Tiers and axes are as SCI and ADV wrote them; the generator takes them as given. The tier change is applied by the script to the six T23 cells only (`with_tier`); T26 and T27 are tier 1 already. Developmental windows stay unscorable because no V2.1 cell carries a window other than P13-P15.
