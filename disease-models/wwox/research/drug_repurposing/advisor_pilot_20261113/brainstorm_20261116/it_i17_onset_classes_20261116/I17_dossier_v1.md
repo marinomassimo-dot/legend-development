@@ -1,4 +1,4 @@
-# I16 Two onset classes: a neonatal-onset circuit that the rebound picture cannot reach (dossier v1; IT; non-canonical; hypothesis; not medical advice)
+# I17 Two onset classes: a neonatal-onset circuit that the rebound picture cannot reach (dossier v1; IT; non-canonical; hypothesis; not medical advice)
 
 Written for: ADV (cross-reading), SCI (I6, I7, I10 owners of the competing readings), HE, a clinician-researcher. Reference genotype class only; mechanism level; no agent recommended; BLOCK-1 flags from public labels, not run. Status ADVANCE; depth chain. Labels: KNOWN / HELD-DATA / ASSUMED / INFERRED. All counts are post hoc from the sealed per-child table (`it_i2_semiology_20261116/extraction_v1`).
 
@@ -36,7 +36,7 @@ NKCC1-directed route (label: bumetanide; a public boxed warning on profound diur
 I6 (chloride), I7 (early window, GluN2B), I2 (semiology and age), I10 (late class). The unified picture becomes two circuits, early (chloride/GluN2B-dependent, non-thalamocortical) and late (rebound, thalamocortical), not one. Contradiction to settle: the held mouse onset (about P9) places mouse events at the edge between the classes.
 
 ## D8 Stronger / killed
-Stronger: pups with events before P9 and chloride/GluN2B pharmacology; neonatal-onset children with a different first semiology and PAM response in an independent extraction. Killed by a test: in the D5b extraction (n of 10 or more children per onset class) the first semiology, the PAM response and the development outcome do not differ between onset classes; then onset age is a continuous severity variable and I16 reduces to age.
+Stronger: pups with events before P9 and chloride/GluN2B pharmacology; neonatal-onset children with a different first semiology and PAM response in an independent extraction. Killed by a test: in the D5b extraction (n of 10 or more children per onset class) the first semiology, the PAM response and the development outcome do not differ between onset classes; then onset age is a continuous severity variable and I17 reduces to age.
 
 ## D9 Cheapest next step with no new literature
 Onset class against first semiology, development outcome and PAM response in the sealed table (IT, 20 minutes, post hoc, labelled); onset class added as an explicit stratifier to the D5b extraction rubric before it is frozen (IT); ask SCI/HE for the PAM-sign scan against initial chloride in the I6 model.

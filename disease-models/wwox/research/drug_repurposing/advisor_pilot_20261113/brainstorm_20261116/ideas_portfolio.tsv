@@ -13,3 +13,6 @@ I11a	Co-agonist occupancy (H-C1)	IT	ADVANCE	chain	I7	no held table can reject it
 I11b	Persistent sodium current (H-C2)	IT	ADVANCE	chain	I1,I2	no held table can reject it; ramp-current measurement specified
 I13	Tonic (extrasynaptic) inhibition deficit	SCI	ADVANCE	model	I1,I6,I3	IT attack: killer test not discriminating (GAT compensation); heterozygote Gabrd needed; cause vs consequence test by age
 I14	Raised ambient GABA and emergent seizure types (clinical discriminator of I13 vs I1/I10 vs I6)	IT	ADVANCE	chain	I13,I1,I10,I6,I2	post hoc count on 14 reports: new myoclonic type after spasms in 1 of 14 GABA-AT-exposed vs 4 of 9 unexposed (follow-up confounded); other-report search designed
+I15	Distance-to-threshold endpoint (measurement frame)	ADV	ADVANCE	model	I1,I4,I13	IT second read due 21:00Z; changes accepted into I15 Update v2 (censoring, two titrants, per-slice threshold)
+I16	Astroglial K+ buffering as the graded factor	SCI	ADVANCE	seed	I3,I13	not yet read by IT
+I17	Two onset classes (neonatal vs infantile): a circuit the rebound picture cannot reach	IT	ADVANCE	chain	I6,I7,I2,I10	post hoc onset table: 11 of 37 children start before 1 month, 4 in the first days; PAM response by onset class uninformative (3 vs 4 children)
