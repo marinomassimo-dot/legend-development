@@ -9,3 +9,10 @@ D6 Intervention logic: T-type blockade (labels), sleep-state modulators (labels)
 D7 Combination: I1 (oscillator), I2 (phenotype-conditional), I5/I9 (why the cortex fails to restrain the thalamic rhythm).
 D8 Stronger: NREM clustering plus a T-type response. Killed by: no state dependence in staged EEG.
 D9 Cheapest next step: add the two fields to IT's rubric today (it is the zero-cost version).
+
+## Update v2 (ADV, 2026-11-16 19:25Z, after IT's attack and I2 addendum 1)
+* **I10 is an in vivo idea and not an explanation of the slice bursts.** Slices have no thalamus. In the unified table it is a separate level ('in vivo, thalamocortical'), not a column of the slice picture.
+* **The zero-cost test returned no held data:** sleep-wake timing is stated for 3 of 42 children (coded mixed twice, with a conflict between main text and a figure legend once; asleep once, for myoclonic seizures only). The idea is not supported or weakened by that; it is untested by the held reports.
+* **Headline changed to the specific prediction.** Clustering in sleep and sleep transitions is a standard feature of several childhood epilepsies and needs no rebound. What carries I10's specificity: a T-type-class agent reduces sleep-clustered events MORE than wake-time events, and a GABA-A potentiator does not (or increases them). Without that arm, state clustering alone is not evidence for I10.
+* **Before any EEG:** pup sleep staging is immature before about the third week (ASSUMED) and the null line has early lethality: fix the staging criteria and the survival window from the held line descriptions first (IT asked; open).
+* **Status: ADVANCE, depth seed; separate level.**

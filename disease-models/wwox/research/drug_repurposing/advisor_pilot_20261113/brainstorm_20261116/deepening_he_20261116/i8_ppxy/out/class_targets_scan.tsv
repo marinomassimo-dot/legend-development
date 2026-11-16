@@ -1,0 +1,47 @@
+gene	matrix_class	in_universe	topology	n_core_PPxY	core_positions	n_LPxY	shuffle_p_core
+Scn1a	sodium_channel;valproate_type	yes	annotated	1	1983:PPSY	0	0.0655
+Scn2a	sodium_channel;valproate_type	yes	topology_unknown	1	1973:PPSY	0	0.0875
+Scn3a	sodium_channel	yes	annotated	1	1919:PPSY	0	0.0755
+Scn8a	sodium_channel	yes	annotated	0		1	
+Scn9a	sodium_channel	yes	annotated	1	1953:PPSY	0	0.0865
+Cacna1g	t_type_calcium;valproate_type	no					
+Cacna1h	t_type_calcium	yes	annotated	0		0	
+Cacna1i	t_type_calcium	no					
+Sv2a	sv2a	yes	annotated	0		0	
+Gria1	ampa_antagonist	yes	annotated	0		0	
+Gria2	ampa_antagonist	yes	annotated	0		0	
+Gria3	ampa_antagonist	yes	annotated	0		0	
+Gria4	ampa_antagonist	yes	annotated	0		0	
+Grin1	nmdar_pore_blocker	yes	annotated	0		0	
+Grin2a	nmdar_pore_blocker	yes	annotated	0		1	
+Grin2b	nmdar_pore_blocker;glun2b_nam	yes	annotated	0		0	
+Grin2c	nmdar_pore_blocker	yes	annotated	0		1	
+Grin2d	nmdar_pore_blocker	yes	annotated	1	999:PPSY	0	0.4138
+Gabra1	gabaa_pam_synaptic_selective;benzodiazepine	yes	annotated	0		0	
+Gabra2	benzodiazepine;gabaa_pam_synaptic_selective	yes	annotated	0		0	
+Gabra3	benzodiazepine	yes	annotated	0		0	
+Gabra5	benzodiazepine	yes	annotated	0		0	
+Gabrb1	benzodiazepine	yes	annotated	0		0	
+Gabrb2	benzodiazepine	yes	annotated	0		0	
+Gabrb3	benzodiazepine	yes	annotated	0		0	
+Gabrg2	benzodiazepine;gabaa_pam_synaptic_selective	yes	annotated	0		0	
+Gabrd	gabaa_neurosteroid_extrasynaptic	yes	annotated	0		0	
+Slc6a1	gaba_at_gat	yes	annotated	0		0	
+Slc6a11	gaba_at_gat	yes	annotated	0		0	
+Slc6a13	gaba_at_gat	yes	annotated	0		0	
+Kcnq2	kv7_opener	yes	annotated	0		0	
+Kcnq3	kv7_opener	yes	annotated	0		0	
+Kcnq5	kv7_opener	yes	annotated	0		0	
+Hcn1	hcn_ih_blocker	yes	annotated	1	654:PPVY	0	0.1179
+Hcn2	hcn_ih_blocker	yes	annotated	0		0	
+Hcn3	hcn_ih_blocker	yes	annotated	0		0	
+Hcn4	hcn_ih_blocker	yes	annotated	0		0	
+Gpr55	cannabidiol	yes	annotated	0		0	
+Trpv1	cannabidiol	yes	annotated	0		0	
+Htr2c	fenfluramine_type	yes	annotated	0		0	
+Htr2a	fenfluramine_type	yes	annotated	0		0	
+Htr1d	fenfluramine_type	yes	annotated	0		0	
+Slc6a4	fenfluramine_type	yes	annotated	0		0	
+Kcnj11	ketogenic_diet	yes	annotated	0		0	
+Abcc8	ketogenic_diet	no					
+Mc2r	steroid_acth	yes	annotated	0		0	

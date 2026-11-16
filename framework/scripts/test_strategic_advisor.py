@@ -286,6 +286,64 @@ def _repo_with_records(tmp: Path, records: dict[str, str]) -> Path:
     return repo
 
 
+class DirectionBeforeStatus(Base):
+    """Input delivery and ordering only: these fixtures cannot certify strategic judgment."""
+
+    def setUp(self) -> None:
+        super().setUp()
+        self.repo = _repo_with_records(self.tmp, {})
+        self.patches = [patch.object(sa, "ROOT", self.repo),
+                        patch.object(sa, "ROADMAP", self.repo / "disease-models/wwox/research/drug_repurposing/roadmap_current.md"),
+                        patch.object(sa, "STATE_DIR", self.tmp / "state")]
+        for p in self.patches:
+            p.start()
+        self.canonical = self.repo / "framework/protocols/cross_session_transport.md"
+        self.canonical.parent.mkdir(parents=True, exist_ok=True)
+        self.rule = "**Direction before status (fixture).** Choose from the mission and source map, then reconcile the laboratory wait."
+        self.canonical.write_text("# Transport\n\n" + self.rule + "\n\nUnrelated later policy.\n")
+        self.obs = {"events": [], "open_mandates": [], "waits": ["laboratory unavailable"],
+                    "queue": {"exhausted": True}, "sessions": {}, "commits_since_last_tick": 0}
+
+    def tearDown(self) -> None:
+        for p in reversed(self.patches):
+            p.stop()
+        super().tearDown()
+
+    def test_source_map_precedes_operational_wait_and_previous_assessment_without_hiding_them(self) -> None:
+        prior = self.campaign / "P7/assessment.md"
+        prior.parent.mkdir(parents=True)
+        prior.write_text("Earlier decision: wait for a laboratory.")
+        brief = sa.build_brief_p(self.campaign, self.obs)
+        headings = ["## Operator roadmap", "## Direction before status", "## Neutral entry points",
+                    "## Observed state", "## Previous assessment"]
+        positions = [brief.index(h) for h in headings]
+        self.assertEqual(positions, sorted(positions))
+        self.assertIn(self.rule, brief)
+        self.assertIn("laboratory unavailable", brief)
+        self.assertIn(str(prior), brief)
+        self.assertEqual(brief.count("## Neutral entry points"), 1)
+        self.assertEqual(brief.count("Unrelated later policy"), 0)
+        self.assertEqual(sa._attempts(self.campaign), [], "building a brief must not call a model")
+
+    def test_canonical_revision_reaches_next_brief_without_a_second_policy_copy(self) -> None:
+        first = sa.build_brief_p(self.campaign, self.obs)
+        revised = self.rule.replace("Choose from the mission", "Compare a different scientific branch from the mission")
+        self.canonical.write_text("# Transport\n\n" + revised + "\n\nUnrelated later policy.\n")
+        second = sa.build_brief_p(self.campaign, self.obs)
+        self.assertIn(self.rule, first)
+        self.assertIn(revised, second)
+        self.assertNotIn(self.rule, second)
+        self.assertEqual(sa._attempts(self.campaign), [])
+
+    def test_missing_guidance_is_visible_and_does_not_invent_a_strategic_outcome(self) -> None:
+        self.canonical.unlink()
+        brief = sa.build_brief_p(self.campaign, self.obs)
+        self.assertIn("Canonical guidance unavailable", brief)
+        self.assertIn("laboratory unavailable", brief)
+        self.assertEqual(sa.parse_assignments(brief), [])
+        self.assertEqual(sa._attempts(self.campaign), [])
+
+
 class Proactive(Base):
     """The proactive pilot: bounded hourly check, one evaluation per decision, assignments with evidence levels, budget and disable. Fixtures: they do not show the real runtime."""
 

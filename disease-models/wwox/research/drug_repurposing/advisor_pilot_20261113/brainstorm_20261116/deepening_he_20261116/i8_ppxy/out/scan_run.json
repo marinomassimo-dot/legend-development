@@ -1,0 +1,17 @@
+{
+ "genes": 4521,
+ "genes_with_core": 180,
+ "inputs": {
+  "uniprot_human_9606.tsv": "dbea5139e5545f42042cd7fa6746b16c81e734af4b823196b5a6a5fddfef656c",
+  "uniprot_mouse_10090.tsv": "668ff4f92ba84cc1af2e2f0dda8529643293bd3d4580e1730b48138a26660b02",
+  "uniprot_wwox_domains.tsv": "1d1c05513684215d380c451c613c672e31feecfa7058e18327fb19fab2ebe29c"
+ },
+ "motif_core": "PP.Y",
+ "motif_relaxed": "LP.Y",
+ "motifs": 204,
+ "release": [
+  "2026_04"
+ ],
+ "seed": 1,
+ "shuffles": 2000
+}

@@ -1,0 +1,282 @@
+{
+ "adapter": "i1_harness_model.py",
+ "base_seed": 20261116,
+ "calls": 380,
+ "files": {
+  "i1_harness_model.py": "7a58ce61288ccefe01ef6d4d8c313db6264c2c7e707a24dba007e5530156c3a9",
+  "rebound_oscillator.py": "c050b8ff0a1ba8fe5ef340f2a57168ecf578f161be12392c42fec98851b89419"
+ },
+ "harness_sha256": "2f9d76f04c15b0d38c224c019fcbeb69f1fff31191d6b933c2dc0cb9ddcefad9",
+ "harness_version": "1",
+ "params": {
+  "G_H": [
+   0.1,
+   0.05,
+   0.15000000000000002,
+   "ASSUMED, see rebound_oscillator.py"
+  ],
+  "J_A": [
+   0.3542,
+   0.1771,
+   0.5313,
+   "ASSUMED, see rebound_oscillator.py"
+  ],
+  "J_I": [
+   0.2567,
+   0.12835,
+   0.38505,
+   "phasic GABA-A weight"
+  ],
+  "J_N": [
+   1.077,
+   0.5385,
+   1.6155,
+   "NMDAR recurrent weight (sustainer)"
+  ],
+  "J_T": [
+   0.2752,
+   0.1376,
+   0.4128,
+   "T-type-like rebound weight (trigger)"
+  ],
+  "J_a": [
+   0.2053,
+   0.10265,
+   0.30795,
+   "adenosine A1 weight"
+  ],
+  "J_tonic": [
+   0.3,
+   0.15,
+   0.44999999999999996,
+   "tonic GABA-A weight"
+  ],
+  "b0": [
+   -0.1503,
+   -0.22544999999999998,
+   -0.07515,
+   "ASSUMED, see rebound_oscillator.py"
+  ],
+  "brake": [
+   0.0,
+   0.0,
+   1.0,
+   "presynaptic brake on recurrent excitation (NPY-like), 0 to 1"
+  ],
+  "c0": [
+   6.0,
+   3.0,
+   9.0,
+   "resting chloride mM"
+  ],
+  "hcn_block": [
+   0.0,
+   0.0,
+   1.0,
+   "HCN blockade fraction 0 to 1"
+  ],
+  "k": [
+   0.08,
+   0.04,
+   0.12,
+   "ASSUMED, see rebound_oscillator.py"
+  ],
+  "k_psi": [
+   0.15,
+   0.075,
+   0.22499999999999998,
+   "ASSUMED, see rebound_oscillator.py"
+  ],
+  "kappa_a": [
+   0.3723,
+   0.18615,
+   0.55845,
+   "ASSUMED, see rebound_oscillator.py"
+  ],
+  "kappa_c": [
+   0.7976,
+   0.3988,
+   1.1964,
+   "ASSUMED, see rebound_oscillator.py"
+  ],
+  "kappa_h": [
+   3.0,
+   1.5,
+   4.5,
+   "ASSUMED, see rebound_oscillator.py"
+  ],
+  "kappa_r": [
+   0.7766,
+   0.3883,
+   1.1648999999999998,
+   "ASSUMED, see rebound_oscillator.py"
+  ],
+  "load_coupling": [
+   0.0,
+   0.0,
+   1.0,
+   "ASSUMED, see rebound_oscillator.py"
+  ],
+  "pam": [
+   0.0,
+   0.0,
+   2.0,
+   "GABA-A positive modulation (relative, mechanism level)"
+  ],
+  "phasic_gain": [
+   1.0,
+   0.5,
+   1.5,
+   "ASSUMED, see rebound_oscillator.py"
+  ],
+  "sigma": [
+   0.1052,
+   0.0526,
+   0.1578,
+   "ASSUMED, see rebound_oscillator.py"
+  ],
+  "tau_N": [
+   0.1054,
+   0.0527,
+   0.1581,
+   "ASSUMED, see rebound_oscillator.py"
+  ],
+  "tau_a": [
+   11.4628,
+   5.7314,
+   17.1942,
+   "adenosine clearance s"
+  ],
+  "tau_c": [
+   17.7586,
+   8.8793,
+   26.637900000000002,
+   "KCC2 extrusion time constant s"
+  ],
+  "tau_eta": [
+   0.05,
+   0.025,
+   0.07500000000000001,
+   "ASSUMED, see rebound_oscillator.py"
+  ],
+  "tau_h": [
+   15.663,
+   7.8315,
+   23.494500000000002,
+   "T-type-like recovery s"
+  ],
+  "tau_r": [
+   5.9994,
+   2.9997,
+   8.999099999999999,
+   "resource recovery s"
+  ],
+  "tau_u": [
+   0.02,
+   0.01,
+   0.03,
+   "ASSUMED, see rebound_oscillator.py"
+  ],
+  "th_psi": [
+   0.45,
+   0.225,
+   0.675,
+   "ASSUMED, see rebound_oscillator.py"
+  ],
+  "tonic_gaba": [
+   1.0,
+   0.5,
+   1.5,
+   "tonic GABA level multiplier"
+  ]
+ },
+ "points": 19,
+ "points_outside_declared_bounds": [],
+ "scan": {
+  "design": "oat",
+  "fixed": {},
+  "oat": {
+   "fraction": 0.4,
+   "params": [
+    "J_T",
+    "J_N",
+    "J_a",
+    "J_I",
+    "J_tonic",
+    "tau_c",
+    "tau_r",
+    "kappa_r",
+    "sigma"
+   ]
+  },
+  "predictions": [
+   {
+    "a": "J_T-40",
+    "b": "base",
+    "expect": "a_gt_b",
+    "id": "S1",
+    "metric": "isi_median_s",
+    "min_fraction": 0.8,
+    "statement": "T-type-like trigger weight -40% lengthens the median interval (replication of the exploratory scan with fresh seeds)"
+   },
+   {
+    "a": "J_N-40",
+    "b": "base",
+    "expect": "a_lt_b",
+    "id": "S2",
+    "metric": "dur_median_s",
+    "min_fraction": 0.8,
+    "statement": "NMDAR weight -40% shortens the median duration"
+   },
+   {
+    "a": "J_tonic+40",
+    "b": "base",
+    "expect": "a_lt_b",
+    "id": "S3",
+    "metric": "n_bursts",
+    "min_fraction": 0.8,
+    "statement": "Tonic GABA-A weight +40% lowers the burst count (near silence)"
+   },
+   {
+    "a": "sigma-40",
+    "b": "base",
+    "expect": "a_lt_b",
+    "id": "S4",
+    "metric": "n_bursts",
+    "min_fraction": 0.8,
+    "statement": "Noise amplitude -40% lowers the burst count"
+   },
+   {
+    "a": "kappa_r-40",
+    "b": "base",
+    "expect": "a_gt_b",
+    "id": "S5",
+    "metric": "dur_median_s",
+    "min_fraction": 0.8,
+    "statement": "Resource depletion rate -40% lengthens the median duration (the duration-only class)"
+   },
+   {
+    "a": "tau_c+40",
+    "b": "base",
+    "expect": "a_gt_b",
+    "id": "S6",
+    "metric": "n_bursts",
+    "min_fraction": 0.8,
+    "statement": "Chloride extrusion time constant +40% (slower KCC2) raises the burst count"
+   },
+   {
+    "a": "J_tonic-40",
+    "b": "base",
+    "expect": "a_gt_b",
+    "id": "S7",
+    "metric": "n_bursts",
+    "min_fraction": 0.8,
+    "statement": "Tonic GABA-A weight -40% raises the burst count (a loss of tonic inhibition produces bursting)"
+   }
+  ],
+  "silent_below": 5,
+  "silent_metric": "n_bursts"
+ },
+ "scan_sha256": "f54cca677e99d6fdc77b50203b067a9f072004f2ba7efaf4bb3b6d9f7f3628de",
+ "seeds": 20
+}

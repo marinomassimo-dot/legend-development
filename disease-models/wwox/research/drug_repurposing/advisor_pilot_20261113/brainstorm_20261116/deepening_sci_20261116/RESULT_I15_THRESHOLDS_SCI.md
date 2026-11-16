@@ -1,0 +1,20 @@
+# I15 distance to threshold in the oscillator: K+ and Mg2+ challenge thresholds per genotype and per graded component (SCI, 2026-11-16; MODEL: hypothesis generator, not evidence; mechanism level; not medical advice)
+
+Written for: ADV (cross-reading), HE and IT (second readers), the operator (first block). Files: `PREDICTIONS_I15_FROZEN_BEFORE_RUN.md` (sha256 da0a5425e8c1f91de6958910ea8c791f6c0a09b03b475a49fbea16d0eb93a255, written before the run), `i15_threshold_test.py`, `i15_incidence.tsv` (every incidence curve), `i15_incidence_threshold50.tsv` (the 50% crossings). The frozen oscillator is imported unchanged. A K+ challenge enters as an increase dx of the resting-drive term, a Mg2+ challenge as a multiplier m on the NMDAR weight; the conversion of dx and m to mM of K+ and Mg2+ is ASSUMED and not made. Graded components (the earlier incidence tests): tonic weight (t 0.8), steady chloride (t 0.3), phasic inhibition (t 2.0), and the NMDAR sustainer (t 0.4, the contrast that failed the incidence test); rebound and excitatory amplitude graded in all; sigma 0.07; 60 slices per point.
+
+## Answer first
+**The two challenges together give each graded component a fingerprint, and the K+ axis alone does not.** 50%-incidence thresholds (dx for K+, m for Mg2+; S-KO is at or above 50% with no challenge):
+| graded component | K+ dx50: S-HT | K+ dx50: S-WT | Mg2+ m50: S-HT | Mg2+ m50: S-WT |
+|---|---|---|---|---|
+| tonic inhibition | 0.039 | above the scan (more than 0.16) | 1.36 | **4.71** |
+| steady chloride | 0.027 | 0.154 | 1.19 | **3.09** |
+| phasic inhibition | 0.027 | 0.145 | 1.23 | **2.09** |
+| NMDAR sustainer (contrast) | 0.000 | 0.037 | 1.00 | **1.52** |
+**Reading in plain words:** on the K+ axis chloride and phasic inhibition are indistinguishable (wild type needs a drive increment of 0.15 either way) and tonic needs at least as much; on the Mg2+ axis the same three separate (the wild type needs 4.7, 3.1 or 2.1 times the NMDAR current) and the NMDAR-sustainer contrast sits far below (1.5). So the experiment should run **both** challenges: the pair (dx50 and m50 of S-WT) is a fingerprint; and the heterozygote's thresholds (close to the knockout's for the NMDAR contrast, a quarter to a half of the wild type's for the inhibitory components) say whether the graded factor is steep or a step.
+
+## Scoring against the frozen predictions
+P1 (K+ axis: dx50 ordered S-KO < S-HT < S-WT for tonic, chloride, phasic; wild type between 0.03 and 0.15): **ordering holds; the range half fails** (tonic above the scan, chloride 0.154 just outside, phasic 0.145 inside). P2 (NMDAR contrast: S-HT minus S-KO below 0.01): **holds** (0.000 and 0.000: the heterozygote behaves as the knockout). P3 (Mg2+ axis: m50 of S-HT not above S-WT, S-KO equals 1): **holds** for all four. P4 (K+ axis does not separate the inhibition-side components; Mg2+ separates the NMDAR contrast from them by at least 1.5-fold): **holds** (median of the three inhibition-side wild-type values 3.09 against 1.52: 2.0-fold); in addition the Mg2+ axis separates the three inhibition-side components from each other, which I had not predicted (4.71, 3.09, 2.09). **Counts: 3 right, 1 half (P1), 0 wrong.**
+
+## What this changes for the pilot (item (a) of the meeting)
+I15's challenge ladder is kept as the primary endpoint with both a K+ ladder and a Mg2+ ladder per genotype; the model's predicted S-WT pair and S-HT pair (table) are written before any recording; the model's units are drive increment and NMDAR multiplier, so the conversion to mM of K+ and Mg2+ needs a calibration step in the first recordings (resting potential against bath K+; NMDAR current against bath Mg2+), which is part of the experiment, not of the model. IT's censoring and dwell rules (as adopted by ADV) apply to the incidence definition used here (at least one burst in 600 s of a slice).
+Limits: the mapping of the components to the genotype axis is assumed linear; the knockout overshoots (about 100% incidence against 86%); sigma and the 600 s window are assumed; thresholds come from 8-point ladders and linear interpolation.

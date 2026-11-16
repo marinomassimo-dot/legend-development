@@ -1,0 +1,79 @@
+{
+ "design": "grid",
+ "grid": {
+  "geno": [
+   0,
+   1,
+   2
+  ],
+  "arm": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ]
+ },
+ "fixed": {},
+ "silent_metric": "n_bursts",
+ "silent_below": 1,
+ "predictions": [
+  {
+   "id": "K1",
+   "statement": "Tonic GABA-A weight x1.2 lowers slice incidence at S-HT (the steep part of the incidence curve)",
+   "metric": "incidence",
+   "a": "arm=1|geno=1",
+   "b": "arm=0|geno=1",
+   "expect": "a_lt_b",
+   "min_fraction": 0.8
+  },
+  {
+   "id": "K2",
+   "statement": "Noise amplitude x0.9 (persistent-sodium type) lowers slice incidence at S-HT",
+   "metric": "incidence",
+   "a": "arm=4|geno=1",
+   "b": "arm=0|geno=1",
+   "expect": "a_lt_b",
+   "min_fraction": 0.8
+  },
+  {
+   "id": "K3",
+   "statement": "Phasic inhibition x1.2 (synaptic GABA-A potentiation type) lowers slice incidence at S-HT",
+   "metric": "incidence",
+   "a": "arm=7|geno=1",
+   "b": "arm=0|geno=1",
+   "expect": "a_lt_b",
+   "min_fraction": 0.8
+  },
+  {
+   "id": "K4",
+   "statement": "Resource depletion x0.6 (duration-only arm) lengthens the median burst duration at S-KO",
+   "metric": "dur_median_s",
+   "a": "arm=6|geno=0",
+   "b": "arm=0|geno=0",
+   "expect": "a_gt_b",
+   "min_fraction": 0.8
+  },
+  {
+   "id": "K5",
+   "statement": "Tonic x1.2 lowers the number of bursts per bursting slice at S-KO (the rate view has no plateau)",
+   "metric": "mean_bursts_in_bursting_slices",
+   "a": "arm=1|geno=0",
+   "b": "arm=0|geno=0",
+   "expect": "a_lt_b",
+   "min_fraction": 0.8
+  },
+  {
+   "id": "K6",
+   "statement": "Baseline incidence is higher at S-KO than at S-HT (graded across the genotype axis)",
+   "metric": "incidence",
+   "a": "arm=0|geno=0",
+   "b": "arm=0|geno=1",
+   "expect": "a_gt_b",
+   "min_fraction": 0.8
+  }
+ ]
+}

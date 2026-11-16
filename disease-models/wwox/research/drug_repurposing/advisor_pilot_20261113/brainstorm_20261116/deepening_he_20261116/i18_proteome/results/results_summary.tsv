@@ -1,0 +1,9 @@
+set	carriers_used	non_carriers_used	strata_used	strata_dropped	D_log2	perm_p_two_sided	boot95_lo	boot95_hi
+P_primary	108	1291	11	9	+0.0315	0.0680	-0.0148	+0.0635
+S_secondary_anywhere	112	1315	12	8	+0.0353	0.0417	-0.0081	+0.0658
+T_LPxY_only	108	1140	9	11	+0.0383	0.0202	+0.0031	+0.0748
+decoy_PPxF	125	1271	10	10	+0.0185	0.2524	-0.0120	+0.0513
+decoy_PPxA	291	1286	11	9	+0.0157	0.1241	-0.0021	+0.0409
+P_primary_without_top5pct_intensity	103	1153	10	10	+0.0291	0.1004	-0.0179	+0.0645
+POSTHOC_P_primary_membrane_only	3	20	1	9	+0.0650	0.5610	-0.1000	+0.3050
+POSTHOC_P_primary_soluble_only	105	1271	10	0	+0.0305	0.0837	-0.0165	+0.0620

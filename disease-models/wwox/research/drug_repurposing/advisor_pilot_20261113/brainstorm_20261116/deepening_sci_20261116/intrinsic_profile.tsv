@@ -1,0 +1,17 @@
+manipulation	RMP_mV	Rin_MOhm	tau_ms	sag_mV	rebound_mV
+HELD S-WT mean	-79.25	102.88	18.55	1.18	0.96
+HELD S-HT mean	-75.51	143.26	18.79	2.04	1.24
+HELD S-KO mean	-73.62	143.03	21.25	2.57	1.86
+model WT (tuned to the WT row)	-79.28	114.93	18.55	1.43	1.08
+tonic GABA-A conductance gG x0.0	-79.23	123.57	20.10	1.57	1.17
+tonic GABA-A conductance gG x0.5	-79.26	119.09	19.29	1.50	1.13
+K+ leak gK x0.5	-70.01	188.74	31.93	2.62	6.76
+K+ leak gK x0.7	-74.77	150.19	24.76	2.05	1.78
+HCN-like Ih gh x2	-78.54	105.80	18.30	2.81	2.13
+HCN-like Ih gh x0.5	-79.71	120.65	18.69	0.68	0.53
+T-type-like gT x2	-79.18	116.85	19.22	1.44	1.20
+capacitance x0.72 (smaller cell, tau kept by lower C)	-79.28	114.93	13.36	1.64	1.24
+cation leak gC x0.0	-91.98	131.92	21.64	0.75	0.61
+cell size x0.72 (every conductance and C x0.72: same densities, smaller cell)	-79.28	159.63	18.55	1.72	1.18
+cell size x0.72 and K+ leak density x0.85	-77.30	180.66	21.18	2.05	1.43
+gG x0.5 and gh x1.5	-78.85	113.88	19.16	2.26	1.69

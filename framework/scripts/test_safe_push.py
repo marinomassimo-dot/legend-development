@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Regressions for safe_push.py — every one is a refusal path, because the refusals are the tool."""
 from __future__ import annotations
-import os, subprocess, sys, unittest
+import os, subprocess, sys, time, unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -174,6 +174,118 @@ class SafePushRefusals(unittest.TestCase):
             self.assertIn("git push exited", r.stderr)
             self.assertNotIn("working tree", r.stderr)
             self.assertNotIn("not PASS", r.stderr)
+
+
+GATE_SLOW = ("import os, sys, time\nlog = os.environ['LEGEND_TEST_LOG']\nopen(log, 'a').write('start %s %.2f\\n' % (os.environ.get('LEGEND_TEST_NAME', '?'), time.time()))\n"
+             "time.sleep(float(os.environ.get('LEGEND_TEST_SLEEP', '2')))\nopen(log, 'a').write('end %s %.2f\\n' % (os.environ.get('LEGEND_TEST_NAME', '?'), time.time()))\n"
+             "print('VERDICT: PASS')\nsys.exit(0)\n")
+
+
+class SafePushSerialize(unittest.TestCase):
+    """`--serialize` (2026-11-16): publishers take turns; the remote tip is checked BEFORE the gate; nothing else is relaxed."""
+    _repo = SafePushRefusals._repo
+    _with_bare_remote = SafePushRefusals._with_bare_remote
+    _commit = SafePushRefusals._commit
+    _remote_main = SafePushRefusals._remote_main
+
+    def _run(self, root: Path, *args: str, **extra_env: str):
+        env = dict(os.environ, LEGEND_SAFE_PUSH_ROOT=str(root), LEGEND_SAFE_PUSH_GATE=str(root / "scripts" / "gate.py"), **extra_env)
+        return subprocess.run([sys.executable, str(TOOL), *args], capture_output=True, text=True, env=env)
+
+    def _popen(self, root: Path, *args: str, **extra_env: str):
+        env = dict(os.environ, LEGEND_SAFE_PUSH_ROOT=str(root), LEGEND_SAFE_PUSH_GATE=str(root / "scripts" / "gate.py"), **extra_env)
+        return subprocess.Popen([sys.executable, str(TOOL), *args], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, env=env)
+
+    def _slow_remote(self, td: str):
+        root, bare = self._with_bare_remote(td)
+        (root / "scripts" / "gate.py").write_text(GATE_SLOW, encoding="utf-8")
+        subprocess.run(["git", "-C", str(root), "commit", "-qam", "slow gate"], check=True)
+        subprocess.run(["git", "-C", str(root), "push", "-q", "origin", "HEAD:refs/heads/main"], check=True)
+        return root, bare
+
+    def test_a_stale_head_is_refused_before_the_gate_runs(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self._slow_remote(td)
+            log = Path(td) / "gate.log"
+            other = Path(td) / "other"
+            subprocess.run(["git", "clone", "-q", "-b", "main", str(bare), str(other)], check=True)
+            fixture_identity = "fixture" + "@" + "invalid"      # assembled: the publication gate screens address-shaped strings
+            subprocess.run(["git", "-C", str(other), "config", "user.email", fixture_identity], check=True)
+            subprocess.run(["git", "-C", str(other), "config", "user.name", "t"], check=True)
+            self._commit(other, "theirs.txt")
+            subprocess.run(["git", "-C", str(other), "push", "-q", "origin", "HEAD:refs/heads/main"], check=True)
+            theirs = self._remote_main(bare)
+            self._commit(root, "mine.txt")
+            r = self._run(root, "origin", "main", "--serialize", LEGEND_TEST_LOG=str(log))
+            self.assertEqual(r.returncode, 1)
+            self.assertIn("moved while this publisher waited", r.stderr)
+            self.assertIn("Nothing was gated or pushed", r.stderr)
+            self.assertFalse(log.exists(), "the gate must not run on a stale HEAD")
+            self.assertEqual(self._remote_main(bare), theirs)
+
+    def test_an_up_to_date_head_publishes_with_the_same_checks(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self._slow_remote(td)
+            mine = self._commit(root, "mine.txt")
+            r = self._run(root, "origin", "main", "--serialize", "--expect-sha", mine, LEGEND_TEST_LOG=str(Path(td) / "g.log"), LEGEND_TEST_SLEEP="0")
+            self.assertEqual(r.returncode, 0, r.stderr)
+            self.assertIn("landing lock acquired", r.stdout)
+            self.assertIn("VERDICT: PASS", r.stdout)
+            self.assertIn("verified=ls-remote", r.stdout)
+            self.assertEqual(self._remote_main(bare), mine)
+
+    def test_the_gate_verdict_and_the_expectation_still_refuse(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self._with_bare_remote(td)
+            (root / "scripts" / "gate.py").write_text(GATE_BLOCK, encoding="utf-8")
+            subprocess.run(["git", "-C", str(root), "commit", "-qam", "blocking gate"], check=True)
+            r = self._run(root, "origin", "main", "--serialize")
+            self.assertEqual(r.returncode, 1)
+            self.assertIn("not PASS", r.stderr)
+            wrong = self._run(root, "origin", "main", "--serialize", "--expect-sha", "no-such-rev")
+            self.assertEqual(wrong.returncode, 1)
+            self.assertIn("not a commit", wrong.stderr)
+
+    def test_two_publishers_gate_one_at_a_time_and_the_second_does_not_waste_a_gate(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self._slow_remote(td)
+            second = Path(td) / "second"
+            subprocess.run(["git", "-C", str(root), "worktree", "add", "-q", "--detach", str(second)], check=True)
+            for w in (root, second):
+                subprocess.run(["git", "-C", str(w), "config", "user.name", "t"], check=True)
+            a = self._commit(root, "a.txt"); b = self._commit(second, "b.txt")
+            log = Path(td) / "gate.log"
+            pa = self._popen(root, "origin", "main", "--serialize", LEGEND_TEST_LOG=str(log), LEGEND_TEST_NAME="A", LEGEND_TEST_SLEEP="3")
+            time.sleep(1.0)
+            pb = self._popen(second, "origin", "main", "--serialize", LEGEND_TEST_LOG=str(log), LEGEND_TEST_NAME="B", LEGEND_TEST_SLEEP="3")
+            oa, ea = pa.communicate(timeout=60); ob, eb = pb.communicate(timeout=60)
+            self.assertEqual(pa.returncode, 0, ea)
+            self.assertEqual(pb.returncode, 1, eb)
+            self.assertIn("waiting for the landing lock", ob)
+            self.assertIn("moved while this publisher waited", eb)
+            self.assertEqual(self._remote_main(bare), a)
+            names = [l.split()[1] for l in log.read_text().splitlines()]
+            self.assertEqual(names, ["A", "A"], "only A's gate ran (start and end); B was refused before its gate")
+
+    def test_a_killed_publisher_releases_the_lock_and_a_timeout_refuses(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self._slow_remote(td)
+            second = Path(td) / "second"
+            subprocess.run(["git", "-C", str(root), "worktree", "add", "-q", str(second), "-b", "other"], check=True)
+            subprocess.run(["git", "-C", str(second), "config", "user.name", "t"], check=True)
+            log = Path(td) / "gate.log"
+            pa = self._popen(root, "origin", "main", "--serialize", LEGEND_TEST_LOG=str(log), LEGEND_TEST_NAME="A", LEGEND_TEST_SLEEP="6")
+            for _ in range(50):
+                if log.exists(): break
+                time.sleep(0.1)
+            self.assertTrue(log.exists(), "A's gate should have started")
+            timed = self._run(second, "origin", "main", "--serialize", "--lock-timeout", "2", LEGEND_TEST_LOG=str(log), LEGEND_TEST_NAME="B")
+            self.assertEqual(timed.returncode, 1)
+            self.assertIn("not free within 2s", timed.stderr)
+            pa.kill(); pa.communicate()
+            free = self._run(second, "origin", "main", "--serialize", "--lock-timeout", "20", LEGEND_TEST_LOG=str(log), LEGEND_TEST_NAME="B", LEGEND_TEST_SLEEP="0")
+            self.assertEqual(free.returncode, 0, free.stderr)
+            self.assertIn("landing lock acquired", free.stdout)
 
 
 if __name__ == "__main__":

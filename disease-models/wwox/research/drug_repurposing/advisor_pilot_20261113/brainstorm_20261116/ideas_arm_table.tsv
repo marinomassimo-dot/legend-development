@@ -1,0 +1,65 @@
+arm	idea	sign	value3	status	owner_confirmed	note
+T-type blocker	I1	interval +		predicts	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+T-type blocker	I5	no change	.	silent_or_zero_unclear	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+T-type blocker	I9	no change	.	silent_or_zero_unclear	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+T-type blocker	I3	no change	. (read as silent unless owner gives a reason for 0)	silent_or_zero_unclear	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+T-type blocker	I4	no change	. (read as silent unless owner gives a reason for 0)	silent_or_zero_unclear	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+T-type blocker	I10	burden -	- (sleep-clustered events, in vivo level only)	predicts	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+NMDAR pore blocker	I1	duration -	- (duration)	predicts	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+NMDAR pore blocker	I5	duration -	.	predicts	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+NMDAR pore blocker	I9	duration -	.	predicts	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+NMDAR pore blocker	I3	duration -	- (duration)	predicts	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+NMDAR pore blocker	I4	duration -	- (duration)	predicts	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+NMDAR pore blocker	I10	duration -	.	predicts	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+GABA-A PAM	I1	rate +	-	CONFLICT: SCI scan says silencing (2 of 47 sets rate up)	ADV corrected to minus on SCI scan; SCI pending	U1 v1 table (ADV); cell read as written | U1 v3 point 1
+GABA-A PAM	I5	rate -	.	predicts	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+GABA-A PAM	I9	rate - (if mature)	- (only after maturation)	predicts	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+GABA-A PAM	I3	rate -		predicts	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+GABA-A PAM	I4	no change	. (read as silent unless owner gives a reason for 0)	silent_or_zero_unclear	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+GABA-A PAM	I10	burden +	+ or 0 (in vivo level only)	predicts (in vivo level)	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+Sodium-channel blocker	I1	?	.	undecided	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+Sodium-channel blocker	I5	?	.	undecided	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+Sodium-channel blocker	I9	?	.	undecided	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+Sodium-channel blocker	I3	?	.	undecided	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+Sodium-channel blocker	I4	no change	. (read as silent unless owner gives a reason for 0)	silent_or_zero_unclear	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+Sodium-channel blocker	I10	burden + (absence-like)	+ (ASSUMED)	predicts	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+Y2/NPY antagonist	I1	no change	. (read as silent unless owner gives a reason for 0)	silent_or_zero_unclear	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+Y2/NPY antagonist	I5	no change	.	silent_or_zero_unclear	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+Y2/NPY antagonist	I9	no change	.	silent_or_zero_unclear	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+Y2/NPY antagonist	I3	hippocampus unmasked		predicts	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+Y2/NPY antagonist	I4	no change	. (read as silent unless owner gives a reason for 0)	silent_or_zero_unclear	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+Y2/NPY antagonist	I10	no change	.	silent_or_zero_unclear	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+Substrate (glucose down, ketone added)	I1	interval changes		predicts	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+Substrate (glucose down, ketone added)	I5	no change	.	silent_or_zero_unclear	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+Substrate (glucose down, ketone added)	I9	no change	.	silent_or_zero_unclear	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+Substrate (glucose down, ketone added)	I3	no change	. (read as silent unless owner gives a reason for 0)	silent_or_zero_unclear	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+Substrate (glucose down, ketone added)	I4	interval changes		predicts	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+Substrate (glucose down, ketone added)	I10	no change	.	silent_or_zero_unclear	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+Remyelination mechanism	I1	no change	. (read as silent unless owner gives a reason for 0)	silent_or_zero_unclear	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+Remyelination mechanism	I5	rate -	- (needs the P10-P20 window)	predicts	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+Remyelination mechanism	I9	rate -	.	predicts	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+Remyelination mechanism	I3	no change	. (read as silent unless owner gives a reason for 0)	silent_or_zero_unclear	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+Remyelination mechanism	I4	no change	. (read as silent unless owner gives a reason for 0)	silent_or_zero_unclear	unconfirmed (owner not asked)	U1 v1 table (ADV); cell read as written
+Remyelination mechanism	I10	no change	.	silent_or_zero_unclear	owner confirmed (ADV, U1 v3 at 19:25Z)	U1 v1 table (ADV); cell read as written
+GluN2B NAM	I7	abolition only if f_c>0.86 or knockout share>0.14 at P13-P17; works early (P6-P8)		predicts	yes (IT)	IT dossier
+NMDAR pore blocker	I7	abolition at titration t>1-f_c at any age		predicts	yes (IT)	IT dossier
+Glycine-site agent / co-agonist scavenger	I11a	burst fall steeper than current fall in knockout		predicts	yes (IT)	IT dossier
+Persistent-sodium-preferring blocker	I11b	burst fall at unchanged evoked firing and EPSC		predicts	yes (IT)	IT dossier
+Sodium-channel blocker (non-selective)	I11b	may aggravate rebound phenotype (INFERRED)		predicts	yes (IT)	IT dossier
+Raised ambient GABA (vigabatrin or GAT-1 blocker)	I13	no worsening of burst-type events; bursts down		predicts	pending SCI	I14 table | SCI Update v5: incidence argument withdrawn, I13 kept as additional tonic deficit/readout
+Raised ambient GABA	I1/I10	worsening, myoclonic/absence-like, sleep-clustered, dose-related		predicts	pending SCI/ADV	I14 table
+Raised ambient GABA	I6	worsening in the youngest, fades with age		predicts	pending SCI	I14 table
+Tonic-selective potentiator (neurosteroid-type)	I13	burst suppression at fractional change where synaptic-selective has little		predicts	pending SCI	SCI I13 D3 | SCI Update v5: incidence argument withdrawn, I13 kept as additional tonic deficit/readout
+GABA-transaminase inhibitor / steroid	I2	response in spasm semiology window		predicts	yes (IT)	held counts: GABA-AT spasm 5 resolved,1 partial,2 none; rebound group n=0
+T-type / valproate-type	I2	benefit in rebound semiology; no held cell n>=3		predicts	yes (IT)	not testable on held reports
+NMDAR pore blocker	I1	duration - and interval + (SCI model)	- duration, + interval	predicts	ADV states from SCI model; SCI pending	U1 v3 point 3d
+T-type blocker	I1	interval +, duration 0	+ interval, 0 duration	predicts	ADV states from SCI model; SCI pending	U1 v3 point 3c
+K2P/Kv7 leak opener	leak reading (I4/SCI)	-	-	predicts	ADV states; owner pending	U1 v3 point 3b
+K2P/Kv7 leak opener	I8	0	0	predicts	owner confirmed (HE, I8 v3: no PPxY/LPxY in 16 K2P/Kir/Kv7 genes)	U1 v3 point 3b
+Sodium-channel blocker	I8	aggravation graded by Nav1.1 density under the shield sign, weakened under the adaptor sign	+ / graded	predicts	ADV states; HE pending	U1 v3 point 3e
+Threshold titration (K+ and Mg2+ ladders), any arm	I15	threshold shift in the same unit in every genotype; K+/Mg2+ disagreement on S-HT is a result	measurement frame	not a mechanism	ADV owner; IT second read done (Update v3 accepts three disjoint regions, matched driven-WT event)	I15
+Astroglial K+ buffering (Kir4.1/Kir, glial uptake) arm	I16	graded factor candidate (SCI)	owner-defined	pending	SCI owner; IT has not read the dossier	I16
+GABA-A positive modulator (phenobarbital/benzodiazepine class)	I17	worse response in neonatal-onset class (onset <= 28 days) than infantile; depolarising GABA	-	predicts	IT owner (dossier v1); SCI/HE pending	I17; held counts uninformative (3 vs 4 children)
+NKCC1-directed or GluN2B-directed route	I17	response in neonatal class, not in infantile	+ (neonatal)	predicts	IT owner; pending SCI	I17
+Any class, by genotype severity	I19	response variance largest at intermediate severity, smallest at the two ends; aggravation reports cluster in milder/intermediate	variance pattern	predicts	ADV owner; test on D5b extraction	I19; sealed 42 as record only
+PPxY-carrier protein level (proteome)	I18	small shift of carriers vs non-carriers; INCONCLUSIVE	.	predicts	owner confirmed (HE, preregistered rule)	I18; membrane proteins scarce in the held table
