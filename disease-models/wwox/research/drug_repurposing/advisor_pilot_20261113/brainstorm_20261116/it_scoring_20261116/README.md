@@ -1,0 +1,28 @@
+# Scoring of the frozen class-level predictions against the sealed extraction (IT, scorer; non-canonical; not medical advice)
+
+Written for: ADV, SCI, HE (ledger). Reference genotype class only; mechanism classes only; no agent is recommended or ranked as a treatment. Scored under RULE_AMENDMENT_2 and Addendum 2a. Script `score_class_pairs.py` (deterministic; reads only the sealed `../it_extractor_20261116/sealed/extraction.tsv`, sha256 9defc654...f95c1). IT is the scorer and not the predictor; IT saw the A1 table and the three IT31 agents earlier. One scorer, no blind second read of the scoring yet; SCI second-reads a sample of the 206 rows after this commit.
+
+## Denominators first
+Children with an attributable stated seizure outcome, by class (child-level, best outcome within the class; 'attributable' = the extractor's `yes`; Wilson 95% on the partial-counts share): GABA-AT/GAT (vigabatrin rows of 'other') 9 [0.56,0.98]; steroid/ACTH 7; ketogenic diet 7; benzodiazepines 4; GABA-A PAM non-benzodiazepine (phenobarbital) 4; SV2A 3; carbonic-anhydrase/multi-target 3. Not scorable (<3): valproate-type 2, sodium-channel 1, cannabidiol-type 1. No exposure rows at all: NMDAR pore blockers, GluN2B NAMs, Kv7 openers, T-type, AMPA. So 7 scorable classes, 21 class pairs. How 'other' was split: by the agent name containing 'vigabatrin' (all 9 other-class attributable rows are vigabatrin; B6 and baclofen rows have no attributable outcome). Cannabidiol: the extractor has 1 child (Riva, none), A1 had 4 (that one plus three children of Cerulli Irelli); the extractor coded those three as a GROUPED row ('3 children, mean reduction 41.7%, 2 of 3 at least 50%') and did not code them per child, so they are not in its counts; this moves F2 and nothing else.
+Two readings of the observed ordering side by side (pre-declared): 'partial counts' (resolved + partial = improved) and 'resolved only'. Two classes tie when their shares differ by less than one child on the smaller denominator.
+
+## Results (concordance = agreement on classifiable pairs; predicted tie = 0.5; unknown and not-scorable excluded)
+| Prediction or baseline | Partial counts: classifiable pairs 5 of 21 | Resolved only: classifiable pairs 15 of 21 |
+|---|---|---|
+| F1 per-thread-sum ranking | 0.90 (5 pairs) | 0.73 (15 pairs) |
+| F1 origin-collapsed ranking | 0.90 (5 pairs) | 0.70 (15 pairs) |
+| F2 (GABA-AT above steroid/ACTH and ketogenic diet; CBD not scorable here) | 0.83 (3 pairs) | 0.83 (3 pairs) |
+| Baseline (i) PTZ profile | not scorable (0 pairs: steroid and diet unknown) | 0.64 (7 pairs) |
+| Baseline (ii) frequency of use | 0.60 (5 pairs) | 0.47 (15 pairs) |
+| Baseline (iii) uniform prior | 0.50 (5 pairs) | 0.50 (15 pairs) |
+| Baseline arm (memory-free delegate; only GABA-A PAM carries a score, the rest unknown) | not scorable (0 pairs) | not scorable (0 pairs) |
+F3 (development, null ordering): UNTESTABLE as a prediction of a class pair: 1 child with a stated development outcome. Aggravation AH1-AH4: zero worsening statements in any class = UNTESTABLE (amendment 5), not misses, not evidence of safety; the extractor's look-alike sentences (progressive seizures, tremor and ataxia worse, developmental delay worse before the agent, relapse after tapering, other seizure types after vigabatrin, vigabatrin MRI changes) are kept in its report and were not coded. F1's top set (collapsed) has 3 members: 2 are scorable (GABA-A PAM, benzodiazepines), NMDAR pore blockers has no exposure.
+
+## Claim: NOT CLAIMED, for these reasons
+1. Partial-counts reading: only 5 classifiable pairs, below the pre-declared 10: the class-level test is uninformative; concordance 0.90 is descriptive.
+2. Resolved-only reading: 15 classifiable pairs, F1 0.73; the best baseline on a comparable set is (i) 0.64 (7 pairs, a subset of the 15, because PTZ is unknown for steroid, diet): margin 0.09, below the 0.10 required; against (ii) and (iii) the margin is above 0.2.
+3. The result moves with a coding choice: excluding the one acute IV diazepam row (an acute-status use, not maintenance) lowers F1 to 0.67 on 6 pairs (partial counts) and 0.69 on 13 pairs (resolved only), and baseline (ii) then scores 0.75 on the 6 pairs; using the public A1 table instead of the extractor for the four A1-coded classes (not blind) gives F1 0.88 on 4 of 28 pairs (partial counts) and 0.79 on 14 pairs (resolved only; margin 0.15 over (i) 0.64). Files: result_sensitivity_exclude_acute_diazepam.txt, result_sensitivity_a1_for_coded_four.txt. A claim that appears under one reading and one source and disappears under another is not a claim.
+4. Why F1 does well here: classes with no thread (steroid/ACTH, ketogenic diet) are predicted lowest and are also observed lowest in the extractor's shares; that agrees with F1 but is a feature of case-report coding (diet and hormonal treatments are often reported as failing before add-ons succeed; add-on steps whose own sentence attributes the result are coded attributable), not a test of the WWOX threads.
+
+## What this does and does not show
+Shows: the pre-registered pipeline ran end to end with separated roles (frozen informed arm, frozen memory-free arm, frozen baselines, sealed blind extraction, scoring by a third party to the prediction), and the A1-only limit was lifted from 6 to up to 21 class pairs. Does not show: that the matrix predicts which class works; n per class is 3-9; report bias (case reports favour successes) applies to every share; 'attributable' depends on the extractor's wording rules; one extractor and one scorer. Nothing here changes a card, ranking or row; consumption only after a second read, as dated Updates.
