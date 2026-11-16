@@ -1,0 +1,84 @@
+Scope note, stated once. The folder holds no measured social phenotype in any WWOX model. Behaviour in the files I read is limited to open-field, anxiety, rotarod and locomotor readouts (PMID42422765_partial_locators.md; "neurobehavioral and motor outcomes indistinguishable from WT"). therapeutic_overclaim_closure.md line 75 lists `three-chamber` and `social interaction` as assay-name probes that surfaced no new file. All "social" content below is therefore ESPANSIONE or IPOTESI built on WWOX circuit, myelin, GABA, GSK3β and metabolic data.
+
+The folder also says three things that constrain every seizure prediction below:
+- Seizures are a rat `lde/lde` phenotype, and mouse seizure status is contested (CLAIM 037; CC-20260826-SEIZURE-RECONCILIATION-01). Mouse seizure readouts here mean ECoG SWD (spike-wave discharges) or PTZ threshold.
+- Sodium-channel blockers are "target not causally downstream of WWOX" (N-03). Class-2 agents (LEV, LTG) are described as bypassing GABA (meta_gaba_paradox).
+- CLAIM 031 (in observation, N=2) is the clinical precedent: "cognitive and psychomotor impairment preceded the onset … did not improve" despite better epileptic control.
+
+All manipulations are assumed to run in a Wwox-deficient background on a background ASM that already controls the ictal phenotype. "Seizures" then means residual ECoG/PTZ susceptibility off or on drug.
+
+H1. Statement: A prenatal or perinatal wiring defect (progenitor/radial-glia migration and layering) fixes the social-circuit architecture before any seizure exists, so seizure-suppressing drugs act on a downstream excitability layer and cannot reach it. 
+Held evidence: CLAIM 014/015/022 in registries/claim_registry_current.md say loss perturbs prenatal cortical development; mechanism_intervention_map.md (Chain A boundary 3) says neuronal rescue "does not repair the progenitor/radial-glia defect, which is largely prenatal"; CLAIM 031. Against it: PAPER 021 (Tochigi) is corrected to PND5–21 maturation, not prenatal assembly. 
+Usual reading vs this one: the usual reading treats the social deficit as a consequence of seizure burden. This one makes it a pre-seizure lesion that is timing-locked, so it is fixed once the window has passed whatever the seizure state. 
+Rejecting observation: embryonic-progenitor-restricted Wwox loss leaves social behaviour and layering normal, while postnatal post-mitotic loss alone reproduces the deficit (three-chamber test plus layer-marker histology). 
+Discriminating manipulation (nearest rival H2, ongoing network state): Wwox-flox with an embryonic progenitor driver (Emx1-Cre) versus a tamoxifen-timed postnatal excitatory-neuron driver (CaMKIIa-CreERT2), with matched restoration arms. Predicts: progenitor-only deletion gives a social deficit with little or no seizure phenotype, and postnatal deletion gives seizures with intact social behaviour. The opposite pattern supports H2.
+
+H2. Statement: A primary, NMDAR- and gap-junction-dependent bursting state in medial prefrontal cortex (mPFC) pyramidal neurons (a state, not a seizure) corrupts social-relevant processing, and the ASM suppresses ictal spread without normalising that state. 
+Held evidence: CLAIM 021 and meta_network_myelin_glia_current.md (bursting, phase–amplitude coupling, rebound, "bursting depends on NMDAR and gap junctions"); mechanism_intervention_map.md (Chain B; d-APV abolishes the burst; carbenoxolone downgraded; N-03). WM BLOCK 1 prioritises EEG state over seizure count. 
+Usual reading vs this one: the usual reading counts seizure freedom as network control. This one separates the ictal and interictal network state, and says the state persists in social-relevant cortex. 
+Rejecting observation: mPFC slice or in vivo burst and phase–amplitude-coupling measures are normal on the ASM while social behaviour is still impaired. 
+Discriminating manipulation (nearest rival H3, PV output deficit): mPFC-restricted deletion of the NMDAR obligatory subunit (Grin1-flox, AAV-Cre, restricted to layer 2/3 pyramidal cells) in the Wwox-deficient animal. Predicts: bursting and the social deficit are rescued, and seizure susceptibility (generated elsewhere) is unchanged. If social behaviour is not rescued, H2 is rejected.
+
+H3. Statement: Functional output of parvalbumin (PV) interneurons in mPFC is reduced, so excitation–inhibition balance and gamma synchrony fail for social coding, while the ASM acts on pyramidal firing or release. 
+Held evidence: CLAIM 005 (PV marker −44% hippocampus in one systemic KO; narrowed, marker only); CLAIM 021 (reduced spontaneous inhibition in L2/3). Against it: meta_gaba_paradox_current.md and mechanism_intervention_map.md §2.3 say marker, survival and function are separate layers, and the systemic-null confounder (CLAIM 036) prevents separating cell-autonomous from secondary injury. The mPFC and social localisation is an IPOTESI. 
+Usual reading vs this one: the usual reading counts PV markers as lost cells. This one reads them as mis-timed or weak output, which a pyramidal-targeted ASM would not fix. 
+Rejecting observation: PV-to-pyramidal IPSC amplitude and PV-cell spike timing in mPFC are normal in the model. 
+Discriminating manipulation (nearest rival H4, depolarising GABA): Pvalb-Cre hM3Dq (Gq-DREADD) activation in mPFC. Predicts: it rescues the social deficit with little change in seizures, because the generator is hippocampal or elsewhere. Failure of PV drive, or worsening, favours H4.
+
+H4. Statement: GABA stays depolarising or shunting (an NKCC1/KCC2 chloride gradient defect) in a subset of circuits, so inhibition is excitatory where social coding needs inhibition. The ASM suppresses seizures through a non-GABA route and leaves this circuit untouched. 
+Held evidence: DL-MECH-035 (research/discovery_ledger_current.md; the authors' hypothesis in organoids only); meta_gaba_paradox_current.md Hypothesis 1 and Open Questions 1–2 (no E_GABA, chloride, NKCC1 or KCC2 measurement in any WWOX model). Contradicting statement: mechanism_intervention_map.md §2.3 and N-04 record that vigabatrin resolved spasms in a WWOX-null child, "as a clinical predictor it was falsified" (FM-018). I keep H4 only as a circuit-restricted social-deficit mechanism, which the vigabatrin case does not address. 
+Usual reading vs this one: the usual reading treats depolarising GABA as the cause of seizures and drug failure. This one makes it a separate cause of the social deficit that is independent of seizure. 
+Rejecting observation: perforated-patch E_GABA in mPFC pyramidal neurons from adult Wwox-deficient animals equals wild type. 
+Discriminating manipulation (nearest rival H3): KCC2 (Slc12a5) overexpression in mPFC pyramidal neurons using an AAV with a CaMKIIa promoter. Predicts: the social deficit is rescued while seizures are unchanged. In the same animals, Pvalb-Cre Gq activation (H3's rescue) fails or worsens the social deficit, because it increases excitatory GABA.
+
+H5. Statement: Neuron-driven, non-cell-autonomous hypomyelination slows long-range conduction (mPFC–amygdala, callosal), producing a connectivity-based social deficit that is independent of seizure generation. 
+Held evidence: CLAIM 003, 004 and the meta_network_myelin_glia_current.md integrated model (Syn-Cre deletion causes hypomyelination, Olig2-Cre and GFAP-Cre give no anomaly; oligodendrocytes never transduced yet g-ratio improves; unmyelinated axons per field stay abnormal after rescue); Abudiab 2025, a cell-autonomous oligodendroglial role, is review-sourced only. The meta file treats hypomyelination as a possible amplifier of seizures, which argues against pure independence. I keep H5 because the amplifier role is a possible, not a demonstrated, route. 
+Usual reading vs this one: the usual reading treats myelin as secondary pathology that follows seizures. This one makes it the causal substrate of the social deficit, and a second-order contributor to seizures. 
+Rejecting observation: a myelin-matched control cohort (comparable g-ratio and conduction velocity) still shows the social deficit. 
+Discriminating manipulation (nearest rival H1): in neuron-restricted Wwox-null mice, an oligodendrocyte-lineage-restricted pro-differentiation manipulation (Pdgfra-CreER driving Myrf or Sox10 expression) that restores myelination without neuronal WWOX. Predicts: g-ratio, conduction velocity and the social deficit improve, and seizures change little or only slightly. If social behaviour does not improve, H5 is rejected, which supports H1.
+
+H6. Statement: Cerebellar (Purkinje) WWOX-dependent circuitry contributes the social and cognitive deficit through cerebello-cortical or cerebello-VTA pathways, and cannot be reached by cortical seizure control. 
+Held evidence: discovery_ledger_current.md line 355 (WWOX-KO: loss of hippocampal GABAergic interneurons and Purkinje cells); CLAIM 039 (ataxia 95% in rat `lde`, cerebellum histologically intact, so ataxia is non-cerebellar there); mechanism_intervention_map.md note that the cerebellum was under-transduced by AAV; meta_gaba_paradox_current.md cites P47T cerebellar degeneration (Hussain 2023). The social link is ESPANSIONE. Against it: CLAIM 039 and the rat data show no structural cerebellar lesion, so I treat this as the least anchored hypothesis. 
+Usual reading vs this one: the usual reading looks for the social deficit in cortex and hippocampus. This one places it in a structure that no ASM targets and that is outside the seizure generator. 
+Rejecting observation: Purkinje-restricted Wwox deletion yields normal Crus I/II physiology and normal three-chamber behaviour. 
+Discriminating manipulation (nearest rival H2): Pcp2-Cre Wwox deletion or restoration, with Crus I Purkinje-cell hM4Di inhibition as the circuit arm. Predicts: social deficit without any seizure or ECoG change (the seizure phenotype is absent). If Purkinje deletion leaves social behaviour unchanged, H6 is rejected.
+
+H7. Statement: Loss of the direct physical brake of WWOX on GSK3β (Axin-like docking motif, residues 388–407, L404 required) produces Tau and cytoskeleton hyperphosphorylation, impaired neurite and spine maturation and social-circuit connectivity, while seizure threshold is controlled by a separate pathway. 
+Held evidence: CLAIM 035 (Wang 2012: GSK3β binding, Tau S396/S404, neurite outgrowth, S9-independent); CLAIM 016; mechanism_intervention_map.md Chain C and its note that "CLAIM 016 and CLAIM 035 exclude each other on the S9 axis" and that lithium suppressed PTZ seizures in all three genotypes, wild type included (N-02). The 016 and 035 conflict and the lithium non-specificity argue against a seizure-neutral reading. I keep H7 only for a structural, seizure-independent role of the docking function. 
+Usual reading vs this one: the usual reading treats GSK3β as a seizure-susceptibility amplifier. This one gives it a structural, seizure-independent role in social-circuit connectivity, and the folder's measurement warning (phospho-S9 is blind) means abundance cannot test it. 
+Rejecting observation: Tau S396/S404 phosphorylation and neurite or spine morphology in the Wwox-deficient cortex are normal. 
+Discriminating manipulation (nearest rival H5): in Wwox-null forebrain excitatory neurons (CaMKIIa), AAV re-expression of the L404-mutant WWOX (cannot dock GSK3β) versus wild-type WWOX. Predicts: the L404 mutant rescues network bursting and seizure susceptibility but not the social deficit, and wild-type WWOX rescues both. A mutant that does rescue social behaviour rejects H7.
+
+H8. Statement: The drug suppresses clinical seizures but not subclinical interictal epileptiform activity or phase–amplitude-coupled bursts, and this interictal load disrupts social cognition during the critical period. 
+Held evidence: WM_v4.4 BLOCK 3 and CLAIM 021 (EEG state over seizure count); meta_network_myelin_glia_current.md. Contradicting statement: CLAIM 031 — social and cognitive impairment "did not improve with achievement of better control of epileptic activity". The folder reports N=2 and does not say whether interictal activity was quantified, so I keep H8 only as a state that persists on drug. 
+Usual reading vs this one: the usual reading counts seizure freedom as control of the epileptic process. This one makes interictal activity the harmful part, and seizures a poor proxy for it. 
+Rejecting observation: interictal spike rate and bursts are matched between animals with and without the social deficit, or are abolished on the ASM while the social deficit persists. 
+Discriminating manipulation (nearest rival H2): hM4Di (Gi-DREADD) in the interictal-spike generator (for example CA1 or CA3 pyramidal cells), leaving mPFC untouched. Predicts: spikes fall, seizure susceptibility falls further, and the social deficit improves only if spike load drives it. H2 predicts no social effect without mPFC change.
+
+H9. Statement: Bioenergetic vulnerability (a WWOX/HIF1α → PDK1 glycolytic shift) in high-demand cells such as PV interneurons produces a social deficit that an anticonvulsant does not correct. 
+Held evidence: M6 in mechanism_intervention_map.md (HIF1α de-repression, Warburg signature in human organoids); CLAIM 009 and 025; WM BLOCK 2 CLAIM 017 (ketogenic diet, 3/5 patients improved seizures). Against it: N-06 says the Warburg phenotype is "not in patients" (lactate readouts normal), CLAIM 034 says the sign of WWOX↔ROS is context-dependent, and CLAIM 036 shows the systemic confounder. I keep H9 as a cell-restricted energetic hypothesis. 
+Usual reading vs this one: the usual reading treats metabolic findings as systemic or secondary. This one treats them as a cell-type energetic limit on circuit function. 
+Rejecting observation: PV-cell mitochondrial and glycolytic flux (Seahorse or NADH imaging) is normal in the model. 
+Discriminating manipulation (nearest rival H3): Pvalb-Cre Hif1a deletion in the Wwox-deficient animal. Predicts: bioenergetics normalise and the social deficit improves, with seizures reduced only modestly. Under H3 (output deficit) the same deletion does nothing, and only direct Gq drive helps.
+
+H10. Statement: A microglia- or cytokine-driven synaptic remodelling (the Il6/IBA1 response) persists after seizures are controlled and prunes social-circuit synapses. 
+Held evidence: CLAIM 005 and 006 (IBA1/GFAP area fractions; only Il6, not Tnf-a, significant, n=4); DL-MECH-012; mechanism_intervention_map.md M10 ("downstream"), and the meta file says gliosis falls after neuron-restricted rescue (Obeid 2026). That makes microglia secondary to the neuron, which argues against an independent glial cause. I keep H10 because "downstream of the neuron" does not mean "settled once seizures stop". 
+Usual reading vs this one: the usual reading treats glial activation as a seizure consequence that resolves with control. This one treats it as a self-sustaining effector. 
+Rejecting observation: microglial pruning markers (for example CD68, synaptic puncta) and social behaviour are normal after the ASM, or the social deficit is not rescued by microglial inhibition. 
+Discriminating manipulation (nearest rival H7): Cx3cr1-CreER hM4Di (or Il6 deletion) in microglia of neuron-restricted Wwox-null mice. Predicts: the social deficit improves and seizures are unchanged. If the neuronal L404 mutant (H7) rescues social behaviour while microglial silencing does not, H10 is rejected.
+
+FILES READ (Read):
+/tmp/legend_cut_1867a26a8/CLAUDE.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/working_model_current.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/meta/meta_gaba_paradox_current.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/meta/meta_network_myelin_glia_current.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/discovery_ledger_current.md (lines 706–725)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/claim_registry_current.md (CLAIM 021–023, 031, 032, 037–039)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-SEIZURE-RECONCILIATION-01.md (first 80 lines)
+
+FILES located by Grep only (the passages I cite were not read in full):
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID42422765_partial_locators.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/therapeutic_overclaim_closure.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/discovery_ledger_current.md (lines 355, 1442)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/biomarker_endpoint/clinical_monitoring_endpoints_current.md

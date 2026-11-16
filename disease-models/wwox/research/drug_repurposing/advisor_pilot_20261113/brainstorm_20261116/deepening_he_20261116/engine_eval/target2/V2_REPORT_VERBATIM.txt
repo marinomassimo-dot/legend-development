@@ -1,0 +1,218 @@
+Path prefix: W = /tmp/legend_cut_1867a26a8/disease-models/wwox. Full paths are in FILES READ.
+
+Premise check from the folder. No WWOX model in the folder has a measured social deficit.
+- The only social assays are in W/research/commit_candidates/CC-20260826-PMID36828035-01.md, §2.6. They were run on P47T/WT heterozygotes and were normal.
+- The rescue batteries are locomotor, open-field, anxiety and rotarod only (W/analysis/therapeutic_repair_candidates.md, §3 row 7, "Zero cognitive assays"; W/analysis/therapeutic_overclaim_closure.md, §2).
+- A Grep for "social" gives 5 behavioural lines in total, none a social deficit in a biallelic model. "sociab" also matches "dissociable", which is a false hit.
+- Everything below is therefore mechanism-level extrapolation from the folder's cortical, myelin, GABA and clinical readings, not a restatement of a WWOX social result.
+
+# HELD READINGS AND THEIR RIVALS
+
+## Step (a) and (b): the 10 held readings
+
+**HR1. Seizure control does not rescue development; the deficit precedes the epileptic encephalopathy and is independent of it.**
+- Where it is held: CLAIM 031 (W/registries/claim_registry_current.md l.569); W/analysis/mechanism_intervention_map.md, N-15; W/therapeutics/therapeutic_strategies_current.md l.79; W/analysis/therapeutic_repair_candidates.md §4 ("DISEASE_MODIFICATION … ABSENT").
+- Rival: the dissociation is partly produced or maintained by the treatment, or by residual interictal activity.
+- Contradicting observation: the same deficit in a child whose seizures were controlled without the drug.
+- Rival-term Grep: "VABAM|iatrogenic" gives 32 hits in 14 files, and "interictal" gives 28 hits in 15 files.
+- Ignored evidence for the rival: CLAIM 031's key case was a vigabatrin-treated child. CLAIM 001 holds VABAM, a drug-linked MRI abnormality, as a real safety signal in WWOX-DEE. CLAIM 031 never treats the drug as a confound of its own N=2. Interictal data exist only for the rat and for Obeid panel 7C, which sits at the Mann-Whitney floor (p=0.2000, "not tested"; CC-20260826-SEIZURE-RECONCILIATION-01 §2). No interictal measure is linked to cognition anywhere.
+- Hypotheses built on it: H5, H6.
+
+**HR2. The substrate is prenatal and "pre-wired" (migration and layering).**
+- Where it is held: CLAIM 014 and CLAIM 015; W/meta/meta_prenatal_structure_current.md.
+- Rival: the relevant lesion is postnatal and reversible, in post-mitotic neurons.
+- Contradicting observation: a post-mitotic-only deletion reproduces the phenotype.
+- Rival-term Grep: "Syn-Cre|Nes-Cre" hits CC-20260826-CLAIM037-01 and CC-20260825-ADVERSARIAL-FALSIFICATION-01.
+- Found evidence for the rival: Syn-Cre animals seize from P9 and 36/42 of their slices burst (CLAIM037-01 §D). WWOX expression is higher in adult than in fetal brain, 17.7 vs 9.2 TPM (ADVERSARIAL l.562-578). The human prenatal evidence is one fetus against one control, with layers labelled only on the control. The birth-dating experiment in Nes-Cre was never run (l.580).
+- Hypotheses built on it: H1 and H2 are the pair. H1 is the postnatal side.
+
+**HR3. WWOX loss is neuron-autonomous. Olig2-Cre and GFAP-Cre give no phenotype, myelin loss is non-cell-autonomous, and gliosis is downstream.**
+- Where it is held: CLAIM 003 and CLAIM 004; mechanism_intervention_map.md M9, M10 and N-13; W/meta/meta_network_myelin_glia_current.md.
+- Rival: oligodendroglial or microglial contributions that are cell-autonomous and stress-contingent.
+- Contradicting observation: myelin phenotype in the Olig2-Cre line, which was never phenotyped for myelin.
+- Rival-term Grep: "cuprizone|Abudiab|unmyelinated" gives 43 hits in 15 files.
+- Found evidence for the rival: CC-20260826-CLAIM003-01 §1.1 and §4. The Olig2-Cre line was measured only for gross appearance, weight and survival, with every myelin endpoint "NOT measured". Unmyelinated axons stay at ~52 vs ~26 in WT after neuronal rescue (`**`; therapeutic_repair_candidates.md row 5b). The oligodendroglia-autonomous reading rests only on the Abudiab preprint under cuprizone, graded IPOTESI.
+- Hypotheses built on it: H4, H9.
+
+**HR4. Network-state pathology is primary: NMDAR- and gap-junction-dependent bursting, abnormal phase-amplitude coupling (PAC), and reduced spontaneous inhibition.**
+- Where it is held: CLAIM 021; mechanism_intervention_map.md Chain B.
+- Rival: the primary lesion is the inhibitory/interneuron compartment, not excitatory-intrinsic.
+- Contradicting observation: interneuron-restricted deletion alone being silent.
+- Rival-term Grep: "Pvalb-Cre|Dlx5|Sst-Cre|Vip-Cre" gives 0 Cre-driver hits (3 GAD2 marker hits only).
+- Found evidence for the rival: PV+ cells −44% (Hussain 2019, meta_gaba_paradox_current.md) and "reduced spontaneous inhibition" inside CLAIM 021 itself. No interneuron-lineage conditional exists in the folder.
+- Hypotheses built on it: H1, H3.
+
+**HR5. GABA markers are not function; GABA is "admitted as mechanism, refused as target".**
+- Where it is held: W/meta/meta_gaba_paradox_current.md; mechanism_intervention_map.md §2.3 and FM-018.
+- Rival: GABAergic maturation is dispensable for seizure threshold, since vigabatrin resolved spasms, but needed for social circuitry.
+- Contradicting observation: vigabatrin response despite a "depolarizing GABA" premise.
+- Rival-term Grep: "parvalbumin|PV+" gives 19 hits in 10 files.
+- Found evidence for the rival: CC-20260826-EGABA-CLOSURE-01 pre-registers an M3 arm for interneuron firing, and that arm is not run.
+- Hypotheses built on it: H3.
+
+**HR6. GSK3β de-repression is a seizure amplifier (CLAIM 016, CLAIM 035).**
+- Where it is held: claim_registry_current.md CLAIM 016 and CLAIM 035; W/meta/meta_prenatal_structure_current.md §4.
+- Rival: the GSK3β–Tau arm acts on dendritic/neurite structure, not on excitability.
+- Contradicting observation: lithium suppressed PTZ seizures in all three genotypes including wild type (N-02), so the seizure link of GSK3β is thin. The WWOX–GSK3β–Tau output is Tau-dependent neurite outgrowth.
+- Rival-term Grep: "S396|Mapt|Tau-dependent|Tau phosph" gives 69 hits in 28 files.
+- Hypotheses built on it: H10.
+
+**HR7. The efficacious window is P0–P5. Neuronal gene therapy does not repair the radial-glia/progenitor defect.**
+- Where it is held: therapeutic_strategies_current.md l.89 (grep context only); mechanism_intervention_map.md Chain A, boundary 3.
+- Rival: the social circuit is rescuable later.
+- Contradicting observation: efficacy after P5.
+- Rival-term Grep: "post-neonatal" gives row 9 of therapeutic_repair_candidates.md, which reads `NOT_MEASURED`.
+- Caveat: the "radial-glia defect unrepaired" statement is attributed to the group's own preclinical work. I could not locate a registered locator for it in the files I read.
+- Hypotheses built on it: H1, H2.
+
+**HR8. Seizure phenotypes are separate axes. SWD is not a seizure, and epileptogenesis is measured nowhere.**
+- Where it is held: CC-20260826-SEIZURE-RECONCILIATION-01.
+- Rival: events (spikes) and state (PAC) are distinct drivers of function.
+- Contradicting observation: spike-triggered silencing changing function without changing state.
+- Hypotheses built on it: H6 (H1 is its nearest rival).
+
+**HR9. Disease-modification evidence is absent; cognition was never measured.**
+- Where it is held: therapeutic_repair_candidates.md §4; therapeutic_overclaim_closure.md §2.2.
+- Rival: "absent" reflects an assay-blind battery, not a negative.
+- Contradicting observation: any social or visually guided assay in a rescued animal.
+- Rival-term Grep: "social|sociab" gives 5 behavioural lines in total, none a social deficit in a biallelic model.
+- Hypotheses built on it: H7 and H8, because their assays have never been run.
+
+**HR10. Systemic metabolic decompensation confounds the systemic null (CLAIM 036).**
+- Where it is held: claim_registry_current.md CLAIM 036.
+- Rival: the neuron-restricted cKO seizes at P9 without that confounder, so brain-intrinsic lesions suffice. A non-cortical hub (cerebellum, retina) is untested.
+- Contradicting observation: a normal P14 blood chemistry in Syn-Cre. The ADVERSARIAL file names this experiment as missing (l.461-464).
+- Hypotheses built on it: H7, H8.
+
+Rival- or contradiction-built hypotheses: H3 to H10, which is 8 of 10. H1 and H2 are the two held-reading hypotheses.
+
+# HYPOTHESES
+
+**H1. [HELD, inverted] Persistent excitatory cortical network state**
+1. Statement: A seizure-independent cortical network state in excitatory neurons persists after the drug. It is NMDAR/gap-junction-dependent bursting with abnormal phase-amplitude coupling (PAC) and reduced spontaneous inhibition. It corrupts the oscillatory coordination social circuits need, so seizures fall and the social deficit stays.
+2. Held evidence: for it, CLAIM 021 (claim_registry_current.md l.382, "primary network-state dysfunction, not only epileptiform activity"; meta_network_myelin_glia_current.md; mechanism_intervention_map.md Chain B). Limits: NMDAR/gap-junction dependence is not shown to be pharmacological (map l.214-221), the data are neuron-specific slice/anaesthetised work graded T2, and no social assay exists. The folder contains nothing that contradicts it.
+3. Usual reading vs this one: the usual reading treats the abnormal EEG as the epilepsy. This one makes the EEG state a separate, drug-insensitive lesion that carries the social deficit.
+4. Rejection: record ECoG PAC and burst state during the social task in drug-controlled animals. It is rejected if PAC and burst state are in the wild-type range while the deficit is intact.
+5. Manipulation vs nearest rival H2 (prenatal wiring): tamoxifen-inducible Wwox re-expression in Emx1-CreER excitatory cortical neurons, started at P21 under the drug.
+   - Seizures: stay at the drug floor; the interictal ECoG state normalises.
+   - Social deficit: rescued if H1; not rescued if H2.
+6. Audit: CONTAMINATION: "phase-amplitude|gap junction|connexin" gives 55 hits in 16 files, so the folder already names this mechanism. FRAMING: worded from CLAIM 021 and Chain B; this is a restatement made to predict the dissociation, not a new result. CITATION: claim_registry_current.md (opened, l.560-610; the CLAIM 021 text from Grep context), meta_network_myelin_glia_current.md (opened), mechanism_intervention_map.md (opened).
+
+**H2. [HELD] Fixed prenatal wiring error**
+1. Statement: Late-born upper-layer neuron migration/layering and cytoskeletal programmes are mis-set in utero, creating a structural wiring error. Seizures are a later, drug-suppressible expression, while the social-circuit mis-wiring cannot be reached postnatally.
+2. Held evidence: for it, CLAIM 014/015 and meta_prenatal_structure_current.md. Against or limiting: the CLAIM 015 INFERENZA rests on one fetus against one control (ADVERSARIAL l.548-558); adult WWOX expression exceeds fetal (l.562); Syn-Cre post-mitotic loss alone gives P9 seizures and bursting (CLAIM037-01 §D). I keep it because the Nes-Cre layer-marker experiment (ADVERSARIAL l.580) is untested, not refuted.
+3. Usual reading vs this one: the usual reading says "early rescue protects development". This one says the social deficit is set before any postnatal rescue or drug can act, and that the network state (H1) is downstream.
+4. Rejection: birth-dating and layer markers in Nes-Cre;Wwox-flox embryos (E14.5 pulse to P1). It is rejected if laminar position of late-born neurons is normal.
+5. Manipulation vs nearest rival H1: in utero electroporation of Wwox into E14.5 upper-layer-fated progenitors of the Wwox-deficient cortex, with no postnatal re-expression.
+   - Seizures: little change (the drug already suppresses them).
+   - Social deficit: rescued disproportionately relative to H1's postnatal-only arm.
+6. Audit: CONTAMINATION: "in utero electroporation|electroporat|E14.5|birth-dating" gives 11 hits in 7 files, and the E14.5 birth-dating experiment is named in the folder, so the mechanism is already named. FRAMING: worded from CLAIM 015, the "pre-wired" wording, and the ADVERSARIAL critique. CITATION: meta_prenatal_structure_current.md (opened), CC-20260825-ADVERSARIAL-FALSIFICATION-01.md (opened l.440-600), CC-20260826-CLAIM037-01.md (opened l.120-180).
+
+**H3. [RIVAL] Interneuron developmental defect that is dispensable for seizure threshold**
+1. Statement: Impaired maturation or timing of PV interneurons weakens E/I-synchronised cortico-limbic activity needed for social behaviour. The drug raises the ictal threshold on the pyramidal side but cannot restore PV-dependent timing, so seizures fall and social behaviour stays low.
+2. Held evidence: the folder holds PV+ cells −44% in one systemic KO at two weeks, and reduced spontaneous inhibition (meta_gaba_paradox_current.md). It states the marker count is not function and that the systemic null is metabolically confounded (CLAIM 036). Contradiction to the held reading: vigabatrin resolved spasms (CLAIM 031), so GABA machinery looks non-critical for seizures. I keep it because that same fact leaves the social role of GABA machinery open, and the only pre-registered test of interneuron firing (CC-20260826-EGABA-CLOSURE-01, M3) is unrun.
+3. Usual reading vs this one: the usual reading says GABA dysfunction is a cause of seizures. This one says it is a cause of social dysfunction and is irrelevant to the seizure fix.
+4. Rejection: Dlx5/6-Cre or Pvalb-Cre Wwox-deleted animals show normal sociability, with normal sIPSC frequency and PV-cell firing. That rejects it.
+5. Manipulation vs nearest rival H1: Dlx5/6-Cre (or Pvalb-Cre) Wwox deletion in an otherwise wild-type mouse.
+   - Seizures: rare or absent.
+   - Social deficit: present if H3; absent if H1.
+6. Audit: CONTAMINATION: "parvalbumin|Pvalb|PV+" gives 19 hits in 10 files, so the interneuron marker deficit is named. "Pvalb-Cre|Dlx5|Sst-Cre|Vip-Cre" gives 0 driver hits, so the lineage-restricted manipulation is novel. FRAMING: worded from the GABA meta, the vigabatrin observation and the unrun M3 arm, not from a result. CITATION: meta_gaba_paradox_current.md (opened), CC-20260826-EGABA-CLOSURE-01.md (grep context only, not opened), mechanism_intervention_map.md (opened).
+
+**H4. [RIVAL] Oligodendrocyte-autonomous, demand-contingent myelin deficit in social tracts**
+1. Statement: An oligodendrocyte-lineage, stress- or activity-contingent myelination failure (unmyelinated axon excess, conduction delay) in long-range association tracts degrades inter-regional social-circuit timing. It is invisible at baseline and not seizure-driven, so seizures fall and social behaviour stays low.
+2. Held evidence: Olig2-Cre and GFAP-Cre lines are normal on gross appearance, weight and survival, but no myelin endpoint was ever applied (CLAIM003-01 §1.1). Unmyelinated axons stay ~26 vs ~52 after neuronal rescue (therapeutic_repair_candidates.md row 5b). MBP deficits vary by region: corpus callosum −48%, cortex −30%, striatum −50%, anterior commissure −70% (PMID42422765_partial_locators.md l.140-143). The cell-autonomous reading is preprint-only (IPOTESI). The folder's "non-cell-autonomous" claim contradicts this, and I keep H4 because the Olig2-Cre myelin phenotype was never measured.
+3. Usual reading vs this one: the usual reading says myelin failure is a downstream amplifier of neuronal hyperexcitability. This one makes it an independent, seizure-insensitive driver.
+4. Rejection: g-ratio, unmyelinated-axon count and optic-nerve CAP are normal in the existing Olig2-Cre line at P17, at P60 and after the cuprizone arm (CLAIM003-01 §4).
+5. Manipulation vs nearest rival (neuron-driven hypomyelination, HR3): Pdgfra-CreER (OPC) Wwox deletion in otherwise wild-type mice, then a social task with and without a cuprizone challenge.
+   - Seizures: none (the Olig2-Cre line is normal on gross phenotype, with no EEG).
+   - Social deficit: appears under challenge if H4; absent if neuron-driven.
+6. Audit: CONTAMINATION: "activity-dependent myelin|adaptive myelin|experience-dependent myelin|myelination…social" gives 0 hits (the social-myelin link is novel); "cuprizone|Abudiab|unmyelinated" gives 43 hits in 15 files. FRAMING: worded from CC-20260826-CLAIM003-01 and the regional MBP table, not from a social result. CITATION: CC-20260826-CLAIM003-01.md (opened), therapeutic_repair_candidates.md (opened l.250-360), PMID42422765_partial_locators.md (grep context only).
+
+**H5. [RIVAL] The drug itself leaves or creates a social deficit that mimics "untouched"**
+1. Statement: The drug's neuromodulatory action on a social-circuit node, or its injury (VABAM-type), suppresses or fixes social behaviour at the same time as it controls seizures. The deficit then looks "untouched" because disease-driven gain and drug-driven loss cancel.
+2. Held evidence: CLAIM 001 holds vigabatrin–VABAM as a real safety signal, with conflicting evidence. CLAIM 031's key case was drug-treated and remained profoundly delayed. This contradicts the held reading that the deficit is independent of seizure control, because the "control" that was achieved was drug control. The folder has no ASM–social data at all; I keep the hypothesis only as a confound to be separated from the disease-intrinsic readings.
+3. Usual reading vs this one: the usual reading says the drug is a neutral seizure switch. This one says it is a confounded variable.
+4. Rejection: social scores are the same in drug-treated and drug-naive animals at matched seizure burden, in the same model. That rejects it.
+5. Manipulation vs nearest rival H1: replace the drug with closed-loop hM4Di silencing of Emx1/Camk2a seizure-focus neurons, triggered by ECoG detection, in drug-naive Syn-Cre cKO mice, with a DREADD-in-wild-type control.
+   - Seizures: suppressed.
+   - Social deficit: improved if H5; unchanged if disease-intrinsic (H1–H4, H6–H10).
+6. Audit: CONTAMINATION: "VABAM|iatrogenic" gives 32 hits in 14 files, but they are all about safety, none links the drug to the cognitive outcome, so the mechanism is only partly named. FRAMING: worded from the CLAIM 001 / CLAIM 031 cross-link, not from a result. CITATION: claim_registry_current.md (opened, CLAIM 001 via Grep context, CLAIM 031 via Read), working_model_current.md (opened l.60-209).
+
+**H6. [RIVAL] Interictal discharges (events) vs network state**
+1. Statement: Interictal epileptiform spikes and sleep-activated discharges persist under the drug. They interrupt hippocampal–prefrontal and thalamocortical coupling in time-locked windows, independent of the background state (H1), so seizures fall and social behaviour stays low.
+2. Held evidence: interictal spikes are documented in the rat lde/lde (n=5, all mutants) and the Obeid spike endpoint is "not tested" (panel 7C at the p=0.2000 floor; CC-20260826-SEIZURE-RECONCILIATION-01 §2). The folder links interictal data to cognition nowhere, which conflicts with the claim that EEG state alone matters (CLAIM 021). I keep it as a testable split between events and state.
+3. Usual reading vs this one: the usual reading says "seizure-free means EEG quiet". This one says the drug leaves events that matter.
+4. Rejection: the social score is uncorrelated with interictal spike rate across ASM-treated animals and sessions. That rejects it.
+5. Manipulation vs nearest rival H1: spike-triggered optogenetic silencing (inhibitory opsin) of Emx1 excitatory neurons at the spike focus, millisecond windows only, leaving the background state and PAC untouched.
+   - Seizures: unchanged, already at the drug floor.
+   - Social deficit: improved if H6; unchanged if H1.
+6. Audit: CONTAMINATION: "interictal" gives 28 hits in 15 files (rat and Obeid endpoints; none about cognition or sociability). FRAMING: worded from the SEIZURE-RECONCILIATION three-axis split, not from a result. CITATION: CC-20260826-SEIZURE-RECONCILIATION-01.md (opened), PMID19500159.md (grep context only, not opened).
+
+**H7. [RIVAL] Cerebellar/Purkinje hub outside the drug's and the vector's reach**
+1. Statement: Purkinje-cell degeneration or dysfunction disrupts cerebello-thalamo-prefrontal social circuitry. It is not seizure-generating and is not repaired by the drug, so seizures fall and social behaviour stays low.
+2. Held evidence: for it, Wwox−/− foliation defects in lobules V–VII with Purkinje counts ~18 vs ~7 (therapeutic_repair_candidates.md row 6); P47T cerebellar degeneration (CC-20260826-PMID36828035-01 §2.4); the neuronal vector under-transduces cerebellum (0 to 1.4× WT) and no cerebellum-specific endpoint was reported. Against it, CLAIM 039: the rat ataxia is "not cerebellar", cerebellum histologically unremarkable. HR9 and HR10: no cerebellar social endpoint was measured. I keep it only because the lesion exists and was never assayed.
+3. Usual reading vs this one: the usual reading says the network lesion is cortical. This one puts the social lesion in a non-cortical hub.
+4. Rejection: Purkinje-restricted deletion in wild type leaves sociability normal. That rejects it.
+5. Manipulation vs nearest rival H1: Pcp2(L7)-Cre-driven Wwox deletion in otherwise wild-type mice, or re-expression in the Syn-Cre cKO.
+   - Seizures: none.
+   - Social deficit: present with deletion if H7; rescued by re-expression only if H7, otherwise no change.
+6. Audit: CONTAMINATION: "Purkinje|cerebell" gives 212 hits in 52 files (cerebellar lesion named; no social link). FRAMING: worded from the row-6 observation that no cerebellar endpoint was measured. CITATION: therapeutic_repair_candidates.md (opened), CC-20260826-PMID36828035-01.md (opened l.100-210), claim_registry_current.md CLAIM 039 via the ADVERSARIAL file (opened l.468-497).
+
+**H8. [RIVAL] Sensory input deficit (visual pathway), not circuit processing**
+1. Statement: Impaired retinal or visual-thalamic input, with optic-nerve hypomyelination, starves face and eye-contact cues the social circuit needs. Seizure control cannot restore sensory input, so seizures fall and social behaviour stays low.
+2. Held evidence: visual impairment in 4/5 WOREE patients (Chong 2023; working_model_current.md l.117) and optic-nerve myelinated axons ~140/68/124 for WT/KO/rescued (therapeutic_repair_candidates.md row 5b). The folder lists vision only as a comorbidity to monitor, not as a mechanism for social deficit. The folder contradicts the pure circuit reading and holds no visual-behaviour endpoint, so I keep H8 as a modality-specific prediction.
+3. Usual reading vs this one: the usual reading says the deficit is in cortical processing. This one says it is upstream input.
+4. Rejection: the deficit is the same in olfactory and ultrasonic-vocalisation social tests as in visually guided tests. That rejects it.
+5. Manipulation vs nearest rival H4 (central white matter): Brn3b/Pou4f2-Cre RGC-restricted Wwox deletion in wild type.
+   - Seizures: none.
+   - Social deficit: restricted to visually guided tasks if H8; absent if H4.
+6. Audit: CONTAMINATION: "visual impairment|optic nerve|retinal ganglion|dLGN|lateral geniculate|cortical visual|eye contact|hearing loss" gives 9 hits in 8 files, and the optic nerve appears as a myelin readout, not a sensory route. FRAMING: worded from the 4/5 visual datum and the optic-nerve myelin counts. CITATION: working_model_current.md (opened), therapeutic_repair_candidates.md (opened).
+
+**H9. [RIVAL] Seizure-independent microglial synapse elimination in prefrontal social circuitry**
+1. Statement: Complement-dependent microglial pruning, initiated by early neuronal dysfunction, becomes self-sustaining and excessively eliminates synapses in mPFC social circuits independent of ongoing seizures. Seizures fall and social behaviour stays low.
+2. Held evidence: gliosis is "downstream", reduced by neuron-restricted rescue (mechanism_intervention_map.md M10; WM l.93, "low-noise modifier"). P47T gliosis rises between 80 and 250 days (CC-20260826-PMID36828035-01 §2.3), and the low-dose arm leaves gliosis significantly worse than wild type (therapeutic_repair_candidates.md row 4). Il6 rises but Tnf does not (meta_gaba_paradox_current.md). This contradicts the held "low-noise" reading, and I defend it only for social circuitry, not for seizure modification. The only C1q record in the folder is a tumour paper plus a queue note on C1q and microglial pruning (full_text_queue_current.md l.242); it is not WWOX–neuron data.
+3. Usual reading vs this one: the usual reading says glia are a secondary modifier. This one says they are a seizure-independent effector.
+4. Rejection: mPFC L2/3 synapse or spine density is not reduced and microglial engulfment of synaptic material is not increased in affected animals. That rejects it.
+5. Manipulation vs nearest rival H1: Tmem119-CreER microglia-restricted C1qa deletion from P10 in Syn-Cre cKO mice.
+   - Seizures: unchanged (bursting is neuron-intrinsic).
+   - Social deficit: improved if H9; unchanged if H1.
+6. Audit: CONTAMINATION: "C1q|pruning|Cx3cr1|Tmem119" gives 12 hits in 4 files (registries and queue only; none about neurons or microglial pruning in WWOX). FRAMING: worded from M10 and the P47T gliosis time course, not from a social result. CITATION: mechanism_intervention_map.md (opened), CC-20260826-PMID36828035-01.md (opened), full_text_queue_current.md (grep context only, not opened).
+
+**H10. [RIVAL] GSK3β–Tau cytoskeletal arm acts on dendritic structure, not excitability**
+1. Statement: De-repressed GSK3β phosphorylates Tau at S396/S404 in prefrontal pyramidal neurons, impairing dendritic and spine development. It is seizure-independent in effect, so seizures fall and social behaviour stays low.
+2. Held evidence: CLAIM 035 describes an S9-independent GSK3β docking motif at 388–407 (L404) and Tau-dependent neurite output; the de-repression is invisible to a phospho-S9 blot. CLAIM 016 reads GSK3β as a seizure amplifier. N-02 weakens that link because lithium suppressed PTZ seizures in all three genotypes including wild type. The folder holds no direct data in a social circuit. This contradicts CLAIM 016, and I keep H10 only because the seizure link rests on a non-specific anticonvulsant.
+3. Usual reading vs this one: the usual reading says GSK3β is an excitability node. This one says its WWOX-relevant role is structural.
+4. Rejection: dendritic arbor, spine density and p-Tau S396/S404 are normal in null mPFC neurons, or a non-phosphorylatable Tau S396/S404A knock-in fails to rescue sociability. That rejects it.
+5. Manipulation vs nearest rival H1: mPFC-targeted AAV-Camk2a-Cre deleting Gsk3b in Wwox-flox mice, or Tau S396/S404A knock-in restricted to mPFC.
+   - Seizures: little change if H10 (a decrease would instead favour CLAIM 016).
+   - Social deficit: rescued if H10; unchanged if H1.
+6. Audit: CONTAMINATION: "S396|Mapt|Tau-dependent|Tau phosph" gives 69 hits in 28 files (named for neurite outgrowth, never for social behaviour). FRAMING: worded from CLAIM 035 and the N-02 lithium datum. CITATION: claim_registry_current.md (opened l.560-610; CLAIM 035 via Grep context), mechanism_intervention_map.md (opened).
+
+# FILES READ
+
+Read in full or in part:
+- /tmp/legend_cut_1867a26a8/CLAUDE.md
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/registries/claim_registry_current.md (l.560-610)
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/registries/working_model_current.md (l.60-209)
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md (l.120-230, 740-830)
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/therapeutic_repair_candidates.md (l.250-360)
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/therapeutic_overclaim_closure.md (l.40-110)
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/meta/meta_gaba_paradox_current.md
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/meta/meta_network_myelin_glia_current.md
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/meta/meta_prenatal_structure_current.md
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/meta/meta_human_spectrum_current.md
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/biomarker_endpoint/clinical_monitoring_endpoints_current.md (l.95-124)
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/research/discovery_ledger_current.md (l.1396-1447)
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-PMID36828035-01.md (l.100-210)
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-SEIZURE-RECONCILIATION-01.md
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-CLAIM003-01.md
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-CLAIM037-01.md (l.120-180)
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260825-ADVERSARIAL-FALSIFICATION-01.md (l.440-600)
+
+Seen only through Grep context lines, not opened as files:
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/therapeutics/therapeutic_strategies_current.md (l.79, 86-89)
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-CLOSURE-01.md (l.84-90)
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID42422765_partial_locators.md (l.140-144, 455-464)
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID19500159.md
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/research/full_text_queue_current.md (l.242)
+- /tmp/legend_cut_1867a26a8/disease-models/wwox/registries/paper_registry_current.md (C1q entry)
