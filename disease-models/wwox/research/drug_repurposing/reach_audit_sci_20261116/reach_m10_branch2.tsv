@@ -1,0 +1,8 @@
+ranking	hallmark	n_genes_in_set_present	ES	NES	perm_p_1000	BH_q_50_sets
+unadjusted	mTORC1 Signaling	192	-0.222	-1.04	0.2048	0.2695
+unadjusted	Glycolysis	180	0.253	1.2	0.045	0.1124
+unadjusted	Hypoxia	177	0.418	2.0	0.001	0.0083
+adjusted for maturation slope	mTORC1 Signaling	192	-0.218	-1.02	0.2278	0.32
+adjusted for maturation slope	Glycolysis	180	0.261	1.22	0.037	0.0924
+adjusted for maturation slope	Hypoxia	177	0.422	1.97	0.001	0.0062
+note	slope coefficient on the per-gene t statistic	13321	1.219			
