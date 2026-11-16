@@ -1,0 +1,9 @@
+# Follow-up of the one-stage rival comparison: predictions written BEFORE the confirmation and serial-dependence runs (SCI, 2026-11-16; MODEL)
+Written after seeing the first comparison (60 slices per cell): the first pass showed that the rival's duration and interval statistics are noisy (its T-type arm, which is a pure null by construction because J_T = 0, moved bursts -22%, duration +48%, interval +32%), so differences of that size are not informative; both models reproduced the four held targets after a fit (rival loss 0.11; two-stage refit to the same four targets, see file), so no held number among the four prefers one. Confirmation run: S-KO only, 200 slices per cell, arms: none, T-type x0.75, neurosteroid-type (tonic x1.2, J_I x1.1), sodium pyramidal (sigma x0.9), mixed sodium (sigma x0.9, J_I x0.7), resource x0.6; both models (the frozen two-stage model and the rival).
+Predictions:
+Q1. T-type arm (rival): all of bursts, duration and interval within the noise of the null control (the baseline replicated twice).
+Q2. Neurosteroid-type arm: the rival's median duration RISES by at least 40% while the two-stage model's duration falls or stays within +/-15% (a sign disagreement that survives 200 slices).
+Q3. Sodium pyramidal arm: the rival's median duration rises by at least 40%; the two-stage model's within +/-20%.
+Q4. Resource arm: the two-stage model's interval within +/-15% of baseline; the rival's interval rises by at least 15%.
+Q5. Serial dependence (300 networks, 900 s): rho(duration, following interval) in the rival above +0.30; in the refitted two-stage model between +0.05 and +0.35.
+Reading: Q2 to Q4 holding gives three arms that discriminate the models by sign or by a factor of at least 2 at S-KO; Q1 failing means the rival's noise floor is larger than assumed and nothing smaller than that is informative.
