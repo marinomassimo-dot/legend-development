@@ -1,0 +1,16 @@
+class	ptz_profile_level	ptz_profile_note	uniform_prior
+sodium-channel	0	classically inactive against PTZ-provoked clonic seizures	1
+T-type calcium	2	active (ethosuximide is the standard PTZ-active agent)	1
+SV2A	0	inactive in acute PTZ screening in standard rodent tests	1
+AMPA antagonists	1	reported to raise PTZ threshold; partial	1
+NMDAR pore blockers	1	partial, dose and agent dependent	1
+GluN2B NAMs	unknown	no PTZ profile held	1
+GABA-A PAM (non-benzodiazepine)	2	PTZ acts at the GABA-A site; positive modulators oppose it	1
+benzodiazepines	2	active	1
+GABA-AT/GAT	1	partial	1
+Kv7 openers	1	reported active in mice	1
+carbonic-anhydrase/multi-target	1	partial	1
+valproate-type	2	active	1
+steroid/ACTH	unknown	no PTZ profile held	1
+ketogenic diet	unknown	rodent PTZ-threshold literature not held	1
+cannabidiol/fenfluramine-type	unknown	mixed reports, not held	1

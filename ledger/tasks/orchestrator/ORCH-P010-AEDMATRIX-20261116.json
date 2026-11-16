@@ -1,0 +1,27 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-P010-AEDMATRIX-20261116",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "PRESIDIO-010 (ADV presidio under the operator MEETING of 2026-11-16): predictor of the informed arm of the AED mechanism-matching matrix; freeze, VOI, held-data pre-test, L7 on paper, post-freeze second read of the blind extractor's sample",
+ "START_UTC": "2026-11-16T07:10:00Z",
+ "BASELINE": "development/main with rule.json v1 (2c170d8ff, sha256 679a6089...); worktree .claude/worktrees/p010c",
+ "MANDATE_STATE": "IN_PROGRESS",
+ "CURRENT_PACKAGE": {
+  "id": "freeze",
+  "state": "cells, scorer draft, rankings, aggravation hypotheses, null orderings, baselines (i) and (iii), VOI, pre-test, L7 written; freeze commit landing",
+  "delegate_active": "none"
+ },
+ "RESUME": "after the freeze: send ADV the freeze commit hash; fill my rows of prediction_ledger.tsv (freeze_commit, freeze_blob_sha256); compare HE's generator output with my draft scorer once it lands; then second-read a sample of the blind extractor's rows (after both freezes and after IT seals and codes the outcome tables)",
+ "DECISIONS_TAKEN": [
+  "2026-11-16: accepted ADV's PRESIDIO-010 (operator-called MEETING, provenance checked in roadmap_current.md line 2026-11-16)",
+  "2026-11-16: no outcome table opened; clinical-outcome threads T6 and T10-series excluded; exposure disclosed in README and FREEZE_PREDICTIONS.md",
+  "2026-11-16: units in the form are the nearest of cells/animals/children, the true unit stays in output/cells.tsv"
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "VERIFICATION_EVIDENCE": []
+}

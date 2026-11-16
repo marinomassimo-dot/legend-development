@@ -1,0 +1,5 @@
+development P6-P8: top score 0; tied top classes: none (no scorable thread); tier enumeration 1 combos over no thread
+development later/unspecified: top score 0; tied top classes: none (no scorable thread); tier enumeration 9 combos over T8,T9
+seizure P13-P15: top score 9; tied top classes: GABA-A PAM (non-benzodiazepine), NMDAR pore blockers, benzodiazepines, sodium-channel, valproate-type; tier enumeration 27 combos over T1,T13,T2
+seizure P6-P8: top score 0; tied top classes: none (no scorable thread); tier enumeration 3 combos over T11
+seizure later/unspecified: top score 9; tied top classes: GABA-A PAM (non-benzodiazepine), NMDAR pore blockers, benzodiazepines, sodium-channel, valproate-type; tier enumeration 2187 combos over T1,T13,T14,T15,T2,T5,T7
