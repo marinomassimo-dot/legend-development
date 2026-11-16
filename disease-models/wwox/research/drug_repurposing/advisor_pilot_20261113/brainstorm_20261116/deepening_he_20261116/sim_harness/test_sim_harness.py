@@ -66,6 +66,12 @@ class Harness(unittest.TestCase):
         self.assertIn("fraction_silent", (o / "summary.tsv").read_text().splitlines()[0])
         c = sh("check", "--out", str(o), "--point", "J_T=0.5|pam=0"); self.assertIn("byte-identical True", c.stdout)
 
+    def test_prediction_label_must_exist_and_harness_is_frozen(self):
+        d = Path(tempfile.mkdtemp()); sc = json.loads((HERE / "scan_toy.json").read_text()); sc["predictions"][0]["a"] = "J_T=9|pam=9"; (d / "s.json").write_text(json.dumps(sc))
+        r = sh("freeze", "--model", str(HERE / "toy_rebound.py"), "--scan", str(d / "s.json"), "--seeds", "1", "--base-seed", "1", "--out", str(self.tmp()), ok=False)
+        self.assertNotEqual(r.returncode, 0); self.assertIn("is not a point of this scan", r.stderr)
+        o = self.tmp(); freeze(o); self.assertIn("harness_sha256", json.loads((o / "freeze.json").read_text()))
+
     def test_unknown_parameter_is_refused_and_help_is_safe(self):
         d = Path(tempfile.mkdtemp()); (d / "bad.json").write_text(json.dumps({"design": "grid", "grid": {"nope": [1, 2]}}))
         r = sh("freeze", "--model", str(HERE / "toy_rebound.py"), "--scan", str(d / "bad.json"), "--seeds", "1", "--base-seed", "1", "--out", str(self.tmp()), ok=False)
