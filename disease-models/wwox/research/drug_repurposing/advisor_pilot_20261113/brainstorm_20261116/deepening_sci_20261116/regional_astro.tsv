@@ -1,0 +1,12 @@
+gene	cortex S ctrl	cortex S KO	hippo S ctrl	hippo S KO	hippo N ctrl	hippo N KO	hippo WT (null set)	hippo null KO	ensembl_note	cortex_S_KO_over_ctrl	hippo_S_KO_over_ctrl	hippo_over_cortex_S_ctrl
+Atp1a2	398.08	242.87	189.61	101.34	180.75	93.12	121.53	87.16	47 transcripts listed	0.61	0.53	0.48
+Atp1a3	2548.71	2705.55	1249.88	1214.64	1123.19	1480.79	831.73	703.37	25 transcripts listed	1.06	0.97	0.49
+Gja1	92.03	80.02	445.65	253.03	409.08	206.1	256.97	181.18	19 transcripts listed	0.87	0.57	4.84
+Aqp4	12.8	10.39	25.84	33.68	21.28	14.32	38.86	41.66	17 transcripts listed	0.81	1.3	2.02
+Kcnj10	90.79	54.34	61.24	71.1	51.33	35.04	59.7	44.11	1 transcripts listed	0.6	1.16	0.67
+Kcnj16	5.01	4.74	6.3	3.88	5.82	3.28	8.38	7.82	8 transcripts listed	0.95	0.62	1.26
+Slc1a2	179.83	115.72	357.28	208.96	335.15	206.63	337.97	288.33	19 transcripts listed	0.64	0.58	1.99
+Slc1a3	185.88	170.92	269.33	201.63	269.43	204.09	217.32	198.36	39 transcripts listed	0.92	0.75	1.45
+Gfap	429.89	774.97	252.38	1096.26	171.25	423.32	178.98	280.51	24 transcripts listed	1.8	4.34	0.59
+Slc12a2	4.92	3.46	12.03	5.39	8.61	4.66	13.07	8.19	10 transcripts listed	0.7	0.45	2.45
+Wwox	18.83	5.94	3.37	0.49	3.55	0.21	3.89	0.33	27 transcripts listed	0.32	0.15	0.18
