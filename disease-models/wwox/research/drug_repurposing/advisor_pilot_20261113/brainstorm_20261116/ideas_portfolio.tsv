@@ -1,8 +1,8 @@
 id	title	owner	status	depth	links	last_test
-I1	Two-stage rebound oscillator	SCI	ADVANCE	seed	I6,I7,I11	none yet (dossier due 19:00Z)
-I2	Phenotype-conditional pharmacology (semiology and age)	IT	ADVANCE	chain	I7,I11,I10	per-child re-extraction running; rubric frozen 6e8ef5c9e; analysis A-F pre-declared
+I1	Two-stage rebound oscillator	SCI	ADVANCE	seed	I6,I7,I11	IT attack: duration predictions 4/8 (chance), interval 9/9; rival one-stage refractory model; T-type vs HCN label; test = interval vs previous duration
+I2	Phenotype-conditional pharmacology (semiology and age)	IT	ADVANCE	chain	I7,I11,I10	per-child extraction done (42 children, 169 exposures): segregation not answerable; 0 worsening statements; addendum 1 pass running
 I3	Compensation asymmetry (hippocampus does not burst)	SCI	ADVANCE	seed	I4,PS-12	none yet
-I4	Metabolic, ketone and adenosine axis	HE	ADVANCE	seed	I3,I10	none yet
+I4	Metabolic, ketone and adenosine axis	HE	ADVANCE	seed	I3,I10	IT attack: A,G undefined on burst rate in wild type (0/11); needs bursting wild-type control for substrate arm
 I5	PV-axon myelin timing and OPC	ADV	ADVANCE	chain	I9	see deepening_adv_20261116
 I6	Chloride dynamics and activity-dependent GABA	SCI	ADVANCE	seed	I1	none yet
 I7	Critical NMDAR fraction and age window	IT	ADVANCE	model	I1,I2,I11	model table only (critical_fraction_model.py); no knockout share held; experiment-ready design in D5b
@@ -11,3 +11,4 @@ I9	Perineuronal nets and PV maturation	ADV	ADVANCE	chain	I5	see deepening_adv_20
 I10	Sleep-wake and thalamocortical dependence	ADV	ADVANCE	chain	I2	see deepening_adv_20261116
 I11a	Co-agonist occupancy (H-C1)	IT	ADVANCE	chain	I7	no held table can reject it; paired slice measurement specified
 I11b	Persistent sodium current (H-C2)	IT	ADVANCE	chain	I1,I2	no held table can reject it; ramp-current measurement specified
+I13	Tonic (extrasynaptic) inhibition deficit	SCI	ADVANCE	model	I1,I6,I3	IT attack: killer test not discriminating (GAT compensation); heterozygote Gabrd needed; cause vs consequence test by age
