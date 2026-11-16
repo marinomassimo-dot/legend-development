@@ -2,6 +2,7 @@
 """Mechanism-class matching matrix: score classes by a rule fixed beforehand, reproducibly.
 
     python3 framework/scripts/aed_matrix.py score CELLS.tsv RULE.json [--out FILE] [--expect-rule-sha256 HEX]
+    python3 framework/scripts/aed_matrix.py compare PRED.tsv COUNTS.tsv [--pred-column NAME] [--min-n 3]
 
 WHY
 ---
@@ -68,6 +69,7 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import itertools
 import json
 import sys
 from pathlib import Path
@@ -499,6 +501,54 @@ def score_endpoint(rows: list[dict], endpoint: str, rule: dict):
     return table, notes
 
 
+def concordance(pred: dict[str, float], counts: dict[str, tuple[int, int]], min_n: int = 3) -> dict:
+    """Pairwise concordance of a predicted class ordering with an observed one (RULE_AMENDMENT_2 arithmetic).
+    counts: class -> (children n, children improved k). A class is scorable with n >= min_n; two classes are tied in the observed ordering
+    when their shares differ by less than one child on the smaller denominator; a tied observed pair is not classifiable and not scored;
+    a pair with a class absent from `pred` is not scored; a predicted tie scores 0.5, the same direction 1, the opposite 0."""
+    scorable = sorted(c for c, (n, _) in counts.items() if n >= min_n)
+    pairs = list(itertools.combinations(scorable, 2))
+    classifiable = scored = 0
+    total = 0.0
+    for a, b in pairs:
+        (na, ka), (nb, kb) = counts[a], counts[b]
+        pa, pb = ka / na, kb / nb
+        if abs(pa - pb) < 1 / min(na, nb):
+            continue
+        classifiable += 1
+        if a not in pred or b not in pred:
+            continue
+        scored += 1
+        observed = 1 if pa > pb else -1
+        direction = (pred[a] > pred[b]) - (pred[a] < pred[b])
+        total += 0.5 if direction == 0 else (1.0 if direction == observed else 0.0)
+    return {"scorable_classes": len(scorable), "pairs": len(pairs), "classifiable": classifiable, "scored": scored,
+            "concordance": (total / scored) if scored else None}
+
+
+def read_two_columns(path: Path, value_columns: list[str]) -> dict[str, list[str]]:
+    with path.open(newline="") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        for col in ["class_id"] + value_columns:
+            if col not in (reader.fieldnames or []):
+                raise Invalid(f"{path.name} lacks column {col}")
+        return {r["class_id"]: [r[c] for c in value_columns] for r in reader}
+
+
+def run_compare(pred_path: Path, counts_path: Path, pred_column: str, min_n: int) -> int:
+    try:
+        pred = {c: float(v[0]) for c, v in read_two_columns(pred_path, [pred_column]).items() if v[0] not in ("", "unknown")}
+        counts = {c: (int(v[0]), int(v[1])) for c, v in read_two_columns(counts_path, ["n", "k"]).items()}
+    except (Invalid, OSError, ValueError, csv.Error) as exc:
+        print(f"invalid: {exc}", file=sys.stderr)
+        return 2
+    r = concordance(pred, counts, min_n)
+    text = f"{r['concordance']:.2f}" if r["concordance"] is not None else "not scorable"
+    print(f"scorable classes {r['scorable_classes']}; class pairs {r['pairs']}; classifiable (observed not tied) {r['classifiable']}; "
+          f"scored {r['scored']}; concordance {text}")
+    return 0
+
+
 def rule_order(root: Path, rule_path: Path, cells_path: Path) -> str:
     """rule committed before the cells: yes | same_commit | not_ancestor | untracked."""
     try:
@@ -569,7 +619,14 @@ def main(argv: list[str] | None = None) -> int:
     sc.add_argument("rule")
     sc.add_argument("--out", help="write the score table here (default: standard output)")
     sc.add_argument("--expect-rule-sha256", help="refuse unless the rule file has exactly this digest")
+    cp = sub.add_parser("compare", help="pairwise concordance of a predicted class ordering with observed counts (ties score 0.5)")
+    cp.add_argument("pred", help="TSV with class_id and the predicted score column")
+    cp.add_argument("counts", help="TSV with class_id, n (children with a stated outcome) and k (children improved)")
+    cp.add_argument("--pred-column", default="score")
+    cp.add_argument("--min-n", type=int, default=3)
     args = parser.parse_args(argv)
+    if args.cmd == "compare":
+        return run_compare(Path(args.pred), Path(args.counts), args.pred_column, args.min_n)
     return run(Path(args.cells), Path(args.rule), Path(args.out) if args.out else None,
                args.expect_rule_sha256, Path(args.root).resolve())
 
