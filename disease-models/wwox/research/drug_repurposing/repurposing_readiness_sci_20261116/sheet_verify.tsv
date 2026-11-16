@@ -1,0 +1,70 @@
+agent	field	result	quote_start
+memantine	mechanism_sentence	FOUND in label	Persistent activation of central nervous system N-methyl-D-aspartate (NMDA) receptors by t
+memantine	class_level_approved_indications	FOUND in label	Memantine hydrochloride tablets are indicated for the treatment of moderate to severe deme
+memantine	bbb_statement	FOUND in abstract	By virtue of the blood brain barrier permeability (BBB), memantine was envisioned as an ap
+memantine	pediatric_label_statement	FOUND in label	Safety and effectiveness in pediatric patients have not been established.
+memantine	interaction_or_contraindication_class	FOUND in label	Conditions that raise urine pH may decrease the urinary elimination of memantine
+ketamine	mechanism_sentence	FOUND in abstract	Its primary mechanism of action is non-competitive antagonism of N-methyl-D-aspartate (NMD
+ketamine	class_level_approved_indications	FOUND in label	KETALAR (ketamine hydrochloride) injection is indicated:
+ketamine	bbb_statement	FOUND in abstract	Ketamine is rapidly absorbed, crosses the blood-brain barrier efficiently, and is metaboli
+ketamine	pediatric_label_statement	FOUND in label	Safety and effectiveness in pediatric patients below the age of 16 have not been establish
+ketamine	interaction_or_contraindication_class	FOUND in label	KETALAR is contraindicated in patients for whom a significant elevation of blood pressure 
+esketamine	mechanism_sentence	FOUND in label	Esketamine, the S-enantiomer of racemic ketamine, is a non-selective, non-competitive anta
+esketamine	class_level_approved_indications	FOUND in label	SPRAVATO is indicated for the treatment of:
+esketamine	bbb_statement	not checked (empty/not stated)	not stated at abstract level (label: 'The brain-to-plasma ratio of nor
+esketamine	pediatric_label_statement	FOUND in label	The safety and effectiveness of SPRAVATO in pediatric patients have not been established.
+esketamine	interaction_or_contraindication_class	FOUND in label	Hypersensitivity to esketamine, ketamine, or any of the excipients.
+esketamine	interaction_or_contraindication_class	FOUND in label	Aneurysmal vascular disease (including thoracic and abdominal aorta, intracranial, and per
+zolpidem	mechanism_sentence	FOUND in label	Zolpidem is a GABA A receptor positive modulator presumed to exert its therapeutic effects
+zolpidem	class_level_approved_indications	FOUND in label	Zolpidem tartrate tablets are indicated for the short-term treatment of insomnia character
+zolpidem	bbb_statement	not checked (empty/not stated)	not stated at abstract level
+zolpidem	pediatric_label_statement	FOUND in label	Zolpidem tartrate is not recommended for use in children.
+zolpidem	interaction_or_contraindication_class	FOUND in label	Zolpidem tartrate tablets are contraindicated in patients who have experienced complex sle
+eszopiclone	mechanism_sentence	NOT FOUND	Zolpidem, zaleplon, zopiclone, eszopiclone (the z-drugs) and indiplon are GABA-A modulator
+eszopiclone	class_level_approved_indications	FOUND in label	Eszopiclone tablets are indicated for the treatment of insomnia.
+eszopiclone	bbb_statement	not checked (empty/not stated)	not stated at abstract level
+eszopiclone	pediatric_label_statement	FOUND in label	Safety and effectiveness of eszopiclone have not been established in pediatric patients.
+eszopiclone	interaction_or_contraindication_class	FOUND in label	Eszopiclone tablets are contraindicated in patients who have experienced complex sleep beh
+diazepam	mechanism_sentence	FOUND in label	Diazepam is a benzodiazepine that exerts anxiolytic, sedative, muscle-relaxant, anticonvul
+diazepam	class_level_approved_indications	FOUND in label	Diazepam tablets are indicated for the management of anxiety disorders
+diazepam	bbb_statement	FOUND in label	Diazepam and its metabolites cross the blood-brain and placental barriers
+diazepam	pediatric_label_statement	FOUND in label	Safety and effectiveness in pediatric patients below the age of 6 months have not been est
+diazepam	interaction_or_contraindication_class	FOUND in label	The concomitant use of benzodiazepines and opioids increases the risk of respiratory depre
+clobazam	mechanism_sentence	FOUND in label	The exact mechanism of action for clobazam, a 1,5-benzodiazepine, is not fully understood
+clobazam	class_level_approved_indications	FOUND in label	ONFI® (clobazam) is indicated for the adjunctive treatment of seizures associated with Len
+clobazam	bbb_statement	not checked (empty/not stated)	not stated at abstract level
+clobazam	pediatric_label_statement	FOUND in label	Safety and effectiveness in patients less than 2 years of age have not been established.
+clobazam	interaction_or_contraindication_class	FOUND in label	WARNING: RISKS FROM CONCOMITANT USE WITH OPIOIDS
+clobazam	interaction_or_contraindication_class	FOUND in label	ABUSE, MISUSE, AND ADDICTION
+clobazam	interaction_or_contraindication_class	FOUND in label	and DEPENDENCE AND WITHDRAWAL REACTIONS
+clonazepam	mechanism_sentence	FOUND in label	The precise mechanism by which clonazepam exerts its antiseizure and antipanic effects is 
+clonazepam	class_level_approved_indications	FOUND in label	Clonazepam is useful alone or as an adjunct in the treatment of the Lennox-Gastaut syndrom
+clonazepam	bbb_statement	not checked (empty/not stated)	not stated at abstract level
+clonazepam	pediatric_label_statement	FOUND in label	Because of the possibility that adverse effects on physical or mental development could be
+clonazepam	interaction_or_contraindication_class	FOUND in label	The concomitant use of benzodiazepines and opioids increases the risk of respiratory depre
+ethosuximide	mechanism_sentence	FOUND in abstract	We aim to evaluate the therapeutic potential of ethosuximide, a T-type channel blocker, on
+ethosuximide	class_level_approved_indications	FOUND in label	Ethosuximide capsule is indicated for the control of absence (petit mal) epilepsy.
+ethosuximide	bbb_statement	not checked (empty/not stated)	not stated at abstract level
+ethosuximide	pediatric_label_statement	FOUND in label	Safety and effectiveness in pediatric patients below the age of 3 years have not been esta
+ethosuximide	interaction_or_contraindication_class	FOUND in label	Since ethosuximide may interact with concurrently administered antiepileptic drugs,
+zonisamide	mechanism_sentence	FOUND in abstract	The data available demonstrating zonisamide's mechanism of action as a voltage-gated sodiu
+zonisamide	class_level_approved_indications	FOUND in label	Zonisamide is indicated as adjunctive therapy in the treatment of partial seizures in adul
+zonisamide	bbb_statement	not checked (empty/not stated)	not stated at abstract level
+zonisamide	pediatric_label_statement	FOUND in label	The safety and effectiveness of zonisamide in children under age 16 have not been establis
+zonisamide	interaction_or_contraindication_class	FOUND in label	Zonisamide is contraindicated in patients who have demonstrated hypersensitivity to sulfon
+carbamazepine	mechanism_sentence	not checked (empty/not stated)	not stated (label first mechanism sentence is: Carbamazepine has demon
+carbamazepine	class_level_approved_indications	FOUND in label	Carbamazepine extended-release tablet is indicated for use as an anticonvulsant drug.
+carbamazepine	bbb_statement	not checked (empty/not stated)	not stated at abstract level
+carbamazepine	pediatric_label_statement	FOUND in label	Substantial evidence of carbamazepine extended-release tablet's effectiveness for use in t
+carbamazepine	interaction_or_contraindication_class	FOUND in label	CYP3A4 inhibitors inhibit carbamazepine metabolism and can thus increase plasma carbamazep
+lamotrigine	mechanism_sentence	FOUND in abstract	Compared with placebo, ion channel modulators, particularly calcium channel blockers (miro
+lamotrigine	class_level_approved_indications	FOUND in label	Lamotrigine tablets are indicated for:
+lamotrigine	bbb_statement	not checked (empty/not stated)	not stated at abstract level
+lamotrigine	pediatric_label_statement	not checked (empty/not stated)	none found (extractor returned an indication-like sentence for 8.4, no
+lamotrigine	interaction_or_contraindication_class	FOUND in label	Valproate increases lamotrigine concentrations more than 2-fold.
+lamotrigine	interaction_or_contraindication_class	FOUND in label	Estrogen-containing oral contraceptives decrease lamotrigine concentrations by approximate
+phenytoin	mechanism_sentence	FOUND in label	The precise mechanism by which phenytoin exerts its therapeutic effect has not been establ
+phenytoin	class_level_approved_indications	NOT FOUND	Extended phenytoin sodium capsules are indicated for the treatment of tonic-clonic (grand 
+phenytoin	bbb_statement	not checked (empty/not stated)	not stated at abstract level
+phenytoin	pediatric_label_statement	not checked (empty/not stated)	none found (extractor returned dosage text for 8.4, not entered)
+phenytoin	interaction_or_contraindication_class	FOUND in label	Phenytoin is a potent inducer of hepatic drug-metabolizing enzymes.
