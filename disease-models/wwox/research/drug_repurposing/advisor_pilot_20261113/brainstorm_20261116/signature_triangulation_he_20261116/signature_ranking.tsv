@@ -1,0 +1,9 @@
+context	class_id	agents	n_signatures	k_opposing	share_opposing	base_rate_same_context	effect_vs_base	p_tail_opposing_or_more	p_tail_aligned_or_more	mapping_confidence	rank_by_effect
+E	sodium_channel	CARBAMAZEPINE,LAMOTRIGINE	3	2	0.667	0.503	+0.163	0.505	0.872	high	1
+E	steroid_acth	DEXAMETHASONE	3	2	0.667	0.503	+0.163	0.505	0.872	low: a glucocorticoid, not the corticotropin or prednisolone the class means	1
+E	carbonic_anhydrase_multitarget	ZONISAMIDE	2	1	0.500	0.503	-0.003	0.753	0.747	medium: multi-target, carbonic-anhydrase inhibitor	3
+E	valproate_type	VALPROIC ACID	4	0	0.000	0.503	-0.503	1.000	0.061	high	4
+B	sodium_channel	CARBAMAZEPINE,LAMOTRIGINE	4	2	0.500	0.516	-0.016	0.712	0.662	high	1
+B	steroid_acth	DEXAMETHASONE	6	3	0.500	0.516	-0.016	0.687	0.625	low: a glucocorticoid, not the corticotropin or prednisolone the class means	1
+B	valproate_type	VALPROIC ACID	4	1	0.250	0.516	-0.266	0.945	0.288	high	3
+B	carbonic_anhydrase_multitarget	ZONISAMIDE	2	0	0.000	0.516	-0.516	1.000	0.234	medium: multi-target, carbonic-anhydrase inhibitor	4

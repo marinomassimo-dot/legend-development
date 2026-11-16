@@ -1,0 +1,13 @@
+gene	calibration_slope_log2cpm_per_log2day	observed_KO_log2FC	projected_KO_log2FC	role
+NES	-0.036	1.316	0.058	marker
+VIM	-0.123	0.864	0.201	marker
+SOX2	0.051	0.511	-0.082	marker
+MAP2	0.044	-0.623	-0.072	marker
+SYT1	0.031	-0.502	-0.05	marker
+SNAP25	0.255	-0.415	-0.415	marker
+GRIN2B	0.465	0.358	-0.756	target
+GRIN2A	1.019	1.105	-1.658	target
+SLC12A2	-0.017	0.037	0.027	target
+SLC12A5	0.084	0.727	-0.136	target
+CCN2	-0.209	1.151	0.34	target
+# composite maturation shift (median of marker KO/slope, log2-day units)	-1.627			n markers 3
