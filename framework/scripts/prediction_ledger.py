@@ -3,6 +3,7 @@
 
     python3 framework/scripts/prediction_ledger.py sweep [--under PATH] [--out FILE]
     python3 framework/scripts/prediction_ledger.py check LEDGER.tsv [--receipts FILE] [--strict]
+    python3 framework/scripts/prediction_ledger.py guard LEDGER.tsv --outcome PATH [--require PATH[=SHA256]]...
 
 WHY
 ---
@@ -27,7 +28,13 @@ writes one ledger row per prediction.
 Who the predictor was, what it read outside the repository, and model memory of a published
 paper are NOT checkable here: every paper_content row is printed with that label.
 
-Exit codes: 0 no violation (warnings allowed) · 1 a violation · 2 invalid invocation or ledger.
+`guard` answers one question before an outcome table is opened or created: it prints `OUTCOME_MAY_OPEN: ...` (exit 0) only
+when every ledger row naming the table holds a real freeze commit that is an ancestor of HEAD and not HEAD, every `--require`d
+file (the rule, each freeze, each baseline) is committed and unmodified, and a table that already exists is the sealed one
+(its digest recorded in the ledger and equal). Otherwise it prints `OUTCOME_REFUSED: <reason>` lines and exits 1. Once the table
+is committed, `check` also requires its digest (outcome_sha256) to be recorded and equal to the blob at outcome_commit.
+
+Exit codes: 0 no violation (warnings allowed) · 1 a violation (or a refusal by `guard`) · 2 invalid invocation or ledger.
 """
 from __future__ import annotations
 
@@ -50,8 +57,8 @@ TEXT_EXT = (".md", ".tsv", ".txt")
 COLUMNS = ["pred_id", "package", "statement_ref", "freeze_commit", "freeze_blob_sha256", "kind",
            "outcome_ref", "outcome_study_id", "outcome_commit", "predictor", "scorer",
            "scoring_rule_ref", "status", "notes"]
-OPTIONAL_COLUMNS = ["blindness"]   # `declared` says the outcome table is public and in the tree at the freeze: blindness is then a declaration, not shown by git
-BLINDNESS = {"", "shown", "declared"}
+OPTIONAL_COLUMNS = ["blindness", "outcome_sha256"]   # `declared` says the outcome table is public and in the tree at the freeze: blindness is then a declaration, not shown by git
+BLINDNESS = {"", "shown", "declared"}   # `outcome_sha256` is the digest of the sealed outcome table (required once outcome_commit is set)
 KINDS = {"", "paper_content", "generative"}
 STATUSES = {"", "unclassified", "open", "held", "failed", "mixed", "unscorable"}
 CANDIDATE_COLUMNS = ["path", "via", "first_add_commit", "first_add_utc", "blob_sha256_at_add",
@@ -220,6 +227,15 @@ def check_row(root: Path, row: dict[str, str], receipts: Path) -> tuple[list[str
             else:
                 order = "not_ancestor"
                 bad.append("the freeze commit is not an ancestor of the outcome commit")
+    if row["outcome_commit"] and outcome and git_ok(root, "cat-file", "-e", f"{row['outcome_commit']}^{{commit}}"):
+        table = blob_at(root, row["outcome_commit"], outcome)
+        recorded = row.get("outcome_sha256", "")
+        if table is None:
+            bad.append(f"outcome table {outcome} is not in the tree at the outcome commit")
+        elif not recorded:
+            bad.append("the outcome table is committed but its digest (outcome_sha256) is not recorded")
+        elif sha256(table) != recorded:
+            bad.append("outcome_sha256 does not match the table at the outcome commit")
     stamp = commit_utc(root, freeze)
     early = [r for r in receipt_times(receipts, row["outcome_study_id"]) if r[0] < stamp]
     if early:
@@ -237,6 +253,58 @@ def check_row(root: Path, row: dict[str, str], receipts: Path) -> tuple[list[str
     if not row["predictor"] or not row["scorer"]:
         warn.append("predictor/scorer not both declared")
     return bad, warn, order
+
+
+def guard(root: Path, ledger: Path, outcome: str, requires: list[str], receipts: Path) -> tuple[bool, list[str]]:
+    """May the outcome table be opened? Every ledger row naming it must hold a real, earlier freeze; every required file
+    (rule, both freezes, a baseline) must be committed, unmodified and in HEAD's history; a table that already exists must be
+    the sealed one (its digest recorded and equal). A table not created yet is allowed: it is created AFTER this line."""
+    problems: list[str] = []
+    try:
+        rows = [r for r in read_ledger(ledger) if r["outcome_ref"].split("#", 1)[0] == outcome]
+    except (OSError, ValueError, csv.Error) as exc:
+        return False, [f"invalid ledger: {exc}"]
+    head = git(root, "rev-parse", "HEAD").strip()
+    if not rows:
+        problems.append(f"no ledger row names {outcome} as its outcome: nothing was frozen against it")
+    freezes = []
+    for row in rows:
+        bad, _, _ = check_row(root, dict(row, outcome_commit=""), receipts)
+        problems += [f"{row['pred_id']}: {b}" for b in bad]
+        if not row["freeze_blob_sha256"]:
+            problems.append(f"{row['pred_id']}: freeze_blob_sha256 is not recorded")
+        full = subprocess.run(["git", "-C", str(root), "rev-parse", "--verify", f"{row['freeze_commit']}^{{commit}}"],
+                              capture_output=True, text=True).stdout.strip()
+        if not full:
+            continue
+        freezes.append(full[:12])
+        if full == head:
+            problems.append(f"{row['pred_id']}: the freeze commit is HEAD itself: the outcome would be opened in the freezing commit")
+        elif not git_ok(root, "merge-base", "--is-ancestor", full, head):
+            problems.append(f"{row['pred_id']}: the freeze commit is not an ancestor of HEAD")
+    table = root / outcome
+    if table.is_file():
+        digests = {r["outcome_sha256"] for r in rows}
+        if "" in digests or not digests:
+            problems.append(f"{outcome} exists but its digest is not recorded in the ledger")
+        elif sha256(table.read_bytes()) not in digests:
+            problems.append(f"{outcome} differs from the sealed digest recorded in the ledger")
+    present = []
+    for spec in requires:
+        path, _, pin = spec.partition("=")
+        blob = blob_at(root, "HEAD", path)
+        if blob is None:
+            problems.append(f"required file {path} is not committed in HEAD")
+            continue
+        if (root / path).read_bytes() != blob:
+            problems.append(f"required file {path} differs from HEAD (uncommitted change)")
+        if pin and sha256(blob) != pin.lower():
+            problems.append(f"required file {path} has sha256 {sha256(blob)}, not the pinned {pin.lower()}")
+        present.append(path)
+    if problems:
+        return False, problems
+    return True, [f"OUTCOME_MAY_OPEN: {outcome}; ledger rows {len(rows)}; freeze commits {','.join(sorted(set(freezes)))}; "
+                  f"required present and unmodified: {', '.join(present) or 'none required'}; HEAD {head[:12]}"]
 
 
 def run_check(root: Path, ledger: Path, receipts: Path, strict: bool) -> int:
@@ -281,8 +349,20 @@ def main(argv: list[str] | None = None) -> int:
     ck.add_argument("ledger")
     ck.add_argument("--receipts", default=DEFAULT_RECEIPTS)
     ck.add_argument("--strict", action="store_true", help="a statement edited after its freeze is fatal")
+    gd = sub.add_parser("guard", help="may this outcome table be opened? refuses unless the freezes, the digest and the required files exist")
+    gd.add_argument("ledger")
+    gd.add_argument("--outcome", required=True, help="repository path of the outcome table")
+    gd.add_argument("--require", action="append", default=[], metavar="PATH[=SHA256]",
+                    help="a file that must be committed and unmodified (rule, freezes, baselines); repeatable")
+    gd.add_argument("--receipts", default=DEFAULT_RECEIPTS)
     args = parser.parse_args(argv)
     root = Path(args.root).resolve()
+    if args.cmd == "guard":
+        receipts = Path(args.receipts)
+        ok, lines = guard(root, Path(args.ledger), args.outcome, args.require, receipts if receipts.is_absolute() else root / receipts)
+        for line in lines:
+            print(line if ok else f"OUTCOME_REFUSED: {line}")
+        return 0 if ok else 1
     if args.cmd == "sweep":
         rows = sweep(root, args.under)
         if args.out:
