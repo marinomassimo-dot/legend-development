@@ -425,6 +425,53 @@ class PropositionFacets(unittest.TestCase):
                     self.assertFalse(any(v.startswith("unrecognised") for v in hp.prop_facets(r).values()), (p["dir"].parent.name, k))
 
 
+class HypothesisSign(unittest.TestCase):
+    """HE65 H3: an optional `sign` cell on a hypothesis row, read as written. `aggravation` is a sign of its own: not `neutral`, not `unknown`, not a negative `direction`, and never netted."""
+    pkg = HypothesesOwnLayout.pkg
+
+    def test_cells_are_read_as_written(self):
+        self.assertEqual([hp.hyp_sign({"sign": v}) for v in hp.HYP_SIGNS], list(hp.HYP_SIGNS))
+        self.assertEqual(len(set(hp.HYP_SIGNS)), 4)
+
+    def test_blank_or_absent_is_unclassified_and_not_an_error(self):
+        self.assertEqual((hp.hyp_sign({"sign": " "}), hp.hyp_sign({"hyp_id": "H1"})), ("unclassified", "unclassified"))
+
+    def test_the_statement_text_is_never_consulted(self):
+        self.assertEqual(hp.hyp_sign({"statement": "this class worsens seizures (aggravation)"}), "unclassified")
+
+    def test_value_outside_the_vocabulary_is_kept_visible_and_validated(self):
+        self.assertEqual(hp.hyp_sign({"sign": "worsens"}), "unrecognised:worsens")
+        with tempfile.TemporaryDirectory() as t:
+            own = self.pkg(t, "a", ["hyp_id", "statement", "sign"], [["H1", "x", "worsens"], ["H2", "y", "aggravation"]])
+            errs = [e for e in hp.validate(own, invs={"INV-9": {}}) if "vocabulary" in e]
+            self.assertEqual(len(errs), 1)
+            self.assertIn("hypothesis H1 sign 'worsens'", errs[0])
+
+    def test_hypotheses_only_rows_carry_their_sign_next_to_the_verbatim_row(self):
+        with tempfile.TemporaryDirectory() as t:
+            own = self.pkg(t, "a", ["hyp_id", "statement", "sign"], [["H1", "x", "aggravation"], ["H2", "y", "match"], ["H3", "z", ""]])
+            rec = hp.hypotheses_for([own], "INV-9")
+            self.assertEqual({r["key"]: r["sign"] for r in rec["rows"]}, {"H1": "aggravation", "H2": "match", "H3": "unclassified"})
+            self.assertEqual(rec["rows"][0]["row"]["sign"], "aggravation")                      # the row itself is still verbatim
+            self.assertIn("sign=aggravation", hp._brief_hyp(rec))
+            self.assertNotIn("sign=unclassified", hp._brief_hyp(rec))                           # nothing printed for a package that says nothing
+
+    def test_a_package_without_the_column_is_unchanged(self):
+        with tempfile.TemporaryDirectory() as t:
+            own = self.pkg(t, "a", ["hyp_id", "statement"], [["H1", "x"]])
+            self.assertEqual(hp.hypotheses_for([own], "INV-9")["rows"][0]["sign"], "unclassified")
+            self.assertEqual([e for e in hp.validate(own, invs={"INV-9": {}}) if "vocabulary" in e], [])
+            self.assertNotIn("sign=", hp._brief_hyp(hp.hypotheses_for([own], "INV-9")))
+
+    def test_committed_packages_are_all_unclassified_or_in_the_vocabulary(self):
+        for p in hp.load_all():
+            if p["role"] in ("hypotheses_only", "physiological_hypotheses"):
+                for k, r in p["hyps"].items():
+                    self.assertFalse(hp.hyp_sign(r).startswith("unrecognised"), (p["dir"].parent.name, k))
+        for h in hp.record_for(hp.load_all(), "INV-05")["hypotheses"]:
+            self.assertIn(h["sign"], ("unclassified",) + hp.HYP_SIGNS)
+
+
 class HypothesesTwoInvestigations(unittest.TestCase):
     """HE47 H2: one hypotheses folder serves several investigations by one manifest row each (the current format); an ambiguous key is a state, not a pick."""
     def setUp(self):
