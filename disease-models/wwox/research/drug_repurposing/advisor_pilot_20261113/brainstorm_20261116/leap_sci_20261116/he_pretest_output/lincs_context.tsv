@@ -1,0 +1,10 @@
+item	n	quantity	value
+all NEU signatures	451	median	0.02
+all NEU signatures	451	share <= -1.05	0.18
+all NEU signatures	451	share >= +1.05	0.166
+CARBAMAZEPINE	family	O_E (neuron-like) / O_B_SIG (progenitor-like) / freq_hit_rate_SIG	0.7367 / -0.2964 / 0.045
+VALPROIC ACID	family	O_E (neuron-like) / O_B_SIG (progenitor-like) / freq_hit_rate_SIG	-1.2768 / -0.3240 / 0.033
+LAMOTRIGINE	family	O_E (neuron-like) / O_B_SIG (progenitor-like) / freq_hit_rate_SIG	-1.3090 / 1.2131 / 0.151
+ZONISAMIDE	family	O_E (neuron-like) / O_B_SIG (progenitor-like) / freq_hit_rate_SIG	-0.9655 / -0.8393 / 0.079
+all families	256	share with O_E <= -1.2768 (valproic acid)	0.113
+all families	256	median freq_hit_rate_SIG	0.098

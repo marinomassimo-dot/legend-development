@@ -17,7 +17,9 @@
  "DECISIONS_TAKEN": [
   "2026-11-16: generated alone, no IT/HE leap file or baseline output read; held-data scan run before fixing H4 and H5, disclosed in the file; pre-test for those two labelled not independent",
   "2026-11-16: mechanism-source anchors are title-level (Europe PMC lookup), labelled as such",
-  "2026-11-16: PRESIDIO-015 (rule 5 of the leap round): ran held-data lookups for the five ADV hypotheses with adv_pretests.py; report ADV_HYPOTHESES_PRETEST_SCI.md; no delegate; labels independent test or consistency check per hypothesis; ADV file not edited"
+  "2026-11-16: PRESIDIO-015 (rule 5 of the leap round): ran held-data lookups for the five ADV hypotheses with adv_pretests.py; report ADV_HYPOTHESES_PRETEST_SCI.md; no delegate; labels independent test or consistency check per hypothesis; ADV file not edited",
+  "2026-11-16: PRESIDIO-013 addenda (ADV H-ADV-5 two exposure levels on the ratio scale; H-ADV-3 and the region comparison of myelin genes in the GABA-axis section) committed in the worktree, not landed",
+  "2026-11-16: PRESIDIO-016 held-data pre-test of the four HE hypotheses (HE file read at its freeze commit 1190dab48d05; A1 sealed, not opened; IT file not read); report HE_HYPOTHESES_PRETEST_SCI.md"
  ],
  "DELEGATIONS": [],
  "ESCALATIONS": [],
