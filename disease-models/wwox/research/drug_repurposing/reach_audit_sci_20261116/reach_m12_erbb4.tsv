@@ -1,0 +1,9 @@
+contrast	gene	transcripts_matched	KO_mean_TPM	control_mean_TPM	ratio
+hippocampus null (KO v WT)	Erbb4	5 of 5 transcripts	KO 5.13 (n2; 4.93, 5.32)	control 6.05 (n3; 4.93, 5.81, 7.42)	ratio 0.85
+hippocampus null (KO v WT)	Wwox	9 of 27 transcripts	KO 0.33 (n2; 0.28, 0.38)	control 3.89 (n3; 3.52, 4.27, 3.87)	ratio 0.09
+hippocampus S line	Erbb4	5 of 5 transcripts	KO 2.75 (n3; 4.32, 2.00, 1.93)	control 5.18 (n2; 5.48, 4.88)	ratio 0.53
+hippocampus S line	Wwox	9 of 27 transcripts	KO 0.49 (n3; 0.37, 0.34, 0.75)	control 3.37 (n2; 3.32, 3.41)	ratio 0.15
+hippocampus N line	Erbb4	5 of 5 transcripts	KO 3.00 (n2; 3.02, 2.98)	control 4.67 (n2; 5.71, 3.63)	ratio 0.64
+hippocampus N line	Wwox	9 of 27 transcripts	KO 0.21 (n2; 0.06, 0.37)	control 3.55 (n2; 3.49, 3.61)	ratio 0.06
+cortex S line	Erbb4	5 of 5 transcripts	KO 1.94 (n3; 1.78, 1.75, 2.29)	control 2.46 (n4; 1.24, 2.17, 2.31, 4.11)	ratio 0.79
+cortex S line	Wwox	9 of 27 transcripts	KO 5.94 (n3; 5.00, 3.80, 9.01)	control 18.83 (n4; 8.01, 26.54, 25.70, 15.06)	ratio 0.32
