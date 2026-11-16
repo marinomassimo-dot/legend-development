@@ -1,0 +1,13 @@
+resting_potential_mV	source	Cl_out_mM	Cl_in_at_E_Cl_equals_Vrest_mM
+-65.0	I6 assumed value	120.0	10.53
+-65.0	I6 assumed value	130.0	11.40
+-65.0	I6 assumed value	140.0	12.28
+-79.25	held S-WT	120.0	6.17
+-79.25	held S-WT	130.0	6.69
+-79.25	held S-WT	140.0	7.20
+-75.51	held S-HET	120.0	7.10
+-75.51	held S-HET	130.0	7.69
+-75.51	held S-HET	140.0	8.29
+-73.62	held S-KO	120.0	7.62
+-73.62	held S-KO	130.0	8.26
+-73.62	held S-KO	140.0	8.89
