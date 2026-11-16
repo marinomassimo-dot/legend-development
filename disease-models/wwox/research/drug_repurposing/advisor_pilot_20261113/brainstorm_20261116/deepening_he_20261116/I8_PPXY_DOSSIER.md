@@ -1,0 +1,71 @@
+# I8 · PY-motif competition: does WWOX loss change the surface level of channels and transporters? (HE v1, 2026-11-16; non-canonical; hypothesis, not finding; not medical advice)
+
+Written for: ADV, SCI, IT (second reader: ADV). Mechanism level only: no dose, no recommendation to use any agent, reference genotype class only, BLOCK-1 flags on every class named. Labels: **KNOWN** (database or general, source named), **HELD-DATA** (table in the repository or a public sequence file), **ASSUMED** (background reasoning, to be re-checked), **INFERRED** (computed from the above).
+
+## Answer first
+1. **The scan ran and its controls came back.** Of 2,052 reviewed mouse membrane channels, receptors and transporters (2,469 human; UniProt release 2026_04), **91 mouse (89 human) carry at least one PPxY in a cytoplasmic region** (72 with annotated topology, 19 without), and 76 of the 91 have the motif conserved in the human ortholog. Without being told, it recovered the three ENaC subunits (Scnn1a PPAY, Scnn1b PPNY, Scnn1g PPRY), the C-terminal PPSY of five voltage-gated sodium channels (Scn1a, Scn2a, Scn3a, Scn9a, Scn5a, Scn10a: all PPSY, near residue 1920 to 1985), and three PPxY on ErbB4. That ENaC, sodium channels and ErbB4 carry PY motifs is ASSUMED background knowledge; the scan is consistent with it and is not an independent proof of it.
+2. **The motif is not rare enough to give strong statistics.** The within-protein composition shuffle gives a smallest Benjamini-Hochberg q of 0.079 over the 91 proteins: no protein is significant at q < 0.05. The scan says where the motif sits; it does not say a given channel is a special ligand. Whether a ligase or WWOX actually uses a given motif is a protein-level question the scan cannot answer.
+3. **The channel classes of the matrix split by this mechanism.** Targets that carry a cytoplasmic PPxY: sodium channels (Scn1a, Scn2a, Scn3a, Scn9a; **Scn8a has an LPxY, not a PPxY**), HCN1 (PPVY at 654), GluN2D (PPSY at 999; q 0.41, weak). Targets of the matrix that carry none: GABA-A subunits, GluN2A, GluN2B, AMPA subunits, GAT-1 and GAT-3, Kv7.2 and Kv7.3. Three class targets are not in the universe (only unreviewed mouse entries in this release): Cacna1g, Cacna1i, Abcc8. If this mechanism operates, the sodium-channel and HCN classes are the ones whose TARGET LEVEL could move with genotype; the GABA-A, Kv7 and GAT classes would not be touched by it.
+4. **Channels outside the usual antiseizure targets that carry the motif, are neuron-expressed in the held class table and are conserved:** Kcnh7 (PPAY 1067; neuron 12.2 against 0.3 FPKM in other classes, neuron-enriched), Trpm3 (PPDY, PPTY; two motifs, q 0.079), Neto1 and Neto2 (PPHY each; auxiliary subunits of ionotropic glutamate receptors, ASSUMED), Kcnt2 (PPRY at 12), Slc17a7 (VGLUT1, PPSY at 538; the only candidate with a P47T cortex FDR below 0.05: log2FC +0.66, FDR 0.046), Ntrk1 (neuron-enriched). Full list: `i8_ppxy/out/candidates_ranked.tsv` (91 rows, ordering rule in its header).
+5. **One surprising prediction, which can fail.** HCN1 carries a PY motif. The null neocortex has a measured larger sag and post-inhibitory rebound (T13, a held observation of SCI's thread table). One of the two sign variants of this hypothesis (below, M+) predicts exactly that direction, the other (M−) predicts the opposite. So the sag is a discriminating observation already in hand for the sign, not for the hypothesis. The test of the hypothesis is **P47T**: UniProt places residue 47 in the first WW domain (WW1 = residues 16 to 49, HELD-DATA), the P47T knock-in keeps Wwox mRNA unchanged (log2FC +0.03, FDR 0.99, cortex), so **a WW1 PPxY-binding defect with the protein present should copy the null's sag/Ih increase** if the mechanism is the WW1-PY route, and should not if the null's sag comes from losing the protein for another reason.
+
+## D1 · Statement and chain
+Hypothesis I8: WWOX WW1 binds PPxY motifs in the cytoplasmic parts of membrane proteins; NEDD4-family ligases read the same motifs; WWOX loss (or a WW1 binding defect) changes the ligase-versus-WWOX occupancy of those motifs and therefore the surface level of the carrying proteins. Two sign variants, because the data do not give the sign:
+* **M−, competition shield:** WWOX at the motif keeps the ligase off, so loss lowers surface level (ligase-mediated removal wins).
+* **M+, adaptor or retention:** WWOX at the motif holds the protein away from the surface or hands it to degradation or retention, so loss raises surface level.
+
+| # | link | label |
+|---|---|---|
+| 1 | WWOX has two WW domains, WW1 16..49 and WW2 57..90 (mouse and human) | HELD-DATA (UniProt feature table, release 2026_04) |
+| 2 | WW domains bind PPxY; WW1 is the ligand-binding one, WW2 a non-binding partner | ASSUMED (general WW-domain knowledge, not re-sourced here) |
+| 3 | NEDD4-family ligases are expressed in neurons: Nedd4 85.1, Nedd4l 9.2, Itch 5.8, Wwp1 3.3, Wwp2 5.6, Smurf1 15.2, Smurf2 10.9 FPKM (P7 neurons); Wwox 4.6 | HELD-DATA (GSE52564 class table; `out/controls_ligases_ligands.tsv`) |
+| 4 | 91 mouse channels, receptors and transporters carry a cytoplasmic PPxY, 76 conserved in the human ortholog | HELD-DATA/INFERRED (this scan) |
+| 5 | WWOX loss changes motif occupancy and so surface level (sign M− or M+) | ASSUMED (this is the hypothesis) |
+| 6 | A change of surface Nav, HCN or other channel density changes excitability or burst timing | ASSUMED (general electrophysiology) |
+| 7 | The WW1 missense P47T (inside WW1) lacks WWOX loss of mRNA but may lack ligand binding | HELD-DATA for the position and the mRNA; ASSUMED for the binding effect |
+
+## D2 · Why it is non-obvious
+The standard reading puts WWOX in a signalling, metabolic and genome-stability role and reads the neurological phenotype through GABAergic or glutamatergic circuit changes. It does not ask what WWOX does at the plasma-membrane protein level. This idea drops the assumption that channel-level changes need a transcriptional route: a WW-domain scaffold can change surface level with no change in mRNA. Consequence for evidence: the held RNA tables cannot reject it, and the P47T line (mRNA unchanged, domain altered) is exactly the animal on which it has a predicted signature.
+
+## D3 · Consequences across scales and surprising predictions
+* **Cell:** surface (biotinylated) level of HCN1, Nav1.1 and Nav1.2, Kcnh7 and Neto1/2 shifts in null neurons by the same sign within a variant, with unchanged total mRNA. **Surprising prediction 1 (the one above):** P47T neocortical neurons show a larger sag and post-inhibitory rebound than wild type with Wwox protein present and mRNA unchanged.
+* **Class level (INFERRED from the scan):** the use-dependent sodium-channel class and the HCN class are the only two whose targets carry the motif; a GABA-A positive modulator, a Kv7 opener and a GAT class act on targets without it. So **the genotype could change the potency or efficacy of sodium-channel and HCN agents without changing that of GABA-A, Kv7 or GAT agents** (target-density effect). Surprising prediction 2: the age-dependence of sodium-channel-class response in null slices (H-HE-1 of the LEAP file) is a surface-density effect rather than a transcript one, so a P47T slice should show the same age pattern.
+* **Slice:** the Scn1a and Scn2a RNA rows are up in the hippocampal N deletion contrast (H_N +0.79 and +0.85; descriptive, 2 v 2) in the structure that does NOT burst (I3): a surface-level change in Nav, if present, is not enough alone in hippocampus.
+* **Animal and patient:** a WW1 missense patient should resemble a null patient on the sodium and HCN agents' response more than a variant outside the PY-binding site would (I2's per-child coding needs a column for the WWOX variant domain: WW1, WW2, SDR, truncating).
+
+## D4 · Minimal computational model
+`i8_ppxy/ppxy_scan.py` (fetch; scan; seeded shuffles) and `ppxy_join.py` (join with held tables). A kinetic model of competition at the motif needs three numbers no held table gives (WW1-PPxY Kd, ligase on-rate, surface half-life), so no simulation is claimed; the scan is the model. Reproducible: `scan_run.json` pins the two UniProt files by sha256 (also `UNIPROT_MANIFEST.json`), seed 1, 2,000 shuffles.
+
+## D5 · Discriminating experiments
+**(a) No new data.**
+1. Done: position of P47 in WW1 (UniProt); the scan; the join. 
+2. Extend the universe to other species by sequence only (zebrafish, rat, Drosophila ortholog sequences via the same public file): a motif conserved across vertebrates is more likely functional than one in mouse and human only. Cost: one fetch. Outcome: the conserved subset narrows the candidate list; it does not test the hypothesis.
+3. Held data: the P47T tables give mRNA only (Hcn1 CTX log2FC +0.27, FDR 0.35; Scn1a −0.37, 0.45). Neither outcome of the hypothesis predicts an mRNA change, so these tables cannot reject it.
+**(b) One slice or animal experiment.** Surface biotinylation and Western or targeted proteomics for HCN1, Nav1.1, Nav1.2, Nav1.6 (negative control: LPxY only), Kcnh7, Neto1/2 and Kcnq2 (negative control: no motif) in cortex of null, P47T and wild type. Outcomes: (i) P47T and null move the same channels in the same direction: supports the WW1-PY route; direction gives M− or M+. (ii) null moves, P47T does not: the effect needs the protein, not WW1 ligand binding; PY competition is not the route (kills this form). (iii) neither moves any PY channel: kills the surface-level idea for these channels. Add the electrophysiological readout: sag ratio and rebound in P47T and null neocortical neurons.
+**(c) Observational.** In the held case series, code the variant domain (WW1 missense, WW2 missense, SDR missense, truncating) with seizure semiology and agent response; the hypothesis predicts WW1-missense cases pattern with truncating cases on sodium-channel and HCN class response. This is a hypothesis for IT's per-child re-extraction, not a test run here.
+
+## D6 · Intervention logic (labels only; no dose)
+* Sodium-channel blockers (carbamazepine-type, lamotrigine-type): act on a target that carries the motif. Under M+ more channels could mean more block available; under M− fewer. Label, source standard mechanism of action. BLOCK-1: cardiac conduction flags at class level.
+* HCN (Ih) blockers (a class candidate of the matrix v2): the target carries the motif; ivabradine is approved for a cardiac indication (label); BLOCK-1: bradycardia (HCN4).
+* Outside the antiseizure set: Kcnh7 (ERG-family K channel; no class), Trpm3 (a TRP channel with its own pharmacology, and a developmental-epilepsy gene: ASSUMED, to be re-checked), VGLUT1 (no marketed class), Neto1/2 (auxiliary subunits; the class is "kainate/AMPA receptor modulators" at best). These are tool-compound candidates for an experiment, not repurposing proposals; BLOCK-1 not applied.
+* NEDD4-family ligase modulators: research tools only; no approved class; no candidate named.
+* Aggravation counterpart: under M−, a Nav or HCN density decrease would make the sodium-channel and HCN classes LESS effective in the null; the sign of any aggravation by sodium-channel blockers (H-ADV AH1) is unchanged by this idea and stays an open experiment.
+
+## D7 · Combination with other ideas
+* **I1 (rebound oscillator, SCI):** an HCN1 density change is a candidate for the trigger parameter (sag and rebound); the harness can scan an `hcn_block` axis, and M+ predicts the sign.
+* **I3 (hippocampal compensation):** Scn1a and Scn2a RNA are up in hippocampal N contrast without bursting there; a surface-density change must be small or compensated, or absent in hippocampus; it is a contradiction to settle by the biotinylation arm in both structures.
+* **I4 (metabolic axis):** independent; shares the cost of the same slice cohort.
+* **I2 and I7:** the variant-domain column; age window of GluN2B/GluN2D (Grin2d is the only NMDAR subunit with a core PPxY).
+
+## D8 · What would make it stronger; what kills it
+Stronger: a surface-level change of any PY channel in P47T or null; a co-immunoprecipitation of WWOX with HCN1 or Nav1.x C-terminal PY peptides; the same-direction change in two independent lines. **Killed by:** the biotinylation arm (b) with adequate power showing no change in HCN1 and Nav1.1/1.2 in both null and P47T (test could fail, would have failed); or P47T showing no sag difference while the null does (kills the WW1-PY route for sag). Parked only with a trigger: if P47T animals cannot be had, the trigger is any WW1-domain missense line or a cell-line knock-in.
+
+## D9 · Cheapest next step that needs no literature, and who
+(1) HE: extend the sequence universe to vertebrate orthologs and re-run (one fetch, same script). (2) HE: add `variant_domain` to the list of columns IT's per-child coding could carry (a message to IT). (3) SCI, if it has the tooling: ask whether any sag/rebound recording from P47T neurons exists in the held figure data (a held-figure question, not a new measurement). (4) The surface-protein arm belongs to a bench team: described, never commissioned.
+
+## Limits (all of them, here and not elsewhere)
+* The universe is reviewed UniProt entries with a transmembrane keyword and a channel, ion-transport, receptor or transport keyword. Cacna1g, Cacna1i and Abcc8 (matrix-class targets) have only unreviewed mouse entries and are not scanned. Topology is UniProt's; 19 of 91 mouse motif-bearing entries have none and are marked `topology_unknown`.
+* PPxY is the core motif; LPxY (66 mouse proteins carry LPxY and no PPxY) is a secondary tier, not scored, and other WW ligand classes (PPLP, polyproline with arginine) are not scanned.
+* Statistics: a composition shuffle with 2,000 draws; BH over 91 proteins; the smallest q is 0.079. The scan lists candidates; it is not an enrichment claim.
+* Held expression is RNA from a P7 neuron class pool (2 samples) and bulk tables; P17 null rows exist only for |centred log2 ratio| ≥ 0.585 (absence is not "unchanged"). For a protein-level hypothesis no column here is a test.
+* The WW1 and ligand binding facts and the M− / M+ framing are not sourced in this file (ASSUMED). The scan's agreement with ENaC, Nav and ErbB4 is consistent, not independent.
