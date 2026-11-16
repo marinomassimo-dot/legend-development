@@ -1,0 +1,4 @@
+model	mean_within_rho_duration_vs_following_interval	sd	mean_rho_preceding_interval_vs_duration	networks
+one_stage_rival	0.241	0.185	0.371	300
+two_stage_refit	0.223	0.177	0.182	300
+two_stage_frozen	0.145	0.204	0.167	300

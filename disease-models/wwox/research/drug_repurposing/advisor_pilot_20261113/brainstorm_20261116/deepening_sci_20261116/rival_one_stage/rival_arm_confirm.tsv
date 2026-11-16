@@ -1,0 +1,15 @@
+model	arm	genotype	incidence	bursts_per_bursting_slice	median_duration_s	median_interval_s
+two_stage	0_none	S-KO	1.00	59.9	0.760	22.6
+two_stage	0b_none_replicate	S-KO	1.00	61.7	0.736	22.0
+two_stage	5_Ttype_x0.75	S-KO	1.00	51.0	0.764	24.7
+two_stage	7_neurosteroid	S-KO	0.99	14.5	0.688	61.6
+two_stage	8_Na_pyramidal	S-KO	1.00	34.5	0.816	32.8
+two_stage	9_Na_with_interneuron	S-KO	1.00	55.2	0.892	25.1
+two_stage	10_resource_x0.6	S-KO	1.00	72.1	1.244	20.5
+one_stage	0_none	S-KO	1.00	65.7	0.596	23.4
+one_stage	0b_none_replicate	S-KO	1.00	67.1	0.560	23.3
+one_stage	5_Ttype_x0.75	S-KO	1.00	71.3	0.556	22.1
+one_stage	7_neurosteroid	S-KO	0.98	16.4	0.768	60.1
+one_stage	8_Na_pyramidal	S-KO	1.00	36.5	0.908	37.9
+one_stage	9_Na_with_interneuron	S-KO	1.00	48.1	0.980	31.8
+one_stage	10_resource_x0.6	S-KO	1.00	81.0	1.176	19.8
