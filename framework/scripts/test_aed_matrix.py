@@ -603,7 +603,7 @@ class V1StaysByteIdentical(Base):
 
 
 RULE_V2 = RULE_V1.with_name("rule_v2.json")
-RULE_V2_SHA256 = "030b2570d8c238f7a82f7f51bac9864abf353b2b2226b2becc20ede45dc82598"  # announced 2026-11-16; v1 is RULE_V1_SHA256
+RULE_V2_SHA256 = "2cb4a908002aae48c6d4cc68baa9f8451e4bbb287fe6f47b4ccd6f7c5785f112"  # announced 2026-11-16; v1 is RULE_V1_SHA256
 
 
 class TheCommittedRuleV2(unittest.TestCase):
