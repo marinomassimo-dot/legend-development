@@ -1,0 +1,25 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-P013-EXPBRIEF-20261116",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "PRESIDIO-013 (ADV presidio, operator MEETING 2026-11-16): decision-grade experiment brief from L7 + VOI + NX1-style sizing + origin hunt",
+ "START_UTC": "2026-11-16T08:00:00Z",
+ "BASELINE": "main with freeze f5b71a3f4 and PRESIDIO-012",
+ "MANDATE_STATE": "DONE",
+ "CURRENT_PACKAGE": "closed in the landing commit",
+ "RESUME": "none; IT does BLOCK-1 on the arms; the second read of the extractor sample follows the outcome stage (after 12:00Z)",
+ "DECISIONS_TAKEN": [
+  "2026-11-16: no concentration as recommendation, published tool concentrations cited with source; classes with no held selectivity source (non-benzodiazepine GABA-A PAM, sodium-channel) are named as class only, source left to IT",
+  "2026-11-16: outcome-to-top-set table produced mechanically with the official generator from a declared outcome mapping, not by judgement"
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "VERIFICATION_EVIDENCE": [
+  "scenarios.py: 8 scenarios, rc 0 with rule pinned",
+  "size_l7.py: sizing table"
+ ]
+}
