@@ -1,0 +1,7 @@
+source	child	rows	seizure_outcomes_by_row	developmental_outcome	concordance	first_imaging_stated
+PMID 30361190	first child (Table 1 case 1)	2	hormonal=partial; vigabatrin=resolved	severe_impairment_unchanged	discordant	MRI at two months, before treatment: thin corpus callosum, wide Sylvian fissure, periventricular connatal cyst
+PMID 30361190	second child (Table 1 case 2)	1	vigabatrin=partial	severe_impairment_unchanged	discordant	MRI at two months: dysplastic thin corpus callosum, mild ventricular dilatation, wide CSF spaces with reduced 
+PMID 39101447	the patient (single case)	1	vigabatrin=partial	severe_impairment_unchanged	discordant	MRI at 4 months, before vigabatrin: irregular ventricles with a widened left ventricle, paraventricular microc
+PMID 35573960	the patient (single case)	4	vigabatrin=none; cannabidiol=none; hormonal=none; ketogenic_diet=none	severe_impairment_unchanged	concordant	MRI at 2 years 4 months: mild progression of atrophy, marked periventricular white matter reduction with signa
+PMID 28721938	the patient (single case)	2	vigabatrin=partial; hormonal=resolved	severe_impairment_unchanged	discordant	MRI at 5 weeks: thin corpus callosum; at 2.6 years: supratentorial atrophy, delayed myelination, very thin cor
+PMID 29808465	patient 2	1	ketogenic_diet=none	severe_impairment_unchanged	concordant	MRI at 3 and 6 months: global atrophy, hypoplasia of the corpus callosum

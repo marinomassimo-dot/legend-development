@@ -2,6 +2,7 @@
 """Mechanism-class matching matrix: score classes by a rule fixed beforehand, reproducibly.
 
     python3 framework/scripts/aed_matrix.py score CELLS.tsv RULE.json [--out FILE] [--expect-rule-sha256 HEX]
+    python3 framework/scripts/aed_matrix.py compare PRED.tsv COUNTS.tsv [--pred-column NAME] [--min-n 3]
 
 WHY
 ---
@@ -55,6 +56,12 @@ WHAT IT COMPUTES, per endpoint (never summed across endpoints) and per age windo
 An agent ranking is printed only for the top class and only when some (axis, origin) key carries
 a match for one agent of that class and not for another.
 
+RULES R1-R3 (rule v2, declared together by r1_min_link, r2_scorable_denominator and r3_splits; a rule without them runs exactly as v1)
+  R1  a class is scored in a group only with a match or aggravation link at the rule's minimum tier and directness;
+  R2  informativeness and the tie-share limit use the scorable classes of the group, so empty columns never raise informativeness;
+  R3  the children of a declared split need two representative agent ids each and a distinguishing thread, else they are unscorable.
+An unscorable class is printed (rank `unscorable`, its aggravation still shown) and named in a note; it is never neutral.
+
 Exit codes: 0 scored (or no cells) · 2 invalid invocation, rule, cells or pinned digest.
 """
 from __future__ import annotations
@@ -62,6 +69,7 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import itertools
 import json
 import sys
 from pathlib import Path
@@ -81,7 +89,17 @@ OUT_COLUMNS = ["endpoint", "window", "class_id", "rank", "score_all", "score_spe
                "null_ge_fraction", "top_set_size", "informativeness", "top_set_label", "tied_with",
                "score_origin_collapsed", "rank_origin_collapsed", "top_set_same_share",
                "top_set_membership_share"]
+OUT_COLUMNS_V2 = OUT_COLUMNS + ["scorable", "scorable_classes"]   # only a rule with R1-R3 adds them: a v1 run keeps its bytes
 POOLED = "pooled"
+
+
+def r_rules(rule: dict) -> bool:
+    """True when the rule declares R1-R3 (rule v2): scored only with a link, informativeness over the scorable classes, splits checked."""
+    return "r1_min_link" in rule
+
+
+def out_columns(rule: dict) -> list[str]:
+    return OUT_COLUMNS_V2 if r_rules(rule) else OUT_COLUMNS
 
 
 class Invalid(Exception):
@@ -108,6 +126,19 @@ def check_rule(rule: dict) -> None:
     share = rule["discriminating_top_set_max_share"]
     if not (isinstance(share, list) and len(share) == 2 and all(isinstance(n, int) and n > 0 for n in share)):
         raise Invalid("discriminating_top_set_max_share must be [numerator, denominator], positive integers")
+    if any(k in rule for k in ("r1_min_link", "r2_scorable_denominator", "r3_splits")):
+        if not all(k in rule for k in ("r1_min_link", "r2_scorable_denominator", "r3_splits")):
+            raise Invalid("R1, R2 and R3 are declared together: r1_min_link, r2_scorable_denominator and r3_splits")
+        lo = rule["r1_min_link"]
+        if not (isinstance(lo, list) and len(lo) == 2 and all(isinstance(n, int) and 1 <= n <= 3 for n in lo)):
+            raise Invalid("r1_min_link must be [minimum tier, minimum directness], integers 1-3")
+        if rule["r2_scorable_denominator"] is not True:
+            raise Invalid("r2_scorable_denominator must be true when R1-R3 are declared")
+        for sp in rule["r3_splits"]:
+            kids = sp.get("children") if isinstance(sp, dict) else None
+            if not (isinstance(sp, dict) and sp.get("parent") and isinstance(kids, list) and len(kids) >= 2
+                    and set(kids) <= set(rule["classes"]) and isinstance(sp.get("min_representatives", 2), int)):
+                raise Invalid("each r3_splits entry needs a parent, two or more children that are rule classes, and an integer min_representatives")
     if rule["rank_by"] not in SCORES:
         raise Invalid(f"rank_by must be one of {SCORES}")
     if not (isinstance(rule["permutations"], int) and 0 <= rule["permutations"] <= 10000):
@@ -315,30 +346,75 @@ def tie_label(k: int, n_classes: int, share: list[int]) -> str:
     return "tie_set_weak" if k * share[1] <= n_classes * share[0] else "not_discriminating"
 
 
+def has_link(row: dict, rule: dict) -> bool:
+    """R1: a cell links its class to a thread at the rule's minimum tier and directness (a match or an aggravation link; unknown and neutral are not links)."""
+    lo_t, lo_d = rule["r1_min_link"]
+    return row["sign"] in ("match", "aggravation") and int(row["evidence_tier"]) >= lo_t and int(row["link_directness"]) >= lo_d
+
+
+def split_failures(rows: list[dict], rule: dict) -> dict[str, str]:
+    """R3: child class -> reason, for the children of a split the cells do not justify. A split needs two representatives (agent ids) in EACH
+    child and a distinguishing thread: one linked to some children of the split and not to others."""
+    out = {}
+    for sp in rule.get("r3_splits", []):
+        kids = sp["children"]
+        need = sp.get("min_representatives", 2)
+        reasons = []
+        for kid in kids:
+            agents = {r["agent_id"] for r in rows if r["class_id"] == kid and r["agent_id"]}
+            if len(agents) < need:
+                reasons.append(f"{kid} has {len(agents)} representative agent id(s) in the cells, needs {need}")
+        threads = {t for t in {r["thread_id"] for r in rows if r["class_id"] in kids}
+                   if 0 < len({r["class_id"] for r in rows if r["thread_id"] == t and r["class_id"] in kids and has_link(r, rule)}) < len(kids)}
+        if not threads:
+            reasons.append("no thread links some children of the split and not others")
+        if reasons:
+            for kid in kids:
+                out[kid] = f"R3 split {sp['parent']}: " + "; ".join(reasons)
+    return out
+
+
+def unscorable_note(endpoint: str, all_classes: list[str], classes: list[str], failed: dict[str, str]) -> str:
+    dropped = [c for c in all_classes if c not in classes]
+    return (f"[{endpoint}] not scorable ({len(dropped)} of {len(all_classes)} classes; excluded from every denominator): "
+            + ", ".join(f"{c} ({failed[c] if c in failed else 'R1 no link at the minimum tier and directness'})" for c in dropped))
+
+
 def score_endpoint(rows: list[dict], endpoint: str, rule: dict):
     mine = [r for r in rows if r["endpoint"] == endpoint]
-    classes = list(rule["classes"])
+    all_classes = list(rule["classes"])
+    v2 = r_rules(rule)
+    failed = split_failures(rows, rule) if v2 else {}
     table, notes = [], []
     for window in [POOLED] + list(rule["age_windows"]):
         part = mine if window == POOLED else [r for r in mine if r["age"] == window]
         tag = f"[{endpoint} {window}]"
+        classes = all_classes
+        part_all = part
+        if v2:   # R1 and R3: only classes with a qualifying link (and an unfailed split) are scored, and only they count in the denominators (R2)
+            linked = {r["class_id"] for r in part if has_link(r, rule)}
+            classes = [c for c in all_classes if c in linked and c not in failed]
+            part = [r for r in part if r["class_id"] in classes]
         if not any(r["sign"] == "match" for r in part):
-            agg_only = class_scores(part, "aggravation")  # aggravation is its own column even where no match exists
-            for c in classes:
+            agg_only = class_scores(part_all, "aggravation")  # aggravation is its own column even where no match exists
+            for c in all_classes:
                 table.append({"endpoint": endpoint, "window": window, "class_id": c, "rank": "null",
                               **{k: "0" for k in ("score_all", "score_specific", "score_drug_by_genotype",
                                                   "match_keys", "score_per_thread_sum")},
                               "aggravation_score": str(agg_only.get(c, {}).get("score_all", 0)),
                               "rank_per_thread_sum": "null",
-                              "neutral_cells": str(sum(r["class_id"] == c and r["sign"] == "neutral" for r in part)),
-                              "unknown_cells": str(sum(r["class_id"] == c and r["sign"] == "unknown" for r in part)),
+                              "neutral_cells": str(sum(r["class_id"] == c and r["sign"] == "neutral" for r in part_all)),
+                              "unknown_cells": str(sum(r["class_id"] == c and r["sign"] == "unknown" for r in part_all)),
                               "null_mean": "undefined", "excess": "undefined", "null_ge_fraction": "undefined",
-                              "top_set_size": str(len(classes)), "informativeness": "0.000",
+                              "top_set_size": str(len(all_classes)), "informativeness": "0.000",
                               "top_set_label": "not_scorable_null_ordering", "tied_with": "",
                               "score_origin_collapsed": "0", "rank_origin_collapsed": "null",
-                              "top_set_same_share": "", "top_set_membership_share": ""})
+                              "top_set_same_share": "", "top_set_membership_share": "",
+                              **({"scorable": "yes" if c in classes else "no", "scorable_classes": str(len(classes))} if v2 else {})})
             notes.append(f"{tag} not scorable: no class links to any thread here; frozen as a null ordering "
-                         f"(all {len(classes)} classes tied, informativeness 0)")
+                         f"(all {len(all_classes)} classes tied, informativeness 0)")
+            if v2 and window == POOLED and len(classes) < len(all_classes):
+                notes.append(unscorable_note(endpoint, all_classes, classes, failed))
             if agg_only:
                 notes.append(f"{tag} aggravation-only window: aggravation is printed in its own column "
                              "for " + ",".join(sorted(agg_only)) + "; the match columns stay null and nothing is netted")
@@ -375,7 +451,25 @@ def score_endpoint(rows: list[dict], endpoint: str, rule: dict):
                           "tied_with": ",".join(tied),
                           "score_origin_collapsed": str(oc.get(cls, 0)), "rank_origin_collapsed": str(rank_oc[cls]),
                           "top_set_same_share": f"{st['same'] / st['runs']:.3f}" if st else "",
-                          "top_set_membership_share": f"{st['inside'][cls] / st['runs']:.3f}" if st else ""})
+                          "top_set_membership_share": f"{st['inside'][cls] / st['runs']:.3f}" if st else "",
+                          **({"scorable": "yes", "scorable_classes": str(len(classes))} if v2 else {})})
+        if v2:
+            agg_all = class_scores(part_all, "aggravation")
+            for c in all_classes:
+                if c not in classes:
+                    table.append({"endpoint": endpoint, "window": window, "class_id": c, "rank": "unscorable",
+                                  **{k: "0" for k in ("score_all", "score_specific", "score_drug_by_genotype", "match_keys",
+                                                      "score_per_thread_sum", "score_origin_collapsed")},
+                                  "aggravation_score": str(agg_all.get(c, {}).get("score_all", 0)),
+                                  "rank_per_thread_sum": "unscorable", "rank_origin_collapsed": "unscorable",
+                                  "neutral_cells": str(sum(r["class_id"] == c and r["sign"] == "neutral" for r in part_all)),
+                                  "unknown_cells": str(sum(r["class_id"] == c and r["sign"] == "unknown" for r in part_all)),
+                                  "null_mean": "undefined", "excess": "undefined", "null_ge_fraction": "undefined",
+                                  "top_set_size": str(k), "informativeness": info, "top_set_label": "unscorable",
+                                  "tied_with": "", "top_set_same_share": "", "top_set_membership_share": "",
+                                  "scorable": "no", "scorable_classes": str(len(classes))})
+            if window == POOLED and len(classes) < len(all_classes):
+                notes.append(unscorable_note(endpoint, all_classes, classes, failed))
         notes.append(f"{tag} top set {{{','.join(top)}}} size {k} of {len(classes)}, informativeness {info}: {label}")
         if st:
             members = ", ".join(f"{c} {st['inside'][c] / st['runs']:.0%}" for c in sorted(classes, key=lambda c: (-st["inside"][c], c))
@@ -405,6 +499,54 @@ def score_endpoint(rows: list[dict], endpoint: str, rule: dict):
             notes.append(f"[{endpoint}] {stability_pairs(part, classes, rule)}")
             notes.append(f"[{endpoint}] {agent_ranking(part, t, rule['rank_by'])}")
     return table, notes
+
+
+def concordance(pred: dict[str, float], counts: dict[str, tuple[int, int]], min_n: int = 3) -> dict:
+    """Pairwise concordance of a predicted class ordering with an observed one (RULE_AMENDMENT_2 arithmetic).
+    counts: class -> (children n, children improved k). A class is scorable with n >= min_n; two classes are tied in the observed ordering
+    when their shares differ by less than one child on the smaller denominator; a tied observed pair is not classifiable and not scored;
+    a pair with a class absent from `pred` is not scored; a predicted tie scores 0.5, the same direction 1, the opposite 0."""
+    scorable = sorted(c for c, (n, _) in counts.items() if n >= min_n)
+    pairs = list(itertools.combinations(scorable, 2))
+    classifiable = scored = 0
+    total = 0.0
+    for a, b in pairs:
+        (na, ka), (nb, kb) = counts[a], counts[b]
+        pa, pb = ka / na, kb / nb
+        if abs(pa - pb) < 1 / min(na, nb):
+            continue
+        classifiable += 1
+        if a not in pred or b not in pred:
+            continue
+        scored += 1
+        observed = 1 if pa > pb else -1
+        direction = (pred[a] > pred[b]) - (pred[a] < pred[b])
+        total += 0.5 if direction == 0 else (1.0 if direction == observed else 0.0)
+    return {"scorable_classes": len(scorable), "pairs": len(pairs), "classifiable": classifiable, "scored": scored,
+            "concordance": (total / scored) if scored else None}
+
+
+def read_two_columns(path: Path, value_columns: list[str]) -> dict[str, list[str]]:
+    with path.open(newline="") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        for col in ["class_id"] + value_columns:
+            if col not in (reader.fieldnames or []):
+                raise Invalid(f"{path.name} lacks column {col}")
+        return {r["class_id"]: [r[c] for c in value_columns] for r in reader}
+
+
+def run_compare(pred_path: Path, counts_path: Path, pred_column: str, min_n: int) -> int:
+    try:
+        pred = {c: float(v[0]) for c, v in read_two_columns(pred_path, [pred_column]).items() if v[0] not in ("", "unknown")}
+        counts = {c: (int(v[0]), int(v[1])) for c, v in read_two_columns(counts_path, ["n", "k"]).items()}
+    except (Invalid, OSError, ValueError, csv.Error) as exc:
+        print(f"invalid: {exc}", file=sys.stderr)
+        return 2
+    r = concordance(pred, counts, min_n)
+    text = f"{r['concordance']:.2f}" if r["concordance"] is not None else "not scorable"
+    print(f"scorable classes {r['scorable_classes']}; class pairs {r['pairs']}; classifiable (observed not tied) {r['classifiable']}; "
+          f"scored {r['scored']}; concordance {text}")
+    return 0
 
 
 def rule_order(root: Path, rule_path: Path, cells_path: Path) -> str:
@@ -438,6 +580,10 @@ def run(cells_path: Path, rule_path: Path, out: Path | None, pin: str | None, ro
         print(f"invalid: {exc}", file=sys.stderr)
         return 2
     threads = sorted({r["thread_id"] for r in rows})
+    if r_rules(rule):
+        print(f"R1 minimum link tier {rule['r1_min_link'][0]} directness {rule['r1_min_link'][1]}; R2 informativeness over the scorable classes; "
+              f"R3 splits {len(rule['r3_splits'])}: " + (", ".join(f"{sp['parent']} {'NOT MET' if any(c in split_failures(rows, rule) for c in sp['children']) else 'met'}"
+                                                              for sp in rule["r3_splits"]) or "none declared"))
     print(f"rule {rule['rule_version']} sha256 {digest}; rule committed before cells: {order}; "
           f"cells {len(rows)}; rank_by {rule['rank_by']}; permutations {rule['permutations']} seed {rule['seed']}")
     print(f"threads {len(threads)} sha256 {hashlib.sha256(chr(10).join(threads).encode()).hexdigest()}: "
@@ -450,7 +596,8 @@ def run(cells_path: Path, rule_path: Path, out: Path | None, pin: str | None, ro
         t, n = score_endpoint(rows, endpoint, rule)
         table += t
         notes += n
-    lines = ["\t".join(OUT_COLUMNS)] + ["\t".join(r[c] for c in OUT_COLUMNS) for r in table]
+    cols = out_columns(rule)
+    lines = ["\t".join(cols)] + ["\t".join(r[c] for c in cols) for r in table]
     text = "\n".join(lines) + "\n"
     if out:
         out.write_text(text)
@@ -472,7 +619,14 @@ def main(argv: list[str] | None = None) -> int:
     sc.add_argument("rule")
     sc.add_argument("--out", help="write the score table here (default: standard output)")
     sc.add_argument("--expect-rule-sha256", help="refuse unless the rule file has exactly this digest")
+    cp = sub.add_parser("compare", help="pairwise concordance of a predicted class ordering with observed counts (ties score 0.5)")
+    cp.add_argument("pred", help="TSV with class_id and the predicted score column")
+    cp.add_argument("counts", help="TSV with class_id, n (children with a stated outcome) and k (children improved)")
+    cp.add_argument("--pred-column", default="score")
+    cp.add_argument("--min-n", type=int, default=3)
     args = parser.parse_args(argv)
+    if args.cmd == "compare":
+        return run_compare(Path(args.pred), Path(args.counts), args.pred_column, args.min_n)
     return run(Path(args.cells), Path(args.rule), Path(args.out) if args.out else None,
                args.expect_rule_sha256, Path(args.root).resolve())
 

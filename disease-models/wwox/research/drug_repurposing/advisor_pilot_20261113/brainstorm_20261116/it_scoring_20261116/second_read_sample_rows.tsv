@@ -1,0 +1,85 @@
+extraction_row	stratum	report_id	child	agent	seizure_outcome
+2	attributable_used_in_scoring	28721938	The patient (boy)	phenobarbital	partial
+3	attributable_used_in_scoring	28721938	The patient (boy)	vigabatrin (Vigabatrine, VGB)	resolved
+4	attributable_used_in_scoring	28721938	The patient (boy)	synthetic ACTH	resolved
+5	attributable_used_in_scoring	29808465	Patient 2	ketogenic diet	none
+6	attributable_used_in_scoring	30361190	The first child (2-year-old bo	oral prednisolone (UKISS proto	partial
+7	attributable_used_in_scoring	30361190	The first child (2-year-old bo	vigabatrin	partial
+8	attributable_used_in_scoring	30361190	The first child (2-year-old bo	levetiracetam	partial
+9	attributable_used_in_scoring	30361190	The second child (12-month-old	phenobarbital	partial
+10	attributable_used_in_scoring	30361190	The second child (12-month-old	vigabatrin	partial
+13	random_seed56	30361190	The second child (12-month-old	baclofen	not_stated
+14	attributable_used_in_scoring	35573960	Our patient (patient II-1, boy	valproate	none
+15	attributable_used_in_scoring	35573960	Our patient (patient II-1, boy	vigabatrin	none
+16	attributable_used_in_scoring	35573960	Our patient (patient II-1, boy	clonazepam	none
+17	attributable_used_in_scoring	35573960	Our patient (patient II-1, boy	clobazam	none
+18	attributable_used_in_scoring	35573960	Our patient (patient II-1, boy	levetiracetam	none
+19	attributable_used_in_scoring	35573960	Our patient (patient II-1, boy	rufinamide	none
+20	attributable_used_in_scoring	35573960	Our patient (patient II-1, boy	CBD oil	none
+23	attributable_used_in_scoring	35573960	Our patient (patient II-1, boy	ACTH (three cycles)	none
+24	attributable_used_in_scoring	35573960	Our patient (patient II-1, boy	ketogenic diet	none
+25	random_seed56	35573960	Our patient (patient II-1, boy	baclofen	not_stated
+26	attributable_used_in_scoring	35792847	Patient 1.1	levetiracetam	partial
+28	random_seed56	35792847	Patient 1.2	topiramate	not_stated
+33	attributable_used_in_scoring	35792847	Patient 2.1	vigabatrin	partial
+35	attributable_used_in_scoring	35792847	Patient 2.2	vigabatrin	resolved
+36	attributable_used_in_scoring	35792847	Patient 3.1	phenobarbital	none
+37	attributable_used_in_scoring	35792847	Patient 3.1	clonazepam	none
+38	attributable_used_in_scoring	35792847	Patient 3.1	topiramate	none
+39	attributable_used_in_scoring	35792847	Patient 3.1	ketogenic diet	partial
+40	attributable_used_in_scoring	35792847	Patient 3.1	intravenous diazepam	resolved
+41	random_seed56	35792847	Patient 3.1	CLOB (clobazam) [Table 3 only]	not_stated
+44	random_seed56	35792847	Patient 3.2	LEV (levetiracetam) [Table 3 o	not_stated
+45	random_seed56	35792847	Patient 3.2	VPA (valproic acid) [Table 3 o	not_stated
+50	random_seed56	35792847	Patient 5	vigabatrin	not_stated
+51	random_seed56	35792847	Patient 5	valproic acid	not_stated
+52	random_seed56	35792847	Patient 5	topiramate	not_stated
+54	attributable_used_in_scoring	35792847	Patient 6	vigabatrin	resolved
+61	random_seed56	35792847	Gribaa et al. (2007) patient 3	phenobarbital	not_stated
+64	random_seed56	35792847	Abdel-Salam et al. (2014) pati	valproic acid	not_stated
+68	random_seed56	35792847	Valduga et al. (2015) patient 	valproic acid	not_stated
+76	random_seed56	35792847	Elsaadany et al. (2016) patien	phenobarbital	not_stated
+79	random_seed56	35792847	Tarta-Arsene et al. (2017) pat	phenobarbital	not_stated
+82	random_seed56	35792847	Johannsen et al. (2018) patien	ketogenic diet	not_stated
+83	random_seed56	35792847	Serin et al. (2018) patient 1 	vigabatrin	not_stated
+84	random_seed56	35792847	Serin et al. (2018) patient 1 	valproic acid	not_stated
+88	random_seed56	35792847	Shaukat et al. (2018) patient 	levetiracetam	not_stated
+92	random_seed56	35792847	Shaukat et al. (2018) patient 	clobazam	not_stated
+94	random_seed56	35792847	Davids et al. (2019) patient 1	topiramate	not_stated
+96	random_seed56	35792847	Yang et al. (2019) patient 1 [	phenobarbital	not_stated
+98	attributable_used_in_scoring	36537114	Patient 1	ketogenic diet	partial
+99	attributable_used_in_scoring	36537114	Patient 2	ketogenic diet	partial
+100	attributable_used_in_scoring	36537114	Patient 4	ketogenic diet	partial
+109	random_seed56	36779245	Patient 2	LEV (levetiracetam)	not_stated
+118	random_seed56	36779245	Patient 3	LEV (levetiracetam)	not_stated
+127	random_seed56	36779245	Patient 6	TPM (topiramate)	not_stated
+130	random_seed56	36779245	Patient 6	PER (perampanel)	not_stated
+139	random_seed56	36779245	Patient 6	DZP (diazepam)	not_stated
+145	random_seed56	36779245	Patient 7	PHT (phenytoin)	not_stated
+153	random_seed56	36779245	Patient 7	LEV (levetiracetam)	not_stated
+165	random_seed56	36779245	Patient 11	CBD (cannabidiol)	not_stated
+167	random_seed56	36779245	Patient 11	CBZ (carbamazepine)	not_stated
+168	random_seed56	36779245	Patient 11	PRED (prednisolone)	not_stated
+170	random_seed56	36779245	Patient 11	KD (ketogenic diet)	not_stated
+173	random_seed56	36779245	Patient 12	KD (ketogenic diet)	not_stated
+174	random_seed56	36779245	Patient 12	PHB (phenobarbital)	not_stated
+175	random_seed56	36779245	Patient 12	LEV (levetiracetam)	not_stated
+178	random_seed56	36779245	Patient 12	MDZ (midazolam)	not_stated
+180	random_seed56	36779245	Patient 13	LTG (lamotrigine)	not_stated
+181	random_seed56	36779245	Patient 13	BRV (brivaracetam)	not_stated
+183	random_seed56	36779245	Patient 13	LEV (levetiracetam)	not_stated
+186	random_seed56	36779245	Patient 13	PER (perampanel)	not_stated
+187	attributable_used_in_scoring	37583270	WWOX row 1 (M; FUA (2), ES (4)	initial hormonal therapy (agen	none
+188	attributable_used_in_scoring	37583270	WWOX row 1 (M; FUA (2), ES (4)	vigabatrin (VGB)	resolved
+189	attributable_used_in_scoring	37583270	WWOX row 2 (F; ES (3))	initial hormonal therapy (agen	resolved
+190	attributable_used_in_scoring	37583270	WWOX row 2 (F; ES (3))	nitrazepam (NZ)	resolved
+191	attributable_used_in_scoring	37583270	WWOX row 3 (F; GTC (2), ES (3)	initial hormonal therapy (agen	none
+192	attributable_used_in_scoring	37583270	WWOX row 3 (F; GTC (2), ES (3)	zonisamide (ZON)	resolved
+193	attributable_used_in_scoring	37583270	WWOX row 4 (F; ES (2))	initial hormonal therapy (agen	none
+194	attributable_used_in_scoring	37583270	WWOX row 4 (F; ES (2))	ketogenic diet (KD)	none
+197	random_seed56	38407561	A 1-year and 7-month-old girl	ACTH therapy	not_stated
+200	attributable_used_in_scoring	39101447	The patient (13-month-old girl	topiramate	resolved
+201	attributable_used_in_scoring	39101447	The patient (13-month-old girl	vigabatrin	partial
+204	attributable_used_in_scoring	42092735	A male neonate (the patient)	phenobarbital	partial
+206	attributable_used_in_scoring	42092735	A male neonate (the patient)	valproic acid	partial
+207	attributable_used_in_scoring	42092735	A male neonate (the patient)	clobazam	resolved

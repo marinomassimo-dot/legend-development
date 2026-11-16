@@ -52,11 +52,11 @@ class Fixture(unittest.TestCase):
         self.outcome = commit(self.root, f"{UNDER}/outcome.tsv", "x\t1\n", "outcome",
                               "2026-11-12T10:00:00+00:00")
         (self.root / RECEIPTS).write_text("")
-        self.row = {c: "" for c in pl.COLUMNS}
+        self.row = {c: "" for c in pl.COLUMNS + pl.OPTIONAL_COLUMNS}
         self.row.update(pred_id="P1", package=UNDER, statement_ref=f"{UNDER}/predictions_frozen.md#P1",
                         freeze_commit=self.freeze, freeze_blob_sha256=pl.sha256(self.statement.encode()),
                         kind="generative", outcome_ref=f"{UNDER}/outcome.tsv", outcome_commit=self.outcome,
-                        predictor="sci", scorer="it", status="held")
+                        predictor="sci", scorer="it", status="held", outcome_sha256=pl.sha256(b"x\t1\n"))
 
     def tearDown(self):
         self.tmp.cleanup()
@@ -68,7 +68,7 @@ class Fixture(unittest.TestCase):
     def write_ledger(self, rows):
         path = self.root / "ledger.tsv"
         with path.open("w") as handle:
-            pl.write_tsv(rows, pl.COLUMNS, handle)
+            pl.write_tsv(rows, pl.COLUMNS + pl.OPTIONAL_COLUMNS, handle)
         return path
 
 
@@ -99,6 +99,10 @@ class CheckSeparatesWhatGitProves(Fixture):
         bad, warn, order = self.check()
         self.assertEqual((bad, order), ([], "yes"))
         self.assertEqual(warn, [])
+
+    def test_a_statement_ref_with_a_space_instead_of_a_hash_names_the_same_file(self):
+        bad, _, order = self.check(statement_ref=f"{UNDER}/predictions_frozen.md F1")
+        self.assertEqual((bad, order), ([], "yes"))
 
     def test_paper_content_is_labelled(self):
         _, warn, _ = self.check(kind="paper_content")
@@ -155,7 +159,8 @@ class CheckSeparatesWhatGitProves(Fixture):
         self.assertTrue(any("blindness declared, not shown" in w and "123" in w for w in warn), warn)
 
     def test_a_public_outcome_in_the_tree_is_a_warning_only_when_blindness_is_declared(self):
-        bad, warn, _ = self.check(outcome_ref=f"{UNDER}/predictions_frozen.md", blindness="declared")
+        bad, warn, _ = self.check(outcome_ref=f"{UNDER}/predictions_frozen.md", blindness="declared", outcome_commit="",
+                                  outcome_sha256="")
         self.assertEqual(bad, [])
         self.assertTrue(any("outcome_in_tree_at_freeze = yes (blindness declared, not shown)" in w for w in warn))
         bad, _, _ = self.check(blindness="maybe")
@@ -167,6 +172,16 @@ class CheckSeparatesWhatGitProves(Fixture):
                                                        "study_id": {"pmid": "45", "doi": None}}) + "\n")
         bad, _, _ = self.check(outcome_study_id="PMID 123; PMID 45")
         self.assertTrue(any("read receipt" in b for b in bad))
+
+    def test_a_declared_freeze_time_earlier_than_the_commit_is_flagged_as_not_shown_by_git(self):
+        # the fixture's freeze commit is dated 2026-11-10T10:00:00Z
+        _, warn, _ = self.check(freeze_utc_declared="2026-11-10T09:00:00Z")
+        self.assertTrue(any("freeze time declared, not shown by git (rebased)" in w for w in warn), warn)
+        for ok in ("2026-11-10T10:00:00Z", "2026-11-10T11:30:00+00:00", ""):
+            _, warn, _ = self.check(freeze_utc_declared=ok)
+            self.assertFalse(any("not shown by git" in w for w in warn), (ok, warn))
+        bad, _, _ = self.check(freeze_utc_declared="yesterday")
+        self.assertTrue(any("not an ISO time" in b for b in bad))
 
     def test_same_actor_as_predictor_and_scorer_is_a_violation(self):
         bad, _, _ = self.check(scorer="sci")
@@ -181,6 +196,89 @@ class CheckSeparatesWhatGitProves(Fixture):
         self.assertTrue(any("not found" in b for b in bad))
         bad, _, _ = self.check(status="great", kind="guess")
         self.assertEqual(len(bad), 2)
+
+
+class OutcomeDigest(Fixture):
+    def test_a_committed_outcome_needs_its_digest_recorded_and_equal(self):
+        bad, _, _ = self.check(outcome_sha256="")
+        self.assertTrue(any("digest (outcome_sha256) is not recorded" in b for b in bad))
+        bad, _, _ = self.check(outcome_sha256="0" * 64)
+        self.assertTrue(any("outcome_sha256 does not match" in b for b in bad))
+        self.assertEqual(self.check()[0], [])
+
+
+class Guard(Fixture):
+    """The outcome table to be opened is a NEW file (`sealed.tsv`), created after the guard says so."""
+    TABLE = f"{UNDER}/sealed.tsv"
+
+    def setUp(self):
+        super().setUp()
+        self.rule = commit(self.root, f"{UNDER}/rule.json", "{}\n", "rule", "2026-11-10T09:00:00+00:00")
+        self.later = commit(self.root, f"{UNDER}/other.md", "later\n", "later", "2026-11-11T10:00:00+00:00")
+        self.row.update(outcome_ref=self.TABLE, outcome_commit="", outcome_sha256="", blindness="")
+
+    def guard(self, rows=None, requires=(f"{UNDER}/rule.json",), table=None):
+        ledger = self.write_ledger(self.row_list(rows))
+        if table is not None:
+            (self.root / self.TABLE).write_text(table)
+        return pl.guard(self.root, ledger, self.TABLE, list(requires), self.root / RECEIPTS)
+
+    def row_list(self, rows):
+        return [self.row] if rows is None else rows
+
+    def test_may_open_when_freeze_rule_and_files_are_committed(self):
+        ok, lines = self.guard()
+        self.assertTrue(ok, lines)
+        self.assertTrue(lines[0].startswith("OUTCOME_MAY_OPEN: " + self.TABLE))
+        self.assertIn(self.freeze[:12], lines[0])
+        self.assertIn(f"{UNDER}/rule.json", lines[0])
+
+    def test_refused_when_no_row_names_the_table(self):
+        ok, lines = self.guard(rows=[dict(self.row, outcome_ref=f"{UNDER}/elsewhere.tsv")])
+        self.assertFalse(ok)
+        self.assertIn("nothing was frozen against it", lines[0])
+
+    def test_refused_when_the_freeze_commit_is_unknown_or_head_or_unrecorded(self):
+        self.assertFalse(self.guard(rows=[dict(self.row, freeze_commit="1" * 40)])[0])
+        head = run(self.root, "rev-parse", "HEAD")
+        ok, lines = self.guard(rows=[dict(self.row, freeze_commit=head, statement_ref=f"{UNDER}/other.md",
+                                           freeze_blob_sha256=pl.sha256(b"later\n"))])
+        self.assertFalse(ok)
+        self.assertTrue(any("freeze commit is HEAD itself" in l for l in lines), lines)
+        ok, lines = self.guard(rows=[dict(self.row, freeze_blob_sha256="")])
+        self.assertTrue(any("freeze_blob_sha256 is not recorded" in l for l in lines), lines)
+
+    def test_refused_when_a_required_file_is_missing_dirty_or_pinned_wrong(self):
+        self.assertTrue(any("not committed in HEAD" in l for l in self.guard(requires=[f"{UNDER}/nope.md"])[1]))
+        (self.root / f"{UNDER}/rule.json").write_text("{\"changed\": 1}\n")
+        self.assertTrue(any("uncommitted change" in l for l in self.guard()[1]))
+        run(self.root, "checkout", "--", f"{UNDER}/rule.json")
+        ok, lines = self.guard(requires=[f"{UNDER}/rule.json=" + "0" * 64])
+        self.assertTrue(any("not the pinned" in l for l in lines), lines)
+        good = pl.sha256(b"{}\n")
+        self.assertTrue(self.guard(requires=[f"{UNDER}/rule.json={good}"])[0])
+
+    def test_an_existing_table_must_be_the_sealed_one(self):
+        ok, lines = self.guard(table="x\t1\n")
+        self.assertFalse(ok)
+        self.assertTrue(any("digest is not recorded" in l for l in lines), lines)
+        sealed = dict(self.row, outcome_sha256=pl.sha256(b"x\t1\n"))
+        self.assertTrue(self.guard(rows=[sealed], table="x\t1\n")[0])
+        ok, lines = self.guard(rows=[sealed], table="tampered\n")
+        self.assertTrue(any("differs from the sealed digest" in l for l in lines), lines)
+
+    def test_the_cli_prints_the_exact_lines_and_exit_codes(self):
+        ledger = self.write_ledger([self.row])
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            code = pl.main(["--root", str(self.root), "guard", str(ledger), "--outcome", self.TABLE,
+                            "--require", f"{UNDER}/rule.json", "--receipts", RECEIPTS])
+        self.assertEqual((code, out.getvalue().startswith("OUTCOME_MAY_OPEN: ")), (0, True))
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            code = pl.main(["--root", str(self.root), "guard", str(ledger), "--outcome", self.TABLE,
+                            "--require", f"{UNDER}/missing.md", "--receipts", RECEIPTS])
+        self.assertEqual((code, out.getvalue().startswith("OUTCOME_REFUSED: ")), (1, True))
 
 
 class CliExitCodes(Fixture):
