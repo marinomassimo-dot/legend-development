@@ -1,0 +1,2 @@
+# snRNA scenario: tone ratio from 0.40 to 0.96 (below 1 in 12 of 12 cells)
+# bulk scenario: tone ratio from 1.11 to 1.38 (above 1 in every cell: lower Adk alone raises adenosine)
