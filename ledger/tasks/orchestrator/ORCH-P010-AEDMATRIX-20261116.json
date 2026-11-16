@@ -9,19 +9,24 @@
  "BASELINE": "development/main with rule.json v1 (2c170d8ff, sha256 679a6089...); worktree .claude/worktrees/p010c",
  "MANDATE_STATE": "IN_PROGRESS",
  "CURRENT_PACKAGE": {
-  "id": "freeze",
-  "state": "cells, scorer draft, rankings, aggravation hypotheses, null orderings, baselines (i) and (iii), VOI, pre-test, L7 written; freeze commit landing",
+  "id": "after-freeze",
+  "state": "froze at f5b71a3f4 (07:30:22Z, on development/main); generator comparison and ledger rows landing; waiting for IT to seal the outcome tables and the blind extractor, then the second read of its sample",
   "delegate_active": "none"
  },
- "RESUME": "after the freeze: send ADV the freeze commit hash; fill my rows of prediction_ledger.tsv (freeze_commit, freeze_blob_sha256); compare HE's generator output with my draft scorer once it lands; then second-read a sample of the blind extractor's rows (after both freezes and after IT seals and codes the outcome tables)",
+ "RESUME": "when IT/ADV name the extractor's coded rows: second-read a sample against the original reports (after both freezes); meanwhile VOI/L7/pre-test are in the freeze folder",
  "DECISIONS_TAKEN": [
   "2026-11-16: accepted ADV's PRESIDIO-010 (operator-called MEETING, provenance checked in roadmap_current.md line 2026-11-16)",
   "2026-11-16: no outcome table opened; clinical-outcome threads T6 and T10-series excluded; exposure disclosed in README and FREEZE_PREDICTIONS.md",
-  "2026-11-16: units in the form are the nearest of cells/animals/children, the true unit stays in output/cells.tsv"
+  "2026-11-16: units in the form are the nearest of cells/animals/children, the true unit stays in output/cells.tsv",
+  "2026-11-16: froze against rule.json v1 sha256 679a6089 (HE 2c170d8ff) at f5b71a3f4; no outcome table opened",
+  "2026-11-16: official generator agrees with my per-thread sum in 75/75 rows; origin-level collapse exists only in my draft scorer (reported to HE/ADV)"
  ],
  "DELEGATIONS": [],
  "ESCALATIONS": [],
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
- "VERIFICATION_EVIDENCE": []
+ "VERIFICATION_EVIDENCE": [
+  "prediction_ledger.py check: 6 rows, 0 violations",
+  "aed_matrix.py score on the frozen cells, rule pinned: rc 0"
+ ]
 }
