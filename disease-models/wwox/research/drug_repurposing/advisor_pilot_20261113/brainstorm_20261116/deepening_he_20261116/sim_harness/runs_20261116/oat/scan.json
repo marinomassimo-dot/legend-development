@@ -1,0 +1,85 @@
+{
+ "silent_metric": "n_bursts",
+ "silent_below": 5,
+ "fixed": {},
+ "design": "oat",
+ "oat": {
+  "params": [
+   "J_T",
+   "J_N",
+   "J_a",
+   "J_I",
+   "J_tonic",
+   "tau_c",
+   "tau_r",
+   "kappa_r",
+   "sigma"
+  ],
+  "fraction": 0.4
+ },
+ "predictions": [
+  {
+   "id": "S1",
+   "statement": "T-type-like trigger weight -40% lengthens the median interval (replication of the exploratory scan with fresh seeds)",
+   "metric": "isi_median_s",
+   "a": "J_T-40",
+   "b": "base",
+   "expect": "a_gt_b",
+   "min_fraction": 0.8
+  },
+  {
+   "id": "S2",
+   "statement": "NMDAR weight -40% shortens the median duration",
+   "metric": "dur_median_s",
+   "a": "J_N-40",
+   "b": "base",
+   "expect": "a_lt_b",
+   "min_fraction": 0.8
+  },
+  {
+   "id": "S3",
+   "statement": "Tonic GABA-A weight +40% lowers the burst count (near silence)",
+   "metric": "n_bursts",
+   "a": "J_tonic+40",
+   "b": "base",
+   "expect": "a_lt_b",
+   "min_fraction": 0.8
+  },
+  {
+   "id": "S4",
+   "statement": "Noise amplitude -40% lowers the burst count",
+   "metric": "n_bursts",
+   "a": "sigma-40",
+   "b": "base",
+   "expect": "a_lt_b",
+   "min_fraction": 0.8
+  },
+  {
+   "id": "S5",
+   "statement": "Resource depletion rate -40% lengthens the median duration (the duration-only class)",
+   "metric": "dur_median_s",
+   "a": "kappa_r-40",
+   "b": "base",
+   "expect": "a_gt_b",
+   "min_fraction": 0.8
+  },
+  {
+   "id": "S6",
+   "statement": "Chloride extrusion time constant +40% (slower KCC2) raises the burst count",
+   "metric": "n_bursts",
+   "a": "tau_c+40",
+   "b": "base",
+   "expect": "a_gt_b",
+   "min_fraction": 0.8
+  },
+  {
+   "id": "S7",
+   "statement": "Tonic GABA-A weight -40% raises the burst count (a loss of tonic inhibition produces bursting)",
+   "metric": "n_bursts",
+   "a": "J_tonic-40",
+   "b": "base",
+   "expect": "a_gt_b",
+   "min_fraction": 0.8
+  }
+ ]
+}
