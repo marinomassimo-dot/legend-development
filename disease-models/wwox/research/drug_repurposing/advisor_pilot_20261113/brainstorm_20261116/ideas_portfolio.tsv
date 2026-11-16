@@ -1,0 +1,13 @@
+id	title	owner	status	depth	links	last_test
+I1	Two-stage rebound oscillator	SCI	ADVANCE	seed	I6,I7,I11	none yet (dossier due 19:00Z)
+I2	Phenotype-conditional pharmacology (semiology and age)	IT	ADVANCE	chain	I7,I11,I10	per-child re-extraction running; rubric frozen 6e8ef5c9e; analysis A-F pre-declared
+I3	Compensation asymmetry (hippocampus does not burst)	SCI	ADVANCE	seed	I4,PS-12	none yet
+I4	Metabolic, ketone and adenosine axis	HE	ADVANCE	seed	I3,I10	none yet
+I5	PV-axon myelin timing and OPC	ADV	ADVANCE	chain	I9	see deepening_adv_20261116
+I6	Chloride dynamics and activity-dependent GABA	SCI	ADVANCE	seed	I1	none yet
+I7	Critical NMDAR fraction and age window	IT	ADVANCE	model	I1,I2,I11	model table only (critical_fraction_model.py); no knockout share held; experiment-ready design in D5b
+I8	PY-motif competition, WWOX as scaffold	HE	ADVANCE	seed	none	none yet (PPxY scan pending)
+I9	Perineuronal nets and PV maturation	ADV	ADVANCE	chain	I5	see deepening_adv_20261116
+I10	Sleep-wake and thalamocortical dependence	ADV	ADVANCE	chain	I2	see deepening_adv_20261116
+I11a	Co-agonist occupancy (H-C1)	IT	ADVANCE	chain	I7	no held table can reject it; paired slice measurement specified
+I11b	Persistent sodium current (H-C2)	IT	ADVANCE	chain	I1,I2	no held table can reject it; ramp-current measurement specified
