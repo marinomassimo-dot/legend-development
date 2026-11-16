@@ -17,7 +17,8 @@
  "DECISIONS_TAKEN": [
   "2026-11-16: accepted ADV's PRESIDIO-010 (operator-called MEETING, provenance checked in roadmap_current.md line 2026-11-16)",
   "2026-11-16: no outcome table opened; clinical-outcome threads T6 and T10-series excluded; exposure disclosed in README and FREEZE_PREDICTIONS.md",
-  "2026-11-16: units in the form are the nearest of cells/animals/children, the true unit stays in output/cells.tsv"
+  "2026-11-16: units in the form are the nearest of cells/animals/children, the true unit stays in output/cells.tsv",
+  "2026-11-16: IT second read of 25 cells: all six findings accepted (CORRECTIONS_20261116.md); POST-HOC v1.1 run with the official generator: top set unchanged (5 of 15, tie_set_weak); frozen files untouched"
  ],
  "DELEGATIONS": [],
  "ESCALATIONS": [],
