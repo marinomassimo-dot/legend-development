@@ -1,0 +1,23 @@
+{
+ "client": "legend-ppxy-scan/1.0",
+ "files": {
+  "uniprot_human_9606.tsv": {
+   "release": "2026_04",
+   "release_date": "04-November-2026",
+   "rows": 2469,
+   "sha256": "dbea5139e5545f42042cd7fa6746b16c81e734af4b823196b5a6a5fddfef656c"
+  },
+  "uniprot_mouse_10090.tsv": {
+   "release": "2026_04",
+   "release_date": "04-November-2026",
+   "rows": 2052,
+   "sha256": "668ff4f92ba84cc1af2e2f0dda8529643293bd3d4580e1730b48138a26660b02"
+  },
+  "uniprot_wwox_domains.tsv": {
+   "release": "2026_04",
+   "release_date": "04-November-2026",
+   "rows": 2,
+   "sha256": "1d1c05513684215d380c451c613c672e31feecfa7058e18327fb19fab2ebe29c"
+  }
+ }
+}
