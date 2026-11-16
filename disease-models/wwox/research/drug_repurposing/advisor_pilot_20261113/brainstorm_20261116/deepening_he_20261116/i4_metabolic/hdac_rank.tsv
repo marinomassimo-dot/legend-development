@@ -1,0 +1,12 @@
+name	rank_of_256_descending_O_E	O_E	in_bottom_50
+VORINOSTAT	227	-1.256	yes
+PANOBINOSTAT LACTATE	217	-1.076	yes
+BELINOSTAT	256	-2.744	yes
+QUISINOSTAT	241	-1.636	yes
+MOCETINOSTAT	223	-1.209	yes
+GIVINOSTAT	23	1.219	no
+ENTINOSTAT	104	0.217	no
+VALPROIC ACID	228	-1.277	yes
+# absent from the table: ABEXINOSTAT
+# 5 of 7 HDAC-inhibitor families are in the bottom 50 of 256; hypergeometric P(at least 5 of 7 in a random bottom-50) = 0.0037
+# families are drug classes, not independent draws (one table, one module): the tail is descriptive
