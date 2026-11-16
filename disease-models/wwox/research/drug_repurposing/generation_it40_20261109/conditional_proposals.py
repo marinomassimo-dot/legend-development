@@ -21,6 +21,21 @@ INVS = ("INV-05", "INV-18")
 FIELDS = ["corrections_it40", "proposal_id", "kind", "need_id", "inv_id", "cards", "status", "starting_observation_and_chain", "context", "competing_explanations", "premise_and_action",
           "compound_or_probe_named_by_package", "catalogue_by_action", "cell_context", "source_and_limits", "expected_result_by_explanation", "decision_measure", "experiments", "unresolved_refs", "nomination", "design_rows_same_investigation"]
 
+# HE65 H3: a hypothesis row whose optional `sign` cell says `aggravation` is a mechanism label counted apart, never a proposal to use the compound it names and never netted against a match.
+AGGRAVATION_NOMINATION = "AGGRAVATION HYPOTHESIS (mechanism label, counted apart and never netted against a match): not a proposal to use any compound, no ranking, no claim"
+AGGRAVATION_DIRECTION = "aggravation hypothesis (the package's sign cell); not a therapeutic direction"
+
+
+def as_aggravation(row: dict, sign: str, package_row: bool = False) -> dict:
+    """The proposal row, unchanged unless the package said `aggravation`; then its own kind, nomination and direction (the other signs change nothing)."""
+    if sign != "aggravation":
+        return row
+    row = dict(row, nomination=AGGRAVATION_NOMINATION, kind="aggravation_hypothesis_from_package" if package_row else "aggravation_hypothesis")
+    if package_row:
+        row["direction_stated"] = AGGRAVATION_DIRECTION
+    return row
+
+
 CORR_ALL = (" Predictions in the arms are INFERENZA from the hypothesis definitions; no cell is a measured result.")
 CORRECTIONS = {
  "MH1": "Independent recomputation (IT40 verifier) gives standard-error multiples for the flat-tau argument of about 1.1 to 1.4, not the 3.9 and 2.9 quoted in the chain; read the chain's multiples as not reproduced. The argument also assumes a single compartment and a protocol that does not shorten the apparent tau.",
@@ -83,12 +98,12 @@ def rows(link=True):
                     if cols: expected.append(f"{a['arm_id']}: " + " | ".join(f"{k.split('_')[0]}={v}" for k, v in cols.items()) + " | arms do not separate: " + a.get("same_prediction_note_arm_does_not_separate", "") + " | label: " + a.get("prediction_label", ""))
                 if not e["arms"]: expected.append(f"{e['row']['exp_id']}: " + e["row"]["what_each_outcome_would_mean"])
             nominated = hyp.get("compound_or_probe", "")
-            out.append(dict(corrections_it40=CORRECTIONS.get(hid, "") + CORR_ALL, proposal_id="CP-" + hid, kind="conditional_physiological_hypothesis", need_id=h["need_id"], inv_id=inv, cards=";".join(h["card_ids"]) if isinstance(h["card_ids"], list) else h["card_ids"],
+            out.append(as_aggravation(dict(corrections_it40=CORRECTIONS.get(hid, "") + CORR_ALL, proposal_id="CP-" + hid, kind="conditional_physiological_hypothesis", need_id=h["need_id"], inv_id=inv, cards=";".join(h["card_ids"]) if isinstance(h["card_ids"], list) else h["card_ids"],
                 status=hyp["status"], starting_observation_and_chain=hyp["chain"], context=hyp["context"], competing_explanations=alts or hyp["competing_explanation"],
                 premise_and_action=hyp["pharmacological_action"], compound_or_probe_named_by_package=nominated, catalogue_by_action=catalogue_summary(RELATIONS[hid], ba), cell_context=cell_context_text(RELATIONS[hid]),
                 source_and_limits=hyp["counter_evidence"] + " || weakening: " + hyp["weakening_result"], expected_result_by_explanation=" ;; ".join(expected) if link else "",
                 decision_measure=hyp["what_would_change_the_decision"], experiments=" ;; ".join(exps), unresolved_refs=",".join(h["unresolved_refs"]),
-                nomination="ABSTAIN" if nominated.lower().startswith(("none", "no ")) else "NAMED_BY_PACKAGE_ONLY (no ranking, no claim)", design_rows_same_investigation=design_pointer(inv, pk) if link else ""))
+                nomination="ABSTAIN" if nominated.lower().startswith(("none", "no ")) else "NAMED_BY_PACKAGE_ONLY (no ranking, no claim)", design_rows_same_investigation=design_pointer(inv, pk) if link else ""), h["sign"]))
     return out
 
 
@@ -436,9 +451,9 @@ def package_rows():
                 prem = cells(r, m["premise"])
                 dcol, dpre = m.get("dropped", (None, None))
                 dropped = bool(dcol and str(r.get(dcol, "")).strip().lower().startswith(dpre))        # the package's own label, read at the start of its own status cell and declared in the mapping; no other word is read
-                unmapped = [c for c in x["columns"] if c not in used and c not in ("id", "hyp_id", "hypothesis_id", m["title"]) and r.get(c)]
+                unmapped = [c for c in x["columns"] if c not in used and c not in ("id", "hyp_id", "hypothesis_id", "sign", m["title"]) and r.get(c)]   # `sign` is read as the sign (HE65 H3), not left as an unmapped cell
                 symbols = (m.get("symbols_by_key") or {}).get(x["key"]) or m.get("symbols") or (rel.get(m["relation_ids"][0], []) if m["relation_ids"] else [])
-                out.append(dict(corrections_it40="", proposal_id="CP-" + x["id"], kind="package_row_dropped_by_the_package" if dropped else "conditional_hypothesis_from_package", need_id="", inv_id=inv, cards="", status="exploratory (IPOTESI); the package row is not an approval",
+                out.append(as_aggravation(dict(corrections_it40="", proposal_id="CP-" + x["id"], kind="package_row_dropped_by_the_package" if dropped else "conditional_hypothesis_from_package", need_id="", inv_id=inv, cards="", status="exploratory (IPOTESI); the package row is not an approval",
                                 starting_observation_and_chain=(cells(r, m["observation"]) or "not stated by the package as an observation") + " [source: " + x["source_ref"] + "]", context=cells(r, m["context"]) or "not stated by the package",
                                 competing_explanations=cells(r, m.get("competing", [])) + (" || " + m.get("rivals_note", "other rows of the same package (the package does not classify them as rivals, complementary or compatible)") + ": " + rivals if rivals else ""),
                                 premise_and_action="relation: " + cells(r, m["relation"]) + " || action: " + action + " || unresolved premise: " + prem,
@@ -450,7 +465,7 @@ def package_rows():
                                 design_rows_same_investigation=("dropped by the package: the investigation-level list of design rows is not repeated for a row nobody proposes" if dropped else design_pointer(inv, pk)),
                                 package_ref=x["id"] + " @ " + x["source_ref"], direction_stated="none (the package states no therapeutic direction)", unmapped_cells=",".join(unmapped), package_title=r.get(m["title"], ""), reopen_or_abandon=cells(r, m.get("reopen", [])) or m.get("reopen_missing", "not stated by the package"), recorded_support=cells(r, m.get("support", [])),
                                 design_join=design_join(pkg, x["key"], design_all, r, m) if m.get("adv006") else "",
-                                lever_attachments=lever_attachments(pkg, x["key"], r, dict(m, _levers={y["key"]: y["row"] for y in rws}), design_all) if m.get("attach") else ""))
+                                lever_attachments=lever_attachments(pkg, x["key"], r, dict(m, _levers={y["key"]: y["row"] for y in rws}), design_all) if m.get("attach") else ""), x["sign"], package_row=True))
     return out, seen_unmapped
 
 

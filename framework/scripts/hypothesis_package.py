@@ -77,6 +77,7 @@ LINK_FIELDS = ("hyp_id", "kind", "need_id", "inv_id", "card_ids", "link_state", 
 LINK_STATES = ("PROPOSED_NOT_APPLIED", "CARRIED_IN_TEXT")
 PROP_RELATIONS = ("mechanism", "other_route", "context")   # relation of what a proposition measures to the mechanism the comparison tests
 PROP_DIRECTIONS = ("supports", "opposes", "null", "mixed", "not_applicable")  # direction of the measured result for the proposal the row serves; null is a measured null result, not_applicable says the question does not arise
+HYP_SIGNS = ("match", "neutral", "aggravation", "unknown")   # optional `sign` cell of a hypothesis row (HE65 H3): an aggravation hypothesis is a sign of its own, counted apart from a match and never netted against it
 UNCLASSIFIED = "unclassified"
 INV_TABLES = ("investigations_it20.tsv", "investigations.tsv")
 INV_DIR = DR / "ranking_it8_p9_20261029"
@@ -323,6 +324,17 @@ def prop_facets(row: dict) -> dict:
     return out
 
 
+def hyp_sign(row: dict) -> str:
+    """The optional `sign` cell of a hypothesis row, as written: a vocabulary value, `unclassified` (blank or no such column: the author said nothing) or
+    `unrecognised:<value>` (never mapped to a near word). Read from the cell only; the statement text is not consulted. `aggravation` is not `neutral` and not `unknown`."""
+    raw = (row.get("sign") or "").strip()
+    return UNCLASSIFIED if not raw else raw if raw in HYP_SIGNS else f"unrecognised:{raw}"
+
+
+def _sign_errors(where: str, hyps: dict) -> list[str]:
+    return [f"{where}: hypothesis {k} sign {v.split(':', 1)[1]!r} is not in the vocabulary {HYP_SIGNS}" for k, r in hyps.items() if (v := hyp_sign(r)).startswith("unrecognised:")]
+
+
 def validate(pkg: dict, needs: set[str] | None = None, invs: dict | None = None, cards: Path | None = None) -> list[str]:
     needs = _need_ids() if needs is None else needs
     invs = _inv_rows() if invs is None else invs
@@ -358,7 +370,9 @@ def validate(pkg: dict, needs: set[str] | None = None, invs: dict | None = None,
         if pkg.get("inv_id") not in invs:
             errs.append(f"{w}: manifest inv_id {pkg.get('inv_id')!r} not in the investigations table")
         errs += [f"{w}: key {k!r} appears more than once ({pkg['key_column']}); the later row would hide the earlier" for k in dict.fromkeys(pkg["duplicates"])]
+        errs += _sign_errors(w, pkg["hyps"])
         return errs
+    errs += _sign_errors(f"{pkg['dir'].parent.name} hypotheses", pkg["hyps"])
     cols = set(_matrix_columns(pkg).values())
     for a, c in alt_columns(pkg).items():
         if c not in cols:
@@ -467,7 +481,7 @@ def record_for(pkgs: list[dict], inv_id: str) -> dict:
             hyps.append({
                 "hyp_id": l["hyp_id"], "package": pkg["dir"].parent.name, "kind": l["kind"], "gene_arc": False,
                 "need_id": l["need_id"], "card_ids": [c for c in l["card_ids"].split(";") if c],
-                "link_state": l["link_state"], "hypothesis": h,
+                "link_state": l["link_state"], "hypothesis": h, "sign": hyp_sign(h),
                 "alternatives": [alts[x] for x in direct],
                 "alternatives_via_matrix_column": [alts[x] for x in via],
                 "other_hypotheses_cited": [x for x in ids if x in pkg["hyps"] and x != l["hyp_id"]],
@@ -560,7 +574,7 @@ def hypotheses_for(pkgs: list[dict], inv_id: str) -> dict:
         sources.append({"package": name, "state": pkg["state"], "key_column": pkg["key_column"], "rows": len(pkg["hyps"])})
         for k, r in pkg["hyps"].items():
             out.append({"id": f"{name}::{k}", "key": k, "package": name, "kind": "hypothesis_row_verbatim", "gene_arc": False, "inv_id": inv_id,
-                        "row": r, "columns": pkg["columns"], "key_column": pkg["key_column"], "source_ref": pkg["refs"][k]})
+                        "row": r, "sign": hyp_sign(r), "columns": pkg["columns"], "key_column": pkg["key_column"], "source_ref": pkg["refs"][k]})
     unread = [x for x in sources if x["state"] != "OK"]
     state = "HYPOTHESES_PRESENT" if out else "HYPOTHESES_NOT_READ" if unread else "NO_HYPOTHESES_LISTED"
     return {"inv_id": inv_id, "state": state, "rows": out, "sources": sources}
@@ -569,7 +583,7 @@ def hypotheses_for(pkgs: list[dict], inv_id: str) -> dict:
 def _brief_hyp(rec: dict) -> str:
     L = [f"{rec['inv_id']} hypotheses in their own layout: {rec['state']}"]
     for r in rec["rows"]:
-        L.append(f"  {r['id']} columns={len(r['columns'])} key_column={r['key_column']} at {r['source_ref']}")
+        L.append(f"  {r['id']} columns={len(r['columns'])} key_column={r['key_column']} at {r['source_ref']}" + (f" sign={r['sign']}" if r["sign"] != UNCLASSIFIED else ""))
     return "\n".join(L)
 
 
@@ -585,7 +599,7 @@ def _brief(rec: dict) -> str:
     if rec["state"] == "UNLINKED":
         L.append("  no package states a hypothesis for this investigation; that is not evidence against it or its compounds")
     for h in rec["hypotheses"]:
-        L.append(f"  {h['hyp_id']} [{h['package']}] kind={h['kind']} gene_arc={h['gene_arc']} need={h['need_id']} state={h['link_state']} cards={','.join(h['card_ids']) or '-'}")
+        L.append(f"  {h['hyp_id']} [{h['package']}] kind={h['kind']} gene_arc={h['gene_arc']} need={h['need_id']} state={h['link_state']} cards={','.join(h['card_ids']) or '-'}" + (f" sign={h['sign']}" if h["sign"] != UNCLASSIFIED else ""))
         L.append(f"    status: {h['hypothesis']['status'][:140]}")
         L.append(f"    rivals (alternatives): {', '.join(a['alt_id'] for a in h['alternatives']) or '-'}   via matrix column: {', '.join(a['alt_id'] for a in h['alternatives_via_matrix_column']) or '-'}   other hypotheses: {', '.join(h['other_hypotheses_cited']) or '-'}   matrix columns: {', '.join(h['matrix_columns_cited'].values()) or '-'}")
         by = {}
