@@ -1,0 +1,61 @@
+arm	nucleus_set	n_nuclei	gene	CPM	frac_detected
+ctrl	neuron-like (Snap25)	2320	Fos	3.05	0.0172
+ctrl	neuron-like (Snap25)	2320	Arc	9.4	0.0565
+ctrl	neuron-like (Snap25)	2320	Npas4	6.96	0.0375
+ctrl	neuron-like (Snap25)	2320	Egr1	10.32	0.0599
+ctrl	neuron-like (Snap25)	2320	Slc12a5	88.1	0.4155
+ctrl	neuron-like (Snap25)	2320	Slc12a2	59.1	0.2853
+ctrl	neuron-like (Snap25)	2320	Npy	5.07	0.0315
+ctrl	neuron-like (Snap25)	2320	Npy1r	17.52	0.1095
+ctrl	neuron-like (Snap25)	2320	Npy2r	9.59	0.0582
+ctrl	neuron-like (Snap25)	2320	Npy5r	9.71	0.0625
+ctrl	excitatory-like (Snap25 and Slc17a7)	1221	Fos	2.37	0.0156
+ctrl	excitatory-like (Snap25 and Slc17a7)	1221	Arc	11.09	0.0827
+ctrl	excitatory-like (Snap25 and Slc17a7)	1221	Npas4	7.4	0.0475
+ctrl	excitatory-like (Snap25 and Slc17a7)	1221	Egr1	10.9	0.0745
+ctrl	excitatory-like (Snap25 and Slc17a7)	1221	Slc12a5	93.02	0.5143
+ctrl	excitatory-like (Snap25 and Slc17a7)	1221	Slc12a2	48.55	0.294
+ctrl	excitatory-like (Snap25 and Slc17a7)	1221	Npy	3.03	0.0229
+ctrl	excitatory-like (Snap25 and Slc17a7)	1221	Npy1r	16.69	0.1261
+ctrl	excitatory-like (Snap25 and Slc17a7)	1221	Npy2r	9.48	0.0729
+ctrl	excitatory-like (Snap25 and Slc17a7)	1221	Npy5r	11.66	0.0909
+ctrl	interneuron-like (Snap25 and Gad1/Gad2)	534	Fos	4.62	0.0225
+ctrl	interneuron-like (Snap25 and Gad1/Gad2)	534	Arc	4.62	0.0318
+ctrl	interneuron-like (Snap25 and Gad1/Gad2)	534	Npas4	6.08	0.0356
+ctrl	interneuron-like (Snap25 and Gad1/Gad2)	534	Egr1	8.52	0.0506
+ctrl	interneuron-like (Snap25 and Gad1/Gad2)	534	Slc12a5	93.94	0.4625
+ctrl	interneuron-like (Snap25 and Gad1/Gad2)	534	Slc12a2	59.87	0.3127
+ctrl	interneuron-like (Snap25 and Gad1/Gad2)	534	Npy	10.95	0.0674
+ctrl	interneuron-like (Snap25 and Gad1/Gad2)	534	Npy1r	17.77	0.1236
+ctrl	interneuron-like (Snap25 and Gad1/Gad2)	534	Npy2r	11.44	0.0674
+ctrl	interneuron-like (Snap25 and Gad1/Gad2)	534	Npy5r	8.27	0.0543
+ko	neuron-like (Snap25)	2219	Fos	1.4	0.0095
+ko	neuron-like (Snap25)	2219	Arc	4.68	0.0293
+ko	neuron-like (Snap25)	2219	Npas4	4.68	0.0306
+ko	neuron-like (Snap25)	2219	Egr1	6.15	0.0383
+ko	neuron-like (Snap25)	2219	Slc12a5	89.22	0.3736
+ko	neuron-like (Snap25)	2219	Slc12a2	38.9	0.2014
+ko	neuron-like (Snap25)	2219	Npy	7.75	0.0428
+ko	neuron-like (Snap25)	2219	Npy1r	7.55	0.05
+ko	neuron-like (Snap25)	2219	Npy2r	3.01	0.0198
+ko	neuron-like (Snap25)	2219	Npy5r	4.61	0.0297
+ko	excitatory-like (Snap25 and Slc17a7)	934	Fos	1.08	0.0096
+ko	excitatory-like (Snap25 and Slc17a7)	934	Arc	4.55	0.0375
+ko	excitatory-like (Snap25 and Slc17a7)	934	Npas4	5.63	0.0493
+ko	excitatory-like (Snap25 and Slc17a7)	934	Egr1	5.99	0.0471
+ko	excitatory-like (Snap25 and Slc17a7)	934	Slc12a5	94.48	0.4946
+ko	excitatory-like (Snap25 and Slc17a7)	934	Slc12a2	33.65	0.2313
+ko	excitatory-like (Snap25 and Slc17a7)	934	Npy	4.91	0.0385
+ko	excitatory-like (Snap25 and Slc17a7)	934	Npy1r	6.71	0.0589
+ko	excitatory-like (Snap25 and Slc17a7)	934	Npy2r	3.83	0.0332
+ko	excitatory-like (Snap25 and Slc17a7)	934	Npy5r	4.79	0.0407
+ko	interneuron-like (Snap25 and Gad1/Gad2)	529	Fos	2.08	0.0151
+ko	interneuron-like (Snap25 and Gad1/Gad2)	529	Arc	3.9	0.0265
+ko	interneuron-like (Snap25 and Gad1/Gad2)	529	Npas4	4.42	0.0321
+ko	interneuron-like (Snap25 and Gad1/Gad2)	529	Egr1	5.72	0.0416
+ko	interneuron-like (Snap25 and Gad1/Gad2)	529	Slc12a5	81.63	0.3686
+ko	interneuron-like (Snap25 and Gad1/Gad2)	529	Slc12a2	41.59	0.2155
+ko	interneuron-like (Snap25 and Gad1/Gad2)	529	Npy	12.48	0.0529
+ko	interneuron-like (Snap25 and Gad1/Gad2)	529	Npy1r	6.76	0.0473
+ko	interneuron-like (Snap25 and Gad1/Gad2)	529	Npy2r	2.86	0.0189
+ko	interneuron-like (Snap25 and Gad1/Gad2)	529	Npy5r	6.24	0.0416

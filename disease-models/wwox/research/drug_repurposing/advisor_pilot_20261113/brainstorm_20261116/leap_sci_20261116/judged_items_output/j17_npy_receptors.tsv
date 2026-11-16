@@ -1,0 +1,23 @@
+gene	table	values
+Npy	neuron-deletion C_S	KO 926.35 v control 474.79 TPM; cLFC 1.166
+Npy	neuron-deletion H_N	KO 223.99 v control 138.49 TPM; cLFC 0.960
+Npy	neuron-deletion H_S	KO 536.70 v control 93.69 TPM; cLFC 2.901
+Npy	neuron-deletion H_null	KO 137.49 v control 83.39 TPM; cLFC 0.934
+Npy	P47T CTX	log2FC 1.59; FDR 0.056; WT 3531
+Npy	P47T HPC	log2FC 1.80; FDR 0.32; WT 2054
+Npy	P47T PFC	log2FC 1.12; FDR 0.015; WT 3430
+Npy	P47T CB	log2FC 0.52; FDR 0.12; WT 439
+Npy1r	neuron-deletion	not among |cLFC|>=0.585 rows
+Npy1r	P47T CTX	log2FC -0.96; FDR 0.22; WT 859
+Npy1r	P47T HPC	log2FC -0.21; FDR 0.74; WT 970
+Npy1r	P47T PFC	log2FC -0.94; FDR 0.028; WT 799
+Npy1r	P47T CB	log2FC 0.33; FDR 0.2; WT 55
+Npy2r	neuron-deletion	not among |cLFC|>=0.585 rows
+Npy2r	P47T CTX	log2FC -0.89; FDR 0.047; WT 373
+Npy2r	P47T HPC	log2FC -0.82; FDR 0.45; WT 1901
+Npy2r	P47T PFC	log2FC -0.60; FDR 0.49; WT 131
+Npy5r	neuron-deletion	not among |cLFC|>=0.585 rows
+Npy5r	P47T CTX	log2FC -0.36; FDR 0.45; WT 157
+Npy5r	P47T HPC	log2FC 0.02; FDR 0.99; WT 216
+Npy5r	P47T PFC	log2FC -0.08; FDR 0.81; WT 137
+Npy4r	neuron-deletion	not among |cLFC|>=0.585 rows
