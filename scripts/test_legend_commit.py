@@ -82,6 +82,19 @@ class LegendCommitWrapper(unittest.TestCase):
         self.assertEqual([], staged)
         self.assertEqual(["peer_new.txt"], untracked)
 
+    def test_a_structurally_broken_data_file_is_refused_at_the_commit_not_19_ci_runs_later(self) -> None:
+        """2026-11-16: a TSV row with 2 cells in an 8-column table reached main; the check existed (test_structured_data_integrity) and only the gate ran it."""
+        (self.repo / "ragged.tsv").write_text("a\tb\tc\n1\t2\t3\nonly\ttwo\n", encoding="utf-8")
+        refused = self.run_wrapper("ragged table", "ragged.tsv")
+        self.assertEqual(7, refused.returncode, refused.stderr)
+        self.assertIn("row widths", refused.stderr)
+        self.assertEqual("seed", git(self.repo, "log", "-1", "--format=%s"))                 # nothing was committed
+        (self.repo / "ok.tsv").write_text("a\tb\n1\t2\n", encoding="utf-8")
+        self.assertEqual(0, self.run_wrapper("well-formed table", "ok.tsv").returncode)
+        env = {**os.environ, "LEGEND_STRUCTURE_BECAUSE": "a deliberately ragged third-party fixture"}
+        forced = subprocess.run(["bash", str(WRAPPER), "stated exception", "ragged.tsv"], cwd=self.repo, capture_output=True, text=True, env=env)
+        self.assertEqual(0, forced.returncode, forced.stderr)                                # a stated reason still allows it, as for stale surfaces
+
     def test_nothing_to_commit_is_reported_and_not_an_error(self) -> None:
         result = self.run_wrapper("no change here", "seed.txt")
         self.assertEqual(0, result.returncode, result.stderr)
