@@ -1,0 +1,3 @@
+My last reply was cut off by a safety classifier partway through the "Portfolio updates" section, so it is incomplete. The `## Outcome` block, which the tick reads, did not come through, and neither did the rest of that section. I won't regenerate the withheld part.
+
+The host should treat this assessment as interrupted, not as a finished evaluation. It must not apply any portfolio patch from it, and since there is no `## Outcome`, the tick will not register a decision. Whether the drafted Science assignment goes ahead is the host's call, made from the parts that did arrive.
