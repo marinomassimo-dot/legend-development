@@ -38,7 +38,8 @@
           "evidence": "Implementation landed through task_close on local main at 7935b43e3; published with exact-SHA gate PASS and ls-remote verification at 37b68596ee410fd625d2af56927b58058f93d846. This record closes the implemented change; behavioural effectiveness is still unproven."
         }
       ]
-    }
+    },
+    "MANDATE_STATE": "COMPLETE"
   },
   "DEFAULTS_TAKEN": [
     {
@@ -81,6 +82,11 @@
       "scope": "Receipt chain on the merged tree",
       "receipts": 1970,
       "verdict": "OK"
+    },
+    {
+      "scope": "Metadata-only closure cd33a98fb",
+      "verdict": "INTERRUPTED_BEFORE_PUBLICATION",
+      "reason": "The monitor derives lifecycle from the AUTHORISED_QUEUE block; top-level COMPLETE alone left COMPLETE_PENDING. The own gate was stopped before push, and the state is now set in the canonical queue location. Implementation publication 37b68596e remains verified."
     }
   ],
   "PUBLICATION": {
