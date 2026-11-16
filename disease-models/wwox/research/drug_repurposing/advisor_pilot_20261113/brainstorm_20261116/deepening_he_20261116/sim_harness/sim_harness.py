@@ -9,10 +9,16 @@
 
 Model contract (numpy only, no network): the adapter file defines PARAMS = {name: [default, low, high, note]} and simulate(params: dict, seed: int) -> dict of floats.
 Every other file the adapter imports must be listed with --also so it is frozen too.
-scan.json: {"design": "grid" | "oat" | "lhs", "fixed": {param: value}, "silent_metric": "n_bursts", "silent_below": 5, "predictions": [...]}
+scan.json: {"design": "grid" | "oat" | "lhs" | "bisect", "fixed": {param: value}, "silent_metric": "n_bursts", "silent_below": 5, "predictions": [...]}
   grid: "grid": {param: [values]}            cartesian product, label "p=v|q=w" (sorted by name)
   oat:  "oat": {"params": [..], "fraction": 0.4}   the baseline plus each parameter at (1-f) and (1+f) of its (fixed or default) value; labels "base", "p-40", "p+40"
   lhs:  "lhs": {"params": {p: [low, high]}, "n": 64, "seed": 5}   seeded Latin hypercube, labels "lhs000".."lhs063"
+  bisect: "bisect": {"parameter": p, "bracket": [lo, hi], "iterations": n, "cells": [{"label", "fixed": {param: value}, "observable": metric, "threshold": x, "direction": "crosses below" | "crosses above"}]}
+          per cell: the value of `parameter` at which the median (over seeds, nan ignored) of `observable` crosses `threshold`, found by halving the bracket `iterations` times; the far end of
+          the bracket is evaluated first and a cell that has not crossed there is reported "not_in_bracket" (no halving). Deterministic: the same seeds at every evaluation, so the
+          bytes do not depend on --workers (cells are independent). A median that is nan counts as NOT crossed. results.tsv has one row per cell, evaluation and seed; summary.tsv one row per cell.
+          predictions for bisect (scored on the crossing estimate = midpoint of the final bracket; not_in_bracket = +infinity): {"id","statement","type":"order","cells":[labels smallest first]},
+          {"id","statement","type":"value","cell","op":"gt"|"lt"|"between","x":v[,"y":w]}, {"id","statement","type":"cmp","a":label,"b":label,"op":"lt"} (a's crossing below b's).
 predictions (frozen with the scan, scored only after the run): {"id", "statement", "metric", "a": LABEL, "b": LABEL, "expect": "a_gt_b" | "a_lt_b", "min_fraction": 0.8}
   scored as the fraction of seeds (the same seed at both points, so paired) in which the expectation holds; PASS when that fraction >= min_fraction.
   A seed where either side is nan (a silent point has no interval) counts as NOT holding and is reported in n_undefined_seeds.
@@ -67,6 +73,12 @@ def points_of(scan, params):
             perm = rng.permutation(n); u = (perm + rng.random(n)) / n; lo, hi = spec["params"][nm]; cols.append(lo + u * (hi - lo))
         for i in range(n):
             out.append((f"lhs{i:03d}", {**base, **{nm: float(cols[j][i]) for j, nm in enumerate(names)}}))
+    elif design == "bisect":
+        b = scan["bisect"]
+        for c in b["cells"]:
+            if c.get("direction") not in ("crosses below", "crosses above"):
+                raise SystemExit(f"cell {c.get('label')!r}: direction must be 'crosses below' or 'crosses above'")
+            out.append((c["label"], {**base, **c.get("fixed", {}), b["parameter"]: b["bracket"][1]}))
     else:
         raise SystemExit(f"unknown design {design!r}")
     labels = [l for l, _ in out]
@@ -87,13 +99,21 @@ def freeze(a):
     pts = points_of(scan, mod.PARAMS)
     labels = {l for l, _ in pts}
     for pr in scan.get("predictions", []):
+        if scan["design"] == "bisect":
+            refs = pr["cells"] if pr.get("type") == "order" else [pr[k] for k in ("cell", "a", "b") if k in pr]
+            if pr.get("type") not in ("order", "value", "cmp") or not refs:
+                raise SystemExit(f"prediction {pr.get('id')}: type must be order, value or cmp, with its cells")
+            for k in refs:
+                if k not in labels:
+                    raise SystemExit(f"prediction {pr['id']}: cell {k!r} is not a cell of this scan (cells: {sorted(labels)[:12]} ...)")
+            continue
         for k in ("a", "b"):
             if pr[k] not in labels:
                 raise SystemExit(f"prediction {pr['id']}: label {pr[k]!r} is not a point of this scan (labels: {sorted(labels)[:12]} ...)")
     oob = [l for l, p in pts if any(not (mod.PARAMS[k][1] <= v <= mod.PARAMS[k][2]) for k, v in p.items())]
     fr = {"harness_version": VERSION, "harness_sha256": sha(__file__), "files": {Path(f).name: sha(f) for f in [a.model] + list(a.also or [])}, "adapter": Path(a.model).name,
           "params": {k: v for k, v in sorted(mod.PARAMS.items())}, "scan": scan, "scan_sha256": sha(a.scan), "seeds": a.seeds, "base_seed": a.base_seed,
-          "points": len(pts), "calls": len(pts) * a.seeds, "points_outside_declared_bounds": oob}
+          "points": len(pts), "calls": len(pts) * a.seeds * ((scan["bisect"]["iterations"] + 1) if scan["design"] == "bisect" else 1), "points_outside_declared_bounds": oob}
     (out / "scan.json").write_bytes(Path(a.scan).read_bytes())
     for f in [a.model] + list(a.also or []):
         (out / "model_files").mkdir(exist_ok=True); (out / "model_files" / Path(f).name).write_bytes(Path(f).read_bytes())
@@ -138,10 +158,97 @@ def run_points(out, fr, workers):
     return pts, seeds, res
 
 
+def _bisect_cell(args):
+    """One cell: [(evaluation, strength, seed, result dict)] and the verdict. Pure function of (adapter, cell, seeds): the same seeds at every evaluation."""
+    path, base, cell, bracket, parameter, iterations, seeds = args
+    mod = load_model(path); lo, hi = float(bracket[0]), float(bracket[1]); below = cell["direction"] == "crosses below"; obs = cell["observable"]; thr = float(cell["threshold"])
+    rows = []; ev = [0]
+
+    def crossed(x):
+        res = [(s, mod.simulate({**base, **cell.get("fixed", {}), parameter: x}, int(s))) for s in seeds]
+        for s, r in res:
+            rows.append((ev[0], x, s, r))
+        ev[0] += 1
+        v = sorted(r[obs] for _, r in res if not math.isnan(float(r.get(obs, float("nan")))))
+        if not v:
+            return False, float("nan")
+        med = statistics.median(v)
+        return (med < thr if below else med > thr), med
+    c_hi, m_hi = crossed(hi)
+    if not c_hi:
+        return rows, {"status": "not_in_bracket", "lo": lo, "hi": hi, "estimate": float("inf"), "stat_at_far_end": m_hi}
+    for _ in range(iterations):
+        mid = (lo + hi) / 2.0
+        c, _m = crossed(mid)
+        if c:
+            hi = mid
+        else:
+            lo = mid
+    return rows, {"status": "crossed", "lo": lo, "hi": hi, "estimate": (lo + hi) / 2.0, "stat_at_far_end": m_hi}
+
+
+def run_bisect(out, fr, workers, expect):
+    scan = fr["scan"]; b = scan["bisect"]; seeds = [fr["base_seed"] + i for i in range(fr["seeds"])]
+    mod = load_model(out / "model_files" / fr["adapter"]); base = {k: v[0] for k, v in mod.PARAMS.items()}; base.update(scan.get("fixed", {}))
+    path = str(out / "model_files" / fr["adapter"])
+    jobs = [(path, base, c, b["bracket"], b["parameter"], int(b["iterations"]), seeds) for c in b["cells"]]
+    if workers > 1:
+        with mp.get_context("spawn").Pool(workers) as pool:
+            res = pool.map(_bisect_cell, jobs, chunksize=1)
+    else:
+        res = [_bisect_cell(j) for j in jobs]
+    mk = sorted({k for rows, _ in res for _e, _x, _s, r in rows for k in r if k != "events"})
+    with open(out / "results.tsv", "w", newline="") as fh:
+        w = csv.writer(fh, delimiter="\t", lineterminator="\n"); w.writerow(["point", "evaluation", b["parameter"], "seed"] + mk)
+        for c, (rows, _v) in zip(b["cells"], res):
+            for e, x, s, r in rows:
+                w.writerow([c["label"], e, fmt(x), s] + [fmt(r.get(k, float("nan"))) for k in mk])
+    with open(out / "summary.tsv", "w", newline="") as fh:
+        w = csv.writer(fh, delimiter="\t", lineterminator="\n"); w.writerow(["point", "status", "bracket_lo", "bracket_hi", "estimate", "stat_at_far_end", "evaluations", "calls"])
+        for c, (rows, v) in zip(b["cells"], res):
+            n_ev = len({e for e, _x, _s, _r in rows}); w.writerow([c["label"], v["status"], fmt(v["lo"]), fmt(v["hi"]), fmt(v["estimate"]), fmt(v["stat_at_far_end"]), n_ev, len(rows)])
+
+
+def score_bisect(out, fr):
+    est = {r["point"]: (float(r["estimate"]) if r["status"] == "crossed" else float("inf")) for r in csv.DictReader(open(out / "summary.tsv"), delimiter="\t")}
+    with open(out / "predictions_scored.tsv", "w", newline="") as fh:
+        w = csv.writer(fh, delimiter="\t", lineterminator="\n"); w.writerow(["id", "type", "verdict", "detail", "statement"])
+        for p in fr["scan"].get("predictions", []):
+            t = p["type"]
+            if t == "order":
+                v = [est[c] for c in p["cells"]]; ok = all(x < y for x, y in zip(v, v[1:])); detail = " ".join(f"{c}={fmt(x)}" for c, x in zip(p["cells"], v))
+            elif t == "value":
+                x = est[p["cell"]]; op = p["op"]; ok = (x > p["x"]) if op == "gt" else (x < p["x"]) if op == "lt" else (p["x"] <= x <= p["y"]); detail = f"{p['cell']}={fmt(x)} {op} {p['x']}" + (f"..{p['y']}" if op == "between" else "")
+            else:
+                x, y = est[p["a"]], est[p["b"]]; ok = x < y; detail = f"{p['a']}={fmt(x)} < {p['b']}={fmt(y)}"
+            w.writerow([p["id"], t, "PASS" if ok else "FAIL", detail, p["statement"]])
+    print((out / "predictions_scored.tsv").read_text())
+
+
+def check_bisect(out, fr, label):
+    mod = load_model(out / "model_files" / fr["adapter"]); b = fr["scan"]["bisect"]; cell = [c for c in b["cells"] if c["label"] == label][0]
+    base = {k: v[0] for k, v in mod.PARAMS.items()}; base.update(fr["scan"].get("fixed", {}))
+    rows = [r for r in csv.DictReader(open(out / "results.tsv"), delimiter="\t") if r["point"] == label]; worst = 0.0; identical = True
+    for r in rows:
+        res = mod.simulate({**base, **cell.get("fixed", {}), b["parameter"]: float(r[b["parameter"]])}, int(r["seed"]))
+        for k, v in res.items():
+            if k == "events" or k not in r: continue
+            identical = identical and fmt(v) == r[k]; ref = float(r[k]); worst = max(worst, abs(float(v) - ref) / (abs(ref) or 1.0))
+    print(f"CHECK cell {label}: rows {len(rows)}; byte-identical {identical}; largest relative difference {worst:.3g}")
+    sys.exit(0 if worst < 1e-9 else 1)
+
+
 def run(a):
     out = Path(a.out); fr = verify_freeze(out, a.expect_freeze_sha256)
     if (out / "results.tsv").exists():
         raise SystemExit("results.tsv exists: a run is never overwritten")
+    if fr["scan"]["design"] == "bisect":
+        run_bisect(out, fr, a.workers, a.expect_freeze_sha256); rows = list(csv.DictReader(open(out / "results.tsv"), delimiter="\t"))
+        man = {"freeze_sha256": a.expect_freeze_sha256, "results_sha256": sha(out / "results.tsv"), "summary_sha256": sha(out / "summary.tsv"), "rows": len(rows),
+               "python": sys.version.split()[0], "numpy": __import__("numpy").__version__}
+        (out / "run_manifest.json").write_text(json.dumps(man, indent=1, sort_keys=True) + "\n")
+        (out / "results.sha256").write_text(f"{man['results_sha256']}  results.tsv\n{man['summary_sha256']}  summary.tsv\n")
+        print(f"RUN {man['results_sha256']}  rows {len(rows)}"); return
     pts, seeds, res = run_points(out, fr, a.workers)
     pn = sorted(fr["params"]); mk = sorted({k for r in res for k in r if k != "events"})
     with open(out / "results.tsv", "w", newline="") as fh:
@@ -174,6 +281,8 @@ def score(a):
     out = Path(a.out); fr = json.loads((out / "freeze.json").read_text())
     if not (out / "results.tsv").exists():
         raise SystemExit("no results.tsv: run first")
+    if fr["scan"]["design"] == "bisect":
+        return score_bisect(out, fr)
     rows = list(csv.DictReader(open(out / "results.tsv"), delimiter="\t")); by = {}
     for r in rows:
         by.setdefault(r["point"], {})[int(r["seed"])] = r
@@ -192,6 +301,8 @@ def score(a):
 
 def check(a):
     out = Path(a.out); fr = json.loads((out / "freeze.json").read_text())
+    if fr["scan"]["design"] == "bisect":
+        return check_bisect(out, fr, a.point)
     mod = load_model(out / "model_files" / fr["adapter"]); scan = json.loads((out / "scan.json").read_text())
     pt = dict(points_of(scan, mod.PARAMS))[a.point]; rows = [r for r in csv.DictReader(open(out / "results.tsv"), delimiter="\t") if r["point"] == a.point]
     worst = 0.0; identical = True
