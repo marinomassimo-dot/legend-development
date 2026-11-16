@@ -1,0 +1,34 @@
+pmid	url_or_query	route	result	saved_file	sha256
+7901753	https://molpharm.aspetjournals.org/content/44/4/851.full.pdf	plain GET	"HTTP 403, Cloudflare ""Just a moment"" challenge page; not solved or bypassed"	7901753_aspet.pdf	bc0ad051226ac35c16108b2053270bd6db9e16e1518a62fcb8f5cab00e08c4c2
+7901753	https://doi.org/10.1016/s0026-895x(25)13275-6	plain GET (doi redirect)	HTTP 200, stub page only (2.7 KB), no article text	7901753_doi.html	32ec0576c62156ff7197084cfd754ae8b814987f6887d50814f6fd6b784abce8
+7901753	Europe PMC REST search EXT_ID:7901753	REST	record found, inEPMC=N, no PMCID		
+7901753	PubMed tool get_article_metadata	PubMed tool	abstract only	7901753_pubmed_abstract.txt	d1819fb4dad556becb464f75137a1e2ede09c0cd4d6d45d81ac7540c5d28ee2b
+9400004	https://jpet.aspetjournals.org/content/283/3/1285.full.pdf	plain GET	HTTP 403, Cloudflare challenge page; not solved or bypassed	9400004_aspet.pdf	692faec5ce2dedb7336446c8d9ceee5327eb51b64b01119c841d93d62e406771
+9400004	Europe PMC REST search EXT_ID:9400004	REST	inEPMC=N, no PMCID		
+9400004	PubMed tool get_article_metadata	PubMed tool	abstract only	9400004_pubmed_abstract.txt	05c97d20e71c44e38e7e122bb51c6d6b43274e9c40b63c62702e3e9938b485ca
+8439412	https://www.cell.com/neuron/fulltext/0896-6273(93)90317-K	plain GET	HTTP 403, Cloudflare challenge page; not solved or bypassed	8439412_cell.html	6bd26c80f14ff0955f517f640e6988d31c47e65c8a173c09c65f9b0e73add152
+8439412	Europe PMC REST search EXT_ID:8439412	REST	inEPMC=N, no PMCID		
+8439412	PubMed tool get_article_metadata	PubMed tool	abstract only	8439412_pubmed_abstract.txt	acc39be50ef59f0311ea5cdee3397fb76cd17f4bdabcd3660d4897449fda52ca
+9143010	https://doi.org/10.1016/s0304-3940(97)00176-6	plain GET (doi redirect)	HTTP 200, redirect stub only, no article text	9143010_doi.html	e3b6041c8c2d6e301626043cba8194377c421167ecdc0fffd963c143e0fd4348
+9143010	Europe PMC REST search EXT_ID:9143010	REST	inEPMC=N, no PMCID		
+9143010	PubMed tool get_article_metadata	PubMed tool	abstract only	9143010_pubmed_abstract.txt	d0e361978a468be79b9de98a9a434d319cd2467201335973b5a658fd1ab9d35e
+7715842	https://doi.org/10.1016/0304-3940(94)11201-s	plain GET (doi redirect)	HTTP 200, redirect stub only, no article text	7715842_doi.html	df26dd8d255b354520830acd88b5ff5fc267174157d20e3488a57c2dc53203fb
+7715842	Europe PMC REST search EXT_ID:7715842	REST	inEPMC=N, no PMCID		
+7715842	PubMed tool get_article_metadata	PubMed tool	abstract only	7715842_pubmed_abstract.txt	c1a1d557295f27326c8bec11ac1b106dfbd137885bbca01081a02227e7f852a2
+15545287	https://www.ebi.ac.uk/europepmc/webservices/rest/PMC1575949/fullTextXML	Europe PMC fullTextXML	HTTP 500 Internal Server Error (twice, 3 s apart); error JSON kept	15545287_epmc2.xml	5fdb8dbe9bdb7b0a5ddb1e8b788ffccc1e9e9efae69356e07d703036701d3cdd
+15545287	https://pmc.ncbi.nlm.nih.gov/articles/PMC1575949/	plain GET (PMC article page)	HTTP 200, full text; HTML saved, text extracted with html.parser	15545287_pmcpage.html	c2ec3717022f8e1d852acd024a20c42995fdb11cedbecab4c6689127494d4239
+15545287	(text extracted from the PMC page; locators verified against this file)	derived	used for all locators	15545287_pmc.txt	ce16cebb53d178814c7de7c1e71f930c7e9dd0675b84a945d6e4d47e4f22f93e
+11784784	https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6758663/fullTextXML	Europe PMC fullTextXML	HTTP 500 Internal Server Error (twice); error JSON kept	11784784_epmc2.xml	650703540fe33e628049518b9a30c0beb688400616803f5fe47e7d9d9b1f5239
+11784784	https://pmc.ncbi.nlm.nih.gov/articles/PMC6758663/	plain GET (PMC article page)	HTTP 200, full text; HTML saved	11784784_pmcpage.html	b551e8dafe050ec3f271aace8b498d4eebbf79703d502bdf68a6bab5695e0cea
+11784784	(text extracted from the PMC page; locators verified against this file)	derived	used for all locators	11784784_pmc.txt	88b392f87832541cd023973ed6387ae53b4133f095ab4463c5744affcdce20ce
+19401195	https://doi.org/10.1016/j.ejphar.2009.04.036	plain GET (doi redirect)	HTTP 200, Elsevier redirect stub only	19401195_doi.html	210b8837c0a446470847559ad1bfb990d645a36e4257b2b8dd304833b2908e19
+19401195	https://www.sciencedirect.com/science/article/pii/S0014299909003835	plain GET	HTTP 403 robot/bot-detection page (832 KB); not bypassed	19401195_sd.html	bfba278b2594abf40457aba295123b8210f6eaff670ee358450770c3933d2703
+19401195	PubMed tool get_article_metadata	PubMed tool	abstract only	19401195_pubmed_abstract.txt	b0c69a8bf58713af91663e4f6a8244ca7dee1358a74de60406923652c9513702
+15725949	https://doi.org/10.1097/01.fjc.0000154374.88283.15	plain GET (doi redirect)	HTTP 200, journal page with abstract only; full text not available without access	15725949_doi.html	a7ef6c932cc20926584410f44b81d0f30779249c5132e68831afb47e5cbc6818
+15725949	(text extracted from journal page)	derived	abstract page text	15725949_lww.txt	607e25cd7cef41580478fbf8e8e0ca0038287f9e59e3998966849da7dc288619
+15725949	PubMed tool get_article_metadata	PubMed tool	abstract only	15725949_pubmed_abstract.txt	5b71e232c49f45f6ddec41d78bcb476a35197708cde28c5ac061681ac1334198
+16495758	https://doi.org/10.1097/01.fjc.0000200810.18575.80	plain GET	HTTP 403, Cloudflare challenge page; not solved or bypassed	16495758_doi.html	18eadea814c9f81dc5a71e7cfa23096626d85934b3102653bbc5ec7e08817390
+16495758	PubMed tool get_article_metadata	PubMed tool	abstract only	16495758_pubmed_abstract.txt	36e45b307d127456867454297f4a51e73f2700327c873b6c36a118fad0a3e9d8
+29618508	https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5961032/fullTextXML	Europe PMC fullTextXML	HTTP 200 application/xml (open access, CC BY)	29618508_epmc.xml	3749b968c5114a34994bad71a9e8d7cc2437b0f54b73fb5910f72130651d09fc
+29618508	(text extracted from the XML; locators verified against this file)	derived	used for all locators	29618508_epmc.txt	73162db2fcd201dabc34e11793b177682a0ea0a58988c5da1556013a2c71741c
+B-hERG-efonidipine	PubMed searches: efonidipine AND (hERG OR IKr OR potassium OR QT); efonidipine delayed rectifier; efonidipine/dihydropyridine hERG HEK293	PubMed tool	no efonidipine hERG paper returned; one record (23876554) concerns native Kv in rabbit coronary arteries		
