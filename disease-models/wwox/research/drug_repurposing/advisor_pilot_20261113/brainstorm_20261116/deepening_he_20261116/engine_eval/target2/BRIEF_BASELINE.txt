@@ -1,0 +1,7 @@
+You are generating hypotheses for a research programme on the WWOX gene. Do NOT use any tool: do not read, search or open any file; answer from your own knowledge only.
+
+QUESTION : "In a genetic epilepsy with neurodevelopmental comorbidity (a social and cognitive deficit) in which a first-line anti-seizure drug stops the seizures but leaves the social deficit untouched, propose 10 distinct mechanisms that could explain the dissociation. For each, name the single cell-type or circuit manipulation (genetic or chemogenetic) whose outcome would discriminate it from its nearest rival, and say what it predicts for the seizures AND for the social deficit."
+
+OUTPUT (your final message, nothing else; no preamble): for each of the 10 hypotheses H1..H10, one block with these fields:
+H<n>. Statement (one sentence, a mechanism with a direction) · Evidence you know for or against it (one line; say 'none known' where that is the case) · What the usual reading assumes and this one changes · The single observation that would reject it (what to measure, what result rejects it) · The single discriminating manipulation between this and the nearest rival, with its predicted effect on the seizures and on the social deficit.
+Mechanism level only; no dose, no recommendation to use any drug.

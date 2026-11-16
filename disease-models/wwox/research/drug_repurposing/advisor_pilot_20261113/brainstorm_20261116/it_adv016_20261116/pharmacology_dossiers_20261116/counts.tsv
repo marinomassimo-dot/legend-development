@@ -1,0 +1,14 @@
+question	pmid	status	n_measurement_rows
+A	7715842	abstract_only	1
+A	7901753	abstract_only	4
+A	8439412	abstract_only	1
+A	9143010	abstract_only	1
+A	9400004	abstract_only	1
+B	11784784	fully_read	11
+B	15545287	fully_read	17
+B	16495758	abstract_only	2
+B	19401195	abstract_only	1
+C	29618508	fully_read	8
+ALL			47
+papers_total			11
+fully_read			3
