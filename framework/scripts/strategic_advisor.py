@@ -385,12 +385,13 @@ def recall_prompt(campaign: Path) -> str:
     rel = Path(campaign)
     rel = rel.relative_to(ROOT) if rel.is_absolute() and ROOT in rel.parents else rel
     body = RECALL_PROMPT.format(root=ROOT, campaign=rel)
-    return body.replace(RECALL_MARK, f"{RECALL_MARK} [text {recall_digest(body)}]", 1)
+    canonical = RECALL_PROMPT.format(root="<root>", campaign=rel)           # the tag must not depend on where the checkout sits (2026-11-16: the same text gave two tags with two roots)
+    return body.replace(RECALL_MARK, f"{RECALL_MARK} [text {recall_digest(canonical)}]", 1)
 
 
 def recall_digest(body: str) -> str:
     """2026-11-16: the installed recall had drifted from the canonical text (the sentence about the meeting was missing) and CronList shows only the head of a prompt, so the difference was found by reading the whole job. The tag sits
-    right after the mark, in the part CronList shows: eight hex digits of the text without the tag. Compare the tag of the installed job with the tag `recall` prints; a different tag is a drifted job, replace it (one job only)."""
+    right after the mark, in the part CronList shows: eight hex digits of the text without the tag and with the checkout path replaced by a placeholder, so the same text gives the same tag wherever the checkout sits. Compare the tag of the installed job with the tag `recall` prints; a different tag is a drifted job, replace it (one job only)."""
     return sha256_text(body)[:8]
 
 

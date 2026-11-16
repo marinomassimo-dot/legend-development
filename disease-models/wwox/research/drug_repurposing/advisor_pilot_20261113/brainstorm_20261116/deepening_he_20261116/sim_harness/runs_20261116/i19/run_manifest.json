@@ -1,0 +1,8 @@
+{
+ "freeze_sha256": "a6c2f0169b39d2b6875d2183ae80d021e140058a24df686449715380211c0ac7",
+ "numpy": "2.5.3",
+ "python": "3.12.3",
+ "results_sha256": "72cf55260b218c4656d3fca45897c18762c9a8375b4cd3dbe43dab9619573685",
+ "rows": 480,
+ "summary_sha256": "392a616c3b8c322b02f5d9a148e68a596afeee4a1330bda243aec40a901efb6d"
+}

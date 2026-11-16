@@ -1393,7 +1393,13 @@ class ValueContinuity(Continuous):
         self.assertEqual(text.count(sa.RECALL_MARK), 1)
         tag = re.search(r"\[text ([0-9a-f]{8})\]", text)
         self.assertTrue(tag and text.index(tag.group(0)) < 120, "the digest tag must sit where CronList shows the prompt")
-        self.assertEqual(tag.group(1), sa.recall_digest(text.replace(" " + tag.group(0), "", 1)))           # eight hex digits of the text without the tag
+        self.assertEqual(tag.group(1), sa.recall_digest(text.replace(" " + tag.group(0), "", 1).replace(str(sa.ROOT), "<root>")))      # eight hex digits of the text without the tag, the path as a placeholder
+        saved_root, sa.ROOT = sa.ROOT, Path("/somewhere/else/checkout")
+        try:
+            elsewhere = re.search(r"\[text ([0-9a-f]{8})\]", sa.recall_prompt(self.campaign)).group(1)
+        finally:
+            sa.ROOT = saved_root
+        self.assertEqual(elsewhere, tag.group(1))                                                           # the same text gives the same tag in any checkout (the 2026-11-16 mismatch: 047a03cd against b00417e1)
         drifted = sa.RECALL_PROMPT.replace("The ordinary verdict NONE does not cancel a due meeting. ", "")      # the 2026-11-16 drift: the meeting sentence was missing from the installed job
         self.assertNotEqual(sa.recall_digest(drifted.format(root=sa.ROOT, campaign=self.campaign)), tag.group(1))
 
