@@ -1,4 +1,3 @@
-# Lexicographic order: (1) neuron P7 FPKM >= 2, (2) topology annotated, (3) motif conserved in the human ortholog, (4) shuffle p ascending, (5) more motifs, (6) symbol. No weights. RNA columns are context for a protein-level hypothesis, not a test of it.
 symbol	accession	protein	topology	n_core	motifs	shuffle_p	BH_q	human_ortholog	neuron_P7_FPKM	best_other_class_FPKM	neuron_enriched	P47T_CTX_log2FC	P47T_CTX_FDR	P47T_HPC_log2FC	P17_deletion_rows	matrix_class
 Ldlrad3	A2AR95	Low-density lipoprotein receptor class A domain-containing p	annotated	2	256:PPSY;275:PPPY	0.0015	0.0791	conserved	7.8	48.8	no	-0.26	0.33	-0.32	none among |cLFC|>=0.585	none (outside the matrix)
 Erbb4	Q61527	Receptor tyrosine-protein kinase erbB-4	annotated	3	1032:PPIY;1053:PPAY;1298:PPPY	0.003	0.0791	conserved	7.4	7.4	no	-0.24	0.58	0.08	none among |cLFC|>=0.585	none (outside the matrix)
