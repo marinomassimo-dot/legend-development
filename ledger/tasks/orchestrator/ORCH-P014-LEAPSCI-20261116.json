@@ -1,0 +1,28 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-P014-LEAPSCI-20261116",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "PRESIDIO-014 (ADV presidio, operator MEETING 2026-11-16): leap round, up to 5 new hypotheses from the perspective ion gradients and network dynamics, template, held-data pre-test, origin flags",
+ "START_UTC": "2026-11-16T08:18:00Z",
+ "BASELINE": "development/main 5af8e20c0",
+ "MANDATE_STATE": "IN_PROGRESS",
+ "CURRENT_PACKAGE": {
+  "id": "frozen-in-worktree",
+  "state": "LEAP_SCI.md and pretest written and committed in worktree p014; landing waits for IT's push window to clear; ledger rows P014-H1..H5 after the freeze commit exists",
+  "delegate_active": "none"
+ },
+ "RESUME": "land after IT reports the push window clear; add ledger rows with freeze_commit and blob sha256; then the second read of the extractor sample after 12:00Z",
+ "DECISIONS_TAKEN": [
+  "2026-11-16: generated alone, no IT/HE leap file or baseline output read; held-data scan run before fixing H4 and H5, disclosed in the file; pre-test for those two labelled not independent",
+  "2026-11-16: mechanism-source anchors are title-level (Europe PMC lookup), labelled as such"
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "VERIFICATION_EVIDENCE": [
+  "pretest_leap.py reproduces pretest_leap_sci.tsv from the committed tables"
+ ]
+}

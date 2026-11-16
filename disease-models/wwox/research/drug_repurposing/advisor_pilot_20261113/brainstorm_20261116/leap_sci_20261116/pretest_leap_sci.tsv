@@ -1,0 +1,144 @@
+hypothesis	gene	table	direction	values	centred_log2_ratio	n_or_FDR	flag
+H1 chloride	Slc12a5	neuron-deletion tables	-	not among |cLFC|>=0.585 rows (smaller change or filtered)			
+H1 chloride	Slc12a5	P47T CTX	down	WT norm count 23584	-0.2596	FDR (no sex term) 0.65; n 5 v 5	
+H1 chloride	Slc12a5	P47T HPC	down	WT norm count 20768	-0.1675	FDR (no sex term) 0.57; n 5 v 5	
+H1 chloride	Slc12a5	P47T PFC	down	WT norm count 25192	-0.1216	FDR (no sex term) 0.35; n 5 v 5	
+H1 chloride	Slc12a2	neuron-deletion H_S	down	TPM KO 5.39 v control 12.03	-0.701	n 3 v 2	background-confounded
+H1 chloride	Slc12a2	P47T CTX	down	WT norm count 2841	-0.3648	FDR (no sex term) 0.19; n 5 v 5	
+H1 chloride	Slc12a2	P47T HPC	up	WT norm count 2304	0.0745	FDR (no sex term) 0.72; n 5 v 5	
+H1 chloride	Slc12a2	P47T PFC	down	WT norm count 2085	-0.3282	FDR (no sex term) 0.062; n 5 v 5	
+H1 chloride	Wnk1	neuron-deletion C_S	down	TPM KO 55.39 v control 97.70	-0.611	n 3 v 4	
+H1 chloride	Wnk1	P47T CTX	down	WT norm count 10425	-0.4270	FDR (no sex term) 0.49; n 5 v 5	
+H1 chloride	Wnk1	P47T HPC	down	WT norm count 8987	-0.0129	FDR (no sex term) 0.89; n 5 v 5	
+H1 chloride	Wnk1	P47T PFC	down	WT norm count 8267	-0.0250	FDR (no sex term) 0.76; n 5 v 5	
+H1 chloride	Stk39	neuron-deletion tables	-	not among |cLFC|>=0.585 rows (smaller change or filtered)			
+H1 chloride	Stk39	P47T CTX	up	WT norm count 2897	0.0487	FDR (no sex term) 0.9; n 5 v 5	
+H1 chloride	Stk39	P47T HPC	up	WT norm count 2693	0.1144	FDR (no sex term) 0.53; n 5 v 5	
+H1 chloride	Stk39	P47T PFC	up	WT norm count 3083	0.0452	FDR (no sex term) 0.74; n 5 v 5	
+H1 chloride	Oxsr1	neuron-deletion tables	-	not among |cLFC|>=0.585 rows (smaller change or filtered)			
+H1 chloride	Oxsr1	P47T CTX	down	WT norm count 2610	-0.2646	FDR (no sex term) 0.46; n 5 v 5	
+H1 chloride	Oxsr1	P47T HPC	down	WT norm count 2301	-0.1909	FDR (no sex term) 0.47; n 5 v 5	
+H1 chloride	Oxsr1	P47T PFC	down	WT norm count 2052	-0.2770	FDR (no sex term) 0.18; n 5 v 5	
+H1 chloride	Gabra1	neuron-deletion H_S	down	TPM KO 28.64 v control 67.05	-0.824	n 3 v 2	
+H1 chloride	Gabra1	P47T CTX	down	WT norm count 11518	-0.0489	FDR (no sex term) 0.9; n 5 v 5	
+H1 chloride	Gabra1	P47T HPC	down	WT norm count 8582	-0.0113	FDR (no sex term) 0.89; n 5 v 5	
+H1 chloride	Gabra1	P47T PFC	down	WT norm count 12825	-0.1737	FDR (no sex term) 0.2; n 5 v 5	
+H1 chloride	Gabrb2	neuron-deletion tables	-	not among |cLFC|>=0.585 rows (smaller change or filtered)			
+H1 chloride	Gabrb2	P47T CTX	down	WT norm count 4432	-0.2997	FDR (no sex term) 0.63; n 5 v 5	
+H1 chloride	Gabrb2	P47T HPC	down	WT norm count 3781	-0.0917	FDR (no sex term) 0.73; n 5 v 5	
+H1 chloride	Gabrb2	P47T PFC	down	WT norm count 4575	-0.1835	FDR (no sex term) 0.44; n 5 v 5	
+H1 chloride	Gabrb3	neuron-deletion tables	-	not among |cLFC|>=0.585 rows (smaller change or filtered)			
+H1 chloride	Gabrb3	P47T CTX	down	WT norm count 8771	-0.0072	FDR (no sex term) 0.94; n 5 v 5	
+H1 chloride	Gabrb3	P47T HPC	up	WT norm count 11391	0.0178	FDR (no sex term) 1; n 5 v 5	
+H1 chloride	Gabrb3	P47T PFC	up	WT norm count 8259	0.0727	FDR (no sex term) 0.68; n 5 v 5	
+H1 chloride	Gabrg2	neuron-deletion tables	-	not among |cLFC|>=0.585 rows (smaller change or filtered)			
+H1 chloride	Gabrg2	P47T CTX	up	WT norm count 5829	0.1141	FDR (no sex term) 0.62; n 5 v 5	
+H1 chloride	Gabrg2	P47T HPC	up	WT norm count 6025	0.0563	FDR (no sex term) 0.6; n 5 v 5	
+H1 chloride	Gabrg2	P47T PFC	down	WT norm count 5812	-0.0928	FDR (no sex term) 0.36; n 5 v 5	
+H2 rebound	Cacna1g	neuron-deletion H_N	down	TPM KO 11.53 v control 23.74	-0.743	n 2 v 2	
+H2 rebound	Cacna1g	P47T CTX	up	WT norm count 3359	0.6530	FDR (no sex term) 0.33; n 5 v 5	
+H2 rebound	Cacna1g	P47T HPC	up	WT norm count 2514	0.4223	FDR (no sex term) 0.36; n 5 v 5	
+H2 rebound	Cacna1g	P47T PFC	up	WT norm count 4040	0.6361	FDR (no sex term) 0.012; n 5 v 5	
+H2 rebound	Cacna1h	neuron-deletion tables	-	not among |cLFC|>=0.585 rows (smaller change or filtered)			
+H2 rebound	Cacna1h	P47T CTX	down	WT norm count 3110	-0.3493	FDR (no sex term) 0.83; n 5 v 5	
+H2 rebound	Cacna1h	P47T HPC	down	WT norm count 5516	-0.2114	FDR (no sex term) 0.52; n 5 v 5	
+H2 rebound	Cacna1h	P47T PFC	down	WT norm count 2432	-0.1351	FDR (no sex term) 0.33; n 5 v 5	
+H2 rebound	Cacna1i	neuron-deletion C_S	down	TPM KO 16.82 v control 32.20	-0.714	n 3 v 4	
+H2 rebound	Cacna1i	neuron-deletion H_N	down	TPM KO 13.73 v control 41.68	-1.300	n 2 v 2	background-confounded
+H2 rebound	Cacna1i	neuron-deletion H_S	down	TPM KO 14.02 v control 30.34	-0.697	n 3 v 2	background-confounded
+H2 rebound	Cacna1i	P47T CTX	down	WT norm count 4197	-0.7074	FDR (no sex term) 0.35; n 5 v 5	
+H2 rebound	Cacna1i	P47T HPC	down	WT norm count 2604	-0.4836	FDR (no sex term) 0.44; n 5 v 5	
+H2 rebound	Cacna1i	P47T PFC	down	WT norm count 4516	-0.4855	FDR (no sex term) 0.1; n 5 v 5	
+H2 rebound	Hcn1	neuron-deletion tables	-	not among |cLFC|>=0.585 rows (smaller change or filtered)			
+H2 rebound	Hcn1	P47T CTX	up	WT norm count 2352	0.2665	FDR (no sex term) 0.35; n 5 v 5	
+H2 rebound	Hcn1	P47T HPC	up	WT norm count 2544	0.2453	FDR (no sex term) 0.52; n 5 v 5	
+H2 rebound	Hcn1	P47T PFC	up	WT norm count 2450	0.1305	FDR (no sex term) 0.65; n 5 v 5	
+H2 rebound	Hcn2	neuron-deletion tables	-	not among |cLFC|>=0.585 rows (smaller change or filtered)			
+H2 rebound	Hcn2	P47T CTX	down	WT norm count 10085	-0.2169	FDR (no sex term) 0.76; n 5 v 5	
+H2 rebound	Hcn2	P47T HPC	down	WT norm count 8580	-0.1375	FDR (no sex term) 0.57; n 5 v 5	
+H2 rebound	Hcn2	P47T PFC	down	WT norm count 9306	-0.0156	FDR (no sex term) 0.94; n 5 v 5	
+H2 rebound	Hcn4	neuron-deletion tables	-	not among |cLFC|>=0.585 rows (smaller change or filtered)			
+H2 rebound	Hcn4	P47T CTX	up	WT norm count 360	1.0939	FDR (no sex term) 0.14; n 5 v 5	
+H2 rebound	Hcn4	P47T HPC	up	WT norm count 158	0.6108	FDR (no sex term) 0.39; n 5 v 5	
+H2 rebound	Hcn4	P47T PFC	up	WT norm count 299	1.6542	FDR (no sex term) 0.032; n 5 v 5	
+H3 NMDAR	Grin1	neuron-deletion C_S	up	TPM KO 846.89 v control 563.76	0.789	n 3 v 4	
+H3 NMDAR	Grin1	neuron-deletion H_N	up	TPM KO 398.84 v control 228.60	1.070	n 2 v 2	
+H3 NMDAR	Grin1	P47T CTX	up	WT norm count 21299	0.2105	FDR (no sex term) 0.49; n 5 v 5	
+H3 NMDAR	Grin1	P47T HPC	up	WT norm count 23771	0.0748	FDR (no sex term) 0.93; n 5 v 5	
+H3 NMDAR	Grin1	P47T PFC	up	WT norm count 22985	0.1416	FDR (no sex term) 0.42; n 5 v 5	
+H3 NMDAR	Grin2a	neuron-deletion tables	-	not among |cLFC|>=0.585 rows (smaller change or filtered)			
+H3 NMDAR	Grin2a	P47T CTX	down	WT norm count 5604	-0.1136	FDR (no sex term) 0.98; n 5 v 5	
+H3 NMDAR	Grin2a	P47T HPC	down	WT norm count 10207	-0.2602	FDR (no sex term) 0.56; n 5 v 5	
+H3 NMDAR	Grin2a	P47T PFC	down	WT norm count 6314	-0.0720	FDR (no sex term) 0.79; n 5 v 5	
+H3 NMDAR	Grin2b	neuron-deletion H_S	down	TPM KO 33.07 v control 116.10	-1.407	n 3 v 2	
+H3 NMDAR	Grin2b	P47T CTX	down	WT norm count 12627	-0.1013	FDR (no sex term) 0.97; n 5 v 5	
+H3 NMDAR	Grin2b	P47T HPC	down	WT norm count 15221	-0.1624	FDR (no sex term) 0.71; n 5 v 5	
+H3 NMDAR	Grin2b	P47T PFC	up	WT norm count 12180	0.0194	FDR (no sex term) 0.94; n 5 v 5	
+H3 NMDAR	Grin2c	neuron-deletion C_S	down	TPM KO 13.51 v control 28.59	-0.851	n 3 v 4	
+H3 NMDAR	Grin2c	neuron-deletion H_N	down	TPM KO 5.47 v control 13.18	-0.928	n 2 v 2	
+H3 NMDAR	Grin2c	neuron-deletion H_S	down	TPM KO 5.33 v control 11.48	-0.651	n 3 v 2	
+H3 NMDAR	Grin2c	P47T CTX	down	WT norm count 2819	-0.1411	FDR (no sex term) 0.78; n 5 v 5	
+H3 NMDAR	Grin2c	P47T HPC	down	WT norm count 3362	-0.2086	FDR (no sex term) 0.49; n 5 v 5	
+H3 NMDAR	Grin2c	P47T PFC	up	WT norm count 2407	0.2715	FDR (no sex term) 0.18; n 5 v 5	
+H4 activity-dependent	Fos	neuron-deletion C_S	down	TPM KO 10.97 v control 36.02	-1.468	n 3 v 4	
+H4 activity-dependent	Fos	neuron-deletion H_N	down	TPM KO 3.68 v control 8.14	-0.779	n 2 v 2	
+H4 activity-dependent	Fos	neuron-deletion H_null	down	TPM KO 3.00 v control 6.88	-0.858	n 2 v 3	
+H4 activity-dependent	Fos	P47T CTX	down	WT norm count 1375	-0.3770	FDR (no sex term) 0.91; n 5 v 5	
+H4 activity-dependent	Fos	P47T HPC	up	WT norm count 499	0.6486	FDR (no sex term) 0.84; n 5 v 5	
+H4 activity-dependent	Fos	P47T PFC	down	WT norm count 1305	-0.4771	FDR (no sex term) 0.81; n 5 v 5	
+H4 activity-dependent	Arc	neuron-deletion C_S	down	TPM KO 31.37 v control 194.07	-2.407	n 3 v 4	
+H4 activity-dependent	Arc	neuron-deletion H_N	down	TPM KO 10.42 v control 40.20	-1.631	n 2 v 2	
+H4 activity-dependent	Arc	neuron-deletion H_null	down	TPM KO 4.72 v control 30.91	-2.374	n 2 v 3	
+H4 activity-dependent	Arc	P47T CTX	down	WT norm count 11150	-0.6639	FDR (no sex term) 0.77; n 5 v 5	
+H4 activity-dependent	Arc	P47T HPC	up	WT norm count 5424	0.2438	FDR (no sex term) 0.94; n 5 v 5	
+H4 activity-dependent	Arc	P47T PFC	down	WT norm count 12641	-0.3605	FDR (no sex term) 0.78; n 5 v 5	
+H4 activity-dependent	Npas4	neuron-deletion C_S	down	TPM KO 3.69 v control 7.31	-0.696	n 3 v 4	
+H4 activity-dependent	Npas4	neuron-deletion H_null	down	TPM KO 0.74 v control 1.83	-0.697	n 2 v 3	
+H4 activity-dependent	Npas4	P47T CTX	down	WT norm count 889	-0.0429	FDR (no sex term) 0.99; n 5 v 5	
+H4 activity-dependent	Npas4	P47T HPC	up	WT norm count 305	0.1278	FDR (no sex term) 0.97; n 5 v 5	
+H4 activity-dependent	Npas4	P47T PFC	down	WT norm count 1049	-0.3845	FDR (no sex term) 0.88; n 5 v 5	
+H4 activity-dependent	Egr1	neuron-deletion C_S	down	TPM KO 152.31 v control 354.26	-1.013	n 3 v 4	
+H4 activity-dependent	Egr1	P47T CTX	down	WT norm count 9918	-0.2972	FDR (no sex term) 0.89; n 5 v 5	
+H4 activity-dependent	Egr1	P47T HPC	up	WT norm count 3345	0.6702	FDR (no sex term) 0.76; n 5 v 5	
+H4 activity-dependent	Egr1	P47T PFC	down	WT norm count 11031	-0.0780	FDR (no sex term) 0.93; n 5 v 5	
+H4 activity-dependent	Bdnf	neuron-deletion tables	-	not among |cLFC|>=0.585 rows (smaller change or filtered)			
+H4 activity-dependent	Bdnf	P47T CTX	up	WT norm count 869	2.5940	FDR (no sex term) 0.12; n 5 v 5	
+H4 activity-dependent	Bdnf	P47T HPC	up	WT norm count 1559	1.8889	FDR (no sex term) 0.34; n 5 v 5	
+H4 activity-dependent	Bdnf	P47T PFC	up	WT norm count 859	2.5540	FDR (no sex term) 0.04; n 5 v 5	
+H5 region/NPY	Wwox	neuron-deletion H_N	down	TPM KO 0.21 v control 3.55	-2.237	n 2 v 2	
+H5 region/NPY	Wwox	neuron-deletion H_S	down	TPM KO 0.49 v control 3.37	-1.577	n 3 v 2	
+H5 region/NPY	Wwox	neuron-deletion H_null	down	TPM KO 0.33 v control 3.89	-2.185	n 2 v 3	
+H5 region/NPY	Wwox	P47T CTX	up	WT norm count 864	0.0283	FDR (no sex term) 0.99; n 5 v 5	
+H5 region/NPY	Wwox	P47T HPC	down	WT norm count 672	-0.1648	FDR (no sex term) 0.49; n 5 v 5	
+H5 region/NPY	Wwox	P47T PFC	down	WT norm count 843	-0.1289	FDR (no sex term) 0.4; n 5 v 5	
+H5 region/NPY	Npy	neuron-deletion C_S	up	TPM KO 926.35 v control 474.79	1.166	n 3 v 4	
+H5 region/NPY	Npy	neuron-deletion H_N	up	TPM KO 223.99 v control 138.49	0.960	n 2 v 2	background-confounded
+H5 region/NPY	Npy	neuron-deletion H_S	up	TPM KO 536.70 v control 93.69	2.901	n 3 v 2	background-confounded
+H5 region/NPY	Npy	neuron-deletion H_null	up	TPM KO 137.49 v control 83.39	0.934	n 2 v 3	background-confounded
+H5 region/NPY	Npy	P47T CTX	up	WT norm count 3531	1.5927	FDR (no sex term) 0.056; n 5 v 5	
+H5 region/NPY	Npy	P47T HPC	up	WT norm count 2054	1.7954	FDR (no sex term) 0.32; n 5 v 5	
+H5 region/NPY	Npy	P47T PFC	up	WT norm count 3430	1.1194	FDR (no sex term) 0.015; n 5 v 5	
+H5 region/NPY	Pvalb	neuron-deletion H_N	down	TPM KO 11.57 v control 21.34	-0.587	n 2 v 2	
+H5 region/NPY	Pvalb	neuron-deletion H_S	down	TPM KO 6.48 v control 22.18	-1.312	n 3 v 2	
+H5 region/NPY	Pvalb	neuron-deletion H_null	down	TPM KO 8.47 v control 19.49	-0.940	n 2 v 3	
+H5 region/NPY	Pvalb	P47T CTX	up	WT norm count 2738	0.1254	FDR (no sex term) 0.93; n 5 v 5	
+H5 region/NPY	Pvalb	P47T HPC	down	WT norm count 1506	-0.0379	FDR (no sex term) 0.98; n 5 v 5	
+H5 region/NPY	Pvalb	P47T PFC	up	WT norm count 2330	0.0018	FDR (no sex term) 0.99; n 5 v 5	
+H5 region/NPY	Sst	neuron-deletion C_S	up	TPM KO 1048.39 v control 774.66	0.639	n 3 v 4	
+H5 region/NPY	Sst	P47T CTX	up	WT norm count 10418	0.8357	FDR (no sex term) 0.089; n 5 v 5	
+H5 region/NPY	Sst	P47T HPC	up	WT norm count 8594	0.2481	FDR (no sex term) 0.51; n 5 v 5	
+H5 region/NPY	Sst	P47T PFC	up	WT norm count 8701	0.9436	FDR (no sex term) 0.021; n 5 v 5	
+H5 region/NPY	Gfap	neuron-deletion H_N	up	TPM KO 423.32 v control 171.25	1.571	n 2 v 2	
+H5 region/NPY	Gfap	neuron-deletion H_S	up	TPM KO 1096.26 v control 252.38	2.506	n 3 v 2	
+H5 region/NPY	Gfap	neuron-deletion H_null	up	TPM KO 280.51 v control 178.98	0.863	n 2 v 3	
+H5 region/NPY	Gfap	P47T CTX	up	WT norm count 21855	0.4531	FDR (no sex term) 0.74; n 5 v 5	
+H5 region/NPY	Gfap	P47T HPC	up	WT norm count 56639	1.4444	FDR (no sex term) 0.41; n 5 v 5	
+H5 region/NPY	Gfap	P47T PFC	up	WT norm count 13953	0.5538	FDR (no sex term) 0.53; n 5 v 5	
+H5 region/NPY	Kcnj10	neuron-deletion tables	-	not among |cLFC|>=0.585 rows (smaller change or filtered)			
+H5 region/NPY	Kcnj10	P47T CTX	down	WT norm count 16044	-0.0585	FDR (no sex term) 0.99; n 5 v 5	
+H5 region/NPY	Kcnj10	P47T HPC	up	WT norm count 15754	0.3015	FDR (no sex term) 0.51; n 5 v 5	
+H5 region/NPY	Kcnj10	P47T PFC	up	WT norm count 16327	0.3411	FDR (no sex term) 0.23; n 5 v 5	
+H5 region/NPY	Atp1a2	neuron-deletion H_N	down	TPM KO 93.12 v control 180.75	-0.685	n 2 v 2	
+H5 region/NPY	Atp1a2	P47T CTX	down	WT norm count 47896	-0.2110	FDR (no sex term) 0.61; n 5 v 5	
+H5 region/NPY	Atp1a2	P47T HPC	down	WT norm count 47597	-0.0085	FDR (no sex term) 0.97; n 5 v 5	
+H5 region/NPY	Atp1a2	P47T PFC	up	WT norm count 40807	0.1263	FDR (no sex term) 0.53; n 5 v 5	
