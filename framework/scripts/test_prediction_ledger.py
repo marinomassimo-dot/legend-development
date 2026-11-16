@@ -100,6 +100,10 @@ class CheckSeparatesWhatGitProves(Fixture):
         self.assertEqual((bad, order), ([], "yes"))
         self.assertEqual(warn, [])
 
+    def test_a_statement_ref_with_a_space_instead_of_a_hash_names_the_same_file(self):
+        bad, _, order = self.check(statement_ref=f"{UNDER}/predictions_frozen.md F1")
+        self.assertEqual((bad, order), ([], "yes"))
+
     def test_paper_content_is_labelled(self):
         _, warn, _ = self.check(kind="paper_content")
         self.assertIn("memory of the paper not excluded", warn)
