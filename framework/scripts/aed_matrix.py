@@ -288,10 +288,12 @@ def score_endpoint(rows: list[dict], endpoint: str, rule: dict):
         part = mine if window == POOLED else [r for r in mine if r["age"] == window]
         tag = f"[{endpoint} {window}]"
         if not any(r["sign"] == "match" for r in part):
+            agg_only = class_scores(part, "aggravation")  # aggravation is its own column even where no match exists
             for c in classes:
                 table.append({"endpoint": endpoint, "window": window, "class_id": c, "rank": "null",
                               **{k: "0" for k in ("score_all", "score_specific", "score_drug_by_genotype",
-                                                  "aggravation_score", "match_keys", "score_per_thread_sum")},
+                                                  "match_keys", "score_per_thread_sum")},
+                              "aggravation_score": str(agg_only.get(c, {}).get("score_all", 0)),
                               "rank_per_thread_sum": "null",
                               "neutral_cells": str(sum(r["class_id"] == c and r["sign"] == "neutral" for r in part)),
                               "unknown_cells": str(sum(r["class_id"] == c and r["sign"] == "unknown" for r in part)),
@@ -300,6 +302,9 @@ def score_endpoint(rows: list[dict], endpoint: str, rule: dict):
                               "top_set_label": "not_scorable_null_ordering", "tied_with": ""})
             notes.append(f"{tag} not scorable: no class links to any thread here; frozen as a null ordering "
                          f"(all {len(classes)} classes tied, informativeness 0)")
+            if agg_only:
+                notes.append(f"{tag} aggravation-only window: aggravation is printed in its own column "
+                             "for " + ",".join(sorted(agg_only)) + "; the match columns stay null and nothing is netted")
             continue
         match, agg, sums = class_scores(part, "match"), class_scores(part, "aggravation"), per_thread_sums(part)
         null, why = null_for(part, classes, rule)
