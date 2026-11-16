@@ -1,0 +1,11 @@
+('C1', 'x0.25', 'up', 'up', '+92%', 'right', '~0', '~0', '+5%', 'right')
+('C2', 'x0.85', 'up', 'up', '+55%', 'right', 'down', 'down', '-54%', 'right')
+('C3', 'pam1.0', 'down', 'up (silent)', '', 'wrong', '~0|up', 'n/a', '', 'n/a')
+('C4', 'x0.35', 'up', 'up', '+29%', 'right', 'down', '~0', '-2%', 'wrong')
+('C5', 'x3', 'down', 'down', '-68%', 'right', 'up', '~0', '+11%', 'wrong')
+('C6', 'x1.4', 'up', 'up', '+18%', 'right', '~0', '~0', '-4%', 'right')
+('C7', '1.0', 'up', 'up', '+275%', 'right', '~0', 'down', '-21%', 'wrong')
+('C8', '0.10', 'up', 'up', '+95%', 'right', 'down', 'down', '-48%', 'right')
+('C9', 'x0.7', 'up', 'up', '+603%', 'right', '~0', 'up', '+21%', 'wrong')
+('C10', 'x2', 'up', 'up (silent)', '', 'right', '~0', 'n/a', '', 'n/a')
+right 13 wrong 5 n/a 2

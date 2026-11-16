@@ -1,0 +1,13 @@
+agent	link_acted_on	label_title	setid	boxed_warning_section	boxed_first_200_chars	xml_sha256_16
+bumetanide	NKCC1 (loop-diuretic class)	BUMETANIDE TABLET [SANDOZ INC]	8914d8bf-61b7-4cd2-a8ef-7e1c5df37828	yes	WARNING Bumetanide is a potent diuretic which, if given in excessive amounts, can lead to a profound diuresis with water and electrolyte depletion. Therefore, careful medical supervision is required, 	5d1b616d8a7835b3
+furosemide	NKCC1 (loop-diuretic class)	FUROSEMIDE (FUROSEMIDE) INJECTION [MICRO LABS LIMITED]	2f547f7c-0322-465c-9764-43f955d98ab2	yes	WARNING Furosemide is a potent diuretic which, if given in excessive amounts, can lead to a profound diuresis with water and electrolyte depletion. Therefore, careful medical supervision is required a	7d848cb1f67b7aca
+acetazolamide	carbonic anhydrase (alters HCO3-/Cl- handling)	ACETAZOLAMIDE CAPSULE, EXTENDED RELEASE [CHARTWELL RX, LLC]	e8e48a25-5f6c-4b5a-a5f2-ee87aabea33b	no		c9bdc7db24d4f4d0
+caffeine citrate	adenosine A1/A2A antagonism	CAFFEINE CITRATE SOLUTION [SAGENT PHARMACEUTICALS]	5f38c395-0093-4afd-89ec-f96e5dc0934a	no		154938efe273b3de
+ivabradine	HCN (If) blockade	CORLANOR (IVABRADINE) TABLET, FILM COATED CORLANOR (IVABRADINE) SOLUTION [AMGEN INC]	92018a65-38f6-45f7-91d4-a34921b81d0d	no		d68d29a5df43e1fd
+ganaxolone	neurosteroid GABA-A PAM	ZTALMY (GANAXOLONE) SUSPENSION [IMMEDICA PHARMA US INC]	d91612c4-b03a-4be4-a1ee-6a13e3b83d4e	no		62f427a3774f4572
+vigabatrin	GABA-transaminase inhibition (tonic GABA up)	VIGABATRIN POWDER, FOR SOLUTION [PAR HEALTH USA, LLC]	e7cbc0a5-8c28-4451-9176-b608e228ba66	yes	WARNING: PERMANENT VISION LOSS Vigabatrin can cause permanent bilateral concentric visual field constriction, including tunnel vision that can result in disability. In some cases, vigabatrin also can 	24c9888000a1552b
+tiagabine	GAT-1 (tonic GABA up)	TIAGABINE HYDROCHLORIDE TABLET [NOVADOZ PHARMACEUTICALS LLC]	7c034fe0-cdac-49e1-8e39-592846ea3bec	no		0940efb0cff7415f
+dipyridamole	adenosine uptake (ENT) inhibition	DIPYRIDAMOLE INJECTION [HENRY SCHEIN, INC.]	1a2c0a9a-c637-4485-ad4b-0b6d0b05fa20	no		beafd6ea6adfdc48
+lacosamide	slow sodium-channel inactivation	LACOSAMIDE SOLUTION [BRYANT RANCH PREPACK]	024bca92-cac5-4832-a1ff-c1b3d5994ba0	no		e5a8d3bee13835fa
+ethosuximide	T-type	ETHOSUXIMIDE SOLUTION [MYLAN PHARMACEUTICALS INC.]	19c924c2-f558-4c78-9277-2d7e0df2f505	no		c7ca1806ac20ce0c
+levetiracetam	SV2A (release)	LEVETIRACETAM TABLET, FILM COATED [REMEDYREPACK INC.]	46852061-e59a-4a8c-aba0-ce4c7887f366	no		fed5ed0ba02cf093
