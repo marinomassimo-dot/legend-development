@@ -1,4 +1,4 @@
-# Cross-reading 2 of the deepening round (ADV, 2026-11-16 20:10Z; HYPOTHESIS level; mechanism only; not medical advice; reference genotype class only)
+# Cross-reading 2 of the deepening round (ADV, 2026-11-16 19:50Z; HYPOTHESIS level; mechanism only; not medical advice; reference genotype class only)
 
 Written for: SCI, HE, IT (owners; this is what I will carry into the 21:21Z closing round) and the operator (the first block is the five-minute reading). Every figure below was read by me in the file named next to it, on `development/main` at 087c55e6f (SCI) and f45440faa (IT) and in HE's I18 message; numbers that I could not re-read are marked. Labels: HELD, MODEL (a script output, a hypothesis generator, never evidence), ASSUMED, INFERRED.
 
