@@ -1,0 +1,64 @@
+endpoint	window	single_input_change	top_set_changes	new_top_set	new_top_score	partner_direction_also_changes
+seizure	P13-P15	link T1-sodium-channel directness 1->0	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; valproate-type	9	1
+seizure	P13-P15	link T1-sodium-channel directness 1->2	1	sodium-channel	12	1
+seizure	P13-P15	link T1-SV2A directness 1->0	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T1-SV2A directness 1->2	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T1-AMPA antagonists directness 2->1	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T1-AMPA antagonists directness 2->3	1	AMPA antagonists; GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T1-NMDAR pore blockers directness 3->2	1	GABA-A PAM (non-benzodiazepine); benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T1-GluN2B NAMs directness 2->1	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T1-GluN2B NAMs directness 2->3	1	GABA-A PAM (non-benzodiazepine); GluN2B NAMs; NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T1-carbonic-anhydrase/multi-target directness 1->0	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T1-carbonic-anhydrase/multi-target directness 1->2	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; carbonic-anhydrase/multi-target; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T1-valproate-type directness 1->0	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel	9	1
+seizure	P13-P15	link T1-valproate-type directness 1->2	1	valproate-type	12	1
+seizure	P13-P15	link T2-GABA-A PAM (non-benzodiazepine) directness 3->2	1	NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T2-benzodiazepines directness 3->2	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T2-GABA-AT/GAT directness 2->1	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T2-GABA-AT/GAT directness 2->3	1	GABA-A PAM (non-benzodiazepine); GABA-AT/GAT; NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T2-valproate-type directness 1->0	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel	9	1
+seizure	P13-P15	link T2-valproate-type directness 1->2	1	valproate-type	12	1
+seizure	P13-P15	link T2-cannabidiol/fenfluramine-type directness 1->0	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T2-cannabidiol/fenfluramine-type directness 1->2	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T13-sodium-channel directness 2->1	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; valproate-type	9	1
+seizure	P13-P15	link T13-sodium-channel directness 2->3	1	sodium-channel	12	1
+seizure	P13-P15	link T13-T-type calcium directness 2->1	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T13-T-type calcium directness 2->3	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; T-type calcium; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T13-Kv7 openers directness 1->0	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T13-Kv7 openers directness 1->2	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T13-carbonic-anhydrase/multi-target directness 1->0	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T13-carbonic-anhydrase/multi-target directness 1->2	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; carbonic-anhydrase/multi-target; sodium-channel; valproate-type	9	0
+seizure	P13-P15	link T13-valproate-type directness 1->0	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel	9	1
+seizure	P13-P15	link T13-valproate-type directness 1->2	1	valproate-type	12	1
+seizure	later/unspecified	link T3-T-type calcium directness 3->2	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T1-sodium-channel directness 1->0	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; valproate-type	9	1
+seizure	later/unspecified	link T1-sodium-channel directness 1->2	1	sodium-channel	12	1
+seizure	later/unspecified	link T1-SV2A directness 1->0	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T1-SV2A directness 1->2	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T1-AMPA antagonists directness 2->1	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T1-AMPA antagonists directness 2->3	1	AMPA antagonists; GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T1-NMDAR pore blockers directness 3->2	1	GABA-A PAM (non-benzodiazepine); benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T1-GluN2B NAMs directness 2->1	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T1-GluN2B NAMs directness 2->3	1	GABA-A PAM (non-benzodiazepine); GluN2B NAMs; NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T1-carbonic-anhydrase/multi-target directness 1->0	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T1-carbonic-anhydrase/multi-target directness 1->2	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; carbonic-anhydrase/multi-target; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T1-valproate-type directness 1->0	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel	9	1
+seizure	later/unspecified	link T1-valproate-type directness 1->2	1	valproate-type	12	1
+seizure	later/unspecified	link T2-GABA-A PAM (non-benzodiazepine) directness 3->2	1	NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T2-benzodiazepines directness 3->2	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T2-GABA-AT/GAT directness 2->1	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T2-GABA-AT/GAT directness 2->3	1	GABA-A PAM (non-benzodiazepine); GABA-AT/GAT; NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T2-valproate-type directness 1->0	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel	9	1
+seizure	later/unspecified	link T2-valproate-type directness 1->2	1	valproate-type	12	1
+seizure	later/unspecified	link T2-cannabidiol/fenfluramine-type directness 1->0	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T2-cannabidiol/fenfluramine-type directness 1->2	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T13-sodium-channel directness 2->1	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; valproate-type	9	1
+seizure	later/unspecified	link T13-sodium-channel directness 2->3	1	sodium-channel	12	1
+seizure	later/unspecified	link T13-T-type calcium directness 2->1	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T13-T-type calcium directness 2->3	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; T-type calcium; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T13-Kv7 openers directness 1->0	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T13-Kv7 openers directness 1->2	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T13-carbonic-anhydrase/multi-target directness 1->0	0	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T13-carbonic-anhydrase/multi-target directness 1->2	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; carbonic-anhydrase/multi-target; sodium-channel; valproate-type	9	0
+seizure	later/unspecified	link T13-valproate-type directness 1->0	1	GABA-A PAM (non-benzodiazepine); NMDAR pore blockers; benzodiazepines; sodium-channel	9	1
+seizure	later/unspecified	link T13-valproate-type directness 1->2	1	valproate-type	12	1

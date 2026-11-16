@@ -1,0 +1,59 @@
+# PRESIDIO-010 (SCI): informed arm of the AED convergence matrix, cells, VOI, pre-test, L7 on paper (2026-11-16)
+
+Non-canonical working note. Not medical advice; no dose, schedule, route or recommendation to use any agent. Every agent class below is a mechanism label for a matching exercise; BLOCK-1 triage applies before any candidate row. Reference genotype class only. Predictive capacity of this note: none until scored (see `FREEZE_PREDICTIONS.md`). DATO = stated in a held file (locator in `output/cells.tsv`); INFERENZA = my reading; background pharmacology (class targets, PTZ profile) = general knowledge, NOT a held-file locator, and is labelled so.
+
+Rule v1 is the plan's (`advisor_pilot_20261113/brainstorm_20261116/PLAN_8H.md`, section "Rule v1"). `build_cells.py` is my draft scorer, used only to produce the table and the sensitivity runs; HE's `aed_matrix.py` and `rule.json` are the scorer of record once their hash exists, and my cells convert to its form.
+
+## Answer first
+1. **At P13-P15, seizure endpoint, the matrix cannot separate five classes.** NMDAR pore blockers, GABA-A positive modulators (non-benzodiazepine), benzodiazepines, sodium-channel blockers and valproate-type agents tie at 9. The tie is produced by ONE origin: every contributing thread (T1 NMDAR-dependent bursts, T2 reduced inhibition, T13 intrinsic excitability) comes from Breton 2021 (slices P13-P17, one laboratory). With origins collapsed (best axis per origin) the top set is NMDAR pore blockers, GABA-A PAM and benzodiazepines at 9; sodium-channel falls to 6 and valproate-type to 3 (breadth, plan item L6). Under tier plus or minus 1 enumeration the three stay at the top in 70% of combinations (sodium-channel 56%, valproate-type 33%).
+2. **The permutation null is degenerate in this window** (all three contributing threads have tier 3, so any permutation of a class's links gives the same sum; excess over null = 0). The ordering is therefore decided by link directness alone, which is my judgement per cell (`why` column), not by data. This is the weakest point of the informed arm and it is stated before any outcome is opened.
+3. **P6-P8 is not scorable** (no WWOX-system measurement at that age; the only P6-P8 thread, T11, is wild-type barrel cortex and conditional). **The development endpoint is not scorable** (T8, T9, T10 link to no antiseizure class; nothing in the held threads connects any class to a developmental outcome; INV-10 states that no report records a developmental gain after a seizure response). A null ordering is a prediction and is frozen as one.
+4. **The GABA axis is disputed inside the held data** (T14 organoid markers up with receptor components down; T15 PV marker loss; T2 slice inhibition down): their signs are `unknown`, they add nothing to scores, and they are why GABA-A PAM sits at the top only with a stated fragility.
+5. **Aggravation is recorded apart, never netted** (four hypotheses, three of them `unknown` by design).
+
+## What I used and did not use
+Used: the thread files named in `output/cells.tsv` (locator column), the registry records of Breton 2021 (CLAIM 021, PAPER 031) and Steinberg (CLAIM 002), the mechanism intervention map, the INV-05/INV-09/T-type/WO-11/ADV-004 packages, and my own second-read packages. NOT used: any clinical-outcome table (A1, the T6 GABA-AT clinical series, the T10 diet series), IT's census content beyond the plan's own text, INV-10's outcomes. **Disclosed prior exposure** (plan wording kept): I read the summary lines of `aed_compare_it31` (levetiracetam: ineffective in one child, 'controlled on levetiracetam and topiramate' in one, 'valproate and levetiracetam only' in one; perampanel: two children listed; the adult case: no sustained effect for seven drugs together) and INV-10's README (the vigabatrin case E01-E07: no seizures seen at home at 11 and 13 months while video-EEG still recorded events, development stagnated; counts of 6 children with both endpoints, 4 discordant). **Rows seen are scored separately**: the GABA-AT/GAT class on both endpoints, SV2A (levetiracetam), AMPA antagonists (perampanel) and the ketogenic-diet and cannabidiol classes (named in INV-10's perimeter, no outcome read). GABA-AT/GAT's score of 6 follows from T2 by the rule, but I had read the vigabatrin narrative first and cannot show independence from it, so the class is flagged.
+
+## Thread inventory (`output/cells.tsv`, one row per thread x class x endpoint x window)
+| id | thread | tier | origin | note |
+|---|---|---|---|---|
+| T1 | NMDAR-dependent neocortical bursts (36/42 KO v 0/11 WT slices; d-APV abolishes, KO only, 5 slices/3 animals) | 3 | Breton 2021 | no drug-by-genotype test |
+| T2 | reduced spontaneous inhibition, L2/3 | 3 | Breton 2021 | pooled-control caveat; ±1 sensitivity run |
+| T13 | depolarisation, firing, sag, post-inhibitory rebound (my addition; plan rows end at T12) | 3 | Breton 2021 | channels unidentified |
+| T3 | PTZ late phase, ethosuximide, Wwox-null pups | 0 | Cheng 2020 | PTZ-generic only, by plan rule |
+| T4 | lithium acts in all genotypes | 0 | Cheng 2020 | directness 0, by plan rule |
+| T5 | Cav3 route | 1 | T-type package | channel unmeasured |
+| T7 | K channels | 1 | IT44/IT45 | tool pharmacology outside WWOX |
+| T11 | GluN2B share 53% (P6-P8) v 14% (0-34) at P13-P15, WT barrel cortex | 1 | Mierau 2004 | not WWOX, not burst slice |
+| T14, T15 | organoid GABA markers; PV marker loss | 2 | Steinberg; CLAIM 005 | signs unknown (my additions) |
+| T8, T9, T10 | ISR, myelin/CTGF, metabolic | 1, 1, 0 | HE50, ADV-007, INV-07 | development endpoint; no class link |
+| T6 | GABA-AT clinical series | excluded | | outcome source, opened only after both freezes |
+| T12 | sodium-channel aggravation | excluded | | `unknown`; recorded as AH1 |
+Additions to the plan's rows (T13, T14, T15) are my proposals; HE's form should accept or refuse them before the freeze. The two-axis "same origin" rule counts T1, T2 and T13 as three distinct (axis, origin) pairs although they share one preparation; that is why I also report the origin-collapsed score.
+
+## Aggravation hypotheses (frozen apart, never netted)
+| id | class | endpoint/window | sign | basis |
+|---|---|---|---|---|
+| AH1 | sodium-channel | seizure, P13-P15 | unknown | inhibition-deficit logic transferred from Nav1.1 DEEs; needs interneuron firing to depend on Nav (LEAP-1); no held statement |
+| AH2 | NMDAR pore blockers | development, P6-P8 | aggravation | early neonatal NMDAR block caused apoptotic neurodegeneration in rodents (Ikonomidou 1999, abstract only; `nmdar_pharmacology_it6_p9_20261029/README.md` line 169); not WWOX |
+| AH3 | GABA-A PAM | seizure, P6-P8 | unknown | GABA response and chloride gradient unmeasured in WWOX models; GABA may be depolarising early (RC-001) |
+| AH4 | benzodiazepines | seizure, P6-P8 | unknown | same premise as AH3 |
+
+## VOI (A2; `output/voi.tsv`)
+One link at a time, directness plus or minus 1, tied top set recomputed at seizure P13-P15. **Reading, with its artefact named:** the top set is a five-way tie, so almost any single change breaks it (every row of `voi.tsv` with `top_set_changes` = 1 is true for a tie reason); the useful content is which changes move which class.
+* Lowering NMDAR pore blockers (3 to 2) removes them from the top and leaves GABA-A PAM and benzodiazepines. Lowering GABA-A PAM or benzodiazepines (3 to 2) removes them and leaves the pore blockers. **Both outcomes change the ranking, in opposite directions: the measurement is a head-to-head of an NMDAR pore blocker against a GABA-A positive modulator on the same burst readout in null slices.** My earlier L7 arm list lacked the GABA-A arm; the matrix puts it at the top, so it is now an arm.
+* Sodium-channel and valproate-type sit in the top tie only through links of directness 1 to 2 (untested). Raising their link by 1 puts them alone at 12; lowering by 1 drops them out. A sodium-channel blocker arm is therefore a high-information arm AND tests AH1 in the same slices.
+* GluN2B NAM, AMPA, T-type, GABA-AT sit one step below (6): the NAM arm tests the T11 split; its outcome moves it only if the null NAM-sensitive fraction (LEAP-2) is measured.
+
+## Held-data pre-test (A3; `pretest_a3.tsv`)
+For each surviving hypothesis, one rejecting observation, and whether a held table could already reject it. Result: none of the five can be decided from held data; two have a held counter-signal (the disputed GABA axis, the pooled-control caveat on T2). That is a result: the next information is new measurement, not new reading.
+
+## L7 on paper: the discriminating experiment
+Wild-type floor: **Breton 2021 reports 36/42 KO slices bursting against 0/11 wild type** (registry CLAIM 021), so a null-versus-wild-type comparison of burst suppression has no wild-type signal to suppress. Two fixes, both needed: (a) wild-type slices provoked to burst to a matched rate by a trigger chosen before the experiment (INV-05 X3 assumes this and names no trigger; Mg2+ and temperature in the medium must be recorded because the NMDAR block depends on them); (b) a genotype-independent specificity control, the evoked NMDAR current in both genotypes, so each class's burst suppression is expressed per unit of NMDAR current removed (INV-05's own conditional hypothesis).
+* Arms (one mechanism representative per top class; no agent is nominated here): NMDAR pore blocker; GABA-A positive modulator (non-benzodiazepine); sodium-channel blocker (tests AH1); GluN2B NAM; AMPA antagonist; T-type blocker; d-APV as positive control; vehicle. Both genotypes (KO and wild type provoked), P13-P17, one preparation, achieved block verified (INV-05 correction), animals as the unit with slices nested, a mixed model.
+* First measurement: **WO-10 with a genotype contrast**: the NAM-sensitive fraction of the isolated NMDAR current in KO and wild-type pyramidal cells at matched age and region. LEAP-2 predicts a KO fraction of at least 40% against the wild-type interval 0-34% of Mierau 2004 (not the same region or preparation); a KO fraction inside 0-34% rejects LEAP-2. It also fixes the directness of the GluN2B NAM cells.
+* Rejecting results: (i) NAM and pore-blocker suppression-per-current-removed curves coincide, so total NMDAR current limits and GluN2B specificity is rejected; (ii) the AMPA antagonist suppresses KO bursts with the same potency, so NMDA dependence gives no class specificity; (iii) the GABA-A positive modulator suppresses KO bursts but also suppresses provoked wild-type bursts to the same degree, so it is PTZ-generic in this readout (L1) and not WWOX-specific; (iv) the null/wild-type effect ratio of any class lies inside replicate variance.
+* Sizing (NX1 method): n animals per arm from the laboratory's own between-animal variance of burst rate; **not available in held files** (the d-APV arm reports 51 bursts in 5 slices from 3 animals, no window length and no per-slice values). I give no n; the formula is the one in `nx1_sizing_sci_20261115/` and needs the variance from the first run. Stop rule: if the provoked wild-type burst rate cannot be matched, use arm (b) alone and say the wild-type contrast was not obtained.
+
+## Limits
+Tiers and directness are my judgement under the plan's rubric; the ±1 enumeration shows how fragile (top share 70% for the three leaders, 0 for the rest). Class targets and the PTZ profile are background pharmacology. Mouse age windows are not mapped to child age; the `later/unspecified` rows are a declared TRANSFER of P13-P15 (`transfer` = 1) plus the unspecified-age threads. Nothing here is an experiment result, a ranking edit or advice.
