@@ -1,0 +1,34 @@
+agent	signal_type	source_kind	result	quote_start
+memantine	interaction	label_text	FOUND verbatim in label text	Conditions that raise urine pH may decrease the urinary elimination of memantine [fragment
+memantine	other	label_text	not label-checked here	none found (no boxed warning in the label text read; seizures noted as uncommon in 6.1 per
+ketamine	tolerability	label_text	FOUND verbatim in label text	Emergence delirium (postoperative confusional states or agitation) has occurred in approxi
+ketamine	tolerability	label_text	FOUND verbatim in label text	Respiratory depression may occur with overdosage or a rapid rate of administration of KETA
+ketamine	tolerability	abstract	not label-checked here	Adverse reactions are uncommon but may include laryngospasm, hypertension, tachycardia, or
+esketamine	boxed_or_serious	label_heading	FOUND verbatim in label text	WARNING: SEDATION; DISSOCIATION; RESPIRATORY DEPRESSION; ABUSE AND MISUSE; and SUICIDAL TH
+esketamine	abuse_dependence_withdrawal	label_text	FOUND verbatim in label text	SPRAVATO contains esketamine, a Schedule III controlled substance (CIII), and may be subje
+zolpidem	boxed_or_serious	label_text	FOUND verbatim in label text	Discontinue zolpidem tartrate immediately if a patient experiences a complex sleep behavio
+zolpidem	abuse_dependence_withdrawal	label_text	FOUND verbatim in label text	Use of zolpidem tartrate may lead to the development of physical and/or psychological depe
+zolpidem	teratogenic_or_developmental	label_text	FOUND verbatim in label text	Zolpidem crosses the placenta and may produce respiratory depression and sedation in neona
+eszopiclone	boxed_or_serious	label_text	FOUND verbatim in label text	Complex sleep behaviors including sleep-walking, sleep-driving, and engaging in other acti
+eszopiclone	abuse_dependence_withdrawal	label_text	FOUND verbatim in label text	Eszopiclone is a Schedule IV controlled substance under the Controlled Substances Act.
+diazepam	boxed_or_serious	label_text	FOUND verbatim in label text	Concomitant use of benzodiazepines and opioids may result in profound sedation, respirator
+diazepam	abuse_dependence_withdrawal	label_text	FOUND verbatim in label text	Diazepam is a benzodiazepine and a CNS depressant with a potential for abuse and addiction
+diazepam	abuse_dependence_withdrawal	label_text	FOUND verbatim in label text	Diazepam may produce physical dependence from continued therapy.
+clobazam	boxed_or_serious	label_text	FOUND verbatim in label text	Concomitant use of benzodiazepines and opioids may result in profound sedation, respirator
+clobazam	abuse_dependence_withdrawal	label_text	FOUND verbatim in label text	To reduce the risk of withdrawal reactions, use a gradual taper to discontinue ONFI or red
+clobazam	boxed_or_serious	label_text	FOUND verbatim in label text	ONFI should be discontinued at the first sign of rash, unless the rash is clearly not drug
+clonazepam	boxed_or_serious	label_text	FOUND verbatim in label text	Concomitant use of benzodiazepines and opioids may result in profound sedation, respirator
+clonazepam	abuse_dependence_withdrawal	label_text	FOUND verbatim in label text	The continued use of benzodiazepines, including clonazepam, may lead to clinically signifi
+ethosuximide	boxed_or_serious	label_text	FOUND verbatim in label text	Blood dyscrasias, including some with fatal outcome, have been reported to be associated w
+ethosuximide	boxed_or_serious	label_text	FOUND verbatim in label text	Cases of systemic lupus erythematosus have been reported with the use of ethosuximide.
+zonisamide	boxed_or_serious	label_text	FOUND verbatim in label text	Fatalities have occurred, although rarely, as a result of severe reactions to sulfonamides
+zonisamide	tolerability	label_text	FOUND verbatim in label text	Generally, zonisamide-induced metabolic acidosis occurs early in treatment, but it can dev
+carbamazepine	boxed_or_serious	label_heading	FOUND verbatim in label text	SERIOUS AND SOMETIMES FATAL DERMATOLOGIC REACTIONS [boxed heading: SERIOUS DERMATOLOGIC RE
+carbamazepine	teratogenic_or_developmental	label_text	FOUND verbatim in label text	Carbamazepine can cause fetal harm when administered to a pregnant woman.
+carbamazepine	interaction	label_text	FOUND verbatim in label text	CYP3A4 inhibitors inhibit carbamazepine metabolism and can thus increase plasma carbamazep
+lamotrigine	boxed_or_serious	label_text	FOUND verbatim in label text	Lamotrigine tablets can cause serious rashes requiring hospitalization and discontinuation
+lamotrigine	teratogenic_or_developmental	label_text	FOUND verbatim in label text	Pregnancy: Based on animal data may cause fetal harm.
+lamotrigine	interaction	label_text	FOUND verbatim in label text	Valproate increases lamotrigine concentrations more than 2-fold.
+phenytoin	boxed_or_serious	label_text	FOUND verbatim in label text	Extended phenytoin sodium capsules can cause severe cutaneous adverse reactions (SCARs), w
+phenytoin	boxed_or_serious	label_text	FOUND verbatim in label text	Some of these events have been fatal or life-threatening.
+phenytoin	interaction	label_text	FOUND verbatim in label text	Phenytoin is a potent inducer of hepatic drug-metabolizing enzymes.
