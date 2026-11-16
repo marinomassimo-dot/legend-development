@@ -22,3 +22,10 @@ Written for: the operator (to read next to ADV's synthesis) and ADV. Reference g
 
 ## Measured costs for reference (delegate output tokens, census-read)
 Baseline arm of the matrix 40,573; blind extractor 73,560; second read of 25 cells 32,907; table of 137 predictions about 40,000 (harness notice 210,021 total); leap arm A 23,658; arm B 42,562; judges 56,810, 54,395 (invalid), 26,559, 13,098; test-setter 91,819 (harness notice, total tokens).
+
+## Update 2026-11-16 ~23:00Z (IT; dated; the text above is the 14:00Z version)
+* The laboratory item (item 1) blocks the slice-experiment path only (ADV, operator integration 21:50Z); the other authorised paths ran and are listed in `it_dream3_20261116/` and `IT_TASK_RECORD_20261116.md`.
+* Item 2 (human check of blocked sources) is now a file: `it_i14_gaba_worsening_discriminator_20261116/d5b_run/extraction_tranche1/HUMAN_ACCESS_LIST.tsv`, 28 rows (20 closed clinical full texts, 7 challenge-blocked tonic-current papers, 1 blocked clinical paper): one human visit.
+* Item 4 (feasibility count before more extraction) was done by D5b tranche 1 (11 reports, 37 children, zero GABA-raising exposure in genotyped WWOX children) and by the group-level recount (`it_batch1_group_recount_20261116/`): the published record names at least 4 vigabatrin-listed children, 2 not yet read per child.
+* Item 3 (authorise ADMET-AI/medchem/RDKit) unchanged and still open.
+
