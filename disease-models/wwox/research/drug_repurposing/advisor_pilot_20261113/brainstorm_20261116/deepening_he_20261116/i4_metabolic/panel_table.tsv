@@ -1,0 +1,53 @@
+group	gene	neuron_FPKM	astro_FPKM	compartment	P47T_CTX_log2FC(FDR)	P47T_HPC_log2FC(FDR)	P47T_PFC_log2FC(FDR)	P47T_CB_log2FC(FDR)	P47T_CTX_pct_among_astro_enriched	P47T_CTX_pct_among_neuron_enriched	P17_deletion_rows
+adenosine	Adora1	5.3	10.4	shared	+0.29 (0.32)	-0.13 (0.67)	+0.32 (0.45)	-0.12 (0.36)	0.89	0.85	none among |cLFC|>=0.585
+adenosine	Adora2a	1.8	4.3	shared	-0.66 (0.37)	+0.27 (0.68)	+0.65 (0.48)	+0.45 (0.36)	0.01	0.03	none among |cLFC|>=0.585
+adenosine	Adk	12.7	36.5	shared	-0.15 (0.53)	-0.06 (0.98)	-0.18 (0.18)	+0.29 (0.12)	0.38	0.29	none among |cLFC|>=0.585
+adenosine	Slc29a1	22.1	12.2	shared	-0.09 (0.95)	-0.03 (0.91)	+0.16 (0.52)	-0.10 (0.53)	0.49	0.36	H_N:+0.86
+adenosine	Slc29a2	7.1	8.1	shared	-0.16 (0.83)	-0.23 (0.4)	-0.19 (0.13)	-0.35 (0.12)	0.38	0.28	none among |cLFC|>=0.585
+adenosine	Nt5e	0.5	0.3	shared	-0.00 (0.95)	+0.61 (0.34)	+0.28 (0.36)	-0.04 (0.88)	0.63	0.49	none among |cLFC|>=0.585
+adenosine	Entpd1	0.6	4.1	astro-enriched	-0.13 (0.58)	+0.11 (0.77)	+0.15 (0.39)	+0.07 (0.53)	0.42	0.31	C_S:-1.55
+adenosine	Entpd2	5.1	79.4	astro-enriched	-0.02 (0.88)	+0.06 (0.78)	+0.03 (0.98)	+0.03 (0.96)	0.60	0.46	none among |cLFC|>=0.585
+adenosine	Ada	1.0	0.2	neuron-enriched	NA	NA	NA	NA	NA	NA	none among |cLFC|>=0.585
+adenosine	Ak1	23.7	6.9	neuron-enriched	+0.25 (0.1)	+0.20 (0.37)	+0.09 (0.19)	+0.08 (0.47)	0.87	0.80	none among |cLFC|>=0.585
+adenosine	Ak2	13.9	24.8	shared	+0.33 (0.3)	+0.25 (0.43)	+0.21 (0.15)	-0.07 (0.27)	0.91	0.87	none among |cLFC|>=0.585
+ketone_energy	Slc16a1	5.9	19.1	astro-enriched	+0.38 (0.43)	+0.23 (0.58)	+0.24 (0.39)	+0.14 (0.27)	0.93	0.89	H_N:-1.05
+ketone_energy	Slc16a7	4.2	0.2	neuron-enriched	+0.09 (0.74)	+0.03 (0.94)	+0.07 (0.75)	-0.17 (0.38)	0.75	0.62	H_S:-0.61
+ketone_energy	Slc16a3	0.8	0.2	neuron-enriched	+0.93 (0.14)	+1.12 (0.34)	+0.71 (0.098)	NA	0.99	0.99	none among |cLFC|>=0.585
+ketone_energy	Bdh1	24.8	29.7	shared	+0.08 (0.94)	-0.00 (0.91)	-0.06 (0.35)	-0.01 (0.98)	0.74	0.61	none among |cLFC|>=0.585
+ketone_energy	Oxct1	62.8	45.0	shared	-0.10 (0.53)	-0.12 (0.46)	-0.12 (0.16)	+0.25 (0.14)	0.47	0.35	H_N:-1.02
+ketone_energy	Acat1	22.4	12.3	shared	+0.08 (1)	+0.07 (0.55)	+0.02 (0.9)	+0.27 (0.15)	0.74	0.62	none among |cLFC|>=0.585
+ketone_energy	Hmgcs2	0.4	3.3	astro-enriched	-0.40 (0.25)	-0.13 (0.99)	-0.33 (0.72)	+0.89 (0.11)	0.10	0.10	C_S:+1.41
+ketone_energy	Hmgcl	7.3	12.3	shared	+0.03 (0.94)	-0.12 (0.48)	-0.21 (0.24)	+0.22 (0.22)	0.67	0.54	none among |cLFC|>=0.585
+ketone_energy	Hcar2	nan	nan	NA	NA	+1.88 (0.38)	NA	NA	NA	NA	none among |cLFC|>=0.585
+ketone_energy	Kcnj11	5.9	0.4	neuron-enriched	+0.21 (0.45)	-0.25 (0.53)	-0.01 (0.94)	-0.16 (0.39)	0.84	0.75	H_S:-0.68
+ketone_energy	Abcc8	5.5	0.1	neuron-enriched	-0.37 (0.84)	-0.77 (0.37)	-0.46 (0.16)	-0.81 (0.12)	0.12	0.11	C_S:-0.77
+ketone_energy	Cpt1a	11.7	49.1	astro-enriched	-0.04 (0.91)	+0.11 (0.72)	+0.29 (0.077)	+0.08 (0.27)	0.58	0.44	H_N:-0.67
+ketone_energy	Ppargc1a	13.8	12.0	shared	-0.13 (0.64)	+0.08 (0.81)	-0.02 (0.85)	-0.15 (0.48)	0.42	0.31	none among |cLFC|>=0.585
+ketone_energy	Ppara	0.1	3.2	astro-enriched	-0.46 (0.27)	-0.42 (0.47)	-0.01 (0.93)	-0.10 (0.63)	0.06	0.07	H_N:-0.90
+ketone_energy	Prkaa1	4.9	7.3	shared	+0.04 (0.81)	+0.03 (0.77)	+0.03 (0.93)	+0.00 (0.82)	0.69	0.56	none among |cLFC|>=0.585
+ketone_energy	Prkaa2	5.0	3.1	shared	+0.03 (0.89)	+0.07 (0.64)	-0.02 (0.78)	-0.10 (0.62)	0.68	0.54	none among |cLFC|>=0.585
+ketone_energy	Sirt1	7.1	10.5	shared	-0.27 (0.068)	-0.17 (0.39)	-0.21 (0.11)	-0.25 (0.23)	0.22	0.18	none among |cLFC|>=0.585
+ketone_energy	Sirt3	12.9	12.0	shared	-0.06 (0.72)	-0.21 (0.41)	-0.10 (0.31)	+0.39 (0.16)	0.53	0.40	H_S:-0.67
+glycolysis_lactate_module	Hk1	41.4	14.0	shared	+0.44 (0.031)	+0.17 (0.59)	+0.42 (0.036)	-0.17 (0.36)	0.94	0.91	H_N:+0.60
+glycolysis_lactate_module	Hk2	0.4	4.4	astro-enriched	+0.45 (0.31)	+0.82 (0.4)	+0.67 (0.004)	-0.19 (0.36)	0.94	0.92	none among |cLFC|>=0.585
+glycolysis_lactate_module	Ldha	68.4	42.0	shared	+0.64 (0.44)	+0.52 (0.4)	+0.41 (0.1)	+0.31 (0.23)	0.98	0.97	H_N:-0.99
+glycolysis_lactate_module	Ldhb	34.6	61.5	shared	-0.16 (0.43)	-0.14 (0.62)	-0.23 (0.15)	+0.33 (0.17)	0.37	0.28	none among |cLFC|>=0.585
+glycolysis_lactate_module	Slc2a1	11.3	55.6	astro-enriched	+0.23 (0.55)	+0.18 (0.54)	+0.27 (0.16)	-0.17 (0.44)	0.86	0.78	H_null:-0.81
+glycolysis_lactate_module	Slc2a3	32.9	1.7	neuron-enriched	+0.51 (0.13)	+0.29 (0.53)	+0.44 (0.19)	-0.19 (0.14)	0.96	0.94	none among |cLFC|>=0.585
+glycolysis_lactate_module	Pdk1	5.3	6.1	shared	-0.05 (0.92)	-0.10 (0.79)	-0.03 (0.91)	+0.09 (0.34)	0.56	0.42	none among |cLFC|>=0.585
+glycolysis_lactate_module	Pdk2	13.8	17.3	shared	+0.14 (0.71)	+0.11 (0.65)	+0.17 (0.31)	+0.02 (0.88)	0.80	0.69	H_N:+0.69;H_S:+0.78
+glycolysis_lactate_module	Pdk3	4.3	4.6	shared	+0.06 (0.76)	+0.09 (0.65)	+0.14 (0.22)	-0.10 (0.18)	0.71	0.58	none among |cLFC|>=0.585
+glycolysis_lactate_module	Pdk4	2.2	63.7	astro-enriched	-0.63 (0.27)	-0.35 (0.56)	-0.42 (0.069)	+0.22 (0.45)	0.02	0.03	H_null:-0.86
+glycolysis_lactate_module	Pdha1	75.0	49.7	shared	+0.01 (0.89)	+0.04 (0.52)	-0.07 (0.085)	+0.05 (0.48)	0.64	0.51	none among |cLFC|>=0.585
+glycolysis_lactate_module	Pfkp	31.6	8.9	neuron-enriched	+0.35 (0.056)	+0.36 (0.33)	+0.17 (0.11)	-0.20 (0.25)	0.92	0.88	none among |cLFC|>=0.585
+glycolysis_lactate_module	Pkm	nan	nan	NA	+0.34 (0.0093)	+0.15 (0.36)	+0.22 (0.03)	-0.01 (0.89)	0.91	0.88	H_N:+1.13
+glycolysis_lactate_module	Bnip3	19.9	6.7	shared	+0.06 (0.97)	+0.00 (0.87)	-0.21 (0.053)	+0.30 (0.14)	0.71	0.59	none among |cLFC|>=0.585
+glycolysis_lactate_module	Hif1a	27.1	30.8	shared	+0.04 (0.98)	+0.14 (0.65)	+0.05 (0.95)	+0.00 (0.9)	0.69	0.56	none among |cLFC|>=0.585
+glial_reactivity	Gfap	5.9	125.8	astro-enriched	+0.45 (0.74)	+1.44 (0.41)	+0.55 (0.53)	+0.89 (0.14)	0.94	0.92	H_N:+1.57;H_S:+2.51;H_null:+0.86
+glial_reactivity	Vim	11.2	62.6	astro-enriched	+0.17 (0.88)	+1.32 (0.43)	+0.13 (0.79)	-0.05 (0.76)	0.83	0.72	none among |cLFC|>=0.585
+glial_reactivity	Aqp4	11.8	318.7	astro-enriched	-0.16 (0.71)	+0.61 (0.47)	+0.20 (0.66)	+0.09 (0.55)	0.38	0.28	none among |cLFC|>=0.585
+glial_reactivity	S100b	6.3	31.0	astro-enriched	+0.07 (0.99)	+0.20 (0.4)	+0.24 (0.12)	+0.39 (0.16)	0.71	0.59	H_N:-0.97;H_S:-0.66
+glial_reactivity	Aldh1l1	8.0	143.9	astro-enriched	-0.17 (0.33)	-0.01 (0.97)	-0.09 (0.87)	+0.18 (0.35)	0.36	0.27	none among |cLFC|>=0.585
+glial_reactivity	Slc1a2	29.6	731.7	astro-enriched	-0.14 (0.72)	+0.12 (0.77)	+0.29 (0.14)	+0.11 (0.22)	0.41	0.30	none among |cLFC|>=0.585
+glial_reactivity	Slc1a3	45.8	1141.0	astro-enriched	-0.16 (0.63)	-0.05 (0.85)	+0.04 (0.9)	+0.12 (0.4)	0.37	0.27	none among |cLFC|>=0.585
+glial_reactivity	Glul	45.5	736.3	astro-enriched	-0.34 (0.3)	-0.31 (0.55)	-0.03 (0.8)	+0.30 (0.3)	0.14	0.12	none among |cLFC|>=0.585
