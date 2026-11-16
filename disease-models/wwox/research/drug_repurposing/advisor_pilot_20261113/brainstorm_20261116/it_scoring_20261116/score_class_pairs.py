@@ -2,6 +2,10 @@
 """IT scoring of the frozen class-level predictions under RULE_AMENDMENT_2 (+ Addendum 2a).
 Reads only the sealed extraction (sha256 in it_extractor_20261116/sealed/SEAL.sha256). Deterministic; no randomness."""
 import csv, itertools, math, sys
+if "--help" in sys.argv or "-h" in sys.argv:
+    print("usage: score_class_pairs.py [--exclude-acute-diazepam] [--a1-for-coded-four]
+Scores the frozen class-level predictions against the sealed extraction; prints to stdout; writes nothing.")
+    sys.exit(0)
 from pathlib import Path
 HERE = Path(__file__).resolve().parent
 EXT = HERE.parent / "it_extractor_20261116" / "sealed" / "extraction.tsv"
