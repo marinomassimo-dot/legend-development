@@ -42,10 +42,17 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      one line `MERGED <tip> into <old> -> <new> under the landing lock` shows the SHA that changed. Nothing else changes: the clean tree, the expectation, the gate verdict, the HEAD re-read after the gate, the fast-forward push of the gated SHA and the ls-remote confirmation are the same code paths. `--lock-timeout <s>`
      refuses instead of waiting longer than that (default: wait).
 
+  9. The lock alone is not first-come-first-served (waiters poll with LOCK_NB and sleep, so whoever polls at the right instant wins; on 2026-11-16 one publisher waited 44 minutes behind four
+     others who kept re-entering). With `--serialize` every waiter therefore takes a TICKET in `<git common dir>/legend_land.queue` (pid, process start time, UTC) and only the HEAD ticket may
+     try the lock: publishers land in arrival order. A ticket whose process is gone (killed, crashed) is pruned by the next waiter, so a dead waiter never blocks the queue; the holder's
+     ticket is removed when it finishes. The position is printed once ('queue position 3 of 4'). The gate, the expectation, the merge under the lock, the HEAD re-read and the ls-remote
+     confirmation are unchanged. A publisher running an OLDER copy of this tool does not take a ticket and still competes for the bare lock: the order is strict only among new copies.
+
 Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>]]      (default branch: main)
 """
 from __future__ import annotations
-import fcntl, os, subprocess, sys, time
+import atexit, fcntl, os, signal, subprocess, sys, time
+from datetime import datetime, timezone
 from pathlib import Path
 
 # The root is overridable so the refusals can be exercised against a throwaway repo with a
@@ -53,6 +60,59 @@ from pathlib import Path
 # to prevent.
 ROOT = Path(os.environ.get("LEGEND_SAFE_PUSH_ROOT", Path(__file__).resolve().parents[2]))
 GATE = Path(os.environ.get("LEGEND_SAFE_PUSH_GATE", ROOT / "scripts" / "public_release_gate.py"))
+
+
+def _start_ticks(pid: int) -> str:
+    """Process start time in clock ticks from /proc (Linux), so a reused pid is not mistaken for the waiter that died; '' when unreadable."""
+    try:
+        return Path(f"/proc/{pid}/stat").read_text().rsplit(")", 1)[1].split()[19]
+    except (OSError, IndexError):
+        return ""
+
+
+def _alive(pid: int, ticks: str) -> bool:
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        pass
+    return ticks == "" or _start_ticks(pid) in ("", ticks)
+
+
+class Queue:
+    """FIFO ticket queue next to the landing lock: `<git common dir>/legend_land.queue`, one line per waiter `pid start_ticks utc`. A short flock on `legend_land.queue.lock`
+    guards each read-modify-write. Only the HEAD ticket may try the landing lock; a ticket whose process is gone (killed, crashed) is pruned by the next waiter, so a dead waiter
+    never blocks the queue; the ticket of the holder stays until it finishes, which is what keeps the order strict."""
+
+    def __init__(self, common: Path):
+        self.path, self.guard = common / "legend_land.queue", common / "legend_land.queue.lock"
+        self.me = (os.getpid(), _start_ticks(os.getpid()))
+
+    def _txn(self, fn):
+        with open(self.guard, "a+") as g:
+            fcntl.flock(g, fcntl.LOCK_EX)
+            rows = []
+            if self.path.exists():
+                for ln in self.path.read_text().splitlines():
+                    f = ln.split()
+                    if len(f) >= 2 and f[0].isdigit() and _alive(int(f[0]), f[1]):
+                        rows.append(ln)
+            rows = fn(rows)
+            self.path.write_text("".join(r + "\n" for r in rows))
+            return rows
+
+    def join(self):
+        mine = f"{self.me[0]} {self.me[1]} {datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')}"
+        return self._txn(lambda rows: rows + [mine])
+
+    def leave(self):
+        self._txn(lambda rows: [r for r in rows if r.split()[0] != str(self.me[0])])
+
+    def position(self):
+        rows = self._txn(lambda rows: rows)
+        pids = [r.split()[0] for r in rows]
+        return (pids.index(str(self.me[0])) + 1 if str(self.me[0]) in pids else 0), len(rows)
 
 
 def run(*cmd, **kw):
@@ -120,18 +180,25 @@ def main(argv: list[str]) -> int:
         common = run("git", "rev-parse", "--git-common-dir").stdout.strip()
         lock_path = (ROOT / common if not os.path.isabs(common) else Path(common)) / "legend_land.lock"
         lock_fh = open(lock_path, "a+")
+        queue = Queue(lock_path.parent)
+        queue.join()
+        atexit.register(queue.leave)
+        signal.signal(signal.SIGTERM, lambda *_: sys.exit(143))
         waited, t0 = False, time.time()
         while True:
-            try:
-                fcntl.flock(lock_fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
-                break
-            except OSError:
-                if not waited:
-                    print(f"waiting for the landing lock {lock_path} (another publisher is gating)", flush=True)
-                    waited = True
-                if lock_timeout is not None and time.time() - t0 > lock_timeout:
-                    return fail(f"the landing lock was not free within {lock_timeout}s. Nothing was gated or pushed.")
-                time.sleep(2)
+            pos, n = queue.position()
+            if pos <= 1:      # head of the queue (or the queue file was lost: fall back to trying the lock)
+                try:
+                    fcntl.flock(lock_fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                    break
+                except OSError:
+                    pass
+            if not waited:
+                print(f"waiting for the landing lock {lock_path}: queue position {pos} of {n}" + (" (another publisher is gating)" if pos <= 1 else ""), flush=True)
+                waited = True
+            if lock_timeout is not None and time.time() - t0 > lock_timeout:
+                return fail(f"the landing lock was not free within {lock_timeout}s. Nothing was gated or pushed.")
+            time.sleep(2)
         print(f"landing lock acquired after {time.time() - t0:.0f}s", flush=True)
         fetched = run("git", "fetch", remote, branch)
         if fetched.returncode != 0:
