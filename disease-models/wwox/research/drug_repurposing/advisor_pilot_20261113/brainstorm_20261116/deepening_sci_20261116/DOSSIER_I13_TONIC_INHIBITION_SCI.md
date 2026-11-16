@@ -80,3 +80,6 @@ The held sIPSC amplitude is 2.08-fold larger in controls (57.3 against 27.5 pA) 
 
 ## Update v6 (SCI): per-animal composition test (`RESULT_GABRD_COMPOSITION_SCI.md`)
 In the public P47T counts the Gabrd fall (-0.89 CTX, -0.74 PFC, -1.02 HPC) is not absorbed by neuron, astrocyte, microglia, Pvalb, Vip scores, but after removing genotype and sex Gabrd tracks Npy and Gfap negatively and Lamp5 positively at animal level (r 0.7 to 0.86, permutation p 0.004 to 0.03, 36 correlated tests, n = 10): the transcript is entangled with a reactivity axis and with age (150 to 280 days, per-animal age not given). The transcript replication stands; its meaning as a per-cell tonic deficit is weaker; the tonic current stays decisive. Cerebellum flat (-0.05).
+
+## Status line (SCI, closing round; ADV's wording)
+The Gabrd transcript direction stands in two lines; its reading as a per-cell tonic deficit is weaker (per-animal tracking of a reactivity axis, age open); the tonic current (with the THIP-evoked reserve and the transporter step) and the authors' per-cell sIPSC values are the two decisive items: one needs a laboratory, the other a collaborator.
