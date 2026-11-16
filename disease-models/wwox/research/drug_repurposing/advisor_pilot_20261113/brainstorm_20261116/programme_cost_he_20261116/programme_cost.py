@@ -55,6 +55,9 @@ LABEL = {  # description given at dispatch -> role in the programme (what IT's n
     "Blind judge rerun of 24 hypotheses": "leap round: blind judge run 2",
     "Blind judge round 1b with planted pair": "leap round: blind judge round 1b",
     "Arm B hypotheses with repository knowledge": "leap round: arm B (with repository knowledge)",
+    "Blind judge of arm B with planted pair": "leap round: blind judge of arm B with planted pair",
+    "Test-setter fixing tests for 31 hypotheses": "test-setter (31 tests)",
+    "Blind audit of the closing synthesis": "blind audit of the closing synthesis",
 }
 dels = []
 for meta in sorted(PROJECTS.glob("*/subagents/*.meta.json")):
@@ -132,6 +135,8 @@ sr = D("Second read of 25 matrix cells")
 if sr:
     L.append(f"| matrix cell second read per cell | {fmt(sr['output'])} | 25 cells | {sr['output'] / 25:,.0f} per cell |")
 judges = [D(x) for x in ("Blind judge of 24 hypotheses", "Blind judge rerun of 24 hypotheses", "Blind judge round 1b with planted pair") if D(x)]
+judge_b = D("Blind judge of arm B with planted pair")
+audit = D("Blind audit of the closing synthesis")
 if judges:
     jo = sum(j["output"] for j in judges)
     L.append(f"| judging, all three runs, per hypothesis judged in round 1 | {fmt(jo)} (of which the invalid run {fmt(inv['output']) if inv else 'n/a'}) | {judged} hypotheses (judge_table_run2.tsv) | {jo / judged:,.0f} per hypothesis |")
@@ -141,8 +146,26 @@ if arms and judges:
     L.append(f"| leap round, delegate arms plus all judging, per round-1 survivor (S1 all four criteria) | {fmt(sum(a['output'] for a in arms) + jo)} | {surv1} survivor(s) in round 1 (UNBLINDED.md) | {(sum(a['output'] for a in arms) + jo) / max(surv1, 1):,.0f} per survivor |")
     if base:
         L.append(f"| the simple-search baseline arm alone, per survivor it produced | {fmt(base['output'])} | 1 survivor (UNBLINDED.md: H-B1) | {base['output']:,.0f} per survivor |")
+if judge_b:
+    L.append(f"| judging arm B (5 hypotheses plus the planted pair) | {fmt(judge_b['output'])} | 5 arm B hypotheses (it_arm_b_20261116) | {judge_b['output'] / 5:,.0f} per hypothesis |")
+if audit:
+    L.append(f"| blind audit of the closing synthesis (checks, not production) | {fmt(audit['output'])} | {audit['turns']} turns | {audit['output'] / audit['turns']:,.0f} per turn |")
 if surv1b:
     L.append(f"| round 1b survivors under the definition S1, by arm (n, S1) | | | " + "; ".join(f"{k} {v[1]} of {v[0]}" for k, v in surv1b.items()) + " |")
+# CI runs (written once from the public API by HE; the file is data, not recomputed here) ---------------------------------
+ci = list(csv.DictReader(open(HERE / "ci_runs_20261116.tsv"), delimiter="\t"))
+def mins(r):
+    a, b = (datetime.fromisoformat(r[k].replace("Z", "+00:00")) for k in ("started_utc", "ended_utc"))
+    return (b - a).total_seconds() / 60
+red = [r for r in ci if r["conclusion"] != "success"]
+L.append("")
+L.append("## CI: one line per run of the public-release-gate workflow, #872 to #893 (source: GitHub API `actions/runs`, jobs and check-run annotations)")
+L.append("| run | commit | conclusion | minutes | cause (read from annotations) or note |")
+L.append("|---|---|---|---|---|")
+for r in ci:
+    L.append(f"| #{r['run']} | {r['sha'][:9]} | {r['conclusion']} | {mins(r):.0f} | {r['red_cause_or_note']} |")
+L.append("")
+L.append(f"{len(red)} red runs (#{red[0]['run']} to #{red[-1]['run']}), {sum(mins(r) for r in red):,.0f} run-minutes on the CI machine, all from two causes, both repository-side and both reached `main` before the gate could see them: (1) HB1 mapping, #873 to #886, repaired by 98542e035; (2) `reach_cahoy.tsv` row width, #886 to #891, repaired by SCI's 120c3abe4. First green runs: #892 (120c3abe4) and #893 (da4f7a957, the head with both repairs and ADV's closing records). #871 and #872 are the last green runs before the HB1 package; #891 stays red because it precedes the repair. These counts are CI minutes read from the API, not tokens and not money.")
 L.append("")
 L.append("## What these lines can and cannot say")
 L.append("* The authors' (ADV, HE, IT, SCI) output per hypothesis is NOT separable: each session did other work in the window, so no authors' survivors-per-token figure is given. A session's whole-window output is in the first table and is an upper bound on what its leap file cost.")
@@ -150,5 +173,6 @@ L.append("* Round 1 and round 1b used different survivor definitions and the num
 L.append("* Cache read dominates every row (long contexts re-read each turn); it is a measure of context size, not of work, and is listed so nobody divides by it by mistake.")
 L.append("* A delegate's row is read at the `--until` time; IT's own notes (JUDGE_RUN2.md) read the run-2 judge earlier (71 turns, output 56,810) and the transcript has grown since, so the two can differ by the turns taken after IT's reading.")
 L.append("* The window ends at the `--until` time given; rerun at the closing time. Delegates that were still running at that time are counted up to it.")
+L.append("* **Final rerun, 15:10Z.** 13 delegates: the 12 of IT's `it_synthesis_audit_20261116/IT_DELEGATE_COSTS.md` (530,674 output tokens, same per-delegate figures as read here) plus one dispatched by SCI (readiness sheets producer), which IT's table does not list. The audit is checks, not production; arm A, arm B, extractor and judges are production for the leap and the matrix.")
 Path(args.out).write_text("\n".join(L) + "\n")
 print(f"wrote {args.out}: {len(sessions)} sessions, {len(dels)} delegates, sessions output {tot['output']}, delegates output {dt['output']}")
