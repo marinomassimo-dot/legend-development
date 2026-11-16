@@ -13,7 +13,7 @@ Baseline (no step): S-KO incidence 1.00, 750 bursts per 40 slices x 600 s (media
 | NMDAR pore blocker or GluN2B NAM at a fractional block (the pore blocker and the NAM differ only in how much NMDAR current is removed) | NMDAR weight x0.9 | 553 (0.74x) | 0.571 s (0.75x) | 13.8 (0.74x) | 0.11 (silent seeds 0.00) | rate lower |
 | T-type blocker (one protocol) | T-type trigger weight x0.75 | 616 (0.82x) | 0.772 s (1.02x) | 15.4 (0.82x) | 0.15 (silent seeds 0.00) | rate lower |
 | T-type enhancer (the opposite step, as a model check; not a pilot arm) | T-type trigger weight x1.25 | 902 (1.20x) | 0.744 s (0.98x) | 22.5 (1.20x) | 0.25 (silent seeds 0.00) | rate higher |
-| sodium-channel blocker (AH1: aggravation?) | noise amplitude x0.9 (persistent-sodium type; SCI's label) | 403 (0.54x) | 0.820 s (1.08x) | 10.2 (0.54x) | 0.03 (silent seeds 0.05) | rate lower |
+| sodium-channel blocker, pyramidal component only (AH1 single-component arm) | noise amplitude x0.9 (SCI's label: sigma x0.9) | 403 (0.54x) | 0.820 s (1.08x) | 10.2 (0.54x) | 0.03 (silent seeds 0.05) | rate lower |
 | duration-only arm (resource-type; no pilot class named) | resource depletion x0.6 | 888 (1.18x) | 1.248 s (1.65x) | 22.2 (1.18x) | 0.29 (silent seeds 0.00) | rate higher |
 
 ## Interval and duration separately (OAT, 40% steps; the I19 run reports no interval)
@@ -42,6 +42,6 @@ Reading: in this model a GABA-A potentiation suppresses bursts and does not rais
 ## What each outcome would change (for the pilot's decision page)
 - A tonic-preferring step that suppresses more than a phasic-preferring step at the same fractional change (S-HT incidence 0.00 against 0.025; S-KO bursts ratio in the table): supports the tonic-brake reading (I13); the opposite order, or no difference, weakens it.
 - A T-type step that lengthens the interval without changing the duration, and an NMDAR step that shortens the duration: H-B1 (two-stage) as the model reads it; both moving in proportion: a single gain.
-- A sodium-channel step: the model's noise term predicts SUPPRESSION; aggravation (AH1) would need a term the model lacks (interneuron Nav, I8's shield reading).
+- A sodium-channel step: the single-component noise arm (sigma x0.9) predicts SUPPRESSION; aggravation (AH1) is predicted only by the MIXED arm (pyramidal noise down AND interneuron inhibition down: SCI's arm 9, sigma x0.9 with J_I x0.7: S-KO bursts -12%, S-HT incidence 0.17 -> 0.38, S-WT 0.11 -> 0.25, predictions hashed first; see PILOT_ARM_EXPECTATIONS_SCI.md). Correction 2026-11-16 22:35Z (SCI): an earlier version of this line said the model lacks the term; it does not.
 
 Limits: model steps, not doses; 20 seeds of one frozen model; the labels that map a pilot arm to a parameter are assumptions; the S-HT incidence is the model's reading of the held 0/11, 4/23, 36/42 gradient, not a measurement.
