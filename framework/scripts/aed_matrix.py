@@ -45,6 +45,11 @@ WHAT IT COMPUTES, per endpoint (never summed across endpoints) and per age windo
     frozen null ordering (`not_scorable_null_ordering`, all classes tied), never as a neutral;
   - `null undefined` instead of a p-value when the null is degenerate (equal tiers, no match cell,
     zero variance across permutations);
+  - the stability of the top SET (a class-level 'top class' out of a tie is a tie-break artefact): the share of
+    single-cell and all +-1 tier changes under which the same set stays on top, the share under which each
+    class is inside the top set, and the range of the set's size;
+  - `score_origin_collapsed`: the sum over origins of the best cell of that origin whatever its axis, printed
+    beside score_all, which collapses by (axis, origin) key; neither changes rank_by, a note names a change of the top set;
   - the per-thread sum (every match cell, no origin collapse) with its rank next to the origin-collapsed
     score, and a note when collapsing changes the top set or one origin carries every match cell.
 An agent ranking is printed only for the top class and only when some (axis, origin) key carries
@@ -73,7 +78,9 @@ SCORES = ("score_all", "score_specific", "score_drug_by_genotype")
 OUT_COLUMNS = ["endpoint", "window", "class_id", "rank", "score_all", "score_specific",
                "score_drug_by_genotype", "aggravation_score", "match_keys", "score_per_thread_sum",
                "rank_per_thread_sum", "neutral_cells", "unknown_cells", "null_mean", "excess",
-               "null_ge_fraction", "top_set_size", "informativeness", "top_set_label", "tied_with"]
+               "null_ge_fraction", "top_set_size", "informativeness", "top_set_label", "tied_with",
+               "score_origin_collapsed", "rank_origin_collapsed", "top_set_same_share",
+               "top_set_membership_share"]
 POOLED = "pooled"
 
 
@@ -176,6 +183,16 @@ def per_thread_sums(rows: list[dict]) -> dict[str, int]:
     return sums
 
 
+def origin_collapsed_sums(rows: list[dict]) -> dict[str, int]:
+    """class_id -> sum over ORIGINS of the largest cell value of that origin, whatever its axis (best axis per origin)."""
+    best: dict[str, dict[str, int]] = {}
+    for row in rows:
+        if row["sign"] == "match":
+            slot = best.setdefault(row["class_id"], {})
+            slot[row["origin_id"]] = max(slot.get(row["origin_id"], 0), value(row))
+    return {c: sum(v.values()) for c, v in best.items()}
+
+
 def ranked(classes: list[str], scores: dict, by: str) -> list[tuple[str, int]]:
     return sorted(((c, scores.get(c, {}).get(by, 0)) for c in classes), key=lambda t: (-t[1], t[0]))
 
@@ -225,6 +242,24 @@ def stability(rows: list[dict], classes: list[str], rule: dict) -> tuple[str, in
         else:
             moved.append(label)
     return top, keep, len(runs), moved if len(tied) == 1 else moved + [f"tie at baseline: {','.join(tied)}"]
+
+
+def set_stability(rows: list[dict], classes: list[str], rule: dict) -> dict:
+    """Stability of the top SET (a tie-break picks one 'top class' out of a tie, so a class-level count is an artefact):
+    how often the original top set stays the top set under every single-cell tier +-1 change and the all +-1 change,
+    how often each class is inside the top set, and the range of the set's size."""
+    by = rule["rank_by"]
+    base = set(top_set(ranked(classes, class_scores(rows, "match"), by)))
+    runs = [dict(shift_all=1), dict(shift_all=-1)]
+    runs += [dict(shifts={r["cell_id"]: s}) for r in sorted(rows, key=lambda r: r["cell_id"]) if r["sign"] == "match" for s in (1, -1)]
+    same, inside, sizes = 0, {c: 0 for c in classes}, []
+    for kw in runs:
+        now = set(top_set(ranked(classes, class_scores(rows, "match", **kw), by)))
+        same += now == base
+        sizes.append(len(now))
+        for c in now:
+            inside[c] += 1
+    return {"base": base, "runs": len(runs), "same": same, "inside": inside, "kmin": min(sizes), "kmax": max(sizes)}
 
 
 PAIR_RUN_CAP = 200000
@@ -299,7 +334,9 @@ def score_endpoint(rows: list[dict], endpoint: str, rule: dict):
                               "unknown_cells": str(sum(r["class_id"] == c and r["sign"] == "unknown" for r in part)),
                               "null_mean": "undefined", "excess": "undefined", "null_ge_fraction": "undefined",
                               "top_set_size": str(len(classes)), "informativeness": "0.000",
-                              "top_set_label": "not_scorable_null_ordering", "tied_with": ""})
+                              "top_set_label": "not_scorable_null_ordering", "tied_with": "",
+                              "score_origin_collapsed": "0", "rank_origin_collapsed": "null",
+                              "top_set_same_share": "", "top_set_membership_share": ""})
             notes.append(f"{tag} not scorable: no class links to any thread here; frozen as a null ordering "
                          f"(all {len(classes)} classes tied, informativeness 0)")
             if agg_only:
@@ -313,6 +350,9 @@ def score_endpoint(rows: list[dict], endpoint: str, rule: dict):
                                                            key=lambda t: (-t[1], t[0])), 1)}
         top = top_set(order)
         k = len(top)
+        oc = origin_collapsed_sums(part)
+        rank_oc = {c: i for i, (c, _) in enumerate(sorted(((c, oc.get(c, 0)) for c in classes), key=lambda t: (-t[1], t[0])), 1)}
+        st = set_stability(part, classes, rule) if k else None
         label = tie_label(k, len(classes), rule["discriminating_top_set_max_share"])
         info = f"{1 - k / len(classes):.3f}" if k else "0.000"
         keys = {c: len({(r["axis"], r["origin_id"]) for r in part if r["class_id"] == c and r["sign"] == "match"})
@@ -332,8 +372,20 @@ def score_endpoint(rows: list[dict], endpoint: str, rule: dict):
                           "excess": f"{match.get(cls, {}).get('score_all', 0) - null[cls][0]:.3f}" if null else "undefined",
                           "null_ge_fraction": f"{null[cls][1]:.3f}" if null else "undefined",
                           "top_set_size": str(k), "informativeness": info, "top_set_label": label,
-                          "tied_with": ",".join(tied)})
+                          "tied_with": ",".join(tied),
+                          "score_origin_collapsed": str(oc.get(cls, 0)), "rank_origin_collapsed": str(rank_oc[cls]),
+                          "top_set_same_share": f"{st['same'] / st['runs']:.3f}" if st else "",
+                          "top_set_membership_share": f"{st['inside'][cls] / st['runs']:.3f}" if st else ""})
         notes.append(f"{tag} top set {{{','.join(top)}}} size {k} of {len(classes)}, informativeness {info}: {label}")
+        if st:
+            members = ", ".join(f"{c} {st['inside'][c] / st['runs']:.0%}" for c in sorted(classes, key=lambda c: (-st["inside"][c], c))
+                                if st["inside"][c])
+            notes.append(f"{tag} top SET {{{','.join(sorted(st['base']))}}} stays the top set in {st['same']} of {st['runs']} "
+                         f"single-cell or all tier +-1 changes; size {st['kmin']}-{st['kmax']}; share of changes with the class inside the top set: {members}")
+        oc_top = [c for c, v in sorted(((c, oc.get(c, 0)) for c in classes), key=lambda t: (-t[1], t[0])) if v and v == max(oc.values())]
+        if oc and set(oc_top) != set(top):
+            notes.append(f"{tag} best axis per origin changes the top set: score_all {{{','.join(top)}}} -> "
+                         f"score_origin_collapsed {{{','.join(oc_top)}}}")
         if not null:
             notes.append(f"{tag} null undefined ({why}); no p-value is reported")
         by_sum = [c for c, _ in sorted(((c, sums.get(c, 0)) for c in classes), key=lambda t: (-t[1], t[0]))
@@ -348,7 +400,8 @@ def score_endpoint(rows: list[dict], endpoint: str, rule: dict):
         if window == POOLED:
             t, keep, total, moved = stability(part, classes, rule)
             notes.append(f"[{endpoint}] top class {t}; kept in {keep} of {total} tier perturbations"
-                         + (f"; moved or tied under: {', '.join(moved)}" if moved else ""))
+                         + (f"; moved or tied under: {', '.join(moved)}" if moved else "")
+                         + ("; secondary: with several classes tied on top this 'top class' is a tie-break artefact, read the top SET lines" if k > 1 else ""))
             notes.append(f"[{endpoint}] {stability_pairs(part, classes, rule)}")
             notes.append(f"[{endpoint}] {agent_ranking(part, t, rule['rank_by'])}")
     return table, notes
