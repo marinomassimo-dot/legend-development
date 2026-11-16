@@ -47,6 +47,14 @@ def main(outdir=None):
     for sd in (0.2, 0.3, 0.4):
         rows.append(("drug-by-genotype: suppression in KO v WT-provoked", f"SD {sd}, delta 0.3", "alpha 0.05, power 0.8",
                      n_per_group(sd, 0.3), n_per_group(sd, 0.3)))
+    # (5) ADV H-ADV-5 addendum 2026-11-16: genotype x exposure-level interaction on the ratio scale (two levels per arm, same animals).
+    # The contrast is (suppression at level 2 - at level 1) in KO minus the same in provoked WT; its SD is SD * sqrt(2 * (1 - rho)), rho = correlation
+    # of an animal's proportional suppression at the two levels. delta = 0.3 difference of differences.
+    for rho in (0.0, 0.5, 0.8):
+        for sd in (0.2, 0.3, 0.4):
+            sdc = sd * math.sqrt(2.0 * (1.0 - rho))
+            rows.append(("curve shape: genotype x level interaction, ratio scale (ADV H-ADV-5)", f"SD {sd} per level, rho {rho} (contrast SD {sdc:.2f}), delta 0.3",
+                         "alpha 0.05, power 0.8", n_per_group(sdc, 0.3), n_per_group(sdc, 0.3)))
     out = ["test\tassumptions\ttest_setting\tn_per_group_cells_or_animals\tanimals_per_group"]
     out += ["\t".join(str(x) for x in r) for r in rows]
     text = "\n".join(out) + "\n"
