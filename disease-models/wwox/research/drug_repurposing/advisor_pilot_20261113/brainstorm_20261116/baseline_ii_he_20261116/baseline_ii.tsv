@@ -1,0 +1,16 @@
+class_id	census_row	children_with_a_row	reports	rank	tied_with	mapping_note
+gaba_at_gat	GABA-AT (vigabatrin)	22	10	1		
+ketogenic_diet	ketogenic diet	12	7	2		
+steroid_acth	steroid/ACTH (hormonal)	11	6	3		
+benzodiazepine	benzodiazepine and other GABA-A modulators	9	6	4	gabaa_pam_nonbzd	merged census row: benzodiazepines and non-benzodiazepine GABA-A modulators are not separable, both rule classes carry the same upper bound
+gabaa_pam_nonbzd	benzodiazepine and other GABA-A modulators	9	6	4	benzodiazepine	merged census row: benzodiazepines and non-benzodiazepine GABA-A modulators are not separable, both rule classes carry the same upper bound
+cbd_fenfluramine	cannabidiol	8	3	6		the census counts cannabidiol alone; its fenfluramine-type row is 0
+carbonic_anhydrase_multitarget	carbonic-anhydrase / multi-target	7	6	7	sv2a	
+sv2a	SV2A (levetiracetam)	7	5	7	carbonic_anhydrase_multitarget	
+valproate_type	valproate-type	6	4	9		
+sodium_channel	sodium-channel	1	1	10		
+ampa_antagonist	T-type (ethosuximide), AMPA (perampanel), fenfluramine-type, mTOR-type, pyridoxine	0	0	11	glun2b_nam,kv7_opener,nmdar_pore_blocker,t_type_calcium	one census row for five groups, all 0
+glun2b_nam	none	0	0	11	ampa_antagonist,kv7_opener,nmdar_pore_blocker,t_type_calcium	no census row: 0 by absence from the series
+kv7_opener	none	0	0	11	ampa_antagonist,glun2b_nam,nmdar_pore_blocker,t_type_calcium	no census row: 0 by absence from the series
+nmdar_pore_blocker	none	0	0	11	ampa_antagonist,glun2b_nam,kv7_opener,t_type_calcium	no census row: 0 by absence from the series
+t_type_calcium	T-type (ethosuximide), AMPA (perampanel), fenfluramine-type, mTOR-type, pyridoxine	0	0	11	ampa_antagonist,glun2b_nam,kv7_opener,nmdar_pore_blocker	one census row for five groups, all 0
