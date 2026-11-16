@@ -38,6 +38,17 @@ class VariantDomain(unittest.TestCase):
         self.assertEqual(m["c.1057-2A>G"]["variant_type"], "splice_no_protein_position")
         self.assertEqual((m["p.X"]["variant_type"], m["something else"]["variant_type"]), ("unparsed", "unparsed"))   # kept verbatim, never guessed
 
+    def test_the_held_classification_is_joined_by_variant_in_any_notation(self) -> None:
+        tmp = Path(tempfile.mkdtemp()); held = tmp / "held.csv"
+        held.write_text("protein,pos,ddG,dist_cat,class\np.Pro47Thr,47,2.8059,12.1,stability (rescuable window)\np.Gln230Pro,230,1.5143,30.2,other\n", encoding="utf-8")
+        src, dst = tmp / "in.tsv", tmp / "out.tsv"
+        src.write_text("child_id\thgvs_p\na\tp.P47T\nb\tp.(Gln230Pro)\nc\tp.Leu99Pro\n", encoding="utf-8")
+        r = subprocess.run([sys.executable, str(TOOL), "--table", str(src), "--out", str(dst), "--held-classified", str(held)], capture_output=True, text=True)
+        self.assertEqual(r.returncode, 0, r.stderr)
+        rows = {x["child_id"]: x for x in csv.DictReader(open(dst, encoding="utf-8"), delimiter="\t")}
+        self.assertEqual(rows["a"]["held_class"], "stability (rescuable window)"); self.assertEqual(rows["a"]["held_ddG"], "2.8059")
+        self.assertEqual(rows["b"]["held_class"], "other"); self.assertEqual(rows["c"]["held_class"], "")        # a variant the held table does not list stays blank
+
     def test_a_missing_column_is_refused_and_help_is_safe(self) -> None:
         tmp = Path(tempfile.mkdtemp()); (tmp / "t.tsv").write_text("child_id\tother\nx\ty\n", encoding="utf-8")
         r = subprocess.run([sys.executable, str(TOOL), "--table", str(tmp / "t.tsv"), "--out", str(tmp / "o.tsv")], capture_output=True, text=True)
