@@ -1,0 +1,40 @@
+# I8 v2 addendum · per-class sign table, the held pyramidal profile as a test, held ligase tables (HE, 2026-11-16; non-canonical; hypothesis; not medical advice)
+
+Written for: ADV, SCI (second reader of I8: channels, sag, electrophysiology). Mechanism level only; no dose; reference genotype class only. Labels as in `I8_PPXY_DOSSIER.md`. Files: `i8_ppxy/i8_sign_predictions.tsv`, `i8_ppxy/sign_fit_summary.tsv`, `i8_ppxy/out/ligases_by_region.tsv`, `i8_ppxy/i8_ligases_regions.py`.
+
+## Answer first
+1. **The held pyramidal-neuron profile of the S-KO is a test of I8 that needs no new data, and it does not favour one sign.** Held observation (layer II/III, P13 to P17, S-KO against control; the note `analysis/metabolic_differential_vulnerability_reposed_20260922.md` gives the table, numbers sibling-attested there from the paper's Table 1): resting potential depolarised (−79.3 to −73.6 mV), input resistance raised (103 to 143 MΩ), sag raised, post-inhibitory rebound raised, AP amplitude reduced (76.3 to 68.7 mV), AP threshold, half-width and AHP not different; interneurons: only AP amplitude reduced. I wrote the expected direction of each feature for each PY candidate under M+ (surface up) and M− (surface down) **before counting** (`i8_sign_predictions.tsv`, basis stated per row, qualitative physiology, ASSUMED) and counted fits mechanically (`sign_fit_summary.tsv`):
+
+| candidate (motif) | M+ adaptor: fit / oppose | M− shield: fit / oppose | predicted change not seen |
+|---|---|---|---|
+| Scn1a Nav1.1 (PPSY 1983) | 0 / 2 | **2 / 0** | 1 (threshold) |
+| Scn2a Nav1.2 (PPSY 1973) | 0 / 1 | **1 / 0** | 1 (threshold) |
+| Hcn1 HCN1 (PPVY 654) | **3 / 1** | 1 / 3 | 0 |
+| Kcnh7 Kv11.3 (PPAY 1067) | 0 / 2 | **2 / 0** | 0 |
+| Kcnt2 Slack-B (PPRY 12) | 0 / 2 | **2 / 0** | 0 |
+| Trpm3 (PPDY 573, PPTY 1515) | 1 / 1 | 1 / 1 | 0 |
+
+   So: **a single sign for all candidates fits poorly.** M− fits the sodium channels and the two K channels (reduced AP amplitude, depolarised resting potential and raised input resistance together are what fewer open conductances look like); M+ fits HCN1 on sag, rebound and resting potential but opposes it on input resistance (HCN1 up should lower it; 3 of 4 features). Either the sign is motif-specific (WWOX as shield at some motifs and adaptor at others, which the WW1 binding alone does not predict), or only one or two of these channels carry the profile, or the profile comes mostly from non-PY routes. This revises the v1 statement that the sag "favours M+ for HCN1": it does, and the same profile favours M− for the others.
+2. **The held profile also separates the candidates from the other direction:** a PY mechanism that works through Nav1.1 alone predicts the **interneuron-only change (AP amplitude reduced, nothing else)** under M−; that is the single most specific fit in the table (2 of 2 for Scn1a, with the threshold not seen).
+3. **The held ligase tables carry no transcriptional footprint**, as the mechanism itself predicts (it acts on protein): Nedd4, Nedd4l, Itch, Wwp1, Wwp2, Smurf1, Smurf2, Wbp1, Wbp2 and Wbp4 are expressed in all four regions of the P47T line (Nedd4 about 17,000 to 23,000 normalised counts; Nedd4l 4,400 to 6,900; Itch 2,000 to 3,400) with log2FC within ±0.38 and no FDR below 0.05 in any of the 40 gene-region rows of these ten genes (smallest: Wbp4 CTX +0.15, FDR 0.051; Smurf2 CTX −0.22, FDR 0.062). Wwox mRNA itself is unchanged in the line (CTX +0.03). So there is no compensation to read and no rejection to take from these tables. Cell class (P7): Nedd4 85 FPKM in neurons, Nedd4l 9.2 in neurons against 8.7 in astrocytes and 1.9 to 3.7 in the other classes (neuron and astrocyte high, the rest low).
+
+## Per-class sign table (what M+ and M− predict for the surface level, and the cheapest discriminating experiment for each)
+Surface level means cell-surface protein (biotinylation with Western or targeted proteomics, or a current density by patch). A discriminating experiment is cheapest when the P47T arm is added to a recording that would be made anyway; all arms are null, P47T, wild type, age P13 to P17.
+
+| candidate | M+ (WWOX loss raises surface) | M− (WWOX loss lowers surface) | cheapest discriminating experiment | what each outcome changes |
+|---|---|---|---|---|
+| Nav1.1 / Nav1.2 (Scn1a, Scn2a; Scn8a with only LPxY is the internal negative control) | more Na+ current density | less | whole-cell Na+ current density (TTX-sensitive) and AP amplitude in pyramidal neurons and PV interneurons; biotinylated Nav1.1/1.2 | M−: Na-channel class cells get a target-density caveat (fewer targets); M+: more targets; unchanged: the held AP-amplitude fall comes from elsewhere |
+| HCN1 | larger Ih, sag, rebound | smaller | Ih density and sag, ZD7288-type sensitivity, in P47T against null | P47T copies the null sag: the WW1-PY route carries the sag; does not copy: the sag has another source |
+| Kcnh7 (Kv11.3) | more K+ current near rest | less | ERG-type blocker-sensitive current and its effect on resting potential and input resistance | M−: it contributes to the depolarised resting potential; unchanged: it does not |
+| Kcnt2 (Slack-B) | more Na+-activated K+ | less | current in Na+-substituted solution; surface level | as above |
+| Trpm3 | more cation current | less | agonist-evoked current amplitude in layer II/III neurons | the profile cannot separate signs (1/1 for both); this is a measurement the table cannot predict |
+| Neto1 / Neto2 (auxiliary subunits of ionotropic glutamate receptors, ASSUMED) | slower, larger kainate-receptor responses | faster, smaller | kainate-receptor EPSC decay in P47T against null | no intrinsic-profile prediction; a pure test of the surface idea on a non-antiseizure target |
+| Slc17a7 (VGLUT1) | larger quantal size; the P47T cortex mRNA is up (+0.66, FDR 0.046), same direction as M+ for transcript | smaller | mEPSC amplitude and VGLUT1 level in P47T against null | direction of the held mRNA is not the surface level; the test is the amplitude |
+
+**The decomposition experiment (one arm, one recording set).** Record the five features of the held profile (resting potential, input resistance, sag, rebound, AP amplitude) in P47T, null and wild-type layer II/III pyramidal neurons. P47T keeps the protein and (ASSUMED) loses WW1 ligand binding. Each feature is then attributed: **copied by P47T** = reachable by the WW1-PY route; **not copied** = needs the protein or another route. The sign question follows from which features are copied: a P47T that copies sag and rebound but not AP amplitude supports a HCN1-M+ and not a Nav-M− route, and so on. Both directions change what the matrix may say about the sodium-channel and HCN classes (target density), so the arm is worth doing whichever way it falls.
+
+## Limits
+* The expected directions are qualitative physiology (ASSUMED) with single-channel logic; conductances interact, and the table is not an additive model. The "not seen" column counts predictions the held profile does not show (threshold ns).
+* The held profile comes from one paper's Table 1 through a note that records it as sibling-attested; the numbers were not re-read from the source here.
+* P47T is a missense line (mRNA unchanged); that it loses WW1 ligand binding is ASSUMED (P47 lies inside WW1, 16 to 49, from the UniProt feature table).
+* The ligase tables are mRNA; the mechanism is at protein level, so they can neither support nor reject it.
