@@ -1,12 +1,12 @@
 id	title	owner	status	depth	links	last_test
-I1	Two-stage rebound oscillator	SCI	ADVANCE	seed	I6,I7,I11	IT attack: duration predictions 4/8 (chance), interval 9/9; one-stage refractory rival; T-type vs HCN is a label; NMDAR-sustainer graded route disfavoured by incidence shape (SCI rivals)
+I1	Two-stage rebound oscillator	SCI	ADVANCE	model	I6,I7,I11	IT attack: duration predictions 4/8 (chance), interval 9/9; one-stage refractory rival; T-type vs HCN is a label; NMDAR-sustainer graded route disfavoured by incidence shape (SCI rivals) | depth refreshed 20:50Z: owner dossier: depth model, duration distribution a named misfit
 I2	Phenotype-conditional pharmacology (semiology and age)	IT	ADVANCE	chain	I7,I11,I10	extraction sealed; SCI second read: 323/323 quotes, attribution follows success (26/33 single-agent benefit vs 5/30), sodium-channel class = zonisamide/topiramate/rufinamide; statement withdrawn; D5b other-report extraction released
-I3	Compensation asymmetry (hippocampus does not burst)	SCI	ADVANCE	seed	I4,PS-12	none yet
-I4	Metabolic, ketone and adenosine axis	HE	ADVANCE	seed	I3,I10	IT attack: A,G undefined on burst rate in wild type (0/11); needs bursting wild-type control for substrate arm
+I3	Compensation asymmetry (hippocampus does not burst)	SCI	ADVANCE	experiment-ready	I4,PS-12	none yet | depth refreshed 20:50Z: owner dossier: model, experiment-ready
+I4	Metabolic, ketone and adenosine axis	HE	ADVANCE	chain	I3,I10	IT attack: A,G undefined on burst rate in wild type (0/11); needs bursting wild-type control for substrate arm | depth refreshed 20:50Z: no depth label in HE dossier; two-step design and tone arithmetic exist, IT reading: chain
 I5	PV-axon myelin timing and OPC	ADV	ADVANCE	chain	I9	see deepening_adv_20261116
-I6	Chloride dynamics and activity-dependent GABA	SCI	ADVANCE	seed	I1	none yet
+I6	Chloride dynamics and activity-dependent GABA	SCI	ADVANCE	model	I1	none yet | depth refreshed 20:50Z: owner dossier: depth model
 I7	Critical NMDAR fraction and age window	IT	ADVANCE	model	I1,I2,I11	model table only (critical_fraction_model.py); no knockout share held; experiment-ready design in D5b
-I8	PY-motif competition, WWOX as scaffold	HE	ADVANCE	seed	none	HE v3: K2P/Kir/Kv7 extension KILLED for canonical PPxY/LPxY at 16 genes (parked, trigger: non-canonical WWOX ligand in a K2P/Kir/Kv7 channel or adaptor); sodium-channel and interneuron-amplitude route remains; counted by feature group, reaches only part of the profile
+I8	PY-motif competition, WWOX as scaffold	HE	ADVANCE	chain	none	HE v3: K2P/Kir/Kv7 extension KILLED for canonical PPxY/LPxY at 16 genes (parked, trigger: non-canonical WWOX ligand in a K2P/Kir/Kv7 channel or adaptor); sodium-channel and interneuron-amplitude route remains; counted by feature group, reaches only part of the profile | depth refreshed 20:50Z: HE v3: scan done, K-channel extension killed; IT reading: chain
 I9	Perineuronal nets and PV maturation	ADV	ADVANCE	chain	I5	see deepening_adv_20261116
 I10	Sleep-wake and thalamocortical dependence	ADV	ADVANCE	chain	I2	see deepening_adv_20261116
 I11a	Co-agonist occupancy (H-C1)	IT	ADVANCE	chain	I7	no held table can reject it; paired slice measurement specified
@@ -14,7 +14,7 @@ I11b	Persistent sodium current (H-C2)	IT	ADVANCE	chain	I1,I2	no held table can r
 I13	Tonic (extrasynaptic) inhibition deficit	SCI	ADVANCE	model	I1,I6,I3	SCI Update v5: incidence argument withdrawn (phasic deficit at its held size, 2.08-fold, explains 0/17/86%); I13 kept as an additional tonic deficit and readout; IT attack: killer test not discriminating (GAT compensation)
 I14	Raised ambient GABA and emergent seizure types (clinical discriminator of I13 vs I1/I10 vs I6)	IT	ADVANCE	chain	I13,I1,I10,I6,I2	post hoc count on 14 reports: new myoclonic type after spasms in 1 of 14 GABA-AT-exposed vs 4 of 9 unexposed (follow-up confounded); other-report search designed
 I15	Distance-to-threshold endpoint (measurement frame)	ADV	ADVANCE	model	I1,I4,I13	IT second read due 21:00Z; changes accepted into I15 Update v2 (censoring, two titrants, per-slice threshold)
-I16	Astroglial K+ buffering as the graded factor	SCI	ADVANCE	seed	I3,I13	not yet read by IT
+I16	Astroglial K+ buffering as the graded factor	SCI	ADVANCE	model	I3,I13	not yet read by IT | depth refreshed 20:50Z: SCI: frozen predictions and a test script; IT reading: model (owner label not read)
 I17	Two onset classes (neonatal vs infantile): a circuit the rebound picture cannot reach	IT	ADVANCE	chain	I6,I7,I2,I10	post hoc onset table: 11 of 37 children start before 1 month, 4 in the first days; PAM response by onset class uninformative (3 vs 4 children)
 I18	PY-motif proteome test (WWOX-silenced endothelial proteome)	HE	PARKED-trigger	experiment-ready	I8	INCONCLUSIVE by its preregistered rule (carriers +0.0315 log2 vs non-carriers, 95% interval -0.015 to +0.064; table has few membrane proteins); trigger: a sharper carrier definition preregistered once, or a membrane-enriched proteome
 I19	Proximity to threshold as one cause of contradictory, variable and resistant responses	ADV	ADVANCE	chain	I15,I2,I14	testable on the D5b extraction (variance and worsening proportion by genotype severity class, min 8 children per class); sealed 42 tabulated as a record only (0 worsening statements)
