@@ -169,6 +169,16 @@ class CheckSeparatesWhatGitProves(Fixture):
         bad, _, _ = self.check(outcome_study_id="PMID 123; PMID 45")
         self.assertTrue(any("read receipt" in b for b in bad))
 
+    def test_a_declared_freeze_time_earlier_than_the_commit_is_flagged_as_not_shown_by_git(self):
+        # the fixture's freeze commit is dated 2026-11-10T10:00:00Z
+        _, warn, _ = self.check(freeze_utc_declared="2026-11-10T09:00:00Z")
+        self.assertTrue(any("freeze time declared, not shown by git (rebased)" in w for w in warn), warn)
+        for ok in ("2026-11-10T10:00:00Z", "2026-11-10T11:30:00+00:00", ""):
+            _, warn, _ = self.check(freeze_utc_declared=ok)
+            self.assertFalse(any("not shown by git" in w for w in warn), (ok, warn))
+        bad, _, _ = self.check(freeze_utc_declared="yesterday")
+        self.assertTrue(any("not an ISO time" in b for b in bad))
+
     def test_same_actor_as_predictor_and_scorer_is_a_violation(self):
         bad, _, _ = self.check(scorer="sci")
         self.assertTrue(any("same actor" in b for b in bad))
