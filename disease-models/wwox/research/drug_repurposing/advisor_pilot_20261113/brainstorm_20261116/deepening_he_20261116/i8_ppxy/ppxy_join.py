@@ -70,8 +70,9 @@ def key(t):
     return (0 if neu >= 2 else 1, 0 if t["topology"] == "annotated" else 1, 0 if t["human_ortholog"] == "conserved" else 1, t["shuffle_p"], -t["n_core"], t["symbol"])
 table.sort(key=key)
 hdr = "# Lexicographic order: (1) neuron P7 FPKM >= 2, (2) topology annotated, (3) motif conserved in the human ortholog, (4) shuffle p ascending, (5) more motifs, (6) symbol. No weights. RNA columns are context for a protein-level hypothesis, not a test of it.\n"
+(out / "candidates_ranked_ORDER.txt").write_text(hdr)    # the ordering rule lives beside the table, never inside it (TSV width test)
 with open(out / "candidates_ranked.tsv", "w", newline="") as fh:
-    fh.write(hdr); w = csv.DictWriter(fh, list(table[0]), delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(table)
+    w = csv.DictWriter(fh, list(table[0]), delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(table)
 ctl = []
 for s in CONTROL:
     e = expr.get(s, {}); ctl.append({"gene": s, **{k: f(mean(e.get(k, [])), 1) for k in ("neuron", "astro", "OPC", "NFO", "MO", "microglia", "endo")}, "P47T_CTX_log2FC": f(p47[(s, "CTX")][0], 2) if (s, "CTX") in p47 else "NA", "P47T_CTX_FDR": f"{p47[(s, 'CTX')][1]:.2g}" if (s, "CTX") in p47 else "NA", "P17_deletion_rows": ";".join(de.get(s, [])) or "none among |cLFC|>=0.585"})
