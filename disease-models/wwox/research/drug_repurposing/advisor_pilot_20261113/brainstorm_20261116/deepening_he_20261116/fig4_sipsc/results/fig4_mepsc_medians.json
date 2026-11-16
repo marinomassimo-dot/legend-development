@@ -1,0 +1,64 @@
+{
+ "B": {
+  "row_p50": 79.75,
+  "unit_per_px": 0.21739130434782608,
+  "genotypes": {
+   "S-WT": {
+    "status": "read",
+    "rows_used": 5,
+    "median_px": 481.25,
+    "median_value": -13.859,
+    "uncertainty_value": 0.473,
+    "fit_se_px": 0.3
+   },
+   "S-HT": {
+    "status": "read",
+    "rows_used": 20,
+    "median_px": 480.67,
+    "median_value": -13.984,
+    "uncertainty_value": 0.468,
+    "fit_se_px": 0.08
+   },
+   "S-KO": {
+    "status": "read",
+    "rows_used": 23,
+    "median_px": 474.52,
+    "median_value": -15.322,
+    "uncertainty_value": 0.464,
+    "fit_se_px": 0.06
+   }
+  },
+  "f": {
+   "nominal": 0.915,
+   "range_min": 0.276,
+   "range_max": 2.551,
+   "separable": true,
+   "classification": "undecided (calibration-limited): nominal near controls, band spans ['midway', 'near controls']"
+  }
+ },
+ "C": {
+  "row_p50": 225.25,
+  "unit_per_px": 0.34782608695652173,
+  "genotypes": {
+   "S-WT": {
+    "status": "read",
+    "rows_used": 21,
+    "median_px": 329.11,
+    "median_value": 4.907,
+    "uncertainty_value": 0.854,
+    "fit_se_px": 0.49
+   },
+   "S-HT": {
+    "status": "hidden (only 3 rows with the class between p 0.40 and 0.60)"
+   },
+   "S-KO": {
+    "status": "read",
+    "rows_used": 15,
+    "median_px": 326.82,
+    "median_value": 4.112,
+    "uncertainty_value": 0.843,
+    "fit_se_px": 0.14
+   }
+  }
+ }
+}
