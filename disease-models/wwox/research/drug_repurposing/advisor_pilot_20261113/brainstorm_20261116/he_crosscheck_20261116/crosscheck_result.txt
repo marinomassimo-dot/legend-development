@@ -17,3 +17,13 @@ observed ordering 'resolved_only'
   baseline_iii_uniform: here 0.50 on 15 pairs (15 classifiable of 21); IT 0.50 on 15 pairs; AGREE
 
 VERDICT: the two computations agree
+
+like for like: every prediction scored on the classes baseline (i) has a level for (resolved_only; partial_counts has no classifiable pair there)
+  resolved_only F1_per_thread_sum: 7 pairs, 0.643
+  resolved_only F1_origin_collapsed: 7 pairs, 0.571
+  resolved_only baseline_i_PTZ: 7 pairs, 0.643
+  resolved_only baseline_ii_frequency: 7 pairs, 0.571
+  partial_counts F1_per_thread_sum: 0 pairs, not scorable
+  partial_counts F1_origin_collapsed: 0 pairs, not scorable
+  partial_counts baseline_i_PTZ: 0 pairs, not scorable
+  partial_counts baseline_ii_frequency: 0 pairs, not scorable
