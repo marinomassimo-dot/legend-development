@@ -12,3 +12,4 @@ I10	Sleep-wake and thalamocortical dependence	ADV	ADVANCE	chain	I2	see deepening
 I11a	Co-agonist occupancy (H-C1)	IT	ADVANCE	chain	I7	no held table can reject it; paired slice measurement specified
 I11b	Persistent sodium current (H-C2)	IT	ADVANCE	chain	I1,I2	no held table can reject it; ramp-current measurement specified
 I13	Tonic (extrasynaptic) inhibition deficit	SCI	ADVANCE	model	I1,I6,I3	IT attack: killer test not discriminating (GAT compensation); heterozygote Gabrd needed; cause vs consequence test by age
+I14	Raised ambient GABA and emergent seizure types (clinical discriminator of I13 vs I1/I10 vs I6)	IT	ADVANCE	chain	I13,I1,I10,I6,I2	post hoc count on 14 reports: new myoclonic type after spasms in 1 of 14 GABA-AT-exposed vs 4 of 9 unexposed (follow-up confounded); other-report search designed
