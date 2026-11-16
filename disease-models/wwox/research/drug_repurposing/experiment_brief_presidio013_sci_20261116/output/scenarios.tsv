@@ -1,0 +1,9 @@
+scenario	description	outcome_codes	top_set_seizure_P13_P15	size_of_15	informativeness	label	aggravation_scores
+S1	pore blocker specific; GluN2B NAM and AMPA generic; the rest do nothing	pore=S; glun2b=G; ampa=G; ttype=N; gabaa=N; benzo=N; sodium=N	nmdar_pore_blocker	1	0.933	discriminating	-
+S2	GABA-A PAM and benzodiazepine specific; pore blocker generic; the rest do nothing	pore=G; glun2b=N; ampa=N; ttype=N; gabaa=S; benzo=S; sodium=N	benzodiazepine,gabaa_pam_nonbzd	2	0.867	tie_set_weak	-
+S3	pore blocker and GABA-A PAM both specific; the rest do nothing	pore=S; glun2b=N; ampa=N; ttype=N; gabaa=S; benzo=N; sodium=N	gabaa_pam_nonbzd,nmdar_pore_blocker	2	0.867	tie_set_weak	-
+S4	GluN2B NAM specific, pore blocker generic; the rest do nothing	pore=G; glun2b=S; ampa=N; ttype=N; gabaa=N; benzo=N; sodium=N	glun2b_nam	1	0.933	discriminating	-
+S5	every arm suppresses, none specific (generic suppression)	pore=G; glun2b=G; ampa=G; ttype=G; gabaa=G; benzo=G; sodium=G	benzodiazepine,gabaa_pam_nonbzd,nmdar_pore_blocker,sodium_channel	4	0.733	tie_set_weak	-
+S6	sodium-channel blocker specific; the others generic	pore=G; glun2b=G; ampa=G; ttype=G; gabaa=G; benzo=G; sodium=S	sodium_channel	1	0.933	discriminating	-
+S7	no arm suppresses KO bursts	pore=N; glun2b=N; ampa=N; ttype=N; gabaa=N; benzo=N; sodium=N	valproate_type	1	0.933	discriminating	-
+S8	pore blocker specific, GABA-A PAM and sodium-channel blocker aggravate (AH1, AH3), the rest do nothing	pore=S; glun2b=N; ampa=N; ttype=N; gabaa=A; benzo=A; sodium=A	nmdar_pore_blocker	1	0.933	discriminating	benzodiazepine:9,gabaa_pam_nonbzd:9,sodium_channel:9

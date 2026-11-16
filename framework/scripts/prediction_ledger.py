@@ -18,10 +18,11 @@ writes one ledger row per prediction.
 `check` reads a ledger TSV and, per row, tests:
   - freeze_commit exists and the statement file at that commit hashes to freeze_blob_sha256;
   - the statement file is unchanged since (EDITED is a warning; --strict makes it fatal);
-  - the outcome file is NOT in the tree at the freeze commit;
+  - the outcome file is NOT in the tree at the freeze commit (a row whose `blindness` cell says `declared`
+    states that the table is public and already there: reported as a warning, blindness declared, not shown);
   - the freeze commit precedes the outcome commit: `yes` (ancestor), `same_commit`, `not_ancestor`
     or `unknown` (no outcome commit yet). It never infers an order it cannot see;
-  - no read receipt for outcome_study_id (a PMID or DOI) is dated before the freeze commit;
+  - no read receipt for outcome_study_id (PMIDs or DOIs, `;`-separated) is dated before the freeze commit;
   - predictor and scorer, when both are declared, are different.
 Who the predictor was, what it read outside the repository, and model memory of a published
 paper are NOT checkable here: every paper_content row is printed with that label.
@@ -49,6 +50,8 @@ TEXT_EXT = (".md", ".tsv", ".txt")
 COLUMNS = ["pred_id", "package", "statement_ref", "freeze_commit", "freeze_blob_sha256", "kind",
            "outcome_ref", "outcome_study_id", "outcome_commit", "predictor", "scorer",
            "scoring_rule_ref", "status", "notes"]
+OPTIONAL_COLUMNS = ["blindness"]   # `declared` says the outcome table is public and in the tree at the freeze: blindness is then a declaration, not shown by git
+BLINDNESS = {"", "shown", "declared"}
 KINDS = {"", "paper_content", "generative"}
 STATUSES = {"", "unclassified", "open", "held", "failed", "mixed", "unscorable"}
 CANDIDATE_COLUMNS = ["path", "via", "first_add_commit", "first_add_utc", "blob_sha256_at_add",
@@ -133,23 +136,38 @@ def read_ledger(path: Path) -> list[dict[str, str]]:
         missing = [c for c in COLUMNS if c not in (reader.fieldnames or [])]
         if missing:
             raise ValueError(f"ledger lacks columns: {', '.join(missing)}")
-        return [{c: (row.get(c) or "").strip() for c in COLUMNS} for row in reader]
+        return [{c: (row.get(c) or "").strip() for c in COLUMNS + OPTIONAL_COLUMNS} for row in reader]
 
 
-def receipt_times(path: Path, study: str) -> list[datetime]:
-    if not study or not path.is_file():
+def study_ids(text: str) -> list[str]:
+    """`PMID 123; doi:10.1/x` -> ['123', '10.1/x'] (lower case, prefixes removed, empty parts dropped)."""
+    out = []
+    for part in text.split(";"):
+        part = part.strip().lower()
+        for prefix in ("pmid", "doi"):
+            if part.startswith(prefix):
+                part = part[len(prefix):].lstrip(": ")
+        if part:
+            out.append(part)
+    return out
+
+
+def receipt_times(path: Path, study: str) -> list[tuple[datetime, str, str, str]]:
+    """(event time, study id, event id, record kind) of the receipts naming ANY of the `;`-separated study ids."""
+    wanted = set(study_ids(study))
+    if not wanted or not path.is_file():
         return []
-    wanted = study.lower().removeprefix("pmid:").removeprefix("doi:")
-    times = []
+    found = []
     with path.open() as handle:
         for line in handle:
-            if wanted not in line.lower():
+            if not any(w in line.lower() for w in wanted):
                 continue
             rec = json.loads(line)
             ids = {str(v).lower() for v in (rec.get("study_id") or {}).values() if v}
-            if wanted in ids and rec.get("event_at"):
-                times.append(datetime.fromisoformat(rec["event_at"]).astimezone(timezone.utc))
-    return times
+            if wanted & ids and rec.get("event_at"):
+                found.append((datetime.fromisoformat(rec["event_at"]).astimezone(timezone.utc),
+                              ",".join(sorted(wanted & ids)), rec.get("event_id", ""), rec.get("record_kind", "")))
+    return found
 
 
 def check_row(root: Path, row: dict[str, str], receipts: Path) -> tuple[list[str], list[str], str]:
@@ -161,6 +179,9 @@ def check_row(root: Path, row: dict[str, str], receipts: Path) -> tuple[list[str
         bad.append(f"kind {row['kind']!r} not in {sorted(KINDS - {''})}")
     if row["status"] not in STATUSES:
         bad.append(f"status {row['status']!r} not in {sorted(STATUSES - {''})}")
+    blindness = row.get("blindness", "")
+    if blindness not in BLINDNESS:
+        bad.append(f"blindness {blindness!r} not in {sorted(BLINDNESS - {''})}")
     if row["kind"] == "paper_content":
         warn.append("memory of the paper not excluded")
     freeze = row["freeze_commit"]
@@ -181,7 +202,10 @@ def check_row(root: Path, row: dict[str, str], receipts: Path) -> tuple[list[str
         warn.append("EDITED: the statement file differs from its frozen blob")
     outcome = row["outcome_ref"].split("#", 1)[0]
     if outcome and blob_at(root, freeze, outcome) is not None:
-        bad.append(f"outcome file {outcome} is already in the tree at the freeze commit")
+        if blindness == "declared":
+            warn.append(f"outcome_in_tree_at_freeze = yes (blindness declared, not shown): {outcome}")
+        else:
+            bad.append(f"outcome file {outcome} is already in the tree at the freeze commit")
     if row["outcome_commit"]:
         if not git_ok(root, "cat-file", "-e", f"{row['outcome_commit']}^{{commit}}"):
             bad.append(f"outcome_commit {row['outcome_commit'][:12]} not found")
@@ -197,10 +221,17 @@ def check_row(root: Path, row: dict[str, str], receipts: Path) -> tuple[list[str
                 order = "not_ancestor"
                 bad.append("the freeze commit is not an ancestor of the outcome commit")
     stamp = commit_utc(root, freeze)
-    early = [t for t in receipt_times(receipts, row["outcome_study_id"]) if t < stamp]
+    early = [r for r in receipt_times(receipts, row["outcome_study_id"]) if r[0] < stamp]
     if early:
-        bad.append(f"a read receipt for {row['outcome_study_id']} is dated {min(early).isoformat()}, "
-                   f"before the freeze {stamp.isoformat()}")
+        studies = sorted({r[1] for r in early})
+        first = min(early)
+        text = (f"{len(studies)} outcome source(s) have a read receipt dated before the freeze {stamp.isoformat()}: "
+                f"{'; '.join(studies)} (earliest {first[0].isoformat()}, {first[2]}, {first[3] or 'kind not stated'}); "
+                "the receipt does not say who read it")
+        if blindness == "declared":
+            warn.append(text + " (blindness declared, not shown)")
+        else:
+            bad.append(text)
     if row["predictor"] and row["scorer"] and row["predictor"] == row["scorer"]:
         bad.append("predictor and scorer are the same actor")
     if not row["predictor"] or not row["scorer"]:
