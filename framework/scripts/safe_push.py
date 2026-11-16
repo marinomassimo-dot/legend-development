@@ -35,8 +35,11 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
   8. `--serialize` makes publishers take turns. The gate takes 7 to 12 minutes and every other session's push moves the remote under it, so on 2026-11-16 seven gates ran to
      completion and were refused at the push ("HEAD moved" / non-fast-forward) because five sessions gated at once. With `--serialize` the tool takes an exclusive flock on
      `<git common dir>/legend_land.lock` (shared by every worktree of the repository; the kernel releases it when the process dies, so a crashed gate cannot deadlock the queue),
-     THEN fetches the branch and refuses, BEFORE the gate, when the remote tip is not an ancestor of HEAD ("merge it and call again"). Nothing else changes: the clean tree, the
-     expectation, the gate verdict, the HEAD re-read after the gate, the fast-forward push of the gated SHA and the ls-remote confirmation are the same code paths. `--lock-timeout <s>`
+     THEN fetches the branch. When the remote tip is not an ancestor of HEAD, the tool MERGES it under the lock (`git merge --no-edit FETCH_HEAD`) and gates and pushes that merged commit
+     (2026-11-16: the lock is not first-come-first-served, and a waiter that acquired it after the holder landed was refused and had to retry, three to eleven minutes a try). Safeguards:
+     `--expect-sha` binds the caller's commit BEFORE the merge (the merged commit is not what it names); only a CLEAN merge is accepted: on a conflict the merge is aborted, the tree and
+     HEAD are left as they were, the conflicting paths are named and nothing is gated or pushed; the tree is clean before and after; no merge happens when the tip is already an ancestor;
+     one line `MERGED <tip> into <old> -> <new> under the landing lock` shows the SHA that changed. Nothing else changes: the clean tree, the expectation, the gate verdict, the HEAD re-read after the gate, the fast-forward push of the gated SHA and the ls-remote confirmation are the same code paths. `--lock-timeout <s>`
      refuses instead of waiting longer than that (default: wait).
 
 Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>]]      (default branch: main)
@@ -135,8 +138,20 @@ def main(argv: list[str]) -> int:
             return fail(f"git fetch {remote} {branch} failed under the landing lock: {fetched.stderr.strip()[:300]}. Nothing was gated or pushed.")
         tip = run("git", "rev-parse", "FETCH_HEAD").stdout.strip()
         if run("git", "merge-base", "--is-ancestor", tip, before).returncode != 0:
-            return fail(f"the remote branch moved while this publisher waited ({tip[:12]} is not an ancestor of HEAD {before[:12]}); merge it and call again. "
-                        "Nothing was gated or pushed.")
+            merged = run("git", "merge", "--no-edit", "FETCH_HEAD")
+            if merged.returncode != 0:
+                conflicts = run("git", "diff", "--name-only", "--diff-filter=U").stdout.split()
+                run("git", "merge", "--abort")
+                now = run("git", "rev-parse", "HEAD").stdout.strip()
+                left = run("git", "status", "--porcelain").stdout.strip()
+                state = "tree and HEAD restored" if (now == before and not left) else f"WARNING: HEAD {now[:12]} / tree not restored: {left[:200]}"
+                why = ("conflicting paths: " + ", ".join(conflicts)) if conflicts else (merged.stderr.strip()[:300] or merged.stdout.strip()[:300])
+                return fail(f"the remote tip {tip[:12]} does not merge cleanly into HEAD {before[:12]} ({why}); {state}. Nothing was gated or pushed.")
+            new_head = run("git", "rev-parse", "HEAD").stdout.strip()
+            if run("git", "status", "--porcelain").stdout.strip():
+                return fail(f"working tree is not clean after the merge of {tip[:12]}; nothing was gated or pushed.")
+            print(f"MERGED {tip[:12]} into {before[:12]} -> {new_head[:12]} under the landing lock", flush=True)
+            before = new_head
 
     gate = run(sys.executable, str(GATE))
     verdict = [l for l in gate.stdout.splitlines() if l.startswith("VERDICT")]
