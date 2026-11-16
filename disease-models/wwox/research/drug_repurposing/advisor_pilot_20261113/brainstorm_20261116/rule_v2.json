@@ -1,0 +1,95 @@
+{
+  "age_windows": [
+    "P6-P8",
+    "P13-P15",
+    "later_unspecified"
+  ],
+  "applied_at_scoring_time_not_by_the_generator": {
+    "baselines": "(i) PTZ-profile ranking, (ii) frequency-of-use ranking from the feasibility census, (iii) class prior with no threads; the matrix must beat the best baseline on classifiable pairs, threshold X fixed before the outcome table is opened",
+    "not_scorable": "a class with fewer than 3 children with a stated outcome is not scorable at scoring time, never neutral",
+    "uninformative": "a class-level test with fewer than 10 classifiable child-agent pairs is declared uninformative in advance"
+  },
+  "classes": [
+    "sodium_channel",
+    "t_type_calcium",
+    "sv2a",
+    "ampa_antagonist",
+    "nmdar_pore_blocker",
+    "glun2b_nam",
+    "gabaa_pam_synaptic_selective",
+    "gabaa_neurosteroid_extrasynaptic",
+    "benzodiazepine",
+    "gaba_at_gat",
+    "kv7_opener",
+    "carbonic_anhydrase_multitarget",
+    "valproate_type",
+    "steroid_acth",
+    "ketogenic_diet",
+    "cannabidiol",
+    "fenfluramine_type",
+    "hcn_ih_blocker",
+    "neuroinflammation_il1_modulator"
+  ],
+  "content_reference": "ADV declaration of 2026-11-16 (matrix V2: 19 scored classes and rules R1-R3, SCI's class-list proposal accepted); machine encoding by HE. rule.json v1 (sha256 679a60894100d26bf4e550e2f49a888e39b8451dfbf428c2157f8b0cb2d94982) is not modified and still scores v1 cells byte-identically.",
+  "directness_rubric": {
+    "0": "none",
+    "1": "plausible",
+    "2": "same pathway",
+    "3": "the class's primary target is the thread's target"
+  },
+  "discriminating_top_set_max_share": [
+    1,
+    3
+  ],
+  "endpoints": [
+    "seizure",
+    "development"
+  ],
+  "never_specific_threads": [
+    "T3"
+  ],
+  "not_adopted": "evidence tiers are hand-assigned under this rubric, not derived from the prediction ledger",
+  "permutations": 1000,
+  "r1_min_link": [
+    1,
+    1
+  ],
+  "r2_scorable_denominator": true,
+  "r3_splits": [
+    {
+      "children": [
+        "gabaa_pam_synaptic_selective",
+        "gabaa_neurosteroid_extrasynaptic"
+      ],
+      "min_representatives": 2,
+      "parent": "gabaa_pam_nonbzd"
+    },
+    {
+      "children": [
+        "cannabidiol",
+        "fenfluramine_type"
+      ],
+      "min_representatives": 2,
+      "parent": "cbd_fenfluramine"
+    }
+  ],
+  "rank_by": "score_all",
+  "rule_version": "v2",
+  "rules_in_words": {
+    "R1": "a class column is scored only with a link to a thread: a match or aggravation cell at evidence_tier >= 1 and link_directness >= 1 from a held WWOX observation; evaluated per (endpoint, age window), so a class can be scorable in one window and not in another; unknown and neutral cells are not links",
+    "R2": "the informativeness denominator and the tie-share limit use the SCORABLE classes of the group only; empty columns never raise informativeness",
+    "R3": "a split needs two representatives in each child (distinct agent_id values among the child's cells) and a distinguishing thread (a thread linked, at the R1 minimum, to some children of the split and not to all); a split the cells do not justify makes its children unscorable (printed with the reason), it does not stop the run"
+  },
+  "seed": 20261116,
+  "status": "v2 form; WATCH classes are not matrix columns",
+  "thread_set": "not a rule: any declared thread id is accepted (amendment 1.1); the generator records the final thread list and its sha256",
+  "tier_rubric": {
+    "0": "none, or non-specific",
+    "1": "indirect, or tool pharmacology outside the WWOX system",
+    "2": "WWOX-system measurement without a genotype contrast",
+    "3": "WWOX-system measurement WITH a genotype contrast"
+  },
+  "zero_directness_threads": [
+    "T4"
+  ]
+}
