@@ -2,6 +2,11 @@
 
 Written for: ADV (cross-reading), HE (second reader), IT and the operator (the first block is the five-minute reading). Labels: KNOWN (source), HELD (table or full text in the repository), ASSUMED, INFERRED. Models are hypothesis generators, not evidence.
 
+## v2 block: what changed since v1 (details in "Update v2" at the foot)
+* The independent P47T line **reproduces** the Npy rise and the Npy2r fall in cortex and the Gabrd fall (tonic route, now I13), and **does not reproduce** the S-line hippocampal Grin2b fall (sustainer route) nor the hippocampus-specific Sst rise; so routes 1 (peptide brake, as receptor availability) and 3 (tonic subunit) are supported by two lines, routes 2 and 4 by one.
+* Graded incidence in the held paper (0/11, 4/23, 36/42 slices) is a constraint on every route: a route must be graded with Wwox dose; the S-HT arm is part of the experiment.
+* The FDR values in the P47T lines are `FDR_no_sex`; `FDR_with_sex` is given with them in I13.
+
 ## Answer first
 * **The idea, reshaped by a held table I had not read at the right resolution.** The hippocampus loses Wwox more than the neocortex (S line, transcript TPM: 0.15 of control against 0.32), loses more PV transcript (0.29 against 0.66), and yet does not burst (Breton 2021: no bursts in hippocampal slices; HELD). So *something other than a smaller deficit* holds it. The ADV seed named NPY. The held table says the NPY story is real in fold and weaker in absolute terms, and it names three other candidates that are at least as strong:
   1. **Peptidergic brake (the seed).** Npy rises 5.7-fold in hippocampus (94 to 537 TPM) against 1.95-fold in neocortex (475 to 926), but the *absolute* rise is the same (+443 against +452 TPM) and the null hippocampus ends with 58% of the neocortical level. The Y2 receptor (Npy2r) is 14-fold more abundant in hippocampal controls than in neocortical ones (11.8 against 0.85 TPM). So the ligand-receptor pair exists in hippocampus and barely in neocortex; the fold-change reading was the wrong one, the receptor-availability reading is the one that makes the asymmetry (HELD, INFERRED).
