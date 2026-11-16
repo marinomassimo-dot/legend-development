@@ -1,0 +1,11 @@
+report	child	status	seizure_outcome
+28721938	The patient (boy)	added_on	resolved
+30361190	The first child (2-year-old bo	added_on	partial
+30361190	The second child (12-month-old	added_on	partial
+35573960	Our patient (patient II-1, boy	continued	none
+35792847	Patient 2.1	tried	partial
+35792847	Patient 2.2	tried	resolved
+35792847	Patient 6	tried	resolved
+37583270	WWOX row 1 (M; FUA (2), ES (4)	added_on	resolved
+39101447	The patient (13-month-old girl	added_on	partial
+TOTAL	distinct children 9	resolved 4/9 (0.19, 0.73)	improved 8/9 (0.56, 0.98)
