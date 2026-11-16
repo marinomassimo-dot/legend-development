@@ -48,7 +48,7 @@
     }
   ],
   "STOP_LOG": [],
-  "VALIDATION_LIMIT": "Tests demonstrate delivery and ordering, not model compliance, scientific value or multiday autonomy. The next real decision must be judged from choice, dispatch and consumption evidence.",
+  "VALIDATION_LIMIT": "Tests demonstrate delivery and ordering, not model compliance, scientific value or multiday autonomy. The next real decision must be judged from choice, dispatch and consumption evidence. No full release inventory was run for this focused change. An initial worktree runner was interrupted (exit 143) and is not called a fresh-clone pass; the seven-target fresh-clone run has its own log.",
   "VALIDATION_ATTEMPTS": [
     {
       "scope": "Task worktree Advisor regression suite",
@@ -61,6 +61,25 @@
       "verdict": "WARN",
       "blocks": 0,
       "log": "/tmp/legend-adv-direction-lint.log"
+    },
+    {
+      "scope": "Frozen 2df5fcf45 on a fresh clone; targeted release regression runner",
+      "targets": 7,
+      "verdict": "PASS_WITH_SKIPS",
+      "skipped_cases": 1,
+      "skip_reason": "Stop hook not installed in the clone; runtime enforcement is not claimed",
+      "log": "/tmp/legend-adv-direction-regressions-fresh.log"
+    },
+    {
+      "scope": "Peer ideas-table merge 35d155575; structured-data integrity",
+      "tests": 4,
+      "verdict": "PASS",
+      "log": "/tmp/legend-adv-direction-structured.log"
+    },
+    {
+      "scope": "Receipt chain on the merged tree",
+      "receipts": 1970,
+      "verdict": "OK"
     }
   ]
 }
