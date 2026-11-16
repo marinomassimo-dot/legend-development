@@ -51,3 +51,7 @@ Found by the IT Orchestrator and ADV on re-reading the PMC article page; I confi
 
 ## Update 2026-11-16 (consumption pass, IT; pointer only)
 The head-to-head slice experiment brief (`experiment_brief_presidio013_sci_20261116/EXPERIMENT_BRIEF_V1_1.md`, section 3, the T-type arm) carries the Cav3 tools as ONE protocol for all agents of the arm (the stimulation-frequency requirement of the Cav3 pair gaps note: the efonidipine IC50 spans about 500-fold with stimulation frequency, so a low-frequency null would not count) and reads interval and duration separately (section 6.2: a T-type arm is predicted to lengthen the interval with the duration about unchanged if the two-stage hypothesis HB1 holds). BLOCK-1 for the representatives of the arm: catalogue-level only, ADMET tools absent (`advisor_pilot_20261113/brainstorm_20261116/it_block1_triage_20261116/README.md`); tolerability flags are unconfirmed general knowledge; no agent is nominated.
+
+## Update 2026-11-16 (IT; dated Update; no rank or direction changed)
+Primary-source dossiers of 2026-11-16 (`advisor_pilot_20261113/brainstorm_20261116/it_adv016_20261116/pharmacology_dossiers_20261116/`, delegate extraction with verbatim locators): flunarizine Kd 530 / 3,552 / 837 nM on Cav3.1 / 3.2 / 3.3 in one assay (Santi 2002); efonidipine measured at full text on Cav3.1 only (Furukawa 2004; IC50 in a figure); no efonidipine Cav3.2/Cav3.3 numbers and no efonidipine hERG number in open sources. The pair stays a proposal; wording proposal in `it_adv016_20261116/INV03_04_WORDING_IT.md`.
+
