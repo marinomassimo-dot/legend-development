@@ -1,0 +1,12 @@
+intensity_decile	compartment	carriers	non_carriers	median_lfc_carriers	median_lfc_non_carriers
+0	soluble	4	113	+0.000	+0.060
+1	soluble	18	115	+0.110	+0.040
+2	soluble	15	128	+0.060	+0.035
+3	soluble	15	116	+0.000	+0.040
+4	soluble	12	132	+0.025	+0.040
+5	soluble	10	133	+0.025	+0.040
+6	membrane	3	20	+0.110	+0.045
+6	soluble	6	137	+0.090	+0.000
+7	soluble	9	128	+0.120	+0.030
+8	soluble	11	131	+0.090	+0.000
+9	soluble	5	138	+0.050	-0.030

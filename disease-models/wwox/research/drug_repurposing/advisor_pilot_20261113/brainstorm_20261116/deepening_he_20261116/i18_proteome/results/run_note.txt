@@ -1,0 +1,5 @@
+verdict by the preregistered rule: INCONCLUSIVE
+proteins analysed 2025 of 2031 rows (dropped: no sequence or NA intensity: 6)
+carriers P in the whole table 118; clean non-carriers 1466
+BH<0.05 share, carriers: up 23, down 14 of 118; non-carriers: up 225, down 153 of 1466
+inputs: table cae297dce11b3b61cb20ab46ec05799fa30c28dae1099b761cb57ce5be980090; sequences f21516f931faeb7712b1fe5d8a5495c2a55b9fb1abfa16227b7f748454c8701d; preregistration 70067dee1baeb5a7c3f1f1d32cbd8ce1e3dbdff10c4e2a306fa186c62eb2d473
