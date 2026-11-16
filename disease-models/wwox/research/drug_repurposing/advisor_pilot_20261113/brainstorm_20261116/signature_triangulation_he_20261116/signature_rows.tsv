@@ -1,0 +1,44 @@
+agent	class_id	cell_id	context_class	dose	time	opposition_score
+CARBAMAZEPINE	sodium_channel	NPC	B	10 µM	24 h	-0.3916
+CARBAMAZEPINE	sodium_channel	NPC	B	10 µM	24 h	0.5286
+CARBAMAZEPINE	sodium_channel	NPC	B	10 µM	6 h	-0.2964
+CARBAMAZEPINE	sodium_channel	NEU	E	10 µM	24 h	0.3116
+CARBAMAZEPINE	sodium_channel	NEU	E	10 µM	6 h	1.1618
+DEXAMETHASONE	steroid_acth	NPC	B	10 µM	24 h	-0.0838
+DEXAMETHASONE	steroid_acth	NPC	B	10 µM	24 h	-0.2672
+DEXAMETHASONE	steroid_acth	NPC	B	10 µM	24 h	0.0786
+DEXAMETHASONE	steroid_acth	NPC	B	10 µM	24 h	0.7092
+DEXAMETHASONE	steroid_acth	NPC	B	10 µM	24 h	1.2989
+DEXAMETHASONE	steroid_acth	NPC	B	10 µM	6 h	-0.2113
+DEXAMETHASONE	steroid_acth	NEU	E	10 µM	24 h	0.1413
+DEXAMETHASONE	steroid_acth	NEU	E	10 µM	24 h	0.8723
+DEXAMETHASONE	steroid_acth	NEU	E	10 µM	6 h	-2.8690
+LAMOTRIGINE	sodium_channel	NPC	B	10 µM	24 h	1.2131
+LAMOTRIGINE	sodium_channel	NEU	E	10 µM	24 h	-1.3090
+NIMODIPINE	not_mapped	NPC	B	10 µM	24 h	-0.5203
+NIMODIPINE	not_mapped	NPC	B	10 µM	24 h	2.0897
+NIMODIPINE	not_mapped	NPC	B	10 µM	6 h	-0.7798
+NIMODIPINE	not_mapped	NEU	E	10 µM	24 h	0.4483
+NIMODIPINE	not_mapped	NEU	E	10 µM	6 h	0.0955
+RILUZOLE	not_mapped	NPC	B	10 µM	24 h	-0.5984
+RILUZOLE	not_mapped	NPC	B	10 µM	24 h	0.4666
+RILUZOLE	not_mapped	NPC	B	10 µM	24 h	1.7139
+RILUZOLE	not_mapped	NPC	B	10 µM	6 h	-2.2930
+RILUZOLE	not_mapped	NPC	B	10 µM	6 h	0.9165
+RILUZOLE	not_mapped	NEU	E	10 µM	24 h	-0.0716
+RILUZOLE	not_mapped	NEU	E	10 µM	24 h	-1.0080
+RILUZOLE	not_mapped	NEU	E	10 µM	24 h	0.2994
+RILUZOLE	not_mapped	NEU	E	10 µM	6 h	-0.6046
+RILUZOLE	not_mapped	NEU	E	10 µM	6 h	-2.0727
+VALPROIC ACID	valproate_type	NPC	B	10 µM	24 h	-0.5980
+VALPROIC ACID	valproate_type	NPC	B	10 µM	24 h	0.2743
+VALPROIC ACID	valproate_type	NPC	B	10 µM	6 h	-0.0500
+VALPROIC ACID	valproate_type	NPC	B	10 µM	6 h	-0.6699
+VALPROIC ACID	valproate_type	NEU	E	10 µM	24 h	-1.5050
+VALPROIC ACID	valproate_type	NEU	E	10 µM	24 h	-1.6592
+VALPROIC ACID	valproate_type	NEU	E	10 µM	6 h	-0.7460
+VALPROIC ACID	valproate_type	NEU	E	10 µM	6 h	-1.0485
+ZONISAMIDE	carbonic_anhydrase_multitarget	NPC	B	10 µM	24 h	-1.3448
+ZONISAMIDE	carbonic_anhydrase_multitarget	NPC	B	10 µM	6 h	-0.3338
+ZONISAMIDE	carbonic_anhydrase_multitarget	NEU	E	10 µM	24 h	0.8508
+ZONISAMIDE	carbonic_anhydrase_multitarget	NEU	E	10 µM	6 h	-2.7817
