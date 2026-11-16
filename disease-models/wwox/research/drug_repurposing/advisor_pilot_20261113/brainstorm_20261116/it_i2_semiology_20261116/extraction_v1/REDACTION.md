@@ -1,0 +1,2 @@
+# Redaction note (IT)
+The delegate's output was sealed first (SEAL_ORIGINAL_DELEGATE_OUTPUT.sha256, the digests of the files as delivered). The publication gate (PARENT_OF_ORIGIN_PAIRING) refused two published children whose genotype text names the parent of origin of a uniparental disomy (reports 38407561 and a second one). Only that phrase was replaced by the bracketed redaction in children.tsv and exposures.tsv; nothing else changed; SEAL.sha256 holds the digests of the published files. The delivered originals remain in the session scratchpad of the Orchestrator.
