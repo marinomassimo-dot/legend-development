@@ -59,6 +59,7 @@ A missing link is UNLINKED, and a missing experiment is NO_EXPERIMENT: both mean
 from __future__ import annotations
 
 import argparse
+import subprocess
 import csv
 import json
 import re
@@ -652,6 +653,10 @@ def main(argv=None) -> int:
         counts, dcounts = unlisted_hypothesis_counts(), unlisted_design_counts()
         for d in unlisted_packages():
             print(f"INFO not in manifest, not read: {d}" + (f" ({counts[d]} hypotheses unreachable)" if counts.get(d) else "") + (f" ({dcounts[d]} design steps unreachable)" if dcounts.get(d) else ""))
+        if not errs:                          # 2026-11-16: the HB1 package passed this check and failed 14 consecutive CI runs in five downstream suites that read the same registry; name them, found by what they read
+            readers = subprocess.run(["git", "grep", "-l", "-e", "conditional_proposals", "-e", "PKG_MAP", "--", "*test*.py"], cwd=REPO, capture_output=True, text=True).stdout.split()
+            if readers:
+                print("NEXT before the push: the registry has readers with their own suites that this check does not run: " + ", ".join(readers))
         return 1 if errs else 0
     rec, cmp_, own, des = record_for(pkgs, a.inv), comparison_for(pkgs, a.inv), hypotheses_for(pkgs, a.inv), design_for(pkgs, a.inv)
     print(json.dumps({"hypotheses": rec, "comparison": cmp_, "hypotheses_own_layout": own, "design_own_layout": des}, indent=1, ensure_ascii=False) if a.json

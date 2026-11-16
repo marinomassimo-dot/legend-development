@@ -42,6 +42,9 @@ def public_files(root: Path = ROOT):
     (dropped non-ignored paths: 0, added: 0), so no publishable file lost coverage.
     A source archive has no `.git`: walk it, pruning nested checkouts.
     """
+    named = os.environ.get("LEGEND_STRUCT_PATHS")
+    if named:                                      # 2026-11-16: scripts/legend_commit.sh runs these same tests on the files of ONE commit, so a ragged row is refused at the commit, not 19 CI runs later
+        return sorted(root / rel for rel in named.split("\n") if rel and (root / rel).is_file())
     if (root / ".git").exists():
         listing = subprocess.run(
             ["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
