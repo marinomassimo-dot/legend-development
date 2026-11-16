@@ -46,6 +46,7 @@ Unit tests (`test_strategic_advisor.py`, 159 tests, all green): the observed cas
 * The P16-era quiet ticks (12:00 to 20:35Z) could not be replayed (state overwritten); the rule changes cannot be shown to cover that stretch, only the overnight hold and the closing wording.
 * "Ready" is the portfolio's own status: a row marked ready that is not truly reachable would still force a naming; the remedy is to mark it `waiting` with a `resume_when` (a row edit), not to word around it.
 * Naming a row satisfies the check; whether the cause given is true is a judgement of the presidio (the check cannot read it).
+* The recall tag first depended on the checkout path (found by ADV: the same text gave `047a03cd` and `b00417e1` with two roots, because `recall` refuses to run from a linked worktree and the primary checkout was on an old local main); the tag is now computed with the path replaced by a placeholder, so the same text gives the same tag in any checkout (test: a different root, the same tag). ADV replaced the installed job with the text of the landed code (tag `b00417e1`, one job); the new path-independent tag will differ from it once and must be installed once more.
 * The tracked ledger append during an evaluation (4b); the installed recall exists only in the ADV session's memory (CronList, session-only), so its tag must be compared by a session; there is no host-side check of it.
 * The closing question of a meeting is text written by the presidio; the rule is in the canonical §12 and §13 (ADV's change), not enforced in code.
 
