@@ -1,0 +1,149 @@
+number_in_text	claim_no	cited_source	value_in_source	match	note
+679a6089...	A1	aed_matrix_sci_20261116/FREEZE_PREDICTIONS.md L5	679a60894100d26bf4e550e2f49a888e39b8451dfbf428c2157f8b0cb2d94982	yes	sha256sum of rule.json confirms
+15 classes	A1	brainstorm_20261116/rule.json	15 class ids	yes	
+244 cells	A1	FREEZE_PREDICTIONS.md L6; output/cells.tsv	244 rows (245 lines with header)	yes	
+f5b71a3f4	A1	git log	f5b71a3f4345b61be7496a328f7cc3b02025c336	yes	commit exists
+07:30:22Z	A1	git log (commit time)	2026-11-16T07:30:22+00:00	yes	time is the commit time; not stated in the file
+score 9	A1	FREEZE_PREDICTIONS.md L11	score 9 (summed)	yes	
+five-way	A1	FREEZE_PREDICTIONS.md L11	top set of 5 of 15	yes	
+0.67	A1	FREEZE_PREDICTIONS.md L11	informativeness 0.67	yes	
+three classes	A1	FREEZE_PREDICTIONS.md L11	top set of 3 of 15	yes	
+0.80	A1	FREEZE_PREDICTIONS.md L11	informativeness 0.80	yes	
+206 rows	A4	it_extractor_20261116/sealed/extraction.tsv	207 lines incl. header = 206 rows	yes	
+08:21:43Z	A4	git log, commit 5a47aa1b2	2026-11-16T08:21:43+00:00	yes	commit time
+F1 0.70 to 0.73	A4	it_scoring_20261116/README.md L11-L12	0.73 per-thread, 0.70 origin-collapsed (resolved only)	yes	sensitivity runs give 0.67, 0.69, 0.79, 0.88; range is the main and reclassified runs
+0.64 to 0.65	A4	it_scoring_20261116/README.md L14, L37	baseline (i) 0.64 (7 pairs); (ii) 0.65 on 10 pairs after reclassification	yes	different pair sets
+margin 0.05 to 0.09	A4	it_scoring_20261116/README.md L23, L37	0.09 (0.73-0.64) and 0.05 (0.70-0.65)	yes	0.09 compares 15 pairs with 7; like-for-like 0.00 (README addendum)
+0.10	A4	it_scoring_20261116/README.md L23	below the 0.10 required	yes	
+7 pairs	A5	he_crosscheck_20261116/crosscheck_result.txt	resolved_only ... 7 pairs	yes	
+0.643 (F1)	A5	he_crosscheck_20261116/crosscheck_result.txt	F1_per_thread_sum 0.643	yes	
+0.643 (PTZ)	A5	he_crosscheck_20261116/crosscheck_result.txt	baseline_i_PTZ 0.643	yes	
+0.571	A5	he_crosscheck_20261116/crosscheck_result.txt	F1_origin_collapsed 0.571	yes	
+206 rows (zero worsening)	A6	it_extractor_20261116/sealed/README.md L8	Worsening statements: 0 in every class	yes	
+one child	A6	it_extractor_20261116/sealed/README.md L8	Development outcome stated: 1 child in total	yes	
+4 of 15	A7	signature_triangulation_he_20261116/README.md L6	covers 4 of the 15 (v1) or 19 (v2) classes	yes	
+5 pairs	A7	signature_triangulation_he_20261116/README.md L6	5 classifiable pairs	yes	
+4 of 4	A7	signature_triangulation_he_20261116/README.md L7	4 of 4 neuron-like signatures	yes	signature_rows.tsv: all four valproic acid E-context scores negative
+2cb4a908	A8	matrix_v2_cells_sci_20261116/README.md L6	2cb4a908002aae48c6d4cc68baa9f8451e4bbb287fe6f47b4ccd6f7c5785f112	yes	sha256sum rule_v2.json confirms
+19 columns	A8	matrix_v2_cells_sci_20261116/README.md L6	19 columns	yes	
+469 cells	A8	matrix_v2_cells_sci_20261116/README.md L6	469 cells	yes	470 lines with header
+dbe590417	A8	git log	dbe59041708665cf91041cb846698e4b5cb50bc7	yes	
+09:14:10Z	A8	git log	2026-11-16T09:14:10+00:00	yes	commit time
+7 of 19	A8	matrix_v2_cells_sci_20261116/README.md L12	Scorable classes: 12 of 19	yes	7 = 19 - 12; R3 four, R1 three
+137 predictions	G1	it_baseline_table_20261116/README.md L6	137 predictions	yes	ledger has 137 P-rows (172 rows incl. later rows)
+34 files	G1	it_baseline_table_20261116/README.md L6	34 by-name files	yes	
+16 of 33	G1	it_baseline_table_20261116/README.md L6	generative 16/33	yes	recomputed from ledger
+48 percent	G1	it_baseline_table_20261116/README.md L6	48%	yes	rounded (48.5)
+37 of 56	G1	it_baseline_table_20261116/README.md L6	paper_content 37/56	yes	
+66 percent	G1	it_baseline_table_20261116/README.md L6	66%	yes	rounded (66.1)
+45 of 89	G1	it_baseline_table_20261116/README.md L6	45 of the 89 scored rows	yes	recomputed from ledger
+84 hit at least one limit	G1	prediction_ledger.py check on prediction_ledger.tsv	violations 84 (REPRODUCE.md L19 gives the same)	yes	all 84 are among the 137 P-rows; REPRODUCE.md counts over 172 rows
+51 predictor = scorer	G1	prediction_ledger.py check	51 'predictor and scorer are the same actor'	yes	
+about 24 (scored file already in tree)	G1	prediction_ledger.py check	44 rows with 'already in the tree at the freeze commit'	no	text 24 vs 44: 20 lower; 24 equals only the paper_content subset; 33 are outside the predictor=scorer set
+24 hypotheses	G2	it_leap_judge_20261116/JUDGE_SETUP.md L4	24 hypotheses	yes	
+ADV 5, SCI 5, HE 4, IT 5, arm A 5	G2	JUDGE_SETUP.md L4	ADV 5, HE 4, SCI 5, IT 5, memory-free baseline arm 5	yes	
+24 of 24	G2	JUDGE_RUN2.md L13	24 of 24 rows have both echoes	yes	
+ONE survivor	G2	JUDGE_RUN2.md L13	SURVIVORS 1 of 24 (J11)	yes	
+10 hypotheses blanked	G2	JUDGE_SETUP.md L11	5 ADV and 5 IT hypotheses	yes	
+54,395	G2	JUDGE_RUN2.md L13; PROGRAMME_COST.md L25	output 54,395	yes	
+24 (round 1b)	G3	round1b/judge_table_1b.tsv	24 rows J01-J24 plus 2 planted	yes	
+2 of 2, n = 2	G3	it_arm_b_20261116/JUDGE_ARMB.md L4	Second 2 of 2 on known answers (earlier judge: 2 of 2)	yes	
+9 / 24 / 22	G3	round1b/judge_table_1b.tsv recomputed	S1 9, S2 24, S3 22	yes	recomputed by script from the a-d columns
+37 percent	G3	JUDGE_ARMB.md L12	authors 37%	yes	7/19 = 36.8 rounded
+40 percent	G3	JUDGE_ARMB.md L12	A 40%	yes	2/5
+n = 4 to 5 per arm	G3	leap_sci_20261116/FATE_TABLE.md L53	n is 4 to 6 per arm	yes	arms are 4,5,5,5 (authors) and 5, 5; FATE_TABLE says 4 to 6
+about 20 per arm	G3	leap_sci_20261116/ROUND3_WORTH_TESTING_SCI.md L11	about 20 items per arm	yes	
+0.2 from 0.6	G3	ROUND3_WORTH_TESTING_SCI.md L11	0.2 against 0.6	yes	
+arm B S1 4 of 5	G4	it_arm_b_20261116/JUDGE_ARMB.md L5, L10	S1 4 of 5	yes	
+arm B S2 5 of 5	G4	JUDGE_ARMB.md L10	S2 5	yes	
+arm B S3 4 of 5	G4	JUDGE_ARMB.md L10	S3 4	yes	
+arm A 2/5, 5/5, 5/5	G4	JUDGE_ARMB.md L9	2, 5, 5	yes	
+authors 7/19, 19/19, 17/19	G4	JUDGE_ARMB.md L11	7, 19, 17	yes	
+23,658	G4	JUDGE_ARMB.md L12; it_leap_baseline_arm_20261116/FREEZE.md	A 23,658	yes	
+42,562	G4	JUDGE_ARMB.md L12; it_arm_b_20261116/FREEZE.md	B 42,562	yes	
+3.6-4.1 KB	G4	JUDGE_ARMB.md L3	about 3.6-4.1 KB	yes	
+1.6-1.8 KB	G4	JUDGE_ARMB.md L3	1.6-1.8 KB	yes	
+8 independent items: 5 agree, 3 disagree, 1 own	G5	it_fate_second_read_20261116/FATE_SECOND_READ_IT.md L24	5 of 8 independent items agree, 3 disagree, 1 own item	yes	
+all 24 round-1 [2,3,5,6,8]	G5	leap_sci_20261116/FATE_COUNTS_REV2.tsv	round 1, all 24: 2 3 5 6 8	yes	
+authors (19) [1,2,5,4,7]	G5	FATE_COUNTS_REV2.tsv	authors (19): 1 2 5 4 7	yes	
+arm A [1,1,0,2,1]	G5	FATE_COUNTS_REV2.tsv	baseline: 1 1 0 2 1	yes	
+arm B [0,0,0,0,5]	G5	FATE_COUNTS_REV2.tsv	arm B: 0 0 0 0 5	yes	
+30f6109f	G6	it_test_setter_20261116/TEST_SETTING_FROZEN.md L1	30f6109fbce943f74ceb184eeefdad50d9bbb455acae767ddf7a6dc171f1f61d	yes	
+2 of 2, n = 2 (planted)	G6	TEST_SETTING_FROZEN.md; STRONG_TEST_SECOND_READ_IT.md L24	both answered as expected; n = 2	yes	
+8 of the 29 (28 percent)	G6	STRONG_TEST_SECOND_READ_IT.md L26	8 of 29 (28 percent)	yes	
+9 of the 31	G6	TEST_SETTING_FROZEN.md	yes 9, no 22	yes	
+6 of the 9 rows fully; 3 partial	G6	leap_sci_20261116/STRONG_TEST_FATE_SCI.md L10	6 executed in full ... 3 only in part	yes	
+6 of 6 categories	G6	STRONG_TEST_SECOND_READ_IT.md L13	Agreement 6 of 6	yes	
+5 of 6 independent	G6	STRONG_TEST_SECOND_READ_IT.md L13	one of them my own item, so 5 independent	yes	wording: all 5 independent items agree
+rejected 1, not rejected 4, untestable 24	G6	STRONG_TEST_SECOND_READ_IT.md L23	1 R, 4 N, 24 U	yes	
+arm A [1,1,0,4]	G6	STRONG_TEST_SECOND_READ_IT.md L17	1,1,0,4	yes	
+arm B [0,0,0,5]	G6	STRONG_TEST_SECOND_READ_IT.md L18	0,0,0,5	yes	
+ADV [3,0,1,4]	G6	STRONG_TEST_SECOND_READ_IT.md L19	3,0,1,4	yes	
+HE [2,0,2,2]	G6	STRONG_TEST_SECOND_READ_IT.md L20	2,0,2,2	yes	
+IT [1,0,0,5]	G6	STRONG_TEST_SECOND_READ_IT.md L21	1,0,0,5	yes	
+SCI [1,0,1,4]	G6	STRONG_TEST_SECOND_READ_IT.md L22	1,0,1,4	yes	
+n = 5, about 20 per arm	G6	STRONG_TEST_SECOND_READ_IT.md L26	NOT SEPARABLE at n 5 (SCI's estimate: about 20 per arm)	yes	
+three freezes	G7	framework/protocols/generative_round.md L26	HE leap, IT leap, extractor release record, arm A output = four	no	text three vs source four (one more)
+15 statements (PS-01..15)	G8	prospective_registry_statements_sci_20261116/README.md L3; STATEMENTS.tsv	15 statements	yes	
+5 publication statements	G8	README.md L19; PUBLICATION_STATEMENTS.tsv	PR-04, 05, 07, 09, 10	yes	
+2027-11-16	G8	README.md L11	All statements expire at 2027-11-16	yes	
+12 of the 15	G8	README.md L19; STATEMENTS.tsv	'twelve' in text; 11 IDs listed (PS-01..07, PS-11..14)	no	text and source prose agree on twelve, but the listed IDs and the dated_outcome_source column give 11
+about 24,000 tokens	G9	it_arm_b_20261116/JUDGE_ARMB.md L12	A 23,658	yes	rounded
+5 hypotheses	G9	it_leap_baseline_arm_20261116/FREEZE.md	5 hypotheses (H-B1 to H-B5)	yes	
+57	B1	PLAN_8H.md L6	15+15+12+15 = 57	yes	
+53	B1	PLAN_8H.md L6	13+14+12+14 = 53	yes	
+45	B1	PLAN_8H.md L6	12+10+13+10 = 45	yes	
+about 11 (IT)	B1	PLAN_8H.md L6	GSK3beta/HDAC 11 (IT) and low for SCI	yes	
+K channels 11 (HE)	B1	PLAN_8H.md L6	K channels 11 (HE)	yes	
+25 cells	B2	it_second_read_cells_20261116/README.md L8	25 cells	yes	
+21 say it	B2	README.md L9	says_it 21	yes	
+1 locator wrong	B2	README.md L9	locator_wrong 1 (T14)	yes	
+2 tiers and 1 directness	B2	README.md L9	Evidence tier too low 2; directness too low 1	yes	
+28 of 36	B2	aed_matrix_sci_20261116/output/POSTHOC_v1.1_stdout.txt	stays the top set in 28 of 36 (seizure P13-P15)	yes	pooled window gives 70 of 72
+26.2 s	B3	EXPERIMENT_BRIEF_V1_1.md L15	median inter-burst interval of 26.2 s	yes	
+0.66 s	B3	EXPERIMENT_BRIEF_V1_1.md L15	Median burst duration 0.66 s	yes	
+0.84 to 0.03 bursts per minute	B3	EXPERIMENT_BRIEF_V1_1.md L72	0.84 to 0.03 bursts/min	yes	
+duration 0.66 to 0.54 s	B3	EXPERIMENT_BRIEF_V1_1.md L72	0.66 to 0.54 s	yes	
+13 bursts	B3	EXPERIMENT_BRIEF_V1_1.md L72	13 bursts	yes	
+four animals per genotype	E1	EXPERIMENT_BRIEF_V1_1.md L10, L50	four animals per genotype	yes	
+6 to 34 (WO-10)	E1	EXPERIMENT_BRIEF_V1_1.md L45; output/sizing.tsv	6 to 34	yes	
+5 to 29	E1	EXPERIMENT_BRIEF_V1_1.md L46; output/sizing.tsv	5 to 29	yes	
+about a quarter more	E1	EXPERIMENT_BRIEF_V1_1.md L37, L50	about a quarter more	yes	
+1 of 15 (pore blocker)	E2	EXPERIMENT_BRIEF_V1_1.md L56; output/scenarios.tsv S1	size 1	yes	
+2 (GABA-A PAM)	E2	EXPERIMENT_BRIEF_V1_1.md L57; scenarios.tsv S2	size 2 (GABA-A PAM and benzodiazepine)	yes	
+4 (generic everywhere)	E2	EXPERIMENT_BRIEF_V1_1.md L60; scenarios.tsv S5	size 4	yes	
+none (no suppression)	E2	scenarios.tsv S7; EXPERIMENT_BRIEF_V1_1.md L62	valproate_type, size 1, 'discriminating'; brief: 'artefact'	no	text says none; generator prints a one-class top set (valproate_type) that the brief calls an artefact
+-85 percent	E3	leap_sci_20261116/SURPRISES_SCI_20261116.md L5	hippocampus S line -85%	yes	
+-68 percent	E3	SURPRISES_SCI_20261116.md L5	neocortex -68%	yes	
+28.1 to 3.3 percent	E3	SURPRISES_SCI_20261116.md L7	28.1% to 3.3%	yes	
+13 representatives	E4	repurposing_readiness_sci_20261116/README.md L6	13 agents	yes	
+3 GluN2B tool compounds	E4	README.md L8, L25	three agents (ifenprodil, Ro 25-6981, radiprodil); radiprodil is clinical-stage	yes	three agents match; only two are 'tool compounds'
+31 of 31	E4	README.md L15	31 of 31 signal quotes found verbatim in the label text	yes	signals_tranche1.tsv has 33 rows
+11 of 13 red	E4	README.md L12	red 11	yes	
+07:05Z to 10:25Z	K1	programme_cost_he_20261116/PROGRAMME_COST.md L1	[2026-11-16T07:05:00Z, 2026-11-16T10:25:00Z)	yes	
+934 turns	K1	PROGRAMME_COST.md L15	935	no	text 1 lower
+1,215,581 output	K1	PROGRAMME_COST.md L15	1,217,228	no	text 1,647 lower
+2,299,178 cache written	K1	PROGRAMME_COST.md L15	2,306,863	no	text 7,685 lower
+401,159,272 cache read	K1	PROGRAMME_COST.md L15	401,673,811	no	text 514,539 lower
+9 transcripts	K1	PROGRAMME_COST.md L20-L28	9 delegate rows	yes	
+327 turns	K1	PROGRAMME_COST.md L29	327	yes	
+398,206 output	K1	PROGRAMME_COST.md L29	398,206	yes	
+54,395	K1	PROGRAMME_COST.md L25, L31	54,395	yes	
+13.7 percent	K1	PROGRAMME_COST.md L31	13.7%	yes	54,395/398,206 = 13.66
+15:10Z (final rerun)	K1	PLAN_8H.md L28; PROGRAMME_COST.md L48	closing synthesis 15:10; 'rerun at the closing time'	yes	no rerun file exists yet
+357 per row	K2	PROGRAMME_COST.md L36	357 per row	yes	73,560/206 = 357.1, rounded
+206 rows	K2	PROGRAMME_COST.md L36	206	yes	
+1,711 per attributable row	K2	PROGRAMME_COST.md L36	1,711	yes	73,560/43 = 1,710.7, rounded
+43	K2	PROGRAMME_COST.md L36	43 attributable rows	yes	it_scoring README L30 also 43
+1,316 per cell	K2	PROGRAMME_COST.md L37	1,316	yes	32,907/25 = 1,316.3
+5,756 per hypothesis	K2	PROGRAMME_COST.md L38	5,756	yes	138,135/24 = 5,755.6
+204,355 per survivor	K2	PROGRAMME_COST.md L39	204,355	yes	23,658 + 138,135 + 42,562 = 204,355
+1 (survivor)	K2	PROGRAMME_COST.md L39	1 survivor	yes	
+Twice (landings blocked)	X4	none	not found	source_not_found	no file records it
+about 20 minutes each	X4	none	not found	source_not_found	no file records it
+about 5 minutes	X7	none	not found	source_not_found	no file records it
+Three freeze commits	X8	framework/protocols/generative_round.md L26	four items named	no	text three vs source four
+12 of 15 registry statements	D1	prospective_registry_statements_sci_20261116/README.md L19	twelve in text; 11 IDs listed	no	same defect as G8
+48 percent	S0-3	it_baseline_table_20261116/README.md L6	48%	yes	rounded
+51 percent	S0-3	it_baseline_table_20261116/README.md L6	45 of 89 = 50.6%	yes	rounded
+20 items per arm	S8	ROUND3_WORTH_TESTING_SCI.md L11, L18	about 20 items per arm	yes	
