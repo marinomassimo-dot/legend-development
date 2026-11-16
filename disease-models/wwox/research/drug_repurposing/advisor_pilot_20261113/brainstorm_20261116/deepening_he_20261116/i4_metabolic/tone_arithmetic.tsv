@@ -1,0 +1,25 @@
+scenario	adk_exponent_s	receptor_exponent_r	girk_exponent_g	adenosine_ratio	tone_ratio_null_over_wt
+snRNA pool values (Adora1 x0.487, Kcnj3 x0.731)	0.5	0.5	0.0	1.112	0.777
+snRNA pool values (Adora1 x0.487, Kcnj3 x0.731)	0.5	0.5	1.0	1.112	0.568
+snRNA pool values (Adora1 x0.487, Kcnj3 x0.731)	0.5	1.0	0.0	1.112	0.542
+snRNA pool values (Adora1 x0.487, Kcnj3 x0.731)	0.5	1.0	1.0	1.112	0.396
+snRNA pool values (Adora1 x0.487, Kcnj3 x0.731)	1.0	0.5	0.0	1.238	0.864
+snRNA pool values (Adora1 x0.487, Kcnj3 x0.731)	1.0	0.5	1.0	1.238	0.632
+snRNA pool values (Adora1 x0.487, Kcnj3 x0.731)	1.0	1.0	0.0	1.238	0.603
+snRNA pool values (Adora1 x0.487, Kcnj3 x0.731)	1.0	1.0	1.0	1.238	0.441
+snRNA pool values (Adora1 x0.487, Kcnj3 x0.731)	1.5	0.5	0.0	1.377	0.961
+snRNA pool values (Adora1 x0.487, Kcnj3 x0.731)	1.5	0.5	1.0	1.377	0.703
+snRNA pool values (Adora1 x0.487, Kcnj3 x0.731)	1.5	1.0	0.0	1.377	0.671
+snRNA pool values (Adora1 x0.487, Kcnj3 x0.731)	1.5	1.0	1.0	1.377	0.490
+Adora1 and Kcnj3 unchanged (the bulk reading)	0.5	0.5	0.0	1.112	1.112
+Adora1 and Kcnj3 unchanged (the bulk reading)	0.5	0.5	1.0	1.112	1.112
+Adora1 and Kcnj3 unchanged (the bulk reading)	0.5	1.0	0.0	1.112	1.112
+Adora1 and Kcnj3 unchanged (the bulk reading)	0.5	1.0	1.0	1.112	1.112
+Adora1 and Kcnj3 unchanged (the bulk reading)	1.0	0.5	0.0	1.238	1.238
+Adora1 and Kcnj3 unchanged (the bulk reading)	1.0	0.5	1.0	1.238	1.238
+Adora1 and Kcnj3 unchanged (the bulk reading)	1.0	1.0	0.0	1.238	1.238
+Adora1 and Kcnj3 unchanged (the bulk reading)	1.0	1.0	1.0	1.238	1.238
+Adora1 and Kcnj3 unchanged (the bulk reading)	1.5	0.5	0.0	1.377	1.377
+Adora1 and Kcnj3 unchanged (the bulk reading)	1.5	0.5	1.0	1.377	1.377
+Adora1 and Kcnj3 unchanged (the bulk reading)	1.5	1.0	0.0	1.377	1.377
+Adora1 and Kcnj3 unchanged (the bulk reading)	1.5	1.0	1.0	1.377	1.377
