@@ -1,0 +1,237 @@
+# Hypotheses to judge (anonymised, shuffled). Four criteria in JUDGE_TASK.md.
+
+## J01. Inhibition itself ignites the burst, by post-inhibitory rebound (so the matrix's top class could aggravate)
+
+* **Statement (IPOTESI).** In knockout neocortex a synchronous inhibitory volley followed by rebound spiking (larger sag and rebound in knockout cells, Breton 2021) is the ignition step of the burst, so enhancing GABA-A drive RAISES the burst rate in knockout slices and a T-type or HCN blocker lowers it. **Rejecting observation:** the burst-onset-triggered average of inhibitory events shows no inhibitory deflection before onset, and a GABA-A positive modulator lowers the knockout burst rate.
+* **Why a leap:** the matrix reads reduced inhibition as a deficit that GABA-A drive restores (T2); this one makes inhibition a trigger when rebound is large, an inversion of the sign for the class that ties at the top.
+* **Existing assay or held table:** Breton 2021 intrinsic properties (sag, post-inhibitory rebound; registry CLAIM 021); T-type package `ttype_20261107/output/README.md`; the L7 brief's GABA-A positive modulator arm (`experiment_brief_presidio013_sci_20261116/EXPERIMENT_BRIEF.md`) already measures the discriminating outcome.
+* **Single discriminating observation:** the sign of the burst-rate change under a GABA-A positive modulator in knockout neocortex. (a) Rate rises: GABA-A rows become aggravation (L7 scenario S8 pattern; top set moves to pore blockers), the rebound mechanism is supported, and T-type blockers rise. (b) Rate falls: rejected.
+* **Repurposing class (labels, source):** T-type blockers (ethosuximide, Z944; held `ttype_20261107`, `cav3_pair_adv009_20261115`); the opposite is an avoid-list entry for GABA-A positive modulators, not a candidate. Mechanism-class anchor: held Breton rebound measurement; no independent neocortical rebound-ignition source found (a PubMed title search returned thalamic and corticothalamic models only: 21458572, 26758833, abstract level).
+* **Held-data pre-test:** mixed, not rejected. T-type transcripts disagree between laboratories: Cacna1g DOWN in neuron-deletion hippocampus N (23.74 to 11.53 TPM) and Cacna1i DOWN in cortex S, hippocampus N and S, but Cacna1g UP in P47T PFC (+0.64, FDR 0.012; CTX +0.65, FDR 0.33). Hcn1 and Hcn2 show no change in either (P47T Hcn1 +0.13 to +0.27, Hcn2 -0.22 to -0.02; none among neuron-deletion rows). Held case-level statements about GABA-A drug exposure with worsening are sealed and unread by me.
+* **What would change my mind:** an inhibitory deflection absent before onset; a knockout rebound not larger than wild type in the same slices; a GABA-A positive modulator that lowers the burst rate.
+* **Cost:** one arm already in the L7 design (8 to 17 animals per genotype under the brief's assumptions) plus a hyperpolarising-step protocol in the same cells.
+
+## J02. The seizure and development endpoints decouple for classes whose targets are glial (steroid/ACTH, GABA-AT/GAT) and track together for neuron-enriched ones: prospective only
+
+* **Statement.** Four of six children with both endpoints stated are discordant (the INV-10 counts quoted in ADV_SEED). The held tables place the NR3C1 target of the steroid class astrocyte-enriched in mouse (3.8 against 28.6 FPKM; human 5.8 against 11.7) and the GAT targets of [another hypothesis] astrocyte-enriched. So for an agent with a neuron-enriched target (sodium-channel, GABA-A gamma-2: Gabrg2 24.1 against 3.7; human GABRG2 69.5 against 12.0), the seizure outcome and the development outcome should agree more often than for glial-target classes. **Rejecting observation:** equal or higher discordance for the neuron-target agents among children with both endpoints stated.
+* **Why a leap.** It drops the idea that one endpoint pair has one mechanism. The two endpoints may sit on different compartments, which would also explain why a class can score on seizure and not on development.
+* **Existing assay or held table.** Held class tables above; the A1 table's concordance and endpoint columns (not opened by me; [a session] scores after the freeze). A1 cannot test it now: no neuron-target class has both endpoints attributable (sodium-channel, GABA-A and SV2A agents appear only as co-therapy text, per [a session] census).
+* **The discriminating observation and its two outcomes.** A new case report with a neuron-target agent and both endpoints stated. Lower discordance for it than for glial-target classes: the endpoint-by-compartment reading is supported and the matrix is scored per endpoint with the compartment as a column. Equal or higher: rejected.
+* **Repurposing class (labels only).** Sodium-channel blockers and GABA-A modulators (neuron-target) against steroid/ACTH and GABA-AT/GAT (glial-target); source: standard mechanism of action.
+* **Held-data pre-test.** Not run on purpose: it would need the A1 outcome and concordance columns, which I did not open. The target-compartment half is from the held tables (above); the endpoint half is untested.
+* **What would change my mind.** A held pair of both-endpoint children on a neuron-target agent with the same discordance as the glial-target classes.
+* **Cost.** Zero now; the test waits for an event (a case report) and goes to the prospective registry.
+
+
+
+## J04.
+
+
+
+**Statement:** One latent delayed-maturation axis in the KO neuronal population explains the co-movement of the progenitor markers, the CCN2 rise, an immature NMDAR subunit ratio, an immature chloride-transporter ratio (NKCC1 up relative to KCC2), the higher input resistance and the depolarised rest, so the held expression tables should show these genes moving by the amount a progenitor-minus-neuronal composite projects; rejected if, in the held KO contrasts, the subunit and chloride-transporter genes move opposite to or independently of the composite projected from the time-course calibration set.
+
+**Why a leap:** The files hold these as separate threads: CCN2 as progenitor-state or composition (`ctgf_held_data_adv007_20261114/README.md`, composite projection +1.21 against observed +1.15), GluN2B composition (`T1_T11` 5b), chloride gradient and a maturational offset as one of seven explanations (`chloride_gradient_sci42_20261110/README.md`), and size/maturation as a hypothesis with no lever (KH5 in `potassium_conductances_sci43_20261110/README.md`). This drops the assumption that they are independent: it asks whether the single projection that carried CCN2 also carries the channel, receptor and transporter genes. Partial overlap with the stated "maturational offset" and KH5; the added element is the common axis and the table-level test.
+
+**Existing assay or table in the repository that can test it:** `ctgf_held_data_adv007_20261114/README.md` (GSE156243 KO organoid 4 versus 2 libraries; GSE150123 time-course calibration; the composite projection method; P17 mouse tables; snRNA pair); `ph_k2p_sci45_20261111/README.md` (P7 cell-class RNA table for Kcnk2/3/9); `chloride_gradient_sci42_20261110/README.md` (M02 age series of littermates as the wet arm).
+
+**The single discriminating observation and its two outcomes:** For a fixed list of genes (GRIN2B, GRIN2A, SLC12A2, SLC12A5, the K2P genes, CCN2), compare the observed KO-versus-WT log2 change in the organoid table with the change projected from the calibration set by the same progenitor-minus-neuronal composite. Outcome A: observed and projected agree in direction and rough size for most of the list (as CCN2 already does): single axis, the later wet readout is M02 (an age series), and the burst phenotype is partly a maturational offset. Outcome B: the receptor and transporter genes depart from the projection while CCN2 stays on it: CCN2 is a composition marker only and the channel and receptor changes need independent explanations.
+
+**Repurposing class and at most 2 named examples (labels only):** No class if the axis is real and nothing in the files gives a maturation lever (KH5: no lever). Conditional class under the chloride arm only: NKCC1-directed chloride-loading modulators; label bumetanide (outside knowledge for the name, see D; the class as a "chloride-gradient manipulation" is in the `chloride_gradient_sci42_20261110/README.md` conditional prediction table).
+
+**Held-data pre-test:** Partly. The CCN2 member of the family already agrees (+1.21 projected, +1.15 observed), so the single-axis reading is not rejected; the receptor and transporter genes are not reported in any file here, so the main test is a table lookup that the folder does not contain. Caveats carried from `ctgf_held_data_adv007_20261114/README.md`: 4 versus 2 libraries, the calibration is a time course of unperturbed spheroids, a projection shows what a shift would carry, not that a shift occurred, and the composite projection is unchecked by anyone else.
+
+**What would change my mind:** An organoid library set in which the progenitor markers do not rise while the channel genes move; a mouse P17 table (null or neuron deletion) where the same genes move against the composite; the age-series measurement (M02) showing a constant offset rather than a shifted time course.
+
+**Cost to test:** 0 animals; roughly 10 to 15 table lookups (each gene in three held tables, plus one projection run).
+
+---
+
+## J05. The network has a critical fraction: burst abolition is a steep threshold in NMDAR current removed, not a graded one
+
+* **Statement (IPOTESI).** d-APV abolishing bursts at 50 uM means the network sits just past a bifurcation; the fraction of the NMDAR current that must be removed to abolish bursts, f_c, is small, so a GluN2B NAM that removes only its sensitive share of the current (WO-11: 14%, interval 0 to 34%, in wild-type barrel cortex) can abolish bursts if f_c is below that share, and burst probability against fraction removed is a steep sigmoid. **Rejecting observation:** burst incidence falls linearly with measured fractional NMDAR current removed, reaching abolition only above about 0.8.
+* **Why a leap:** INV-05 asks whether NAM and pore-blocker curves coincide; this one predicts the SHAPE (a threshold) and turns the NAM-sensitive share into a go/no-go number. If bursts are threshold phenomena, a small partial block can be enough, which reverses the usual "needs near-complete block" reading.
+* **Existing assay or held table:** INV-05 X2 (burst incidence against current removed; `nmda_inv05_20261107/output/experiment.tsv`); WO-11 (`wo11_mierau_it55_20261115/README.md`); the L7 brief's d-APV titration.
+* **Single discriminating observation:** burst probability against measured fractional NMDAR current removed by d-APV titration in the same slices. (a) Steep with f_c at or below the NAM-sensitive fraction measured in WO-10: GluN2B NAM directness rises (L7 scenario S4 pattern; top set GluN2B NAMs alone). (b) Graded, f_c large: NAM class falls, pore blockers and AMPA classes remain.
+* **Repurposing class (labels, source):** GluN2B NAMs (ifenprodil, radiprodil; held `nmda_inv05_20261107/output/probes.tsv`) and pore blockers (memantine). Mechanism-class anchor: PMID 35031915 (a unified framework of transitions between seizures, sustained ictal activity and depolarisation block, abstract level).
+* **Held-data pre-test:** no held table can reject it: no burst-rate-against-current-removed series exists; the only quantity is WO-11's 14% (0 to 34%), which is a wild-type evoked-EPSC fraction at one concentration. Result: untestable from held data (not rejected).
+* **What would change my mind:** a titration curve that is graded; or a measured knockout NAM-sensitive fraction well below any plausible f_c.
+* **Cost:** a d-APV titration with the isolated NMDAR current in roughly 6 to 10 animals per genotype; it adds to WO-10 rather than starting a new preparation.
+
+## J06. The knockout network fails the homeostatic response to its own bursting
+
+* **Statement (IPOTESI).** In a network that bursts, activity-dependent genes should rise and scale excitation down; in the knockout they are LOWER (Fos, Arc, Npas4, Egr1; see pre-test), so the homeostatic downward correction is blunted, which would explain why a high-excitability state persists (increased mEPSC amplitude, AMPAR-weighted, in Breton 2021) instead of self-correcting. **Rejecting observation:** after a sustained activity challenge (hours of raised network activity in slice culture), knockout neurons induce Arc, Fos and Npas4 and scale mEPSC amplitude down to a wild-type extent.
+* **Why a leap:** the reduced inhibition and raised AMPAR current are read as primary causes; this reads them as a failure of the set-point controller, a third cause class (neither supply nor response of inhibition) that the held explanations table (`chloride_gradient_sci42_20261110/output/explanations.tsv`) lists only as "a change secondary to bursting".
+* **Existing assay or held table:** the committed mouse tables (below); a slice-culture activity challenge does not exist in the repository.
+* **Single discriminating observation:** induction of Arc, Fos and Npas4 and mEPSC scaling after a defined activity challenge, knockout against wild type. (a) Blunted: homeostatic-capacity classes become relevant (any lever that substitutes for downscaling, for example AMPA antagonists, rises in directness on a new "set-point" axis). (b) Normal: rejected; the lower baseline transcripts are a state artefact.
+* **Repurposing class (labels, source):** AMPA antagonists as a substitute for failed downscaling (perampanel, GYKI 53655; held `ampa_comparison_it41_20261109`). Mechanism-class anchor: PMID 25012372 (how homeostatic plasticity is important in epilepsy, review, abstract level).
+* **Held-data pre-test (NOT independent, see disclosure 1):** Fos, Arc, Npas4 and Egr1 are DOWN in neuron-deletion tables (cortex S: Fos 36.02 to 10.97, Arc 194.07 to 31.37, Npas4 7.31 to 3.69, Egr1 354.26 to 152.31 TPM; hippocampus N: Fos 8.14 to 3.68, Arc 40.20 to 10.42; hippocampus null: Fos 6.88 to 3.00, Arc 30.91 to 4.72), but NOT in the independent P47T hypomorph (CTX Arc -0.66, FDR 0.77; Fos -0.38, FDR 0.91; no difference). Result: consistent with the hypothesis in one laboratory network and absent in the independent line; also compatible with sampling-state or arousal differences between genotypes at P17, which the tables cannot separate.
+* **What would change my mind:** normal induction and scaling; or evidence that the lower transcripts reflect handling or sampling state.
+* **Cost:** a slice-culture activity challenge, roughly 8 to 12 animals per genotype, plus qPCR or RNA from the same cultures.
+
+## J07. The GABA-AT/GAT class acts on a glial compartment, so its matrix cell belongs to the glial thread, not the neuronal GABA thread
+
+* **Statement.** In the held tables the transporter targets of the GABA-AT/GAT class are astrocyte-enriched and the enzyme is shared: Slc6a11 (GAT-3) neuron 35.1 against astrocytes 557.4 FPKM (16-fold, mouse), SLC6A11 2.1 against 101.5 (human); Slc6a1 (GAT-1) 128.7 against 419.7; ABAT 53.6 against 53.0 (shared). The class is also the most frequently used in the A1 series (22 children, baseline (ii) rank 1). So the WWOX-relevant effect of this class, if any, should require the astrocyte compartment: it should be present in the null slice (which contains astrocytes) and shrink in a neuron-enriched preparation. **Rejecting observation:** an equal effect in a neuron-enriched preparation, or a held result that places GAT-1/GAT-3 neuron-enriched.
+* **Why a leap.** It drops the assumption that a GABA-axis class is scored on the neuronal GABA thread (T2, reduced inhibitory events). The matrix counts the class through T2 and T3 (GABA-A axis); the class's targets are not on that axis.
+* **Existing assay or held table.** The held class tables above; the slice burst assay; the organoid GABA-pathway markers (T14) as the neuron-enriched contrast, not read here.
+* **The discriminating observation and its two outcomes.** A GABA-uptake/GABA-AT label against vehicle in null slices versus in a neuron-enriched preparation. Glial dependence: the class cell moves from the GABA-A thread to the glial thread (T9) and its score is recomputed there; the top set may lose or keep it depending on the glial cells. Neuronal persistence: the cell stays on the GABA thread and the compartment reading is rejected.
+* **Repurposing class (labels only).** GABA-AT inactivators and GABA-transporter inhibitors: vigabatrin-type and tiagabine-type (source: standard mechanism of action).
+* **Held-data pre-test.** A table could have rejected it (neuron-enriched GAT-1/GAT-3). Result: not rejected for GAT-3 (16-fold astrocytic in mouse; human 48-fold) and GAT-1 (3.3-fold astrocytic); ABAT shared, so the enzyme half of the class is not compartment-specific.
+* **What would change my mind.** A neuron-enriched GAT-1/GAT-3 reading in an adult table, or a null-slice effect of this class that survives astrocyte-poor conditions.
+* **Cost.** One additional preparation arm (animals or cultures), plus two table lookups.
+
+## J08.
+
+
+
+**Statement:** Neuron-specific Wwox deletion makes astrocytes reactive and lowers their potassium and glutamate clearance, so extracellular K+ and glutamate rise locally during activity and lower the threshold for NMDAR-dependent bursts; rejected if astrocytic Ba2+-sensitive (Kir-type) current and the astrocyte clearance transcripts are unchanged or higher in KO slices, or if burst incidence is the same in KO slices in which clearance is supported.
+
+**Why a leap:** The files treat the burst as a neuron-intrinsic and synaptic problem (input resistance, rest, sIPSC, NMDAR share) and the glia as a composition confound for CCN2 (`ctgf_held_data_adv007_20261114/README.md`: Gfap 16 to 41, Plp1 392 to 136, endothelial markers up in the knockout pool). This drops "the deleted cell is the only cell that matters in a neuron-specific deletion" and reads the same composition shift as a possible cause. Partial overlap: `ph_k2p_sci45_20261111/README.md` notes a glial TREK-1 contribution to pHo and K+ handling as possible and `potassium_conductances_sci43_20261110/README.md` notes Ba2+ may act on glial Kir4.1.
+
+**Existing assay or table in the repository that can test it:** `ctgf_held_data_adv007_20261114/README.md` (the snRNA pair GSE158684, one pool per arm, cell-class marker split) and `ph_k2p_sci45_20261111/README.md` (P7 cell-class RNA table; astrocyte Kcnk2); `potassium_conductances_sci43_20261110/README.md` (Ba2+ difference-current ladder, step 2, 60 uM, same slices, per-pF currents).
+
+**The single discriminating observation and its two outcomes:** Same slices, same Ba2+ step: the Ba2+-sensitive current per pF measured in astrocytes (not only in pyramidal cells) in KO versus WT, with a parallel table lookup of astrocyte-nucleus clearance genes. Outcome A: reduced astrocytic Ba2+-sensitive current and lower clearance transcripts in KO astrocyte nuclei: non-cell-autonomous K+ clearance deficit, and the Ba2+ difference current in neurons is partly glial. Outcome B: unchanged or larger astrocytic current and unchanged transcripts: the glial change is a marker, not a driver.
+
+**Repurposing class and at most 2 named examples (labels only):** Glial potassium-channel (K2P/Kir) modulators; label riluzole (listed in the catalogued K2P-opener rows of `ph_k2p_sci45_20261111/README.md`; non-selective, reported there as a native-neuron value, so only a class label here). A glutamate-transporter-supporting class is the tempted second class (outside knowledge, see D), not named.
+
+**Held-data pre-test:** Weak. The snRNA pair is one pool per arm and descriptive only; a pool-level fall of Plp1 and rise of Gfap and endothelial markers fits a composition shift, and an astrocyte-nucleus lookup of the clearance genes is possible only if those genes sit in the held matrix files, which the folder does not show. Result: not rejected, not supported; direction of any single-pool lookup cannot reject (n = 1 per arm).
+
+**What would change my mind:** Astrocyte-restricted clearance genes up in KO; burst incidence unchanged when extracellular K+ is clamped or buffered in wild-type slices driven into a burst state (M09-type arm); a neuron-only effect surviving co-culture without astrocytes.
+
+**Cost to test:** About 8 KO and 8 WT animals for astrocyte patch plus the Ba2+ step (same animals as ladder step 2 if run in parallel); about 6 to 10 table lookups first.
+
+---
+
+
+
+
+
+## J11.
+
+
+
+**Statement:** In the Wwox slice a burst is a two-stage event, a low-threshold calcium-channel-dependent trigger that sets the burst *incidence* (inter-burst interval) and an NMDAR-dependent sustainer that sets burst *duration*, so a T-type blocker lengthens the interval without shortening bursts and a matched-current NMDAR reduction shortens or abolishes bursts without much change in the interval; rejected if both manipulations change interval and duration together at matched effect on incidence (no dissociation), or if the T-type arm acts only by lowering the isolated NMDAR current.
+
+**Why a leap:** The usual reading in the files treats the NMDAR as the single gain variable (d-APV abolishes bursts; X2 compares a GluN2B NAM against d-APV at matched current) and treats Cav3 as a separate proposal (efonidipine and flunarizine pair; ethosuximide in the PTZ figure). This one drops "one variable sets both whether and how long": it gives the two classes different jobs and makes the discriminating readout the split of burst interval versus burst duration, which the files record (duration on the order of a second, median interval 26 s) but never use as an endpoint.
+
+**Existing assay or table in the repository that can test it:** `nmda_inv05_20261107/output/README.md` (X2: matched measured fractional NMDAR reduction, burst incidence and duration against it, d-APV titration); `cav3_pair_adv009_20261115/README.md` and `cav3_pair_gaps_rp016_sci_20261115/README.md` (Cav3 tool pair and the use-dependence requirement); `T4_T8` is not needed. Same slices as X2, one added arm.
+
+**The single discriminating observation and its two outcomes:** In bursting KO slices, at equal measured reduction of the isolated NMDAR EPSC (X1) and equal time-matched vehicle, compare the shift of median inter-burst interval and of median burst duration under (i) a d-APV titration and (ii) a Cav3-directed arm run with one stimulation/holding protocol for both agents (the RP-016 requirement). Outcome A: (ii) moves the interval more than the duration and (i) moves the duration more than the interval, isolated NMDAR current unchanged by (ii): two-stage. Outcome B: both arms move interval and duration in the same proportion, or (ii) lowers the isolated NMDAR current: single-gain (the NMDAR reading, or an off-target action) stands.
+
+**Repurposing class and at most 2 named examples (labels only):** T-type (Cav3) calcium channel blockers; labels efonidipine and ethosuximide (efonidipine from the Cav3 pair notes, ethosuximide from the NX1 sizing note; source of the mechanism class: INV-03 pair as described in `cav3_pair_adv009_20261115/README.md`).
+
+**Held-data pre-test:** No table in this folder can reject it. The NX1 note (`nx1_sizing_sci_20261115/README.md`) says the ethosuximide gap in the nulls is at the late phase and large (1.06 stage) but that it cannot tell a null-specific from a proportional effect, and it is an in vivo PTZ score, not a slice interval or duration: compatible with, not evidence for, a trigger role. Result: not rejected, not supported.
+
+**What would change my mind:** A Cav3 arm that lowers the isolated NMDAR current (then it is an NMDAR route); burst interval and duration that are tightly coupled across slices (a single threshold process); a T-type arm with no effect at a protocol-matched, burst-frequency stimulation (the efonidipine IC50 spans about 500-fold with stimulation frequency in `cav3_pair_gaps_rp016_sci_20261115/README.md`, so a low-frequency null would not count).
+
+**Cost to test:** About 8 to 10 KO animals (slices as unit of analysis within animal, X2 shared), zero extra animals if X2 is run anyway; 0 table lookups.
+
+---
+
+## J12.  Discordance is a timing artefact, not a drug property
+
+
+## J13.  Lead time to control, not class, separates development outcomes among discordant children
+
+
+## J14. Sodium-channel targets are absent at P6-P8 and present at P13-P15: "no link" at P6-P8 is "target not yet there", not a negative
+
+* **Statement.** The held mouse neuron class (P7) reads the sodium-channel alpha subunits at low values and below non-neuronal classes (Scn1a 2.5 FPKM against 4.8 in OPC; Scn3a 8.6 against 11.3; Scn8a 6.2 against 8.9), while the held human cortical neuron class reads them neuron-enriched (SCN1A 18.5 against 3.8, 4.9-fold; SCN3A 13.1 against 3.0; SCN8A 12.1 against 5.5). So a use-dependent sodium-channel-blocker label (class label only) should reduce bursting in the Wwox-null slice at P13-P15 but little or not at P6-P8, the reverse of the NMDAR pattern (ifenprodil-sensitive share 53 percent at P6-P8, 14 percent at P13-P15). **Rejecting observation:** an equal burst-rate reduction at both ages, or none at either.
+* **Why a leap.** The matrix reads absence of a thread as absence of a link. This drops that: absence of a thread at an age where the target is barely read is a measurement of the target, not of the class.
+* **Existing assay or held table.** The INV-05 slice burst assay at its two ages (P6-P8, P13-P15); held tables: `he_leap_targets_mouse.tsv`, `he_leap_targets_human.tsv`, and the P7 and human rows of the SCI44/IT47 tables.
+* **The discriminating observation and its two outcomes.** Burst rate in null slices with a use-dependent sodium-channel-blocker label against vehicle, at both ages. Age-gated effect: the sodium-channel class gains a P13-P15 cell and its rank differs between the age windows and the pooled ranking (the age-window ranking of the matrix becomes the primary view for this class). Equal or absent effect: nothing changes; the class stays at zero for want of a thread, and the age explanation is rejected.
+* **Repurposing class (labels only).** Sodium-channel blockers: carbamazepine-type and lamotrigine-type (mechanism labels; source: standard mechanism of action, not a WWOX source).
+* **Held-data pre-test.** The held tables cannot reject it: there is no later-age mouse neuron class, and species differ. Result: not rejected, not tested. No held table contradicts it.
+* **What would change my mind.** A later-age mouse neuron RNA table showing Scn1a, Scn3a and Scn8a at P13-P15 neuron values at or below the P7 ones, or a held burst-assay result at P6-P8 that a sodium-channel blocker reduces.
+* **Cost.** One table lookup (a later-age neuron class from a public RNA set, if one is obtainable) for the target part; one slice experiment at two ages with two arms for the effect.
+
+
+
+## J16. A valproate-type signature moves the WWOX-loss glycolysis/lactate module in the loss direction: an aggravation hypothesis on the metabolic axis, apart from its anticonvulsant targets
+
+* **Statement.** In the held LINCS-type table (`network_comparison_it7_p3_20261029/results`; observed opposition of the six-gene module HK2, LDHA, LDHB, SLC2A1, BNIP3 up and PDK1 down, built from the WWOX-loss contrasts), valproic acid has a negative opposition score in 4 of 4 neuron-like signatures (-1.05, -0.75, -1.51, -1.66; 6 h and 24 h, 10 uM; family value -1.28, rank 228 of 256) and in 3 of 4 progenitor-like ones: its signature moves the module the way WWOX loss does. Carbamazepine is positive in both its neuron-like signatures (+1.16, +0.31). So valproate-type exposure in a Wwox-null background should push the module no further (ceiling) or further (additive), and in a wild-type background should move it toward the null value. **Rejecting observation:** no change of HK2/LDHA/SLC2A1 transcript or lactate ratio under a valproate-type label in wild-type neurons.
+* **Why a leap.** The matrix asks what an agent matches. This asks what an agent does to the genotype's own measured signature, and keeps the answer as an aggravation sign (never netted against its seizure-axis match). It uses a table built to test a different question.
+* **Existing assay or held table.** `signature_scores.tsv` and `family_scores.tsv`; the GSE156243 and GSE126075 contrasts the module comes from. No WWOX readout of HK2/LDHA under any antiseizure label is held.
+* **The discriminating observation and its two outcomes.** Module transcripts (or lactate ratio) in wild-type and null neurons, with a valproate-type label against vehicle. Wild-type moves toward null and null does not move further: occlusion, the aggravation is a shared-axis effect; wild-type moves and null moves further: additive aggravation hypothesis recorded on the valproate-type class cell (sign aggravation, metabolic thread). No movement: the held table's sign is a LINCS context artefact and the cell stays unknown.
+* **Repurposing class (labels only).** Valproate-type (broad multi-target; HDAC inhibition is one of its mechanism labels, as in the WO-32 thread named in ADV_SEED); the label is a mechanism, not a proposal.
+* **Held-data pre-test.** The held table could have rejected it (positive scores). Result: not rejected, with limits: one dose (10 uM), two cell types (NEU and NPC), 4 neuron-like signatures; lamotrigine has one neuron-like signature (-1.31) and one progenitor one (+1.21), so no within-class contrast between carbamazepine and lamotrigine is supported. The held file itself says everything LINCS-derived is not WWOX evidence and that a knockout signature is not a rescue signature.
+* **What would change my mind.** A replicate valproate signature in a neuron-like context with a positive score; or a held HK2/LDHA reading in valproate-exposed neurons that does not move.
+* **Cost.** Table lookups for the replication check; one two-genotype, two-arm transcript or lactate measurement for the experiment.
+
+## J17. The hippocampus does not burst because NPY compensation, not a smaller deficit, protects it
+
+* **Statement (IPOTESI).** Hippocampus of the neuron-targeted knockout does not burst (0 bursts in Breton 2021's hippocampus) despite an interneuron-marker loss (PV transcript down) because upregulated NPY and its receptors restrain it more than they do in neocortex; blocking the NPY system unmasks hippocampal bursting. **Rejecting observation:** a Y2-receptor antagonist (tool) does not unmask bursts in knockout hippocampal slices, or the neocortical NPY rise is as large as the hippocampal one.
+* **Why a leap:** the region split is read as "the neocortex has the deficit"; this reads it as "the hippocampus has the same deficit plus a compensator". It also dissolves part of the Aldaz region confound (PV loss in hippocampus without bursting).
+* **Existing assay or held table:** committed tables below; the Breton hippocampal null result; the L7 brief's both-region design.
+* **Single discriminating observation:** knockout hippocampal slices with and without an NPY-system blocker (tool), burst incidence. (a) Bursts appear: compensation is real and the PV-loss signal does count toward inhibition deficits in that region; the Aldaz measurement of the L7 brief is then informative for hippocampus only. (b) No bursts: rejected; the hippocampus is spared for another reason.
+* **Repurposing class (labels, source):** none approved for the NPY system; Y2 antagonists are tools (BIIE0246, label only, no held source). The class matters as an avoid and as a mechanism, not as a candidate. Mechanism-class anchor: PMID 11287111 (NPY and epilepsy: seizure-type and receptor-dependent effects, abstract level).
+* **Held-data pre-test (partly NOT independent, see disclosure 1):** Npy is UP in every held contrast (cortex S 474.79 to 926.35 TPM; hippocampus S 93.69 to 536.70, the largest, +2.9 log2; hippocampus N 138.49 to 223.99; null 83.39 to 137.49) and in the independent P47T line (CTX +1.59 log2, FDR 0.056; HPC +1.80, FDR 0.32; PFC +1.12, FDR 0.015). Two against: the cortical rise is also large (+1.17 S; +1.59 P47T CTX), so the hippocampus-larger-than-cortex premise is only supported in the S contrast, and Aldaz 2019 counted FEWER NPY+ interneurons in the full-knockout hippocampus while the transcript rises (a transcript can come from principal neurons under seizure). The recombination-artefact alternative for the region split IS rejected by held data: Wwox falls MORE in the S-deletion hippocampus (3.37 to 0.49 TPM, -85%) than in the S-deletion cortex (18.83 to 5.94 TPM, -68%), so weaker excision does not explain a spared hippocampus. Result: not rejected; NPY elevation replicates across two laboratories, the region asymmetry does not clearly.
+* **What would change my mind:** no unmasking by an NPY-system blocker; evidence that the NPY transcript rise is a seizure-state response of principal cells.
+* **Cost:** hippocampal slices from both genotypes with a blocker arm, about 8 to 12 animals per genotype, inside the L7 both-region design.
+
+---
+
+## J18.
+
+
+
+**Statement:** Burst occurrence is a network threshold set by the fraction of Wwox-deficient neurons in the slice, so the incomplete excision of the Synapsin I-Cre line (and the 4 of 23 heterozygote slices) predicts that the 6 of 42 burst-free KO slices carry the lowest fraction of excised neurons; rejected if burst-free and bursting KO slices have the same per-slice excised-neuron fraction.
+
+**Why a leap:** The files read burst incidence as a genotype property (0 of 11, 4 of 23, 36 of 42) and note only that a burst-free knockout contrast is hard to obtain and that Syn1-Cre excision is partial. This drops "the genotype is the unit" and makes the slice's mosaic fraction the explanatory variable, which also changes what a partial NMDAR reduction needs to achieve (it only has to push a threshold system below its threshold). Not stated in any file as a hypothesis, question or conclusion.
+
+**Existing assay or table in the repository that can test it:** `chloride_gradient_sci42_20261110/README.md` (burst counts 0/11, 4/23, 36/42 and the caution that bursting slices confound cause and consequence) and `gsk3_inv09_20261107/output/README.md` (R03, R04: Syn1-Cre excision partial; Nestin-, Olig2-, GFAP-Cre as other arms); `nmda_inv05_20261107/output/README.md` (X2 readouts).
+
+**The single discriminating observation and its two outcomes:** In KO slices, the per-slice fraction of Wwox-negative (or reporter-positive) pyramidal neurons against whether the slice bursts. Outcome A: bursting slices have a higher excised fraction and a threshold is visible (burst-free slices cluster at the low end): the network-threshold reading holds, and a small measured NMDAR reduction could suffice. Outcome B: no relation across a wide range of fractions: the burst is not a mosaic-threshold effect (the neuron-deletion genotype acts per cell or through a tissue-wide factor).
+
+**Repurposing class and at most 2 named examples (labels only):** Partial gain reduction of NMDAR-dependent excitation, GluN2B-selective NAM class; label ifenprodil (source: the matched-current design in `nmda_inv05_20261107/output/README.md` and `target_first_it15_qa_nmdar_20261101/README.md`). No class beyond what the NMDAR thread already holds; the contribution is the expected size of reduction needed.
+
+**Held-data pre-test:** The held counts (0/11, 4/23, 36/42) are monotone with gene dosage and are equally compatible with a cell-autonomous dose effect; no table here has a per-slice excision fraction. Result: cannot reject.
+
+**What would change my mind:** Burst-free KO slices with high excision; bursting HT slices with a low Wwox-negative fraction in a Cre-negative-for-reporter check; a sparse-deletion experiment (Cre at limiting dose) where bursts appear at a fraction well below the KO value.
+
+**Cost to test:** About 10 to 12 KO animals with a reporter or Wwox immunostaining on the recorded slices (retrospective in the same slices as X2); 0 table lookups.
+
+---
+
+## J19. Burst duration is set by activity-dependent chloride loading against KCC2 capacity
+
+* **Statement (IPOTESI).** In knockout layer 2/3 pyramidal cells E_GABA is not only static but shifts depolarising DURING a burst (intracellular Cl- accumulates faster than KCC2 extrudes it), so GABA-A drive turns from restraining to sustaining late in the burst; burst DURATION (not onset) therefore depends on KCC2 capacity and on extracellular K+. **Rejecting observation:** E_GABA, measured by gramicidin-perforated patch or a chloride sensor at burst onset and at burst end in the same cells, shifts by no more in knockout bursts than in matched wild-type provoked bursts.
+* **Why a leap:** the usual reading treats the chloride gradient as a fixed property (the held M01 asks for one E_GABA per genotype); this one drops "fixed" and makes inhibition's sign a function of burst time.
+* **Existing assay or held table:** the burst preparation (Breton 2021; INV-05 X1 to X4); `chloride_gradient_sci42_20261110/output/new_measurements.tsv` (M01, M03). The within-burst measurement itself does not exist.
+* **Single discriminating observation:** E_GABA at burst onset against burst end. (a) A depolarising shift in KO beyond provoked WT: GABA-A positive modulators become late-burst aggravators or ineffective (the matrix's AH3 becomes a prediction; GABA-A rows lose the top set), and chloride-gradient classes gain. (b) No shift: the static M01 question stands and the GABA-A classes keep their rank.
+* **Repurposing class (labels, source):** NKCC1 inhibitors (bumetanide; held in `analysis/mechanism_intervention_map.md` R-07, RC-001) and loop diuretics (furosemide; no held source). Mechanism-class anchor: PMID 30201259 (chloride plasticity in seizures, review, abstract level) and 32892950 (coordinated KCC2 and GABA-A receptor downregulation during seizures, abstract level).
+* **Held-data pre-test:** transcripts do not reject it. KCC2 (Slc12a5) is not among the neuron-deletion rows with |centred log2| >= 0.585, and in P47T it is -0.26 (CTX, FDR 0.65), -0.17 (HPC, 0.57), -0.12 (PFC, 0.35); NKCC1 (Slc12a2) is LOWER, not higher (neuron-deletion hippocampus S, 12.03 to 5.39 TPM, background-confounded; P47T CTX -0.36, FDR 0.19; PFC -0.33, FDR 0.062). INFERENZA: a lower NKCC1 transcript is a mild counter-signal to a loading mechanism, but loading depends on transport function and on conductance-driven influx, which transcripts do not measure. Result: not rejected; mild counter-signal.
+* **What would change my mind:** an E_GABA series that is flat across the burst; or burst duration unchanged by KCC2 or NKCC1 manipulation in knockout slices.
+* **Cost:** gramicidin-perforated recordings in roughly 6 to 10 animals per genotype (animals as the unit), after the L7 pilot has fixed the burst rate; no new preparation.
+
+## J20.  The class ranking is confounded by line of therapy
+
+
+## J21.
+
+
+
+**Statement:** The ifenprodil-sensitive (GluN2B-containing) share of the NMDAR EPSC in KO layer II/III cells at P13-P17 stays near the immature or sensory-deprived value (about 0.5) instead of the wild-type value (about 0.14), because the experience-dependent loss of the GluN2B share stalls when cortical drive is reduced; rejected if the KO share lies inside the wild-type interval (0 to 0.34) while the bursts are present.
+
+**Why a leap:** The files list a KO-specific change of NMDAR composition and the GluN2B-to-GluN2A switch inside P13-P17 as alternatives to exclude (`target_first_it15_qa_nmdar_20261101/README.md` 5b), and carry a single wild-type number (14 percent, interval 0-34, whisker-intact P13-P15) from Mierau. The same paper has two more arms that are not used: whisker-deprived P13-P15 (49 percent) and P26-P33 (26 percent). This hypothesis names a cause for a composition difference, a deprivation-like stall, and uses the deprived arm as the reference value, which drops the assumption that the P13-P15 wild-type number is the right comparator for a hypoactive or seizing animal. Partial overlap with the stated alternative; the added element is the cause and the positive-control arm.
+
+**Existing assay or table in the repository that can test it:** `wo11_mierau_it55_20261115/README.md` and `second_reader_wo11_sci_20261115/README.md` (the 14 percent, 53 percent, 49 percent and 26 percent values, design, limits); `target_first_it15_qa_nmdar_20261101/README.md` (E0 measurement of f in the same animals and genotypes; WO-10 for burst slices).
+
+**The single discriminating observation and its two outcomes:** In the same pipeline as E0/WO-10, the ifenprodil-sensitive fraction of the isolated NMDAR EPSC in KO versus wild-type littermate layer II/III cells at P13-P17, with a whisker-deprived wild-type arm as a positive control for the reading. Outcome A: KO fraction near the deprived-wild-type value and above the intact-wild-type interval: stalled switch, and the GluN2B-NAM lever has a larger ceiling than the 0.14 floor suggests. Outcome B: KO fraction inside the intact-wild-type interval: composition is not the difference, the bursts do not depend on a retained GluN2B share, and the 0.14 reading carries.
+
+**Repurposing class and at most 2 named examples (labels only):** GluN2B-selective negative allosteric modulators; labels ifenprodil and Ro 25-6981 (source: the IT15 target-first table, `target_first_it15_qa_nmdar_20261101/README.md`, and the Mierau measurement).
+
+**Held-data pre-test:** None can reject it; the folder holds only wild-type numbers (Mierau: 14 percent intact, 49 percent deprived at P13-P15, 53 percent at P6-P8, 26 percent deprived P26-P33) and no KO ifenprodil value. Result: untestable on held tables. Mierau's own limits apply (evoked synaptic current, room temperature, 2 mM Mg2+, between-cell design, one concentration, n counts cells).
+
+**What would change my mind:** A KO fraction at or below the wild-type value; a KO fraction elevated but equal in burst-free and bursting KO slices (a composition change not tied to bursts); a deprived-wild-type arm that fails to reproduce the 49 percent in this lab's hands (the reading would then be unusable).
+
+**Cost to test:** About 24 animals (three arms, roughly 8 each, ifenprodil and control cells pre-incubated as in Mierau; n of 10 to 15 cells per group), 0 table lookups.
+
+---
+
+## J22.  The spasm window and the later seizure types are two generators with two class profiles
+
+
+
+
+## J24.  The high GABA-AT share is a spasm-phenotype base rate, not a WWOX match
+

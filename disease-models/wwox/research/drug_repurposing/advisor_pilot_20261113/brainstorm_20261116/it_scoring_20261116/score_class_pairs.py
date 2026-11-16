@@ -3,8 +3,8 @@
 Reads only the sealed extraction (sha256 in it_extractor_20261116/sealed/SEAL.sha256). Deterministic; no randomness."""
 import csv, itertools, math, sys
 if "--help" in sys.argv or "-h" in sys.argv:
-    print("usage: score_class_pairs.py [--exclude-acute-diazepam] [--a1-for-coded-four]
-Scores the frozen class-level predictions against the sealed extraction; prints to stdout; writes nothing.")
+    print("usage: score_class_pairs.py [--exclude-acute-diazepam] [--a1-for-coded-four] [--reclassify-polytherapy=ROW,ROW]")
+    print("Scores the frozen class-level predictions against the sealed extraction; prints to stdout; writes nothing.")
     sys.exit(0)
 from pathlib import Path
 HERE = Path(__file__).resolve().parent
@@ -17,6 +17,13 @@ MAP = {"steroid_acth": "steroid/ACTH", "ketogenic_diet": "ketogenic diet", "benz
 EXCLUDE_ACUTE = "--exclude-acute-diazepam" in sys.argv
 USE_A1 = "--a1-for-coded-four" in sys.argv   # sensitivity only: public A1 table (NOT blind) replaces the extractor for four classes
 rows = list(csv.DictReader(open(EXT), delimiter="\t"))
+RECLASS = set()
+for a in sys.argv:
+    if a.startswith("--reclassify-polytherapy="):
+        RECLASS = {int(x) for x in a.split("=", 1)[1].split(",") if x}   # extraction line numbers (header = line 1): sensitivity only
+for i, r in enumerate(rows):
+    if i + 2 in RECLASS:
+        r["seizure_outcome_attributable"] = "polytherapy_unattributable"
 def cls(r):
     if r["mechanism_class"] == "other":
         return "GABA-AT/GAT" if "vigabatrin" in r["agent_or_treatment_as_printed"].lower() else None
