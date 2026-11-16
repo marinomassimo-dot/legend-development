@@ -26,12 +26,17 @@
     "ketogenic_diet",
     "cbd_fenfluramine"
   ],
+  "content_reference": "PLAN_8H.md section 'Rule v1' (blob 40182647a96c) plus RULE_AMENDMENTS.md amendment 1 (blob 377c3464a4e5); this file is their machine encoding, differences are listed in the message that announced its sha256",
   "directness_rubric": {
     "0": "none",
     "1": "plausible",
     "2": "same pathway",
     "3": "the class's primary target is the thread's target"
   },
+  "discriminating_top_set_max_share": [
+    1,
+    3
+  ],
   "endpoints": [
     "seizure",
     "development"
@@ -42,23 +47,9 @@
   "not_adopted": "evidence tiers are hand-assigned under this rubric, not derived from the prediction ledger",
   "permutations": 1000,
   "rank_by": "score_all",
-  "rule_version": "v1-draft",
+  "rule_version": "v1",
   "seed": 20261116,
-  "status": "DRAFT shell from PLAN_8H 'Rule v1'; its sha256 becomes the recorded one only when ADV declares the content final and before any cell exists",
-  "threads": [
-    "T1",
-    "T2",
-    "T3",
-    "T4",
-    "T5",
-    "T6",
-    "T7",
-    "T8",
-    "T9",
-    "T10",
-    "T11",
-    "T12"
-  ],
+  "thread_set": "not a rule: any declared thread id is accepted (amendment 1.1); the generator records the final thread list and its sha256",
   "tier_rubric": {
     "0": "none, or non-specific",
     "1": "indirect, or tool pharmacology outside the WWOX system",
