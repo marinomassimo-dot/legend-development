@@ -20,7 +20,7 @@ RULE = {
     "tier_rubric": {"0": "none", "1": "indirect", "2": "system, no contrast", "3": "system with contrast"},
     "directness_rubric": {"0": "none", "1": "plausible", "2": "same pathway", "3": "primary target"},
     "endpoints": ["seizure", "development"], "age_windows": ["A", "B"],
-    "classes": ["c1", "c2", "c3"], "threads": ["T1", "T2", "T3", "T4"],
+    "classes": ["c1", "c2", "c3"], "discriminating_top_set_max_share": [1, 3],
     "never_specific_threads": ["T3"], "zero_directness_threads": ["T4"],
     "rank_by": "score_all", "permutations": 40, "seed": 7,
 }
@@ -123,6 +123,97 @@ class GoldenScores(Base):
         line = next(l for l in out.splitlines() if l.startswith("[seizure] top class"))
         self.assertIn("top class c1", line)
         self.assertIn("kept in", line)
+
+
+class AmendmentOne(Base):
+    def test_the_thread_set_is_data_and_its_digest_is_printed(self):
+        rows = CELLS + [cell("n1", "T99", "c3", tier=1, directness=1, axis="Q", origin="o99")]
+        code, out, _ = self.score(rows)
+        self.assertEqual(code, 0)
+        threads = sorted({r["thread_id"] for r in rows})
+        digest = hashlib.sha256("\n".join(threads).encode()).hexdigest()
+        self.assertIn(f"threads {len(threads)} sha256 {digest}", out)
+        self.assertIn("T99", out)
+
+    def test_a_cell_needs_a_locator(self):
+        bad = dict(cell("a", "T1", "c1"), source_locator="")
+        self.assertIn("source_locator is required", self.refused_with([bad]))
+
+    def refused_with(self, rows):
+        code, _, err = self.score(rows)
+        self.assertEqual(code, 2, err)
+        return err
+
+    def test_tie_labels_follow_the_third_rule(self):
+        share = [1, 3]
+        self.assertEqual(am.tie_label(0, 15, share), "no_scored_class")
+        self.assertEqual(am.tie_label(1, 15, share), "discriminating")
+        self.assertEqual(am.tie_label(5, 15, share), "tie_set_weak")
+        self.assertEqual(am.tie_label(6, 15, share), "not_discriminating")
+
+    def test_top_set_size_and_informativeness_are_reported(self):
+        rows = [cell("a", "T1", "c1", origin="o1"), cell("b", "T2", "c2", axis="Y", origin="o2")]
+        out = self.score(rows)[1]
+        r = self.row(out, "seizure", "pooled", "c1")
+        self.assertEqual((r["top_set_size"], r["informativeness"], r["top_set_label"]),
+                         ("2", "0.333", "not_discriminating"))
+        self.assertEqual(self.row(out, "seizure", "pooled", "c1")["tied_with"], "c2")
+
+    def test_equal_tiers_make_the_null_undefined_not_a_p_value(self):
+        rows = [cell("a", "T1", "c1", tier=2, directness=3, origin="o1"),
+                cell("b", "T2", "c2", tier=2, directness=2, axis="Y", origin="o2")]
+        out = self.score(rows)[1]
+        r = self.row(out, "seizure", "pooled", "c1")
+        self.assertEqual((r["null_mean"], r["excess"], r["null_ge_fraction"]), ("undefined",) * 3)
+        self.assertIn("null undefined (equal tiers", out)
+
+    def test_unequal_tiers_keep_a_defined_null(self):
+        r = self.row(self.score()[1], "seizure", "pooled", "c1")
+        self.assertNotEqual(r["null_mean"], "undefined")
+
+    def test_a_window_with_no_match_cell_is_a_frozen_null_ordering(self):
+        rows = [c for c in CELLS if c["endpoint"] == "seizure"]
+        out = self.score(rows)[1]
+        dev = [r for r in table(out) if r["endpoint"] == "development" and r["window"] == "pooled"]
+        self.assertEqual(len(dev), 3)
+        self.assertEqual({r["top_set_label"] for r in dev}, {"not_scorable_null_ordering"})
+        self.assertEqual({r["rank"] for r in dev}, {"null"})
+        self.assertEqual({r["score_all"] for r in dev}, {"0"})
+        self.assertIn("[development pooled] not scorable", out)
+
+    def test_per_thread_sum_sits_next_to_the_origin_collapsed_score(self):
+        r = self.row(self.score()[1], "seizure", "pooled", "c2")
+        self.assertEqual((r["score_all"], r["score_per_thread_sum"]), ("6", "12"))
+
+    def test_origin_collapse_that_changes_the_top_set_is_named(self):
+        rows = [cell("a", "T1", "c1", tier=2, directness=2, origin="O"), cell("b", "T2", "c1", tier=2, directness=2, origin="O"),
+                cell("c", "T3", "c1", tier=2, directness=2, origin="O"),
+                cell("d", "T1", "c2", tier=3, directness=2, axis="Y", origin="P")]
+        out = self.score(rows)[1]
+        self.assertEqual(self.row(out, "seizure", "pooled", "c1")["score_per_thread_sum"], "12")
+        self.assertEqual(self.row(out, "seizure", "pooled", "c1")["rank_per_thread_sum"], "1")
+        self.assertEqual(self.row(out, "seizure", "pooled", "c2")["rank"], "1")
+        self.assertIn("origin collapse changes the top set: per-thread sum {c1} -> origin-collapsed {c2}", out)
+
+    def test_a_single_origin_is_named(self):
+        rows = [cell("a", "T1", "c1", origin="O"), cell("b", "T2", "c2", origin="O")]
+        self.assertIn("single origin O carries every match cell", self.score(rows)[1])
+
+    def test_two_cell_enumeration_is_reported_and_capped(self):
+        self.assertIn("two-cell tier enumeration: top class kept in", self.score()[1])
+        with unittest_patch_cap(1):
+            self.assertIn("two-cell tier enumeration not run", self.score()[1])
+
+
+class unittest_patch_cap:
+    def __init__(self, cap):
+        self.cap = cap
+
+    def __enter__(self):
+        self.old, am.PAIR_RUN_CAP = am.PAIR_RUN_CAP, self.cap
+
+    def __exit__(self, *exc):
+        am.PAIR_RUN_CAP = self.old
 
 
 class Determinism(Base):
@@ -280,6 +371,34 @@ class RuleBeforeCells(unittest.TestCase):
             self.git(root, "add", "cells.tsv", "rule.json")
             self.git(root, "commit", "-q", "-m", "both")
             self.assertEqual(am.rule_order(root, rule, cells), "same_commit")
+
+
+RULE_V1 = Path(__file__).resolve().parents[2] / ("disease-models/wwox/research/drug_repurposing/"
+                                                  "advisor_pilot_20261113/brainstorm_20261116/rule.json")
+RULE_V1_SHA256 = "679a60894100d26bf4e550e2f49a888e39b8451dfbf428c2157f8b0cb2d94982"  # announced 2026-11-16
+
+
+class TheCommittedRuleIsTheAnnouncedOne(unittest.TestCase):
+    def test_rule_v1_is_valid_and_its_digest_is_the_announced_one(self):
+        raw = RULE_V1.read_bytes()
+        self.assertEqual(hashlib.sha256(raw).hexdigest(), RULE_V1_SHA256,
+                         "rule.json changed: a new digest must be announced and recorded with the freeze")
+        rule = json.loads(raw)
+        am.check_rule(rule)
+        self.assertEqual(len(rule["classes"]), 15)
+        self.assertEqual(rule["endpoints"], ["seizure", "development"])
+
+    def test_the_generator_scores_one_cell_under_the_committed_rule(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            rule = json.loads(RULE_V1.read_text())
+            row = cell("k1", "T13", "sodium_channel", endpoint="seizure", age="P13-P15")
+            cells = Path(tmp) / "cells.tsv"
+            cells.write_text("\t".join(HEADER) + "\n" + "\t".join(row[c] for c in HEADER) + "\n")
+            out = io.StringIO()
+            with contextlib.redirect_stdout(out):
+                code = am.main(["score", str(cells), str(RULE_V1), "--expect-rule-sha256", RULE_V1_SHA256])
+            self.assertEqual(code, 0)
+            self.assertEqual(len(table(out.getvalue())), 2 * 4 * len(rule["classes"]))
 
 
 class HelpIsSafe(unittest.TestCase):
