@@ -639,6 +639,49 @@ class TheCommittedRuleV2(unittest.TestCase):
             self.assertIn("not scorable (18 of 19 classes; excluded from every denominator)", text)
 
 
+class Concordance(unittest.TestCase):
+    COUNTS = {"A": (4, 4), "B": (4, 2), "C": (4, 2), "D": (2, 2)}      # D has n < 3: not scorable
+
+    def test_hand_checked_pairs_and_ties(self):
+        r = am.concordance({"A": 3, "B": 2, "C": 2}, self.COUNTS)
+        self.assertEqual((r["scorable_classes"], r["pairs"], r["classifiable"], r["scored"], r["concordance"]), (3, 3, 2, 2, 1.0))
+        self.assertEqual(am.concordance({"A": 1, "B": 2, "C": 2}, self.COUNTS)["concordance"], 0.0)
+        self.assertEqual(am.concordance({"A": 1, "B": 1, "C": 1}, self.COUNTS)["concordance"], 0.5)       # a predicted tie scores 0.5
+        self.assertEqual(am.concordance({"A": 3, "B": 2, "C": 2}, self.COUNTS)["pairs"], 3)               # BC tied in the observation: not scored
+
+    def test_a_class_without_a_prediction_drops_its_pairs_and_none_left_is_not_scorable(self):
+        r = am.concordance({"B": 2, "C": 2}, self.COUNTS)
+        self.assertEqual((r["classifiable"], r["scored"], r["concordance"]), (2, 0, None))
+
+    def test_the_observed_tie_threshold_is_one_child_on_the_smaller_denominator(self):
+        counts = {"X": (3, 2), "Y": (9, 6)}                  # 0.667 against 0.667: tied
+        self.assertEqual(am.concordance({"X": 2, "Y": 1}, counts)["classifiable"], 0)
+        counts = {"X": (3, 3), "Y": (9, 6)}                  # 1.0 against 0.667: differ by 0.333, not less than 1/3
+        self.assertEqual(am.concordance({"X": 2, "Y": 1}, counts)["classifiable"], 1)
+
+    def test_it_scoring_of_the_frozen_f1_is_reproduced_from_its_own_counts(self):
+        # counts (n, partial-counts k, resolved-only k) as printed in it_scoring_20261116/result_main.txt
+        printed = {"gabaa_pam_nonbzd": (4, 3, 0), "gaba_at_gat": (9, 8, 4), "sv2a": (3, 2, 0), "benzodiazepine": (4, 3, 3),
+                   "carbonic_anhydrase_multitarget": (3, 2, 2), "ketogenic_diet": (7, 4, 0), "steroid_acth": (7, 3, 2)}
+        thread_sum = {"gabaa_pam_nonbzd": 9, "benzodiazepine": 9, "gaba_at_gat": 6, "carbonic_anhydrase_multitarget": 6, "sv2a": 3, "steroid_acth": 0, "ketogenic_diet": 0}
+        partial = am.concordance(thread_sum, {c: (n, a) for c, (n, a, _) in printed.items()})
+        resolved = am.concordance(thread_sum, {c: (n, b) for c, (n, _, b) in printed.items()})
+        self.assertEqual((partial["pairs"], partial["classifiable"], round(partial["concordance"], 2)), (21, 5, 0.9))
+        self.assertEqual((resolved["pairs"], resolved["classifiable"], round(resolved["concordance"], 2)), (21, 15, 0.73))
+
+    def test_the_cli_reads_two_tsv_files(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            pred, counts = Path(tmp) / "p.tsv", Path(tmp) / "c.tsv"
+            pred.write_text("class_id\tscore_all\nA\t3\nB\t2\nC\t2\nD\tunknown\n")
+            counts.write_text("class_id\tn\tk\nA\t4\t4\nB\t4\t2\nC\t4\t2\n")
+            out = io.StringIO()
+            with contextlib.redirect_stdout(out):
+                self.assertEqual(am.main(["compare", str(pred), str(counts), "--pred-column", "score_all"]), 0)
+            self.assertIn("classifiable (observed not tied) 2; scored 2; concordance 1.00", out.getvalue())
+            with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                self.assertEqual(am.main(["compare", str(pred), str(counts), "--pred-column", "nope"]), 2)
+
+
 class HelpIsSafe(unittest.TestCase):
     def test_help_prints_usage_and_exits_zero(self):
         with contextlib.redirect_stdout(io.StringIO()) as out, self.assertRaises(SystemExit) as stop:
