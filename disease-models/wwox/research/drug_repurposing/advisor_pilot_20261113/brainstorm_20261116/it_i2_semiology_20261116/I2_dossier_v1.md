@@ -1,0 +1,42 @@
+# I2 Phenotype-conditional pharmacology: dossier v1 with the per-child result (IT; non-canonical; hypothesis; not medical advice)
+
+Written for: the team (SCI, HE, ADV) and a clinician-researcher who could record the observational design in D5c. Reference genotype class only; mechanism level; no dose and no recommendation. Status ADVANCE, depth chain, with an experiment-ready observational design. Labels: KNOWN / HELD-DATA / ASSUMED / INFERRED. Rubric frozen 6e8ef5c9e (sha256 2d81d629...) before the extraction; extraction sealed by digest (extraction_v1/SEAL.sha256); addendum 1 frozen (b1ed301f...) and collected in a second pass (not in this version).
+
+**Answer first.** The 14 held reports cannot answer whether response segregates by semiology and age: they hold 42 children and 169 exposures, but only 23 children have any stated outcome and 17 have both a specific semiology at exposure and an outcome (50 exposure rows). Spasm-group exposures (24 with an outcome) sit almost entirely in the two classes aimed at spasms (GABA-transaminase inhibitor, steroid/ACTH); the rebound group (myoclonic, absence-like: 10 exposure rows) has no class with 3 or more rows, so no within-class comparison exists. The pre-declared feasibility rule fails for the segregation test (A), and the output is the design (D5c). Two things did come out: (1) zero statements that a seizure type got worse on any agent: the aggravation half of I2 cannot be tested in the held case reports (case reports favour successes; absence of a statement is not absence of worsening); (2) in two children, myoclonic seizures emerged after vigabatrin (Shaukat child 1; Al-Baradie 2.1), and in one child spasms emerged after topiramate: not stated as worse, consistent with the I2 aggravation direction but equally with the natural spasm-to-myoclonic course. The right reading is a lead, not a result.
+
+## D1 Chain
+1. Seizure semiology changes with age in the reference genotype class: spasms and tonic seizures early, other types later (HELD-DATA, extraction children.tsv: ordered semiologies; limited by printed ages).
+2. Early window: high GluN2B share and immature GABA action (KNOWN in wild-type mouse for the share, Mierau 2004; ASSUMED for the knockout).
+3. Rebound phenotype later: sag and rebound in the knockout neocortex (HELD-DATA, T13 of the thread; SCI's I1).
+4. Agents act on one circuit and can aggravate the other (ASSUMED; general antiseizure pharmacology of GABAergic drive and sodium-channel blockers aggravating myoclonic and absence-type seizures is to be re-verified).
+5. So the pooled response of a class across the spectrum looks variable ('contrasting results') (INFERRED).
+
+## D2 Why non-obvious
+The standard reading asks whether a class works in WWOX; this asks in which semiology and at which age, and treats the spread of reports as two circuits sampled together.
+
+## D3 Consequences and the surprising prediction
+Cell/slice: I1 and I7 (age-dependent NMDAR share; rebound). Patient: response by class should be a function of semiology-at-exposure: spasm window favours GABA-transaminase inhibition and hormonal agents, later myoclonic/absence-like types favour T-type and valproate-type agents; GABAergic drive (benzodiazepines, GABA-A modulators, GABA-transaminase inhibition) and sodium-channel blockers may aggravate the later group. **Surprising prediction:** agents that fail on average (sodium-channel agents: 4 none, 3 resolved of 7 exposure rows with a stated semiology) succeed in a subgroup (the held table shows resolved sodium-channel rows in spasm and non-spasm groups, so semiology alone does not sort them), and aggravation clusters in the rebound group.
+Held result against the prediction (counts of exposure rows, not independent, one row per child-agent): spasm group resolved 10, partial 4, none 10; rebound group resolved 2, partial 2, none 6; other-semiology 4/2/9; unspecified 2/4/7; both groups 0/1/0. Within classes: GABA-AT inhibitor, spasm 5/1/2 (none in the rebound group); steroid, spasm 2/1/3; sodium channel, rebound 1 resolved 1 none, spasm 1 resolved, other 1/0/1. No class has both groups at n of 3 or more. Pooled difference spasm versus rebound is confounded by class (spasm rows are the classes aimed at spasms) and by line of therapy (not collected until addendum 1).
+
+## D4 Model
+None needed for the extraction. A small formal version: response probability = f(class, semiology group, age); with the current counts the likelihood is flat for every class except GABA-AT in spasm. A generative model belongs to I1.
+
+## D5 Experiments
+(a) No new data: done above; result 'not answerable at class level'. A further no-literature step: addendum 1 (variant domain, sleep timing, line of therapy) and a re-extraction of the 61+62 literature patients of the two secondary tables is NOT possible without their original reports (grouped rows only).
+(b) Animal: the age-by-semiology prediction at the circuit level is I1/I7 (slice at P6-P8 versus P13-P17, with a T-type blocker and a GABA-A positive modulator arm in the I10 sleep-staged EEG).
+(c) Clinical-observational design (a clinician-researcher can run it in any centre with the reference genotype class): for each child, at each agent start, record (1) dominant seizure type in the preceding 4 weeks from a seizure diary, closed list as the rubric, (2) age in months, (3) line of therapy, (4) co-therapy, (5) EEG pattern (hypsarrhythmia, generalised spike-wave with rebound, other) when available, (6) at 4 and 12 weeks: change of each seizure type separately (reduced, unchanged, increased, new type appeared), (7) sleep-wake timing of events. Counts per class and semiology group; the question is pre-declared: does the increased/new-type category cluster in the myoclonic/absence-like group for GABAergic and sodium-channel agents? What each outcome changes: clustering supports I2 and shifts the matrix aggravation row from unknown; no clustering with n of 10 per cell removes I2's aggravation half.
+
+## D6 Intervention logic (labels, no dose)
+Spasm window: GABA-transaminase inhibitor class, steroid/ACTH class (HELD-DATA: 5 of 8 resolved in the first; 2 of 6 in the second, polytherapy confounded). Rebound window: T-type blocker class and valproate-type class as hypothesised benefit, GABA-A modulators and sodium-channel blockers as hypothesised aggravation. Agents outside the antiseizure set that act on the circuit: GluN2B NAM class (I7: early window), glycine-site agents (I11), persistent-sodium-preferring agents (I11b). BLOCK-1: not run (tools absent); flags from general knowledge unconfirmed.
+
+## D7 Combination
+I7: the early window is the high-share window; I1: rebound is the later stage. I10: a sleep-staged observation separates the rebound group. I8: HE's WW1 hypothesis needs the variant domain (addendum 1; Oliver Table 2 lists Missense/Missense children, so the domain contrast may not be empty). Contradiction to settle: sodium-channel agents with resolved rows in both groups suggest semiology is not the only sorter.
+
+## D8 Stronger / killed
+Stronger: a registry of the D5c design; line of therapy and variant domain from addendum 1. Killed by a test: the clinical design with 10 or more exposures per cell showing the same response of every class in both semiology groups and no clustering of new or increased seizure types (E of the rubric).
+
+## D9 Cheapest next step with no literature
+Addendum pass (running), then add the clinician-facing D5c form as a one-page file; IT. Then ask a clinician-researcher via the operator for one centre's seizure-diary data, which is a lawful and existing record, not a literature search.
+
+## Limits written first
+Delegate extraction (sonnet, effort high; 372,983 tokens of subagent total), sealed; not independently re-read yet (second read by SCI of all rows with semiology and outcome is requested). Exposure rows are not independent; polytherapy rows (124 of 170) carry no attribution; Oliver's 83 rows have no stated outcome; Chong narratives for patients 1-4 are missing from the bundle; two reports contribute no child.

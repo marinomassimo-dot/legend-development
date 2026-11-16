@@ -1,0 +1,65 @@
+metric	value	comment
+children	42	children.tsv rows (14 reports; 2 reports contribute 0 children)
+exposures	169	exposure rows with agent present (rows with mechanism_class=none excluded)
+rows_in_exposures_tsv	170	includes 1 agent=none row(s)
+exposures_by_mechanism_class:ampa_antagonist	2	
+exposures_by_mechanism_class:benzodiazepine	26	
+exposures_by_mechanism_class:carbonic_anhydrase_multi	0	
+exposures_by_mechanism_class:cbd_fenfluramine	5	
+exposures_by_mechanism_class:gaba_transaminase_inhibitor	23	
+exposures_by_mechanism_class:gabaa_pam_non_benzodiazepine	15	
+exposures_by_mechanism_class:glun2b_nam	0	
+exposures_by_mechanism_class:ketogenic_diet	11	
+exposures_by_mechanism_class:kv7_opener	0	
+exposures_by_mechanism_class:nmdar_pore_blocker	0	
+exposures_by_mechanism_class:none	1	
+exposures_by_mechanism_class:other_named	7	
+exposures_by_mechanism_class:sodium_channel	32	
+exposures_by_mechanism_class:steroid_acth	12	
+exposures_by_mechanism_class:sv2a	21	
+exposures_by_mechanism_class:t_type_calcium	1	
+exposures_by_mechanism_class:valproate_type	14	
+children_with_at_least_one_worsening_statement	2	keys: AB12,YO1; both statements are TEMPORAL_ONLY and NONSEIZURE (see notes)
+rows_with_worsening_statement	4	AB12 statement is repeated on its three current-agent rows
+distinct_worsening_statements	2	
+worsening_statements_naming_a_seizure_type	0	0: no text states that a seizure type got worse
+children_with_stated_onset_age	37	onset_age_months numeric; 5 children have onset only as words or not at all
+children_with_onset_age_as_printed_non_blank	41	includes onset given in words (e.g. 'early infancy')
+exposures_with_semiology_at_exposure_and_outcome	60	semiology_at_exposure not not_stated (includes seizures_unspecified) and outcome resolved|partial|none|worsened
+exposures_with_specific_semiology_at_exposure_and_outcome	50	as above but excluding rows whose semiology is only seizures_unspecified
+with_semiology_and_outcome_by_class:benzodiazepine	8	none=5; resolved=3
+with_semiology_and_outcome_by_class:cbd_fenfluramine	1	none=1
+with_semiology_and_outcome_by_class:gaba_transaminase_inhibitor	12	none=4; partial=2; resolved=6
+with_semiology_and_outcome_by_class:gabaa_pam_non_benzodiazepine	6	none=2; partial=3; resolved=1
+with_semiology_and_outcome_by_class:ketogenic_diet	5	none=3; partial=2
+with_semiology_and_outcome_by_class:other_named	5	none=5
+with_semiology_and_outcome_by_class:sodium_channel	7	none=4; resolved=3
+with_semiology_and_outcome_by_class:steroid_acth	8	none=5; partial=1; resolved=2
+with_semiology_and_outcome_by_class:sv2a	5	none=1; partial=2; resolved=2
+with_semiology_and_outcome_by_class:valproate_type	3	none=2; partial=1
+exposures_with_outcome_stated	63	resolved|partial|none|worsened
+rows_by_outcome:resolved	18	
+rows_by_outcome:partial	13	
+rows_by_outcome:none	32	
+rows_by_outcome:worsened	0	
+rows_by_outcome:not_stated	107	
+exposures_with_age_at_exposure_months	27	
+exposures_with_EMERGENT_AFTER_AGENT_flag	3	new seizure types after the agent, text does not say worse; not coded as worsening: SH1 vigabatrin; AB21 vigabatrin; YO1 topiramate
+exposures_non_antiseizure_agents	2	baclofen (spasticity) rows; counted in exposures, class other_named
+single_agent_rows	46	single_agent = text ties the outcome to that agent (including add-on agents named as the change)
+polytherapy_not_attributable_rows	124	
+grouped_rows	35	grouped_rows.tsv; not counted as children
+children_in_report:28721938	1	exposure rows: 4
+children_in_report:29808465	2	exposure rows: 3
+children_in_report:30061856	0	exposure rows: 0
+children_in_report:30361190	2	exposure rows: 10
+children_in_report:35573960	1	exposure rows: 12
+children_in_report:35792847	9	exposure rows: 29
+children_in_report:36537114	5	exposure rows: 7
+children_in_report:36779245	13	exposure rows: 83
+children_in_report:37583270	4	exposure rows: 8
+children_in_report:38407561	1	exposure rows: 4
+children_in_report:39101447	1	exposure rows: 4
+children_in_report:40126049	0	exposure rows: 0
+children_in_report:41442931	2	exposure rows: 2
+children_in_report:42092735	1	exposure rows: 4
