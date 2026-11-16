@@ -1,0 +1,7 @@
+manipulation	sets_run(best single + accepted)	reproduces_all_four	RMP_ok	Rin_ok	sag_ok	rebound_ok
+K+ leak x0.7	9	0	4	4	0	4
+K+ leak x0.5	9	0	1	7	4	3
+tonic GABA-A x0.5	9	0	0	2	0	0
+tonic GABA-A x0.0	9	0	0	5	1	2
+tonic x0.5 and K+ leak x0.85	9	0	0	5	0	4
+Ih x2	9	0	0	0	8	9

@@ -1,0 +1,9 @@
+# Amendment 1 to PREREGISTRATION_FIG4_MEPSC_SECOND_READ.md: how the axes are calibrated (HE, 2026-11-16; written and committed before any curve median is computed)
+
+What happened: stage 1 of the script found no separate tick marks on the x axes of panels B and C at the 708 × 675 px resolution (the raster is blurred; the axis labels are legible, the tick marks are not resolved), so step 3 of the preregistered method ("tick marks found by script") cannot be carried out as written. I looked at enlarged crops of the AXES and axis labels only to set the search boxes; I did look at the overall shape of the curves in those crops (red shifted left of black and blue in panel B; the three curves nearly coincident in panel C) before this amendment. No median has been computed.
+
+Replacement for step 3 (same linear map, different anchors, both stated with their uncertainty):
+* Panel B x: −50 pA at the y-axis line column; 0 pA at the right end of the x-axis line. Panel C x: 0 Hz at the y-axis line column; 80 Hz at the right end of the x-axis line (to be confirmed by the cross-check below). y: probability 0 at the centre of the x-axis line rows; probability 1 at the top end of the y-axis line.
+* Cross-check, same script: the centres of the printed axis labels (clusters of dark pixels below the x axis) are compared with the positions the linear map predicts for each label; the largest label-centre deviation is reported; if it exceeds 3 px the calibration is declared failed and nothing is read.
+* Uncertainty: ±2 px at each anchor (line width and blur) propagated to every read value in addition to the ±1.5 px curve-position uncertainty already preregistered (combined in quadrature).
+The decision rule, the quantity read (the median, cumulative probability 0.5), the colour classes and the hidden-curve rule are unchanged.
