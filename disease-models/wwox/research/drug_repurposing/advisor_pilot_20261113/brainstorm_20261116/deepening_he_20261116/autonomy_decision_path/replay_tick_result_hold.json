@@ -1,0 +1,92 @@
+{
+ "after": {
+  "PRESIDIO_line": "ACTIVE: an evaluation is due or running",
+  "TICK_RESULT": {
+   "hours_since_last_evaluation": 16.5,
+   "verdict": "EVALUATE",
+   "why": "hold lapsed after 6.1 h: re-compare (a hold is a wait for the paths it names, not a standing answer; excluded then: none stated)"
+  },
+  "commit": "36a6ee44c",
+  "portfolio_actionable_in_tick": [
+   "RP-001",
+   "RP-002",
+   "RP-003",
+   "RP-006",
+   "RP-007",
+   "RP-009",
+   "RP-010",
+   "RP-020"
+  ],
+  "queue": {
+   "blocked_only": [
+    "INTAKE-OVERNIGHT-20261002",
+    "ORCH-METABOLIC-BATCH-20261019"
+   ],
+   "blocked_paths": [
+    {
+     "blocker": "neuro-WWOX new-literature pool exhausted and the decisive targets are paywalled or absent (356 declared artefacts absent; PMIDs 10786676, 11719429, 28001369, 38",
+     "step": "Operator rule of 2026-10-03: whenever a literature batch completes, the Orchestr",
+     "task": "INTAKE-OVERNIGHT-20261002"
+    },
+    {
+     "blocker": "selectable lawful WWOX-direct pool exhausted; the decisive remaining targets have no lawful free route",
+     "step": "Further waves on the metabolic themes: pool exhausted (wave 4 selector found <12",
+     "task": "ORCH-METABOLIC-BATCH-20261019"
+    }
+   ],
+   "executable": [],
+   "exhausted": true,
+   "portfolio_ready": [
+    "RP-001",
+    "RP-002",
+    "RP-003",
+    "RP-006",
+    "RP-007",
+    "RP-009",
+    "RP-010",
+    "RP-020"
+   ],
+   "scope": "written executable tasks only; not a statement about the portfolio"
+  },
+  "saved_outcome": {
+   "excluded_paths_named": "(none: the field did not exist)",
+   "reason": "INTAKE-OVERNIGHT-20261002 and ORCH-METABOLIC-BATCH-20261019 blocked and the executable queue exhausted; every session holds a written wait or a named item (IT: second-read wording and waits a/b/d; SCI",
+   "resume_when": "record:INTAKE-OVERNIGHT-20261002=CONTINUE",
+   "utc": "2026-11-15T21:54:29Z"
+  }
+ },
+ "before": {
+  "PRESIDIO_line": "HELD by host at 2026-11-15T21:54:29Z: INTAKE-OVERNIGHT-20261002 and ORCH-METABOLIC-BATCH-20261019 blocked and the executable queue exhausted; every session holds a written wait o; resume_when record:INTAKE-OVERNIGHT-20261002=CONTINUE; ends at that condition, a roadmap change or the first new event (not an evaluation, no model run)",
+  "TICK_RESULT": {
+   "hours_since_last_evaluation": 16.5,
+   "verdict": "NONE",
+   "why": "nothing new: the previous assessment stands"
+  },
+  "commit": "60e96ffcb",
+  "portfolio_actionable_in_tick": [
+   "RP-001",
+   "RP-002",
+   "RP-003",
+   "RP-006",
+   "RP-007",
+   "RP-009",
+   "RP-010",
+   "RP-020"
+  ],
+  "queue": {
+   "blocked_only": [
+    "INTAKE-OVERNIGHT-20261002",
+    "ORCH-METABOLIC-BATCH-20261019"
+   ],
+   "executable": [],
+   "exhausted": true
+  },
+  "saved_outcome": {
+   "excluded_paths_named": "(none: the field did not exist)",
+   "reason": "INTAKE-OVERNIGHT-20261002 and ORCH-METABOLIC-BATCH-20261019 blocked and the executable queue exhausted; every session holds a written wait or a named item (IT: second-read wording and waits a/b/d; SCI",
+   "resume_when": "record:INTAKE-OVERNIGHT-20261002=CONTINUE",
+   "utc": "2026-11-15T21:54:29Z"
+  }
+ },
+ "now": "2026-11-16T04:00:00Z"
+}
