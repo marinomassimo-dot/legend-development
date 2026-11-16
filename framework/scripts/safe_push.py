@@ -32,10 +32,17 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      the push published the commit that was checked out (gate PASS on the SHA published, but not the SHA
      meant). Callers that merge or check out a candidate first should pass it.
 
-Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>]      (default branch: main)
+  8. `--serialize` makes publishers take turns. The gate takes 7 to 12 minutes and every other session's push moves the remote under it, so on 2026-11-16 seven gates ran to
+     completion and were refused at the push ("HEAD moved" / non-fast-forward) because five sessions gated at once. With `--serialize` the tool takes an exclusive flock on
+     `<git common dir>/legend_land.lock` (shared by every worktree of the repository; the kernel releases it when the process dies, so a crashed gate cannot deadlock the queue),
+     THEN fetches the branch and refuses, BEFORE the gate, when the remote tip is not an ancestor of HEAD ("merge it and call again"). Nothing else changes: the clean tree, the
+     expectation, the gate verdict, the HEAD re-read after the gate, the fast-forward push of the gated SHA and the ls-remote confirmation are the same code paths. `--lock-timeout <s>`
+     refuses instead of waiting longer than that (default: wait).
+
+Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>]]      (default branch: main)
 """
 from __future__ import annotations
-import os, subprocess, sys
+import fcntl, os, subprocess, sys, time
 from pathlib import Path
 
 # The root is overridable so the refusals can be exercised against a throwaway repo with a
@@ -58,7 +65,17 @@ def main(argv: list[str]) -> int:
     if any(arg in ("-h", "--help") for arg in argv[1:]):
         print(__doc__)
         return 0
-    args, expect = list(argv[1:]), None
+    args, expect, serialize, lock_timeout = list(argv[1:]), None, False, None
+    if "--serialize" in args:
+        serialize = True
+        args.remove("--serialize")
+    for i, a in enumerate(args):
+        if a == "--lock-timeout":
+            if i + 1 >= len(args) or not args[i + 1].isdigit():
+                return fail("--lock-timeout needs a number of seconds")
+            lock_timeout = int(args[i + 1])
+            del args[i:i + 2]
+            break
     for i, a in enumerate(args):
         if a == "--expect-sha":
             if i + 1 >= len(args) or args[i + 1].startswith("-"):
@@ -71,7 +88,7 @@ def main(argv: list[str]) -> int:
             del args[i]
             break
     if not 1 <= len(args) <= 2:
-        return fail("usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>]")
+        return fail("usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>]]")
     remote, branch = args[0], (args[1] if len(args) == 2 else "main")
 
     for bad in ("+", "--force", "-f", "--force-with-lease"):
@@ -93,6 +110,32 @@ def main(argv: list[str]) -> int:
             return fail(f"--expect-sha {expect!r} is not a commit of this repository. Nothing was gated or pushed.")
         if want != before:
             return fail(f"HEAD is {before} but the caller expected {want} (a failed merge or checkout before this call?). "
+                        "Nothing was gated or pushed.")
+
+    lock_fh = None
+    if serialize:
+        common = run("git", "rev-parse", "--git-common-dir").stdout.strip()
+        lock_path = (ROOT / common if not os.path.isabs(common) else Path(common)) / "legend_land.lock"
+        lock_fh = open(lock_path, "a+")
+        waited, t0 = False, time.time()
+        while True:
+            try:
+                fcntl.flock(lock_fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                break
+            except OSError:
+                if not waited:
+                    print(f"waiting for the landing lock {lock_path} (another publisher is gating)", flush=True)
+                    waited = True
+                if lock_timeout is not None and time.time() - t0 > lock_timeout:
+                    return fail(f"the landing lock was not free within {lock_timeout}s. Nothing was gated or pushed.")
+                time.sleep(2)
+        print(f"landing lock acquired after {time.time() - t0:.0f}s", flush=True)
+        fetched = run("git", "fetch", remote, branch)
+        if fetched.returncode != 0:
+            return fail(f"git fetch {remote} {branch} failed under the landing lock: {fetched.stderr.strip()[:300]}. Nothing was gated or pushed.")
+        tip = run("git", "rev-parse", "FETCH_HEAD").stdout.strip()
+        if run("git", "merge-base", "--is-ancestor", tip, before).returncode != 0:
+            return fail(f"the remote branch moved while this publisher waited ({tip[:12]} is not an ancestor of HEAD {before[:12]}); merge it and call again. "
                         "Nothing was gated or pushed.")
 
     gate = run(sys.executable, str(GATE))
