@@ -10,8 +10,8 @@
   "OBJECTIVE": "Apply the operator-agreed direction-before-status correction in the existing Advisor path: frame the useful scientific gain before adopting operational closure; preserve live work, supported waits, autonomy and scientific checks. No new actor, scheduler, gate or mandatory report.",
   "worktree": "/tmp/legend-adv-direction-20261116",
   "branch": "codex/adv-direction-20261116",
-  "MANDATE_STATE": "OPEN",
-  "CURRENT_STATE": "IN_PROGRESS",
+  "MANDATE_STATE": "COMPLETE",
+  "CURRENT_STATE": "COMPLETE",
   "related_work": "Native HE69 owns continuity/hold/recall repairs; this task owns the canonical framing paragraph and its delivery before operational state in Stage P. No campaign counters or peer files are edited.",
   "AUTHORISED_QUEUE_20261116": {
     "OBJ_DIRECTION": {
@@ -34,10 +34,12 @@
         },
         {
           "step": "Land and publish through existing checks without disturbing live peer work; document remaining behavioural test",
-          "status": "IN_PROGRESS"
+          "status": "DONE",
+          "evidence": "Implementation landed through task_close on local main at 7935b43e3; published with exact-SHA gate PASS and ls-remote verification at 37b68596ee410fd625d2af56927b58058f93d846. This record closes the implemented change; behavioural effectiveness is still unproven."
         }
       ]
-    }
+    },
+    "MANDATE_STATE": "COMPLETE"
   },
   "DEFAULTS_TAKEN": [
     {
@@ -80,6 +82,25 @@
       "scope": "Receipt chain on the merged tree",
       "receipts": 1970,
       "verdict": "OK"
+    },
+    {
+      "scope": "Metadata-only closure cd33a98fb",
+      "verdict": "INTERRUPTED_BEFORE_PUBLICATION",
+      "reason": "The monitor derives lifecycle from the AUTHORISED_QUEUE block; top-level COMPLETE alone left COMPLETE_PENDING. The own gate was stopped before push, and the state is now set in the canonical queue location. Implementation publication 37b68596e remains verified."
     }
-  ]
+  ],
+  "PUBLICATION": {
+    "implementation_sha": "37b68596ee410fd625d2af56927b58058f93d846",
+    "gate": "PASS",
+    "remote_verified": true,
+    "runtime": "Codex",
+    "actor_id": "plan"
+  },
+  "NEXT_OBSERVATION": {
+    "owner": "ADV host, existing continuous campaign",
+    "trigger": "next normal strategic boundary; no extra invocation required",
+    "evidence": "existing assessment or MEETING, actual recipient take-in-charge and consumer result",
+    "question": "Does the choice compare a useful scientific gain and alternatives, reconcile local blockers, and reach a consumer? Keeping a still-valid direction or a supported wait remains legitimate.",
+    "status": "NOT_YET_OBSERVED; input-delivery tests are not cognitive or scientific validation"
+  }
 }
