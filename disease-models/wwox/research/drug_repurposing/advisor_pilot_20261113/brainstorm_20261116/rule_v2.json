@@ -28,7 +28,7 @@
     "cannabidiol",
     "fenfluramine_type",
     "hcn_ih_blocker",
-    "neuroinflammation_il1_modulator"
+    "glial_reactivity_modulator"
   ],
   "content_reference": "ADV declaration of 2026-11-16 (matrix V2: 19 scored classes and rules R1-R3, SCI's class-list proposal accepted); machine encoding by HE. rule.json v1 (sha256 679a60894100d26bf4e550e2f49a888e39b8451dfbf428c2157f8b0cb2d94982) is not modified and still scores v1 cells byte-identically.",
   "directness_rubric": {
