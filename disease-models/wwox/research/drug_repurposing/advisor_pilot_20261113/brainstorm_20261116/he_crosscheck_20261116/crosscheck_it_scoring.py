@@ -117,3 +117,12 @@ for version, col in (("partial_counts", 1), ("resolved_only", 2)):
         agree &= ok
         print(f"  {name}: here {mine} on {r['scored']} pairs ({r['classifiable']} classifiable of {r['pairs']}); IT {theirs}; {'AGREE' if ok else 'CHECK'}")
 print("\nVERDICT:", "the two computations agree" if agree and same_counts else "the two computations differ somewhere; see the lines marked CHECK")
+
+# 4. like for like: IT compares F1 (15 pairs) with baseline (i) (7 pairs, only the classes with a PTZ level). On the SAME classes: ----------------
+print("\nlike for like: every prediction scored on the classes baseline (i) has a level for (resolved_only; partial_counts has no classifiable pair there)")
+shared = set(PRED["baseline_i_PTZ"])
+for version, col in (("resolved_only", 2), ("partial_counts", 1)):
+    counts = {c: (v[0], v[col]) for c, v in mine_counts.items() if c in shared and v[0] >= 3}
+    for name in ("F1_per_thread_sum", "F1_origin_collapsed", "baseline_i_PTZ", "baseline_ii_frequency"):
+        r = am.concordance(PRED[name], counts)
+        print(f"  {version} {name}: {r['scored']} pairs, " + (f"{r['concordance']:.3f}" if r["concordance"] is not None else "not scorable"))
