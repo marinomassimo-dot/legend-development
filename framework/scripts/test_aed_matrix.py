@@ -181,6 +181,15 @@ class AmendmentOne(Base):
         self.assertEqual({r["score_all"] for r in dev}, {"0"})
         self.assertIn("[development pooled] not scorable", out)
 
+    def test_aggravation_is_shown_where_no_class_matches(self):
+        rows = [cell("a", "T12", "c1", sign="aggravation", tier=2, directness=3, origin="o1")]
+        out = self.score(rows)[1]
+        r = self.row(out, "seizure", "pooled", "c1")
+        self.assertEqual((r["top_set_label"], r["score_all"], r["aggravation_score"]),
+                         ("not_scorable_null_ordering", "0", "6"))
+        self.assertIn("[seizure pooled] aggravation-only window: aggravation is printed in its own column for c1", out)
+        self.assertNotIn("aggravation-only", self.score([cell("a", "T1", "c1")])[1])
+
     def test_per_thread_sum_sits_next_to_the_origin_collapsed_score(self):
         r = self.row(self.score()[1], "seizure", "pooled", "c2")
         self.assertEqual((r["score_all"], r["score_per_thread_sum"]), ("6", "12"))
