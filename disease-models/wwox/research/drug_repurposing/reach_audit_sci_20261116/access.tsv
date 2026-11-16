@@ -1,0 +1,7 @@
+local_file_under_files/reach_audit_downloads	url	what	status	bytes	sha256
+MSigDB_Hallmark_2020.gmt	https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=MSigDB_Hallmark_2020	Enrichr hallmark library (human symbols; 50 sets)	200 OK, text/plain; no registration, captcha or interstitial	44235	4275592957a1587652092bb398cf77216fde5b8daa2aedaa0e016f7d10bbdb81
+GSE9566-GPL1261_series_matrix.txt.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE9nnn/GSE9566/matrix/GSE9566-GPL1261_series_matrix.txt.gz	Cahoy 2008 (PMID 18171944) purified neurons P7, P16, P26 and astrocytes, Affymetrix MOE430 2.0	200 OK; public GEO ftp	5907598	7ccb21c0cd8c1ecb1b3db8ec6f20336f7817cf925cfd279faa6a7ccf3188809a
+GSE9566-GPL6096_series_matrix.txt.gz	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE9nnn/GSE9566/matrix/GSE9566-GPL6096_series_matrix.txt.gz	second platform of the same series (downloaded with the first; not used)	200 OK; public GEO ftp	327747	008ca84da3b6c3ac83d8fda910c2605ef632b383a94efe4dbf6a5b2b2207af7f
+GPL1261.annot.gz	https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL1nnn/GPL1261/annot/GPL1261.annot.gz	probe annotation for GPL1261	200 OK; public GEO ftp	8389179	394c103cf4ca99500d06369e4fb2b9b9bffc2c10fd3cbeb0b0d64c51c3fc95f8
+(failed)	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE9nnn/GSE9566/matrix/GSE9566_series_matrix.txt.gz	first guess of the file name (single-platform name)	404 Not Found; the series has two platforms		
+(all)	(client)	python urllib default User-Agent; no contact address, account, token or cookie sent; one GET per file; no spend			
