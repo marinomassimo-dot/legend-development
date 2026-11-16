@@ -1,0 +1,41 @@
+region	item	value1	value2	value3	animals
+CTX	Gabrd genotype effect (no covariate / sex covariate)	-0.89 / -0.89			10
+CTX	neuron	score genotype effect +0.15	adjusted genotype coefficient -0.92 (shrinkage -4%)	residual r +0.18, perm p 0.629	10
+CTX	astrocyte	score genotype effect -0.31	adjusted genotype coefficient -0.90 (shrinkage -2%)	residual r -0.03, perm p 0.943	10
+CTX	microglia	score genotype effect -0.01	adjusted genotype coefficient -0.89 (shrinkage +0%)	residual r +0.04, perm p 0.921	10
+CTX	oligodendrocyte	score genotype effect -0.64	adjusted genotype coefficient -0.63 (shrinkage +30%)	residual r +0.53, perm p 0.118	10
+CTX	Lamp5	score genotype effect -0.69	adjusted genotype coefficient -0.41 (shrinkage +54%)	residual r +0.42, perm p 0.220	10
+CTX	Sst	score genotype effect +0.72	adjusted genotype coefficient -0.63 (shrinkage +29%)	residual r -0.36, perm p 0.302	10
+CTX	Cck	score genotype effect +0.81	adjusted genotype coefficient -0.46 (shrinkage +48%)	residual r -0.40, perm p 0.247	10
+CTX	Pvalb	score genotype effect +0.01	adjusted genotype coefficient -0.90 (shrinkage -1%)	residual r +0.29, perm p 0.402	10
+CTX	Vip	score genotype effect +0.10	adjusted genotype coefficient -0.85 (shrinkage +5%)	residual r -0.39, perm p 0.258	10
+CTX	Npy	score genotype effect +1.51	adjusted genotype coefficient -0.23 (shrinkage +74%)	residual r -0.80, perm p 0.004	10
+CTX	Ndnf	score genotype effect -0.34	adjusted genotype coefficient -0.80 (shrinkage +11%)	residual r +0.35, perm p 0.340	10
+CTX	Gfap	score genotype effect +0.37	adjusted genotype coefficient -0.80 (shrinkage +10%)	residual r -0.75, perm p 0.010	10
+PFC	Gabrd genotype effect (no covariate / sex covariate)	-0.74 / -0.75			10
+PFC	neuron	score genotype effect +0.16	adjusted genotype coefficient -0.91 (shrinkage -21%)	residual r +0.30, perm p 0.402	10
+PFC	astrocyte	score genotype effect +0.05	adjusted genotype coefficient -0.69 (shrinkage +9%)	residual r -0.50, perm p 0.153	10
+PFC	microglia	score genotype effect +0.31	adjusted genotype coefficient -0.95 (shrinkage -27%)	residual r +0.17, perm p 0.618	10
+PFC	oligodendrocyte	score genotype effect -0.53	adjusted genotype coefficient -0.18 (shrinkage +76%)	residual r +0.86, perm p 0.004	10
+PFC	Lamp5	score genotype effect -0.84	adjusted genotype coefficient +0.47 (shrinkage +162%)	residual r +0.83, perm p 0.007	10
+PFC	Sst	score genotype effect +1.03	adjusted genotype coefficient -1.53 (shrinkage -104%)	residual r +0.62, perm p 0.056	10
+PFC	Cck	score genotype effect +0.73	adjusted genotype coefficient -0.50 (shrinkage +34%)	residual r -0.17, perm p 0.628	10
+PFC	Pvalb	score genotype effect +0.06	adjusted genotype coefficient -0.80 (shrinkage -7%)	residual r +0.70, perm p 0.025	10
+PFC	Vip	score genotype effect -0.11	adjusted genotype coefficient -0.74 (shrinkage +2%)	residual r +0.11, perm p 0.783	10
+PFC	Npy	score genotype effect +1.23	adjusted genotype coefficient -0.83 (shrinkage -11%)	residual r +0.04, perm p 0.906	10
+PFC	Ndnf	score genotype effect -0.07	adjusted genotype coefficient -0.83 (shrinkage -11%)	residual r -0.72, perm p 0.026	10
+PFC	Gfap	score genotype effect +0.69	adjusted genotype coefficient -0.54 (shrinkage +28%)	residual r -0.71, perm p 0.030	10
+HPC	Gabrd genotype effect (no covariate / sex covariate)	-1.02 / -1.04			10
+HPC	neuron	score genotype effect -0.19	adjusted genotype coefficient -1.05 (shrinkage -1%)	residual r -0.01, perm p 0.976	10
+HPC	astrocyte	score genotype effect -0.10	adjusted genotype coefficient -1.07 (shrinkage -3%)	residual r -0.43, perm p 0.221	10
+HPC	microglia	score genotype effect -0.19	adjusted genotype coefficient -1.15 (shrinkage -10%)	residual r -0.54, perm p 0.111	10
+HPC	oligodendrocyte	score genotype effect -0.41	adjusted genotype coefficient -1.14 (shrinkage -10%)	residual r -0.27, perm p 0.453	10
+HPC	Lamp5	score genotype effect -0.55	adjusted genotype coefficient -0.24 (shrinkage +77%)	residual r +0.77, perm p 0.007	10
+HPC	Sst	score genotype effect +0.10	adjusted genotype coefficient -0.98 (shrinkage +6%)	residual r -0.34, perm p 0.340	10
+HPC	Cck	score genotype effect -0.15	adjusted genotype coefficient -1.07 (shrinkage -3%)	residual r -0.11, perm p 0.770	10
+HPC	Pvalb	score genotype effect -0.16	adjusted genotype coefficient -0.76 (shrinkage +27%)	residual r +0.68, perm p 0.037	10
+HPC	Vip	score genotype effect +0.08	adjusted genotype coefficient -0.98 (shrinkage +6%)	residual r -0.46, perm p 0.182	10
+HPC	Npy	score genotype effect +1.64	adjusted genotype coefficient -0.34 (shrinkage +68%)	residual r -0.79, perm p 0.006	10
+HPC	Ndnf	score genotype effect -0.17	adjusted genotype coefficient -1.04 (shrinkage -0%)	residual r -0.02, perm p 0.958	10
+HPC	Gfap	score genotype effect +1.26	adjusted genotype coefficient -0.69 (shrinkage +33%)	residual r -0.76, perm p 0.013	10
+CB	Gabrd genotype effect (no covariate / sex covariate)	-0.05 / -0.06			7
