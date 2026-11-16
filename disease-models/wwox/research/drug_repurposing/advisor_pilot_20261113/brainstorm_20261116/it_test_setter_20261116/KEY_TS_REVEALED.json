@@ -1,0 +1,126 @@
+{
+ "M01": {
+  "arm": "PLANTED_NEEDS_NEW_RECORDING",
+  "orig": "J25"
+ },
+ "M02": {
+  "arm": "HE",
+  "orig": "H-HE-1"
+ },
+ "M03": {
+  "arm": "ARMB",
+  "orig": "H-C3"
+ },
+ "M04": {
+  "arm": "ADV",
+  "orig": "H-ADV-3"
+ },
+ "M05": {
+  "arm": "ARMB",
+  "orig": "H-C4"
+ },
+ "M06": {
+  "arm": "ADV",
+  "orig": "H-ADV-5"
+ },
+ "M07": {
+  "arm": "IT",
+  "orig": "HIT-4"
+ },
+ "M08": {
+  "arm": "BASE",
+  "orig": "H-B3"
+ },
+ "M09": {
+  "arm": "SCI",
+  "orig": "HSCI-2"
+ },
+ "M10": {
+  "arm": "ADV",
+  "orig": "H-ADV-4"
+ },
+ "M11": {
+  "arm": "HE",
+  "orig": "H-HE-3"
+ },
+ "M12": {
+  "arm": "ADV",
+  "orig": "H-ADV-1"
+ },
+ "M13": {
+  "arm": "ARMB",
+  "orig": "H-C1"
+ },
+ "M14": {
+  "arm": "IT",
+  "orig": "HIT-2"
+ },
+ "M15": {
+  "arm": "IT",
+  "orig": "HIT-3"
+ },
+ "M16": {
+  "arm": "BASE",
+  "orig": "H-B1"
+ },
+ "M17": {
+  "arm": "SCI",
+  "orig": "HSCI-5"
+ },
+ "M18": {
+  "arm": "BASE",
+  "orig": "H-B4"
+ },
+ "M19": {
+  "arm": "HE",
+  "orig": "H-HE-4"
+ },
+ "M20": {
+  "arm": "SCI",
+  "orig": "HSCI-1"
+ },
+ "M21": {
+  "arm": "SCI",
+  "orig": "HSCI-3"
+ },
+ "M22": {
+  "arm": "SCI",
+  "orig": "HSCI-4"
+ },
+ "M23": {
+  "arm": "IT",
+  "orig": "HIT-1"
+ },
+ "M24": {
+  "arm": "ARMB",
+  "orig": "H-C2"
+ },
+ "M25": {
+  "arm": "ADV",
+  "orig": "H-ADV-2"
+ },
+ "M26": {
+  "arm": "ARMB",
+  "orig": "H-C5"
+ },
+ "M27": {
+  "arm": "BASE",
+  "orig": "H-B2"
+ },
+ "M28": {
+  "arm": "BASE",
+  "orig": "H-B5"
+ },
+ "M29": {
+  "arm": "PLANTED_HELD_TESTABLE",
+  "orig": "PX1"
+ },
+ "M30": {
+  "arm": "HE",
+  "orig": "H-HE-2"
+ },
+ "M31": {
+  "arm": "IT",
+  "orig": "HIT-5"
+ }
+}
