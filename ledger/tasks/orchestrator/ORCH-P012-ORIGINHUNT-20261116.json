@@ -1,0 +1,25 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-P012-ORIGINHUNT-20261116",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "PRESIDIO-012 (ADV presidio, operator MEETING 2026-11-16): find an independent origin for T1, T2 or T13 so the five-way tie can be broken by reading",
+ "START_UTC": "2026-11-16T07:42:00Z",
+ "BASELINE": "development/main with freeze f5b71a3f4",
+ "MANDATE_STATE": "DONE",
+ "CURRENT_PACKAGE": "closed in the landing commit",
+ "RESUME": "none; IT and ADV consume the proposal; the v2 cell set is built after the outcome stage",
+ "DECISIONS_TAKEN": [
+  "2026-11-16: two routes (PubMed, Europe PMC title/abstract and full-text body) before declaring absence; 3 papers read, limit 8; no reCAPTCHA met",
+  "2026-11-16: candidate rows kept out of the frozen matrix; scratch simulation with the official generator in two sign scenarios"
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "VERIFICATION_EVIDENCE": [
+  "verify_quotes: 12 of 12 found",
+  "aed_matrix.py scratch runs rc 0, rule pinned"
+ ]
+}

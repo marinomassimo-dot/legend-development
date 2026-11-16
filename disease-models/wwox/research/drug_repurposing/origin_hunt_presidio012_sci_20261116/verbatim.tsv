@@ -1,0 +1,13 @@
+id	file	locator	quote
+Q1	PMC10835625_p47t.txt	P47T, Results 2.3	adult homozygous mutant mice displayed significant seizure activity
+Q2	PMC10835625_p47t.txt	P47T, Results 2.3	Wildtype mice displayed infrequent spike activity (0–68/hour) but no evidence of seizures
+Q3	PMC10835625_p47t.txt	P47T, Results 2.3	We detected very frequent interictal cortical spike discharges (0–3098/hour)
+Q4	PMC10835625_p47t.txt	P47T, Methods 4.4	Simultaneous video-EEG and behavioral monitoring (Labchart 8.0, ADI Systems) was performed during 24-hour sessions in adult (aged >6 weeks)(n = 3) and(n = 3) mice of either sex.
+Q5	PMC10835625_p47t.txt	P47T, Results (transcriptome)	Suppression of GABAergic and glutamatergic synapses in CTX and HPC was also detected in KEGG pathways
+Q6	PMC7104842_aldaz2019.txt	Aldaz 2019, Methods 2.1	mice (2 weeks old) and age-matchedcontrols were used for comparative analysis.
+Q7	PMC7104842_aldaz2019.txt	Aldaz 2019, Results 3.1	We first examined the distribution of fast-spiking parvalbumin expressing (PV+) GABA-ergic interneurons in the DG (dentate gyrus) and the CA1 and CA3 (cornu ammonis) hippocampal subfields of(= 7) and(n = 7) mice.
+Q8	PMC7104842_aldaz2019.txt	Aldaz 2019, Results 3.1	the DG region ofmice displayed a significant reduction in number of PV+ interneurons
+Q9	PMC7104842_aldaz2019.txt	Aldaz 2019, Results (RNA, hippocampus)	the very significant downregulation in expression of the NMDA receptor, glutamate receptor, and voltage-gated potassium channelgenes inmice when compared tocontrols
+Q10	PMC7104842_aldaz2019.txt	Aldaz 2019, Results (RNA, hippocampus)	(= 4) and(n = 4) mice
+Q11	PMC7104842_aldaz2019.txt	Aldaz 2019, Discussion	Therefore, it is logical to speculate thatdownregulation may also lead to abnormal NMDAR receptor function by altering receptor subunit composition
+Q12	PMC6678113_suzuki2019.txt	Suzuki 2019, Introduction	epileptic seizures could be evoked by exposingrats to sound after postnatal day (PND) 16

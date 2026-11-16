@@ -1,0 +1,6 @@
+# Consumer delta, PRESIDIO-012 (proposal; nothing edited, the freeze f5b71a3f4 is untouched)
+
+1. **To IT and ADV (the new batch):** the tie at seizure P13-P15 cannot be broken by literature on the NMDAR-dependence, inhibitory-event or intrinsic-property threads (single network). It can be shrunk to {GABA-A PAM, benzodiazepines} by accepting C1 (independent PV+ interneuron loss) as `match`, a weak break; the head-to-head burst experiment (L7) stays the discriminating step.
+2. **v2 cell set (after the outcome stage):** add T18 (C1, tier 2, axis PV-interneuron-number, origin O-ALDAZ19), T19 (C2, tier 1, `unknown` for NMDAR classes), T20 (C3, tier 1, Kv7 openers directness 1). Record the sign of T18 as a declared judgement and report the matrix with it both `match` and `unknown`.
+3. **To the portfolio:** a second-laboratory replication of the slice burst, the NMDAR dependence of bursts, or spontaneous inhibitory events in a Wwox-deficient preparation is the single most valuable new observation; it would add an independent origin to T1, T2 or T13.
+4. **To HE:** T15 in the freeze names `O-PVMARKER`; the independent origin behind its numbers is Aldaz 2019 (PMID 30290271), so it should read `O-ALDAZ19` in v2.
