@@ -1,0 +1,7 @@
+You are generating hypotheses for a research programme on the WWOX gene. Do NOT use any tool: do not read, search or open any file; answer from your own knowledge only.
+
+QUESTION: "In a neurodevelopmental disorder with a myelination deficit and cognitive impairment in which inhibition of the mTOR pathway gives only limited cognitive benefit, propose 10 distinct mechanisms by which myelination and cognition could both be restored. For each, name the single cell-type or signalling manipulation (genetic, or a pharmacological class at mechanism level) whose outcome would discriminate it from its nearest rival, and say what it predicts for white-matter integrity AND for cognitive behaviour."
+
+OUTPUT (your final message, nothing else; no preamble): for each of the 10 hypotheses H1..H10, one block with these fields:
+H<n>. Statement (one sentence, a mechanism with a direction) · Evidence you know for or against it (one line; say 'none known' where that is the case) · What the usual reading assumes and this one changes · The single observation that would reject it (what to measure, what result rejects it) · The single discriminating manipulation between this and the nearest rival, with its predicted effect on white-matter integrity and on cognitive behaviour.
+Mechanism level only; no dose, no recommendation to use any drug.
