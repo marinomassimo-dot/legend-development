@@ -1,0 +1,66 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-HE-20261116",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "ACTOR_ID": "plan",
+ "OWNER": "plan",
+ "PRIORITY": "HIGH",
+ "assigned_on": "2026-11-16",
+ "OBJECTIVE": "Harness items taken in charge on 2026-11-16 from ADV's meeting and operator INTEGRATION: the P4 variant-to-domain map (UniProt class and held class), the expected sign and size per pilot arm from the frozen model results, the threshold-bisection scan, and the RP-006 incident table; each keeps its own start condition. No new service, scheduler or gate.",
+ "worktree": "/home/desktop/legend-development/.claude/worktrees/he70",
+ "branch": "task/he70-variant-map",
+ "MANDATE_STATE": "OPEN",
+ "CURRENT_STATE": "IN_PROGRESS",
+ "related_work": "The autonomy decision path repair landed in 0559220f4 and 56943f2c6 (report: deepening_he_20261116/autonomy_decision_path/AUTONOMY_DECISION_PATH_REPORT.md); ADV's recall job carries tag db465862.",
+ "AUTHORISED_QUEUE_20261116": {
+  "OBJ_HE_TAKEN": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P4: variant-to-domain mapper with classes fixed before any join (UniProt Q9NZC7), P47T model-line mark, held class and ddG join, 5 tests",
+     "status": "DONE",
+     "evidence": "framework/scripts/wwox_variant_domain.py and test_wwox_variant_domain.py (5 tests OK); classes file CLASSES_FIXED_BEFORE_THE_JOIN.md committed as d9b46a03e before any variant was read; held join from analysis/data/WWOX_pathogenic_missense_classified.csv."
+    },
+    {
+     "step": "P4: run the mapper on IT's per-child variant table (UniProt class, held class, in-frame deletions and frameshifts as their own types)",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "blocker": "IT's P4 step-1 per-child variant table is not on main yet (announced for 21:45Z)",
+     "unblock_when": {
+      "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_p4_missense_20261116/README.md"
+     }
+    },
+    {
+     "step": "Expected sign and size per pilot arm from the frozen model results (S1-S7, G1-G2, K1-K6 PASS), written beside the brief's arms, with SCI (SCI owns the model, HE runs the frozen scans); due 23:00Z",
+     "status": "TODO",
+     "owner": "plan"
+    },
+    {
+     "step": "Threshold-bisection scan as a fourth frozen scan (a new 'bisect' design in sim_harness, tested), after SCI's arm list: 3 genotype settings plus 8 priority arms, 10 seeds, 8 iterations",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "blocker": "SCI's list of the 3 genotype settings and 8 priority arms (announced for 21:30Z)",
+     "unblock_when": {
+      "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/scan_bisect_arms.json"
+     }
+    },
+    {
+     "step": "RP-006: table of the incidents of 2026-11-16 (what was lost, type, first control that did or would have caught it, whether it exists, cheapest repair, before/after where measured), two pages at most; due 23:30Z",
+     "status": "TODO",
+     "owner": "plan"
+    }
+   ]
+  }
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "Unblock files for the two blocked steps are named by guess of the owners' folder conventions",
+   "default_taken": "A blocked step with an unmet path stays blocked; the steps are re-read at every recall and the real path is written into the step when the owner's file lands",
+   "why_safe": "A wrong path keeps the step BLOCKED (never counted executable by mistake)",
+   "what_would_have_differed": "With the true path the continuity check would start the step by itself"
+  }
+ ],
+ "STOP_LOG": [],
+ "VALIDATION_LIMIT": "Fixture and replay evidence only; no claim about multiday autonomy."
+}
