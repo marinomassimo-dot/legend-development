@@ -13,15 +13,25 @@ COUNTS, MATRIX, PANELTSV, DL, TAG, SPECIES, OUT = sys.argv[2:9]
 NEG = {"Gfap", "Gja1", "Kcnj10", "Adk", "Aif1"}        # NeuN- primary fraction (amendment 1, point 2)
 PRED = {"Gfap": "+", "Aif1": "+", "Npy": "+", "Sst": "-", "Slc12a5": "-", "Slc12a2": "+", "Cacna1h": "+", "Hcn2": "-", "Gabrd": "-", "Gabra5": "-", "Pvalb": "-", "Gad1": "unreadable"}
 PANEL = ["Gabrd", "Gabra5", "Gabra1", "Gabrg2", "Slc6a1", "Npy", "Npy2r", "Sst", "Pvalb", "Gad1", "Grin2b", "Grin2a", "Cacna1h", "Cacna1i", "Hcn2", "Slc12a5", "Slc12a2", "Kcnk2", "Kcnq2", "Adora1", "Gfap", "Gja1", "Kcnj10", "Adk", "Wwox", "Aif1"]
-# sample metadata from the series matrix
+# counts first, then sample metadata (series matrix, or the column names when MATRIX is the word colnames)
+h = None; genes = []; M = []
+for k, l in enumerate(gzip.open(COUNTS, "rt")):
+    a = l.rstrip("\n").split("\t")
+    if k == 0: h = a[1:]; continue
+    genes.append(a[0]); M.append([float(x) for x in a[1:]])
+M = np.array(M); cols = {c: j for j, c in enumerate(h)}
 meta = {}
-for l in gzip.open(MATRIX, "rt"):
+for l in ([] if MATRIX == "colnames" else gzip.open(MATRIX, "rt")):
     a = l.rstrip("\n").split("\t")
     if a[0] == "!Sample_title": meta["title"] = [x.strip('"') for x in a[1:]]
     elif a[0] == "!Sample_geo_accession": meta["gsm"] = [x.strip('"') for x in a[1:]]
     elif a[0] == "!Sample_characteristics_ch1":
         k = a[1].strip('"').split(":")[0].strip().lower(); meta.setdefault("ch_" + k, [x.strip('"').split(":", 1)[-1].strip().lower() for x in a[1:]])
         # note: the first row seen for a key wins
+if MATRIX == "colnames":      # GSE330624 columns look like 41-3m-KA-pos: number, time tag, KA or SH, pos (NeuN+) or neg (NeuN-)
+    meta["title"] = list(h); meta["ch_treatment"] = ["kainic acid" if ("-KA-" in c or c.startswith("PILO")) else "nacl" for c in h]
+    meta["ch_diet"] = ["ketogenic" if c.startswith("PILOKD") else "standard" for c in h]
+    meta["ch_cell type"] = ["neun+" if c.endswith("pos") else ("neun-" if c.endswith("neg") else "all") for c in h]
 n = len(meta["title"])
 def role(i):
     t = meta.get("ch_treatment", [""] * n)[i]
@@ -30,12 +40,6 @@ def role(i):
     return None
 def frac(i): return meta.get("ch_cell type", ["all"] * n)[i]
 def diet_ok(i): return meta.get("ch_diet", ["standard"] * n)[i] in ("standard", "")
-h = None; genes = []; M = []
-for k, l in enumerate(gzip.open(COUNTS, "rt")):
-    a = l.rstrip("\n").split("\t")
-    if k == 0: h = a[1:]; continue
-    genes.append(a[0]); M.append([float(x) for x in a[1:]])
-M = np.array(M); cols = {c: j for j, c in enumerate(h)}
 def colof(i):
     for key in (meta["title"][i], meta.get("gsm", [None] * n)[i], meta["title"][i].replace(" ", "_")):
         if key in cols: return cols[key]
@@ -44,7 +48,7 @@ def colof(i):
     return None
 samples = []
 for i in range(n):
-    if TAG and not meta["title"][i].startswith(TAG): continue
+    if TAG and TAG not in meta["title"][i]: continue
     r = role(i)
     if r is None or not diet_ok(i): continue
     j = colof(i)
