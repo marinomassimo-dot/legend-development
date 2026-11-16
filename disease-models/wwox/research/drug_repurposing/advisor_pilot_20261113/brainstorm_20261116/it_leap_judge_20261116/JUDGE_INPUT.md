@@ -1,7 +1,6 @@
 # Hypotheses to judge (anonymised, shuffled). Four criteria in JUDGE_TASK.md.
 
 ## J01. Inhibition itself ignites the burst, by post-inhibitory rebound (so the matrix's top class could aggravate)
-
 * **Statement (IPOTESI).** In knockout neocortex a synchronous inhibitory volley followed by rebound spiking (larger sag and rebound in knockout cells, Breton 2021) is the ignition step of the burst, so enhancing GABA-A drive RAISES the burst rate in knockout slices and a T-type or HCN blocker lowers it. **Rejecting observation:** the burst-onset-triggered average of inhibitory events shows no inhibitory deflection before onset, and a GABA-A positive modulator lowers the knockout burst rate.
 * **Why a leap:** the matrix reads reduced inhibition as a deficit that GABA-A drive restores (T2); this one makes inhibition a trigger when rebound is large, an inversion of the sign for the class that ties at the top.
 * **Existing assay or held table:** Breton 2021 intrinsic properties (sag, post-inhibitory rebound; registry CLAIM 021); T-type package `ttype_20261107/output/README.md`; the L7 brief's GABA-A positive modulator arm (`experiment_brief_presidio013_sci_20261116/EXPERIMENT_BRIEF.md`) already measures the discriminating outcome.
@@ -12,7 +11,6 @@
 * **Cost:** one arm already in the L7 design (8 to 17 animals per genotype under the brief's assumptions) plus a hyperpolarising-step protocol in the same cells.
 
 ## J02. The seizure and development endpoints decouple for classes whose targets are glial (steroid/ACTH, GABA-AT/GAT) and track together for neuron-enriched ones: prospective only
-
 * **Statement.** Four of six children with both endpoints stated are discordant (the INV-10 counts quoted in ADV_SEED). The held tables place the NR3C1 target of the steroid class astrocyte-enriched in mouse (3.8 against 28.6 FPKM; human 5.8 against 11.7) and the GAT targets of [another hypothesis] astrocyte-enriched. So for an agent with a neuron-enriched target (sodium-channel, GABA-A gamma-2: Gabrg2 24.1 against 3.7; human GABRG2 69.5 against 12.0), the seizure outcome and the development outcome should agree more often than for glial-target classes. **Rejecting observation:** equal or higher discordance for the neuron-target agents among children with both endpoints stated.
 * **Why a leap.** It drops the idea that one endpoint pair has one mechanism. The two endpoints may sit on different compartments, which would also explain why a class can score on seizure and not on development.
 * **Existing assay or held table.** Held class tables above; the A1 table's concordance and endpoint columns (not opened by me; [a session] scores after the freeze). A1 cannot test it now: no neuron-target class has both endpoints attributable (sodium-channel, GABA-A and SV2A agents appear only as co-therapy text, per [a session] census).
@@ -22,11 +20,9 @@
 * **What would change my mind.** A held pair of both-endpoint children on a neuron-target agent with the same discordance as the glial-target classes.
 * **Cost.** Zero now; the test waits for an event (a case report) and goes to the prospective registry.
 
-
+## J03. Statement: Wwox loss in oligodendrocyte-lineage cells (the CTGF/OPC threads) thins the myelin of PV+ interneuron axons, which are among the most myelinated, and a conduction-timing deficit in PV axons contributes to the reduced inhibitory output; the oligodendrocyte marker fall in the knockout single-nucleus pool (Plp1 392 to 136 CPM, a held table) is the first sign. Rejecting observation: PV-axon myelin markers (MBP, Caspr) are not reduced in null tissue, or remyelination-promoting agents do not change the burst rate. Test: held single-nucleus pair (Plp1, Mbp, Mobp in KO versus control, pool descriptive only); outcomes: supported -> the myelin line (CTGF, clemastine-type threads) acquires a link to the seizure endpoint it does not have now; rejected -> the myelin line stays a development-endpoint thread. Class label: OPC-differentiation/remyelination mechanism (label). Pre-test: partly present (Plp1), pool-level and composition-confounded (the CTGF package says so). Would change my mind: Mbp unchanged after composition adjustment. Cost: held-table lookups.
 
 ## J04.
-
-
 
 **Statement:** One latent delayed-maturation axis in the KO neuronal population explains the co-movement of the progenitor markers, the CCN2 rise, an immature NMDAR subunit ratio, an immature chloride-transporter ratio (NKCC1 up relative to KCC2), the higher input resistance and the depolarised rest, so the held expression tables should show these genes moving by the amount a progenitor-minus-neuronal composite projects; rejected if, in the held KO contrasts, the subunit and chloride-transporter genes move opposite to or independently of the composite projected from the time-course calibration set.
 
@@ -47,7 +43,6 @@
 ---
 
 ## J05. The network has a critical fraction: burst abolition is a steep threshold in NMDAR current removed, not a graded one
-
 * **Statement (IPOTESI).** d-APV abolishing bursts at 50 uM means the network sits just past a bifurcation; the fraction of the NMDAR current that must be removed to abolish bursts, f_c, is small, so a GluN2B NAM that removes only its sensitive share of the current (WO-11: 14%, interval 0 to 34%, in wild-type barrel cortex) can abolish bursts if f_c is below that share, and burst probability against fraction removed is a steep sigmoid. **Rejecting observation:** burst incidence falls linearly with measured fractional NMDAR current removed, reaching abolition only above about 0.8.
 * **Why a leap:** INV-05 asks whether NAM and pore-blocker curves coincide; this one predicts the SHAPE (a threshold) and turns the NAM-sensitive share into a go/no-go number. If bursts are threshold phenomena, a small partial block can be enough, which reverses the usual "needs near-complete block" reading.
 * **Existing assay or held table:** INV-05 X2 (burst incidence against current removed; `nmda_inv05_20261107/output/experiment.tsv`); WO-11 (`wo11_mierau_it55_20261115/README.md`); the L7 brief's d-APV titration.
@@ -58,7 +53,6 @@
 * **Cost:** a d-APV titration with the isolated NMDAR current in roughly 6 to 10 animals per genotype; it adds to WO-10 rather than starting a new preparation.
 
 ## J06. The knockout network fails the homeostatic response to its own bursting
-
 * **Statement (IPOTESI).** In a network that bursts, activity-dependent genes should rise and scale excitation down; in the knockout they are LOWER (Fos, Arc, Npas4, Egr1; see pre-test), so the homeostatic downward correction is blunted, which would explain why a high-excitability state persists (increased mEPSC amplitude, AMPAR-weighted, in Breton 2021) instead of self-correcting. **Rejecting observation:** after a sustained activity challenge (hours of raised network activity in slice culture), knockout neurons induce Arc, Fos and Npas4 and scale mEPSC amplitude down to a wild-type extent.
 * **Why a leap:** the reduced inhibition and raised AMPAR current are read as primary causes; this reads them as a failure of the set-point controller, a third cause class (neither supply nor response of inhibition) that the held explanations table (`chloride_gradient_sci42_20261110/output/explanations.tsv`) lists only as "a change secondary to bursting".
 * **Existing assay or held table:** the committed mouse tables (below); a slice-culture activity challenge does not exist in the repository.
@@ -69,7 +63,6 @@
 * **Cost:** a slice-culture activity challenge, roughly 8 to 12 animals per genotype, plus qPCR or RNA from the same cultures.
 
 ## J07. The GABA-AT/GAT class acts on a glial compartment, so its matrix cell belongs to the glial thread, not the neuronal GABA thread
-
 * **Statement.** In the held tables the transporter targets of the GABA-AT/GAT class are astrocyte-enriched and the enzyme is shared: Slc6a11 (GAT-3) neuron 35.1 against astrocytes 557.4 FPKM (16-fold, mouse), SLC6A11 2.1 against 101.5 (human); Slc6a1 (GAT-1) 128.7 against 419.7; ABAT 53.6 against 53.0 (shared). The class is also the most frequently used in the A1 series (22 children, baseline (ii) rank 1). So the WWOX-relevant effect of this class, if any, should require the astrocyte compartment: it should be present in the null slice (which contains astrocytes) and shrink in a neuron-enriched preparation. **Rejecting observation:** an equal effect in a neuron-enriched preparation, or a held result that places GAT-1/GAT-3 neuron-enriched.
 * **Why a leap.** It drops the assumption that a GABA-axis class is scored on the neuronal GABA thread (T2, reduced inhibitory events). The matrix counts the class through T2 and T3 (GABA-A axis); the class's targets are not on that axis.
 * **Existing assay or held table.** The held class tables above; the slice burst assay; the organoid GABA-pathway markers (T14) as the neuron-enriched contrast, not read here.
@@ -80,8 +73,6 @@
 * **Cost.** One additional preparation arm (animals or cultures), plus two table lookups.
 
 ## J08.
-
-
 
 **Statement:** Neuron-specific Wwox deletion makes astrocytes reactive and lowers their potassium and glutamate clearance, so extracellular K+ and glutamate rise locally during activity and lower the threshold for NMDAR-dependent bursts; rejected if astrocytic Ba2+-sensitive (Kir-type) current and the astrocyte clearance transcripts are unchanged or higher in KO slices, or if burst incidence is the same in KO slices in which clearance is supported.
 
@@ -101,13 +92,11 @@
 
 ---
 
+## J09. Statement: the held Wwox-null expression tables carry an mTORC1-activation signature, so a share of the seizure phenotype is mTOR-driven even though WWOX is not an mTOR pathway gene by name. Rejecting observation: no hallmark mTORC1 signature in the held KO tables (GSE156243 organoids, the mouse tables), or a signature that tracks progenitor state (the composition artefact the CTGF package found). Test: gene-set scoring on held tables; outcomes: signature present and not composition-explained -> a new thread row for the matrix with a genotype contrast and a class (mTOR pathway inhibitors, label) the AED matrix does not contain; absent -> closed at no cost. Pre-test: this IS the test; the check is a table lookup. Would change my mind: composition explains it. Cost: one script on tables already held.
 
-
-
+## J10. Statement: the matrix cannot discriminate because all arms are scored on burst suppression, a readout shared by every excitation-lowering agent; a readout that separates WWOX-specific from generic effects is the genotype difference in the RESPONSE CURVE shape (slope and plateau of burst reduction versus agent exposure), not the mean effect: a WWOX-specific mechanism predicts a left-shifted or steeper curve in null slices, a generic one a parallel shift scaled by baseline burst rate. Rejecting observation: curves are parallel after normalising to baseline rate for every arm. Test: the same brief's pilot with two exposures per arm, no extra animals beyond one added level; outcomes: shape difference in one class -> that class becomes the first WWOX-specific match with a drug-by-genotype interaction on the ratio scale (the NX1 lesson); parallel everywhere -> the burst readout cannot give specificity, and the next step is a different readout. Class label: none (a design hypothesis). Pre-test: [a session] NX1 sizing already says the absolute scale cannot separate A from B; this applies it. Would change my mind: a held curve pair showing parallel shifts. Cost: one extra exposure level per arm.
 
 ## J11.
-
-
 
 **Statement:** In the Wwox slice a burst is a two-stage event, a low-threshold calcium-channel-dependent trigger that sets the burst *incidence* (inter-burst interval) and an NMDAR-dependent sustainer that sets burst *duration*, so a T-type blocker lengthens the interval without shortening bursts and a matched-current NMDAR reduction shortens or abolishes bursts without much change in the interval; rejected if both manipulations change interval and duration together at matched effect on incidence (no dissociation), or if the T-type arm acts only by lowering the isolated NMDAR current.
 
@@ -128,13 +117,12 @@
 ---
 
 ## J12.  Discordance is a timing artefact, not a drug property
-
+Statement: development is largely fixed before the treatment window opens (structural findings such as thin corpus callosum and periventricular cysts are already present on imaging before any treatment in the A1 series), so seizure-control classes can change the seizure endpoint without moving development, and the discordance share is the same across agent classes; rejecting observation: among children with both endpoints, the discordance share differs by agent class or by presence of pre-treatment imaging abnormality (children with a normal pre-treatment imaging and a seizure response show development improvement). Why a leap: the usual reading looks for a drug or pathway that decouples the two endpoints; this reading drops the premise that treatment is on the causal path of development at all. Existing assay or table: `batch_sci_20261105/a1_wwox_reports/cases_a1.tsv` columns `concordance`, `imaging_finding`, `onset_age_as_stated` (6 children with both endpoints). Single discriminating observation: discordant children with pre-treatment structural imaging versus concordant children without it; outcome one (discordance tracks imaging): the matrix's development endpoint is not a drug-class question and the F3 null stands as a design fact, development moves to a separate thread; outcome two (discordance does not track imaging): the timing reading is rejected and development-specific classes (GSK3, ISR) keep their rows. Repurposing class: none for development by this hypothesis (a negative hypothesis); seizure classes unchanged. Held-data pre-test: not run by [a session]; the A1 columns above can reject it. What would change my mind: one discordant child with documented normal pre-treatment imaging and early control, and one concordant child with pre-treatment abnormalities. Cost to test: table lookups (6 children), no animals.
 
 ## J13.  Lead time to control, not class, separates development outcomes among discordant children
-
+Statement: among children whose seizures responded, the developmental outcome is associated with the interval between onset and the first control (how long hypsarrhythmia ran) rather than with the class that achieved control; rejecting observation: two children with similar latency and opposite development, or with different latency and the same development. Why a leap: it drops the class as the explanatory variable and replaces it with the clock. Existing assay or table: `cases_a1.tsv` (`onset_age_as_stated`, treatment status, `developmental_outcome`) for the 6 both-endpoint children; the INV-10 count of 10+ when it grows (PS-09). Discriminating observation: rank correlation of latency with development in children with both endpoints (n = 6, so descriptive); outcome one (association): the development thread is a timing thread and an observational registry design, not a class-ranking; outcome two (none): timing is not the variable and the discordance stays unexplained. Repurposing class: none by this hypothesis (a timing hypothesis; no treatment statement is made). Held-data pre-test: not run; latencies are partly unstated, so this may be untestable at n = 6, which would itself be the result. What would change my mind: latency unstated in most of the six, so untestable. Cost: table lookups.
 
 ## J14. Sodium-channel targets are absent at P6-P8 and present at P13-P15: "no link" at P6-P8 is "target not yet there", not a negative
-
 * **Statement.** The held mouse neuron class (P7) reads the sodium-channel alpha subunits at low values and below non-neuronal classes (Scn1a 2.5 FPKM against 4.8 in OPC; Scn3a 8.6 against 11.3; Scn8a 6.2 against 8.9), while the held human cortical neuron class reads them neuron-enriched (SCN1A 18.5 against 3.8, 4.9-fold; SCN3A 13.1 against 3.0; SCN8A 12.1 against 5.5). So a use-dependent sodium-channel-blocker label (class label only) should reduce bursting in the Wwox-null slice at P13-P15 but little or not at P6-P8, the reverse of the NMDAR pattern (ifenprodil-sensitive share 53 percent at P6-P8, 14 percent at P13-P15). **Rejecting observation:** an equal burst-rate reduction at both ages, or none at either.
 * **Why a leap.** The matrix reads absence of a thread as absence of a link. This drops that: absence of a thread at an age where the target is barely read is a measurement of the target, not of the class.
 * **Existing assay or held table.** The INV-05 slice burst assay at its two ages (P6-P8, P13-P15); held tables: `he_leap_targets_mouse.tsv`, `he_leap_targets_human.tsv`, and the P7 and human rows of the SCI44/IT47 tables.
@@ -144,10 +132,9 @@
 * **What would change my mind.** A later-age mouse neuron RNA table showing Scn1a, Scn3a and Scn8a at P13-P15 neuron values at or below the P7 ones, or a held burst-assay result at P6-P8 that a sodium-channel blocker reduces.
 * **Cost.** One table lookup (a later-age neuron class from a public RNA set, if one is obtainable) for the target part; one slice experiment at two ages with two arms for the effect.
 
-
+## J15. Statement: the Wwox-null burst depends on the energy substrate: lowering glucose or adding a ketone body changes the burst rate in null slices and not in wild type, through KATP-type conductances in interneurons or the lactate/ketone route, which would make 'diet' and 'metabolic' classes mechanistically testable in the same assay as the AED arms. Rejecting observation: no genotype-by-substrate interaction on burst rate. Test: the [a session] brief's slice assay with one extra arm (substrate change) in both genotypes; outcomes: interaction present -> a metabolic row (T10) gets a genotype contrast (tier 3) and the diet class moves; absent -> the diet class stays an unexplained clinical observation. Class label: ketone-body/KATP-opener mechanism (label). Pre-test: held expression of glycolysis and ketone-handling genes in the Wwox-null tables (not run). Would change my mind: no substrate effect in the pilot. Cost: one added arm, the pilot's four animals per genotype.
 
 ## J16. A valproate-type signature moves the WWOX-loss glycolysis/lactate module in the loss direction: an aggravation hypothesis on the metabolic axis, apart from its anticonvulsant targets
-
 * **Statement.** In the held LINCS-type table (`network_comparison_it7_p3_20261029/results`; observed opposition of the six-gene module HK2, LDHA, LDHB, SLC2A1, BNIP3 up and PDK1 down, built from the WWOX-loss contrasts), valproic acid has a negative opposition score in 4 of 4 neuron-like signatures (-1.05, -0.75, -1.51, -1.66; 6 h and 24 h, 10 uM; family value -1.28, rank 228 of 256) and in 3 of 4 progenitor-like ones: its signature moves the module the way WWOX loss does. Carbamazepine is positive in both its neuron-like signatures (+1.16, +0.31). So valproate-type exposure in a Wwox-null background should push the module no further (ceiling) or further (additive), and in a wild-type background should move it toward the null value. **Rejecting observation:** no change of HK2/LDHA/SLC2A1 transcript or lactate ratio under a valproate-type label in wild-type neurons.
 * **Why a leap.** The matrix asks what an agent matches. This asks what an agent does to the genotype's own measured signature, and keeps the answer as an aggravation sign (never netted against its seizure-axis match). It uses a table built to test a different question.
 * **Existing assay or held table.** `signature_scores.tsv` and `family_scores.tsv`; the GSE156243 and GSE126075 contrasts the module comes from. No WWOX readout of HK2/LDHA under any antiseizure label is held.
@@ -158,7 +145,6 @@
 * **Cost.** Table lookups for the replication check; one two-genotype, two-arm transcript or lactate measurement for the experiment.
 
 ## J17. The hippocampus does not burst because NPY compensation, not a smaller deficit, protects it
-
 * **Statement (IPOTESI).** Hippocampus of the neuron-targeted knockout does not burst (0 bursts in Breton 2021's hippocampus) despite an interneuron-marker loss (PV transcript down) because upregulated NPY and its receptors restrain it more than they do in neocortex; blocking the NPY system unmasks hippocampal bursting. **Rejecting observation:** a Y2-receptor antagonist (tool) does not unmask bursts in knockout hippocampal slices, or the neocortical NPY rise is as large as the hippocampal one.
 * **Why a leap:** the region split is read as "the neocortex has the deficit"; this reads it as "the hippocampus has the same deficit plus a compensator". It also dissolves part of the Aldaz region confound (PV loss in hippocampus without bursting).
 * **Existing assay or held table:** committed tables below; the Breton hippocampal null result; the L7 brief's both-region design.
@@ -171,8 +157,6 @@
 ---
 
 ## J18.
-
-
 
 **Statement:** Burst occurrence is a network threshold set by the fraction of Wwox-deficient neurons in the slice, so the incomplete excision of the Synapsin I-Cre line (and the 4 of 23 heterozygote slices) predicts that the 6 of 42 burst-free KO slices carry the lowest fraction of excised neurons; rejected if burst-free and bursting KO slices have the same per-slice excised-neuron fraction.
 
@@ -193,7 +177,6 @@
 ---
 
 ## J19. Burst duration is set by activity-dependent chloride loading against KCC2 capacity
-
 * **Statement (IPOTESI).** In knockout layer 2/3 pyramidal cells E_GABA is not only static but shifts depolarising DURING a burst (intracellular Cl- accumulates faster than KCC2 extrudes it), so GABA-A drive turns from restraining to sustaining late in the burst; burst DURATION (not onset) therefore depends on KCC2 capacity and on extracellular K+. **Rejecting observation:** E_GABA, measured by gramicidin-perforated patch or a chloride sensor at burst onset and at burst end in the same cells, shifts by no more in knockout bursts than in matched wild-type provoked bursts.
 * **Why a leap:** the usual reading treats the chloride gradient as a fixed property (the held M01 asks for one E_GABA per genotype); this one drops "fixed" and makes inhibition's sign a function of burst time.
 * **Existing assay or held table:** the burst preparation (Breton 2021; INV-05 X1 to X4); `chloride_gradient_sci42_20261110/output/new_measurements.tsv` (M01, M03). The within-burst measurement itself does not exist.
@@ -204,11 +187,9 @@
 * **Cost:** gramicidin-perforated recordings in roughly 6 to 10 animals per genotype (animals as the unit), after the L7 pilot has fixed the burst rate; no new preparation.
 
 ## J20.  The class ranking is confounded by line of therapy
-
+Statement: improvement shares by class reflect where in the sequence the class was given (add-on steps after earlier agents, steps that the authors attribute explicitly), so 'resolved' shares rise for classes that are usually added late and fall for first-line classes, and the F1 and baseline concordances partly measure treatment order; rejecting observation: within each class the improved share of children given the class as add-on equals the share of children given it as a tried first step. Why a leap: the usual reading treats a class share as a property of the class; this drops the independence of exposure order and outcome. Existing assay or table: the sealed `it_extractor_20261116/sealed/extraction.tsv` column `status` (tried, added_on, continued, stopped) against `seizure_outcome` by class. Discriminating observation: share by status within each class; outcome one (shares differ by status): the scoring result of 2026-11-16 must be restated on first-step rows only and the 'not claimed' becomes 'confounded'; outcome two (equal): the order confound is not visible at these n. Repurposing class: none (a measurement-validity hypothesis). Held-data pre-test: can be tested now on the extraction (not run by [a session] before freezing this file). What would change my mind: equal shares within class by status with the interval including a difference of 0. Cost: a table lookup; n is small (43 attributable rows), so the likely result is 'cannot say'.
 
 ## J21.
-
-
 
 **Statement:** The ifenprodil-sensitive (GluN2B-containing) share of the NMDAR EPSC in KO layer II/III cells at P13-P17 stays near the immature or sensory-deprived value (about 0.5) instead of the wild-type value (about 0.14), because the experience-dependent loss of the GluN2B share stalls when cortical drive is reduced; rejected if the KO share lies inside the wild-type interval (0 to 0.34) while the bursts are present.
 
@@ -229,9 +210,9 @@
 ---
 
 ## J22.  The spasm window and the later seizure types are two generators with two class profiles
+Statement: epileptic spasms with hypsarrhythmia in the first months belong to an early-window state (immature GABA/GluN2B balance, the 53% GluN2B share at P6-P8) and respond to the GABA-AT and hormonal classes, while the 'other seizure types' that appear after spasm control (reported in two A1 children after vigabatrin) belong to a later network-threshold state (the 14% share at P13-P15) with a different class profile; rejecting observation: the same class that controls spasms also controls the later focal types in the same child, or the later types appear in children whose spasms were never controlled. Why a leap: the matrix scores one seizure endpoint per age window; this splits the endpoint by seizure type within a child. Existing assay or table: `cases_a1.tsv` (spasm and other-seizure-type statements per child) and the sealed extraction notes; the mouse age windows of WO-11 and INV-05. Discriminating observation: per child, class response for spasms versus for later types; outcome one (profiles differ): a seizure-type endpoint is added to the matrix and F1's age-window logic gets a clinical anchor; outcome two (same class works for both): one generator, and the age-window split is not clinically supported. Repurposing class: GABA-AT/GAT and steroid/ACTH labels for the spasm window (mechanism source: A1 statements), NMDAR-active labels for the later window only as a stated untested class. Held-data pre-test: partial: the 43 attributable rows record seizure type in the notes for some children; not run. What would change my mind: a child whose later focal seizures stop with the same class that stopped spasms. Cost: table lookups.
 
-
-
+## J23. Statement: WWOX loss weakens ErbB4 signalling in PV+ interneurons (WWOX is reported to bind the ErbB4 intracellular domain through its WW domains; ErbB4 in PV+ cells sets their inhibitory output), so the PV-axis findings (Aldaz 2019 PV+ loss, reduced inhibitory events, PV marker loss) share ONE upstream cause, and the five-way matrix tie on the GABA axis would collapse onto it. Rejecting observation: ErbB4 or its target genes are not reduced in PV-class pools of Wwox-deficient tissue, or neuregulin/ErbB4 pathway activation does not change the burst rate in null slices. Why a leap: the usual reading treats the inhibition deficit as a downstream consequence; this makes it a signalling deficit with a pathway handle. Test: held cell-class tables (isr_cellclass_he50 and the single-nucleus pair GSE158684: Erbb4, Nrg1, Pvalb counts in KO versus control); both outcomes change the GABA-axis rows (T2, T14, T15) from three origins to one. Class label: neuregulin/ErbB4 pathway modulators (none is an antiseizure agent; the point is the target, not a candidate). Held-data pre-test: not run by me. Would change my mind: Erbb4 unchanged in the held pools. Cost: held-table lookups.
 
 ## J24.  The high GABA-AT share is a spasm-phenotype base rate, not a WWOX match
-
+Statement: the improved share on vigabatrin in the WWOX children (8 of 9 with partial counted, 4 of 9 resolved) equals the published responder share of vigabatrin among infantile-spasm cohorts of other genetic aetiologies, so the GABA-AT class is a match for the phenotype 'epileptic spasms' and not for WWOX loss; rejecting observation: the WWOX share lies outside the interval of that base rate. Why a leap: F2 counts the high share as support of a WWOX-specific mechanistic match; this reads it as a base rate of the seizure type. Existing assay or table: the sealed extraction (vigabatrin rows) and a lawful public census of vigabatrin response in other genetic spasm cohorts (PubMed abstracts, census level only). Discriminating observation: WWOX share against the base-rate interval; outcome one (inside): F2 is a phenotype prior, the GABA-AT row in the matrix gets a 'phenotype-generic' flag like PTZ; outcome two (outside): a WWOX-specific excess to be examined (still not causal). Repurposing class: GABA-AT/GAT and steroid/ACTH as labels (source: A1 and extraction). Held-data pre-test: not run; needs the external base rate. What would change my mind: a base rate far lower than 8 of 9 from a well-defined cohort with the same coding. Cost: about 5 abstract-level lookups.
