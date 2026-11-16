@@ -79,5 +79,54 @@ class Harness(unittest.TestCase):
         self.assertEqual(sh("--help").returncode, 0)
 
 
+BIS = {"design": "bisect", "bisect": {"parameter": "x", "bracket": [0.0, 3.0], "iterations": 8, "cells": [
+    {"label": "fast", "fixed": {"k": 3.0}, "observable": "rel", "threshold": 0.5, "direction": "crosses below"},
+    {"label": "slow", "fixed": {"k": 1.0}, "observable": "rel", "threshold": 0.5, "direction": "crosses below"},
+    {"label": "never", "fixed": {"k": 0.1}, "observable": "rel", "threshold": 0.5, "direction": "crosses below"},
+    {"label": "up", "fixed": {"k": 1.0, "sign": 1.0}, "observable": "rel", "threshold": 1.5, "direction": "crosses above"}]},
+    "predictions": [{"id": "O1", "statement": "fast before slow", "type": "order", "cells": ["fast", "slow"]},
+                    {"id": "V1", "statement": "never is outside the bracket", "type": "value", "cell": "never", "op": "gt", "x": 3.0},
+                    {"id": "V2", "statement": "slow between 0.6 and 0.8", "type": "value", "cell": "slow", "op": "between", "x": 0.6, "y": 0.8},
+                    {"id": "C1", "statement": "fast below slow", "type": "cmp", "a": "fast", "b": "slow", "op": "lt"},
+                    {"id": "C2", "statement": "wrong on purpose: slow below fast", "type": "cmp", "a": "slow", "b": "fast", "op": "lt"}]}
+
+
+class Bisect(unittest.TestCase):
+    def setUp(self):
+        self.d = Path(tempfile.mkdtemp()); self.scan = self.d / "bis.json"; self.scan.write_text(json.dumps(BIS))
+
+    def go(self, name, workers=1):
+        o = self.d / name; h = freeze(o, scan=str(self.scan), seeds=3, model="toy_decay.py")
+        sh("run", "--out", str(o), "--expect-freeze-sha256", h, "--workers", str(workers)); return o
+
+    def est(self, o):
+        return {r["point"]: r for r in csv.DictReader(open(o / "summary.tsv"), delimiter="\t")}
+
+    def test_crossings_are_found_within_the_final_bracket_and_a_cell_that_never_crosses_is_reported(self):
+        e = self.est(self.go("a")); w = 3.0 / 2 ** 8
+        import math
+        self.assertAlmostEqual(float(e["fast"]["estimate"]), math.log(2) / 3.0, delta=w + 0.005)
+        self.assertAlmostEqual(float(e["slow"]["estimate"]), math.log(2) / 1.0, delta=w + 0.005)
+        self.assertAlmostEqual(float(e["up"]["estimate"]), math.log(1.5) / 1.0, delta=w + 0.005)
+        self.assertEqual(e["never"]["status"], "not_in_bracket"); self.assertEqual(e["never"]["evaluations"], "1")
+        self.assertEqual(e["fast"]["evaluations"], "9")
+
+    def test_worker_count_does_not_change_the_bytes(self):
+        a, b = self.go("w1", 1), self.go("w2", 2)
+        self.assertEqual((a / "results.tsv").read_bytes(), (b / "results.tsv").read_bytes()); self.assertEqual((a / "summary.tsv").read_bytes(), (b / "summary.tsv").read_bytes())
+
+    def test_predictions_are_scored_mechanically_and_a_wrong_one_fails(self):
+        o = self.go("s"); out = sh("score", "--out", str(o)).stdout
+        v = {l.split("\t")[0]: l.split("\t")[2] for l in out.splitlines()[1:] if l}
+        self.assertEqual(v, {"O1": "PASS", "V1": "PASS", "V2": "PASS", "C1": "PASS", "C2": "FAIL"})
+
+    def test_check_reproduces_a_cell_and_unknown_cells_are_refused_at_freeze(self):
+        o = self.go("c"); r = sh("check", "--out", str(o), "--point", "slow"); self.assertIn("byte-identical True", r.stdout)
+        bad = dict(BIS); bad["predictions"] = [{"id": "X", "statement": "s", "type": "cmp", "a": "nope", "b": "fast", "op": "lt"}]
+        p = self.d / "bad.json"; p.write_text(json.dumps(bad))
+        r = sh("freeze", "--model", str(HERE / "toy_decay.py"), "--scan", str(p), "--seeds", "2", "--base-seed", "1", "--out", str(self.d / "badout"), ok=False)
+        self.assertNotEqual(r.returncode, 0); self.assertIn("is not a cell", r.stderr)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
