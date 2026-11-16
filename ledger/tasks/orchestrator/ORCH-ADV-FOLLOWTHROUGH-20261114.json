@@ -691,7 +691,7 @@
    "the two live LINCS queries S8/S9 (5 of 625 genes; presidio advises against)",
    "whether to start a Mirror session (RP-022, and an independent reader for the RP-001 replay)",
    "a weekly usage limit so resource discipline has a number",
-   "extension of the continuous-autonomy trial to 72 hours (report conditions in TRIAL_24H_REPORT.md)"
+   "RETIRED 2026-11-16: the extension of the continuous-autonomy trial to 72 hours is not a pending decision: CONTINUOUS.json and the roadmap hold the standing authorisation (reconciliation paragraph in TRIAL_24H_REPORT.md; operator INTEGRATION of 2026-11-16)"
   ]
  }
 }
