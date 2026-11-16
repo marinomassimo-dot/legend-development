@@ -1,0 +1,15 @@
+group	gene	log2FC_KO_v_WT	KO_mean_CPM	WT_mean_CPM
+progenitor	Nes	1.316	249.5	99.6
+progenitor	Sox2	0.511	254.5	178.2
+progenitor	Pax6	0.144	132.4	119.7
+progenitor	Mki67	0.391	37.8	28.6
+progenitor	Top2a	-0.501	67.9	96.5
+progenitor	Vim	0.864	3213.9	1764.7
+progenitor	Hes1	0.386	72.0	54.9
+neuronal maturation	Map2	-0.623	157.5	243.1
+neuronal maturation	Rbfox3	0.038	47.5	46.2
+neuronal maturation	Syt1	-0.502	48.1	68.6
+neuronal maturation	Snap25	-0.415	62.6	83.8
+neuronal maturation	Dcx	-0.274	528.5	639.2
+neuronal maturation	Stmn2	-0.411	443.7	590.3
+neuronal maturation	Tubb3	-0.231	1253.3	1471.3

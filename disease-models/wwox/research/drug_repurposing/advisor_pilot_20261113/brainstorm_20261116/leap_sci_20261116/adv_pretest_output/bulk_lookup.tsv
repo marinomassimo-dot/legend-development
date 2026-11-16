@@ -1,0 +1,461 @@
+hypothesis	gene	table	direction	values	flag
+H-ADV-1	Erbb4	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-1	Erbb4	P47T CTX	down	WT 2512; log2FC -0.24; FDR(no sex) 0.58; n 5 v 5	
+H-ADV-1	Erbb4	P47T HPC	up	WT 1566; log2FC 0.08; FDR(no sex) 0.73; n 5 v 5	
+H-ADV-1	Erbb4	P47T PFC	down	WT 2337; log2FC -0.13; FDR(no sex) 0.4; n 5 v 5	
+H-ADV-1	Erbb4	P47T CB	up	WT 719; log2FC 0.08; FDR(no sex) 0.56; n 4 v 3	
+H-ADV-1	Nrg1	neuron-deletion H_S	down	KO 2.44 v control 6.86 TPM; cLFC -0.937; n 3 v 2	background-confounded
+H-ADV-1	Nrg1	P47T CTX	down	WT 391; log2FC -0.17; FDR(no sex) 0.89; n 5 v 5	
+H-ADV-1	Nrg1	P47T HPC	up	WT 206; log2FC 0.21; FDR(no sex) 0.48; n 5 v 5	
+H-ADV-1	Nrg1	P47T PFC	down	WT 328; log2FC -0.37; FDR(no sex) 0.13; n 5 v 5	
+H-ADV-1	Nrg1	P47T CB	down	WT 426; log2FC -0.14; FDR(no sex) 0.66; n 4 v 3	
+H-ADV-1	Nrg2	neuron-deletion H_N	down	KO 2.07 v control 11.89 TPM; cLFC -2.000; n 2 v 2	background-confounded
+H-ADV-1	Nrg2	P47T CTX	down	WT 315; log2FC -0.05; FDR(no sex) 1; n 5 v 5	
+H-ADV-1	Nrg2	P47T HPC	down	WT 262; log2FC -0.27; FDR(no sex) 0.48; n 5 v 5	
+H-ADV-1	Nrg2	P47T PFC	down	WT 276; log2FC -0.01; FDR(no sex) 0.94; n 5 v 5	
+H-ADV-1	Nrg2	P47T CB	down	WT 1448; log2FC -0.33; FDR(no sex) 0.12; n 4 v 3	
+H-ADV-1	Nrg3	neuron-deletion H_N	up	KO 17.17 v control 10.65 TPM; cLFC 0.932; n 2 v 2	background-confounded
+H-ADV-1	Nrg3	P47T CTX	up	WT 1496; log2FC 0.21; FDR(no sex) 0.33; n 5 v 5	
+H-ADV-1	Nrg3	P47T HPC	up	WT 1564; log2FC 0.13; FDR(no sex) 0.67; n 5 v 5	
+H-ADV-1	Nrg3	P47T PFC	up	WT 1599; log2FC 0.26; FDR(no sex) 0.15; n 5 v 5	
+H-ADV-1	Nrg3	P47T CB	down	WT 511; log2FC -0.15; FDR(no sex) 0.33; n 4 v 3	
+H-ADV-1	Pvalb	neuron-deletion H_N	down	KO 11.57 v control 21.34 TPM; cLFC -0.587; n 2 v 2	
+H-ADV-1	Pvalb	neuron-deletion H_S	down	KO 6.48 v control 22.18 TPM; cLFC -1.312; n 3 v 2	
+H-ADV-1	Pvalb	neuron-deletion H_null	down	KO 8.47 v control 19.49 TPM; cLFC -0.940; n 2 v 3	
+H-ADV-1	Pvalb	P47T CTX	up	WT 2738; log2FC 0.13; FDR(no sex) 0.93; n 5 v 5	
+H-ADV-1	Pvalb	P47T HPC	down	WT 1506; log2FC -0.04; FDR(no sex) 0.98; n 5 v 5	
+H-ADV-1	Pvalb	P47T PFC	up	WT 2330; log2FC 0.00; FDR(no sex) 0.99; n 5 v 5	
+H-ADV-1	Pvalb	P47T CB	up	WT 32304; log2FC 0.32; FDR(no sex) 0.21; n 4 v 3	
+H-ADV-1	Gad1	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-1	Gad1	P47T CTX	up	WT 16283; log2FC 0.27; FDR(no sex) 0.088; n 5 v 5	
+H-ADV-1	Gad1	P47T HPC	up	WT 12204; log2FC 0.42; FDR(no sex) 0.32; n 5 v 5	
+H-ADV-1	Gad1	P47T PFC	up	WT 14840; log2FC 0.22; FDR(no sex) 0.18; n 5 v 5	
+H-ADV-1	Gad1	P47T CB	down	WT 29716; log2FC -0.14; FDR(no sex) 0.4; n 4 v 3	
+H-ADV-1	Gad2	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-1	Gad2	P47T CTX	up	WT 8909; log2FC 0.48; FDR(no sex) 0.17; n 5 v 5	
+H-ADV-1	Gad2	P47T HPC	up	WT 5623; log2FC 0.59; FDR(no sex) 0.32; n 5 v 5	
+H-ADV-1	Gad2	P47T PFC	up	WT 6568; log2FC 0.68; FDR(no sex) 0.039; n 5 v 5	
+H-ADV-1	Gad2	P47T CB	down	WT 6511; log2FC -0.25; FDR(no sex) 0.27; n 4 v 3	
+H-ADV-1	Slc32a1	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-1	Slc32a1	P47T CTX	up	WT 6343; log2FC 0.28; FDR(no sex) 0.26; n 5 v 5	
+H-ADV-1	Slc32a1	P47T HPC	up	WT 3919; log2FC 0.68; FDR(no sex) 0.3; n 5 v 5	
+H-ADV-1	Slc32a1	P47T PFC	up	WT 4773; log2FC 0.43; FDR(no sex) 0.037; n 5 v 5	
+H-ADV-1	Slc32a1	P47T CB	down	WT 8838; log2FC -0.09; FDR(no sex) 0.47; n 4 v 3	
+H-ADV-1	Sst	neuron-deletion C_S	up	KO 1048.39 v control 774.66 TPM; cLFC 0.639; n 3 v 4	
+H-ADV-1	Sst	P47T CTX	up	WT 10418; log2FC 0.84; FDR(no sex) 0.089; n 5 v 5	
+H-ADV-1	Sst	P47T HPC	up	WT 8594; log2FC 0.25; FDR(no sex) 0.51; n 5 v 5	
+H-ADV-1	Sst	P47T PFC	up	WT 8701; log2FC 0.94; FDR(no sex) 0.021; n 5 v 5	
+H-ADV-1	Sst	P47T CB	up	WT 148; log2FC 1.54; FDR(no sex) 0.16; n 4 v 3	
+H-ADV-1	Vip	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-1	Vip	P47T CTX	up	WT 1813; log2FC 0.23; FDR(no sex) 0.83; n 5 v 5	
+H-ADV-1	Vip	P47T HPC	up	WT 905; log2FC 0.23; FDR(no sex) 0.62; n 5 v 5	
+H-ADV-1	Vip	P47T PFC	down	WT 1983; log2FC -0.12; FDR(no sex) 0.41; n 5 v 5	
+H-ADV-1	Lamp5	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-1	Lamp5	P47T CTX	down	WT 5923; log2FC -0.65; FDR(no sex) 0.048; n 5 v 5	
+H-ADV-1	Lamp5	P47T HPC	down	WT 1608; log2FC -0.40; FDR(no sex) 0.39; n 5 v 5	
+H-ADV-1	Lamp5	P47T PFC	down	WT 7049; log2FC -0.86; FDR(no sex) 0.013; n 5 v 5	
+H-ADV-1	Lamp5	P47T CB	up	WT 94; log2FC 0.59; FDR(no sex) 0.79; n 4 v 3	
+H-ADV-1	Npy	neuron-deletion C_S	up	KO 926.35 v control 474.79 TPM; cLFC 1.166; n 3 v 4	
+H-ADV-1	Npy	neuron-deletion H_N	up	KO 223.99 v control 138.49 TPM; cLFC 0.960; n 2 v 2	background-confounded
+H-ADV-1	Npy	neuron-deletion H_S	up	KO 536.70 v control 93.69 TPM; cLFC 2.901; n 3 v 2	background-confounded
+H-ADV-1	Npy	neuron-deletion H_null	up	KO 137.49 v control 83.39 TPM; cLFC 0.934; n 2 v 3	background-confounded
+H-ADV-1	Npy	P47T CTX	up	WT 3531; log2FC 1.59; FDR(no sex) 0.056; n 5 v 5	
+H-ADV-1	Npy	P47T HPC	up	WT 2054; log2FC 1.80; FDR(no sex) 0.32; n 5 v 5	
+H-ADV-1	Npy	P47T PFC	up	WT 3430; log2FC 1.12; FDR(no sex) 0.015; n 5 v 5	
+H-ADV-1	Npy	P47T CB	up	WT 439; log2FC 0.52; FDR(no sex) 0.12; n 4 v 3	
+H-ADV-1	Cck	neuron-deletion H_N	down	KO 311.32 v control 722.61 TPM; cLFC -0.945; n 2 v 2	
+H-ADV-1	Cck	neuron-deletion H_S	down	KO 240.67 v control 580.58 TPM; cLFC -0.879; n 3 v 2	
+H-ADV-1	Cck	neuron-deletion H_null	down	KO 235.82 v control 427.98 TPM; cLFC -0.642; n 2 v 3	
+H-ADV-1	Cck	P47T CTX	up	WT 11928; log2FC 0.90; FDR(no sex) 0.029; n 5 v 5	
+H-ADV-1	Cck	P47T HPC	up	WT 15017; log2FC 0.02; FDR(no sex) 0.99; n 5 v 5	
+H-ADV-1	Cck	P47T PFC	up	WT 17831; log2FC 0.70; FDR(no sex) 0.032; n 5 v 5	
+H-ADV-1	Cck	P47T CB	up	WT 1384; log2FC 0.24; FDR(no sex) 0.57; n 4 v 3	
+H-ADV-1	Snap25	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-1	Snap25	P47T CTX	up	WT 95424; log2FC 0.17; FDR(no sex) 0.51; n 5 v 5	
+H-ADV-1	Snap25	P47T HPC	down	WT 80537; log2FC -0.01; FDR(no sex) 0.98; n 5 v 5	
+H-ADV-1	Snap25	P47T PFC	up	WT 110961; log2FC 0.01; FDR(no sex) 0.88; n 5 v 5	
+H-ADV-1	Snap25	P47T CB	down	WT 113289; log2FC -0.13; FDR(no sex) 0.44; n 4 v 3	
+H-ADV-1	Slc17a7	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-1	Slc17a7	P47T CTX	up	WT 60497; log2FC 0.66; FDR(no sex) 0.046; n 5 v 5	
+H-ADV-1	Slc17a7	P47T HPC	up	WT 79398; log2FC 0.21; FDR(no sex) 0.51; n 5 v 5	
+H-ADV-1	Slc17a7	P47T PFC	up	WT 79081; log2FC 0.52; FDR(no sex) 0.016; n 5 v 5	
+H-ADV-1	Slc17a7	P47T CB	down	WT 28219; log2FC -0.17; FDR(no sex) 0.21; n 4 v 3	
+H-ADV-1	Wwox	neuron-deletion H_N	down	KO 0.21 v control 3.55 TPM; cLFC -2.237; n 2 v 2	
+H-ADV-1	Wwox	neuron-deletion H_S	down	KO 0.49 v control 3.37 TPM; cLFC -1.577; n 3 v 2	
+H-ADV-1	Wwox	neuron-deletion H_null	down	KO 0.33 v control 3.89 TPM; cLFC -2.185; n 2 v 3	
+H-ADV-1	Wwox	P47T CTX	up	WT 864; log2FC 0.03; FDR(no sex) 0.99; n 5 v 5	
+H-ADV-1	Wwox	P47T HPC	down	WT 672; log2FC -0.16; FDR(no sex) 0.49; n 5 v 5	
+H-ADV-1	Wwox	P47T PFC	down	WT 843; log2FC -0.13; FDR(no sex) 0.4; n 5 v 5	
+H-ADV-1	Wwox	P47T CB	down	WT 1316; log2FC -0.12; FDR(no sex) 0.3; n 4 v 3	
+H-ADV-3	Plp1	neuron-deletion C_S	down	KO 170.96 v control 346.99 TPM; cLFC -0.817; n 3 v 4	
+H-ADV-3	Plp1	neuron-deletion H_N	down	KO 100.73 v control 365.17 TPM; cLFC -1.585; n 2 v 2	background-confounded
+H-ADV-3	Plp1	neuron-deletion H_S	down	KO 66.36 v control 398.65 TPM; cLFC -2.189; n 3 v 2	background-confounded
+H-ADV-3	Plp1	neuron-deletion H_null	down	KO 164.16 v control 655.44 TPM; cLFC -1.778; n 2 v 3	background-confounded
+H-ADV-3	Plp1	P47T CTX	down	WT 61106; log2FC -0.51; FDR(no sex) 0.19; n 5 v 5	
+H-ADV-3	Plp1	P47T HPC	down	WT 50520; log2FC -0.33; FDR(no sex) 0.62; n 5 v 5	
+H-ADV-3	Plp1	P47T PFC	down	WT 36786; log2FC -0.60; FDR(no sex) 0.12; n 5 v 5	
+H-ADV-3	Plp1	P47T CB	up	WT 47060; log2FC 0.35; FDR(no sex) 0.3; n 4 v 3	
+H-ADV-3	Mbp	neuron-deletion C_S	down	KO 1752.07 v control 4000.26 TPM; cLFC -0.988; n 3 v 4	
+H-ADV-3	Mbp	neuron-deletion H_N	down	KO 1224.82 v control 3118.22 TPM; cLFC -1.080; n 2 v 2	
+H-ADV-3	Mbp	neuron-deletion H_S	down	KO 745.47 v control 3294.14 TPM; cLFC -1.754; n 3 v 2	
+H-ADV-3	Mbp	neuron-deletion H_null	down	KO 684.64 v control 2767.34 TPM; cLFC -1.798; n 2 v 3	
+H-ADV-3	Mbp	P47T CTX	down	WT 149026; log2FC -0.71; FDR(no sex) 0.26; n 5 v 5	
+H-ADV-3	Mbp	P47T HPC	down	WT 123324; log2FC -0.36; FDR(no sex) 0.48; n 5 v 5	
+H-ADV-3	Mbp	P47T PFC	down	WT 89352; log2FC -0.65; FDR(no sex) 0.2; n 5 v 5	
+H-ADV-3	Mbp	P47T CB	up	WT 105603; log2FC 0.79; FDR(no sex) 0.13; n 4 v 3	
+H-ADV-3	Mobp	neuron-deletion C_S	down	KO 196.52 v control 424.77 TPM; cLFC -0.908; n 3 v 4	
+H-ADV-3	Mobp	neuron-deletion H_N	down	KO 121.78 v control 357.98 TPM; cLFC -1.284; n 2 v 2	
+H-ADV-3	Mobp	neuron-deletion H_S	down	KO 65.50 v control 393.49 TPM; cLFC -2.189; n 3 v 2	
+H-ADV-3	Mobp	neuron-deletion H_null	down	KO 88.66 v control 406.77 TPM; cLFC -1.975; n 2 v 3	
+H-ADV-3	Mobp	P47T CTX	down	WT 32490; log2FC -0.64; FDR(no sex) 0.34; n 5 v 5	
+H-ADV-3	Mobp	P47T HPC	down	WT 27151; log2FC -0.24; FDR(no sex) 0.74; n 5 v 5	
+H-ADV-3	Mobp	P47T PFC	down	WT 18591; log2FC -0.69; FDR(no sex) 0.27; n 5 v 5	
+H-ADV-3	Mobp	P47T CB	up	WT 20612; log2FC 0.88; FDR(no sex) 0.12; n 4 v 3	
+H-ADV-3	Mog	neuron-deletion H_N	down	KO 28.11 v control 61.57 TPM; cLFC -0.849; n 2 v 2	
+H-ADV-3	Mog	neuron-deletion H_S	down	KO 14.99 v control 74.82 TPM; cLFC -1.892; n 3 v 2	
+H-ADV-3	Mog	neuron-deletion H_null	down	KO 14.21 v control 52.45 TPM; cLFC -1.632; n 2 v 3	
+H-ADV-3	Mog	P47T CTX	down	WT 2887; log2FC -0.39; FDR(no sex) 0.22; n 5 v 5	
+H-ADV-3	Mog	P47T HPC	down	WT 2372; log2FC -0.34; FDR(no sex) 0.76; n 5 v 5	
+H-ADV-3	Mog	P47T PFC	down	WT 1618; log2FC -0.68; FDR(no sex) 0.11; n 5 v 5	
+H-ADV-3	Mog	P47T CB	up	WT 2091; log2FC 0.55; FDR(no sex) 0.24; n 4 v 3	
+H-ADV-3	Mag	neuron-deletion H_N	down	KO 194.82 v control 372.46 TPM; cLFC -0.665; n 2 v 2	
+H-ADV-3	Mag	neuron-deletion H_S	down	KO 135.55 v control 403.12 TPM; cLFC -1.180; n 3 v 2	
+H-ADV-3	Mag	neuron-deletion H_null	down	KO 90.37 v control 318.71 TPM; cLFC -1.597; n 2 v 3	
+H-ADV-3	Mag	P47T CTX	down	WT 7325; log2FC -0.26; FDR(no sex) 0.69; n 5 v 5	
+H-ADV-3	Mag	P47T HPC	down	WT 6280; log2FC -0.16; FDR(no sex) 0.79; n 5 v 5	
+H-ADV-3	Mag	P47T PFC	down	WT 4970; log2FC -0.41; FDR(no sex) 0.38; n 5 v 5	
+H-ADV-3	Mag	P47T CB	up	WT 6139; log2FC 0.42; FDR(no sex) 0.23; n 4 v 3	
+H-ADV-3	Cnp	neuron-deletion H_N	down	KO 123.49 v control 508.13 TPM; cLFC -1.768; n 2 v 2	background-confounded
+H-ADV-3	Cnp	neuron-deletion H_S	down	KO 94.94 v control 437.34 TPM; cLFC -1.809; n 3 v 2	background-confounded
+H-ADV-3	Cnp	neuron-deletion H_null	down	KO 73.06 v control 234.04 TPM; cLFC -1.457; n 2 v 3	background-confounded
+H-ADV-3	Cnp	P47T CTX	down	WT 15467; log2FC -0.44; FDR(no sex) 0.22; n 5 v 5	
+H-ADV-3	Cnp	P47T HPC	down	WT 13612; log2FC -0.33; FDR(no sex) 0.64; n 5 v 5	
+H-ADV-3	Cnp	P47T PFC	down	WT 10123; log2FC -0.52; FDR(no sex) 0.13; n 5 v 5	
+H-ADV-3	Cnp	P47T CB	up	WT 14453; log2FC 0.29; FDR(no sex) 0.21; n 4 v 3	
+H-ADV-3	Olig1	neuron-deletion C_S	down	KO 74.67 v control 134.99 TPM; cLFC -0.648; n 3 v 4	
+H-ADV-3	Olig1	neuron-deletion H_N	down	KO 43.24 v control 123.59 TPM; cLFC -1.236; n 2 v 2	
+H-ADV-3	Olig1	neuron-deletion H_S	down	KO 47.80 v control 109.55 TPM; cLFC -0.799; n 3 v 2	
+H-ADV-3	Olig1	neuron-deletion H_null	down	KO 41.41 v control 79.88 TPM; cLFC -0.723; n 2 v 3	
+H-ADV-3	Olig1	P47T CTX	down	WT 5696; log2FC -0.20; FDR(no sex) 0.47; n 5 v 5	
+H-ADV-3	Olig1	P47T HPC	down	WT 6087; log2FC -0.17; FDR(no sex) 0.67; n 5 v 5	
+H-ADV-3	Olig1	P47T PFC	down	WT 4639; log2FC -0.02; FDR(no sex) 0.94; n 5 v 5	
+H-ADV-3	Olig1	P47T CB	up	WT 2275; log2FC 0.27; FDR(no sex) 0.23; n 4 v 3	
+H-ADV-3	Olig2	neuron-deletion H_N	down	KO 10.31 v control 22.65 TPM; cLFC -0.830; n 2 v 2	
+H-ADV-3	Olig2	P47T CTX	down	WT 1209; log2FC -0.27; FDR(no sex) 0.5; n 5 v 5	
+H-ADV-3	Olig2	P47T HPC	down	WT 1172; log2FC -0.24; FDR(no sex) 0.42; n 5 v 5	
+H-ADV-3	Olig2	P47T PFC	down	WT 968; log2FC -0.09; FDR(no sex) 0.82; n 5 v 5	
+H-ADV-3	Olig2	P47T CB	up	WT 544; log2FC 0.02; FDR(no sex) 0.91; n 4 v 3	
+H-ADV-3	Sox10	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-3	Sox10	P47T CTX	down	WT 1909; log2FC -0.39; FDR(no sex) 0.6; n 5 v 5	
+H-ADV-3	Sox10	P47T HPC	down	WT 1717; log2FC -0.17; FDR(no sex) 0.57; n 5 v 5	
+H-ADV-3	Sox10	P47T PFC	down	WT 1408; log2FC -0.14; FDR(no sex) 0.77; n 5 v 5	
+H-ADV-3	Sox10	P47T CB	up	WT 1020; log2FC 0.13; FDR(no sex) 0.67; n 4 v 3	
+H-ADV-3	Pdgfra	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-3	Pdgfra	P47T CTX	down	WT 2465; log2FC -0.27; FDR(no sex) 0.33; n 5 v 5	
+H-ADV-3	Pdgfra	P47T HPC	down	WT 2372; log2FC -0.07; FDR(no sex) 0.83; n 5 v 5	
+H-ADV-3	Pdgfra	P47T PFC	up	WT 1743; log2FC 0.03; FDR(no sex) 0.9; n 5 v 5	
+H-ADV-3	Pdgfra	P47T CB	up	WT 771; log2FC 0.02; FDR(no sex) 0.58; n 4 v 3	
+H-ADV-3	Enpp6	neuron-deletion C_S	down	KO 3.87 v control 10.67 TPM; cLFC -1.153; n 3 v 4	
+H-ADV-3	Enpp6	neuron-deletion H_N	down	KO 1.81 v control 10.53 TPM; cLFC -1.991; n 2 v 2	
+H-ADV-3	Enpp6	neuron-deletion H_S	down	KO 3.24 v control 8.20 TPM; cLFC -0.827; n 3 v 2	
+H-ADV-3	Enpp6	neuron-deletion H_null	down	KO 3.42 v control 7.95 TPM; cLFC -0.891; n 2 v 3	
+H-ADV-3	Enpp6	P47T CTX	down	WT 364; log2FC -0.50; FDR(no sex) 0.26; n 5 v 5	
+H-ADV-3	Enpp6	P47T HPC	down	WT 256; log2FC -0.06; FDR(no sex) 1; n 5 v 5	
+H-ADV-3	Enpp6	P47T PFC	down	WT 210; log2FC -0.22; FDR(no sex) 0.45; n 5 v 5	
+H-ADV-3	Enpp6	P47T CB	up	WT 319; log2FC 0.26; FDR(no sex) 0.55; n 4 v 3	
+H-ADV-3	Cldn11	neuron-deletion C_S	down	KO 112.42 v control 222.93 TPM; cLFC -0.782; n 3 v 4	
+H-ADV-3	Cldn11	neuron-deletion H_N	down	KO 64.47 v control 147.52 TPM; cLFC -0.920; n 2 v 2	
+H-ADV-3	Cldn11	neuron-deletion H_S	down	KO 43.15 v control 172.27 TPM; cLFC -1.596; n 3 v 2	
+H-ADV-3	Cldn11	neuron-deletion H_null	down	KO 42.12 v control 153.93 TPM; cLFC -1.641; n 2 v 3	
+H-ADV-3	Cldn11	P47T CTX	down	WT 5839; log2FC -0.45; FDR(no sex) 0.19; n 5 v 5	
+H-ADV-3	Cldn11	P47T HPC	down	WT 5234; log2FC -0.16; FDR(no sex) 0.9; n 5 v 5	
+H-ADV-3	Cldn11	P47T PFC	down	WT 3551; log2FC -0.72; FDR(no sex) 0.033; n 5 v 5	
+H-ADV-3	Cldn11	P47T CB	up	WT 3232; log2FC 0.42; FDR(no sex) 0.18; n 4 v 3	
+H-ADV-3	Cntnap1	neuron-deletion H_S	down	KO 23.70 v control 50.58 TPM; cLFC -0.689; n 3 v 2	
+H-ADV-3	Cntnap1	P47T CTX	down	WT 12838; log2FC -0.15; FDR(no sex) 0.89; n 5 v 5	
+H-ADV-3	Cntnap1	P47T HPC	down	WT 12281; log2FC -0.29; FDR(no sex) 0.55; n 5 v 5	
+H-ADV-3	Cntnap1	P47T PFC	up	WT 13256; log2FC 0.06; FDR(no sex) 0.91; n 5 v 5	
+H-ADV-3	Cntnap1	P47T CB	down	WT 16196; log2FC -0.28; FDR(no sex) 0.18; n 4 v 3	
+H-ADV-3	Cntnap2	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-3	Cntnap2	P47T CTX	down	WT 4862; log2FC -0.15; FDR(no sex) 0.77; n 5 v 5	
+H-ADV-3	Cntnap2	P47T HPC	down	WT 4061; log2FC -0.28; FDR(no sex) 0.51; n 5 v 5	
+H-ADV-3	Cntnap2	P47T PFC	down	WT 4942; log2FC -0.03; FDR(no sex) 0.65; n 5 v 5	
+H-ADV-3	Cntnap2	P47T CB	down	WT 2621; log2FC -0.14; FDR(no sex) 0.4; n 4 v 3	
+H-ADV-3	Nfasc	neuron-deletion C_S	down	KO 62.53 v control 126.14 TPM; cLFC -0.804; n 3 v 4	
+H-ADV-3	Nfasc	neuron-deletion H_N	down	KO 43.23 v control 82.51 TPM; cLFC -0.656; n 2 v 2	
+H-ADV-3	Nfasc	neuron-deletion H_S	down	KO 43.58 v control 107.88 TPM; cLFC -0.909; n 3 v 2	
+H-ADV-3	Nfasc	neuron-deletion H_null	down	KO 27.27 v control 67.07 TPM; cLFC -1.067; n 2 v 3	
+H-ADV-3	Nfasc	P47T CTX	up	WT 8640; log2FC 0.08; FDR(no sex) 0.81; n 5 v 5	
+H-ADV-3	Nfasc	P47T HPC	up	WT 8025; log2FC 0.22; FDR(no sex) 0.48; n 5 v 5	
+H-ADV-3	Nfasc	P47T PFC	up	WT 8382; log2FC 0.25; FDR(no sex) 0.17; n 5 v 5	
+H-ADV-3	Nfasc	P47T CB	down	WT 12131; log2FC -0.39; FDR(no sex) 0.17; n 4 v 3	
+H-ADV-2	Hk1	neuron-deletion H_N	up	KO 164.88 v control 130.86 TPM; cLFC 0.600; n 2 v 2	
+H-ADV-2	Hk1	P47T CTX	up	WT 17382; log2FC 0.44; FDR(no sex) 0.031; n 5 v 5	
+H-ADV-2	Hk1	P47T HPC	up	WT 21104; log2FC 0.17; FDR(no sex) 0.59; n 5 v 5	
+H-ADV-2	Hk1	P47T PFC	up	WT 19745; log2FC 0.42; FDR(no sex) 0.036; n 5 v 5	
+H-ADV-2	Hk1	P47T CB	down	WT 15092; log2FC -0.17; FDR(no sex) 0.36; n 4 v 3	
+H-ADV-2	Hk2	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-2	Hk2	P47T CTX	up	WT 133; log2FC 0.45; FDR(no sex) 0.31; n 5 v 5	
+H-ADV-2	Hk2	P47T HPC	up	WT 189; log2FC 0.82; FDR(no sex) 0.4; n 5 v 5	
+H-ADV-2	Hk2	P47T PFC	up	WT 117; log2FC 0.67; FDR(no sex) 0.004; n 5 v 5	
+H-ADV-2	Hk2	P47T CB	down	WT 652; log2FC -0.19; FDR(no sex) 0.36; n 4 v 3	
+H-ADV-2	Gpi1	neuron-deletion C_S	up	KO 1587.54 v control 1207.29 TPM; cLFC 0.597; n 3 v 4	
+H-ADV-2	Gpi1	neuron-deletion H_N	up	KO 1008.36 v control 727.34 TPM; cLFC 0.739; n 2 v 2	
+H-ADV-2	Gpi1	P47T CTX	up	WT 24020; log2FC 0.35; FDR(no sex) 0.032; n 5 v 5	
+H-ADV-2	Gpi1	P47T HPC	up	WT 28439; log2FC 0.04; FDR(no sex) 0.79; n 5 v 5	
+H-ADV-2	Gpi1	P47T PFC	up	WT 22692; log2FC 0.32; FDR(no sex) 0.0093; n 5 v 5	
+H-ADV-2	Gpi1	P47T CB	down	WT 20645; log2FC -0.17; FDR(no sex) 0.24; n 4 v 3	
+H-ADV-2	Pfkm	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-2	Pfkm	P47T CTX	up	WT 17121; log2FC 0.28; FDR(no sex) 0.16; n 5 v 5	
+H-ADV-2	Pfkm	P47T HPC	up	WT 16604; log2FC 0.25; FDR(no sex) 0.31; n 5 v 5	
+H-ADV-2	Pfkm	P47T PFC	up	WT 17465; log2FC 0.15; FDR(no sex) 0.15; n 5 v 5	
+H-ADV-2	Pfkm	P47T CB	down	WT 23745; log2FC -0.06; FDR(no sex) 0.64; n 4 v 3	
+H-ADV-2	Pfkl	neuron-deletion C_S	down	KO 56.88 v control 100.74 TPM; cLFC -0.617; n 3 v 4	
+H-ADV-2	Pfkl	neuron-deletion H_S	down	KO 37.29 v control 77.98 TPM; cLFC -0.665; n 3 v 2	background-confounded
+H-ADV-2	Pfkl	neuron-deletion H_null	down	KO 22.44 v control 39.91 TPM; cLFC -0.601; n 2 v 3	background-confounded
+H-ADV-2	Pfkl	P47T CTX	up	WT 7636; log2FC 0.48; FDR(no sex) 0.032; n 5 v 5	
+H-ADV-2	Pfkl	P47T HPC	up	WT 13445; log2FC 0.01; FDR(no sex) 0.99; n 5 v 5	
+H-ADV-2	Pfkl	P47T PFC	up	WT 8404; log2FC 0.35; FDR(no sex) 0.015; n 5 v 5	
+H-ADV-2	Pfkl	P47T CB	down	WT 4632; log2FC -0.13; FDR(no sex) 0.17; n 4 v 3	
+H-ADV-2	Pgk1	neuron-deletion H_N	down	KO 78.10 v control 176.18 TPM; cLFC -0.900; n 2 v 2	background-confounded
+H-ADV-2	Pgk1	neuron-deletion H_S	down	KO 76.21 v control 154.16 TPM; cLFC -0.622; n 3 v 2	background-confounded
+H-ADV-2	Pgk1	P47T CTX	up	WT 15171; log2FC 0.46; FDR(no sex) 0.3; n 5 v 5	
+H-ADV-2	Pgk1	P47T HPC	up	WT 16067; log2FC 0.26; FDR(no sex) 0.33; n 5 v 5	
+H-ADV-2	Pgk1	P47T PFC	up	WT 14371; log2FC 0.23; FDR(no sex) 0.072; n 5 v 5	
+H-ADV-2	Pgk1	P47T CB	up	WT 12452; log2FC 0.22; FDR(no sex) 0.28; n 4 v 3	
+H-ADV-2	Pkm	neuron-deletion H_N	up	KO 1053.98 v control 580.74 TPM; cLFC 1.128; n 2 v 2	
+H-ADV-2	Pkm	P47T CTX	up	WT 44051; log2FC 0.34; FDR(no sex) 0.0093; n 5 v 5	
+H-ADV-2	Pkm	P47T HPC	up	WT 50639; log2FC 0.15; FDR(no sex) 0.36; n 5 v 5	
+H-ADV-2	Pkm	P47T PFC	up	WT 44539; log2FC 0.22; FDR(no sex) 0.03; n 5 v 5	
+H-ADV-2	Pkm	P47T CB	down	WT 44954; log2FC -0.01; FDR(no sex) 0.89; n 4 v 3	
+H-ADV-2	Ldha	neuron-deletion H_N	down	KO 112.06 v control 269.56 TPM; cLFC -0.994; n 2 v 2	background-confounded
+H-ADV-2	Ldha	P47T CTX	up	WT 11917; log2FC 0.64; FDR(no sex) 0.44; n 5 v 5	
+H-ADV-2	Ldha	P47T HPC	up	WT 11334; log2FC 0.52; FDR(no sex) 0.4; n 5 v 5	
+H-ADV-2	Ldha	P47T PFC	up	WT 11791; log2FC 0.41; FDR(no sex) 0.1; n 5 v 5	
+H-ADV-2	Ldha	P47T CB	up	WT 5531; log2FC 0.31; FDR(no sex) 0.23; n 4 v 3	
+H-ADV-2	Ldhb	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-2	Ldhb	P47T CTX	down	WT 18359; log2FC -0.16; FDR(no sex) 0.43; n 5 v 5	
+H-ADV-2	Ldhb	P47T HPC	down	WT 14749; log2FC -0.14; FDR(no sex) 0.62; n 5 v 5	
+H-ADV-2	Ldhb	P47T PFC	down	WT 15483; log2FC -0.23; FDR(no sex) 0.15; n 5 v 5	
+H-ADV-2	Ldhb	P47T CB	up	WT 20778; log2FC 0.33; FDR(no sex) 0.17; n 4 v 3	
+H-ADV-2	Slc2a1	neuron-deletion H_null	down	KO 21.34 v control 44.12 TPM; cLFC -0.815; n 2 v 3	
+H-ADV-2	Slc2a1	P47T CTX	up	WT 5478; log2FC 0.23; FDR(no sex) 0.55; n 5 v 5	
+H-ADV-2	Slc2a1	P47T HPC	up	WT 5319; log2FC 0.18; FDR(no sex) 0.54; n 5 v 5	
+H-ADV-2	Slc2a1	P47T PFC	up	WT 4418; log2FC 0.27; FDR(no sex) 0.16; n 5 v 5	
+H-ADV-2	Slc2a1	P47T CB	down	WT 5631; log2FC -0.17; FDR(no sex) 0.44; n 4 v 3	
+H-ADV-2	Slc2a3	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-2	Slc2a3	P47T CTX	up	WT 5366; log2FC 0.51; FDR(no sex) 0.13; n 5 v 5	
+H-ADV-2	Slc2a3	P47T HPC	up	WT 4916; log2FC 0.29; FDR(no sex) 0.53; n 5 v 5	
+H-ADV-2	Slc2a3	P47T PFC	up	WT 5299; log2FC 0.44; FDR(no sex) 0.19; n 5 v 5	
+H-ADV-2	Slc2a3	P47T CB	down	WT 5917; log2FC -0.19; FDR(no sex) 0.14; n 4 v 3	
+H-ADV-2	Slc16a1	neuron-deletion H_N	down	KO 10.52 v control 27.01 TPM; cLFC -1.052; n 2 v 2	
+H-ADV-2	Slc16a1	P47T CTX	up	WT 2535; log2FC 0.38; FDR(no sex) 0.43; n 5 v 5	
+H-ADV-2	Slc16a1	P47T HPC	up	WT 3152; log2FC 0.23; FDR(no sex) 0.58; n 5 v 5	
+H-ADV-2	Slc16a1	P47T PFC	up	WT 2158; log2FC 0.24; FDR(no sex) 0.39; n 5 v 5	
+H-ADV-2	Slc16a1	P47T CB	up	WT 2739; log2FC 0.14; FDR(no sex) 0.27; n 4 v 3	
+H-ADV-2	Slc16a7	neuron-deletion H_S	down	KO 4.39 v control 9.27 TPM; cLFC -0.610; n 3 v 2	
+H-ADV-2	Slc16a7	P47T CTX	up	WT 1128; log2FC 0.09; FDR(no sex) 0.74; n 5 v 5	
+H-ADV-2	Slc16a7	P47T HPC	up	WT 901; log2FC 0.03; FDR(no sex) 0.94; n 5 v 5	
+H-ADV-2	Slc16a7	P47T PFC	up	WT 1142; log2FC 0.07; FDR(no sex) 0.75; n 5 v 5	
+H-ADV-2	Slc16a7	P47T CB	down	WT 759; log2FC -0.17; FDR(no sex) 0.38; n 4 v 3	
+H-ADV-2	Slc16a3	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-2	Slc16a3	P47T CTX	up	WT 179; log2FC 0.93; FDR(no sex) 0.14; n 5 v 5	
+H-ADV-2	Slc16a3	P47T HPC	up	WT 91; log2FC 1.12; FDR(no sex) 0.34; n 5 v 5	
+H-ADV-2	Slc16a3	P47T PFC	up	WT 116; log2FC 0.71; FDR(no sex) 0.098; n 5 v 5	
+H-ADV-2	Bdh1	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-2	Bdh1	P47T CTX	up	WT 2028; log2FC 0.08; FDR(no sex) 0.94; n 5 v 5	
+H-ADV-2	Bdh1	P47T HPC	down	WT 2233; log2FC -0.00; FDR(no sex) 0.91; n 5 v 5	
+H-ADV-2	Bdh1	P47T PFC	down	WT 1840; log2FC -0.06; FDR(no sex) 0.35; n 5 v 5	
+H-ADV-2	Bdh1	P47T CB	down	WT 2482; log2FC -0.01; FDR(no sex) 0.98; n 4 v 3	
+H-ADV-2	Oxct1	neuron-deletion H_N	down	KO 116.28 v control 284.87 TPM; cLFC -1.021; n 2 v 2	
+H-ADV-2	Oxct1	P47T CTX	down	WT 14525; log2FC -0.10; FDR(no sex) 0.53; n 5 v 5	
+H-ADV-2	Oxct1	P47T HPC	down	WT 14272; log2FC -0.12; FDR(no sex) 0.46; n 5 v 5	
+H-ADV-2	Oxct1	P47T PFC	down	WT 12762; log2FC -0.12; FDR(no sex) 0.16; n 5 v 5	
+H-ADV-2	Oxct1	P47T CB	up	WT 12839; log2FC 0.25; FDR(no sex) 0.14; n 4 v 3	
+H-ADV-2	Acat1	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-2	Acat1	P47T CTX	up	WT 4366; log2FC 0.08; FDR(no sex) 1; n 5 v 5	
+H-ADV-2	Acat1	P47T HPC	up	WT 4524; log2FC 0.07; FDR(no sex) 0.55; n 5 v 5	
+H-ADV-2	Acat1	P47T PFC	up	WT 3535; log2FC 0.02; FDR(no sex) 0.9; n 5 v 5	
+H-ADV-2	Acat1	P47T CB	up	WT 4311; log2FC 0.27; FDR(no sex) 0.15; n 4 v 3	
+H-ADV-2	Hmgcs2	neuron-deletion C_S	up	KO 17.42 v control 7.29 TPM; cLFC 1.405; n 3 v 4	
+H-ADV-2	Hmgcs2	P47T CTX	down	WT 584; log2FC -0.40; FDR(no sex) 0.25; n 5 v 5	
+H-ADV-2	Hmgcs2	P47T HPC	down	WT 641; log2FC -0.13; FDR(no sex) 0.99; n 5 v 5	
+H-ADV-2	Hmgcs2	P47T PFC	down	WT 443; log2FC -0.33; FDR(no sex) 0.72; n 5 v 5	
+H-ADV-2	Hmgcs2	P47T CB	up	WT 283; log2FC 0.89; FDR(no sex) 0.11; n 4 v 3	
+H-ADV-2	Pdk1	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-2	Pdk1	P47T CTX	down	WT 2342; log2FC -0.05; FDR(no sex) 0.92; n 5 v 5	
+H-ADV-2	Pdk1	P47T HPC	down	WT 1983; log2FC -0.10; FDR(no sex) 0.79; n 5 v 5	
+H-ADV-2	Pdk1	P47T PFC	down	WT 2222; log2FC -0.03; FDR(no sex) 0.91; n 5 v 5	
+H-ADV-2	Pdk1	P47T CB	up	WT 1038; log2FC 0.09; FDR(no sex) 0.34; n 4 v 3	
+H-ADV-2	Pdk2	neuron-deletion H_N	up	KO 109.44 v control 81.31 TPM; cLFC 0.695; n 2 v 2	
+H-ADV-2	Pdk2	neuron-deletion H_S	up	KO 109.62 v control 83.27 TPM; cLFC 0.784; n 3 v 2	
+H-ADV-2	Pdk2	P47T CTX	up	WT 5433; log2FC 0.14; FDR(no sex) 0.71; n 5 v 5	
+H-ADV-2	Pdk2	P47T HPC	up	WT 6265; log2FC 0.11; FDR(no sex) 0.65; n 5 v 5	
+H-ADV-2	Pdk2	P47T PFC	up	WT 4809; log2FC 0.17; FDR(no sex) 0.31; n 5 v 5	
+H-ADV-2	Pdk2	P47T CB	up	WT 11415; log2FC 0.02; FDR(no sex) 0.88; n 4 v 3	
+H-ADV-2	Pdk3	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-2	Pdk3	P47T CTX	up	WT 948; log2FC 0.06; FDR(no sex) 0.76; n 5 v 5	
+H-ADV-2	Pdk3	P47T HPC	up	WT 1068; log2FC 0.09; FDR(no sex) 0.65; n 5 v 5	
+H-ADV-2	Pdk3	P47T PFC	up	WT 849; log2FC 0.14; FDR(no sex) 0.22; n 5 v 5	
+H-ADV-2	Pdk3	P47T CB	down	WT 928; log2FC -0.10; FDR(no sex) 0.18; n 4 v 3	
+H-ADV-2	Pdk4	neuron-deletion H_null	down	KO 3.21 v control 7.30 TPM; cLFC -0.856; n 2 v 3	background-confounded
+H-ADV-2	Pdk4	P47T CTX	down	WT 879; log2FC -0.63; FDR(no sex) 0.27; n 5 v 5	
+H-ADV-2	Pdk4	P47T HPC	down	WT 767; log2FC -0.35; FDR(no sex) 0.56; n 5 v 5	
+H-ADV-2	Pdk4	P47T PFC	down	WT 694; log2FC -0.42; FDR(no sex) 0.069; n 5 v 5	
+H-ADV-2	Pdk4	P47T CB	up	WT 490; log2FC 0.22; FDR(no sex) 0.45; n 4 v 3	
+H-ADV-2	Pdha1	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-2	Pdha1	P47T CTX	up	WT 9731; log2FC 0.01; FDR(no sex) 0.89; n 5 v 5	
+H-ADV-2	Pdha1	P47T HPC	up	WT 10422; log2FC 0.04; FDR(no sex) 0.52; n 5 v 5	
+H-ADV-2	Pdha1	P47T PFC	down	WT 9292; log2FC -0.07; FDR(no sex) 0.085; n 5 v 5	
+H-ADV-2	Pdha1	P47T CB	up	WT 7546; log2FC 0.05; FDR(no sex) 0.48; n 4 v 3	
+H-ADV-2	Kcnj11	neuron-deletion H_S	down	KO 8.80 v control 18.95 TPM; cLFC -0.676; n 3 v 2	
+H-ADV-2	Kcnj11	P47T CTX	up	WT 2342; log2FC 0.21; FDR(no sex) 0.45; n 5 v 5	
+H-ADV-2	Kcnj11	P47T HPC	down	WT 1919; log2FC -0.25; FDR(no sex) 0.53; n 5 v 5	
+H-ADV-2	Kcnj11	P47T PFC	down	WT 2553; log2FC -0.01; FDR(no sex) 0.94; n 5 v 5	
+H-ADV-2	Kcnj11	P47T CB	down	WT 2374; log2FC -0.16; FDR(no sex) 0.39; n 4 v 3	
+H-ADV-2	Abcc8	neuron-deletion C_S	down	KO 5.69 v control 11.64 TPM; cLFC -0.769; n 3 v 4	
+H-ADV-2	Abcc8	P47T CTX	down	WT 1036; log2FC -0.37; FDR(no sex) 0.84; n 5 v 5	
+H-ADV-2	Abcc8	P47T HPC	down	WT 1073; log2FC -0.77; FDR(no sex) 0.37; n 5 v 5	
+H-ADV-2	Abcc8	P47T PFC	down	WT 1089; log2FC -0.46; FDR(no sex) 0.16; n 5 v 5	
+H-ADV-2	Abcc8	P47T CB	down	WT 3456; log2FC -0.81; FDR(no sex) 0.12; n 4 v 3	
+H-ADV-2	Abcc9	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-2	Abcc9	P47T CTX	up	WT 596; log2FC 0.27; FDR(no sex) 0.34; n 5 v 5	
+H-ADV-2	Abcc9	P47T HPC	up	WT 528; log2FC 0.11; FDR(no sex) 0.7; n 5 v 5	
+H-ADV-2	Abcc9	P47T PFC	up	WT 502; log2FC 0.35; FDR(no sex) 0.14; n 5 v 5	
+H-ADV-2	Abcc9	P47T CB	down	WT 760; log2FC -0.13; FDR(no sex) 0.62; n 4 v 3	
+H-ADV-2	Cpt1a	neuron-deletion H_N	down	KO 4.82 v control 9.72 TPM; cLFC -0.674; n 2 v 2	
+H-ADV-2	Cpt1a	P47T CTX	down	WT 1364; log2FC -0.04; FDR(no sex) 0.91; n 5 v 5	
+H-ADV-2	Cpt1a	P47T HPC	up	WT 1455; log2FC 0.11; FDR(no sex) 0.72; n 5 v 5	
+H-ADV-2	Cpt1a	P47T PFC	up	WT 1188; log2FC 0.29; FDR(no sex) 0.077; n 5 v 5	
+H-ADV-2	Cpt1a	P47T CB	up	WT 1404; log2FC 0.08; FDR(no sex) 0.27; n 4 v 3	
+H-ADV-4 panel	Eif4ebp1	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-4 panel	Eif4ebp1	P47T CTX	up	WT 157; log2FC 0.14; FDR(no sex) 0.94; n 5 v 5	
+H-ADV-4 panel	Eif4ebp1	P47T HPC	up	WT 102; log2FC 0.76; FDR(no sex) 0.59; n 5 v 5	
+H-ADV-4 panel	Eif4ebp1	P47T PFC	down	WT 148; log2FC -0.19; FDR(no sex) 0.42; n 5 v 5	
+H-ADV-4 panel	Eif4ebp1	P47T CB	down	WT 56; log2FC -0.03; FDR(no sex) 0.94; n 4 v 3	
+H-ADV-4 panel	Srebf1	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-4 panel	Srebf1	P47T CTX	down	WT 3593; log2FC -0.14; FDR(no sex) 0.7; n 5 v 5	
+H-ADV-4 panel	Srebf1	P47T HPC	down	WT 3723; log2FC -0.01; FDR(no sex) 0.93; n 5 v 5	
+H-ADV-4 panel	Srebf1	P47T PFC	up	WT 2877; log2FC 0.12; FDR(no sex) 0.47; n 5 v 5	
+H-ADV-4 panel	Srebf1	P47T CB	down	WT 3101; log2FC -0.09; FDR(no sex) 0.56; n 4 v 3	
+H-ADV-4 panel	Hmgcs1	neuron-deletion H_N	down	KO 37.23 v control 94.30 TPM; cLFC -1.061; n 2 v 2	background-confounded
+H-ADV-4 panel	Hmgcs1	P47T CTX	up	WT 9006; log2FC 0.43; FDR(no sex) 0.46; n 5 v 5	
+H-ADV-4 panel	Hmgcs1	P47T HPC	up	WT 8221; log2FC 0.29; FDR(no sex) 0.74; n 5 v 5	
+H-ADV-4 panel	Hmgcs1	P47T PFC	up	WT 9351; log2FC 0.34; FDR(no sex) 0.42; n 5 v 5	
+H-ADV-4 panel	Hmgcs1	P47T CB	up	WT 3930; log2FC 0.21; FDR(no sex) 0.11; n 4 v 3	
+H-ADV-4 panel	Hmgcr	neuron-deletion H_N	down	KO 37.17 v control 75.54 TPM; cLFC -0.745; n 2 v 2	
+H-ADV-4 panel	Hmgcr	P47T CTX	up	WT 4090; log2FC 0.57; FDR(no sex) 0.18; n 5 v 5	
+H-ADV-4 panel	Hmgcr	P47T HPC	up	WT 3583; log2FC 0.38; FDR(no sex) 0.55; n 5 v 5	
+H-ADV-4 panel	Hmgcr	P47T PFC	up	WT 4578; log2FC 0.59; FDR(no sex) 0.051; n 5 v 5	
+H-ADV-4 panel	Hmgcr	P47T CB	up	WT 2301; log2FC 0.19; FDR(no sex) 0.11; n 4 v 3	
+H-ADV-4 panel	Insig1	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-4 panel	Insig1	P47T CTX	up	WT 3377; log2FC 0.22; FDR(no sex) 0.59; n 5 v 5	
+H-ADV-4 panel	Insig1	P47T HPC	up	WT 2581; log2FC 0.21; FDR(no sex) 0.73; n 5 v 5	
+H-ADV-4 panel	Insig1	P47T PFC	up	WT 3137; log2FC 0.14; FDR(no sex) 0.62; n 5 v 5	
+H-ADV-4 panel	Insig1	P47T CB	up	WT 3313; log2FC 0.29; FDR(no sex) 0.13; n 4 v 3	
+H-ADV-4 panel	Ldlr	neuron-deletion C_S	down	KO 6.09 v control 13.48 TPM; cLFC -0.883; n 3 v 4	
+H-ADV-4 panel	Ldlr	neuron-deletion H_N	down	KO 2.27 v control 5.67 TPM; cLFC -0.886; n 2 v 2	
+H-ADV-4 panel	Ldlr	neuron-deletion H_S	down	KO 2.86 v control 6.17 TPM; cLFC -0.600; n 3 v 2	
+H-ADV-4 panel	Ldlr	neuron-deletion H_null	down	KO 1.70 v control 3.99 TPM; cLFC -0.815; n 2 v 3	
+H-ADV-4 panel	Ldlr	P47T CTX	up	WT 1007; log2FC 0.34; FDR(no sex) 0.12; n 5 v 5	
+H-ADV-4 panel	Ldlr	P47T HPC	up	WT 792; log2FC 0.31; FDR(no sex) 0.75; n 5 v 5	
+H-ADV-4 panel	Ldlr	P47T PFC	up	WT 879; log2FC 0.40; FDR(no sex) 0.25; n 5 v 5	
+H-ADV-4 panel	Ldlr	P47T CB	up	WT 1160; log2FC 0.27; FDR(no sex) 0.14; n 4 v 3	
+H-ADV-4 panel	Fasn	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-4 panel	Fasn	P47T CTX	down	WT 14813; log2FC -0.11; FDR(no sex) 0.92; n 5 v 5	
+H-ADV-4 panel	Fasn	P47T HPC	down	WT 16054; log2FC -0.09; FDR(no sex) 0.61; n 5 v 5	
+H-ADV-4 panel	Fasn	P47T PFC	up	WT 15018; log2FC 0.11; FDR(no sex) 0.41; n 5 v 5	
+H-ADV-4 panel	Fasn	P47T CB	down	WT 11107; log2FC -0.25; FDR(no sex) 0.35; n 4 v 3	
+H-ADV-4 panel	Acly	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-4 panel	Acly	P47T CTX	up	WT 7879; log2FC 0.07; FDR(no sex) 0.83; n 5 v 5	
+H-ADV-4 panel	Acly	P47T HPC	up	WT 7278; log2FC 0.24; FDR(no sex) 0.54; n 5 v 5	
+H-ADV-4 panel	Acly	P47T PFC	up	WT 7056; log2FC 0.04; FDR(no sex) 0.83; n 5 v 5	
+H-ADV-4 panel	Acly	P47T CB	down	WT 8721; log2FC -0.07; FDR(no sex) 0.54; n 4 v 3	
+H-ADV-4 panel	Slc7a5	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-4 panel	Slc7a5	P47T CTX	up	WT 3192; log2FC 0.48; FDR(no sex) 0.062; n 5 v 5	
+H-ADV-4 panel	Slc7a5	P47T HPC	up	WT 3406; log2FC 0.42; FDR(no sex) 0.42; n 5 v 5	
+H-ADV-4 panel	Slc7a5	P47T PFC	up	WT 2879; log2FC 0.46; FDR(no sex) 0.14; n 5 v 5	
+H-ADV-4 panel	Slc7a5	P47T CB	up	WT 4041; log2FC 0.02; FDR(no sex) 0.85; n 4 v 3	
+H-ADV-4 panel	Slc3a2	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-4 panel	Slc3a2	P47T CTX	up	WT 4573; log2FC 0.43; FDR(no sex) 0.23; n 5 v 5	
+H-ADV-4 panel	Slc3a2	P47T HPC	up	WT 4961; log2FC 0.42; FDR(no sex) 0.36; n 5 v 5	
+H-ADV-4 panel	Slc3a2	P47T PFC	up	WT 4171; log2FC 0.35; FDR(no sex) 0.033; n 5 v 5	
+H-ADV-4 panel	Slc3a2	P47T CB	up	WT 4823; log2FC 0.10; FDR(no sex) 0.19; n 4 v 3	
+H-ADV-4 panel	Cad	neuron-deletion H_N	down	KO 5.31 v control 10.91 TPM; cLFC -0.706; n 2 v 2	
+H-ADV-4 panel	Cad	P47T CTX	down	WT 932; log2FC -0.18; FDR(no sex) 0.91; n 5 v 5	
+H-ADV-4 panel	Cad	P47T HPC	down	WT 871; log2FC -0.05; FDR(no sex) 0.74; n 5 v 5	
+H-ADV-4 panel	Cad	P47T PFC	down	WT 923; log2FC -0.07; FDR(no sex) 0.4; n 5 v 5	
+H-ADV-4 panel	Cad	P47T CB	down	WT 1415; log2FC -0.46; FDR(no sex) 0.13; n 4 v 3	
+H-ADV-4 panel	Ppat	neuron-deletion H_N	up	KO 4.35 v control 3.23 TPM; cLFC 0.646; n 2 v 2	
+H-ADV-4 panel	Ppat	P47T CTX	down	WT 762; log2FC -0.13; FDR(no sex) 0.38; n 5 v 5	
+H-ADV-4 panel	Ppat	P47T HPC	down	WT 724; log2FC -0.10; FDR(no sex) 0.63; n 5 v 5	
+H-ADV-4 panel	Ppat	P47T PFC	down	WT 673; log2FC -0.11; FDR(no sex) 0.6; n 5 v 5	
+H-ADV-4 panel	Ppat	P47T CB	down	WT 921; log2FC -0.01; FDR(no sex) 0.97; n 4 v 3	
+H-ADV-4 panel	Gart	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-4 panel	Gart	P47T CTX	up	WT 1618; log2FC 0.03; FDR(no sex) 0.97; n 5 v 5	
+H-ADV-4 panel	Gart	P47T HPC	down	WT 1709; log2FC -0.03; FDR(no sex) 0.62; n 5 v 5	
+H-ADV-4 panel	Gart	P47T PFC	down	WT 1495; log2FC -0.06; FDR(no sex) 0.24; n 5 v 5	
+H-ADV-4 panel	Gart	P47T CB	up	WT 1645; log2FC 0.16; FDR(no sex) 0.34; n 4 v 3	
+H-ADV-4 panel	Mthfd2	neuron-deletion H_null	down	KO 1.31 v control 3.70 TPM; cLFC -0.996; n 2 v 3	
+H-ADV-4 panel	Mthfd2	P47T CTX	up	WT 227; log2FC 0.13; FDR(no sex) 0.96; n 5 v 5	
+H-ADV-4 panel	Mthfd2	P47T HPC	up	WT 206; log2FC 0.41; FDR(no sex) 0.78; n 5 v 5	
+H-ADV-4 panel	Mthfd2	P47T PFC	down	WT 191; log2FC -0.31; FDR(no sex) 0.2; n 5 v 5	
+H-ADV-4 panel	Mthfd2	P47T CB	up	WT 304; log2FC 0.20; FDR(no sex) 0.25; n 4 v 3	
+H-ADV-4 panel	Shmt2	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-4 panel	Shmt2	P47T CTX	up	WT 873; log2FC 0.03; FDR(no sex) 0.87; n 5 v 5	
+H-ADV-4 panel	Shmt2	P47T HPC	up	WT 875; log2FC 0.24; FDR(no sex) 0.72; n 5 v 5	
+H-ADV-4 panel	Shmt2	P47T PFC	down	WT 831; log2FC -0.15; FDR(no sex) 0.23; n 5 v 5	
+H-ADV-4 panel	Shmt2	P47T CB	down	WT 1339; log2FC -0.19; FDR(no sex) 0.25; n 4 v 3	
+H-ADV-4 panel	Pgk1	neuron-deletion H_N	down	KO 78.10 v control 176.18 TPM; cLFC -0.900; n 2 v 2	background-confounded
+H-ADV-4 panel	Pgk1	neuron-deletion H_S	down	KO 76.21 v control 154.16 TPM; cLFC -0.622; n 3 v 2	background-confounded
+H-ADV-4 panel	Pgk1	P47T CTX	up	WT 15171; log2FC 0.46; FDR(no sex) 0.3; n 5 v 5	
+H-ADV-4 panel	Pgk1	P47T HPC	up	WT 16067; log2FC 0.26; FDR(no sex) 0.33; n 5 v 5	
+H-ADV-4 panel	Pgk1	P47T PFC	up	WT 14371; log2FC 0.23; FDR(no sex) 0.072; n 5 v 5	
+H-ADV-4 panel	Pgk1	P47T CB	up	WT 12452; log2FC 0.22; FDR(no sex) 0.28; n 4 v 3	
+H-ADV-4 panel	Ldha	neuron-deletion H_N	down	KO 112.06 v control 269.56 TPM; cLFC -0.994; n 2 v 2	background-confounded
+H-ADV-4 panel	Ldha	P47T CTX	up	WT 11917; log2FC 0.64; FDR(no sex) 0.44; n 5 v 5	
+H-ADV-4 panel	Ldha	P47T HPC	up	WT 11334; log2FC 0.52; FDR(no sex) 0.4; n 5 v 5	
+H-ADV-4 panel	Ldha	P47T PFC	up	WT 11791; log2FC 0.41; FDR(no sex) 0.1; n 5 v 5	
+H-ADV-4 panel	Ldha	P47T CB	up	WT 5531; log2FC 0.31; FDR(no sex) 0.23; n 4 v 3	
+H-ADV-4 panel	Tpi1	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-4 panel	Tpi1	P47T CTX	up	WT 24471; log2FC 0.30; FDR(no sex) 0.18; n 5 v 5	
+H-ADV-4 panel	Tpi1	P47T HPC	up	WT 27329; log2FC 0.12; FDR(no sex) 0.34; n 5 v 5	
+H-ADV-4 panel	Tpi1	P47T PFC	up	WT 23843; log2FC 0.18; FDR(no sex) 0.06; n 5 v 5	
+H-ADV-4 panel	Tpi1	P47T CB	up	WT 21515; log2FC 0.06; FDR(no sex) 0.7; n 4 v 3	
+H-ADV-4 panel	Hk2	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-4 panel	Hk2	P47T CTX	up	WT 133; log2FC 0.45; FDR(no sex) 0.31; n 5 v 5	
+H-ADV-4 panel	Hk2	P47T HPC	up	WT 189; log2FC 0.82; FDR(no sex) 0.4; n 5 v 5	
+H-ADV-4 panel	Hk2	P47T PFC	up	WT 117; log2FC 0.67; FDR(no sex) 0.004; n 5 v 5	
+H-ADV-4 panel	Hk2	P47T CB	down	WT 652; log2FC -0.19; FDR(no sex) 0.36; n 4 v 3	
+H-ADV-4 panel	Gpi1	neuron-deletion C_S	up	KO 1587.54 v control 1207.29 TPM; cLFC 0.597; n 3 v 4	
+H-ADV-4 panel	Gpi1	neuron-deletion H_N	up	KO 1008.36 v control 727.34 TPM; cLFC 0.739; n 2 v 2	
+H-ADV-4 panel	Gpi1	P47T CTX	up	WT 24020; log2FC 0.35; FDR(no sex) 0.032; n 5 v 5	
+H-ADV-4 panel	Gpi1	P47T HPC	up	WT 28439; log2FC 0.04; FDR(no sex) 0.79; n 5 v 5	
+H-ADV-4 panel	Gpi1	P47T PFC	up	WT 22692; log2FC 0.32; FDR(no sex) 0.0093; n 5 v 5	
+H-ADV-4 panel	Gpi1	P47T CB	down	WT 20645; log2FC -0.17; FDR(no sex) 0.24; n 4 v 3	
+H-ADV-4 panel	Eif4a1	neuron-deletion H_N	down	KO 183.73 v control 340.72 TPM; cLFC -0.621; n 2 v 2	background-confounded
+H-ADV-4 panel	Eif4a1	neuron-deletion H_S	down	KO 141.25 v control 315.28 TPM; cLFC -0.766; n 3 v 2	background-confounded
+H-ADV-4 panel	Eif4a1	P47T CTX	up	WT 10821; log2FC 0.29; FDR(no sex) 0.67; n 5 v 5	
+H-ADV-4 panel	Eif4a1	P47T HPC	up	WT 12985; log2FC 0.15; FDR(no sex) 0.54; n 5 v 5	
+H-ADV-4 panel	Eif4a1	P47T PFC	up	WT 9277; log2FC 0.09; FDR(no sex) 0.49; n 5 v 5	
+H-ADV-4 panel	Eif4a1	P47T CB	up	WT 8240; log2FC 0.21; FDR(no sex) 0.18; n 4 v 3	
+H-ADV-4 panel	Eef1a1	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-4 panel	Eef1a1	P47T CTX	down	WT 98637; log2FC -0.07; FDR(no sex) 0.81; n 5 v 5	
+H-ADV-4 panel	Eef1a1	P47T HPC	down	WT 112593; log2FC -0.12; FDR(no sex) 0.64; n 5 v 5	
+H-ADV-4 panel	Eef1a1	P47T PFC	down	WT 72847; log2FC -0.08; FDR(no sex) 0.73; n 5 v 5	
+H-ADV-4 panel	Eef1a1	P47T CB	up	WT 53293; log2FC 0.46; FDR(no sex) 0.14; n 4 v 3	
+H-ADV-4 panel	Rps6	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-4 panel	Rps6	P47T CTX	up	WT 10484; log2FC 0.03; FDR(no sex) 0.94; n 5 v 5	
+H-ADV-4 panel	Rps6	P47T HPC	down	WT 9843; log2FC -0.07; FDR(no sex) 0.83; n 5 v 5	
+H-ADV-4 panel	Rps6	P47T PFC	down	WT 7667; log2FC -0.08; FDR(no sex) 0.67; n 5 v 5	
+H-ADV-4 panel	Rps6	P47T CB	up	WT 8135; log2FC 0.42; FDR(no sex) 0.12; n 4 v 3	
+H-ADV-4 panel	Rpl13a	neuron-deletion H_N	down	KO 1394.95 v control 3802.00 TPM; cLFC -1.178; n 2 v 2	background-confounded
+H-ADV-4 panel	Rpl13a	P47T CTX	up	WT 765; log2FC 0.06; FDR(no sex) 0.96; n 5 v 5	
+H-ADV-4 panel	Rpl13a	P47T HPC	down	WT 683; log2FC -0.03; FDR(no sex) 0.98; n 5 v 5	
+H-ADV-4 panel	Rpl13a	P47T PFC	down	WT 565; log2FC -0.08; FDR(no sex) 0.65; n 5 v 5	
+H-ADV-4 panel	Rpl13a	P47T CB	up	WT 514; log2FC 0.37; FDR(no sex) 0.15; n 4 v 3	
+H-ADV-4 panel	Rpl3	neuron-deletion	not among |cLFC|>=0.585 rows		
+H-ADV-4 panel	Rpl3	P47T CTX	down	WT 17891; log2FC -0.05; FDR(no sex) 0.78; n 5 v 5	
+H-ADV-4 panel	Rpl3	P47T HPC	down	WT 18819; log2FC -0.16; FDR(no sex) 0.42; n 5 v 5	
+H-ADV-4 panel	Rpl3	P47T PFC	down	WT 13791; log2FC -0.09; FDR(no sex) 0.6; n 5 v 5	
+H-ADV-4 panel	Rpl3	P47T CB	up	WT 11739; log2FC 0.38; FDR(no sex) 0.12; n 4 v 3	

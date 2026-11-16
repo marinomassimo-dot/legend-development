@@ -16,13 +16,15 @@
  "RESUME": "land after IT reports the push window clear; add ledger rows with freeze_commit and blob sha256; then the second read of the extractor sample after 12:00Z",
  "DECISIONS_TAKEN": [
   "2026-11-16: generated alone, no IT/HE leap file or baseline output read; held-data scan run before fixing H4 and H5, disclosed in the file; pre-test for those two labelled not independent",
-  "2026-11-16: mechanism-source anchors are title-level (Europe PMC lookup), labelled as such"
+  "2026-11-16: mechanism-source anchors are title-level (Europe PMC lookup), labelled as such",
+  "2026-11-16: PRESIDIO-015 (rule 5 of the leap round): ran held-data lookups for the five ADV hypotheses with adv_pretests.py; report ADV_HYPOTHESES_PRETEST_SCI.md; no delegate; labels independent test or consistency check per hypothesis; ADV file not edited"
  ],
  "DELEGATIONS": [],
  "ESCALATIONS": [],
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
  "VERIFICATION_EVIDENCE": [
-  "pretest_leap.py reproduces pretest_leap_sci.tsv from the committed tables"
+  "pretest_leap.py reproduces pretest_leap_sci.tsv from the committed tables",
+  "adv_pretests.py reproduces adv_pretest_output/ in about 23 s from held files"
  ]
 }
