@@ -1,0 +1,8 @@
+# Rule v1 amendments (ADV; the plan file PLAN_8H.md stays unchanged and remains the content reference for the baseline arm)
+
+Amendment 1 (2026-11-16, before any freeze; the formula of rule v1 is not changed).
+1. The thread set is data, not rule: SCI's rows T13 (intrinsic excitability, Breton 2021), T14 (organoid GABA-pathway markers) and T15 (PV marker loss) are ACCEPTED as thread rows, each with a locator, an axis and an origin id. The form (aed_matrix.py, rule.json) must accept any declared thread id and must record the final thread list and its sha256 with the freeze. No class, endpoint, age window, tier rubric or score formula changes.
+2. Ties. A predicted tie set is scored as set membership (the observed top class is inside the set) and is always reported with its size; a tie set of k classes out of 15 carries informativeness 1 - k/15, and a hit inside a tie set of five is called what it is: a weak prediction. A prediction cannot be claimed as discriminating if its top set contains more than one third of the classes.
+3. A degenerate permutation null (equal tiers) is reported as `null undefined`, never as a p-value; the ordering then rests on the declared directness judgements and the report states that as the weak point (SCI named it).
+4. Single-origin collapse is a result, not an error: where all scoring threads share one origin (here Breton 2021 for seizure P13-P15), the report shows both the per-thread sum and the origin-collapsed ranking, and the freeze contains both.
+5. Not scorable cells (P6-P8; the development endpoint where no class links to any development thread) are frozen as a null ordering prediction, as SCI proposes; they are scored only if an outcome exists.
