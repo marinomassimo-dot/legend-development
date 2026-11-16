@@ -55,3 +55,10 @@ Stronger: Y2 antagonist unmasks bursts in null hippocampus only; Grin2b protein 
 
 ## D9 Cheapest next step with no literature
 SCI: the five-gene single table across both regions and the P47T line (script `regional_baseline.py` already holds the S-line half; the P47T half needs the committed all-genes table). HE: second reader. IT: add hippocampal-onset to the I2 coding rubric.
+
+## Update v2 (SCI, same day): what the independent P47T line says about the four routes (HELD: `wwox_data_it24_p4_20261104/results/p47t_all_regions_tested_genes.tsv.gz`, 5 v 5, Wwox mRNA unchanged in this line)
+* **Route 2 (sustainer drop) weakened:** Grin2b log2 -0.16 hippocampus (FDR 0.71), -0.10 cortex; Grin2a -0.26 (FDR 0.56): the S-line fall of hippocampal Grin2b (0.28 of control) is not reproduced.
+* **Route 1 (peptidergic) partly supported:** Npy up in all regions (log2 +1.12 PFC FDR 0.02, +1.59 CTX FDR 0.06, +1.80 HPC FDR 0.32); Npy2r down in cortex (-0.89, FDR 0.05) and hippocampus (-0.82, ns); the receptor level in hippocampus (1,901 normalised counts in wild type) against cortex (373) again shows the availability difference (5-fold here, 14-fold in the S-line tables).
+* **Route 3 (tonic GABA-A) strengthened as a direction:** Gabrd log2 -0.80 CTX, -0.82 PFC, -0.93 HPC, cerebellum +0.08; Gabra5 -0.19 HPC (ns): see I13, now a dossier of its own.
+* **Route 4 (somatostatin and chloride headroom):** Sst up +0.94 PFC (FDR 0.02) and +0.84 CTX (FDR 0.09) but only +0.25 in hippocampus (ns): the hippocampal Sst rise of the S line is not reproduced as hippocampus-specific; KCC2 (Slc12a5) log2 -0.17 to -0.28, NKCC1 (Slc12a2) -0.33 PFC FDR 0.06, +0.07 HPC: no hippocampal NKCC1 fall in P47T, so the KCC2-to-NKCC1 asymmetry index of I6 is not reproduced either.
+**Net:** of the four routes only the receptor-availability reading of the peptide brake (route 1) and the tonic subunit (route 3) are supported by a second line; routes 2 and 4 rest on the S-line tables alone. The slice experiment (D5b) still separates all four.

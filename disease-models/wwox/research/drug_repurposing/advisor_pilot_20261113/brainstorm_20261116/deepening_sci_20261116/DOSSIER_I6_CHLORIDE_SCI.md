@@ -55,3 +55,6 @@ Stronger: a measured E_GABA at burst end more positive than at onset by at least
 
 ## D9 Cheapest next step with no literature
 Owner SCI: add the chloride load as a free parameter to the I1 oscillator and scan which (load, headroom) pairs produce a sign flip of the positive modulator; deliver the map to HE's harness as a frozen scan. Owner IT: add the modulator-response and worsening columns to the I2 re-extraction. Needs no outside source.
+
+## Update v2 (SCI, same day): P47T does not reproduce the regional transporter asymmetry
+In the independent P47T line (HELD, 5 v 5; log2 fold): Slc12a5 (KCC2) -0.12 PFC, -0.17 HPC, -0.26 CTX (all FDR above 0.3); Slc12a2 (NKCC1) -0.33 PFC (FDR 0.06), +0.07 HPC, -0.36 CTX (FDR 0.19). So the hippocampal NKCC1 fall (0.45 of control in the S line) that gave the KCC2-to-NKCC1 index of 1.51 in hippocampus is not seen; KCC2 falls modestly in both lines, in all regions. The "hippocampus keeps its chloride headroom" reading is therefore weak; the headroom model itself (D4) does not depend on it.
