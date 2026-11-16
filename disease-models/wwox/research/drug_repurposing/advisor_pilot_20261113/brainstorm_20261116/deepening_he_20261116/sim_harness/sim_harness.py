@@ -85,8 +85,13 @@ def freeze(a):
         raise SystemExit("freeze.json already exists: a frozen configuration is never overwritten (use a new --out)")
     mod = load_model(a.model); scan = json.loads(Path(a.scan).read_text())
     pts = points_of(scan, mod.PARAMS)
+    labels = {l for l, _ in pts}
+    for pr in scan.get("predictions", []):
+        for k in ("a", "b"):
+            if pr[k] not in labels:
+                raise SystemExit(f"prediction {pr['id']}: label {pr[k]!r} is not a point of this scan (labels: {sorted(labels)[:12]} ...)")
     oob = [l for l, p in pts if any(not (mod.PARAMS[k][1] <= v <= mod.PARAMS[k][2]) for k, v in p.items())]
-    fr = {"harness_version": VERSION, "files": {Path(f).name: sha(f) for f in [a.model] + list(a.also or [])}, "adapter": Path(a.model).name,
+    fr = {"harness_version": VERSION, "harness_sha256": sha(__file__), "files": {Path(f).name: sha(f) for f in [a.model] + list(a.also or [])}, "adapter": Path(a.model).name,
           "params": {k: v for k, v in sorted(mod.PARAMS.items())}, "scan": scan, "scan_sha256": sha(a.scan), "seeds": a.seeds, "base_seed": a.base_seed,
           "points": len(pts), "calls": len(pts) * a.seeds, "points_outside_declared_bounds": oob}
     (out / "scan.json").write_bytes(Path(a.scan).read_bytes())
@@ -99,6 +104,8 @@ def freeze(a):
 
 def verify_freeze(out, expect):
     fr = json.loads((out / "freeze.json").read_text())
+    if fr.get("harness_sha256") and fr["harness_sha256"] != sha(__file__):
+        raise SystemExit("REFUSED: sim_harness.py is not the version that froze this configuration")
     if sha(out / "freeze.json") != expect:
         raise SystemExit("REFUSED: freeze.json does not hash to --expect-freeze-sha256")
     for name, h in fr["files"].items():
