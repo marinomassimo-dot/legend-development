@@ -1,0 +1,10 @@
+{
+ "kind": "MECH",
+ "status": "open",
+ "tag": "IPOTESI",
+ "title": "The one WWOX missense variant with functional and clinical evidence, p.Pro47Thr, combines WW1 PPxY-binding loss with similar total protein (mouse cerebellum) and late onset (three held homozygous children, onset 6 months against a cohort median of about 2 months): a WW1-binding-loss class that is not a null class",
+ "source": "SCI DREAM-1 2026-11-16; Hussain 2023 full text (Results 2.1, Fig. 1 legend); Al-Baradie 2022 rows in it_i2_semiology_20261116/extraction_v1; WWOX_pathogenic_missense_classified.csv (ddG +2.81, rescuable window class); P47T_PROTEIN_LEVEL_AND_DDG_SCI.md",
+ "causal_statement": "IPOTESI: loss of WW1 ligand binding with preserved protein produces a later-onset, partly drug-responsive epilepsy phenotype in both species, so any pharmacological reading that rests on a protein-retaining WW1-impaired context applies to P47T-like variants and not to missense variants in general.",
+ "falsifier": "Onset of other WW1 missense homozygotes (P47R, H46Y; none held) equal to the null-like cohort, or P47T mouse slices at P13 to P17 showing the null's intrinsic profile and bursting at the null's incidence.",
+ "transfer_limit": "Three children, two families, one report, polytherapy; ascertainment (a consanguineous cohort); cerebellar western qualitative with two mice visible; ddG computed."
+}

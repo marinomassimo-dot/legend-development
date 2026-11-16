@@ -1,0 +1,10 @@
+{
+ "kind": "MECH",
+ "status": "open",
+ "tag": "IPOTESI",
+ "title": "The Gabrd (delta GABA-A) transcript fall in the protein-retaining P47T line tracks a reactive cell-state axis (Gfap and Npy up, Lamp5 down) at animal level, while composition arithmetic gives the wrong sign and the S-line shows the same Gabrd fall at P17 with mild gliosis",
+ "source": "SCI DREAM-1 2026-11-16; deepening_sci_20261116/RESULT_GABRD_COMPOSITION_SCI.md (public GSE215425 counts, per-animal, predictions hashed first); deepening_he_20261116/gabrd_composition/RESULT_COMPOSITION_ARITHMETIC.md; regional_baseline.tsv (S line P17)",
+ "causal_statement": "IPOTESI: Gabrd transcript changes in WWOX-deficient cortex reflect a cell-state program (reactive glia / interneuron-subtype state) that is present already in the young neuron-deleted line and in the aged protein-retaining line, rather than a loss of delta-containing receptors per neuron; the tonic current would then be normal or reserve-limited. Competing readings: neuron-intrinsic WW1-function-dependent regulation; age-driven neuroinflammation only (excluded as sole cause by the P17 S line); transcript without function.",
+ "falsifier": "Tonic current and THIP-evoked reserve in L2/3 pyramidal cells of null, S-HT, P47T and wild type reduced in step with the Gabrd transcript (neuron-intrinsic) or unchanged despite the fall (cell-state/transcript only); per-animal Gabrd residual correlations absent in a larger or younger P47T set.",
+ "transfer_limit": "Bulk transcript, 10 animals per region, age 150 to 280 days with per-animal age not in the deposit, 36 correlated tests, one line; S line is P17 neuron-targeted with 2 to 4 animals; no protein, no current."
+}
