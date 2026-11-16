@@ -19,6 +19,8 @@ writes one ledger row per prediction.
 `check` reads a ledger TSV and, per row, tests:
   - freeze_commit exists and the statement file at that commit hashes to freeze_blob_sha256;
   - the statement file is unchanged since (EDITED is a warning; --strict makes it fatal);
+  - when a row declares `freeze_utc_declared` and the freeze commit is LATER than that, the declared time is not shown by git
+    (a rebase or cherry-pick moves a commit's time): printed as a warning, never as proof; freeze commits should be merged, not rebased;
   - the outcome file is NOT in the tree at the freeze commit (a row whose `blindness` cell says `declared`
     states that the table is public and already there: reported as a warning, blindness declared, not shown);
   - the freeze commit precedes the outcome commit: `yes` (ancestor), `same_commit`, `not_ancestor`
@@ -57,7 +59,7 @@ TEXT_EXT = (".md", ".tsv", ".txt")
 COLUMNS = ["pred_id", "package", "statement_ref", "freeze_commit", "freeze_blob_sha256", "kind",
            "outcome_ref", "outcome_study_id", "outcome_commit", "predictor", "scorer",
            "scoring_rule_ref", "status", "notes"]
-OPTIONAL_COLUMNS = ["blindness", "outcome_sha256"]   # `declared` says the outcome table is public and in the tree at the freeze: blindness is then a declaration, not shown by git
+OPTIONAL_COLUMNS = ["blindness", "outcome_sha256", "freeze_utc_declared"]   # `declared` says the outcome table is public and in the tree at the freeze: blindness is then a declaration, not shown by git
 BLINDNESS = {"", "shown", "declared"}   # `outcome_sha256` is the digest of the sealed outcome table (required once outcome_commit is set)
 KINDS = {"", "paper_content", "generative"}
 STATUSES = {"", "unclassified", "open", "held", "failed", "mixed", "unscorable"}
@@ -237,6 +239,16 @@ def check_row(root: Path, row: dict[str, str], receipts: Path) -> tuple[list[str
         elif sha256(table) != recorded:
             bad.append("outcome_sha256 does not match the table at the outcome commit")
     stamp = commit_utc(root, freeze)
+    declared = row.get("freeze_utc_declared", "")
+    if declared:
+        try:
+            said = datetime.fromisoformat(declared.replace("Z", "+00:00")).astimezone(timezone.utc)
+        except ValueError:
+            bad.append(f"freeze_utc_declared {declared!r} is not an ISO time")
+        else:
+            if stamp > said:
+                warn.append(f"freeze time declared, not shown by git (rebased): declared {said.isoformat()}, "
+                            f"the freeze commit's own time is {stamp.isoformat()}")
     early = [r for r in receipt_times(receipts, row["outcome_study_id"]) if r[0] < stamp]
     if early:
         studies = sorted({r[1] for r in early})
