@@ -1,0 +1,39 @@
+nucleus class (control pool, P17 hippocampus)	n_nuclei	gene	CPM	frac_detected
+neuron-like nuclei (Snap25 UMI > 0)	2320	Scn1a	244.27	0.6056
+neuron-like nuclei (Snap25 UMI > 0)	2320	Scn2a	348.98	0.769
+neuron-like nuclei (Snap25 UMI > 0)	2320	Scn3a	143.41	0.5349
+neuron-like nuclei (Snap25 UMI > 0)	2320	Scn8a	399.28	0.7862
+neuron-like nuclei (Snap25 UMI > 0)	2320	Scn1b	60.14	0.3026
+neuron-like nuclei (Snap25 UMI > 0)	2320	Scn2b	23.26	0.1483
+neuron-like nuclei (Snap25 UMI > 0)	2320	Snap25	935.88	1.0
+neuron-like nuclei (Snap25 UMI > 0)	2320	Slc6a1	63.8	0.2216
+neuron-like nuclei (Snap25 UMI > 0)	2320	Slc6a11	21.98	0.1194
+neuron-like nuclei (Snap25 UMI > 0)	2320	Abat	55.5	0.2483
+neuron-like nuclei (Snap25 UMI > 0)	2320	Nr3c1	77.72	0.3543
+neuron-like nuclei (Snap25 UMI > 0)	2320	Gabrg2	173.08	0.5784
+neuron-like nuclei (Snap25 UMI > 0)	2320	Gabra1	100.86	0.3746
+neuron-like nuclei (Snap25 UMI > 0)	2320	Aqp4	15.45	0.0707
+neuron-like nuclei (Snap25 UMI > 0)	2320	Slc1a3	113.37	0.1922
+neuron-like nuclei (Snap25 UMI > 0)	2320	Slc17a7	147.44	0.5263
+neuron-like nuclei (Snap25 UMI > 0)	2320	Gad1	47.87	0.1858
+neuron-like nuclei (Snap25 UMI > 0)	2320	Gad2	50.67	0.1198
+neuron-like nuclei (Snap25 UMI > 0)	2320	Gfap	9.71	0.0509
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Scn1a	31.09	0.0608
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Scn2a	83.95	0.1747
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Scn3a	40.42	0.0785
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Scn8a	152.36	0.2329
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Scn1b	44.57	0.1038
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Scn2b	32.13	0.0785
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Snap25	0.0	0.0
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Slc6a1	316.12	0.4658
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Slc6a11	154.43	0.2582
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Abat	111.94	0.2127
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Nr3c1	160.65	0.2608
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Gabrg2	33.17	0.0658
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Gabra1	30.06	0.0734
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Aqp4	223.88	0.2835
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Slc1a3	2041.84	0.9215
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Slc17a7	64.26	0.1443
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Gad1	33.17	0.0785
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Gad2	15.55	0.0304
+astrocyte-like nuclei (Aqp4/Slc1a3/Gfap UMI > 0, no Snap25)	395	Gfap	145.11	0.2228

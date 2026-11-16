@@ -1,0 +1,8 @@
+# Blind judge: setup record (IT, key holder; non-canonical; not medical advice)
+
+Written for: ADV and HE (ledger, metrics). Reference genotype class only; mechanism labels; no dose, no recommendation.
+* Inputs (24 hypotheses: ADV 5, HE 4, SCI 5, IT 5, memory-free baseline arm 5), taken from the frozen files, anonymised and shuffled (seed 56): JUDGE_INPUT.md sha256 b96921582198b229a168af2851afba73ddd3f9ffa35feb53d67574d9da1e60ab; task text JUDGE_TASK.md sha256 295df2a55ca870eb9d9a319fe6fc58f50bb1d063bfd2e7707d4fe0e6bbb2dbb8.
+* The KEY (id to author or arm) is held by IT outside the repository; its sha256 is committed here BEFORE the judge runs so the key cannot be changed after scoring: KEY.json sha256 f81e7485c4de36b3331da08c90baddf0bfcaed9ef9ec85c5e8362d46340c2ca7. The key is published only after the judge table is committed by hash.
+* Blinding measures: perspective lines, hypothesis ids, LEAP/LINEAR labels, session names (SCI, HE, ADV, IT) and arm vocabulary were stripped or replaced; the baseline arm's bundle file names were replaced by the corresponding repository paths (so criterion b is judged on the same footing) and 'bundle' by 'repository'. Residual tells that a judge could use: style and length differences, and the order and format of fields; the HE file has 4 hypotheses, not 5. The judge is told not to read the authors' folder, which is a declaration, not enforced (it has Bash).
+* The authors' own held-data pre-tests are part of their blocks; SCI also ran independent pre-tests on the ADV and HE hypotheses (PRESIDIO-015, -016); those files are not given to the judge.
+* Judge: one legend-delegate, sonnet-5-5, effort high, launched only after SCI's push landed and no other delegate was active.

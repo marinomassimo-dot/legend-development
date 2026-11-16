@@ -1,0 +1,11 @@
+table	gene set	median_log2FC	empirical_p_vs_random_same_size_sets
+P47T CTX	declared panel (n=25 genes present)	0.143	0.0114
+P47T CTX	Rps/Rpl ribosomal-protein genes (n=117)	0.004	0.895
+P47T HPC	declared panel (n=25 genes present)	0.214	0.0
+P47T HPC	Rps/Rpl ribosomal-protein genes (n=116)	-0.09	0.0
+P47T PFC	declared panel (n=25 genes present)	0.115	0.0134
+P47T PFC	Rps/Rpl ribosomal-protein genes (n=114)	-0.12	0.0
+P47T CB	declared panel (n=25 genes present)	0.16	0.024
+P47T CB	Rps/Rpl ribosomal-protein genes (n=113)	0.411	0.0
+organoid GSE156243 KO(4) v WT(2)	declared panel (n=24)	-0.112	0.21
+organoid GSE156243 KO(4) v WT(2)	RPS/RPL ribosomal-protein genes (n=111)	-0.221	0.0

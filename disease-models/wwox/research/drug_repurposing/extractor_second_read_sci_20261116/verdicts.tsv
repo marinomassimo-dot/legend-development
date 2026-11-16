@@ -1,0 +1,85 @@
+extraction_row	report_id	child	agent	mechanism_class_coded	seizure_outcome_coded	attributable_coded	verdict	flags	note
+2	28721938	The patient (boy)	phenobarbital	gabaa_pam_non_	partial	yes	SUPPORTS		
+3	28721938	The patient (boy)	vigabatrin (Vigabatrine, VGB)	other	resolved	yes	SUPPORTS	CLASS_GABA_AT;ADDON_ATTRIBUTED	VGB 'added to phenobarbital', controlled 'for a month' then spasms reappeared; authors attribute to the add-on, PB continues
+4	28721938	The patient (boy)	synthetic ACTH	steroid_acth	resolved	yes	SUPPORTS	ADDON_ATTRIBUTED	ACTH 'added' after PB and VGB; authors attribute
+5	29808465	Patient 2	ketogenic diet	ketogenic_diet	none	yes	SUPPORTS		
+6	30361190	The first child (2-year-old 	oral prednisolone (UKISS protocol)	steroid_acth	partial	yes	SUPPORTS		
+7	30361190	The first child (2-year-old 	vigabatrin	other	partial	yes	SUPPORTS	CLASS_GABA_AT	quote: spasms resolved; same sentence says other seizure types followed, so overall partial is the coder's reading
+8	30361190	The first child (2-year-old 	levetiracetam	sv2a	partial	yes	SUPPORTS	ADDON_ATTRIBUTED	LEV added; focal myoclonic and clonic seizures improved
+9	30361190	The second child (12-month-o	phenobarbital	gabaa_pam_non_	partial	yes	SUPPORTS		
+10	30361190	The second child (12-month-o	vigabatrin	other	partial	yes	SUPPORTS	CLASS_GABA_AT;ADDON_ATTRIBUTED	child was on PB, VPA, CLB; VGB 'added with a partial response'
+13	30361190	The second child (12-month-o	baclofen	other	not_stated	n/a	SUPPORTS		
+14	35573960	Our patient (patient II-1, b	valproate	valproate_type	none	yes	SUPPORTS	COLLECTIVE_NEGATIVE	one sentence names 7 agents as ineffective: 7 rows from one statement
+15	35573960	Our patient (patient II-1, b	vigabatrin	other	none	yes	SUPPORTS	COLLECTIVE_NEGATIVE;CLASS_GABA_AT;STATUS_NOT_SUPPORTED	status 'continue' is not in this sentence (check later 'current ASM' list)
+16	35573960	Our patient (patient II-1, b	clonazepam	benzodiazepine	none	yes	SUPPORTS	COLLECTIVE_NEGATIVE;STATUS_NOT_SUPPORTED	status 'continue' not in this sentence
+17	35573960	Our patient (patient II-1, b	clobazam	benzodiazepine	none	yes	SUPPORTS	COLLECTIVE_NEGATIVE;STATUS_NOT_SUPPORTED	status 'continue' not in this sentence
+18	35573960	Our patient (patient II-1, b	levetiracetam	sv2a	none	yes	SUPPORTS	COLLECTIVE_NEGATIVE	one sentence names 7 agents as ineffective: 7 rows from one statement
+19	35573960	Our patient (patient II-1, b	rufinamide	sodium_channel	none	yes	SUPPORTS	COLLECTIVE_NEGATIVE	one sentence names 7 agents as ineffective: 7 rows from one statement
+20	35573960	Our patient (patient II-1, b	CBD oil	cannabidiol_fe	none	yes	SUPPORTS	COLLECTIVE_NEGATIVE	one sentence names 7 agents as ineffective: 7 rows from one statement
+23	35573960	Our patient (patient II-1, b	ACTH (three cycles)	steroid_acth	none	yes	SUPPORTS		
+24	35573960	Our patient (patient II-1, b	ketogenic diet	ketogenic_diet	none	yes	SUPPORTS		
+25	35573960	Our patient (patient II-1, b	baclofen	other	not_stated	n/a	SUPPORTS		
+26	35792847	Patient 1.1	levetiracetam	sv2a	partial	yes	SUPPORTS		
+28	35792847	Patient 1.2	topiramate	carbonic_anhyd	not_stated	polyth	SUPPORTS		
+33	35792847	Patient 2.1	vigabatrin	other	partial	yes	SAYS_MORE	CLASS_GABA_AT	quote 'effectively controlled his seizures' vs code partial; rows 35 and 54 with the same kind of wording are coded resolved
+35	35792847	Patient 2.2	vigabatrin	other	resolved	yes	SUPPORTS	CLASS_GABA_AT	'seizures were under control' coded resolved; LEV previously given outside, then VGB
+36	35792847	Patient 3.1	phenobarbital	gabaa_pam_non_	none	yes	SUPPORTS	COLLECTIVE_NEGATIVE	narrative lists PHB, clonazepam, topiramate; the paper's Table 3 lists PHB, CLOB, LEV for this patient (internal inconsistency in the source)
+37	35792847	Patient 3.1	clonazepam	benzodiazepine	none	yes	SUPPORTS	COLLECTIVE_NEGATIVE	narrative lists PHB, clonazepam, topiramate; the paper's Table 3 lists PHB, CLOB, LEV for this patient (internal inconsistency in the source)
+38	35792847	Patient 3.1	topiramate	carbonic_anhyd	none	yes	SUPPORTS	COLLECTIVE_NEGATIVE	narrative lists PHB, clonazepam, topiramate; the paper's Table 3 lists PHB, CLOB, LEV for this patient (internal inconsistency in the source)
+39	35792847	Patient 3.1	ketogenic diet	ketogenic_diet	partial	yes	SUPPORTS		
+40	35792847	Patient 3.1	intravenous diazepam	benzodiazepine	resolved	yes	SUPPORTS	ACUTE_TERMINATION	intravenous diazepam aborted a non-convulsive status episode; acute termination, not chronic control
+41	35792847	Patient 3.1	CLOB (clobazam) [Table 3 only]	benzodiazepine	not_stated	n/a	SUPPORTS		
+44	35792847	Patient 3.2	LEV (levetiracetam) [Table 3 only]	sv2a	not_stated	n/a	SUPPORTS		
+45	35792847	Patient 3.2	VPA (valproic acid) [Table 3 only]	valproate_type	not_stated	n/a	SUPPORTS		
+50	35792847	Patient 5	vigabatrin	other	not_stated	n/a	SUPPORTS	CLASS_GABA_AT	VGB added; no outcome stated anywhere for this patient in the text
+51	35792847	Patient 5	valproic acid	valproate_type	not_stated	n/a	SUPPORTS		
+52	35792847	Patient 5	topiramate	carbonic_anhyd	not_stated	n/a	SUPPORTS		
+54	35792847	Patient 6	vigabatrin	other	resolved	yes	SUPPORTS	CLASS_GABA_AT	
+61	35792847	Gribaa et al. (2007) patient	phenobarbital	gabaa_pam_non_	not_stated	n/a	SUPPORTS		
+64	35792847	Abdel-Salam et al. (2014) pa	valproic acid	valproate_type	not_stated	n/a	SUPPORTS		
+68	35792847	Valduga et al. (2015) patien	valproic acid	valproate_type	not_stated	n/a	SUPPORTS		
+76	35792847	Elsaadany et al. (2016) pati	phenobarbital	gabaa_pam_non_	not_stated	n/a	SUPPORTS		
+79	35792847	Tarta-Arsene et al. (2017) p	phenobarbital	gabaa_pam_non_	not_stated	n/a	SUPPORTS		
+82	35792847	Johannsen et al. (2018) pati	ketogenic diet	ketogenic_diet	not_stated	n/a	SAYS_MORE		Table 3 row for Johannsen patient 2 reads 'NA Refractory KD': a statement of non-response to the ketogenic diet (as the same patient in row 5), coded not_stated
+83	35792847	Serin et al. (2018) patient 	vigabatrin	other	not_stated	n/a	SUPPORTS	CLASS_GABA_AT	table-only row, no outcome column in Table 3
+84	35792847	Serin et al. (2018) patient 	valproic acid	valproate_type	not_stated	n/a	SUPPORTS		
+88	35792847	Shaukat et al. (2018) patien	levetiracetam	sv2a	not_stated	n/a	SUPPORTS		
+92	35792847	Shaukat et al. (2018) patien	clobazam	benzodiazepine	not_stated	n/a	SUPPORTS		
+94	35792847	Davids et al. (2019) patient	topiramate	carbonic_anhyd	not_stated	n/a	SUPPORTS		
+96	35792847	Yang et al. (2019) patient 1	phenobarbital	gabaa_pam_non_	not_stated	n/a	SUPPORTS		
+98	36537114	Patient 1	ketogenic diet	ketogenic_diet	partial	yes	SUPPORTS		
+99	36537114	Patient 2	ketogenic diet	ketogenic_diet	partial	yes	SUPPORTS		
+100	36537114	Patient 4	ketogenic diet	ketogenic_diet	partial	yes	SUPPORTS		
+109	36779245	Patient 2	LEV (levetiracetam)	sv2a	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+118	36779245	Patient 3	LEV (levetiracetam)	sv2a	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+127	36779245	Patient 6	TPM (topiramate)	carbonic_anhyd	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+130	36779245	Patient 6	PER (perampanel)	ampa_antagonis	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+139	36779245	Patient 6	DZP (diazepam)	benzodiazepine	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+145	36779245	Patient 7	PHT (phenytoin)	sodium_channel	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+153	36779245	Patient 7	LEV (levetiracetam)	sv2a	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+165	36779245	Patient 11	CBD (cannabidiol)	cannabidiol_fe	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+167	36779245	Patient 11	CBZ (carbamazepine)	sodium_channel	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+168	36779245	Patient 11	PRED (prednisolone)	steroid_acth	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+170	36779245	Patient 11	KD (ketogenic diet)	ketogenic_diet	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+173	36779245	Patient 12	KD (ketogenic diet)	ketogenic_diet	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+174	36779245	Patient 12	PHB (phenobarbital)	gabaa_pam_non_	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+175	36779245	Patient 12	LEV (levetiracetam)	sv2a	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+178	36779245	Patient 12	MDZ (midazolam)	benzodiazepine	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+180	36779245	Patient 13	LTG (lamotrigine)	sodium_channel	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+181	36779245	Patient 13	BRV (brivaracetam)	sv2a	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+183	36779245	Patient 13	LEV (levetiracetam)	sv2a	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+186	36779245	Patient 13	PER (perampanel)	ampa_antagonis	not_stated	polyth	SUPPORTS		Oliver Table 2: ASMs trialed with a per-patient 'drug-resistant' column: regimen-level; polytherapy code right
+187	37583270	WWOX row 1 (M; FUA (2), ES (	initial hormonal therapy (agent no	steroid_acth	none	yes	SUPPORTS		
+188	37583270	WWOX row 1 (M; FUA (2), ES (	vigabatrin (VGB)	other	resolved	yes	SAYS_LESS	CLASS_GABA_AT	'FIHT, response with VGB': 'response' is not 'resolved'; the outcome column reads ESC, SF
+189	37583270	WWOX row 2 (F; ES (3))	initial hormonal therapy (agent no	steroid_acth	resolved	yes	SAYS_LESS		'RIHT' = responded to initial hormonal therapy (legend), then relapse; 'responded' coded resolved
+190	37583270	WWOX row 2 (F; ES (3))	nitrazepam (NZ)	benzodiazepine	resolved	yes	SAYS_LESS		'response with NZ' coded resolved
+191	37583270	WWOX row 3 (F; GTC (2), ES (	initial hormonal therapy (agent no	steroid_acth	none	yes	SUPPORTS		
+192	37583270	WWOX row 3 (F; GTC (2), ES (	zonisamide (ZON)	carbonic_anhyd	resolved	yes	SAYS_LESS		'FIHT, response with ZON' but the outcome column reads 'PES, SF' (persistent epileptic spasms; seizure free): contradictory, 'resolved' not supported
+193	37583270	WWOX row 4 (F; ES (2))	initial hormonal therapy (agent no	steroid_acth	none	yes	SUPPORTS		
+194	37583270	WWOX row 4 (F; ES (2))	ketogenic diet (KD)	ketogenic_diet	none	yes	SUPPORTS		
+197	38407561	A 1-year and 7-month-old gir	ACTH therapy	steroid_acth	not_stated	polyth	SUPPORTS		abstract quote verified against the PubMed abstract (no PMC copy held); 'despite altering AEDs and ACTH' is a regimen statement: polytherapy code right
+200	39101447	The patient (13-month-old gi	topiramate	carbonic_anhyd	resolved	yes	SUPPORTS	ATTRIBUTION_SHOULD_BE_POLYTHERAPY	LEV and PB had given the same 'no recurrence for about 3 months' before; whether they continued when topiramate was started is not stated
+201	39101447	The patient (13-month-old gi	vigabatrin	other	partial	yes	SAYS_MORE	CLASS_GABA_AT;ADDON_ATTRIBUTED	quote: no visible seizures at last follow-up (VEEG still showed clinical events not noticed at home); partial is conservative; VGB 'added to the treatment'
+204	42092735	A male neonate (the patient)	phenobarbital	gabaa_pam_non_	partial	yes	SUPPORTS		
+206	42092735	A male neonate (the patient)	valproic acid	valproate_type	partial	yes	SUPPORTS	ADDON_ATTRIBUTED	VPA introduced after PB+VGB; frequency decreased, not resolved
+207	42092735	A male neonate (the patient)	clobazam	benzodiazepine	resolved	yes	SUPPORTS	ATTRIBUTION_SHOULD_BE_POLYTHERAPY;ADDON_ATTRIBUTED	same paragraph: 'has since remained seizure-free on a regimen of valproic acid and clobazam' (the extractor's own regimen example); the first sentence attributes to the CLB addition
