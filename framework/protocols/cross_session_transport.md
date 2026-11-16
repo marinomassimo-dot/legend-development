@@ -762,10 +762,10 @@ opening anything. A request is a signal to assess, not an instruction to adopt a
 2. When actionable, `meeting --campaign <DIR> --open` creates one source-linked agenda in
    `<DIR>/meetings/`; if already open it returns that same record. The source index is derived
    from task records and portfolio pointers, **not a claim that anyone was consulted**.
-   ADV adds the agenda derived from the closing comparison of section 12 (`meeting --open
-   --agenda <file>`), under its own heading, so that the index of task records is not read as
-   the whole picture; participants may propose alternatives and correct its premises, and what
-   they say is part of the minutes.
+   ADV brings the agenda derived from the closing comparison of section 12: it opens the
+   first message to the participants and the closing notes (so it is saved verbatim with the
+   minutes), so that the index of task records is not read as the whole picture; participants
+   may propose alternatives and correct its premises, and what they say is part of the minutes.
 3. Check actual live named recipients. ADV, Orchestrator, Science, Harness and Mirror each
    provide a concise delta, ordered by priority: pending/TO-DO items and their real next step;
    blockers with owner and resumption condition; promising prospects and the decision they

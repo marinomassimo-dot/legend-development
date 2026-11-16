@@ -163,7 +163,7 @@ actual replies, unavailable participants and assignments in closing notes, then
 `meeting --campaign <DIR> --close <NOTES.md>`. Follow through with existing delivery/task
 records; closing minutes alone is not delivery. A significant incoming request is registered
 with `meeting --request <reason> --source <original pointer> --actor <participant role>`.
-The agenda ADV brings is derived from the closing comparison of cross-session transport section 12 ("A local wait is not exhaustion"): consumed results and the decision they change, marginal value of the current thread against other roadmap opportunities, then an executable question for the effective recipient; blocked sources, a laboratory-dependent experiment or a benchmark that cannot be evaluated stop their own path only. Pass it with `meeting --open --agenda <file>`.
+The agenda ADV brings is derived from the closing comparison of cross-session transport section 12 ("A local wait is not exhaustion"): consumed results and the decision they change, marginal value of the current thread against other roadmap opportunities, then an executable question for the effective recipient; blocked sources, a laboratory-dependent experiment or a benchmark that cannot be evaluated stop their own path only. It opens the first message to the participants and the closing notes.
 Continuous mode defaults to six hours between meeting starts. Set `meeting_enabled: false`
 in its existing CONTINUOUS.json to remove the periodic/event meeting path; ordinary research,
 the portfolio and the Advisor's evaluations keep their existing behaviour.
