@@ -1,0 +1,11 @@
+mechanism_class	a1_coded	children_with_a_row	children_seizure_outcome_stated	children_development_outcome_stated	children_both	reports	children_worsening_stated	scorable_seizure	scorable_development
+GABA-AT (vigabatrin)	yes	22	11	5	5	10	0	yes	yes
+steroid/ACTH (hormonal)	yes	11	8	3	3	6	0	yes	yes
+ketogenic diet	yes	12	8	2	2	7	0	yes	not scorable (n<3)
+cannabidiol	yes	8	4	1	1	3	0	yes	not scorable (n<3)
+sodium-channel	no (co-therapy mention only)	1	0	0	0	1	0	not scorable	not scorable
+valproate-type	no (co-therapy mention only)	6	0	0	0	4	0	not scorable	not scorable
+benzodiazepine and other GABA-A modulators	no (co-therapy mention only)	9	0	0	0	6	0	not scorable	not scorable
+carbonic-anhydrase / multi-target	no (co-therapy mention only)	7	0	0	0	6	0	not scorable	not scorable
+SV2A (levetiracetam)	no (co-therapy mention only)	7	0	0	0	5	0	not scorable	not scorable
+T-type (ethosuximide), AMPA (perampanel), fenfluramine-type, mTOR-type, pyridoxine	no	0	0	0	0	0	0	not scorable	not scorable
