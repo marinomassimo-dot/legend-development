@@ -1582,6 +1582,19 @@ def operating_mode_text(campaign: Path) -> str:
             f"Shared weekly allocation: {week['state']} ({week.get('note', 'measured and enforced for this presidio')}). Operator control lines in the roadmap section (most recent last): {json.dumps(ctl)}.\n\n" + followthrough_text())
 
 
+def direction_before_status_text() -> str:
+    """Render the shared rule from its one home; do not maintain a second prompt policy."""
+    path = ROOT / "framework/protocols/cross_session_transport.md"
+    try:
+        paragraphs = path.read_text(encoding="utf-8").split("\n\n")
+    except OSError:
+        paragraphs = []
+    paragraph = next((p.strip() for p in paragraphs if p.startswith("**Direction before status (")), "")
+    return "## Direction before status\n" + (paragraph or
+        "Canonical guidance unavailable in framework/protocols/cross_session_transport.md section 12. "
+        "Disclose the missing input; do not treat it as evidence that useful research is exhausted.")
+
+
 def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
     campaign = Path(campaign)
     states = assignment_states(campaign)
@@ -1592,6 +1605,9 @@ def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
              "## Operator roadmap (authoritative; operator instructions prevail over any automatic plan)", roadmap_text() or "(no roadmap section found: say so, and propose nothing beyond keeping the plan)", "",
              "## Campaign limits", json.dumps({k: v for k, v in _budget(campaign).items() if k in ("expires_utc", "max_invocations", "max_assignments", "turn_limit")}), "",
              operating_mode_text(campaign), "",
+             direction_before_status_text(), "",
+             "## Neutral entry points", render_entrypoints(entrypoints()), "", f"Memory directory (read-only): `{MEMORY_DIR}`", "",
+             "## Live harness scouting (daily scout briefing, read by the caller: opportunities, not evidence)", scout_briefing(), "",
              portfolio_text(), "",
               portfolio_brief(obs.get("portfolio") or portfolio_snapshot()), "",
               "For a material portfolio change you may add an optional `## Portfolio updates` section with a fenced json list of partial row objects (stable `id` required). The procedure saves the assessment verbatim, then applies these advisory patches. "
@@ -1603,11 +1619,10 @@ def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
              json.dumps({k: {"recipient": v["recipient"], "key": v["key"], "highest": v["highest"], "mandates": v.get("mandates", [])} for k, v in states.items()}, indent=1) or "none", "",
              "Evidence levels are historical transport facts. Current mandate verdicts and their paths are listed separately: TAKEN does not mean still running, RELEASED does not prove consumption. Read the relevant complete record before relying on its state. "
              "The latest saved assessment is historical context; it is not evidence that its old premises remain true.", "",
-             f"## Previous assessment\n{prior[-1].parent.name}: `{prior[-1]}` (read it; reuse it when nothing relevant changed)" if prior else "## Previous assessment\nnone", "",
+             f"## Previous assessment\n{prior[-1].parent.name}: `{prior[-1]}` (historical decision; reconcile after framing the direction; reuse while its premises and expected value still hold)" if prior else "## Previous assessment\nnone", "",
              "## Incomplete attempts (history, not reusable decisions)\n" + (json.dumps(incomplete, indent=1) if incomplete else "none"), "",
-             "## Live harness scouting (daily scout briefing, read by the caller: a feed of opportunities, not of evidence; the weekly candidate tables are stale)", scout_briefing(), "",
              turn_limit_text(campaign), "",
-             "## Neutral entry points", render_entrypoints(entrypoints()), "", f"Memory directory (read-only): `{MEMORY_DIR}`", "", "## Output", CONTRACT,
+             "## Output", CONTRACT,
              "Give the usual headings, then `## Assignments`: either `none: <reason>` (continuing the plan can be the best decision) or one `### ASSIGNMENT n` block per assignment with exactly these "
              "`field: value` lines: " + ", ".join(ASSIGNMENT_FIELDS) + ". recipient is Orchestrator, Science or Harness. At most as many blocks as the campaign allows; none to show independence.",
              "Finish with `## Outcome`, four `field: value` lines: `outcome:` one of " + ", ".join(OUTCOMES) + "; `excluded:` (for a wait: the relevant alternatives you left out, each with why); `reason:`; "

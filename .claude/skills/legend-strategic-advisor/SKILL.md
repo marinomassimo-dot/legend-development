@@ -102,6 +102,13 @@ folder, `framework/scripts/strategic_advisor.py` and its test, the row in `frame
 
 ## Proactive pilot (Stage P)
 
+At strategic decision boundaries, the hosting session and analyst use **Direction before
+status** in [cross-session transport section 12](../../../framework/protocols/cross_session_transport.md#12--autonomous-mandate-continuity).
+The generated brief puts that canonical paragraph and the source map ahead of the mechanical
+queue and previous decision. The host applies the same reasoning at a delivery or MEETING
+without commissioning another evaluation merely to fill a form. A technical test can check
+that these inputs reach the analyst; useful strategic initiative still needs observed work.
+
 **What it is.** The operator's roadmap (the marked section at the top of `disease-models/wwox/research/drug_repurposing/roadmap_current.md`) defines the mission and the priorities; the
 dashboard, the open questions, DREAM and the radar help the Advisor choose how to pursue them. Without waiting to be asked it observes the laboratory, compares directions, and may draft
 assignments (`### ASSIGNMENT` blocks) for the Orchestrator, Science or Harness. A new operator line in the roadmap prevails over any automatic plan and triggers a re-evaluation. The Advisor
