@@ -1,0 +1,5 @@
+statistic	value	networks
+mean_within_rho_duration_vs_following_interval	0.135	300
+sd_within_rho_duration_vs_following_interval	0.202	300
+mean_within_rho_preceding_interval_vs_duration	0.131	300
+pooled_rho_duration_vs_following_interval	0.160	300
