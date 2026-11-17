@@ -1,0 +1,27 @@
+gene	fraction_used	C_log2	ci_low	ci_high	n_treated	n_control	S_line_hippocampus_log2	readable_C(|C|>=0.4)	readable_S(|S|>=0.4)	same_sign	call_vs_S	predicted_sign	prediction_result	C_other_fraction
+Gabrd	neun+	-0.35	-0.68	-0.00	4	4	-1.67	False	True	True	partly copied	-	not readable	-0.27
+Gabra5	neun+	-0.13	-0.41	+0.07	4	4	-0.54	False	True	True	partly copied	-	not readable	-0.22
+Gabra1	neun+	-0.06	-0.34	+0.25	4	4	-1.22	False	True	True	not copied			-0.19
+Gabrg2	neun+	+0.25	-0.04	+0.65	4	4	-0.35	False	False	False	S not readable			-0.09
+Slc6a1	neun+	-0.10	-0.39	+0.13	4	4	-0.94	False	True	True	not copied			-0.27
+Npy	neun+	+0.21	-0.57	+1.05	4	4	+2.52	False	True	True	not copied	+	not readable	-0.38
+Npy2r	neun+	-0.03	-0.20	+0.14	4	4	-0.84	False	True	True	not copied			-0.43
+Sst	neun+	-0.02	-0.77	+0.75	4	4	+1.31	False	True	False	not copied	-	not readable	-0.38
+Pvalb	neun+	-0.20	-0.56	+0.14	4	4	-1.76	False	True	True	not copied	-	not readable	+0.16
+Gad1	neun+	-0.12	-0.37	+0.15	4	4	-0.54	False	True	True	partly copied	unreadable	right	-0.17
+Grin2b	neun+	+0.05	-0.17	+0.32	4	4	-1.81	False	True	False	not copied			-0.19
+Grin2a	neun+	+0.01	-0.21	+0.20	4	4	-0.91	False	True	False	not copied			-0.38
+Cacna1h	neun+	+0.04	-0.24	+0.29	4	4	-0.46	False	True	False	not copied	+	not readable	-0.01
+Cacna1i	neun+	-0.04	-0.25	+0.25	4	4	-1.11	False	True	True	not copied			+0.13
+Hcn2	neun+	-0.10	-0.34	+0.12	4	4	-0.65	False	True	True	not copied	-	not readable	+0.23
+Slc12a5	neun+	-0.07	-0.25	+0.07	4	4	-0.55	False	True	True	not copied	-	not readable	-0.16
+Slc12a2	neun+	+0.16	-0.07	+0.36	4	4	-1.15	False	True	False	not copied	+	not readable	+0.07
+Kcnk2	neun+	+0.15	-0.11	+0.40	4	4	-0.83	False	True	False	not copied			-0.10
+Kcnq2	neun+	-0.07	-0.24	+0.10	4	4	-0.45	False	True	True	not copied			-0.16
+Adora1	neun+	-0.21	-0.35	-0.05	4	4	-0.06	False	False	True	S not readable			-0.13
+Gfap	neun-	-0.21	-0.58	+0.19	4	4	+2.12	False	True	False	not copied	+	not readable	+0.28
+Gja1	neun-	-0.89	-1.57	-0.28	4	4	-0.82	True	True	True	copied			-0.55
+Kcnj10	neun-	+0.06	-0.16	+0.32	4	4	+0.22	False	False	True	S not readable			-0.05
+Adk	neun-	-0.22	-0.43	-0.02	4	4	-0.44	False	True	True	partly copied			-0.13
+Wwox	neun+	+0.07	-0.19	+0.38	4	4	-2.56	False	True	False	not copied			-0.09
+Aif1	neun-	+0.29	-0.08	+0.54	4	4		False	False	False	S not readable	+	not readable	+0.24
