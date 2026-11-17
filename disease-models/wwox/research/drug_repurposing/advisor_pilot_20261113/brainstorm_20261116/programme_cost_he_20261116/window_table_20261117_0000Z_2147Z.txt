@@ -1,0 +1,39 @@
+WINDOW [2026-11-17T00:00:00Z, 2026-11-17T21:47:00Z)  (turns, output tokens, cache written, cache read; subagent columns are summed from the session's own subagent transcripts)
+
+SESSIONS	turns	output	cache_written	cache_read	sub_runs	sub_turns	sub_output	sub_cache_written	sub_cache_read
+Advisor evaluation P20 (a4c607f6)	6	10928	72306	310472	0	0	0	0	0
+Advisor evaluation P21 (598b692a)	5	5196	60621	218248	0	0	0	0	0
+Advisor evaluation P22 (6edec095)	8	8775	85209	469116	0	0	0	0	0
+Advisor evaluation P23 (6bc72d6e)	11	10691	86703	689466	0	0	0	0	0
+Advisor evaluation P24 (2a5af974)	14	13867	73015	783516	0	0	0	0	0
+Advisor evaluation P25 (8d03459d)	15	14914	98219	1051510	0	0	0	0	0
+Advisor evaluation P26 (e9e834f5)	12	15574	91388	773133	0	0	0	0	0
+Advisor evaluation P27 (f5d43296)	14	13244	84441	868925	0	0	0	0	0
+HE (29e50812)	792	657107	1926789	355895725	66	324	751264	2607803	19304003
+IT Orchestrator (4325d70d)	518	396135	1423837	139896133	3	161	217656	613651	18733552
+SCI (9400b253)	607	712958	1730004	185271719	0	0	0	0	0
+legend-development-39 (e6526331)	789	640111	1318153	420435982	0	0	0	0	0
+
+ADVISOR EVALUATIONS	turns	output	cache_written	cache_read	state
+P20 2026-11-17T04:24:20Z	6	10928	72306	310472	incomplete
+P21 2026-11-17T06:24:18Z	5	5196	60621	218248	incomplete
+P22 2026-11-17T07:27:18Z	8	8775	85209	469116	complete
+P23 2026-11-17T09:24:19Z	11	10691	86703	689466	complete
+P24 2026-11-17T11:24:05Z	14	13867	73015	783516	complete
+P25 2026-11-17T13:24:11Z	15	14914	98219	1051510	complete
+P26 2026-11-17T15:24:40Z	12	15574	91388	773133	complete
+P27 2026-11-17T18:25:20Z	14	13244	84441	868925	complete
+
+COUNTS
+ref	development/main
+commits	335
+merge_commits	163
+task_records_created	2
+task_final_states	{"CONTINUE": 1, "RELEASED": 1}
+assignment_events_by_state	{"DRAFTED": 11, "SENT": 10}
+assignment_ids_by_latest_state	{"DRAFTED": 1, "SENT": 10}
+holds_recorded	0
+presidio_decided	[]
+operator_directed	[]
+receipts_appended	9
+receipts_by_record_kind	{"contemporaneous_receipt": 9}
