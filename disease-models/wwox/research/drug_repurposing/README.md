@@ -45,6 +45,8 @@ never copied from an older one. Where a text written earlier says a receipt is "
 recorded event is found by identifier with `python3 framework/scripts/receipt_linkage.py`
 (read-only; it never edits the ledger).
 
+**Held results are filed by dataset folder, not by gene or need — look here before proposing a held-data pre-test (2026-11-17, `ADV-023`).** The WWOX-knockout organoid transcriptome (GSE156243, week 15, 4 knockout against 2 wild-type libraries) is already read: the seven canonical Wnt genes (AXIN2, LEF1, NKD1, APCDD1, TCF7L2, WNT5A, CTNNB1) are all UP in the knockout, with the maturation limit stated, in [`gse156243/prediction_wnt_sign_20261025.md`](gse156243/prediction_wnt_sign_20261025.md) (RESULT section); the paper's own figure-level reading is in `deepdive_manifests/PMID34268881.json`. A prediction about a gene or pathway in these organoids is checked against those two files first; the per-need list of what is held in human neural systems is [`dream4_20261108/needs_human_neural_systems.tsv`](dream4_20261108/needs_human_neural_systems.tsv).
+
 ## The rest of the capability, and where it lives
 
 This directory holds the **documents**. The **code** cannot live here: `framework/` is the generic
