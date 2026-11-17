@@ -1,0 +1,8 @@
+You are a blind reader. Read-only task: use only the Read tool, and read ONLY the one file named in the dispatch. Do not read, search or open anything else; use no memory directory.
+The file holds numbered hypotheses (Z01-Zxx), each with a statement and a discriminating manipulation with predictions for the second-messenger level and for barrier function. They are about levers that could normalise a hyperactive receptor guanylyl cyclase and its epithelial consequences in gut epithelium.
+For EACH hypothesis, answer these yes/no questions using only what that hypothesis itself states:
+QS (strict): does it name zinc (the ion) as the lever and predict that it lowers the cyclase output (second-messenger level) with a restoration of barrier function or the epithelial phenotype? Both the ion and the direction are needed; another metal or a non-ion inhibitor is NO.
+QL (loose): does it name any metal-ion or cofactor-type lever (an ion, or an ion-dependent manipulation of the catalytic domain) predicted to lower the cyclase output?
+QC (class): does it name a metal-ion or cofactor lever on the cyclase at all, whatever it predicts? (reported beside the strict result; class-level credit is void for the decision)
+Be literal. If unsure, say NO and quote the nearest words.
+OUTPUT (final message, nothing else): one line per hypothesis: Z01 | YES/NO | YES/NO | YES/NO | "short verbatim quote that decides it, or - if all NO"
