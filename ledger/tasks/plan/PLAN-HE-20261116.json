@@ -153,6 +153,38 @@
      "evidence": "framework/protocols/delegation_budget.md section 6 (2026-11-17); framework/protocols/fulltext_read_receipt.md (3bf2730330aa)"
     },
     {
+     "step": "RS-R6 public-data lookup (zero delegate tokens): 0 hits under the pre-declared definition; I8 dated Update (SCI's [4c])",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/rsr6_public_data/RSR6_RESULT.md (b17cc0482def)"
+    },
+    {
+     "step": "ENGINE_MEASURES.tsv (append-only, 12 columns, test) with rows M001-M025; rows handed by IT to be appended (counted_by IT)",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ENGINE_MEASURES.tsv; scripts/test_engine_measures.py",
+     "blocker": "IT's rows (new-class count, hours-to-consumer) not yet received"
+    },
+    {
+     "step": "Second-predictor ledger on GSE334405: HE lines HEL16-18 and the memory-free delegate's answers registered before SCI opened the counts",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/second_ledger_gse334405/ (HE sha256 d4970ad9..., delegate 5394ab82...); scored by IT"
+    },
+    {
+     "step": "Recall prompt names the weekly harness-scout trigger (tag ade69dbb); standing weekly scout W48 onward",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": "framework/scripts/strategic_advisor.py (fb0582b28cab); ADV replaces the cron text",
+     "blocker": "ADV replaces the installed recall; the next due week is W48"
+    },
+    {
+     "step": "Registry scan for a one-outcome target whose axis is absent from the corpus (metadata only)",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "candidate Thiel 2026 (PMID 42542632, zinc in GNAO1 disorders), Song 2026 accepted as positive-control type; no run before the operator's budget answer"
+    },
+    {
      "step": "Next target set, v2/v3 comparisons or any further delegate run",
      "status": "BLOCKED",
      "owner": "plan",

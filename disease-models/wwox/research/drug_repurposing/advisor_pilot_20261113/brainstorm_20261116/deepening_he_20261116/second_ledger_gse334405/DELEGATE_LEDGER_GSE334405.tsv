@@ -1,0 +1,10 @@
+id	who	bin_low	bin_high	probability
+HEL16	delegate	-inf	-0.4	0.27
+HEL16	delegate	-0.4	0.4000000001	0.53
+HEL16	delegate	0.4000000001	inf	0.2
+HEL17	delegate	-inf	-0.4	0.12
+HEL17	delegate	-0.4	0.4000000001	0.66
+HEL17	delegate	0.4000000001	inf	0.22
+HEL18	delegate	-inf	-0.4	0.2
+HEL18	delegate	-0.4	0.4000000001	0.6
+HEL18	delegate	0.4000000001	inf	0.2

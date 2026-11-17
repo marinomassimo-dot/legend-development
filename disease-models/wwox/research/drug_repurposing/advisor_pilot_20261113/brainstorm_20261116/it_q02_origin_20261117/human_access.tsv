@@ -1,0 +1,5 @@
+PMID	title	reason	needed_for
+19500159	A spontaneous mutation of the Wwox gene and audiogenic seizures in rats with lethal dwarfism and epilepsy (Genes Brain Behav 2009; doi 10.1111/j.1601-183x.2009.00502.x)	closed (no open-access full text in Europe PMC); publisher page not fetched in this run	EEG methods, n, ages, quantification of interictal spikes and bursts (abstract only so far)
+42397075	Disrupted WWOX-MYC interplay impairs neurogenesis in human brain organoids (Brain 2026; doi 10.1093/brain/awag239)	closed in Europe PMC; original laboratory	hyperexcitability method (cell-attached or other), numbers
+PPR960425	WWOX deficiency impairs neurogenesis and neuronal function in human organoids (bioRxiv; doi 10.1101/2024.12.22.630016)	Europe PMC full text HTTP 500; preprint server page not fetched; original laboratory	same as above
+30290271	Wwox deletion leads to reduced GABA-ergic inhibitory interneuron numbers ... in mouse hippocampus (Neurobiol Dis 2019; doi 10.1016/j.nbd.2018.09.026)	PMC article page returned a reCAPTCHA challenge (stop); Europe PMC non-OA	only to confirm no electrophysiology (abstract reports counts of PV/NPY interneurons and GAD65/67 levels)
