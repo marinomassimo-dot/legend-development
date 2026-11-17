@@ -1,0 +1,104 @@
+STEP 1: CLASSIFICATION OF THE 15 STAGE-1 HYPOTHESES
+The folder is a WWOX disease model. A whole-folder Grep for guanylyl, guanylate cyclase, GUCY2C, GC-C, cGMP, guanylin, linaclotide, PRKG and PKG returns 0 hits. A Grep for PDE, phosphodiesterase, ABCC, MRP4, PRKG, VASP, ZO-1, claudin, occludin and MLCK returns 1 hit, which is the word "occluding" (CC-20260909-26499798-01.md:98). No gut-epithelium mechanism is held.
+- S1-1 ligand tone. OUTSIDE (guanylin, uroguanylin, Guca2: 0).
+- S1-2 kinase-domain brake. OUTSIDE (0 in any cyclase context). The brake terms (autoinhibit, ATP-binding, kinase-like, pseudokinase, desensiti) give 8 hits in 3 files I did not open: orchestration_reviews/2026-08-11.md, deepdive_manifests/PMID23435430.json and corpus_seed_pubmed_20260806.jsonl. The nearest held item is an intramolecular occlusion in WWOX (dismissal_ledger_current.md:70).
+- S1-3 PDE5/9 sink. OUTSIDE (0).
+- S1-4 ABCC4 export. OUTSIDE (0).
+- S1-5 PKG2 effector. OUTSIDE (0).
+- S1-6 cGMP to PDE3 to cAMP relay. OUTSIDE (0 for cGMP or PDE3). The only cAMP-adjacent hit is a catalogued, unread title on PKA phosphorylation of ezrin-WWOX (batch_queue.md:172).
+- S1-7 CFTR flow injury. OUTSIDE. CFTR appears in about 5 lines, all as a folding-corrector analogy and none as secretion (proteostasis_rationale.md:33,65; therapeutic_strategies_current.md:58; mechanism_intervention_map.md:601,930). NHE3 gives 0.
+- S1-8 microbiota. OUTSIDE (germ-free: 0). Every "microbio" hit is a journal name, "Vet Microbiol".
+- S1-9 Atoh1/Notch lineage. OUTSIDE (Atoh1, Hes1, Rbpj, Paneth, goblet, Muc2, mucus: 0). "Notch" appears once, as a MeSH heading in a corpus-seed record (corpus_seed_pubmed_20260806.jsonl:280).
+- S1-10 Wnt niche. INSIDE as a circuit: more than 40 Wnt lines, including the WWOX-DVL2-Wnt arm and the intestinal-crypt liability of Wnt inhibition. The cGMP-to-Wnt link itself gives 0.
+- S1-11 secretory-cell ER stress and UPR. INSIDE as a circuit: about 12 lines (discovery_ledger_current.md:390-395, dismissal_ledger_current.md:68, mechanism_intervention_map.md:714-718, meta_metabolism_current.md:163, claim_registry_current.md:465). The cGMP link gives 0.
+- S1-12 PKG junction substrate. OUTSIDE (VASP, ZO-1, claudin: 0).
+- S1-13 cytokine feed-forward. INSIDE as a circuit, but only in neural tissue (about 57 inflammation lines in 17 files). TNF-receptor or MLCK terms in gut give 0.
+- S1-14 receptor dose or turnover. OUTSIDE (receptor desensitisation or internalisation: 0). Only an adjacent caution is held, namely that expression level is not activity.
+- S1-15 sGC/NO second source. OUTSIDE (sGC, nitric oxide, Gucy: 0).
+
+Of the final ten, six are OUTSIDE stage-1 hypotheses (S1-1, S1-2, S1-4, S1-5, S1-6, S1-9). Two are ENGINE hypotheses built from held circuits. Two are INSIDE stage-1 hypotheses (S1-10, S1-11). For every OUTSIDE hypothesis the corpus test is "not stated", and no "contradict" is claimed anywhere. Silence is not contradiction. A caveat applies to every H block. The folder holds no gut or GC-C data, so every "support" below is support for a mechanism, a compartment or a design rule in WWOX systems. None of it is gut data, and all of it is ESPANSIONE-grade transfer.
+
+H1. Origin: S1-1 (OUTSIDE, kept)
+Statement: The variant raises the receptor's gain toward normal luminal guanylin/uroguanylin tone, so cutting ligand supply lowers cGMP and restores the epithelium.
+Corpus test: NOT STATED. The whole-folder grep for guanylin, uroguanylin, Guca2 and GC-C returns 0. The rival terms (autoinhibition, brake) are also not stated in any cyclase context. Adjacent support only, and not decisive: CLAIM 028 holds that output depends on partner accessibility and not on level alone (claim_registry_current.md:502-509).
+What the usual reading assumes and this one changes: The usual reading is that a gain-of-function receptor is autonomously overactive and ligand is irrelevant. This reading says the variant amplifies ligand-dependent signalling, so the lever sits upstream of the receptor.
+Rejection: On the variant allele, delete epithelial Guca2a and Guca2b. If epithelial cGMP is unchanged, H1 is rejected.
+Discriminating manipulation (vs H2, the autoinhibition-loss rival): Ligand-null (Guca2a/Guca2b double knockout) on the variant allele, compared with variant plus ligand-null plus wild-type controls. H1 predicts cGMP falls toward wild type and barrier and secretory-cell counts recover with it. H2 predicts cGMP stays high and barrier stays abnormal. Include the wild-type ligand-null arm. The held lithium case failed its specificity test because the drug worked in wild type too (mechanism_intervention_map.md:477), so a ligand-null effect must be shown to exceed what it does in wild type.
+
+H2. Origin: S1-2 (OUTSIDE, kept)
+Statement: The variant removes an intramolecular brake in the receptor's regulatory (kinase-homology) domain, giving ligand-independent cyclase activity that is rescued only by restoring the brake in cis.
+Corpus test: NOT STATED for any cyclase. The cyclase grep returns 0. Adjacent support for the mechanism class only: WWOX holds a documented intramolecular cap, in which WW2 occludes the WW1 groove, and removing it changes activity (dismissal_ledger_current.md:70, D-04, and the P282A "stable and completely inert" result). Related caution: abundance and activity are dissociable in a held kinase system (mechanism_intervention_map.md:478).
+What the usual reading assumes and this one changes: The usual reading is "more catalytic activity", reachable only downstream. This reading makes the brake interface itself the lever.
+Rejection: A second cis mutation that kills ATP/nucleotide binding in the regulatory domain, with normal surface expression, leaves cGMP high.
+Discriminating manipulation (vs H3, the surface-abundance rival): Add the cis nucleotide-site-dead allele to the variant receptor and compare specific activity (cGMP per surface receptor, from surface biotinylation) at unchanged surface level. H2 predicts per-receptor activity falls and total cGMP falls with surface number unchanged. H3 predicts per-receptor activity is unchanged. Barrier tracks cGMP in both cases.
+
+H3. Origin: ENGINE (refines S1-14, receptor dose or turnover)
+Statement: The excess comes from the number of variant receptors reaching the apical surface, so lowering ER export or raising ER-associated clearance of the variant lowers cGMP at fixed specific activity.
+Corpus test: NOT STATED for any receptor. Desensitisation and receptor-dose terms give 0. The held design rule is the compartment-match lesson: ERAD and chaperone logic is "true only for ER/secretory proteins" (dismissal_ledger_current.md:68, D-02; mechanism_intervention_map.md:714-718). A membrane receptor is an ER/secretory protein, so the rule places this circuit in the right compartment. The held warning is that the sign of a chaperone depends on its route, and a folding enhancer can move things the wrong way (dismissal_ledger_current.md:69, D-03). A held trafficking hub is SEC23IP/SCAMP3 in endomembrane trafficking (discovery_ledger_current.md:255-261). The held caution on dose is that level is not output (claim_registry_current.md:502-509).
+What the usual reading assumes and this one changes: The usual reading is that a gain-of-function variant has a fixed activity per receptor. This reading makes surface number the variable, and a folding-capacity boost would then be the wrong direction.
+Rejection: Halving surface receptor (variant/null heterozygote, or ER-export reduction) does not lower cGMP in proportion to surface number.
+Discriminating manipulation (vs H2): Reduce ER-to-surface export of the variant (COPII cargo-adaptor reduction, or an ER-retention signal) and measure cGMP against surface-biotinylated receptor. H3 predicts cGMP falls in proportion to surface number, with ligand removal still acting additively and specific activity unchanged. H2 predicts cGMP per surface receptor is unchanged by export reduction. Barrier improves in step with total cGMP.
+
+H4. Origin: S1-4 (OUTSIDE, kept)
+Statement: Export of cGMP across the basolateral or apical membrane (ABCC4/MRP4 class) is a rate-limiting sink, and the excess pool persists because efflux is saturated.
+Corpus test: NOT STATED. ABCC and MRP4 return 0. CFTR appears only as a corrector analogy (proteostasis_rationale.md:65), not as a transporter. Nothing on cyclic-nucleotide efflux is held.
+What the usual reading assumes and this one changes: The usual reading is that cGMP is set only by synthesis and hydrolysis. This reading adds export as an independent third sink.
+Rejection: Abcc4 loss on the variant allele does not raise intracellular cGMP.
+Discriminating manipulation (vs H5, the effector rival, and the PDE sink S1-3): Epithelial Abcc4 deletion on the variant allele. H4 predicts intracellular cGMP rises further, extracellular cGMP falls, and barrier worsens. A PDE-sink mechanism predicts deletion changes little. A matched epithelial PDE-overexpression arm predicts intracellular cGMP and extracellular cGMP both fall.
+
+H5. Origin: S1-5 (OUTSIDE, kept)
+Statement: The epithelial damage is carried by the apical cGMP-dependent kinase PKG2 (PRKG2) and not by cGMP itself, so removing the kinase decouples high cGMP from the phenotype.
+Corpus test: NOT STATED. PRKG and PKG return 0. The only held kinase-effector precedent is the general rule that phosphorylation state and compartment decide output (CLAIM 028, claim_registry_current.md:502-509). The related catalogued PKA-ezrin-WWOX title (batch_queue.md:172) is unread and unmatched.
+What the usual reading assumes and this one changes: The usual reading is that lowering cGMP is the only route. This reading puts the rescue at the effector, with cGMP left high.
+Rejection: Epithelial Prkg2 deletion on the variant allele does not improve barrier or secretory-cell counts.
+Discriminating manipulation (vs H6, the cAMP relay): Epithelial Prkg2 knockout on the variant allele. H5 predicts cGMP is unchanged or higher (feedback lost) while barrier and differentiation normalise. If the cAMP relay carries the damage, barrier stays abnormal. An H6 arm should add a cAMP sink and show cGMP unchanged but barrier improved.
+
+H6. Origin: S1-6 (OUTSIDE, kept)
+Statement: Excess cGMP inhibits a cGMP-inhibited cAMP phosphodiesterase (the PDE3 class), so cAMP rises, and the cAMP excess is the damaging signal.
+Corpus test: NOT STATED. cGMP and PDE3 return 0. The only cAMP-adjacent line is the catalogued, unread PKA-ezrin-WWOX title (batch_queue.md:172). It is not a cross-talk statement.
+What the usual reading assumes and this one changes: The usual reading is that the harm is cGMP-specific. This reading makes it a cGMP-to-cAMP relay.
+Rejection: cAMP is not raised in the variant epithelium, or lowering cAMP does not help the barrier.
+Discriminating manipulation (vs H5): Epithelial expression of a PDE3-resistant cAMP-degrading allele, or a cAMP-specific PDE, on the variant allele. H6 predicts cGMP is unchanged, cAMP falls, and barrier improves. H5 predicts barrier does not improve and Prkg2 loss is what rescues.
+
+H7. Origin: S1-9 (OUTSIDE, kept)
+Statement: Excess cGMP/PKG shifts progenitors away from the secretory lineage (loss of Atoh1 or gain of Notch/Hes1 signalling), so goblet, Paneth and enteroendocrine cells are too few. The mucus and antimicrobial layer thins, and the barrier leaks as a result.
+Corpus test: NOT STATED. Atoh1, Hes1, Rbpj, Paneth, goblet and Muc2 return 0 (the "Notch" hit is a MeSH heading only, corpus_seed_pubmed_20260806.jsonl:280). An adjacent held caution applies: WWOX-knockout organoids change differentiation markers, but the paper does not always separate primary cell effect from maturation delay or organoid composition (fulltext_dossiers/PMID34268881.md:12). Any readout here must separate lineage allocation, maturation delay and composition.
+What the usual reading assumes and this one changes: The usual reading is that the barrier defect is a direct junction problem. This reading says it is a downstream effect of lineage allocation, so the leak should follow the differentiation defect in time.
+Rejection: Restoring secretory numbers (induced Atoh1, or epithelial Rbpj loss) leaves the barrier leaking.
+Discriminating manipulation (vs H8, the Wnt-niche rival): Epithelial Rbpj deletion, or induced Atoh1, on the variant allele. H7 predicts cGMP is unchanged, goblet and Paneth numbers and mucus recover, and barrier improves. H8 predicts the Wnt-dependent compartment stays abnormal and barrier stays abnormal.
+
+H8. Origin: S1-10 (INSIDE as a circuit, kept)
+Statement: Excess cGMP/PKG damps epithelial Wnt/β-catenin signalling, so there are too few Wnt-dependent stem and Paneth cells and secretory differentiation fails.
+Corpus test: SUPPORT for the crypt's dependence on Wnt tone, and NOT STATED for the cGMP-to-Wnt link. Systemic Wnt inhibition has an intestinal-crypt turnover liability (mechanism_intervention_map.md:461; discovery_ledger_current.md:83). The held rule is that "less Wnt is not a safe default" (therapeutic_strategies_current.md:67; claim_registry_current.md:502-509). The held WWOX direction is Wnt up on WWOX loss (discovery_ledger_current.md:80-81), and that sign is not this gut sign.
+What the usual reading assumes and this one changes: The usual reading is a differentiation block downstream of Notch. This reading is a deficit of the niche signal.
+Rejection: Crypt Wnt target genes (Lgr5, Axin2) are normal or raised in variant crypts.
+Discriminating manipulation (vs H7): Epithelial stabilised β-catenin (Ctnnb1 exon 3) or R-spondin supply on the variant allele. H8 predicts cGMP is unchanged, Paneth and stem cells recover, and barrier improves while the Notch/Atoh1 status is unchanged. H7's Atoh1/Rbpj manipulation does not restore Wnt-dependent cells. The held "less Wnt is not a safe default" rule means a hyperactive arm should be run too. Excess Wnt should itself worsen the epithelium.
+
+H9. Origin: S1-11 (INSIDE as a circuit, kept)
+Statement: Sustained cGMP signalling overloads the ER of secretory cells, so the terminal UPR arm kills or silences goblet and Paneth cells.
+Corpus test: SUPPORT for the compartment and the adaptive-versus-terminal UPR concept, and NOT STATED for any cGMP link. DL-MECH-023 holds that a WWOX state biases ER-stress outcome between adaptive and apoptotic, through GRP78, IRE1, PERK/eIF2α, JNK/p38 and BCL-xL:BAX (discovery_ledger_current.md:390-395). The ER-folding route is "true only for ER/secretory proteins" (dismissal_ledger_current.md:68). A held ATF4/UPR effect is HIF1α-independent (meta_metabolism_current.md:163). The held caution is that chaperone sign depends on route (dismissal_ledger_current.md:69).
+What the usual reading assumes and this one changes: The usual reading is that differentiation fails through lineage signals. This reading is a loss of secretory-cell survival or function through proteostasis.
+Rejection: Xbp1 splicing and Ddit3 (CHOP) are not raised in variant secretory cells.
+Discriminating manipulation (vs H7): Delete Ddit3, or overexpress spliced Xbp1, on the variant allele. H9 predicts cGMP is unchanged, secretory-cell survival, mucus and barrier improve, and Atoh1-positive lineage commitment stays unchanged. H7 predicts Ddit3 loss does not restore secretory numbers while Rbpj loss does.
+
+H10. Origin: ENGINE (reframes S1-13)
+Statement: The raised cytokines are a feed-forward cause of the leak through an IL-6/gp130/STAT3-dominated loop, not through TNF/MLCK, and cut the loop and the barrier recovers with cGMP left high.
+Corpus test: SUPPORT for the signature, NOT STATED for gut. In the Wwox-knockout hippocampus Il6 is significantly raised but Tnf-a is not (meta_gaba_paradox_current.md:39, n=4 per group). WWOX loss raises IL-6, IL-8, IL-1β and MCP-1 through MAPK/NF-κB, and WWOX normally restrains this (discovery_ledger_current.md:208-209). JAK2/STAT3/IL6 is a listed druggable node (discovery_ledger_current.md:262). The held reading is that inflammation is a downstream modifier (working_model_current.md:93).
+What the usual reading assumes and this one changes: The usual reading is that cytokines are a downstream readout, or that TNF/MLCK is the permeability driver. This reading makes a specific IL-6 loop self-amplifying, with TNF dispensable.
+Rejection: Il6 deletion on the variant allele leaves barrier and cytokine rise unchanged.
+Discriminating manipulation (vs the S1-13 TNF/MLCK rival): Il6 deletion versus Tnfrsf1a deletion, each on the variant allele. H10 predicts cGMP is unchanged, Il6 deletion improves barrier, and Tnfrsf1a deletion changes little. The TNF/MLCK rival predicts the reverse. Avoid epithelial Stat3 deletion as the arm, because STAT3 is also a regenerative signal and its loss could worsen barrier.
+
+Operational note: the held rule that a rescue effect must exceed what the same manipulation does in wild type (mechanism_intervention_map.md:477) should be applied to H1, H5, H7, H8 and H9.
+
+FILES READ:
+/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/set3/T7/V3_S1_A.txt
+/tmp/legend_cut_1867a26a8/CLAUDE.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/discovery_ledger_current.md (lines 74-88, 386-399; Grep context at 119-122, 178-181, 208-209, 255-263)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md (lines 440-480, 708-722; Grep context at 601, 930)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/dismissal_ledger_current.md (lines 60-71)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/proteostasis_rationale.md (lines 25-74)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/meta/meta_gaba_paradox_current.md (lines 36-41)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/working_model_current.md (lines 88-95; Grep context at 63, 156, 175)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/claim_registry_current.md (lines 501-514; Grep context at 452-465)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID42422765_partial_locators.md (lines 464-475)
+Grep matches only, not read whole: /tmp/legend_cut_1867a26a8/disease-models/wwox/registries/batch_queue.md:172; /tmp/legend_cut_1867a26a8/disease-models/wwox/registries/corpus_seed_pubmed_20260806.jsonl:280; /tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID34268881.md:12; /tmp/legend_cut_1867a26a8/disease-models/wwox/therapeutics/therapeutic_strategies_current.md:58,66-67; /tmp/legend_cut_1867a26a8/disease-models/wwox/meta/meta_metabolism_current.md:163; /tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260909-26499798-01.md:98

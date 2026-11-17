@@ -1,0 +1,99 @@
+Reading of the folder: it is a WWOX-DEE model. WWOX is a cytosolic oxidoreductase, not a membrane carrier, so everything below transfers by analogy only (the folder's own MECHANISM_TRANSFER_FIREWALL, mechanism_intervention_map.md:60). Stage 1 assumed a dopamine-transporter-like carrier. The question does not name the carrier, so any lever that works on a transmitter flips sign if the carrier clears an inhibitory transmitter. The hits below are counts of matches from Grep over /tmp/legend_cut_1867a26a8/disease-models.
+
+S1 classification (all 15):
+- INSIDE the held circuits: S1-1 (ligand chaperone: "chaperone" 104 hits in 24 files, includes chaperone-mediated autophagy), S1-2 (Hsp70/Hsp90/osmolyte/4-PBA terms: 63 hits in 27 files), S1-7 (per-carrier activity: "stable but inert" is a held phenotype), S1-14 (developmental window: 17 hits in mechanism_intervention_map.md), S1-15 (cell-type sufficiency: Synapsin/Olig2/GFAP-Cre terms 180 hits in 49 files).
+- OUTSIDE:
+  - S1-3 (COPII/Sec24/Sar1/ER-export): 0 hits.
+  - S1-4 (palmitoylation/DHHC): 0 hits.
+  - S1-5 (ERAD/Hrd1): 5 lines in 4 files, all in the ledgers or the map, and all of them reject ERAD as the wrong compartment for WWOX.
+  - S1-6 (endocytosis/Nedd4): 1 hit, in batch_queue.md. The ubiquitin side is inside (ITCH/K63).
+  - S1-8 (tyrosine hydroxylase/dopamine synthesis): the terms dopamin|tyrosine hydroxylase|monoamine|VMAT hit 18 times in 8 files. The only prose hit is one passing review sentence about the substantia nigra (PMID42128308_partial_locators.md:213-214).
+  - S1-9 (D1/D2/DARPP) and S1-11 (A2A/adenosine): 0 hits.
+  - S1-10 (serotonin/Tph2): 0 hits.
+  - S1-12 (NET/OCT3 alternative carrier): 0 hits.
+  - S1-13 (dominant-negative/oligomer): 0 hits on dominant-negative; the 3 hits for "dimer" are unrelated (full_text_queue_current.md:1213 and :1948, discovery_ledger_current.md:775).
+- Kept in the final ten: S1-1, S1-2, S1-3, S1-5, S1-7, S1-8, S1-9, S1-13, S1-14. The five OUTSIDE ones kept are S1-3, S1-5, S1-8, S1-9, S1-13. H10 is ENGINE.
+- Dropped for redundancy or lack of a separate readout: S1-4, S1-6, S1-10, S1-11, S1-12 and S1-15. Each was dropped for distinctness only, not because the folder is silent.
+
+H1. Origin S1-1 (INSIDE, "chaperone" 104 hits / 24 files)
+- Statement: A ligand that binds the carrier's own pocket acts as a folding scaffold, so ER exit and surface density rise and locomotion falls.
+- Corpus test: support for the concept, but conditional. proteostasis_rationale.md:55 defines the site-specific chaperone and says it needs a binding pocket. proteostasis_rationale.md:72 and mechanism_intervention_map.md:605 say the route fails when no ligand is known. mechanism_intervention_map.md:603 says no WWOX variant has ever been shown chaperone-responsive.
+- Usual reading assumes / this changes: The usual reading takes a pocket ligand to be a blocker or a substrate. This one treats its binding energy as the active principle. The folder adds that rescued abundance is not rescue of function (dismissal_ledger_current.md:70; proteostasis_rationale.md:96).
+- Rejection: Surface carrier rises with the ligand class but surface-normalised uptake and locomotion do not move.
+- Discriminating manipulation (nearest rival H2, a non-ligand folding lever): put in cis a second-site change that deletes ligand binding but leaves misfolding unchanged. Locomotion stays high and surface stays at the knock-in baseline for H1, while H2 is unaffected.
+
+H2. Origin S1-2 (INSIDE, 63 hits / 27 files), reframed with ENGINE
+- Statement: The sign of chaperone-balance manipulation depends on which chaperone arm is limiting. If triage (HSC70-type delivery to degradation) dominates, reducing it raises surface carrier and lowers locomotion. If folding assistance dominates, the opposite holds.
+- Corpus test: contradicts the stage-1 assumption that a chaperone always helps, because the sign flips. dismissal_ledger_current.md:69 (D-03) says "HSC70 does not rescue: it delivers to the lysosome" and that an HSP70 co-inducer could accelerate destruction. This is restated at mechanism_intervention_map.md:609. The folder is also unresolved on whether 4-PBA acts as an HSP co-inducer (dismissal_ledger_current.md:110).
+- Usual reading assumes / this changes: The usual reading is that more chaperone gives more folded protein. This one says the same family is also the triage machinery.
+- Rejection: Loss of the HSC70-class arm leaves surface unchanged and chaperone induction raises it.
+- Discriminating manipulation (nearest rival H1): conditional loss of the HSPA8-class chaperone in carrier-expressing neurons. If triage-limited: surface rises, locomotion falls, and the effect does not depend on the ligand pocket. If folding-limited: surface falls and locomotion rises. H1 predicts no dependence on this arm.
+
+H3. Origin S1-3 (OUTSIDE, 0 hits)
+- Statement: ER export, not folding or degradation, limits the marginally folded mutant, so raising cargo-selective COPII capacity raises surface carrier and lowers locomotion.
+- Corpus test: not stated (0 hits for COPII|Sec24|Sar1|ER export). Rival terms (proteasom|lysosom|CMA) are held, but only for a cytosolic protein (discriminating_experiment.md:8-9, :22). The held fork "synthesis vs insolubility vs turnover" (proteostasis_rationale.md:105) has no export branch, which is a gap in the folder, not a contradiction.
+- Usual reading assumes / this changes: The usual reading says a mutant that fails quality control cannot exit whatever the machinery. This one treats export capacity as rate-limiting.
+- Rejection: Raising the cargo-selective Sec24 isoform in carrier neurons leaves surface density unchanged.
+- Discriminating manipulation (nearest rival H4): conditional gain of the cargo-selective Sec24 isoform on the knock-in. Surface rises and locomotion falls for H3. For H4 surface does not move, because the mutant is cleared before it reaches the export step.
+
+H4. Origin S1-5 (OUTSIDE, 5 lines, all rejections for a cytosolic protein)
+- Statement: ERAD removes the mutant before export, so relaxing ERAD raises the ER and surface pool and lowers locomotion. This is the opposite of the lysosome-first route that the folder holds for WWOX.
+- Corpus test: not stated for the carrier. Indirect support for applicability: dismissal_ledger_current.md:68 (D-02) says ERAD is right "only for ER/secretory proteins", and a plasma-membrane carrier is one. The folder rejected ERAD for WWOX only because WWOX is cytosolic, and that reason does not hold here. Support for the compartment rule, not for efficacy. discriminating_experiment.md:38 adds that the proteasome probe can be mute while the lysosome is the real route.
+- Usual reading assumes / this changes: The usual reading treats ERAD as a quality filter to leave alone. This one treats it as a lever. The folder adds that the clearance route must be measured, not assumed (proteostasis_rationale.md:97).
+- Rejection: Deleting the ERAD E3 ligase raises total carrier but not surface carrier, and locomotion does not move.
+- Discriminating manipulation (nearest rival H3): conditional deletion of the ERAD E3 ligase in carrier neurons, read as surface versus total carrier. If surface rises, H4 holds and locomotion falls. If only total rises, H3 (export-limited) holds and locomotion is unchanged.
+
+H5. Origin S1-13 (OUTSIDE, 0 hits)
+- Statement: The mutant protein traps wild-type carrier (oligomer trapping or ER stress), so removing the mutant allele's product raises wild-type surface carrier and lowers locomotion.
+- Corpus test: not stated for the carrier. The held analogue, CLAIM 032 (claim_registry_current.md:593), says WWOX haploinsufficiency is not deleterious, which is recessive loss of function. It is not transferable (the firewall at mechanism_intervention_map.md:60) and cannot count as a contradiction.
+- Usual reading assumes / this changes: The usual reading says a loss-of-function allele is recessive. This one says the mutant acts on the wild-type allele.
+- Rejection: Heterozygous knock-in animals look like wild type in surface level and locomotion, or hemizygous knock-in/null looks the same as knock-in/wild type.
+- Discriminating manipulation (nearest rival: pure loss of function, which includes H6): mutant-allele-specific knockdown in the heterozygote, compared with the heterozygous null. For H5, wild-type surface rises and locomotion falls. For pure loss of function nothing changes.
+
+H6. Origin S1-7 (INSIDE, "stable but inert" held)
+- Statement: The carrier that does reach the surface cycles poorly, so raising per-carrier turnover lowers locomotion with no change in surface level.
+- Corpus test: support, by analogy. dismissal_ledger_current.md:70 (D-04) says stability and function are in tension: "stable and completely inert" is a demonstrated WWOX phenotype (P282A). CLAIM 030 (claim_registry_current.md:559) says severity tracks residual function, not abundance. proteostasis_rationale.md:96 says a stability readout without a function readout cannot support a GO.
+- Usual reading assumes / this changes: The usual reading says the phenotype is a number-of-carriers problem. This one adds a per-carrier term.
+- Rejection: Surface-normalised uptake equals wild type in the knock-in.
+- Discriminating manipulation (nearest rival H1, which is surface-number): a positive modulator class acting on the cycling step, with no change in folding. Surface carrier is unchanged and locomotion falls for H6. For H1 the same class does nothing, because the number of carriers is what limits.
+
+H7. Origin S1-14 (INSIDE, window terms 17 hits)
+- Statement: Part of the hyperactivity is a developmental adaptation, so restoring surface carrier early normalises locomotion and restoring it in the adult does so only partly.
+- Corpus test: support, by analogy. mechanism_intervention_map.md:193-196 says neuronal rescue works in the P0-P5 window and does not repair the largely prenatal progenitor defect. :197-199 says haploinsufficiency is tolerated from birth, but a rescue arrives after part of the damage. claim_registry_current.md:594 states the same limit for CLAIM 032.
+- Usual reading assumes / this changes: The usual reading assumes the phenotype tracks the current carrier level. This one says it can persist after restoration.
+- Rejection: Adult restoration normalises locomotion as fully as early restoration, at matched surface level.
+- Discriminating manipulation (nearest rival H10, level rather than timing): a Cre-revertible wild-type allele restored early versus in the adult, with surface level matched by measurement. Surface is equal by design. Locomotion is normal only with early restoration for H7. For H10, locomotion depends on surface level alone and not on timing.
+
+H8. Origin S1-9 (OUTSIDE, 0 hits for D1/D2/DARPP/A2A)
+- Statement: Reducing the postsynaptic response, for example by removing D1 signalling in direct-pathway striatal neurons, normalises locomotion while transmitter stays high and surface carrier stays low.
+- Corpus test: not stated for D1. A downstream block that normalises network state is held only for NMDAR, as a T1 tool-compound result in a slice: d-APV takes the burst from 1.0 to zero, with a washout overshoot of about 1.85x (CC-20260826-NMDAR-CONJUNCTION-01.md:30, :49-50). It was never tested on locomotion. mechanism_intervention_map.md:53 (MARKER_TO_FUNCTION_GATE) says a lever justified at one layer is not justified at the next.
+- Usual reading assumes / this changes: The usual reading treats the effector as non-specific. This one assigns the phenotype to a defined pathway, and the washout overshoot shows that blocking and then releasing can rebound.
+- Rejection: Cell-type-restricted D1 deletion on the knock-in does not lower locomotion.
+- Discriminating manipulation (nearest rival H9, input reduction): direct-pathway-restricted D1 deletion on the knock-in. Locomotion falls, extracellular transmitter stays high, and surface carrier is unchanged. H9 predicts transmitter falls.
+
+H9. Origin S1-8 (OUTSIDE, 18 hits, one passing mention)
+- Statement: Reducing synthesis of the transmitter the carrier would clear lowers the extracellular load and normalises locomotion with no change in the carrier.
+- Corpus test: not stated. The nearest held rule is that no intervention enters until the sign of its axis is resolved (mechanism_intervention_map.md:56-59), which matters because the question does not name the transmitter. A held analogue of an input-side lever is the metabolic bypass in mechanism_intervention_map.md:290-301 (CHAIN E), also WWOX-derived.
+- Usual reading assumes / this changes: The usual reading says the goal is to restore clearance. This one says lowering input is equivalent.
+- Rejection: Microdialysis shows transmitter falls but locomotion does not.
+- Discriminating manipulation (nearest rival H8): dopamine-neuron-restricted tyrosine hydroxylase haploinsufficiency on the knock-in. Extracellular transmitter falls, locomotion falls, surface carrier is unchanged. H8 leaves transmitter high. If the carrier clears an inhibitory transmitter, the locomotor sign flips.
+
+H10. Origin ENGINE (INSIDE)
+- Statement: Restoring surface carrier to above the wild-type set point overshoots and itself produces hyperactivity, so locomotion normalises only in a window of restored level, bounded below by a threshold under 100% of wild type.
+- Corpus test: support, by analogy. After neuronal gene addition, open-field velocity (WT about 9.5, treated about 11.5, marked *) and total distance (about 3,400 to about 4,300, marked *) exceed wild type (PMID42422765_partial_locators.md:455-456, :462). The text contradicts its own panels (:553). The overshoot is consistent with 8.2x/10.7x/5.6x/1.4x wild-type protein, and consistency is not discrimination (CC-20260826-AAV9-ENDPOINT-SPLIT-01.md:174-175, :203-205). One arm would settle it: an intermediate dose with per-animal expression, carried to P90 (:207-210). The lower bound comes from CLAIM 032 (claim_registry_current.md:593), where the lethal/viable threshold sits below 50%. Overshoot as a marker effect is also in claim_registry_current.md:59.
+- Usual reading assumes / this changes: The usual reading is that more restored carrier is monotonically better. This one is an inverted-U with a lower threshold.
+- Rejection: Locomotion falls monotonically across surface levels from baseline to well above wild type.
+- Discriminating manipulation (nearest rival H7, timing): graded restoration at fixed timing with per-animal surface quantification. Locomotion reaches wild type at a surface level near wild type and exceeds it at supra-wild-type surface levels. For H7 it depends on timing and not on level.
+
+FILES READ:
+/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/set3/T9/V4_S1_A.txt
+/tmp/legend_cut_1867a26a8/CLAUDE.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/proteostasis_rationale.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md (lines 1-260 and 596-630)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/data/redteam/discriminating_experiment.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/dismissal_ledger_current.md (lines 56-125)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md (lines 186-205)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-AAV9-ENDPOINT-SPLIT-01.md (lines 125-225)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID42422765_partial_locators.md (lines 440-590)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/claim_registry_current.md (lines 45-90, 340-410, 548-608)
+Grep-only (matched lines inspected, not read in full): /tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-NMDAR-CONJUNCTION-01.md; /tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID42128308_partial_locators.md; /tmp/legend_cut_1867a26a8/disease-models/wwox/research/full_text_queue_current.md; /tmp/legend_cut_1867a26a8/disease-models/wwox/research/discovery_ledger_current.md
