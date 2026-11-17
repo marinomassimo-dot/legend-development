@@ -1,0 +1,3 @@
+Memory probe. Do NOT use any tool: answer from your own knowledge only. This is not a deep dive and produces no commit candidate.
+QUESTION: "What is known about zinc and the activity of guanylyl cyclase C (GUCY2C), or about zinc treatment in mouse models of GUCY2C gain-of-function (familial diarrheal syndrome, early-onset inflammatory bowel disease)?"
+OUTPUT (final message, nothing else): begin with the line "Answered from memory only, with no files or tools used. This is not a deep dive and produces no commit candidate." Then two short lists: "What I know that is specific and reliable" and "What I do not know". Say plainly where you know of no study. Mechanism level only.

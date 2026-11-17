@@ -1,0 +1,14 @@
+1. Pharmacological chaperone or folding-correcting small molecule (restore trafficking of the misfolded carrier) | "cause misfolding and loss of the carrier at the cell surface"
+2. Proteostasis modulation (ER quality control, ERAD/proteasome or lysosomal degradation inhibition, chaperone induction) | "misfolding and loss of the carrier"
+3. Genetic restoration or replacement of the carrier (gene therapy or transgene re-expression, wild-type allele, or bypass of the variant) | "Missense variants", "Knock-in mice carrying such a variant"
+4. Direct enhancement of residual carrier activity or surface retention (positive allosteric modulator, reduced internalisation or endocytosis) | "impaired uptake", "loss of the carrier at the cell surface"
+5. Blockade or knockdown of postsynaptic receptors for the neurotransmitter, for example antagonists of its receptor subtypes | "locomotor hyperactivity" (plus "normalise")
+6. Reduction of neurotransmitter synthesis, for example by inhibiting the rate-limiting synthetic enzyme or lowering precursor supply | "lower striatal tissue content of the neurotransmitter"
+7. Inhibition of neurotransmitter release or of presynaptic firing, including autoreceptor agonism | "locomotor hyperactivity" together with "lower striatal tissue content"
+8. Inhibition of metabolic degradation (inhibitors of the catabolic enzymes) to restore content and cut metabolite | "raised level of its metabolite"
+9. Vesicular repackaging or storage modulation (VMAT-type manipulation) to restore tissue content | "lower striatal tissue content of the neurotransmitter"
+10. Alternative clearance routes, for example blockade or enhancement of other transporters (low-affinity monoamine transporters, glial uptake) | "impaired uptake"
+11. Circuit-level or downstream modulation (opposing neuromodulatory systems, striatal output pathways) | "locomotor hyperactivity"
+12. Genetic dosage or background manipulation (crossing to hetero- or homozygous partners, conditional rescue in selected neurons) | "Knock-in mice", "genetic, or a class at mechanism level"
+
+Note: the wording itself suggests the discriminating-readout structure (activity plus content plus metabolite) as a means of separating levers that act on uptake, synthesis, release, degradation or receptors.

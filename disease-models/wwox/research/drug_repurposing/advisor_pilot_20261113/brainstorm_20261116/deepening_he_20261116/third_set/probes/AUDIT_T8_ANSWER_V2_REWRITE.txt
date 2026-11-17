@@ -1,0 +1,12 @@
+1. Restore the lost carrier itself (gene replacement, re-expression, or protein/mRNA delivery) | "Loss of a mitochondrial membrane carrier" and "restore the function of these cells"
+2. Substitute with a paralog or functionally redundant transporter (ectopic expression of a related carrier) | "a mitochondrial membrane carrier" (a carrier family implies paralogs) and "genetic" manipulation
+3. Bypass the missing carrier's substrate flux by supplying the downstream metabolite or an alternative fuel (anaplerotic or substrate supplementation) | "reduces oxidative respiration" and "a mitochondrial membrane carrier" (a carrier moves a substrate)
+4. Boost electron transport chain or oxidative phosphorylation capacity directly (complex I/IV activity, cofactors, biogenesis, PGC-1a-type programs) | "reduces oxidative respiration" and "oxygen consumption"
+5. Increase mitochondrial biogenesis or mass, or improve mitochondrial quality control (mitophagy, dynamics) | "mitochondrial" and "restore the function"
+6. Shift energy metabolism toward glycolysis or other non-oxidative ATP sources so the cells no longer depend on respiration | "reduces oxidative respiration" and "increased cell death"
+7. Block the cell-death pathways (anti-apoptotic, mPTP inhibition, caspase inhibition, ferroptosis inhibition) | "increased cell death" and "cell survival"
+8. Reduce oxidative or redox stress (antioxidants, NAD+ repletion, glutathione support) | "oxidative respiration" and "increased cell death" (an inferred link, not stated in the wording)
+9. Restore proliferation and progenitor state (growth, cell-cycle, or differentiation signaling, trophic factors) | "reduced proliferation" and "neuronal progenitors"
+10. Correct the patient-specific genetic background (isogenic CRISPR correction, or suppression of a variant or modifier) | "derived from patient stem cells" and "single manipulation (genetic...)"
+
+Lever classes that are not about the cause but come from the answer format: a "nearest rival" discrimination design (rescue-versus-bypass tests) and "predicts for oxygen consumption AND for cell survival". Together these push toward levers that separate respiration rescue from survival rescue, such as classes 3, 4, 6, and 7.

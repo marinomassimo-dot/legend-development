@@ -215,6 +215,12 @@
  },
  "DEFAULTS_TAKEN": [
   {
+   "condition": "A second delegate active at the same time as another session's delegate (delegation_budget section 2: a second only when the capacity that day justifies it, reason written in the task record)",
+   "default_taken": "ESCALATION 2026-11-17 ~06:45Z host clock: reason = ADV's reading that the one-active-delegate rule is per main session, plus the operator's standing instruction of 22:05Z to spend the remaining token budget proactively (set 2 ran at 1.68M of 2.1M with no usage-limit notice); expected output = tool-free memory probes and question-leak audits for the third target set, 8 small runs of about 18k tokens each; setting = sonnet, legend-deepdive, no file tools, one at a time; any usage-limit notice stops them at once",
+   "why_safe": "No tool access, no repository access, about 18k tokens each, zero external spend, no write to any shared file; the corpus-reading runs of set 3 stay behind the operator's budget answer and the MEETING",
+   "what_would_have_differed": "The probes and audits would have waited for IT48-Q01 to finish and Part B of the third set could not have been frozen before the MEETING"
+  },
+  {
    "condition": "Unblock files for the two blocked steps are named by guess of the owners' folder conventions",
    "default_taken": "A blocked step with an unmet path stays blocked; the steps are re-read at every recall and the real path is written into the step when the owner's file lands",
    "why_safe": "A wrong path keeps the step BLOCKED (never counted executable by mistake)",
