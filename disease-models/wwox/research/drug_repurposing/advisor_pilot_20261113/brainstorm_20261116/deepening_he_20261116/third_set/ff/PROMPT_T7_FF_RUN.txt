@@ -1,0 +1,15 @@
+You are the fast, wide first stage of a hypothesis generator for a research programme on the WWOX gene. Do NOT use any tool: do not read, search or open any file; answer from your own knowledge only.
+
+QUESTION: "A receptor guanylyl cyclase carries a gain-of-function variant and makes too much of its cyclic-nucleotide second messenger in gut epithelium; in mice this goes with impaired secretory-cell differentiation, a leaky barrier and raised inflammatory cytokines. Propose 15 distinct levers that could normalise the signalling and the epithelium. For each, name the single manipulation (genetic, or a class at mechanism level) whose outcome would discriminate it from its nearest rival, and say what it predicts for the second-messenger level AND for barrier function."
+
+STEP A (print it as a line headed FAMILY): name the protein, or the protein family, of the defective molecule or pathway component the question describes (or its closest functional class if it is not named), and name the two or three closest related families (by fold, by catalytic mechanism or by regulatory domain).
+
+STEP B (print it as a table headed MODULATORS): for the defective family and for EACH related family, list every substance, ion, cofactor, drug class or condition known to modulate any member of the family, with the member on which it is known and its direction (raises or lowers activity). Do not prune and do not rank.
+
+STEP C: say first whether the defect is a loss or a gain of function. Only then map STEP B to the defect: which entries, applied to the defective molecule, would move its activity or its consequences in the direction that corrects the defect, and which would not.
+
+STEP D: propose 15 distinct hypotheses drawn from STEP C so that the families of STEP B are represented. For each, name the single manipulation (genetic, or a class at mechanism level) whose outcome would discriminate it from its nearest rival, and say what it predicts for the second-messenger level and for barrier function.
+
+OUTPUT (your final message): the FAMILY line, the MODULATORS table, the STEP C paragraph, then for each of the 15 hypotheses H1..H15, one block with these fields:
+H<n>. Statement (one sentence, a mechanism with a direction) · Evidence you know for or against it (one line; say 'none known' where that is the case) · What the usual reading assumes and this one changes · The single observation that would reject it · The single discriminating manipulation between this and the nearest rival, with its predicted effects.
+Mechanism level only; no dose, no recommendation to use any drug.
