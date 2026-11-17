@@ -1,0 +1,137 @@
+{
+ "adapter": "pilot_bisect_harness_model.py",
+ "parameter_scaled": "strength",
+ "bracket": [
+  0.0,
+  3.0
+ ],
+ "cost_note": "one call = 2 x 40 slices x 600 s = about 20 s of CPU; 10 seeds x 8 iterations x 18 cells (S-KO and S-HT) = 1,440 calls = 8 CPU-hours: use 5 seeds x 6 iterations (540 calls, 3 CPU-hours) first; S-WT is not bisected (baseline incidence near the floor; rel_bursts is noise)",
+ "cells": [
+  {
+   "arm": 1,
+   "geno": 0,
+   "observable": "rel_bursts",
+   "threshold": 0.5,
+   "direction": "crosses below"
+  },
+  {
+   "arm": 1,
+   "geno": 1,
+   "observable": "rel_bursts",
+   "threshold": 0.5,
+   "direction": "crosses below"
+  },
+  {
+   "arm": 2,
+   "geno": 0,
+   "observable": "rel_bursts",
+   "threshold": 0.5,
+   "direction": "crosses below"
+  },
+  {
+   "arm": 2,
+   "geno": 1,
+   "observable": "rel_bursts",
+   "threshold": 0.5,
+   "direction": "crosses below"
+  },
+  {
+   "arm": 4,
+   "geno": 0,
+   "observable": "rel_bursts",
+   "threshold": 0.5,
+   "direction": "crosses below"
+  },
+  {
+   "arm": 4,
+   "geno": 1,
+   "observable": "rel_bursts",
+   "threshold": 0.5,
+   "direction": "crosses below"
+  },
+  {
+   "arm": 5,
+   "geno": 0,
+   "observable": "rel_bursts",
+   "threshold": 0.5,
+   "direction": "crosses below"
+  },
+  {
+   "arm": 5,
+   "geno": 1,
+   "observable": "rel_bursts",
+   "threshold": 0.5,
+   "direction": "crosses below"
+  },
+  {
+   "arm": 6,
+   "geno": 0,
+   "observable": "rel_bursts",
+   "threshold": 0.5,
+   "direction": "crosses below"
+  },
+  {
+   "arm": 6,
+   "geno": 1,
+   "observable": "rel_bursts",
+   "threshold": 0.5,
+   "direction": "crosses below"
+  },
+  {
+   "arm": 7,
+   "geno": 0,
+   "observable": "rel_bursts",
+   "threshold": 0.5,
+   "direction": "crosses below"
+  },
+  {
+   "arm": 7,
+   "geno": 1,
+   "observable": "rel_bursts",
+   "threshold": 0.5,
+   "direction": "crosses below"
+  },
+  {
+   "arm": 8,
+   "geno": 0,
+   "observable": "rel_bursts",
+   "threshold": 0.5,
+   "direction": "crosses below"
+  },
+  {
+   "arm": 8,
+   "geno": 1,
+   "observable": "rel_bursts",
+   "threshold": 0.5,
+   "direction": "crosses below"
+  },
+  {
+   "arm": 3,
+   "geno": 0,
+   "observable": "rel_duration",
+   "threshold": 0.8,
+   "direction": "crosses below"
+  },
+  {
+   "arm": 9,
+   "geno": 1,
+   "observable": "rel_bursts",
+   "threshold": 1.5,
+   "direction": "crosses above"
+  },
+  {
+   "arm": 9,
+   "geno": 0,
+   "observable": "rel_bursts",
+   "threshold": 0.7,
+   "direction": "crosses below"
+  }
+ ],
+ "predictions_to_hash_before_the_run": {
+  "S-KO strength s at which rel_bursts first falls below 0.5, ordered smallest first": "arm 1 (d-APV) < arm 7 (neurosteroid-type) < arm 2 (NMDAR pore) < arm 8 (sodium pyramidal) < arm 4 (AMPA) < arm 6 (synaptic GABA-A) < arm 5 (T-type); arm 5 reaches 0.5 only at s above 2 or not within the bracket",
+  "arm 3 (GluN2B NAM)": "rel_duration does not fall below 0.8 within s <= 1; below 0.8 only for s above 1.5",
+  "arm 9 at S-HT": "rel_bursts rises above 1.5 at s between 0.7 and 1.5 (aggravation near threshold); at S-KO rel_bursts stays above 0.7 for s <= 1",
+  "S-HT versus S-KO": "for the suppressive arms 6, 7, 8 the S-HT crossing strength is smaller than the S-KO crossing strength (the near-threshold setting is more sensitive)"
+ },
+ "caveats": "weights not concentrations; 40 slices per batch; S-HT baseline has few bursts (about 10 per 40 slices), so rel_bursts at S-HT is noisy: read it with the incidence_baseline and incidence_arm fields; the settings S-HT phasic position 0.9 is assumed."
+}

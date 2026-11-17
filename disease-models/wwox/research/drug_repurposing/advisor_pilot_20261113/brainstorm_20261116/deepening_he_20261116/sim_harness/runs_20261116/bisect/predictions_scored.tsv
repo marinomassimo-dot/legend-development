@@ -1,0 +1,10 @@
+id	type	verdict	detail	statement
+P1	order	PASS	arm1_KO=0.1640625 arm7_KO=0.5390625 arm2_KO=0.9140625 arm8_KO=1.1015625 arm4_KO=1.4296875 arm6_KO=1.7109375 arm5_KO=inf	S-KO crossing strength of rel_bursts below 0.5, smallest first: d-APV < neurosteroid-type < NMDAR pore < sodium pyramidal < AMPA < synaptic GABA-A < T-type (SCI)
+P1b	value	PASS	arm5_KO=inf gt 2.0	T-type reaches 0.5 only at s above 2 or not within the bracket (SCI)
+P2a	value	PASS	arm3_KO=1.9453125 gt 1.0	GluN2B NAM: rel_duration does not fall below 0.8 within s <= 1 (SCI)
+P2b	value	PASS	arm3_KO=1.9453125 gt 1.5	GluN2B NAM: below 0.8 only for s above 1.5 (SCI)
+P3a	value	FAIL	arm9_HT=0.3984375 between 0.7..1.5	sodium with interneuron share at S-HT: rel_bursts rises above 1.5 at s between 0.7 and 1.5 (SCI)
+P3b	value	PASS	arm9_KO=1.8984375 gt 1.0	sodium with interneuron share at S-KO: rel_bursts stays above 0.7 for s <= 1 (SCI)
+P4a	cmp	PASS	arm6_HT=0.4453125 < arm6_KO=1.7109375	synaptic GABA-A: S-HT crossing smaller than S-KO (SCI)
+P4b	cmp	PASS	arm7_HT=0.2578125 < arm7_KO=0.5390625	neurosteroid-type: S-HT crossing smaller than S-KO (SCI)
+P4c	cmp	PASS	arm8_HT=0.4453125 < arm8_KO=1.1015625	sodium pyramidal: S-HT crossing smaller than S-KO (SCI)
