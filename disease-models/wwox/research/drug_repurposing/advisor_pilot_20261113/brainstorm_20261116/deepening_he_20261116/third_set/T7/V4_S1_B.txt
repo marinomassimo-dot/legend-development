@@ -1,0 +1,160 @@
+ENUMERATION
+
+Defect in physical-chemical terms. GC-C (GUCY2C) is a single-pass receptor guanylyl cyclase. It has an extracellular ligand-binding domain (guanylin, uroguanylin, bacterial STa), a transmembrane helix, an intracellular kinase-homology domain (KHD) that binds ATP and acts as an allosteric gate, a hinge/coiled-coil, and a C-terminal cyclase domain. The cyclase domain forms an antiparallel dimer with two pseudo-symmetric sites and converts Mg-GTP to cGMP plus PPi. The activity cycle is ligand binding, then KHD/ATP-dependent transduction, then dimer closure, then catalysis, then desensitisation (KHD phosphorylation, ligand dissociation, endocytosis). A gain of function means the cycle's "off" arm is impaired (a lower activation threshold, constitutive or ligand-independent signalling, or loss of desensitisation) or its flux per receptor is raised. Net cGMP is flux in minus PDE hydrolysis and MRP4 efflux. The cGMP signal then acts through PKG2 (PRKG2), cGMP-regulated PDEs (PDE3 inhibition gives a cAMP rise, PDE2 stimulation) and CNG-type channels. The main epithelial outputs are CFTR opening, NHE3 inhibition, and effects on proliferation and differentiation. Caveat (INFERENZA): loss of GC-C also impairs barrier and goblet cells in mice, so the dose-response is probably U-shaped and "normalise" means return to a window, not "minimise".
+
+(a) Catalytic/activity cycle.
+- Substrate: GTP pool (de novo and salvage guanine nucleotides, IMPDH/GMPS flux).
+- ATP occupancy of the KHD, which potentiates activity.
+- Divalent metal: Mg2+ (physiological) versus Mn2+ (hyperactivates in vitro); intracellular free Mg2+.
+- KHD phosphorylation and desensitisation.
+- Cysteine redox state and oxidative stress.
+- Intracellular and luminal pH. Uroguanylin binding is pH-dependent: it is favoured at acidic pH, and guanylin at alkaline pH.
+- Allosteric cyclase-domain binders.
+
+(b) Folding and stability.
+- ER chaperones and HSP90/CDC37 client maintenance.
+- Core and ER-lumen N-glycosylation, which is needed for ligand binding and surface expression.
+- Temperature.
+- Osmolytes and chemical chaperones.
+- Ligand-site binders that stabilise the extracellular domain (they also change activation).
+
+(c) Assembly, trafficking, localisation.
+- Dimer or oligomer assembly of the cyclase domains.
+- Apical sorting and raft/cholesterol partitioning.
+- Endocytosis and recycling (Rab11, myosin Vb).
+- Binders of the ligand site (competitive antagonists, ligand scavengers).
+- Lipidation.
+- Brush-border scaffolds (PDZ proteins).
+
+(d) Substrate and metabolite supply.
+- Dietary purines and the guanine-nucleotide pool.
+- Dietary Mg2+.
+- Luminal ligand supply: proguanylin and prouroguanylin processing, and salt-linked uroguanylin secretion.
+- Luminal pH set by bicarbonate and diet.
+- Microbial metabolites that drive barrier and goblet cells: butyrate and other short-chain fatty acids, and tryptophan/AHR ligands.
+- Vitamin A, zinc.
+- Transport of cGMP out of the cell (MRP4).
+
+(e) Degradation and turnover.
+- Receptor ubiquitination, lysosomal degradation and shedding.
+- PDE5, PDE9, PDE10 and PDE2 hydrolysis of cGMP, and PDE3 cross-talk.
+- ABCC4 efflux.
+- Ligand degradation by luminal proteases.
+- cGMP-to-5'-GMP flux.
+
+(f) Downstream effector or bypass.
+- PKG2.
+- PKG2 targets CFTR and NHE3 (NHE3 is inhibited via the NHERF2 complex).
+- cAMP/PKA via PDE3 inhibition.
+- Fluid secretion and shear on the epithelium.
+- Notch/ATOH1/Wnt control of secretory lineage.
+- Tight-junction regulators (MLCK, ROCK, claudins).
+- IL-22/STAT3 and EGFR repair.
+- TNF/IFN-γ neutralisation.
+- Mucus layer restoration.
+
+(g) Cell type, timing, dosage.
+- Epithelium-restricted versus whole-body reversion of the allele.
+- Enterocyte versus secretory-lineage versus stem-cell action.
+- Immune and enteric-neuron cells (extracellular cGMP acts on nociceptors).
+- Heterozygous versus homozygous dosage.
+- Allele-specific silencing.
+- Neonatal versus adult window.
+- Germ-free background.
+
+HYPOTHESES
+
+H1. Statement: The excess cGMP is substrate-limited, so lowering the guanine-nucleotide (GTP) pool in the epithelium proportionally lowers cGMP flux and relieves the epithelium. (Axes a, d.)
+- Evidence: GC-C cyclase Km for GTP is not far below cellular GTP, but I know of no GOF-specific data. None known for this variant.
+- Usual reading assumes the receptor is saturated with substrate and that only the receptor or the PDEs set the signal. This reading changes that: GTP supply is a controllable rate term.
+- Rejection: Epithelial Impdh2 reduction (or the IMPDH-inhibitor class) does not change cGMP in GOF crypts or villus cells, or does so only through toxicity (lower proliferation).
+- Discriminator (nearest rival H9, metal/redox gating): epithelial-specific Impdh2 deletion with guanosine salvage clamped. It predicts cGMP down about in proportion to GTP, and barrier and goblet differentiation improved unless GTP loss itself damages the crypt (a risk). Under H9 this manipulation would leave cGMP unchanged.
+
+H2. Statement: The variant bypasses the ATP-dependent KHD gate, so the cyclase is released from its normal ATP-dependent brake or amplifier. (Axis a.)
+- Evidence: KHD ATP binding modulates activity in GC-C and in related receptor guanylyl cyclases, and some activating human variants sit in or near the KHD/hinge. This is partly INFERENZA.
+- Usual reading assumes the GOF is a simple increase in catalytic rate. This reading changes that: it is a failure of allosteric gating.
+- Rejection: A cis ATP-site-dead KHD mutation (the K516A-type lesion) leaves GOF-level cGMP unchanged.
+- Discriminator (nearest rival H3, ligand hypersensitivity): the cis KHD ATP-site mutation. It predicts cGMP drops to near wild-type or below, with barrier and goblet cells recovering, while the ligand-knockout manipulation (H3) leaves residual cGMP.
+
+H3. Statement: The variant lowers the ligand threshold, so the normal guanylin/uroguanylin tone becomes supramaximal. The excess is ligand-dependent, not constitutive. (Axes c, d.)
+- Evidence: Human GOF alleles show raised cGMP with ligand dependence in some cases and constitutive activity in others. I am not certain which applies here.
+- Usual reading assumes the GOF is constitutive. This reading changes that: normalising ligand supply or tone is enough.
+- Rejection: GOF cGMP is unchanged in Guca2a/Guca2b double-null mice.
+- Discriminator (nearest rival H2): Guca2a/Guca2b deletion on the GOF background. It predicts cGMP falls toward baseline and the barrier improves. If cGMP stays high, the GOF is ligand-independent (H2/H4/H5 favoured). Note that ligand loss itself harms the barrier in wild type, so a floor effect is likely.
+
+H4. Statement: The GOF protein is overexpressed or over-stabilised because ER chaperoning (HSP90/CDC37, glycan quality control) lets more of it mature. Reducing its folding capacity lowers total receptor and therefore cGMP. (Axis b.)
+- Evidence: Related receptor cyclases are HSP90 clients, and GC-C maturation depends on glycosylation. Variant-specific data: none known.
+- Usual reading assumes the receptor level is fixed and only the specific activity changes. This reading changes that: client load matters.
+- Rejection: GOF total GC-C protein is the same as wild type and does not fall with chaperone-capacity reduction.
+- Discriminator (nearest rival H5, surface density): a chaperone-network knockdown (for example Cdc37 or an HSP90-class manipulation) in epithelium. It predicts total and surface receptor both fall and cGMP falls. Under H5, total receptor stays and only surface density changes. Barrier is predicted to improve if cGMP falls into the window, but chaperone loss is pleiotropic.
+
+H5. Statement: The variant increases apical surface residency (through glycosylation, raft partitioning or reduced endocytosis), so excess surface receptor produces the excess cGMP. (Axis c.)
+- Evidence: None known for GOF alleles. N-glycans are needed for surface expression of GC-C.
+- Usual reading assumes the variant acts on activity per receptor. This reading changes that: surface density is the driver.
+- Rejection: Surface biotinylation shows the same apical GC-C in GOF and wild type.
+- Discriminator (nearest rival H4, total protein): cis removal of key N-glycosylation sites, or forced endocytosis of the receptor, in the GOF allele. It predicts surface GC-C falls with total roughly unchanged, cGMP falls, and barrier improves. The sign of the barrier effect matches H4, but the total-protein readout separates them.
+
+H6. Statement: The GOF receptor escapes ubiquitin/lysosomal turnover, so a longer half-life gives more cGMP. Restoring turnover normalises both. (Axis e.)
+- Evidence: None known for GC-C. The proposal comes from other receptor cyclases and from receptors in general. Mark IPOTESI.
+- Usual reading assumes the abundance of the receptor is set by synthesis. This reading changes that: half-life is the lever.
+- Rejection: The half-life (cycloheximide chase) of the GOF protein equals wild type.
+- Discriminator (nearest rival H4): a degron-tag knock-in on the GOF allele that allows induced degradation. It predicts rapid cGMP fall with receptor loss, and barrier recovery with time. Unlike H4, a chaperone reduction does not change half-life.
+
+H7. Statement: The cGMP excess is also due to insufficient PDE capacity, so adding hydrolysis capacity (epithelial PDE5 or PDE9) clamps cGMP regardless of the receptor lesion. (Axis e.)
+- Evidence: Intestinal cGMP is controlled by PDEs, and PDE inhibition raises cGMP-driven secretion. PDE5/PDE9 adaptation to chronic GOF: none known.
+- Usual reading assumes the receptor lesion is the only target. This reading changes that: the sink side can be adjusted.
+- Rejection: Transgenic epithelial PDE5 or PDE9 expression lowers cGMP in wild type but not in GOF crypts (sink saturated by flux).
+- Discriminator (nearest rival H8, efflux): epithelial PDE overexpression with Abcc4 intact. It predicts intracellular and extracellular cGMP both fall. The barrier improves if cGMP is the damaging species, which is the PDE route. Under H8, extracellular cGMP stays high.
+
+H8. Statement: Export of cGMP by ABCC4 (MRP4) sets the intracellular level. Higher efflux would lower the intracellular signal but raise extracellular cGMP, and the injury might depend on which pool acts. (Axis d/e.)
+- Evidence: MRP4 exports cGMP and is expressed in gut epithelium; extracellular cGMP reaches sensory neurons (linaclotide analgesia). Variant link: none known.
+- Usual reading assumes intracellular cGMP is the whole story. This reading changes that: the extracellular pool may contribute to inflammation or sensation.
+- Rejection: Abcc4 deletion on the GOF background leaves the phenotype unchanged and extracellular cGMP is not detectable.
+- Discriminator (nearest rival H7): Abcc4 deletion. It predicts intracellular cGMP rises, extracellular falls, and barrier and cytokines improve only if extracellular cGMP is the harmful pool; if intracellular is harmful the barrier worsens.
+
+H9. Statement: The catalytic cycle is gated by divalent metal and redox/pH state, so inflammation-induced oxidative stress or high free Mg2+/Mn2+ feeds the GOF cyclase, creating a feed-forward loop. (Axis a.)
+- Evidence: Mn2+ strongly raises guanylyl-cyclase activity in vitro; in vivo relevance for GC-C is none known. Redox/pH sensitivity of uroguanylin binding is known. Mark IPOTESI.
+- Usual reading assumes Mg-GTP availability is constant. This reading changes that: metal status or redox is a modulator.
+- Rejection: Lowering epithelial free Mg2+ (Trpm6/Trpm7 deficiency) or antioxidant manipulation does not change cGMP.
+- Discriminator (nearest rival H1): reducing intracellular Mg2+ import in epithelium with GTP pool held. It predicts cGMP down and barrier partly better. A pure GTP lever (H1) is independent of metal.
+
+H10. Statement: PKG2 (PRKG2) carries the damaging signal, suppressing secretory-lineage and barrier programmes, so the epithelium can be normalised without lowering cGMP. (Axis f.)
+- Evidence: PKG2 is the main intestinal cGMP kinase and mediates CFTR activation; a direct role in secretory differentiation is IPOTESI.
+- Usual reading assumes that lowering cGMP is necessary. This reading changes that: the target is the kinase.
+- Rejection: Epithelial Prkg2 deletion in GOF mice leaves goblet cells and barrier unchanged.
+- Discriminator (nearest rival H12, fluid secretion only): Prkg2 deletion with CFTR intact. It predicts cGMP unchanged or higher (loss of kinase feedback), differentiation and barrier improved. Under H12 only Cftr deletion improves outcomes.
+
+H11. Statement: The harm is mediated by cGMP inhibiting PDE3, which raises cAMP and PKA signalling, rather than by cGMP itself. (Axis f.)
+- Evidence: cGMP-PDE3 cross-talk is established in other tissues; in gut epithelium it is untested for this model. Mark IPOTESI.
+- Usual reading assumes cGMP signals only through PKG. This reading changes that: cAMP is the effector.
+- Rejection: cAMP is unchanged in GOF epithelium and PKA-dependent phosphorylation is not raised.
+- Discriminator (nearest rival H10): epithelial PDE3 overexpression, or a PKA-regulatory-subunit knock-in that blunts PKA. It predicts cGMP unchanged, cAMP down, and barrier better if H11 holds; Prkg2 deletion would not alter cAMP.
+
+H12. Statement: Much of the damage is secondary to excess CFTR-driven (and NHE3-inhibited) fluid secretion: mucus washout, shear, and luminal dilution. Blocking that output protects the epithelium without touching cGMP. (Axis f.)
+- Evidence: Familial GC-C GOF is a secretory diarrhoea; the link from fluid load to goblet depletion and permeability is INFERENZA.
+- Usual reading assumes signalling directly alters differentiation and junctions. This reading changes that: the physical consequence of secretion does.
+- Rejection: Cftr deletion in GOF mice stops diarrhoea but goblet depletion and permeability remain.
+- Discriminator (nearest rival H10): epithelial Cftr deletion (or NHE3 restoration). It predicts cGMP unchanged, diarrhoea resolved, barrier and mucus improved. Prkg2 deletion in H10 would also change non-fluid PKG targets and thus differ in differentiation.
+
+H13. Statement: A bypass restoring secretory-lineage output (lower Notch, higher ATOH1) repairs the barrier independently of the cGMP level. (Axis f.)
+- Evidence: Notch inhibition expands goblet cells in mouse gut; use in a GOF-GC-C background: none known.
+- Usual reading assumes the cell fate defect must be repaired by correcting the signal. This reading changes that: lineage output can be set downstream.
+- Rejection: Forcing Atoh1 or Notch blockade in GOF epithelium gives goblet cells but the barrier remains leaky.
+- Discriminator (nearest rival H10): epithelial Atoh1 stabilisation or Notch-pathway reduction (a γ-secretase-class manipulation) with Prkg2 intact. It predicts cGMP unchanged, goblet and Paneth cell numbers and barrier improved. If barrier does not follow, the leak is not due to missing secretory cells (favouring H12/H14).
+
+H14. Statement: The cytokine elevation and part of the leak are driven by microbiota and by deficient supply of barrier-supporting metabolites (butyrate, tryptophan/AHR ligands), not by cGMP directly. (Axis d.)
+- Evidence: Microbial metabolites support barrier and goblet cells in mice; the combination with GC-C GOF: none known.
+- Usual reading assumes the epithelium-intrinsic signal is the whole cause. This reading changes that: the luminal environment is a co-driver and can be changed.
+- Rejection: Germ-free GOF mice show the same leak and cytokine profile as conventional GOF mice.
+- Discriminator (nearest rival H15, compartment): rederiving GOF mice germ-free, or defined-flora colonisation with a butyrate/AHR-producing community. It predicts cGMP unchanged, cytokines lower, barrier better.
+
+H15. Statement: Only an epithelial and dosage-dependent window matters. Silencing or reverting the GOF allele in epithelium (and in a given window, neonatal or adult) restores differentiation, while changes in immune or neuronal GC-C do not. The relationship between allele dose and barrier is non-linear. (Axis g.)
+- Evidence: Allele-dose and conditional data for GUCY2C GOF: none known. Loss-of-function mouse data suggest the epithelium is the main site.
+- Usual reading assumes the whole-body phenotype reflects one compartment, and that any lowering of signal helps. This reading changes that: cell type, timing and dose shape the outcome.
+- Rejection: Epithelium-specific allele reversion (Vil1-Cre) leaves the barrier and cytokine phenotype unchanged.
+- Discriminator (nearest rival H14): inducible epithelial reversion of the GOF allele in adult mice with microbiota constant. It predicts cGMP down to near wild type and a barrier recovery that is faster in the epithelium than in the cytokine profile, with an overshoot to a loss-of-function-like leak if the allele is over-reduced (a U-shaped response). If the barrier does not recover while cGMP normalises, the microbiota or an immune compartment is the driver (H14).
+
+Notes
+- Evidence statements come from my own knowledge and have not been checked against the registry.
+- Every claim above is INFERENZA or IPOTESI except the general biochemistry of receptor guanylyl cyclases, which is DATO from the literature as I recall it.
+- Mechanism level only; no dosing and no recommendation to use any drug.

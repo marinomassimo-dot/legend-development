@@ -1,0 +1,42 @@
+Z01 | NO | NO | NO | NO | NO | -
+Z02 | NO | NO | NO | NO | NO | -
+Z03 | NO | NO | NO | YES | NO | "A site-specific ligand that binds and stabilises the folding intermediate raises surface carrier and lowers hyperactivity"
+Z04 | NO | NO | NO | YES | NO | "If triage (HSC70-type delivery to degradation) dominates, reducing it raises surface carrier and lowers locomotion" (conditional on triage-limited; YES when that condition is met)
+Z05 | NO | NO | NO | NO | NO | -
+Z06 | NO | NO | NO | NO | NO | -
+Z07 | NO | NO | NO | NO | NO | -
+Z08 | NO | NO | NO | NO | NO | nearest: "dampening it lowers hyperactivity without restoring the carrier" (ISR dampening via a PERK/eIF2a allele, not named as a chaperone or corrector, so NO)
+Z09 | YES | NO | YES | NO | NO | "dopamine-neuron-restricted tyrosine hydroxylase haploinsufficiency on the knock-in. Extracellular transmitter falls, locomotion falls"
+Z10 | YES | NO | YES | NO | NO | "Heterozygous deletion of the rate-limiting synthetic enzyme (or vesicular transporter) in carrier neurons (genetic). - Locomotion falls"
+Z11 | NO | NO | NO | YES | NO | "relaxing ERAD raises the ER and surface pool and lowers locomotion" (proteostasis modulator, borderline)
+Z12 | NO | NO | NO | NO | NO | -
+Z13 | NO | NO | NO | NO | NO | nearest: "lowering the terminal UPR/ISR arm (CHOP/PERK-ISR) lowers locomotion without changing surface carrier"
+Z14 | NO | NO | NO | NO | NO | nearest: "Lowering NMDAR-dependent drive (a low-affinity open-channel antagonist class) lowers locomotion" (glutamatergic, not monoaminergic)
+Z15 | NO | NO | NO | NO | NO | nearest: "Strengthening COPII cargo recognition (Sec24 isoform gain or export-motif strengthening) raises surface carrier and lowers hyperactivity"
+Z16 | NO | NO | NO | NO | NO | -
+Z17 | NO | NO | NO | YES | NO | "binds the folded state of the missense carrier in the ER, restores export, raises surface carrier and lowers hyperactivity, but only if the stabiliser does not occlude the function"
+Z18 | YES | NO | YES | NO | NO | "partial reduction of transmitter synthesis or release lowers extracellular tone and activity" / "cross in a heterozygous allele of the rate-limiting synthesis enzyme ... activity falls"
+Z19 | NO | NO | NO | NO | NO | -
+Z20 | NO | NO | NO | NO | NO | -
+Z21 | NO | NO | NO | NO | NO | -
+Z22 | NO | NO | NO | NO | NO | -
+Z23 | NO | NO | NO | YES | NO | "Blocking the route that is actually operative raises surface carrier and lowers hyperactivity only if a fold-competent fraction exists" (conditional; YES when it is met)
+Z24 | NO | NO | NO | NO | NO | -
+Z25 | NO | NO | NO | NO | NO | nearest: "blocking removal (E3-ligase or dynamin class...) lengthens surface residence and lowers hyperactivity"
+Z26 | NO | NO | NO | YES | NO | "A ligand that binds the carrier's own pocket acts as a folding scaffold, so ER exit and surface density rise and locomotion falls"
+Z27 | NO | NO | YES | NO | NO | "conditional Drd1 deletion in striatal projection neurons of the knock-in. Prediction: locomotion down" (receptor-side)
+Z28 | NO | NO | YES | NO | NO | "removing D1 signalling in direct-pathway striatal neurons, normalises locomotion"
+Z29 | NO | NO | NO | YES | NO | "Raising ER folding capacity (adaptive UPR output or chemical chaperones) ... surface carrier rises and hyperactivity falls"
+Z30 | NO | NO | NO | NO | NO | -
+Z31 | NO | NO | NO | NO | NO | nearest: "Gain of the palmitoyl-transferase gives surface up and locomotion down"
+Z32 | NO | NO | NO | NO | NO | -
+Z33 | NO | NO | NO | YES | NO | "a lysosomal-flux blocker class versus a proteasome-flux blocker class ... Locomotion falls only where the rescued carrier is functional" (proteostasis modulator, conditional; borderline)
+Z34 | YES | NO | YES | NO | NO | "Lowering transmitter synthesis (tyrosine hydroxylase gene dosage) ... Th heterozygosity in the knock-in. Prediction: surface unchanged, locomotion down"
+Z35 | NO | NO | NO | YES | NO | "removing the delivering step (not boosting folding) raises total and surface carrier and lowers hyperactivity" (chaperone removal, proteostasis modulation; borderline)
+Z36 | NO | NO | NO | NO | NO | nearest: "neuron-specific gain of a Sec24 isoform ... surface up, locomotion down"
+Z37 | NO | NO | NO | NO | NO | nearest: "Reducing NKCC1-dependent chloride loading (NKCC1-blocker class) restores inhibition and lowers locomotion"
+Z38 | NO | NO | NO | YES | NO | "A folding-stabilising ligand (pharmacological-chaperone class) raises ER exit and surface carrier and lowers hyperactivity only if the stabilised state is not locked into an occluded, non-transporting conformation"
+Z39 | NO | NO | YES | NO | NO | "blocking the downstream receptor lowers activity whatever the carrier does"
+Z40 | NO | NO | NO | NO | NO | nearest: "raising neuronal export capacity increases surface carrier and lowers hyperactivity"
+
+Notes: the file header says "Sixty hypotheses" but it holds only Z01-Z40. Z08 and Z13 (ISR/UPR dampening) were scored NO on QN1, and Z11, Z23, Z33 and Z35 (ERAD, degradation-route or chaperone-delivery manipulation) were scored YES. Both calls are borderline. No hypothesis names an amphetamine-type releaser (QS2) or a methylphenidate-type blocker (QN2).
