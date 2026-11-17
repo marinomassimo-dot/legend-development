@@ -1,0 +1,8 @@
+# Arm table v6: a unique cell_id (IT, keeper; host clock 2026-11-17 ~07:40Z; non-canonical; not medical advice)
+
+File: `ideas_arm_table_v6_20261117.tsv` (76 lines x 10 columns: v5's eight plus a leading `cell_id` and a trailing `table_origin`), built by `build_arm_table_v6.py` (run from the repository root; it stops with an assertion if `cell_id` is not unique or if any `origin_row` id is missing from SCI's transfer table, sha256 prefix 3fea4464; it passed before this push). v5 and earlier are unchanged.
+* **cell_id** C001..C075, assigned in the v5 row order, never reused; a later version appends new ids and never renumbers.
+* **Duplicated (arm, idea) keys (found by ADV):** 'T-type blocker|I1' (C001 from the v1 table, C055 from the v3 table) and 'NMDAR pore blocker|I1' (C007 v1, C054 v3). Choice: **both rows are kept, each with its own cell_id, and `table_origin` says which table it came from** (v1_table / v3_table); nothing is deleted from the record, and the two readings (interval + only; interval +, duration 0) stay visible. Their `origin_row` is the same for both rows because SCI's table names the arm|idea string, not the cell: the match is by string until SCI adds `cell_id` (revision 3, after this file lands).
+* **origin_row** still holds SCI's reading ids (R01..); when SCI adds cell_id, the reference will be cell_id on that side.
+* Counts unchanged from v5: 32 of 75 cells with an origin row, 43 without; six without an origin carry a sign **counted by value3** (about 20 further cells carry a directional phrase in the sign column with no origin: ADV's count by wording).
+* Not done: the two arm strings SCI's table cannot match and the six signed cells still wait for SCI's rows (v7).
