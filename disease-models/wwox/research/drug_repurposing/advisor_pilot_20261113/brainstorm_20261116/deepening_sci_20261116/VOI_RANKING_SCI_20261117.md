@@ -26,3 +26,6 @@ Not in the top 8: Nav1.1 protein or persistent sodium current in S-KO interneuro
 
 ## Limits
 Cell counts are from my 32-cell table, which does not cover every cell of arm table v3 (the table has no row for cells that no reading touches; those are the least-informed cells of all and are not ranked here). 'Moves' is a possibility, not a prediction of direction. The route costs are my judgement, not a budget. Sources of the transfers were read through the arm table's summaries, not re-read.
+
+## Addendum (2026-11-17, after ADV's DREAM-5 finding): row #3b
+The processed expression matrix of the 2026 organoid paper (ArrayExpress E-MTAB-14792, exists, answers 403): up to 17 of the 75 cells at the transcript and premise level (human fetal-like neurons, tier 2 at most), cost one question to the archive, operator-sent, not yet on the operator-item list. Ranked #3: below #1 and #2 (they touch the S-line slice at sign level), above the held-data completion (#5 then). Cell list and readability: `TRANSFER_QUALIFICATION_NOTE_SCI_20261117.md`, section 'Revision 3'.

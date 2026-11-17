@@ -52,3 +52,21 @@ with open(B + "ideas_arm_table_v7_20261117.tsv", "w", newline="") as f:
 n = sum(1 for r in out[1:] if r[ix["origin_row"]] != "none")
 sg = [(r[0], r[ix["arm"]][:30], r[ix["idea"]]) for r in out[1:] if r[ix["origin_row"]] == "none" and r[ix["value3"]].strip()[:1] in ("+", "-", "0")]
 print("cells", len(out) - 1, "with origin", n, "none", len(out) - 1 - n, "signed-none by value3", len(sg), sg)
+
+# origin coverage, computed here and not by hand: by reading, including assumption rows, and by best tier
+rt, tier = {}, {}
+for r in tq:
+    rt.setdefault(r["reading_id"], set()).add(r["row_type"])
+    tier[r["reading_id"]] = min(int(tier.get(r["reading_id"], 9)), int(r["tier_cap"]))
+body = out[1:]
+with_origin = [r for r in body if r[ix["origin_row"]] != "none"]
+by_reading = [r for r in with_origin
+              if any(t != "assumption" for x in r[ix["origin_row"]].split(";") for t in rt[x])]
+best12 = [r for r in by_reading if min(tier[x] for x in r[ix["origin_row"]].split(";") if rt[x] != {"assumption"}) <= 2]
+tier3 = [r for r in by_reading if r not in best12]
+rows_cov = [("cells", len(body)), ("origin_by_reading", len(by_reading)), ("origin_including_assumption_rows", len(with_origin)),
+            ("best_tier_1_or_2", len(best12)), ("tier_3_only", len(tier3)), ("no_origin", len(body) - len(with_origin))]
+with open(B + "ORIGIN_COVERAGE_V7_IT_20261117.tsv", "w", newline="") as f:
+    w = csv.writer(f, delimiter="\t", lineterminator="\n")
+    w.writerow(["measure", "cells"]); w.writerows(rows_cov)
+print(rows_cov)
