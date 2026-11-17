@@ -48,3 +48,21 @@ After: **3 of 10** (before 0 of 10). The three that moved are text searches; the
 
 ## What would close it for the general case (not done)
 A derived gene-to-held-result index regenerated from `prediction_*.md` RESULT sections, or a line in the working-model row for the organoid evidence; each is more than a pointer and is left to the Advisor's choice of priority.
+
+## Update 2026-11-17, second re-run: the derived index route (ADV decision; preregistration addendum written before the run)
+Built: `framework/scripts/held_results_index.py` (build, check, lookup), its test `framework/scripts/test_held_results_index.py`, the derived copy `gse156243/HELD_RESULTS_BY_GENE_derived.md` (marked derived at its head; 136 rows; rebuilt by one command, `check` fails on drift), one routing row in `framework/scripts/README.md` section 1 and one recipe row in section 13. No source file edited. The test rebuilds the index and checks that WNT5A points to `prediction_wnt_sign_20261025.md` RESULT, line 49 ("7 of 7 up"), accession GSE156243.
+
+Re-run on the working tree after merging main (same queries as the first run; routes 12 and 13 added):
+| # | Route | In the first 20? | What made it move |
+|---|---|---|---|
+| 1 | `git grep -n WNT5A` (146 lines now) | yes: 5 of the first 20 name the file | IT's dated updates (a51 node, hit 1; discovery ledger, hit 13) and the README paragraph (hit 14), landed meanwhile |
+| 2 | `git grep -il WNT5A -- disease-models` | yes (README rank 10; note rank 40, derived index rank 30) | README paragraph |
+| 3 | evidence index `--term WNT5A` | no for the file; the paper-level datum is still there | unchanged |
+| 4, 5, 6, 8 | need/compound search, supplement search, registry theme, working model | no | unchanged |
+| 7 | scripts README grep Wnt/organoid | yes (the new section 13 row names the file) | new recipe row |
+| 9 | README, portfolio, roadmap | yes | README paragraph |
+| 10 | discovery ledger grep WNT5A | yes (IT's dated update, line 103, names the file) | IT, not this work |
+| 12 | `held_results_index.py lookup WNT5A` | yes (the Wnt sign note, line 49, first row after the reanalysis) | the index |
+| 13 | scripts README grep "held result" | yes (routing row and recipe row) | the index rows |
+Result: **7 of 12** routes (the ten original: 5; the two new: 2). Preregistered: 4 of 11, and route 13 deciding findability. Differences from the prediction: route 10 (not predicted; IT's update, made at ADV's request after the first report) and route 7 (not predicted; the recipe row names the file, which is the router naming it rather than the tool finding it).
+What this does and does not show: the index route works when the searcher knows the tool or greps the router for "held result" (route 13 found it); the structured need and compound tools and the working model are still silent on the gene. The count mixes three interventions (README paragraph, IT's ledger and node updates, the index and its rows), made at different times; the per-route "what made it move" column is the attribution, not a controlled comparison. The index covers one folder and RESULT sections of notes that declare a gene set; a gene that none of them declares returns "not indexed", a statement about the folder.
