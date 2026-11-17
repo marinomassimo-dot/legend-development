@@ -1732,6 +1732,27 @@ def current_result_sources(obs: dict[str, Any], snap: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def _compact(obj: Any) -> str:
+    """HE95 (2026-11-17): the same JSON with no indentation (the separators keep one space, as the readers and tests of the brief expect): one line, every key and value kept."""
+    return json.dumps(obj, separators=(", ", ": "))
+
+
+def render_assignment_states(states: dict[str, Any]) -> str:
+    """One line per assignment; each mandate named once with its verdict and path (the same four mandates were repeated under most assignments). Nothing is dropped: every assignment keeps its
+    recipient, key, origin, highest evidence level and its mandates, and every mandate keeps its verdict and path."""
+    if not states:
+        return "none"
+    mandates: dict[str, dict[str, Any]] = {}
+    lines = []
+    for k, v in states.items():
+        ids = []
+        for m in v.get("mandates", []):
+            mandates.setdefault(m["task"], {key: val for key, val in m.items() if key != "task"})
+            ids.append(m["task"])
+        lines.append(_compact({"id": k, "recipient": v["recipient"], "key": v["key"], "origin": v.get("origin", "assessment"), "highest": v["highest"], "mandates": ids}))
+    return "Mandates referenced below (task: verdict and path):\n" + "\n".join(f"{t}: {_compact(m)}" for t, m in mandates.items()) + "\nAssignments (one per line):\n" + "\n".join(lines)
+
+
 def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
     campaign = Path(campaign)
     states = assignment_states(campaign)
@@ -1754,15 +1775,15 @@ def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
               "For a material portfolio change you may add an optional `## Portfolio updates` section with a fenced json list of partial row objects (stable `id` required). The procedure saves the assessment verbatim, then applies these advisory patches. "
               "No section is needed when nothing changes. Preserve sources, link the recipient's mandate when known, record the actual consumer and the next question; do not mark an opportunity done merely because an assignment was sent. "
               "This does not alter the operator mission or promote any scientific conclusion.", "",
-            "## Observed state (mechanical, this tick)", json.dumps({k: obs[k] for k in ("events", "open_mandates", "waits", "queue", "sessions", "commits_since_last_tick")}, indent=1), "",
-            "## Laboratory activity (observation, not a verdict on useful work)", json.dumps(activity, indent=1), "",
+            "## Observed state (mechanical, this tick)", _compact({k: obs[k] for k in ("events", "open_mandates", "waits", "queue", "sessions", "commits_since_last_tick")}), "",
+            "## Laboratory activity (observation, not a verdict on useful work)", _compact(activity), "",
             previous_outcome_text(campaign), "",
              "## Assignments already drafted, with their evidence level (do not duplicate; follow what was taken in charge)",
-             json.dumps({k: {"recipient": v["recipient"], "key": v["key"], "origin": v.get("origin", "assessment"), "highest": v["highest"], "mandates": v.get("mandates", [])} for k, v in states.items()}, indent=1) or "none", "",
+             render_assignment_states(states), "",
              "Evidence levels are historical transport facts. Current mandate verdicts and their paths are listed separately: TAKEN does not mean still running, RELEASED does not prove consumption. Read the relevant complete record before relying on its state. "
              "The latest saved assessment is historical context; it is not evidence that its old premises remain true.", "",
              f"## Previous assessment\n{prior[-1].parent.name}: `{prior[-1]}` (historical decision; reconcile after framing the direction; reuse while its premises and expected value still hold)" if prior else "## Previous assessment\nnone", "",
-             "## Incomplete attempts (history, not reusable decisions)\n" + (json.dumps(incomplete, indent=1) if incomplete else "none"), "",
+             "## Incomplete attempts (history, not reusable decisions)\n" + (_compact(incomplete) if incomplete else "none"), "",
              turn_limit_text(campaign), "",
              "## Output", CONTRACT,
              "Give the usual headings, then `## Assignments`: either `none: <reason>` (continuing the plan can be the best decision) or one `### ASSIGNMENT n` block per assignment with exactly these "

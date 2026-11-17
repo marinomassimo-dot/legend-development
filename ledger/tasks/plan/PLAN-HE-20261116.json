@@ -211,6 +211,27 @@
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/second_target_set/RESULT_SET2.md section 'What the set shows beyond the rule', item 4"
     }
    ]
+  },
+  "OBJ_HE_ADV_SCOPED_20261117": {
+   "order": 2,
+   "source": "ADV message 2026-11-17 (scoped technical continuation of governance/design_records/adv_lab_ownership_20261117.md, 'Operational continuation'); independent of research, pauses nothing, a live scientific delivery goes first",
+   "steps": [
+    {
+     "step": "a: simplify the decision input (Plan's read-only rendering 80,983 characters) without dropping operator instructions, controls, current results or access to complete originals; measure before/after on the same inputs; no model call",
+     "status": "IN_PROGRESS",
+     "owner": "plan"
+    },
+    {
+     "step": "b: cost for one stated window from programme_cost.py, session_model_census.py, trial_window_table.py; host sessions, evaluation calls and delegates distinct; overlap reconciled; unknown quota is not zero",
+     "status": "TODO",
+     "owner": "plan"
+    },
+    {
+     "step": "c: reconcile the shared-root reset workflow, isolated publication surfaces, preserve unpublished commits; reconfirm two old waiters by identity/completion file and stop only own stale ones",
+     "status": "TODO",
+     "owner": "plan"
+    }
+   ]
   }
  },
  "DEFAULTS_TAKEN": [

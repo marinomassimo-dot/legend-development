@@ -1162,6 +1162,18 @@ class ValueContinuity(Continuous):
         commit(f"{base}/ADV-003_brief.md", "ADV: evaluation P10 recorded (delivered); brief file touched")
         self.assertEqual(len([e for e in sa.observe(inside, state)["events"] if e.startswith("delivery:")]), 2)   # a commit that also touches a file outside the advisor's own still counts
 
+    def test_the_assignment_render_names_each_mandate_once_and_loses_no_field(self) -> None:
+        """HE95: the compact render keeps every assignment's recipient, key, origin, evidence level and mandates, and each mandate's verdict and path once."""
+        states = {"ADV-001": {"recipient": "Science", "key": "k1", "origin": "assessment", "highest": "EXECUTED",
+                              "mandates": [{"task": "T-A", "verdict": "RELEASED", "path": "ledger/tasks/plan/T-A.json"}, {"task": "T-B", "verdict": "OPEN", "path": "ledger/tasks/plan/T-B.json"}]},
+                  "ADV-002": {"recipient": "Harness", "key": "k2", "highest": "SENT", "mandates": [{"task": "T-A", "verdict": "RELEASED", "path": "ledger/tasks/plan/T-A.json"}]}}
+        text = sa.render_assignment_states(states)
+        for needle in ("ADV-001", "ADV-002", "Science", "Harness", "k1", "k2", "EXECUTED", "SENT", "T-A", "T-B", "RELEASED", "OPEN", "ledger/tasks/plan/T-A.json", "ledger/tasks/plan/T-B.json"):
+            self.assertIn(needle, text)
+        self.assertEqual(text.count("ledger/tasks/plan/T-A.json"), 1)         # named once, referenced by id under each assignment
+        self.assertIn('"origin": "assessment"', text)                           # an absent origin reads as assessment, as before
+        self.assertEqual(sa.render_assignment_states({}), "none")
+
     def test_session_activity_shows_who_is_idle_and_for_how_long(self) -> None:
         """HE60: the idle share and each session's quiet time come from the runtime and the transcript mtime, only for this repository's sessions."""
         proj = self.tmp / "projects" / "-x"
