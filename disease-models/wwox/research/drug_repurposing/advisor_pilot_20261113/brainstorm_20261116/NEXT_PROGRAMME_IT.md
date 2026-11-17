@@ -29,3 +29,14 @@ Baseline arm of the matrix 40,573; blind extractor 73,560; second read of 25 cel
 * Item 4 (feasibility count before more extraction) was done by D5b tranche 1 (11 reports, 37 children, zero GABA-raising exposure in genotyped WWOX children) and by the group-level recount (`it_batch1_group_recount_20261116/`): the published record names at least 4 vigabatrin-listed children, 2 not yet read per child.
 * Item 3 (authorise ADMET-AI/medchem/RDKit) unchanged and still open.
 
+
+## Update 2026-11-17 (IT; dated; one reconciliation with what landed today, branch by branch; no new programme; the texts above are unchanged)
+* **Item 1, laboratory:** blocks only the slice path. The decisions IT56-Q08 and IT56-Q10 put the PV tool arm and the fractional-block condition in the slice pilot list at hypothesis level; their wet-lab remainders are IT56-Q10R and IT56-Q08R (OPEN, need a laboratory). The older whole-programme stop applies to those two rows and to nothing else.
+* **Item 2, human visit:** the list now also holds PMID 36537114 (ninth entry of `it_operator_items_20261117/HUMAN_VISIT_RANKING_IT_20261117.md`, partial by delivery); IT56-Q06R is access-blocked (human check).
+* **Item 3, BLOCK-1 tools:** unchanged; the operator's authorisation is still needed.
+* **Item 4, feasibility count:** done and extended: D5b tranche 1, the vigabatrin group recount, and SCI's benzodiazepine class note (IT46-Q11 ANSWERED: no class-level record, two single-child response attributions, four regimen-level non-control groups, no denominator).
+* **Item 5, watch:** unchanged.
+* **Selection view independence (IT56-Q07, CONCLUDED):** the first five units rest on 4 independent origins; positions 2 and 3 share one experiment (Cheng 2020) and stay separate units; 5 WWOX-system origins in the eight units plus one non-WWOX; by group the first five are fewer (three origins carry the same senior author). Files: `it_adv025_20261117/`.
+* **Stale rows:** five rows read OPEN while packages on main answered them (IT56-Q05, IT56-Q09, WO-06, TS-02, IT46-Q03 in part), plus IT46-Q11; applied. SCI's ADV-027 sweep of the zero-spend OPEN rows will give the real reachable list; I apply it and run no sweep of my own.
+* **Panel 6 (SCI, RNA level):** the organoid GAD1-up and GABRB2/GABRB3-down direction is not reproduced per class in the S-line neuron-specific deletion; scaffold transcripts do not fall; H1 is neither supported nor refuted, and an RNA row does not test the protein-level lever (arm table v9, M103 to M105).
+* **Engine path:** still stopped until the operator gives a budget; this is the one older whole-programme stop that stays whole.
