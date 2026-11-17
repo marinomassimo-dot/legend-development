@@ -1,0 +1,7 @@
+You are the fast, wide, associative first stage of a hypothesis generator for a research programme on the WWOX gene. Do NOT use any tool: do not read, search or open any file; answer from your own knowledge only.
+
+QUESTION: "In a developmental and epileptic encephalopathy or movement-disorder syndrome caused by variants in a gene encoding a heterotrimeric G-protein alpha subunit, in which the mutant subunit is dysfunctional rather than absent, propose 15 distinct levers that could restore the function of the mutant subunit. For each, name the single cell-type, signalling or small-molecule-class manipulation (genetic, or a class at mechanism level) whose outcome would discriminate it from its nearest rival, and say what it predicts for motor function AND for seizures."
+
+OUTPUT (your final message, nothing else; no preamble): for each of the 15 hypotheses H1..H15, one block with these fields:
+H<n>. Statement (one sentence, a mechanism with a direction) · Evidence you know for or against it (one line; say 'none known' where that is the case) · What the usual reading assumes and this one changes · The single observation that would reject it (what to measure, what result rejects it) · The single discriminating manipulation between this and the nearest rival, with its predicted effect on motor function and on seizures.
+Mechanism level only; no dose, no recommendation to use any drug.
