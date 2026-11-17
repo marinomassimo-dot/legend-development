@@ -659,3 +659,5 @@ must not be dropped in any downstream version.
 
 **No row of this file is canonical; none is proposed for `BATCH_COMMIT` here.** The recommendation
 that **no new animal cohort is warranted** is endorsed.
+
+[Update 2026-11-17, CC-20261117-ORCHESTRATOR-P47T-ABUNDANCE-WORDING-01 (IT; wording from the closure note IT56-Q05 of SCI, held files only): where this file says P47T protein is normal or at wild-type amount (lines 63), read "present, similar by the authors' wording, not quantified; folded state and stability untested". Same: the permitted statement is protein present, level unquantified, Purkinje cells lost. The original sentences above are not edited. Nothing else in this file changes.]

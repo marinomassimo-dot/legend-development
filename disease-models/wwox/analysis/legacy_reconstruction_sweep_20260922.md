@@ -240,3 +240,5 @@ census of one ledger file on 2026-09-22, not a statement about any other reposit
 PMIDs 19936220, 19500159, 42193054, 26857392, 30361190, 39101447, 39420317, 24456803, 27495153, 24932569,
 38161429, 30362252, 23446842 — all appear here as **ledger and registry entries**, not as sources read or cited
 for scientific content.
+
+[Update 2026-11-17, CC-20261117-ORCHESTRATOR-P47T-ABUNDANCE-WORDING-01 (IT; wording from the closure note IT56-Q05 of SCI, held files only): where this file says P47T protein is normal or at wild-type amount (lines 118), read "present, similar by the authors' wording, not quantified; folded state and stability untested". Descriptive mention only; no argument in this file depends on equal abundance. The original sentences above are not edited. Nothing else in this file changes.]

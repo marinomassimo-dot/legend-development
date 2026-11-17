@@ -422,3 +422,5 @@ and no sensor is proposed.**
 
 *Non-canonical analysis file. Produces no claim, no commit candidate and no canonical change.
 Not medical advice.*
+
+[Update 2026-11-17, CC-20261117-ORCHESTRATOR-P47T-ABUNDANCE-WORDING-01 (IT; wording from the closure note IT56-Q05 of SCI, held files only): where this file says P47T protein is normal or at wild-type amount (lines 333,390), read "present, similar by the authors' wording, not quantified; folded state and stability untested". P47T as discriminator needs an abundance control; "normal abundance" is not shown, so the abundance control is not optional. The original sentences above are not edited. Nothing else in this file changes.]

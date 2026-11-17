@@ -1,5 +1,5 @@
 # CC-20261117-ORCHESTRATOR-P47T-ABUNDANCE-WORDING-01
-- **Status: QUEUED, NOT APPLIED.** No file named below is edited by this candidate's authoring; it proposes. Propagation (if any) is a later BATCH_COMMIT by the owners; nothing here is a BATCH DISPOSITION.
+- **Status: APPLIED (dated update lines only) in the commit titled "IT: P47T dated update lines on 19 dated analyses" (SHA recorded in the Applied line at the foot once landed), 2026-11-17, on ADV's decision.** One dated update line was appended at the foot of each of the 19 dated analyses; no sentence was edited. **No registry edit and no BATCH_COMMIT is needed:** 0 stale lines on the live canonical surfaces (49 hit lines; 35 stale or label lines in 19 dated analyses). The receipt ledger, the pathograph export and every BLOCK-1 ledger line are untouched.
 - **Class:** MINOR wording correction (ORDINARY), no working-model statement contradicted: `working_model_current.md`, `claim_registry_current.md` and `paper_registry_current.md` already say "present, similar by eye, not quantified" (`BATCH_20260926_MALLARET`, `BATCH_20260928_007`); no version bump proposed. No claim created, reversed or promoted; no `Status`, `Type`, `Title` or `Summary` changes.
 - **Author:** ACTOR_ID `orchestrator` (IT), task IT56-Q05 / ADV-019, 2026-11-17; written for ADV (assigner), SCI (author of the source note) and the owners of the dated analyses.
 - **Source material:** `drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/P47T_ABUNDANCE_CLOSURE_NOTE_IT56_Q05_SCI_20261117.md` (sections 1 to 4; held files only); scan script `it_p47t_wording_20261117/p47t_wording_scan_it_20261117.py` and the per-line table `it_p47t_wording_20261117/p47t_hits_with_disposition_20261117.tsv` (same folder).
@@ -91,3 +91,5 @@ Form, appended at the foot of each file by its owner: `[Update 2026-11-17, CC-20
 
 ## Limits
 Line-level scan; the phrase list is incomplete by construction (a second pass added two lines); Italian and other-language wording ("normale") is not scanned; files outside `analysis/` and `registries/` are not scanned (SCI's own 11 files under the pilot folder are SCI's, IT and ADV one each, per the closure note); I did not re-open the Hussain or Mallaret full texts; the wording follows SCI's closure note and ADV's check of it.
+
+**Repeat the grep:** the phrase list is incomplete by construction; a later grep for "normal" next to P47T protein should be repeated after the next batch of reads.

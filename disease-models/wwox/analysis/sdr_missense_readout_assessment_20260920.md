@@ -378,3 +378,5 @@ fetch with **HTTP 202 and zero bytes** — a bot challenge, not a paywall — so
 `https://www.degruyter.com/document/doi/10.1515/znc-2011-1-210/pdf`**, at no cost. ⚠️ **The lesson is
 the one this repository keeps re-learning in a new costume:** three routes agreed, and all three were
 **PubMed-family** — agreement among siblings is not independence. No paid access was attempted.
+
+[Update 2026-11-17, CC-20261117-ORCHESTRATOR-P47T-ABUNDANCE-WORDING-01 (IT; wording from the closure note IT56-Q05 of SCI, held files only): where this file says P47T protein is normal or at wild-type amount (lines 212), read "present, similar by the authors' wording, not quantified; folded state and stability untested". Descriptive mention only; no argument in this file depends on equal abundance. The original sentences above are not edited. Nothing else in this file changes.]

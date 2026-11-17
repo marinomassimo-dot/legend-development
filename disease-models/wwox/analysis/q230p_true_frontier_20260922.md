@@ -686,3 +686,5 @@ to prevent.** `TX-003` and `HYP-20260709-02` stay conditional, and the therapeut
 branch-dependent exactly as `q230p_structural_mechanism_20260922.md` §9 states.
 
 🔴 **Nothing here is medical advice.** No dose, route, schedule or clinical framing, for any genotype.
+
+[Update 2026-11-17, CC-20261117-ORCHESTRATOR-P47T-ABUNDANCE-WORDING-01 (IT; wording from the closure note IT56-Q05 of SCI, held files only): where this file says P47T protein is normal or at wild-type amount (lines 166), read "present, similar by the authors' wording, not quantified; folded state and stability untested". The inversion of the ddG predictor against the six measurements used P47T as "normal in two matrices": read "present in two matrices"; the inversion is then weaker for P47T and rests on the other measured variants. The original sentences above are not edited. Nothing else in this file changes.]
