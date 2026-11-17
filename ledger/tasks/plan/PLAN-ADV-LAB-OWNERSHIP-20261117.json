@@ -11,7 +11,7 @@
   "worktree": "/tmp/legend-adv-lab-ownership-20261117",
   "branch": "codex/adv-lab-ownership-20261117",
   "AUTHORISED_QUEUE_20261117": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_IMPLEMENT": {
       "order": 1,
       "steps": [
@@ -27,7 +27,8 @@
         },
         {
           "step": "Verify relevant regressions, land and publish on exact SHA, report behavioural limitations",
-          "status": "IN_PROGRESS"
+          "status": "DONE",
+          "evidence": "Frozen 2c132b7fdda7328e91d727a22623526e157b75de: six targeted suites on a fresh clone PASS WITH SKIPS (one absent Stop-hook case); author task_close landed at 5ae577097. Published 25472f9ed42064f9f85a97de521475294132dd56 through exact-SHA gate PASS and ls-remote verification. Native result merge also passes structured-data integrity (5 tests)."
         }
       ]
     }
@@ -90,7 +91,39 @@
       "scope": "Structural LINT",
       "verdict": "WARN",
       "blocks": 0
+    },
+    {
+      "scope": "fresh clone at frozen implementation 2c132b7fdda7328e91d727a22623526e157b75de",
+      "targets": 6,
+      "verdict": "PASS_WITH_SKIPS",
+      "skipped_cases": 1,
+      "skip_reason": "Stop hook not installed in clean clone; runtime enforcement is not claimed",
+      "log": "/tmp/legend-adv-ownership-fresh-regressions-20261117.log"
+    },
+    {
+      "scope": "merged native data at publication",
+      "tests": 5,
+      "verdict": "PASS",
+      "log": "/tmp/legend-adv-ownership-merged-data-20261117.log"
     }
   ],
-  "TEAM_HANDOFF": "governance/design_records/adv_lab_ownership_20261117.md; linked inside the effective operator roadmap. This is a durable assignment source, not a claim of SendMessage delivery."
+  "TEAM_HANDOFF": "governance/design_records/adv_lab_ownership_20261117.md; linked inside the effective operator roadmap. This is a durable assignment source, not a claim of SendMessage delivery.",
+  "PUBLICATION": {
+    "implementation_sha": "25472f9ed42064f9f85a97de521475294132dd56",
+    "gate": "PASS",
+    "remote_verified": true,
+    "actor_id": "plan",
+    "runtime": "Codex"
+  },
+  "NEXT_OBSERVATION": {
+    "owner": "ADV host; HE technical verification; IT/SCI real execution and consumption",
+    "source": "governance/design_records/adv_lab_ownership_20261117.md, already linked in the effective operator roadmap",
+    "status": "READY_FOR_TEAM_TAKE_IN_CHARGE; not claimed sent or accepted",
+    "evidence_required": "existing transport receipt, recipient mandate, actual result and consumer, then next autonomous choice; technical tests alone do not demonstrate strategy"
+  },
+  "KNOWN_LIMITS": [
+    "No full release inventory run for this focused change; six relevant targets on a fresh clone.",
+    "A read-only rendering on the merged real state contains ownership, result-source and activity context and the complete handoff pointer; it is not a model evaluation or proof of compliance.",
+    "Rendered Stage P context remains large (80,234 characters in that observation); streamline duplicate/historical context without losing active controls as a measured HE follow-up, not as another approval layer."
+  ]
 }
