@@ -1,0 +1,111 @@
+class | member | direction (raises or lowers activity) | mechanism (one line)
+a. catalytic cycle | ATP at the KHD | raises | Binds the kinase-like domain and allosterically potentiates ligand-stimulated cyclase activity.
+a | non-hydrolysable ATP analogs (AMP-PNP, ATPgS) | raises | Occupy the KHD ATP site and mimic the allosteric potentiation without being consumed.
+a | KHD ATP-site competitors / ATP depletion (energy stress) | lowers | Less ATP at the KHD removes the allosteric potentiation; this is a mechanistic possibility, not a validated agent.
+a | Mg2+ (Mg-GTP) | raises | Physiological catalytic metal; forms the Mg-GTP substrate at the cyclase active site.
+a | Mn2+ | raises | Supports higher Vmax and ligand-independent activity, so it bypasses ligand gating.
+a | Ca2+ substitution / metal chelation (EDTA) | lowers | Ca2+ poorly supports catalysis and competes for the metal site; chelation removes the catalytic metal.
+a | GTP (substrate) | raises | Substrate supply sets the rate at sub-saturating GTP (Km dependence).
+a | GTP depletion | lowers | Lowers substrate occupancy, so the rate falls (the mechanism of IMPDH inhibition, see d).
+a | Pyrophosphate (PPi, product) | lowers | Product inhibition of the cyclase reaction.
+a | Inorganic pyrophosphatase | raises | Removes PPi and so relieves product inhibition.
+a | Oxidants / ROS / thiol-alkylators (e.g. NEM) | lowers | Modify extracellular-domain cysteines or catalytic thiols and impair ligand binding or catalysis (hedged; receptor-specific).
+a | Reducing conditions (DTT) | raises (in vitro, hedged) | Preserve ligand-binding thiols or disulfides in a reduced, competent state; also keeps reduced ligand peptides intact.
+a | Acidic luminal pH (~5-6) | raises (uroguanylin-driven) | Increases uroguanylin affinity and potency for the receptor.
+a | Alkaline luminal pH (~8) | raises (guanylin-driven); lowers uroguanylin-driven | Guanylin is more potent at alkaline pH, and uroguanylin loses potency.
+a | Temperature (higher) | raises | Increases the catalytic rate (Q10 effect).
+a | Temperature (lower) | lowers | Decreases the catalytic rate.
+a | Detergent / membrane perturbation (Triton in vitro) | raises (in vitro) | Uncouples the ligand-gated switch and increases basal activity.
+b. folding and stability | Hsp90 | raises (receptor level and activity) | Client chaperone that supports folding and maturation.
+b | Hsp90 inhibitors (geldanamycin class) | lowers | Destabilise the client and send the receptor to ERAD, so less receptor reaches the surface.
+b | Hsp70 / Hsp40 | raises | Support folding or refolding and ER export.
+b | Hsp70 inhibition | lowers | Impairs folding and increases degradation.
+b | Calnexin / calreticulin cycle | raises (surface level) | Quality-control folding of the N-glycosylated extracellular domain.
+b | Chemical chaperones (4-PBA, TMAO, glycerol) | raises (surface level) | Stabilise folding intermediates and improve ER export; they could rescue a GOF protein that is partly misfolded.
+b | Low-temperature rescue (about 27 C) | raises (surface level) | Favours folding and ER export of destabilised variants.
+b | KHD or ligand-binding-domain stabilising ligands | raises | Pharmacological-chaperone stabilisation of the folded state.
+b | Destabilising agents / proteotoxic stress (ER stress inducers) | lowers | Reduce folded, exported protein; lowering is possible only if the GOF allele is over-stable (hypothesis).
+c. assembly, trafficking | N-glycosylation (OST, glycan processing) | raises | Needed for ligand binding and ER export of the receptor.
+c | Tunicamycin | lowers | Blocks N-glycosylation, which impairs folding, export and ligand binding.
+c | Glucosidase / mannosidase inhibitors (castanospermine, kifunensine) | lowers (surface level, hedged) | Alter glycan trimming and the quality-control cycle, so less receptor reaches the surface.
+c | COPII components (Sar1, Sec23/24) | raises | Mediate ER exit of the receptor.
+c | Dominant-negative Sar1 (GTP-locked) | lowers | Blocks COPII budding and traps the receptor in the ER.
+c | Brefeldin A | lowers | Collapses ER-Golgi transport, so the receptor is not delivered to the surface.
+c | Wild-type partner in a dimer | raises | Dimerisation via the hinge and coiled coil is required for catalytic closure.
+c | Catalytically dead or kinase-dead dominant-negative subunit | lowers | Forms inactive heterodimers with the GOF subunit.
+c | Apical sorting signals / lipid-raft partitioning (cholesterol) | raises | Concentrate the receptor with signalling partners at the brush border.
+c | Methyl-beta-cyclodextrin (cholesterol depletion) | lowers (hedged) | Disrupts raft organisation and receptor clustering.
+c | Palmitoylation inhibitors (2-bromopalmitate) | lowers (hedged) | Impair membrane targeting; evidence for GC-C is limited.
+c | Endogenous ligands guanylin and uroguanylin | raises | Bind the extracellular domain and trigger the switch.
+c | STa enterotoxin (extreme agonist) | raises | High-affinity, poorly reversible agonist at the ligand site.
+c | Linaclotide / plecanatide-type agonist peptides | raises | Ligand-site agonists mimicking guanylin or uroguanylin.
+c | Neutralising antibody, soluble decoy extracellular domain, ligand-sequestering agent | lowers | Remove or compete for ligand, so ligand-dependent activation falls (only ligand-dependent activity is reduced).
+c | Ligand-site competitive antagonist (truncated or modified ligand analogs) | lowers | Occupy the binding site without triggering the conformational switch.
+d. substrate and metabolite supply | IMPDH inhibitors (mycophenolic acid, ribavirin) | lowers | Deplete the guanine nucleotide pool and therefore GTP substrate.
+d | GMP synthase inhibitors (acivicin, decoyinine) | lowers | Block XMP to GMP and reduce GTP.
+d | Salvage (HGPRT) with hypoxanthine or guanine / guanosine | raises | Replenishes GMP and GTP and supports substrate supply.
+d | De novo purine synthesis | raises | Maintains the GTP pool.
+d | De novo purine synthesis inhibitors (antifolates, mizoribine class) | lowers | Reduce nucleotide precursors and GTP.
+d | ABCC4 / ABCC5 transporters | lowers cellular cGMP | Export cGMP out of the cell, which limits intracellular signal.
+d | ABCC4/ABCC5 inhibitors (MK571, probenecid) | raises cellular cGMP | Block cGMP efflux, so intracellular cGMP accumulates (cGMP signal, not catalysis).
+d | SGLT1 / Na+-coupled absorption (glucose-Na+ cotransport) | lowers fluid output (bypass) | Drives Na+ and water absorption and opposes secretion.
+d | CFTR-driven Cl- and HCO3- secretion | raises fluid secretion (downstream) | Anion efflux drives water secretion.
+d | Luminal pH changes from HCO3- secretion | modulates ligand potency | Alkalinisation favours guanylin and disfavours uroguanylin.
+d | NO donors / L-arginine / dietary nitrate | raises (parallel sGC pool) | Feed soluble guanylyl cyclase, a separate cGMP source, and so increase total cGMP.
+d | NOS inhibitors (L-NAME) | lowers (parallel pool) | Reduce NO and sGC-derived cGMP.
+d | Dietary fibre / short-chain fatty acids (butyrate) | raises or modulates (indirect, hedged) | Supply epithelial energy (ATP) and lower luminal pH.
+e. degradation and turnover | PDE5 | lowers cGMP | Hydrolyses cGMP.
+e | PDE5 inhibitors (sildenafil class) | raises cGMP | Block hydrolysis and so raise the cGMP signal (not cyclase catalysis).
+e | PDE9 | lowers cGMP | Hydrolyses cGMP with high affinity.
+e | PDE9 inhibitors | raises cGMP | Block hydrolysis.
+e | PDE10 | lowers cGMP | Dual cAMP/cGMP hydrolysis.
+e | PDE10 inhibitors | raises cGMP | Block hydrolysis.
+e | PDE1 | lowers cGMP | Hydrolyses cGMP in a Ca2+/calmodulin-dependent way.
+e | PDE1 inhibitors (vinpocetine) | raises cGMP | Block hydrolysis.
+e | PDE2 | lowers cGMP | Hydrolyses cGMP and cAMP, and is stimulated by cGMP.
+e | PDE2 inhibitors (EHNA, BAY 60-7550) | raises cGMP | Block hydrolysis.
+e | PKG phosphorylation of PDE5 | lowers cGMP | Feedback activation of PDE5 raises hydrolysis.
+e | KHD kinases (PKC, CK2-type) | raises | Phosphorylation of the KHD supports full receptor activation (receptor-specific; hedged for GC-C).
+e | PMA (PKC activation) | raises | Potentiates ligand-stimulated activity.
+e | Protein phosphatases | lowers | Dephosphorylation of the KHD reduces activity and responsiveness.
+e | Phosphatase inhibitors (okadaic acid) | raises | Maintain the KHD in the phosphorylated state.
+e | Ligand-induced endocytosis (dynamin / clathrin) | lowers | Removes receptor from the apical surface.
+e | Dynamin inhibitors (dynasore) | raises (surface level) | Block internalisation.
+e | E3 ubiquitin ligases | lowers | Ubiquitination targets the receptor for lysosomal or proteasomal degradation.
+e | Lysosomal inhibitors (chloroquine, bafilomycin) | raises (receptor level) | Block lysosomal receptor turnover.
+e | Proteasome inhibitors (bortezomib, MG132) | raises (receptor level, with ER stress) | Block ERAD and proteasomal turnover.
+e | p97/VCP inhibitors | raises (receptor level) | Block ERAD extraction.
+e | Proguanylin and prouroguanylin processing proteases (chymotrypsin- or elastase-type) | raises | Generate active ligand from the prohormone.
+e | Luminal protease inhibitors (e.g. serine-protease inhibitors) | lowers | Reduce the supply of active ligand.
+f. effector and bypass | PKG2 (PRKG2) | raises downstream signal | Phosphorylates CFTR and NHE3 and drives secretion.
+f | PKG2 inhibitors (Rp-cGMPS analogs, KT5823) | lowers downstream signal | Block PKG2 kinase activity.
+f | cGMP analogs (8-Br-cGMP) | raises downstream signal | Activate PKG2 directly, bypassing the cyclase.
+f | CFTR potentiator (ivacaftor class) | raises | Increases channel open probability and fluid secretion.
+f | CFTR inhibitors (CFTRinh-172, GlyH-101) | lowers downstream secretion | Block anion flux.
+f | cGMP-mediated PDE3 inhibition | raises cAMP / PKA | cGMP competitively inhibits PDE3, so cAMP rises and PKA augments CFTR.
+f | PDE3 inhibitors (cilostamide class) | raises cAMP / PKA signal | Mimic the cGMP effect on PDE3.
+f | Adenylyl cyclase inhibitors | lowers cAMP / PKA signal | Reduce the cAMP branch of secretion.
+f | NHE3 inhibition by PKG2 | raises luminal fluid | Reduces Na+ absorption.
+f | NHE3 inhibitors (tenapanor class) | raises luminal fluid | Same mechanism: block Na+/H+ exchange.
+f | Soluble GC (sGC) | raises (parallel source) | Competing cGMP source activated by NO.
+f | sGC stimulators / activators (riociguat, vericiguat class) | raises (parallel source) | Sensitise or activate sGC, adding cGMP.
+f | sGC inhibitor ODQ | lowers (parallel source) | Oxidises the sGC heme and blocks cGMP formation.
+f | Notch inhibition (gamma-secretase inhibitors, DAPT) | raises secretory fate | Derepresses Atoh1 and shifts cells to goblet and secretory lineages.
+f | Notch activation / Atoh1 loss | lowers secretory fate | Favours absorptive fate.
+f | Wnt signalling / Wnt inhibitors | modulates (hedged) | Alter proliferation and differentiation balance in the crypt.
+f | TNF, IL-1b, NF-kB signalling | lowers (receptor and ligand expression) | Inflammatory cytokines downregulate GUCY2C and guanylin expression.
+f | Anti-TNF or NF-kB blockade | raises (expression) | Relieves cytokine suppression.
+f | IL-22 | modulates (hedged) | Epithelial cytokine loop with barrier effects.
+f | MLCK inhibition / claudin-2 / ZO-1 changes | modulates barrier (hedged) | Tight-junction permeability affects paracellular water and ion flux.
+g. cell type, timing, dosage | Epithelium-specific Cre-driven removal of the GOF allele | lowers | Removes the variant in the relevant tissue.
+g | Tamoxifen-inducible Cre removal (reversibility test) | lowers | Tests whether the phenotype reverses after the allele is removed.
+g | siRNA / antisense knockdown of the GOF allele | lowers | Reduces transcript and protein.
+g | Heterozygous dosage | lowers (relative to homozygous) | Halves the GOF allele load.
+g | Homozygous dosage | raises (relative to heterozygous) | Doubles the GOF allele load.
+g | Trans-heterodimer with a null allele | lowers | Forms catalytically impaired dimers with the GOF subunit.
+g | Lgr5 stem-cell compartment versus differentiated cells | modulates | Receptor expression and effectors differ by cell state and lineage.
+g | Developmental versus adult onset | modulates | Timing affects compensation and the phenotype.
+g | Compensatory uroguanylin from the proximal gut | raises (ligand input) | Provides more ligand to a GOF receptor and so adds to the hyperactivity.
+g | Transcription factors (CDX2, HNF4A) | raises (expression) | Drive GUCY2C expression in the intestinal epithelium (hedged).
+
+LOWERING MEMBERS: KHD ATP-site competitors / ATP depletion; Ca2+ substitution / metal chelation (EDTA); GTP depletion; Pyrophosphate (PPi, product); Oxidants / ROS / thiol-alkylators (NEM); Alkaline luminal pH (for uroguanylin-driven activity); Temperature (lower); Hsp90 inhibitors (geldanamycin class); Hsp70 inhibition; Destabilising agents / proteotoxic stress (hypothesis); Tunicamycin; Glucosidase / mannosidase inhibitors; Dominant-negative Sar1 (GTP-locked); Brefeldin A; Catalytically dead or kinase-dead dominant-negative subunit; Methyl-beta-cyclodextrin (hedged); Palmitoylation inhibitors (2-bromopalmitate, hedged); Neutralising antibody / soluble decoy extracellular domain / ligand-sequestering agent; Ligand-site competitive antagonist; IMPDH inhibitors (mycophenolic acid, ribavirin); GMP synthase inhibitors (acivicin, decoyinine); De novo purine synthesis inhibitors; ABCC4/ABCC5 transporters (lower cellular cGMP); SGLT1 / Na+-coupled absorption (lowers fluid output); NOS inhibitors (L-NAME; parallel pool); PDE5, PDE9, PDE10, PDE1 and PDE2 themselves (lower cGMP); PKG phosphorylation of PDE5; Protein phosphatases; Ligand-induced endocytosis (dynamin / clathrin); E3 ubiquitin ligases; Luminal protease inhibitors; PKG2 inhibitors (Rp-cGMPS analogs, KT5823); CFTR inhibitors (CFTRinh-172, GlyH-101); Adenylyl cyclase inhibitors; sGC inhibitor ODQ; Notch activation / Atoh1 loss; TNF, IL-1b, NF-kB signalling; Epithelium-specific Cre-driven removal of the GOF allele; Tamoxifen-inducible Cre removal; siRNA / antisense knockdown of the GOF allele; Heterozygous dosage (relative to homozygous); Trans-heterodimer with a null allele
