@@ -81,3 +81,5 @@ Most rows are abstract-level (Europe PMC core records); about 20 full texts were
 
 ## Files (/tmp/it56_ket/p4_harms/)
 HARMS_TABLE.tsv (84 rows, 12 columns; quote_verbatim and statement_label added to the brief's columns), SOURCES.tsv (84 rows plus 4 for sources not reached), SEARCHES.tsv (51 rows), sources/ (Europe PMC core JSON per PMID, fullTextXML for open-access papers, two DailyMed SPL XMLs, _fetchlog.tsv), sources/txt/ (derived text used for quote checks).
+
+**Update 2026-11-17 (IT; after blind verification of sampled rows):** corrections for this package are in `../CORRECTIONS_AFTER_BLIND_VERIFICATION_IT_20261117.md`; the text above is unchanged.
