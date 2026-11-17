@@ -9,3 +9,5 @@ File: `ideas_arm_table_v7_20261117.tsv` (76 lines x 10 columns, same columns as 
 * T-type I10 origin R13 (transfer only, tier 3); NMDAR pore blocker I4 origin R17c (the I1 sign carried over, tier 3); the Cacna1g transfer row (now one string for I1/I10) origin R13.
 * The duplicated-key pairs still share an origin_row (SCI's table names the string, not the cell); SCI adds cell_id in revision 3 and the match then becomes by cell.
 Limits: the origin of a cell is the existence of a reading that names its arm|idea string, not a check that the reading supports the sign (the transfer table's tier and direction columns say that); 37 cells still have no origin row.
+
+Correction (IT, host 2026-11-17 ~08:30Z): where this note and M075 say 'about 20 further cells' carry a directional phrase in the sign column, the correct statement (ADV) is: 20 rows in all carry a directional phrase in the sign column, the six included.
