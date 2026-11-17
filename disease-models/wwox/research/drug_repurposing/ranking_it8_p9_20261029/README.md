@@ -160,6 +160,7 @@ availability.
 
 **Source independence.** An assertion is counted once however many records cite it (preprint, publication, database row, citing paper). The two AAV9
 cards are one intervention. Distinct-paper counts are shown, and the text says that they do not establish independence of the groups.
+* **Update 2026-11-17 (IT; ADV host decision, IT56-Q07; ranking.json and positions unchanged).** In the general selection view the first five units rest on 4 independent origins; positions 2 and 3 share one experiment (Cheng 2020; one laboratory, one preparation). They stay separate units because they ask different questions (T-type sensitivity for ethosuximide, a non-specific GSK3-class action for lithium); a single shared drug-by-genotype design (same pups, same-day vehicle, wild type included, ratio-free threshold endpoint) serves both and is not two independent supports of one claim. The eight units rest on 5 WWOX-system origins plus one outside WWOX (U25). Table: `advisor_pilot_20261113/brainstorm_20261116/it_adv025_20261117/`.
 
 ## 3. Selections (requirement E)
 
