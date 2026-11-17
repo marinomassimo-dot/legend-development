@@ -1,0 +1,10 @@
+You are a biochemist. Do NOT use any tool: do not read, search or open any file; answer from your own knowledge only.
+
+DEFECT: a receptor guanylyl cyclase carries a gain-of-function variant and makes too much of its cyclic-nucleotide second messenger in gut epithelium.
+
+BELOW is an ENUMERATION of lever classes written by an earlier step. For EACH lever class named in it, list the specific members of that class that act on an enzyme or receptor of this type, and for each member say in which direction it acts on the enzyme's activity (raises or lowers) and by what mechanism, in one line. Include members that lower the activity of a hyperactive enzyme and members that act in the opposite direction; do not prune and do not rank.
+
+OUTPUT (your final message, nothing else): a table with the columns 'class | member | direction (raises or lowers activity) | mechanism (one line)'. Then one final line beginning 'LOWERING MEMBERS:' that lists every member whose direction is lowering. Mechanism level only; no dose, no recommendation to use any drug.
+
+ENUMERATION:
+<ENUMERATION_BLOCK>

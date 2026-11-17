@@ -1,0 +1,75 @@
+You are a biochemist. Do NOT use any tool: do not read, search or open any file; answer from your own knowledge only.
+
+DEFECT: a receptor guanylyl cyclase carries a gain-of-function variant and makes too much of its cyclic-nucleotide second messenger in gut epithelium.
+
+BELOW is an ENUMERATION of lever classes written by an earlier step. For EACH lever class named in it, list the specific members of that class that act on an enzyme or receptor of this type, and for each member say in which direction it acts on the enzyme's activity (raises or lowers) and by what mechanism, in one line. Include members that lower the activity of a hyperactive enzyme and members that act in the opposite direction; do not prune and do not rank.
+
+OUTPUT (your final message, nothing else): a table with the columns 'class | member | direction (raises or lowers activity) | mechanism (one line)'. Then one final line beginning 'LOWERING MEMBERS:' that lists every member whose direction is lowering. Mechanism level only; no dose, no recommendation to use any drug.
+
+ENUMERATION:
+ENUMERATION
+
+Defect in physical-chemical terms. GC-C (GUCY2C) is a single-pass receptor guanylyl cyclase. It has an extracellular ligand-binding domain (guanylin, uroguanylin, bacterial STa), a transmembrane helix, an intracellular kinase-homology domain (KHD) that binds ATP and acts as an allosteric gate, a hinge/coiled-coil, and a C-terminal cyclase domain. The cyclase domain forms an antiparallel dimer with two pseudo-symmetric sites and converts Mg-GTP to cGMP plus PPi. The activity cycle is ligand binding, then KHD/ATP-dependent transduction, then dimer closure, then catalysis, then desensitisation (KHD phosphorylation, ligand dissociation, endocytosis). A gain of function means the cycle's "off" arm is impaired (a lower activation threshold, constitutive or ligand-independent signalling, or loss of desensitisation) or its flux per receptor is raised. Net cGMP is flux in minus PDE hydrolysis and MRP4 efflux. The cGMP signal then acts through PKG2 (PRKG2), cGMP-regulated PDEs (PDE3 inhibition gives a cAMP rise, PDE2 stimulation) and CNG-type channels. The main epithelial outputs are CFTR opening, NHE3 inhibition, and effects on proliferation and differentiation. Caveat (INFERENZA): loss of GC-C also impairs barrier and goblet cells in mice, so the dose-response is probably U-shaped and "normalise" means return to a window, not "minimise".
+
+(a) Catalytic/activity cycle.
+- Substrate: GTP pool (de novo and salvage guanine nucleotides, IMPDH/GMPS flux).
+- ATP occupancy of the KHD, which potentiates activity.
+- Divalent metal: Mg2+ (physiological) versus Mn2+ (hyperactivates in vitro); intracellular free Mg2+.
+- KHD phosphorylation and desensitisation.
+- Cysteine redox state and oxidative stress.
+- Intracellular and luminal pH. Uroguanylin binding is pH-dependent: it is favoured at acidic pH, and guanylin at alkaline pH.
+- Allosteric cyclase-domain binders.
+
+(b) Folding and stability.
+- ER chaperones and HSP90/CDC37 client maintenance.
+- Core and ER-lumen N-glycosylation, which is needed for ligand binding and surface expression.
+- Temperature.
+- Osmolytes and chemical chaperones.
+- Ligand-site binders that stabilise the extracellular domain (they also change activation).
+
+(c) Assembly, trafficking, localisation.
+- Dimer or oligomer assembly of the cyclase domains.
+- Apical sorting and raft/cholesterol partitioning.
+- Endocytosis and recycling (Rab11, myosin Vb).
+- Binders of the ligand site (competitive antagonists, ligand scavengers).
+- Lipidation.
+- Brush-border scaffolds (PDZ proteins).
+
+(d) Substrate and metabolite supply.
+- Dietary purines and the guanine-nucleotide pool.
+- Dietary Mg2+.
+- Luminal ligand supply: proguanylin and prouroguanylin processing, and salt-linked uroguanylin secretion.
+- Luminal pH set by bicarbonate and diet.
+- Microbial metabolites that drive barrier and goblet cells: butyrate and other short-chain fatty acids, and tryptophan/AHR ligands.
+- Vitamin A, zinc.
+- Transport of cGMP out of the cell (MRP4).
+
+(e) Degradation and turnover.
+- Receptor ubiquitination, lysosomal degradation and shedding.
+- PDE5, PDE9, PDE10 and PDE2 hydrolysis of cGMP, and PDE3 cross-talk.
+- ABCC4 efflux.
+- Ligand degradation by luminal proteases.
+- cGMP-to-5'-GMP flux.
+
+(f) Downstream effector or bypass.
+- PKG2.
+- PKG2 targets CFTR and NHE3 (NHE3 is inhibited via the NHERF2 complex).
+- cAMP/PKA via PDE3 inhibition.
+- Fluid secretion and shear on the epithelium.
+- Notch/ATOH1/Wnt control of secretory lineage.
+- Tight-junction regulators (MLCK, ROCK, claudins).
+- IL-22/STAT3 and EGFR repair.
+- TNF/IFN-γ neutralisation.
+- Mucus layer restoration.
+
+(g) Cell type, timing, dosage.
+- Epithelium-restricted versus whole-body reversion of the allele.
+- Enterocyte versus secretory-lineage versus stem-cell action.
+- Immune and enteric-neuron cells (extracellular cGMP acts on nociceptors).
+- Heterozygous versus homozygous dosage.
+- Allele-specific silencing.
+- Neonatal versus adult window.
+- Germ-free background.
+
+HYPOTHESES
+
