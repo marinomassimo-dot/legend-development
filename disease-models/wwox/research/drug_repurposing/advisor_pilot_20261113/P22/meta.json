@@ -1,0 +1,282 @@
+{
+  "capture": {
+    "assessment_sha256": "8a2d629e353e21977d2a7eadd8052ccf6813500839909e56c6b568e74c85562a",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P22/stream.jsonl",
+    "raw_stream_sha256": "4b0496139be7da098b07e6624062be2400da7874ac450e82f0bac2511729ead9",
+    "source_session_id": "6edec095-405c-4066-9d88-e7f899c865c1",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 72248
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-17T07:29:32Z",
+  "label": "P22",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": true,
+      "efforts": {
+        "high": 8
+      },
+      "first_turn_context": 44761,
+      "models": {
+        "claude-opus-5": 1,
+        "claude-opus-5-5": 7
+      },
+      "peak_context": 85143,
+      "totals": {
+        "cache_creation": 85209,
+        "cache_read": 469116,
+        "output": 8775
+      },
+      "turns": 8
+    },
+    "final_turn_model": "claude-opus-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.0028667000000000002,
+        "inputTokens": 28537,
+        "maxOutputTokens": 128000,
+        "outputTokens": 26,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5": {
+        "cacheCreationEphemeral1hInputTokens": 68,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 68,
+        "cacheReadInputTokens": 83331,
+        "canonicalModel": "claude-opus-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.1643155,
+        "inputTokens": 4,
+        "maxOutputTokens": 64000,
+        "outputTokens": 4878,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 85209,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 85209,
+        "cacheReadInputTokens": 470926,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.8683091999999999,
+        "inputTokens": 18,
+        "maxOutputTokens": 128000,
+        "outputTokens": 4619,
+        "provider": "firstParty",
+        "thinkingTokens": 2660,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 14,
+    "refusal_fallbacks": [
+      {
+        "apiRefusalCategory": null,
+        "direction": "retry",
+        "fallbackModel": null,
+        "originalModel": null,
+        "scope": "session",
+        "trigger": "refusal"
+      }
+    ],
+    "total_cost_usd": 1.0354914,
+    "turn_models": {
+      "claude-opus-5": 1,
+      "claude-opus-5-5": 8
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 85209,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 85209,
+      "cache_read_input_tokens": 469116,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 18,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 68,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 68,
+          "cache_read_input_tokens": 83331,
+          "input_tokens": 4,
+          "output_tokens": 4878,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 8775,
+      "output_tokens_details": {
+        "thinking_tokens": 2290
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-17T07:27:18Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_it48q01_20261117/RESULT.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# RESULT - IT48Q01: Ba2+-sensitive share of resting conductance, rodent neocortical layer II/III pyramidal neurons, P13-17\n2\t\n3\tDate 2026-11-17. Mechanism-lev"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P19/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tMy last reply was cut off by a safety classifier partway through the \"Portfolio updates\" section, so it is incomplete. The `## Outcome` block, which the tick "
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/research_portfolio.tsv"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tid\ttheme\topportunity\tdecision\tpriority\twhy_now\tnext_action\tstatus\tsources\tmandate_id\tresume_when\toutcome\tupdated_utc\n2\tRP-001\tGeneration\tTurn unused qualified"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-*.md"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261115T152159Z-jaq44mq3.md\ndisease-models/wwox/research/drug_repurposing"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261117T023531Z-65a1hzow.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# MEETING \u2014 2026-11-17T02:35:31Z\n2\t\n3\tStarted UTC: 2026-11-17T02:35:31Z\n4\tSnapshot SHA: 7bc9a34f63eefe20ab2f963b9a012c4bd7d0fb84\n5\tCoordination: ADV (directio"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "IT48-Q01"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 26 files\ndisease-models/wwox/research/drug_repurposing/research_portfolio.tsv\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainst"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P21/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tI'll continue the assessment from the records already read, without reproducing the withheld text.\n2\t\n3\t## 1 \u00b7 Principal decision\n4\t\n5\tWhere does the next inc"
+    },
+    {
+      "input": {
+        "-C": 6,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_live1_consumption_20261117/NEXT_TWO_LITERATURE_ROWS_IT_20261117.md",
+        "pattern": "IT48-Q01"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "1-# The next two literature-executable rows after today's results (IT; ADV's request 02:20Z; the list has 39 OPEN literature_executable rows; each with the deci"
+    },
+    {
+      "input": {
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/IT_TASK_RECORD_20261116.md",
+        "pattern": "(ADV-016|IT48|threshold bisection|TRANSFER_QUALIFICATION|07:0|06:[3-5])"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "1:# IT task record (deepening round and ADV-016; non-canonical; not medical advice)\n3:## ADV-016 take-in-charge (IT, 2026-11-16 ~20:48Z)\n26:[Omitted long matchi"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/TRANSFER*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/TRANSFER_QUALIFICATION_SCI_20261117.tsv\ndisease-"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/IT_TASK_RECORD_20261116.md",
+        "limit": 25
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# IT task record (deepening round and ADV-016; non-canonical; not medical advice)\n2\t\n3\t## ADV-016 take-in-charge (IT, 2026-11-16 ~20:48Z)\n4\tAssignment: carry "
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/TRANSFER_QUALIFICATION_NOTE_SCI_20261117.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Transfer qualification of the readings under arm table v3: where it changes a cell and where it changes nothing (SCI, 2026-11-17; non-canonical; hypothesis "
+    }
+  ]
+}

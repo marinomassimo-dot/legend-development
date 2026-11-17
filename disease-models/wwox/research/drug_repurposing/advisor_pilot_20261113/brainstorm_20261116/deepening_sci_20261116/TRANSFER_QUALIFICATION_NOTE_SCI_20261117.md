@@ -33,3 +33,14 @@ The sign stays, the support is re-labelled. The largest groups: (0) **Sodium-cha
 * Sources of the transfers (Miao, Lucas-Clarke, Hsieh, Su) are read through the arm table's own summaries, not re-read by me today.
 * Whether the model's S-HT sensitivity is real is the model's open question (it missed twice there).
 * The 'changes' list is my reading; IT owns the arm table and decides what v4 says. 4 of 61 rows change a cell (2 sign, 2 value3: the substrate cell appears for I1 and I4); 33 re-label; 24 change nothing.
+
+## Revision 2 (IT's arm table v5 finding, 2026-11-17; ADV relayed it)
+* **Two arm keys matched no v4 string**: both were my split of one v4 row, `T-type blockade / Cacna1g deletion (transfer)` with idea `I1/I10`. Corrected: both rows now carry exactly `T-type blockade / Cacna1g deletion (transfer)|I1/I10`; the wording column says 'I1 part' or 'I10 part'. All 66 arm keys of the TSV now match a v4 `arm|idea` string (checked against `ideas_arm_table_v4_20261117.tsv`).
+* **Six cells carried a sign with no origin row; one row added for each (five rows; the sixth is the key fix above).**
+  * `T-type blocker|I10` ('burden -'): origin R13 (Miao T-type blockade, transfer, tier 3); no held Wwox in vivo reading. Carry 'transfer only'.
+  * `NMDAR pore blocker|I4` ('duration -'): origin R17c (model: NMDAR-active agent duration -54%), tier 3; it is the I1 sign carried to I4, no I4-specific reading.
+  * `GABA-A PAM|I9` ('rate -, if mature'): the sign has origin R17a (simulation, tier 3); the qualifier 'only after maturation' has **no held reading** (assumption).
+  * `GABA-A PAM|I10` ('burden + or 0, in vivo'): **no held reading: the sign is an assumption**; carry '.' or 'assumed' (row A01).
+  * `Remyelination mechanism|I5` ('rate -'): origin R08c (composition: oligodendrocyte-lineage share 22.5% to 7.8% in the S-line pool, n = 1 per arm, hippocampus) supports the **premise** at tier 2; the sign has no held reading (assumption).
+  * `T-type blockade / Cacna1g deletion (transfer)|I1/I10`: origin R13, tier 3 (two rows, one for each part).
+* **New totals:** 66 rows (43 WWOX observations, 10 transfers, 10 simulations, 3 assumptions); tiers 5 / 14 / 47; effects 4 change a cell, 38 re-label, 24 change nothing; 36 distinct cells (of the 75 in v4) have at least one row. The value-of-information counts of the ranking were made on the 32-cell version and are unchanged by these additions (none of the new rows adds a measurement).
