@@ -1,0 +1,7 @@
+gene	class	C_log2	ci_low	ci_high	n_ctrl	n_ko	n_expressing_ctrl	n_expressing_ko	readable_detection(>=30 each)
+Cacna1g	dentate	+1.54	+1.15	+1.99	638	564	61	126	yes
+Ldha	dentate	+0.63	+0.17	+1.11	638	564	63	82	yes
+Ldhb	dentate	+0.12	-0.23	+0.49	638	564	115	106	yes
+Hk1	dentate	+0.00	-0.26	+0.26	638	564	204	176	yes
+Pkm	dentate	+0.54	+0.32	+0.77	638	564	218	249	yes
+Slc2a1	dentate	+0.65	-0.27	+1.68	638	564	19	34	no
