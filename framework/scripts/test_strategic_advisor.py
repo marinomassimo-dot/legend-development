@@ -981,8 +981,14 @@ class ValueContinuity(Continuous):
         commit(f"{base}/assignments/ADV-001.md", "ADV draft delivered")
         commit("ledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-X.json", "ADV record COMPLETE")
         self.assertEqual(sa.observe(inside, state)["events"], [])           # three commits that match the delivery pattern, all the advisor's own
+        (self.repo / "disease-models/wwox/research/drug_repurposing/deepening_adv_x").mkdir(parents=True, exist_ok=True)
+        commit("disease-models/wwox/research/drug_repurposing/research_portfolio.tsv", "ADV: evaluation P9 recorded (assign; delivered to IT)")
+        commit("disease-models/wwox/research/drug_repurposing/deepening_adv_x/IDEAS_ORDER_DREAM5_ADV.md", "ADV: DREAM-5 update (R4 consumed)")
+        self.assertEqual([e for e in sa.observe(inside, state)["events"] if e.startswith("delivery:")], [])   # HE95: the portfolio update and the DREAM note an evaluation leaves are the advisor's own too
         commit(f"{base}/ADV-002_result.md", "HE result delivered")
         self.assertEqual(len([e for e in sa.observe(inside, state)["events"] if e.startswith("delivery:")]), 1)
+        commit(f"{base}/ADV-003_brief.md", "ADV: evaluation P10 recorded (delivered); brief file touched")
+        self.assertEqual(len([e for e in sa.observe(inside, state)["events"] if e.startswith("delivery:")]), 2)   # a commit that also touches a file outside the advisor's own still counts
 
     def test_session_activity_shows_who_is_idle_and_for_how_long(self) -> None:
         """HE60: the idle share and each session's quiet time come from the runtime and the transcript mtime, only for this repository's sessions."""
