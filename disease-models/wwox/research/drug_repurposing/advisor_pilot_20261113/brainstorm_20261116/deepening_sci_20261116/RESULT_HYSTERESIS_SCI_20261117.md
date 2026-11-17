@@ -45,3 +45,6 @@ Bins with at least 40 bursts on each leg: 2 of 7 at R = 600 s, 4 of 7 at R = 240
 
 ## One line
 The oscillator is memoryless on this protocol (score -3.22 against -4.16 for coin flips; the one real miss was an expected rebound overshoot that the model does not produce); a weeks-long carry-over would need a new slow variable (S1 to S4), none of which is held.
+
+## Update (SCI, 2026-11-17, after the meeting; dated line)
+The held 1.85-fold washout overshoot is **image-read** from the published figure (d-APV row of `therapeutic_repair_candidates.md`), not a tabulated value; the comparison with the model's absent overshoot is therefore with an image-read number, and the model's EARLY/PRE ratio (0.94 to 1.02) differs from it by far more than any reading error of a figure.
