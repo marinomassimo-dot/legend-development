@@ -191,10 +191,18 @@
      "evidence": "governance/candidates/HARNESS-SCOUT-2026-W47.md and -W40.md (HE triage section); ENGINE_MEASURES M038-M040"
     },
     {
-     "step": "Next target set, v2/v3 comparisons or any further delegate run",
+     "step": "Second target set frozen by metadata before any run (T4 Thiel 2026, T5 Song 2026, T6 Villani 2026 negative control), 12 briefs, decision rule fixed first",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/second_target_set/; ENGINE_MEASURES M051"
+    },
+    {
+     "step": "Run the frozen second target set (T5, T4, T6; v1, v3, baseline each twice; blind reader) and the COMPOSE-rubric first use as a checker",
      "status": "BLOCKED",
      "owner": "plan",
-     "blocker": "the operator's token budget (ADV decision page item 7) or the next meeting's authorisation; one target per meeting meanwhile"
+     "blocker": "the operator's answer on the token budget (about 2.1 million tokens for the set, about 3 hours of delegate time and 3 of mine; one target per meeting meanwhile)",
+     "awaited_event": "the operator's budget answer, carried by ADV to the decision page and the next report",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/second_target_set/FREEZE_SECOND_SET.md (sha256 7e341642f2429e4e0b964cd4692d6a9094d27e92c0343d0a5b064b2aa0c2e63a, verified by ADV on main a47eb308744b)"
     }
    ]
   }
