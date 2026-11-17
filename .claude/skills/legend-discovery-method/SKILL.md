@@ -181,6 +181,10 @@ property that matters, and distinctness cannot be checked mechanically.
 
 ---
 
+#### 2.2b · A two-stage brief for `diverge_hypotheses` — OPTIONAL, ANECDOTAL evidence (2026-11-16), no mandate
+
+A corpus-bound generator anchors: on three held-out targets (`deepening_he_20261116/engine_eval/`, labelled "retrodiction by absence from the corpus, not by date") no condition, engine or memory-free baseline, reached the paper's discriminating atom under the strict rule. A step that asks the engine to doubt its held reading (v2, contradiction-first) changed what it said, not where it looked. The two-stage brief keeps an outside idea alive: **S1** a fast, wide, memory-free generator (15 hypotheses from the question alone); **S2** a corpus-grounded pass that classifies each S1 hypothesis INSIDE or OUTSIDE the held circuits by grep counts, MUST keep at least 3 OUTSIDE ones, and runs a support / contradict / **not stated** test on each, where silence is `not stated` and never `contradict`; it then adds its own held-circuit hypotheses. Measured on one target: S1 22,840 tokens, S2 151,307, against 95,426 for the plain engine brief (1.8x) and 23,235 for the memory-free baseline (7.5x); it produced the only loose-rule hit of the three targets (a muscarinic lever from S1) and still missed the strict atom; every kept outside hypothesis came back `not stated`, i.e. the corpus cannot ground what it does not hold. Use it only when the question is to look beyond the held literature; do not use it as a gate. Briefs: `engine_eval/target3/BRIEF_V3_S1.txt`, `BRIEF_V3_S2.txt`; result and limits: `engine_eval/target3/RUN_RECORD_AND_RESULT_TARGET3.md`. One target is an anecdote; a second set of targets is needed before 'improved' is claimed.
+
 ### 2.3 · `connect_domains`
 
 **When.** The WWOX corpus is small and self-referential; the constraint that decides a question is
