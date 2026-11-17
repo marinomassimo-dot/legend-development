@@ -185,10 +185,30 @@
      "evidence": "candidate Thiel 2026 (PMID 42542632, zinc in GNAO1 disorders), Song 2026 accepted as positive-control type; no run before the operator's budget answer"
     },
     {
-     "step": "Next target set, v2/v3 comparisons or any further delegate run",
+     "step": "Weekly scout triage W47 and W40 (42 rows): HE verdict, start or re-check date, reason; status TRIAGED 2026-11-17",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "governance/candidates/HARNESS-SCOUT-2026-W47.md and -W40.md (HE triage section); ENGINE_MEASURES M038-M040"
+    },
+    {
+     "step": "Second target set frozen by metadata before any run (T4 Thiel 2026, T5 Song 2026, T6 Villani 2026 negative control), 12 briefs, decision rule fixed first",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/second_target_set/; ENGINE_MEASURES M051"
+    },
+    {
+     "step": "Run the frozen second target set (T5, T4, T6; v1, v3, baseline each twice; blind reader)",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/second_target_set/RESULT_SET2.md (36 delegate runs, 1,675,686 tokens; the frozen rule applied: v3 beats v1 on 0 of 3 targets, no improvement claimed); ENGINE_MEASURES M052-M068"
+    },
+    {
+     "step": "COMPOSE-rubric first use as a checker, and the candidate v4 enumeration step (physical-chemical levers of a named defect, independent of the corpus), both on a NEW one-outcome target",
      "status": "BLOCKED",
      "owner": "plan",
-     "blocker": "the operator's token budget (ADV decision page item 7) or the next meeting's authorisation; one target per meeting meanwhile"
+     "blocker": "needs a new target chosen by the standing target-selection rule (T4 atoms are now known) and the operator's token-budget decision; ADV brings the v4 design note to the MEETING",
+     "awaited_event": "the operator's budget answer and the MEETING decision on the v4 enumeration step",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/second_target_set/RESULT_SET2.md section 'What the set shows beyond the rule', item 4"
     }
    ]
   }
