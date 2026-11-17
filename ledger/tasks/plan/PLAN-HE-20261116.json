@@ -140,6 +140,19 @@
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/engine_eval/ENGINE_EVAL_DESIGN.md foot"
     },
     {
+     "step": "Live run 1 (production): v3 two-stage on the graded-inhibition question; result consumed by IT into arm table v3; compare IT's count of new classes with mine under ONE counting rule",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/live1/LIVE1_RESULT.md (5b8febd2b7a1 on main; 198,088 tokens; 7 of 10 outside the held circuits)",
+     "blocker": "IT's class count (waiting) before the comparison; no further runs without the operator's budget answer"
+    },
+    {
+     "step": "Hard-stop sentence in delegation_budget.md; extraction rubric unit AND region line",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "framework/protocols/delegation_budget.md section 6 (2026-11-17); framework/protocols/fulltext_read_receipt.md (3bf2730330aa)"
+    },
+    {
      "step": "Next target set, v2/v3 comparisons or any further delegate run",
      "status": "BLOCKED",
      "owner": "plan",
