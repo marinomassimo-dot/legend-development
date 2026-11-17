@@ -8,7 +8,7 @@ Subject: Request for underlying data, Breton et al. 2021, Neurobiology of Diseas
 
 Dear Dr [corresponding author],
 
-We are studying the published findings on Wwox loss and would be grateful for the underlying values behind three items of your paper. We ask only for numbers that already exist in your analysis; a spreadsheet or text file is enough, and we will cite the paper and acknowledge your help in anything that uses them.
+We are studying the published findings on Wwox loss and would be grateful for the underlying values behind the items listed below (the first two are the ones that matter most; items 3 to 5 are optional and only if they exist). We ask only for numbers that already exist in your analysis; a spreadsheet or text file is enough, and we will cite the paper and acknowledge your help in anything that uses them.
 
 1. Spontaneous inhibitory postsynaptic currents (Figure 4, panels G and H). For each recorded layer II/III pyramidal neuron: genotype group as in the paper (S-WT, S-HT, S-KO), animal identifier, mean sIPSC amplitude (pA) and mean sIPSC frequency (Hz), and the number of events analysed. The text reports the control group (S-WT and S-HT pooled) and the S-KO group; the S-WT and S-HT values separately are what we cannot reconstruct from the published figure.
 2. Spontaneous burst events in the neocortical field recordings (Figure 1). For each recorded slice: genotype, animal identifier, and for each detected burst its onset time, duration (s) and the interval to the next burst (s), as used for the medians and gamma shape estimates reported.

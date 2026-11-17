@@ -1,0 +1,147 @@
+All paths below are under /tmp/legend_cut_1867a26a8/disease-models/wwox/. Short names are given in full at the end, in FILES READ.
+
+Preliminary finding: the folder holds no data on any plasma-membrane carrier (Grep gives 0 hits for dopamine transporter, SLC6, GAT1, GlyT, VMAT, tyrosine hydroxylase, Drd1, DARPP-32). It holds the cytosolic enzyme WWOX and its missense alleles, mainly Q230P. So every "corpus test" below is by analogy at the level of mechanism. The folder's own firewall (`MECHANISM_TRANSFER_FIREWALL`, mechanism_intervention_map.md:60-62) forbids treating a comparator as a bench. Nothing here is DATO for a carrier.
+
+H1. Origin S1-1 (INSIDE)
+- Statement: A ligand-site or kinetic stabiliser binds the folded state of the missense carrier in the ER, restores export, raises surface carrier and lowers hyperactivity, but only if the stabiliser does not occlude the function it rescues.
+- Corpus test: SUPPORT, conditional.
+  - analysis/proteostasis_rationale.md:11 and :53-57 give the rationale and the three chaperone families, "nothing demonstrated for WWOX".
+  - proteostasis_rationale.md:96 says stabilising does not mean restoring function.
+  - dismissal_ledger_current.md:70 (D-04) says stability and function are in tension, "stability is bought with occlusion".
+  - discovery_ledger_current.md:1027 describes P282A as stable but inert.
+  - therapeutic_hypotheses_ledger_current.md:331 raises a doubt: a buried proline cannot be removed by a chaperone.
+- Usual reading assumes: more surface protein means more function. This reading changes that. Surface level is a necessary readout but not the lever's success criterion, and a stable-but-inert carrier would raise surface while locomotion stays high.
+- Rejection observation: a ligand class that raises surface carrier of the mutant, with transport function measured in the same cells, leaves locomotion at knock-in level.
+- Discriminating manipulation (versus H2, a non-ligand route): run the ligand class on a knock-in that carries, in cis, a pocket-dead but fold-neutral substitution. If the effect is lost, a binding-dependent chaperone (H1) holds. The folder's own design is a parallel negative-control variant (therapeutic_hypotheses_ledger_current.md:335-339). Prediction if H1 holds: surface rescue lost and locomotion unchanged in the pocket-dead line, surface up and locomotion down in the intact mutant. If surface still rises, the lever is non-specific (H2 favoured).
+
+H2. Origin S1-15 (INSIDE, adjacent)
+- Statement: Part of the hyperactivity is a toxic gain from ER stress caused by retained misfolded carrier, so lowering the terminal UPR/ISR arm (CHOP/PERK-ISR) lowers locomotion without changing surface carrier.
+- Corpus test: NOT STATED as a lever.
+  - discovery_ledger_current.md:390-395 (DL-MECH-023) holds a UPR panel (GRP78, XBP1 splicing, p-PERK, p-eIF2α, ATF4, CHOP) in isogenic WT/Q230P/KO lines as a measurement. It says the aim is to preserve survival.
+  - Rival-side held datum: claim_registry_current.md:559 (CLAIM 030) says abundance does not predict severity, which argues for loss-of-function readouts. It does not exclude a toxic component.
+  - Grep for PERK/ATF6/IRE1/CHOP in .md files: about 8 hits, all measurement-level.
+- Usual reading assumes: the whole phenotype is loss of function. This reading adds a second, surface-independent component.
+- Rejection observation: homozygous knock-in is no more hyperactive than the null, and deleting CHOP in the knock-in changes neither locomotion nor ER-stress markers.
+- Discriminating manipulation (versus H1): neuron-specific deletion of the terminal-UPR effector CHOP in the knock-in. Prediction if H2 holds: surface unchanged, locomotion down. Prediction if the phenotype is pure loss of function (H1 territory): both unchanged. A knock-in more hyperactive than the null favours H2.
+
+H3. Origin S1-5 (OUTSIDE, kept)
+- Statement: ER export capacity (COPII cargo adaptor or Sec24 isoform dosage) is rate-limiting for the partly folded mutant, so raising it increases the post-ER pool and surface carrier and lowers locomotion.
+- Corpus test: NOT STATED.
+  - Grep for COPII/Sec24/Sar1 gives 0 hits in the whole folder.
+  - Adjacent but not deciding: discovery_ledger_current.md:257-259 records WWOX binding SEC23IP, SCAMP3 and VOPP1 (ER/Golgi/endosomal trafficking), with "medium" belief for neuronal transfer. This is a WWOX interactor datum, not carrier export.
+  - Rival-side terms (ERAD, degradation) are held only as the "wrong compartment for WWOX" default, dismissal_ledger_current.md:68. For an ER-synthesised carrier that default reverses (see H8).
+- Usual reading assumes: surface loss equals folding failure only. This reading adds a liftable export bottleneck acting on cargo that is folded enough.
+- Rejection observation: raising cargo-adaptor capacity leaves the mutant's post-ER glycoform fraction and its surface level unchanged.
+- Discriminating manipulation (versus H1, folding quality): neuron-specific gain of a Sec24 isoform in the knock-in, with no ligand present, read as the endoglycosidase-H-resistant fraction. Prediction if H3 holds: post-ER fraction and surface up, locomotion down. If H1 holds, the mutant stays EndoH-sensitive, surface unchanged, locomotion unchanged.
+
+H4. Origin S1-7 (OUTSIDE, kept)
+- Statement: Lipid post-translational stabilisation (DHHC-mediated palmitoylation, cholesterol or PIP2 occupancy) lengthens residence of the mutant at the surface, so raising it increases surface carrier and lowers locomotion without changing folding.
+- Corpus test: NOT STATED.
+  - Grep for palmitoyl/DHHC gives 0 hits in the whole folder.
+  - Rival-side terms (ubiquitination, lysosomal routing) are held: dismissal_ledger_current.md:67 (D-01) says K63 chains co-occur with HSC70 binding and lysosomal routing. This does not contradict a lipid mechanism; it describes a different clearance path.
+- Usual reading assumes: stability is intrinsic to sequence. This reading says surface half-life is modifiable after arrival.
+- Rejection observation: raising palmitoylation leaves the surface half-life and the surface level of the mutant unchanged.
+- Discriminating manipulation (versus H8, route-specific clearance): cysteine-to-alanine substitution at the palmitoylation sites in cis in the knock-in. Prediction if H4 holds: surface falls further and locomotion rises further. Gain of the palmitoyl-transferase gives surface up and locomotion down. If H8 holds, the cysteine mutant shows no change in the post-arrival half-life that the route block would change.
+
+H5. Origin S1-9 (OUTSIDE, kept)
+- Statement: Lowering transmitter synthesis (tyrosine hydroxylase gene dosage) shrinks the extracellular transmitter excess, so locomotion normalises while carrier surface level is untouched.
+- Corpus test: NOT STATED.
+  - Grep for dopamine/TH/VMAT/Drd1 gives 0 hits (dopamine appears only as a Parkinson's-disease aside, research/fulltext_dossiers/PMID42128308_partial_locators.md:214).
+  - Held principle that does not contradict but cautions: mechanism_intervention_map.md:439 says suppressing a network state is not correcting a lesion. CLAIM 031 (claim_registry_current.md:577-578) says symptom control does not buy development. Both concern epilepsy and development, not locomotion.
+- Usual reading assumes: repair means restoring the carrier. This reading bypasses it and predicts surface unchanged.
+- Rejection observation: Th heterozygosity in the knock-in lowers extracellular transmitter but leaves locomotion high.
+- Discriminating manipulation (versus H10, an output-side lever): Th heterozygosity in the knock-in. Prediction: surface unchanged, locomotion down, extracellular transmitter down. H10's receptor deletion also lowers locomotion, but transmitter stays high. The transmitter level is the discriminator.
+
+H6. Origin S1-13 (OUTSIDE, kept)
+- Statement: The mutant protein retains the wild-type subunit in oligomers (dominant-negative), so silencing or editing the mutant allele frees wild-type carrier and raises surface carrier above the 50 percent expected in a heterozygote.
+- Corpus test: NOT STATED for carriers.
+  - Grep for oligomer gives 0 hits. "Dominant-negative" appears once in a different context: research/deepdive_manifests/PMID15070730.json:385, where the authors guess that a WW-domain mutant has a dominant-negative effect on endogenous Wwox ("One possible explanation").
+  - Held WWOX data lean against dominant-negative action for WWOX: claim_registry_current.md:593 (CLAIM 032) says heterozygotes are not deleterious and that every published human family has healthy heterozygous carriers. That is monomeric-enzyme logic and does not transfer to an oligomeric carrier.
+  - Allele-level lever logic is held: mechanism_intervention_map.md:325-327 ("lever assignment is per allele").
+- Usual reading assumes: a heterozygote keeps 50 percent function. This reading predicts less than 50 percent.
+- Rejection observation: heterozygous mice carrying the missense allele are not hyperactive, and silencing the mutant allele gives no gain at the surface.
+- Discriminating manipulation (versus adding a wild-type copy, the nearest rival): allele-specific silencing of the mutant in the heterozygote, compared with addition of one wild-type copy. Prediction if dominant-negative holds: silencing raises surface above 50 percent of wild type and lowers locomotion more than copy addition. If it is simple haploinsufficiency, both give the same gain.
+
+H7. Origin S1-14 (INSIDE)
+- Statement: Hyperactivity is fixed by a developmental adaptation, so restoration of surface carrier normalises locomotion only if it is started early.
+- Corpus test: SUPPORT, indirect and WWOX-specific.
+  - mechanism_intervention_map.md:193-196 gives the efficacious window P0-P5 in mouse and says neuronal rescue does not repair the prenatal defect.
+  - claim_registry_current.md:594 (CLAIM 032) says rescue arrives after part of the developmental damage.
+  - claim_registry_current.md:264 and :281 (CLAIMs 014 and 015) describe a prenatal, "developmentally pre-wired" substrate.
+  - Not stated for hyperactivity as such.
+- Usual reading assumes: surface rescue at any age reverses the phenotype. This reading predicts a window.
+- Rejection observation: adult-onset induction of the restored allele normalises locomotion as fully as neonatal induction.
+- Discriminating manipulation (versus H9, titration): a Cre-inducible restored allele switched on neonatally versus in adulthood at matched surface level. Prediction: surface up in both; locomotion down only with early induction. If H9 holds, locomotion tracks the level reached, not the timing.
+
+H8. Origin ENGINE (adjacent to S1-3, S1-4, S1-6) (INSIDE)
+- Statement: The loss of mutant carrier at the surface is set by one dominant clearance route (ER-associated proteasomal versus post-ER endolysosomal or chaperone-mediated). Blocking that route raises carrier mass, and the sign of any chaperone-pathway manipulation depends on which route is dominant.
+- Corpus test: SUPPORT as method, with a reversal of a held default.
+  - dismissal_ledger_current.md:67 (D-01) says the proteasome default is false as stated.
+  - :68 (D-02) says ER chemical chaperones and ERAD are valid only for ER/secretory proteins. A plasma-membrane carrier is exactly that class, so the held "wrong compartment" verdict for WWOX does not carry over.
+  - :69 (D-03) says HSC70 delivers to the lysosome, and "the sign depends on which chaperone and which route".
+  - discovery_ledger_current.md:1011-1017 shows P252A restored by lysosomal blockade but not by proteasome blockade, with K63 ubiquitination and HSC70 binding.
+  - proteostasis_rationale.md:105 requires measuring the route before choosing a stabiliser.
+- Usual reading assumes: misfolded means ERAD and proteasome, and "chaperone" means help. This reading makes the route an empirical variable and makes "chaperone" a sign-ambiguous word.
+- Rejection observation: neither proteasome-flux nor lysosomal-flux blockade changes mutant carrier abundance in a cycloheximide chase.
+- Discriminating manipulation (versus H1, which changes fold): in knock-in neurons, a lysosomal-flux blocker class versus a proteasome-flux blocker class, each with a chase and an EndoH readout.
+  - If post-ER endolysosomal clearance dominates: lysosomal block raises surface, proteasome block does not.
+  - If ER-associated clearance dominates: proteasome block raises ER-retained mass, surface unchanged.
+  - Locomotion falls only where the rescued carrier is functional (the H1 caveat).
+
+H9. Origin ENGINE (INSIDE)
+- Statement: Restoration is effective only within a narrow expression band. Supraphysiological gene addition confounds the locomotor readout, so locomotion should be read against the restored level, not against presence or absence of the rescue.
+- Corpus test: SUPPORT, WWOX-specific.
+  - therapeutic_routing_and_endpoint_hardening.md:180-181 shows treated mice exceeding wild type in open-field velocity (about 1.21x) and distance (about 1.26x).
+  - :239-241 says hyperactivity and overexpression overshoot are not discriminated, "cannot be run in this dataset".
+  - therapeutic_hypotheses_ledger_current.md:342 says the target is the physiological level, not the maximum.
+  - mechanism_intervention_map.md:413-414 holds a threshold, not a gradient.
+  - claim_registry_current.md:593-594 (CLAIM 032) says the threshold is well below full restoration.
+  - Caveat: the held overshoot is in a WWOX rescue, not a carrier knock-in.
+- Usual reading assumes: more restored carrier is monotonically better. This reading says the surface-level target is the wild-type band and over-restoration is a separate variable.
+- Rejection observation: locomotion keeps falling below the wild-type value as restored surface carrier rises well above the wild-type value.
+- Discriminating manipulation (versus H7, timing): graded neuron-selective gene addition (an intermediate-expression arm) versus endogenous-locus allele correction. Prediction: surface rises monotonically with the added dose; locomotion falls to a wild-type plateau at partial restoration and does not go lower. Endogenous correction reaches the wild-type plateau without overshoot.
+
+H10. Origin S1-11 (OUTSIDE, kept)
+- Statement: Hyperactivity is carried by the striatal-projection output of the excess transmitter (D1-pathway cAMP/PKA signalling), so removing that output normalises locomotion with surface carrier untouched.
+- Corpus test: NOT STATED.
+  - Grep for Drd1/DARPP-32/striatal output gives 0 hits.
+  - Nearest held analogue: Chain B, mechanism_intervention_map.md:201-221 and claim_registry_current.md:390 (CLAIM 021), where bursting depends on NMDAR and gap junctions. That is cortical and WWOX-specific.
+  - Held caution: mechanism_intervention_map.md:439 says suppressing a network state is not correcting a lesion.
+- Usual reading assumes: the carrier is the only lever. This reading targets the output and predicts surface unchanged.
+- Rejection observation: conditional Drd1 deletion in striatal projection neurons leaves hyperactivity unchanged.
+- Discriminating manipulation (versus H5, supply reduction): conditional Drd1 deletion in striatal projection neurons of the knock-in. Prediction: locomotion down, surface unchanged, extracellular transmitter unchanged or high. H5 gives the same locomotion and surface effect but lowers extracellular transmitter, so transmitter level is the discriminator.
+
+S1 CLASSIFICATION (Grep hit counts, in .md files under disease-models/wwox unless stated)
+
+| S1 | Class | Hits and basis |
+|---|---|---|
+| 1 | INSIDE | pharmacological chaperone: 27 occurrences in 9 files |
+| 2 | INSIDE | 4-PBA/TUDCA/osmolyte: 23 in 9 files (dismissal ledger DIS-004, D-02); low temperature not held |
+| 3 | INSIDE (partial) | HSC70/STUB1/Hsp70: 75 in 18 files, but as delivery to lysosome (D-03, discovery_ledger_current.md:1017); CHIP/BAG as a triage lever not stated |
+| 4 | INSIDE (partial) | ERAD/Hrd1/Sel1L: 5 in 3 files, only as the wrong-compartment default D-02 |
+| 5 | OUTSIDE | COPII/Sec24/Sar1: 0 (adjacent: SEC23IP, discovery_ledger_current.md:257) |
+| 6 | PARTLY | ubiquitination route held (D-01, DIS-001); regulated endocytosis and dynamin: 0; Nedd4 appears only as a paper title (corpus_seed_pubmed_20260806.tsv:120) |
+| 7 | OUTSIDE | palmitoyl/DHHC: 0 |
+| 8 | OUTSIDE | ZnT3/Zn2+: 0 ("zinc finger" Zfra only, analysis/data/WWOX_therapy_levers.csv:6) |
+| 9 | OUTSIDE | TH/dopamine synthesis: 0 |
+| 10 | OUTSIDE | OCT3/PMAT/NET/astrocytic uptake: 0 |
+| 11 | OUTSIDE | Drd1/DARPP-32: 0 |
+| 12 | OUTSIDE | serotonin/SERT/Tph2: 0 |
+| 13 | OUTSIDE (near-0) | oligomer: 0; dominant-negative: 1 speculative (PMID15070730.json:385) |
+| 14 | INSIDE | window P0-P5 (mechanism_intervention_map.md:193-196) |
+| 15 | INSIDE (adjacent) | UPR/PERK/IRE1/CHOP: about 8, measurement-level |
+
+Kept OUTSIDE in the final ten: S1-5 (H3), S1-7 (H4), S1-9 (H5), S1-13 (H6) and S1-11 (H10). All five tested "not stated", with no contradiction and none treated as contradicted by silence. Dropped: S1-3, S1-4, S1-8, S1-10 and S1-12, as redundant or not testable here. H8 absorbs S1-3, S1-4 and S1-6. H9 and H8 are the two corpus-built engine additions.
+
+FILES READ:
+/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/set3/T9/V4_S1_B.txt
+/tmp/legend_cut_1867a26a8/CLAUDE.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/proteostasis_rationale.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md (lines 1-582)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/therapeutic_routing_and_endpoint_hardening.md (lines 165-265)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/claim_registry_current.md (lines 256-287, 343-395, 551-621)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/dismissal_ledger_current.md (lines 28-117)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/discovery_ledger_current.md (lines 1000-1030, plus Grep-located lines 257-259, 390-395, 1079-1087)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md (lines 322-343)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/deepdive_manifests/PMID15070730.json (lines 378-387)
+Grep-only (matched lines viewed, not read whole): disease-models/wwox/research/fulltext_dossiers/PMID42128308_partial_locators.md, analysis/data/WWOX_therapy_levers.csv, registries/corpus_seed_pubmed_20260806.tsv, research/commit_candidates/CC-20260826-AAV9-ENDPOINT-SPLIT-01.md, analysis/canonical_impact_and_negative_audit.md
