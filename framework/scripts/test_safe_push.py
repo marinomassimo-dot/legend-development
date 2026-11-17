@@ -182,7 +182,7 @@ GATE_SLOW = ("import os, sys, time\nlog = os.environ['LEGEND_TEST_LOG']\nopen(lo
 
 
 class SafePushSerialize(unittest.TestCase):
-    """`--serialize` (2026-11-16): publishers take turns; the remote tip is checked BEFORE the gate; nothing else is relaxed."""
+    """`--serialize` (2026-11-16): publishers take turns; a moved remote tip is merged under the lock when the merge is clean, before the gate; nothing else is relaxed."""
     _repo = SafePushRefusals._repo
     _with_bare_remote = SafePushRefusals._with_bare_remote
     _commit = SafePushRefusals._commit
@@ -203,25 +203,71 @@ class SafePushSerialize(unittest.TestCase):
         subprocess.run(["git", "-C", str(root), "push", "-q", "origin", "HEAD:refs/heads/main"], check=True)
         return root, bare
 
-    def test_a_stale_head_is_refused_before_the_gate_runs(self) -> None:
+    def _other_clone(self, td: str, bare: Path) -> Path:
+        other = Path(td) / "other"
+        subprocess.run(["git", "clone", "-q", "-b", "main", str(bare), str(other)], check=True)
+        fixture_identity = "fixture" + "@" + "invalid"      # assembled: the publication gate screens address-shaped strings
+        subprocess.run(["git", "-C", str(other), "config", "user.email", fixture_identity], check=True)
+        subprocess.run(["git", "-C", str(other), "config", "user.name", "t"], check=True)
+        return other
+
+    def test_a_moved_remote_is_merged_under_the_lock_and_the_merged_commit_is_gated_and_pushed(self) -> None:
         with TemporaryDirectory() as td:
             root, bare = self._slow_remote(td)
             log = Path(td) / "gate.log"
-            other = Path(td) / "other"
-            subprocess.run(["git", "clone", "-q", "-b", "main", str(bare), str(other)], check=True)
-            fixture_identity = "fixture" + "@" + "invalid"      # assembled: the publication gate screens address-shaped strings
-            subprocess.run(["git", "-C", str(other), "config", "user.email", fixture_identity], check=True)
-            subprocess.run(["git", "-C", str(other), "config", "user.name", "t"], check=True)
+            other = self._other_clone(td, bare)
             self._commit(other, "theirs.txt")
             subprocess.run(["git", "-C", str(other), "push", "-q", "origin", "HEAD:refs/heads/main"], check=True)
             theirs = self._remote_main(bare)
-            self._commit(root, "mine.txt")
+            mine = self._commit(root, "mine.txt")
+            r = self._run(root, "origin", "main", "--serialize", "--expect-sha", mine, LEGEND_TEST_LOG=str(log), LEGEND_TEST_SLEEP="0")
+            self.assertEqual(r.returncode, 0, r.stderr)
+            merged = subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
+            self.assertIn(f"MERGED {theirs[:12]} into {mine[:12]} -> {merged[:12]} under the landing lock", r.stdout)
+            self.assertNotEqual(merged, mine)
+            self.assertEqual(self._remote_main(bare), merged, "the merged commit, the one gated, is the one published")
+            for n in ("mine.txt", "theirs.txt"):
+                self.assertTrue((root / n).exists())
+            self.assertEqual(len(log.read_text().splitlines()), 2, "one gate run (start and end) on the merged commit")
+            self.assertEqual(subprocess.run(["git", "-C", str(root), "status", "--porcelain"], capture_output=True, text=True).stdout, "")
+
+    def test_a_conflicting_remote_leaves_the_tree_as_it_was_and_gates_nothing(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self._slow_remote(td)
+            log = Path(td) / "gate.log"
+            other = self._other_clone(td, bare)
+            (other / "shared.txt").write_text("theirs\n", encoding="utf-8")
+            subprocess.run(["git", "-C", str(other), "add", "shared.txt"], check=True)
+            subprocess.run(["git", "-C", str(other), "commit", "-qm", "theirs"], check=True)
+            subprocess.run(["git", "-C", str(other), "push", "-q", "origin", "HEAD:refs/heads/main"], check=True)
+            theirs = self._remote_main(bare)
+            (root / "shared.txt").write_text("mine\n", encoding="utf-8")
+            subprocess.run(["git", "-C", str(root), "add", "shared.txt"], check=True)
+            subprocess.run(["git", "-C", str(root), "commit", "-qm", "mine"], check=True)
+            mine = subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
             r = self._run(root, "origin", "main", "--serialize", LEGEND_TEST_LOG=str(log))
             self.assertEqual(r.returncode, 1)
-            self.assertIn("moved while this publisher waited", r.stderr)
+            self.assertIn("does not merge cleanly", r.stderr)
+            self.assertIn("shared.txt", r.stderr)
             self.assertIn("Nothing was gated or pushed", r.stderr)
-            self.assertFalse(log.exists(), "the gate must not run on a stale HEAD")
+            self.assertFalse(log.exists())
             self.assertEqual(self._remote_main(bare), theirs)
+            self.assertEqual(subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip(), mine)
+            self.assertEqual(subprocess.run(["git", "-C", str(root), "status", "--porcelain"], capture_output=True, text=True).stdout, "")
+            self.assertEqual((root / "shared.txt").read_text(), "mine\n")
+
+    def test_expect_sha_still_binds_the_commit_before_the_merge(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self._slow_remote(td)
+            other = self._other_clone(td, bare)
+            self._commit(other, "theirs.txt")
+            subprocess.run(["git", "-C", str(other), "push", "-q", "origin", "HEAD:refs/heads/main"], check=True)
+            mine = self._commit(root, "mine.txt")
+            self._commit(root, "extra.txt")
+            r = self._run(root, "origin", "main", "--serialize", "--expect-sha", mine, LEGEND_TEST_LOG=str(Path(td) / "g.log"))
+            self.assertEqual(r.returncode, 1)
+            self.assertIn("the caller expected", r.stderr)
+            self.assertNotIn("MERGED", r.stdout)
 
     def test_an_up_to_date_head_publishes_with_the_same_checks(self) -> None:
         with TemporaryDirectory() as td:
@@ -246,7 +292,7 @@ class SafePushSerialize(unittest.TestCase):
             self.assertEqual(wrong.returncode, 1)
             self.assertIn("not a commit", wrong.stderr)
 
-    def test_two_publishers_gate_one_at_a_time_and_the_second_does_not_waste_a_gate(self) -> None:
+    def test_two_publishers_gate_one_at_a_time_and_the_second_merges_the_first_under_the_lock(self) -> None:
         with TemporaryDirectory() as td:
             root, bare = self._slow_remote(td)
             second = Path(td) / "second"
@@ -260,12 +306,56 @@ class SafePushSerialize(unittest.TestCase):
             pb = self._popen(second, "origin", "main", "--serialize", LEGEND_TEST_LOG=str(log), LEGEND_TEST_NAME="B", LEGEND_TEST_SLEEP="3")
             oa, ea = pa.communicate(timeout=60); ob, eb = pb.communicate(timeout=60)
             self.assertEqual(pa.returncode, 0, ea)
-            self.assertEqual(pb.returncode, 1, eb)
+            self.assertEqual(pb.returncode, 0, eb)
             self.assertIn("waiting for the landing lock", ob)
-            self.assertIn("moved while this publisher waited", eb)
-            self.assertEqual(self._remote_main(bare), a)
+            self.assertIn(f"MERGED {a[:12]} into {b[:12]}", ob)
+            self.assertNotEqual(self._remote_main(bare), a)
+            self.assertTrue(subprocess.run(["git", "-C", str(bare), "merge-base", "--is-ancestor", a, "refs/heads/main"]).returncode == 0)
             names = [l.split()[1] for l in log.read_text().splitlines()]
-            self.assertEqual(names, ["A", "A"], "only A's gate ran (start and end); B was refused before its gate")
+            self.assertEqual(names, ["A", "A", "B", "B"], "the gates ran one at a time; B merged A under the lock and gated the merged commit once")
+
+    def _three(self, td):
+        root, bare = self._slow_remote(td)
+        wts = [root]
+        for n in ("second", "third"):
+            w = Path(td) / n
+            subprocess.run(["git", "-C", str(root), "worktree", "add", "-q", "--detach", str(w)], check=True); wts.append(w)
+        for w in wts:
+            subprocess.run(["git", "-C", str(w), "config", "user.name", "t"], check=True)
+        for w, nm in zip(wts, ("a.txt", "b.txt", "c.txt")):
+            self._commit(w, nm)
+        return wts, bare
+
+    def test_the_ticket_queue_lands_publishers_in_arrival_order(self) -> None:
+        with TemporaryDirectory() as td:
+            wts, bare = self._three(td); log = Path(td) / "gate.log"
+            ps = []
+            for w, nm in zip(wts, ("A", "B", "C")):
+                ps.append(self._popen(w, "origin", "main", "--serialize", LEGEND_TEST_LOG=str(log), LEGEND_TEST_NAME=nm, LEGEND_TEST_SLEEP="2"))
+                time.sleep(1.0)
+            outs = [p.communicate(timeout=90) for p in ps]
+            for p, (o, e) in zip(ps, outs):
+                self.assertEqual(p.returncode, 0, e)
+            names = [l.split()[1] for l in log.read_text().splitlines()]
+            self.assertEqual(names, ["A", "A", "B", "B", "C", "C"], "gates ran in arrival order, one at a time")
+            self.assertTrue(any("queue position" in o for o, _ in outs[1:]), "a waiter prints its queue position")
+
+    def test_a_killed_waiter_and_a_stale_ticket_do_not_block_the_queue(self) -> None:
+        import signal as _sig
+        with TemporaryDirectory() as td:
+            wts, bare = self._three(td); log = Path(td) / "gate.log"
+            common = subprocess.run(["git", "-C", str(wts[0]), "rev-parse", "--git-common-dir"], capture_output=True, text=True).stdout.strip()
+            common = Path(common) if os.path.isabs(common) else wts[0] / common
+            (common / "legend_land.queue").write_text("999999 1 2026-11-16T00:00:00Z\n")            # a ticket whose process does not exist, at the head
+            a = self._popen(wts[0], "origin", "main", "--serialize", LEGEND_TEST_LOG=str(log), LEGEND_TEST_NAME="A", LEGEND_TEST_SLEEP="3"); time.sleep(1.0)
+            b = self._popen(wts[1], "origin", "main", "--serialize", LEGEND_TEST_LOG=str(log), LEGEND_TEST_NAME="B", LEGEND_TEST_SLEEP="2"); time.sleep(1.0)
+            c = self._popen(wts[2], "origin", "main", "--serialize", LEGEND_TEST_LOG=str(log), LEGEND_TEST_NAME="C", LEGEND_TEST_SLEEP="2"); time.sleep(1.0)
+            b.send_signal(_sig.SIGKILL); b.wait(timeout=10)                     # B dies while waiting: its ticket stays in the file until the next waiter prunes it
+            oa, ea = a.communicate(timeout=90); oc, ec = c.communicate(timeout=90)
+            self.assertEqual(a.returncode, 0, ea); self.assertEqual(c.returncode, 0, ec)
+            names = [l.split()[1] for l in log.read_text().splitlines()]
+            self.assertEqual(names, ["A", "A", "C", "C"], "the dead ticket at the head and the killed waiter were skipped")
+            self.assertEqual((common / "legend_land.queue").read_text().strip(), "", "every live ticket was released at exit")
 
     def test_a_killed_publisher_releases_the_lock_and_a_timeout_refuses(self) -> None:
         with TemporaryDirectory() as td:

@@ -27,6 +27,17 @@ def aa(tok: str) -> str | None:
     return None
 
 
+AA1TO3 = {v: k for k, v in AA3.items()}
+
+
+def canon(h: str) -> str:
+    """p.Pro47Thr, p.(Pro47Thr) and p.P47T are one variant: the three-letter form without parentheses, or the input unchanged when it is not a simple substitution."""
+    m = re.match(r"^p\.\(?([A-Za-z]{1,3})(\d+)([A-Za-z*]{1,3}|=)\)?$", (h or "").strip())
+    if not m: return (h or "").strip()
+    def three(x): return AA1TO3.get(x, x) if len(x) == 1 else x
+    return f"p.{three(m.group(1))}{m.group(2)}{three(m.group(3))}"
+
+
 def classes_of(a: int, b: int) -> list[str]:
     if a < 1 or b > LENGTH: return ["outside_protein"] if (b < 1 or a > LENGTH) else [c for c, s, e in CLASSES if not (b < s or a > e)] + ["partly_outside_protein"]
     return [c for c, s, e in CLASSES if not (b < s or a > e)]
@@ -55,6 +66,7 @@ def parse(h: str) -> dict:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--table"); ap.add_argument("--variant-col", default="hgvs_p"); ap.add_argument("--id-col", default="child_id"); ap.add_argument("--out"); ap.add_argument("--uniprot-json")
+    ap.add_argument("--held-classified", help="analysis/data/WWOX_pathogenic_missense_classified.csv (protein,pos,ddG,dist_cat,class): adds held_class, held_ddG and held_dist_cat for the variants it lists")
     a = ap.parse_args()
     if not (a.table and a.out):
         ap.print_help(); return
@@ -64,21 +76,26 @@ def main() -> None:
             if f["type"] in ("Natural variant", "Mutagenesis"):
                 for pos in range(f["location"]["start"]["value"], f["location"]["end"]["value"] + 1):
                     feats.setdefault(pos, []).append(f"{f['type']}: {f.get('description', '')[:60]}")
+    held = {}
+    if a.held_classified:
+        for r in csv.DictReader(open(a.held_classified, encoding="utf-8", newline="")):
+            held[canon(r["protein"])] = r
     rows = list(csv.DictReader(open(a.table, encoding="utf-8", newline=""), delimiter="\t"))
     if rows and a.variant_col not in rows[0]: sys.exit(f"REFUSED: the table has no column {a.variant_col!r} (columns: {', '.join(rows[0])}); pass --variant-col")
     out = []
     for r in rows:
         v = parse(r[a.variant_col]); t = v["type"]
+        h = held.get(canon(r[a.variant_col]), {})
         base = {"child_id": r.get(a.id_col, ""), "hgvs_input": r[a.variant_col], "variant_type": t}
         if t in ("unparsed", "splice_no_protein_position"):
-            out.append({**base, "start": "", "end": "", "class": t, "spans_classes": "", "subflags": "", "uniprot_features_at_position": "", "model_line_mark": ""}); continue
+            out.append({**base, "start": "", "end": "", "class": t, "spans_classes": "", "subflags": "", "uniprot_features_at_position": "", "model_line_mark": "", "held_class": h.get("class", ""), "held_ddG": h.get("ddG", ""), "held_dist_cat": h.get("dist_cat", "")}); continue
         cl = classes_of(v["start"], v["end"])
         subs = [n for n, s, e in SUBFLAGS if not (v["end"] < s or v["start"] > e)]
         uf = sorted({x for pos in range(v["start"], v["end"] + 1) for x in feats.get(pos, [])})
         mark = MODEL_LINES.get((v.get("ref"), v["start"], v.get("alt")), "") if t == "missense" else ""
         if t == "frameshift": cl = cl + [("downstream_lost: " + ", ".join(c for c, s, e in CLASSES if s > v["start"] and c.startswith(("WW2", "SDR", "linker_2")) ) or "downstream_lost: none")]
         if t == "nonsense": cl = cl + ["downstream_lost: " + (", ".join(c for c, s, e in CLASSES if s > v["start"]) or f"residues {v['start'] + 1}-{LENGTH} of {cl[0]}")]
-        out.append({**base, "start": v["start"], "end": v["end"], "class": cl[0], "spans_classes": ";".join(cl[1:]) if len(cl) > 1 else "", "subflags": ";".join(subs), "uniprot_features_at_position": " | ".join(uf), "model_line_mark": ("same_variant_as_model_line: " + mark) if mark else ""})
+        out.append({**base, "start": v["start"], "end": v["end"], "class": cl[0], "spans_classes": ";".join(cl[1:]) if len(cl) > 1 else "", "subflags": ";".join(subs), "uniprot_features_at_position": " | ".join(uf), "model_line_mark": ("same_variant_as_model_line: " + mark) if mark else "", "held_class": h.get("class", ""), "held_ddG": h.get("ddG", ""), "held_dist_cat": h.get("dist_cat", "")})
     cols = list(out[0]) if out else ["child_id"]
     with open(a.out, "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, cols, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(out)

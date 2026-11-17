@@ -1,0 +1,157 @@
+question	alternative_id	observation_id	value	reason
+Q1	Q1-A1	O1	silent	Explanandum (0 of 11, 4 of 23, 36 of 42); each alternative was built to reproduce a graded fraction, so the quote does not discriminate.
+Q1	Q1-A1	O2	silent	'hippocampal slices exhibited spontaneous activity indistinguishable from controls or heterozygotes': no quote measures this alternative's variable in hippocampus, so it is untested; the region restriction is unexplained by all alternatives.
+Q1	Q1-A1	O3	silent	Median burst duration 0.66 and inter-burst interval 26.2 s are KO timing values; no quote links them to what grades het between WT and KO.
+Q1	Q1-A1	O4	supports	'the sIPSCs were reduced in both amplitude and frequency' in S-KO (27.5 vs 57.3 pA): synaptic inhibition is lower in KO; het-alone is not given (S-CTL pools het and WT), so grading at het is untested.
+Q1	Q1-A1	O5	silent	Resting potential of pyramidal neurons is quoted; no quote links it to the size of inhibitory currents or to tonic current.
+Q1	Q1-A1	O6	supports	'favors excitation over inhibition, primarily through an impairment in the amplitude of the inhibitory currents': authors' interpretation naming inhibitory-current amplitude (KO level, not a measurement).
+Q1	Q1-A1	O7	silent	'd-APV (50 micromolar) removed bursts' in KO: NMDA-receptor dependence is a downstream requirement compatible with every alternative; het not tested.
+Q1	Q1-A1	O8	silent	Quote is wild-type tonic-current pharmacology; no Wwox genotype and no burst is involved.
+Q1	Q1-A1	O9	silent	Tonic and phasic GABA control by GAT-1 versus GAT-2/3 in rat layer II/III; no Wwox genotype is involved.
+Q1	Q1-A1	O10	silent	A computed scan of sequence annotation for 16 K-channel genes; it does not address this alternative.
+Q1	Q1-A1	O11	silent	Resting potential, input resistance, sag and AP amplitude are quoted as S-HT = S-KO; this alternative makes no claim about them.
+Q1	Q1-A1	O12	silent	'zolpidem ... did not alter the tonic current induced by THIP': pharmacology of a wild-type tonic current; no Wwox genotype.
+Q1	Q1-A2	O1	silent	Explanandum (0 of 11, 4 of 23, 36 of 42); each alternative was built to reproduce a graded fraction, so the quote does not discriminate.
+Q1	Q1-A2	O2	silent	'hippocampal slices exhibited spontaneous activity indistinguishable from controls or heterozygotes': no quote measures this alternative's variable in hippocampus, so it is untested; the region restriction is unexplained by all alternatives.
+Q1	Q1-A2	O3	silent	Median burst duration 0.66 and inter-burst interval 26.2 s are KO timing values; no quote links them to what grades het between WT and KO.
+Q1	Q1-A2	O4	silent	sIPSC means are given for KO versus pooled S-CTL (het plus WT); no het-alone value and no intrinsic measure is quoted.
+Q1	Q1-A2	O5	supports	'the S-KO and S-HTs were also more depolarized': het already carries the shifted intrinsic state this alternative treats as permissive.
+Q1	Q1-A2	O6	silent	Authors' sentence concerns excitation versus inhibition in KO 'through an impairment in the amplitude of the inhibitory currents'; an interpretation, not about the intrinsic route or het grading.
+Q1	Q1-A2	O7	silent	'd-APV (50 micromolar) removed bursts' in KO: NMDA-receptor dependence is a downstream requirement compatible with every alternative; het not tested.
+Q1	Q1-A2	O8	silent	Quote is wild-type tonic-current pharmacology; no Wwox genotype and no burst is involved.
+Q1	Q1-A2	O9	silent	Tonic and phasic GABA control by GAT-1 versus GAT-2/3 in rat layer II/III; no Wwox genotype is involved.
+Q1	Q1-A2	O10	silent	The scan finds no cytoplasmic PPxY or LPxY in 16 listed genes; this removes one proposed route for those genes (a direct PPxY link needs the outside fact that the WW domain binds PPxY) but not an intrinsic-property route as such.
+Q1	Q1-A2	O11	supports	Resting potential, input resistance, sag, AP amplitude 'S-HT = S-KO' (a shared step, so permissive but not graded) and 'rebound is significant only in S-KO' (an intrinsic feature that tracks the KO-heavy burst rate; significance, not absence in het).
+Q1	Q1-A2	O12	silent	'zolpidem ... did not alter the tonic current induced by THIP': pharmacology of a wild-type tonic current; no Wwox genotype.
+Q1	Q1-A3	O1	silent	Explanandum (0 of 11, 4 of 23, 36 of 42); each alternative was built to reproduce a graded fraction, so the quote does not discriminate.
+Q1	Q1-A3	O2	silent	'hippocampal slices exhibited spontaneous activity indistinguishable from controls or heterozygotes': no quote measures this alternative's variable in hippocampus, so it is untested; the region restriction is unexplained by all alternatives.
+Q1	Q1-A3	O3	silent	Median burst duration 0.66 and inter-burst interval 26.2 s are KO timing values; no quote links them to what grades het between WT and KO.
+Q1	Q1-A3	O4	silent	The sIPSC is a phasic event; no quote gives a tonic current for any Wwox genotype.
+Q1	Q1-A3	O5	silent	Resting potential of pyramidal neurons is quoted; no quote links it to the size of inhibitory currents or to tonic current.
+Q1	Q1-A3	O6	silent	Sentence names 'the amplitude of the inhibitory currents' (sIPSC); no tonic quote.
+Q1	Q1-A3	O7	silent	'd-APV (50 micromolar) removed bursts' in KO: NMDA-receptor dependence is a downstream requirement compatible with every alternative; het not tested.
+Q1	Q1-A3	O8	opposes	'only a minute tonic current was induced by mimicking in vivo endogenous GABA levels' (WT, P13-P19 layer 2/3): a small baseline tonic current leaves little for a graded loss to remove. Weak: another preparation, inference from magnitude.
+Q1	Q1-A3	O9	silent	Tonic and phasic GABA control by GAT-1 versus GAT-2/3 in rat layer II/III; no Wwox genotype is involved.
+Q1	Q1-A3	O10	silent	A computed scan of sequence annotation for 16 K-channel genes; it does not address this alternative.
+Q1	Q1-A3	O11	silent	Resting potential, input resistance, sag and AP amplitude are quoted as S-HT = S-KO; this alternative makes no claim about them.
+Q1	Q1-A3	O12	silent	'zolpidem ... did not alter the tonic current induced by THIP': pharmacology of a wild-type tonic current; no Wwox genotype.
+Q1	Q1-A0	O1	silent	Abstention makes no claim about this observation.
+Q1	Q1-A0	O2	silent	Abstention makes no claim about this observation.
+Q1	Q1-A0	O3	silent	Abstention makes no claim about this observation.
+Q1	Q1-A0	O4	silent	Abstention makes no claim about this observation.
+Q1	Q1-A0	O5	silent	Abstention makes no claim about this observation.
+Q1	Q1-A0	O6	silent	Abstention makes no claim about this observation.
+Q1	Q1-A0	O7	silent	Abstention makes no claim about this observation.
+Q1	Q1-A0	O8	silent	Abstention makes no claim about this observation.
+Q1	Q1-A0	O9	silent	Abstention makes no claim about this observation.
+Q1	Q1-A0	O10	silent	Abstention makes no claim about this observation.
+Q1	Q1-A0	O11	silent	Abstention makes no claim about this observation.
+Q1	Q1-A0	O12	silent	Abstention makes no claim about this observation.
+Q2	Q2-B1	O1	silent	Gives presence of bursts by genotype; no interval or duration is quoted for het or WT.
+Q2	Q2-B1	O2	silent	Hippocampal spontaneous activity is 'indistinguishable'; no timing value is quoted.
+Q2	Q2-B1	O3	silent	Explanandum: duration 0.66 [0.53-1.06] (unit not quoted) against interval 26.2 s (2.29 bursts/minute) needs a slow process on a tens-of-seconds scale, but no quote gives a time constant for any process.
+Q2	Q2-B1	O4	silent	sIPSC means are given with no relation to burst phase or timing; no excitatory measure is quoted.
+Q2	Q2-B1	O5	silent	'more depolarized' is a static resting-potential shift; no time course is quoted.
+Q2	Q2-B1	O6	silent	Authors' sentence is about excitation-inhibition balance in KO; it carries no timing information.
+Q2	Q2-B1	O7	supports	'd-APV (50 micromolar) removed bursts' in KO: the NMDA-receptor-dependent excitation this alternative names is necessary for bursts to occur (necessity for occurrence, not shown for timing).
+Q2	Q2-B1	O8	silent	Wild-type tonic-current pharmacology; no timing content.
+Q2	Q2-B1	O9	silent	GAT pharmacology of tonic and evoked IPSCs in rat neocortex; no timing of bursts.
+Q2	Q2-B1	O10	silent	Computed sequence scan of 16 K-channel genes; no timing content.
+Q2	Q2-B1	O11	silent	Resting potential, input resistance, sag and AP amplitude are quoted as step values (S-HT = S-KO); no kinetics of a slow cycle are quoted.
+Q2	Q2-B1	O12	silent	Zolpidem leaves the THIP-induced tonic current unchanged; no timing content.
+Q2	Q2-B2	O1	silent	Gives presence of bursts by genotype; no interval or duration is quoted for het or WT.
+Q2	Q2-B2	O2	silent	Hippocampal spontaneous activity is 'indistinguishable'; no timing value is quoted.
+Q2	Q2-B2	O3	silent	Explanandum: duration 0.66 [0.53-1.06] (unit not quoted) against interval 26.2 s (2.29 bursts/minute) needs a slow process on a tens-of-seconds scale, but no quote gives a time constant for any process.
+Q2	Q2-B2	O4	silent	sIPSCs are 'reduced in both amplitude and frequency' in KO, implicating inhibition in the burst-prone state, but nothing is quoted about its time course after a burst.
+Q2	Q2-B2	O5	silent	'more depolarized' is a static resting-potential shift; no time course is quoted.
+Q2	Q2-B2	O6	silent	Authors' sentence is about excitation-inhibition balance in KO; it carries no timing information.
+Q2	Q2-B2	O7	silent	'd-APV ... removed bursts' shows NMDA-receptor dependence of occurrence; it does not test timing and does not exclude this alternative.
+Q2	Q2-B2	O8	silent	Wild-type tonic-current pharmacology; no timing content.
+Q2	Q2-B2	O9	silent	GAT pharmacology of tonic and evoked IPSCs in rat neocortex; no timing of bursts.
+Q2	Q2-B2	O10	silent	Computed sequence scan of 16 K-channel genes; no timing content.
+Q2	Q2-B2	O11	silent	Resting potential, input resistance, sag and AP amplitude are quoted as step values (S-HT = S-KO); no kinetics of a slow cycle are quoted.
+Q2	Q2-B2	O12	silent	Zolpidem leaves the THIP-induced tonic current unchanged; no timing content.
+Q2	Q2-B3	O1	silent	Gives presence of bursts by genotype; no interval or duration is quoted for het or WT.
+Q2	Q2-B3	O2	silent	Hippocampal spontaneous activity is 'indistinguishable'; no timing value is quoted.
+Q2	Q2-B3	O3	silent	Explanandum: duration 0.66 [0.53-1.06] (unit not quoted) against interval 26.2 s (2.29 bursts/minute) needs a slow process on a tens-of-seconds scale, but no quote gives a time constant for any process.
+Q2	Q2-B3	O4	silent	sIPSC means only; no intrinsic measure and no timing.
+Q2	Q2-B3	O5	silent	'more depolarized' is a static resting-potential shift; no time course is quoted.
+Q2	Q2-B3	O6	silent	Authors' sentence is about excitation-inhibition balance in KO; it carries no timing information.
+Q2	Q2-B3	O7	silent	'd-APV ... removed bursts' shows NMDA-receptor dependence of occurrence; it does not test timing and does not exclude this alternative.
+Q2	Q2-B3	O8	silent	Wild-type tonic-current pharmacology; no timing content.
+Q2	Q2-B3	O9	silent	GAT pharmacology of tonic and evoked IPSCs in rat neocortex; no timing of bursts.
+Q2	Q2-B3	O10	silent	Computed sequence scan of 16 K-channel genes; no timing content.
+Q2	Q2-B3	O11	supports	'rebound is significant only in S-KO': a time-dependent intrinsic feature present in the genotype that bursts; no kinetics are quoted, so weak.
+Q2	Q2-B3	O12	silent	Zolpidem leaves the THIP-induced tonic current unchanged; no timing content.
+Q2	Q2-B0	O1	silent	Abstention makes no claim about this observation.
+Q2	Q2-B0	O2	silent	Abstention makes no claim about this observation.
+Q2	Q2-B0	O3	silent	Abstention makes no claim about this observation.
+Q2	Q2-B0	O4	silent	Abstention makes no claim about this observation.
+Q2	Q2-B0	O5	silent	Abstention makes no claim about this observation.
+Q2	Q2-B0	O6	silent	Abstention makes no claim about this observation.
+Q2	Q2-B0	O7	silent	Abstention makes no claim about this observation.
+Q2	Q2-B0	O8	silent	Abstention makes no claim about this observation.
+Q2	Q2-B0	O9	silent	Abstention makes no claim about this observation.
+Q2	Q2-B0	O10	silent	Abstention makes no claim about this observation.
+Q2	Q2-B0	O11	silent	Abstention makes no claim about this observation.
+Q2	Q2-B0	O12	silent	Abstention makes no claim about this observation.
+Q3	Q3-C1	O1	silent	WT has 0 of 11 bursting slices; no quote shows that any manipulation brings WT slices to burst, so a defined WT value from this ladder is not shown. CONFOUND: 4 of 23 het slices already burst, so those sit past threshold at baseline and an ascending ladder gives them no threshold.
+Q3	Q3-C1	O2	silent	Hippocampal spontaneous activity 'indistinguishable'; the quote concerns a different region and says nothing about this frame.
+Q3	Q3-C1	O3	silent	CONFOUND: KO bursts recur about every 26.2 s (2.29 per minute), so the observation window at each ladder step must span several intervals or near-threshold slices will be scored as non-bursting.
+Q3	Q3-C1	O4	silent	sIPSCs are quoted as reduced in KO; this frame does not read synaptic inhibition directly.
+Q3	Q3-C1	O5	supports	'S-KO and S-HTs were also more depolarized': a raised-potassium ladder reads a depolarization-related quantity that differs by genotype. CONFOUND: het and KO start from an already shifted potential, so equal steps may not be equal distances.
+Q3	Q3-C1	O6	silent	Authors' sentence on excitation versus inhibition; it does not bear on this frame.
+Q3	Q3-C1	O7	silent	'd-APV ... removed bursts' in KO only; no quote ties it to this frame.
+Q3	Q3-C1	O8	silent	Wild-type tonic-current pharmacology; it does not bear on this frame.
+Q3	Q3-C1	O9	silent	Tonic/phasic GABA control by transporters in rat layer II/III; it does not bear on this frame.
+Q3	Q3-C1	O10	silent	Computed scan of sequence annotation for 16 K-channel genes; it does not bear on a measurement frame.
+Q3	Q3-C1	O11	supports	Resting potential and input resistance 'S-HT = S-KO': the ladder reads the depolarization component. CONFOUND: it may place het and KO at the same distance despite 4 of 23 versus 36 of 42, collapsing the graded step.
+Q3	Q3-C1	O12	silent	Zolpidem leaves the THIP-induced tonic current unchanged; it does not bear on this frame.
+Q3	Q3-C2	O1	silent	WT has 0 of 11 bursting slices; no quote shows that any manipulation brings WT slices to burst, so a defined WT value from this ladder is not shown. CONFOUND: 4 of 23 het slices already burst, so those sit past threshold at baseline and an ascending ladder gives them no threshold.
+Q3	Q3-C2	O2	silent	Hippocampal spontaneous activity 'indistinguishable'; the quote concerns a different region and says nothing about this frame.
+Q3	Q3-C2	O3	silent	CONFOUND: KO bursts recur about every 26.2 s (2.29 per minute), so the observation window at each ladder step must span several intervals or near-threshold slices will be scored as non-bursting.
+Q3	Q3-C2	O4	silent	sIPSCs are quoted as reduced in KO; this frame does not read synaptic inhibition directly.
+Q3	Q3-C2	O5	silent	'more depolarized' in KO and HT. CONFOUND: whether the baseline shift changes how much a magnesium step matters is not quoted (needs the outside fact on voltage dependence of the magnesium block).
+Q3	Q3-C2	O6	silent	Authors' sentence on excitation versus inhibition; it does not bear on this frame.
+Q3	Q3-C2	O7	supports	'd-APV ... removed bursts': bursts need NMDA receptors, so a ladder acting on NMDA-receptor-gated excitation reads a quantity needed for bursts. CONFOUND: it reads the common downstream path and may mask which upstream variable differs; KO only.
+Q3	Q3-C2	O8	silent	Wild-type tonic-current pharmacology; it does not bear on this frame.
+Q3	Q3-C2	O9	silent	Tonic/phasic GABA control by transporters in rat layer II/III; it does not bear on this frame.
+Q3	Q3-C2	O10	silent	Computed scan of sequence annotation for 16 K-channel genes; it does not bear on a measurement frame.
+Q3	Q3-C2	O11	silent	Passive-property step (S-HT = S-KO) and KO-only rebound are quoted; this frame does not interact with them in any quoted way.
+Q3	Q3-C2	O12	silent	Zolpidem leaves the THIP-induced tonic current unchanged; it does not bear on this frame.
+Q3	Q3-C3	O1	silent	WT has 0 of 11 bursting slices; no quote shows that any manipulation brings WT slices to burst, so a defined WT value from this ladder is not shown. CONFOUND: 4 of 23 het slices already burst, so those sit past threshold at baseline and an ascending ladder gives them no threshold.
+Q3	Q3-C3	O2	silent	Hippocampal spontaneous activity 'indistinguishable'; the quote concerns a different region and says nothing about this frame.
+Q3	Q3-C3	O3	silent	CONFOUND: KO bursts recur about every 26.2 s (2.29 per minute), so the observation window at each ladder step must span several intervals or near-threshold slices will be scored as non-bursting.
+Q3	Q3-C3	O4	supports	'the sIPSCs were reduced in both amplitude and frequency' in KO: a graded reduction of GABA-A inhibition reads a quantity known to differ by genotype. CONFOUND: KO starts with less, so the ladder range differs by genotype.
+Q3	Q3-C3	O5	silent	Resting potential is quoted; this frame does not interact with it in any quoted way.
+Q3	Q3-C3	O6	supports	'primarily through an impairment in the amplitude of the inhibitory currents': the authors point to the quantity this ladder reads (interpretation).
+Q3	Q3-C3	O7	silent	'd-APV ... removed bursts' in KO only; no quote ties it to this frame.
+Q3	Q3-C3	O8	silent	'only a minute tonic current' at endogenous GABA levels in WT: this ladder would read mainly the phasic component in WT; CONFOUND: no tonic value is quoted for het or KO.
+Q3	Q3-C3	O9	silent	NO711 and SNAP-5114 'substantially increased tonic currents' only together: ambient GABA depends on uptake, so CONFOUND: slice-to-slice uptake differences could shift a GABA-A-based reading.
+Q3	Q3-C3	O10	silent	Computed scan of sequence annotation for 16 K-channel genes; it does not bear on a measurement frame.
+Q3	Q3-C3	O11	silent	Passive-property step (S-HT = S-KO) and KO-only rebound are quoted; this frame does not interact with them in any quoted way.
+Q3	Q3-C3	O12	silent	Zolpidem leaves the THIP-induced tonic current unchanged; it does not bear on this frame.
+Q3	Q3-C4	O1	opposes	'0 of n = 11' WT slices burst: a suppression ladder needs bursts to suppress, so WT has no defined value (the task's own requirement); only bursting het and KO slices could be read.
+Q3	Q3-C4	O2	silent	Hippocampal spontaneous activity 'indistinguishable'; the quote concerns a different region and says nothing about this frame.
+Q3	Q3-C4	O3	silent	CONFOUND: KO bursts recur about every 26.2 s (2.29 per minute), so the observation window at each ladder step must span several intervals or near-threshold slices will be scored as non-bursting.
+Q3	Q3-C4	O4	supports	'the sIPSCs were reduced in both amplitude and frequency' in KO: inhibitory capacity differs, which a suppression ladder would read in bursting slices.
+Q3	Q3-C4	O5	silent	Resting potential is quoted; this frame does not interact with it in any quoted way.
+Q3	Q3-C4	O6	supports	'favors excitation over inhibition': the authors name the quantity a suppression ladder adds to (interpretation).
+Q3	Q3-C4	O7	silent	'd-APV ... removed bursts' in KO only; no quote ties it to this frame.
+Q3	Q3-C4	O8	supports	'THIP induced a robust tonic GABA(A)-mediated current in layer 2/3 neurons': the lever works in WT neurons, but it gives a current value, not a distance to burst threshold.
+Q3	Q3-C4	O9	silent	Ambient GABA depends on uptake ('Coapplication ... substantially increased tonic currents'); CONFOUND for any GABA-A-based reading.
+Q3	Q3-C4	O10	silent	Computed scan of sequence annotation for 16 K-channel genes; it does not bear on a measurement frame.
+Q3	Q3-C4	O11	silent	Passive-property step (S-HT = S-KO) and KO-only rebound are quoted; this frame does not interact with them in any quoted way.
+Q3	Q3-C4	O12	silent	Zolpidem leaves the THIP-induced tonic current unchanged; it does not bear on this frame.
+Q3	Q3-C0	O1	silent	Abstention makes no claim about this observation.
+Q3	Q3-C0	O2	silent	Abstention makes no claim about this observation.
+Q3	Q3-C0	O3	silent	Abstention makes no claim about this observation.
+Q3	Q3-C0	O4	silent	Abstention makes no claim about this observation.
+Q3	Q3-C0	O5	silent	Abstention makes no claim about this observation.
+Q3	Q3-C0	O6	silent	Abstention makes no claim about this observation.
+Q3	Q3-C0	O7	silent	Abstention makes no claim about this observation.
+Q3	Q3-C0	O8	silent	Abstention makes no claim about this observation.
+Q3	Q3-C0	O9	silent	Abstention makes no claim about this observation.
+Q3	Q3-C0	O10	silent	Abstention makes no claim about this observation.
+Q3	Q3-C0	O11	silent	Abstention makes no claim about this observation.
+Q3	Q3-C0	O12	silent	Abstention makes no claim about this observation.

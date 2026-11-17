@@ -128,6 +128,8 @@ in the work manifest under `verbatim_locators`, and
 [`deepdive_manifest.py`](../scripts/deepdive_manifest.py) refuses a `complete_fulltext_read`
 without them.
 
+**A numeric statement carries its unit and its panel or table.** Next to the quoted sentence, record the unit of every number the reading will carry out and the panel letter or table row it was read from (`sIPSC`, not "the N"; panel B, not "the figure"). Added 2026-11-16 after a legend count for one measurement (sEPSC) was read as the count for another (sIPSC) and became a premise in a task text; it was caught within minutes, so the rule lives in this reading rubric only, with no structural check. **Added 2026-11-17 (SCI's suggestion, ADV's decision):** the first line of every candidate record also states the UNIT and the REGION (and species, preparation or cell fraction) of every dataset it cites; both errors of 2026-11-16 that reached a peer's reading were a region or a unit stated nowhere near the number. If the error recurs, a check on TSVs that declare a value column (unit and locator columns required) is the next step, about 3 to 4 hours.
+
 **Reading and quoting are different facts, and the receipt only carries the first.** On
 **2026-08-04** an export to an external knowledge base found that **no verbatim locator
 existed anywhere in the canonical state**, across every complete read in this ledger.

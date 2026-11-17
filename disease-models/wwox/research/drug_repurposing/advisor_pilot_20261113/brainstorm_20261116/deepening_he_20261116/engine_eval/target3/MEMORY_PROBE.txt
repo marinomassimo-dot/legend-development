@@ -1,0 +1,9 @@
+I know of no specific study of an ENT1 inhibitor or adenosine in Tsc2+/- mice that reports white-matter integrity or cognition. I can't confirm one exists, and I won't invent findings or citations. This is from memory only, with nothing checked, as instructed.
+
+General background (not specific to this question):
+- Tsc2+/- mice have mTORC1 hyperactivation. They show hippocampal learning and memory deficits that rapamycin reversed (Ehninger and colleagues, 2008). Myelination and white-matter abnormalities have been reported in TSC models and patients.
+- ENT1 inhibitors such as dipyridamole and NBMPR block adenosine reuptake. This raises extracellular adenosine and adenosine-receptor signalling. Adenosine signalling is implicated in oligodendrocyte and myelin biology, epilepsy and ethanol-related behaviours.
+
+Any claim that an ENT1 inhibitor rescues white matter or cognition in Tsc2+/- mice would be my inference from these separate facts. It would not be a finding I know of.
+
+If a paper on this exists, it needs a full-text read before any claim is made.

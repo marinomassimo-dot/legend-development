@@ -1,0 +1,5 @@
+# Ledger line L11 (SCI, 2026-11-17 00:2xZ; registered before the GSE158684 matrix was opened; non-canonical; model-based register, not evidence)
+| id | target (not opened at registration) | quantity | my prediction (bins, probability) | naive baseline |
+|---|---|---|---|---|
+| L11 | GSE158684 single-nucleus RNA-seq of S-Control vs S-KO hippocampus at P17 (n = 1 animal or pool per arm per the paper's legend; unit = nucleus, pooled; intervals pseudo-replicated) | Gabrd log2 fold KO over Control in excitatory-neuron nuclei (marker-set classification of PREREGISTRATION_4B_SNUC_S_LINE_SCI.md, sha256 3126bfbb...); scored on the pooled value, with its n | at or below -1.0: 0.35; between -1.0 and -0.4: 0.40; above -0.4: 0.25 | the seizure-model neuronal reference, -0.35 (GSE330624, NeuN+): the bin above -0.4 with 0.8, the rest equally (0.1 each) |
+If the excitatory class has fewer than 30 nuclei expressing Gabrd per genotype, L11 is 'not readable (detection)' and is not scored. Bin edges: a value equal to an edge belongs to the lower bin.

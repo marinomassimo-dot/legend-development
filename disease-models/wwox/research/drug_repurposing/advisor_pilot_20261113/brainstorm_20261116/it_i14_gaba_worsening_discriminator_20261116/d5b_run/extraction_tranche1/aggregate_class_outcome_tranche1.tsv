@@ -1,0 +1,18 @@
+mechanism_class	stratum	endpoint	age_at_exposure_window	outcome_category	children_with_stated_outcome	reports	scorable_at_3_children
+ampa_antagonist	WWOX	seizure	not_stated	none	1	1	no
+benzodiazepine	WWOX	seizure	not_stated	none	1	1	no
+benzodiazepine	WWOX	seizure	not_stated	partial	1	1	no
+gaba_transaminase_inhibitor	non-WWOX second stratum	seizure	not_stated	partial	1	1	no
+gaba_transaminase_inhibitor	non-WWOX second stratum	seizure	not_stated	resolved	1	1	no
+gabaa_pam_non_benzodiazepine	WWOX	seizure	not_stated	none	3	3	yes
+gabaa_pam_non_benzodiazepine	WWOX	seizure	not_stated	partial	1	1	no
+gabaa_pam_non_benzodiazepine	non-WWOX second stratum	seizure	not_stated	none	1	1	no
+sodium_channel	WWOX	seizure	not_stated	none	4	4	yes
+sodium_channel	WWOX	seizure	not_stated	partial	3	2	yes
+sodium_channel	non-WWOX second stratum	seizure	not_stated	none	1	1	no
+sodium_channel	non-WWOX second stratum	seizure	not_stated	partial	1	1	no
+sv2a	WWOX	seizure	not_stated	none	3	3	yes
+sv2a	WWOX	seizure	not_stated	partial	1	1	no
+t_type_calcium	WWOX	seizure	not_stated	none	1	1	no
+valproate_type	WWOX	seizure	not_stated	none	2	2	no
+valproate_type	WWOX	seizure	not_stated	partial	2	1	no

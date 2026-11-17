@@ -1,0 +1,25 @@
+gene	class	C_log2	ci_low	ci_high	n_ctrl	n_ko	n_expressing_ctrl	n_expressing_ko	readable_detection(>=30 each)
+Slc12a5	dentate	-0.23	-0.47	-0.02	638	564	282	211	yes
+Slc12a2	dentate	-0.28	-0.64	+0.03	638	564	149	104	yes
+Scn1a	dentate	-0.31	-0.56	-0.06	638	564	349	232	yes
+Scn2a	dentate	-0.10	-0.22	+0.03	638	564	542	436	yes
+Kcnk2	dentate	+0.13	-0.13	+0.38	638	564	265	221	yes
+Kcnk3	dentate	+0.92	+0.01	+1.90	638	564	7	14	no
+Kcnj10	dentate	-0.07	-1.27	+1.14	638	564	7	6	no
+Kcnq2	dentate	+0.29	+0.11	+0.47	638	564	353	316	yes
+Hcn1	dentate	+0.89	+0.48	+1.34	638	564	190	279	yes
+Gabra5	dentate	-0.20	-0.41	+0.01	638	564	340	240	yes
+Gabrd	dentate	-1.56	-2.14	-1.02	638	564	102	29	no
+Gabrg2	dentate	-0.18	-0.34	-0.02	638	564	437	339	yes
+Slc6a1	dentate	-0.32	-0.80	+0.08	638	564	120	83	yes
+Slc6a11	dentate	+0.14	-0.34	+0.64	638	564	60	59	yes
+Npy	dentate	+0.93	+0.08	+1.88	638	564	12	21	no
+Sst	dentate	+0.74	+0.21	+1.33	638	564	37	51	yes
+Cck	dentate	-0.06	-0.36	+0.26	638	564	154	123	yes
+Lamp5	dentate	-0.88	-1.83	+0.02	638	564	20	9	no
+Pvalb	dentate	+0.72	-0.21	+1.77	638	564	5	9	no
+Grin2b	dentate	-0.09	-0.16	-0.03	638	564	633	545	yes
+Grin2a	dentate	+0.01	-0.09	+0.11	638	564	613	522	yes
+Cacna1i	dentate	-0.67	-1.31	+0.01	638	564	54	25	no
+Cacna1h	dentate	+0.02	-0.22	+0.25	638	564	250	209	yes
+Wwox	dentate	-2.23	-2.82	-1.79	638	564	162	37	yes

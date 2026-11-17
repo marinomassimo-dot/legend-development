@@ -1,0 +1,92 @@
+source	query	hits
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND slice	64
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND patch-clamp	37
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND electrophysiology	50
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND IPSC	88
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND EPSC	3
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND GABA	149
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND inhibition	1505
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND NMDA	88
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND bursts	50
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND epileptiform	74
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND excitability	121
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND "intrinsic properties"	9
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND interneuron	51
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND organoid	70
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND "iPSC neurons"	2
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND "cultured neurons"	20
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND zebrafish	144
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND fly	85
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND Drosophila	317
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND rat	485
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND heterozygous	664
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND knock-in	338
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND P47T	13
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND seizure	303
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND epilepsy	386
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND neurons	499
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND synaptic	387
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND synapse	274
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND "resting membrane potential"	18
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND "input resistance"	7
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND hippocampal	217
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND cortical	376
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND "multielectrode array"	6
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND "calcium imaging"	22
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND "network activity"	24
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND "knockout mice"	305
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND Cre	177
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND patient	1564
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND variant	1215
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND Purkinje	49
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND cerebellum	195
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND "action potential"	63
+EuropePMC REST search	(WWOX OR Wwox OR Fra16D OR WOX1 OR "WW domain-containing oxidoreductase") AND firing	143
+EuropePMC REST search	(Wwox OR WWOX) AND (Synapsin OR "Synapsin-Cre") 	24
+EuropePMC REST search	(Wwox OR WWOX) AND ("knock-in" OR "knockin") AND (neuron OR brain)	157
+EuropePMC REST search	"WWOX" AND ("developmental and epileptic encephalopathy" OR DEE OR SCAR12 OR EIEE28)	155
+EuropePMC REST search	"Wwox" AND (lde OR "lethal dwarfism with epilepsy")	25
+EuropePMC REST search	"WWOX" AND (spasticity OR "neuronal excitability" OR "hyperexcitability")	151
+EuropePMC REST search	TITLE_ABS:(WWOX) AND (electrophysiolog* OR patch OR slice)	16
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (slice*)	13
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND ("patch-clamp" OR "patch clamp")	2
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (electrophysiolog*)	13
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (IPSC OR IPSCs OR "inhibitory postsynaptic")	9
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (EPSC OR EPSCs OR "excitatory postsynaptic")	5
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (GABA OR GABAergic)	25
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (inhibitory)	98
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (NMDA OR "N-methyl-D-aspartate")	8
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (burst*)	29
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (epileptiform)	18
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (excitab*)	17
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND ("intrinsic properties" OR "membrane potential" OR "input resistance")	11
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (interneuron*)	20
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (organoid*)	18
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (iPSC OR "induced pluripotent" OR "stem cell-derived")	9
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND ("cultured neurons" OR "primary neurons" OR "neuronal culture*")	1
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (zebrafish OR "Danio rerio")	8
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (Drosophila OR fly OR flies)	62
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (rat OR rats)	108
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (heterozygous OR haploinsufficien*)	166
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND ("knock-in" OR knockin)	56
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (P47T)	11
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (epilep* OR seizure*)	136
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (neuron* OR neuronal)	141
+EuropePMC REST search (title/abstract gene)	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox" OR TITLE_ABS:"Fra16D" OR TITLE_ABS:"WOX1" OR TITLE_ABS:"WW domain-containing oxidoreductase") AND (brain OR cortex OR hippocamp* OR cerebell*)	208
+EuropePMC REST search (full-text-wide)	(WWOX OR Wwox OR Fra16D OR WOX1) AND "patch-clamp"	33
+EuropePMC REST search (full-text-wide)	(WWOX OR Wwox OR Fra16D OR WOX1) AND "patch clamp"	33
+EuropePMC REST search (full-text-wide)	(WWOX OR Wwox OR Fra16D OR WOX1) AND "input resistance"	7
+EuropePMC REST search (full-text-wide)	(WWOX OR Wwox OR Fra16D OR WOX1) AND "multielectrode array"	5
+EuropePMC REST search (full-text-wide)	(WWOX OR Wwox OR Fra16D OR WOX1) AND EPSC	3
+EuropePMC REST search (full-text-wide)	(WWOX OR Wwox OR Fra16D OR WOX1) AND IPSC	84
+EuropePMC REST search (full-text-wide)	(WWOX OR Wwox OR Fra16D OR WOX1) AND "resting membrane potential"	18
+EuropePMC REST search (full-text-wide)	(WWOX OR Wwox OR Fra16D OR WOX1) AND epileptiform	74
+EuropePMC REST search (full-text-wide)	(WWOX OR Wwox OR Fra16D OR WOX1) AND slice AND electrophysiology	17
+EuropePMC REST search (full-text-wide)	(WWOX OR Wwox OR Fra16D OR WOX1) AND electrophysiology AND neurons	42
+EuropePMC REST search (full-text-wide)	(WWOX OR Wwox OR Fra16D OR WOX1) AND "whole-cell"	176
+EuropePMC REST search (full-text-wide)	(WWOX OR Wwox OR Fra16D OR WOX1) AND "hyperexcitability"	64
+PubMed (MCP search_articles; all-fields automatic term mapping)	(WWOX OR Wwox OR Fra16D OR WOX1) AND (slice OR patch-clamp OR electrophysiology OR IPSC OR EPSC)	4
+PubMed (MCP search_articles; all-fields automatic term mapping)	(WWOX OR Wwox OR Fra16D OR WOX1) AND (GABA OR inhibition OR NMDA OR bursts OR epileptiform OR excitability OR interneuron)	154
+PubMed (MCP search_articles; all-fields automatic term mapping)	(WWOX OR Wwox OR Fra16D OR WOX1) AND (organoid OR iPSC OR "cultured neurons" OR zebrafish OR Drosophila OR rat)	44
+PubMed (MCP search_articles; all-fields automatic term mapping)	(WWOX OR Wwox) AND (heterozygous OR knock-in OR P47T) AND (neuron OR brain OR seizure OR epilepsy)	15
+PubMed (MCP search_articles; all-fields automatic term mapping)	(WWOX OR Wwox) AND (intrinsic properties OR "resting membrane potential" OR "input resistance" OR "multielectrode array" OR "network activity")	2
