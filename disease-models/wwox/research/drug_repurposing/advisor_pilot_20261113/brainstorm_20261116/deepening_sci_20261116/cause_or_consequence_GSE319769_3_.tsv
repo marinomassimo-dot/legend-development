@@ -1,0 +1,27 @@
+gene	fraction_used	C_log2	ci_low	ci_high	n_treated	n_control	S_line_hippocampus_log2	readable_C(|C|>=0.4)	readable_S(|S|>=0.4)	same_sign	call_vs_S	predicted_sign	prediction_result	C_other_fraction
+Gabrd	all	-1.44	-1.75	-1.13	6	6	-1.67	True	True	True	copied	-	right	
+Gabra5	all	-0.46	-0.57	-0.36	6	6	-0.54	True	True	True	copied	-	right	
+Gabra1	all	+0.00	-0.12	+0.13	6	6	-1.22	False	True	False	not copied			
+Gabrg2	all	-0.40	-0.50	-0.29	6	6	-0.35	True	False	True	S not readable			
+Slc6a1	all	-1.04	-1.21	-0.85	6	6	-0.94	True	True	True	copied			
+Npy	all	+1.84	+1.63	+2.09	6	6	+2.52	True	True	True	copied	+	right	
+Npy2r	all	-0.12	-0.67	+0.27	6	6	-0.84	False	True	True	not copied			
+Sst	all	-0.35	-0.54	-0.17	6	6	+1.31	False	True	False	opposite	-	not readable	
+Pvalb	all	-1.36	-1.67	-1.07	6	6	-1.76	True	True	True	copied	-	right	
+Gad1	all	-0.48	-0.65	-0.31	6	6	-0.54	True	True	True	copied	unreadable	wrong	
+Grin2b	all	-0.55	-0.65	-0.45	6	6	-1.81	True	True	True	partly copied			
+Grin2a	all	-0.58	-0.70	-0.43	6	6	-0.91	True	True	True	copied			
+Cacna1h	all	+0.48	+0.01	+0.87	6	6	-0.46	True	True	False	opposite	+	right	
+Cacna1i	all	-0.97	-1.14	-0.81	6	6	-1.11	True	True	True	copied			
+Hcn2	all	-0.58	-0.70	-0.47	6	6	-0.65	True	True	True	copied	-	right	
+Slc12a5	all	-0.79	-0.92	-0.66	6	6	-0.55	True	True	True	copied	-	right	
+Slc12a2	all	-0.01	-0.21	+0.19	6	6	-1.15	False	True	True	not copied	+	not readable	
+Kcnk2	all	-0.33	-0.64	-0.09	6	6	-0.83	False	True	True	partly copied			
+Kcnq2	all	-0.37	-0.46	-0.27	6	6	-0.45	False	True	True	copied			
+Adora1	all	-0.20	-0.34	-0.08	6	6	-0.06	False	False	True	S not readable			
+Gfap	all	+2.73	+2.27	+3.20	6	6	+2.12	True	True	True	copied	+	right	
+Gja1	all	-0.84	-1.08	-0.60	6	6	-0.82	True	True	True	copied			
+Kcnj10	all	+0.83	+0.62	+1.03	6	6	+0.22	True	False	True	S not readable			
+Adk	all	-0.09	-0.28	+0.12	6	6	-0.44	False	True	True	partly copied			
+Wwox	all	-0.31	-0.47	-0.15	6	6	-2.56	False	True	True	not copied			
+Aif1	all	+1.71	+1.46	+1.95	6	6		True	False	False	S not readable	+	right	

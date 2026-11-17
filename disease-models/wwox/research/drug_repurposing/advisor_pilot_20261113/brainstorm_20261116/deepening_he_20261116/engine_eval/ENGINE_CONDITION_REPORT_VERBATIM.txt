@@ -1,0 +1,114 @@
+All paths below sit under /tmp/legend_cut_1867a26a8/disease-models/wwox/. I abbreviate that prefix as W/.
+
+Caveats that apply to every block:
+- The folder holds no primary Aβ experiment on WWOX loss, except two second-hand items: the Chang 2015 cascade and the Lucas-Clarke 2025 preprint title. Both are known only through ledger and review summaries, not read as primary text.
+- The Wwox-null mouse dies at about 3–4 weeks, so any adult amyloid test needs a conditional or hypomorphic allele.
+- The held record says WWOX abundance is not WWOX function: P47T mice keep normal protein, and SCAR12 organoids with minimal WWOX look near-normal (W/research/fulltext_dossiers/PMID42128308_partial_locators.md).
+- The Obeid review also reports WWOX is not differentially expressed in AD brain transcriptomics (same file, lines 209–212). That weakens any "AD brains lose WWOX mRNA" premise.
+
+H1. Statement: Loss of the WWOX 388–407/L404 docking-site brake de-represses GSK3β independently of pS9, which raises amyloidogenic APP processing and so Aβ production. This is a mechanism of production, not of toxicity.
+- Held evidence: W/registries/claim_registry_current.md (CLAIM 035 and CLAIM 016, both "in observation") and W/research/discovery_ledger_current.md (DL-MECH-064) give DATO for direct, L404-dependent inhibition of GSK3β by WWOX, with endogenous co-IP from mouse brain. They also give DATO that GSK3β protein is elevated in Wwox-null cortex and hippocampus (Cheng 2020).
+  - Against or limiting: the work was done in overexpressing SH-SY5Y cells, and no WWOX-DEE allele was tested.
+  - Against or limiting: lithium suppressed PTZ seizures in all three genotypes, so it is not WWOX-specific (CLAIM 016).
+  - Against or limiting: the "GSK3β→Aβ production" link is not in the folder (ESPANSIONE). In the held Chang cascade, APP→Aβ sits upstream of pT181-tau, not downstream of a kinase.
+- Usual reading vs this one: the usual reading treats GSK3β as an Aβ-driven downstream kinase. This reading puts a WWOX-lost kinase brake upstream of Aβ generation. It also says that a pS9 western, the standard assay, would miss the effect (CLAIM 035).
+- Rejection: in WWOX-reduced APP-expressing neurons, measure Aβ40/42 and sAPPβ together with a substrate-based GSK3 activity readout. If the activity readout is unchanged, or Aβ rises while GSK3 activity is normal, H1 is rejected.
+- Discriminator vs H2: rescue with WWOX-L404A, which keeps the rest of the protein but cannot bind or inhibit GSK3β. If L404A fails to rescue the Aβ phenotype, H1 is favoured. If L404A rescues fully, the SDR scaffold or aggregation arm of H2 is favoured.
+
+H2. Statement: Loss of WWOX phospho-Tyr33/SDR chaperone-scaffold function lets TPC6AΔ aggregate and drives the TIAF1 → caspase-3 → APP → Aβ cascade, so Aβ rises through aggregation and caspase cleavage.
+- Held evidence: W/research/discovery_ledger_current.md (DL-BIO-004, DL-MECH-019) holds the Chang/Sze/Chang 2015 data.
+  - Supports: aggregated pTyr33-WWOX is about 40% lower in AD brain than in controls (42 controls, 96 AD cases).
+  - Supports: TPC6AΔ binds the SDR (aa 120–414) and WWOX co-expression suppresses its aggregation by about 50%.
+  - Supports: 3-week Wwox-KO cortex already shows extracellular TPC6AΔ aggregates and higher pT181-tau (n=5).
+  - Limits: single laboratory, TPC6AΔ biology "almost exclusive" to that group, no independent replication, overexpression.
+  - Limits: the Zfra follow-up (Lee 2017) has small numbers and inconsistent reporting, and the peptide is not detected in brain.
+  - Limits: the primary papers are catalogued (CORPUS-STUB-156 in W/registries/paper_registry_current.md) but not read as complete full text here.
+- Usual reading vs this one: the usual reading holds that WWOX is a bystander or marker of cell death in AD. This reading makes loss of WWOX anti-aggregation function an upstream cause that feeds Aβ generation.
+- Rejection: in WWOX-deficient neurons, knock down TPC6AΔ or TIAF1. If Aβ is unchanged, or if Aβ rises with no TPC6AΔ aggregates, H2 is rejected. Failure of independent labs to find TPC6AΔ aggregates also rejects it.
+- Discriminator vs H1: caspase-3 or TIAF1 inhibition lowers the Aβ excess, with unchanged GSK3 activity, favouring H2. A GSK3 inhibitor lowering it with caspase-3 still elevated favours H1.
+
+H3. Statement: Loss of WWOX in neurons produces NMDAR-dependent bursting and PV-interneuron deficit, and the resulting sustained excess activity raises extracellular Aβ release (activity-dependent production).
+- Held evidence: W/registries/claim_registry_current.md holds the supporting findings.
+  - CLAIM 021 (consolidated baseline): neuron-specific Wwox loss gives spontaneous neocortical bursting, raised excitatory drive, reduced inhibition and NMDAR dependence.
+  - CLAIM 001: organoid hyperexcitability that is rescued by WWOX re-expression.
+  - CLAIM 005: PV-positive interneuron counts in hippocampus down 44% at 2 weeks.
+  - W/research/discovery_ledger_current.md (DL-MOL-001) gives NMDAR dependence of bursting.
+  - Against: nothing held measures Aβ in any of these systems. CLAIM 005 notes that a Wwox-null mouse is not shown to be epileptic, and the same note says seizures are a rat lde phenotype. Adult tests are limited by lethality at 3–4 weeks.
+- Usual reading vs this one: the usual reading treats AD hyperexcitability as a consequence of Aβ. This reading makes WWOX-loss network hyperexcitability the upstream amplifier.
+- Rejection: in APP-expressing WWOX-deficient neurons, silence activity (TTX or NMDAR block). If extracellular Aβ stays elevated, H3 is rejected. If Aβ is unchanged without silencing even though bursting is present, it is also rejected.
+- Discriminator vs H1: activity silencing normalises Aβ while GSK3 activity stays high (H3), versus GSK3 inhibition normalising Aβ with bursting persisting (H1).
+
+H4. Statement: Loss of WWOX shifts neurons toward an ATF4/UPR-driven, methionine-dependent metabolic state (lactate and LDH up) that worsens Aβ42 neurotoxicity independently of HIF1α.
+- Held evidence: W/research/fulltext_dossiers/PMID42128308_partial_locators.md (lines 221–225) and W/meta/meta_metabolism_current.md (line 163) carry the claim as a Drosophila preprint, second-hand.
+  - Supports (second-hand): Wwox loss raises lactate and LDH via ATF4 and is HIF1α-independent. Rescue restores lifespan and motor function and lowers L-methionine, but does not lower lactate.
+  - Supports (title only): W/research/full_text_queue_current.md (FT-009) holds only the title and a paraphrase of Lucas-Clarke 2025, "Wwox protects against amyloid pathology through metabolic reprogramming".
+  - Limits: the primary is unread, the paper is a preprint (observation only), and the system is fly, so it is ESPANSIONE. No Aβ data are held beyond that title.
+  - Also: W/registries/claim_registry_current.md (CLAIM 025) is annotated as a tension, not a contradiction.
+- Usual reading vs this one: the usual reading treats the WWOX metabolic axis as HIF1α-glycolytic. This reading puts the Aβ-relevant axis in the UPR/methionine branch, which the held review says is where the treatment effect lands.
+- Rejection: in Wwox-reduced neurons with Aβ42 challenge, check that methionine restriction or ATF4 knockdown changes toxicity. If neither changes it, H4 is rejected. Direct rejection: no enhancement of Aβ42 toxicity by Wwox loss.
+- Discriminator vs H5: HIF1α knockdown versus ATF4 knockdown on Aβ toxicity. If only ATF4 knockdown rescues, H4 is favoured. If only HIF1α knockdown rescues, H5 is favoured.
+
+H5. Statement: Loss of WWOX de-represses HIF1α, giving a Warburg-like state with lower ATP and O₂ consumption, so neurons are bioenergetically less able to buffer Aβ proteotoxic and synaptic stress.
+- Held evidence: W/research/discovery_ledger_current.md (DL-MECH-020) and W/registries/claim_registry_current.md (CLAIM 025) give DATO in MEF and cancer models of HIF1α up, glucose uptake and lactate up, ATP down, OCR down.
+  - Limits: the neuronal transfer is untested (belief "medio"). The HIF1α line has a credibility caution tied to a serial-retraction group.
+  - Against: the Drosophila preprint is HIF1α-independent.
+  - Against: the systemic null mouse is metabolically decompensated at P18 (CLAIM 036), which confounds brain readouts. W/meta/meta_metabolism_current.md says CNS transfer is "not yet proven".
+  - No held Aβ link.
+- Usual reading vs this one: the usual reading treats the AD energy deficit as downstream of Aβ. This reading makes it a pre-existing WWOX-loss vulnerability that lowers the Aβ toxicity threshold.
+- Rejection: Seahorse OCR/ECAR in Wwox-deficient neurons. If the glycolysis/OXPHOS ratio is not shifted, or HIF1α inhibition does not change Aβ vulnerability, H5 is rejected.
+- Discriminator vs H4: see H4. Also test whether a ketone or acetyl-CoA bypass of PDH, which acts downstream of PDK/PDH, removes the extra vulnerability (H5) or does not (H4/H6).
+
+H6. Statement: Loss of WWOX removes a redox/mitochondrial resilience network (Idh/Sod genetic interactions), so the same Aβ challenge produces larger ROS and mitochondrial damage. The effect is stressor-dependent, not a rise in baseline ROS.
+- Held evidence: W/registries/claim_registry_current.md (CLAIM 009, "in observation") and W/registries/paper_registry_current.md (PAPER 071, fly Wwox×Idh/Sod; PAPER 054).
+  - 🔴 Direct contradiction to the simple version: in fly, Wwox loss LOWERS thresholded CM-H2DCFDA signal and overexpression raises it. In diabetic photoreceptors, WWOX knockdown lowers superoxide. CLAIM 009 explicitly says the deficiency→ROS direction is not monotonic.
+  - I keep H6 only in the narrowed "resilience under challenge" form. The PAPER 071 note itself speaks of a "redox-metabolic resilience network, not a universal deficiency→ROS direction", and the held WWOX–cuprizone lesson says some phenotypes need a stressor to appear (PMID42128308 file, lines 172–185).
+  - No held Aβ-challenge experiment exists.
+- Usual reading vs this one: the usual reading predicts higher baseline ROS in WWOX loss. This reading predicts equal or even lower baseline ROS but a failure to buffer an Aβ-induced oxidative or mitochondrial load.
+- Rejection: Aβ-challenged WWOX-deficient neurons show ROS, membrane potential and viability equal to wild type. This rejects H6.
+- Discriminator vs H5: baseline versus challenge. A genotype difference present at baseline without Aβ favours H5 (a fixed energy deficit). A difference appearing only under Aβ favours H6.
+
+H7. Statement: Loss of WWOX removes a restraint on ERK/JNK/NF-κB inflammatory signalling, so reactive microglia and astrocytes amplify Aβ toxicity (non-cell-autonomous, from the neuron-WWOX-loss side).
+- Held evidence: W/research/discovery_ledger_current.md (DL-MECH-012, DL-MECH-014/015) and W/registries/claim_registry_current.md (CLAIM 005, CLAIM 006).
+  - Supports: IBA1 and GFAP area fractions are raised in hippocampus of Wwox-KO at 2 weeks, and the P47T mouse shows progressive microgliosis and astrogliosis. ERK/JNK/NF-κB de-repression and IL-6/IL-1β/MCP1 are increased in multiple tissues (DL-MECH-012, "medio-alto").
+  - Limits: the CLAIM 005 measures are marker area fractions, not cell counts, and only Il6, not Tnf-a, is significant (n=4). In P47T, transfer to the reference genotype is flagged with caution. The multi-tissue data are mainly peripheral (lung, sepsis) and global-KO. DL-MECH-014 is oncology and abstract-only.
+  - No neuron-specific deletion with glial readout is held.
+- Usual reading vs this one: the usual reading casts microglia as responding to Aβ. This reading says WWOX loss pre-sets a primed inflammatory state, so any Aβ challenge gets an amplified response.
+- Rejection: neuron-specific Wwox deletion in an APP background gives no increase in microglial activation or IL-6 beyond APP alone. This rejects H7. Microglial depletion that does not alter the phenotype also rejects it.
+- Discriminator vs H3: block neuronal activity (TTX or NMDAR block) in neuron-specific WWOX-loss slices. If microgliosis persists with silence, H7 (WWOX loss acting through a non-activity route) is favoured. If microgliosis disappears, H3 is favoured.
+
+H8. Statement: Loss of the WWOX scaffold at ER/Golgi/endosomal/lysosomal nodes (SEC23IP, SCAMP3, VOPP1) disturbs APP/secretase trafficking or lysosomal clearance, shifting APP flux toward Aβ or impairing its removal.
+- Held evidence: W/research/discovery_ledger_current.md (DL-MECH-018) and W/registries/claim_registry_current.md (CLAIM 026): TAP-MS gives 216 partners and co-IP confirms SEC23IP, SCAMP3 and VOPP1 binding, in HEK293T with tagged protein.
+  - Limits: no APP, BACE1 or γ-secretase data are held at all. This is INFERENZA stacked on an interactome.
+  - 🔴 Direction caution from W/research/discovery_ledger_current.md (DL-MECH-016): WWOX induction promotes lysosomal degradation of Bcl-XL/Mcl-1. That is gain, not loss. Loss of WWOX would, by the same logic, spare Bcl-XL and Mcl-1, which is protective. It does not support a harmful lysosomal-clearance defect.
+- Usual reading vs this one: the usual reading treats APP trafficking defects as driven by endocytic genes such as the known AD loci. This reading adds WWOX as a scaffold at those compartments, carried by an interactome rather than by APP data.
+- Rejection: in Wwox-null neurons, APP-CTF/Aβ ratio and APP endosomal co-localisation are unchanged, and SEC23IP/SCAMP3 localisation is unchanged. This rejects H8.
+- Discriminator vs H2: trafficking (H8) predicts altered APP-CTF/Aβ ratio and early-endosome APP enrichment without TPC6AΔ aggregation. H2 predicts caspase-cleaved APP fragments and TPC6AΔ aggregates with a normal APP-CTF pattern.
+
+H9. Statement: Loss of WWOX raises GSK3β-mediated tau phosphorylation at S396/S404 and weakens tau-dependent microtubule assembly, so the tau-mediated amplification of Aβ toxicity is larger (a downstream amplifier of existing Aβ, not a source).
+- Held evidence: W/research/discovery_ledger_current.md (DL-MECH-064) gives DATO that WWOX overexpression cuts pTau S396 to 0.18 and S404 to 0.28, and that knockdown of Tau abolishes the WWOX/GSK3β benefit (Tau as sole effector, with non-additivity). The 3-week Wwox-KO shows higher pT181-tau (DL-BIO-004). The Obeid review gives second-hand "decreased WWOX protein in AD patients… enhanced tau phosphorylation" (PMID42128308 file, lines 239–241), which is duplicated text.
+  - 🔴 Contradicted in part: Wang 2012 states WWOX does not co-IP Tau, but its Supplementary Figure A has no Tau blot. The negative is unevaluable (W/research/dismissal_ledger_current.md, DIS-010), so the tau arc is intact, not refuted, and not solid either. Chang/Sze rest on yeast two-hybrid.
+  - Limits: Sze 2004 (W/research/full_text_queue_current.md, FT-024) is still unread, so the GSK3 claim has only two sources. In the Chang cascade tau phosphorylation comes after Aβ, which is consistent with this amplifier role but not with H1.
+- Usual reading vs this one: the usual reading treats tau phosphorylation as a passive consequence of Aβ-driven kinases. This reading says WWOX level sets the gain of that step.
+- Rejection: in WWOX-reduced neurons exposed to a fixed Aβ dose, knock down tau. If toxicity is equal to WWOX-reduced neurons with tau intact, H9 is rejected. Equally, if pTau S396/S404 does not rise on WWOX reduction, it is rejected.
+- Discriminator vs H1: a fixed exogenous Aβ dose bypasses production. If the WWOX-loss excess toxicity persists with Aβ held constant, H9 (or H5/H6) is favoured. If the excess appears only with endogenous Aβ production, H1/H2/H8 are favoured.
+
+H10. Statement: Loss of WWOX fragments sleep and network-state stability, which reduces nightly consolidation and clearance and so raises Aβ accumulation over time.
+- Held evidence: W/research/discovery_ledger_current.md (DL-MECH-013, "INFERENZA", belief "medio"): WWOX intronic variants rs16948804/rs4887991 are associated with sleep duration in humans, and Drosophila Wwox loss reduces and fragments daytime sleep and increases night sleep without abolishing circadian rhythm. The paper links the phenotype to metabolism, ROS and tau.
+  - The Obeid review repeats this (PMID42128308 file, lines 226–229).
+  - Against or limiting: the human variants are intronic, with non-pediatric-WWOX-DEE data. No Aβ, amyloid or clearance measure is held in either system. The night-sleep increase makes the net direction on a clearance mechanism ambiguous. The Wwox-null mouse dies before sleep-clearance studies are practical.
+- Usual reading vs this one: the usual reading treats poor sleep in AD as a consequence of amyloid pathology. This reading makes WWOX-linked sleep fragmentation an upstream, WWOX-dependent source of Aβ accumulation.
+- Rejection: in Wwox-reduced animals, consolidate sleep pharmacologically or genetically. If Aβ burden and ISF Aβ diurnal oscillation are unchanged relative to untreated Wwox-reduced animals, H10 is rejected. Equally, no sleep-fragmentation difference with a normal Aβ rhythm rejects it.
+- Discriminator vs H3: hyperexcitability (H3) predicts that Aβ excess follows activity or bursting regardless of sleep state. H10 predicts that Aβ excess tracks sleep state or architecture. A sleep-matched, activity-controlled comparison separates them.
+
+FILES READ:
+/tmp/legend_cut_1867a26a8/CLAUDE.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/full_text_queue_current.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/discovery_ledger_current.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID42128308_partial_locators.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID31428585.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID25245215.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/dismissal_ledger_current.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/meta/meta_metabolism_current.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/claim_registry_current.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/paper_registry_current.md
+(Grep only, no full read: /tmp/legend_cut_1867a26a8/disease-models/wwox/registries/working_model_current.md, /tmp/legend_cut_1867a26a8/disease-models/wwox/meta/ (all files), /tmp/legend_cut_1867a26a8/disease-models/wwox/registries/batch_queue.md, /tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/therapy_levers.md, /tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260909-31428585-01.md, /tmp/legend_cut_1867a26a8/disease-models/wwox/research/deepdive_manifests/PMID31428585.json)
