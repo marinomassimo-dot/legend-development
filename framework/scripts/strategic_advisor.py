@@ -765,6 +765,12 @@ CONTINUOUS = "CONTINUOUS.json"
 CONTROL_LINE = re.compile(r"^\s*(?:[-*]\s*)?(PAUSE|STOP|RESUME|URGENT|INTEGRATION)\s*:\s*(.+?)\s*$", re.M)
 ADVISOR_SCOPES = ("all", "advisor", "adv", "presidio", "strategic advisor")
 ALLOCATION_UNITS = ("output_tokens", "cache_read_tokens")
+EVALUATION_USAGE_SCOPE = (
+    "Saved model evaluations of this campaign only; excludes the ADV hosting session, "
+    "IT/SCI/HE and their delegates. Unmeasured work is not zero-cost. "
+    "These observations do not establish total laboratory use or remaining account quota. "
+    "Use the existing session_model_census.py / trial_window_table.py for a stated laboratory window."
+)
 
 
 def continuous(campaign: Path) -> dict[str, Any]:
@@ -824,10 +830,12 @@ def weekly_state(campaign: Path) -> dict[str, Any]:
     used = measured_use(campaign, _now() - dt.timedelta(days=7))
     limit, share, unit = alloc.get("usable_limit"), alloc.get("advisor_share"), alloc.get("unit")
     if not (limit and share and unit in ALLOCATION_UNITS):
-        return {"state": "unset", "measured_7d": used, "note": "usable weekly limit not given by the operator and not exposed by the runtime: nothing is blocked and no value is assumed"}
+        return {"state": "unset", "measured_7d": used, "measurement_scope": EVALUATION_USAGE_SCOPE,
+                "note": "usable weekly limit not given by the operator and not exposed by the runtime: nothing is blocked and no value is assumed"}
     cap = float(limit) * float(share)
     spent = used[unit]
-    return {"state": "exhausted" if spent >= cap else "near" if spent >= 0.8 * cap else "ok", "measured_7d": used, "unit": unit, "advisor_cap": cap, "advisor_spent": spent}
+    return {"state": "exhausted" if spent >= cap else "near" if spent >= 0.8 * cap else "ok", "measured_7d": used,
+            "measurement_scope": EVALUATION_USAGE_SCOPE, "unit": unit, "advisor_cap": cap, "advisor_spent": spent}
 
 
 def stage_limits(campaign: Path, limits: dict[str, int] = LIMITS) -> dict[str, int | None]:
@@ -1649,7 +1657,8 @@ def operating_mode_text(campaign: Path) -> str:
             f"{cont['authorised_utc']}; the pilot's totals and expiry above are history). An assignment that ends does not end the presidio. Select and prepare useful work from the standing roadmap; operator silence and a future review are not dependencies. "
             "A supported whole-portfolio constraint can justify waiting; no active-work quota applies. Radar and scouting items are opportunities to compare with the current thread, the other open questions, the promising comparisons, "
             "knowledge already held and concrete obstacles; they are not orders and not a second roadmap, and nothing is installed because a radar recommends it. "
-            f"Shared weekly allocation: {week['state']} ({week.get('note', 'measured and enforced for this presidio')}). Operator control lines in the roadmap section (most recent last): {json.dumps(ctl)}.\n\n" + followthrough_text())
+            f"Shared weekly allocation: {week['state']} ({week.get('note', 'measured and enforced for this presidio')}). Measurement scope: {week['measurement_scope']} "
+            f"Operator control lines in the roadmap section (most recent last): {json.dumps(ctl)}.\n\n" + followthrough_text())
 
 
 def direction_before_status_text() -> str:
@@ -1913,6 +1922,7 @@ def status(campaign: Path) -> str:
                      f"{n}/{b.get('max_invocations', '-')} and {drafted}/{b.get('max_assignments', '-')} and are history, not the rule of this mode; "
                      f"{'SUSPENDED: ' + held if held else 'no operator suspension'}; weekly allocation {week['state']} (measured 7 d: {week['measured_7d']['evaluations']} evaluation(s), "
                      f"{week['measured_7d']['output_tokens']} output, {week['measured_7d']['cache_read_tokens']} cache-read tokens)" + ("" if week["state"] != "unset" else "; " + week["note"]))
+        lines.append("  Measurement scope: " + week["measurement_scope"])
     held = _holds(campaign)
     if held:
         last = held[-1]
