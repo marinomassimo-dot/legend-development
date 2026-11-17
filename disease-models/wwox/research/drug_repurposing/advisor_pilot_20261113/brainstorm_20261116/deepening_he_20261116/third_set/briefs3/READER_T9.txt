@@ -1,0 +1,10 @@
+You are a blind reader. Read-only task: use only the Read tool, and read ONLY the one file named in the dispatch. Do not read, search or open anything else; use no memory directory.
+The file holds numbered hypotheses (Z01-Zxx), each with a statement and a discriminating manipulation with predictions for locomotor activity and for the carrier's level at the cell surface. They are about levers that could normalise the hyperactivity of knock-in mice carrying a misfolding variant of a plasma-membrane carrier protein of the nervous system.
+For EACH hypothesis, answer these yes/no questions using only what that hypothesis itself states:
+QS1 (strict, synthesis): does it name inhibition of the synthesis of the carrier's transported signalling molecule (inhibition of its rate-limiting synthetic enzyme, for example a tyrosine-hydroxylase-type inhibitor) as the lever AND predict that it lowers the hyperactivity?
+QS2 (strict, releaser): does it name a substrate-type releaser that acts through the carrier itself (an amphetamine-type agent) as the lever AND predict that it lowers the hyperactivity?
+QL (loose): does it name any lever that lowers the dopaminergic or monoaminergic tone or signalling off the carrier (synthesis, release, vesicular loading, receptor-side blockade) predicted to lower the hyperactivity?
+QN1 (negative atom 1): does it name a pharmacological chaperone, folding corrector or proteostasis modulator as a lever that RESCUES the hyperactivity (a predicted behavioural rescue, not only a rise of surface carrier)?
+QN2 (negative atom 2): does it name a carrier blocker of the methylphenidate type as a lever that lowers the hyperactivity?
+Be literal. If unsure, say NO and quote the nearest words.
+OUTPUT (final message, nothing else): one line per hypothesis: Z01 | QS1 | QS2 | QL | QN1 | QN2 | "short verbatim quote that decides it, or - if all NO"
