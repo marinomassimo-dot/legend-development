@@ -333,3 +333,5 @@ in-act `get_article_metadata` responses. **One discrepancy is recorded rather th
 
 **End.** Not medical advice. No safety triage was run and no druggability score assigned. Read-only toward every
 canonical file; nothing promoted, nothing committed.
+
+**Update 2026-11-17 (IT).** The Wnt direction in this node should be read with the held GSE156243 result (`research/drug_repurposing/gse156243/prediction_wnt_sign_20261025.md`): four transcriptional Wnt readouts up in 4 of 4 and seven of seven with WNT5A and TCF7L2, bulk, 4 knockout against 2 wild-type libraries, composition not separable. The non-canonical alternative (R2 of the RP-008 selection note) is weakened, not refuted; the organoid Wnt thread is parked with a rescue contrast as its revival condition. No sentence above was changed.
