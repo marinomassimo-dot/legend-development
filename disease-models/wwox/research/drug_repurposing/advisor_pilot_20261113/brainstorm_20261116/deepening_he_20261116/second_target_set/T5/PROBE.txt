@@ -1,0 +1,15 @@
+From memory only. I used no tools and opened no files.
+
+What I know, with the confidence each point deserves:
+
+- 4-phenylbutyrate (4-PBA) is a chemical chaperone and a weak histone deacetylase inhibitor. It is thought to ease endoplasmic reticulum (ER) retention of misfolded proteins and to reduce ER stress.
+
+- Specific to GABRA1, I recall work from the Macdonald lab (Vanderbilt). It reported that 4-PBA raised the surface and total expression of GABA-A receptor alpha-1 subunits carrying epilepsy mutations, such as A322D and some others. This was in transfected HEK293T cells. I am moderately confident of that. In the same work, 4-PBA reduced ER stress and improved the trafficking of the mutant alpha-1 subunit and the currents it carried. Some mutants responded better than others. I think this included the alpha-1(D219N) and alpha-1(S326fs328X) variants, but I am not certain which ones.
+
+- A related report describes 4-PBA in a mouse model of the Gabrg2 Q390X truncation variant. It lowered ER stress and increased surface subunit levels. I am less certain of the details, and that variant is in gamma-2, not alpha-1.
+
+- I have no reliable knowledge of how well 4-PBA works in mice carrying GABRA1 variants, or of any in vivo effect on seizures with GABRA1. I will not guess at numbers, effect sizes or citations.
+
+- I know nothing about WWOX-specific data on this.
+
+Overall, I know the general direction but not the details. Check any specific claim against the source papers before using it.

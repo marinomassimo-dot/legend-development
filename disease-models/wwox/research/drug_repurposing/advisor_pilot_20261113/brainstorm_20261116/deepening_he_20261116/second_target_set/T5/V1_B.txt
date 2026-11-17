@@ -1,0 +1,88 @@
+**Scope note (DATO).** The folder holds no data on GABA-A subunit missense variants, surface trafficking or ER quality control. Its only GABA-A content is the following:
+- GABRB2 and GABRB3 transcripts are reduced in WWOX-KO organoids.
+- sIPSC amplitude is about 52% lower in neuron-specific Wwox loss.
+- No E_GABA, KCC2 or NKCC1 value has been measured in any WWOX system.
+
+The "held evidence" lines below therefore cite transferable method rules and analogies from the WWOX proteostasis work, not direct support. Every mechanism claim here is IPOTESI or ESPANSIONE. Not medical advice, and no dose or drug recommendation.
+
+Three rules from the folder apply to every block:
+- Abundance is not function (`MARKER_TO_FUNCTION_GATE`), so each block reads surface and current separately.
+- The sign of a chaperone or proteostasis lever depends on the compartment and the route (dismissal ledger D-02, D-03).
+- Stable but inert is possible (D-04), so a surface gain with no current gain means a gating or conductance defect, not a trafficking one.
+
+**H1. Statement:** A missense subunit is folding-competent but kinetically trapped, so raising ER folding capacity (a chemical-chaperone or ER-lumen-folding class) increases ER exit, surface density and current.
+· Held evidence: `/tmp/legend_cut_1867a26a8/disease-models/wwox/research/dismissal_ledger_current.md` (D-02) says the misfolded-protein → ERAD → chemical-chaperone chain is "true only for ER/secretory proteins". WWOX is cytosolic, so the folder rejected that route for WWOX. A multipass GABA-A subunit is an ER/secretory protein, so the rejection does not apply and the rationale is plausible here. No GABA-A data. `/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/proteostasis_rationale.md` §3 and `mechanism_intervention_map.md` N-11 hold the 4-PBA/TUDCA precedent, which the folder does not allow to be transferred without a compartment check.
+· Usual reading vs this one: the usual reading treats variant loss as degradation. This one treats it as slowed folding that a higher folding capacity can outrun.
+· Reject if: variant-expressing neurons or cells treated with the chaperone class show no rise in endoglycosidase-H-resistant (post-ER) subunit by pulse-chase, while total protein rises.
+· Discriminating manipulation (vs H2, ERAD relief): knock down the ER-lumen chaperone BiP, or the calnexin/calreticulin cycle, and compare with a folding enhancer. H1 predicts surface subunit and evoked current fall with BiP knockdown and rise with the enhancer. The rival H2 predicts no dependence on BiP.
+
+**H2. Statement:** The variant subunit is recognised as misfolded and removed by ER-associated degradation although it is partly assembly-competent, so slowing that clearance (an ERAD E3, SEL1L/HRD1 or p97 manipulation) raises ER pool, surface expression and current.
+· Held evidence: `/tmp/legend_cut_1867a26a8/disease-models/wwox/research/dismissal_ledger_current.md` D-01 and D-03 say route and linkage must be measured, not assumed. `/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md` N-12 says that "it is a chaperone" can accelerate destruction. This is a direct warning that H2's sign depends on the route. Proteasome inhibitors are listed as unacceptable chronically (map R-09), which limits the lever to a research probe.
+· Usual reading vs this one: the usual reading says inhibiting clearance only accumulates junk. This one says that if the retained fraction is assembly-competent, delay gives time to assemble.
+· Reject if: genetic ERAD blockade raises total subunit and ER-retained subunit but gives no increase in surface biotinylated subunit or current. That makes the retained pool non-exportable.
+· Discriminating manipulation (vs H1): genetic knockdown of HRD1/SEL1L (or a p97 class) with a folding-chaperone arm held constant. Predicted: surface and current rise only if the retained pool is exportable. Under H1 the same knockdown produces no additional surface gain.
+
+**H3. Statement:** Surface loss is an assembly-stoichiometry problem. The variant subunit is limited by its partner subunits (for example α/β/γ supply), so raising partner-subunit supply restores surface pentamers and current.
+· Held evidence: the folder's only subunit data are GABRB2 and GABRB3 transcripts reduced in WWOX-KO organoids (`/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/therapeutic_translation_second_pass.md` §3.2; `research/commit_candidates/CC-20260826-CLAIM002-01.md` §3.1, 'abundance only'). If subunit supply is reduced upstream of a missense, partner limitation is plausible, but this is not measured. WWOX-linked effects on the subunit are not part of the question.
+· Usual reading vs this one: the usual reading blames the variant's own stability. This one blames partner stoichiometry, which differs by cell type.
+· Reject if: raising the partner subunit lifts surface density of the wild-type subunit but not of the variant, which means the defect is intrinsic to the variant.
+· Discriminating manipulation (vs H1): partner-subunit overexpression (genetic) in cells with a cell-type-specific subunit make-up, such as interneuron vs pyramidal neuron. H3 predicts a surface and current gain scaled to the partner, without any chaperone. H1 predicts the gain depends on the folding enhancer and not on the partner.
+
+**H4. Statement:** The variant causes haploinsufficiency, so adding a wild-type copy under a neuron-restricted promoter restores surface receptors and current in proportion to dose.
+· Held evidence: `/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md` R-01 and §7 TOP_MECHANISTIC_LEVERS #1 use neuron-restricted WWOX supplementation as the strongest lever. For WWOX, `research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md` §3b RESCUE_CONTROL_LOGIC uses the same design to test cause. The folder also records against any plain expression boost (DIS-003: "increasing transcription/translation does not help" when the bottleneck is downstream), so H4 only holds if the variant is a loss of dose and not a stability problem.
+· Usual reading vs this one: the usual reading assumes more gene helps. This one says it helps only if the mutant is not co-assembling and trapping the wild-type copy.
+· Reject if: the wild-type copy fails to raise surface or current when the mutant is present, because the mutant co-assembles and drags the wild type to the ER.
+· Discriminating manipulation (vs H5): AAV or genetic expression of the wild-type subunit under a pan-neuronal vs interneuron-restricted promoter. Predicted: surface and current rise only if haploinsufficient. Under a dominant-negative mutant, surface and current stay low or fall.
+
+**H5. Statement:** The variant is dominant-negative: it co-assembles with the wild-type product and traps it intracellularly. Selective silencing of the variant allele (ASO or siRNA class, allele-specific) raises surface and current.
+· Held evidence: `/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md` N-10 and R-08 say a splice-switching class cannot create what is missing, and gene-addition and silencing routes are modality-specific. This is an analogy only. Opposing item: if the variant is haploinsufficient, silencing it removes half of the already halved supply, so H5 would fail and the folder's DIS-003 logic (the bottleneck is downstream) does not help it.
+· Usual reading vs this one: the usual reading treats any missense as simple loss of function. This one treats it as poisoning of the wild-type pool.
+· Reject if: allele-selective knockdown lowers surface and current instead of raising them.
+· Discriminating manipulation (vs H4): selective knockdown of the variant allele. Predicted: under dominant-negative action, surface and current rise. Under haploinsufficiency, both fall to roughly half, which is the opposite of H4's wild-type-copy prediction.
+
+**H6. Statement:** The variant subunit leaves the ER but is slowed in COPII-dependent export or Golgi passage, so increasing export machinery (COPII-cargo adaptor or Golgi-processing lever) raises surface expression and current.
+· Held evidence: none in the folder. The closest is `research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md` §KCC2/NKCC1_SECONDARY_READOUTS, which says "total can be normal while surface expression is not" and asks for surface biotinylation, not total protein. That is a method rule that transfers.
+· Usual reading vs this one: the usual reading puts the block in the ER. This one puts it at the ER-to-Golgi step.
+· Reject if: the variant subunit is fully endoglycosidase-H-sensitive (ER-bound) with no complex-glycosylated form, which places the block earlier than export.
+· Discriminating manipulation (vs H1): block COPII export genetically (a Sec24-family or Sar1-GTPase dominant negative) and compare with folding enhancement. H6 predicts that export block removes the gain from any treatment and that raising export raises surface and current without changing the endoglycosidase-H pattern. H1 predicts the gain appears at the ER form first.
+
+**H7. Statement:** The variant reaches the surface but is internalised and routed to lysosomes faster than wild-type, so reducing endocytosis (a clathrin/AP2-phospho-site or ubiquitin-ligase manipulation) raises surface density and current.
+· Held evidence: `/tmp/legend_cut_1867a26a8/disease-models/wwox/research/dismissal_ledger_current.md` D-01 and DIS-001 show that K63 ubiquitin linkage is multifunctional and routes to trafficking or lysosome, not only proteasome, and that an E3 ligase can be a probe but not a therapeutic target because it is promiscuous. D-03 warns that the sign depends on the route. The WWOX case concerns a cytosolic protein, so this is an analogy, not support.
+· Usual reading vs this one: the usual reading treats surface loss as failed delivery. This one treats it as accelerated removal after delivery.
+· Reject if: a surface-protein internalisation assay (antibody feeding or biotin-based, with dynamin blocked acutely) shows the same internalisation rate for variant and wild type.
+· Discriminating manipulation (vs H6): acute dynamin/clathrin block class in cells expressing the variant. H7 predicts surface rises within minutes to hours and current follows if the channel is intact. H6 predicts no rise, because the receptor never reached the surface.
+
+**H8. Statement:** The variant reaches the surface but lacks synaptic retention, because the scaffold and cell-adhesion link (gephyrin, collybistin, neuroligin-2) fails to cluster it, so the receptor diffuses away and is removed. Stabilising the scaffold restores synaptic density and mIPSC amplitude.
+· Held evidence: `/tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-CLOSURE-01.md` §1 says mIPSC amplitude reports postsynaptic receptor number and conductance, and frequency reports synapse number or release probability, so the two read different things. `research/commit_candidates/CC-20260826-CLAIM002-01.md` §3.2 reports sIPSC amplitude halved in neuron-specific loss. Neither names a scaffold.
+· Usual reading vs this one: the usual reading counts total surface protein. This one splits surface into synaptic and extrasynaptic and says only the synaptic part carries phasic current.
+· Reject if: surface biotinylation and single-particle tracking show the variant diffusing and clustering like wild type, with unchanged mIPSC amplitude per unit surface.
+· Discriminating manipulation (vs H7): knock down gephyrin or use a collybistin dominant negative. H8 predicts total surface unchanged or only mildly reduced, with synaptic cluster and mIPSC amplitude falling. H7 predicts total surface falls and a dynamin block restores it.
+
+**H9. Statement:** Surface residency of the variant depends on phosphorylation of the intracellular loop (a PKA/PKC/Akt or phosphatase-class balance), so shifting kinase-phosphatase balance stabilises surface receptors and current.
+· Held evidence: `/tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md` §KCC2/NKCC1_SECONDARY_READOUTS notes that phosphorylation (Ser940, Thr1007 on KCC2) changes surface expression without changing abundance. This is a transporter, not a GABA-A subunit, so only the method transfers. Caution: `mechanism_intervention_map.md` N-01 and `CC-20260826-MTOR-DIRECTION-01.md` record that mTOR-pathway direction was unfavourable in WWOX cells and is not measured at protein level. That is a WWOX-specific datum and does not contradict H9. It does mean a kinase lever cannot be assumed to point the right way in a neuron.
+· Usual reading vs this one: the usual reading treats a missense as fixed structural damage. This one treats surface stability as signalling-gated.
+· Reject if: phospho-null and phospho-mimetic knock-in of the loop site do not change surface level or half-life of the variant.
+· Discriminating manipulation (vs H7): phospho-null and phospho-mimetic variants of the same site. H9 predicts surface and current follow the phospho-state independently of dynamin block. H7 predicts the effect disappears when internalisation is blocked.
+
+**H10. Statement:** A ligand-binding-site-competent variant can be stabilised in the ER by a ligand-site pharmacological chaperone (an orthosteric or allosteric-site binder class), so surface density rises, and current rises once the ligand is washed out.
+· Held evidence: `/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/proteostasis_rationale.md` §3 and R-09 describe migalastat-style chaperones as needing a binding pocket and an intact active site. For WWOX the endogenous ligand was uncharacterised, so that route stalled. GABA-A receptors have known ligand sites, so the obstacle noted for WWOX does not apply. D-04 in `dismissal_ledger_current.md` warns that stabilisation can be bought with occlusion and give a stable but inert protein. That risk is real here: a bound ligand can keep the channel occupied or desensitised.
+· Usual reading vs this one: the usual reading treats a ligand as a channel modulator. This one treats it as a folding scaffold whose effect on surface is separable from channel opening.
+· Reject if: surface rises after treatment but evoked current stays at baseline after washout with an intact binding site, which is the D-04 outcome (stable but inert).
+· Discriminating manipulation (vs H1): a binding-site-dead double mutant (genetic). H10 predicts the gain vanishes when the site is dead and survives only if the site is intact. H1's non-site-specific folding gain is the same in either construct. Current prediction: under H10, evoked current rises only after washout.
+
+**Cross-cutting control (INFERENZA from the folder).** GABA-evoked current depends on driving force as well as on receptor number. Perforated-patch E_GABA and V_rest in the same cell (`research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md` §2, `CC-20260826-EGABA-CLOSURE-01.md` §2) are needed to separate a chloride-gradient change from a surface-density change. Otherwise a current gain under any lever above can be misread as a surface effect. Recording temperature matters (KCC2 transport is temperature-dependent; same file, §3b).
+
+**What this folder cannot support.** Whether these subunit variants lose protein by degradation or by stalled synthesis is undiscriminated. The folder's own WWOX repair shows that conflation is a standing error (`proteostasis_rationale.md` §4: "Synthesis, insolubility and turnover are three separate questions"). Ranking H1 to H10 against each other would be false precision.
+
+FILES READ:
+/tmp/legend_cut_1867a26a8/CLAUDE.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/proteostasis_rationale.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/meta/meta_gaba_paradox_current.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md (lines 520-829)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-CLAIM002-01.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-CLOSURE-01.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/therapeutic_translation_second_pass.md (lines 335-384)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/dismissal_ledger_current.md (lines 60-119)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID34268881.md (by Grep, GABA lines only)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-MTOR-DIRECTION-01.md (by Grep, mTOR lines only)
