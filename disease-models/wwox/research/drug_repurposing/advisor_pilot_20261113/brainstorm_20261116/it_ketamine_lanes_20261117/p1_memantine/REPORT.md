@@ -1,0 +1,69 @@
+# P1 (lane B2) report. Producer: legend-delegate (sonnet, medium). Copied by IT from the delegate's hand-back message, content unchanged except layout; the delegate's own Write of REPORT.md was refused. IT 2026-11-17. Reference genotype class only. Not medical advice. No dose or recommendation.
+
+## Short paragraph for the caller
+Q1 was answered to the depth of the abstract plus the ClinicalTrials.gov record, Q2 with PubMed and ClinicalTrials.gov, Q3 with one complete full text and two abstracts, Q4 with abstracts. The body of the memantine trial (PMID 36256600) could not be read. The Oxford University Press page and doi.org returned a Cloudflare "Just a moment..." page (HTTP 403); the paper is not in PMC or Europe PMC and OpenAlex marks it as not open access. So randomisation method, allocation concealment, why the twins were removed, any WWOX or genetic stratum, carry-over, adverse events by arm, funder and conflicts are UNVERIFIABLE here. Other access blocks: PMC article page PMC7940561 (reCAPTCHA); ScienceDirect for PMID 39970743 (HTTP 403 robot page); Europe PMC fullTextXML for PMC7940561 (HTTP 500); PMID 34074563 only a redirect stub from doi.org. No block was bypassed. The full text of PMID 33493807 came through the PubMed MCP full-text tool; only verbatim excerpts are saved as a file.
+
+## Verdicts
+| Claim | Verdict | Route |
+|---|---|---|
+| K8 numbers (9/27 vs 2/27, RD +25.9%, NNT 3.9) | PARTLY SUPPORTED | Abstract and registry NCT03779672. Counts and "P < 0.02" are in the abstract. RD, OR and NNT recompute, but only unpaired on a crossover trial. The input's "trial's paired analysis" is not supported: the abstract names no test. |
+| K8 "the only randomized NMDAR antagonist trial in DEE" | PARTLY SUPPORTED | Supported for published randomised trials: no second one across 6 PubMed queries and 8 ClinicalTrials.gov queries. Not supported as an unqualified statement: a randomised placebo-controlled Phase 3 of radiprodil (a GluN2B negative allosteric modulator) in GRIN-related neurodevelopmental disorder is recruiting (NCT07224581, start 2026-01-05, no results, 100 planned, includes a seizure cohort). It is not registered under an epileptic-encephalopathy condition term, so whether it counts as DEE is a definitional choice. A randomised Phase 1b (NCT07941206) is not yet recruiting. |
+| K9 ATP1A2 precedent | PARTLY SUPPORTED | n = 1 plus n = 5, uncontrolled, confounded. The mechanism is Na/K-ATPase and glutamate handling, a different disease. |
+| K12 memantine part | PARTLY SUPPORTED | Same limits as K8 and K9. "Sustainable for years" and "avoids the duration flip" are not tested by a 6-week trial (INFERENZA at best). |
+
+## Q1: memantine trial, PMID 36256600 (abstract and registry only; the paper is Schiller 2023, Brain 146(3):873-879)
+All quotes are from the abstract.
+* Design. "In this randomized double-blind placebo-controlled crossover trial (Trial registration: https://clinicaltrials.gov/ct2/show/NCT03779672), patients with developmental and epileptic encephalopathy received memantine and placebo, each for a 6-week period separated by a 2-week washout phase."
+* Flow. "Thirty-one patients (13 females) enrolled. Two patients withdrew prior to initiating medication and two (twins) had to be removed from analysis. Of the remaining 27 patients, nine (33%) were classified as responders to memantine versus two (7%) in the placebo group (P < 0.02)." 31 - 2 - 2 = 27 is consistent. The reason for removing the twins and their arm or sequence are not stated. The registry gives actual enrollment 30, not 31 (unexplained).
+* Responder. "The primary outcome measure was classification as a 'responder', defined as >=2 of: >50% seizure frequency reduction, electroencephalography improvement, caregiver clinical impression improvement or clear neuropsychological testing improvement." The registry lists 5 components; the fifth is serum inflammatory markers; the paper lists 4 in the abstract (INFERENZA from comparing two documents; the full text may explain it). Who assessed each component is not stated in the abstract. The registry plan has diaries, an electroencephalographer, a neuropsychologist and a caregiver 3-level question; masking is registered as quadruple.
+* Components. EEG 8 vs 2 (P < 0.04). Seizure 8 vs 2 (P < 0.04). Caregiver 10 vs 7 (not significant). Neuropsychology: "improvements in symptoms of attention-deficit hyperactivity disorder and autism" (no numbers).
+* Not stated in the held bytes: randomisation method and allocation concealment; age range and DEE types (registry plan: age 6-18, weight >=20 kg, "Epileptic Encephalopathy, Childhood-Onset"); any WWOX or genetic stratum; analysis method and carry-over or period effect; adverse events by arm (the abstract only says "safe and effective"); funder and conflicts (PubMed type "Research Support, Non-U.S. Gov't", funder unnamed; registry sponsor is an individual investigator, no data monitoring committee).
+* Registration: first submitted 2018-12-05, start 2019-02-07, so registered before start. No results posted.
+* Recomputation (9/27 vs 2/27, unpaired): risk difference +25.9%, Wald 95% CI +5.6% to +46.3% (matches the input); odds ratio 6.25, 95% CI 1.20 to 32.5; NNT 3.86 (3.9), implied CI 2.2 to 17.9; Fisher two-sided 0.0394 (matches the input), 0.0764 for 8 vs 2; uncorrected chi-square 0.0180 for 9 vs 2, 0.0355 for 8 vs 2.
+* Which analysis is "P < 0.02"? Not stated. INFERENZA: both reported thresholds (<0.02, <0.04) are met by an uncorrected chi-square, and Fisher would not meet them for the 8 vs 2 contrasts, so the paper's test is probably an unpaired chi-square, not a paired test. Not verified.
+* Paired bound: paired data are not in the abstract. Exact McNemar if the 2 placebo responders were also memantine responders (7:0) gives P = 0.0156; 8:1 gives 0.039; 9:2 gives 0.065.
+* Caveat: 27 children each contribute to both arms, so the unpaired CI and NNT treat 54 observations as independent.
+
+## Q2: other randomised NMDAR-antagonist trials
+Exact queries (full strings in SEARCHES.tsv). PubMed: memantine epilepsy randomized (7); NMDA receptor antagonist epileptic encephalopathy randomized (11); dextromethorphan epileptic encephalopathy (42); ketamine epileptic encephalopathy trial (21); (amantadine OR memantine OR dextromethorphan) AND infantile spasms (8); (GRIN1 OR GRIN2A OR GRIN2B OR GRIN2D OR "GRIN-related") AND (memantine OR dextromethorphan OR radiprodil) (108). Two as-briefed queries had an operator-precedence artefact (counts 11090 and 3566), discarded and re-run in corrected form. ClinicalTrials.gov v2, key-less, one request at a time: epilepsy or epileptic encephalopathy with memantine 6; epileptic encephalopathy with ketamine 0; with dextromethorphan 0; with NMDA receptor antagonist 0; GRIN with memantine, radiprodil or dextromethorphan 3; infantile spasms with memantine, amantadine or dextromethorphan 0; radiprodil 10; developmental and epileptic encephalopathy with 5 drugs 0.
+
+| Study | Design | Randomised | Population | n | Result | ID |
+|---|---|---|---|---|---|---|
+| Schiller memantine | crossover, double-blind | yes | childhood DEE | 31 enrolled, 27 analysed | 9 vs 2 responders | PMID 36256600; NCT03779672 |
+| Radiprodil Beeline Phase 3 | parallel, triple masked, recruiting | yes | GRIN-related neurodevelopmental disorder, gain-of-function variants, seizure and no-seizure cohorts, 1 month to 18 years | 100 planned | no results | NCT07224581 |
+| Radiprodil Phase 1b | parallel, not yet recruiting | yes | GRIN-related disorder, non-gain-of-function | 27 planned | none | NCT07941206 |
+| Radiprodil Honeycomb | single group, Phase 1 | no | GRIN-related disorders | 24 | none posted | NCT05818943 |
+| Radiprodil infantile spasms | single group, Phase 2, terminated | no | infantile spasms | 3 | none read | NCT02829827 |
+| Radiprodil TSC/FCD | non-randomised, Phase 1/2 | no | tuberous sclerosis complex, focal cortical dysplasia | 30 | none read | NCT06392009 |
+| Memantine adult cognition RCTs | parallel | yes | adults with focal epilepsy, not DEE | 17 analysed (30449328); 55 completed (27570386) | no group difference (30449328); improved cognition (27570386, reported) | PMID 30449328; PMID 27570386; NCT01054599; NCT04417543 |
+
+PMID 20435238 is an ACTH plus magnesium sulfate vs ACTH randomised trial in infantile spasms: title read only, not opened; magnesium counts as an NMDAR antagonist only on some definitions. No ketamine randomised trial in DEE was found.
+Limits on the absence claim: PubMed was searched through a tool with automatic term mapping; ClinicalTrials.gov condition matching was literal (DEE, West syndrome and Lennox-Gastaut were not enumerated); only about 12 of the 60 listed GRIN hits were screened; Embase, Cochrane CENTRAL and WHO ICTRP were not searched.
+
+## Q3: ATP1A2
+| PMID | Design, n, ages | Genotype | Given and outcome | Follow-up | Separable from co-treatment? | Tolerability and denominator | Depth |
+|---|---|---|---|---|---|---|---|
+| 39970743 (Orgun 2025) | case report, n = 1, 11-month-old girl | de novo heterozygous c.2432C>G; exome sequencing in week 2 of memantine | "Her seizure was partially responsive to ketamine, and she became seizure-free when memantine, another NMDA receptor blocker, was added to the treatment." | not stated in abstract | No. Memantine was "added"; other co-treatment not stated. | not stated in abstract | abstract only |
+| 33493807 (Moya-Mendez 2021) | retrospective chart review, 7 patients (2.5-20 y); 5 given memantine, 1 of them also ketamine; "not the results of a controlled trial" | 4 missense + 1 splice variant among the 5 treated | "Memantine, given to five, was tolerated in all (mean treatment: 2.3 years, range 6 weeks-4.8 years) with some improvements reported in all five." | mean 2.3 y, range 6 weeks to 4.8 y | No. Patient 5 had memantine plus ketogenic diet, then ketamine. Authors: improvements "could have been due to natural developmental progression that occurs with age or to other ongoing therapies such as the ketogenic diet in patient 5." | "side effects of memantine were minimal and were limited to one patient needing to temporarily cease treatment... nausea and vomiting"; patient 5 "initially became sleepy during the titration". Denominators: 5 memantine; 1 ketamine ("did not report any side effects"). | complete main text; supplementary tables (global rating scales) not seen |
+| 34074563 (Bouhadoun 2021) | retrospective, single centre, 8 children with mixed diagnoses, not ATP1A2 | a GRIN2A variant of uncertain significance in one girl | "Memantine is generally well-tolerated in children"; "No serious adverse events were noted." | not stated | partly ("two of these started other concurrent treatments") | denominator 8 | abstract only |
+
+The input uses 34074563 as paediatric tolerability evidence beside the ATP1A2 papers; it is a general paediatric neurology clinic review with no ATP1A2 in the abstract.
+Mechanism as the papers state it: 33493807: ATP1A2 "codes for the alpha2-subunit of the Na/K-ATPase pump, which is responsible for maintenance and restoration of membrane potential in astrocytes... This results in the subsequent inability of astrocytes to uptake released glutamate from synaptic clefts." 39970743: "ATP1A2 gene plays a role in protecting neurons from glutamate and NMDAR-related excitotoxicity."
+Transfer to WWOX: neither paper argues it; WWOX does not appear in anything held. The transfer is the input's own step (TRANSFER / IPOTESI). 33493807 also notes that ion-transport-directed approaches "may offer an opportunity for more specific precision therapy".
+Sequence: in 39970743 the order is ketamine first, then memantine, as the input says. In 33493807 patient 5 the order was the reverse (memantine, then ketamine), which the input does not mention.
+
+## Q4: other clinical statements (abstracts; denominators)
+* 38512072 (ATP1A2 early-infantile DEE, retrospective): "Memantine was prescribed to three patients, one with a reduction in ictal frequency, one with improvement in gait pattern, coordination, and attention span, and another one in alertness without significant side effects." n = 3.
+* 29610157: ATP1A2 variant, 12-year-old. Memantine, dextromethorphan and coenzyme Q10 together; improved attention and dexterity at 1 year; co-treatment confounds. n = 1.
+* 34844267: GRIN2B epileptic encephalopathy, 20-month-old. "significant reduction in average seizure episodes by ~80%" on memantine with polytherapy. n = 1.
+* 42564024: GRIN1 neonate, seizures improved after memantine; vigabatrin started 4 days earlier. n = 1.
+* 27616483: GRIN2D, 2 children. Memantine gave "mild to moderate improvement in seizure burden and development"; the older proband later had "dramatic electroclinical improvement" on ketamine plus magnesium for refractory status epilepticus. n = 2.
+* 41288262 (adults, non-randomised cohort): 211 enrolled, 101 on memantine. Headache 7%, dizziness 5%, fatigue 4%, drowsiness 2%, anorexia 2%. No new bilateral tonic-clonic seizure. Increased seizure frequency in 7 memantine vs 5 non-memantine.
+* 30449328 (adult pilot RCT): "No significant changes were evident in depression, sleepiness, side effects, or seizure frequency."
+* Case reports are selected for success; direction of bias is IPOTESI. No WWOX patient appears anywhere.
+
+## Not done
+No body quotes from the memantine trial (every quote for it is from the abstract or registry); ATP1A2 reports 29610157 and 38512072 seen as abstracts only.
+
+## Files (/tmp/it56_ket/p1_memantine/)
+SOURCES.tsv (24 rows), SEARCHES.tsv (21 rows), MEMANTINE_TRIAL_AUDIT.tsv (21 rows), sources/ (NCT03779672 and NCT07224581 registry JSON, 8 ClinicalTrials.gov query JSONs, 10 Europe PMC abstract JSONs, the PMID 33493807 excerpts file, and the blocked or error captures for 36256600, 39970743, 34074563 and 33493807).
