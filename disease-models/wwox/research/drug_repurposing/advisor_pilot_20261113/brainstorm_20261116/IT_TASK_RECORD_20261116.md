@@ -13,3 +13,6 @@ Assignment: carry the deepening round into the repurposing loop (arm-table freez
 
 ## Take-in-charge, ADV decisions of ~23:25Z (IT)
 (1) Origin-collapse table of the general selection view: done (it_adv016_20261116/origin_collapse_general_view_20261116.tsv, sha256 93a86e8b43bb10619fe8bff3f817afe5540efd371f5217a295389ef6145a0c01; 8 units in the general view, 5 origins, top five on 4). (2) Contrast-set blind builder launched 23:28Z (sonnet/high, one active); second reader queued after; estimate 60-120k tokens (builder) and 40-80k (second reader), recorded before launch. (3) The arm-table freeze is pre-pilot: any later change is a dated new version with a new digest, never an edit.
+
+## Independent scorer, ledger lines
+L10a scored 2026-11-16 ~23:59Z: observed Gabrd C_log2 -0.35 [-0.68, -0.00], cause_or_consequence_GSE330624.tsv, row Gabrd (file sha256 d1436e51...); bin negative; ledger 0.55 -> ln -0.598, naive 0.8 -> ln -0.223 (ledger below naive on this line); readability caveat (|C| < 0.4, CI touches 0) stated, not applied; details in it_ledger_scoring_20261116/L10a_SCORE_IT.md. L1-L9 will be scored as their data arrive; ADV is the second scorer for I2, I7, I11, I14, I17 lines.
