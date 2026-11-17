@@ -1,0 +1,174 @@
+STEP 1. CLASSIFICATION OF THE 15 STAGE-1 HYPOTHESES
+Counts are raw Grep hits on the distinctive terms, under /tmp/legend_cut_1867a26a8/disease-models. Registry and corpus-seed files inflate them, so I read the hits that decided each call. Short names in the blocks below: DL = discovery_ledger_current.md, THL = therapeutic_hypotheses_ledger_current.md, MIM = analysis/mechanism_intervention_map.md, CR = claim_registry_current.md. All are under /tmp/legend_cut_1867a26a8/disease-models/wwox/.
+
+- S1-1 OPC block (Wnt, Notch, Id2/4): INSIDE for Wnt and for OPC maturation arrest. Wnt/β-catenin has 179 hits in 33 .md files, and HYP-20260709-07 in THL is a maturation-arrest hypothesis. Notch, Id2, Id4 and Hes1 have 2 hits, with no discussion, so that part is OUTSIDE.
+- S1-2 Activity-dependent signalling to OPCs: INSIDE through the network-state pathology (CLAIM 021, M2 in MIM). The activity-to-myelin link itself has 0 hits. "Chemogenetic", "optogenetic" and "activity-dependent" give 5 hits, none about myelin (e.g. MIM:434).
+- S1-3 M1 muscarinic brake on OPCs: OUTSIDE, 0 hits on muscarinic, Chrm1 and cholinergic. The only neighbour is the clemastine record, 6 lines.
+- S1-4 Astrocyte cholesterol and lipid supply: OUTSIDE. Cholesterol, SREBP and sterol give 37 raw hits, none read as astrocyte supply to myelin. The nearest item is the lipid-homeostasis inference at DL:1755-1762.
+- S1-5 MCT1 and lactate coupling of OL to axon: OUTSIDE, 0 hits.
+- S1-6 Microglia, TREM2/CSF1R: OUTSIDE, 0 hits on TREM2, CSF1R and "myelin debris". Microglia are discussed only as responders (gliosis).
+- S1-7 PV-interneuron myelination: mostly OUTSIDE. PV markers and function are INSIDE (CLAIM 005, meta_gaba_paradox_current.md, 8 hits), but PV-axon myelination has 1 incidental hit.
+- S1-8 Seizures cause the myelin loss: INSIDE (CLAIM 037, CLAIM 005 boundary, E-D1).
+- S1-9 THRA / thyroid hormone: OUTSIDE for hormone signalling. "Thyroid" gives 42 raw hits, which I did not read individually. They are registry titles, an expression table and a GSK3B candidate file, and none was read as T3 or THRA signalling. Muscarinic/THRA/cholinergic gives 0 real hits.
+- S1-10 ERK/MAPK limits myelin thickness: adjacent only. WWOX–MAPK appears in cancer, skin and lung (DL:208-209; paper_registry_current.md:1523), with opposite signs. Nothing links it to myelin.
+- S1-11 HDAC chromatin state: OUTSIDE. HDAC3 appears only in a breast-cancer β-catenin paper (corpus_seed_pubmed_20260806.tsv:317).
+- S1-12 ISR / ER stress in oligodendrocytes: OUTSIDE for oligodendrocytes. A PERK/eIF2α/CHOP lead exists only for cell death in WWOX cells (DL:392-395).
+- S1-13 Neuregulin–ErbB: OUTSIDE for myelination. NRG1 has 0 hits. WWOX–ErbB4 binding appears only in cancer and structural papers.
+- S1-14 Vascular or HIF hypoxia: INSIDE for HIF1α–PDK1 metabolism (M6, 234 hits). Vascular perfusion of white matter has 0 hits.
+- S1-15 Cognition independent of myelin, neuronal plasticity: INSIDE (CLAIM 021, E-D1, and the open question "sequential or parallel" at meta_network_myelin_glia_current.md:129).
+
+Kept as OUTSIDE (5, above the minimum of 3): S1-3, S1-5, S1-6, S1-13 and S1-4 reframed through S1-5. Final OUTSIDE set: H3, H4, H5, H6. See the note after H10.
+
+Premise note. The folder holds no WWOX mTOR-inhibition experiment. The mTOR direction is "INSUFFICIENT — never measured at protein level": the single datum is a transcriptomic "mTOR/EIF4EBP1 down" at n=2 vs 4, with no locator (CC-20260826-MTOR-DIRECTION-01.md:36-38, :59-62, :96). The question's premise therefore cannot be checked against the folder. H9 uses this.
+
+STEP 2. THE TEN FINAL HYPOTHESES
+
+H1. Origin: S1-1 (the Wnt arm only; Notch/Id are dropped as unstated)
+Statement: Neuronal WWOX loss de-represses Wnt/β-catenin tone, which holds OPCs in the progenitor state (PDGFRα⁺ high, CC1⁺ low), so releasing the Wnt brake in OPCs restores myelination, and cognition follows only if myelination is rate-limiting.
+Corpus test: SUPPORT for the premises, NOT STATED for the OPC link.
+- WWOX-KO cerebral organoids show Wnt chronically activated (nuclear β-catenin ~1.7×; WNT/LEF1/AXIN2 up), partly recovered by W-AAV (DL:691; DL-MOL-003 at DL:77-84).
+- In the neuronal-rescue paper, the numbers run PDGFRα⁺ WT ~53 / KO ~87 / rescued ~70 and CC1⁺ WT ~170 / KO ~77 / rescued ~135 (CR:96). That is the "maturation block" pattern. The ledger candidate states it as a signature (CC-20260826-CLAIM003-01.md:115), and CLAIM 003 records "OPCs present" (CR:75).
+- No study measures Wnt in OPCs. The rat study counted no precursor marker (PMID31340538.md:80-82; DL:1798).
+Usual reading assumes: the myelin block is an oligodendrocyte-intrinsic defect. This one changes: Wnt is a neuron-dependent tone that arrests OPCs, and WWOX scaffold anti-Wnt function (DVL2 sequestration) is the lever.
+Rejecting observation: in neuron-specific Wwox-null tissue, OPC β-catenin/AXIN2 readouts are normal and the PDGFRα⁺/CC1⁺ ratio is unchanged. The ratio is already measured and "present OPCs" is already stated, so rejection would have to come from the OPC pathway readout.
+Discriminating manipulation (vs H2, neuron-derived signal): OPC-restricted Wnt-pathway suppression (Axin2 stabilisation or a dominant-negative β-catenin, driven by a Pdgfra-CreER line) in the neuron-specific Wwox-null.
+- Prediction: if H1 is true, CC1⁺ mature cells, g-ratio and diffusion anisotropy (FA) rise without any change in neuronal bursting.
+- Cognitive behaviour: improves only in proportion to the myelin gain, and not at all if the network state alone drives the deficit.
+- If H2 is true instead, white matter stays low and the bursting stays.
+
+H2. Origin: S1-2, direction reversed
+Statement: Aberrant, NMDAR-dependent bursting and desynchronised network activity (not low activity) is the signal that fails to drive OPC maturation, so normalising network state restores myelin and cognition together.
+Corpus test: CONTRADICTS S1's direction (reduced drive); the myelin link is NOT STATED.
+- Neuron-specific loss gives increased excitatory drive, reduced spontaneous inhibition, bursting that is NMDAR- and gap-junction-dependent, and altered phase-amplitude coupling (CR:390).
+- d-APV abolishes the burst; carbenoxolone is not clean (MIM:31-33).
+- "Sequential or parallel?" is the open question (meta_network_myelin_glia_current.md:129).
+- A candidate mediator is listed in DL:297 (NS-017) but never measured.
+Usual reading assumes: hyperexcitability and hypomyelination are two outputs of the lesion. This one changes: bursting is upstream and the myelin deficit is its consequence.
+Rejecting observation: acute or chronic NMDAR blockade abolishes bursting in the mutant but the myelin deficit persists (g-ratio and CC1⁺ unchanged).
+Discriminating manipulation (vs H1): suppress bursting in the Syn-Cre null without touching OPCs. Examples are a sodium-channel-blocker class or an NMDAR-antagonist class given in the myelination window, or a non-pharmacological route such as a neuronal Kv7 opener.
+- Prediction if H2 is true: CC1⁺, g-ratio and FA rise, and learning improves, with the OPC-intrinsic Wnt readouts unchanged.
+- If H1 is true: bursting is suppressed and white matter stays low.
+- Caution on safety: NMDAR blockade in a developing brain removes a maturation signal (MIM:434).
+
+H3. Origin: S1-3 (OUTSIDE, kept)
+Statement: An extrinsic M1-muscarinic brake on OPC differentiation is raised in the mutant, so releasing it from OPCs (not from neurons) restores myelin, with a smaller cognitive effect than H1 or H2.
+Corpus test: NOT STATED, with a nearby partial CONTRADICT of OPC-only levers.
+- Muscarinic, Chrm1 and cholinergic give 0 real hits.
+- The corpus does contain a pro-myelinating anticholinergic-type candidate, clemastine (THL:257), and it parks that route: "an oligodendrocyte-autonomous pro-myelinator is not the right lever… even if all OPCs are present, pushing them alone would yield little because they do not receive the axonal signal" (THL:262-264).
+- That passage is an argument from neuronal-rescue data, not a test of an M1 manipulation. Silence on M1 itself is therefore "not stated".
+Usual reading assumes: the block is a cell-intrinsic maturation arrest. This one changes: the block is a reversible extrinsic receptor signal.
+Rejecting observation: OPC-specific Chrm1 deletion in the mutant leaves CC1⁺ and g-ratio at mutant level, while the same deletion raises them in a control demyelination model.
+Discriminating manipulation (vs H1): OPC-specific Chrm1 deletion in the Syn-Cre null, versus OPC-specific Wnt suppression.
+- Prediction: H3 gives a modest FA and CC1⁺ gain with a small cognitive gain.
+- If the nearest rival (H1) is right, Chrm1 deletion fails.
+- THL:262-264 predicts both OPC-only manipulations will be modest.
+
+H4. Origin: S1-5, with S1-4 folded in as the supply-side rival (OUTSIDE, kept)
+Statement: Oligodendrocyte-to-axon metabolic coupling (MCT1 lactate shuttle) is impaired, so axons are energetically unsupported and conduction fails even where myelin is present; restoring the coupling rescues conduction and cognition with little change in myelin thickness.
+Corpus test: NOT STATED.
+- MCT1, lactate shuttle and axon degeneration give 0 hits.
+- The corpus holds only "reduced myelinated axons → conduction deficit" (meta_network_myelin_glia_current.md:41) and an unmeasured lipid-homeostasis route to myelin biogenesis labelled INFERENZA (DL:1755-1762).
+- Silence is not contradiction, but note the human lactate data: normal blood lactate four times and "extremely low" cerebral lactate by MRS (MIM:312-313), which complicates any lactate-based reading.
+Usual reading assumes: the deficit is quantity of myelin. This one changes: the deficit is the support function of myelinating cells for axons, so white-matter integrity can fall with normal-looking myelin.
+Rejecting observation: axon counts, axonal mitochondrial and energy markers and ex vivo compound action potential are normal in the mutant, where the compound action potential is in fact reported impaired in neuronal-deletion mice (CC-20260826-CLAIM003-01.md:118).
+Discriminating manipulation (vs H1 and H3): oligodendrocyte-specific MCT1 re-expression in the Syn-Cre null.
+- Prediction if H4 is true: axon preservation and conduction velocity recover, FA recovers modestly, myelin thickness and CC1⁺ do not change, and cognitive gain tracks conduction.
+- If H1 is true, restoring MCT1 leaves CC1⁺ low.
+
+H5. Origin: S1-6 (OUTSIDE, kept)
+Statement: Microglia are rate-limiting for OPC maturation or myelin remodelling (TREM2/CSF1R axis), so normalising microglial support restores myelin, with cognition smaller than in H2.
+Corpus test: NOT STATED, with a tension that weakens it.
+- TREM2, CSF1R and microglial depletion give 0 hits.
+- Wwox is not detected in microglia in the rat, and cortical Iba1 is reduced there (PMID31340538.md:55-58, :83-84; DL:539).
+- Gliosis falls after neuron-restricted rescue, so it is read as downstream (meta_network_myelin_glia_current.md:43).
+- The glial sign is region- and species-dependent (PMID31340538.md:85-88).
+- These facts show microglia respond to the neuron, but do not test whether they are also rate-limiting.
+Usual reading assumes: microglia are bystanders. This one changes: they are a permissive stage between neuron and OPC.
+Rejecting observation: transient microglial depletion and repopulation, or TREM2 loss, in the Syn-Cre null leaves CC1⁺ and g-ratio unchanged.
+Discriminating manipulation (vs H1/H2): transient CSF1R-class depletion with repopulation, or microglial Trem2 manipulation, in the Syn-Cre null, against restoration of neuronal WWOX alone.
+- Prediction if H5 is true: myelin gain without a change in neuronal bursting.
+- If H2 is true: bursting persists and microglial manipulation alone changes neither.
+- Cognition: a small gain at best.
+
+H6. Origin: S1-13 (OUTSIDE, kept)
+Statement: Axon-to-glia neuregulin–ErbB signalling is reduced in the mutant and limits myelination, which would place the myelin deficit in the axonal signal that the OPC receives.
+Corpus test: NOT STATED for myelination.
+- NRG1 gives 0 hits.
+- WWOX–ErbB4 binding exists as structural and cancer biology: WWOX/YAP compete for ErbB-4 (corpus_seed_pubmed_20260806.tsv:46), and native ErbB4 PY1PY2 binds predominantly via WW1 (analysis/dismech_export_spec.md:842-850).
+- The corpus does say the neuron→OPC mediator is unknown and druggable in principle (DL:297, NS-017).
+- WWOX–ErbB4 binding is a support for the node, not for the myelin claim.
+Usual reading assumes: the OPC side is at fault. This one changes: the axon-side ligand or its receptor interaction with WWOX is the failing signal, which would account for the neuron-restricted rescue working.
+Rejecting observation: axonal NRG1 and OPC ErbB activation are normal in the mutant, and exogenous pathway activation does not change myelin.
+Discriminating manipulation (vs H1): neuron-specific NRG1 restoration in the Syn-Cre null, versus OPC-specific ErbB activation.
+- Prediction if H6 is true: myelin thickness (g-ratio) recovers and FA rises, with a modest cognitive gain.
+- If H1 is true: OPC ErbB activation alone fails to unblock the OPCs, because they do not receive an axonal signal.
+- A gain from neuronal NRG1 but not from OPC-side Wnt suppression favours H6 over H1.
+
+H7. Origin: S1-8
+Statement: The myelin deficit is a consequence of the seizure burden, so seizure control, not myelin-directed therapy, restores white matter and cognition.
+Corpus test: CONTRADICTS in the rat; NOT STATED in the neuronal-deletion mouse.
+- The rat lde/lde shows MBP/CNP reductions from PND5-10 and mature oligodendrocytes reduced from PND15 (PMID31340538.md:75-79), while the earliest seizure onset is day 16 (CR:116; CR:691 gives 16–63 days). The myelin deficit begins before seizures.
+- The Wwox-null mouse shows no epilepsy per PMID 19500159 (CR:116, CLAIM 037), yet has hypomyelination.
+- The experiment that would decide, a seizure-matched comparator, has not been done (E-D1 in analysis/therapeutic_translation_second_pass.md:705-718; analysis/commit_candidates AAV9-ENDPOINT-SPLIT at CC-20260826-AAV9-ENDPOINT-SPLIT-01.md:274-275: cognition not measured in any model).
+Usual reading assumes: the lesion is primary. This one says seizures cause the loss, but the rat timing says seizure onset is too late to start it. The version that survives is amplification: seizures worsen, but do not initiate, the deficit.
+Rejecting observation: Wwox-null or rat tissue shows the same MBP/CC1⁺ deficit before any seizure, and seizure suppression with a matched antiseizure arm does not change white matter (the design E-D1 sets up). The rat already supplies the first half.
+Discriminating manipulation (vs H2): seizure suppression through a channel mechanism that does not alter bursting-independent signalling, versus gene addition, with matched seizure suppression in both.
+- Prediction if H7 is true: white matter and learning rise in proportion to seizure reduction in both arms.
+- Prediction if the primary-lesion reading (H1/H2) is right: only gene addition raises FA and cognition, as E-D1 states (:715).
+
+H8. Origin: S1-15
+Statement: Cognitive impairment arises from neuron-intrinsic synaptic and excitability change that runs in parallel with the myelin deficit, so cognition can be restored without changing myelin (and the reverse).
+Corpus test: NOT STATED (cognition has never been measured); the structure is held.
+- Neuron-specific loss changes both synaptic and intrinsic physiology (CR:390).
+- The corpus lists "sequential or parallel" as open (meta_network_myelin_glia_current.md:129).
+- CLAIM 003/011 say cognition and developmental trajectory are not measured in any WWOX model (CC-20260826-AAV9-ENDPOINT-SPLIT-01.md:274-275).
+- E-D1 is the pre-specified design that would settle it (second_pass:705-718).
+Usual reading assumes: hypomyelination explains the cognitive deficit. This one changes: cognition and myelin have separate neuronal causes.
+Rejecting observation: restoring myelin alone (OPC-side manipulation with the neuron untouched) raises cognition to control level.
+Discriminating manipulation (vs H1): neuron-specific WWOX restoration after the myelination window, in the Syn-Cre null, versus OPC-restricted Wnt suppression, with myelin quantified against wild type.
+- Prediction if H8 is true: cognitive recovery with FA and g-ratio still reduced, and the OPC arm recovers myelin with no cognitive gain.
+- If H1 is true: the reverse.
+
+H9. Origin: ENGINE, built on the stated premise
+Statement: mTORC1 signalling may not be hyperactive in this disorder. The limited benefit of inhibition is then expected, and the lever is pathway restoration or other routes, not inhibition.
+Corpus test: SUPPORT (weak, transcriptomic), with the mTOR direction formally INSUFFICIENT.
+- The only datum is "mTOR/EIF4EBP1 down" and "autophagy down" in WWOX-KO organoids at n=2 vs 4, raw P<0.01, no locator (DL:691).
+- That datum was retired from "wrong direction" to "never measured" (CC-20260826-MTOR-DIRECTION-01.md:36-38, :59-62; MIM:31, :112-120).
+- mTOR directional statements in the canonical layer: 0 (CC-20260826-MTOR-DIRECTION-01.md:96).
+- The WWOX–autophagy registry stubs point in opposite directions and are unread (same file, :74-79).
+Usual reading assumes: the mTOR pathway is over-active and inhibition is the logical first lever. This one changes: the sign is unknown, and if the pathway is low, the inhibition result is a symptom of a wrong-direction trial.
+Rejecting observation: phospho-S6 and 4E-BP1 phosphorylation, measured at protein level in WWOX-deficient neurons and OPCs, are raised.
+Discriminating manipulation (vs the TSC-like reading where mTORC1 is high): OPC- or neuron-restricted mTORC1 activation (e.g. Tsc1 deletion) in the Syn-Cre null, against inhibition.
+- Prediction if H9 is true: activation raises CC1⁺ and g-ratio and FA, with a cognitive gain only if the neuron is also corrected.
+- If the TSC-like reading is true: activation worsens both, and inhibition helps.
+
+H10. Origin: ENGINE (the second, stress-dependent oligodendrocyte mechanism)
+Statement: A cell-autonomous oligodendroglial WWOX function limits differentiation and remyelination under stress, and accounts for the incomplete neuronal rescue, so rescuing the oligodendrocyte side adds a separate, additive myelin gain.
+Corpus test: SUPPORT-qualified (IPOTESI, single unrefereed preprint).
+- The neuronal-rescue paper's residual deficit: unmyelinated axons ~26 in WT vs ~52 in treated; g-ratio normalises (CR:96).
+- Olig2-Cre; Wwox-flox shows no gross phenotype, and no myelin endpoint was measured on it (CC-20260826-CLAIM003-01.md:19-31 and :42-48).
+- Under cuprizone, the review reports defective differentiation and remyelination (CC-20260826-CLAIM003-01.md:55-61, citing a preprint labelled IPOTESI).
+- The oligodendrocyte-promoter vector was less effective than the neuronal one, but AAV9 has poor oligodendrocyte tropism (DL-MECH-010 at DL:192-195; PMID42422765_partial_locators.md:105).
+- THL:262-264 parks a pure oligodendrocyte-autonomous pro-myelinator.
+Usual reading assumes: myelin failure is entirely non-cell-autonomous. This one changes: it has two components, an additive stress-gated oligodendrocyte one and the neuronal one.
+Rejecting observation: myelin endpoints (g-ratio, unmyelinated axon counts, CC1⁺) in the existing Olig2-Cre; Wwox-flox line are normal at baseline and after cuprizone.
+Discriminating manipulation (vs H1/H3): oligodendrocyte-specific Wwox restoration (OPC/OL-targeted vector) in the neuron-restored background, versus neuronal restoration alone.
+- Prediction if H10 is true: the combination gives a further drop in unmyelinated-axon count and a further FA gain, with a cognitive gain only if conduction is the limiting step.
+- If the neuron is the only driver, the combination adds nothing.
+
+Note on the OUTSIDE count. H3, H4, H5 and H6 are OUTSIDE stage-1 hypotheses kept, each with a corpus test result and the line that decides it (H3: THL:262-264; H4: meta_network_myelin_glia_current.md:41 and DL:1755-1762; H5: PMID31340538.md:55-58; H6: corpus_seed_pubmed_20260806.tsv:46 and DL:297). That is 4 kept OUTSIDE, at least 3 as required. S1-4 (astrocyte lipid supply) was folded into H4 as a rival, not given its own slot. S1-9 (THRA), S1-11 (HDAC), S1-12 (ISR) and S1-14 (vascular) were dropped for lack of discrimination against H1, not because the corpus is silent.
+
+FILES READ:
+/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/t3/S1_OUTPUT.txt
+/tmp/legend_cut_1867a26a8/CLAUDE.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/meta/meta_network_myelin_glia_current.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md (lines 1-582 of 952)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-CLAIM003-01.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-MTOR-DIRECTION-01.md (lines 1-110)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/claim_registry_current.md (lines 67-122, 382-399 and CLAIM 037 block)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID31340538.md (lines 15-130)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/discovery_ledger_current.md (lines 290-304 and 1750-1824; DL-MOL-003 and DL-MECH-034 blocks; grep hits elsewhere)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-AAV9-ENDPOINT-SPLIT-01.md (lines 255-302)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/therapeutic_translation_second_pass.md (lines 703-732)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md (HYP-20260709-07 block)
+Search-only hits, not read whole: PMID42422765_partial_locators.md (hit lines), meta_gaba_paradox_current.md (hit lines), working_model_current.md (hit lines), analysis/dismech_export_spec.md, registries/corpus_seed_pubmed_20260806.tsv and .jsonl, registries/paper_registry_current.md, analysis/data/redteam and other files that appeared only in count outputs.
