@@ -1,0 +1,20 @@
+# Ranking the human visit: 36 PDFs by decision value (IT; for the operator decision page, item 2; ranked by TITLE and by the decision each PDF can unblock, not by content: none of these full texts has been read; non-canonical; not medical advice)
+Source list: `it_i14_gaba_worsening_discriminator_20261116/d5b_run/extraction_tranche1/HUMAN_ACCESS_LIST.tsv` (36 rows: 20 closed clinical full texts, 1 challenge-blocked clinical paper, 7 tonic-current papers, 8 pharmacology papers). Rule: decision value per PDF that must come with it. If the operator can fetch only a few, take them in this order; each entry says how many PDFs go together.
+## Top 8
+| # | PDF(s) (PMID) | Decisions or ideas unblocked | Reason in one line |
+|---|---|---|---|
+| 1 | 19401195 Furukawa 2009, Eur J Pharmacol (1 PDF) | WO-25, INV-03/04 pair, T-type arm | the one paper that compares efonidipine on Cav3.1/3.2/3.3 (and 14 dihydropyridines): it completes the missing half of the pair; without it the pair stays a proposal |
+| 2 | 7901753 Williams 1993 Mol Pharmacol + 9400004 Fischer 1997 JPET (2 PDFs together) | WO-12, I7 NAM efficacy e, I11a co-agonist link | the glycine, Mg2+ and holding conditions of the two GluN2B selectivity papers; one without the other does not answer the question |
+| 3 | 16221925 Drasbek and Jensen 2006, Cereb Cortex (1 PDF) | IT56-Q01, I13, the tonic arm | mouse frontoparietal slices at P13-P19, the model's age window: endogenous versus THIP-evoked tonic current in layer 2/3 |
+| 4 | 18463187 Vardya 2008 + 17215511 Drasbek 2007, J Neurophysiol (2 PDFs together) | IT56-Q01, rule v2 R3 (neurosteroid versus benzodiazepine), I13 | the mouse layer 2/3 pyramidal-cell pharmacology: THDOC-sensitive, zolpidem-insensitive current at abstract level only today |
+| 5 | 39039877 Wang 2024, Chin J Pediatr (1 PDF; Chinese) | second clinical tranche, P4 (names p.Ser304Tyr), I17, I19 | 12 compound-heterozygous children in one report: the largest single addition of children and a missense variant (SCI's note) |
+| 6 | 25411445 Mignot 2015 + 30094525 Serin 2018 (2 PDFs together) | I14, I13/I1/I6 discriminator, second tranche | the two vigabatrin-listed children not yet read per child (group recount) and two phenotype-spectrum papers |
+| 7 | 40875931, 42721537, 34034642, 26345274 (4 PDFs; each worth taking alone) | second clinical tranche (I14, I17, I19 minimum of 8 per class) | WWOX-DEE case series of 5 to 7 children each (titles: expanding the clinical spectrum; seven patients; six patients; five new cases) |
+| 8 | 16495758 Trepakova 2006, J Cardiovasc Pharmacol (1 PDF) | BLOCK-1 hERG flag of the T-type pair (INV-03/04) | flunarizine hERG IC50 is abstract-level only (5.7 nM, CHO cells): a number the safety flag needs |
+## The rest, by group (lower value per PDF)
+* Tonic current: 16997904 Yamada 2007 and 15987761 Keros 2005 (rat; the species split and the single-versus-double GAT block: useful for I13/I14 as a pair of 2), 21451144 Jo 2011 (supraoptic nucleus, not cortex), 29560580 Meis 2018 (amygdala; closed).
+* Pharmacology: 8439412 Williams 1993 Neuron (developmental switch of NR2 expression), 9143010 Pahk and Williams 1997 (pH), 7715842 Williams 1995 (NR2D), 15725949 Furukawa 2005 (alpha1G only).
+* Clinical, single-case or small reports (1 to 2 children each): 32037574, 32051108, 31669195, 31353122, 30853297, 30362252 (the blocked one: a microdeletion), 25716914, 25403906.
+* Clinical, panels and cohorts with an unknown WWOX share (probably one to a few children each): 42190144, 41510857, 40088508, 39933386, 34673242, 29852413.
+**Cheapest useful visit:** PDFs 1 to 4 and 8 (7 PDFs) cover WO-25, WO-12, IT56-Q01 and the hERG flag with no clinical reading; adding #5 and #6 (3 PDFs) opens a second clinical tranche of at least 12 children and the two new vigabatrin-listed children; the 21 clinical papers together are the full tranche.
+**Limits:** content not read; the order could change after one abstract check of items 7 and the clinical panels (an Europe PMC abstract check costs minutes); route rules: no e-mail-based service, no challenge bypass, library or author copies only.
