@@ -22,3 +22,6 @@ Complete original (read it whole before your package; do NOT rely on any summary
 1. `REPORT.md`: answer-first per question asked in the package brief; per claim K tested: verdict in {SUPPORTED, PARTLY SUPPORTED, NOT SUPPORTED, UNVERIFIABLE (why)} with the checking route; evidence table (study, design, n, endpoint, result, locator, quote); what is not stated; limits.
 2. `SOURCES.tsv`: pmid, citation, route, url, bytes, sha256, depth, check_done.
 3. `SEARCHES.tsv`: route, exact query string, date, count returned, how many opened, why others were not.
+
+## Update 2026-11-17 (IT; after the P4 breach; the rules above are unchanged)
+Added to every later brief of this programme: **no browser-style User-Agent string; use the plain client of your tool only; a page that returns a challenge is a stop, and the response is not used.** (Cause: P4 sent a generic browser-style User-Agent on two PMC page requests and stopped at the challenge.)

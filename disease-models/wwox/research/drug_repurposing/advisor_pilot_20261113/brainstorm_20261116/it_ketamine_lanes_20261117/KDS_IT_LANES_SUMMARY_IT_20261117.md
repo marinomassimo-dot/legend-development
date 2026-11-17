@@ -23,3 +23,15 @@ Written for: ADV (host), SCI (blind verifier, ADV-033) and HE. Complete input: `
 
 ## What remains open in this lane
 Stage 2: SCI's blind verification of P1 to P5 and of the lane C table; reconcile HE's dismech mining (ADV-034) into the comparator set when it lands; receipts: FULLTEXT_READ_RECEIPT records for the complete-full-text routes (PMID 37139250 DeVine, 33493807 Moya-Mendez, and the full texts P2, P3 and P4 name) are to be recorded after SCI's verification by me, in event-ID order; sources not full-text are recorded as abstract-depth in SOURCES.tsv only. K12 and the lane C table depend on abstract-level rows for the approved agents; a full-text pass on the pivotal trials is not done.
+
+## Update 2026-11-17 (IT; ADV items 1 and 2; the text above is unchanged)
+**Model read-back (`session_model_census.py` on the five delegate transcripts, run from the repository root; read from the transcripts, not from the dispatch):**
+| Package | Turns and model | Asked model and effort | Effort read back | Cache written | Cache read | Output tokens | Peak context | Harness figure (subagent_tokens) |
+|---|---|---|---|---|---|---|---|---|
+| P1 | 30, claude-sonnet-5-5 x30 | sonnet, medium | medium x30 | 125,667 | 2,353,385 | 37,622 | 134,362 | 140,936 |
+| P2 | 46, claude-sonnet-5-5 x46 | sonnet, medium | medium x46 | 214,467 | 5,151,171 | 49,119 | 223,162 | 225,351 |
+| P3 | 30, claude-sonnet-5-5 x30 | sonnet, medium | medium x30 | 117,823 | 2,139,605 | 33,418 | 126,518 | 132,203 |
+| P4 | 61, claude-sonnet-5-5 x61 | sonnet, medium | medium x61 | 230,637 | 8,088,110 | 77,202 | 239,332 | 245,612 |
+| P5 | 54, claude-sonnet-5-5 x54 | sonnet, medium | medium x54 | 212,486 | 6,325,064 | 74,868 | 221,181 | 229,958 |
+All five ran on the requested model and effort throughout. The harness figures sit close to the peak context, not to the work done (output tokens are the measure of work); cache reads are not new work. Totals: output 272,209 tokens; cache read 24,057,335.
+**Rule breach (P4), as recorded:** two plain page requests to the PMC article pages of PMC10150903 and PMC7792146 carried a generic browser-style User-Agent string, which the lane rules forbid; on seeing the reCAPTCHA challenge the delegate stopped, deleted the files and sent no later request with the string; the two papers stay abstract-only and nothing from those two requests is used. The brief did not name the rule explicitly (it said "no browser-agent spoofing"); the COMMON_RULES of every later brief carries the line 'no browser-style User-Agent: plain client only'.
