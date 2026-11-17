@@ -39,9 +39,9 @@
     },
     {
      "step": "Threshold-bisection scan as a fourth frozen scan (a new 'bisect' design in sim_harness, tested), after SCI's arm list: 3 genotype settings plus 8 priority arms, 10 seeds, 8 iterations",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "bisect design in sim_harness (11 tests); SCI's 17-cell spec translated; frozen digest da37aa3bd623de40bac79f381438bc65b3ba754f4e59cd6c5406e61e182720fa sent to SCI before the run; run started 2026-11-16T23:05Z at load 2.9 on 3 workers; result and per-cell table pending"
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/sim_harness/runs_20261116/bisect/BISECT_RESULT.md: 8 of 9 predictions PASS, P3a fails; scored literally by SCI"
     },
     {
      "step": "RP-006: table of the incidents of 2026-11-16 (what was lost, type, first control that did or would have caught it, whether it exists, cheapest repair, before/after where measured), two pages at most; due 23:30Z",
@@ -93,13 +93,70 @@
     },
     {
      "step": "Sidecar (TSV, one row per bin, own digest) of SCI's prospective ledger and a scorer script that refuses an observed value without a locator (3 h, 6 tests, routed in the scripts README)",
-     "status": "TODO",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "framework/scripts/prospective_ledger_score.py (7 tests, routed), disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/ledger_sidecar/PROSPECTIVE_LEDGER_SIDECAR_FROZEN.tsv sha256 1e2679d167bff62746d5326727683628934baa42efa09073d1b40bfa9949c80e (SCI confirmed every row)"
     },
     {
      "step": "DREAM-2b on the engine at the end of this set of tasks",
-     "status": "TODO",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/DREAM2B_ENGINE.md"
+    },
+    {
+     "step": "safe_push --serialize ticket queue (FIFO, dead tickets pruned, position printed)",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "d3ea9f4e38f4 on development/main; 19 tests"
+    },
+    {
+     "step": "Target 2 and target 3 frozen and run (v2 minimum not met; v3 two-stage, strict 0/0/0, loose 1)",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/engine_eval/target2/ and target3/RUN_RECORD_AND_RESULT_*.md"
+    },
+    {
+     "step": "I4 dossier dated Update (Hsieh 2026, Lucas-Clarke 2026 as transfer from another system)",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/I4_METABOLIC_ADENOSINE_DOSSIER.md foot"
+    },
+    {
+     "step": "Registration guard: legend_commit.sh runs the registry reader suites when hypothesis_packages.tsv or conditional_proposals.py is named (exit 9; about 45 s)",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "scripts/legend_commit.sh, scripts/test_legend_commit.py (16 tests)"
+    },
+    {
+     "step": "Ideas portfolio id uniqueness and arm-table idea tokens in the structure test",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "scripts/test_structured_data_integrity.py (5 tests; fails on an injected duplicate)"
+    },
+    {
+     "step": "Standing target-selection rule: a set must include a one-outcome-headline target",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/engine_eval/ENGINE_EVAL_DESIGN.md foot"
+    },
+    {
+     "step": "Live run 1 (production): v3 two-stage on the graded-inhibition question; result consumed by IT into arm table v3; compare IT's count of new classes with mine under ONE counting rule",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/live1/LIVE1_RESULT.md (5b8febd2b7a1 on main; 198,088 tokens; 7 of 10 outside the held circuits)",
+     "blocker": "IT's class count (waiting) before the comparison; no further runs without the operator's budget answer"
+    },
+    {
+     "step": "Hard-stop sentence in delegation_budget.md; extraction rubric unit AND region line",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "framework/protocols/delegation_budget.md section 6 (2026-11-17); framework/protocols/fulltext_read_receipt.md (3bf2730330aa)"
+    },
+    {
+     "step": "Next target set, v2/v3 comparisons or any further delegate run",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "blocker": "the operator's token budget (ADV decision page item 7) or the next meeting's authorisation; one target per meeting meanwhile"
     }
    ]
   }

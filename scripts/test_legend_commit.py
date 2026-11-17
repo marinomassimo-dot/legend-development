@@ -114,6 +114,19 @@ class LegendCommitWrapper(unittest.TestCase):
         finally:
             waiter.kill(); waiter.wait()
 
+    def test_a_registry_registration_that_breaks_a_reader_suite_is_refused_and_a_complete_one_passes(self) -> None:
+        reader = "import sys\nPKG_MAP = 'a reader of the registry'\nrows = [l.split() for l in open('hypothesis_packages.tsv').read().splitlines()[1:]]\nsys.exit(0 if all(len(r) == 2 for r in rows) else 1)\n"
+        (self.repo / "test_reader.py").write_text(reader, encoding="utf-8"); git(self.repo, "add", "test_reader.py"); git(self.repo, "commit", "-q", "-m", "reader")
+        (self.repo / "hypothesis_packages.tsv").write_text("package map\nP1 M1\nP2\n", encoding="utf-8")         # P2 has no PKG_MAP entry
+        r = self.run_wrapper("register", "hypothesis_packages.tsv")
+        self.assertEqual(r.returncode, 9, r.stderr); self.assertIn("test_reader.py", r.stderr)
+        self.assertEqual(git(self.repo, "log", "--oneline").count("\n"), 1, "nothing was committed (seed and reader only)")
+        (self.repo / "hypothesis_packages.tsv").write_text("package map\nP1 M1\nP2 M2\n", encoding="utf-8")
+        ok = self.run_wrapper("register", "hypothesis_packages.tsv")
+        self.assertEqual(ok.returncode, 0, ok.stderr); self.assertIn("reader suites passed", ok.stderr)
+        (self.repo / "other.txt").write_text("x\n", encoding="utf-8")
+        self.assertNotIn("reader suites", self.run_wrapper("unrelated", "other.txt").stderr, "a commit that does not name the registry runs no reader suite")
+
     def test_nothing_to_commit_is_reported_and_not_an_error(self) -> None:
         result = self.run_wrapper("no change here", "seed.txt")
         self.assertEqual(0, result.returncode, result.stderr)

@@ -1,0 +1,9 @@
+You are the fast, wide, associative first stage of a hypothesis generator for a research programme on the WWOX gene. Do NOT use any tool: do not read, search or open any file; answer from your own knowledge only.
+
+QUESTION: "In the Wwox-null neocortex the graded inhibitory output is lowered (measured phasic deficit; Gabrd per neuron lower in the hippocampus; chloride, tonic and PV-output readings open). Which levers, from any area of biology and not only the held circuits, could restore graded inhibitory output or lower the distance to the burst threshold, and what single observation would test each?"
+
+Propose 15 distinct levers from any area of biology (ion transport, receptor subunit composition, neuromodulation, glia, metabolism, development, activity-dependent plasticity, gene regulation, anything), not only the circuits the question names. Label every hypothesis with exactly one of: WWOX observation (a measurement in a Wwox-deficient preparation), transfer (a finding from another system or species), assumption (neither). Name MECHANISM CLASSES only: never a drug, compound, brand or dose; BLOCK-1 safety triage has not been run.
+
+OUTPUT (your final message, nothing else; no preamble): for each of the 15 hypotheses H1..H15, one block with these fields:
+H<n>. Label · Statement (one sentence: a mechanism CLASS and the direction in which it moves graded inhibitory output or the distance to the burst threshold) · Evidence you know for or against it (one line; say 'none known' where that is the case) · The single observation that would test it, and what each outcome would mean · Which part of the biology the usual reading ignores here.
+Mechanism level only.

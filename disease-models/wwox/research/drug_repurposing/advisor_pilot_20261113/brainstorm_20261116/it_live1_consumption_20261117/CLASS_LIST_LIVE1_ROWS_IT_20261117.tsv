@@ -1,0 +1,4 @@
+id	class_label	status_vs_ranking	held_link	tier_now	agent_route	decision
+LIVE1-H1	postsynaptic inhibitory scaffold (cluster-organiser class)	new	none held (0 hits in arm table v2, CLASS_LIST_PROPOSAL, matrix classes, ranking units)	tier 0 (no held WWOX thread)	no agent named	WATCH: trigger = the pre/post split (IT56-Q10) shows an unchanged fractional block with smaller mIPSC
+LIVE1-H7	presynaptic GABA content per vesicle (synthesis/vesicular loading)	new	marker level only: GAD65/67 protein lower; sIPSC 57.3 v 27.5 pA (held)	tier 1 at marker level; held marker-to-function gate forbids reading it as a function deficit	no agent named	WATCH: trigger = the same split shows a larger fractional block (presynaptic)
+LIVE1-H4	receptor assembly and ER export of delta-containing GABA-A receptors	new	held reading is transcript-level only (Gabrd fall); non-WWOX precedent	tier 0	no agent named	WATCH: trigger = surface versus total delta in the pilot animals
