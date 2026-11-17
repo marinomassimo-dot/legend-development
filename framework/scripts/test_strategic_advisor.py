@@ -891,6 +891,29 @@ class Continuous(Proactive):
         self.assertEqual(sa.main(["authorise-continuous", "--campaign", str(self.campaign), "--source", "x", "--weekly-limit", "5"]), 2)
         self.assertFalse((self.campaign / sa.CONTINUOUS).exists())
 
+    def test_evaluation_usage_is_never_presented_as_the_whole_laboratory_cost(self) -> None:
+        self.authorise()
+        meta = self.campaign / "P1" / "meta.json"
+        meta.parent.mkdir()
+        meta.write_text(json.dumps({"started_utc": "2026-11-13T10:00:00Z",
+            "runtime_readback": {"census": {"totals": {"output": 123, "cache_read": 456}}}}))
+        before = sa._attempts(self.campaign)
+        for allocated in (False, True):
+            if allocated:
+                self.authorise("--weekly-limit", "100000", "--advisor-share", "0.25", "--unit", "output_tokens")
+            week = sa.weekly_state(self.campaign)
+            self.assertEqual(week["measured_7d"], {"evaluations": 1, "output_tokens": 123, "cache_read_tokens": 456})
+            for text in (week["measurement_scope"], sa.operating_mode_text(self.campaign), sa.status(self.campaign)):
+                self.assertIn("excludes the ADV hosting session", text)
+                self.assertIn("Unmeasured work is not zero-cost", text)
+                self.assertIn("remaining account quota", text)
+            if allocated:
+                self.assertEqual(week["advisor_spent"], 123)
+                self.assertEqual(week["advisor_cap"], 25000)
+            else:
+                self.assertEqual(week["state"], "unset")
+        self.assertEqual(sa._attempts(self.campaign), before, "scope disclosure does not launch a model or renew a budget")
+
 
     # ---- HE64: a hold recorded by the host, without a model run -------------------------------------------------------------------------------------------------------------------------------
 
