@@ -1,0 +1,67 @@
+You are a biochemist. Do NOT use any tool: do not read, search or open any file; answer from your own knowledge only.
+
+DEFECT: a receptor guanylyl cyclase carries a gain-of-function variant and makes too much of its cyclic-nucleotide second messenger in gut epithelium.
+
+BELOW is an ENUMERATION of lever classes written by an earlier step. For EACH lever class named in it, list the specific members of that class that act on an enzyme or receptor of this type, and for each member say in which direction it acts on the enzyme's activity (raises or lowers) and by what mechanism, in one line. Include members that lower the activity of a hyperactive enzyme and members that act in the opposite direction; do not prune and do not rank.
+
+OUTPUT (your final message, nothing else): a table with the columns 'class | member | direction (raises or lowers activity) | mechanism (one line)'. Then one final line beginning 'LOWERING MEMBERS:' that lists every member whose direction is lowering. Mechanism level only; no dose, no recommendation to use any drug.
+
+ENUMERATION:
+ENUMERATION
+
+Defect in physical-chemical terms (DATO from the question, INFERENZA for the mechanism). A receptor guanylyl cyclase is a single-pass membrane protein. It has an extracellular ligand-binding domain, a transmembrane helix, an intracellular kinase-like homology domain (KHD) that binds ATP and acts as an allosteric regulator, a hinge or coiled-coil dimerisation region, and a C-terminal cyclase domain. Its cycle is: ligand binding, then a conformational switch relayed through the KHD, then dimeric catalytic-domain closure, then Mg2+ or Mn2+-dependent conversion of GTP to cGMP plus pyrophosphate, then desensitisation by phosphorylation and by loss of ligand. The defect is a gain of function. The switch is released too easily (reduced autoinhibition, a lower activation barrier, or hypersensitivity to ligand), so the net rate of GTP to cGMP is too high. The steady-state cGMP level is the balance of synthesis against PDE hydrolysis and ABCC4/ABCC5 efflux, and the effectors are PKG2 (PRKG2), cGMP-gated or cGMP-inhibited PDEs, and CFTR through PKG2. The step that is impaired is therefore the off-state of the activity cycle.
+
+Axis (a), catalytic or activity cycle:
+- ATP occupancy of the KHD (allosteric).
+- Mg2+/Mn2+ metal site and metal identity.
+- GTP substrate concentration and the Km-dependence of the cyclase.
+- Product pyrophosphate (product inhibition; pyrophosphatase).
+- Redox state, because cysteines in the extracellular domain and ROS influence ligand binding.
+- Luminal and cytosolic pH, which tunes uroguanylin against guanylin potency.
+- Temperature.
+
+Axis (b), folding and stability:
+- ER chaperones: Hsp90, Hsp70, calnexin.
+- Chemical or osmolyte chaperones.
+- Pharmacological ligands that stabilise the KHD or the ligand-binding domain.
+- Temperature-sensitive folding.
+- The GOF allele may be over-stable, and destabilisation could be the lever.
+
+Axis (c), assembly, trafficking, localisation:
+- N-glycosylation and ER export, including COPII adaptors.
+- Dimerisation, with a dominant-negative partner as a lever.
+- Apical sorting and lipid-raft or palmitoylation targeting.
+- Ligand-site binders: decoy receptors or ligand-sequestering agents, and the ligands themselves (guanylin, uroguanylin; STa-like enterotoxin as the extreme).
+
+Axis (d), substrate and metabolite supply:
+- Guanine nucleotide pool: IMPDH, GMP synthase, de novo against salvage, and dietary purine or guanosine.
+- cGMP export by ABCC4/ABCC5, which is a transport lever.
+- Ion and fluid supply: Cl-, HCO3-, Na+ and water transport and their effect on luminal pH and ligand potency.
+- Dietary nitrate, NO and L-arginine, which feed the soluble-GC parallel pool.
+- Dietary fibre and short-chain fatty acids, which feed epithelial energetics.
+
+Axis (e), degradation and turnover:
+- cGMP hydrolysis by PDE5, PDE9, PDE10, PDE1 and PDE2.
+- Receptor desensitisation by KHD phosphorylation and by protein phosphatases.
+- Receptor ubiquitination, endocytosis and lysosomal degradation.
+- Proteasome and ERAD.
+- Ligand turnover: proguanylin processing by proteases.
+
+Axis (f), downstream effector or parallel bypass:
+- PKG2 (PRKG2) and CFTR phosphorylation.
+- cGMP inhibition of PDE3, which raises cAMP and PKA.
+- NHE3 inhibition and the resulting fluid secretion.
+- Soluble GC and the NO pool as a competing cGMP source.
+- Notch/Atoh1 and Wnt as the secretory-fate machinery.
+- NF-kB/TNF/IL-22 cytokine loops.
+- Tight-junction machinery (claudins, ZO-1, MLCK).
+
+Axis (g), cell type, timing, dosage:
+- Epithelium-specific against global effect.
+- Stem-cell compartment (Lgr5) against differentiated cells.
+- Developmental against adult onset.
+- Heterozygous against homozygous dosage.
+- Trans-heterodimer with a null allele.
+- Reversibility after inducible removal of the GOF allele.
+- Compensation by uroguanylin from the proximal gut.
+

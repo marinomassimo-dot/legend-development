@@ -1,0 +1,111 @@
+class | member | direction (raises or lowers activity) | mechanism (one line)
+(a) activity cycle | GTP pool, de novo and salvage (IMPDH/GMPS/HGPRT flux) | raises | Supplies Mg-GTP, the cyclase substrate, so more substrate gives more flux per receptor.
+(a) activity cycle | IMPDH inhibition (mycophenolate-type) / GMPS inhibition | lowers | Lowers the GTP pool and so the substrate supply.
+(a) activity cycle | ATP bound to the KHD | raises | ATP binding to the kinase-homology domain is an allosteric potentiator of ligand-driven activation.
+(a) activity cycle | ATP depletion / KHD nucleotide-site blockers | lowers | Remove KHD occupancy and so the allosteric "on" signal. This is the logic of the mechanism, not a validated GC-C agent.
+(a) activity cycle | Non-hydrolysable ATP analogues (ATPγS-type) | raises | Occupy the KHD ATP site and can stabilise the activated state.
+(a) activity cycle | Mg2+ (free intracellular Mg2+) | raises | Forms the Mg-GTP substrate and is the physiological catalytic metal.
+(a) activity cycle | Mn2+ | raises | Replaces Mg2+ at the catalytic site, giving higher Vmax and ligand-independent activity in vitro.
+(a) activity cycle | Mg2+ depletion | lowers | Less Mg-GTP substrate is formed.
+(a) activity cycle | Ca2+ / Zn2+ (competing divalent cations) | lowers | Compete for the metal sites and inhibit cyclase catalysis in vitro. Relevance to GC-C in vivo is tentative.
+(a) activity cycle | KHD phosphorylation by kinases (e.g. PKC) | raises | A phosphorylated KHD is needed for ATP-dependent ligand coupling. Direction is context-dependent; for the related GC-A, dephosphorylation is the desensitising step.
+(a) activity cycle | KHD dephosphorylation by phosphatases | lowers | Desensitisation arm; weaker coupling of ligand binding to catalysis.
+(a) activity cycle | Loss of desensitisation (phosphatase-resistant or phospho-mimetic KHD) | raises | Locks the receptor in the activated or coupled state; this is the GOF mechanism class.
+(a) activity cycle | Oxidants / S-nitrosation of cysteines (H2O2, ROS, RNS) | lowers | Oxidise or modify cysteines in the extracellular domain or cyclase domain and impair ligand binding or catalysis. Evidence is tentative.
+(a) activity cycle | Reductants / antioxidant systems (thioredoxin, GSH) | raises | Keep disulfides and thiols in their functional state and preserve activity.
+(a) activity cycle | Acidic pH (luminal or intracellular) | raises | Favours uroguanylin binding, so uroguanylin-driven activation is stronger.
+(a) activity cycle | Alkaline pH (bicarbonate, antacid/PPI-type luminal alkalinisation) | lowers | Weakens uroguanylin potency (guanylin is relatively favoured), so net activation by uroguanylin falls.
+(a) activity cycle | Allosteric positive modulators of the cyclase domain | raises | Hypothetical class; would stabilise the closed antiparallel dimer or lower the KM for GTP.
+(a) activity cycle | Allosteric negative modulators / P-site-type nucleotide analogues, small-molecule cyclase inhibitors (LY83583/NS2028-type, tentative) | lowers | Bind the cyclase domain or the product (pyrophosphate-like) site and block dimer closure or catalysis. None is validated for GC-C.
+(b) folding and stability | ER chaperones (calnexin/calreticulin, BiP) | raises | Promote correct folding and ER exit, so more functional receptor reaches the surface.
+(b) folding and stability | ER stress / UPR overload, chaperone depletion | lowers | Leaves more receptor misfolded and retained in the ER, so there is less surface receptor.
+(b) folding and stability | HSP90/CDC37 | raises | Maintain client stability of the kinase-like domain, so the receptor pool is retained.
+(b) folding and stability | HSP90 inhibitors (geldanamycin-class) | lowers | Release the client for ubiquitination and proteasomal loss, so the receptor level falls.
+(b) folding and stability | Core and ER-lumen N-glycosylation | raises | Required for ligand binding and surface expression.
+(b) folding and stability | Glycosylation inhibitors (tunicamycin-type), glycosidases | lowers | Block glycan addition or remove glycans, which impairs ligand binding and surface expression.
+(b) folding and stability | Low temperature | raises | Improves folding yield and surface delivery (the "temperature rescue" effect).
+(b) folding and stability | Elevated temperature (fever) | lowers | Destabilises the extracellular domain and the kinase-like domain, and increases misfolding.
+(b) folding and stability | Osmolytes / chemical chaperones (glycerol, TMAO, 4-PBA) | raises | Stabilise the folded state and increase ER export and surface level.
+(b) folding and stability | Agonist ligand-site binders (guanylin, uroguanylin, STa, linaclotide, plecanatide, dolcanatide) | raises | Stabilise the extracellular domain and also trigger activation.
+(b) folding and stability | Antagonist or occupying ligand-site binders (STa-derived antagonist peptides, hypothetical) | lowers | Occupy the extracellular domain and stabilise it without transmitting the KHD signal.
+(c) assembly, trafficking, localisation | Cyclase-domain dimer/oligomer assembly | raises | The antiparallel dimer with two pseudo-symmetric sites is the catalytic unit.
+(c) assembly, trafficking, localisation | Dominant-negative or dimer-interface-blocking subunits/peptides | lowers | Form inactive heterodimers or occupy the dimer interface, so fewer functional dimers form.
+(c) assembly, trafficking, localisation | Apical sorting and raft/cholesterol partitioning | raises | Concentrate the receptor with its ligand and effectors at the brush border.
+(c) assembly, trafficking, localisation | Cholesterol depletion / raft disruption (methyl-β-cyclodextrin-type) | lowers | Disperses the receptor from raft domains and uncouples it from effectors.
+(c) assembly, trafficking, localisation | Rab11/myosin Vb recycling | raises | Returns internalised receptor to the apical membrane, so surface level and signalling are sustained.
+(c) assembly, trafficking, localisation | MYO5B or Rab11 loss | lowers | Mis-localises or depletes apical receptor.
+(c) assembly, trafficking, localisation | Clathrin/dynamin-dependent endocytosis | lowers | Removes receptor from the surface and desensitises it.
+(c) assembly, trafficking, localisation | Endocytosis blockers (dynamin/clathrin inhibitors) | raises | Retain receptor at the surface, with prolonged signalling.
+(c) assembly, trafficking, localisation | Competitive antagonists of the ligand site | lowers | Compete with endogenous ligand and STa. Would only help if the GOF is ligand-dependent.
+(c) assembly, trafficking, localisation | Ligand scavengers (anti-ligand antibodies, binding proteins) | lowers | Sequester guanylin or uroguanylin, so less ligand reaches the receptor.
+(c) assembly, trafficking, localisation | Agonist peptides at the ligand site | raises | Increase occupancy and activation.
+(c) assembly, trafficking, localisation | Lipidation (palmitoylation) | raises | Favours membrane and raft partitioning. Tentative.
+(c) assembly, trafficking, localisation | Palmitoylation inhibitors (2-bromopalmitate-type) | lowers | Reduce raft partitioning. Tentative.
+(c) assembly, trafficking, localisation | Brush-border PDZ scaffolds (NHERF2/PDZK1) | raises | Co-cluster the receptor with CFTR and NHE3, which strengthens effector coupling (effector-level, not cyclase catalysis).
+(c) assembly, trafficking, localisation | Scaffold loss / PDZ-motif disruption | lowers | Uncouples receptor output from its effectors, without changing catalysis.
+(d) substrate and metabolite supply | Dietary purines / guanine-nucleotide pool | raises | Raise the GTP supply through salvage. Modest effect (INFERENZA).
+(d) substrate and metabolite supply | Purine restriction / salvage limitation | lowers | Lowers GTP supply.
+(d) substrate and metabolite supply | Dietary Mg2+ | raises | Increases the Mg-GTP substrate and the free Mg2+ pool.
+(d) substrate and metabolite supply | Mg2+ deficiency | lowers | Limits Mg-GTP formation.
+(d) substrate and metabolite supply | Proguanylin/prouroguanylin processing by luminal proteases | raises | Generates the active ligand peptides.
+(d) substrate and metabolite supply | Inhibition of prohormone processing | lowers | Limits formation of the active ligand.
+(d) substrate and metabolite supply | Salt-linked uroguanylin secretion (high Na+ intake) | raises | Raises uroguanylin and so receptor occupancy.
+(d) substrate and metabolite supply | Low-salt state | lowers | Lowers uroguanylin secretion.
+(d) substrate and metabolite supply | Bacterial STa (enterotoxigenic E. coli) | raises | Exogenous heat-stable agonist at the ligand site.
+(d) substrate and metabolite supply | Luminal pH set by bicarbonate and diet (acidic) | raises | Favours uroguanylin binding.
+(d) substrate and metabolite supply | Luminal pH set by bicarbonate and diet (alkaline) | lowers | Disfavours uroguanylin binding.
+(d) substrate and metabolite supply | Butyrate and other SCFAs | lowers | Not a direct enzyme effect; supports barrier function and goblet cells and may change ligand expression. Net direction on GC-C activity is uncertain (flag).
+(d) substrate and metabolite supply | Tryptophan/AHR ligands (via IL-22) | lowers | Indirect: support barrier and repair. No direct enzyme action (flag).
+(d) substrate and metabolite supply | Vitamin A (retinoids) | raises | Indirect, through epithelial differentiation and expression of ligand and receptor. Tentative.
+(d) substrate and metabolite supply | Zinc | lowers | Zn2+ inhibits guanylyl cyclase catalysis in vitro and supports barrier function. Tentative.
+(d) substrate and metabolite supply | MRP4 (ABCC4) cGMP efflux | lowers | Exports cGMP, which lowers intracellular cGMP (not enzyme activity).
+(d) substrate and metabolite supply | MRP4 inhibitors (MK571/probenecid-type) | raises | Retain intracellular cGMP.
+(e) degradation and turnover | Receptor ubiquitination and lysosomal degradation | lowers | Remove receptor protein.
+(e) degradation and turnover | Proteasome/lysosome inhibitors | raises | Stabilise receptor protein.
+(e) degradation and turnover | Ectodomain shedding / proteolytic cleavage | lowers | Removes the ligand-binding domain.
+(e) degradation and turnover | Metalloprotease inhibitors | raises | Prevent shedding.
+(e) degradation and turnover | PDE5 | lowers | Hydrolyses cGMP to 5'-GMP, so net cGMP falls. It is also activated by PKG phosphorylation and cGMP, as negative feedback.
+(e) degradation and turnover | PDE5 inhibitors (sildenafil-class) | raises | Block cGMP hydrolysis, so net cGMP rises.
+(e) degradation and turnover | PDE9 | lowers | High-affinity cGMP hydrolysis.
+(e) degradation and turnover | PDE9 inhibitors | raises | Block cGMP hydrolysis.
+(e) degradation and turnover | PDE10 | lowers | Dual-substrate cGMP/cAMP hydrolysis.
+(e) degradation and turnover | PDE10 inhibitors | raises | Block hydrolysis.
+(e) degradation and turnover | PDE2 (cGMP-stimulated) | lowers | cGMP binds the GAF domain and stimulates PDE2, which hydrolyses both cAMP and cGMP (feedback).
+(e) degradation and turnover | PDE2 inhibitors | raises | Raise cAMP and cGMP.
+(e) degradation and turnover | PDE3 (cGMP-inhibited) | lowers | Hydrolyses cAMP and, more slowly, cGMP; cGMP competes for it, so cGMP raises cAMP.
+(e) degradation and turnover | PDE3 inhibitors (cilostazol/milrinone-type) | raises | Raise cAMP, with an additive effect on CFTR (cross-talk).
+(e) degradation and turnover | ABCC4 efflux (as above) | lowers | Export of cGMP.
+(e) degradation and turnover | Luminal proteases degrading ligand | lowers | Cleave guanylin and uroguanylin, which lowers receptor occupancy.
+(e) degradation and turnover | Protease inhibitors | raises | Preserve ligand.
+(e) degradation and turnover | cGMP to 5'-GMP flux (net PDE activity) | lowers | Terminates the signal.
+(f) downstream effector or bypass | PKG2 (PRKG2) activation | raises | cGMP-activated membrane-anchored kinase phosphorylating CFTR and NHE3 complex components.
+(f) downstream effector or bypass | PKG2 inhibitors (Rp-cGMPS analogues, KT5823-type) | lowers | Block output signalling downstream of cGMP. Specificity is limited.
+(f) downstream effector or bypass | cGMP analogues (8-Br-cGMP) | raises | Directly activate PKG downstream of the receptor.
+(f) downstream effector or bypass | CFTR phosphorylation and gating (potentiators) | raises | Increases Cl-/HCO3- secretion.
+(f) downstream effector or bypass | CFTR inhibitors (CFTRinh-172, GlyH-101, crofelemer-type) | lowers | Block the Cl- channel, so fluid secretion falls.
+(f) downstream effector or bypass | NHE3 inhibition via the PKG2/NHERF2 complex | raises | Reduces Na+ absorption, giving net luminal fluid.
+(f) downstream effector or bypass | NHE3 inhibitors (tenapanor-type) | raises | Pharmacologically mimic the GC-C effect on absorption.
+(f) downstream effector or bypass | Basolateral NKCC1 inhibitors (bumetanide-type) | lowers | Reduce the Cl- supply for secretion.
+(f) downstream effector or bypass | Antisecretory approaches (enkephalinase inhibition-type) | lowers | Reduce cAMP-driven secretion. Mechanism-level only.
+(f) downstream effector or bypass | cAMP/PKA via PDE3 inhibition | raises | cAMP adds to the CFTR drive.
+(f) downstream effector or bypass | Adenylyl cyclase inhibition / Gi activation | lowers | Reduce the cAMP arm of the secretory output.
+(f) downstream effector or bypass | Fluid secretion and shear on the epithelium | raises | Mechanical and fluid load that may feed back on the epithelium. Context-dependent (flag).
+(f) downstream effector or bypass | Notch inhibition (γ-secretase inhibitors) | raises | Pushes towards the secretory lineage (ATOH1 up). Compensates for loss of goblet cells; indirect.
+(f) downstream effector or bypass | Wnt pathway activity | raises | Maintains the proliferating stem and progenitor pool. GC-C/cGMP tends to restrain proliferation, so this acts in opposition (indirect).
+(f) downstream effector or bypass | Wnt inhibitors | lowers | Reduce proliferation. Indirect, and the effect on the output is uncertain.
+(f) downstream effector or bypass | Tight-junction regulation (MLCK, ROCK, claudins) | raises | Increased permeability when MLCK/ROCK are overactive. Indirect.
+(f) downstream effector or bypass | MLCK and ROCK inhibitors | lowers | Reduce permeability. Indirect.
+(f) downstream effector or bypass | IL-22/STAT3 and EGFR repair | raises | Epithelial repair and barrier support. Indirect, no enzyme action.
+(f) downstream effector or bypass | TNF/IFN-γ neutralisation | raises | TNF and IFN-γ reduce guanylin/uroguanylin expression and damage the barrier, so neutralising them restores ligand and barrier. Indirect.
+(f) downstream effector or bypass | Mucus layer restoration | lowers | Barrier support, not an enzyme effect. Indirect.
+(g) cell type, timing, dosage | Epithelium-restricted allele reversion (e.g. Villin-Cre) | lowers | Removes the GOF allele from the epithelium only, leaving immune and neuronal cells unchanged.
+(g) cell type, timing, dosage | Whole-body allele reversion | lowers | Removes the GOF allele everywhere, including enteric neurons and immune cells.
+(g) cell type, timing, dosage | Enterocyte vs secretory-lineage vs stem-cell targeting | lowers | The target cell type determines whether secretion, differentiation or proliferation outputs are corrected.
+(g) cell type, timing, dosage | Immune and enteric-neuron cells (extracellular cGMP acting on nociceptors) | raises | Extracellular cGMP is exported by MRP4 and acts on nociceptors, so the GOF allele can raise this output.
+(g) cell type, timing, dosage | Heterozygous vs homozygous dosage | lowers | One GOF allele gives about half the dose of mutant receptor. If the variant is dominant-negative or additive, the effect scales with allele number.
+(g) cell type, timing, dosage | Allele-specific silencing (ASO/siRNA) | lowers | Lowers transcript of the GOF allele only.
+(g) cell type, timing, dosage | Base or prime editing of the variant | lowers | Corrects the variant at the DNA level.
+(g) cell type, timing, dosage | Neonatal vs adult window | raises | The neonatal gut may be more sensitive to GC-C-driven secretion (heightened STa susceptibility). Tentative.
+(g) cell type, timing, dosage | Germ-free background | lowers | Microbiota shape ligand expression and barrier maturation. Context-dependent (flag).
+
+LOWERING MEMBERS: IMPDH/GMPS inhibition; ATP depletion / KHD nucleotide-site blockers; Mg2+ depletion; Ca2+/Zn2+ competing cations; KHD dephosphorylation by phosphatases; oxidants / S-nitrosation of cysteines; alkaline pH; allosteric negative modulators / P-site-type nucleotide analogues and small-molecule cyclase inhibitors; ER stress / chaperone depletion; HSP90 inhibitors; glycosylation inhibitors; elevated temperature; antagonist ligand-site binders; dominant-negative or dimer-interface-blocking subunits/peptides; cholesterol depletion / raft disruption; MYO5B or Rab11 loss; clathrin/dynamin-dependent endocytosis; competitive antagonists of the ligand site; ligand scavengers; palmitoylation inhibitors; scaffold loss / PDZ-motif disruption; purine restriction; Mg2+ deficiency; inhibition of prohormone processing; low-salt state; alkaline luminal pH; butyrate/SCFAs (indirect); tryptophan/AHR ligands (indirect); zinc; MRP4 efflux; receptor ubiquitination and lysosomal degradation; ectodomain shedding; PDE5; PDE9; PDE10; PDE2; PDE3; ABCC4 efflux; luminal proteases degrading ligand; cGMP to 5'-GMP flux; PKG2 inhibitors; CFTR inhibitors; NKCC1 inhibitors; antisecretory approaches (enkephalinase inhibition-type); adenylyl cyclase inhibition / Gi activation; Wnt inhibitors; MLCK and ROCK inhibitors; mucus layer restoration; epithelium-restricted allele reversion; whole-body allele reversion; enterocyte/secretory/stem-cell targeting; heterozygous vs homozygous dosage; allele-specific silencing; base or prime editing; germ-free background.
