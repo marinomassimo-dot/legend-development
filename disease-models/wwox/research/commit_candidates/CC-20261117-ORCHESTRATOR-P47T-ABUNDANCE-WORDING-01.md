@@ -93,3 +93,5 @@ Form, appended at the foot of each file by its owner: `[Update 2026-11-17, CC-20
 Line-level scan; the phrase list is incomplete by construction (a second pass added two lines); Italian and other-language wording ("normale") is not scanned; files outside `analysis/` and `registries/` are not scanned (SCI's own 11 files under the pilot folder are SCI's, IT and ADV one each, per the closure note); I did not re-open the Hussain or Mallaret full texts; the wording follows SCI's closure note and ADV's check of it.
 
 **Repeat the grep:** the phrase list is incomplete by construction; a later grep for "normal" next to P47T protein should be repeated after the next batch of reads.
+
+**Applied line:** applied in commit 37a0531e101c (published 2026-11-17, gate PASS); the report commit a37969cd5ea8 carried the CC itself, R4 and annex updates.
