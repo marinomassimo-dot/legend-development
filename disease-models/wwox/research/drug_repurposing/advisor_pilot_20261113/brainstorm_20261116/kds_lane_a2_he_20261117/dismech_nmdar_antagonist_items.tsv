@@ -1,0 +1,458 @@
+entry	epilepsy_related	term	section	kind	grade	pmid	supports
+Acute Post-Surgical Pain	False	NMDAR antagonist (class)	treatments	evidence_item	HUMAN_CLINICAL	15105220	SUPPORT
+Alzheimer Disease	False	NMDAR antagonist (class)	treatments	evidence_item		36412156	SUPPORT
+Alzheimer Disease	False	NMDAR antagonist (class)	treatments	treatment_entry			
+Alzheimer Disease	False	NMDAR antagonist (class)	treatments	evidence_item		12768511	SUPPORT
+Alzheimer Disease	False	NMDAR antagonist (class)	treatments	evidence_item		27662322	SUPPORT
+Alzheimer Disease	False	NMDAR antagonist (class)	treatments	evidence_item		20943326	SUPPORT
+Catatonia	True	NMDAR antagonist (class)	treatments	evidence_item	HUMAN_CLINICAL	37039129	SUPPORT
+Catatonia	True	NMDAR antagonist (class)	treatments	treatment_entry			
+Catatonia	True	NMDAR antagonist (class)	treatments	evidence_item	HUMAN_CLINICAL	37039129	SUPPORT
+Catatonia	True	NMDAR antagonist (class)	treatments	evidence_item	HUMAN_CLINICAL	37039129	SUPPORT
+Catatonia	True	NMDAR antagonist (class)	treatments	treatment_entry			
+Catatonia	True	NMDAR antagonist (class)	treatments	evidence_item	HUMAN_CLINICAL	37039129	SUPPORT
+Catatonia	True	NMDAR antagonist (class)	treatments	evidence_item	HUMAN_CLINICAL	37039129	SUPPORT
+Cerebral Amyloid Angiopathy	False	NMDAR antagonist (class)	treatments	evidence_item	HUMAN_CLINICAL	37280119	SUPPORT
+Complex Regional Pain Syndrome Type 1	False	NMDAR antagonist (class)	treatments	evidence_item	HUMAN_CLINICAL	19783371	SUPPORT
+Developmental And Epileptic Encephalopathy 46	True	NMDAR antagonist (class)	treatments	treatment_entry			
+Developmental And Epileptic Encephalopathy 46	True	NMDAR antagonist (class)	treatments	evidence_item	HUMAN_CLINICAL	27616483	SUPPORT
+Developmental And Epileptic Encephalopathy 46	True	NMDAR antagonist (class)	treatments	treatment_entry			
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	NMDAR antagonist (class)	treatments	evidence_item	IN_VITRO	24839611	SUPPORT
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	NMDAR antagonist (class)	treatments	evidence_item	HUMAN_CLINICAL	27683935	SUPPORT
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	NMDAR antagonist (class)	animal_models	evidence_item	MODEL_ORGANISM	32577763	SUPPORT
+GRIN2B-Related Developmental and Epileptic Encephalopathy	True	NMDAR antagonist (class)	treatments	treatment_entry			
+Huntington Disease	False	NMDAR antagonist (class)	mechanistic_hypotheses	evidence_item	OTHER	15717010	REFUTE
+Huntington Disease	False	NMDAR antagonist (class)	discussions	evidence_item	OTHER	15717010	SUPPORT
+Intellectual Disability Autosomal Recessive 65	False	NMDAR antagonist (class)	discussions	evidence_item	MODEL_ORGANISM	42160407	SUPPORT
+Intellectual Disability, Autosomal Dominant 6	True	NMDAR antagonist (class)	differential_diagnoses	evidence_item	IN_VITRO	28533163	SUPPORT
+Kleefstra Syndrome	True	NMDAR antagonist (class)	pathophysiology	evidence_item	IN_VITRO	10103841467019129473	SUPPORT
+Major Depressive Disorder	False	NMDAR antagonist (class)	discussions	evidence_item	HUMAN_CLINICAL	16390905	SUPPORT
+Nonketotic Hyperglycinemia	True	NMDAR antagonist (class)	treatments	treatment_entry			
+Nonketotic Hyperglycinemia	True	NMDAR antagonist (class)	treatments	evidence_item	OTHER	39423724	SUPPORT
+Traumatic Brain Injury	False	NMDAR antagonist (class)	pathophysiology	evidence_item	IN_VITRO	31235685	SUPPORT
+Catatonia	True	amantadine	treatments	treatment_entry			
+Catatonia	True	amantadine	treatments	evidence_item	HUMAN_CLINICAL	37039129	SUPPORT
+Catatonia	True	amantadine	treatments	evidence_item	HUMAN_CLINICAL	37039129	SUPPORT
+Catatonia	True	amantadine	treatments	evidence_item	HUMAN_CLINICAL	151492247289157945	SUPPORT
+Catatonia	True	amantadine	treatments	evidence_item	HUMAN_CLINICAL	151492247289157945	SUPPORT
+PINK1-Related Early-Onset Parkinson Disease	False	amantadine	treatments	treatment_entry			
+PINK1-Related Early-Onset Parkinson Disease	False	amantadine	treatments	evidence_item	HUMAN_CLINICAL	20301792	SUPPORT
+PINK1-Related Early-Onset Parkinson Disease	False	amantadine	treatments	evidence_item	HUMAN_CLINICAL	20301792	SUPPORT
+PINK1-Related Early-Onset Parkinson Disease	False	amantadine	treatments	treatment_entry			
+PINK1-Related Early-Onset Parkinson Disease	False	amantadine	treatments	evidence_item	HUMAN_CLINICAL	20301792	SUPPORT
+PRKN-Related Juvenile Parkinson Disease	False	amantadine	treatments	evidence_item	HUMAN_CLINICAL	20301651	SUPPORT
+Parkinson's Disease	False	amantadine	treatments	evidence_item		27577098	SUPPORT
+Parkinson's Disease	False	amantadine	treatments	evidence_item		27577098	SUPPORT
+Parkinson's Disease	False	amantadine	treatments	evidence_item		27577098	SUPPORT
+Parkinson's Disease	False	amantadine	treatments	evidence_item		27577098	SUPPORT
+Parkinson's Disease	False	amantadine	treatments	evidence_item		27577098	SUPPORT
+Parkinson's Disease	False	amantadine	treatments	evidence_item		27577098	SUPPORT
+Postpoliomyelitis Syndrome	False	amantadine	treatments	treatment_entry			
+Postpoliomyelitis Syndrome	False	amantadine	treatments	evidence_item	OTHER	31379723	REFUTE
+Progressive Supranuclear Palsy	False	amantadine	treatments	treatment_entry			
+Rabies	False	amantadine	treatments	treatment_entry			
+Rabies	False	amantadine	treatments	evidence_item	HUMAN_CLINICAL	30747124	REFUTE
+Spinocerebellar Ataxia 27A	False	amantadine	treatments	treatment_entry			
+Spinocerebellar Ataxia 27A	False	amantadine	treatments	evidence_item	HUMAN_CLINICAL	29416937	SUPPORT
+Spinocerebellar Ataxia 27A	False	amantadine	treatments	evidence_item	HUMAN_CLINICAL	29416937	SUPPORT
+Traumatic Brain Injury	False	amantadine	treatments	treatment_entry			
+Traumatic Brain Injury	False	amantadine	treatments	evidence_item	HUMAN_CLINICAL	22375973	SUPPORT
+Acute Post-Surgical Pain	False	dextromethorphan	treatments	evidence_item	HUMAN_CLINICAL	15105220	SUPPORT
+Amyotrophic Lateral Sclerosis Type 1	False	dextromethorphan	treatments	treatment_entry			
+CDK19-Related Disorder	True	dextromethorphan	treatments	treatment_entry			
+CDK19-Related Disorder	True	dextromethorphan	treatments	evidence_item	HUMAN_CLINICAL	33134521	REFUTE
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	dextromethorphan	treatments	treatment_entry			
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	dextromethorphan	treatments	evidence_item	HUMAN_CLINICAL	27683935	SUPPORT
+GRIN2B-Related Developmental and Epileptic Encephalopathy	True	dextromethorphan	treatments	treatment_entry			
+Isolated Sulfite Oxidase Deficiency	True	dextromethorphan	treatments	evidence_item	HUMAN_CLINICAL	16140720	SUPPORT
+Isolated Sulfite Oxidase Deficiency	True	dextromethorphan	treatments	treatment_entry			
+Isolated Sulfite Oxidase Deficiency	True	dextromethorphan	treatments	evidence_item	HUMAN_CLINICAL	16140720	SUPPORT
+Major Depressive Disorder	False	dextromethorphan	treatments	evidence_item		39150594	SUPPORT
+Nonketotic Hyperglycinemia	True	dextromethorphan	phenotypes	evidence_item	HUMAN_CLINICAL	38589924	SUPPORT
+Nonketotic Hyperglycinemia	True	dextromethorphan	treatments	treatment_entry			
+Nonketotic Hyperglycinemia	True	dextromethorphan	treatments	evidence_item	OTHER	39423724	SUPPORT
+Nonketotic Hyperglycinemia	True	dextromethorphan	treatments	evidence_item	HUMAN_CLINICAL	38589924	SUPPORT
+Progressive Bulbar Palsy	False	dextromethorphan	treatments	treatment_entry			
+Progressive Bulbar Palsy	False	dextromethorphan	treatments	evidence_item	HUMAN_CLINICAL	37647907	SUPPORT
+Serotonin Syndrome	False	dextromethorphan	environmental	evidence_item	HUMAN_CLINICAL	42713547	SUPPORT
+Lennox-Gastaut Syndrome	True	felbamate	treatments	treatment_entry			
+Lennox-Gastaut Syndrome	True	felbamate	treatments	evidence_item	HUMAN_CLINICAL	37212330	SUPPORT
+Lennox-Gastaut Syndrome	True	felbamate	treatments	evidence_item	OTHER	39854828	SUPPORT
+3-methylglutaconic_Aciduria_With_Deafness_Encephalopathy_And_Leigh-like_Syndrome	True	ketamine	treatments	treatment_entry			
+ADNP-Related Syndrome	False	ketamine	treatments	treatment_entry			
+ADNP-Related Syndrome	False	ketamine	treatments	evidence_item	HUMAN_CLINICAL	36119806	SUPPORT
+ADNP-Related Syndrome	False	ketamine	treatments	evidence_item	HUMAN_CLINICAL	39054328	SUPPORT
+ADNP-Related Syndrome	False	ketamine	discussions	evidence_item	HUMAN_CLINICAL	36119806	SUPPORT
+ADNP-Related Syndrome	False	ketamine	discussions	evidence_item	OTHER	36945042	SUPPORT
+ADNP-Related Syndrome	False	ketamine	clinical_trials	evidence_item	HUMAN_CLINICAL	04388774	SUPPORT
+ADNP-Related Syndrome	False	ketamine	clinical_trials	evidence_item	HUMAN_CLINICAL	36119806	SUPPORT
+Acute Post-Surgical Pain	False	ketamine	treatments	treatment_entry			
+Acute Post-Surgical Pain	False	ketamine	treatments	treatment_entry			
+Acute Post-Surgical Pain	False	ketamine	treatments	evidence_item	HUMAN_CLINICAL	15105220	SUPPORT
+Autoimmune Encephalitis	True	ketamine	pathophysiology	evidence_item	HUMAN_CLINICAL	18851928	SUPPORT
+BBOX1-Related Carnitine Biosynthesis Deficiency	False	ketamine	phenotypes	evidence_item	HUMAN_CLINICAL	41022783	SUPPORT
+Catatonia	True	ketamine	treatments	treatment_entry			
+Catatonia	True	ketamine	treatments	evidence_item	HUMAN_CLINICAL	39098303	SUPPORT
+Complex Regional Pain Syndrome Type 1	False	ketamine	pathophysiology	evidence_item	HUMAN_CLINICAL	19783371	SUPPORT
+Complex Regional Pain Syndrome Type 1	False	ketamine	treatments	treatment_entry			
+Complex Regional Pain Syndrome Type 1	False	ketamine	treatments	evidence_item	HUMAN_CLINICAL	19783371	SUPPORT
+Complex Regional Pain Syndrome Type 1	False	ketamine	treatments	evidence_item	HUMAN_CLINICAL	19783371	SUPPORT
+Complex Regional Pain Syndrome Type 1	False	ketamine	treatments	evidence_item	HUMAN_CLINICAL	40917914	SUPPORT
+Developmental And Epileptic Encephalopathy 46	True	ketamine	phenotypes	evidence_item	HUMAN_CLINICAL	27616483	SUPPORT
+Developmental And Epileptic Encephalopathy 46	True	ketamine	treatments	treatment_entry			
+Developmental And Epileptic Encephalopathy 46	True	ketamine	treatments	evidence_item	HUMAN_CLINICAL	27616483	SUPPORT
+Developmental And Epileptic Encephalopathy 46	True	ketamine	treatments	evidence_item	MODEL_ORGANISM	40277233	REFUTE
+Developmental And Epileptic Encephalopathy 46	True	ketamine	discussions	evidence_item	MODEL_ORGANISM	40277233	REFUTE
+Febrile Infection-Related Epilepsy Syndrome	True	ketamine	treatments	treatment_entry			
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	ketamine	treatments	evidence_item	HUMAN_CLINICAL	27683935	SUPPORT
+Major Depressive Disorder	False	ketamine	pathophysiology	evidence_item	HUMAN_CLINICAL	42372880	SUPPORT
+Major Depressive Disorder	False	ketamine	treatments	treatment_entry			
+Major Depressive Disorder	False	ketamine	treatments	evidence_item		39150594	SUPPORT
+Major Depressive Disorder	False	ketamine	treatments	evidence_item		39150594	SUPPORT
+Major Depressive Disorder	False	ketamine	treatments	evidence_item		39150594	SUPPORT
+Major Depressive Disorder	False	ketamine	treatments	evidence_item		39150594	SUPPORT
+Major Depressive Disorder	False	ketamine	discussions	evidence_item	HUMAN_CLINICAL	42372880	SUPPORT
+Major Depressive Disorder	False	ketamine	discussions	evidence_item	OTHER	39360294	SUPPORT
+Major Depressive Disorder	False	ketamine	discussions	evidence_item	MODEL_ORGANISM	27144355	SUPPORT
+Major Depressive Disorder	False	ketamine	discussions	evidence_item	HUMAN_CLINICAL	42462931	SUPPORT
+Major Depressive Disorder	False	ketamine	discussions	evidence_item	HUMAN_CLINICAL	30153752	SUPPORT
+Nonketotic Hyperglycinemia	True	ketamine	treatments	treatment_entry			
+Nonketotic Hyperglycinemia	True	ketamine	treatments	evidence_item	OTHER	39423724	SUPPORT
+Opioid Use Disorder	False	ketamine	discussions	evidence_item	OTHER	39833376	SUPPORT
+Post-Traumatic Stress Disorder	False	ketamine	treatments	treatment_entry			
+Post-Traumatic Stress Disorder	False	ketamine	treatments	evidence_item	HUMAN_CLINICAL	42405700	SUPPORT
+Post-Traumatic Stress Disorder	False	ketamine	treatments	evidence_item	HUMAN_CLINICAL	1298858	SUPPORT
+Post-Traumatic Stress Disorder	False	ketamine	mechanistic_hypotheses	evidence_item	HUMAN_CLINICAL	42405700	SUPPORT
+Post-Traumatic Stress Disorder	False	ketamine	mechanistic_hypotheses	evidence_item	HUMAN_CLINICAL	42405700	SUPPORT
+Rabies	False	ketamine	treatments	treatment_entry			
+Rabies	False	ketamine	treatments	evidence_item	HUMAN_CLINICAL	30747124	REFUTE
+Schizophrenia	False	ketamine	pathophysiology	evidence_item	HUMAN_CLINICAL	32437573	SUPPORT
+Schizophrenia	False	ketamine	pathophysiology	evidence_item	HUMAN_CLINICAL	32437573	SUPPORT
+Secondary Erythromelalgia	False	ketamine	treatments	treatment_entry			
+Secondary Erythromelalgia	False	ketamine	treatments	evidence_item	HUMAN_CLINICAL	40428878	SUPPORT
+ADPRS-Related Stress-Induced Neurodegeneration	True	magnesium	pathophysiology	evidence_item	IN_VITRO	33894202	SUPPORT
+Acquired Long QT Syndrome	False	magnesium	treatments	treatment_entry			
+Acquired Long QT Syndrome	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	26183037	SUPPORT
+Acquired Long QT Syndrome	False	magnesium	treatments	treatment_entry			
+Acute Tricyclic Antidepressant Poisoning	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	430931	SUPPORT
+Acute Tricyclic Antidepressant Poisoning	True	magnesium	treatments	treatment_entry			
+Acute Tricyclic Antidepressant Poisoning	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	430931	SUPPORT
+Acute Tricyclic Antidepressant Poisoning	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	430931	SUPPORT
+Acute Tricyclic Antidepressant Poisoning	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	430931	SUPPORT
+Autoimmune Pancreatitis	False	magnesium	treatments	evidence_item	OTHER	4	SUPPORT
+Autosomal Dominant Hypocalcemia 1	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	37754292	SUPPORT
+Autosomal Dominant Hypocalcemia 1	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	16128246	SUPPORT
+Autosomal Dominant Hypocalcemia 1	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	37754292	SUPPORT
+Autosomal Dominant Hypocalcemia 1	True	magnesium	treatments	treatment_entry			
+Autosomal Dominant Hypocalcemia 1	True	magnesium	treatments	treatment_entry			
+Autosomal Dominant Hypocalcemia 2	True	magnesium	biochemical	evidence_item	HUMAN_CLINICAL	24823460	SUPPORT
+Autosomal Dominant Hypocalcemia 2	True	magnesium	biochemical	evidence_item	HUMAN_CLINICAL	24823460	SUPPORT
+Autosomal Dominant Hypocalcemia 2	True	magnesium	differential_diagnoses	evidence_item	HUMAN_CLINICAL	24823460	SUPPORT
+Bartter syndrome	False	magnesium	pathophysiology	evidence_item	OTHER	30519073	SUPPORT
+Bartter syndrome	False	magnesium	phenotypes	evidence_item	OTHER	30519073	SUPPORT
+Bartter syndrome	False	magnesium	treatments	treatment_entry			
+CKD-Mineral Bone Disorder	False	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	26303319	SUPPORT
+CKD-Mineral Bone Disorder	False	magnesium	biochemical	evidence_item	HUMAN_CLINICAL	26303319	SUPPORT
+CN-Related Developmental and Epileptic Encephalopathy	True	magnesium	references	evidence_item	HUMAN_CLINICAL	10338920251600877	SUPPORT
+Cerebral Palsy	False	magnesium	treatments	treatment_entry			
+Cerebral Palsy	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	39724363	SUPPORT
+Cerebral Palsy	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	32086598	SUPPORT
+Cerebral Palsy	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	39724363	SUPPORT
+Cesium Poisoning	False	magnesium	treatments	treatment_entry			
+Cesium Poisoning	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	41489700	SUPPORT
+Cesium Poisoning	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	41489700	SUPPORT
+Chondrocalcinosis 2	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	22647861	SUPPORT
+Chondrocalcinosis 2	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	22647861	SUPPORT
+Chorioamnionitis	False	magnesium	treatments	evidence_item	OTHER	33007269	SUPPORT
+Chromosome 17q12 Deletion Syndrome	False	magnesium	pathophysiology	evidence_item	IN_VITRO	24204001	SUPPORT
+Chromosome 17q12 Deletion Syndrome	False	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	26340261	SUPPORT
+Chromosome 17q12 Deletion Syndrome	False	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	27929632	SUPPORT
+Chromosome 17q12 Deletion Syndrome	False	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	27929632	SUPPORT
+Cisplatin Toxicity	False	magnesium	phenotypes	evidence_item	OTHER	18272962	SUPPORT
+Cisplatin Toxicity	False	magnesium	biochemical	evidence_item	HUMAN_CLINICAL	37530867	SUPPORT
+Cisplatin Toxicity	False	magnesium	treatments	treatment_entry			
+Cisplatin Toxicity	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	37530867	SUPPORT
+Cisplatin Toxicity	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	37530867	SUPPORT
+Congenital Disorder of Glycosylation, Type ICC	False	magnesium	classifications	evidence_item	OTHER	35748970	SUPPORT
+Congenital Disorder of Glycosylation, Type ICC	False	magnesium	inheritance	evidence_item	HUMAN_CLINICAL	34655400	SUPPORT
+Congenital Disorder of Glycosylation, Type ICC	False	magnesium	mechanistic_hypotheses	evidence_item	HUMAN_CLINICAL	21796205	SUPPORT
+Congenital Disorder of Glycosylation, Type ICC	False	magnesium	mechanistic_hypotheses	evidence_item	IN_VITRO	35182234	REFUTE
+Congenital Disorder of Glycosylation, Type ICC	False	magnesium	mechanistic_hypotheses	evidence_item	HUMAN_CLINICAL	34655400	REFUTE
+Congenital Disorder of Glycosylation, Type ICC	False	magnesium	treatments	treatment_entry			
+Congenital Disorder of Glycosylation, Type ICC	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	34655400	REFUTE
+Congenital Disorder of Glycosylation, Type ICC	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	34655400	REFUTE
+Congenital Disorder of Glycosylation, Type ICC	False	magnesium	treatments	treatment_entry			
+Congenital Disorder of Glycosylation, Type ICC	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	34655400	SUPPORT
+Congenital Disorder of Glycosylation, Type ICC	False	magnesium	clinical_trials	evidence_item	OTHER	02496676	SUPPORT
+Cystinosis	False	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	20301574	SUPPORT
+Cystinosis	False	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	20301574	SUPPORT
+Cystinosis	False	magnesium	biochemical	evidence_item	HUMAN_CLINICAL	20301574	SUPPORT
+Developmental And Epileptic Encephalopathy 46	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	27616483	SUPPORT
+Developmental And Epileptic Encephalopathy 46	True	magnesium	treatments	treatment_entry			
+Developmental And Epileptic Encephalopathy 46	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	27616483	SUPPORT
+Digitalis Poisoning	False	magnesium	treatments	treatment_entry			
+Dopamine Beta-Hydroxylase Deficiency	False	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	33034372	SUPPORT
+Dopamine Beta-Hydroxylase Deficiency	False	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	33034372	SUPPORT
+Dopamine Beta-Hydroxylase Deficiency	False	magnesium	biochemical	evidence_item	HUMAN_CLINICAL	33034372	SUPPORT
+Dopamine Beta-Hydroxylase Deficiency	False	magnesium	treatments	treatment_entry			
+Dopamine Beta-Hydroxylase Deficiency	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	20301647	SUPPORT
+EAST Syndrome	True	magnesium	treatments	treatment_entry			
+EAST Syndrome	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	19420365	SUPPORT
+EAST Syndrome	True	magnesium	treatments	treatment_entry			
+EAST Syndrome	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	29722015	SUPPORT
+EAST Syndrome	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	19420365	SUPPORT
+FAM111A-Related Skeletal Dysplasia	False	magnesium	animal_models	evidence_item	MODEL_ORGANISM	35715480	REFUTE
+Familial Hypocalciuric Hypercalcemia 1	False	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	39810898	SUPPORT
+Familial Hypocalciuric Hypercalcemia 2	False	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	41240382	SUPPORT
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	magnesium	pathophysiology	evidence_item	IN_VITRO	20890276	SUPPORT
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	magnesium	pathophysiology	evidence_item	MODEL_ORGANISM	33420383	SUPPORT
+Gitelman syndrome	False	magnesium	pathophysiology	evidence_item	OTHER	35173827	SUPPORT
+Gitelman syndrome	False	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	41278357	SUPPORT
+Gitelman syndrome	False	magnesium	biochemical	evidence_item	OTHER	35173827	SUPPORT
+Gitelman syndrome	False	magnesium	treatments	treatment_entry			
+Gitelman syndrome	False	magnesium	treatments	evidence_item	OTHER	28003083	SUPPORT
+Gitelman syndrome	False	magnesium	treatments	evidence_item	OTHER	28003083	SUPPORT
+Gitelman syndrome	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	41278357	SUPPORT
+Gitelman syndrome	False	magnesium	treatments	treatment_entry			
+Gitelman syndrome	False	magnesium	treatments	evidence_item	OTHER	28003083	SUPPORT
+Gitelman syndrome	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	41278357	SUPPORT
+Gitelman syndrome	False	magnesium	references	evidence_item	HUMAN_CLINICAL	101093019	SUPPORT
+HELLP Syndrome	False	magnesium	treatments	treatment_entry			
+Hypertensive Heart Disease	False	magnesium	treatments	evidence_item		3882040	SUPPORT
+Hypomagnesemia 7 Renal With Or Without Dilated Cardiomyopathy	False	magnesium	pathophysiology	evidence_item	MODEL_ORGANISM	34607910	SUPPORT
+Hypomagnesemia 7 Renal With Or Without Dilated Cardiomyopathy	False	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	38901414	SUPPORT
+Hypomagnesemia 7 Renal With Or Without Dilated Cardiomyopathy	False	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	38901414	SUPPORT
+Hypomagnesemia 7 Renal With Or Without Dilated Cardiomyopathy	False	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	41141537	SUPPORT
+Hypomagnesemia 7 Renal With Or Without Dilated Cardiomyopathy	False	magnesium	treatments	treatment_entry			
+Hypomagnesemia 7 Renal With Or Without Dilated Cardiomyopathy	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	41141537	SUPPORT
+Hypomagnesemia 7 Renal With Or Without Dilated Cardiomyopathy	False	magnesium	treatments	treatment_entry			
+Hypomagnesemia 7 Renal With Or Without Dilated Cardiomyopathy	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	41141537	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	pathophysiology	evidence_item	IN_VITRO	33600043	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	pathophysiology	evidence_item	MODEL_ORGANISM	24699222	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	pathophysiology	evidence_item	IN_VITRO	24699222	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	pathophysiology	evidence_item	IN_VITRO	24699222	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	pathophysiology	evidence_item	MODEL_ORGANISM	28033128	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	33600043	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	pathophysiology	evidence_item	MODEL_ORGANISM	33859252	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	34604137	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	24699222	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	33600043	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	38519529	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	diagnosis	evidence_item	HUMAN_CLINICAL	33600043	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	diagnosis	evidence_item	HUMAN_CLINICAL	33600043	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	diagnosis	evidence_item	HUMAN_CLINICAL	38519529	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	treatments	treatment_entry			
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	34604137	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	24699222	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	animal_models	evidence_item	MODEL_ORGANISM	24699222	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	animal_models	evidence_item	MODEL_ORGANISM	33859252	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	animal_models	evidence_item	MODEL_ORGANISM	28033128	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	discussions	evidence_item	IN_VITRO	27068403	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 1	True	magnesium	discussions	evidence_item	IN_VITRO	35846113	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	inheritance	evidence_item	HUMAN_CLINICAL	33968856	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	34717959	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	30388404	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	33968856	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	33968856	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	34717959	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	30388404	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	30388404	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	30388404	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	34717959	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	30388404	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	34717959	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	30388404	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	treatments	treatment_entry			
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	30388404	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	33968856	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	34717959	SUPPORT
+Hypomagnesemia, Seizures, and Intellectual Disability 2	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	33968856	SUPPORT
+Immunodeficiency 96	False	magnesium	variants	evidence_item	IN_VITRO	38896336	SUPPORT
+Inflammatory Skin And Bowel Disease Neonatal 2	False	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	24691054	SUPPORT
+Inflammatory Skin And Bowel Disease Neonatal 2	False	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	24691054	SUPPORT
+Inflammatory Skin And Bowel Disease Neonatal 2	False	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	24691054	SUPPORT
+Inflammatory Skin And Bowel Disease Neonatal 2	False	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	24691054	SUPPORT
+Inflammatory Skin And Bowel Disease Neonatal 2	False	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	24691054	SUPPORT
+Inflammatory Skin And Bowel Disease Neonatal 2	False	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	24691054	SUPPORT
+Inflammatory Skin And Bowel Disease Neonatal 2	False	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	24691054	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	progression	evidence_item	HUMAN_CLINICAL	16107578	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	pathophysiology	evidence_item	IN_VITRO	14576148	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	pathophysiology	evidence_item	MODEL_ORGANISM	27991852	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	16107578	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	pathophysiology	evidence_item	MODEL_ORGANISM	27991852	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	16107578	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	12032570	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	16107578	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	23942199	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	pathophysiology	evidence_item	OTHER	40740723	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	pathophysiology	evidence_item	OTHER	40740723	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	pathophysiology	evidence_item	OTHER	40740723	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	16107578	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	33565749	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	pathophysiology	evidence_item	OTHER	40740723	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	16107578	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	40853861	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	40853861	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	16107578	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	16107578	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	biochemical	evidence_item	HUMAN_CLINICAL	23942199	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	biochemical	evidence_item	HUMAN_CLINICAL	40853861	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	biochemical	evidence_item	HUMAN_CLINICAL	40853861	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	genetic	evidence_item	HUMAN_CLINICAL	12032570	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	treatments	treatment_entry			
+Intestinal Hypomagnesemia 1	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	16107578	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	treatments	treatment_entry			
+Intestinal Hypomagnesemia 1	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	12032570	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	12032570	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	40853861	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	diagnosis	evidence_item	HUMAN_CLINICAL	16107578	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	animal_models	evidence_item	MODEL_ORGANISM	27991852	SUPPORT
+Intestinal Hypomagnesemia 1	True	magnesium	animal_models	evidence_item	MODEL_ORGANISM	27991852	SUPPORT
+Jalili Syndrome	False	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	24194943	SUPPORT
+Jalili Syndrome	False	magnesium	pathophysiology	evidence_item	MODEL_ORGANISM	24339795	SUPPORT
+Jervell and Lange-Nielsen Syndrome 2	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	31846911	SUPPORT
+Neurodevelopmental Disorder With Intention Tremor, Pyramidal Signs, Dyspraxia, And Ocular Anomalies	True	magnesium	pathophysiology	evidence_item	COMPUTATIONAL	35087184	SUPPORT
+Organophosphate Poisoning	True	magnesium	treatments	treatment_entry			
+Organophosphate Poisoning	True	magnesium	treatments	evidence_item	OTHER	34053713	SUPPORT
+Placental Abruption	False	magnesium	clinical_trials	evidence_item	HUMAN_CLINICAL	00186069	SUPPORT
+Placental Abruption	False	magnesium	treatments	treatment_entry			
+Placental Abruption	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	00186069	SUPPORT
+Placental Abruption	False	magnesium	treatments	treatment_entry			
+Preeclampsia	False	magnesium	treatments	treatment_entry			
+Preeclampsia	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	12057549	SUPPORT
+Preterm Premature Rupture of the Membranes	False	magnesium	treatments	treatment_entry			
+Preterm Premature Rupture of the Membranes	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	38726883	SUPPORT
+Preterm Premature Rupture of the Membranes	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	38726883	NO_EVIDENCE
+Refeeding Syndrome	False	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	40738722	SUPPORT
+Refeeding Syndrome	False	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	40738722	SUPPORT
+Refeeding Syndrome	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	41171118	SUPPORT
+Refeeding Syndrome	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	41171118	SUPPORT
+Refeeding Syndrome	False	magnesium	treatments	treatment_entry			
+Refeeding Syndrome	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	41171118	SUPPORT
+Refeeding Syndrome	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	41171118	SUPPORT
+Refeeding Syndrome	False	magnesium	diagnosis	evidence_item	HUMAN_CLINICAL	41113144	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	classifications	evidence_item	HUMAN_CLINICAL	3298795	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	inheritance	evidence_item	HUMAN_CLINICAL	3298795	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	inheritance	evidence_item	HUMAN_CLINICAL	9915957	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	pathophysiology	evidence_item	IN_VITRO	18448590	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	pathophysiology	evidence_item	OTHER	19812536	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	3298795	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	3298795	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	25765846	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	27234911	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	29657876	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	27234911	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	9915957	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	3298795	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	9915957	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	treatments	treatment_entry			
+Renal Hypomagnesemia 2	True	magnesium	treatments	evidence_item	OTHER	30175537	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	27234911	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	discussions	evidence_item	OTHER	30175537	SUPPORT
+Renal Hypomagnesemia 2	True	magnesium	mechanistic_hypotheses	evidence_item	IN_VITRO	18448590	SUPPORT
+Renal Hypomagnesemia 3	False	magnesium	pathophysiology	evidence_item	MODEL_ORGANISM	17442678	SUPPORT
+Renal Hypomagnesemia 3	False	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	11518780	SUPPORT
+Renal Hypomagnesemia 3	False	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	10390358	SUPPORT
+Renal Hypomagnesemia 3	False	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	25477417	SUPPORT
+Renal Hypomagnesemia 3	False	magnesium	phenotypes	evidence_item	OTHER	26613020	SUPPORT
+Renal Hypomagnesemia 3	False	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	25477417	SUPPORT
+Renal Hypomagnesemia 3	False	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	25477417	SUPPORT
+Renal Hypomagnesemia 3	False	magnesium	phenotypes	evidence_item	MODEL_ORGANISM	17442678	SUPPORT
+Renal Hypomagnesemia 3	False	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	25477417	SUPPORT
+Renal Hypomagnesemia 3	False	magnesium	biochemical	evidence_item	HUMAN_CLINICAL	25477417	SUPPORT
+Renal Hypomagnesemia 3	False	magnesium	treatments	treatment_entry			
+Renal Hypomagnesemia 3	False	magnesium	treatments	evidence_item	OTHER	26613020	SUPPORT
+Renal Hypomagnesemia 3	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	11518780	SUPPORT
+Renal Hypomagnesemia 3	False	magnesium	treatments	evidence_item	OTHER	26613020	REFUTE
+Renal Hypomagnesemia 3	False	magnesium	treatments	treatment_entry			
+Renal Hypomagnesemia 3	False	magnesium	treatments	evidence_item	OTHER	26613020	SUPPORT
+Renal Hypomagnesemia 3	False	magnesium	animal_models	evidence_item	MODEL_ORGANISM	17442678	SUPPORT
+Renal Hypomagnesemia 4	True	magnesium	inheritance	evidence_item	HUMAN_CLINICAL	3436090	SUPPORT
+Renal Hypomagnesemia 4	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	17671655	SUPPORT
+Renal Hypomagnesemia 4	True	magnesium	pathophysiology	evidence_item	OTHER	17671646	SUPPORT
+Renal Hypomagnesemia 4	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	3436090	SUPPORT
+Renal Hypomagnesemia 4	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	17671655	SUPPORT
+Renal Hypomagnesemia 4	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	17671655	SUPPORT
+Renal Hypomagnesemia 4	True	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	17671655	SUPPORT
+Renal Hypomagnesemia 4	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	17671655	SUPPORT
+Renal Hypomagnesemia 4	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	17671655	SUPPORT
+Renal Hypomagnesemia 4	True	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	3436090	SUPPORT
+Renal Hypomagnesemia 4	True	magnesium	biochemical	evidence_item	HUMAN_CLINICAL	17671655	SUPPORT
+Renal Hypomagnesemia 4	True	magnesium	biochemical	evidence_item	HUMAN_CLINICAL	17671655	SUPPORT
+Renal Hypomagnesemia 4	True	magnesium	biochemical	evidence_item	HUMAN_CLINICAL	17671655	SUPPORT
+Spinocerebellar Ataxia Type 2	False	magnesium	phenotypes	evidence_item	HUMAN_CLINICAL	18418684	SUPPORT
+Spinocerebellar Ataxia Type 2	False	magnesium	treatments	evidence_item	HUMAN_CLINICAL	18418684	SUPPORT
+TANGO2 Deficiency Disorder	True	magnesium	treatments	treatment_entry			
+TANGO2 Deficiency Disorder	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	35568137	SUPPORT
+TANGO2 Deficiency Disorder	True	magnesium	treatments	evidence_item	OTHER	29369572	SUPPORT
+Tetanus	True	magnesium	treatments	evidence_item		38822438	SUPPORT
+Tetanus	True	magnesium	treatments	treatment_entry			
+Traveler's Diarrhea	False	magnesium	discussions	evidence_item	IN_VITRO	101172171249	SUPPORT
+Tricho-dento-osseous Syndrome	False	magnesium	pathophysiology	evidence_item	HUMAN_CLINICAL	38006713	SUPPORT
+UBA5-Related Developmental and Epileptic Encephalopathy	True	magnesium	treatments	treatment_entry			
+UBA5-Related Developmental and Epileptic Encephalopathy	True	magnesium	treatments	evidence_item	HUMAN_CLINICAL	40217280	SUPPORT
+Alzheimer Disease	False	memantine	treatments	evidence_item		28671413	SUPPORT
+Alzheimer Disease	False	memantine	treatments	evidence_item		35608903	SUPPORT
+Alzheimer Disease	False	memantine	treatments	evidence_item		36412156	SUPPORT
+Alzheimer Disease	False	memantine	treatments	treatment_entry			
+Alzheimer Disease	False	memantine	treatments	evidence_item		12768511	SUPPORT
+Alzheimer Disease	False	memantine	treatments	evidence_item		27662322	SUPPORT
+Alzheimer Disease	False	memantine	treatments	evidence_item		20943326	SUPPORT
+Autosomal Recessive Cerebellar Ataxia-Saccadic Intrusion Syndrome	True	memantine	treatments	treatment_entry			
+Autosomal Recessive Cerebellar Ataxia-Saccadic Intrusion Syndrome	True	memantine	treatments	evidence_item	HUMAN_CLINICAL	10121201000028695201476	SUPPORT
+Catatonia	True	memantine	treatments	treatment_entry			
+Catatonia	True	memantine	treatments	evidence_item	HUMAN_CLINICAL	37039129	SUPPORT
+Catatonia	True	memantine	treatments	evidence_item	HUMAN_CLINICAL	37039129	SUPPORT
+Cerebral Amyloid Angiopathy	False	memantine	treatments	treatment_entry			
+Developmental And Epileptic Encephalopathy 46	True	memantine	treatments	treatment_entry			
+Developmental And Epileptic Encephalopathy 46	True	memantine	treatments	evidence_item	HUMAN_CLINICAL	27616483	SUPPORT
+Developmental And Epileptic Encephalopathy 46	True	memantine	treatments	evidence_item	HUMAN_CLINICAL	34560056	SUPPORT
+Developmental And Epileptic Encephalopathy 46	True	memantine	treatments	evidence_item	HUMAN_CLINICAL	41489401	REFUTE
+Developmental And Epileptic Encephalopathy 46	True	memantine	treatments	evidence_item	HUMAN_CLINICAL	41489401	SUPPORT
+Developmental And Epileptic Encephalopathy 46	True	memantine	animal_models	evidence_item	MODEL_ORGANISM	40277233	SUPPORT
+Developmental And Epileptic Encephalopathy 46	True	memantine	discussions	evidence_item	HUMAN_CLINICAL	41489401	SUPPORT
+Fragile X-Associated Tremor Ataxia Syndrome	False	memantine	clinical_trials	evidence_item	HUMAN_CLINICAL	00584948	SUPPORT
+GRIN1-Related Neurodevelopmental Disorder	True	memantine	treatments	treatment_entry			
+GRIN1-Related Neurodevelopmental Disorder	True	memantine	treatments	evidence_item	HUMAN_CLINICAL	41489401	SUPPORT
+GRIN1-Related Neurodevelopmental Disorder	True	memantine	discussions	evidence_item	HUMAN_CLINICAL	41489401	SUPPORT
+GRIN1-Related Neurodevelopmental Disorder	True	memantine	discussions	evidence_item	HUMAN_CLINICAL	38380699	SUPPORT
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	memantine	diagnosis	evidence_item	HUMAN_CLINICAL	41489401	SUPPORT
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	memantine	treatments	treatment_entry			
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	memantine	treatments	evidence_item	IN_VITRO	24839611	SUPPORT
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	memantine	treatments	evidence_item	IN_VITRO	24839611	SUPPORT
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	memantine	treatments	evidence_item	HUMAN_CLINICAL	24839611	SUPPORT
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	memantine	treatments	evidence_item	HUMAN_CLINICAL	41489401	SUPPORT
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	memantine	treatments	evidence_item	HUMAN_CLINICAL	41489401	SUPPORT
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	memantine	treatments	evidence_item	HUMAN_CLINICAL	27683935	SUPPORT
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	memantine	discussions	evidence_item	HUMAN_CLINICAL	41489401	SUPPORT
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	True	memantine	discussions	evidence_item	HUMAN_CLINICAL	24839611	SUPPORT
+GRIN2B-Related Developmental and Epileptic Encephalopathy	True	memantine	pathophysiology	evidence_item	IN_VITRO	28377535	SUPPORT
+GRIN2B-Related Developmental and Epileptic Encephalopathy	True	memantine	pathophysiology	evidence_item	IN_VITRO	28377535	SUPPORT
+GRIN2B-Related Developmental and Epileptic Encephalopathy	True	memantine	discussions	evidence_item	IN_VITRO	28377535	SUPPORT
+GRIN2B-Related Developmental and Epileptic Encephalopathy	True	memantine	treatments	treatment_entry			
+GRIN2B-Related Developmental and Epileptic Encephalopathy	True	memantine	treatments	evidence_item	HUMAN_CLINICAL	41489401	SUPPORT
+Hereditary Sensory and Autonomic Neuropathy Type 1A	False	memantine	pathophysiology	evidence_item	IN_VITRO	27016021	SUPPORT
+Intellectual Disability Autosomal Recessive 65	False	memantine	discussions	evidence_item	MODEL_ORGANISM	42160407	SUPPORT
+Isolated Sulfite Oxidase Deficiency	True	memantine	discussions	evidence_item	MODEL_ORGANISM	29106383	SUPPORT
+Major Depressive Disorder	False	memantine	discussions	evidence_item	HUMAN_CLINICAL	16390905	SUPPORT
+Obsessive-Compulsive Disorder	False	memantine	treatments	treatment_entry			
+Obsessive-Compulsive Disorder	False	memantine	treatments	evidence_item	COMPUTATIONAL	1287326	SUPPORT
+Obsessive-Compulsive Disorder	False	memantine	treatments	evidence_item	HUMAN_CLINICAL	30044966	REFUTE
+Obsessive-Compulsive Disorder	False	memantine	treatments	evidence_item	HUMAN_CLINICAL	42484816	REFUTE
+Obsessive-Compulsive Disorder	False	memantine	treatments	evidence_item	HUMAN_CLINICAL	40235251	SUPPORT
+Obsessive-Compulsive Disorder	False	memantine	mechanistic_hypotheses	evidence_item	COMPUTATIONAL	1287326	SUPPORT
+Homocystinuria	False	nitrous oxide	treatments	evidence_item	OTHER	20301697	SUPPORT
+Inborn Disorder of Cobalamin Metabolism and Transport	True	nitrous oxide	treatments	treatment_entry			
+Inborn Disorder of Cobalamin Metabolism and Transport	True	nitrous oxide	treatments	evidence_item	HUMAN_CLINICAL	20301503	SUPPORT
+MMACHC-related Methylmalonic Aciduria and Homocystinuria, cblC Type	False	nitrous oxide	treatments	evidence_item	HUMAN_CLINICAL	20301503	SUPPORT
+MMACHC-related Methylmalonic Aciduria and Homocystinuria, cblC Type	False	nitrous oxide	treatments	treatment_entry			
+MMACHC-related Methylmalonic Aciduria and Homocystinuria, cblC Type	False	nitrous oxide	treatments	evidence_item	HUMAN_CLINICAL	20301503	SUPPORT
+MMADHC-related Disorder of Cobalamin Metabolism, cblD Type	False	nitrous oxide	treatments	treatment_entry			
+MMADHC-related Disorder of Cobalamin Metabolism, cblD Type	False	nitrous oxide	treatments	evidence_item	OTHER	20301503	SUPPORT
+Methylcobalamin Deficiency Type cblE	True	nitrous oxide	treatments	treatment_entry			
+Methylcobalamin Deficiency Type cblE	True	nitrous oxide	treatments	evidence_item	HUMAN_CLINICAL	20301503	SUPPORT
+Methylcobalamin Deficiency Type cblG	True	nitrous oxide	treatments	treatment_entry			
+Methylcobalamin Deficiency Type cblG	True	nitrous oxide	treatments	evidence_item	HUMAN_CLINICAL	20301503	SUPPORT
+Methylmalonic Acidemia With Homocystinuria, Type cblJ	False	nitrous oxide	treatments	evidence_item	OTHER	20301503	SUPPORT
+Methylmalonic Aciduria and Homocystinuria cblL Type	False	nitrous oxide	treatments	treatment_entry			
+Methylmalonic Aciduria and Homocystinuria cblL Type	False	nitrous oxide	treatments	evidence_item	HUMAN_CLINICAL	20301503	SUPPORT

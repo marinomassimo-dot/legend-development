@@ -247,6 +247,30 @@
      "evidence": "advisor_pilot_20261113/brainstorm_20261116/kds_lane_a_he_20261117/LANE_A_AUDIT_HE_20261117.md (+ pmid_table.tsv, lane_a_arithmetic.py, lane_a_graph_pasted.py, lane_a_graph_kb.py): 25 PMIDs, 24 quotes, arithmetic reproduced, coverage figures reproduced on the dismech entry graph, radar item; findings F1-F14"
     }
    ]
+  },
+  "OBJ_HE_ADV034_20261117": {
+   "order": 4,
+   "source": "ADV message 2026-11-17 (ADV-034, host decision; text advisor_pilot_20261113/assignments/ADV-034.md in the ADV worktree); programme cap of delegates raised to four for package 3 only",
+   "steps": [
+    {
+     "step": "1: snippet-in-abstract and direction check of the 23 evidence items of the dismech WWOX entry (kb.zip v0.1.48)",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "advisor_pilot_20261113/brainstorm_20261116/kds_lane_a2_he_20261117/LANE_A2_REPORT_HE_20261117.md section 1 and wwox_entry_evidence_items_check.tsv: 22 of 23 snippets in the cited abstracts, direction agrees for all 23, 21 distinct snippets"
+    },
+    {
+     "step": "2: cross-disorder mining of the 4,068 dismech entries for NMDAR antagonists (ketamine, memantine, dextromethorphan, magnesium) in DEEs and other genetic epilepsies with evidence grading; orphan-node scan across entries",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "advisor_pilot_20261113/brainstorm_20261116/kds_lane_a2_he_20261117/LANE_A2_REPORT_HE_20261117.md section 2, dismech_nmdar_antagonist_items.tsv (457 items, 99 entries), dismech_graph_scan.tsv (4,068 entries), lane_a2_mine_dismech.py"
+    },
+    {
+     "step": "3: checker calibration: one blind verifier (sonnet, high, separate context) given the input and the nine GSK-3beta abstracts, preregistered before it runs (F1 0.4, F2 0.3, F6 0.3, F11 0.05, about 100k); tell ADV at dispatch and at completion; stop on any usage-limit notice",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "advisor_pilot_20261113/brainstorm_20261116/kds_lane_a2_he_20261117/LANE_A2_REPORT_HE_20261117.md section 4 with PREREG_CHECKER_CALIBRATION_BEFORE_RUN.md (53776c245 before dispatch): 4 of 4 primary defects found against 1.05 expected; claude-sonnet-5-5 effort high read back; no leak; the brief localised the check"
+    }
+   ]
   }
  },
  "DEFAULTS_TAKEN": [
