@@ -1,0 +1,17 @@
+metric	value
+queries_run	91 (49 Europe PMC full-text-wide + 25 Europe PMC gene-in-title/abstract + 12 Europe PMC ephys-specific + 5 PubMed)
+hit_sum_over_all_queries	13152 (overlapping, not unique)
+unique_records_retrieved_for_triage	2776 (2714 lite records capped at 1000 per query; 413 gene-in-title/abstract core records; 322 ephys full-text-wide)
+triage_basis	gene-in-title/abstract set of 413 unique records filtered by neural/ephys keywords (175 reviewed by title); full-text-wide ephys hits reviewed by title
+included_fully_read_other_laboratory	2 (36828035, 32000863)
+included_abstract_only_other_laboratory	1 (19500159)
+original_laboratory_fully_read	3 (34747138, 42422765, 34268881)
+original_laboratory_abstract_only	2 (PPR960425, 42397075)
+fully_downloaded_keyword_screened_excluded	5 (31340538, 32581702, 25649963, 31543760, 42909904)
+excluded_abstract_only_blocked	1 (30290271)
+measurement_rows	16
+quotes_verified_verbatim	16 of 16 (quote_verification.tsv)
+challenge_pages_met	1 (reCAPTCHA on PMC article page for PMC7104842; stopped)
+P1_other_lab_report	none found (slice electrographic bursts removed by APV)
+P2_other_lab_report	none found (sIPSC amplitude/frequency)
+P3_other_lab_report	none found (resting potential, input resistance, sag, rebound)
