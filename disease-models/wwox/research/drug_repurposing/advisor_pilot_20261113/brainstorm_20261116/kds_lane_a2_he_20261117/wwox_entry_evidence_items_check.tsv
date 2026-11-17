@@ -1,0 +1,24 @@
+item	node	pmid	label	evidence_source	snippet_in_abstract	snippet_shared_with_items	direction_vs_label	note
+1	Biallelic WWOX Loss-of-Function Lesion	30356099	SUPPORT	HUMAN_CLINICAL	yes		agrees	largest published cohort, per the explanation
+2	Biallelic WWOX Loss-of-Function Lesion	24456803	SUPPORT	HUMAN_CLINICAL	yes		agrees	index observation of a nonsense variant in one family
+3	Loss of WWOX Scaffold Function	39507621	SUPPORT	HUMAN_CLINICAL	no		not applicable (snippet not in abstract)	full text only (introduction sentence on domain architecture); the case report's abstract has no scaffold-function datum; the explanation says the node is scoped to scaffold function because the substrate is unknown, an inference and not a measurement
+4	Wnt/GSK-3beta Signalling Dysregulation	32000863	SUPPORT	MODEL_ORGANISM	yes		agrees	measures GSK3beta activation and a lithium effect on PTZ-provoked seizures; no Wnt/beta-catenin readout in the abstract, so 'Wnt' in the node name has no measurement here
+5	Hyal-2/WWOX/Smad4 Complex Failure	27845895	SUPPORT	IN_VITRO	yes		agrees	cell-based loss-of-function result
+6	Impaired Oligodendrocyte Maturation	33914858	SUPPORT	MODEL_ORGANISM	yes		agrees	transcript levels of myelination genes as a proxy for maturation
+7	CNS Hypomyelination	33914858	SUPPORT	MODEL_ORGANISM	yes	9	agrees	same snippet as item 9
+8	CNS Hypomyelination	33914858	SUPPORT	IN_VITRO	yes		agrees	human organoid with WWOX deletion; graded IN_VITRO
+9	Impaired Axonal Conductivity	33914858	SUPPORT	MODEL_ORGANISM	yes	7	agrees	same snippet as item 7: one sentence counted as evidence for two nodes
+10	Disrupted Cortical Neuronal Migration	32000863	SUPPORT	MODEL_ORGANISM	yes		agrees	malformations and migration defects in Wwox-/- mice
+11	Increased Excitatory Synaptic Drive	34634460	SUPPORT	MODEL_ORGANISM	yes	12	agrees	same snippet as item 12
+12	Reduced Inhibitory Synaptic Drive	34634460	SUPPORT	MODEL_ORGANISM	yes	11	agrees	same snippet as item 11 (its explanation says so)
+13	Intrinsic Neuronal Hyperexcitability	34634460	SUPPORT	MODEL_ORGANISM	yes		agrees	intrinsic membrane measurements
+14	Cortical Excitation-Inhibition Imbalance	34634460	SUPPORT	MODEL_ORGANISM	yes		agrees, interpretive	the authors' concluding sentence, not a measurement
+15	Neocortical Network Hypersynchrony	34634460	SUPPORT	MODEL_ORGANISM	yes		agrees	
+16	Neocortical Network Hypersynchrony	34634460	SUPPORT	MODEL_ORGANISM	yes		agrees	the abstract does not name the NMDA antagonist used
+17	Early-Onset Drug-Resistant Seizures	36779245	SUPPORT	HUMAN_CLINICAL	yes		agrees	seizure-type frequencies; early onset and drug resistance are in item 18
+18	Early-Onset Drug-Resistant Seizures	30356099	SUPPORT	HUMAN_CLINICAL	yes		agrees	review-level statement
+19	Progressive Cerebral and Optic Atrophy	36779245	SUPPORT	HUMAN_CLINICAL	yes		agrees	
+20	Progressive Cerebral and Optic Atrophy	32000863	SUPPORT	MODEL_ORGANISM	yes		agrees	mouse
+21	Profound Developmental Impairment	33916893	SUPPORT	HUMAN_CLINICAL	yes		agrees	
+22	Genotype-Stratified Mortality Risk	36779245	SUPPORT	HUMAN_CLINICAL	yes		agrees	formal survival analysis; biallelic null lower survival than at least one presumed hypomorphic missense
+23	Genotype-Stratified Mortality Risk	30356099	SUPPORT	HUMAN_CLINICAL	yes		agrees, hedged	'seems to be associated'
