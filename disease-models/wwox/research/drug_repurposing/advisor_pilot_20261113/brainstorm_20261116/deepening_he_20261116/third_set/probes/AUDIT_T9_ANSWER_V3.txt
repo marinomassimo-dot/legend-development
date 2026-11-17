@@ -1,0 +1,14 @@
+1. Pharmacological chaperone or ligand-mediated stabilisation of the folded carrier (substrate or inhibitor-like binders) | "cause misfolding and loss of the carrier"
+2. Chemical or proteostasis-modulating folding correction (chemical chaperones, folding-pathway modulators, temperature rescue) | "misfolding"
+3. Reduction of ER-associated degradation or proteasome and lysosome clearance of the misfolded carrier | "misfolding and loss of the carrier"
+4. Enhanced trafficking, export from the ER and delivery to the plasma membrane (including trafficking-factor or cargo-receptor manipulation) | "loss of the carrier at the cell surface"
+5. Reduced endocytosis or internalisation, or increased recycling, of surface carrier (stabilising residence at the membrane) | "at the cell surface"
+6. Gene dosage restoration: overexpression or supplementation of the wild-type carrier (gene therapy, AAV, transcript upregulation) | "loss of the carrier"
+7. Allele-level correction or editing of the variant (base or prime editing, knock-in reversal) | "Missense variants" and "Knock-in mice carrying such a variant"
+8. Replacement of the carrier's function by pharmacologically or genetically altering the transported substrate (substrate supply, synthesis, or extracellular and synaptic levels) | "plasma-membrane carrier protein" (the carrier's transport function)
+9. Compensation by a paralogous or alternative transporter, or by an alternative uptake route | "carrier protein of the nervous system"
+10. Downstream circuit and neuromodulator-level symptomatic control (dopaminergic, noradrenergic or other monoaminergic receptor antagonists or agonists; modulation of neuronal excitability) | "hyperactive" and "normalise the hyperactivity"
+11. Cell-type or region-specific restoration of the carrier (conditional rescue in the neuron population that drives the behaviour) | "of the nervous system" and "discriminate it from its nearest rival"
+12. Chronic loss of the transporter-dependent adaptation (developmental versus acute timing of intervention) | "Knock-in mice" and "normalise" (hinted weakly)
+
+Notes: the "single manipulation (genetic, or a class at mechanism level)" and the pairing "locomotor activity AND carrier's level at the cell surface" suggest a split between levers that act on the carrier (they predict a change in surface level) and levers that act downstream (they predict locomotion changes with no change in surface level). Lever 10 is the main downstream class that predicts this.
