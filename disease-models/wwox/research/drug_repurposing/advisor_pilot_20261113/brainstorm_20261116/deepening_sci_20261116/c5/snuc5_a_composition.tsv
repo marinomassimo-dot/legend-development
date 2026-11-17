@@ -1,0 +1,5 @@
+genotype	sample_group	n_nuclei	excitatory	inhibitory	astrocyte	oligodendrocyte	microglia	unassigned
+ctrl	all	3182	0.519	0.060	0.137	0.225	0.050	0.009
+ctrl	1	3182	0.519	0.060	0.137	0.225	0.050	0.009
+ko	all	2920	0.509	0.090	0.217	0.078	0.067	0.039
+ko	1	2920	0.509	0.090	0.217	0.078	0.067	0.039
