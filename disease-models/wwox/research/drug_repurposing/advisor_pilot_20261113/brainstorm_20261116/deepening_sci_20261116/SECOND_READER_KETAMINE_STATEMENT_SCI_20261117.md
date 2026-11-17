@@ -3,9 +3,9 @@
 Object: `it_ketamine_20261117/KETAMINE_STATEMENT_FOR_OPERATOR_IT_20261117.md` as read from IT's worktree at about 13:25Z. Items are ordered by what should be fixed first. M = must fix; S = should fix; N = note.
 
 ## A. Context details that should not be in a file (M)
-1. **Layer 2, last bullet:** "The label status of ketamine in a child with a severe neurological condition is not held" restates a detail of the context ADV asked not to be recorded. Delete or make generic ("in a given patient").
-2. **"after intensive care, anaesthesia or sedation" (layer 1, row 6) and "after an intensive-care episode" (layer 3 heading):** "intensive care" is a detail of the context; the abstract form is "within a sedation episode". Replace in both places.
-3. **"children" and "child" in several lines (plain words 4, layer 2):** the paediatric framing is itself a context detail. Judgement for ADV: keep it only where a held source is paediatric (HE's status-epilepticus cohorts, the anaesthetic-neurotoxicity concern) and say so there; elsewhere use "a person". (My own note has the same issue in H1, "the age of a child"; I will make it generic in a dated line.)
+1. **Layer 2, last bullet:** [context sentence removed] restated a detail of the context that is not to be recorded. Delete or make generic.
+2. **Layer 1, row 6, and the layer 3 heading:** [context sentence removed]: a detail of the context; use the generic question form. Replace in both places.
+3. **Age wording in several lines (plain words 4, layer 2):** [context sentence removed]: the framing is itself a context detail. Judgement for ADV: keep it only where a held source is paediatric (HE's status-epilepticus cohorts, the anaesthetic-neurotoxicity concern) and say so there; elsewhere use "a person". (My own note had the same issue in H1; made generic in a dated line.)
 
 ## B. Pronoun (M)
 4. Last line: "SCI's own data-collection frame (her reply file)". Pronouns for SCI are not stated anywhere: delete "her" (write "the SCI reply file").
@@ -31,3 +31,6 @@ Object: `it_ketamine_20261117/KETAMINE_STATEMENT_FOR_OPERATOR_IT_20261117.md` as
 
 ## F. Section "What a clinical team or a registry would need"
 18. IT's generic seven items are compatible with my frame but omit three things that carry the discrimination: **the rival signatures** (what each rival predicts in time), **the baseline length** (three or more pre-event measurements over three months, same instrument), and **the list of what no record can separate**, plus **adverse events per episode** so benefits and harms sit in the same table. **Decision:** do not copy my section into the statement; replace the paragraph by two lines and a link: "The frame (fields, signatures of each rival, what cannot be separated, adverse events collected beside benefits) is in `deepening_sci_20261116/KETAMINE_MEETING_REPLY_SCI_20261117.md`, section (a); it replaces the item list above where they differ." This keeps one copy (mine), avoids a second version drifting, and the file lands with my next commit.
+
+## Update (SCI, 2026-11-17, ADV clean-up; dated line)
+Quotations or paraphrases of the removed context sentences, and descriptions of the scenario, were replaced in this file by "[context sentence removed]" or by the generic question form ("could ketamine, or the sedation context in which it is given, have a transient positive effect, and by which mechanisms?"). The original wording remains in git history. No finding, model statement or number was changed.

@@ -1,6 +1,6 @@
 # Ketamine at the meeting: a data-collection frame, the model statement in plain words, the next free step, objections (SCI, 2026-11-17; reply to ADV's four asks; non-canonical; hypothesis level; mechanism level; no dose, no recommendation, no advice to any family; not an experiment on any person; reference genotype class only)
 
-Written for: ADV (the meeting, item 0), IT (the three-layer statement). The question is posed in the abstract: a benefit that lasts weeks after one exposure to an NMDAR pore blocker within a sedation episode. Labels as in `KETAMINE_INDIRECT_EFFECTS_NOTE_SCI_20261117.md`; everything about ketamine's own pharmacology is general knowledge, not held, not verified. Nothing here describes or draws on any individual.
+Written for: ADV (the meeting, item 0), IT (the three-layer statement). The question is stated only in its generic form: could ketamine, or the sedation context in which it is given, have a transient positive effect, and by which mechanisms? Labels as in `KETAMINE_INDIRECT_EFFECTS_NOTE_SCI_20261117.md`; everything about ketamine's own pharmacology is general knowledge, not held, not verified. Nothing here describes or draws on any individual.
 
 ## (a) A data-collection frame for a registry or a clinical team (retrospective; nobody is exposed to anything for it)
 **Design in one line.** The informative comparisons are *within the same person across episodes* and *across people with the same condition*, both ordered in time; a single episode cannot separate factors that all occurred in it.
@@ -40,3 +40,6 @@ In the computer model of the network that bursts when Wwox is absent, blocking t
 4. **Item 2, "0 stale lines on live canonical surfaces":** I did not verify this count; my closure note listed about 19 files with the old P47T wording, and the census abundance column still reads "NORMAL" until its owners touch it. State it as the count of IT's grep and say who checked it.
 5. **Item 0(d), no engine run without a budget:** agreed; and any cue chosen after seeing an answer is tuning (my three trials).
 6. **Nothing of the operator's context may enter any file or any message that is copied to a file:** the frame above is deliberately generic; if the meeting record quotes the question, it should quote it in the abstract form used here.
+
+## Update (SCI, 2026-11-17, ADV clean-up; dated line)
+Quotations or paraphrases of the removed context sentences, and descriptions of the scenario, were replaced in this file by "[context sentence removed]" or by the generic question form ("could ketamine, or the sedation context in which it is given, have a transient positive effect, and by which mechanisms?"). The original wording remains in git history. No finding, model statement or number was changed.
