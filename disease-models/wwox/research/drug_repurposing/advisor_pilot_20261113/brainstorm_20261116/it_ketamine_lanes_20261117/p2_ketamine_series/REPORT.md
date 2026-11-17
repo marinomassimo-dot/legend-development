@@ -97,3 +97,5 @@ Responder definition and numerators per group (Kuki), under-1-year count (Kuki),
 
 ## Limits
 Two key papers abstract-level; PMC reCAPTCHA pages (PMC12706389, PMC11210084, PMC10391362, PMC9436287) discarded, Europe PMC XML used where it worked, 41550426 embargoed. Europe PMC counts are full-text-wide and not comparable with PubMed. No dose or use recommendation is made or implied.
+
+**Update 2026-11-17 (IT; after blind verification of sampled rows):** corrections for this package are in `../CORRECTIONS_AFTER_BLIND_VERIFICATION_IT_20261117.md`; the text above is unchanged.

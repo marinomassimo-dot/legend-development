@@ -271,6 +271,18 @@
      "evidence": "advisor_pilot_20261113/brainstorm_20261116/kds_lane_a2_he_20261117/LANE_A2_REPORT_HE_20261117.md section 4 with PREREG_CHECKER_CALIBRATION_BEFORE_RUN.md (53776c245 before dispatch): 4 of 4 primary defects found against 1.05 expected; claude-sonnet-5-5 effort high read back; no leak; the brief localised the check"
     }
    ]
+  },
+  "OBJ_HE_ADV035_20261117": {
+   "order": 5,
+   "source": "ADV message 2026-11-17 (ADV-035, host decision; advisor_pilot_20261113/assignments/ADV-035.md)",
+   "steps": [
+    {
+     "step": "one recipe row in framework/scripts/README.md section 13: before relying on a generated synthesis report, literature-review table or pipeline-produced claim list (mechanical layer, claim-faithful layer, table-vs-graph agreement, agent and population match, vote counts, number with sample unit); worked cases routed; routing test and quick suites; land from the own worktree",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "framework/scripts/README.md section 13, recipe row 'You are about to rely on a generated synthesis report' (two layers, five points, worked cases routed); test_tool_routing, documented commands, section references, structured data and release surface suites OK"
+    }
+   ]
   }
  },
  "DEFAULTS_TAKEN": [

@@ -71,3 +71,5 @@
 
 ## Files (/tmp/it56_ket/p3_collision/)
 COLLISION_PAPERS.tsv, SOURCES.tsv, SEARCHES.tsv, totext.py, txt/, sources/ (the three BLOCKED_* files are challenge pages, kept as evidence of the block).
+
+**Update 2026-11-17 (IT; after blind verification of sampled rows):** corrections for this package are in `../CORRECTIONS_AFTER_BLIND_VERIFICATION_IT_20261117.md`; the text above is unchanged.

@@ -67,3 +67,5 @@ No body quotes from the memantine trial (every quote for it is from the abstract
 
 ## Files (/tmp/it56_ket/p1_memantine/)
 SOURCES.tsv (24 rows), SEARCHES.tsv (21 rows), MEMANTINE_TRIAL_AUDIT.tsv (21 rows), sources/ (NCT03779672 and NCT07224581 registry JSON, 8 ClinicalTrials.gov query JSONs, 10 Europe PMC abstract JSONs, the PMID 33493807 excerpts file, and the blocked or error captures for 36256600, 39970743, 34074563 and 33493807).
+
+**Update 2026-11-17 (IT; after blind verification of sampled rows):** corrections for this package are in `../CORRECTIONS_AFTER_BLIND_VERIFICATION_IT_20261117.md`; the text above is unchanged.
