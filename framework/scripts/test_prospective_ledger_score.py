@@ -36,6 +36,11 @@ class Ledger(unittest.TestCase):
         self.assertIn(f"ledger={math.log(0.7) + math.log(0.001):.4f}", tot)     # B: 11 is outside every bin -> the floor
         self.assertIn(f"naive={math.log(0.8):.4f}", tot)
 
+    def test_a_note_is_printed_beside_the_score_and_never_excludes_the_line(self):
+        p = self.d / "obs_note.tsv"; p.write_text("id\tvalue\tlocator\tnote\nA\t0.5\tFig. 2B\tinterval touches 0\n")
+        r = run("score", str(self.side), str(p)); self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertIn("interval touches 0", r.stdout); self.assertIn(f"ledger={math.log(0.7):.4f}", r.stdout)
+
     def test_a_value_without_a_locator_is_refused(self):
         for loc in ("", "-", "TBD", "n/a"):
             r = run("score", str(self.side), self.obs([f"A\t0.5\t{loc}"])); self.assertEqual(r.returncode, 1); self.assertIn("no locator", r.stderr)

@@ -1,0 +1,33 @@
+id | QS | QL | quote or '-'
+Y01 | NO | NO | -
+Y02 | NO | NO | -
+Y03 | NO | NO | - (NMDAR antagonist/chemogenetic silencing is glutamatergic, not on the listed neuromodulatory levers)
+Y04 | NO | NO | -
+Y05 | NO | NO | -
+Y06 | NO | NO | -
+Y07 | NO | YES | "An extrinsic M1-muscarinic brake on OPC differentiation is raised... releasing it from OPCs... restores myelin, with a smaller cognitive effect" (lever is Chrm1 deletion, genetic)
+Y08 | NO | NO | -
+Y09 | NO | NO | -
+Y10 | NO | NO | -
+Y11 | NO | NO | - (sodium-channel/NMDAR/Kv7 levers, not purinergic or neuromodulatory)
+Y12 | NO | NO | -
+Y13 | NO | NO | -
+Y14 | NO | NO | -
+Y15 | NO | NO | -
+Y16 | NO | ONE-SIDED | "a differentiation push (for example a muscarinic M1 antagonist class) improves WM but not seizures" (WM only; main lever is a sodium-channel blocker)
+Y17 | NO | ONE-SIDED | "an OPC differentiation push, for example through a muscarinic M1 antagonist class... Myelin repair alone raises WM... Cognition improves little"
+Y18 | NO | NO | -
+Y19 | NO | NO | -
+Y20 | NO | NO | -
+Y21 | NO | NO | -
+Y22 | NO | NO | -
+Y23 | NO | NO | -
+Y24 | NO | NO | -
+Y25 | NO | NO | -
+Y26 | NO | NO | -
+Y27 | NO | NO | -
+Y28 | NO | NO | -
+Y29 | NO | NO | -
+Y30 | NO | NO | -
+
+Totals: QS=YES 0, QS ONE-SIDED 0; QL=YES 1 (Y07), QL ONE-SIDED 2 (Y16, Y17).
