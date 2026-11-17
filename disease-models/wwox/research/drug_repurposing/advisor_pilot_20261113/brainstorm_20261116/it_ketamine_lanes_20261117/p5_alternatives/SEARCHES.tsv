@@ -1,0 +1,57 @@
+route	exact query string	date	count returned	how many opened	why others were not
+PubMed tool (search_articles)	cannabidiol randomized placebo-controlled Dravet syndrome OR Lennox-Gastaut syndrome[Title]	2026-11-17	784 (15 shown)	0	result list not title-targeted; replaced by Europe PMC title queries
+PubMed tool (search_articles)	fenfluramine randomized placebo-controlled Dravet OR Lennox-Gastaut	2026-11-17	2267 (12 shown)	0	unfocused; replaced
+PubMed tool (search_articles)	stiripentol Dravet placebo-controlled add-on	2026-11-17	8	0	did not return the STICLO trial; Europe PMC route used
+PubMed tool (search_articles)	ganaxolone CDKL5 deficiency disorder randomised placebo-controlled	2026-11-17	3	0 via tool (Knight 2022 and Downs 2024 opened through Europe PMC)	
+PubMed tool (search_articles)	everolimus tuberous sclerosis complex refractory seizures randomised placebo EXIST-3	2026-11-17	3	0	EXIST-3 primary paper not in this list; found on Europe PMC
+PubMed tool (search_articles)	infantile spasms randomised trial vigabatrin prednisolone ACTH hormonal therapy	2026-11-17	9	0 via tool	list used for orientation only
+PubMed tool (search_articles)	ketogenic diet randomized controlled trial children epilepsy	2026-11-17	83 (20 shown)	0 via tool	orientation; Europe PMC title queries used for selection
+Europe PMC REST search (resultType=lite)	TITLE:"Cannabidiol in Dravet" OR TITLE:"cannabidiol" AND TITLE:"Dravet syndrome" AND PUB_TYPE:"Randomized Controlled Trial"	2026-11-17	6	2	others are OLE/dose-ranging safety/commentary
+Europe PMC REST search (resultType=lite)	TITLE:"cannabidiol" AND TITLE:"Lennox-Gastaut" AND PUB_TYPE:"Randomized Controlled Trial"	2026-11-17	5	2	others OLE/post-hoc
+Europe PMC REST search (resultType=lite)	TITLE:"fenfluramine" AND (TITLE:"Dravet" OR TITLE:"Lennox") AND (TITLE:"placebo" OR TITLE:"randomi")	2026-11-17	2	2	
+Europe PMC REST search (resultType=lite)	TITLE:"fenfluramine" AND (TITLE:"Dravet" OR TITLE:"Lennox") AND PUB_YEAR:[2019 TO 2023] AND PUB_TYPE:"Randomized Controlled Trial"	2026-11-17	9	4	others post-hoc/cardiac/executive-function analyses
+Europe PMC REST search (resultType=lite)	TITLE:"stiripentol" AND (TITLE:"Dravet" OR TITLE:"severe myoclonic")	2026-11-17	56	0	real-world/PK/consensus papers; not randomised
+Europe PMC REST search (resultType=lite)	TITLE:"stiripentol" AND (TITLE:"severe myoclonic epilepsy in infancy" OR TITLE:"placebo-controlled") AND PUB_YEAR:[1999 TO 2022]	2026-11-17	6	1	STICLO opened; childhood partial epilepsy RCT is not DEE; others reviews
+Europe PMC REST search (resultType=lite)	TITLE:"ganaxolone" AND (TITLE:"CDKL5" OR TITLE:"placebo")	2026-11-17	12	2	others reviews/mechanism/HTA
+Europe PMC REST search (resultType=lite)	TITLE:"everolimus" AND TITLE:"seizures" AND TITLE:"tuberous"	2026-11-17	11	0	reviews/PK/substudies
+Europe PMC REST search (resultType=lite)	TITLE:"EXIST-3"	2026-11-17	7	0	most hits unrelated; EXIST-3 paediatric analysis found
+Europe PMC REST search (resultType=lite)	TITLE:"Adjunctive everolimus therapy for treatment-resistant focal-onset seizures"	2026-11-17	1	1	
+Europe PMC REST search (resultType=lite)	TITLE:"vigabatrin" AND TITLE:"infantile spasms" AND PUB_TYPE:"Randomized Controlled Trial"	2026-11-17	13	6	others open/observational; Knupp cosyntropin cohort not randomised
+Europe PMC REST search (resultType=lite)	TITLE:"infantile spasms" AND (TITLE:"prednisolone" OR TITLE:"ACTH" OR TITLE:"corticotropin" OR TITLE:"hormonal") AND PUB_TYPE:"Randomized Controlled Trial"	2026-11-17	13	2	older ACTH dose trials, nitrazepam, pyridoxine add-on, Mg add-on not opened (outside brief list)
+Europe PMC REST search (resultType=lite)	TITLE:"prednisolone" AND TITLE:"ACTH" OR TITLE:"corticotropin" AND TITLE:"infantile spasms" AND (TITLE:"randomi" OR TITLE:"trial") AND PUB_YEAR:[2008 TO 2024]	2026-11-17	5	1	Li 2020 meta-analysis opened
+Europe PMC REST search (resultType=lite)	AUTH:"Wanigasinghe J" AND TITLE:"infantile spasms"	2026-11-17	4	0	the prednisolone-vs-ACTH RCT by this author was NOT returned: not held
+Europe PMC REST search (resultType=lite)	TITLE:"Hormonal therapy" AND TITLE:"infantile spasms" AND (TITLE:"Cochrane" OR TITLE:"meta-analysis" OR TITLE:"systematic")	2026-11-17	1	1	Guang 2022
+Europe PMC REST search (resultType=lite)	TITLE:"vigabatrin" AND TITLE:"infantile spasms" AND (TITLE:"Cochrane" OR TITLE:"systematic review")	2026-11-17	0	0	no result
+Europe PMC REST search (resultType=lite)	TITLE:"ketogenic diet" AND PUB_TYPE:"Randomized Controlled Trial" AND (TITLE:"children" OR TITLE:"infants" OR TITLE:"epilepsy" OR TITLE:"spasms")	2026-11-17	20	6	others autism/ADHD/obesity, protocols, economic analyses
+Europe PMC REST search (resultType=lite)	TITLE:"ketogenic" AND (TITLE:"Cochrane" OR TITLE:"systematic review") AND TITLE:"epilepsy"	2026-11-17	28	0	not opened; primary RCTs used
+Europe PMC REST search (resultType=lite)	TITLE:"cenobamate" AND (TITLE:"pediatric" OR TITLE:"paediatric" OR TITLE:"children" OR TITLE:"Lennox")	2026-11-17	29	1	all hits real-world/retrospective/reviews; no paediatric DEE RCT found
+Europe PMC REST search (resultType=lite)	TITLE:"rufinamide" AND TITLE:"Lennox-Gastaut" AND PUB_YEAR:[2005 TO 2010]	2026-11-17	14	0	reviews
+Europe PMC REST search (resultType=lite)	AUTH:"Glauser T" AND TITLE:"rufinamide" AND PUB_YEAR:2008	2026-11-17	1	1	
+Europe PMC REST search (resultType=lite)	TITLE:"clobazam" AND TITLE:"Lennox-Gastaut" AND TITLE:"placebo"	2026-11-17	1	0	post-hoc
+Europe PMC REST search (resultType=lite)	AUTH:"Ng YT" AND TITLE:"clobazam" AND PUB_YEAR:2011	2026-11-17	1	1	
+Europe PMC REST search (resultType=lite)	TITLE:"levetiracetam" AND TITLE:"fosphenytoin" AND TITLE:"valproate"	2026-11-17	12	1	adult/toxin subanalysis not opened
+Europe PMC REST search (resultType=lite)	TITLE:"status epilepticus" AND (TITLE:"children" OR TITLE:"paediatric" OR TITLE:"pediatric") AND (TITLE:"levetiracetam" OR TITLE:"phenytoin") AND PUB_TYPE:"Randomized Controlled Trial"	2026-11-17	11	5	protocols, PK, other
+Europe PMC REST search (resultType=lite)	TITLE:"Randomized Trial of Three Anticonvulsant Medications for Status Epilepticus"	2026-11-17	1	1	
+Europe PMC REST search (resultType=lite)	TITLE:"refractory status epilepticus" AND (TITLE:"midazolam" OR TITLE:"pentobarbital" OR TITLE:"thiopental" OR TITLE:"barbiturate" OR TITLE:"anesthetic") AND (TITLE:"children" OR TITLE:"pediatric" OR TITLE:"paediatric" OR TITLE:"systematic review")	2026-11-17	19	6	retrospective single-centre series not opened
+Europe PMC REST search (resultType=lite)	TITLE:"thiopental" AND TITLE:"propofol" AND TITLE:"status epilepticus"	2026-11-17	7	1	Cochrane 2017 opened
+Europe PMC REST search (resultType=lite)	TITLE:"midazolam" AND TITLE:"status epilepticus" AND (TITLE:"infusion") AND PUB_TYPE:"Randomized Controlled Trial"	2026-11-17	2	2	
+Europe PMC REST search (resultType=lite)	TITLE:"refractory status epilepticus" AND TITLE:"ketamine" AND (TITLE:"systematic review" OR TITLE:"meta-analysis")	2026-11-17	8	7	Shehata 2024 (pro/anti-epileptic SR) not opened
+Europe PMC REST search (resultType=lite)	TITLE:"ketamine" AND TITLE:"status epilepticus" AND (TITLE:"children" OR TITLE:"pediatric" OR TITLE:"paediatric")	2026-11-17	21	9	surveys, PK modelling, prehospital case series not opened
+Europe PMC REST search (resultType=lite)	TITLE:"ketamine" AND TITLE:"status epilepticus" AND PUB_TYPE:"Randomized Controlled Trial"	2026-11-17	2	2	Othman 2025 (RCT) and KETASER01 protocol
+Europe PMC REST search (resultType=lite)	KETASER01 OR (AUTH:"Rosati A" AND TITLE:"ketamine" AND TITLE:"refractory convulsive status epilepticus")	2026-11-17	10	2	results paper (2022) and protocol (2016) opened
+Europe PMC REST search (resultType=lite)	ABSTRACT:"NCT02431663"	2026-11-17	2	0	same two
+Europe PMC REST search (resultType=lite)	(TITLE:"ketamine" OR ABSTRACT:"ketamine") AND (TITLE:"status epilepticus") AND (ABSTRACT:"GRADE" OR ABSTRACT:"certainty of evidence" OR ABSTRACT:"quality of evidence" OR ABSTRACT:"level of evidence" OR ABSTRACT:"low-quality evidence") AND (ABSTRACT:"children" OR ABSTRACT:"pediatric" OR ABSTRACT:"paediatric")	2026-11-17	1	0	one 2014 review, not an SR; no paediatric ketamine SR with GRADE wording found by this route
+Europe PMC REST search (resultType=lite)	TITLE:"refractory status epilepticus" AND (TITLE:"children" OR TITLE:"pediatric" OR TITLE:"paediatric") AND (TITLE:"systematic review" OR TITLE:"guideline" OR TITLE:"consensus") AND PUB_YEAR:[2018 TO 2026]	2026-11-17	3	0	midazolam SR already held; others not ketamine
+Europe PMC REST search (resultType=lite)	(ABSTRACT:"dextromethorphan" OR TITLE:"dextromethorphan") AND (TITLE:"epilep*" OR TITLE:"seizure*" OR TITLE:"encephalopathy" OR TITLE:"hyperglycinemia" OR TITLE:"spasm*") AND (ABSTRACT:"children" OR ABSTRACT:"patients") AND PUB_YEAR:[1990 TO 2026]	2026-11-17	20	2	NKH/glycine encephalopathy reports and non-epilepsy; no randomised trial in the 12 shown
+Europe PMC REST search (resultType=lite)	(TITLE:"amantadine") AND (ABSTRACT:"epilep*" OR ABSTRACT:"seizure*") AND (ABSTRACT:"children" OR ABSTRACT:"patients" OR ABSTRACT:"randomi*")	2026-11-17	7	1	case reports / small series; no RCT
+Europe PMC REST search (resultType=lite)	(TITLE:"NMDA receptor antagonist*") AND (TITLE:"epilep*" OR TITLE:"encephalopathy") AND (ABSTRACT:"randomi*")	2026-11-17	0	0	no result
+Europe PMC REST search (resultType=lite)	(TITLE:"memantine" OR TITLE:"NMDA") AND TITLE:"epileptic encephalopathy" AND PUB_TYPE:"Randomized Controlled Trial"	2026-11-17	1	0	Schiller 2023 only; P1 package covers memantine; not duplicated
+Europe PMC REST search (resultType=lite)	TITLE:"radiprodil"	2026-11-17	11	2	preclinical/PK papers not opened
+Europe PMC REST search (resultType=lite)	TITLE:"esketamine" AND (TITLE:"seizure" OR TITLE:"epilep" OR TITLE:"status")	2026-11-17	9	1	one paediatric NORSE case report; rest anaesthesia/psychiatry
+Europe PMC REST search (resultType=lite)	(by title) Soto-Insuga amantadine; Bjoraker dextromethorphan	2026-11-17	2	2	fetched by PMID
+ClinicalTrials.gov REST v2 /studies (no key, no contact parameter)	query.intr=radiprodil	2026-11-17	10 returned	10 listed; fields read	registry fields only; NCT07224581 randomized triple-masked phase 3 GRIN; NCT02829827 3 infants terminated
+ClinicalTrials.gov REST v2 /studies (no key, no contact parameter)	query.intr=dextromethorphan AND query.cond=epilepsy	2026-11-17	0	0	absence record (first attempt with an OR-clause condition returned unrelated studies and was discarded)
+ClinicalTrials.gov REST v2 /studies (no key, no contact parameter)	query.intr=amantadine AND query.cond=epilepsy	2026-11-17	5	5 listed	engine returned memantine studies (synonym expansion), none amantadine epilepsy trial; NCT03779672 = Schiller memantine trial (P1 scope)
+ClinicalTrials.gov REST v2 /studies (no key, no contact parameter)	query.intr=esketamine AND query.cond=status epilepticus	2026-11-17	0	0	absence record
+ClinicalTrials.gov REST v2 /studies (no key, no contact parameter)	query.intr=ketamine AND query.cond=status epilepticus	2026-11-17	10	10 listed; NCT02431663 opened in full	NCT05779657 completed (Othman); NCT07046611 and NCT07095842 and NCT06907173 recruiting; NCT02431663 terminated futility
+openFDA drug label API (no key)	search=openfda.brand_name:{Epidiolex, Fintepla, Diacomit, Ztalmy, Afinitor+Disperz, Sabril, Banzel, Onfi, Xcopri, Ketalar}&limit=1	2026-11-17	1 each	10	Acthar: brand search NOT_FOUND, generic search returned an unrelated homeopathic product (discarded); Acthar label not held
