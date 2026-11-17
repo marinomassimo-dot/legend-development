@@ -1,0 +1,378 @@
+{
+  "capture": {
+    "assessment_sha256": "2521c56b88446a80642d5b129782e79d96b49b5c39d80ac28f707dc3678c2adf",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P25/stream.jsonl",
+    "raw_stream_sha256": "fe0e1e0bd9bbe914b53caacab6a31aaeaf8579d793975a355c4e05a8c192d7e6",
+    "source_session_id": "8d03459d-ce3b-4370-8aeb-a8d05f4c43d3",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 73226
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-17T13:27:39Z",
+  "label": "P25",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": true,
+      "efforts": {
+        "high": 15
+      },
+      "first_turn_context": 45086,
+      "models": {
+        "claude-opus-5": 1,
+        "claude-opus-5-5": 14
+      },
+      "peak_context": 98153,
+      "totals": {
+        "cache_creation": 98219,
+        "cache_read": 1051510,
+        "output": 14914
+      },
+      "turns": 15
+    },
+    "final_turn_model": "claude-opus-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.0028910999999999997,
+        "inputTokens": 28796,
+        "maxOutputTokens": 128000,
+        "outputTokens": 23,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5": {
+        "cacheCreationEphemeral1hInputTokens": 68,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 68,
+        "cacheReadInputTokens": 94328,
+        "canonicalModel": "claude-opus-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.22123900000000002,
+        "inputTokens": 4,
+        "maxOutputTokens": 64000,
+        "outputTokens": 6935,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 98219,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 98219,
+        "cacheReadInputTokens": 1055333,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 1.1748666,
+        "inputTokens": 32,
+        "maxOutputTokens": 128000,
+        "outputTokens": 8896,
+        "provider": "firstParty",
+        "thinkingTokens": 5421,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 23,
+    "refusal_fallbacks": [
+      {
+        "apiRefusalCategory": null,
+        "direction": "retry",
+        "fallbackModel": null,
+        "originalModel": null,
+        "scope": "session",
+        "trigger": "refusal"
+      }
+    ],
+    "total_cost_usd": 1.3989967,
+    "turn_models": {
+      "claude-opus-5": 1,
+      "claude-opus-5-5": 15
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 98219,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 98219,
+      "cache_read_input_tokens": 1051510,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 32,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 68,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 68,
+          "cache_read_input_tokens": 94328,
+          "input_tokens": 4,
+          "output_tokens": 6935,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 14914,
+      "output_tokens_details": {
+        "thinking_tokens": 4727
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-17T13:24:11Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P24/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tI'll write the assessment now, without reproducing the withheld passage.\n2\t\n3\t## 1 \u00b7 Principal decision\n4\t\n5\tADV-018 was delivered and IT has already answered"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "IT56-Q0[0-9]"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 49 files\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/TASK_RECORD_SCI_20261116.md\ndisea"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/P47T_ABUNDANCE_CLOSURE_NOTE_IT56_Q05_SCI_20261117.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# P47T: what the two abundance observations support, and what class B and C069 should say (SCI, 2026-11-17; closure note for ADV-019 / IT56-Q05; non-canonical"
+    },
+    {
+      "input": {
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "pattern": "IT56-Q0(6|7|8|9)|IT56-Q10"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "200:[Omitted long matching line]\n201:[Omitted long matching line]\n202:[Omitted long matching line]\n203:[Omitted long matching line]\n204:[Omitted long matching l"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/**/meetings/MEETING-20261117*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261117T023531Z-65a1hzow.md\ndisease-models/wwox/research/drug_repurposing"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/batch_sci_20261105/map/open_questions_map.tsv",
+        "limit": 5,
+        "offset": 200
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "200\tIT56-Q06\tdisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_i14_gaba_worsening_discriminator_20261116/D5B_SCOPE_OTH"
+    },
+    {
+      "input": {
+        "head_limit": 40,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116",
+        "pattern": "(?i)vigabatrin|Al-Baradie|Oliver 2023"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_adv_20261116/IDEAS_ORDER_DREAM4B_ADV.md:11:6. **Clinical reco"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_batch1_group_recount_20261116/*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_batch1_group_recount_20261116/GROUP_RECOUNT_IT_20261116.md"
+    },
+    {
+      "input": {
+        "glob": "*.md",
+        "head_limit": 30,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113",
+        "pattern": "IT56-Q06|Q06"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P1/assessment.md:9:[Omitted long matching line]\ndisease-models/wwox/research/drug_repurposi"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_batch1_group_recount_20261116/GROUP_RECOUNT_IT_20261116.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Batch 1: group-level exposure recount in the held Table 3 tables (IT; held tables only; counts only; non-canonical; not medical advice)\n2\t**Disclosure first"
+    },
+    {
+      "input": {
+        "head_limit": 25,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116",
+        "pattern": "(?i)mignot|serin 2018|serin et al"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_i2_semiology_20261116/extraction_v1/grouped_rows.tsv:6:30361190\tPMID"
+    },
+    {
+      "input": {
+        "pattern": "files/fulltext/*{Mignot,Serin}*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "No files found"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox",
+        "pattern": "(?i)stiripentol.{0,200}(LDH|lactate dehydrogenase)|(LDH|lactate dehydrogenase).{0,200}stiripentol"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 200 files\ndisease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/units.tsv\ndisease-models/wwox/research/drug_repurposing/ranking_it8_p9_202"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116",
+        "pattern": "(?i)Lucas-Clarke|RS-R6"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 26 files\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/TRANSFER_QUALIFICATION_SCI_202611"
+    },
+    {
+      "input": {
+        "head_limit": 15,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_i21_20261117/I21_PART1_RS_R6_SECOND_ROUTE_IT_20261117.md",
+        "pattern": "(?i)lucas-clarke|IT56-Q09|already|card"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "3:[Omitted long matching line]\n4:[Omitted long matching line]"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_i21_20261117/I21_PART1_RS_R6_SECOND_ROUTE_IT_20261117.md",
+        "limit": 12
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# I21 part 1: the second route for the RS-R6 absence claim (IT; 2026-11-17 ~03:10Z; plain generic clients, no keys, no e-mail; non-canonical; hypotheses; not "
+    },
+    {
+      "input": {
+        "head_limit": 40,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261117T074632Z-pld639my.md",
+        "pattern": "(?i)^#+ |decision|batch|ketamine"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "1:# MEETING \u2014 2026-11-17T07:46:32Z\n7:## Trigger and source index\n8:[Omitted long matching line]\n10:## Derived agenda \u2014 not participant statements\n16:- ORCH-META"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/**/*{ketamine,KETAMINE}*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/KETAMINE_INDIRECT_EFFECTS_NOTE_SCI_20261117.md\nd"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261117T074632Z-pld639my.md",
+        "limit": 25,
+        "offset": 59
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "59\t## 4 \u00b7 DECISIONS (ADV with the Orchestrator's reply; brief reasons)\n60\tD1 LAUNCH set 3 REDUCED-SEQUENTIAL now, in HE's order and with HE's stop rules (above)"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113",
+        "pattern": "42721537|set.3.{0,40}(scor|result)"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 15 files\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/TASK_RECORD_SCI_20261116.md\ndisea"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_ketamine_20261117/KETAMINE_IN_THE_REPOSITORY_IT_20261117.md",
+        "limit": 30
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Ketamine in the repository (IT, 2026-11-17; held files only; non-canonical; mechanism level; reference genotype class only; no dose, no recommendation; noth"
+    }
+  ]
+}
