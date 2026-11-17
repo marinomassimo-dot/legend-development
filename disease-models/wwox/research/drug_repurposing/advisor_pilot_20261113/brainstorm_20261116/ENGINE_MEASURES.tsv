@@ -48,3 +48,4 @@ M046	2026-11-17	log score of SCI on L16 Gabrd excitatory (observed LOW, p 0.30)	
 M047	2026-11-17	log score of SCI on L17 Slc12a2 excitatory (observed MIDDLE, p 0.60)	-0.511	nats			as M046	as M046	as M046	IT	as M046
 M048	2026-11-17	log score of HE on HEL16 Gabrd excitatory (observed LOW, p 0.25)	-1.386	nats			as M046	as M046	as M046	IT	as M046
 M049	2026-11-17	log score of HE on HEL17 Slc12a2 excitatory (observed MIDDLE, p 0.60)	-0.511	nats			as M046	as M046	as M046	IT	as M046
+M050	2026-11-17	predictors with at most 0.30 on the observed LOW bin of Gabrd excitatory (SCI, HE, IT and the memory-free delegate)	1.00	fraction	4	4	GSE334405 neocortex PV-Cre Scn1a, 3 v 3 animals; Gabrd excitatory C -0.66 (LOW)	probability registered on LOW <= 0.30 before counts	it_ledger_scoring_20261116/L16_L17_HEL16_HEL18_SCORES_IT_20261117.md	IT	one quantity; direction generic across epilepsy lines; ADV's suggestion
