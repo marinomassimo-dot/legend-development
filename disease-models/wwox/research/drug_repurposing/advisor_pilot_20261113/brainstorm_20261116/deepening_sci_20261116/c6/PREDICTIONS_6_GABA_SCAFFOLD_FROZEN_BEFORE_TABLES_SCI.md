@@ -84,4 +84,4 @@ Rows give P(readable) then LOW / MIDDLE / HIGH given readable. Where a row has n
 One pool per arm in (a): every interval over nuclei is pseudo-replicated and a sample-to-sample batch difference is not separable from genotype. A class is a marker argmax, so a composition change moves nuclei between classes. Counts of lowly expressed receptor genes in a class of a few hundred nuclei are noisy. (b) is Scn1a, never a Wwox row.
 
 ## Result
-Not yet run.
+Run 2026-11-17 20:29Z; see `RESULT_6_GABA_SCAFFOLD_SCI_20261117.md` (frozen text above unchanged; frozen at commit fe3a7c58a, sha256 77b63749990349b0f7df425ab47ee8899f1530cb10948118f53596f8ebac0be7). Score: (a) -3.310 nats against naive, (b) +1.489.
