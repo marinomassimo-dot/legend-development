@@ -46,4 +46,5 @@ M044	2026-11-17	new classes by IT rule among class rows of live run 1	0.30	fract
 M045	2026-11-17	gate friction after a serialised merge, median	8	minutes		5	five landings of IT batches	minutes from push start to PUBLISHED	IT task record 2026-11-16/17	IT	n = 5; range 4-13
 M046	2026-11-17	log score of SCI on L16 Gabrd excitatory (observed LOW, p 0.30)	-1.204	nats			GSE334405 neocortex PV-Cre Scn1a, 3 v 3 animals	ln of the probability on the observed bin	it_ledger_scoring_20261116/L16_L17_HEL16_HEL18_SCORES_IT_20261117.md	IT	digest f68cb663 of snuc_4d_genes.tsv
 M047	2026-11-17	log score of SCI on L17 Slc12a2 excitatory (observed MIDDLE, p 0.60)	-0.511	nats			as M046	as M046	as M046	IT	as M046
-M048	2026-11-17	log score of HE on HEL16 / HEL17 (0.25 on LOW / 0.60 on MIDDLE)	-1.386 / -0.511	nats			as M046	as M046	as M046	IT	two values in one row
+M048	2026-11-17	log score of HE on HEL16 Gabrd excitatory (observed LOW, p 0.25)	-1.386	nats			as M046	as M046	as M046	IT	as M046
+M049	2026-11-17	log score of HE on HEL17 Slc12a2 excitatory (observed MIDDLE, p 0.60)	-0.511	nats			as M046	as M046	as M046	IT	as M046
