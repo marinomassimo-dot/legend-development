@@ -1,0 +1,234 @@
+{
+  "capture": {
+    "assessment_sha256": "f14b5defb89a88a966f6997b43e11be97d6d9ac79bb62385f7ded537d0da3934",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P20/stream.jsonl",
+    "raw_stream_sha256": "b04704c5c4f9f9bdb1508fb85ab398211b3ad3fcd90e89c4f880fb0e7827c9b1",
+    "source_session_id": "a4c607f6-677a-4461-90f2-0b81ffb874c5",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 74341
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-17T04:27:12Z",
+  "label": "P20",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": true,
+      "efforts": {
+        "high": 6
+      },
+      "first_turn_context": 45685,
+      "models": {
+        "claude-opus-5": 1,
+        "claude-opus-5-5": 5
+      },
+      "peak_context": 72240,
+      "totals": {
+        "cache_creation": 72306,
+        "cache_read": 310472,
+        "output": 10928
+      },
+      "turns": 6
+    },
+    "final_turn_model": "claude-opus-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.0029568000000000003,
+        "inputTokens": 29458,
+        "maxOutputTokens": 128000,
+        "outputTokens": 22,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5": {
+        "cacheCreationEphemeral1hInputTokens": 68,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 68,
+        "cacheReadInputTokens": 71455,
+        "canonicalModel": "claude-opus-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.24430249999999998,
+        "inputTokens": 4,
+        "maxOutputTokens": 64000,
+        "outputTokens": 8315,
+        "provider": "firstParty",
+        "thinkingTokens": 2446,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 72306,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 72306,
+        "cacheReadInputTokens": 311255,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.7114150000000001,
+        "inputTokens": 14,
+        "maxOutputTokens": 128000,
+        "outputTokens": 3533,
+        "provider": "firstParty",
+        "thinkingTokens": 2759,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 9,
+    "refusal_fallbacks": [
+      {
+        "apiRefusalCategory": null,
+        "direction": "retry",
+        "fallbackModel": null,
+        "originalModel": null,
+        "scope": "session",
+        "trigger": "refusal"
+      }
+    ],
+    "total_cost_usd": 0.9586743000000001,
+    "turn_models": {
+      "claude-opus-5": 1,
+      "claude-opus-5-5": 6
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 72306,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 72306,
+      "cache_read_input_tokens": 310472,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 14,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 68,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 68,
+          "cache_read_input_tokens": 71455,
+          "input_tokens": 4,
+          "output_tokens": 8315,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 10928,
+      "output_tokens_details": {
+        "thinking_tokens": 4285
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-17T04:24:20Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/research_portfolio.tsv"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tid\ttheme\topportunity\tdecision\tpriority\twhy_now\tnext_action\tstatus\tsources\tmandate_id\tresume_when\toutcome\tupdated_utc\n2\tRP-001\tGeneration\tTurn unused qualified"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P19/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tMy last reply was cut off by a safety classifier partway through the \"Portfolio updates\" section, so it is incomplete. The `## Outcome` block, which the tick "
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/**/meetings/MEETING-*.md"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261115T152159Z-jaq44mq3.md\ndisease-models/wwox/research/drug_repurposing"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261117T023531Z-65a1hzow.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# MEETING \u2014 2026-11-17T02:35:31Z\n2\t\n3\tStarted UTC: 2026-11-17T02:35:31Z\n4\tSnapshot SHA: 7bc9a34f63eefe20ab2f963b9a012c4bd7d0fb84\n5\tCoordination: ADV (directio"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/**/*{COMPOSE,I21,GSE334405,Q02,SUPPRESSOR,suppressor,ENGINE_MEASURES,compose}*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/multitarget_it24_p6_20261104/proposals_decomposed.tsv\ndisease-models/wwox/research/drug_repurposing/reverse_it24_p"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_i21_20261117/I21_PART1_RS_R6_SECOND_ROUTE_IT_20261117.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# I21 part 1: the second route for the RS-R6 absence claim (IT; 2026-11-17 ~03:10Z; plain generic clients, no keys, no e-mail; non-canonical; hypotheses; not "
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_q02_origin_20261117/RESULT_IT56_Q02_IT_20261117.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# IT56-Q02: is there an independent origin for the three observations of the Wwox neuron-knockout slice paper? Result of the bounded search (IT; delegate extr"
+    }
+  ]
+}
