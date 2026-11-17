@@ -1,0 +1,17 @@
+Answered from memory only, with no files or tools used. This is not a deep dive and produces no commit candidate.
+
+**What I know that is specific and reliable**
+
+- GUCY2C (guanylyl cyclase C, GC-C) is the intestinal receptor for guanylin, uroguanylin and the heat-stable enterotoxin STa. Ligand binding raises cGMP in enterocytes. cGMP activates PKGII (PRKG2), which phosphorylates CFTR. This drives chloride and bicarbonate secretion, and cGMP also inhibits NHE3, so fluid secretion rises.
+- Gain-of-function GUCY2C variants cause familial diarrhea syndrome, and some families also have early-onset IBD-like disease. The mechanism is raised cGMP signalling and excess secretion. Loss-of-function variants cause meconium ileus, so the receptor works in both directions.
+- Linaclotide and plecanatide are GC-C agonists used for constipation. The ligand-binding and cGMP axis is therefore pharmacologically well established.
+- Mechanism level only: the GC-C catalytic domain is a cyclase, so metal ions (Mg2+/Mn2+) matter for catalysis in general. Zinc as a general modulator of cyclases is known for other targets, for example adenylyl cyclase inhibition by Zn2+. I recall this as a general principle for cyclases. I do not recall it as a GC-C finding.
+- Zinc is a standard treatment for diarrhea, especially in children. It is thought to act on epithelial ion transport and barrier function. The mechanisms proposed include inhibition of cAMP-driven chloride secretion and effects on basolateral K+ channels. I know this as a general antidiarrheal literature, not a GUCY2C-specific one.
+
+**What I do not know**
+
+- I know of no study showing that zinc directly binds, inhibits or activates GUCY2C, or that it changes the receptor's cGMP output.
+- I know of no study of zinc treatment in mouse models of GUCY2C gain-of-function (familial diarrhea or early-onset IBD). I know of no such mouse experiment, positive or negative.
+- I cannot say whether zinc's antisecretory action reaches the cGMP/PKGII/CFTR pathway or acts only downstream or in parallel. I also cannot say whether the effect would hold with a constitutively active GC-C.
+- I cannot say whether the zinc doses used in diarrhea trials are relevant to GC-C signalling.
+- I have not checked any recent paper from 2025 to 2026 that could exist on this topic. My statements about the literature are memory-based and not verified.

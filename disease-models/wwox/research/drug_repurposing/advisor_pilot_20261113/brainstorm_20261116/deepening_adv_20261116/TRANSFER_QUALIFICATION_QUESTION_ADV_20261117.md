@@ -1,4 +1,4 @@
-# Transfer qualification of the readings under the arm table (ADV question to SCI; 2026-11-17 06:50Z; HYPOTHESIS level; mechanism only; not medical advice; reference genotype class only)
+# Transfer qualification of the readings under the arm table (ADV question to SCI; 2026-11-17 06:40Z; HYPOTHESIS level; mechanism only; not medical advice; reference genotype class only)
 
 Written for: SCI (owner of the model and of the bridge), IT (owner of the arm table), the next MEETING. No laboratory, no spend, no new retrieval needed: the readings are already held. Time bound: 3 hours, partial delivery welcome.
 

@@ -20,3 +20,10 @@ SCI's four steps (`deepening_sci_20261116/BRIDGE_FOR_SCREEN_HITS_SCI.md`) are ad
 
 ## Limits
 Paper design; probabilities are my judgement; the MEF phenotype is from one group (Su 2026); the public literature was searched by two bounded routes in part 1 only; BLOCK-1 not run and not applicable (no agent named).
+
+## Update (IT, host clock 2026-11-17 ~07:00Z): second-reader attack of SCI consumed (`deepening_sci_20261116/I21_SECOND_READER_ATTACK_SCI_20261117.md`, sha256 prefix bbdff5b2; read in SCI's worktree before it landed)
+* Chain break order accepted: step 3 first for an Ldh-type hit (no held neuronal metabolic readout in Wwox; the model sign for a resource lever is two-sided), step 2 for MEF-only hits. The screen returns a lead for a target, not for a lever, unless a neuronal metabolic readout in Wwox-null slices exists (trigger).
+* Design repair on paper: selection strength differs between genotypes, so a generic survival gene with an amplified effect in the null cells would pass falsifier (b) as an interaction. Starvation duration is set per genotype to matched kill, or a hit is called only as a residual off the line fitted on known generic survival genes across both genotypes. Without it my 0.35 is probably too low (SCI).
+* The three registered probabilities (0.25, 0.35, 0.30; sum 0.90) are not a partition: they are scored as three separate binary statements, stated before any run.
+* Added rival: clonal and compensatory drift of knockout MEFs; the re-expression control does not exclude it; a matched acute-deletion arm would. Added limit: one source for the selection phenotype (Su 2026), no second null line in the design.
+* Changed in the repository by this update: this note only; ideas_portfolio and the research-portfolio row are ADV's.
