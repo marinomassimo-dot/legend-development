@@ -13,6 +13,7 @@
 #          5 generated surfaces unverifiable (or stale under a refused override) on the candidate commit
 #          6 committed on main, but regenerating the stale surfaces afterwards failed
 #          7 a named TSV/CSV/JSON file is structurally broken (ragged rows, unparsable JSON, empty file); LEGEND_STRUCTURE_BECAUSE overrides
+#          9 a commit that names the hypothesis-packages registry (hypothesis_packages.tsv) or its PKG_MAP file (conditional_proposals.py) broke one of the reader suites that read it; LEGEND_REGISTRY_READERS_BECAUSE overrides
 #          8 this worktree has a `safe_push.py --serialize` waiting in the landing queue: a new commit moves HEAD and the pending push is refused or wasted; LEGEND_COMMIT_WHILE_PUSH_PENDING=<reason> overrides
 #
 # Concurrent actors share one checkout, so every commit takes an exclusive lock:
@@ -122,6 +123,26 @@ case " $* " in
       fi
     fi;;
 esac
+
+# The packages registry has readers with their own suites that the registry's own `check` does not run (2026-11-16: the HB1 package registered without a PKG_MAP entry failed 14 consecutive CI runs,
+# about 14 x 50 to 80 run-minutes, in five reader suites). When a commit names the registry or the PKG_MAP file, run every test file that reads them (found by what it reads, so a new reader is
+# picked up) before the commit; about 45 seconds today, 40 of them in one ladder suite.
+REGISTRY_TOUCHED=0
+for p in "$@"; do
+  case "$(basename "$p")" in hypothesis_packages.tsv|conditional_proposals.py) REGISTRY_TOUCHED=1;; esac
+done
+if [ "$REGISTRY_TOUCHED" -eq 1 ] && [ -z "${LEGEND_REGISTRY_READERS_BECAUSE:-}" ]; then
+  READERS="$(git grep -l -e conditional_proposals -e PKG_MAP -- '*test*.py' || true)"
+  T0=$SECONDS
+  for t in $READERS; do
+    if ! ROUT="$(cd "$ROOT" && python3 "$t" 2>&1)"; then
+      printf '%s\n' "$ROUT" | tail -12 >&2
+      echo "refused: the reader suite $t fails with this registry state (see above). Add the missing PKG_MAP entry or fix the registry, or set LEGEND_REGISTRY_READERS_BECAUSE=\"<reason>\"." >&2
+      exit 9
+    fi
+  done
+  echo "registry reader suites passed ($(printf '%s\n' $READERS | wc -l | tr -d ' ') files, $((SECONDS - T0)) s)" >&2
+fi
 
 git add -- "$@"
 if git diff --cached --quiet -- "$@"; then
