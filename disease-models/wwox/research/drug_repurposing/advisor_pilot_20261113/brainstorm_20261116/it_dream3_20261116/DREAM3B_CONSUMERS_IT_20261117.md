@@ -26,3 +26,5 @@ Scope: results of IT after DREAM-3 (22:30Z): P4 table, tonic dossiers, WO-12/WO-
 * Aggregate class-by-outcome table (V2.1 scorability): no file names it; HE's v21 generator has not been reported against it: pending.
 * Bisection note (HE75, 00:35Z: 8 of 9 predictions pass, P3a fails: arm 9 aggravates at S-HT at s = 0.40): it bears on the I15/threshold-titration design (an arm that aggravates near threshold) and on I14's aggravation question; I have not read it in full; no IT consumer edited; flagged as a candidate hand-off to I15 Update v3 (ADV owner).
 * Class-lever table (SCI, MISSENSE_CLASS_LEVER_TABLE_SCI.md): read only by name; its consumer for IT is the P4 table (consumed above).
+
+DREAM-3c (IT, host 2026-11-17 ~07:20Z): since DREAM-3b the material changes are the arm table v4 and v5 (five cells changed, origin_row added: 6 signed cells with no origin row), IT48-Q01 (target window not found, no absence claim), I21 parts 2-3 with two dated updates, and the L16/L17/HEL16-18 scores. Each has a named consumer file stating what changed. Nothing else changed in the readings of DREAM-3b: no new lead.

@@ -27,3 +27,8 @@ Paper design; probabilities are my judgement; the MEF phenotype is from one grou
 * The three registered probabilities (0.25, 0.35, 0.30; sum 0.90) are not a partition: they are scored as three separate binary statements, stated before any run.
 * Added rival: clonal and compensatory drift of knockout MEFs; the re-expression control does not exclude it; a matched acute-deletion arm would. Added limit: one source for the selection phenotype (Su 2026), no second null line in the design.
 * Changed in the repository by this update: this note only; ideas_portfolio and the research-portfolio row are ADV's.
+
+## Update 2 (IT, host clock 2026-11-17 ~07:20Z): step 2 for the metabolic hit (SCI's point 5, relayed by ADV; SCI's file was not on main when I wrote this, so the numbers below are the relay's, not re-read by me)
+* Ldha and Ldhb are readable in excitatory nuclei in both held single-nucleus sets: step 2 PASSES for an Ldh-type hit, and passes trivially (broadly expressed genes), so it does not make the MEF phenotype neuronal. The chain still breaks at step 3 (no held neuronal metabolic readout in Wwox; the model sign for a resource lever is two-sided).
+* The glycolytic lean is seen in the S-line only, one animal or pool per arm; rival: composition (oligodendrocyte share 22.5% to 7.8%) rather than a per-cell change. This is added beside the registered 0.25 for an Ldh or glycolysis-entry hit: the prediction is unchanged, the rival is named.
+* Changed in the repository: this note only.
