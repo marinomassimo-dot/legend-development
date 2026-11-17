@@ -185,6 +185,12 @@
      "evidence": "candidate Thiel 2026 (PMID 42542632, zinc in GNAO1 disorders), Song 2026 accepted as positive-control type; no run before the operator's budget answer"
     },
     {
+     "step": "Weekly scout triage W47 and W40 (42 rows): HE verdict, start or re-check date, reason; status TRIAGED 2026-11-17",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "governance/candidates/HARNESS-SCOUT-2026-W47.md and -W40.md (HE triage section); ENGINE_MEASURES M038-M040"
+    },
+    {
      "step": "Next target set, v2/v3 comparisons or any further delegate run",
      "status": "BLOCKED",
      "owner": "plan",
