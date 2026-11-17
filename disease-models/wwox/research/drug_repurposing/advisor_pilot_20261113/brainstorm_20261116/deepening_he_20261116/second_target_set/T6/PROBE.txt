@@ -1,0 +1,17 @@
+Answered from memory only, with no files or tools used. This is not a deep dive and produces no commit candidate.
+
+**What I know that is specific and reliable**
+
+- Phikmvvirus (the phiKMV-like phages, a T7-like podovirus genus of the Autographiviridae, best known from Pseudomonas aeruginosa) encodes its own ATP-dependent DNA ligase. This is a general T7-group feature, and phiKMV is described as having a ligase gene.
+- Phage-encoded ATP-dependent DNA ligases (T4 and T7 are the classical examples) seal nicks during replication, recombination and repair. Their mechanism has three steps: ligase adenylylation, AMP transfer to the 5' phosphate, then phosphodiester bond formation.
+- General mechanism-level reasoning about restriction-modification (R-M) and CRISPR-Cas: a Type II restriction enzyme or a Cas9/Cas12 nuclease makes a cut in phage DNA. A phage ligase could in principle reseal a clean, ligatable break, such as a Type II restriction cut with 5' phosphate and 3' OH ends. This could reduce the effect of that cut.
+- Ligation would not help against all defences. It would not help against modification-dependent cleavage that destroys the substrate. It would also not help against base excision or against Cas13-type RNA targeting.
+- The idea that a phage ligase might help the phage tolerate restriction or Cas nucleases is plausible at the mechanism level. I am treating it as a hypothesis, not as an established result.
+
+**What I do not know**
+
+- I know of no study showing that a Phikmvvirus ligase confers tolerance to a CRISPR-Cas or R-M nuclease. I know of no knockout, complementation or efficiency-of-plating experiment on this question for that genus.
+- I do not know whether the ligase gene is conserved across all Phikmvvirus members.
+- I know of no biochemical data on how such a ligase handles Cas-generated ends, for example blunt versus staggered ends, or ends with a 5' phosphate.
+- I do not know whether any 2025–2026 paper has tested this. My memory does not reliably cover recent work, so I cannot rule one out.
+- I have no figures such as fold-change in plating efficiency, nuclease types tested or host strains used.

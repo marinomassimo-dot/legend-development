@@ -1,0 +1,127 @@
+STAGE-2 RESULT, task T4 (Gα-subunit DEE / movement disorder, dysfunctional-not-absent subunit; exemplar GNAO1)
+
+CORPUS FACT, stated once. The folder is a WWOX-DEE disease model. The G-protein circuit is not held. Grep over /tmp/legend_cut_1867a26a8/disease-models gave:
+- GNAO1: 1 hit. It is only a sibling file name in /tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/dismech_export_spec.md:185.
+- GNB1, GNAI, GNAZ, ADCY5, Ric-8, RGS, GIRK, Gβγ, GTPase/GAP, cholinergic/muscarinic: 0 hits each.
+- Every motor or seizure statement in the folder concerns WWOX, not a G-protein subunit.
+- Support or contradiction for the G-protein hypotheses is therefore by mechanism class only, from the held WWOX circuits. Silence is reported as "not stated", never as "contradict".
+
+CLASSIFICATION OF THE 15 STAGE-1 HYPOTHESES (distinctive-term hit counts)
+Hits are Grep counts over the folder's .md files, WWOX content.
+- S1-1 allele-specific removal. INSIDE as allele-level logic, with 122 hits across 37 files for "allele-specific|antisense|ASO|siRNA|dominant-negative|gain-of-function". The premise that the mutant dominates is not held.
+- S1-2 gene addition. INSIDE. The 4 registry files mention haploinsufficiency (8 hits), and AAV9 gene addition is held at length.
+- S1-3 chaperone and proteostasis. INSIDE. 138 hits across 21 files.
+- S1-4 Ric-8. OUTSIDE, 0 hits.
+- S1-5 palmitoylation and myristoylation. OUTSIDE, 0 hits.
+- S1-6 RGS/GAP. OUTSIDE, 0 hits.
+- S1-7 Gβγ trapping. OUTSIDE, 0 hits.
+- S1-8 GPCR sequestration. OUTSIDE, 2 incidental hits. One is a cancer title (batch_queue.md:121). The other is Parkinson's-disease dopaminergic loss (PMID42128308_partial_locators.md:214).
+- S1-9 striatal D2-MSN. OUTSIDE, 2 hits, both about striatal myelin (PMID42422765_partial_locators.md:141,144).
+- S1-10 interneuron origin of seizures. INSIDE. 38 hits across 12 files.
+- S1-11 AC5/PKA. OUTSIDE, 1 hit, a queue title (batch_queue.md:172).
+- S1-12 GIRK opener. OUTSIDE, 0 hits.
+- S1-13 Cav2/α2δ. OUTSIDE, 0 hits.
+- S1-14 paralog substitution. OUTSIDE, GNAI and GNAZ 0 hits.
+- S1-15 cholinergic interneuron. OUTSIDE, 0 hits.
+
+Kept OUTSIDE: S1-6, S1-9, S1-11, S1-15 (4, above the minimum of 3).
+Dropped from the ten: S1-4, S1-5, S1-7, S1-8, S1-12, S1-13 and S1-14. The reason is the 10-slot limit and overlap with kept items. It is not folder silence. S1-4 is a near-duplicate of S1-3 at mechanism level and survives as H3's named rival.
+
+FINAL TEN
+
+H1. Origin: S1-1 (INSIDE as allele-level logic; dominance premise outside)
+Statement: Removing the mutant transcript while leaving the wild-type allele restores function if the mutant acts dominantly (gain-of-function or dominant-negative) over a wild-type allele that is already sufficient.
+Corpus test: NOT STATED for any G-protein. The nearest held logic is "Lever assignment is per allele" (/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md:325). CLAIM 032, "WWOX haploinsufficiency is not deleterious" (/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/claim_registry_current.md:585-594), is an analogy only: one sufficient allele equals a healthy carrier. The held oligonucleotide discussion covers splice-masking only and does not cover silencing (map line 359).
+Usual vs this: The usual reading treats a missense DEE subunit as lost function, to be replaced. This reading says the surplus of mutant protein is the lesion, so the wild-type dose is not limiting.
+Single rejecting observation: In neurons or mice carrying mutant plus wild type, mutant-specific knockdown leaves the Gαo effector readout (GIRK current, cAMP inhibition) unchanged or worse.
+Discriminating manipulation (vs H2, wild-type addition): Allele-specific mutant knockdown with no wild-type added.
+- Motor and seizures: if the mutant is dominant, both improve. If it is pure loss of function, motor and seizures are unchanged or move toward the knockout state, because the dose falls.
+
+H2. Origin: S1-2 (INSIDE)
+Statement: Raising wild-type subunit dose in neurons, by gene addition or transcriptional up-regulation, restores function when the mutant is hypomorphic rather than interfering, and rescue is threshold-like rather than graded.
+Corpus test: SUPPORT by mechanism class (WWOX). Neuron-restricted gene addition rescued survival, behaviour, ataxia and spike-wave discharges in the Wwox-null mouse (/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md:397-415, R-01). Rescue was a threshold: the low dose failed and the high dose succeeded (working_model_current.md:87, 131). Held CONTRADICTION in the opposite direction: "'more WWOX = better' is not a safe default" (working_model_current.md:71, CLAIM 028). The held dCas9/CRISPRa option for hypomorphic states is "not actionable now" (working_model_current.md:229).
+Usual vs this: The usual reading is "more wild-type is better, and graded". This one predicts a minimum effective dose below which nothing is rescued, and no benefit or harm if the mutant interferes.
+Single rejecting observation: Wild-type overexpression on the mutant background leaves the readout unchanged, which is a dominant-negative signature, or improvement is smoothly graded with no dose threshold.
+Discriminating manipulation (vs H1): Add wild-type subunit and leave the mutant in place.
+- Motor and seizures: both improve only above a threshold, and only if the mutant is a loss-of-function type. There is no benefit, or worsening, if the mutant is dominant-negative.
+
+H3. Origin: S1-3 (INSIDE; S1-4 Ric-8 gain is the named rival)
+Statement: A ligand-type stabiliser of the mutant subunit (the pharmacological-chaperone class), or global proteostasis capacity, raises the functional mutant pool when the lesion is folding or turnover. The ligand class stabilises by occlusion, which can raise abundance while abolishing function.
+Corpus test: SUPPORT by mechanism class (WWOX). HYP-20260709-08 (/tmp/legend_cut_1867a26a8/disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md:271-299) requires first separating synthesis, insolubility and turnover. /tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/proteostasis_rationale.md retracted three of four rationale steps, including the ΔΔG "recoverability" band, which has no demonstrated predictive value (lines 31-47). The "stable but inert" trap, "stability is bought with occlusion", is at mechanism_intervention_map.md:348-353 and working_model_current.md:60. Ric-8, the endogenous Gα chaperone, is NOT STATED (0 hits).
+Usual vs this: The usual reading takes higher mutant abundance as higher function. This one tests abundance and nucleotide-cycle function together, and treats a ligand that clamps the pocket as a possible failure.
+Single rejecting observation: Mutant protein level and nucleotide-binding competence are already normal in neurons, so stabilisation adds nothing. Or stabilisation raises protein while the effector readout falls (stable but inert).
+Discriminating manipulation (vs Ric-8 gain): A direct small-molecule folding-stabiliser class applied with Ric-8 level held constant, compared with neuronal Ric-8 gain on the same mutant.
+- Motor and seizures: a partial benefit to both appears only in low-abundance mutants. An occluding stabiliser raises abundance but leaves motor and seizures unchanged. Ric-8 gain predicts a similar direction with a lesser seizure effect.
+
+H4. Origin: S1-6 (OUTSIDE, kept)
+Statement: For mutants with slow GTP hydrolysis (locked active state), increasing RGS-type GTPase-accelerating activity restores timely deactivation. For under-active mutants it makes things worse.
+Corpus test: NOT STATED. Grep for RGS, GTPase, GAP activity and nucleotide exchange returned 0 hits across the folder. What the folder holds is only a rule of method. "Downstream levers are not uniformly genotype-agnostic; only gene addition is" (/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md:287-288). That rule implies a deactivation-side lever is sign-dependent by allele, so it does not contradict this hypothesis.
+Usual vs this: The usual reading assumes receptor input, or abundance, limits signalling. This one says the off-rate is the lesion.
+Single rejecting observation: The mutant's intrinsic and RGS-stimulated hydrolysis rates match wild type.
+Discriminating manipulation (vs H5, effector bypass): Neuronal RGS overexpression, with Gβγ and effectors untouched.
+- Motor and seizures: if the mutant is over-active, less tonic hyperkinesia and fewer seizures. If the mutant is under-active, both worsen. The sign of the response is itself the readout that identifies the allele class.
+
+H5. Origin: S1-11 (OUTSIDE, kept)
+Statement: Loss of Gαo inhibition of adenylyl cyclase (AC5) and PKA is the effector bottleneck for movement, so reducing AC5-PKA output bypasses the mutant subunit.
+Corpus test: NOT STATED. cAMP, PKA and adenylyl cyclase returned 1 hit in the folder, an unprocessed queue title with no content (/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/batch_queue.md:172). Held method rule: a lever on a downstream node must be tied to a resolved sign in a relevant compartment before it is admitted ("Direction before candidate", mechanism_intervention_map.md:55-59). This is the same rule that rejected an mTOR inhibitor for WWOX.
+Usual vs this: The usual reading looks for ion-channel effectors. This one says the cAMP-effector arm decides the movement phenotype and an ion-channel arm decides seizures.
+Single rejecting observation: Striatal cAMP and PKA substrate phosphorylation are normal in the mutant.
+Discriminating manipulation (vs H6, GIRK/Gβγ arm: opening GIRK channels, a Gβγ effector, with no change in AC5-PKA output): An AC5-inhibitor class, or AC5 knockdown restricted to striatal neurons.
+- Motor: improvement. Seizures: a variable effect, with no seizure benefit if the seizure arm runs through Gβγ-gated channels.
+
+H6. Origin: S1-9 (OUTSIDE, kept)
+Statement: The motor phenotype arises mainly in indirect-pathway (D2) striatal projection neurons, and restoring the subunit there corrects movement with little change in seizures.
+Corpus test: NOT STATED. Striatum appears in the folder only as a myelin measurement (/tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID42422765_partial_locators.md:141,144). Supportive for the cell-type design only: neuron-restricted (Synapsin-Cre) deletion reproduces the whole WWOX phenotype, while Olig2-Cre and GFAP-Cre give no evident anomaly (mechanism_intervention_map.md:170-171). Also, ataxic gait was the most penetrant rat phenotype (95% vs 0%) with no cerebellar explanation (/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/claim_registry_current.md:716-726), so the motor locus of a G-protein lesion cannot be assumed.
+Usual vs this: The usual reading treats motor and seizure phenotypes as one global defect. This one separates them anatomically.
+Single rejecting observation: Restoring the subunit in D2-pathway neurons alone leaves the motor score unchanged.
+Discriminating manipulation (vs D1-pathway restoration): D2-neuron-restricted (Cre-dependent) restoration versus D1-neuron-restricted restoration.
+- Motor: improvement with D2 and little with D1. Seizures: unchanged with either.
+
+H7. Origin: S1-15 (OUTSIDE, kept)
+Statement: Striatal cholinergic interneurons lose Gαo-coupled muscarinic autoreceptor braking, so acetylcholine is in excess. Restoring subunit function there, or restoring the braking from outside the cell, corrects dystonia and chorea.
+Corpus test: NOT STATED. Cholinergic, muscarinic and acetylcholine returned 0 hits. The "M4" hits in the map are an internal mechanism label (GSK3β de-repression) and do not concern muscarinic M4.
+Usual vs this: The usual reading puts the motor lesion in spiny projection neurons (H6). This one puts it in the cholinergic interneuron.
+Single rejecting observation: ChAT-interneuron-restricted restoration changes nothing, or acetylcholine release is normal in the mutant.
+Discriminating manipulation (vs H6): Cholinergic-interneuron-restricted restoration (ChAT-Cre), or an M4-selective positive allosteric modulator class.
+- Motor: improvement, larger than with D2-restricted restoration only if the cholinergic arm is the driver. Seizures: unchanged.
+
+H8. Origin: S1-10 (INSIDE as WWOX-class circuit; Gαo-specific content outside)
+Statement: Seizures arise mainly from GABAergic interneuron dysfunction, so restoring the subunit in interneurons controls seizures while leaving movement.
+Corpus test: SUPPORT only for WWOX, not for a G-protein. Reduced PV markers, reduced GAD65/67 protein and "reduced spontaneous inhibition" in layer 2/3 pyramidal neurons are held (/tmp/legend_cut_1867a26a8/disease-models/wwox/meta/meta_gaba_paradox_current.md:36-60). The held gate is "marker ≠ function", and a marker count cannot separate cell death from marker down-regulation (meta_gaba_paradox_current.md:40, MARKER_TO_FUNCTION_GATE). A systemic knockout cannot separate cell-autonomous loss from metabolic confounding (meta_gaba_paradox_current.md:22). The WWOX GABA direction is explicitly unresolved (meta_gaba_paradox_current.md:143-158).
+Usual vs this: The usual reading puts the seizure origin in cortical excitatory networks. This one puts it in the inhibitory arm.
+Single rejecting observation: Dlx- or PV-restricted restoration does not change seizure threshold or EEG burst density.
+Discriminating manipulation (vs excitatory-neuron restoration, e.g. CaMKIIα- or Emx1-driven): Interneuron-restricted restoration.
+- Seizures: fewer, only if the interneuron arm is causal. Motor function: unchanged. Opposite predictions for excitatory-neuron restoration.
+
+H9. Origin: ENGINE (held-circuit built)
+Statement: Rescuability is gated by a developmental window. Restoring or stabilising the subunit in the early postnatal window rescues motor circuitry and seizures, while the same restoration after circuit assembly rescues seizures and network state but only part of motor function.
+Corpus test: SUPPORT by mechanism class (WWOX). The efficacious gene-therapy window is P0-P5 in mouse. Neuronal rescue does not repair the largely prenatal progenitor and radial-glia defect (mechanism_intervention_map.md:193-199). CLAIM 031, "DEE, not EE": seizure control does not save development (working_model_current.md:181). The cognitive deficit precedes seizures and does not improve when seizures are controlled (therapeutic_hypotheses_ledger_current.md:266). The held caveat that post-neonatal dosing is declared future work (working_model_current.md:226) means "late rescue fails" is itself untested. Not held for any G-protein.
+Usual vs this: The usual reading treats a correctable lesion as correctable whenever corrected. This one says motor and seizure endpoints close at different times.
+Single rejecting observation: Adult-onset restoration (inducible expression, or inducible removal of a silenced allele) produces the same motor recovery as P0-P5 restoration.
+Discriminating manipulation (vs H2, same lever at a fixed timepoint): The same restoration lever given at P0-P5-equivalent versus after weaning (inducible Cre, or a timed vector).
+- Seizures: reduced at both times. Motor: complete rescue early, only partial late. Caveat: held seizure phenotypes are rat-specific (claim_registry_current.md:682, CLAIM 037) and are explicitly absent in mouse, so a seizure endpoint needs a model that seizes.
+
+H10. Origin: ENGINE (held-circuit built)
+Statement: The restorable function is neuron-intrinsic. Subunit restoration in neurons alone is sufficient for motor and seizure endpoints, while glial or oligodendrocyte restoration adds nothing for these two endpoints.
+Corpus test: SUPPORT by design analogy (WWOX). Neuron-restricted deletion reproduces the phenotype, while oligodendrocyte-restricted (Olig2) and astrocyte-restricted (GFAP) deletion do not (/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/claim_registry_current.md:67-78, CLAIM 003). The neuron-specific vector never transduced oligodendrocytes and still improved myelin. The held limit is that "non-cell-autonomous" describes a component, not the whole phenomenon, and a residual gap is attributed to oligodendrocytes (claim_registry_current.md:78). Not held for any G-protein. Astrocytic Gαi/o signalling is outside the held circuits.
+Usual vs this: The usual reading assumes a ubiquitous subunit needs ubiquitous restoration. This one says the neuron compartment alone is sufficient.
+Single rejecting observation: Neuron-restricted restoration leaves a residual motor or seizure deficit that astrocyte-restricted restoration additionally reduces.
+Discriminating manipulation (vs H6-H8, a subtype-specific arm): Pan-neuronal restoration (synapsin-driven) versus pan-neuronal plus astrocyte (GFAP-driven) versus astrocyte-only.
+- Motor and seizures: pan-neuronal restoration gives most of the benefit for both. Astrocyte-only gives none, or a minor seizure effect.
+
+Dropped S1 items, folder-silent but not contradicted (so not "contradict"): S1-4, S1-5, S1-7, S1-8, S1-12, S1-13, S1-14. They are the only items left out, and the cause is the 10-slot limit.
+
+FILES READ:
+/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/set2/T4/S1_A.txt
+/tmp/legend_cut_1867a26a8/CLAUDE.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/dismech_export_spec.md (lines 175-199)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/working_model_current.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/meta/meta_gaba_paradox_current.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md (lines 1-582)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md (lines 1-310)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/claim_registry_current.md (lines 67-82, 382-394, 585-598, 716-727)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/proteostasis_rationale.md (lines 1-70)
+Targeted Grep only (hit lines or counts, not read whole):
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID42422765_partial_locators.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID42128308_partial_locators.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/batch_queue.md

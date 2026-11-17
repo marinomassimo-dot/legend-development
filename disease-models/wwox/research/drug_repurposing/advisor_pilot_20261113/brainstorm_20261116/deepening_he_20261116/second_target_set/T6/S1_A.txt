@@ -1,0 +1,93 @@
+All 15 hypotheses below come from my own knowledge, with no file access, so every evidence line is from memory and is hedged where I am unsure. "Escape" means heritable loss of the target. "Repaired site" means the sequence of the former cleavage site in surviving progeny. H15 is a deliberate avoidance control, included as the null rival to all the repair hypotheses.
+
+H1. Statement: A phage-encoded Ku/LigD-like end-joining module directly religates the cleaved ends, so the phage survives with small indels at the cut.
+Evidence: Mycobacteriophage Omega encodes a LigD-like ligase, and Mu Gam is structurally Ku-like. A role in rescuing the phage from RM or CRISPR cuts is not shown (none known).
+Usual reading assumes: phages survive nuclease attack only by blocking the nuclease or by modifying or mutating the target. This one changes that: survival comes from repair after cutting, with the cut accepted as a recurrent event.
+Rejection: A deletion of the phage Ku/LigD-like gene gives no loss of plating efficiency (efficiency of plating, EOP) under nuclease attack, and survivors still carry the same site.
+Discriminating manipulation (rival H2, host-encoded NHEJ): Delete the phage Ku/LigD gene in a host that has no NHEJ of its own. Prediction: EOP falls by orders of magnitude under attack, while an unattacked control is unchanged. Survivors carry short deletions or insertions, often with 0 to 4 nt microhomology, at the junction.
+
+H2. Statement: The host's chromosomal NHEJ system (Ku/LigD in mycobacteria or Bacillus) repairs the phage's cleaved ends, so survival depends on the host and not the phage.
+Evidence: Host Ku/LigD repairs I-SceI and Cas-type breaks in the host genome with indels. Use of it by phage during nuclease attack is not shown (none known).
+Usual reading assumes: the phage is the sole determinant of its own survival. This one changes that: the host's own repair machinery is a phage resource.
+Rejection: Phage EOP under nuclease attack is the same in ΔligD/Δku and wild-type hosts.
+Discriminating manipulation (rival H1): Take the same phage into ΔKu/ΔLigD and wild-type hosts. Prediction: EOP drops in the ΔKu/ΔLigD host only, and the phage-gene deletion has no extra effect. Repaired sites are indels of the NHEJ type in the wild-type host.
+
+H3. Statement: Microhomology-mediated alt-end joining (RecBCD/RecJ resection, annealing, ligation) deletes the segment between two short flanking repeats, destroying the target.
+Evidence: Deletion escapes of CRISPR-targeted phages are commonly reported, and microhomology at some deletion junctions is plausible. A direct causal test is lacking.
+Usual reading assumes: escape is a point mutation in the PAM or seed. This one changes that: escape is a repair-driven deletion whose endpoints follow local sequence repeats.
+Rejection: Deletion junctions show no enrichment of 3 to 10 nt direct repeats compared with random positions.
+Discriminating manipulation (rival H1, Ku-independent): Engineer or erase a 6 to 8 nt direct repeat flanking the site (silent changes), in a Ku-free system. Prediction: survival rises with the repeat and falls when it is removed. The repaired site is a deletion with its junction at the introduced repeat, and one repeat copy is retained.
+
+H4. Statement: A phage single-strand annealing protein (Redβ, RecT or Sak type) joins resected ends at repeats in the phage's own concatemer, so survival needs a recombinase and a repeat.
+Evidence: SSAP activity is well established in recombineering, and phage-encoded recombinases are known. Rescue from RM or CRISPR cuts has been suggested (low confidence).
+Usual reading assumes: the phage recombinase only serves replication and diversity. This one changes that: it works as a repair device for cuts.
+Rejection: A phage recombinase deletion does not change EOP under attack.
+Discriminating manipulation (rival H5, RecA-dependent): Delete the SSAP gene in a host with a normal recA. Prediction: EOP falls, and recA-independent repair disappears. The repaired site has one repeat unit lost between two direct repeats, a deletion with a signature of the repeat length.
+
+H5. Statement: Host RecBCD (Chi-activated) and RecA use an intact sister genome copy in the same cell as a template, restoring the original sequence by gene conversion.
+Evidence: Classic phage genetics (λ Red, T4 replication) shows recombination between sibling genomes. Direct tests during CRISPR or RM attack are partial (hedged).
+Usual reading assumes: cleavage is lethal for that genome copy, and only unmodified escapes survive. This one changes that: cut copies are repaired from uncut copies.
+Rejection: EOP is the same in recA-null, recB-null and wild-type hosts.
+Discriminating manipulation (rival H4): Compare recA-null and wild-type hosts at constant phage replication. Prediction: EOP falls in recA-null. The repaired site is the unchanged wild-type sequence, and it stays cleavable (no heritable change). The Chi site, if added, increases survival.
+
+H6. Statement: A phage end-protecting protein (Gam type, T4 gp2 type) stops RecBCD degrading cut ends and keeps them intact long enough for later repair.
+Evidence: λ Gam, Mu Gam (Ku-like) and T4 gp2 protect DNA ends from host exonucleases. Use against nuclease-induced DSBs generally is plausible but untested (none known). This module is dedicated to ends, not to a specific nuclease, which is why it fits the question.
+Usual reading assumes: anti-RecBCD proteins only serve phage replication in vivo. This one changes that: they serve as a generic DSB buffer.
+Rejection: A gam-type deletion has no effect on survival of an RM-attacked phage.
+Discriminating manipulation (rival H1/H5): Delete gam, and separately delete host recBCD to remove the degradation target. Prediction: loss of gam reduces EOP, and removing host recBCD restores it. The repaired site is wild type or a modest deletion, with no ends lost.
+
+H7. Statement: A cut genome is restarted by recombination-dependent replication, with a strand invading a sibling genome and initiating replication from the broken end (T4 UvsX type), so survival requires D-loop priming.
+Evidence: T4 recombination-dependent replication is well established. Reported CRISPR escape by this path is not firmly shown (hedged).
+Usual reading assumes: replication depends on origin firing. This one changes that: end invasion can initiate it.
+Rejection: A recombination-dependent replication mutant with intact origin replication shows the same EOP under attack.
+Discriminating manipulation (rival H5, simple repair): Delete uvsX (or inhibit the strand-exchange protein) while leaving origin replication intact. Prediction: survival falls at high attack intensity, while the cut sequence is replaced by the donor copy's sequence (copy-over). Marked SNPs near the cut show donor-derived tracts around the site.
+
+H8. Statement: At high multiplicity, damaged genomes complement and recombine with each other, so survival depends on infection density and not on any single genome.
+Evidence: Cooperative inactivation of CRISPR by anti-CRISPR phage is shown, which is not repair. Recombination between co-infecting phages is classic.
+Usual reading assumes: each infection is independent. This one changes that: the cell is a repair arena for several genomes.
+Rejection: Survival per cell is independent of the number of co-infecting phages.
+Discriminating manipulation (rival H5, sibling repair within one genome lineage): Co-infect with two phage variants that carry different silent SNPs flanking the site, at low versus high multiplicity. Prediction: survival increases superlinearly with multiplicity. The repaired site shows recombinant mosaics, crossovers between the two parental SNP sets.
+
+H9. Statement: Concatemeric (rolling-circle) replication makes many copies of the site per genome, so cleavage of some copies is harmless, and the packaging machine takes uncut stretches.
+Evidence: None known directly. It is consistent with the headful packaging mechanisms of T4/P22/SPP1.
+Usual reading assumes: one cut equals one lost genome. This one changes that: redundancy absorbs cuts and no repair is needed.
+Rejection: Survival does not fall when the concatemer is made shorter or monomeric.
+Discriminating manipulation (rival H5/H4, repair-based): Block recombination (recA-null, SSAP deleted) but keep concatemer formation, and in another arm force monomeric replication. Prediction: survival is retained in the first arm and lost in the second. The recovered site is unchanged wild type.
+
+H10. Statement: Terminal redundancy or circular permutation lets a linearized genome end-join by homology between its own repeated ends.
+Evidence: None known as a nuclease defense. Terminal redundancy is a general feature of T-even and T7-like phages.
+Usual reading assumes: terminal repeats exist for replication. This one changes that: they are also a built-in repair template.
+Rejection: A phage with shortened or removed terminal repeats shows the same EOP.
+Discriminating manipulation (rival H9): Use a variant with terminal repeats removed, keeping total genome length. Prediction: EOP under attack falls, with no change in unattacked growth. The repaired site is wild type or repeat-collapsed, and repeat copy number shrinks by one.
+
+H11. Statement: A phage-encoded (or host) DNA ligase directly religates complementary cohesive ends from restriction enzymes, restoring the original site.
+Evidence: Religation of restriction cuts is classic in vitro, and restriction in vivo is known to be leaky (hedged). Phage ligase deletions raise restriction sensitivity in some reports (not certain).
+Usual reading assumes: a cut is irreversible without a second enzyme. This one changes that: simple ligation reverses it.
+Rejection: A ligase knockout (host ligase attenuated) shows no change in EOP.
+Discriminating manipulation (rival H1, which needs end processing): Switch the cutter from a sticky-end to a blunt-end enzyme (or Cas9 with blunt ends) and delete the phage ligase. Prediction: loss of ligase hits sticky-end attack more than blunt, and the repaired site is wild type with no indel, so it remains cleavable (hence the survival gain wears off at the next infection).
+
+H12. Statement: Error-prone repair (SOS Pol IV/V, low-fidelity polymerase at cuts) writes point mutations into the site, so survival comes from escape generated by the repair itself.
+Evidence: Escape mutants carry point mutations in the PAM and seed, but their origin during DSB repair is hypothesized and not shown (low confidence).
+Usual reading assumes: escape mutants pre-exist in the population. This one changes that: cleavage induces them.
+Rejection: Escape frequency is the same in a lexA-uncleavable host and wild type, and in a fluctuation test the mutants pre-exist.
+Discriminating manipulation (rival H3): Use a lexA-noncleavable host (no SOS) or a polymerase-fidelity variant. Prediction: escape frequency drops in the SOS-null host, and survival is lower. The repaired site shows point substitutions (PAM/seed) and not deletions, with a mutation spectrum that changes with the polymerase.
+
+H13. Statement: A homologous sequence in a host prophage or cryptic element serves as donor for repair, shifting the cleavage site by gene conversion.
+Evidence: Recombination between a phage and prophage mosaic regions is a documented source of CRISPR escape (hedged). Direct proof in an RM/Cas break is limited.
+Usual reading assumes: only the phage genome and host machinery matter. This one changes that: the host genome is a donor library.
+Rejection: Curing the prophage leaves EOP unchanged.
+Discriminating manipulation (rival H5, whose donor is a sibling): Cure the homologous prophage (or delete the homology) from the host. Prediction: EOP falls, and the repair product switches from donor-patterned to wild type. In the lysogen, the site carries prophage-specific SNP tracts that mark the donor.
+
+H14. Statement: High copy number and fast replication saturate a limited pool of nuclease, so survivors are cells where enzyme runs out before all genomes are cut.
+Evidence: Efficiency of plating under RM is multiplicity-dependent and graded (not 0 or 1). Concentration-dependence of Cas9 is known (hedged).
+Usual reading assumes: attack is all-or-nothing per genome. This one changes that: attack is a titration race between cut rate and copy number.
+Rejection: Raising nuclease expression 10-fold does not change survival.
+Discriminating manipulation (rival H9): Slow phage replication (temperature-sensitive polymerase) while holding nuclease constant. Prediction: survival collapses at the restrictive condition. Survivors keep the original site, and no repair signature appears because the cell never fully cut.
+
+H15. Statement: A jumbo phage's proteinaceous nucleus-like shell physically excludes nucleases, so DSBs never occur in the replicating genome. This is avoidance, not tolerance, and serves as the null rival to H1 to H14.
+Evidence: Nucleus-like shell (ChmA) protects phiKZ-type phages against Type I, II and V CRISPR and RM enzymes. This is well supported, so evidence for.
+Usual reading assumes: tolerance means repair. This one changes that: nothing is cut, so nothing is repaired.
+Rejection: Shell-disrupted (ChmA-deficient) phage retains full resistance, or the genome in intact infections is shown to be cut.
+Discriminating manipulation (rival H1 to H14): Knock out the shell protein. Prediction: EOP under attack falls sharply, and the cleavage is then visible in the genome. In the normal shelled phage, the site stays uncleaved and unchanged (no repair signature), whereas every repair hypothesis predicts a signature in survivors.
+
+Cross-cutting note, mechanism level only: in sequencing survivors, a wild-type site (H5, H9, H10, H11, H14), a deletion at a repeat (H3, H4), an indel (H1, H2), a point change (H12), a donor tract (H7, H8, H13) and no cut (H15) separate these hypotheses. A single survival-plus-site-sequence panel across recA, ligD/ku, recBCD and SOS host variants with matching phage-gene deletions would resolve most of them.

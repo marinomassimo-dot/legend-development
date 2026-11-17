@@ -197,12 +197,18 @@
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/second_target_set/; ENGINE_MEASURES M051"
     },
     {
-     "step": "Run the frozen second target set (T5, T4, T6; v1, v3, baseline each twice; blind reader) and the COMPOSE-rubric first use as a checker",
+     "step": "Run the frozen second target set (T5, T4, T6; v1, v3, baseline each twice; blind reader)",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/second_target_set/RESULT_SET2.md (36 delegate runs, 1,675,686 tokens; the frozen rule applied: v3 beats v1 on 0 of 3 targets, no improvement claimed); ENGINE_MEASURES M052-M068"
+    },
+    {
+     "step": "COMPOSE-rubric first use as a checker, and the candidate v4 enumeration step (physical-chemical levers of a named defect, independent of the corpus), both on a NEW one-outcome target",
      "status": "BLOCKED",
      "owner": "plan",
-     "blocker": "the operator's answer on the token budget (about 2.1 million tokens for the set, about 3 hours of delegate time and 3 of mine; one target per meeting meanwhile)",
-     "awaited_event": "the operator's budget answer, carried by ADV to the decision page and the next report",
-     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/second_target_set/FREEZE_SECOND_SET.md (sha256 7e341642f2429e4e0b964cd4692d6a9094d27e92c0343d0a5b064b2aa0c2e63a, verified by ADV on main a47eb308744b)"
+     "blocker": "needs a new target chosen by the standing target-selection rule (T4 atoms are now known) and the operator's token-budget decision; ADV brings the v4 design note to the MEETING",
+     "awaited_event": "the operator's budget answer and the MEETING decision on the v4 enumeration step",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/second_target_set/RESULT_SET2.md section 'What the set shows beyond the rule', item 4"
     }
    ]
   }

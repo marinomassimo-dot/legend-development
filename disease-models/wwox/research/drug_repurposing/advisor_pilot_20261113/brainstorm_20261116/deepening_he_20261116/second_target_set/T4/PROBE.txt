@@ -1,0 +1,12 @@
+Answered from memory only, with no files or tools used. This is not a deep dive and produces no commit candidate.
+
+What I know that is specific and reliable:
+- Gαo is encoded by GNAO1. It is a Gi/o-family heterotrimeric G-protein alpha subunit, very abundant in neurons. It inhibits adenylyl cyclase and modulates Cav2 calcium channels and GIRK potassium channels (the latter through Gβγ).
+- GNAO1 variants cause developmental and epileptic encephalopathy (DEE17) and a neurodevelopmental disorder with involuntary movements (NEDIM), including dystonia and chorea. Loss-of-function, gain-of-function and dominant-negative mechanisms have been described.
+- Reported models include patient-variant mouse models (for example G184S and G203R) and Drosophila and cell models. Therapeutic work has included antisense oligonucleotides and, in some reports, drugs such as caffeine and risdiplam for specific variants.
+
+What I do not know:
+- I know of no specific study of zinc supplementation and Gαo function, either in GNAO1 patients or in models. I cannot cite any.
+- Zinc is known to affect other G-protein-related processes. These include GPCR modulation, zinc-sensing receptors such as GPR39, and zinc-finger proteins. I cannot link any of these to Gαo with specific evidence, so connecting zinc to GNAO1 would be an IPOTESI, not a DATO.
+
+Verification would need a literature search (PubMed or the LEGEND registry), which I did not run. It is possible that a recent paper exists that I do not know of.

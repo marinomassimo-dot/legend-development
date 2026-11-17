@@ -1,0 +1,71 @@
+id | QS | QL | QC | quote or '-'
+Z01 | NO | YES | NO | "Pentamer assembly and export are limited by biogenesis factors (EMC and LHFPL4-class), so raising the factor" (QL only)
+Z02 | NO | NO | NO | -
+Z03 | NO | YES | NO | "defect in ER export, specifically palmitoylation-dependent or COPII-dependent exit, so enhancing export raises surface expression" (QL only)
+Z04 | NO | YES | NO | "inhibiting it raises surface subunit and current" (genetic Hsp90 loss; QL only)
+Z05 | NO | YES | NO | "slowing that clearance (an ERAD E3, SEL1L/HRD1 or p97 manipulation) raises ER pool, surface expression and current"
+Z06 | NO | YES | YES | QC: "nearest rival H6, the HDAC-class chemical chaperone"; QL: "Selective activation of the ATF6 arm" (lever is genetic, so QS NO)
+Z07 | NO | NO | NO | -
+Z08 | NO | YES | NO | "shortening the cycle (UGGT1 loss, or a glucosidase-inhibitor class) releases it for export and raises surface and current"
+Z09 | YES | YES | YES | "ligand-site pharmacological chaperone, washed out before recording, stabilises the folding intermediate and raises surface subunit"
+Z10 | YES | YES | YES | "ligand-site pharmacological chaperone (an orthosteric or allosteric-site binder class), so surface density rises"
+Z11 | NO | NO | NO | -
+Z12 | NO | NO | NO | -
+Z13 | NO | NO | NO | -
+Z14 | NO | NO | NO | -
+Z15 | NO | NO | NO | -
+Z16 | NO | NO | NO | -
+Z17 | NO | NO | NO | -
+Z18 | YES | YES | YES | "acts as a pharmacological chaperone, stabilising the mutant during assembly and raising surface expression"
+Z19 | NO | YES | NO | "lowering ERAD flux raises the ER-resident pool and, if the folded fraction can exit, the surface pool"
+Z20 | NO | NO | NO | -
+Z21 | NO | NO | NO | -
+Z22 | YES | YES | YES | "ER calcium handling (class: L-type Ca2+ channel blockers, SERCA activation) lowers ERAD flux and raises ER chaperone function"
+Z23 | NO | NO | NO | -
+Z24 | YES | YES | YES | "binding-site ligand acting as a pharmacological chaperone raises surface during synthesis"
+Z25 | NO | NO | NO | -
+Z26 | NO | NO | NO | -
+Z27 | NO | NO | NO | -
+Z28 | NO | YES | NO | "an integrated-stress-response inhibitor class (acting on eIF2alpha dephosphorylation)... Surface rises only if folding capacity is not exceeded" (QL borderline, conditional rise)
+Z29 | NO | YES | NO | "nucleotide-exchange or folding-promoting partners shift the mutant toward ER export" (genetic overexpression)
+Z30 | NO | NO | NO | -
+Z31 | NO | NO | NO | -
+Z32 | NO | YES | NO | "Blocking ER-associated degradation... so surface expression and current rise" (surface up only modestly)
+Z33 | NO | NO | NO | -
+Z34 | NO | NO | NO | -
+Z35 | NO | YES | NO | "increasing export machinery (COPII-cargo adaptor or Golgi-processing lever) raises surface expression and current"
+Z36 | NO | NO | NO | -
+Z37 | NO | NO | NO | -
+Z38 | NO | NO | NO | -
+Z39 | NO | YES | YES | QC: "Hsp90 inhibition (class), which promotes client degradation"; QL: "Hsp70 activation raises surface and current" (Hsp70 arm not stated as small molecule, so QS NO)
+Z40 | NO | NO | NO | -
+Z41 | NO | NO | NO | -
+Z42 | NO | NO | NO | -
+Z43 | NO | NO | NO | -
+Z44 | YES | YES | YES | "raising ER folding capacity (a chemical-chaperone or ER-lumen-folding class) increases ER exit, surface density and current"
+Z45 | YES | YES | YES | "A 4-phenylbutyrate-class compound lifts mutant surface by two separable actions"
+Z46 | NO | NO | NO | -
+Z47 | YES | YES | YES | "ATF6-arm activation (genetic active fragment, or an ATF6-selective small-molecule class)"
+Z48 | NO | YES | NO | "Raising ER folding capacity (BiP/Hsp70 chaperone cycle, driven by the ATF6 arm of the UPR)" (genetic ATF6 or BiP only)
+Z49 | YES | YES | YES | "stabilises the folded or assembling subunit in the ER, raising surface expression and also potentiating channel gating"
+Z50 | NO | NO | NO | -
+Z51 | NO | NO | NO | -
+Z52 | NO | NO | NO | -
+Z53 | NO | NO | NO | -
+Z54 | YES | YES | YES | "induce the ATF6 arm of the unfolded-protein response (a class acting on BiP/foldases)"
+Z55 | YES | YES | YES | "A ligand that binds the orthosteric or an allosteric site stabilises the folded pentamer (a pharmacological chaperone)"
+Z56 | YES | YES | YES | "use an ATF6-selective class against an IRE1/PERK class. Predicts surface and current up"
+Z57 | YES | YES | YES | "modulates ER-chaperone activity and ER exit and raises mutant surface expression" (L-type blocker class)
+Z58 | NO | YES | NO | "reducing it gives more mutant protein a chance to assemble and exit the ER... surface expression up only modestly"
+Z59 | NO | NO | NO | -
+Z60 | NO | NO | NO | -
+
+TOTALS (YES over 60): QS = 13 | QL = 27 | QC = 15
+
+Borderline calls, so the caller can re-score if the rule is stricter or looser:
+- Z22 and Z57 count as QS because the text frames L-type blocker and SERCA classes as raising ER chaperone function and surface. A stricter rule drops QS to 11 and QC to 13.
+- Z08 (glucosidase-inhibitor class) is not counted as QS or QC. Neither is Z19, Z32 or Z58 (p97-inhibitor class). Those are ER-quality-control modulators, not chemical-chaperone classes. Z08, Z19, Z32 and Z58 are counted in QL.
+- Z39 counts as QC only because it names Hsp90 inhibition (class) as a comparison arm.
+- Z28 (integrated-stress-response inhibitor) counts in QL, but only weakly, because the surface rise is conditional.
+- Z01 counts in QL as ER-export/biogenesis factor enhancement. Z23 and Z33 (partner or assembly-factor supply) count as NO.
+- Z07, Z15 and Z60 count as NO because the lever is lysosomal blockade, a scaffold, or endocytosis. Z16, Z37, Z40 and Z46 (Golgi palmitoylation) also count as NO.
