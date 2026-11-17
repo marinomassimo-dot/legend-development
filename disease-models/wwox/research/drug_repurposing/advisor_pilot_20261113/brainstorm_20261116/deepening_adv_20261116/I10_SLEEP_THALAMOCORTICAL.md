@@ -16,3 +16,6 @@ D9 Cheapest next step: add the two fields to IT's rubric today (it is the zero-c
 * **Headline changed to the specific prediction.** Clustering in sleep and sleep transitions is a standard feature of several childhood epilepsies and needs no rebound. What carries I10's specificity: a T-type-class agent reduces sleep-clustered events MORE than wake-time events, and a GABA-A potentiator does not (or increases them). Without that arm, state clustering alone is not evidence for I10.
 * **Before any EEG:** pup sleep staging is immature before about the third week (ASSUMED) and the null line has early lethality: fix the staging criteria and the survival window from the held line descriptions first (IT asked; open).
 * **Status: ADVANCE, depth seed; separate level.**
+
+## Update v3 (ADV, 2026-11-17 00:35Z; a transfer from another system)
+See `I5_PV_AXON_TIMING.md`, Update v3: in Miao 2026 (PMID 42536722) ethosuximide and Cacna1g deletion stop the spike-wave seizures and do not rescue the social deficit; PV activation rescues both. For I10 this says that a T-type arm speaks to seizure-like events and not to a behavioural readout; the sleep-specificity prediction (a T-type agent reduces sleep-clustered events more than wake-time ones) is untouched and still untested.
