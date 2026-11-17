@@ -16,3 +16,9 @@ Routes (N=11) and my probability that each surfaces it:
 11 gse156243/README.md (needs the folder name: oracle control, not counted as a route a searcher could pick) 0.70
 Expected count of routes 1-10 that surface it: about 2.5 of 10. The route I expect to work best: 2 (a file list), then 8 or 9.
 Expected cause of a miss: indexing/representation (results filed by dataset folder, not by gene or need), then tool choice.
+
+## Addendum, written before the index route was run (2026-11-17, after the README pointer landed in 462c8a04f)
+New routes, same input text (R2), no folder named:
+ 12 `python3 framework/scripts/held_results_index.py lookup WNT5A` (needs the searcher to know the tool): file in the first 20 lines   0.95
+ 13 grep of framework/scripts/README.md for "held result" / "which held result" (can a searcher find route 12 from the router?)       0.70 for "held result", 0.10 for "Wnt" or "organoid"
+Routes 1 to 11 are re-run unchanged. Expectation: 1, 2, 9 stay yes (the README pointer is in main); the derived markdown index adds hits to 1 and 2 but sorts before the note, so both stay yes; 3 to 8, 10 stay no. Expected total: 3 of 10 before the new tool, 4 of 11 with route 12 counted, and route 13 decides whether the tool is findable.
