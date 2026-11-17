@@ -1117,7 +1117,7 @@ def _waits() -> list[dict[str, str]]:
 
 
 def _own_updates(campaign: Path) -> list[str]:
-    """Pathspecs that leave out what the Advisor itself writes (its saved assessments, its assignment and invocation logs, the sender records): a commit that touches only those is not news to the Advisor
+    """Pathspecs that leave out what the Advisor itself writes (its saved assessments, its assignment and invocation logs, its portfolio updates and DREAM notes, the sender records): a commit that touches only those is not news to the Advisor
     (HE57: 2 of the last 23 commits of the campaign folder matched the delivery pattern). A recipient's result file in the folder is still news. Outside the repository there is nothing to exclude."""
     try:
         rel = Path(campaign).resolve().relative_to(ROOT.resolve())
@@ -1125,6 +1125,8 @@ def _own_updates(campaign: Path) -> list[str]:
         return []
     return [f":(exclude,glob){rel}/P[0-9]*/**", f":(exclude){rel}/assignments", f":(exclude){rel}/assignments.jsonl", f":(exclude){rel}/invocations.jsonl",
             f":(exclude,glob){rel}/meetings/**",
+            f":(exclude){PORTFOLIO_REL}",                          # an evaluation records its portfolio updates in the same commit; a changed portfolio is its own event (the digest), not a delivery
+            ":(exclude,glob)**/IDEAS_ORDER_DREAM*_ADV.md",         # the Advisor's DREAM pass notes
             *[f":(exclude,glob)ledger/tasks/*/*{m}*" for m in SENDER_RECORDS]]
 
 
