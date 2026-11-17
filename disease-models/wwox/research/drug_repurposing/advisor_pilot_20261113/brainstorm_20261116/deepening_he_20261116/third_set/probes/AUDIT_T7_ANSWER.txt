@@ -1,0 +1,12 @@
+1. Direct receptor guanylyl cyclase catalytic inhibition or negative allosteric modulation (small molecule or antibody against the receptor) | "A receptor guanylyl cyclase carries a gain-of-function variant" and "makes too much"
+2. Reduction of ligand or agonist drive on the receptor (ligand sequestration, neutralising antibody, or loss of the ligand gene) | "receptor guanylyl cyclase" (receptor implies a ligand) and "gain-of-function"
+3. Genetic correction or allele-specific knockdown of the variant (gene editing, antisense or siRNA, heterozygous deletion or haploinsufficiency) | "carries a gain-of-function variant" and "genetic" manipulation
+4. Enhanced cyclic-nucleotide degradation (phosphodiesterase activation or phosphodiesterase overexpression) | "too much of its cyclic-nucleotide second messenger" and "normalise the signalling"
+5. Blockade of cyclic-nucleotide efflux or compartmental handling (efflux transporter modulation) | "too much of its cyclic-nucleotide second messenger" and "second-messenger level"
+6. Inhibition of downstream effectors (cGMP-dependent protein kinase inhibition, or cyclic-nucleotide-gated channel or CFTR blockade) | "normalise the signalling" and "a class at mechanism level"
+7. Restoring secretory-lineage differentiation (Notch inhibition or Atoh1 and Wnt pathway modulation to rebalance goblet and Paneth cells) | "impaired secretory-cell differentiation" and "normalise ... the epithelium"
+8. Barrier reinforcement independent of second-messenger level (tight-junction or claudin modulation, or a mucus-layer or barrier-protective agent such as a GLP-2 analogue) | "a leaky barrier" and "predicts ... for barrier function"
+9. Cytokine or inflammatory blockade (anti-TNF, anti-IL-6 or anti-IL-23 antibody, or JAK or NF-kB inhibition) | "raised inflammatory cytokines"
+10. Microbiota or luminal modulation (antibiotics, germ-free derivation or bile-acid or short-chain-fatty-acid changes, to cut the luminal trigger for inflammation) | "gut epithelium" and "raised inflammatory cytokines", which suggests a luminal or immune driver acting in addition to epithelial signalling
+
+Ordering note: levers 1 to 4 are the most strongly entailed, because the wording names the receptor, the variant and the messenger level. Lever 5 is next, then levers 6 to 9 from the phenotype terms. Lever 10 is the weakest suggestion. The "genetic, or a class at mechanism level" phrase also leaks the form of the answer: it asks for knockout or knock-in manipulations or pharmacological classes.
