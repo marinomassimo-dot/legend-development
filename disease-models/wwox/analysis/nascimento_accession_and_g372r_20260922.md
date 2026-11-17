@@ -527,3 +527,5 @@ advice.** Genotype classes (`P47T`, `G372R`, `Q230P`, `c.517-2A>G`, `c.1114G>C`)
 (patient fibroblast, patient-derived iPSC, forebrain-organoid VZ, post-mortem human temporal lobe,
 mouse, rat) are kept rigidly separate throughout, and every variant string and identifier in this
 file was read from a served source today — **none reconstructed from memory.**
+
+[Update 2026-11-17, CC-20261117-ORCHESTRATOR-P47T-ABUNDANCE-WORDING-01 (IT; wording from the closure note IT56-Q05 of SCI, held files only): where this file says P47T protein is normal or at wild-type amount (lines 388), read "present, similar by the authors' wording, not quantified; folded state and stability untested". "Both protein-normal" becomes "both protein present"; the burial argument is unchanged. The original sentences above are not edited. Nothing else in this file changes.]

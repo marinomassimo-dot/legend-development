@@ -662,3 +662,5 @@ Gateway.*
 [41007296](https://doi.org/10.3390/biology14091151) ·
 [42589397](https://doi.org/10.3390/ijms27156740).
 **PMID 21476439 carries no DOI in its PubMed record** and none is constructed here.
+
+[Update 2026-11-17, CC-20261117-ORCHESTRATOR-P47T-ABUNDANCE-WORDING-01 (IT; wording from the closure note IT56-Q05 of SCI, held files only): where this file says P47T protein is normal or at wild-type amount (lines 178), read "present, similar by the authors' wording, not quantified; folded state and stability untested". Descriptive mention only; no argument in this file depends on equal abundance. The original sentences above are not edited. Nothing else in this file changes.]

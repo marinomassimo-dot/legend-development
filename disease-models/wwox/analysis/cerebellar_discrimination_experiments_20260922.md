@@ -688,3 +688,5 @@ section. So a **layer-resolved cerebellar WWOX distribution already exists as un
 moving that question from `NEW STAINING` to **`NEW ANALYSIS ONLY`**. ⚠️ Marked `SIBLING-ATTESTED` in
 § 3 and **not** independently verified here; and every such row remains conditional on **archive
 retention, which is `NOT STATED`**.
+
+[Update 2026-11-17, CC-20261117-ORCHESTRATOR-P47T-ABUNDANCE-WORDING-01 (IT; wording from the closure note IT56-Q05 of SCI, held files only): where this file says P47T protein is normal or at wild-type amount (lines 144,150,165,178,221,405,417,441,477), read "present, similar by the authors' wording, not quantified; folded state and stability untested". The "function rather than abundance" contrast (P47T versus an AAV-treated null) rests on equal abundance; with abundance unquantified, and the input band lighter in the one blot that shows it, the contrast is weaker than written, not removed (binding loss at present protein stands). The original sentences above are not edited. Nothing else in this file changes.]

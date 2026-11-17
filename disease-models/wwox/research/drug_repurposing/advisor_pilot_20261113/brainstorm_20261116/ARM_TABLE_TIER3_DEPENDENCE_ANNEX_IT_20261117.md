@@ -37,3 +37,8 @@ Dependence labels: **circuit** = R4's circuit-lever column (class-agnostic for t
 **Counts:** CITABLE 3 (C001, C055, C069); PARKED 21. Dependence (my reading of R4's columns and SCI's rows, not measured): circuit-lever 13 cells (C001, C007, C011, C015, C024, C046, C047, C049, C054, C055, C057, C069, C075), system transfer 7 (C006, C031, C035, C065, C066, C067, C068), clinical 2 (C053, C061), none 1 (C018), class-agnostic 1 (C071).
 ## Limits
 Tier is SCI's cap, not mine; a WWOX observation at tier 3 is a limited observation (one pool per arm, aggregated values), not a null result; 'citable' means 'may be cited with its tier-3 label', not 'supported for a drug'; no cell value or sign was changed here; the dependence labels are judgement. Not medical advice.
+
+## Update 2026-11-17 (IT, host 11:39Z; wording from SCI's closure note IT56-Q05; the C069 line above is not edited)
+* **C069 now reads:** "circuit/adaptor-directed (needs protein present; level not required to be wild-type; P47T: present in two matrices, level unquantified)". Before: "(needs protein retained)".
+* **What changed:** the dependence wording only; "retained" implied an unchanged level that no held datum gives. C069 still depends on the variant being a protein-present one, which P47T meets, and on R05a (aggregated sIPSC, a null background).
+* **What did not change:** C069 stays CITABLE at tier 3 (aggregated sIPSC only); no phasic measurement exists in P47T animals, so it does not become tier 2 for P47T; the other 23 cells, the counts (CITABLE 3, PARKED 21) and the dependence tally (circuit 13, system transfer 7, clinical 2, none 1, class-agnostic 1) are unchanged. Whether a scaffold-restoring lever acts through the WW1 groove is the I8 question, not this line's.

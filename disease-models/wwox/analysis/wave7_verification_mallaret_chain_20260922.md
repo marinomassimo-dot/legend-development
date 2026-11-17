@@ -267,3 +267,5 @@ absence of defects in it.
 count does not regress from 0. What changes is that a canonical claim will now *say* that one of
 its co-attributed sources is unread and says the opposite — which is a decrease in hidden debt,
 not an increase in declared debt.
+
+[Update 2026-11-17, CC-20261117-ORCHESTRATOR-P47T-ABUNDANCE-WORDING-01 (IT; wording from the closure note IT56-Q05 of SCI, held files only): where this file says P47T protein is normal or at wild-type amount (lines 153,175), read "present, similar by the authors' wording, not quantified; folded state and stability untested". Descriptive mention only; no argument in this file depends on equal abundance. The original sentences above are not edited. Nothing else in this file changes.]

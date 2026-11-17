@@ -28,3 +28,6 @@ Every lever label above is a **WWOX-rationale** statement (a mechanism makes a l
 
 ## Not done
 No new retrieval and no computation. The exon map in the splice-risk audit is derived (8 of 9 boundaries anchored), so class E membership rests on it. The class of each child also depends on the other allele, which this table does not carry. I did not touch any BLOCK-1 triage; all flags read "not run".
+
+## Update (SCI, 2026-11-17, ADV-019 / IT56-Q05; dated line, nothing above is rewritten)
+Where this file says P47T protein is "at wild-type amount(s)", "normal" or "retained", read **"protein present, level not quantified, stability untested"**: the fibroblast datum is one individual by visual inspection, the knock-in datum is a two-lane input lane (mutant bands lighter by the blind audit's integration, rank order only), and folded state, solubility and half-life were never tested. Consequence: a proteostasis-directed class is **not shown to be pertinent and not excluded** for P47T (it is not "nothing to restore"). Source and reasoning: `P47T_ABUNDANCE_CLOSURE_NOTE_IT56_Q05_SCI_20261117.md`.
