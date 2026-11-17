@@ -1,0 +1,8 @@
+T7 V3_S1_A | 15 list: metal [] synth [3, 4] rel [] | rule-R ten [2, 5, 3, 11, 14, 12, 1, 4, 6, 7] | metal in ten [] synth in ten [3, 4] rel in ten []
+T7 V3_S1_B | 15 list: metal [] synth [] rel [] | rule-R ten [3, 6, 2, 1, 4, 5, 7, 8, 9, 10] | metal in ten [] synth in ten [] rel in ten []
+T7 V4_S1_A | 15 list: metal [2, 3] synth [3, 8] rel [] | rule-R ten [2, 10, 6, 5, 11, 1, 3, 4, 7, 8] | metal in ten [2, 3] synth in ten [3, 8] rel in ten []
+T7 V4_S1_B | 15 list: metal [1, 9] synth [6] rel [] | rule-R ten [14, 1, 11, 5, 4, 15, 2, 3, 6, 7] | metal in ten [1] synth in ten [6] rel in ten []
+T9 V3_S1_A | 15 list: metal [] synth [9, 10] rel [10] | rule-R ten [1, 2, 15, 6, 8, 3, 4, 5, 7, 9] | metal in ten [] synth in ten [9] rel in ten []
+T9 V3_S1_B | 15 list: metal [] synth [12] rel [11] | rule-R ten [11, 4, 1, 9, 2, 3, 5, 6, 7, 8] | metal in ten [] synth in ten [] rel in ten [11]
+T9 V4_S1_A | 15 list: metal [] synth [8, 10] rel [10] | rule-R ten [2, 6, 1, 8, 11, 3, 4, 5, 7, 9] | metal in ten [] synth in ten [8] rel in ten []
+T9 V4_S1_B | 15 list: metal [] synth [9] rel [12] | rule-R ten [9, 1, 6, 5, 2, 11, 3, 4, 7, 8] | metal in ten [] synth in ten [9] rel in ten []

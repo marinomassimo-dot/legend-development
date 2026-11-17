@@ -1,0 +1,147 @@
+STEP 1. CLASSIFICATION OF THE 15 STAGE-1 HYPOTHESES
+(The folder is a WWOX-DEE model. The terms GUCY2C, GC-C, guanylyl cyclase and guanylin return 0 hits in the whole folder. So "INSIDE" below means a held mechanism class or design rule that can be transferred. It never means a held GC-C datum.)
+- S1-1 GTP pool: OUTSIDE. Terms IMPDH, GTP pool, guanine nucleotide, GTP gave 0 hits in the md files. The one hit is in a corpus-seed record.
+- S1-2 KHD/ATP gate: OUTSIDE. Terms pseudokinase, kinase-homology, allosteric, ATP-binding gave 8 raw hits, all about WWOX ligands or proteostasis. None concern a cyclase.
+- S1-3 ligand threshold: OUTSIDE. 0 hits.
+- S1-4 chaperone/HSP90: INSIDE as a class, OUTSIDE for the receptor. Chaperone terms: about 133 raw hits in 31 files. The relevant ones are analysis/proteostasis_rationale.md:57 and analysis/mechanism_intervention_map.md:609, 714-723. HSP90/CDC37 on receptor cyclases: 0.
+- S1-5 surface residency/glycosylation: OUTSIDE. Terms glycosylat, endocytosis, apical, biotinylat, Rab11, raft gave 4 raw hits in 2 commit-candidate files on E_GABA. I did not open them and they look unrelated.
+- S1-6 receptor half-life/lysosomal turnover: INSIDE. Terms ubiquitin, lysosom, CMA, proteasom, half-life, pulse-chase gave 63 hits in 12 analysis files.
+- S1-7 PDE sink: OUTSIDE. Terms PDE, phosphodiesterase, ABCC, efflux gave 0 relevant hits. 3 incidental hits are at registries/paper_registry_current.md:5483, 5484 and 5784, which are Ack1 and FRA16D titles.
+- S1-8 ABCC4 efflux: OUTSIDE. 0 hits.
+- S1-9 metal/redox/pH gating: OUTSIDE for the metal/pH mechanism (0 Mg2+/Mn2+ hits). The redox-sign premise is held for WWOX only (claim_registry_current.md:626-638).
+- S1-10 PKG2: OUTSIDE. Terms cGMP, PKG, PRKG2 gave 0 hits.
+- S1-11 PDE3/cAMP/PKA: OUTSIDE. 0 relevant hits.
+- S1-12 CFTR/NHE3 fluid secretion: OUTSIDE. CFTR gives 5 raw hits, all as a protein-corrector paradigm (therapeutic_strategies_current.md:58, mechanism_intervention_map.md:601, 930, proteostasis_rationale.md:33, 65). Terms diarrh and fluid secretion give 0 relevant hits. The 2 raw hits are ketogenic-diet red-flag lists (working_model_current.md:121-122, disease_model.md:71).
+- S1-13 Notch/ATOH1 lineage bypass: OUTSIDE. 0 relevant hits. Two hits are a MeSH tag (registries/corpus_seed_pubmed_20260806.jsonl:280) and a fibroblast co-expression remark (research/deepdive_manifests/PMID42128308.json:270).
+- S1-14 microbiota/butyrate/AHR: OUTSIDE. 0 relevant hits. The "tryptophan" matches are the WW-domain residue.
+- S1-15 compartment/timing/dose: INSIDE as a design principle (neuron-restricted rescue and conditional allele). It is not held for gut.
+
+Kept OUTSIDE: S1-3, S1-7, S1-10, S1-12, S1-13, S1-14 (six, minimum was three). Kept INSIDE: S1-6 (which absorbs S1-4 and S1-5 as sub-branches), S1-15. ENGINE: 2 hypotheses.
+
+STEP 2. THE TEN HYPOTHESES (mechanism level only)
+
+H1. Origin S1-3 (OUTSIDE)
+- Statement: The variant lowers the ligand threshold, so normal guanylin/uroguanylin tone becomes supramaximal. Reducing ligand drive therefore lowers cGMP and restores secretory-lineage and barrier programmes.
+- Corpus test: NOT STATED. 0 hits for GC-C, guanylin or guanylyl cyclase in the whole folder. Rival terms (KHD, ATP gate, abundance) also have 0 relevant hits. Held rule that applies: "Direction before candidate" (analysis/mechanism_intervention_map.md:57-59). It requires the sign of an axis to be resolved in the relevant compartment before any lever is admitted, and it bears on the floor effect described below.
+- Usual reading vs this one: The usual reading treats a gain-of-function receptor as constitutive, so ligand supply is irrelevant. This reading says the excess is ligand-gated and therefore tunable from outside the receptor.
+- Rejection: cGMP in GOF crypts is unchanged in Guca2a/Guca2b double-null mice.
+- Discriminating manipulation (nearest rival H2, abundance/half-life): Guca2a/Guca2b deletion on the GOF background.
+  - If H1 holds: cGMP falls toward the wild-type window with total receptor protein unchanged. Barrier and goblet differentiation improve, but only down to a floor, because ligand loss is itself damaging to the barrier in wild type (S1 caveat, not a corpus datum). Over-reduction gives a loss-of-function-like leak.
+  - If H2 holds: cGMP stays high.
+
+H2. Origin S1-6 (INSIDE as a class; absorbs S1-4 and S1-5)
+- Statement: The GOF receptor escapes normal lysosomal turnover, so its half-life and steady-state abundance are raised. Restoring the turnover route, not folding capacity, lowers cGMP and the epithelial damage. IPOTESI.
+- Corpus test: NOT STATED for GC-C; the folder supplies the test design only. Held design in analysis/data/redteam/discriminating_experiment.md:
+  - Lines 10-22: cycloheximide chase, with chloroquine/NH4Cl as the primary probe and MG-132 as the specificity control.
+  - Line 45: a chase does not measure synthesis, so nascent-synthesis pulse labelling must come first.
+  - Line 46: tag placement is not free.
+  - Line 41: separate the CMA, eMI and bulk-lysosomal routes.
+  - The route and the sign of a chaperone lever must be resolved before choosing one: analysis/mechanism_intervention_map.md:714-723 (N-11, N-12).
+  - The ER-chaperone rationale was retracted for cytosolic WWOX. It is not excluded for GC-C, which is a membrane receptor. That distinction is the held caveat on S1-4.
+- Usual reading vs this one: The usual reading says the receptor level is set by synthesis or folding and only specific activity changes. This reading says half-life is the lever, and a chaperone-capacity cut (S1-4) or surface-density change (S1-5) is a sub-branch that total-protein and pulse-chase readouts can separate.
+- Rejection: The chase half-life and steady-state total GC-C are equal in GOF and wild type, with equal nascent synthesis.
+- Discriminating manipulation (nearest rival H1, ligand tone): an induced-degradation degron knock-in on the GOF allele, with a lysosomal-block arm as the control.
+  - If H2 holds: cGMP and total receptor fall together irrespective of ligand. Lysosomal block raises both. Barrier recovers with a lag.
+  - If H1 holds: ligand deletion lowers cGMP with receptor mass unchanged.
+  - Predicted risk: over-depletion gives a loss-of-function-like leak.
+
+H3. Origin S1-7 (OUTSIDE)
+- Statement: Insufficient cGMP-hydrolysing capacity lets the GOF flux accumulate. Raising epithelial PDE5/PDE9-class hydrolysis clamps cGMP regardless of the receptor lesion and relieves the epithelium. The ABCC4 efflux branch (S1-8) is a sub-branch with an opposite extracellular prediction.
+- Corpus test: NOT STATED. 0 relevant hits for PDE, phosphodiesterase, ABCC or efflux (the 3 incidental hits are listed in Step 1). The rival's terms (receptor half-life) are held only as the generic route in H2.
+- Usual reading vs this one: The usual reading says the receptor lesion is the only target. This reading says the sink side is adjustable, provided the sink is not saturated.
+- Rejection: Epithelial PDE overexpression lowers cGMP in wild-type crypts but not in GOF crypts (flux saturates the sink).
+- Discriminating manipulation (nearest rival H2): epithelial PDE5/PDE9-class overexpression with the GOF receptor and its abundance left unchanged.
+  - If H3 holds: intracellular cGMP falls with total GC-C unchanged. The barrier improves only if intracellular cGMP is the damaging pool.
+  - If H2 holds: PDE overexpression does not alter receptor mass, so only the degron arm changes that.
+  - Abcc4 deletion (sub-branch): intracellular cGMP rises and extracellular falls. The barrier worsens if the intracellular pool is the harmful one.
+
+H4. Origin S1-10 (OUTSIDE)
+- Statement: PKG2 (PRKG2) carries the damaging signal that suppresses secretory-lineage and barrier programmes. Removing the kinase normalises the epithelium while cGMP stays high.
+- Corpus test: NOT STATED. 0 hits for cGMP, PKG or PRKG2 in any signalling context (the folder's only cGMP-adjacent hits are CFTR-corrector analogies, listed under S1-12 in Step 1). The rival (CFTR secretion, H5) is likewise absent.
+- Usual reading vs this one: The usual reading says lowering cGMP is necessary. This reading puts the damage at the effector kinase, so the signal level is irrelevant to the epithelium.
+- Rejection: Epithelial Prkg2 deletion in GOF mice leaves goblet cells and barrier unchanged.
+- Discriminating manipulation (nearest rival H5): epithelial Prkg2 deletion with CFTR intact.
+  - If H4 holds: cGMP is unchanged or higher (loss of kinase feedback), differentiation and barrier improve, and diarrhoea may persist.
+  - If H5 holds: Prkg2 deletion changes fluid secretion only. Only Cftr deletion would help, and it would leave cGMP unchanged.
+
+H5. Origin S1-12 (OUTSIDE)
+- Statement: Much of the damage is physical and secondary to CFTR-driven, NHE3-inhibited fluid secretion (mucus washout, shear). Blocking that output protects the barrier without touching cGMP. INFERENZA.
+- Corpus test: NOT STATED. Rival terms PKG/PRKG2 also have 0 hits. Related methodological caution: a systemic-null animal is simultaneously acidotic and dehydrated, so tissue phenotypes are confounded by systemic collapse (registries/claim_registry_current.md:666-668, CLAIM 036: bicarbonate 14.50 vs 21.67 mEq/L, calcium 10.18 vs 11.13 mg/dL, glucose 143.5 vs 250.6 mg/dL). That claim is WWOX null mouse, T3, a design warning only. It neither supports nor contradicts H5.
+- Usual reading vs this one: The usual reading says the signal directly alters differentiation and junctions. This reading says the physical consequence of the fluid load does.
+- Rejection: Cftr deletion in GOF mice resolves diarrhoea but goblet depletion and permeability remain.
+- Discriminating manipulation (nearest rival H4): epithelial Cftr deletion (or NHE3 restoration).
+  - If H5 holds: cGMP is unchanged, fluid output is normal, and mucus and barrier improve.
+  - If H4 holds: diarrhoea resolves but differentiation and barrier do not.
+
+H6. Origin S1-13 (OUTSIDE)
+- Statement: The leak is due to missing secretory output downstream of the signal. Raising Atoh1 or lowering Notch restores secretory cells and barrier independently of cGMP.
+- Corpus test: NOT STATED. 0 relevant hits (see Step 1). Held rule that shapes the test: MARKER_TO_FUNCTION_GATE (analysis/mechanism_intervention_map.md:54-56; applied at :832). Marker abundance, lineage/survival and function are four separate questions. This predicts that goblet counts can rise without barrier recovery. That is H6's own rejection arm, not a contradiction of it.
+- Usual reading vs this one: The usual reading says the fate defect must be repaired by correcting the signal. This reading says lineage output can be set downstream of it.
+- Rejection: Forced Atoh1 or Notch blockade gives goblet cells but the barrier stays leaky.
+- Discriminating manipulation (nearest rival H10, Wnt tone): epithelial Atoh1 stabilisation or γ-secretase-class Notch reduction with Prkg2 intact.
+  - If H6 holds: cGMP is unchanged, goblet and Paneth counts and barrier improve.
+  - If H10 holds: improvement depends on the sign of the Wnt arm.
+  - If counts rise but the barrier does not: the leak is not due to missing secretory cells, which favours H5 and H7.
+
+H7. Origin S1-14 (OUTSIDE)
+- Statement: Cytokine elevation and part of the leak are driven by the microbiota and by deficient supply of barrier-supporting metabolites (butyrate, tryptophan/AHR ligands), not by cGMP directly. IPOTESI.
+- Corpus test: NOT STATED. 0 relevant hits for microbio, butyrate, germ-free or AHR. The "tryptophan" matches concern a WW-domain residue, for example research/deepdive_manifests/PMID35716775.json:143. The rival's terms (epithelial-intrinsic reversion) are held only as a design principle in H8.
+- Usual reading vs this one: The usual reading says the epithelium-intrinsic signal is the whole cause. This reading says the luminal environment is a co-driver and can be changed.
+- Rejection: Germ-free GOF mice show the same leak and cytokine profile as conventional GOF mice.
+- Discriminating manipulation (nearest rival H8, epithelium-intrinsic): rederive GOF mice germ-free, or colonise with a defined butyrate/AHR-producing community.
+  - If H7 holds: cGMP is unchanged, cytokines fall, barrier partly recovers.
+  - If H8 holds: with microbiota constant, inducible epithelial reversion normalises cGMP and barrier.
+
+H8. Origin S1-15 (INSIDE as a design principle; gut itself is ESPANSIONE)
+- Statement: Only the epithelial compartment, in a dose window, drives the phenotype. Reverting the GOF allele in epithelium restores differentiation and barrier, and the dose-response is U-shaped, because over-reduction reproduces a loss-of-function-like leak.
+- Corpus test: SUPPORT as method only (T3). Evidence held for a different tissue:
+  - Neuron-restricted WWOX rescue corrects non-cell-autonomous gliosis, myelin and systemic glucose (research/discovery_ledger_current.md:192, DL-MECH-010).
+  - Wwox deletion in oligodendrocytes or astrocytes gives no anomaly (analysis/mechanism_intervention_map.md:725-731, N-13).
+  - A conditional allele was built to separate local autonomy from systemic collapse and was not used in that direction (registries/claim_registry_current.md:666-668, CLAIM 036).
+  - Nothing is held for gut epithelium or for GOF alleles.
+- Usual reading vs this one: The usual reading says the whole-body phenotype reflects one compartment and any signal lowering helps. This reading adds that cell type, timing and dose decide the outcome.
+- Rejection: Epithelium-restricted allele reversion (Vil1-Cre) leaves barrier and cytokines unchanged.
+- Discriminating manipulation (nearest rival H7): inducible epithelial reversion of the GOF allele in adults with microbiota held constant.
+  - If H8 holds: cGMP falls to near wild type, and the barrier recovers faster than the cytokine profile. Over-reducing the allele produces a loss-of-function-like leak.
+  - If cGMP normalises but the barrier does not recover: a non-epithelial or microbial driver (H7, H9) is implicated.
+
+H9. Origin ENGINE (built on held inflammatory-axis circuits)
+- Statement: The raised cytokines are downstream of the epithelial lesion and then sustain barrier leak independently. Neutralising a TNF/IFN-γ-class signal restores the barrier without correcting cGMP. IPOTESI.
+- Corpus test: SUPPORT by structure only (ESPANSIONE; WWOX, T3 or below). Held circuits:
+  - The inflammatory cascade is "de-repressed, but downstream", with IL-1β/NLRP3/NF-κB named as the node (analysis/mechanism_intervention_map.md:108).
+  - Gliosis is downstream of the neuron (research/discovery_ledger_current.md:210-211, DL-MECH-012, DL-MECH-010).
+  - The held verdict is "downstream, symptomatic/slowing" (discovery_ledger_current.md:210). So even a correct H9 predicts partial rescue.
+  - No gut data are held.
+- Usual reading vs this one: The usual reading treats cytokines as a readout of epithelial signalling. This reading treats them as a separable, causal downstream amplifier.
+- Rejection: Cytokine neutralisation in GOF mice leaves permeability unchanged.
+- Discriminating manipulation (nearest rival H8): TNF/IFN-γ-class neutralisation on the GOF background, without touching the allele.
+  - If H9 holds: cGMP is unchanged (or changed only via feedback on ligand or receptor expression), and the barrier improves partly.
+  - If H8 holds: epithelial reversion normalises cGMP and the barrier first, with cytokines falling later.
+
+H10. Origin ENGINE (built on held Wnt circuit, with sign deliberately open)
+- Statement: Excess cGMP signalling displaces crypt Wnt/β-catenin tone out of the window needed for secretory maturation. The direction is unknown and must be set empirically. Correcting the tone in the right direction restores differentiation without changing cGMP. IPOTESI.
+- Corpus test: NOT STATED for gut or GC-C. The method is held:
+  - "Direction before candidate": the held Wnt reversal came from this gate (analysis/mechanism_intervention_map.md:57-59).
+  - A two-armed design is held as the way to fix the sign: tankyrase-class XAV939 versus a GSK3β-inhibitor CHIR99021, after measuring nuclear β-catenin (analysis/mechanism_intervention_map.md:464; research/discovery_ledger_current.md:84).
+  - "Less Wnt = better is not a safe default" (mechanism_intervention_map.md:463).
+  - Systemic Wnt inhibition carries an intestinal-crypt-turnover liability (mechanism_intervention_map.md:461; discovery_ledger_current.md:83). This is a risk, not a contradiction.
+- Usual reading vs this one: The usual reading says the cGMP signal acts on differentiation directly through PKG. This reading puts crypt Wnt tone between the signal and the lineage choice.
+- Rejection: Neither arm improves goblet or Paneth differentiation in GOF crypt organoids, or both arms do.
+- Discriminating manipulation (nearest rival H6, direct lineage bypass): the two-armed Wnt-tone test in GOF crypt organoids, a tankyrase-class lowering arm versus a GSK3β-inhibitor-class raising arm, after measuring nuclear β-catenin.
+  - If H10 holds: cGMP is unchanged, and only the arm of the correct sign improves differentiation and barrier. The wrong arm worsens them, and the crypt-turnover risk applies.
+  - If H6 holds: Atoh1 stabilisation or Notch reduction improves differentiation irrespective of arm.
+
+CAVEATS
+- Evidence from the folder is T3/T5 transfer from WWOX systems, and ESPANSIONE for every gut statement. Nothing in the folder bears directly on GC-C.
+- Dose-response is expected to be U-shaped, so "normalise" means return to a window, not "minimise".
+- Mechanism level only; no dose, no recommendation to use any drug. Nothing here substitutes for clinical judgment.
+
+FILES READ:
+/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/set3/T7/V4_S1_B.txt
+/tmp/legend_cut_1867a26a8/CLAUDE.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md (lines 40-149, 440-480, 590-649, 705-834)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/data/redteam/discriminating_experiment.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/discovery_ledger_current.md (lines 77-89, 206-227)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/claim_registry_current.md (lines 656-675)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/paper_registry_current.md (lines 5483, 5784 only, to confirm hits were incidental)
+Grep sweeps (hit lists inspected, files not otherwise read) over the whole /tmp/legend_cut_1867a26a8 folder and /tmp/legend_cut_1867a26a8/disease-models/wwox/ subfolders. They surfaced, among others: registries/working_model_current.md:121-122, disease_model.md:71, registries/corpus_seed_pubmed_20260806.jsonl:280, research/deepdive_manifests/PMID42128308.json:270, research/deepdive_manifests/PMID35716775.json:143, analysis/proteostasis_rationale.md:33, 57, 65, therapeutics/therapeutic_strategies_current.md:58.
