@@ -107,3 +107,5 @@ INFERENZA on the input: its paediatric series figures match the abstracts held (
 
 ## Files (/tmp/it56_ket/p5_alternatives/)
 ALTERNATIVES_RCT_EVIDENCE.tsv (58 rows, 11 columns, every result/harm/funding quote machine-checked as an exact substring of the held bytes, 0 mismatches), SOURCES.tsv (103 byte-checked sources), SEARCHES.tsv (56 searches with exact query strings and counts), sources/.
+
+**Update 2026-11-17 (IT; after blind verification of sampled rows):** corrections for this package are in `../CORRECTIONS_AFTER_BLIND_VERIFICATION_IT_20261117.md`; the text above is unchanged.
