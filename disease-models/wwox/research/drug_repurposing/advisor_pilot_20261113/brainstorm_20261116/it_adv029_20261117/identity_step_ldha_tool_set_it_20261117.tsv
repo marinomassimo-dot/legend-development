@@ -1,0 +1,6 @@
+tool_name	chembl_id	chembl_inchikey	pubchem_record_inchikey	identity_by_inchikey	ldha_rows_returned	best_ldha_rows_as_returned
+GSK2837808A	CHEMBL3335794	RZBCPMYJIARMGV-UHFFFAOYSA-N	RZBCPMYJIARMGV-UHFFFAOYSA-N	full-key match	9	IC50 2.6 nM (3 documents CHEMBL3351282, CHEMBL3763153, CHEMBL4825721), IC50 38 nM (CHEMBL4028893), Ki 4.8 nM, Kd 1.7 and 59 nM, cell EC50 8180 nM
+FX11	CHEMBL126519	LVPYVYFMCKYFCZ-UHFFFAOYSA-N	LVPYVYFMCKYFCZ-UHFFFAOYSA-N	full-key match	7	Ki 50 nM (CHEMBL3763153) and 8000 nM (4 documents), IC50 >40000 and >500000 nM; one Plasmodium LDH Ki 300 nM
+GNE-140 (R)	CHEMBL4065858	SUFXXEIVBZJOAP-RUZDIDTESA-N	SUFXXEIVBZJOAP-RUZDIDTESA-N	full-key match (the three name-search candidates CHEMBL5027251, CHEMBL3122117, CHEMBL4475494 are other compounds)	8	IC50 3.0 nM (CHEMBL4428136), <10 nM, EC50 7.2 and 8.9 nM; 424 nM in one liver-LDHA assay (CHEMBL4028893); cell IC50 670 nM
+GNE-140 racemate / other enantiomer	CHEMBL4436150 / CHEMBL4589484	SUFXXEIVBZJOAP-UHFFFAOYSA-N / SUFXXEIVBZJOAP-VWLOTQADSA-N	same connectivity block	stereo variants of the same skeleton	1 / 1	IC50 9.0 nM / 55.0 nM (CHEMBL4428136)
+galloflavin	CHEMBL5199516	UXHISTVMLJLECY-UHFFFAOYSA-N	UXHISTVMLJLECY-UHFFFAOYSA-N	full-key match	1	Ki 5460 nM (CHEMBL5113506); the other two candidates (CHEMBL3763517, CHEMBL4217921) are not the PubChem structure
