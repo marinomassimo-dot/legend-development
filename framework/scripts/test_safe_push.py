@@ -314,6 +314,49 @@ class SafePushSerialize(unittest.TestCase):
             names = [l.split()[1] for l in log.read_text().splitlines()]
             self.assertEqual(names, ["A", "A", "B", "B"], "the gates ran one at a time; B merged A under the lock and gated the merged commit once")
 
+    def _three(self, td):
+        root, bare = self._slow_remote(td)
+        wts = [root]
+        for n in ("second", "third"):
+            w = Path(td) / n
+            subprocess.run(["git", "-C", str(root), "worktree", "add", "-q", "--detach", str(w)], check=True); wts.append(w)
+        for w in wts:
+            subprocess.run(["git", "-C", str(w), "config", "user.name", "t"], check=True)
+        for w, nm in zip(wts, ("a.txt", "b.txt", "c.txt")):
+            self._commit(w, nm)
+        return wts, bare
+
+    def test_the_ticket_queue_lands_publishers_in_arrival_order(self) -> None:
+        with TemporaryDirectory() as td:
+            wts, bare = self._three(td); log = Path(td) / "gate.log"
+            ps = []
+            for w, nm in zip(wts, ("A", "B", "C")):
+                ps.append(self._popen(w, "origin", "main", "--serialize", LEGEND_TEST_LOG=str(log), LEGEND_TEST_NAME=nm, LEGEND_TEST_SLEEP="2"))
+                time.sleep(1.0)
+            outs = [p.communicate(timeout=90) for p in ps]
+            for p, (o, e) in zip(ps, outs):
+                self.assertEqual(p.returncode, 0, e)
+            names = [l.split()[1] for l in log.read_text().splitlines()]
+            self.assertEqual(names, ["A", "A", "B", "B", "C", "C"], "gates ran in arrival order, one at a time")
+            self.assertTrue(any("queue position" in o for o, _ in outs[1:]), "a waiter prints its queue position")
+
+    def test_a_killed_waiter_and_a_stale_ticket_do_not_block_the_queue(self) -> None:
+        import signal as _sig
+        with TemporaryDirectory() as td:
+            wts, bare = self._three(td); log = Path(td) / "gate.log"
+            common = subprocess.run(["git", "-C", str(wts[0]), "rev-parse", "--git-common-dir"], capture_output=True, text=True).stdout.strip()
+            common = Path(common) if os.path.isabs(common) else wts[0] / common
+            (common / "legend_land.queue").write_text("999999 1 2026-11-16T00:00:00Z\n")            # a ticket whose process does not exist, at the head
+            a = self._popen(wts[0], "origin", "main", "--serialize", LEGEND_TEST_LOG=str(log), LEGEND_TEST_NAME="A", LEGEND_TEST_SLEEP="3"); time.sleep(1.0)
+            b = self._popen(wts[1], "origin", "main", "--serialize", LEGEND_TEST_LOG=str(log), LEGEND_TEST_NAME="B", LEGEND_TEST_SLEEP="2"); time.sleep(1.0)
+            c = self._popen(wts[2], "origin", "main", "--serialize", LEGEND_TEST_LOG=str(log), LEGEND_TEST_NAME="C", LEGEND_TEST_SLEEP="2"); time.sleep(1.0)
+            b.send_signal(_sig.SIGKILL); b.wait(timeout=10)                     # B dies while waiting: its ticket stays in the file until the next waiter prunes it
+            oa, ea = a.communicate(timeout=90); oc, ec = c.communicate(timeout=90)
+            self.assertEqual(a.returncode, 0, ea); self.assertEqual(c.returncode, 0, ec)
+            names = [l.split()[1] for l in log.read_text().splitlines()]
+            self.assertEqual(names, ["A", "A", "C", "C"], "the dead ticket at the head and the killed waiter were skipped")
+            self.assertEqual((common / "legend_land.queue").read_text().strip(), "", "every live ticket was released at exit")
+
     def test_a_killed_publisher_releases_the_lock_and_a_timeout_refuses(self) -> None:
         with TemporaryDirectory() as td:
             root, bare = self._slow_remote(td)
