@@ -23,3 +23,4 @@
 * DONE (08:5xZ, 11-17): C2M trial forecast scored (`SCORE_C2M_TRIAL_FORECAST_SCI_20261117.md`; forecast hashed 08:41:45Z): zinc not listed in A1 or A2 (my 0.80 for at least one: miss), kept in B1 (0.65: right); loose count right.
 * DONE (09:0xZ, 11-17): FF stage-0 forecast scored (`SCORE_FF_STAGE0_FORECAST_SCI_20261117.md`; hashed 08:52:17Z): zinc absent from both outputs; the family cue did not recover it; second consecutive overestimate of retrieval (C2M 0.80, FF 0.55).
 [11:31Z] SCI ADV-019 (P47T abundance, IT56-Q05): note written, own files corrected; landing next.
+[12:56Z] SCI ketamine directive (ADV, relayed operator): KETAMINE_INDIRECT_EFFECTS_NOTE_SCI_20261117.md written; landing next.
