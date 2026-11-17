@@ -102,6 +102,32 @@ folder, `framework/scripts/strategic_advisor.py` and its test, the row in `frame
 
 ## Proactive pilot (Stage P)
 
+**Accountable host, optional consultant.** The current rule is **Laboratory ownership** in
+[cross-session transport section 12](../../../framework/protocols/cross_session_transport.md#12--autonomous-mandate-continuity).
+The ADV host owns overall performance and the continuing programme. The read-only invocation
+supplies a second perspective; it is not a required approval or the only way to choose work.
+At a delivery, closure or recall, the host reconciles the originals, the current recipient
+state and the consumer, chooses what next deserves investment, and follows it through.
+
+For a host decision inside the already-authorised continuous campaign, write the ordinary
+`## Assignments` / `### ASSIGNMENT n` blocks and run:
+`python3 framework/scripts/strategic_advisor.py assign --campaign <DIR> --text-file <FILE>`.
+This reuses the existing assignment log, keys, duplicate checks and delivery route, labels
+the origin `host`, updates the last choice and launches no model. It does **not** send or
+claim acceptance: resolve the live recipient, SendMessage the saved assignment pointer,
+record the actual receipt with `deliver`, and verify take-in-charge and consumption.
+Existing operator controls, shared resource limits and an in-flight consultant remain
+visible; the bounded pilot gains no alternative route around its ceilings. Do not call
+model-mediated reading or coordination "token-free" just because no delegate was launched.
+
+When a separate perspective can change the direction, use `evaluate` as below. Its brief
+now includes actual session activity and changed original-result paths at pinned revisions,
+including edits to existing files. `DIFFERS OR UNAVAILABLE` requires host reconciliation at
+a safe boundary, not a checkout reset, a new gate or a conclusion from an unread source.
+The source index is not a shortlist or a reading receipt. A future MEETING is not permission
+to defer the next useful choice. Technical completion and strategic effectiveness remain
+separate: use the behavioural work in the implementation handoff, not a keyword test.
+
 At strategic decision boundaries, the hosting session and analyst use **Direction before
 status** in [cross-session transport section 12](../../../framework/protocols/cross_session_transport.md#12--autonomous-mandate-continuity).
 The generated brief puts that canonical paragraph and the source map ahead of the mechanical
@@ -117,7 +143,7 @@ cannot change a conclusion, ranking or qualification, and has no new mission or 
 **The two levels, one schedule.** An hourly in-session cron (the one scheduling mechanism a live session can use and the one that can also *deliver*: the host crontab already runs the mandate watch
 and is not repeated) runs `python3 framework/scripts/strategic_advisor.py tick --campaign <DIR>`. `tick` is mechanical and makes no model call: it reads the roadmap digest, the commits of `main`
 since the last tick, the task records, the mandate watch's own event log and the runtime's list of sessions, and answers `NONE` (nothing new: the previous assessment stands), `EVALUATE`,
-or why not (`RUNNING`, `DEFERRED`, `BUDGET`, `EXPIRED`, `DISABLED`). On `EVALUATE` run, in the background, `strategic_advisor.py evaluate --campaign <DIR>` (opus, effort `high`, the existing
+or why not (`RUNNING`, `DEFERRED`, `BUDGET`, `EXPIRED`, `DISABLED`). On `EVALUATE` choose an effective host decision through `assign`, reuse a still-valid choice with current evidence, or consult in the background with `strategic_advisor.py evaluate --campaign <DIR>` (opus, effort `high`, the existing
 fallback if the account does not serve it, declared in `meta.json`). Evaluations are about four hours apart, earlier when a delivery, a closed mandate, a stalled mandate or a roadmap edit
 anticipates one; the same events are never evaluated twice (a digest), an evaluation that is still running is not overlapped (process identity), and a session waiting for a CI run, a battery or
 a delegate is not "stalled": only the mandate watch calls a mandate resumable, and recovery stays with it.

@@ -348,6 +348,155 @@ class DirectionBeforeStatus(Base):
         self.assertEqual(sa._attempts(self.campaign), [])
 
 
+class HostDecisions(Base):
+    """Exercise the real host path, not model obedience or scientific judgment."""
+
+    def setUp(self) -> None:
+        super().setUp()
+        self.repo = _repo_with_records(self.tmp, {"ORCH-CLOSED": "COMPLETE"})
+        self.patches = [patch.object(sa, "ROOT", self.repo),
+                        patch.object(sa, "ROADMAP", self.repo / "disease-models/wwox/research/drug_repurposing/roadmap_current.md"),
+                        patch.object(sa, "STATE_DIR", self.tmp / "state"),
+                        patch.object(sa, "_sessions", return_value={"SCI": "idle"}),
+                        patch.dict(os.environ, {"LEGEND_ADVISOR_NOW": "2026-11-17T16:00:00Z"})]
+        for p in self.patches:
+            p.start()
+        self.campaign.mkdir(exist_ok=True)
+        (self.campaign / "budget.json").write_text(json.dumps({"expires_utc": "2026-11-14T00:00:00Z", "max_invocations": 1, "max_assignments": 1}))
+        (self.campaign / sa.CONTINUOUS).write_text(json.dumps({"mode": "continuous", "authorised_utc": "2026-11-14T00:00:00Z"}))
+        self.text = ("## Assignments\n### ASSIGNMENT 1\nkey: next-scientific-question\nrecipient: Science\n"
+                     "question: Which current observation distinguishes the competing mechanisms?\n"
+                     "why_now: the previous result is consumed; the laboratory branch is blocked, this reading is not\n"
+                     "roadmap_link: generation and open questions\nrelated_work: previous case closed\n"
+                     "sources: held original and current question row\ndecision_changed_by_result: choose the next comparison\n"
+                     "perimeter_and_budget: one original-source pass; shared allocation; no spend\n"
+                     "method_autonomy: correct the premise or propose a better method\ndeliver_to: Orchestrator\n"
+                     "duplicate_check: existing owner records checked\n")
+
+    def tearDown(self) -> None:
+        for p in reversed(self.patches):
+            p.stop()
+        super().tearDown()
+
+    def test_host_choice_has_honest_provenance_no_model_or_fake_send_and_no_renewed_budget(self) -> None:
+        frozen_budget = (self.campaign / "budget.json").read_bytes()
+        with patch.object(sa, "run", side_effect=AssertionError("must not call a consultant")):
+            self.assertEqual(sa.host_assign(self.campaign, self.text), 0)
+        self.assertEqual(sa._attempts(self.campaign), [])
+        self.assertEqual((self.campaign / "budget.json").read_bytes(), frozen_budget)
+        rows = sa._events(self.campaign)
+        self.assertEqual([(r["state"], r["origin"]) for r in rows], [("DRAFTED", "host")])
+        self.assertIn("not an independent assessment", (self.campaign / "assignments/ADV-001.md").read_text())
+        self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "DRAFTED")
+        self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["origin"], "host")
+        self.assertNotIn("last_evaluation_utc", sa._load_state(self.campaign))
+        self.assertEqual(sa.host_assign(self.campaign, self.text), 0)
+        self.assertEqual(sum(r["state"] == "DRAFTED" for r in sa._events(self.campaign)), 1)
+
+    def test_a_host_choice_settles_its_event_but_a_later_delivery_remains_actionable(self) -> None:
+        sa.tick(self.campaign)
+        state = sa._load_state(self.campaign)
+        state.update(pending_events=["delivery: abc1234 previous result consumed"], pending_commits=1)
+        sa._save_state(self.campaign, state)
+        self.assertEqual(sa.host_assign(self.campaign, self.text), 0)
+        quiet = sa.tick(self.campaign)
+        self.assertEqual(quiet["verdict"], "NONE")
+        self.assertEqual(sa._load_state(self.campaign)["pending_events"], [])
+        self.assertEqual(quiet["evaluation_clock"]["source"], "recorded host decision (not a model evaluation)")
+        original = sa.observe
+        def delivered(campaign, state):
+            obs = original(campaign, state)
+            obs["events"].append("delivery: def5678 new independent result")
+            return obs
+        with patch.object(sa, "observe", side_effect=delivered):
+            self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
+
+    def test_pause_disable_and_bounded_pilot_cannot_be_bypassed_by_a_host_draft(self) -> None:
+        for refusal in ["operator suspension", "weekly allocation exhausted", "campaign disabled"]:
+            with self.subTest(refusal=refusal), patch.object(sa, "budget_refusal", return_value=refusal):
+                self.assertEqual(sa.host_assign(self.campaign, self.text), 2)
+        (self.campaign / sa.CONTINUOUS).unlink()
+        self.assertEqual(sa.host_assign(self.campaign, self.text), 2)
+        self.assertEqual(sa._events(self.campaign), [])
+
+    def test_a_delivery_arriving_during_registration_is_not_consumed_with_the_old_choice(self) -> None:
+        sa.tick(self.campaign)
+        register = sa.register_assignments
+        def arrived(*args, **kwargs):
+            state = sa._load_state(self.campaign)
+            state["pending_events"] = ["delivery: abc1234 result arriving during registration"]
+            state["pending_commits"] = 1
+            sa._save_state(self.campaign, state)
+            return register(*args, **kwargs)
+        with patch.object(sa, "register_assignments", side_effect=arrived):
+            self.assertEqual(sa.host_assign(self.campaign, self.text), 0)
+        self.assertEqual(sa._load_state(self.campaign)["pending_events"], ["delivery: abc1234 result arriving during registration"])
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
+
+    def test_independent_host_help_does_not_interrupt_or_replace_a_running_consultation(self) -> None:
+        sa._save_state(self.campaign, {"running": "fixture", "pending_events": ["delivery: pending"], "last_outcome": {"evaluation": "P7"}})
+        before = sa._load_state(self.campaign)
+        with patch.object(sa, "_running", return_value=True):
+            self.assertEqual(sa.host_assign(self.campaign, self.text), 0)
+        self.assertEqual(sa._load_state(self.campaign), before)
+        self.assertEqual(sa._events(self.campaign)[0]["origin"], "host")
+
+    def test_current_source_index_deduplicates_history_and_follows_observed_main(self) -> None:
+        rel = "disease-models/wwox/research/result.md"
+        calls = []
+        def git(*args, **kwargs):
+            calls.append(args)
+            if args[:2] == ("diff", "--name-only"):
+                return rel
+            if args[:2] == ("rev-parse", "--verify"):
+                return "current-blob" if args[-1] == "feed1234:" + rel else "stale-blob"
+            if args[0] == "hash-object":
+                return "current-blob"
+            return ""
+        (self.repo / rel).parent.mkdir(parents=True, exist_ok=True)
+        (self.repo / rel).write_text("current consumed result")
+        with patch.object(sa, "_git", side_effect=git):
+            rendered = sa.current_result_sources({"main_sha": "feed1234", "events": ["delivery: abc1234 first result", "delivery: def5678 merged correction"]}, {"repo_sha": "oldhead", "main_ahead": []})
+        self.assertEqual(rendered.count("- `" + rel + "`"), 1)
+        self.assertIn("same bytes readable here", rendered)
+        self.assertIn("Change provenance: abc1234, def5678", rendered)
+        self.assertIn(("diff", "--name-only", "def5678^", "def5678"), calls)
+        self.assertNotIn("DIFFERS OR UNAVAILABLE", rendered)
+
+    def test_removed_current_source_is_not_presented_as_a_live_old_delivery(self) -> None:
+        rel = "disease-models/wwox/research/removed.md"
+        with patch.object(sa, "_git", side_effect=lambda *a, **k: rel if a[0] == "diff" else ""):
+            rendered = sa.current_result_sources({"main_sha": "feed1234", "events": ["delivery: abc1234 old file"]}, {"repo_sha": "feed1234"})
+        self.assertIn("removed at observed main", rendered)
+
+    def test_a_newer_ref_modifying_an_existing_source_is_explicit_even_without_a_new_folder(self) -> None:
+        rel = "disease-models/wwox/research/existing.md"
+        def git(*args, **kwargs):
+            if args[0] == "diff":
+                return rel
+            if args[0] == "rev-parse":
+                return "new-blob" if args[-1].startswith("newtip:") else "old-blob"
+            return ""
+        with patch.object(sa, "_git", side_effect=git):
+            rendered = sa.current_result_sources({"main_sha": "oldtip", "events": []},
+                {"repo_sha": "oldtip", "main_ahead": [{"tip": "newtip", "new_folders": []}]})
+        self.assertIn(rel, rendered)
+        self.assertIn("Newer known ref `newtip`", rendered)
+        self.assertIn("NOT supplied by the observed-main copy", rendered)
+
+    def test_activity_and_canonical_accountability_reach_the_analyst_without_a_launch(self) -> None:
+        path = self.repo / "framework/protocols/cross_session_transport.md"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("### Laboratory ownership (fixture)\n\nThe host owns the programme.\n\n### Next section\nDo not copy this.\n")
+        obs = sa.observe(self.campaign, {})
+        obs["activity"] = {"available": True, "idle_share": "3/4", "idle_over_half": True}
+        brief = sa.build_brief_p(self.campaign, obs)
+        self.assertIn('"idle_share": "3/4"', brief)
+        self.assertIn("The host owns the programme.", brief)
+        self.assertNotIn("Do not copy this.", brief)
+        self.assertEqual(sa._attempts(self.campaign), [])
+
+
 class Proactive(Base):
     """The proactive pilot: bounded hourly check, one evaluation per decision, assignments with evidence levels, budget and disable. Fixtures: they do not show the real runtime."""
 

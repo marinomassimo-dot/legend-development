@@ -8,6 +8,20 @@ the parts where they conflict, and the Advisor re-evaluates when this section ch
 
 <!-- OPERATOR_ROADMAP:BEGIN -->
 
+**2026-11-17 — Operator-approved laboratory ownership and implementation handoff.** ADV is
+the final accountable owner of overall laboratory performance. Apply the current rule in
+`framework/protocols/cross_session_transport.md` section 12, **Laboratory ownership**. The
+operator approved implementation by Plan and real follow-through by ADV, HE and IT/SCI.
+Read the complete implementation and executable team handoff in
+`governance/design_records/adv_lab_ownership_20261117.md`; reconcile its earlier observations
+with live state. Use the existing continuous campaign, messages, portfolio and mandate notes.
+ADV can register its own decisions through the existing assignment channel without a fresh
+consultation or operator agenda. Choose useful research, follow actual acceptance and
+consumption, and decide the next investment. The behavioural check belongs to ADV, with HE
+verifying the technical path and IT/SCI retaining execution and scientific independence.
+No renewed pilot cap, token-exhaustion target, new approval, scheduler or research pause.
+
+
 **2026-11-15 — Standing operator integration: continuous useful research.** ADV is authorised
 and expected to maintain the research pipeline within this roadmap, without new operational
 prompts from the operator. Operator silence is not a dependency; intervention happens by

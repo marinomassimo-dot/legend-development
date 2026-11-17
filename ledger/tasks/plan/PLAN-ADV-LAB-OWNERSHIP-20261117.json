@@ -1,0 +1,96 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+  "TASK_ID": "PLAN-ADV-LAB-OWNERSHIP-20261117",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "ACTOR_ID": "plan",
+  "OWNER": "plan",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-11-17",
+  "OBJECTIVE": "Implement the operator-approved ADV laboratory-performance ownership, a direct host-decision path without consultant dependency, current original-result and activity inputs, and the team behavioural handoff. Preserve lean modularity, existing controls, scientific independence and useful-cost reasoning.",
+  "worktree": "/tmp/legend-adv-lab-ownership-20261117",
+  "branch": "codex/adv-lab-ownership-20261117",
+  "AUTHORISED_QUEUE_20261117": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_IMPLEMENT": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Inspect actual decision and source path; separate host accountability from scientific authority",
+          "status": "DONE",
+          "evidence": "CLAUDE.md, LEGEND_CORE 21c-21e, roles/plan.md, current Advisor path and independent bounded read-only review"
+        },
+        {
+          "step": "Implement canonical ownership, direct host assignment and fresh result/activity context; prepare durable team handoff",
+          "status": "DONE",
+          "evidence": "framework/scripts/strategic_advisor.py; cross-session transport section 12; governance/design_records/adv_lab_ownership_20261117.md"
+        },
+        {
+          "step": "Verify relevant regressions, land and publish on exact SHA, report behavioural limitations",
+          "status": "IN_PROGRESS"
+        }
+      ]
+    }
+  },
+  "DEFAULTS_TAKEN": [],
+  "STOP_LOG": [],
+  "VALIDATION_LIMIT": "Mechanical tests prove controls, provenance, freshness metadata and event handling, not scientific quality, generative benefit or multiday autonomy. ADV owns live follow-through via the existing roadmap/campaign; no send is claimed from a saved handoff.",
+  "IMPLEMENTATION_REVIEW": {
+    "method": "bounded independent read-only delegate, two passes",
+    "changes_after_review": [
+      "host decision settles its observation boundary without consuming later delivery events",
+      "source paths deduplicated and resolved at observed main, newer ref differences explicit",
+      "independent host help remains possible during consultation without replacing its state"
+    ],
+    "claim": "technical design review; no scientific effectiveness claim"
+  },
+  "VALIDATION_ATTEMPTS": [
+    {
+      "scope": "first Advisor worktree suite",
+      "tests": 171,
+      "verdict": "FAIL",
+      "cause": "agent definition 1441 words exceeds existing 1400-word bound; definition shortened, bound preserved"
+    },
+    {
+      "scope": "first section-reference check",
+      "verdict": "FAIL",
+      "cause": "four generic historical labels resolved to unrelated new basename matches; clarified intended file references without scientific change"
+    },
+    {
+      "scope": "first documented-command check",
+      "verdict": "FAIL",
+      "cause": "existing sim_harness example used freeze|run|score|check as a literal subcommand; example replaced by executable --help and separate subcommand names"
+    },
+    {
+      "scope": "Advisor worktree suite after definition correction",
+      "tests": 171,
+      "verdict": "PASS",
+      "log": "/tmp/legend-adv-ownership-advisor-r2-20261117.log"
+    },
+    {
+      "scope": "Mandate continuity",
+      "tests": 70,
+      "verdict": "PASS"
+    },
+    {
+      "scope": "Section references after explicit-reference repairs",
+      "tests": 13,
+      "verdict": "PASS"
+    },
+    {
+      "scope": "Documented commands after executable example repair",
+      "tests": 3,
+      "verdict": "PASS"
+    },
+    {
+      "scope": "Release surface and tool routing",
+      "verdict": "PASS"
+    },
+    {
+      "scope": "Structural LINT",
+      "verdict": "WARN",
+      "blocks": 0
+    }
+  ],
+  "TEAM_HANDOFF": "governance/design_records/adv_lab_ownership_20261117.md; linked inside the effective operator roadmap. This is a durable assignment source, not a claim of SendMessage delivery."
+}
