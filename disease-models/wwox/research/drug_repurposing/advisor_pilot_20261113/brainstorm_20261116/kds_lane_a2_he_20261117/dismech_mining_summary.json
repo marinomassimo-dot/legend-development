@@ -1,0 +1,104 @@
+{
+ "disorder_files": 4068,
+ "parse_failures": [],
+ "hits": 457,
+ "entries_with_hits": 99,
+ "by_term": {
+  "ketamine": {
+   "items": 52,
+   "entries": 17,
+   "epilepsy_entries": 7,
+   "grades": {
+    "none": 17,
+    "HUMAN_CLINICAL": 28,
+    "OTHER": 4,
+    "MODEL_ORGANISM": 3
+   }
+  },
+  "magnesium": {
+   "items": 261,
+   "entries": 51,
+   "epilepsy_entries": 18,
+   "grades": {
+    "IN_VITRO": 14,
+    "none": 39,
+    "HUMAN_CLINICAL": 164,
+    "OTHER": 26,
+    "MODEL_ORGANISM": 17,
+    "COMPUTATIONAL": 1
+   }
+  },
+  "memantine": {
+   "items": 50,
+   "entries": 14,
+   "epilepsy_entries": 7,
+   "grades": {
+    "none": 15,
+    "HUMAN_CLINICAL": 24,
+    "MODEL_ORGANISM": 3,
+    "IN_VITRO": 6,
+    "COMPUTATIONAL": 2
+   }
+  },
+  "dextromethorphan": {
+   "items": 18,
+   "entries": 10,
+   "epilepsy_entries": 5,
+   "grades": {
+    "HUMAN_CLINICAL": 9,
+    "none": 8,
+    "OTHER": 1
+   }
+  },
+  "NMDAR antagonist (class)": {
+   "items": 31,
+   "entries": 15,
+   "epilepsy_entries": 7,
+   "grades": {
+    "HUMAN_CLINICAL": 11,
+    "none": 11,
+    "IN_VITRO": 4,
+    "MODEL_ORGANISM": 2,
+    "OTHER": 3
+   }
+  },
+  "amantadine": {
+   "items": 27,
+   "entries": 9,
+   "epilepsy_entries": 1,
+   "grades": {
+    "none": 14,
+    "HUMAN_CLINICAL": 12,
+    "OTHER": 1
+   }
+  },
+  "nitrous oxide": {
+   "items": 15,
+   "entries": 8,
+   "epilepsy_entries": 3,
+   "grades": {
+    "OTHER": 3,
+    "none": 6,
+    "HUMAN_CLINICAL": 6
+   }
+  },
+  "felbamate": {
+   "items": 3,
+   "entries": 1,
+   "epilepsy_entries": 1,
+   "grades": {
+    "none": 1,
+    "HUMAN_CLINICAL": 1,
+    "OTHER": 1
+   }
+  }
+ },
+ "graph": {
+  "entries_with_pathophysiology": 4066,
+  "entries_without": 2,
+  "entries_with_parentless_beyond_first": 1331,
+  "median_nodes": 6.0,
+  "entries_not_all_reachable_from_first": 1331,
+  "share_nodes_reachable_median": 1.0
+ }
+}
