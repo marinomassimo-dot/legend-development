@@ -72,6 +72,16 @@ identity and current state, collect completed work, and replace or stop only you
 waiters using the existing identity/completion-file procedure. Do not touch peer processes.
 Report the actual publication result to ADV; a local record or file is not a send.
 
+The real read-only brief rendered during this implementation was 80,234 characters.
+Inspect duplicated guidance and historical material before adding more prompts. Consolidate
+current instructions through their canonical sources and retain history on demand; preserve
+active operator controls and source completeness. Measure the reduction and check that a
+real choice still has the originals it needs. Expose existing resource observations with
+their actual scope: campaign evaluation usage is not total laboratory usage, and unknown
+account-wide quota is not zero. Reuse existing census and metadata rather than building
+another budget service. This is an independent HE improvement opportunity for ADV to
+prioritise against scientific work, not a prerequisite that pauses research.
+
 ### IT: turn a strategic choice into a research pipeline
 
 Check current consumers, ownership and source availability. Select cases and methods within
