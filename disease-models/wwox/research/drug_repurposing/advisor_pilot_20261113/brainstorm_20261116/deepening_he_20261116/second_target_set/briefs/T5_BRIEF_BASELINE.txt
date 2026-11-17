@@ -1,0 +1,7 @@
+You are generating hypotheses for a research programme on the WWOX gene. Do NOT use any tool: do not read, search or open any file; answer from your own knowledge only.
+
+QUESTION: "Missense variants in a gene encoding a GABA-A receptor subunit cause a developmental and epileptic encephalopathy through loss of the subunit protein at the cell surface. Propose 10 distinct levers that could restore the subunit's expression at the surface and the receptor's function. For each, name the single cell-type, signalling or small-molecule-class manipulation (genetic, or a class at mechanism level) whose outcome would discriminate it from its nearest rival, and say what it predicts for surface expression AND for GABA-evoked current."
+
+OUTPUT (your final message, nothing else; no preamble): for each of the 10 hypotheses H1..H10, one block with these fields:
+H<n>. Statement (one sentence, a mechanism with a direction) · Evidence you know for or against it (one line; say 'none known' where that is the case) · What the usual reading assumes and this one changes · The single observation that would reject it (what to measure, what result rejects it) · The single discriminating manipulation between this and the nearest rival, with its predicted effect on surface expression and on GABA-evoked current.
+Mechanism level only; no dose, no recommendation to use any drug.

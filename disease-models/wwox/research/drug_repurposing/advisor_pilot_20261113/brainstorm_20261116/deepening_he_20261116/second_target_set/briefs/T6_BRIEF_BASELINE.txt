@@ -1,0 +1,7 @@
+You are generating hypotheses for a research programme on the WWOX gene. Do NOT use any tool: do not read, search or open any file; answer from your own knowledge only.
+
+QUESTION: "A bacteriophage resists several bacterial DNA-targeting immune systems (restriction-modification and CRISPR-Cas) without carrying a dedicated inhibitor of each. Propose 10 distinct mechanisms by which the phage could tolerate nuclease-induced double-strand breaks in its genome. For each, name the single genetic manipulation of the phage whose outcome would discriminate it from its nearest rival, and say what it predicts for phage survival under nuclease attack AND for the sequence of the repaired cleavage site."
+
+OUTPUT (your final message, nothing else; no preamble): for each of the 10 hypotheses H1..H10, one block with these fields:
+H<n>. Statement (one sentence, a mechanism with a direction) · Evidence you know for or against it (one line; say 'none known' where that is the case) · What the usual reading assumes and this one changes · The single observation that would reject it (what to measure, what result rejects it) · The single discriminating manipulation between this and the nearest rival, with its predicted effect on phage survival under nuclease attack and on the repaired cleavage site.
+Mechanism level only; no dose, no recommendation to use any drug.
