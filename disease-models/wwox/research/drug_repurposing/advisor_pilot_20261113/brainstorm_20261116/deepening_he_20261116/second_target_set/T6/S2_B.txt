@@ -1,0 +1,99 @@
+STAGE-1 CLASSIFICATION (done first; Grep over /tmp/legend_cut_1867a26a8/disease-models, *.md unless stated)
+Corpus fact: the folder holds NO phage biology. Word-level Grep for phage, bacteriophage, RecBCD, RecA, RecT, jumbo, nickase, Luria, fluctuation test = 0 relevant hits. The only "phage" strings are "phage display" in PMID24550385.json (lines 35, 289, 293) and one receipts line. Hits for concatemer, multiplicity reactivation, headful, terminal redundancy, terminal protein, rolling circle, terminase, escape mutant and PAM = 10 hits. Every one is unrelated to phage: "PAM" in base-editing wording, e.g. discovery_ledger_current.md:991 and mechanism_intervention_map.md:587.
+The folder does hold a eukaryotic DSB-repair-pathway-choice circuit around WWOX–BRCA1: NHEJ 22 hits in 4 files; HDR / homologous recombination 48 hits in 11 files; resection / SSA / alt-NHEJ / microhomology / MMEJ 16 hits in 6 files, thin, mostly the one record at discovery_ledger_current.md:399. It also holds ATM/DDR competence (claim_registry_current.md:533-545; DL-MECH-103, discovery_ledger_current.md:3195-3208) and two held method lessons: direction of manipulation (DL-METH-084, discovery_ledger_current.md:2224-2240) and measuring at the assay floor (PMID38499540.md:151-182).
+"INSIDE" below therefore means: the eukaryotic analogue of the repair route is held, the phage version is not.
+- S1-1 Ku/ligase NHEJ: INSIDE by analogy (NHEJ 22 hits; Ku or DNA-ligase as a repair factor 0 hits; the only "ligase" hits are E3 ubiquitin ligase).
+- S1-2 recombinase, templated HR: INSIDE by analogy (HDR/HR 48; RecA/RecT 0).
+- S1-3 Gam RecBCD inhibitor: OUTSIDE (0).
+- S1-4 concatemeric copy-number buffering: OUTSIDE (0).
+- S1-5 headful packaging and terminal redundancy: OUTSIDE (0).
+- S1-6 SSA between repeats: INSIDE, thin (SSA appears only in discovery_ledger_current.md:399).
+- S1-7 nucleus-like shell: OUTSIDE (0). It is avoidance, not tolerance.
+- S1-8 hypermodified bases: OUTSIDE (0). It is avoidance, not tolerance.
+- S1-9 multiplicity reactivation: OUTSIDE (0).
+- S1-10 host RecA repair: INSIDE by analogy (RAD51 and HDR held).
+- S1-11 MMEJ: INSIDE, thin (alt-NHEJ and microhomology only at discovery_ledger_current.md:399).
+- S1-12 pre-existing variants (Luria-Delbruck): OUTSIDE (0).
+- S1-13 nick sealing: OUTSIDE (nickase 0). It sidesteps the DSB.
+- S1-14 terminal-protein end capping: OUTSIDE (0).
+- S1-15 genome coating: OUTSIDE (0).
+Kept OUTSIDE: S1-4, S1-5, S1-9, S1-12, S1-14. Kept INSIDE: S1-1, S1-2, S1-6. Added: two ENGINE hypotheses.
+Dropped: S1-3, S1-7, S1-8, S1-10, S1-11, S1-13, S1-15. S1-7, S1-8 and S1-15 are avoidance rather than tolerance. S1-3 is folded into H9. S1-10 and S1-11 are variants of H1 and H3.
+Readout caveat for every block: a repair that restores the wild-type site is cut again, so surviving progeny under continuous attack are enriched for site-lost sequences. "Scarless" can be read only in a single burst, under a transient nuclease, or with a silently marked donor or site. "Survival" below means that readout, not final plaque formation.
+
+H1. Origin: S1-2
+- Statement: A phage strand-exchange or annealing recombinase (Red-beta/UvsX/RecT-type) repairs the cut by templated recombination from a sibling genome in the same cell, which raises survival with cut number and restores the original site sequence.
+- Corpus test: not stated for phage. The phage terms hit 0 times. The held analogue is support by analogy only: HDR is a measured repair route for a DSB (PMID38499540.md:128-135; discovery_ledger_current.md:399-400). Two held cautions apply. In the same laboratory's data, gain and loss of a repair factor did not move HDR symmetrically (discovery_ledger_current.md:2235-2238, DL-METH-084). An HDR readout at 0.03–0.83% of events is a floor and cannot show "no change" (PMID38499540.md:162-165).
+- What the usual reading assumes and this one changes: The usual reading assumes that a cleaved phage genome is lost and the phage needs one inhibitor per nuclease. This one says the sibling copies in the cell are the repair donor, so one repair module covers many nucleases.
+- Rejection observation: A recombinase-null phage keeps wild-type survival at high cut number and has the same distribution of repaired-site sequences.
+- Discriminating manipulation (vs H3, end-joining): Delete the recombinase gene and leave the ligase/Ku-type module intact. Survival: it falls with rising cut number and rising nuclease dose if H1 holds. If H3 carries the load, survival stays. Site: under H1, donor-templated or scarless products and gene-conversion tracts disappear and survivors are only indels or escapes. Under H3, the indel spectrum persists unchanged.
+
+H2. Origin: S1-6
+- Statement: Phage-encoded resection plus an annealase joins the two cut ends across direct repeats in the same genome, so survival rises with the presence of flanking repeats and the site is repaired as a deletion between repeats.
+- Corpus test: not stated for phage. SSA is held only as a listed readout of the eukaryotic pathway: "WWOX loss increases HDR/SSA and RPA32/RAD51, reduces NHEJ/alt-NHEJ" (discovery_ledger_current.md:399). This is thin support by analogy, with no experimental detail.
+- What the usual reading assumes and this one changes: The usual reading assumes repair needs an intact template from a sibling. This one says repeats on the same molecule suffice, so a single-copy infection can be repaired.
+- Rejection observation: Phage with repeats flanking the site and phage without them survive equally, and no survivor carries a deletion with a single repeat copy.
+- Discriminating manipulation (vs H1): Insert direct repeats (tens of bp) on both sides of the target site and keep the annealase gene. Survival: it rises at low MOI, where no sibling donor exists. A recombinase-donor route (H1) predicts no gain at MOI ~1 and no dependence on the repeats. Site: the readout is a deletion between the repeats leaving one repeat copy. H1 predicts a scarless or gene-converted site.
+
+H3. Origin: S1-1
+- Statement: A phage Ku/ligase pair seals the ends directly (end joining), so survivors carry small indels at the site and survival depends on that module at high cut load.
+- Corpus test: not stated for phage; support by analogy for the pathway. NHEJ is a held, measured DSB route (53BP1-marked, PMID38499540.md:128-135; line 134-135 states the authors' inference). Ku and DNA ligase as repair factors: 0 hits. The held record also warns that the HDR/NHEJ reporter can sit at the floor (PMID38499540.md:151-182), so a Ku-null result needs a readout above the floor.
+- What the usual reading assumes and this one changes: The usual reading assumes phages lack end-joining and avoid breaks. This one says a phage-borne end-joining module exists and the break is tolerated by a mutagenic repair.
+- Rejection observation: A Ku/ligase-null phage survives like wild type and shows the same indel spectrum.
+- Discriminating manipulation (vs H1): Delete the Ku or ligase gene and leave the recombinase intact. Survival: it falls only when the break has no homologous partner (low MOI, single copy). H1 predicts no change when siblings are present. Site: small indels with 0–few nt microhomology vanish, and survivors are escapes or deletions flanked by long homology.
+
+H4. Origin: ENGINE (held circuit DL-MECH-024)
+- Statement: A phage 5'-to-3' exonuclease sets the amount of end resection, which channels a cut away from mutagenic end joining toward annealing/recombination, so more resection raises scarless and repeat-deletion repair and less resection raises indels.
+- Corpus test: support by analogy only; the phage version is not stated. discovery_ledger_current.md:398-401: WWOX-WW1 binds BRCA1 and limits end resection and HDR; WWOX loss raises HDR/SSA and RPA32/RAD51 and lowers NHEJ/alt-NHEJ (belief "medio-alto in the cellular system"). Line 2235 gives a second model: early resection can reconcile gain-of-function and loss-of-function results that do not look symmetric. Nothing in the folder contradicts it.
+- What the usual reading assumes and this one changes: The usual reading treats repair-route choice as set by which repair enzymes exist. This one says the extent of resection decides the route, so the exonuclease is a switch rather than an extra route.
+- Rejection observation: A nuclease-dead exonuclease with intact annealase and ligase leaves both survival and the repaired-site spectrum unchanged.
+- Discriminating manipulation (vs H1, which deletes the whole recombinase): Make the exonuclease catalytically dead and leave the annealase and strand-exchange activity intact. Survival: it falls modestly at low cut number and strongly at high cut number, less than for a full recombinase deletion. Site: the repeat-deletion and scarless classes drop and the indel class rises. Separate prediction (from DL-METH-084): over-supplying the exonuclease is not the mirror image, because too much resection can itself remove the site, so survival is non-monotonic.
+
+H5. Origin: ENGINE (held circuit DL-MECH-103, replication-stress breaks)
+- Statement: The cut end is used as a primer for recombination-dependent replication, so the DSB is converted into a replication event copied from a sibling, and survival rises with the number of cuts until replication-initiation capacity saturates.
+- Corpus test: not stated for phage. Weak analogy only: DL-MECH-103 (discovery_ledger_current.md:3199-3202) ties replication stress (aphidicolin) to chromosome breaks that WWOX loss worsens. Replication-coupled repair is not itself tested there. Count of "break-induced replication / strand invasion / recombination-dependent replication" terms = RAD51 and strand invasion only, in PMID38499540.md (9 hits), batch_queue.md (1) and discovery_ledger_current.md (4).
+- What the usual reading assumes and this one changes: The usual reading treats a DSB as damage to be repaired. This one says that for a replicating phage a DSB is a replication origin, so the cut is useful rather than a repair problem.
+- Rejection observation: Survival under nuclease is unchanged when recombination-dependent initiation is removed but the cell has free cut ends.
+- Discriminating manipulation (vs H1): Delete the helicase/loader that primes replication from the invading end and leave strand exchange intact. Survival: it falls at high cut number only. H1 predicts no dependence on the loader if repair does not need replication. Site: long tracts copied from a sibling (many markers transferred) vanish. Gene conversion over a short tract can persist.
+
+H6. Origin: S1-9 (OUTSIDE)
+- Statement: Co-infecting phage genomes cross-rescue each other by recombination, so a cut genome is restored from a cut-resistant partner and survival per genome rises with MOI.
+- Corpus test: not stated. Grep "multiplicity reactivation" = 0 and "phage" = 0; the rival terms (copy number, replication) give nothing phage-specific. Nothing in the folder contradicts it. The closest held line is discovery_ledger_current.md:2235-2238, a general warning that the manipulation, not only the system, must be named.
+- What the usual reading assumes and this one changes: The usual reading assumes single-hit kinetics: each genome lives or dies alone. This one says survival is shared across genomes in the same cell.
+- Rejection observation: Survival per genome is the same at MOI 0.1 and MOI 10 at fixed nuclease dose.
+- Discriminating manipulation (vs H7, copy-number buffering): Co-infect the nuclease-sensitive phage with a helper phage whose target site carries silent changes, at fixed total MOI, with recombination functional. Survival: sensitive progeny rise with the helper fraction. If H7 holds, the helper adds copies but does not rescue the sensitive genome. Site: under H6, surviving sensitive progeny carry the helper's silent allele at the site (a recombinant). Under H7 the sensitive allele stays and the helper allele is not transferred.
+
+H7. Origin: S1-4 (OUTSIDE)
+- Statement: Rolling-circle/concatemeric replication produces many redundant genome copies, so some copies stay uncut and the lineage persists even though individual copies are cut.
+- Corpus test: not stated. Grep concatemer / rolling circle / headful / terminase = 0 relevant. No contradicting text. Rival terms (HDR/NHEJ) exist, but only for the eukaryotic cell.
+- What the usual reading assumes and this one changes: The usual reading assumes one cut kills one genome. This one says survival is a copy-number outcome, so it needs no repair.
+- Rejection observation: Survival does not rise with replicated copy number at a fixed nuclease dose.
+- Discriminating manipulation (vs H1): Block late replication with a conditional initiator or replication-helicase mutant and keep the recombinase. Survival: it falls sharply at the same nuclease dose. If H1 carries the load, survival falls less. Site: survivors keep the original, uncut site (sequence unchanged) under H7, or are site-lost escapes after the block. H1 predicts repaired products, not an unchanged site.
+
+H8. Origin: S1-5 (OUTSIDE)
+- Statement: Headful packaging of circularly permuted, terminally redundant genomes lets a cut genome be reassembled from overlapping ends, so packaging acts as a repair step and a broken molecule can still yield a complete genome.
+- Corpus test: not stated. Grep headful / terminal redundancy / terminase = 0. Nothing contradicts it. IPOTESI.
+- What the usual reading assumes and this one changes: The usual reading treats packaging as a passive final step. This one says terminal redundancy and permuted ends are a built-in repair substrate.
+- Rejection observation: Replacing the terminase with a cos-type or fixed-end packaging module leaves survival unchanged.
+- Discriminating manipulation (vs H7): Swap the headful terminase for a fixed-end (cos-type) system and keep replication and recombination. Survival: it falls even when copy number is unchanged, because there are no redundant overlaps. Under H7 survival would not change. Site: survivors carry large deletions/truncations (or uncut sites) rather than point repairs, because the cut genome cannot be reassembled.
+
+H9. Origin: S1-14 (OUTSIDE, absorbs S1-3 Gam)
+- Statement: A phage terminal protein or an end-binding protein (Gam-type) caps the cut ends against degradation, which keeps the end intact long enough for rejoining or recombination.
+- Corpus test: not stated for phage. Grep terminal protein = 0, RecBCD = 0. Only the principle that end resection decides the route is held, by analogy (discovery_ledger_current.md:399-400). No contradicting text.
+- What the usual reading assumes and this one changes: The usual reading assumes protein caps matter for replication or are dedicated anti-nuclease factors. This one says end integrity is the rate-limiting step for every downstream repair, so one protector covers many nucleases.
+- Rejection observation: Deleting the end-binding or terminal protein leaves survival and end structure unchanged.
+- Discriminating manipulation (vs H1): Delete the terminal/end-binding protein and leave the recombinase intact. Survival: it falls at all cut loads, even at high MOI, because the ends are degraded before any donor can be used. Under H1 survival would fall mainly at low MOI. Site: survivors show deletions that extend beyond the target on one or both sides (exonucleolytic loss). A recombinase-null phage keeps intact ends and shows a failed rejoining instead.
+
+H10. Origin: S1-12 (OUTSIDE)
+- Statement: Apparent tolerance is selection of rare pre-existing site variants (point, PAM or seed changes), not active repair, so survivors are jackpot-distributed escapes that carry no repair signature.
+- Corpus test: not stated. Grep escape mutant / pre-existing variant / Luria = 0. "PAM" hits in the folder concern gene editing and do not bear on it. Closest held method line: a null measured at an assay floor shows nothing (PMID38499540.md:162-165); the same caution applies to a fluctuation test with too few cultures. Nothing contradicts it.
+- What the usual reading assumes and this one changes: The usual reading in this task assumes tolerance is an active process requiring a repair module. This one says survival is a selected population, so repair genes are not needed.
+- Rejection observation: A fluctuation test on a single-plaque-purified stock shows escapers arising after exposure at a rate above the mutation rate and carrying a repair signature.
+- Discriminating manipulation (vs H1/H3): Single-plaque-purify the stock, then run a fluctuation test across many parallel small cultures and sequence the survivors' cut site. Survival: if H10 holds, survivor counts are jackpot-distributed (variance far above the mean) and do not rise with cut number. If repair carries the load, survival is uniform across cultures and rises with MOI or repair-gene dose. Site: H10 survivors carry only point or PAM/seed changes, and none carry indels or microhomology deletions. Repair predicts indels, microhomology deletions or donor-templated sequences.
+
+FILES READ:
+/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/set2/T6/S1_B.txt
+/tmp/legend_cut_1867a26a8/CLAUDE.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/discovery_ledger_current.md (lines 385-409, 2170-2245, 3190-3215)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID38499540.md (lines 115-200)
+Grep-only (not read in full): /tmp/legend_cut_1867a26a8/disease-models/wwox/registries/claim_registry_current.md (lines 533-545), /tmp/legend_cut_1867a26a8/disease-models/wwox/research/deepdive_manifests/PMID24550385.json (phage-display lines 35, 289, 293), /tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md (line 587)

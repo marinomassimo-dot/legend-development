@@ -1,0 +1,238 @@
+{
+  "capture": {
+    "assessment_sha256": "80e310e6b44fb33a14a4abf74dfc61adf8927e4b032875d57683a9e453402492",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P21/stream.jsonl",
+    "raw_stream_sha256": "70b3b65f22df129941b0d0e3cf3678cfc5d42c417ad2e5f1a3611939a194118f",
+    "source_session_id": "598b692a-eb92-4a15-b47b-2fe4b775028d",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 75254
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-17T06:25:37Z",
+  "label": "P21",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": true,
+      "efforts": {
+        "high": 5
+      },
+      "first_turn_context": 45880,
+      "models": {
+        "claude-opus-5": 1,
+        "claude-opus-5-5": 4
+      },
+      "peak_context": 64499,
+      "totals": {
+        "cache_creation": 60621,
+        "cache_read": 218248,
+        "output": 5196
+      },
+      "turns": 5
+    },
+    "final_turn_model": "claude-opus-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.0029768999999999998,
+        "inputTokens": 29654,
+        "maxOutputTokens": 128000,
+        "outputTokens": 23,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5": {
+        "cacheCreationEphemeral1hInputTokens": 68,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 68,
+        "cacheReadInputTokens": 64427,
+        "canonicalModel": "claude-opus-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.12026350000000001,
+        "inputTokens": 4,
+        "maxOutputTokens": 64000,
+        "outputTokens": 3494,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 65328,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 65328,
+        "cacheReadInputTokens": 279634,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.6126467999999999,
+        "inputTokens": 14,
+        "maxOutputTokens": 128000,
+        "outputTokens": 1702,
+        "provider": "firstParty",
+        "thinkingTokens": 829,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 9,
+    "refusal_fallbacks": [
+      {
+        "apiRefusalCategory": null,
+        "direction": "retry",
+        "fallbackModel": null,
+        "originalModel": null,
+        "scope": "session",
+        "trigger": "refusal"
+      }
+    ],
+    "total_cost_usd": 0.7358872,
+    "turn_models": {
+      "claude-opus-5": 1,
+      "claude-opus-5-5": 4
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 65328,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 65328,
+      "cache_read_input_tokens": 278801,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 14,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 68,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 68,
+          "cache_read_input_tokens": 64427,
+          "input_tokens": 4,
+          "output_tokens": 3494,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 5196,
+      "output_tokens_details": {
+        "thinking_tokens": 829
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-17T06:24:18Z",
+  "tool_calls": [
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/{meetings/*,P19/*,P20/*,brainstorm_20261116/*}"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261115T152159Z-jaq44mq3.md\ndisease-models/wwox/research/drug_repurposing"
+    },
+    {
+      "input": {
+        "output_mode": "content",
+        "path": "disease-models/wwox/research/drug_repurposing/research_portfolio.tsv",
+        "pattern": "^(RP-005|RP-003|RP-023|RP-015|RP-010)\\t"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "4:[Omitted long matching line]\n6:[Omitted long matching line]\n11:[Omitted long matching line]\n16:[Omitted long matching line]\n24:[Omitted long matching line]"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261117T023531Z-65a1hzow.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# MEETING \u2014 2026-11-17T02:35:31Z\n2\t\n3\tStarted UTC: 2026-11-17T02:35:31Z\n4\tSnapshot SHA: 7bc9a34f63eefe20ab2f963b9a012c4bd7d0fb84\n5\tCoordination: ADV (directio"
+    },
+    {
+      "input": {
+        "output_mode": "count",
+        "path": "ledger/tasks",
+        "pattern": "2026-11-17T0[3-6]"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No matches found\n\nFound 0 total occurrences across 0 files."
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/**/*{I21,i21,SUPPRESSOR,suppressor,COMPOSE,compose,GSE334405,gse334405}*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/multitarget_it24_p6_20261104/proposals_decomposed.tsv\ndisease-models/wwox/research/drug_repurposing/reverse_it24_p"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_i21_20261117/I21_PARTS2_3_SCREEN_DESIGN_IT_20261117.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# I21 parts 2-3: a suppressor screen on a sensitised Wwox-null background, and how a hit reaches a lever (IT; 2026-11-17 ~04:50Z; non-canonical; paper design "
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_adv_20261116/SCORE_IT_LINES_GSE334405_ADV_20261117.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Scoring of IT's three ledger lines on GSE334405 (ADV as second scorer; 2026-11-17 03:25Z; non-canonical; a model-based register, not evidence; not medical a"
+    }
+  ]
+}
