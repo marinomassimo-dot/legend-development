@@ -1,0 +1,7 @@
+# Arm table v8: SCI's revision 3 (organoid rows) consumed (IT, keeper; host clock 2026-11-17 ~08:10Z; non-canonical; not medical advice)
+
+File: `ideas_arm_table_v8_20261117.tsv` (76 lines x 10 columns, same as v7), built by `build_arm_table_v8.py` against SCI's revision 3 (sha256 prefix 5512570e, 84 rows). cell_ids are unchanged. The coverage figures are in `ORIGIN_COVERAGE_V8_IT_20261117.tsv`.
+* **What changed: only the origin_row text of 10 cells** (C010, C013, C048, C051, C058, C059, C060, C063, C070, C071); each gained organoid reading ids (O1..O8) as additional origins. No value, sign, status or note changed (the 18 organoid rows change no cell, as ADV verified).
+* **The by-tier measure did NOT move: best tier 1 or 2 stays at 26 of 75, tier 3 only 11, by reading 37, including assumption rows 38, no origin 37.** Reason: each of the 10 cells already had an origin of tier 1 or 2, or already had an origin; no cell went from 'none' to an origin, and none moved from tier 3 only to tier 2. The organoid rows add breadth (more than one origin for the cell), not coverage. This is the expected 'move for the right reason' answered honestly: there was no move.
+* **SCI's revision 3 has no cell_id column** (I checked the header), so the mapping is still by the arm|idea string; the duplicated-key pairs still share an origin_row.
+* New measure M079: cells with at least one human organoid origin row: 10 of 75.
