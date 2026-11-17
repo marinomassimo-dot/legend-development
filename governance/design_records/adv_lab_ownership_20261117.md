@@ -176,6 +176,16 @@ complete when read, verify and reuse it; do not rerun research to satisfy this h
 short review of actual decisions and missed alternatives by the operator or another model
 can assess usefulness later; it is not a precondition for any ordinary next assignment.
 
+**Observed publication friction, same continuation.** While Plan's publisher queued, the
+shared `main` reflog recorded a reset to `development/main` that excluded already-landed
+`a8dc81367` and the subsequent IT commit `f9aed6973`. Plan preserved both in its isolated
+branch and stopped only its own waiting publisher. The existing publisher now rechecks HEAD
+and cleanliness after acquiring the queue lock, before fetch/merge or a gate; it does not
+reset another actor's work. A fixture reproduces the old wasted-gate / unintended-push paths.
+This detects checkout changes; it cannot prevent another process resetting a shared branch.
+HE should reconcile that root-reset workflow and use isolated publication surfaces, preserving
+all unpublished commits. This is an actual coordination defect to fix, not another approval.
+
 ## Completion and limitations
 
 Plan's implementation is complete after the landed code, appropriate regression checks,

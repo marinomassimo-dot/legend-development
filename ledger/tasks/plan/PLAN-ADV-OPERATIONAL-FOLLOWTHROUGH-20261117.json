@@ -5,7 +5,7 @@
   "PRIORITY": "HIGH",
   "OBJECTIVE": "Operationalise the existing ADV ownership handoff: real SCI result through consumer and next choice; route independent context simplification to HE; disclose evaluation-only usage scope without a new budget controller.",
   "worktree": "/tmp/legend-adv-operational-followthrough-20261117",
-  "branch": "codex/adv-operational-followthrough-20261117",
+  "branch": "codex/adv-followthrough-closure-20261117",
   "AUTHORISED_QUEUE_20261117": {
     "MANDATE_STATE": "OPEN",
     "OBJ_FOLLOWTHROUGH": {
@@ -47,6 +47,24 @@
       "check": "Structural LINT",
       "verdict": "WARN",
       "blocks": 0
+    },
+    {
+      "check": "fresh disposable clone, frozen 91523e2eb",
+      "targets": 3,
+      "verdict": "PASS",
+      "log": "/tmp/legend-adv-followthrough-fresh-20261117.log"
+    },
+    {
+      "check": "Publisher regression suite with queued checkout change test",
+      "tests": 20,
+      "verdict": "PASS",
+      "log": "/tmp/legend-adv-followthrough-publisher-20261117.log"
+    },
+    {
+      "check": "Regression against old publisher in isolated bare-remote fixtures",
+      "verdict": "EXPECTED_FAILURE_CONFIRMED",
+      "detail": "Old version gates after queued HEAD change and publishes after dirt appears; exact failure signatures verified. Initial shallow temporary script path invalid, corrected; a later verification predicate expected the wrong assertion, so actual traces explicitly checked.",
+      "log": "/tmp/legend-adv-followthrough-publisher-reproduction-verified-20261117.log"
     }
   ],
   "LIMITATIONS": [
@@ -59,5 +77,30 @@
   "DEFAULTS_TAKEN": [],
   "DIRECTIVE_VERSION": 1,
   "GENERATION": 1,
-  "assigned_on": "2026-11-17"
+  "assigned_on": "2026-11-17",
+  "LANDING_ATTEMPTS": [
+    {
+      "verdict": "REFUSED",
+      "reason": "ADV briefly writing assignments.jsonl and ADV-025/026 in primary checkout; no files moved, stashed or changed by Plan.",
+      "log": "/tmp/legend-adv-followthrough-land-20261117.log"
+    },
+    {
+      "verdict": "PASS",
+      "main_sha": "a8dc8136744fba7e65bb0b37d02b983fbf3c1559",
+      "log": "/tmp/legend-adv-followthrough-land-r2-20261117.log"
+    }
+  ],
+  "PUBLICATION_RACE": {
+    "observation": "While own publisher queued, shared main reset from f9aed6973 to d8da68ae2 (git reflog), excluding own landed a8dc81367 and subsequent IT commit; source was preserved in own isolated branch, no peer reset or stash.",
+    "recovery": "Stopped only own waiting safe_push PID 597529; fast-forwarded own worktree to preserved f9aed6973; publish from isolated worktree with serialized merge.",
+    "micro_upgrade": "Existing safe_push checks queued HEAD and cleanliness immediately after lock, before fetch/merge/gate; no new lock, controller or policy.",
+    "limitation": "Detects but does not prevent another actor resetting a shared branch; routed as an observed HE workflow defect in existing handoff."
+  },
+  "OBSERVED_ADOPTION": {
+    "scope": "native transcript and complete saved assignment inspection, not strategic validation",
+    "ADV-024": "SCI result read; native ADV later verified transfer table revision 5 and IT arm table v9.",
+    "ADV-025": "Host assignment sent to IT at 21:05:00Z; independent origins supporting top candidates; IT executing at 21:06:30Z; original f9aed6973 preserved with own candidate.",
+    "ADV-026": "Host assignment sent to SCI at 21:05:04Z; benzodiazepine-class evidence; recipient execution not established by that send.",
+    "HE_CONTINUATION": "Available inside the existing handoff/roadmap; no SendMessage from Codex or HE acceptance claimed."
+  }
 }
