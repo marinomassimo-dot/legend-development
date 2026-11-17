@@ -79,3 +79,56 @@ The HARNESS-SCOUT-2026-W47 table has no ketamine entry; ketamine appears only in
 ## What would close the gaps (cheap, one query each, if the meeting wants them)
 
 1. Open Q2 hits by title (131) and filter for named genetic DEE syndromes. 2. Open Q4c abstracts. 3. A narrow query for improvement after general anaesthesia/sedation in genetic NDDs. 4. A narrow paediatric ICU ketamine-harm query. Estimated 30-45 minutes.
+
+---
+
+## Update 2026-11-17, gap closure (13:00-13:20Z; added to the section above, nothing above was changed)
+
+All items are **abstract-level**; no full text was read. Same rules: aggregates only, no per-patient detail. Each query was run one at a time with pauses; two attempts were refused by a rate limit and repeated.
+
+### Queries added
+
+| Q | Query (shortened) | Hits | Opened |
+|---|---|---|---|
+| G1 | improvement after general anaesthesia in Rett OR Angelman OR genetic epilepsy | not run (rate limit, twice) | — |
+| G2 | Rett syndrome anesthesia improvement after sedation | 0 | — |
+| G3 | transient improvement after anesthesia neurodevelopmental disorder children | 2 | 2 |
+| G4 | regression recovery of skills after critical illness OR intensive care in children with genetic neurodevelopmental disorder | 614 (OR-parse too broad) | 0 |
+| H1 | ketamine emergence reactions children | 83 | 2 of 6 |
+| H2 | ketamine intracranial pressure children | 48 | 2 of 6 |
+| H3 | anesthetic exposure early childhood neurodevelopmental outcome cohort | 19 | 2 of 6 |
+| H4 | repeated ketamine exposure children adverse effects | 7 | 2 of 6 |
+| Q2b | ketamine AND (Dravet OR CDKL5 OR GRIN2A OR GRIN2B OR SCN2A OR infantile spasms OR Rett OR Angelman) | 118 | 4 of 10 |
+
+An earlier unparenthesised version of Q2b parsed as 939 hits (the drug term bound only to the first syndrome) and was discarded.
+
+### (a) Transient improvement after ICU stay, intubation, anaesthesia or sedation in neurodevelopmental or genetic disorders
+
+**Result: NOT FOUND in what was opened.** The two abstracts opened (G3) were not relevant to the question: a single-patient dental-rehabilitation report with parent-reported short-term comfort, sleep and weight change, and a 1993 premedication trial in cardiac surgery. G2 returned nothing. G4 was too broad to open anything.
+**Does not cover:** any of the 614 G4 hits; the terminology a case report might use (awakening, regained, paradoxical, lucid interval, "after extubation"); non-English or grey literature; reports that do not say "anaesthesia" in the abstract. The absence is a statement about these queries, not about the literature.
+
+### (b) Paediatric harms
+
+| Item | Level | Aggregate finding | Limit |
+|---|---|---|---|
+| PMID 38065480, doi 10.1016/j.jad.2023.12.011 | abstract | RCT, 84 preschool children, intranasal dexmedetomidine with or without esketamine before dental general anaesthesia: lower emergence agitation and lower anxiety with the combination; adverse reactions similar between arms | short follow-up; combination, not ketamine alone |
+| PMID 33555694, doi 10.1097/AJP.0000000000000918 | abstract | Review of intranasal ketamine for acute pain: more transient dizziness, bitter taste, fatigue, vomiting than opioids; evidence insufficient | adult and paediatric mixed |
+| PMID 36825892, doi 10.1097/CCM.0000000000005806 | abstract | 33 children with severe traumatic brain injury, 127 bolus doses in 22: no ICP rise after sedation doses; ICP fell and cerebral perfusion pressure rose during ICP crises | retrospective, exploratory, one centre; not a neurodevelopmental population |
+| PMID 27028535, doi 10.1007/s40262-016-0383-6 | abstract | Pharmacology review: no evidence of raised ICP after ketamine in humans; psychotomimetic and cognitive adverse effects; long-term safety unresolved | review |
+| PMID 30883414, doi 10.1213/ANE.0000000000004052 | abstract | Methods review of 76 human studies of general anaesthesia in early childhood: findings contradictory; major confounding by surgery and indication, small samples, short follow-up | general anaesthetics, **not ketamine-specific** |
+| PMID 24275940, doi 10.1097/ANA.0000000000000027 | abstract | Review: dual effects; repeated ketamine in immature brain may be neurotoxic without noxious stimuli and possibly neuroprotective (less inflammation) with strong pain stimuli; therapeutic window undefined | preclinical and clinical mix, 2014 |
+| PMID 36892030, doi 10.2174/1567205020666230308123718 | abstract | Juvenile rats, 3 days of repeated dosing: highest dose gave later anxiety-like behaviour and spatial-navigation deficit; lower doses little | 32 animals, one lab, rodent |
+
+**Does not cover:** a human cohort with long-term developmental outcome after ketamine specifically (none surfaced); repeated-exposure human series; hepatobiliary and urinary toxicity; abuse liability; interaction with antiseizure medicines. Unopened hits: H1 40801799, 27534393, 41256828, 22157929; H2 24996763, 25245275, 10228376, 19569909; H3 42443755, 21148656, 37283466, 37552011; H4 24659739, 42232094, 40246008, 40024338.
+
+### (c) Q2 follow-up (ketamine in defined genetic syndromes)
+
+The opened abstracts were mechanistic, not clinical: PMID 29532791 (doi 10.1038/mp.2017.255; review, rodent-heavy: NMDAR block at synaptic and GluN2B extrasynaptic receptors and on interneurons, AMPAR activation, BDNF, eEF2, mTOR, GSK-3, and NMDAR-independent routes through (R)-ketamine and hydroxynorketamine; the authors say the mechanisms are not mutually exclusive); PMID 34321660 (doi 10.1038/s41586-021-03769-9; human GluN1-GluN2A and GluN1-GluN2B cryo-EM with S-ketamine; binding site in the channel vestibule, key residues named; structural only); PMID 36630309 (doi 10.1021/acschemneuro.2c00637; mouse brain-wide c-Fos after subanaesthetic ketamine and psilocybin: elevation in many regions including locus coeruleus, habenula, amygdala; a map, not a mechanism); PMID 39215550 (doi 10.33594/000000722; human neuroblastoma cell line, excitotoxicity model, only the non-selective blocker protected). **No clinical report of ketamine in a named DEE or genetic syndrome surfaced among the 14 abstracts opened across Q2 and Q2b.** Unopened Q2b: 27683935, 21424308, 40612906, 41465113, 36051601, 36093918 (and about 108 further hits beyond the first 10).
+
+### Q4c, the four abstracts still unopened
+
+PMIDs 41254322, 41572340, 41082017, 41135741 were **not opened** in this update (time-box); the inflammation arm still rests on the two preclinical abstracts above.
+
+### Net effect of this update on the census
+
+(a) remains empty; (b) now has a paediatric ICP signal (TBI cohort, no rise), an emergence-agitation signal in a combination RCT, and the early-life anaesthetic-neurotoxicity literature (general anaesthetics, contradictory in humans, positive in rodents); (c) adds mechanism and structure but no clinical syndrome report. Estimated further cost to open everything unopened: about 40 minutes.
