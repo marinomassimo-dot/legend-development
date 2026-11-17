@@ -1,0 +1,93 @@
+All 15 answers come from my own knowledge. I used no tools and checked no sources.
+
+Conventions: "mutant" means the missense subunit. "Surface" means surface expression, measured by biotinylation or surface-selective imaging. "Current" means GABA-evoked current, measured by patch clamp or by IPSC/mIPSC recording.
+
+**H1. Statement:** The missense subunit is folding-competent but is removed too fast by ER-associated degradation (SEL1L-HRD1 / p97 route), so blocking that route raises surface subunit and GABA current.
+Evidence: Proteasome inhibition raises total and partly surface levels of GABRG2 and GABRA1 mutants in heterologous cells and neurons, and the mutants are ubiquitinated and degraded by ERAD. Recovery is usually partial. Effects on current are poorly documented.
+What the usual reading assumes and this one changes: The usual reading treats degradation as the appropriate fate of a misfolded protein. This one treats it as the rate-limiting step for an otherwise functional protein.
+Observation that would reject it: HRD1 or p97 loss raises total mutant protein but leaves surface unchanged, with endoglycosidase-H-sensitive protein piling up in the ER and no new current. That would mean the mutant is irreparably misfolded.
+Discriminating manipulation (vs H2/H4, which improve folding): Knock down SEL1L or HRD1 in the mutant background. Prediction: total protein and surface rise, current rises less than surface if the rescued protein has gating defects, and half-life lengthens. A folding-enhancement lever instead raises the endoglycosidase-H-resistant (post-ER) fraction before the half-life changes.
+
+**H2. Statement:** Selectively boosting the ATF6 arm of the unfolded-protein response (more BiP, calnexin and PDI) improves ER folding and assembly of the mutant, raising surface and current.
+Evidence: Pharmacological ATF6 activation rescues several secretory and membrane misfolding disease proteins. For GABA-A mutants, Kang and colleagues showed that ER stress, BiP and the unfolded-protein response change mutant handling. A direct ATF6 test on a GABA-A subunit: none known to me.
+What the usual reading assumes and this one changes: The usual reading treats unfolded-protein-response activation as a pathogenic stress. This one uses its adaptive arm as therapy.
+Observation that would reject it: ATF6 activation raises BiP but does not change surface or current of the mutant, or surface rises only in stressed, non-neuronal cells.
+Discriminating manipulation (vs H3, a chemical chaperone, and H1): Activate ATF6 genetically (inducible ATF6 active fragment) while holding PERK and IRE1 constant. Prediction: surface and current rise together, and the rise is blocked by BiP knockdown. A chemical chaperone, or ATF6 with BiP knocked down, would not give that pattern.
+
+**H3. Statement:** Chemical chaperones and HDAC-inhibitor-class proteostasis modulators (4-phenylbutyrate-like) lift mutant subunit surface expression by changing chaperone expression and the folding environment, restoring current.
+Evidence: 4-phenylbutyrate increased surface and function of GABRA1 A322D and some GABRG2 mutants in heterologous cells and in a mouse model, with partial effects. Reported benefit is mutation-dependent.
+What the usual reading assumes and this one changes: The usual reading assumes a nonspecific chaperone effect. This one proposes an HDAC-dependent transcriptional effect on a chaperone network.
+Observation that would reject it: The HDAC-inhibitor class raises surface of a nonsense or null control but not the missense subunit. Or the effect persists after the chaperone-gene program is blocked by transcriptional inhibition.
+Discriminating manipulation (vs H2 and H4): Compare an HDAC-inhibitor class with a pure osmolyte chemical chaperone, both with transcription blocked. Prediction: the HDAC class loses its surface and current benefit when transcription is blocked, and the osmolyte does not.
+
+**H4. Statement:** Raising Hsp70 activity or its co-chaperone network, or tuning Hsp90 and its co-chaperones, lengthens the folding window and shifts the mutant from degradation to export, increasing surface and current.
+Evidence: GABRA1 and GABRG2 mutants are Hsp70 and Hsp90 clients, with BiP, calnexin and other lectin chaperones involved. Hsp90 inhibition tends to accelerate client turnover, so direction is uncertain.
+What the usual reading assumes and this one changes: The usual reading treats these chaperones as bystanders. This one makes the triage ratio between folding and ERAD the lever.
+Observation that would reject it: Hsp70 activation, or Hsp90 co-chaperone shifting, changes total protein but not the post-ER, endoglycosidase-H-resistant fraction, and there is no surface change.
+Discriminating manipulation (vs H1): Overexpress a cytosolic Hsp70 nucleotide-exchange or ATPase-stimulating partner. Prediction: the post-ER fraction, surface and current rise together, and mutant half-life changes little. H1 would show a longer half-life and a smaller export increase.
+
+**H5. Statement:** Stabilising ER luminal calcium (SERCA activation or ER-calcium-preserving manipulation) restores calcium-dependent chaperone function (calnexin, calreticulin, BiP) and improves export of the mutant subunit.
+Evidence: Calcium-dependent chaperone function in the ER is well established. For GABA-A mutants, ER calcium handling has been proposed as a modifier, but this is thin. Direct evidence: none known to me.
+What the usual reading assumes and this one changes: The usual reading looks only at protein-intrinsic misfolding. This one adds an ER-environment cause.
+Observation that would reject it: Chelating or raising ER calcium does not change surface of the mutant, while a general chaperone lever still works.
+Discriminating manipulation (vs H2): Raise ER calcium with SERCA2b overexpression, which does not engage the unfolded-protein response. Prediction: calnexin-dependent surface and current rise, abolished by calnexin knockdown. H2 would be insensitive to calnexin knockdown.
+
+**H6. Statement:** A ligand that binds the assembling pentamer (orthosteric or modulatory site) acts as a pharmacological chaperone, stabilising folding intermediates and increasing surface assembly of the mutant, with current restored if gating is preserved.
+Evidence: Ligand-induced stabilisation of nicotinic receptor assembly is known. For GABA-A receptors, binding-site ligands changing surface expression are sparsely documented.
+What the usual reading assumes and this one changes: The usual reading treats a positive modulator as acting only on gating. This one treats a ligand as a folding aid.
+Observation that would reject it: A binding-site ligand raises current but not surface in a surface-biotinylation assay, which is pure gating potentiation (see H15).
+Discriminating manipulation (vs H15): Preincubate during synthesis, then wash out completely before recording. Prediction: surface rises and persists after washout, and current rises with a washout-persistent component. A pure gating potentiator gives no surface change and no current after washout.
+
+**H7. Statement:** Mutant subunit competes for limited partner subunits, so raising the supply of partner subunits (α, β or γ) rescues assembly and surface delivery.
+Evidence: Subunit stoichiometry and partner availability govern surface expression. Rescue by partner overexpression has been seen for some GABRG2 and GABRB3 mutants. Not universal.
+What the usual reading assumes and this one changes: The usual reading treats the mutant as intrinsically defective. This one makes it stoichiometry-limited.
+Observation that would reject it: Partner overexpression raises partner surface but does not bring the mutant to the surface, shown by epitope-tagged mutant surface staining.
+Discriminating manipulation (vs H8): Overexpress the partner subunit alone, with no change to assembly factors. Prediction: surface of the tagged mutant and co-assembled current rise, with no change in mutant ER processing in a partner-null background. H8 would work in that background.
+
+**H8. Statement:** Assembly and export factors (EMC, LHFPL4, TMEM132, NACHO-like chaperone class) limit pentamer formation, so upregulating them raises mutant surface and current.
+Evidence: LHFPL4 and EMC subunits are linked to GABA-A receptor biogenesis, and NACHO is an assembly factor for nicotinic receptors. Their effect on a pathogenic missense subunit: none known.
+What the usual reading assumes and this one changes: The usual reading looks at the subunit. This one looks at the biogenesis machinery.
+Observation that would reject it: Overexpressing the factor raises WT surface but not mutant surface, which would mean the defect is structural and cannot be bypassed.
+Discriminating manipulation (vs H7): Knock out one assembly factor in a cell line and test the mutant, with partner levels held constant. Prediction: surface and current fall further, and overexpression of that factor rescues them. Partner overexpression would not.
+
+**H9. Statement:** Retention by the glycan-dependent quality-control cycle (calnexin, UGGT1, glucosidase II) holds the mutant in the ER, so shortening the cycle (glucosidase or UGGT1 inhibition) allows export.
+Evidence: GABA-A subunits are N-glycosylated and calnexin engages mutants. Release by glucosidase inhibition or UGGT1 loss rescues other misfolded glycoproteins. Not tested for these receptor mutants that I know of.
+What the usual reading assumes and this one changes: The usual reading treats lectin-chaperone binding as protective. This one treats prolonged binding as the cause of loss.
+Observation that would reject it: Glucosidase inhibition, or mutation of the glycosylation site, does not alter mutant surface level.
+Discriminating manipulation (vs H1, H2): Knock out UGGT1 (reglucosylation). Prediction: surface and current rise, and the mutant becomes endoglycosidase-H-resistant without a half-life change. H1 would act through ubiquitination rather than the glycan cycle.
+
+**H10. Statement:** Reduced S-palmitoylation of the subunit (for γ2, via ZDHHC3/7 / GODZ) reduces Golgi trafficking and synaptic stability, so raising palmitoylation restores surface and synaptic current.
+Evidence: GODZ-mediated γ2 palmitoylation controls GABA-A receptor surface and synaptic clustering. Whether pathogenic missense variants are palmitoylation-deficient: none known.
+What the usual reading assumes and this one changes: The usual reading looks at folding defects only. This one invokes a post-ER lipid-modification defect.
+Observation that would reject it: The mutant subunit is palmitoylated at the same level as WT, and enzyme overexpression does not change its surface level.
+Discriminating manipulation (vs H12): Overexpress ZDHHC3 and compare with a palmitoylation-site mutant. Prediction: surface and synaptic IPSC amplitude rise, and the effect is lost with the site mutant. Whole-cell current from extrasynaptic receptors changes less.
+
+**H11. Statement:** The mutant reaches the surface but is internalised and degraded faster (AP2/clathrin, ubiquitin, lysosome), so reducing endocytosis raises surface and current.
+Evidence: Surface GABA-A receptor stability depends on AP2 binding to β and γ subunits, and ubiquitin-dependent lysosomal degradation is known. For pathogenic mutants specifically: none known.
+What the usual reading assumes and this one changes: The usual reading puts the loss in the ER. This one puts it after delivery.
+Observation that would reject it: Surface biotinylation after blocking endocytosis shows no accumulation of the mutant, because it never leaves the ER.
+Discriminating manipulation (vs H1): Acutely block dynamin or AP2 and look at the surface pool kinetics. Prediction: surface rises within minutes, with an ER-resident, endoglycosidase-H-sensitive fraction unchanged, and current rises in proportion. ERAD-type levers would act over hours.
+
+**H12. Statement:** Kinase signalling sets mutant surface stability (PKA/PKC phosphorylation of β subunit AP2-binding sites, BDNF–TrkB downregulation), so phospho-state manipulation raises surface and current.
+Evidence: Phosphorylation of β3 serines 408/409 reduces AP2 binding and increases surface stability, and BDNF–TrkB signalling lowers surface GABA-A receptors. Direct testing on missense DEE variants: none known.
+What the usual reading assumes and this one changes: The usual reading takes activity-dependent regulation as a modifier of normal receptors. This one uses it to rescue a mutant.
+Observation that would reject it: A phospho-mimetic version of the mutant does not change its surface level, or TrkB inhibition changes WT but not the mutant.
+Discriminating manipulation (vs H11): Compare a phospho-mimetic against an AP2-binding-null version, all other things held constant. Prediction: both raise surface, but only phospho-state change is reversed by kinase inhibition, with current following surface.
+
+**H13. Statement:** Restoring wild-type subunit only in GABAergic interneurons (e.g. parvalbumin cells) is enough to recover surface receptor and inhibitory current, because the pathology is cell-type-specific.
+Evidence: The relevant GABA-A subunits are broadly expressed, and DEE and Dravet-type phenotypes are driven largely by interneuron dysfunction in sodium-channel models. A GABA-A cell-type-specific rescue: none known to me.
+What the usual reading assumes and this one changes: The usual reading assumes global replacement is needed. This one assumes a minimal cell population.
+Observation that would reject it: Interneuron-restricted rescue restores interneuron IPSCs but leaves pyramidal-cell surface expression and tonic current deficient, with seizures unchanged.
+Discriminating manipulation (vs global expression, H14): Use a Dlx-enhancer-driven AAV against a pyramidal-selective (CaMKII-promoter) vector. Prediction: Dlx raises surface and IPSC amplitude in interneurons and in their targets, while the pyramidal vector raises only pyramidal surface and tonic current.
+
+**H14. Statement:** The mutant acts as a dominant-negative sink, co-assembling with WT subunits and trapping them, so silencing the mutant allele frees WT subunit and raises surface and current.
+Evidence: Dominant-negative suppression of WT GABRG2 and GABRA1 by misfolded mutants is documented for some variants (e.g. GABRG2 Q390X), where mutant retention depletes WT. Not general.
+What the usual reading assumes and this one changes: The usual reading treats the defect as haploinsufficiency. This one treats it as active interference.
+Observation that would reject it: WT subunit surface level is unchanged by co-expression with the mutant, and allele-specific silencing does not increase WT surface.
+Discriminating manipulation (vs H7 and haploinsufficiency): Silence the mutant allele selectively (allele-specific siRNA or ASO). Prediction: WT surface and current rise above the 50% level, compared with simple gene dosage. Under haploinsufficiency, silencing the mutant gives no gain.
+
+**H15. Statement:** Surface expression is not the primary defect for some missense variants, and a positive-modulator class (neurosteroid- or benzodiazepine-like) restores gating and function without changing surface level.
+Evidence: Many missense DEE variants in GABRB3 and GABRA1 reduce current by gating or gain-of-function mechanisms, and surface loss is variable. Positive allosteric modulators augment currents of residual receptors.
+What the usual reading assumes and this one changes: The usual reading assumes the surface protein loss causes the loss of function. This one proposes per-receptor activity and the surface pool as separate variables.
+Observation that would reject it: The modulator raises current only to the extent of residual surface receptors and the maximal response is unchanged, or the current increase is absent in a null control.
+Discriminating manipulation (vs H6): Apply the modulator acutely in the recording and wash out. Prediction: surface unchanged, current increased only during application. A pharmacological chaperone (H6) would instead raise surface with a persisting current.

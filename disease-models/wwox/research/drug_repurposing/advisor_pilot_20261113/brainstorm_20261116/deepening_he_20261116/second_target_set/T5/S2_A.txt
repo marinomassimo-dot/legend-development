@@ -1,0 +1,106 @@
+Folder facts that bind all ten blocks. The frozen folder is a WWOX corpus. It holds no GABA-A subunit missense work. Across the whole folder, GABRB2/GABRB3/Gabra2 appear only as transcript-level markers (mechanism_intervention_map.md:552; therapeutic_translation_second_pass.md:358). Every "corpus test" below is therefore a transfer from WWOX proteostasis logic or from the GABA-paradox dossier. The folder's own firewall says such a transfer is not a read-across bench (proteostasis_rationale.md:47; mechanism_intervention_map.md:60-62). Paths are under /tmp/legend_cut_1867a26a8/disease-models/wwox/. "Not stated" means the folder is silent. It does not mean contradicted.
+
+STAGE-1 CLASSIFICATION (hit counts over the whole folder)
+- S1-1 ERAD (SEL1L/HRD1/p97): INSIDE, partial. HRD1/SEL1L/p97/VCP = 0. "ERAD" = 5 lines (mechanism_intervention_map.md:715; research/dismissal_ledger_current.md:68,91; research/discovery_ledger_current.md:730,1043). ERAD|proteasom|p97 combined = 171 hits in 49 files, mostly proteasome.
+- S1-2 ATF6 / UPR arm: OUTSIDE. ATF6, BiP, calnexin, calreticulin, SERCA, UGGT and glucosidase combined = 11 hits in 9 files. All are UPR-ATF4/IRE1/PERK context, none ATF6.
+- S1-3 4-PBA / HDAC class: INSIDE. 4-PBA|TUDCA|HDAC = 26 hits in 12 files.
+- S1-4 Hsp70/Hsp90: INSIDE. HSP70|HSC70|HSP90|arimoclomol|heat-shock = 97 hits in 30 files.
+- S1-5 ER calcium / SERCA2b: OUTSIDE. SERCA and calnexin = 0.
+- S1-6 pharmacological chaperone ligand: INSIDE, as a class. About 25 "pharmacological chaperone" lines (proteostasis_rationale.md:11,51-63; mechanism_intervention_map.md:598).
+- S1-7 partner-subunit supply: OUTSIDE. "stoichiomet" = 2 hits, neither on receptors (fulltext_dossiers/PMID15070730.md:171; PMID21115974.md:209).
+- S1-8 assembly factors (EMC/LHFPL4/NACHO): OUTSIDE. LHFPL and NACHO = 0. EMC was not counted on its own.
+- S1-9 UGGT / glucosidase cycle: OUTSIDE. Count 0.
+- S1-10 palmitoylation (ZDHHC/GODZ): OUTSIDE. Count 0.
+- S1-11 AP2/clathrin endocytosis: OUTSIDE. clathrin|endocytos = 0. The "AP-2" hits in the registries were not opened and are presumably the transcription factor.
+- S1-12 BDNF–TrkB / phospho-state: OUTSIDE. TrkB = 0. BDNF was not counted on its own.
+- S1-13 interneuron-restricted rescue: INSIDE, partial. interneuron|PV|neuron-restricted|Synapsin = 45 hits in 12 analysis files. Dlx = 0.
+- S1-14 dominant-negative / allele-specific silencing: INSIDE, partial. "dominant-negative" = 0. "allele-specific" appears only in WWOX RNA contexts. The haploinsufficiency threshold is CLAIM 032.
+- S1-15 positive allosteric modulator: INSIDE, partial. Benzodiazepine "GABAergic push" is N-04 (mechanism_intervention_map.md:651-658). Neurosteroid and ganaxolone = 0.
+
+Of the 15, 8 are OUTSIDE (S1-2, 5, 7, 8, 9, 10, 11, 12). Five of them are kept in the ten (H1–H5).
+
+---
+H1. Origin: S1-2 (OUTSIDE)
+Statement: Selective activation of the ATF6 arm of the unfolded-protein response raises ER folding capacity (BiP, calnexin, PDI), which increases the post-ER fraction, surface subunit and GABA-evoked current of the missense subunit.
+Corpus test: NOT STATED. ATF6 = 0 hits. The nearest held text is research/discovery_ledger_current.md:390-394 ("WWOX directs adaptive-vs-terminal UPR under ER stress … in the CNS the aim is to preserve survival"). It treats the UPR as a panel to measure, and its probes are the PERK and IRE1 inhibitors GSK2656157 and KIRA6 (line 418). Adjacent support for the compartment match is research/dismissal_ledger_current.md:68 (D-02). It says the ER-chaperone route is valid only for ER/secretory proteins, which is what a GABA-A subunit is, unlike WWOX. No line contradicts it.
+Usual reading assumes / this changes: The usual reading treats UPR activation as the pathogenic stress of an ER-retained mutant. This reading uses only its adaptive, folding-capacity arm as the lever and holds the PERK/ATF4 arm constant. The folder's ATF4 data (claim_registry_current.md:465) show that arm acts through other routes.
+Rejection observation: ATF6 activation raises BiP and chaperone transcripts but leaves the Endo-H-resistant fraction, surface and current of the mutant unchanged.
+Discriminating manipulation (vs nearest rival H6, the HDAC-class chemical chaperone): inducible ATF6 active fragment in the mutant background, PERK and IRE1 held constant, with BiP knocked down in a parallel arm. Predicted: surface and current rise together, and the rise is lost with BiP knockdown. The rival (HDAC-class, transcription-dependent) would be insensitive to BiP knockdown. Both would raise surface and current if either works. Only BiP dependence separates them.
+
+H2. Origin: S1-9 (OUTSIDE)
+Statement: Prolonged calnexin/UGGT1 reglucosylation cycling retains the mutant in the ER, so shortening the cycle (UGGT1 loss, or a glucosidase-inhibitor class) releases it for export and raises surface and current.
+Corpus test: NOT STATED. UGGT, glucosidase and calnexin = 0. Adjacent: D-02 (research/dismissal_ledger_current.md:68) holds that the ER quality-control logic is valid only for ER/secretory proteins, so the receptor falls inside its scope. The folder gives no reason to doubt the mechanism and none to expect it.
+Usual reading assumes / this changes: The usual reading treats lectin-chaperone binding as protective. This one makes dwell time in the cycle the cause of loss.
+Rejection observation: UGGT1 knockout, or mutation of the subunit's N-glycosylation sites, leaves the surface level unchanged and the Endo-H-sensitive pool unchanged.
+Discriminating manipulation (vs nearest rival H8, clearance by a lysosomal route): UGGT1 knockout in the mutant background. Predicted: the Endo-H-resistant fraction and surface rise with no change in half-life, and current rises in step with surface. The rival would show no change in the Endo-H-resistant fraction, because it acts after export.
+
+H3. Origin: S1-8, with S1-7 as the nearest rival (OUTSIDE)
+Statement: Pentamer assembly and export are limited by biogenesis factors (EMC and LHFPL4-class), so raising the factor, but not the partner subunit supply, raises mutant surface and current.
+Corpus test: NOT STATED. LHFPL and NACHO = 0. Stoichiometry has only two unrelated hits (PMID15070730.md:171; PMID21115974.md:209). The nearest held rule is that abundance is not function (research/discovery_ledger_current.md:738-739, FM-013/FM-014). Surface level and measured current must be recorded as separate readouts.
+Usual reading assumes / this changes: The usual reading looks only at the subunit sequence. This one moves the limiting step to the biogenesis machinery, with partner dosage as the specific rival.
+Rejection observation: The factor raises wild-type surface but not mutant surface in epitope-tagged surface staining. That would mean the defect is structural and cannot be bypassed.
+Discriminating manipulation (vs H7 and S1-7, partner overexpression): knock out the factor and test the mutant with partner levels held constant, in a partner-null background. Predicted: the mutant's surface and current fall further, and the factor (not the partner) rescues them. Partner overexpression raises partner surface but not the tagged-mutant surface.
+
+H4. Origin: S1-10 (OUTSIDE)
+Statement: Missense variants that reduce S-palmitoylation of the subunit (for γ2 via ZDHHC3/7-class acyltransferases) lower Golgi exit and synaptic stability, so raising palmitoylation raises surface, and mainly synaptic current.
+Corpus test: NOT STATED. Palmitoyl, ZDHHC and GODZ = 0. No line contradicts it.
+Usual reading assumes / this changes: The usual reading puts all loss at the ER folding step. This one proposes a post-ER lipid-modification defect. It is the only post-Golgi lever here that also separates synaptic from extrasynaptic current.
+Rejection observation: The mutant is palmitoylated at the same level as wild type, and ZDHHC overexpression leaves its surface unchanged.
+Discriminating manipulation (vs nearest rival H5, post-delivery endocytosis): overexpress the acyltransferase against a palmitoylation-site mutant of the subunit. Predicted: surface and synaptic IPSC amplitude rise, the effect is lost with the site mutant, and extrasynaptic whole-cell current changes less. The rival (H5) would raise the whole-cell current and extrasynaptic pool equally.
+
+H5. Origin: S1-11, modified (OUTSIDE)
+Statement: The mutant reaches the surface but is cleared faster by a K63-ubiquitin and AP2/clathrin-dependent endolysosomal route, so acute endocytosis block raises surface and current within minutes.
+Corpus test: NOT STATED for receptors. Clathrin and endocytosis = 0. Adjacent support for the ubiquitin-linkage premise: fulltext_dossiers/PMID27551470.md:191-192 (K63 chains carry a non-proteasomal, trafficking-type role) and research/dismissal_ledger_current.md:67 (D-01, "polyubiquitination → proteasome" is false as a universal). The folder makes the clearance route a measured quantity, not an assumed one (proteostasis_rationale.md:97).
+Usual reading assumes / this changes: The usual reading puts the loss in the ER or at ERAD. This one puts it after delivery, in the surface-pool lifetime.
+Rejection observation: Surface biotinylation after acute dynamin/AP2 block shows no accumulation of the mutant, because it never leaves the ER.
+Discriminating manipulation (vs H1 and H2, ER-level levers): acutely block dynamin or AP2 binding. Predicted: surface rises within minutes, the Endo-H-sensitive fraction is unchanged, and current rises in proportion. ER-level levers act over hours and shift the Endo-H-resistant fraction first.
+
+H6. Origin: S1-3 (INSIDE)
+Statement: A 4-phenylbutyrate-class compound lifts mutant surface by two separable actions, a chaperone-like effect and an HDAC-dependent chaperone-gene program, and only the transcriptional part persists when transcription is blocked.
+Corpus test: SUPPORT (conditional). The folder withdrew 4-PBA/TUDCA for WWOX because it is cytosolic (mechanism_intervention_map.md:714-718, N-11, and research/dismissal_ledger_current.md:68, D-02). It adds that the logic is "true only for ER/secretory proteins", which a GABA-A subunit is, and that 4-PBA is also an HDAC inhibitor and HSP co-inducer, "a different mechanism" to be re-evaluated on that basis (line 717-718). No GABA-A data.
+Usual reading assumes / this changes: The usual reading takes it as a nonspecific osmolyte. This one separates a transcription-dependent HDAC arm from a folding-environment arm.
+Rejection observation: An HDAC-class compound raises surface of a null or nonsense control equally, or its effect persists with transcription blocked.
+Discriminating manipulation (vs H1): compare the HDAC-inhibitor class with a pure osmolyte chemical chaperone, both with transcription blocked. Predicted: the HDAC class loses its surface and current gain, and the osmolyte keeps it. An ATF6 arm (H1) would instead be BiP-dependent.
+
+H7. Origin: S1-4 (INSIDE)
+Statement: The sign of an Hsp70 lever depends on which co-chaperone is raised: nucleotide-exchange or folding-promoting partners shift the mutant toward ER export, while E3/degradation-promoting partners shift it toward clearance.
+Corpus test: SUPPORT for the direction-dependence, CONTRADICT for the naive "more chaperone helps". research/dismissal_ledger_current.md:69 (D-03): "The sign depends on WHICH chaperone and WHICH route. HSC70 does not rescue: it delivers to the lysosome." mechanism_intervention_map.md:720-723 (N-12) records an HSP70 co-inducer as possibly accelerating destruction. The folder holds this for WWOX, not for a membrane receptor.
+Usual reading assumes / this changes: The usual reading treats Hsp70/Hsp90 as bystanders or as uniformly helpful. This one makes the folding-versus-degradation triage ratio the lever.
+Rejection observation: An Hsp70 nucleotide-exchange partner changes total mutant protein but leaves the post-ER (Endo-H-resistant) fraction and surface unchanged.
+Discriminating manipulation (vs H8): overexpress a folding-promoting Hsp70 partner (nucleotide-exchange factor) versus a CHIP-type ubiquitin-ligase partner. Predicted: the first raises post-ER fraction, surface and current with little change in half-life. The second lowers all three. H8 would instead leave the post-ER fraction unchanged and act only through half-life.
+
+H8. Origin: ENGINE (S1-1 as the nearest rival)
+Statement: Much of the mutant's loss goes through a K63-ubiquitin / lysosomal route, not proteasomal ERAD, so blocking ERAD/p97 raises total protein but leaves surface and current unchanged.
+Corpus test: SUPPORT as a held general rule (research/dismissal_ledger_current.md:67, D-01; fulltext_dossiers/PMID27551470.md:191-192; proteostasis_rationale.md:97, "The clearance route must be measured, not assumed"). For WWOX the "proteasome" endpoint is a default never measured (fulltext_dossiers/PMID19500159.md:224). For GABA-A receptors, not stated.
+Usual reading assumes / this changes: S1-1 assumes ERAD is the rate-limiting step. This one holds that an ER-to-lysosome arm, or one that bypasses the proteasome, carries the flux. A proteasome-only test could therefore return a false negative (proteostasis_rationale.md:97).
+Rejection observation: SEL1L/HRD1 or p97 loss, with matched lysosome-inhibitor controls, raises the Endo-H-resistant pool and surface.
+Discriminating manipulation (vs S1-1, SEL1L-HRD1 knockdown): run the SEL1L/HRD1 knockdown and a lysosomal-acidification/ER-phagy block side by side in the same cells. Predicted for this reading: only the lysosomal arm lengthens half-life and raises surface and current, and the ERAD arm raises total protein only. ERAD-first predicts the reverse.
+
+H9. Origin: S1-6, with S1-15 as the nearest rival (INSIDE)
+Statement: A binding-site ligand acting as a pharmacological chaperone raises surface during synthesis and its benefit persists after washout, whereas a pure positive allosteric modulator raises current only while present. The chaperone effect can still fail by occluding gating.
+Corpus test: SUPPORT. proteostasis_rationale.md:53-57 (site-specific pharmacological chaperones are one of three families) and research/dismissal_ledger_current.md:70 (D-04, stabilizing is not restoring function; "stable and completely inert" is a demonstrated case) and mechanism_intervention_map.md:348-353 ("stability is bought with occlusion"), 612 (promote a hit only if at least two orthogonal readouts beyond abundance recover). Neurosteroid and ganaxolone = 0. Benzodiazepine "GABAergic push" is a cautioned class (mechanism_intervention_map.md:651-658, N-04).
+Usual reading assumes / this changes: The usual reading treats a positive modulator as acting on gating only. This one lets a ligand act as a folding aid and makes current-per-surface-receptor a required readout, so a surface rise alone cannot be called a rescue.
+Rejection observation: The ligand raises current only in proportion to existing surface receptors, with no surface rise and no persistence after washout. That would mean pure gating potentiation.
+Discriminating manipulation (vs S1-15, an acutely applied modulator): pre-incubate during synthesis, then wash out fully before recording. Predicted: surface rises and a washout-persistent current component remains; the pure modulator gives neither. Record current by perforated-patch so the chloride gradient does not distort it (research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md:146,160).
+
+H10. Origin: ENGINE (S1-13 and S1-14 as rivals)
+Statement: Partial, physiological-level restoration of the wild-type subunit in neurons is enough, because a graded threshold below full restoration holds. If the mutant is also a dominant-negative sink, selective silencing of the mutant allele adds gain beyond what dosage alone gives.
+Corpus test: SUPPORT as a held design principle, NOT STATED for GABA-A. claim_registry_current.md:593-594 (CLAIM 032: haploinsufficiency is not deleterious, the threshold is below 50%, partial mosaic correction may suffice; limits stated: known for survival and morphology, not for cognition and epilepsy). mechanism_intervention_map.md:99, 107, 164-199 (neuron-restricted loss reproduces the phenotype and neuron-restricted rescue repairs it). mechanism_intervention_map.md:660-671 (N-05) holds that a non-allele-specific boost can preferentially amplify a missense allele of unknown folding fate. research/discovery_ledger_current.md:738 (FM-013) holds that supra-physiological rescue is a risk. "Dominant-negative" = 0.
+Usual reading assumes / this changes: The usual reading says a global, high-level replacement is required. This one makes the lever a graded dosage in the right cell class, with allele silencing as a separate test of interference.
+Rejection observation: Neuron-restricted restoration repairs interneuron IPSCs but leaves pyramidal surface and tonic current deficient (S1-13's own rejection test), or allele-specific silencing gives no surface gain over wild-type dosage alone.
+Discriminating manipulation (vs S1-13 global replacement, and vs a haploinsufficiency-only model): compare a Synapsin-promoter vector at graded expression against a Dlx-enhancer (interneuron) vector and a CaMKII (pyramidal) vector, plus allele-specific silencing of the mutant. Predicted: the Synapsin graded arm recovers surface and IPSC amplitude at sub-50% wild-type expression, the Dlx arm raises interneuron surface and IPSCs with pyramidal tonic current unchanged, and the CaMKII arm does the reverse. Allele silencing raises wild-type surface and current above the 50% level only if the mutant is a dominant-negative sink. Under pure haploinsufficiency it gives no gain.
+
+Not carried into the ten: S1-5 (ER calcium) is OUTSIDE with 0 hits. S1-7 is folded into H3 as H3's rival. S1-12 (BDNF–TrkB phospho-state) is OUTSIDE with TrkB = 0 and not stated. S1-14 and S1-13 are carried inside H10. S1-15 is carried inside H9.
+
+Note for the GABA-evoked current readout in any block above: the held GABA dossier warns that marker quantity is not function (meta/meta_gaba_paradox_current.md:94-105, 59-60). The EGABA experiment record (research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md:146,160,188-190) records that whole-cell mode sets the intracellular chloride, that driving force (DF_GABA), not E_GABA alone, is the endpoint, and that surface KCC2 can change while total KCC2 does not. A "rescued current" therefore needs perforated-patch recording and a chloride-driving-force control.
+
+FILES READ:
+/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/set2/T5/S1_A.txt
+/tmp/legend_cut_1867a26a8/CLAUDE.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/proteostasis_rationale.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/meta/meta_gaba_paradox_current.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md (lines 1-742)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/dismissal_ledger_current.md (lines 55-105)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/discovery_ledger_current.md (lines 722-740, 1036-1050)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/claim_registry_current.md (lines 584-598)
+Located by Grep only, matching lines seen but not opened as files: research/discovery_ledger_current.md:390-394,418 (ATF6/UPR context); research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md (lines 23-192); fulltext_dossiers/PMID27551470.md:191-192; fulltext_dossiers/PMID19500159.md:224; registries/claim_registry_current.md:465.

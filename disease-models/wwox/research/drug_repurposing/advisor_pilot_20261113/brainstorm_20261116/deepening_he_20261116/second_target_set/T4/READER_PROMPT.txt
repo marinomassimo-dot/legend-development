@@ -1,0 +1,13 @@
+You are a blind reader. Read-only task: use only the Read tool, and read ONLY the one file /tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/set2/T4/blind_input.md. Do not read, search or open anything else; use no memory directory.
+
+The file holds 60 numbered hypotheses (Z01-Z60), each with a statement and a discriminating manipulation with predictions for motor function and seizures. They are about levers that could restore the function of a dysfunctional (not absent) heterotrimeric G-protein alpha subunit in a developmental and epileptic encephalopathy or movement-disorder syndrome.
+
+For EACH of the 60, answer three yes/no questions, using only what that hypothesis itself states:
+QS (strict): does it name, as the lever, a divalent metal-ion cofactor or ion supplied to restore the catalytic cycle (GTP hydrolysis and cellular interactions) of the dysfunctional G-alpha-o subunit AND predict an improvement in motor function / daily activities but NOT in seizures? Both parts are needed; a one-sided prediction in the wrong direction, or a seizure benefit, is NO.
+QL (loose): does it name a cofactor, an ion or a small-molecule lever predicted to restore the catalytic cycle (nucleotide handling, GTP hydrolysis) of the mutant subunit with a functional benefit?
+QC (lever class): does it name cofactor or metal-ion supplementation restoring a catalytic activity as the lever, whatever it predicts?
+Be literal: a lever that is genetic, a receptor drive, a downstream effector bypass or a cell-type restriction is not a cofactor or ion lever. If unsure, say NO and quote the nearest words.
+
+OUTPUT (final message, nothing else): one line per hypothesis, exactly in the form
+Z01 | YES/NO | YES/NO | YES/NO | "short verbatim quote that decides it, or - if all NO"
+for Z01 to Z60, in order.
