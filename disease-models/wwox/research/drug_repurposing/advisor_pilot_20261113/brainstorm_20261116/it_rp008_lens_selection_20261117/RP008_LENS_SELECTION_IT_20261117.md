@@ -39,3 +39,6 @@ The Scientist reads P237, P361 (free text, PMC4356412 and PMC4464321) and P313 (
 
 ## Cost
 One selection pass, no delegate, no engine run, no spend: repository greps, 10 PubMed abstracts, one held full text read for Wnt terms. Premise checked: the pool holds 47 papers with a PMC identifier and no receipt (census.tsv, IT55); none is held as a file.
+
+## Update 2026-11-17 (consumption of the held GSE156243 result, after ADV evaluation P27)
+R2 weakened, not refuted, by the held GSE156243 result (`research/drug_repurposing/gse156243/prediction_wnt_sign_20261025.md`, RESULT): the four transcriptional Wnt readouts (AXIN2, LEF1, NKD1, APCDD1) are 4 of 4 up (mean log2FC +1.12) and the wider seven, WNT5A included, 7 of 7 up, in 4 knockout against 2 wild-type bulk libraries of one cell line at week 15, with composition and maturation not separable. A ligand transcript is not ROR2/JNK signalling and bulk cannot resolve cell types, so R2 is not refuted, but its simple form (WNT5A-pathway activity lower in knockout) conflicts with held data. The pre-test I named as needing E-MTAB-14792 was in part already answered at bulk level by this file. The organoid Wnt thread is PARKED; its revival condition is the one that file specifies, a WWOX re-expression (rescue) contrast. What did not change: the pool verdict, the stop rule that dropped the case, the BLOCK-1 status.
