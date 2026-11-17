@@ -1,0 +1,167 @@
+{
+ "design": "bisect",
+ "source_spec": "anchored interneuron share (SCI, 2026-11-17); arms 91 to 94 of pilot_bisect_anchor_model.py",
+ "bisect": {
+  "parameter": "strength",
+  "bracket": [
+   0.0,
+   3.0
+  ],
+  "iterations": 6,
+  "cells": [
+   {
+    "label": "arm91_HT",
+    "fixed": {
+     "arm": 91,
+     "geno": 1
+    },
+    "observable": "rel_bursts",
+    "threshold": 1.5,
+    "direction": "crosses above",
+    "note": "anchored sodium + interneuron share, S-HT"
+   },
+   {
+    "label": "arm91_KO",
+    "fixed": {
+     "arm": 91,
+     "geno": 0
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.7,
+    "direction": "crosses below",
+    "note": "anchored sodium + interneuron share, S-KO"
+   },
+   {
+    "label": "arm92_HT",
+    "fixed": {
+     "arm": 92,
+     "geno": 1
+    },
+    "observable": "rel_bursts",
+    "threshold": 1.5,
+    "direction": "crosses above",
+    "note": "anchored sodium + interneuron share, S-HT"
+   },
+   {
+    "label": "arm92_KO",
+    "fixed": {
+     "arm": 92,
+     "geno": 0
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.7,
+    "direction": "crosses below",
+    "note": "anchored sodium + interneuron share, S-KO"
+   },
+   {
+    "label": "arm93_HT",
+    "fixed": {
+     "arm": 93,
+     "geno": 1
+    },
+    "observable": "rel_bursts",
+    "threshold": 1.5,
+    "direction": "crosses above",
+    "note": "anchored sodium + interneuron share, S-HT"
+   },
+   {
+    "label": "arm93_KO",
+    "fixed": {
+     "arm": 93,
+     "geno": 0
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.7,
+    "direction": "crosses below",
+    "note": "anchored sodium + interneuron share, S-KO"
+   },
+   {
+    "label": "arm94_HT",
+    "fixed": {
+     "arm": 94,
+     "geno": 1
+    },
+    "observable": "rel_bursts",
+    "threshold": 1.5,
+    "direction": "crosses above",
+    "note": "anchored sodium + interneuron share, S-HT"
+   },
+   {
+    "label": "arm94_KO",
+    "fixed": {
+     "arm": 94,
+     "geno": 0
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.7,
+    "direction": "crosses below",
+    "note": "anchored sodium + interneuron share, S-KO"
+   }
+  ]
+ },
+ "predictions": [
+  {
+   "id": "Q1",
+   "type": "order",
+   "cells": [
+    "arm94_HT",
+    "arm93_HT",
+    "arm92_HT",
+    "arm91_HT"
+   ],
+   "statement": "S-HT crossing of rel_bursts above 1.5, smallest first: arm 94 < arm 93 < arm 92 < arm 91 (a not-in-bracket crossing counts as +infinity)"
+  },
+  {
+   "id": "Q2",
+   "type": "value",
+   "cell": "arm93_HT",
+   "op": "between",
+   "x": 0.3,
+   "y": 0.7,
+   "statement": "central anchored arm (KO interneuron:pyramid ratio 2.6, proportional coupling): S-HT crossing between 0.3 and 0.7, i.e. the miss of P3a STAYS (below my original lower bound 0.7)"
+  },
+  {
+   "id": "Q3",
+   "type": "value",
+   "cell": "arm94_HT",
+   "op": "lt",
+   "x": 0.3,
+   "statement": "arm 94: S-HT crossing below 0.3"
+  },
+  {
+   "id": "Q4",
+   "type": "value",
+   "cell": "arm92_HT",
+   "op": "between",
+   "x": 0.5,
+   "y": 1.2,
+   "statement": "arm 92 (equal fractional block, coupling 2): S-HT crossing between 0.5 and 1.2, inside or next to my original range"
+  },
+  {
+   "id": "Q5",
+   "type": "value",
+   "cell": "arm91_HT",
+   "op": "gt",
+   "x": 1.0,
+   "statement": "arm 91 (equal fractional block, proportional coupling): S-HT crossing above 1.0 or not within the bracket"
+  },
+  {
+   "id": "Q6",
+   "type": "value",
+   "cell": "arm94_KO",
+   "op": "gt",
+   "x": 1.0,
+   "statement": "arm 94 at S-KO: rel_bursts stays above 0.7 for s <= 1"
+  },
+  {
+   "id": "Q7",
+   "type": "cmp",
+   "a": "arm91_KO",
+   "b": "arm94_KO",
+   "op": "lt",
+   "statement": "S-KO crossing below 0.7: arm 91 earlier than arm 94 (less interneuron offset)"
+  }
+ ],
+ "caveats": "weights not concentrations; 40 slices per batch; S-HT baseline has few bursts (about 10 per 40 slices), so rel_bursts at S-HT is noisy: read it with the incidence_baseline and incidence_arm fields; the settings S-HT phasic position 0.9 is assumed.",
+ "translation_note": "SCI wrote these mechanical predictions directly (no translation); estimate = midpoint of the final bracket; statistic = median over 5 seeds; S-HT noisy (about 10 bursts per 40 slices)"
+}
