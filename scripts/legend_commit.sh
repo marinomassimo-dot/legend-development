@@ -13,6 +13,7 @@
 #          5 generated surfaces unverifiable (or stale under a refused override) on the candidate commit
 #          6 committed on main, but regenerating the stale surfaces afterwards failed
 #          7 a named TSV/CSV/JSON file is structurally broken (ragged rows, unparsable JSON, empty file); LEGEND_STRUCTURE_BECAUSE overrides
+#          8 this worktree has a `safe_push.py --serialize` waiting in the landing queue: a new commit moves HEAD and the pending push is refused or wasted; LEGEND_COMMIT_WHILE_PUSH_PENDING=<reason> overrides
 #
 # Concurrent actors share one checkout, so every commit takes an exclusive lock:
 # `git commit` races on .git/index.lock. The commit is path-scoped, so an actor can
@@ -42,6 +43,18 @@ done
 # one lock. `$ROOT/.git` is a directory only in the main checkout; in a linked worktree it is a
 # gitfile, and the old `$ROOT/.git/legend_commit.lock` path could not even be opened there.
 COMMON="$(git rev-parse --path-format=absolute --git-common-dir)"
+# A commit in a worktree whose publisher is still waiting in the landing queue moves HEAD under it (2026-11-16: it cost a restarted push twice). The queue file lists one waiter per line
+# ("pid start_ticks utc"); a ticket whose process runs in THIS worktree blocks the commit. Dead pids are ignored; the queue file exists only where the ticket-queue tool has run.
+QUEUE="$COMMON/legend_land.queue"
+if [ -f "$QUEUE" ] && [ -z "${LEGEND_COMMIT_WHILE_PUSH_PENDING:-}" ]; then
+  while read -r qpid _rest; do
+    case "$qpid" in ''|*[!0-9]*) continue ;; esac
+    if [ "$(readlink "/proc/$qpid/cwd" 2>/dev/null || true)" = "$ROOT" ]; then
+      echo "refused: a safe_push waiting in the landing queue (pid $qpid) runs in this worktree; a commit now moves HEAD under it. Wait for it, or use another worktree, or set LEGEND_COMMIT_WHILE_PUSH_PENDING=\"<reason>\"." >&2
+      exit 8
+    fi
+  done < "$QUEUE"
+fi
 LOCK="${LEGEND_COMMIT_LOCK:-$COMMON/legend_commit.lock}"
 
 exec 9>"$LOCK"

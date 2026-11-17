@@ -95,6 +95,25 @@ class LegendCommitWrapper(unittest.TestCase):
         forced = subprocess.run(["bash", str(WRAPPER), "stated exception", "ragged.tsv"], cwd=self.repo, capture_output=True, text=True, env=env)
         self.assertEqual(0, forced.returncode, forced.stderr)                                # a stated reason still allows it, as for stale surfaces
 
+    def test_a_commit_is_refused_while_this_worktrees_push_waits_in_the_landing_queue(self) -> None:
+        import time
+        common = Path(git(self.repo, "rev-parse", "--path-format=absolute", "--git-common-dir"))
+        waiter = subprocess.Popen(["sleep", "30"], cwd=self.repo)       # stands for a safe_push waiting in this worktree
+        try:
+            (common / "legend_land.queue").write_text(f"999999 1 2026-11-17T00:00:00Z\n{waiter.pid} 1 2026-11-17T00:00:01Z\n", encoding="utf-8")
+            (self.repo / "a.txt").write_text("a\n", encoding="utf-8")
+            r = self.run_wrapper("pending", "a.txt")
+            self.assertEqual(r.returncode, 8, r.stderr); self.assertIn("landing queue", r.stderr)
+            self.assertEqual(git(self.repo, "log", "--oneline").count("\n"), 0, "nothing was committed")
+            env = dict(os.environ, LEGEND_COMMIT_WHILE_PUSH_PENDING="test override")
+            ok = subprocess.run(["bash", str(WRAPPER), "pending", "a.txt"], cwd=self.repo, capture_output=True, text=True, env=env)
+            self.assertEqual(ok.returncode, 0, ok.stderr)
+            (common / "legend_land.queue").write_text("999999 1 2026-11-17T00:00:00Z\n", encoding="utf-8")        # a dead ticket alone does not block
+            (self.repo / "b.txt").write_text("b\n", encoding="utf-8")
+            self.assertEqual(self.run_wrapper("dead ticket", "b.txt").returncode, 0)
+        finally:
+            waiter.kill(); waiter.wait()
+
     def test_nothing_to_commit_is_reported_and_not_an_error(self) -> None:
         result = self.run_wrapper("no change here", "seed.txt")
         self.assertEqual(0, result.returncode, result.stderr)
