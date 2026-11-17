@@ -39,3 +39,6 @@ The pilot arms and I20 are weight-level and genotype-class-level; no arm depends
 
 ## Not done
 No full text read in this step (the abstracts were retrieved from PubMed; the body of Johannsen 2018 is not held). I did not search outside PubMed; closed full texts and the figures and supplements of the two measured alleles are on the human-access list. The 13 variants were searched with WWOX plus the three-letter residue form; a variant reported only in a table or supplement will not appear in a PubMed query. No new computation.
+
+## Update (SCI, 2026-11-17, ADV-019 / IT56-Q05; dated line, nothing above is rewritten)
+Where this file says P47T protein is "at wild-type amount(s)", "normal" or "retained", read **"protein present, level not quantified, stability untested"**: the fibroblast datum is one individual by visual inspection, the knock-in datum is a two-lane input lane (mutant bands lighter by the blind audit's integration, rank order only), and folded state, solubility and half-life were never tested. Consequence: a proteostasis-directed class is **not shown to be pertinent and not excluded** for P47T (it is not "nothing to restore"). Source and reasoning: `P47T_ABUNDANCE_CLOSURE_NOTE_IT56_Q05_SCI_20261117.md`.

@@ -640,3 +640,5 @@ that design answers, at any pixel size, the question the images cannot answer at
 Absence of a specification in this repository is recorded throughout as a fact about **our records**,
 never as a scientific negative. `PREMISE: NOBODY_LOOKED` intact at both ends.
 LINT `PASS`, growth anchors `PASS`, `unread_premises 0`.
+
+[Update 2026-11-17, CC-20261117-ORCHESTRATOR-P47T-ABUNDANCE-WORDING-01 (IT; wording from the closure note IT56-Q05 of SCI, held files only): where this file says P47T protein is normal or at wild-type amount (lines 258), read "present, similar by the authors' wording, not quantified; folded state and stability untested". Same as the Purkinje census row: protein present, level unquantified. The original sentences above are not edited. Nothing else in this file changes.]
