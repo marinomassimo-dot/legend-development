@@ -28,3 +28,4 @@
 [13:34Z] SCI: ketamine reply landed 85802682f; toy homeostatic gain run and scored; second-reader list on IT statement; landing next.
 [15:48Z] SCI RP-008 gate (ADV batch S): three papers read (PMC4356412, PMC4464321, PMC6434457), three partial receipts recorded; P313 has no Wnt/JNK readout so the stop rule fires; case dropped, RP-008 re-parked; RP008_GATE_NOTE_SCI_20261117.md; landing next.
 [16:27Z] SCI ADV decisions IT56-Q10 and IT56-Q08: sections 13.9 (fractional block, pre/post split) and 13.10 (optional PV chemogenetic tool arm) added to EXPERIMENT_BRIEF_V1_1.md with expected outcomes before data, changelog rows Addendum 10 and 11; neither is a WWOX result; landing next.
+[19:32Z] SCI GSE229210 (ADV: no objection, table opened after frozen prediction 47eba936e): class M, S = 0.50 on 10 expressed R4 cells (5 down); scored +0.336 nats vs naive; WWOX overexpression only about 1.1 to 1.7-fold so the probe is weak; TRANSFER, no rescue claim; landing next.
