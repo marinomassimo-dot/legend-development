@@ -1,6 +1,6 @@
 # Ketamine: what the repository can and cannot say (IT; revision of 2026-11-17 after second-reader lists of HE and SCI; the first draft stays in git history; for the operator)
 
-**Nothing here is medical advice.** No dose, no schedule, no recommendation for or against any use of any drug; the decision belongs to the treating clinical team. The question, in its most generic form: *a transient benefit of unspecified duration was reported after a sedation episode that included ketamine; what can the repository say about the drug and its mechanisms?* The statement is about the drug and the mechanisms, not about a case.
+**Nothing here is medical advice.** No dose, no schedule, no recommendation for or against any use of any drug; the decision belongs to the treating clinical team. The question put to the team: could ketamine, or the sedation context in which it is given, have a transient positive effect, and by which mechanisms? The statement is about the drug and the mechanisms, not about a case.
 
 ## In plain words (five lines)
 1. **What we know:** ketamine has never been given to any WWOX system in anything the repository holds; what is held is the drug class (NMDAR pore blockers) in a model, in a laboratory tool experiment, and in other diseases.
