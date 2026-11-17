@@ -280,6 +280,47 @@ class SafePushSerialize(unittest.TestCase):
             self.assertIn("verified=ls-remote", r.stdout)
             self.assertEqual(self._remote_main(bare), mine)
 
+    def test_a_checkout_changed_while_queued_is_preserved_and_not_gated_or_pushed(self) -> None:
+        """A clean initial expectation does not survive a peer changing the shared checkout."""
+        import fcntl, select
+        for mutation in ("commit", "dirt"):
+            with self.subTest(mutation=mutation), TemporaryDirectory() as td:
+                root, bare = self._slow_remote(td)
+                published = self._remote_main(bare)
+                mine = self._commit(root, "mine.txt")
+                log = Path(td) / "gate.log"
+                with (root / ".git/legend_land.lock").open("a+") as guard:
+                    fcntl.flock(guard, fcntl.LOCK_EX)
+                    proc = self._popen(root, "origin", "main", "--serialize", "--expect-sha", mine,
+                                       LEGEND_TEST_LOG=str(log), LEGEND_TEST_SLEEP="0")
+                    seen = b""
+                    try:
+                        deadline = time.monotonic() + 10
+                        while b"waiting for the landing lock" not in seen:
+                            left = deadline - time.monotonic()
+                            ready, _, _ = select.select([proc.stdout], [], [], max(0, left))
+                            if not ready or left <= 0:
+                                self.fail("publisher did not reach its queued wait")
+                            chunk = os.read(proc.stdout.fileno(), 4096)
+                            if not chunk:
+                                self.fail("publisher exited before its queued wait")
+                            seen += chunk
+                        later = self._commit(root, "later.txt") if mutation == "commit" else mine
+                        if mutation == "dirt":
+                            (root / "peer-work.txt").write_text("unfinished peer work\n")
+                    finally:
+                        fcntl.flock(guard, fcntl.LOCK_UN)
+                        out, err = proc.communicate(timeout=15)
+                self.assertEqual(proc.returncode, 1, err)
+                self.assertIn("while waiting for the landing lock", err)
+                self.assertIn("Nothing was gated or pushed", err)
+                self.assertFalse(log.exists(), "a stale checkout must be detected before spending a gate run")
+                self.assertEqual(self._remote_main(bare), published)
+                head = subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], check=True, capture_output=True, text=True).stdout.strip()
+                self.assertEqual(head, later, "do not reset another actor's newer commit")
+                if mutation == "dirt":
+                    self.assertEqual((root / "peer-work.txt").read_text(), "unfinished peer work\n")
+
     def test_the_gate_verdict_and_the_expectation_still_refuse(self) -> None:
         with TemporaryDirectory() as td:
             root, bare = self._with_bare_remote(td)

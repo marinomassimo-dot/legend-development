@@ -200,6 +200,12 @@ def main(argv: list[str]) -> int:
                 return fail(f"the landing lock was not free within {lock_timeout}s. Nothing was gated or pushed.")
             time.sleep(2)
         print(f"landing lock acquired after {time.time() - t0:.0f}s", flush=True)
+        current = run("git", "rev-parse", "HEAD").stdout.strip()
+        if current != before:
+            return fail(f"HEAD moved while waiting for the landing lock ({before} -> {current}). "
+                        "Reconcile the intended commit in your own worktree. Nothing was gated or pushed.")
+        if run("git", "status", "--porcelain").stdout.strip():
+            return fail("working tree changed while waiting for the landing lock. Nothing was gated or pushed.")
         fetched = run("git", "fetch", remote, branch)
         if fetched.returncode != 0:
             return fail(f"git fetch {remote} {branch} failed under the landing lock: {fetched.stderr.strip()[:300]}. Nothing was gated or pushed.")

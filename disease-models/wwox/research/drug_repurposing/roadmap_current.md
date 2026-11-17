@@ -8,6 +8,13 @@ the parts where they conflict, and the Advisor re-evaluates when this section ch
 
 <!-- OPERATOR_ROADMAP:BEGIN -->
 
+**2026-11-17 — Operational continuation, same programme.** At the next active boundary,
+apply the dated continuation in `governance/design_records/adv_lab_ownership_20261117.md`:
+reconcile SCI's ADV-024 delivery, its consumer and the next investment choice; actually route
+the independent context/cost simplification to HE and follow take-in-charge. Reuse the
+existing programme notes and full-window cost method. No further operator agenda, new
+campaign, approval or pause of scientific work is required. Check what is already done.
+
 **2026-11-17 — Operator-approved laboratory ownership and implementation handoff.** ADV is
 the final accountable owner of overall laboratory performance. Apply the current rule in
 `framework/protocols/cross_session_transport.md` section 12, **Laboratory ownership**. The
