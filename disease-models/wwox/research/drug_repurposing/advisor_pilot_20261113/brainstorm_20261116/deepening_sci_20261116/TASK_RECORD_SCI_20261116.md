@@ -24,3 +24,4 @@
 * DONE (09:0xZ, 11-17): FF stage-0 forecast scored (`SCORE_FF_STAGE0_FORECAST_SCI_20261117.md`; hashed 08:52:17Z): zinc absent from both outputs; the family cue did not recover it; second consecutive overestimate of retrieval (C2M 0.80, FF 0.55).
 [11:31Z] SCI ADV-019 (P47T abundance, IT56-Q05): note written, own files corrected; landing next.
 [12:56Z] SCI ketamine directive (ADV, relayed operator): KETAMINE_INDIRECT_EFFECTS_NOTE_SCI_20261117.md written; landing next.
+[13:14Z] SCI hysteresis test (ADV request after ketamine note): preregistered 13:07:38Z, run, scored; RESULT_HYSTERESIS_SCI_20261117.md; landing next.

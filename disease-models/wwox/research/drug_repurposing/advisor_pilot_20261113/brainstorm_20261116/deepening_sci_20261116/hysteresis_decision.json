@@ -1,0 +1,53 @@
+{
+ "decisionA": {
+  "A_f0.5_D60": {
+   "rate_flag": false,
+   "dur_flag": false,
+   "silent_flag": false,
+   "hysteresis": false
+  },
+  "A_f0.8_D60": {
+   "rate_flag": false,
+   "dur_flag": false,
+   "silent_flag": false,
+   "hysteresis": false
+  },
+  "A_f0.5_D300": {
+   "rate_flag": false,
+   "dur_flag": false,
+   "silent_flag": false,
+   "hysteresis": false
+  },
+  "A_f0.8_D300": {
+   "rate_flag": false,
+   "dur_flag": false,
+   "silent_flag": false,
+   "hysteresis": false
+  },
+  "A_f0.5_D1800": {
+   "rate_flag": false,
+   "dur_flag": false,
+   "silent_flag": false,
+   "hysteresis": false
+  },
+  "A_f0.8_D1800": {
+   "rate_flag": false,
+   "dur_flag": false,
+   "silent_flag": false,
+   "hysteresis": false
+  }
+ },
+ "decisionB": {
+  "R600": {
+   "evaluable_bins": 2,
+   "flagged_bins": 0,
+   "hysteresis": false
+  },
+  "R2400": {
+   "evaluable_bins": 4,
+   "flagged_bins": 0,
+   "hysteresis": false
+  }
+ },
+ "headline_no_hysteresis": true
+}
