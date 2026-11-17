@@ -1,0 +1,63 @@
+{
+  "TASK_ID": "PLAN-ADV-OPERATIONAL-FOLLOWTHROUGH-20261117",
+  "ACTOR_ID": "plan",
+  "OWNER": "plan",
+  "PRIORITY": "HIGH",
+  "OBJECTIVE": "Operationalise the existing ADV ownership handoff: real SCI result through consumer and next choice; route independent context simplification to HE; disclose evaluation-only usage scope without a new budget controller.",
+  "worktree": "/tmp/legend-adv-operational-followthrough-20261117",
+  "branch": "codex/adv-operational-followthrough-20261117",
+  "AUTHORISED_QUEUE_20261117": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_FOLLOWTHROUGH": {
+      "steps": [
+        {
+          "step": "Inspect current native adoption, scientific delivery, existing programme and cost tools",
+          "status": "DONE",
+          "evidence": "ADV host dispatch 20:26Z; SCI delivered 9e534f564 at 20:51Z; existing NEXT_PROGRAMME_IT.md and PROGRAMME_COST.md read. No new native SendMessage capability is claimed for Codex."
+        },
+        {
+          "step": "Clarify measured scope and activate concrete continuation inside existing handoff and roadmap",
+          "status": "DONE",
+          "evidence": "weekly_state/status/brief distinguish evaluation use from unmeasured host and laboratory use; existing handoff updated with real delivery and existing programme/cost sources."
+        },
+        {
+          "step": "Run relevant checks, land and publish; verify actual take-in-charge if observed",
+          "status": "IN_PROGRESS"
+        }
+      ]
+    }
+  },
+  "DECISIONS_TAKEN": [
+    "Reuse the current campaign, programme notes, portfolio and cost census; add no actor, scheduler, approval or service.",
+    "Keep the existing allocation arithmetic and resource controls unchanged; add measurement-scope disclosure only."
+  ],
+  "VALIDATION": [
+    {
+      "check": "Advisor regression suite, including scope disclosure and unchanged budget arithmetic",
+      "tests": 173,
+      "verdict": "PASS",
+      "log": "/tmp/legend-adv-followthrough-advisor-20261117.log"
+    },
+    {
+      "check": "Section references",
+      "tests": 13,
+      "verdict": "PASS"
+    },
+    {
+      "check": "Structural LINT",
+      "verdict": "WARN",
+      "blocks": 0
+    }
+  ],
+  "LIMITATIONS": [
+    "A saved handoff is not a SendMessage receipt or recipient acceptance.",
+    "Rendering sizes are character counts, not token costs.",
+    "No scientific promotion, predictive improvement or multiday autonomy is inferred from a single completed assignment."
+  ],
+  "CAPABILITY_OUTCOME": "Existing gap addressed: evaluation counters could be mistaken for laboratory resource use; scope now explicit. Large context remains a measured HE continuation, not a scientific stop.",
+  "STOP_LOG": [],
+  "DEFAULTS_TAKEN": [],
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "assigned_on": "2026-11-17"
+}

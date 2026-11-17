@@ -130,6 +130,52 @@ and coordinator cost; no-delegate work is not token-free. Account-wide quota rem
 unless actually supplied. Do not target exhaustion, keep all sessions busy for its own sake,
 or certify multi-day autonomy from a single loop.
 
+## Operational continuation after first adoption (2026-11-17)
+
+This is the next executable part of the same handoff, not a new campaign or approval.
+Read and reconcile the current originals before acting; work may have advanced meanwhile.
+
+**Observed adoption.** The native ADV host read this complete handoff, replaced its one
+hourly recall with the updated text, registered HOST assignment ADV-024 and sent it to SCI.
+SCI delivered the result at `9e534f564` and sent ADV the pointer at 20:51Z. These observations
+establish adoption and a scientific delivery, not consumption, strategic benefit or sustained
+autonomy. The source is `advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/c6/RESULT_6_GABA_SCAFFOLD_SCI_20261117.md`.
+
+**ADV / IT / SCI: close the live loop now.** Reconcile that delivery and the actual consumer;
+carry its measured limits and qualifications into the relevant existing comparison or source
+rows, or state why no edit is justified. Decide the next useful question without another
+operator agenda. Compare further depth on this thread with a reachable alternative from the
+standing roadmap, candidates, open questions or unread literature. Another gene panel is not
+automatically the next step. Let the result and marginal value decide. Keep the programme and
+alternative in the existing campaign notes or portfolio; do not create another programme file.
+`advisor_pilot_20261113/brainstorm_20261116/NEXT_PROGRAMME_IT.md` already exists: reconcile its
+dated updates and branch-specific dependencies rather than recreate it or reuse its older
+whole-programme stops. No new experiment, candidate or favourable outcome is prescribed.
+
+**ADV to HE: send the scoped technical continuation.** At the next active boundary, use the
+existing native message route and verify take-in-charge; a pointer in this file alone is not
+delivery. Ask HE to simplify the decision input without dropping active operator instructions,
+controls, current results or access to complete originals. The read-only rendering saved by
+Plan before this continuation contained 80,983 characters: roadmap 35,457; assignment history
+9,725; portfolio 8,159; entry points 6,702. These are characters, not measured tokens or money.
+Identify genuine duplication or explicitly superseded history, measure before/after on the
+same inputs, and retain uncertain instructions until reconciled. No arbitrary size target or
+new model call is needed to measure rendering. This independent work must not pause research.
+
+The full-window cost method already exists in
+`advisor_pilot_20261113/brainstorm_20261116/programme_cost_he_20261116/PROGRAMME_COST.md`, with
+`programme_cost.py`, `session_model_census.py` and `trial_window_table.py`. Reuse it for a
+relevant stated window instead of building a new cost service. Keep host sessions, evaluation
+calls and delegates distinct; reconcile overlap and missing coverage. Plan's small reporting
+fix labels evaluation-only usage in structured status and the brief. It does not measure the
+unobserved laboratory total, infer quota or change existing allocation controls.
+
+The observable follow-through is: real result consumed, subsequent choice explained, scoped
+work actually accepted, then its result used. Existing records suffice. If a step is already
+complete when read, verify and reuse it; do not rerun research to satisfy this handoff. A
+short review of actual decisions and missed alternatives by the operator or another model
+can assess usefulness later; it is not a precondition for any ordinary next assignment.
+
 ## Completion and limitations
 
 Plan's implementation is complete after the landed code, appropriate regression checks,
