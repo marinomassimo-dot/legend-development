@@ -373,8 +373,9 @@ def render_entrypoints(rows: list[dict[str, Any]]) -> str:
 
 RECALL_PROMPT = ("Proactive Strategic Advisor pilot, hourly mechanical check. Run: cd {root} && python3 framework/scripts/strategic_advisor.py tick --campaign {campaign}. "
                  "First inspect the independent meeting field: when actionable, apply cross-session transport section 13 (MEETING) and run `strategic_advisor.py meeting --campaign {campaign} --open` or resume its existing record. The ordinary verdict NONE does not cancel a due meeting. Use the hosting session, existing messages and current sources; no extra evaluation or cron is required. "
-                 "If the verdict is NONE, DEFERRED, RUNNING, PAUSED, RESOURCES or DISABLED/EXPIRED/BUDGET, stay quiet unless something actionable changed; these mechanical verdicts do not establish that all useful work is exhausted: a blocked path is not a blocked portfolio, and an EVALUATE left unrun needs its excluded paths and a resume condition. If EVALUATE, apply the current legend-strategic-advisor skill and start `strategic_advisor.py evaluate --campaign {campaign}` "
-                 "in the background (run_in_background), and when it finishes read the drafted assignments with `status`, check each recipient is listed live by `claude agents --json`, "
+                 "Apply cross-session transport section 12, Laboratory ownership: the ADV host is accountable for programme performance and chooses the next useful question at deliveries and closures; the analyst is a consultant, not permission to act. "
+                 "If the verdict is NONE, DEFERRED, RUNNING, PAUSED, RESOURCES or DISABLED/EXPIRED/BUDGET, stay quiet unless something actionable changed; these mechanical verdicts do not establish that all useful work is exhausted: a blocked path is not a blocked portfolio, and an EVALUATE left unrun needs its excluded paths and a resume condition. If EVALUATE, apply the current legend-strategic-advisor skill: reconcile current originals, choose and register a host decision with `strategic_advisor.py assign --campaign {campaign} --text-file <FILE>` when no further consultation is useful, or start `strategic_advisor.py evaluate --campaign {campaign}` "
+                 "in the background (run_in_background) for a separate perspective. Read drafted assignments with `status`, check each recipient is listed live by `claude agents --json`, "
                  "deliver each with SendMessage (durable artifact path plus pointer), record `deliver --state SENT --to <the session named in the send's receipt>` or `UNREACHABLE`, and later verify the take-in-charge in the recipient's task record. "
                  "An assignment already drafted and authorised is delivered in the turn that reads it, not at the next recall. Prepare useful work from the standing roadmap without waiting for an operator line or a distant report; read the current recipient record before claiming it is still in flight. Whatever the verdict, also read the real state (the tick's `activity` block, open records and their awaited events, the latest commits): an idle share above half without a written reason is a prompt to send, not a quiet verdict. If `python3 framework/scripts/harness_session_start.py --actor plan` reports SCOUT_DUE or TRIAGE_DUE, tell HE (plan): the weekly harness scout has no other trigger. Help a stuck session in a bounded way (find what blocks it, supply or route the input, correct your own wrong premise; never the recipient's method) and address a role only if `mandate_watch.py route --to <role>` resolves it, else keep a conditional request in the portfolio and do not record a send that did not happen. Never invent work; never write to transcripts; respect the effective operating mode and shared resources.")
 RECALL_MARK = "Proactive Strategic Advisor pilot, hourly mechanical check"   # what a session looks for in CronList before creating the recall: one copy only
@@ -1262,6 +1263,14 @@ def presidio_state(verdict: str, why: str, is_continuous: bool, outcome: dict[st
 def evaluation_clock(campaign: Path, state: dict[str, Any]) -> tuple[dt.datetime | None, str]:
     """Start-to-start cadence; legacy completion times remain historical facts, not dispatch times."""
     end_text = state.get("last_evaluation_utc")
+    choice = state.get("last_outcome") or {}
+    if choice.get("evaluation") == "HOST":
+        try:
+            stamp = dt.datetime.fromisoformat(choice["utc"].replace("Z", "+00:00"))
+            if stamp.tzinfo is not None and (not end_text or stamp >= dt.datetime.fromisoformat(end_text.replace("Z", "+00:00"))):
+                return stamp, "recorded host decision (not a model evaluation)"
+        except (KeyError, TypeError, ValueError):
+            pass
     if not end_text:
         return None, "no previous evaluation"
     end = dt.datetime.fromisoformat(end_text.replace("Z", "+00:00"))
@@ -1436,7 +1445,16 @@ def _log_assignment(campaign: Path, row: dict[str, Any]) -> None:
         handle.write(json.dumps({**row, "utc": _utc(_now())}, sort_keys=True) + "\n")
 
 
-def register_assignments(campaign: Path, label: str, text: str) -> list[dict[str, str]]:
+def register_assignments(campaign: Path, label: str, text: str, *, origin: str = "assessment") -> list[dict[str, str]]:
+    """Serialise only draft-id allocation, not research, delivery or consultation."""
+    lock = _state_path(Path(campaign)).parent / "assignments.lock"
+    lock.parent.mkdir(parents=True, exist_ok=True)
+    with lock.open("a") as guard:
+        fcntl.flock(guard, fcntl.LOCK_EX)
+        return _register_assignments(campaign, label, text, origin=origin)
+
+
+def _register_assignments(campaign: Path, label: str, text: str, *, origin: str) -> list[dict[str, str]]:
     """Save the drafts of an assessment as `assignments/ADV-nnn.md`, within the campaign's assignment budget and without duplicating a key already drafted or already named in a task record."""
     campaign = Path(campaign)
     cap = 10**9 if continuous(campaign) else int(_budget(campaign).get("max_assignments", 10**9))      # the pilot's assignment cap is history in continuous operation
@@ -1455,10 +1473,59 @@ def register_assignments(campaign: Path, label: str, text: str) -> list[dict[str
         ident = f"ADV-{len(drafted) + 1:03d}"
         out = campaign / "assignments"
         out.mkdir(exist_ok=True)
-        (out / f"{ident}.md").write_text(f"# {ident} (assessment {label}, campaign {campaign.name})\n\nRecipient: {block['recipient']}\n\n{block['_text']}\n", encoding="utf-8")
-        row = {"id": ident, "state": "DRAFTED", "key": key, "recipient": block["recipient"], "assessment": label}
+        attribution = "host decision (not an independent assessment)" if origin == "host" else f"assessment {label}"
+        (out / f"{ident}.md").write_text(f"# {ident} ({attribution}, campaign {campaign.name})\n\nRecipient: {block['recipient']}\n\n{block['_text']}\n", encoding="utf-8")
+        row = {"id": ident, "state": "DRAFTED", "key": key, "recipient": block["recipient"], "assessment": label, "origin": origin}
         _log_assignment(campaign, row); drafted[ident] = row; made.append({"id": ident, **block})
     return made
+
+
+def host_assign(campaign: Path, text: str) -> int:
+    """The authorised ADV host can choose work without commissioning its consultant.
+
+    Uses the existing drafts, duplicate check and delivery receipts. It does not send,
+    launch a model or manufacture acceptance/consumption. A completed host choice settles
+    its observed event boundary; later deliveries remain pending.
+    The bounded pilot is unchanged; a continuous campaign must already be authorised.
+    """
+    campaign = Path(campaign)
+    refusal = primary_refusal() or budget_refusal(campaign)
+    if not refusal and not continuous(campaign):
+        refusal = "direct host assignments require the existing continuous authorisation"
+    if refusal:
+        print(f"REFUSED: {refusal}", file=sys.stderr)
+        return 2
+    blocks = parse_assignments(text)
+    if not blocks or any(b.get("_missing") for b in blocks):
+        print("No assignments registered: use the existing complete ASSIGNMENT blocks", file=sys.stderr)
+        return 2
+    before = _load_state(campaign)
+    obs = observe(campaign, before)
+    handled = list(dict.fromkeys(list(before.get("pending_events") or []) + obs["events"]))
+    made = register_assignments(campaign, "HOST", text, origin="host")
+    if not made:
+        print("No new draft: the same work is already recorded; follow its existing owner")
+        return 0
+    state = _load_state(campaign)
+    if _running(state):
+        print("Host decision registered (not sent): " + ", ".join(b["id"] for b in made)
+              + "; consultant still running: preserve its observation boundary and reconcile its returned drafts")
+        return 0
+    state["last_outcome"] = {
+        "evaluation": "HOST", "origin": "host", "utc": _utc(_now()), "stated": True,
+        "outcome": "assign", "reason": " | ".join(f"{b['id']}: {b['why_now']}" for b in made),
+        "excluded": "See each assignment's related_work and duplicate_check; host choice, not independent review",
+        "resume_when": "event", "problem": "",
+    }
+    later = [e for e in state.get("pending_events", []) if e not in handled]
+    state.update(main_sha=obs["main_sha"], mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"],
+                 portfolio_digest=obs["portfolio"]["digest"],
+                 last_digest=sha256_text(obs["roadmap_sha256"] + "|" + "|".join(sorted(handled))),
+                 pending_events=later, pending_commits=state.get("pending_commits", 0) if later else 0,
+                 waits_seen=sorted({sha256_text(w["task"] + "|" + w["blocker"])[:12] for w in obs["waits"]}))
+    _save_state(campaign, state)
+    print("Host decision registered (not sent): " + ", ".join(b["id"] for b in made))
+    return 0
 
 
 SENDER_RECORDS = ("PROACTIVE-ADVISOR", "ADV-PRESIDIO", "ADV-FOLLOWTHROUGH")   # the records of the sessions that draft and deliver (the pilot implementation, the presidio): their naming a draft or its delivery is not a recipient taking it in charge. Harness is also a recipient: its own record (PLAN-ADV-SESSION) is NOT excluded
@@ -1470,7 +1537,7 @@ def assignment_states(campaign: Path) -> dict[str, dict[str, Any]]:
     out: dict[str, dict[str, Any]] = {}
     for e in _events(campaign):
         if e.get("id"):
-            out.setdefault(e["id"], {"recipient": e.get("recipient", ""), "key": e.get("key", ""), "levels": []})["levels"].append(e["state"])
+            out.setdefault(e["id"], {"recipient": e.get("recipient", ""), "key": e.get("key", ""), "origin": e.get("origin", "assessment"), "levels": []})["levels"].append(e["state"])
     taken, done = set(), set()
     def walk(node: Any, ident: str) -> tuple[bool, bool]:
         hit, ok = False, False
@@ -1598,18 +1665,80 @@ def direction_before_status_text() -> str:
         "Disclose the missing input; do not treat it as evidence that useful research is exhausted.")
 
 
+def laboratory_ownership_text() -> str:
+    """Source the effective accountability rule; do not fork it in the runtime prompt."""
+    try:
+        text = (ROOT / "framework/protocols/cross_session_transport.md").read_text(encoding="utf-8")
+    except OSError:
+        text = ""
+    match = re.search(r"^### Laboratory ownership[^\n]*\n(.*?)(?=^### |\Z)", text, re.M | re.S)
+    return "## Laboratory ownership\n" + (match.group(1).strip() if match else
+        "Canonical accountability guidance unavailable in cross_session_transport.md section 12; disclose the missing input.")
+
+
+def current_result_sources(obs: dict[str, Any], snap: dict[str, Any]) -> str:
+    """Index originals at pinned revisions, including changes to existing files.
+
+    No source is summarised, copied, fetched or declared read. The host can reconcile
+    an unavailable original at a safe boundary; the analyst cannot assume it saw it.
+    """
+    lines = ["## Current result sources", f"Observed main: `{obs.get('main_sha') or 'unknown'}`; readable checkout: `{snap.get('repo_sha') or 'unknown'}`.",
+             "These are source locations, not evidence or a shortlist. Read the relevant original and current recipient record before proposing work already reported complete."]
+    refs: dict[str, set[str]] = {}
+    ahead_sources: dict[str, list[str]] = {}
+    for event in obs.get("events", []):
+        match = re.match(r"delivery: ([0-9a-f]{7,40})\b", event)
+        if match:
+            ref = match.group(1)
+            refs.setdefault(ref, set()).update(_git("diff", "--name-only", f"{ref}^", ref).splitlines())
+    for ahead in snap.get("main_ahead", []):
+        ref = ahead["tip"]
+        changed = _git("diff", "--name-only", "HEAD", ref).splitlines()
+        refs.setdefault(ref, set()).update(changed)
+        for rel in changed:
+            ahead_sources.setdefault(rel, []).append(ref)
+    by_path: dict[str, list[str]] = {}
+    for ref, paths in refs.items():
+        relevant = sorted(p for p in paths if p.startswith(("disease-models/wwox/research/", "ledger/tasks/"))
+                          and Path(p).suffix in (".md", ".tsv", ".json")
+                          and "/assignments/" not in p and not re.search(r"/P\d+/", p))
+        for rel in relevant:
+            by_path.setdefault(rel, []).append(ref)
+    current = obs.get("main_sha") or snap.get("repo_sha") or "HEAD"
+    for rel, provenance in list(by_path.items())[:24]:
+        blob = _git("rev-parse", "--verify", f"{current}:{rel}")
+        local = _git("hash-object", "--", rel) if (ROOT / rel).is_file() else ""
+        availability = ("removed at observed main; do not resurrect the older delivery" if not blob else
+                        "same bytes readable here" if blob == local else
+                        "DIFFERS OR UNAVAILABLE here; host must reconcile the original")
+        lines.append(f"- `{rel}` @ `{current}`: {availability}. Change provenance: {', '.join(provenance)}.")
+        for ref in ahead_sources.get(rel, []):
+            newer = _git("rev-parse", "--verify", f"{ref}:{rel}")
+            if newer != blob:
+                lines.append(f"  Newer known ref `{ref}` has different or removed content; it is NOT supplied by the observed-main copy. Reconcile before relying on that copy as current.")
+    if len(by_path) > 24:
+        lines.append(f"Index shows 24 of {len(by_path)} changed source paths; the pinned revisions retain every original. This is not a coverage census.")
+    if not by_path:
+        lines.append("No changed result path identified from these events; use the permanent source map and portfolio. This does not establish exhaustion.")
+    return "\n".join(lines)
+
+
 def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
     campaign = Path(campaign)
     states = assignment_states(campaign)
     attempts = sorted((p for p in campaign.glob("P*/assessment.md") if re.fullmatch(r"P\d+", p.parent.name)), key=lambda p: int(p.parent.name[1:]))
     incomplete = {p.parent.name: why for p in attempts if (why := incomplete_run(campaign, p.parent.name))}
     prior = [p for p in attempts if p.parent.name not in incomplete]
-    parts = ["# Strategic Advisor brief — Stage P (proactive evaluation)", "", "## Snapshot", render_snapshot(snapshot()), "",
+    snap = snapshot()
+    activity = obs.get("activity") or session_activity(_now())
+    parts = ["# Strategic Advisor brief — Stage P (proactive evaluation)", "", "## Snapshot", render_snapshot(snap), "",
              "## Operator roadmap (authoritative; operator instructions prevail over any automatic plan)", roadmap_text() or "(no roadmap section found: say so, and propose nothing beyond keeping the plan)", "",
              "## Campaign limits", json.dumps({k: v for k, v in _budget(campaign).items() if k in ("expires_utc", "max_invocations", "max_assignments", "turn_limit")}), "",
              operating_mode_text(campaign), "",
+             laboratory_ownership_text(), "",
              direction_before_status_text(), "",
              "## Neutral entry points", render_entrypoints(entrypoints()), "", f"Memory directory (read-only): `{MEMORY_DIR}`", "",
+             current_result_sources(obs, snap), "",
              "## Live harness scouting (daily scout briefing, read by the caller: opportunities, not evidence)", scout_briefing(), "",
              portfolio_text(), "",
               portfolio_brief(obs.get("portfolio") or portfolio_snapshot()), "",
@@ -1617,9 +1746,10 @@ def build_brief_p(campaign: Path, obs: dict[str, Any]) -> str:
               "No section is needed when nothing changes. Preserve sources, link the recipient's mandate when known, record the actual consumer and the next question; do not mark an opportunity done merely because an assignment was sent. "
               "This does not alter the operator mission or promote any scientific conclusion.", "",
             "## Observed state (mechanical, this tick)", json.dumps({k: obs[k] for k in ("events", "open_mandates", "waits", "queue", "sessions", "commits_since_last_tick")}, indent=1), "",
+            "## Laboratory activity (observation, not a verdict on useful work)", json.dumps(activity, indent=1), "",
             previous_outcome_text(campaign), "",
              "## Assignments already drafted, with their evidence level (do not duplicate; follow what was taken in charge)",
-             json.dumps({k: {"recipient": v["recipient"], "key": v["key"], "highest": v["highest"], "mandates": v.get("mandates", [])} for k, v in states.items()}, indent=1) or "none", "",
+             json.dumps({k: {"recipient": v["recipient"], "key": v["key"], "origin": v.get("origin", "assessment"), "highest": v["highest"], "mandates": v.get("mandates", [])} for k, v in states.items()}, indent=1) or "none", "",
              "Evidence levels are historical transport facts. Current mandate verdicts and their paths are listed separately: TAKEN does not mean still running, RELEASED does not prove consumption. Read the relevant complete record before relying on its state. "
              "The latest saved assessment is historical context; it is not evidence that its old premises remain true.", "",
              f"## Previous assessment\n{prior[-1].parent.name}: `{prior[-1]}` (historical decision; reconcile after framing the direction; reuse while its premises and expected value still hold)" if prior else "## Previous assessment\nnone", "",
@@ -1788,7 +1918,7 @@ def status(campaign: Path) -> str:
         last = held[-1]
         lines.append(f"  holds recorded {len(held)} (not evaluations, not counted above); last {last['utc']}: cleared {len(last['events_cleared'])} event(s) and {last['commits_cleared']} commit(s), resume_when {last['resume_when']}: {last['reason'][:160]}")
     for ident, v in sorted(assignment_states(campaign).items()):
-        lines.append(f"  {ident} [{v['recipient']}] {v['key']}: highest evidence {v['highest'] or 'none'}; levels {','.join(v['levels'])}" + ("; UNREACHABLE (residual stays in the queue)" if v["unreachable"] else ""))
+        lines.append(f"  {ident} [{v['recipient']}] {v['key']}: highest evidence {v['highest'] or 'none'}; origin {v.get('origin', 'assessment')}; levels {','.join(v['levels'])}" + ("; UNREACHABLE (residual stays in the queue)" if v["unreachable"] else ""))
     return "\n".join(lines)
 
 
@@ -1814,6 +1944,8 @@ def main(argv: list[str] | None = None) -> int:
     c = sub.add_parser("check"); c.add_argument("--campaign", required=True)
     t = sub.add_parser("tick", help="the hourly bounded check (no model unless you then run `evaluate`)"); t.add_argument("--campaign", required=True)
     ev = sub.add_parser("evaluate", help="one strategic evaluation, counted in the campaign budget"); ev.add_argument("--campaign", required=True)
+    ha = sub.add_parser("assign", help="register the continuous ADV host's decision in the existing assignment channel, without a consultant call or a send")
+    ha.add_argument("--campaign", required=True); ha.add_argument("--text-file", required=True, help="existing ASSIGNMENT blocks; preserve original premises and recipient autonomy")
     hd = sub.add_parser("hold", help="record a hold without a model run: consumes the pending digest, lists what it clears in holds.jsonl, is not an evaluation"); hd.add_argument("--campaign", required=True); hd.add_argument("--reason", required=True); hd.add_argument("--resume-when", required=True, help="record:<TASK>=<STATE> or path:<file>[~<text>]"); hd.add_argument("--excluded", required=True, help="the paths the hold leaves out (record ids, portfolio rows, files) with the actual cause of each; a hold lapses at min_hours_between")
     ev.add_argument("--model", default="opus"); ev.add_argument("--effort", default="high", choices=["low", "medium", "high"]); ev.add_argument("--timeout", type=int, default=3600)
     st = sub.add_parser("status", help="budget and the evidence level of every assignment"); st.add_argument("--campaign", required=True)
@@ -1889,7 +2021,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.cmd == "check":
         return check(Path(args.campaign))
     campaign = Path(args.campaign)
-    if args.cmd in ("recall", "tick", "evaluate", "meeting", "deliver", "activate", "disable", "authorise-continuous", "end-continuous") and primary_refusal():
+    if args.cmd in ("recall", "tick", "evaluate", "assign", "meeting", "deliver", "activate", "disable", "authorise-continuous", "end-continuous") and primary_refusal():
         print(primary_refusal(), file=sys.stderr); return 2
     if args.cmd == "recall":
         print(recall_prompt(campaign)); return 0
@@ -1904,6 +2036,11 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps(result, indent=1)); return 0
     if args.cmd == "evaluate":
         return evaluate(campaign, args.model, args.effort, args.timeout)
+    if args.cmd == "assign":
+        try:
+            return host_assign(campaign, Path(args.text_file).read_text(encoding="utf-8"))
+        except (OSError, ValueError) as exc:
+            print(f"Host assignment not registered: {exc}", file=sys.stderr); return 2
     if args.cmd == "hold":
         return hold(campaign, args.reason, args.resume_when, args.excluded)
     if args.cmd == "status":
