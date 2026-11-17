@@ -1,0 +1,14 @@
+axis coverage per run (number of the 7 axes named by the 10 final hypotheses; keyword test)
+target | baseline A/B | v1 A/B | v3 A/B
+T4 | 6/5 | 5/4 | 6/5
+T5 | 5/5 | 4/5 | 6/5
+T6 | 2/3 | 2/3 | 4/4
+mean axes per run: {'BASE': 4.33, 'V1': 3.83, 'V3': 5.0}
+share of hypotheses naming each axis (percent), then hypotheses naming no axis:
+BASE {'a': 5, 'b': 23, 'c': 37, 'd': 3, 'e': 18, 'f': 15, 'g': 22} no axis: 18 of 60
+V1 {'a': 7, 'b': 27, 'c': 20, 'd': 0, 'e': 25, 'f': 20, 'g': 27} no axis: 19 of 60
+V3 {'a': 7, 'b': 20, 'c': 20, 'd': 0, 'e': 20, 'f': 15, 'g': 33} no axis: 13 of 60
+v3 final tens: origin of each hypothesis (stage-1 item versus built from the held circuits)
+T4 run A (S1, ENGINE) = (8, 2) run B = (9, 1)
+T5 run A (S1, ENGINE) = (8, 2) run B = (9, 1)
+T6 run A (S1, ENGINE) = (7, 3) run B = (8, 2)
