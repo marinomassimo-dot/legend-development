@@ -14,6 +14,9 @@ We are studying the published findings on Wwox loss and would be grateful for th
 2. Spontaneous burst events in the neocortical field recordings (Figure 1). For each recorded slice: genotype, animal identifier, and for each detected burst its onset time, duration (s) and the interval to the next burst (s), as used for the medians and gamma shape estimates reported.
 3. Optionally, if available: the per-cell values behind Table 1 (resting membrane potential, input resistance, sag, rebound, action-potential amplitude) with genotype and animal identifier.
 
+4. Optionally, only if such recordings exist in any form: per-cell values of miniature inhibitory postsynaptic currents recorded in tetrodotoxin, and the action-potential waveform (amplitude, half-width) per cell with its cell class, with genotype and animal identifier.
+5. Optionally, only if it exists in any form: whether in vivo EEG or ECoG recordings of this line were made with sleep-state annotation, and if so what can be shared.
+
 We would be glad to receive whatever subset is easiest to share. If any item cannot be shared, please tell us and we will not ask again. Thank you for your time.
 
 [Sender name, affiliation, own e-mail address: written by the human sender; not supplied by this repository]
