@@ -1,0 +1,14 @@
+pmid	url	route	result	saved_file	sha256
+42909904	PubMed MCP get_article_metadata	PubMed tools (metadata)	ok; abstract, DOI 10.1093/braincomms/fcag385, PMCID PMC13684411	(not saved; abstract used only for cross-check)	
+42909904	PubMed MCP convert_article_ids	PubMed tools (ID conversion)	ok; PMID to PMC13684411		
+42909904	https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13684411/fullTextXML	Europe PMC REST fullTextXML, plain curl GET, no headers/params	HTTP 200 application/xml; full JATS text returned; no challenge page	fulltext/PMC13684411.xml	4e571e24a85342f2a72d92a18df1acdebd9efa89dcdf5754c092078d112a23a4
+42909904	(derived locally)	XML to plain text with tools/x2t.py (stdlib ElementTree); quotes verified against this file	ok	fulltext/PMC13684411.txt	2cf6ea4b029dea0866d5b2738a05bc58cd04b3faa034690abd4a36522f4aa3d5
+42536722	PubMed MCP get_article_metadata	PubMed tools (metadata)	ok; abstract, DOI 10.1126/sciadv.aec6065, PMCID PMC13426438	(not saved; abstract used only for cross-check)	
+42536722	PubMed MCP convert_article_ids	PubMed tools (ID conversion)	ok; PMID to PMC13426438		
+42536722	https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13426438/fullTextXML	Europe PMC REST fullTextXML, plain curl GET, no headers/params	HTTP 200 application/xml; full JATS text returned; no challenge page	fulltext/PMC13426438.xml	ec59c91b8c5e471e42de843c92ebd87e35d370576b293ed2d20029b86f902d6f
+42536722	(derived locally)	XML to plain text with tools/x2t.py (stdlib ElementTree); quotes verified against this file	ok	fulltext/PMC13426438.txt	0a6041074d1b74ea6582adee7f8f9e8da99bd48c1bdc1c206ff2f2512203b9ee
+42310739	PubMed MCP get_article_metadata	PubMed tools (metadata)	ok; abstract, DOI 10.1186/s12929-026-01269-4, PMCID PMC13274077	(not saved; abstract used only for cross-check)	
+42310739	PubMed MCP convert_article_ids	PubMed tools (ID conversion)	ok; PMID to PMC13274077		
+42310739	https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13274077/fullTextXML	Europe PMC REST fullTextXML, plain curl GET, no headers/params	HTTP 200 application/xml; full JATS text returned; no challenge page	fulltext/PMC13274077.xml	0950ff391fe8590e44db87b5532b37120400679bfceb3a213e99ad653761db4d
+42310739	(derived locally)	XML to plain text with tools/x2t.py (stdlib ElementTree); quotes verified against this file	ok	fulltext/PMC13274077.txt	77c8b0f5d51d6cdfbabfc24a1b61f9c91bf3ebceb81e6401f81245670d7a55d6
+all	PMC article pages (pmc.ncbi.nlm.nih.gov)	not attempted	not needed: Europe PMC fullTextXML returned full text for all three		
