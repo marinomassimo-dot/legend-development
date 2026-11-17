@@ -1,0 +1,311 @@
+{
+  "capture": {
+    "assessment_sha256": "7dc1785e04d7c79d1290bb1d433e43804ae33c3e24a45504479353d9e0481ed5",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P23/stream.jsonl",
+    "raw_stream_sha256": "a2bed282cd3ebe0ffa8a1c5e7ce30bde28db415118e7cfec9541b47e9d38853c",
+    "source_session_id": "6bc72d6e-9c11-42da-9100-f1eca652dc5e",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 71466
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-17T09:26:59Z",
+  "label": "P23",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": true,
+      "efforts": {
+        "high": 11
+      },
+      "first_turn_context": 44353,
+      "models": {
+        "claude-opus-5": 1,
+        "claude-opus-5-5": 10
+      },
+      "peak_context": 86637,
+      "totals": {
+        "cache_creation": 86703,
+        "cache_read": 689466,
+        "output": 10691
+      },
+      "turns": 11
+    },
+    "final_turn_model": "claude-opus-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.002824,
+        "inputTokens": 28125,
+        "maxOutputTokens": 128000,
+        "outputTokens": 23,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5": {
+        "cacheCreationEphemeral1hInputTokens": 68,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 68,
+        "cacheReadInputTokens": 83898,
+        "canonicalModel": "claude-opus-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.17852400000000002,
+        "inputTokens": 4,
+        "maxOutputTokens": 64000,
+        "outputTokens": 5435,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 86703,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 86703,
+        "cacheReadInputTokens": 692203,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.9635805999999999,
+        "inputTokens": 24,
+        "maxOutputTokens": 128000,
+        "outputTokens": 6571,
+        "provider": "firstParty",
+        "thinkingTokens": 3831,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 17,
+    "refusal_fallbacks": [
+      {
+        "apiRefusalCategory": null,
+        "direction": "retry",
+        "fallbackModel": null,
+        "originalModel": null,
+        "scope": "session",
+        "trigger": "refusal"
+      }
+    ],
+    "total_cost_usd": 1.1449285999999999,
+    "turn_models": {
+      "claude-opus-5": 1,
+      "claude-opus-5-5": 11
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 86703,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 86703,
+      "cache_read_input_tokens": 689466,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 24,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 68,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 68,
+          "cache_read_input_tokens": 83898,
+          "input_tokens": 4,
+          "output_tokens": 5435,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 10691,
+      "output_tokens_details": {
+        "thinking_tokens": 3065
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-17T09:24:19Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P22/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tI'll stop that line and write the assessment from what I have already read.\n2\t\n3\t## 1 \u00b7 Principal decision\n4\t\n5\tWhere the next increment of value lies now tha"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-*.md"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261115T152159Z-jaq44mq3.md\ndisease-models/wwox/research/drug_repurposing"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261117T074632Z-pld639my.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# MEETING \u2014 2026-11-17T07:46:32Z\n2\t\n3\tStarted UTC: 2026-11-17T07:46:32Z\n4\tSnapshot SHA: 6f7193c7bac29a43b6680bfdd3557547e297717f\n5\tCoordination: ADV (directio"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113",
+        "pattern": "HE95|family-first"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 7 files\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/PREDICTIONS_FF_STAGE0_SCI_INDEPEND"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing",
+        "pattern": "Cacna1g"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 111 files\ndisease-models/wwox/research/drug_repurposing/functional_it13_p3a_20261031/README.md\ndisease-models/wwox/research/drug_repurposing/advisor_pilot"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/third_set/ff/RESULT_FF_STAGE0.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Family-first cue step, stage 0 (tuned-on T7, tool-free): result (HE; 2026-11-17; non-canonical; not medical advice)\n2\t\n3\t**CANDIDATE STEP, DEVELOPMENT ON A "
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/third_set/ff/CUE_QUESTION_FOR_MEETING.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# The next cue: one question for the 13:46Z meeting (HE; 2026-11-17; no run; non-canonical)\n2\t\n3\t**Question.** What is the cue that is narrower than a table o"
+    },
+    {
+      "input": {
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ENGINE_MEASURES.tsv",
+        "pattern": "^M0(79|8\\d|9\\d)"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "80:[Omitted long matching line]\n81:[Omitted long matching line]\n82:M081\t2026-11-17\ttokens of the T7 series (4 stage-1 and stage-2 pairs of v3 and v4, blind read"
+    },
+    {
+      "input": {
+        "glob": "*.md",
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116",
+        "pattern": "spikes per neuron|Fig\\. 1D|intrinsic excitab|organoid"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 49 files\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_dataset_search_20261117/WWOX_NEURAL_DATASET_SEARCH_IT"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/*{R4,R5,LEVER,lever,42721537,V8,v8}*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ARM_TABLE_V8_NOTES_IT_20261117.md\ndisease-models/wwox/research/drug_rep"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_r4_lever_table_20261117/R4_LEVER_TABLE_BY_CLASS_IT_20261117.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# R4: the lever table by class, with G372R carried as an observation (IT; host clock 2026-11-17 ~08:10Z; non-canonical; hypotheses; mechanism level; no agent,"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_dataset_search_20261117/WWOX_NEURAL_DATASET_SEARCH_IT_20261117.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Search for public Wwox-deficient neural transcriptome datasets released since 2025-09-01 (IT; host clock 2026-11-17 ~09:00Z; non-canonical; a statement abou"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ARM_TABLE_V8_NOTES_IT_20261117.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Arm table v8: SCI's revision 3 (organoid rows) consumed (IT, keeper; host clock 2026-11-17 ~08:10Z; non-canonical; not medical advice)\n2\t\n3\tFile: `ideas_arm"
+    },
+    {
+      "input": {
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_adv_20261116/IDEAS_ORDER_DREAM5_ADV.md",
+        "pattern": "organoid|E-MTAB-14792|rank 2|^## "
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "5:## A. What changed since DREAM-4b, and the decision each moves\n12:## B. Operational memory: what was not kept, found late, or not acting\n13:[Omitted long matc"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_adv_20261116/IDEAS_ORDER_DREAM5_ADV.md",
+        "limit": 30,
+        "offset": 18
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "18\t## C. Connections (chains: sources -> relation -> rivals -> measurement -> consumer), tagged\n19\t1. **Human and mouse inhibitory-compartment readings, side by"
+    }
+  ]
+}
