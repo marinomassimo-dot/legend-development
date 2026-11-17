@@ -1,0 +1,118 @@
+Note on method: the brief said to use no tools and answer from knowledge, so nothing was read from the repository and no registry or dedup check was done. Everything below is recalled knowledge. Epistemic tags: DATO means I recall it as published but it is not checked against any source here. IPOTESI means it is unproven. Nothing is a dose or a drug recommendation.
+
+FAMILY: The defective molecule is guanylyl cyclase C (GC-C, GUCY2C), a membrane receptor guanylyl cyclase of the intestinal epithelium. Its ligands are guanylin and uroguanylin, and the bacterial heat-stable enterotoxin STa also activates it. Its second messenger is cGMP, which acts through PKG2 (PRKG2), PDE3 and PDE2 crosstalk, and CFTR and NHE3. The defective family is the receptor guanylyl cyclases: GC-A/NPR1, GC-B/NPR2, GC-C, GC-D, GC-E/GUCY2D and GC-F/GUCY2F, and GC-G. Closest related families:
+(1) adenylyl cyclases and soluble adenylyl cyclase, which share the class III nucleotide-cyclase catalytic fold;
+(2) soluble guanylyl cyclase (sGC, GUCY1A/B), which has the same cGMP-producing cyclase domain but is regulated by NO through a heme-binding H-NOX domain;
+(3) the pseudokinase and protein-kinase-fold receptors. The kinase-homology domain (KHD) of receptor guanylyl cyclases is an ATP-binding, catalytically inactive kinase-like module. The comparison is with other pseudokinase receptors such as HER3, and with the downstream cGMP-effector kinase PKG, which has the same fold.
+The wider pathway components that set the cGMP level or carry its effect also belong here: PDEs, the efflux transporters MRP4 and MRP5 (ABCC4 and ABCC5), PKG, and the cAMP-gated and cGMP-gated effectors.
+
+MODULATORS (not pruned, not ranked; "up" means raises activity or level, "down" means lowers it)
+
+| Family | Member | Modulator | Direction |
+|---|---|---|---|
+| Receptor GC | GC-C | guanylin | up |
+| Receptor GC | GC-C | uroguanylin (more active at acidic luminal pH; guanylin more active at alkaline pH) | up |
+| Receptor GC | GC-C | STa (ETEC heat-stable toxin) | up |
+| Receptor GC | GC-C | linaclotide and plecanatide (agonist peptide class) | up |
+| Receptor GC | GC-C | ATP binding to the KHD (allosteric potentiator) | up |
+| Receptor GC | GC-C | Mn2+ or Mg2+ as catalytic metal (Mn2+ gives higher activity) | up |
+| Receptor GC | GC-C | KHD or hinge activating variants such as S840I (disease class) | up |
+| Receptor GC | GC-C | glycosylation and Hsp90-dependent maturation, trafficking to the apical membrane | up (required) |
+| Receptor GC | GC-C | ligand-induced phosphorylation or dephosphorylation of the KHD (desensitisation) | down |
+| Receptor GC | GC-C | decreased hormone expression in inflamed or injured epithelium (TNF or IFNγ lowers guanylin) | down |
+| Receptor GC | GC-C | Gucy2c knockout, Guca2a knockout, Guca2b knockout | down |
+| Receptor GC | GC-C | ATP-site or KHD-targeting compounds, anti-GC-C antibodies or peptide antagonists | down (experimental; no clinical inhibitor known to me) |
+| Receptor GC | GC-A | ANP, BNP | up |
+| Receptor GC | GC-B | CNP | up |
+| Receptor GC | GC-A, GC-B | ATP | up |
+| Receptor GC | GC-A, GC-B | HS-142-1, anantin, A71915 (receptor antagonists) | down |
+| Receptor GC | GC-A, GC-B | dephosphorylation of the KHD (PP), PKC-linked heterologous desensitisation | down |
+| Receptor GC | GC-A, GC-B | phosphorylation of the KHD (needed for activity) | up |
+| Receptor GC | GC-D | guanylin or uroguanylin (olfactory or other GC-D-bearing cells), CO2/bicarbonate (via carbonic anhydrase) | up |
+| Receptor GC | GC-E, GC-F | GCAP1 or GCAP2 at low Ca2+ | up |
+| Receptor GC | GC-E, GC-F | GCAP at high Ca2+ | down |
+| Receptor GC | GC-E, GC-F | RD3 | down |
+| Receptor GC | GC-E, GC-F | Mg2+ | up |
+| Adenylyl cyclase | AC (several) | Gαs, forskolin, Gβγ (isoform-dependent), Mn2+ | up |
+| Adenylyl cyclase | AC (several) | Gαi, P-site inhibitors (2',5'-dideoxyadenosine and similar), SQ22536, PKA or PKC feedback phosphorylation | down |
+| Adenylyl cyclase | AC1, AC8 | Ca2+/calmodulin | up |
+| Adenylyl cyclase | AC5, AC6 | Ca2+ | down |
+| Adenylyl cyclase | sAC | bicarbonate, Ca2+ | up |
+| Adenylyl cyclase | sAC | KH7, LRE1, TDI-10229 (inhibitor class) | down |
+| sGC | sGC | NO | up |
+| sGC | sGC | CO (weak) | up |
+| sGC | sGC | stimulators (riociguat, vericiguat, BAY 41-2272, YC-1; need reduced heme) | up |
+| sGC | sGC | activators (cinaciguat; act on oxidised or heme-free enzyme) | up |
+| sGC | sGC | ODQ, NS2028 (oxidise the heme), methylene blue, thiol oxidation | down |
+| sGC | sGC | ATP | down |
+| sGC | sGC | heme loss | down (and activator-sensitive) |
+| Effectors and removers of cGMP | PDE5 | sildenafil class | down on cGMP degradation, so cGMP up |
+| Effectors and removers of cGMP | PDE5 | PKG-mediated phosphorylation | up in PDE5 activity |
+| Effectors and removers of cGMP | PDE9 | BAY 73-6691 class | cGMP up |
+| Effectors and removers of cGMP | PDE6 | zaprinast-like inhibitors | cGMP up |
+| Effectors and removers of cGMP | PDE10 | inhibitors | cGMP and cAMP up |
+| Effectors and removers of cGMP | PDE1 | Ca2+/calmodulin | up in activity |
+| Effectors and removers of cGMP | PDE1 | vinpocetine class | cGMP up |
+| Effectors and removers of cGMP | PDE2 | cGMP stimulates it, so cGMP lowers cAMP | up in activity |
+| Effectors and removers of cGMP | PDE2 | EHNA, BAY 60-7550 | cAMP up |
+| Effectors and removers of cGMP | PDE3 | cGMP competes for cAMP, so cGMP raises cAMP | inhibited by cGMP |
+| Effectors and removers of cGMP | PDE3 | cilostamide class | cAMP up |
+| Effectors and removers of cGMP | MRP4 (ABCC4), MRP5 (ABCC5) | efflux of cGMP and cAMP | cGMP down intracellularly |
+| Effectors and removers of cGMP | MRP4, MRP5 | probenecid, MK571 | cGMP up |
+| Effectors and removers of cGMP | PKG2 (PRKG2) | 8-Br-cGMP, cGMP | up |
+| Effectors and removers of cGMP | PKG2 (PRKG2) | Rp-8-pCPT-cGMPS, DT-2, KT5823 (selectivity uncertain) | down |
+| Effectors and removers of cGMP | CFTR | PKG2 and PKA phosphorylation | up |
+| Effectors and removers of cGMP | CFTR | CFTRinh-172, GlyH-101, crofelemer (also acts on CaCC) | down |
+| Effectors and removers of cGMP | NHE3 | PKGII/cAMP-linked phosphorylation | down |
+| Effectors and removers of cGMP | NHE3 | tenapanor class | down |
+| Conditions | luminal pH | acid favours uroguanylin, alkaline favours guanylin | direction by ligand |
+| Conditions | STa-producing bacteria (microbiota) | | up |
+| Conditions | inflammatory cytokines | | down in hormone expression |
+| Conditions | bile acids and dietary state | | modulate hormone expression |
+
+STEP C. The defect is a gain of function: too much cGMP is produced. That is an IPOTESI from the question, because the question says the variant makes too much second messenger and I know of no data on this specific model. The recalled human precedent is a KHD activating variant (S840I) causing familial diarrhoea (DATO, recalled, not verified). Correcting entries are those that lower cGMP output or break its downstream consequences.
+- Lowering ligand drive helps if the variant is hormone-dependent: guanylin or uroguanylin loss, or acid-base conditions that disfavour the ligand.
+- Lowering catalysis helps if it is hormone-independent: KHD or ATP-site modulation, and allele-specific dosage reduction.
+- Raising cGMP removal helps: PDE activity (PDE5, PDE9, PDE1, PDE2) and efflux (MRP4, MRP5).
+- Blocking downstream effectors helps: PKG2 and CFTR or NHE3 inhibition would correct fluid and ion consequences. They would not lower cGMP, and PKG-feedback loss could raise it.
+- Epithelial and inflammatory entries correct the consequences, not the signal. These are Notch/Atoh1 shifts toward secretory differentiation, UPR relief, microbiota depletion, TNF or IL-22 axis changes and MLCK inhibition.
+Entries that would not correct the defect:
+- All agonists (GC-C, GC-A/B, sGC stimulators and activators) would worsen or be irrelevant.
+- PDE inhibitors (sildenafil class and others) and the efflux inhibitors (probenecid, MK571) would raise cGMP.
+- Forskolin and Gαs activators would add cAMP crosstalk.
+- GC-A/B, sGC and adenylyl cyclase modulators are cross-talk candidates only, and their effect in this epithelium is not assumed.
+One tension I flag: loss of the GC-C axis (Gucy2c, Guca2a, Guca2b knockouts) is also reported to impair barrier and goblet or secretory differentiation and to enhance injury (DATO, recalled). So both too little and too much signalling may damage the epithelium. A model with high but unregulated, non-pulsatile or mislocalised signalling would reconcile the two. This is IPOTESI, and H8 and H14 test it.
+
+HYPOTHESES
+
+H1. Statement: The variant raises basal and ligand-independent catalysis through loss of KHD autoinhibition, so cGMP is high even without hormone. · Evidence: S840I-type KHD variants are reported to raise cyclase activity in cells (DATO, recalled); the mouse model is unknown to me. · Usual reading: the variant simply amplifies the normal hormone response; this reading says it bypasses the hormone. · Rejection: cGMP returns to wild-type level when ligands are removed (Guca2a and Guca2b double knockout). · Discriminator versus H2: add Guca2a/2b deletion on the GOF background. Predicts cGMP stays elevated and barrier stays impaired.
+
+H2. Statement: The variant increases receptor sensitivity to guanylin and uroguanylin, and hormone drive is what keeps cGMP high. · Evidence: none known for this model; the knockout biology says hormone loss lowers cGMP and impairs barrier. · Usual reading: GC-C activity is a fixed readout; this reading says it is hormone-limited. · Rejection: hormone deletion fails to lower cGMP. · Discriminator versus H1: Guca2a/2b deletion on the GOF background. Predicts cGMP falls toward wild type and barrier improves, if H2 is true.
+
+H3. Statement: The cause is deficient cGMP removal, because epithelial PDE activity (PDE5, PDE9, PDE1) is too low to match output. · Evidence: none known in this model. · Usual reading: the cyclase alone sets the level; this reading makes the PDE capacity limiting. · Rejection: PDE overexpression leaves cGMP and barrier unchanged. · Discriminator versus H4: epithelial overexpression of a cGMP-selective PDE. Predicts cGMP falls and barrier improves, while Abcc4 deletion has no extra effect.
+
+H4. Statement: Efflux through MRP4 or MRP5 is a separate removal route, and its low capacity lets intracellular cGMP accumulate. · Evidence: MRP4 is a cGMP and cAMP exporter (DATO, recalled); no link to this model. · Usual reading: removal means degradation; this reading adds export. · Rejection: Abcc4 deletion or inhibition does not raise cGMP. · Discriminator versus H3: epithelial Abcc4 overexpression. Predicts lower intracellular cGMP and better barrier, with higher luminal cGMP.
+
+H5. Statement: PKG2 (PRKG2) is the effector that damages differentiation and junctions, and its loss uncouples cGMP from the epithelium. · Evidence: Prkg2 is the main intestinal cGMP effector (DATO, recalled); no model-specific data. · Usual reading: cGMP is the harmful quantity; this reading says only PKG2 signalling is. · Rejection: epithelial Prkg2 deletion does not improve barrier. · Discriminator versus H6: Prkg2 deletion on the GOF background. Predicts cGMP unchanged or higher, with PKG-feedback loss, and barrier improved.
+
+H6. Statement: cGMP acts through PDE3 inhibition and PDE2 activation, which shifts cAMP/PKA tone. · Evidence: cGMP–cAMP crosstalk through PDE3 and PDE2 is established in other tissues (DATO, recalled); none known here. · Usual reading: cGMP acts as cGMP; this reading says it acts via cAMP. · Rejection: lowering cAMP or deleting PDE3/PDE2 does not change the barrier phenotype. · Discriminator versus H5: epithelial Pde3b deletion or an adenylyl cyclase loss-of-function combined with the GOF. Predicts cGMP unchanged and cAMP altered, with barrier changing only if H6 holds.
+
+H7. Statement: CFTR and NHE3 changes cause the leaky barrier through luminal fluid and osmotic stress, not through cGMP signalling inside cells. · Evidence: GC-C raises Cl- and HCO3- secretion through CFTR and lowers NHE3 (DATO, recalled); link to leak is IPOTESI. · Usual reading: barrier loss is a cell-differentiation effect; this reading says it is a physical effect of secretion. · Rejection: CFTR deletion fixes secretion but not barrier. · Discriminator versus H5: Cftr deletion or NHE3 inhibitor class on the GOF background. Predicts cGMP unchanged and barrier improved if H7 is right.
+
+H8. Statement: The harm comes from loss of pulsatile, compartmented cGMP signalling: tonic apical or microdomain cGMP excess replaces regulated bursts. · Evidence: none known for this receptor in vivo. · Usual reading: total cGMP is what matters; this reading says the pattern and location matter. · Rejection: lowering total cGMP to wild type fully rescues without any spatial change. · Discriminator versus H3: apically targeted versus cytosolic PDE5 expression. Predicts the same total cGMP with different barrier outcomes.
+
+H9. Statement: Excess cGMP/PKG signalling blocks secretory-lineage commitment through Notch/Atoh1 balance. · Evidence: none known for this model; the GC-C axis is reported to affect goblet and Paneth differentiation (DATO, recalled). · Usual reading: differentiation loss follows barrier damage; this reading says it comes first. · Rejection: Atoh1 or Notch manipulation fixes goblet cells but not barrier. · Discriminator versus H10: γ-secretase inhibitor class or Atoh1 overexpression. Predicts cGMP unchanged and barrier improved if mucus and goblet restoration is limiting.
+
+H10. Statement: Secretory cells carry ER stress and UPR overload from the excess signalling, and this impairs their function. · Evidence: none known. · Usual reading: differentiation fails; this reading says differentiated cells exist but fail. · Rejection: chaperone or Xbp1-pathway support leaves secretory cell function unchanged. · Discriminator versus H9: chemical-chaperone class or UPR modulation. Predicts cGMP unchanged, with barrier improved without lineage change.
+
+H11. Statement: Microbiota-driven inflammation causes the leak and the cytokines, secondary to the signalling defect. · Evidence: none known; barrier and microbe contact are linked generally (DATO, recalled). · Usual reading: the variant acts on epithelium directly; this reading says microbes mediate it. · Rejection: germ-free or antibiotic conditions leave barrier leak unchanged. · Discriminator versus H12: germ-free derivation of the GOF line. Predicts cGMP unchanged and barrier and cytokines improved.
+
+H12. Statement: TNF/IFNγ (and IL-22) feed back on epithelium, and cytokine signalling itself sustains the leak and further changes the hormone axis. · Evidence: cytokines are reported to lower guanylin (DATO, recalled). · Usual reading: cytokines are an outcome; this reading makes them a driver. · Rejection: Tnfr1 epithelial deletion or anti-TNF class does not change barrier. · Discriminator versus H11: epithelial Tnfr1 deletion in conventional mice. Predicts cGMP changing only through hormone feedback, and barrier improved if H12 holds.
+
+H13. Statement: PKG-dependent MLCK and myosin-light-chain phosphorylation opens tight junctions directly. · Evidence: none known for this model. · Usual reading: tight junctions are lost through differentiation or inflammation; this reading says they are actively opened. · Rejection: Mylk deletion leaves barrier unchanged. · Discriminator versus H5: epithelial Mylk deletion. Predicts cGMP unchanged, with barrier improved while Prkg2 is still active.
+
+H14. Statement: The variant acts in a dosage-sensitive or dominant manner, so reducing mutant versus wild-type allele dose rescues in different ways. · Evidence: none known. · Usual reading: any reduction of GC-C is equal; this reading says the mutant alone must be removed. · Rejection: halving the wild-type allele gives the same rescue as halving the mutant allele. · Discriminator versus H1: heterozygous versus homozygous GOF, and allele-specific knockdown class. Predicts a graded cGMP fall and barrier recovery with mutant dose only.
+
+H15. Statement: Part of the cGMP load, or of the barrier effect, comes from sGC/NO crosstalk and natriuretic GC compensation, not from GC-C alone. · Evidence: none known; sGC and GC-A/B express little in epithelium (IPOTESI). · Usual reading: GC-C is the only cyclase of consequence; this reading allows a second cGMP source. · Rejection: epithelial Gucy1b1 deletion or an sGC inhibitor class changes neither cGMP nor barrier. · Discriminator versus H1: Gucy1b1 deletion on the GOF background. Predicts a small cGMP fall and an unchanged barrier if GC-C dominates, and a larger change if H15 holds.
+
+Flags: no URGENT_COMMIT_REQUEST category applies on this input, since it is a hypothesis exercise with no source. Nothing is a biomarker candidate, and no preprint is involved. No COMMIT CANDIDATE or FULLTEXT_READ_RECEIPT is produced, because no paper was read.
