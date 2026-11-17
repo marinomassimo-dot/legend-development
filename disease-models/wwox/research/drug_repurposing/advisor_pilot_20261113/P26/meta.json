@@ -1,0 +1,282 @@
+{
+  "capture": {
+    "assessment_sha256": "d95e8d5a83d22e5e18e9421cb044f5fbac4f854d2cb85c43ba723a9c052a4f8b",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P26/stream.jsonl",
+    "raw_stream_sha256": "8e3a31891f3cd9854dbcf2f53c37e9135d759e568913db817ab94714a3e1e747",
+    "source_session_id": "e9e834f5-d2f9-4b14-bb3b-ce7bd30f2f8d",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 73506
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-17T15:27:40Z",
+  "label": "P26",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": false,
+      "efforts": {
+        "high": 12
+      },
+      "first_turn_context": 45188,
+      "models": {
+        "claude-opus-5-5": 12
+      },
+      "peak_context": 91390,
+      "totals": {
+        "cache_creation": 91388,
+        "cache_read": 773133,
+        "output": 15574
+      },
+      "turns": 12
+    },
+    "final_turn_model": "claude-opus-5-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.0029000000000000002,
+        "inputTokens": 28895,
+        "maxOutputTokens": 128000,
+        "outputTokens": 21,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 91388,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 91388,
+        "cacheReadInputTokens": 773133,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 1.1973066,
+        "inputTokens": 24,
+        "maxOutputTokens": 128000,
+        "outputTokens": 15574,
+        "provider": "firstParty",
+        "thinkingTokens": 8176,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 14,
+    "refusal_fallbacks": [],
+    "total_cost_usd": 1.2002066,
+    "turn_models": {
+      "claude-opus-5-5": 12
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 91388,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 91388,
+      "cache_read_input_tokens": 773133,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 24,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 2393,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 2393,
+          "cache_read_input_tokens": 88995,
+          "input_tokens": 2,
+          "output_tokens": 6605,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 15574,
+      "output_tokens_details": {
+        "thinking_tokens": 8176
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-17T15:24:40Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P25/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tI'll write the assessment now from what I already hold, without reproducing the withheld material.\n2\t\n3\t## 1 \u00b7 Principal decision\n4\t\n5\tADV-019 is answered: SC"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/**/meetings/MEETING-20261117*.md"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261117T023531Z-65a1hzow.md\ndisease-models/wwox/research/drug_repurposing"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261117T131644Z-__l1rl6n.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# MEETING \u2014 2026-11-17T13:16:44Z\n2\t\n3\tStarted UTC: 2026-11-17T13:16:44Z\n4\tSnapshot SHA: 41090e732bbe32d6f22053927c68d3ec52cc14d5\n5\tCoordination: ADV (directio"
+    },
+    {
+      "input": {
+        "-i": true,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261117T074632Z-pld639my.md",
+        "pattern": "^D\\d|DECISIONS|batch|theme"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "8:[Omitted long matching line]\n16:- ORCH-METABOLIC-BATCH-20261019: orchestrator; ALL_BLOCKED; `ledger/tasks/orchestrator/ORCH-METABOLIC-BATCH-20261019.json`\n26:"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261117T074632Z-pld639my.md",
+        "limit": 30,
+        "offset": 38
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "38\tMEETING anticipated (operator rule: everyone idle or finishing, so no waiting for 08:35Z). Two themes, as the operator set them (22:05Z): (1) where we direct"
+    },
+    {
+      "input": {
+        "-i": true,
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113",
+        "pattern": "42721537|toy slow|slow homeostatic|DREAM-6|DREAM6"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 24 files\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261117T131644Z-__l1rl6n.md\ndisease-models/wwox/research/d"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_adv_20261116/IDEAS_ORDER_DREAM5_ADV.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# DREAM-5 (ADV): the ideas re-ordered after the transfer qualification, the VOI ranking, reading [5] and the set-3 freeze (2026-11-17 07:40Z host clock; HYPOT"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/RESULT_HOMEOSTAT_TOY_SCI_20261117.md",
+        "limit": 40
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# Result of the LABELLED TOY: a slow homeostatic gain added to the oscillator (SCI, 2026-11-17; non-canonical; MODEL: hypothesis generator, not evidence; a to"
+    },
+    {
+      "input": {
+        "-i": true,
+        "head_limit": 25,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116",
+        "pattern": "organoid.{0,80}(MEA|pharmacolog|bumetanide|panel|discriminat)"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_adv_20261116/IDEAS_ORDER_DREAM5_ADV.md:19:[Omitted long match"
+    },
+    {
+      "input": {
+        "-i": true,
+        "head_limit": 10,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox",
+        "pattern": "(42397075|Brain 2026).{0,200}(drug|agent|blocker|TTX|bicuculline|picrotoxin|CNQX|APV|treated|pharmac)"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/registries/literature_tracking_log_current.md:12452:[Omitted long matching line]\ndisease-models/wwox/registries/fulltext_read_receipts.jsonl"
+    },
+    {
+      "input": {
+        "-i": true,
+        "head_limit": 12,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox",
+        "pattern": "stiripentol.{0,120}(LDH|lactate dehydrogenase|Ldha)|(LDH|lactate dehydrogenase|Ldha).{0,120}stiripentol"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/registries/literature_tracking_log_current.md:22429:**Short title:** Rico-Molina 2024 \u2014 stiripentol-related hLDHA inhibitors for primary hyp"
+    },
+    {
+      "input": {
+        "-i": true,
+        "head_limit": 12,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox",
+        "pattern": "organoid.{0,150}(E_GABA|EGABA|NKCC1|KCC2|bumetanide|depolari[sz]|bicuculline|picrotoxin|gabazine)|(E_GABA|NKCC1|KCC2|bumetanide|depolari[sz]ing GABA|bicuculline|gabazine).{0,150}organoid"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/registries/working_model_current.md:170:[Omitted long matching line]\ndisease-models/wwox/meta/meta_gaba_paradox_current.md:27:- Steinberg 20"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116",
+        "pattern": "bisection"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 20 files\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/TASK_RECORD_SCI_20261116.md\ndisea"
+    }
+  ]
+}
