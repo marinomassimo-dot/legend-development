@@ -1,0 +1,157 @@
+question	alternative_id	observation_id	value	reason
+Q1	Q1-A1	O1	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A1	O2	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A1	O3	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A1	O4	supports	Synaptic IPSC amplitude and frequency are reduced in KO, which A1 needs; but het alone is not separated from WT in the quote (S-CTL pools het and WT), so grading itself is not shown
+Q1	Q1-A1	O5	silent	Depolarization shared by het and KO; does not discriminate phasic-inhibition grading; het-only sIPSC values not quoted
+Q1	Q1-A1	O6	supports	Authors state KO favors excitation over inhibition via inhibitory current amplitude; A1 needs synaptic inhibition loss; dose scaling not shown
+Q1	Q1-A1	O7	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A1	O8	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A1	O9	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A1	O10	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A1	O11	silent	het = KO on passive properties; consistent with A1 but nondiscriminating; het-only sIPSC values not quoted
+Q1	Q1-A1	O12	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A2	O1	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A2	O2	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A2	O3	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A2	O4	silent	sIPSC reduction is KO vs pooled het+WT; whether het differs from KO in synaptic inhibition is not quoted (missing: het-only values)
+Q1	Q1-A2	O5	supports	Het and KO share a more depolarized state, the permissive non-graded component A2 posits
+Q1	Q1-A2	O6	silent	Authors' KO-vs-control statement; whether synaptic inhibition separates het from KO is not quoted (missing: het-only values)
+Q1	Q1-A2	O7	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A2	O8	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A2	O9	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A2	O10	silent	Scan shows no cytoplasmic PPxY in listed K channels; a link from Wwox to intrinsic properties via PPxY is not in the quotes (missing: Wwox-PPxY relationship)
+Q1	Q1-A2	O11	supports	Rebound significant only in KO while passive properties are het = KO: the quote states exactly the pattern A2 needs (a property larger in KO than het)
+Q1	Q1-A2	O12	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A3	O1	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A3	O2	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A3	O3	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A3	O4	silent	Only sIPSCs measured; no tonic conductance in Wwox genotypes quoted (missing fact)
+Q1	Q1-A3	O5	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A3	O6	silent	Authors attribute to amplitude of inhibitory currents (synaptic); no tonic data quoted
+Q1	Q1-A3	O7	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A3	O8	silent	WT tonic current minute at endogenous GABA, but tonic current in Wwox slices not quoted (missing: tonic measurements in het/KO)
+Q1	Q1-A3	O9	silent	Tonic current insensitive to GAT-1 alone in rat; no Wwox tonic measurement quoted
+Q1	Q1-A3	O10	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A3	O11	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A3	O12	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q1	Q1-A0	O1	silent	Abstention alternative makes no claim
+Q1	Q1-A0	O2	silent	Abstention alternative makes no claim
+Q1	Q1-A0	O3	silent	Abstention alternative makes no claim
+Q1	Q1-A0	O4	silent	Abstention alternative makes no claim
+Q1	Q1-A0	O5	silent	Abstention alternative makes no claim
+Q1	Q1-A0	O6	silent	Abstention alternative makes no claim
+Q1	Q1-A0	O7	silent	Abstention alternative makes no claim
+Q1	Q1-A0	O8	silent	Abstention alternative makes no claim
+Q1	Q1-A0	O9	silent	Abstention alternative makes no claim
+Q1	Q1-A0	O10	silent	Abstention alternative makes no claim
+Q1	Q1-A0	O11	silent	Abstention alternative makes no claim
+Q1	Q1-A0	O12	silent	Abstention alternative makes no claim
+Q2	Q2-B1	O1	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B1	O2	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B1	O3	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B1	O4	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B1	O5	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B1	O6	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B1	O7	supports	Bursts abolished by d-APV: NMDA-receptor dependence which B1 needs; recovery/depletion itself is not shown and evidence is KO-only
+Q2	Q2-B1	O8	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B1	O9	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B1	O10	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B1	O11	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B1	O12	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B2	O1	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B2	O2	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B2	O3	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B2	O4	silent	Inhibition reduced in KO; that bursts recruit inhibition that decays over the interval is not quoted (missing fact)
+Q2	Q2-B2	O5	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B2	O6	silent	Excitation favored over inhibition; no burst-recruited inhibition time course quoted
+Q2	Q2-B2	O7	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B2	O8	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B2	O9	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B2	O10	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B2	O11	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B2	O12	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B3	O1	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B3	O2	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B3	O3	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B3	O4	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B3	O5	silent	Depolarized resting state does not give a tens-of-seconds cycle; time course not quoted
+Q2	Q2-B3	O6	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B3	O7	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B3	O8	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B3	O9	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B3	O10	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B3	O11	silent	Rebound is a candidate after-burst state, but its time scale (tens of seconds) and relation to bursts is not quoted (missing fact)
+Q2	Q2-B3	O12	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q2	Q2-B0	O1	silent	Abstention alternative makes no claim
+Q2	Q2-B0	O2	silent	Abstention alternative makes no claim
+Q2	Q2-B0	O3	silent	Abstention alternative makes no claim
+Q2	Q2-B0	O4	silent	Abstention alternative makes no claim
+Q2	Q2-B0	O5	silent	Abstention alternative makes no claim
+Q2	Q2-B0	O6	silent	Abstention alternative makes no claim
+Q2	Q2-B0	O7	silent	Abstention alternative makes no claim
+Q2	Q2-B0	O8	silent	Abstention alternative makes no claim
+Q2	Q2-B0	O9	silent	Abstention alternative makes no claim
+Q2	Q2-B0	O10	silent	Abstention alternative makes no claim
+Q2	Q2-B0	O11	silent	Abstention alternative makes no claim
+Q2	Q2-B0	O12	silent	Abstention alternative makes no claim
+Q3	Q3-C1	O1	silent	CONFOUND: 36 of 42 KO slices and 4 of 23 het slices already burst at baseline, 0 of 11 WT do; a first-burst (or, for C4, abolition) score gives no value for already-bursting slices (C4: WT has no bursts to suppress)
+Q3	Q3-C1	O2	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C1	O3	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C1	O4	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C1	O5	silent	CONFOUND: het and KO are already more depolarized, so equal K+ steps need not be equal distances
+Q3	Q3-C1	O6	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C1	O7	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C1	O8	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C1	O9	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C1	O10	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C1	O11	silent	CONFOUND: het = KO on passive properties, so a depolarization-based read may collapse the graded het/KO difference
+Q3	Q3-C1	O12	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C2	O1	silent	CONFOUND: 36 of 42 KO slices and 4 of 23 het slices already burst at baseline, 0 of 11 WT do; a first-burst (or, for C4, abolition) score gives no value for already-bursting slices (C4: WT has no bursts to suppress)
+Q3	Q3-C2	O2	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C2	O3	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C2	O4	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C2	O5	silent	Dependence of Mg2+-lowering response on baseline depolarization is not quoted (missing fact)
+Q3	Q3-C2	O6	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C2	O7	supports	Bursts are NMDA-receptor dependent (d-APV removes them), the process Mg2+ lowering gates; evidence KO-only
+Q3	Q3-C2	O8	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C2	O9	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C2	O10	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C2	O11	silent	Dependence of Mg2+-lowering response on baseline depolarization is not quoted (missing fact)
+Q3	Q3-C2	O12	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C3	O1	silent	CONFOUND: 36 of 42 KO slices and 4 of 23 het slices already burst at baseline, 0 of 11 WT do; a first-burst (or, for C4, abolition) score gives no value for already-bursting slices (C4: WT has no bursts to suppress)
+Q3	Q3-C3	O2	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C3	O3	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C3	O4	silent	CONFOUND: KO starts with reduced sIPSC amplitude/frequency, so the available antagonism range differs by genotype
+Q3	Q3-C3	O5	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C3	O6	supports	Authors identify inhibitory-current reserve as the lever that favors excitation in KO; C3 reads that reserve
+Q3	Q3-C3	O7	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C3	O8	silent	WT tonic current minute at endogenous GABA, so mostly phasic is read; consistent but nondiscriminating; tonic in het/KO not quoted
+Q3	Q3-C3	O9	silent	CONFOUND: ambient GABA/tonic current depends on GABA uptake (GAT-1/2/3 blockade changes IPSCs and tonic current), a source of variation in the baseline read by antagonism
+Q3	Q3-C3	O10	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C3	O11	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C3	O12	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C4	O1	silent	CONFOUND: 36 of 42 KO slices and 4 of 23 het slices already burst at baseline, 0 of 11 WT do; a first-burst (or, for C4, abolition) score gives no value for already-bursting slices (C4: WT has no bursts to suppress)
+Q3	Q3-C4	O2	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C4	O3	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C4	O4	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C4	O5	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C4	O6	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C4	O7	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C4	O8	supports	THIP induces a robust tonic GABA-A current in L2/3 neurons of WT mice: the lever works in WT neurons (Wwox genotypes not quoted)
+Q3	Q3-C4	O9	silent	Whether THIP-induced current is affected by uptake is not quoted (missing fact)
+Q3	Q3-C4	O10	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C4	O11	silent	Quote states nothing the alternative needs or predicts, and nothing contradicting it
+Q3	Q3-C4	O12	silent	Zolpidem does not alter THIP current; does not bear on the ladder or its genotype range
+Q3	Q3-C0	O1	silent	Abstention alternative makes no claim
+Q3	Q3-C0	O2	silent	Abstention alternative makes no claim
+Q3	Q3-C0	O3	silent	Abstention alternative makes no claim
+Q3	Q3-C0	O4	silent	Abstention alternative makes no claim
+Q3	Q3-C0	O5	silent	Abstention alternative makes no claim
+Q3	Q3-C0	O6	silent	Abstention alternative makes no claim
+Q3	Q3-C0	O7	silent	Abstention alternative makes no claim
+Q3	Q3-C0	O8	silent	Abstention alternative makes no claim
+Q3	Q3-C0	O9	silent	Abstention alternative makes no claim
+Q3	Q3-C0	O10	silent	Abstention alternative makes no claim
+Q3	Q3-C0	O11	silent	Abstention alternative makes no claim
+Q3	Q3-C0	O12	silent	Abstention alternative makes no claim

@@ -12,8 +12,10 @@ SIDECAR.tsv columns (tab separated, header required): id, who, bin_low, bin_high
   inclusive low, exclusive high, `-inf` and `inf` allowed; bins need not cover the whole line, but an observed value outside every bin of a forecaster is scored with the floor.
   Probability 0 is allowed. A point forecast (a naive rule) is written as a narrow bin carrying most of the probability, the rest spread over the other bins; the convention is yours
   and is part of the digest.
-OBSERVED.tsv columns: id, value, locator.  `locator` is required and must say where the value was read (file, table row, figure panel, page): an empty value, `-`, `?`, `tbd`,
+OBSERVED.tsv columns: id, value, locator, and an OPTIONAL note.  `locator` is required and must say where the value was read (file, table row, figure panel, page): an empty value, `-`, `?`, `tbd`,
   `todo` or `n/a` is refused. An id absent from the sidecar is refused. No value is ever read from a chat message or from the sidecar itself.
+The note (a limit such as 'below the readability threshold' or 'interval touches 0') is printed beside the score and NEVER excludes a line: a line is scored by its registered bin (ADV's rule of 2026-11-16);
+  'not scorable' only for the reasons registered with the ledger (below the stated minimum n, no locator, no observed value), which are refusals here.
 Score: the natural log of the probability the forecaster put on the bin that contains the observed value (the floor replaces a probability below it, so a bin with 0 costs ln(floor));
   per id and forecaster, then the sum per forecaster over the ids observed. A higher (less negative) total is better; the ledger 'improves' only if it beats both baselines on a second
   ledger of this kind (SCI's rule); this tool only computes the numbers. Nothing here is evidence about biology; it scores the forecasters. Not medical advice.
@@ -114,16 +116,16 @@ def cmd_score(a: list[str]) -> int:
             die(f"observed id {i} has no locator (where was the value read?): refused")
         if not any(k[0] == i for k in by):
             die(f"observed id {i} is not in the sidecar")
-        x = num(r["value"], f"observed {i} value")
+        x = num(r["value"], f"observed {i} value"); note = (r.get("note") or "").strip()
         for (sid, w), bins in sorted(by.items()):
             if sid != i:
                 continue
             p = prob_of(bins, x); eff = max(p if p is not None else 0.0, floor)
             totals[w] += math.log(eff)
-            lines.append((i, w, x, "outside every bin" if p is None else f"p={p:g}", math.log(eff)))
-    print("id\twho\tvalue\tbin\tlog_score")
-    for i, w, x, b, s in lines:
-        print(f"{i}\t{w}\t{x:g}\t{b}\t{s:.4f}")
+            lines.append((i, w, x, "outside every bin" if p is None else f"p={p:g}", math.log(eff), note))
+    print("id\twho\tvalue\tbin\tlog_score\tnote")
+    for i, w, x, b, s, nt in lines:
+        print(f"{i}\t{w}\t{x:g}\t{b}\t{s:.4f}\t{nt}")
     print("TOTAL\t" + "\t".join(f"{w}={t:.4f}" for w, t in sorted(totals.items())) + f"\t(ids observed: {len(seen)}; floor {floor})")
     return 0
 
