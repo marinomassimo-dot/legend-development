@@ -41,3 +41,5 @@ All five ran on the requested model and effort throughout. The harness figures s
 * **K13 and K8/K9 harm statement for memantine in GRIN:** replace 'seizure worsening in 3 or 4 of 19 gain-of-function individuals' with 'increased seizure frequency in three named individuals with gain-of-function variants (the Discussion says four but names three; cause unclear); 3 of 15 rare adverse events in the other group, type not stated as seizures' (19 = 34 - 15 by the delegate's subtraction).
 * **K8:** the funder of the memantine trial is stored in the Europe PMC record (Savoy Foundation; Fonds de Recherche du Quebec - Sante; McGill University Health Centre Research Institute); 'funder not named' is withdrawn.
 * **K12 / lane C:** see the dated line at the foot of the lane C table (label wording, GRIN statement).
+
+* **K7, DeVine, complete line (2026-11-17, ADV):** see the second update in `CORRECTIONS_AFTER_BLIND_VERIFICATION_IT_20261117.md`: one course shows seizure cessation within one hour of ketamine started in conjunction with midazolam, with recurrence after both were stopped; the pooled prior has 0 to 2 attributable DeVine responders.
