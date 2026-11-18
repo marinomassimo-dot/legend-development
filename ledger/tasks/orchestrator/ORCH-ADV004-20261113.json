@@ -14,7 +14,7 @@
   "delegate_active": "none",
   "updated": "2026-11-14"
  },
- "RESUME": "Complete. IT Orchestrator consumes consumer_delta rows 1-6; nothing further owed by this record.",
+ "RESUME": "Complete. IT Orchestrator consumed consumer_delta rows 1-6 (f2b198ee8); closure evidence pointers for every step supplied 2026-11-18 (the watch had flagged six DONE steps without evidence); nothing further owed by this record.",
  "DECISIONS_TAKEN": [
   "2026-11-13 ADV-004 taken in charge as executed (this record cites it); accepted as a request relayed by the ADV presidio; reversible by the operator"
  ],
@@ -30,22 +30,26 @@
     {
      "step": "Take in charge ADV-004; ledger and repo checked first; S0 frame (definitions, trigger, priors) committed before reading",
      "status": "DONE",
-     "owner": "orchestrator"
+     "owner": "orchestrator",
+     "evidence": "Closure evidence supplied 2026-11-18 (all pointers checked on origin/main; ancestry verified): S0 frame disease-models/wwox/research/drug_repurposing/gabaa_subtype_adv004_20261114/S0_before_reading.md, committed in 796a27356 together with this task record, before any paper was read."
     },
     {
      "step": "Producer brief; one producer (sonnet medium) reads the three papers as complete originals; staged receipts validated",
      "status": "DONE",
-     "owner": "orchestrator"
+     "owner": "orchestrator",
+     "evidence": "Closure evidence supplied 2026-11-18: producer brief gabaa_subtype_adv004_20261114/BRIEF_P.md (commit 160e88047) and producer output under gabaa_subtype_adv004_20261114/output/ (commit 1bbc5343c); three staged producer receipts (event ids ending -62) recorded in disease-models/wwox/registries/fulltext_read_receipts.jsonl."
     },
     {
      "step": "One blind verifier (sonnet high): re-extract every number with conditions; attack the conditions analysis; corrections and a narrow recheck",
      "status": "DONE",
-     "owner": "orchestrator"
+     "owner": "orchestrator",
+     "evidence": "Closure evidence supplied 2026-11-18: verifier brief gabaa_subtype_adv004_20261114/VERIFIER_BRIEF.md and verifier output under gabaa_subtype_adv004_20261114/verify/ (commit 58f0d6047); narrow recheck of the README and delta applied (commit 339792178); five staged verifier receipts (event ids ending -60) in disease-models/wwox/registries/fulltext_read_receipts.jsonl."
     },
     {
      "step": "README answer-first, consumer_delta, conditional design position; message the presidio and the IT Orchestrator",
      "status": "DONE",
-     "owner": "orchestrator"
+     "owner": "orchestrator",
+     "evidence": "Closure evidence supplied 2026-11-18: gabaa_subtype_adv004_20261114/README.md (answer first; conditional design position) and consumer_delta.md (commits 58f0d6047 and 339792178, both ancestors of origin/main); the IT consumption is recorded on main in f2b198ee8 and the presidio disposition in 1c8ed97f1. The messages to the presidio and the IT Orchestrator left no durable trace of their own; their content is the README and consumer_delta."
     }
    ]
   },
@@ -55,12 +59,14 @@
     {
      "step": "Landing: pre-freeze suites, gate, LINT, receipts, growth, battery (after the IT battery or after telling IT), task_close, safe_push",
      "status": "DONE",
-     "owner": "orchestrator"
+     "owner": "orchestrator",
+     "evidence": "Closure evidence supplied 2026-11-18: VERIFICATION_EVIDENCE of this record (battery 20261114-004219-85b2f6aa, exit 0 on 6cc6ef493, an ancestor of origin/main; the first run on 87e9c4c70 was interrupted by the actor because main moved, evidence kept in the same field); battery PASS recorded in dc65a27b2; the record was landed on main in 87e9c4c70 and dc65a27b2."
     },
     {
      "step": "Self-evaluation, DREAM, final report",
      "status": "DONE",
-     "owner": "orchestrator"
+     "owner": "orchestrator",
+     "evidence": "Closure evidence supplied 2026-11-18: self-evaluation disease-models/wwox/research/session_evaluations/2026-11-14_orchestrator_adv004.md (commit 38c5ff4ed, on main). The README is the final report. A separate DREAM record for this mandate was not found on main and is not asserted here; downstream consumption is evidenced by f2b198ee8."
     }
    ]
   }
