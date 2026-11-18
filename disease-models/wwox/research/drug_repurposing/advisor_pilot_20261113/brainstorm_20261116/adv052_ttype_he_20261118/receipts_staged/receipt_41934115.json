@@ -1,0 +1,39 @@
+{
+ "event_id": "FTR-20261118-41934115-52",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "41934115",
+  "doi": "10.1002/cns.70865"
+ },
+ "event_at": "2026-11-18T08:38:33Z",
+ "analysis_at": "2026-11-18T08:38:33Z",
+ "workflow": "ADV-052 producer reading package (parts b, c, d): full text fetched through Europe PMC REST fullTextXML, converted to text keeping paragraphs, titles, captions and table cells and dropping the reference list, and read whole with the Read tool. Quotes below were machine-checked as substrings of the converted text (dash glyphs and whitespace normalised). Figure images and supplements were not seen.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/raw/PMID41934115_PMC13052111_europepmc.xml",
+ "source_fingerprint": "ba1bc1dd0b30c0bd4b2f4109e3eb9599312abca862661a1f1211e8dcff45035d",
+ "source_kind": "fulltext_remote",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "figures": "captions_only",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/TABLE_PRODUCER.md"
+ ],
+ "evidence_basis": [
+  "verbatim_locator: \"Responder rates were 51.2%, 55.3%, 53.7%, and 53.7% at 3, 6, 9, and 12 months, respectively.\"",
+  "verbatim_locator: \"Efficacy was consistent across age and etiology.\"",
+  "verbatim_locator: \"80% for Dravet syndrome (DS), 66.7% for early infantile developmental and epileptic encephalopathy (EIDEE), 59.6% for unclassified DEE, 54.6% for Lennox-Gastaut syndrome (LGS), and 43.9% for infantile epileptic spasms syndrome (IESS)\"",
+  "verbatim_locator: \"Adverse events were reported in 14.2% (18/127) of patients.\""
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

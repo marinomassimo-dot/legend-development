@@ -1,0 +1,39 @@
+{
+ "event_id": "FTR-20261118-33243296-52",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "33243296",
+  "doi": "10.1186/s13041-020-00700-7"
+ },
+ "event_at": "2026-11-18T08:38:33Z",
+ "analysis_at": "2026-11-18T08:38:33Z",
+ "workflow": "ADV-052 producer reading package (parts b, c, d): full text fetched through Europe PMC REST fullTextXML, converted to text keeping paragraphs, titles, captions and table cells and dropping the reference list, and read whole with the Read tool. Quotes below were machine-checked as substrings of the converted text (dash glyphs and whitespace normalised). Figure images and supplements were not seen.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/raw/PMID33243296_PMC7690142_europepmc.xml",
+ "source_fingerprint": "8b5722bbf210de8af744a524b04f440833846ae6485cd4207bdc6f9d42f2d004",
+ "source_kind": "fulltext_remote",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "figures": "captions_only",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/TABLE_PRODUCER.md"
+ ],
+ "evidence_basis": [
+  "verbatim_locator: \"ZNS shifted the half-conductance of the activation potential of mutant CaV3.1 to more hyperpolarized potentials in a concentration-dependent manner.\"",
+  "verbatim_locator: \"The current densities (absolute peak amplitude of the CaV3.1 current divided by capacitances) did not decrease significantly in the presence of 50 µM ZNS (Fig. 1b).\"",
+  "verbatim_locator: \"efonidipine did not affect the half-conductance of the activation potential of wild-type (p = 0.695) and mutant CaV3.1 (p = 0.567)\"",
+  "verbatim_locator: \"is also a sodium channel blocker [8], the effects of sodium channel blockade may have an indirect influence on tremor in patients with SCA42.\""
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

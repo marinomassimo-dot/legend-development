@@ -1,0 +1,39 @@
+{
+ "event_id": "FTR-20261118-36537292-52",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "36537292",
+  "doi": "10.1002/prp2.1032"
+ },
+ "event_at": "2026-11-18T08:38:33Z",
+ "analysis_at": "2026-11-18T08:38:33Z",
+ "workflow": "ADV-052 producer reading package (parts b, c, d): full text fetched through Europe PMC REST fullTextXML, converted to text keeping paragraphs, titles, captions and table cells and dropping the reference list, and read whole with the Read tool. Quotes below were machine-checked as substrings of the converted text (dash glyphs and whitespace normalised). Figure images and supplements were not seen.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/raw/PMID36537292_PMC9764106_europepmc.xml",
+ "source_fingerprint": "ca9bfa07bbfa5798b590a0e29e4c50b56944e0ed8316580df7b10547b6e61bf6",
+ "source_kind": "fulltext_remote",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "figures": "captions_only",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/TABLE_PRODUCER.md"
+ ],
+ "evidence_basis": [
+  "verbatim_locator: \"Eligible subjects for the clinical study were healthy adult male and female volunteers aged between 18 and 45 years\"",
+  "verbatim_locator: \"No major adverse reaction was reported throughout the study.\"",
+  "verbatim_locator: \"Dizziness, fatigue, and concentration difficulties were reported following the administration of ethosuximide, whatever the formulation.\"",
+  "verbatim_locator: \"capsules cannot be used in children below 12 years\""
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
