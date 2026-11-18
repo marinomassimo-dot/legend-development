@@ -99,10 +99,11 @@
     },
     {
      "step": "ACTOR_ID advisor: roles/advisor.md, identity and routing (advisor vs orchestrator), migration of the ADV record without history loss, one host, recall verified, probe demonstration, delivery to ADV IT SCI, rollback path",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
      "source": "operator mandate 2026-11-18 (ACTOR_ID plan): distinct ACTOR_ID advisor for the ADV host, integrated with the continuity work",
-     "accepted_at": "2026-11-18T22:02:45Z"
+     "accepted_at": "2026-11-18T22:02:45Z",
+     "updated_at": "2026-11-18T22:24:14Z"
     }
    ]
   }

@@ -1,7 +1,8 @@
 {
  "_schema": "orchestrator-task-v1",
- "OWNER": "orchestrator",
- "ACTOR_ID": "orchestrator",
+ "OWNER": "advisor",
+ "ACTOR_ID": "advisor",
+ "ACTOR_HISTORY": [{"actor": "orchestrator", "from": "2026-11-14T07:55:00Z", "until": "2026-11-18T22:23:49Z", "note": "operator decision 2026-11-18, DEC-20261118-ADVISOR-ACTOR: the ADV host is ACTOR_ID advisor; same record, same TASK_ID, same session binding and recall; events and entries written as orchestrator stay orchestrator; the file moved from ledger/tasks/orchestrator/ (pointer left there)"}],
  "PRIORITY": "P0",
  "RECALL": {"mark": "Proactive Strategic Advisor pilot, hourly mechanical check", "command": "python3 framework/scripts/strategic_advisor.py recall --campaign disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113", "renew_days": 6},
  "TASK_ID": "ORCH-ADV-FOLLOWTHROUGH-20261114",
