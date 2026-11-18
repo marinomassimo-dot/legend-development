@@ -57,3 +57,4 @@
 [10:28Z] SCI: one sentence removed for wording in the outreach package (readiness item 8) and in the in vivo brief (section 6 item 7); no change of content; repo-wide check of my documents for the same pattern: none left.
 [10:42Z] SCI ADV-059 cold-read list (IT) applied in one pass: brief section 9.3 and cover (what a laboratory will ask first); priors file untouched.
 [10:59Z] SCI ADV-059 IT second-look list (8 points) applied in one pass: brief section 9.4 and cover; priors file untouched.
+[11:30Z] SCI ADV-062 blind recount of the vigabatrin aggregates: adv062_vigabatrin_recount_sci_20261118/ (aggregates only; recount written and hashed before IT section 1 was opened; agreement on rows, reports, response counts; disagreements: lower bound 21 not 20 (my rule error), upper 24 to 26, alone (fewer than 3 stated), row A non-responses 3, hormonal same-row 4 vs linked-row up to 8).
