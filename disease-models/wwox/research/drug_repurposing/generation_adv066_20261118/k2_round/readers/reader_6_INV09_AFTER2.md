@@ -1,0 +1,15 @@
+(1) First actions: (a) pre-specify the regimen (Cheng's repeated pretreatment as the replication condition) and the genotype-by-treatment term, before data; (b) run the pilot shared with INV-04 (variability, assay age, non-floor stimulus); (c) measure the H1 baseline (pS535, total GSK3, replicate lanes, p-eIF2 alpha) in WWOX-deficient vs corrected cells, stating the null (H5) first.
+
+(2) Arms and controls: provoked-seizure assay, three genotypes, same session and same vehicle group per genotype: lithium, a second GSK-3 inhibitor of another class, a general non-GSK-3 anticonvulsant comparator, an age series in wild-type pups. Optional inositol add-back arm (not GSK-3-free). Measurements: p-Ser9, total GSK-3beta and a kinase or beta-catenin readout in tissue from the same treated animals; E_GABA by perforated patch at matched maturity. Cell arm: GSK3A/B knock-down, S535A and catalytically dead epsilon (with its own control), ISRIB only as a probe with an engagement control, an isogenic isoform-knockout check per compound.
+
+(3) More promising: no overall ranking. Lithium is general; ethosuximide's selectivity is open and it runs first in vivo (the only arm whose outcome changes the decision, design-level inference). Lithium has the most paediatric exposure of the GSK-3 agents (label level). Neither the NKCC1 nor the KCC2 branch is more promising overall. Withdrawn: the Kasahara 2019 P11 datum and any link of bumetanide-sensitive aggravation to the lithium thread. Unresolved: the beta-catenin sign, the sign of GSK-3 inhibition for myelination, whether the GSK3 route is engaged, and the isoform.
+
+(4) Cannot conclude: that lithium's effect is GSK-3-specific or knockout-enhanced. Cheng's 82 vs 54 percent difference cannot be shown to exceed noise. Active GSK-3 is inferred from one p-Ser9 blot, one lane per genotype, with ages that disagree. No kinase, Wnt or beta-catenin data exist in Wwox-null tissue. No infant data, no development datum for any non-gene agent, no repurposing candidate, no efficacy claim.
+
+(5) Decision needing someone else: the start age and regimen of any separate development cohort ("the laboratory's"), and the regimen pre-registration, which belong to the laboratory.
+
+(6) Explanations and separating patterns:
+- General effect (L1): lithium and second inhibitor effective in all genotypes, interaction ratio 0.7 to 1.43, and the comparator also effective.
+- GSK-3-specific, knockout-enhanced (L2): interaction outside 0.7 to 1.43, reproduced by the second inhibitor and not by the comparator, with a p-Ser9 or kinase change. If the interaction cannot be sized (about 180 to 320 animals per cell), it is exploratory.
+- Regimen artefact (L3): the sign changes with regimen. No numeric margin.
+- Cell-level rivals (H1 to H5): H1 fails if pS535 is not raised at baseline, if pS535 falls but translation does not move, or if the effect is also seen in corrected cells or is unchanged by S535A. H2: alpha also acts or neither isoform changes pS535. H5: the GSK3 route is not engaged. The material gives no numeric margins for these.

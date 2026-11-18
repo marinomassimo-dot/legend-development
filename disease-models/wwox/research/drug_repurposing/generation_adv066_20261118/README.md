@@ -9,7 +9,8 @@ Non-canonical working note (IT, 2026-11-18). Not medical advice; no dose, schedu
 3. **What a reader writes differently with the packages (K1 and K4, observed; not a score).** The AFTER readers state, endpoint by endpoint, which candidate or class is more promising and at which evidence level (provoked seizure, acute rescue, chronic control, development; paediatric exposure for lithium; the KCC2 branch against an NKCC1 blocker "on evidence level only"), and both say the Kasahara 2019 datum is withdrawn. The BEFORE readers state that the material ranks nothing. That is a better formulation of a comparison. It is not a new prediction: **no reader, in either arm, produced a new discriminating outcome pattern (K2)**.
 4. **The BEFORE arm already carried the day's wording.** The stored investigation rows for INV-04 and INV-09 were updated earlier today (IT57: the published effect cannot power the interaction, wild type near the floor, a pilot first, the rat age floor, no T-type or GSK-3 measurement in a WWOX system, the 0.7 and 1.43 margin) and that wording was already in the BEFORE text. K3, K4 and K5 were therefore largely met by both arms; the packages add K1 and little else. I had not weighed that when I wrote the prediction.
 5. **Two defects of my own found and repaired before landing** (section 2): the generator wrote "mapping drafted by HE and read by the owners (SCI, PRESIDIO-001, 2026-11-14)" onto my eight rows, which is false provenance for a mapping I wrote; and my first run interleaved the new INV-09 rows into the middle of the earlier file, which three earlier suites pin.
-6. **ONE battery is still owed and is not mine to start alone.** Targeted suites pass (section 5). The full battery on the final tree is coordinated with HE, who decides who runs it after this change lands.
+6. **K2 round (later the same day, section 7): the question, not the mapping, elicited the patterns.** When the reader task asked for the outcome pattern per explanation (round 1 never asked), K2 was met in every arm except INV-09 BEFORE; mapping SCI's section-4 patterns into the comparison rows added nothing detectable (AFTER2 = AFTER on K2 and on patterns matching the key). The generator's hypothesis rows carry the extra patterns the BEFORE text lacks (INV-04 E2 and the T-type route; INV-09 L1 and L2 with margins). The round-1 sentence "K2 produced by no reader" is therefore a statement about the task, not about the material.
+7. **ONE battery is still owed and is not mine to start alone.** Targeted suites pass (section 5). The full battery on the final tree is coordinated with HE, who decides who runs it after this change lands.
 
 ## 1. What was registered (`../comparison_adv066_20261118/`)
 
@@ -69,3 +70,27 @@ Outcome by the fixed rule (IMPROVED needs +3 and no harm): INV-04 NO DIFFERENCE 
 ## Files
 
 `PREREG_ADV066_READER_TEST.md`, `READER_TASK.txt`, `views/` (four reader inputs), `build_views_adv066.py` (as run), `readers/` (four hand-backs), `scoring_adv066.tsv`, `SHA256SUMS_ADV066.txt`.
+
+## 7. K2 round (dated 2026-11-18, after ADV's reply; `k2_round/`)
+
+ADV accepted round 1 and asked for a K2 round as a mapping, not new authorship: SCI's in vivo brief section 4 (priors file sha256 prefix `326846fb5180`) already states per arm what each outcome favours. Done:
+
+* **Mapping** (`../comparison_adv066_20261118/apply_k2_mapping_adv066.py`, idempotent): the brief's patterns, with their margins (0.7 and 1.43), appended under a marker to `outcome_favourable` and `outcome_contrary` of INV-04 C-EP2 and INV-09 C-GS1 ("from SCI's brief section 4, mapped by IT"). The brief's own labels are named as the brief's (its E4 is "no effect anywhere"; the package's E4 is the T-type route). No pattern of IT's. No SCI question was needed.
+* **Two causes kept apart** (pre-registered, `k2_round/PREREG_K2_ADV066.md`, hash printed 21:44:21 UTC before the first reader): the round-1 task never asked for part 6, and the round-1 views did not show the comparison rows' outcome cells. Six fresh readers (sonnet; effort read back: medium, whereas round 1 ran at xhigh, so the two rounds are not strictly comparable), arms BEFORE, AFTER (the round-1 views, byte-identical) and AFTER2 (AFTER plus the two outcome cells), task with part 6.
+
+| Thread | Arm | K2 | Patterns matching the key | Harm |
+|---|---|---|---|---|
+| INV-04 | BEFORE | yes | 2 of 3 (E1, E3) | none |
+| INV-04 | AFTER | yes | 3 of 3 (+ T-type route) | none |
+| INV-04 | AFTER2 | yes | 3 of 3 (+ T-type route) | none |
+| INV-09 | BEFORE | no (strict); yes only if patterns for the cell-level explanations count | 0 to 1 of 2 | none |
+| INV-09 | AFTER | yes | 2 of 2 (+ L3) | none |
+| INV-09 | AFTER2 | yes | 2 of 2 (+ L3) | none |
+
+**Outcome by the rule fixed in advance:** (1) THE TASK ELICITS IT: yes, both threads (K2 met in BEFORE for INV-04 and, loosely, for INV-09). (2) THE MAPPING ADDS: no, both threads (AFTER2 equals AFTER on K2 and on matching patterns): NO DIFFERENCE. (3) THE GENERATOR CARRIES IT: yes, by the "+1 pattern" arm of the rule: INV-04 3 against 2 (E2 and the T-type route appear only with the generator rows), INV-09 2 against 0 or 1 (L1 and L2 with their margins; the BEFORE reader gave direction only and said the material has no numeric margin). Not WORSE: no harm.
+
+My prediction (task elicits 0.75; mapping NO DIFFERENCE 0.65; BEFORE states no per-explanation patterns 0.80) held on the first two and missed the third in part: the BEFORE text already holds the 0.7 and 1.43 margin, enough for two patterns on INV-04.
+
+What this says, kept apart: (a) the round-1 K2 failure was the task, so round 1's "no reader produced a new prediction" must not be read as a limit of the generator; (b) the readers state patterns the material already holds: nothing new is predicted by anyone, which is what the mapping decision implies; (c) the mapping into the comparison rows is harmless and makes the patterns visible where a reader of the comparison looks, but the generator's hypothesis rows already carried them, so a gain from the mapping alone is not detected (6 readers, one pass, one model); (d) the remaining gap is authorship: for explanations the brief does not cover (INV-09 H1 to H5, regimen artefact L3), the patterns stay qualitative and the readers say the material gives no margin. Predictive capacity: none claimed.
+
+Files: `k2_round/` (pre-registration, task, AFTER2 views, builder as run, six reader reports, `scoring_k2_adv066.tsv`, sums).

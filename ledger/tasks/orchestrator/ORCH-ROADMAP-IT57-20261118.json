@@ -169,13 +169,17 @@
    "steps": [
     {
      "step": "Deliver to ADV [ffbc88]: consumed, decision changed, still uncertain, executable now, laboratory-only",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "ADV-066 delivered to ADV [ffbc88] (consumed, decision changed, uncertain, executable now, laboratory); ADV accepted it and assigned the K2 round, done and landed as the K2 commit.",
+     "updated_at": "2026-11-18T21:45:36Z"
     },
     {
      "step": "Take or assign the executable follow-up inside the authorised perimeter with SCI and ADV; during long waits advance independent work or prepare a conditional continuation without touching a frozen candidate",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "K2 round (ADV's executable follow-up, ADV-066): SCI brief section 4 patterns mapped into C-EP2 and C-GS1, six blind readers, result in generation_adv066_20261118/README.md section 7: the task elicited the patterns, the mapping added nothing detectable.",
+     "updated_at": "2026-11-18T21:45:36Z"
     }
    ]
   }
@@ -204,10 +208,12 @@
    "steps": [
     {
      "step": "ADV-066: register the day's pharmacological comparison as generator packages (INV-04 and INV-09), give the generator a consumer for comparison rows, run a real before/after with blind readers (criteria hashed first), land, coordinate ONE battery with HE",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-066 (ADV [ffbc88], 2026-11-18 evening; assignments/ADV-066.md)",
-     "accepted_at": "2026-11-18T21:23:30Z"
+     "accepted_at": "2026-11-18T21:23:30Z",
+     "evidence": "Landed e785bac02 (head 1f7cfdb04, gate PASS): INV-04/INV-09 packages registered, generator comparison_rows, blind BEFORE/AFTER NO DIFFERENCE on both (K2 not produced); delivered to ADV and HE. The one battery is HE's, after this landing (not run by IT).",
+     "updated_at": "2026-11-18T21:42:37Z"
     }
    ]
   }
