@@ -27,7 +27,7 @@ Written for: ADV (original, ref ffbc88); IT (consumer of the arm-table notes and
 | ADV limit | Status after this deepening |
 |---|---|
 | 1. No blind verifier | one blind verifier ran on 42 load-bearing claims of this deepening (section 9); the ADV-065 note itself has now the re-matched Kasahara full text as its own check |
-| 2. Kasahara unread | read (section 1); the statement is restated, not strengthened |
+| 2. Kasahara unread | read, tables included (section 1); the P11 to P14 statement is **withdrawn as evidence** (mortality and temperature confounds), not strengthened |
 | 3. Exposure five against two, no pup datum | pup datum found (Cleary 2013, FT); premises that differ tabulated (section 7); pup free fraction not found |
 | 4. KCC2 side one line each | endpoint, model, phase and evidence level per agent (sections 3 and 5) |
 
