@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+"""IT ADV-063 part 2: rerun of SCI's ADV-046 part B part-2 (time course after washout) with a SECOND seed and a SECOND gain time constant.
+HYPOTHESIS GENERATOR, NOT EVIDENCE. Mechanism level. No dose, no agent. Reference genotype class only. numpy only.
+Models (rebound_oscillator.py, homeostat_toy.py) and SCI's adv046_b_compare.py are imported UNCHANGED (sha256 checked by the script and again here).
+Changed parameters (declared in CHANGES_ADV063_PART2.md before the run): ht.SEED 20261117 -> 20261118; added cell K2_7200 (tau_w = 7200 s).
+Frozen and unchanged: F = 0.3, D_HOLD = 1800 s, RAMP, POST = 7200 s, windows W1 0-30, W2 30-60, W3 60-120 min after the start of washout, rate classes below < 0.7 < within <= 1.3 < above, a0 calibration, N_NET, models.
+Additional (not in SCI's frozen definitions; labelled as such): 5-minute bins after the start of washout, to locate when the rebound ends.
+"""
+import hashlib, json, os, sys, time
+import numpy as np
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.join(os.path.dirname(HERE), "brainstorm_20261116")
+PARTB = os.path.join(ROOT, "adv046_review_sci_20261118", "partb")
+MODELS = os.path.join(ROOT, "deepening_sci_20261116")
+WANT = {"adv046_b_compare.py": "6a7af71f6958bab16aca405eba882763c728e3e231ae938111467fdb892f1be8",
+        "rebound_oscillator.py": "c050b8ff0a1ba8fe5ef340f2a57168ecf578f161be12392c42fec98851b89419",
+        "homeostat_toy.py": "a48855081414110fb02b5c58550844b54225f3bf548dcf40da676df36e0ac420"}
+for name, want in WANT.items():
+    p = os.path.join(PARTB if name.startswith("adv046") else MODELS, name)
+    got = hashlib.sha256(open(p, "rb").read()).hexdigest()
+    if got != want:
+        raise SystemExit("file changed: %s %s" % (name, got))
+sys.path.insert(0, PARTB)
+import adv046_b_compare as C  # noqa: E402  (imports the models from MODELS; hashes checked there too)
+ht = C.ht
+SEED_ORIG = ht.SEED
+SEED2 = 20261118
+BIN = 300.0
+def spec(cid, tw):
+    return dict(id=cid, tau_w=tw, tau_off=None)
+JOBS = [  # (label, seed, spec)
+    ("orig_seed_K2_3600_check", SEED_ORIG, spec("K2_3600", 3600.0)),
+    ("orig_seed_K2_7200", SEED_ORIG, spec("K2_7200", 7200.0)),
+    ("seed2_K0", SEED2, spec("K0", None)),
+    ("seed2_K2_3600", SEED2, spec("K2_3600", 3600.0)),
+    ("seed2_K2_1800", SEED2, spec("K2_1800", 1800.0)),
+    ("seed2_K2_7200", SEED2, spec("K2_7200", 7200.0)),
+]
+def one(args):
+    label, seed, sp, a0 = args
+    ht.SEED = seed
+    m, t_dn1, t_up0 = C.make_m(sp["tau_off"])
+    T = t_up0 + C.POST
+    res, um, wt = ht.run(m, T, ht.N_NET, seed, sp["tau_w"], a0)
+    pre = ht.rate(res, ht.BURN, ht.BURN + ht.PRE)
+    out = dict(label=label, seed=seed, spec=sp, rate_pre=pre)
+    out["hold_over_pre"] = ht.rate(res, t_dn1, t_up0) / pre if pre > 0 else None
+    wins = {}
+    for name, a, b in C.WIN:
+        t0, t1 = t_up0 + a, t_up0 + b
+        r = ht.rate(res, t0, t1) / pre if pre > 0 else None
+        es = [m(t) * w for (t, w) in wt if t0 <= t < t1]
+        wins[name] = dict(rate_over_pre=r, E=float(np.mean(es)) if es else None, cls=C.rclass(r))
+    out["windows"] = wins
+    bins = []
+    for k in range(int(C.POST // BIN)):
+        t0, t1 = t_up0 + k * BIN, t_up0 + (k + 1) * BIN
+        bins.append(dict(min_from=k * BIN / 60.0, min_to=(k + 1) * BIN / 60.0, rate_over_pre=ht.rate(res, t0, t1) / pre if pre > 0 else None))
+    out["bins5"] = bins
+    return out
+if __name__ == "__main__":
+    t_start = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    a0 = ht.calibrate()
+    import multiprocessing as mp
+    with mp.Pool(4) as pool:
+        rows = pool.map(one, [(l, s, sp, a0) for (l, s, sp) in JOBS])
+    json.dump(dict(started=t_start, a0=a0, seed_orig=SEED_ORIG, seed2=SEED2, rows=rows), open(os.path.join(HERE, "rerun_result.json"), "w"), indent=1)
+    print("done", time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
