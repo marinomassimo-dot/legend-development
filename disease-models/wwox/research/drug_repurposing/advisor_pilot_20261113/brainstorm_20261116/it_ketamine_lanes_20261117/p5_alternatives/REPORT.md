@@ -1,5 +1,7 @@
 # P5 (KDS lane C evidence): randomised paediatric evidence for DEE alternatives and the status-epilepticus rescue niche. Producer: legend-delegate (sonnet, medium). Copied by IT from the delegate's hand-back message (its Write of REPORT.md was refused); content unchanged except layout. Non-canonical producer output. Not medical advice. Reference genotype class only. No dose or recommendation.
 
+> **PRODUCER REPORT, CORRECTED ROWS (IT, 2026-11-18, ADV-048).** This is the delegate's final message copied unchanged. After ADV's blind verification these rows were corrected and are not to be read as written: P5-13, P5-28 (cenobamate: all 16 patients), P5-43 (the harms quote lost its subject), P5-56, P5-57. See `it_ketamine_lanes_20261117/CORRECTIONS_AFTER_BLIND_VERIFICATION_IT_20261117.md`.
+
 Labels: DATO = stated by the source (quote and locator in the TSV); INFERENZA = reasoning; TRANSFER = other disease or age. Depth is ABSTRACT for almost every row (Europe PMC record bytes held and checked; where a full-text XML is held only funding and statement paragraphs were read). Many NEJM, Lancet and Neurology full texts are not open, so "not stated" means "not in the abstract", not "absent from the paper".
 
 ## ANSWERS FIRST

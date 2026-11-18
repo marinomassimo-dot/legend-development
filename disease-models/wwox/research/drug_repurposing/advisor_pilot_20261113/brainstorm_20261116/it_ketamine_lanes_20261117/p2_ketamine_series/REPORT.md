@@ -1,4 +1,6 @@
 # P2 (lane B3): paediatric ketamine in refractory and super-refractory status epilepticus (K7)
+
+> **PRODUCER REPORT, CORRECTED ROWS (IT, 2026-11-18, ADV-048).** This is the delegate's final message copied unchanged. After ADV's blind verification these rows were corrected and are not to be read as written: P2-03 (DeVine: the paper does not state "retrospective" or "no genetic aetiology"; 0 to 2 attributable responders, so the pooled 24/30 does not stand), P2-06, P2-11. See `it_ketamine_lanes_20261117/CORRECTIONS_AFTER_BLIND_VERIFICATION_IT_20261117.md`.
 Producer report, 2026-11-17. Non-canonical. Not medical advice; no dose or recommendation (regimen figures are descriptors of what each study did). Reference genotype class only. Labels: DATO / INFERENZA / IPOTESI / TRANSFER.
 Files: `SOURCES.tsv`, `SEARCHES.tsv`, `KETAMINE_PAEDIATRIC_SERIES.tsv`, bytes in `sources/`.
 
