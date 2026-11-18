@@ -1037,6 +1037,19 @@ class DocumentedCommandsPrecheckTests(unittest.TestCase):
         done = self.run_gate(root, "--skip-clean-clone")
         self.assertNotIn("DOCUMENTED_COMMANDS_PRECHECK", done.stdout)
 
+    def test_the_precheck_reminds_about_derived_surfaces_without_judging_them(self) -> None:
+        root = self.make_repo(doc="Run `python3 scripts/public_release_gate.py --help`.\n")
+        done = self.run_gate(root, "--paths", "ok.md")
+        self.assertEqual(done.returncode, 0, done.stdout)                           # a reminder never changes the exit status
+        self.assertIn("REMINDER (not run here, no verdict)", done.stdout)
+        self.assertIn("candidate_tree_freshness.py --paths", done.stdout)
+        self.assertIn("PRECHECK_VERDICT: PASS", done.stdout)
+
+    def test_the_full_gate_does_not_print_the_reminder(self) -> None:
+        root = self.make_repo(doc="Run `python3 scripts/public_release_gate.py --help`.\n")
+        done = self.run_gate(root, "--skip-clean-clone")
+        self.assertNotIn("REMINDER", done.stdout)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

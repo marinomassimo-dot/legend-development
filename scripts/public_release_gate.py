@@ -1655,6 +1655,10 @@ def main() -> int:
         for line in missing[:30]:
             print(f"[BLOCK] DOCUMENTED_COMMAND_MISSING {line}")
         documented_failed = status.startswith("FAIL")
+        # ADV-057/HE: a reminder only (no scan, no verdict, no effect on the exit status): a generated surface that a change makes stale is
+        # refused later, at the exact tree, by the freshness check; naming it here moves that discovery before the queue.
+        print("REMINDER (not run here, no verdict): derived surfaces are not checked by this pre-check; before the queue run "
+              "`python3 framework/scripts/candidate_tree_freshness.py --paths <the files you changed>`.")
     for finding in findings:
         print(
             f"[{finding.severity}] {finding.code} "

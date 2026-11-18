@@ -166,3 +166,36 @@ swapon --show && free -m
 
 Swap lengthens the time before an OOM kill and turns some of them into slowness; it does not
 remove the cause, and 4 GB is a quarter of the memory this host has.
+
+## F. Selective cleanup (2026-11-18)
+
+Criteria applied to each worktree before `git worktree remove` (no `--force`): HEAD is an ancestor
+of the verified `development/main`; `git status --porcelain` clean; ignored files other than
+`__pycache__`, `*.pyc` and the hard-linked `files/` tree absent; no process with its cwd inside;
+no open mandate record names it; last activity two days old or more. Removed (15): `it41 it42
+it47 it50 it51 it52 it53 p010 p010b p010v11 p013 p019 p020 p021 pushmine`; plus the probe worktree
+after its evidence was on `development/main`. Kept and why: `p010c` (named as BASELINE in the
+IN_PROGRESS record ORCH-P010-AEDMATRIX-20261116), `p022` (ignored run logs: unique data), `p022b`
+(one commit not on `development/main`), `he86` (unmerged merge commit only; its content change,
+the M101 reorder, landed from this worktree), `/tmp/it56_iso` (live processes, 32 tracked
+changes), `adv`, `adv2`, `adv3` (ADV's, integrated and clean but used today).
+
+**Space, counted by inode.** The files of the removal set were grouped by (device, inode); those
+whose link count equals their occurrences inside the set are freed, the others stay linked from
+the main corpus. Prediction 6.82 GB (apparent sum 202 GB, of which 65 GB is `files/` shared with
+the corpus); `df` before/after 6.93 GB. The 71 GB "attributed to worktrees" is therefore not
+recoverable by deleting them.
+
+**Evaluated separately.** `uv cache prune` (the only safe form: it removes unreachable objects)
+freed 0 MB of 8.4 GB, so nothing was removed from the uv cache. VS Code: the `anthropic.claude-code`
+extension 2.1.326 is marked obsolete in `.obsolete`, but six processes still execute its native
+binary, so its directory (367 MB) was kept; only its cached VSIX installer (176 MB, no open
+handle) was removed. The Claude Code binaries under `~/.local/share/claude/versions` (2.1.317 is
+run by ADV's session, 2.1.327 by the others) are the runtime's own and were not touched.
+
+**A hazard found.** `claude purge <path>` was dry-run for the probe worktree: its plan contained
+the project entry `projects["/home/desktop/legend-development"]` of `~/.claude.json` (trust,
+history, MCP servers), that is the **production** project's, beside the probe's own transcripts.
+It was not run. The probe sessions were unlisted with `claude rm` and only their three
+transcripts and file-history directories were deleted, by exact path, after the evidence folder
+was published.

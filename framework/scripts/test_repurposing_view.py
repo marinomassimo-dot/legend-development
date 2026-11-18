@@ -937,8 +937,13 @@ class ShareableAudit(unittest.TestCase):
                 rv.build(dr, "shareable", "it")
 
     def test_mutation_bc_only_pair_in_a_lead_sentence_and_in_a_card(self):
-        # a sentence that names a compound and a target that the catalogue gives it only through class-B/C claims, with a database named
-        name, genes = next((n, g) for n, g in self.ref.pair_bc.items() if n.isalpha() and len(n) > 8 and n not in self.ref.own_grams and not (self.ref.name_records[n] & self.ref.card_cat_ids))
+        # a sentence that names a compound and a target that the catalogue gives it only through class-B/C claims, with a database named.
+        # When a literature corpus exists the compound must also be absent from it, because the last check below asserts exactly that and
+        # the corpus is whatever files/fulltext holds today (2026-11-18: a new source named the first catalogue-only compound and failed
+        # the test in every checkout that links files/); selecting a name the corpus lacks keeps the guard and removes the dependency.
+        dirs = self.au.default_corpus_dirs()
+        lit = self.au.Literature(self.au.read_corpus(dirs)) if dirs else None
+        name, genes = next((n, g) for n, g in self.ref.pair_bc.items() if n.isalpha() and len(n) > 8 and n not in self.ref.own_grams and not (self.ref.name_records[n] & self.ref.card_cat_ids) and not (lit and lit.contains(n)))
         gene = sorted(genes)[0]
         sentence = f"The catalogue lists {name} against {gene} (claim source DTC, 'inhibitor')."
         t = self.mutate(lambda P: P["leads"][0].__setitem__("why", P["leads"][0]["why"] + " " + sentence))
@@ -951,9 +956,7 @@ class ShareableAudit(unittest.TestCase):
         t = self.mutate(lambda P: P["leads"][0].__setitem__("why", P["leads"][0]["why"] + f" {subj} acts on {sg}."))
         self.assertNotIn("class-bc-compound-target-pair-in-text", self.kinds(t))
         # the same sentence with the pair as a catalogue-only compound is caught when a literature corpus exists
-        dirs = self.au.default_corpus_dirs()
-        if dirs:
-            lit = self.au.Literature(self.au.read_corpus(dirs))
+        if lit:
             self.assertFalse(lit.contains(name))
             rep, _ = self.au.audit_html(self.mutate(lambda P: P["leads"][0].__setitem__("why", P["leads"][0]["why"] + f" {name} acts on {gene}.")), DR, self.ref, None, lit)
             self.assertIn("class-bc-compound-target-pair-in-text", {v["kind"] for v in rep.violations})

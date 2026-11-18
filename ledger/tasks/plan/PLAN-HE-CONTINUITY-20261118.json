@@ -1,0 +1,158 @@
+{
+ "TASK_ID": "PLAN-HE-CONTINUITY-20261118",
+ "ACTOR_ID": "plan",
+ "STANDING": "mandate that holds the work this actor has accepted; the owner writes `MANDATE_BOUND: PLAN-HE-CONTINUITY-20261118` in its session",
+ "SESSION_NAME": "HE",
+ "AUTHORISED_QUEUE_ACCEPTED": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_ACCEPTED": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Mandate A-D: re-verify the 2026-11-18 diagnosis; wake-up durability in the contract; recovery, DUPLICATE_HOST, authorised rebind; accepted work visible to the monitor; observed-ref monitoring (code, tests, contract text, controlled scratch-session demonstration)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-18 (ACTOR_ID plan, Harness Engineering: continuity of ADV and the laboratory) A-D",
+     "accepted_at": "2026-11-18T21:02:10Z",
+     "evidence": "landed on development/main d82868b75 (gate PASS, ls-remote verified); design record governance/design_records/wakeup_continuity_20261118.md with raw evidence folder; suites test_mandate_watch 52, test_mandate_continuity 77, test_strategic_advisor 187 OK",
+     "updated_at": "2026-11-18T21:02:15Z"
+    },
+    {
+     "step": "Mandate E: memory containment — opt-in scoped jobs, resources view, swap limit recorded, command block handed to the operator through ADV",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-18 (ACTOR_ID plan, Harness Engineering: continuity of ADV and the laboratory) E",
+     "accepted_at": "2026-11-18T21:02:10Z",
+     "evidence": "real-kernel scope test and job run --memory-max (exit 137 vs 0) recorded in design record section E; swap needs sudo password: limit recorded, command block in the record, nothing run",
+     "updated_at": "2026-11-18T21:02:16Z"
+    },
+    {
+     "step": "Mandate F: selective cleanup of integrated, clean, unused worktrees with measured freed space; uv cache and VS Code evaluated separately",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-18 (ACTOR_ID plan, Harness Engineering: continuity of ADV and the laboratory) F",
+     "accepted_at": "2026-11-18T21:02:11Z",
+     "evidence": "15 worktrees removed without force (unique-inode prediction 6.82 GB, df-measured 6.93 GB); he96probe removed; uv cache prune freed 0 MB; obsolete extension VSIX 176 MB removed; obsolete extension dir kept (6 processes run from it)",
+     "updated_at": "2026-11-18T21:02:16Z"
+    },
+    {
+     "step": "Mandate G: land the work, tell ADV and IT what is implemented, really proven and limited; no concurrent full battery",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-18 (ACTOR_ID plan, Harness Engineering: continuity of ADV and the laboratory) G",
+     "accepted_at": "2026-11-18T21:02:11Z",
+     "evidence": "landed d82868b75 and af31ca6ac; delivery messages sent to ADV (msg 5361f893) and IT Orchestrator (msg c0201917) with implemented / really proven / limits; no battery started",
+     "updated_at": "2026-11-18T21:03:40Z"
+    },
+    {
+     "step": "ADV parked items after the mandate: cache timing measurement for the ADV-057 note, pre-check reminder line for derived surfaces, plan-record objectives ADV-055/057/060",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-18 (ACTOR_ID plan, Harness Engineering: continuity of ADV and the laboratory) ADV-PARKED",
+     "accepted_at": "2026-11-18T21:02:11Z"
+    },
+    {
+     "step": "Add RECALL field to the ADV mandate record (ADV owns the record: proposal handed over, not edited)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-18 (ACTOR_ID plan, Harness Engineering: continuity of ADV and the laboratory) RECALL",
+     "accepted_at": "2026-11-18T21:02:11Z",
+     "evidence": "exact RECALL JSON and the recall-armed follow-up handed to ADV in message 5361f893 (the record is ADV's)",
+     "updated_at": "2026-11-18T21:06:53Z"
+    },
+    {
+     "step": "ADV-055 (HE): landing pipeline time budget measured and the per-file result cache design note",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV assignments ADV-055/ADV-057/ADV-060 (sent by ADV 2026-11-18; delivered and consumed per the ADV records) ADV-055",
+     "accepted_at": "2026-11-18T21:06:46Z",
+     "evidence": "commit 2003dce20 on development/main (budget note + measurements); ADV record b4b94d9f6 says delivered and consumed",
+     "updated_at": "2026-11-18T21:06:47Z"
+    },
+    {
+     "step": "ADV-057 (HE): opt-in per-file cache for the gate's privacy scan with differential proof",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV assignments ADV-055/ADV-057/ADV-060 (sent by ADV 2026-11-18; delivered and consumed per the ADV records) ADV-057",
+     "accepted_at": "2026-11-18T21:06:47Z",
+     "evidence": "commit 1d2861166 on development/main (opt-in cache, tests); ADV record d80375234 says delivered and consumed; timing line for the 20 s assumption is a parked item below",
+     "updated_at": "2026-11-18T21:06:47Z"
+    },
+    {
+     "step": "ADV-060 (HE): pre-check also prints DOCUMENTED_COMMANDS_PRECHECK; release battery question handed to IT",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV assignments ADV-055/ADV-057/ADV-060 (sent by ADV 2026-11-18; delivered and consumed per the ADV records) ADV-060",
+     "accepted_at": "2026-11-18T21:06:47Z",
+     "evidence": "commits 92d49823e and 6807af7f5 on development/main; ADV record 8a34d6f1f marks ADV-060 partial (the battery part is IT's)",
+     "updated_at": "2026-11-18T21:06:48Z"
+    }
+   ]
+  }
+ },
+ "ACCEPT_LOG": [
+  {
+   "at": "2026-11-18T21:02:10Z",
+   "source": "operator mandate 2026-11-18 (ACTOR_ID plan, Harness Engineering: continuity of ADV and the laboratory) A-D",
+   "step_sha256": "819d970187cc",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T21:02:10Z",
+   "source": "operator mandate 2026-11-18 (ACTOR_ID plan, Harness Engineering: continuity of ADV and the laboratory) E",
+   "step_sha256": "117c15fe3015",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T21:02:11Z",
+   "source": "operator mandate 2026-11-18 (ACTOR_ID plan, Harness Engineering: continuity of ADV and the laboratory) F",
+   "step_sha256": "7a2c7b3238e7",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T21:02:11Z",
+   "source": "operator mandate 2026-11-18 (ACTOR_ID plan, Harness Engineering: continuity of ADV and the laboratory) G",
+   "step_sha256": "1e86fc967371",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T21:02:11Z",
+   "source": "operator mandate 2026-11-18 (ACTOR_ID plan, Harness Engineering: continuity of ADV and the laboratory) ADV-PARKED",
+   "step_sha256": "820873c98a85",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T21:02:11Z",
+   "source": "operator mandate 2026-11-18 (ACTOR_ID plan, Harness Engineering: continuity of ADV and the laboratory) RECALL",
+   "step_sha256": "aded8d71bc86",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T21:06:46Z",
+   "source": "ADV assignments ADV-055/ADV-057/ADV-060 (sent by ADV 2026-11-18; delivered and consumed per the ADV records) ADV-055",
+   "step_sha256": "35f483750931",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T21:06:47Z",
+   "source": "ADV assignments ADV-055/ADV-057/ADV-060 (sent by ADV 2026-11-18; delivered and consumed per the ADV records) ADV-057",
+   "step_sha256": "2e6bd6c4add6",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T21:06:47Z",
+   "source": "ADV assignments ADV-055/ADV-057/ADV-060 (sent by ADV 2026-11-18; delivered and consumed per the ADV records) ADV-060",
+   "step_sha256": "75dc389d4833",
+   "reopened_block": false,
+   "authorised_by": null
+  }
+ ]
+}

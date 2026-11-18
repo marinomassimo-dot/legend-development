@@ -36,3 +36,21 @@ Turn on for one run: `python3 scripts/public_release_gate.py --cache`; for pushe
 
 ## The sentence to approve (or not)
 "I approve pushes using the publication gate's opt-in per-file privacy cache (`LEGEND_GATE_CACHE=1`), on the understanding that it stores gate results inside the repository's git directory and is trusted like the repository's own hooks, that the gate still runs on the exact commit before every push, and that `--cache-verify` is run daily and before every release; I can switch it off by unsetting the variable."
+
+## Update 2026-11-18 (HE, after the continuity mandate): the 20 s landing overhead, measured
+The saving section above says the lock hold would fall to about 0.9 min "if the merge and push overhead is 20 s (ASSUMED)". That figure is now measured in part. Scratch clone of this repository (`--no-hardlinks`) against a local bare remote, the real `safe_push.py --serialize` with an empty commit each time, load average 2.6 to 5.3 on 4 cores (the job ran under `mandate_watch.py job run --memory-max 5G`):
+
+| Landing (whole `safe_push.py`) | Wall time | Load |
+|---|---|---|
+| fast-forward, gate uncached | 314.4 s | 5.3 |
+| remote moved, merge under the lock, gate uncached | 227.7 s | 4.1 |
+| fast-forward, `LEGEND_GATE_CACHE=1`, cold | 217.7 s | 2.7 |
+| fast-forward, cache warm | 30.9 s | 3.2 |
+| remote moved, merge, cache warm | 25.9 s | 2.9 |
+| same, with `GIT_TRACE2_EVENT` | 22.4 s | about 3 |
+
+* **Git steps of a landing, MEASURED** (trace of the 22.4 s landing, against the local bare remote): fetch 0.04 s, merge 0.07 s, push 0.03 s, ls-remote about 0 s, three `status` 0.09 s in all: about **0.25 s** together.
+* **The gate alone, cache warm, MEASURED** three times in the same clone: 28.5, 28.1 and 30.3 s. The whole landing (22.4 to 30.9 s) is not distinguishable from the gate alone at this noise: the non-gate part is within a few seconds, not 20.
+* **Network to the real remote, MEASURED read-only** (five runs each): `git ls-remote` 1.2 to 1.9 s; a no-op `git fetch` 1.3 to 1.9 s with one 5.9 s outlier. The push of a small commit to the real remote was **not** measured (a test commit cannot be pushed there); the two real landings of today took 235 s and 277 s uncached, in the range of the uncached scratch landings (228 to 314 s), so they carry no separable overhead either.
+* **Reading, ESTIMATED:** overhead outside the gate is about 0.25 s local plus fetch, push and ls-remote round trips, so roughly **3 to 8 s** at the real remote, not 20 s. With the cache warm a landing would hold the lock about 25 to 40 s instead of the estimated 0.9 min. The unexplained difference between the median hold (3.5 min) and the gate (3.2 min) in the queue logs is therefore probably queue and start-up time, or the longer gate under load, and was not located. Cache cold is no slower than uncached (217.7 s against 227.7 s and 314.4 s; the spread is load, not cache).
+* Limits: one clone, empty commits (the cache-warm gate sees an identical tree; a real change adds re-scanning of the changed files only), a local remote, five network samples, load that varied between runs. Raw timings: scratch log of the run, summarised here; the scratch clone is not kept.
