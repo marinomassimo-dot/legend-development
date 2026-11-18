@@ -580,7 +580,41 @@ def _authoritative_context(path: Path) -> Optional[tuple[Path, str]]:
     return None
 
 
-def _strict_local_source(receipt: dict[str, Any], root: Path) -> list[str]:
+# 🔴 SOURCE SANITY (ADV-041, 2026-11-18). A receipt's fingerprint proves that the recorded bytes are
+# the bytes on disk, not that they are the paper: ADV-030 found a "full text" that was an error
+# body, by size and first line, after the receipt existed. A source that begins like an HTTP error,
+# a bot-challenge or an access-denied page is refused; one under SMALL_SOURCE_BYTES is warned about
+# loudly. `--allow-small-source` is for a legitimately tiny source that was read and is the real text.
+SMALL_SOURCE_BYTES = 2048
+ERROR_PAGE_MAX_BYTES = 20000     # an error or challenge page is small; a real paper that quotes such a phrase is not
+ERROR_SIGNATURES = re.compile(
+    r"internal server error|just a moment|access denied|attention required|recaptcha|are you a robot|"
+    r"verify you are human|403 forbidden|404 not found|502 bad gateway|503 service unavailable|"
+    r"service temporarily unavailable|request blocked|enable javascript and cookies",
+    re.IGNORECASE)
+HTTP_ERROR_JSON = re.compile(
+    r'^\s*\{\s*"(?:status|statusCode|status_code|code|error|errors|message)"\s*:\s*'
+    r'(?:"?[45][0-9]{2}\b|"[^"]*(?:error|denied|forbidden|not found|unavailable)[^"]*")',
+    re.IGNORECASE)
+
+
+def source_sanity(data: bytes) -> tuple[list[str], list[str]]:
+    """(errors, warnings) for the bytes of a source artifact: error-page signatures and tiny size."""
+    head = data[:1500].decode("utf-8", errors="replace")
+    errors: list[str] = []
+    if len(data) < ERROR_PAGE_MAX_BYTES:
+        found = ERROR_SIGNATURES.search(head)
+        if found:
+            errors.append(f"the source begins like an error, challenge or access-denied page ({found.group(0)!r}); "
+                          "it is not the paper")
+        elif HTTP_ERROR_JSON.match(head):
+            errors.append("the source is an HTTP-status or error JSON body, not the paper")
+    warnings = ([f"the source is only {len(data)} bytes (under {SMALL_SOURCE_BYTES}): check it is the real text"]
+                if len(data) < SMALL_SOURCE_BYTES else [])
+    return errors, warnings
+
+
+def _strict_local_source(receipt: dict[str, Any], root: Path, allow_small_source: bool = False) -> list[str]:
     """Bind a new complete read to a real local full-text artifact at write time."""
     if receipt.get("record_kind") != "contemporaneous_receipt":
         return []
@@ -610,9 +644,16 @@ def _strict_local_source(receipt: dict[str, Any], root: Path) -> list[str]:
         errors.append(f"source full-text artifact does not exist: {locator}")
         return errors
     expected = str(receipt.get("source_fingerprint") or "")
-    actual = hashlib.sha256(candidate.read_bytes()).hexdigest()
+    data = candidate.read_bytes()
+    actual = hashlib.sha256(data).hexdigest()
     if expected != actual:
         errors.append("source_fingerprint does not match the full-text artifact")
+    sanity_errors, sanity_warnings = source_sanity(data)
+    if not allow_small_source:
+        errors.extend(f"source sanity: {message}; if it really is the source, pass --allow-small-source"
+                      for message in sanity_errors)
+        for message in sanity_warnings:
+            print(f"WARNING: {message}", file=sys.stderr)
     return errors
 
 
@@ -936,6 +977,7 @@ def receipt_depth_index(path: Path) -> dict[str, dict[str, Any]]:
 def append_receipt(
     path: Path, receipt: dict[str, Any], *, manifest: Optional[Path] = None,
     artifact_root: Optional[Path] = None, dry_run: bool = False,
+    allow_small_source: bool = False,
 ) -> dict[str, Any]:
     """Append one event under an exclusive lock and return the persisted record.
 
@@ -970,7 +1012,7 @@ def append_receipt(
         require_work_manifest(
             record, root, disease, strict=True, artifact_root=evidence_root
         )
-        strict_errors = _strict_local_source(record, evidence_root)
+        strict_errors = _strict_local_source(record, evidence_root, allow_small_source)
     else:
         root, strict_errors = None, []
     foreign = foreign_manifest_error(path, manifest)
@@ -1642,6 +1684,10 @@ def main() -> int:
     record = subparsers.add_parser("record")
     record.add_argument("--receipt", required=True, help="one receipt JSON file")
     record.add_argument(
+        "--allow-small-source", action="store_true",
+        help=("accept a source artifact that looks like an error page or is under 2 KB, for a "
+              "legitimately tiny source that you have read and that is the real text"))
+    record.add_argument(
         "--dry-run", action="store_true",
         help=("run every check `record` runs (validators, work manifest, chain, anchor, "
               "sequence) and write nothing - neither the ledger nor the state manifest"))
@@ -1718,6 +1764,7 @@ def main() -> int:
                 manifest=manifest,
                 artifact_root=(Path(args.artifact_workspace) if args.artifact_workspace else None),
                 dry_run=args.dry_run,
+                allow_small_source=args.allow_small_source,
             )
             if args.dry_run:
                 print(f"DRY RUN OK: {persisted['event_id']} would be appended to {ledger} "
