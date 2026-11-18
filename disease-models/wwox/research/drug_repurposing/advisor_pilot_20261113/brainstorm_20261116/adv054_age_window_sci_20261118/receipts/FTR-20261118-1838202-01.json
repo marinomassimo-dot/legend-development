@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-18T09:22:28Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T09:24:28Z",
+ "event_id": "FTR-20261118-1838202-01",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"In 12-day-old rats an increased incidence of minimal seizures was detected.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv054_age_window_sci_20261118/ADV054_AGE_WINDOW_PER_CANDIDATE_SCI_20261118.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "afb4f9a3fe1a1f61cc82c1d4f80e5ecdfa83aad93a66e139a3859f98516838b4",
+ "source_kind": "abstract",
+ "source_locator": "files/fulltext/adv054_20261118/abs_1838202.json",
+ "study_id": {
+  "pmid": "1838202"
+ },
+ "workflow": "SCI ADV-054 age-window unit (rodent P7 to P28 provoked-seizure assays); context_policy QUESTION_DRIVEN; abstract-level producer package (legend-delegate, sonnet medium); SCI (integrator) re-matched the pivotal quotes against the saved abstract bytes before recording; three added ketamine abstracts fetched and read by SCI after the blind verifier found them"
+}

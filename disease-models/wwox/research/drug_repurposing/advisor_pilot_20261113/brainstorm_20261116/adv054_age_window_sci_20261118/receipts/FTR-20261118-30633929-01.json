@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-18T09:22:28Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T09:24:28Z",
+ "event_id": "FTR-20261118-30633929-01",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"In P10 rats, CBDV suppressed seizures only in the pentylenetetrazole model.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv054_age_window_sci_20261118/ADV054_AGE_WINDOW_PER_CANDIDATE_SCI_20261118.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "754cc0e15be4a68af13c142178530c2f6d208d2a422a279c57b7eabbcf5d0fa7",
+ "source_kind": "abstract",
+ "source_locator": "files/fulltext/adv054_20261118/abs_30633929.json",
+ "study_id": {
+  "pmid": "30633929"
+ },
+ "workflow": "SCI ADV-054 age-window unit (rodent P7 to P28 provoked-seizure assays); context_policy QUESTION_DRIVEN; abstract-level producer package (legend-delegate, sonnet medium); SCI (integrator) re-matched the pivotal quotes against the saved abstract bytes before recording; three added ketamine abstracts fetched and read by SCI after the blind verifier found them"
+}
