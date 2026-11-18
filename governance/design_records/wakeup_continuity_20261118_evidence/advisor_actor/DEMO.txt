@@ -1,0 +1,10 @@
+== 22:07:29 route + check before stop (record under ledger/tasks/advisor, ACTOR_ID advisor)
+RESOLVED 360e9a12-4667-4cad-804d-ba7396435027 ['ACTOR_ID advisor: binding of PROBE-ADV-ACTOR-20261118']
+== 22:07:35 stop the probe session
+stopped 360e9a12
+== 22:07:35 listing
+[]
+== 22:07:36 watch with --deliver resume --quiet-minutes 0
+STOPPED_RESUMABLE RESUME sent session absent from the live listing and silent, authorised work remains (1 executable step(s) remai
+== 22:12:32 route after resume
+RESOLVED 360e9a12-4667-4cad-804d-ba7396435027 ['ACTOR_ID advisor: binding of PROBE-ADV-ACTOR-20261118']

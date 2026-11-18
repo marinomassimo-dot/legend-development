@@ -46,10 +46,12 @@
     },
     {
      "step": "ADV parked items after the mandate: cache timing measurement for the ADV-057 note, pre-check reminder line for derived surfaces, plan-record objectives ADV-055/057/060",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "operator mandate 2026-11-18 (ACTOR_ID plan, Harness Engineering: continuity of ADV and the laboratory) ADV-PARKED",
-     "accepted_at": "2026-11-18T21:02:11Z"
+     "accepted_at": "2026-11-18T21:02:11Z",
+     "evidence": "landed 16e1468bb: ADV-057 note measured update, pre-check REMINDER line with tests and routing text, objectives ADV-055/057/060 registered with commit pointers; red test_repurposing_view selection repaired (before FAIL, after OK); delivered to ADV and IT (msgs 2d9f6fec, 2cd919b0)",
+     "updated_at": "2026-11-18T21:34:15Z"
     },
     {
      "step": "Add RECALL field to the ADV mandate record (ADV owns the record: proposal handed over, not edited)",
@@ -86,6 +88,23 @@
      "accepted_at": "2026-11-18T21:06:47Z",
      "evidence": "commits 92d49823e and 6807af7f5 on development/main; ADV record 8a34d6f1f marks ADV-060 partial (the battery part is IT's)",
      "updated_at": "2026-11-18T21:06:48Z"
+    },
+    {
+     "step": "Run ONE release battery on the final tree after IT's ADV-066 change (generation_it40 package registration and INVS) lands: tell IT the PID, never concurrent with another full battery, preserve the historical FAIL on 20191c453, report the verdict to ADV and IT",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "source": "ADV decision to HE 2026-11-18 (answer c): ONE battery on the final tree, run by HE, after IT's ADV-066 lands",
+     "accepted_at": "2026-11-18T21:34:15Z",
+     "updated_at": "2026-11-18T21:53:00Z"
+    },
+    {
+     "step": "ACTOR_ID advisor: roles/advisor.md, identity and routing (advisor vs orchestrator), migration of the ADV record without history loss, one host, recall verified, probe demonstration, delivery to ADV IT SCI, rollback path",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-18 (ACTOR_ID plan): distinct ACTOR_ID advisor for the ADV host, integrated with the continuity work",
+     "accepted_at": "2026-11-18T22:02:45Z",
+     "updated_at": "2026-11-18T22:38:21Z",
+     "evidence": "contract+routing 6394916c4, passage 9d7ec1142; probe demonstration evidence in advisor_actor/; ADV verified record, routes and root ff; 22:37Z production run classified the record once RUNNING; delivered to ADV, IT, SCI"
     }
    ]
   }
@@ -153,6 +172,32 @@
    "step_sha256": "75dc389d4833",
    "reopened_block": false,
    "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T21:34:15Z",
+   "source": "ADV decision to HE 2026-11-18 (answer c): ONE battery on the final tree, run by HE, after IT's ADV-066 lands",
+   "step_sha256": "709d4d4db9d8",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T22:02:45Z",
+   "source": "operator mandate 2026-11-18 (ACTOR_ID plan): distinct ACTOR_ID advisor for the ADV host, integrated with the continuity work",
+   "step_sha256": "a559bf263549",
+   "reopened_block": false,
+   "authorised_by": null
+  }
+ ],
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261118-215233-74c2282d",
+   "label": "battery",
+   "sha": "6320348db5bc5022b731d436ff499d1d68ab8a37",
+   "state": "CONCLUDED",
+   "exit_code": 1,
+   "evidence_dir": "/tmp/legend-verify-keep/20261118-215233-74c2282d",
+   "log_sha256": "2efe731194f98d8c5bc962c8b0f7661f67e85ac1c28b4ec1f5197f4187bcaf02",
+   "clone": "REMOVED"
   }
  ]
 }

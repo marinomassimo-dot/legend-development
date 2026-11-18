@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import os
+import subprocess
 import sys
 import tempfile
 import time
@@ -160,6 +161,35 @@ class Watch(unittest.TestCase):
         row = json.loads(output.getvalue())[0]
         self.assertEqual((row["state"], row["action"]), ("UNKNOWN", "NONE"))
         self.assertIn("multiple unmerged", row["why"])
+
+    def test_a_published_record_missing_from_a_lagging_root_says_so(self):
+        e = self.env(record())
+        rel = f"ledger/tasks/plan/{TASK}.json"
+        (e.root / "ledger/tasks/orchestrator" / f"{TASK}.json").unlink()
+        trees = []
+        for name in ("copy-a", "copy-b"):
+            tree = Path(e.tmp.name) / name
+            (tree / rel).parent.mkdir(parents=True)
+            (tree / rel).write_text(json.dumps(record()))
+            trees.append(tree)
+        git = lambda *a: subprocess.run(["git", "-C", str(e.root), "-c", "user.email=t@example.invalid", "-c", "user.name=t", *a], check=True, capture_output=True)
+        git("init", "-q")
+        (e.root / rel).parent.mkdir(parents=True, exist_ok=True)
+        (e.root / rel).write_text(json.dumps(record()))
+        git("add", rel)
+        git("commit", "-q", "-m", "x")
+        git("update-ref", "refs/remotes/development/main", "HEAD")
+        (e.root / rel).unlink()                                                 # the root checkout lags: the record is published, not here
+        args = SimpleNamespace(root=str(e.root), deliver="resume", quiet_minutes=25, resume_arg=[], json=True)
+        output = io.StringIO()
+        with mock.patch.object(mw, "registered_worktrees", return_value=[e.root, *trees]), \
+                mock.patch.object(mw, "list_sessions", return_value=[]), \
+                mock.patch.object(mw, "check") as checked, contextlib.redirect_stdout(output):
+            mw._check_all(args)
+        checked.assert_not_called()                                              # still nothing is guessed or started
+        row = json.loads(output.getvalue())[0]
+        self.assertEqual((row["state"], row["action"], row.get("published")), ("UNKNOWN", "NONE", True))
+        self.assertIn("merge --ff-only development/main", row["why"])
 
     def test_waiting_for_science_does_not_block_an_independent_step(self):
         rec = record(steps=("BLOCKED", "TODO"))
@@ -434,6 +464,46 @@ class Routing(unittest.TestCase):
         self.assertEqual(mw.declared_recipients("ORCH to HE (cc ADV): BASELINE ACQUIRED."), ["HE", "ADV"])
         self.assertEqual(mw.declared_recipients("no addressing line here"), [])
         self.assertEqual(mw.check_recipients("no addressing line here", ["HE"], self.live, self.root)["verdict"], "NO_DECLARED_RECIPIENT")
+
+
+class ActorAlias(unittest.TestCase):
+    """DEC-20261118-ADVISOR-ACTOR: an ACTOR_ID as recipient resolves to the live session bound to an OPEN record of that actor, and to nothing when two sessions answer."""
+    ADV = "e6526331-6b7c-4631-8c9b-9e9d79867e90"
+    IT = "11111111-0000-0000-0000-000000000002"
+
+    def make(self, adv_actor, adv_dir):
+        t = tempfile.TemporaryDirectory(); self.addCleanup(t.cleanup)
+        root = Path(t.name)
+        for actor, task, sid, state in ((adv_actor, "ORCH-ADV-FOLLOWTHROUGH", self.ADV, "OPEN"), ("orchestrator", "ORCH-IT-OLD", self.ADV, "COMPLETE")):
+            rec = record(state=state, steps=("DONE",) if state == "COMPLETE" else ("TODO",))
+            rec.update({"TASK_ID": task, "ACTOR_ID": actor, "SESSION_BINDING": {"session_id": sid}})
+            d = root / "ledger" / "tasks" / (adv_dir if task.startswith("ORCH-ADV") else "orchestrator")
+            d.mkdir(parents=True, exist_ok=True)
+            (d / f"{task}.json").write_text(json.dumps(rec), encoding="utf-8")
+        live = [listed(self.ADV, "ADV"), listed(self.IT, "IT Orchestrator")]
+        return root, live
+
+    def test_before_the_passage_orchestrator_is_ambiguous_and_names_both_sessions(self):
+        root, live = self.make("orchestrator", "orchestrator")
+        r = mw.route("orchestrator", live, root)
+        self.assertEqual(r["status"], "AMBIGUOUS")
+        self.assertEqual({c["session_id"] for c in r["candidates"]}, {self.ADV, self.IT})
+
+    def test_after_the_passage_each_alias_resolves_to_one_session(self):
+        root, live = self.make("advisor", "advisor")
+        a = mw.route("advisor", live, root)
+        self.assertEqual((a["status"], a["session_id"]), ("RESOLVED", self.ADV))
+        o = mw.route("orchestrator", live, root)
+        self.assertEqual((o["status"], o["session_id"]), ("RESOLVED", self.IT))      # a COMPLETE record of that actor bound to another live session does not count
+
+    def test_a_substitute_session_with_the_advisor_binding_is_still_one_host(self):
+        root, live = self.make("advisor", "advisor")
+        rec_path = root / "ledger/tasks/advisor/ORCH-ADV-FOLLOWTHROUGH.json"
+        rec = json.loads(rec_path.read_text()); rec["SESSION_BINDING"]["session_id"] = "22222222-0000-0000-0000-000000000009"
+        rec_path.write_text(json.dumps(rec))
+        live = [listed("22222222-0000-0000-0000-000000000009", "ADV"), listed(self.IT, "IT Orchestrator")]
+        self.assertEqual(mw.route("advisor", live, root)["session_id"], "22222222-0000-0000-0000-000000000009")
+        self.assertEqual(mw.route("advisor", [listed(self.IT, "IT Orchestrator")], root)["status"], "UNRESOLVED")      # unreachable reads as unreachable
 
 
 SID2 = "99999999-aaaa-bbbb-cccc-dddddddddddd"

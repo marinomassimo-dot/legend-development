@@ -597,6 +597,8 @@ ROLES.
     Engineering a candidate list every Monday (`governance/candidates/HARNESS-SCOUT-<YYYY>-W<WW>.md`,
     skill `legend-harness-scout`). Proposes; does not gate; implements only what Harness
     Engineering assigns, at T0.
+  - ADVISOR — ACTOR_ID `advisor` (`roles/advisor.md`; operator decision 2026-11-18, `governance/decisions/DEC-20261118-ADVISOR-ACTOR.md`). The ADV host: direction, rhythm and
+    quality of the research programme inside the operator's roadmap. Distinct from the operative Orchestrator; not an approval step; no scientific guarantee or reserved decision changes.
   - ORCHESTRATOR keeps task assignment, priority and adjudication (H.1). It works and
     commits like every other actor, root and `main` included; it is no longer the sole
     merger and holds no lease precondition for anything.

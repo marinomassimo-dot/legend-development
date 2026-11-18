@@ -6,7 +6,7 @@
  "recipients": {
   "Harness": "HE",
   "Orchestrator": "IT Orchestrator",
-  "Science": "orch-adv004-mandate-reconciliation"
+  "Science": "SCI"
  },
  "turn_limit": 20,
  "amendments": [
