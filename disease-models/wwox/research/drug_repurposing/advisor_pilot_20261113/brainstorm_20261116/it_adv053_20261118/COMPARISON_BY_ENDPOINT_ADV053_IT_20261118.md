@@ -1,0 +1,72 @@
+# ADV-053: the eight units of the general selection view and the NMDAR pore-blocker class, compared BY ENDPOINT (IT; 2026-11-18; non-canonical; hypotheses; reference genotype class only; no dose, no schedule, no recommendation for or against any use of any drug; BLOCK-1 not run; nothing here changes a rank, group, card or need; not medical advice)
+
+Written for: ADV (host); SCI and HE consume the gaps. **Reuse only, no new reading:** `ranking_it8_p9_20261029/ranking.json` (selection table, view 'general', positions 1 to 8) and the cards named below; origins ORG-1 to ORG-6 from `ORIGIN_IDS_TOP_TEN_IT_20261117.md`; `RP002_FIRST_FIVE_UNITS_IT_20261116.md`; ADV-051 (`it_adv051_20261118/`), ADV-048 part 2 (`it_adv048_20261118/`); the KDS lanes (`it_ketamine_lanes_20261117/`, with their corrections); arm table v9; HE's ADV-052 part (a) (`adv052_ttype_he_20261118/`) as a dated line. ADV-050 (SCI, memantine and kinetics) had not landed when this was written: its cells are marked "pending" and take a dated line.
+Candidates: **U07** AAV9-delivered human WWOX (ORG-1); **U17** ethosuximide and **U24** lithium (ORG-2, one experiment, Cheng 2020); **U21** d-APV, a tool compound, with the NMDAR/AMPAR class (ORG-3, Breton 2021 slices); **U10** A51, a multi-kinase inhibitor (ORG-4, organoids); **U15** ketogenic diet and **U20** vigabatrin (ORG-5, case reports); **U25** apinocaltamide (ORG-6, no WWOX system); plus the **pore blockers, ketamine and memantine**, which are not units of the view. "Evidence level" uses the card's own words; "origin" is the ORG id. "More promising" is stated per endpoint with its reason; tolerability or an elegant rationale is not efficacy, and a count of sources is not evidence.
+
+## 1. Acute rescue (treatment of a seizure or status epilepticus already under way)
+| Candidate | Measured in a WWOX system (preparation; origin; level) | Outside WWOX (transfer) |
+|---|---|---|
+| U07 | none: no seizure endpoint in the card's endpoint list (survival, weight, motor score, GFAP, glucose); prevention or early-window in the null mouse | n/a |
+| U17, U24 | none as rescue: both were given BEFORE the provoking PTZ injection (ORG-2; pretreatment, not rescue after onset) | n/a |
+| U21 (d-APV, tool) | burst frequency lowered by d-APV in neuron-specific knockout cortical slices (ORG-3; n = 5 slices, 3 animals; competitive block, a tool; bursting rose to about 1.85 times baseline after washout: a held hint of rebound) | n/a |
+| U10, U15, U20, U25 | none (diet and vigabatrin are chronic regimens; A51 and apinocaltamide not tested) | apinocaltamide: absence-type models, convulsive models only at higher concentration (abstract) |
+| Ketamine | none in any WWOX system; no WOREE child with ketamine found | uncontrolled paediatric series; one halted refractory-SE trial; a positive randomised first-line trial in generalised convulsive SE (PMID 40186980, abstract); the DeVine infants' resolution is not attributable to ketamine by the timeline |
+| Memantine | none | not an acute agent; case-level GRIN and ATP1A2 reports |
+**More promising:** nothing is shown to rescue in a WWOX system. By general paediatric evidence in this niche, ketamine has the most (transfer, tier 3, other diseases); the only in-system acute abolition is d-APV, a laboratory tool.
+
+## 2. Provoked-seizure suppression in a Wwox-null or WWOX-deficient system
+| Candidate | Measured (preparation; origin; level) |
+|---|---|
+| U17 ethosuximide | PTZ stage in preweaning -/- pups, late phase of the hour, graphical reading (ORG-2; one experiment; no wild-type or drug-by-genotype test; wild-type floor; control variability comparable to the effect). ADV-051: not separable from a young-age effect and a floor; ADV's reading of Fig. 7: the early-window drop looks proportionally similar in all genotypes (hypothesis). **ADV-052 (HE) part (a), dated line:** no source links WWOX loss to Cav3 by two routes; four held WWOX-deficient transcript datasets disagree and none samples thalamus or reticular nucleus or measures a current: the arm rests on a descriptive pattern, not a T-type rationale |
+| U24 lithium | PTZ stage after one provoking injection, preweaning -/- pups (ORG-2; N = 6 in the -/- arm); significant in all three genotypes, including at the wild-type floor, so a general property is what is shown |
+| U21 | slice bursts, not a provoked seizure (see 1) |
+| U07, U10, U15, U20, U25 | none |
+| Ketamine, memantine | none (ketamine was given to Wwox mice only as an anaesthetic) |
+**More promising:** lithium and ethosuximide over every other candidate (they are the only ones measured), for different reasons: lithium for a robust effect that is probably general; ethosuximide for the only open selectivity question (and the weaker rationale). They share ONE origin, so this endpoint is one experiment. The paper's "lithium better than ethosuximide" is a cross-cohort impression, not a tested difference.
+
+## 3. Spontaneous seizure burden by video-EEG
+Nothing is measured for any candidate (the null mouse is reported to seize spontaneously after about P12 and to die by about four weeks; no video-EEG quantification is held). U15 and U20 report clinician-reported control in case series (no instrument). **More promising: no ordering is possible.**
+
+## 4. Chronic seizure control in children
+| Candidate | Measured in the WWOX class | Outside WWOX |
+|---|---|---|
+| U15 ketogenic diet | clinician-reported seizure control, case-level (ORG-5; retrospective, uncontrolled, denominator unknown, partial read) | randomised trials in other epilepsies (lane C: five) |
+| U20 vigabatrin | clinical cessation of epileptic spasms, case-level (ORG-5; abstract or queried depth; concomitant drugs in all five children with both endpoints; the children overlap across the four classes) | a placebo-controlled randomised trial in infantile spasms (n = 40, 1999) and open comparisons |
+| U17 / U24 | none in children of the class | ethosuximide approved in older children for absence seizures (not this seizure type; not established below 3 years); lithium: not an epilepsy agent |
+| Memantine | none | one randomised crossover trial in childhood DEE (abstract and registry; composite responder; full text blocked); case-level GRIN reports |
+| Ketamine, U07, U10, U21, U25 | none | ketamine: rescue only; apinocaltamide: healthy-adult phase 1 only |
+**More promising:** vigabatrin, then the ketogenic diet, because they are the only candidates with human-class data and, for vigabatrin, randomised support in a related seizure type; all WWOX-class data are case-level, uncontrolled and confounded by co-therapy and natural history (rival explanations kept: spasms remit with age; vigabatrin was added after a partial response).
+
+## 5. Development (growth, survival, myelination, cortical and cerebellar structure)
+| Candidate | Measured |
+|---|---|
+| U07 | survival (high-dose arm, n = 30 against untreated knockout n = 10; untreated knockouts die by about day 17), body weight series, composite motor score, GFAP-positive cells: all in the favourable direction; quantified myelination improved but not normalised (unmyelinated axons per field about 52 against about 26 in wild type); blood glucose at P10 no effect; a neuron-promoter vector corrected neuronal function but not radial-glia abnormalities (organoid arm), SATB2 mRNA overshoots wild type up to about eleven-fold in treated organoids. ORG-1: prevention or early window (injection P0 to P5), one laboratory (two papers), one pertinence row carries the group |
+| U10 A51 | fraction of SOX2+MYC+ progenitors in organoid sections lowered (ORG-4; no treated wild-type arm; SOX2 is a readout; identity with the clinical agent not verified; same laboratory as the AAV9 work) |
+| All others | none |
+**More promising: U07, by a wide margin and as the comparator** (the only candidate measured), with its limits: prevention not recovery after onset, a high-dose pertinence row still to be adjudicated, one laboratory, no ceiling or overexpression endpoint.
+
+## 6. Harms in children and the hardest harm of each (as stated by the cards, labels and lanes; none is a safety profile)
+| Candidate | Harm evidence held | Hardest harm named |
+|---|---|---|
+| U07 | no overexpression or tumour-surveillance endpoint in the mouse study; applied recombinant WWOX lowered viability of human cortical neurons in a preprint; SATB2 overshoot | unmeasured overexpression toxicity and tumour risk (irreversible; "more is not safer") |
+| U17 ethosuximide | label: safety not established below 3 years; blood dyscrasias, DRESS, lupus, suicidality; a class-level progenitor-viability signal is recorded in the card | serious haematological or immune-mediated reactions |
+| U24 lithium | label: toxicity "can occur at doses close to therapeutic concentrations"; renal, thyroid, calcium effects; no infant treatment data; potentiates pilocarpine-type seizures in rodents | lithium toxicity (narrow margin); seizure-threshold lowering in cholinergic models |
+| Pore blockers (U21 class; ketamine; memantine) | a developing-brain apoptosis signal for NMDAR block in rats (card); slice rebound after washout; memantine: increased seizure frequency in three named GRIN gain-of-function individuals (Discussion says four; cause unclear); ketamine: short exposure low and quantified (0.33% serious events in 58,752 sedated children), prolonged exposure case reports and PICU series, electrographic seizures after ketamine in children with epilepsy 3 of 5 (four age-separable studies), human developmental neurotoxicity not established | seizure aggravation and developing-brain neurotoxicity (class, transfer; not established in humans) |
+| U10 A51 | adult-oncology toxicity in the card; identity with the clinical agent not verified | not assessable in children |
+| U15 ketogenic diet | not in the card | not held here (name: the diet's trial and review literature) |
+| U20 vigabatrin | a WWOX-DEE case-level safety signal (new pallidal and thalamic signal change in fewer than 3 children, abstract only, no denominator) | that signal change; the class's visual-field toxicity is not held in these inputs (name: the vigabatrin label) |
+| U25 apinocaltamide | healthy-adult phase 1 only; no paediatric data | not assessable |
+**More promising on harms:** no candidate is better characterised in WWOX children; ethosuximide and lithium have the longest labels, and neither has infant data.
+
+## Three lists
+**(a) Endpoints where NOTHING is measured for any candidate, ordered by how much one measurement would change the comparison.**
+1. Spontaneous seizure burden by video-EEG in the null mouse (3): without it no agent can be compared and no provoked-seizure result can be tied to the disease; a laboratory item (animals needed; null mice die by about four weeks).
+2. Acute rescue after onset (1): no WWOX system has a post-onset arm for any agent; a laboratory item.
+3. Mechanism readouts that decide the T-type and GSK-3 claims: Cav3 current or expression in thalamic and reticular neurons of Wwox-null tissue; kinase activity, beta-catenin and Wnt readouts (one p-Ser9 blot exists); in silico on the four held transcript datasets first (HE), then a laboratory item.
+4. Development endpoints for any non-gene agent (5): none; the pilot would need a post-onset design.
+5. PV identity, maturation and inhibitory-current measurements in the burst preparation (RP-019): none; they decide whether a disinhibition route exists.
+**(b) The cell where the choice between two candidates rests on one experiment or one origin.** Provoked-seizure suppression (2): lithium against ethosuximide rests on ONE experiment (ORG-2), with different cohorts per arm and no drug-by-genotype test. Second: the NMDAR arm rests on d-APV in one slice preparation (ORG-3, n = 5 slices from 3 animals). Third: U07 as the development comparator rests on ORG-1 (two papers, one laboratory).
+**(c) The candidate or class that deserves the next loop step, with rivals kept: vigabatrin (U20).** It is the only candidate with human-class data on chronic control AND randomised support in a related seizure type, and it carries an unresolved harm signal and an unresolved denominator problem (children overlap across classes; co-therapy in all). The next loop step is literature and in silico (no spend): the primary reports behind the five children with both endpoints, their ages and co-therapy, the harm signal, and the label's class warnings. Rivals kept: spasm remission with age, co-therapy, reporting bias in case series. The experimental next step stays the ADV-051 order (ethosuximide with an age series in wild-type pups, lithium plus a second GSK-3 class and valproate, the pore-blocker arm last in vivo).
+
+## Updates by dated line (when they land)
+ADV-050 (SCI: memantine and kinetics): pending; it updates the NMDAR cells. ADV-052 (HE) parts (b) to (d), including mouse ontogeny of ethosuximide against PTZ: pending; part (a) is in the ethosuximide cell above.
