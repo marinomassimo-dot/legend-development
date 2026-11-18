@@ -355,6 +355,42 @@
      "evidence": "same file, item 3b: no tuned-on separation, no contamination check, promote-only judge; drop as a benchmark source"
     }
    ]
+  },
+  "OBJ_HE_ADV047_20261118": {
+   "order": 9,
+   "source": "ADV message 2026-11-18 (ADV-047)",
+   "steps": [
+    {
+     "step": "part 1: diagnosis of the NONE path; part 2: GSK-3beta producer reconciliation",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "adv047_he_20261118/ADV047_PART1_PART2_HE_20261118.md; fd9fe89b5; tick why line names ready rows (+test), SKILL clause, three PLAN-HE steps set BLOCKED"
+    }
+   ]
+  },
+  "OBJ_HE_ADV049_20261118": {
+   "order": 10,
+   "source": "ADV message 2026-11-18 (ADV-049)",
+   "steps": [
+    {
+     "step": "make the PERMANENT 2026-11-18 operator instruction durable: section 12 subsection, skill pointer, recall clause and test; CLAUDE.md and the agent definition deliberately not edited on a peer request",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "5df109f23; recall tag 9154b9df verified by ADV"
+    }
+   ]
+  },
+  "OBJ_HE_ADV052_20261118": {
+   "order": 11,
+   "source": "ADV message 2026-11-18 (ADV-052 with part d)",
+   "steps": [
+    {
+     "step": "T-type axis lane: (a) held transcripts and a computed GSE158684 by cell class, (b) infantile evidence by endpoint, (c) T-type versus other targets, (d) rat versus mouse ontogeny",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "adv052_ttype_he_20261118/ADV052_T_TYPE_LANE_HE_20261118.md; (a) landed 0a4869748; b, c, d with this commit; one delegate sonnet medium read back; 14 receipts staged, not recorded"
+    }
+   ]
   }
  },
  "DEFAULTS_TAKEN": [

@@ -1,0 +1,39 @@
+{
+ "event_id": "FTR-20261118-42274296-52",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42274296",
+  "doi": "10.1002/epi4.70289"
+ },
+ "event_at": "2026-11-18T08:38:33Z",
+ "analysis_at": "2026-11-18T08:38:33Z",
+ "workflow": "ADV-052 producer reading package (parts b, c, d): full text fetched through Europe PMC REST fullTextXML, converted to text keeping paragraphs, titles, captions and table cells and dropping the reference list, and read whole with the Read tool. Quotes below were machine-checked as substrings of the converted text (dash glyphs and whitespace normalised). Figure images and supplements were not seen.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/raw/PMID42274296_PMC13395050_europepmc.xml",
+ "source_fingerprint": "873cc1fb2c570f76e89af09ab49bd2fef200ec0722943a2a89e7a2b1080330a3",
+ "source_kind": "fulltext_remote",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "figures": "captions_only",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/TABLE_PRODUCER.md"
+ ],
+ "evidence_basis": [
+  "verbatim_locator: \"Video-EEG recordings of adult (10-week-old) KI and wild-type (WT) littermates were scored for atypical absence seizures\"",
+  "verbatim_locator: \"reduced total seizure incidence by 64% (vehicle 21.4 ± 4.7, range 5-45 vs. ethosuximide 7.7 ± 1.8, range 1-20; t(8) = 2.6, p = 0.03)\"",
+  "verbatim_locator: \"Ulixacaltamide produced robust reductions in atypical absence seizures\"",
+  "verbatim_locator: \"demonstrating that both vigabatrin and CBD significantly reduce spasm burden\""
+ ],
+ "prior_receipt": "FTR-20261021-42274296-01",
+ "reread_reason": "new_question_outside_prior_coverage"
+}
