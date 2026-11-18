@@ -23,7 +23,7 @@ Comparison method: printed lines starting with '[' minus ' MISSING_' lines, old 
    Tried: t2 and t1 (cold and warm).
    Old vs new cold vs new warm: identical (7 findings in t2, 8 in t1). HOLDS. Raw-byte hashing is strictly finer than the text, so it can only miss, never conflate.
 
-5. GATE_INTERNAL_FILES skip. `scripts/public_release_gate.py` and `scripts/test_public_release_gate.py` containing e-mails, plus `scripts/other.md`.
+5. GATE_INTERNAL_FILES skip. `scripts/public_release_gate.py` and `scripts/test_public_release_gate.py` containing e-mails, plus a Markdown file (named other, in the same folder as the two internal files).
    Tried: t2. The two internal files give [] in both runs; other.md is reported in both. Cached [] is keyed by rel, so the same bytes under a different name are not answered by it. HOLDS.
 
 6. Same relative path twice / case-insensitive paths / symlinks. os.walk yields each rel once; rel is part of the key; symlinked directories are not followed; broken or directory symlinks fail `is_file()` before both paths. Case variants (`UP.MD`) are distinct strings. HOLDS by reading; only the Unicode/case names in item 4 were run (NOT TESTED on a case-insensitive filesystem).
@@ -68,3 +68,7 @@ Comparison method: printed lines starting with '[' minus ' MISSING_' lines, old 
 
 ## (d) Overall answer
 The claim "findings and verdict are identical for every input" does not hold in general. For ordinary inputs (files, names, encodings, line endings, flags, env, concurrency, worktrees) the cached run was identical cold and warm in every experiment I ran. Two inputs make the cached run PASS a file the uncached gate BLOCKs: (1) a cache file whose entry was rewritten and resealed (the seal is unkeyed, so it detects damage, not forgery), and (2) a file that is toggled A->B->A during the scan, which stores B's findings under A's key and persists them. Both need a write-capable adversary (cache dir or the working tree during the gate), so against an honest user the cache looks safe, but its stated guarantee for "every input" is too strong; the warm run also gives no sign that its answer was not recomputed. A third difference is not a PASS: a non-UTF-8 file name makes `--cache` exit 3 with no findings where the old gate exits 2 with the finding. Cheap hardening: re-scan at least one-third of hits, or always verify in the landing gate, key the seal with something not stored beside the cache, store text hash computed from the very bytes the scan read (read once, scan from that string) to close item 2, and encode keys with surrogateescape. I could not check: other Python versions, case-insensitive filesystems, permission-denied files, pid-namespace tmp collisions, and the full-tree exact comparison.
+
+
+---
+Dated edit 2026-11-18 (HE, ADV-060): the reviewer's fixture file name in item 5 was a path-shaped string that the reader-journey suite read as a missing repository path; reworded to a description. Nothing else in this report was edited.
