@@ -1,0 +1,26 @@
+# Blind verification package PK for KDS lane D addendum (host; 2026-11-17)
+
+Not medical advice; no dose, no recommendation; reference genotype class only. Values below are concentrations as papers state them; they are not exposure statements.
+
+You are an independent verifier. For each claim, decide from the stored SOURCE alone whether it is SUPPORTED, PARTLY SUPPORTED, NOT SUPPORTED or UNVERIFIABLE FROM THIS SOURCE; give the verbatim quote (or table cell) with its locator; and say if the claim omits or alters something that changes its meaning (a unit, a matrix such as plasma/serum/whole blood, total vs free, a population, a route, an enantiomer, an n, a mean vs median, a time point). Recompute every conversion and ratio shown (ng/mL divided by 237.7 gives umol/L for ketamine; 223.7 for norketamine; micromolar times 237.7 gives ng/mL) and say if the arithmetic is wrong. The claims were written by others; you are not told their conclusions. Do NOT read any file under disease-models/ or any ketamine note in the repository; use only the stored sources. If a stored file is an error page or the wrong paper, say so.
+
+Source root: /home/desktop/legend-development/files/fulltext/kds_pk_20261117/ (files stored flat; names carry the PMID). Chen 2009 and Riepe 2026 are at /home/desktop/legend-development/files/fulltext/PMID19158287_PMC2744993_Chen2009_page.html and /home/desktop/legend-development/files/fulltext/PMID42794650_PMC13607510_Riepe2026_epmc.xml.
+
+| id | claim to check | source |
+|---|---|---|
+| PK01 | Healthy adult volunteers given ketamine intravenously for research: plasma ketamine Cmax median 112.87 ng/mL (IQR 91.52 to 155), range 85.34 to 247.51, n = 8; i.e. median 0.475 uM, range 0.36 to 1.04 uM. | PMID38162029_PMC10755719_epmc.xml |
+| PK02 | Same study: lumbar CSF ketamine Cmax median 42.36 ng/mL (IQR 39.25 to 89), n = 9 (0.178 uM); CSF:plasma AUC ratio for ketamine 0.917; for norketamine 0.829 and for the hydroxynorketamine mixture 0.980. | same |
+| PK03 | Same study: plasma norketamine median 59.27 ng/mL (IQR 48.39 to 72; 0.265 uM) and hydroxynorketamine mixture 46.19 ng/mL (IQR 28.06 to 58). | same |
+| PK04 | Adult volunteers, research infusion, n = 6: "Cmax of ketamine was 273.8 ng/mL" (mean +/- SEM), i.e. 1.15 uM. | PMID40692288_PMC12280840_epmc.xml |
+| PK05 | One adult on ECMO during a prolonged ketamine infusion for bronchospasm: plasma concentration at steady state 1,018.7 ng/mL (4.29 uM); the abstract's matrix wording (whole blood or plasma) is ambiguous. | PMID30929859_pubmed_efetch.xml |
+| PK06 | Children 1 to 7 years under anaesthesia: S-ketamine plasma peak after i.v. 1,860 +/- 883 ng/mL at 3 +/- 1 min (7.8 uM); after nasal administration 355 +/- 172 ng/mL at 18 +/- 13 min. | PMID15601346_pubmed_efetch.xml |
+| PK07 | Children 2 to 9 years under anaesthesia: ketamine plasma peaks after nasal administration 496 and 2,104 ng/mL (at 20 and 21 min) and after rectal administration 632 ng/mL (at 42 min); i.e. 2.1, 8.9 and 2.7 uM. | PMID8881626_pubmed_efetch.xml |
+| PK08 | 113 children aged 0.02 to 17.6 years: the abstract quotes thresholds from the literature of ">100 ng/mL" for analgesia and "750 ng/mL" for awakening from anaesthesia. | PMID29677389_pubmed_efetch.xml |
+| PK09 | 25 children (median age 0.42 y, range 0.02 to 12.5) on prolonged sedation: the abstract gives NO ketamine concentration values, only "marked variability in steady-state plasma concentrations" and parameters (clearance variability 40% for S-ketamine and 104% for S-norketamine). | PMID29030928_pubmed_efetch.xml |
+| PK10 | Rats, postnatal day 21 to 90: serum ketamine Cmax (total) from 10,000 ng/mL (adult) to 30,000 ng/mL (PND 21). | PMID42240040_Sarkar2026_held_epmc.xml |
+| PK11 | (R)-ketamine brain-to-plasma AUC ratio 1.57 to 2.25 in rats; human plasma protein binding 56.71, 70.07 and 57.90% at 0.1, 1 and 10 uM (ultrafiltration, one enantiomer). | PMID41357861_PMC12678371_epmc.xml |
+| PK12 | Ih inhibition by ketamine: 20 uM tested in mouse cortical pyramidal neurons aged 14 to 22 days; recombinant HCN1-HCN2 EC50 8.2 uM (voltage shift) and 15.6 uM (current amplitude) for racemic ketamine, and 4.1 and 7.4 uM for S-ketamine. | /home/desktop/legend-development/files/fulltext/PMID19158287_PMC2744993_Chen2009_page.html |
+| PK13 | In Mg2+-free hippocampal slices of adult mice, S-ketamine at 100 uM abolished seizure-like events. | /home/desktop/legend-development/files/fulltext/PMID42794650_PMC13607510_Riepe2026_epmc.xml |
+| PK14 | Arithmetic: the highest human plasma value in this set is 2,104 ng/mL (8.9 uM); 20 uM = 4,750 ng/mL = 2.3 times that value, 4.7 times the ECMO value 1,019 and 42 times the volunteer median 112.87; 8.2 uM = 1,950 ng/mL and 15.6 uM = 3,710 ng/mL (0.9 and 1.8 times the highest human value); 100 uM = 23,800 ng/mL = 11 times the highest human value, 23 times the ECMO value and 211 times the volunteer median. Recompute each and say if any is off. | arithmetic only |
+
+Output: ONE file named VERIFY_RESULT_PK.md in the same folder as this package: a table (id, verdict, verbatim quote or table cell with locator, omission or alteration that changes the meaning), then a short list of claims you could not check and why. Do not start agents. No web access beyond the stored files unless a stored file is missing (then say so and mark UNVERIFIABLE).
