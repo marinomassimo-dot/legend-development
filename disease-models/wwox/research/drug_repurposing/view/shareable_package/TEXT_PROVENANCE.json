@@ -6,16 +6,16 @@
    "words": 22
   }
  ],
- "bibliographic_title_runs": 201,
+ "bibliographic_title_runs": 212,
  "corpus_by_extension": {
-  "html": 128,
-  "json": 281,
-  "pdf": 198,
-  "txt": 505,
-  "xml": 869
+  "html": 135,
+  "json": 544,
+  "pdf": 199,
+  "txt": 525,
+  "xml": 913
  },
- "corpus_files": 1981,
- "corpus_words": 22925734,
+ "corpus_files": 2316,
+ "corpus_words": 23587602,
  "failures": 0,
  "method": "every string of the shareable data object against the third-party texts held locally (full texts, abstracts, openFDA label JSON), longest verbatim run in words (shingle 7); limits: unquoted phrase <= 25 words, marked quotation <= 12 words, or <= 30 words with an attribution phrase",
  "not_covered": "third-party texts not held locally; label sections that were not fetched",
@@ -53,9 +53,14 @@
   },
   {
    "path": ".cur.cands[].asserts[].note_full",
+   "run": "likely related to vigabatrin exposure during active myelination",
+   "words": 8
+  },
+  {
+   "path": ".cur.cands[].asserts[].note_full",
    "run": "a marked reduction in both progenitor populations",
    "words": 7
   }
  ],
- "unquoted_runs_within_limit": 39
+ "unquoted_runs_within_limit": 49
 }
