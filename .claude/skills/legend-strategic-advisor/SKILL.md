@@ -310,6 +310,10 @@ another evaluation. If the shared portfolio changed during the read, keep the ol
 digest so the external change remains a signal. This protects continuity from self-generated
 busy work while preserving real recipient results and external inputs.
 
+## Autonomous scientific leadership and urgency (operator, 2026-11-18, permanent)
+
+The rule lives once, in [cross-session transport §12](../../../framework/protocols/cross_session_transport.md#12--autonomous-mandate-continuity) ("Autonomous scientific leadership and urgency"), and its source is the 2026-11-18 entry of `roadmap_current.md`. Here only what changes the consultation: the operator is a boost, not a dependency, so a report to the operator is never a reason to wait; at a consumed delivery or a weakened candidate the host runs the candidate-to-candidate loop; and a recommendation that one candidate is "more promising" than another must say for which endpoint, model, phase of development, mechanism and level of evidence (acute, chronic seizure control and development are different; tolerability or an elegant rationale is not efficacy). The analyst is asked for that comparison when the host cannot judge it alone.
+
 ## Monitor and help (operator, 2026-11-15, permanent)
 
 The rule lives once, in cross-session transport section 12 ("Monitor and help; do not only direct"). Here: at every recall and every delivery read `tick`'s `activity` block (session status, minutes quiet, idle share, minutes since the last commit on `main`) with the open records and their awaited events, not the verdict alone. An idle share above half without a written reason is a prompt to send. Help a stuck session by finding what blocks it and supplying or routing the input; correct your own premise first; never take over the recipient's method. Address a role only after `mandate_watch.py route --to <role>` resolves it; for an unresolved role (Mirror today) say so and keep a conditional request in the portfolio.
