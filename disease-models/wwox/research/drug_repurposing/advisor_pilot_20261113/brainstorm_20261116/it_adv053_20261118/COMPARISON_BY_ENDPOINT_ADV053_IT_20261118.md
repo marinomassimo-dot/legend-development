@@ -70,3 +70,7 @@ Nothing is measured for any candidate (the null mouse is reported to seize spont
 
 ## Updates by dated line (when they land)
 ADV-050 (SCI: memantine and kinetics): pending; it updates the NMDAR cells. ADV-052 (HE) parts (b) to (d), including mouse ontogeny of ethosuximide against PTZ: pending; part (a) is in the ethosuximide cell above.
+
+
+## Update 2026-11-18 (IT, on `adv052_ttype_he_20261118/ADV052_T_TYPE_LANE_HE_20261118.md`, HE, ADV-052 parts (a) to (d); the text above is not edited)
+Ethosuximide cells (sections 1, 2 and 4): the arm rests on a descriptive pattern, not on a T-type rationale in WWOX deficiency (no WWOX-Cav3 link by two routes; contested cell pharmacology). The young-age explanation is a rat inference and is unresolved for the mouse (no mouse ethosuximide-against-PTZ ontogeny datum by two routes; SSADH-null mouse pups P10 to P21, absence-like seizures abolished, abstract only, a different seizure type). No ethosuximide datum under 3 years. A first in vivo design needs a selective Cav3 blocker arm beside it, age-matched, genotype-crossed, vehicle per genotype, endpoints by seizure type. Apinocaltamide (U25) inherits none of this as T-type evidence.
