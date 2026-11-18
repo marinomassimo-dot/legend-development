@@ -1,0 +1,6 @@
+route	query	count	raw_sha256
+PubMed esearch	WWOX[Title/Abstract] AND vigabatrin[Title/Abstract]	2 (41442931, 39101447)	1664f931c8ef1627792a41f2c1ec31f2c4c305dc1fec4db3039dc5a478a76529
+PubMed esearch	WWOX[Title/Abstract] AND (VABAM OR vigabatrin-associated)	1 (41442931)	0fc0677c35cbd29bf2f3fce3736b0d4af7fe986ac1f7d30066244a12dd1f1301
+Europe PMC search	ABSTRACT:WWOX AND ABSTRACT:vigabatrin	2 (41442931, 39101447)	1800c44b4b144803a5f8293cd50c6c7cb52e1b7c035d84dd5b6e643777055ffc
+Europe PMC search	WWOX AND vigabatrin (all fields)	41 hits, first page of ids retrieved; not individually screened	89f4ba9a16a7b73e76530fd83b4847ab1c07daae227ab5aa86d38a8730a95876
+Europe PMC core + PubMed MCP	PMIDs 41442931, 42735667	abstracts; no PMCID, not open access	e17c4f94..., 927822b1...
