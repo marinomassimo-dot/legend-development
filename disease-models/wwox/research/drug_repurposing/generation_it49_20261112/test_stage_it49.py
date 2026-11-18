@@ -16,7 +16,7 @@ class RemainingHypotheses(unittest.TestCase):
     def test_eight_rows_and_nothing_left_unmapped(self):
         self.assertEqual({"KH1", "KH2", "KH3", "KH4", "KH5", "HY1", "HY2", "HY3"}, set(self.by))
         self.assertEqual({}, self.unmapped)
-        self.assertEqual(34, len(self.rows))   # IT50 added the three INV-02 rows; HE53 the six SCI47 levers (INV-05); HE66 the one HB1 row (INV-05, IT56, 2026-11-16); the 24 earlier rows are unchanged (test_stage_it50)
+        self.assertEqual(42, len(self.rows))   # IT57 (ADV-066, 2026-11-18): eight more rows, appended after the 34 (INV-09 L1-L4 and INV-04 E1-E4; test_comparison_rows_adv066); IT50 added the three INV-02 rows; HE53 the six SCI47 levers (INV-05); HE66 the one HB1 row (INV-05, IT56, 2026-11-16); the 24 earlier rows are unchanged (test_stage_it50)
 
     def test_no_direction_is_invented_and_hcn_rows_state_no_expectation(self):
         for r in self.by.values():

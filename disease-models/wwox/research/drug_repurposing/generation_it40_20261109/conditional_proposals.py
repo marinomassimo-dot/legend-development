@@ -165,6 +165,15 @@ PKG_MAP = {
     # Owner reading (SCI, PRESIDIO-001, 2026-11-14; unverified until its blind reader reports): all cells faithful, with the slot corrections applied here: counter_evidence is evidence (limits), the 'adds over general anticonvulsant
     # action' cell is an outcome-to-lever condition (expected slot), only the rejection cell decides (measure), comparators are controls, the nomination follows the package's own status.
 }
+# IT57 / ADV-066 (2026-11-18): the two packages of the day's comparison (INV-04 ethosuximide and the T-type thread; INV-09 lithium, the GSK-3 thread and the regimen). Layout of the HB1 package; the author of the
+# package wrote the mapping with its rows (not read by a second owner). `mechanism_and_missing_bridge` carries the premise and the relation, so the premise slot is empty by design; `weakening_result` goes to
+# `reopen`; `sign` is `unknown` for every row. The by-endpoint comparison rows of the same folders are read through `comparison_rows()` below, not through this map.
+for _pkg, _inv in (("inv04_ethosuximide_age_assay", "INV-04"), ("inv09_lithium_gsk3_regimen", "INV-09")):
+    PKG_MAP[_pkg] = dict(inv=_inv, relation_ids=[], symbols=[], observation=["wwox_observation"], relation=["mechanism_and_missing_bridge"], context=["action_cell_context"],
+                         action=["action_cell_context"], compound=["probe_or_qualified_compound"], premise=[], competing=["competing_alternative"], expected=["favourable_result"],
+                         measure=["next_decision"], reopen=["weakening_result"], title="hypothesis_id", sibling_cell="mechanism_and_missing_bridge",
+                         mapping_unconfirmed=True, mapping_note="mapping drafted by IT with the rows (ADV-066, 2026-11-18); no second owner has read it and no blind reader has tested the mapping")
+LATE_PACKAGES = frozenset({"inv04_ethosuximide_age_assay", "inv09_lithium_gsk3_regimen"})   # IT57: read after every earlier package, so the rows already produced keep their position and the new ones are appended
 PKG_FIELDS = FIELDS + ["package_ref", "direction_stated", "unmapped_cells", "package_title", "recorded_support", "reopen_or_abandon", "design_join", "lever_attachments"]
 
 
@@ -435,12 +444,14 @@ def package_rows():
     for p in pk:
         if p.get("role") == "hypotheses_only" and p.get("inv_id") and p["inv_id"] not in order:
             order.append(p["inv_id"])
-    for inv in order:
+    for inv, late in [(i, False) for i in order] + [(i, True) for i in order]:
         res = hp.hypotheses_for(pk, inv)
         by_pkg = {}
         for x in res["rows"]:
             by_pkg.setdefault(x["package"], []).append(x)
         for pkg, rws in by_pkg.items():
+            if (pkg in LATE_PACKAGES) != late:
+                continue
             m = PKG_MAP.get(pkg)
             if not m:
                 seen_unmapped[(inv, pkg)] = len(rws); continue
@@ -468,12 +479,48 @@ def package_rows():
                                 source_and_limits="package row, verbatim cells; no direction asserted; labels of the package kept: " + cells(r, [c for c in ("class", "status", "label") if r.get(c)]) + (" || counter-evidence as documented by the package (evidence, not an explanation): " + cells(r, m["limits"]) if m.get("limits") and cells(r, m["limits"]) else ""),
                                 expected_result_by_explanation=cells(r, m["expected"]) or m.get("expected_missing", "not stated by the package (missing): its recorded support and counter-evidence are not a falsifiable prediction"), decision_measure=cells(r, m["measure"]) or "not stated by the package: a question, not an experiment",
                                 experiments=("controls as documented by the package (controls, not outcomes): " + cells(r, m["controls"]) if m.get("controls") and cells(r, m["controls"]) else ""), unresolved_refs="", nomination=(f"NOT PROPOSED: the package drops this row (its own status label: {r.get(dcol)!r}); kept so the drop is visible" if dropped else (f"the package's own status: {r.get(dcol)!r}; named compounds are the package's, not ranked; no therapeutic direction asserted" if m.get("nomination_from_status") else "CONDITIONAL; named compounds are the package's, not ranked; no therapeutic direction asserted"))
-                                + ("; mapping drafted by HE and read by the owners (SCI, PRESIDIO-001, 2026-11-14), whose own blind reader had not reported when this was built" if m.get("mapping_unconfirmed") else ""),
+                                + ("; " + m["mapping_note"] if m.get("mapping_note") else ("; mapping drafted by HE and read by the owners (SCI, PRESIDIO-001, 2026-11-14), whose own blind reader had not reported when this was built" if m.get("mapping_unconfirmed") else "")),
                                 design_rows_same_investigation=("dropped by the package: the investigation-level list of design rows is not repeated for a row nobody proposes" if dropped else design_pointer(inv, pk)),
                                 package_ref=x["id"] + " @ " + x["source_ref"], direction_stated="none (the package states no therapeutic direction)", unmapped_cells=",".join(unmapped), package_title=r.get(m["title"], ""), reopen_or_abandon=cells(r, m.get("reopen", [])) or m.get("reopen_missing", "not stated by the package"), recorded_support=cells(r, m.get("support", [])),
                                 design_join=design_join(pkg, x["key"], design_all, r, m) if m.get("adv006") else "",
                                 lever_attachments=lever_attachments(pkg, x["key"], r, dict(m, _levers={y["key"]: y["row"] for y in rws}), design_all) if m.get("attach") else ""), x["sign"], package_row=True))
     return out, seen_unmapped
+
+
+# IT57 / ADV-066: a consumer for the `pharmacological_comparison` packages of INV-04 and INV-09. The conditional-proposal generator had none (the IT41 reader reads INV-05 only, for a table of its own), so a
+# registered comparison was reachable and never read by it. INVS above governs ONLY the physiological hypothesis packages (record_for): adding INV-04 or INV-09 to it changes no output (checked: 0 rows), which is why
+# this is a function of its own. Rows are returned verbatim through hp.comparison_for; nothing is mapped, ranked or completed: a missing cell is written as missing.
+COMPARISON_INVS = ("INV-04", "INV-09")
+COMP_FIELDS = ["comparison_id", "inv_id", "package", "state", "endpoint_or_question", "candidates", "documented_action_and_limits", "more_promising_statement", "controls_and_discriminating_control",
+               "measurement_that_makes_it_interpretable", "outcome_favourable", "outcome_contrary", "outcome_unresolved", "explanations_not_separated", "new_measurements_blocking_this_row",
+               "decisive_propositions_cited", "withdrawn_statements_of_the_package", "source_ref", "nomination"]
+DECISIVE_FIELDS = ["prop_id", "inv_id", "package", "statement", "status", "depth", "class", "relation", "direction", "system_and_conditions", "source_ref"]
+NO_NOMINATION = "NO NOMINATION (a comparison row, not a proposal; no ranking, no claim, no dose, no schedule; 'more promising' is a statement about evidence level and testability in the package's own words)"
+
+
+def comparison_rows():
+    pk = hp.load_all(); out = []; dec = []
+    for inv in COMPARISON_INVS:
+        rec = hp.comparison_for(pk, inv)
+        cmp_pkgs = [p for p in pk if p.get("role") == "pharmacological_comparison" and p.get("inv_id") == inv]
+        withdrawn = " || ".join(f"{k}: {r.get('statement', '')}" for p in cmp_pkgs for k, r in p["dec"].items() if str(r.get("producer_status", "")).lower().startswith("withdrawn"))
+        for r in rec["rows"]:
+            row = r["row"]
+            g = lambda *names: next((row[n] for n in names if row.get(n)), "not stated by the package")
+            out.append(dict(comparison_id=f"{r['package']}::{r['key']}", inv_id=inv, package=r["package"], state=rec["state"], endpoint_or_question=g("action_context_hypothesised_benefit"),
+                            candidates=g("compound_or_probe"), documented_action_and_limits=g("documented_action_and_limits"), more_promising_statement=g("functional_comparison"),
+                            controls_and_discriminating_control=g("mechanism_discriminating_control"), measurement_that_makes_it_interpretable=g("measurement_that_makes_it_interpretable"),
+                            outcome_favourable=g("outcome_favourable"), outcome_contrary=g("outcome_contrary"), outcome_unresolved=g("outcome_unresolved"),
+                            explanations_not_separated=g("explanations_not_separated"),
+                            new_measurements_blocking_this_row=" || ".join(f"{m['meas_id']}: {m['measurement']} (why no literature can substitute: {m['why_no_literature_can_substitute']})" for m in r["new_measurements"]) or "none attached",
+                            decisive_propositions_cited=" || ".join(f"{d['prop_id']} [{d.get('producer_status', '')}; {d.get('depth', '')}; relation {d.get('relation', '')}; direction {d.get('direction', '')}]: {d['statement']}" for d in r["decisive_cited"]) or "none cited by this row",
+                            withdrawn_statements_of_the_package=withdrawn or "none", source_ref=r["source_refs"][f"cmp:{r['key']}"], nomination=NO_NOMINATION))
+        for p in cmp_pkgs:
+            for k, d in p["dec"].items():
+                dec.append(dict(prop_id=f"{p['dir'].parent.name}::{k}", inv_id=inv, package=p["dir"].parent.name, statement=d.get("statement", ""), status=d.get("producer_status", ""), depth=d.get("depth", ""),
+                                **{"class": d.get("class", "")}, relation=d.get("relation", "unclassified"), direction=d.get("direction", "unclassified"),
+                                system_and_conditions=d.get("species_system_age_prep_exposure_readout", ""), source_ref=p["refs"][f"dec:{k}"]))
+    return out, dec
 
 
 # HE50: design-only packages (manifest role `design_only`): steps, controls and decision branches, returned verbatim by hp.design_for and mapped here, cell by cell, onto what a design keeps apart.
@@ -545,6 +592,12 @@ if __name__ == "__main__":
         with open(HERE / "conditional_proposals_packages_it47.tsv", "w", newline="") as f:
             w = csv.DictWriter(f, PKG_FIELDS, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(pr)
         print(len(pr), "package rows -> conditional_proposals_packages_it47.tsv; reachable but not mapped:", {f"{i}:{p}": n for (i, p), n in unm.items()})
+        cr, cdec = comparison_rows()
+        with open(HERE / "conditional_comparison_adv066.tsv", "w", newline="") as f:
+            w = csv.DictWriter(f, COMP_FIELDS, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(cr)
+        with open(HERE / "conditional_decisive_adv066.tsv", "w", newline="") as f:
+            w = csv.DictWriter(f, DECISIVE_FIELDS, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(cdec)
+        print(len(cr), "comparison rows ->", "conditional_comparison_adv066.tsv;", len(cdec), "decisive propositions -> conditional_decisive_adv066.tsv")
         dr_, dunm = design_rows()
         with open(HERE / "conditional_design_steps_it50.tsv", "w", newline="") as f:
             w = csv.DictWriter(f, DESIGN_FIELDS, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(dr_)

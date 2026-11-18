@@ -1,0 +1,5 @@
+meas_id	measurement	why_no_literature_can_substitute	blocks_which_comparison_row
+M-1	[INFERENZA design] The same pilot as INV-04 (variability, assay age, non-floor stimulus) with lithium and the comparator in the same session and the same vehicle groups.	The published curves cannot size the interaction.	C-GS1
+M-2	[INFERENZA design] A second GSK-3 inhibitor of another class (chemically unrelated to lithium, published selective GSK-3 inhibition at the exposure used and published rodent brain exposure) and one general non-GSK-3 anticonvulsant comparator effective across ages.	Lithium alone cannot separate a GSK-3 route from a general property; it acts on other targets.	C-GS1
+M-3	[INFERENZA design] p-Ser9, total GSK-3beta and a kinase or beta-catenin readout in tissue from the same lithium-treated and vehicle animals.	Cheng measured p-Ser9 only in untreated animals; no kinase or beta-catenin readout exists in Wwox-null tissue.	C-GS2
+M-4	[INFERENZA design] E_GABA by perforated patch at matched maturity (the same measurement as INV-04 M-6).	E_GABA was never measured in a WWOX system.	C-GS3
