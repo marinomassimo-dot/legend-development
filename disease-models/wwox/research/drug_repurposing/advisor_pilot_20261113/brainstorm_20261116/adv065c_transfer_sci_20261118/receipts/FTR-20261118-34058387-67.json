@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-18T20:24:52Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T21:54:52Z",
+ "event_id": "FTR-20261118-34058387-67",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"restores intracellular chloride concentration\"",
+  "verbatim_locator [Abstract]: \"Importantly, adeno-associated virus (AAV)-mediated, neuron-specific NKCC1 knockdown in vivo rescues cognitive deficits in diverse behavioral tasks in Ts65Dn animals.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065c_transfer_sci_20261118/TRANSFER_LEDGER_CHLORIDE_LEVERS_ADV065C_SCI_20261118.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "10b890793cbc90f571881aa6ba6facb9d0612c4e12e4372124a86745cbaeb327",
+ "source_kind": "abstract",
+ "source_locator": "files/fulltext/adv065c_20261118/abs_34058387.txt",
+ "study_id": {
+  "pmid": "34058387"
+ },
+ "workflow": "SCI ADV-065c; abstract parsed from PubMed efetch XML saved by a legend-delegate producer (sonnet, medium) and written to the saved file by SCI after re-matching the quotation(s) in code"
+}

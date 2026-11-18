@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-18T20:24:52Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T21:54:52Z",
+ "event_id": "FTR-20261118-28279020-67",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"suppression of membrane KCC2 expression, using shRNAKCC2 plasmid in vitro and shRNAKCC2 containing lentivirus in vivo, induced spontaneous epileptiform bursting activities in vitro and Racine III seizure behaviors accompanied by epileptic EEG in vivo\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065c_transfer_sci_20261118/TRANSFER_LEDGER_CHLORIDE_LEVERS_ADV065C_SCI_20261118.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "be0a7aca0a0ee155648033f596c30a92f02f5071304697358d4365ea4b306702",
+ "source_kind": "abstract",
+ "source_locator": "files/fulltext/adv065c_20261118/abs_28279020.txt",
+ "study_id": {
+  "pmid": "28279020"
+ },
+ "workflow": "SCI ADV-065c; abstract parsed from PubMed efetch XML saved by a legend-delegate producer (sonnet, medium) and written to the saved file by SCI after re-matching the quotation(s) in code"
+}

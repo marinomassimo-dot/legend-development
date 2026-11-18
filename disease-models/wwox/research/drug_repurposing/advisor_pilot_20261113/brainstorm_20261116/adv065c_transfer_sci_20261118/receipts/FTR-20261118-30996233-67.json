@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-18T20:24:52Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T21:54:52Z",
+ "event_id": "FTR-20261118-30996233-67",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Discussion]: \"poor bioavailability of bumetanide in the brain in vivo may explain why it did not prevent seizure activity\"",
+  "verbatim_locator [Results]: \"Bumetanide treatment did not prevent seizures in Scn1b−/− animals.\"",
+  "verbatim_locator [Discussion]: \"Studies show that less than 1% of systemically administered bumetanide reaches the brain, resulting in concentrations well below that required to block NKCC122.\"",
+  "verbatim_locator [Discussion]: \"Acute application of 10–20 μM bumetanide to brain slices in our study suppressed GABA-induced excitation, suggesting that poor bioavailability of bumetanide in the brain in vivo may explain why it did not prevent seizure activity.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065c_transfer_sci_20261118/TRANSFER_LEDGER_CHLORIDE_LEVERS_ADV065C_SCI_20261118.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "ad88a7c78bd2a94fe5389fb5521b197e211c5395030b497c97b5e204f375dd97",
+ "source_kind": "fulltext_remote",
+ "source_locator": "files/fulltext/adv065c_20261118/PMID30996233_PMC6470170_efetch_pmc.xml",
+ "study_id": {
+  "pmid": "30996233"
+ },
+ "workflow": "SCI ADV-065c: open-access full text fetched by NCBI E-utilities (db=pmc, plain client) by a legend-delegate producer (sonnet, effort medium read back) that read the body by keyword-sentence scans; quotations re-matched in code by SCI against the saved XML; coverage marks only sections where a matched locator lies; figures, supplements and table bodies not reached"
+}

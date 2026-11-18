@@ -1,0 +1,150 @@
+{
+ "TASK_ID": "ORCH-SCI-ADV065-DEEPEN-20261118",
+ "ACTOR_ID": "orchestrator",
+ "STANDING": "mandate that holds the work this actor has accepted; the owner writes `MANDATE_BOUND: ORCH-SCI-ADV065-DEEPEN-20261118` in its session",
+ "SESSION_NAME": "orch-adv004-mandate-reconciliation",
+ "AUTHORISED_QUEUE_ACCEPTED": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_ACCEPTED": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Reconcile accepted work (ADV-064, ADV-065, ADV-065b, IT57 and ADV consumption) and state the delta of this mandate over ADV-065b; read delegation_budget.md",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator instruction 2026-11-18 (SESSION_FUNCTION SCI: follow-up of ADV-064/065, in Italian, sections A-G); ADV-065b already delivered the KCC2/OV350 first pass",
+     "accepted_at": "2026-11-18T21:35:48Z"
+    },
+    {
+     "step": "Targeted recheck of the ADV-065 premises that change the decision and examine the Arshad 2026 figures and supplement",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator instruction 2026-11-18, section D",
+     "accepted_at": "2026-11-18T21:35:54Z"
+    },
+    {
+     "step": "Survey the repository for SLC12A5/SLC12A2/chloride-regulator data and run a proportionate reproducible reanalysis with correct biological units, or document that none is usable",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator instruction 2026-11-18, sections E-G",
+     "accepted_at": "2026-11-18T21:36:01Z"
+    },
+    {
+     "step": "Land and deliver the ADV-065c follow-up (receipts recorded with the tools, regenerate views after rebase, push), deliver originals, qualified synthesis, corrections, consumer delta, residual questions and executable work to ADV (advisor) and IT, and verify take-in-charge",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18 (A to G)",
+     "accepted_at": "2026-11-18T23:33:35Z"
+    },
+    {
+     "step": "ADV-067 lithium regimen bifurcation table and decision",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-067 assignment message 2026-11-18 (advisor)",
+     "accepted_at": "2026-11-18T23:33:35Z"
+    },
+    {
+     "step": "Select the next question with ADV by marginal benefit (same axis again, another open question, an unused connection, a documented Wwox mechanism not yet turned into a pharmacological comparison, an unread relevant source); propose a reasoned choice visibly if ADV is busy",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 1",
+     "accepted_at": "2026-11-18T23:33:44Z"
+    },
+    {
+     "step": "Answer ADV's diagnosis question on the two generator comparisons that showed no detectable benefit",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 2",
+     "accepted_at": "2026-11-18T23:33:44Z"
+    },
+    {
+     "step": "With IT, fix before the outcome the question, alternatives, utility criterion, error to avoid and no-difference outcome of one real case that tests whether the new relations improve a comparison against the simple path; record the result and the cost",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 3",
+     "accepted_at": "2026-11-18T23:33:44Z"
+    },
+    {
+     "step": "Reconcile the queue after delivery and continue the next useful deepening; update open questions through the existing path; use DREAM if associations can change a search",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 4",
+     "accepted_at": "2026-11-18T23:33:44Z"
+    }
+   ]
+  }
+ },
+ "ACCEPT_LOG": [
+  {
+   "at": "2026-11-18T21:35:48Z",
+   "source": "operator instruction 2026-11-18 (SESSION_FUNCTION SCI: follow-up of ADV-064/065, in Italian, sections A-G); ADV-065b already delivered the KCC2/OV350 first pass",
+   "step_sha256": "69f6e69aa2eb",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T21:35:54Z",
+   "source": "operator instruction 2026-11-18, section D",
+   "step_sha256": "95e3bb7ddd4f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T21:36:01Z",
+   "source": "operator instruction 2026-11-18, sections E-G",
+   "step_sha256": "ea678468dcf2",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:33:35Z",
+   "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18 (A to G)",
+   "step_sha256": "c9c20a92f61b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:33:35Z",
+   "source": "ADV-067 assignment message 2026-11-18 (advisor)",
+   "step_sha256": "ef70471b194f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:33:44Z",
+   "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 1",
+   "step_sha256": "e9b8125db5ec",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:33:44Z",
+   "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 2",
+   "step_sha256": "521058cec816",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:33:44Z",
+   "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 3",
+   "step_sha256": "0eb3ea88857a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:33:44Z",
+   "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 4",
+   "step_sha256": "4d0eca8e6432",
+   "reopened_block": false,
+   "authorised_by": null
+  }
+ ],
+ "DELEGATIONS": [
+  "ADV-065 producer (legend-delegate, agent a57af19b): asked sonnet/medium; read back claude-sonnet-5-5 x35, medium x35; birth 22,693; 35 turns; output 76,207; cache read 4,460,447; peak 227,405; completed NKCC1_KCC2 table (Q1-Q6), 4 staged receipts earlier landed (-65 abstract level).",
+  "ADV-065b producer (legend-delegate, agent a7d23230): asked sonnet, effort NOT stated in the dispatch (deviation from delegation_budget section 1: the delegate inherited the session setting); read back claude-sonnet-5-5 x85, effort xhigh x85; birth 23,740; 85 turns; output 159,905; cache read 18,382,596; peak 470,238; completed KCC2_OV350 table (K1-K5), 16 receipts later landed (-66).",
+  "ADV-065b verifier (legend-delegate, agent a0740363): asked sonnet, effort NOT stated in the dispatch (same deviation); read back claude-sonnet-5-5 x64, effort xhigh x64; birth 21,574; 64 turns; output 182,970; cache read 16,626,495; peak 485,955; 42 claims: 29 supported, 11 partly, 2 absences confirmed; found Kasahara Tables 1-2 mortality. Remedy for this mandate: every dispatch states model and effort (producer medium, verifier high) and the read-back is recorded.",
+  "ADV-065c P1 producer (legend-delegate, agent aa059df2): asked sonnet/medium; read back claude-sonnet-5-5 x31, medium x31; birth 20,859; 31 turns; output 48,783; cache read 2,675,790; peak 166,400; completed lever genetics and engagement table (L1-L3, N1, N2); 8 new full texts by keyword-sentence scans, 75 quotations matched, no STOP.",
+  "ADV-065c verifier V (legend-delegate, agent a8d6cc32): asked sonnet/high; read back claude-sonnet-5-5 x73, high x73; birth 20,878; 73 turns; output 140,360; cache read 13,690,481; peak 434,873; two phases; phase 1 32 statements (29 supported, 3 partly, reanalysis rerun byte-identical), phase 2 45 inference items (15 sound, 19 overstated, 9 missing rival, 1 unsupported, 1 transfer error); all replacement wordings applied; the KCC2-above-NKCC1 development ranking withdrawn.",
+  "ADV-065c recheck verifier (legend-delegate, agent a2c66295): asked sonnet/high; read back claude-sonnet-5-5 x72, high x72; birth 20,869; 72 turns; output 70,743; cache read 10,434,740; peak 302,141; 19 statements (18 supported, 1 partly), 6 overstatements reworded, 1 new rival added, 3 consistency defects fixed."
+ ]
+}

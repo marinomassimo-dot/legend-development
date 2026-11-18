@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-18T20:24:52Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T21:54:52Z",
+ "event_id": "FTR-20261118-38950809-67",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Discussion]: \"documented brain penetrability in neonates\"",
+  "verbatim_locator [Discussion]: \"have not determined the precise mechanism\"",
+  "verbatim_locator [Results]: \"In contrast, chronic bumetanide treatment completely restored the I-O curves for IPSCs in Fmr1 KO mice to WT levels\"",
+  "verbatim_locator [Results]: \"Thus, we compared bumetanide with CTZ, a thiazide diuretic that does not target NKCC1 and lacks brain permeability (43,49,50).\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065c_transfer_sci_20261118/TRANSFER_LEDGER_CHLORIDE_LEVERS_ADV065C_SCI_20261118.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "f4b42c49a054c9d74d4a02dbaa821ebd34063ca4b27f1f0c1103dcaef2cdae39",
+ "source_kind": "fulltext_remote",
+ "source_locator": "files/fulltext/adv065c_20261118/PMID38950809_PMC11825064_efetch_pmc.xml",
+ "study_id": {
+  "pmid": "38950809"
+ },
+ "workflow": "SCI ADV-065c: open-access full text fetched by NCBI E-utilities (db=pmc, plain client) by a legend-delegate producer (sonnet, effort medium read back) that read the body by keyword-sentence scans; quotations re-matched in code by SCI against the saved XML; coverage marks only sections where a matched locator lies; figures, supplements and table bodies not reached"
+}

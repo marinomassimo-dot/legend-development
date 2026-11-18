@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-18T20:24:52Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T21:54:52Z",
+ "event_id": "FTR-20261118-23006485-67",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"potential risk of early treatment with bumetanide\"",
+  "verbatim_locator [Abstract]: \"We found that neonatal treatment with bumetanide resulted in a similar level of susceptibility to thermally induced seizures as described for the GABA(A) γ2(R43Q) mouse.\"",
+  "verbatim_locator [Abstract]: \"It also draws attention to the potential risk of early treatment with bumetanide.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065c_transfer_sci_20261118/TRANSFER_LEDGER_CHLORIDE_LEVERS_ADV065C_SCI_20261118.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "b13834a5b2dcb66ec82800788de9879f5600f71b7ff4c825b1ace036101d0c30",
+ "source_kind": "abstract",
+ "source_locator": "files/fulltext/adv065c_20261118/abs_23006485.txt",
+ "study_id": {
+  "pmid": "23006485"
+ },
+ "workflow": "SCI ADV-065c; abstract parsed from PubMed efetch XML saved by a legend-delegate producer (sonnet, medium) and written to the saved file by SCI after re-matching the quotation(s) in code"
+}

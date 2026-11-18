@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-18T20:24:52Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T21:54:52Z",
+ "event_id": "FTR-20261118-26029047-67",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Discussion]: \"Hence, NKCC1 blockage fails to rescue ischemic seizures regardless of the anti-seizure efficacy of GABAA agonists which fail at P7 but work at P10 and P12.\"",
+  "verbatim_locator [Discussion]: \"Recent review also discusses the various reasons for the low bioavailability of BTN in brain, a significant caveat to this line of pharmacotherapy (Puskarjov et al., 2014b).\"",
+  "verbatim_locator [Results]: \"The post-ischemic downregulation of KCC2 expression in ipsilateral hemisphere was ~45% compared to uninjured contralateral hemisphere\"",
+  "verbatim_locator [Discussion]: \"Current clinical trials for BTN were initiated based on earlier reports of BTN-efficacy from non-ischemic models that may depend on the stable KCC2 expression following the initial insult.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065c_transfer_sci_20261118/TRANSFER_LEDGER_CHLORIDE_LEVERS_ADV065C_SCI_20261118.md"
+ ],
+ "prior_receipt": "FTR-20261118-26029047-65",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "c3a6abe4218b87674249f4ac6c2e85d10d3560339c624a55edb89fab7cc4aa50",
+ "source_kind": "fulltext_remote",
+ "source_locator": "files/fulltext/adv065c_20261118/PMID26029047_PMC4429249_efetch_pmc.xml",
+ "study_id": {
+  "pmid": "26029047"
+ },
+ "workflow": "SCI ADV-065c: open-access full text fetched by NCBI E-utilities (db=pmc, plain client) by a legend-delegate producer (sonnet, effort medium read back) that read the body by keyword-sentence scans; quotations re-matched in code by SCI against the saved XML; coverage marks only sections where a matched locator lies; figures, supplements and table bodies not reached"
+}

@@ -1,0 +1,8 @@
+metric	KO_mean	WT_mean	log2_KO_over_WT	KO_min	KO_max	WT_min	WT_max	ranges
+SLC12A5_CPM	30.125	17.8	0.759	19.2	41.3	15.6	20.0	overlap
+SLC12A2_CPM	5.4	5.2	0.054	5.0	5.6	4.6	5.8	overlap
+ratio_A2_over_A5	0.201	0.294	-0.551	0.133	0.289	0.292	0.297	separated
+neuronal_panel	118.65	132.15	-0.155	112.2	127.0	121.9	142.4	overlap
+A5_over_neuronal	0.253	0.134	0.915	0.161	0.356	0.128	0.14	separated
+A2_over_neuronal	0.046	0.04	0.212	0.044	0.047	0.038	0.041	separated
+A2_over_progenitor_glia	0.043	0.058	-0.453	0.029	0.06	0.056	0.061	overlap
