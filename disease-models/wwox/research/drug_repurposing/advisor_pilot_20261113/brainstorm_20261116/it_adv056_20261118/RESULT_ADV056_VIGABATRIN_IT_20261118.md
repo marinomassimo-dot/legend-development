@@ -63,3 +63,7 @@ Abstract-level for every literature row; the label read in full for the boxed wa
 
 ## Verification
 Blind verification of the twelve claims that carry the result (label boxed warning and assessment schedule, ERG 21% of 146, perimetry 34% of 32 and the 9% to 63% gradient, MRI 22% against 4% in 205, the 64-child cohort and its odds ratio, the WWOX-class MRI abstract, the 1999 trial, UKISS and ICISS percentages, the young-rat spasm-model result): 12 of 12 SUPPORTED against the saved bytes (abstract level for the literature, label text for the label); `VERIFY_RESULT_BLIND_IT_20261118.tsv`. Added by the verifier: the 21% ERG report also says no effect of age at initiation, sex or cumulative dose; the 205 infants are the review population, not an arm; the perimetry duration groups hold 10 to 11 children each, with higher risk in tuberous sclerosis. My own check of the quotes of package B rows was by substring against the saved bytes (no failures). The aggregates of section 1 come from the held readings and were not re-derived by the verifier (they rest on per-child held tables that this dossier does not reproduce).
+
+
+## Update 2026-11-18 (IT, ADV's citation check; the text above is not edited)
+The WWOX MRI report (PMID 41442931, Pediatr Neurol): electronic publication 2025-12-06, volume 175 (the 2026 print year); cite it as 'Choi 2025/2026' or by PMID. The card's 2026 date is the print year.

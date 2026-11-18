@@ -1,0 +1,26 @@
+# A short set of aggregate questions for a clinician or a registry (IT; ADV-058 unit 1; 2026-11-18; DRAFT for the operator's use if a channel exists; nothing is sent)
+
+**Not medical advice. No agent is recommended, and nothing here asks a clinician to prefer, start, stop or avoid any agent.** The questions ask only for counts, in age bands, that a service or a registry can read from its own aggregate figures without opening any individual record. Reference genotype class only (children with biallelic loss of WWOX function).
+
+## How to answer (the same for every question)
+* Give counts only, in the bands shown. Any cell with fewer than 3 children is written "fewer than 3" or merged into the neighbouring band; do not give a number below 3.
+* Age bands: under 1 year, 1 to 3 years, over 3 years (age at the start of the agent, not at the time of reply).
+* A question that cannot be answered from existing aggregate figures is answered "not recorded", which is a useful answer.
+
+## What is NOT asked
+No name, initials, date (of birth, of an event or of a visit), place, centre or country, no variant or genotype string beyond "biallelic loss of function", no sex, no free text about any person, no image, no per-child list or table, no dose, schedule or regimen detail, no opinion on any agent, no request for a family's account, and no request to contact any family. Nothing that could identify a person is needed for any question, and none should be sent.
+
+## The questions, in value-of-information order
+**Q1. Was the agent the only change? (changes the cells "chronic control in children" for vigabatrin, the ketogenic diet and memantine in the ADV-053 comparison.)**
+For each class of chronic agent your service has used in these children (steroid or hormonal, vigabatrin, ketogenic diet, cannabidiol, phenobarbital, other antiseizure agents, other): the number of children who received it, by start-age band; and, of those, the number for whom it was the only change to the treatment regimen in the 8 weeks before and the 8 weeks after it was started. *Why first:* every WWOX-class response on record is confounded by co-therapy (no child on record had vigabatrin alone); a count of isolated changes is the cheapest figure that separates an agent's effect from its neighbours and from a drug added at a bad moment.
+**Q2. How was the outcome measured, and what happened without an agent? (changes the same cells, and the natural-history comparison.)**
+For the same classes: of the children who received it, the number whose outcome was recorded by (a) video-EEG or EEG, (b) a seizure diary kept before and after, (c) a clinical impression only; and the number with a recorded reduction of the targeted seizure type of at least half, no change, or worsening, by those three methods. Also: among children who had NOT received any of the listed classes during a comparable period, the number whose spasms or seizures stopped or changed type by age band. *Why second:* all stated responses on record are clinical impressions; remission with age cannot be excluded without a comparison count.
+**Q3. Was the pallidal and thalamic change symptomatic, and did it resolve? (changes the harm cell for vigabatrin.)**
+Among children who had brain imaging during or after exposure to the vigabatrin class: the number imaged; the number with a new symmetrical signal change in the pallidum or thalamus; of those, the number with and without new symptoms; and the number in whom repeat imaging after the agent was stopped showed resolution, persistence, or who had no repeat imaging. *Why third:* the only WWOX-class report is two children selected for the finding, and its abstract does not say whether either was symptomatic or whether the change resolved.
+**Q4. Visual assessment in children with optic involvement. (changes the harm cell for vigabatrin and any agent with a visual warning.)**
+Among children with documented optic involvement (optic atrophy or a visual impairment attributed to the visual pathway) who received any chronic agent: the number; the number who had a visual assessment before the agent and after it, by method (visual-field testing, electroretinography or visual evoked potentials, behavioural assessment, none); and the number with a documented change. Also the number with optic involvement who were never exposed. *Why fourth:* the label's monitoring depends on cooperation, and no study on record has this group as its exposed population.
+**Q5. Development status by start age. (changes the "development" row of the comparison.)**
+For children who started any chronic agent in the first year of life: the number alive at ages 1, 2 and 3; and, at the most recent routine review, the number in each of three bands of motor achievement (none, sitting, walking), by start-age band. *Why fifth:* no non-gene agent has any development endpoint on record, and the one comparator (gene addition) is a prevention study in a mouse.
+
+## Note for the operator
+The first two questions would change the comparison most; Q3 and Q4 are harm questions that only exposed children can answer. If a registry already exists, the questions fit as an add-on to its aggregate report; if none exists, no part of this set needs a new database. Nothing in this set depends on any individual-level record.
