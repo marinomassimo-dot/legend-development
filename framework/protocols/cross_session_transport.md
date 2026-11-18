@@ -716,6 +716,41 @@ restate it. A session that lost the conversation reads that entry first.
   pauses and reserved acts keep their meaning; data, inference, hypothesis and model result stay
   distinct.
 
+### Wake-up durability: the presidio belongs to the ADV campaign, not to a chat (operator, 2026-11-18, PERMANENT)
+
+**The property.** Scheduling and responsibility for the presidio belong to the ADV campaign. The termination or replacement of a chat never requires a new operator prompt to restore the programme that is
+already authorised. Evidence and measurements: `governance/design_records/wakeup_continuity_20261118.md` (the 2026-11-18 loss of the whole desktop service by the OOM killer, and a controlled test on a scratch
+session). This subsection is the operating rule; the design record is non-normative.
+
+**Who does what.** The **ADV host** is a session bound to the campaign's mandate record (`ORCH-ADV-FOLLOWTHROUGH-*`, which carries `SESSION_NAME`, `SESSION_BINDING` and a `RECALL` field). The host owns the
+recall, the recovery and any substitution. The read-only analyst (`legend-strategic-advisor`) is a consultant: it never manages a process, a cron or a session. Identity is the **bound session id**
+(the `MANDATE_BOUND: <TASK_ID>` line in the session's own text and the record's `SESSION_BINDING`), never `ACTOR_ID` (ADV and IT share `orchestrator` and are different functions) and never a display
+name (a revival or an operator rename changes it). Two live sessions may answer to one name; only the ones that carry the marker are hosts.
+
+**The chain, each layer already installed or part of the tools.**
+1. *The runtime's daemon* respawns a killed background session under the same id (measured).
+2. *The host crontab* (`mandate_watch.py check --all --deliver resume`, hourly, in the system `cron` service, so a desktop loss does not take it down) revives a bound session that is **not live** while its
+   mandate record still lists authorised work, under its own id and with no flags (see the limits). A session counts as live only if its listing entry names a running pid: the runtime keeps killed and
+   stopped sessions in `claude agents --json` without a pid.
+3. *The revived host restores its one recall.* A session cron is restored on resume under the **same job id** (measured, not documented): the host calls CronList first and creates the recall only if no job carries
+   the mark (`strategic_advisor.py recall` prints the text; the tag in its first 120 characters identifies it). One recall, never two.
+4. *The host keeps the recall alive.* A session cron expires after 7 days. After every CronCreate the host runs `strategic_advisor.py recall-armed --campaign <DIR> --job-id <id>`; the tick warns from day 5
+   (`RECALL RENEWAL DUE`): CronDelete the job, CronCreate the recall text, `recall-armed` again.
+5. *Work must be in a record to be recoverable.* The watch revives a session only while **its record** lists authorised work and never executes instructions found in messages. The actor that takes charge of
+   authorised work writes it down: `mandate_continuity.py accept --task <ID> --step ... --source <where it was authorised>`; `step` moves it (DONE needs evidence, BLOCKED needs a named blocker, optionally an
+   `unblock_when` such as a commit already on `development/main`). A COMPLETE block is reopened only with `--reopen --authorised-by <pointer>`; a PAUSED or CANCELLED block is an operator stop and is never reopened.
+
+**Substitution and duplicates.** A substitute host takes over only by an explicit, operator-authorised act: `mandate_watch.py rebind --task <ID> --to <session> --authorised-by <pointer to the authorisation>`.
+It is refused while another live session still carries the marker (stop it, or have it write `MANDATE_RELEASED: <ID>`), when the target is not exactly one live session, or when the mandate is paused or
+cancelled. The new host then writes its `MANDATE_BOUND` line, calls CronList, and arms the recall only if none carries the mark; `route --to ADV` must show exactly one host first. Two live bound sessions
+are reported as `DUPLICATE_HOST`: nothing is resumed and nothing is chosen. A revival or a rename never transfers a mandate by itself.
+
+**Limits, exact.** A session cron is session-only, fires only while the session is idle and expires after 7 days (restoration on resume was observed on Claude Code 2.1.327; whether a resume restarts the
+7-day clock was not measured). No supported external command sends a prompt to a **live** session: a live interactive session that has lost its recall cannot be woken from outside; a live *background*
+session can be stopped (`claude stop <id>`) and resumed with `claude --bg --resume <id>` and no other flag (any flag on a session with saved options starts a copy). The watch never wakes a closed mandate and
+never transfers one. Pauses, stops, resource limits and jobs already running keep their meaning: a PAUSED or CANCELLED mandate is not revived, a live job keeps the mandate running, and the effective quota
+is not guessed. Heavy jobs (batteries, browsers, delegates) run in their own memory-limited scope (`framework/scripts/README.md`, "memory containment") so that one of them cannot take the desktop service down.
+
 ### Decision table — apply it before ending any turn
 
 | Observed condition | Action |

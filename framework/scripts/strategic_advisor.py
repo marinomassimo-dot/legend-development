@@ -1092,7 +1092,7 @@ def session_activity(now: dt.datetime, agents: list[dict[str, Any]] | None = Non
     actor commits under one author. The runtime says each session's status and its transcript's last write; only that modification time is read, never the content. `quiet_min` is minutes since the transcript was
     last written (None when it is not found), `idle_share` counts this repository's sessions written within the last day (older ones are listed, not counted). Facts, not a verdict: a written reason is still read by the presidio."""
     agents = _agents() if agents is None else agents
-    last = _git("log", "-1", "--format=%ct", "main")
+    last = _git("log", "-1", "--format=%ct", observed_ref(fetch=False, now=now)["ref"])      # the observed ref, not a stale local main
     main_quiet = round((now.timestamp() - int(last)) / 60) if last.isdigit() else None
     published = unpublished_main(now)
     if not agents:
@@ -1211,11 +1211,93 @@ def resume_problem(spec: str) -> str:
     return f"resume_when {spec!r} is not one of event | record:<TASK_ID>=<STATE> | path:<file>[~<text>] | after:<UTC>; read as event"
 
 
+PUBLISHED_REMOTE = "development"
+FETCH_TIMEOUT_S = 25
+
+
+def _ref_time(ref: str) -> int:
+    out = _git("log", "-1", "--format=%ct", ref)
+    return int(out) if out.isdigit() else 0
+
+
+RECALL_RENEW_DAYS = 5      # a session cron expires after 7 days (CronCreate says so); the warning leaves two days to renew
+
+
+def recall_status(state: dict[str, Any], now: dt.datetime) -> dict[str, Any]:
+    """The age of the one in-session recall, from the host's own `recall-armed` note. A session cron is session-only and auto-expires after 7 days; a revival restores it under the same job id (measured 2026-11-18,
+    Claude Code 2.1.327) but nothing re-arms it before it expires except the host. The tick cannot see CronList, so it counts from what the host recorded and says when that note is missing."""
+    rec = state.get("recall") or {}
+    armed = rec.get("armed_utc")
+    if not armed:
+        return {"armed_utc": None, "age_days": None, "renew_due": False, "note": "no arming recorded: after CronCreate run `strategic_advisor.py recall-armed` so the 7-day expiry is watched"}
+    try:
+        age = (now - dt.datetime.fromisoformat(armed.replace("Z", "+00:00"))).total_seconds() / 86400
+    except ValueError:
+        return {"armed_utc": armed, "age_days": None, "renew_due": False, "note": "the recorded arming time is not readable"}
+    due = age >= RECALL_RENEW_DAYS
+    return {"armed_utc": armed, "job_id": rec.get("job_id", ""), "age_days": round(age, 1), "renew_due": due,
+            "note": (f"armed {age:.1f} days ago (job {rec.get('job_id') or '?'}); renew before day 7: CronList, CronDelete the job carrying the mark, CronCreate the text of `recall`, then `recall-armed`"
+                     if due else f"armed {age:.1f} days ago")}
+
+
+def observed_ref(fetch: bool = True, now: dt.datetime | None = None) -> dict[str, Any]:
+    """2026-11-18: the ref the presidio reads as "main", and how far it can be trusted. The tick used to read ONLY the local `main`; on 2026-11-18 the primary checkout's `main` was 13 hours behind `development/main`
+    (the checkout held the newer work detached, the published branch held it too, local `main` held neither), and a presidio that reads a stale ref says "nothing new" while work lands. Now: one bounded fetch of
+    the published remote's `main` (it moves only the remote-tracking ref: no checkout, branch or index is touched, nothing is reset), then the NEWEST of development/main, origin/main and local main by commit time is
+    the observed ref, and the answer says which ref it is, whether the fetch succeeded, how old the last fetch is when it did not, and how far local `main` and the checkout lag behind it. States: VERIFIED (published ref
+    fetched now), UNVERIFIED (the fetch failed: the published ref is as old as the last fetch), LOCAL_ONLY (the newest commit is on local `main` and not published), NO_REMOTE (a repository without the published remote:
+    nothing to verify). A state other than VERIFIED and NO_REMOTE is said in the tick's `why`; the tick never reads it as proof that nothing landed."""
+    now = now or _now()
+    has_remote = bool(_git("remote", "get-url", PUBLISHED_REMOTE))
+    fetch_info: dict[str, Any] = {"attempted": False, "ok": None, "error": ""}
+    if fetch and has_remote and os.environ.get("LEGEND_ADVISOR_NOFETCH") != "1":
+        fetch_info["attempted"] = True
+        try:
+            done = subprocess.run(["git", "fetch", "-q", PUBLISHED_REMOTE, "main"], cwd=ROOT, capture_output=True, text=True, timeout=FETCH_TIMEOUT_S)
+            fetch_info["ok"] = done.returncode == 0
+            fetch_info["error"] = "" if done.returncode == 0 else (done.stderr.strip().splitlines() or ["fetch failed"])[-1][:160]
+        except (OSError, subprocess.SubprocessError) as exc:
+            fetch_info["ok"], fetch_info["error"] = False, type(exc).__name__
+    fetch_head = Path(_git("rev-parse", "--path-format=absolute", "--git-common-dir") or ".") / "FETCH_HEAD"
+    fetch_age = round((now.timestamp() - fetch_head.stat().st_mtime) / 60) if fetch_head.exists() else None
+    cands = {r: _git("rev-parse", "--verify", "--quiet", r) for r in (f"{PUBLISHED_REMOTE}/main", "origin/main", "main")}
+    cands = {r: sha for r, sha in cands.items() if sha}
+    if not cands:
+        return {"ref": "main", "sha": "", "state": "NO_REMOTE", "fetch": fetch_info, "fetch_age_min": fetch_age, "local_main": {}, "checkout": {}, "note": "no main ref is known"}
+    def _is_ancestor(old: str, new: str) -> bool:
+        return old == new or subprocess.run(["git", "merge-base", "--is-ancestor", old, new], cwd=ROOT, capture_output=True).returncode == 0
+    order = [r for r in (f"{PUBLISHED_REMOTE}/main", "origin/main", "main") if r in cands]
+    tips = [r for r in order if all(_is_ancestor(cands[o], cands[r]) for o in order)]       # a ref that contains all the others: the real tip (ties go to the published remote first)
+    ref = tips[0] if tips else max(order, key=lambda r: (_ref_time(r), r == f"{PUBLISHED_REMOTE}/main"))      # diverged refs: the newest commit
+    sha = cands[ref]
+    published = cands.get(f"{PUBLISHED_REMOTE}/main", "")
+    local_only = ref == "main" and bool(published) and sha != published and subprocess.run(["git", "merge-base", "--is-ancestor", sha, published], cwd=ROOT, capture_output=True).returncode != 0
+    if not has_remote:
+        state = "NO_REMOTE"
+    elif local_only:
+        state = "LOCAL_ONLY"
+    elif fetch_info["attempted"] and fetch_info["ok"]:
+        state = "VERIFIED"
+    else:
+        state = "UNVERIFIED"
+    behind = _git("rev-list", "--count", f"main..{ref}") if "main" in cands and ref != "main" else "0"
+    head = _git("rev-parse", "HEAD")
+    head_behind = _git("rev-list", "--count", f"HEAD..{ref}")
+    note = {"VERIFIED": f"{ref} fetched now", "NO_REMOTE": "no published remote in this repository",
+            "LOCAL_ONLY": f"the newest commit is on local main and is not published ({published[:8] or 'no published ref'} is the published tip)",
+            "UNVERIFIED": (f"the fetch of {PUBLISHED_REMOTE}/main failed ({fetch_info['error'] or 'not attempted'}); {ref} is as old as the last fetch ({fetch_age} min ago)" if fetch_age is not None
+                           else f"the fetch of {PUBLISHED_REMOTE}/main failed ({fetch_info['error'] or 'not attempted'}) and no earlier fetch is recorded")}[state]
+    return {"ref": ref, "sha": sha, "state": state, "fetch": fetch_info, "fetch_age_min": fetch_age, "note": note,
+            "local_main": {"sha": cands.get("main", "")[:12], "behind_observed": int(behind) if behind.isdigit() else None},
+            "checkout": {"head": head[:12], "branch": _git("rev-parse", "--abbrev-ref", "HEAD"), "behind_observed": int(head_behind) if head_behind.isdigit() else None}}
+
+
 def observe(campaign: Path, state: dict[str, Any]) -> dict[str, Any]:
     """The bounded facts a decision needs, read mechanically: roadmap digest, commits since the last tick, mandate transitions, stalled mandates reported by the watch, sessions."""
-    main_sha = _git("rev-parse", "main")
+    ref = observed_ref()
+    main_sha = ref["sha"] or _git("rev-parse", "main")
     last = state.get("main_sha") or main_sha
-    commits = [c for c in _git("log", "--format=%h %s", f"{last}..main", "--", "ledger/tasks", "disease-models/wwox/research/drug_repurposing", *_own_updates(campaign)).splitlines()[:60] if c.strip()]
+    commits = [c for c in _git("log", "--format=%h %s", f"{last}..{main_sha}", "--", "ledger/tasks", "disease-models/wwox/research/drug_repurposing", *_own_updates(campaign)).splitlines()[:60] if c.strip()]
     recs = _records()
     before = state.get("mandates") or {}
     transitions = [f"{t}: {before[t]} -> {r['state']}" for t, r in recs.items() if t in before and before[t] != r["state"] and not _is_sender(t)]       # HE57: the sender's own records changing are not an event
@@ -1229,13 +1311,15 @@ def observe(campaign: Path, state: dict[str, Any]) -> dict[str, Any]:
     waits = _waits()
     seen_waits = set(state.get("waits_seen") or [])
     new_waits = [w for w in waits if sha256_text(w["task"] + "|" + w["blocker"])[:12] not in seen_waits] if state.get("waits_seen") is not None else []   # the first tick records the waits as they are; only a NEW wait is an event
-    events = ([f"delivery: {c}" for c in commits if EVENT_SUBJECT.search(c)] + [f"mandate: {t}" for t in transitions] + [f"opened: {t}" for t in opened]
+    switched = ([f"reference: the observed ref moved to {ref['ref']}@{main_sha[:8]} (local main {ref['local_main'].get('behind_observed')} commits behind it)"]
+                if state.get("main_sha") and state.get("main_ref") and state.get("main_ref") != ref["ref"] else [])
+    events = (switched + [f"delivery: {c}" for c in commits if EVENT_SUBJECT.search(c)] + [f"mandate: {t}" for t in transitions] + [f"opened: {t}" for t in opened]
               + [f"stalled-for-the-watch: {t}" for t in stalled] + [f"waiting: {w['task']}: {w['blocker'][:100]}" for w in new_waits])
     portfolio = portfolio_snapshot(recs)
     if (portfolio["available"] or state.get("portfolio_digest")) and portfolio["digest"] != state.get("portfolio_digest"):
         events.append(f"portfolio: {portfolio['digest'][:16]} opportunities, priorities or executable dependencies changed")
     rm = roadmap_text()
-    return {"main_sha": main_sha, "roadmap_sha256": sha256_text(rm) if rm else "", "commits_since_last_tick": len(commits), "events": events,
+    return {"main_sha": main_sha, "main_ref": ref, "roadmap_sha256": sha256_text(rm) if rm else "", "commits_since_last_tick": len(commits), "events": events,
             "open_mandates": sorted(t for t, r in recs.items() if r["state"] == "OPEN"), "mandates": {t: r["state"] for t, r in recs.items()}, "waits": waits,
             "queue": queue_state(recs), "sessions": _sessions(), "portfolio": portfolio}
 
@@ -1380,12 +1464,19 @@ def tick(campaign: Path) -> dict[str, Any]:
             verdict, why = "EVALUATE", "the last evaluation left no stated outcome and no executable work remains: decide what is next from the portfolio"
         elif outcome.get("stated") and outcome.get("outcome") in ("continue", "switch", "assign", "queue") and obs["queue"]["exhausted"] and hours is not None and hours >= float(cont.get("min_hours_between", 4)):
             verdict, why = "EVALUATE", "the previous choice leaves no executable work: choose what is next from the standing portfolio"
+    recall = recall_status(state, now)
+    if verdict in ("NONE", "DEFERRED") and cont and recall["renew_due"]:
+        why += f"; RECALL RENEWAL DUE: {recall['note']}"
+    ref = obs.get("main_ref") or {"ref": "main", "sha": "", "state": "NO_REMOTE", "note": "no reference was observed", "fetch": {}, "fetch_age_min": None, "local_main": {}, "checkout": {}}
+    if verdict in ("NONE", "DEFERRED") and ref["state"] in ("UNVERIFIED", "LOCAL_ONLY"):
+        # 2026-11-18: "nothing new" about a reference that could not be verified is not a statement that nothing landed.
+        why += f"; NOT VERIFIED: {ref['note']}"
     if verdict == "NONE" and not first and obs["portfolio"].get("actionable"):
         # ADV-047: NONE answers "did an event, a roadmap change or a met resume condition arrive", not "is there work"; the tick line itself names the ready rows so a quiet hour is not read as an empty portfolio
         why += "; this says nothing about opportunities, ready portfolio rows: " + ", ".join(obs["portfolio"]["actionable"][:6])
     state["last_tick_utc"] = _utc(now)
     if verdict != "RUNNING":
-        state.update(main_sha=obs["main_sha"], mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"],
+        state.update(main_sha=obs["main_sha"], main_ref=(obs.get("main_ref") or {}).get("ref", "main"), mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"],
                      waits_seen=sorted({sha256_text(w["task"] + "|" + w["blocker"])[:12] for w in obs["waits"]}))
     # A deferred tick observes without consuming. While a run is active, leave its
     # baseline alone so deliveries arriving after its snapshot reach the next run.
@@ -1408,6 +1499,8 @@ def tick(campaign: Path) -> dict[str, Any]:
             "events": obs["events"][:12], "open_mandates": obs["open_mandates"], "waiting_on": [f"{w['task']}: {w['blocker'][:70]}" for w in obs["waits"]][:4] + ([f"... {len(obs['waits'])} in all"] if len(obs["waits"]) > 4 else []),
              "portfolio": {k: obs["portfolio"][k] for k in ("path", "available", "actionable", "errors")},
             "sessions": obs["sessions"], "activity": session_activity(now), "digest": digest,
+            "recall": recall,
+            "reference": {k: ref[k] for k in ("ref", "sha", "state", "note", "fetch", "fetch_age_min", "local_main", "checkout")},
             "evaluation_clock": {"utc": _utc(last_eval) if last_eval else None, "source": clock_source},
             "hours_since_last_evaluation": None if hours is None else round(hours, 1)}
 
@@ -1447,9 +1540,31 @@ def delivery_refusal(campaign: Path, ident: str, state: str, to: list[str]) -> s
     if not to:
         return (f"SENT needs --to <session> for the real send(s): the receipt, not the text of the message, says who received it. {ident} is for {row.get('recipient')}"
                 + (f" = session {session!r}" if session else ""))
-    if session and session.lower() not in {t.strip().lower() for t in to}:
+    if session and session.lower() in {t.strip().lower() for t in to}:
+        return ""
+    # 2026-11-18: a session revived under another display name made a real send unregistrable (the receipt named the new name, the budget the old one). Identity is the session, not its name: both sides are
+    # resolved against the LIVE sessions (a listed entry without a process is not live), with a record's binding or marker before a display name, and compared by session id.
+    live = _live_agents()
+    if session and live:
+        import mandate_watch as mw
+        want = mw.route(session, live, ROOT)
+        got = [mw.route(t.strip(), live, ROOT) for t in to]
+        if want["status"] == "RESOLVED" and any(g["status"] == "RESOLVED" and g["session_id"] == want["session_id"] for g in got):
+            return ""
+        if want["status"] == "RESOLVED":
+            names = ", ".join(f"{g.get('recipient') or t} ({g['status']})" for t, g in zip(to, got))
+            return (f"the receipt names {names}; {ident} is for {row.get('recipient')} = session {want['recipient']!r} [{want['session_id'][:8]}]. Send it to that session (one send per recipient) and record that receipt")
+        return (f"{row.get('recipient')} = {session!r} does not resolve to exactly one live session ({want['status']}: {want.get('why', '')}); a send to it cannot be recorded as SENT: record UNREACHABLE, "
+                "or name the session by its id in the budget recipients")
+    if session:
         return f"the receipt names {', '.join(to)}; {ident} is for {row.get('recipient')} = session {session!r}. Send it to that session (one send per recipient) and record that receipt"
     return ""
+
+
+def _live_agents() -> list[dict[str, Any]]:
+    """The runtime's listing, minus the entries whose process is gone (`claude agents --json` keeps killed and stopped sessions without a pid)."""
+    import mandate_watch as mw
+    return [x for x in (_agents() or []) if isinstance(x, dict) and mw.session_is_live(x)]
 
 
 def _log_assignment(campaign: Path, row: dict[str, Any]) -> None:
@@ -1530,7 +1645,7 @@ def host_assign(campaign: Path, text: str) -> int:
         "resume_when": "event", "problem": "",
     }
     later = [e for e in state.get("pending_events", []) if e not in handled]
-    state.update(main_sha=obs["main_sha"], mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"],
+    state.update(main_sha=obs["main_sha"], main_ref=(obs.get("main_ref") or {}).get("ref", "main"), mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"],
                  portfolio_digest=obs["portfolio"]["digest"],
                  last_digest=sha256_text(obs["roadmap_sha256"] + "|" + "|".join(sorted(handled))),
                  pending_events=later, pending_commits=state.get("pending_commits", 0) if later else 0,
@@ -1922,7 +2037,7 @@ def hold(campaign: Path, reason: str, resume_when: str, excluded: str = "") -> i
               "previous_digest": state.get("last_digest", ""), "previous_outcome": {k: (state.get("last_outcome") or {}).get(k, "") for k in ("evaluation", "outcome", "utc")}, "main_sha": obs["main_sha"]}
     with (campaign / "holds.jsonl").open("a", encoding="utf-8") as f:
         f.write(json.dumps(record, sort_keys=True) + "\n")
-    state.update(main_sha=obs["main_sha"], mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"], waits_seen=sorted({sha256_text(w["task"] + "|" + w["blocker"])[:12] for w in obs["waits"]}),   # what a tick records as observed: the listed events must not be read again
+    state.update(main_sha=obs["main_sha"], main_ref=(obs.get("main_ref") or {}).get("ref", "main"), mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"], waits_seen=sorted({sha256_text(w["task"] + "|" + w["blocker"])[:12] for w in obs["waits"]}),   # what a tick records as observed: the listed events must not be read again
                  last_digest=digest, pending_digest=digest, pending_events=[], pending_commits=0, portfolio_digest=obs["portfolio"]["digest"], unstated_streak=0,
                  last_outcome={"stated": True, "outcome": "wait", "reason": reason.strip(), "excluded": excluded.strip(), "problem": "", "resume_when": spec, "evaluation": "HOLD", "utc": now})
     _save_state(campaign, state)
@@ -1999,6 +2114,8 @@ def main(argv: list[str] | None = None) -> int:
     ac.add_argument("--hours", type=int, default=24); ac.add_argument("--max-invocations", type=int, default=3); ac.add_argument("--max-assignments", type=int, default=3)
     ac.add_argument("--turn-limit", type=int, default=20); ac.add_argument("--recipient", action="append", default=[], help="role=session name, e.g. Orchestrator='IT Orchestrator'")
     rc = sub.add_parser("recall", help="print the one canonical text of the hourly recall (what to pass to CronCreate when restoring it); CronList first, so there is one copy only"); rc.add_argument("--campaign", required=True)
+    ra = sub.add_parser("recall-armed", help="record that the host armed (or renewed) the one in-session recall just now: a session cron expires after 7 days, so the tick warns from day 5; run it right after CronCreate")
+    ra.add_argument("--campaign", required=True); ra.add_argument("--job-id", default="", help="the job id CronCreate returned")
     ec = sub.add_parser("authorise-continuous", help="record the operator's persistent authorisation to continue inside the roadmap (a mode of this campaign: budget, counters and history are untouched; `end-continuous` returns to the bounded pilot)")
     ec.add_argument("--campaign", required=True); ec.add_argument("--source", required=True, help="where the operator's authorisation is recorded (the Operator roadmap line)")
     ec.add_argument("--min-hours-between", type=float, default=4.0); ec.add_argument("--min-hours-anticipating", type=float, default=1.0)
@@ -2060,6 +2177,10 @@ def main(argv: list[str] | None = None) -> int:
         print(primary_refusal(), file=sys.stderr); return 2
     if args.cmd == "recall":
         print(recall_prompt(campaign)); return 0
+    if args.cmd == "recall-armed":
+        st = _load_state(campaign); now = _now()
+        st["recall"] = {"armed_utc": _utc(now), "job_id": args.job_id, "tag": re.search(r"\[text ([0-9a-f]{8})\]", recall_prompt(campaign)).group(1)}
+        _save_state(campaign, st); print(json.dumps(st["recall"])); return 0
     if args.cmd == "tick":
         print(json.dumps(tick(campaign), indent=1)); return 0
     if args.cmd == "meeting":

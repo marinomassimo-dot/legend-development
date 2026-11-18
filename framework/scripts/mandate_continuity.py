@@ -186,12 +186,26 @@ def unblock_met(spec) -> str:
             if isinstance(want, str) and want and want not in f.read_text(encoding="utf-8", errors="replace"):
                 return ""
             return f"{spec['path']} exists" + (f" and contains {want!r}" if isinstance(want, str) and want else "")
+        if isinstance(spec.get("commit"), str) and spec["commit"].strip():
+            # 2026-11-18: a blocker is often overtaken by a landing nobody wrote a file for. `{"commit": "<text of a commit subject>", "ref": "development/main"}` is met when a commit on that ref
+            # (default: the published branch) carries the text; `{"commit_sha": "<sha>", "ref": ...}` when that commit is contained in the ref. One bounded read of the history, never a search of anything else.
+            ref = str(spec.get("ref") or "development/main")
+            if spec.get("commit_sha"):
+                return f"commit {spec['commit_sha'][:12]} is on {ref}" if subprocess.run(["git", "-C", str(ROOT), "merge-base", "--is-ancestor", str(spec["commit_sha"]), ref],
+                                                                                            capture_output=True, timeout=15).returncode == 0 else ""
+            found = subprocess.run(["git", "-C", str(ROOT), "log", "-n", "3000", "--format=%h", "--fixed-strings", f"--grep={spec['commit'].strip()}", ref],
+                                   capture_output=True, text=True, timeout=20).stdout.split()
+            return f"a commit on {ref} carries {spec['commit'].strip()!r} ({found[0]})" if found else ""
+        if isinstance(spec.get("commit_sha"), str) and spec["commit_sha"].strip():
+            ref = str(spec.get("ref") or "development/main")
+            return f"commit {spec['commit_sha'][:12]} is on {ref}" if subprocess.run(["git", "-C", str(ROOT), "merge-base", "--is-ancestor", spec["commit_sha"].strip(), ref],
+                                                                                        capture_output=True, timeout=15).returncode == 0 else ""
         if isinstance(spec.get("record"), str) and isinstance(spec.get("state"), str):
             for path in (ROOT / "ledger" / "tasks").glob(f"*/{spec['record']}.json"):
                 rec = json.loads(path.read_text(encoding="utf-8"))
                 if str(rec.get("MANDATE_STATE") or "").strip().upper() == spec["state"].strip().upper():
                     return f"record {spec['record']} is {spec['state']}"
-    except (OSError, ValueError):
+    except (OSError, ValueError, subprocess.SubprocessError):
         return ""
     return ""
 
@@ -323,6 +337,8 @@ def verdict(record) -> dict:
                  for st in steps if st.get("blocker_resolved")]
     findings += [f"{st['objective']}[{st['index']}] invalid status {st['invalid_status']!r}, counted TODO"
                  for st in steps if st.get("invalid_status")]
+    findings += [f"{st['objective']}[{st['index']}] is {st['status']} but names a blocker ({str(st['blocker'])[:60]!r}): it counts as executable work; if it waits, set it BLOCKED (`step --status BLOCKED`)"
+                 for st in steps if st["status"] in ("TODO", "IN_PROGRESS") and str(st.get("blocker") or "").strip() and not st.get("blocker_resolved")]
     unreconciled = sum(1 for st in steps if st.get("unreconciled"))
     executable = [st for st in steps if st["status"] in ("TODO", "IN_PROGRESS")]
     base = {"task": task_id, "queue_key": queue_key, "mandate_state": state, "counts": counts,
@@ -500,6 +516,118 @@ def launcher_binding() -> str | None:
     """The task a launcher bound this process to, or None. A malformed id binds nothing."""
     value = os.environ.get(BIND_ENV, "").strip()
     return value if TASK_ID_RE.match(value) else None
+
+
+# ---------------------------------------------------------------- accepting work (2026-11-18)
+# The watch revives a session only while ITS RECORD lists authorised work. On 2026-11-18 two actors held real assignments received by message while their
+# records read COMPLETE, RELEASED or all-BLOCKED, so after a total host loss nothing revived them. The remedy is not a monitor that executes instructions found in
+# messages (it never does): the actor that takes charge of authorised work writes it into its own persistent mandate, with a pointer to where it was authorised.
+ACCEPT_BLOCK = "AUTHORISED_QUEUE_ACCEPTED"
+ACCEPT_OBJECTIVE = "OBJ_ACCEPTED"
+OPERATOR_STOPS = ("PAUSED", "CANCELLED")
+
+
+def _utc(now: datetime | None = None) -> str:
+    return (now or datetime.now(timezone.utc)).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def _write_record(path: Path, rec: dict) -> None:
+    path.write_text(json.dumps(rec, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def accept_step(root: Path, task_id: str, text: str, source: str, *, authorised_by: str = "", reopen: bool = False, owner: str = "",
+                create_for: str = "", actor: str = "", now: datetime | None = None) -> dict:
+    """Register ONE accepted unit of authorised work as an executable step of the actor's own mandate record.
+    `source` is where the work was authorised (an assignment id, a message, a roadmap line): without it nothing is written. The step goes to the block `AUTHORISED_QUEUE_ACCEPTED`, created when absent.
+    Refusals, each a decision that is not the actor's: an operator PAUSED / CANCELLED block anywhere in the record (a stop is respected, not reopened); a COMPLETE accepted block without
+    `reopen=True` AND `authorised_by` (the pointer to where the reopening was authorised): a session does not silently reopen a closed mandate. A source already registered is idempotent.
+    Every acceptance appends an entry to the record's `ACCEPT_LOG` (git is the audit) and to the hook events."""
+    text, source = (text or "").strip(), (source or "").strip()
+    if not text or not source:
+        raise ValueError("accept needs the step text and its --source (where the work was authorised)")
+    path = find_record(root, task_id)
+    if path is None:
+        if not create_for:
+            raise ValueError(f"no unambiguous ledger/tasks/*/{task_id}.json (a standing record is created with --create-for <actor>)")
+        if not re.fullmatch(r"[a-z][a-z0-9_-]*", create_for):
+            raise ValueError("--create-for names the actor directory under ledger/tasks (lower case)")
+        path = root / "ledger" / "tasks" / create_for / f"{task_id}.json"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        rec: dict = {"TASK_ID": task_id, "ACTOR_ID": create_for, "STANDING": "mandate that holds the work this actor has accepted; the owner writes `MANDATE_BOUND: " + task_id + "` in its session"}
+        if actor:
+            rec["SESSION_NAME"] = actor
+    else:
+        rec = json.loads(path.read_text(encoding="utf-8"))
+    blocks = dict(load_blocks(rec)) if any(k.startswith(QUEUE_PREFIX) for k in rec) else {}
+    stopped = [k for k, b in blocks.items() if block_state(b) in OPERATOR_STOPS]
+    if stopped:
+        raise PermissionError(f"{', '.join(stopped)} is PAUSED or CANCELLED: an operator stop is not reopened by a session; nothing was written")
+    block = blocks.get(ACCEPT_BLOCK)
+    reopened = False
+    if block is None:
+        block = {"MANDATE_STATE": "OPEN", ACCEPT_OBJECTIVE: {"order": 1, "steps": []}}
+        rec[ACCEPT_BLOCK] = block
+    elif block_state(block) != "OPEN":
+        if not (reopen and authorised_by.strip()):
+            raise PermissionError(f"{ACCEPT_BLOCK} is {block_state(block)}: reopening needs --reopen and --authorised-by <where it was authorised>; nothing was written")
+        block["MANDATE_STATE"] = "OPEN"
+        reopened = True
+    objective = block.setdefault(ACCEPT_OBJECTIVE, {"order": 1, "steps": []})
+    steps = objective.setdefault("steps", [])
+    existing = next((st for st in steps if isinstance(st, dict) and st.get("source") == source), None)
+    if existing is not None:
+        return {"task": task_id, "record": str(path.relative_to(root)), "registered": False, "why": "this source is already registered", "step": existing, **_summary(rec)}
+    step = {"step": text, "status": "TODO", "owner": owner or str(rec.get("ACTOR_ID") or "?"), "source": source, "accepted_at": _utc(now),
+            **({"authorised_by": authorised_by.strip()} if authorised_by.strip() else {})}
+    steps.append(step)
+    rec.setdefault("ACCEPT_LOG", []).append({"at": step["accepted_at"], "source": source, "step_sha256": hashlib.sha256(text.encode("utf-8")).hexdigest()[:12],
+                                             "reopened_block": reopened, "authorised_by": authorised_by.strip() or None})
+    _write_record(path, rec)
+    log_event("ACCEPT", task=task_id, source=source, reopened=reopened)
+    return {"task": task_id, "record": str(path.relative_to(root)), "registered": True, "reopened": reopened, "step": step, **_summary(rec)}
+
+
+def _summary(rec: dict) -> dict:
+    v = verdict(rec)
+    return {"verdict": v["verdict"], "message": v["message"]}
+
+
+def set_step(root: Path, task_id: str, match: str, status: str, *, evidence: str = "", blocker: str = "", unblock_when: dict | None = None, now: datetime | None = None) -> dict:
+    """Move one step of a record to a status by its `source` or by the start of its text, with the rules the verdict reads: DONE needs an evidence pointer; BLOCKED needs a named blocker (and may carry an
+    `unblock_when`); a step that stays TODO or IN_PROGRESS carries no blocker (a step that names one waits, and waiting is BLOCKED, or it keeps the queue executable)."""
+    status = status.strip().upper()
+    if status not in STEP_STATUSES:
+        raise ValueError(f"status must be one of {', '.join(STEP_STATUSES)}")
+    if status == "DONE" and not _is_evidence(evidence):
+        raise ValueError("DONE needs --evidence: a durable pointer (commit, receipt, record)")
+    if status == "BLOCKED" and not blocker.strip():
+        raise ValueError("BLOCKED needs --blocker: what the step waits for")
+    path = find_record(root, task_id)
+    if path is None:
+        raise ValueError(f"no unambiguous ledger/tasks/*/{task_id}.json")
+    rec = json.loads(path.read_text(encoding="utf-8"))
+    hits = []
+    for key, block in load_blocks(rec):
+        for name, objective in block.items():
+            if isinstance(objective, dict) and isinstance(objective.get("steps"), list) and name.strip().upper().startswith(OBJECTIVE_PREFIX):
+                hits += [(key, name, i, st) for i, st in enumerate(objective["steps"]) if isinstance(st, dict) and (st.get("source") == match or str(st.get("step", "")).startswith(match))]
+    if len(hits) != 1:
+        raise ValueError(f"{len(hits)} steps match {match!r}; give a source id or a longer start of the step text")
+    key, name, i, st = hits[0]
+    st["status"] = status
+    if status == "DONE":
+        st["evidence"] = evidence.strip()
+        st.pop("blocker", None); st.pop("unblock_when", None)
+    elif status == "BLOCKED":
+        st["blocker"] = blocker.strip()
+        if unblock_when:
+            st["unblock_when"] = unblock_when
+    else:
+        st.pop("blocker", None); st.pop("unblock_when", None)
+    st["updated_at"] = _utc(now)
+    _write_record(path, rec)
+    log_event("STEP", task=task_id, step=f"{name}[{i}]", status=status)
+    return {"task": task_id, "record": str(path.relative_to(root)), "step": f"{key}/{name}[{i}]", "status": status, **_summary(rec)}
 
 
 # ---------------------------------------------------------------- bounded stop hook
@@ -681,6 +809,24 @@ def main(argv: list[str] | None = None) -> int:
     nm.add_argument("--task", required=True)
     nm.add_argument("--root", type=Path, default=ROOT)
     nm.add_argument("--write", action="store_true")
+    ac = sub.add_parser("accept", help="register accepted authorised work as an executable step of the actor's own mandate (the actor that takes charge runs this; the watch never does)")
+    ac.add_argument("--task", required=True)
+    ac.add_argument("--step", required=True, help="the unit of work, in one sentence")
+    ac.add_argument("--source", required=True, help="where it was authorised: an assignment id, a message, a roadmap line")
+    ac.add_argument("--authorised-by", default="", help="a pointer to where a reopening (or an exceptional acceptance) was authorised")
+    ac.add_argument("--reopen", action="store_true", help="reopen a COMPLETE accepted block (needs --authorised-by); never a PAUSED or CANCELLED one")
+    ac.add_argument("--create-for", default="", help="create a standing record under ledger/tasks/<actor>/ when the task does not exist")
+    ac.add_argument("--session-name", default="", help="with --create-for: the role name the session answers to (SESSION_NAME)")
+    ac.add_argument("--owner", default="")
+    ac.add_argument("--root", type=Path, default=ROOT)
+    sp = sub.add_parser("step", help="set the status of one step by its source or the start of its text (DONE needs evidence, BLOCKED a blocker)")
+    sp.add_argument("--task", required=True)
+    sp.add_argument("--match", required=True)
+    sp.add_argument("--status", required=True)
+    sp.add_argument("--evidence", default="")
+    sp.add_argument("--blocker", default="")
+    sp.add_argument("--unblock-when", default="", help='JSON, for example {"commit": "ADV-064", "ref": "development/main"} or {"path": "x.md", "contains": "text"}')
+    sp.add_argument("--root", type=Path, default=ROOT)
     ev = sub.add_parser("events", help="what the stop hook decided on this machine")
     ev.add_argument("--last", type=int, default=20, help="how many recent events to print")
     args = parser.parse_args(argv)
@@ -714,6 +860,22 @@ def main(argv: list[str] | None = None) -> int:
         return code
 
     root = args.root.resolve()
+    if args.command in ("accept", "step"):
+        try:
+            if args.command == "accept":
+                out = accept_step(root, args.task, args.step, args.source, authorised_by=args.authorised_by, reopen=args.reopen, owner=args.owner,
+                                  create_for=args.create_for, actor=args.session_name)
+            else:
+                out = set_step(root, args.task, args.match, args.status, evidence=args.evidence, blocker=args.blocker,
+                               unblock_when=json.loads(args.unblock_when) if args.unblock_when else None)
+        except PermissionError as exc:
+            print(f"REFUSED: {exc}", file=sys.stderr)
+            return 3
+        except (ValueError, Malformed) as exc:
+            print(f"REFUSED: {exc}", file=sys.stderr)
+            return 2
+        print(json.dumps(out, indent=1, ensure_ascii=False))
+        return 0
     if args.command == "normalise":
         path = find_record(root, args.task)
         if path is None:

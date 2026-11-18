@@ -70,7 +70,8 @@ import mandate_continuity as mc  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 QUIET_MINUTES = 25            # idle and silent for this long before a session counts as stopped
-REREQUEST_MINUTES = 180       # a pending request with no progress is repeated no sooner than this
+REREQUEST_MINUTES = 180       # a pending request with no progress is repeated no sooner than this, while the session it went to is live
+STARTUP_GRACE_MINUTES = 10    # a revival that was just sent is not repeated while the revived session may still be starting
 EVENTS_FILE = "events.jsonl"
 EVENTS_MAX_BYTES = 256 * 1024
 _SESSIONS_UNSET = object()
@@ -119,12 +120,24 @@ def _save(task: str, data: dict) -> None:
 
 
 # ---------------------------------------------------------------- observations
+def session_is_live(entry: dict) -> bool:
+    """Is the process of this listing entry running? `claude agents --json` keeps a session that was killed or stopped in its list, WITHOUT a pid
+    and without a status (measured 2026-11-18 with a scratch session: after `claude stop` and after a kill the entry stayed, 'state: working'), so an
+    entry in the list is not a live session. An entry is live when it names a pid and /proc/<pid> holds a process that is not a zombie."""
+    pid = entry.get("pid")
+    if isinstance(pid, str) and pid.isdigit():
+        pid = int(pid)
+    if not isinstance(pid, int) or pid <= 0:
+        return False
+    return _proc_state(pid) not in (None, "Z")
+
+
 def list_sessions() -> list[dict] | None:
-    """Live sessions from the runtime's own listing; None when it cannot be read."""
+    """Live sessions from the runtime's own listing (entries whose process is not running are dropped); None when the listing cannot be read."""
     try:
         out = subprocess.run([claude_bin(), "agents", "--json"], capture_output=True, text=True, timeout=60)
         data = json.loads(out.stdout)
-        return data if isinstance(data, list) else None
+        return [x for x in data if isinstance(x, dict) and session_is_live(x)] if isinstance(data, list) else None
     except (OSError, ValueError, subprocess.SubprocessError):
         return None
 
@@ -166,6 +179,7 @@ def route(target: str, sessions: list[dict] | None, root: Path = ROOT) -> dict:
         elif want and want <= _tokens(name):
             found.setdefault(sid, "live name token")
     bound_gone = []
+    bound_live: dict[str, str] = {}
     for path in sorted((root / "ledger" / "tasks").glob("*/*.json")):                # 2 the binding a record states for the session that holds the role
         try:
             rec = json.loads(path.read_text(encoding="utf-8"))
@@ -173,13 +187,27 @@ def route(target: str, sessions: list[dict] | None, root: Path = ROOT) -> dict:
             continue
         if not isinstance(rec, dict) or not want or not want <= _tokens(str(rec.get("SESSION_NAME") or "")):
             continue
+        for host in live_bound_sessions(str(rec.get("TASK_ID")), list(live.values())):      # the live session that carries the marker of a record this role owns, whatever its display name is now
+            found.setdefault(host["session_id"], f"MANDATE_BOUND of {rec.get('TASK_ID')}")
+            bound_live.setdefault(host["session_id"], str(rec.get("TASK_ID")))
         bind = rec.get("SESSION_BINDING")
         sid = (bind.get("session_id") if isinstance(bind, dict) else (UUID_RE.search(str(bind or "")) or [None])[0]) if bind else None
         if sid and sid in live:
             found.setdefault(sid, f"binding of {rec.get('TASK_ID')}")
+            bound_live.setdefault(sid, str(rec.get("TASK_ID")))
         elif sid:
             bound_gone.append({"task": rec.get("TASK_ID"), "session_id": sid})
     out["candidates"] = [{"recipient": live[sid].get("name"), "session_id": sid, "via": why} for sid, why in found.items()]
+    # 2026-11-18: two live sessions answered to 'ADV' (the bound session and an operator chat named after the mandate) and 'HE' matched 'HE-PROBE' by token. A whole-name match beats a token match, and when several
+    # names still answer, the session a record's SESSION_BINDING names for that role is the one; the others are listed as surplus, never chosen and never silently dropped.
+    bound = [sid for sid in found if sid in bound_live]
+    if len(found) > 1 and len(bound) == 1:                                           # identity follows the binding (record or marker), not the display name
+        out["surplus_name_matches"] = [{"recipient": live[sid].get("name"), "session_id": sid} for sid in found if sid not in bound]
+        found = {bound[0]: f"binding of {bound_live[bound[0]]} (the other live sessions that answer to the name are not its host)"}
+    exact = [sid for sid in found if found[sid] == "live name or id"]
+    if len(found) > 1 and exact and len(exact) < len(found):
+        out["surplus_token_matches"] = [{"recipient": live[sid].get("name"), "session_id": sid} for sid in found if sid not in exact]
+        found = {sid: found[sid] for sid in exact}
     if len(found) == 1:
         sid = next(iter(found))
         out.update(status="RESOLVED", recipient=live[sid].get("name"), session_id=sid, via=found[sid])
@@ -209,6 +237,72 @@ def check_recipients(first_line: str, used: list[str], sessions: list[dict] | No
 
 
 
+_BIND_CACHE: dict[tuple[str, float, int], str | None] = {}
+
+
+def cached_binding(path: Path) -> str | None:
+    """`mc.binding_from_transcript`, once per (file, mtime, size) in this process: a transcript of tens of megabytes was read again for every task of an `--all` run (the hourly check took about
+    four minutes of which nearly all was re-reading the same files)."""
+    try:
+        st = path.stat()
+    except OSError:
+        return None
+    key = (str(path), st.st_mtime, st.st_size)
+    if key not in _BIND_CACHE:
+        _BIND_CACHE[key] = mc.binding_from_transcript(path)
+    return _BIND_CACHE[key]
+
+
+def transcript_for_session(session_id: str, projects_dir: Path | None = None) -> Path | None:
+    """The transcript file of a session id (one file per id under ~/.claude/projects/<cwd>/), or None."""
+    base = projects_dir or Path(os.path.expanduser("~/.claude/projects"))
+    try:
+        return next(iter(base.glob(f"*/{session_id}.jsonl")), None)
+    except OSError:
+        return None
+
+
+def live_bound_sessions(task: str, sessions: list[dict] | None, projects_dir: Path | None = None) -> list[dict]:
+    """The LIVE sessions whose own last marker line binds this task. The key is the bound session id, never a display name: two live sessions may legitimately answer to one name (the bound session
+    and an operator chat that investigated), and only the ones that carry `MANDATE_BOUND: <task>` are hosts of it."""
+    out = []
+    for sess in sessions or []:
+        sid = str(sess.get("sessionId") or "")
+        path = transcript_for_session(sid, projects_dir) if sid else None
+        if path is not None and cached_binding(path) == task:
+            out.append({"session_id": sid, "name": sess.get("name"), "kind": sess.get("kind"), "status": sess.get("status")})
+    return out
+
+
+def has_saved_options(session_id: str) -> bool:
+    """Does the runtime's background-job store hold saved options (name, model) for this session? `~/.claude/jobs/<first 8 characters of the id>/state.json` is written when a session has been a background
+    session. MEASURED 2026-11-18 on a scratch session: for such a session the runtime says "keeps its own saved options, so the flags you passed started a copy"; a revival WITH any flag forks a second session
+    under a new id, and WITHOUT flags it continues the session itself under the same id and the same name."""
+    base = Path(os.environ.get("LEGEND_CLAUDE_JOBS") or os.path.expanduser("~/.claude/jobs"))
+    return (base / session_id[:8] / "state.json").is_file()
+
+
+def last_session_name(transcript: Path) -> str | None:
+    """The name the operator gave the session (its last `custom-title` record). A session that has NO saved options (an interactive one: the Science session after the 2026-11-18 OOM) comes back with a
+    name generated from the resume prompt ('orch-adv004-mandate-reconciliation'), which breaks every name-based address; for those the revival passes the chosen name again. Never for a session that has saved
+    options: any flag on such a session starts a COPY (see has_saved_options)."""
+    name = None
+    try:
+        with transcript.open(encoding="utf-8", errors="replace") as fh:
+            for line in fh:
+                if '"custom-title"' not in line:
+                    continue
+                try:
+                    entry = json.loads(line)
+                except ValueError:
+                    continue
+                if isinstance(entry, dict) and entry.get("type") == "custom-title" and isinstance(entry.get("customTitle"), str) and entry["customTitle"].strip():
+                    name = entry["customTitle"].strip()
+    except OSError:
+        return None
+    return name
+
+
 def find_bound_transcript(task: str, projects_dir: Path | None = None, max_age_days: int = 5) -> Path | None:
     """The newest session transcript whose last marker line binds this task."""
     base = projects_dir or Path(os.path.expanduser("~/.claude/projects"))
@@ -224,7 +318,7 @@ def find_bound_transcript(task: str, projects_dir: Path | None = None, max_age_d
     except OSError:
         return None
     for p in sorted(cands, key=lambda q: q.stat().st_mtime, reverse=True):
-        if mc.binding_from_transcript(p) == task:
+        if cached_binding(p) == task:
             return p
     return None
 
@@ -398,26 +492,114 @@ def summarise_jobs(jobs: list[dict]) -> dict:
             "dead": [j for j in jobs if j["state"] == "DEAD" and not j.get("collected")]}
 
 
-def job_run(task: str, label: str, cmd: list[str], cwd: str | None = None) -> dict:
+def memory_scope(cmd: list[str], memory_max: str) -> list[str]:
+    """Wrap `cmd` in a transient systemd user scope with a hard memory cap. The kernel then
+    confines an out-of-memory kill to this scope and systemd stops only the scope, so a runaway
+    battery or browser cannot widen into the desktop service (whose OOMPolicy=stop kills every
+    process it holds). Opt-in: nothing is capped unless asked; no threshold is imposed here."""
+    if not re.fullmatch(r"[1-9]\d*(\.\d+)?[KMGT]?", memory_max):
+        raise ValueError(f"--memory-max must look like 3G, 800M or 2500000000, not {memory_max!r}")
+    exe = shutil.which("systemd-run")
+    if not exe:
+        raise RuntimeError("systemd-run is not available: the job is NOT started uncapped, since a cap was requested")
+    return [exe, "--user", "--scope", "--quiet", "-p", f"MemoryMax={memory_max}", "-p", "OOMPolicy=stop", "--", *cmd]
+
+
+def job_run(task: str, label: str, cmd: list[str], cwd: str | None = None, memory_max: str | None = None) -> dict:
     """Start `cmd` detached and tagged. Idempotent per (task, label): a live job with the same
-    label is returned instead of starting a second execution of the same work."""
+    label is returned instead of starting a second execution of the same work. With `memory_max`
+    the job runs in its own memory-capped scope (see `memory_scope`); the recorded `cmd` stays
+    the caller's command and `memory_max` is recorded beside it."""
     for j in load_jobs(task):
         if j["label"] == label and j["state"] == "ALIVE":
             return dict(j, started=False, note="already running: not started a second time")
+    run_cmd = memory_scope(cmd, memory_max) if memory_max else cmd
     d = jobs_dir(task)
     d.mkdir(parents=True, exist_ok=True)
     jid = f"{int(time.time())}-{label}"
     exit_file, log = d / f"{jid}.exit", d / f"{jid}.log"
-    script = " ".join(shlex.quote(c) for c in cmd) + f"; echo $? > {shlex.quote(str(exit_file))}"
+    script = " ".join(shlex.quote(c) for c in run_cmd) + f"; echo $? > {shlex.quote(str(exit_file))}"
     with open(log, "ab") as fh:
         p = subprocess.Popen(["/bin/sh", "-c", script], start_new_session=True, stdin=subprocess.DEVNULL,
                              stdout=fh, stderr=subprocess.STDOUT, cwd=cwd, env=dict(os.environ, **{JOB_ENV: task}))
     job = {"id": jid, "task": task, "label": label, "cmd": cmd, "pid": p.pid, "start_ticks": _start_ticks(p.pid),
            "log": str(log), "exit_file": str(exit_file), "started_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
            "collected": False}
+    if memory_max:
+        job["memory_max"] = memory_max
     (d / f"{jid}.json").write_text(json.dumps(job, indent=1), encoding="utf-8")
     log_event("job_started", task=task, label=label, pid=p.pid)
     return dict(job, started=True, state="ALIVE")
+
+
+def _kv_kb(path: Path, keys: tuple[str, ...]) -> dict:
+    out: dict = {}
+    try:
+        for line in path.read_text().splitlines():
+            k, _, v = line.partition(":")
+            if k in keys:
+                out[k] = int(v.split()[0])
+    except (OSError, ValueError, IndexError):
+        pass
+    return out
+
+
+def resource_state(proc: str = "/proc", top: int = 8, jobs_base: Path | None = None, sessions: list[dict] | None = None) -> dict:
+    """Observed memory facts for coordinating heavy work. READ-ONLY and threshold-free: it states
+    what is loaded and who holds it, and the caller decides. RSS counts a shared page once per
+    process, so a group's figure is an upper bound. `groups` are cgroups (the unit that an OOM
+    event would stop or kill together), not processes: that is the blast radius."""
+    root = Path(proc)
+    mem = _kv_kb(root / "meminfo", ("MemTotal", "MemAvailable", "SwapTotal", "SwapFree"))
+    psi: dict = {}
+    try:
+        for line in (root / "pressure" / "memory").read_text().splitlines():
+            kind, _, rest = line.partition(" ")
+            psi[kind] = dict(x.split("=") for x in rest.split())
+    except OSError:
+        pass
+    groups: dict[str, dict] = {}
+    for d in root.iterdir():
+        if not d.name.isdigit():
+            continue
+        try:
+            cg = (d / "cgroup").read_text().strip().splitlines()[-1].rsplit(":", 1)[-1]
+            rss = _kv_kb(d / "status", ("VmRSS",)).get("VmRSS", 0)
+            comm = (d / "comm").read_text().strip()
+        except (OSError, IndexError):
+            continue
+        g = groups.setdefault(cg, {"cgroup": cg, "rss_mb": 0, "procs": 0, "largest": ("", 0)})
+        g["rss_mb"] += rss // 1024
+        g["procs"] += 1
+        if rss // 1024 > g["largest"][1]:
+            g["largest"] = (comm, rss // 1024)
+    ranked = sorted(groups.values(), key=lambda g: -g["rss_mb"])[:top]
+    for g in ranked:
+        g["largest"] = {"comm": g["largest"][0], "rss_mb": g["largest"][1]}
+    alive = []
+    base = jobs_base or (state_dir() / "jobs")
+    if base.is_dir():
+        for tdir in sorted(base.iterdir()):
+            for j in load_jobs(tdir.name, tdir):
+                if j["state"] == "ALIVE":
+                    alive.append({"task": j.get("task", tdir.name), "label": j["label"], "pid": j["pid"],
+                                  "memory_max": j.get("memory_max"), "cmd": " ".join(j["cmd"])[:80]})
+    held = []
+    for x in sessions or []:
+        try:
+            leaf = (root / str(x["pid"]) / "cgroup").read_text().strip().splitlines()[-1].rsplit("/", 1)[-1]
+        except (OSError, IndexError, KeyError):
+            leaf = "?"
+        held.append({"name": x.get("name"), "session": str(x.get("sessionId", ""))[:8], "pid": x.get("pid"), "cgroup": leaf})
+    load = ""
+    try:
+        load = (root / "loadavg").read_text().split()[0]
+    except (OSError, IndexError):
+        pass
+    return {"mem_total_mb": mem.get("MemTotal", 0) // 1024, "mem_available_mb": mem.get("MemAvailable", 0) // 1024,
+            "swap_total_mb": mem.get("SwapTotal", 0) // 1024, "swap_free_mb": mem.get("SwapFree", 0) // 1024,
+            "pressure": psi, "load1": load, "groups": ranked, "alive_jobs": alive, "sessions": held,
+            "note": "facts only, no threshold. `sessions[].cgroup` is the unit an OOM event stops together with the session; start a heavy job with `job run --memory-max` so its OOM kill stays in its own scope"}
 
 
 def job_collect(task: str, jid: str) -> bool:
@@ -453,7 +635,8 @@ def push_confirmation_missing(root: Path, record_rel: str | None, timeout: int =
 # ---------------------------------------------------------------- the decision (pure)
 def classify(status: dict, session: dict | None, session_list_ok: bool, bound: bool,
              idle_seconds: float | None, pending: dict, signature: str, now: float,
-             quiet_minutes: int = QUIET_MINUTES, jobs: dict | None = None, push_missing: str | None = None, near_marker: dict | None = None) -> dict:
+             quiet_minutes: int = QUIET_MINUTES, jobs: dict | None = None, push_missing: str | None = None, near_marker: dict | None = None,
+             dup_hosts: list | None = None) -> dict:
     """Return {state, action, why}. action is RESUME or NONE. No I/O."""
     v = status.get("verdict")
     jobs = jobs or {"alive": [], "to_collect": [], "dead": []}
@@ -479,6 +662,11 @@ def classify(status: dict, session: dict | None, session_list_ok: bool, bound: b
         return {"state": "UNKNOWN", "action": "NONE", "why": "no session transcript carries MANDATE_BOUND for this task (the line must start a line of the session's own persisted text; after writing it, run `mandate_watch.py check --task <id> --deliver none --json` and expect a session id, else write it again in a message of its own)" + hint}
     if not session_list_ok:
         return {"state": "UNKNOWN", "action": "NONE", "why": "the session listing could not be read"}
+    if dup_hosts and len(dup_hosts) > 1:
+        names = ", ".join(f"{d.get('name')} [{str(d.get('session_id'))[:8]}]" for d in dup_hosts)
+        return {"state": "DUPLICATE_HOST", "action": "NONE",
+                "why": (f"{len(dup_hosts)} live sessions carry `MANDATE_BOUND` for this task ({names}): none is revived, none is chosen, and no second recall may be armed. Release the surplus one "
+                        "with the plain line `MANDATE_RELEASED: <TASK_ID>` in its own text (or stop it) and keep the one the record's SESSION_BINDING names; two sessions that only share a display name are not hosts")}
     if jobs["alive"]:
         j = jobs["alive"][0]
         return {"state": "RUNNING", "action": "NONE", "why": f"job '{j['label']}' is alive (pid {j['pid']}) even if its output is silent"}
@@ -490,7 +678,10 @@ def classify(status: dict, session: dict | None, session_list_ok: bool, bound: b
     if idle_seconds is not None and idle_seconds < quiet_minutes * 60:
         return {"state": "RUNNING", "action": "NONE", "why": f"activity {int(idle_seconds // 60)} min ago (quiet threshold {quiet_minutes})"}
     last = pending.get("requested_at")
-    if last and pending.get("signature") == signature and now - last < REREQUEST_MINUTES * 60:
+    if last and pending.get("signature") == signature and now - last < REREQUEST_MINUTES * 60 and (session is not None or now - last < STARTUP_GRACE_MINUTES * 60):
+        # The pending guard protects a LIVE session that was asked and has not answered yet, and a revival that is still starting (the grace window: a second `--bg --resume` of the same session while the first
+        # is coming up would be a copy). A session that is not live after the grace window was revived once and died again (a second OOM, a second kill): asking it again is the recovery, not spam, and the
+        # hourly cron is the only rate (measured 2026-11-18 on a scratch session: a second death within the window was refused for three hours).
         return {"state": "STOPPED_RESUMABLE", "action": "NONE", "why": "a request is already pending for this queue state"}
     extra = ""
     if jobs["to_collect"]:
@@ -502,7 +693,18 @@ def classify(status: dict, session: dict | None, session_list_ok: bool, bound: b
             "why": "session " + ("absent from the live listing" if session is None else "idle") + f" and silent, {what}{extra}"}
 
 
-def request_text(task: str, status: dict, record_path: str = "") -> str:
+def recall_clause(recall) -> str:
+    """The sentence a revival adds for a mandate whose host keeps an in-session recall (a record field `RECALL: {"mark": ..., "command": ...}`). Measured 2026-11-18 on a scratch session (Claude Code
+    2.1.327): a session cron survives the death of its process and a resume, under the SAME job id, so the right first move is to look, not to create: a second CronCreate would be a second recall."""
+    if not isinstance(recall, dict) or not recall.get("mark"):
+        return ""
+    cmd = f" The text of the recall is the output of `{recall['command']}`." if recall.get("command") else ""
+    return (f" This mandate keeps ONE in-session recall (its text starts with {recall['mark']!r}).{cmd} First call CronList: the runtime restores the session's recall job when a session is resumed "
+            "(same job id), so if a job carrying that mark is listed, do NOT create another; create it only when none is listed; never two. Session cron jobs expire after 7 days, so note when it was "
+            f"created and renew it (CronDelete, then CronCreate) before day {recall.get('renew_days', 6)}.")
+
+
+def request_text(task: str, status: dict, record_path: str = "", recall=None) -> str:
     where = f" The record is {record_path}." if record_path else ""
     return (f"Mandate {task} is open with authorised work remaining ({status.get('message', '')[:200]}).{where} "
             "Hourly watch: the session had stopped. Resume from the checkpoint in the mandate record, "
@@ -510,10 +712,26 @@ def request_text(task: str, status: dict, record_path: str = "") -> str:
             "the mandate. Before starting any job check `mandate_watch.py job list --task <id>` and the worktree list: "
             "never start a second execution of work that is already running or a second integrator. "
             "If only closure evidence is missing, supply the verified pointers; do not repeat completed science. "
-            "Do not ask the operator for anything the mandate already authorises.")
+            "Do not ask the operator for anything the mandate already authorises." + recall_clause(recall))
 
 
 # ---------------------------------------------------------------- command
+def record_dict(root: Path, rec_rel: str | None) -> dict:
+    try:
+        data = json.loads((root / rec_rel).read_text(encoding="utf-8")) if rec_rel else {}
+        return data if isinstance(data, dict) else {}
+    except (OSError, ValueError):
+        return {}
+
+
+def record_binding_id(rec: dict) -> str | None:
+    bind = rec.get("SESSION_BINDING") if isinstance(rec, dict) else None
+    if isinstance(bind, dict):
+        return str(bind.get("session_id") or "") or None
+    m = UUID_RE.search(str(bind or ""))
+    return m.group(0) if m else None
+
+
 def check(task: str, *, root: Path = ROOT, deliver: str = "none", quiet_minutes: int = QUIET_MINUTES, resume_args: tuple = (),
           projects_dir: Path | None = None, tasks_root: Path | None = None,
           sessions=_SESSIONS_UNSET, now: float | None = None, runner=None, self_call: bool = False) -> dict:
@@ -521,10 +739,18 @@ def check(task: str, *, root: Path = ROOT, deliver: str = "none", quiet_minutes:
     status = mc.status_for(root, task)
     rec_rel = status.get("record")
     signature = mc._queue_signature(root, rec_rel)
-    transcript = find_bound_transcript(task, projects_dir)
     # None is an observed listing failure. Do not repeat a runtime query per mandate
     # in --all; only the default sentinel requests a fresh observation.
     live = list_sessions() if sessions is _SESSIONS_UNSET else sessions
+    rec = record_dict(root, rec_rel)
+    bind_sid = record_binding_id(rec)
+    dups = live_bound_sessions(task, live, projects_dir) if live else []
+    transcript = None
+    if dups:                      # a live session that carries the marker is the host; the record's SESSION_BINDING decides among several
+        pick = next((d["session_id"] for d in dups if d["session_id"] == bind_sid), dups[0]["session_id"])
+        transcript = transcript_for_session(pick, projects_dir)
+    if transcript is None:
+        transcript = find_bound_transcript(task, projects_dir)
     sid = transcript.stem if transcript else None
     session = next((s for s in (live or []) if s.get("sessionId") == sid), None) if sid else None
     if self_call and session is not None:
@@ -542,16 +768,20 @@ def check(task: str, *, root: Path = ROOT, deliver: str = "none", quiet_minutes:
         push_missing = push_confirmation_missing(root, rec_rel)
     near = find_near_marker(task, projects_dir) if transcript is None and status.get("verdict") not in ("RELEASED", "COMPLETE_PENDING") else None
     out = classify(status, session, live is not None, transcript is not None, idle, pend, signature, now, quiet_minutes,
-                   jobs=jobs, push_missing=push_missing, near_marker=near)
+                   jobs=jobs, push_missing=push_missing, near_marker=near, dup_hosts=dups)
     out.update({"task": task, "session": sid, "signature": signature[:12],
                 "record_verdict": status.get("verdict")})
+    if len(dups) > 1:
+        out["live_bound_sessions"] = dups
     if near:
         out["near_marker"] = near
     if out["action"] == "RESUME" and deliver == "resume":
         if session is not None:
             out["delivery"] = "not sent: the session is alive; the in-session cron delivers to a live session"
         else:
-            cmd = [claude_bin(), "--bg", *resume_args, "--resume", sid, request_text(task, status, str(root / rec_rel) if rec_rel else "")]
+            chosen = None if has_saved_options(sid) else last_session_name(transcript)
+            cmd = [claude_bin(), "--bg", *resume_args, *(["--name", chosen] if chosen else []), "--resume", sid,
+                   request_text(task, status, str(root / rec_rel) if rec_rel else "", rec.get("RECALL") if isinstance(rec, dict) else None)]
             try:
                 cwd = transcript_cwd(transcript)
                 res = (runner or (lambda c, cwd=None: subprocess.run(c, capture_output=True, text=True, timeout=120, cwd=cwd)))(cmd, cwd=cwd)
@@ -571,6 +801,45 @@ def check(task: str, *, root: Path = ROOT, deliver: str = "none", quiet_minutes:
     log_event("check", **{k: out[k] for k in ("task", "state", "action", "why") if k in out}, delivery=out.get("delivery"),
               **({"delivery_output": out["delivery_output"][:200]} if str(out.get("delivery", "")).startswith("failed") and out.get("delivery_output") else {}))
     return out
+
+
+def rebind(task: str, to: str, authorised_by: str, *, root: Path = ROOT, sessions=_SESSIONS_UNSET, projects_dir: Path | None = None, now: float | None = None) -> dict:
+    """Transfer the host role of a mandate to a SUBSTITUTE session. Nothing transfers by itself: a revived session keeps its own id, a name is not an identity, and the watch never picks a new host.
+    The operator's authorisation is an explicit pointer (`authorised_by`: the message, roadmap line or record where it was given); without it nothing happens. Refused when: the record is PAUSED or CANCELLED
+    (a stop is the operator's); the target is not exactly one live session; another LIVE session still carries `MANDATE_BOUND` for the task (no two hosts: stop it or have it write
+    `MANDATE_RELEASED: <task>` first). On success the record's SESSION_BINDING names the target (and the previous binding is kept in the entry), one `rebind` event is logged, and the answer says what
+    the new host must do: write the plain line `MANDATE_BOUND: <task>` in its own text, call CronList, and arm the ONE recall only if none carries the mark."""
+    pointer = (authorised_by or "").strip()
+    if len(pointer) < 8:
+        raise PermissionError("rebind needs --authorised-by: a pointer to where the operator authorised this substitute (message, roadmap entry, record line)")
+    status = mc.status_for(root, task)
+    rec_rel = status.get("record")
+    if not rec_rel:
+        raise ValueError(f"no record for {task}: {status.get('message')}")
+    path = root / rec_rel
+    rec = json.loads(path.read_text(encoding="utf-8"))
+    for key, block in mc.load_blocks(rec):
+        if mc.block_state(block) in mc.OPERATOR_STOPS:
+            raise PermissionError(f"{key} is {mc.block_state(block)}: a stop is the operator's; a substitute does not reopen it")
+    live = list_sessions() if sessions is _SESSIONS_UNSET else sessions
+    target = route(to, live, root)
+    if target["status"] != "RESOLVED":
+        raise ValueError(f"the substitute {to!r} does not resolve to exactly one live session ({target['status']}: {target.get('why', '')})")
+    others = [d for d in live_bound_sessions(task, live, projects_dir) if d["session_id"] != target["session_id"]]
+    if others:
+        raise PermissionError("another live session still carries MANDATE_BOUND for this task (" + ", ".join(f"{d['name']} [{d['session_id'][:8]}]" for d in others)
+                              + "): stop it or have it write `MANDATE_RELEASED: <TASK_ID>` first, so that there is exactly one host")
+    previous = rec.get("SESSION_BINDING")
+    stamp = datetime.fromtimestamp(now or time.time(), timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    rec["SESSION_BINDING"] = {"session_id": target["session_id"], "name_at_binding": target.get("recipient"), "bound_at": stamp, "authorised_by": pointer,
+                              **({"previous": previous} if previous else {})}
+    mc._write_record(path, rec)
+    log_event("rebind", task=task, session=target["session_id"], name=target.get("recipient"), authorised_by=pointer[:200],
+              previous=(previous or {}).get("session_id") if isinstance(previous, dict) else None)
+    tpath = transcript_for_session(target["session_id"], projects_dir)
+    return {"task": task, "record": rec_rel, "session_id": target["session_id"], "name": target.get("recipient"), "authorised_by": pointer,
+            "marker_present": bool(tpath and cached_binding(tpath) == task),
+            "next": f"the new host writes the plain line `MANDATE_BOUND: {task}` in its own text, then CronList; the ONE recall is created only if no job carries its mark. Commit the record."}
 
 
 def open_tasks(root: Path) -> list[str]:
@@ -661,6 +930,7 @@ def main(argv: list[str] | None = None) -> int:
     jr.add_argument("--task", required=True)
     jr.add_argument("--label", required=True)
     jr.add_argument("--cwd")
+    jr.add_argument("--memory-max", help="opt-in hard memory cap for this job (3G, 800M): runs it in its own systemd user scope")
     jr.add_argument("jobcmd", nargs=argparse.REMAINDER)
     jl = jsub.add_parser("list")
     jl.add_argument("--task", required=True)
@@ -671,6 +941,13 @@ def main(argv: list[str] | None = None) -> int:
     rt.add_argument("--to", action="append", required=True, help="a recipient actually used (repeat once per send), or the target to resolve")
     rt.add_argument("--first-line", default="", help="the message's first line, e.g. 'IT to ADV and HE: ...'")
     rt.add_argument("--root", default=str(ROOT))
+    rb = sub.add_parser("rebind", help="operator-authorised transfer of a mandate's host role to a live substitute session (explicit authorisation pointer required)")
+    rb.add_argument("--task", required=True)
+    rb.add_argument("--to", required=True, help="the substitute: a session id, its name, or a role alias")
+    rb.add_argument("--authorised-by", default="", help="where the operator authorised the substitute (message, roadmap entry, record line)")
+    rb.add_argument("--root", default=str(ROOT))
+    rs = sub.add_parser("resources", help="observed memory, pressure, swap, the cgroups holding most RSS and the live jobs (read-only, no thresholds)")
+    rs.add_argument("--top", type=int, default=8)
     e = sub.add_parser("events", help="what the watch decided on this machine")
     e.add_argument("--last", type=int, default=20)
     a = ap.parse_args(argv)
@@ -679,12 +956,30 @@ def main(argv: list[str] | None = None) -> int:
             cmd = a.jobcmd[1:] if a.jobcmd and a.jobcmd[0] == "--" else a.jobcmd
             if not cmd:
                 ap.error("job run needs a command after --")
-            print(json.dumps({k: v for k, v in job_run(a.task, a.label, cmd, a.cwd).items() if k != "_file"}, sort_keys=True))
+            try:
+                started = job_run(a.task, a.label, cmd, a.cwd, a.memory_max)
+            except (ValueError, RuntimeError) as exc:
+                print(f"REFUSED: {exc}", file=sys.stderr)
+                return 2
+            print(json.dumps({k: v for k, v in started.items() if k != "_file"}, sort_keys=True))
         elif a.jcmd == "list":
             for j in load_jobs(a.task):
                 print(f"{j['id']}\t{j['state']}\tpid={j['pid']}\t{'collected' if j.get('collected') else 'open'}\t{' '.join(j['cmd'])[:80]}")
         else:
             print("collected" if job_collect(a.task, a.id) else "not found")
+        return 0
+    if a.cmd == "resources":
+        print(json.dumps(resource_state(top=a.top, sessions=list_sessions()), indent=1, sort_keys=True))
+        return 0
+    if a.cmd == "rebind":
+        try:
+            print(json.dumps(rebind(a.task, a.to, a.authorised_by, root=Path(a.root)), indent=1, sort_keys=True, ensure_ascii=False))
+        except PermissionError as exc:
+            print(f"REFUSED: {exc}", file=sys.stderr)
+            return 3
+        except (ValueError, OSError) as exc:
+            print(f"REFUSED: {exc}", file=sys.stderr)
+            return 2
         return 0
     if a.cmd == "route":
         sessions = list_sessions()

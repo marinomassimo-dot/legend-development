@@ -1,0 +1,63 @@
+== 20:04:58 stop the scratch session (conversation kept)
+stopped 8ac2e368
+== 20:05:03 listing after stop (live):
+[('HE-PROBE', None, 'working')]
+== listing --all:
+[('HE-PROBE', None, 'working', None)]
+3
+== fired.log now:
+FIRED-20:00:28
+FIRED-20:04:24
+== 20:06:18 watch check (current code, probe root, probe state dir)
+{"action": "RESUME", "delivery": "not sent: the session is alive; the in-session cron delivers to a live session", "record_verdict": "CONTINUE", "session": "8ac2e368-8a7e-4656-ab57-4658e0724bb7", "signature": "3708e94b52c9", "state": "STOPPED_RESUMABLE", "task": "PROBE-HE-RECOVERY-20261118", "why": "session idle and silent, authorised work remains (1 executable step(s) remain; next: OBJ_A[0] PROBE (HE, 2026-11-18): after every start of this session, call CronList and)"}
+== events:
+{"action": "RESUME", "at": "2026-11-18T20:06:23Z", "delivery": "not sent: the session is alive; the in-session cron delivers to a live session", "kind": "check", "state": "STOPPED_RESUMABLE", "task": "PROBE-HE-RECOVERY-20261118", "why": "session idle and silent, authorised work remains (1 executable
+== 20:06:43 watch check with the liveness fix
+{"action": "RESUME", "delivery": "sent", "delivery_output": "backgrounded \u00b7 8ac2e368 \u00b7 HE-PROBE\n  claude agents             list sessions\n  claude attach 8ac2e368    open in this terminal\n  claude logs 8ac2e368      show recent output\n  claude stop 8ac2e368      stop this session\n", "record_verdict": "CONTINUE", "session": "8ac2e368-8a7e-4656-ab57-4658e0724bb7", "signature": "3708e94b52c9", "state": "STOPPED_RESUMABLE", "task": "PROBE-HE-RECOVERY-20261118", "why": "session absent from the live listing and silent, authorised work remains (1 executable step(s) remain; next: OBJ_A[0] PROBE (HE, 2026-11-18): after every start of this session, call CronList and)"}
+== 20:25:20 ROUND 2 (final code): stop the probe, run the watch, observe name, CronList and job count
+stopped 8ac2e368
+== 20:26:30 watch check
+{'state': 'STOPPED_RESUMABLE', 'action': 'NONE', 'delivery': None, 'why': 'a request is already pending for this queue state'}
+{'name': 'HE-PROBE', 'pid': None, 'sessionId': '8ac2e368-8a7e-4656-ab57-4658e0724bb7', 'status': None}
+== 20:27:23 (pending state from round 1 still in the state dir: the new code revives a not-live session again after the grace window)
+{'state': 'STOPPED_RESUMABLE', 'action': 'RESUME', 'delivery': 'sent', 'why': 'session absent from the live listing and silent, authorised work remains (1 executable step(s) remain; next: OBJ_A[0] PROBE round 2 (HE, 2026-11-18): append to /tmp/he96_probe/events.log the lin)'}
+BOUND-AND-ARMED 2026-11-18T19:57:58Z 2c89b82e
+RESUMED-CHECK 2026-11-18T20:07:05Z
+ROUND2-RESUMED 2026-11-18T20:27:38Z jobs=1
+{'name': 'HE-PROBE', 'pid': None, 'sessionId': '8ac2e368-8a7e-4656-ab57-4658e0724bb7', 'status': None}
+{'name': 'HE-PROBE', 'pid': 1390281, 'sessionId': '3be20fd7-24ba-43e6-8515-5482aa93c4dc', 'status': 'busy'}
+2c89b82e — Every 4 minutes (recurring) [session-only], next run Nov 18 8:08pm: PROBE-RECALL tag p1: run Bash `date -u +FIRED-%H:%M:%S >> /tmp/he96_probe/fired…
+2026-11-18T20:27:38Z
+2c89b82e — Every 4 minutes (recurring) [session-only], next run Nov 18 8:28pm: PROBE-RECALL tag p1: run Bash `date -u +FIRED-%H:%M:%S >> /tmp/he96_probe/fired…
+== 20:29:18 ROUND 3: two live sessions carry the marker (a fork 940511d5 and the original line 3be20fd7 resumed without flags)
+note: woke session 3be20fd7 with its saved options (--name, --model).
+backgrounded · 3be20fd7 · HE-PROBE
+{'state': 'DUPLICATE_HOST', 'action': 'NONE', 'delivery': None}
+2 live sessions carry `MANDATE_BOUND` for this task (HE-PROBE [940511d5], HE-PROBE [3be20fd7]): none is revived, none is chosen, and no second recall may be armed. Release the surplus one with the plain line `MANDATE_RELEASED: <TASK_ID>` in its own text (or st
+[('HE-PROBE', '940511d5'), ('HE-PROBE', '3be20fd7')]
+== rebind to the fork while the other is still live
+REFUSED: another live session still carries MANDATE_BOUND for this task (HE-PROBE [3be20fd7]): stop it or have it write `MANDATE_RELEASED: <TASK_ID>` first, so that there is exactly one host
+rc=0
+== 20:30:00 stop the surplus (3be20fd7), then the authorised rebind to the fork 940511d5
+stopped 3be20fd7
+{
+ "authorised_by": "HE probe, operator mandate 2026-11-18 (controlled test)",
+ "marker_present": true,
+ "name": "HE-PROBE",
+ "next": "the new host writes the plain line `MANDATE_BOUND: PROBE-HE-RECOVERY-20261118` in its own text, then CronList; the ONE recall is created only if no job carries its mark. Commit the record.",
+ "record": "ledger/tasks/orchestrator/PROBE-HE-RECOVERY-20261118.json",
+ "session_id": "940511d5-863d-49c1-a533-3383038ec849",
+ "task": "PROBE-HE-RECOVERY-20261118"
+}
+== the record binding now:
+{'session_id': '940511d5-863d-49c1-a533-3383038ec849', 'name_at_binding': 'HE-PROBE', 'bound_at': '2026-11-18T20:30:21Z', 'authorised_by': 'HE probe, operator mandate 2026-11-18 (controlled test)'}
+== watch check after the transfer
+{'state': 'STOPPED_RESUMABLE', 'action': 'NONE', 'session': '940511d5-863d-49c1-a533-3383038ec849'}
+== fired.log (two live restored recalls fire twice per slot)
+FIRED-20:00:28
+FIRED-20:04:24
+FIRED-20:08:23
+FIRED-20:12:23
+FIRED-20:16:24
+FIRED-20:20:24
+FIRED-20:24:24
