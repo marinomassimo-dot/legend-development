@@ -283,6 +283,33 @@
      "evidence": "framework/scripts/README.md section 13, recipe row 'You are about to rely on a generated synthesis report' (two layers, five points, worked cases routed); test_tool_routing, documented commands, section references, structured data and release surface suites OK"
     }
    ]
+  },
+  "OBJ_HE_CHECKLIST_TEST_20261118": {
+   "order": 6,
+   "source": "ADV host decision 2026-11-17/18 after KDS closed: GO for the small stage-1-only checklist test on two targets, cap 250k tokens including sourcing, ESCALATION line before any overrun, at most two delegates at once, stop on usage-limit notice",
+   "steps": [
+    {
+     "step": "freeze the fixed checklist, the stage-1 template and the preregistration v0 BEFORE any target is chosen; ask SCI for a hashed forecast",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "deepening_he_20261116/checklist_test_he_20261118/ PREREG_CHECKLIST_TEST_V0_BEFORE_TARGETS.md committed a8092154e before any target; SCI asked for a hashed forecast"
+    },
+    {
+     "step": "source two targets by the standing rule (contamination counts, memory probe, leak audit, atoms, strict and loose terms) within about 100k tokens, else report the yield",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "blocker": "sourcing yield 0 clean new in-scope targets from about 190 titles (SOURCING_YIELD_20261118.md); waiting for ADV's decision between declining, a development stage 0 on T7 only, or sourcing in another window",
+     "unblock_when": {
+      "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/checklist_test_he_20261118/SOURCING_YIELD_20261118.md",
+      "contains": "ADV DECISION"
+     }
+    },
+    {
+     "step": "run four tool-free stage-1 delegates (two per target), read back model and effort and path audit, score strict and loose, report by path with digests, outcomes and what it would change",
+     "status": "TODO",
+     "owner": "plan"
+    }
+   ]
   }
  },
  "DEFAULTS_TAKEN": [
