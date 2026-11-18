@@ -1,0 +1,13 @@
+pmid	verdict	what_it_corrects	receipt_locators	consumers	re_read_first
+19503085	TOUCHES	Fig 1h Pdgfra panel (dCKO P4) replaced; corrected panel shows no labelled cells (my reading)	FTR-20261105-19503085-06 B01	p3_B/evidence_it29_B.tsv B01; signed_rows_case1_it29.tsv S1-19,S1-20	re-read B01 and its signed rows
+21822218	NO EFFECT	author name	FTR-20261111-21822218-87,-88	ph_k2p_sci45_20261111	none
+22622579	NO EFFECT	Supp Fig 1b and Fig 2e antibody clarification; neither cited	FTR-20261105-22622579-04 N1-N7	batch_it28_p4_isr_role_20261105/B_neurons	none
+23536761	NO EFFECT	author name and affiliation	FTR-20261105-23536761-06	phenotype_first_it29_20261105/p3_E	none
+24209626	NOT RECOVERABLE	notice text not reached (Cell challenge page)	FTR-20261105-24209626-04	batch_it28_p3_hdac5_20261105/B_class_iia_biology	human visit: HDAC5-KO HDAC3 localisation and H3 acetylation locators
+24997607	TOUCHES (low)	Fig 3e representative image (benzatropine) corrected; quantification is Fig 3a,f	FTR-20261105-24997607-06 locator 2	p3_A/evidence_it29_A.tsv R08; ebp_reannotation_adv001_20261113/annotation_compounds.tsv	re-read R08
+25186741	NO EFFECT	author contributions; gene-name typos in Tables 2,3 and Fig 4, none cited	FTR-20261110-25186741-96,-97; FTR-20261112-25186741-72	pdh_pdk_sci44_20261110; cell_context_verify_sci49_20261112	none
+29533123	NO EFFECT	grant mis-cited	FTR-20261112-29533123-73,-74	nrf2_comparator_sci48_20261112	none
+30919030	NO EFFECT	Fig 2a duplicated image; Olig2/CAII counts not cited	FTR-20261113-30919030-68,-69	myelin_phenotype_first_sci50_20261113 V09,V10	none
+35655584	NOT RECOVERABLE	notice text not reached (PMC reCAPTCHA, Cloudflare, XML 500)	FTR-20261105-35655584-22	batch_sci_20261105/a2_baseline/evidence_a2.tsv D01,D02; seizure_function_inv10_20261107/output/evidence.tsv E19	human visit: D01, D02, E19 (numeric values)
+36594817	TOUCHES	Fig 8A gamma-2 plot duplicated; Fig 8B REM-dark data and statistics changed; Fig 3 supp 5 sex symbols	FTR-20261106-36594817-24 locator 3	r1_restoration_ndd/evidence_r1.tsv R87; README; needs/needs.json; generated views	re-read R87, needs.json statement, README tracks sentence; corrected figure not opened
+37006625	NO EFFECT	affiliations	FTR-20261105-37006625-04	batch_it28_p3_hdac5_20261105/A_edge_origin	none
