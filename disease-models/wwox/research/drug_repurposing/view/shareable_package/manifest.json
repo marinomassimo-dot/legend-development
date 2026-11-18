@@ -23,7 +23,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 6933,
+    "values": 6934,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
@@ -471,7 +471,7 @@
   "BIBLIO": 2696,
   "COUNT": 12405,
   "ID": 4861,
-  "OWN": 90197,
+  "OWN": 90198,
   "ROWNAME": 2408,
   "SRC_A": 189,
   "SRC_META": 261,
@@ -545,7 +545,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2150,
-   "sha256": "d377a7cb6ea676ed5eb3201d042cb88a3b7e87d40b68dd20b328a940f8f8860c"
+   "sha256": "b120773acb7a5698960a27d36b72d667e8adee0c3bf0831f471e519a94461422"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -560,24 +560,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5269676,
-   "sha256": "5e757f64fc6973a596f2ea55891218785689a909f8811a58e9e8fdebe1b8bfe0"
+   "bytes": 5270225,
+   "sha256": "79c4fed0ba4378b1447d17d45c7fb83a137f05f9c6d0828e3fc7cc489552fc4b"
   },
   "es.html": {
-   "bytes": 5254819,
-   "sha256": "55dae14e89a21a612b44f51963f3f05414451728138c14995d754e12bb2faee6"
+   "bytes": 5255368,
+   "sha256": "1504b113bed56629a14a4ce3447321305d2c08b2f3668d1106dc6da84d204ea5"
   },
   "fr.html": {
-   "bytes": 5286824,
-   "sha256": "983e9799349490f2c5a1cef134224548dbb56e09997c8a5fe6ab57145ad2b0da"
+   "bytes": 5287373,
+   "sha256": "75eb786ceb2ffd1a7935f9938605cbe2972f7bba97a9660278d7cb71123f8422"
   },
   "index.html": {
-   "bytes": 5167806,
-   "sha256": "99513f04bca681b9194cd05a94f90c1d4ecf198d8d1512b75bb37735a20a4b9b"
+   "bytes": 5168355,
+   "sha256": "0e6a3c9647f1f6f217d343af21834a73d48402a1033f59f12d05c9cd6a3a51ad"
   },
   "it.html": {
-   "bytes": 5233017,
-   "sha256": "340149bd5ed1eb2b803c7e48b9f0757dc318f4b66d05868c015a86dd9ddb9af5"
+   "bytes": 5233566,
+   "sha256": "6de64b23780a6e48172ed14ccaf252729d58fe12a622ee39273cece427d99e3a"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
