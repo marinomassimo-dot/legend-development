@@ -95,12 +95,12 @@
      "owner": "plan",
      "source": "ADV decision to HE 2026-11-18 (answer c): ONE battery on the final tree, run by HE, after IT's ADV-066 lands",
      "accepted_at": "2026-11-18T21:34:15Z",
-     "blocker": "IT's ADV-066 change has not landed on development/main (the earlier match 916360e37 is ADV's SENT record, not the landing); IT is asked to put the words 'ADV-066 LANDED' in the landing commit subject and to send me the SHA",
+     "blocker": "IT is landing a K2 round on top of ADV-066 (package cells and generated rows change); the final tree is the one after that landing; the earlier landing e785bac02 and my own commit subject matched the old marker, so the marker is now the K2 landing",
      "unblock_when": {
-      "commit": "ADV-066 LANDED",
+      "commit": "LANDED, K2",
       "ref": "development/main"
      },
-     "updated_at": "2026-11-18T21:34:40Z"
+     "updated_at": "2026-11-18T21:45:51Z"
     }
    ]
   }
