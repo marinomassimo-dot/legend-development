@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-18T08:22:50Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T08:24:50Z",
+ "event_id": "FTR-20261118-24101301-01",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Introduction]: \"Meanwhile, ketamine exhibits full trapping\"",
+  "verbatim_locator [Results]: \"1.2 ± 0.2 seconds for memantine and 2.1 ± 0.6 seconds for ketamine at +50 mV\"",
+  "Question-driven: use dependence, trapping, unblock, Mg2+ and subunit properties of ketamine and memantine (ADV-050); windows around the passages were read by the producer delegate (about 25 to 45 percent of the text displayed); tables as extracted text."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv050_nmdar_agents_sci_20261118/ADV050_NMDAR_AGENTS_VS_KETAMINE_SCI_20261118.md"
+ ],
+ "prior_receipt": "FTR-20261107-24101301-90",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "b522a61b5623692e08f8a5c2fc5efce0cc2eaf51a836564685b0efcecfbc5dd4",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/adv050_20261118/PMC3834148.html",
+ "study_id": {
+  "pmid": "24101301"
+ },
+ "workflow": "SCI ADV-050 kinetics and paediatric-exposure unit (NMDAR agents against ketamine); context_policy QUESTION_DRIVEN; the producer delegate (legend-delegate, sonnet medium) read windows and tied quotes to the saved bytes, and SCI (integrator) re-matched the pivotal quotes against the same bytes before recording"
+}

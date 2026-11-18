@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-18T08:22:50Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T08:24:50Z",
+ "event_id": "FTR-20261118-1432438-01",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"resulting in complete resolution of absence episodes within 1 week\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv050_nmdar_agents_sci_20261118/ADV050_NMDAR_AGENTS_VS_KETAMINE_SCI_20261118.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "08466c69a1ab4c3ade6d0a46122b7b2cf0209058c96c79b392e707a0c87b3b7b",
+ "source_kind": "abstract",
+ "source_locator": "files/fulltext/adv050_20261118/abs_1432438.json",
+ "study_id": {
+  "pmid": "1432438"
+ },
+ "workflow": "SCI ADV-050 kinetics and paediatric-exposure unit (NMDAR agents against ketamine); context_policy QUESTION_DRIVEN; the producer delegate (legend-delegate, sonnet medium) read windows and tied quotes to the saved bytes, and SCI (integrator) re-matched the pivotal quotes against the same bytes before recording"
+}
