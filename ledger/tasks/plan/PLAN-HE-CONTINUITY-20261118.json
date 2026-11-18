@@ -109,16 +109,53 @@
     },
     {
      "step": "Targeted rerun of test_repurposing_view and test_public_release_gate_cache on the tip after IT's view regeneration (no second full battery); report to IT and ADV",
-     "status": "BLOCKED",
+     "status": "IN_PROGRESS",
      "owner": "plan",
      "source": "HE proposal to IT and ADV 2026-11-18 after the battery FAIL",
      "accepted_at": "2026-11-18T23:23:08Z",
-     "blocker": "IT has not yet landed the regenerated views and package after K2",
-     "unblock_when": {
-      "commit": "VIEWS REGENERATED",
-      "ref": "development/main"
-     },
-     "updated_at": "2026-11-18T23:23:08Z"
+     "updated_at": "2026-11-18T23:43:22Z"
+    },
+    {
+     "step": "Night A: reconcile the battery on 6320348db5 (verdict, SHA, failures, skips, limits, what may proceed), real technical dependency of shared waits on a clone battery, targeted rerun after IT's regeneration",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) A",
+     "accepted_at": "2026-11-18T23:32:13Z"
+    },
+    {
+     "step": "Night B: verify the advisor passage by observation of the watcher (one host, aliases advisor/orchestrator/SCI, record path, history, one recall) without provoking anything",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) B",
+     "accepted_at": "2026-11-18T23:32:13Z"
+    },
+    {
+     "step": "Night C: dashboard FR/ES/DE translation defect: verify the audit chain /tmp/legend-dashboard-audit-20261118/RAPPORTO.md on current state, fix identity/order of transformations, regression on rendered content, hand to IT",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) C",
+     "accepted_at": "2026-11-18T23:32:13Z"
+    },
+    {
+     "step": "Night D: resources with the new 4 GiB swap (PSS not RSS), ordinary cleanup of clean integrated worktrees and recreatable temporaries, measured recovery",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) D",
+     "accepted_at": "2026-11-18T23:32:13Z"
+    },
+    {
+     "step": "Night E: generation support only where a real gap is shown: ask IT and SCI which step limited INV-04/INV-09/K2 (retrieval, selection, context exposure, interpretation, consumption, evaluation)",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) E",
+     "accepted_at": "2026-11-18T23:32:13Z"
+    },
+    {
+     "step": "Night F: delivery to IT, SCI, ADV; follow the first real use of any important change",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) F",
+     "accepted_at": "2026-11-18T23:32:14Z"
     }
    ]
   }
@@ -205,6 +242,48 @@
    "at": "2026-11-18T23:23:08Z",
    "source": "HE proposal to IT and ADV 2026-11-18 after the battery FAIL",
    "step_sha256": "4b51fe10a7d3",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:32:13Z",
+   "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) A",
+   "step_sha256": "0fb7f2c946c7",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:32:13Z",
+   "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) B",
+   "step_sha256": "8759b3385923",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:32:13Z",
+   "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) C",
+   "step_sha256": "6177679659eb",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:32:13Z",
+   "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) D",
+   "step_sha256": "afd2360ef3cd",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:32:13Z",
+   "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) E",
+   "step_sha256": "b02d43159222",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:32:14Z",
+   "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) F",
+   "step_sha256": "599eddf04dd7",
    "reopened_block": false,
    "authorised_by": null
   }
