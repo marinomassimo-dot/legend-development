@@ -925,5 +925,70 @@ class NestedCheckoutTests(unittest.TestCase):
         self.assertFalse({item for item in walked if item.startswith(".claude/worktrees/")})
 
 
+class PrecheckTests(unittest.TestCase):
+    """ADV-041: the per-file pre-check (`--paths`, `--changed-since`) is a cheap look at the files of one
+    commit, NOT the gate: it must find what the per-file scans find in the named files, say plainly what it
+    did not check, and never print a gate verdict."""
+
+    def make_repo(self) -> Path:
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        root = Path(temp.name)
+        (root / "README.md").write_text("# Public project\n", encoding="utf-8")
+        (root / "ok.md").write_text("A clean note.\n", encoding="utf-8")
+        (root / "broken.md").write_text("[missing](missing.md)\n", encoding="utf-8")
+        (root / "linked.md").write_text(
+            "The proband has maternal c.1057-2A>G and paternal Q230P.", encoding="utf-8")
+        return root
+
+    def run_gate(self, root: Path, *args: str) -> subprocess.CompletedProcess:
+        return subprocess.run([sys.executable, str(GATE_PATH), "--root", str(root), *args],
+                              capture_output=True, text=True)
+
+    def test_a_clean_named_file_passes_and_the_statement_of_limits_is_printed(self) -> None:
+        root = self.make_repo()
+        done = self.run_gate(root, "--paths", "ok.md")
+        self.assertEqual(done.returncode, 0, done.stdout)
+        self.assertIn("PRECHECK_VERDICT: PASS", done.stdout)
+        self.assertIn("NOT a gate verdict", done.stdout)
+        self.assertIn("NOT CHECKED", done.stdout)
+        self.assertFalse(any(line.startswith("VERDICT:") for line in done.stdout.splitlines()),
+                         "a pre-check must not print a gate verdict line")
+
+    def test_it_finds_a_broken_link_and_a_case_linkage_in_the_named_files(self) -> None:
+        root = self.make_repo()
+        broken = self.run_gate(root, "--paths", "broken.md")
+        self.assertEqual(broken.returncode, 2)
+        self.assertIn("BROKEN_MARKDOWN_LINK", broken.stdout)
+        self.assertIn("PRECHECK_VERDICT: BLOCK", broken.stdout)
+        linked = self.run_gate(root, "--paths", "linked.md")
+        self.assertEqual(linked.returncode, 2)
+        self.assertIn("LINKAGE", linked.stdout)
+
+    def test_a_file_that_was_not_named_is_not_read(self) -> None:
+        """The honest limit, pinned: broken.md and linked.md are bad, ok.md is named, the pre-check passes."""
+        root = self.make_repo()
+        done = self.run_gate(root, "--paths", "ok.md")
+        self.assertEqual(done.returncode, 0)
+        self.assertNotIn("BROKEN_MARKDOWN_LINK", done.stdout)
+        full = self.run_gate(root, "--skip-clean-clone")
+        self.assertEqual(full.returncode, 2, "the full gate still sees the files the pre-check did not")
+
+    def test_changed_since_names_the_modified_and_the_untracked_files(self) -> None:
+        root = self.make_repo()
+        for cmd in (["init", "-q"], ["add", "."], ["-c", "user.name=t", "-c", "user.email=t@example.invalid", "commit", "-q", "-m", "base"]):
+            subprocess.run(["git", "-C", str(root), *cmd], check=True, capture_output=True)
+        # nothing changed since HEAD: nothing is read, so the bad files committed earlier are not reported
+        quiet = self.run_gate(root, "--changed-since", "HEAD")
+        self.assertEqual(quiet.returncode, 0, quiet.stdout)
+        self.assertIn("FILES NAMED: 0", quiet.stdout)
+        (root / "new_bad.md").write_text("[gone](gone.md)\n", encoding="utf-8")       # untracked
+        (root / "ok.md").write_text("Changed but clean.\n", encoding="utf-8")         # tracked and modified
+        changed = self.run_gate(root, "--changed-since", "HEAD")
+        self.assertEqual(changed.returncode, 2)
+        self.assertIn("new_bad.md", changed.stdout)
+        self.assertIn("FILES NAMED: 2", changed.stdout)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

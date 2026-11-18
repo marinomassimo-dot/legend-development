@@ -311,14 +311,43 @@ def walk_publishable(root: Path) -> Iterable[Path]:
             yield path
 
 
+# 🔴 PER-FILE PRE-CHECK (ADV-041, 2026-11-18). When set (by `--paths` or `--changed-since`), the two
+# content scans that read one file at a time (privacy and case linkage, local links) read ONLY these
+# repository-relative paths. It is a way to learn in seconds, before the serialized queue, what the
+# gate would say about the files of one commit. It is NOT the gate: the tree-level scans, the
+# provenance and README checks and the clean clone are not run, and a clean pre-check says nothing
+# about a file that was not named. `None` is the full gate and the default.
+ONLY_PATHS: frozenset[str] | None = None
+
+
+def in_scope(root: Path, path: Path) -> bool:
+    if ONLY_PATHS is None:
+        return True
+    try:
+        return path.relative_to(root).as_posix() in ONLY_PATHS
+    except ValueError:
+        return False
+
+
 def iter_files(root: Path) -> Iterable[Path]:
     for path in walk_publishable(root):
         if path.is_file():
             yield path
 
 
+def scoped_files(root: Path) -> Iterable[Path]:
+    """The named files of a pre-check, with the same exemptions the full walk applies; no tree walk."""
+    exempt = unpublishable_paths(root)
+    for rel in sorted(ONLY_PATHS or ()):
+        path = root / rel
+        if (not path.is_file() or any(part in SKIP_DIRS for part in Path(rel).parts)
+                or is_exempt(rel, exempt)):
+            continue
+        yield path
+
+
 def iter_text_files(root: Path) -> Iterable[Path]:
-    for path in iter_files(root):
+    for path in (iter_files(root) if ONLY_PATHS is None else scoped_files(root)):
         if path.suffix.lower() in TEXT_SUFFIXES or path.name in {
             "LICENSE", ".gitignore",
         }:
@@ -327,7 +356,7 @@ def iter_text_files(root: Path) -> Iterable[Path]:
 
 def iter_privacy_files(root: Path) -> Iterable[Path]:
     """Every file the privacy scan reads: the text suffixes plus PRIVACY_EXTRA_SUFFIXES."""
-    for path in iter_files(root):
+    for path in (iter_files(root) if ONLY_PATHS is None else scoped_files(root)):
         if (
             path.suffix.lower() in TEXT_SUFFIXES
             or path.suffix.lower() in PRIVACY_EXTRA_SUFFIXES
@@ -684,6 +713,8 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
         )
 
     for path in iter_privacy_files(root):
+        if not in_scope(root, path):
+            continue
         text = read_text(path)
         rel = str(path.relative_to(root))
         if rel in GATE_INTERNAL_FILES:
@@ -1016,15 +1047,21 @@ def scan_links(root: Path, findings: list[Finding]) -> None:
     markdown_link = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
     wikilink = re.compile(r"\[\[([^\]#|]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]")
     by_name: dict[str, list[Path]] = {}
-    for file_path in iter_files(root):
-        by_name.setdefault(file_path.name, []).append(file_path)
-        by_name.setdefault(file_path.stem, []).append(file_path)
-    for directory in walk_publishable(root):
-        if directory.is_dir():
-            by_name.setdefault(directory.name, []).append(directory)
+
+    def fill_names() -> None:
+        for file_path in iter_files(root):
+            by_name.setdefault(file_path.name, []).append(file_path)
+            by_name.setdefault(file_path.stem, []).append(file_path)
+        for directory in walk_publishable(root):
+            if directory.is_dir():
+                by_name.setdefault(directory.name, []).append(directory)
+
+    if ONLY_PATHS is None:
+        fill_names()            # the full gate builds the name index up front, as before
+    names_filled = ONLY_PATHS is None
 
     for path in iter_text_files(root):
-        if path.suffix.lower() != ".md":
+        if path.suffix.lower() != ".md" or not in_scope(root, path):
             continue
         text = read_text(path)
         rel = str(path.relative_to(root))
@@ -1066,6 +1103,9 @@ def scan_links(root: Path, findings: list[Finding]) -> None:
                 continue
             name = Path(target).name
             candidates = {name, f"{name}.md"}
+            if not names_filled:    # a pre-check builds the whole-tree name index only when a wikilink needs it
+                fill_names()
+                names_filled = True
             if not any(candidate in by_name for candidate in candidates):
                 findings.append(
                     Finding(
@@ -1306,7 +1346,26 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--report-json", help="Write machine-readable report")
     parser.add_argument("--skip-clean-clone", action="store_true")
+    parser.add_argument(
+        "--paths", nargs="+", metavar="FILE",
+        help=("PRE-CHECK, not the gate: run only the per-file content scans (privacy and case "
+              "linkage, secrets, local markdown links) on these repository-relative files"))
+    parser.add_argument(
+        "--changed-since", metavar="REF",
+        help=("PRE-CHECK, not the gate: the same per-file scans on the files changed since REF "
+              "(git diff REF, plus untracked files not ignored)"))
     return parser.parse_args()
+
+
+def changed_since(root: Path, ref: str) -> list[str]:
+    """Repository-relative paths changed since `ref` in the working tree, plus untracked files."""
+    def git(*cmd: str) -> list[str]:
+        done = subprocess.run(["git", "-C", str(root), *cmd], capture_output=True, text=True)
+        if done.returncode != 0:
+            raise RuntimeError(f"git {' '.join(cmd)}: {done.stderr.strip()[:200]}")
+        return [line for line in done.stdout.splitlines() if line.strip()]
+    return sorted(set(git("diff", "--name-only", "--diff-filter=ACMR", ref))
+                  | set(git("ls-files", "--others", "--exclude-standard")))
 
 
 def main() -> int:
@@ -1316,11 +1375,25 @@ def main() -> int:
         print(f"GATE_ERROR: root is not a directory: {root}", file=sys.stderr)
         return 3
 
+    global ONLY_PATHS
+    precheck = bool(args.paths or args.changed_since)
+    if precheck:
+        try:
+            named = list(args.paths or []) + (changed_since(root, args.changed_since) if args.changed_since else [])
+        except (RuntimeError, OSError) as exc:
+            print(f"GATE_ERROR: {exc}", file=sys.stderr)
+            return 3
+        ONLY_PATHS = frozenset(Path(p).as_posix().lstrip("./") if not Path(p).is_absolute()
+                               else Path(p).resolve().relative_to(root).as_posix() for p in named)
+
     findings: list[Finding] = []
     try:
         scan_privacy_and_secrets(root, findings)
         scan_links(root, findings)
-        scan_provenance(root, findings)
+        if precheck:
+            pass    # tree-level scans and the clean clone belong to the gate, not to the pre-check
+        else:
+            scan_provenance(root, findings)
         scan_readme_consistency(root, findings)
         if args.mode in {"release", "clone"} and not args.skip_clean_clone:
             run_clean_clone(root, findings, args.report_json)
@@ -1328,6 +1401,9 @@ def main() -> int:
         print(f"GATE_ERROR: {type(exc).__name__}: {exc}", file=sys.stderr)
         return 3
 
+    if precheck:
+        # tree-level findings that the privacy function also emits (a missing CI workflow, for one) are the gate's business: keep the ones about the named files
+        findings = [finding for finding in findings if finding.path in (ONLY_PATHS or ())]
     findings = deduplicate(findings)
     blocks = [finding for finding in findings if finding.severity == "BLOCK"]
     result = {
@@ -1345,8 +1421,15 @@ def main() -> int:
             encoding="utf-8",
         )
 
-    print(f"VERDICT: {result['verdict']}")
-    print(f"BLOCKS: {len(blocks)}")
+    if precheck:
+        result["mode"] = "precheck"
+        print(f"PRECHECK_VERDICT: {'BLOCK' if blocks else 'PASS'} (per-file scans only; this is NOT a gate verdict)")
+        print(f"FILES NAMED: {len(ONLY_PATHS or ())}; BLOCKS: {len(blocks)}")
+        print("NOT CHECKED: provenance coverage, README and repository consistency, the clean clone, "
+              "and every file that was not named. Only the full gate (`safe_push.py`) may publish.")
+    else:
+        print(f"VERDICT: {result['verdict']}")
+        print(f"BLOCKS: {len(blocks)}")
     for finding in findings:
         print(
             f"[{finding.severity}] {finding.code} "

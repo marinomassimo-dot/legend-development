@@ -307,6 +307,24 @@
      "evidence": "advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/checklist_test_he_20261118/RESULT_T7_STAGE0_CHECKLIST_20261118.md: two tool-free runs on T7 (TUNED-ON), 79,783 tokens, zinc named loosely 2 of 2 and strictly 1 of 2; model and effort read back; no files opened; not the authorised test"
     }
    ]
+  },
+  "OBJ_HE_ADV041_20261118": {
+   "order": 7,
+   "source": "ADV message 2026-11-18 (ADV-041; assignments/ADV-041.md)",
+   "steps": [
+    {
+     "step": "per-file pre-check mode for scripts/public_release_gate.py (--paths, --changed-since): per-file content scans only, with test, routing text and a plain statement of what it does not check; the full gate stays the authority",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "scripts/public_release_gate.py --paths / --changed-since (per-file privacy, case-linkage, secrets and link scans; PRECHECK_VERDICT, never VERDICT; 1.4 s against 28 s before the walk was removed); PrecheckTests (4) in scripts/test_public_release_gate.py, 66 tests OK; both of the day's refusals replayed and caught; routing row in framework/scripts/README.md section 8"
+    },
+    {
+     "step": "receipt source sanity in fulltext_receipts.py record: refuse error, challenge and access-denied sources, warn under 2 KB, override flag, with test",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "framework/scripts/fulltext_receipts.py source_sanity and --allow-small-source in record; SourceSanityTests (5) in framework/scripts/test_fulltext_receipts.py, 117 tests OK; routing row in framework/scripts/README.md section 2"
+    }
+   ]
   }
  },
  "DEFAULTS_TAKEN": [

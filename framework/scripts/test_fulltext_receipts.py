@@ -1800,5 +1800,56 @@ class ARecordSaysWhichStampedSurfaceItStaled(unittest.TestCase):
         self.assertNotIn("NOT CHECKED", done.stdout)
 
 
+class SourceSanityTests(unittest.TestCase):
+    """ADV-041: a receipt's fingerprint proves the bytes, not that they are the paper."""
+
+    def source(self, body: bytes) -> tuple[dict, Path]:
+        temporary = TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        root = Path(temporary.name)
+        artifact = root / "files/fulltext/paper.xml"
+        artifact.parent.mkdir(parents=True)
+        artifact.write_bytes(body)
+        receipt = example("FTR-20260725-42193054-01")
+        receipt.update({"source_locator": "files/fulltext/paper.xml",
+                        "source_fingerprint": hashlib.sha256(body).hexdigest(),
+                        "source_kind": "fulltext_local"})
+        return receipt, root
+
+    def test_error_challenge_and_denied_pages_are_refused(self) -> None:
+        for body in (b"<html><head><title>Just a moment...</title></head></html>",
+                     b"<!DOCTYPE html><title>Access denied</title><p>Error 1020</p>",
+                     b"Internal Server Error",
+                     b"<html>Please complete the reCAPTCHA to continue</html>",
+                     b'{"status": 503, "error": "Service Unavailable"}',
+                     b'{"error": "Forbidden", "code": 403}'):
+            receipt, root = self.source(body)
+            errors = receipts._strict_local_source(receipt, root)
+            self.assertTrue(any("source sanity" in error for error in errors), body)
+
+    def test_the_override_flag_accepts_a_legitimately_tiny_source(self) -> None:
+        receipt, root = self.source(b"Access denied")
+        self.assertEqual(receipts._strict_local_source(receipt, root, allow_small_source=True), [])
+
+    def test_a_real_paper_that_mentions_such_a_phrase_is_not_refused(self) -> None:
+        body = (b"<article><body>" + b"The patient was denied access to the registry. " * 600
+                + b"Access denied pages are discussed. reCAPTCHA is mentioned here.</body></article>")
+        self.assertGreater(len(body), receipts.ERROR_PAGE_MAX_BYTES)
+        receipt, root = self.source(body)
+        self.assertEqual(receipts._strict_local_source(receipt, root), [])
+
+    def test_a_small_ordinary_source_warns_and_a_normal_one_does_not(self) -> None:
+        errors, warnings = receipts.source_sanity(b"<article>short but real text about a gene</article>")
+        self.assertEqual(errors, [])
+        self.assertTrue(warnings and "bytes" in warnings[0])
+        self.assertEqual(receipts.source_sanity(b"x" * 5000), ([], []))
+
+    def test_the_warning_is_printed_when_the_receipt_is_checked(self) -> None:
+        receipt, root = self.source(b"<article>short but real text</article>")
+        with mock.patch("sys.stderr") as err:
+            self.assertEqual(receipts._strict_local_source(receipt, root), [])
+        self.assertTrue(any("WARNING" in str(call) for call in err.write.call_args_list))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
