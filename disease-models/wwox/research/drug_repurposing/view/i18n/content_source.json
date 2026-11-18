@@ -351,6 +351,10 @@
   "src": "en",
   "text": "It separates a deficit of GABA supply from a postsynaptic or chloride-gradient deficit: only the first is helped by more GABA."
  },
+ "2de89d3d8437": {
+  "src": "en",
+  "text": "A selective inhibitor of the named kinase beside the non-selective agent in the same WWOX-system assay, with the second need's readout measured in the same experiment. IT21 addition: include an arm with the inositol precursor added back, which tests the second action in the same experiment. [IT36] selectivity is biochemical and does not carry to cells (4-6-fold in live cells); attribution needs an isogenic isoform-knockout check per compound or convergent pharmacology. [IT36] in rat organotypic CA1 the GSK3-PI4KIIalpha branch sets synaptic NMDAR current; compare GSK3-route compounds with d-APV at matched NMDAR-current reduction; double GSK3A/B depletion needed. [IT47 package] Hypotheses read by the generator from the GSK3 and eIF2B package (five rows, no direction asserted, no repurposing candidate named): before any compound arm, the baseline of eIF2B epsilon Ser535 phosphorylation (human Ser540) with total GSK3 and replicate lanes in the WWOX-deficient cells against corrected controls; the isoform (beta or alpha) by genetic knock-down; a phospho-resistant epsilon (Ser to Ala) and a catalytically dead epsilon as epistasis, with two limits found by the independent reader: Ser to Ala cannot separate GSK3 from DYRK2 acting at the priming serine, and the catalytically dead form needs its own control in tissue with intact Gsk3b; an eIF2B activator only as a discriminating probe, with an engagement control; the null (the GSK3 route is not engaged) stated before the measurement. Lithium stays a labelled non-specific comparator. Source: un registro del repository (non incluso in questo pacchetto). [IT57; ADV-051, ADV-059] In the same assay the lithium regimen (a single against a repeated pretreatment) is a design variable that can change the sign in one family of mouse provoked-seizure papers; the one experiment held shows an effect in all three genotypes, which is more consistent with a general effect than a knockout-specific one, so reading a genotype effect needs a general anticonvulsant comparator that does not act on this kinase, an age series in wild-type pups, and a second inhibitor of another class as the attribution control."
+ },
  "2e055fd6bb53": {
   "src": "it",
   "text": "Rami della risposta UPR, trascritti"
@@ -1243,6 +1247,10 @@
   "src": "it",
   "text": "le stesse condizioni, più una firma più grande di sei geni"
  },
+ "8d34cfa9c82a": {
+  "src": "en",
+  "text": "The same provoked-seizure design with both genotypes treated and an interaction term, powered on the published effect size. [IT57; ADV-051, ADV-054, ADV-059, ADV-061] The published effect size cannot be used to power it: the paper reports no genotype-by-treatment test, does not state the age of the pups, and its wild-type pups sit near the floor of the scale; from its curves the variability of the 60-minute summary is a bracket (a coefficient of variation of about 0.6 to 1.2 in knockouts, read from means and error bars, not a value), which puts the interaction contrast at about 180 to 320 animals per cell at the paper's stimulus, so a pilot comes first and fixes the variability, the assay age and a stimulus that gives wild type a measurable response. The design also needs: wild-type pups at the assay age and at two or more older ages; reference agents with different age profiles as an assay-sensitivity panel (the rat age floor for this agent is an inference, unresolved for the mouse); seizure type recorded per animal and a motor control; a dose check at each age; and a selective T-type blocker beside this agent, because no T-type current has been measured in any WWOX system (the held transcript sets do not sample the thalamus) and the cell pharmacology of this agent is contested. The margin for the same size is the interaction ratio (the knockout effect ratio over the wild-type effect ratio, on the log scale): genotype-specific if at most 0.7 or at least 1.43, not genotype-specific between 0.7 and 1.43, fixed before data (in vivo brief, section 2.7)."
+ },
  "8d3f28942f92": {
   "src": "it",
   "text": "la stessa rete con quattro archi HIF1A duplicati (già presenti nella rete esterna; non rappresenta il patrimonio WWOX)"
@@ -1446,10 +1454,6 @@
  "a0da570946e1": {
   "src": "en",
   "text": "Per-animal parvalbumin cell counts by immunostaining in neuron-targeted Wwox deletion against Cre-only controls, at least 3 animals per arm (reopening condition (c) of NP3A1), read together with a maturation and identity marker panel in the same animals, and, where the data holders allow, intrinsic-property and inhibitory-input recordings from labelled parvalbumin cells and a circuit-level read. Alternatives that also reopen it: a deposited library or animal index for GSE158684, or an independent neuron-targeted deletion dataset with at least 3 animals per arm and a parvalbumin-enriched capture. The result is read as six separate rows (number, identity and maturation, marker expression, intrinsic properties, synaptic input, circuit function); a change in one is not carried to another. In every animal used (P14 to P17, matching the phenotype window), on the same sections: a parvalbumin marker, the Rosa26 tdTomato reporter and a Wwox read-out, reporting per animal the fraction of parvalbumin cells reporter-positive, the fraction Wwox-negative and their concordance, beside cell number, identity and marker expression; transcript, protein, activity, cell number and circuit function stay separate results. [SCI42] Order of the inhibitory minimum experiment: M03 (re-record sIPSC with glutamate block, fixed threshold, per-animal summary), then M01 (E_GABA by gramicidin perforated patch, knockout, heterozygote and wild-type littermates), then M02 (age series with a survivor-selection control); M05 and M06 if M03 confirms the amplitude loss."
- },
- "a2faba19d938": {
-  "src": "en",
-  "text": "A selective inhibitor of the named kinase beside the non-selective agent in the same WWOX-system assay, with the second need's readout measured in the same experiment. IT21 addition: include an arm with the inositol precursor added back, which tests the second action in the same experiment. [IT36] selectivity is biochemical and does not carry to cells (4-6-fold in live cells); attribution needs an isogenic isoform-knockout check per compound or convergent pharmacology. [IT36] in rat organotypic CA1 the GSK3-PI4KIIalpha branch sets synaptic NMDAR current; compare GSK3-route compounds with d-APV at matched NMDAR-current reduction; double GSK3A/B depletion needed. [IT47 package] Hypotheses read by the generator from the GSK3 and eIF2B package (five rows, no direction asserted, no repurposing candidate named): before any compound arm, the baseline of eIF2B epsilon Ser535 phosphorylation (human Ser540) with total GSK3 and replicate lanes in the WWOX-deficient cells against corrected controls; the isoform (beta or alpha) by genetic knock-down; a phospho-resistant epsilon (Ser to Ala) and a catalytically dead epsilon as epistasis, with two limits found by the independent reader: Ser to Ala cannot separate GSK3 from DYRK2 acting at the priming serine, and the catalytically dead form needs its own control in tissue with intact Gsk3b; an eIF2B activator only as a discriminating probe, with an engagement control; the null (the GSK3 route is not engaged) stated before the measurement. Lithium stays a labelled non-specific comparator. Source: un registro del repository (non incluso in questo pacchetto)."
  },
  "a32410816420": {
   "src": "it",
@@ -1778,10 +1782,6 @@
  "c574948de032": {
   "src": "en",
   "text": "Lowering KEAP1 repression of NRF2 (covalent modification or a non-covalent binder at the Kelch domain), or activating NFE2L2."
- },
- "c5a4e3d438da": {
-  "src": "en",
-  "text": "The same provoked-seizure design with both genotypes treated and an interaction term, powered on the published effect size."
  },
  "c5b782b9d1f2": {
   "src": "en",
