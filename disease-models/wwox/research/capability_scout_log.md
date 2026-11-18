@@ -1829,3 +1829,1099 @@ verify routing and schema behaviour; universal future model obedience is not dem
 **Reusable distinction:** an event observed is not a result consumed; a previous choice is not perpetual activity; an Advisor annotation is not fresh evidence. These are now executable cases, not another approval step.
 
 **GAP-REPEATED, separate publication diagnosis:** receipt-only increments left ranking summary counts behind the ledger (1957/1958, then1958/1959/1960 today) while all69unit records and37ranked interventions stayed unchanged. The existing regeneration recipe repairs it; protocol clarification alone has not made that boundary automatic. Candidate for later Harness diagnosis: reuse the existing publication/derived-surface tools to expose or repair this coupling proportionately, without a new service, approval or disease-specific dependency. No such additional architecture adopted or handoff claimed here; the final publication snapshot is repaired. No external scouting or spend.
+
+## 2026-11-02 · scout_daily · Discovery:diagnosis:catalogue-use
+
+**WWOX question.** Catalogue use no funnel from source records to identity-resolved to method-usable to evaluated compounds; vigabatrin assertions not recoded 
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [dataset/huggingface] GreenNode/VieDocOCR-Benchmark (2026-11-02, none stated, revision f9d373e2190f, 22670 files) https://huggingface.co/datasets/GreenNode/VieDocOCR-Benchmark; [dataset/huggingface] Digital-Divide-Data/DDD-Kenya-Kamba-Extending-Benchmarks (2026-11-02, cc-by-4.0, revision f348e066251c, 63 files) https://huggingface.co/datasets/Digital-Divide-Data/DDD-Kenya-Kamba-Extending-Benchmarks; [dataset/huggingface] xinyi234/vulnmirage-benchmark (2026-11-02, other, revision a41e9374dfa5, 14 files) https://huggingface.co/datasets/xinyi234/vulnmirage-benchmark; [paper/nature] Microstructural injury to the optic nerve with vigabatrin treatment in West syndrome: A DTI study (2025-07-16, journal-article) https://doi.org/10.1038/s41598-025-06336-8
+
+**Why asked.** diagnosis row 'Catalogue use' (R2) [disease-models/wwox/research/drug_repurposing/diagnosis_it18_20261101/README.md @ blob e278961562, main b193f1a4f54b]: "Catalogue use no funnel from source records to identity-resolved to method-usable to evaluated compounds; viga"
+
+**If confirmed (decision).** Catalogue use: closing 'no funnel from source records to identity-resolved to method-usable to evaluated compounds; vigabatrin assertions not recoded in I' Roadmap: R3.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-02 · scout_daily · Discovery:diagnosis:compound-target-action
+
+**WWOX question.** Compound-target-action six discordances unresolved at source; 83 percent of module mechanism pairs have no independent counterpart
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [dataset/huggingface] pdabrowskitumanski/lab4-compound-sources (2026-10-28, none stated) https://huggingface.co/datasets/pdabrowskitumanski/lab4-compound-sources; [dataset/huggingface] CompoundAI/pe-bench (2026-10-19, cc-by-4.0) https://huggingface.co/datasets/CompoundAI/pe-bench; [dataset/huggingface] cora-health/compounded-injection-price-index (2026-10-11, cc-by-4.0) https://huggingface.co/datasets/cora-health/compounded-injection-price-index; [paper/nature] Global warming intensifies compound renewable energy droughts (2026-10-29, journal-article) https://doi.org/10.1038/s43247-026-04183-7
+
+**Why asked.** diagnosis row 'Compound-target-action' (R2/R5) [disease-models/wwox/research/drug_repurposing/diagnosis_it18_20261101/README.md @ blob e278961562, main b193f1a4f54b]: "Compound-target-action six discordances unresolved at source; 83 percent of module mechanism pairs have no ind"
+
+**If confirmed (decision).** Compound-target-action: closing 'six discordances unresolved at source; 83 percent of module mechanism pairs have no independent counterpart' Roadmap: R2.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-02 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] picspin/study-design-agent (2026-10-23, MIT) https://github.com/picspin/study-design-agent; [repository/github] mbote-droid/bioeng-termbench (2026-10-16, MIT) https://github.com/mbote-droid/bioeng-termbench; [repository/github] Ayesha037/biogenesis (2026-10-11, none stated) https://github.com/Ayesha037/biogenesis; [model/huggingface] Shicheng/biomedical-ai-resource-track-baseline (2026-11-02, apache-2.0) https://huggingface.co/Shicheng/biomedical-ai-resource-track-baseline; [dataset/huggingface] nhminh107/vibiomir-biomedical-corpus (2026-11-02, cc-by-nc-4.0) https://huggingface.co/datasets/nhminh107/vibiomir-biomedical-corpus; [model/huggingface] AI999X/biomedical-science-ai999x (2026-11-01, apache-2.0) https://huggingface.co/AI999X/biomedical-science-ai999x
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-03 · scout_daily · MTBLS12344
+
+**WWOX question.** Is the metabolomics dataset openly accessible (metabolic-signature question)?
+
+**Contribution vs existing.** dated accessibility record: tool_survey_20261022.md; a status change is a reachability signal only
+
+**Detected.** status: 401 -> 200
+
+**Cost / licence.** reading the change: minutes; any adoption: unestimated until triaged; see source.
+
+**Proof.** https://www.ebi.ac.uk/metabolights/ws/studies/public/study/MTBLS12344
+
+**Outcome.** AVAILABILITY SIGNAL (reachability changed; not a capability: check the reopening condition named above, then decide)
+
+## 2026-11-03 · scout_daily · Discovery:diagnosis:matching-evaluation
+
+**WWOX question.** Matching evaluation duplication of evidence, improper transfer between molecules and unknown turned into negative are tested by fixtures but
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [preprint/europepmc] A Large-Scale Pharmacogenomic Knowledge Graph for Drug-Gene-Variant-Disease Discovery (2025-09-25, preprint (not peer reviewed)) https://europepmc.org/article/PPR/PPR1090369; [dataset/huggingface] gaia-benchmark/results_public (2026-11-03, none stated, revision 92364b4800f2, 4 files) https://huggingface.co/datasets/gaia-benchmark/results_public; [dataset/huggingface] Tushar29k/agent-guardrails-adversarial-benchmark (2026-11-03, none stated, revision d7786f09eb4c, 5 files) https://huggingface.co/datasets/Tushar29k/agent-guardrails-adversarial-benchmark; [dataset/huggingface] syedhuq/multihop-rag-benchmark (2026-11-03, cc-by-4.0, revision f41fcf28de60, 3 files) https://huggingface.co/datasets/syedhuq/multihop-rag-benchmark; [paper/nature] Drug repurposing and African natural product screening, targeting the Parkinson‘s-associated LRRK2 G2019S mutant kinase using molecular dock (2026-10-15, journal-article) https://doi.org/10.1038/s41598-026-71061-9; [paper/nature] Drug repurposing in hereditary ataxia (2026-10-12, journal-article) https://doi.org/10.1038/s44386-026-00079-w
+
+**Why asked.** diagnosis row 'Matching evaluation' (R3/R7) [disease-models/wwox/research/drug_repurposing/diagnosis_it20_20261102/README.md @ blob 23f287e46c, main e7f00f13cc11]: "Matching evaluation duplication of evidence, improper transfer between molecules and unknown turned into negat"
+
+**If confirmed (decision).** Matching evaluation: closing 'duplication of evidence, improper transfer between molecules and unknown turned into negative are tested by fixtures but not by a ' Roadmap: R3.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-03 · scout_daily · Discovery:diagnosis:provenance-through-intermediaries
+
+**WWOX question.** Provenance through intermediaries four T-type entries (terodiline, suloctidil, phloroglucinol, bepridil) get a direction through DGIdb copie
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Artemis: Harnessing Knowledge Graphs for Next-Generation Drug Target Prioritization. (2026-06-26, published record) [+1 mirror(s) merged] https://europepmc.org/article/MED/42614934; [paper/europepmc] Statistics and Ontology of Published Small Molecule Ring Systems. (2026-02-01, published record) https://europepmc.org/article/MED/41757738; [repository/github] harshk242/burp (2026-11-02, none stated) https://github.com/harshk242/burp; [repository/github] MuhammadMuneeb007/drug-disease-mapping (2026-10-24, NOASSERTION) https://github.com/MuhammadMuneeb007/drug-disease-mapping; [repository/github] smolyanko/biomedical-ner-pipeline (2026-09-28, MIT) https://github.com/smolyanko/biomedical-ner-pipeline
+
+**Why asked.** diagnosis row 'Provenance through intermediaries' (R2/R5) [disease-models/wwox/research/drug_repurposing/diagnosis_it20_20261102/README.md @ blob 23f287e46c, main e7f00f13cc11]: "Provenance through intermediaries four T-type entries (terodiline, suloctidil, phloroglucinol, bepridil) get a"
+
+**If confirmed (decision).** Provenance through intermediaries: closing 'four T-type entries (terodiline, suloctidil, phloroglucinol, bepridil) get a direction through DGIdb copies of the ChEMBL group ac' Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-03 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] ma3u/MinimumViableHealthDataspacev2 (2026-11-02, Apache-2.0) https://github.com/ma3u/MinimumViableHealthDataspacev2; [repository/github] aiswaryanandan24-cell/PharmGraph-Agentic-AI-Pipeline-for-Drug-Interaction-Discovery (2026-11-02, MIT) https://github.com/aiswaryanandan24-cell/PharmGraph-Agentic-AI-Pipeline-for-Drug-Interaction-Discovery; [repository/github] orevid-org/orevid (2026-11-02, MIT) https://github.com/orevid-org/orevid; [model/huggingface] rav39439/next_token_prediction (2026-11-03, none stated) https://huggingface.co/rav39439/next_token_prediction; [dataset/huggingface] THEORACLEEEE/polymarket-predictions (2026-11-03, mit) https://huggingface.co/datasets/THEORACLEEEE/polymarket-predictions; [dataset/huggingface] Ciroc0/dmi-aarhus-predictions (2026-11-03, cc-by-4.0) https://huggingface.co/datasets/Ciroc0/dmi-aarhus-predictions
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-04 · scout_daily · Discovery:work_order:NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR
+
+**WWOX question.** Which of three readings (NMDAR gain, permissive necessity, AMPAR-led drive) explains the d-APV-sensitive bursting, and does the bursting dep
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Heterosynaptic NMDA receptor plasticity in hippocampal dentate granule cells. (2026-07-22, published record) https://europepmc.org/article/MED/42558507; [paper/europepmc] Modeling the coexistence of NMDAR-dependent LTP and LTD mediated by changes in AMPAR conductance. (2026-06-22, published record) https://europepmc.org/article/MED/42331308; [paper/europepmc] Chronic joint pain drives sex-specific changes in hippocampal glutamatergic signaling and sleep. (2026-09-21, published record) https://europepmc.org/article/MED/42768134; [repository/github] JudyXChen/SpontaneousNMDAR (2026-11-02, none stated, default-branch head 5b0480267999 2026-10-07, release none published) https://github.com/JudyXChen/SpontaneousNMDAR; [repository/github] kalpanapandyanmims1999/-kalpanapandya16-NMDARInhibitors (2026-10-28, none stated, default-branch head 1739aae10ae3 2026-10-28, release none published) https://github.com/kalpanapandyanmims1999/-kalpanapandya16-NMDARInhibitors; [repository/github] KhondamirRustamov/iGluR-peptides (2026-10-15, none stated, default-branch head 4ee79b2d76e5 2026-10-15, release none published) https://github.com/KhondamirRustamov/iGluR-peptides; [paper/nature] BME (CDRI-08) mitigates hypoxia-induced hippocampal neurodegeneration and memory impairment via modulating NMDAR-CREB-BDNF signaling and apo (2026-08-23, journal-article) https://doi.org/10.1038/s41598-026-65605-2; [paper/nature] Sex and genotype influence the disruption of circulating NMDAR-related amino acids in patients with Parkinson’s disease (2026-08-11, journal-article) https://doi.org/10.1038/s41531-026-01507-4
+
+**Why asked.** work_order entry NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR [disease-models/wwox/research/drug_repurposing/view/work_order.json @ blob 4e96385baf, main cceaf8540686]: "Which of three readings (NMDAR gain, permissive necessity, AMPAR-led drive) explains the d-APV-sensitive burst"
+
+**If confirmed (decision).** E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot b Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-04 · scout_daily · Discovery:work_order:NEED-GSK3B-DEREPRESSION
+
+**WWOX question.** Is GSK3 output actually raised in WWOX loss, and in which direction does each class of GSK3 inhibitor move the Wnt readout? The only datum i
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Circulating Extracellular Vesicles in Alcoholic Liver Disease Affect Skeletal Muscle Homeostasis and Differentiation. (2025-02-01, published record) https://europepmc.org/article/MED/39921321; [paper/europepmc] DCI improves diabetic encephalopathy by modulating the BDNF/NF-κB/GSK-3β pathway. (2025-04-03, published record) https://europepmc.org/article/MED/40187477; [repository/github] r-universe/gsk3 (2026-11-01, none stated) https://github.com/r-universe/gsk3; [repository/github] gauravkadupatil-png/GSK32 (2026-10-04, none stated) https://github.com/gauravkadupatil-png/GSK32; [repository/github] spiliotislab/sept9-gsk3-phosphoswitch-code (2026-09-29, MIT) https://github.com/spiliotislab/sept9-gsk3-phosphoswitch-code; [dataset/huggingface] DenyTranDFW/Benchmark_2026_B44_Mortgage_Trust_2160315 (2026-11-04, gpl) https://huggingface.co/datasets/DenyTranDFW/Benchmark_2026_B44_Mortgage_Trust_2160315; [dataset/huggingface] AirCaps/a5s-small-v2-asr-benchmark-dataset (2026-11-04, other) https://huggingface.co/datasets/AirCaps/a5s-small-v2-asr-benchmark-dataset; [dataset/huggingface] crawlcheck/agent-safety-benchmark (2026-11-04, cc-by-4.0) https://huggingface.co/datasets/crawlcheck/agent-safety-benchmark
+
+**Why asked.** work_order entry NEED-GSK3B-DEREPRESSION [disease-models/wwox/research/drug_repurposing/view/work_order.json @ blob 4e96385baf, main cceaf8540686]: "Is GSK3 output actually raised in WWOX loss, and in which direction does each class of GSK3 inhibitor move the"
+
+**If confirmed (decision).** Raised output with a Tau-versus-catenin separation by one class would make that class a compensation hypothesis independent of residual WWOX protein; unchanged  Roadmap: R3.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-04 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] marinomassimo-dot/legend-development (2026-11-04, MIT) https://github.com/marinomassimo-dot/legend-development; [repository/github] Dengyuemed/dengyuemed.github.io (2026-11-03, none stated) https://github.com/Dengyuemed/dengyuemed.github.io; [repository/github] api-evangelist/omass-therapeutics (2026-10-31, none stated) https://github.com/api-evangelist/omass-therapeutics; [space/huggingface] danielenglish1996/ai-content-repurposing (2026-09-22, none stated) https://huggingface.co/spaces/danielenglish1996/ai-content-repurposing; [space/huggingface] RottenShadow/ailixir-drug-repurposing (2026-07-08, none stated) https://huggingface.co/spaces/RottenShadow/ailixir-drug-repurposing; [space/huggingface] nexustech1/repurposingagent (2026-07-06, none stated) https://huggingface.co/spaces/nexustech1/repurposingagent
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-05 · scout_daily · ToolUniverse
+
+**WWOX question.** Can one live-lookup layer (MCP) answer gene-level WWOX queries?
+
+**Contribution vs existing.** optional isolated tool; see tooluniverse_capability_test_20261026.md (work saved) and tool_survey row 12
+
+**Detected.** release: 'v1.5.8' -> 'v1.5.9'
+
+**Cost / licence.** reading the change: minutes; any adoption: unestimated until triaged; Apache-2.0.
+
+**Proof.** https://github.com/mims-harvard/ToolUniverse/releases
+
+**Outcome.** TO_TRIAGE (a detected change is not a reading)
+
+## 2026-11-05 · scout_daily · Monarch-app
+
+**WWOX question.** Phenotype/disease KG API changes
+
+**Contribution vs existing.** kg_thin_slice.py uses it
+
+**Detected.** release: 'v1.31.1' -> 'v1.32.0-rc1'
+
+**Cost / licence.** reading the change: minutes; any adoption: unestimated until triaged; BSD-3-Clause.
+
+**Proof.** https://github.com/monarch-initiative/monarch-app/releases
+
+**Outcome.** TO_TRIAGE (a detected change is not a reading)
+
+## 2026-11-05 · scout_daily · Discovery:work_order:NEED-INHIBITORY-HYPOFUNCTION
+
+**WWOX question.** In the Wwox neuron-deleted neocortical slice, is the lost fast GABA-A inhibition the step that makes bursting (rather than a graded change o
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] BrenoKaffer/gabarita (2026-11-05, none stated, default-branch head 6e6d67fe5f40 2026-11-05, release none published) https://github.com/BrenoKaffer/gabarita; [repository/github] Bronze012/gabarito-med (2026-11-05, none stated, default-branch head c30080b18885 2026-11-05, release none published) https://github.com/Bronze012/gabarito-med; [repository/github] lucasgenial/gabarito360 (2026-11-05, none stated, default-branch head 9ea0a2977b57 2026-11-05, release none published) https://github.com/lucasgenial/gabarito360; [model/huggingface] georgeliu59/caption_qwen35_9b_trainset_retrieval_benchmark_110426 (2026-11-05, none stated) https://huggingface.co/georgeliu59/caption_qwen35_9b_trainset_retrieval_benchmark_110426; [dataset/huggingface] crawlcheck/vendor-benchmark (2026-11-05, cc-by-4.0) https://huggingface.co/datasets/crawlcheck/vendor-benchmark; [dataset/huggingface] Tushar29k/voice-agent-adversarial-benchmark (2026-11-05, none stated) https://huggingface.co/datasets/Tushar29k/voice-agent-adversarial-benchmark; [paper/nature] Altered axonal initial segment development links circuit and Kv7 dysfunction in an Fmr1 knockout rat (2026-09-12, journal-article) https://doi.org/10.1038/s42003-026-10958-7; [paper/nature] GABA and glutamate interplay during tactile processing: an fMRS study (2026-09-01, journal-article) https://doi.org/10.1038/s42003-026-09547-5
+
+**Why asked.** work_order entry NEED-INHIBITORY-HYPOFUNCTION [disease-models/wwox/research/drug_repurposing/view/work_order.json @ blob 4e96385baf, main 8c7c46cf47b4]: "In the Wwox neuron-deleted neocortical slice, is the lost fast GABA-A inhibition the step that makes bursting "
+
+**If confirmed (decision).** A heterozygote with inhibition like the knockout would put the NMDAR/excitatory-gain readings first; a knockout-specific receptor-limited loss would make positi Roadmap: R3.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-05 · scout_daily · Discovery:work_order:NEED-ISR-ATTENUATION
+
+**WWOX question.** Is the ISR kinase arm active at all in WWOX-deficient neural cells, and is it compensatory or harmful? After the mouse P17 transcripts the s
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] 6nguyen/cut-israel-ties (2026-11-05, none stated) https://github.com/6nguyen/cut-israel-ties; [repository/github] arielf-idra/notam-isr (2026-11-05, MIT) https://github.com/arielf-idra/notam-isr; [repository/github] RokuIL/Live-From-Israel (2026-11-05, none stated) https://github.com/RokuIL/Live-From-Israel; [model/huggingface] israel-adewuyi/AlphabetSort (2026-11-04, none stated) https://huggingface.co/israel-adewuyi/AlphabetSort; [dataset/huggingface] israel-adewuyi/tinystories_african (2026-11-04, none stated) https://huggingface.co/datasets/israel-adewuyi/tinystories_african; [dataset/huggingface] Hebrish/Israeli-Name-Sentences (2026-11-03, cc-by-4.0) https://huggingface.co/datasets/Hebrish/Israeli-Name-Sentences
+
+**Why asked.** work_order entry NEED-ISR-ATTENUATION [disease-models/wwox/research/drug_repurposing/view/work_order.json @ blob 4e96385baf, main 8c7c46cf47b4]: "Is the ISR kinase arm active at all in WWOX-deficient neural cells, and is it compensatory or harmful? After t"
+
+**If confirmed (decision).** A measured elevation would give the need its first controlled WWOX-system row on the pathway; a flat result removes the premise of F3 for card E01. Transcripts  Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-06 · scout_daily · Discovery:work_order:NEED-LACTATE-LDH
+
+**WWOX question.** Is LDH activity or lactate raised in WWOX-deficient neural cells? (IT8 P3 2026-10-29: the former second half of this question, whether stiri
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Exploring Cross-Sectional and Longitudinal Associations Among DNA Methylation, Prognostic Proteins, and Symptoms in Patients Prescribed Oral (2026-10-08, published record) https://europepmc.org/article/MED/42848710; [paper/europepmc] LDH-related Metabolic Alterations in Alzheimer's Disease: Evidence from Clinical and Transcriptomic Analyses. (2026-09-01, published record) https://europepmc.org/article/MED/42870594; [preprint/europepmc] Drosophila melanogaster  lactate dehydrogenase deficiency recapitulates the exercise intolerance of human glycogen storage disease type XI (2026-07-10, preprint (not peer reviewed)) https://europepmc.org/article/PPR/PPR1277259; [repository/github] luccabruno3z/luccabruno3z.github.io (2026-11-06, none stated, default-branch head e68b8fb21c94 2026-11-06, release none published) https://github.com/luccabruno3z/luccabruno3z.github.io; [repository/github] luccabruno3z/ldh-lol (2026-11-06, none stated, default-branch head 359854340e6d 2026-11-05, release timelines 2026-10-30) https://github.com/luccabruno3z/ldh-lol; [repository/github] ldhawka/ldhawka.github.io (2026-11-05, none stated, default-branch head 7644641f84d8 2026-11-05, release none published) https://github.com/ldhawka/ldhawka.github.io; [model/huggingface] gschottlender/graphmatch-bioactivity-models (2026-09-21, none stated) https://huggingface.co/gschottlender/graphmatch-bioactivity-models; [model/huggingface] prime7781/drug-bioactivity-predictor (2026-08-24, mit) https://huggingface.co/prime7781/drug-bioactivity-predictor; [dataset/huggingface] Sepideh2027/Bioactivity-Bench (2026-07-23, none stated) https://huggingface.co/datasets/Sepideh2027/Bioactivity-Bench; [paper/nature] Structural characterization and CO2 adsorption enhancement of synthesized calcined flower-like Mg–Al LDH@γ-Al2O3 (2026-09-20, journal-article) https://doi.org/10.1038/s41598-026-72292-6; [paper/nature] Interface-driven electrocatalytic activity of NiFe-LDH on MnO2-modified SWCNT hierarchical nanostructures for overall water splitting (2026-09-15, journal-article) https://doi.org/10.1038/s41598-026-66726-4
+
+**Why asked.** work_order entry NEED-LACTATE-LDH [disease-models/wwox/research/drug_repurposing/view/work_order.json @ blob 4e96385baf, main 0845ed06e8d0]: "Is LDH activity or lactate raised in WWOX-deficient neural cells? (IT8 P3 2026-10-29: the former second half o"
+
+**If confirmed (decision).** If lactate is not raised, the need loses its WWOX observation and E02 moves to P3 by rule; if raised, the node is tested with a nanomolar human-LDHA inhibitor,  Roadmap: R5.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-06 · scout_daily · Discovery:work_order:NEED-MYC-PROGENITOR-PROLIFERATION
+
+**WWOX question.** Is the MYC rise in WWOX-deficient radial glia a driver, a marker of retained progenitor state or a consequence of the cell-cycle shift, and 
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] MYC-driven gliosis impairs neuron-glia communication in amyotrophic lateral sclerosis. (2026-05-01, published record) https://europepmc.org/article/MED/41004427; [paper/europepmc] Walnut-Derived Extracellular Vesicles Orchestrate a Pre-Regenerative Niche via c-Myc Mediated Metabolic Reprogramming. (2026-07-01, published record) https://europepmc.org/article/MED/42206567; [paper/europepmc] Microglial ADGRG1: AD glial resilience generator. (2025-10-01, published record) https://europepmc.org/article/MED/41038155; [repository/github] anttiluode/TheMycelialCortex (2026-06-16, MIT) https://github.com/anttiluode/TheMycelialCortex; [repository/github] GautamGripen/NeuronWiseLabs-MyCodeBackups (2026-04-13, none stated) https://github.com/GautamGripen/NeuronWiseLabs-MyCodeBackups; [space/huggingface] Sepideh2027/ligand-bioactivity-predictor (2026-07-23, none stated) https://huggingface.co/spaces/Sepideh2027/ligand-bioactivity-predictor; [dataset/huggingface] Ni3SinghR/provbench-egfr-bioactivity (2026-06-29, cc-by-sa-3.0) https://huggingface.co/datasets/Ni3SinghR/provbench-egfr-bioactivity; [model/huggingface] JuliTech-001/Druglikeness-bioactivity-model (2026-03-19, none stated) https://huggingface.co/JuliTech-001/Druglikeness-bioactivity-model
+
+**Why asked.** work_order entry NEED-MYC-PROGENITOR-PROLIFERATION [disease-models/wwox/research/drug_repurposing/view/work_order.json @ blob 4e96385baf, main 0845ed06e8d0]: "Is the MYC rise in WWOX-deficient radial glia a driver, a marker of retained progenitor state or a consequence"
+
+**If confirmed (decision).** If MYC difference vanishes within cell-cycle and potency strata, MYC is a marker and the need moves to inert for lever purposes. If genetic MYC lowering moves n Roadmap: R5.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-06 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] Exynos-8890/gptr-bench (2026-11-05, Apache-2.0) https://github.com/Exynos-8890/gptr-bench; [repository/github] cw-jlu/Drug-Repurposing-Agent (2026-10-03, none stated) https://github.com/cw-jlu/Drug-Repurposing-Agent; [repository/github] RyanWangZf/BioDSA (2026-09-30, MIT) https://github.com/RyanWangZf/BioDSA; [model/huggingface] SINAI/ALIA-es-biomedical-7B-Instruct (2026-11-03, apache-2.0) https://huggingface.co/SINAI/ALIA-es-biomedical-7B-Instruct; [model/huggingface] Alberto/ALIA-es-biomedical-7B-Instruct-gguf (2026-11-01, apache-2.0) https://huggingface.co/Alberto/ALIA-es-biomedical-7B-Instruct-gguf; [model/huggingface] mradermacher/Gemma4-Biomedical-E4B-GGUF (2026-10-28, apache-2.0) https://huggingface.co/mradermacher/Gemma4-Biomedical-E4B-GGUF
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-07 · scout_daily · PubMed:wwox_any
+
+**WWOX question.** New WWOX paper or external precedent that could reopen a research question
+
+**Contribution vs existing.** not checked against the registry (never grepped); intake triage decides new vs already read
+
+**Detected.** 42991897 Population-specific differences in ClinVar pathogenic and likely pathogenic variants of ep
+
+**Cost / licence.** abstract screen: minutes; a full read needs its receipt; PubMed metadata; full text per paper.
+
+**Proof.** https://pubmed.ncbi.nlm.nih.gov/?term=42991897
+
+**Outcome.** TO_TRIAGE (abstract = discovery, not a reading)
+
+## 2026-11-07 · scout_daily · Discovery:task_step:OBJ_P8/P8
+
+**WWOX question.** P8 Pharmacological comparisons incl. AEDs
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Risks of neurodevelopmental disorders after prenatal exposure to antiepileptic drugs. (2026-09-14, published record) https://europepmc.org/article/MED/42736039; [paper/europepmc] Prophylactic Antiepileptic Drugs in Nontraumatic Intracerebral Hemorrhage: A Network Meta-Analysis. (2026-05-05, published record) https://europepmc.org/article/MED/42087030; [paper/europepmc] Assessment of Preparedness for Medical Emergencies in Saudi Dental Colleges: A National Cross-Sectional Study. (2026-10-25, published record) https://europepmc.org/article/MED/42928625; [repository/github] the-sunnyy/fx (2026-11-07, none stated, default-branch head 5c1b1e17b252 2026-11-07, release none published) https://github.com/the-sunnyy/fx; [repository/github] cecattot/tipos_abstratos_dados (2026-11-07, none stated, default-branch head cc814a5d016a 2026-11-07, release none published) https://github.com/cecattot/tipos_abstratos_dados; [repository/github] GersonPardim/Simulador_Interativo_de_-Arvores (2026-11-07, none stated, default-branch head 1e25b3034fb2 2026-11-07, release none published) https://github.com/GersonPardim/Simulador_Interativo_de_-Arvores; [model/huggingface] Shoriful025/molecular_bioactivity_predictor_gnn (2026-01-08, mit) https://huggingface.co/Shoriful025/molecular_bioactivity_predictor_gnn; [model/huggingface] aksw/Bike-bioactivity (2025-11-24, apache-2.0) https://huggingface.co/aksw/Bike-bioactivity; [space/huggingface] fatmamattar/bioactivity-predictor (2025-06-21, none stated) https://huggingface.co/spaces/fatmamattar/bioactivity-predictor; [paper/nature] An artifact audit of budget-dependent LoRA rank comparisons (2026-11-05, journal-article) https://doi.org/10.1038/s41598-026-78535-w; [paper/nature] Stage harmonized temporal survival comparisons in de novo metastatic breast cancer using SEER (2026-11-04, journal-article) https://doi.org/10.1038/s41598-026-77501-w
+
+**Why asked.** task_step ORCH-ROADMAP-IT31-20261106 OBJ_P8 step P8 [TODO] [ledger/tasks/orchestrator/ORCH-ROADMAP-IT31-20261106.json @ blob 87f4985c9d, main 25a01f7a524d]: "P8 Pharmacological comparisons incl. AEDs"
+
+**If confirmed (decision).** step P8 (orchestrator): whether a found method/resource changes how it is done Roadmap: R5.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-07 · scout_daily · Discovery:work_order:NEED-MYELINATION
+
+**WWOX question.** Does vigabatrin or CPP-115 exposure add myelin injury in a Wwox-deficient juvenile model, given the baseline white-matter loss in the human 
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Pharmacokinetics of Loading Dose Vigabatrin Administered via Enteral Tube in Participants With Post-Anoxic Status Epilepticus. (2026-10-01, published record) https://europepmc.org/article/MED/42723519; [paper/europepmc] Vigabatrin-related MRI changes and tapering strategy in hemispherotomy for infantile spasms: illustrative case. (2026-07-13, published record) https://europepmc.org/article/MED/42441989; [paper/europepmc] Microstructural injury to the optic nerve with vigabatrin treatment in West syndrome: A DTI study. (2025-07-16, published record) https://europepmc.org/article/MED/40670421
+
+**Why asked.** work_order entry NEED-MYELINATION [disease-models/wwox/research/drug_repurposing/view/work_order.json @ blob 153e14f097, main 25a01f7a524d]: "Does vigabatrin or CPP-115 exposure add myelin injury in a Wwox-deficient juvenile model, given the baseline w"
+
+**If confirmed (decision).** A clean absence of added injury would move H02 to a position without harm rows; its presence would make the sibling tag a card-level C3 for vigabatrin as well. Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-07 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] AikyaKumar/hetionet-drug-repurposing (2026-11-06, none stated) https://github.com/AikyaKumar/hetionet-drug-repurposing; [repository/github] medical-device-design/FDA-kg (2026-11-05, none stated) https://github.com/medical-device-design/FDA-kg; [repository/github] Harsheys27/BioLens (2026-11-05, none stated) https://github.com/Harsheys27/BioLens; [dataset/huggingface] Venkat071989/superkart-sales-prediction (2026-11-07, none stated) https://huggingface.co/datasets/Venkat071989/superkart-sales-prediction; [space/huggingface] sadansabo/Nigerian_National_Flood_Prediction_System (2026-11-07, none stated) https://huggingface.co/spaces/sadansabo/Nigerian_National_Flood_Prediction_System; [space/huggingface] soradash/stock-ai-prediction (2026-11-07, none stated) https://huggingface.co/spaces/soradash/stock-ai-prediction
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-08 · scout_daily · Discovery:work_order:NEED-NEUROINFLAMMATION-GLIA
+
+**WWOX question.** Is glial density in a Wwox-deficient brain below, equal to or above wild type before the first spike? The sign conflicts between species, so
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Harnessing Neurogenic Potential of Glial Cell Types as an Emerging Strategy for Treating Epilepsy. (2026-10-15, published record) [+1 mirror(s) merged] https://europepmc.org/article/MED/42941915; [paper/europepmc] Biofluid Biomarkers of Neuronal and Glial Injury in Epilepsy and Seizures: A Comprehensive Review. (2026-10-03, published record) https://europepmc.org/article/MED/42884085; [model/huggingface] diamandislabii/ViT-Glial-Tumor-Classification (2025-06-16, none stated, revision f70e4cd93758, 4 files) https://huggingface.co/diamandislabii/ViT-Glial-Tumor-Classification; [paper/nature] Disrupted glial-mediated synaptic refinement in Fragile X syndrome (2026-10-25, journal-article) https://doi.org/10.1038/s41598-026-75819-z; [paper/nature] Conversational brain AI for adaptive epilepsy care (2026-10-16, journal-article) https://doi.org/10.1038/s41591-026-04719-6
+
+**Why asked.** work_order entry NEED-NEUROINFLAMMATION-GLIA [disease-models/wwox/research/drug_repurposing/view/work_order.json @ blob 153e14f097, main 0a3a34f95c41]: "Is glial density in a Wwox-deficient brain below, equal to or above wild type before the first spike? The sign"
+
+**If confirmed (decision).** It decides whether this need is a readout, a seizure consequence or a seizure-independent lever. Until then no glial modulator is proposed, and no position move Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-08 · scout_daily · Discovery:work_order:NEED-PDH-PYRUVATE-AXIS
+
+**WWOX question.** Is PDH phosphorylation higher in WWOX-deficient neural cells, and does a PDK inhibitor change it in a genotype-dependent way without lowerin
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Shaoyao Gancao Decoction alleviates ulcerative colitis-associated secondary liver injury by inhibiting the phosphorylation of pyruvate dehyd (2026-04-04, published record) https://europepmc.org/article/MED/41941988; [paper/europepmc] The pyruvate dehydrogenase complex at the crossroads of cancer metabolism and cell death. (2026-07-01, published record) https://europepmc.org/article/MED/42462696; [paper/europepmc] BICC1 attenuates oxidative stress-induced osteogenic injury via regulation of the PDK/PDH axis in MC3T3-E1 cells. (2026-09-08, published record) https://europepmc.org/article/MED/42709265; [repository/github] pdh9311/pdh9311 (2026-11-08, none stated, default-branch head c0098a626655 2026-11-08, release none published) https://github.com/pdh9311/pdh9311; [repository/github] AmanSingh1812/btcusdt-scalper-paper-trading (2026-11-08, none stated, default-branch head 766f83a7c30a 2026-11-08, release none published) https://github.com/AmanSingh1812/btcusdt-scalper-paper-trading; [repository/github] AmanSingh1812/btcusdt-scalper-highfreq-paper-trading (2026-11-08, none stated) https://github.com/AmanSingh1812/btcusdt-scalper-highfreq-paper-trading; [dataset/huggingface] MLL-Lab/MultiBBQ-perturbations (2026-11-07, cc-by-4.0) https://huggingface.co/datasets/MLL-Lab/MultiBBQ-perturbations; [dataset/huggingface] ChicagoHAI/openaireview-perturbation (2026-11-02, other) https://huggingface.co/datasets/ChicagoHAI/openaireview-perturbation; [dataset/huggingface] anuosi666/Perturbation-response-identification (2026-10-20, none stated) https://huggingface.co/datasets/anuosi666/Perturbation-response-identification
+
+**Why asked.** work_order entry NEED-PDH-PYRUVATE-AXIS [disease-models/wwox/research/drug_repurposing/view/work_order.json @ blob 153e14f097, main 0a3a34f95c41]: "Is PDH phosphorylation higher in WWOX-deficient neural cells, and does a PDK inhibitor change it in a genotype"
+
+**If confirmed (decision).** A genotype-by-inhibitor interaction would give the first WWOX-system row for DCA on this need; the known glucose-lowering and neuropathy signals would remain as Roadmap: R2.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-08 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] carson-olaf/mva-hackathon-2026 (2026-10-30, NOASSERTION) https://github.com/carson-olaf/mva-hackathon-2026; [repository/github] api-evangelist/healx (2026-10-30, none stated) https://github.com/api-evangelist/healx; [repository/github] neonbhai/mva-research (2026-10-29, none stated) https://github.com/neonbhai/mva-research; [space/huggingface] Darkweb007/content-repurposing-pipeline (2026-06-23, none stated) https://huggingface.co/spaces/Darkweb007/content-repurposing-pipeline; [space/huggingface] DiyaR2002/drug-repurposing (2026-06-13, none stated) https://huggingface.co/spaces/DiyaR2002/drug-repurposing; [space/huggingface] vrindagotephd/Clinical_Trials_Drug_Repurposing_AI_Tool (2026-06-11, none stated) https://huggingface.co/spaces/vrindagotephd/Clinical_Trials_Drug_Repurposing_AI_Tool
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-09 · scout_daily · Discovery:work_order:NEED-REDOX-NRF2
+
+**WWOX question.** In WWOX-deficient versus isogenic corrected human neural cells that include microglia or CNS-macrophage-like cells, are NRF2 target activity
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Selective NRF2 target induction despite falling NFE2L2 transcription across the MASLD spectrum: implications for marginal donor grafts and K (2026-10-20, published record) https://europepmc.org/article/MED/42901279; [paper/europepmc] Variant-informed multimodal tissue-state modeling reveals an NRF2 stress niche and dependency axis in KEAP1/NFE2L2-altered cancer. (2026-10-06, published record) https://europepmc.org/article/MED/42903351; [paper/europepmc] The KEAP1-NFE2L2/NRF2 Axis in Non-Small Cell Lung Cancer Radioresistance: Redox Homeostasis and Emerging DNA Damage Response Mechanisms. (2026-09-03, published record) https://europepmc.org/article/MED/42708106; [repository/github] kireol/nrf24l01SenderNodeMcu (2026-11-08, MIT, default-branch head 705604a444fb 2016-09-09, release none published) https://github.com/kireol/nrf24l01SenderNodeMcu; [repository/github] AtherNet29/BW-16-RTL8720DN-DEAUTHER-EVILTWIN-NRF24 (2026-11-08, none stated, default-branch head ac8815017131 2026-11-08, release none published) https://github.com/AtherNet29/BW-16-RTL8720DN-DEAUTHER-EVILTWIN-NRF24; [repository/github] mrdulasolutions/MCAS.Opensource (2026-11-08, NOASSERTION, default-branch head 5b01f0f1563e 2026-11-08, release v0.2.0 2026-07-27) https://github.com/mrdulasolutions/MCAS.Opensource; [dataset/huggingface] aikseng/Kras-Nrf2-Dataset (2025-08-12, mit) https://huggingface.co/datasets/aikseng/Kras-Nrf2-Dataset; [paper/nature] Beauvericin exhibits antitumor activity in pancreatic cancer cells: Integrative analysis suggests potential modulation of the KEAP1-NRF2-HMO (2026-09-20, journal-article) https://doi.org/10.1038/s41598-026-72126-5; [paper/nature] PCHP‑1 A from Polygonatum cyrtonema Hua alleviates APAP‑induced acute liver injury via Nrf2/Keap1 and NF‑κB pathways (2026-09-03, journal-article) https://doi.org/10.1038/s41598-026-70075-7
+
+**Why asked.** work_order entry NEED-REDOX-NRF2 [disease-models/wwox/research/drug_repurposing/view/work_order.json @ blob 153e14f097, main 4d10771c21ae]: "In WWOX-deficient versus isogenic corrected human neural cells that include microglia or CNS-macrophage-like c"
+
+**If confirmed (decision).** If neither ROS nor NRF2 tone nor cytokine protein differs and activation changes nothing: the axis moves to inert and the card is closed. If ROS is raised and a Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-09 · scout_daily · Discovery:work_order:NEED-SEIZURE-CONTROL-SYMPTOMATIC
+
+**WWOX question.** Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-speci
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Cannabidiol reduces atypical absence seizures and epileptic spasms in a Gabrb3+/D120N mouse model of Lennox-Gastaut syndrome. (2026-06-11, published record) https://europepmc.org/article/MED/42274296; [paper/europepmc] Case Report: Adenylosuccinate lyase deficiency type I caused by splicing disruption due to a novel missense variant in the ADSL gene. (2025-10-24, published record) https://europepmc.org/article/MED/41211455; [paper/europepmc] From barbiturates to ganaxolone: The importance of chirality in drug development and in understanding the actions of old and new antiseizure (2025-02-05, published record) https://europepmc.org/article/MED/39920975; [dataset/huggingface] elsiddik/egypt-real-estate-prices-compounds-2026 (2026-11-05, cc-by-4.0) https://huggingface.co/datasets/elsiddik/egypt-real-estate-prices-compounds-2026; [dataset/huggingface] cora-health/peptide-compounding-status-index (2026-11-03, cc-by-4.0) https://huggingface.co/datasets/cora-health/peptide-compounding-status-index; [dataset/huggingface] molport/In-stock-Screening-Compound-Database (2026-10-08, cc-by-nc-4.0) https://huggingface.co/datasets/molport/In-stock-Screening-Compound-Database
+
+**Why asked.** work_order entry NEED-SEIZURE-CONTROL-SYMPTOMATIC [disease-models/wwox/research/drug_repurposing/view/work_order.json @ blob 153e14f097, main 4d10771c21ae]: "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the"
+
+**If confirmed (decision).** A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide wh Roadmap: R2.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-09 · scout_daily · Follow:mims-harvard/ToolUniverse
+
+**WWOX question.** live-lookup layer tried on a capability the adapters lack
+
+**Contribution vs existing.** followed since 2026-11-01 (WATCH ToolUniverse; tooluniverse_capability_test_20261026.md)
+
+**Detected.** default-branch head 99b81ebec84f -> e3a819ff1f8d; latest release {"date": "2026-11-01", "tag": "v1.5.8"} -> {"date": "2026-11-05", "tag": "v1.5.9"}
+
+**If confirmed (decision).** reopen condition: a capability the adapters lack becomes available, or terms change Roadmap: R9.
+
+**Cost / licence.** reading the change: minutes; see source.
+
+**Proof.** https://github.com/mims-harvard/ToolUniverse
+
+**Outcome.** TO_TRIAGE (a detected change is not a reading)
+
+## 2026-11-09 · scout_daily · Follow:everycure-org/matrix
+
+**WWOX question.** open drug-disease score matrix, inconclusive trial
+
+**Contribution vs existing.** followed since 2026-11-01 (WATCH EveryCure-MATRIX-code; p3b1/txgnn_matrix_outcomes_20261026.md)
+
+**Detected.** default-branch head 96fd24ce4aee -> 233511014e57; latest release {"date": "2026-02-05", "tag": "v0.15.0-matrix"} -> {"date": "2026-02-05", "tag": "v0.15.0-matrix"}
+
+**If confirmed (decision).** reopen condition: a stated licence for the scores table, or a code/data release Roadmap: R9.
+
+**Cost / licence.** reading the change: minutes; see source.
+
+**Proof.** https://github.com/everycure-org/matrix
+
+**Outcome.** TO_TRIAGE (a detected change is not a reading)
+
+## 2026-11-10 · scout_daily · EveryCure-MATRIX-scores
+
+**WWOX question.** Has a licence for the scores table been stated (the stated reopening condition)?
+
+**Contribution vs existing.** p3b1/txgnn_matrix_outcomes_20261026.md: scores table declared no licence on 2026-10-26
+
+**Detected.** card_oid: '0c542d0a858e574deb6ae9293ce05646ce94e242' -> '011677840b8ea1a4c797ea3f0953c261c75548af'; sha: 'd6b121bf38112cf28e7c813d0a062651757c52a1' -> '4a53314d0d354844464abd98409a406c42930691'
+
+**Cost / licence.** reading the change: minutes; any adoption: unestimated until triaged; see source.
+
+**Proof.** https://github.com/everycure/matrix-scores/releases
+
+**Outcome.** TO_TRIAGE (a detected change is not a reading)
+
+## 2026-11-10 · scout_daily · EveryCure-kg-nodes
+
+**WWOX question.** Did the MATRIX knowledge-graph nodes change content or terms (graph terms are separate; upstream licences stay in force)?
+
+**Contribution vs existing.** p3b1/txgnn_matrix_outcomes_20261026.md section 2.1
+
+**Detected.** card_oid: '807c5cc867fd73f88fc6f19af8cce483502169a0' -> '876c65ddabb4c5fbc63e7369863823f702dbbaf0'; sha: 'c9c60b2c55e72cedb757b0422f4ea160a9bffc5c' -> 'cfb7d6579105ee73ba72b34717f9f2c8b0d0f90d'
+
+**Cost / licence.** reading the change: minutes; any adoption: unestimated until triaged; other.
+
+**Proof.** https://github.com/everycure/kg-nodes/releases
+
+**Outcome.** TO_TRIAGE (a detected change is not a reading)
+
+## 2026-11-10 · scout_daily · EveryCure-kg-edges
+
+**WWOX question.** Did the MATRIX knowledge-graph edges change content or terms (separate from nodes, scores, code)?
+
+**Contribution vs existing.** p3b1/txgnn_matrix_outcomes_20261026.md section 2.1
+
+**Detected.** card_oid: '368ec637d86abcf0f33088e2dd2c1421c077c967' -> '99db56bc72c682da8eb3dd685e4efbb67a1b3823'; sha: 'fcd0585957ab5137771b256dad3714dcaf44b7db' -> '4b6fd25467fcb4499058024cc9da80514db8dd31'
+
+**Cost / licence.** reading the change: minutes; any adoption: unestimated until triaged; other.
+
+**Proof.** https://github.com/everycure/kg-edges/releases
+
+**Outcome.** TO_TRIAGE (a detected change is not a reading)
+
+## 2026-11-10 · scout_daily · Discovery:work_order:NEED-SYSTEMIC-GLYCAEMIA-GROWTH
+
+**WWOX question.** Is the P10 glucose difference real (knockout about 95, wild type about 130), and does any dose of the vector correct it? It would resolve th
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Anatomy-aware, label-informed approach improves image registration for challenging datasets. (2026-09-08, published record) https://europepmc.org/article/MED/42709748; [preprint/europepmc] A guide to selecting high-performing renewable antibodies for KIF5A (Q12840) across western blot, immunoprecipitation, and immunofluorescenc (2026-06-30, preprint (not peer reviewed)) https://europepmc.org/article/PPR/PPR1283125; [paper/europepmc] Inadequate antibody validation places substantial numbers of animal and human tissue samples at risk of waste. (2026-10-06, published record) https://europepmc.org/article/MED/42837326; [dataset/huggingface] wraith1337/knockout-cup-windows64 (2026-11-09, none stated, revision 4eb40ed51242, 1 files) https://huggingface.co/datasets/wraith1337/knockout-cup-windows64; [model/huggingface] reax-knockout/sn92-gen-a1 (2026-10-21, apache-2.0, revision d57f18b92547, 26 files) https://huggingface.co/reax-knockout/sn92-gen-a1; [model/huggingface] suchirsalhan/polypythia-160m-knockout-continue (2026-09-21, apache-2.0, revision f253c185e1c2, 344 files) https://huggingface.co/suchirsalhan/polypythia-160m-knockout-continue; [paper/nature] Estimated glucose disposal rate is associated with continuous glucose monitoring metrics in type 1 diabetes (2026-10-15, journal-article) https://doi.org/10.1038/s41598-026-75846-w; [paper/nature] In-race continuous glucose monitoring in highly trained male distance runners: a context-dependent reversal of the glucose–performance assoc (2026-10-08, journal-article) https://doi.org/10.1038/s41598-026-74914-5
+
+**Why asked.** work_order entry NEED-SYSTEMIC-GLYCAEMIA-GROWTH [disease-models/wwox/research/drug_repurposing/view/work_order.json @ blob 153e14f097, main 975535a93695]: "Is the P10 glucose difference real (knockout about 95, wild type about 130), and does any dose of the vector c"
+
+**If confirmed (decision).** It would resolve the two glucose rows and either remove the C2 or make it a C1. Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-10 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] rasel-isu/biomedical-AI-benchmark (2026-08-09, none stated) https://github.com/rasel-isu/biomedical-AI-benchmark; [repository/github] nithin-jella/RareDx-Agentic-Diagnostic-Assistant (2026-08-06, none stated) https://github.com/nithin-jella/RareDx-Agentic-Diagnostic-Assistant; [repository/github] AI-in-Health/BioMedArena (2026-06-25, MIT) https://github.com/AI-in-Health/BioMedArena; [dataset/huggingface] MohsinElis/biomedical-disease-mapping (2026-11-07, mit) https://huggingface.co/datasets/MohsinElis/biomedical-disease-mapping; [model/huggingface] edh1/gemma4-biomedical-e4b-litertlm (2026-10-25, gemma) https://huggingface.co/edh1/gemma4-biomedical-e4b-litertlm; [space/huggingface] fatenahaq/biomedical-research-ai (2026-10-20, none stated) https://huggingface.co/spaces/fatenahaq/biomedical-research-ai
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-11 · scout_daily · PubMed:wwox_any
+
+**WWOX question.** New WWOX paper or external precedent that could reopen a research question
+
+**Contribution vs existing.** not checked against the registry (never grepped); intake triage decides new vs already read
+
+**Detected.** 43004178 Genetic and regulatory architecture of meat yield traits in commercial pig populations.
+
+**Cost / licence.** abstract screen: minutes; a full read needs its receipt; PubMed metadata; full text per paper.
+
+**Proof.** https://pubmed.ncbi.nlm.nih.gov/?term=43004178
+
+**Outcome.** TO_TRIAGE (abstract = discovery, not a reading)
+
+## 2026-11-11 · scout_daily · Discovery:work_order:NEED-WWOX-GENE-ADDITION
+
+**WWOX question.** Does an intermediate vector level separate a threshold from a gradient, and is the benefit only prevented inside the first days of life or a
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Quantized large language models in biomedical natural language processing: evaluation and recommendation. (2026-11-04, published record) https://europepmc.org/article/MED/42982917; [preprint/europepmc] The Temporal Validity of Taxonomic Entailments in Evolving Biomedical Ontologies (2026-11-04, preprint (not peer reviewed)) https://europepmc.org/article/PPR/PPR1358204; [preprint/europepmc] Quantifying performance inflation from hidden sample dependence in biomedical image classification benchmarks (2026-10-08, preprint (not peer reviewed)) https://europepmc.org/article/PPR/PPR1337091; [repository/github] ipb-halle/MetFamily (2026-10-21, GPL-2.0, default-branch head a54924fec7b6 2026-10-21, release 1.0 2019-03-27) https://github.com/ipb-halle/MetFamily; [repository/github] Ivan-Cheuk0/DSM5TR-NLP-Transdiagnostic (2026-10-19, none stated, default-branch head 1357c9852115 2026-10-19, release none published) https://github.com/Ivan-Cheuk0/DSM5TR-NLP-Transdiagnostic; [repository/github] nepalanurag/Biomedical-Imaging-Analysis (2026-10-16, none stated, default-branch head fc46054946d8 2026-10-16, release none published) https://github.com/nepalanurag/Biomedical-Imaging-Analysis; [space/huggingface] Jeev321/Quantified_Self (2026-01-12, none stated) https://huggingface.co/spaces/Jeev321/Quantified_Self; [space/huggingface] GatewayInc/gateway-wealth-bridge-quantified-gold-rush (2025-10-21, none stated) https://huggingface.co/spaces/GatewayInc/gateway-wealth-bridge-quantified-gold-rush; [space/huggingface] Quantified/Clip-Generator-V3-Server (2024-11-19, none stated) https://huggingface.co/spaces/Quantified/Clip-Generator-V3-Server; [paper/nature] Structure-property correlations of alkaline-free extracted cellulose nanocrystals for prospective biomedical applications (2026-09-16, journal-article) https://doi.org/10.1038/s41598-026-71481-7; [paper/nature] Impact of adpkd-associated PKD1 gene variants on the human facial phenotype quantified by 3d geometric morphometry (2026-08-13, journal-article) https://doi.org/10.1038/s41598-026-65632-z
+
+**Why asked.** work_order entry NEED-WWOX-GENE-ADDITION [disease-models/wwox/research/drug_repurposing/view/work_order.json @ blob 153e14f097, main 3f8f17fb9598]: "Does an intermediate vector level separate a threshold from a gradient, and is the benefit only prevented insi"
+
+**If confirmed (decision).** Quantified myelination would add a controlled row on the same need; a failure would move the card to C2 by rule; a treated-after-onset arm would show whether th Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-11 · scout_daily · Discovery:work_order:NEED-WWOX-MISSENSE-PROTEIN-RESCUE
+
+**WWOX question.** Is the Q230P-class protein made and then cleared, by which route (proteasome, lysosome), and does any protein that returns carry function pe
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Molecular pathogenesis and gene therapy-based intervention of GTPBP3-related mitochondrial disease. (2026-04-09, published record) https://europepmc.org/article/MED/41957021
+
+**Why asked.** work_order entry NEED-WWOX-MISSENSE-PROTEIN-RESCUE [disease-models/wwox/research/drug_repurposing/view/work_order.json @ blob 153e14f097, main 3f8f17fb9598]: "Is the Q230P-class protein made and then cleared, by which route (proteasome, lysosome), and does any protein "
+
+**If confirmed (decision).** No protein with synthesis present closes A02 and A05 for this allele; soluble native protein on the ruler would give the first WWOX-system row on the need; prot Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-11 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] glusman-team/graph-monorepo (2026-11-10, Apache-2.0) https://github.com/glusman-team/graph-monorepo; [repository/github] GKHarjithadithyha/medsafe (2026-11-10, none stated) https://github.com/GKHarjithadithyha/medsafe; [repository/github] oncodash/oncodashkb (2026-11-10, none stated) https://github.com/oncodash/oncodashkb; [dataset/huggingface] JiaxinShi/lychsim-genia-pasr-predictions-20261106 (2026-11-11, none stated) https://huggingface.co/datasets/JiaxinShi/lychsim-genia-pasr-predictions-20261106; [model/huggingface] Noor-Khan/dog-breed-prediction (2026-11-10, mit) https://huggingface.co/Noor-Khan/dog-breed-prediction; [dataset/huggingface] LundAISociety/hot-building-predictions (2026-11-10, odbl) https://huggingface.co/datasets/LundAISociety/hot-building-predictions
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-12 · scout_daily · Monarch-app
+
+**WWOX question.** Phenotype/disease KG API changes
+
+**Contribution vs existing.** kg_thin_slice.py uses it
+
+**Detected.** release: 'v1.32.0-rc1' -> 'v1.32.0'
+
+**Cost / licence.** reading the change: minutes; any adoption: unestimated until triaged; BSD-3-Clause.
+
+**Proof.** https://github.com/monarch-initiative/monarch-app/releases
+
+**Outcome.** TO_TRIAGE (a detected change is not a reading)
+
+## 2026-11-12 · scout_daily · Discovery:reopen:biopathnet_it18_20261101/0
+
+**WWOX question.** BioPathNet (emyyue/BioPathNet b051a900, gene-function checkpoint model_epoch_12) Reopen if any of: (1) explanation for one query runs in <= 
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [preprint/europepmc] MC-Bayes: A Python-based wrapper for MotionCor3 processing of EER files compatible with Bayesian polishing (2026-08-07, preprint (not peer reviewed)) https://europepmc.org/article/PPR/PPR1294466; [paper/europepmc] Memory-Saving Version of k-Wave Toolbox for Single-Frequency Simulations. (2026-09-22, published record) https://europepmc.org/article/MED/42784474; [preprint/europepmc] QRAFT: Scaling coalescent-based species tree inference to one million taxa (2026-11-06, preprint (not peer reviewed)) https://europepmc.org/article/PPR/PPR1361066; [repository/github] Rameshsain070/Rameshsain070 (2026-11-12, none stated, default-branch head 40a7ff800964 2026-11-12, release none published) https://github.com/Rameshsain070/Rameshsain070; [repository/github] Gnanasudharsan/ramp-accessibility-agent (2026-11-12, MIT, default-branch head 19e4bf5a1263 2026-11-12, release none published) https://github.com/Gnanasudharsan/ramp-accessibility-agent; [repository/github] ramazantufekci/ramazantufekci (2026-11-12, AGPL-3.0, default-branch head 5197f370f323 2026-11-12, release 8 2025-10-07) https://github.com/ramazantufekci/ramazantufekci; [model/huggingface] realnewbiexvwu/pvz-agent-artifacts (2026-11-12, lgpl-3.0) https://huggingface.co/realnewbiexvwu/pvz-agent-artifacts; [model/huggingface] hmkz-1981/gemma-4-e4b-agentic-rl-think-effort-GGUF (2026-11-12, apache-2.0) https://huggingface.co/hmkz-1981/gemma-4-e4b-agentic-rl-think-effort-GGUF; [model/huggingface] LoosiFR/qwen35-9b-agentic-v2.5-GGUF (2026-11-12, none stated) https://huggingface.co/LoosiFR/qwen35-9b-agentic-v2.5-GGUF; [paper/nature] Data-driven and physics-guided neural approaches for LCR circuit modeling: a comparative analysis (2026-10-22, journal-article) https://doi.org/10.1038/s41598-026-74713-y; [paper/nature] A lightweight privacy-aware federated vision transformer for tomato leaf disease classification (2026-10-14, journal-article) https://doi.org/10.1038/s41598-026-65968-6
+
+**Why asked.** reopen biopathnet_it18_20261101 table row 0 [WATCH - explanations not] [disease-models/wwox/research/drug_repurposing/biopathnet_it18_20261101/decisions.tsv @ blob 6b733ad502, main 940182af525c]: "BioPathNet (emyyue/BioPathNet b051a900, gene-function checkpoint model_epoch_12) Reopen if any of: (1) explana"
+
+**If confirmed (decision).** reopen condition met? Reopen if any of: (1) explanation for one query runs in <= 8 GB RAM on CPU (e.g. an upstream subgraph-restricted explain mode, or a host wit Roadmap: R9/R12.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-12 · scout_daily · Discovery:reopen:function_pharm_it14_p3_20261101/NP3P1
+
+**WWOX question.** Heterozygote versus wild-type sIPSC (amplitude and charge) in the neuron-deleted neocortical slice source data or a new report with the thre
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [preprint/europepmc] Chronic Stress Alters Dorsal Bed Nucleus of Stria Terminalis Synaptic Neurotransmission in a Dravet Syndrome Mouse Model (2026-05-21, preprint (not peer reviewed)) https://europepmc.org/article/PPR/PPR1235764; [paper/europepmc] Chemogenetic astrocyte modulation reduces spontaneous hippocampal discharges and metabolite changes in an epilepsy mouse model. (2025-10-25, published record) https://europepmc.org/article/MED/41137858; [paper/europepmc] A Novel Compound QO-83 Alleviates Acute and Chronic Epileptic Seizures in Rodents by Modulating KV7 Channel Activity. (2025-03-01, published record) https://europepmc.org/article/MED/40125810
+
+**Why asked.** reopen function_pharm_it14_p3_20261101 table row NP3P1 [NEEDS-DATUM] [disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv @ blob abb8c8031e, main 940182af525c]: "Heterozygote versus wild-type sIPSC (amplitude and charge) in the neuron-deleted neocortical slice source data"
+
+**If confirmed (decision).** reopen condition met? source data or a new report with the three genotypes separated Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-12 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] BoukeliaAbdelbasset/MINT-KG (2026-11-08, none stated) https://github.com/BoukeliaAbdelbasset/MINT-KG; [repository/github] stringtang/mva-hackathon-2026 (2026-10-29, none stated) https://github.com/stringtang/mva-hackathon-2026; [repository/github] api-evangelist/axcelius-i-ii (2026-10-29, none stated) https://github.com/api-evangelist/axcelius-i-ii; [dataset/huggingface] TheFamousHesham/drug-repurposing-pan (2026-06-05, none stated) https://huggingface.co/datasets/TheFamousHesham/drug-repurposing-pan; [space/huggingface] Priyabhanderi2/drug-repurposing (2026-04-07, none stated) https://huggingface.co/spaces/Priyabhanderi2/drug-repurposing; [space/huggingface] KiranKKT/Drug_Repurposing (2025-12-29, none stated) https://huggingface.co/spaces/KiranKKT/Drug_Repurposing
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-13 · scout_daily · Discovery:reopen:function_pharm_it14_p3_20261101/NP3P2
+
+**WWOX question.** Locus of the lost sIPSC current (receptor-limited or release-limited), with a physiological-chloride internal solution an electrophysiology 
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] MAPT-A152T mutation drives neuronal hyperactivity through Fyn-NMDAR signaling in human iPSC-Derived neurons: Insights into Alzheimer's patho (2024-12-24, published record) https://europepmc.org/article/MED/39811068; [paper/europepmc] Effects of esketamine on electrophysiology and metabolic reprogramming in brain organoids: insights into antidepressant mechanisms. (2025-08-30, published record) https://europepmc.org/article/MED/40885845; [paper/europepmc] Response of iPSC-derived neurons from individuals with treatment-resistant depression to (2 R,6 R)-hydroxynorketamine and reelin: an explora (2025-11-18, published record) https://europepmc.org/article/MED/41257792; [repository/github] nmdarksky/nmdarksky.github.io (2026-10-05, none stated, default-branch head 5b2c4a468ce6 2026-10-05, release none published) https://github.com/nmdarksky/nmdarksky.github.io; [repository/github] BrainCircuitsBehaviorLab/NMDAR_paper (2026-09-30, GPL-3.0, default-branch head e77d0254382d 2026-09-30, release none published) https://github.com/BrainCircuitsBehaviorLab/NMDAR_paper; [repository/github] nmdarosa/nmdarosa.github.io (2026-09-28, none stated, default-branch head 8d8b04033248 2026-09-28, release none published) https://github.com/nmdarosa/nmdarosa.github.io; [paper/nature] Priming of human iPSCs with doxorubicin causes genome-wide transcriptional reprogramming and functional impairments in iPSC-derived cardiomy (2026-10-10, journal-article) https://doi.org/10.1038/s41536-026-00513-7; [paper/nature] Author Correction: Cryopreservable dopaminergic progenitors derived from human iPSCs with accelerated loss of pluripotency and early functio (2026-09-07, journal-article) https://doi.org/10.1038/s41531-026-01569-4
+
+**Why asked.** reopen function_pharm_it14_p3_20261101 table row NP3P2 [NEEDS-DATUM] [disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv @ blob abb8c8031e, main 387f6ae49edb]: "Locus of the lost sIPSC current (receptor-limited or release-limited), with a physiological-chloride internal "
+
+**If confirmed (decision).** reopen condition met? an electrophysiology report with the same-cell triad (isolated NMDAR current, sIPSC charge, resting potential and input resistance) and mini Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-13 · scout_daily · Discovery:reopen:function_pharm_it14_p3_20261101/NP3P3
+
+**WWOX question.** Same-system comparison of the subtype selectivity of the GABA-A positive modulators under discussion a head-to-head in one system with diaze
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [preprint/europepmc] Systemic diazepam alters local hippocampal CA1 circuits and differentially affects entorhinal and CA3 inputs (2026-08-23, preprint (not peer reviewed)) https://europepmc.org/article/PPR/PPR1304123; [paper/europepmc] Chronic Chrysin, but Not Diazepam, Induces Anxiolytic-like Effects Without Behavioral Tolerance. (2026-09-10, published record) https://europepmc.org/article/MED/42796464; [paper/europepmc] Female ddY mice show a weaker diazepam-induced reduction in aggressive biting behavior toward inanimate objects and lower hypothalamic KCC2  (2026-11-05, published record) https://europepmc.org/article/MED/42988109; [repository/github] gabacorporation/gaba-corporation (2026-11-13, none stated) https://github.com/gabacorporation/gaba-corporation; [repository/github] RBPerez1701/saliksik-gabay-portal (2026-11-13, none stated) https://github.com/RBPerez1701/saliksik-gabay-portal; [repository/github] rzamora-openit/GABAI (2026-11-13, MIT) https://github.com/rzamora-openit/GABAI; [dataset/huggingface] marissadolorfino/BIOINF595_BioactivityReport (2025-04-29, mit) https://huggingface.co/datasets/marissadolorfino/BIOINF595_BioactivityReport; [dataset/huggingface] Desp-ML/Bioactivity_report_QM9 (2025-04-24, cc0-1.0) https://huggingface.co/datasets/Desp-ML/Bioactivity_report_QM9; [dataset/huggingface] Desp-ML/Bioactivity_Final_Project_QM9 (2025-04-24, none stated) https://huggingface.co/datasets/Desp-ML/Bioactivity_Final_Project_QM9
+
+**Why asked.** reopen function_pharm_it14_p3_20261101 table row NP3P3 [NEEDS-DATUM] [disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv @ blob abb8c8031e, main 387f6ae49edb]: "Same-system comparison of the subtype selectivity of the GABA-A positive modulators under discussion a head-to"
+
+**If confirmed (decision).** reopen condition met? a head-to-head in one system with diazepam as comparator Roadmap: R5.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-14 · scout_daily · Discovery:reopen:function_pharm_it14_p3_20261101/NP3P3
+
+**WWOX question.** Same-system comparison of the subtype selectivity of the GABA-A positive modulators under discussion a head-to-head in one system with diaze
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [dataset/huggingface] luxuan-lulu/Bioactivity_Final_project (2025-04-16, mit, revision a61f6bb5f68b, 10 files) https://huggingface.co/datasets/luxuan-lulu/Bioactivity_Final_project; [model/huggingface] Brent1997/bioactivity_predictor_for_CHEMBL274_with_text_based_model (2025-04-02, none stated, revision 3fb982d5dfca, 1 files) https://huggingface.co/Brent1997/bioactivity_predictor_for_CHEMBL274_with_text_based_model; [dataset/huggingface] DanielShunom/ubiquitin-l1-hydrolase-bioactivity (2024-11-18, afl-3.0, revision eb1982013b17, 4 files) https://huggingface.co/datasets/DanielShunom/ubiquitin-l1-hydrolase-bioactivity; [paper/nature] Comparative evaluation of dexmedetomidine, diazepam, and acepromazine as adjuvants to lidocaine in intravenous regional anaesthesia in goats (2026-11-11, journal-article) https://doi.org/10.1038/s41598-026-75456-6; [paper/nature] A novel approach to cut flower preservation: pre- and postharvest application of GABA in Matthiola incana (2026-08-18, journal-article) https://doi.org/10.1038/s41598-026-67476-z
+
+**Why asked.** reopen function_pharm_it14_p3_20261101 table row NP3P3 [NEEDS-DATUM] [disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv @ blob ce41d1a3c7, main 1c8ed97f15fe]: "Same-system comparison of the subtype selectivity of the GABA-A positive modulators under discussion a head-to"
+
+**If confirmed (decision).** reopen condition met? a head-to-head in one system with diazepam as comparator (met by Ralvenius 2016 alone, with qualifications; it does not resolve the dispute) Roadmap: R5.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-14 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] mbzuai-ai4bio/BioXArena-Pro (2026-11-11, MIT) https://github.com/mbzuai-ai4bio/BioXArena-Pro; [repository/github] xX-its-amit-Xx/biocalib (2026-05-31, GPL-3.0) https://github.com/xX-its-amit-Xx/biocalib; [repository/github] boheling/skillbench (2026-05-24, MIT) https://github.com/boheling/skillbench; [dataset/huggingface] healthcare-biomedical-ai/Trauma-Resuscitation-Constraint-Verification-Benchmark (2026-11-13, none stated) https://huggingface.co/datasets/healthcare-biomedical-ai/Trauma-Resuscitation-Constraint-Verification-Benchmark; [dataset/huggingface] healthcare-biomedical-ai/Specialty-Referral-Intake-Constraint-Validation-Benchmark (2026-11-13, none stated) https://huggingface.co/datasets/healthcare-biomedical-ai/Specialty-Referral-Intake-Constraint-Validation-Benchmark; [model/huggingface] mradermacher/Bio-Medical-MultiModal-Llama-3-8B-V1-GGUF (2026-11-12, other) https://huggingface.co/mradermacher/Bio-Medical-MultiModal-Llama-3-8B-V1-GGUF
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-15 · scout_daily · ToolUniverse
+
+**WWOX question.** Can one live-lookup layer (MCP) answer gene-level WWOX queries?
+
+**Contribution vs existing.** optional isolated tool; see tooluniverse_capability_test_20261026.md (work saved) and tool_survey row 12
+
+**Detected.** release: 'v1.5.9' -> 'v1.5.10'
+
+**Cost / licence.** reading the change: minutes; any adoption: unestimated until triaged; Apache-2.0.
+
+**Proof.** https://github.com/mims-harvard/ToolUniverse/releases
+
+**Outcome.** TO_TRIAGE (a detected change is not a reading)
+
+## 2026-11-15 · scout_daily · Discovery:diagnosis:compound-with-several-or-opposed-actions
+
+**WWOX question.** Compound with several or opposed actions: pracinostat (class I potent, class IIa uncertain) Multi-target contributions are ALREADY computed 
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Binding affinities for histamine receptors 1 to 4: Systematic comparison of ligands from the Psychoactive Drug Screening Program Ki database (2026-06-12, published record) https://europepmc.org/article/MED/42391979; [paper/europepmc] Guiding student use of generative AI in undergraduate pharmacology: a narrative review and proposed source-checking process framework. (2026-07-28, published record) https://europepmc.org/article/MED/42583001; [preprint/europepmc] How Intercurrent Event Strategies Shape Estimands: Practical Applications in Clinical Pharmacology (2026-06-15, preprint (not peer reviewed)) https://europepmc.org/article/PPR/PPR1252190; [repository/github] oashu741-source/clinical-trial-data-cleaner (2026-07-25, none stated, default-branch head c5f9ea645063 2026-07-25, release none published) https://github.com/oashu741-source/clinical-trial-data-cleaner; [paper/nature] Missing data imputation for wearable time series (2026-09-20, journal-article) https://doi.org/10.1038/s41598-026-71659-z; [paper/nature] A solution to the mystery of the missing neutrinos (2026-08-27, journal-article) https://doi.org/10.1038/d41586-026-02628-9
+
+**Why asked.** diagnosis row 'Compound with several or opposed actions: pracinostat (class' (case / limit layout) [disease-models/wwox/research/drug_repurposing/diagnosis_it28_20261105/README.md @ blob dabb9bb5a8, main 9aa28b3700a2]: "Compound with several or opposed actions: pracinostat (class I potent, class IIa uncertain) Multi-target contr"
+
+**If confirmed (decision).** Compound with several or opposed actions: pracinostat (class: closing 'Multi-target contributions are ALREADY computed and decomposed; the missing piece is assay-matched potency (47 v 5,113 nM) whose m' Roadmap: R5.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-15 · scout_daily · Discovery:diagnosis:knowledge-present-but-not-influencing-th
+
+**WWOX question.** Knowledge present but not influencing the result (a) NOT_CONSUMED defect: 762 GtoPdb ligands without a ChEMBL id (747 after the labelled and
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [preprint/europepmc] Model-dependent GD2 upregulation in Ewing sarcoma with the EZH2 inhibitor tazemetostat: Prerequisites for combination with GD2-specific CAR  (2026-07-24, preprint (not peer reviewed)) https://europepmc.org/article/PPR/PPR1284994; [paper/europepmc] EZH2 inhibitor tazemetostat voluntarily withdrawn from market. (2026-07-01, published record) https://europepmc.org/article/MED/42386529; [preprint/europepmc] EZH2 Inhibition in Advanced Epithelioid Sarcoma: Real-World Evidence of Target Validation and Implications for Next-Generation Inhibitor Dev (2026-09-11, preprint (not peer reviewed)) https://europepmc.org/article/PPR/PPR1317321; [repository/github] Ankita2612-hub/EZH2-Breast-Cancer-Integrative-Analysis (2026-11-14, none stated, default-branch head 29aa181bb533 2026-11-14, release none published) https://github.com/Ankita2612-hub/EZH2-Breast-Cancer-Integrative-Analysis; [repository/github] MD-Mushfiqur123/EZH2-in-Breast-Cancer- (2026-11-13, none stated, default-branch head ceec53d21d14 2026-11-13, release none published) https://github.com/MD-Mushfiqur123/EZH2-in-Breast-Cancer-; [repository/github] MD-MUSHFIQUR-RAHIM/ezh2-brca (2026-11-13, none stated) https://github.com/MD-MUSHFIQUR-RAHIM/ezh2-brca
+
+**Why asked.** diagnosis row 'Knowledge present but not influencing the result' (case / limit layout) [disease-models/wwox/research/drug_repurposing/diagnosis_it28_20261105/README.md @ blob dabb9bb5a8, main 9aa28b3700a2]: "Knowledge present but not influencing the result (a) NOT_CONSUMED defect: 762 GtoPdb ligands without a ChEMBL "
+
+**If confirmed (decision).** Knowledge present but not influencing the result: closing '(a) NOT_CONSUMED defect: 762 GtoPdb ligands without a ChEMBL id (747 after the labelled and radioactive exclusion) never joined to' Roadmap: R5.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-15 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] MALL-Lab/PRECISION_paper (2026-11-13, GPL-3.0) https://github.com/MALL-Lab/PRECISION_paper; [repository/github] tonnidas/biograph-agent (2026-11-13, none stated) https://github.com/tonnidas/biograph-agent; [repository/github] mahmoodphd/DrugRAG (2026-11-12, MIT) https://github.com/mahmoodphd/DrugRAG; [model/huggingface] Krishmahaseth/house-price-prediction-model (2026-11-14, mit) https://huggingface.co/Krishmahaseth/house-price-prediction-model; [model/huggingface] karthick1586/churn_prediction (2026-11-14, none stated) https://huggingface.co/karthick1586/churn_prediction; [model/huggingface] Noor-Khan/employee-attrition-prediction (2026-11-14, mit) https://huggingface.co/Noor-Khan/employee-attrition-prediction
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-16 · scout_daily · Discovery:diagnosis:lever-with-a-pertinent-measure:-rock2,-b
+
+**WWOX question.** Lever with a pertinent measure: ROCK2, belumosudil v SAR-407899 Executed and compared; the residual is pharmacology qualification, not gener
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Discovery of Deuterated 3,4-Dihydro-benzo[e][1,4]diazepine-2,5-dione Derivatives as Potent, Selective and Orally Bioavailable ROCK2 Inhibito (2026-08-01, published record) https://europepmc.org/article/MED/42593922; [paper/europepmc] Discovery of N‑Acylhydrazone Derivatives as ROCK Inhibitors: A Journey from Virtual Screening and Structure-Based De Novo Design to the Iden (2026-01-27, published record) https://europepmc.org/article/MED/42006256; [repository/github] ahn2747/ROCK2_analysis (2026-10-27, none stated, default-branch head e5e3d97935de 2026-10-27, release none published) https://github.com/ahn2747/ROCK2_analysis; [repository/github] zpdlf003-wq/rock2 (2026-10-27, none stated) https://github.com/zpdlf003-wq/rock2; [repository/github] rockesprortsofficial-dot/ROCK2 (2026-10-19, none stated, default-branch head 88f399c9e2af 2026-10-19, release none published) https://github.com/rockesprortsofficial-dot/ROCK2; [dataset/huggingface] jyLee0111/omx_f_object-rock2 (2026-08-20, apache-2.0) https://huggingface.co/datasets/jyLee0111/omx_f_object-rock2; [model/huggingface] wmeddie/smolvla_place_rock2 (2025-12-06, none stated) https://huggingface.co/wmeddie/smolvla_place_rock2; [model/huggingface] clembench-playpen/meta-llama_3.1_KTO_KTO_all_games_ROCK2 (2025-02-28, none stated) https://huggingface.co/clembench-playpen/meta-llama_3.1_KTO_KTO_all_games_ROCK2; [paper/nature] S2O-SARUNet: SAR-to-optical self-attention Res-UNet for grayscale images colorization (2026-11-15, journal-article) https://doi.org/10.1038/s41598-026-73580-x; [paper/nature] NSFA AQE CenterOBB detects oriented SAR ships using frequency domain noise suppression and angle quality estimation (2026-11-09, journal-article) https://doi.org/10.1038/s41598-026-79138-1
+
+**Why asked.** diagnosis row 'Lever with a pertinent measure: ROCK2, belumosudil v SAR-407' (case / limit layout) [disease-models/wwox/research/drug_repurposing/diagnosis_it28_20261105/README.md @ blob dabb9bb5a8, main ee5f6cdaaa14]: "Lever with a pertinent measure: ROCK2, belumosudil v SAR-407899 Executed and compared; the residual is pharmac"
+
+**If confirmed (decision).** Lever with a pertinent measure: ROCK2, belumosudil v SAR-407: closing 'Executed and compared; the residual is pharmacology qualification, not generation: ROCK1 "conflict" has under 1% of the mass and i' Roadmap: R5.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-16 · scout_daily · Discovery:diagnosis:lever-with-unresolved-role:-isr-modulato
+
+**WWOX question.** Lever with unresolved role: ISR modulators (INV-02) and HDAC5 to SLC2A1 Missing measurement (protein-level ISR sign) and a thin premise (one
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] IsrarSoomro60/IsrarSoomro60 (2026-11-16, none stated) https://github.com/IsrarSoomro60/IsrarSoomro60; [repository/github] pcarlsgaard/isr_hsc_kinetics (2026-11-16, none stated) https://github.com/pcarlsgaard/isr_hsc_kinetics; [repository/github] CatKod/embedded-iot-toolkit (2026-11-16, MIT) https://github.com/CatKod/embedded-iot-toolkit; [model/huggingface] twanghcmut/so101-left-arm-task3-isr (2026-11-09, none stated) https://huggingface.co/twanghcmut/so101-left-arm-task3-isr; [space/huggingface] Malak-Israr/reviewmind (2026-10-03, none stated) https://huggingface.co/spaces/Malak-Israr/reviewmind
+
+**Why asked.** diagnosis row 'Lever with unresolved role: ISR modulators (INV-02) and HDAC' (case / limit layout) [disease-models/wwox/research/drug_repurposing/diagnosis_it28_20261105/README.md @ blob dabb9bb5a8, main ee5f6cdaaa14]: "Lever with unresolved role: ISR modulators (INV-02) and HDAC5 to SLC2A1 Missing measurement (protein-level ISR"
+
+**If confirmed (decision).** Lever with unresolved role: ISR modulators (INV-02) and HDAC: closing 'Missing measurement (protein-level ISR sign) and a thin premise (one muscle knockdown origin); the engine cannot supply either' Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-16 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [space/huggingface] amancharde/sanjeevani-drug-repurposing (2025-12-26, none stated) https://huggingface.co/spaces/amancharde/sanjeevani-drug-repurposing; [model/huggingface] muraria/tnbc-drug-repurposing (2025-12-23, none stated) https://huggingface.co/muraria/tnbc-drug-repurposing; [model/huggingface] DPruddh7556/drug-repurposing-models (2025-11-08, none stated) https://huggingface.co/DPruddh7556/drug-repurposing-models
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-16 · scout_daily · Follow:mims-harvard/ToolUniverse
+
+**WWOX question.** live-lookup layer tried on a capability the adapters lack
+
+**Contribution vs existing.** followed since 2026-11-01 (WATCH ToolUniverse; tooluniverse_capability_test_20261026.md)
+
+**Detected.** default-branch head e3a819ff1f8d -> 0da8fb3fcae2; latest release {"date": "2026-11-05", "tag": "v1.5.9"} -> {"date": "2026-11-14", "tag": "v1.5.10"}
+
+**If confirmed (decision).** reopen condition: a capability the adapters lack becomes available, or terms change Roadmap: R9.
+
+**Cost / licence.** reading the change: minutes; see source.
+
+**Proof.** https://github.com/mims-harvard/ToolUniverse
+
+**Outcome.** TO_TRIAGE (a detected change is not a reading)
+
+## 2026-11-17 · scout_daily · PubMed:wwox_any
+
+**WWOX question.** New WWOX paper or external precedent that could reopen a research question
+
+**Contribution vs existing.** not checked against the registry (never grepped); intake triage decides new vs already read
+
+**Detected.** 43036373 A Window Into WOREE: WWOX, Organoids, and Epilepsy.
+
+**Cost / licence.** abstract screen: minutes; a full read needs its receipt; PubMed metadata; full text per paper.
+
+**Proof.** https://pubmed.ncbi.nlm.nih.gov/?term=43036373
+
+**Outcome.** TO_TRIAGE (abstract = discovery, not a reading)
+
+## 2026-11-17 · scout_daily · PubMed:wwox_dee
+
+**WWOX question.** New WWOX paper or external precedent that could reopen a research question
+
+**Contribution vs existing.** not checked against the registry (never grepped); intake triage decides new vs already read
+
+**Detected.** 43036373 A Window Into WOREE: WWOX, Organoids, and Epilepsy.
+
+**Cost / licence.** abstract screen: minutes; a full read needs its receipt; PubMed metadata; full text per paper.
+
+**Proof.** https://pubmed.ncbi.nlm.nih.gov/?term=43036373
+
+**Outcome.** TO_TRIAGE (abstract = discovery, not a reading)
+
+## 2026-11-17 · scout_daily · Discovery:reopen:functional_it13_p3a_20261031/NP3A2
+
+**WWOX question.** Ethosuximide on the provoked seizure score with a same-day three-genotype design, a drug-by-genotype interaction test and measured exposure;
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Electroclinical and behavioral outcomes of add-on ethosuximide in children with developmental and epileptic encephalopathy with spike-wave a (2026-07-10, published record) https://europepmc.org/article/MED/42485909; [paper/europepmc] Aza-Michael approach for the rapid synthesis of 3,5-dimethylpyrazole derivatives with potential biological significance. (2026-07-15, published record) https://europepmc.org/article/MED/42839581; [paper/europepmc] Treatment responses to antiseizure medication in children with Angelman syndrome. (2026-09-07, published record) https://europepmc.org/article/MED/42771958
+
+**Why asked.** reopen functional_it13_p3a_20261031 table row NP3A2 [NEEDS-DATUM] [disease-models/wwox/research/drug_repurposing/functional_it13_p3a_20261031/reopen_searches_it13_p3a.tsv @ blob 1906f5bd43, main bf7cba6706f8]: "Ethosuximide on the provoked seizure score with a same-day three-genotype design, a drug-by-genotype interacti"
+
+**If confirmed (decision).** reopen condition met? source data released or the experiment reproduced Roadmap: R2.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-17 · scout_daily · Discovery:reopen:functional_it13_p3a_20261031/NP3A3
+
+**WWOX question.** Resting potential and the M-current (Kv7) component in neuron-deleted versus control slices at P13 to P17, with the isolated NMDAR current a
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] MartyBordeaux/NMDAR_Braess (2026-09-17, MIT, default-branch head 33665958e50e 2026-09-17, release none published) https://github.com/MartyBordeaux/NMDAR_Braess; [repository/github] xxh87/uADEV_anti_NMDAR_Encephalitis_Case (2026-08-29, none stated, default-branch head 3516f24a2a93 2026-08-29, release none published) https://github.com/xxh87/uADEV_anti_NMDAR_Encephalitis_Case; [repository/github] penghuike3-hash/r14-r8-nmdar-readout-audit (2026-08-28, none stated) https://github.com/penghuike3-hash/r14-r8-nmdar-readout-audit; [paper/nature] Phase separation in multi-component membrane during cell adhesion (2026-11-03, journal-article) https://doi.org/10.1038/s44431-026-00049-2; [paper/nature] Liquid metal interfaces for component mounting on kirigami stretchable substrates (2026-10-30, journal-article) https://doi.org/10.1038/s41528-026-00662-1
+
+**Why asked.** reopen functional_it13_p3a_20261031 table row NP3A3 [NEEDS-DATUM] [disease-models/wwox/research/drug_repurposing/functional_it13_p3a_20261031/reopen_searches_it13_p3a.tsv @ blob 1906f5bd43, main bf7cba6706f8]: "Resting potential and the M-current (Kv7) component in neuron-deleted versus control slices at P13 to P17, wit"
+
+**If confirmed (decision).** reopen condition met? an electrophysiology report from the neuron-deleted line Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-18 · scout_daily · Discovery:reopen:functional_it13_p3a_20261031/NP3A4
+
+**WWOX question.** E_GABA (gramicidin perforated patch) in Wwox-deficient neurons a chloride-gradient measurement in a WWOX-deficient neuron
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Severe neonatal epilepsy linked to a novel homozygous SLC12A5 Arg508Cys variant with impaired chloride transport. (2026-06-17, published record) https://europepmc.org/article/MED/42309338; [dataset/huggingface] referencesource/motor-fuel-dispenser-measurement-tolerances-nist (2026-11-17, other, revision 25bd6dc1cadc, 3 files) https://huggingface.co/datasets/referencesource/motor-fuel-dispenser-measurement-tolerances-nist; [dataset/huggingface] danylochernov/cloud-vps-measurements (2026-11-17, cc-by-4.0, revision f6e0c4263bb8, 7 files) https://huggingface.co/datasets/danylochernov/cloud-vps-measurements; [model/huggingface] SZLHOLDINGS/measurement-master-v1-candidate (2026-11-16, apache-2.0, revision 0eabed41bae5, 9 files) https://huggingface.co/SZLHOLDINGS/measurement-master-v1-candidate; [paper/nature] Edge-centric functional network organization reveals seizure pathways in human epilepsy (2026-09-15, journal-article) https://doi.org/10.1038/s42005-026-02860-9; [paper/nature] Measurement of parent–child quality time: psychometric properties, measurement invariance, and demographic differences (2026-08-09, journal-article) https://doi.org/10.1038/s41598-026-64429-4
+
+**Why asked.** reopen functional_it13_p3a_20261031 table row NP3A4 [NEEDS-DATUM] [disease-models/wwox/research/drug_repurposing/functional_it13_p3a_20261031/reopen_searches_it13_p3a.tsv @ blob 1906f5bd43, main 8a7f3e460b66]: "E_GABA (gramicidin perforated patch) in Wwox-deficient neurons a chloride-gradient measurement in a WWOX-defic"
+
+**If confirmed (decision).** reopen condition met? a chloride-gradient measurement in a WWOX-deficient neuron Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-18 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] JINGEWU/BioMedArena (2026-04-30, MIT) https://github.com/JINGEWU/BioMedArena; [repository/github] sahithirmaryada/RareDx-Agentic-Diagnostic-Assistant (2026-04-30, none stated) https://github.com/sahithirmaryada/RareDx-Agentic-Diagnostic-Assistant; [repository/github] d-feng/Bio-llm-agent-evals (2026-02-21, none stated) https://github.com/d-feng/Bio-llm-agent-evals; [dataset/huggingface] scalingX/lifesci-biomedical-nlp-swe-envs-nocap (2026-11-16, none stated) https://huggingface.co/datasets/scalingX/lifesci-biomedical-nlp-swe-envs-nocap; [dataset/huggingface] Redpine-AI/redpine-biomedical-qa (2026-11-16, cc-by-4.0) https://huggingface.co/datasets/Redpine-AI/redpine-biomedical-qa; [dataset/huggingface] healthcare-biomedical-ai/Surgical-Critical-Care-Medication-Constraint-Verification-Benchmark (2026-11-16, none stated) https://huggingface.co/datasets/healthcare-biomedical-ai/Surgical-Critical-Care-Medication-Constraint-Verification-Benchmark
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
