@@ -1,0 +1,13 @@
+gene	class	ctrl_CPM	ko_CPM	log2_ko_over_ctrl_descriptive_one_pool_per_arm
+Slc12a5	exc	95.62	95.18	-0.007
+Slc12a5	inh	78.01	88.1	0.176
+Slc12a5	astro	42.59	45.38	0.091
+Slc12a5	oligo	37.66	40.22	0.095
+Slc12a5	micro	29.16	42.98	0.56
+Slc12a5	opc	26.61	23.93	-0.153
+Slc12a2	exc	43.93	33.3	-0.4
+Slc12a2	inh	48.96	28.9	-0.761
+Slc12a2	astro	68.45	53.56	-0.354
+Slc12a2	oligo	332.94	239.66	-0.474
+Slc12a2	micro	153.11	105.07	-0.543
+Slc12a2	opc	70.96	88.88	0.325

@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-18T20:24:52Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T21:54:52Z",
+ "event_id": "FTR-20261118-33258158-67",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"consistent with the negative data of the recent human trial\"",
+  "verbatim_locator [Abstract]: \"The data demonstrate that bumetanide does not increase the efficacy of phenobarbital in a model of birth asphyxia\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065c_transfer_sci_20261118/TRANSFER_LEDGER_CHLORIDE_LEVERS_ADV065C_SCI_20261118.md"
+ ],
+ "prior_receipt": "FTR-20261118-33258158-65",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "4e39ced6787a42f58965b943d4843a083b74846099eadb2860059d245307b4c4",
+ "source_kind": "abstract",
+ "source_locator": "files/fulltext/adv065c_20261118/abs_33258158.txt",
+ "study_id": {
+  "pmid": "33258158"
+ },
+ "workflow": "SCI ADV-065c; abstract parsed from PubMed efetch XML saved by a legend-delegate producer (sonnet, medium) and written to the saved file by SCI after re-matching the quotation(s) in code"
+}

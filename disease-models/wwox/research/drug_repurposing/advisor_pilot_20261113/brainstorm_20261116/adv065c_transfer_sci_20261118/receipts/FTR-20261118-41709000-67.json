@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-18T20:24:52Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "not_read",
+  "figures": "read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T21:54:52Z",
+ "event_id": "FTR-20261118-41709000-67",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Figure 3 legend]: \"High-amplitude movements were significantly less in OV350-treated Cdkl5 KO pups from p11 to 13 compared to veh-treated KO pups.\"",
+  "verbatim_locator [Figure 5 legend title]: \"KCC2 activator increases the susceptibility to KA-induced seizures and SE in Cdkl5 KO mice\"",
+  "verbatim_locator [Results]: \"Total KCC2 expression increased linearly over development until p14, followed by maintenance at this level as the brain neurons further matured by p21 in WT mice\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065c_transfer_sci_20261118/TRANSFER_LEDGER_CHLORIDE_LEVERS_ADV065C_SCI_20261118.md"
+ ],
+ "prior_receipt": "FTR-20261118-41709000-66",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "304786288b9ecd76629382974cbed373abcc72c109146972e881e9d3a8052bed",
+ "source_kind": "fulltext_remote",
+ "source_locator": "files/fulltext/adv065b_20261118/PMID41709000_PMC12992657_efetch_pmc.xml",
+ "study_id": {
+  "pmid": "41709000"
+ },
+ "workflow": "SCI ADV-065c: all seven figures viewed as images (publisher static image host, one plain request each; copies PMID41709000_Fig1 to Fig7 saved beside the XML in files/fulltext/adv065c_20261118) and compared with legends and Results text; the supplement text was read in ADV-065b and its n and p-values checked by a blind verifier there; not re-read here"
+}

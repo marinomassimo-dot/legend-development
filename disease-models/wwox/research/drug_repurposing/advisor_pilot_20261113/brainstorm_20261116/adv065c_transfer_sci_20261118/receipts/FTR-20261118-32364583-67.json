@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-18T20:24:52Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T21:54:52Z",
+ "event_id": "FTR-20261118-32364583-67",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"Through a genetic screen in zebrafish, we identified a mutant with disruption to myelin in both the CNS and PNS caused by a mutation in a previously uncharacterized gene, slc12a2b, predicted to encode a Na+, K+, and Cl- (NKCC) cotransporter, NKCC1b.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065c_transfer_sci_20261118/TRANSFER_LEDGER_CHLORIDE_LEVERS_ADV065C_SCI_20261118.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "cf9c2d190ec8c906e9825834a00a89988e3577889fd6d969d1b4ed3b9bec9402",
+ "source_kind": "abstract",
+ "source_locator": "files/fulltext/adv065c_20261118/abs_32364583.txt",
+ "study_id": {
+  "pmid": "32364583"
+ },
+ "workflow": "SCI ADV-065c; PubMed esearch (NKCC1 or bumetanide with oligodendrocyte or myelin terms, no reviews) then efetch; abstract text saved and the quoted sentence matched in code"
+}

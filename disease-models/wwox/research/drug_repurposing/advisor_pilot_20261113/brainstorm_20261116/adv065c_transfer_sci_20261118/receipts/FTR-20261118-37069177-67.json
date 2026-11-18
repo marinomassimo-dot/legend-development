@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-18T20:24:52Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T21:54:52Z",
+ "event_id": "FTR-20261118-37069177-67",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Results]: \"Chronic administration of bumetanide significantly lengthened the latency in both WT and Ube3am−/p+ mice\"",
+  "verbatim_locator [Results]: \"No significant interaction was observed between genotype and drug, suggesting that flurothyl-induced seizure activity may involve NKCC1 activation, regardless of genotype.\"",
+  "verbatim_locator [Results]: \"The frequency of epileptic discharges and power in low-frequency bands were not altered by chronic bumetanide administration in Ube3am−/p+ mice\"",
+  "verbatim_locator [Discussion]: \"In contrast to prior studies that demonstrated an increased mean [Cl−]i accompanied by increased NKCC1 expression, the [Cl−]i value did not differ between WT and Ube3am−/p+.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065c_transfer_sci_20261118/TRANSFER_LEDGER_CHLORIDE_LEVERS_ADV065C_SCI_20261118.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "c4893a55664655f5f178cbede82a938bc686448322583b263fed643af8d25cdb",
+ "source_kind": "fulltext_remote",
+ "source_locator": "files/fulltext/adv065c_20261118/PMID37069177_PMC10110603_efetch_pmc.xml",
+ "study_id": {
+  "pmid": "37069177"
+ },
+ "workflow": "SCI ADV-065c: open-access full text fetched by NCBI E-utilities (db=pmc, plain client) by a legend-delegate producer (sonnet, effort medium read back) that read the body by keyword-sentence scans; quotations re-matched in code by SCI against the saved XML; coverage marks only sections where a matched locator lies; figures, supplements and table bodies not reached"
+}

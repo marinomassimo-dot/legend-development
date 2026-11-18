@@ -1,0 +1,3 @@
+gene	ctrl_all_CPM	ko_all_CPM	counterfactual_ko_composition_ctrl_class_values_CPM	log2_ko_over_ctrl_observed	log2_counterfactual_over_ctrl	share_explained_by_composition	rule_verdict
+Slc12a5	81.05	82.49	81.2	0.025	0.003	0.108	within-class
+Slc12a2	81.86	45.69	61.35	-0.841	-0.416	0.495	mixed

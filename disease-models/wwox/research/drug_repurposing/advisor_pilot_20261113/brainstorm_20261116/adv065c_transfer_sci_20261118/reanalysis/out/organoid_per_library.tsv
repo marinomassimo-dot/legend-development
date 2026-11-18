@@ -1,0 +1,7 @@
+library	genotype	total_counts	SLC12A5_CPM	SLC12A2_CPM	ratio_A2_over_A5	neuronal_panel_gmean_CPM	progenitor_glia_panel_gmean_CPM	A5_over_neuronal	A2_over_neuronal	A2_over_progenitor_glia	WWOX_CPM
+cko1	KO	38725699	21.0	5.0	0.24	112.2	132.5	0.187	0.045	0.038	14.12
+cko2	KO	41153292	19.2	5.6	0.289	119.3	92.6	0.161	0.047	0.06	11.86
+cko3	KO	38206349	41.3	5.5	0.133	116.1	187.4	0.356	0.047	0.029	16.54
+cko4	KO	34206111	39.0	5.5	0.142	127.0	125.9	0.307	0.044	0.044	12.28
+cwt1	WT	37256191	20.0	5.8	0.292	142.4	103.8	0.14	0.041	0.056	9.64
+cwt2	WT	29979206	15.6	4.6	0.297	121.9	76.4	0.128	0.038	0.061	10.07
