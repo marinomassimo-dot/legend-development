@@ -56,3 +56,6 @@ Non-canonical research material, not medical advice; no dose, schedule or route 
 * Full text of Welliver 2018, Hartley 2019, Cree 2018, Barez-Lopez 2018 and Ravichandar 2024 (PMC records served abstracts only): these rows are abstract-only conditional leads.
 * Not searched or not read: Liu 2016 (clemastine, socially isolated adolescent mice), ReBUILD trial, Abiraman 2015 (M1/M3 in OPC), Sob-AM2 in the Mct8/Oatp1c1 double knockout, kappa-opioid receptor and GPR17 antagonist lines, PDGFRA-negative or zebrafish muscarinic data. A reopening trigger: any source that gives these compounds in a **neuron-driven hypomyelination** (for example a neuron-specific deletion with pup treatment) with an EM endpoint.
 * Europe PMC keyword searches ('myelination high-content screen' and relatives) returned reviews and 2025-2026 items; none changed the class list.
+
+
+Update 2026-11-18 (IT, SCI ADV-045, advisor_pilot_20261113/brainstorm_20261116/adv045_errata_sci_20261118/ERRATA_READ_ADV045_SCI_20261118.md (main 78bf06890)): erratum to PMID 24997607 (Fig 3e representative image for benzatropine; quantification is Fig 3a and 3f). Low effect on row R08 (the image is representative, not the measurement); the row is unchanged.

@@ -256,3 +256,6 @@ here so that any proposed fifth state is assessed against the full set.
 6. **Three rows are `cited_in_source_not_read`** (`R17`, `R22`, `R78`). If the integrator wants any of them
    as a module input, the primary source must be opened first. `R43` carries the same provenance problem at
    `partial_fulltext` depth and should not be read as a measurement made in the citing source.
+
+
+Update 2026-11-18 (IT, SCI ADV-045, advisor_pilot_20261113/brainstorm_20261116/adv045_errata_sci_20261118/ERRATA_READ_ADV045_SCI_20261118.md (main 78bf06890)): the module input that rests on R87 (and R83, R88, R94, R95 as listed above) carries a caution: PMID 36594817 has an erratum changing the plots behind the 'tracks Ube3a protein level' statement; the corrected figure was not read; re-read before relying on it. No input was edited.

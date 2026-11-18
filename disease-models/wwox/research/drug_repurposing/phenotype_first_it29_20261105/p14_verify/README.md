@@ -40,3 +40,6 @@ Sources opened as full text: PMC2701973 (PMID 19503085), PMC4750051 via E-utilit
 3. Re-word the non-selective-inhibitor and "changes a carried decision" sentences to what the evidence tier shows, state that the signed table is a hand-curated layer (converter on raw evidence gives 9 roles), and fix the S1-27/S1-28 provenance (citing paper).
 
 Files: `origin_check.tsv` (31-row check with classification). Scratch re-run outputs: `/tmp/claude-1000/-home-desktop-legend-development/4325d70d-8bea-4789-8046-d7a9ee74c97f/scratchpad/p14/`.
+
+
+Update 2026-11-18 (IT, SCI ADV-045, advisor_pilot_20261113/brainstorm_20261116/adv045_errata_sci_20261118/ERRATA_READ_ADV045_SCI_20261118.md (main 78bf06890)): signed rows S1-19 and S1-20 (via B01, PMID 19503085): the author correction (Fig 1h Pdgfra panel duplicated from Mbp) was read by SCI on the corrected image; the statement stands. No row was edited.

@@ -500,3 +500,6 @@ All 34 are in `queries.tsv` with database, exact string, timestamp, hit count an
 Routes used: the PubMed MCP tools, NCBI E-utilities (esearch, esummary, efetch), Europe PMC REST, and PMC
 article pages. Zero spend, no registration, no account, no author contact, no contact address sent anywhere.
 No third-party bytes were saved inside the repository; downloads stayed in the session scratch directory.
+
+
+Update 2026-11-18 (IT, SCI ADV-045, advisor_pilot_20261113/brainstorm_20261116/adv045_errata_sci_20261118/ERRATA_READ_ADV045_SCI_20261118.md (main 78bf06890)): CAUTION on the statement that improvement 'tracks the increase in Ube3a protein levels' (PMID 36594817; row R87, also R86-R88 where they rest on the same figure). The paper has an erratum (Fig 8A gamma-2 plot duplicated; Fig 8B REM-dark data and statistics changed; the authors state text and conclusion unchanged). The corrected figure was not read; re-read it first. No claim was edited. The same wording is carried in `integration/NEED-WWOX-GENE-ADDITION_consolidated.json` (statement on PMID 36594817) and in `module_inputs.md`; both are left as written, and this line is the pointer.

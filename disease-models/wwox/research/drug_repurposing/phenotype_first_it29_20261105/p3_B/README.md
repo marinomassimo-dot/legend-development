@@ -120,3 +120,6 @@ Activation of cortical axons with DREADD raises OPC proliferation and differenti
 - Nothing here gives dose, schedule, route or preparation; no individual-level record is involved.
 
 > **Note, IT29 P10 (CH-IT29-CLASSIIA-CNS-MYELIN, 2026-11-05).** The row 'HDAC4 / HDAC5 in CNS oligodendroglia' stays empty after bounded searches by three further readers (`cycle_it29_p10_20261105/p10_F`, `p10_G`, `p10_H`). The Schwann-cell source (PMID 29472387) shows a transient delay in a double mutant, recovered by P8, with a scaffold mechanism; it is not evidence that class IIa HDACs are required for myelination.
+
+
+Update 2026-11-18 (IT, SCI ADV-045, advisor_pilot_20261113/brainstorm_20261116/adv045_errata_sci_20261118/ERRATA_READ_ADV045_SCI_20261118.md (main 78bf06890)): the author correction to PMID 19503085 (Fig 1h Pdgfra panel was a duplicate of Mbp) was read by SCI against the corrected image: no labelled cells, and the P4 statement behind row B01 stands on the corrected panel (SCI's reading, not re-read by IT). No row was edited.
