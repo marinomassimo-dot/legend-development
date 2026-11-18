@@ -1,0 +1,241 @@
+All of this is from my own recall. I used no tools and checked nothing against the repository or the literature. Every "evidence" line is recall-level and should be verified before it is used. Several checklist rows are low-confidence or inferred from a neighbouring family, and I mark them as such.
+
+FAMILY: The defective molecule is a membrane receptor guanylyl cyclase, GC-C (GUCY2C). Its ligands are guanylin, uroguanylin and the E. coli heat-stable enterotoxin STa, and its product is cGMP. The wider family is the particulate receptor guanylyl cyclases (GC-A/NPR1, GC-B/NPR2, GC-D, GC-E/F, GC-G). The closest relatives are:
+1. Soluble guanylyl cyclase (sGC), which has the same class III nucleotidyl-cyclase catalytic fold but a heme H-NOX regulatory domain.
+2. Transmembrane and soluble adenylyl cyclases (tmAC, sAC), which share the class III cyclase mechanism and fold.
+3. Protein kinases and pseudokinases, because GC-C carries an ATP-binding kinase-homology domain (KHD) as its regulatory domain.
+
+CHECKLIST
+Item | known to modulate the family? | member | direction | evidence (recall)
+1 Na+ | not known | - | - | no direct cyclase data recalled
+2 K+ | not known | - | - | -
+3 Ca2+ | yes | RetGC1/2 via GCAPs; AC1/8, AC5/6, sAC | RetGC: low Ca2+ raises, high Ca2+ lowers. AC1/8 raised via CaM. AC5/6 lowered. sAC raised | phototransduction; AC Ca2+ isoform pharmacology. Not known for GC-C
+4 Mg2+ | yes | all cyclases | raises (required cofactor) | Mg-GTP and Mg-ATP are the real substrates
+5 Mn2+ | yes | sGC, AC, particulate GC | raises in vitro | Mn-GTP supports higher Vmax and bypasses ligand requirement in assays
+6 Fe2+ / Fe3+ | yes | sGC | Fe2+ heme raises. Oxidised Fe3+ heme lowers NO responsiveness | heme state; ODQ oxidises it
+7 Cu+ / Cu2+ | not known (weak) | AC | possibly lowers | old in-vitro inhibition, low confidence
+8 Zn2+ | yes | AC5/6 and other tmAC | lowers | in-vitro inhibition; low confidence for GC
+9 Co2+ | not known | - | - | -
+10 Ni2+ | not known | - | - | -
+11 Li+ | yes | AC (AC5) | lowers | Mg-competitive inhibition; moderate confidence
+12 Cl- | yes | GC-A (NPR-A) hormone-binding domain | lowers ligand binding | Cl- site in the crystal structure. Not known for GC-C
+13 HCO3- | yes | sAC; GC-D | raises | sAC is a bicarbonate sensor. GC-D is activated by CO2/HCO3- via carbonic anhydrase
+14 phosphate | not known (as an ion) | - | - | phosphorylation is covered under ATP
+15 sulfate | not known | - | - | -
+16 iodide | not known | - | - | -
+17 fluoride | yes (indirect) | tmAC via AlF4- activation of Gs | raises | classic membrane AC activation
+18 selenium | not known | - | - | -
+19 molybdenum | not known | - | - | -
+20 low pH | yes | GC-C | uroguanylin gains potency at acidic pH. Guanylin gains potency at alkaline pH | pH-dependent ligand activity; the direction is ligand-specific
+21 high pH | yes | GC-C | favours guanylin over uroguanylin | same
+22 low temperature | yes | GC-G | raises | cool sensing in Grueneberg ganglion; moderate confidence
+23 high temperature | not known | - | - | -
+24 low osmolarity | not known | - | - | -
+25 high osmolarity | not known | - | - | -
+26 hypoxia | not known (indirect) | sGC | altered NO/sGC expression | not specific to GC-C
+27 hyperoxia | weak, indirect | sGC | lowers | ROS oxidising heme/thiols; low confidence
+28 H2O2 / ROS | yes | sGC | mostly lowers (heme oxidation, NO-unresponsive). Some reports of activation | mixed
+29 nitric oxide | yes | sGC (strongly); AC5/6 | sGC raised. AC5/6 lowered by S-nitrosylation | heme Fe2+ nitrosyl. Not known for GC-C
+30 carbon monoxide | yes | sGC | raises (weak, a few-fold) | YC-1 sensitises
+31 hydrogen sulfide | yes, mixed | sGC / PDE5 | cGMP raised via PDE inhibition; effect on sGC itself unclear | low confidence
+32 GSH / GSSG | weak | sGC (thiol redox) | mixed | low confidence
+33 NAD+ | yes (indirect) | tmAC | raises or lowers via ADP-ribosylation of Gs (cholera toxin) or Gi (pertussis toxin) | NAD+ is the toxin substrate
+34 NADP+ / NADPH | not known | - | - | -
+35 ATP | yes | GC-C and GC-A (KHD) | raises (allosteric potentiation of ligand-stimulated cyclase). sGC reported to be inhibited by ATP | KHD ATP binding. For tmAC, ATP is the substrate
+36 ADP and AMP | yes | AC | lowers (P-site type inhibition) | adenine nucleoside/nucleotide inhibition
+37 GTP and GDP | yes | all | GTP is the substrate and raises. GDP lowers G-protein stimulation of AC | substrate
+38 cAMP | yes (indirect) | AC5/6 | PKA phosphorylation lowers AC5/6 | feedback; not known for GC-C
+39 cGMP | yes (downstream) | PDE2 activated. PDE3 inhibited. PKG phosphorylation activates PDE5 | lowers cGMP (negative feedback via PDE5) | PDE regulation
+40 acetyl-CoA / CoA | not known | - | - | -
+41 S-adenosylmethionine | not known | - | - | -
+42 FAD / FMN | not known | - | - | -
+43 pyridoxal phosphate | not known | - | - | -
+44 thiamine pyrophosphate | not known | - | - | -
+45 biotin | weak | sGC | raises | old reports of activity or expression increase; low confidence
+46 folate / THF | not known | - | - | -
+47 vitamin B12 | yes (indirect) | sGC | lowers (cobalamin scavenges NO) | hydroxocobalamin
+48 vitamin C | weak | sGC | possibly raises | heme protection; low confidence
+49 vitamin D | not known | - | - | -
+50 vitamin A / retinoids | not known | - | - | -
+51 vitamin E | not known | - | - | -
+52 vitamin K | not known | - | - | -
+53 heme | yes | sGC | raises (prosthetic group; heme-free sGC responds to activators) | cinaciguat class
+54 lipoic acid | not known | - | - | -
+55 coenzyme Q10 | not known | - | - | -
+56 glucose | not known | - | - | -
+57 lactate | not known | - | - | -
+58 pyruvate | not known | - | - | -
+59 ketone bodies | not known | - | - | -
+60 glutamine | not known | - | - | -
+61 glutamate | indirect | sGC | raises (NMDA to NO to sGC in neurons) | not an epithelial finding
+62 GABA | not known | - | - | -
+63 glycine | not known | - | - | -
+64 aspartate | not known | - | - | -
+65 serine | not known | - | - | -
+66 arginine | yes (indirect) | sGC | raises (NOS substrate) | NO supply
+67 taurine | not known | - | - | -
+68 creatine | not known | - | - | -
+69 carnitine | not known | - | - | -
+70 TCA intermediates | indirect only | AC | succinate via SUCNR1 (Gi) may lower cAMP | low confidence
+71 free fatty acids | weak | sGC | raises (unsaturated fatty acids in vitro) | old data
+72 cholesterol / sterols | not known | - | - | -
+73 bile acids | indirect | AC | raises cAMP via TGR5 (Gs) | no direct GC-C data
+74 polyamines | not known | - | - | -
+75 adenosine | yes | AC | A2A/A2B raise via Gs. A1 lowers via Gi. P-site analogues lower directly | GPCR and P-site
+76 ammonia | not known | - | - | -
+77 urea | not known | - | - | -
+
+MODULATORS
+Family or member | modulator | direction
+GC-C | guanylin, uroguanylin, lymphoguanylin, STa, linaclotide, plecanatide | raise
+GC-C | ATP at the KHD; Mg2+/Mn2+ | raise (ATP is allosteric; Mg2+/Mn2+ cofactors)
+GC-C | KHD phosphorylation (required for ligand-driven activity); phosphatase or desensitisation | phosphorylation raises, dephosphorylation lowers (recall-level, low confidence)
+GC-C | luminal pH (uroguanylin acid-preferring, guanylin alkaline-preferring) | ligand-specific
+GC-C pathway (cGMP removal and use) | PDE5, PDE2, PDE3, PDE10, PDE9 hydrolyse cGMP | lower cGMP. PDE inhibitors raise it
+GC-C pathway | MRP4/ABCC4 (and MRP5) export of cGMP | lowers intracellular cGMP
+GC-C pathway | PKG2 (PRKG2) phosphorylates CFTR and inhibits NHE3 | downstream effectors of the signal
+GC-A / GC-B | ANP, BNP, CNP; ATP; Cl- | ligands and ATP raise. Cl- lowers binding
+GC-A / GC-B | PKC, dephosphorylation, desensitisation by LPA, PTH, FGF (on GC-B) | lower
+GC-A / GC-B | NPR-C clearance; neprilysin degradation of peptides | lower ligand
+GC-D | CO2/HCO3-, guanylin peptides | raise
+GC-E / GC-F | GCAPs plus low Ca2+ | raise
+GC-E / GC-F | high Ca2+ with GCAPs; RD3 | lower
+GC-G | low temperature | raises
+sGC | NO, CO | raise
+sGC | riociguat, vericiguat, YC-1 (stimulators, heme-dependent) | raise
+sGC | cinaciguat, ataciguat (activators of oxidised or heme-free enzyme) | raise
+sGC | ODQ, ROS, hydroxocobalamin | lower
+sGC | Hsp90, heme supply | permissive
+tmAC | Gs, forskolin, Ca2+/CaM (AC1/8), AlF4-, cholera toxin | raise
+tmAC | Gi, pertussis toxin, P-site inhibitors, SQ22536, Zn2+, Li+, PKA phosphorylation (AC5/6) | lower
+sAC | HCO3-, Ca2+, Mn2+ | raise
+sAC | KH7, LRE1, TDI-10229 | lower
+Kinase / pseudokinase family | ATP, Mg2+ | permissive
+Kinase / pseudokinase family | ATP-competitive ligands | modulate at the KHD. None demonstrated for GC-C that I recall
+
+STEP C
+The defect is a gain of function. A corrective lever must lower cGMP, or interrupt a step downstream of cGMP that damages the epithelium. Entries that would move in the corrective direction:
+- Less ligand, or tuning the pH-dependent ligand potency.
+- Interference with ATP or the phospho-state at the KHD.
+- Fewer mutant receptors.
+- More cGMP hydrolysis (PDE gain) or more export (MRP4 gain).
+- Blockade of PKG2, CFTR or the cAMP cross-talk branch.
+- Removal of the NO/sGC contribution.
+- Bypass of the differentiation block (Atoh1 gain or Notch inhibition).
+- Removal of secondary injury (microbiota, bile acids, cytokines).
+Entries that would worsen the defect when applied to the mutant receptor:
+- Agonists such as STa, linaclotide and plecanatide.
+- PDE5 inhibitors and MRP4 inhibitors.
+- NO donors and sGC stimulators.
+- Mn2+ and ATP excess.
+Entries that are not usable for the correction:
+- Entries with no member data (most vitamins, metals and metabolites in the checklist).
+- Entries known only for another family, where transfer to GC-C is IPOTESI. Examples are Cl-, GCAP/Ca2+ and bicarbonate.
+Residual caveat: the barrier may be U-shaped in cGMP. As I recall, loss of GC-C signalling in mice also gives a leaky barrier. Over-correction is therefore possible, and I could not rank the effect sizes.
+
+H1. Statement: the mutant receptor is hypersensitive to normal guanylin-peptide ligand, so removing ligand normalises cGMP and the epithelium.
+Evidence: GC-C gain-of-function variants cause familial diarrhoea and an IBD-like phenotype in humans (recall of the case reports). Ligand dependence of the mutants is unknown to me.
+Usual reading assumes: a gain-of-function variant is constitutive. This one changes that to a shifted ligand sensitivity.
+Rejection: cGMP stays high in a Guca2a/Guca2b double-null background.
+Discriminating manipulation: cross the mutant to Guca2a/Guca2b double knockout. Nearest rival is H3 (intrinsic ATP-dependent activation).
+Predicts: cGMP normal and barrier normal if ligand-dependent. If constitutive, cGMP and barrier phenotype persist.
+
+H2. Statement: the dominant ligand is pH-matched to the lumen, so selective loss of the acid-preferring uroguanylin or the alkaline-preferring guanylin lowers net drive in one gut segment.
+Evidence: pH-dependent potency of the two peptides (recall). Segmental rescue is none known.
+Usual reading assumes: the two peptides are interchangeable. This one changes that to segment-specific drive.
+Rejection: both single knockouts leave cGMP unchanged in the segment where it is high.
+Discriminating manipulation: Guca2a-only versus Guca2b-only deletion in the mutant. Nearest rival is H1.
+Predicts: segment-specific fall in cGMP and a segment-specific barrier improvement. The unaffected segment stays abnormal.
+
+H3. Statement: the variant makes receptor activity depend on ATP binding at the kinase-homology domain, so disabling ATP binding cuts cGMP.
+Evidence: ATP potentiates ligand-stimulated GC-C and GC-A through the KHD (recall). Not tested for the variant.
+Usual reading assumes: the variant sits in the catalytic domain and acts independently. This one changes that to dependence on KHD allostery.
+Rejection: an ATP-binding-deficient KHD in cis leaves cGMP unchanged.
+Discriminating manipulation: ATP-site-disabled knock-in in cis with the variant. Nearest rival is H4.
+Predicts: cGMP falls under ligand-saturating and ligand-free conditions, and the barrier recovers.
+
+H4. Statement: the variant keeps the KHD in a hyper-phosphorylated state, so a phospho-null KHD or phosphatase gain lowers cGMP.
+Evidence: KHD phosphorylation is needed for ligand activation (recall, low confidence). Not tested.
+Usual reading assumes: activity is set by the ligand. This one changes that to a phospho-state set point.
+Rejection: phospho-null KHD leaves cGMP unchanged and ligand response intact.
+Discriminating manipulation: phosphosite alanine knock-in in cis with the variant. Nearest rival is H3, which keeps the phospho-state and removes ATP binding.
+Predicts: cGMP falls with preserved ATP binding. The barrier improves in step with cGMP.
+
+H5. Statement: the mutant receptor acts partly in trans through oligomers with the wild-type allele, so lowering mutant dose lowers cGMP more than proportionally.
+Evidence: none known for this variant.
+Usual reading assumes: one mutant allele contributes additively. This one changes that to a shared-complex effect.
+Rejection: cGMP in mutant/null mice is half that of mutant/wild-type.
+Discriminating manipulation: compare mutant/wild-type with mutant/null (hemizygous), or allele-specific silencing. Nearest rival is H1.
+Predicts: cGMP below half in mutant/null if cooperative. Barrier follows cGMP.
+
+H6. Statement: raising epithelial PDE5 or PDE2 capacity removes the excess cGMP.
+Evidence: PKG feedback activates PDE5. Gain of PDE in this model is none known.
+Usual reading assumes: the receptor is the only control point. This one changes that to degradation capacity.
+Rejection: Pde5a/Pde2a overexpression leaves cGMP and barrier abnormal.
+Discriminating manipulation: epithelial Pde5a or Pde2a gain in the mutant. Nearest rival is H7 (export).
+Predicts: tissue cGMP falls, and so does the effluxed cGMP. Barrier recovers if cGMP-driven.
+
+H7. Statement: raising MRP4/ABCC4 export removes cGMP from the cell.
+Evidence: MRP4 exports cGMP (recall). Not tested for this model.
+Usual reading assumes: intracellular cGMP reflects synthesis alone. This one changes that to include export.
+Rejection: Abcc4 loss does not raise intracellular cGMP in the mutant.
+Discriminating manipulation: Abcc4 deletion versus gain in the mutant. Nearest rival is H6.
+Predicts: Abcc4 loss raises intracellular cGMP and lowers extracellular cGMP, and worsens the barrier. PDE-based rescue should be unaffected by it.
+
+H8. Statement: the epithelial damage runs through PKG2, so deleting it normalises differentiation and barrier without lowering cGMP.
+Evidence: PKG2 is the effector that phosphorylates CFTR. Its role in differentiation here is none known.
+Usual reading assumes: the damage is a consequence of the cGMP level. This one changes that to a PKG2-specific effector.
+Rejection: Prkg2 deletion leaves the barrier and secretory cells abnormal.
+Discriminating manipulation: epithelial Prkg2 deletion in the mutant. Nearest rival is H12 (lineage bypass).
+Predicts: cGMP unchanged or higher; differentiation, barrier and cytokines improve.
+
+H9. Statement: the barrier injury is secondary to CFTR-driven fluid secretion, not to cGMP-driven junction signalling.
+Evidence: none known for this model.
+Usual reading assumes: cGMP acts on junctions directly. This one changes that to a flux effect.
+Rejection: Cftr deletion leaves the barrier abnormal.
+Discriminating manipulation: Cftr deletion or a CFTR-gating inhibitor class in the mutant. Nearest rival is H15 (bile-acid injury).
+Predicts: cGMP unchanged; luminal fluid falls, and the barrier improves only if flux-driven.
+
+H10. Statement: cGMP spills over into cAMP by inhibiting PDE3, and the cAMP arm is what harms the epithelium.
+Evidence: cGMP inhibits PDE3 (established pharmacology). Its role here is none known.
+Usual reading assumes: the cGMP-PKG axis is the only axis. This one changes that to cAMP crosstalk.
+Rejection: epithelial PKA-catalytic deletion or PDE3 gain leaves the barrier abnormal.
+Discriminating manipulation: epithelial PKA loss in the mutant. Nearest rival is H8.
+Predicts: cGMP unchanged, cAMP falls, barrier improves.
+
+H11. Statement: inflammation-induced NO drives sGC and adds to epithelial cGMP.
+Evidence: NO strongly activates sGC; iNOS is raised in colitis (recall). Not tested here.
+Usual reading assumes: all cGMP comes from the receptor. This one changes that to include sGC.
+Rejection: Nos2 loss or sGC beta-1 deletion does not change cGMP.
+Discriminating manipulation: Nos2 deletion or epithelial Gucy1b1 deletion in the mutant. Nearest rival is H14 (cytokine loop).
+Predicts: partial fall in cGMP, and a barrier gain if NO damage contributes.
+
+H12. Statement: the secretory-lineage defect can be bypassed, which would restore mucus and antimicrobial defence.
+Evidence: none known for this model.
+Usual reading assumes: the lineage block and the cGMP signal must be fixed together. This one changes that to a bypass that leaves the signal unchanged.
+Rejection: Atoh1 gain (or Notch inhibition) fails to restore goblet and Paneth cells.
+Discriminating manipulation: epithelial Atoh1 overexpression in the mutant. Nearest rival is H8, which removes the signal rather than bypassing it.
+Predicts: cGMP unchanged, lineage rescued, barrier improved only if the leak follows secretory deficiency.
+
+H13. Statement: the leak and the cytokines are driven by microbial encroachment through a thin mucus layer.
+Evidence: none known for this model.
+Usual reading assumes: the cytokines are epithelial-intrinsic. This one changes that to microbe-driven.
+Rejection: germ-free mutant mice keep their leak and cytokines.
+Discriminating manipulation: germ-free or antibiotic-treated mutant mice. Nearest rival is H14.
+Predicts: cGMP unchanged, barrier and cytokines normalise.
+
+H14. Statement: a cytokine feed-forward loop (TNF, IL-1) sustains the damage once started.
+Evidence: cytokines lower guanylin-peptide expression in colitis (recall). Not tested here.
+Usual reading assumes: the cytokines are an outcome only. This one changes that to a driver.
+Rejection: TNF/IL-1 blockade does not change the barrier.
+Discriminating manipulation: Tnf or Il1b deletion, or a blocking-antibody class, in the mutant. Nearest rival is H13.
+Predicts: cGMP at receptor level unchanged, barrier improves.
+
+H15. Statement: bile-acid load from the extra luminal flux damages the epithelium.
+Evidence: none known for this model.
+Usual reading assumes: fluid loss is harmless to the epithelium. This one changes that to a bile-acid injury.
+Rejection: Cyp7a1 deletion or a sequestrant class leaves the barrier abnormal.
+Discriminating manipulation: Cyp7a1 deletion in the mutant. Nearest rival is H9, which blocks the fluid itself.
+Predicts: cGMP unchanged, fluid output unchanged, barrier improves.
+
+Not selected, for lack of recalled evidence or for being redundant with the above: Cl- binding to the extracellular domain (known for GC-A, not GC-C), IMPDH and GTP-pool depletion, and NHE3 restoration.

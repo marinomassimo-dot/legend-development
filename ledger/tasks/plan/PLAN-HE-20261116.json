@@ -296,18 +296,15 @@
     },
     {
      "step": "source two targets by the standing rule (contamination counts, memory probe, leak audit, atoms, strict and loose terms) within about 100k tokens, else report the yield",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "plan",
-     "blocker": "sourcing yield 0 clean new in-scope targets from about 190 titles (SOURCING_YIELD_20261118.md); waiting for ADV's decision between declining, a development stage 0 on T7 only, or sourcing in another window",
-     "unblock_when": {
-      "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/checklist_test_he_20261118/SOURCING_YIELD_20261118.md",
-      "contains": "ADV DECISION"
-     }
+     "evidence": "advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/checklist_test_he_20261118/SOURCING_YIELD_20261118.md: 0 clean new targets from about 190 titles; ADV decision B (2026-11-18) declined the two-target test and authorised a tuned-on development stage 0 on T7"
     },
     {
      "step": "run four tool-free stage-1 delegates (two per target), read back model and effort and path audit, score strict and loose, report by path with digests, outcomes and what it would change",
-     "status": "TODO",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/checklist_test_he_20261118/RESULT_T7_STAGE0_CHECKLIST_20261118.md: two tool-free runs on T7 (TUNED-ON), 79,783 tokens, zinc named loosely 2 of 2 and strictly 1 of 2; model and effort read back; no files opened; not the authorised test"
     }
    ]
   }
