@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-18T17:33:03Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T17:35:03Z",
+ "event_id": "FTR-20261118-42958794-64",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"chronic FFA treatment reduces the frequency of hyperthermia-induced seizures\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv064_not_found_recheck_sci_20261118/RECHECK_NOT_FOUND_ADV064_SCI_20261118.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "88b74f71fefcd7b0683251d14d7e66d0f6b3e4ace0ba79cf3f22b29ce99a31b7",
+ "source_kind": "abstract",
+ "source_locator": "files/fulltext/adv064_20261118/abs_42958794.txt",
+ "study_id": {
+  "pmid": "42958794"
+ },
+ "workflow": "SCI ADV-064 blind re-search of the age-window not-found items; context_policy QUESTION_DRIVEN; the delegate (legend-delegate, sonnet medium) saved the abstracts and SCI re-matched the pivotal quotes against the saved bytes before recording"
+}
