@@ -1,0 +1,47 @@
+{
+ "analysis_at": "2026-11-18T19:37:49Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "read"
+ },
+ "event_at": "2026-11-18T19:57:49Z",
+ "event_id": "FTR-20261118-31058209-66",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Methods]: \"Data collection and statistical tests were performed by researchers blinded to the experimental conditions.\"",
+  "verbatim_locator [Methods]: \"Of 29 mice tested, 17 mice died during the 50 min recording period.\"",
+  "verbatim_locator [Results, Fig. 1 legend]: \"saline, 5/5;\"",
+  "verbatim_locator [Results, Fig. 1 legend]: \"bumetanide, 2/4)\"",
+  "verbatim_locator [Results, Fig. 2 legend]: \"saline, 3/5;\"",
+  "verbatim_locator [Results]: \"These results suggest that the GABA excitatory/inhibitory shift presumably takes place at ∼P11–P14 in mice.\"",
+  "verbatim_locator [Results]: \"the latency to the emergence of the first epileptic event was significantly shorter in the diazepam- and pentobarbital-treated groups, a phenomenon not blocked by bumetanide (Fig. 5B)\"",
+  "verbatim_locator [Discussion]: \"the sedation induced by high-dose GABAA receptor modulators may exacerbate the seizure phenotype by preventing mouse pups from dissipating heat\"",
+  "verbatim_locator [Discussion]: \"The brain levels of bumetanide after systemic administration are usually lower than the levels required for the effective activation of NKCC1\"",
+  "verbatim_locator [Discussion]: \"In the present study, we found that bumetanide alone did not affect the seizure phenotypes, but it suppressed the GABAA receptor modulator-mediated deterioration of seizures in experimental FSs.\"",
+  "verbatim_locator [Table 2, row text with its cells concatenated as stored in the XML]: \"Mortality0/50/50/55/55/55/5\"",
+  "verbatim_locator [Table 1, row text with its cells concatenated as stored in the XML]: \"Death0/50/50/51/50/45/55/51/4\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065b_kcc2_ov350_sci_20261118/CHLORIDE_KCC2_OV350_DEEPENING_ADV065B_SCI_20261118.md"
+ ],
+ "prior_receipt": "FTR-20261118-31058209-65",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "a0e602efc634a0900a758c85f3825fc453e5a2dd8febef13eee4c910b6bea76f",
+ "source_kind": "fulltext_remote",
+ "source_locator": "files/fulltext/adv065b_20261118/PMID31058209_PMC6498421_efetch_pmc.xml",
+ "study_id": {
+  "pmid": "31058209"
+ },
+ "workflow": "SCI ADV-065 deepening (chloride, KCC2, OV350): Kasahara 2019 open-access full text fetched by NCBI E-utilities (db=pmc, one plain request; the PMC article page returned a challenge page and was not retried); body paragraphs, figure and table captions parsed from the saved XML by SCI; table cells read after a blind verifier pointed to the mortality rows; extended-data figures not read"
+}

@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3646,
+    "forbidden-name": 3649,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -544,8 +544,8 @@
    "sha256": "e9367322b983351155ab1af5fdfb8ea8f77ac1df58952deb9ca36ca7862e24ee"
   },
   "TEXT_PROVENANCE.json": {
-   "bytes": 2003,
-   "sha256": "3cb9f3aa74583148c71c4c53c6dc6c7255ce496dd3329e6c1bc4fb8dba5d2c4a"
+   "bytes": 2150,
+   "sha256": "d377a7cb6ea676ed5eb3201d042cb88a3b7e87d40b68dd20b328a940f8f8860c"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -560,24 +560,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5265462,
-   "sha256": "ac807ece7c779a15aade38e3b9a346c7f61f1e466fd92d55ccca465ba900de83"
+   "bytes": 5269676,
+   "sha256": "5e757f64fc6973a596f2ea55891218785689a909f8811a58e9e8fdebe1b8bfe0"
   },
   "es.html": {
-   "bytes": 5250578,
-   "sha256": "ec2bef8419828fa2d2f6a3612c31fff4a1c6b9525d1b00c9214f9673682572bf"
+   "bytes": 5254819,
+   "sha256": "55dae14e89a21a612b44f51963f3f05414451728138c14995d754e12bb2faee6"
   },
   "fr.html": {
-   "bytes": 5282452,
-   "sha256": "22a966d4e86a33cd61b289a895a89600a39e483d4f52e08cbd44bb2f06d76d04"
+   "bytes": 5286824,
+   "sha256": "983e9799349490f2c5a1cef134224548dbb56e09997c8a5fe6ab57145ad2b0da"
   },
   "index.html": {
-   "bytes": 5163801,
-   "sha256": "bc01713096fc655b52d1672d4ce233493ce90a4093c15cf6fdc6e1ad2ac8cc51"
+   "bytes": 5167806,
+   "sha256": "99513f04bca681b9194cd05a94f90c1d4ecf198d8d1512b75bb37735a20a4b9b"
   },
   "it.html": {
-   "bytes": 5228653,
-   "sha256": "035df30ea8625ead1c310521e8aa74dcc8445a848c003bf1bddc0ebdf21e0c04"
+   "bytes": 5233017,
+   "sha256": "340149bd5ed1eb2b803c7e48b9f0757dc318f4b66d05868c015a86dd9ddb9af5"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

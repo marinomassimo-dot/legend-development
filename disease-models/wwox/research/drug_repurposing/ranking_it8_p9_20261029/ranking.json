@@ -1453,7 +1453,7 @@
    "need_direction": "down",
    "need_id": "NEED-T-TYPE-CALCIUM",
    "need_short": "Ethosuximide sensitivity of provoked seizure in Wwox loss",
-   "next_test": "The same provoked-seizure design with both genotypes treated and an interaction term, powered on the published effect size.",
+   "next_test": "The same provoked-seizure design with both genotypes treated and an interaction term, powered on the published effect size. [IT57; ADV-051, ADV-054, ADV-059, ADV-061] The published effect size cannot be used to power it: the paper reports no genotype-by-treatment test, does not state the age of the pups, and its wild-type pups sit near the floor of the scale; from its curves the variability of the 60-minute summary is a bracket (a coefficient of variation of about 0.6 to 1.2 in knockouts, read from means and error bars, not a value), which puts the interaction contrast at about 180 to 320 animals per cell at the paper's stimulus, so a pilot comes first and fixes the variability, the assay age and a stimulus that gives wild type a measurable response. The design also needs: wild-type pups at the assay age and at two or more older ages; reference agents with different age profiles as an assay-sensitivity panel (the rat age floor for this agent is an inference, unresolved for the mouse); seizure type recorded per animal and a motor control; a dose check at each age; and a selective T-type blocker beside this agent, because no T-type current has been measured in any WWOX system (the held transcript sets do not sample the thalamus) and the cell pharmacology of this agent is contested. The margin for the same size is the interaction ratio (the knockout effect ratio over the wild-type effect ratio, on the log scale): genotype-specific if at most 0.7 or at least 1.43, not genotype-specific between 0.7 and 1.43, fixed before data (in vivo brief, section 2.7).",
    "novelty_perimeter": "Queried: the ethosuximide and apinocaltamide units, their assertion rows and caveat rows, and the per-need position table. The missing interaction test is recorded in this module's own caveats, not inferred from absence.",
    "objective": "partial",
    "origin_class": "known_in_wwox",
@@ -1638,7 +1638,7 @@
    "need_direction": "uncertain",
    "need_id": "NEED-GSK3B-DEREPRESSION",
    "need_short": "GSK3beta de-repression",
-   "next_test": "A selective inhibitor of the named kinase beside the non-selective agent in the same WWOX-system assay, with the second need's readout measured in the same experiment. IT21 addition: include an arm with the inositol precursor added back, which tests the second action in the same experiment. [IT36] selectivity is biochemical and does not carry to cells (4-6-fold in live cells); attribution needs an isogenic isoform-knockout check per compound or convergent pharmacology. [IT36] in rat organotypic CA1 the GSK3-PI4KIIalpha branch sets synaptic NMDAR current; compare GSK3-route compounds with d-APV at matched NMDAR-current reduction; double GSK3A/B depletion needed. [IT47 package] Hypotheses read by the generator from the GSK3 and eIF2B package (five rows, no direction asserted, no repurposing candidate named): before any compound arm, the baseline of eIF2B epsilon Ser535 phosphorylation (human Ser540) with total GSK3 and replicate lanes in the WWOX-deficient cells against corrected controls; the isoform (beta or alpha) by genetic knock-down; a phospho-resistant epsilon (Ser to Ala) and a catalytically dead epsilon as epistasis, with two limits found by the independent reader: Ser to Ala cannot separate GSK3 from DYRK2 acting at the priming serine, and the catalytically dead form needs its own control in tissue with intact Gsk3b; an eIF2B activator only as a discriminating probe, with an engagement control; the null (the GSK3 route is not engaged) stated before the measurement. Lithium stays a labelled non-specific comparator. Source: generation_it47_20261112/p4_gsk3/result_it47.md.",
+   "next_test": "A selective inhibitor of the named kinase beside the non-selective agent in the same WWOX-system assay, with the second need's readout measured in the same experiment. IT21 addition: include an arm with the inositol precursor added back, which tests the second action in the same experiment. [IT36] selectivity is biochemical and does not carry to cells (4-6-fold in live cells); attribution needs an isogenic isoform-knockout check per compound or convergent pharmacology. [IT36] in rat organotypic CA1 the GSK3-PI4KIIalpha branch sets synaptic NMDAR current; compare GSK3-route compounds with d-APV at matched NMDAR-current reduction; double GSK3A/B depletion needed. [IT47 package] Hypotheses read by the generator from the GSK3 and eIF2B package (five rows, no direction asserted, no repurposing candidate named): before any compound arm, the baseline of eIF2B epsilon Ser535 phosphorylation (human Ser540) with total GSK3 and replicate lanes in the WWOX-deficient cells against corrected controls; the isoform (beta or alpha) by genetic knock-down; a phospho-resistant epsilon (Ser to Ala) and a catalytically dead epsilon as epistasis, with two limits found by the independent reader: Ser to Ala cannot separate GSK3 from DYRK2 acting at the priming serine, and the catalytically dead form needs its own control in tissue with intact Gsk3b; an eIF2B activator only as a discriminating probe, with an engagement control; the null (the GSK3 route is not engaged) stated before the measurement. Lithium stays a labelled non-specific comparator. Source: generation_it47_20261112/p4_gsk3/result_it47.md. [IT57; ADV-051, ADV-059] In the same assay the lithium regimen (a single against a repeated pretreatment) is a design variable that can change the sign in one family of mouse provoked-seizure papers; the one experiment held shows an effect in all three genotypes, which is more consistent with a general effect than a knockout-specific one, so reading a genotype effect needs a general anticonvulsant comparator that does not act on this kinase, an age series in wild-type pups, and a second inhibitor of another class as the attribution control.",
    "novelty_perimeter": "Queried: this need's two observation rows; the lithium unit, its caveat rows and its counter-statements; the search layer over the four kinase-axis targets (588 associations, 526 families, none direction-coherent because the need direction is unresolved). The opposing action on the second need is recorded in this module's own need file.",
    "objective": "partial",
    "origin_class": "known_in_wwox",
@@ -6087,7 +6087,7 @@
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 2125
+   "receipt_ledger_lines": 2141
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -14164,7 +14164,7 @@
    "inputs": {
     "T1_cards": "e5f873d116363e69",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "796718514942e638",
+    "T3_receipts": "08613482978fce78",
     "T4_needs": "6607eb58bf62a894",
     "T5_pharmacology": "4cfc018740c85d41",
     "T6_identity": "c8a9075059e82981"
@@ -14268,7 +14268,7 @@
     "35292925",
     "36828035"
    ],
-   "receipts_on_cited_pmids": 55,
+   "receipts_on_cited_pmids": 57,
    "research_objective": "",
    "tracks": [
     "A"

@@ -39,19 +39,21 @@
     },
     {
      "step": "Write this persistent record so the monitor reads the effective IT work, and land it",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "record landed c75baa294e36 (gate PASS); shared root aligned by fast-forward only (b82b1c1095 to c75baa294e36; ADV uncommitted files untouched); IT_TASK_RECORD_20261116.md carries a pointer line"
     },
     {
      "step": "Verify the session binding: marker MANDATE_BOUND as its own message, then mandate_watch check for this task",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "MANDATE_BOUND marker written as its own message; mandate_watch check --task ORCH-ROADMAP-IT57-20261118 --root /home/desktop/legend-development: session 4325d70d-8bea-4789-8046-d7a9ee74c97f, state RUNNING"
     },
     {
      "step": "Reconcile the ADV-064 and ADV-065 send registration with ADV and HE (sent, accepted, executed, consumed kept apart; no invented receipt)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "message to ADV [ffbc88] 2026-11-18T20:0xZ with the cause (budget.json recipients.Science = SCI; the live session answers to orch-adv004-mandate-reconciliation, id 9400b253) and the real receipts ff599c03-6e23-4b6f-a6a3-2e2959d10680 and 03827e4b-718e-45cc-ac51-0f7644d92f9c taken from ADV's own transcript; the ledger event is ADV's to append; HE to be told of the facts"
+     "evidence": "Cause: budget.json recipients.Science = SCI while the live SCI session (9400b253-25a0-4b03-8822-96361325fc16) answers to orch-adv004-mandate-reconciliation. Real receipts from ADV transcript: ADV-064 msg ff599c03-6e23-4b6f-a6a3-2e2959d10680, ADV-065 msg 03827e4b-718e-45cc-ac51-0f7644d92f9c (both name orch-adv004-mandate-reconciliation). ADV applied the budget mapping and recorded both SENT as distinct from accepted, executed (SCI 489026bfb; 6d7c40dd7 to 11cd2f344) and consumed (615c0db40; f24639ad1); no event rewritten; HE to be told in the message that closes this increment"
     }
    ]
   },
@@ -61,39 +63,45 @@
    "steps": [
     {
      "step": "Check the vigabatrin corrections reach every consumer that carries the counts or the 'vigabatrin alone' wording",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "synthesis carries 21 to 26 distinct and the corrected wording; ADV-056 result banner and update, ADV-053 line, IT56-Q15 carry the five corrections (5854d5d8d)"
     },
     {
      "step": "Check the washout timing wording (end of the rebound zone is not a clean measure; the date of the end depends on seed and time constant) in the in vivo brief, brief 13.11, the outreach package and the arm table",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "brief 13.11 dated line (SCI) and the outreach package line say 30 minutes is the end of the rebound zone and 60 minutes is the clean read; the IT arm-table notes for C007, C011, C054 lacked it and now carry it (this landing)"
     },
     {
      "step": "Check the figure-derived sizing limits are stated the same in brief, cover and notes (bracket, not a value; interaction out of reach at realistic CV)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "in vivo brief section 1 dated addendum and the cover carry the bracket and the not-attemptable statement; an error of mine (interaction needs 4 times the simple-effect number, accepted in my cold read) was corrected by SCI (twice) and is corrected by dated line in my file; the SCI figure 180 to 320 per cell includes wild-type variability at the floor of the paper stimulus"
     },
     {
      "step": "Check the diazepam ontogeny correction in every consumer that quoted the earlier 'no ontogeny paper' or an age-flat reading",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "my consumers never carried an age-flat diazepam statement; the arm-table I9 and I10 line (ADV, 17:43Z) follows my I9 line in the same file; brief 9.5 corrects section 6 item 3"
     },
     {
      "step": "Check what age, region and preparation dependence does to the GABAergic comparisons in the by-endpoint table, the arm table and the age-window line",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "ADV-053 dated line (GABAergic cells read across no age, region or preparation; Breton IPSC chloride-loaded pipette), ADV-056 section 3 update; Kasahara-dependent wording held until SCI line lands (SCI read the full text: partial effect)"
     },
     {
      "step": "ADV-065 wording: ask SCI for the scientific qualification of 'not more promising on any endpoint' against 'hypothesis-level yes on development in other models'; verify and propagate only the supported formulation as dated lines",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "question sent to SCI (session orch-adv004-mandate-reconciliation), msg_id b3223373-c5e3-44eb-8c51-c265e3f28305"
+     "evidence": "SCI answered (msg 2026-11-18 ~20:10Z): item 4 carries the exception on development; withdrew the word only; verdict not rankable on present searching; propagated as a dated line in ADV-053 (this landing)"
     },
     {
      "step": "Map the chloride and KCC2 branch into the open-question rows before SCI's deepening lands, then update by dated line when it lands",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "row IT57-Q01 added OPEN and dated line on WO-18 (this landing); update by dated line when SCI deepening lands (conditional continuation, not a blocker)"
     }
    ]
   },
@@ -103,18 +111,21 @@
    "steps": [
     {
      "step": "For each substantive delta trace observation, premise or relation, pharmacological hypothesis, comparison, discriminating experiment, candidate or open question, next work",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "generation_it57_20261118/result_it57.md trace table"
     },
     {
      "step": "Find the generation path actually read (not merely a table or a reader) and check it consumes the deltas",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "conditional_proposals.py reads only packages in hypothesis_packages.tsv (20 folders) and builds INV-05 and INV-18 only; none of the day strands registered; INV-04 and INV-09 reach the reader and the dashboard through investigations.tsv, ranking.json and the view; the INV-04 next test was stale"
     },
     {
      "step": "Run one real before/after comparison against the current path or a simple baseline; record whether it changed a proposal, an applicability condition, a control, a research priority, or nothing; no forced ranking change",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "blind readers A (BEFORE) 0 of 8 criteria, B (AFTER) 8 of 8, C (AFTER2) item 4 no longer asks for the margin; no harm triggered; IMPROVED by the pre-registered rule; changed: a control, an applicability condition; not changed: ranking order digest ff38fcaa61295a5a, no proposal, no card"
     }
    ]
   },
@@ -124,13 +135,15 @@
    "steps": [
     {
      "step": "Check freshness of only the derived files involved (ranking, receipt counts, views, translations) at the effective revision",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "ranking regenerated, i18n 0 stale on it fr es de, views regenerated (full all languages, shareable all languages, package), audit-shareable PASS on every page; candidate_tree_freshness pending before landing"
     },
     {
      "step": "Improve only the sections touched by real scientific change (facts, hypotheses and missing measures separated; priority questions readable; comparisons and limits visible); no general redesign",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "two next_test cells of the investigation rows (INV-04, INV-09) in five languages; no general redesign"
     }
    ]
   },
