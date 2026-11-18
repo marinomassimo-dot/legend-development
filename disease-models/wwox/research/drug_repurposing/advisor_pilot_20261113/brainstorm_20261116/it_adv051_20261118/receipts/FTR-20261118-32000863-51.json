@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-18T08:09:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-18T08:18:00Z",
+ "event_id": "FTR-20261118-32000863-51",
+ "evidence_basis": [
+  "keyword-directed passages, not a line-by-line read; figures not viewed",
+  "verbatim_locator | proposition: the western-blot tissue was taken at postnatal day 14 | Methods, Western blotting | \"isolated from three genotypes of mice at postnatal day 14\"",
+  "verbatim_locator | proposition: the Fig 7 legend dates the GSK3beta activation at day 20 | Fig 7 legend | \"Increased activation of GSK3\u03b2 was determined in the cerebellum, hippocampus and cerebral cortex of Wwox \u2212/\u2212 mice at postnatal day 20\"",
+  "verbatim_locator | proposition: the provoked-seizure assays were in preweaning mice | Abstract-level summary in Results | \"increased susceptibility to pilocarpine- and pentylenetetrazol (PTZ)-induced seizures in preweaning mice\"",
+  "verbatim_locator | proposition: lithium was given three times within one hour before PTZ and ethosuximide 45 minutes before | Methods | \"LiCl (i.p., 60 mg/kg) were pretreated three times within 1 h before PTZ injection\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv051_20261118/RESULT_ADV051_IT_20261118.md"
+ ],
+ "prior_receipt": "FTR-20261117-32000863-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "792b5b296863674d0295a7dba918ee7c59ade8cdff64ee8ec9d8f01bd12f00f5",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC REST fullTextXML for PMC6990504, 156,335 bytes, sha256 792b5b296863674d0295a7dba918ee7c59ade8cdff64ee8ec9d8f01bd12f00f5, held copy outside git; only the passages named were read",
+ "study_id": {
+  "doi": "10.1186/s40478-020-0883-3",
+  "pmid": "32000863"
+ },
+ "workflow": "ADV-051, Orchestrator check of the age and regimen statements that the age-confound inference on ethosuximide rests on; the two producer packages read abstracts only."
+}
