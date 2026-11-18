@@ -99,11 +99,12 @@
     },
     {
      "step": "ACTOR_ID advisor: roles/advisor.md, identity and routing (advisor vs orchestrator), migration of the ADV record without history loss, one host, recall verified, probe demonstration, delivery to ADV IT SCI, rollback path",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
      "source": "operator mandate 2026-11-18 (ACTOR_ID plan): distinct ACTOR_ID advisor for the ADV host, integrated with the continuity work",
      "accepted_at": "2026-11-18T22:02:45Z",
-     "updated_at": "2026-11-18T22:24:14Z"
+     "updated_at": "2026-11-18T22:38:21Z",
+     "evidence": "contract+routing 6394916c4, passage 9d7ec1142; probe demonstration evidence in advisor_actor/; ADV verified record, routes and root ff; 22:37Z production run classified the record once RUNNING; delivered to ADV, IT, SCI"
     }
    ]
   }
@@ -185,6 +186,18 @@
    "step_sha256": "a559bf263549",
    "reopened_block": false,
    "authorised_by": null
+  }
+ ],
+ "VERIFICATION_EVIDENCE": [
+  {
+   "run_id": "20261118-215233-74c2282d",
+   "label": "battery",
+   "sha": "6320348db5bc5022b731d436ff499d1d68ab8a37",
+   "state": "CONCLUDED",
+   "exit_code": 1,
+   "evidence_dir": "/tmp/legend-verify-keep/20261118-215233-74c2282d",
+   "log_sha256": "2efe731194f98d8c5bc962c8b0f7661f67e85ac1c28b4ec1f5197f4187bcaf02",
+   "clone": "REMOVED"
   }
  ]
 }
