@@ -196,5 +196,29 @@
    "how_to_revert": "rerun repurposing_view.py"
   }
  ],
- "STOP_LOG": []
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_ACCEPTED": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_ACCEPTED": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "ADV-066: register the day's pharmacological comparison as generator packages (INV-04 and INV-09), give the generator a consumer for comparison rows, run a real before/after with blind readers (criteria hashed first), land, coordinate ONE battery with HE",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-066 (ADV [ffbc88], 2026-11-18 evening; assignments/ADV-066.md)",
+     "accepted_at": "2026-11-18T21:23:30Z"
+    }
+   ]
+  }
+ },
+ "ACCEPT_LOG": [
+  {
+   "at": "2026-11-18T21:23:30Z",
+   "source": "ADV-066 (ADV [ffbc88], 2026-11-18 evening; assignments/ADV-066.md)",
+   "step_sha256": "254f57194dd5",
+   "reopened_block": false,
+   "authorised_by": null
+  }
+ ]
 }

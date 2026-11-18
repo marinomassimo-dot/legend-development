@@ -1,0 +1,333 @@
+"""IT57 / ADV-066: build the two registered packages of the 2026-11-18 comparison (INV-04 ethosuximide and the T-type thread; INV-09 lithium and the GSK-3 thread).
+Reuse only: every statement is taken from a held note and carries its label and level; withdrawn statements are stated as withdrawn. Output: hypotheses.tsv (role hypotheses_only),
+comparison.tsv, new_measurements.tsv, decisive.tsv (role pharmacological_comparison) in each folder. No dose, no schedule, no recommendation; reference genotype class only."""
+import csv, sys
+from pathlib import Path
+OUT = Path(sys.argv[1])
+
+SRC = {
+ "cheng": "Cheng 2020, PMID 32000863 (held full text, Fig 7 read; supplement text searched)",
+ "brief": "in vivo brief `experiment_brief_presidio013_sci_20261116/invivo_pup_adv059_sci_20261118/` (SCI, ADV-059, with its dated addenda 9.1 to 9.7)",
+ "a051": "`advisor_pilot_20261113/brainstorm_20261116/it_adv051_20261118/` (IT, ADV-051, with its dated lines)",
+ "a053": "`.../it_adv053_20261118/COMPARISON_BY_ENDPOINT_ADV053_IT_20261118.md` (IT, ADV-053, with its dated lines)",
+ "a054": "`.../adv054_age_window_sci_20261118/` (SCI, ADV-054)",
+ "a064": "`.../adv064_not_found_recheck_sci_20261118/` (SCI, ADV-064)",
+ "a065": "`.../adv065_chloride_nkcc1_sci_20261118/` and `.../adv065b_kcc2_ov350_sci_20261118/` (SCI, ADV-065 and its deepening)",
+ "a052": "`.../adv052_ttype_he_20261118/` (HE, ADV-052)",
+ "a056": "`.../it_adv056_20261118/` (IT, ADV-056; counts corrected by SCI's blind recount ADV-062)",
+ "a050": "`.../adv050_nmdar_agents_sci_20261118/` (SCI, ADV-050)",
+ "a061": "`fig7_quant_ethosuximide_lithium_sci_20261115/` ADV-061 addendum (SCI) and `.../it_adv063_20261118/` (IT independent check)",
+}
+
+def write(path, header, rows):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f, delimiter="\t", lineterminator="\n")
+        w.writerow(header)
+        for r in rows:
+            assert len(r) == len(header), (path.name, r[0], len(r), len(header))
+            for c in r:
+                assert "\t" not in c and "\n" not in c, (path.name, r[0])
+            w.writerow(r)
+
+HYP_H = ["hypothesis_id", "wwox_observation", "mechanism_and_missing_bridge", "probe_or_qualified_compound", "action_cell_context", "competing_alternative",
+         "favourable_result", "weakening_result", "next_decision", "label", "sign"]
+CMP_H = ["row_id", "action_context_hypothesised_benefit", "compound_or_probe", "identity_status", "documented_action_and_limits", "functional_comparison",
+         "mechanism_discriminating_control", "measurement_that_makes_it_interpretable", "outcome_favourable", "outcome_contrary", "outcome_unresolved",
+         "explanations_not_separated", "source_locator_depth", "public_or_new_measurement", "needs_new_experiment"]
+MEAS_H = ["meas_id", "measurement", "why_no_literature_can_substitute", "blocks_which_comparison_row"]
+DEC_H = ["prop_id", "statement", "source_pmid_or_doi", "locator_hint", "producer_status", "depth", "class", "relation", "direction", "species_system_age_prep_exposure_readout"]
+LAB = "IPOTESI; labels per cell (DATO stated in a source at the depth named; INFERENZA reasoned; TRANSFER other species or preparation); no dose, no schedule, no recommendation; reference genotype class only; not medical advice; the order of investigations is research value, not efficacy"
+
+# ---------------------------------------------------------------- INV-04
+h04 = [
+ ["E1",
+  "[DATO, Cheng 2020] In global Wwox-null preweaning pups ethosuximide lowered the provoked-seizure stage, mostly after minute 30; it is significant in the knockout and not significant in wild-type and heterozygous pups (one-way ANOVA; no genotype-by-treatment test exists or can be computed from the figure); wild-type stage is about 1 on a 0 to 6 scale, near the floor; the age of the test is not stated in the paper or its supplement (searched). One experiment, one laboratory. [INFERENZA, by eye and by measurement of the figure] The early-window drop looks proportionally similar in all genotypes; the knockout difference is late, when wild type is already near the floor.",
+  "Knockout-selective suppression (reading E1) needs a drug-by-genotype interaction at a stimulus where wild type is above the floor and at an age at which the agent can act. A difference in significance is not an interaction. T-type mediation is NOT part of this hypothesis (see E4).",
+  "Ethosuximide, named by the source; class: antiseizure agent with a contested T-type mechanism. No compound is proposed for any use.",
+  "Provoked-seizure assay in global Wwox-null pups (+/+, +/-, -/-) of one age, the same session, a vehicle per genotype; the assay age, the stimulus and the doses are the laboratory's; the design is the in vivo brief of 2026-11-18.",
+  "E2 age-limited with a wild-type floor; E3 a general anticonvulsant effect proportional in every genotype; E4 a T-type route; the lithium pattern (an effect in all three genotypes, INV-09) is the contrast case.",
+  "Effect ratio in the knockout at most 0.7 with an interval excluding 1; wild type null (interval inside 0.85 to 1.15); interaction ratio at most 0.7 or at least 1.43; assay-sensitivity panel valid at the age; wild type above the floor.",
+  "Interaction ratio between 0.7 and 1.43 with a valid panel (a general effect); a wild-type effect at an older age only (E2); no effect anywhere (not replicated at this age and stimulus); a failed panel is an assay failure, not a negative.",
+  "A pilot first: the variability of the 60-minute summary on the scale of the primary analysis, the assay age and a stimulus that gives wild type a measurable response; then the size. The published effect size cannot power the interaction (SCI bracket from the figure: about 180 to 320 animals per cell at the paper's stimulus with wild type at the floor; about 70 to 220 per cell if wild type had the knockout's variability, IT arithmetic, INFERENZA); the interaction is exploratory unless the pilot finds a low-variability summary.",
+  LAB, "unknown"],
+ ["E2",
+  "[DATO, abstract level, one Prague laboratory family] In the rat ethosuximide was effective against PTZ only from about 25 days of age and not at 18 days or younger (Mares and Velisek 1983, 1987; Mares 1998). The mouse ontogeny of ethosuximide against PTZ was not found by two routes (HE, ADV-052 part d). One mouse pup datum for another seizure type goes the other way (Cortez 2004, SSADH-null pups P10 to P21: absence-like seizures abolished; abstract only, the age of the drug test not stated, a spontaneous GHB and GABA-B-driven model, not PTZ). Cheng's pups are 'preweaning', the test age not stated. [INFERENZA] The rat age floor is unresolved for the mouse and may be endpoint-bound.",
+  "Age-limited effect with a wild-type floor: a null in +/+ and +/- pups is what a young-age effect predicts whatever the genotype.",
+  "Ethosuximide, and reference agents with different age profiles as an assay-sensitivity panel, named as class examples from the rodent literature only (ADV-054, ADV-064): a flat-profile general anticonvulsant (protective against PTZ at every age in the rat, mouse not found), a rising-profile agent, a falling-profile NMDAR-subunit-selective agent (GluN2B-selective agents fade across P7 to P18); diazepam is not age-flat in the rat.",
+  "Wild-type pups at the assay age and at two or more older ages inside the window to about P28, the same stimulus and scale; knockouts at the assay age only (they cannot be matched at older ages).",
+  "E1 and E3; the panel's own validity at each age is a precondition, not a result.",
+  "Wild-type null at the assay age and an effect at an older age while the panel is valid at both ages.",
+  "The same effect at every wild-type age (E3), or the panel fails at the assay age: move the age, do not read the null.",
+  "State the assay age against the age windows of the panel agents; report the panel per age.",
+  LAB, "unknown"],
+ ["E3",
+  "[DATO, abstract level] Ethosuximide is a classic anti-PTZ and anti-absence agent in adult rodents (ADV-051 package A) but not a general anticonvulsant: it lowered the pilocarpine threshold in rats (Turski 1987), was ineffective or of low potency against kainate, and lacked action in guinea-pig amygdala kindling. [INFERENZA] A proportional effect in every genotype is the pattern a general property gives; lithium shows that pattern in the one experiment held.",
+  "A general anticonvulsant effect proportional in every genotype: the Wwox-null adds magnitude, not specificity.",
+  "Ethosuximide (named by the source); no compound proposed for any use.",
+  "The same assay and the same genotype-crossed design as E1.",
+  "E1 and E2.",
+  "Similar effect ratios in the three genotypes (interaction ratio between 0.7 and 1.43) with a valid panel.",
+  "A clear genotype difference (E1) or an age-dependent wild-type effect (E2).",
+  "The interaction cannot be sized at the variability the published curves show; the order of hypotheses of the brief (panel validity, ratios by genotype and age, then the interaction as an exploratory interval) is the fallback.",
+  LAB, "unknown"],
+ ["E4",
+  "[DATO, search result not biological absence] No T-type current, no Cav3 expression in thalamic or reticular neurons and no Cav3-isoform measurement exists in any WWOX system (two routes, PubMed and Europe PMC; four held WWOX-deficient transcript sets disagree and none samples the thalamus or measures a current; HE, ADV-052). The cell pharmacology of ethosuximide is contested (Leresche 1998, full text read by HE: no effect on the low-threshold calcium current in 10 to 18 day rat thalamic slices; the persistent sodium current down by about 60 percent). A selective-blocker design exists elsewhere (Cav3.1 and Cav3.2 knockout with a selective blocker in a maximal-electroshock assay, abstract level, TRANSFER); no pup datum for the selective blockers was found.",
+  "T-type mediation of the ethosuximide effect needs a premise nobody has measured; the ethosuximide arm rests on a descriptive pattern, not on a T-type rationale in WWOX deficiency.",
+  "A selective T-type blocker class beside ethosuximide, 'selective' by the laboratory's own criterion (published selectivity at the exposure used and published rodent brain exposure); the clinical-stage T-type agent of the ranking inherits none of this as T-type evidence for WWOX.",
+  "The same genotype-crossed, age-matched assay with the selective blocker in the same layout and an engagement control if the laboratory can add one.",
+  "E1, E2, E3 (a pattern shared by the selective blocker would still not prove a T-type route without engagement or genetics).",
+  "The selective blocker reproduces the ethosuximide pattern in the knockout (a T-type route is plausible, not proven).",
+  "The selective blocker has no effect where ethosuximide has one, or its exposure was inadequate (no engagement control exists in pups: a null is not interpretable without one).",
+  "A Cav3 current or expression measurement in Wwox-null neurons of the thalamic and reticular circuit, or an isoform-selective blocker with genetics, before any T-type claim.",
+  LAB, "unknown"],
+]
+write(OUT / "inv04_ethosuximide_age_assay" / "hypotheses.tsv", HYP_H, h04)
+
+c04 = [
+ ["C-EP1",
+  "Acute rescue of a seizure already under way (endpoint 1).",
+  "Ketamine and memantine (NMDAR pore blockers; not units of the selection view); d-APV (tool); lithium and ethosuximide (given before the provoking injection, so not rescue).",
+  "not assessed here (class-level comparison; BLOCK-1 not run)",
+  "[DATO] Nothing is shown to rescue in a WWOX system; the only in-system acute abolition is d-APV on slice bursts (neuron-specific knockout cortical slices, n = 5 slices from 3 animals, one preparation; rebound above baseline after washout). Ketamine has the most paediatric evidence in this niche in other settings (uncontrolled series, one halted refractory-status trial, a positive randomised first-line trial; abstract level; TRANSFER, tier 3); no WOREE child with ketamine was found.",
+  "More promising by general paediatric evidence: ketamine (transfer only). More promising in a WWOX system: none.",
+  "A post-onset arm of any agent in a WWOX system.",
+  "A treatment-after-onset arm in a Wwox-null preparation.",
+  "A WWOX-system agent that stops an established seizure.",
+  "No WWOX-system agent does.",
+  "Evidence from other settings does not transfer to the genotype class without a measurement.",
+  "Ketamine and memantine are not distinguished from each other in this endpoint by any WWOX datum.",
+  "ADV-053 section 1; ADV-050 (SCI)", "new", "yes (laboratory)"],
+ ["C-EP2",
+  "Provoked-seizure suppression in a Wwox-null or WWOX-deficient system (endpoint 2).",
+  "Ethosuximide and lithium (one experiment, one laboratory, one origin); the NMDAR pore blockers have none.",
+  "not assessed here",
+  "[DATO] Only lithium and ethosuximide are measured. Lithium is significant in all three genotypes; ethosuximide is significant in the knockout only as a difference in significance; the two arms were tested against different PTZ-alone cohorts (the knockout PTZ-alone curves of the two panels differ in height), so 'lithium better than ethosuximide' is a cross-cohort impression, not a tested difference.",
+  "More promising: lithium and ethosuximide over every other candidate (they are the only ones measured), for different reasons: lithium for a robust effect that is probably general; ethosuximide for the only open selectivity question and the weaker mechanistic rationale.",
+  "Genotype-crossed design with a vehicle per genotype, an age series, an assay-sensitivity panel and a non-floor stimulus (the brief).",
+  "A pilot that fixes variability, assay age and stimulus.",
+  "An interaction ratio at most 0.7 or at least 1.43 with a valid panel (selective), or between 0.7 and 1.43 (general).",
+  "No effect anywhere, or a failed panel.",
+  "The interaction cannot be sized at the published variability.",
+  "Lithium and ethosuximide share one origin (ORG-2); the cross-cohort comparison is untested.",
+  "ADV-053 section 2; ADV-051; ADV-061 addendum; ADV-063 (IT); decisive D01 D02 D03 D08", "new", "yes (laboratory)"],
+ ["C-EP3",
+  "Spontaneous seizure burden by video-EEG (endpoint 3).",
+  "All candidates.",
+  "not assessed here",
+  "[DATO] Nothing is measured for any candidate; the null mouse is reported to seize spontaneously after about P12 and to die by about four weeks; no video-EEG quantification is held.",
+  "No ordering is possible.",
+  "Video-EEG on a subset of knockout pups added to a provoked-seizure design.",
+  "Video-EEG in the null mouse.",
+  "A quantified spontaneous burden against which any agent could be compared.",
+  "No usable recording.",
+  "Whether a provoked-seizure result bears on the spontaneous phenotype.",
+  "Provoked and spontaneous seizures are different endpoints.",
+  "ADV-053 section 3; the in vivo brief section 5; measurements M-7", "new", "yes (laboratory)"],
+ ["C-EP4",
+  "Chronic seizure control in children of the genotype class (endpoint 4).",
+  "Vigabatrin, the ketogenic diet, memantine, ethosuximide, ketamine.",
+  "not assessed here",
+  "[DATO, aggregate, case-level] Vigabatrin exposure is documented in 22 children in 10 reports (21 to 26 distinct at most; no child is documented as receiving vigabatrin alone with a known full regimen; a response is stated for 11, 8 responses and 3 non-responses, every response qualified): the data bear only 'reported' (blind recount, ADV-062). Randomised evidence for vigabatrin is spasm-defined (infantile spasms) and transfers poorly to other seizure types; the harm side transfers (labelled irreversible visual-field loss, with a labelled caution for pre-existing visual damage; infant MRI change mostly asymptomatic and reversible). Memantine: one randomised crossover trial in childhood developmental and epileptic encephalopathy (abstract and registry), seizure worsening in some GRIN gain-of-function individuals. Ethosuximide: no datum under 3 years (label), school-age cohorts in related syndromes.",
+  "More promising: vigabatrin for spasm control by evidence level in a related seizure type; the ketogenic diet and vigabatrin are the only candidates with class case reports; no ordering for other seizure types; vigabatrin is the heaviest on harm.",
+  "A prospective aggregate collection of start age, co-therapy timing and instrumented outcome (clinical channel).",
+  "Aggregate questions to a clinician or registry (counts only, bands, cells under 3 merged).",
+  "A clinically instrumented response under a single agent change.",
+  "Every response remains an impression with co-therapy.",
+  "Remission with age, co-therapy, reporting bias and regression to the mean.",
+  "Children overlap across the four drug classes; class counts are not additive.",
+  "ADV-053 section 4; ADV-056 and ADV-062; ADV-058 unit 1; decisive D11", "new", "yes (clinical channel)"],
+ ["C-EP5",
+  "Development: growth, survival, myelination, structure (endpoint 5).",
+  "AAV9 gene addition (comparator); lithium (conditional); the KCC2 branch and an NKCC1 blocker (hypothesis-level, other models).",
+  "not assessed here",
+  "[DATO] Only AAV9 gene addition is measured on development endpoints in the null mouse (survival, weight, motor score, GFAP, myelination structure improved but not normalised); it is prevention or early window, one laboratory, a high-dose row still to be adjudicated. The KCC2 branch (OV350, pup dosing p10 to p21, adult outcomes in a Cdkl5 knockout; one open full text, company-funded, small, unreplicated, text and supplement conflicts) is more promising than an NKCC1 blocker on this endpoint on evidence level only; against the other candidates it is not rankable (their development data were not searched). Neither branch is more promising overall; both are gated by the same unmeasured E_GABA and KCC2 state in a WWOX preparation.",
+  "More promising: AAV9 gene addition, clearly, with its limits. Others: not rankable.",
+  "A separate in vivo cohort for lithium on the AAV9 comparator's own endpoints, only after a selective lithium effect in the provoked assay (the fallback in the brief addendum 9.1).",
+  "E_GABA by perforated patch at matched maturity (WO-18, IT57-Q01) before any chloride-branch arm.",
+  "A development endpoint moved by a non-gene agent in the null pup.",
+  "Nothing moved, or an early floor (untreated knockouts die by about day 17).",
+  "Prevention against rescue; durability; pup exposure.",
+  "The development endpoints are confounded by the provoking injection of the provoked-seizure assay.",
+  "ADV-053 section 5; ADV-058 unit 2; ADV-065 and ADV-065b (SCI)", "new", "yes (laboratory)"],
+ ["C-EP6",
+  "Harms in children and the hardest harm of each candidate (endpoint 6).",
+  "AAV9; ethosuximide; lithium; the NMDAR pore blockers; vigabatrin; the ketogenic diet; an NKCC1 blocker; the KCC2 branch.",
+  "not assessed here",
+  "[DATO, label and abstract level] AAV9: no overexpression or tumour endpoint (irreversible risk unmeasured). Ethosuximide: blood dyscrasias, immune-mediated reactions; not established below 3 years. Lithium: toxicity close to therapeutic concentrations, renal and thyroid effects; no infant treatment data. Pore blockers: seizure aggravation (memantine in three named GRIN gain-of-function individuals; drug-provoked seizures after ketamine), developing-brain apoptosis signal in rat (TRANSFER). Vigabatrin: irreversible visual-field loss, a labelled caution with pre-existing visual damage, infant MRI change; myelin and retinal lesions in young rodents. NKCC1 blocker: ototoxicity signals and a neonatal trial stopped early for harm.",
+  "No candidate is better characterised in WWOX children; harm columns are not ranked.",
+  "Harm endpoints of the drug's own (myelin, retina, brain size, renal and thyroid readouts as the label lists) in any development cohort.",
+  "Aggregate clinical questions on symptomatic or resolved imaging change and visual assessment.",
+  "Harms measured with the efficacy endpoint.",
+  "Unmeasured harms.",
+  "Populations and evidence levels differ across agents.",
+  "No harm ranking is supported.",
+  "ADV-053 section 6; ADV-056", "new", "partly"],
+ ["C-EP7",
+  "Age window of each candidate (design variable of every in vivo experiment).",
+  "Valproate, ketamine, memantine, MK-801, GluN2B-selective agents, phenobarbital, diazepam, lithium, GSK-3 inhibitors, T-type blockers other than ethosuximide, ethosuximide, vigabatrin.",
+  "not assessed here",
+  "[DATO, abstract level, mostly rat, about half one Prague laboratory family] Valproate protects against PTZ at every age tested in the rat (mouse not found); ketamine suppresses generalised tonic-clonic seizures in rat pups with moderate or no effect on minimal seizures and ataxia at the lowest dose, more in younger animals; memantine and MK-801 suppress generalised seizures and RAISE minimal seizures at young ages; GluN2B-selective agents fade across the window (mouse ifenprodil effective at P7 and P10, not at P14 or P21); phenobarbital efficacious from P10 in the mouse; diazepam is NOT age-flat in the rat (status epilepticus not stopped at P9, stopped at P15 and P21); lithium and GSK-3 inhibitors and the selective T-type blockers: no age-window provoked-seizure paper found by two routes. The Kasahara 2019 mouse inference (P11 against P14, 'undone by bumetanide') is WITHDRAWN: full text shows incidence not raised, latency effect not blocked, all high-dose diazepam mice dead at P11 and P14, groups of 4 to 5.",
+  "No ordering; the age window is a design variable.",
+  "An age series of wild-type pups with an assay-sensitivity panel.",
+  "Wild-type age series.",
+  "Efficacy that differs by age within the experiment window.",
+  "No age dependence.",
+  "Rat to mouse transfer.",
+  "Seizure type per animal separates agents that move minimal and generalised seizures in opposite directions.",
+  "ADV-054; ADV-064; ADV-065b (Kasahara withdrawal); decisive D04 D05 D09 D10", "new", "yes (laboratory)"],
+]
+write(OUT / "inv04_ethosuximide_age_assay" / "comparison.tsv", CMP_H, c04)
+
+m04 = [
+ ["M-1", "[INFERENZA design] Pilot in the null and wild-type pups: the variability of the 60-minute summary S on the scale of the primary analysis (ratio of means with a bootstrap over litters; the coefficient of variation of S and the SD of log S among animals with S above zero), the assay age and a stimulus that gives wild type a measurable non-floor response.",
+  "Only group means and error bars of one figure exist; the bracket for the SD of S depends on the unmeasured within-animal correlation of minutes.", "C-EP2"],
+ ["M-2", "[INFERENZA design] Wild-type age series: wild-type pups at the assay age and two or more older ages inside the window to about P28, vehicle against each test agent, with an assay-sensitivity panel (flat, rising and, if an NMDAR arm is included, falling profile).",
+  "No mouse ontogeny of ethosuximide against PTZ was found by two routes; the rat age floor cannot be carried to the mouse.", "C-EP2; C-EP7"],
+ ["M-3", "[INFERENZA design] A dose or exposure check at each age of the series (two exposures per agent or a published pup exposure, or a measured exposure); a null at an unchecked exposure is a dose null and is reported as unresolved.",
+  "Potency shifts with age and no pup exposure measurement was found for any agent.", "C-EP2"],
+ ["M-4", "[INFERENZA design] Seizure type recorded per animal (minimal, intermediate, bilateral clonus, generalised tonic-clonic, status) and a motor and ataxia control before the stimulus.",
+  "Several agents move minimal and generalised seizures in opposite directions at young ages; a mean stage can cancel them.", "C-EP2; C-EP7"],
+ ["M-5", "[INFERENZA design] A selective T-type blocker arm beside ethosuximide (age-matched, genotype-crossed, vehicle per genotype), and a Cav3 current or expression measurement in Wwox-null neurons of the thalamic and reticular circuit.",
+  "No T-type current has been measured in any WWOX system and no engagement control exists in pups.", "C-EP2"],
+ ["M-6", "[INFERENZA design] E_GABA by gramicidin perforated patch in neuron-targeted knockout against wild type at matched maturity (a younger window of about P9 to P12 and the slice-pilot window of P13 to P17), sex recorded, the bath without bumetanide as the primary condition, with a KCC2-blocker-sensitive component.",
+  "E_GABA was never measured in any WWOX system; the Breton slice IPSCs used a chloride-loaded pipette.", "C-EP5; C-EP7"],
+ ["M-7", "[INFERENZA design] Video-EEG on a subset of knockout pups.",
+  "No spontaneous-seizure quantification exists for any agent.", "C-EP3"],
+ ["M-8", "[INFERENZA design] An aggregate clinical question set (counts only, age bands, cells under 3 merged): whether the agent was the only change, how the outcome was measured, symptomatic or resolved imaging change under the vigabatrin class, visual assessment in children with optic involvement, development status by start age.",
+  "Case-level reports bear only 'reported'; no per-child data are held or requested.", "C-EP4; C-EP6"],
+]
+write(OUT / "inv04_ethosuximide_age_assay" / "new_measurements.tsv", MEAS_H, m04)
+
+d04 = [
+ ["D01", "DATO: Cheng 2020: ethosuximide lowered the PTZ-provoked stage in the knockout and was not significant in wild-type and heterozygous pups; wild-type stage about 1 on 0 to 6; no genotype-by-treatment test; the test age is not stated in the paper or its supplement.", "32000863", "Fig 7b legend; Methods; supplement text searched", "supported", "full text, held; figure read; supplement text searched", "provoked-seizure result", "mechanism", "supports a knockout difference in significance only", "global Wwox-null mouse, preweaning, PTZ, ethosuximide pretreatment, 60-minute Racine stage"],
+ ["D02", "INFERENZA: the SD of the 60-minute summary is a bracket, not a value; coefficient of variation of S about 0.6 to 1.2 in the knockout (within-animal correlation 0.6 to 1.0), the wild-type groups at the floor with coefficients above 1.4; independent reading by IT within about 20 percent (per-minute SD 1.15 against 1.32 in 7b, 1.53 against 1.26 in 7d).", "32000863", "SCI ADV-061 addendum; IT ADV-063 report", "supported (two readers)", "means and error bars of the figure; N assumed constant over the hour", "sizing", "context", "limits the design", "Fig 7b and 7d, PTZ-alone knockout and wild-type groups"],
+ ["D03", "INFERENZA: an interaction contrast needs twice, not four times, the simple-effect number per cell (4 (z sigma / delta)^2); with the bracket and wild type at the floor about 180 to 320 animals per cell, about 700 to 1,300 animals for one drug against vehicle; the genotype-by-treatment contrast is not attemptable with the full-hour summary at this variability.", "32000863", "in vivo brief section 1 dated addendum; IT correction in the cold-read file", "supported", "arithmetic re-derived by IT", "sizing", "context", "limits the design", "design arithmetic, ratio 0.7, two-sided 0.05, power 0.80"],
+ ["D04", "DATO (abstract): rat PTZ ontogeny: ethosuximide effective only from about 25 days of age, not at 18 days or younger.", "6666517; 3147456; 9698055", "Mares and Velisek 1983, 1987; Mares 1998", "supported at abstract level", "abstract, saved bytes", "age dependence", "mechanism", "supports an age-limited reading in the rat", "rat pups 7 to 90 days, PTZ, ethosuximide"],
+ ["D05", "DATO: no mouse ethosuximide-against-PTZ ontogeny datum was found by two routes; one mouse pup datum for another seizure type goes the other way (SSADH-null pups P10 to P21, absence-like seizures abolished; abstract only, age of the drug test not stated). TRANSFER from the rat is unresolved.", "15582027", "Cortez 2004; HE ADV-052 part d", "supported at abstract level", "abstract; PubMed and Europe PMC queries", "age dependence", "other_route", "opposes carrying the rat floor to the mouse", "mouse pups P10 to P21, spontaneous GHB and GABA-B-driven seizures"],
+ ["D06", "DATO: ethosuximide did not act on the low-threshold calcium current of rat and cat thalamic neurons in vitro (10 to 18 day slices) and reduced the persistent sodium current by about 60 percent; the T-type mechanism is contested.", "9634550", "Leresche 1998", "supported", "full text read by HE", "mechanism", "mechanism", "opposes a T-type rationale", "rat and cat thalamic neurons in vitro"],
+ ["D07", "DATO (search result, not biological absence): no WWOX-Cav3 link and no T-type current in any WWOX system by two routes; four held WWOX-deficient transcript sets disagree and none samples the thalamus or measures a current.", "", "HE ADV-052 part (a); DL-MECH-171", "supported", "literature and held transcripts", "T-type route", "mechanism", "no support", "WWOX-deficient systems (bulk P17, P47T knock-in, organoids, snRNA by class)"],
+ ["D08", "DATO (abstract): lithium lowered the PTZ stage in all three genotypes in the same experiment, so the pattern is the shape of a general effect.", "32000863", "Fig 7d", "supported", "figure read; SCI exact values from the vector panel", "general-property contrast", "mechanism", "supports a general reading for lithium", "global Wwox-null mouse, PTZ, lithium pretreatment"],
+ ["D09", "DATO (abstract level, mostly rat): per candidate, valproate protects against PTZ at every age tested in the rat; ketamine acts on generalised seizures with ataxia more in younger animals; memantine and MK-801 raise minimal seizures; GluN2B-selective agents fade across the window; phenobarbital efficacious from P10 in the mouse; lithium and selective T-type blockers: no age-window paper found; diazepam is not age-flat in the rat.", "", "SCI ADV-054 and ADV-064 tables", "supported at abstract level, blind-verified (11 of 12 claims, one partly)", "abstract level; about half one laboratory family", "age window", "context", "context", "rodent pups, provoked-seizure assays"],
+ ["D10", "WITHDRAWN: the statement that, in the mouse, high-dose diazepam or pentobarbital worsened induction at P11 and not at P14 and that bumetanide undid it (Kasahara 2019) is withdrawn as evidence after full-text reading by SCI and by IT: incidence of clonic seizures not raised, latency effect not blocked by bumetanide, all high-dose diazepam mice dead at P11 and P14, groups of 4 to 5, 17 of 29 recorded mice died, sedation and heat dissipation open.", "31058209", "Kasahara 2019 Tables 1 and 2", "withdrawn", "full text read by SCI and IT", "age window", "other_route", "withdrawn", "mouse pups P11 and P14, hyperthermia-induced seizures"],
+ ["D11", "DATO (label): ethosuximide safety and effectiveness are not established below 3 years; warnings include blood dyscrasias and immune-mediated reactions; no primary paediatric safety paper found.", "", "DailyMed label; ADV-051 package A", "supported", "label text", "harm", "context", "context", "paediatric labelled use"],
+ ["D12", "DATO (abstract): selective-blocker genetics exist in another assay (a Cav3.1 and Cav3.2 knockout design with a selective blocker in a maximal-electroshock assay); no pup datum for selective T-type blockers was found by two routes.", "", "ADV-051 package A row T09; ADV-064", "supported at abstract level", "abstract", "T-type route", "other_route", "context", "mouse, maximal electroshock, adult"],
+]
+# the closed vocabulary of the reader: direction in (supports, opposes, null, mixed, not_applicable); the longer meaning stays in the statement
+DIR04 = {"D01": "mixed", "D02": "not_applicable", "D03": "not_applicable", "D04": "supports", "D05": "opposes", "D06": "opposes", "D07": "null", "D08": "supports",
+         "D09": "not_applicable", "D10": "not_applicable", "D11": "not_applicable", "D12": "not_applicable"}
+for r in d04: r[8] = DIR04[r[0]]
+write(OUT / "inv04_ethosuximide_age_assay" / "decisive.tsv", DEC_H, d04)
+
+# ---------------------------------------------------------------- INV-09
+h09 = [
+ ["L1",
+  "[DATO, Cheng 2020] Lithium (repeated pretreatment within an hour before the provoking injection) lowered the provoked-seizure stage in all three genotypes, including wild type at the floor (mean stage over minutes 1 to 60: +/+ 0.27 against 0.12, +/- 0.42 against 0.16, -/- 1.20 against 0.22; N 12 against 8, 12 against 12, 6 against 7; SCI exact values from the vector panel); the effect is proportionally larger in the knockout (82 against 54 percent), which the figure cannot show to exceed noise. The only GSK-3 measurement in a Wwox-null animal is one p-Ser9 blot (one lane per genotype and region; the ages of the legend and the Methods disagree).",
+  "A general property: in wild-type mice acute lithium raises the PTZ clonic threshold in several abstracts (one family also found acute lithium pro-convulsant and chronic threshold-raising), in rats the effect is very weak or absent, and lithium potentiates pilocarpine-type seizures several-fold; other GSK-3 inhibitors are anticonvulsant in several unrelated provoked models and worse or opposite in others. An effect in all genotypes is what a general property predicts. [INFERENZA from DATO at abstract level]",
+  "Lithium (named by the source). A second GSK-3 inhibitor of another class and a general anticonvulsant comparator that does not act on this kinase are the controls; no compound is proposed for any use.",
+  "The same assay as INV-04, the same session and the same vehicle group per genotype; the lithium regimen is stated before data.",
+  "L2 GSK-3-specific, knockout-enhanced; L3 a regimen artefact.",
+  "Lithium effect in all genotypes (interaction ratio between 0.7 and 1.43), the second GSK-3 inhibitor effective, the comparator effective: a general anticonvulsant effect of GSK-3 inhibition and of the comparator.",
+  "A knockout-larger effect reproduced by the second GSK-3 inhibitor and not by the comparator (L2).",
+  "As INV-04: the provoked-assay pilot first; the genotype-by-treatment term pre-specified.",
+  LAB, "unknown"],
+ ["L2",
+  "[DATO] p-Ser9 GSK3beta is lower in untreated knockout brain (cerebellum, hippocampus, cortex; one representative blot per region, four independent experiments stated); lithium engagement was not measured; no kinase activity, beta-catenin, Wnt or substrate readout in Wwox-null tissue (PubMed and Europe PMC, abstract level). Cell-line data point both ways (WWOX knock-down raised GSK-3beta and Tau phosphorylation in one neuroblastoma line; WWOX overexpression lowered GSK-3beta-driven Tau phosphorylation in another); WWOX binds Dvl and restrains Wnt output in cancer lines (TRANSFER).",
+  "GSK-3-specific, knockout-enhanced: more active GSK-3 is INFERRED from a lower p-Ser9 (no kinase assay). Two readings predict opposite beta-catenin signs: a p-Ser9 fall lowers beta-catenin, Dvl release raises Wnt output; neither is measured in Wwox-null brain.",
+  "Lithium plus a second, chemically unrelated GSK-3 inhibitor with published selectivity and rodent brain exposure; a non-GSK-3 anticonvulsant comparator.",
+  "Genotype-crossed assay as L1; optional add-on: p-Ser9, total GSK-3beta and a kinase or beta-catenin readout in tissue from the same animals.",
+  "L1 and L3; lithium has other targets (inositol depletion; an inositol add-back arm is not GSK-3-free).",
+  "A knockout-larger lithium effect reproduced by the second GSK-3 inhibitor and not by the comparator, with a p-Ser9 or kinase change in the treated animals.",
+  "The second GSK-3 inhibitor does not reproduce it, or the comparator does (a general effect).",
+  "Which of the two beta-catenin readings holds in Wwox-null brain; the sign of GSK-3 inhibition for myelination is divided across studies.",
+  LAB, "unknown"],
+ ["L3",
+  "[DATO, abstract level] The lithium regimen can change the sign within one family of mouse PTZ papers: a single acute pretreatment raised the clonic threshold in several, and one later paper from the same family found acute lithium pro-convulsive and chronic lithium threshold-raising; Cheng 2020 used repeated pretreatment within an hour. [INFERENZA] A regimen difference between laboratories would produce a sign difference that has nothing to do with genotype.",
+  "The lithium regimen is a design variable: Cheng's regimen as the paper states it is the replication condition; any other regimen is stated before data.",
+  "Lithium (named by the source); no schedule is proposed here.",
+  "As L1, with the regimen stated before data and kept the same across genotypes and ages.",
+  "L1 and L2.",
+  "The same sign in the replication regimen.",
+  "A sign change with the regimen (a regimen effect).",
+  "State the regimen in the pre-registration of the laboratory.",
+  LAB, "unknown"],
+ ["L4",
+  "[IPOTESI, conditional] The development endpoints of the AAV9 comparator (survival to a fixed end age beyond day 17, weight series, one composite motor score at a fixed age, GFAP, myelination, brain size at about day 20) in a separate in vivo cohort for lithium, litter-blocked, with its own vehicle-only knockout group; no development datum exists for any non-gene agent; the sign of GSK-3 inhibition for myelination is divided.",
+  "Runs only after the provoked assay shows a lithium effect that is selective (interaction outside 0.7 to 1.43, reproduced by the second GSK-3 inhibitor and not by the comparator); if the interaction cannot be sized, the condition is the GSK-3 pharmacology in the knockout with the interaction as an exploratory interval; dropped if the effect is general.",
+  "Lithium and, if run, a second GSK-3 inhibitor; ethosuximide, the NMDAR pore blockers and vigabatrin do not qualify (reasons in the ADV-058 unit-2 text).",
+  "Separate cohort dosed from the first days of life (the start age is the laboratory's); harms endpoints of its own (renal and thyroid readouts as the label lists).",
+  "L1 (a general anticonvulsant effect gives no development rationale).",
+  "A development endpoint moved relative to vehicle knockouts.",
+  "Nothing moved, or an early floor (untreated knockouts die by about day 17).",
+  "Prevention against rescue; durability; pup exposure; no overexpression endpoint for a drug.",
+  LAB, "unknown"],
+]
+write(OUT / "inv09_lithium_gsk3_regimen" / "hypotheses.tsv", HYP_H, h09)
+
+c09 = [
+ ["C-GS1",
+  "Provoked-seizure suppression: is the lithium effect general or GSK-3-specific, and in what order do the agents run in a first in vivo Wwox-null experiment.",
+  "Lithium; a second GSK-3 inhibitor of another class; a general anticonvulsant comparator; ethosuximide (INV-04); the NMDAR pore-blocker arm last.",
+  "not assessed here",
+  "[DATO and INFERENZA] Order proposed (IT, ADV-051, with the brief): ethosuximide first (the only arm whose outcome changes the decision), lithium in the same session as a positive-control-like arm with a second GSK-3 class and a general comparator; the pore-blocker arm last in vivo, after the slice arm, with its harms and stopping rules written first.",
+  "More promising: not stated as an overall ranking; lithium is general, ethosuximide's selectivity is open.",
+  "Second GSK-3 inhibitor of another class (attribution control); general non-GSK-3 comparator.",
+  "Interaction ratio and the panel per age (as INV-04).",
+  "Second inhibitor reproduces a knockout-larger effect and the comparator does not.",
+  "Second inhibitor and comparator reproduce an effect in all genotypes.",
+  "The interaction cannot be sized at the published variability.",
+  "Lithium also acts on other targets; the GSK-3 link is a same-university cell study and no catalogue activity row exists.",
+  "ADV-051; the in vivo brief section 3; decisive D01 D03 D04 D08", "new", "yes (laboratory)"],
+ ["C-GS2",
+  "GSK-3 axis: what is measured in Wwox loss, other inhibitors, paediatric safety, the Wnt context.",
+  "Lithium; tideglusib; a clinical-stage kinase inhibitor; tool inhibitors; valproate (its GSK-3 action is contested).",
+  "not assessed here",
+  "[DATO, abstract and label level] One p-Ser9 blot is the only GSK-3 measurement in a Wwox-null animal. Other inhibitors have seizure results only in provoked or tool settings and not uniform: positive in several models, none in a Wwox model, a status-epilepticus worsening in one study, slowed kainate epileptogenesis with higher activity in another. Lithium has a paediatric label from age 7 (bipolar) and no infant treatment data (toxicity close to therapeutic concentrations; renal, thyroid, calcium effects); the one GSK-3 agent with adolescent data is tideglusib (16 subjects, 13 to 34 years). The sign of GSK-3 inhibition for myelination is divided across studies; the Wnt readings of the Wwox-null state predict opposite beta-catenin signs.",
+  "More promising: none over the others; lithium has the most paediatric exposure of the GSK-3 agents.",
+  "A kinase or beta-catenin readout in Wwox-null tissue.",
+  "p-Ser9 after lithium in the same animals; a second, unrelated GSK-3 inhibitor.",
+  "A kinase or beta-catenin change in treated knockouts.",
+  "No change.",
+  "Which beta-catenin sign holds.",
+  "Valproate's GSK-3 action is contested and it is also the general comparator.",
+  "ADV-051 package B; the in vivo brief section 5; decisive D02 D04 D05 D06 D07", "new", "yes (laboratory)"],
+ ["C-GS3",
+  "Where the chloride-gradient branch (NKCC1 and KCC2) sits relative to the lithium and GSK-3 thread.",
+  "An NKCC1 blocker; the KCC2 branch (OV350 and others); GABAergic agents.",
+  "not assessed here",
+  "[DATO, abstract and one full text] E_GABA was never measured in any WWOX system; the switch of GABA polarity is region- and preparation-dependent and, in the mouse, close to the experiment ages (slice data P2 to P8 and P9 to P15 by region); the NKCC1 blocker is not more promising than the other candidates on any endpoint, with a hypothesis-level exception on development in other rodent models; the KCC2 branch is more promising than an NKCC1 blocker on development on evidence level only, not rankable against the other candidates; neither branch is more promising overall; both are gated by the same unmeasured state. The P11 mouse datum (Kasahara 2019) is WITHDRAWN.",
+  "More promising: neither branch overall.",
+  "E_GABA perforated patch at matched maturity, the bath without bumetanide as primary.",
+  "A depolarising null with a reduced KCC2 component would open a KCC2-activator arm only then.",
+  "A depolarising E_GABA.",
+  "A hyperpolarising E_GABA at matched maturity.",
+  "Region and preparation dependence.",
+  "Access to the KCC2 agent is an operator-level matter.",
+  "ADV-065 and ADV-065b (SCI); decisive D09", "new", "yes (laboratory)"],
+]
+write(OUT / "inv09_lithium_gsk3_regimen" / "comparison.tsv", CMP_H, c09)
+
+m09 = [
+ ["M-1", "[INFERENZA design] The same pilot as INV-04 (variability, assay age, non-floor stimulus) with lithium and the comparator in the same session and the same vehicle groups.", "The published curves cannot size the interaction.", "C-GS1"],
+ ["M-2", "[INFERENZA design] A second GSK-3 inhibitor of another class (chemically unrelated to lithium, published selective GSK-3 inhibition at the exposure used and published rodent brain exposure) and one general non-GSK-3 anticonvulsant comparator effective across ages.", "Lithium alone cannot separate a GSK-3 route from a general property; it acts on other targets.", "C-GS1"],
+ ["M-3", "[INFERENZA design] p-Ser9, total GSK-3beta and a kinase or beta-catenin readout in tissue from the same lithium-treated and vehicle animals.", "Cheng measured p-Ser9 only in untreated animals; no kinase or beta-catenin readout exists in Wwox-null tissue.", "C-GS2"],
+ ["M-4", "[INFERENZA design] E_GABA by perforated patch at matched maturity (the same measurement as INV-04 M-6).", "E_GABA was never measured in a WWOX system.", "C-GS3"],
+]
+write(OUT / "inv09_lithium_gsk3_regimen" / "new_measurements.tsv", MEAS_H, m09)
+
+d09 = [
+ ["D01", "DATO: Cheng 2020: lithium lowered the PTZ stage in all three genotypes; exact values from the vector panel: mean stage over minutes 1 to 60, +/+ 0.27 against 0.12 (N 12 and 8), +/- 0.42 against 0.16 (12 and 12), -/- 1.20 against 0.22 (6 and 7).", "32000863", "Fig 7d (vector); SCI fig7 quantification", "supported", "full text; figure exact", "provoked-seizure result", "mechanism", "supports a general reading", "global Wwox-null mouse, PTZ, lithium pretreatment"],
+ ["D02", "DATO: the only GSK-3 measurement in a Wwox-null animal is one p-Ser9 blot (one lane per genotype and region; the age stated as day 14 in Methods and day 20 in the legend); no kinase activity, beta-catenin or Wnt readout in Wwox-null tissue.", "32000863", "Fig 7c legend; Methods; ADV-051 package B", "supported", "full text; PubMed and Europe PMC queries", "GSK-3 premise", "mechanism", "supports an inference only", "global Wwox-null mouse brain"],
+ ["D03", "DATO (abstract level): lithium in wild-type rodent PTZ and other models: acute raises the clonic threshold in several mouse abstracts; one family found acute pro-convulsant and chronic threshold-raising; the effect is very weak or absent in rats; potentiation of pilocarpine-type seizures several-fold; no lithium age-window provoked-seizure paper was found by two routes.", "", "ADV-051 package A rows L01 to L18; ADV-064", "supported at abstract level", "abstract; saved bytes", "general-property contrast", "context", "context", "wild-type rodents"],
+ ["D04", "DATO (abstract level): other GSK-3 inhibitors: anticonvulsant in several provoked models, worse or opposite in others (status epilepticus worsened in one study; higher GSK-3 activity slowed kainate epileptogenesis in another); none in a Wwox model; tideglusib has no seizure-model result.", "", "ADV-051 package B", "supported at abstract level", "abstract", "general-property contrast", "mechanism", "context", "rodent provoked and kainate models"],
+ ["D05", "DATO (label and abstract level): lithium paediatric label from age 7 (bipolar), not established below 7 years; toxicity close to therapeutic concentrations; infant data are breast-milk exposure case reports only.", "", "DailyMed label; ADV-051 package B", "supported", "label text", "harm", "context", "context", "paediatric labelled use"],
+ ["D06", "DATO (abstract level): GSK-3 inhibition and myelination: raised oligodendrocyte differentiation in some studies and suppressed it in others; conditional beta-catenin activation delayed developmental myelination; the sign is stage-dependent.", "", "ADV-051 package B section 4", "supported at abstract level", "abstract", "development", "context", "context", "postnatal mouse, optic nerve, preterm rabbit model"],
+ ["D07", "INFERENZA: the p-Ser9 fall (more active GSK-3, lower beta-catenin) and Dvl release (higher Wnt output) predict opposite beta-catenin signs in Wwox loss; neither is measured in Wwox-null brain.", "", "ADV-051 package B row T4-06", "supported as an inference", "reasoning over abstracts", "GSK-3 premise", "mechanism", "context", "Wwox-null brain"],
+ ["D08", "INFERENZA: with a within-animal correlation of 0.6 to 1.0 the knockout PTZ-alone variability needs about 36 to 109 animals per arm for a ratio of 0.7 and an interaction about 180 to 320 per cell; the interaction is exploratory unless the pilot finds a lower-variability summary.", "32000863", "ADV-061 addendum; ADV-063 independent check", "supported (two readers)", "means and error bars", "sizing", "context", "limits the design", "Fig 7b and 7d"],
+ ["D09", "WITHDRAWN: any statement that a bumetanide-sensitive GABAergic aggravation in the mouse (Kasahara 2019) bears on the lithium or GSK-3 thread: withdrawn as evidence (see INV-04 D10).", "31058209", "Kasahara 2019 Tables 1 and 2", "withdrawn", "full text read by SCI and IT", "chloride branch", "other_route", "withdrawn", "mouse pups P11 and P14"],
+]
+DIR09 = {"D01": "supports", "D02": "mixed", "D03": "not_applicable", "D04": "mixed", "D05": "not_applicable", "D06": "not_applicable", "D07": "not_applicable",
+         "D08": "not_applicable", "D09": "not_applicable"}
+for r in d09: r[8] = DIR09[r[0]]
+write(OUT / "inv09_lithium_gsk3_regimen" / "decisive.tsv", DEC_H, d09)
+print("built")
