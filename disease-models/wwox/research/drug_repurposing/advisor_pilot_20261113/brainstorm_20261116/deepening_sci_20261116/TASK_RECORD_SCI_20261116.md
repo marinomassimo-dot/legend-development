@@ -56,3 +56,4 @@
 [09:57Z] SCI ADV-059 consumers: brief section 9.1 (optional development-endpoint cohort for lithium, IT ADV-058 unit 2, condition: selective lithium effect first); dated line on VOI_RANKING_SCI_20261117.md (top 3 unchanged; #8 cheaper via video-EEG add-on; #5 largely done by HE ADV-052; GSK-3 readout new; #6 lower for P13-P17).
 [10:28Z] SCI: one sentence removed for wording in the outreach package (readiness item 8) and in the in vivo brief (section 6 item 7); no change of content; repo-wide check of my documents for the same pattern: none left.
 [10:42Z] SCI ADV-059 cold-read list (IT) applied in one pass: brief section 9.3 and cover (what a laboratory will ask first); priors file untouched.
+[10:59Z] SCI ADV-059 IT second-look list (8 points) applied in one pass: brief section 9.4 and cover; priors file untouched.
