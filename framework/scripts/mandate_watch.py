@@ -878,6 +878,23 @@ def registered_worktrees(root: Path) -> list[Path]:
     return roots
 
 
+def published_copies(root: Path, trees: list[Path], task: str, ref: str = "development/main") -> list[str]:
+    """Which of the record paths found in `trees` the published ref carries. Used only to say WHY a task is ambiguous: a record that
+    landed on the published ref but is absent from a root checkout that lags behind it shows up as several unmerged copies, and the fix
+    is to advance the root (merge --ff-only), not to guess a winner."""
+    found = []
+    for tree in trees:
+        for p in mc.find_records(tree, task):
+            rel = p.relative_to(tree).as_posix()
+            try:
+                r = subprocess.run(["git", "-C", str(root), "cat-file", "-e", f"{ref}:{rel}"], capture_output=True, timeout=10)
+            except (OSError, subprocess.SubprocessError):
+                continue
+            if r.returncode == 0 and rel not in found:
+                found.append(rel)
+    return found
+
+
 def _check_all(a) -> int:
     sessions = list_sessions()
     results = []
@@ -898,6 +915,11 @@ def _check_all(a) -> int:
             out = {"task": task, "state": "UNKNOWN", "action": "NONE",
                    "why": "multiple unmerged task records; no authoritative root copy",
                    "record_roots": [str(t) for t in trees]}
+            landed = published_copies(root, trees, task)
+            if landed:
+                out["why"] += (f"; the record IS on the published ref ({landed[0]}) and the root checkout lacks it: advance the root with "
+                               "`git merge --ff-only development/main` (nothing is guessed here), after which this record is watched")
+                out["published"] = True
             results.append(out)
             log_event("check", **out)
             continue

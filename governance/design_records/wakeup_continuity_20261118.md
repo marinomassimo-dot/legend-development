@@ -199,3 +199,20 @@ history, MCP servers), that is the **production** project's, beside the probe's 
 It was not run. The probe sessions were unlisted with `claude rm` and only their three
 transcripts and file-history directories were deleted, by exact path, after the evidence folder
 was published.
+
+## G. First production run of the new watcher (cron :37, 21:37 to 21:40 UTC) and one finding
+
+The root checkout had been fast-forwarded to code containing d82868b75, so the hourly job ran
+the new watcher for the first time. Read from the events log: 132 checks in about three minutes;
+states COMPLETE 108, UNKNOWN 19, BLOCKED 3, RUNNING 2; **no `DUPLICATE_HOST`, no request sent to
+a live session**; ADV's record RUNNING ("session busy; busy is not progress"). The UNKNOWN rows
+are old records whose sessions no longer carry a `MANDATE_BOUND` marker (unchanged behaviour).
+
+**Finding: a record that landed on `development/main` but is not yet in the root checkout is
+UNKNOWN when two or more registered worktrees carry a copy.** `PLAN-HE-CONTINUITY-20261118` was
+UNKNOWN ("multiple unmerged task records; no authoritative root copy") because the root lagged
+the published ref and a second worktree had merged it. The rule that nothing is guessed is kept
+(an existing test pins it). The row now says why: `published: true` and "advance the root with
+`git merge --ff-only development/main`", after which the record is watched. Until then a mandate
+registered by `accept --create-for` is not woken by the hourly check: the actor that creates a
+standing record must make sure the root has it, or say so.

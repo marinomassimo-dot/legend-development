@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import os
+import subprocess
 import sys
 import tempfile
 import time
@@ -160,6 +161,35 @@ class Watch(unittest.TestCase):
         row = json.loads(output.getvalue())[0]
         self.assertEqual((row["state"], row["action"]), ("UNKNOWN", "NONE"))
         self.assertIn("multiple unmerged", row["why"])
+
+    def test_a_published_record_missing_from_a_lagging_root_says_so(self):
+        e = self.env(record())
+        rel = f"ledger/tasks/plan/{TASK}.json"
+        (e.root / "ledger/tasks/orchestrator" / f"{TASK}.json").unlink()
+        trees = []
+        for name in ("copy-a", "copy-b"):
+            tree = Path(e.tmp.name) / name
+            (tree / rel).parent.mkdir(parents=True)
+            (tree / rel).write_text(json.dumps(record()))
+            trees.append(tree)
+        git = lambda *a: subprocess.run(["git", "-C", str(e.root), "-c", "user.email=t@example.invalid", "-c", "user.name=t", *a], check=True, capture_output=True)
+        git("init", "-q")
+        (e.root / rel).parent.mkdir(parents=True, exist_ok=True)
+        (e.root / rel).write_text(json.dumps(record()))
+        git("add", rel)
+        git("commit", "-q", "-m", "x")
+        git("update-ref", "refs/remotes/development/main", "HEAD")
+        (e.root / rel).unlink()                                                 # the root checkout lags: the record is published, not here
+        args = SimpleNamespace(root=str(e.root), deliver="resume", quiet_minutes=25, resume_arg=[], json=True)
+        output = io.StringIO()
+        with mock.patch.object(mw, "registered_worktrees", return_value=[e.root, *trees]), \
+                mock.patch.object(mw, "list_sessions", return_value=[]), \
+                mock.patch.object(mw, "check") as checked, contextlib.redirect_stdout(output):
+            mw._check_all(args)
+        checked.assert_not_called()                                              # still nothing is guessed or started
+        row = json.loads(output.getvalue())[0]
+        self.assertEqual((row["state"], row["action"], row.get("published")), ("UNKNOWN", "NONE", True))
+        self.assertIn("merge --ff-only development/main", row["why"])
 
     def test_waiting_for_science_does_not_block_an_independent_step(self):
         rec = record(steps=("BLOCKED", "TODO"))
