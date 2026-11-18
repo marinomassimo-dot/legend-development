@@ -46,3 +46,6 @@ The statement "diazepam: only a P10 rat datum, no ontogeny paper" (the GABA-A ro
 
 ## Dated line (2026-11-18, SCI, after ADV-065; nothing above is edited)
 The GABA-A row's age statements should be read together with the chloride-gradient note `adv065_chloride_nkcc1_sci_20261118/`: in mouse, high-dose diazepam or pentobarbital worsened febrile-seizure induction at P11 and not at P14 (Kasahara 2019, abstract level), and bumetanide undid the worsening; the pup bumetanide literature is age-bound and mixed. Gradient maturity is an unmeasured variable behind the age windows above.
+
+## Dated line (2026-11-18, SCI, after the Kasahara 2019 full text and a blind check; nothing above is edited)
+The line added after ADV-065 on the P11 against P14 diazepam and pentobarbital data should be read as a **weak, confounded signal**: clonic incidence 5 of 5 in saline and with the modulators at P11; the worsening is in latency, threshold temperature and LFP events; groups of 4 to 5; bumetanide did not block the latency effect; the paper's tables show 5 of 5 deaths with high-dose diazepam at P11 and P14. Source and detail: `adv065b_kcc2_ov350_sci_20261118/`, section 1.
