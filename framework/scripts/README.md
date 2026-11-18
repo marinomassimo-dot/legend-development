@@ -100,6 +100,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | do the quotations inside prose dossiers occur in a paper anybody can point at | `framework/scripts/dossier_quote_audit.py` |
 | re-take a snippet whose text moved because normalisation moved, not because the reader did | `framework/scripts/recapture_snippets.py` |
 | does any locator stand on a panel its own erratum corrected | `framework/scripts/erratum_scope_check.py` |
+| has any paper behind a receipt gained a correction, expression of concern or retraction notice, and did it come after the reading (Europe PMC, no key; read-only on the ledger; a non-JSON reply stops the run; 6 preprint PMIDs are reported as not indexed, never as clean) | `framework/scripts/epmc_notice_sweep.py --out <folder>` |
 | a manifest flag that IMPROVED without the work behind it | `framework/scripts/manifest_flag_drift.py` |
 | does a manifest's queued multi-hop id name **this** paper's debt | `framework/scripts/manifest_queue_id_crosscheck.py` |
 | does a manifest's `receipt` name the reading that **produced** it — the decided semantics (`fulltext_read_receipt.md`), with the declared non-conformance ceiling; reports, never writes | `framework/scripts/manifest_receipt_provenance.py --check` |

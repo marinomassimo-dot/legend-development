@@ -325,6 +325,36 @@
      "evidence": "framework/scripts/fulltext_receipts.py source_sanity and --allow-small-source in record; SourceSanityTests (5) in framework/scripts/test_fulltext_receipts.py, 117 tests OK; routing row in framework/scripts/README.md section 2"
     }
    ]
+  },
+  "OBJ_HE_ADV044_20261118": {
+   "order": 8,
+   "source": "ADV message 2026-11-18 (ADV-044, host decision, MEETING 20261118T052113Z)",
+   "steps": [
+    {
+     "step": "1 sweep: has any PMID behind a receipt gained a correction, expression of concern or retraction notice after it was read (Europe PMC, read-only on the ledger, table, consumers, recipe)",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "framework/scripts/epmc_notice_sweep.py + test_epmc_notice_sweep.py; report and table in advisor_pilot_20261113/brainstorm_20261116/notice_sweep_he_20261118/: 1,435 PMIDs, 44 notice links, 0 post-dating; three integrity hits all already handled; 12 erratum PMIDs with locators and no manifest are outside erratum_scope_check"
+    },
+    {
+     "step": "2 recheck the radar matcher link between PMID 42309338 and open row NP3A5; report the rule; fix if small, with a test",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    },
+    {
+     "step": "3a dismech recipe row in framework/scripts/README.md section 13",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "landed c29006c88 (BSD-3-Clause on GitHub, CC-BY 4.0 in the site footer, not reconciled against LICENSE)"
+    },
+    {
+     "step": "3b half-hour BioMedArena glance",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
   }
  },
  "DEFAULTS_TAKEN": [

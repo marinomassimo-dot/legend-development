@@ -1,0 +1,45 @@
+pmid	receipt_events	first_event	last_event	depths	notice_type	notice_id	notice_date	vs_receipt	notice_doi	title
+16007179	1	2026-11-10	2026-11-10	abstract_only	Erratum in	(no id; Oncogene. 2006 Dec 7;25(58):7662)	2006 Dec 7	PRE		FRA16D common chromosomal fragile site oxido-reductase (FOR/WWOX) protects again
+16847353	1	2026-10-30	2026-10-30	partial_fulltext_read	Erratum in	(no id; Genes Dev. 2007 Mar 1;21(5):625)	2007 Mar 1	PRE		c-Myc is an important direct target of Notch1 in T-cell acute lymphoblastic leuk
+19503085	1	2026-11-05	2026-11-05	partial_fulltext_read	Erratum in	40670687	2025-08-01	PRE	10.1038/s41593-025-02034-w	HDAC1 and HDAC2 regulate oligodendrocyte differentiation by disrupting the beta-
+21635238	1	2026-11-07	2026-11-07	abstract_only	Erratum in	(no id; Epilepsia. 2012 May;53(5):933)	2012 May	PRE		Effects of early long-term treatment with antiepileptic drugs on development of 
+21822218	2	2026-11-11	2026-11-11	partial_fulltext_read	Erratum in	(no id; EMBO J. 2011 Nov 2;30(21):4515)	2011 Nov 2	PRE		The pore structure and gating mechanism of K2P channels.
+22622579	1	2026-11-05	2026-11-05	partial_fulltext_read	Erratum in	(no id; Nature.2014 Jul 17;511(7509):370)	2014 Jul 17	PRE		Sustained translational repression by eIF2α-P mediates prion neurodegeneration.
+22781553	1	2026-11-03	2026-11-03	abstract_only	Erratum in	40589262	2025-07-01	PRE	10.1158/1078-0432.ccr-25-1021	AT13148 is a novel, oral multi-AGC kinase inhibitor with potent pharmacodynamic 
+23536761	1	2026-11-05	2026-11-05	partial_fulltext_read	Erratum in	(no id; PLoS One. 2013;8(8). doi:10.1371/annotation/48a011e6-e4d0-4706-9a28-857eba8cfb31)	2013	PRE		Bumetanide enhances phenobarbital efficacy in a rat model of hypoxic neonatal se
+24166903	1	2026-11-04	2026-11-04	abstract_only	Erratum in	25934894	2015-05-01	PRE	10.1158/1078-0432.ccr-15-0185	Phase I safety, pharmacokinetic, and pharmacodynamic study of SAR245408 (XL147),
+24209626	1	2026-11-05	2026-11-05	partial_fulltext_read	Erratum in	(no id; Cell. 2015 Apr 23;161(3):691)	2015 Apr 23	PRE		Injury-induced HDAC5 nuclear export is essential for axon regeneration.
+24997607	1	2026-11-05	2026-11-05	partial_fulltext_read	Erratum in	38997609	2024-09-01	PRE	10.1038/s41591-024-03162-9	Micropillar arrays as a high-throughput screening platform for therapeutics in m
+25186741	3	2026-11-11	2026-11-13	partial_fulltext_read	Erratum in	(no id; J Neurosci. 2015 Jan 14;35(2):846-6)	2015 Jan 14	PRE		An RNA-sequencing transcriptome and splicing database of glia, neurons, and vasc
+25193991	1	2026-11-04	2026-11-04	abstract_only	Erratum in	(no id; Ann Oncol. 2015 Feb;26(2):445)	2015 Feb	PRE		Phase I/IIa study evaluating the safety, efficacy, pharmacokinetics, and pharmac
+25193991	1	2026-11-04	2026-11-04	abstract_only	Erratum in	32590894	2015-02-01	PRE	10.1093/annonc/mdu547	Phase I/IIa study evaluating the safety, efficacy, pharmacokinetics, and pharmac
+25383915	2	2026-11-11	2026-11-11	abstract_only	Erratum in	31769671	2019-11-26	PRE	10.1021/acs.jmedchem.9b01878	Discovery and optimization of 4,5-diarylisoxazoles as potent dual inhibitors of 
+26419537	1	2026-10-21	2026-10-21	partial_fulltext_read	Erratum in	26496836	2015-10-23	PRE	10.1186/s13024-015-0051-6	Ethosuximide ameliorates neurodegenerative disease phenotypes by modulating DAF-
+29533123	2	2026-11-12	2026-11-12	partial_fulltext_read	Erratum in	30507342	2018-12-03	PRE	10.1177/0271678x18818010	Protective effects of sulforaphane in experimental vascular cognitive impairment
+29724996	3	2026-08-10	2026-11-06	complete_fulltext_read|partial_fulltext_read|queried_not_full_read	Erratum in	30470736	2018-11-23	PRE	10.1038/s41419-018-1158-9	WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia.
+30356099	5	2026-08-11	2026-11-06	partial_fulltext_read	Erratum in	30783266	2019-07-01	PRE	10.1038/s41436-019-0460-y	The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE 
+30919030	2	2026-11-13	2026-11-13	partial_fulltext_read	Erratum in	31482207	2019-09-03	PRE	10.1007/s00401-019-02064-2	Ketogenic diet ameliorates axonal defects and promotes myelination in Pelizaeus-
+31618474	2	2026-09-21	2026-10-03	complete_fulltext_read|partial_fulltext_read	Erratum in	32176372	2020-02-25	PRE	10.1002/ana.25703	The Genetic Landscape of Epilepsy of Infancy with Migrating Focal Seizures.
+31808502	1	2026-11-08	2026-11-08	abstract_only	Erratum in	35608218	2022-06-06	PRE	10.1039/d1fo90056k	Glycyrrhizic acid promotes neural repair by directly driving functional remyelin
+31888761	1	2026-11-03	2026-11-03	partial_fulltext_read	Erratum in	35598003	2022-05-21	PRE	10.1186/s13148-022-01288-6	Silencing or inhibition of H3K79 methyltransferase DOT1L induces cell cycle arre
+32214227	2	2026-09-21	2026-10-03	complete_fulltext_read|partial_fulltext_read	Erratum in	34050322	2022-02-01	PRE	10.1038/s41431-021-00909-7	First-line exome sequencing in Palestinian and Israeli Arabs with neurological d
+33733293	1	2026-11-17	2026-11-17	abstract_only	Erratum in	38592588	2024-10-01	PRE	10.1007/s12035-024-04154-z	Protective Effect of GM1 Attenuates Hippocampus and Cortex Apoptosis After Ketam
+35655584	1	2026-11-06	2026-11-06	partial_fulltext_read	Erratum in	36176337	2022-09-26	PRE	10.1212/nxg.0000000000200035	Epilepsy Course and Developmental Trajectories in <i>STXBP1</i>-DEE.
+36594817	1	2026-11-06	2026-11-06	partial_fulltext_read	Erratum in	39404600	2024-10-15	PRE	10.7554/elife.104349	Antisense oligonucleotide therapy rescues disturbed brain rhythms and sleep in j
+37006625	1	2026-11-05	2026-11-05	partial_fulltext_read	Erratum in	37152903	2023-04-20	PRE	10.3389/fmolb.2023.1201886	Histone deacetylase functions and therapeutic implications for adult skeletal mu
+37095367	1	2026-10-02	2026-10-02	complete_fulltext_read	Erratum in	39394494	2025-05-01	PRE	10.1007/s12035-024-04544-3	Whole-Genome Sequencing Among Kazakhstani Children with Early-Onset Epilepsy Rev
+38144875	1	2026-10-21	2026-10-21	complete_fulltext_read	Erratum in	38533474	2024-02-01	PRE	10.1016/j.conctc.2024.101264	Effectiveness of L-serine supplementation in children with a <i>GRIN2B</i> loss-
+38182577	3	2026-08-10	2026-11-07	complete_fulltext_read|partial_fulltext_read	Erratum in	38355659	2024-02-14	PRE	10.1038/s41419-024-06518-8	WWOX promotes osteosarcoma development via upregulation of Myc.
+39083422	3	2026-11-13	2026-11-13	partial_fulltext_read	Erratum in	39432800	2024-10-21	PRE	10.1073/pnas.2420080121	Targeting the muscarinic M1 receptor with a selective, brain-penetrant antagonis
+39167905	1	2026-11-17	2026-11-17	abstract_only	Erratum in	39243569	2024-09-07	PRE	10.1016/j.jpsychires.2024.09.001	Ketamine alleviates PTSD-like effect and improves hippocampal synaptic plasticit
+39934240	1	2026-10-20	2026-10-20	partial_fulltext_read	Erratum in	40229390	2025-04-14	PRE	10.1038/s41598-025-97486-2	Drug-resistant epilepsy associated with peripheral complement decreases and sex-
+39981749	2	2026-11-11	2026-11-11	partial_fulltext_read	Erratum in	40523247	2025-06-16	PRE	10.1021/acschemneuro.5c00409	Discovery of ONO-2920632 (VU6011887): A Highly Selective and CNS Penetrant TREK-
+40119223	1	2026-10-20	2026-10-20	partial_fulltext_read	Erratum in	42024171	2026-04-23	PRE	10.1007/s00431-026-06877-8	Exploring the long-term impacts of neonatal hypoglycemia to determine a safe thr
+40177888	1	2026-11-05	2026-11-05	abstract_only	Erratum in	41746217	2026-06-01	PRE	10.1093/brain/awag067	Persistent Na+ current couples spreading depolarization to seizures in Scn8a gai
+40507943	1	2026-10-03	2026-10-03	complete_fulltext_read	Erratum in	41373918	2025-12-03	PRE	10.3390/ijms262311691	Hyaluronan: An Architect and Integrator for Cancer and Neural Diseases.
+41069084	1	2026-10-20	2026-10-20	partial_fulltext_read	Erratum in	42043325	2026-04-01	PRE	10.1111/acem.70311	Severe Hyponatremia in the Emergency Department Incidence of Cerebral Edema and 
+41210171	1	2026-10-03	2026-10-03	partial_fulltext_read	Erratum in	42137596	2026-04-15	PRE	10.1016/j.omta.2026.201731	Impact of pre-existing immunity on safety and biodistribution of a single AAV9 v
+42769206	1	2026-10-20	2026-10-20	complete_fulltext_read	Erratum in	42852004	2026-09-24	PRE	10.3389/fnins.2026.1995110	Effect of fresh-frozen plasma transfusion on intraventricular hemorrhage risk in
+16223882	1	2026-09-09	2026-09-09	complete_fulltext_read	Expression of concern in	28373548	2017-04-03	PRE	10.1073/pnas.1704296114	WWOX gene restoration prevents lung cancer growth in vitro and in vivo.
+39083422	3	2026-11-13	2026-11-13	partial_fulltext_read	Expression of concern in	40512803	2025-06-13	PRE	10.1073/pnas.2512750122	Targeting the muscarinic M1 receptor with a selective, brain-penetrant antagonis
+23446842	2	2026-07-26	2026-08-06	partial_fulltext_read	Retraction in	42464650	2026-07-17	PRE	10.3892/ijmm.2026.5925	p73 participates in WWOX-mediated apoptosis in leukemia cells.
