@@ -56,3 +56,5 @@ No other group is named in the held tables for neuron-level recordings from a Ww
 Everything else in parts 1 to 3 is ready as written, subject to the operator's tags.
 
 Dated line (2026-11-18, SCI): one sentence in readiness item 8 removed for wording; no change of content.
+
+Dated line (2026-11-18, SCI): the early-read timing comes from a model, and an independent rerun (second seed, three time constants) says the classification is robust while the date of the end of a short rebound is not: the reads at about 5, 15, 30, 60 and 120 minutes stand; the read at 30 minutes can sit on the tail of a rebound with a long time constant, the 60-minute read is the clean one, and one optional read at about 45 minutes is welcome. Nothing else in the package changes.
