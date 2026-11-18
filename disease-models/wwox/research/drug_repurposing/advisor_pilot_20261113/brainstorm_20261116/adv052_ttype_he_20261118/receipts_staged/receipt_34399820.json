@@ -1,0 +1,39 @@
+{
+ "event_id": "FTR-20261118-34399820-52",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "34399820",
+  "doi": "10.1186/s13041-021-00838-y"
+ },
+ "event_at": "2026-11-18T08:38:33Z",
+ "analysis_at": "2026-11-18T08:38:33Z",
+ "workflow": "ADV-052 producer reading package (parts b, c, d): full text fetched through Europe PMC REST fullTextXML, converted to text keeping paragraphs, titles, captions and table cells and dropping the reference list, and read whole with the Read tool. Quotes below were machine-checked as substrings of the converted text (dash glyphs and whitespace normalised). Figure images and supplements were not seen.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/raw/PMID34399820_PMC8365958_europepmc.xml",
+ "source_fingerprint": "8e151a58ff65f9f728c3bfb1d06ce8e363bd1675c8667659f325d3c88c46424c",
+ "source_kind": "fulltext_remote",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "figures": "captions_only",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/TABLE_PRODUCER.md"
+ ],
+ "evidence_basis": [
+  "verbatim_locator: \"In vitro functional analysis of human Nav1.6 and Cav3.2 channel variants revealed mild but significant alterations of their gating properties that were in general consistent with a gain- and loss-of-channel function, respectively.\"",
+  "verbatim_locator: \"poorly responded to antiepileptic medication including clobazam, levetiracetam, phenobarbital and topiramate\"",
+  "verbatim_locator: \"In contrast, CACNA1H has never been associated with DEEs.\"",
+  "verbatim_locator: \"may not have had a major contribution to the development of the disease on its own\""
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

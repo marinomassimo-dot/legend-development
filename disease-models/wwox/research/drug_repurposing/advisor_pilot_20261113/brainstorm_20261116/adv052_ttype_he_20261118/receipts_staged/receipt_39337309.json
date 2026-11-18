@@ -1,0 +1,39 @@
+{
+ "event_id": "FTR-20261118-39337309-52",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "39337309",
+  "doi": "10.3390/ijms25189821"
+ },
+ "event_at": "2026-11-18T08:38:33Z",
+ "analysis_at": "2026-11-18T08:38:33Z",
+ "workflow": "ADV-052 producer reading package (parts b, c, d): full text fetched through Europe PMC REST fullTextXML, converted to text keeping paragraphs, titles, captions and table cells and dropping the reference list, and read whole with the Read tool. Quotes below were machine-checked as substrings of the converted text (dash glyphs and whitespace normalised). Figure images and supplements were not seen.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/raw/PMID39337309_PMC11432152_europepmc.xml",
+ "source_fingerprint": "5cc9bf940648244e8d07729d2d21e2671ede9e61ae00e6f6638d38ed3371975d",
+ "source_kind": "fulltext_remote",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "figures": "captions_only",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/TABLE_PRODUCER.md"
+ ],
+ "evidence_basis": [
+  "verbatim_locator: \"However, its efficacy as a T-type calcium channel blocker has been questioned [170].\"",
+  "verbatim_locator: \"The AED ethosuximide, which is exclusively used for absence seizures, exerts its antiepileptic action by targeting T-type calcium channels (see Section 6).\"",
+  "verbatim_locator: \"Knockout of CACNA1G in epileptic stargazer, tottering, and lethargic mice eliminates SWD generation in these models of absence epilepsy\"",
+  "verbatim_locator: \"CACNA1G knockout mice are resistant to gamma-hydroxybutyrate (GHB) and baclofen-induced absence seizures\""
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
