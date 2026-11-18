@@ -50,6 +50,7 @@ I18N_SUBDIR = "i18n"
 
 
 def load_translations(dr: Path) -> None:
+    _UI_SRC.clear()
     TRANS.clear()
     for lang in LANGS:
         for kind in ("ui", "content"):
@@ -119,6 +120,47 @@ class _Loc(dict):
         return [self._tr(k, v) for k, v in super().items()]
 
 
+def source_identity(text: str) -> str:
+    """The text as the inventory knows it. `load_allowlist` swaps the Italian wording of the redaction formulas for the page language's wording INSIDE the replacement
+    texts, so a passage that quotes a formula reaches `lx`/`lxi` partly localised and its hash no longer matches the inventory entry (collected on the Italian variant): the
+    translation existed and was never found (2026-11-18 dashboard audit: 17 English passages and a generic phrase marked 'original language only' on FR/ES/DE, and a
+    regeneration did not change that). The identity is restored by putting the Italian wording back, longest wording first, for the lookup only; the text that is shown is
+    the translation found, or, when none exists, the text as it stands (redaction and wording untouched)."""
+    for loc, it_text in CUR.get("unswap") or ():
+        if loc in text:
+            text = text.replace(loc, it_text)
+    return _ui_source_map(CUR["lang"]).get(text, text)           # a whole passage that is itself a translated interface string (iv_withheld) is known by its Italian source
+
+
+def localise_formulas(found: str) -> str:
+    """A catalogue translation may carry a redaction formula in its Italian wording (the passage was translated from the Italian-variant inventory text and the formula kept
+    verbatim: 15 passages per language, 2026-11-18). The formula is a placeholder of the shareable policy: it takes the page language's wording here, once, so the catalogue
+    holds one translation per passage and not one per formula variant."""
+    for it_text, loc in CUR.get("swaps") or ():
+        if it_text in found:
+            found = found.replace(it_text, loc)
+    return found
+
+
+_UI_SRC: dict = {}
+
+
+def _ui_source_map(lang: str) -> dict:
+    """page-language wording -> Italian source, for every translated interface string whose wording is unique (an ambiguous wording is left out, never guessed)."""
+    if lang not in _UI_SRC:
+        out: dict = {}
+        dup: set = set()
+        for name in LOC_TABLES:
+            for path, it_text in globals()[name].leaves():
+                found = TRANS.get(lang, {}).get("ui", {}).get(path)
+                if found and found != it_text:
+                    if out.get(found, it_text) != it_text:
+                        dup.add(found)
+                    out[found] = it_text
+        _UI_SRC[lang] = {k: v for k, v in out.items() if k not in dup}
+    return _UI_SRC[lang]
+
+
 def lx(text, tag="span") -> str:
     """Reader-facing curated English text in the page language. English pages and untranslated passages keep the original with lang="en"; an untranslated passage on another
     language's page also carries the `orig` marker (a visible 'original language only' badge)."""
@@ -128,9 +170,9 @@ def lx(text, tag="span") -> str:
     lang = CUR["lang"]
     if lang == "en":
         return f'<{tag} lang="en">{E(text)}</{tag}>'
-    found = TRANS.get(lang, {}).get("content", {}).get(text_hash(text))
+    found = TRANS.get(lang, {}).get("content", {}).get(text_hash(text)) or TRANS.get(lang, {}).get("content", {}).get(text_hash(source_identity(text)))
     if found:
-        return f'<{tag} lang="{lang}">{E(found)}</{tag}>'
+        return f'<{tag} lang="{lang}">{E(localise_formulas(found))}</{tag}>'
     return f'<{tag} lang="en" class="orig" title="{E(UI_IT["orig_only_title"])}">{E(text)}</{tag}>'
 
 
@@ -143,9 +185,9 @@ def lxi(text, tag="span") -> str:
     lang = CUR["lang"]
     if lang == "it":
         return E(text)
-    found = TRANS.get(lang, {}).get("content", {}).get(text_hash(text))
+    found = TRANS.get(lang, {}).get("content", {}).get(text_hash(text)) or TRANS.get(lang, {}).get("content", {}).get(text_hash(source_identity(text)))
     if found:
-        return E(found)
+        return E(localise_formulas(found))
     return f'<{tag} lang="it" class="orig" title="{E(UI_IT["orig_only_title"])}">{E(text)}</{tag}>'
 
 
@@ -377,6 +419,8 @@ def load_allowlist(dr: Path) -> dict:
     p = dr / "view/shareable_sources.json"
     allow = jload(p) if p.exists() else {"dgidb_claim_sources": {}, "name_sources": {}, "access_scope_prefixes": {}, "own_text": {"allowed": True}}
     lang = CUR["lang"]
+    CUR["unswap"] = []
+    CUR["swaps"] = []
     if lang != "it" and isinstance(allow.get("prose_policy"), dict):
         tr = TRANS.get(lang, {}).get("ui", {})
         swaps = {}                                                   # Italian wording -> wording in the page language, also inside the English replacement texts that quote it
@@ -392,6 +436,8 @@ def load_allowlist(dr: Path) -> dict:
             else:
                 pol[key.split(".", 1)[1]] = found
         allow = dict(allow, prose_policy=pol)
+        CUR["swaps"] = sorted(((a_, b_) for a_, b_ in swaps.items() if b_ != a_), key=lambda t: -len(t[0]))
+        CUR["unswap"] = sorted(((b_, a_) for a_, b_ in swaps.items() if b_ != a_), key=lambda t: -len(t[0]))      # page wording -> Italian wording, for the identity of a text only
 
         def sub(x):
             if isinstance(x, str):

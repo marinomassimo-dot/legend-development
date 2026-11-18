@@ -144,6 +144,46 @@ class FiveLanguages(unittest.TestCase):
                     if len(t) >= 25 and len(rv.IT_WORDS.findall(re.sub(r"\bIL-?\d\w*", "", t).lower())) >= 3 and len(rv.EN_WORDS.findall(t.lower())) < 2]
             self.assertEqual(left, [], lg)
 
+    def test_a_translated_passage_is_never_shown_as_original_language_only_on_the_rendered_page(self):
+        # 2026-11-18 dashboard audit: the catalogues were complete (582 of 582) and the rendered FR/ES/DE pages still carried ~23 original-language markers, because the redaction
+        # formulas were localised BEFORE the lookup by hash and the text lost its identity. Pinned on the page that is produced, not on the catalogue.
+        for lg in ("fr", "es", "de"):
+            body = re.sub(r"<script\b.*?</script>|<style\b.*?</style>", "", self.pages[lg], flags=re.S)
+            body = re.sub(r'<p class="mini mut technote">.*?</p>', "", body, flags=re.S)                 # the one intentional marker: the technical section stays in its original language
+            marked = [html.unescape(re.sub(r"<[^>]+>", "", m)).strip()[:80] for m in re.findall(r'<(?:\w+)\b[^>]*class="orig"[^>]*>.*?</(?:\w+)>', body, flags=re.S)]
+            self.assertEqual(marked, [], lg)
+
+    def test_a_catalogue_translation_that_kept_an_italian_formula_gets_the_page_language_formula(self):
+        # the formula is a placeholder of the shareable policy: one translation per passage, the formula localised at render time (never one translation per formula variant)
+        for lg in ("fr", "es", "de"):
+            body = re.sub(r"<script\b.*?</script>|<style\b.*?</style>", "", self.pages[lg], flags=re.S)
+            self.assertNotIn("non incluso in questo pacchetto (", html.unescape(body), lg)
+            self.assertNotIn("un registro del repository", html.unescape(body), lg)
+
+    def test_a_passage_quoting_a_localised_formula_keeps_its_identity_for_the_lookup(self):
+        saved = {k: dict(v) for k, v in rv.TRANS.items()}
+        try:
+            rv.load_translations(DR)
+            rv.CUR["lang"] = "fr"
+            allow = rv.load_allowlist(DR)                                                     # localises the formulas for the page language and records how to undo it for identity
+            self.assertTrue(rv.CUR["unswap"])
+            it_formula, fr_formula = rv.CUR["swaps"][0]
+            source = f"An English passage that quotes {it_formula} inside a sentence."
+            rv.TRANS["fr"]["content"][rv.text_hash(source)] = f"Un passage traduit qui cite {it_formula} dans une phrase."
+            shown = rv.lx(source.replace(it_formula, fr_formula))                             # what the page builder hands over after the policy swap
+            self.assertNotIn('class="orig"', shown)
+            self.assertIn('lang="fr"', shown)
+            self.assertIn(fr_formula, html.unescape(shown))                                   # the redaction formula is the page language's, the placeholder is not lost
+            self.assertNotIn(it_formula, html.unescape(shown))
+            del rv.TRANS["fr"]["content"][rv.text_hash(source)]
+            self.assertIn('class="orig"', rv.lx(source.replace(it_formula, fr_formula)))      # no translation: still flagged, not silently passed off
+        finally:
+            rv.CUR["lang"] = "it"
+            rv.CUR["unswap"] = []
+            rv.CUR["swaps"] = []
+            rv.TRANS.clear()
+            rv.TRANS.update(saved)
+
     def test_an_untranslated_passage_is_flagged_not_passed_off_as_translated(self):
         saved = {k: dict(v) for k, v in rv.TRANS.items()}
         try:
