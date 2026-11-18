@@ -1485,6 +1485,18 @@ class ValueContinuity(Continuous):
         self.assertIn("human check", q["blocked_paths"][0]["blocker"])
         self.assertEqual(q["portfolio_ready"], ["RP-101", "RP-102"])                                         # the rows the queue statement says nothing about
 
+    def test_a_quiet_tick_names_the_ready_rows_in_its_own_why_line(self) -> None:
+        """ADV-047: the 2026-11-18 idle statements followed ticks that said only 'nothing new: the previous assessment stands' while two portfolio rows were ready."""
+        self.blocked_and_portfolio()
+        self.at("2026-11-13T17:00:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")                                      # first tick of the campaign
+        sa.evaluate(self.campaign)
+        self.at("2026-11-13T18:00:00Z")
+        t = sa.tick(self.campaign)
+        self.assertEqual(t["verdict"], "NONE", t["why"])
+        self.assertIn("ready portfolio rows: RP-101, RP-102", t["why"])
+        self.assertIn("nothing new", t["why"])                                                               # the event statement is kept, the scope is added
+
     def test_a_general_hold_over_ready_portfolio_rows_is_refused_and_a_hold_that_names_them_is_not(self) -> None:
         """BEFORE (HE64 code, same fixture): the hold with the reason 'intakes blocked, queue exhausted' was recorded and the next ticks said NONE for as long as ORCH-A stayed blocked."""
         self.blocked_and_portfolio()
