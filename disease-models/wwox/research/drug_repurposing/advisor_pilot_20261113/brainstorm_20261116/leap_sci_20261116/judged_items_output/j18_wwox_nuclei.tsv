@@ -1,0 +1,7 @@
+arm	nuclei_set	n	frac_with_Wwox_UMI	Wwox_CPM
+ctrl	all nuclei	3182	0.3196	110.43
+ctrl	neuron-like (Snap25)	2320	0.3397	100.49
+ctrl	astrocyte-like	395	0.281	192.78
+ko	all nuclei	2920	0.0483	12.25
+ko	neuron-like (Snap25)	2219	0.0536	11.7
+ko	astrocyte-like	396	0.0328	16.76

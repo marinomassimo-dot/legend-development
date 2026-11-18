@@ -1,0 +1,76 @@
+gene	S_line_region	S_ctrl_TPM	S_KO_TPM	S_log2	P47T_region	P47T_log2FC	P47T_95pct_interval	FDR_no_sex	FDR_with_sex	P47T_WT_norm_count	call
+Gabrd	cortex	83.29	36.10	-1.20	CTX	-0.80	-1.21 to -0.39	0.061	0.099	3191.72	copied
+Gabrd	cortex	83.29	36.10	-1.20	PFC	-0.82	-1.40 to -0.23	0.085	0.122	2604.55	copied
+Gabrd	hippocampus	8.52	2.61	-1.67	HPC	-0.93	-1.71 to -0.15	0.345	0.447	1075.05	copied (direction only)
+Gabra5	cortex	13.72	15.90	+0.21	CTX	-0.03	-0.25 to +0.18	0.837	0.876	1494.88	not readable
+Gabra5	cortex	13.72	15.90	+0.21	PFC	-0.09	-0.38 to +0.20	0.629	0.708	1546.60	not readable
+Gabra5	hippocampus	84.15	57.72	-0.54	HPC	-0.19	-0.50 to +0.11	0.464	0.537	6821.60	partly copied (direction only)
+Gabra1	cortex	57.82	47.82	-0.27	CTX	-0.05	-0.32 to +0.23	0.899	0.862	11517.5	not readable
+Gabra1	cortex	57.82	47.82	-0.27	PFC	-0.17	-0.34 to -0.00	0.195	0.223	12825.3	not readable
+Gabra1	hippocampus	67.05	28.64	-1.22	HPC	-0.01	-0.32 to +0.30	0.894	0.974	8581.94	not copied
+Gabrg2	cortex	51.30	52.69	+0.04	CTX	+0.11	-0.12 to +0.35	0.623	0.593	5828.78	not readable
+Gabrg2	cortex	51.30	52.69	+0.04	PFC	-0.09	-0.24 to +0.05	0.356	0.417	5811.65	not readable
+Gabrg2	hippocampus	40.77	32.04	-0.35	HPC	+0.06	-0.09 to +0.20	0.599	0.686	6024.72	not readable
+Slc6a1	cortex	101.46	67.76	-0.58	CTX	-0.12	-0.32 to +0.08	0.708	0.494	16730.2	partly copied (direction only)
+Slc6a1	cortex	101.46	67.76	-0.58	PFC	+0.05	-0.18 to +0.28	0.948	0.794	15873.2	not copied
+Slc6a1	hippocampus	117.91	61.26	-0.94	HPC	-0.07	-0.39 to +0.26	0.744	0.83	14762.4	not copied
+Npy	cortex	474.79	926.35	+0.96	CTX	+1.59	+0.82 to +2.37	0.056	0.092	3531.33	copied
+Npy	cortex	474.79	926.35	+0.96	PFC	+1.12	+0.72 to +1.52	0.015	0.025	3430.13	copied
+Npy	hippocampus	93.69	536.70	+2.52	HPC	+1.80	+0.70 to +2.89	0.321	0.447	2054.30	copied (direction only)
+Npy2r	cortex	0.85	1.36	+0.62	CTX	-0.89	-1.29 to -0.50	0.047	0.077	372.90	opposite
+Npy2r	cortex	0.85	1.36	+0.62	PFC	-0.60	-1.76 to +0.57	0.491	0.513	130.70	not separable
+Npy2r	hippocampus	11.78	6.55	-0.84	HPC	-0.82	-1.80 to +0.15	0.453	0.476	1901.08	copied (direction only)
+Sst	cortex	774.66	1048.39	+0.44	CTX	+0.84	+0.42 to +1.26	0.088	0.098	10418.1	copied
+Sst	cortex	774.66	1048.39	+0.44	PFC	+0.94	+0.52 to +1.36	0.021	0.042	8700.54	copied
+Sst	hippocampus	244.11	605.50	+1.31	HPC	+0.25	-0.19 to +0.68	0.507	0.572	8594.43	not copied
+Pvalb	cortex	90.88	60.37	-0.59	CTX	+0.13	-0.49 to +0.74	0.928	0.838	2738.16	not separable
+Pvalb	cortex	90.88	60.37	-0.59	PFC	+0.00	-0.18 to +0.18	0.989	0.992	2329.81	not copied
+Pvalb	hippocampus	22.18	6.48	-1.76	HPC	-0.04	-0.40 to +0.32	0.983	0.919	1505.61	not copied
+Gad1	cortex	135.84	102.49	-0.41	CTX	+0.27	+0.11 to +0.44	0.088	0.13	16283.0	opposite
+Gad1	cortex	135.84	102.49	-0.41	PFC	+0.22	+0.01 to +0.44	0.181	0.216	14840.0	opposite
+Gad1	hippocampus	161.02	110.46	-0.54	HPC	+0.42	+0.16 to +0.67	0.321	0.447	12203.7	opposite (direction only)
+Grin2b	cortex	33.20	29.51	-0.17	CTX	-0.10	-0.70 to +0.50	0.974	0.869	12627.4	not readable
+Grin2b	cortex	33.20	29.51	-0.17	PFC	+0.02	-0.67 to +0.71	0.941	0.975	12180.0	not readable
+Grin2b	hippocampus	116.10	33.07	-1.81	HPC	-0.16	-0.80 to +0.48	0.712	0.797	15220.7	not copied
+Grin2a	cortex	6.37	5.69	-0.16	CTX	-0.11	-0.41 to +0.18	0.976	0.673	5604.01	not readable
+Grin2a	cortex	6.37	5.69	-0.16	PFC	-0.07	-0.53 to +0.38	0.786	0.855	6314.37	not readable
+Grin2a	hippocampus	17.60	9.34	-0.91	HPC	-0.26	-0.85 to +0.33	0.563	0.652	10207.2	partly copied (direction only)
+Cacna1h	cortex	9.57	8.77	-0.12	CTX	-0.35	-1.08 to +0.38	0.826	0.598	3109.80	not readable
+Cacna1h	cortex	9.57	8.77	-0.12	PFC	-0.14	-0.30 to +0.03	0.332	0.305	2432.02	not readable
+Cacna1h	hippocampus	22.36	16.25	-0.46	HPC	-0.21	-0.63 to +0.21	0.523	0.609	5515.96	partly copied (direction only)
+Cacna1i	cortex	32.20	16.82	-0.93	CTX	-0.71	-1.26 to -0.15	0.348	0.207	4197.41	copied (direction only)
+Cacna1i	cortex	32.20	16.82	-0.93	PFC	-0.49	-0.87 to -0.10	0.102	0.155	4516.27	copied
+Cacna1i	hippocampus	30.34	14.02	-1.11	HPC	-0.48	-1.16 to +0.19	0.441	0.508	2604.14	partly copied (direction only)
+Hcn2	cortex	99.83	62.18	-0.68	CTX	-0.22	-0.76 to +0.32	0.762	0.661	10085.1	partly copied (direction only)
+Hcn2	cortex	99.83	62.18	-0.68	PFC	-0.02	-0.21 to +0.17	0.942	0.93	9306.48	not copied
+Hcn2	hippocampus	38.76	24.64	-0.65	HPC	-0.14	-0.45 to +0.18	0.566	0.654	8579.90	partly copied (direction only)
+Slc12a5	cortex	214.75	136.52	-0.65	CTX	-0.26	-0.59 to +0.07	0.647	0.397	23584.2	partly copied (direction only)
+Slc12a5	cortex	214.75	136.52	-0.65	PFC	-0.12	-0.32 to +0.07	0.348	0.429	25191.5	not copied
+Slc12a5	hippocampus	109.16	74.60	-0.55	HPC	-0.17	-0.55 to +0.21	0.569	0.652	20767.7	partly copied (direction only)
+Slc12a2	cortex	4.92	3.46	-0.49	CTX	-0.36	-0.66 to -0.07	0.191	0.221	2840.77	copied
+Slc12a2	cortex	4.92	3.46	-0.49	PFC	-0.33	-0.55 to -0.11	0.061	0.104	2085.47	copied
+Slc12a2	hippocampus	12.03	5.39	-1.15	HPC	+0.07	-0.27 to +0.42	0.724	0.826	2304.47	not copied
+Kcnk2	cortex	10.45	7.89	-0.40	CTX	-0.45	-0.78 to -0.11	0.167	0.193	3209.48	not readable
+Kcnk2	cortex	10.45	7.89	-0.40	PFC	-0.21	-0.47 to +0.05	0.332	0.312	2470.40	not readable
+Kcnk2	hippocampus	7.14	3.98	-0.83	HPC	-0.57	-0.86 to -0.28	0.321	0.447	2515.97	copied (direction only)
+Kcnq2	cortex	62.94	38.22	-0.72	CTX	+0.28	-0.19 to +0.76	0.502	0.506	17785.1	not separable
+Kcnq2	cortex	62.94	38.22	-0.72	PFC	+0.45	+0.27 to +0.63	0.014	0.032	17011.0	opposite
+Kcnq2	hippocampus	57.43	41.88	-0.45	HPC	+0.06	-0.29 to +0.41	0.939	0.873	21838.8	not copied
+Gja1	cortex	92.03	80.02	-0.20	CTX	-0.48	-0.68 to -0.27	0.042	0.075	10811.0	not readable
+Gja1	cortex	92.03	80.02	-0.20	PFC	-0.22	-0.55 to +0.11	0.351	0.404	8370.80	not readable
+Gja1	hippocampus	445.65	253.03	-0.82	HPC	-0.42	-0.97 to +0.12	0.485	0.489	13080.7	copied (direction only)
+Kcnj10	cortex	90.79	54.34	-0.74	CTX	-0.06	-0.39 to +0.27	0.994	0.862	16044.4	not copied
+Kcnj10	cortex	90.79	54.34	-0.74	PFC	+0.34	-0.06 to +0.75	0.226	0.296	16327.2	not separable
+Kcnj10	hippocampus	61.24	71.10	+0.22	HPC	+0.30	-0.25 to +0.85	0.51	0.584	15754.4	not readable
+Gfap	cortex	429.89	774.97	+0.85	CTX	+0.45	-0.79 to +1.69	0.743	0.693	21854.6	copied (direction only)
+Gfap	cortex	429.89	774.97	+0.85	PFC	+0.55	-0.84 to +1.95	0.53	0.616	13953.3	copied (direction only)
+Gfap	hippocampus	252.38	1096.26	+2.12	HPC	+1.44	-0.31 to +3.20	0.408	0.478	56638.9	copied (direction only)
+Adk	cortex	66.72	68.73	+0.04	CTX	-0.15	-0.41 to +0.10	0.526	0.509	2331.16	not readable
+Adk	cortex	66.72	68.73	+0.04	PFC	-0.18	-0.36 to -0.00	0.178	0.222	2162.19	not readable
+Adk	hippocampus	70.95	52.15	-0.44	HPC	-0.06	-0.32 to +0.21	0.977	0.833	2278.45	not copied
+Adora1	cortex	75.10	69.01	-0.12	CTX	+0.29	-0.04 to +0.62	0.315	0.345	11050.3	not readable
+Adora1	cortex	75.10	69.01	-0.12	PFC	+0.32	-0.21 to +0.84	0.445	0.442	10736.5	not readable
+Adora1	hippocampus	46.32	44.45	-0.06	HPC	-0.13	-0.50 to +0.23	0.67	0.708	14264.1	not readable
+Wwox	cortex	18.83	5.94	-1.65	CTX	+0.03	-0.31 to +0.36	0.986	0.939	864.23	not copied
+Wwox	cortex	18.83	5.94	-1.65	PFC	-0.13	-0.35 to +0.10	0.395	0.465	842.81	not copied
+Wwox	hippocampus	3.37	0.49	-2.56	HPC	-0.16	-0.45 to +0.12	0.487	0.564	672.35	not copied

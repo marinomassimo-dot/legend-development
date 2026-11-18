@@ -1,0 +1,154 @@
+All paths below are under /tmp/legend_cut_1867a26a8/disease-models/wwox/ unless stated. The folder holds a WWOX model. Apart from GABRB2/GABRB3 transcript abundance in WWOX-KO organoids and the E_GABA experiment design, it holds nothing on GABA-A receptor biogenesis. "INSIDE" below therefore means "the folder discusses that mechanism class, for another protein or in WWOX", and a transfer to GABA-A is never "support".
+
+H1. Origin: S1-2 (OUTSIDE)
+- Statement: Selective activation of the ATF6 arm of the unfolded-protein response raises ER folding and export capacity, so EndoH-resistant mutant subunit, surface subunit and GABA-evoked current all increase. It works only if the mutant has a partly foldable intermediate.
+- Corpus test: NOT STATED. Grep for ATF6, calnexin and UGGT returns 0 hits. IRE1/PERK/XBP1 hits are WWOX cell-death readouts only (research/discovery_ledger_current.md:392, :395). The nearest held rule is D-02 at research/dismissal_ledger_current.md:68. It says "misfolded protein → ERAD → chaperone" is true only for ER/secretory proteins. A GABA-A subunit is an ER-synthesised membrane protein, so the corpus's own rule does not exclude an ER-capacity lever. This is a compatible-by-rule reading, not support.
+- Usual reading vs this one: The usual reading is that the mutant is intrinsically unfoldable and only a ligand can help. This reading says raising the host's folding and export capacity is enough.
+- Rejecting observation: ATF6 activation raises BiP and calnexin, but the surface-biotinylated and EndoH-resistant mutant fractions do not change.
+- Discriminating manipulation: ATF6-arm activation (genetic active fragment, or an ATF6-selective small-molecule class) versus IRE1/XBP1s-arm activation.
+  - ATF6 prediction: total mutant subunit ↑, EndoH-resistant ↑, surface ↑, GABA-evoked current ↑ at fixed driving force.
+  - IRE1/XBP1s prediction: it also induces ERAD, so total is flat or ↓, surface is flat, and current is flat.
+
+H2. Origin: S1-7 (OUTSIDE)
+- Statement: The mutant does reach the plasma membrane, but faster clathrin/AP2- and dynamin-dependent endocytosis removes it. The loss is post-ER, and blocking endocytosis raises surface subunit and current.
+- Corpus test: NOT STATED. A search for clathrin, dynamin, endocytosis and AP2 gives 15 raw hits. All are string collisions (MAP2, YAP2, AP-2γ), for example research/deepdive_manifests/PMID31340538.json:85 and research/page_adjudications/PMID16061658/adjudications.json:20. None concerns receptor turnover.
+  - Held lysosomal evidence is for cytosolic WWOX (54 lysosome hits).
+  - The corpus rule "the clearance route must be measured, not assumed" (analysis/proteostasis_rationale.md:97) and the route-splitting arms (LAMP2A vs VPS4 vs bulk; analysis/data/redteam/discriminating_experiment.md:41) are a template, not support.
+- Usual reading vs this one: The usual reading puts the loss at the ER. This one puts it at the plasma membrane, after arrival.
+- Rejecting observation: A surface-biotinylation pulse-chase shows essentially no EndoH-resistant or surface mutant pool at any time. Dynamin/AP2 block then changes nothing.
+- Discriminating manipulation: Acute dynamin/AP2 blockade versus ER-export enhancement (H1). Use a tagged mutant so the effect on wild-type receptors can be excluded.
+  - Genetic blockade: dominant-negative dynamin, or AP2μ2 knockdown.
+  - Under endocytic block: surface ↑ and current ↑ in proportion to functional channels. The EndoH-resistant (post-ER) pool of the mutant is detectable beforehand.
+  - Under H1: surface ↑ with no dependence on endocytosis.
+  - If the loss is ER-based: dynamin block leaves mutant surface and current flat.
+
+H3. Origin: S1-9 (OUTSIDE)
+- Statement: Reduced palmitoylation by Golgi palmitoyl-transferases (ZDHHC3/7, GODZ) limits Golgi export of the mutant. Restoring palmitoylation raises surface subunit and current.
+- Corpus test: NOT STATED. Grep for palmitoyl, ZDHHC, GODZ and depalmitoylase returns 0 hits across disease-models. The rival terms for H2 and H1 also give no contradicting statement. No file contradicts this.
+- Usual reading vs this one: The usual reading treats lipid modification as incidental. This one says it gates Golgi export or surface residence.
+- Rejecting observation: A Cys→Ser palmitoylation-site mutant of the wild-type subunit is exported and sits at the surface normally. ZDHHC overexpression also leaves the mutant's surface fraction unchanged.
+- Discriminating manipulation: ZDHHC3/7 gain (genetic) versus depalmitoylase (APT/ABHD17-class) inhibition. These give the same sign but different stages.
+  - ZDHHC gain: EndoH-resistant fraction ↑, surface ↑, current ↑.
+  - Depalmitoylase block: surface ↑ only through longer residence, the EndoH-resistant fraction is unchanged, and wild-type receptors also rise.
+  - Using the Cys→Ser double mutant shows whether the effect needs the modification site.
+
+H4. Origin: S1-12 (OUTSIDE)
+- Statement: The mutant subunit assembles with wild-type partners and traps them in the ER (dominant-negative). Allele-specific silencing of the mutant releases the wild-type pool, so wild-type-containing surface receptors and current rise.
+- Corpus test: NOT STATED for GABA-A. The only "dominant negative" hit is WWOX-WW-domain specific (research/deepdive_manifests/PMID15070730.json:385). The opposite genetic logic is held for WWOX itself: carriers are healthy, so haploinsufficiency is tolerated (registries/claim_registry_current.md:593, CLAIM 032, "in observation"). That is a gene-specific contrast, not a contradiction of H4.
+- Usual reading vs this one: The usual reading is that loss is confined to the mutant protein (cell-autonomous). This reading says the wild-type partner pool is also lost.
+- Rejecting observation: Co-expression with the mutant does not lower surface wild-type subunit relative to wild-type alone, measured with a differentially tagged wild-type subunit.
+- Discriminating manipulation: Allele-specific silencing of the mutant (ASO/siRNA class) versus wild-type-allele upregulation (H9).
+  - If dominant-negative: silencing raises tagged-WT surface and current toward wild-type, while WT upregulation adds ER-trapped subunit and fails to raise current.
+  - If haploinsufficient: silencing lowers or leaves current flat, and WT upregulation raises it.
+
+H5. Origin: S1-14 (OUTSIDE)
+- Statement: The mutant's defect is mainly in synaptic anchoring (gephyrin, neuroligin-2, LHFPL4, Shisa7), so whole-cell surface subunit is near normal while the synaptic pool is lost. Rescue should therefore depend on cell type (interneuron-targeted versus pyramidal).
+- Corpus test: NOT STATED for scaffolds. Grep for gephyrin, LHFPL, Shisa and neuroligin returns 2 hits, both about NLGN3, and that entry states no WWOX link (research/discovery_ledger_current.md:1442, :1444).
+  - A held analogue separates marker abundance from synaptic output. Interneuron exemplars look alike across genotypes while inhibition onto L2/3 pyramidal neurons is halved (analysis/therapeutic_translation_second_pass.md:349-352).
+  - The same principle is the "MARKER_TO_FUNCTION_GATE" (meta/meta_gaba_paradox_current.md:40).
+  - Outcome: not stated for the lever, with analogue support for splitting synaptic from total.
+- Usual reading vs this one: The usual reading is that total surface subunit is lost. This one says only the synaptic pool is lost.
+- Rejecting observation: The mutant is as absent from the extrasynaptic surface (biotinylation and tonic current) as from synapses.
+- Discriminating manipulation: Gephyrin/NLGN2 gain restricted to interneuron-targeted versus pyramidal-targeted neurons, against ER-export enhancement (H1).
+  - Scaffold gain: whole-cell surface unchanged, synaptic puncta ↑, mIPSC amplitude ↑ (cell-type dependent), and the extrasynaptic isoguvacine-evoked current unchanged.
+  - H1: whole-cell surface ↑ and extrasynaptic current ↑.
+
+H6. Origin: S1-3 (INSIDE)
+- Statement: A ligand-site pharmacological chaperone, washed out before recording, stabilises the folding intermediate and raises surface subunit. Current rises only if the rescued mutant gates.
+- Corpus test: SUPPORT as mechanism class, with explicit limits. The three families (pharmacological chaperone, kinetic stabiliser, proteostasis regulator) are laid out at analysis/proteostasis_rationale.md:53-57. The folder is dense on chaperone logic (90 hits in 15 files).
+  - "Stabilizing ≠ restoring function" is at analysis/proteostasis_rationale.md:96.
+  - Stable-but-inert (P282A) is at research/dismissal_ledger_current.md:70 (D-04).
+  - The ΔΔG recoverability band was retracted (analysis/proteostasis_rationale.md:35).
+  - All of this is WWOX-specific and cytosolic. For GABA-A it is not stated.
+- Usual reading vs this one: The usual reading is that a ligand only changes gating. This one makes ligand binding a biogenesis event. The corpus adds that a stability readout alone cannot count as a rescue.
+- Rejecting observation: A binding-site-dead double mutant that keeps the folding defect is rescued equally, so the effect is not site-specific.
+- Discriminating manipulation: A ligand-site chaperone class with washout versus a gating-only positive allosteric modulator present during recording (rival S1-15).
+  - Chaperone after washout: surface ↑, and current ↑ if gating is intact. If surface rises and current stays flat, the receptor is the GABA-A analogue of stable-but-inert.
+  - PAM, with no washout: surface unchanged, current ↑ only while the drug is present, and it vanishes on washout.
+
+H7. Origin: S1-4 (INSIDE for Hsp70, OUTSIDE for Hsp90)
+- Statement: Hsp90 engagement commits the mutant to degradation, so inhibiting it raises surface subunit and current. Hsp70-axis induction does not rescue and can accelerate loss.
+- Corpus test: SUPPORT for the principle, NOT STATED for Hsp90 and for GABA-A.
+  - Held: "it is a chaperone" does not give the sign. HSC70 delivers the mutant to the lysosome. Arimoclomol was proposed and withdrawn the same day (research/dismissal_ledger_current.md:69, D-03; analysis/mechanism_intervention_map.md:720-723, N-12; research/therapeutic_hypotheses_ledger_current.md:374).
+  - Hsp70/HSC70/arimoclomol hit 76 times in 18 files.
+  - Hsp90 gives 22 raw hits, almost all loading-control labels (research/fulltext_dossiers/PMID21115974.md:170, :186) plus one generic list (therapeutics/therapeutic_strategies_current.md:58).
+- Usual reading vs this one: The usual reading is that chaperones are uniformly pro-folding. The corpus already rejects that. This one adds that Hsp90 specifically commits the mutant to disposal.
+- Rejecting observation: Hsp90 inhibition lowers total and surface mutant.
+- Discriminating manipulation: Hsp90 loss (genetic isoform knockdown with HSF1 held constant, to avoid heat-shock co-induction) versus Hsp70 gain.
+  - Hsp90 loss: total ↑, surface ↑, current ↑.
+  - Hsp70 gain: surface flat or ↓, current flat or ↓. The ER (BiP) arm and the cytosolic arm must be separated.
+
+H8. Origin: S1-6 extended by ENGINE (INSIDE)
+- Statement: Post-ER disposal of the mutant is lysosomal (autophagic, ER-phagy or Golgi-to-lysosome), not proteasomal. Blocking it raises total mutant. Surface and current rise only if the retained pool is export-competent.
+- Corpus test: SUPPORT as design logic. The folder is dense on autophagy/CMA (157 hits in 28 files) and lysosome routes (54 hits in 19 files).
+  - Textbook "ubiquitin → proteasome" is false here (research/dismissal_ledger_current.md:67, D-01).
+  - MG-132 is mute, so lysosome block should be the primary probe and the proteasome the specificity control (analysis/data/redteam/discriminating_experiment.md:38).
+  - Chloroquine cannot tell routes apart; add route-specific arms (same file :41).
+  - ER-phagy, FAM134B and ATG5 give 0 hits.
+  - All held evidence is for cytosolic WWOX (P252A, Zhang 2025). Transfer to a membrane receptor is not stated.
+- Usual reading vs this one: The usual reading is "ERAD, then proteasome". This one says the disposal route must be measured and may be lysosomal.
+- Rejecting observation: Lysosome block and ATG5/FAM134B loss raise neither total nor surface mutant. A proteasome block alone then does.
+- Discriminating manipulation: Lysosomal-proteolysis blockade (acidification/protease-block class), with ATG5 loss versus FAM134B loss to split macroautophagy from ER-phagy, against a proteasome-inhibitor class.
+  - Lysosome block: total ↑, and the EndoH-resistant pool, surface and current ↑ only if the mutant exports.
+  - Proteasome block: ER pool (EndoH-sensitive) ↑, surface flat, current flat.
+
+H9. Origin: S1-11 (INSIDE)
+- Statement: Raising expression of the wild-type allele (promoter/enhancer-directed dCas9 activation) compensates for haploinsufficiency. Surface and current rise in proportion to dose when the wild-type protein itself is processed normally. It fails if partner assembly or post-translational loss is limiting.
+- Corpus test: SUPPORT conditional, in the WWOX domain.
+  - CRISPRa is held as a "future/ESPANSIONE" option for hypomorphic states (registries/working_model_current.md:229; disease_model.md:87).
+  - The partial-restoration threshold is held (registries/claim_registry_current.md:593, CLAIM 032).
+  - Boosting expression is a rejection that holds when the bottleneck is downstream (research/dismissal_ledger_current.md:103, DIS-003). That is the contradict-side warning.
+  - For GABA-A it is not stated.
+- Usual reading vs this one: The usual reading is that a dominant mutant needs allele correction. This one reads the defect as simple dosage.
+- Rejecting observation: Titrated wild-type-allele activation in heterozygous cells gives no current gain (that is H4 or a post-translational bottleneck).
+- Discriminating manipulation: Wild-type-allele-specific activation versus co-expression of the missing partner subunits at fixed wild-type dose (the S1-10 rival).
+  - If dosage-limited: WT activation gives surface ↑ and current ↑ with a graded dose-response, and extra partner adds nothing.
+  - If assembly-limited: partner co-expression rescues and WT activation plateaus.
+
+H10. Origin: ENGINE (held circuit: synthesis-versus-degradation fork)
+- Statement: The missense lowers co-translational folding yield or synthesis, so little receptor is made. No degradation blocker recovers it. Only a biogenesis-stage manipulation raises surface subunit and current.
+- Corpus test: SUPPORT as design structure, NOT STATED for GABA-A.
+  - Johannsen left "impaired translation OR premature degradation" open (analysis/data/redteam/WWOX_Q230P_redteam_report.md:33).
+  - Model M4 is a co-translational folding-yield defect, not post-translational degradation (analysis/data/redteam/discriminating_experiment.md:8).
+  - A cycloheximide chase does not measure synthesis, so nascent synthesis (35S/OP-Puro pulse) is step 1 (same file :45).
+  - DIS-003 (research/dismissal_ledger_current.md:103) records that boosting expression fails when the bottleneck is downstream.
+- Usual reading vs this one: The usual reading is "made, misfolded, then degraded". This one says it is never made efficiently.
+- Rejecting observation: A pulse label shows normal incorporation at time zero, followed by a shortened half-life that proteasome plus lysosome block restores.
+- Discriminating manipulation: A short pulse followed by immunoprecipitation, with and without combined proteasome and lysosome blockade.
+  - If synthesis- or yield-limited: time-zero signal is low, the blocks do not raise total, and surface and current stay flat.
+  - Slowing translation elongation (low temperature, as a diagnostic) then raises folding yield: surface ↑ and current ↑.
+  - If degradation-limited: time zero is normal and the blocks raise total.
+
+Current-measurement note for every block: record isoguvacine-evoked current with gramicidin-perforated patch, and report the reversal potential (E_GABA) and conductance (research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md:127-168). Without that, a change in chloride driving force can mimic a change in surface receptors. The folder also records KCC2 surface biotinylation and phosphorylation as parallel tools (same file, :188-194).
+
+Classification of the 15 stage-1 hypotheses (Grep hits are raw counts in disease-models, *.md)
+- S1-1 ERAD: INSIDE, as a rejection. Hrd1/Sel1L/p97 give 0 specific hits; 5 ERAD-family hits, all about WWOX (research/dismissal_ledger_current.md:68, D-02). Not kept; its rival ER-capacity lever is H1.
+- S1-2 ATF6: OUTSIDE (ATF6 0; 13 UPR-family hits, WWOX cell death). Kept as H1.
+- S1-3 pharmacological chaperone: INSIDE (90 chaperone hits). Kept as H6.
+- S1-4 Hsp70/Hsp90: Hsp70 INSIDE (76 hits), Hsp90 OUTSIDE (22 hits, loading controls). Kept as H7.
+- S1-5 calnexin/UGGT: OUTSIDE (0). Not kept; folded into H1's scope.
+- S1-6 ER-phagy/macroautophagy: autophagy INSIDE (157 hits), ER-phagy/ATG5 OUTSIDE (0). Kept as H8.
+- S1-7 post-surface endocytosis: OUTSIDE (0 relevant of 15 raw). Kept as H2.
+- S1-8 Plic-1/E3 balance: Plic/UBQLN 0 hits; E3 regulated degradation is INSIDE (ubiquitin 143 hits; ACK1/ITCH 247). Not kept; its regulated-degradation logic overlaps S1-13 (research/discovery_ledger_current.md:1050-1064).
+- S1-9 palmitoylation: OUTSIDE (0). Kept as H3.
+- S1-10 partner stoichiometry: OUTSIDE (the only 2 hits are co-IP "stoichiometric" caveats). Retained as the rival in H9's manipulation, not as its own block.
+- S1-11 WT-allele upregulation: INSIDE (CLAIM 032, DIS-003, CRISPRa). Kept as H9.
+- S1-12 dominant-negative trapping: OUTSIDE (0 for GABA-A). Kept as H4.
+- S1-13 kinase regulation: INSIDE for ACK1-Tyr287 phospho-degron (Tyr287 phosphorylation required for degradation; non-phosphorylatable variant not degraded; research/discovery_ledger_current.md:1050). Not kept.
+- S1-14 synaptic scaffolding: OUTSIDE (2 hits, NLGN3 only). Kept as H5.
+- S1-15 PAM bypass: INSIDE for GABA pharmacology caution (analysis/mechanism_intervention_map.md:651, N-04; benzodiazepine/neurosteroid 3 hits). Used as the rival to H6.
+- 5 OUTSIDE items are kept (H1-H5), and 10 hypotheses total are delivered. Of these, 3 are ENGINE or ENGINE-extended (H8, H9, H10 are built on held circuits), and H6 and H7 are INSIDE stage-1 items.
+
+FILES READ:
+/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/set2/T5/S1_B.txt
+/tmp/legend_cut_1867a26a8/CLAUDE.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/proteostasis_rationale.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/data/redteam/discriminating_experiment.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/dismissal_ledger_current.md (lines 55-124)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/meta/meta_gaba_paradox_current.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/therapeutic_translation_second_pass.md (lines 335-379)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md (lines 535-574, 700-739)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/registries/claim_registry_current.md (lines 580-604)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md (lines 60-230)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/discovery_ledger_current.md (lines 1036-1065)
+Located by Grep only (matching lines seen): disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md; disease-models/wwox/analysis/data/redteam/WWOX_Q230P_redteam_report.md; disease-models/wwox/research/fulltext_dossiers/PMID23370280.md; disease-models/wwox/research/commit_candidates/CC-20260826-MTOR-DIRECTION-01.md; disease-models/wwox/research/fulltext_dossiers/PMID21115974.md; disease-models/wwox/therapeutics/therapeutic_strategies_current.md; disease-models/wwox/research/deepdive_manifests/PMID15070730.json; disease-models/wwox/research/deepdive_manifests/PMID31340538.json; disease-models/wwox/research/page_adjudications/PMID16061658/adjudications.json; disease-models/wwox/registries/working_model_current.md; disease-models/wwox/disease_model.md

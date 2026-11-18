@@ -1,0 +1,14 @@
+# Blind extractor: sealed output (IT; non-canonical; not medical advice)
+
+Written for: ADV, SCI (second read of a sample), HE (ledger). Reference genotype class only. The extraction is sealed by the sha256 digests in SEAL.sha256 (extraction.tsv 9defc654...f95c1; counts.tsv 880e4f0a...c7a36) and is committed BEFORE any scoring; IT has not computed a class share from it at the time of this commit.
+
+Extractor: legend-delegate, sonnet-5-5, effort high, not SCI and not IT; released 2026-11-16T08:11:55Z (local commit 2de3487dc; the record on the remote is the cherry-pick). Cost read back from its transcript (session_model_census.py): 38 turns, output 73,560, cache written 257,068, cache read 4,511,879; duration about 9 minutes (harness notice). Output: 206 rows, 11 columns; every locator quote was machine-checked against the bundle files by the extractor (zero misses); IT has not re-checked that.
+
+## What the extractor reports (counts only)
+Attributable seizure outcome stated, children (all rows = excluding the 17 literature-table children): steroid/ACTH 7, ketogenic diet 7, benzodiazepine 4, GABA-A PAM non-benzodiazepine 4, SV2A 3, carbonic-anhydrase/multi-target 3, valproate-type 2, sodium-channel 1, cannabidiol-type 1, T-type 0, AMPA 0; `other` 9 (it holds vigabatrin, vitamin B6/pyridoxine and baclofen: the GABA-AT class must be separated by rows before any share is computed). Development outcome stated: 1 child in total (steroid/ACTH). Worsening statements: 0 in every class (the extractor lists look-alike sentences it did not code). 55 children exposed in all rows (38 excluding the Al Baradie Table 3 literature children).
+
+## Coding choices that the scorer must carry (extractor's own list)
+`n/a` was written in `seizure_outcome_attributable` where no outcome exists (outside the brief's value list; 60 rows with not_stated and n/a). Add-on steps whose sentence attributes the result to the agent are coded `yes`; explicit combination wording is `polytherapy_unattributable`. Control with breakthrough is `partial`; 'controlled' is `resolved`; transient control is `resolved` with the relapse in notes. Vigabatrin is coded `other`; zonisamide and topiramate `carbonic_anhydrase_or_multitarget`. Oliver 2023 (13 children, 83 rows) gives only a drug list per patient: all rows `not_stated`, polytherapy. 30061856 yielded no rows (no WWOX child in the abstract); 36537114 holds 8 delivered chunks only (patients 1-4 narratives missing). Al Baradie Table 3 literature rows carry no outcomes and may overlap other reports (not merged). Grouped rows (3 children in the cannabidiol group, 2 in 41442931) are not counted as children.
+
+## Limits
+Case reports favour successes; one extractor, no blind second read yet (SCI second-reads a sample after the seal); the abstract-only reports are limited to their abstracts; development endpoint has 1 child with a stated outcome, so no development class pair exists.

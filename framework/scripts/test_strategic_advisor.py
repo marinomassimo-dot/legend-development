@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import re
 import ast
 import os
 import stat
@@ -267,6 +268,9 @@ def _git_repo() -> tuple[Path, dict[str, str]]:
 
 
 
+EXCL = "ORCH-A: its intake is blocked on a source that needs a human check"      # a path (a record id) with its actual cause, as a hold now requires
+
+
 def _record(task: str, state: str, extra: dict | None = None) -> dict:
     """A task record the continuity module reads: an OPEN one has a step still to do, a COMPLETE one has its step done with evidence."""
     step = {"step": "work", "status": "TODO" if state == "OPEN" else "DONE", "owner": "x", "evidence": "" if state == "OPEN" else "evidence recorded and verified in full"}
@@ -284,6 +288,213 @@ def _repo_with_records(tmp: Path, records: dict[str, str]) -> Path:
     for cmd in (["git", "init", "-q", "-b", "main"], ["git", "add", "."], ["git", "commit", "-q", "-m", "base"]):
         subprocess.run(cmd, cwd=repo, check=True, capture_output=True, env=env)
     return repo
+
+
+class DirectionBeforeStatus(Base):
+    """Input delivery and ordering only: these fixtures cannot certify strategic judgment."""
+
+    def setUp(self) -> None:
+        super().setUp()
+        self.repo = _repo_with_records(self.tmp, {})
+        self.patches = [patch.object(sa, "ROOT", self.repo),
+                        patch.object(sa, "ROADMAP", self.repo / "disease-models/wwox/research/drug_repurposing/roadmap_current.md"),
+                        patch.object(sa, "STATE_DIR", self.tmp / "state")]
+        for p in self.patches:
+            p.start()
+        self.canonical = self.repo / "framework/protocols/cross_session_transport.md"
+        self.canonical.parent.mkdir(parents=True, exist_ok=True)
+        self.rule = "**Direction before status (fixture).** Choose from the mission and source map, then reconcile the laboratory wait."
+        self.canonical.write_text("# Transport\n\n" + self.rule + "\n\nUnrelated later policy.\n")
+        self.obs = {"events": [], "open_mandates": [], "waits": ["laboratory unavailable"],
+                    "queue": {"exhausted": True}, "sessions": {}, "commits_since_last_tick": 0}
+
+    def tearDown(self) -> None:
+        for p in reversed(self.patches):
+            p.stop()
+        super().tearDown()
+
+    def test_source_map_precedes_operational_wait_and_previous_assessment_without_hiding_them(self) -> None:
+        prior = self.campaign / "P7/assessment.md"
+        prior.parent.mkdir(parents=True)
+        prior.write_text("Earlier decision: wait for a laboratory.")
+        brief = sa.build_brief_p(self.campaign, self.obs)
+        headings = ["## Operator roadmap", "## Direction before status", "## Neutral entry points",
+                    "## Observed state", "## Previous assessment"]
+        positions = [brief.index(h) for h in headings]
+        self.assertEqual(positions, sorted(positions))
+        self.assertIn(self.rule, brief)
+        self.assertIn("laboratory unavailable", brief)
+        self.assertIn(str(prior), brief)
+        self.assertEqual(brief.count("## Neutral entry points"), 1)
+        self.assertEqual(brief.count("Unrelated later policy"), 0)
+        self.assertEqual(sa._attempts(self.campaign), [], "building a brief must not call a model")
+
+    def test_canonical_revision_reaches_next_brief_without_a_second_policy_copy(self) -> None:
+        first = sa.build_brief_p(self.campaign, self.obs)
+        revised = self.rule.replace("Choose from the mission", "Compare a different scientific branch from the mission")
+        self.canonical.write_text("# Transport\n\n" + revised + "\n\nUnrelated later policy.\n")
+        second = sa.build_brief_p(self.campaign, self.obs)
+        self.assertIn(self.rule, first)
+        self.assertIn(revised, second)
+        self.assertNotIn(self.rule, second)
+        self.assertEqual(sa._attempts(self.campaign), [])
+
+    def test_missing_guidance_is_visible_and_does_not_invent_a_strategic_outcome(self) -> None:
+        self.canonical.unlink()
+        brief = sa.build_brief_p(self.campaign, self.obs)
+        self.assertIn("Canonical guidance unavailable", brief)
+        self.assertIn("laboratory unavailable", brief)
+        self.assertEqual(sa.parse_assignments(brief), [])
+        self.assertEqual(sa._attempts(self.campaign), [])
+
+
+class HostDecisions(Base):
+    """Exercise the real host path, not model obedience or scientific judgment."""
+
+    def setUp(self) -> None:
+        super().setUp()
+        self.repo = _repo_with_records(self.tmp, {"ORCH-CLOSED": "COMPLETE"})
+        self.patches = [patch.object(sa, "ROOT", self.repo),
+                        patch.object(sa, "ROADMAP", self.repo / "disease-models/wwox/research/drug_repurposing/roadmap_current.md"),
+                        patch.object(sa, "STATE_DIR", self.tmp / "state"),
+                        patch.object(sa, "_sessions", return_value={"SCI": "idle"}),
+                        patch.dict(os.environ, {"LEGEND_ADVISOR_NOW": "2026-11-17T16:00:00Z"})]
+        for p in self.patches:
+            p.start()
+        self.campaign.mkdir(exist_ok=True)
+        (self.campaign / "budget.json").write_text(json.dumps({"expires_utc": "2026-11-14T00:00:00Z", "max_invocations": 1, "max_assignments": 1}))
+        (self.campaign / sa.CONTINUOUS).write_text(json.dumps({"mode": "continuous", "authorised_utc": "2026-11-14T00:00:00Z"}))
+        self.text = ("## Assignments\n### ASSIGNMENT 1\nkey: next-scientific-question\nrecipient: Science\n"
+                     "question: Which current observation distinguishes the competing mechanisms?\n"
+                     "why_now: the previous result is consumed; the laboratory branch is blocked, this reading is not\n"
+                     "roadmap_link: generation and open questions\nrelated_work: previous case closed\n"
+                     "sources: held original and current question row\ndecision_changed_by_result: choose the next comparison\n"
+                     "perimeter_and_budget: one original-source pass; shared allocation; no spend\n"
+                     "method_autonomy: correct the premise or propose a better method\ndeliver_to: Orchestrator\n"
+                     "duplicate_check: existing owner records checked\n")
+
+    def tearDown(self) -> None:
+        for p in reversed(self.patches):
+            p.stop()
+        super().tearDown()
+
+    def test_host_choice_has_honest_provenance_no_model_or_fake_send_and_no_renewed_budget(self) -> None:
+        frozen_budget = (self.campaign / "budget.json").read_bytes()
+        with patch.object(sa, "run", side_effect=AssertionError("must not call a consultant")):
+            self.assertEqual(sa.host_assign(self.campaign, self.text), 0)
+        self.assertEqual(sa._attempts(self.campaign), [])
+        self.assertEqual((self.campaign / "budget.json").read_bytes(), frozen_budget)
+        rows = sa._events(self.campaign)
+        self.assertEqual([(r["state"], r["origin"]) for r in rows], [("DRAFTED", "host")])
+        self.assertIn("not an independent assessment", (self.campaign / "assignments/ADV-001.md").read_text())
+        self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "DRAFTED")
+        self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["origin"], "host")
+        self.assertNotIn("last_evaluation_utc", sa._load_state(self.campaign))
+        self.assertEqual(sa.host_assign(self.campaign, self.text), 0)
+        self.assertEqual(sum(r["state"] == "DRAFTED" for r in sa._events(self.campaign)), 1)
+
+    def test_a_host_choice_settles_its_event_but_a_later_delivery_remains_actionable(self) -> None:
+        sa.tick(self.campaign)
+        state = sa._load_state(self.campaign)
+        state.update(pending_events=["delivery: abc1234 previous result consumed"], pending_commits=1)
+        sa._save_state(self.campaign, state)
+        self.assertEqual(sa.host_assign(self.campaign, self.text), 0)
+        quiet = sa.tick(self.campaign)
+        self.assertEqual(quiet["verdict"], "NONE")
+        self.assertEqual(sa._load_state(self.campaign)["pending_events"], [])
+        self.assertEqual(quiet["evaluation_clock"]["source"], "recorded host decision (not a model evaluation)")
+        original = sa.observe
+        def delivered(campaign, state):
+            obs = original(campaign, state)
+            obs["events"].append("delivery: def5678 new independent result")
+            return obs
+        with patch.object(sa, "observe", side_effect=delivered):
+            self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
+
+    def test_pause_disable_and_bounded_pilot_cannot_be_bypassed_by_a_host_draft(self) -> None:
+        for refusal in ["operator suspension", "weekly allocation exhausted", "campaign disabled"]:
+            with self.subTest(refusal=refusal), patch.object(sa, "budget_refusal", return_value=refusal):
+                self.assertEqual(sa.host_assign(self.campaign, self.text), 2)
+        (self.campaign / sa.CONTINUOUS).unlink()
+        self.assertEqual(sa.host_assign(self.campaign, self.text), 2)
+        self.assertEqual(sa._events(self.campaign), [])
+
+    def test_a_delivery_arriving_during_registration_is_not_consumed_with_the_old_choice(self) -> None:
+        sa.tick(self.campaign)
+        register = sa.register_assignments
+        def arrived(*args, **kwargs):
+            state = sa._load_state(self.campaign)
+            state["pending_events"] = ["delivery: abc1234 result arriving during registration"]
+            state["pending_commits"] = 1
+            sa._save_state(self.campaign, state)
+            return register(*args, **kwargs)
+        with patch.object(sa, "register_assignments", side_effect=arrived):
+            self.assertEqual(sa.host_assign(self.campaign, self.text), 0)
+        self.assertEqual(sa._load_state(self.campaign)["pending_events"], ["delivery: abc1234 result arriving during registration"])
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
+
+    def test_independent_host_help_does_not_interrupt_or_replace_a_running_consultation(self) -> None:
+        sa._save_state(self.campaign, {"running": "fixture", "pending_events": ["delivery: pending"], "last_outcome": {"evaluation": "P7"}})
+        before = sa._load_state(self.campaign)
+        with patch.object(sa, "_running", return_value=True):
+            self.assertEqual(sa.host_assign(self.campaign, self.text), 0)
+        self.assertEqual(sa._load_state(self.campaign), before)
+        self.assertEqual(sa._events(self.campaign)[0]["origin"], "host")
+
+    def test_current_source_index_deduplicates_history_and_follows_observed_main(self) -> None:
+        rel = "disease-models/wwox/research/result.md"
+        calls = []
+        def git(*args, **kwargs):
+            calls.append(args)
+            if args[:2] == ("diff", "--name-only"):
+                return rel
+            if args[:2] == ("rev-parse", "--verify"):
+                return "current-blob" if args[-1] == "feed1234:" + rel else "stale-blob"
+            if args[0] == "hash-object":
+                return "current-blob"
+            return ""
+        (self.repo / rel).parent.mkdir(parents=True, exist_ok=True)
+        (self.repo / rel).write_text("current consumed result")
+        with patch.object(sa, "_git", side_effect=git):
+            rendered = sa.current_result_sources({"main_sha": "feed1234", "events": ["delivery: abc1234 first result", "delivery: def5678 merged correction"]}, {"repo_sha": "oldhead", "main_ahead": []})
+        self.assertEqual(rendered.count("- `" + rel + "`"), 1)
+        self.assertIn("same bytes readable here", rendered)
+        self.assertIn("Change provenance: abc1234, def5678", rendered)
+        self.assertIn(("diff", "--name-only", "def5678^", "def5678"), calls)
+        self.assertNotIn("DIFFERS OR UNAVAILABLE", rendered)
+
+    def test_removed_current_source_is_not_presented_as_a_live_old_delivery(self) -> None:
+        rel = "disease-models/wwox/research/removed.md"
+        with patch.object(sa, "_git", side_effect=lambda *a, **k: rel if a[0] == "diff" else ""):
+            rendered = sa.current_result_sources({"main_sha": "feed1234", "events": ["delivery: abc1234 old file"]}, {"repo_sha": "feed1234"})
+        self.assertIn("removed at observed main", rendered)
+
+    def test_a_newer_ref_modifying_an_existing_source_is_explicit_even_without_a_new_folder(self) -> None:
+        rel = "disease-models/wwox/research/existing.md"
+        def git(*args, **kwargs):
+            if args[0] == "diff":
+                return rel
+            if args[0] == "rev-parse":
+                return "new-blob" if args[-1].startswith("newtip:") else "old-blob"
+            return ""
+        with patch.object(sa, "_git", side_effect=git):
+            rendered = sa.current_result_sources({"main_sha": "oldtip", "events": []},
+                {"repo_sha": "oldtip", "main_ahead": [{"tip": "newtip", "new_folders": []}]})
+        self.assertIn(rel, rendered)
+        self.assertIn("Newer known ref `newtip`", rendered)
+        self.assertIn("NOT supplied by the observed-main copy", rendered)
+
+    def test_activity_and_canonical_accountability_reach_the_analyst_without_a_launch(self) -> None:
+        path = self.repo / "framework/protocols/cross_session_transport.md"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("### Laboratory ownership (fixture)\n\nThe host owns the programme.\n\n### Next section\nDo not copy this.\n")
+        obs = sa.observe(self.campaign, {})
+        obs["activity"] = {"available": True, "idle_share": "3/4", "idle_over_half": True}
+        brief = sa.build_brief_p(self.campaign, obs)
+        self.assertIn('"idle_share": "3/4"', brief)
+        self.assertIn("The host owns the programme.", brief)
+        self.assertNotIn("Do not copy this.", brief)
+        self.assertEqual(sa._attempts(self.campaign), [])
 
 
 class Proactive(Base):
@@ -680,6 +891,29 @@ class Continuous(Proactive):
         self.assertEqual(sa.main(["authorise-continuous", "--campaign", str(self.campaign), "--source", "x", "--weekly-limit", "5"]), 2)
         self.assertFalse((self.campaign / sa.CONTINUOUS).exists())
 
+    def test_evaluation_usage_is_never_presented_as_the_whole_laboratory_cost(self) -> None:
+        self.authorise()
+        meta = self.campaign / "P1" / "meta.json"
+        meta.parent.mkdir()
+        meta.write_text(json.dumps({"started_utc": "2026-11-13T10:00:00Z",
+            "runtime_readback": {"census": {"totals": {"output": 123, "cache_read": 456}}}}))
+        before = sa._attempts(self.campaign)
+        for allocated in (False, True):
+            if allocated:
+                self.authorise("--weekly-limit", "100000", "--advisor-share", "0.25", "--unit", "output_tokens")
+            week = sa.weekly_state(self.campaign)
+            self.assertEqual(week["measured_7d"], {"evaluations": 1, "output_tokens": 123, "cache_read_tokens": 456})
+            for text in (week["measurement_scope"], sa.operating_mode_text(self.campaign), sa.status(self.campaign)):
+                self.assertIn("excludes the ADV hosting session", text)
+                self.assertIn("Unmeasured work is not zero-cost", text)
+                self.assertIn("remaining account quota", text)
+            if allocated:
+                self.assertEqual(week["advisor_spent"], 123)
+                self.assertEqual(week["advisor_cap"], 25000)
+            else:
+                self.assertEqual(week["state"], "unset")
+        self.assertEqual(sa._attempts(self.campaign), before, "scope disclosure does not launch a model or renew a budget")
+
 
     # ---- HE64: a hold recorded by the host, without a model run -------------------------------------------------------------------------------------------------------------------------------
 
@@ -707,7 +941,7 @@ class Continuous(Proactive):
         meeting = sa._state_path(self.campaign).with_name("meeting.json")
         meeting_before = meeting.read_bytes() if meeting.exists() else None
         self.at("2026-11-13T17:00:00Z")
-        self.assertEqual(sa.main(["hold", "--campaign", str(self.campaign), "--reason", "both intakes blocked, queue exhausted", "--resume-when", "record:ORCH-A=COMPLETE"]), 0)
+        self.assertEqual(sa.main(["hold", "--campaign", str(self.campaign), "--reason", "both intakes blocked, queue exhausted", "--resume-when", "record:ORCH-A=COMPLETE", "--excluded", EXCL]), 0)
         rows = [json.loads(line) for line in (self.campaign / "holds.jsonl").read_text(encoding="utf-8").splitlines()]
         self.assertEqual(len(rows), 1)
         self.assertTrue(any("SCI70 record COMPLETE" in e for e in rows[0]["events_cleared"]), rows[0])        # nothing silently discarded: the cleared events are in the record
@@ -727,7 +961,7 @@ class Continuous(Proactive):
     def test_a_new_event_after_a_hold_re_fires_within_the_hour(self) -> None:
         self.held_campaign()
         self.at("2026-11-13T17:00:00Z")
-        self.assertEqual(sa.main(["hold", "--campaign", str(self.campaign), "--reason", "waiting for the intake record", "--resume-when", "record:ORCH-A=COMPLETE"]), 0)
+        self.assertEqual(sa.main(["hold", "--campaign", str(self.campaign), "--reason", "waiting for the intake record", "--resume-when", "record:ORCH-A=COMPLETE", "--excluded", EXCL]), 0)
         self.at("2026-11-13T17:30:00Z")
         self.land("SCI71 record COMPLETE; package delivered")
         new = sa.tick(self.campaign)
@@ -738,8 +972,8 @@ class Continuous(Proactive):
     def test_a_hold_ends_at_its_resume_condition(self) -> None:
         self.held_campaign()
         self.at("2026-11-13T17:00:00Z")
-        self.assertEqual(sa.main(["hold", "--campaign", str(self.campaign), "--reason", "waiting for ORCH-A", "--resume-when", "record:ORCH-A=COMPLETE"]), 0)
-        self.at("2026-11-13T22:00:00Z")
+        self.assertEqual(sa.main(["hold", "--campaign", str(self.campaign), "--reason", "waiting for ORCH-A", "--resume-when", "record:ORCH-A=COMPLETE", "--excluded", EXCL]), 0)
+        self.at("2026-11-13T20:00:00Z")                                                                       # three hours after the hold: still inside min_hours_between
         self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")
         (self.repo / "ledger/tasks/orchestrator/ORCH-A.json").write_text(json.dumps(_record("ORCH-A", "COMPLETE")), encoding="utf-8")
         self.at("2026-11-13T23:00:00Z")
@@ -748,7 +982,7 @@ class Continuous(Proactive):
     def test_a_hold_is_refused_without_a_reason_an_external_form_a_pending_event_or_while_an_evaluation_runs(self) -> None:
         def attempt(reason: str, resume: str) -> int:
             with patch("sys.stderr", new=__import__("io").StringIO()):
-                return sa.main(["hold", "--campaign", str(self.campaign), "--reason", reason, "--resume-when", resume])
+                return sa.main(["hold", "--campaign", str(self.campaign), "--reason", reason, "--resume-when", resume, "--excluded", EXCL])
         self.authorise()
         self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
         sa.evaluate(self.campaign)
@@ -772,7 +1006,7 @@ class Continuous(Proactive):
         before = sorted((p.as_posix(), p.stat().st_mtime_ns) for p in real.rglob("*") if p.is_file()) if real.exists() else []
         self.held_campaign()
         self.at("2026-11-13T17:00:00Z")
-        sa.main(["hold", "--campaign", str(self.campaign), "--reason", "r", "--resume-when", "record:ORCH-A=COMPLETE"])
+        sa.main(["hold", "--campaign", str(self.campaign), "--reason", "r", "--resume-when", "record:ORCH-A=COMPLETE", "--excluded", EXCL])
         after = sorted((p.as_posix(), p.stat().st_mtime_ns) for p in real.rglob("*") if p.is_file()) if real.exists() else []
         self.assertEqual(before, after)
 
@@ -919,8 +1153,26 @@ class ValueContinuity(Continuous):
         commit(f"{base}/assignments/ADV-001.md", "ADV draft delivered")
         commit("ledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-X.json", "ADV record COMPLETE")
         self.assertEqual(sa.observe(inside, state)["events"], [])           # three commits that match the delivery pattern, all the advisor's own
+        (self.repo / "disease-models/wwox/research/drug_repurposing/deepening_adv_x").mkdir(parents=True, exist_ok=True)
+        commit("disease-models/wwox/research/drug_repurposing/research_portfolio.tsv", "ADV: evaluation P9 recorded (assign; delivered to IT)")
+        commit("disease-models/wwox/research/drug_repurposing/deepening_adv_x/IDEAS_ORDER_DREAM5_ADV.md", "ADV: DREAM-5 update (R4 consumed)")
+        self.assertEqual([e for e in sa.observe(inside, state)["events"] if e.startswith("delivery:")], [])   # HE95: the portfolio update and the DREAM note an evaluation leaves are the advisor's own too
         commit(f"{base}/ADV-002_result.md", "HE result delivered")
         self.assertEqual(len([e for e in sa.observe(inside, state)["events"] if e.startswith("delivery:")]), 1)
+        commit(f"{base}/ADV-003_brief.md", "ADV: evaluation P10 recorded (delivered); brief file touched")
+        self.assertEqual(len([e for e in sa.observe(inside, state)["events"] if e.startswith("delivery:")]), 2)   # a commit that also touches a file outside the advisor's own still counts
+
+    def test_the_assignment_render_names_each_mandate_once_and_loses_no_field(self) -> None:
+        """HE95: the compact render keeps every assignment's recipient, key, origin, evidence level and mandates, and each mandate's verdict and path once."""
+        states = {"ADV-001": {"recipient": "Science", "key": "k1", "origin": "assessment", "highest": "EXECUTED",
+                              "mandates": [{"task": "T-A", "verdict": "RELEASED", "path": "ledger/tasks/plan/T-A.json"}, {"task": "T-B", "verdict": "OPEN", "path": "ledger/tasks/plan/T-B.json"}]},
+                  "ADV-002": {"recipient": "Harness", "key": "k2", "highest": "SENT", "mandates": [{"task": "T-A", "verdict": "RELEASED", "path": "ledger/tasks/plan/T-A.json"}]}}
+        text = sa.render_assignment_states(states)
+        for needle in ("ADV-001", "ADV-002", "Science", "Harness", "k1", "k2", "EXECUTED", "SENT", "T-A", "T-B", "RELEASED", "OPEN", "ledger/tasks/plan/T-A.json", "ledger/tasks/plan/T-B.json"):
+            self.assertIn(needle, text)
+        self.assertEqual(text.count("ledger/tasks/plan/T-A.json"), 1)         # named once, referenced by id under each assignment
+        self.assertIn('"origin": "assessment"', text)                           # an absent origin reads as assessment, as before
+        self.assertEqual(sa.render_assignment_states({}), "none")
 
     def test_session_activity_shows_who_is_idle_and_for_how_long(self) -> None:
         """HE60: the idle share and each session's quiet time come from the runtime and the transcript mtime, only for this repository's sessions."""
@@ -1204,6 +1456,142 @@ class ValueContinuity(Continuous):
         self.assertTrue(result["queue"]["exhausted"])
         self.assertEqual(result["verdict"], "DEFERRED")
         self.assertEqual(len({(a["stage"], a["index"]) for a in sa._attempts(self.campaign)}), 1)
+
+
+    # ---- 2026-11-16: a blocked path is not a blocked portfolio ---------------------------------------------------------------------------------------------------------------------------------
+    # The observed case: two intakes blocked, `exhausted` true because it reads task records only, a general hold or wait recorded, and the portfolio holding ready rows that nobody named
+    # (the 13:21Z closing: nine rows ready, five waiting, five backlog; every session answered 'nothing queued, awaiting X').
+
+    def portfolio_rows(self, *rows: tuple[str, str]) -> None:
+        path = sa.ROOT / sa.PORTFOLIO_REL
+        path.parent.mkdir(parents=True, exist_ok=True)
+        lines = ["\t".join(sa.PORTFOLIO_FIELDS)] + ["\t".join({"id": i, "opportunity": f"opportunity {i}", "status": st, "priority": "1", "resume_when": "record:ORCH-A=COMPLETE" if st == "waiting" else ""}.get(f, "") for f in sa.PORTFOLIO_FIELDS) for i, st in rows]
+        path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    def blocked_and_portfolio(self) -> None:
+        """Both written mandates blocked (the intakes), the portfolio with two ready rows and one waiting row."""
+        self.held_campaign()
+        self.write_waiting("ORCH-A", "the human check of the source pages", other_step="DONE")
+        self.portfolio_rows(("RP-101", "ready"), ("RP-102", "ready"), ("RP-103", "waiting"))
+
+    def test_the_tick_never_shows_exhausted_without_its_scope_and_the_blocked_paths(self) -> None:
+        self.blocked_and_portfolio()
+        self.at("2026-11-13T17:00:00Z")
+        t = sa.tick(self.campaign)
+        q = t["queue"]
+        self.assertTrue(q["exhausted"])                                                                      # kept for compatibility
+        self.assertEqual(q["scope"], "written executable tasks only; not a statement about the portfolio")
+        self.assertEqual([b["task"] for b in q["blocked_paths"]], ["ORCH-A"])
+        self.assertIn("human check", q["blocked_paths"][0]["blocker"])
+        self.assertEqual(q["portfolio_ready"], ["RP-101", "RP-102"])                                         # the rows the queue statement says nothing about
+
+    def test_a_general_hold_over_ready_portfolio_rows_is_refused_and_a_hold_that_names_them_is_not(self) -> None:
+        """BEFORE (HE64 code, same fixture): the hold with the reason 'intakes blocked, queue exhausted' was recorded and the next ticks said NONE for as long as ORCH-A stayed blocked."""
+        self.blocked_and_portfolio()
+        self.at("2026-11-13T17:00:00Z")
+        with patch("sys.stderr", new=__import__("io").StringIO()) as err:
+            rc = sa.main(["hold", "--campaign", str(self.campaign), "--reason", "intake blocked, queue exhausted", "--resume-when", "record:ORCH-A=COMPLETE", "--excluded", EXCL])
+        self.assertEqual(rc, 2)
+        self.assertIn("RP-101", err.getvalue()); self.assertIn("A blocked path is not a blocked portfolio", err.getvalue())
+        self.assertFalse((self.campaign / "holds.jsonl").exists())
+        with patch("sys.stderr", new=__import__("io").StringIO()) as err2:
+            self.assertEqual(sa.main(["hold", "--campaign", str(self.campaign), "--reason", "waiting", "--resume-when", "record:ORCH-A=COMPLETE", "--excluded", "no path here, only prose"]), 2)
+        self.assertIn("--excluded", err2.getvalue())                                                        # a hold that names no path is a general wait
+        ok = sa.main(["hold", "--campaign", str(self.campaign), "--reason", "ORCH-A blocked; RP-101 needs ORCH-A's result, RP-102 needs the same source check", "--resume-when", "record:ORCH-A=COMPLETE",
+                      "--excluded", "ORCH-A: source pages need a human check; RP-101 and RP-102: both read those pages"])
+        self.assertEqual(ok, 0)                                                                              # a considered wait is still allowed
+        row = json.loads((self.campaign / "holds.jsonl").read_text(encoding="utf-8").splitlines()[0])
+        self.assertIn("RP-102", row["excluded"])
+        self.at("2026-11-13T18:00:00Z")
+        quiet = sa.tick(self.campaign)
+        self.assertEqual(quiet["verdict"], "NONE")
+        self.assertIn("excluded paths: ORCH-A: source pages need a human check", quiet["presidio"])
+        self.assertNotIn("NOT A VALID GENERAL WAIT", quiet["presidio"])
+
+    def test_a_hold_lapses_at_min_hours_between_instead_of_silencing_the_ticks_all_night(self) -> None:
+        """The overnight 22:55-04:22Z run of NONE verdicts under a host hold: six hours, no comparison. After the change the hold answers NONE for min_hours_between (4 h) and then EVALUATE with its excluded paths."""
+        self.held_campaign()
+        self.portfolio_rows(("RP-201", "waiting"))
+        self.at("2026-11-13T17:00:00Z")
+        self.assertEqual(sa.main(["hold", "--campaign", str(self.campaign), "--reason", "waiting for ORCH-A", "--resume-when", "record:ORCH-A=COMPLETE", "--excluded", EXCL]), 0)
+        verdicts = []
+        for hour in range(18, 24):
+            self.at(f"2026-11-13T{hour}:00:00Z")
+            verdicts.append(sa.tick(self.campaign)["verdict"])
+        self.assertEqual(verdicts[:3], ["NONE", "NONE", "NONE"])                                             # 18, 19, 20: inside the 4 hours
+        self.assertEqual(verdicts[3], "EVALUATE")                                                           # 21:00: the hold lapsed
+        self.at("2026-11-13T21:00:00Z")
+        lapsed = sa.tick(self.campaign)
+        self.assertIn("hold lapsed", lapsed["why"]); self.assertIn("ORCH-A", lapsed["why"])
+
+    def test_a_stated_wait_that_leaves_out_ready_rows_is_asked_once_per_portfolio_state(self) -> None:
+        self.started()
+        self.evaluate_with(self.WAIT % "record:ORCH-A=COMPLETE")
+        self.at("2026-11-13T15:00:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")                                          # no portfolio rows: the old behaviour, unchanged
+        self.portfolio_rows(("RP-301", "ready"))
+        st = sa._load_state(self.campaign); st["portfolio_digest"] = sa.portfolio_snapshot()["digest"]; sa._save_state(self.campaign, st)      # a wait saved BEFORE this rule, with the portfolio already consumed (a new row alone is already an event): the real P16-era state
+        self.at("2026-11-13T16:00:00Z")
+        first = sa.tick(self.campaign)
+        self.assertEqual(first["verdict"], "EVALUATE"); self.assertIn("RP-301", first["why"])
+        self.at("2026-11-13T17:00:00Z")
+        again = sa.tick(self.campaign)
+        self.assertEqual(again["verdict"], "NONE")                                                          # asked once for this portfolio state, not every hour
+        self.assertIn("NOT A VALID GENERAL WAIT", again["presidio"])                                         # and the presidio line says so
+
+    def test_an_evaluation_cannot_state_a_wait_that_does_not_name_the_ready_rows(self) -> None:
+        self.started()
+        self.portfolio_rows(("RP-401", "ready"))
+        self.evaluate_with(self.WAIT % "record:ORCH-A=COMPLETE")
+        last = sa._load_state(self.campaign)["last_outcome"]
+        self.assertFalse(last["stated"]); self.assertIn("RP-401", last["problem"])
+        self.at("2026-11-13T17:00:00Z")
+        self.evaluate_with("outcome: wait|excluded: RP-401 needs the lever result that ORCH-A has not delivered|reason: RP-401 is the only ready row and it depends on ORCH-A|resume_when: record:ORCH-A=COMPLETE")
+        self.assertTrue(sa._load_state(self.campaign)["last_outcome"]["stated"])                             # a wait that names the row and its cause is kept
+        self.at("2026-11-13T18:00:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")
+
+    def test_the_operator_pause_and_real_waits_are_not_touched(self) -> None:
+        self.started()
+        self.portfolio_rows(("RP-501", "ready"))
+        self.roadmap("PAUSE: science \u2014 hold the SCI reading packages")
+        self.at("2026-11-13T17:00:00Z")
+        self.assertIn("PAUSE: science", " ".join(sa.tick(self.campaign)["operator_controls"]))              # an operator pause is still shown and honoured as before
+        self.portfolio_rows(("RP-502", "waiting"), ("RP-503", "backlog"))                                    # no ready row: a general wait is allowed
+        self.roadmap()
+        self.evaluate_with(self.WAIT % "record:ORCH-A=COMPLETE")
+        self.assertTrue(sa._load_state(self.campaign)["last_outcome"]["stated"])
+
+    def test_the_run_folder_is_assembled_outside_the_checkout_and_moved_in_one_step(self) -> None:
+        self.authorise()
+        seen = []
+        real = os.replace
+        def spy(src, dst, *a, **k):
+            if Path(dst).parent.name == "P1" and Path(dst).parent.parent == self.campaign:
+                seen.append(sorted(x.name for x in (self.campaign / "P1").iterdir()))                       # what the shared folder holds just before each move
+            return real(src, dst, *a, **k)
+        with patch.object(sa.os, "replace", side_effect=spy):
+            self.assertEqual(sa.evaluate(self.campaign), 0)
+        self.assertTrue(seen and seen[0] == [], seen)                                                        # nothing was written into the campaign folder before the final move
+        self.assertTrue((self.campaign / "P1/assessment.md").exists() and (self.campaign / "P1/meta.json").exists() and (self.campaign / "P1/brief.md").exists())
+        self.assertFalse((sa.STATE_DIR / "runs" / f"{self.campaign.name}-P1").exists())                     # the spool is gone
+
+    def test_the_recall_text_carries_the_clause_and_there_is_one_canonical_text(self) -> None:
+        text = sa.recall_prompt(self.campaign)
+        self.assertIn("a blocked path is not a blocked portfolio", text)
+        self.assertIn("an EVALUATE left unrun needs its excluded paths and a resume condition", text)
+        self.assertEqual(text.count(sa.RECALL_MARK), 1)
+        tag = re.search(r"\[text ([0-9a-f]{8})\]", text)
+        self.assertTrue(tag and text.index(tag.group(0)) < 120, "the digest tag must sit where CronList shows the prompt")
+        self.assertEqual(tag.group(1), sa.recall_digest(text.replace(" " + tag.group(0), "", 1).replace(str(sa.ROOT), "<root>")))      # eight hex digits of the text without the tag, the path as a placeholder
+        saved_root, sa.ROOT = sa.ROOT, Path("/somewhere/else/checkout")
+        try:
+            elsewhere = re.search(r"\[text ([0-9a-f]{8})\]", sa.recall_prompt(self.campaign)).group(1)
+        finally:
+            sa.ROOT = saved_root
+        self.assertEqual(elsewhere, tag.group(1))                                                           # the same text gives the same tag in any checkout (the 2026-11-16 mismatch: 047a03cd against b00417e1)
+        drifted = sa.RECALL_PROMPT.replace("The ordinary verdict NONE does not cancel a due meeting. ", "")      # the 2026-11-16 drift: the meeting sentence was missing from the installed job
+        self.assertNotEqual(sa.recall_digest(drifted.format(root=sa.ROOT, campaign=self.campaign)), tag.group(1))
 
 
 class LivingPortfolio(Base):

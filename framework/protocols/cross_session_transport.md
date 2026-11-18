@@ -603,6 +603,8 @@ For ADV, an item addressed to Plan/Harness, Science or nobody is still a strateg
 
 **Strategic synthesis is executable work (operator correction, 2026-11-15).** The operator supplies long-term direction and may intervene by integration, a new roadmap, urgency or stop; ordinary assignments do not wait for the operator to return. ADV maintains the pipeline from that direction to a concrete question, research, consumption in drug repurposing and the next choice. "Too broad" or "no named decision yet" identifies planning work: select a source-backed slice, formulate a testable question, or ask the Orchestrator to choose the best case with methodological autonomy. A distant trial report is reporting work alongside this pipeline, not a reservation of all sessions' capacity. A delivery from nobody currently working is not an expected event. Before relying on a mandate's state, open its current record; the existence of a file or a historical TAKEN receipt does not establish work still in flight.
 
+**Direction before status (operator correction, 2026-11-16).** At a strategic decision boundary, the ADV host and its read-only analyst first frame the next useful gain from the operator's long-term roadmap and the scientific source map: what capability or uncertainty limits that gain, and whether deeper work, another branch or a changed method has greater marginal value. Form that provisional view before adopting participants' conclusions or the previous assessment; their reports remain evidence to inspect, not the set of allowed choices. Then reconcile the view with current results, live ownership, dependencies, resources and competing explanations, retaining or revising it with reasons. This is a reasoning order within the existing assessment and MEETING, not another invocation, compulsory report or approval. A completed task, an empty READY list, no new papers, an inconclusive benchmark or a missing laboratory does not establish that other discovery is exhausted. A broad opportunity may need a question formulated before it can be assigned. Keep hypothetical mechanisms distinct from evidence, and distinguish useful hypothesis development from independent validation. Use the existing principal decision, alternatives and outcome to explain the choice and follow its actual consumer. Reuse a still-valid direction, allow supported waits and deprioritisation, preserve current work, and impose no novelty, utilisation or all-tools quota. This perspective is not blind to the supplied context and does not claim to clone another model's judgment.
+
 The portfolio supplies complementary ways forward, selected by expected scientific value rather than a duty to exercise every tool:
 
 * **Generate and compare:** develop rival mechanisms, qualified pharmacological contrasts and rejectable experimental hypotheses; reconnect held but unused relations to a real consumer. Separate discovery from promotion and measure added value over the existing or a simple baseline.
@@ -613,6 +615,8 @@ The portfolio supplies complementary ways forward, selected by expected scientif
 
 A wet-lab dependency suspends the dependent branch, not the laboratory. When these routes contain a useful reachable step, prepare or assign it within shared resources and follow its result to the consumer; do not wait for another operator prompt. Delivery and completion messages are decision boundaries: use a still-valid direction or prepare the next step in that turn; the hourly recall is a backstop, not the only occasion to act. A whole-portfolio wait remains valid for a supported resource limit, a reserved act without an alternative, or an actual absence of useful reachable work after proportionate exploration. Its evidence names the excluded paths and a real resumption condition. Unmeasured quota, operator absence, review preparation hours away and a broad backlog are not evidence of such a constraint. No fixed task count, utilisation quota, mandatory all-input reread or new approval is introduced.
 
+**A local wait is not exhaustion; compare at every significant closing (operator, 2026-11-16).** On 2026-11-16 a set of local waits (blocked sources, a mandate with only blocked steps, an empty written queue, a hold decided by hand) was read as exhaustion of the possible scientific work; after the operator's intervention useful work appeared on the same materials. The rule, once: a blocked source, an experiment that needs a laboratory, or a benchmark that cannot be evaluated stops **that path**; the other authorised paths are evaluated separately, and finding a laboratory or an operator answer is never a general prerequisite for continuing authorised research. Continuous operation is the standing authorisation of `CONTINUOUS.json` and the roadmap; a trial's recommendation to 'extend to 48-72 hours' is closed by it and needs no further grant. At every significant closing (a MEETING, a round of deliveries, a consumed result, a set of dossiers) ADV: (1) checks what was really consumed and which decision it changes; (2) compares the marginal value of deepening the current thread with other roadmap opportunities; (3) looks, proportionately, at the existing inputs (dashboard and source records, open questions, candidates, held-but-unused knowledge, DREAM, radars, reading gaps), not every one at every closing; (4) turns a broad opportunity into an executable question even when nobody wrote a task; (5) assigns the follow-up to the effective recipient (`mandate_watch.py route`) and verifies take-in-charge and result. A wait remains a valid decision when it names the blocked path, the alternatives compared and a real resumption condition; there is no duty to keep every session busy or to consume a set duration. The same holds for a `hold` and for an `EVALUATE` left unrun: the excluded paths and the resume condition are written, and the choice is revisited at the ordinary cadence, not at the next prompt.
+
 **Monitor and help; do not only direct (operator, 2026-11-15, permanent and durable; not tied to a prompt).** Giving directives is not enough: the presidio also reads the execution and helps a session that is stuck. *Monitoring* is reading the real state at every recall and every delivery: the tick's `activity` block (each session's status and minutes quiet, the idle share, minutes since the last commit on `main`), the open records and their awaited events, and the latest commits; a tick verdict alone does not show it. An idle share above half without a written reason is a prompt to send, not a quiet verdict; a wait stays valid only with its reason, the awaited event and a check that the event has not already occurred. *Helping* is bounded: find what blocks a session (a record waiting for an answer that already exists, a stale premise, a missing input, a duplicate, an access state), supply the input or route it to its owner, correct the presidio's own wrong premise, or take a bounded step inside the presidio's own role; the recipient's method stays the recipient's. *A role is addressed only if it is live*: `mandate_watch.py route --to <role>` first; where it does not resolve (today Mirror), say so and keep a conditional request in the portfolio with its resume condition rather than recording a send that did not happen. Git cannot attribute activity to an actor (one author), so the `activity` block comes from the runtime's session list and each transcript's last-write time; a session quiet for a day is listed and not counted.
 
 * **Two decisions, kept apart.** (1) A result is delivered and consumed (the existing loop). (2) A decision on where to invest next, taken even when nothing new arrived. The second is not an automatic consequence of the first, and it is not skipped because the first is finished.
@@ -621,7 +625,62 @@ A wet-lab dependency suspends the dependent branch, not the laboratory. When the
 * **Allowed outcomes:** continue; switch thread; assign independent work; queue a conditional follow-up; wait with a reason. A wait names the relevant alternatives it excluded and why, and its **resume condition**: an event, a record reaching a state, a file holding a text, or a time. Without that, the wait is a stop that nothing resumes.
 * **No repeated evaluation.** A recall reuses an evaluation that is still valid: the same situation is not re-evaluated at cost, an update the evaluator itself wrote is not an event, and a draft already queued or taken in charge is not drafted again. A new result, a met resume condition or a change that bears on the earlier choice reconsiders it.
 * **What still binds.** Operator pauses, the real limits of the resources, the reserved acts of §21d, scientific constraints and real dependencies. Work is not invented to keep sessions busy; success is a useful decision followed by pertinent work, or useless work avoided for a reason that can be checked.
-* **Where it is implemented.** `framework/scripts/strategic_advisor.py`: the evaluation ends with an `## Outcome` block (`outcome`, `excluded`, `reason`, `resume_when`), the hourly tick reads it (a met `resume_when`, or an evaluation that left no outcome while the executable queue is exhausted, calls one evaluation; a stated wait does not), and the brief carries the principle. The procedure is in the Advisor's definition and skill.
+* **Where it is implemented.** `framework/scripts/strategic_advisor.py`: the evaluation ends with an `## Outcome` block (`outcome`, `excluded`, `reason`, `resume_when`), the hourly tick reads it (a met `resume_when`, or an evaluation that left no outcome while the executable queue is exhausted, calls one evaluation; a stated wait does not), and the brief carries the principle. The procedure is in the Advisor's definition and skill. Since 2026-11-16 (a blocked path is not a blocked portfolio): `queue` states its `scope` and its `blocked_paths`; `hold` needs `--excluded` (paths with their cause), is refused while ready portfolio rows are unnamed and lapses at `min_hours_between`; a stated wait names every ready row it leaves out; the recall text carries a path-independent `[text xxxxxxxx]` tag that the installed job must show.
+
+### Laboratory ownership — ADV is accountable for the programme (operator, 2026-11-17)
+
+**ADV is the final accountable owner of the laboratory's overall performance:** pace,
+continuity, useful throughput, efficiency, scientific quality, depth and breadth, strategic
+direction, generative research, development of candidates and open questions, and use of the
+shared allocation. It detects shortcomings, diagnoses their causes, acts or routes the remedy,
+and checks the effect. A completed recall, meeting, report or dispatch does not discharge that
+responsibility. Orchestrator retains operational coordination; Scientists retain methodological
+autonomy and authority over what the evidence supports; Harness owns implementation. ADV must
+help these roles succeed, not prescribe their conclusions or assume control of their processes.
+
+**Own a continuing research programme, not only the last assignment.** At a meaningful result
+or closure, keep the programme's question, actual frontier, relevant alternatives and next
+attainable scientific gain current in the existing roadmap, portfolio and mandate notes.
+Use dashboard source records, promising candidates, unresolved questions, unread WWOX and
+transferable literature, DREAM associations, radars, tool use and measured harness obstacles
+proportionately. Convert a broad opportunity into a first executable question or give
+Orchestrator the bounded selection work. A future meeting may improve that choice; its date
+does not reserve idle capacity. Plan a useful independent or conditional continuation during
+long waits when its expected value justifies the shared cost. Reuse a sound direction rather
+than commission a new assessment merely to demonstrate activity.
+
+**The ADV host decides and follows through; the read-only analyst is a consultant.** Inside
+the existing continuous authorisation the host may register its own assignment through
+`strategic_advisor.py assign --campaign <DIR> --text-file <FILE>`, using the same assignment
+blocks, duplicate checks, recipients and delivery receipts as a consulted assessment. This is
+labelled a host decision, never an independent review. It launches no model and makes no send;
+the host delivers through the supported channel, verifies acceptance, helps with real blocks,
+and follows the result into its consumer and the next investment choice. Consult a separate
+analyst when another perspective can change that choice, not as permission to proceed.
+
+**Explore freely; qualify what is supported.** Distinguish an unreliable source, an immature
+hypothesis, a low-value direction parked for now, and an explanation contradicted by a relevant
+test. A failed case does not exhaust its literature pool or neighbouring mechanisms. Discovery
+may create a new question; an existing INV citation is not admission to exploration. Hypotheses
+retain unresolved premises, rival explanations and rejecting observations. Do not promote a
+candidate or scientific claim merely to meet a productivity target; equally, do not apply
+confirmation criteria as an automatic veto on developing an idea. Deferring an idea for low
+marginal value is allowed without calling it refuted.
+
+**Spend for useful progress.** Available capacity left unused while valuable, authorised work
+is reachable is an opportunity cost ADV must address. Token exhaustion is not a goal, and one
+thread must not starve the others. Compare the full incremental cost, including coordinator
+tokens, with simpler alternatives; no external spend is authorised here. Unknown quota stays
+unknown, not a reason to stop or a licence to assume unlimited capacity. Resources, operator
+controls and reserved acts retain their existing meaning.
+
+**Judge behaviour from the work.** Existing notes and receipts should show the selected question,
+its priority rationale, actual dispatch and acceptance, result, consumer and subsequent choice,
+including corrections, duplicates avoided, preventable waits and resource limitations. Separate
+operator-supplied agendas from ADV initiative, and mechanical checks from strategic quality.
+Negative, unchanged and inconclusive results are legitimate. No fixed task count, all-tools
+checklist, mandatory new report, approval level, scheduler or guaranteed scientific outcome is
+introduced. The next-work duty persists across compaction, sessions and operator absence.
 
 ### Decision table — apply it before ending any turn
 
@@ -760,6 +819,10 @@ opening anything. A request is a signal to assess, not an instruction to adopt a
 2. When actionable, `meeting --campaign <DIR> --open` creates one source-linked agenda in
    `<DIR>/meetings/`; if already open it returns that same record. The source index is derived
    from task records and portfolio pointers, **not a claim that anyone was consulted**.
+   ADV brings the agenda derived from the closing comparison of section 12: it opens the
+   first message to the participants and the closing notes (so it is saved verbatim with the
+   minutes), so that the index of task records is not read as the whole picture; participants
+   may propose alternatives and correct its premises, and what they say is part of the minutes.
 3. Check actual live named recipients. ADV, Orchestrator, Science, Harness and Mirror each
    provide a concise delta, ordered by priority: pending/TO-DO items and their real next step;
    blockers with owner and resumption condition; promising prospects and the decision they

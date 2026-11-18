@@ -1,0 +1,10 @@
+{
+ "kind": "MECH",
+ "status": "open",
+ "tag": "IPOTESI",
+ "title": "Raised sag and rebound in null layer II/III pyramidal cells can be a deeper voltage deflection at fixed current (input resistance +39%, time constant unchanged) rather than more Ih or T-type current, and the T-type transcript Cacna1i falls in both lines while Hcn1 is flat",
+ "source": "SCI DREAM-1 2026-11-16; Breton 2021 Table 1 (sag 1.18 to 2.57 mV at -200 pA; Rin 102.9 to 143.0; tau 18.55 to 21.25 ms ns); intrinsic_profile_model.py (single compartment: smaller cell gives Rin x1.39 and tau unchanged; K leak loss reproduces RMP, Rin, sag, rebound); ww1_panel.tsv (Cacna1i -0.93 S line, -0.71 P47T CTX; Hcn1 flat)",
+ "causal_statement": "IPOTESI: the held sag and rebound are partly a consequence of cell size and a resting K+ leak loss; the T-type trigger of the rebound oscillator has no transcript support in either line.",
+ "falsifier": "Sag as a ratio to the peak deflection at a matched steady-state deflection still raised about 1.6-fold in the knockout and abolished by an Ih blocker, or a T-type-sensitive rebound reduced by a T-type blocker in null cells.",
+ "transfer_limit": "Table 1 means from one paper; the -200 pA pulse length not stated in the text read (500 ms assumed); single-compartment model with assumed conductances."
+}

@@ -1,0 +1,9 @@
+signature_context	reference	shared_classes	pairs	classifiable	concordance
+neuron-like	matrix F1 per_thread_sum (seizure P13-P15, frozen)	4	6	5	0.30
+neuron-like	matrix F1 origin_collapsed (seizure P13-P15, frozen)	4	6	5	0.50
+neuron-like	IT observed ordering, partial_counts (sealed extraction)	2	1	0	not scorable
+neuron-like	IT observed ordering, resolved_only (sealed extraction)	2	1	1	0.00
+progenitor-like	matrix F1 per_thread_sum (seizure P13-P15, frozen)	4	6	5	0.50
+progenitor-like	matrix F1 origin_collapsed (seizure P13-P15, frozen)	4	6	5	0.50
+progenitor-like	IT observed ordering, partial_counts (sealed extraction)	2	1	0	not scorable
+progenitor-like	IT observed ordering, resolved_only (sealed extraction)	2	1	1	0.00

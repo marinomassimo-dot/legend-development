@@ -1,0 +1,24 @@
+item	value
+papers_total	12
+papers_fully_read	5
+papers_abstract_only	7
+papers_closed	1
+papers_blocked	6
+measurement_rows_total	109
+measurement_rows_from_full_text	78
+measurement_rows_abstract_only	31
+full_text_rows_recording_agents_not_tested	5
+full_text_rows_with_a_measured_value	73
+locator_quotes_verified_verbatim	109 of 109 (plus 13 of 13 limits quotes), see tools/verify.py
+rows_16221925_Drasbek_2006	5
+rows_17215511_Drasbek_2007	5
+rows_18463187_Vardya_2008	3
+rows_16997904_Yamada_2007	5
+rows_15987761_Keros_2005	4
+rows_20846324_Sebe_2010	16
+rows_21451144_Jo_2011	6
+rows_26857959_Carver_2016	16
+rows_38176909_Liddiard_2024	15
+rows_37900589_Bogaj_2023	16
+rows_24723854_Marowsky_2014	15
+rows_29560580_Meis_2018	3

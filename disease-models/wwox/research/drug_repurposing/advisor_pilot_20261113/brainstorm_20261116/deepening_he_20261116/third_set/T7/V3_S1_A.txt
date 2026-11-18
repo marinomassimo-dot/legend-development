@@ -1,0 +1,91 @@
+Convention: GC-C = the receptor guanylyl cyclase, cGMP = its second messenger, GOF = gain of function. Evidence lines come from memory and are hedged. Where I am unsure I say so.
+
+H1. Statement: The variant is ligand-hypersensitive, so normal luminal guanylin/uroguanylin tone is over-amplified, and lowering ligand supply lowers cGMP and restores the epithelium.
+Evidence: Familial diarrhoea GOF variants in GC-C are described as raising basal and ligand-stimulated cyclase activity. Whether ligand dependence is retained in the mouse model is not known to me. Guanylin-axis loss is reported to disturb the barrier, which argues for a window of tone.
+Usual reading assumes: the receptor is autonomously overactive, so ligand is irrelevant. This reading changes that to a gain in ligand gain, correctable upstream.
+Rejection: On the GOF background, remove epithelial guanylin and uroguanylin (Guca2a/Guca2b). If cGMP stays unchanged, H1 is rejected.
+Discriminating manipulation (vs H2): Guca2a/Guca2b double knockout on the GOF allele. cGMP falls toward wild type. Barrier and secretory differentiation improve. If cGMP is unchanged, constitutive activity (H2) wins.
+
+H2. Statement: The variant removes intracellular kinase-homology-domain autoinhibition, giving ligand-independent cyclase activity, so only an in-cis change to the nucleotide-binding or inhibitory interface of that domain would normalise it.
+Evidence: The kinase-like domain is known to gate cyclase activation and needs ATP or nucleotide for full activity. Known diarrhoea variants cluster in or near this regulatory region. A cis-rescue allele in mice is not known to me.
+Usual reading assumes: the lesion is simply "more catalytic activity", targetable only downstream. This reading changes that to a defect in an intramolecular brake, which makes the brake pocket the lever.
+Rejection: A second cis mutation that abolishes ATP binding in the kinase-like domain, with the receptor still expressed at the surface. If cGMP stays high, H2 is rejected.
+Discriminating manipulation (vs H1): Add the cis ATP-site-dead allele to the GOF receptor and compare it with ligand-null on the same background. cGMP falls and ligand removal adds nothing further. Barrier normalises in step with cGMP.
+
+H3. Statement: Epithelial cGMP clearance by phosphodiesterases (PDE5/PDE9 class) is the limiting sink, and raising its capacity buffers the excess.
+Evidence: PDE5 and PDE9 degrade cGMP in epithelia. In the GOF context, none known.
+Usual reading assumes: a synthesis problem is fixed only at synthesis. This reading changes that to a flux imbalance correctable at degradation.
+Rejection: Epithelial PDE5/9 overexpression leaves steady-state cGMP unchanged. This rejects H3.
+Discriminating manipulation (vs H4, export): Epithelial overexpression of a cGMP-hydrolysing PDE. Intracellular cGMP falls and extracellular cGMP falls too. Under H4, export enhancement lowers intracellular cGMP while extracellular cGMP rises. Barrier improves in both.
+
+H4. Statement: Active cGMP export through the ABCC4 transporter is under-engaged, and more export would lower the intracellular pool.
+Evidence: ABCC4 (MRP4) exports cyclic nucleotides in intestinal epithelium. It is reported to interact with CFTR in a functional complex. In the GOF model, none known.
+Usual reading assumes: only synthesis and hydrolysis set cGMP. This reading changes that to export as a third, independent sink.
+Rejection: Abcc4 loss on the GOF background does not raise intracellular cGMP and does not worsen it. This rejects H4.
+Discriminating manipulation (vs H3): Abcc4 deletion on the GOF allele. Intracellular cGMP rises further, extracellular cGMP falls, and barrier worsens. If degradation (H3) were the sink, deletion would change little.
+
+H5. Statement: The damage is carried by PKG2 (PRKG2), the apical cGMP-dependent kinase, not by cGMP itself, so removing the kinase uncouples a high cGMP from the epithelial phenotype.
+Evidence: PKG2 phosphorylates CFTR and other apical targets downstream of GC-C. Whether it drives differentiation or junction defects is not known to me.
+Usual reading assumes: lowering cGMP is the only route. This reading changes that to an effector-level rescue with cGMP left high.
+Rejection: Epithelial Prkg2 deletion on the GOF allele does not improve barrier or secretory-cell counts. This rejects H5.
+Discriminating manipulation (vs H6, cAMP): Epithelial Prkg2 knockout. cGMP is unchanged or higher, since negative feedback is lost, while barrier and differentiation normalise. If the cAMP route carries the damage, barrier stays abnormal.
+
+H6. Statement: cGMP inhibits PDE3, which raises cAMP, and the excess cAMP is the damaging signal. Buffering cAMP, not cGMP, would repair the tissue.
+Evidence: Cross-talk through cGMP-inhibited PDE3 is established in several tissues. In the GOF model, none known.
+Usual reading assumes: the harm is cGMP-specific. This reading changes that to a cGMP-to-cAMP relay.
+Rejection: cAMP is not raised in GOF epithelium, or cAMP lowering does not help. This rejects H6.
+Discriminating manipulation (vs H5): Epithelial expression of a cAMP sink (a cAMP-specific PDE such as PDE4, or a PDE3-resistant allele). cGMP is unchanged, cAMP falls and barrier improves. Under H5, barrier would not improve.
+
+H7. Statement: Chloride and fluid hypersecretion through CFTR, with NHE3 inhibition, creates a flow and osmotic injury that damages the barrier, independent of cGMP-driven signalling.
+Evidence: GC-C hyperactivity causes secretory diarrhoea by CFTR activation. Whether the flow itself damages junctions is unknown to me.
+Usual reading assumes: the barrier defect is signalling-driven. This reading changes that to a mechanical consequence of fluid load.
+Rejection: Epithelial Cftr deletion abolishes the diarrhoea but leaves the barrier defect and cytokines untouched. This rejects H7.
+Discriminating manipulation (vs H5): Epithelial Cftr deletion. cGMP is unchanged. Fluid secretion falls and barrier improves only if flow drives the injury. If barrier stays abnormal, the signalling route (H5/H12) is favoured.
+
+H8. Statement: The altered luminal environment (fluid, pH, bile acid) causes dysbiosis, and the microbiota drive the leak and the cytokines.
+Evidence: GC-C axis loss is reported to alter the microbiota and permeability. For GOF, none known.
+Usual reading assumes: the epithelium is the primary actor. This reading changes that to a microbe-mediated secondary injury.
+Rejection: Germ-free or antibiotic-depleted GOF mice keep the same barrier leak and the same cytokine rise. This rejects H8.
+Discriminating manipulation (vs H13, immune): Derive the GOF line germ-free. cGMP is unchanged. Barrier and cytokines normalise only if the microbiota matter. If they normalise, test T-cell and TNF dependence next.
+
+H9. Statement: PKG signalling suppresses secretory-lineage commitment (Atoh1) or enhances Notch/Hes1, so progenitors do not become goblet, Paneth or enteroendocrine cells. The thin mucus and antimicrobial layer then causes the leak.
+Evidence: GC-C status is linked to crypt-villus lineage allocation, but the direction in GOF and the mechanism are unknown to me.
+Usual reading assumes: the barrier defect is a direct junction problem. This reading changes that to a lineage-allocation problem that thins the protective secretory layer.
+Rejection: Restoring Atoh1 or Notch inhibition rescues secretory-cell numbers, yet the barrier still leaks. This rejects H9.
+Discriminating manipulation (vs H10, Wnt): Induced Atoh1 expression, or loss of epithelial Notch signalling by Rbpj deletion, on the GOF allele. cGMP is unchanged. Goblet and Paneth cells recover, mucus returns and barrier improves. Under H10, the Wnt-dependent compartment would remain abnormal.
+
+H10. Statement: cGMP/PKG damps Wnt/β-catenin signalling, so there are too few Wnt-dependent stem and Paneth cells and secretory differentiation fails.
+Evidence: cGMP-PKG reduces β-catenin signalling in colon cancer models and GC-C loss raises proliferation. For GOF, I infer the mirror image, which is unverified.
+Usual reading assumes: the GOF phenotype is a differentiation block downstream of Notch. This reading changes that to a niche-signal deficit.
+Rejection: Crypt Wnt target gene expression is normal or raised in GOF crypts. This rejects H10.
+Discriminating manipulation (vs H9): Stabilised β-catenin (Ctnnb1 exon 3) or R-spondin supply in the epithelium. cGMP is unchanged. Paneth and stem cells recover and barrier improves, while Notch status stays unchanged. Atoh1 restoration (H9) would not restore Wnt-dependent cells.
+
+H11. Statement: Sustained cGMP signalling overloads the endoplasmic reticulum of secretory cells, so UPR stress kills or blocks goblet and Paneth cells.
+Evidence: ER stress in goblet and Paneth cells is well known as a driver of colitis in Xbp1 and Muc2 models. A link to GC-C GOF is none known.
+Usual reading assumes: differentiation fails through lineage signals. This reading changes that to loss of secretory-cell survival or function through proteostasis.
+Rejection: UPR markers (Xbp1 splicing, Chop) are not raised in GOF secretory cells. This rejects H11.
+Discriminating manipulation (vs H9): Enhance ER folding capacity (Xbp1 overexpression) or delete Ddit3 (Chop). cGMP is unchanged. Secretory-cell survival, mucus and barrier improve. The lineage commitment seen with Atoh1 staining is unchanged, which separates it from H9.
+
+H12. Statement: PKG phosphorylates junction and cytoskeletal regulators (VASP, ZO-1/claudin partners), which opens the paracellular path directly, independently of differentiation.
+Evidence: cGMP and PKG effects on endothelial and epithelial junctions are reported. In the GOF gut, none known.
+Usual reading assumes: the leak follows the cell-type defect. This reading changes that to direct junction regulation, so the leak should precede the differentiation defect.
+Rejection: Early or acute GOF organoids and monolayers show normal transepithelial resistance, with the leak appearing only after lineage loss. This rejects H12.
+Discriminating manipulation (vs H9): A phospho-null allele of a PKG junction substrate (for example Vasp). cGMP is unchanged, junction permeability falls, and secretory-cell counts are unchanged.
+
+H13. Statement: Raised TNF/IL-type cytokines are a feed-forward cause of the leak (for example through myosin light-chain kinase) and of differentiation loss, and are not just a consequence.
+Evidence: TNF-driven epithelial permeability through MLCK is well established in colitis. For GOF, none known.
+Usual reading assumes: inflammation is a downstream readout. This reading changes that to a self-amplifying loop.
+Rejection: Blocking TNF receptor signalling in GOF mice leaves the barrier and the cytokine rise unchanged. This rejects H13.
+Discriminating manipulation (vs H8, microbiota): Tnfrsf1a deletion, or epithelial Mlck deletion, on the GOF allele. cGMP is unchanged and barrier improves. Germ-free rederivation would instead remove the cause upstream, which tests H8.
+
+H14. Statement: The excess comes from receptor abundance and turnover (a lost desensitisation or internalisation brake), so cGMP scales with receptor dose.
+Evidence: GC-C is homologously desensitised, and the mechanism involves kinase-domain phosphorylation. Dose-response in the GOF context is not known to me.
+Usual reading assumes: the variant defines a fixed activity per receptor. This reading changes that to a gain that depends on surface number, which makes it titratable.
+Rejection: Halving receptor dosage (GOF/null) does not lower cGMP in proportion. This rejects H14.
+Discriminating manipulation (vs H1/H2): A GOF/null compound heterozygote compared with GOF/GOF. cGMP falls in proportion to dose. Barrier improves in step. A flat response favours a threshold-type, autoinhibition mechanism (H2).
+
+H15. Statement: Soluble guanylyl cyclase, driven by nitric oxide, contributes a second epithelial cGMP source that adds to the GC-C signal, and its cut would normalise the total.
+Evidence: sGC (Gucy1a/b) is expressed in intestinal tissue. Its contribution to epithelial cGMP in the GOF model is none known.
+Usual reading assumes: GC-C is the only source. This reading changes that to two pools that summate on shared effectors.
+Rejection: Deleting epithelial sGC does not change the total cGMP. This rejects H15.
+Discriminating manipulation (vs H2/H3): Epithelial Gucy1b1 (sGC beta) deletion on the GOF allele. Total cGMP falls modestly, and barrier improves only if the summed pool matters. If cGMP is unchanged, the pathology is GC-C-pool-specific.

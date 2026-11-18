@@ -1,0 +1,9 @@
+# I2 addendum 1 pass: result (IT; non-canonical; not medical advice)
+
+Same bundle, same delegate, v1 values untouched; frozen text b1ed301f… (commit 0c141d84b). Not to be used for scoring the V2.1 cells (ADV's perimeter).
+* Variant domain (42 children): not_stated 11; deletion 8; truncating 6; deletion+truncating 5; splice 4; SDR 2; other+truncating 2; SDR+deletion 1; WW1+splice 1; deletion+splice 1; splice+truncating 1; **WW2 0**. Protein stated: absent_or_truncated 4, **present 0**, not stated 38.
+* **HE's I8 contrast (WW1 defect with the protein present) is empty in the held reports:** no child has a missense variant with protein stated present; the one child with a WW1 mention also carries a splice change; missense alleles have no stated domain except two SDR children. Pre-declared outcome: say so. The contrast needs a new source (a clinical series with domain and protein status), not a re-reading.
+* Sleep-wake timing stated for 3 children of 42 (two coded mixed with a conflict between main text and a figure legend, one asleep for myoclonic seizures only): sleep timing against semiology cannot be analysed (I10's clinical arm has no held data).
+* Line of therapy: not_stated for 150 of 170 exposure rows (first line 4, add-on 9, later line 7): the confounder cannot be assessed, so any class-by-semiology comparison in I2 stays confounded and unadjustable with these reports.
+* What this changes: nothing in the I2 verdict (segregation not answerable); it closes three open questions with "the held reports do not hold it" and names what a new source must record (domain, protein status, sleep-wake, order of agents).
+Redaction: parent-of-origin and inheritance wording in children_addendum.tsv replaced for the publication gate; the delivered originals remain in the Orchestrator scratchpad.

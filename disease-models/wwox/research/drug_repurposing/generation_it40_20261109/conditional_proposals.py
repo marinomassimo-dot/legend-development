@@ -111,6 +111,13 @@ def rows(link=True):
 # conditional proposal keeps. The mapping is the reviewable part (which cell answers which question); the loader maps nothing. A slot with no cell says so; no direction is invented.
 # slot -> package cells (joined in order, each labelled with its own column name). `action_from_relation` names a relation of the IT41/IT43 tables to take the action from when the package has none.
 PKG_MAP = {
+    # HE66 (2026-11-16): the HB1 package IT56 registered after the leap round (hypotheses_only, INV-05). Mapping drafted by HE from the COLUMN NAMES only, not read by the owner:
+    # `action_cell_context` is one cell that names the action and its context, so it feeds both slots; `weakening_result` goes to `reopen`; `sign` is read as the sign (HE65 H3).
+    # No relation symbols: the package names classes (a T-type blocker class, an NMDAR pore blocker or d-APV), not genes, so no cell-class join is attempted.
+    "hb1_two_stage_burst_it56_20261116": dict(inv="INV-05", relation_ids=[], symbols=[], observation=["wwox_observation"], relation=["mechanism_and_missing_bridge"],
+                                              context=["action_cell_context"], action=["action_cell_context"], compound=["probe_or_qualified_compound"], premise=[],
+                                              competing=["competing_alternative"], expected=["favourable_result"], measure=["next_decision"], reopen=["weakening_result"],
+                                              title="hypothesis_id", sibling_cell="mechanism_and_missing_bridge", mapping_unconfirmed=True),
     "ph_k2p_sci45_20261111": dict(inv="INV-18", relation_ids=[], symbols=["KCNK2", "KCNK3", "KCNK9"],  # the channels the package names (TREK-1, TASK-1, TASK-3)
                                    observation=["initial_observation"], relation=["mechanistic_relation"], context=["context"], action=["action"], compound=["compound_or_class"],
                                   premise=["counter_evidence"], expected=["possible_functional_outcome"], measure=["experiment_that_rejects_it"], title="hypothesis", sibling_cell="hypothesis"),

@@ -1,0 +1,26 @@
+import re,sys,json,random,hashlib
+d=sys.argv[1]; seed=int(sys.argv[2]); files=sys.argv[3:]   # files are 'ARM_RUN:path'
+items=[]
+for spec in files:
+    tag,path=spec.split(":",1); t=open(path).read()
+    if "FINAL TEN" in t: t=t.split("FINAL TEN",1)[1]
+    t=re.split(r"\n\s*(?:\*\*)?FILES READ|\nFILES READ",t)[0]
+    t=re.split(r"\n(?:Current-measurement note|Not carried into|Note for the GABA|Cross-cutting|What this folder cannot|Classification of|CAVEATS|Operational note|CLASSIFICATION of|CLASSIFICATION OF ALL|Basis:|Shared readout|Dropped S1 items|Caveats:)",t)[0]
+    parts=re.split(r"(?m)^[ \t]*[*#]*\s*H(\d+)\.\s",t)
+    # parts: [pre, n1, body1, n2, body2...]
+    for i in range(1,len(parts),2):
+        n=int(parts[i]); body=parts[i+1]
+        m=re.search(r"Statement[:\*\s·]*\s*(.*?)(?=\s*·\s*(?:Held evidence|Evidence|Corpus test)|\n\s*[·\-]?\s*\**(?:Held evidence|Evidence|Corpus test)|\n·\s|$)",body,re.S|re.I)
+        st=m.group(1).strip() if m else ""
+        dm=re.search(r"Discriminat(?:ing manipulation|or).*",body,re.S|re.I)
+        mn=dm.group(0).strip() if dm else ""
+        mn=re.sub(r"\n\s*\n.*","",mn,flags=re.S) if len(mn)>3500 else mn
+        items.append((tag,n,re.sub(r"\s+"," ",st),re.sub(r"\s+"," ",mn)))
+print(len(items),{t:sum(1 for i in items if i[0]==t) for t in {i[0] for i in items}},file=sys.stderr)
+bad=[(i[0],i[1]) for i in items if not i[2] or not i[3]]; print("missing fields:",bad,file=sys.stderr)
+random.seed(seed); order=list(range(len(items))); random.shuffle(order)
+key={}; out=["# Sixty hypotheses (statement and discriminating manipulation only)\n"]
+for n,idx in enumerate(order,1):
+    t,k,st,mn=items[idx]; key[f"Z{n:02d}"]=f"{t}-H{k}"; out.append(f"## Z{n:02d}\nStatement: {st}\n{mn}\n")
+open(d+"/blind_input.md","w").write("\n".join(out)); open(d+"/blind_key.json","w").write(json.dumps(key,indent=0))
+print(hashlib.sha256(open(d+"/blind_key.json","rb").read()).hexdigest(), len("\n".join(out)))

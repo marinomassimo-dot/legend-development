@@ -1,0 +1,8 @@
+id	metric	a	b	expect	fraction_holding	n_undefined_seeds	min_fraction	verdict	median_a	median_b	statement
+S1	isi_median_s	J_T-40	base	a_gt_b	1.000	0	0.8	PASS	35.556000000000004	26.03400000000002	T-type-like trigger weight -40% lengthens the median interval (replication of the exploratory scan with fresh seeds)
+S2	dur_median_s	J_N-40	base	a_lt_b	1.000	0	0.8	PASS	0.14399999999997704	0.7169999999999845	NMDAR weight -40% shortens the median duration
+S3	n_bursts	J_tonic+40	base	a_lt_b	1.000	0	0.8	PASS	7.0	140.0	Tonic GABA-A weight +40% lowers the burst count (near silence)
+S4	n_bursts	sigma-40	base	a_lt_b	1.000	0	0.8	PASS	0.0	140.0	Noise amplitude -40% lowers the burst count
+S5	dur_median_s	kappa_r-40	base	a_gt_b	1.000	0	0.8	PASS	1.211999999999989	0.7169999999999845	Resource depletion rate -40% lengthens the median duration (the duration-only class)
+S6	n_bursts	tau_c+40	base	a_gt_b	1.000	0	0.8	PASS	197.0	140.0	Chloride extrusion time constant +40% (slower KCC2) raises the burst count
+S7	n_bursts	J_tonic-40	base	a_gt_b	1.000	0	0.8	PASS	623.0	140.0	Tonic GABA-A weight -40% raises the burst count (a loss of tonic inhibition produces bursting)

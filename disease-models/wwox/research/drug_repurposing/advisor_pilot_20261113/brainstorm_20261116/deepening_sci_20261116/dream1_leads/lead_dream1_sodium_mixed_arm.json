@@ -1,0 +1,10 @@
+{
+ "kind": "MECH",
+ "status": "open",
+ "tag": "IPOTESI",
+ "title": "A sodium-channel blocker with an interneuron share can lower burst rate at the knockout while RAISING slice incidence near threshold (S-HT 0.17 to 0.38 in the frozen oscillator): the net sign of a mixed-component agent depends on distance to threshold even though no single component changes sign",
+ "source": "SCI DREAM-1 2026-11-16; deepening_sci_20261116/PILOT_ARM_EXPECTATIONS_SCI.md (arm 9, predictions hashed first, E9 failed in the informative direction); Breton 2021 Table 1 (interneuron AP amplitude 60.78 to 45.03 mV, resting potential unchanged); P47T Scn1a -0.47 log2 PFC (pointer); I2 second reading (no seizure-worsening statement in 42 held children)",
+ "causal_statement": "IPOTESI: AH1 (sodium-channel blockers aggravating) is a statement about the interneuron share of the blocker and the distance of the preparation from threshold, not about the class; it predicts aggravation of incidence at S-HT and not at S-KO for a non-selective blocker and suppression for a pyramidal-preferring one.",
+ "falsifier": "A non-selective sodium-channel blocker lowering incidence at S-HT slices (or raising nothing at any setting) on the I15 K+/Mg2+ ladder; or a pilot arm with a verified interneuron-spike effect and no incidence rise.",
+ "transfer_limit": "Model-level (weights, not concentrations; 80 slices per cell; one fitted parameter set); interneuron AP amplitude from 5 and 6 cells; no sodium-blocker data in WWOX slices."
+}

@@ -1,0 +1,324 @@
+{
+  "capture": {
+    "assessment_sha256": "3655bd395b5ad7049142986f51f1871d2891e0cf525b877c9a74fd2f83154424",
+    "method": "runtime result event of the headless stream (stream-json), saved verbatim",
+    "published": "assessment.md and this file only; the raw stream and the session transcript stay local",
+    "raw_stream": "/tmp/legend-advisor-raw/advisor_pilot_20261113-P18/stream.jsonl",
+    "raw_stream_sha256": "5a029741ac9cba854779fe1fb6de6f14adcf1e3badf6d23c3066cf80d828c7a7",
+    "source_session_id": "d536c7a1-bb8f-447b-a74b-f3e96ba6549d",
+    "transcribed_by_caller": false,
+    "transcript_cross_check": true
+  },
+  "context": {
+    "brief_chars": 73550
+  },
+  "deliveries": [],
+  "ended_utc": "2026-11-16T21:27:55Z",
+  "label": "P18",
+  "profile": {
+    "agent": "legend-strategic-advisor",
+    "denied": [
+      "Bash",
+      "Write",
+      "Edit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebSearch",
+      "SendMessage",
+      "Skill",
+      "Read(**/advisor_sealed/**)"
+    ],
+    "effort_asked": "high",
+    "model_asked": "opus",
+    "permission_mode": "dontAsk",
+    "restricted": false,
+    "tools_flag": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ]
+  },
+  "runtime_readback": {
+    "census": {
+      "changed_mid_run": false,
+      "efforts": {
+        "high": 13
+      },
+      "first_turn_context": 45075,
+      "models": {
+        "claude-opus-5-5": 13
+      },
+      "peak_context": 94799,
+      "totals": {
+        "cache_creation": 91783,
+        "cache_read": 902278,
+        "output": 12608
+      },
+      "turns": 13
+    },
+    "final_turn_model": "claude-opus-5-5",
+    "init_mcp_servers": [],
+    "init_model": "claude-opus-5-5",
+    "init_permission_mode": "dontAsk",
+    "init_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch"
+    ],
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "cacheReadInputTokens": 0,
+        "canonicalModel": "claude-haiku-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 0.0029139,
+        "inputTokens": 29024,
+        "maxOutputTokens": 128000,
+        "outputTokens": 23,
+        "provider": "firstParty",
+        "thinkingTokens": 0,
+        "webSearchRequests": 0
+      },
+      "claude-opus-5-5": {
+        "cacheCreationEphemeral1hInputTokens": 91783,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationInputTokens": 91783,
+        "cacheReadInputTokens": 902278,
+        "canonicalModel": "claude-opus-5-5",
+        "contextWindow": 1000000,
+        "costBasis": "list",
+        "costUSD": 1.1669836,
+        "inputTokens": 26,
+        "maxOutputTokens": 128000,
+        "outputTokens": 12608,
+        "provider": "firstParty",
+        "thinkingTokens": 5898,
+        "webSearchRequests": 0
+      }
+    },
+    "num_turns": 19,
+    "refusal_fallbacks": [],
+    "total_cost_usd": 1.1698975,
+    "turn_models": {
+      "claude-opus-5-5": 13
+    },
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 91783,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 91783,
+      "cache_read_input_tokens": 902278,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 26,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 1308,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 1308,
+          "cache_read_input_tokens": 93489,
+          "input_tokens": 2,
+          "output_tokens": 5196,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 12608,
+      "output_tokens_details": {
+        "thinking_tokens": 5898
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "snapshot_note": "see the brief for the dispatch snapshot",
+  "stage": "P",
+  "started_utc": "2026-11-16T21:25:22Z",
+  "tool_calls": [
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P17/assessment.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t## Assessment (Stage P, P17)\n2\t\n3\t**1. Principal decision.** The deepening round of 16:35Z is in progress. It now holds 18 ideas, all marked ADVANCE. Its 21:2"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/**/*"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_a1_feasibility_20261116/census.tsv\ndisease-models/wwox/research/drug"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/{meetings/*,brainstorm_20261116/*.md,brainstorm_20261116/*.tsv,brainstorm_20261116/deepening_*/*,P18/*}"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261115T152159Z-jaq44mq3.md\ndisease-models/wwox/research/drug_repurposing"
+    },
+    {
+      "input": {
+        "pattern": "disease-models/wwox/research/drug_repurposing/**/{MEETING-20261116T2*,MEETING-20261116T1[5-9]*,ideas_*.tsv,*CONSUMPTION*,*consumption*,DEEPENING_CLOSE*,*CLOSING*}"
+      },
+      "is_error": false,
+      "name": "Glob",
+      "result_head": "disease-models/wwox/research/drug_repurposing/consumption_it29_p9_20261105/consumption_diff.tsv\ndisease-models/wwox/research/drug_repurposing/consumption_it29_p"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/meetings/MEETING-20261116T192157Z-yyri6fhb.md"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# MEETING \u2014 2026-11-16T19:21:57Z\n2\t\n3\tStarted UTC: 2026-11-16T19:21:57Z\n4\tSnapshot SHA: 015b9b5d7038c0cc34c8f31c9fa0877fe6e6cb0f\n5\tCoordination: ADV (directio"
+    },
+    {
+      "input": {
+        "head_limit": 40,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks",
+        "pattern": "ADV-016|21:2[0-9]Z|deepening-round-repurposing"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "ledger/tasks/orchestrator/ORCH-ROADMAP-IT36-20261108.json:43:     \"evidence\": \"the three INV-16 staged receipts: the producer moved planned times back one minut"
+    },
+    {
+      "input": {
+        "head_limit": 20,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks/orchestrator/ORCH-ADV-FOLLOWTHROUGH-20261114.json",
+        "pattern": "P17|arm table|arm_table|D5b|closing round"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "No matches found"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/DEEPENING_ROUND.md",
+        "limit": 60,
+        "offset": 1
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# DEEPENING ROUND (ADV; operator instruction of 2026-11-16 ~16:35Z; non-canonical; hypotheses, not findings; not medical advice)\n2\t\n3\t## Principle\n4\tThe opera"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113",
+        "pattern": "ADV-016|consumption pass|frame strategic direction|Direction before status"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 5 files\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/P18/brief.md\ndisease-models/wwox/research/drug_repurposing/advisor_pilot_2026"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ideas_portfolio.tsv"
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\tid\ttitle\towner\tstatus\tdepth\tlinks\tlast_test\n2\tI1\tTwo-stage rebound oscillator\tSCI\tADVANCE\tseed\tI6,I7,I11\tIT attack: duration predictions 4/8 (chance), interva"
+    },
+    {
+      "input": {
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/assignments.jsonl",
+        "pattern": "ADV-016"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "30:{\"assessment\": \"P17\", \"id\": \"ADV-016\", \"key\": \"deepening-round-repurposing-consumption\", \"recipient\": \"Orchestrator\", \"state\": \"DRAFTED\", \"utc\": \"2026-11-16T"
+    },
+    {
+      "input": {
+        "head_limit": 25,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/CLOSING_SYNTHESIS.md",
+        "pattern": "repurposing|INV-0|consum|21:21"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "3:[Omitted long matching line]\n41:[Omitted long matching line]\n50:[Omitted long matching line]"
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_sci_20261116/DOSSIER_I16_ASTROGLIAL_K_SCI.md",
+        "limit": 40
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "1\t# I16 ASTROGLIAL K+ BUFFERING (and a maturation-lag seed) AS THE GRADED FACTOR BEHIND 0 / 17 / 86% BURSTING SLICES (dossier v1, SCI, 2026-11-16; hypothesis, n"
+    },
+    {
+      "input": {
+        "head_limit": 15,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ideas_arm_table.tsv",
+        "pattern": "(?i)kv7|k2p|kir4|leak|potassium|K\\+"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "57:K2P/Kv7 leak opener\tleak reading (I4/SCI)\t-\t-\tpredicts\tADV states; owner pending\tU1 v3 point 3b\n58:K2P/Kv7 leak opener\tI8\t0\t0\tpredicts\towner confirmed (HE, I"
+    },
+    {
+      "input": {
+        "head_limit": 30,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/ledger/tasks/plan/PLAN-HE-IT23-SYMBOL-TRIAL-20261115.json",
+        "pattern": "\"(state|status|verdict|summary|result|next|unblock_when)\""
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "30:     \"status\": \"DONE\",\n36:     \"status\": \"DONE\",\n42:     \"status\": \"DONE\",\n60:     \"status\": \"DONE\",\n66:     \"status\": \"DONE\",\n72:     \"status\": \"DONE\","
+    },
+    {
+      "input": {
+        "file_path": "/home/desktop/legend-development/ledger/tasks/plan/PLAN-HE-IT23-SYMBOL-TRIAL-20261115.json",
+        "limit": 70,
+        "offset": 20
+      },
+      "is_error": false,
+      "name": "Read",
+      "result_head": "20\t  \"provenance\": \"roadmap_current.md dated line 2026-11-15 and assignments/PRESIDIO-004.md (ADV commit 6529d4831 on main); relayed by the ADV session as a cro"
+    },
+    {
+      "input": {
+        "head_limit": 20,
+        "output_mode": "content",
+        "path": "/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116",
+        "pattern": "(?i)missense|hypomorph|severity class"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_adv_20261116/I19_PROXIMITY_TO_THRESHOLD_AND_CONTRADICTORY_RES"
+    },
+    {
+      "input": {
+        "output_mode": "files_with_matches",
+        "path": "/home/desktop/legend-development/framework/scripts",
+        "pattern": "serialize|flock"
+      },
+      "is_error": false,
+      "name": "Grep",
+      "result_head": "Found 13 files\nframework/scripts/strategic_advisor.py\nframework/scripts/test_safe_push.py\nframework/scripts/safe_push.py\nframework/scripts/README.md\nframework/s"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+You are the fast, wide first stage of a hypothesis generator for a research programme on the WWOX gene. Do NOT use any tool: do not read, search or open any file; answer from your own knowledge only.
+
+QUESTION: "A receptor guanylyl cyclase carries a gain-of-function variant and makes too much of its cyclic-nucleotide second messenger in gut epithelium; in mice this goes with impaired secretory-cell differentiation, a leaky barrier and raised inflammatory cytokines. Propose 15 distinct levers that could normalise the signalling and the epithelium. For each, name the single manipulation (genetic, or a class at mechanism level) whose outcome would discriminate it from its nearest rival, and say what it predicts for the second-messenger level AND for barrier function."
+
+STEP A (print it as a line headed FAMILY): name the protein, or the protein family, of the defective molecule or pathway component the question describes (or its closest functional class if it is not named), and name the two or three closest related families (by fold, by catalytic mechanism or by regulatory domain).
+
+STEP A2 (print it as a table headed CHECKLIST, directly after the FAMILY line): go through the ITEMS below IN THE ORDER GIVEN, one line per item, none skipped. For each item write: ITEM | is this item known to modulate any member of the defective family or of its two or three closest related families (yes, no, or not known) | the member on which it is known | direction (raises or lowers activity) | the evidence you can recall in a few words. Answer 'not known' where you do not know; do not leave an item out.
+ITEMS:
+1. Na+
+2. K+
+3. Ca2+
+4. Mg2+
+5. Mn2+
+6. Fe2+ / Fe3+
+7. Cu+ / Cu2+
+8. Zn2+
+9. Co2+
+10. Ni2+
+11. Li+
+12. Cl-
+13. HCO3-
+14. phosphate
+15. sulfate
+16. iodide
+17. fluoride
+18. selenium (selenoproteins, selenite)
+19. molybdenum
+20. low pH (acidosis)
+21. high pH (alkalosis)
+22. low temperature
+23. high temperature
+24. low osmolarity
+25. high osmolarity
+26. hypoxia
+27. hyperoxia
+28. hydrogen peroxide and other reactive oxygen species
+29. nitric oxide
+30. carbon monoxide
+31. hydrogen sulfide
+32. reduced / oxidised glutathione
+33. NAD+ / NADH
+34. NADP+ / NADPH
+35. ATP
+36. ADP and AMP
+37. GTP and GDP
+38. cAMP
+39. cGMP
+40. acetyl-CoA and coenzyme A
+41. S-adenosylmethionine
+42. FAD and FMN
+43. pyridoxal phosphate (vitamin B6)
+44. thiamine pyrophosphate (vitamin B1)
+45. biotin
+46. folate and tetrahydrofolate
+47. vitamin B12 (cobalamin)
+48. vitamin C (ascorbate)
+49. vitamin D
+50. vitamin A (retinoids)
+51. vitamin E
+52. vitamin K
+53. heme
+54. lipoic acid
+55. coenzyme Q10
+56. glucose
+57. lactate
+58. pyruvate
+59. ketone bodies (beta-hydroxybutyrate, acetoacetate)
+60. glutamine
+61. glutamate
+62. GABA
+63. glycine
+64. aspartate
+65. serine
+66. arginine
+67. taurine
+68. creatine
+69. carnitine
+70. citrate and TCA-cycle intermediates (succinate, alpha-ketoglutarate, fumarate)
+71. free fatty acids
+72. cholesterol and other sterols
+73. bile acids
+74. polyamines (spermidine, spermine)
+75. adenosine
+76. ammonia
+77. urea
+
+STEP B (print it as a table headed MODULATORS): for the defective family and for EACH related family, list every substance, ion, cofactor, drug class or condition known to modulate any member of the family, with the member on which it is known and its direction (raises or lowers activity). Do not prune and do not rank.
+
+STEP C: say first whether the defect is a loss or a gain of function. Only then map STEP B to the defect: which entries, applied to the defective molecule, would move its activity or its consequences in the direction that corrects the defect, and which would not.
+
+STEP D: propose 15 distinct hypotheses drawn from STEP C so that the families of STEP B are represented. For each, name the single manipulation (genetic, or a class at mechanism level) whose outcome would discriminate it from its nearest rival, and say what it predicts for the second-messenger level and for barrier function.
+
+OUTPUT (your final message): the FAMILY line, the CHECKLIST table, the MODULATORS table, the STEP C paragraph, then for each of the 15 hypotheses H1..H15, one block with these fields:
+H<n>. Statement (one sentence, a mechanism with a direction) · Evidence you know for or against it (one line; say 'none known' where that is the case) · What the usual reading assumes and this one changes · The single observation that would reject it · The single discriminating manipulation between this and the nearest rival, with its predicted effects.
+Mechanism level only; no dose, no recommendation to use any drug.

@@ -42,6 +42,9 @@ def public_files(root: Path = ROOT):
     (dropped non-ignored paths: 0, added: 0), so no publishable file lost coverage.
     A source archive has no `.git`: walk it, pruning nested checkouts.
     """
+    named = os.environ.get("LEGEND_STRUCT_PATHS")
+    if named:                                      # 2026-11-16: scripts/legend_commit.sh runs these same tests on the files of ONE commit, so a ragged row is refused at the commit, not 19 CI runs later
+        return sorted(root / rel for rel in named.split("\n") if rel and (root / rel).is_file())
     if (root / ".git").exists():
         listing = subprocess.run(
             ["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
@@ -104,6 +107,30 @@ class StructuredDataIntegrityTests(unittest.TestCase):
                 failures.append(
                     f"{path.relative_to(ROOT)}: row widths {sorted(widths)}"
                 )
+        self.assertFalse(failures, "\n".join(failures))
+
+
+    def test_ideas_portfolio_ids_are_unique_and_arm_tables_name_only_known_ideas(self) -> None:
+        """2026-11-16: two ideas were both named I16 until renumbered (RP-006 row 7). The ideas portfolio must not repeat an id, and every idea token (I<number>) in the `idea` column of an
+        ideas arm table must be an id of the portfolio; free text and composite cells ('I1/I10', 'leak reading (I4/SCI)') are read token by token, other words ignored. An idea with no arm
+        row is allowed (an idea may have no arm yet)."""
+        import re
+        portfolios = [p for p in public_files() if p.name == "ideas_portfolio.tsv"]
+        failures = []
+        for pf in portfolios:
+            with pf.open(encoding="utf-8", newline="") as h:
+                rows = list(csv.DictReader(h, delimiter="\t"))
+            ids = [r["id"] for r in rows]
+            dup = sorted({i for i in ids if ids.count(i) > 1})
+            if dup:
+                failures.append(f"{pf.relative_to(ROOT)}: duplicate idea id {dup}")
+            known = set(ids)
+            for arm in sorted(pf.parent.glob("ideas_arm_table*.tsv")):
+                with arm.open(encoding="utf-8", newline="") as h:
+                    for n, r in enumerate(csv.DictReader(h, delimiter="\t"), 2):
+                        for tok in re.findall(r"\bI\d+\b", r.get("idea", "") or ""):
+                            if tok not in known:
+                                failures.append(f"{arm.relative_to(ROOT)} line {n}: idea {tok} is not in {pf.name}")
         self.assertFalse(failures, "\n".join(failures))
 
 

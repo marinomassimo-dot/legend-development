@@ -756,3 +756,5 @@ is itself an unsolved problem in this literature and should be costed separately
 chain, canonical file or state manifest was read-modified-written by this act. No `BATCH_COMMIT` was
 run. According to PubMed, the literature content above derives from the records cited, each with its
 DOI linked at first use.
+
+[Update 2026-11-17, CC-20261117-ORCHESTRATOR-P47T-ABUNDANCE-WORDING-01 (IT; wording from the closure note IT56-Q05 of SCI, held files only): where this file says P47T protein is normal or at wild-type amount (lines 173,433,482,496), read "present, similar by the authors' wording, not quantified; folded state and stability untested". Lines 173, 433, 482, 496: "both NORMAL" becomes "present, similar by the authors' wording, not quantified"; section 6.1's ranking row for P47T changes in the same way. The original sentences above are not edited. Nothing else in this file changes.]

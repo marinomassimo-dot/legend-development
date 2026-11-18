@@ -1,0 +1,36 @@
+arm_class	cells	cells_with_origin_row	best_tier_1_or_2	tier_3_only
+NMDAR pore blocker	8	4	1	3
+Sodium-channel blocker	7	2	1	1
+T-type blocker	7	3	0	3
+GABA-A PAM	6	3	1	2
+Remyelination mechanism	6	1	1	0
+Substrate (glucose down, ketone added)	6	2	0	2
+Y2/NPY antagonist	6	1	1	0
+K2P/Kv7 leak opener	2	2	1	1
+Raised ambient GABA	2	1	0	1
+Any class, by genotype severity	1	1	1	0
+Astroglial K+ buffering (Kir4.1/Kir, glial uptake) arm	1	1	1	0
+Bicarbonate-linked chloride loading limitation (carbonic-anhydrase-class mechanism)	1	0	0	0
+ENT1 inhibitor (adenosine-augmenting label)	1	1	0	1
+Endocannabinoid-type presynaptic brake release on CCK-class basket terminals	1	1	0	1
+GABA-A positive modulator (phenobarbital/benzodiazepine class)	1	1	0	1
+GABA-transaminase inhibitor / steroid	1	1	1	0
+Genetic Ldh lowering (fly) / lactate-pyruvate route	1	1	0	1
+GluN2B NAM	1	0	0	0
+Glycine-site agent / co-agonist scavenger	1	0	0	0
+Microglial or complement-tagged removal of inhibitory terminals limitation	1	0	0	0
+NKCC1-directed or GluN2B-directed route	1	1	1	0
+Neuromodulatory receptor-class activation recruiting interneurons	1	0	0	0
+PPxY-carrier protein level (proteome)	1	0	0	0
+PV-interneuron chemogenetic activation (tool arm, not a drug)	1	1	0	1
+Persistent-sodium-preferring blocker	1	1	0	1
+Postsynaptic inhibitory scaffold restoration (cluster-organiser class)	1	1	0	1
+Presynaptic GABA content per vesicle (synthesis and vesicular loading) increase	1	1	1	0
+Raised ambient GABA (vigabatrin or GAT-1 blocker)	1	1	1	0
+Receptor assembly and ER export of delta-containing GABA-A receptors improvement	1	1	0	1
+Sodium-channel blocker (non-selective)	1	1	0	1
+T-type / valproate-type	1	1	0	1
+T-type blockade / Cacna1g deletion (transfer)	1	1	0	1
+Threshold titration (K+ and Mg2+ ladders), any arm	1	1	1	0
+Tonic-selective potentiator (neurosteroid-type)	1	1	1	0
+TOTAL (denominator: 75 cells of arm table v8; a count of cells, not of evidence)	75	38	14	24

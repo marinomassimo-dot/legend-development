@@ -1,0 +1,1 @@
+# Lexicographic order: (1) neuron P7 FPKM >= 2, (2) topology annotated, (3) motif conserved in the human ortholog, (4) shuffle p ascending, (5) more motifs, (6) symbol. No weights. RNA columns are context for a protein-level hypothesis, not a test of it.

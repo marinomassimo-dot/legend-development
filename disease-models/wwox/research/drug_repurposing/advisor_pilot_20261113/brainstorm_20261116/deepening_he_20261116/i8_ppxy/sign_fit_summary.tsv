@@ -1,0 +1,13 @@
+candidate	sign_variant	informative_features	fit	oppose	predicted_change_not_seen
+Scn1a (Nav1.1, PPSY 1983)	M+ adaptor (surface up)	3	0	2	1
+Scn1a (Nav1.1, PPSY 1983)	M- shield (surface down)	3	2	0	1
+Scn2a (Nav1.2, PPSY 1973)	M+ adaptor (surface up)	2	0	1	1
+Scn2a (Nav1.2, PPSY 1973)	M- shield (surface down)	2	1	0	1
+Hcn1 (HCN1, PPVY 654)	M+ adaptor (surface up)	4	3	1	0
+Hcn1 (HCN1, PPVY 654)	M- shield (surface down)	4	1	3	0
+Kcnh7 (Kv11.3, PPAY 1067)	M+ adaptor (surface up)	0	0	0	0
+Kcnh7 (Kv11.3, PPAY 1067)	M- shield (surface down)	0	0	0	0
+Kcnt2 (Slack-B, PPRY 12)	M+ adaptor (surface up)	0	0	0	0
+Kcnt2 (Slack-B, PPRY 12)	M- shield (surface down)	0	0	0	0
+Trpm3 (TRPM3, PPDY 573, PPTY 1515)	M+ adaptor (surface up)	2	1	1	0
+Trpm3 (TRPM3, PPDY 573, PPTY 1515)	M- shield (surface down)	2	1	1	0

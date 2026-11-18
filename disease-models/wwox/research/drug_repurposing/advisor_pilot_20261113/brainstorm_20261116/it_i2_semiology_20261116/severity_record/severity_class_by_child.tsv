@@ -1,0 +1,43 @@
+report	child	severity_class_by_rule_v3
+28721938	the patient (case study; first child of 	biallelic_loss_or_null_like
+29808465	Patient 1	residual_or_missense
+29808465	Patient 2	residual_or_missense
+30361190	first child (Case 1)	biallelic_loss_or_null_like
+30361190	second child (Case 2)	biallelic_loss_or_null_like
+35573960	patient II-1 (Figure 1 legend: 'Portrait	biallelic_loss_or_null_like
+35792847	Patient 1.1	residual_or_missense
+35792847	Patient 1.2	residual_or_missense
+35792847	Patient 2.1	biallelic_loss_or_null_like
+35792847	Patient 2.2	biallelic_loss_or_null_like
+35792847	Patient 3.1	biallelic_loss_or_null_like
+35792847	Patient 3.2	biallelic_loss_or_null_like
+35792847	Patient 4	residual_or_missense
+35792847	Patient 5	biallelic_loss_or_null_like
+35792847	Patient 6	residual_or_missense
+36537114	Patient 1	biallelic_loss_or_null_like
+36537114	Patient 2	biallelic_loss_or_null_like
+36537114	Patient 3	biallelic_loss_or_null_like
+36537114	Patient 4	biallelic_loss_or_null_like
+36537114	Patient 5 (7-year-old girl)	residual_or_missense
+36779245	Patient 1	residual_or_missense
+36779245	Patient 2	residual_or_missense
+36779245	Patient 3	biallelic_loss_or_null_like
+36779245	Patient 4	biallelic_loss_or_null_like
+36779245	Patient 5	residual_or_missense
+36779245	Patient 6	residual_or_missense
+36779245	Patient 7	biallelic_loss_or_null_like
+36779245	Patient 8	biallelic_loss_or_null_like
+36779245	Patient 9	biallelic_loss_or_null_like
+36779245	Patient 10	biallelic_loss_or_null_like
+36779245	Patient 11	residual_or_missense
+36779245	Patient 12	residual_or_missense
+36779245	Patient 13	biallelic_loss_or_null_like
+37583270	Table 4 serial no. 37 (gene WWOX)	biallelic_loss_or_null_like
+37583270	Table 4 serial no. 38 (gene WWOX)	biallelic_loss_or_null_like
+37583270	Table 4 serial no. 39 (gene WWOX)	biallelic_loss_or_null_like
+37583270	Table 4 serial no. 40 (gene WWOX)	biallelic_loss_or_null_like
+38407561	A 1-year and 7-month-old girl	biallelic_loss_or_null_like
+39101447	the patient (13-month-old girl)	biallelic_loss_or_null_like
+41442931	first of 'two children' (not individuall	unknown
+41442931	second of 'two children' (not individual	unknown
+42092735	male neonate (case report)	residual_or_missense

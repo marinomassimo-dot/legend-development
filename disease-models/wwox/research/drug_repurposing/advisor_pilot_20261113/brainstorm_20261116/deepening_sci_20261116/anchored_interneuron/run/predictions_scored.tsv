@@ -1,0 +1,8 @@
+id	type	verdict	detail	statement
+Q1	order	FAIL	arm94_HT=0.1171875 arm93_HT=0.5390625 arm92_HT=inf arm91_HT=inf	S-HT crossing of rel_bursts above 1.5, smallest first: arm 94 < arm 93 < arm 92 < arm 91 (a not-in-bracket crossing counts as +infinity)
+Q2	value	PASS	arm93_HT=0.5390625 between 0.3..0.7	central anchored arm (KO interneuron:pyramid ratio 2.6, proportional coupling): S-HT crossing between 0.3 and 0.7, i.e. the miss of P3a STAYS (below my original lower bound 0.7)
+Q3	value	PASS	arm94_HT=0.1171875 lt 0.3	arm 94: S-HT crossing below 0.3
+Q4	value	FAIL	arm92_HT=inf between 0.5..1.2	arm 92 (equal fractional block, coupling 2): S-HT crossing between 0.5 and 1.2, inside or next to my original range
+Q5	value	PASS	arm91_HT=inf gt 1.0	arm 91 (equal fractional block, proportional coupling): S-HT crossing above 1.0 or not within the bracket
+Q6	value	PASS	arm94_KO=2.8359375 gt 1.0	arm 94 at S-KO: rel_bursts stays above 0.7 for s <= 1
+Q7	cmp	PASS	arm91_KO=0.8203125 < arm94_KO=2.8359375	S-KO crossing below 0.7: arm 91 earlier than arm 94 (less interneuron offset)

@@ -1,0 +1,107 @@
+Stage-1 classification (step 1). The folder holds no guanylyl-cyclase material. Grep for GUCY2C, guanylyl, guanylate cyclase, cGMP, GC-C and guanylin over /tmp/legend_cut_1867a26a8/disease-models gives 0 hits. The folder is a WWOX disease model, so "INSIDE" means a mechanism class the folder already discusses, not GC-C itself. Hit counts are Grep line counts over disease-models/wwox unless stated.
+- OUTSIDE:
+  - S1-1 PDE (1 hit, a 2',3'-cyclic-nucleotide 3'-phosphodiesterase MeSH tag on an unrelated paper in corpus_seed_pubmed_20260806.jsonl:476; effectively 0).
+  - S1-2 MRP4 (0).
+  - S1-3 ligand (0).
+  - S1-4 constitutive activity / receptor dose (0 for ligand-independent, autoinhibit, constitutive).
+  - S1-5 desensitisation (0).
+  - S1-6 PKG2 (0).
+  - S1-7 PDE3/cAMP (cAMP/PKA appears only as the title of PMID 16438931, batch_queue.md:172).
+  - S1-8 CFTR/NHE3 (CFTR 5 hits, all "Trikafta/CFTR-F508del" corrector analogies; NHE3 0).
+  - S1-9 Atoh1/Notch (0).
+  - S1-10 claudin/ZO-1 (0).
+  - S1-12 microbiota (microbio 0; LPS hits are only sepsis/brain, CC-20260826-PMID36828035-01).
+  - S1-15 ligand gradient (0).
+- INSIDE:
+  - S1-11 cytokine loop (TNF/IL-1β/IL-6/cytokine: 28 lines in 12 files).
+  - S1-13 receptor folding/trafficking (HSP90/chaperone/corrector class: dozens of lines; dismissal_ledger_current.md D-02 to D-04).
+  - S1-14 STAT3/repair (JAK2/STAT3 axis, discovery_ledger_current.md:223-226; therapeutic_hypotheses_ledger_current.md:39-49). The IL-22 repair route itself is OUTSIDE, 0 hits.
+
+Final ten, each tagged IPOTESI. Where a field says "not stated", the folder is silent, which is not a contradiction.
+
+H1. Origin: S1-3 (OUTSIDE, 0 hits for guanylin, Guca2a, Guca2b). Nearest rival: S1-4, ligand-independent constitutive activity.
+- Statement: The variant raises receptor output by amplifying the response to endogenous guanylin/uroguanylin, so cutting ligand drive pulls cGMP and the epithelial phenotype back toward wild type.
+- Corpus test: NOT STATED. 0 hits for guanylin, Guca2a, GC-C. Rival terms constitutive, ligand-independent and autoinhibit also give 0 hits (checked in claim_registry_current.md and across disease-models). The nearest held analogue is the "gate the sign/mechanism first" rule: /tmp/legend_cut_1867a26a8/disease-models/wwox/research/discovery_ledger_current.md:82 (the lithium reversal), which says to fix the mechanism before choosing the lever.
+- Usual reading changed: The usual reading calls a "gain-of-function cyclase" constitutively active. This one makes it a gain of ligand sensitivity, so the lever is upstream of the receptor.
+- Reject: Deleting the ligand genes on the variant background leaves cGMP and barrier at the variant level.
+- Discriminator: Guca2a/Guca2b double deletion on the variant background, compared with a heterozygous receptor-null allele on the same background. Ligand loss gives cGMP down toward wild type and barrier restored if H1 is right. If the variant is constitutive, ligand loss changes nothing and only the receptor-dose reduction works. Beware an overshoot: held rule "neither too little nor too much", mechanism_intervention_map.md:412 and :669. Full ligand loss may undershoot cGMP and damage the barrier, because receptor-null mice leak too (S1-10 premise, not held).
+
+H2. Origin: S1-6 (OUTSIDE, 0 hits for PRKG, PKG, protein kinase G, cGMP-dependent). Nearest rival: H3, cAMP-PKA.
+- Statement: cGMP damages differentiation and the barrier through PKG2 (Prkg2) as effector, so the second-messenger level can stay high while the damage stops when the effector is removed.
+- Corpus test: NOT STATED. 0 hits for PKG and PRKG. The rival's terms (cAMP/PKA) hit only the title of PMID 16438931 in batch_queue.md:172, catalogued and never read.
+- Usual reading changed: The usual reading treats the cGMP level as the harmful variable. This one separates level from effector.
+- Reject: Epithelial Prkg2 deletion on the variant background leaves the secretory-cell deficit and leak untouched.
+- Discriminator: Epithelial-specific Prkg2 deletion on the variant background. Predicts cGMP unchanged or slightly up (loss of PKG feedback), cAMP unchanged, barrier normalised if PKG2 is the effector. If barrier is unchanged, H3 is favoured.
+
+H3. Origin: S1-7 (OUTSIDE; cAMP/PKA only as one unread title, batch_queue.md:172). Nearest rival: H2.
+- Statement: Excess cGMP inhibits cGMP-inhibited PDE3 and raises cAMP, and cAMP-PKA, not PKG, carries the harm.
+- Corpus test: NOT STATED. 0 hits for PDE3, phosphodiesterase (cGMP sense) and cGMP. The PKG rival also gives 0 hits.
+- Usual reading changed: The usual reading takes cGMP-PKG as the axis. This one routes the harm through cAMP crosstalk.
+- Reject: Epithelial cAMP is not raised in variant gut (direct assay in lysate), or cAMP rises but lowering it leaves barrier unchanged.
+- Discriminator: Epithelium-restricted gain of a PDE3-class cAMP hydrolase (or a PDE3-resistant allele) on the variant background. Predicts cGMP unchanged, cAMP down, barrier restored if H3 is right. If Prkg2 loss (H2) rescues instead, this manipulation leaves barrier unchanged.
+
+H4. Origin: S1-1, with S1-2 as the rival (OUTSIDE; PDE 1 irrelevant CNPase hit, MRP4/ABCC4/efflux 0). Nearest rival: cGMP export through MRP4.
+- Statement: A limiting epithelial cGMP-hydrolysing capacity co-causes the overload, so raising hydrolysis, rather than lowering synthesis, normalises cGMP and the epithelium.
+- Corpus test: NOT STATED. Grep PDE, phosphodiesterase and sildenafil gives only the unrelated MeSH tag at corpus_seed_pubmed_20260806.jsonl:476. 0 hits for MRP4 and ABCC4 (the "transporter" grep hits in CC-20260826-EGABA-EXPERIMENT-01.md are chloride cotransporters, not cGMP export).
+- Usual reading changed: The usual reading blames synthesis alone. This one makes clearance a co-cause and an independent lever.
+- Reject: Lysate cGMP-hydrolysing activity with class-selective blockers is unchanged in variant epithelium, and an equal PDE gain does not move steady-state cGMP.
+- Discriminator: Epithelial overexpression of a cGMP-hydrolysing PDE on the variant background, compared with epithelial Abcc4 deletion. PDE gain gives intracellular cGMP down and extracellular cGMP down, barrier improved. Abcc4 loss gives intracellular cGMP up, extracellular down, barrier worse. A PDE gain that equally lowers cAMP confounds H3.
+
+H5. Origin: S1-9 (OUTSIDE; Atoh1, Math1, Hes1, goblet, Paneth, enteroendocrine: 0 hits). Nearest rival: H6, direct junctional effect.
+- Statement: cGMP signalling suppresses the Atoh1-dependent secretory programme directly, so the differentiation defect comes first and the leak and cytokines follow from the thinned mucus and Paneth-cell layer.
+- Corpus test: NOT STATED. 0 hits for the secretory-lineage terms. The only held intestinal-epithelium statement is a Wnt-safety line: mechanism_intervention_map.md:461 ("intestinal-crypt turnover … systemic Wnt-inhibition liabilities") and discovery_ledger_current.md:83. These show crypt dependence on Wnt but nothing on secretory fate.
+- Usual reading changed: Differentiation defects are usually read as a consequence of inflammation. This one makes them primary.
+- Reject: Enforced epithelial Atoh1 restores goblet and Paneth cells while the leak persists unchanged, so differentiation does not drive the leak. The reverse test also rejects it: leak is present before any secretory-cell change.
+- Discriminator: Inducible epithelial Atoh1 re-expression on the variant background. Predicts cGMP unchanged (it acts downstream), secretory cells restored, barrier improved only if differentiation is causal. If barrier stays leaky, H6 is favoured.
+
+H6. Origin: S1-10 (OUTSIDE; claudin, occludin, ZO-1, tight junction, paracellular, TEER: 0 gut hits; "permeab" hits are blood-brain barrier). Nearest rival: H5.
+- Statement: Excess cGMP remodels tight-junction composition directly (a claudin-2-type pore pathway), independent of secretory cell fate, which makes the leak a junctional effect.
+- Corpus test: NOT STATED. 0 hits for junction proteins in any gut sense.
+- Usual reading changed: The usual reading ties the barrier to mucus and secretory cells. This one decouples them.
+- Reject: Barrier is normal in variant mice at an age when goblet cells are already abnormal, or the reverse.
+- Discriminator: Epithelial claudin-2 deletion on the variant background. Predicts cGMP unchanged, pore-pathway leak reduced, secretory cells unchanged. If leak persists, H5 is favoured.
+
+H7. Origin: S1-8 (OUTSIDE; CFTR 5 hits only as Trikafta/CFTR-F508del correctors in analysis/proteostasis_rationale.md:33 and analysis/mechanism_intervention_map.md:601; NHE3 0). Nearest rival: H6.
+- Statement: The excess cGMP drives CFTR-dependent anion/fluid secretion and NHE3 inhibition, and the resulting luminal flow and osmotic stress, not nuclear signalling, injure the barrier and raise cytokines.
+- Corpus test: NOT STATED. The held CFTR text concerns protein-rescue analogies, not ion transport in gut.
+- Usual reading changed: Secretion is usually treated as separate from differentiation and barrier. This one makes secretory load the cause.
+- Reject: The leak and the differentiation defect persist when secretory output is blocked.
+- Discriminator: Epithelial Cftr deletion (or a class that blocks anion channel gating) on the variant background. Predicts cGMP unchanged (the lever is downstream), barrier restored if flow-driven. An intact secretory-cell defect would show the route is not secretion alone.
+
+H8. Origin: S1-11 (INSIDE). Nearest rival: primary epithelial defect (H5/H6).
+- Statement: Cytokines are secondary but form a feed-forward amplifier (cytokine → junction/secretory-fate damage → more cytokine), so cutting the receptor limb partly restores barrier without changing cGMP.
+- Corpus test: SUPPORT (weak, by analogy). research/fulltext_dossiers/PMID30290271.md:78 (Il6 and Tnf-a both >1.5-fold, only Il6 significant, n=4/group). discovery_ledger_current.md:123 warns the anti-inflammatory lever acts on an "effetto a valle", not the cause. analysis/therapeutic_translation_second_pass.md:550 says "the target is downstream of the target". These come from WWOX-loss brain/lung, not GC-C, and they show cytokines are read-outs, not proven causes.
+- Usual reading changed: Cytokines are usually read-outs. This one makes them an amplifier, and the held data suggest the IL-6/STAT3 arm may matter more than TNF.
+- Reject: Genetic loss of the cytokine receptor lowers cytokine signalling while barrier and secretory cells do not move.
+- Discriminator: Epithelial Tnfrsf1a deletion on the variant background, run in parallel with an IL-6-family receptor (Il6st) deletion given the held IL-6-over-TNF pattern. Predicts cGMP unchanged (or slightly lower if cytokines raise receptor expression) and barrier partly restored if the loop is causal. The first of those two is the only one that is a single manipulation.
+
+H9. Origin: S1-13 (INSIDE). Nearest rival: H1/S1-4 (receptor-dose logic).
+- Statement: The variant output depends on ER folding, glycosylation and exit of the transmembrane receptor to the apical surface, so lowering surface density, not catalytic activity, normalises cGMP.
+- Corpus test: SUPPORT for the rule, NOT STATED for GC-C. dismissal_ledger_current.md:68 (D-02: chemical chaperones are right only for ER/secretory proteins; WWOX is cytosolic, so they were withdrawn) and :69 (D-03: the sign of a chaperone depends on which chaperone and route; HSC70 delivers to the lysosome). A transmembrane receptor is exactly the ER/secretory class D-02 says the ER chaperone logic fits. D-04 (:70) adds that stability and function can come apart, so abundance is not the same as output.
+- Usual reading changed: Surface receptor is taken as fixed. This one makes it the lever, and the sign of any chaperone-class manipulation has to be checked per route.
+- Reject: Surface biotinylation shows receptor density unchanged in variant epithelium.
+- Discriminator: A folding- or exit-defective receptor allele (e.g. a glycosylation-site allele) on the variant background, compared with a catalytic-site-dead allele. Predicts cGMP down and barrier improved if surface density is the lever. A catalytic-dead allele would instead remove output without changing density.
+
+H10. Origin: ENGINE (held circuit: Wnt/β-catenin with the sign gate; discovery_ledger_current.md:77-85 and mechanism_intervention_map.md:446-464).
+- Statement: The secretory-differentiation defect is mediated by an epithelial Wnt/β-catenin tone that the cGMP overload shifts, and the direction of that shift has to be measured before any lever is chosen.
+- Corpus test: SUPPORT for the logic, NOT STATED for gut. discovery_ledger_current.md:82 shows the held rule: a gate on direction avoided a harmful candidate (lithium). mechanism_intervention_map.md:454 records nuclear β-catenin about 1.7-fold up in WWOX-KO organoids. :461 records intestinal-crypt turnover as the classic liability of systemic Wnt inhibition, so crypt Wnt dependence is held. No link between cGMP and Wnt is held.
+- Usual reading changed: Wnt is read as a proliferation axis. This one makes it the gate of secretory fate and treats its sign as unknown until measured.
+- Reject: Nuclear β-catenin and target genes (Axin2, Lef1) are unchanged in variant crypts.
+- Discriminator: Epithelial Ctnnb1 heterozygous deletion on the variant background, after a baseline measure of nuclear β-catenin. Predicts cGMP unchanged. Barrier and secretory cells improve if Wnt is high and worsen if Wnt is low, so the sign decides the outcome.
+
+Dropped from stage 1, with the reason for each (none dropped only because the folder is silent):
+- S1-2 is folded in as H4's rival.
+- S1-4 is folded in as H1's rival.
+- S1-5 (desensitisation): its test is a phospho-site knock-in on wild type, which asks whether feedback exists rather than offering a lever; the folder is silent (0 hits), which is "not stated".
+- S1-12 (microbiota): the lever acts on luminal cause, not on the signal, and is covered by the generic germ-free test. The folder is silent on gut microbiota; LPS hits are sepsis/brain only.
+- S1-14 (STAT3 repair): not on the second messenger; held STAT3 text is the WWOX brake axis (discovery_ledger_current.md:223-226), in the opposite direction.
+- S1-15 (ligand gradient): the folder is silent; its discriminator duplicates H1.
+
+FILES READ:
+/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/set3/T7/V3_S1_B.txt
+/tmp/legend_cut_1867a26a8/CLAUDE.md
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/discovery_ledger_current.md (lines 70-130, 178-212, 390-396)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/dismissal_ledger_current.md (lines 62-71)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/mechanism_intervention_map.md (lines 445-464, 595-610)
+/tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID24871327_locators.md (lines 85-124)
+Grep-matched lines cited (not opened as whole files): /tmp/legend_cut_1867a26a8/disease-models/wwox/research/fulltext_dossiers/PMID30290271.md:78; /tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/therapeutic_translation_second_pass.md:550; /tmp/legend_cut_1867a26a8/disease-models/wwox/analysis/proteostasis_rationale.md:33; /tmp/legend_cut_1867a26a8/disease-models/wwox/registries/batch_queue.md:172; /tmp/legend_cut_1867a26a8/disease-models/wwox/registries/corpus_seed_pubmed_20260806.jsonl:476; /tmp/legend_cut_1867a26a8/disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md:39-49; /tmp/legend_cut_1867a26a8/disease-models/wwox/research/commit_candidates/CC-20260826-EGABA-EXPERIMENT-01.md

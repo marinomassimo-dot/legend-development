@@ -122,6 +122,7 @@ python3 scripts/run_release_regressions.py              # every release suite at
 python3 governance/scripts/governance_fingerprint.py compose --all   # per-role governance fingerprint
 python3 scripts/test_tool_routing.py                    # every shipped tool is routed, exactly once
 python3 scripts/test_section_references.py --census     # `<file>` §NN references, per directory
+python3 framework/scripts/safe_push.py development main --expect-sha <sha> --serialize   # publish: the gate on the exact SHA, one publisher at a time (the lock covers the gate and the push only, never research)
 ```
 
 Persist receipts with `fulltext_receipts.py record`. Hand-editing the ledger breaks its hash chain

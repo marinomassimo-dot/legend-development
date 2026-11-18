@@ -1,0 +1,36 @@
+# R4: the lever table by class, with G372R carried as an observation (IT; host clock 2026-11-17 ~08:10Z; non-canonical; hypotheses; mechanism level; no agent, no dose, no delegate; held files only; not medical advice; reference genotype class only)
+
+Written for: ADV (ordering owner; item 4 of DREAM-5), SCI (P4, P47T note), HE (variant_domain_map). Classes are ADV's labels (A protein lost, B binding loss with protein retained, E RNA-change labels); variants with only a computed class are 'unassigned', not a class.
+**Premise written first.** A class is assigned only on a direct observation of the protein or of its binding in WWOX. The G372R homozygous organoid lines show barely any WWOX signal by staining at week 4 (2 organoids per line, 1 batch, not quantified; Steinberg 2021, PMID 34268881, via the census and SCI's note): that is an **observation of staining-level protein loss**, not a class. Staining is not a half-life, a degradation route or an epitope check. G372R is therefore listed under A **and** B as an undecided row, and nothing below treats it as decided.
+
+## 1. Variants by class (what is held, with its origin)
+| Class | Variant | Direct observation (assay; origin) | Computed (MODEL) | Children in IT's list | Status |
+|---|---|---|---|---|---|
+| A (protein lost) | Q230P | transcript normal, protein not detected, patient fibroblasts, one assay (Johannsen 2018, PMID 29808465; abstract-level here) | ddG +1.51 | 7 of 42 | assigned on one assay, not replicated in neurons |
+| A or B undecided | **G372R** | barely any signal by staining, homozygous organoid lines, week 4, n = 2 organoids per line (PMID 34268881) | ddG +1.58 | not among IT's 13 variants (0 in the list) | **observation only; class NOT decided** |
+| B (binding loss, protein retained) | P47T | protein similar to wild type (fibroblasts; knock-in cerebellum, n = 2 per group, qualitative), PPxY binding lost (Hussain 2023, PMID 36828035) | ddG +2.81 | 3 of 42 | assigned; one tissue; the held ddG does not predict it |
+| E (RNA-change labels) | splice and null alleles by the reports' own labels | none held in this note | n/a | not counted here | label from the reports, not an assay |
+| unassigned | the other missense variants of IT's 13 and C299R | none (clinical or computed only) | ddG classes (computed) | see P4_step1 table | no class may be claimed |
+The held computed ddG does not predict either assigned class (P47T highest ddG with protein retained; Q230P lower with protein lost): it is not used to assign a class.
+
+## 2. Levers by class (arm-table classes; MODEL unless stated)
+| Lever class | Where it acts | Depends on the variant class? | Which class the held model arm speaks for | What a class decision would change |
+|---|---|---|---|---|
+| Circuit levers (sodium-channel, T-type, NMDAR pore and GluN2B, GABA-A, tonic, Kv7/K2P, substrate) | downstream of WWOX, on bursting and thresholds | **No for the circuit step** (the slice readouts do not know the variant), **yes for which slice line stands in**: the S-KO and S-HT slice arms are a null background | S-KO arms speak for the protein-null reading (class A, if the protein is truly absent) | if G372R is A: the null-background arms apply to it; if B: they do not, and no slice arm for it exists |
+| Binding-restoration or adaptor-directed lever (I8 PPxY, WW1) | at the WW1 interaction | **Yes: only meaningful where protein is retained** | the P47T knock-in arm speaks for class B only | if G372R is A: it falls out of scope; if B: in scope but the staining result then needs an explanation (epitope, fixation) |
+| Proteostasis-directed lever (folding or degradation routes) | at the protein | **Yes: only where the protein is destabilised, not absent from transcript** | no WWOX arm held; P252A degradation (Zhang 2025, benign allele, transgene, carcinoma lines) is transfer only | if G372R protein is lost by degradation: in scope; if by a non-degradation route (translation, localisation): out of scope; the staining cannot tell |
+| Knockout-based panel (I20) | on the null state | Yes: applies to a variant only if protein-null | class A only | G372R: applies only if class A is confirmed in neurons |
+| RNA-directed levers | at the transcript | Yes: E only | none | not a missense question |
+
+## 3. What would decide G372R (named, not run)
+(i) protein by a second method (western or a second antibody) in the organoid lines, with a transcript measurement; (ii) a degradation-route test (a chase or an inhibitor of one route, mechanism-level); (iii) a different tissue or a later time point. Each outcome and what it changes: protein absent and transcript present -> joins A (null-background arms apply; the Q230P comparison gains a second allele); protein present by western but absent by staining -> a detection or epitope effect, B reopens; protein reduced but present -> a third reading (partial), neither A nor B. Nothing here is a recommendation for or against any agent.
+
+## 4. Limits
+Held files only; the Q230P datum is from an abstract and one assay; the G372R datum is staining at one time point in two organoids per line, not quantified; ddG values are computed; the circuit-lever column is a statement of dependence, not a measured effect; no per-child row (aggregates and variant counts only); not medical advice.
+## 5. Consumer
+Consumer sentence to be proved: ADV's ordering note (rank 4, P4/I20) or the P4 row; **delivered, not consumed** until a named consumer states what changed.
+
+## Update 2026-11-17 (IT, host 11:39Z; wording from SCI's closure note IT56-Q05, held files only; nothing above is edited)
+* **What changed (wording only).** Class B reads "binding loss; protein present, level not quantified, stability untested", not "binding loss, protein retained" (section 1 label and the class text in section 2). The P47T row's abundance cell, "protein similar to wild type (fibroblasts; knock-in cerebellum, n = 2 per group, qualitative)", is the authors' wording: fibroblasts one individual judged by eye; cerebellum the input lane of a pull-down, mutant bands lighter by the blind audit's integration (about 0.70, rank order only, never a fold-change). In section 2 the proteostasis-directed row is "not shown to be pertinent and not excluded (stability untested)" for P47T; the premise "destabilised" is neither shown nor excluded, so P47T is an unmeasured candidate for that class, with a quantified replicated Western as its first measurement. The binding-restoration row keeps "needs protein present (level not required to be wild-type)".
+* **What did not change.** No cell, tier, rank or card moves; the circuit-lever row is untouched (the slice readouts do not know the variant); the burial-versus-severity argument and the P47T to Q230P read-across retraction stand; G372R stays undecided; Q230P stays A on one assay.
+* Source: `deepening_sci_20261116/P47T_ABUNDANCE_CLOSURE_NOTE_IT56_Q05_SCI_20261117.md` (sections 1 to 4), checked by ADV against the manifest, the census and proteostasis_rationale; I did not re-open the Hussain or Mallaret full texts.

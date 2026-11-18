@@ -1,0 +1,98 @@
+{
+ "J01": {
+  "arm": "SCI",
+  "orig": "HSCI-2"
+ },
+ "J02": {
+  "arm": "HE",
+  "orig": "H-HE-4"
+ },
+ "J03": {
+  "arm": "ADV",
+  "orig": "H-ADV-3"
+ },
+ "J04": {
+  "arm": "BASE",
+  "orig": "H-B3"
+ },
+ "J05": {
+  "arm": "SCI",
+  "orig": "HSCI-3"
+ },
+ "J06": {
+  "arm": "SCI",
+  "orig": "HSCI-4"
+ },
+ "J07": {
+  "arm": "HE",
+  "orig": "H-HE-2"
+ },
+ "J08": {
+  "arm": "BASE",
+  "orig": "H-B4"
+ },
+ "J09": {
+  "arm": "ADV",
+  "orig": "H-ADV-4"
+ },
+ "J10": {
+  "arm": "ADV",
+  "orig": "H-ADV-5"
+ },
+ "J11": {
+  "arm": "BASE",
+  "orig": "H-B1"
+ },
+ "J12": {
+  "arm": "IT",
+  "orig": "HIT-1"
+ },
+ "J13": {
+  "arm": "IT",
+  "orig": "HIT-5"
+ },
+ "J14": {
+  "arm": "HE",
+  "orig": "H-HE-1"
+ },
+ "J15": {
+  "arm": "ADV",
+  "orig": "H-ADV-2"
+ },
+ "J16": {
+  "arm": "HE",
+  "orig": "H-HE-3"
+ },
+ "J17": {
+  "arm": "SCI",
+  "orig": "HSCI-5"
+ },
+ "J18": {
+  "arm": "BASE",
+  "orig": "H-B5"
+ },
+ "J19": {
+  "arm": "SCI",
+  "orig": "HSCI-1"
+ },
+ "J20": {
+  "arm": "IT",
+  "orig": "HIT-3"
+ },
+ "J21": {
+  "arm": "BASE",
+  "orig": "H-B2"
+ },
+ "J22": {
+  "arm": "IT",
+  "orig": "HIT-2"
+ },
+ "J23": {
+  "arm": "ADV",
+  "orig": "H-ADV-1"
+ },
+ "J24": {
+  "arm": "IT",
+  "orig": "HIT-4"
+ }
+}

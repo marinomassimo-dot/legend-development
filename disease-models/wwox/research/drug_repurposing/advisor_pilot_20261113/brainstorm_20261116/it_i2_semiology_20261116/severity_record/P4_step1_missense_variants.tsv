@@ -1,0 +1,14 @@
+variant	children_in_the_42	children_in_the_37	reports	domain_as_stated_by_the_reports	protein_stated_by_the_reports	what_the_reports_say_about_function_(from_my_keyword_pass_over_the_25_report_texts_only)	flag	held_ddG_class_if_in_the_13 (computed prediction, not an assay)
+p.Gln230Pro (c.689A>C)	7	4	29808465,30356099,35792847,36537114,36779245	domain stated by 29808465 (catalytic SDR)	not stated	29808465: change of glycine 230 into proline within the catalytic short-chain dehydrogenase domain (stated); 30356099: all missense variations but p.Ser318Leu classified probably damaging by PolyPhen-2; 35792847: described as a familial missense pathogenic variant		p.Gln230Pro: ddG +1.51, stability (rescuable window)
+p.Pro47Thr (c.139C>A)	3	0	35792847	domain named only in citing text; not by 35792847; SAME VARIANT AS THE P47T KNOCK-IN MOUSE (flag)	not stated	35792847 Table 1: homozygous, Missense (no domain named); 42193054 and 30746283 (citing earlier literature): within the WW domain, highly conserved residue	SAME VARIANT AS A MODEL LINE (P47T knock-in)	p.Pro47Thr: ddG +2.81, stability (rescuable window)
+p.Ser318Leu (c.953C>T)	0	2	30356099	not stated	not stated	30356099: the only missense variation of that series NOT classified as probably damaging by PolyPhen-2		not in the held 13
+p.Gly137Glu (c.410G>A)	0	2	30356099	not stated	not stated	30356099: variant interpretation by an online tool (see the report); no experimental function		not in the held 13
+p.Glu17Lys (c.49G>A)	2	1	30356099,36779245	stated: not in a known functional domain	not stated	30356099: not located in a known functional domain (with p.Thr358Ile)		not in the held 13
+p.His150Pro (c.449A>C)	0	1	30356099	not stated	not stated	30356099: classified by PolyPhen-2 as probably damaging (series statement); no experimental function		not in the held 13
+p.Lys200Glu;Thr358Ile (c.598A>G;1073C>T)	0	1	30356099	stated for Thr358Ile only	not stated	30356099: p.Thr358Ile not located in a known functional domain		not in the held 13
+p.Ser304Tyr (c.911C>A; text also c.991C>A)	0	2	37095367,39416860	not stated; the report prints two nucleotide positions (Table 1 c.911C>A, text c.991C>A) for one protein change	not stated	39416860: pathogenicity and clinical correlation require validation through animal experiments		not in the held 13
+p.Ser304Phe (c.911C>T)	0	1	30356099	not stated	not stated	none		not in the held 13
+p.Thr12Met (c.35C>T)	0	1	39507621	not stated	not stated	39507621: homozygous likely pathogenic variant (classification only)		p.Thr12Met: ddG +0.04, tolerant/other
+p.Leu239Arg (c.716T>G)	1	2	41153369,42092735	not stated	not stated	42092735: predicted amino acid substitution from exome; 41153369 Table: reported ACMG classification only		not in the held 13
+p.Ala363Pro (c.1087G>C)	1	0	36779245	not stated	not stated	none		not in the held 13
+c.406A>G (amino-acid change not named in the report)	0	1	35712340	not stated	not stated	none		not in the held 13

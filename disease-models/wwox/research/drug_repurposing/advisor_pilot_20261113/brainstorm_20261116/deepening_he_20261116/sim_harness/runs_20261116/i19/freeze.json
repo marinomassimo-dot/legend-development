@@ -1,0 +1,108 @@
+{
+ "adapter": "i19_harness_model.py",
+ "base_seed": 20261116,
+ "calls": 480,
+ "files": {
+  "i19_harness_model.py": "7016332b403902ce2874ec984c428dd43fed487d87ab60e391430c404fd87fea",
+  "rebound_oscillator.py": "c050b8ff0a1ba8fe5ef340f2a57168ecf578f161be12392c42fec98851b89419"
+ },
+ "harness_sha256": "2f9d76f04c15b0d38c224c019fcbeb69f1fff31191d6b933c2dc0cb9ddcefad9",
+ "harness_version": "1",
+ "params": {
+  "arm": [
+   0,
+   0,
+   7,
+   "0 none, 1 tonic x1.2, 2 T-type x0.75, 3 NMDAR x0.9, 4 noise x0.9, 5 T-type x1.25, 6 resource x0.6, 7 phasic x1.2"
+  ],
+  "geno": [
+   1,
+   0,
+   2,
+   "0 S-KO, 1 S-HT, 2 S-WT (held positions of rebound, excitatory amplitude, phasic inhibition)"
+  ]
+ },
+ "points": 24,
+ "points_outside_declared_bounds": [],
+ "scan": {
+  "design": "grid",
+  "fixed": {},
+  "grid": {
+   "arm": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "geno": [
+    0,
+    1,
+    2
+   ]
+  },
+  "predictions": [
+   {
+    "a": "arm=1|geno=1",
+    "b": "arm=0|geno=1",
+    "expect": "a_lt_b",
+    "id": "K1",
+    "metric": "incidence",
+    "min_fraction": 0.8,
+    "statement": "Tonic GABA-A weight x1.2 lowers slice incidence at S-HT (the steep part of the incidence curve)"
+   },
+   {
+    "a": "arm=4|geno=1",
+    "b": "arm=0|geno=1",
+    "expect": "a_lt_b",
+    "id": "K2",
+    "metric": "incidence",
+    "min_fraction": 0.8,
+    "statement": "Noise amplitude x0.9 (persistent-sodium type) lowers slice incidence at S-HT"
+   },
+   {
+    "a": "arm=7|geno=1",
+    "b": "arm=0|geno=1",
+    "expect": "a_lt_b",
+    "id": "K3",
+    "metric": "incidence",
+    "min_fraction": 0.8,
+    "statement": "Phasic inhibition x1.2 (synaptic GABA-A potentiation type) lowers slice incidence at S-HT"
+   },
+   {
+    "a": "arm=6|geno=0",
+    "b": "arm=0|geno=0",
+    "expect": "a_gt_b",
+    "id": "K4",
+    "metric": "dur_median_s",
+    "min_fraction": 0.8,
+    "statement": "Resource depletion x0.6 (duration-only arm) lengthens the median burst duration at S-KO"
+   },
+   {
+    "a": "arm=1|geno=0",
+    "b": "arm=0|geno=0",
+    "expect": "a_lt_b",
+    "id": "K5",
+    "metric": "mean_bursts_in_bursting_slices",
+    "min_fraction": 0.8,
+    "statement": "Tonic x1.2 lowers the number of bursts per bursting slice at S-KO (the rate view has no plateau)"
+   },
+   {
+    "a": "arm=0|geno=0",
+    "b": "arm=0|geno=1",
+    "expect": "a_gt_b",
+    "id": "K6",
+    "metric": "incidence",
+    "min_fraction": 0.8,
+    "statement": "Baseline incidence is higher at S-KO than at S-HT (graded across the genotype axis)"
+   }
+  ],
+  "silent_below": 1,
+  "silent_metric": "n_bursts"
+ },
+ "scan_sha256": "1ed89404fff848ff4ee41270e0a57400036040702576fee436dac15f23e72746",
+ "seeds": 20
+}

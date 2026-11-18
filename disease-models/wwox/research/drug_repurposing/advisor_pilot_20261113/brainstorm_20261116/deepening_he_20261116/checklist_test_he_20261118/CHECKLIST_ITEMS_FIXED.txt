@@ -1,0 +1,80 @@
+# Fixed item checklist, Form 1 (HE; declared 2026-11-18 BEFORE any target is chosen; identical for every target and defect)
+# Source of the list: the generic categories of a standard physiology and biochemistry text (physiological ions and trace metals, acid-base and physical conditions, redox couples and gases, nucleotides and second messengers, vitamins and cofactors, amino acids and neurotransmitters, intermediary metabolites, lipids and sterols). No item was added, removed or reordered after any target was known; no item is there because of any particular defect. Zinc is on the list for the same reason as every other trace metal.
+# One item per line, in this order.
+Na+
+K+
+Ca2+
+Mg2+
+Mn2+
+Fe2+ / Fe3+
+Cu+ / Cu2+
+Zn2+
+Co2+
+Ni2+
+Li+
+Cl-
+HCO3-
+phosphate
+sulfate
+iodide
+fluoride
+selenium (selenoproteins, selenite)
+molybdenum
+low pH (acidosis)
+high pH (alkalosis)
+low temperature
+high temperature
+low osmolarity
+high osmolarity
+hypoxia
+hyperoxia
+hydrogen peroxide and other reactive oxygen species
+nitric oxide
+carbon monoxide
+hydrogen sulfide
+reduced / oxidised glutathione
+NAD+ / NADH
+NADP+ / NADPH
+ATP
+ADP and AMP
+GTP and GDP
+cAMP
+cGMP
+acetyl-CoA and coenzyme A
+S-adenosylmethionine
+FAD and FMN
+pyridoxal phosphate (vitamin B6)
+thiamine pyrophosphate (vitamin B1)
+biotin
+folate and tetrahydrofolate
+vitamin B12 (cobalamin)
+vitamin C (ascorbate)
+vitamin D
+vitamin A (retinoids)
+vitamin E
+vitamin K
+heme
+lipoic acid
+coenzyme Q10
+glucose
+lactate
+pyruvate
+ketone bodies (beta-hydroxybutyrate, acetoacetate)
+glutamine
+glutamate
+GABA
+glycine
+aspartate
+serine
+arginine
+taurine
+creatine
+carnitine
+citrate and TCA-cycle intermediates (succinate, alpha-ketoglutarate, fumarate)
+free fatty acids
+cholesterol and other sterols
+bile acids
+polyamines (spermidine, spermine)
+adenosine
+ammonia
+urea

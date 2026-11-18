@@ -1,0 +1,86 @@
+All answers below are hypotheses from general knowledge. No files were consulted. Evidence lines are marked as known, partial or none known. "WM" means white-matter integrity (for example DTI fractional anisotropy, g-ratio, MBP/PLP, callosal thickness). "Cog" means cognitive behaviour.
+
+H1. Statement: Loss of WWOX function inside the oligodendrocyte-precursor (OPC) lineage blocks OPC-to-myelinating-oligodendrocyte differentiation cell-autonomously, so lineage-restricted rescue restores both myelin and cognition.
+- Evidence: Hypomyelination is reported in WWOX-deficient rodents and in patients. Cell-autonomy has not been shown, and conditional lineage-specific work is partial or none known.
+- Usual reading assumes: Myelin loss is a secondary effect of neuronal or epileptic dysfunction. This hypothesis makes it primary.
+- Rejection: OPC-selective deletion of the gene (Pdgfra-CreER or Sox10-Cre) in an otherwise wild-type animal gives normal MBP and g-ratio and a normal OPC differentiation index (CC1+/Olig2+). That result rejects it.
+- Discriminating manipulation: Re-express the gene only in the OPC lineage, versus only in neurons (Syn1-Cre, the rival H2/H10).
+  - WM prediction: OPC-only re-expression restores WM, and neuron-only re-expression does not.
+  - Cog prediction: OPC-only re-expression partly restores cognition (the part that depends on myelin).
+
+H2. Statement: Seizure and hyperexcitability burden suppresses activity-dependent myelination and degrades myelin, so controlling network excitability raises both WM and cognition.
+- Evidence: Seizures and aberrant activity are known to alter myelination and remodelling in other models. Whether this operates in WWOX deficiency is none known. Neuronal hyperexcitability itself is reported.
+- Usual reading assumes: Seizures are an outcome that sits beside the myelin defect. This hypothesis makes them its driver.
+- Rejection: An animal made seizure-free (or with network activity normalised) still has an unchanged g-ratio and MBP deficit. That rejects it.
+- Discriminating manipulation: Suppress neuronal firing with a sodium-channel-blocker-class or chemogenetic approach, with OPC differentiation left untouched. Compare against an OPC-intrinsic differentiation push (H1).
+  - WM prediction: WM improves with excitability control, with no OPC-differentiation change measured intrinsically.
+  - Cog prediction: Cognition improves.
+  - If a differentiation push (for example a muscarinic M1 antagonist class) improves WM but not seizures, H1 or H10 is favoured over H2.
+
+H3. Statement: Reduced ErbB4/NRG1 signalling in parvalbumin interneurons causes E/I imbalance and impaired circuit-driven myelination, so restoring interneuron ErbB4 signalling raises both WM and cognition.
+- Evidence: WWOX interacts with ErbB4 in vitro, and interneuron myelination is activity-sensitive. The link in vivo is none known.
+- Usual reading assumes: The interneuron phenotype and the myelin phenotype are separate. This hypothesis links them through PV-cell activity.
+- Rejection: PV-interneuron-specific ErbB4 or NRG1 gain of function leaves PV-axon myelination and the E/I ratio unchanged. That rejects it.
+- Discriminating manipulation: Selectively activate or restore the ErbB4 arm in PV cells, versus restoring signalling in excitatory neurons (the rival H8).
+  - WM prediction: Increased myelination of PV axons and local cortical WM.
+  - Cog prediction: Improved working-memory and learning measures, with reduced network hypersynchrony.
+
+H4. Statement: A deficit of oligodendrocyte metabolic support (glycolysis, lactate export through MCT1, HIF1 handling) starves axons and halts myelin maintenance, so restoring the metabolic coupling restores both.
+- Evidence: WWOX is reported to regulate glycolysis and HIF1a in non-neural cells. Oligodendroglial lactate support of axons is established in other settings. In WWOX-deficient neural tissue, none known.
+- Usual reading assumes: Metabolic effects are a consequence of mTOR hyperactivity. This hypothesis makes them independent of it.
+- Rejection: Oligodendrocyte lactate or glucose flux (a metabolic reporter) is normal in the model, and an MCT1-supply manipulation does not change axonal energy status. That rejects it.
+- Discriminating manipulation: Oligodendrocyte-specific MCT1 or HIF1a/glycolytic gene manipulation (a genetic rescue of lactate export), against a lineage differentiation push (H1).
+  - WM prediction: Axonal integrity and myelin maintenance improve, mainly in axonal health markers (fewer degenerating axons) rather than in OPC numbers.
+  - Cog prediction: Improved performance, with possible exercise- or energy-demand dependence.
+
+H5. Statement: Astrocyte-derived lipid and cholesterol supply (SREBP/SCAP pathway) is insufficient for myelin membrane synthesis, so restoring astrocytic lipid output restores myelin and cognition.
+- Evidence: Astrocyte cholesterol supply for myelination is known in other models. A role in WWOX disease is none known.
+- Usual reading assumes: The lipid deficit is an oligodendrocyte-intrinsic effect of mTORC1. This hypothesis makes it non-cell-autonomous.
+- Rejection: Brain cholesterol and lipid synthesis gene expression, and myelin lipid composition, are normal in the model. That rejects it.
+- Discriminating manipulation: Astrocyte-specific SREBP/SCAP gain or loss, versus oligodendrocyte-specific mTORC1 gain. Cholesterol supplementation would be a mechanism-level contrast.
+  - WM prediction: Astrocyte-targeted rescue increases myelin thickness.
+  - Cog prediction: Cognition improves in step.
+  - If astrocytic rescue fails but an oligodendrocyte-intrinsic push works, the lipid hypothesis is rejected.
+
+H6. Statement: WWOX loss derepresses Wnt/β-catenin signalling (through Dvl), which holds OPCs in a progenitor state, independently of mTOR.
+- Evidence: WWOX binds Dvl and modulates Wnt in other cell types. Wnt hyperactivation inhibits OPC maturation in other models. The combination in WWOX-deficient brain is none known.
+- Usual reading assumes: mTOR is the main brake on myelination. This hypothesis makes the brake Wnt-dependent, which would explain why mTOR inhibition is only partial.
+- Rejection: Nuclear β-catenin and Axin2 are not elevated in WWOX-deficient OPCs, and Wnt inhibition does not change differentiation. That rejects it.
+- Discriminating manipulation: Inhibit the Wnt pathway in the OPC lineage (a tankyrase or porcupine-class inhibitor, or lineage-restricted Dvl/β-catenin reduction), in combination with versus without mTOR inhibition.
+  - WM prediction: Additive or synergistic WM gains with mTOR inhibition.
+  - Cog prediction: Additional cognitive gain beyond mTOR inhibition alone.
+  - If there is no additive effect, Wnt is not an independent arm.
+
+H7. Statement: Dysregulated microglia (excess pruning of axons or myelin, or failure to clear myelin debris) damage myelin and synapses, so resetting the microglial state restores both.
+- Evidence: Microglial roles in myelin maintenance and debris clearance are established generally. In WWOX disease, none known.
+- Usual reading assumes: Glia other than oligodendrocytes are bystanders. This hypothesis makes microglia the effector.
+- Rejection: Microglial depletion or repopulation (CSF1R-inhibitor class) leaves the myelin deficit and the behavioural deficit unchanged. That rejects it.
+- Discriminating manipulation: CSF1R-inhibitor-class microglial depletion followed by repopulation, versus oligodendrocyte-selective manipulation.
+  - WM prediction: Depletion and repopulation improves WM (fewer myelin debris, more intact sheaths) if H7 holds.
+  - Cog prediction: Cognition improves and synaptic density normalises.
+
+H8. Statement: The signal that sets myelin thickness is an axon-intrinsic deficit, such as reduced neuronal NRG1 type III (and downstream axonal caliber or ensheathment cues), so neuron-restricted restoration of axonal instructive cues restores myelin and cognition.
+- Evidence: Axonal NRG1 type III sets myelin thickness in the PNS and CNS in other models. The link to WWOX is none known.
+- Usual reading assumes: The oligodendrocyte alone decides how much myelin it makes. This hypothesis moves the instruction to the axon.
+- Rejection: Neuron-specific NRG1 type III (or ErbB) gain of function does not change myelin thickness, or the axonal NRG1 level is normal in the model. That rejects it.
+- Discriminating manipulation: Neuron-restricted rescue (axonal NRG1 type III), versus an OPC-intrinsic rescue (H1).
+  - WM prediction: A thickness increase on axons that carry the transgene, and little change in OPC number.
+  - Cog prediction: Improvement, specifically in myelin-dependent timing and learning tasks.
+
+H9. Statement: DNA-damage-response and oxidative stress signalling (p53-dependent), driven by loss of WWOX's role in genome maintenance, causes OPC senescence or apoptosis and depletes the myelinating pool.
+- Evidence: WWOX is linked to the DNA damage response and to p53 and ATM in other cells. Senescent OPCs are reported in ageing and other disease. In WWOX deficiency in brain, none known.
+- Usual reading assumes: OPC loss is a differentiation failure. This hypothesis makes it a survival or senescence problem.
+- Rejection: The OPC pool is normal in size (Pdgfra+ cell density), with no senescence markers (p16/p21, SA-β-gal) or γH2AX excess. That rejects it.
+- Discriminating manipulation: OPC-restricted p53 reduction or a senolytic-class manipulation, compared with a differentiation push (H1).
+  - WM prediction: OPC density and myelination recover, with fewer senescence markers.
+  - Cog prediction: Improved performance.
+  - A differentiation push in a depleted pool would fail to restore WM, which would separate H9 from H1.
+
+H10. Statement: Cognitive impairment arises mainly from synaptic and neuronal dysfunction (for example GluN2B/NMDAR-dependent signalling or ER stress), with hypomyelination a parallel effect, so rescuing the neuron restores cognition and myelination only partially or secondarily.
+- Evidence: Synaptic and NMDAR-related abnormalities are reported in WWOX-deficient models. A myelin-independent cognitive rescue is none known.
+- Usual reading assumes: Myelination restoration drives cognitive recovery. This hypothesis dissociates them, which would explain the limited cognitive benefit when mTOR inhibition acts on myelin.
+- Rejection: Selective myelin repair (OPC differentiation push with the neuron untouched) normalises cognition fully. That rejects it.
+- Discriminating manipulation: Repair myelin alone (an OPC differentiation push, for example through a muscarinic M1 antagonist class or a lineage-specific Myrf gain) with neurons untouched, versus neuron-restricted rescue.
+  - WM prediction: Myelin repair alone raises WM.
+  - Cog prediction: Cognition improves little, while neuron-restricted rescue improves cognition with only a modest WM change. That dissociation is the signature of H10.
+  - If myelin repair alone restores cognition, H10 is rejected in favour of H1.

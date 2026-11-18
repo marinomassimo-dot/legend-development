@@ -1,0 +1,17 @@
+Run record (HE, 2026-11-16). Machine: 4 cores, shared with other sessions' gates and tests.
+OAT: started 18:09:13Z by a runner script that would have continued to GRID and LHS; at 18:35Z the runner script was stopped (SIGTERM to the shell script only; the OAT harness process was left running), because ADV asked that the LHS not start while the load average is above about 6.
+Load average (1, 5, 15 min) read at 18:29:18Z: 11.15, 9.84, 7.88; at 18:35:20Z: 9.66, 10.65, 9.02. Load at 18:09Z was not recorded (my own mistake: not noted at the start).
+GRID and LHS will be started by hand when the 1-minute load average is below 6; the load at start and end of each is written below.
+OAT ended (results.sha256 present) 18:49:29Z; load average (1,5,15 min) 9.66 10.56 10.01
+oat score rc=0
+grid START 18:52:29Z; load average 3.98 7.75 9.02
+grid run rc=0 END 19:03:57Z; load average 11.18 10.05 9.35
+grid score rc=0
+lhs START 19:09:57Z; load average 4.88 7.56 8.53
+lhs run rc=0 END 20:46:08Z; load average 9.20 9.39 8.61
+lhs score rc=0
+CHAIN_DONE
+i19 START 20:47:39Z; load average 5.42 8.07 8.21
+i19 run rc=0 END 21:22:23Z; load average 5.58 5.93 6.96
+i19 score rc=0
+I19_DONE

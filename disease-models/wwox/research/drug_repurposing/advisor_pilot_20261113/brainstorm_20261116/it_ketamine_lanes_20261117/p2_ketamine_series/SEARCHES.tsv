@@ -1,0 +1,27 @@
+route	exact_query_string	date	count_returned	how_many_opened_and_why_others_not
+PubMed (MCP tool)	ketamine status epilepticus children	2026-11-17	84	60 returned; opened metadata for the systematic reviews and named cohorts only (see SOURCES); remaining ~50 not opened: mostly adult, case reports, other drugs, or already represented
+PubMed (MCP tool)	ketamine super-refractory status epilepticus pediatric	2026-11-17	24	all 24 PMIDs screened by title; 7 reviews/cohorts opened; rest case reports/older reviews
+PubMed (MCP tool)	ketamine infantile epileptic encephalopathy	2026-11-17	6	6 screened; 3 opened as abstract (CDKL5 review 34530725, Ohtahara anaesthesia case 38969971, KCNQ2 case 30530441); 3 older (1827585, 7588967, 27616483 GRIN2D opened)
+PubMed (MCP tool)	ketamine refractory status epilepticus systematic review meta-analysis	2026-11-17	6	all 6 opened at abstract; 4 also full text (41409370 via EPMC XML; 38926769 via EPMC XML; 42835272, 38782798 via PMC page); 41550426 embargoed in PMC; 37523161 captcha
+PubMed (MCP tool)	ketamine refractory convulsive status epilepticus children Ilvento OR Keros OR Wang OR Mewasingh	2026-11-17	2069994	MALFORMED (OR precedence); count is meaningless; discarded; replaced by field-tagged author queries below
+PubMed (MCP tool)	Jacobwitz ketamine refractory status epilepticus children	2026-11-17	2	both opened (37783824 abstract; 35817569 PMC page)
+PubMed (MCP tool)	Ilvento L[Author] AND ketamine	2026-11-17	3	26189786 abstract opened; 27311915 protocol opened; 23197747 = Rosati
+PubMed (MCP tool)	Keros S[Author] AND ketamine	2026-11-17	1	28349774 abstract opened
+PubMed (MCP tool)	ketamine pediatric refractory status epilepticus Wang febrile infection-related epilepsy syndrome retrospective	2026-11-17	0	zero; Wang 2020 (China, n=18) reached only via secondary table in 38926769
+PubMed (MCP tool)	WWOX ketamine	2026-11-17	0	absence route 1 of 2
+PubMed (MCP tool)	WOREE ketamine	2026-11-17	0	absence route 1 of 2
+PubMed (MCP tool)	"WWOX AND (ketamine OR ""NMDA receptor antagonist"" OR memantine)"	2026-11-17	0	absence route 1 of 2 (broader)
+PubMed (MCP tool)	ketamine AND (GRIN1 OR GRIN2A OR GRIN2B OR GRIN2D OR NMDA receptor gain-of-function) AND epileptic encephalopathy	2026-11-17	8	abstracts of 7 read (41672997 and 39404842 and 30639357 off-topic: depression mouse, PTZ mouse, rat pilocarpine); GRIN2D human 27616483, GRIN1 34227748, GluN2A in vitro 31249692, GRIN2D mouse 40277233 relevant
+PubMed (MCP tool)	ketamine AND (SCN1A OR SCN2A OR SCN8A OR KCNQ2 OR STXBP1 OR CDKL5 OR KCNT1) AND (status epilepticus OR seizures)	2026-11-17	2	34530725 CDKL5 cohort (no ketamine data in abstract), 30530441 KCNQ2 case
+PubMed (MCP tool)	"ketamine ""developmental and epileptic encephalopathy"""	2026-11-17	3	40277233 (mouse), 39970743 (ATP1A2 case), 38969971 (Ohtahara anaesthesia)
+PubMed (MCP tool)	ketamine ATP1A2 status epilepticus	2026-11-17	1	39970743 abstract
+Europe PMC REST	"(ketamine AND ""status epilepticus"" AND (child OR children OR pediatric OR paediatric))"	2026-11-17	1332	full-text-wide default search; first 100 hits stored (sources/EPMCsearch_a.json), not screened one by one; count not comparable with PubMed
+Europe PMC REST	"(ketamine AND ""super-refractory status epilepticus"" AND (pediatric OR paediatric OR children))"	2026-11-17	201	first 100 stored (EPMCsearch_b.json); not individually opened
+Europe PMC REST	"(ketamine AND ""infantile epileptic encephalopathy"")"	2026-11-17	229	first 100 stored (EPMCsearch_c.json); not individually opened (full-text-wide, many spurious)
+Europe PMC REST	"(ketamine AND ""refractory status epilepticus"" AND (""systematic review"" OR ""meta-analysis""))"	2026-11-17	251	first 100 stored (EPMCsearch_d.json); reviews taken from the PubMed query instead
+Europe PMC REST	(WWOX AND ketamine)	2026-11-17	33	33 hits stored (EPMCsearch_e.json); 2 WWOX-neurological papers opened as full text (42422765, 34747138): ketamine only as perfusion/electrophysiology anaesthetic. Other 31 are oncology/lung/bone/conference supplements by title; not opened (WWOX and ketamine both appear somewhere in full text but not as a treatment pair; NOT individually verified)
+Europe PMC REST	(WOREE AND ketamine)	2026-11-17	2	both = the two WWOX papers above; opened; absence route 2 of 2
+Europe PMC REST	(WWOX AND ketamine) AND (OPEN_ACCESS:y)	2026-11-17	24	stored (EPMCsearch_g.json); subset of previous
+Europe PMC REST	"(ketamine AND (GRIN2A OR GRIN2B OR GRIN2D OR SCN2A OR SCN8A OR KCNQ2 OR STXBP1 OR ATP1A2 OR CDKL5) AND (seizure OR epilepsy OR ""status epilepticus""))"	2026-11-17	1534	full-text-wide; stored first 100 (EPMCsearch_h.json); not screened; too broad (mouse and cell studies)
+Europe PMC REST	(KETASER OR NCT02431663)	2026-11-17	7	KETASER01 protocol 27311915 and results 35833327 identified; rest unrelated
+Europe PMC REST	EXT_ID:<pmid> AND SRC:MED (core record), for 20 PMIDs	2026-11-17	20	one record each; abstract bytes saved

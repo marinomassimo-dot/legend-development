@@ -1,0 +1,150 @@
+Answered from my own knowledge only. No tool or file was used, so nothing here is checked against LEGEND records, the registry or the literature. The question does not name the carrier. I used a Na+/Cl--coupled neurotransmitter transporter as the worked example, with the dopamine transporter (SLC6A3) as the best fit. Its loss gives hyperlocomotion in null mice, and missense misfolding variants are known in humans. If the carrier is something else, H8 to H12 change most.
+
+ENUMERATION
+
+Defect in physical-chemical terms: a multi-pass (about 12 transmembrane segment) membrane protein must fold in the ER and be N-glycosylated. It must then pass quality control, exit through COPII vesicles and reach the plasma membrane. There it runs an alternating-access cycle: Na+/Cl- and substrate bind, the protein goes outward-open to occluded to inward-open, and substrate is released. The impaired step is biogenesis, meaning folding, quality control and ER export. Ectopic degradation by ERAD or lysosomes follows. The cycle itself may be only partly damaged. The result is less reuptake, so extracellular substrate stays high and tonic signalling is abnormal. The hyperactivity is probably a circuit adaptation to that excess, but this is INFERENZA.
+
+(a) Activity cycle
+- Na+ and Cl- gradients, and membrane potential.
+- Extracellular Zn2+ and other divalent metals binding the carrier.
+- Substrate-like ligands, and the way inhibitors lock the conformation.
+- Phosphorylation state (PKC, CaMKII).
+- PIP2 and cholesterol binding.
+- Cysteine redox state, extracellular pH, and reverse-transport (efflux) modes.
+
+(b) Folding and stability
+- Hsp70/Hsp90 and their co-chaperones; calnexin/calreticulin.
+- Chemical chaperones and osmolytes (glycerol, TMAO, 4-PBA-type).
+- Reduced temperature.
+- Ligand-site stabilisers (pharmacological chaperones).
+- UPR arms (ATF6, IRE1, PERK/ISR) and proteostasis regulators (HDAC inhibition, ER Ca2+ handling).
+
+(c) Assembly, trafficking, localisation
+- COPII components (Sar1, Sec23/24 isoforms).
+- Cargo receptors, and SNARE or scaffold partners (syntaxin 1A, PICK1, Rit2, alpha-synuclein).
+- Oligomerisation with the wild-type subunit.
+- Palmitoylation (DHHC enzymes).
+- N-glycosylation.
+- Ligand-site binders that act as export cofactors.
+
+(d) Substrate and metabolite supply
+- Precursor amino acid availability and diet.
+- Synthesis-enzyme dosage (tyrosine hydroxylase).
+- Vesicular loading (VMAT2), and degradation by COMT and MAO.
+- Supply of substrate through other uptake routes.
+
+(e) Degradation and turnover
+- ERAD (Hrd1/Sel1L), proteasome, ER-phagy, and lysosomal sorting.
+- Ubiquitin ligases (Nedd4-2) and deubiquitinases.
+- Regulated endocytosis (dynamin, PKC-driven), and recycling.
+
+(f) Downstream effector or bypass
+- Dopamine D1 and D2 receptors, and the D2 autoreceptor.
+- A2A and cAMP/PKA/DARPP-32 in striatal neurons; PDE10A.
+- Serotonergic and noradrenergic engagement.
+- Low-affinity uptake-2 transporters (OCT3, PMAT), NET and SERT cross-uptake, and astrocytic clearance.
+
+(g) Cell type, timing, dosage
+- Neuron-specific re-expression of the gene.
+- Allele-specific knockdown or editing of the mutant.
+- Wild-type dosage, and dominant-negative interaction with the wild-type subunit.
+- Developmental versus adult rescue windows.
+- Heterozygous versus homozygous state.
+- Gain-of-function toxicity of the misfolded protein.
+
+HYPOTHESES
+
+H1. Statement: A ligand-site binder acting as a pharmacological chaperone stabilises the folded state in the ER, restores export, raises surface carrier and lowers hyperactivity.
+- Evidence: INFERENZA. Pharmacological-chaperone rescue of misfolded SLC6 carriers is known in cell models for DAT and for SERT-, GAT1- and GlyT2-type carriers. In vivo rescue is much less established.
+- Usual reading assumes: a chaperone works by binding the carrier. This reading adds that the binding must not occlude the function it restores.
+- Single observation that would reject it: a binding-competent ligand-class raises surface carrier but locomotion stays high. The rescued protein would then be inactive, because the ligand stays bound or the mutant is catalytically dead.
+- Discriminating manipulation (vs H2): add in cis a binding-site-dead but folding-neutral second mutation. If the chaperone effect vanishes, H1 holds. Predicted: surface rescue lost, locomotion unchanged. If the effect persists, H2 is favoured.
+
+H2. Statement: Non-specific chemical chaperones or osmolytes, or lowered temperature, improve folding without binding the carrier, so they raise surface carrier and reduce hyperactivity.
+- Evidence: INFERENZA. Osmolytes and low temperature rescue some mutants in vitro. In vivo specificity is poor.
+- Usual reading assumes: rescue needs a specific ligand. This reading drops that assumption.
+- Rejected by: osmolyte class gives no surface change, or rescues the binding-dead mutant of H1 equally with no locomotor effect.
+- Discriminating manipulation (vs H1): osmolyte class on the knock-in that carries the binding-dead mutation from H1. Predicted: surface up, locomotion down only if H2 is true.
+
+H3. Statement: Shifting the chaperone triage balance, with less ubiquitin-ligase co-chaperone activity (CHIP/BAG-type) or more Hsp70 folding activity, gives more mutant protein a chance to fold and traffic.
+- Evidence: none known for this carrier. Other membrane proteins (CFTR) show the principle.
+- Usual reading assumes: the mutant is unfoldable. This reading assumes it is only kinetically trapped.
+- Rejected by: dopamine-neuron-specific co-chaperone knockdown raises ER-retained mutant but no surface protein.
+- Discriminating manipulation (vs H4): neuron-specific co-chaperone-ligase knockdown. Predicted: surface up, locomotion down.
+
+H4. Statement: Blocking ERAD (Sel1L/Hrd1) retains more mutant protein in the ER, and the fraction that leaks to the surface is partly functional.
+- Evidence: none known for this carrier.
+- Usual reading assumes: degradation removal only adds inert protein. This reading says any leak matters.
+- Rejected by: ERAD block raises total protein but not surface, and locomotion is unchanged.
+- Discriminating manipulation (vs H3): Sel1L or Hrd1 deletion in the relevant neurons. Predicted: total protein up, surface unchanged or slightly up, locomotion unchanged or small change, and ER stress rises. This separates quantity of protein from folding quality.
+
+H5. Statement: Export is rate-limiting, so adding COPII capacity or a specific cargo adaptor (an Sec24 isoform or a Sar1 variant) raises surface carrier.
+- Evidence: Sec24C has been described as a DAT export factor in cell models. Not tested in mutant knock-in mice, as far as I know.
+- Usual reading assumes: surface loss is due to misfolding only. This reading adds an export bottleneck that can be lifted.
+- Rejected by: Sec24 overexpression or cargo-adaptor boost leaves surface unchanged.
+- Discriminating manipulation (vs H3): Sec24 isoform overexpression in the neuron with the chaperone system held constant. Predicted: surface up, locomotion down.
+
+H6. Statement: Surface loss is partly accelerated endocytosis and degradation, so preventing ubiquitination or regulated internalisation (a lysine-to-arginine variant, or dynamin/PKC pathway reduction) will raise surface carrier.
+- Evidence: PKC-driven DAT internalisation and Nedd4-2 ubiquitination are known in wild-type carriers. Not tested for the mutant.
+- Usual reading assumes: loss is due to ER retention. This reading says some of it happens after arrival.
+- Rejected by: blocking internalisation changes neither surface carrier nor activity.
+- Discriminating manipulation (vs H5): lysine-to-arginine substitutions at the ubiquitination sites in cis. Predicted: surface up with unchanged ER pool, locomotion down.
+
+H7. Statement: Lipid and post-translational stabilisation (palmitoylation by DHHC enzymes, cholesterol or PIP2 occupancy) stabilises the mutant surface carrier.
+- Evidence: DAT palmitoylation (DHHC2) is known to reduce PKC-mediated downregulation. Not tested for the mutant.
+- Usual reading assumes: stability is intrinsic to the sequence. This reading says lipidation modulates it.
+- Rejected by: raising DHHC activity leaves surface level and activity unchanged.
+- Discriminating manipulation (vs H6): cysteine-to-alanine palmitoylation-site mutation in cis, or DHHC2 overexpression. Predicted for overexpression: surface up, locomotion down. For the cysteine mutant: surface down further, locomotion up.
+
+H8. Statement: Reducing inhibitory extracellular Zn2+ (or modulating Zn2+ binding at the carrier's Zn2+ site) increases the residual uptake of the mutant carrier, so locomotion falls with no change in surface level.
+- Evidence: Zn2+ modulates DAT uptake and efflux. Whether this applies to the knock-in is unknown.
+- Usual reading assumes: only a surface increase helps. This reading keeps surface level unchanged and raises per-carrier activity.
+- Rejected by: ZnT3 deletion changes nothing in activity, or raises surface.
+- Discriminating manipulation (vs H1): ZnT3 knockout in the knock-in. Predicted: surface unchanged, locomotion down. A chaperone raises surface.
+
+H9. Statement: Reducing dopamine synthesis (tyrosine hydroxylase dosage or precursor supply) shrinks the extracellular excess and normalises locomotion without touching the carrier.
+- Evidence: known principle in DAT-null mice. Tyrosine hydroxylase inhibition lowers hyperactivity.
+- Usual reading assumes: repair means restoring the carrier. This reading bypasses it.
+- Rejected by: Th heterozygosity in the knock-in leaves locomotion high.
+- Discriminating manipulation (vs H10): Th heterozygous knock-in. Predicted: surface unchanged, locomotion down. Wild-type activity is not restored and the cause remains.
+
+H10. Statement: Another uptake route compensates, so strengthening it (OCT3/PMAT, NET or astrocytic clearance) normalises extracellular dopamine and locomotion.
+- Evidence: NET and astrocyte clearance partly handle dopamine in DAT-null mice. Evidence is inferred, not shown here.
+- Usual reading assumes: only the primary carrier clears. This reading assumes bypass clearance can be raised.
+- Rejected by: raising the bypass leaves locomotion unchanged.
+- Discriminating manipulation (vs H9): astrocyte- or neuron-specific overexpression of the low-affinity transporter. Predicted: surface of the mutant unchanged, locomotion down. A knockout of that route would worsen hyperactivity.
+
+H11. Statement: Hyperactivity is carried by D1-pathway striatal signalling (D1, Gαolf, cAMP/PKA/DARPP-32), so reducing it normalises locomotion.
+- Evidence: known principle for dopamine-driven hyperactivity. Dopamine receptor antagonists reduce it.
+- Usual reading assumes: the transporter is the only lever. This reading targets the output.
+- Rejected by: D1-neuron-specific Drd1 loss leaves hyperactivity unchanged.
+- Discriminating manipulation (vs H12): conditional Drd1 deletion in striatal projection neurons. Predicted: locomotion down, surface unchanged.
+
+H12. Statement: A non-dopaminergic route normalises locomotion: raising serotonergic tone calms hyperactivity.
+- Evidence: in DAT-null mice, serotonin-raising and stimulant drugs paradoxically reduce hyperactivity (Gainetdinov-type findings).
+- Usual reading assumes: stimulants always increase activity. This reading gives them a calming route in a hyperdopaminergic circuit.
+- Rejected by: SERT knockout in the knock-in leaves hyperactivity unchanged.
+- Discriminating manipulation (vs H11): SERT knockout (or Tph2 deletion for the opposite test) in the knock-in. Predicted: locomotion down for SERT loss, surface unchanged.
+
+H13. Statement: The mutant retains the wild-type subunit through oligomers (dominant-negative), so silencing or editing the mutant allele frees the wild-type protein and raises surface carrier.
+- Evidence: DAT oligomerisation is known, and dominant-negative effects of DAT variants are seen in cell models. In vivo is unknown.
+- Usual reading assumes: heterozygosity leaves 50 percent function. This reading predicts less than 50 percent.
+- Rejected by: allele-specific silencing gives no gain at the surface in the heterozygote.
+- Discriminating manipulation (vs H14): allele-specific silencing of the mutant in the heterozygote versus adding wild-type copy. Predicted: surface up, locomotion down for silencing. Added wild-type alone gives a smaller effect if dominant-negative is real.
+
+H14. Statement: The hyperactivity is fixed by a developmental adaptation (D2 autoreceptor and circuit changes), so adult restoration of surface carrier will not normalise locomotion, while early restoration will.
+- Evidence: none known for this model. Developmental adaptation is plausible by analogy with null mice.
+- Usual reading assumes: surface rescue at any age reverses the phenotype. This reading predicts a window.
+- Rejected by: inducible adult rescue of the allele normalises locomotion as fully as neonatal rescue.
+- Discriminating manipulation (vs H13): a Cre-inducible restored allele, switched on neonatally or in adulthood. Predicted: surface up in both. Locomotion down only if rescued early.
+
+H15. Statement: Part of the hyperactivity is a gain-of-function consequence of ER stress from misfolded protein, so lowering the stress response (ATF6/IRE1/PERK-ISR modulation) lowers locomotion with little change at the surface.
+- Evidence: none known for this carrier. Other misfolding disease models show ER-stress toxicity.
+- Usual reading assumes: the whole phenotype is loss of function. This reading adds a toxic component.
+- Rejected by: the knock-in is no more hyperactive than the null, and CHOP deletion changes nothing.
+- Discriminating manipulation (vs H4): compare homozygous knock-in with null, and delete CHOP or modulate PERK-ISR in the knock-in. Predicted: surface unchanged, locomotion down if gain of function is real. If knock-in is more hyperactive than the null, H15 is favoured.
+
+Status and flags
+- No dedup was done, no COMMIT CANDIDATE or inbox entry was built, and no FULLTEXT_READ_RECEIPT is issued, because this was a no-tool hypothesis task.
+- Every item is IPOTESI or INFERENZA, not DATO.
+- No dose and no drug recommendation.

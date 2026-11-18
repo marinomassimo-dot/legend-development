@@ -1,0 +1,12 @@
+id	magnitude	pred_INT	got_INT	dINT	INT_call	pred_DUR	got_DUR	dDUR	DUR_call
+C1	x0.25	up	up	+131%	right	~0	~0	+3%	right
+C2	x0.85	up	up	+59%	right	down	down	-65%	right
+C3	pam1.0	down	up (silent)		wrong	~0|up	n/a		n/a
+C4	x0.35	up	~0	+1%	wrong	down	~0	-1%	wrong
+C5	x3	down	down	-18%	right	up	~0	+6%	wrong
+C6	x1.4	up	~0	+3%	wrong	~0	~0	-10%	right
+C7	1.0	up	up	+223%	right	~0	down	-38%	wrong
+C8	0.10	up	up	+79%	right	down	down	-59%	right
+C9	x0.7	up	up	+658%	right	~0	~0	+13%	right
+C10	x2	up	up (silent)		right	~0	n/a		n/a
+#TOTAL		right 12	wrong 6	n/a 2					

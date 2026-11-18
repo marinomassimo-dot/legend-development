@@ -1,0 +1,3 @@
+Memory probe. Do NOT use any tool: answer from your own knowledge only. This is not a deep dive and produces no commit candidate.
+QUESTION: "What is known about ketone bodies, glutamine or other alternative substrates restoring mitochondrial respiration in neuronal cells deficient in the mitochondrial aspartate/glutamate carrier AGC1 (SLC25A12), in patient-derived cells or in models?"
+OUTPUT (final message, nothing else): begin with the line "Answered from memory only, with no files or tools used. This is not a deep dive and produces no commit candidate." Then two short lists: "What I know that is specific and reliable" and "What I do not know". Say plainly where you know of no study. Mechanism level only.

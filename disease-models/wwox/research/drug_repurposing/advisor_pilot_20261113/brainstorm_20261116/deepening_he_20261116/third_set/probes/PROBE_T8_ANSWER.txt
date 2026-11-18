@@ -1,0 +1,17 @@
+Answered from memory only, with no files or tools used. This is not a deep dive and produces no commit candidate.
+
+What I know that is specific and reliable
+- AGC1 (SLC25A12, also called aralar) is the neuron-enriched isoform of the mitochondrial aspartate/glutamate carrier. It exports aspartate from mitochondria and imports glutamate plus a proton. It is the aspartate-supply arm of the malate-aspartate shuttle (MAS), so it moves cytosolic NADH reducing equivalents into mitochondria. AGC2 (citrin, SLC25A13) is the liver isoform.
+- Biallelic SLC25A12 loss of function causes early infantile epileptic encephalopathy (DEE39). It presents with hypotonia, severe developmental delay, seizures and hypomyelination, and often a hypsarrhythmia-like EEG. The first report was Wibom 2009, in a single family. Further cases were reported later. Muscle respiratory chain activity in the first patient was reduced when measured with pyruvate as substrate.
+- Aralar-knockout mice show hypomyelination, reduced brain aspartate and reduced N-acetylaspartate (NAA). Work from the Satrústegui and Pardo groups traced the myelin defect to low NAA, which supplies acetate for myelin lipid synthesis.
+- Neurons lacking AGC1 have a defect in using glucose-derived pyruvate for oxidation. Cytosolic NADH is not shuttled into the mitochondria, so lactate accumulates and mitochondrial pyruvate oxidation is limited. Aralar-deficient neurons are rescued by pyruvate, which bypasses the need for the shuttle. The Satrústegui group showed this in cultured neurons.
+- The same group reported that in aralar-deficient neurons, ketone bodies (beta-hydroxybutyrate) and lactate-derived pyruvate can supply mitochondrial substrate. I am less sure of the exact details here. The mechanism is that these substrates generate NADH or acetyl-CoA inside mitochondria and so bypass the cytosolic NADH shuttle requirement.
+- AGC1-deficient oligodendrocyte precursor cells have impaired differentiation and myelination. This is linked to aspartate and NAA deficiency, and acetate or related supplementation has been tried in models.
+- Aspartate is also needed for nucleotide and protein synthesis in proliferating cells. Respiration-deficient cells depend on pyruvate and aspartate supplementation, and glutamine supplies carbon to the TCA cycle through anaplerosis.
+
+What I do not know
+- Specific, reliable data on glutamine restoring respiration in AGC1-deficient neuronal cells. I know of no study showing this in SLC25A12 models. My statements about it come from general mechanism: glutamine can enter the TCA cycle through glutamate and alpha-ketoglutarate, but glutamate import into mitochondria in AGC1 deficiency may be limited.
+- The exact experimental conditions, quantitative effect sizes and the cell types used in the ketone body or pyruvate rescue experiments.
+- Any study of ketone bodies or alternative substrates in patient-derived neuronal cells, such as iPSC-derived neurons, from AGC1-deficient patients. I know of none.
+- The ketogenic diet in AGC1 deficiency. I recall case-level reports, and I am not sure of them, that the diet was tried in a few patients with variable seizure benefit. I know of no systematic study or trial. I cannot give reliable numbers. The mechanistic rationale is that ketone bodies bypass the shuttle-dependent pyruvate oxidation and aspartate need, but it is not proven in patients.
+- Whether any ketogenic diet effect on the myelination defect has been shown. I know of none.

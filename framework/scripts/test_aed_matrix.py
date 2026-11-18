@@ -441,6 +441,129 @@ class RuleBeforeCells(unittest.TestCase):
             self.assertEqual(am.rule_order(root, rule, cells), "same_commit")
 
 
+def rule_v2(classes, splits=()):
+    return dict(RULE, rule_version="fixture-2", classes=classes, threads=None, r1_min_link=[1, 1],
+                r2_scorable_denominator=True, r3_splits=list(splits)) if False else dict(
+        {k: v for k, v in RULE.items()}, rule_version="fixture-2", classes=classes, r1_min_link=[1, 1],
+        r2_scorable_denominator=True, r3_splits=list(splits))
+
+
+class RulesR1ToR3(Base):
+    def score2(self, rows, rule):
+        cells, rule_path = write(self.dir, rows, rule)
+        out, err = io.StringIO(), io.StringIO()
+        with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+            code = am.main(["--root", str(self.dir), "score", str(cells), str(rule_path)])
+        return code, out.getvalue(), err.getvalue()
+
+    def rows2(self, text):
+        lines = [l for l in text.splitlines() if l.count("\t") == len(am.OUT_COLUMNS_V2) - 1]
+        return [dict(zip(lines[0].split("\t"), l.split("\t"))) for l in lines[1:]]
+
+    def find(self, text, cls, endpoint="seizure", window="pooled"):
+        return next(r for r in self.rows2(text) if (r["endpoint"], r["window"], r["class_id"]) == (endpoint, window, cls))
+
+    FIVE = [cell(f"t{i}", "T1", f"c{i}", tier=2, directness=2, axis=f"X{i}", origin=f"o{i}") for i in range(1, 6)] + \
+           [cell("t6", "T2", "c6", tier=1, directness=2, axis="Y", origin="p")]
+
+    def test_a_v1_run_keeps_its_columns_and_has_no_scorable_column(self):
+        code, out, _ = self.score(self.FIVE, dict(RULE, classes=["c1", "c2", "c3", "c4", "c5", "c6"]))
+        self.assertEqual(code, 0)
+        header = next(l for l in out.splitlines() if l.startswith("endpoint\t"))
+        self.assertEqual(header, "\t".join(am.OUT_COLUMNS))
+        self.assertNotIn("scorable", header)
+
+    def test_empty_columns_do_not_raise_informativeness(self):
+        six = [f"c{i}" for i in range(1, 7)]
+        padded = six + [f"e{i}" for i in range(13)]
+        a = self.find(self.score2(self.FIVE, rule_v2(six))[1], "c1")
+        b = self.find(self.score2(self.FIVE, rule_v2(padded))[1], "c1")
+        self.assertEqual((a["top_set_size"], a["informativeness"], a["top_set_label"]), ("5", "0.167", "not_discriminating"))
+        self.assertEqual((b["top_set_size"], b["informativeness"], b["top_set_label"], b["scorable_classes"]),
+                         (a["top_set_size"], a["informativeness"], a["top_set_label"], "6"))
+        # the same cells under a v1 rule DO move with the number of declared classes: the defect R2 removes
+        v1a = self.row(self.score(self.FIVE, dict(RULE, classes=six))[1], "seizure", "pooled", "c1")
+        v1b = self.row(self.score(self.FIVE, dict(RULE, classes=padded))[1], "seizure", "pooled", "c1")
+        self.assertNotEqual(v1a["informativeness"], v1b["informativeness"])
+
+    def test_the_tie_share_limit_follows_the_scorable_denominator(self):
+        rows = [cell("a", "T1", "c1", tier=2, directness=2), cell("b", "T1", "c2", tier=2, directness=2, axis="Y", origin="o2"),
+                cell("c", "T2", "c3", tier=1, directness=1, axis="Z", origin="o3"), cell("d", "T2", "c4", tier=1, directness=1, axis="W", origin="o4"),
+                cell("e", "T3", "c5", tier=1, directness=1, axis="V", origin="o5"), cell("f", "T3", "c6", tier=1, directness=1, axis="U", origin="o6")]
+        six = [f"c{i}" for i in range(1, 7)]
+        out = self.score2(rows, rule_v2(six + [f"e{i}" for i in range(10)]))[1]
+        self.assertEqual((self.find(out, "c1")["top_set_size"], self.find(out, "c1")["top_set_label"]), ("2", "tie_set_weak"))   # 2*3 <= 6
+        out5 = self.score2(rows[:5], rule_v2(six[:5] + [f"e{i}" for i in range(10)]))[1]
+        self.assertEqual(self.find(out5, "c1")["top_set_label"], "not_discriminating")                                          # 2*3 > 5
+
+    def test_r1_a_class_without_a_qualifying_link_is_not_scored(self):
+        classes = ["c1", "c2", "c3", "c4"]
+        rows = [cell("a", "T1", "c1", tier=2, directness=2), cell("b", "T2", "c2", tier=0, directness=3, axis="Y", origin="o2"),
+                cell("c", "T3", "c3", tier=3, directness=0, axis="Z", origin="o3"), cell("d", "T4x", "c4", sign="unknown", tier=3, directness=3, axis="W", origin="o4")]
+        out = self.score2(rows, rule_v2(classes))[1]
+        self.assertEqual(self.find(out, "c1")["scorable"], "yes")
+        for c in ("c2", "c3", "c4"):
+            r = self.find(out, c)
+            self.assertEqual((r["scorable"], r["rank"], r["top_set_label"]), ("no", "unscorable", "unscorable"), c)
+        self.assertEqual(self.find(out, "c1")["scorable_classes"], "1")
+        self.assertIn("not scorable (3 of 4 classes; excluded from every denominator)", out)
+
+    def test_an_aggravation_link_makes_a_class_scorable_and_shows_its_aggravation(self):
+        rows = [cell("a", "T1", "c1", tier=2, directness=2), cell("b", "T2", "c2", sign="aggravation", tier=2, directness=3, axis="Y", origin="o2")]
+        out = self.score2(rows, rule_v2(["c1", "c2"]))[1]
+        r = self.find(out, "c2")
+        self.assertEqual((r["scorable"], r["aggravation_score"], r["score_all"]), ("yes", "6", "0"))
+
+    SPLIT = [{"parent": "cp", "children": ["c1", "c2"], "min_representatives": 2}]
+
+    def split_rows(self, agents1=2, agents2=2, distinguishing=True):
+        rows = []
+        for i in range(agents1):
+            rows.append(cell(f"a{i}", "T1", "c1", agent=f"ag{i}", axis="X", origin="o1"))
+        for i in range(agents2):
+            rows.append(cell(f"b{i}", "T1" if not distinguishing else "T1", "c2", agent=f"bg{i}", axis="X", origin="o1", tier=2, directness=2))
+        if distinguishing:
+            rows.append(cell("z", "T9", "c1", axis="Z", origin="o9"))        # a thread that links c1 and not c2
+        return rows
+
+    def test_r3_a_justified_split_is_scored(self):
+        out = self.score2(self.split_rows(), rule_v2(["c1", "c2"], self.SPLIT))[1]
+        self.assertEqual((self.find(out, "c1")["scorable"], self.find(out, "c2")["scorable"]), ("yes", "yes"))
+        self.assertIn("R3 splits 1: cp met", out)
+
+    def test_r3_too_few_representatives_or_no_distinguishing_thread_makes_the_children_unscorable(self):
+        out = self.score2(self.split_rows(agents2=1), rule_v2(["c1", "c2"], self.SPLIT))[1]
+        self.assertEqual((self.find(out, "c1")["scorable"], self.find(out, "c2")["scorable"]), ("no", "no"))
+        self.assertIn("c2 has 1 representative agent id(s) in the cells, needs 2", out)
+        self.assertIn("R3 splits 1: cp NOT MET", out)
+        out = self.score2(self.split_rows(distinguishing=False), rule_v2(["c1", "c2"], self.SPLIT))[1]
+        self.assertEqual(self.find(out, "c1")["scorable"], "no")
+        self.assertIn("no thread links some children of the split and not others", out)
+
+    def test_r3_failed_children_carry_no_score_into_the_ranking(self):
+        rows = self.split_rows(agents2=1) + [cell("o", "T2", "c3", tier=1, directness=1, axis="Q", origin="oq")]
+        out = self.score2(rows, rule_v2(["c1", "c2", "c3"], self.SPLIT))[1]
+        self.assertEqual((self.find(out, "c3")["rank"], self.find(out, "c3")["scorable_classes"]), ("1", "1"))
+        self.assertEqual(self.find(out, "c1")["score_all"], "0")
+
+    def test_the_rule_must_declare_r1_to_r3_together_and_validly(self):
+        for bad in (dict(RULE, r1_min_link=[1, 1]), dict(rule_v2(["c1"]), r1_min_link=[0, 1]),
+                    dict(rule_v2(["c1"]), r2_scorable_denominator=False),
+                    dict(rule_v2(["c1", "c2"]), r3_splits=[{"parent": "p", "children": ["c1", "zz"]}])):
+            with self.assertRaises(am.Invalid):
+                am.check_rule(bad)
+
+    def test_a_retired_parent_class_is_refused_in_v2_cells(self):
+        code, _, err = self.score2([cell("a", "T1", "cp")], rule_v2(["c1", "c2"], self.SPLIT))
+        self.assertEqual(code, 2)
+        self.assertIn("class_id", err)
+
+    def test_two_runs_are_byte_identical_under_v2(self):
+        a = self.score2(self.FIVE, rule_v2([f"c{i}" for i in range(1, 7)]))[1]
+        b = self.score2(self.FIVE, rule_v2([f"c{i}" for i in range(1, 7)]))[1]
+        self.assertEqual(a, b)
+
+
 RULE_V1 = Path(__file__).resolve().parents[2] / ("disease-models/wwox/research/drug_repurposing/"
                                                   "advisor_pilot_20261113/brainstorm_20261116/rule.json")
 RULE_V1_SHA256 = "679a60894100d26bf4e550e2f49a888e39b8451dfbf428c2157f8b0cb2d94982"  # announced 2026-11-16
@@ -467,6 +590,120 @@ class TheCommittedRuleIsTheAnnouncedOne(unittest.TestCase):
                 code = am.main(["score", str(cells), str(RULE_V1), "--expect-rule-sha256", RULE_V1_SHA256])
             self.assertEqual(code, 0)
             self.assertEqual(len(table(out.getvalue())), 2 * 4 * len(rule["classes"]))
+
+
+V1_FIXTURE_OUTPUT_SHA256 = "d65c366ed8829931b3eaffe597ca1e7a827867e9ece303ee5b034b5deca4e881"   # stdout of `score` on CELLS under RULE, captured BEFORE R1-R3 were added
+
+
+class V1StaysByteIdentical(Base):
+    def test_the_v1_fixture_output_has_not_changed_by_one_byte(self):
+        out = self.score()[1]
+        self.assertEqual(hashlib.sha256(out.encode()).hexdigest(), V1_FIXTURE_OUTPUT_SHA256,
+                         "a v1 run must keep its bytes; if this change is intended, say so and update the digest in the same commit")
+
+
+RULE_V2 = RULE_V1.with_name("rule_v2.json")
+RULE_V2_SHA256 = "2cb4a908002aae48c6d4cc68baa9f8451e4bbb287fe6f47b4ccd6f7c5785f112"  # announced 2026-11-16; v1 is RULE_V1_SHA256
+
+
+class TheCommittedRuleV2(unittest.TestCase):
+    def test_rule_v2_is_valid_pinned_and_leaves_v1_alone(self):
+        raw = RULE_V2.read_bytes()
+        self.assertEqual(hashlib.sha256(raw).hexdigest(), RULE_V2_SHA256,
+                         "rule_v2.json changed: a new digest must be announced and recorded with the freeze")
+        self.assertEqual(hashlib.sha256(RULE_V1.read_bytes()).hexdigest(), RULE_V1_SHA256)
+        rule = json.loads(raw)
+        am.check_rule(rule)
+        self.assertEqual(len(rule["classes"]), 19)
+        v1 = json.loads(RULE_V1.read_text())
+        for retired in ("gabaa_pam_nonbzd", "cbd_fenfluramine"):
+            self.assertIn(retired, v1["classes"])
+            self.assertNotIn(retired, rule["classes"])
+        self.assertEqual({sp["parent"] for sp in rule["r3_splits"]}, {"gabaa_pam_nonbzd", "cbd_fenfluramine"})
+        for key in ("tier_rubric", "directness_rubric", "endpoints", "age_windows", "never_specific_threads",
+                    "zero_directness_threads", "rank_by", "permutations", "seed", "discriminating_top_set_max_share"):
+            self.assertEqual(rule[key], v1[key], key)      # nothing but the class list and R1-R3 differs
+
+    def test_one_cell_scores_under_v2_with_unscorable_columns_listed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            row = cell("k1", "T13", "sodium_channel", endpoint="seizure", age="P13-P15", tier=2, directness=2)
+            cells = Path(tmp) / "cells.tsv"
+            cells.write_text("\t".join(HEADER) + "\n" + "\t".join(row[c] for c in HEADER) + "\n")
+            out = io.StringIO()
+            with contextlib.redirect_stdout(out):
+                code = am.main(["score", str(cells), str(RULE_V2), "--expect-rule-sha256", RULE_V2_SHA256])
+            self.assertEqual(code, 0)
+            text = out.getvalue()
+            self.assertIn("R3 splits 2: gabaa_pam_nonbzd NOT MET, cbd_fenfluramine NOT MET", text)
+            self.assertIn("scorable_classes", text.splitlines()[3])
+            self.assertIn("not scorable (18 of 19 classes; excluded from every denominator)", text)
+
+
+class Concordance(unittest.TestCase):
+    COUNTS = {"A": (4, 4), "B": (4, 2), "C": (4, 2), "D": (2, 2)}      # D has n < 3: not scorable
+
+    def test_hand_checked_pairs_and_ties(self):
+        r = am.concordance({"A": 3, "B": 2, "C": 2}, self.COUNTS)
+        self.assertEqual((r["scorable_classes"], r["pairs"], r["classifiable"], r["scored"], r["concordance"]), (3, 3, 2, 2, 1.0))
+        self.assertEqual(am.concordance({"A": 1, "B": 2, "C": 2}, self.COUNTS)["concordance"], 0.0)
+        self.assertEqual(am.concordance({"A": 1, "B": 1, "C": 1}, self.COUNTS)["concordance"], 0.5)       # a predicted tie scores 0.5
+        self.assertEqual(am.concordance({"A": 3, "B": 2, "C": 2}, self.COUNTS)["pairs"], 3)               # BC tied in the observation: not scored
+
+    def test_a_class_without_a_prediction_drops_its_pairs_and_none_left_is_not_scorable(self):
+        r = am.concordance({"B": 2, "C": 2}, self.COUNTS)
+        self.assertEqual((r["classifiable"], r["scored"], r["concordance"]), (2, 0, None))
+
+    def test_the_observed_tie_threshold_is_one_child_on_the_smaller_denominator(self):
+        counts = {"X": (3, 2), "Y": (9, 6)}                  # 0.667 against 0.667: tied
+        self.assertEqual(am.concordance({"X": 2, "Y": 1}, counts)["classifiable"], 0)
+        counts = {"X": (3, 3), "Y": (9, 6)}                  # 1.0 against 0.667: differ by 0.333, not less than 1/3
+        self.assertEqual(am.concordance({"X": 2, "Y": 1}, counts)["classifiable"], 1)
+
+    def test_it_scoring_of_the_frozen_f1_is_reproduced_from_its_own_counts(self):
+        # counts (n, partial-counts k, resolved-only k) as printed in it_scoring_20261116/result_main.txt
+        printed = {"gabaa_pam_nonbzd": (4, 3, 0), "gaba_at_gat": (9, 8, 4), "sv2a": (3, 2, 0), "benzodiazepine": (4, 3, 3),
+                   "carbonic_anhydrase_multitarget": (3, 2, 2), "ketogenic_diet": (7, 4, 0), "steroid_acth": (7, 3, 2)}
+        thread_sum = {"gabaa_pam_nonbzd": 9, "benzodiazepine": 9, "gaba_at_gat": 6, "carbonic_anhydrase_multitarget": 6, "sv2a": 3, "steroid_acth": 0, "ketogenic_diet": 0}
+        partial = am.concordance(thread_sum, {c: (n, a) for c, (n, a, _) in printed.items()})
+        resolved = am.concordance(thread_sum, {c: (n, b) for c, (n, _, b) in printed.items()})
+        self.assertEqual((partial["pairs"], partial["classifiable"], round(partial["concordance"], 2)), (21, 5, 0.9))
+        self.assertEqual((resolved["pairs"], resolved["classifiable"], round(resolved["concordance"], 2)), (21, 15, 0.73))
+
+    def test_the_cli_reads_two_tsv_files(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            pred, counts = Path(tmp) / "p.tsv", Path(tmp) / "c.tsv"
+            pred.write_text("class_id\tscore_all\nA\t3\nB\t2\nC\t2\nD\tunknown\n")
+            counts.write_text("class_id\tn\tk\nA\t4\t4\nB\t4\t2\nC\t4\t2\n")
+            out = io.StringIO()
+            with contextlib.redirect_stdout(out):
+                self.assertEqual(am.main(["compare", str(pred), str(counts), "--pred-column", "score_all"]), 0)
+            self.assertIn("classifiable (observed not tied) 2; scored 2; concordance 1.00", out.getvalue())
+            with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                self.assertEqual(am.main(["compare", str(pred), str(counts), "--pred-column", "nope"]), 2)
+
+
+V2_CELLS = Path(__file__).resolve().parents[2] / "disease-models/wwox/research/drug_repurposing/matrix_v2_cells_sci_20261116/output/cells_v2_form.tsv"
+V2_SCORES = V2_CELLS.with_name("scores_v2.tsv")
+
+
+@unittest.skipUnless(V2_CELLS.exists() and V2_SCORES.exists(), "the filled v2 matrix is not in this checkout")
+class TheFilledMatrixIsReproducible(unittest.TestCase):
+    """H5: the generator is a function of two committed files. Two runs on the filled v2 cells are byte-identical, and equal to the committed scores."""
+
+    def run_once(self, out):
+        with contextlib.redirect_stdout(io.StringIO()) as printed:
+            code = am.main(["score", str(V2_CELLS), str(RULE_V2), "--expect-rule-sha256", RULE_V2_SHA256, "--out", str(out)])
+        return code, printed.getvalue()
+
+    def test_two_runs_are_byte_identical_and_equal_the_committed_scores(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            a, b = Path(tmp) / "a.tsv", Path(tmp) / "b.tsv"
+            (code_a, text_a), (code_b, text_b) = self.run_once(a), self.run_once(b)
+            self.assertEqual((code_a, code_b), (0, 0))
+            self.assertEqual(a.read_bytes(), b.read_bytes())
+            self.assertEqual(text_a, text_b)
+            self.assertEqual(a.read_bytes(), V2_SCORES.read_bytes(),
+                             "the committed scores_v2.tsv is not what the generator makes of the committed cells under the pinned rule")
 
 
 class HelpIsSafe(unittest.TestCase):

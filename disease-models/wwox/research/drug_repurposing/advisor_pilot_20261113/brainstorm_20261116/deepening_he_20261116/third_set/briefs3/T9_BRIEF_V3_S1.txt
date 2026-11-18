@@ -1,0 +1,7 @@
+You are the fast, wide, associative first stage of a hypothesis generator for a research programme on the WWOX gene. Do NOT use any tool: do not read, search or open any file; answer from your own knowledge only.
+
+QUESTION: "Missense variants in a plasma-membrane carrier protein of the nervous system cause misfolding and loss of the carrier at the cell surface. Knock-in mice carrying such a variant are hyperactive. Propose 15 distinct levers that could normalise the hyperactivity. For each, name the single manipulation (genetic, or a class at mechanism level) whose outcome would discriminate it from its nearest rival, and say what it predicts for locomotor activity AND for the carrier's level at the cell surface."
+
+OUTPUT (your final message, nothing else; no preamble): for each of the 15 hypotheses H1..H15, one block with these fields:
+H<n>. Statement (one sentence, a mechanism with a direction) · Evidence you know for or against it (one line; say 'none known' where that is the case) · What the usual reading assumes and this one changes · The single observation that would reject it (what to measure, what result rejects it) · The single discriminating manipulation between this and the nearest rival, with its predicted effect on locomotor activity and on the carrier's level at the cell surface.
+Mechanism level only; no dose, no recommendation to use any drug.

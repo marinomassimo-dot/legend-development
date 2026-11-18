@@ -1,0 +1,60 @@
+Z01 | NO | NO | NO | -
+Z02 | NO | NO | NO | -
+Z03 | NO | NO | NO | "raising the guanine-nucleotide-exchange input (receptor-driven flux or a Ric-8A-type chaperone/GEF)"
+Z04 | NO | NO | NO | -
+Z05 | NO | NO | NO | "Over-express an accessory GEF-class protein, or the cognate receptor"
+Z06 | NO | NO | NO | -
+Z07 | NO | NO | NO | -
+Z08 | NO | NO | NO | -
+Z09 | NO | NO | NO | -
+Z10 | NO | NO | NO | -
+Z11 | NO | NO | NO | -
+Z12 | NO | NO | NO | -
+Z13 | NO | NO | NO | -
+Z14 | NO | NO | NO | -
+Z15 | NO | NO | NO | -
+Z16 | NO | NO | NO | -
+Z17 | NO | NO | NO | -
+Z18 | NO | NO | NO | "increasing GTPase-accelerating activity (RGS or RGS7–Gβ5-type complexes)"
+Z19 | NO | NO | NO | -
+Z20 | NO | NO | NO | -
+Z21 | NO | NO | NO | -
+Z22 | NO | NO | NO | -
+Z23 | NO | NO | NO | "increasing GTPase-accelerating activity (RGS, R7-family RGS7/Gβ5 or RGS4/RGS9-2)"
+Z24 | NO | NO | NO | -
+Z25 | NO | NO | NO | -
+Z26 | NO | NO | NO | -
+Z27 | NO | NO | NO | -
+Z28 | NO | NO | NO | -
+Z29 | NO | NO | NO | -
+Z30 | NO | NO | NO | -
+Z31 | NO | NO | NO | -
+Z32 | NO | NO | NO | -
+Z33 | NO | NO | NO | -
+Z34 | NO | NO | NO | -
+Z35 | NO | NO | NO | -
+Z36 | NO | NO | NO | -
+Z37 | NO | NO | NO | "Raising GTPase-accelerating activity (RGS family, including RGS7/9 with Gβ5)"
+Z38 | NO | NO | NO | -
+Z39 | NO | NO | NO | -
+Z40 | NO | NO | NO | "increasing RGS-type GTPase-accelerating activity restores timely deactivation"
+Z41 | NO | NO | NO | -
+Z42 | NO | NO | NO | -
+Z43 | NO | NO | NO | -
+Z44 | NO | NO | NO | -
+Z45 | NO | NO | NO | -
+Z46 | NO | NO | NO | -
+Z47 | NO | NO | NO | -
+Z48 | NO | NO | NO | -
+Z49 | NO | NO | NO | -
+Z50 | NO | NO | NO | -
+Z51 | NO | NO | NO | -
+Z52 | NO | NO | NO | -
+Z53 | NO | NO | NO | -
+Z54 | NO | NO | NO | -
+Z55 | NO | NO | NO | -
+Z56 | NO | NO | NO | "Accelerating GTP hydrolysis (RGS-family GAP activity"
+Z57 | NO | NO | NO | -
+Z58 | NO | NO | NO | -
+Z59 | NO | NO | NO | "amplifying the upstream receptor drive (GPCR positive allosteric modulators"
+Z60 | NO | NO | NO | -

@@ -1,0 +1,106 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+  "TASK_ID": "PLAN-ADV-DIRECTION-20261116",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "ACTOR_ID": "plan",
+  "OWNER": "plan",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-11-16",
+  "OBJECTIVE": "Apply the operator-agreed direction-before-status correction in the existing Advisor path: frame the useful scientific gain before adopting operational closure; preserve live work, supported waits, autonomy and scientific checks. No new actor, scheduler, gate or mandatory report.",
+  "worktree": "/tmp/legend-adv-direction-20261116",
+  "branch": "codex/adv-direction-20261116",
+  "MANDATE_STATE": "COMPLETE",
+  "CURRENT_STATE": "COMPLETE",
+  "related_work": "Native HE69 owns continuity/hold/recall repairs; this task owns the canonical framing paragraph and its delivery before operational state in Stage P. No campaign counters or peer files are edited.",
+  "AUTHORISED_QUEUE_20261116": {
+    "OBJ_DIRECTION": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Read current authority, inspect actual Advisor path and distinguish peer work",
+          "status": "DONE",
+          "evidence": "CLAUDE.md section 0; LEGEND_CORE sections 21c-21e; roles/plan.md; current Stage P builder; native HE69 already repairs recall and continuity."
+        },
+        {
+          "step": "Implement one canonical framing rule, source it in the generated brief, and route the existing host and agent to it",
+          "status": "DONE",
+          "evidence": "framework/protocols/cross_session_transport.md section 12, Direction before status; strategic_advisor.py direction_before_status_text/build_brief_p; existing agent and skill."
+        },
+        {
+          "step": "Verify input delivery, existing valid waits and release-relevant checks",
+          "status": "DONE",
+          "evidence": "Advisor suite: 154 tests PASS (/tmp/legend-adv-direction-tests.log); three new tests cover canonical revision, input ordering with a retained laboratory wait and prior decision, and missing-source visibility without a fabricated outcome. Structural LINT WARN, zero BLOCK. Fresh-clone regression checks follow on the committed candidate."
+        },
+        {
+          "step": "Land and publish through existing checks without disturbing live peer work; document remaining behavioural test",
+          "status": "DONE",
+          "evidence": "Implementation landed through task_close on local main at 7935b43e3; published with exact-SHA gate PASS and ls-remote verification at 37b68596ee410fd625d2af56927b58058f93d846. This record closes the implemented change; behavioural effectiveness is still unproven."
+        }
+      ]
+    },
+    "MANDATE_STATE": "COMPLETE"
+  },
+  "DEFAULTS_TAKEN": [
+    {
+      "condition": "The native HE session is already repairing recall/hold behaviour",
+      "default_taken": "Keep this increment on an isolated task worktree and limit changes to strategic framing and brief ordering",
+      "why_safe": "Avoids duplicate implementation and leaves the running campaign and recipients unchanged",
+      "what_would_have_differed": "A combined large repair would collide with HE69 and make attribution harder"
+    }
+  ],
+  "STOP_LOG": [],
+  "VALIDATION_LIMIT": "Tests demonstrate delivery and ordering, not model compliance, scientific value or multiday autonomy. The next real decision must be judged from choice, dispatch and consumption evidence. No full release inventory was run for this focused change. An initial worktree runner was interrupted (exit 143) and is not called a fresh-clone pass; the seven-target fresh-clone run has its own log.",
+  "VALIDATION_ATTEMPTS": [
+    {
+      "scope": "Task worktree Advisor regression suite",
+      "tests": 154,
+      "verdict": "PASS",
+      "log": "/tmp/legend-adv-direction-tests.log"
+    },
+    {
+      "scope": "Structural LINT",
+      "verdict": "WARN",
+      "blocks": 0,
+      "log": "/tmp/legend-adv-direction-lint.log"
+    },
+    {
+      "scope": "Frozen 2df5fcf45 on a fresh clone; targeted release regression runner",
+      "targets": 7,
+      "verdict": "PASS_WITH_SKIPS",
+      "skipped_cases": 1,
+      "skip_reason": "Stop hook not installed in the clone; runtime enforcement is not claimed",
+      "log": "/tmp/legend-adv-direction-regressions-fresh.log"
+    },
+    {
+      "scope": "Peer ideas-table merge 35d155575; structured-data integrity",
+      "tests": 4,
+      "verdict": "PASS",
+      "log": "/tmp/legend-adv-direction-structured.log"
+    },
+    {
+      "scope": "Receipt chain on the merged tree",
+      "receipts": 1970,
+      "verdict": "OK"
+    },
+    {
+      "scope": "Metadata-only closure cd33a98fb",
+      "verdict": "INTERRUPTED_BEFORE_PUBLICATION",
+      "reason": "The monitor derives lifecycle from the AUTHORISED_QUEUE block; top-level COMPLETE alone left COMPLETE_PENDING. The own gate was stopped before push, and the state is now set in the canonical queue location. Implementation publication 37b68596e remains verified."
+    }
+  ],
+  "PUBLICATION": {
+    "implementation_sha": "37b68596ee410fd625d2af56927b58058f93d846",
+    "gate": "PASS",
+    "remote_verified": true,
+    "runtime": "Codex",
+    "actor_id": "plan"
+  },
+  "NEXT_OBSERVATION": {
+    "owner": "ADV host, existing continuous campaign",
+    "trigger": "next normal strategic boundary; no extra invocation required",
+    "evidence": "existing assessment or MEETING, actual recipient take-in-charge and consumer result",
+    "question": "Does the choice compare a useful scientific gain and alternatives, reconcile local blockers, and reach a consumer? Keeping a still-valid direction or a supported wait remains legitimate.",
+    "status": "NOT_YET_OBSERVED; input-delivery tests are not cognitive or scientific validation"
+  }
+}

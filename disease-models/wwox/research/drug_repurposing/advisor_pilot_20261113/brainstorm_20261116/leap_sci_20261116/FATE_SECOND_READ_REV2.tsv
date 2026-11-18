@@ -1,0 +1,10 @@
+judge_id	arm	original_id	sci_category_first	it_category	it_agreement	sci_category_rev2	sci_reason
+J03	ADV	H-ADV-3	partially supported	P	agree	partially supported	no change
+J06	SCI	HSCI-4	partially supported	P	agree, P means premise only	partially supported	no change
+J09	ADV	H-ADV-4	rejecting observation met	R	agree for the null scope; add 'present in the missense line only'	rejecting observation met	no change
+J12	IT	HIT-1	untestable by held data	(own item)	IT wrote it; no independent category	untestable by held data	no change
+J17	SCI	HSCI-5	counter-signal	C	agree (soft)	counter-signal	no change
+J23	ADV	H-ADV-1	rejecting observation met	U	DISAGREE	untestable by held data	accepted: R only if the author's rejecting observation is evaluable and met; an 11-16% fall in one pool without variance, against 'unchanged', is not evaluable
+R2-C1	arm B	H-C1	untestable by held data	U	agree	untestable by held data	no change
+R2-C3	arm B	H-C3	partially supported	U	DISAGREE	untestable by held data	accepted: P only if the premise is reproduced; a smaller tonic A1 drive is not readable from RNA (Adk runs against the example route, Adora1/Kcnj3 cannot separate tone from receptor reserve)
+R2-C5	arm B	H-C5	consistent / not rejected	U	DISAGREE	untestable by held data	accepted: a presence condition passed carries no weight (I had flagged it as the weakest N); same biology as J23

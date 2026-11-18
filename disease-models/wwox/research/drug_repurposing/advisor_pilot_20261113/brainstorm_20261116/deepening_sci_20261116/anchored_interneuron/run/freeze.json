@@ -1,0 +1,202 @@
+{
+ "adapter": "pilot_bisect_anchor_model.py",
+ "base_seed": 1000,
+ "calls": 280,
+ "files": {
+  "pilot_bisect_anchor_model.py": "47cc126f907824dd1e3aa3fbddf930004fe8d8002528eede71803ed00a8fa481",
+  "rebound_oscillator.py": "c050b8ff0a1ba8fe5ef340f2a57168ecf578f161be12392c42fec98851b89419"
+ },
+ "harness_sha256": "15c0d27fbf5972bb1ed81ffc8c09b06eee534c993f8ffe2bd2c81b66fcd8a9fe",
+ "harness_version": "1",
+ "params": {
+  "arm": [
+   1,
+   1,
+   94,
+   "pilot arm code 1 to 9, or 91 to 94 (anchored interneuron share, see module doc)"
+  ],
+  "geno": [
+   0,
+   0,
+   2,
+   "0 S-KO, 1 S-HT, 2 S-WT"
+  ],
+  "strength": [
+   1.0,
+   0.0,
+   3.0,
+   "arm strength s (multiplier ** s)"
+  ]
+ },
+ "points": 8,
+ "points_outside_declared_bounds": [],
+ "scan": {
+  "bisect": {
+   "bracket": [
+    0.0,
+    3.0
+   ],
+   "cells": [
+    {
+     "direction": "crosses above",
+     "fixed": {
+      "arm": 91,
+      "geno": 1
+     },
+     "label": "arm91_HT",
+     "note": "anchored sodium + interneuron share, S-HT",
+     "observable": "rel_bursts",
+     "threshold": 1.5
+    },
+    {
+     "direction": "crosses below",
+     "fixed": {
+      "arm": 91,
+      "geno": 0
+     },
+     "label": "arm91_KO",
+     "note": "anchored sodium + interneuron share, S-KO",
+     "observable": "rel_bursts",
+     "threshold": 0.7
+    },
+    {
+     "direction": "crosses above",
+     "fixed": {
+      "arm": 92,
+      "geno": 1
+     },
+     "label": "arm92_HT",
+     "note": "anchored sodium + interneuron share, S-HT",
+     "observable": "rel_bursts",
+     "threshold": 1.5
+    },
+    {
+     "direction": "crosses below",
+     "fixed": {
+      "arm": 92,
+      "geno": 0
+     },
+     "label": "arm92_KO",
+     "note": "anchored sodium + interneuron share, S-KO",
+     "observable": "rel_bursts",
+     "threshold": 0.7
+    },
+    {
+     "direction": "crosses above",
+     "fixed": {
+      "arm": 93,
+      "geno": 1
+     },
+     "label": "arm93_HT",
+     "note": "anchored sodium + interneuron share, S-HT",
+     "observable": "rel_bursts",
+     "threshold": 1.5
+    },
+    {
+     "direction": "crosses below",
+     "fixed": {
+      "arm": 93,
+      "geno": 0
+     },
+     "label": "arm93_KO",
+     "note": "anchored sodium + interneuron share, S-KO",
+     "observable": "rel_bursts",
+     "threshold": 0.7
+    },
+    {
+     "direction": "crosses above",
+     "fixed": {
+      "arm": 94,
+      "geno": 1
+     },
+     "label": "arm94_HT",
+     "note": "anchored sodium + interneuron share, S-HT",
+     "observable": "rel_bursts",
+     "threshold": 1.5
+    },
+    {
+     "direction": "crosses below",
+     "fixed": {
+      "arm": 94,
+      "geno": 0
+     },
+     "label": "arm94_KO",
+     "note": "anchored sodium + interneuron share, S-KO",
+     "observable": "rel_bursts",
+     "threshold": 0.7
+    }
+   ],
+   "iterations": 6,
+   "parameter": "strength"
+  },
+  "caveats": "weights not concentrations; 40 slices per batch; S-HT baseline has few bursts (about 10 per 40 slices), so rel_bursts at S-HT is noisy: read it with the incidence_baseline and incidence_arm fields; the settings S-HT phasic position 0.9 is assumed.",
+  "design": "bisect",
+  "predictions": [
+   {
+    "cells": [
+     "arm94_HT",
+     "arm93_HT",
+     "arm92_HT",
+     "arm91_HT"
+    ],
+    "id": "Q1",
+    "statement": "S-HT crossing of rel_bursts above 1.5, smallest first: arm 94 < arm 93 < arm 92 < arm 91 (a not-in-bracket crossing counts as +infinity)",
+    "type": "order"
+   },
+   {
+    "cell": "arm93_HT",
+    "id": "Q2",
+    "op": "between",
+    "statement": "central anchored arm (KO interneuron:pyramid ratio 2.6, proportional coupling): S-HT crossing between 0.3 and 0.7, i.e. the miss of P3a STAYS (below my original lower bound 0.7)",
+    "type": "value",
+    "x": 0.3,
+    "y": 0.7
+   },
+   {
+    "cell": "arm94_HT",
+    "id": "Q3",
+    "op": "lt",
+    "statement": "arm 94: S-HT crossing below 0.3",
+    "type": "value",
+    "x": 0.3
+   },
+   {
+    "cell": "arm92_HT",
+    "id": "Q4",
+    "op": "between",
+    "statement": "arm 92 (equal fractional block, coupling 2): S-HT crossing between 0.5 and 1.2, inside or next to my original range",
+    "type": "value",
+    "x": 0.5,
+    "y": 1.2
+   },
+   {
+    "cell": "arm91_HT",
+    "id": "Q5",
+    "op": "gt",
+    "statement": "arm 91 (equal fractional block, proportional coupling): S-HT crossing above 1.0 or not within the bracket",
+    "type": "value",
+    "x": 1.0
+   },
+   {
+    "cell": "arm94_KO",
+    "id": "Q6",
+    "op": "gt",
+    "statement": "arm 94 at S-KO: rel_bursts stays above 0.7 for s <= 1",
+    "type": "value",
+    "x": 1.0
+   },
+   {
+    "a": "arm91_KO",
+    "b": "arm94_KO",
+    "id": "Q7",
+    "op": "lt",
+    "statement": "S-KO crossing below 0.7: arm 91 earlier than arm 94 (less interneuron offset)",
+    "type": "cmp"
+   }
+  ],
+  "source_spec": "anchored interneuron share (SCI, 2026-11-17); arms 91 to 94 of pilot_bisect_anchor_model.py",
+  "translation_note": "SCI wrote these mechanical predictions directly (no translation); estimate = midpoint of the final bracket; statistic = median over 5 seeds; S-HT noisy (about 10 bursts per 40 slices)"
+ },
+ "scan_sha256": "2b42d209edb83b7a99f0f9fe8c76cea89ad1f9f00c7c29ab931264f85dc09174",
+ "seeds": 5
+}

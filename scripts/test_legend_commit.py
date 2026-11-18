@@ -82,6 +82,51 @@ class LegendCommitWrapper(unittest.TestCase):
         self.assertEqual([], staged)
         self.assertEqual(["peer_new.txt"], untracked)
 
+    def test_a_structurally_broken_data_file_is_refused_at_the_commit_not_19_ci_runs_later(self) -> None:
+        """2026-11-16: a TSV row with 2 cells in an 8-column table reached main; the check existed (test_structured_data_integrity) and only the gate ran it."""
+        (self.repo / "ragged.tsv").write_text("a\tb\tc\n1\t2\t3\nonly\ttwo\n", encoding="utf-8")
+        refused = self.run_wrapper("ragged table", "ragged.tsv")
+        self.assertEqual(7, refused.returncode, refused.stderr)
+        self.assertIn("row widths", refused.stderr)
+        self.assertEqual("seed", git(self.repo, "log", "-1", "--format=%s"))                 # nothing was committed
+        (self.repo / "ok.tsv").write_text("a\tb\n1\t2\n", encoding="utf-8")
+        self.assertEqual(0, self.run_wrapper("well-formed table", "ok.tsv").returncode)
+        env = {**os.environ, "LEGEND_STRUCTURE_BECAUSE": "a deliberately ragged third-party fixture"}
+        forced = subprocess.run(["bash", str(WRAPPER), "stated exception", "ragged.tsv"], cwd=self.repo, capture_output=True, text=True, env=env)
+        self.assertEqual(0, forced.returncode, forced.stderr)                                # a stated reason still allows it, as for stale surfaces
+
+    def test_a_commit_is_refused_while_this_worktrees_push_waits_in_the_landing_queue(self) -> None:
+        import time
+        common = Path(git(self.repo, "rev-parse", "--path-format=absolute", "--git-common-dir"))
+        waiter = subprocess.Popen(["sleep", "30"], cwd=self.repo)       # stands for a safe_push waiting in this worktree
+        try:
+            (common / "legend_land.queue").write_text(f"999999 1 2026-11-17T00:00:00Z\n{waiter.pid} 1 2026-11-17T00:00:01Z\n", encoding="utf-8")
+            (self.repo / "a.txt").write_text("a\n", encoding="utf-8")
+            r = self.run_wrapper("pending", "a.txt")
+            self.assertEqual(r.returncode, 8, r.stderr); self.assertIn("landing queue", r.stderr)
+            self.assertEqual(git(self.repo, "log", "--oneline").count("\n"), 0, "nothing was committed")
+            env = dict(os.environ, LEGEND_COMMIT_WHILE_PUSH_PENDING="test override")
+            ok = subprocess.run(["bash", str(WRAPPER), "pending", "a.txt"], cwd=self.repo, capture_output=True, text=True, env=env)
+            self.assertEqual(ok.returncode, 0, ok.stderr)
+            (common / "legend_land.queue").write_text("999999 1 2026-11-17T00:00:00Z\n", encoding="utf-8")        # a dead ticket alone does not block
+            (self.repo / "b.txt").write_text("b\n", encoding="utf-8")
+            self.assertEqual(self.run_wrapper("dead ticket", "b.txt").returncode, 0)
+        finally:
+            waiter.kill(); waiter.wait()
+
+    def test_a_registry_registration_that_breaks_a_reader_suite_is_refused_and_a_complete_one_passes(self) -> None:
+        reader = "import sys\nPKG_MAP = 'a reader of the registry'\nrows = [l.split() for l in open('hypothesis_packages.tsv').read().splitlines()[1:]]\nsys.exit(0 if all(len(r) == 2 for r in rows) else 1)\n"
+        (self.repo / "test_reader.py").write_text(reader, encoding="utf-8"); git(self.repo, "add", "test_reader.py"); git(self.repo, "commit", "-q", "-m", "reader")
+        (self.repo / "hypothesis_packages.tsv").write_text("package map\nP1 M1\nP2\n", encoding="utf-8")         # P2 has no PKG_MAP entry
+        r = self.run_wrapper("register", "hypothesis_packages.tsv")
+        self.assertEqual(r.returncode, 9, r.stderr); self.assertIn("test_reader.py", r.stderr)
+        self.assertEqual(git(self.repo, "log", "--oneline").count("\n"), 1, "nothing was committed (seed and reader only)")
+        (self.repo / "hypothesis_packages.tsv").write_text("package map\nP1 M1\nP2 M2\n", encoding="utf-8")
+        ok = self.run_wrapper("register", "hypothesis_packages.tsv")
+        self.assertEqual(ok.returncode, 0, ok.stderr); self.assertIn("reader suites passed", ok.stderr)
+        (self.repo / "other.txt").write_text("x\n", encoding="utf-8")
+        self.assertNotIn("reader suites", self.run_wrapper("unrelated", "other.txt").stderr, "a commit that does not name the registry runs no reader suite")
+
     def test_nothing_to_commit_is_reported_and_not_an_error(self) -> None:
         result = self.run_wrapper("no change here", "seed.txt")
         self.assertEqual(0, result.returncode, result.stderr)

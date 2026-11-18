@@ -1,0 +1,47 @@
+gene	matrix_class	label_note
+Scn1a	sodium_channel;valproate_type	Nav1.1; standard mechanism label of sodium-channel blockers and of one valproate-type target
+Scn2a	sodium_channel;valproate_type	Nav1.2; standard mechanism label
+Scn3a	sodium_channel	Nav1.3; standard mechanism label
+Scn8a	sodium_channel	Nav1.6; standard mechanism label
+Scn9a	sodium_channel	Nav1.7; standard mechanism label (sodium-channel blockers act on it as a class)
+Cacna1g	t_type_calcium;valproate_type	Cav3.1; T-type label
+Cacna1h	t_type_calcium	Cav3.2; T-type label
+Cacna1i	t_type_calcium	Cav3.3; T-type label
+Sv2a	sv2a	SV2A ligand label
+Gria1	ampa_antagonist	AMPA receptor subunit
+Gria2	ampa_antagonist	AMPA receptor subunit
+Gria3	ampa_antagonist	AMPA receptor subunit
+Gria4	ampa_antagonist	AMPA receptor subunit
+Grin1	nmdar_pore_blocker	NMDA receptor subunit
+Grin2a	nmdar_pore_blocker	NMDA receptor subunit
+Grin2b	nmdar_pore_blocker;glun2b_nam	NMDA receptor subunit, GluN2B
+Grin2c	nmdar_pore_blocker	NMDA receptor subunit
+Grin2d	nmdar_pore_blocker	NMDA receptor subunit
+Gabra1	gabaa_pam_synaptic_selective;benzodiazepine	GABA-A receptor subunit
+Gabra2	benzodiazepine;gabaa_pam_synaptic_selective	GABA-A receptor subunit
+Gabra3	benzodiazepine	GABA-A receptor subunit
+Gabra5	benzodiazepine	GABA-A receptor subunit
+Gabrb1	benzodiazepine	GABA-A receptor subunit
+Gabrb2	benzodiazepine	GABA-A receptor subunit
+Gabrb3	benzodiazepine	GABA-A receptor subunit
+Gabrg2	benzodiazepine;gabaa_pam_synaptic_selective	GABA-A receptor subunit
+Gabrd	gabaa_neurosteroid_extrasynaptic	GABA-A delta subunit, extrasynaptic
+Slc6a1	gaba_at_gat	GAT-1
+Slc6a11	gaba_at_gat	GAT-3
+Slc6a13	gaba_at_gat	GAT-2
+Kcnq2	kv7_opener	Kv7.2
+Kcnq3	kv7_opener	Kv7.3
+Kcnq5	kv7_opener	Kv7.5
+Hcn1	hcn_ih_blocker	HCN1
+Hcn2	hcn_ih_blocker	HCN2
+Hcn3	hcn_ih_blocker	HCN3
+Hcn4	hcn_ih_blocker	HCN4
+Gpr55	cannabidiol	cannabidiol mechanism label (uncertain)
+Trpv1	cannabidiol	cannabidiol mechanism label (uncertain)
+Htr2c	fenfluramine_type	serotonin receptor label
+Htr2a	fenfluramine_type	serotonin receptor label
+Htr1d	fenfluramine_type	serotonin receptor label
+Slc6a4	fenfluramine_type	serotonin transporter label
+Kcnj11	ketogenic_diet	KATP pore (metabolic route label)
+Abcc8	ketogenic_diet	KATP regulatory subunit (metabolic route label)
+Mc2r	steroid_acth	ACTH receptor label

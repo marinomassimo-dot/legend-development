@@ -236,3 +236,5 @@ LEGEND already holds. DOIs carry two routes each; ⚠️ `convert_article_ids` i
 
 **End.** Not medical advice. No gate, registry, mandatory field or audit programme is proposed. Read-only toward
 every canonical file; nothing promoted, nothing committed.
+
+[Update 2026-11-17, CC-20261117-ORCHESTRATOR-P47T-ABUNDANCE-WORDING-01 (IT; wording from the closure note IT56-Q05 of SCI, held files only): where this file says P47T protein is normal or at wild-type amount (lines 69), read "present, similar by the authors' wording, not quantified; folded state and stability untested". Descriptive mention only; no argument in this file depends on equal abundance. The original sentences above are not edited. Nothing else in this file changes.]

@@ -807,7 +807,7 @@ Scholar Gateway · 4 queries · 36 passages · 33 articles · 1991-10-01 – 202
 
 **END OF FILE — `q230p_minimum_discriminator_20260922.md`.** Sections: inherited bounds and the one
 refusal §0 · prospective `DISCOVERY_TRACE` with scores §6 (persisted before any confirmatory search;
-`RESULT` §6.7, self-finding §6.8) · component-by-component necessity with explicit cuts §1 ·
+`q230p_minimum_discriminator_20260922.md` §6.7, self-finding §6.8) · component-by-component necessity with explicit cuts §1 ·
 hypothesis × result matrix §2 · minimum discriminating set, cost class and what it cannot resolve
 §3 · function-follows-abundance with the `POLE4`/`GSK3β` re-evaluation §4 · chaperone qualification
 §5 · `REVIVAL_TRIGGER`s, `COULD NOT ESTABLISH` and `HUMAN_REQUIRED` §7 · self-grade §8.

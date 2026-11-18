@@ -1,0 +1,284 @@
+{
+ "design": "bisect",
+ "source_spec": "pilot_bisect_spec.json (SCI, sha256 ab9a24cd1df7da5b150909cc4aa02a3c9f4aaba23ca4e4fcf09a54930d988cab)",
+ "bisect": {
+  "parameter": "strength",
+  "bracket": [
+   0.0,
+   3.0
+  ],
+  "iterations": 6,
+  "cells": [
+   {
+    "label": "arm1_KO",
+    "fixed": {
+     "arm": 1,
+     "geno": 0
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.5,
+    "direction": "crosses below",
+    "note": "d-APV, S-KO"
+   },
+   {
+    "label": "arm1_HT",
+    "fixed": {
+     "arm": 1,
+     "geno": 1
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.5,
+    "direction": "crosses below",
+    "note": "d-APV, S-HT"
+   },
+   {
+    "label": "arm2_KO",
+    "fixed": {
+     "arm": 2,
+     "geno": 0
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.5,
+    "direction": "crosses below",
+    "note": "NMDAR pore, S-KO"
+   },
+   {
+    "label": "arm2_HT",
+    "fixed": {
+     "arm": 2,
+     "geno": 1
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.5,
+    "direction": "crosses below",
+    "note": "NMDAR pore, S-HT"
+   },
+   {
+    "label": "arm4_KO",
+    "fixed": {
+     "arm": 4,
+     "geno": 0
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.5,
+    "direction": "crosses below",
+    "note": "AMPA, S-KO"
+   },
+   {
+    "label": "arm4_HT",
+    "fixed": {
+     "arm": 4,
+     "geno": 1
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.5,
+    "direction": "crosses below",
+    "note": "AMPA, S-HT"
+   },
+   {
+    "label": "arm5_KO",
+    "fixed": {
+     "arm": 5,
+     "geno": 0
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.5,
+    "direction": "crosses below",
+    "note": "T-type, S-KO"
+   },
+   {
+    "label": "arm5_HT",
+    "fixed": {
+     "arm": 5,
+     "geno": 1
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.5,
+    "direction": "crosses below",
+    "note": "T-type, S-HT"
+   },
+   {
+    "label": "arm6_KO",
+    "fixed": {
+     "arm": 6,
+     "geno": 0
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.5,
+    "direction": "crosses below",
+    "note": "synaptic GABA-A, S-KO"
+   },
+   {
+    "label": "arm6_HT",
+    "fixed": {
+     "arm": 6,
+     "geno": 1
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.5,
+    "direction": "crosses below",
+    "note": "synaptic GABA-A, S-HT"
+   },
+   {
+    "label": "arm7_KO",
+    "fixed": {
+     "arm": 7,
+     "geno": 0
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.5,
+    "direction": "crosses below",
+    "note": "neurosteroid-type, S-KO"
+   },
+   {
+    "label": "arm7_HT",
+    "fixed": {
+     "arm": 7,
+     "geno": 1
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.5,
+    "direction": "crosses below",
+    "note": "neurosteroid-type, S-HT"
+   },
+   {
+    "label": "arm8_KO",
+    "fixed": {
+     "arm": 8,
+     "geno": 0
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.5,
+    "direction": "crosses below",
+    "note": "sodium pyramidal, S-KO"
+   },
+   {
+    "label": "arm8_HT",
+    "fixed": {
+     "arm": 8,
+     "geno": 1
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.5,
+    "direction": "crosses below",
+    "note": "sodium pyramidal, S-HT"
+   },
+   {
+    "label": "arm3_KO",
+    "fixed": {
+     "arm": 3,
+     "geno": 0
+    },
+    "observable": "rel_duration",
+    "threshold": 0.8,
+    "direction": "crosses below",
+    "note": "GluN2B NAM, S-KO"
+   },
+   {
+    "label": "arm9_HT",
+    "fixed": {
+     "arm": 9,
+     "geno": 1
+    },
+    "observable": "rel_bursts",
+    "threshold": 1.5,
+    "direction": "crosses above",
+    "note": "sodium + interneuron share, S-HT"
+   },
+   {
+    "label": "arm9_KO",
+    "fixed": {
+     "arm": 9,
+     "geno": 0
+    },
+    "observable": "rel_bursts",
+    "threshold": 0.7,
+    "direction": "crosses below",
+    "note": "sodium + interneuron share, S-KO"
+   }
+  ]
+ },
+ "predictions": [
+  {
+   "id": "P1",
+   "type": "order",
+   "cells": [
+    "arm1_KO",
+    "arm7_KO",
+    "arm2_KO",
+    "arm8_KO",
+    "arm4_KO",
+    "arm6_KO",
+    "arm5_KO"
+   ],
+   "statement": "S-KO crossing strength of rel_bursts below 0.5, smallest first: d-APV < neurosteroid-type < NMDAR pore < sodium pyramidal < AMPA < synaptic GABA-A < T-type (SCI)"
+  },
+  {
+   "id": "P1b",
+   "type": "value",
+   "cell": "arm5_KO",
+   "op": "gt",
+   "x": 2.0,
+   "statement": "T-type reaches 0.5 only at s above 2 or not within the bracket (SCI)"
+  },
+  {
+   "id": "P2a",
+   "type": "value",
+   "cell": "arm3_KO",
+   "op": "gt",
+   "x": 1.0,
+   "statement": "GluN2B NAM: rel_duration does not fall below 0.8 within s <= 1 (SCI)"
+  },
+  {
+   "id": "P2b",
+   "type": "value",
+   "cell": "arm3_KO",
+   "op": "gt",
+   "x": 1.5,
+   "statement": "GluN2B NAM: below 0.8 only for s above 1.5 (SCI)"
+  },
+  {
+   "id": "P3a",
+   "type": "value",
+   "cell": "arm9_HT",
+   "op": "between",
+   "x": 0.7,
+   "y": 1.5,
+   "statement": "sodium with interneuron share at S-HT: rel_bursts rises above 1.5 at s between 0.7 and 1.5 (SCI)"
+  },
+  {
+   "id": "P3b",
+   "type": "value",
+   "cell": "arm9_KO",
+   "op": "gt",
+   "x": 1.0,
+   "statement": "sodium with interneuron share at S-KO: rel_bursts stays above 0.7 for s <= 1 (SCI)"
+  },
+  {
+   "id": "P4a",
+   "type": "cmp",
+   "a": "arm6_HT",
+   "b": "arm6_KO",
+   "op": "lt",
+   "statement": "synaptic GABA-A: S-HT crossing smaller than S-KO (SCI)"
+  },
+  {
+   "id": "P4b",
+   "type": "cmp",
+   "a": "arm7_HT",
+   "b": "arm7_KO",
+   "op": "lt",
+   "statement": "neurosteroid-type: S-HT crossing smaller than S-KO (SCI)"
+  },
+  {
+   "id": "P4c",
+   "type": "cmp",
+   "a": "arm8_HT",
+   "b": "arm8_KO",
+   "op": "lt",
+   "statement": "sodium pyramidal: S-HT crossing smaller than S-KO (SCI)"
+  }
+ ],
+ "caveats": "weights not concentrations; 40 slices per batch; S-HT baseline has few bursts (about 10 per 40 slices), so rel_bursts at S-HT is noisy: read it with the incidence_baseline and incidence_arm fields; the settings S-HT phasic position 0.9 is assumed.",
+ "translation_note": "HE translated SCI's textual predictions to mechanical ones; each id keeps SCI's wording; the estimate is the midpoint of the final bracket (width 3/64 = 0.047), the statistic is the median over seeds; S-HT cells are noisy (about 10 bursts per 40 slices)"
+}

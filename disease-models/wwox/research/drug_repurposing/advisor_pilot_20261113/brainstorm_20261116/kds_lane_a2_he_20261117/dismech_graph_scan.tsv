@@ -1,0 +1,4069 @@
+entry	nodes	edges	parentless_beyond_first	reachable_from_first	epilepsy_related
+10q22.3q23.3 Microduplication Syndrome	2	18	0	2	False
+12p12.1 Microdeletion Syndrome	3	4	0	3	False
+15q11q13 Microduplication Syndrome	5	23	0	5	True
+16p11.2 Deletion Syndrome	6	22	0	6	True
+2-Aminoadipic 2-Oxoadipic Aciduria	9	15	1	8	True
+2-Methylbutyryl-CoA Dehydrogenase Deficiency	5	10	0	5	False
+22q11.2 Deletion Syndrome	6	10	0	6	False
+22q11.2 Duplication Syndrome	3	17	0	3	False
+2q37 Microdeletion Syndrome	6	20	0	6	False
+3-Hydroxy-3-Methylglutaric Aciduria	8	16	0	8	False
+3-Hydroxy-3-Methylglutaryl-CoA Synthase Deficiency	5	9	0	5	False
+3-hydroxyisobutyryl-CoA hydrolase deficiency	6	11	0	6	False
+3-M Syndrome	15	24	0	15	False
+3-Methylcrotonyl-CoA Carboxylase Deficiency	5	10	0	5	False
+3-Methylglutaconic Aciduria Type I	4	9	2	2	True
+3-Phosphoglycerate Dehydrogenase Deficiency	6	20	0	6	True
+3-Hydroxyacyl-CoA Dehydrogenase Deficiency	11	21	0	11	False
+3-Methylglutaconic Aciduria Type 9	6	18	0	6	True
+3-Methylglutaconic Aciduria Type VIIA	7	19	0	7	True
+3-Methylglutaconic Aciduria Type VIIB	10	26	2	8	True
+3-methylglutaconic_Aciduria_With_Deafness_Encephalopathy_And_Leigh-like_Syndrome	15	22	0	15	True
+3MC Syndrome	10	16	3	6	False
+3p- Syndrome	13	20	0	13	False
+45,X/46,XY Mixed Gonadal Dysgenesis	11	19	0	11	False
+46,XX Gonadal Dysgenesis	10	18	4	5	False
+46,XX testicular disorder of sex development	9	16	4	5	False
+46,XY disorder of sex development due to 17-beta-hydroxysteroid dehydrogenase 3 deficiency	7	25	0	7	False
+46,XY disorder of sex development due to 5-alpha-reductase 2 deficiency	8	23	1	7	False
+46,XY partial gonadal dysgenesis	19	31	4	7	False
+46,XY Sex Reversal 11	14	31	1	13	False
+46,XY Sex Reversal 5	12	28	0	12	False
+46,XY complete gonadal dysgenesis	18	29	6	12	False
+47,XYY Syndrome	6	6	0	6	True
+5-Fluorouracil Poisoning	8	15	1	7	True
+5-Oxoprolinase Deficiency	2	2	0	2	False
+6q16 Deletion Syndrome	9	21	1	8	False
+8p Inverted Duplication Deletion Syndrome	10	56	1	9	True
+A20 Haploinsufficiency	5	11	0	5	False
+AARS1-related Leukoencephalopathy	7	19	1	6	True
+AA Amyloidosis	15	23	6	8	False
+ABCB1-Related Acute Transient Encephalopathy	7	15	1	6	True
+ABCC9-Related Intellectual Disability and Myopathy Syndrome	13	12	0	13	True
+ACAD9 Deficiency	5	12	1	4	False
+ACAN-Related Short Stature Spectrum	8	19	0	8	False
+ACBD5 Deficiency	9	20	0	9	False
+ACCES Syndrome	4	9	0	4	False
+ACTA1-Related Nemaline Myopathy	11	25	1	10	False
+ACTB-Related Syndromic Thrombocytopenia	7	9	1	6	False
+ACTH-Independent Macronodular Adrenal Hyperplasia 3	9	9	0	9	False
+ACTL6A-related BAFopathy	4	6	0	4	False
+ACys Amyloidosis	10	11	0	10	False
+ADAM9-Related Retinopathy	5	14	0	5	False
+Autosomal Dominant Cerebellar Ataxia Deafness and Narcolepsy	12	32	0	12	True
+ADGRG1-related Bilateral Frontoparietal Polymicrogyria	9	22	1	8	True
+ADNP-Related Syndrome	7	33	0	7	False
+ADPRS-Related Stress-Induced Neurodegeneration	12	35	1	11	True
+ADan amyloidosis	17	20	1	16	False
+AFG2A-Related Encephalopathy	11	11	0	11	True
+AFG3L2-related Optic Atrophy And/Or Spastic Ataxia Spectrum	10	24	2	8	True
+AGAT Deficiency	3	14	0	3	False
+S-Adenosylhomocysteine Hydrolase Deficiency	14	35	0	14	False
+AICA-ribosiduria	6	13	0	6	True
+AIP-related pituitary adenoma predisposition	14	23	0	14	False
+AIPL1-Related Retinopathy	5	5	0	5	False
+AKT3-Related Overgrowth Spectrum	8	18	1	7	True
+ALDH18A1-Related Autosomal Dominant Cutis Laxa Type 3	5	21	0	5	False
+ALDH18A1-Related Spastic Paraplegia and Neurocutaneous Spectrum	9	28	1	3	False
+ALG1-congenital disorder of glycosylation	7	24	0	7	True
+ALG11-congenital disorder of glycosylation	7	9	2	5	True
+ALG12-congenital disorder of glycosylation	9	22	0	9	False
+ALG2-congenital disorder of glycosylation	8	9	1	7	True
+ALG3-congenital disorder of glycosylation	7	24	0	7	True
+ALG6-congenital disorder of glycosylation	8	35	0	8	True
+ALG8-related Autosomal Dominant Polycystic Kidney And/Or Liver Disease	7	13	1	6	False
+ALG9-congenital disorder of glycosylation	10	26	0	10	True
+ALK-Related Neuroblastic Tumor Susceptibility	7	13	1	6	False
+ALK-Rearranged Non-Small Cell Lung Cancer	8	8	1	3	False
+ALPK3-Related Hypertrophic Cardiomyopathy	15	32	0	15	False
+Systemic AL Amyloidosis	20	34	0	20	False
+Cardiac Arrhythmia, Ankyrin-B-Related	9	20	0	9	False
+ANK2-Related Complex Neurodevelopmental Disorder	12	21	2	6	True
+ANKRD26-Related Thrombocytopenia	7	16	0	7	False
+Acute Promyelocytic Leukemia, PML-RARA	13	20	2	10	False
+ARF3-related Neurodevelopmental Disorder	7	11	0	7	True
+ARHGDIA-Related Steroid-Resistant Nephrotic Syndrome	12	21	0	12	True
+ARPC1B Deficiency	8	7	0	8	False
+X-Linked Lissencephaly With Abnormal Genitalia (ARX-Related)	14	29	0	14	True
+Autosomal Recessive Cerebellar Ataxia-Saccadic Intrusion Syndrome	7	13	0	7	True
+ASCT1 Deficiency	10	24	0	10	True
+ATF6-Related Retinopathy	4	10	0	4	False
+ATP6V0C-Related Epilepsy	7	26	0	7	True
+ATR-X-Related Syndrome	6	26	0	6	True
+Hereditary Transthyretin Amyloidosis	12	26	1	8	False
+Abdominal Aortic Aneurysm	8	16	1	4	False
+Abetalipoproteinemia	10	50	0	10	False
+Ablepharon-Macrostomia Syndrome	8	27	0	8	False
+absence of fingerprints-congenital milia syndrome	5	9	0	5	False
+Acantholytic Blistering of Oral and Laryngeal Mucosa	4	9	1	3	False
+Acatalasia	8	14	0	8	False
+Acetaminophen Hepatotoxicity	7	16	0	7	True
+Achalasia-Progeroid Syndrome	5	4	0	5	False
+Acheiropodia	4	9	0	4	False
+Achondrogenesis Type IA	17	33	1	16	False
+Achondrogenesis Type II	12	32	0	12	False
+Achondroplasia	11	38	1	10	False
+Achoo Syndrome	5	8	0	5	False
+Achromatopsia	7	13	4	3	False
+Acinetobacter Infectious Disease	6	9	1	5	False
+Acne Vulgaris	6	12	1	3	False
+Aconitine Poisoning	11	10	1	10	False
+Acoustic Neuroma	7	12	0	7	False
+Acquired Angioedema	6	10	1	5	False
+Acquired Epidermolysis Bullosa	13	27	2	11	False
+Acquired Immunodeficiency Syndrome	10	16	0	10	False
+Acquired Long QT Syndrome	5	8	1	4	False
+Acquired Partial Lipodystrophy	7	24	2	5	False
+Acquired Thrombotic Thrombocytopenic Purpura	8	16	0	8	False
+Acrocallosal Syndrome	5	20	0	5	False
+Acrocapitofemoral Dysplasia	8	26	0	8	False
+Acrodermatitis Enteropathica	19	28	5	13	False
+Acrodysostosis	7	17	2	3	False
+Acrofacial Dysostosis Cincinnati Type	14	61	0	14	True
+Acrokeratosis Verruciformis	4	8	0	4	False
+Acromesomelic Dysplasia Demirhan Type	8	26	0	8	False
+Acromesomelic Dysplasia Grebe Type	5	5	0	5	False
+Acromesomelic Dysplasia Maroteaux Type	9	26	0	9	False
+Acromesomelic Dysplasia PRKG2 Type	12	18	0	12	False
+Actinomycosis	8	18	1	7	False
+Action Myoclonus-Renal Failure Syndrome	6	13	0	6	True
+Activated PI3K-delta syndrome	7	16	0	7	False
+Acute Ackee Fruit Intoxication	12	28	0	12	False
+Acute Alcohol Sensitivity	5	8	1	4	False
+Acute Annular Outer Retinopathy	6	10	1	5	False
+Acute Cystitis	4	6	0	4	False
+Acute Disseminated Encephalomyelitis	5	20	0	5	True
+Acute Erythroid Leukemia	7	14	0	7	False
+Acute Flaccid Myelitis	5	15	0	5	False
+Acute Hypotension	8	10	3	5	False
+Acute Intermittent Porphyria	6	31	1	5	False
+Acute Lichenoid Pityriasis	6	16	1	5	False
+Acute Lymphoblastic Leukemia	7	16	3	4	False
+Acute Macular Neuroretinopathy	3	2	0	3	False
+Acute Megakaryoblastic Leukemia	13	13	8	2	False
+Acute Motor and Sensory Axonal Neuropathy	7	17	0	7	False
+Acute Myeloid Leukemia with CEBPA Somatic Mutations	8	17	2	6	False
+Acute Opioid Poisoning	6	8	1	5	False
+Acute Post-Surgical Pain	9	11	1	8	False
+Acute Pyelonephritis	3	6	0	3	False
+Acute Radiation Syndrome	14	29	5	7	False
+Acute Respiratory Distress Syndrome	21	35	1	19	False
+Acute Tricyclic Antidepressant Poisoning	20	58	0	20	True
+Adamantinoma	6	9	3	2	False
+Adams-Oliver Syndrome	16	23	8	2	False
+Addison's Disease	4	7	1	3	False
+Adenine Phosphoribosyltransferase Deficiency	7	30	0	7	False
+Adenoid Cystic Carcinoma	12	17	5	5	False
+Adenomyosis	7	8	1	6	False
+Adenosine Kinase Deficiency	7	24	0	7	False
+Adenovirus Respiratory Infection	6	14	0	6	False
+Adenylosuccinate Lyase Deficiency	7	28	0	7	True
+Adrenal Cortex Adenoma	14	35	3	1	False
+Adult-Onset Ataxia and Polyneuropathy	7	19	1	6	False
+Adult-Onset Autosomal Dominant Demyelinating Leukodystrophy	14	27	3	8	False
+Adult-Onset Myasthenia Gravis	18	29	2	13	False
+Adult-Onset Proximal Spinal Muscular Atrophy, Autosomal Dominant	10	23	0	10	False
+Adult-Onset Still Disease	5	14	0	5	False
+Adult-Type Hypolactasia	10	19	1	9	False
+Adult Granulosa Cell Tumor of Ovary	8	7	2	6	False
+Adult Neuronal Ceroid Lipofuscinosis	7	18	3	3	True
+Adult-Onset Dystonia-Parkinsonism	7	39	0	7	False
+Adult-Onset Foveomacular Vitelliform Dystrophy	3	7	0	3	False
+Adult Polyglucosan Body Disease	5	27	0	5	False
+Adult Refsum Disease	14	33	1	12	False
+Adult T-Cell Leukemia/Lymphoma	7	14	2	5	False
+Advanced Sleep Phase Syndrome	14	28	1	5	False
+Aeromonas Hydrophila Intestinal Disease	6	11	1	5	False
+Aflatoxicosis	5	10	0	5	False
+Aflatoxin-Related Hepatocellular Carcinoma	11	18	1	9	False
+African Tick-Bite Fever	6	14	0	6	False
+Age-Related Macular Degeneration	9	15	4	3	False
+Ageing Associated Decline in Intrinsic Capacity	11	3	7	2	False
+Agenesis of the Corpus Callosum with Peripheral Neuropathy	6	13	0	6	True
+Aggressive NK-cell Leukemia	10	18	5	3	False
+Agnathia-Otocephaly Complex	8	24	2	5	False
+Agoraphobia	7	8	1	4	False
+Aicardi-Goutieres Syndrome	8	39	0	8	True
+Aicardi Syndrome	6	20	3	2	True
+Ainhum	5	11	1	4	False
+Akinetopsia	4	5	3	1	False
+Alacrima, Achalasia, and Intellectual Disability Syndrome	8	10	2	6	False
+Alagille syndrome	6	34	1	5	False
+Aland Islands Eye Disease	6	16	0	6	False
+Alazami-Yuan Syndrome	3	14	0	3	True
+Alcohol Use Disorder	30	59	4	26	False
+Alcohol-Associated Liver Disease	11	20	0	11	False
+Alexander Disease	7	34	0	7	True
+Alkaptonuria	6	37	0	6	False
+Allan-Herndon-Dudley Syndrome	9	34	0	9	False
+Allergic Cutaneous Vasculitis	5	9	0	5	False
+Allopurinol-Induced Stevens-Johnson Syndrome/Toxic Epidermal Necrolysis	6	11	1	5	False
+Alopecia-Intellectual Disability Syndrome 1	3	5	0	3	False
+Alopecia-Intellectual Disability Syndrome 4	4	9	0	4	True
+Alopecia Areata	6	10	1	5	False
+Alpers-Huttenlocher Syndrome	16	34	1	15	True
+Alpha-2-Plasmin Inhibitor Deficiency	5	16	0	5	False
+Alpha-gal Syndrome	7	13	1	6	False
+Alpha-1 Antitrypsin Deficiency	10	18	1	5	False
+Alpha-mannosidosis	5	77	0	5	False
+Alpha Thalassemia	5	15	1	4	False
+Alport Syndrome	8	19	1	7	False
+Alsahan-Harris Syndrome	5	10	0	5	False
+Alstrom Syndrome	7	21	0	7	False
+Alternating Hemiplegia of Childhood	5	15	0	5	True
+Alveolar capillary dysplasia with misalignment of pulmonary veins	10	9	1	9	False
+Alveolar Rhabdomyosarcoma	11	18	0	11	False
+Alveolar Soft Part Sarcoma	5	8	0	5	False
+Alzheimer Disease	29	47	16	10	False
+Amatoxin Poisoning	15	33	2	13	False
+Ameloblastoma	6	8	1	5	False
+Amelogenesis Imperfecta	7	13	3	4	False
+Aminoacylase 1 Deficiency	5	16	0	5	True
+Aminoglycoside-Induced Hearing Loss	13	18	2	9	False
+Amish Lethal Microcephaly	6	18	0	6	False
+Amniotic Band Syndrome	11	23	1	10	False
+Amniotic Fluid Embolism	20	40	1	19	False
+Amyloidosis	5	12	2	3	False
+Amyotrophic Lateral Sclerosis-Parkinsonism-Dementia Complex	9	16	2	3	False
+Amyotrophic Lateral Sclerosis	18	14	12	1	False
+Amyotrophic Lateral Sclerosis 27, Juvenile	10	32	0	10	False
+Amyotrophic Lateral Sclerosis Type 1	16	34	0	16	False
+Anaerobic meningitis	9	16	0	9	False
+Anaerobic Pneumonia	6	11	0	6	False
+Anal Canal Adenocarcinoma	6	7	1	4	False
+Anal Canal Carcinoma	6	10	0	6	False
+Anaplastic Large Cell Lymphoma	9	16	3	5	False
+Anaplastic Thyroid Carcinoma	9	22	2	7	False
+Anauxetic dysplasia	7	17	0	7	False
+Andersen-Tawil Syndrome	9	28	0	9	False
+Androgen Insensitivity Syndrome	18	53	1	16	False
+Androgenetic Alopecia	21	33	6	12	False
+Anencephaly	4	8	1	3	False
+Aneurysm-Osteoarthritis Syndrome	8	29	0	8	False
+Aneurysmal Bone Cyst	7	12	0	7	False
+Angelman Syndrome	9	42	2	7	True
+Angiomatoid Fibrous Histiocytoma	8	14	1	7	False
+Angiosarcoma	6	5	4	2	False
+Aniridia	9	8	1	8	False
+Ankylosing Spondylitis	10	24	3	7	False
+Anorexia Nervosa	13	23	1	12	False
+Anterior Spinal Artery Syndrome	7	12	0	7	False
+Anthracycline-Induced Cardiomyopathy	11	23	1	9	False
+Anthrax	8	20	0	8	False
+Anti-Glomerular Basement Membrane Disease	6	12	0	6	False
+Anti-NMDA Receptor Encephalitis	6	14	1	5	True
+Antiphospholipid Syndrome	18	44	1	16	False
+Antisocial Personality Disorder	4	7	1	2	False
+Antisynthetase Syndrome	7	19	0	7	False
+Antley-Bixler Syndrome, FGFR2-Related	9	37	0	9	False
+Aortic Valve Disease 2	5	11	0	5	False
+Aortic Valve Disease 3	5	9	0	5	False
+Aortic Valve Stenosis	23	47	4	17	False
+Aortitis	6	14	3	3	False
+Apert Syndrome	15	35	0	15	False
+Aplasia of Lacrimal and Salivary Glands	5	14	0	5	False
+apparent mineralocorticoid excess	13	20	0	13	False
+Appendiceal Neoplasm	9	7	2	7	False
+Appendiceal Neuroendocrine Tumor	5	6	0	5	False
+Aquarium Granuloma	6	11	2	4	False
+Arboleda-Tham Syndrome	11	41	0	11	False
+Arginase Deficiency	5	34	0	5	True
+Argininosuccinic Aciduria	5	21	0	5	True
+Ariboflavinosis	10	22	0	10	False
+Aromatase Deficiency	5	30	0	5	False
+Aromatase Excess Syndrome	5	9	0	5	False
+Aromatic L-amino acid decarboxylase deficiency	6	45	0	6	False
+arrhythmogenic right ventricular cardiomyopathy	9	20	0	9	False
+Arsenic Poisoning	10	16	0	10	False
+Arsenic-Related Cancers	10	17	0	10	False
+Arterial Calcification of Infancy	5	8	3	2	False
+Arterial Dissection-Lentiginosis Syndrome	3	7	0	3	False
+EMILIN1-Related Arterial Tortuosity Syndrome	5	8	0	5	False
+Arterial Tortuosity Syndrome	4	11	0	4	False
+Arteriosclerotic Retinopathy	1	2	0	1	False
+Arthrochalasia Ehlers-Danlos Syndrome	8	46	1	7	False
+Arthrogryposis-Renal Dysfunction-Cholestasis Syndrome	18	39	1	17	False
+Arthrogryposis, Cleft Palate, Craniosynostosis, and Impaired Intellectual Development	2	15	0	2	True
+Arthrogryposis Multiplex Congenita	9	13	5	4	False
+Arts syndrome	12	31	0	12	False
+Asbestosis	10	16	0	10	False
+Asherman_Syndrome	18	31	5	8	False
+Asparagine synthetase deficiency	7	19	0	7	True
+Aspartylglucosaminuria	5	45	1	4	False
+Aspergillosis	21	21	4	9	False
+Aspirin-Exacerbated Respiratory Disease	20	30	4	15	False
+Asthma	10	22	5	2	False
+Astrakhan spotted fever	6	6	0	6	False
+Ataxia-Telangiectasia-Like Disorder 2	4	6	0	4	False
+Ataxia-telangiectasia	6	24	0	6	False
+Ataxia With Oculomotor Apraxia Type 1	7	6	0	7	False
+Ataxia With Oculomotor Apraxia Type 2	16	30	0	16	False
+Atelosteogenesis Type I	3	23	0	3	False
+Atelosteogenesis Type II	6	36	0	6	False
+Atelosteogenesis Type III	3	18	0	3	False
+Atopic Dermatitis	7	17	2	1	False
+Atransferrinemia	14	33	0	14	False
+Atrial Fibrillation	11	15	5	2	False
+Atrial Septal Defect	4	14	0	4	False
+Atrial Standstill	9	15	2	5	False
+Atrioventricular Septal Defect	21	35	7	9	False
+Attention Deficit-Hyperactivity Disorder	4	6	1	3	False
+Attenuated Mucopolysaccharidosis Type I	14	44	0	14	False
+Atypical Hemolytic Uremic Syndrome	8	18	2	6	False
+Atypical Teratoid/Rhabdoid Tumor	5	11	0	5	False
+Auditory Neuropathy	5	6	4	1	False
+Auriculocondylar Syndrome	18	28	3	10	False
+Auroneurodental Syndrome	11	47	0	11	False
+Autism Spectrum Disorder-Epilepsy-Arthrogryposis Syndrome	8	25	0	8	True
+Autism Spectrum Disorder	8	9	2	4	False
+Autism, Susceptibility to, X-Linked 3	4	4	0	4	True
+Auto-Brewery Syndrome	5	11	1	4	False
+Autoimmune Autonomic Ganglionopathy	6	16	0	6	False
+Autoimmune Disease, Multisystem, Infantile-Onset, 2	6	13	1	5	False
+Autoimmune Disease Multisystem Infantile-onset 3	9	27	0	9	False
+Autoimmune Encephalitis	7	12	0	7	True
+Autoimmune Enteropathy	5	8	2	2	False
+Autoimmune Gastritis	4	12	0	4	False
+Autoimmune Hemolytic Anemia	21	38	4	15	False
+Autoimmune Hepatitis	6	10	0	6	False
+Autoimmune Lymphoproliferative Syndrome	3	2	0	3	False
+Autoimmune Pancreatitis	20	38	2	11	False
+Autoimmune Polyendocrine Syndrome Type 1	4	22	0	4	False
+Autoimmune Polyendocrinopathy	5	13	2	3	False
+Autoimmune Pulmonary Alveolar Proteinosis	8	21	0	8	False
+Autoimmune Retinopathy	2	4	0	2	False
+Autoinflammation, immune dysregulation, and eosinophilia	5	21	0	5	False
+Autoinflammation With Episodic Fever and Immune Dysregulation	6	15	0	6	False
+Autoinflammation With Episodic Fever and Lymphadenopathy	5	14	0	5	False
+Autosomal Agammaglobulinemia	31	55	12	8	False
+Autosomal Dominant Aplasia and Myelodysplasia	3	4	0	3	False
+Autosomal Dominant Cerebellar Ataxia	12	30	2	10	False
+Autosomal Dominant Cerebellar Ataxia Type I	13	33	0	13	True
+Autosomal Dominant Cerebellar Ataxia Type III	10	14	8	2	False
+Autosomal dominant Charcot-Marie-Tooth disease type 2K	11	27	0	11	False
+Autosomal dominant Charcot-Marie-Tooth disease type 2W	4	3	0	4	False
+Autosomal Dominant Cutis Laxa 1	15	43	0	15	False
+Autosomal Dominant Distal Renal Tubular Acidosis	12	24	0	12	False
+Autosomal Dominant Dopa-Responsive Dystonia	6	20	2	3	False
+Autosomal Dominant Epilepsy with Auditory Features	19	31	2	13	True
+Autosomal Dominant Hyper-IgE Syndrome	4	11	0	4	False
+Autosomal Dominant Hypercholesterolemia 3	21	32	0	21	False
+Autosomal Dominant Hypocalcemia 1	13	25	0	13	True
+Autosomal Dominant Hypocalcemia 2	4	10	0	4	True
+Autosomal Dominant Lamellar Ichthyosis	8	11	1	6	False
+Autosomal Dominant Mendelian Susceptibility To Mycobacterial Diseases Due To Partial IFNgammaR1 Deficiency	7	17	2	5	False
+Autosomal Dominant Nebulin-Related Myopathy	4	13	0	4	False
+Autosomal Dominant Non-Syndromic Intellectual Disability	11	17	0	11	True
+Autosomal Dominant Nonsyndromic Hearing Loss 11	4	6	0	4	False
+Autosomal Dominant Nonsyndromic Hearing Loss 12	6	6	0	6	False
+Autosomal Dominant Nonsyndromic Hearing Loss 17	6	6	0	6	False
+Autosomal Dominant Nonsyndromic Hearing Loss 25	9	11	0	9	False
+Autosomal Dominant Nonsyndromic Hearing Loss 2A	9	12	1	8	False
+Autosomal Dominant Nonsyndromic Hearing Loss 2B	6	7	0	6	False
+Autosomal Dominant Nonsyndromic Hearing Loss 37	4	7	0	4	False
+Autosomal Dominant Nonsyndromic Hearing Loss 3A	7	12	0	7	False
+Autosomal Dominant Nonsyndromic Hearing Loss 41	3	5	0	3	False
+Autosomal Dominant Nonsyndromic Hearing Loss 47	1	2	0	1	False
+Autosomal Dominant Nonsyndromic Hearing Loss 4B	5	7	0	5	False
+Autosomal Dominant Nonsyndromic Hearing Loss 50	12	18	1	11	False
+Autosomal Dominant Nonsyndromic Hearing Loss 53	2	3	0	2	False
+Autosomal Dominant Nonsyndromic Hearing Loss 67	9	12	0	9	False
+Autosomal Dominant Nonsyndromic Hearing Loss 68	9	13	2	7	False
+Autosomal Dominant Nonsyndromic Hearing Loss 7	5	10	1	3	False
+Autosomal Dominant Nonsyndromic Hearing Loss 9	12	26	0	12	False
+Autosomal Dominant Optic Atrophy	9	21	0	9	False
+Autosomal Dominant Optic Atrophy Plus	5	12	0	5	False
+Autosomal Dominant Osteopetrosis Type I	7	23	0	7	False
+Autosomal Dominant Osteopetrosis Type II	3	21	0	3	False
+Autosomal Dominant Osteosclerosis Worth Type	8	26	0	8	False
+Autosomal Dominant Polycystic Kidney Disease	23	42	11	10	False
+Autosomal dominant polycystic liver disease	13	32	2	10	False
+Autosomal Dominant Progressive External Ophthalmoplegia	12	35	0	12	False
+Autosomal Dominant Pseudohypoaldosteronism Type 1	7	18	1	6	False
+Autosomal Dominant Robinow Syndrome 1	8	39	0	8	False
+Autosomal Dominant Robinow Syndrome 2	11	52	0	11	False
+Autosomal Dominant Robinow Syndrome 3	9	64	0	9	False
+Autosomal Dominant Sensory Ataxia 1	11	15	0	11	False
+Autosomal dominant striatal neurodegeneration	2	11	0	2	False
+Autosomal Recessive Ataxia Beauce Type	3	35	0	3	False
+Autosomal Recessive Ataxia Due to Ubiquinone Deficiency	7	23	0	7	True
+Autosomal Recessive Cerebellar Ataxia With Late-Onset Spasticity	6	20	0	6	False
+Autosomal Recessive Congenital Ichthyosis	5	13	0	5	False
+Autosomal Recessive Cutis Laxa Type 2A	14	23	0	14	True
+Autosomal Recessive Dopa-Responsive Dystonia	7	41	0	7	True
+Autosomal Recessive Hypercholesterolemia	8	15	1	7	False
+Autosomal Recessive Hypophosphatemic Rickets 1	13	27	0	13	False
+Autosomal Recessive Limb-Girdle Muscular Dystrophy	10	11	5	4	False
+Autosomal Recessive Multiple Pterygium Syndrome	2	11	0	2	False
+Autosomal Recessive Non-Syndromic Intellectual Disability	7	18	0	7	True
+Autosomal Recessive Nonsyndromic Hearing Loss 102	6	9	1	5	False
+Autosomal Recessive Nonsyndromic Hearing Loss 103	4	6	0	4	False
+Autosomal Recessive Nonsyndromic Hearing Loss 104	10	12	0	10	False
+Autosomal Recessive Nonsyndromic Hearing Loss 115	6	9	0	6	False
+Autosomal Recessive Nonsyndromic Hearing Loss 123	5	6	0	5	False
+Autosomal Recessive Nonsyndromic Hearing Loss 124	9	14	0	9	False
+Autosomal Recessive Nonsyndromic Hearing Loss 15	14	15	0	14	True
+Autosomal Recessive Nonsyndromic Hearing Loss 22	6	5	1	5	False
+Autosomal Recessive Nonsyndromic Hearing Loss 26	5	6	0	5	False
+Autosomal Recessive Nonsyndromic Hearing Loss 28	9	13	0	9	False
+Autosomal Recessive Nonsyndromic Hearing Loss 30	5	9	0	5	False
+Autosomal Recessive Nonsyndromic Hearing Loss 31	4	5	0	4	False
+Autosomal Recessive Nonsyndromic Hearing Loss 32	7	15	1	5	False
+Autosomal Recessive Nonsyndromic Hearing Loss 35	10	12	1	9	False
+Autosomal Recessive Nonsyndromic Hearing Loss 48	9	15	1	8	False
+Autosomal Recessive Nonsyndromic Hearing Loss 7	7	14	1	6	False
+Autosomal Recessive Nonsyndromic Hearing Loss 70	5	7	0	5	False
+Autosomal Recessive Nonsyndromic Hearing Loss 77	9	18	1	8	False
+Autosomal Recessive Nonsyndromic Hearing Loss 79	5	6	0	5	False
+Autosomal Recessive Nonsyndromic Hearing Loss 88	12	16	0	12	False
+Autosomal Recessive Nonsyndromic Hearing Loss 93	8	11	0	8	False
+Autosomal Recessive Nonsyndromic Hearing Loss 97	6	6	0	6	False
+Autosomal Recessive Nonsyndromic Hearing Loss 98	4	4	0	4	False
+Autosomal Recessive Optic Atrophy OPA7 Type	8	14	0	8	False
+Autosomal Recessive Osteopetrosis 1	5	37	0	5	False
+Autosomal Recessive Osteopetrosis 3	11	19	0	11	False
+Autosomal Recessive Primary Microcephaly	10	23	0	10	True
+Autosomal Recessive Progressive External Ophthalmoplegia 1	11	28	0	11	True
+Autosomal Recessive Robinow Syndrome	10	45	0	10	False
+Autosomal Recessive Spastic Ataxia 9	10	27	0	10	False
+Autosomal Recessive Spinocerebellar Ataxia 10	12	49	0	12	True
+Autosomal Recessive Spinocerebellar Ataxia 15	5	13	0	5	True
+Autosomal Recessive Spinocerebellar Ataxia 16	21	33	0	21	True
+Autosomal Recessive Spinocerebellar Ataxia 17	3	9	0	3	True
+Autosomal Recessive Spinocerebellar Ataxia 20	20	27	0	20	True
+Autosomal Recessive Spondylometaphyseal Dysplasia, Megarbane Type	7	23	0	7	False
+Autosomal Systemic Lupus Erythematosus Type 16	8	17	0	8	False
+Avascular Necrosis of Femoral Head, Primary, 2	11	15	0	11	False
+Avoidant Restrictive Food Intake Disorder	8	21	1	7	False
+Axenfeld-Rieger_syndrome	5	13	1	3	False
+Axial Spondylometaphyseal Dysplasia	10	31	0	10	False
+Ayme-Gripp syndrome	4	14	0	4	True
+B-Lymphoblastic Leukemia/Lymphoma With Recurrent Genetic Abnormality	3	6	0	3	False
+B4GALT1-Congenital Disorder of Glycosylation	6	20	0	6	False
+BARD1-related Cancer Predisposition	5	6	1	4	False
+BBOX1-Related Carnitine Biosynthesis Deficiency	8	11	0	8	False
+BBSome-related retinitis pigmentosa	4	12	0	4	False
+BCKDK Deficiency	6	21	0	6	True
+BCL11A-Related Intellectual Disability	6	15	0	6	False
+BDV Syndrome	7	14	0	7	False
+BEST1-Related Dominant Retinopathy	4	9	0	4	False
+BEST1-related Vitreoretinochoroidopathy	6	22	0	6	False
+BEST1 Bestrophinopathies	15	22	3	2	False
+BLOC1S1-related Complex Neurodevelopmental Disorder with Leukodystrophy	4	15	0	4	True
+BMP2-Related Short Stature-Facial Dysmorphism-Skeletal Anomalies Syndrome	13	30	0	13	False
+BMP4-Related Ocular Growth Disorder	4	22	0	4	False
+BPTF-Related Neurodevelopmental Disorder	11	23	0	11	True
+BRAF-Mutant Papillary Thyroid Cancer	4	3	0	4	False
+BRAF V600E-Mutant Colorectal Cancer	7	5	1	6	False
+BRAF V600E-Mutant Non-Small Cell Lung Cancer	8	8	2	5	False
+BRAF V600 Mutant Melanoma	8	8	3	4	False
+BRCA-Mutant Prostate Cancer	5	7	1	4	False
+BRPF1-Related Intellectual Disability	19	33	0	19	False
+Babesiosis	7	31	0	7	False
+Bachmann-Bupp Syndrome	11	19	0	11	False
+Bacillary Angiomatosis	7	18	0	7	False
+Bacterial Conjunctivitis	4	6	1	3	False
+Bacterial meningitis caused by gram-negative bacteria	5	9	0	5	False
+Bacterial Vaginosis	15	19	1	14	False
+Bacterial meningitis	8	3	7	1	False
+Bailey-Bloch Congenital Myopathy	8	22	1	7	False
+Bainbridge-Ropers syndrome	7	6	0	7	False
+Balkan Endemic Nephropathy	6	10	0	6	False
+Baller-Gerold Syndrome	6	10	0	6	False
+Bamforth-Lazarus Syndrome	5	11	0	5	False
+Bannayan-Riley-Ruvalcaba Syndrome	11	27	1	10	False
+Baraitser-Winter Cerebrofrontofacial Syndrome	9	82	0	9	False
+Barber-Say Syndrome	6	19	0	6	False
+Bardet-Biedl syndrome	11	22	0	11	False
+Bart-Pumphrey Syndrome	6	10	0	6	False
+Barth syndrome	6	22	0	6	False
+Bartsocas-Papas Syndrome 1	8	31	0	8	False
+Bartter syndrome	13	30	4	8	False
+Basal Cell Carcinoma	5	4	1	4	False
+Basel-Vanagaite-Smirin-Yosef Syndrome	4	81	0	4	True
+Basilicata-Akhtar Syndrome	5	9	0	5	False
+Bazex-Dupre-Christol Syndrome	4	20	0	4	False
+Beare-Stevenson Cutis Gyrata Syndrome	7	13	0	7	False
+Beck-Fahrner Syndrome	4	3	0	4	True
+Becker Muscular Dystrophy	10	17	0	10	False
+Beckwith-Wiedemann Syndrome	4	16	0	4	False
+Behcet's Disease	3	12	0	3	False
+Behr Syndrome	11	19	0	11	False
+Bejel	6	11	1	5	False
+Bell's palsy	9	16	0	9	False
+Benign Familial Infantile Epilepsy	6	8	4	2	True
+Benign Neonatal Seizures	6	15	1	5	True
+Benign Paroxysmal Positional Vertigo	10	16	0	10	False
+Benign Prostatic Hyperplasia	9	0	8	1	False
+Berardinelli-Seip Congenital Lipodystrophy	13	43	4	7	False
+Bernard-Soulier Syndrome	7	22	0	7	False
+Beta-Ketothiolase Deficiency	8	30	0	8	False
+Beta Mannosidosis	6	27	0	6	False
+Beta Thalassemia	6	23	1	5	False
+Bethlem myopathy	15	52	0	15	False
+Bietti Crystalline Dystrophy	6	6	0	6	False
+Bilateral Microtia-Deafness-Cleft Palate Syndrome	9	20	0	9	False
+Bilateral Parasagittal Parieto-occipital Polymicrogyria	4	6	0	4	True
+Bilateral Striopallidodentate Calcinosis	3	3	1	2	True
+Bile Duct Cyst	6	5	0	6	False
+Biliary Atresia	25	43	13	9	False
+Biliary, Renal, Neurologic, and Skeletal Syndrome	7	27	0	7	False
+Binge Eating Disorder	3	5	2	1	False
+Biotin-Thiamine-Responsive Basal Ganglia Disease	3	17	0	3	True
+Biotinidase Deficiency	5	35	0	5	True
+Bipolar Disorder	10	4	6	1	False
+Bird Fancier's Lung	11	18	5	4	False
+Birt-Hogg-Dube Syndrome	6	9	0	6	False
+Bjornstad Syndrome	6	9	0	6	False
+Black Widow Spider Envenomation	9	23	0	9	False
+Bladder Urothelial Carcinoma	5	4	1	4	False
+Blastic Plasmacytoid Dendritic Cell Neoplasm	30	34	11	10	False
+Blau Syndrome	9	20	0	9	False
+Bleeding disorder, platelet-type, 21	7	7	1	6	False
+Bleeding Disorder of Unknown Cause	10	13	0	10	False
+Blepharocheilodontic Syndrome 1	9	20	1	8	False
+Blepharophimosis-Impaired Intellectual Development Syndrome	4	4	0	4	True
+Blepharophimosis-Intellectual Disability Syndrome, MKB Type	3	3	0	3	False
+Blepharophimosis, Ptosis, and Epicanthus Inversus Syndrome	4	12	2	1	False
+Bloom syndrome	6	24	0	6	False
+Blount Disease	6	12	0	6	False
+Blue Cone Monochromacy	8	12	1	7	False
+Blue Rubber Bleb Nevus Syndrome	9	22	0	9	False
+Body Dysmorphic Disorder	6	11	0	6	False
+Bohring-Opitz syndrome	2	15	1	1	False
+Bone Fragility With Contractures Arterial Rupture And Deafness	11	13	0	11	False
+Bone Giant Cell Tumor	12	14	0	12	False
+Bone Marrow Failure Syndrome 4	19	36	2	17	False
+Bone Marrow Failure Syndrome 5	3	10	0	3	True
+Bone Marrow Failure Syndrome 6	8	8	0	8	False
+Borderline Personality Disorder	3	9	1	2	False
+Bordetella Parapertussis Infectious Disease	6	12	1	5	False
+Borjeson-Forssman-Lehmann syndrome	7	34	0	7	False
+Borrelia Miyamotoi Disease	5	13	0	5	False
+Bosch-Boonstra-Schaaf Optic Atrophy Syndrome	7	25	0	7	True
+Bosma Arhinia Microphthalmia Syndrome	7	45	0	7	False
+Botryomycosis	4	8	1	3	False
+Botulism	15	35	1	14	False
+Boucher-Neuhauser Syndrome	7	29	0	7	False
+Boutonneuse fever	8	34	2	6	False
+Bowen-Conradi Syndrome	6	10	0	6	False
+Brachydactyly-Syndactyly Syndrome	3	13	0	3	False
+Brachydactyly Type A1	6	21	2	4	False
+Brachydactyly Type A2	6	16	2	3	False
+Brachydactyly Type B1	3	11	0	3	False
+Brachydactyly Type B2	3	9	0	3	False
+Brachydactyly Type C	3	9	0	3	False
+Brachydactyly Type D	3	7	0	3	False
+Brachydactyly Type E1	3	10	0	3	False
+Brachydactyly Type E2	7	15	1	6	False
+Brachyolmia-Amelogenesis Imperfecta Syndrome	9	19	0	9	False
+Brachyolmia	14	33	2	3	False
+Brachyphalangy-Polydactyly-Tibial Aplasia Syndrome	5	17	0	5	False
+Brain Abnormalities, Neurodegeneration, and Dysosteosclerosis	7	26	0	7	True
+Brain arteriovenous malformation	17	28	0	17	True
+Brain Malformation Renal Syndrome	5	11	0	5	False
+Brain Malformations With Or Without Urinary Tract Defects	6	11	0	6	False
+Brain Small Vessel Disease 1 With Or Without Ocular Anomalies	21	40	0	21	False
+Brain Small Vessel Disease 2 (COL4A2)	7	8	0	7	True
+Brain Small Vessel Disease 4 (NIT1)	4	7	0	4	True
+Brain Small Vessel Disease 6 With Leukoencephalopathy	6	13	0	6	True
+Branchiooculofacial Syndrome	6	27	1	5	False
+Breast Carcinoma	6	4	2	4	False
+Breast Fibroadenoma	3	3	0	3	False
+Breast Implant-Associated Anaplastic Large Cell Lymphoma	2	3	0	2	False
+Breasts and Nipples Aplasia or Hypoplasia 2	3	5	0	3	False
+Brittle Cornea Syndrome	5	5	0	5	False
+Brody Myopathy	9	18	0	9	False
+Bronchiectasis	9	23	3	6	False
+Bronchiectasis and Nasal Polyposis	7	6	1	6	False
+Bronchiectasis With Or Without Elevated Sweat Chloride 1	7	9	0	7	False
+Bronchopulmonary Dysplasia	11	17	2	9	False
+Brown-Vialetto-Van Laere Syndrome	4	13	0	4	False
+Brucella Abortus Brucellosis	4	7	0	4	False
+Brucella Canis Brucellosis	5	12	1	4	False
+Brucella Melitensis Brucellosis	14	23	1	13	False
+Brucella Suis Brucellosis	4	7	0	4	False
+Brucellosis	18	34	4	13	False
+Brugada syndrome	6	11	1	5	False
+Brunet-Wagner_Neurodevelopmental_Syndrome	5	24	1	4	True
+Brunner Syndrome	10	21	1	9	False
+Bryant-Li-Bhoj Neurodevelopmental Syndrome 1	12	23	2	10	True
+Bryant-Li-Bhoj Neurodevelopmental Syndrome 2	8	39	0	8	True
+Bubonic Plague	5	11	0	5	False
+Budd-Chiari Syndrome	4	21	0	4	False
+Bulimia Nervosa	15	33	4	11	False
+Bullous Pemphigoid	4	4	0	4	False
+Burkitt Lymphoma	4	8	0	4	False
+Burn-McKeown Syndrome	14	35	0	14	False
+Buruli ulcer	2	1	1	1	False
+Buschke-Ollendorff Syndrome	9	15	0	9	False
+Byssinosis	9	18	0	9	False
+C1Q Deficiency	7	24	0	7	True
+C1s Deficiency	7	27	0	7	True
+CACNA1A-Related Disorder	5	13	1	3	True
+CACNA1E-Related Developmental and Epileptic Encephalopathy	10	36	0	10	True
+CACNA1F-Related Retinopathy	4	3	0	4	False
+CACNA1I-Related Neurodevelopmental Disorder	8	26	1	6	True
+CACNA2D4-related Retinopathy	7	13	0	7	False
+CADASIL Type 1	9	20	2	7	True
+CADASIL Type 2	17	35	2	15	False
+CAGSSS Syndrome	9	45	0	9	False
+CALFAN Syndrome	5	15	0	5	False
+CAMLG-CDG	13	16	0	13	True
+CANVAS	23	57	2	19	False
+CAPN5-Related Vitreoretinopathy	6	6	0	6	False
+CAPOS Syndrome	7	6	0	7	True
+CAPRIN1 Related Neurodevelopmental Disorder	23	29	5	17	True
+CARMIL2 Deficiency	29	74	4	24	False
+CASQ2 CPVT	24	39	4	20	False
+CATSHL Syndrome	15	30	0	15	False
+CBL-related Disorder	10	21	0	10	False
+CBX1-related neurodevelopmental disorder	5	9	0	5	False
+CCDC115-CDG	5	18	0	5	False
+CCN2-Related Kyphomelic Dysplasia	4	3	0	4	False
+CD16 Deficiency	7	9	1	6	False
+CD25 Deficiency	25	51	4	21	False
+CD27-related lymphoproliferative and immune disorder	6	17	0	6	False
+CDC20-related Oocyte Maturation Defect	4	7	0	4	False
+CDH1-Related Hereditary Diffuse Gastric Cancer	4	3	0	4	False
+CDH2-Related ACOG Syndrome	10	11	1	9	False
+CDH23-associated pituitary adenoma 5	3	3	0	3	False
+CDK19-Related Disorder	14	28	0	14	True
+CDK8-Related Disorder	9	32	0	9	False
+CDKL5 Deficiency Disorder	24	45	3	20	True
+CEBALID Syndrome	9	30	0	9	False
+CEDNIK Syndrome	18	46	0	18	False
+CERKL-Related Retinopathy	6	6	0	6	False
+CFAP418-related retinal ciliopathy	5	11	0	5	False
+CHAND Syndrome	5	8	0	5	False
+CHARGE syndrome	5	29	0	5	True
+CHD2-Related Developmental and Epileptic Encephalopathy	5	15	0	5	True
+CHD8-Related Neurodevelopmental Disorder with Overgrowth	29	56	0	29	True
+CHEK2-related Cancer Predisposition	6	7	1	5	False
+CHILD Syndrome	13	18	1	11	False
+CHIME_syndrome	4	34	0	4	True
+CHOPS Syndrome	8	48	0	8	False
+CHRNA1-Associated Fetal Hypo-akinesia Disorder of Prenatal Onset	2	9	0	2	False
+CHST3-Related Skeletal Dysplasia	7	30	0	7	False
+CIC-Rearranged Sarcoma	7	8	0	7	False
+CINCA Syndrome	9	31	0	9	False
+CKD-Mineral Bone Disorder	8	13	2	6	False
+CLCN2-Related Leukoencephalopathy	11	12	0	11	True
+CLOVES Syndrome	7	40	0	7	False
+CNGA1-Related Retinopathy	6	16	0	6	False
+CNGA3-Related Retinopathy	9	20	0	9	False
+CNGB1-Related Retinopathy	11	17	0	11	False
+CNGB3-Related Retinopathy	6	13	0	6	False
+CNS Neuroblastoma, FOXR2-Activated	5	7	1	4	True
+CNS Tumor with BCOR Internal Tandem Duplication	5	5	0	5	False
+CNS Vasculitis	5	5	1	4	False
+CN-Related Developmental and Epileptic Encephalopathy	3	11	0	3	True
+COA3-Related COX Deficiency	3	7	0	3	True
+COA5-Related Fatal Infantile Cardioencephalomyopathy	7	12	0	7	False
+COA6-Related Fatal Infantile Cardioencephalomyopathy	7	10	0	7	True
+COA8-Related COX Deficiency	2	12	0	2	True
+CODAS Syndrome	8	58	0	8	False
+COFS Syndrome	5	20	0	5	False
+COG1-congenital disorder of glycosylation	10	39	0	10	False
+COG3-Congenital Disorder of Glycosylation	6	26	0	6	True
+COG4-Congenital Disorder of Glycosylation	7	28	0	7	True
+COG7-congenital disorder of glycosylation	9	30	0	9	False
+COG8-congenital disorder of glycosylation	10	41	0	10	True
+COL11A2-Related Hearing Loss	4	4	1	2	False
+COL11A2-Related Skeletal Spectrum	5	15	1	3	False
+COPA Syndrome	10	41	1	9	False
+COQ2-Related Primary Coenzyme Q10 Deficiency	10	32	0	10	False
+COQ4-Related Neonatal Encephalomyopathy	7	24	0	7	True
+COQ6-Related Steroid-Resistant Nephrotic Syndrome with Sensorineural Deafness	12	19	0	12	False
+COVID-19	10	19	0	10	False
+COX10-Related COX Deficiency	6	14	0	6	False
+COX11-Related COX Deficiency	2	2	0	2	True
+COX14-Related COX Deficiency	8	10	0	8	False
+COX15-Related COX Deficiency	7	11	0	7	False
+COX16-Related COX Deficiency	6	11	0	6	False
+COX18-Related COX Deficiency	2	5	0	2	False
+COX20-Related COX Deficiency	11	30	1	10	False
+COX4I1-Related COX Deficiency	15	30	0	15	True
+COX4I2-Related Pancreatic Insufficiency-Anemia-Hyperostosis Syndrome	7	17	1	6	False
+COX5A-Related COX Deficiency	7	9	1	6	False
+COX6A2-Related COX Deficiency	18	23	0	18	False
+COX6B1-Related COX Deficiency	16	36	0	16	False
+COX8A-Related COX Deficiency	6	9	0	6	True
+COXFA4-Related COX Deficiency	13	18	3	10	True
+CPLX1-Related Developmental and Epileptic Encephalopathy	6	8	3	2	True
+CPT1C-Related Hereditary Spastic Paraplegia	10	9	3	3	True
+CRADD-Related Thin Lissencephaly	7	13	2	5	True
+CRB1 Retinal Dystrophies	4	13	0	4	False
+CRX-Related Retinopathy	7	5	4	1	False
+CTCF-related Neurodevelopmental Disorder	4	15	0	4	False
+CTLA4 Haploinsufficiency	11	25	1	10	False
+CTNNB1 Neurodevelopmental Disorder	16	24	3	13	False
+CWC27-Related Retinitis Pigmentosa With or Without Skeletal Anomalies	5	19	0	5	False
+CYB561-Related Orthostatic Hypotension	8	11	0	8	False
+CYCS-Related Thrombocytopenia	7	8	0	7	False
+CYFIP2-Related Developmental and Epileptic Encephalopathy	14	17	2	12	True
+CYLD Cutaneous Syndrome	9	19	0	9	False
+Cadmium Poisoning	16	28	1	15	False
+Caffey Disease	7	23	0	7	False
+Calvarial Doughnut Lesions-Bone Fragility Syndrome	9	7	3	6	False
+Campomelic Dysplasia	4	27	3	1	False
+Camptodactyly-Arthropathy-Coxa Vara-Pericarditis Syndrome	8	24	0	8	False
+Camptodactyly	5	5	3	2	False
+Campylobacter fetus Infectious Disease	6	12	0	6	False
+Campylobacteriosis	8	15	0	8	False
+Camurati-Engelmann Disease	3	13	0	3	False
+Canavan disease	12	30	1	11	True
+Cannabis Hyperemesis Syndrome	5	7	1	4	False
+Capillary Malformation-Arteriovenous Malformation Syndrome	3	8	0	3	False
+Carbamate Poisoning	6	17	0	6	False
+Carbamoyl Phosphate Synthetase I Deficiency	4	24	0	4	True
+Carbon Monoxide Poisoning	14	15	2	5	True
+Carbonic Anhydrase VA Deficiency	8	18	0	8	True
+Carboxypeptidase N Deficiency	8	14	0	8	False
+Cardiac, Facial, and Digital Anomalies with Developmental Delay	7	10	0	7	False
+Cardiac Sarcoidosis	7	15	0	7	False
+PLD1-Related Congenital Heart Disease	9	26	0	9	False
+Cardiac Valvular Ehlers-Danlos Syndrome	9	21	2	7	False
+PRKACA-Related Cardioacrofacial Dysplasia	4	15	0	4	False
+Cardiofaciocutaneous Syndrome	4	7	1	2	False
+Cardiofacioneurodevelopmental Syndrome	10	28	0	10	False
+Cardiomyopathy-Hypotonia-Lactic Acidosis Syndrome	17	30	2	13	False
+Cardiomyopathy Dilated 100	6	6	0	6	False
+Cardiomyopathy Dilated 2C	10	29	1	9	False
+Cardiomyopathy Dilated 2D	11	27	1	10	False
+Dilated Cardiomyopathy 2E	6	8	0	6	False
+Cardiomyopathy Dilated 2F	8	13	0	8	False
+Dilated Cardiomyopathy 2G	11	15	0	11	False
+Cardiomyopathy Dilated 2H	10	11	1	9	False
+Cardiomyopathy Dilated 2I	10	21	1	9	False
+Dilated Cardiomyopathy 2J	10	17	0	10	False
+Cardiospondylocarpofacial syndrome	6	22	0	6	False
+Carney-Stratakis syndrome	4	8	0	4	False
+Carney Complex	4	9	0	4	False
+Carnitine-acylcarnitine Translocase Deficiency	13	34	0	13	False
+Carnitine Palmitoyltransferase 1A Deficiency	11	22	1	10	False
+Carnitine Palmitoyltransferase II Deficiency	5	22	2	3	False
+Caroli disease	21	45	1	20	False
+Carotid Artery Occlusion	11	23	0	11	False
+Carotid Stenosis	14	19	1	13	False
+Carotid web	4	9	0	4	False
+Cartilage-hair hypoplasia	24	63	1	22	False
+Carvajal Syndrome	6	11	0	6	False
+Cat-scratch Disease	13	12	7	6	False
+Catamenial Pneumothorax	16	22	4	9	False
+Cataract 12 Multiple Types	5	14	1	4	False
+Cataract 13 With Adult I Phenotype	4	6	0	4	False
+Cataract 15	7	19	0	7	False
+Cataract 1 Multiple Types	14	26	0	14	False
+Cataract 21 Multiple Types	7	18	0	7	True
+Cataract 2, Multiple Types	6	12	0	6	False
+Cataract 31 Multiple Types	5	10	0	5	False
+Cataract 33	4	8	0	4	False
+Cataract 39, Multiple Types	13	17	0	13	False
+Cataract 3, Multiple Types	5	16	0	5	False
+Cataract 40	3	3	0	3	False
+Cataract 48	3	4	0	3	False
+Cataract 4, Multiple Types	6	16	0	6	False
+Cataract 5 Multiple Types	8	14	1	7	False
+Cataract 9 Multiple Types	9	24	1	8	False
+Catatonia	11	24	4	7	True
+Catel-Manzke Syndrome	5	8	0	5	False
+Cauda Equina Syndrome	5	15	0	5	False
+Celiac Disease	9	19	3	6	False
+Cellulitis	6	8	2	3	False
+Cenani-Lenz Syndactyly Syndrome	7	21	0	7	False
+Central Areolar Choroidal Dystrophy	6	11	1	5	False
+Central Congenital Hypothyroidism	3	6	1	2	False
+Central Core Myopathy	8	25	1	6	False
+Central Nervous System Germ Cell Tumor	8	2	7	1	False
+Central Nervous System Teratoma	5	13	2	3	False
+Central Precocious Puberty	4	6	1	3	False
+Central Retinal Artery Occlusion	4	3	0	4	False
+Central Serous Chorioretinopathy	5	4	1	4	False
+Centronuclear Myopathy	16	28	9	6	False
+Cerebellar Ataxia-Hypogonadism Syndrome	8	14	3	5	False
+cerebellar ataxia, brain abnormalities, and cardiac conduction defects	6	22	0	6	False
+Cerebellar Ataxia, Intellectual Disability, and Dysequilibrium Syndrome	8	11	5	3	False
+Cerebellar, Ocular, Craniofacial, and Genital Syndrome	7	26	0	7	False
+Cerebral Amyloid Angiopathy	14	31	2	11	False
+Cerebral Cavernous Malformation	4	4	3	1	True
+Cerebral Palsy	15	20	6	2	False
+Cerebral Proliferative Angiopathy	4	10	0	4	True
+Cerebrocostomandibular Syndrome	15	27	0	15	False
+Cerebrotendinous xanthomatosis	11	65	0	11	True
+Cernunnos-XLF deficiency	3	12	0	3	False
+Cervical Adenocarcinoma	5	14	1	4	False
+Cervical Artery Dissection	4	8	1	3	False
+Cervical Cancer	9	14	2	4	False
+Cervical Dystonia	3	8	0	3	False
+Cervical Squamous Cell Carcinoma	4	3	0	4	False
+Cesium Poisoning	12	22	1	10	False
+Chagas disease	6	13	0	6	False
+Chancroid	8	7	3	5	False
+Charcot-Marie-Tooth Disease-Hearing Loss-Intellectual Disability Syndrome	3	4	1	2	True
+Charcot-Marie-Tooth Disease	0	0	0	0	False
+Charcot-Marie-Tooth Disease, Axonal, Autosomal Recessive, Type 2A2B	8	20	0	8	False
+Charcot-Marie-Tooth Disease Axonal Type 2C	6	6	0	6	False
+Charcot-Marie-Tooth disease, axonal, type 2JJ	4	3	0	4	False
+Charcot-Marie-Tooth Disease Axonal Type 2P	12	23	1	11	False
+Charcot-Marie-Tooth Disease Axonal Type 2S	12	24	0	12	False
+Charcot-Marie-Tooth disease, axonal, type 2T	6	18	0	6	False
+Charcot-Marie-Tooth Disease Axonal Type 2Z	9	20	4	4	False
+Charcot-Marie-Tooth Disease, Demyelinating, Type 1G	7	19	1	6	False
+Charcot-Marie-Tooth Disease Dominant Intermediate B	8	16	0	8	False
+Charcot-Marie-Tooth Disease Dominant Intermediate E	21	40	0	21	False
+Charcot-Marie-Tooth Disease Dominant Intermediate G	7	26	0	7	False
+Charcot-Marie-Tooth Disease Recessive Intermediate D	11	16	2	8	False
+Charcot-Marie-Tooth Disease Type 1	9	14	7	2	False
+Charcot-Marie-Tooth Disease Type 1E	8	17	1	7	False
+Charcot-Marie-Tooth Disease Type 2	22	29	18	3	False
+Charcot-Marie-Tooth Disease Type 2B2	11	28	1	10	True
+Charcot-Marie-Tooth Disease Type 4	8	12	6	2	False
+Charcot-Marie-Tooth Disease Type 4B3	21	30	7	13	False
+Charcot-Marie-Tooth Disease Type 4C	11	25	0	11	False
+Charcot-Marie-Tooth disease type 4D	11	18	1	10	False
+Charcot-Marie-Tooth Disease Type 4K	8	13	0	8	False
+Charcot-Marie-Tooth Disease Type X	16	36	5	7	False
+Charcot-Marie-Tooth Disease X-linked Recessive 4	8	24	0	8	False
+Charlevoix-Saguenay spastic ataxia	5	16	1	4	False
+Chediak-Higashi Syndrome	6	5	0	6	False
+Chemotherapy-Induced Diarrhea	10	19	0	10	False
+Chemotherapy-Induced Nausea and Vomiting	4	7	0	4	False
+Chemotherapy-Induced Neutropenia	6	7	0	6	False
+Cherubism	6	13	0	6	False
+Chiari Malformation Type I	8	9	1	7	False
+Chickenpox	4	7	0	4	False
+Chikungunya	9	12	1	8	False
+Childhood-Onset Striatonigral Degeneration	6	16	0	6	False
+childhood-onset motor and cognitive regression syndrome with extrapyramidal movement disorder	7	28	0	7	False
+Childhood Absence Epilepsy	7	12	1	6	True
+Childhood Occipital Visual Epilepsy	9	16	1	8	True
+Chilton-Okur-Chung Neurodevelopmental Syndrome	4	11	0	4	False
+Chitayat Syndrome	2	7	0	2	False
+Chlamydia Pneumoniae Pneumonia	9	19	0	9	False
+Chloramphenicol Toxicity	9	22	1	8	False
+Chlorophacinone Poisoning	9	9	0	9	False
+Cholangiocarcinoma	6	6	0	6	False
+Cholelithiasis	5	8	1	4	False
+Cholera	9	5	4	5	False
+Cholesteatoma	12	18	2	10	False
+Cholesteryl Ester Storage Disease	6	14	0	6	False
+Chondrocalcinosis 2	7	12	0	7	False
+Chondrodysplasia Blomstrand Type	7	14	0	7	False
+Chondrodysplasia Punctata, Tibial-metacarpal Type	2	14	0	2	False
+Chondrodysplasia With Joint Dislocations gPAPP Type	8	11	0	8	False
+Chondrosarcoma	9	4	4	3	False
+Chopra-Amiel-Gordon Syndrome	8	24	3	5	True
+Chordoma	9	12	6	1	False
+Chorea-acanthocytosis	6	18	0	6	True
+Chorioamnionitis	19	22	1	18	False
+Choriocarcinoma	11	13	0	11	False
+Choroid Plexus Carcinoma	5	9	0	5	False
+Choroid Plexus Neoplasm	11	26	1	10	False
+Choroideremia-Deafness-Obesity Syndrome	7	6	0	7	False
+Choroideremia	4	3	0	4	False
+Choroiditis	12	36	0	12	False
+Christianson Syndrome	6	20	0	6	False
+Chromoblastomycosis	3	2	0	3	False
+Chromophobe Renal Cell Carcinoma	9	12	1	8	False
+Chromosome 15q24 Deletion Syndrome	7	33	0	7	False
+Chromosome 16p12.2-p11.2 Deletion Syndrome	4	37	0	4	False
+Chromosome 17q12 Deletion Syndrome	8	23	0	8	False
+Chromosome 17q12 Duplication Syndrome	5	20	0	5	True
+Chromosome 18p Deletion Syndrome	8	20	0	8	False
+Chromosome 18q Deletion Syndrome	6	13	0	6	False
+Chromosome 1p36 Deletion Syndrome	2	14	0	2	True
+Chromosome 2q32-q33 Deletion Syndrome	6	22	0	6	False
+Chromosome 3q29 Microdeletion Syndrome	6	6	0	6	False
+Chromosome 3q29 Microduplication Syndrome	4	15	0	4	False
+Chromosome Xq Duplication	10	39	0	10	False
+Chronic Beryllium Disease	9	8	0	9	False
+Chronic Canaliculitis	4	10	0	4	False
+Chronic Granulomatous Disease	4	14	0	4	False
+Chronic Inflammatory Demyelinating Polyneuropathy	3	0	2	1	False
+Chronic Insomnia Disorder	5	5	0	5	False
+Chronic Intestinal Pseudoobstruction	4	9	1	2	False
+Chronic Kidney Disease	7	14	3	2	False
+Chronic Lymphocytic Inflammation With Pontine Perivascular Enhancement Responsive To Steroids	5	11	0	5	False
+Chronic Lymphocytic Leukemia	5	13	0	5	False
+Chronic Mucocutaneous Candidiasis	14	31	5	3	False
+Chronic Myeloid Leukemia, BCR-ABL1 Positive	9	10	0	9	False
+Chronic Myelomonocytic Leukemia	7	3	4	1	False
+Chronic Neurovisceral Acid Sphingomyelinase Deficiency	2	5	0	2	False
+Chronic_Obstructive_Pulmonary_Disease	16	12	6	1	False
+Chronic Pancreatitis	6	9	1	5	False
+Chronic Primary Adrenal Insufficiency	4	8	0	4	False
+Chronic Recurrent Multifocal Osteomyelitis	4	6	0	4	False
+Chronic Traumatic Encephalopathy	7	8	0	7	True
+Chudley-McCullough Syndrome	6	12	0	6	True
+Chung-Jansen Syndrome	10	20	0	10	False
+Chuvash Polycythemia	9	23	0	9	False
+Chylomicron Retention Disease	12	32	0	12	False
+Ciguatera Fish Poisoning	12	33	0	12	False
+Cisplatin Toxicity	14	25	0	14	False
+Citrin Deficiency	7	30	0	7	True
+Citrullinemia Type I	5	24	1	3	False
+Claes-Jensen Type X-Linked Intellectual Disability	8	13	0	8	True
+Classic Familial Adenomatous Polyposis	12	21	0	12	False
+Classic Hodgkin Lymphoma	8	12	5	3	False
+Classical-like Ehlers-Danlos Syndrome	9	27	2	6	False
+Clear Cell Ovarian Carcinoma	8	7	1	5	False
+Clear Cell Renal Cell Carcinoma	9	7	3	5	False
+Clear Cell Sarcoma	5	4	2	3	False
+Clear Cell Sarcoma of Kidney	4	9	1	3	False
+Cleft Lip/Palate	6	7	4	1	True
+Cleft Palate, Proliferative Retinopathy, and Developmental Delay	7	9	0	7	False
+Cleft Palate With Or Without Ankyloglossia, X-linked	5	8	0	5	False
+Cleidocranial Dysplasia	1	8	0	1	False
+Clostridioides difficile Infection	12	13	3	7	False
+Clouston Syndrome	6	13	1	2	False
+Coal Workers Pneumoconiosis	15	30	0	15	False
+Coarctation of the Aorta	12	23	2	8	False
+Cocaine Intoxication	21	43	0	21	True
+Coccidioidomycosis	11	24	2	7	False
+Cockayne Syndrome	12	50	0	12	False
+Cocoon Syndrome	5	12	0	5	False
+Coffin-Lowry syndrome	7	24	0	7	True
+Coffin-Siris syndrome	11	20	10	1	True
+Cogan Syndrome	8	24	0	8	False
+Cohen Syndrome	5	17	0	5	False
+Colchicine Poisoning	12	14	1	11	False
+Cold Agglutinin Disease	14	22	2	12	False
+Cole-Carpenter syndrome	5	9	1	4	False
+Collagenous Sprue	3	0	2	1	False
+Colobomatous Microphthalmia-Rhizomelic Dysplasia Syndrome	4	7	0	4	False
+Colon Adenocarcinoma	9	7	2	1	False
+Combined Factor V and Factor VIII Deficiency	7	24	1	6	False
+Combined immunodeficiency due to CD3gamma deficiency	15	44	2	13	False
+Combined Immunodeficiency Due to CTPS1 Deficiency	7	11	0	7	False
+Combined Immunodeficiency Due To DOCK8 Deficiency	16	34	0	16	False
+Combined Immunodeficiency Due To Dimerization Defective IKAROS Mutation	7	17	0	7	False
+Combined Immunodeficiency Due To GINS1 Deficiency	8	15	0	8	False
+Combined Immunodeficiency Due To MALT1 Deficiency	8	26	0	8	False
+Combined Immunodeficiency Due To Moesin Deficiency	5	11	0	5	False
+Combined Malonic and Methylmalonic Aciduria	3	15	0	3	False
+Combined Oxidative Phosphorylation Defect Type 13	13	24	0	13	True
+Combined Oxidative Phosphorylation Defect Type 15	3	3	0	3	False
+Combined Oxidative Phosphorylation Defect Type 17	8	24	0	8	True
+Combined Oxidative Phosphorylation Defect Type 21	9	10	0	9	True
+Combined Oxidative Phosphorylation Defect Type 23	8	20	0	8	True
+Combined Oxidative Phosphorylation Defect Type 24	5	13	0	5	True
+Combined Oxidative Phosphorylation Defect Type 26	6	10	0	6	True
+Combined Oxidative Phosphorylation Defect Type 3	9	23	0	9	False
+Combined Oxidative Phosphorylation Defect Type 30	7	5	1	6	False
+Combined Oxidative Phosphorylation Defect Type 37	6	5	0	6	True
+Combined Oxidative Phosphorylation Defect Type 4	7	13	0	7	True
+Combined Oxidative Phosphorylation Defect Type 7	5	9	0	5	False
+Combined Oxidative Phosphorylation Deficiency 28	7	14	1	6	False
+Combined Oxidative Phosphorylation Deficiency 34	10	17	0	10	False
+Combined Oxidative Phosphorylation Deficiency 35	8	22	0	8	True
+Combined Oxidative Phosphorylation Deficiency 36	8	19	0	8	False
+Combined oxidative phosphorylation deficiency 42	7	6	0	7	False
+Combined oxidative phosphorylation deficiency 48	8	22	0	8	False
+Combined Oxidative Phosphorylation Deficiency 51	10	14	0	10	True
+Combined Oxidative Phosphorylation Deficiency 52	4	15	0	4	False
+Combined Oxidative Phosphorylation Deficiency 58	5	24	0	5	True
+Combined Oxidative Phosphorylation Deficiency 60	5	20	0	5	True
+Combined Pituitary Hormone Deficiencies, Genetic Form	7	27	0	7	False
+Combined Saposin Deficiency	6	11	0	6	False
+Common Variable Immunodeficiency	8	15	6	1	False
+Complement Component 2 Deficiency	5	7	0	5	False
+Complement Component 3 Deficiency	5	16	0	5	False
+Complement Component 4A Deficiency	3	5	0	3	False
+Complex Cortical Dysplasia With Other Brain Malformations 2	3	14	0	3	True
+Complex Hereditary Spastic Paraplegia	12	26	10	1	True
+Complex Lethal Osteochondrodysplasia	11	16	1	10	False
+Complex Regional Pain Syndrome Type 1	8	9	0	8	False
+Conduct Disorder	8	7	4	3	False
+Cone-rod dystrophy 10	7	10	0	7	False
+Cone-rod dystrophy 20	4	12	0	4	False
+Cone-rod dystrophy 5	3	8	0	3	False
+Cone-rod dystrophy and hearing loss 1	6	8	0	6	False
+Cone-rod dystrophy and hearing loss 2	6	5	0	6	False
+Cone Dystrophy	8	7	3	5	False
+Congenital Adrenal Hyperplasia	9	11	4	4	False
+Congenital Amegakaryocytic Thrombocytopenia 1	4	12	0	4	False
+Congenital Analbuminemia	8	21	0	8	False
+Congenital Aural Atresia	6	10	0	6	False
+Congenital Bilateral Absence of Vas Deferens	5	4	1	4	False
+Congenital Bile Acid Synthesis Defect 5	9	22	0	9	False
+Congenital Central Hypoventilation Syndrome	6	7	0	6	False
+Congenital Chloride Diarrhea	4	4	0	4	False
+Congenital Diaphragmatic Hernia	8	28	0	8	False
+Congenital Disorder of Glycosylation, Type ICC	5	5	0	5	False
+Congenital Disorder of Glycosylation Type IIr	7	16	1	6	False
+Congenital Disorder of Glycosylation, Type IIw	7	15	1	6	False
+Congenital Dyserythropoietic Anemia	7	24	5	2	False
+Congenital Epulis	1	3	0	1	False
+Congenital Factor V Deficiency	9	22	2	6	False
+Congenital Factor XII Deficiency	6	6	1	5	False
+Congenital Factor X Deficiency	6	16	0	6	False
+Congenital Fibrosis of the Extraocular Muscles	10	26	3	6	False
+Congenital Glaucoma	13	15	3	10	True
+Congenital Glutamine Synthetase Deficiency	8	23	0	8	True
+Congenital Heart Defects And Ectodermal Dysplasia	5	20	0	5	False
+Congenital Heart Defects, Multiple Types, 2	5	14	0	5	False
+Congenital Heart Defects, Multiple Types, 7	4	8	1	3	False
+Congenital Heart Defects and Skeletal Malformations Syndrome	7	28	0	7	False
+Congenital Heart Disease	10	39	1	9	False
+Congenital Herpes Simplex Virus Infection	6	12	0	6	False
+Congenital Hydrocephalus	12	25	4	4	False
+Congenital Hypofibrinogenemia	5	13	0	5	False
+Congenital Hypomyelinating Neuropathy	6	11	1	5	False
+Congenital Hypothyroidism	6	11	3	2	False
+Congenital Insensitivity to Pain	11	16	3	7	False
+Congenital Isolated ACTH Deficiency	6	17	0	6	True
+Congenital Isolated Hyperinsulinism	7	11	4	3	True
+Congenital Lactase Deficiency	3	4	0	3	False
+Congenital Laryngomalacia	7	15	2	5	False
+Congenital Leptin Deficiency	5	9	0	5	False
+Congenital Merosin-deficient Muscular Dystrophy 1A	20	42	0	20	True
+Congenital Mesoblastic Nephroma	5	10	0	5	False
+Congenital Myasthenic Syndrome	8	16	7	1	False
+Congenital Myasthenic Syndrome 15	5	4	0	5	True
+Congenital Myasthenic Syndrome 6	3	4	0	3	False
+Congenital Myasthenic Syndrome 7	7	11	2	5	False
+Congenital Myelofibrosis with Anemia, Neutropenia, Developmental Delay, and Ocular Abnormalities	7	13	0	7	False
+Congenital Myopathy 11	8	12	0	8	False
+Congenital Myopathy 18	9	33	0	9	False
+Congenital Myopathy 21 With Early Respiratory Failure	10	32	1	9	False
+Congenital Myopathy 27	4	6	0	4	False
+Congenital Myopathy 28 With Rigid Spine	3	9	0	3	False
+MYL1-Related Congenital Myopathy	5	11	0	5	False
+Congenital Nephrotic Syndrome, Finnish Type	6	16	1	5	False
+Congenital Plasminogen Activator Inhibitor Type 1 Deficiency	3	11	0	3	False
+Congenital Primary Lymphedema of Gordon	4	9	0	4	False
+Congenital Primary Megaureter	6	6	0	6	False
+Congenital Prothrombin Deficiency	13	23	0	13	False
+Congenital Pulmonary Airway Malformation	7	8	4	1	False
+Congenital Pulmonary Sequestration	8	13	3	4	False
+Congenital Renal Artery Stenosis	10	13	4	6	False
+Congenital Rubella Syndrome	5	20	0	5	False
+Congenital Sialidosis Type 2	13	43	0	13	False
+Congenital Sodium Diarrhea	7	14	1	6	False
+Congenital Stationary Night Blindness	8	11	3	3	False
+Congenital Sucrase-Isomaltase Deficiency	3	16	1	2	False
+Congenital Thrombotic Thrombocytopenic Purpura	7	6	0	7	False
+Congenital Total Pulmonary Venous Return Anomaly	7	26	2	5	False
+Congenital Tufting Enteropathy	5	5	0	5	False
+Congenital Vertebral-Cardiac-Renal Anomalies Syndrome	9	19	1	8	False
+Congenital Zika Syndrome	12	13	0	12	True
+Congestive Splenomegaly	3	2	0	3	False
+Constitutional Megaloblastic Anemia With Severe Neurologic Disease	5	9	0	5	True
+Constitutional Mismatch Repair Deficiency	8	8	0	8	False
+Contact Dermatitis	18	23	3	4	False
+Contractures, Pterygia, and Spondylocarpotarsal Fusion Syndrome 1A	6	11	0	6	False
+Cooks Syndrome	5	9	1	4	False
+Cor Pulmonale	4	5	0	4	False
+Acute Myeloid Leukemia, Core Binding Factor	4	4	0	4	False
+Cori Forbes Disease	3	15	0	3	False
+Corneal Dystrophy	8	9	5	3	False
+Cornelia de Lange syndrome	6	39	0	6	False
+Cornelia de Lange Syndrome 1	6	21	0	6	False
+Cornelia de Lange Syndrome 4	5	17	0	5	False
+Cornelia de Lange Syndrome 5	6	26	0	6	False
+Coronary Arterial Fistulas	2	6	0	2	False
+Coronary Artery Congenital Malformation	5	15	0	5	False
+Coronary Artery Disease	7	8	1	6	False
+Coronary Vasospasm	4	9	0	4	True
+Corpus Callosum Agenesis-Intellectual Disability-Coloboma-Micrognathia Syndrome	5	4	0	5	False
+Corticobasal Syndrome	3	12	0	3	False
+Cortisone Reductase Deficiency	4	19	1	3	False
+Costello Syndrome	9	21	0	9	False
+Cough Variant Asthma	5	0	4	1	False
+Cowden Syndrome	8	10	3	5	False
+Congenital Cranial Dysinnervation Disorder with Absent Corneal Reflex and Developmental Delay	7	13	0	7	False
+Cranial Neuralgia	9	9	4	5	True
+Craniodiaphyseal Dysplasia	5	21	0	5	False
+Cranioectodermal Dysplasia	5	23	0	5	False
+Craniofacial-Deafness-Hand Syndrome	6	9	0	6	False
+Craniofacial Anomalies and Anterior Segment Dysgenesis Syndrome	5	11	0	5	False
+Craniofacial Microsomia	7	26	3	4	False
+Craniofaciocardiohepatic Syndrome	6	9	0	6	False
+Craniofrontonasal Syndrome	9	15	0	9	False
+Craniometadiaphyseal Osteosclerosis with Hip Dysplasia	5	7	0	5	False
+Craniometaphyseal Dysplasia	9	28	1	8	False
+Craniopharyngioma	5	16	2	2	False
+Craniosynostosis-Scoliosis Syndrome	7	11	0	7	False
+Craniosynostosis and Dental Anomalies	7	22	1	6	False
+Creatine Transporter Deficiency	3	3	0	3	True
+Cri-du-Chat Syndrome	12	12	1	11	False
+Crigler-Najjar Syndrome	3	2	0	3	False
+Crimean-Congo Hemorrhagic Fever	9	37	1	8	False
+Crohn Disease	12	17	3	4	False
+Cronkhite-Canada syndrome	4	0	3	1	False
+Crouzon Syndrome	5	10	1	4	False
+Crouzon Syndrome with Acanthosis Nigricans	8	13	0	8	False
+Cryoglobulinemic Vasculitis	4	3	2	2	False
+Cryptococcal Meningitis	7	7	2	5	False
+Currarino Triad	7	18	0	7	False
+Cushing Disease	6	6	0	6	False
+Cushing's Syndrome	3	0	2	1	False
+Cutaneous collagenous vasculopathy	4	6	0	4	False
+Cutaneous larva migrans	3	7	0	3	False
+Cutaneous Melanoma	5	4	0	5	False
+Cutaneous Squamous Cell Carcinoma	6	11	1	5	False
+Cutis Laxa Autosomal Recessive Type 1A	10	18	0	10	False
+Cutis Laxa Autosomal Recessive Type 2E	12	27	0	12	False
+Cyanide Poisoning	10	24	0	10	True
+Cyanosis Transient Neonatal	7	10	1	5	False
+Cyclic Hematopoiesis	5	12	0	5	False
+Cyclosporiasis	5	14	0	5	False
+Cystic echinococcosis	5	9	0	5	False
+Cystic Fibrosis	29	59	0	29	False
+Cystic Leukoencephalopathy Without Megalencephaly	8	11	0	8	True
+Cystinosis	7	64	0	7	False
+Cystinuria	6	24	0	6	False
+Cytokine Release Syndrome	7	18	0	7	False
+Cytomegalovirus Retinitis	4	3	0	4	False
+Cytosolic Phospholipase A2 Alpha Deficiency	9	23	0	9	False
+Czech dysplasia	4	3	0	4	False
+D-2-Hydroxyglutaric Aciduria	6	28	1	4	True
+D-Bifunctional Protein Deficiency	3	9	0	3	True
+DDX17-related Neurodevelopmental Disorder	5	15	0	5	False
+DDX41-related Hematologic Malignancy Predisposition Syndrome	9	32	0	9	False
+DECR Deficiency	4	26	0	4	True
+Developmental and Epileptic Encephalopathy with Spike-Wave Activation in Sleep	9	8	1	7	True
+DEF6 Deficiency	9	9	0	9	False
+DEGCAGS Syndrome	5	49	0	5	False
+DEGS1-Related Hypomyelinating Leukodystrophy	12	20	0	12	False
+DENND5A-Related Developmental and Epileptic Encephalopathy	14	15	0	14	True
+DEPDC5-Related Epilepsy	6	6	0	6	True
+DGAT1 Deficiency	4	3	0	4	False
+DGKE-Associated Atypical Hemolytic Uremic Syndrome	8	18	0	8	False
+DHRSX-Congenital Disorder of Glycosylation	5	19	0	5	False
+DICER1 Tumor Predisposition Syndrome	4	3	0	4	False
+DIP2C-related Developmental Disorder With Speech Delay	5	7	0	5	True
+DK1-congenital disorder of glycosylation	5	20	0	5	True
+DLG4-Related Synaptopathy	8	10	0	8	True
+DNASE2 Deficiency	8	18	0	8	False
+DNM1 Encephalopathy	3	4	0	3	True
+DOCK2 Deficiency	9	19	0	9	False
+DONSON-Related Microcephalic Primordial Dwarfism	4	12	0	4	False
+DOORS Syndrome	3	13	0	3	True
+DPAGT1-congenital disorder of glycosylation	7	17	0	7	True
+DPM2-congenital disorder of glycosylation	8	9	0	8	True
+DSP Cardiomyopathy	4	12	0	4	False
+DTYMK-Related Neurodegeneration	9	10	0	9	True
+DYRK1A-related intellectual disability syndrome	3	31	0	3	True
+Dacryocystitis-Osteopoikilosis Syndrome	3	10	0	3	False
+Dandy-Walker Syndrome	7	11	1	6	False
+Danon disease	8	20	0	8	False
+Darier Disease	6	6	0	6	True
+DeSanto-Shinawi syndrome	4	12	0	4	True
+Deafness-Dystonia-Optic Neuronopathy Syndrome	7	15	0	7	False
+deafness-lymphedema-leukemia syndrome	4	15	1	3	False
+Deafness, Congenital Heart Defects, and Posterior Embryotoxon	8	7	0	8	False
+Deafness Dystonia and Cerebral Hypomyelination	6	22	0	6	False
+Deeah Syndrome	6	12	0	6	True
+Deficiency of Adenosine Deaminase 2	6	22	0	6	False
+Deficiency of the Interleukin-1 Receptor Antagonist	5	19	0	5	False
+Dehydrated_Hereditary_Stomatocytosis_2	4	8	0	4	False
+Delayed Sleep Phase Syndrome	4	4	1	3	False
+Delpire-McNeill Syndrome	4	13	0	4	False
+Dementia with Lewy Bodies	20	47	1	19	False
+Dengue	12	7	9	3	False
+Dent Disease	11	22	1	9	False
+Dental Caries	5	4	2	3	False
+Dental Fluorosis	8	15	0	8	False
+Dentatorubral-Pallidoluysian Atrophy	6	16	0	6	True
+Dentici-Novelli neurodevelopmental syndrome	3	12	0	3	True
+Dentin Dysplasia Type II	5	11	0	5	False
+Denys-Drash Syndrome	6	13	0	6	False
+Deoxyhypusine Synthase Deficiency	7	9	0	7	True
+Deployment-Related Constrictive Bronchiolitis	13	17	3	10	False
+Dermatitis Herpetiformis	6	9	0	6	False
+Dermatofibrosarcoma Protuberans	3	5	0	3	False
+Dermatomyositis	4	0	3	1	False
+Dermatopathia Pigmentosa Reticularis	5	10	0	5	False
+Dermatosparaxis Ehlers-Danlos Syndrome	5	4	0	5	False
+Dermoid Cyst	8	16	3	5	False
+Desbuquois Dysplasia 1	8	20	0	8	False
+Desmin-Related Myopathy	10	26	0	10	False
+Desmoid Tumor	9	12	2	7	False
+Desmoplastic Small Round Cell Tumor	4	3	0	4	False
+Developmental and Epileptic Encephalopathy 116	7	6	0	7	True
+Developmental and Epileptic Encephalopathy 14	8	14	0	8	True
+Developmental And Epileptic Encephalopathy 16	14	40	0	14	True
+Developmental and Epileptic Encephalopathy 19	9	22	0	9	True
+Developmental And Epileptic Encephalopathy 38	4	3	0	4	True
+Developmental And Epileptic Encephalopathy 40	4	3	0	4	True
+Developmental And Epileptic Encephalopathy 46	9	28	0	9	True
+Developmental and Epileptic Encephalopathy 50	7	5	1	6	True
+Developmental And Epileptic Encephalopathy 77	8	29	0	8	True
+Developmental and Epileptic Encephalopathy 8	9	15	0	9	True
+Developmental And Epileptic Encephalopathy 80	5	9	0	5	True
+Developmental and Epileptic Encephalopathy 81	11	22	0	11	True
+Developmental and Epileptic Encephalopathy 82	11	25	0	11	True
+Developmental and Epileptic Encephalopathy 89	12	29	0	12	True
+Developmental Delay, Hypotonia, Musculoskeletal Defects, and Behavioral Abnormalities	8	11	0	8	False
+developmental delay with or without dysmorphic facies and autism	4	23	0	4	True
+Developmental Delay With Short Stature, Dysmorphic Facial Features, And Sparse Hair 1	6	10	0	6	False
+Developmental Malformations-Deafness-Dystonia Syndrome	7	9	0	7	False
+Developmental Stuttering	6	6	1	5	False
+Developmental and Epileptic Encephalopathy 55	6	16	0	6	True
+Dextro-Transposition of the Great Arteries	3	9	0	3	False
+Diabetes Deafness Developmental Delay and Short Stature Syndrome	6	5	0	6	False
+Diabetes mellitus	2	1	0	2	False
+Diabetic Retinopathy	5	7	0	5	False
+Diamond-Blackfan Anemia	6	13	2	3	False
+Diamond-Blackfan Anemia 14 with Mandibulofacial Dysostosis	7	18	0	7	False
+Diamond-Blackfan Anemia 15 with Mandibulofacial Dysostosis	4	11	0	4	False
+Diaphyseal Medullary Stenosis with Malignant Fibrous Histiocytoma	6	5	0	6	False
+Diastrophic Dysplasia	5	26	0	5	False
+Dientamoebiasis	4	13	0	4	False
+Diethylene Glycol Poisoning	11	16	0	11	False
+Diets-Jongmans Syndrome	6	10	0	6	True
+Dieulafoy Lesion	4	9	0	4	False
+Diffuse Astrocytoma	9	10	6	1	False
+Diffuse Cerebral and Cerebellar Atrophy-Intractable Seizures-Progressive Microcephaly Syndrome	6	13	0	6	True
+Diffuse Large B-Cell Lymphoma	5	11	1	4	False
+Diffuse Nonepidermolytic Palmoplantar Keratoderma	3	17	0	3	False
+Digitalis Poisoning	15	29	0	15	False
+Dihydropyrimidinase Deficiency	5	13	0	5	True
+Dihydropyrimidine Dehydrogenase Deficiency	8	12	0	8	True
+Dilated Cardiomyopathy	13	8	10	1	False
+Dilated Cardiomyopathy 1A	17	27	0	17	False
+Dilated Cardiomyopathy 1AA	10	15	0	10	False
+Dilated Cardiomyopathy 1B	3	2	0	3	False
+Dilated Cardiomyopathy 1BB	17	25	0	17	False
+Dilated Cardiomyopathy 1C	6	12	0	6	False
+Dilated Cardiomyopathy 1CC	8	8	0	8	False
+Dilated Cardiomyopathy 1D	4	5	0	4	False
+Dilated Cardiomyopathy 1DD	6	6	0	6	False
+Dilated Cardiomyopathy 1E	4	11	0	4	False
+Dilated Cardiomyopathy 1EE	5	6	0	5	False
+Dilated Cardiomyopathy 1FF	7	10	0	7	False
+Dilated Cardiomyopathy 1G	5	7	0	5	False
+Dilated Cardiomyopathy 1GG	6	5	0	6	True
+Dilated Cardiomyopathy 1HH	5	6	0	5	False
+Dilated Cardiomyopathy 1I	4	7	0	4	False
+Dilated Cardiomyopathy 1II	6	11	0	6	False
+Dilated Cardiomyopathy 1J	8	12	0	8	False
+Dilated Cardiomyopathy 1JJ	9	13	0	9	False
+Dilated Cardiomyopathy 1L	7	14	0	7	False
+Dilated Cardiomyopathy 1M	9	13	0	9	False
+Dilated Cardiomyopathy 1NN	5	4	0	5	False
+Dilated Cardiomyopathy 1O	10	14	0	10	False
+Dilated Cardiomyopathy 1P	15	31	0	15	False
+Dilated Cardiomyopathy 1R	4	7	0	4	False
+Dilated Cardiomyopathy 1S	4	5	0	4	False
+Dilated Cardiomyopathy 1U	5	3	1	4	False
+Dilated Cardiomyopathy 1V	5	5	1	4	False
+Dilated Cardiomyopathy 1W	11	15	1	9	False
+Dilated Cardiomyopathy 1X	7	6	1	6	False
+Dilated Cardiomyopathy 1Y	4	3	0	4	False
+Dilated Cardiomyopathy 1Z	9	12	0	9	False
+Dilated Cardiomyopathy 2A	4	3	0	4	False
+Dilated Cardiomyopathy 2B	8	16	0	8	False
+Dilated Cardiomyopathy with Woolly Hair, Keratoderma, and Tooth Agenesis	8	28	0	8	False
+Dimethylglycine Dehydrogenase Deficiency	6	10	1	5	False
+Diphtheria	16	15	4	12	False
+Disabling Pansclerotic Morphea of Childhood	6	18	1	5	False
+Disorder of Catecholamine Synthesis	5	19	3	2	False
+Dissociative Identity Disorder	4	9	0	4	False
+Distal Arthrogryposis Type 2B1	6	16	0	6	False
+Distal Arthrogryposis Type 5	6	16	0	6	False
+Distal Hereditary Motor Neuronopathy, Autosomal Dominant	4	3	0	4	False
+Distal Hereditary Motor Neuronopathy, Autosomal Recessive	12	19	8	4	False
+Distal Hereditary Motor Neuronopathy Type 2A	5	6	0	5	False
+Distal Hereditary Motor Neuronopathy Type 5B	7	7	0	7	False
+Distal Hereditary Motor Neuronopathy Type 9	6	8	0	6	False
+Distal Myopathy 6, Adult-Onset, Autosomal Dominant	5	6	0	5	False
+Distal Myopathy 7, Adult-Onset, X-Linked	4	10	0	4	False
+Distal Myopathy, Tateyama Type	9	18	0	9	False
+Dominant Beta-Thalassemia	7	10	0	7	False
+Dominant Deafness-Onychodystrophy Syndrome	5	5	1	4	True
+Donnai-Barrow syndrome	1	13	0	1	False
+Dopa-Responsive Dystonia	4	22	3	1	True
+Dopamine Beta-Hydroxylase Deficiency	12	33	0	12	False
+Dorfman-Chanarin Disease	3	11	0	3	False
+Dorsalgia	11	29	1	10	False
+Double Outlet Right Ventricle	10	28	1	9	False
+Dowling-Degos Disease	4	7	2	1	False
+Down_syndrome	6	12	0	6	False
+Doyne Honeycomb Retinal Dystrophy	11	31	0	11	False
+Dracunculiasis	4	9	1	3	False
+Dravet_syndrome	5	38	1	4	True
+Drug-Induced Methemoglobinemia	9	14	3	3	False
+Drug- or Toxin-Induced Pulmonary Arterial Hypertension	4	9	1	3	False
+Dry Eye Disease	12	20	5	7	False
+Du Pan Syndrome	3	2	0	3	False
+Duane-Radial Ray Syndrome	3	29	0	3	False
+Duane Retraction Syndrome	4	9	0	4	False
+Duane Retraction Syndrome 3 With Or Without Deafness	7	6	0	7	False
+Dubin-Johnson Syndrome	3	3	0	3	False
+Duchenne Muscular Dystrophy	19	37	0	19	False
+Dupuytren Contracture	5	9	0	5	False
+Dysembryoplastic Neuroepithelial Tumor	5	4	2	3	True
+Dysferlinopathy	10	26	0	10	False
+Dyskeratosis Congenita	5	15	2	3	False
+Dyskeratosis Congenita Autosomal Recessive 2	10	23	0	10	False
+Dyskeratosis Congenita Autosomal Recessive 6	6	14	0	6	False
+Dyskeratosis Congenita Digenic	8	7	0	8	False
+Dyslexia	4	9	1	2	False
+Dysostosis Multiplex, Ain-Naz Type	8	19	0	8	False
+Dysplasminogenemia	3	5	0	3	False
+Dyssegmental Dysplasia	7	7	0	7	False
+Dystonia 22, Juvenile-Onset	3	6	0	3	False
+Dystonia 24	5	20	0	5	True
+Dystonia 25	7	16	0	7	False
+VPS16-Related Dystonia	2	10	0	2	False
+EIF2AK2-Related Dystonia	2	7	0	2	False
+Dystroglycanopathy	11	19	0	11	False
+Dystrophic Epidermolysis Bullosa	9	25	1	8	False
+E-Cigarette or Vaping Product Use-Associated Lung Injury	5	5	0	5	False
+EAST Syndrome	4	12	0	4	True
+EBF3-Related Neurodevelopmental Disorder	5	13	0	5	False
+EBV-Associated Gastric Cancer	7	12	1	6	False
+ECHS1 Deficiency	4	6	0	4	True
+EDARADD-Related Hypohidrotic Ectodermal Dysplasia	4	15	0	4	False
+EDAR-Related Hypohidrotic Ectodermal Dysplasia	5	28	1	4	False
+EDEM3-Congenital Disorder of Glycosylation	5	6	0	5	False
+EDN3/EDNRB Waardenburg-Shah	5	6	1	4	False
+EEFSEC Deficiency	3	8	0	3	True
+EFEMP2-Related Cutis Laxa	26	59	1	25	False
+EFL1-related Shwachman-Diamond syndrome	3	8	1	2	False
+EGFR-Mutant Non-Small Cell Lung Cancer	5	3	1	4	False
+EGLN1-related Erythrocytosis and Pheochromocytoma/Paraganglioma Predisposition	6	12	0	6	False
+ELF4 Deficiency, X-linked	6	23	0	6	False
+EML1-related Ribbon-like Subcortical Heterotopia	5	26	0	5	True
+ERF-Related Craniosynostosis	10	31	0	10	False
+ER-Positive Breast Cancer	7	3	3	3	False
+ETV6-Related Thrombocytopenia	12	26	0	12	False
+EVEN-PLUS Syndrome	5	4	0	5	False
+EYA1-Related Branchiootorenal Spectrum Disorder	6	14	0	6	False
+EYS-Related Retinitis Pigmentosa	4	3	0	4	False
+Early-Infantile Developmental and Epileptic Encephalopathy	8	11	0	8	True
+Early-Onset Autosomal Dominant Alzheimer Disease	15	17	0	15	True
+Early-onset Combined Immunodeficiency With Low Ig Due To Dominant Negative IKAROS Mutation	9	29	0	9	False
+Early-onset Familial Hypoaldosteronism	4	11	0	4	False
+Early-onset Generalized Limb-onset Dystonia	8	10	0	8	False
+Early-onset_Lafora_Body_Disease	4	16	0	4	True
+Ebola Virus Disease (EVD)	5	7	1	4	False
+Ebstein Anomaly	10	11	2	8	False
+Ecthyma	5	10	0	5	False
+Ectodermal Dysplasia 13 Hair Tooth Type	4	10	0	4	False
+Ectodermal Dysplasia and Immunodeficiency 2	6	21	0	6	False
+Ectomesenchymoma	3	5	0	3	False
+Ectopia Lentis 1, Isolated, Autosomal Dominant	2	2	0	2	False
+Ectopic Pregnancy	11	11	2	9	False
+Ehlers-Danlos Syndrome	10	24	7	3	False
+Ehlers-Danlos Syndrome, COL5A1-related	3	12	0	3	False
+Ehrlichiosis	4	16	0	4	False
+Eiken Syndrome	6	19	0	6	False
+Eisenmenger Syndrome	13	26	0	13	False
+El Hayek-Chahrour neurodevelopmental disorder	6	13	0	6	True
+Ellis-van Creveld Syndrome	3	18	0	3	False
+Elsahy-Waters Syndrome	4	17	0	4	False
+Emanuel Syndrome	5	19	0	5	False
+Embryonal Carcinoma	10	10	1	9	False
+Embryonal Rhabdomyosarcoma	3	1	1	2	False
+Embryonal Tumor with Multilayered Rosettes	10	12	1	8	False
+Emery-Dreifuss Muscular Dystrophy	6	23	1	5	False
+Empty Nose Syndrome	6	16	0	6	False
+Encephalitis/Encephalopathy, Mild, with Reversible Myelin Vacuolization	4	11	0	4	True
+Encephalocraniocutaneous Lipomatosis	1	5	0	1	False
+Encephalopathy Due To Defective Mitochondrial And Peroxisomal Fission 2	5	14	0	5	True
+Encephalopathy Due To Hydroxykynureninuria	4	8	0	4	True
+Endometrial Carcinoma	8	8	4	4	False
+Endometrial Endometrioid Adenocarcinoma	8	6	3	4	False
+Endometriosis	15	13	7	1	False
+Endomyocardial Fibrosis	14	14	1	13	False
+Endophthalmitis	10	9	0	10	False
+Enhanced S-Cone Syndrome	4	10	0	4	False
+Enlarged Parietal Foramina	6	11	1	5	True
+Eosinophilia-Myalgia Syndrome	14	26	1	13	False
+Eosinophilic Esophagitis	8	10	2	6	False
+Eosinophilic Fasciitis	4	11	0	4	False
+Eosinophilic granulomatosis with polyangiitis	8	12	1	5	False
+Ependymoma	16	35	2	14	True
+Epidemic typhus	8	14	2	6	False
+Epidermolysis Bullosa	4	4	0	4	False
+Epidermolysis Bullosa Simplex	9	12	6	3	False
+Epidermolysis Bullosa Simplex 7 With Nephropathy And Deafness	5	10	0	5	False
+Epidermolytic Hyperkeratosis 2	7	17	1	6	False
+Epilepsy	21	28	5	1	True
+Epilepsy of Infancy with Migrating Focal Seizures	6	13	0	6	True
+Epilepsy with Generalized Tonic-Clonic Seizures Alone	8	7	2	6	True
+Epilepsy with Myoclonic Absences	7	7	0	7	True
+Epilepsy with Myoclonic-Atonic Seizures	6	11	0	6	True
+Episodic Ataxia	5	3	1	3	False
+Epithelioid Hemangioendothelioma	9	10	2	7	False
+Epithelioid Sarcoma	4	6	0	4	False
+Erb Palsy	10	16	0	10	False
+Erdheim-Chester Disease	2	16	0	2	False
+Ergotism	8	21	1	7	True
+Erysipelas	5	11	1	4	False
+Erysipelothrix Rhusiopathiae Infectious Disease	5	11	0	5	False
+Erythrasma	5	8	0	5	False
+Familial Erythrocytosis 5	9	12	1	6	False
+Erythrokeratodermia Variabilis	8	10	4	3	False
+Erythropoietic Protoporphyria	7	13	1	6	False
+Escherichia coli meningitis	11	23	0	11	False
+Esophageal Adenocarcinoma	9	7	1	8	False
+Esophageal Atresia	8	23	1	7	False
+Esophageal Carcinoma	5	9	1	3	False
+Esophageal Squamous Cell Carcinoma	10	16	1	9	False
+Essential Fructosuria	6	9	0	6	False
+Essential Hypertension	7	0	6	1	False
+Essential Thrombocythemia	3	11	0	3	False
+Essential Tremor	8	9	4	4	False
+Estrogen Resistance Syndrome	7	21	0	7	False
+Ethmoid Sinus Adenocarcinoma	5	5	0	5	False
+Ethylene Glycol Poisoning	6	14	0	6	False
+Ethylmalonic Encephalopathy	6	22	0	6	True
+Evans Syndrome	5	11	0	5	False
+Ewing Sarcoma	30	47	9	21	False
+Exfoliation Syndrome	13	30	0	13	False
+Exstrophy-Epispadias Complex	2	4	1	1	False
+External Hordeolum	5	8	1	4	False
+FADD-Related Immunodeficiency	8	18	0	8	True
+FAM111A-Related Skeletal Dysplasia	5	26	0	5	False
+FAS-related Autoimmune Lymphoproliferative Syndrome	5	14	0	5	False
+FASTKD5-Related COX Deficiency	10	17	1	9	False
+FBXL4-Related Mitochondrial DNA Depletion Syndrome	12	41	0	12	True
+FBXO11-Related Neurodevelopmental Disorder	4	9	0	4	True
+FBXW7-Related Neurodevelopmental Disorder	10	15	1	9	False
+FDX2-Related Mitochondrial Myopathy	11	34	1	10	True
+FGF12-Related Developmental and Epileptic Encephalopathy	9	8	2	7	True
+FGFR1-Related Hypogonadotropic Hypogonadism	2	8	0	2	False
+FGFR2-Related Bent Bone Dysplasia	6	11	0	6	False
+FGFR-Altered Cholangiocarcinoma	5	4	0	5	False
+FGFR-Altered Urothelial Carcinoma	7	12	3	4	False
+FG Syndrome 1	9	45	0	9	False
+FG Syndrome 4	4	3	0	4	False
+FICUS syndrome	6	15	0	6	False
+FILS Syndrome	4	12	0	4	False
+FLNA Intestinal Pseudoobstruction	2	4	0	2	False
+FLNC-Related Dilated Cardiomyopathy	5	4	0	5	False
+Acute Myeloid Leukemia, FLT3-Mutated	5	4	0	5	False
+FLVCR1-Related Retinopathy with or without Ataxia	6	5	1	5	False
+FOLR1-Related Cerebral Folate Transport Deficiency	5	4	0	5	True
+FOXE3-Related Anterior Segment Dysgenesis	2	8	0	2	False
+FOXG1 Disorder	7	44	0	7	True
+FOXP1 Syndrome	13	42	0	13	False
+FOXP2-Related Speech and Language Disorder	7	13	0	7	False
+FUT8-Congenital Disorder of Glycosylation	10	37	0	10	True
+Fabry disease	18	52	0	18	False
+Facioscapulohumeral Muscular Dystrophy	5	10	1	4	False
+Factor XIII A Subunit Deficiency	9	19	1	8	False
+Factor XIII B Subunit Deficiency	9	13	0	9	False
+Fallopian tube benign neoplasm	6	8	0	6	False
+Fallopian Tube Cancer	4	8	0	4	False
+Familial Acute Necrotizing Encephalopathy	9	33	1	8	True
+Familial Adenomatous Polyposis	6	8	0	6	False
+Familial Atrial Fibrillation	5	4	1	4	False
+Familial Chylomicronemia Syndrome	4	9	0	4	False
+Familial Cold Autoinflammatory Syndrome	7	14	3	4	False
+Familial Congenital Mirror Movements	7	9	3	4	False
+Familial Defective Apolipoprotein B-100	7	7	0	7	False
+Familial Digital Arthropathy-Brachydactyly	7	17	0	7	False
+Familial Encephalopathy With Neuroserpin Inclusion Bodies	8	15	0	8	True
+Familial_Episodic_Pain_Syndrome_With_Predominantly_Lower_Limb_Involvement	6	10	0	6	False
+Familial Erythrocytosis 4	5	9	1	4	False
+Familial Erythrocytosis 6	13	24	0	13	False
+Familial Expansile Osteolysis	8	17	0	8	False
+Familial Exudative Vitreoretinopathy	8	26	3	5	False
+Familial Focal Epilepsy With Variable Foci	3	5	2	1	True
+Familial Glucocorticoid Deficiency	8	12	4	3	False
+Familial Hemiplegic Migraine	15	37	4	8	False
+familial hyperaldosteronism	6	5	3	2	False
+Familial hyperaldosteronism type I	4	16	0	4	False
+Familial Hypercholesterolemia	19	39	4	14	False
+Familial Hyperprolactinemia	6	9	0	6	False
+Familial Hypocalciuric Hypercalcemia 1	10	11	1	9	False
+Familial Hypocalciuric Hypercalcemia 2	7	11	1	6	False
+Familial Infantile Myoclonic Epilepsy	5	11	0	5	True
+Familial Isolated Vitamin E Deficiency	8	38	0	8	False
+Familial Juvenile Hyperuricemic Nephropathy Type 1	6	11	0	6	False
+Familial Juvenile Hyperuricemic Nephropathy Type 2	10	25	0	10	False
+Familial Male-limited Precocious Puberty	7	19	0	7	False
+Familial Mediterranean Fever	4	12	0	4	False
+Familial Nonmedullary Thyroid Carcinoma	6	15	0	6	False
+Familial Partial Lipodystrophy	9	10	5	2	False
+Familial Pityriasis Rubra Pilaris	7	12	0	7	False
+Familial Progressive Hyperpigmentation With Or Without Hypopigmentation	7	11	0	7	False
+Familial progressive retinal dystrophy-iris coloboma-congenital cataract syndrome	2	7	0	2	False
+Familial Renal Glucosuria	3	5	2	1	False
+Familial Sick Sinus Syndrome	9	16	6	3	False
+Familial Sleep-Related Hypermotor Epilepsy	6	11	0	6	True
+Familial Thoracic Aortic Aneurysm and Aortic Dissection	10	12	5	5	False
+Familial Vesicoureteral Reflux	12	14	2	10	False
+Familial Visceral Amyloidosis	6	5	0	6	False
+Familial Visceral Neuropathy 2	5	11	0	5	False
+Fanconi-Bickel Syndrome	4	8	0	4	False
+Fanconi_Anemia	23	199	10	12	False
+Fanconi Renotubular Syndrome	3	13	0	3	False
+Far-East Scarlet-Like Fever	6	17	0	6	False
+Far Eastern Spotted Fever	7	23	0	7	False
+Farber Disease	7	24	0	7	False
+Fatal Familial Insomnia	8	26	0	8	False
+Febrile Infection-Related Epilepsy Syndrome	9	18	1	8	True
+Feingold Syndrome	6	5	2	3	False
+Female_Infertility_Due_To_Zona_Pellucida_Defect	5	9	0	5	False
+Ferguson-Bonni neurodevelopmental syndrome	4	6	0	4	False
+Fetal Alcohol Spectrum Disorder	3	7	0	3	False
+Fetal Growth Restriction	11	13	0	11	False
+Fetal Valproate Syndrome	16	42	0	16	False
+Fetomaternal Alloimmune Thrombocytopenia 1	9	13	0	9	False
+Fibrocartilaginous Embolism	4	14	0	4	False
+Fibrochondrogenesis	3	2	0	3	False
+Fibrodysplasia Ossificans Progressiva	5	11	1	4	False
+Fibrolamellar Hepatocellular Carcinoma	15	16	1	14	False
+Fibromuscular Dysplasia	2	12	1	1	False
+Fibromyalgia	7	4	5	1	False
+Fibrosarcoma	4	3	1	3	False
+Fibrosis, Neurodegeneration, and Cerebral Angiomatosis	13	38	2	11	True
+Fibrous Dysplasia	5	37	2	3	False
+Ficolin 3 Deficiency	4	5	0	4	True
+Filippi Syndrome	8	8	0	8	False
+Finnish Type Amyloidosis	5	4	0	5	False
+Fire Ant Poisoning	8	16	0	8	False
+Flea-Borne Spotted Fever	7	8	3	1	False
+Fliedner-Zweier Syndrome	4	9	0	4	True
+Flinders Island Spotted Fever	7	15	1	5	False
+Floating-Harbor syndrome	6	18	0	6	False
+Focal Articular Cartilage Defect of the Knee	4	7	0	4	False
+Focal Cortical Dysplasia Type II	6	6	0	6	True
+Focal Dermal Hypoplasia	3	27	1	2	False
+Focal Facial Dermal Dysplasia Type IV	5	10	0	5	False
+Focal Segmental Glomerulosclerosis	8	12	3	5	False
+Focal Segmental Glomerulosclerosis and Neurodevelopmental Syndrome	4	9	0	4	True
+Follicular Lymphoma	6	6	3	3	False
+Folliculitis	21	23	7	5	False
+Fontaine Progeroid Syndrome	4	58	0	4	False
+Food Allergy	7	13	0	7	True
+Food Protein-Induced Enterocolitis Syndrome	7	14	2	5	False
+Foodborne trematodiases	0	0	0	0	False
+Formaldehyde Poisoning	19	20	2	17	False
+Fountain Syndrome	6	5	0	6	True
+Fowler Syndrome	10	19	0	10	False
+Fragile X-Associated Primary Ovarian Insufficiency	8	8	0	8	False
+Fragile X-Associated Tremor Ataxia Syndrome	9	21	0	9	False
+Fragile X Syndrome	9	18	0	9	False
+Frank-Ter Haar Syndrome	5	13	0	5	False
+Fraser Syndrome	8	10	1	6	False
+Frasier Syndrome	5	15	0	5	False
+Free Sialic Acid Storage Disease	6	23	0	6	False
+Frias syndrome	3	14	0	3	False
+Friedreich Ataxia	9	25	0	9	False
+Frontonasal Dysplasia	4	14	0	4	False
+Frontotemporal Dementia	6	15	3	3	False
+Frontotemporal Dementia And/Or Amyotrophic Lateral Sclerosis 2	16	30	0	16	False
+Fructose-1,6-Bisphosphatase Deficiency	7	7	0	7	True
+Fuchs Endothelial Corneal Dystrophy	13	15	3	4	False
+Fucosidosis	9	42	0	9	True
+Fuhrmann Syndrome	5	7	0	5	False
+Fumaric Aciduria	11	26	0	11	True
+Furunculosis	10	9	3	1	False
+G6PC3 Deficiency	7	19	0	7	False
+GABRB3-Related Developmental and Epileptic Encephalopathy	9	11	0	9	True
+GABRG2-Related Epilepsy	7	14	0	7	True
+GALNT2-Congenital Disorder of Glycosylation	7	15	0	7	True
+GAPO Syndrome	3	10	0	3	False
+GATA2 Deficiency	7	18	0	7	False
+GFI1B-related platelet-type bleeding disorder	6	5	1	5	False
+GJB2-GJB6 Digenic Nonsyndromic Hearing Loss	4	4	0	4	False
+GLUT1 Deficiency Syndrome	9	29	0	9	True
+GM1 Gangliosidosis Type 1	5	23	0	5	False
+GM1 Gangliosidosis Type 2	4	19	0	4	True
+GM1 Gangliosidosis Type 3	1	4	0	1	False
+GM3 synthase deficiency	4	25	0	4	True
+GNAO1-Related Developmental and Epileptic Encephalopathy	8	21	0	8	True
+GNAS-related pituitary adenoma 3	5	4	0	5	False
+GNAT2-Related Retinopathy	3	9	0	3	False
+GNB5-Related Neurodevelopmental Disorder	7	11	1	6	True
+GNE Myopathy	6	17	0	6	False
+GNPTG-Mucolipidosis	2	6	0	2	False
+GOLGA2-Related Golgin A2 Deficiency	3	2	0	3	True
+GPD1 Deficiency	7	12	0	7	False
+GPR101-related pituitary adenoma 2	6	4	1	5	False
+GPR161-related medulloblastoma predisposition	6	6	0	6	False
+GRHL3-related Orofacial Clefting	4	4	0	4	False
+GRIN1-Related Neurodevelopmental Disorder	6	8	0	6	True
+GRIN2A-Related Epileptic Encephalopathy and Intellectual Disability	10	24	2	7	True
+GRIN2B-Related Developmental and Epileptic Encephalopathy	6	6	0	6	True
+GUCA1A-Related Retinopathy	7	16	0	7	False
+GUCY2D-Related Retinopathy	5	3	1	3	False
+GYG1-Related Disorder of Glycogen Metabolism	5	12	0	5	False
+Gabriele-de Vries Syndrome	8	27	1	7	False
+Galactosemia	12	23	2	10	False
+Galactosialidosis	5	18	0	5	True
+Gallbladder Cancer	4	7	0	4	False
+Galloway-Mowat syndrome	6	24	3	3	False
+Gambling Disorder	5	5	1	4	False
+Gamma-Glutamylcysteine Synthetase Deficiency	7	6	0	7	False
+Gamma-glutamyl Transpeptidase Deficiency	6	11	0	6	False
+Ganglioneuroblastoma	7	11	2	4	False
+Ganglioneuroma	5	9	4	1	False
+Garg-Mishra Progeroid Syndrome	11	19	0	11	False
+Gas Gangrene	4	8	0	4	False
+Gastric Adenocarcinoma	18	31	5	11	False
+Gastric Cancer H. pylori Associated	10	8	3	3	False
+Gastric Ulcer	4	3	0	4	False
+Gastroenteropancreatic Neuroendocrine Neoplasm	7	3	3	3	False
+Gastroesophageal Reflux Disease	9	2	6	1	False
+Gastrointestinal Lymphoma	6	7	0	6	False
+Gastrointestinal Stromal Tumor	4	4	1	3	False
+Gastrointestinal Tularemia	3	4	0	3	False
+Gaucher Disease	21	51	0	21	False
+Gaucher Disease Due To Saposin C Deficiency	5	12	0	5	False
+Gaze_Palsy_Familial_Horizontal_With_Progressive_Scoliosis_2	11	19	0	11	False
+Geleophysic Dysplasia	7	33	3	4	False
+Generalized Anxiety Disorder	7	0	6	1	False
+Generalized Epilepsy with Febrile Seizures Plus	5	12	2	3	True
+Generalized Resistance to Thyroid Hormone	7	11	0	7	False
+Genetic Developmental and Epileptic Encephalopathy	7	15	1	6	True
+Genital Lichen Sclerosus	4	9	1	3	False
+Genitopatellar Syndrome	3	14	0	3	False
+Gerstmann-Straussler-Scheinker Syndrome	10	9	1	9	False
+Gestational Diabetes Mellitus	6	7	0	6	False
+Gestational Trophoblastic Neoplasm	6	7	3	3	False
+Ghosal Hematodiaphyseal Dysplasia	7	22	0	7	False
+Giant Axonal Neuropathy 1	9	33	0	9	True
+Giant Cell Arteritis	3	0	2	1	False
+Giant Cell Hepatitis With Autoimmune Hemolytic Anemia	4	5	0	4	False
+Giardiasis	14	24	2	11	False
+Gilbert's Syndrome	6	11	0	6	False
+Gitelman syndrome	5	14	0	5	False
+Glanders	4	5	1	3	False
+Glanzmann Thrombasthenia	7	7	0	7	False
+Glaucoma	4	0	3	1	False
+Glioblastoma, IDH-Wildtype	8	6	2	2	False
+Glioma	6	16	0	6	False
+Global Developmental Delay, Progressive Ataxia, and Elevated Glutamine	8	8	0	8	False
+Glomerulonephritis	11	20	1	10	False
+Glomerulopathy With Fibronectin Deposits 2	10	27	0	10	False
+Glomus Tumor	8	14	2	5	False
+Glucocorticoid Resistance	8	15	0	8	False
+Glucose-6-Phosphate Dehydrogenase (G6PD) Deficiency	5	14	0	5	False
+Glucose-Galactose Malabsorption	5	4	0	5	False
+Glutaric Acidemia Type 3	5	6	2	3	False
+Glutaryl-CoA Dehydrogenase Deficiency	15	31	0	15	False
+Glutathione Reductase Deficiency	7	11	0	7	False
+Glutathione Synthetase Deficiency	4	8	0	4	True
+Glycogen Storage Disease Due To Aldolase A Deficiency	7	8	0	7	False
+Glycogen Storage Disease Due To Lactate Dehydrogenase M-subunit Deficiency	7	14	0	7	False
+Glycogen Storage Disease Due To Phosphoglycerate Mutase Deficiency	5	13	0	5	False
+Glycogen Storage Disease Due to Muscle Beta-Enolase Deficiency	4	9	0	4	False
+Glycogen Storage Disease Type 0a	11	18	0	11	False
+Glycogen Storage Disease Type 0b	6	12	0	6	False
+Glycogen Storage Disease Type I	5	37	0	5	False
+Glycogen Storage Disease Type IV	5	36	0	5	False
+Glycogen Storage Disease Type IX	8	20	0	8	False
+Glycogen Storage Disease Type V	3	8	0	3	False
+Glycogen Storage Disease Type VI	8	7	0	8	False
+Glycogen Storage Disease Type VII	5	23	0	5	False
+Glycogen Storage Disease XV	4	14	0	4	False
+Glycoprotein Storage Disease	3	9	0	3	False
+Glycosylphosphatidylinositol Biosynthesis Defect 15	6	23	0	6	True
+Glycosylphosphatidylinositol Biosynthesis Defect 18	6	47	0	6	True
+Gnathodiaphyseal Dysplasia	9	9	0	9	False
+Goldberg-Shprintzen Syndrome	8	15	0	8	False
+Gonococcal Conjunctivitis	6	11	0	6	False
+Gonorrhea	15	25	6	4	False
+Good Syndrome	5	14	0	5	False
+Gordon Syndrome	5	13	0	5	False
+Gorham-Stout disease	6	9	0	6	False
+Gorlin Syndrome	15	40	1	11	False
+Gout	6	11	0	6	False
+Grange syndrome	4	6	0	4	False
+Granular Cell Tumor	5	9	0	5	False
+Granuloma Inguinale	6	7	1	5	False
+Granulomatosis with Polyangiitis	4	3	0	4	False
+Graphite Pneumoconiosis	4	8	0	4	False
+Graves' Disease	5	1	4	1	False
+Gray Platelet Syndrome	10	11	0	10	False
+Green Tobacco Sickness	5	17	0	5	False
+Greenberg Dysplasia	5	11	1	4	False
+Greig Cephalopolysyndactyly Syndrome	3	7	0	3	False
+Griscelli Syndrome Type 1	11	20	0	11	True
+Griscelli Syndrome Type 2	5	4	0	5	False
+Griscelli Syndrome Type 3	4	7	0	4	False
+Growth Hormone Insensitivity Syndrome	6	10	2	4	False
+Growth Restriction Hypoplastic Kidneys Alopecia And Distinctive Facies	5	17	0	5	False
+Guanidinoacetate Methyltransferase Deficiency	5	26	0	5	True
+Guillain-Barre Syndrome	4	1	2	1	False
+Guillouet-Gordon Syndrome	2	9	0	2	False
+Guttmacher syndrome	3	8	0	3	False
+Diffuse Midline Glioma, H3 K27-Altered	9	8	0	9	False
+HAO1-Related Glycolate Oxidase Deficiency	3	2	0	3	False
+HAVCR2-Related Cancer Predisposition	5	17	0	5	False
+HCN1-Related Developmental and Epileptic Encephalopathy	5	4	0	5	True
+HDAC3-Related Neurodevelopmental Disorder	7	17	0	7	False
+HELLP Syndrome	9	10	2	7	False
+HER2-Positive Breast Cancer	5	4	0	5	False
+HER2-Positive Colorectal Cancer	4	9	0	4	False
+HER2-Positive Gastric Cancer	4	3	0	4	False
+HFM1-related gametogenic failure	4	5	0	4	False
+HHAT-related chondrodysplasia with 46,XY disorder of sex development	8	26	0	8	False
+HHV-8-Associated Multicentric Castleman Disease	6	8	1	5	False
+HIDEA_Syndrome	4	13	3	1	True
+HNRNPU-Related Developmental and Epileptic Encephalopathy	12	14	0	12	True
+HOIP Deficiency	15	30	0	15	False
+HOXC13-Related Pure Hair-Nail Ectodermal Dysplasia	4	6	0	4	False
+HPV-Negative Head and Neck Cancer	4	4	3	1	False
+HPV-Positive Head and Neck Cancer	4	2	3	1	False
+HROB-related gametogenic failure	4	11	0	4	False
+HSD10 Mitochondrial Disease	5	13	0	5	True
+H Syndrome	5	25	0	5	False
+Hackmann-Di Donato Syndrome	9	23	0	9	False
+Haemophilus meningitis	7	17	0	7	False
+Hailey-Hailey Disease	5	3	1	4	False
+Hairy Cell Leukemia	6	9	1	3	False
+Hajdu-Cheney Syndrome	3	3	1	2	False
+Hallermann-Streiff Syndrome	1	11	0	1	False
+Hand-Foot-Genital Syndrome	6	23	1	5	False
+Hand Foot and Mouth Disease	10	12	2	8	False
+Hantavirus Hemorrhagic Fever with Renal Syndrome	12	15	0	12	False
+Hantavirus Pulmonary Syndrome	5	4	0	5	False
+Hao-Fountain syndrome	2	19	0	2	False
+Harderoporphyria	7	6	0	7	False
+Hardikar Syndrome	10	45	1	9	False
+Hartnup Disease	6	29	1	5	True
+Hartsfield Syndrome	3	25	0	3	True
+Hashimoto Encephalopathy	3	13	1	2	True
+Hashimoto's Thyroiditis	12	17	4	8	False
+Hatipoglu Immunodeficiency Syndrome	7	13	0	7	False
+Hearing Loss Autosomal Dominant 34 With or Without Inflammation	6	11	0	6	False
+Hearing Loss Autosomal Dominant 72	5	6	0	5	False
+Hearing Loss Autosomal Dominant 75	5	7	0	5	False
+Hearing Loss Autosomal Dominant 76	4	6	0	4	False
+Hearing Loss Autosomal Dominant 78	5	6	0	5	False
+Hearing Loss Autosomal Dominant 82	4	5	0	4	True
+Hearing Loss Autosomal Dominant 83	6	9	0	6	False
+Hearing Loss Autosomal Dominant 84	5	6	0	5	False
+Hearing Loss Autosomal Recessive 100	5	5	0	5	False
+Hearing Loss Autosomal Recessive 106	4	3	0	4	False
+Hearing Loss Autosomal Recessive 108	5	8	0	5	False
+Hearing Loss Autosomal Recessive 116	6	7	1	5	False
+Hearing Loss Autosomal Recessive 120	6	8	0	6	False
+Heart-Hand Syndrome, Slovenian Type	7	16	0	7	False
+Heart Defect-Tongue Hamartoma-Polysyndactyly Syndrome	5	9	0	5	False
+Heart Failure	11	16	5	5	False
+Heavy Chain Disease	11	34	1	10	False
+Helicobacter Pylori Infectious Disease	11	17	0	11	False
+Heme Oxygenase 1 Deficiency	12	49	0	12	False
+Hemiconvulsion-Hemiplegia-Epilepsy Syndrome	9	9	0	9	True
+Hemicrania Continua	3	12	0	3	False
+Hemimegalencephaly	9	10	1	8	True
+Hemochromatosis	15	33	4	11	False
+Hemoglobin M Disease, Beta Type	6	12	0	6	False
+Hemolytic Disease of the Fetus and Newborn	9	9	0	9	False
+Hemolytic Uremic Syndrome Atypical 8 With Rhizomelic Short Stature	5	8	0	5	False
+Hemophagocytic Lymphohistiocytosis	6	11	3	2	False
+Hemophilia	6	9	1	4	False
+Hemophilia A	6	11	1	5	False
+Hemophilia B	10	18	2	8	False
+Hennekam lymphangiectasia-lymphedema syndrome 1	6	12	0	6	False
+Hennekam lymphangiectasia-lymphedema syndrome 2	7	12	0	7	False
+Heparin-Induced Thrombocytopenia	11	12	0	11	False
+Hepatic Fibrinogen Storage Disease	8	12	0	8	False
+Hepatic veno-occlusive disease-immunodeficiency syndrome	7	7	0	7	False
+Hepatitis A	5	8	0	5	False
+Hepatitis B	8	18	1	7	False
+Hepatitis C	15	26	1	14	False
+Hepatitis D	5	4	0	5	False
+Hepatitis E	5	6	0	5	False
+Hepatoblastoma	6	10	0	6	False
+Hepatocellular Carcinoma	20	21	5	9	False
+Hepatosplenic T-cell Lymphoma	6	11	2	4	False
+Hereditary Angioedema	10	36	1	8	False
+Hereditary Arterial and Articular Multiple Calcification Syndrome	3	13	0	3	False
+Hereditary Breast and Ovarian Cancer Syndrome	4	3	0	4	False
+Hereditary Congenital Facial Paresis 3	6	9	0	6	False
+Hereditary Diffuse Leukoencephalopathy with Spheroids	8	22	0	8	True
+Hereditary Elliptocytosis	6	23	1	5	False
+Hereditary Folate Malabsorption	8	30	0	8	True
+Hereditary Fructose Intolerance	3	19	0	3	False
+Hereditary Gingival Fibromatosis	5	10	2	1	False
+Hereditary Hemorrhagic Telangiectasia	7	14	1	6	False
+Hereditary Hemorrhagic Telangiectasia Type 4	3	5	0	3	False
+Hereditary Hemorrhagic Telangiectasia Type 5	7	13	0	7	False
+Hereditary Hemorrhagic Telangiectasia Type 1	10	18	1	9	False
+Hereditary Hemorrhagic Telangiectasia Type 2	14	26	1	13	False
+Hereditary Hyperekplexia	4	19	2	2	True
+Hereditary Hyperferritinemia with Congenital Cataracts	8	11	0	8	False
+Hereditary Hypophosphatemic Rickets with Hypercalciuria	7	20	0	7	False
+Hereditary intrinsic factor deficiency	4	9	0	4	False
+Hereditary Leiomyomatosis and Renal Cell Cancer	7	7	0	7	True
+Hereditary methemoglobinemia	7	20	1	5	False
+Hereditary Multiple Osteochondromas	10	24	0	10	False
+Hereditary Neuropathy with Liability to Pressure Palsies	3	4	1	2	False
+Hereditary Orotic Aciduria	3	23	0	3	False
+Hereditary Pancreatitis	3	4	0	3	False
+Hereditary Pheochromocytoma-Paraganglioma Syndrome	7	7	0	7	False
+Hereditary Pulmonary Alveolar Proteinosis	3	15	0	3	False
+Hereditary Sclerosing Poikiloderma With Tendon And Pulmonary Involvement	11	26	0	11	False
+Hereditary Sensory Neuropathy Type 1D	4	4	0	4	False
+Hereditary Sensory and Autonomic Neuropathy	5	9	3	2	False
+Hereditary Sensory and Autonomic Neuropathy Type 1A	4	12	0	4	False
+Hereditary Sensory and Autonomic Neuropathy Type 1C	3	4	0	3	False
+Hereditary Sensory and Autonomic Neuropathy Type 1E	6	5	0	6	False
+Hereditary Sensory and Autonomic Neuropathy Type 2	6	15	0	6	False
+Hereditary Sensory and Autonomic Neuropathy Type 6	7	12	0	7	False
+Hereditary Spastic Paraplegia	13	12	11	2	False
+Hereditary Spastic Paraplegia 11	5	4	0	5	False
+Hereditary Spastic Paraplegia 3A	11	19	0	11	False
+Hereditary Spastic Paraplegia 44	4	7	0	4	False
+Hereditary Spastic Paraplegia 46	5	9	0	5	False
+Hereditary Spastic Paraplegia 48	7	21	0	7	False
+Hereditary Spastic Paraplegia 49	6	16	0	6	False
+Hereditary Spastic Paraplegia 5A	4	8	0	4	False
+Hereditary Spastic Paraplegia 7	5	4	0	5	False
+Hereditary Spastic Paraplegia 77	6	29	0	6	True
+Hereditary Spherocytosis	3	24	0	3	False
+Hereditary Xanthinuria	7	6	1	6	False
+Hereditary von Willebrand Disease	1	9	0	1	False
+Heritable Pulmonary Arterial Hypertension	10	15	5	5	False
+Hermansky-Pudlak Syndrome	10	14	3	6	False
+Herpes Zoster	5	10	0	5	False
+Visceral Heterotaxy 14	3	6	0	3	False
+Heyn-Sproul-Jackson syndrome	5	13	0	5	False
+Hidradenitis Suppurativa	11	19	0	11	False
+High Altitude Pulmonary Edema	7	8	1	6	False
+High Myopia-Sensorineural Deafness Syndrome	8	14	0	8	False
+Hirschsprung Disease	2	0	1	1	False
+Histiocytoid Cardiomyopathy	6	16	0	6	False
+Hodgkin Lymphoma	9	13	6	3	False
+Holocarboxylase Synthetase Deficiency	12	36	0	12	True
+Holoprosencephaly 12 With or Without Pancreatic Agenesis	7	21	0	7	False
+Holoprosencephaly 9	11	12	0	11	False
+Holt-Oram syndrome	4	12	0	4	False
+Homocystinuria	8	56	2	6	False
+Hospital-Acquired Acute Kidney Injury	4	0	3	1	False
+Houge-Janssens Syndrome	6	5	2	4	True
+Human African trypanosomiasis	2	2	0	2	False
+Human Granulocytic Anaplasmosis	11	24	1	10	False
+Human Metapneumovirus Infection	2	8	0	2	False
+Human Monocytic Ehrlichiosis	10	27	1	9	False
+Human Papillomavirus Infection	4	3	0	4	False
+Humeroradial Synostosis	7	20	3	4	False
+Hunter syndrome	8	26	0	8	False
+Huntington disease-like 2	4	10	0	4	False
+Huntington Disease	20	70	4	12	False
+Huppke-Brendel syndrome	6	18	0	6	False
+Hurler syndrome	4	27	0	4	False
+Hutchinson-Gilford Progeria Syndrome	8	12	0	8	False
+Hydatidiform Mole	4	6	0	4	False
+Hydrolethalus Syndrome 1	5	16	0	5	False
+Hydrolethalus Syndrome 2	4	12	0	4	False
+Hydrops-Lactic Acidosis-Sideroblastic Anemia-Multisystemic Failure Syndrome	7	18	0	7	False
+Hyper-IgM Syndrome Type 1	6	16	0	6	False
+Hyper-IgM Syndrome Type 2	11	11	0	11	False
+Hyper-IgM Syndrome Type 5	8	16	0	8	False
+Hyperbiliverdinemia	4	7	1	3	False
+Hypercalciuria, Absorptive, 2	2	3	0	2	False
+Hypercatabolic Hypoproteinemia	9	8	0	9	False
+Hypercholanemia Familial 2	4	8	0	4	False
+Hyperemesis Gravidarum	14	14	2	11	True
+Hypereosinophilic syndrome	10	18	0	10	False
+Hyperinsulinemic Hypoglycemia	13	30	7	6	False
+Hyperkalemic Periodic Paralysis	8	14	0	8	False
+Hyperlipidemia	8	10	2	5	False
+Hypermetabolism Due To Uncoupled Mitochondrial Oxidative Phosphorylation 2	7	12	0	7	False
+Hypermobile Ehlers-Danlos Syndrome	3	4	1	2	False
+Hyperornithinemia-hyperammonemia-homocitrullinuria syndrome	7	47	0	7	True
+Hyperostosis Cranialis Interna	7	14	0	7	False
+Hyperparathyroidism 1	6	10	0	6	False
+Hyperphosphatemic Familial Tumoral Calcinosis	13	26	2	11	False
+Hyperprolinemia Type 1	4	9	0	4	False
+Hyperprolinemia Type 2	7	6	0	7	True
+Hypersensitivity pneumonitis	5	4	0	5	False
+Hypertensive Heart Disease	7	18	0	7	False
+Hypertensive Retinopathy	3	9	0	3	False
+Hypertrophic Cardiomyopathy	6	1	5	1	False
+Hypertrophic Cardiomyopathy 1	8	16	0	8	False
+Hypertrophic Cardiomyopathy 10	8	19	0	8	False
+Hypertrophic Cardiomyopathy 11	4	7	0	4	False
+Hypertrophic Cardiomyopathy 12	9	13	0	9	False
+Hypertrophic Cardiomyopathy 13	5	7	0	5	False
+Hypertrophic Cardiomyopathy 14	5	8	1	4	False
+Hypertrophic Cardiomyopathy 15	7	10	0	7	False
+Hypertrophic Cardiomyopathy 16	5	8	0	5	False
+Hypertrophic Cardiomyopathy 17	4	5	0	4	False
+Hypertrophic Cardiomyopathy 18	5	9	1	4	False
+Hypertrophic Cardiomyopathy 2	8	9	0	8	False
+Hypertrophic Cardiomyopathy 20	3	3	0	3	False
+Hypertrophic Cardiomyopathy 21	3	2	0	3	False
+Hypertrophic Cardiomyopathy 25	7	7	0	7	False
+Hypertrophic Cardiomyopathy 26	8	11	0	8	False
+Hypertrophic Cardiomyopathy 28	7	14	1	6	False
+Hypertrophic Cardiomyopathy 3	9	11	0	9	False
+Hypertrophic Cardiomyopathy 30, Atrial	9	12	0	9	False
+Hypertrophic Cardiomyopathy 4	8	7	1	7	False
+Hypertrophic Cardiomyopathy 7	7	9	0	7	False
+Hypertrophic Cardiomyopathy 8	7	14	0	7	False
+Hypertrophic Cardiomyopathy 9	4	4	0	4	False
+Hypervalinemia and Hyperleucine-Isoleucinemia	3	13	0	3	True
+Hypoalphalipoproteinemia, Primary, 1	4	8	0	4	False
+Hypobetalipoproteinemia	13	19	2	6	False
+Hypochondrogenesis	7	23	1	6	False
+Hypochondroplasia	5	29	0	5	False
+Hypogonadotropic Hypogonadism 18 With or Without Anosmia	5	11	1	4	False
+Hypogonadotropic Hypogonadism 23 With or Without Anosmia	5	17	0	5	False
+Hypogonadotropic Hypogonadism 24 Without Anosmia	7	21	0	7	False
+Hypogonadotropic Hypogonadism 26 With or Without Anosmia	5	12	0	5	False
+Hypokalemic Periodic Paralysis	3	4	1	2	False
+Hypokalemic Tubulopathy and Deafness	5	8	0	5	False
+Hypomagnesemia 7 Renal With Or Without Dilated Cardiomyopathy	7	17	0	7	False
+Hypomagnesemia, Seizures, and Intellectual Disability 1	9	25	0	9	True
+Hypomagnesemia, Seizures, and Intellectual Disability 2	6	12	0	6	True
+Hypomyelinating Leukodystrophy 10	7	8	0	7	True
+Hypomyelinating Leukodystrophy 12	7	15	0	7	True
+Hypomyelinating Leukodystrophy 14	11	22	1	10	True
+Hypomyelinating Leukodystrophy 15	6	9	0	6	False
+Hypomyelinating Leukodystrophy 17	9	23	0	9	True
+Hypomyelinating Leukodystrophy 2	8	29	1	7	False
+Hypomyelinating Leukodystrophy 23	9	16	0	9	False
+Hypomyelinating Leukodystrophy 27	7	10	0	7	False
+Hypomyelinating Leukodystrophy 4	9	35	0	9	True
+Hypomyelinating Leukodystrophy 5	7	20	1	6	False
+Hypomyelinating Leukodystrophy 7	4	17	0	4	False
+Hypomyelinating Leukodystrophy 9	12	37	0	12	True
+Hypomyelination with Brain Stem and Spinal Cord Involvement and Leg Spasticity	5	15	0	5	True
+Hypoparathyroidism-Deafness-Renal Disease Syndrome	9	30	0	9	False
+Hypophosphatasia	5	20	0	5	False
+Hypopigmentation, Organomegaly, and Delayed Myelination and Development	13	14	0	13	False
+Hypoplasminogenemia	3	9	0	3	False
+Hypoplastic Left Heart Syndrome	10	19	0	10	False
+Hypothalamic Hamartoma with Gelastic Seizures	8	19	0	8	True
+Hypotonia-cystinuria syndrome	7	23	0	7	False
+Hypotonia, Ataxia, Developmental Delay, and Tooth Enamel Defect Syndrome	10	21	0	10	False
+UNC80 Deficiency	6	13	0	6	False
+Hypotonia, Infantile, with Psychomotor Retardation and Characteristic Facies 3	15	17	0	15	True
+Hypotrichosis 11	3	7	0	3	False
+Hypotrichosis 14	4	10	0	4	False
+Hypotrichosis 2	4	6	0	4	False
+Hypotrichosis 4	7	9	0	7	False
+Hypotrichosis with Juvenile Macular Dystrophy	4	9	0	4	False
+ICHAD Syndrome	5	9	0	5	False
+IDH3B-Related Retinopathy	5	12	0	5	False
+Acute Myeloid Leukemia, IDH-Mutated	6	5	0	6	False
+IDH-Mutant Astrocytoma	8	13	3	4	False
+IDH-Mutant Cholangiocarcinoma	6	12	0	6	False
+IDH-Mutant and 1p/19q-Codeleted Oligodendroglioma	6	8	2	3	False
+IFAP Syndrome 1	6	5	0	6	False
+IFAP Syndrome 2	7	11	0	7	False
+IFIH1-Related Type 1 Interferonopathy	3	8	0	3	True
+IFNAR1 Deficiency	9	8	1	7	False
+IFNAR2 Deficiency	5	8	0	5	False
+IFT140-related Recessive Ciliopathy	4	8	0	4	False
+IGF1 Deficiency	3	10	0	3	False
+IHH-Related Polysyndactyly	4	12	0	4	False
+IKBKG ectodermal dysplasia with immunodeficiency	8	32	0	8	False
+IKK2 Deficiency	4	10	0	4	False
+IKZF2-related Combined Immunodeficiency	8	20	0	8	False
+IL21R Deficiency	6	7	0	6	False
+IL6ST-Related Stuve-Wiedemann Syndrome	5	16	0	5	False
+IMAGe Syndrome	5	15	0	5	False
+IMPDH1-Related Retinopathy	7	11	1	6	False
+IMPG1-related Dominant Retinopathy	5	12	0	5	False
+IMPG1-related Recessive Retinopathy	6	14	0	6	False
+IMPG2-related Recessive Retinopathy	4	8	0	4	False
+INPP5K-Related Congenital Muscular Dystrophy	10	26	0	10	True
+IPEX Syndrome	3	2	0	3	False
+IREB2-Related Neurodegeneration	13	17	1	12	True
+IRF1 Deficiency	3	6	0	3	False
+IRF2BPL-Related Neurodevelopmental Disorder with Regression	11	22	1	9	True
+IRF7 Deficiency	3	7	0	3	False
+IRIDA Syndrome	8	9	0	8	False
+IRX5-related craniofacial dysostosis with osteopenia, intellectual disability, and dental anomalies	4	13	0	4	False
+ISCU Myopathy	11	20	0	11	False
+Ichthyosiform Erythroderma, Corneal Involvement, and Hearing Loss	4	19	0	4	False
+Ichthyosis Prematurity Syndrome	7	21	0	7	False
+Ichthyosis Vulgaris	9	19	0	9	False
+Ichthyotic_Keratoderma_Spasticity_Hypomyelination_And_Dysmorphic_Facial_Features	6	8	0	6	False
+Idiopathic Gastroparesis	7	15	1	6	False
+Idiopathic Hypereosinophilic Syndrome	11	20	0	11	False
+Idiopathic Hypersomnia	5	5	0	5	False
+Idiopathic Interstitial Pneumonia	8	8	0	8	False
+Idiopathic Multicentric Castleman Disease	17	27	6	11	False
+Idiopathic Phalangeal Acro-osteolysis	2	5	1	1	False
+Idiopathic Pulmonary Arterial Hypertension	8	15	1	7	False
+Idiopathic Pulmonary Fibrosis	21	32	10	11	False
+Idiopathic Spontaneous Coronary Artery Dissection	2	7	1	1	False
+Idiopathic Triglyceride Deposit Cardiomyovasculopathy	2	3	0	2	False
+IgA Nephropathy	10	15	1	9	False
+IgA Pemphigus	6	12	0	6	False
+IgA Vasculitis	5	4	0	5	False
+IgG4-Related Disease	25	38	7	12	False
+IgG4-Related Sclerosing Cholangitis	3	2	0	3	False
+Imerslund-Grasbeck Syndrome Type 1	9	21	0	9	False
+Immune Dysregulation, Neurodevelopmental Defects, And Colitis	7	14	0	7	True
+Immune Dysregulation With Immunodeficiency Due To AIOLOS Haploinsufficiency	5	19	1	4	False
+Immune Thrombocytopenia	4	0	3	1	False
+Immunodeficiency 101 (Varicella Zoster Virus-Specific)	7	17	0	7	False
+Immunodeficiency 102	7	21	0	7	False
+Immunodeficiency 105	4	6	1	3	False
+Immunodeficiency 118	7	8	0	7	False
+Immunodeficiency 11B with Atopic Dermatitis	6	19	0	6	False
+Immunodeficiency 120	9	23	0	9	False
+Immunodeficiency 122	9	26	1	8	False
+Immunodeficiency 123 With HPV-related Verrucosis	9	8	0	9	False
+Immunodeficiency 127	5	6	0	5	False
+Immunodeficiency 128	7	16	0	7	False
+Immunodeficiency 131	6	6	0	6	False
+Immunodeficiency 133 With Ectodermal Dysplasia With Or Without Peripheral Neuropathy	9	18	2	7	False
+Immunodeficiency 14B, Autosomal Recessive	11	11	0	11	False
+Immunodeficiency 15A	7	16	0	7	False
+Immunodeficiency 18	10	10	0	10	False
+Immunodeficiency 19	11	26	0	11	False
+Immunodeficiency 25	6	4	1	5	False
+Immunodeficiency 27A	7	16	0	7	False
+Immunodeficiency 28	6	9	0	6	False
+Immunodeficiency 32B	6	17	0	6	False
+Immunodeficiency 35	9	14	0	9	False
+Immunodeficiency 37	8	8	0	8	False
+Immunodeficiency 49	13	39	2	11	True
+Immunodeficiency 53	10	35	0	10	False
+Immunodeficiency 57	6	13	0	6	False
+Immunodeficiency 60	6	19	0	6	False
+Immunodeficiency 61	5	8	0	5	False
+Immunodeficiency 62	10	23	0	10	False
+Immunodeficiency 63 with Lymphoproliferation and Autoimmunity	8	7	0	8	False
+Immunodeficiency 64	8	11	0	8	False
+Immunodeficiency 65 (IRF9 Deficiency)	8	11	0	8	False
+Immunodeficiency 67	8	14	0	8	False
+Immunodeficiency 69	5	14	0	5	False
+Immunodeficiency 70	4	3	0	4	False
+Immunodeficiency 73B	8	12	0	8	False
+Immunodeficiency 74, COVID-19-Related, X-Linked	9	13	0	9	False
+Immunodeficiency 76	10	14	0	10	False
+Immunodeficiency 79	5	11	0	5	False
+Immunodeficiency 80 with or without Congenital Cardiomyopathy	4	9	0	4	False
+Immunodeficiency 81	9	22	2	7	False
+Immunodeficiency 82 With Systemic Inflammation	5	20	0	5	False
+Immunodeficiency 84	7	14	0	7	False
+Immunodeficiency 85 and Autoimmunity	6	20	0	6	False
+Immunodeficiency 86	9	10	0	9	False
+Immunodeficiency 88	10	25	1	9	False
+Immunodeficiency 89 and Autoimmunity	6	10	0	6	False
+Immunodeficiency 91 and Hyperinflammation	8	8	0	8	True
+Immunodeficiency 92	7	7	0	7	True
+Immunodeficiency 93 and Hypertrophic Cardiomyopathy	9	8	0	9	False
+Immunodeficiency 96	8	14	0	8	False
+Immunodeficiency 97 With Autoinflammation	4	10	0	4	False
+Immunodeficiency 98 With Autoinflammation	8	6	1	7	False
+Immunodeficiency-Centromeric Instability-Facial Anomalies Syndrome	6	29	1	5	False
+Immunodeficiency Common Variable 4	5	4	0	5	False
+Immunodeficiency Due To MASP-2 Deficiency	4	6	0	4	False
+Immunoskeletal Dysplasia with Neurodevelopmental Abnormalities	9	37	0	9	False
+Impetigo	7	11	0	7	False
+Inborn Disorder of Bile Acid Synthesis	4	3	0	4	False
+Inborn Disorder of Cobalamin Metabolism and Transport	6	6	1	5	True
+Inborn Disorder of Methionine Cycle and Sulfur Amino Acid Metabolism	8	34	0	8	False
+Inclusion body myopathy with Paget disease of bone and frontotemporal dementia	8	33	1	6	False
+Inclusion Body Myositis	11	14	3	6	False
+Inclusion Conjunctivitis	3	8	0	3	False
+Incontinentia Pigmenti	11	12	0	11	False
+Indian Tick Typhus	8	17	1	6	False
+Infantile-Onset Multisystem Neurologic, Endocrine, and Pancreatic Disease	5	20	0	5	False
+Infantile-Onset Pompe Disease	10	23	0	10	False
+Infantile Cataract, Skin Abnormalities, Glutamate Excess, and Impaired Intellectual Development	11	11	0	11	True
+Infantile Cerebellar-Retinal Degeneration	4	16	0	4	True
+Infantile Hemangioma	7	15	1	5	False
+Infantile Hypercalcemia	4	19	1	3	False
+Infantile Liver Failure Syndrome 1	9	9	1	8	True
+Infantile Liver Failure Syndrome 2	11	20	0	11	True
+Infantile_Myofibromatosis	3	10	1	2	False
+Infantile Parkinsonism-Dystonia	3	16	0	3	False
+Infantile Spasms	4	11	0	4	True
+Infective Endocarditis	8	18	1	7	False
+Inflammatory Bowel Disease 30	4	7	0	4	False
+Inflammatory Myofibroblastic Tumor	4	10	0	4	False
+Inflammatory Skin and Bowel Disease, Neonatal, 1	9	26	0	9	False
+Inflammatory Skin And Bowel Disease Neonatal 2	8	23	0	8	False
+Influenza	7	2	5	1	False
+Inherited Aplastic Anemia	7	15	4	3	False
+Inherited Ichthyosis	6	13	2	4	False
+Inherited Porphyria	12	24	5	4	False
+Inherited Prekallikrein Deficiency	8	10	0	8	False
+Inherited Retinal Dystrophy	4	11	2	2	False
+Inherited Threoninemia	3	14	0	3	True
+Intellectual Developmental Disorder, Autosomal Dominant 64	4	6	0	4	False
+Intellectual Developmental Disorder, Autosomal Dominant 72	6	16	0	6	False
+MARK2-Related Intellectual Developmental Disorder	4	13	0	4	True
+Intellectual Developmental Disorder, Autosomal Dominant 77	7	9	1	5	True
+Intellectual Developmental Disorder Autosomal Recessive 67	4	3	0	4	False
+Intellectual Developmental Disorder With Autism And Dysmorphic Facies	6	10	0	6	True
+TBR1-Related Neurodevelopmental Disorder	8	16	0	8	True
+Intellectual Developmental Disorder With Macrocephaly Seizures And Speech Delay	7	22	0	7	True
+Intellectual Developmental Disorder With Muscle Tone Abnormalities And Distal Skeletal Defects	5	10	0	5	False
+Intellectual Developmental Disorder With Speech Delay And Axonal Peripheral Neuropathy	5	12	0	5	False
+Intellectual Developmental Disorder with Speech Delay, Autism, and Dysmorphic Facies	3	6	0	3	True
+Intellectual Developmental Disorder, X-Linked, Syndromic 37	9	23	2	6	False
+Intellectual Developmental Disorder, X-Linked 114	8	25	0	8	False
+Intellectual Developmental Disorder, X-Linked, Syndromic, With Pigmentary Mosaicism And Coarse Facies	4	8	0	4	True
+Intellectual Disability, Anterior Maxillary Protrusion, and Strabismus	8	7	0	8	True
+Intellectual Disability, Autosomal Dominant 11	4	4	0	4	False
+Intellectual Disability, Autosomal Dominant 30	4	6	0	4	True
+Intellectual Disability Autosomal Dominant 34	9	29	0	9	True
+Intellectual Disability Autosomal Dominant 42	6	24	0	6	True
+Intellectual Disability, Autosomal Dominant 48	7	11	1	6	True
+Intellectual Disability Autosomal Dominant 52	11	24	0	11	True
+Intellectual Disability, Autosomal Dominant 6	8	17	0	8	True
+Intellectual Disability, Autosomal Recessive 43	7	10	0	7	False
+Intellectual Disability Autosomal Recessive 65	7	11	0	7	False
+Intellectual Disability X-linked 100	9	11	1	6	True
+Intellectual Disability X-linked 102	11	21	1	10	True
+Intellectual Disability X-linked 93	6	8	0	6	False
+Intellectual Disability, X-linked, Syndromic 33	9	23	1	8	True
+Intellectual Disability X-linked Syndromic 35	8	20	2	6	True
+CNKSR2-Related Neurodevelopmental and Epilepsy Disorder	8	11	0	8	True
+Interleukin-10 Receptor Deficiency	4	3	0	4	False
+Intermediate Charcot-Marie-Tooth Disease	7	11	5	2	False
+Intermittent Explosive Disorder	7	10	2	4	False
+Internal Hordeolum	6	9	0	6	False
+Interstitial Lung Disease 1	6	8	0	6	False
+Interstitial Lung Disease 2	7	11	0	7	False
+Intestinal Hypomagnesemia 1	11	21	0	11	True
+Intracranial berry aneurysm	8	18	2	6	False
+Intrahepatic Cholestasis of Pregnancy	5	9	0	5	False
+Invasive Candidiasis	4	8	0	4	False
+Invasive Non-Typhoidal Salmonellosis	7	11	4	1	False
+Iron Poisoning	10	10	0	10	False
+Irritable Bowel Syndrome	7	1	6	1	False
+Ischemic Stroke	9	14	0	9	False
+Isobutyryl-CoA Dehydrogenase Deficiency	5	21	1	4	False
+Isolated Anophthalmia-Microphthalmia Syndrome	13	35	1	11	False
+Isolated Congenital Digital Clubbing	5	6	1	4	False
+Isolated Focal Non-epidermolytic Palmoplantar Keratoderma	8	17	0	8	False
+Isolated Glycerol Kinase Deficiency	8	7	0	8	False
+Isolated Growth Hormone Deficiency	12	14	3	5	False
+Isolated Growth Hormone Deficiency Type IA	4	7	0	4	False
+Isolated Hyperchlorhidrosis	6	15	0	6	False
+Isolated Pierre Robin Syndrome	3	7	0	3	False
+Isolated Sedoheptulokinase Deficiency	3	4	0	3	False
+Isolated Sulfite Oxidase Deficiency	13	13	0	13	True
+Isolated Thyroid-stimulating Hormone Deficiency	5	16	0	5	False
+Isolated Woolly Hair	2	8	1	1	False
+Isoniazid Toxicity	11	20	2	4	True
+Isovaleric Acidemia	7	34	0	7	True
+Israeli Tick Typhus	6	16	1	5	False
+JARID2-Related Neurodevelopmental Disorder	4	16	0	4	False
+Jaberi-Elahi Syndrome	8	26	0	8	True
+Jackson-Weiss Syndrome	5	9	0	5	False
+Jacobsen Syndrome	2	4	0	2	False
+Jalili Syndrome	4	17	0	4	False
+Japanese Encephalitis	4	9	0	4	True
+Japanese Spotted Fever	7	15	0	7	False
+Jeavons Syndrome	3	0	2	1	True
+Jeffries-Lakhani Neurodevelopmental Syndrome	4	15	0	4	True
+Jervell and Lange-Nielsen Syndrome 1	11	10	0	11	False
+Jervell and Lange-Nielsen Syndrome 2	7	6	0	7	False
+Jet Lag	3	7	0	3	False
+Jeune Asphyxiating Thoracic Dystrophy	7	45	6	1	False
+Johanson-Blizzard syndrome	6	17	0	6	False
+Joint Laxity, Short Stature, and Myopia	4	8	0	4	False
+Joubert syndrome	16	69	0	16	False
+Junctional Epidermolysis Bullosa	7	5	4	3	False
+Juvenile-Onset Diabetes Mellitus With Central and Peripheral Neurodegeneration	9	9	0	9	False
+Juvenile Absence Epilepsy	8	9	1	7	True
+Juvenile Amyotrophic Lateral Sclerosis	8	7	5	3	False
+Juvenile Idiopathic Arthritis	4	5	1	3	False
+Juvenile Myelomonocytic Leukemia	5	10	1	4	False
+Juvenile Myoclonic Epilepsy	6	6	0	6	True
+Juvenile Neuronal Ceroid Lipofuscinosis	10	13	8	2	True
+Juvenile Open Angle Glaucoma	5	8	2	2	False
+Juvenile Paget Disease	9	22	0	9	False
+Juvenile Polyposis Syndrome	9	18	2	5	False
+Juvenile Sialidosis Type 2	2	1	0	2	False
+Juvenile Temporal Arteritis	2	4	0	2	False
+Juvenile Xanthogranuloma	4	7	0	4	False
+KATNB1-related Cortical Malformation	5	18	0	5	False
+KBG Syndrome	4	26	0	4	False
+KCNA2-Related Developmental and Epileptic Encephalopathy	6	9	0	6	True
+KCNB1-Related Developmental and Epileptic Encephalopathy	6	11	0	6	True
+KCNH1 Associated Disorder	7	10	0	7	True
+KCNQ2 Developmental and Epileptic Encephalopathy	6	5	0	6	True
+KCNV2-Related Retinopathy	5	4	0	5	False
+KDF1-Related Ectodermal Dysplasia	6	13	0	6	False
+KDM1A-Related Neurodevelopmental Disorder	5	5	0	5	False
+KDM6B-Related Neurodevelopmental Disorder	9	32	0	9	False
+KIF1A-Related Neurological Disorder	8	15	2	6	True
+KIF2A-related Complex Cortical Dysplasia	7	20	0	7	True
+KIF5B-Related Kyphomelic Dysplasia	4	17	0	4	False
+KINSSHIP Syndrome	3	8	0	3	True
+KIT Mutant Melanoma	6	11	0	6	False
+KIZ-related Retinopathy	7	19	0	7	False
+KLC4-Related Early-Childhood-Onset Neurodegeneration	5	8	0	5	False
+KLHL24-Related Hypertrophic Cardiomyopathy	10	25	1	9	False
+KLICK Syndrome	8	14	0	8	False
+KMT2B-Related Dystonia	6	29	0	6	False
+KPNA7-related Preimplantation Embryonic Arrest	3	3	0	3	False
+KRAS G12C-Mutant Non-Small Cell Lung Cancer	5	4	1	4	False
+KRT1 Keratinopathies	3	9	0	3	False
+KRT74-Related Pure Hair-Nail Ectodermal Dysplasia	2	5	0	2	False
+KRT85-Related Pure Hair-Nail Ectodermal Dysplasia	3	6	0	3	False
+KY-related Neuromyopathy	6	9	1	5	False
+Kabuki Syndrome	8	25	0	8	False
+Kagami-Ogata Syndrome	6	10	1	5	False
+Kallmann Syndrome	3	2	0	3	False
+Kanzaki Disease	3	11	0	3	False
+Kaposi Sarcoma	9	9	1	8	False
+Kariminejad Neurodevelopmental Syndrome	3	16	0	3	False
+Karyomegalic Interstitial Nephritis	7	11	0	7	False
+Kasabach-Merritt Syndrome	7	7	1	6	False
+Kashin-Beck Disease	16	20	3	13	False
+Kawasaki Disease	2	37	1	1	False
+Kaya-Barakat-Masson Syndrome	3	16	0	3	True
+Kearns-Sayre syndrome	10	28	0	10	False
+Keipert syndrome	3	13	0	3	False
+Kennedy Disease	6	6	1	5	False
+Keratitis-Ichthyosis-Deafness Syndrome	11	23	0	11	False
+Keratoconus	14	22	3	10	False
+Keratoderma Hereditarium Mutilans	5	13	1	4	False
+Keratosis follicularis spinulosa decalvans	4	22	1	3	False
+Keratosis Pilaris Atrophicans	5	10	2	3	False
+Keutel Syndrome	4	12	0	4	False
+Kidney Sarcoma	6	6	0	6	False
+Kikuchi-Fujimoto Disease	3	1	1	2	False
+Kilquist syndrome	9	17	0	9	False
+Kindler Epidermolysis Bullosa	5	3	1	4	False
+Klebsiella Pneumonia	10	12	2	7	False
+Kleefstra Syndrome	4	9	1	3	True
+Kleine-Levin Syndrome	4	3	0	4	False
+Klinefelter Syndrome	5	15	0	5	False
+Klippel-Feil Syndrome	5	12	2	2	False
+Kniest Dysplasia	4	23	1	2	False
+Knobloch Syndrome 1	9	24	0	9	True
+Den Hoed-de Boer-Voisin Syndrome	3	11	0	3	True
+Konzo	4	3	0	4	False
+Koolen-de Vries syndrome	5	29	0	5	False
+Kosaki_Overgrowth_Syndrome	7	22	0	7	False
+Krabbe Disease	11	17	1	10	False
+Krabbe Disease Due To Saposin A Deficiency	3	2	0	3	False
+Kufor-Rakeb syndrome	6	12	0	6	False
+Kummell Disease	6	7	1	3	False
+Kyasanur Forest Disease	5	8	1	4	False
+Kyphoscoliotic Ehlers-Danlos Syndrome	11	30	1	9	False
+L-2-Hydroxyglutaric Aciduria	6	24	0	6	True
+L1 Syndrome	4	15	0	4	False
+LAMA5-Related Bent Bone Dysplasia	5	16	0	5	False
+LAMB1-Related Cobblestone Lissencephaly	6	5	0	6	True
+LAMB2-Related Infantile-Onset Nephrotic Syndrome	12	37	0	12	False
+LAT Deficiency	16	43	0	16	False
+LCA5-Related Retinopathy	3	2	0	3	False
+LCK Deficiency	6	19	0	6	False
+LDLR-Related Familial Hypercholesterolemia	14	17	0	14	False
+LEF1 Ectodermal Dysplasia with Limb Malformations	5	13	1	4	False
+LETM1-Related Childhood-Onset Neurodegeneration	8	27	0	8	True
+LIFR-Related Stuve-Wiedemann Syndrome	4	21	0	4	False
+LPIN1-Related Recurrent Myoglobinuria	6	15	0	6	False
+LRBA Deficiency	8	13	2	4	False
+LRRK2-Related Parkinson Disease	6	6	0	6	False
+LSM7-related Leukodystrophy and Cerebellar Atrophy	7	15	0	7	False
+Labyrinthitis	12	13	1	11	False
+Lafora_Disease	10	38	0	10	True
+Lambert-Eaton Myasthenic Syndrome	5	4	0	5	False
+Landau-Kleffner Syndrome	4	10	0	4	True
+Lane Hamilton Syndrome	4	10	0	4	False
+Langer Mesomelic Dysplasia	5	12	1	4	False
+Langerhans Cell Histiocytosis	3	2	0	3	False
+Large Cell Neuroendocrine Carcinoma	12	16	0	12	False
+Larsen-like Syndrome B3GAT3 Type	7	27	0	7	False
+Larsen Syndrome	4	14	1	2	False
+Laryngeal Squamous Cell Carcinoma	7	6	2	4	False
+Laryngotracheoesophageal Cleft	5	0	4	1	False
+Lassa Fever	7	22	1	6	False
+Late-Onset Pompe Disease	10	21	0	10	False
+Late Complement Component Deficiency	4	9	0	4	False
+Lateral Meningocele Syndrome	8	28	0	8	False
+Lathosterolosis	8	7	0	8	False
+Lathyrism	9	8	1	5	False
+Lead Poisoning	19	31	0	19	False
+Leber-like Hereditary Optic Neuropathy, Autosomal Recessive 1	8	9	0	8	False
+Leber Congenital Amaurosis 10	3	2	0	3	False
+Leber Congenital Amaurosis 13	7	8	0	7	False
+Leber Congenital Amaurosis 16	7	15	0	7	False
+Leber Congenital Amaurosis 9	8	17	0	8	False
+Leber Congenital Amaurosis with Early-Onset Deafness	3	5	0	3	False
+Leber Hereditary Optic Neuropathy	7	6	1	6	False
+Leber Optic Atrophy and Dystonia	6	13	0	6	False
+Left ventricular noncompaction	6	14	0	6	False
+Left Ventricular Noncompaction 10	5	5	0	5	False
+Left Ventricular Noncompaction 8	11	14	0	11	False
+Legg-Calve-Perthes Disease	10	23	2	8	False
+Legionnaires Disease	6	2	3	3	False
+Legius Syndrome	6	5	0	6	False
+Leigh Syndrome	7	9	4	3	False
+Leiomyosarcoma	6	9	0	6	False
+Leishmaniasis	6	11	0	6	False
+Lemierre Syndrome	5	12	0	5	False
+Lennox-Gastaut Syndrome	10	21	1	8	True
+Lenz-Majewski hyperostotic dwarfism	2	9	0	2	False
+Leprosy	12	7	9	1	False
+Leptospirosis	21	25	5	1	False
+Leri-Weill Dyschondrosteosis	4	17	1	3	False
+Lesch-Nyhan Syndrome	5	29	0	5	False
+Lessel-Kreienkamp Syndrome	8	33	1	7	True
+Lethal Congenital Contracture Syndrome	17	31	12	3	False
+Lethal Congenital Glycogen Storage Disease of Heart	4	10	0	4	False
+Lethal Polymalformative Syndrome, Boissel Type	7	27	0	7	False
+Leukocyte Adhesion Deficiency 1	9	17	0	9	False
+Leukocyte Adhesion Deficiency Type II	8	12	0	8	False
+Leukoencephalopathy Progressive Infantile-onset With Or Without Deafness	5	11	0	5	True
+Leukoencephalopathy With Thalamus And Brainstem Involvement And High Lactate	14	43	0	14	True
+Leukoencephalopathy With Vanishing White Matter	5	6	0	5	True
+Li-Fraumeni Syndrome	19	36	0	19	False
+Li-Ghorbani-Weisz-Hubshman Syndrome	5	4	0	5	True
+Liberfarb syndrome	3	16	0	3	False
+Lichen Myxedematosus	4	3	1	3	False
+Lichen Simplex Chronicus	5	8	0	5	False
+Lichtenstein-Knorr Syndrome	3	8	0	3	True
+Liddle syndrome	5	14	1	4	False
+Light Chain Deposition Disease	8	11	0	8	False
+Limb-Girdle Muscular Dystrophy, Autosomal Dominant	5	4	3	2	False
+Limbic Encephalitis	6	5	4	2	True
+Linear Skin Defects with Multiple Congenital Anomalies 1	4	10	0	4	False
+Lipoic Acid Synthetase Deficiency	4	13	0	4	True
+Lipoid Proteinosis	7	19	0	7	True
+Lipoprotein Glomerulopathy	6	16	0	6	False
+Liposarcoma	5	6	2	3	False
+Lipoyl Transferase 1 Deficiency	4	12	0	4	True
+Lissencephaly Spectrum Disorders	12	11	9	1	True
+Listeria meningitis	10	18	1	7	False
+Listeriosis	7	18	0	7	False
+Livedoid vasculopathy	3	7	2	1	False
+Liver Cirrhosis	13	20	1	12	True
+Local Anesthetic Systemic Toxicity	11	19	0	11	True
+Loeys-Dietz Syndrome	5	39	3	2	False
+Loeys-Dietz Syndrome 1	8	32	0	8	False
+Loeys-Dietz Syndrome 2	9	33	1	8	False
+Loeys-Dietz Syndrome 4	8	34	0	8	False
+Loeys-Dietz Syndrome 6	7	15	0	7	True
+Lone Star Virus Infection	1	1	0	1	False
+Long-chain 3-hydroxyacyl-CoA Dehydrogenase Deficiency	7	24	0	7	False
+Long-Olsen-Distelmaier Syndrome	7	20	0	7	False
+Long COVID	19	50	4	13	False
+Familial Long QT Syndrome	9	16	4	5	False
+Long QT Syndrome 1	7	15	1	6	False
+Long QT Syndrome 10	3	4	0	3	False
+Long QT Syndrome 14	4	7	0	4	True
+Long QT Syndrome 15	5	9	0	5	False
+Lowe syndrome	7	16	0	7	False
+Lowry-Wood Syndrome	3	8	0	3	False
+Lucey-Driscoll Syndrome	3	3	0	3	False
+Ludwig's Angina	6	1	5	1	False
+Lujo Hemorrhagic Fever	4	13	0	4	False
+Lung Carcinoma	10	18	6	3	False
+Lung Disease, Immunodeficiency, and Chromosome Breakage Syndrome	7	36	0	7	False
+Lupus Nephritis	13	15	1	12	False
+Luscan-Lumish Syndrome	6	6	0	6	False
+Lyme Disease	12	21	7	1	False
+Lymphangioleiomyomatosis	5	5	0	5	False
+Lymphatic filariasis	4	3	3	1	False
+Lymphatic malformation 13	4	11	0	4	False
+Lymphatic malformation 6	7	7	0	7	True
+Lymphedema-Distichiasis Syndrome	6	19	0	6	False
+Lymphogranuloma Venereum	6	13	1	5	False
+Lymphoma	4	8	2	1	False
+Lymphomatoid Granulomatosis	5	5	0	5	False
+Lymphoproliferative Syndrome 1	7	19	0	7	False
+Lynch Syndrome	6	5	0	6	False
+Lysinuric protein intolerance	8	16	0	8	False
+Lysosomal Acid Phosphatase Deficiency	4	8	0	4	False
+MAK-related Retinopathy	8	17	0	8	False
+MALT Lymphoma	4	3	0	4	False
+MAN2C1-congenital disorder of deglycosylation 2	3	11	0	3	False
+MASS Syndrome	3	12	0	3	False
+MBD4-Related Tumor Predisposition Syndrome	7	15	0	7	False
+MBD4-Related Uveal Melanoma Predisposition	4	4	0	4	False
+MBD5 Haploinsufficiency Syndrome	5	10	0	5	True
+Medium Chain Acyl-CoA Dehydrogenase Deficiency	5	24	0	5	True
+MCM3AP-Related Peripheral Neuropathy	5	6	0	5	False
+MCM8-related gametogenic failure	5	6	1	4	False
+MCM9-related gametogenic failure	4	6	1	2	False
+MECP2 Duplication Syndrome	2	11	1	1	True
+MED11-Related Disorder	2	5	0	2	True
+MED13L Syndrome	7	35	1	6	True
+MED13 Syndrome	11	39	2	9	False
+MED17-Related Disorder	2	11	0	2	True
+MED27-Related Disorder	2	9	0	2	True
+MEDNIK syndrome	4	13	0	4	False
+MEF2C-Related Disorder	9	10	2	4	True
+MEGF10-Related Myopathy	10	35	0	10	False
+MEGF8-related Carpenter Syndrome	6	8	0	6	False
+MEHMO Syndrome	7	18	0	7	True
+MEK Inhibitor-Induced Cardiomyopathy	3	4	0	3	False
+MELAS Syndrome	21	45	2	19	True
+MEND Syndrome	3	6	0	3	False
+MEPAN Syndrome	11	21	0	11	False
+MERRF Syndrome	13	15	0	13	True
+MERTK-Related Retinopathy	4	3	0	4	False
+MET Exon 14 Skipping Non-Small Cell Lung Cancer	5	6	1	4	False
+MGAT2-congenital disorder of glycosylation	6	18	0	6	True
+MHC class II deficiency	6	38	0	6	False
+MHC Class I Deficiency 2	9	19	0	9	False
+MICPCH Syndrome	11	26	0	11	True
+MITF Waardenburg-Tietz Spectrum	4	12	0	4	False
+MMACHC-related Methylmalonic Aciduria and Homocystinuria, cblC Type	10	29	0	10	False
+MMADHC-related Disorder of Cobalamin Metabolism, cblD Type	12	17	2	5	False
+MOGAD	5	6	0	5	False
+MOGS-Congenital Disorder of Glycosylation	11	36	0	11	True
+MOS-related Oocyte Zygote Embryo Maturation Arrest	6	9	0	6	False
+MPDU1-congenital disorder of glycosylation	7	20	0	7	False
+MPI-congenital disorder of glycosylation	10	39	1	9	False
+MPIG6B-Related Thrombocytopenia and Myelofibrosis	13	32	0	13	False
+MRPL44 Deficiency	7	24	0	7	False
+MSI-High Colorectal Cancer	6	5	0	6	False
+MSI-High Endometrial Cancer	3	2	0	3	False
+MSMO1 Deficiency	12	28	0	12	False
+MSTO1-Related Mitochondrial Myopathy	14	15	0	14	True
+MSX2-Related Craniosynostosis	3	3	0	3	True
+MT-ATP6/MT-ATP8-Related Infantile Hypertrophic Cardiomyopathy	10	19	1	9	False
+MTHFD1 Deficiency	10	18	0	10	False
+MTO1 Deficiency	8	22	0	8	True
+MUTYH-Associated Polyposis	4	3	0	4	False
+MYH2-Related Myopathy	10	33	2	6	False
+MYH7-Related Skeletal Myopathy	10	20	0	10	False
+MYO6_Hearing_Loss	6	14	0	6	False
+MYPN-Related Cardiomyopathy	8	14	0	8	False
+Mabry Syndrome	9	10	1	8	True
+Machado-Joseph Disease	6	5	2	4	False
+Macrocephaly, Dysmorphic Facies, and Psychomotor Retardation	7	21	2	5	True
+Macular Degeneration, Early-onset	3	3	0	3	False
+Macular Dystrophy with or without Cone Dysfunction	4	5	0	4	False
+Maculopapular Cutaneous Mastocytosis	4	8	1	3	False
+Madras Motor Neuron Disease	7	21	0	7	False
+Majeed Syndrome	6	15	0	6	False
+Major Depressive Disorder	12	8	7	1	False
+Mal De Debarquement	5	4	0	5	False
+Mal de Meleda	10	25	0	10	False
+Malan Syndrome	3	26	0	3	False
+Malaria	13	10	7	5	False
+Maleylacetoacetate Isomerase Deficiency	6	8	0	6	False
+Malignant Atrophic Papulosis	3	9	0	3	False
+Malignant Germ Cell Tumor of Ovary	13	16	0	13	False
+Malignant hyperthermia of anesthesia	2	11	0	2	False
+Malignant Mesothelioma	4	0	3	1	False
+Malignant Non-Dysgerminomatous Germ Cell Tumor Of Ovary	5	10	1	4	False
+Malignant otitis externa caused by Pseudomonas aeruginosa	3	9	0	3	False
+Malignant Peripheral Nerve Sheath Tumor	10	10	4	3	False
+Malignant Peritoneal Mesothelioma	5	8	1	4	False
+Malignant Sertoli-Leydig Cell Tumor of Ovary	6	5	0	6	False
+Malnutrition-Related Diabetes Mellitus	4	8	0	4	False
+Malonic Aciduria	8	8	0	8	True
+Mandibular Hypoplasia, Deafness, Progeroid Features, and Lipodystrophy Syndrome	7	20	1	6	False
+Mandibuloacral Dysplasia Associated to MTX2	10	16	0	10	False
+Mandibuloacral Dysplasia Type B	9	15	1	8	False
+Mandibulofacial Dysostosis with Alopecia	4	3	0	4	False
+Mandibulofacial dysostosis with microcephaly	3	23	0	3	False
+Manganism	16	36	1	15	True
+Mannose-binding Lectin Deficiency	6	10	0	6	False
+Mantle Cell Lymphoma	10	12	2	5	False
+Maple Syrup Urine Disease	8	29	0	8	True
+Marburg Virus Disease	4	13	0	4	False
+Marchiafava-Bignami Disease	6	5	0	6	False
+Marden-Walker Syndrome	5	17	1	4	False
+Marfan Syndrome	6	18	2	4	False
+Marfanoid-Progeroid-Lipodystrophy Syndrome	9	25	0	9	False
+Marginal Zone Lymphoma	4	3	0	4	False
+Marinesco-Sjogren Syndrome	8	9	0	8	False
+Maroteaux-Lamy syndrome	4	14	0	4	False
+Marshall-Smith Syndrome	5	17	0	5	False
+Marshall Syndrome	7	13	0	7	False
+Mast Cell Activation Syndrome	5	13	1	4	False
+Mayer-Rokitansky-Kuster-Hauser_Syndrome	10	24	1	9	False
+McKusick-Kaufman syndrome	6	8	0	6	False
+McLeod Neuroacanthocytosis Syndrome	10	9	0	10	False
+Meacham syndrome	3	9	0	3	False
+Measles	6	5	2	4	False
+Meckel Diverticulum	1	0	0	1	False
+Meckel Syndrome	11	0	10	1	False
+Mediator Complex Neurodevelopmental Disorder	9	36	1	8	False
+Medullary Sponge Kidney	5	12	1	4	False
+Medullary Thyroid Carcinoma	4	4	1	3	False
+Medulloblastoma	4	12	0	4	False
+Medulloblastoma, Non-WNT/Non-SHH	11	15	3	8	False
+Medulloblastoma, SHH-Activated	3	2	0	3	False
+Medulloblastoma, WNT-Activated	7	12	3	4	False
+Meester-Loeys Syndrome	4	6	0	4	False
+Megaconial Congenital Muscular Dystrophy	13	26	2	11	False
+Megacystis-Microcolon-Intestinal Hypoperistalsis Syndrome 1	3	6	0	3	False
+Megacystis-Microcolon-Intestinal Hypoperistalsis Syndrome 2	7	6	0	7	False
+Megalencephalic Leukoencephalopathy With Subcortical Cysts 1	7	15	0	7	True
+Megalencephalic Leukoencephalopathy With Subcortical Cysts 2A	8	18	1	7	True
+Megalencephalic Leukoencephalopathy With Subcortical Cysts 2B	7	14	1	6	True
+Megalencephaly-polydactyly Syndrome	6	9	0	6	False
+Megalencephaly-polymicrogyria-polydactyly-hydrocephalus Syndrome 3	3	4	0	3	True
+Meier-Gorlin syndrome	11	26	3	7	False
+Melanoma-Pancreatic Cancer Syndrome	9	12	1	8	False
+Melanoma and Neural System Tumor Syndrome	9	16	0	9	False
+Melanoma_in_Congenital_Melanocytic_Nevus	5	4	2	2	False
+Melanotic Neuroectodermal Tumor of Infancy	2	8	0	2	False
+Melioidosis	10	18	3	6	False
+Melkersson-Rosenthal syndrome	4	9	1	3	False
+Melorheostosis	8	19	0	8	False
+Membranous nephropathy	11	14	0	11	False
+Mendelian Susceptibility To Mycobacterial Diseases Due To Complete IL12B Deficiency	6	11	0	6	False
+Mendelian Susceptibility To Mycobacterial Diseases Due To Complete IL12RB1 Deficiency	6	10	0	6	False
+Mendelian Susceptibility To Mycobacterial Diseases Due To Complete ISG15 Deficiency	10	19	0	10	True
+Mendelian Susceptibility To Mycobacterial Diseases Due To Partial IRF8 Deficiency	5	7	0	5	False
+Meniere's Disease	4	7	3	1	False
+Meningeal Melanocytoma	5	4	0	5	False
+Meningeal tuberculosis	9	19	0	9	False
+Meningioma	11	5	5	3	False
+Meningococcal Meningitis	3	5	0	3	False
+Meningococcemia	7	17	0	7	False
+Menke-Hennekam Syndrome	7	10	0	7	False
+Menkes Disease	9	24	0	9	True
+Mercury Poisoning	2	1	0	2	False
+Merkel Cell Carcinoma	4	2	1	3	False
+Mesial Temporal Lobe Epilepsy with Hippocampal Sclerosis	2	1	0	2	True
+Mesomelia-Synostoses Syndrome	3	4	0	3	False
+Mesomelic Dysplasia, Kantaputra Type	4	7	0	4	False
+Mesomelic Dysplasia, Savarirayan Type	4	6	1	3	False
+Metabolic Dysfunction-Associated Steatotic Liver Disease	13	20	3	9	False
+Metabolic Myopathy Due To Lactate Transporter Defect	5	10	0	5	False
+Metachromatic Leukodystrophy	6	14	1	5	False
+Metaphyseal anadysplasia	5	4	1	4	False
+Metaphyseal Chondrodysplasia, Jansen Type	9	8	0	9	False
+Metaphyseal Chondrodysplasia, Schmid Type	5	3	1	4	False
+Metaphyseal dysplasia, Spahr type	3	2	0	3	False
+Metaphyseal dysplasia with maxillary hypoplasia and brachydactyly	6	5	0	6	False
+Metatropic Dysplasia	3	17	0	3	False
+Methanol Poisoning	11	14	0	11	False
+Methotrexate Toxicity	19	44	0	19	False
+Methylcobalamin Deficiency Type cblE	7	9	0	7	True
+Methylcobalamin Deficiency Type cblG	8	15	0	8	True
+Methylmalonate Semialdehyde Dehydrogenase Deficiency	6	5	2	4	True
+Methylmalonic Acidemia	10	36	2	8	False
+Methylmalonic Acidemia With Homocystinuria, Type cblJ	7	15	0	7	False
+Methylmalonic Aciduria and Homocystinuria cblL Type	6	7	1	5	False
+Methylmalonic Aciduria, cblA Type	13	27	1	12	False
+Methylmalonyl-CoA Epimerase Deficiency	6	18	0	6	False
+Mevalonate Kinase Deficiency	3	18	0	3	False
+Microcephalic Osteodysplastic Primordial Dwarfism Type I	5	21	0	5	False
+Microcephalic Osteodysplastic Primordial Dwarfism Type II	6	28	0	6	False
+Microcephaly-Capillary Malformation Syndrome	9	10	0	9	True
+Microcephaly 26, Primary, Autosomal Dominant	5	14	0	5	True
+Microcephaly 27, Primary, Autosomal Dominant	5	11	0	5	True
+Microcephaly, Cataracts, Impaired Intellectual Development, and Dystonia with Abnormal Striatum	4	10	0	4	False
+Microcephaly, Epilepsy, and Diabetes Syndrome 2	10	18	0	10	True
+Microcephaly, Facial Dysmorphism, Renal Agenesis, and Ambiguous Genitalia Syndrome	4	12	0	4	True
+Microcephaly, Growth Restriction, and Increased Sister Chromatid Exchange 2	5	8	0	5	False
+Microcephaly, Short Stature, and Impaired Glucose Metabolism 1	11	10	1	10	True
+Microcephaly, Short Stature, and Impaired Glucose Metabolism 2	9	24	0	9	False
+Microcornea-Myopic Chorioretinal Atrophy	5	12	0	5	False
+Microcytic Anemia With Liver Iron Overload	4	7	0	4	False
+microphthalmia, syndromic 11	6	9	1	5	False
+Microphthalmia with Coloboma	7	11	4	1	False
+Microscopic Polyangiitis	4	4	0	4	False
+Microvillus Inclusion Disease	5	4	0	5	False
+Middle East Respiratory Syndrome	2	15	0	2	False
+Midface Hypoplasia, Hearing Impairment, Elliptocytosis, and Nephrocalcinosis	4	14	0	4	False
+Migraine	11	11	3	8	False
+Migraine with aura	8	10	3	3	True
+Miller-Dieker Lissencephaly Syndrome	5	22	0	5	True
+Minimal Change Disease	7	14	1	6	False
+Mitchell-Riley Syndrome	11	12	1	10	False
+Mitchell Syndrome	4	9	0	4	False
+Mitochondrial Complex II Deficiency, Nuclear Type 1	3	4	0	3	True
+Mitochondrial Complex II Deficiency, Nuclear Type 3	3	15	0	3	True
+Mitochondrial Complex I Deficiency, Nuclear Type 1	8	16	0	8	False
+Mitochondrial Complex I Deficiency, Nuclear Type 11	11	28	0	11	False
+Mitochondrial Complex I Deficiency, Nuclear Type 12	5	4	1	4	True
+Mitochondrial Complex I Deficiency, Nuclear Type 13	6	16	0	6	True
+Mitochondrial Complex I Deficiency, Nuclear Type 14	9	13	0	9	False
+Mitochondrial Complex I Deficiency, Nuclear Type 15	7	19	0	7	True
+Mitochondrial Complex I Deficiency, Nuclear Type 17	8	11	0	8	False
+Mitochondrial Complex I Deficiency, Nuclear Type 18	7	22	0	7	True
+Mitochondrial Complex I Deficiency Nuclear Type 19	6	5	0	6	True
+Mitochondrial Complex I Deficiency, Nuclear Type 2	7	7	0	7	False
+Mitochondrial Complex I Deficiency Nuclear Type 21	6	18	0	6	True
+Mitochondrial Complex I Deficiency, Nuclear Type 22	8	15	0	8	False
+Mitochondrial Complex I Deficiency Nuclear Type 23	6	9	0	6	False
+Mitochondrial Complex I Deficiency, Nuclear Type 24	5	5	0	5	False
+Mitochondrial Complex I Deficiency, Nuclear Type 26	6	23	0	6	True
+Mitochondrial Complex I Deficiency Nuclear Type 3	7	11	0	7	False
+Mitochondrial Complex I Deficiency Nuclear Type 31	6	5	0	6	False
+Mitochondrial Complex I Deficiency, Nuclear Type 32	10	20	0	10	True
+Mitochondrial Complex I Deficiency, Nuclear Type 33	9	25	0	9	True
+Mitochondrial Complex I Deficiency, Nuclear Type 34	7	6	0	7	True
+Mitochondrial Complex I Deficiency, Nuclear Type 36	9	18	0	9	False
+Mitochondrial Complex I Deficiency, Nuclear Type 39	6	8	0	6	True
+Mitochondrial Complex I Deficiency, Nuclear Type 6	8	8	0	8	True
+Mitochondrial Complex V (ATP Synthase) Deficiency, Nuclear Type 1	3	7	0	3	True
+Mitochondrial Complex V (ATP Synthase) Deficiency, Nuclear Type 2	5	8	0	5	False
+Mitochondrial Complex V (ATP Synthase) Deficiency, Nuclear Type 3	5	18	0	5	False
+Mitochondrial DNA Depletion Syndrome 12B (Cardiomyopathic Type)	9	21	1	8	False
+Mitochondrial DNA Depletion Syndrome 14B (Cardioencephalomyopathic Type)	7	12	0	7	False
+Mitochondrial DNA Depletion Syndrome 17	5	7	0	5	True
+Mitochondrial DNA Depletion Syndrome 3 (Hepatocerebral Type)	9	32	1	8	False
+Mitochondrial DNA Depletion Syndrome 6 (Hepatocerebral Type)	9	30	0	9	True
+Mitochondrial DNA Depletion Syndrome 7	3	17	0	3	True
+Mitochondrial DNA Depletion Syndrome, Myopathic Form	9	28	2	7	False
+Mitochondrial Neurogastrointestinal Encephalomyopathy	7	13	2	5	True
+Mitochondrial Pyruvate Carrier Deficiency	6	14	0	6	True
+Mitochondrial Spastic Paraplegia	5	6	0	5	False
+Mitochondrial Trifunctional Protein Deficiency	5	24	0	5	False
+Mitral Valve Prolapse	9	10	2	7	False
+Mixed Connective Tissue Disease	5	0	4	1	False
+Mixed Germ Cell Tumor	8	9	1	7	False
+Mixed Neuronal-Glial Tumor	4	4	0	4	True
+Mixed Phenotype Acute Leukemia	12	33	2	10	False
+Mobitz Type I Atrioventricular Block	4	4	1	3	False
+Molybdenum Cofactor Deficiency Type A	7	6	0	7	True
+Monilethrix	6	6	0	6	False
+Monkeypox	7	0	6	1	False
+Monoclonal Mast Cell Activation Syndrome	6	6	2	4	False
+Monomelic Amyotrophy	4	12	1	3	False
+Morgagni-Stewart-Morel Syndrome	5	14	2	3	False
+Morquio syndrome	10	20	1	9	False
+Mosaic Variegated Aneuploidy Syndrome	9	34	2	7	False
+Mowat-Wilson syndrome	5	10	0	5	True
+Moyamoya Disease	6	9	4	1	False
+Muckle-Wells Syndrome	6	15	0	6	False
+Mucoepidermoid Carcinoma	4	5	0	4	False
+Mucolipidosis Type II	5	14	0	5	False
+Mucolipidosis Type III Alpha/Beta	9	46	0	9	False
+Mucolipidosis Type IV	8	21	0	8	False
+Mucopolysaccharidosis-Plus Syndrome	8	26	1	7	False
+Mucopolysaccharidosis	5	14	0	5	False
+Mucopolysaccharidosis type IX	3	5	0	3	False
+Mucopolysaccharidosis type X	5	15	0	5	False
+Mucous Membrane Pemphigoid	8	14	1	6	False
+Muenke Syndrome	6	11	0	6	False
+Muggenthaler-Chowdhury-Chioza Syndrome	3	13	0	3	False
+Mulibrey Nanism	8	10	1	7	False
+Mullegama-Klein-Martinez Syndrome	5	7	0	5	False
+Mullerian Aplasia and Hyperandrogenism	4	11	0	4	False
+Multiminicore Disease	6	12	2	4	False
+Multiple Acyl-CoA Dehydrogenase Deficiency	8	27	2	6	False
+Multiple Congenital Anomalies-Hypotonia-Seizures Syndrome	6	15	0	6	True
+Multiple Endocrine Neoplasia Type 1	5	4	0	5	False
+Multiple Endocrine Neoplasia Type 2	4	3	0	4	False
+Multiple Epiphyseal Dysplasia	5	4	2	3	False
+Multiple Epiphyseal Dysplasia, Al-Gazali Type	2	4	0	2	False
+Multiple Epiphyseal Dysplasia, Beighton Type	6	18	0	6	False
+Multiple Mitochondrial Dysfunctions Syndrome 1	8	19	0	8	True
+Multiple Mitochondrial Dysfunctions Syndrome 2	8	20	0	8	True
+Multiple Mitochondrial Dysfunctions Syndrome 4	5	8	0	5	True
+Multiple Mitochondrial Dysfunctions Syndrome 5	7	17	0	7	True
+Multiple Mitochondrial Dysfunctions Syndrome 6	8	18	0	8	True
+Multiple Mitochondrial Dysfunctions Syndrome 9B	10	30	1	9	True
+Multiple Myeloma	8	7	1	6	False
+Multiple Sclerosis	13	15	5	3	False
+Multiple Self-Healing Squamous Epithelioma	4	4	1	3	False
+Multiple Sulfatase Deficiency	7	39	0	7	False
+Multiple Synostoses Syndrome	3	10	1	2	False
+Multiple System Atrophy	13	21	4	9	False
+Multisystem Inflammatory Syndrome in Children (MIS-C)	7	0	6	1	False
+Multisystemic smooth muscle dysfunction syndrome	2	3	1	1	False
+Mumps	4	3	0	4	False
+Murine typhus	9	4	4	1	False
+Muscular Dystrophy, Congenital Hearing Loss, and Ovarian Insufficiency Syndrome	8	14	0	8	False
+Muscular Dystrophy, Limb-Girdle, Autosomal Recessive 28	6	9	0	6	False
+Musculocontractural Ehlers-Danlos Syndrome	5	4	0	5	False
+MyD88 Deficiency	9	23	0	9	False
+Myalgic Encephalomyelitis/Chronic Fatigue Syndrome	24	18	15	6	False
+Myasthenia Gravis	3	0	2	1	False
+Mycetoma	10	13	1	7	False
+Mycobacterium Xenopi Infection	5	7	0	5	False
+Mycoplasma Encephalitis	6	15	0	6	False
+Mycoplasma Pneumoniae Pneumonia	4	6	0	4	False
+Mycosis Fungoides	8	0	7	1	False
+Myelodysplastic Syndrome	4	3	0	4	False
+Myeloperoxidase Deficiency	8	15	1	7	False
+Myeloproliferative Neoplasm, Unclassifiable	5	11	0	5	False
+Myhre Syndrome	4	29	0	4	False
+Myiasis	10	9	0	10	False
+Myocardial Infarction	5	13	0	5	False
+Myocarditis	14	31	4	10	False
+Myoclonic Epilepsy in Infancy	6	7	0	6	True
+Myoclonus-Dystonia Syndrome	8	22	5	2	False
+Myofibrillar Myopathy	8	29	0	8	False
+Myopathic Ehlers-Danlos Syndrome	7	18	1	6	False
+Myopathy Congenital Proximal With Minicore Lesions	5	22	0	5	False
+Myopathy, Congenital, with Tremor	4	16	0	4	False
+Myopathy Due To Calsequestrin And SERCA1 Protein Overload	12	27	1	11	False
+Myopathy Due To Myoadenylate Deaminase Deficiency	10	18	0	10	False
+Myopathy, Lactic Acidosis, and Sideroblastic Anemia	5	27	2	3	False
+Myopia 24, Autosomal Dominant	5	5	0	5	False
+Myotonic Dystrophy Type 1	15	30	0	15	False
+Myxedema	4	16	0	4	False
+N-Acetylglutamate Synthase Deficiency	7	22	1	5	False
+NAD(P)HX Dehydratase Deficiency	7	15	0	7	True
+NAD(P)HX Epimerase Deficiency	7	36	0	7	True
+NAGA Deficiency Type 3	2	11	0	2	True
+NARP syndrome	8	15	0	8	False
+NDE1-related Microcephaly-Lissencephaly	5	15	0	5	True
+NDP-Related Vitreoretinopathy	4	3	0	4	False
+Neonatal Severe Encephalopathy with Lactic Acidosis and Brain Abnormalities	6	25	0	6	True
+NEUROD2-Related Developmental and Epileptic Encephalopathy	7	7	0	7	True
+NF1 Microdeletion Syndrome	4	12	0	4	False
+NGLY1-congenital disorder of deglycosylation	5	6	0	5	True
+NIK Deficiency	9	21	0	9	False
+NKX2-5-Related Congenital, Conduction and Myopathic Heart Disease	9	25	0	9	False
+NOG-Related Symphalangism Spectrum Disorder	4	8	0	4	False
+Acute Myeloid Leukemia, NPM1-Mutated	5	4	0	5	False
+NR5A1-related sex development disorder	7	18	0	7	False
+NRAS Mutant Melanoma	4	3	0	4	False
+NRROS-Related Microgliopathy	7	12	0	7	True
+NTHL1-deficiency Tumor Predisposition Syndrome	3	7	0	3	False
+NTRK Fusion-Positive Cancer	3	3	0	3	False
+NUP62-Related Infantile Bilateral Striatal Necrosis	3	7	0	3	False
+Nager Acrofacial Dysostosis	4	6	0	4	False
+Nail-patella Syndrome	7	19	0	7	False
+Nance-Horan Syndrome	10	30	0	10	False
+Narcolepsy-Cataplexy Syndrome	3	5	1	1	False
+Narcolepsy	4	3	1	3	False
+Nasopharyngeal Carcinoma	6	4	4	1	False
+Nasu-Hakola Disease	13	16	0	13	False
+Natural Killer Cell and Glucocorticoid Deficiency with DNA Repair Defect	5	10	0	5	False
+Naxos disease	7	8	0	7	False
+Necrotizing Enterocolitis	15	34	1	14	False
+Necrotizing Soft Tissue Infection	6	14	0	6	False
+Nemaline Myopathy	10	18	4	5	False
+Neonatal Diabetes Mellitus With Congenital Hypothyroidism	10	25	0	10	False
+Neonatal Epileptic Encephalopathy Due to Glutaminase Deficiency	10	12	0	10	True
+Neonatal Lupus Erythematosus	6	5	0	6	False
+Neonatal Severe Primary Hyperparathyroidism	7	22	0	7	False
+Nephrogenic Syndrome of Inappropriate Antidiuresis	12	24	0	12	True
+Nephronophthisis	16	16	9	5	False
+Nephrotic Syndrome 15	7	9	0	7	False
+Nephrotic Syndrome Type 12	7	13	0	7	False
+Nephrotic Syndrome Type 18	6	9	0	6	False
+Nephrotic Syndrome Type 2	6	8	0	6	False
+Nephrotic Syndrome Type 20	5	10	0	5	False
+Nephrotic Syndrome Type 21	5	7	0	5	False
+Nephrotic Syndrome Type 3	15	23	1	12	False
+Nerve Agent Poisoning	9	25	0	9	True
+Nestor-Guillermo progeria syndrome	4	14	0	4	False
+Netherton syndrome	9	19	0	9	False
+Neuralgic Amyotrophy	6	13	0	6	False
+Neuroblastoma	38	45	15	15	False
+Neurocardiorenal Malformation Syndrome	6	11	0	6	False
+Neurodegeneration and Seizures Due to Copper Transport Defect	8	38	0	8	True
+Neurodegeneration Childhood-onset With Cerebellar Atrophy	11	35	2	9	False
+Neurodegeneration With Brain Iron Accumulation	4	14	0	4	False
+Neurodevelopmental Disorder With Absent Speech and Movement and Behavioral Abnormalities	7	18	0	7	False
+Neurodevelopmental Disorder With Ataxia And Brain Abnormalities	6	9	0	6	True
+Neurodevelopmental Disorder With Cerebellar Atrophy And Motor Dysfunction	10	32	0	10	True
+Neurodevelopmental Disorder With Characteristic Facial And Ectodermal Features And Tetraparesis 1	5	10	0	5	True
+Neurodevelopmental Disorder With Dysmorphic Facies And Variable Seizures	2	5	0	2	True
+Neurodevelopmental Disorder With Dysmorphic Facies, Sleep Disturbance, and Brain Abnormalities	10	56	0	10	True
+Neurodevelopmental Disorder With Dystonia And Seizures	7	8	3	4	True
+Neurodevelopmental Disorder with Epilepsy and Brain Atrophy	3	6	0	3	True
+neurodevelopmental disorder with facial dysmorphism, absent language, and pseudo-pelger-huet anomaly	8	26	1	7	True
+Neurodevelopmental Disorder With Hypotonia, Seizures, And Absent Language	5	37	1	4	True
+Neurodevelopmental Disorder With Intention Tremor, Pyramidal Signs, Dyspraxia, And Ocular Anomalies	9	20	0	9	True
+Neurodevelopmental Disorder With Microcephaly And Structural Brain Anomalies	5	5	0	5	False
+Neurodevelopmental Disorder With Microcephaly, Arthrogryposis, And Structural Brain Anomalies	9	21	0	9	True
+Neurodevelopmental Disorder With Microcephaly, Cataracts, And Renal Abnormalities	4	16	0	4	True
+Neurodevelopmental Disorder With Movement Abnormalities, Abnormal Gait, And Autistic Features	7	16	0	7	True
+Neurodevelopmental Disorder With Nonspecific Brain Abnormalities And With Or Without Seizures	7	23	0	7	True
+Neurodevelopmental Disorder With Or Without Variable Movement Or Behavioral Abnormalities	2	5	0	2	False
+Neurodevelopmental Disorder With Poor Growth And Behavioral Abnormalities	5	6	0	5	True
+Neurodevelopmental Disorder With Poor Growth, Large Ears, And Dysmorphic Facies	4	8	0	4	False
+Neurodevelopmental Disorder With Seizures And Brain Atrophy	5	16	0	5	True
+Neurodevelopmental Disorder With Seizures And Gingival Overgrowth	7	28	0	7	True
+Neurodevelopmental Disorder with Seizures, Microcephaly, and Brain Abnormalities	5	7	1	4	True
+Neurodevelopmental Disorder With Seizures, Spasticity, And Complete Or Partial Agenesis Of The Corpus Callosum	5	16	0	5	True
+Neurodevelopmental Disorder with Thin Corpus Callosum, Hypotonia, and Absent Language	5	11	0	5	True
+Neurodevelopmental Disorder With or Without Autism or Seizures	8	9	0	8	True
+Neurodevelopmental Disorder with Central Hypotonia and Dysmorphic Facies	6	21	0	6	True
+Neurodevelopmental Disorder with Central and Peripheral Motor Dysfunction	10	27	0	10	False
+Neurodevelopmental Disorder with Dysmorphic Facies and Distal Skeletal Anomalies	7	34	0	7	True
+Neurodevelopmental Disorder with Early-Onset Parkinsonism and Behavioral Abnormalities	7	35	0	7	True
+Neurodevelopmental Disorder with Epilepsy, Spasticity, and Brain Atrophy	12	40	0	12	True
+Neurodevelopmental Disorder with Hearing Loss and Spasticity	11	26	0	11	True
+Neurodevelopmental Disorder with Hypotonia, Feeding Difficulties, Facial Dysmorphism, and Brain Abnormalities	7	34	0	7	False
+Neurodevelopmental Disorder with Hypotonia and Speech Delay, With or Without Seizures	10	13	0	10	True
+Neurodevelopmental Disorder with Microcephaly, Hypotonia, and Absent Language	6	8	0	6	True
+Neurodevelopmental Disorder with Microcephaly, Impaired Language, and Gait Abnormalities	8	9	0	8	True
+Neurodevelopmental Disorder with Microcephaly, Movement Abnormalities, and Seizures	8	7	0	8	True
+Neurodevelopmental Disorder with Microcephaly, Seizures, and Cortical Atrophy	10	13	0	10	True
+Neurodevelopmental Disorder with Neuromuscular and Skeletal Abnormalities	12	14	0	12	False
+Neurodevelopmental Disorder with Poor Growth, Spastic Tetraplegia, and Hearing Loss	5	13	0	5	False
+Neurodevelopmental Disorder with Severe Motor Impairment and Absent Language	8	8	2	6	False
+Neurodevelopmental Disorder with or without Anomalies of the Brain, Eye, or Heart	8	11	0	8	False
+Neurofibroma	7	12	0	7	False
+Neurofibromatosis-Noonan Syndrome	5	4	0	5	False
+Neurofibromatosis	5	9	0	5	False
+Neurofibromatosis Type 1	12	25	0	12	False
+Neurohypophyseal Diabetes Insipidus	8	14	1	7	False
+Neuromuscular Disease And Ocular Or Auditory Anomalies With Or Without Seizures	4	11	0	4	True
+Neuromyelitis Optica Spectrum Disorder	10	0	9	1	False
+Neuromyelitis Optica Spectrum Disorder with Anti-AQP4 Antibodies	7	14	0	7	False
+Neuronal Ceroid Lipofuscinosis	9	20	3	4	True
+Neuronal Ceroid Lipofuscinosis 1	5	15	0	5	True
+Neuronal Ceroid Lipofuscinosis 2	3	12	0	3	True
+Neuronal Ceroid Lipofuscinosis 3	4	3	0	4	True
+Neuronal Ceroid Lipofuscinosis 7	11	19	0	11	True
+Neuronal Intranuclear Inclusion Disease	8	10	0	8	False
+Neuronopathy, Distal Hereditary Motor, Autosomal Recessive 5	8	27	0	8	False
+Neuronopathy, Distal Hereditary Motor, Autosomal Recessive 7	8	21	0	8	False
+Neurooculocardiogenitourinary Syndrome	8	35	0	8	True
+Neurooculorenal Syndrome	8	9	0	8	False
+Neuropathy Hereditary Motor And Sensory Type VIc With Optic Atrophy	5	4	0	5	True
+Neuropsychiatric Systemic Lupus Erythematosus	4	3	1	3	True
+Neurosarcoidosis	3	2	0	3	False
+Neutral Lipid Storage Myopathy	2	7	0	2	False
+Neutrophil Immunodeficiency Syndrome	5	9	0	5	False
+Nevus of Ota	5	9	0	5	False
+Nicolaides-Baraitser Syndrome	5	30	0	5	True
+Niemann-Pick Disease Type A	6	25	0	6	False
+Niemann-Pick Disease Type B	4	17	0	4	False
+Niemann-Pick Disease Type E	1	2	0	1	False
+Niemann-Pick Disease Type C	10	39	1	8	False
+Nijmegen Breakage Syndrome-like Disorder	8	36	0	8	False
+Nijmegen breakage syndrome	5	9	0	5	False
+Nipah Virus Disease	7	20	0	7	False
+Nizon-Isidor Syndrome	2	5	0	2	False
+Nocardiosis	9	21	3	6	False
+Noise Induced Hearing Loss	10	12	0	10	False
+Noma	2	1	1	1	False
+Non-24-Hour Sleep-Wake Rhythm Disorder	4	3	0	4	False
+Non-Small Cell Lung Cancer	10	3	6	1	False
+Non-Syndromic X-Linked Intellectual Disability	5	5	0	5	True
+Non-functional Pancreatic Neuroendocrine Tumor	4	7	2	2	False
+Nonimmune Chronic Idiopathic Neutropenia of Adults	6	6	0	6	False
+Nonketotic Hyperglycinemia	7	25	1	6	True
+Nontuberculous Mycobacterial Lung Disease	11	22	3	7	False
+Noonan Syndrome-like Disorder with Loose Anagen Hair	3	10	1	2	False
+Noonan Syndrome	16	61	5	11	False
+Noonan Syndrome 11	8	28	0	8	False
+Noonan Syndrome 6	8	29	1	7	False
+Noonan Syndrome with Multiple Lentigines	7	19	2	5	False
+Normal Pressure Hydrocephalus	7	11	1	4	False
+North Carolina Macular Dystrophy	4	11	1	3	False
+Northern Epilepsy	2	4	0	2	True
+O'Donnell-Luria-Rodan Syndrome	5	34	1	4	True
+OGT-Congenital Disorder of Glycosylation	8	17	1	7	False
+OPTN-related Open Angle Glaucoma	6	7	0	6	False
+ORAI1 Deficiency	11	16	0	11	False
+OTUD6B-Related Neurodevelopmental Disorder	9	10	0	9	True
+OTULIN-Related Autoinflammatory Syndrome	6	16	0	6	False
+Obesity	10	4	7	1	False
+Obesity Due to MC4R Pathway Disruption	3	2	0	3	False
+Obesity, Hyperphagia, and Developmental Delay	4	7	0	4	True
+Obsessive-Compulsive Disorder	5	4	3	2	False
+Obstructive Sleep Apnea	11	15	1	10	False
+Occupational Asthma	6	9	1	5	False
+Ochoa syndrome	7	18	1	6	False
+Ocular Melanoma	13	23	1	10	False
+Oculoauricular Syndrome	6	16	0	6	False
+Oculocerebrodental Syndrome	3	9	0	3	False
+Oculocutaneous Albinism	6	5	2	4	False
+Oculodentodigital Dysplasia	5	25	1	4	True
+Oculofaciocardiodental Syndrome	11	11	0	11	False
+Oculogastrointestinal-neurodevelopmental syndrome	4	3	0	4	False
+Oculoglandular Tularemia	3	7	0	3	False
+Oculomotor Nerve Palsy	11	20	4	7	False
+Oculopharyngeal Muscular Dystrophy	4	12	0	4	False
+Oculopharyngodistal Myopathy	4	9	0	4	False
+Odonto-Onycho-Dermal Dysplasia	6	18	0	6	False
+Odontochondrodysplasia	6	17	0	6	False
+Ogden syndrome	8	20	0	8	False
+Okur-Chung Neurodevelopmental Syndrome	2	3	0	2	True
+Olfactory Neuroblastoma	7	14	0	7	False
+Olmsted Syndrome 1	8	19	1	7	False
+Olmsted Syndrome 2	6	9	0	6	False
+Omodysplasia	4	25	1	2	False
+Omphalocele	4	8	0	4	False
+Omsk Hemorrhagic Fever	3	8	0	3	False
+Onchocerciasis	4	12	2	2	False
+Opioid Use Disorder	14	39	1	13	False
+Opitz G/BBB syndrome	2	7	1	1	False
+Oppositional Defiant Disorder	5	7	1	4	False
+Opsismodysplasia	4	28	1	3	False
+Opsoclonus-Myoclonus Syndrome	4	14	1	3	False
+Optic Atrophy 13 With Retinal and Foveal Abnormalities	7	6	0	7	False
+Optic Atrophy 14	5	4	0	5	False
+Optic Atrophy 15	4	6	0	4	False
+Optic Atrophy 3	4	8	0	4	False
+Optic Neuritis	4	9	2	2	False
+Oral Cavity Squamous Cell Carcinoma	8	7	3	5	False
+Orbital Cellulitis	6	18	0	6	False
+Organophosphate Poisoning	12	14	0	12	True
+Ornithine Carbamoyltransferase Deficiency	6	23	0	6	False
+Orofaciodigital Syndrome	11	10	3	8	False
+Orofaciodigital Syndrome 17	2	9	0	2	False
+Orofaciodigital Syndrome Type I	2	21	1	1	False
+Oropouche Fever	8	20	0	8	False
+Oroya fever	7	4	2	1	False
+Osmotic Demyelination Syndrome	5	4	0	5	False
+Osteoarthritis	4	2	3	1	False
+Osteochondritis of Tarsal/Metatarsal Bone	4	8	0	4	False
+Osteochondrosis	8	5	3	3	False
+Osteofibrous Dysplasia	5	8	0	5	False
+Osteogenesis Imperfecta Type I	1	14	0	1	False
+Osteogenesis Imperfecta Type II	5	24	0	5	False
+Osteogenesis Imperfecta Type III	3	19	0	3	False
+Osteogenesis Imperfecta Type IV	3	16	0	3	False
+Osteogenesis Imperfecta Type IX	3	2	0	3	False
+Osteogenesis Imperfecta Type V	2	11	0	2	False
+Osteogenesis Imperfecta Type VI	4	4	0	4	False
+Osteogenesis Imperfecta Type VII	4	15	0	4	False
+Osteogenesis Imperfecta Type VIII	5	16	0	5	False
+Osteogenesis Imperfecta Type X	3	2	0	3	False
+Osteogenesis Imperfecta Type XI	3	2	0	3	False
+Osteogenesis Imperfecta Type XII	3	11	0	3	False
+Osteogenesis Imperfecta Type XIII	3	2	0	3	False
+Osteogenesis Imperfecta Type XIV	3	2	0	3	False
+Osteogenesis Imperfecta Type XIX	3	2	0	3	False
+Osteogenesis Imperfecta Type XV	3	2	0	3	False
+Osteogenesis Imperfecta Type XVI	3	2	0	3	False
+Osteogenesis Imperfecta Type XVII	3	2	0	3	False
+Osteogenesis Imperfecta Type XVIII	3	13	0	3	False
+Osteogenesis Imperfecta Type XX	3	8	0	3	False
+Osteogenesis Imperfecta Type XXI	4	4	0	4	False
+Osteogenesis Imperfecta Type XXII	3	9	0	3	False
+Osteogenesis Imperfecta Type XXIII	2	7	0	2	False
+Osteoglophonic Dysplasia	5	25	0	5	False
+Osteonecrosis	6	9	0	6	False
+Osteootohepatoenteric Syndrome	7	8	1	6	False
+Osteopetrosis	5	26	3	2	False
+Osteoporosis	9	4	5	4	False
+Osteosarcoma	9	2	6	1	False
+Otofacial Neurodevelopmental Syndrome	6	17	0	6	False
+Otomycosis	10	8	1	7	False
+Otopalatodigital Spectrum Disorders	2	1	0	2	False
+Otosclerosis	8	12	2	6	False
+Ovarian Endometrioid Carcinoma	9	15	3	6	False
+Ovarian High-Grade Serous Carcinoma	16	17	2	11	False
+Ovarian Hyperstimulation Syndrome	17	39	3	14	False
+Ovarian Mucinous Carcinoma	8	9	1	7	False
+Overhydrated Hereditary Stomatocytosis	15	24	1	14	False
+PACS2-Related Developmental and Epileptic Encephalopathy	9	7	1	6	True
+PAICS Deficiency	4	10	0	4	False
+PAMI Syndrome	11	32	0	11	False
+PAPA Syndrome	6	11	1	5	False
+PARK7-Related Early-Onset Parkinson Disease	7	8	0	7	False
+PAX1-Related Otofaciocervical Syndrome	4	10	0	4	False
+PAX3-Related Waardenburg Syndrome	5	11	0	5	False
+PCDH19 Clustering Epilepsy	7	16	0	7	True
+PCWH syndrome	9	25	0	9	False
+PDE6A-Related Retinopathy	4	3	0	4	False
+PDE6C-Related Retinopathy	4	13	0	4	False
+PDE6G-Related Retinopathy	5	9	0	5	False
+ZNHIT3-Related PEHO Syndrome	9	13	0	9	True
+PET100-Related COX Deficiency	5	20	0	5	True
+PET117-Related COX Deficiency	3	4	0	3	False
+PGM1-congenital disorder of glycosylation	14	35	1	13	False
+PGM2L1 Deficiency	2	4	0	2	True
+PHARC syndrome	9	17	0	9	False
+PHF21A Related Neurodevelopmental Disorder	4	22	0	4	True
+PHOX2B-Related Neuroblastic Tumor Susceptibility	2	2	0	2	False
+PIK3CA-Mutant Breast Cancer	5	4	1	4	False
+PINK1-Related Early-Onset Parkinson Disease	13	21	1	12	False
+PIP5K1C-Related Neurodevelopmental Disorder	7	13	0	7	True
+PKP2_Cardiomyopathy	7	18	0	7	False
+PLACK Syndrome	5	7	0	5	False
+PLS3-Related X-Linked Osteoporosis	7	13	0	7	False
+PMM2-Congenital Disorder of Glycosylation	10	10	0	10	False
+PNPO Deficiency	7	5	1	6	True
+POEMS Syndrome	8	26	0	8	False
+POLD2-related Combined Immunodeficiency	7	17	1	6	False
+POLR-Related Leukodystrophy	19	23	0	19	False
+POT1 Tumor Predisposition Syndrome	5	10	0	5	False
+PPM-X Syndrome	6	19	0	6	True
+PPP1R13L-Related Arrhythmogenic Cardiomyopathy	9	25	0	9	False
+PPP2R3C-Related Gonadal Dysgenesis Syndrome	5	5	0	5	False
+PRKAG2 Cardiac Syndrome	14	14	0	14	False
+PRKN-Related Juvenile Parkinson Disease	13	13	1	11	False
+PRMT7-Related Short Stature-Brachydactyly Syndrome	3	6	0	3	True
+PRPF19-related neurodevelopmental disorder	6	8	1	4	False
+PRPF31-Related Retinopathy	4	3	1	3	False
+PRPF8-Related Retinopathy	5	8	0	5	False
+PRPH2-Related Retinopathy	3	4	0	3	False
+PRPS1 Deficiency Spectrum	5	25	0	5	False
+PRPS1 Superactivity	6	15	1	5	False
+PRR12-Related Neuroocular Syndrome	12	32	0	12	False
+PTCH1-related nevoid basal cell carcinoma syndrome	2	2	1	1	False
+PTEN Hamartoma Tumor Syndrome	5	19	0	5	False
+PUM1-Associated Developmental Disability, Ataxia, and Seizure Syndrome	9	14	1	8	True
+PUS3-Related Neurodevelopmental Disorder	5	15	0	5	True
+PUS7-Related Neurodevelopmental Disorder	16	19	0	16	False
+PYCR1-Related De Barsy Syndrome	6	38	0	6	False
+Pacak-Zhuang syndrome	4	9	0	4	False
+Pachyonychia Congenita	9	13	0	9	False
+Paget Disease of Bone	6	5	0	6	False
+Pallister-Hall Syndrome	4	10	0	4	False
+Palmoplantar Keratoderma-Deafness Syndrome	5	6	0	5	False
+Palmoplantar Keratoderma-Esophageal Carcinoma Syndrome	6	9	0	6	False
+Palmoplantar Keratoderma Nagashima Type	9	10	1	8	False
+Pan-Chung-Bellen Syndrome	3	22	0	3	True
+Pancreatic Agenesis	6	5	3	2	False
+Pancreatic Ductal Adenocarcinoma	42	46	22	12	False
+Pancreatic Mucinous Cystadenoma	6	8	4	2	False
+Pancreatic Neuroendocrine Tumor	6	0	5	1	False
+Pancytopenia-Developmental Delay Syndrome	8	18	0	8	False
+Panic Disorder	5	4	3	2	False
+pantothenate kinase-associated neurodegeneration	6	14	0	6	False
+Panuveitis	4	13	2	2	False
+Papillary Thyroid Carcinoma	3	2	0	3	False
+Papillon-Lefevre Disease	11	21	1	10	False
+Papular xanthoma	1	4	0	1	False
+Parainfluenza Virus Infection	4	9	0	4	False
+Paralytic Poliomyelitis	6	5	1	5	False
+Paranasal Sinus Squamous Cell Carcinoma	5	4	0	5	False
+Paraneoplastic Cerebellar Degeneration	6	14	0	6	False
+Paraneoplastic Neurological Syndromes	5	6	1	4	False
+Paraneoplastic Pemphigus	5	9	0	5	False
+Paraquat Poisoning	11	28	0	11	False
+Parathyroid Gland Carcinoma	7	10	1	6	False
+Parathyroid Hyperplasia	5	4	3	1	False
+Paratyphoid Fever	6	5	1	1	False
+Parenti-Mignot Neurodevelopmental Syndrome	3	7	0	3	True
+Parkinson Disease, Mitochondrial	4	9	0	4	False
+Parkinson's Disease	37	67	14	19	False
+Paroxysmal Dyskinesia	12	24	5	5	True
+Paroxysmal Extreme Pain Disorder	5	12	0	5	True
+Paroxysmal Familial Ventricular Fibrillation	5	9	0	5	False
+Paroxysmal Nocturnal Hemoglobinuria	6	16	0	6	False
+Pars Planitis	5	16	0	5	False
+Parvovirus B19 Infection	5	1	4	1	False
+Pasteurellosis	6	14	2	4	False
+Patent Ductus Arteriosus	4	10	1	3	False
+Patent Ductus Arteriosus 3	9	15	0	9	False
+Pearson syndrome	6	12	0	6	False
+Pediatric Acute-onset Neuropsychiatric Syndrome	3	12	2	1	False
+Pediatric Autoimmune Neuropsychiatric Disorders Associated with Streptococcal Infections	3	6	1	2	False
+Peeling Skin Syndrome	5	10	3	2	False
+Pelger-Huet-like Anomaly and Episodic Fever with Abdominal Pain	10	25	0	10	False
+Pelger-Huet Anomaly	5	6	1	4	False
+Pelizaeus-Merzbacher Disease	11	29	3	5	False
+Pelvic Inflammatory Disease	15	16	3	12	False
+Pelvic Organ Prolapse	13	20	3	7	False
+Pemphigus Erythematosus	2	2	0	2	False
+Pemphigus Foliaceus	7	12	0	7	False
+Pemphigus Vulgaris	5	0	4	1	False
+Pendred Syndrome	9	17	0	9	False
+Penile Cancer	4	3	1	3	False
+Pentanucleotide Repeat Familial Adult Myoclonus Epilepsy	13	17	6	7	True
+Penttinen_Premature_Aging_Syndrome	3	6	0	3	False
+Pericarditis	9	15	0	9	False
+Periodic Fever, Immunodeficiency, and Thrombocytopenia Syndrome	9	18	0	9	False
+Periodontal Ehlers-Danlos Syndrome	6	18	1	5	False
+Periodontitis	12	15	1	11	False
+Peripartum Cardiomyopathy	5	6	1	4	False
+Peripheral Artery Disease	7	4	2	5	False
+Peripheral T-Cell Lymphoma	8	3	4	1	False
+Periprosthetic Joint Infection	8	14	0	8	False
+Peritonsillar Abscess	7	17	0	7	False
+Perivascular Epithelioid Cell Neoplasm	4	3	1	3	False
+Periventricular Nodular Heterotopia	6	13	1	5	True
+ARFGEF2-Related Periventricular Nodular Heterotopia	6	13	0	6	True
+Periventricular Nodular Heterotopia 7	4	4	0	4	True
+Periventricular Nodular Heterotopia 8	4	5	0	4	True
+Periventricular Nodular Heterotopia 9	4	8	0	4	True
+Perlman Syndrome	7	11	0	7	False
+Peroxisomal Acyl-CoA Oxidase Deficiency	5	18	1	4	True
+Peroxisome Biogenesis Disorder	11	32	0	11	False
+Peroxisome Biogenesis Disorder 11A (Zellweger)	12	13	0	12	False
+Peroxisome Biogenesis Disorder 11B	7	13	0	7	False
+Peroxisome Biogenesis Disorder 12A (Zellweger)	10	36	0	10	False
+Peroxisome Biogenesis Disorder 1B	5	4	0	5	False
+Peroxisome Biogenesis Disorder 2B	7	21	0	7	False
+Peroxisome Biogenesis Disorder 3A (Zellweger)	10	10	0	10	False
+Peroxisome Biogenesis Disorder 4A (Zellweger)	8	10	0	8	False
+Peroxisome Biogenesis Disorder 4B	5	4	0	5	False
+Peroxisome Biogenesis Disorder 5B	8	23	2	6	False
+Peroxisome Biogenesis Disorder 6A (Zellweger)	5	7	0	5	False
+Peroxisome Biogenesis Disorder 6B	5	20	0	5	False
+Peroxisome Biogenesis Disorder 8B	6	15	0	6	False
+Perrault Syndrome	13	39	0	13	False
+Persistent Mullerian Duct Syndrome	10	16	1	7	False
+Persistent Truncus Arteriosus	11	12	0	11	False
+Pertussis	7	6	0	7	False
+Peters plus syndrome	7	22	0	7	False
+Peutz-Jeghers syndrome	9	24	2	7	False
+Peutz-Jeghers polyp	8	18	0	8	False
+Pfeiffer Syndrome	6	17	1	5	False
+Phelan-McDermid Syndrome	5	13	0	5	True
+Phenylketonuria	17	53	0	17	True
+Pheochromocytoma and Paraganglioma	12	34	2	9	False
+Phosphoenolpyruvate Carboxykinase Deficiency, Cytosolic	11	27	1	10	True
+Phosphoglycerate Kinase 1 Deficiency	10	19	0	10	True
+Photosensitive Epilepsy	6	5	0	6	True
+Photosensitive Occipital Lobe Epilepsy	6	7	0	6	True
+Pica	8	10	1	7	False
+Pick Disease	3	3	0	3	False
+Piebaldism	3	5	0	3	False
+Pigment Dispersion Syndrome	6	11	0	6	False
+Pilarowski-Bjornsson syndrome	4	8	0	4	True
+Pilocytic Astrocytoma	4	3	0	4	False
+Pineoblastoma	6	2	3	3	False
+Pinta	5	8	1	4	False
+Pitt-Hopkins Syndrome	6	35	0	6	True
+Pituitary Tumor	3	2	0	3	False
+Placenta Accreta Spectrum	5	5	0	5	False
+Placenta Previa	13	20	0	13	False
+Placental Abruption	7	6	0	7	False
+Plague	8	15	1	7	False
+Plasma Cell Neoplasm	7	7	3	4	False
+Platelet-Type von Willebrand Disease	4	8	1	3	False
+Platelet-type Bleeding Disorder 12	7	11	0	7	False
+Platelet-type Bleeding Disorder 15	6	12	1	5	False
+Platelet-type Bleeding Disorder 16	11	26	0	11	False
+Platelet-type bleeding disorder 18	7	7	1	6	False
+Platelet-type Bleeding Disorder 19	5	8	0	5	False
+Platelet-type Bleeding Disorder 20	8	9	0	8	False
+Platelet-type Bleeding Disorder 22	8	12	0	8	False
+Platelet-type bleeding disorder 8	5	4	0	5	False
+Pleuropulmonary Blastoma	9	14	2	7	False
+Pneumococcal Meningitis	7	14	0	7	True
+Pneumococcal Pneumonia	4	3	0	4	False
+Pneumocystis Pneumonia	3	4	1	2	False
+Pneumonia Caused By Pseudomonas Aeruginosa Infection	7	12	1	5	False
+Pneumonic Plague	4	12	0	4	False
+Pneumonic Tularemia	7	18	0	7	False
+Podoconiosis	13	18	0	13	False
+CSNK2B-Related Neurodevelopmental Disorder	9	26	2	7	True
+Polycystic echinococcosis	3	3	0	3	False
+Polycystic Kidney Disease	5	25	3	1	False
+Polycystic Kidney Disease 2	6	9	0	6	False
+Polycystic Kidney Disease 3	4	3	0	4	False
+Polycystic Ovary Syndrome	12	14	5	6	False
+Polycythemia Vera	4	2	1	3	False
+Perisylvian Polymicrogyria with Cerebellar Hypoplasia and Arthrogryposis	5	9	0	5	False
+Polymyalgia Rheumatica	6	9	0	6	False
+Polymyositis	7	8	1	6	False
+Pompe Disease	4	20	0	4	False
+Pontiac Fever	3	7	1	2	False
+Pontocerebellar Hypoplasia	14	24	12	2	False
+Porokeratosis	13	22	2	11	False
+Porphyria-Related Leukoencephalopathy	4	11	0	4	True
+Porphyria due to ALA Dehydratase Deficiency	5	19	1	4	False
+Portal_Hypertension_Noncirrhotic_2	8	14	0	8	False
+Post-SSRI Sexual Dysfunction	9	12	0	9	False
+Post-Traumatic Epilepsy	8	10	0	8	True
+Post-Traumatic Stress Disorder	6	15	0	6	False
+Postcricoid Region Cancer	4	5	0	4	False
+Posterior Myocardial Infarction	4	5	0	4	False
+Posterior Polymorphous Corneal Dystrophy	5	13	1	4	False
+Postinfectious Vasculitis	7	25	4	2	False
+Postpartum Depression	8	9	1	6	False
+Postpoliomyelitis Syndrome	4	19	0	4	False
+Postural Orthostatic Tachycardia Syndrome	7	19	3	3	False
+Potocki-Lupski Syndrome	3	9	0	3	False
+Pouchitis	4	1	2	2	False
+Powassan Virus Disease	5	15	0	5	False
+Prader-Willi Syndrome	4	30	0	4	False
+Pre-Descemet Corneal Dystrophy	6	5	1	4	False
+Preaxial Digit Brachydactyly-Webbed Fingers	4	6	0	4	False
+Preeclampsia	14	27	2	12	False
+Premature Ovarian Failure 19	4	10	0	4	False
+Premature Ovarian Failure 20	4	7	0	4	False
+Premature Ovarian Failure 24	3	10	0	3	False
+Premenstrual Dysphoric Disorder	5	4	2	3	False
+Preterm Premature Rupture of the Membranes	13	19	3	10	False
+Primary Aldosteronism	13	23	1	12	False
+Primary Amebic Meningoencephalitis	7	16	2	5	False
+Primary Bile Acid Malabsorption	11	19	0	11	False
+Primary Biliary Cholangitis	5	2	2	3	False
+Primary Carnitine Deficiency	5	20	0	5	True
+Primary Central Nervous System Lymphoma	11	20	4	6	False
+Primary_Ciliary_Dyskinesia	24	51	13	5	False
+Primary Ciliary Dyskinesia 3	7	18	0	7	False
+Primary Ciliary Dyskinesia 30	8	7	0	8	False
+Primary Ciliary Dyskinesia 37	5	15	0	5	False
+Primary Ciliary Dyskinesia 40	5	11	0	5	False
+Primary Ciliary Dyskinesia 47 and Lissencephaly	5	15	0	5	False
+Primary Ciliary Dyskinesia 50	4	10	0	4	False
+Primary Ciliary Dyskinesia 7	5	15	0	5	False
+Primary Ciliary Dyskinesia 9	8	7	0	8	False
+Primary Coenzyme Q10 Deficiency	6	8	2	4	False
+Primary Cutaneous Aggressive Epidermotropic CD8+ T-cell Lymphoma	3	5	0	3	False
+Primary Cutaneous Amyloidosis	10	12	3	6	False
+Primary Erythermalgia	4	4	0	4	False
+Primary Familial Polycythemia Due to EPO Receptor Mutation	11	25	0	11	False
+Primary Hyperoxaluria Type 1	5	4	0	5	False
+Primary Hyperoxaluria Type 2	5	4	0	5	False
+Primary Hyperoxaluria Type 3	5	4	0	5	False
+Primary Hypertrophic Osteoarthropathy	5	5	1	3	False
+Primary Lateral Sclerosis	4	19	1	3	False
+Primary Myelofibrosis	4	3	0	4	False
+Primary Pigmented Nodular Adrenocortical Disease	7	9	3	4	False
+Primary Polyarteritis Nodosa	4	18	0	4	False
+Primary Progressive Aphasia	4	12	0	4	False
+Primary Progressive Apraxia of Speech	3	7	0	3	False
+Primary Sclerosing Cholangitis	3	0	2	1	False
+Primary_Tonsillar_Lymphoma	5	0	4	1	False
+Primary Triglyceride Deposit Cardiomyovasculopathy	4	9	0	4	False
+Primrose Syndrome	3	26	0	3	False
+Progressive Bulbar Palsy	5	2	3	2	False
+Progressive Encephalopathy With Amyotrophy And Optic Atrophy	8	26	0	8	True
+Progressive Encephalopathy With Brain Atrophy And Thin Corpus Callosum	8	25	0	8	True
+Progressive External Ophthalmoplegia Autosomal Recessive 6	6	18	0	6	False
+Progressive External Ophthalmoplegia with Mitochondrial DNA Deletions, Autosomal Recessive 4	10	16	0	10	False
+Progressive Familial Heart Block	5	5	0	5	False
+Progressive Familial Intrahepatic Cholestasis	17	44	1	16	False
+Progressive Microcephaly-Seizures-Cortical Blindness-Developmental Delay Syndrome	6	14	0	6	True
+Progressive Muscular Atrophy	4	11	1	2	False
+Progressive Myoclonic Epilepsy Type 11	8	24	0	8	True
+Progressive Myoclonic Epilepsy Type 7	6	6	0	6	True
+Progressive Myoclonic Epilepsy Type 8	6	5	0	6	True
+Progressive Myoclonus Epilepsy	5	0	4	1	True
+Progressive Pseudorheumatoid Arthropathy of Childhood	5	4	0	5	False
+Progressive_Retinal_Dystrophy_Due_To_Retinol_Transport_Defect	8	11	0	8	False
+Progressive Supranuclear Palsy	7	12	3	4	False
+Prolidase Deficiency	9	9	0	9	False
+Proliferative Vitreoretinopathy	5	9	0	5	False
+Propionic Acidemia	6	28	0	6	False
+Propofol Infusion Syndrome	5	16	1	4	False
+Prostate Adenocarcinoma	19	25	8	9	False
+Protan Color Vision Deficiency	5	7	0	5	False
+Proteasome-Associated Autoinflammatory Syndrome	6	12	1	5	False
+Protein S Deficiency	5	10	0	5	False
+Proteus syndrome	6	27	0	6	False
+Proximal Myopathy With Extrapyramidal Signs	11	28	0	11	False
+Proximal tubulopathy-diabetes mellitus-cerebellar ataxia syndrome	4	8	0	4	False
+Prune Belly Syndrome	11	21	5	5	False
+Prurigo Nodularis	10	21	2	8	False
+Pseudohypoaldosteronism Type 2D	13	18	1	12	False
+Pseudohypoaldosteronism Type 2E	10	14	0	10	False
+Pseudohypoaldosteronism Type IB1 Autosomal Recessive	8	23	0	8	False
+Pseudohypoaldosteronism Type IB2 Autosomal Recessive	8	23	0	8	False
+Pseudohypoaldosteronism Type IB3 Autosomal Recessive	8	22	0	8	False
+Pseudohypoparathyroidism	5	15	0	5	False
+Pseudomyxoma Peritonei	8	8	1	7	False
+Pseudopseudohypoparathyroidism	10	16	0	10	False
+Pseudoxanthoma Elasticum	5	15	0	5	False
+Psittacosis	3	26	0	3	False
+Psoriasis	7	7	3	2	False
+Psoriasis 14, Pustular	2	7	0	2	False
+Psoriatic Arthritis	7	27	2	5	False
+Pulmonary Alveolar Microlithiasis	7	10	0	7	False
+Pulmonary Alveolar Proteinosis With Hypogammaglobulinemia	9	17	0	9	False
+Pulmonary Embolism	10	9	1	9	False
+Pulmonary Hemosiderosis	4	24	1	3	False
+Pulmonary Veno-Occlusive Disease and/or Pulmonary Capillary Haemangiomatosis	5	0	4	1	False
+Pulmonary_hypertension	7	17	4	3	False
+Punctate Palmoplantar Keratoderma	4	7	1	3	False
+Pure Autonomic Failure	19	47	3	16	False
+Purine nucleoside phosphorylase deficiency	16	18	0	16	False
+Pycnodysostosis	5	25	0	5	False
+Pyoderma Gangrenosum	11	13	4	7	False
+Pyomyositis	3	8	0	3	False
+Pyridoxine-Dependent Epilepsy	8	6	1	7	True
+Pyrimidine 5-Nucleotidase Deficiency	6	9	0	6	False
+Pyruvate Carboxylase Deficiency Disease	7	23	0	7	False
+Pyruvate Dehydrogenase Deficiency	13	77	4	9	True
+Pyruvate Kinase Deficiency	5	12	0	5	False
+Q Fever	5	5	0	5	False
+Quebec Platelet Disorder	6	13	0	6	False
+Queensland Tick Typhus	10	17	2	8	False
+RAB23-related Carpenter Syndrome	6	23	0	6	False
+RAB28-Related Retinopathy	4	13	0	4	False
+RAB33B-Related Smith-McCort Dysplasia 2	4	3	0	4	False
+RAB5C-Related Neurodevelopmental Disorder with Macrocephaly	3	2	0	3	True
+RARB-related syndromic microphthalmia	7	14	0	7	False
+RCBTB1-Related Retinopathy	4	3	0	4	False
+RD3-Related Retinopathy	9	23	0	9	False
+RDH12-Related Dominant Retinopathy	7	16	0	7	False
+RDH5-Related Retinopathy	5	4	0	5	False
+RECON Progeroid Syndrome	6	9	0	6	False
+REM Sleep Behavior Disorder	6	5	0	6	False
+RET Fusion-Positive Thyroid Cancer	7	13	0	7	False
+RET-Rearranged Non-Small Cell Lung Cancer	4	3	0	4	False
+RFT1-congenital disorder of glycosylation	5	20	0	5	True
+RHO-Related Retinopathy	4	6	1	3	False
+RHOBTB2-Related Developmental and Epileptic Encephalopathy	9	5	3	6	True
+RHYNS Syndrome	7	14	0	7	False
+RIN2 Syndrome	6	18	0	6	False
+RLBP1-Related Retinopathy	5	5	0	5	False
+RNASEH1-Related Progressive External Ophthalmoplegia	10	24	0	10	False
+RNU12-related minor spliceopathy	2	9	0	2	False
+RNU4-2-Related Autosomal Recessive Neurodevelopmental Disorder	6	27	0	6	True
+RNU5B-1 Related Neurodevelopmental Disorder With Seizures And Joint Laxity	5	11	0	5	True
+ROGDI-Related Kohlschutter-Tonz Syndrome	5	12	0	5	True
+ROHHAD Syndrome	5	18	2	3	False
+ROS1-Rearranged Non-Small Cell Lung Cancer	4	3	0	4	False
+ROSAH Syndrome	13	34	0	13	False
+RP1-Related Retinopathy	4	3	1	3	False
+RP2-Related Retinopathy	4	3	0	4	False
+RPE65-Related Retinopathy	3	7	0	3	False
+RPGR-Related Retinopathy	4	14	0	4	False
+RTN4IP1-Related Optic Atrophy	4	5	0	4	True
+RUNX1 Familial Platelet Disorder with Associated Myeloid Malignancy	7	9	1	6	False
+RYR1-Related Myopathy	8	11	0	8	False
+RYR2 CPVT	15	28	5	10	False
+Rabies	11	11	0	11	False
+Rabson-Mendenhall Syndrome	10	20	0	10	False
+Radio-Tartaglia Syndrome	7	24	0	7	False
+Radioulnar Synostosis with Amegakaryocytic Thrombocytopenia	15	40	1	13	False
+Raine Syndrome	12	27	0	12	True
+Rajab Interstitial Lung Disease With Brain Calcifications 1	6	14	0	6	False
+Ramond-Elliott Neurodevelopmental Syndrome	3	13	0	3	True
+RAPADILINO Syndrome	9	19	0	9	False
+Rasmussen Encephalitis	10	12	0	10	True
+Raynaud Disease	7	1	5	2	True
+ReNU Syndrome	5	17	0	5	True
+Reelin Pathway Lissencephaly	6	14	1	5	False
+Refeeding Syndrome	11	22	4	1	False
+Relapsing Fever	7	17	1	6	False
+Relapsing Polychondritis	6	19	1	5	False
+Renal-Hepatic-Pancreatic Dysplasia 2	10	29	0	10	False
+Renal Agenesis	6	5	2	4	False
+Renal Artery Obstruction	7	5	4	3	False
+Renal Cell Carcinoma	10	7	4	1	False
+Renal Coloboma Syndrome	8	21	0	8	False
+Renal Hypomagnesemia 2	7	12	0	7	True
+Renal Hypomagnesemia 3	5	10	0	5	False
+Renal Hypomagnesemia 4	5	6	0	5	True
+Renal Nutcracker Syndrome	6	5	0	6	False
+Renal Tubular Acidosis, Distal, 2, With Progressive Sensorineural Hearing Loss	7	6	0	7	False
+Renal Tubular Acidosis, Distal, 3, With or Without Sensorineural Hearing Loss	9	16	0	9	False
+Renal Tubular Acidosis Distal 4 with Hemolytic Anemia	4	21	0	4	False
+Renal Tubular Dysgenesis - ACE	11	24	0	11	False
+Renpenning syndrome	3	13	1	2	False
+Resistance to Thyroid Hormone Alpha	12	30	0	12	False
+Respiratory Syncytial Virus Infection	1	0	0	1	False
+Restless Legs Syndrome	8	8	2	6	False
+Restrictive Cardiomyopathy	6	7	1	5	False
+Reticular Dysgenesis	10	18	0	10	False
+Reticulate Acropigmentation Of Kitamura	3	4	0	3	False
+Retinal Arterial Tortuosity	4	7	0	4	False
+Retinitis Pigmentosa 59	9	26	0	9	False
+Retinitis Pigmentosa With or Without Situs Inversus	6	13	0	6	False
+Retinoblastoma	5	10	0	5	False
+Retinopathy of Prematurity	2	1	1	1	False
+Retrograde Cricopharyngeus Dysfunction	5	11	2	3	False
+Rett Syndrome	10	29	0	10	False
+Reversible Infantile Cytochrome c Oxidase Deficiency	4	10	0	4	False
+Revesz Syndrome	7	21	0	7	False
+Reynolds Syndrome	6	12	1	3	False
+Rh Deficiency Syndrome	5	9	1	4	False
+Rhabdoid Tumor	6	6	0	6	False
+Rhabdoid Tumor Predisposition Syndrome 1	6	11	0	6	False
+Rhabdoid Tumor Predisposition Syndrome 2	6	9	0	6	False
+Rhabdomyolysis Susceptibility To 1	5	10	0	5	False
+Rheumatic Heart Disease	11	21	0	11	False
+Rheumatoid Arthritis	15	9	8	1	False
+Rheumatoid Vasculitis	4	5	0	4	False
+Rhinoscleroma	5	11	0	5	False
+Rhinovirus Infection	1	0	0	1	False
+Rhizomelic Chondrodysplasia Punctata, Plasmalogen-Synthesis Defect	6	4	1	5	True
+Rhizomelic Chondrodysplasia Punctata Type 1	6	13	0	6	True
+Rhizomelic Chondrodysplasia Punctata Type 5	6	11	0	6	False
+Rhizomelic Dysplasia, Ain-Naz Type	5	10	0	5	False
+Ricin Poisoning	18	46	0	18	False
+Rickettsia helvetica spotted fever	7	14	0	7	False
+Rickettsia Parkeri Spotted Fever	7	14	1	6	False
+Rickettsialpox	9	11	3	1	False
+Rienhoff Syndrome	8	7	0	8	False
+Rift Valley Fever	8	16	2	6	False
+Riley-Day Syndrome	10	21	0	10	False
+Ring Chromosome 14 Syndrome	9	10	1	8	True
+Ring Chromosome 20 Syndrome	10	12	0	10	True
+Ritscher-Schinzel Syndrome	4	20	0	4	False
+Ritscher-Schinzel Syndrome 1	10	32	0	10	False
+Roberts Syndrome	18	52	2	16	False
+Robinow Syndrome, Autosomal Recessive 2	3	5	0	3	False
+Rocky Mountain spotted fever	11	24	1	10	False
+Roifman-syndrome	6	15	0	6	False
+Rosacea	22	31	6	11	False
+Rosai-Dorfman Disease	4	3	1	3	False
+Rotaviral Enteritis	7	19	0	7	False
+Rothmund-Thomson Syndrome	8	12	3	5	True
+Rotor Syndrome	2	3	0	2	False
+Round Cell Sarcoma with EWSR1-non-ETS Fusion	5	5	0	5	False
+Rubella	4	2	1	3	False
+Rubinstein-Taybi Syndrome	3	24	0	3	False
+Rumination Disorder	7	8	1	6	False
+SADDAN	3	2	0	3	False
+SAMD9L-Related Spectrum and Myeloid Neoplasm Risk	10	30	2	8	False
+SAPHO Syndrome	10	12	1	9	False
+SARS1-Related Neurodevelopmental Disorder	12	15	1	11	True
+Short-Chain Acyl-CoA Dehydrogenase Deficiency	4	6	1	3	True
+SCN1B-Related Developmental and Epileptic Encephalopathy	20	24	2	18	True
+SCN2A-Related Developmental and Epileptic Encephalopathy	5	5	0	5	True
+SCN4A-Related Myopathy, Autosomal Recessive	4	21	0	4	False
+SCN8A-Related Developmental and Epileptic Encephalopathy	4	10	0	4	True
+SCO1-Related COX Deficiency	2	12	0	2	True
+SCO2-Related Fatal Infantile Cardioencephalomyopathy	2	7	0	2	True
+SCUBE3-Related Short Stature Syndrome	4	13	0	4	False
+SDHA-Related Neurodegeneration With Ataxia and Optic Atrophy	9	9	0	9	False
+SEC61A1 Deficiency	8	29	0	8	True
+SECISBP2 Deficiency	4	4	0	4	False
+SEPSECS Deficiency	3	9	0	3	False
+SETBP1 Haploinsufficiency Disorder	3	13	0	3	False
+SETD1A-Related Early-Onset Epilepsy	8	13	0	8	True
+SETD1B-Related Neurodevelopmental Disorder	5	25	0	5	True
+SETD5 Haploinsufficiency Syndrome	9	24	1	8	True
+SHH Holoprosencephaly Spectrum	10	32	1	9	False
+SHILCA Syndrome	3	15	0	3	True
+SHORT Syndrome	10	35	0	10	False
+SIN3A-Related Intellectual Disability Syndrome	6	22	1	5	True
+SLC12A5-Related Developmental and Epileptic Encephalopathy	14	16	1	13	True
+SLC13A5 Citrate Transporter Disorder	6	5	0	6	True
+SLC1A2-Related Developmental and Epileptic Encephalopathy	11	13	0	11	True
+SLC25A12-Related Developmental and Epileptic Encephalopathy	13	14	0	13	True
+SLC25A46-Related Hereditary Motor And Sensory Neuropathy	13	32	0	13	False
+SLC26A1-Related Hypersulfaturia	3	6	0	3	False
+SLC26A1-Related Oxalate Transporter Deficiency	4	3	0	4	False
+SLC26A6-Related Hyperoxaluria and Nephrolithiasis	5	4	0	5	False
+SLC35A1-Congenital Disorder of Glycosylation	8	7	0	8	True
+SLC35A2-congenital disorder of glycosylation	4	2	1	3	True
+SLC44A1-Related Childhood-Onset Neurodegeneration	9	19	0	9	True
+SLC45A1-Related Neuronal Glucose Transporter Deficiency	2	5	0	2	True
+SLC5A6-Related Multivitamin Transporter Deficiency	11	35	0	11	True
+SLC6A1-Related Neurodevelopmental Disorder	4	8	0	4	True
+SMAD6-related craniosynostosis	6	11	1	5	False
+SMARCC1-associated Developmental Dysgenesis Syndrome	7	14	0	7	True
+SNAP25-Related Developmental and Epileptic Encephalopathy	6	11	0	6	True
+SNF8-Related Neurodevelopmental Disorder	6	6	0	6	True
+SNIP1-Related Neurodevelopmental Disorder	25	71	0	25	True
+SNRNP200-Related Dominant Retinopathy	4	6	0	4	False
+SOCS1 Haploinsufficiency	11	14	0	11	False
+SOX10 Neurocristopathy Spectrum	7	9	0	7	False
+SOX11-Related Neurodevelopmental Disorder	15	17	0	15	False
+SPATA22-related gametogenic failure	5	14	0	5	False
+SPOP-Related Neurodevelopmental Disorder	6	11	0	6	False
+SPTAN1-Related Developmental and Epileptic Encephalopathy	14	9	4	10	True
+SPTBN4-Related Neurodevelopmental Disorder	14	16	1	13	True
+SQSTM1-Related Childhood-Onset Neurodegeneration	7	20	0	7	False
+SQSTM1-related Multisystem Proteinopathy	10	36	0	10	False
+SRD5A3-Congenital Disorder of Glycosylation	6	25	0	6	False
+SRPX2-related Speech-Epilepsy-Polymicrogyria	6	13	0	6	True
+SSR4-Congenital Disorder of Glycosylation	6	29	1	5	True
+STAG3-related gametogenic failure	4	7	0	4	False
+STAR Syndrome	7	32	0	7	False
+STAT2 Deficiency	2	5	0	2	False
+STAT3-Related Early-Onset Multisystem Autoimmune Disease	9	23	0	9	False
+STAT5B Deficiency	8	26	0	8	False
+STAT6 Gain-of-Function Disease	8	10	0	8	False
+STIM1 Deficiency	15	29	0	15	False
+STING-Associated Vasculopathy with Onset in Infancy	4	9	0	4	False
+STK4 Deficiency	5	17	0	5	False
+STRA6-related syndromic microphthalmia	6	10	0	6	False
+STT3A-Congenital Disorder of Glycosylation	10	48	1	9	True
+STX1B-Related Epilepsy	3	4	0	3	True
+STXBP1 Encephalopathy	5	11	0	5	True
+SUCLA2-Related Mitochondrial DNA Depletion Syndrome	10	27	0	10	False
+SUFU-related nevoid basal cell carcinoma syndrome	2	2	1	1	False
+SURF1-Related Leigh Syndrome	4	17	0	4	False
+SYCE1-related gametogenic failure	4	8	0	4	False
+SYCP2-related spermatogenic failure	5	4	1	4	False
+SYCP3-related spermatogenic failure	5	6	1	4	False
+SYN1-Related Neurodevelopmental Disorder	2	6	0	2	True
+SYNCRIP-related Neurodevelopmental Disorder	8	18	1	3	True
+SYNGAP1-Related Developmental and Epileptic Encephalopathy	9	7	1	8	True
+SYT1-Associated Neurodevelopmental Disorder	3	9	0	3	True
+SZT2-Related Developmental and Epileptic Encephalopathy	14	14	1	13	True
+Saethre-Chotzen Syndrome	7	21	0	7	False
+Sagittal Sinus Thrombosis	4	10	0	4	True
+Salivary Gland Polymorphous Adenocarcinoma	6	5	1	5	False
+Salla Disease	6	22	0	6	False
+Salmonella Gastroenteritis	10	17	0	10	False
+Sandestig-Stefanova Syndrome	13	48	0	13	False
+Sandhoff Disease	8	17	0	8	False
+Sanfilippo syndrome	6	30	0	6	False
+Sanjad-Sakati Syndrome	6	22	0	6	True
+Sarcoglycanopathy	5	6	0	5	False
+Sarcoidosis	9	12	0	9	False
+Sarcoma Of Cervix Uteri	7	11	0	7	False
+Sarcoma with BCOR Genetic Alterations	4	6	0	4	False
+Sarcopenia	17	26	5	5	False
+Satoyoshi Syndrome	6	15	0	6	True
+Saul-Wilson Syndrome	7	22	0	7	False
+Say-Barber-Biesecker-Young-Simpson Syndrome	3	16	0	3	False
+Scabies	5	9	0	5	False
+Scapuloperoneal Spinal Muscular Atrophy	5	15	0	5	False
+Scarlet Fever	7	4	4	1	False
+Schaaf-Yang Syndrome	8	31	0	8	False
+Schimke immuno-osseous dysplasia	6	15	0	6	False
+Schindler Disease	3	20	0	3	True
+Schinzel-Giedion syndrome	5	26	0	5	True
+Schistosomiasis	5	3	2	1	False
+Schizophrenia	12	15	7	5	False
+Schneckenbecken Dysplasia	6	16	0	6	False
+Schnitzler Syndrome	3	14	1	2	False
+Schnyder Corneal Dystrophy	7	7	0	7	False
+Schuurs-Hoeijmakers Syndrome	9	12	2	7	True
+Schwannoma	6	6	0	6	False
+Schwannomatosis	6	10	0	6	False
+Schwartz-Jampel Syndrome	8	7	0	8	True
+Scimitar Syndrome	9	24	0	9	False
+Sclerosing Cholangitis	10	12	5	5	False
+Sclerosteosis	4	11	1	3	False
+Scorpion Envenomation	10	27	2	5	False
+Scott Syndrome	6	5	0	6	False
+Scrub typhus	13	28	3	10	False
+Scurvy	6	18	2	4	False
+Sea-Blue Histiocyte Syndrome	3	7	0	3	False
+Seasonal Coronavirus Infection	3	12	0	3	False
+Seborrheic Dermatitis	12	15	3	8	False
+Seckel syndrome	4	17	3	1	False
+Secondary Erythromelalgia	9	11	1	6	False
+Secondary Hypertension	6	8	1	1	False
+Segmental arterial mediolysis	3	5	1	2	False
+Seizures-scoliosis-macrocephaly syndrome	7	15	1	6	True
+Selective IgA Deficiency	7	9	2	5	False
+Selective IgM Deficiency	1	1	0	1	False
+Self-Limited Epilepsy with Autonomic Seizures	6	6	0	6	True
+Self-Limited Epilepsy with Centrotemporal Spikes	6	12	1	5	True
+Semantic Dementia	6	20	0	6	False
+Semicircular Canal Dehiscence Syndrome	6	12	2	4	False
+Sengers syndrome	6	14	0	6	False
+Senior-Loken Syndrome	3	14	0	3	False
+Sennetsu Fever	8	15	0	8	False
+Sensory Ataxic Neuropathy, Dysarthria, and Ophthalmoparesis	2	7	0	2	False
+Sepsis	9	11	0	9	False
+Septic Peritonitis	6	15	0	6	False
+Septicemic Plague	3	5	0	3	False
+Serotonin Syndrome	5	20	0	5	False
+Sessile Serrated Polyposis Cancer Syndrome	5	5	1	4	False
+Severe Combined Immunodeficiency	9	29	5	3	False
+Severe Combined Immunodeficiency Due To CARD11 Deficiency	4	10	0	4	False
+Severe Combined Immunodeficiency Due To CORO1A Deficiency	12	36	1	11	False
+Severe Combined Immunodeficiency Due To DNA-PKcs Deficiency	12	39	0	12	True
+Severe Congenital Neutropenia 1, Autosomal Dominant	8	18	0	8	False
+Severe Congenital Neutropenia 7, Autosomal Recessive	6	12	0	6	False
+Severe Congenital Neutropenia 9	7	11	0	7	False
+Severe Neonatal-Onset Encephalopathy With Microcephaly	18	48	0	18	True
+Severe X-linked Intellectual Disability Gustavson Type	6	17	0	6	True
+Severe X-linked Mitochondrial Encephalomyopathy	8	45	0	8	True
+Sezary Syndrome	8	11	0	8	False
+Shashi-Pena Syndrome	4	6	0	4	False
+Shashi X-Linked Intellectual Disability Syndrome	8	11	0	8	False
+Sheehan Syndrome	13	26	1	12	True
+Shiga Toxin-Associated Hemolytic Uremic Syndrome	13	22	1	12	False
+Shigellosis	5	0	4	1	False
+Short-Rib Polydactyly Syndrome	2	20	0	2	False
+Short-Rib Thoracic Dysplasia 6 With or Without Polydactyly	5	4	0	5	False
+Short-rib thoracic dysplasia 21 without polydactyly	8	22	0	8	False
+Short QT Syndrome	5	10	0	5	False
+Short Stature, Amelogenesis Imperfecta, and Skeletal Dysplasia with Scoliosis	9	10	0	9	False
+Short Stature, Dauber-Argente Type	7	9	0	7	False
+Short Stature, Microcephaly, and Endocrine Dysfunction	2	11	0	2	False
+Short Stature With Nonspecific Skeletal Abnormalities 1	4	9	0	4	False
+Shprintzen-Goldberg Syndrome	2	6	0	2	False
+Shwachman-Diamond syndrome	18	35	2	16	False
+Sialidosis type 1	5	24	1	4	True
+Sialuria	6	8	0	6	False
+Siberian Tick Typhus	7	8	2	5	False
+Sick Sinus Syndrome 2, Autosomal Dominant	6	12	0	6	False
+Sickle Cell Disease	7	33	0	7	False
+Siddiqi Syndrome	4	11	0	4	False
+Siderius Type X-Linked Intellectual Disability	15	20	0	15	False
+Sideroblastic Anemia 3	5	9	0	5	False
+Sideroblastic Anemia with B-Cell Immunodeficiency, Periodic Fevers, and Developmental Delay	9	23	1	8	True
+Sifrim-Hitz-Weiss syndrome	3	5	2	1	False
+Silent Sinus Syndrome	7	8	0	7	False
+Silicosis	9	12	0	9	False
+Silo Filler Disease	5	11	0	5	False
+Silver-Russell Syndrome	6	8	3	3	False
+Simple Bone Cyst	3	4	1	1	False
+Simpson-Golabi-Behmel Syndrome Type 1	7	11	1	6	False
+Sinoatrial Block	4	10	1	3	False
+Sinoatrial Node Dysfunction and Deafness	10	11	0	10	True
+Sinonasal Undifferentiated Carcinoma	5	4	1	4	False
+Sitosterolemia	10	10	0	10	False
+Sjogren-Larsson Syndrome	10	20	0	10	True
+Sjogren's Syndrome	6	1	5	1	False
+CSGALNACT1-Congenital Disorder of Glycosylation	5	14	0	5	False
+Skeletal Fluorosis	16	20	0	16	False
+Skin Fragility-Woolly Hair Syndrome	5	10	0	5	False
+Skraban-Deardorff Syndrome	6	22	0	6	True
+Sly syndrome	6	13	0	6	False
+Small Cell Lung Cancer	10	6	4	3	False
+Small Intestinal Bacterial Overgrowth	5	9	0	5	False
+Small Intestine Cancer	6	4	2	3	False
+Smallpox	5	10	1	4	False
+Smith-Lemli-Opitz syndrome	8	17	0	8	False
+Smith-Magenis Syndrome	5	27	1	4	False
+Snakebite envenoming	6	13	4	1	False
+Sneddon syndrome	4	5	0	4	False
+Snijders Blok-Campeau Syndrome	3	31	0	3	False
+Snyder-Robinson Syndrome	8	22	0	8	True
+Social Anxiety Disorder	5	4	3	2	False
+Soil-transmitted helminthiases	5	5	2	1	False
+Solitary Fibrous Tumor	6	8	0	6	False
+Sorbitol Dehydrogenase Deficiency	8	9	0	8	False
+Sorsby Fundus Dystrophy	14	31	0	14	False
+Sotos Syndrome	13	29	1	12	True
+Southern Tick-Associated Rash Illness	4	8	1	3	False
+Spaceflight Associated Neuro-Ocular Syndrome	7	2	4	1	False
+Spasmodic Dysphonia	4	0	3	1	True
+Spastic Paraparesis-Cataracts-Speech Delay Syndrome	7	6	0	7	True
+Spastic Paraplegia 81	6	20	0	6	True
+Spastic Paraplegia 89 Autosomal Recessive	6	5	0	6	True
+Spastic Paraplegia 90A, Autosomal Dominant	6	14	0	6	False
+Spastic Paraplegia 91, Autosomal Dominant, With or Without Cerebellar Ataxia	6	16	0	6	True
+Spastic Tetraplegia and Axial Hypotonia, Progressive	10	25	0	10	False
+Spastic Ataxia	3	7	0	3	False
+Specific Antibody Deficiency	4	4	0	4	False
+Spermatogenic Failure 100	5	11	0	5	False
+Spermatogenic Failure 16	4	5	0	4	False
+Spermatogenic Failure 18	3	8	0	3	False
+Spermatogenic Failure 19	7	19	2	5	False
+Spermatogenic Failure 20	3	11	0	3	False
+Spermatogenic Failure 23	5	7	0	5	False
+Spermatogenic Failure 24	4	12	0	4	False
+Spermatogenic Failure 26	3	6	0	3	False
+Spermatogenic Failure 28	5	12	1	4	False
+Spermatogenic Failure 32	4	7	0	4	False
+Spermatogenic Failure 33	5	13	0	5	False
+Spermatogenic Failure 39	6	13	1	4	False
+Spermatogenic Failure 40	5	15	0	5	False
+Spermatogenic Failure 41	3	7	0	3	False
+Spermatogenic failure 43	5	8	0	5	False
+Spermatogenic Failure 45	5	12	0	5	False
+Spermatogenic Failure 46	4	11	0	4	False
+Spermatogenic Failure 47	3	6	0	3	False
+Spermatogenic failure 48	5	9	0	5	False
+Spermatogenic Failure 49	4	9	0	4	False
+Spermatogenic Failure 51	4	7	0	4	False
+Spermatogenic Failure 56	5	12	0	5	False
+Spermatogenic Failure 64	4	6	0	4	False
+Spermatogenic Failure 67	2	3	0	2	False
+Spermatogenic Failure 68	4	4	0	4	False
+Spermatogenic Failure 72	3	5	0	3	False
+Spermatogenic Failure 84	4	12	0	4	False
+Spermatogenic Failure 88	6	9	0	6	False
+Spermatogenic Failure 95	4	12	0	4	False
+Spermatogenic failure 98	4	3	0	4	False
+Spermatogenic Failure X-linked 3	4	12	0	4	False
+Spermatogenic Failure X-linked 5	2	3	0	2	False
+RBBP7-Related X-linked Spermatogenic Maturation Arrest	6	10	0	6	False
+Sphingosine Phosphate Lyase Insufficiency Syndrome	9	23	0	9	False
+Spina Bifida Cystica	9	11	3	6	False
+Spinal Cord Ischemia	2	1	0	2	False
+Spinal Muscular Atrophy	6	41	1	5	False
+Spinal Muscular Atrophy-Progressive Myoclonic Epilepsy Syndrome	5	17	0	5	True
+Spinal Muscular Atrophy with Respiratory Distress Type 1	4	8	0	4	False
+Spinocerebellar Ataxia 27A	8	15	4	4	False
+Spinocerebellar ataxia 27B	6	6	0	6	False
+Spinocerebellar Ataxia 43	4	3	0	4	False
+Spinocerebellar Ataxia 46	6	12	0	6	False
+Spinocerebellar Ataxia 48	8	28	1	7	False
+Spinocerebellar Ataxia, Autosomal Recessive 26	7	18	0	7	True
+Spinocerebellar Ataxia, Autosomal Recessive 27	4	18	0	4	False
+Spinocerebellar Ataxia, Autosomal Recessive 29	7	12	0	7	True
+Spinocerebellar Ataxia, Autosomal Recessive 31	8	24	0	8	False
+Spinocerebellar Ataxia, Autosomal Recessive 32	9	31	0	9	False
+Spinocerebellar Ataxia, Autosomal Recessive, With Axonal Neuropathy 3	16	38	0	16	True
+Spinocerebellar Ataxia Type 1	13	37	1	12	False
+Spinocerebellar Ataxia Type 15/16	3	9	0	3	False
+Spinocerebellar ataxia type 17	10	20	1	9	False
+Spinocerebellar Ataxia Type 19/22	6	11	0	6	True
+Spinocerebellar Ataxia Type 2	8	7	1	7	False
+Spinocerebellar Ataxia Type 23	7	7	0	7	False
+Spinocerebellar Ataxia Type 31	8	9	0	8	False
+Spinocerebellar Ataxia Type 36	11	18	1	10	False
+Spinocerebellar Ataxia Type 4	8	17	0	8	False
+Spinocerebellar Ataxia Type 6	5	7	0	5	False
+Spinocerebellar Ataxia Type 8	10	15	0	10	False
+Spirillary Rat-Bite Fever	4	8	0	4	False
+Splenic artery aneurysm	5	4	3	2	False
+Splenic Marginal Zone Lymphoma	5	4	0	5	False
+Split-Foot Malformation with Mesoaxial Polydactyly	5	13	0	5	False
+Split Hand-Foot Malformation	4	9	0	4	False
+Spondylo-megaepiphyseal-metaphyseal Dysplasia	6	16	0	6	False
+Spondylo-ocular Syndrome	6	21	0	6	False
+Spondylocarpotarsal Synostosis Syndrome	4	20	1	3	False
+Spondylocostal Dysostosis	3	2	0	3	False
+Spondylodysplastic Ehlers-Danlos Syndrome	8	31	1	2	False
+Spondyloenchondrodysplasia	9	22	0	9	False
+Spondyloepimetaphyseal Dysplasia Aggrecan Type	5	17	0	5	False
+Spondyloepimetaphyseal Dysplasia Bieganski Type	3	12	0	3	False
+Spondyloepimetaphyseal Dysplasia Faden-Alkuraya Type	7	6	0	7	False
+Spondyloepimetaphyseal Dysplasia Guo-Campeau Type	5	12	0	5	False
+Spondyloepimetaphyseal Dysplasia Krakow Type	4	6	0	4	False
+Spondyloepimetaphyseal Dysplasia Maroteaux Type	4	5	0	4	False
+Spondyloepimetaphyseal Dysplasia Missouri Type	6	12	0	6	False
+Spondyloepimetaphyseal Dysplasia, Shohat Type	8	16	0	8	False
+Spondyloepimetaphyseal Dysplasia Short Limb Abnormal Calcification Syndrome	6	15	0	6	False
+Spondyloepimetaphyseal Dysplasia Sponastrime Type	5	17	0	5	False
+Spondyloepimetaphyseal Dysplasia Strudwick Type	5	18	3	2	False
+Spondyloepimetaphyseal Dysplasia with Joint Laxity Type 3	8	22	0	8	False
+Spondyloepiphyseal Dysplasia Congenita	5	21	2	3	False
+Spondyloepiphyseal Dysplasia, Kondo-Fu Type	8	17	0	8	False
+Spondyloepiphyseal Dysplasia, Nishimura Type	15	35	0	15	False
+Spondylometaphyseal Dysplasia Corner Fracture Type	9	23	0	9	False
+Spondylometaphyseal Dysplasia Kozlowski Type	5	24	1	4	False
+Spondylometaphyseal Dysplasia, Schmidt Type	7	21	0	7	False
+Spondylometaphyseal Dysplasia with Cone-Rod Dystrophy	7	14	0	7	False
+Spondylometaphyseal Dysplasia with Corneal Dystrophy	6	16	0	6	False
+Spondyloperipheral Dysplasia	5	16	0	5	False
+Spongiform Encephalopathy With Neuropsychiatric Features	6	12	0	6	True
+Spotted fever rickettsiosis	7	5	2	5	False
+Squalene Synthase Deficiency	7	15	0	7	True
+Squamous Cell Carcinoma of Penis	4	3	1	3	False
+Stankiewicz-Isidor syndrome	4	16	0	4	False
+Staphylococcal Scalded Skin Syndrome	11	20	2	8	False
+Staphylococcus Aureus Pneumonia	6	10	1	5	False
+Staphylococcus Discitis	6	8	0	6	False
+Staphyloenterotoxemia	5	7	1	4	False
+Stargardt Disease	8	18	1	7	False
+Statin Toxicity	14	23	2	10	False
+Steatocystoma Multiplex	8	15	1	7	False
+Steel Syndrome	7	28	0	7	False
+Sterol Carrier Protein 2 Deficiency	5	9	0	5	True
+Stevens-Johnson Syndrome	12	16	2	10	False
+Stickler Syndrome Type 1	2	29	0	2	False
+Stickler Syndrome Type 1 Nonsyndromic Ocular	7	12	0	7	False
+Stickler Syndrome Type 2	9	16	0	9	False
+Stickler Syndrome Type 4	5	12	0	5	False
+Stickler Syndrome Type 5	5	10	0	5	False
+Stickler Syndrome Type 6	7	15	0	7	False
+Stiff Person Syndrome	6	1	4	2	True
+Stiff Skin Syndrome	5	7	0	5	False
+Streptobacillary Rat-Bite Fever	4	9	0	4	False
+Streptococcal meningitis	8	13	0	8	False
+Streptococcal Pharyngitis	7	15	2	5	False
+Striatal Degeneration, Autosomal Dominant 2	6	8	0	6	False
+Striate Palmoplantar Keratoderma Type 1	5	8	0	5	False
+Striate Palmoplantar Keratoderma Type 2	7	19	0	7	False
+Stromal Corneal Dystrophy	7	8	4	3	False
+Stromme Syndrome	3	29	0	3	False
+Sturge-Weber Syndrome	12	13	0	12	True
+Subacute Delirium	9	10	2	6	False
+Subacute Inflammatory Demyelinating Polyneuropathy	5	8	3	1	False
+Subcutaneous Panniculitis-like T-cell Lymphoma	5	6	0	5	False
+Succinic Semialdehyde Dehydrogenase Deficiency	6	29	0	6	True
+Sudden cardiac failure, infantile	8	23	0	8	True
+Sulfide Quinone Oxidoreductase Deficiency	6	21	0	6	False
+Sulfur Mustard Poisoning	17	37	0	17	False
+Superior Mesenteric Artery Syndrome	8	9	0	8	False
+Susac Syndrome	6	12	2	4	False
+Sweeney-Cox Syndrome	5	4	0	5	False
+Sweet Syndrome	5	4	0	5	False
+Sycosis Barbae	3	5	0	3	False
+Symphalangism Proximal 1B	3	4	0	3	False
+Syndromic X-linked Intellectual Disability 94	7	19	0	7	True
+Syndromic X-linked Intellectual Disability Nascimento Type	7	8	0	7	True
+Synovial Sarcoma	3	3	0	3	False
+Syphilis	17	40	4	12	False
+Systemic Lupus Erythematosus	19	24	7	10	False
+Systemic Lupus Erythematosus 18	7	12	0	7	False
+Systemic Mastocytosis	4	12	1	3	False
+Systemic Monochloroacetate Poisoning	13	27	0	13	True
+Systemic Sclerosis	4	1	2	1	False
+T-cell Immunodeficiency, Congenital Alopecia, and Nail Dystrophy	7	8	0	7	False
+TACO1-Related COX Deficiency	2	7	0	2	False
+TANGO2 Deficiency Disorder	13	33	1	8	True
+TARP syndrome	2	6	1	1	False
+TBX6-Associated Congenital Scoliosis	3	4	0	3	False
+TCF20-Associated Neurodevelopmental Disorder	4	6	0	4	True
+TEX11-related spermatogenic failure	5	6	0	5	False
+TFRC-related Combined Immunodeficiency	6	16	0	6	False
+TGFBI Corneal Dystrophies	3	8	0	3	False
+THG1L-Related Disorder	4	8	0	4	False
+THOC2-Related Intellectual Disability	6	33	0	6	True
+THOC6-Related Developmental Delay-Microcephaly-Facial Dysmorphism Syndrome	5	8	0	5	False
+THPO-Related Thrombocythemia	16	23	0	16	False
+THUMPD1-Related Neurodevelopmental Disorder with Speech Delay and Variable Ocular Anomalies	4	10	0	4	False
+TLR3 Deficiency	5	6	0	5	False
+TLR7-Related Systemic Lupus Erythematosus	6	13	0	6	False
+TMEM165-Congenital Disorder of Glycosylation	14	50	0	14	False
+TMEM199-CDG	11	11	0	11	True
+TMEM94-Associated Congenital Heart Defect-Facial Dysmorphism-Developmental Delay Syndrome	8	26	0	8	False
+TMLHE Deficiency	6	6	0	6	False
+TNF Receptor-Associated Periodic Syndrome	4	12	0	4	False
+TNRC6B-Related Neurodevelopmental Disorder	4	14	0	4	True
+TOP2B-Related Immunodeficiency and Congenital Anomalies Spectrum	7	19	2	5	False
+TOPORS-Related Retinopathy	5	8	0	5	False
+TP63-Related Ectodermal Dysplasia Spectrum	3	14	0	3	False
+TPM2-Related Myopathy	11	31	1	10	False
+TPM4-related Platelet Disorder	6	14	1	5	False
+TRAF3 Haploinsufficiency	9	10	0	9	False
+TRAPPC12-Related Encephalopathy	8	38	0	8	True
+TRIM28-Related Wilms Tumor Predisposition	5	7	0	5	False
+TRIM71-Associated_Developmental_Disorder	7	13	0	7	False
+TRIO-Related Neurodevelopmental Disorder	4	4	0	4	True
+TRMU-Related Acute Infantile Liver Failure	9	9	1	8	False
+TTC19-related mitochondrial complex III deficiency	4	3	0	4	False
+TTLL5-Related Retinopathy	5	17	0	5	False
+TTN-Related Myopathy, Dominant-Negative TTNsv	3	7	0	3	False
+TUBA1A-related Tubulinopathy	3	2	0	3	True
+TUBA1C-related Preimplantation Embryonic Arrest	2	2	0	2	False
+TUBA4A-related Disorder	3	10	0	3	True
+TUBA8-related Polymicrogyria with Optic Nerve Hypoplasia	3	15	1	2	False
+TUBB1-related Macrothrombocytopenia	5	9	0	5	False
+TUBB2A/TUBB2B-related Cortical Malformation	3	20	0	3	True
+TUBB3-related Tubulinopathy	5	14	0	5	False
+TUBB4A-related Neurologic Disorder	7	29	0	7	False
+TUBB8-related Oocyte Maturation Defect	10	20	3	7	False
+TUBB/TUBB5-related Microcephaly	7	12	0	7	True
+TUBG1-related Tubulinopathy	4	11	0	4	True
+TUBGCP2-related Lissencephaly Spectrum Disorder	7	24	0	7	True
+TUBGCP4-related Microcephaly and Chorioretinopathy	4	5	0	4	False
+TUBGCP6-related Microcephaly and Chorioretinopathy	8	19	0	8	True
+TULP1-Related Retinopathy	18	39	0	18	False
+Taeniasis/cysticercosis	4	7	0	4	True
+Takayasu Arteritis	3	2	1	2	False
+Takenouchi-Kosaki Syndrome	8	24	0	8	False
+Takotsubo Cardiomyopathy	13	21	1	12	False
+Talc Pneumoconiosis	6	13	1	4	False
+Tall Stature-Intellectual Disability-Renal Anomalies Syndrome	4	8	1	2	False
+Tall Stature-Scoliosis-Macrodactyly of the Great Toes Syndrome	6	15	0	6	False
+Tangier_Disease	13	33	0	13	False
+Tatton-Brown-Rahman overgrowth syndrome	3	6	0	3	False
+Taurine transporter deficiency	10	11	0	10	False
+Taurodontism	5	10	2	3	False
+Tay-Sachs Disease	15	42	2	12	True
+Tay-Sachs Disease AB Variant	4	14	0	4	True
+Teebi Hypertelorism Syndrome 2	7	24	1	6	False
+Temple-Baraitser Syndrome	7	17	0	7	True
+Temple Syndrome	5	12	0	5	False
+Temporal Lobe Epilepsy	6	8	4	1	True
+Temtamy Preaxial Brachydactyly Syndrome	4	25	0	4	False
+Temtamy Syndrome	4	8	0	4	True
+Terminal Osseous Dysplasia	4	15	0	4	False
+Tessadori-Van Haaften Neurodevelopmental Syndrome 3	3	7	0	3	False
+Testicular Dysgenesis Syndrome	11	16	0	11	False
+Testicular Germ Cell Tumor	6	2	3	3	False
+Testicular Seminoma	5	3	1	4	False
+Testicular Sex Cord-Stromal Neoplasm	9	11	2	6	False
+Tetanus	3	6	1	2	True
+Tetanus neonatorum	7	12	0	7	False
+Tetraamelia Syndrome 2	5	7	0	5	False
+Tetrahydrobiopterin Deficiency	6	13	0	6	True
+Tetralogy of Fallot	9	18	0	9	False
+Thallium Poisoning	11	15	0	11	False
+Thanatophoric Dysplasia	4	17	0	4	False
+Thanatophoric Dysplasia Type 1	8	25	0	8	False
+Thanatophoric Dysplasia Type 2	8	26	2	6	False
+Thiamine-Responsive Megaloblastic Anemia Syndrome	9	14	0	9	False
+Thiopurine S-methyltransferase Deficiency	7	6	0	7	False
+Thomsen and Becker disease	4	7	0	4	False
+Thoracic Aortic Aneurysm	8	15	3	4	False
+Thromboangiitis obliterans	5	11	0	5	False
+Thrombocytopenia-Absent Radius Syndrome	5	8	0	5	False
+Thrombocytopenia 11 with Multiple Congenital Anomalies and Dysmorphic Facies	3	5	0	3	False
+Thrombocytopenia 3	9	16	0	9	False
+Thrombocytopenia 6	7	15	0	7	True
+Thrombocytopenia 9	4	5	0	4	False
+Thrombophilia	12	13	7	4	False
+Thunderstorm Asthma	6	3	2	4	False
+Thymic Carcinoma	5	5	0	5	False
+Thymic Neuroendocrine Carcinoma	10	24	3	7	False
+Thymoma	10	13	3	7	False
+Thymus Neoplasm	2	5	0	2	False
+Thyroid dyshormonogenesis 5	6	5	1	5	False
+Thyroid Follicular Carcinoma	6	8	1	5	False
+Tick-Borne Encephalitis	2	12	0	2	False
+Tick-Borne Relapsing Fever	7	11	0	7	False
+Timothy Syndrome	12	21	1	10	False
+Tonne-Kalscheuer Syndrome	9	13	0	9	False
+Tooth Agenesis	6	10	4	2	False
+Tooth and Nail Syndrome	3	8	0	3	False
+Torsade de Pointes Syndrome With Short Coupling Interval	5	11	1	4	False
+Torsion Dystonia 6	7	14	0	7	False
+Tourette Syndrome	10	12	1	9	False
+Townes-Brocks Syndrome 1	9	18	1	7	False
+Toxic Oil Syndrome	17	25	1	15	False
+Toxic Shock Syndrome	11	7	4	7	False
+Toxoplasmosis	15	15	0	15	False
+Trachoma	3	3	0	3	False
+Transaldolase Deficiency	16	49	0	16	False
+Transient Neonatal Hyperparathyroidism	9	21	1	8	False
+Transient Neonatal Pustular Melanosis	7	5	2	5	False
+Transient Neonatal Zinc Deficiency	6	14	0	6	False
+Transitional Cell Carcinoma	6	7	0	6	False
+Transketolase Deficiency	3	5	0	3	False
+Transverse Myelitis	6	13	2	4	False
+Traumatic Brain Injury	16	28	3	12	False
+Traveler's Diarrhea	15	16	5	8	False
+Treacher Collins Syndrome	7	23	1	6	False
+Trehalase Deficiency	4	7	0	4	False
+Trench Fever	8	12	2	6	False
+Tricho-dento-osseous Syndrome	7	13	0	7	False
+Trichohepatoenteric Syndrome	5	8	0	5	False
+Trichohepatoneurodevelopmental Syndrome	6	13	0	6	False
+Trichorhinophalangeal Syndrome Type I	8	22	0	8	False
+Trichothiodystrophy	26	60	5	12	False
+Trichotillomania	5	4	0	5	False
+Triglyceride Storage Disease Type 1	3	2	0	3	False
+Triglyceride Storage Disease Type 2	2	2	0	2	False
+Trimethylaminuria	2	3	0	2	False
+Triosephosphate Isomerase Deficiency	12	23	0	12	False
+Triple A Syndrome	5	15	0	5	False
+Triple-Negative Breast Cancer	8	8	2	3	False
+Trisomy 13	3	6	0	3	False
+Trisomy 18	5	5	0	5	False
+Trisomy X	4	17	0	4	True
+Tritan Color Vision Deficiency	7	11	0	7	False
+Tuberculosis	8	6	3	4	False
+Tuberous Sclerosis Complex	15	47	0	15	True
+Tularemia	7	12	2	5	False
+Turner Syndrome	16	31	0	16	False
+Twin to Twin Transfusion Syndrome	5	11	0	5	False
+Type 2 Diabetes Mellitus	13	14	8	5	False
+Type B Insulin Resistance Syndrome	5	10	0	5	False
+Type I Diabetes	13	25	3	7	False
+Typhoid Fever	9	17	2	7	False
+Typhoidal Tularemia	9	19	2	7	False
+Tyrosinemia Type I	7	26	1	6	False
+Tyrosinemia Type II	3	8	0	3	False
+Tyrosinemia Type III	4	9	0	4	True
+U2AF2-related neurodevelopmental disorder	3	7	0	3	True
+U4 and U6 snRNA Gene-Related Retinitis Pigmentosa	3	6	0	3	False
+UBA5-Related Developmental and Epileptic Encephalopathy	10	10	3	6	True
+UCHL1-Related Neurodegeneration with Optic Atrophy and Spastic Paraplegia	8	18	0	8	False
+UGDH-related developmental and epileptic encephalopathy 84	5	9	0	5	True
+UGGT1-congenital disorder of glycosylation	4	7	0	4	True
+UGP2-related developmental and epileptic encephalopathy 83	6	7	0	6	True
+UNC13A-Related Congenital NDD with Epilepsy	4	15	0	4	True
+UNC13A-Related NDD with Seizures and Movement Disorder	3	8	1	2	True
+UQCC2-related mitochondrial complex III deficiency	6	11	0	6	True
+USP8-related pituitary adenoma 4	5	4	0	5	False
+USP9X Female-Restricted Syndromic Intellectual Disability	17	19	0	17	False
+UV-Sensitive Syndrome	4	6	0	4	False
+Ulcerative Colitis	13	11	5	2	False
+Ulceroglandular Tularemia	3	4	0	3	False
+Ullrich congenital muscular dystrophy	6	37	0	6	False
+Ulnar-Mammary Syndrome	5	14	0	5	False
+Undetermined Early-Onset Epileptic Encephalopathy	3	7	0	3	True
+Undifferentiated Connective Tissue Syndrome	5	6	0	5	False
+Uner Tan Syndrome	2	3	0	2	False
+Unicentric Castleman Disease	5	6	0	5	False
+Unverricht-Lundborg Disease	8	14	0	8	True
+Urea Cycle Disorder	9	32	0	9	True
+Ureaplasma Urethritis	5	5	3	2	False
+Urinary Bladder Small Cell Neuroendocrine Carcinoma	3	2	1	2	False
+Urticaria	10	12	3	6	False
+Usher Syndrome Type 1	5	10	0	5	False
+Usher Syndrome Type 2	5	8	0	5	False
+Usher Syndrome Type 3	4	8	0	4	False
+Usher Syndrome Type 4	9	10	0	9	False
+Usmani-Riazuddin Syndrome, Autosomal Dominant	8	18	1	7	True
+Usmani-Riazuddin Syndrome, Autosomal Recessive	4	6	0	4	True
+Usutu Virus Disease	5	12	0	5	False
+Uterine Leiomyoma	9	18	0	9	False
+Uveal Coloboma-Cleft Lip and Palate-Intellectual Disability Syndrome	7	16	1	6	False
+Uveal Melanoma	4	2	1	3	False
+Uveitis	5	11	1	3	False
+VAMP2-Related Neurodevelopmental Disorder	6	24	0	6	True
+VCP-Associated Multisystem Proteinopathy	5	16	0	5	False
+VEXAS Syndrome	6	17	0	6	False
+Very Long-Chain Acyl-CoA Dehydrogenase Deficiency	7	15	0	7	False
+VPS4A-Related Neurodevelopmental Syndrome	9	10	0	9	False
+VPS51-Related Pontocerebellar Hypoplasia-CDG	4	2	1	3	True
+VPS53-Related Pontocerebellar Hypoplasia Type 2E	5	8	0	5	True
+Vacuolar Neuromyopathy	5	14	0	5	False
+Van Buchem Disease	4	11	0	4	False
+Van Maldergem Syndrome	7	7	0	7	False
+Vascular Ehlers-Danlos Syndrome	2	8	0	2	False
+Vein of Galen malformation	6	17	0	6	True
+Ventricular Septal Defect	8	16	1	7	False
+Verruga Peruana	5	8	0	5	False
+Vertebral Anomalies And Variable Endocrine And T-cell Dysfunction	6	18	0	6	False
+Vertebral Artery Insufficiency	11	20	7	4	False
+Vertebral, Cardiac, Tracheoesophageal, Renal, and Limb Defects	5	11	0	5	False
+Vibrio Vulnificus Infectious Disease	7	14	1	6	False
+Vici Syndrome	10	21	0	10	False
+Viral Encephalitis	6	10	0	6	True
+Visceral heterotaxy	3	9	1	2	False
+Visceral Heterotaxy 13	5	23	0	5	False
+Visceral Heterotaxy 7	5	29	0	5	False
+Visceral Heterotaxy 8	6	29	0	6	False
+Visceral Heterotaxy 9	7	19	0	7	False
+Visual Snow Syndrome	5	12	2	3	False
+Vitamin D-Dependent Rickets Type 1A	8	15	0	8	False
+Vitamin D-Dependent Rickets Type 1B	3	13	0	3	False
+Vitamin D-Dependent Rickets Type 2A	13	27	5	8	False
+Vitamin D-Dependent Rickets Type 2B	6	8	2	2	False
+Vitamin D-Dependent Rickets Type 3	6	21	0	6	False
+Vitamin K-Dependent Coagulation Factor Deficiency	5	29	1	4	False
+Vitiligo	10	4	7	1	False
+Vogt-Koyanagi-Harada Disease	10	21	2	8	False
+Volumetric Muscle Loss	7	12	0	7	False
+Von Hippel-Lindau Disease	8	18	0	8	False
+Vulvar Adenocarcinoma	8	13	5	1	False
+Vulvar Carcinoma	13	23	3	8	False
+Vulvodynia	9	17	1	8	False
+WAGR Syndrome	5	41	0	5	False
+WAPL-Related Developmental Disorder	9	10	1	7	False
+WFS1-Related Disorder	10	21	0	10	False
+WHIM Syndrome 1	9	17	0	9	False
+WIPF1 Deficiency	3	10	0	3	False
+WT1-Related Wilms Tumor Predisposition	8	14	0	8	False
+WWOX-Related Developmental and Epileptic Encephalopathy	17	15	5	11	True
+Waardenburg Syndrome Type 2F	4	13	0	4	False
+Waisman Syndrome	9	24	0	9	True
+Waldenstrom Macroglobulinemia	6	5	2	3	False
+Warburg-Cinotti Syndrome	6	5	0	6	False
+Warburg micro syndrome	7	23	0	7	False
+Warsaw breakage syndrome	8	25	0	8	False
+Water Intoxication	7	14	2	5	True
+Weaver Syndrome	4	19	0	4	False
+Webb-Dattani Syndrome	7	29	0	7	True
+Weill-Marchesani syndrome	18	23	3	15	False
+Weil's Disease	6	14	0	6	False
+Weiss-Kruszka Syndrome	4	6	0	4	False
+Werner Syndrome	17	32	1	14	False
+Whipple Disease	6	0	5	1	False
+White-Sutton Syndrome	7	22	0	7	True
+White Sponge Nevus	5	11	0	5	False
+Wieacker-Wolff Syndrome Spectrum	6	20	0	6	False
+Wiedemann-Rautenstrauch Syndrome	10	38	0	10	False
+Wiedemann-Steiner Syndrome	5	31	0	5	False
+Williams Syndrome	8	20	0	8	False
+Wilms Tumor	13	18	7	5	False
+Wilson Disease	13	75	0	13	False
+Winchester Syndrome	11	24	0	11	False
+Wiskott-Aldrich syndrome	5	33	0	5	False
+Wissler syndrome	7	17	0	7	False
+Wolcott-Rallison Syndrome	8	19	0	8	False
+Wolf-Hirschhorn_Syndrome	10	36	0	10	True
+Wolfram Syndrome	14	30	1	13	False
+Wolman Disease	9	18	0	9	False
+Woodhouse-Sakati Syndrome	4	18	0	4	False
+Wooly Hair-Palmoplantar Keratoderma Syndrome	3	4	0	3	False
+X-Linked Combined Immunodeficiency	7	21	0	7	False
+X-Linked Hypophosphatemia	7	17	0	7	False
+X-Linked Infantile Spinal Muscular Atrophy	8	20	0	8	False
+X-Linked Nephrogenic Diabetes Insipidus	10	24	0	10	False
+X-Linked Spondyloepiphyseal Dysplasia Tarda	6	10	0	6	False
+X-linked Agammaglobulinemia	4	5	0	4	False
+X-linked Chondrodysplasia Punctata 1	5	10	1	4	False
+X-linked Chondrodysplasia Punctata 2	9	18	1	6	False
+X-linked Dilated Cardiomyopathy	9	15	0	9	False
+X-linked Dominant Chondrodysplasia Chassaing-Lacombe Type	4	3	1	3	False
+X-linked Dystonia-Parkinsonism	4	6	0	4	False
+X-linked Hypohidrotic Ectodermal Dysplasia	9	18	0	9	False
+X-Linked Intellectual Disability-Cerebellar Hypoplasia Syndrome	8	17	0	8	True
+X-linked Intellectual Disability Van Esch Type	5	10	0	5	True
+X-linked Lymphoproliferative Disease Due To SH2D1A Deficiency	10	26	0	10	False
+X-linked Lymphoproliferative Disease Due To XIAP Deficiency	7	15	0	7	False
+X-linked Mendelian Susceptibility to Mycobacterial Diseases due to CYBB Deficiency	7	10	0	7	False
+X-linked Nonsyndromic Hearing Loss	5	6	4	1	False
+X-linked Reticulate Pigmentary Disorder	8	14	2	6	False
+X-linked Retinoschisis	6	5	0	6	False
+X-linked Syndromic Intellectual Disability, Turner Type	11	26	2	1	False
+XFE Progeroid Syndrome	7	9	0	7	False
+Xanthogranulomatous Pyelonephritis	6	17	0	6	False
+Xeroderma Pigmentosum	6	19	0	6	False
+Xia-Gibbs Syndrome	5	17	0	5	True
+YWHAG Syndrome	5	17	0	5	True
+Yao Syndrome	4	22	0	4	False
+Yaws	7	20	2	3	False
+Yellow Fever	3	10	0	3	False
+Yersinia Enterocolitica Infectious Disease	8	13	1	7	False
+Yersinia Pseudotuberculosis Infectious Disease	6	9	0	6	False
+Yolk Sac Tumor	8	4	6	2	False
+You-Hoover-Fong Syndrome	1	2	0	1	False
+Young Syndrome	4	9	1	3	False
+Yunis-Varon Syndrome	12	31	1	11	False
+ZAP70 Deficiency	11	28	0	11	False
+ZFP36L2-related Oocyte Maturation Defect	4	6	0	4	False
+ZIC1-Related Craniosynostosis	7	24	0	7	False
+ZNF341 Deficiency	10	29	1	9	False
+ZNF407-Related Neurodevelopmental Disorder	3	37	0	3	False
+ZRS-Related Limb Malformation	8	19	1	4	False
+ZTTK syndrome	7	31	0	7	False
+Zaki Syndrome	3	20	0	3	False
+Zellweger Spectrum Disorders	10	31	6	4	True
+Zimmermann-Laband Syndrome	10	23	1	5	False
+Zlotogora-Ogur Syndrome	3	10	0	3	False
+aceruloplasminemia	3	13	0	3	False
+adrenoleukodystrophy	10	23	0	10	False
+Alpha-Methylacyl-CoA Racemase Deficiency	9	20	0	9	True
+angioosteohypertrophic syndrome	5	15	0	5	False
+capillary leak syndrome	6	16	0	6	False
+erythromelalgia	4	4	1	3	False
+IL6ST-Related Hyper-IgE Syndrome (Autosomal Dominant)	3	12	0	3	False
+neuroferritinopathy	6	10	0	6	False
+Oligoastrocytoma	4	5	2	1	False
+ornithine aminotransferase deficiency	5	14	0	5	False
+pseudotumor cerebri	14	23	3	8	False

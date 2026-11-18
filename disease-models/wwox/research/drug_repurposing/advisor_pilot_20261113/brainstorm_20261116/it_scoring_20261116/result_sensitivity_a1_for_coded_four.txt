@@ -1,0 +1,31 @@
+children with an attributable stated seizure outcome (class: n, partial-counts k, resolved-only k, Wilson 95% partial-counts)
+  GABA-A PAM (non-benzodiazepine): n=4 k_partial_counts=3 k_resolved=0 share=0.75 [0.30,0.95] SCORABLE
+  GABA-AT/GAT: n=11 k_partial_counts=8 k_resolved=4 share=0.73 [0.43,0.90] SCORABLE
+  SV2A: n=3 k_partial_counts=2 k_resolved=0 share=0.67 [0.21,0.94] SCORABLE
+  benzodiazepines: n=4 k_partial_counts=3 k_resolved=3 share=0.75 [0.30,0.95] SCORABLE
+  cannabidiol/fenfluramine-type: n=4 k_partial_counts=2 k_resolved=0 share=0.50 [0.15,0.85] SCORABLE
+  carbonic-anhydrase/multi-target: n=3 k_partial_counts=2 k_resolved=2 share=0.67 [0.21,0.94] SCORABLE
+  ketogenic diet: n=8 k_partial_counts=5 k_resolved=0 share=0.62 [0.31,0.86] SCORABLE
+  sodium-channel: n=1 k_partial_counts=0 k_resolved=0 share=0.00 [0.00,0.79] not scorable (<3)
+  steroid/ACTH: n=8 k_partial_counts=3 k_resolved=1 share=0.38 [0.14,0.69] SCORABLE
+  valproate-type: n=2 k_partial_counts=1 k_resolved=0 share=0.50 [0.09,0.91] not scorable (<3)
+
+scorable classes (8): ['GABA-A PAM (non-benzodiazepine)', 'GABA-AT/GAT', 'SV2A', 'benzodiazepines', 'cannabidiol/fenfluramine-type', 'carbonic-anhydrase/multi-target', 'ketogenic diet', 'steroid/ACTH']; class pairs: 28
+
+== observed ordering version 'partial_counts': classifiable (not tied) pairs 6 of 28
+  F1_per_thread_sum: classifiable pairs scored 4, concordance 0.88
+  F1_origin_collapsed: classifiable pairs scored 4, concordance 0.88
+  F2_GABA-AT>CBD>steroid=KD (CBD pairs only when CBD is scorable): classifiable pairs scored 2, concordance 0.75
+  baseline_i_PTZ_profile: 0 classifiable pairs scored (not scorable)
+  baseline_ii_frequency_of_use: classifiable pairs scored 4, concordance 0.50
+  baseline_iii_uniform: classifiable pairs scored 6, concordance 0.50
+  baseline_arm_memory_free (score_match; unknown excluded): 0 classifiable pairs scored (not scorable)
+
+== observed ordering version 'resolved_only': classifiable (not tied) pairs 17 of 28
+  F1_per_thread_sum: classifiable pairs scored 14, concordance 0.79
+  F1_origin_collapsed: classifiable pairs scored 14, concordance 0.75
+  F2_GABA-AT>CBD>steroid=KD (CBD pairs only when CBD is scorable): classifiable pairs scored 4, concordance 0.88
+  baseline_i_PTZ_profile: classifiable pairs scored 7, concordance 0.64
+  baseline_ii_frequency_of_use: classifiable pairs scored 14, concordance 0.43
+  baseline_iii_uniform: classifiable pairs scored 17, concordance 0.50
+  baseline_arm_memory_free (score_match; unknown excluded): 0 classifiable pairs scored (not scorable)

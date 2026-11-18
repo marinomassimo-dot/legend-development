@@ -12,6 +12,9 @@
 #   exit:  0 committed / nothing to commit · 2 usage · 3 lock timeout · 4 directory pathspec
 #          5 generated surfaces unverifiable (or stale under a refused override) on the candidate commit
 #          6 committed on main, but regenerating the stale surfaces afterwards failed
+#          7 a named TSV/CSV/JSON file is structurally broken (ragged rows, unparsable JSON, empty file); LEGEND_STRUCTURE_BECAUSE overrides
+#          9 a commit that names the hypothesis-packages registry (hypothesis_packages.tsv) or its PKG_MAP file (conditional_proposals.py) broke one of the reader suites that read it; LEGEND_REGISTRY_READERS_BECAUSE overrides
+#          8 this worktree has a `safe_push.py --serialize` waiting in the landing queue: a new commit moves HEAD and the pending push is refused or wasted; LEGEND_COMMIT_WHILE_PUSH_PENDING=<reason> overrides
 #
 # Concurrent actors share one checkout, so every commit takes an exclusive lock:
 # `git commit` races on .git/index.lock. The commit is path-scoped, so an actor can
@@ -41,6 +44,18 @@ done
 # one lock. `$ROOT/.git` is a directory only in the main checkout; in a linked worktree it is a
 # gitfile, and the old `$ROOT/.git/legend_commit.lock` path could not even be opened there.
 COMMON="$(git rev-parse --path-format=absolute --git-common-dir)"
+# A commit in a worktree whose publisher is still waiting in the landing queue moves HEAD under it (2026-11-16: it cost a restarted push twice). The queue file lists one waiter per line
+# ("pid start_ticks utc"); a ticket whose process runs in THIS worktree blocks the commit. Dead pids are ignored; the queue file exists only where the ticket-queue tool has run.
+QUEUE="$COMMON/legend_land.queue"
+if [ -f "$QUEUE" ] && [ -z "${LEGEND_COMMIT_WHILE_PUSH_PENDING:-}" ]; then
+  while read -r qpid _rest; do
+    case "$qpid" in ''|*[!0-9]*) continue ;; esac
+    if [ "$(readlink "/proc/$qpid/cwd" 2>/dev/null || true)" = "$ROOT" ]; then
+      echo "refused: a safe_push waiting in the landing queue (pid $qpid) runs in this worktree; a commit now moves HEAD under it. Wait for it, or use another worktree, or set LEGEND_COMMIT_WHILE_PUSH_PENDING=\"<reason>\"." >&2
+      exit 8
+    fi
+  done < "$QUEUE"
+fi
 LOCK="${LEGEND_COMMIT_LOCK:-$COMMON/legend_commit.lock}"
 
 exec 9>"$LOCK"
@@ -92,6 +107,41 @@ Stale-surfaces-because: $LEGEND_STALE_SURFACES_BECAUSE"
       exit 5
     fi
   fi
+fi
+
+# Structure of the machine-readable files this commit names (2026-11-16: a TSV row with 2 cells in an 8-column table reached main and kept the publication workflow red for 19 runs, ~1,200 CI
+# minutes; the check existed and was only run by the gate). The same tests, restricted to the named files: ragged TSV/CSV rows, JSON that does not parse, empty or non-UTF-8 files.
+case " $* " in
+  *.tsv*|*.csv*|*.json*)
+    STRUCT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/scripts/test_structured_data_integrity.py"
+    if [ -f "$STRUCT" ] && [ -z "${LEGEND_STRUCTURE_BECAUSE:-}" ]; then
+      REL="$(for p in "$@"; do [ -f "$p" ] && realpath "$p"; done)"                 # absolute paths: the wrapper's own checkout and the repository it commits to need not be the same
+      if ! SOUT="$(LEGEND_STRUCT_PATHS="$REL" python3 "$STRUCT" 2>&1)"; then
+        printf '%s\n' "$SOUT" | tail -12 >&2
+        echo "refused: a named machine-readable file is structurally broken (see above). Fix it, or set LEGEND_STRUCTURE_BECAUSE=\"<reason>\"." >&2
+        exit 7
+      fi
+    fi;;
+esac
+
+# The packages registry has readers with their own suites that the registry's own `check` does not run (2026-11-16: the HB1 package registered without a PKG_MAP entry failed 14 consecutive CI runs,
+# about 14 x 50 to 80 run-minutes, in five reader suites). When a commit names the registry or the PKG_MAP file, run every test file that reads them (found by what it reads, so a new reader is
+# picked up) before the commit; about 45 seconds today, 40 of them in one ladder suite.
+REGISTRY_TOUCHED=0
+for p in "$@"; do
+  case "$(basename "$p")" in hypothesis_packages.tsv|conditional_proposals.py) REGISTRY_TOUCHED=1;; esac
+done
+if [ "$REGISTRY_TOUCHED" -eq 1 ] && [ -z "${LEGEND_REGISTRY_READERS_BECAUSE:-}" ]; then
+  READERS="$(git grep -l -e conditional_proposals -e PKG_MAP -- '*test*.py' || true)"
+  T0=$SECONDS
+  for t in $READERS; do
+    if ! ROUT="$(cd "$ROOT" && python3 "$t" 2>&1)"; then
+      printf '%s\n' "$ROUT" | tail -12 >&2
+      echo "refused: the reader suite $t fails with this registry state (see above). Add the missing PKG_MAP entry or fix the registry, or set LEGEND_REGISTRY_READERS_BECAUSE=\"<reason>\"." >&2
+      exit 9
+    fi
+  done
+  echo "registry reader suites passed ($(printf '%s\n' $READERS | wc -l | tr -d ' ') files, $((SECONDS - T0)) s)" >&2
 fi
 
 git add -- "$@"

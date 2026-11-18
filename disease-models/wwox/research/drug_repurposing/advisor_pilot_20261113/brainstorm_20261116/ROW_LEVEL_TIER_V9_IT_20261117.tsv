@@ -1,0 +1,39 @@
+cell_id	best_tier_row_level	row_types	reading_ids
+C001	3	WWOX observation	R03;R08
+C006	3	transfer	R13
+C007	3	simulation	R17c
+C010	2	WWOX observation	O3;R07;R08;R11
+C011	3	simulation	R17c
+C013	1	WWOX observation+assumption+simulation	O1;O2;O3;R05a;R05b;R17a;R20
+C015	3	simulation	R17a
+C018	3	assumption	A01
+C024	3	WWOX observation+simulation	R01;R17b
+C028	1	WWOX observation	R06;R08;R11
+C031	3	WWOX observation+simulation	R16;R17c
+C035	3	WWOX observation+simulation+transfer	R14;R16;R17c
+C038	2	WWOX observation	R08c
+C046	3	WWOX observation	R04
+C047	3	WWOX observation+simulation	R01;R04;R17b
+C048	2	WWOX observation	O1;R08
+C049	3	WWOX observation	R05a
+C051	2	WWOX observation+transfer	O3;O8;R05a;R08;R09;R10;R11;R20
+C052	2	WWOX observation	R18
+C053	3	WWOX observation	R18
+C054	3	WWOX observation+simulation	R02;R17c
+C055	3	WWOX observation+simulation	R02;R03;R08;R17a
+C056	1	WWOX observation+transfer	R03;R08;R09
+C057	3	WWOX observation	R08
+C058	1	WWOX observation+simulation	O8;R04;R08;R11;R17b
+C059	1	WWOX observation	O2;R01
+C060	2	WWOX observation	O3;R08
+C061	3	WWOX observation	R08;R18
+C062	2	WWOX observation	R08
+C063	2	WWOX observation	O5;O6;O7;R01
+C065	3	transfer	R12
+C066	3	transfer	R13
+C067	3	WWOX observation+transfer	R14;R16
+C068	3	transfer	R15
+C069	2	WWOX observation+transfer	R05a;R08;R20;R21
+C070	2	WWOX observation+transfer	O1;O4;R05a;R19;R20;R21
+C071	3	WWOX observation	O3;R08
+C075	3	WWOX observation	R08

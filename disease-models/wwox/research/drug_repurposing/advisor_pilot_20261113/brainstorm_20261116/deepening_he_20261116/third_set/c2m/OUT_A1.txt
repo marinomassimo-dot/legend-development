@@ -1,0 +1,82 @@
+class | member | direction (raises or lowers activity) | mechanism (one line)
+(a) catalytic cycle | ATP bound at the KHD | raises | Allosteric nucleotide occupancy of the kinase-like domain potentiates ligand-stimulated cyclase activity.
+(a) catalytic cycle | ATP depletion or KHD ATP-site competitors (non-hydrolysable or kinase-inhibitor-type analogues) | lowers | Remove or displace the allosteric ATP, so the KHD cannot relay activation to the catalytic domain.
+(a) catalytic cycle | Mg2+ (as Mg-GTP) | raises | Physiological catalytic metal for the cyclase dimer.
+(a) catalytic cycle | Mn2+ | raises | Replaces Mg2+, raises Vmax and partly uncouples the cyclase from ligand control.
+(a) catalytic cycle | Ca2+ and metal chelators (EDTA, EGTA) | lowers | Ca2+ competes for the metal site; chelators remove the metal needed for catalysis.
+(a) catalytic cycle | GTP supply (substrate) | raises | Rate follows substrate concentration at a sub-saturating Km.
+(a) catalytic cycle | GTP-site analogues / substrate-competitive inhibitors (2'-deoxy-3'-GMP-type, GTP analogues, LY83583 as a non-selective cyclase inhibitor) | lowers | Compete with GTP at the catalytic site.
+(a) catalytic cycle | Pyrophosphate (product) | lowers | Product inhibition of the cyclase reaction.
+(a) catalytic cycle | Inorganic pyrophosphatase activity | raises | Removes PPi, which pulls the reaction forward and relieves product inhibition.
+(a) catalytic cycle | Reducing agents (DTT, other thiol reductants) | lowers | Break extracellular-domain disulfides needed for ligand binding.
+(a) catalytic cycle | Oxidants / ROS | raises or lowers (context dependent) | Alter extracellular-domain cysteine redox state and ligand binding; the direction depends on which disulfides are modified.
+(a) catalytic cycle | Acidic luminal pH | raises (uroguanylin) | Favours uroguanylin binding, so ligand potency rises.
+(a) catalytic cycle | Alkaline luminal pH | lowers (uroguanylin); raises (guanylin) | Shifts relative potency of the two endogenous ligands.
+(a) catalytic cycle | Temperature (higher) | raises | Increases catalytic rate and conformational switching.
+(a) catalytic cycle | Temperature (lower) | lowers | Decreases catalytic rate and conformational switching.
+(b) folding and stability | Hsp90 inhibitors (geldanamycin-class) | lowers | Block chaperone-dependent maturation, so less receptor reaches the surface and more is degraded.
+(b) folding and stability | Hsp70 / calnexin chaperone cycle (supply) | raises | Supports folding and ER quality-control passage of the receptor.
+(b) folding and stability | Chemical or osmolyte chaperones (glycerol, TMAO, 4-PBA) | raises | Stabilise folding intermediates and increase surface receptor.
+(b) folding and stability | KHD or ligand-binding-domain stabilising ligands | raises | Lock a conformation; a stabiliser of the active state raises activity, one of the inactive state lowers it.
+(b) folding and stability | Destabilising agents or low-stability states of the KHD (heat, destabilising ligands) | lowers | Promote unfolding and degradation of an over-stable GOF protein.
+(b) folding and stability | Low-temperature folding rescue | raises | Improves export of folding-impaired receptor.
+(c) assembly, trafficking, localisation | Tunicamycin (N-glycosylation block) | lowers | Unglycosylated receptor is retained in the ER, loses ligand binding and does not reach the surface.
+(c) assembly, trafficking, localisation | ER mannosidase or glucosidase inhibitors (kifunensine, castanospermine) | lowers | Alter glycan processing and ER export.
+(c) assembly, trafficking, localisation | COPII machinery (Sar1, Sec24 supply) | raises | Required for ER exit of the receptor.
+(c) assembly, trafficking, localisation | Dominant-negative Sar1 (GTP-locked) / brefeldin A | lowers | Block ER-to-Golgi transport.
+(c) assembly, trafficking, localisation | Dimerisation-competent wild-type partner | lowers (relative to GOF homodimer) | Forms a heterodimer with partly normal regulation.
+(c) assembly, trafficking, localisation | Dominant-negative truncated or catalytically dead subunit | lowers | Forms inactive heterodimers.
+(c) assembly, trafficking, localisation | Lipid-raft disruption (methyl-beta-cyclodextrin, cholesterol depletion) | lowers | Dislocates the receptor from its signalling platform.
+(c) assembly, trafficking, localisation | Palmitoylation inhibitor (2-bromopalmitate) | lowers | Reduces membrane and raft targeting.
+(c) assembly, trafficking, localisation | Guanylin, uroguanylin | raises | Endogenous agonists at the extracellular domain.
+(c) assembly, trafficking, localisation | Linaclotide, plecanatide | raises | Agonist peptides at the ligand site.
+(c) assembly, trafficking, localisation | STa enterotoxin | raises | Supra-physiological, high-affinity agonist.
+(c) assembly, trafficking, localisation | Soluble receptor extracellular domain (decoy) | lowers | Sequesters ligand so less reaches the membrane receptor.
+(c) assembly, trafficking, localisation | Anti-ligand or ST-neutralising antibodies | lowers | Sequester ligand.
+(c) assembly, trafficking, localisation | Competitive ligand-site antagonist peptides (inactive STa or guanylin analogues) | lowers | Occupy the ligand site without switching the receptor.
+(d) substrate and metabolite supply | IMPDH inhibitors (mycophenolic acid, ribavirin) | lowers | Deplete the GTP pool, so less substrate.
+(d) substrate and metabolite supply | GMP synthase inhibitors (acivicin, decoyinine) | lowers | Block de novo GMP synthesis and lower GTP.
+(d) substrate and metabolite supply | Salvage pathway (HGPRT) and dietary guanosine or purines | raises | Supply guanine nucleotides.
+(d) substrate and metabolite supply | ABCC4/ABCC5 inhibitors (MK571, probenecid) | raises (intracellular cGMP) | Block cGMP efflux; the enzyme itself is not changed.
+(d) substrate and metabolite supply | ABCC4/ABCC5 supply or upregulation | lowers (intracellular cGMP) | Export cGMP out of the cell.
+(d) substrate and metabolite supply | Cl- / HCO3- / Na+ / water transport state (luminal pH, osmolarity) | raises or lowers | Change luminal pH and so ligand potency.
+(d) substrate and metabolite supply | Dietary nitrate, NO donors, L-arginine | raises (total cGMP) | Feed the soluble-GC pool, not GC-C.
+(d) substrate and metabolite supply | NO synthase inhibitors (L-NAME) | lowers (total cGMP) | Reduce the soluble-GC contribution.
+(d) substrate and metabolite supply | Dietary fibre, short-chain fatty acids | raises or lowers | Alter epithelial energetics, ATP and nucleotide supply; indirect.
+(e) degradation and turnover | PDE5 inhibitors (sildenafil-class) | raises (cGMP) | Block cGMP hydrolysis.
+(e) degradation and turnover | PDE9 inhibitors | raises (cGMP) | Block cGMP hydrolysis.
+(e) degradation and turnover | PDE10 inhibitors | raises (cGMP) | Block cGMP hydrolysis.
+(e) degradation and turnover | PDE1 inhibitors (vinpocetine-class) | raises (cGMP) | Block Ca2+/calmodulin-dependent hydrolysis.
+(e) degradation and turnover | PDE2 inhibitors (EHNA, BAY 60-7550) | raises (cGMP) | Block cGMP-stimulated hydrolysis.
+(e) degradation and turnover | PDE activity (PDE5 phosphorylated by PKG, PDE2 stimulated by cGMP) | lowers (cGMP) | Feedback hydrolysis; the enzyme itself is not changed.
+(e) degradation and turnover | Kinase-mediated KHD phosphorylation (including PKC) | raises | Phosphorylation of the KHD supports activation of the receptor.
+(e) degradation and turnover | Protein phosphatases (PP1/PP2A) | lowers | Dephosphorylation desensitises the receptor, as shown for NPR-A and reported for GC-C.
+(e) degradation and turnover | Phosphatase inhibitors (okadaic acid, calyculin A) | raises | Preserve the phosphorylated, active state.
+(e) degradation and turnover | E3 ligases, endocytosis, lysosomal degradation (supply) | lowers | Remove receptor from the surface and degrade it.
+(e) degradation and turnover | Lysosomal inhibitors (chloroquine, bafilomycin) | raises | Block lysosomal receptor turnover.
+(e) degradation and turnover | Proteasome inhibitors (MG132, bortezomib) / ERAD blockade | raises | Prevent proteasomal and ERAD clearance, so more receptor persists.
+(e) degradation and turnover | Targeted degraders (PROTAC-type, hypothetical for this receptor) | lowers | Direct the receptor to the proteasome.
+(e) degradation and turnover | Luminal proteases that process proguanylin or prouroguanylin | raises | Generate active ligand.
+(e) degradation and turnover | Protease inhibitors (aprotinin, serine protease inhibitors) | lowers | Reduce ligand activation.
+(f) effector or bypass | PKG2 (PRKG2) activators (8-Br-cGMP) | raises (pathway output) | Act downstream of the cyclase.
+(f) effector or bypass | PKG2 inhibitors (Rp-cGMPS analogues) | lowers (pathway output) | Block cGMP signalling downstream of the receptor.
+(f) effector or bypass | CFTR inhibitors (CFTRinh-172, GlyH-101) | lowers (pathway output) | Block Cl- and HCO3- secretion.
+(f) effector or bypass | CFTR potentiators (ivacaftor-class) | raises (pathway output) | Raise channel open probability.
+(f) effector or bypass | cGMP inhibition of PDE3, with raised cAMP and PKA | raises (pathway output) | cGMP feeds into the cAMP-PKA arm.
+(f) effector or bypass | NHE3 inhibitors (tenapanor) | raises (pathway output) | Reduce fluid absorption; this mimics the cGMP effect.
+(f) effector or bypass | Antisecretory agents (racecadotril, crofelemer, loperamide, octreotide, alpha2 agonists) | lowers (pathway output) | Oppose the secretory output.
+(f) effector or bypass | Soluble-GC stimulators or activators (riociguat, cinaciguat) | raises (total cGMP) | Add a parallel cGMP source.
+(f) effector or bypass | Soluble-GC inhibitors (ODQ) | lowers (total cGMP) | Remove the parallel cGMP source.
+(f) effector or bypass | Notch / Atoh1 / Wnt machinery (gamma-secretase inhibitors, e.g. DAPT) | raises or lowers | Shifts secretory cell fate and the cells expressing the receptor.
+(f) effector or bypass | NF-kB / TNF / IL-22 loops (anti-TNF) | raises (inflammatory loops) or lowers (when blocked) | Modulate barrier and secretory signalling.
+(f) effector or bypass | Tight-junction modulators (claudins, ZO-1, MLCK inhibitors) | raises or lowers (barrier leak) | Alter paracellular fluid handling.
+(g) cell type, timing, dosage | Epithelium-restricted versus global expression | raises or lowers | Sets the cell population that carries the GOF allele.
+(g) cell type, timing, dosage | Lgr5 stem-cell versus differentiated-cell expression | raises or lowers | Determines the cell compartment affected.
+(g) cell type, timing, dosage | Developmental versus adult onset of the defect | raises or lowers | Timing sets adaptation and compensation.
+(g) cell type, timing, dosage | Heterozygous versus homozygous dosage | lowers (heterozygous relative to homozygous) | One mutant allele halves the GOF dose.
+(g) cell type, timing, dosage | Trans-heterodimer with a null allele | lowers | Mixed dimers give a partial or inactive complex.
+(g) cell type, timing, dosage | Inducible removal of the GOF allele (Cre excision) | lowers | Tests reversibility.
+(g) cell type, timing, dosage | siRNA / antisense knockdown of the receptor | lowers | Reduces receptor abundance.
+(g) cell type, timing, dosage | Compensation by proximal-gut uroguanylin | raises | Raises ligand drive on the receptor.
+
+LOWERING MEMBERS: ATP depletion or KHD ATP-site competitors; Ca2+ and metal chelators; GTP-site analogues and substrate-competitive inhibitors; pyrophosphate; reducing agents; alkaline luminal pH (uroguanylin); lower temperature; Hsp90 inhibitors; destabilising agents of the KHD; tunicamycin; kifunensine and castanospermine; dominant-negative Sar1 and brefeldin A; wild-type dimer partner; dominant-negative truncated or catalytically dead subunit; lipid-raft disruption (methyl-beta-cyclodextrin); 2-bromopalmitate; soluble extracellular-domain decoy; anti-ligand or ST-neutralising antibodies; competitive ligand-site antagonist peptides; IMPDH inhibitors (mycophenolic acid, ribavirin); GMP synthase inhibitors (acivicin, decoyinine); ABCC4/ABCC5 upregulation (lowers intracellular cGMP); PDE activity (PDE5 phosphorylation by PKG, PDE2 stimulation by cGMP); protein phosphatases (PP1/PP2A); E3 ligases, endocytosis and lysosomal degradation; targeted degraders; protease inhibitors that block ligand activation; PKG2 inhibitors; CFTR inhibitors; antisecretory agents (racecadotril, crofelemer, loperamide, octreotide, alpha2 agonists); soluble-GC inhibitors (ODQ); NO synthase inhibitors (L-NAME); heterozygous dosage; trans-heterodimer with a null allele; inducible removal of the GOF allele; siRNA or antisense knockdown.

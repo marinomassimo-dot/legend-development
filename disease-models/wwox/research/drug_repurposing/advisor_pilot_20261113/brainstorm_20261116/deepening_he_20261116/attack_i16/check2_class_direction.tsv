@@ -1,0 +1,5 @@
+contrast	descriptive_rows	astro_enriched_rows	astro_down	astro_up	astro_median_centred_log2	neuron_enriched_rows	neuron_down	neuron_up	neuron_median_centred_log2
+C_S	880	113	101	12	-0.81	80	45	35	-0.61
+H_S	1709	147	113	34	-0.69	185	145	40	-0.68
+H_N	2983	277	217	60	-0.76	256	108	148	+0.62
+H_null	729	96	70	26	-0.71	50	27	23	-0.61
