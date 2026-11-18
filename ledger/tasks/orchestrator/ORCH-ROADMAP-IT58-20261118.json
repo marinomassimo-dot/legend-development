@@ -1,0 +1,114 @@
+{
+ "TASK_ID": "ORCH-ROADMAP-IT58-20261118",
+ "ACTOR_ID": "orchestrator",
+ "STANDING": "mandate that holds the work this actor has accepted; the owner writes `MANDATE_BOUND: ORCH-ROADMAP-IT58-20261118` in its session",
+ "SESSION_NAME": "IT Orchestrator",
+ "AUTHORISED_QUEUE_ACCEPTED": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_ACCEPTED": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "1 CLOSE THE CURRENT INCREMENT: F03 counter-evidence, KCC2/NKCC1 development withdrawal, dated lines, SCI ADV-065c landing and receipts order, HE's battery and the pertinent CI; no second battery",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator mandate 2026-11-18 (NEXT ITERATION - Scientific consumption, useful generation and trustworthy public view; ACTOR_ID orchestrator)",
+     "accepted_at": "2026-11-18T23:37:48Z"
+    },
+    {
+     "step": "2 COMPLETE THE CONSUMER CHAIN: trace deltas, classify join differences",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator mandate 2026-11-18 NEXT ITERATION",
+     "accepted_at": "2026-11-18T23:37:53Z"
+    },
+    {
+     "step": "3 DIAGNOSE THE GENERATIVE NULL RESULT: six-class diagnosis, audit of unelicited criteria, next informative bifurcation with pre-specified rule",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator mandate 2026-11-18 NEXT ITERATION, section 3",
+     "accepted_at": "2026-11-18T23:38:06Z"
+    },
+    {
+     "step": "4 TURN NEW SCIENCE INTO RESEARCH: per result what it strengthens, weakens, modifies or leaves; assignments with real recipient and full originals",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator mandate 2026-11-18 NEXT ITERATION, section 4",
+     "accepted_at": "2026-11-18T23:38:06Z"
+    },
+    {
+     "step": "5 PUBLIC DASHBOARD: language defect with HE, produced then published pages, five languages, filters, links, phone and desktop, no ranking change",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator mandate 2026-11-18 NEXT ITERATION, section 5",
+     "accepted_at": "2026-11-18T23:38:06Z"
+    },
+    {
+     "step": "6 VERIFICATION, PUBLICATION AND WAITS: SHA attribution, CI and dashboard workflow, real site, independent work during batteries",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator mandate 2026-11-18 NEXT ITERATION, section 6",
+     "accepted_at": "2026-11-18T23:38:06Z"
+    },
+    {
+     "step": "7 HANDOFF AND CONTINUATION: deliver to the advisor consumed, decision, limits, next work, costs; continue",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator mandate 2026-11-18 NEXT ITERATION, section 7",
+     "accepted_at": "2026-11-18T23:38:06Z"
+    }
+   ]
+  }
+ },
+ "ACCEPT_LOG": [
+  {
+   "at": "2026-11-18T23:37:48Z",
+   "source": "operator mandate 2026-11-18 (NEXT ITERATION - Scientific consumption, useful generation and trustworthy public view; ACTOR_ID orchestrator)",
+   "step_sha256": "fcb822844620",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:37:53Z",
+   "source": "operator mandate 2026-11-18 NEXT ITERATION",
+   "step_sha256": "ecf6ec10aa3d",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:38:06Z",
+   "source": "operator mandate 2026-11-18 NEXT ITERATION, section 3",
+   "step_sha256": "45a640cd45df",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:38:06Z",
+   "source": "operator mandate 2026-11-18 NEXT ITERATION, section 4",
+   "step_sha256": "7cc21a83f26c",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:38:06Z",
+   "source": "operator mandate 2026-11-18 NEXT ITERATION, section 5",
+   "step_sha256": "133a3bd4c2f9",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:38:06Z",
+   "source": "operator mandate 2026-11-18 NEXT ITERATION, section 6",
+   "step_sha256": "95db592e8dc7",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:38:06Z",
+   "source": "operator mandate 2026-11-18 NEXT ITERATION, section 7",
+   "step_sha256": "bb90b246e1ad",
+   "reopened_block": false,
+   "authorised_by": null
+  }
+ ]
+}
