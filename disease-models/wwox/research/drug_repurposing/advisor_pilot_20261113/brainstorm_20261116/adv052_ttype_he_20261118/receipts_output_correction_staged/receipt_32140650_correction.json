@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-18T08:38:33Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-18T10:31:36Z",
+ "event_id": "FTR-20261118-32140650-53",
+ "evidence_basis": [
+  "output-path and source-locator correction only, no reread: the original receipt named its producer table and its saved source under a private scratch root that never ships; the table is committed at the path now named and the saved source bytes are held at the files/ path now named (same sha256, in SOURCES_SHA256.tsv beside the table). Coverage, depth, analysis time and fingerprint are carried over unchanged from FTR-20261118-32140650-52; its verbatim locators stand.",
+  "verbatim_locator: \"Whereas five (6%) patients exhibited resolution of epileptic spasms, only two (2%) patients exhibited video-EEG confirmed resolution of both epileptic spasms and hypsarrhythmia (electroclinical response).\"",
+  "verbatim_locator: \"none of the 78 children with prior failure of hormonal therapy or vigabatrin subsequently responded to zonisamide\"",
+  "verbatim_locator: \"metabolic acidosis was documented in 13 (15%) cases\"",
+  "verbatim_locator: \"response rate was inversely correlated with sample size\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv052_ttype_he_20261118/TABLE_PRODUCER_BCD_20261118.md"
+ ],
+ "prior_receipt": "FTR-20261118-32140650-52",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "receipt_correction",
+ "source_fingerprint": "0f82fc67939005271c4782727330dafa70aee65a5b50ed23cc2c5deb9f63b163",
+ "source_kind": "fulltext_remote",
+ "source_locator": "files/fulltext/adv052_he_20261118/PMID32140650_PMC7049796_europepmc.xml",
+ "study_id": {
+  "doi": "10.1002/epi4.12381",
+  "pmid": "32140650"
+ },
+ "workflow": "output and source-locator correction of FTR-20261118-32140650-52 (ADV-052 producer reading package (parts b, c, d): full text fetched through Euro)"
+}

@@ -990,5 +990,53 @@ class PrecheckTests(unittest.TestCase):
         self.assertIn("FILES NAMED: 2", changed.stdout)
 
 
+class DocumentedCommandsPrecheckTests(unittest.TestCase):
+    """ADV-060: the pre-check also runs the path half of test_documented_commands (a script named in a document that does not exist),
+    as a separate line, and says it did not run the --help half. The gate itself does not."""
+
+    def make_repo(self, with_scan: bool = True, doc: str = "# Project\n") -> Path:
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        root = Path(temp.name)
+        (root / "scripts").mkdir()
+        (root / "README.md").write_text(doc, encoding="utf-8")
+        (root / "ok.md").write_text("A clean note.\n", encoding="utf-8")
+        shutil.copy(GATE_PATH, root / "scripts" / "public_release_gate.py")
+        if with_scan:
+            shutil.copy(GATE_PATH.with_name("test_documented_commands.py"), root / "scripts" / "test_documented_commands.py")
+        for cmd in (["init", "-q"], ["add", "."]):
+            subprocess.run(["git", "-C", str(root), *cmd], check=True, capture_output=True)
+        return root
+
+    def run_gate(self, root: Path, *args: str) -> subprocess.CompletedProcess:
+        return subprocess.run([sys.executable, str(GATE_PATH), "--root", str(root), *args], capture_output=True, text=True)
+
+    def test_a_document_that_names_a_missing_script_fails_the_precheck_and_names_it(self) -> None:
+        root = self.make_repo(doc="Run `python3 scripts/no_such_tool.py --help`.\n")
+        done = self.run_gate(root, "--paths", "ok.md")
+        self.assertEqual(done.returncode, 2, done.stdout)
+        self.assertIn("DOCUMENTED_COMMANDS_PRECHECK: FAIL: 1 documented Python path(s) do not exist", done.stdout)
+        self.assertIn("DOCUMENTED_COMMAND_MISSING README.md:1: scripts/no_such_tool.py", done.stdout)
+        self.assertIn("PRECHECK_VERDICT: PASS", done.stdout)                      # the per-file verdict is unchanged; the extra line is separate
+        self.assertIn("its --help half is not run", done.stdout)
+
+    def test_the_same_tree_with_the_script_present_passes(self) -> None:
+        root = self.make_repo(doc="Run `python3 scripts/public_release_gate.py --help`.\n")
+        done = self.run_gate(root, "--paths", "ok.md")
+        self.assertEqual(done.returncode, 0, done.stdout)
+        self.assertIn("DOCUMENTED_COMMANDS_PRECHECK: PASS", done.stdout)
+
+    def test_a_root_without_the_scan_says_so_and_does_not_fail(self) -> None:
+        root = self.make_repo(with_scan=False, doc="Run `python3 scripts/no_such_tool.py`.\n")
+        done = self.run_gate(root, "--paths", "ok.md")
+        self.assertEqual(done.returncode, 0, done.stdout)
+        self.assertIn("DOCUMENTED_COMMANDS_PRECHECK: not run (scripts/test_documented_commands.py is absent", done.stdout)
+
+    def test_the_full_gate_does_not_run_it(self) -> None:
+        root = self.make_repo(doc="Run `python3 scripts/no_such_tool.py`.\n")
+        done = self.run_gate(root, "--skip-clean-clone")
+        self.assertNotIn("DOCUMENTED_COMMANDS_PRECHECK", done.stdout)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

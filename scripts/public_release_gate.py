@@ -17,6 +17,7 @@ import argparse
 import fnmatch
 import functools
 import hashlib
+import importlib.util
 import json
 import os
 import re
@@ -1545,6 +1546,23 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def documented_commands_precheck(root: Path) -> tuple[str, list[str]]:
+    """ADV-060, pre-check only: the cheap half of `scripts/test_documented_commands.py` (do the Python paths that documents name exist), over the
+    whole documented surface, about five seconds. Its slow half (running `--help` of every documented command) is not run. The gate does not call this."""
+    path = root / "scripts" / "test_documented_commands.py"
+    if not path.is_file():
+        return "not run (scripts/test_documented_commands.py is absent in this root)", []
+    try:
+        spec = importlib.util.spec_from_file_location("documented_commands_precheck", path)
+        module = importlib.util.module_from_spec(spec)
+        sys.modules["documented_commands_precheck"] = module
+        spec.loader.exec_module(module)
+        missing = module.missing_documented_commands()
+    except Exception as exc:   # a scan that could not run is said so; it is never read as a pass
+        return f"not run ({type(exc).__name__}: {str(exc)[:160]})", []
+    return ("PASS" if not missing else f"FAIL: {len(missing)} documented Python path(s) do not exist"), list(missing)
+
+
 def changed_since(root: Path, ref: str) -> list[str]:
     """Repository-relative paths changed since `ref` in the working tree, plus untracked files."""
     def git(*cmd: str) -> list[str]:
@@ -1629,12 +1647,20 @@ def main() -> int:
     else:
         print(f"VERDICT: {result['verdict']}")
         print(f"BLOCKS: {len(blocks)}")
+    documented_failed = False
+    if precheck:
+        status, missing = documented_commands_precheck(root)
+        print(f"DOCUMENTED_COMMANDS_PRECHECK: {status} (the path half of scripts/test_documented_commands.py over every documented Markdown file; "
+              "its --help half is not run)")
+        for line in missing[:30]:
+            print(f"[BLOCK] DOCUMENTED_COMMAND_MISSING {line}")
+        documented_failed = status.startswith("FAIL")
     for finding in findings:
         print(
             f"[{finding.severity}] {finding.code} "
             f"{finding.path}:{finding.line} — {finding.message}"
         )
-    return 2 if blocks else 0
+    return 2 if blocks or documented_failed else 0
 
 
 if __name__ == "__main__":
