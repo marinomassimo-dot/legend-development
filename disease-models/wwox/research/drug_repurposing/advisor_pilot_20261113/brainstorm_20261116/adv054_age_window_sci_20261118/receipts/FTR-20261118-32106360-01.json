@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-18T09:08:51Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T09:10:51Z",
+ "event_id": "FTR-20261118-32106360-01",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"Radiprodil showed the largest protective seizure effects in juvenile rats (maximum at PN12, corresponding to late infancy in humans).\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv054_age_window_sci_20261118/ADV054_AGE_WINDOW_PER_CANDIDATE_SCI_20261118.md"
+ ],
+ "prior_receipt": "FTR-20261029-32106360-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "5ed5453556cd7b8160e9900d5928a00ee200dd7eca917fcd7085d83d5ed0f48c",
+ "source_kind": "abstract",
+ "source_locator": "files/fulltext/adv054_20261118/abs_32106360.json",
+ "study_id": {
+  "pmid": "32106360"
+ },
+ "workflow": "SCI ADV-054 age-window unit (rodent P7 to P28 provoked-seizure assays); context_policy QUESTION_DRIVEN; abstract-level producer package (legend-delegate, sonnet medium); SCI (integrator) re-matched the pivotal quotes against the saved abstract bytes before recording; three added ketamine abstracts fetched and read by SCI after the blind verifier found them"
+}
