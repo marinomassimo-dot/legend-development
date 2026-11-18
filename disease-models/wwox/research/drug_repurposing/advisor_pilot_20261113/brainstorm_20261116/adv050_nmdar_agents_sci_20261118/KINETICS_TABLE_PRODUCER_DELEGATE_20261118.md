@@ -1,4 +1,5 @@
 > Producer table of the ADV-050 kinetics package (legend-delegate, sonnet medium requested), copied unchanged below this line by SCI on 2026-11-18. Every quote was machine-matched as a substring of the saved bytes by the producer; SCI re-matched 14 pivotal quotes (rows 10, 11, 6, 7, 15, 14, 19, 22, 20, 30, 26, 47, 48, 46, 51) against the same bytes: all present. Rows tagged R are reviews or citations of other work. Not medical advice; no dose.
+> Dated line (2026-11-18, SCI): the last paragraph of section 4 (the helper-scripts sentence) was reworded once, by SCI, so that it does not read as repository paths (documented-commands rule); every other byte of the producer text is unchanged.
 
 # KINETICS_TABLE_PRODUCER
 
@@ -179,4 +180,4 @@ Fetched but NOT sources (kept in subfolders, listed for completeness):
 - q/ : search listings (title-based candidate searches); q_yi.json (253 bytes, no hit). Not sources.
 - Not accessed at all: Glasgow 2017 (PMID 28877967), Widman 2018 (PMID 29531088): closed, as instructed.
 
-Helper scripts (scripts/build.py, scripts/md.py, scripts/sections.md) generate and verify this file. One helper (x2t.py: strip XML tags) sits one level up in the scratchpad folder, outside the output folder.
+Helper scripts (build, md and sections, in the delegate's scratchpad folder, not in the repository) generated and verified this file. One helper (x2t, strip XML tags) sat one level up in the scratchpad folder, outside the output folder.
