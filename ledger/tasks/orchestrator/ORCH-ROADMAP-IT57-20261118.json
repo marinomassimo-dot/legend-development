@@ -1,0 +1,187 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "TASK_ID": "ORCH-ROADMAP-IT57-20261118",
+ "START_UTC": "2026-11-18T19:50:00Z",
+ "SESSION_NAME": "IT Orchestrator [deecf9]",
+ "SESSION_BINDING": {
+  "session_id": "4325d70d-8bea-4789-8046-d7a9ee74c97f",
+  "identity_source": "operator assignment (ACTOR_ID orchestrator, SESSION_FUNCTION IT: operational coordination and integration), re-stated in the opening prompt of the 2026-11-18 resume mandate; not inferred from the directory, the title or the runtime. The common actor code orchestrator does not make this session and the ADV session interchangeable (the ADV session is e6526331-6b7c-4631-8c9b-9e9d79867e90, ref ffbc88).",
+  "run_from": "landing worktree /tmp/it56_iso (detached, one landing at a time); the shared root checkout is not edited"
+ },
+ "OBJECTIVE": "LEGEND IT57 (operator mandate of 2026-11-18, after the desktop stop): resume and register the real IT work, reconcile the recent scientific results (ADV-050, 054, 056, 061, 063, 064, 065) with their consumers, trace each substantive delta to a candidate, open question or experiment and check that the generation path really read is fed, keep the derived surfaces involved fresh, verify and publish on the effective revision with HE, and keep delivering to ADV. History is not rewritten; sent, accepted, executed and consumed are kept apart; a found-nothing result is a search result, not a biological absence; no model-to-model transfer as WWOX evidence; no ranking change is forced; reference genotype class only; no dose, no schedule, no recommendation.",
+ "REAL_WORK_RECONCILED_SINCE_IT50": {
+  "note": "The previous IT ledger record, ORCH-ROADMAP-IT50-20261113, is COMPLETE. The IT51 to IT56 iterations ran under ADV assignments and the markdown record advisor_pilot_20261113/brainstorm_20261116/IT_TASK_RECORD_20261116.md, so the monitor read the IT mandates as concluded while work was running. Landed IT work of 2026-11-17 and 2026-11-18, all on development/main with the gate PASS (shas are the published ones):",
+  "landed": [
+   "ADV-024/025/027/029 (arm table v9, origin ids, map alignment, ChEMBL results): it_adv025_20261117, it_adv029_20261117, B/ARM_TABLE_V9_NOTES_IT_20261117.md",
+   "ADV-033 KDS lanes B2, B3, B5, E, C, corrections, ADV-037: it_ketamine_lanes_20261117, it_adv037_20261117 (e.g. 6c42ca814f9d, a6a501acc9fb, 7bb29071ba07)",
+   "ADV-048 parts 1 and 2: 935b7353fca7 (corrections where readers meet them), 01a416245434 (PV interneuron reports); 3274b97f82bd (arm notes)",
+   "ADV-051 e7979c1a9964; ADV-053 5d7127fbac4e; ADV-054 dated lines 20191c453569; ADV-056 d90fbe7670c5; ADV-058 4c8379dbc0a3",
+   "ADV-059 cold read 60c0864574ba; HE receipts -52 and -53: c582d8d9e1f3, ae1eee3527dd; ADV-050 dated line f2fedc7d5adc",
+   "ADV-063 2afd59857087; vigabatrin recount corrections e525b16ec17b (5854d5d8d)"
+  ],
+  "not_mine_done_by_others": "ADV regenerated the six repurposing views (50d0183d1) and added dated lines to the arm table notes for I9 and I10 (diazepam not age-flat); SCI delivered ADV-061, ADV-064, ADV-065; HE staged and I recorded the receipt corrections.",
+  "not_repeated": "no concluded reading was reopened; the interrupted view regeneration was not repeated because 50d0183d1 supersedes it"
+ },
+ "AUTHORISED_QUEUE_20261118": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1_RECONCILE": {
+   "order": 1,
+   "title": "Recover and register the real work",
+   "steps": [
+    {
+     "step": "Reconcile messages accepted, live processes, local changes, commits and publications after the desktop stop (live processes none; landing worktree reverted of its stale view regeneration; every IT item on main)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-18T19:52Z to 20:00Z: ps shows no IT process; /tmp/it56_iso reverted to development/main f24639ad1; vigabatrin corrections and receipt corrections in main; ADV states ADV-050 to ADV-065 consumed."
+    },
+    {
+     "step": "Write this persistent record so the monitor reads the effective IT work, and land it",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Verify the session binding: marker MANDATE_BOUND as its own message, then mandate_watch check for this task",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Reconcile the ADV-064 and ADV-065 send registration with ADV and HE (sent, accepted, executed, consumed kept apart; no invented receipt)",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "message to ADV [ffbc88] 2026-11-18T20:0xZ with the cause (budget.json recipients.Science = SCI; the live session answers to orch-adv004-mandate-reconciliation, id 9400b253) and the real receipts ff599c03-6e23-4b6f-a6a3-2e2959d10680 and 03827e4b-718e-45cc-ac51-0f7644d92f9c taken from ADV's own transcript; the ledger event is ADV's to append; HE to be told of the facts"
+    }
+   ]
+  },
+  "OBJ_2_INTEGRATE": {
+   "order": 2,
+   "title": "Reconcile the recent scientific deltas with their consumers",
+   "steps": [
+    {
+     "step": "Check the vigabatrin corrections reach every consumer that carries the counts or the 'vigabatrin alone' wording",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Check the washout timing wording (end of the rebound zone is not a clean measure; the date of the end depends on seed and time constant) in the in vivo brief, brief 13.11, the outreach package and the arm table",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Check the figure-derived sizing limits are stated the same in brief, cover and notes (bracket, not a value; interaction out of reach at realistic CV)",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Check the diazepam ontogeny correction in every consumer that quoted the earlier 'no ontogeny paper' or an age-flat reading",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Check what age, region and preparation dependence does to the GABAergic comparisons in the by-endpoint table, the arm table and the age-window line",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "ADV-065 wording: ask SCI for the scientific qualification of 'not more promising on any endpoint' against 'hypothesis-level yes on development in other models'; verify and propagate only the supported formulation as dated lines",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "question sent to SCI (session orch-adv004-mandate-reconciliation), msg_id b3223373-c5e3-44eb-8c51-c265e3f28305"
+    },
+    {
+     "step": "Map the chloride and KCC2 branch into the open-question rows before SCI's deepening lands, then update by dated line when it lands",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_3_GENERATION": {
+   "order": 3,
+   "title": "Consumption and generative capacity",
+   "steps": [
+    {
+     "step": "For each substantive delta trace observation, premise or relation, pharmacological hypothesis, comparison, discriminating experiment, candidate or open question, next work",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Find the generation path actually read (not merely a table or a reader) and check it consumes the deltas",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Run one real before/after comparison against the current path or a simple baseline; record whether it changed a proposal, an applicability condition, a control, a research priority, or nothing; no forced ranking change",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_4_DERIVED": {
+   "order": 4,
+   "title": "Dashboard and derived surfaces",
+   "steps": [
+    {
+     "step": "Check freshness of only the derived files involved (ranking, receipt counts, views, translations) at the effective revision",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Improve only the sections touched by real scientific change (facts, hypotheses and missing measures separated; priority questions readable; comparisons and limits visible); no general redesign",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_5_VERIFY_PUBLISH": {
+   "order": 5,
+   "title": "Verification and publication",
+   "steps": [
+    {
+     "step": "Protect frozen SHAs, verification environments and others' work; coordinate one shared test run with HE; an old FAIL stays on its old candidate; targeted PASS is not a full-battery PASS",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Verify publication and CI on the effective revision; report to HE any divergence between the local main reference and the remote (the shared root main is 78bf06890, development/main is f24639ad1) without reset or branch change",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_6_CONTINUE": {
+   "order": 6,
+   "title": "Deliver and continue",
+   "steps": [
+    {
+     "step": "Deliver to ADV [ffbc88]: consumed, decision changed, still uncertain, executable now, laboratory-only",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Take or assign the executable follow-up inside the authorised perimeter with SCI and ADV; during long waits advance independent work or prepare a conditional continuation without touching a frozen candidate",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ },
+ "DECISIONS_TAKEN": [
+  {
+   "what": "Open a new record ORCH-ROADMAP-IT57-20261118 instead of reopening the COMPLETE IT50 record",
+   "alternatives_rejected": "editing ORCH-ROADMAP-IT50-20261113 (would rewrite a closed verdict); using the ADV record (belongs to the ADV session)",
+   "consulted": "the operator's mandate; ADV [ffbc88]",
+   "reversibility": "full",
+   "how_to_revert": "set MANDATE_STATE to CANCELLED"
+  },
+  {
+   "what": "Do not repeat the interrupted view regeneration",
+   "alternatives_rejected": "regenerating again",
+   "consulted": "ADV state message 2026-11-18T19:5xZ (50d0183d1)",
+   "reversibility": "full",
+   "how_to_revert": "rerun repurposing_view.py"
+  }
+ ],
+ "STOP_LOG": []
+}
