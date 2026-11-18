@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-18T19:41:08Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "not_read",
+  "discussion": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T20:26:08Z",
+ "event_id": "FTR-20261118-33711029-66",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Materials And Methods]: \"We used male Sprague-Dawley rats (Japan SLC, Shizuoka, Japan); specifically, PND7 neonatal rats (n = 161) and 4-week-old adult rats (n = 70).\"",
+  "verbatim_locator [Abstract]: \"By contrast, CLP290 alone did not exert sedative effects.\"",
+  "verbatim_locator [Discussion]: \"This suggests that the KCC2 in neonates has the capacity for activity enhancement by CLP290, whereas in adults, this capacity is saturated.\"",
+  "verbatim_locator [Discussion]: \"This suggests that the KCC2 in neonates has the capacity for activity enhancement by CLP290, whereas in adults, this capacity is saturated.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065b_kcc2_ov350_sci_20261118/CHLORIDE_KCC2_OV350_DEEPENING_ADV065B_SCI_20261118.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "9d00071f5dd95936729b4e3f0e04c7394a6972e668f4935040b8dbf748c233e0",
+ "source_kind": "fulltext_remote",
+ "source_locator": "files/fulltext/adv065b_20261118/PMID33711029_PMC7954344_efetch_pmc.xml",
+ "study_id": {
+  "pmid": "33711029"
+ },
+ "workflow": "SCI ADV-065 deepening (KCC2/OV350): open-access full text fetched by NCBI E-utilities (db=pmc, plain client) by a legend-delegate producer (model claude-sonnet-5-5 read back) and its quotations re-matched in code by SCI against the saved XML; coverage marks only the sections where a matched locator lies"
+}

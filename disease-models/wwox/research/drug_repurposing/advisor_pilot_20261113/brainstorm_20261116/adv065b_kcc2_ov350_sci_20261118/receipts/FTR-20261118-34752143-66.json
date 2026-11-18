@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-18T19:41:08Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T20:26:08Z",
+ "event_id": "FTR-20261118-34752143-66",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Materials And Methods]: \"Equivalent numbers of male and female pups were introduced into the study.\"",
+  "verbatim_locator [Results]: \"Administration of CLP290 at P10 did not further improve the efficacy of PB at any of the doses tested (Fig. 2C and fig. S1, F and G).\"",
+  "verbatim_locator [Results]: \"This suggests that the therapeutic benefit of KCC2 functional enhancement is dependent upon the degree of KCC2 hypofunction\"",
+  "verbatim_locator [Results]: \"but significantly increased first-hour seizure burden when compared to untreated S940A+/+ mice (Fig. 4H).\"",
+  "verbatim_locator [Results]: \"S940A+/+ mice had spontaneous epileptiform discharges at both P7 and P12, which failed to respond to CLP290 intervention (Fig. 4, A to D).\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065b_kcc2_ov350_sci_20261118/CHLORIDE_KCC2_OV350_DEEPENING_ADV065B_SCI_20261118.md"
+ ],
+ "prior_receipt": "FTR-20261118-34752143-65",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "9388332c98e4143dd71e0deb3b968ba5de8c23e11546ac9513e7566c38a8b59d",
+ "source_kind": "fulltext_remote",
+ "source_locator": "files/fulltext/adv065b_20261118/PMID34752143_PMC8763016_efetch_pmc.xml",
+ "study_id": {
+  "pmid": "34752143"
+ },
+ "workflow": "SCI ADV-065 deepening (KCC2/OV350): open-access full text fetched by NCBI E-utilities (db=pmc, plain client) by a legend-delegate producer (model claude-sonnet-5-5 read back) and its quotations re-matched in code by SCI against the saved XML; coverage marks only the sections where a matched locator lies"
+}

@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-18T19:41:08Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T20:26:08Z",
+ "event_id": "FTR-20261118-26333769-66",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"Here we show recessive loss-of-function SLC12A5 mutations in patients with a severe infantile-onset pharmacoresistant epilepsy syndrome\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065b_kcc2_ov350_sci_20261118/CHLORIDE_KCC2_OV350_DEEPENING_ADV065B_SCI_20261118.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "193a1eb693a1339dab6a38ee48623c916db46d2c5270753ea11b9f1bdfe96bea",
+ "source_kind": "abstract",
+ "source_locator": "files/fulltext/adv065b_20261118/abs_26333769.txt",
+ "study_id": {
+  "pmid": "26333769"
+ },
+ "workflow": "SCI ADV-065 deepening (KCC2/OV350); abstract text parsed from PubMed efetch XML saved by a legend-delegate producer and written to the saved file by SCI after re-matching the quote(s) in code"
+}
