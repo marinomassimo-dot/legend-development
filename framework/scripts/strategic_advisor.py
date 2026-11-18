@@ -1379,6 +1379,9 @@ def tick(campaign: Path) -> dict[str, Any]:
             verdict, why = "EVALUATE", "the last evaluation left no stated outcome and no executable work remains: decide what is next from the portfolio"
         elif outcome.get("stated") and outcome.get("outcome") in ("continue", "switch", "assign", "queue") and obs["queue"]["exhausted"] and hours is not None and hours >= float(cont.get("min_hours_between", 4)):
             verdict, why = "EVALUATE", "the previous choice leaves no executable work: choose what is next from the standing portfolio"
+    if verdict == "NONE" and not first and obs["portfolio"].get("actionable"):
+        # ADV-047: NONE answers "did an event, a roadmap change or a met resume condition arrive", not "is there work"; the tick line itself names the ready rows so a quiet hour is not read as an empty portfolio
+        why += "; this says nothing about opportunities, ready portfolio rows: " + ", ".join(obs["portfolio"]["actionable"][:6])
     state["last_tick_utc"] = _utc(now)
     if verdict != "RUNNING":
         state.update(main_sha=obs["main_sha"], mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"],

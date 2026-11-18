@@ -463,7 +463,7 @@
  ],
  "data": {
   "catalogue_generated": "2026-10-31T07:28:37Z",
-  "data_date": "2026-11-15",
+  "data_date": "2026-11-18",
   "dgidb_export": "2024-06-10",
   "view_schema": "legend.wwox.repurposing_view/2"
  },
@@ -541,11 +541,11 @@
   },
   "README.md": {
    "bytes": 5072,
-   "sha256": "ddfa534ffb4c2288401b51584044de086317569cca379f549e3b8e25721ac086"
+   "sha256": "e9367322b983351155ab1af5fdfb8ea8f77ac1df58952deb9ca36ca7862e24ee"
   },
   "TEXT_PROVENANCE.json": {
-   "bytes": 2000,
-   "sha256": "0240df134322f53a0848da9e0053254a2539954340550aad6c9a81b6954d04c8"
+   "bytes": 2003,
+   "sha256": "3cb9f3aa74583148c71c4c53c6dc6c7255ce496dd3329e6c1bc4fb8dba5d2c4a"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -560,24 +560,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5265466,
-   "sha256": "c41edf79926d8b7554f0118f0f02dc0b287d608966c967851e587c286ffe0820"
+   "bytes": 5265462,
+   "sha256": "ac807ece7c779a15aade38e3b9a346c7f61f1e466fd92d55ccca465ba900de83"
   },
   "es.html": {
-   "bytes": 5250582,
-   "sha256": "658cf6c5cbe6320d6c726773cabe1d48c8d96eaeba46a7032af2782d1e980771"
+   "bytes": 5250578,
+   "sha256": "ec2bef8419828fa2d2f6a3612c31fff4a1c6b9525d1b00c9214f9673682572bf"
   },
   "fr.html": {
-   "bytes": 5282456,
-   "sha256": "46b69b4384d07008c3d2744574d4557f9ae7af913e74982d76dae363974f906b"
+   "bytes": 5282452,
+   "sha256": "22a966d4e86a33cd61b289a895a89600a39e483d4f52e08cbd44bb2f06d76d04"
   },
   "index.html": {
-   "bytes": 5163805,
-   "sha256": "e535f6345630d29f0dbbca5b785c61d9df274e90b566b9a6929a7e9132ec32c2"
+   "bytes": 5163801,
+   "sha256": "bc01713096fc655b52d1672d4ce233493ce90a4093c15cf6fdc6e1ad2ac8cc51"
   },
   "it.html": {
-   "bytes": 5228657,
-   "sha256": "286eb2a919913290fe1909c4eb35457d35d1644246a9b4e3fa156d3cc10df242"
+   "bytes": 5228653,
+   "sha256": "035df30ea8625ead1c310521e8aa74dcc8445a848c003bf1bddc0ebdf21e0c04"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
