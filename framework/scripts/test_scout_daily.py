@@ -1282,5 +1282,32 @@ class FallbackThemeList(unittest.TestCase):
         self.assertIn("experiments", cats, "follow-up of a known project stays in the rotation")
 
 
+class ReopenRowQueries(unittest.TestCase):
+    """ADV-044 item 2: the search a reopen row asks is its own first object and method terms, so two rows of one table never share a query; 'at least' is not a search term."""
+    TABLE = ("id\titem\tverdict\ttrigger_to_reopen\n"
+             "R1\tWhole-cell recording of glial nuclei in GSE158684\tNEEDS-DATUM\tper-library snRNA data, at least two libraries per genotype\n"
+             "R4\tE_GABA (gramicidin perforated patch) in neurons\tNEEDS-DATUM\ta chloride-gradient measurement in a deficient neuron\n"
+             "R5\tCause of the fall of Wwox UMI in glial nuclei of the deletion pool (GSE158684)\tNEEDS-DATUM\ta reporter readout in the Synapsin-Cre deletion\n")
+
+    def questions(self):
+        path = "pkg/x/reopen_searches_demo.tsv"
+        items = sd.parse_reopen_table(self.TABLE, path)
+        for it in items:
+            it.update(path=path, blob="b", sha="s")
+        return {q["id"].rsplit("/", 1)[-1]: q for q in sd.build_questions(items)[0]}
+
+    def test_at_least_is_not_a_search_term(self):
+        q = self.questions()["R1"]
+        self.assertNotIn("least", q["kw"].split())
+        self.assertNotIn("TITLE_ABS:least", q["epmc"] or "")
+
+    def test_a_chloride_row_and_a_glial_deposit_row_do_not_share_a_query(self):
+        qs = self.questions()
+        self.assertTrue({"R4", "R5"} <= set(qs))
+        self.assertIn("gramicidin", qs["R4"]["epmc"])
+        self.assertNotIn("gramicidin", qs["R5"]["epmc"])
+        self.assertNotIn("gse158684", qs["R4"]["epmc"].lower())
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

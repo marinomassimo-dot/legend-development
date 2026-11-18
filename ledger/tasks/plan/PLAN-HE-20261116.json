@@ -338,9 +338,9 @@
     },
     {
      "step": "2 recheck the radar matcher link between PMID 42309338 and open row NP3A5; report the rule; fix if small, with a test",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "advisor_pilot_20261113/brainstorm_20261116/adv044_items_2_3_he_20261118/ADV044_ITEMS_2_3_HE_20261118.md: the log links 42309338 to NP3A4 only; the NP3A5 wording was HE's own; 'least' added to scout_daily STOP with ReopenRowQueries tests; intake recipe row in README section 13"
     },
     {
      "step": "3a dismech recipe row in framework/scripts/README.md section 13",
@@ -350,9 +350,9 @@
     },
     {
      "step": "3b half-hour BioMedArena glance",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "same file, item 3b: no tuned-on separation, no contamination check, promote-only judge; drop as a benchmark source"
     }
    ]
   }
