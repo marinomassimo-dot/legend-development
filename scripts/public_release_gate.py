@@ -319,6 +319,11 @@ def walk_publishable(root: Path) -> Iterable[Path]:
 # about a file that was not named. `None` is the full gate and the default.
 ONLY_PATHS: frozenset[str] | None = None
 
+# Opt-in per-file cache of the privacy scan (ADV-057). `None` is today's behaviour and the default: the privacy scan walks every file.
+# Set only by `scan_privacy_cached`, for the duration of one call, to the files whose result the cache could not give.
+PRIVACY_FILES: Iterable[Path] | None = None
+PRIVACY_TEXT: dict[Path, str] = {}      # opt-in cache only: the text of the ONE file being scanned, decoded from the very bytes that were hashed
+
 
 def in_scope(root: Path, path: Path) -> bool:
     if ONLY_PATHS is None:
@@ -356,6 +361,9 @@ def iter_text_files(root: Path) -> Iterable[Path]:
 
 def iter_privacy_files(root: Path) -> Iterable[Path]:
     """Every file the privacy scan reads: the text suffixes plus PRIVACY_EXTRA_SUFFIXES."""
+    if PRIVACY_FILES is not None:        # opt-in cache only: the cache wrapper hands over the files it could not answer
+        yield from PRIVACY_FILES
+        return
     for path in (iter_files(root) if ONLY_PATHS is None else scoped_files(root)):
         if (
             path.suffix.lower() in TEXT_SUFFIXES
@@ -366,6 +374,8 @@ def iter_privacy_files(root: Path) -> Iterable[Path]:
 
 
 def read_text(path: Path) -> str:
+    if PRIVACY_TEXT and path in PRIVACY_TEXT:     # cache pass only (empty, hence skipped, in every other run)
+        return PRIVACY_TEXT[path]
     return path.read_text(encoding="utf-8", errors="replace")
 
 
@@ -531,6 +541,173 @@ def person_context_is_explicitly_negated(window: str) -> bool:
         re.search(rf"(?i){negation}.{{0,100}}{subject}", window)
         or re.search(rf"(?i){subject}.{{0,100}}{negation}", window)
     )
+
+
+# ---------------------------------------------------------------------------------------------
+# Opt-in per-file result cache for the privacy scan (ADV-057). OFF by default; nothing below runs, and
+# nothing is written, unless `--cache`, `--cache-verify` or LEGEND_GATE_CACHE=1 is given (`--no-cache` wins).
+#
+# What it relies on, and tests: the privacy scan is a function of one file's text and its repository-relative
+# path and of nothing else (every finding it emits carries that path; the per-file loop reads no other
+# file). It is NOT used for the link, README-consistency or provenance scans, which are cross-file and
+# always run in full. The cache answers a file only when the key matches exactly:
+#   key = sha256(digest of THIS script's bytes, relative path, digest of the file's bytes)
+# so editing the script (any detector pattern or digest list, any constant) changes every key, and
+# editing a file changes its key. The cache file carries a seal over its content: a missing, unreadable,
+# malformed, wrongly-sealed or other-format cache is no cache, and the scan runs in full.
+# The cache lives next to the git landing lock (`<git common dir>/legend_gate_cache/`), is rewritten
+# atomically and holds only the files of the current run.
+CACHE_FORMAT = 1
+CACHE_ENV = "LEGEND_GATE_CACHE"
+CACHE_FILE_ENV = "LEGEND_GATE_CACHE_FILE"
+
+
+def gate_digest() -> str:
+    """The script's own bytes (every pattern, digest list and constant) and the interpreter's version (its `re` and Unicode tables decide what a pattern matches)."""
+    return hashlib.sha256(Path(__file__).read_bytes() + b"\0" + sys.version.encode("utf-8")).hexdigest()
+
+
+def cache_file(root: Path) -> Path | None:
+    override = os.environ.get(CACHE_FILE_ENV)
+    if override:
+        return Path(override)
+    try:
+        out = subprocess.run(["git", "-C", str(root), "rev-parse", "--git-common-dir"],
+                             check=True, capture_output=True, text=True).stdout.strip()
+    except (OSError, subprocess.CalledProcessError):
+        return None
+    common = Path(out)
+    common = common if common.is_absolute() else root / common
+    return common / "legend_gate_cache" / f"privacy_v{CACHE_FORMAT}.json"
+
+
+def cache_seal(gate: str, entries: dict) -> str:
+    body = json.dumps({"format": CACHE_FORMAT, "gate_sha256": gate, "entries": entries},
+                      sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(body.encode("ascii")).hexdigest()
+
+
+def cache_load(path: Path | None, gate: str) -> dict | None:
+    """The stored entries, or None when there is nothing trustworthy (absent, unreadable, malformed, other gate, bad seal)."""
+    if path is None:
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        entries = data["entries"]
+        if (data["format"] != CACHE_FORMAT or data["gate_sha256"] != gate or not isinstance(entries, dict)
+                or data["seal"] != cache_seal(gate, entries)):
+            return None
+        for key, items in entries.items():
+            if not isinstance(key, str) or not isinstance(items, list):
+                return None
+            for item in items:
+                if (not isinstance(item, list) or len(item) != 5 or not all(isinstance(x, str) for x in (item[0], item[1], item[2], item[4]))
+                        or not isinstance(item[3], int)):
+                    return None
+        return entries
+    except (OSError, ValueError, KeyError, TypeError):
+        return None
+
+
+def cache_store(path: Path | None, gate: str, entries: dict) -> bool:
+    if path is None:
+        return False
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        tmp = path.with_name(path.name + f".{os.getpid()}.tmp")
+        tmp.write_text(json.dumps({"format": CACHE_FORMAT, "gate_sha256": gate, "entries": entries,
+                                   "seal": cache_seal(gate, entries)}, sort_keys=True),
+                       encoding="utf-8")
+        os.replace(tmp, path)
+        return True
+    except (OSError, ValueError, TypeError):
+        return False
+
+
+def cache_key(gate: str, rel: str, raw: bytes) -> str:
+    return hashlib.sha256(gate.encode("ascii") + b"\0" + rel.encode("utf-8", "surrogateescape") + b"\0" + hashlib.sha256(raw).hexdigest().encode("ascii")).hexdigest()
+
+
+def decode_like_read_text(raw: bytes) -> str:
+    """The text `Path.read_text(encoding="utf-8", errors="replace")` returns for these bytes (decoding, then universal-newline translation)."""
+    return raw.decode("utf-8", errors="replace").replace("\r\n", "\n").replace("\r", "\n")
+
+
+def scan_privacy_cached(root: Path, findings: list[Finding], verify: bool = False) -> dict:
+    """The privacy scan with a per-file cache. Returns counts; `mismatch` lists files whose cached findings differ from a fresh scan (verify mode only).
+    Findings are the same set, to the field, as `scan_privacy_and_secrets(root, findings)` gives; `deduplicate` orders them afterwards, as today."""
+    global PRIVACY_FILES
+    assert PRIVACY_FILES is None, "scan_privacy_cached is not re-entrant"
+    gate = gate_digest()
+    path = cache_file(root)
+    stored = None if verify else cache_load(path, gate)
+    old = cache_load(path, gate) if verify else None
+    files = list(iter_privacy_files(root))
+    answered: dict[str, list] = {}
+    answered_entries: dict[str, list] = {}
+    misses: list[Path] = []
+    for file in files:
+        rel = str(file.relative_to(root))
+        try:
+            raw = file.read_bytes()
+        except OSError:
+            misses.append(file)         # unreadable: the scan below meets it exactly as it does today
+            continue
+        key = cache_key(gate, rel, raw)
+        if stored is not None and key in stored:
+            answered[rel] = stored[key]
+            answered_entries[key] = stored[key]
+        else:
+            misses.append(file)
+    # The files the cache could not answer are read AGAIN, one at a time, and that second read is the one that is both hashed and
+    # scanned (the loop's read_text hands back the text decoded from those very bytes), so a file that changes, or changes and changes back,
+    # between the first pass and the scan can never be stored under the hash of other bytes than the ones that were judged.
+    final_keys: dict[str, str | None] = {}
+
+    def lazily(paths: list[Path]) -> Iterable[Path]:
+        for file in paths:
+            rel = str(file.relative_to(root))
+            PRIVACY_TEXT.clear()
+            try:
+                raw = file.read_bytes()
+            except OSError:
+                final_keys[rel] = None
+                yield file
+                continue
+            final_keys[rel] = cache_key(gate, rel, raw)
+            PRIVACY_TEXT[file] = decode_like_read_text(raw)
+            yield file
+        PRIVACY_TEXT.clear()
+
+    fresh: list[Finding] = []
+    PRIVACY_FILES = lazily(misses)
+    try:
+        scan_privacy_and_secrets(root, fresh)
+    finally:
+        PRIVACY_FILES = None
+        PRIVACY_TEXT.clear()
+    missed = {str(file.relative_to(root)) for file in misses}
+    per_file: dict[str, list] = {rel: [] for rel in missed}
+    cacheable = True
+    for finding in fresh:
+        if finding.path in per_file:
+            per_file[finding.path].append([finding.severity, finding.code, finding.path, finding.line, finding.message])
+        else:
+            cacheable = False           # a finding not tied to a scanned file: nothing is stored from this run
+    for items in answered.values():
+        findings.extend(Finding(*item) for item in items)
+    findings.extend(fresh)
+    mismatch = []
+    if verify and old is not None:
+        for rel, items in per_file.items():
+            if final_keys.get(rel) in old and old[final_keys[rel]] != items:
+                mismatch.append(rel)
+    stored_now = False
+    if cacheable:
+        entries = {final_keys[rel]: items for rel, items in per_file.items() if final_keys.get(rel)}
+        entries.update(answered_entries)
+        stored_now = cache_store(path, gate, entries)
+    return {"files": len(files), "hits": len(answered), "misses": len(misses), "stored": stored_now, "mismatch": mismatch}
 
 
 def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
@@ -1351,6 +1528,17 @@ def parse_args() -> argparse.Namespace:
         help=("PRE-CHECK, not the gate: run only the per-file content scans (privacy and case "
               "linkage, secrets, local markdown links) on these repository-relative files"))
     parser.add_argument(
+        "--cache", action="store_true",
+        help=("OPT-IN, off by default: reuse the stored result of the per-file privacy scan for files whose bytes and the "
+              "gate script are unchanged (also LEGEND_GATE_CACHE=1). The link, README and provenance scans always run in full."))
+    parser.add_argument(
+        "--no-cache", action="store_true",
+        help="Never read or write the privacy cache, whatever LEGEND_GATE_CACHE says: exactly today's behaviour")
+    parser.add_argument(
+        "--cache-verify", action="store_true",
+        help=("Audit: scan every file in full, compare with the stored result, exit 3 (CACHE_MISMATCH) on any difference, "
+              "then rewrite the cache from the fresh scan"))
+    parser.add_argument(
         "--changed-since", metavar="REF",
         help=("PRE-CHECK, not the gate: the same per-file scans on the files changed since REF "
               "(git diff REF, plus untracked files not ignored)"))
@@ -1388,7 +1576,18 @@ def main() -> int:
 
     findings: list[Finding] = []
     try:
-        scan_privacy_and_secrets(root, findings)
+        use_cache = not args.no_cache and not precheck and (
+            args.cache or args.cache_verify or os.environ.get(CACHE_ENV) == "1")
+        if use_cache:
+            stats = scan_privacy_cached(root, findings, verify=args.cache_verify)
+            print(f"GATE_CACHE: files={stats['files']} hits={stats['hits']} misses={stats['misses']} stored={stats['stored']}",
+                  file=sys.stderr)
+            if stats["mismatch"]:
+                print("GATE_ERROR: CACHE_MISMATCH: the stored privacy result differs from a fresh scan for: "
+                      + ", ".join(stats["mismatch"][:20]), file=sys.stderr)
+                return 3
+        else:
+            scan_privacy_and_secrets(root, findings)
         scan_links(root, findings)
         if precheck:
             pass    # tree-level scans and the clean clone belong to the gate, not to the pre-check
