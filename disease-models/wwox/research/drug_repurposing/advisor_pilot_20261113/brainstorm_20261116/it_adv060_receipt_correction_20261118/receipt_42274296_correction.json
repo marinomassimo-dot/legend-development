@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-18T08:38:33Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-18T10:31:36Z",
+ "event_id": "FTR-20261118-42274296-53",
+ "evidence_basis": [
+  "output-path and source-locator correction only, no reread: the original receipt named its producer table and its saved source under a private scratch root that never ships; the table is committed at the path now named and the saved source bytes are held at the files/ path now named (same sha256, in SOURCES_SHA256.tsv beside the table). Coverage, depth, analysis time and fingerprint are carried over unchanged from FTR-20261118-42274296-52; its verbatim locators stand.",
+  "verbatim_locator: \"Video-EEG recordings of adult (10-week-old) KI and wild-type (WT) littermates were scored for atypical absence seizures\"",
+  "verbatim_locator: \"reduced total seizure incidence by 64% (vehicle 21.4 \u00b1 4.7, range 5-45 vs. ethosuximide 7.7 \u00b1 1.8, range 1-20; t(8) = 2.6, p = 0.03)\"",
+  "verbatim_locator: \"Ulixacaltamide produced robust reductions in atypical absence seizures\"",
+  "verbatim_locator: \"demonstrating that both vigabatrin and CBD significantly reduce spasm burden\"",
+  "source bytes copy (same sha256 as source_fingerprint): files/fulltext/adv052_he_20261118/PMID42274296_PMC13395050_europepmc.xml; the source_locator above is kept as first recorded because the ledger forbids changing it in a correction"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv052_ttype_he_20261118/TABLE_PRODUCER_BCD_20261118.md"
+ ],
+ "prior_receipt": "FTR-20261118-42274296-52",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "receipt_correction",
+ "source_fingerprint": "873cc1fb2c570f76e89af09ab49bd2fef200ec0722943a2a89e7a2b1080330a3",
+ "source_kind": "fulltext_remote",
+ "source_locator": "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/raw/PMID42274296_PMC13395050_europepmc.xml",
+ "study_id": {
+  "doi": "10.1002/epi4.70289",
+  "pmid": "42274296"
+ },
+ "workflow": "output and source-locator correction of FTR-20261118-42274296-52 (ADV-052 producer reading package (parts b, c, d): full text fetched through Euro)"
+}

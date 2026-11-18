@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-18T08:38:33Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-18T10:31:36Z",
+ "event_id": "FTR-20261118-33243296-53",
+ "evidence_basis": [
+  "output-path and source-locator correction only, no reread: the original receipt named its producer table and its saved source under a private scratch root that never ships; the table is committed at the path now named and the saved source bytes are held at the files/ path now named (same sha256, in SOURCES_SHA256.tsv beside the table). Coverage, depth, analysis time and fingerprint are carried over unchanged from FTR-20261118-33243296-52; its verbatim locators stand.",
+  "verbatim_locator: \"ZNS shifted the half-conductance of the activation potential of mutant CaV3.1 to more hyperpolarized potentials in a concentration-dependent manner.\"",
+  "verbatim_locator: \"The current densities (absolute peak amplitude of the CaV3.1 current divided by capacitances) did not decrease significantly in the presence of 50 \u00b5M ZNS (Fig. 1b).\"",
+  "verbatim_locator: \"efonidipine did not affect the half-conductance of the activation potential of wild-type (p = 0.695) and mutant CaV3.1 (p = 0.567)\"",
+  "verbatim_locator: \"is also a sodium channel blocker [8], the effects of sodium channel blockade may have an indirect influence on tremor in patients with SCA42.\"",
+  "source bytes copy (same sha256 as source_fingerprint): files/fulltext/adv052_he_20261118/PMID33243296_PMC7690142_europepmc.xml; the source_locator above is kept as first recorded because the ledger forbids changing it in a correction"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv052_ttype_he_20261118/TABLE_PRODUCER_BCD_20261118.md"
+ ],
+ "prior_receipt": "FTR-20261118-33243296-52",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "receipt_correction",
+ "source_fingerprint": "8b5722bbf210de8af744a524b04f440833846ae6485cd4207bdc6f9d42f2d004",
+ "source_kind": "fulltext_remote",
+ "source_locator": "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/raw/PMID33243296_PMC7690142_europepmc.xml",
+ "study_id": {
+  "doi": "10.1186/s13041-020-00700-7",
+  "pmid": "33243296"
+ },
+ "workflow": "output and source-locator correction of FTR-20261118-33243296-52 (ADV-052 producer reading package (parts b, c, d): full text fetched through Euro)"
+}

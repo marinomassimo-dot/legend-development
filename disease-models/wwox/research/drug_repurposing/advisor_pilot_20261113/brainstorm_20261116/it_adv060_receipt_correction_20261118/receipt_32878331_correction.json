@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-18T08:38:33Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-18T10:31:36Z",
+ "event_id": "FTR-20261118-32878331-53",
+ "evidence_basis": [
+  "output-path and source-locator correction only, no reread: the original receipt named its producer table and its saved source under a private scratch root that never ships; the table is committed at the path now named and the saved source bytes are held at the files/ path now named (same sha256, in SOURCES_SHA256.tsv beside the table). Coverage, depth, analysis time and fingerprint are carried over unchanged from FTR-20261118-32878331-52; its verbatim locators stand.",
+  "verbatim_locator: \"The presentation was of a developmental and epileptic encephalopathy without evident cerebellar atrophy.\"",
+  "verbatim_locator: \"These data suggest that L909F results in gain-of-function, whereas L208P exhibits mixed gain-of-function and loss-of-function effects due to opposing changes in the biophysical properties.\"",
+  "verbatim_locator: \"At age 9 years, she had been seizure free for 2 years on topiramate monotherapy.\"",
+  "verbatim_locator: \"in a mouse model of Dravet syndrome due to Scn1a mutation, decreased Cacna1g expression results in a partial amelioration of disease phenotypes with improved survival and reduced spontaneous seizure frequency\"",
+  "source bytes copy (same sha256 as source_fingerprint): files/fulltext/adv052_he_20261118/PMID32878331_PMC7503748_europepmc.xml; the source_locator above is kept as first recorded because the ledger forbids changing it in a correction"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv052_ttype_he_20261118/TABLE_PRODUCER_BCD_20261118.md"
+ ],
+ "prior_receipt": "FTR-20261118-32878331-52",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "receipt_correction",
+ "source_fingerprint": "89dd9aae4d3caf979b0459257a98a8ce0cb61cd02567c2e21a45e3431b2cc210",
+ "source_kind": "fulltext_remote",
+ "source_locator": "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/raw/PMID32878331_PMC7503748_europepmc.xml",
+ "study_id": {
+  "doi": "10.3390/ijms21176333",
+  "pmid": "32878331"
+ },
+ "workflow": "output and source-locator correction of FTR-20261118-32878331-52 (ADV-052 producer reading package (parts b, c, d): full text fetched through Euro)"
+}

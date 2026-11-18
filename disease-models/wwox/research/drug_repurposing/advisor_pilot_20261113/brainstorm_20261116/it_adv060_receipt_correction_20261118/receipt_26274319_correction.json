@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-18T08:38:33Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-18T10:31:36Z",
+ "event_id": "FTR-20261118-26274319-53",
+ "evidence_basis": [
+  "output-path and source-locator correction only, no reread: the original receipt named its producer table and its saved source under a private scratch root that never ships; the table is committed at the path now named and the saved source bytes are held at the files/ path now named (same sha256, in SOURCES_SHA256.tsv beside the table). Coverage, depth, analysis time and fingerprint are carried over unchanged from FTR-20261118-26274319-52; its verbatim locators stand.",
+  "verbatim_locator: \"Z944 was not effective at suppressing seizures in fully kindled rats compared to vehicle.\"",
+  "verbatim_locator: \"ETX, a drug that is ineffective clinically against partial seizures, had no effect on seizure class in fully kindled rats compared to vehicle\"",
+  "verbatim_locator: \"ETX, a lower-potency non-selective T-type Ca2+ channel blocker used clinically as an anti-seizure drug in patients with genetic generalized epilepsy, also demonstrated a trend towards delaying seizure severity in this model, but this was significantly less than that observed for Z944.\"",
+  "verbatim_locator: \"CaV3.2 knockout mice were resistant to the development of chronic seizures following pilocarpine-induced SE\"",
+  "source bytes copy (same sha256 as source_fingerprint): files/fulltext/adv052_he_20261118/PMID26274319_PMC4537250_europepmc.xml; the source_locator above is kept as first recorded because the ledger forbids changing it in a correction"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv052_ttype_he_20261118/TABLE_PRODUCER_BCD_20261118.md"
+ ],
+ "prior_receipt": "FTR-20261118-26274319-52",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "receipt_correction",
+ "source_fingerprint": "26005ff800568dbb4f6ea55850acc68b4ddadb223c3638c1e5978b6688692127",
+ "source_kind": "fulltext_remote",
+ "source_locator": "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/raw/PMID26274319_PMC4537250_europepmc.xml",
+ "study_id": {
+  "doi": "10.1371/journal.pone.0130012",
+  "pmid": "26274319"
+ },
+ "workflow": "output and source-locator correction of FTR-20261118-26274319-52 (ADV-052 producer reading package (parts b, c, d): full text fetched through Euro)"
+}

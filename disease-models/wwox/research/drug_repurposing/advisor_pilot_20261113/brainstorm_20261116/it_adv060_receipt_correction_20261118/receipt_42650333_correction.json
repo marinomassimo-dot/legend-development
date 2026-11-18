@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-18T08:38:33Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-18T10:31:36Z",
+ "event_id": "FTR-20261118-42650333-53",
+ "evidence_basis": [
+  "output-path and source-locator correction only, no reread: the original receipt named its producer table and its saved source under a private scratch root that never ships; the table is committed at the path now named and the saved source bytes are held at the files/ path now named (same sha256, in SOURCES_SHA256.tsv beside the table). Coverage, depth, analysis time and fingerprint are carried over unchanged from FTR-20261118-42650333-52; its verbatim locators stand.",
+  "verbatim_locator: \"No pharmacological agent is currently approved for D/EE-SWAS\"",
+  "verbatim_locator: \"Ethosuximide blocks T-type calcium channels in thalamic neurons and theoretically exerts effects on the thalamocortical epileptic network in D/EE-SWAS; it is most commonly used in combination with valproic acid or benzodiazepines\"",
+  "verbatim_locator: \"Sodium channel blockers (carbamazepine, oxcarbazepine, phenobarbital, phenytoin) should be avoided in idiopathic D/EE-SWAS due to risk of precipitating or worsening ESES\"",
+  "verbatim_locator: \"The presence of tonic seizures or epileptic spasms should prompt consideration of an alternative diagnosis.\"",
+  "source bytes copy (same sha256 as source_fingerprint): files/fulltext/adv052_he_20261118/PMID42650333_PMC13510780_europepmc.xml; the source_locator above is kept as first recorded because the ledger forbids changing it in a correction"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv052_ttype_he_20261118/TABLE_PRODUCER_BCD_20261118.md"
+ ],
+ "prior_receipt": "FTR-20261118-42650333-52",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "receipt_correction",
+ "source_fingerprint": "4f62fa69f832dfa7c24bff394617c64d5f5fa0e3350b6eaebb044a01cad33c8a",
+ "source_kind": "fulltext_remote",
+ "source_locator": "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/raw/PMID42650333_PMC13510780_europepmc.xml",
+ "study_id": {
+  "doi": "10.3390/children13080993",
+  "pmid": "42650333"
+ },
+ "workflow": "output and source-locator correction of FTR-20261118-42650333-52 (ADV-052 producer reading package (parts b, c, d): full text fetched through Euro)"
+}

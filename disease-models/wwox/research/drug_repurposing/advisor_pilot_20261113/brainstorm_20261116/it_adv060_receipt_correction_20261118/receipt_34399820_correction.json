@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-18T08:38:33Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "not_present",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-18T10:31:36Z",
+ "event_id": "FTR-20261118-34399820-53",
+ "evidence_basis": [
+  "output-path and source-locator correction only, no reread: the original receipt named its producer table and its saved source under a private scratch root that never ships; the table is committed at the path now named and the saved source bytes are held at the files/ path now named (same sha256, in SOURCES_SHA256.tsv beside the table). Coverage, depth, analysis time and fingerprint are carried over unchanged from FTR-20261118-34399820-52; its verbatim locators stand.",
+  "verbatim_locator: \"In vitro functional analysis of human Nav1.6 and Cav3.2 channel variants revealed mild but significant alterations of their gating properties that were in general consistent with a gain- and loss-of-channel function, respectively.\"",
+  "verbatim_locator: \"poorly responded to antiepileptic medication including clobazam, levetiracetam, phenobarbital and topiramate\"",
+  "verbatim_locator: \"In contrast, CACNA1H has never been associated with DEEs.\"",
+  "verbatim_locator: \"may not have had a major contribution to the development of the disease on its own\"",
+  "source bytes copy (same sha256 as source_fingerprint): files/fulltext/adv052_he_20261118/PMID34399820_PMC8365958_europepmc.xml; the source_locator above is kept as first recorded because the ledger forbids changing it in a correction"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv052_ttype_he_20261118/TABLE_PRODUCER_BCD_20261118.md"
+ ],
+ "prior_receipt": "FTR-20261118-34399820-52",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "receipt_correction",
+ "source_fingerprint": "8e151a58ff65f9f728c3bfb1d06ce8e363bd1675c8667659f325d3c88c46424c",
+ "source_kind": "fulltext_remote",
+ "source_locator": "/tmp/claude-1000/-home-desktop-legend-development/29e50812-fef0-4635-9c95-cfe7de2a8e2d/scratchpad/adv052/raw/PMID34399820_PMC8365958_europepmc.xml",
+ "study_id": {
+  "doi": "10.1186/s13041-021-00838-y",
+  "pmid": "34399820"
+ },
+ "workflow": "output and source-locator correction of FTR-20261118-34399820-52 (ADV-052 producer reading package (parts b, c, d): full text fetched through Euro)"
+}
