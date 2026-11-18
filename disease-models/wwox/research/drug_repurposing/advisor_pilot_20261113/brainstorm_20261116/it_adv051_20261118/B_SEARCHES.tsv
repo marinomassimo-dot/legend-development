@@ -1,0 +1,29 @@
+route	exact_query	date	count	opened	note
+PubMed MCP	"(Wwox[Title/Abstract]) AND (GSK3[Title/Abstract] OR GSK-3[Title/Abstract] OR ""glycogen synthase kinase""[Title/Abstract] OR Wnt[Title/Abstract] OR catenin[Title/Abstract] OR tau[Title/Abstract])"	2026-11-18	50 (40 returned)	6 abstracts	others cancer or off-topic
+Europe PMC	(TITLE_ABS:Wwox) AND (TITLE_ABS:GSK3 OR TITLE_ABS:GSK-3 OR TITLE_ABS:Wnt OR TITLE_ABS:catenin OR TITLE_ABS:tau)	2026-11-18	52	4 + 2 preprints	as above
+PubMed MCP	(WWOX[Title/Abstract]) AND (Dishevelled OR Dvl OR Dvl2)[Title/Abstract]	2026-11-18	7	3	cancer papers
+PubMed MCP	(Wwox[tiab]) AND (knockout OR null OR deficient OR mutant) AND (brain OR neuron* OR seizure* OR epilep*) AND (phosphorylat* OR beta-catenin OR GSK*)	2026-11-18	4	1 (32000863)	others reviews on WWOX phosphorylation/TRAPPC6A
+Europe PMC	same four-block query as the previous row in TITLE_ABS form	2026-11-18	6	1	same
+PubMed MCP	(GSK-3 inhibitor OR SB216763 OR AR-A014418 OR CHIR99021 OR TDZD-8 OR tideglusib) AND (seizure OR epilepsy OR PTZ OR kainate OR pilocarpine) AND (mice OR rats) AND (anticonvulsant OR seizure threshold OR seizures)	2026-11-18	25	titles via Europe PMC	read by relevance
+Europe PMC	"TITLE_ABS:(GSK-3 OR GSK3 OR SB216763 OR AR-A014418 OR CHIR99021 OR TDZD-8 OR tideglusib OR ""glycogen synthase kinase"") AND TITLE_ABS:(seizure* OR epilep* OR convuls* OR PTZ OR kainate OR pilocarpine) AND TITLE_ABS:inhibit* AND TITLE_ABS:(mice OR rats OR mouse OR rat)"	2026-11-18	66	first 40 titles listed; ~12 abstracts	40 listed, rest not opened
+Europe PMC	TITLE_ABS:(AR-A014418) AND TITLE_ABS:(seizure* OR convuls* OR epilep*)	2026-11-18	0	0	absence: two routes not both run for this agent (PubMed route covered by the broad query above, which named it); written as not found in these queries
+Europe PMC	TITLE_ABS:(SB216763) AND seizure terms	2026-11-18	4	3	1 irrelevant
+Europe PMC	TITLE_ABS:(CHIR99021) AND seizure terms	2026-11-18	3	1	2 not seizure papers
+Europe PMC	TITLE_ABS:tideglusib AND (seizure* OR epilep* OR convuls*)	2026-11-18	2	2	
+PubMed MCP	tideglusib[tiab] AND (children OR paediatric OR adolescents OR congenital myotonic dystrophy)	2026-11-18	20 returned	2 (via Europe PMC)	query translation too wide (child[All Fields]); selected by title
+Europe PMC	TITLE_ABS:tideglusib AND (trial OR children OR congenital OR Alzheimer OR supranuclear OR autism)	2026-11-18	35	3	titles screened
+Europe PMC	TITLE_ABS:(tideglusib) AND (REACH OR phase 2/3 OR 6 to 16 OR congenital myotonic)	2026-11-18	1 (off-topic)	0	no REACH-CDM paper found; a registered paediatric trial is not excluded (ClinicalTrials.gov MCP needs authentication, not reachable)
+PubMed MCP	LY2090314[tiab] OR (tideglusib AND seizure) OR AZD1080[tiab]	2026-11-18	58	0 (title screen)	off-topic
+Europe PMC	TITLE_ABS:LY2090314 AND (phase OR patients OR leukemia OR clinical)	2026-11-18	22	1	
+Europe PMC	TITLE_ABS:(valpro*) AND TITLE_ABS:(GSK-3 OR GSK3 OR glycogen synthase kinase) AND TITLE_ABS:inhibit*	2026-11-18	150	0 (title screen)	too wide
+Europe PMC	TITLE:(valproate OR valproic acid) AND TITLE:(glycogen synthase kinase OR GSK-3) AND PUB_YEAR 1996-2006	2026-11-18	8	4	
+Europe PMC	TITLE_ABS:lithium AND (PTZ OR pilocarpine) AND seizure AND GSK*	2026-11-18	6	3	
+Europe PMC	TITLE_ABS:(GSK-3 OR lithium) AND oligodendrocyte/myelination AND (Wnt OR catenin)	2026-11-18	37	2 plus 3 from title searches	listed 25
+Europe PMC	TITLE:(GSK3beta ...) AND TITLE:(oligodendrocyte OR myelination OR remyelination) 2008-2016	2026-11-18	3	2	
+Europe PMC	TITLE:(Wnt OR beta-catenin) AND TITLE:(oligodendrocyte OR myelination OR remyelination) 2008-2014	2026-11-18	13	2	
+Europe PMC	TITLE_ABS:(GSK-3 OR lithium) AND neurogenesis/progenitor AND Wnt/catenin AND cortex/developing	2026-11-18	26	1	
+Europe PMC	TITLE:lithium AND TITLE_ABS:(children OR adolescents OR pediatric) AND (safety OR tolerability OR adverse) AND review/RCT types	2026-11-18	42	5	
+Europe PMC	TITLE_ABS:lithium AND (neonat* OR infant* OR newborn*) AND (toxicity OR adverse OR exposure OR breastfe*) AND review types	2026-11-18	61	2	
+Europe PMC	TITLE:lithium AND (seizure OR epilep*) AND (child* OR infant* OR neonat*)	2026-11-18	18	1 (42661025)	others lithium-pilocarpine models or toxicity
+DailyMed	drug_name=lithium carbonate / ethosuximide / valproate sodium / depakote	2026-11-18	lists of 3-5 labels	3 labels saved	one repackager lithium label and brand Zarontin and Depakote; other manufacturers not compared
+Europe PMC	fullTextXML PMC7031858 (guessed id)	2026-11-18	HTTP 500 error body	0	discarded, correct id PMC6990504 obtained from PubMed ID converter
