@@ -106,3 +106,5 @@
 {"evidence": "SendMessage msg_id 8e33f3f6-008f-4f2b-919a-647c244c8af9 to SCI (another Claude session on this machine, in its inbox), 08:54Z 2026-11-18; full brief in the message", "id": "ADV-054", "state": "SENT", "to": ["SCI"], "utc": "2026-11-18T08:54:18Z"}
 {"assessment": "HOST", "id": "ADV-055", "key": "landing-pipeline-time-budget-measured", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-18T08:57:33Z"}
 {"evidence": "SendMessage msg_id e71a8602-25be-4aba-86f0-d2a27ff20f67 to HE (another Claude session on this machine, in its inbox), 08:58Z 2026-11-18; full brief in the message", "id": "ADV-055", "state": "SENT", "to": ["HE"], "utc": "2026-11-18T08:58:04Z"}
+{"assessment": "HOST", "id": "ADV-056", "key": "vigabatrin-u20-chronic-control-dossier", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-18T09:06:40Z"}
+{"evidence": "SendMessage msg_id bf360454-439c-4c4f-b7f6-6b98168fea7a to IT Orchestrator (another Claude session on this machine, in its inbox), 09:07Z 2026-11-18; full brief in the message", "id": "ADV-056", "state": "SENT", "to": ["IT Orchestrator"], "utc": "2026-11-18T09:07:01Z"}
