@@ -28,6 +28,48 @@
      "owner": "orchestrator",
      "source": "operator instruction 2026-11-18, sections E-G",
      "accepted_at": "2026-11-18T21:36:01Z"
+    },
+    {
+     "step": "Land and deliver the ADV-065c follow-up (receipts recorded with the tools, regenerate views after rebase, push), deliver originals, qualified synthesis, corrections, consumer delta, residual questions and executable work to ADV (advisor) and IT, and verify take-in-charge",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18 (A to G)",
+     "accepted_at": "2026-11-18T23:33:35Z"
+    },
+    {
+     "step": "ADV-067 lithium regimen bifurcation table and decision",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-067 assignment message 2026-11-18 (advisor)",
+     "accepted_at": "2026-11-18T23:33:35Z"
+    },
+    {
+     "step": "Select the next question with ADV by marginal benefit (same axis again, another open question, an unused connection, a documented Wwox mechanism not yet turned into a pharmacological comparison, an unread relevant source); propose a reasoned choice visibly if ADV is busy",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 1",
+     "accepted_at": "2026-11-18T23:33:44Z"
+    },
+    {
+     "step": "Answer ADV's diagnosis question on the two generator comparisons that showed no detectable benefit",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 2",
+     "accepted_at": "2026-11-18T23:33:44Z"
+    },
+    {
+     "step": "With IT, fix before the outcome the question, alternatives, utility criterion, error to avoid and no-difference outcome of one real case that tests whether the new relations improve a comparison against the simple path; record the result and the cost",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 3",
+     "accepted_at": "2026-11-18T23:33:44Z"
+    },
+    {
+     "step": "Reconcile the queue after delivery and continue the next useful deepening; update open questions through the existing path; use DREAM if associations can change a search",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 4",
+     "accepted_at": "2026-11-18T23:33:44Z"
     }
    ]
   }
@@ -51,6 +93,48 @@
    "at": "2026-11-18T21:36:01Z",
    "source": "operator instruction 2026-11-18, sections E-G",
    "step_sha256": "ea678468dcf2",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:33:35Z",
+   "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18 (A to G)",
+   "step_sha256": "c9c20a92f61b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:33:35Z",
+   "source": "ADV-067 assignment message 2026-11-18 (advisor)",
+   "step_sha256": "ef70471b194f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:33:44Z",
+   "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 1",
+   "step_sha256": "e9b8125db5ec",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:33:44Z",
+   "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 2",
+   "step_sha256": "521058cec816",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:33:44Z",
+   "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 3",
+   "step_sha256": "0eb3ea88857a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:33:44Z",
+   "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 4",
+   "step_sha256": "4d0eca8e6432",
    "reopened_block": false,
    "authorised_by": null
   }
