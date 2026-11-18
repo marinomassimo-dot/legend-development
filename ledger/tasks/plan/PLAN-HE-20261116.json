@@ -141,9 +141,9 @@
     },
     {
      "step": "Live run 1 (production): v3 two-stage on the graded-inhibition question; result consumed by IT into arm table v3; compare IT's count of new classes with mine under ONE counting rule",
-     "status": "IN_PROGRESS",
+     "status": "BLOCKED",
      "owner": "plan",
-     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/live1/LIVE1_RESULT.md (5b8febd2b7a1 on main; 198,088 tokens; 7 of 10 outside the held circuits)",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/deepening_he_20261116/live1/LIVE1_RESULT.md (5b8febd2b7a1 on main; 198,088 tokens; 7 of 10 outside the held circuits) | 2026-11-18 ADV-047: status corrected from IN_PROGRESS to BLOCKED; the step names a blocker and waits for another actor or a date, so it is not executable work and had kept the queue statement non-exhausted",
      "blocker": "IT's class count (waiting) before the comparison; no further runs without the operator's budget answer"
     },
     {
@@ -160,9 +160,9 @@
     },
     {
      "step": "ENGINE_MEASURES.tsv (append-only, 12 columns, test) with rows M001-M025; rows handed by IT to be appended (counted_by IT)",
-     "status": "IN_PROGRESS",
+     "status": "BLOCKED",
      "owner": "plan",
-     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ENGINE_MEASURES.tsv; scripts/test_engine_measures.py",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ENGINE_MEASURES.tsv; scripts/test_engine_measures.py | 2026-11-18 ADV-047: status corrected from IN_PROGRESS to BLOCKED; the step names a blocker and waits for another actor or a date, so it is not executable work and had kept the queue statement non-exhausted",
      "blocker": "IT's rows (new-class count, hours-to-consumer) not yet received"
     },
     {
@@ -173,9 +173,9 @@
     },
     {
      "step": "Recall prompt names the weekly harness-scout trigger (tag ade69dbb); standing weekly scout W48 onward",
-     "status": "IN_PROGRESS",
+     "status": "BLOCKED",
      "owner": "plan",
-     "evidence": "framework/scripts/strategic_advisor.py (fb0582b28cab); ADV replaces the cron text",
+     "evidence": "framework/scripts/strategic_advisor.py (fb0582b28cab); ADV replaces the cron text | 2026-11-18 ADV-047: status corrected from IN_PROGRESS to BLOCKED; the step names a blocker and waits for another actor or a date, so it is not executable work and had kept the queue statement non-exhausted",
      "blocker": "ADV replaces the installed recall; the next due week is W48"
     },
     {

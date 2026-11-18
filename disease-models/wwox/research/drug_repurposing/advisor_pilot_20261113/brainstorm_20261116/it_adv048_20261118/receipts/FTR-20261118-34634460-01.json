@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-18T07:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-18T07:35:00Z",
+ "event_id": "FTR-20261118-34634460-01",
+ "evidence_basis": [
+  "verbatim_locator | proposition: spontaneous inhibitory currents onto layer II/III pyramids were smaller in amplitude and frequency in the neuron-targeted knockout | Results | \"the sIPSCs were reduced in both amplitude and frequency (Fig. 4G, H; mean amplitude: S-CTLs 57.3 \u00b1 31.0pA; S-KOs 27.5 \u00b1 19.4 pA\"",
+  "verbatim_locator | proposition: of the interneuron intrinsic properties only the spike amplitude differed | Results | \"For the interneurons, only the action potential amplitude was diminished in the S-KOs compared to the controls\"",
+  "verbatim_locator | proposition: the authors name an interneuron decrease as an unaccounted possibility | Discussion | \"reflect a WWOX-dependent decrease in the interneuron population (Hussain et al., 2019) for which we did not account\"",
+  "verbatim_locator | proposition: the recordings used a chloride-loaded pipette | Methods | \"140 KCl, 1 CaCl2, 1 MgCl2, 10 EGTA, 10 HEPES, 3 Mg-ATP, 0.3 Na2GTP\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv048_20261118/RESULT_ADV048_PART2_RP019_IT_20261118.md",
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv048_20261118/PV_REPORTS_TABLE.tsv"
+ ],
+ "prior_receipt": "FTR-20261117-34634460-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC REST fullTextXML (PMC8609180) fetched 2026-11-18, 156866 bytes, sha256 934b4e1a42ac19f5cd8912994fb171beabdeb94a6631b23d9a383dab1db906aa, saved copy outside git, path in SOURCES.tsv; delegate read the text sections, Orchestrator checked four quotes; figures and supplement not viewed",
+ "study_id": {
+  "doi": "10.1016/j.nbd.2021.105529",
+  "pmid": "34634460"
+ },
+ "workflow": "ADV-048 part 2 (RP-019), one legend-delegate producer (sonnet requested, effort medium) plus the Orchestrator's check of the pivotal quotes against the saved bytes; figures and supplements not viewed; the delegate's keyword-and-passage reading is not a line-by-line read by the Orchestrator."
+}

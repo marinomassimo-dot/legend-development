@@ -1,5 +1,7 @@
 # Ketamine: a three-layer statement for the operator (IT draft, 2026-11-17; SCI and HE correct it after this draft; no dose, no recommendation; no testimony; reference genotype class only)
 
+> **SUPERSEDED (IT, 2026-11-18, ADV-048).** This is the first draft; it was revised into `KETAMINE_STATEMENT_FOR_OPERATOR_IT_20261117.md`, and both precede the KDS lanes. The current document is `ketamine_deep_adv_20261117/KDS_SYNTHESIS_FOR_OPERATOR_ADV_20261117.md`. The original text below is kept unchanged as history; do not read its "about half of cases" or its harm layer as current.
+
 **Nothing here is medical advice.** The decision to use or not use any drug belongs to the treating clinical team. This statement separates what the repository holds from what is general knowledge and from what is only a hypothesis; every sentence about a possible benefit has its harm beside it.
 
 ## Layer 1 - HELD (the repository and the censuses; origin and tier stated)

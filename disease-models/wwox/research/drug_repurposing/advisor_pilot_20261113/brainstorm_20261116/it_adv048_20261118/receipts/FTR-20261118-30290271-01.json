@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-18T07:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-18T07:35:00Z",
+ "event_id": "FTR-20261118-30290271-01",
+ "evidence_basis": [
+  "verbatim_locator | proposition: PV-immunopositive cell number was lower in the whole hippocampus of the knockout at two weeks | Results 3.1 | \"The overall reduction of PV+ interneurons in Wwox KO mice amounted to 44% when the hippocampus was taken in its entirety (p < .005, Fig. 1 D).\"",
+  "verbatim_locator | proposition: the unit is animals, 7 against 7 | Results 3.1 | \"Wwox KO (n = 7) and WT (n = 7) mice\"",
+  "verbatim_locator | proposition: some areas showed no PV-positive cells | Results 3.1 | \"Some hippocampal areas in Wwox KO mice showed a complete absence of such cells (Fig. 1 B1).\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv048_20261118/RESULT_ADV048_PART2_RP019_IT_20261118.md",
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv048_20261118/PV_REPORTS_TABLE.tsv"
+ ],
+ "prior_receipt": "FTR-20261108-30290271-92",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI E-utilities efetch db=pmc (PMC7104842) fetched 2026-11-18, 178386 bytes, sha256 ea6e0fa2fa1146da9d6b9920db7f24a55ce84951b04d4c86aeb3c5ad694d92f6, saved copy outside git, path in SOURCES.tsv; delegate read the text sections, Orchestrator checked three quotes; figures and supplement not viewed",
+ "study_id": {
+  "doi": "10.1016/j.nbd.2018.09.026",
+  "pmid": "30290271"
+ },
+ "workflow": "ADV-048 part 2 (RP-019), one legend-delegate producer (sonnet requested, effort medium) plus the Orchestrator's check of the pivotal quotes against the saved bytes; figures and supplements not viewed; the delegate's keyword-and-passage reading is not a line-by-line read by the Orchestrator."
+}

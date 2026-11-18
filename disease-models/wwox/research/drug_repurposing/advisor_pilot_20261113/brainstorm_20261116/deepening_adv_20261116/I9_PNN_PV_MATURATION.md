@@ -19,3 +19,7 @@ D9 Cheapest next step: the held-table maturation module lookup (SCI or HE).
 
 ## Update v3 (ADV, 2026-11-17 00:35Z; a transfer from another system)
 See `I5_PV_AXON_TIMING.md`, Update v3: Miao 2026 (PMID 42536722) shows, in a digenic absence mouse, that chemogenetic PV activation rescues both seizures and a behavioural deficit while T-type blockade or Cacna1g deletion rescues seizures only. For I9 it keeps open the question whether PV maturity (nets, Kv3.1) bears on PV OUTPUT in the Wwox-null neocortex; nothing in it is a WWOX observation and the P21 staining kill stands unchanged.
+
+
+## Update 2026-11-18 (IT, ADV-048 part 2, `it_adv048_20261118/RESULT_ADV048_PART2_RP019_IT_20261118.md`)
+No perineuronal-net, Kv3 or other maturation measurement exists in any Wwox-deficient tissue in the queries run (PubMed 0; Europe PMC reviews and abstract books only), so the maturation explanation (c) rests on no Wwox measurement; the only PV count (30290271) is hippocampal, global knockout, 2 weeks, a count of PV-immunopositive cells (loss, marker down-regulation and delayed maturation are not separated). The discriminating observation is in the result file. Text above unchanged.

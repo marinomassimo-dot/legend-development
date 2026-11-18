@@ -142,7 +142,7 @@ cannot change a conclusion, ranking or qualification, and has no new mission or 
 
 **The two levels, one schedule.** An hourly in-session cron (the one scheduling mechanism a live session can use and the one that can also *deliver*: the host crontab already runs the mandate watch
 and is not repeated) runs `python3 framework/scripts/strategic_advisor.py tick --campaign <DIR>`. `tick` is mechanical and makes no model call: it reads the roadmap digest, the commits of `main`
-since the last tick, the task records, the mandate watch's own event log and the runtime's list of sessions, and answers `NONE` (nothing new: the previous assessment stands), `EVALUATE`,
+since the last tick, the task records, the mandate watch's own event log and the runtime's list of sessions, and answers `NONE` (nothing new: the previous assessment stands; an answer about events, not about opportunities: its line names the ready portfolio rows, and a statement that remaining work depends on the operator names them too), `EVALUATE`,
 or why not (`RUNNING`, `DEFERRED`, `BUDGET`, `EXPIRED`, `DISABLED`). On `EVALUATE` choose an effective host decision through `assign`, reuse a still-valid choice with current evidence, or consult in the background with `strategic_advisor.py evaluate --campaign <DIR>` (opus, effort `high`, the existing
 fallback if the account does not serve it, declared in `meta.json`). Evaluations are about four hours apart, earlier when a delivery, a closed mandate, a stalled mandate or a roadmap edit
 anticipates one; the same events are never evaluated twice (a digest), an evaluation that is still running is not overlapped (process identity), and a session waiting for a CI run, a battery or
