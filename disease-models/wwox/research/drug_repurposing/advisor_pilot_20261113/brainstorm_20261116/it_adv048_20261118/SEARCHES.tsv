@@ -1,0 +1,24 @@
+query	source	count	note
+(WWOX OR Wwox) AND (parvalbumin OR "PV+" OR "PV-positive")	Europe PMC REST search	103	full-text search; many hits are WWOX-in-a-list noise, not screened one by one
+(WWOX OR Wwox) AND (interneuron OR interneurons OR GABAergic)	Europe PMC REST search	138	full-text search; many hits are WWOX-in-a-list noise, not screened one by one
+(WWOX OR Wwox) AND (perineuronal OR "perineuronal nets" OR WFA)	Europe PMC REST search	6	full-text search; many hits are WWOX-in-a-list noise, not screened one by one
+(WWOX OR Wwox) AND (sIPSC OR mIPSC OR IPSC OR "inhibitory postsynaptic")	Europe PMC REST search	85	full-text search; many hits are WWOX-in-a-list noise, not screened one by one
+(WWOX OR Wwox) AND "lde/lde"	Europe PMC REST search	22	full-text search; many hits are WWOX-in-a-list noise, not screened one by one
+TITLE_ABS:(WWOX OR Wwox) AND (parvalbumin OR interneuron OR GABA OR GABAergic OR inhibitory)	Europe PMC REST search	108	full-text search; many hits are WWOX-in-a-list noise, not screened one by one
+(TITLE_ABS:WWOX OR TITLE_ABS:Wwox) AND (parvalbumin OR interneuron OR interneurons OR GABAergic OR IPSC OR "perineuronal")	Europe PMC REST search	33	title/abstract anchored; all returned titles screened (first 100 only if more)
+(TITLE:WWOX OR TITLE:Wwox) AND (brain OR neuron* OR cortex OR hippocamp* OR epilep* OR seizure*)	Europe PMC REST search	149	title/abstract anchored; all returned titles screened (first 100 only if more)
+(TITLE_ABS:WWOX OR TITLE_ABS:Wwox) AND parvalbumin	Europe PMC REST search	7	title/abstract anchored; all returned titles screened (first 100 only if more)
+(TITLE_ABS:WWOX OR TITLE_ABS:Wwox) AND (IPSC OR sIPSC OR mIPSC OR "inhibitory postsynaptic" OR "perineuronal")	Europe PMC REST search	9	title/abstract anchored; all returned titles screened (first 100 only if more); "IPSC" also matches iPSC (induced pluripotent) so hits are not inhibitory-current papers
+(TITLE_ABS:WWOX OR TITLE_ABS:Wwox) AND (organoid* OR iPSC OR "stem cell" OR neurosphere) AND (GABAergic OR interneuron* OR inhibitory)	Europe PMC REST search	36	title/abstract anchored; all returned titles screened (first 100 only if more); iPSC noise; none carries a PV/GABA measurement in its title/abstract
+(TITLE_ABS:WWOX OR TITLE_ABS:Wwox) AND ("lde/lde" OR "lethal dwarfism" OR "hypomorph*" OR "P47T")	Europe PMC REST search	31	title/abstract anchored; all returned titles screened (first 100 only if more)
+(WWOX OR Wwox) AND parvalbumin	PubMed (MCP)	1	30290271 only
+(WWOX OR Wwox) AND (interneuron* OR GABAergic OR GABA)	PubMed (MCP)	5	30290271; 33255508, 34359949 reviews; 41442931 and 39101447 clinical case reports (no interneuron measurement)
+(WWOX OR Wwox) AND (perineuronal OR sIPSC OR mIPSC OR "inhibitory synap*" OR "inhibitory postsynaptic")	PubMed (MCP)	0	
+(WWOX OR Wwox) AND (calbindin OR somatostatin OR calretinin OR "neuropeptide Y" OR GAD65 OR GAD67 OR GAD1)	PubMed (MCP)	1	30290271 only
+(WWOX OR Wwox) AND (epilepsy OR seizure OR hippocampus OR neocortex) AND (knockout OR mice OR rat OR conditional)	PubMed (MCP)	23	all 23 screened by title; primary animal papers opened: 30290271 34634460 32000863 36828035 34747138 33914858
+(WWOX OR Wwox) AND (perineuronal OR "perineuronal net" OR IPSC OR "inhibitory postsynaptic" OR inhibition)	PubMed (MCP)	135 (60 returned)	too broad (IPSC = iPSC, inhibition); superseded by the narrower query above; the 60 returned were not individually screened
+(WWOX OR Wwox) AND (autopsy OR neuropathology OR postmortem OR "post-mortem" OR fetus) AND (brain OR cortex)	PubMed (MCP)	12	titles screened; no patient-tissue interneuron/PV measurement found in these queries
+(WWOX OR Wwox) AND (parvalbumin OR interneuron* OR "perineuronal net*" OR sIPSC OR GABAergic OR "inhibitory interneuron*")[tiab]	PubMed (MCP)	4	41442931 34359949 33255508 30290271
+(Wwox[tiab] OR WWOX[tiab]) AND (rat[tiab] OR "lde/lde"[tiab] OR zebrafish[tiab] OR drosophila[tiab]) AND (epilep*[tiab] OR seizure*[tiab] OR neuron*[tiab])	PubMed (MCP)	11	screened by title/abstract keyword; lde rat papers 19500159 (abstract only), 31340538 (full text read)
+EXT_ID:42397075	Europe PMC REST core	1	abstract only; inEPMC N
+WWOX AND (organoids OR myelin) AND SRC:PPR	Europe PMC REST	5 (3 relevant preprint records: PPR960425, PPR1124524, PPR204784)	preprints not opened; bioRxiv connector needs authorisation and was not used
