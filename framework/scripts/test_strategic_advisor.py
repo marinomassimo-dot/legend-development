@@ -1592,6 +1592,7 @@ class ValueContinuity(Continuous):
         text = sa.recall_prompt(self.campaign)
         self.assertIn("a blocked path is not a blocked portfolio", text)
         self.assertIn("an EVALUATE left unrun needs its excluded paths and a resume condition", text)
+        self.assertIn("the operator is a boost, not a dependency", text)                                    # ADV-049: the 2026-11-18 permanent instruction reaches the hourly recall
         self.assertEqual(text.count(sa.RECALL_MARK), 1)
         tag = re.search(r"\[text ([0-9a-f]{8})\]", text)
         self.assertTrue(tag and text.index(tag.group(0)) < 120, "the digest tag must sit where CronList shows the prompt")

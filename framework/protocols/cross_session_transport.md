@@ -682,6 +682,40 @@ Negative, unchanged and inconclusive results are legitimate. No fixed task count
 checklist, mandatory new report, approval level, scheduler or guaranteed scientific outcome is
 introduced. The next-work duty persists across compaction, sessions and operator absence.
 
+### Autonomous scientific leadership and urgency (operator, 2026-11-18, PERMANENT)
+
+The source is the 2026-11-18 entry of the drug-repurposing `roadmap_current.md` ("Recent
+operator instructions", PERMANENT); this subsection is the operating pointer and does not
+restate it. A session that lost the conversation reads that entry first.
+
+* **A boost, not a dependency.** The operator and the external model are an additional
+  contribution. The ordinary continuity of the laboratory is ADV's: it chooses and assigns
+  inside the authorised mandate without asking confirmation, continues while the operator reads
+  or is away, and folds an intervention into the existing programme when it arrives. A report to
+  the operator creates no dependency on a reply. A reserved decision (§21d, the rules in force)
+  blocks only its own action; research and independent work continue.
+* **The loop.** result -> alternative or question -> comparative evaluation -> deepening ->
+  new evidence and hypotheses -> update the consumers -> next choice. A deepening may generate
+  the next one, and ADV recognises and starts it; "it would be useful" in a report is not the
+  end of the step. The same holds when a candidate weakens: judge the follow-up the negative
+  result raises. A new compound may be research as a comparison or probe without becoming a
+  priority candidate.
+* **"More promising" is stated, not implied:** for which endpoint, model, phase of development,
+  mechanism and level of evidence; acute intervention, chronic seizure control and benefit on
+  development are different. A hoped-for tolerability or a more elegant rationale is not
+  efficacy. Keep the rival explanations and the counter-evidence.
+* **Proportion and reuse.** First a brief exploration, a targeted reading or a comparison with
+  data already held; a successor candidate needs mostly its decisive differences, not a copy of
+  the earlier dossier. Compare the marginal value of the chain with the other strands; continue,
+  branch, change direction or park a branch with its resume condition.
+* **A general wait** is justified only by an updated, briefly documented evaluation of the
+  alternatives and of the resources actually available, with the concrete condition that ends it
+  (see "A local wait is not exhaustion" above). A tick NONE, a MEETING not yet due or a queue just
+  concluded are operational information, not an evaluation of scientific opportunities.
+* **Perimeter.** No new register, scheduler, gate or duty to produce activity; resources, operator
+  pauses and reserved acts keep their meaning; data, inference, hypothesis and model result stay
+  distinct.
+
 ### Decision table — apply it before ending any turn
 
 | Observed condition | Action |
