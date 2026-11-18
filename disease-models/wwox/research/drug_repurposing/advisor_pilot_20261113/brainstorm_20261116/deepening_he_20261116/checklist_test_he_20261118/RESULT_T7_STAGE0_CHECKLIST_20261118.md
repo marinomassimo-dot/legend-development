@@ -39,3 +39,6 @@ The small test that option (b) described, a stage-1 checklist on two fresh targe
 
 ## Limits
 One target, tuned-on (the list's zinc item exists for the same reason as every other trace metal, but the project knew the answer when it chose this target); two runs; scorer not blind; recalled evidence in the model's own words, unchecked; one model and one delegate type; the model's answer for zinc was about adenylyl cyclases, and the transfer to the receptor guanylyl cyclase is its own hypothesis; token counts are the harness's.
+
+## Update 2026-11-18: SCI's scoring and the forecasts
+SCI scored the two runs independently (`deepening_sci_20261116/SCORE_FORECAST_CHECKLIST_TEST_SCI_20261118.md`, commit 4b16d7895, as the file stood when I read it): LOOSE 2 of 2 at 0.09 (-2.41 nats) against a naive -1.10, STRICT 1 of 2 at 0.22; her calibration note: loose per run near 0.8 when the atom is on the list. My own forecast was 0.30 for loose in at least one of two runs; observed 2 of 2, so I was under-confident by about the same direction as hers. Two forecasters, one target, one list: this says the forecasts under-weighted a named item, not that the cue works beyond the item it names. The result above is unchanged.
