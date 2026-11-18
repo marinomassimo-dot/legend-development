@@ -1,0 +1,12 @@
+source	what	route	depth	sha256
+PMID 41442931 Choi 2026 (DOI 10.1016/j.pediatrneurol.2025.12.001)	abstract	PubMed (MCP get_article_metadata) + Europe PMC core record (no PMCID, isOpenAccess N)	abstract only; full text not reached	e17c4f949498bb0a5113f6ed26f497ef438c3b5bb77090e0a194e81306519254 (raw/epmc_41442931.json)
+PMID 42735667 Choi cohort (DOI 10.1016/j.seizure.2026.09.006)	abstract	PubMed MCP + Europe PMC	abstract only	927822b1637eb648ae649efaf37b8faaac00bcfa3f74d2fb4cded4f0be085202
+held A1 README (30361190, 36537114, 37583270, 39101447, 35573960, 42092735, 28721938, 35792847, 36779245 readings)	reuse, not re-read from primary	repo batch_sci_20261105/a1_wwox_reports/README.md	partial_fulltext as recorded there	c8e41b6c7f950042e0e17369c75060300333235db962cde0d6cabc7d0028dcf3
+held cases_a1.tsv	used for aggregation only; no per-child output	repo	as above	ae04e1e8c872f0df048f6236bc52278e460c3d72dd211bdcb7f8c4b19b8b2e34
+held denominators_a1.tsv	repo			4acde24bacee92973f999808ad412ff48cd5ecbe0199e1416c526d730d137a87
+held RESPONSE.md	repo			383b5b23bab390a835cc3ec68923475569a8a584fb566691c3b24dad91045f46
+held module_inputs.md	repo (not otherwise used)			5c6d8cccf9179bda3ab7099330bb39ead8366d788fd3c9cd28ed990221b29ffd
+GROUP_RECOUNT_IT_20261116.md (Al-Baradie Table 3, Oliver Table 3)	repo		secondary compilation	ad5f8771e2a28a9b2d7477400eb3eeb66f4e5da290ad31d998a9efeb0a754bc2
+H02 packet.json	repo; card.json holds no assertion text			cef0776003b4292f3b9ec56c336158e2cb1969369446a0bb7c38b623b3de9c7a
+wwox_neonatal_parkinsonism_audit_20260921.md	repo			6928fc5e88a8c998d5cf45a3fb5b68353941660a747dda454e65b1eb351aeb93
+Primary full texts of the 8+2 reports	NOT re-opened in this package (reuse before reading; time budget)	-	not read	-

@@ -1,0 +1,33 @@
+# A development-endpoint arm for a non-gene agent in the Wwox-null pup (IT; ADV-058 unit 2; 2026-11-18; text for SCI, hypothesis level; no dose, no schedule, no recommendation; the brief is not edited)
+
+Written for: SCI (design) and ADV. Inputs reused: ADV-053 (development row, U07), cards C01 and C04 (AAV9 endpoint list), ADV-051 (arm order), RP-019 result, KDS lanes; nothing new was read.
+
+## Answer first
+**No as an arm of the brief 13.11 design, a conditional yes as a separate in vivo cohort, and only one agent of the arm list qualifies: lithium (with a second GSK-3 class beside it if the first is run).** Brief 13.11 is a slice experiment (hours; one preparation), and no development endpoint can be read in a slice. In vivo, the development endpoints are confounded by the provoking injection of the ADV-051 first experiment, so they need their own cohort.
+
+## U07's own endpoints, and what can be measured in an early-window arm of a drug
+| U07 endpoint (card C04 and ranking) | In the same animals as the provoked assay? | In a separate cohort | Note |
+|---|---|---|---|
+| Survival (untreated knockouts die by about day 17; treated high-dose arm n = 30 against untreated n = 10) | No: half of the PTZ-injected knockouts evolved into status epilepticus (Cheng 2020), so the provoking injection would drive survival | Yes: time to death with a pre-specified end age at least beyond day 17 | the primary comparable |
+| Body weight series from birth (days 0 to 30) | Only the readings before the provoking day | Yes | cheap, repeated |
+| Composite motor score (the panel states no age) | Only before the provoking day | Yes, with an age fixed beforehand | the age used in the AAV9 panel is not stated: ask the source laboratory or fix our own |
+| GFAP-positive cells | No (a seizure is a confounder) | Yes, at a fixed age | one section series per animal |
+| Myelination structure (unmyelinated axons per field about 52 against about 26 in wild type, not normalised) | No | Yes at a fixed age; electron microscopy is the heavy item; a lighter staining readout can precede it | the most mechanistic readout for a GSK-3/Wnt agent |
+| Brain size and weight at about day 20 (reported reduced in the null; not a U07 endpoint) | Yes at the end of the provoked assay, with the caveat above | Yes | a harm and a development readout together |
+Blood glucose at P10 showed no effect of AAV9 and is not worth an arm.
+
+## What a direct comparison with the AAV9 result would and would not allow
+*Would allow:* a comparison of effect sizes on the same endpoints in the same strain and age window, if the arm starts in the first days of life (the early window of U07: injection P0 to P5). *Would not allow:* (a) prevention against rescue: AAV9 is prevention or early window, a post-onset arm does not exist for either; (b) a claim of equivalence of mechanism: the vector restores WWOX dosage, a drug acts downstream and only while present; (c) durability and dose-response (the AAV9 high-dose row is one row, n = 30 against 10, with the audit repair still to be adjudicated; one laboratory, two papers); (d) a safety comparison: AAV9 has no overexpression or tumour endpoint, and a drug needs harm endpoints of its own (myelin, retina, brain size, and for lithium renal and thyroid readouts as the label lists); (e) pharmacokinetics in pups: unknown for every agent here, so exposure cannot be matched. The comparison would be of different cohorts, laboratories and years.
+
+## Controls and per-animal summaries
+Same-litter controls for each genotype (+/+, +/-, -/-) with vehicle; litter as the block; randomisation by litter; sex recorded; scoring blind to genotype and arm; per-animal summaries fixed before the first animal (days survived with a stated censoring day; area under the weight curve; one motor score per animal at the fixed age; one GFAP count and one myelin measure per animal), and the genotype-by-treatment term pre-specified. No power calculation is offered: no variance is held for any of these endpoints in a drug arm. A separate vehicle-only knockout group is needed in the same cohort, not borrowed from the AAV9 papers.
+
+## Which agents of the arm list make sense
+* **Lithium: yes, as the single candidate.** Reasons: it has the only in vivo Wwox-null drug effect with a general-property reading; its GSK-3 route has a rationale for myelination (the sign is divided across studies, so the arm decides nothing in advance); and a development arm gives the second GSK-3 class a purpose. Harms to carry into the endpoints: toxicity close to therapeutic concentrations (label), renal and thyroid effects, and GSK-3 inhibition raising progenitor proliferation in embryonic cortex in one study. It was given before the provoking injection only; chronic neonatal dosing is not an existing datum.
+* **Ethosuximide: no.** It was given only before a provoking injection; there is no development rationale; in rats it did not act below about 25 days on PTZ (a rat inference, unresolved for the mouse); early chronic treatment in an absence model was temporary.
+* **Pore blockers (ketamine, memantine) and d-APV: no.** Chronic NMDAR block in the maturation window is the aggravation counterpart (developing-brain apoptosis signal in rats; seizure aggravation signals); a development arm would be a harm experiment first.
+* **Vigabatrin: no as an efficacy arm.** In young rodents the same window carries myelin and retinal lesions; the WWOX-class phenotype has hypomyelination and, in some children, optic involvement.
+* **Valproate:** not a development agent; it belongs to the provoked-assay comparator list only.
+
+## Is it worth an arm?
+Conditional. Run it only after the provoked assay shows a lithium effect that is reproduced with the genotype-by-treatment term, and as its own cohort: the cost is a litter-blocked cohort of null pups dosed from the first days of life, the prior is thin (one GSK-3 rationale with a divided sign for myelination, no pup exposure data), and an early floor is likely because untreated knockouts die by about day 17. If the provoked assay does not show lithium to be selective, the development arm has no rationale beyond a general anticonvulsant and should be dropped. Text only: brief 13.11 is not edited.
