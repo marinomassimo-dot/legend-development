@@ -29,3 +29,6 @@ Source list: `it_i14_gaba_worsening_discriminator_20261116/d5b_run/extraction_tr
 
 
 Update 2026-11-18 (IT, SCI ADV-045, advisor_pilot_20261113/brainstorm_20261116/adv045_errata_sci_20261118/ERRATA_READ_ADV045_SCI_20261118.md (main 78bf06890)): three entries for the visit, each with the decision it unblocks. (1) 35655584, erratum 36176337 (PMC reCAPTCHA): its corrected p values are carried by consumers a2 D01 and D02 and inv10 E19; read the erratum text. (2) 24209626 (Cell, challenge page): the notice has no text elsewhere; read the notice to know whether any cited item changed. (3) The corrected Fig 8 of 36594817: unblocks row R87 and its consumers (R1 README, module input, the need statement on gene addition); no other source gives it.
+
+
+Update 2026-11-18 (IT, ADV-056, `it_adv056_20261118/RESULT_ADV056_VIGABATRIN_IT_20261118.md`): one more entry. Choi 2026 (PMID 41442931, no PMCID, closed): the full text of the two-child MRI report on vigabatrin in WWOX-class children. Decision it unblocks: whether the pallidal and thalamic change was symptomatic and whether it resolved, the hormonal co-therapy at the time, and the authors' susceptibility argument for WWOX children. No other source holds it; the ranking above is unchanged and not renumbered.

@@ -1,0 +1,17 @@
+# Blind verification brief (ADV-056 dossier on vigabatrin; verifier; IT 2026-11-18)
+
+You verify claims against saved source bytes. You have NOT seen the dossier, any verdict or any author's conclusion; do not look for them. Do not search the web. Non-canonical; no dose, no recommendation. For each claim below, find the quote in the named source (saved bytes under `/tmp/it56_adv056/outB/sources/` and `/tmp/it56_adv056/outA/raw/`; the DailyMed label is `outB/sources/dailymed_sabril_powder_a88ac1b4.xml`; sources are named by PMID) and answer with one of SUPPORTED, PARTLY SUPPORTED (say what is missing or different), NOT SUPPORTED (say what the source states instead), UNVERIFIABLE (the bytes do not hold it). Give the verbatim quote (at most 40 words) and its location for every row. Note anything the claim omits that changes its meaning. Output: a TSV `/tmp/it56_adv056/verify/VERIFY_RESULT.tsv` (claim_id, verdict, quote, location, note) and your final message with the same table. Write only under `/tmp/it56_adv056/verify/`.
+
+Claims:
+C1 (label) The onset of vision loss from vigabatrin is unpredictable and can occur within weeks of starting treatment or sooner, or at any time, including after months or years.
+C2 (label) Vision assessment is recommended at baseline (no later than 4 weeks after starting), at least every 3 months during therapy, and about 3 to 6 months after discontinuation.
+C3 (label) In infants, vision loss may not be detected until it is severe; perimetry is named for adults and cooperative paediatric patients.
+C4 (label) Vigabatrin should not be used in patients with, or at high risk of, other types of irreversible vision loss unless the benefits clearly outweigh the risks.
+C5 (PMID 25381295) In 146 treated children, 30 (21%) showed retinal damage defined by ERG; the ERG amplitude decreased with duration of treatment; no recovery after stopping; no effect of age at start is reported.
+C6 (PMID 25145415) In a school-age perimetry study after infant exposure, 32 children were analysed and the proportion with visual-field defects was 34%, rising with duration of exposure from 9% to 63%.
+C7 (PMID 19054414) Among infants with infantile spasms, the prevalence of prespecified MRI abnormalities was 22% in vigabatrin-treated against 4% in those not given vigabatrin (205 infants).
+C8 (PMID 42735667) In a cohort of 64 children given vigabatrin, 18 (28.1%) had the vigabatrin-associated MRI abnormality; concomitant prednisolone was associated with it in univariable analysis (odds ratio 4.07, 95% CI 1.22 to 17.3).
+C9 (PMID 41442931) Two children with a WWOX-related epileptic encephalopathy had new symmetrical signal changes in the globus pallidi and thalami during vigabatrin treatment, called vigabatrin-associated MRI abnormalities; the abstract does not state whether they were symptomatic or whether they resolved.
+C10 (PMID 10565592) Appleton 1999: a randomised, placebo-controlled study in 40 children with infantile spasms with a 5-day double-blind phase, outcome defined as reduction in spasms against baseline.
+C11 (PMID 15541450, PMID 27838190) UKISS: no spasms on days 13 and 14 in 54% with vigabatrin against 73% with hormonal treatment. ICISS (open label, outcome assessors masked): no witnessed spasms from day 14 to 42 in 72% with hormonal therapy plus vigabatrin against 57% with hormonal therapy alone.
+C12 (PMID 19780795) In rat pups, vigabatrin suppressed NMDA-induced flexion seizures at postnatal day 12 but was ineffective against clonic-tonic seizures at both ages tested.
