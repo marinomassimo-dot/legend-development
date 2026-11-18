@@ -1,0 +1,97 @@
+arm	class	gene	nuclei	nuclei_with_umi	umi	umi_per_1e4
+ctrl	all nuclei	Cacna1g	3182	389	496	0.27
+ctrl	all nuclei	Cacna1h	3182	641	897	0.49
+ctrl	all nuclei	Cacna1i	3182	420	573	0.31
+ctrl	all nuclei	Wwox	3182	1017	2041	1.1
+ctrl	all nuclei	Gad1	3182	500	857	0.46
+ctrl	all nuclei	Slc17a7	3182	1350	2557	1.38
+ctrl	neuron	Cacna1g	1093	213	283	0.32
+ctrl	neuron	Cacna1h	1093	304	417	0.47
+ctrl	neuron	Cacna1i	1093	270	375	0.42
+ctrl	neuron	Wwox	1093	382	827	0.93
+ctrl	neuron	Gad1	1093	218	434	0.49
+ctrl	neuron	Slc17a7	1093	810	1564	1.76
+ctrl	neuron_exc	Cacna1g	955	186	250	0.32
+ctrl	neuron_exc	Cacna1h	955	289	400	0.52
+ctrl	neuron_exc	Cacna1i	955	239	335	0.43
+ctrl	neuron_exc	Wwox	955	294	570	0.74
+ctrl	neuron_exc	Gad1	955	84	90	0.12
+ctrl	neuron_exc	Slc17a7	955	793	1538	1.99
+ctrl	neuron_inh	Cacna1g	138	27	33	0.28
+ctrl	neuron_inh	Cacna1h	138	15	17	0.15
+ctrl	neuron_inh	Cacna1i	138	31	40	0.34
+ctrl	neuron_inh	Wwox	138	88	257	2.2
+ctrl	neuron_inh	Gad1	138	134	344	2.94
+ctrl	neuron_inh	Slc17a7	138	17	26	0.22
+ctrl	oligodendrocyte	Cacna1g	247	5	6	0.07
+ctrl	oligodendrocyte	Cacna1h	247	23	36	0.42
+ctrl	oligodendrocyte	Cacna1i	247	9	12	0.14
+ctrl	oligodendrocyte	Wwox	247	62	117	1.37
+ctrl	oligodendrocyte	Gad1	247	22	25	0.29
+ctrl	oligodendrocyte	Slc17a7	247	15	16	0.19
+ctrl	OPC	Cacna1g	104	7	7	0.26
+ctrl	OPC	Cacna1h	104	3	4	0.15
+ctrl	OPC	Cacna1i	104	2	2	0.07
+ctrl	OPC	Wwox	104	34	66	2.45
+ctrl	OPC	Gad1	104	14	15	0.56
+ctrl	OPC	Slc17a7	104	6	6	0.22
+ctrl	astrocyte	Cacna1g	287	7	8	0.1
+ctrl	astrocyte	Cacna1h	287	20	23	0.29
+ctrl	astrocyte	Cacna1i	287	4	4	0.05
+ctrl	astrocyte	Wwox	287	88	156	1.98
+ctrl	astrocyte	Gad1	287	30	32	0.41
+ctrl	astrocyte	Slc17a7	287	26	29	0.37
+ctrl	microglia	Cacna1g	169	1	1	0.04
+ctrl	microglia	Cacna1h	169	4	7	0.31
+ctrl	microglia	Cacna1i	169	1	1	0.04
+ctrl	microglia	Wwox	169	31	49	2.15
+ctrl	microglia	Gad1	169	5	7	0.31
+ctrl	microglia	Slc17a7	169	24	26	1.14
+ko	all nuclei	Cacna1g	2920	559	803	0.48
+ko	all nuclei	Cacna1h	2920	683	1027	0.62
+ko	all nuclei	Cacna1i	2920	299	400	0.24
+ko	all nuclei	Wwox	2920	141	204	0.12
+ko	all nuclei	Gad1	2920	491	942	0.57
+ko	all nuclei	Slc17a7	2920	1031	1804	1.08
+ko	neuron	Cacna1g	955	259	390	0.48
+ko	neuron	Cacna1h	955	347	533	0.66
+ko	neuron	Cacna1i	955	192	259	0.32
+ko	neuron	Wwox	955	70	100	0.12
+ko	neuron	Gad1	955	200	464	0.57
+ko	neuron	Slc17a7	955	602	1087	1.34
+ko	neuron_exc	Cacna1g	828	218	330	0.47
+ko	neuron_exc	Cacna1h	828	312	488	0.69
+ko	neuron_exc	Cacna1i	828	178	241	0.34
+ko	neuron_exc	Wwox	828	54	80	0.11
+ko	neuron_exc	Gad1	828	82	123	0.17
+ko	neuron_exc	Slc17a7	828	586	1062	1.5
+ko	neuron_inh	Cacna1g	127	41	60	0.57
+ko	neuron_inh	Cacna1h	127	35	45	0.43
+ko	neuron_inh	Cacna1i	127	14	18	0.17
+ko	neuron_inh	Wwox	127	16	20	0.19
+ko	neuron_inh	Gad1	127	118	341	3.27
+ko	neuron_inh	Slc17a7	127	16	25	0.24
+ko	oligodendrocyte	Cacna1g	57	5	7	0.33
+ko	oligodendrocyte	Cacna1h	57	7	13	0.61
+ko	oligodendrocyte	Cacna1i	57	1	1	0.05
+ko	oligodendrocyte	Wwox	57	0	0	0.0
+ko	oligodendrocyte	Gad1	57	4	4	0.19
+ko	oligodendrocyte	Slc17a7	57	2	2	0.09
+ko	OPC	Cacna1g	163	4	4	0.09
+ko	OPC	Cacna1h	163	17	20	0.46
+ko	OPC	Cacna1i	163	5	6	0.14
+ko	OPC	Wwox	163	2	4	0.09
+ko	OPC	Gad1	163	27	31	0.71
+ko	OPC	Slc17a7	163	15	16	0.36
+ko	astrocyte	Cacna1g	345	20	25	0.25
+ko	astrocyte	Cacna1h	345	21	26	0.26
+ko	astrocyte	Cacna1i	345	2	2	0.02
+ko	astrocyte	Wwox	345	7	9	0.09
+ko	astrocyte	Gad1	345	31	35	0.35
+ko	astrocyte	Slc17a7	345	32	36	0.36
+ko	microglia	Cacna1g	126	1	1	0.05
+ko	microglia	Cacna1h	126	4	6	0.31
+ko	microglia	Cacna1i	126	0	0	0.0
+ko	microglia	Wwox	126	6	15	0.77
+ko	microglia	Gad1	126	8	8	0.41
+ko	microglia	Slc17a7	126	15	16	0.82
