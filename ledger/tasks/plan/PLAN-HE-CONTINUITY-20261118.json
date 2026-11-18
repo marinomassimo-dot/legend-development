@@ -91,11 +91,12 @@
     },
     {
      "step": "Run ONE release battery on the final tree after IT's ADV-066 change (generation_it40 package registration and INVS) lands: tell IT the PID, never concurrent with another full battery, preserve the historical FAIL on 20191c453, report the verdict to ADV and IT",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV decision to HE 2026-11-18 (answer c): ONE battery on the final tree, run by HE, after IT's ADV-066 lands",
      "accepted_at": "2026-11-18T21:34:15Z",
-     "updated_at": "2026-11-18T21:53:00Z"
+     "updated_at": "2026-11-18T23:23:08Z",
+     "evidence": "battery on 6320348db5 ran (266 suites, 4823 s) and FAILED on 2 suites: test_repurposing_view (stale views after K2; IT's regeneration) and test_public_release_gate_cache (my pinned count, fixed 1aaea7445); evidence /tmp/legend-verify-keep/20261118-215233-74c2282d; historical FAIL on 20191c453 untouched; verdict sent to IT, ADV, SCI"
     },
     {
      "step": "ACTOR_ID advisor: roles/advisor.md, identity and routing (advisor vs orchestrator), migration of the ADV record without history loss, one host, recall verified, probe demonstration, delivery to ADV IT SCI, rollback path",
@@ -105,6 +106,19 @@
      "accepted_at": "2026-11-18T22:02:45Z",
      "updated_at": "2026-11-18T22:38:21Z",
      "evidence": "contract+routing 6394916c4, passage 9d7ec1142; probe demonstration evidence in advisor_actor/; ADV verified record, routes and root ff; 22:37Z production run classified the record once RUNNING; delivered to ADV, IT, SCI"
+    },
+    {
+     "step": "Targeted rerun of test_repurposing_view and test_public_release_gate_cache on the tip after IT's view regeneration (no second full battery); report to IT and ADV",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "source": "HE proposal to IT and ADV 2026-11-18 after the battery FAIL",
+     "accepted_at": "2026-11-18T23:23:08Z",
+     "blocker": "IT has not yet landed the regenerated views and package after K2",
+     "unblock_when": {
+      "commit": "VIEWS REGENERATED",
+      "ref": "development/main"
+     },
+     "updated_at": "2026-11-18T23:23:08Z"
     }
    ]
   }
@@ -184,6 +198,13 @@
    "at": "2026-11-18T22:02:45Z",
    "source": "operator mandate 2026-11-18 (ACTOR_ID plan): distinct ACTOR_ID advisor for the ADV host, integrated with the continuity work",
    "step_sha256": "a559bf263549",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T23:23:08Z",
+   "source": "HE proposal to IT and ADV 2026-11-18 after the battery FAIL",
+   "step_sha256": "4b51fe10a7d3",
    "reopened_block": false,
    "authorised_by": null
   }
