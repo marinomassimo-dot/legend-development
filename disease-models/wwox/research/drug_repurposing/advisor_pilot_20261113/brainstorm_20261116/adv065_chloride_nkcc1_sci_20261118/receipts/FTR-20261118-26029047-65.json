@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-18T18:01:17Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T18:03:17Z",
+ "event_id": "FTR-20261118-26029047-65",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"BTN failed as an adjunct, at all ages tested and significantly blunted PB-efficacy at P10\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065_chloride_nkcc1_sci_20261118/CHLORIDE_GRADIENT_AND_NKCC1_ADV065_SCI_20261118.md"
+ ],
+ "prior_receipt": "FTR-20261118-26029047-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "cdf6037153be4756acfd349a175efa2b6b49f7243aece945a85595e061527ed7",
+ "source_kind": "abstract",
+ "source_locator": "files/fulltext/adv065_20261118/abs_26029047.txt",
+ "study_id": {
+  "pmid": "26029047"
+ },
+ "workflow": "SCI ADV-065 chloride gradient and NKCC1 note; context_policy QUESTION_DRIVEN; abstract text parsed from PubMed efetch XML by the delegate (legend-delegate, sonnet medium) and written to the saved file by SCI after re-matching the quote"
+}

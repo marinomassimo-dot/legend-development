@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-18T18:01:17Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-18T18:03:17Z",
+ "event_id": "FTR-20261118-27251618-65",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"in slices from P2-P8 mice\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065_chloride_nkcc1_sci_20261118/CHLORIDE_GRADIENT_AND_NKCC1_ADV065_SCI_20261118.md"
+ ],
+ "prior_receipt": "FTR-20261110-27251618-93",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "f0bf68fb0b438945327a21b6a777610603830bab5b620c0e667686d902461e5e",
+ "source_kind": "abstract",
+ "source_locator": "files/fulltext/adv065_20261118/abs_27251618.txt",
+ "study_id": {
+  "pmid": "27251618"
+ },
+ "workflow": "SCI ADV-065 chloride gradient and NKCC1 note; context_policy QUESTION_DRIVEN; abstract text parsed from PubMed efetch XML by the delegate (legend-delegate, sonnet medium) and written to the saved file by SCI after re-matching the quote"
+}
