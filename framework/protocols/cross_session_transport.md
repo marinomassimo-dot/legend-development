@@ -724,7 +724,7 @@ session). This subsection is the operating rule; the design record is non-normat
 
 **Who does what.** The **ADV host** is a session bound to the campaign's mandate record (`ORCH-ADV-FOLLOWTHROUGH-*`, which carries `SESSION_NAME`, `SESSION_BINDING` and a `RECALL` field). The host owns the
 recall, the recovery and any substitution. The read-only analyst (`legend-strategic-advisor`) is a consultant: it never manages a process, a cron or a session. Identity is the **bound session id**
-(the `MANDATE_BOUND: <TASK_ID>` line in the session's own text and the record's `SESSION_BINDING`), never `ACTOR_ID` (ADV and IT share `orchestrator` and are different functions) and never a display
+(the `MANDATE_BOUND: <TASK_ID>` line in the session's own text and the record's `SESSION_BINDING`), never `ACTOR_ID` alone (ADV is `advisor` since DEC-20261118-ADVISOR-ACTOR, IT is `orchestrator`; before that both were `orchestrator`; an ACTOR_ID alias resolves to a session only when exactly one live bound session carries it) and never a display
 name (a revival or an operator rename changes it). Two live sessions may answer to one name; only the ones that carry the marker are hosts.
 
 **The chain, each layer already installed or part of the tools.**

@@ -32,6 +32,8 @@ ROLE_CONTRACT = {
     "scientist": "roles/scientist.md",
     # Junior Harness Engineer — DEC-20260905-AGILE-HARNESS-MODE, LEGEND_CORE §21e.
     "junior-harness": "roles/junior_harness.md",
+    # The ADV host — operator decision 2026-11-18, governance/decisions/DEC-20261118-ADVISOR-ACTOR.md.
+    "advisor": "roles/advisor.md",
 }
 
 

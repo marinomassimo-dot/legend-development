@@ -216,3 +216,13 @@ the published ref and a second worktree had merged it. The rule that nothing is 
 `git merge --ff-only development/main`", after which the record is watched. Until then a mandate
 registered by `accept --create-for` is not woken by the hourly check: the actor that creates a
 standing record must make sure the root has it, or say so.
+
+## H. ACTOR_ID `advisor`: demonstration under the new actor (2026-11-18, DEC-20261118-ADVISOR-ACTOR)
+
+Real runtime, scratch root, probe session `HE-PROBE-ADV` (id `360e9a12-4667-4cad-804d-ba7396435027`, haiku), probe record under `ledger/tasks/advisor/` with `ACTOR_ID: advisor` and a `RECALL`
+field; raw logs and digests in `wakeup_continuity_20261118_evidence/advisor_actor/`. Observed: the probe bound itself (`MANDATE_BOUND` as its own line) and armed ONE recall
+(4-minute cron); `mandate_watch.py route --to advisor` resolved to it alone through "ACTOR_ID advisor: binding"; `check` RUNNING; after `claude stop`, `check --deliver resume`
+sent one resume under the **same session id**; the resumed session reported `jobs=1` (the recall restored, no second one armed) and the first firing after the resume was observed
+(22:12:22 UTC, `fired.txt`). Not demonstrated here, because the machinery is unchanged and was proven in section B: duplicate hosts, authorised `rebind`, flag-copy. Fixtures
+(`ActorAlias`): before the passage `route --to orchestrator` is AMBIGUOUS (IT and ADV carry the same ACTOR_ID); after it, `advisor` resolves to the ADV session and `orchestrator` to IT; a
+COMPLETE record of an actor bound to another live session does not count; an unreachable host reads UNRESOLVED. The probe session was unlisted with `claude rm`; its transcript was deleted by exact path.

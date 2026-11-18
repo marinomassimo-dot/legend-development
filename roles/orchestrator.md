@@ -88,7 +88,7 @@ you assignment drafts without being asked, with the sources to read and the deci
 evidence the Advisor looks for), coordinate it with the work already active, and decide its order and method, recording why when you adapt it; no extra approval is needed per assignment inside the
 campaign. The operator's roadmap prevails over any automatic plan; you keep operational coordination; an operator stop or pause keeps its precedence.
 
-**Wake-up durability and who a session is.** ADV and IT share `ACTOR_ID: orchestrator` and are sessions with different functions; a session's identity is its bound session id (the `MANDATE_BOUND` line and the
+**Wake-up durability and who a session is.** Until 2026-11-18 ADV and IT shared `ACTOR_ID: orchestrator`; the ADV host is now `ACTOR_ID: advisor` (`roles/advisor.md`, `DEC-20261118-ADVISOR-ACTOR`) and this contract is the operative Orchestrator's alone. Sessions have different functions, and a session's identity is its bound session id (the `MANDATE_BOUND` line and the
 record's `SESSION_BINDING`), never the `ACTOR_ID` and never its display name. The presidio's wake-ups, recall and recovery after a lost chat belong to the ADV campaign and its host session, not to the read-only analyst
 and not to a new operator prompt: [wake-up durability](../framework/protocols/cross_session_transport.md#wake-up-durability-the-presidio-belongs-to-the-adv-campaign-not-to-a-chat-operator-2026-11-18-permanent). Work you accept is written into your own mandate with `mandate_continuity.py accept`, or no watch can revive you for it.
 

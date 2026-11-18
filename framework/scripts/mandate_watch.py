@@ -197,11 +197,33 @@ def route(target: str, sessions: list[dict] | None, root: Path = ROOT) -> dict:
             bound_live.setdefault(sid, str(rec.get("TASK_ID")))
         elif sid:
             bound_gone.append({"task": rec.get("TASK_ID"), "session_id": sid})
+    actor_hits: set[str] = set()
+    actor = target.strip().lower()                                                   # 3 an ACTOR_ID as the recipient ("advisor", "orchestrator"): the live sessions bound to an OPEN record of that actor
+    if re.fullmatch(r"[a-z][a-z0-9-]*", actor):
+        for path in sorted((root / "ledger" / "tasks").glob("*/*.json")):
+            try:
+                rec = json.loads(path.read_text(encoding="utf-8"))
+                if not isinstance(rec, dict) or str(rec.get("ACTOR_ID") or "").lower() != actor:
+                    continue
+                if "OPEN" not in [mc.block_state(b) for _, b in mc.load_blocks(rec)]:
+                    continue
+            except (OSError, ValueError, mc.Malformed, AttributeError):
+                continue
+            task = str(rec.get("TASK_ID") or path.stem)
+            hosts = {h["session_id"] for h in live_bound_sessions(task, list(live.values()))}
+            bind = rec.get("SESSION_BINDING")
+            sid = (bind.get("session_id") if isinstance(bind, dict) else (UUID_RE.search(str(bind or "")) or [None])[0]) if bind else None
+            if sid and sid in live:
+                hosts.add(sid)
+            for h in hosts:
+                found.setdefault(h, f"ACTOR_ID {actor}: binding of {task}")
+                bound_live.setdefault(h, task)
+                actor_hits.add(h)
     out["candidates"] = [{"recipient": live[sid].get("name"), "session_id": sid, "via": why} for sid, why in found.items()]
     # 2026-11-18: two live sessions answered to 'ADV' (the bound session and an operator chat named after the mandate) and 'HE' matched 'HE-PROBE' by token. A whole-name match beats a token match, and when several
     # names still answer, the session a record's SESSION_BINDING names for that role is the one; the others are listed as surplus, never chosen and never silently dropped.
     bound = [sid for sid in found if sid in bound_live]
-    if len(found) > 1 and len(bound) == 1:                                           # identity follows the binding (record or marker), not the display name
+    if len(found) > 1 and len(bound) == 1 and not actor_hits:                        # (not for an ACTOR_ID alias: a name-token session that no record binds is another candidate, not a surplus duplicate) identity follows the binding (record or marker), not the display name
         out["surplus_name_matches"] = [{"recipient": live[sid].get("name"), "session_id": sid} for sid in found if sid not in bound]
         found = {bound[0]: f"binding of {bound_live[bound[0]]} (the other live sessions that answer to the name are not its host)"}
     exact = [sid for sid in found if found[sid] == "live name or id"]

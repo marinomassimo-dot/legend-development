@@ -1,0 +1,25 @@
+{
+ "_schema": "task record, probe",
+ "TASK_ID": "PROBE-ADV-ACTOR-20261118",
+ "OWNER": "advisor",
+ "ACTOR_ID": "advisor",
+ "SESSION_NAME": "HE-PROBE-ADV",
+ "RECALL": {
+  "mark": "PROBE-ADV-RECALL",
+  "command": "date -u",
+  "renew_days": 6
+ },
+ "AUTHORISED_QUEUE_PROBE": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_A": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "PROBE (HE, 2026-11-18): after every start of this session call CronList; if no job carries PROBE-ADV-RECALL create exactly one; then append the line RESUMED-CHECK <utc> jobs=<n> to /tmp/he96_probe2/events.log",
+     "status": "TODO",
+     "owner": "probe"
+    }
+   ]
+  }
+ }
+}

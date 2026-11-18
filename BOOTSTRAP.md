@@ -217,6 +217,8 @@ into one and then could not choose between.
 | `scientist-b` | worktree `lettore-b` | same | `roles/scientist.md` |
 | `scientist-c` | worktree `lettore-c` | same | `roles/scientist.md` |
 
+Added by the operator on 2026-11-18 (`DEC-20261118-ADVISOR-ACTOR`): `advisor`, the ADV host (`roles/advisor.md`), a persistent actor registered when the operator assigns it, with no home or worktree implied by the identity; the Orchestrator row above is the operative Orchestrator only.
+
 **The five rows below `orchestrator` are the `Annex I.2` step 6 list**, and for those five actors
 the two columns hold the same value — which is why every other role contract needs one field and
 this one needs two.
