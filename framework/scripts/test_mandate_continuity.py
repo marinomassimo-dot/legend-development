@@ -836,5 +836,106 @@ class SecondBlindReview(unittest.TestCase):
             self.assertEqual(mc.binding_from_transcript(p), "T-1")
 
 
+class AcceptedWork(unittest.TestCase):
+    """2026-11-18: work accepted by message was in no record, so after a total host loss nothing revived the actors that held it; and an old COMPLETE record hid the new work. `accept` makes the actor's
+    own record say it; it never reopens an operator stop and never reopens a closed block without an explicit authorisation pointer."""
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        (self.root / "ledger" / "tasks" / "plan").mkdir(parents=True)
+        self.saved = os.environ.get("LEGEND_MANDATE_HOOK_STATE")
+        os.environ["LEGEND_MANDATE_HOOK_STATE"] = str(self.root / "hook_state")
+
+    def tearDown(self) -> None:
+        os.environ.pop("LEGEND_MANDATE_HOOK_STATE", None) if self.saved is None else os.environ.__setitem__("LEGEND_MANDATE_HOOK_STATE", self.saved)
+
+    def write(self, rec: dict, task: str = "T-1") -> Path:
+        path = self.root / "ledger" / "tasks" / "plan" / f"{task}.json"
+        path.write_text(json.dumps(rec), encoding="utf-8")
+        return path
+
+    def test_work_accepted_into_a_record_that_read_complete_makes_it_executable_again(self) -> None:
+        old = {"TASK_ID": "T-1", "ACTOR_ID": "plan", "AUTHORISED_QUEUE_OLD": {"MANDATE_STATE": "COMPLETE", "OBJ_1": {"order": 1, "steps": [{"step": "done", "status": "DONE", "evidence": "commit abc"}]}}}
+        path = self.write(old)
+        self.assertEqual(mc.verdict(json.loads(path.read_text()))["verdict"], "RELEASED")             # the watch would never revive a session for this record
+        out = mc.accept_step(self.root, "T-1", "ADV-070: measure X", "ADV-070 (message 2026-11-18 20:30Z)")
+        self.assertTrue(out["registered"])
+        self.assertEqual(out["verdict"], "CONTINUE")                                                  # the old COMPLETE block no longer hides the new work
+        rec = json.loads(path.read_text())
+        self.assertEqual(rec["AUTHORISED_QUEUE_OLD"]["MANDATE_STATE"], "COMPLETE")                    # history untouched
+        self.assertEqual(rec["ACCEPT_LOG"][0]["source"], "ADV-070 (message 2026-11-18 20:30Z)")
+        again = mc.accept_step(self.root, "T-1", "ADV-070: measure X", "ADV-070 (message 2026-11-18 20:30Z)")
+        self.assertFalse(again["registered"])                                                         # the same source is not registered twice
+        self.assertEqual(len(json.loads(path.read_text())[mc.ACCEPT_BLOCK][mc.ACCEPT_OBJECTIVE]["steps"]), 1)
+
+    def test_an_operator_stop_is_never_reopened_and_nothing_is_written(self) -> None:
+        rec = {"TASK_ID": "T-1", "ACTOR_ID": "plan", "AUTHORISED_QUEUE_A": {"MANDATE_STATE": "PAUSED", "OBJ_1": {"order": 1, "steps": [{"step": "x", "status": "TODO"}]}}}
+        path = self.write(rec)
+        before = path.read_text()
+        with self.assertRaises(PermissionError):
+            mc.accept_step(self.root, "T-1", "new work", "ADV-071", authorised_by="operator message", reopen=True)
+        self.assertEqual(path.read_text(), before)
+
+    def test_a_closed_accepted_block_needs_reopen_and_an_authorisation_pointer(self) -> None:
+        rec = {"TASK_ID": "T-1", "ACTOR_ID": "plan", mc.ACCEPT_BLOCK: {"MANDATE_STATE": "COMPLETE", mc.ACCEPT_OBJECTIVE: {"order": 1, "steps": [{"step": "d", "status": "DONE", "evidence": "commit abc"}]}}}
+        path = self.write(rec)
+        for kw in ({}, {"reopen": True}, {"authorised_by": "operator message"}):
+            with self.assertRaises(PermissionError):
+                mc.accept_step(self.root, "T-1", "new work", "ADV-072", **kw)
+        self.assertEqual(json.loads(path.read_text())[mc.ACCEPT_BLOCK]["MANDATE_STATE"], "COMPLETE")
+        out = mc.accept_step(self.root, "T-1", "new work", "ADV-072", reopen=True, authorised_by="operator message 2026-11-18 20:40Z")
+        self.assertTrue(out["reopened"])
+        self.assertEqual(json.loads(path.read_text())["ACCEPT_LOG"][-1]["authorised_by"], "operator message 2026-11-18 20:40Z")
+
+    def test_no_source_means_nothing_is_written(self) -> None:
+        self.write({"TASK_ID": "T-1", "ACTOR_ID": "plan"})
+        with self.assertRaises(ValueError):
+            mc.accept_step(self.root, "T-1", "work", "")
+
+    def test_a_standing_record_is_created_for_an_actor_that_has_none(self) -> None:
+        with self.assertRaises(ValueError):
+            mc.accept_step(self.root, "IT-STANDING", "work", "ADV-073")
+        out = mc.accept_step(self.root, "IT-STANDING", "work", "ADV-073", create_for="orchestrator", actor="IT")
+        self.assertEqual(out["verdict"], "CONTINUE")
+        rec = json.loads((self.root / "ledger/tasks/orchestrator/IT-STANDING.json").read_text())
+        self.assertEqual((rec["SESSION_NAME"], rec["ACTOR_ID"]), ("IT", "orchestrator"))
+
+    def test_step_rules_done_needs_evidence_blocked_needs_a_blocker_and_waiting_is_not_in_progress(self) -> None:
+        self.write({"TASK_ID": "T-1", "ACTOR_ID": "plan", "AUTHORISED_QUEUE_A": {"OBJ_1": {"order": 1, "steps": [{"step": "wait for IT's rows", "status": "IN_PROGRESS", "blocker": "IT's rows"}, {"step": "other", "status": "TODO"}]}}})
+        rec = json.loads((self.root / "ledger/tasks/plan/T-1.json").read_text())
+        self.assertTrue(any("names a blocker" in f for f in mc.verdict(rec)["findings"]))             # the 2026-11-18 defect class is visible in `status`
+        with self.assertRaises(ValueError):
+            mc.set_step(self.root, "T-1", "wait for", "DONE")
+        with self.assertRaises(ValueError):
+            mc.set_step(self.root, "T-1", "wait for", "BLOCKED")
+        out = mc.set_step(self.root, "T-1", "wait for", "BLOCKED", blocker="IT's rows")
+        self.assertEqual(out["verdict"], "CONTINUE")                                                  # 'other' is still executable
+        mc.set_step(self.root, "T-1", "other", "DONE", evidence="commit abc")
+        self.assertEqual(mc.verdict(json.loads((self.root / "ledger/tasks/plan/T-1.json").read_text()))["verdict"], "ALL_BLOCKED")
+        with self.assertRaises(ValueError):
+            mc.set_step(self.root, "T-1", "no such step", "TODO")
+
+    def test_a_blocker_is_recognised_as_overtaken_by_a_landed_commit(self) -> None:
+        repo = self.root / "repo"
+        repo.mkdir()
+        env = {**os.environ, "GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@example.invalid", "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@example.invalid"}
+        for cmd in (["git", "init", "-q", "-b", "main"], ["git", "commit", "-q", "--allow-empty", "-m", "ADV-064 delivered and consumed"]):
+            subprocess.run(cmd, cwd=repo, check=True, capture_output=True, env=env)
+        sha = subprocess.run(["git", "rev-parse", "HEAD"], cwd=repo, capture_output=True, text=True).stdout.strip()
+        saved, mc.ROOT = mc.ROOT, repo
+        try:
+            self.assertIn("ADV-064", mc.unblock_met({"commit": "ADV-064", "ref": "main"}))
+            self.assertEqual(mc.unblock_met({"commit": "ADV-099", "ref": "main"}), "")
+            self.assertIn(sha[:12], mc.unblock_met({"commit_sha": sha, "ref": "main"}))
+            self.assertEqual(mc.unblock_met({"commit_sha": "0" * 40, "ref": "main"}), "")
+            step = {"step": "after ADV-064", "status": "BLOCKED", "blocker": "ADV-064 lands", "unblock_when": {"commit": "ADV-064", "ref": "main"}}
+            v = mc.verdict({"TASK_ID": "T", "AUTHORISED_QUEUE_A": {"OBJ_1": {"order": 1, "steps": [step]}}})
+            self.assertEqual(v["verdict"], "CONTINUE")                                                # the wait is over: the evidence was already in the history
+        finally:
+            mc.ROOT = saved
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

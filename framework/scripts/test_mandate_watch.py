@@ -436,5 +436,259 @@ class Routing(unittest.TestCase):
         self.assertEqual(mw.check_recipients("no addressing line here", ["HE"], self.live, self.root)["verdict"], "NO_DECLARED_RECIPIENT")
 
 
+SID2 = "99999999-aaaa-bbbb-cccc-dddddddddddd"
+
+
+def listed(sid, name, pid=None, status="idle", kind="background"):
+    return {"sessionId": sid, "name": name, "pid": os.getpid() if pid is None else pid, "status": status, "kind": kind}
+
+
+class Continuity20261118(unittest.TestCase):
+    """The defects of 2026-11-18 (OOM of the desktop service): a dead session still LISTED, two hosts, an alias that follows a display name, a revival that renames the session, a substitute that nobody
+    authorised, and work accepted by message that no record listed. Fixtures: they do not show the real runtime; the scratch-session demonstration (governance/design_records/wakeup_continuity_20261118.md) does."""
+
+    def tearDown(self):
+        getattr(self, "e", None) and self.e.close()
+
+    def env(self, *a, **k):
+        self.e = Env(*a, **k)
+        return self.e
+
+    def test_a_listed_session_without_a_running_process_is_not_live(self):
+        """Measured with a scratch session: after `claude stop` and after a kill, `claude agents --json` still listed it, with no pid and no status."""
+        self.assertTrue(mw.session_is_live({"pid": os.getpid()}))
+        self.assertFalse(mw.session_is_live({"pid": None, "state": "working"}))
+        self.assertFalse(mw.session_is_live({"name": "x"}))
+        self.assertFalse(mw.session_is_live({"pid": 2 ** 22 + 12345}))                 # no such process
+        raw = json.dumps([{"sessionId": SID, "name": "DEAD", "state": "working"}, {"sessionId": SID2, "name": "ALIVE", "pid": os.getpid(), "status": "idle"}])
+        with mock.patch.object(mw.subprocess, "run", return_value=SimpleNamespace(stdout=raw, returncode=0)):
+            self.assertEqual([x["name"] for x in mw.list_sessions()], ["ALIVE"])
+
+    def test_a_dead_but_listed_bound_session_is_revived_not_called_alive(self):
+        e = self.env(record())
+        before = e.check([{"sessionId": SID, "name": "H", "state": "working"}], deliver="none")      # the old reading of the listing: this entry would count as a session
+        self.assertEqual(before["state"], "STOPPED_RESUMABLE")                      # the check itself reads only what it is given: the filter is in list_sessions
+        with mock.patch.object(mw, "list_sessions", return_value=[]):
+            out = e.check(mw._SESSIONS_UNSET, deliver="resume", runner=lambda cmd, cwd=None: SimpleNamespace(returncode=0, stdout="ok", stderr=""))
+        self.assertEqual((out["action"], out["delivery"]), ("RESUME", "sent"))
+
+    def test_two_live_sessions_that_carry_the_marker_are_a_duplicate_host_and_nothing_is_resumed(self):
+        e = self.env(record())
+        (e.proj / "p" / f"{SID2}.jsonl").write_text(json.dumps({"type": "assistant", "message": {"content": [{"type": "text", "text": f"MANDATE_BOUND: {TASK}"}]}}) + "\n")
+        out = e.check([listed(SID, "ADV"), listed(SID2, "ADV chat")], deliver="resume")
+        self.assertEqual((out["state"], out["action"]), ("DUPLICATE_HOST", "NONE"))
+        self.assertEqual(len(out["live_bound_sessions"]), 2)
+        self.assertIn("MANDATE_RELEASED", out["why"])
+
+    def test_two_sessions_that_only_share_a_name_are_not_a_duplicate_host(self):
+        """The legitimate case seen on 2026-11-18: the bound session and an operator chat that investigated both answered to 'ADV'. Only the marker makes a host."""
+        e = self.env(record(), age_minutes=1)
+        (e.proj / "p" / f"{SID2}.jsonl").write_text(json.dumps({"type": "assistant", "message": {"content": [{"type": "text", "text": "an investigation, unbound"}]}}) + "\n")
+        out = e.check([listed(SID, "ADV", status="busy"), listed(SID2, "ADV")], deliver="resume")
+        self.assertEqual((out["state"], out["action"]), ("RUNNING", "NONE"))
+        self.assertNotIn("live_bound_sessions", out)
+
+    def test_the_record_binding_chooses_the_host_among_live_bound_sessions_and_the_rest_are_named(self):
+        e = self.env(record())
+        rec = record(); rec["SESSION_BINDING"] = {"session_id": SID2}
+        (e.root / "ledger" / "tasks" / "orchestrator" / f"{TASK}.json").write_text(json.dumps(rec))
+        (e.proj / "p" / f"{SID2}.jsonl").write_text(json.dumps({"type": "assistant", "message": {"content": [{"type": "text", "text": f"MANDATE_BOUND: {TASK}"}]}}) + "\n")
+        out = e.check([listed(SID, "one"), listed(SID2, "two")], deliver="none")
+        self.assertEqual(out["state"], "DUPLICATE_HOST")
+        self.assertEqual(out["session"], SID2)                                       # the record's binding is the one the answer names as the host
+
+    def test_route_prefers_a_whole_name_and_the_record_binding_over_token_matches(self):
+        root = Path(tempfile.mkdtemp())
+        rec = record(); rec.update(TASK_ID="ADV-TASK", SESSION_NAME="ADV — Strategic Advisor", SESSION_BINDING={"session_id": SID})
+        (root / "ledger" / "tasks" / "orchestrator").mkdir(parents=True)
+        (root / "ledger" / "tasks" / "orchestrator" / "ADV-TASK.json").write_text(json.dumps(rec))
+        live = [listed(SID, "ADV"), listed(SID2, "ORCH-ADV-FOLLOWTHROUGH-20261114"), listed("33333333-4444-5555-6666-777777777777", "HE-PROBE")]
+        res = mw.route("ADV", live, root)
+        self.assertEqual((res["status"], res["session_id"]), ("RESOLVED", SID))
+        self.assertEqual([c["session_id"] for c in res["surplus_name_matches"]], [SID2])
+        self.assertEqual(mw.route("HE", live, root)["session_id"], "33333333-4444-5555-6666-777777777777")      # the only 'HE' token match here, listed as such
+        live2 = [listed(SID, "something else"), listed(SID2, "ADV")]                # the bound session was renamed, another session took the name
+        res2 = mw.route("ADV", live2, root)
+        self.assertEqual((res2["status"], res2["session_id"]), ("RESOLVED", SID))   # identity follows the binding, not the name
+        self.assertTrue(res2["surplus_name_matches"])
+
+    def test_a_role_alias_follows_the_marker_of_its_record_after_a_rename(self):
+        e = self.env(record())
+        rec = record(); rec["SESSION_NAME"] = "SCI — Scientist"
+        (e.root / "ledger" / "tasks" / "orchestrator" / f"{TASK}.json").write_text(json.dumps(rec))
+        with mock.patch.object(mw, "transcript_for_session", lambda sid, pd=None: e.tr if sid == SID else None):
+            res = mw.route("SCI", [listed(SID, "orch-adv004-mandate-reconciliation")], e.root)
+        self.assertEqual((res["status"], res["session_id"]), ("RESOLVED", SID))
+
+    def test_a_revival_never_passes_a_flag_to_a_session_that_has_saved_options(self):
+        """Measured: a flag on a background session with saved options starts a COPY under a new id; without flags the same command continues the session itself."""
+        e = self.env(record())
+        e.tr.write_text(e.tr.read_text() + json.dumps({"type": "custom-title", "customTitle": "SCI"}) + "\n")
+        jobs = Path(e.tmp.name) / "jobs"
+        (jobs / SID[:8]).mkdir(parents=True)
+        (jobs / SID[:8] / "state.json").write_text("{}")
+        os.environ["LEGEND_CLAUDE_JOBS"] = str(jobs)
+        self.addCleanup(os.environ.pop, "LEGEND_CLAUDE_JOBS", None)
+        seen = {}
+        out = e.check([], deliver="resume", runner=lambda cmd, cwd=None: (seen.update(cmd=cmd), SimpleNamespace(returncode=0, stdout="ok", stderr=""))[1])
+        self.assertEqual(out["delivery"], "sent")
+        self.assertNotIn("--name", seen["cmd"])
+        self.assertEqual(seen["cmd"][1:4], ["--bg", "--resume", SID])
+
+    def test_the_revival_passes_the_chosen_name_and_the_recall_clause_and_never_a_second_recall(self):
+        e = self.env(record())
+        os.environ["LEGEND_CLAUDE_JOBS"] = str(Path(e.tmp.name) / "no_jobs")                  # an interactive session: no saved options, the chosen name is passed
+        self.addCleanup(os.environ.pop, "LEGEND_CLAUDE_JOBS", None)
+        e.tr.write_text(e.tr.read_text() + json.dumps({"type": "custom-title", "customTitle": "SCI"}) + "\n")
+        rec = record(); rec["RECALL"] = {"mark": "Proactive Strategic Advisor pilot, hourly mechanical check", "command": "strategic_advisor.py recall --campaign X", "renew_days": 6}
+        (e.root / "ledger" / "tasks" / "orchestrator" / f"{TASK}.json").write_text(json.dumps(rec))
+        seen = {}
+        def runner(cmd, cwd=None):
+            seen["cmd"] = cmd
+            return SimpleNamespace(returncode=0, stdout="ok", stderr="")
+        out = e.check([], deliver="resume", runner=runner)
+        self.assertEqual(out["delivery"], "sent")
+        cmd = seen["cmd"]
+        self.assertEqual(cmd[cmd.index("--name") + 1], "SCI")                          # a revived session keeps the name the operator gave it
+        text = cmd[-1]
+        self.assertIn("call CronList", text)
+        self.assertIn("do NOT create another", text)
+        self.assertIn("before day 6", text)
+        self.assertEqual(mw.recall_clause(None), "")                                  # a mandate without a recall field gets no recall sentence
+
+    def test_a_session_that_died_again_after_its_revival_is_revived_again_but_not_while_it_may_still_be_starting(self):
+        e = self.env(record())
+        calls = []
+        run = lambda c, cwd=None: (calls.append(c), SimpleNamespace(returncode=0, stdout="ok", stderr=""))[1]
+        e.check([], deliver="resume", runner=run)
+        mw.check(TASK, root=e.root, projects_dir=e.proj, tasks_root=e.tasks, sessions=[], now=NOW + 5 * 60, deliver="resume", runner=run)     # five minutes later: the revival may still be starting
+        self.assertEqual(len(calls), 1)
+        later = mw.check(TASK, root=e.root, projects_dir=e.proj, tasks_root=e.tasks, sessions=[], now=NOW + 40 * 60, deliver="resume", runner=run)
+        self.assertEqual((later["action"], later["delivery"]), ("RESUME", "sent"))          # forty minutes later and still not live: it died again, ask again
+        self.assertEqual(len(calls), 2)
+        live = mw.check(TASK, root=e.root, projects_dir=e.proj, tasks_root=e.tasks, sessions=[listed(SID, "H")], now=NOW + 80 * 60, deliver="resume", runner=run)
+        self.assertEqual(len(calls), 2)                                                      # a live session that was asked is left alone for the long window
+
+    def test_rebind_needs_an_explicit_authorisation_a_single_live_target_and_no_second_host(self):
+        e = self.env(record())
+        live = [listed(SID, "ADV", status="idle"), listed(SID2, "substitute")]
+        with self.assertRaises(PermissionError):
+            mw.rebind(TASK, SID2, "", root=e.root, sessions=live, projects_dir=e.proj)                          # no pointer: nothing happens
+        with self.assertRaises(PermissionError) as c:
+            mw.rebind(TASK, SID2, "operator message 2026-11-18 20:10Z", root=e.root, sessions=live, projects_dir=e.proj)   # SID still carries the marker and is live
+        self.assertIn("exactly one host", str(c.exception))
+        with self.assertRaises(ValueError):
+            mw.rebind(TASK, "nobody", "operator message 2026-11-18 20:10Z", root=e.root, sessions=live, projects_dir=e.proj)
+        out = mw.rebind(TASK, SID2, "operator message 2026-11-18 20:10Z", root=e.root, sessions=[listed(SID2, "substitute")], projects_dir=e.proj)   # the old host is gone
+        self.assertEqual(out["session_id"], SID2)
+        saved = json.loads((e.root / out["record"]).read_text())
+        self.assertEqual(saved["SESSION_BINDING"]["session_id"], SID2)
+        self.assertEqual(saved["SESSION_BINDING"]["authorised_by"], "operator message 2026-11-18 20:10Z")
+        self.assertFalse(out["marker_present"])                                       # the substitute has not yet written its own marker line
+        ev = mw.state_dir() / mw.EVENTS_FILE
+        self.assertIn('"kind": "rebind"', ev.read_text())
+
+    def test_rebind_never_reopens_an_operator_stop(self):
+        e = self.env(record(state="PAUSED"))
+        with self.assertRaises(PermissionError):
+            mw.rebind(TASK, SID2, "operator message 2026-11-18 20:10Z", root=e.root, sessions=[listed(SID2, "substitute")], projects_dir=e.proj)
+
+
+class MemoryContainment(unittest.TestCase):
+    """The opt-in memory scope of `job run` and the read-only `resources` view. The real-kernel
+    proof (a capped job OOM-killed alone while the desktop service stays untouched) is recorded in
+    governance/design_records/wakeup_continuity_20261118.md; these are fixtures."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        os.environ["LEGEND_MANDATE_WATCH_STATE"] = str(Path(self.tmp.name) / "state")
+        self.bin = Path(self.tmp.name) / "bin"
+        self.bin.mkdir()
+        fake = self.bin / "systemd-run"                       # records its arguments, then runs the command after `--`
+        fake.write_text('#!/bin/sh\necho "$@" > "%s/args"\nwhile [ "$1" != "--" ]; do shift; done\nshift\nexec "$@"\n' % self.tmp.name)
+        fake.chmod(0o755)
+
+    def tearDown(self):
+        os.environ.pop("LEGEND_MANDATE_WATCH_STATE", None)
+        self.tmp.cleanup()
+
+    def test_value_is_validated_and_a_missing_systemd_run_never_means_uncapped(self):
+        for bad in ("3GB", "0", "", "-1G", "3 G", "G"):
+            with self.assertRaises(ValueError, msg=bad):
+                mw.memory_scope(["true"], bad)
+        with mock.patch.object(mw.shutil, "which", return_value=None):
+            with self.assertRaises(RuntimeError):
+                mw.memory_scope(["true"], "3G")
+            with self.assertRaises(RuntimeError):
+                mw.job_run("T", "l", ["true"], memory_max="3G")
+        self.assertFalse((mw.jobs_dir("T")).exists())            # nothing was started
+
+    def test_wrapped_command_carries_the_cap_and_the_user_scope(self):
+        with mock.patch.object(mw.shutil, "which", return_value="/usr/bin/systemd-run"):
+            cmd = mw.memory_scope(["python3", "x.py"], "2.5G")
+        self.assertEqual(cmd[1:6], ["--user", "--scope", "--quiet", "-p", "MemoryMax=2.5G"])
+        self.assertEqual(cmd[-3:], ["--", "python3", "x.py"])
+
+    def test_job_run_with_cap_runs_the_command_inside_the_wrapper_and_records_the_cap(self):
+        with mock.patch.object(mw.shutil, "which", return_value=str(self.bin / "systemd-run")):
+            j = mw.job_run("T", "capped", ["sh", "-c", "echo hello"], memory_max="1G")
+        self.assertTrue(j["started"])
+        self.assertEqual(j["memory_max"], "1G")
+        self.assertEqual(j["cmd"], ["sh", "-c", "echo hello"])      # the caller's command is what is recorded
+        for _ in range(100):
+            if Path(j["exit_file"]).exists():
+                break
+            time.sleep(0.05)
+        self.assertEqual(Path(j["exit_file"]).read_text().strip(), "0")
+        self.assertIn("hello", Path(j["log"]).read_text())
+        self.assertIn("MemoryMax=1G", (Path(self.tmp.name) / "args").read_text())
+
+    def test_job_run_without_cap_is_unchanged(self):
+        j = mw.job_run("T", "plain", ["true"])
+        self.assertNotIn("memory_max", j)
+        self.assertFalse((Path(self.tmp.name) / "args").exists())
+
+    def _fake_proc(self):
+        proc = Path(self.tmp.name) / "proc"
+        (proc / "pressure").mkdir(parents=True)
+        (proc / "meminfo").write_text("MemTotal: 16000000 kB\nMemAvailable: 8000000 kB\nSwapTotal: 0 kB\nSwapFree: 0 kB\n")
+        (proc / "pressure" / "memory").write_text("some avg10=1.50 avg60=0.00 avg300=0.00 total=5\nfull avg10=0.25 avg60=0.00 avg300=0.00 total=3\n")
+        (proc / "loadavg").write_text("2.50 1.00 0.50 1/100 1234\n")
+        for pid, cg, rss, comm in ((10, "/system.slice/a.service", 2048, "big"), (11, "/system.slice/a.service", 1024, "small"),
+                                   (12, "/user.slice/b.scope", 512, "other")):
+            d = proc / str(pid)
+            d.mkdir()
+            (d / "cgroup").write_text(f"0::{cg}\n")
+            (d / "status").write_text(f"Name:\t{comm}\nVmRSS:\t{rss} kB\n")
+            (d / "comm").write_text(comm + "\n")
+        (proc / "self").mkdir()                                     # non-numeric entries are ignored
+        return proc
+
+    def test_resources_groups_by_cgroup_and_reports_pressure_without_thresholds(self):
+        proc = self._fake_proc()
+        out = mw.resource_state(str(proc), top=5, jobs_base=Path(self.tmp.name) / "none",
+                                sessions=[{"name": "X", "sessionId": "abcdef12-0000", "pid": 12}, {"name": "Y", "sessionId": "ff", "pid": 999}])
+        self.assertEqual((out["mem_total_mb"], out["mem_available_mb"], out["swap_total_mb"]), (15625, 7812, 0))
+        self.assertEqual(out["pressure"]["some"]["avg10"], "1.50")
+        self.assertEqual(out["load1"], "2.50")
+        top = out["groups"][0]
+        self.assertEqual((top["cgroup"], top["rss_mb"], top["procs"], top["largest"]["comm"]), ("/system.slice/a.service", 3, 2, "big"))
+        self.assertEqual([s["cgroup"] for s in out["sessions"]], ["b.scope", "?"])   # a vanished pid is "?", not an error
+        self.assertNotIn("verdict", out)
+        self.assertNotIn("allowed", out)                                          # facts only
+
+    def test_resources_lists_live_jobs_with_their_caps(self):
+        with mock.patch.object(mw.shutil, "which", return_value=str(self.bin / "systemd-run")):
+            j = mw.job_run("T", "sleeper", ["sleep", "30"], memory_max="1G")
+        try:
+            out = mw.resource_state(str(self._fake_proc()), jobs_base=mw.state_dir() / "jobs")
+            self.assertEqual([(x["label"], x["memory_max"]) for x in out["alive_jobs"]], [("sleeper", "1G")])
+        finally:
+            try:
+                os.killpg(j["pid"], 15)
+            except OSError:
+                pass
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

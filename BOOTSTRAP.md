@@ -28,6 +28,10 @@ You are reading this because a chat opened in this repository and found no labor
 This file tells you what to do. **It assumes you know nothing about LEGEND**, and if at any point
 it requires you to already know something, that is a defect in this file, not in you — record it.
 
+**If you are resuming a role after a chat or the whole desktop was lost,** do not ask the operator to re-issue the mandate: read
+[wake-up durability](framework/protocols/cross_session_transport.md#wake-up-durability-the-presidio-belongs-to-the-adv-campaign-not-to-a-chat-operator-2026-11-18-permanent) (the chain that revives a bound session, restores the one recall and registers accepted work), check `python3 framework/scripts/mandate_watch.py route --to <your role>` for exactly one live
+host, and continue from your mandate record.
+
 ## What this repository is
 
 LEGEND is a cumulative knowledge system for a rare disease. It is also, at the level this file

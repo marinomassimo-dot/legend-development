@@ -497,7 +497,7 @@ class HostDecisions(Base):
         self.assertEqual(sa._attempts(self.campaign), [])
 
 
-class Proactive(Base):
+class ProactiveFixture(Base):
     """The proactive pilot: bounded hourly check, one evaluation per decision, assignments with evidence levels, budget and disable. Fixtures: they do not show the real runtime."""
 
     def setUp(self) -> None:
@@ -528,6 +528,11 @@ class Proactive(Base):
 
     def at(self, stamp: str) -> None:
         os.environ["LEGEND_ADVISOR_NOW"] = stamp
+
+
+
+class Proactive(ProactiveFixture):
+    """The proactive pilot: bounded hourly check, one evaluation per decision, assignments with evidence levels, budget and disable. Fixtures: they do not show the real runtime."""
 
     def test_the_first_tick_starts_the_campaign_and_then_nothing_new_costs_no_evaluation(self) -> None:
         self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")        # campaign start: a strategic choice from the roadmap and the first observation
@@ -638,6 +643,32 @@ class Proactive(Base):
         self.assertIn('"to": ["HE", "sci"]', (self.campaign / "assignments.jsonl").read_text(encoding="utf-8"))
         self.assertEqual(sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "UNREACHABLE", "--evidence", "no live session"]), 0)   # no receipt exists for that
         self.assertEqual(sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-099", "--state", "SENT", "--evidence", "x", "--to", "SCI"]), 2)   # not a drafted assignment
+
+    def test_a_recipient_revived_under_another_name_is_still_the_recipient_and_a_dead_listed_one_is_not(self) -> None:
+        """2026-11-18: the Science session came back as 'orch-adv004-mandate-reconciliation'; the budget said 'SCI', so a real send could not be recorded. Identity is the session id, resolved against LIVE sessions."""
+        os.environ["FAKE_MODE"] = "assign"; sa.evaluate(self.campaign)
+        sci, he, dead = "9400b253-0000-0000-0000-000000000001", "29e50812-0000-0000-0000-000000000002", "deadbeef-0000-0000-0000-000000000003"
+        live = [{"sessionId": sci, "name": "orch-adv004-mandate-reconciliation", "pid": os.getpid(), "status": "idle"},
+                {"sessionId": he, "name": "HE", "pid": os.getpid(), "status": "busy"},
+                {"sessionId": dead, "name": "SCI", "state": "working"}]                      # a killed session still listed: no pid, no status
+        budget = json.loads((self.campaign / "budget.json").read_text()); budget["recipients"]["Science"] = "9400b253"       # the budget names the session by its id prefix
+        (self.campaign / "budget.json").write_text(json.dumps(budget), encoding="utf-8")
+        base = ["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "SENT", "--evidence", "msg 1"]
+        with patch.object(sa, "_agents", lambda: live):
+            self.assertEqual(sa.main(base + ["--to", "HE"]), 2)                                              # another live session: not a delivery to Science
+            self.assertEqual(sa.main(base + ["--to", "SCI"]), 2)                                             # the name SCI now belongs to a dead entry: it does not resolve to the live session
+            self.assertEqual(sa.main(base + ["--to", "orch-adv004-mandate-reconciliation"]), 0)               # the receipt names the session by its current name: same id, accepted
+        self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "SENT")
+
+    def test_a_recipient_role_that_resolves_to_no_live_session_cannot_be_recorded_as_sent(self) -> None:
+        os.environ["FAKE_MODE"] = "assign"; sa.evaluate(self.campaign)
+        budget = json.loads((self.campaign / "budget.json").read_text()); budget["recipients"]["Science"] = "NOBODY"
+        (self.campaign / "budget.json").write_text(json.dumps(budget), encoding="utf-8")
+        live = [{"sessionId": "11111111-0000-0000-0000-000000000009", "name": "HE", "pid": os.getpid(), "status": "idle"}]
+        with patch.object(sa, "_agents", lambda: live):
+            msg = sa.delivery_refusal(self.campaign, "ADV-001", "SENT", ["HE"])
+        self.assertIn("does not resolve to exactly one live session", msg)
+        self.assertIn("UNREACHABLE", msg)
 
     def test_the_senders_own_records_never_count_as_a_recipient_taking_or_executing_an_assignment(self) -> None:
         os.environ["FAKE_MODE"] = "assign"; sa.evaluate(self.campaign)
@@ -1605,6 +1636,108 @@ class ValueContinuity(Continuous):
         self.assertEqual(elsewhere, tag.group(1))                                                           # the same text gives the same tag in any checkout (the 2026-11-16 mismatch: 047a03cd against b00417e1)
         drifted = sa.RECALL_PROMPT.replace("The ordinary verdict NONE does not cancel a due meeting. ", "")      # the 2026-11-16 drift: the meeting sentence was missing from the installed job
         self.assertNotEqual(sa.recall_digest(drifted.format(root=sa.ROOT, campaign=self.campaign)), tag.group(1))
+
+
+class ObservedRef(ProactiveFixture):
+    """2026-11-18: the tick read only the local `main`, which in the primary checkout was 13 hours behind the published branch, so it could say 'nothing new' while work landed. Fixtures with a real bare remote."""
+
+    GENV = None
+
+    def git(self, cwd: Path, *args: str) -> str:
+        env = {**os.environ, "GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@example.invalid", "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@example.invalid"}
+        return subprocess.run(["git", *args], cwd=cwd, check=True, capture_output=True, text=True, env=env).stdout.strip()
+
+    def remote(self) -> Path:
+        """A bare `development` remote holding the repository's main, and a second clone that can publish to it."""
+        bare = self.tmp / "development.git"
+        self.git(self.tmp, "init", "-q", "--bare", "-b", "main", str(bare))
+        self.git(self.repo, "remote", "add", "development", str(bare))
+        self.git(self.repo, "push", "-q", "development", "main")
+        self.git(self.repo, "fetch", "-q", "development", "main")
+        other = self.tmp / "other"
+        self.git(self.tmp, "clone", "-q", str(bare), str(other))
+        return other
+
+    def publish(self, other: Path, subject: str) -> str:
+        (other / "ledger/tasks/orchestrator").mkdir(parents=True, exist_ok=True)
+        (other / "ledger/tasks/orchestrator/pub.txt").write_text(subject, encoding="utf-8")
+        self.git(other, "add", "."); self.git(other, "commit", "-q", "-m", subject)
+        self.git(other, "push", "-q", "origin", "main")
+        return self.git(other, "rev-parse", "HEAD")
+
+    def test_a_remote_ahead_of_a_stale_local_main_is_read_and_the_tick_does_not_say_nothing_new(self) -> None:
+        other = self.remote()
+        sa.evaluate(self.campaign)
+        self.at("2026-11-13T11:00:00Z")
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "NONE")
+        tip = self.publish(other, "SCI77 record COMPLETE; package delivered")       # published; this checkout's local main and remote-tracking ref know nothing of it
+        self.assertNotEqual(self.git(self.repo, "rev-parse", "main"), tip)           # the 2026-11-18 situation: the old read ('main') is behind
+        self.assertNotEqual(self.git(self.repo, "rev-parse", "development/main"), tip)
+        self.at("2026-11-13T12:00:00Z")
+        t = sa.tick(self.campaign)
+        self.assertEqual(t["verdict"], "EVALUATE")
+        self.assertTrue(any(e.startswith("delivery:") and "SCI77" in e for e in t["events"]), t["events"])
+        ref = t["reference"]
+        self.assertEqual((ref["ref"], ref["state"], ref["sha"]), ("development/main", "VERIFIED", tip))
+        self.assertEqual(ref["local_main"]["behind_observed"], 1)                    # local main is reported as behind, not silently used
+        self.assertEqual(self.git(self.repo, "rev-parse", "main"), self.git(self.repo, "rev-parse", "HEAD"))   # nothing was reset, checked out or merged
+
+    def test_a_failed_fetch_is_said_and_nothing_new_is_not_claimed_as_proof(self) -> None:
+        self.remote()
+        sa.evaluate(self.campaign)
+        self.git(self.repo, "remote", "set-url", "development", str(self.tmp / "gone.git"))      # the remote cannot be reached
+        self.at("2026-11-13T11:00:00Z")
+        t = sa.tick(self.campaign)
+        self.assertEqual(t["verdict"], "NONE")
+        self.assertEqual(t["reference"]["state"], "UNVERIFIED")
+        self.assertIn("NOT VERIFIED", t["why"])
+        self.assertIn("fetch", t["why"])
+
+    def test_a_commit_only_on_local_main_is_labelled_unpublished(self) -> None:
+        self.remote()
+        sa.evaluate(self.campaign)
+        self.land("a local-only change")
+        self.at("2026-11-13T11:00:00Z")
+        t = sa.tick(self.campaign)
+        self.assertEqual((t["reference"]["ref"], t["reference"]["state"]), ("main", "LOCAL_ONLY"))
+        self.assertIn("NOT VERIFIED", t["why"])
+
+    def test_a_repository_without_the_published_remote_is_not_flagged(self) -> None:
+        sa.evaluate(self.campaign)
+        self.at("2026-11-13T11:00:00Z")
+        t = sa.tick(self.campaign)
+        self.assertEqual(t["reference"]["state"], "NO_REMOTE")
+        self.assertNotIn("NOT VERIFIED", t["why"])
+
+    def test_the_recall_arming_is_recorded_and_the_tick_warns_before_the_seven_day_expiry(self) -> None:
+        self.assertEqual(sa.main(["authorise-continuous", "--campaign", str(self.campaign), "--source", "Operator roadmap line, 2026-11-14"]), 0)
+        self.assertEqual(sa.tick(self.campaign)["verdict"], "EVALUATE")
+        sa.evaluate(self.campaign)
+        self.at("2026-11-13T11:00:00Z")
+        before = sa.tick(self.campaign)
+        self.assertEqual(before["recall"]["armed_utc"], None)                        # nothing recorded yet: said, not guessed
+        self.assertFalse(before["recall"]["renew_due"])
+        self.assertEqual(sa.main(["recall-armed", "--campaign", str(self.campaign), "--job-id", "069fe752"]), 0)
+        self.at("2026-11-15T11:00:00Z")
+        two = sa.tick(self.campaign)
+        self.assertEqual((two["recall"]["job_id"], two["recall"]["renew_due"]), ("069fe752", False))
+        self.at("2026-11-18T12:00:00Z")
+        due = sa.tick(self.campaign)
+        self.assertTrue(due["recall"]["renew_due"])
+        if due["verdict"] in ("NONE", "DEFERRED"):
+            self.assertIn("RECALL RENEWAL DUE", due["why"])
+
+    def test_repeated_ticks_with_nothing_landed_do_not_move_the_observed_state(self) -> None:
+        """The hourly check by itself is not progress: ten empty ticks leave the reference, the events and the evaluation clock where they were."""
+        self.remote()
+        sa.evaluate(self.campaign)
+        first = None
+        for i in range(10):
+            self.at(f"2026-11-13T{11 + (i // 2):02d}:{(i % 2) * 30:02d}:00Z")
+            t = sa.tick(self.campaign)
+            self.assertEqual((t["verdict"], t["events"]), ("NONE", []))
+            first = first or (t["reference"]["sha"], t["evaluation_clock"])
+            self.assertEqual((t["reference"]["sha"], t["evaluation_clock"]), first)
 
 
 class LivingPortfolio(Base):
