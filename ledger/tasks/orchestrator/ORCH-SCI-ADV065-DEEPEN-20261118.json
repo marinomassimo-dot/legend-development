@@ -1,0 +1,63 @@
+{
+ "TASK_ID": "ORCH-SCI-ADV065-DEEPEN-20261118",
+ "ACTOR_ID": "orchestrator",
+ "STANDING": "mandate that holds the work this actor has accepted; the owner writes `MANDATE_BOUND: ORCH-SCI-ADV065-DEEPEN-20261118` in its session",
+ "SESSION_NAME": "orch-adv004-mandate-reconciliation",
+ "AUTHORISED_QUEUE_ACCEPTED": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_ACCEPTED": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Reconcile accepted work (ADV-064, ADV-065, ADV-065b, IT57 and ADV consumption) and state the delta of this mandate over ADV-065b; read delegation_budget.md",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator instruction 2026-11-18 (SESSION_FUNCTION SCI: follow-up of ADV-064/065, in Italian, sections A-G); ADV-065b already delivered the KCC2/OV350 first pass",
+     "accepted_at": "2026-11-18T21:35:48Z"
+    },
+    {
+     "step": "Targeted recheck of the ADV-065 premises that change the decision and examine the Arshad 2026 figures and supplement",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator instruction 2026-11-18, section D",
+     "accepted_at": "2026-11-18T21:35:54Z"
+    },
+    {
+     "step": "Survey the repository for SLC12A5/SLC12A2/chloride-regulator data and run a proportionate reproducible reanalysis with correct biological units, or document that none is usable",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator instruction 2026-11-18, sections E-G",
+     "accepted_at": "2026-11-18T21:36:01Z"
+    }
+   ]
+  }
+ },
+ "ACCEPT_LOG": [
+  {
+   "at": "2026-11-18T21:35:48Z",
+   "source": "operator instruction 2026-11-18 (SESSION_FUNCTION SCI: follow-up of ADV-064/065, in Italian, sections A-G); ADV-065b already delivered the KCC2/OV350 first pass",
+   "step_sha256": "69f6e69aa2eb",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T21:35:54Z",
+   "source": "operator instruction 2026-11-18, section D",
+   "step_sha256": "95e3bb7ddd4f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-18T21:36:01Z",
+   "source": "operator instruction 2026-11-18, sections E-G",
+   "step_sha256": "ea678468dcf2",
+   "reopened_block": false,
+   "authorised_by": null
+  }
+ ],
+ "DELEGATIONS": [
+  "ADV-065 producer (legend-delegate, agent a57af19b): asked sonnet/medium; read back claude-sonnet-5-5 x35, medium x35; birth 22,693; 35 turns; output 76,207; cache read 4,460,447; peak 227,405; completed NKCC1_KCC2 table (Q1-Q6), 4 staged receipts earlier landed (-65 abstract level).",
+  "ADV-065b producer (legend-delegate, agent a7d23230): asked sonnet, effort NOT stated in the dispatch (deviation from delegation_budget section 1: the delegate inherited the session setting); read back claude-sonnet-5-5 x85, effort xhigh x85; birth 23,740; 85 turns; output 159,905; cache read 18,382,596; peak 470,238; completed KCC2_OV350 table (K1-K5), 16 receipts later landed (-66).",
+  "ADV-065b verifier (legend-delegate, agent a0740363): asked sonnet, effort NOT stated in the dispatch (same deviation); read back claude-sonnet-5-5 x64, effort xhigh x64; birth 21,574; 64 turns; output 182,970; cache read 16,626,495; peak 485,955; 42 claims: 29 supported, 11 partly, 2 absences confirmed; found Kasahara Tables 1-2 mortality. Remedy for this mandate: every dispatch states model and effort (producer medium, verifier high) and the read-back is recorded."
+ ]
+}
