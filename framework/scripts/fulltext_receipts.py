@@ -282,7 +282,23 @@ def _parse_datetime(value: str) -> datetime:
     return datetime.fromisoformat(candidate)
 
 
-def validate_new_receipt(receipt: Any) -> list[str]:
+# Roots that never ship in the public edition (the ledger ships; these do not). A receipt whose `outputs` name a path under one of them promises a file
+# a fresh clone does not have, and `scripts/test_fulltext_trace_contract.py` refuses it (it imports this constant: one rule, one place). `record` refuses it
+# at write time since 2026-11-18, when 14 receipts naming /tmp scratch files reached main and turned the release battery red hours later.
+UNSHIPPABLE_OUTPUT_ROOTS = ("staging/", "files/", "backup/", "tmp/", "overlay/", "_qa/")
+
+
+def private_output_errors(receipt: Any) -> list[str]:
+    outputs = receipt.get("outputs") if isinstance(receipt, dict) else None
+    bad = [o for o in (outputs or []) if isinstance(o, str) and any(root in o for root in UNSHIPPABLE_OUTPUT_ROOTS)]
+    if not bad:
+        return []
+    return ["outputs name a path under a root that never ships (" + ", ".join(UNSHIPPABLE_OUTPUT_ROOTS) + "): " + "; ".join(bad[:3])
+            + (f" (+{len(bad) - 3} more)" if len(bad) > 3 else "")
+            + ". Name the committed file the reading landed in, or pass --allow-private-output for a named exception"]
+
+
+def validate_new_receipt(receipt: Any, allow_private_output: bool = False) -> list[str]:
     """Rules applied to a receipt being WRITTEN, never to one already in the ledger.
 
     History is grandfathered on purpose. `validate_receipt` runs over every line whenever the
@@ -297,7 +313,7 @@ def validate_new_receipt(receipt: Any) -> list[str]:
     """
     if not isinstance(receipt, dict):
         return []
-    errors: list[str] = []
+    errors: list[str] = [] if allow_private_output else private_output_errors(receipt)
     workflow = receipt.get("workflow")
     if isinstance(workflow, str) and SELF_NEGATING_WORKFLOW.search(workflow):
         errors.append(
@@ -977,7 +993,7 @@ def receipt_depth_index(path: Path) -> dict[str, dict[str, Any]]:
 def append_receipt(
     path: Path, receipt: dict[str, Any], *, manifest: Optional[Path] = None,
     artifact_root: Optional[Path] = None, dry_run: bool = False,
-    allow_small_source: bool = False,
+    allow_small_source: bool = False, allow_private_output: bool = False,
 ) -> dict[str, Any]:
     """Append one event under an exclusive lock and return the persisted record.
 
@@ -1019,7 +1035,7 @@ def append_receipt(
     if foreign:
         raise ValueError(foreign)
     # `root` matters: without it the corpus content check resolves against the process CWD.
-    errors = validate_receipt(record, root) + validate_new_receipt(record) + strict_errors
+    errors = validate_receipt(record, root) + validate_new_receipt(record, allow_private_output) + strict_errors
     if errors:
         raise ValueError("; ".join(errors))
     if dry_run and not path.is_file():
@@ -1688,6 +1704,10 @@ def main() -> int:
         help=("accept a source artifact that looks like an error page or is under 2 KB, for a "
               "legitimately tiny source that you have read and that is the real text"))
     record.add_argument(
+        "--allow-private-output", action="store_true",
+        help=("accept `outputs` that name a path under a root that never ships (staging/, files/, backup/, tmp/, overlay/, _qa/); "
+              "for a named exception only: the release battery refuses such outputs on main"))
+    record.add_argument(
         "--dry-run", action="store_true",
         help=("run every check `record` runs (validators, work manifest, chain, anchor, "
               "sequence) and write nothing - neither the ledger nor the state manifest"))
@@ -1765,6 +1785,7 @@ def main() -> int:
                 artifact_root=(Path(args.artifact_workspace) if args.artifact_workspace else None),
                 dry_run=args.dry_run,
                 allow_small_source=args.allow_small_source,
+                allow_private_output=args.allow_private_output,
             )
             if args.dry_run:
                 print(f"DRY RUN OK: {persisted['event_id']} would be appended to {ledger} "

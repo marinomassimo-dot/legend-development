@@ -1800,6 +1800,33 @@ class ARecordSaysWhichStampedSurfaceItStaled(unittest.TestCase):
         self.assertNotIn("NOT CHECKED", done.stdout)
 
 
+class PrivateOutputTests(unittest.TestCase):
+    """2026-11-18: 14 receipts naming /tmp scratch outputs were recorded and turned the release battery red hours later; `record` now refuses them."""
+
+    def test_outputs_under_a_root_that_never_ships_are_refused_and_the_message_names_them(self) -> None:
+        for bad in ("/tmp/claude-1000/scratchpad/x/TABLE.md", "staging/draft.md", "files/fulltext/x.xml", "backup/a.md", "overlay/b.md", "_qa/c.md"):
+            receipt = example("FTR-20260725-42193054-01")
+            receipt["outputs"] = ["disease-models/wwox/registries/paper_registry_current.md#PAPER 001", bad]
+            errors = receipts.validate_new_receipt(receipt)
+            self.assertTrue(any("never ships" in e and bad in e for e in errors), (bad, errors))
+
+    def test_the_override_and_a_committed_path_pass(self) -> None:
+        receipt = example("FTR-20260725-42193054-01")
+        receipt["outputs"] = ["/tmp/x/TABLE.md"]
+        self.assertEqual(receipts.validate_new_receipt(receipt, allow_private_output=True), [])
+        receipt["outputs"] = ["disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/x/TABLE.md"]
+        self.assertEqual(receipts.validate_new_receipt(receipt), [])
+
+    def test_the_trace_contract_test_reads_the_same_constant(self) -> None:
+        source = (Path(__file__).resolve().parents[2] / "scripts" / "test_fulltext_trace_contract.py").read_text(encoding="utf-8")
+        self.assertIn("UNSHIPPABLE_OUTPUT_ROOTS", source)
+        self.assertNotIn('"staging/", "files/"', source)               # no second copy of the list
+
+    def test_the_command_line_flag_exists(self) -> None:
+        help_text = subprocess.run([sys.executable, str(Path(receipts.__file__)), "record", "--help"], capture_output=True, text=True).stdout
+        self.assertIn("--allow-private-output", help_text)
+
+
 class SourceSanityTests(unittest.TestCase):
     """ADV-041: a receipt's fingerprint proves the bytes, not that they are the paper."""
 

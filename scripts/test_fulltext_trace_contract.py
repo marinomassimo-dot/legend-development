@@ -196,7 +196,8 @@ class FulltextTraceContractTests(unittest.TestCase):
             if line.strip()
         ]
         corrected = {r.get("prior_receipt") for r in receipts if r.get("prior_receipt")}
-        unshippable = ("staging/", "files/", "backup/", "tmp/", "overlay/", "_qa/")
+        sys.path.insert(0, str(ROOT / "framework" / "scripts"))
+        from fulltext_receipts import UNSHIPPABLE_OUTPUT_ROOTS as unshippable    # the writer refuses the same roots: one rule, one place
         offenders = [
             f"{r['event_id']}: {output}"
             for r in receipts
