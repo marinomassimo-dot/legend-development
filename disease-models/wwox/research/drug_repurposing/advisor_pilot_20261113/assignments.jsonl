@@ -84,3 +84,5 @@
 {"evidence": "SendMessage msg_id 74eaf5a6-20f2-45c8-9ad6-a18ba1023f3e to SCI (another Claude session on this machine, in its inbox), 02:22Z 2026-11-18; full brief in the message", "id": "ADV-043", "state": "SENT", "to": ["SCI"], "utc": "2026-11-18T02:22:18Z"}
 {"assessment": "HOST", "id": "ADV-044", "key": "receipt-ledger-correction-retraction-sweep", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-18T05:22:22Z"}
 {"evidence": "SendMessage msg_id 67854aec-e638-485a-8fdb-c57b25dc9cc4 to HE (another Claude session on this machine, in its inbox), 05:22Z 2026-11-18; full brief in the message", "id": "ADV-044", "state": "SENT", "to": ["HE"], "utc": "2026-11-18T05:22:34Z"}
+{"assessment": "HOST", "id": "ADV-045", "key": "erratum-scope-read-12-receipts-without-manifest", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-18T05:41:03Z"}
+{"evidence": "SendMessage msg_id f4ca7032-efe5-44b2-809e-5e48bb129cd7 to SCI (another Claude session on this machine, in its inbox), 05:41Z 2026-11-18; full brief in the message", "id": "ADV-045", "state": "SENT", "to": ["SCI"], "utc": "2026-11-18T05:41:14Z"}
