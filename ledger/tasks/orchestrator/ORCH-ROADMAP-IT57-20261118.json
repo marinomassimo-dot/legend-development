@@ -26,7 +26,7 @@
   "not_repeated": "no concluded reading was reopened; the interrupted view regeneration was not repeated because 50d0183d1 supersedes it"
  },
  "AUTHORISED_QUEUE_20261118": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_1_RECONCILE": {
    "order": 1,
    "title": "Recover and register the real work",
@@ -135,9 +135,10 @@
    "steps": [
     {
      "step": "Check freshness of only the derived files involved (ranking, receipt counts, views, translations) at the effective revision",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "ranking regenerated, i18n 0 stale on it fr es de, views regenerated (full all languages, shareable all languages, package), audit-shareable PASS on every page; candidate_tree_freshness pending before landing"
+     "evidence": "Done in IT58: join (with caches), ranking digest ff38fcaa61295a5a, views, shareable editions and package regenerated and checked at 741ca6b4bef4, dd0b59697586, ee570667bbaa; coverage_report and reading_state regenerated at 65367c768ef7; superseded by ORCH-ROADMAP-IT58-20261118 and ORCH-ROADMAP-IT59-20261119.",
+     "updated_at": "2026-11-19T08:53:58Z"
     },
     {
      "step": "Improve only the sections touched by real scientific change (facts, hypotheses and missing measures separated; priority questions readable; comparisons and limits visible); no general redesign",
@@ -153,13 +154,17 @@
    "steps": [
     {
      "step": "Protect frozen SHAs, verification environments and others' work; coordinate one shared test run with HE; an old FAIL stays on its old candidate; targeted PASS is not a full-battery PASS",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "SUPERSEDED by IT58 step 6 and IT59 step 1: HE's batteries ran on isolated clones; the FAIL on 6320348db5 stays that tree's verdict; targeted reruns passed on d69f4de0c and 741ca6b4.",
+     "updated_at": "2026-11-19T08:53:58Z"
     },
     {
      "step": "Verify publication and CI on the effective revision; report to HE any divergence between the local main reference and the remote (the shared root main is 78bf06890, development/main is f24639ad1) without reset or branch change",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "SUPERSEDED by IT58 step 6 and IT59 step 1: CI read on 6320348d (fail, closed), 741ca6b4 and dd0b5969 (fail: reading_state/coverage_report drift, fixed), 65367c768 (success); tip 2e7e0c293 red (HE's reminder test), fix d13a1c582 landed; CI on d13a1c58 and 4082a19e being read under IT59.",
+     "updated_at": "2026-11-19T08:53:58Z"
     }
    ]
   },
@@ -202,7 +207,7 @@
  ],
  "STOP_LOG": [],
  "AUTHORISED_QUEUE_ACCEPTED": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_ACCEPTED": {
    "order": 1,
    "steps": [
