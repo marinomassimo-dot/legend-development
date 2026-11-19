@@ -37,3 +37,6 @@ Written for: SCI, HE, IT (their DREAM-1b, DREAM-2b, DREAM-3b are the inputs), th
 
 ## E. For the next MEETING (one step again)
 Results to bring: the pre-registered ledger lines scored so far (L10a below naive, L11 hit), the consumption count of live run 1 (hours, new classes, consumer-claim accuracy 2 true of 5), the engine counts, the receipt protocol; the one engine step proposed: a COMPOSE step in the two-stage brief, tested on a one-outcome target set once the operator's token budget is set; the operator items per path unchanged (decision page).
+
+
+**Dated caveat, 22:35Z on 2026-11-19 (host clock):** the "bisection is scored (8 of 9)" in row 2 above is read with HE's normalisation note (sim_harness/NOTE_BISECT_NORMALISATION_HE_20261119.md): the order in crossing strength is partly imposed by the per-arm coefficients (d-APV and the NMDAR pore blocker perturb the same parameter and tie on the multiplier scale at x0.82), so P1 in particular is not evidence of class superiority. Nothing above is rewritten. No personal or individual-level information is used or recorded.

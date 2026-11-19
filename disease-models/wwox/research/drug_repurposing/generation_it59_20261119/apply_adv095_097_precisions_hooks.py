@@ -1,0 +1,18 @@
+"""IT59 (2026-11-19), ADV-095/096/097 methodological integration (operator): four precisions carried to the arm table notes as ONE dated paragraph.
+Dated line only: the text above is not edited; no cell, tier, origin, arm, size, stop rule, card or ranking input changes (the ranking digest is untouched). Idempotent."""
+from pathlib import Path
+
+DR = Path(__file__).resolve().parent.parent
+B = "advisor_pilot_20261113/brainstorm_20261116/"
+MARK = "(IT59, on the operator's methodological integration of ADV-095, 096 and 097"
+TXT = ("\n\nUpdate 2026-11-19 " + MARK + ", relayed by ADV; the text above is not edited; no cell, tier, origin or arm changes; hypothesis level; not medical advice): "
+       "(1) **Simulated class order is partly imposed by the per-arm coefficients.** In HE's bisect model the factor on a parameter is multiplier ** s, so two arms that perturb the same parameter with different multipliers (d-APV J_N x0.3 and the NMDAR pore blocker J_N x0.8) reach the same effect at different crossing strengths s (0.164 and 0.885 are the same perturbation). Wherever the order of classes by crossing strength, or the statement '8 of 9 registered predictions pass', is cited, read it with this caveat: comparisons ACROSS arms depend on the chosen normalisation and are not evidence of class superiority; HE reports on a normalisation-independent scale. "
+       "(2) **The transcriptomic premise screen is a source of evidence, not a universal condition.** Absence of an RNA change, or an opposite sign, does not automatically exclude a lever (protein activity, compensation and functional results matter); contrasts are to be shown before and after the maturity and composition adjustments. "
+       "(3) **HE's wrapper is parametric sensitivity, not structural alternatives**; a few informative joint scenarios are added. (4) **SCI chooses the exposure-effect relation per agent**; C/(C+IC50) is one option with explicit assumptions. "
+       "Consumers searched (IT's own files and inputs, by phrase: class order, crossing strength, bisect, '8 of 9', simulated order, no RNA or transcript change, premise absent): the arm-table notes (this file), the arm-class coverage tables, the cards, the investigation rows (INV-03, INV-05), the open-question map and the needs file. **Found:** this file's ADV-046 part B paragraph (the pore-blocker readout design) rests on the bisect model for 'told apart at intermediate depths' and should be read with caveat (1); no card, investigation row or open-question row states the class order or the '8 of 9' figure. **Not changed on purpose:** cards, the investigation table and the needs file are inputs of the ranking; no ranking input was edited. **Not IT's files, owner to note:** the pilot-bisection score (SCI: SCORE_PILOT_BISECTION_SCI.md, '8 of 9 pass'), the missense lever table, the cause-or-consequence result and the transfer qualification table (SCI); the unified-model and ideas-order notes and the P20, P24 and P27 assessments (ADV); the ADV-047 part 1 and 2 note (HE). "
+       "For caveat (2), where a card carries a transcript sign as a premise (L01 NRF2: NFE2L2 0.75x, KEAP1 0.93x, NQO1 0.73x; the ISR target-set rows in the needs file with opposite signs in the two human neural systems), the reading is a premise-stage observation, not an exclusion; no card or open question in the searched set states 'no RNA change, therefore excluded' (a phrase search; a paraphrase may exist).")
+p = DR / (B + "ARM_TABLE_V9_NOTES_IT_20261117.md")
+s = p.read_text(encoding="utf-8")
+if MARK not in s:
+    p.write_text(s.rstrip("\n") + TXT + "\n", encoding="utf-8")
+print("ok")
