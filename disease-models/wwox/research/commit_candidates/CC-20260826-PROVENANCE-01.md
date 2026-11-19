@@ -341,3 +341,9 @@ Item-by-item check against the current registries and the evidence host, as the 
 **Next step, with recipient:** a blind locator audit of the triples in this candidate against the recovered refereed text (recipient: the auditing session named by ADV; no reader's conclusions in the packet). No propagation before it.
 
 **Not medical advice.**
+
+## BATCH DISPOSITION — `BATCH_20261119_003` (2026-11-19, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only — audit of the locator triples
+
+**Status:** DEFERRED
+
+SCI's blind audit of the triples of this candidate against the recovered 2026 text (`advisor_pilot_20261113/brainstorm_20261116/claim002_unit_audit_sci_20261119/`, section 4): triples 1, 2, 3 and 6 SUPPORTED (Fig 6A(ii) shows brackets WT vs EGFP and EGFP vs WWOX only, none to WT). Triple 4 (delivered WWOX 0.4x to 7x) is UNVERIFIABLE_SURFACE: the supplementary figures volume is not held; it stays an attestation, not a verbatim locator. **Triple 5 (Fig 2F) is WITHDRAWN as written.** Two independent readers (SCI on a 600 dpi crop, axis -3 to 1, and the blind delegate) agree on: WWOX-KO neurons about -2.4 and RGs about +1.0; SCAR12 RGs about -0.27 and neurons about +0.19; WOREE RGs about +0.07 and neurons about -0.06. The values in this candidate (KO RGs +0.55, KO Neu -2.6, SCAR12 Neu -0.2, RGs -0.15) were IT's reading and do not hold; they are not carried forward. The sentence 'patient lines carry a maturation phenotype instead' is the authors', but the paper also reports an RG increase in WOREE and reduced SATB2+ and CTIP2+ neurons in KO and WOREE. Manifest entry numbers are zero-based. The repoint of `CLAIM 002`'s `Source` stays deferred until `CC-20261119-ORCHESTRATOR-CLAIM002-WORDING-01` and a re-audited triple 5 are in. Class unchanged (MINOR for the wording; the repoint is audit-gated).

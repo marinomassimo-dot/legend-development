@@ -1,0 +1,40 @@
+# COMMIT CANDIDATE — CC-20261119-ORCHESTRATOR-CLAIM002-WORDING-01
+
+**Actor:** `orchestrator` (IT) · **Task:** ORCH-ROADMAP-IT59-20261119 (ADV-083 line) · **Date:** 2026-11-19
+**Papers:** PMID 34268881 (Steinberg et al. 2021, *EMBO Mol Med*; `PAPER 039`) as the anchor; PMID 42397075 (Steinberg 2026, *Brain*; `PAPER 094`) for the 2026 statements; PMID 34634460 (`PAPER 031`) for the Breton clause.
+**Origin of the findings:** SCI's blind unit audit, `advisor_pilot_20261113/brainstorm_20261116/claim002_unit_audit_sci_20261119/CLAIM002_UNIT_AUDIT_VERDICT_SCI_20261119.md` (11 supported, 11 overshoot, 1 undershoot, 2 unverifiable; data layer clean). Findings F1–F15 are SCI's; the wording below is IT's and has NOT been audited.
+**Status:** PROPOSED — for `BATCH_COMMIT` ONLY after the wording of section 3 passes a blind check against the 2021 text (and the 2026 text for the clauses that name it). The claim registry is NOT edited by this act.
+
+> Public, disease-level, de-identified. Nothing here is medical advice.
+
+## 1 · CHANGE CLASS (stated before any apply)
+**MINOR.** `Status` (consolidated baseline), `Type` and the data layer (Table S1 values, Breton means, firing P, Fig 4H brackets, token counts) are untouched and SCI found them exact. Every change narrows an interpretive sentence to what the source says, or adds the system or readout a sentence omitted. One point to name: the Clinical meaning's «Strongly supports … la terapia genica» becomes «supports … as a proof of concept (partial rescue, two families)», and `Impact on Working Model: supports BLOCCO 1 and P7` stays as written; the P7 'gene therapy readiness' pathway is not demoted, its support is described at the strength the source gives it. I do not read that as a baseline reversal. If you read it so, say so before apply.
+The `Source` line is NOT touched here: its repoint is the PROVENANCE-01 item, still deferred (section 5).
+
+## 2 · Findings and the sentence each touches (SCI §5–6)
+F1 Summary 1st sentence; F2 Summary last sentence; F3 Clinical meaning; F5 Title; F6 Summary (i); F7 DDR; F8 OXPHOS/glycolysis and Wnt; F9 Evidence boundary; F10 firing; F11 Summary (ii) system; F12 adjacent negatives; F13 model relevance; F14 week 20/24; F15 wave note. (F4 is IT's own triple 5 of PROVENANCE-01, handled in section 5.)
+
+## 3 · Proposed wording (hypothesis level; old = verbatim registry text)
+**3.1 (F5, Title).** *Old:* «WWOX-LoF causes network hyperexcitability; AAV-WWOX rescues organoid phenotype». *New:* «WWOX loss is associated with network hyperexcitability in human organoids; re-expression by knock-in (AAVS1), lentivirus or neuron-directed AAV9 partly rescues the phenotype». The wave note's qualifier stays.
+**3.2 (F1, Summary first sentence).** *Old:* «WWOX-deficient organoids show hyperexcitability and altered Ca²⁺ dynamics; WWOX re-expression improves the phenotype.» *New:* «WWOX-deficient organoids show hyperexcitability (local field potential and cell-attached firing in the 2021 paper; Ca²⁺ imaging of firing is the 2026 paper's); WWOX re-expression improves the phenotype in part.» The Pathway line's «Ca²⁺» is left and listed in the batch report as an open wording point (it names the 2026 readout).
+**3.3 (F6, Summary (i)).** «cioè disfunzione del compartimento inibitorio misurata a livello di trascritto e di proteina» → «cioè uno squilibrio fra neuroni glutammatergici e GABAergici (GAD67 per immunofluorescenza, GAD1/GAD2 per trascritto; GABRB2/3 solo per trascritto)».
+**3.4 (F11, Summary (ii)).** After «ampiezza sIPSC dimezzata in [[PAPER 031]] (Breton 2021)» add «(topo, knockout neurone-specifico, fette P13–P17, controlli aggregati, media ± DS; anche la frequenza diminuisce)».
+**3.5 (F14).** «immunoblot (settimana 20)» → «immunoblot (settimana 20 nel testo; la legenda della Fig 3/EV2 dice settimana 24)».
+**3.6 (F7).** «difetto DDR con perdita del checkpoint apoptotico» → «caspasi-3 clivata ridotta nella VZ (un solo marcatore), che gli autori leggono come possibile perdita di checkpoint».
+**3.7 (F8, F10).** «firma OXPHOS↓/glicolisi↑» → «firma trascrizionale (GSEA; Appendix Fig S3A-B, non tenuta; nessun metabolismo misurato)»; «attivazione Wnt» → «β-catenina nucleare 1,7 volte (2 WT e 4 KO, nessun test), più alcuni geni significativi al qPCR»; «firing aumentato e normalizzato dal rescue» → «firing aumentato; nelle linee dei pazienti il confronto dopo rescue non mostra differenza (P = 0,7681, test di differenza, non di equivalenza); nel KO il rescue lentivirale è letto come potenza lenta del LFP, non come firing».
+**3.8 (F2).** «prova che la reintroduzione di WWOX può correggere più domini cellulari» → «mostra, come proof of concept, che la reintroduzione di WWOX corregge in parte alcuni domini (LFP, firing nelle linee dei pazienti, marcatori di strato CTIP2 e SATB2, alcuni geni Wnt); i marcatori astrocitari non sono quantificati nel braccio di rescue».
+**3.9 (F3, Clinical meaning).** «Strongly supports the network-level model, la terapia genica e l'uso degli organoidi come piattaforma sperimentale.» → «Supports the network-level model; supports gene therapy and organoids as an experimental platform only as a proof of concept (partial rescue, two families; the authors: further study is required before clinical translation).» The following sentences are unchanged.
+**3.10 (F9, Evidence boundary).** «the rescue normalises two of three layer markers and overshoots the third» → «the rescue is not distinguishable from wild type in two of three sub-panels (no bracket; the W-AAV medians sit above WT in all three) and exceeds it in the third; the text names only CTIP2 and SATB2 as recovered, and 'not significant' is an inference from the all-pairwise ANOVA in the legend (W-AAV n = 4, one batch)».
+**3.11 (F12, F13).** Add «organoid diameter» to «does not reproduce the microcephaly» (a proxy); add the source's own axis sentence to the dorsal/ventral negative (the text also lists axis specification as enriched and concludes impaired spatial patterning); in Genotype/model relevance add «organoidi SCAR12 (G372R): differenze minime o assenti nello sviluppo neuronale del proencefalo, degli astrociti e nella DDR».
+**3.12 (F15, wave note).** «in a different organoid cohort» → «at an earlier time point (cell-attached recording; Fig 6A(ii) is Ca²⁺ imaging); the AAV9 arm had no knockout line; the treated bars sit numerically above WT in active ROIs and amplitude».
+
+## 4 · Consumer note
+CLAIM 002 is consumed by 27 needs, cards and arm cells (SCI's scan). Before apply I run the same exact-phrase sweep as for CLAIM 021 on 'AAV-WWOX', 'altered Ca', 'Strongly supports', 'prova che' and 'corregge'; dated lines where found, no tier change, perimeter stated.
+
+## 5 · PROVENANCE-01 triples after SCI's read (to be written into that candidate by a dated line)
+Triples 1, 2, 3 and 6 SUPPORTED against the recovered 2026 text (SCI read Fig 6A(ii): brackets WT vs EGFP and EGFP vs WWOX only). Triple 4 (WWOX 0.4x–7x) UNVERIFIABLE_SURFACE (supplementary figures volume not held): kept as an attestation, not a locator. Triple 5 (Fig 2F) is WITHDRAWN as written: the values read by two independent readers are KO neurons about -2.4 and RGs about +1.0; SCAR12 RGs about -0.27 and neurons about +0.19; WOREE RGs about +0.07 and neurons about -0.06 (mine were +0.55, -2.6, -0.2, -0.15). The sentence «patient lines carry a maturation phenotype instead» is the authors' but the paper also reports an RG increase in WOREE and reduced SATB2+ and CTIP2+ neurons in KO and WOREE; manifest entry numbers are zero-based. The repoint stays deferred until the section-3 wording and a re-audited triple 5 are in.
+
+## 6 · Order of work
+(1) blind check of section 3 against the texts, a reader that saw no earlier audit; (2) after SUPPORTED, ops for `batch_commit.py propagate` on the claim registry, one MINOR `BATCH_COMMIT` (class restated in its disposition block); (3) regenerate derived pages in the documented sequence; ranking digest `ff38fcaa61295a5a` must not move.
+
+**Not medical advice.**
