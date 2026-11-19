@@ -190,3 +190,5 @@
 {"evidence": "SendMessage receipt msg_id cf4d4045-9b93-46e7-a489-4b321d457f91 at 22:06Z 2026-11-19, receipt names SCI, scientific selection direction", "id": "ADV-095", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T22:06:56Z"}
 {"evidence": "SendMessage receipt msg_id caeac3c3-9f7e-4aa5-a7ef-e874c9259a8f at 22:06Z 2026-11-19, receipt names HE, scientific selection direction", "id": "ADV-096", "state": "SENT", "to": ["HE"], "utc": "2026-11-19T22:06:56Z"}
 {"evidence": "SendMessage receipt msg_id d8a67d8e-989c-4dcc-88e4-9a3daede3527 at 22:06Z 2026-11-19, receipt names IT Orchestrator, scientific selection direction", "id": "ADV-097", "state": "SENT", "to": ["IT Orchestrator"], "utc": "2026-11-19T22:06:56Z"}
+{"assessment": "HOST", "id": "ADV-098", "key": "agent-pharmacology-data-sheet-real-agents", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-19T23:12:45Z"}
+{"evidence": "SendMessage receipt msg_id ea865954-37f0-4817-add4-14a66cab8b66 at 23:13Z 2026-11-19, receipt names HE, night direction", "id": "ADV-098", "state": "SENT", "to": ["HE"], "utc": "2026-11-19T23:13:15Z"}
