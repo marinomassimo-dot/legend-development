@@ -12864,7 +12864,7 @@
      "wwox_assertions": 7
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 13,
+     "need_level_counter_items": 14,
      "need_level_counter_items_note": "over 3 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 24,
@@ -12896,7 +12896,7 @@
     "T1_cards": "e7c4cc4144cc76ec",
     "T2_pertinence": "40d3f822d9a26184",
     "T3_receipts": "bdc70a10bd913242",
-    "T4_needs": "98de133ad523d5dd",
+    "T4_needs": "b027fcaaf3d160a2",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "30921a9013e88d22"
    },
@@ -14139,7 +14139,7 @@
      "wwox_assertions": 0
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 8,
+     "need_level_counter_items": 9,
      "need_level_counter_items_note": "over 2 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 0,
@@ -14165,7 +14165,7 @@
     "T1_cards": "e5f873d116363e69",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "1935b7b15890470e",
-    "T4_needs": "6607eb58bf62a894",
+    "T4_needs": "f0d916521e0412ac",
     "T5_pharmacology": "4cfc018740c85d41",
     "T6_identity": "c8a9075059e82981"
    },
