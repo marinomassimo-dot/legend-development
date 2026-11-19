@@ -336,6 +336,15 @@
      "accepted_at": "2026-11-19T15:16:55Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/pv_population_b_adv085_sci_20261119/PV_POPULATION_FIRST_PASS_ADV085_SCI_20261119.md: one group-level PV count, no per-animal or per-cell PV value; delegate sonnet/high read back; quotes and EV rows checked; stop rule applied with the texts that would change it; delivered to ADV and IT, nothing applied",
      "updated_at": "2026-11-19T15:24:18Z"
+    },
+    {
+     "step": "Write the separating measurement from ADV-085 B (fate-mapped interneuron lineage reporter, per-animal PV-immunoreactive fraction in the recorded slices at P14, P17, P21, then reporter-cell firing and evoked IPSC at physiological chloride) onto the ordering page as a dated refinement of row 6 by SCI, and add Hussain 2019 figures, the Breton 2021 supplement, Steinberg 2026 Supp Fig 8B and a clean Repudi 2021 PDF to the supply list (decision page item 14)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-19, ADV-085 acceptance (verdict on B; claims 031, 011, 019 stay unstarted)",
+     "accepted_at": "2026-11-19T15:38:36Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/experiment_brief_presidio013_sci_20261116/v2_consolidated_sci_20261119/ORDERING_PAGE.md: dated refinement of row 6 (lineage reporter, per-animal PV fraction P14/P17/P21, firing and evoked IPSC at physiological chloride); decision page item 14: Hussain 2019 figures, Breton supplement, Steinberg 2026 Supp Fig 8B, clean Repudi 2021 PDF added (ADV had not added them); nothing else changed",
+     "updated_at": "2026-11-19T15:39:15Z"
     }
    ]
   }
@@ -590,6 +599,13 @@
    "at": "2026-11-19T15:16:55Z",
    "source": "ADV-085 (assignments/ADV-085.md) and ADV message 2026-11-19",
    "step_sha256": "134b75a22bd4",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T15:38:36Z",
+   "source": "ADV message 2026-11-19, ADV-085 acceptance (verdict on B; claims 031, 011, 019 stay unstarted)",
+   "step_sha256": "f2a600068e03",
    "reopened_block": false,
    "authorised_by": null
   }
