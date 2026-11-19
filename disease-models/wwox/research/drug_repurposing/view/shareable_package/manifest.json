@@ -463,7 +463,7 @@
  ],
  "data": {
   "catalogue_generated": "2026-10-31T07:28:37Z",
-  "data_date": "2026-11-18",
+  "data_date": "2026-11-19",
   "dgidb_export": "2024-06-10",
   "view_schema": "legend.wwox.repurposing_view/2"
  },
@@ -541,11 +541,11 @@
   },
   "README.md": {
    "bytes": 5072,
-   "sha256": "e9367322b983351155ab1af5fdfb8ea8f77ac1df58952deb9ca36ca7862e24ee"
+   "sha256": "99a6436da188c47f90fd4778e25dcab89b31009e471b5be4a4806f4faf6a29ec"
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2150,
-   "sha256": "87e75a3d3e1789b86ed9d536089c146c5b060196547d42e247df3c0f28aed1a7"
+   "sha256": "3eff0a15e9f7689abee69c16889d1c0afcbf2a82b447acf3126799f151c30f9d"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -560,24 +560,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5274786,
-   "sha256": "3631d4b698135f48637fd2355d6b2e53c516f133c22b00849b1f448727c7cca1"
+   "bytes": 5276579,
+   "sha256": "fcd518db28145a3ea2c6a530793d703646bbe48161e638451ec7f6df251d7062"
   },
   "es.html": {
-   "bytes": 5260232,
-   "sha256": "94dda318475e5dffdb730fe2be7f83538c7d79d4beecd4d47706bf41a5b08599"
+   "bytes": 5262023,
+   "sha256": "26592307d4ca5374e084923b90db9dbbf65eedcdc46880c3e3b413a0c48d2ff4"
   },
   "fr.html": {
-   "bytes": 5295542,
-   "sha256": "e5b4f0b2c08ecb541f8908d9811b116fe6c23fd2bb864fec3ce20f4c06c7ea46"
+   "bytes": 5297419,
+   "sha256": "18f744b7fa5928d3bc784709a5dfbb72c18b47d8998b670f06001a38ea7f6b3a"
   },
   "index.html": {
-   "bytes": 5168355,
-   "sha256": "1edefd2efa4ceab193d76e14666be8bdd9df35a2376c249abfe91c916ae19a09"
+   "bytes": 5170025,
+   "sha256": "fcaff1f748f2aa080dbe626cdb310d0f5346446ffcca838bff0e2d199861442e"
   },
   "it.html": {
-   "bytes": 5233566,
-   "sha256": "7d5971ad159bfddbfd82b3f28caac16fd681322e3e886dfaaa9ee8f73054f551"
+   "bytes": 5235387,
+   "sha256": "7b2f6b7b99d4a63c6f77ec71852969232e0e042ec9242b0cb33c3b2f2ef8b2ab"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
