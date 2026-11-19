@@ -381,6 +381,15 @@
      "accepted_at": "2026-11-19T17:45:20Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/experiment_brief_presidio013_sci_20261116/v2_consolidated_sci_20261119/ORDERING_PAGE.md: dated lines for rows 4 and 6, the pup brief age series and glucose add-on; one-line pointers in the pup brief and slice package appendices; no arm or tier change; basis one whole-brain bulk dataset stated",
      "updated_at": "2026-11-19T17:46:38Z"
+    },
+    {
+     "step": "ADV-088/090 post hoc look: T-type channel transcripts (Cacna1g, Cacna1h, Cacna1i) plus Kcnq2, Kcnq3, Grin2b, Grin2a in the same E-MTAB-6798 file, same unit, labelled post hoc, to tell whether the ethosuximide age series sits on a rising or flat phase of its target family; findings to IT; then idle",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-19, ADV-090 acceptance (YES to the post hoc look)",
+     "accepted_at": "2026-11-19T17:54:15Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/expression_timecourse_adv088_sci_20261119/POSTHOC_TARGET_FAMILIES_ADDENDUM_SCI_20261119.md: labelled post hoc; T-type flat P14 to P28, composition changes P3 to P14; Kcnq2 rising P14 to P28; ordering page dated bullet",
+     "updated_at": "2026-11-19T17:55:14Z"
     }
    ]
   }
@@ -670,6 +679,13 @@
    "at": "2026-11-19T17:45:20Z",
    "source": "ADV-090 (assignments/ADV-090.md) and ADV message 2026-11-19",
    "step_sha256": "cfd2dfac1e8f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T17:54:15Z",
+   "source": "ADV message 2026-11-19, ADV-090 acceptance (YES to the post hoc look)",
+   "step_sha256": "5869b5f1b5c4",
    "reopened_block": false,
    "authorised_by": null
   }
