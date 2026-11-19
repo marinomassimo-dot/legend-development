@@ -97,6 +97,15 @@
      "accepted_at": "2026-11-19T09:49:28Z",
      "evidence": "Reader (sonnet) checked Cheng 2020 and Repudi 2021 originals; IT checked consumers with other concept words: row 1 corrected (latency not equal to the null; amplitude carried in IT56-Q02 table), row 2 narrower (only E16.5 thinning precedes seizure), row 3 supported but qualitative, row 4 partly; mapped: IT59-Q03 and arm-table dated line.",
      "updated_at": "2026-11-19T09:49:28Z"
+    },
+    {
+     "step": "12 MAP SCI's ADV-074 glucose and metabolic axis pass: open-question row IT59-Q04, NEED-SYSTEMIC-GLYCAEMIA-GROWTH counter-evidence, E04 card not-known item, arm-table line",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "SCI ADV-074 delivery message 2026-11-19 (glucose and metabolic axis consumer delta)",
+     "accepted_at": "2026-11-19T10:24:15Z",
+     "evidence": "Mapped in one pass: IT59-Q04, need counter-evidence (2009 table, 2021 text-only, dissociations, CMV P14-only correction, muscle-KO opposite sign), E04 packet not_known + card rebuilt by the bridge, arm-table dated line; ranking digest ff38fcaa61295a5a unchanged; audit 10/10; ranking 74, join 91 OK.",
+     "updated_at": "2026-11-19T10:24:15Z"
     }
    ]
   }
@@ -176,6 +185,13 @@
    "at": "2026-11-19T09:49:28Z",
    "source": "ADV-075 (assignments/ADV-075.md) and SCI audit G message, 2026-11-19",
    "step_sha256": "5fe860aa0679",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T10:24:15Z",
+   "source": "SCI ADV-074 delivery message 2026-11-19 (glucose and metabolic axis consumer delta)",
+   "step_sha256": "07f1d28c3fe3",
    "reopened_block": false,
    "authorised_by": null
   }
