@@ -226,6 +226,24 @@ def route(target: str, sessions: list[dict] | None, root: Path = ROOT) -> dict:
     if len(found) > 1 and len(bound) == 1 and not actor_hits:                        # (not for an ACTOR_ID alias: a name-token session that no record binds is another candidate, not a surplus duplicate) identity follows the binding (record or marker), not the display name
         out["surplus_name_matches"] = [{"recipient": live[sid].get("name"), "session_id": sid} for sid in found if sid not in bound]
         found = {bound[0]: f"binding of {bound_live[bound[0]]} (the other live sessions that answer to the name are not its host)"}
+    if len(found) > 1 and not actor_hits and len(bound) != 1:
+        # 2026-11-19 (ADV-078 trial, measured): a fresh window of a record that carries no SESSION_NAME left two live sessions named SCI and route said AMBIGUOUS although only one of them held the mandate:
+        # the old session had written MANDATE_RELEASED. Identity follows the marker: among the same-name sessions, the one that is the live marker-host of an OPEN record is the target.
+        hosts = {}
+        for path in sorted((root / "ledger" / "tasks").glob("*/*.json")):
+            try:
+                rec = json.loads(path.read_text(encoding="utf-8"))
+                if not isinstance(rec, dict) or "OPEN" not in [mc.block_state(b) for _, b in mc.load_blocks(rec)]:
+                    continue
+            except (OSError, ValueError, mc.Malformed, AttributeError):
+                continue
+            task = str(rec.get("TASK_ID") or path.stem)
+            for h in live_bound_sessions(task, [live[sid] for sid in found]):
+                hosts.setdefault(h["session_id"], task)
+        if len(hosts) == 1:
+            host = next(iter(hosts))
+            out["surplus_name_matches"] = [{"recipient": live[sid].get("name"), "session_id": sid} for sid in found if sid != host]
+            found = {host: f"MANDATE_BOUND of {hosts[host]} (the other live sessions that answer to the name are not hosts of an open record)"}
     exact = [sid for sid in found if found[sid] == "live name or id"]
     if len(found) > 1 and exact and len(exact) < len(found):
         out["surplus_token_matches"] = [{"recipient": live[sid].get("name"), "session_id": sid} for sid in found if sid not in exact]
