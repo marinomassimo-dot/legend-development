@@ -11,7 +11,7 @@ Hypothesis level. Reference genotype class only. No dose, schedule or recommenda
 ---
 
 ## 0. Header
-`candidate_id` · `portfolio` (ambitious / conservative) · `cluster` · `dossier_date` · `author` · `package_sources` (paths) · `cost_ranges_item` (row key in `cost_ranges.tsv`, or `not supplied`)
+`candidate_id` · `portfolio` (ambitious / conservative) · `cluster` · `dossier_date` · `author` · `package_sources` (paths) · `cost_ranges_item` (row key in `cost_ranges.tsv`, or `not supplied`) · `check_reader` (the person who can say "we would not do anything different"; **the operator for the first cases**, ADV 2026-11-19)
 
 ## 1. The question as a chain (one row per link; the weakest link is marked)
 | Link | Statement (one sentence) | Evidence class | Source and locator | Weakest? |
@@ -23,6 +23,9 @@ Hypothesis level. Reference genotype class only. No dose, schedule or recommenda
 Evidence classes are the repository's, stated per link; `unknown` is a valid value and is printed as such. The weakest link is the one with the lowest class; ties are all marked.
 
 ## 2. What we know (three lines at most, each with its limit)
+
+## 2b. Safety cell: one line per agent and age (its own cell, never merged into the chain or an ordering)
+For each agent the study would use and each age that matters: the label limit (minimum age, warnings), the harm signal from held sources, and the source class. `unknown` is printed as unknown. Example of the kind of entry (from held labels, not advice): an agent whose label states safety not established below a given age. A conservative-cluster candidate whose safety cell is unknown or states a limit above the target age is not assumed safe because the cluster is called conservative.
 
 ## 3. The decisive uncertainty, and the decision it changes
 One sentence: the uncertainty. Then the **outcome-to-decision table** (rows are the possible results; no row may be blank):
@@ -51,7 +54,7 @@ Which other candidates or controls the same readout serves (candidate ids), the 
 ## Consumers (who reads which field)
 | Consumer | Reads |
 |---|---|
-| The ordinal funding view (`FUNDING_VIEW_SPEC_IT_ADV092.md`) | header, field 1 (classes, weakest link), field 3 (decision named: yes/no; the outcome table), field 6 (assay id), field 7, `cost_ranges_item` |
+| The ordinal funding view (`FUNDING_VIEW_SPEC_IT_ADV092.md`) | header, field 1, field 2b (own column) (classes, weakest link), field 3 (decision named: yes/no; the outcome table), field 6 (assay id), field 7, `cost_ranges_item` |
 | The cards' "decisive experiment" field | field 3 |
 | `research_portfolio.tsv` | header, field 3 |
 | ADV's meeting page and the Foundation reader | the whole page |
@@ -59,7 +62,8 @@ Which other candidates or controls the same readout serves (candidate ids), the 
 ## Filling checklist (what a reviewer checks first)
 1. Four links present, each with a class; `unknown` printed as unknown.
 2. Field 3 has three rows and a named control; or the line says the null is `UNRESOLVED` by construction.
-3. Field 3 names a decision, or the "would we do anything different" question is answered.
+3. Field 3 names a decision, or the "would we do anything different" question is answered by the named `check_reader`.
+3b. Field 2b has a line per agent and age (or `unknown`).
 4. Field 4 gives a perimeter, not only "none found".
 5. Field 5 says which link stays open after the best outcome.
 6. Field 7 is honest about repairs after the check.

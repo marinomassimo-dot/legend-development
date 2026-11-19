@@ -47,7 +47,7 @@ LINK_NAMES = {"L1": "Target engaged", "L2": "Direction", "L3": "Phenotype releva
 CLASS_RANK = {"unknown": 0, "ESPANSIONE": 1, "IPOTESI": 2, "INFERENZA": 3,
               "DATO-adjacent": 4, "DATO-matching": 5}
 OPP_COLS = ["opp_id", "portfolio", "name", "study_class", "resolves_links", *LINKS, "chain_notes",
-            "decision_named", "decision_text", "null_control", "rows_that_change_decision", "assay_id",
+            "decision_named", "decision_text", "null_control", "safety_cell", "rows_that_change_decision", "assay_id",
             "ordering_page_row", "blind_check", "read_state", "cost_item", "sources"]
 COST_COLS = ["item", "low", "high", "currency", "source", "date"]
 NS = "not supplied"
@@ -203,7 +203,7 @@ def render(d: Path) -> str:
              f'operator supplies ({sum(1 for _ in costs)} supplied; default "{NS}"). Input digest {digest}.</p>')
     # Table A
     head = ["Candidate", "Portfolio", "Study class", *[f"{k} {LINK_NAMES[k]}" for k in LINKS],
-            "Weakest link(s)", "Study resolves the weakest?", "Decision named", "Null control", "Shared assay",
+            "Weakest link(s)", "Study resolves the weakest?", "Decision named", "Null control", "Safety (per agent and age; never in an ordering)", "Shared assay",
             "Blind check", "Cost range", "Cost flag"]
     rows = []
     for o in opps:
@@ -211,7 +211,7 @@ def render(d: Path) -> str:
         share = f"{o['assay_id']} (with {', '.join(sh[o['opp_id']])})" if sh[o["opp_id"]] else f"{o['assay_id']} (alone)"
         rows.append([f"{o['opp_id']} {o['name']}", o["portfolio"], o["study_class"], *[o[k] for k in LINKS],
                      ", ".join(wk[o["opp_id"]]) or "n/a", resolved(o), f"{o['decision_named']}: {o['decision_text']}",
-                     o["null_control"], share, o["blind_check"], fmt_cost(c), "supplied" if c else NS])
+                     o["null_control"], o["safety_cell"], share, o["blind_check"], fmt_cost(c), "supplied" if c else NS])
     p.append("<h2>1. Candidates: components as separate columns</h2>")
     p.append('<p class="note">Evidence classes, low to high: unknown, ESPANSIONE, IPOTESI, INFERENZA, DATO-adjacent (a datum in another '
              'system, stage or only at abstract level), DATO-matching (a datum in the system the study would use). The weakest link is '

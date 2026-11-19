@@ -47,3 +47,6 @@ A dossier (template) becomes one row: its field 1 gives L1 to L4 with classes; f
 
 ## 6. Reserved to the operator (unchanged)
 The cost ranges per type of study (from the laboratories' own quotes), the choice of any laboratory or clinical channel, the human supply of the clinical series, whether the view appears on the public page, and the final choice of what to fund.
+
+## 7. Dated line 2026-11-19 (after ADV accepted ADV-092 and resolved the three flags)
+ADV: ethosuximide belongs to the PUP series, not the slice preparation (the earlier wording was the error; the map already tags it so); "paediatric safety already known" is overstated, so lithium stays ambitious and **safety gets its own cell per agent and age**; the dossier names the "would we do anything different" reader, the operator for the first cases. Applied: template field `check_reader` and field 2b (safety cell); `opportunities.tsv` column `safety_cell` (filled for OPP-03 and OPP-04 from the held label rows, `unknown` elsewhere); the view prints it as its own column and no ordering reads it.

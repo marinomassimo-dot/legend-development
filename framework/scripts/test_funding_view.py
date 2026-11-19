@@ -16,7 +16,7 @@ def row(i: str, portfolio: str, **kw: str) -> dict:
     base = {c: "" for c in fv.OPP_COLS}
     base.update(opp_id=i, portfolio=portfolio, name=f"cand {i}", study_class="x", resolves_links="L1",
                 L1="unknown", L2="unknown", L3="IPOTESI", L4="unknown", chain_notes="n", decision_named="yes",
-                decision_text="d", null_control="partly", rows_that_change_decision="unknown", assay_id="A1",
+                decision_text="d", null_control="partly", safety_cell="unknown", rows_that_change_decision="unknown", assay_id="A1",
                 ordering_page_row="1", blind_check="not checked", read_state="r", cost_item="item1", sources="s")
     base.update(kw)
     return base
