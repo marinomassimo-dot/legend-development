@@ -3,7 +3,7 @@
 **Actor:** `orchestrator` (IT) · **Task:** ORCH-ROADMAP-IT59-20261119 (ADV-084 line) · **Date:** 2026-11-19
 **Paper:** PMID 30290271 (Hussain et al. 2019; the CLAIM 005 anchor) and the organoid paper for G5
 **Origin of the findings:** SCI's blind wording audit, `advisor_pilot_20261113/brainstorm_20261116/claim005_wording_audit_sci_20261119/CLAIM005_WORDING_AUDIT_VERDICT_SCI_20261119.md` (7 supported, 3 undershoot, 4 overshoot, 1 not in source, 2 unverifiable; data layer holds). G1–G9 are SCI's; the wording below is IT's and has NOT been audited.
-**Status:** PROPOSED — for `BATCH_COMMIT` ONLY after a blind check of section 2 against the held text (a reader that saw no earlier audit). The claim registry is NOT edited by this act.
+**Status:** PROPOSED — REVISED once (section 4, 2026-11-19, after the blind audit: 4 SUPPORTED, 1 UNDERSHOOT, 1 OVERSHOOT, repaired); for `BATCH_COMMIT` ONLY after a second check of the section 4 sentences. The claim registry is NOT edited by this act.
 
 > Public, disease-level, de-identified. Nothing here is medical advice.
 
@@ -25,3 +25,11 @@
 (1) blind check of section 2 against the held text; (2) after SUPPORTED, `batch_commit.py propagate` ops on the claim registry in one MINOR `BATCH_COMMIT`, with dated lines on the verifier H1 and the IT22 seeds note (history is not rewritten); (3) regenerate derived pages in the documented sequence; ranking digest `ff38fcaa61295a5a` must not move.
 
 **Not medical advice.**
+
+## 4 · REVISION 1 (2026-11-19, after the blind audit of section 2)
+Audit: `research/locator_audits/2026-11-19_claim005_wording_it59/` (6 triples, quotes verified verbatim by script, one fresh `legend-delegate`, asked sonnet/high; read back sonnet x5, effort high x5). Verdicts: T1–T4 SUPPORTED, T5 UNDERSHOOT, T6 OVERSHOOT. I checked both against the delegate's quoted source words; both hold. G4 and G5's organoid side rest on Steinberg 2021 EV tables and were verified by SCI on those tables, not in this audit.
+* **G2 (T5).** After «NPY-positive counts are lower in DG only» add: «the CA1 and CA3 subfields 'did not exhibit any obvious difference' in NPY+ counts; the authors' Results summary says 'in the various hippocampal subfields' and the Abstract 'in different subfields'; the whole-hippocampus panel (Fig 2D) is referenced and carries no number in the text».
+* **G3 (T6).** Replace the added clause by: «the authors write 'hypertrophy as well as hyperplasia' of astrocytes from area-fraction data without counting cells, so their wording says more than their measurement; for microglia they describe less ramified cells with shorter, thicker processes and larger soma, characteristic of activated microglia».
+* **G1 (T4).** The CA3 clause reads: «the text also calls PV+ counts significantly low in CA1 and CA3 in a qualitative sentence; the stereological sentence gives P values for DG and CA1 only, and no CA3 P value is in the text».
+* **Carried as limits:** whether the Tnf-a bar carries an asterisk in Fig 4E is not verifiable (figure not held); the legend asterisk names no gene.
+**Next:** a second check of the section 4 sentences, then `BATCH_COMMIT` MINOR (class restated), G8 first.
