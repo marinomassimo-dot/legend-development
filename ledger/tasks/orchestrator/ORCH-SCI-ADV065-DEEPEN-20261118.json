@@ -241,11 +241,11 @@
      "owner": "orchestrator",
      "source": "SCI remaining items 2026-11-19 (supply-path papers)",
      "accepted_at": "2026-11-19T10:15:43Z",
-     "blocker": "waits for the operator's supply of the listed texts (decision page item 14, owner: operator through ADV); not held: Aqeilan 2008, Suzuki 2009 full text, the 2005 and 2007 WWOX-ERBB4 reports, Sardi 2006, the clinical series. The Hussain 2023 supplement is NOT owed: it is held on disk (files/supplement/PMID36828035/, found 2026-11-19) and its S2 and S6 panels are an executable reading for ADV to assign",
+     "blocker": "waits for the operator's supply (decision page item 14, owner: operator through ADV), narrowed by the ledger check of 2026-11-19 (l_supply_state_sci_20261119/): full texts never held: Sardi 2006 (PMID 17018285), Aqeilan 2007 WWOX-ERBB4 (PMID 17909041, abstract only), the WWOX clinical series (not identified: name it first); bytes missing for papers already read: Aqeilan 2008 (complete read 2026-08-11), Suzuki 2009 (complete read 2026-08-06), Aqeilan 2005 (partial read 2026-08-11); no lawful machine route restores any of them (PMC XML refused by the publisher, PMC page and Europe PMC PDF behind challenges, no PMC id for the other five, SHA search of local folders 0). The Hussain 2023 supplement is NOT owed: it is held on disk (files/supplement/PMID36828035/) and its S2 and S6 panels were read",
      "unblock_when": {
       "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/checkpoint_sci_20261119/L_TEXT_ARRIVED.txt"
      },
-     "updated_at": "2026-11-19T11:22:11Z"
+     "updated_at": "2026-11-19T13:23:46Z"
     },
     {
      "step": "ADV-079: per-candidate harm-against-phenotype table from held originals (audit items 5 and 7; item 6 resolved by IT): lithium, ethosuximide, pore blockers, vigabatrin, ketogenic diet, AAV9 comparator; stop rule: fewer than three intersections with a held primary source gives 'mostly unknown'",
@@ -282,6 +282,13 @@
      "accepted_at": "2026-11-19T12:48:37Z",
      "evidence": "Verdict note advisor_pilot_20261113/brainstorm_20261116/claim025_revised_audit_sci_20261119/CLAIM025_REVISED_AUDIT_VERDICT_SCI_20261119.md: 22 triples, 21 SUPPORTED, 1 OVERSHOOT (T8, mine); delegate sonnet/high read back; verdict sent to ADV and IT 2026-11-19; nothing applied",
      "updated_at": "2026-11-19T13:11:03Z"
+    },
+    {
+     "step": "Audit-gap census (bounded first slice): list the QUEUED commit candidates and any candidate that names a consolidated-baseline claim, with status, target claim and whether a blind locator audit is recorded; deliver the list to IT and ADV; apply nothing (comparison and reasons in l_supply_state_sci_20261119/L_SUPPLY_STATE_AND_NEXT_INVESTMENT_SCI_20261119.md)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV standing line relayed in checkpoint B section 4 (2026-11-19): next investments are SCI's from the whole roadmap, made visible, no approval needed; HE57 choice-of-next rule (cross_session_transport section 12)",
+     "accepted_at": "2026-11-19T13:23:46Z"
     }
    ]
   }
@@ -494,6 +501,13 @@
    "at": "2026-11-19T12:48:37Z",
    "source": "ADV-081 (assignments/ADV-081.md; ADV message 2026-11-19)",
    "step_sha256": "d3908225c63a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T13:23:46Z",
+   "source": "ADV standing line relayed in checkpoint B section 4 (2026-11-19): next investments are SCI's from the whole roadmap, made visible, no approval needed; HE57 choice-of-next rule (cross_session_transport section 12)",
+   "step_sha256": "621f7274d03d",
    "reopened_block": false,
    "authorised_by": null
   }
