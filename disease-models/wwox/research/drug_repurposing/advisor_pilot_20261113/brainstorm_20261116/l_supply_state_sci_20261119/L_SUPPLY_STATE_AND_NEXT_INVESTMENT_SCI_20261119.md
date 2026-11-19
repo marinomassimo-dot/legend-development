@@ -10,7 +10,7 @@
 | Aqeilan 2005, Cancer Res (WWOX and YAP compete for ErbB-4) | 16061658 | none | `retrieved_not_read` (screen refused) then `partial_fulltext_read` under direct operator authorisation, `FTR-20260811-16061658-02` | absent, 0 of 10 | bytes; a complete read is still open |
 | Aqeilan 2007, Cancer Res (Wwox and ErbB4, breast cancer) | 17909041 | none | `abstract_only` 2026-11-08, `FTR-20261108-17909041-99`, bytes not saved | never held | full text |
 | Sardi 2006, Cell (presenilin-dependent ErbB4 signalling, astrogenesis) | 17018285 | none | no receipt | never held | full text (it is the paper R3's P1 rests on, now abstract level only) |
-| WWOX clinical series | not identified in any record I read | | | | name the paper first (ADV, decision page item 14) |
+| WWOX clinical series | resolved in section 6 (five papers, listed on decision page item 14 by title and year) | none | no receipt for any | never held | five full texts |
 
 ## 2. Routes tried today (all lawful, none circumvented)
 * **Local bytes by SHA-256** (`evidence_presence.py --search` over the uploads cache, Downloads, Documents, Desktop): recoverable 0.
@@ -31,3 +31,16 @@ Candidates I could reach, each with what it could change and what it needs:
 
 ## 5. Limits
 My counts come from a header scan of `commit_candidates/` (status line and the words "audit"); the scan is a census, not a verdict on any candidate. The receipt facts are from `fulltext_read_receipts.jsonl` (events named by their own PMID), the byte facts from `evidence_presence.py`; I did not open any of the six papers.
+
+## 6. Additions and a correction (SCI, 2026-11-19, after ADV's reply; sections 1 to 5 are left as written)
+**Correction to section 4.** The census in candidate A counted header status lines, which are stale (the real backlog derives from the append-only disposition blocks and is 3, per ADV and IT); the figures "206 PROPOSED and 30 QUEUED" must not be used, and A is replaced by the assignment ADV gave in its reply: an **anchor-integrity scan of the canonical claims** (which papers anchor each claim, at what receipt depth; which claims rest only on placeholders, abstract-level or partial readings while their wording is stronger; ranked by consumption by cards, needs and arm cells; first slice about 20 consumed claims; IT's reading-debt script and the receipts-based join, not rebuilt; nothing edited). B and C unchanged.
+**The clinical series, resolved by PubMed (title searches, then metadata; none has a PMC id, none has a receipt, none is held in `files/fulltext/`):**
+| Decision-page title (year) | PMID | First author, journal | What PubMed shows |
+|---|---|---|---|
+| WWOX-associated encephalopathies: phenotypic spectrum and genotype-phenotype correlation (2018) | 30094525 | Serin, Neurol Sci 2018;39:1977-80, DOI 10.1007/s10072-018-3528-6 | **a case report of one girl** (homozygous p.Leu239Arg), not a series: it cannot carry onset-age distribution, drug response or genotype-class severity |
+| Recently defined epileptic encephalopathy related to WWOX gene mutation: six patients and new mutations (2021) | 34034642 | Havali, Neurol Res 2021;43:744-50, DOI 10.1080/01616412.2021.1932173 | six children, biallelic variants, two novel |
+| WWOX-related encephalopathies: delineation of the phenotypical spectrum and genotype-phenotype correlation (2014) | 25411445 | Mignot, J Med Genet 2015;52:61-70 (epub 2014-11-19), DOI 10.1136/jmedgenet-2014-102748 | five patients from four families; the abstract describes a null-allele phenotype and an intermediate phenotype for null plus missense |
+| Novel compound heterozygous WWOX mutations cause early infantile epileptic encephalopathy (2019) | 31669195 | Yang, Int J Dev Neurosci 2019;79:45-8, DOI 10.1016/j.ijdevneu.2019.10.003 | one infant (c.173-2A>G and p.Ser259Pro) |
+| Early onset epileptic encephalopathy caused by a novel compound heterozygous WWOX mutation (2020) | 32037574 | Su, Int J Dev Neurosci 2020;80:157-61, DOI 10.1002/jdn.10013 | one patient compared with 59 reported cases (per its abstract); seizures controlled by phenobarbital and topiramate in this case |
+Two facts for the decision page: **the 2018 entry is described there as if it gave onset age, semiology and drug response by genotype class, but it is a single-patient report**; and the 2007 ERBB4 paper (PMID 17909041, DOI 10.1158/0008-5472.CAN-07-2147) is listed as "Guler et al."; **PubMed lists Aqeilan RI as first author** (Aqeilan, Donati, Gaudio and others; 556 breast cancers; Wwox expression associated with membranous ErbB4). Not on the list but held: Weisz-Hubshman 2019 (PMID 30853297, the Yemenite Jewish families), three partial receipts. All five titles resolve to one PMID each.
+**One more route tried for Aqeilan 2008.** `framework/scripts/pmc_bucket_fetch.py --pmid 18487609` (the documented open-data route) returned `xml_state: restricted_stub` (11,727 bytes, the same front-matter-only file as the plain efetch); I deleted that stub from `files/fulltext/` so it cannot be mistaken for a held text. No lawful machine route restores Aqeilan 2008.
