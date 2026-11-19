@@ -531,6 +531,31 @@ class ProactiveFixture(Base):
 
 
 
+class Empathy(ProactiveFixture):
+    """The existing hourly decision gets the current reason, including with an old recall job."""
+
+    def guidance(self, text: str, control: str = "") -> None:
+        sa.ROADMAP.write_text(sa.ROADMAP_BEGIN + "\n" + control + "\n" + sa.mc.GUIDANCE_BEGIN + "\n" + text
+                              + "\n" + sa.mc.GUIDANCE_END + "\n" + sa.ROADMAP_END, encoding="utf-8")
+
+    def test_tick_reads_revised_guidance_without_recreating_the_recall(self) -> None:
+        self.guidance("At a closure compare other branches. Why: continuity.")
+        first = sa.tick(self.campaign)
+        self.assertTrue(first["operator_guidance"]["available"])
+        self.assertIn("Why: continuity", first["operator_guidance"]["text"])
+        self.guidance("Revised criterion and source after an operator correction.")
+        self.assertIn("Revised criterion", sa.tick(self.campaign)["operator_guidance"]["text"])
+        self.assertIn("operator_guidance", sa.recall_prompt(self.campaign))
+
+    def test_guidance_cannot_lift_an_operator_pause_or_launch_an_evaluation(self) -> None:
+        self.guidance("Continue useful work without a fresh prompt.", "PAUSE: advisor")
+        self.assertEqual(sa.main(["authorise-continuous", "--campaign", str(self.campaign), "--source", "fixture operator authorisation"]), 0)
+        out = sa.tick(self.campaign)
+        self.assertEqual(out["verdict"], "PAUSED")
+        self.assertIn("Continue useful", out["operator_guidance"]["text"])
+        self.assertEqual(list(self.campaign.glob("P[0-9]*")), [])
+
+
 class Proactive(ProactiveFixture):
     """The proactive pilot: bounded hourly check, one evaluation per decision, assignments with evidence levels, budget and disable. Fixtures: they do not show the real runtime."""
 

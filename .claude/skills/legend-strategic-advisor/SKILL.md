@@ -158,21 +158,18 @@ existing retry). `status --campaign <DIR>` keeps four things apart: **drafted** 
 **executed** (a DONE step carries its id). None of them says the result was useful; that is judged against the continuation that would have happened anyway. Never write into a transcript to
 simulate a message and never start a copy of a live session to make it resume.
 
-**Budget, and what enforces it.** `activate` writes `<DIR>/budget.json` (24 hours, no renewal, at most three real strategic invocations in total, failed attempts and dialogue included, at most
+**Bounded-pilot budget, and what enforces it.** The following describes the initial bounded pilot, not the currently authorised continuous mode; recorded amendments and the Continuous operation section below govern the effective limits. `activate` writes `<DIR>/budget.json` (24 hours, no renewal, at most three real strategic invocations in total, failed attempts and dialogue included, at most
 three assignments, a turn limit of 20). *Code-enforced for runs launched through this tool:* the invocation total, the expiry, the assignment count, the disable flag, the turn limit (`claude -p` has
 no turn-limit flag on this host, so the launcher stops the child it started and the attempt counts). *Procedural:* that the cron keeps running (it is session-only, fires only while the session is idle,
 and expires after seven days) and that deliveries are made; the account's total consumption is not controlled by any of this. Exhausting this budget stops the Advisor's evaluations only; the
 sessions' already authorised work continues.
 
-**Who holds the presidio, and what survives.** The operator may host the recall in a dedicated session (`ADV`, ACTOR_ID `orchestrator`, a mandate of its own distinct from the IT Orchestrator's);
+**Who holds the presidio, and what survives.** The operator hosts the recall in a dedicated session (`ADV`, ACTOR_ID `advisor`, [role contract](../../../roles/advisor.md)); the earlier assignment as `orchestrator` remains historical, not the current identity.
 the evaluations are still run by `legend-strategic-advisor` in a separate read-only context, and the hosting session runs `tick`, starts `evaluate`, critically judges incoming signals and decisive premises, delivers scoped work and follows its result. Operational execution remains with the recipients; ADV is not an approval step. One campaign, one
 state: run every command from the **primary checkout** (the campaign folder, `budget.json` and the counters are files there; the state directory is keyed by the campaign name; a linked worktree
 holds its own copy, so `tick`, `evaluate`, `deliver`, `activate`, `disable` and `recall` refuse to run from one). Transfer = the new host reads the campaign and the state, the old host
 `CronDelete`s only its Advisor recall (never another mandate's job), the new host creates its own with the text `strategic_advisor.py recall --campaign <DIR>` prints, and verifies its first fire.
-**Restore on restart:** the recall lives in the session process's memory (CronCreate is session-only, `durable` has no effect, a recurring job expires after seven days). A compaction keeps the
-process; a termination, a resume in a new process (the mandate watch's `claude --bg --resume` included) or the seven days drop it, and nothing restores it by itself. So the hosting session's
-mandate record carries a standing first step: `CronList`; if no job's text contains `Proactive Strategic Advisor pilot, hourly mechanical check`, create it from `recall`; if one exists, create
-nothing. Not verified here: that a compaction leaves the job in place (the campaign's first recall was created after one); this is an unresolved limit, not a guarantee.
+**Restore on restart:** use the current [Wake-up durability rule](../../../framework/protocols/cross_session_transport.md#wake-up-durability-the-presidio-belongs-to-the-adv-campaign-not-to-a-chat-operator-2026-11-18-permanent). The initial pilot's account of losing a recall at every process death is superseded by the later measured resume behaviour. Inspect `CronList` before creating or replacing the one job; do not infer job loss from process loss.
 
 **Strategic inputs.** `entrypoints` is the one index (no second registry). Its rows separate the operator roadmap, the dashboard and its source data, investigations and cards, open questions,
 candidates, packages, diagnoses and DREAM (a connection DREAM proposes is a question, not evidence), the scientific radars, harness scouting, the capability surface, and the tools and cost

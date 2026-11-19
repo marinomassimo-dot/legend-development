@@ -1,0 +1,39 @@
+{
+  "TASK_ID": "PLAN-EMPATHY-PHASE2-20261119",
+  "ACTOR_ID": "plan",
+  "OWNER": "plan",
+  "SESSION_NAME": "Codex EMPATHY implementation",
+  "OBJECTIVE": "Implement selective, durable learning of operator intent through existing repository guidance and decision-time readers, without a new memory store, gate or actor. Operator authorised Phase 2 in chat on 2026-11-19 after the Harness Phase 1 report.",
+  "AUTHORISED_QUEUE_EMPATHY": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_1": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Reconcile the Phase 1 evidence and current readers",
+          "status": "DONE",
+          "evidence": "governance/design_records/empathy_phase1_20261119.md and its evidence folder; inspected current roadmap, recall_prompt, request_text and continuity module; baseline structural LINT WARN without BLOCK"
+        },
+        {
+          "step": "Implement the selective learning method and active operator guidance",
+          "status": "DONE",
+          "evidence": "cross_session_transport.md EMPATHY method; current situation/rationale section in existing roadmap; complete previous operator block preserved byte-for-byte as history"
+        },
+        {
+          "step": "Connect startup, recall and revival to current guidance",
+          "status": "DONE",
+          "evidence": "shared router/start skill; read-only mandate_continuity.py guidance; live guidance in strategic_advisor.tick and mandate_watch.request_text; no model call or new state store"
+        },
+        {
+          "step": "Run focused regressions and record the observed limits",
+          "status": "DONE",
+          "evidence": "test_mandate_continuity: 80 tests OK (1 environment skip); test_strategic_advisor exit 0; test_mandate_watch: 59 tests OK; routing, section references, skills, closed-world assertions, scout and documented commands exit 0; source and behavioural limits in empathy_phase2_20261119.md"
+        },
+        {
+          "step": "Integrate, verify and publish the change under the existing release procedure",
+          "status": "IN_PROGRESS"
+        }
+      ]
+    }
+  }
+}
