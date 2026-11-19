@@ -1,0 +1,33 @@
+# Read-but-not-carried audit: summary and blind spot-check (SCI, step G of the operator continuation, 2026-11-19; hypothesis level; no dose; not medical advice)
+
+Producer: one fresh delegate (sonnet, effort medium; read-back in the census; about 31 tool calls, 6 minutes). Full audit as delivered: `G_AUDIT_AS_DELIVERED.md` (78 results from 20 held papers). Basis stated by the producer: results taken from the dossiers and deep-dive manifests, not from a fresh page-by-page read; consumers searched by regex over concatenated copies with the hits read; every NOT_CARRIED row has two routes; the newer work folders under the brainstorm directory and any file outside the five named consumers were **not** searched.
+
+## Counts
+78 results: **30 carried, 16 partly, 30 not carried, 2 unclear** (the metabolism review has no measured results).
+
+## Ranked ten (the producer's ranking; each row has the held source and locator in the audit file)
+1. Heterozygote transcranial motor-evoked-potential latency equals the null while amplitude is normal (Cheng 2020): a candidate carrier readout; no concept-word hit anywhere.
+2. Rat lde/lde serum constituents normal at 28 days against the mouse metabolic crisis: bears on whether hypoglycaemia drives excitability or only confounds it.
+3. Skeletal-muscle conditional knockout: glucose intolerance, insulin and weight gain (opposite glucose sign to the null mouse); no consumer carries that paper.
+4. Structure precedes seizure: cortical thinning at E16.5, DCX high, apoptosis about 5 times, cerebellar vermis fusion (Cheng 2020): a timing limit for every acute seizure-drug card.
+5. Peripheral nerve: Schwann cell apoptosis and onion-bulb degeneration (Cheng 2020).
+6. S-HT (heterozygote) spectrum and evoked-response panels without an S-HT against control test (Brain 2021): the brief carries only the bursting incidence.
+7. P47T knock-in cholestasis, nephropathy and organ weights (Hussain 2023, supplement): no consumer mentions it.
+8. Olig2-positive counts fall while Mbp area is unchanged (Hussain 2023).
+9. Residual Wwox transcript by region in the neuronal knockout: cortex about 10-fold the hippocampal level (Brain 2021 supplement): a deletion-completeness limit for region-specific readings.
+10. The caspase-3 "no oligodendrocyte death" result is an image only, with no n or test (Brain 2021).
+Near misses: neurosphere differentially expressed genes (Kcna2, Grm3, Grin2b down; Gabra2, Gabbr2 up); P47T survival 393 against 542 days; the null mouse's audiogenic seizures by age; the CMV-vector glucose normalisation with 3 of 5 animals dead by about day 32.
+Corrections the producer made to my brief: axonal conduction is **partly** carried (a conduction-latency proxy appears in a needs readout list; no measured direction or size); hypoglycaemia is only partly carried (the glycaemia need uses the 2026 values only); the brief path I gave was wrong.
+
+## Blind spot-check of five rows (random draw, seed 20261119 over the 80 table lines; row 66 was a non-result line and was replaced by the next draw, row 32; my checks used concept words and routes different from the producer's)
+| Row | Producer label | My check | Outcome |
+|---|---|---|---|
+| 2, conduction delayed in the neuronal knockout | PARTLY | the needs readout list names "a callosal conduction-latency proxy" (needs line 4388); the F02 card (line 194) requires conduction for any enhancer arm, a hit the producer's route reported as three DCA-card hits only | label confirmed; **the producer's route missed a relevant hit** |
+| 27, Purkinje loss and cerebellar thinning in P47T | PARTLY | Purkinje appears in the needs and one card only for other models and a note on cytokines; the "composition caveat" statement could not be confirmed or contradicted quickly | not contradicted, not confirmed |
+| 61, muscle-knockout glucose paper | NOT CARRIED | no hit by PMID, title words or author words in needs, cards, open questions or brief; the K01 card carries muscle and brown fat data from a **different** (2014) report | **confirmed** (with the nuance that a peripheral-tissue glucose datum from another paper is carried) |
+| 78, patient-derived lines nearly indistinguishable in neurons | UNCLEAR | SCAR12 is widely carried (31 card hits; M01 card: SCAR12 radial glia similar to wild type, no neuron decrease); the specific neuronal-similarity claim is not located | unclear confirmed |
+| 32, organoid firing about 4-fold, normalised by WWOX (2021) | CARRIED | the M01 card carries "neuron-stage gene add-back restores firing in WOREE organoids", citing the 2026 paper; the 2021 size and cell counts are not located | **possible over-credit** (the carried statement may rest on the 2026 result) |
+Spot-check conclusion: the NOT CARRIED labels hold in the one row checked, the PARTLY and CARRIED labels can be generous or can miss a hit, so **the ranked list is a candidate list for IT to confirm per row, not a settled census**; two of five rows exposed a route limitation in the producer's regex search.
+
+## Consumer delta
+IT: one pass over the ten (each could become an open-question row, a dated line on a card, or an arm-cell caveat); first candidates by decision value: the heterozygote evoked-potential latency (a carrier endpoint), the structure-precedes-seizure timing limit (affects every acute seizure-drug card), the muscle-versus-null glucose sign (peripheral arm of the glycolysis question), and the neuronal-knockout residual-transcript limit. ADV: the decision page can cite this as the programme-level result of the pattern "read but not carried". HE: the producer's route limitation is a reason to keep the registry-against-ledger recipe a query that reads, not a keyword count.
