@@ -184,3 +184,9 @@
 {"evidence": "SendMessage receipt msg_id 14e11563-2e52-44af-b79a-ef34d6b278db at 18:17Z 2026-11-19, receipt names HE, brainstorm", "id": "ADV-093", "state": "SENT", "to": ["HE"], "utc": "2026-11-19T18:17:13Z"}
 {"assessment": "HOST", "id": "ADV-094", "key": "blind-check-of-the-pilot-dossier-and-blind-hindcast-scoring", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-19T19:21:17Z"}
 {"evidence": "SendMessage receipt msg_id a306c151-5520-4e21-87a8-e5daaafe8572 at 19:21Z 2026-11-19, receipt names IT Orchestrator, after ADV-091 delivery", "id": "ADV-094", "state": "SENT", "to": ["IT Orchestrator"], "utc": "2026-11-19T19:21:34Z"}
+{"assessment": "HOST", "id": "ADV-095", "key": "scientific-selection-analyses-both-objectives", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T22:06:21Z"}
+{"assessment": "HOST", "id": "ADV-096", "key": "model-structure-robustness-and-exposure-mapping-harness", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-19T22:06:21Z"}
+{"assessment": "HOST", "id": "ADV-097", "key": "selection-consumers-and-what-changed-tracking", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-19T22:06:21Z"}
+{"evidence": "SendMessage receipt msg_id cf4d4045-9b93-46e7-a489-4b321d457f91 at 22:06Z 2026-11-19, receipt names SCI, scientific selection direction", "id": "ADV-095", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T22:06:56Z"}
+{"evidence": "SendMessage receipt msg_id caeac3c3-9f7e-4aa5-a7ef-e874c9259a8f at 22:06Z 2026-11-19, receipt names HE, scientific selection direction", "id": "ADV-096", "state": "SENT", "to": ["HE"], "utc": "2026-11-19T22:06:56Z"}
+{"evidence": "SendMessage receipt msg_id d8a67d8e-989c-4dcc-88e4-9a3daede3527 at 22:06Z 2026-11-19, receipt names IT Orchestrator, scientific selection direction", "id": "ADV-097", "state": "SENT", "to": ["IT Orchestrator"], "utc": "2026-11-19T22:06:56Z"}
