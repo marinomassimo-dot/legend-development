@@ -249,6 +249,13 @@
      "accepted_at": "2026-11-19T12:41:40Z",
      "evidence": "second window 133 turns birth 61k peak 309k mean 193k, 25.4M cache-read (191k per turn); third window launched, unbound 20 s",
      "updated_at": "2026-11-19T13:04:00Z"
+    },
+    {
+     "step": "Fix trace_claim_foundation.py supporting_papers: a Claim links field that begins 'none' is no link (14 PAPER records, 21 false edges); check support_linkage.py; tests; regenerate derived",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "SCI message 2026-11-19 (anchor-integrity scan defect, handed to HE)",
+     "accepted_at": "2026-11-19T14:09:16Z"
     }
    ]
   }
@@ -440,6 +447,13 @@
    "at": "2026-11-19T12:41:40Z",
    "source": "ADV-078 second trial (ADV 2026-11-19): keep the census of the successor SCI window at about 100 turns",
    "step_sha256": "d47583b8ea5b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T14:09:16Z",
+   "source": "SCI message 2026-11-19 (anchor-integrity scan defect, handed to HE)",
+   "step_sha256": "3ad9e6d996b6",
    "reopened_block": false,
    "authorised_by": null
   }
