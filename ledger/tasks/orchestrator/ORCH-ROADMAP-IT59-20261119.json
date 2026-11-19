@@ -88,10 +88,12 @@
     },
     {
      "step": "10 READ CI on the exact SHAs d13a1c5829c2 and 4082a19e5f3c and on every later landing; report only causes not already closed",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "messages 2026-11-19 (SCI R1 request, ADV-072/073, HE browser, HE CI fix), item 10",
-     "accepted_at": "2026-11-19T08:53:58Z"
+     "accepted_at": "2026-11-19T08:53:58Z",
+     "evidence": "CI read 2026-11-19: d13a1c58 and 4082a19e green; reds on e0af18023, 0ceb91986, 61e77cd71, 2962de440 traced to test_link_targets (checkpoint placeholder), test_documented_commands (my command line), a test_mandate_watch teardown race (HE, fixed fcf4db797) and two derived determinism tests; all closed; f9e90fa38, 5d2ebda6e, 83d42ec77 green",
+     "updated_at": "2026-11-19T21:51:50Z"
     },
     {
      "step": "11 CONFIRM the top four NOT_CARRIED endpoints of audit G against the originals and consumers, map the confirmed ones in dated lines, report false rows; then choose the next investment and make it visible",
