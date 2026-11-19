@@ -295,6 +295,39 @@ class AnHtmlPageWearingABinaryName(unittest.TestCase):
             capture_output=True, text=True,
         )
 
+    def _manifest_only(self, pmid: str, artifacts: list) -> Path:
+        root = self.tmp / "repo"
+        subprocess.run(["git", "init", "-q", str(root)], check=True)
+        man = root / "disease-models" / "wwox" / "research" / "deepdive_manifests"
+        man.mkdir(parents=True)
+        (man / f"PMID{pmid}.json").write_text(json.dumps({"schema_version": 2, "pmid": pmid, "source_artifacts": artifacts}), encoding="utf-8")
+        return root
+
+    def test_a_manifest_that_declares_no_artefact_is_not_reported_as_complete(self):
+        # PMID 35716775 (2026-11-19): a complete receipt whose manifest names no artefact printed "manifests: 1 | artifacts: 0 ... VERDICT: COMPLETE", a vacuous pass read as presence
+        r = self.run_tool(self._manifest_only("35716775", []), "--pmid", "35716775")
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertIn("artifacts: 0", r.stdout)
+        self.assertIn("NO ARTEFACT DECLARED", r.stdout)
+        self.assertNotIn("VERDICT: COMPLETE", r.stdout)
+        self.assertIn("[NO ARTEFACT DECLARED] PMID 35716775", r.stdout)
+
+    def test_declared_but_absent_artefacts_keep_their_own_verdict(self):
+        # PMID 19500159: two artefacts declared (pdf and html), neither on this disk: NO LOCAL EVIDENCE, as before
+        art = [{"path": "files/fulltext/PMID19500159_Suzuki2009.pdf", "sha256": "ab" * 32, "kind": "pdf"},
+               {"path": "files/fulltext/PMID19500159_Suzuki2009.html", "sha256": "cd" * 32, "kind": "html"}]
+        r = self.run_tool(self._manifest_only("19500159", art), "--pmid", "19500159")
+        self.assertIn("absent: 2", r.stdout)
+        self.assertIn("VERDICT: NO LOCAL EVIDENCE", r.stdout)
+        self.assertNotIn("NO ARTEFACT DECLARED", r.stdout)
+
+    def test_no_manifest_at_all_is_not_a_pass_either(self):
+        root = self.tmp / "repo"
+        subprocess.run(["git", "init", "-q", str(root)], check=True)
+        (root / "disease-models" / "wwox" / "research" / "deepdive_manifests").mkdir(parents=True)
+        r = self.run_tool(root)
+        self.assertIn("VERDICT: NO ARTEFACT DECLARED — no manifest matches", r.stdout)
+
     def test_html_under_a_jpg_name_is_its_own_state_and_not_present(self):
         r = self.run_tool(self.fixture("fig1.jpg", self.ERROR_PAGE))
         self.assertEqual(r.returncode, 0, r.stderr)

@@ -212,6 +212,22 @@
      "accepted_at": "2026-11-19T10:33:22Z",
      "evidence": "census on four transcripts (574-752 turns, 286-425M cache-read each, 0.48-0.57M/turn); recipe row landed in framework/scripts/README.md section 13; not tested as a restart",
      "updated_at": "2026-11-19T10:36:08Z"
+    },
+    {
+     "step": "evidence_presence.py: 'no artefact declared' instead of COMPLETE for a zero-artefact manifest; tests 35716775 and 19500159; count of other receipts touched before landing",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-19 (approved, one hour)",
+     "accepted_at": "2026-11-19T10:40:32Z",
+     "evidence": "NO ARTEFACT DECLARED verdict landed with 3 tests (35716775, 19500159, no manifest); touches 3 of 594 manifests (34214506, 35716775, 40875931)",
+     "updated_at": "2026-11-19T10:42:23Z"
+    },
+    {
+     "step": "Follow the SCI fresh-window trial: census before/after, proof of reading, failed steps; report to ADV",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV GO 2026-11-19: SCI fresh-window trial at the delivery of ADV-077",
+     "accepted_at": "2026-11-19T10:41:07Z"
     }
    ]
   }
@@ -375,6 +391,20 @@
    "at": "2026-11-19T10:33:22Z",
    "source": "ADV-078 (assignments/ADV-078.md, ADV 2026-11-19)",
    "step_sha256": "b795553ebb16",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T10:40:32Z",
+   "source": "ADV message 2026-11-19 (approved, one hour)",
+   "step_sha256": "5ae43e4abcd1",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T10:41:07Z",
+   "source": "ADV GO 2026-11-19: SCI fresh-window trial at the delivery of ADV-077",
+   "step_sha256": "9fc4cfbe7e64",
    "reopened_block": false,
    "authorised_by": null
   }
