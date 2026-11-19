@@ -1,0 +1,12 @@
+set	premise_direction_in_KO	label	detail
+M1_WNT_TARGETS	lower	ADJUSTMENT_DEPENDENT	D1_Q=False D1_Qopp=False D2_Q=False D2_Qopp=False D1_adjfail=True D2_adjfail=False
+M2_ISR_ATF4	higher	PARTIAL	D1_Q=False D1_Qopp=True D2_Q=False D2_Qopp=False D1_adjfail=False D2_adjfail=False
+M3a_OL_MATURE	lower	M3_SEE_COMBINED_ROW	D1_Q=False D1_Qopp=False D2_Q=True D2_Qopp=False D1_adjfail=True D2_adjfail=False
+M3b_OPC_LINEAGE	lower	M3_SEE_COMBINED_ROW	D1_Q=False D1_Qopp=False D2_Q=False D2_Qopp=False D1_adjfail=True D2_adjfail=True
+M4_NRF2_TARGETS	lower	FLAT	D1_Q=False D1_Qopp=False D2_Q=False D2_Qopp=False D1_adjfail=False D2_adjfail=False
+M5_GLYCOLYSIS_PDK	higher	ADJUSTMENT_DEPENDENT	D1_Q=False D1_Qopp=False D2_Q=False D2_Qopp=False D1_adjfail=True D2_adjfail=False
+M6_MYC_TARGETS	higher	FLAT	D1_Q=False D1_Qopp=False D2_Q=False D2_Qopp=False D1_adjfail=False D2_adjfail=False
+E1_ASTRO_REACTIVE	higher	ADJUSTMENT_DEPENDENT	D1_Q=False D1_Qopp=False D2_Q=True D2_Qopp=False D1_adjfail=True D2_adjfail=False
+M3_combined	block vs loss	NEITHER	mature R=-1.06 A1=-0.58; OPC R=-0.38 A1=-0.14; mouse cortex only; composition-confounded by construction
+M7_class_IIa_HDAC_MEF2	n/a	UNDECIDED_NO_RNA_READOUT	registered
+M8_EZH2	n/a	UNDECIDED_NO_RNA_READOUT	registered
