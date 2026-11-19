@@ -203,6 +203,15 @@
      "accepted_at": "2026-11-19T08:28:36Z",
      "evidence": "radar bridge rule ec12b6027, sample before/after, delivered to ADV",
      "updated_at": "2026-11-19T10:28:36Z"
+    },
+    {
+     "step": "ADV-078: measure start-context size and re-read share for the three roles over the last day with the census; name the smallest reversible change (checkpoint-and-fresh-window recipe: what the checkpoint holds, how the resumed session proves it read it, when a window is worth restarting); land as a recipe row",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-078 (assignments/ADV-078.md, ADV 2026-11-19)",
+     "accepted_at": "2026-11-19T10:33:22Z",
+     "evidence": "census on four transcripts (574-752 turns, 286-425M cache-read each, 0.48-0.57M/turn); recipe row landed in framework/scripts/README.md section 13; not tested as a restart",
+     "updated_at": "2026-11-19T10:36:08Z"
     }
    ]
   }
@@ -359,6 +368,13 @@
    "at": "2026-11-19T08:28:36Z",
    "source": "operator mandate 2026-11-19 harness continuation (ACTOR_ID plan) P3",
    "step_sha256": "9f2509ffad09",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T10:33:22Z",
+   "source": "ADV-078 (assignments/ADV-078.md, ADV 2026-11-19)",
+   "step_sha256": "b795553ebb16",
    "reopened_block": false,
    "authorised_by": null
   }
