@@ -1,0 +1,76 @@
+## DECISION
+
+**Do not wait. Assign now.** I could not send anything from this session, so these are the messages I would send.
+
+**Why waiting is wrong.** Practice rule 3 (`roles/advisor_practice.md` §1) and the charter's "Engine" clause (`roles/advisor.md`) both apply. A recipient idle for more than about an hour, with no blocker that names an awaited event, means I assign from the whole roadmap in that turn. SCI and IT have been idle since about 05:38, so 1h40 by now. The 05:25 MEETING gives them no awaited event. It records "nothing pending, no blockers", which is an empty queue, not a named wait. My earlier "motivated wait" was exactly the failure rule 3 describes: a plateau of one strand read as a plateau of the programme.
+
+**Before sending (cheap checks, not gates).**
+- Run `date -u` for time labels.
+- Read `tick()["activity"]` (rule 3).
+- Check CI on the tip SHA (rule 22), because the 05:25 note says the green CI cited belongs to 65367c768 only.
+- Confirm in SCI's record that ADV-070 was delivered. I would verify it myself against the held data (rule 4), not by the message.
+- Record `SENT` only after each send's receipt names the recipient (rule 20).
+
+**Messages.** Each is one unit with one owner, copied to the Orchestrator's coordination (charter: no second plan on the same work). No medical advice and no individual-level information.
+
+1. **To SCI (bound session):** ADV-0xx, the PPxY partner branch of the interneuron gap (ERBB4, NETO2).
+   - **Why:** IT's prospect at the 05:25 MEETING found zero hits in needs, investigations, cards, packages and open questions. The 05:25 decision 2 named it the next unit after ADV-070 "if SCI judges it worth one round".
+   - **Task:**
+     - Run one in-silico round on held originals.
+     - Fix the pass/fail criteria before reading.
+     - Use a depth-of-check statement for any "not found" (two routes, rule 14).
+     - Read quotations from the held text (rule 9).
+   - **Out of scope:** no tier change.
+   - **Output:** a short result file. IT then maps it in one pass.
+   - **Dispatch:** state model and effort explicitly (rule 17).
+   - **Escape clause:** if SCI judges it not worth a round, it says so with a reason and takes the next item from the portfolio instead. It does not go idle.
+
+2. **To IT:** two bounded items.
+   - **(a) Open-questions row IT41-Q04.** RP-003 names it as "next in line" among zero-spend reachable rows. 49 rows are STILL_OPEN_UNTOUCHED, a lower bound. Take it, and pick one more reachable row from that map, naming the choice and the exclusions.
+   - **(b) Re-derive the round-1 K-count** that IT itself named as least trusted. It said the direction is trusted, not the numbers. Output: a corrected count or a statement that it stands.
+
+3. **To HE:** no new unit unless the tick shows HE idle without a blocker. Then I would assign the parked RP-029 items:
+   - (a) the adversarial fetch/merge/push timing, cold and warm gate;
+   - (b) the pre-check reminder line for derived surfaces;
+   - (c) the objectives in HE's plan record.
+
+**What I would not do.**
+- Run the "no-material reader" round. The 05:25 decision 3 says it only runs when attached to a scheduled decision, and none is.
+- Touch anything reserved to the operator: laboratory, clinical channel, gate cache, human visit, registry query, engine budget, sponsor question.
+
+**Inconsistency I would flag.** The checkout holds material dated after 07:18:
+- a MEETING file stamped 11:26Z;
+- a "dated correction 08:31Z" in the 05:25 meeting file;
+- assignments ADV-071 to ADV-079.
+
+This contradicts the facts I was given: no commit since 06:20 and the next meeting at 11:25. I did not treat those later passages as established at 07:18. The 08:31Z note, which says "all decisions need a laboratory" does not describe the whole roadmap, matches my conclusion, but I did not rely on it. I did not check whether my assignments duplicate ADV-071 to ADV-079. The first action before sending is `git log` and the ledger/assignments listing, then dropping any item already assigned.
+
+**Next evaluation.** The next hourly tick. Resume condition for the next wait, if one is ever warranted: a named awaited event, as rule 3 requires.
+
+## RELIED_ON (in reading order)
+1. `roles/advisor.md` (charter, "Engine", reserved decisions)
+2. `framework/state/state_manifest_current.md` (`current_state: READY`, line 139)
+3. `framework/protocols/cross_session_transport.md`: I found only the §12 and §13 headings by grep and did not read their text.
+4. `roles/advisor_practice.md` (rules 3, 4, 9, 14, 17, 20, 22)
+5. Glob of the `advisor_pilot_20261113/` campaign folder (listing only)
+6. `disease-models/wwox/research/drug_repurposing/research_portfolio.tsv` (RP-001 to RP-032)
+7. `meetings/MEETING-20261119T052503Z-935k_dpu.md` (the previous MEETING, fully read)
+8. First 40 lines of `meetings/MEETING-20261119T112615Z-ans04_zz.md` (post-dated, used only for the inconsistency)
+9. Globs of `assignments/ADV-07*` and `*ADV070*` (listings only; I did not open ADV-070 or its result)
+
+I did not run `mandate_continuity.py guidance`, `strategic_advisor.py` or the tick, because I cannot run commands here. I also did not read `LEGEND_CORE.md` §21c to §21e, `roadmap_current.md` or `CONTINUOUS.json`.
+
+## CHARTER_PRACTICE_GUIDANCE_FOUND
+- **Charter:** yes, `roles/advisor.md`, including the 2026-11-19 operator-confirmed charter of the seat.
+- **Practice rules:** yes, `roles/advisor_practice.md` (23 rules).
+- **Operator's standing guidance:** found only as it is cited in those files and in the portfolio:
+  - the permanent instruction of 2026-11-18 on "more promising" by endpoint;
+  - the 2026-11-15 and 2026-11-18 instructions to keep assigning and not wait.
+
+  I did not read the EMPATHY section or the `mandate_continuity.py guidance` output directly.
+
+## TURNS
+5 tool turns, 13 calls in total. Calls within a turn were issued in parallel.
+
+## MEMORY_CANARY
+No. I see no private memory notes or auto-memory index from an earlier session in my context.
