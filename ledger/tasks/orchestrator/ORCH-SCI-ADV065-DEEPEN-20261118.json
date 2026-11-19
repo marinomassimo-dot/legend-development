@@ -4,7 +4,7 @@
  "STANDING": "mandate that holds the work this actor has accepted; the owner writes `MANDATE_BOUND: ORCH-SCI-ADV065-DEEPEN-20261118` in its session",
  "SESSION_NAME": "orch-adv004-mandate-reconciliation",
  "AUTHORISED_QUEUE_ACCEPTED": {
-  "MANDATE_STATE": "COMPLETE",
+  "MANDATE_STATE": "OPEN",
   "OBJ_ACCEPTED": {
    "order": 1,
    "steps": [
@@ -134,6 +134,49 @@
      "authorised_by": "operator night mandate section G (continue the next useful deepening in the authorised programme; the operator is a contribution, not the dependency) and the advisor assignment ADV-070 (advisor_pilot_20261113/assignments/ADV-070.md, host decision at MEETING-20261119T052503Z-935k_dpu)",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv070_stage_adjusted_p3a_sci_20261119/STAGE_ADJUSTED_REREAD_RESULT_ADV070_SCI_20261119.md: pre-registration hashed first (bf529dae2); covariate has low leverage in the only qualifying contrast, stage adjustment not decisive; IEG lower and Npy higher stable to the covariate; no tier change; reasoned stop",
      "updated_at": "2026-11-19T05:30:49Z"
+    },
+    {
+     "step": "A: targeted premise checks that can change a decision (GEO sample=animal verified from the deposit; independent blind recompute of the ADV-068 and ADV-069 primary quantities; frozen criteria untouched; primary and sensitivity kept apart; proportionate verification of the negative conclusions)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator continuation 2026-11-19 step 1",
+     "accepted_at": "2026-11-19T08:29:43Z",
+     "authorised_by": "operator message 2026-11-19 SCIENTIFIC CONTINUATION (Broaden the search and generate useful, testable alternatives), sections A to F; SESSION SCI"
+    },
+    {
+     "step": "B: WW1-PPxY first pass with complete originals (six questions: direct vs proposed, neural systems, functional consequences, interpretable lever, unsupported transfers, can it improve a comparison or generate a distinct experiment); close with a reason or hand to D; no endless branch",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator continuation 2026-11-19 step 2",
+     "accepted_at": "2026-11-19T08:29:44Z"
+    },
+    {
+     "step": "C: source base against the corpus (effective readings, partial readings, open questions, mechanisms the module does not use, accessible sources that could change a choice); PubMed 43048821 triage (identity, relevance, prior reading, possible contribution)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator continuation 2026-11-19 step 3",
+     "accepted_at": "2026-11-19T08:29:44Z"
+    },
+    {
+     "step": "D: pharmacological reasoning chains (observation, relation, hypothesised action, context, pharmacological comparison, prediction, rejecting result) separating WWOX specificity, general anticonvulsant activity, target function, alternative compound actions, symptomatic vs development, repurposing drug vs probe; a comparison may conclude that no compound is justified yet if it names a decisive measure",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator continuation 2026-11-19 step 4",
+     "accepted_at": "2026-11-19T08:29:44Z"
+    },
+    {
+     "step": "E: materials-contribution test with IT on a real decision; improvement criteria fixed before; equal search budget; targeted contexts; observed cost; delegation_budget.md respected",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator continuation 2026-11-19 step 5",
+     "accepted_at": "2026-11-19T08:29:44Z"
+    },
+    {
+     "step": "F: delivery to IT and ADV (question and decision, evidence and depth, competing explanations, hypothesis or comparison, discriminating experiment, consumer delta, executable work, laboratory limit, cost and diagnosis) and proposal and uptake of the useful continuation inside the authorised mandate",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator continuation 2026-11-19 step 6",
+     "accepted_at": "2026-11-19T08:29:44Z"
     }
    ]
   }
@@ -236,6 +279,48 @@
    "step_sha256": "52cae561f875",
    "reopened_block": true,
    "authorised_by": "operator night mandate section G (continue the next useful deepening in the authorised programme; the operator is a contribution, not the dependency) and the advisor assignment ADV-070 (advisor_pilot_20261113/assignments/ADV-070.md, host decision at MEETING-20261119T052503Z-935k_dpu)"
+  },
+  {
+   "at": "2026-11-19T08:29:43Z",
+   "source": "operator continuation 2026-11-19 step 1",
+   "step_sha256": "5e80451ac543",
+   "reopened_block": true,
+   "authorised_by": "operator message 2026-11-19 SCIENTIFIC CONTINUATION (Broaden the search and generate useful, testable alternatives), sections A to F; SESSION SCI"
+  },
+  {
+   "at": "2026-11-19T08:29:44Z",
+   "source": "operator continuation 2026-11-19 step 2",
+   "step_sha256": "e40849af5ebd",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T08:29:44Z",
+   "source": "operator continuation 2026-11-19 step 3",
+   "step_sha256": "829104877baf",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T08:29:44Z",
+   "source": "operator continuation 2026-11-19 step 4",
+   "step_sha256": "1d96cd27b97b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T08:29:44Z",
+   "source": "operator continuation 2026-11-19 step 5",
+   "step_sha256": "4dc1a67ee610",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T08:29:44Z",
+   "source": "operator continuation 2026-11-19 step 6",
+   "step_sha256": "777dfc62a2bf",
+   "reopened_block": false,
+   "authorised_by": null
   }
  ],
  "DELEGATIONS": [
@@ -245,6 +330,7 @@
   "ADV-065c P1 producer (legend-delegate, agent aa059df2): asked sonnet/medium; read back claude-sonnet-5-5 x31, medium x31; birth 20,859; 31 turns; output 48,783; cache read 2,675,790; peak 166,400; completed lever genetics and engagement table (L1-L3, N1, N2); 8 new full texts by keyword-sentence scans, 75 quotations matched, no STOP.",
   "ADV-065c verifier V (legend-delegate, agent a8d6cc32): asked sonnet/high; read back claude-sonnet-5-5 x73, high x73; birth 20,878; 73 turns; output 140,360; cache read 13,690,481; peak 434,873; two phases; phase 1 32 statements (29 supported, 3 partly, reanalysis rerun byte-identical), phase 2 45 inference items (15 sound, 19 overstated, 9 missing rival, 1 unsupported, 1 transfer error); all replacement wordings applied; the KCC2-above-NKCC1 development ranking withdrawn.",
   "ADV-065c recheck verifier (legend-delegate, agent a2c66295): asked sonnet/high; read back claude-sonnet-5-5 x72, high x72; birth 20,869; 72 turns; output 70,743; cache read 10,434,740; peak 302,141; 19 statements (18 supported, 1 partly), 6 overstatements reworded, 1 new rival added, 3 consistency defects fixed.",
-  "ADV-067 producer (legend-delegate, agent ae15fa0e): asked sonnet/medium; read back claude-sonnet-5-5 x28, medium x28; birth 21,223; 28 turns; output 37,502; cache read 1,871,922; peak 127,832; completed the lithium regimen table (T1 to T5), 41 quotations matched, 0 new full texts (Cheng 2020 the only full text), no STOP. Case E simple path (main session slice): 5 turns, output 5,401, cache read 3,824,984."
+  "ADV-067 producer (legend-delegate, agent ae15fa0e): asked sonnet/medium; read back claude-sonnet-5-5 x28, medium x28; birth 21,223; 28 turns; output 37,502; cache read 1,871,922; peak 127,832; completed the lithium regimen table (T1 to T5), 41 quotations matched, 0 new full texts (Cheng 2020 the only full text), no STOP. Case E simple path (main session slice): 5 turns, output 5,401, cache read 3,824,984.",
+  "A2 verifier (legend-delegate, agent a3664627, blind recompute of the ADV-068, ADV-069 and ADV-070 pre-registrations, 2026-11-19): asked sonnet/high; read back claude-sonnet-5-5 x14, high x14; birth 21,400; 14 turns; output 29,499; cache read 646,206; peak 77,676; 18 tool calls, 3.6 minutes; A2_REPORT.md: all primary numbers reproduce; ADV-068 robustness correction (three single-gene omissions flip R-B to R-D under the half-PV reading, margin 0.007); ADV-069 label ambiguity; no decision changed."
  ]
 }
