@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-19T00:34:33Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-19T01:04:33Z",
+ "event_id": "FTR-20261119-34747138-70",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [full text]: \"rescue the growth retardation, hypoglycemia, epileptic seizures, ataxia, and premature death of Wwox‐null mice\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/census_alterations_sci_20261119/CENSUS_WWOX_ALTERATIONS_VS_LOOP_SCI_20261119.md"
+ ],
+ "prior_receipt": "FTR-20261118-34747138-67",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "c430d5d2771bb0cc9cced8e27c095cab1947f1299e71ddd7bba156fd47689b46",
+ "source_kind": "fulltext_remote",
+ "source_locator": "files/fulltext/adv065c_20261118/PMID34747138_PMC8649866_efetch_pmc.xml",
+ "study_id": {
+  "pmid": "34747138"
+ },
+ "workflow": "SCI census of documented Wwox alterations: the saved open-access full text searched in code for hypoglycaemia, glial activation and conduction terms and the sentences around the matches read; not read in full; figures and supplements not reached"
+}
