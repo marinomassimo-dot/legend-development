@@ -250,3 +250,5 @@ S100/S101 sources (abstract level), S104 (as stated in the needs row, not indepe
   was verified against full text.
 * No attempt was made to re-run the centred-ratio computations; the checker already re-reads them from the committed tables.
 * This verification does not make any seed usable or unusable; it lists what the package owner should change.
+
+Update 2026-11-19 (IT59, `BATCH_20261119_005`): finding H1 quotes Results 3.3 as '(significant at p < .05)'; all three held byte copies read '(Il6 significant at p < .05)'. The direction for Tnf-a (both more than 1.5-fold up) is the source's; its significance is not stated. History above is not edited. See `research/drug_repurposing/generation_it59_20261119/TNF_SIGNIFICANCE_CHAIN_IT59.md`.

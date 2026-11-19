@@ -33,3 +33,12 @@ Audit: `research/locator_audits/2026-11-19_claim005_wording_it59/` (6 triples, q
 * **G1 (T4).** The CA3 clause reads: «the text also calls PV+ counts significantly low in CA1 and CA3 in a qualitative sentence; the stereological sentence gives P values for DG and CA1 only, and no CA3 P value is in the text».
 * **Carried as limits:** whether the Tnf-a bar carries an asterisk in Fig 4E is not verifiable (figure not held); the legend asterisk names no gene.
 **Next:** a second check of the section 4 sentences, then `BATCH_COMMIT` MINOR (class restated), G8 first.
+
+## 5 · REVISION 2 (2026-11-19, after the second blind check of the section 4 sentences)
+Check: `research/locator_audits/2026-11-19_claim005_wording_it59/AUDIT2_REPORT_AS_DELIVERED.md` (3 triples, one fresh `legend-delegate`, asked sonnet/high): all three SUPPORTED (T1 qualified: the DG-only reading rests on a qualitative sentence and the CA1/CA3 data are in figures not held). The G4 numbers (EV tables) were verified by SCI on the tables, not in a blind audit, and are written with that attribution.
+
+## BATCH DISPOSITION — `BATCH_20261119_005` (2026-11-19, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** PROPAGATED
+
+8 record-scoped ops on `CLAIM 005` (G1, G2, G3, G4, G5, G6, G7 and the G8 correction note: the 2026-10-30 quotation dropped «Il6»; the true state is 'Tnf-a significance not stated'). **Change class restated: MINOR.** Dated lines on the verifier file (H1) and the IT22 README point to `generation_it59_20261119/TNF_SIGNIFICANCE_CHAIN_IT59.md`; `seeds.tsv` row S085 is an input and is not edited.

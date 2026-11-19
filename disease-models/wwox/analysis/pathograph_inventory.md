@@ -51,7 +51,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | Node | Declared title | Status | Type | Pathway | Scale | Deg | Papers |
 |---|---|---|---|---|---|---|---|
 | CLAIM 001 | Vigabatrin associated with VABAM in WWOX-DEE | conflicting evidence | DATO | P2 — GABAergic vulnerability / safety | NOT_ANNOTATED | 5 | 9 |
-| CLAIM 002 | WWOX-LoF causes network hyperexcitability; AAV-WWOX rescues organoid phenotype | consolidated baseline | DATO + INFERENZA prudente | P1 — Ca²⁺ / network dysregulation; P7 —  | NOT_ANNOTATED | 2 | 3 |
+| CLAIM 002 | WWOX loss is associated with network hyperexcitability in human organoids; re-expression by AAVS | consolidated baseline | DATO + INFERENZA prudente | P1 — Ca²⁺ / network dysregulation; P7 —  | NOT_ANNOTATED | 2 | 3 |
 | CLAIM 003 | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination | consolidated baseline | DATO | P4 — myelination / white matter | NOT_ANNOTATED | 3 | 1 |
 | CLAIM 004 | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement | consolidated baseline | DATO | P7 — gene therapy readiness | NOT_ANNOTATED | 10 | 1 |
 | CLAIM 005 | Reduced GABAergic interneurons and glial activation in WWOX-KO | consolidated baseline | DATO | P2 — GABAergic vulnerability; P6 — neuro | NOT_ANNOTATED | 20 | 6 |
@@ -182,7 +182,7 @@ assembler lists the titles and stops there.
 | Node | Connective | Class | Morphology | Declared title |
 |---|---|---|---|---|
 | CLAIM 001 | `associated with` | ASSOCIATIVE | finite or multiword | Vigabatrin associated with VABAM in WWOX-DEE |
-| CLAIM 002 | `causes` | CAUSAL | finite or multiword | WWOX-LoF causes network hyperexcitability; AAV-WWOX rescues organoid phenotype |
+| CLAIM 002 | `associated with` | ASSOCIATIVE | finite or multiword | WWOX loss is associated with network hyperexcitability in human organoids; re-expression b |
 | CLAIM 003 | `induces` | CAUSAL | finite or multiword | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination |
 | CLAIM 004 | `rescue` | AMBIGUOUS_LEXICAL_FORM | ambiguous bare form | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement |
 | CLAIM 005 | `reduced` | AMBIGUOUS_LEXICAL_FORM | ambiguous bare form | Reduced GABAergic interneurons and glial activation in WWOX-KO |
@@ -328,8 +328,8 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 |---|---|
 | AMBIGUOUS_LEXICAL_FORM | 1445 |
 | ARROW | 18 |
-| ASSOCIATIVE | 89 |
-| CAUSAL | 359 |
+| ASSOCIATIVE | 90 |
+| CAUSAL | 358 |
 | DEPENDENCY | 104 |
 
 A connective class is a property of the word, not a verdict about the
@@ -348,7 +348,7 @@ its sentence is a reading, and this tool does not perform readings.
 | Bound to | Source | Connective | Proposition (verbatim) |
 |---|---|---|---|
 | CLAIM 001 | claim_title | `associated with` | Vigabatrin associated with VABAM in WWOX-DEE |
-| CLAIM 002 | claim_title | `causes` | WWOX-LoF causes network hyperexcitability; AAV-WWOX rescues organoid phenotype |
+| CLAIM 002 | claim_title | `associated with` | WWOX loss is associated with network hyperexcitability in human organoids; re-expression by AAVS1 knock-in or lentivirus |
 | CLAIM 003 | claim_title | `induces` | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination |
 | CLAIM 004 | claim_title | `rescue` | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement |
 | CLAIM 005 | claim_title | `reduced` | Reduced GABAergic interneurons and glial activation in WWOX-KO |
@@ -377,6 +377,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 597 input files; digest
-`349cc4c1f78f147e`. Sources: the claim, paper and
+`2a9f81e57dd88c2c`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
