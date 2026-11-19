@@ -37,3 +37,6 @@ One preparation, one laboratory, mouse slices; the age windows rest on one whole
 
 ## 8. What the team does next without waiting
 Close the audit of the repaired dossier sentences; fix the Pick 2 rule with IT's last read-through; keep the funding view current; after the supply arrives, read the clinical series in two passes; keep claim audits stopped until the write-time lint warning exists and flags something.
+
+
+**Dated note, 23:24Z on 2026-11-19 (host clock), after the operator's direction "Scientific selection before laboratory work":** this document is **superseded as a SELECTION**. It remains study-preparation material: it describes how a shared slice preparation and a clinical-data project could be prepared and what each could and could not resolve; it selects no candidate and the pair it describes is not two winning pharmacological choices. The selection now proceeds through comparative in-silico work (SELECTION_NOTE_V1_ADV_20261119.md, its dated integration and branch register); the funding view and the opportunity map are study-preparation diagnostics, and the hindcast is a diagnostic of that evaluation. Cost and quotes play no role in the selection. No personal or individual-level information is used or recorded.

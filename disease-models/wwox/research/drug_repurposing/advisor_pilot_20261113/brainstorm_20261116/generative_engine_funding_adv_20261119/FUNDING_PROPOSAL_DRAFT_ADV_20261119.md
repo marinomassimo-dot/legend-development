@@ -52,3 +52,6 @@ Revision 2 applied nine corrections from IT's read-through (a person who can say
 
 ## What this draft does not claim
 No probability of benefit; no ranking by score; no statement that the pair is optimal: it is a **labelled reading** of the ten mapped opportunities with its weakest links named, and it changes if a premise changes.
+
+
+**Dated note, 23:24Z on 2026-11-19 (host clock), after the operator's direction "Scientific selection before laboratory work":** this document is **superseded as a SELECTION**. It remains study-preparation material: it describes how a shared slice preparation and a clinical-data project could be prepared and what each could and could not resolve; it selects no candidate and the pair it describes is not two winning pharmacological choices. The selection now proceeds through comparative in-silico work (SELECTION_NOTE_V1_ADV_20261119.md, its dated integration and branch register); the funding view and the opportunity map are study-preparation diagnostics, and the hindcast is a diagnostic of that evaluation. Cost and quotes play no role in the selection. No personal or individual-level information is used or recorded.
