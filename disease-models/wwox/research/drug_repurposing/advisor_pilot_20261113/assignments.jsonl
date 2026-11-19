@@ -182,3 +182,5 @@
 {"evidence": "SendMessage receipt msg_id c83b07ac-8332-4bad-830d-61459e71f27a at 18:17Z 2026-11-19, receipt names SCI, brainstorm", "id": "ADV-091", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T18:17:13Z"}
 {"evidence": "SendMessage receipt msg_id 2687fd5d-e6da-4951-bc47-09f9789454ab at 18:17Z 2026-11-19, receipt names IT Orchestrator, brainstorm", "id": "ADV-092", "state": "SENT", "to": ["IT Orchestrator"], "utc": "2026-11-19T18:17:13Z"}
 {"evidence": "SendMessage receipt msg_id 14e11563-2e52-44af-b79a-ef34d6b278db at 18:17Z 2026-11-19, receipt names HE, brainstorm", "id": "ADV-093", "state": "SENT", "to": ["HE"], "utc": "2026-11-19T18:17:13Z"}
+{"assessment": "HOST", "id": "ADV-094", "key": "blind-check-of-the-pilot-dossier-and-blind-hindcast-scoring", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-19T19:21:17Z"}
+{"evidence": "SendMessage receipt msg_id a306c151-5520-4e21-87a8-e5daaafe8572 at 19:21Z 2026-11-19, receipt names IT Orchestrator, after ADV-091 delivery", "id": "ADV-094", "state": "SENT", "to": ["IT Orchestrator"], "utc": "2026-11-19T19:21:34Z"}
