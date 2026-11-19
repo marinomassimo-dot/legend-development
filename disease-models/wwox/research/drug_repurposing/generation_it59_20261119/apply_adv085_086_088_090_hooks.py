@@ -1,0 +1,17 @@
+"""IT59 (2026-11-19), checkpoint item 4: SCI's ADV-088 and ADV-090 age lines, the ADV-085 B note and the ADV-086 unread-corpus note, mapped onto the arm table notes in ONE dated paragraph.
+Dated line only: the text above it is not edited; no cell, tier, origin, arm, size or stop rule changes. Idempotent (marker below)."""
+from pathlib import Path
+
+DR = Path(__file__).resolve().parent.parent
+B = "advisor_pilot_20261113/brainstorm_20261116/"
+MARK = "(IT59, on SCI's ADV-085 B note, ADV-086, ADV-088 and ADV-090"
+TXT = ("\n\nUpdate 2026-11-19 " + MARK + "; the text above is not edited; no cell, tier, origin, arm, size or stop rule changes; hypothesis level; not medical advice): "
+       "(1) Basis of every age in these notes, from ADV-088 (" + B + "expression_timecourse_adv088_sci_20261119/): a line that carries an age and a number rests on ONE public whole-brain mouse bulk RNA-seq dataset (E-MTAB-6798): four samples per age at P0, P3, P14, P28 and P63, transcript level, no P7, P10, P17 or P21, no layers, no protein, not the knockout. What may be cited with that limit: Pvalb at about 0.47 of its plateau at P14 (replicates 0.36 to 0.60) and 0.89 at P28; the Slc12a5 to Slc12a2 ratio 3.12 at P3, 5.65 at P14 and 5.28 at P28, at plateau at P14, the first age sampled after P3 (where the rise ends inside P3 to P14 is not measured; SCI repaired this wording after IT's blind check, so a line that says the P13 to P17 window lies after the rise overshoots); T-type transcripts flat between P14 and P28 with a composition change between P3 and P14 (Cacna1h falls to less than half, Cacna1i rises about 2.6 times); Kcnq2 transcript about 49 percent higher at P28 than at P14. "
+       "(2) Design lines from ADV-090 (ordering page, dated lines of SCI; for the laboratory to decide, not changes): row 4 (E_GABA) an early point at P9 to P10 suggested as a defined point of the arm, with a control at each age; row 6 and the pup brief: same-day littermate controls and the exact age in days per animal, which hold without the dataset. "
+       "(3) ADV-085 B note (" + B + "pv_population_b_adv085_sci_20261119/) onto the row that separates interneuron loss from delayed marker onset: the only PV cell count in the held originals is one group-level stereology value (germline knockout, hippocampus, 7 knockout against 7 control animals, whole hippocampus minus 44 percent) with no denominator, compatible with loss and with PV-negative cells that are present; the human organoid papers run the other way on GABAergic markers and carry no PVALB, SST or VIP row; the separating measurement is the PV-immunoreactive fraction of a fate-mapped interneuron population per animal at P14, P17 and P21. "
+       "(4) ADV-086 unread corpus (" + B + "unread_corpus_adv086_sci_20261119/): 452 of 706 corpus records have no receipt; the texts that could change a decision are the clinical series and cohorts (a 2026 burst-suppression EEG cohort, a 2025 prospective infant-epilepsy cohort, a 2020 compound-heterozygous case report, and eight paywalled series), all blocked to a plain client; they bear on onset age and assay age (row 11) and on a callosal correlate (rows 8 and 9). Whether a card or need already carries their content was NOT checked here.")
+p = DR / (B + "ARM_TABLE_V9_NOTES_IT_20261117.md")
+s = p.read_text(encoding="utf-8")
+if MARK not in s:
+    p.write_text(s.rstrip("\n") + TXT + "\n", encoding="utf-8")
+print("ok")

@@ -199,6 +199,8 @@ def render(d: Path) -> str:
     p.append("<h1>Which study could change which decision: an ordinal view</h1>")
     p.append('<p class="first">Funding order is not research order. Nothing on this page is a score, a probability of benefit '
              'or a recommendation; the orderings below are declared, ordinal, and shown beside the evidence they rest on.</p>')
+    p.append('<p class="first">The case for funding a study rests on its dossier: the decisive uncertainty and the outcome-to-decision table, not on any score or on the orderings below. '
+             'A blind hindcast of the four components (ADV-094, 2026-11-19) showed no separation of known successes from known failures, in a run the scorer recognised ten of twelve pairs of; the components are labels of what is known, never a sort key.</p>')
     p.append('<p class="note">Hypothesis level. Reference genotype class only. Not medical advice. Costs appear only as ranges the '
              f'operator supplies ({sum(1 for _ in costs)} supplied; default "{NS}"). Input digest {digest}.</p>')
     # Table A
