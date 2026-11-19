@@ -256,6 +256,15 @@
      "owner": "plan",
      "source": "SCI message 2026-11-19 (anchor-integrity scan defect, handed to HE)",
      "accepted_at": "2026-11-19T14:09:16Z"
+    },
+    {
+     "step": "Read the first radar briefing after the bridge change (2026-11-20T05:20Z) and report whether anything beyond the lexical bridge is justified",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "source": "ADV message 2026-11-19 14:17Z (choose your next investment; written reason allowed)",
+     "accepted_at": "2026-11-19T14:21:45Z",
+     "blocker": "the first radar briefing after the bridge change is produced at 2026-11-20T05:20Z by the daily scout",
+     "updated_at": "2026-11-19T14:21:45Z"
     }
    ]
   }
@@ -454,6 +463,13 @@
    "at": "2026-11-19T14:09:16Z",
    "source": "SCI message 2026-11-19 (anchor-integrity scan defect, handed to HE)",
    "step_sha256": "3ad9e6d996b6",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T14:21:45Z",
+   "source": "ADV message 2026-11-19 14:17Z (choose your next investment; written reason allowed)",
+   "step_sha256": "a8cc3bfe2eff",
    "reopened_block": false,
    "authorised_by": null
   }
