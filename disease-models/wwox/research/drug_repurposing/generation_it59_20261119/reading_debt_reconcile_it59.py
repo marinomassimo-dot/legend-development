@@ -3,8 +3,11 @@ Run from the repository root:  python3 disease-models/wwox/research/drug_repurpo
 Categories of the coverage_report 'reading debt' entries (CORPUS records whose effective depth is catalogued):
   A  the paper has a receipt (event id carries its PMID) owned by ANOTHER registry entry: the stub duplicates a processed record;
   D  no receipt and no promoted/resolved pointer: genuinely catalogued as far as the ledger and the registry say."""
-import collections, csv, json, re, subprocess, sys
+import argparse, collections, csv, json, re, subprocess, sys
 from pathlib import Path
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser(description="Reading debt against the receipt ledger (reading only): classifies the coverage_report reading-debt entries and writes reading_debt_classified_it59.tsv and queue_start_here_with_depth_it59.tsv next to this script. Run from the repository root; no registry is edited.")
+    ap.parse_args()
 ROOT = Path.cwd(); HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "framework/scripts"))
 import coverage_report as C, fulltext_receipts as receipts

@@ -47,8 +47,11 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      try the lock: publishers land in arrival order. A ticket whose process is gone (killed, crashed) is pruned by the next waiter, so a dead waiter never blocks the queue; the holder's
      ticket is removed when it finishes. The position is printed once ('queue position 3 of 4'). The gate, the expectation, the merge under the lock, the HEAD re-read and the ls-remote
      confirmation are unchanged. A publisher running an OLDER copy of this tool does not take a ticket and still competes for the bare lock: the order is strict only among new copies.
+  10. `--regenerate-derived` (with `--serialize`, opt-in, 2026-11-19): after the merge, under the lock, `candidate_tree_freshness.py --regenerate` regenerates the derived surfaces that are stale
+     on the merged tip and commits exactly those files; the gate then judges that commit and it is the one pushed (`REGENERATED ... a -> b` is printed). Used by whoever records receipts,
+     so that coverage_report.md and reading_state.md are never behind the ledger on the pushed SHA. About 80 s of lock time. Without the flag nothing changes.
 
-Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>]]      (default branch: main)
+Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--regenerate-derived]]      (default branch: main)
 """
 from __future__ import annotations
 import atexit, fcntl, os, signal, subprocess, sys, time
@@ -60,6 +63,7 @@ from pathlib import Path
 # to prevent.
 ROOT = Path(os.environ.get("LEGEND_SAFE_PUSH_ROOT", Path(__file__).resolve().parents[2]))
 GATE = Path(os.environ.get("LEGEND_SAFE_PUSH_GATE", ROOT / "scripts" / "public_release_gate.py"))
+REGEN = Path(os.environ.get("LEGEND_SAFE_PUSH_REGEN", ROOT / "framework" / "scripts" / "candidate_tree_freshness.py"))
 
 
 def _start_ticks(pid: int) -> str:
@@ -132,6 +136,9 @@ def main(argv: list[str]) -> int:
     if "--serialize" in args:
         serialize = True
         args.remove("--serialize")
+    regenerate = "--regenerate-derived" in args
+    if regenerate:
+        args.remove("--regenerate-derived")
     for i, a in enumerate(args):
         if a == "--lock-timeout":
             if i + 1 >= len(args) or not args[i + 1].isdigit():
@@ -151,7 +158,7 @@ def main(argv: list[str]) -> int:
             del args[i]
             break
     if not 1 <= len(args) <= 2:
-        return fail("usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>]]")
+        return fail("usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--regenerate-derived]]")
     remote, branch = args[0], (args[1] if len(args) == 2 else "main")
 
     for bad in ("+", "--force", "-f", "--force-with-lease"):
@@ -174,6 +181,9 @@ def main(argv: list[str]) -> int:
         if want != before:
             return fail(f"HEAD is {before} but the caller expected {want} (a failed merge or checkout before this call?). "
                         "Nothing was gated or pushed.")
+
+    if regenerate and not serialize:
+        return fail("--regenerate-derived needs --serialize: the derived surfaces are regenerated under the landing lock, on the tip being published. Nothing was gated or pushed.")
 
     lock_fh = None
     if serialize:
@@ -225,6 +235,21 @@ def main(argv: list[str]) -> int:
                 return fail(f"working tree is not clean after the merge of {tip[:12]}; nothing was gated or pushed.")
             print(f"MERGED {tip[:12]} into {before[:12]} -> {new_head[:12]} under the landing lock", flush=True)
             before = new_head
+
+    if regenerate:
+        # 2026-11-19, third recurrence in a day: a receipts landing left coverage_report.md and reading_state.md behind the ledger and CI failed on the pushed SHA. The repair is a
+        # step of the sequence, not a refusal: under the lock, on the merged tip, the existing freshness tool regenerates what is stale and commits exactly those files; the gate then
+        # judges the commit that is pushed. Opt-in; nothing happens without the flag.
+        regen = run(sys.executable, str(REGEN), "--regenerate", "--repo", str(ROOT))
+        print("\n".join(l for l in regen.stdout.splitlines() if l.strip())[-400:], flush=True)
+        if regen.returncode != 0:
+            return fail(f"--regenerate-derived: the freshness tool exited {regen.returncode}: {(regen.stderr or regen.stdout).strip()[-300:]}. Nothing was gated or pushed.")
+        if run("git", "status", "--porcelain").stdout.strip():
+            return fail("--regenerate-derived left the working tree unclean. Nothing was gated or pushed.")
+        regenerated = run("git", "rev-parse", "HEAD").stdout.strip()
+        if regenerated != before:
+            print(f"REGENERATED derived surfaces under the landing lock: {before[:12]} -> {regenerated[:12]}", flush=True)
+            before = regenerated
 
     gate = run(sys.executable, str(GATE))
     verdict = [l for l in gate.stdout.splitlines() if l.startswith("VERDICT")]

@@ -350,6 +350,7 @@ def main(argv: list[str] | None = None) -> int:
             rows = report["artifacts"]
             bad = [r for r in rows if r["state"] != PRESENT]
             if not rows:
+                print(f"  [NO ARTEFACT DECLARED] PMID {report['pmid']}: the manifest fingerprints no artefact, so nothing here shows that the bytes of this reading exist")
                 continue
             if not bad:
                 print(f"  [OK]      PMID {report['pmid']}: {len(rows)}/{len(rows)} present and matching")
@@ -402,6 +403,12 @@ def main(argv: list[str] | None = None) -> int:
     if unusable:
         print("VERDICT: PARTIAL — some declared evidence is absent from this checkout "
               "or is not the artefact its name promises.")
+        return 0
+    if total_artifacts == 0:
+        # 2026-11-19 (declaration is not attestation): a manifest that declares nothing used to print COMPLETE, a vacuous pass read as presence (PMID 35716775, a complete receipt whose
+        # text had to be re-acquired). A pass needs something declared.
+        print("VERDICT: NO ARTEFACT DECLARED — " + ("no manifest matches" if not reports else "the manifest(s) fingerprint no artefact")
+              + "; this is not presence. A complete receipt over such a manifest has no fingerprinted bytes to check.")
         return 0
     print("VERDICT: COMPLETE — every declared artifact is present and matches its digest.")
     return 0
