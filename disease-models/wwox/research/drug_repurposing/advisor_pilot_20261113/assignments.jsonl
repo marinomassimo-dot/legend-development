@@ -174,3 +174,11 @@
 {"assessment": "HOST", "id": "ADV-089", "key": "scripted-quote-and-number-scan-of-consumed-claims", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-19T17:28:51Z"}
 {"evidence": "SendMessage receipt msg_id 125c5381-af46-4cf1-8ce2-e597e10728fb at 17:29Z 2026-11-19, receipt names SCI, MEETING 17:27Z", "id": "ADV-088", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T17:29:06Z"}
 {"evidence": "SendMessage receipt msg_id 30f8f280-754f-4b2e-bc12-de87c41dc1db at 17:29Z 2026-11-19, receipt names IT Orchestrator, MEETING 17:27Z", "id": "ADV-089", "state": "SENT", "to": ["IT Orchestrator"], "utc": "2026-11-19T17:29:06Z"}
+{"assessment": "HOST", "id": "ADV-090", "key": "assay-ages-of-rows-4-and-6-and-the-pup-brief-from-the-time-course", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T17:45:07Z"}
+{"evidence": "SendMessage receipt msg_id 9bda4e21-2644-496d-8e51-6a9d6a1fc0df at 17:45Z 2026-11-19, receipt names SCI, after ADV-088 delivery", "id": "ADV-090", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T17:45:15Z"}
+{"assessment": "HOST", "id": "ADV-091", "key": "pilot-decision-dossier-shared-assay-and-frozen-hindcast-set", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T18:16:55Z"}
+{"assessment": "HOST", "id": "ADV-092", "key": "dossier-template-funding-view-and-cost-ranges-input", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-19T18:16:55Z"}
+{"assessment": "HOST", "id": "ADV-093", "key": "ledger-summary-and-hindcast-scoring-function", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-19T18:16:55Z"}
+{"evidence": "SendMessage receipt msg_id c83b07ac-8332-4bad-830d-61459e71f27a at 18:17Z 2026-11-19, receipt names SCI, brainstorm", "id": "ADV-091", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T18:17:13Z"}
+{"evidence": "SendMessage receipt msg_id 2687fd5d-e6da-4951-bc47-09f9789454ab at 18:17Z 2026-11-19, receipt names IT Orchestrator, brainstorm", "id": "ADV-092", "state": "SENT", "to": ["IT Orchestrator"], "utc": "2026-11-19T18:17:13Z"}
+{"evidence": "SendMessage receipt msg_id 14e11563-2e52-44af-b79a-ef34d6b278db at 18:17Z 2026-11-19, receipt names HE, brainstorm", "id": "ADV-093", "state": "SENT", "to": ["HE"], "utc": "2026-11-19T18:17:13Z"}
