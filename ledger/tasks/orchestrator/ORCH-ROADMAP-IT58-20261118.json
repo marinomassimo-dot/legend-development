@@ -55,19 +55,21 @@
     },
     {
      "step": "6 VERIFICATION, PUBLICATION AND WAITS: SHA attribution, CI and dashboard workflow, real site, independent work during batteries",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-18 NEXT ITERATION, section 6",
      "accepted_at": "2026-11-18T23:38:06Z",
-     "updated_at": "2026-11-19T01:16:16Z"
+     "updated_at": "2026-11-19T03:19:02Z",
+     "evidence": "Public release gate CI success on 65367c768ef7 (the tip carrying the ADV-067/ADV-068 mappings, regenerated views/join/package and regenerated coverage_report/reading_state); earlier failures attributed: 6320348db5 (views stale + pinned count, closed), 741ca6b4 and dd0b5969 (test_reading_state, test_coverage_report drift, fixed at 65367c768); publish workflow success and five online pages byte-identical to the package; HE's targeted reruns passed on d69f4de0c and 741ca6b4; no full battery rerun, the 6320348db5 FAIL stays that tree's verdict."
     },
     {
      "step": "7 HANDOFF AND CONTINUATION: deliver to the advisor consumed, decision, limits, next work, costs; continue",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-18 NEXT ITERATION, section 7",
      "accepted_at": "2026-11-18T23:38:06Z",
-     "updated_at": "2026-11-19T01:16:22Z"
+     "updated_at": "2026-11-19T03:19:02Z",
+     "evidence": "Delivered to the advisor at dd0b59697586 and ee570667bbaa (consumed, decisions changed or unchanged, limits, costs); advisor accepted; no open assignment for IT; 05:24Z meeting question (no-material reader condition) answered with a recommendation."
     }
    ]
   }
