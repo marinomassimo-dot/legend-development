@@ -1,0 +1,20 @@
+# Premise checks before the night results govern the next choice (SCI, 2026-11-19; step A of the operator continuation; hypothesis level; no dose, no recommendation; not medical advice)
+
+Frozen criteria and results of ADV-068, ADV-069 and ADV-070 are not rewritten here; primary results and sensitivity analyses stay distinct. This note does only what can change a decision: (A1) the unit assumption, (A2) one independent blind recompute (appended below when it returns), (A3) what each frozen result can and cannot support.
+
+## A1. "One GEO sample = one animal" checked against the deposits' own fields (2026-11-19; plain client, no key, no contact data)
+| Deposit | What the deposit says | Reading |
+|---|---|---|
+| GSE158682, cortex (ADV-068 primary contrast; also the only contrast with at least three per arm in ADV-070) | the sample record states "Cortices were collected from S-Control (n=4) and S-KO (n=3) mice at P17"; seven samples; whole cortices; Trizol RNA | **the unit is supported by the deposit's own text: one library per mouse, 4 and 3 mice** (not stated per sample, but the arm sizes equal the animal counts) |
+| GSE158681, hippocampus | the series design lists the groups as n per group (WT 3 v KO 2, S-Ctrl 2 v S-KO 3, N-Ctrl 2 v N-KO 2), "RNA isolated from whole hippocampi"; sample records say hippocampi were dissected from "the mice brain" | consistent with one animal per sample, **not stated per sample**; the descriptive hippocampal contrasts keep the assumption |
+| GSE158684, nuclei | 8 sample records (4 control, 4 knockout) but the processing says the count matrix was aggregated and "created separately for control and KO samples" | the library of origin of a nucleus is not recoverable; nuclei are not animals (as IT14 found) |
+| All | the BioSample records carry only title, tissue, age and genotype | **no sex, litter, cage, dissection batch or animal identifier is recorded anywhere**: sex and litter are uncontrolled sources of variance and possible confounds for every per-animal result |
+Consequence: the ADV-068 primary contrast rests on a unit the deposit itself supports; the hippocampal and nuclear readings keep their stated assumption; nothing stronger than "per-animal, uncontrolled for sex and litter" can be said.
+
+## A3. What each frozen result can and cannot support
+| Result | Can support | Cannot support | Operational threshold and validity |
+|---|---|---|---|
+| ADV-068 (PV against late-maturing set, cortex 3 v 4) | the lower Pvalb transcript is PV-weighted but moves with a late-maturing neuronal set and the myelin genes in the same animals; a PV-directed drug arm is not justified by this evidence | PV cell number or function; that the PV deficit is a maturation effect (it is one reading); a verdict independent of Slc12a5 (the rule is met at its boundary on one gene) | "at least three per arm" is an operational threshold for applying a rule, not a validity statement; n of 3 and 4 gives a mean shift with wide uncertainty; sex and litter uncontrolled |
+| ADV-069 (DNA-damage and p53-response transcripts, organoid week 15) | no large transcript-level signature at week 15 in one line | any statement about DNA breaks (foci at weeks 6 and 10) or about a damage response at another age; "no change" (the null bands were 0.45 to 0.86 log2 wide) | one parental line, 4 v 2 libraries; the negative result closes only a transcript-level check, not the imaging finding |
+| ADV-070 (stage-adjusted seeds) | IEG lower and Npy higher are stable to the covariate in every contrast read; no tier change | separating stage, composition, line background and genotype (collinear at n of 2 to 5; control-line animals already +0.33 on the score) | the labels "stands" mean "not removable by this covariate at this n", not "independent of stage" |
+All three exclude nothing at the programme level; the strands they touch (PV-directed premise, DNA-damage-directed class, transcript-supported channel seeds) are **not closed by transcripts**; their remaining test is tissue measurement at two ages (brief Addendum 19).
