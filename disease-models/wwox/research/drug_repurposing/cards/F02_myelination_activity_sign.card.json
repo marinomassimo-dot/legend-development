@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "1eccfd424460eb8a8554f20e8c9d352ed7a9909f924600b0adde8b5a0ac27cca",
+  "input_sha256": "95d4149cfd5d14f31febbb80101b90af5068114cb58abe7da733514695f4695b",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -183,7 +183,8 @@
       "Whether activity raises or lowers myelin in the Wwox-deficient brain.",
       "Whether any pro-myelinating agent acts on Wwox-deficient oligodendrocytes.",
       "The quantified MBP or g-ratio after neuronal AAV rescue.",
-      "Whether an oligodendroglial WWOX function exists under remyelination stress."
+      "Whether an oligodendroglial WWOX function exists under remyelination stress.",
+      "SCI 2026-11-19 (R1, advisor_pilot_20261113/brainstorm_20261116/r1_conduction_endpoint_sci_20261119/R1_CONDUCTION_ENDPOINT_NOTE_SCI_20261119.md; mapped by IT): conduction in the Wwox-null brain was measured once (neuron-targeted deletion, acute slices P13 to P17, 8 slices from 5 animals against 8 from 6, graph-read N1 latency about 2.5 against 3.2 ms, N1/N2 ratio changed, Synapsin-Cre only, no rescue, no velocity, a control n identical to another experiment's n, Methods without a callosal protocol): a candidate readout that needs re-measurement with a rescue arm and animal-level statistics. Structural endpoints with demonstrated neuronal rescue exist (EM myelinated axons, CNP, MBP, CC1; g-ratio with a residual difference) and are the usable ones for an arm on this card."
     ],
     "evidence_against": [
       "Oligodendrocyte-lineage deletion shows no anomaly while neuronal deletion reproduces it.",
