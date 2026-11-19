@@ -172,17 +172,21 @@
     },
     {
      "step": "Day P0: repair CI failure scripts/test_no_closed_world_assertions_on_live_state.py (negative-on-append-only on my receipts-ledger reminder test), minimal semantically correct fix, one candidate with IT, CI actually green",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "operator mandate 2026-11-19 harness continuation (ACTOR_ID plan) P0",
-     "accepted_at": "2026-11-19T08:28:36Z"
+     "accepted_at": "2026-11-19T08:28:36Z",
+     "evidence": "d13a1c582 fixes the closed-world detector with an argued fixture exception; CI #1315 success on d13a1c58, #1320 success on f0b638ea; green of 65367c768 does not qualify later commits",
+     "updated_at": "2026-11-19T10:28:36Z"
     },
     {
      "step": "Day P1: dashboard validation in a real browser (phone and desktop) with the existing resolver, temporary profiles, evidence",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "operator mandate 2026-11-19 harness continuation (ACTOR_ID plan) P1",
-     "accepted_at": "2026-11-19T08:28:36Z"
+     "accepted_at": "2026-11-19T08:28:36Z",
+     "evidence": "real Chromium 3583 via repurposing_view.py browser; viewports on five editions, one German print overflow fixed (2f9ed5269); interaction pass; record governance/design_records/browser_validation_20261119.md",
+     "updated_at": "2026-11-19T10:28:36Z"
     },
     {
      "step": "Day P2: completion-to-continuation gap: which mandate continues, how closure reaches the recipient, when direction is chosen, acceptance, records reflect current work; real passage to new authorised work",
@@ -193,10 +197,12 @@
     },
     {
      "step": "Day P3: radar relevance: small sample diagnosis, bridge required, before/after if a small change is justified, else diagnosis to ADV",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "operator mandate 2026-11-19 harness continuation (ACTOR_ID plan) P3",
-     "accepted_at": "2026-11-19T08:28:36Z"
+     "accepted_at": "2026-11-19T08:28:36Z",
+     "evidence": "radar bridge rule ec12b6027, sample before/after, delivered to ADV",
+     "updated_at": "2026-11-19T10:28:36Z"
     }
    ]
   }
