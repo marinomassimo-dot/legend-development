@@ -163,10 +163,12 @@
     },
     {
      "step": "Night F: delivery to IT, SCI, ADV; follow the first real use of any important change",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) F",
-     "accepted_at": "2026-11-18T23:32:14Z"
+     "accepted_at": "2026-11-18T23:32:14Z",
+     "evidence": "first real use: IT58 741ca6b4b regenerated views and package with the fixes; landed package has 0 orig markers in fr/es/de/it/index (technote excluded), repurposing_view check current; online pages are IT's check",
+     "updated_at": "2026-11-19T00:34:16Z"
     }
    ]
   }
