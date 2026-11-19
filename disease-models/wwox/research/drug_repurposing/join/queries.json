@@ -100,7 +100,7 @@
  },
  {
   "axis": "all",
-  "digest": "70f08f1e767925fd",
+  "digest": "5d4be89b602fe35b",
   "kind": "claim",
   "linkage": {
    "ids_in_registry_without_pmid": [
@@ -122,7 +122,7 @@
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 002",
   "origin_line": 50,
-  "origin_title": "WWOX-LoF causes network hyperexcitability; AAV-WWOX rescues organoid phenotype",
+  "origin_title": "WWOX loss is associated with network hyperexcitability in human organoids; re-expression by AAVS1 knock-in or lentivirus (2021) or neuron-directed AAV9 (2026) reduces the hyperexcitability readouts, the 2021 rescue of the broader phenotype being partial and the 2026 arm leaving radial-glia abnormali",
   "papers_named": [
    "PAPER 001",
    "PAPER 031",
@@ -143,7 +143,8 @@
   "query_id": "Q-CLAIM002",
   "terms": [
    "WWOX",
-   "AAV"
+   "AAVS1",
+   "AAV9"
   ]
  },
  {
@@ -933,7 +934,7 @@
  },
  {
   "axis": "all",
-  "digest": "03cdbbad7b7475a1",
+  "digest": "a529f494448d2c85",
   "kind": "claim",
   "linkage": {
    "ids_in_registry_without_pmid": [],
@@ -948,7 +949,7 @@
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 021",
   "origin_line": 435,
-  "origin_title": "WWOX loss directly destabilizes neocortical network physiology through combined synaptic and intrinsic mechanisms",
+  "origin_title": "Neuron-specific WWOX loss induces neocortical network hyperexcitability in slices, with synaptic and intrinsic changes",
   "papers_named": [
    "PAPER 031"
   ],
@@ -1053,7 +1054,7 @@
  },
  {
   "axis": "all",
-  "digest": "3cde19630a898f8b",
+  "digest": "3be9d002baba485a",
   "kind": "claim",
   "linkage": {
    "ids_in_registry_without_pmid": [
@@ -1063,12 +1064,14 @@
     "PAPER 029",
     "PAPER 091",
     "PAPER 158",
+    "PAPER 262",
     "PAPER 567"
    ],
    "ids_not_found_in_registry": [],
    "ids_reaching_a_pmid": [
     "PAPER 029",
     "PAPER 091",
+    "PAPER 262",
     "PAPER 567"
    ]
   },
@@ -1080,10 +1083,12 @@
    "PAPER 029",
    "PAPER 091",
    "PAPER 158",
+   "PAPER 262",
    "PAPER 567"
   ],
   "pmids": [
    "29724996",
+   "33520443",
    "42128308",
    "42589397",
    "42909904"
@@ -5132,7 +5137,7 @@
    "CLAIM 009",
    "CLAIM 025"
   ],
-  "digest": "0ace4158b30c5443",
+  "digest": "ec946c61c898d55d",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -5167,6 +5172,7 @@
    "27339895",
    "29724996",
    "30755385",
+   "33520443",
    "34214506",
    "35328751",
    "36537114",
@@ -5186,6 +5192,9 @@
    ],
    "27339895": [
     "CLAIM 009"
+   ],
+   "33520443": [
+    "CLAIM 025"
    ],
    "34214506": [
     "CLAIM 009"
@@ -8362,7 +8371,7 @@
   "claims_named": [
    "CLAIM 025"
   ],
-  "digest": "76e6cefb4c19e429",
+  "digest": "3d2dac3318c036f1",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -8384,12 +8393,16 @@
    "28045433",
    "28151481",
    "29724996",
+   "33520443",
    "42128308",
    "42589397",
    "42909904"
   ],
   "pmids_via_records": {
    "29724996": [
+    "CLAIM 025"
+   ],
+   "33520443": [
     "CLAIM 025"
    ],
    "42128308": [
@@ -33816,7 +33829,7 @@
   ],
   "curated_cards": [],
   "decisive_test": "UNKNOWN",
-  "digest": "926619970b80fa89",
+  "digest": "e01f8a25a82e18f7",
   "intervention": "*toxicity incompatible* + *wrong endpoint*. The only approved drug that corrects a",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -33841,6 +33854,7 @@
   ],
   "pmids": [
    "29724996",
+   "33520443",
    "42128308",
    "42589397",
    "42909904"
@@ -33848,6 +33862,9 @@
   "pmids_via_records": {
    "29724996": [
     "PAPER 091"
+   ],
+   "33520443": [
+    "CLAIM 025"
    ],
    "42128308": [
     "CLAIM 025"
@@ -35194,11 +35211,12 @@
   "axis": "all",
   "candidate": "Tau-lowering, imported from tauopathy into CHAIN C",
   "claims_named": [
+   "CLAIM 021",
    "CLAIM 035"
   ],
   "curated_cards": [],
   "decisive_test": "UNKNOWN",
-  "digest": "485b75aeb6874fd6",
+  "digest": "a8ce2e27a6630a86",
   "intervention": "*importing a disease's dominant modality because the pathway diagram looks like that disease, without checking which way the arrow points.* CHAIN C reads like a tauopathy — WWOX loss → GSK3β de-repressed → pTau S396/S404 up (`CLAIM 035`, `DL-MECH-019`) — and tauopathy's dominant modality is **tau-lowering**. In the only system where the question was asked, tau-lowering **removes the benefit of bot",
   "kind": "mechanism_record",
   "leads_named": [
@@ -35208,12 +35226,14 @@
   "linkage": {
    "ids_in_registry_without_pmid": [],
    "ids_named": [
+    "CLAIM 021",
     "CLAIM 035",
     "DL-MECH-019",
     "DL-MECH-069"
    ],
    "ids_not_found_in_registry": [],
    "ids_reaching_a_pmid": [
+    "CLAIM 021",
     "CLAIM 035",
     "DL-MECH-019",
     "DL-MECH-069"
@@ -35471,6 +35491,55 @@
  {
   "axis": "all",
   "bound_claims": [
+   "CLAIM 023"
+  ],
+  "bound_from": "working_model_current.md#BLOCK 2|CLAIM 023",
+  "digest": "7eb23296e5833950",
+  "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 023"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 023"
+   ]
+  },
+  "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
+  "origin_id": "CLAIM 023",
+  "origin_line": 0,
+  "origin_title": "WWOX controls partner function via subcellular rerouting; Tyr33 phosphorylation regulates the **binding**, its effect on rerouting untested (narrowed `BATCH_20260909_001`)",
+  "pmids": [
+   "12514174",
+   "15070730",
+   "21115974",
+   "32185845"
+  ],
+  "pmids_via_records": {
+   "12514174": [
+    "CLAIM 023"
+   ],
+   "15070730": [
+    "CLAIM 023"
+   ],
+   "21115974": [
+    "CLAIM 023"
+   ],
+   "32185845": [
+    "CLAIM 023"
+   ]
+  },
+  "query_id": "Q-PG-00b9407a530e",
+  "relation_type": "CAUSAL",
+  "review_state": "AWAITING_SCIENTIST_REVIEW",
+  "terms": [
+   "WWOX"
+  ]
+ },
+ {
+  "axis": "all",
+  "bound_claims": [
    "CLAIM 002",
    "CLAIM 005",
    "CLAIM 030",
@@ -35683,80 +35752,6 @@
  {
   "axis": "all",
   "bound_claims": [
-   "CLAIM 009",
-   "CLAIM 034"
-  ],
-  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID37897534.json|entries[12]",
-  "digest": "cce76e5adff79594",
-  "kind": "mechanism_line",
-  "linkage": {
-   "ids_in_registry_without_pmid": [],
-   "ids_named": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ],
-   "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ]
-  },
-  "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
-  "origin_id": "CLAIM 009",
-  "origin_line": 0,
-  "origin_title": "Figures 4 and 5: the p53 point mutations (A135P, V213G in the DNA-binding domain) were found in one late-passage null clone (no. 56) and in no other clone; the same clone shows large nuclear p53, Ser18 phosphorylation and no p21 induction, whereas the other null clones show low p53. Ectopic wild-type p53 restores p21, growth suppression and SA-beta-gal (about 20%) in clone 56. No panel sequences p",
-  "pmids": [
-   "17567906",
-   "21075834",
-   "21901168",
-   "27339895",
-   "30755385",
-   "34214506",
-   "35328751",
-   "36537114",
-   "37897534"
-  ],
-  "pmids_via_records": {
-   "17567906": [
-    "CLAIM 009"
-   ],
-   "21075834": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ],
-   "21901168": [
-    "CLAIM 009"
-   ],
-   "27339895": [
-    "CLAIM 009"
-   ],
-   "30755385": [
-    "CLAIM 009"
-   ],
-   "34214506": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ],
-   "35328751": [
-    "CLAIM 009"
-   ],
-   "36537114": [
-    "CLAIM 009"
-   ]
-  },
-  "query_id": "Q-PG-066ee1fee440",
-  "relation_type": "CAUSAL",
-  "review_state": "AWAITING_SCIENTIST_REVIEW",
-  "terms": [
-   "A135P",
-   "V213G",
-   "NAC",
-   "ROS"
-  ]
- },
- {
-  "axis": "all",
-  "bound_claims": [
    "CLAIM 015",
    "CLAIM 016"
   ],
@@ -35809,43 +35804,6 @@
   "review_state": "AWAITING_SCIENTIST_REVIEW",
   "terms": [
    "PTZ"
-  ]
- },
- {
-  "axis": "all",
-  "bound_claims": [
-   "CLAIM 010"
-  ],
-  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID34937577.json|entries[9]",
-  "digest": "14b4d38974fb12c8",
-  "kind": "mechanism_line",
-  "linkage": {
-   "ids_in_registry_without_pmid": [
-    "CLAIM 010"
-   ],
-   "ids_named": [
-    "CLAIM 010"
-   ],
-   "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
-  },
-  "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
-  "origin_id": "CLAIM 010",
-  "origin_line": 0,
-  "origin_title": "Figure 2 shows both downregulating mitophagy (3-MA, BNIP3 silencing, WNT3a, glycine) and upregulating it (antagomir, rapamycin, 17-AAG, melatonin, morin, NIX, AMPK, UA/AC, TFEB, PINK1, Atg1, IPC) as leading to neuronal protection, in one schematic with a neuron panel of pathogenic proteins and impaired autophagosome transport; it plots no data.",
-  "pmids": [
-   "34937577"
-  ],
-  "query_id": "Q-PG-125b81f6e32f",
-  "relation_type": "CAUSAL",
-  "review_state": "AWAITING_SCIENTIST_REVIEW",
-  "terms": [
-   "BNIP3",
-   "AAG",
-   "NIX",
-   "AMPK",
-   "TFEB",
-   "PINK1"
   ]
  },
  {
@@ -35910,68 +35868,131 @@
  {
   "axis": "all",
   "bound_claims": [
-   "CLAIM 002",
-   "CLAIM 004"
+   "CLAIM 023"
   ],
-  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID18460020.json|entries[0]",
-  "digest": "fd40748ac33591ed",
+  "bound_from": "claim_registry_current.md#CLAIM 023|Title",
+  "digest": "84f48dbdcfb635e6",
   "kind": "mechanism_line",
   "linkage": {
    "ids_in_registry_without_pmid": [],
    "ids_named": [
-    "CLAIM 002",
-    "CLAIM 004"
+    "CLAIM 023"
    ],
    "ids_not_found_in_registry": [],
    "ids_reaching_a_pmid": [
-    "CLAIM 002",
-    "CLAIM 004"
+    "CLAIM 023"
    ]
   },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
-  "origin_id": "CLAIM 002",
+  "origin_id": "CLAIM 023",
   "origin_line": 0,
-  "origin_title": "The Ad-WWOX and Ad-GFP adenoviruses used for every in vitro and in vivo result in this paper are not characterised here: they are taken wholesale from reference 21, which is PMID 16223882 (Fabbri 2005, PNAS) - a paper carrying a STANDING EXPRESSION OF CONCERN (PMID 28373548) that this repository already holds under 'no canonical promotion until the concern is resolved'.",
+  "origin_title": "WWOX controls partner-protein function not only by binding, but by subcellular rerouting that changes downstream biological output; Tyr33 phosphorylation regulates the **binding**, and its effect on rerouting is untested",
   "pmids": [
-   "16223882",
-   "18460020",
-   "28373548",
-   "34268881",
-   "34634460",
-   "34747138",
-   "34831305",
-   "42128308",
-   "42397075"
+   "12514174",
+   "15070730",
+   "21115974",
+   "32185845"
   ],
   "pmids_via_records": {
-   "34268881": [
-    "CLAIM 002"
+   "12514174": [
+    "CLAIM 023"
    ],
-   "34634460": [
-    "CLAIM 002"
+   "15070730": [
+    "CLAIM 023"
    ],
-   "34747138": [
-    "CLAIM 004"
+   "21115974": [
+    "CLAIM 023"
    ],
-   "34831305": [
-    "CLAIM 004"
-   ],
-   "42128308": [
-    "CLAIM 002"
-   ],
-   "42397075": [
-    "CLAIM 002"
+   "32185845": [
+    "CLAIM 023"
    ]
   },
-  "query_id": "Q-PG-25f33018bbf4",
+  "query_id": "Q-PG-1eab5c38eacc",
   "relation_type": "CAUSAL",
   "review_state": "AWAITING_SCIENTIST_REVIEW",
   "terms": [
-   "WWOX",
-   "GFP",
-   "PNAS",
-   "STANDING",
-   "CONCERN"
+   "WWOX"
+  ]
+ },
+ {
+  "axis": "all",
+  "bound_claims": [
+   "CLAIM 023"
+  ],
+  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID21115974.json|entries[6]",
+  "digest": "3e1bf06f1ec725d7",
+  "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 023"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 023"
+   ]
+  },
+  "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
+  "origin_id": "CLAIM 023",
+  "origin_line": 0,
+  "origin_title": "The rescue conclusion - that re-expressed p100, and p52 alone, restore Tax-driven transformation - is the claim the unmarked bars of Figure 1C have to carry.",
+  "pmids": [
+   "12514174",
+   "15070730",
+   "21115974",
+   "32185845"
+  ],
+  "pmids_via_records": {
+   "12514174": [
+    "CLAIM 023"
+   ],
+   "15070730": [
+    "CLAIM 023"
+   ],
+   "32185845": [
+    "CLAIM 023"
+   ]
+  },
+  "query_id": "Q-PG-27e0d65058d4",
+  "relation_type": "CAUSAL",
+  "review_state": "AWAITING_SCIENTIST_REVIEW",
+  "terms": []
+ },
+ {
+  "axis": "all",
+  "bound_claims": [
+   "CLAIM 021"
+  ],
+  "bound_from": "claim_registry_current.md#CLAIM 021|Title",
+  "digest": "5f80adaa9c884e7f",
+  "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 021"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 021"
+   ]
+  },
+  "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
+  "origin_id": "CLAIM 021",
+  "origin_line": 0,
+  "origin_title": "Neuron-specific WWOX loss induces neocortical network hyperexcitability in slices, with synaptic and intrinsic changes",
+  "pmids": [
+   "34634460"
+  ],
+  "pmids_via_records": {
+   "34634460": [
+    "CLAIM 021"
+   ]
+  },
+  "query_id": "Q-PG-3146b69db141",
+  "relation_type": "CAUSAL",
+  "review_state": "AWAITING_SCIENTIST_REVIEW",
+  "terms": [
+   "WWOX"
   ]
  },
  {
@@ -36018,78 +36039,6 @@
    "WW1",
    "WBP",
    "SIMPLE"
-  ]
- },
- {
-  "axis": "all",
-  "bound_claims": [
-   "CLAIM 009",
-   "CLAIM 034"
-  ],
-  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID37897534.json|entries[13]",
-  "digest": "7eb50426b2c8cd59",
-  "kind": "mechanism_line",
-  "linkage": {
-   "ids_in_registry_without_pmid": [],
-   "ids_named": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ],
-   "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ]
-  },
-  "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
-  "origin_id": "CLAIM 009",
-  "origin_line": 0,
-  "origin_title": "Figure 3 (hand readings): the p16 promoter-luciferase signal is about 1.5-fold HIGHER in null than heterozygote while p16 protein is absent, i.e. the loss is post-transcriptional or epigenetic (the paper's methylation arm); the p21 reporter is about 0.15-fold. Re-expression of p16, p21 or both restores SA-beta-gal (about 15% versus 5%) and suppresses growth in null cells with no WWOX present (WWOX",
-  "pmids": [
-   "17567906",
-   "21075834",
-   "21901168",
-   "27339895",
-   "30755385",
-   "34214506",
-   "35328751",
-   "36537114",
-   "37897534"
-  ],
-  "pmids_via_records": {
-   "17567906": [
-    "CLAIM 009"
-   ],
-   "21075834": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ],
-   "21901168": [
-    "CLAIM 009"
-   ],
-   "27339895": [
-    "CLAIM 009"
-   ],
-   "30755385": [
-    "CLAIM 009"
-   ],
-   "34214506": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ],
-   "35328751": [
-    "CLAIM 009"
-   ],
-   "36537114": [
-    "CLAIM 009"
-   ]
-  },
-  "query_id": "Q-PG-32292d67a04b",
-  "relation_type": "CAUSAL",
-  "review_state": "AWAITING_SCIENTIST_REVIEW",
-  "terms": [
-   "HIGHER",
-   "WWOX"
   ]
  },
  {
@@ -36459,142 +36408,49 @@
  {
   "axis": "all",
   "bound_claims": [
-   "CLAIM 002",
-   "CLAIM 004"
+   "CLAIM 023"
   ],
-  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID18460020.json|entries[10]",
-  "digest": "1fdf6cee4de182c3",
+  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID15070730.json|entries[19]",
+  "digest": "e24c55fd481e8074",
   "kind": "mechanism_line",
   "linkage": {
    "ids_in_registry_without_pmid": [],
    "ids_named": [
-    "CLAIM 002",
-    "CLAIM 004"
+    "CLAIM 023"
    ],
    "ids_not_found_in_registry": [],
    "ids_reaching_a_pmid": [
-    "CLAIM 002",
-    "CLAIM 004"
+    "CLAIM 023"
    ]
   },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
-  "origin_id": "CLAIM 002",
+  "origin_id": "CLAIM 023",
   "origin_line": 0,
-  "origin_title": "The WW1/Y33 conclusion is drawn only comparatively. The panel supports a stronger and a weaker statement the text does not make: the SDR-deleted mutant RETAINS significant colony suppression, so the SDR domain is not required; and Y33R abolishes suppression even in the SDR-deleted background.",
+  "origin_title": "THE Y33 RATIONALE IS INHERITED FROM A PAPER THIS CORPUS DOES NOT HOLD. Y33 was chosen for study because Chang et al. reported it affects murine Wox1's interaction with JNK; the same reference supplies the claim that altering Y33 reduces Wwox's proapoptotic activity. That reference is J Biol Chem 278:9195-9202 (2003) = PMID 12514174, already known to this corpus as MISSING FROM DISK AND UNREAD. PRE",
   "pmids": [
-   "18460020",
-   "34268881",
-   "34634460",
-   "34747138",
-   "34831305",
-   "42128308",
-   "42397075"
+   "12514174",
+   "15070730",
+   "21115974",
+   "32185845"
   ],
   "pmids_via_records": {
-   "34268881": [
-    "CLAIM 002"
+   "21115974": [
+    "CLAIM 023"
    ],
-   "34634460": [
-    "CLAIM 002"
-   ],
-   "34747138": [
-    "CLAIM 004"
-   ],
-   "34831305": [
-    "CLAIM 004"
-   ],
-   "42128308": [
-    "CLAIM 002"
-   ],
-   "42397075": [
-    "CLAIM 002"
+   "32185845": [
+    "CLAIM 023"
    ]
   },
-  "query_id": "Q-PG-4bcf041381ff",
+  "query_id": "Q-PG-59c035e1d83a",
   "relation_type": "CAUSAL",
   "review_state": "AWAITING_SCIENTIST_REVIEW",
   "terms": [
-   "WW1",
    "Y33",
-   "SDR",
-   "RETAINS",
-   "Y33R"
-  ]
- },
- {
-  "axis": "all",
-  "bound_claims": [
-   "CLAIM 009",
-   "CLAIM 034"
-  ],
-  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID37897534.json|entries[1]",
-  "digest": "10c4f7a099339b13",
-  "kind": "mechanism_line",
-  "linkage": {
-   "ids_in_registry_without_pmid": [],
-   "ids_named": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ],
-   "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ]
-  },
-  "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
-  "origin_id": "CLAIM 009",
-  "origin_line": 0,
-  "origin_title": "THE RESCUE ARM, WHICH IS THE ONLY THERAPEUTIC-DIRECTION LEAD IN THIS RECORD: an ordinary antioxidant prevented the instability phenotype in Wwox-null cells. It is a cell-culture result in fibroblasts, with no neural or in vivo arm.",
-  "pmids": [
-   "17567906",
-   "21075834",
-   "21901168",
-   "27339895",
-   "30755385",
-   "34214506",
-   "35328751",
-   "36537114",
-   "37897534"
-  ],
-  "pmids_via_records": {
-   "17567906": [
-    "CLAIM 009"
-   ],
-   "21075834": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ],
-   "21901168": [
-    "CLAIM 009"
-   ],
-   "27339895": [
-    "CLAIM 009"
-   ],
-   "30755385": [
-    "CLAIM 009"
-   ],
-   "34214506": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ],
-   "35328751": [
-    "CLAIM 009"
-   ],
-   "36537114": [
-    "CLAIM 009"
-   ]
-  },
-  "query_id": "Q-PG-55cf7aa62dbf",
-  "relation_type": "CAUSAL",
-  "review_state": "AWAITING_SCIENTIST_REVIEW",
-  "terms": [
-   "RESCUE",
-   "ARM",
-   "WHICH",
-   "LEAD",
+   "FROM",
    "THIS",
-   "RECORD"
+   "CORPUS",
+   "DOES",
+   "HOLD"
   ]
  },
  {
@@ -36666,32 +36522,48 @@
  {
   "axis": "all",
   "bound_claims": [
-   "CLAIM 010"
+   "CLAIM 023"
   ],
-  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID34937577.json|entries[6]",
-  "digest": "2474f949f28aa032",
+  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID15070730.json|entries[36]",
+  "digest": "390664b658c588e4",
   "kind": "mechanism_line",
   "linkage": {
-   "ids_in_registry_without_pmid": [
-    "CLAIM 010"
-   ],
+   "ids_in_registry_without_pmid": [],
    "ids_named": [
-    "CLAIM 010"
+    "CLAIM 023"
    ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "CLAIM 023"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
-  "origin_id": "CLAIM 010",
+  "origin_id": "CLAIM 023",
   "origin_line": 0,
-  "origin_title": "Epilepsy paragraph: rapamycin is called an inducer of mitophagy and is said to prevent epilepsy early and reduce seizures late in mice; the epilepsy evidence is mTOR pathway pharmacology, with no mitophagy measure stated.",
+  "origin_title": "The two Discussion sentences that carry the 'cytoplasmic cooperation drives apoptosis' leg BOTH cite a panel that does not exist. Fig 3's caption declares panels (A), (B) and (C) and the image carries three panels; the Discussion cites 'Fig. 3 D' twice, once for the ΔNp73 result and once for the increased apoptotic activity. The data meant are in Fig 3C, so this is a citation defect and not a miss",
   "pmids": [
-   "34937577"
+   "12514174",
+   "15070730",
+   "21115974",
+   "32185845"
   ],
-  "query_id": "Q-PG-64ea7246811f",
+  "pmids_via_records": {
+   "12514174": [
+    "CLAIM 023"
+   ],
+   "21115974": [
+    "CLAIM 023"
+   ],
+   "32185845": [
+    "CLAIM 023"
+   ]
+  },
+  "query_id": "Q-PG-641d966eacc6",
   "relation_type": "CAUSAL",
   "review_state": "AWAITING_SCIENTIST_REVIEW",
-  "terms": []
+  "terms": [
+   "BOTH"
+  ]
  },
  {
   "axis": "all",
@@ -36853,131 +36725,91 @@
  {
   "axis": "all",
   "bound_claims": [
-   "CLAIM 003",
-   "CLAIM 006",
-   "CLAIM 030",
-   "CLAIM 037"
+   "CLAIM 023"
   ],
-  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID31315632.json|entries[7]",
-  "digest": "44c117e4a11d8af0",
+  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID15070730.json|entries[21]",
+  "digest": "0d7fcddae9b86d3e",
   "kind": "mechanism_line",
   "linkage": {
    "ids_in_registry_without_pmid": [],
    "ids_named": [
-    "CLAIM 003",
-    "CLAIM 006",
-    "CLAIM 030",
-    "CLAIM 037"
+    "CLAIM 023"
    ],
    "ids_not_found_in_registry": [],
    "ids_reaching_a_pmid": [
-    "CLAIM 003",
-    "CLAIM 006",
-    "CLAIM 030",
-    "CLAIM 037"
+    "CLAIM 023"
    ]
   },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
-  "origin_id": "CLAIM 003",
+  "origin_id": "CLAIM 023",
   "origin_line": 0,
-  "origin_title": "The FRET section concludes that WWOX joins via the SDR domain, contradicting the yeast two-hybrid result in the same paper.",
+  "origin_title": "THE APOPTOSIS RESULT CONTAINS ITS OWN TENSION AND THE AUTHORS FLAG IT AS A GUESS. WWY33R does not bind p73, yet WWY33R + p73β gives the LARGEST apoptotic population in Fig 3C (~38%, above WT-Wwox + p73β at ~31%). The explanation offered is explicitly one possibility among others, not a demonstration. Anyone carrying 'Wwox-p73 cytoplasmic cooperation drives apoptosis' out of this paper must also ca",
   "pmids": [
-   "17360458",
-   "17803050",
-   "18487609",
-   "19500159",
-   "19936220",
-   "24369382",
-   "24456803",
-   "25331887",
-   "25411445",
-   "26499798",
-   "29808465",
-   "31315632",
-   "32000863",
-   "33914858",
-   "33916893",
-   "34268881",
-   "34747138",
-   "34831305",
-   "36779245",
-   "36828035",
-   "42397075",
-   "42422765"
+   "12514174",
+   "15070730",
+   "21115974",
+   "32185845"
   ],
   "pmids_via_records": {
-   "17360458": [
-    "CLAIM 037"
+   "12514174": [
+    "CLAIM 023"
    ],
-   "17803050": [
-    "CLAIM 037"
+   "21115974": [
+    "CLAIM 023"
    ],
-   "18487609": [
-    "CLAIM 037"
-   ],
-   "19500159": [
-    "CLAIM 037"
-   ],
-   "19936220": [
-    "CLAIM 037"
-   ],
-   "24369382": [
-    "CLAIM 030",
-    "CLAIM 037"
-   ],
-   "24456803": [
-    "CLAIM 030"
-   ],
-   "25331887": [
-    "CLAIM 030"
-   ],
-   "25411445": [
-    "CLAIM 030"
-   ],
-   "26499798": [
-    "CLAIM 030"
-   ],
-   "29808465": [
-    "CLAIM 030"
-   ],
-   "32000863": [
-    "CLAIM 037"
-   ],
-   "33914858": [
-    "CLAIM 003"
-   ],
-   "33916893": [
-    "CLAIM 030"
-   ],
-   "34268881": [
-    "CLAIM 030"
-   ],
-   "34747138": [
-    "CLAIM 003"
-   ],
-   "34831305": [
-    "CLAIM 003"
-   ],
-   "36779245": [
-    "CLAIM 030"
-   ],
-   "36828035": [
-    "CLAIM 006"
-   ],
-   "42397075": [
-    "CLAIM 003"
-   ],
-   "42422765": [
-    "CLAIM 037"
+   "32185845": [
+    "CLAIM 023"
    ]
   },
-  "query_id": "Q-PG-83cf40451de6",
+  "query_id": "Q-PG-7f958638ba68",
   "relation_type": "CAUSAL",
   "review_state": "AWAITING_SCIENTIST_REVIEW",
   "terms": [
-   "FRET",
+   "RESULT",
+   "CONTAINS",
+   "ITS",
+   "OWN",
+   "TENSION",
+   "AUTHORS"
+  ]
+ },
+ {
+  "axis": "all",
+  "bound_claims": [
+   "CLAIM 021"
+  ],
+  "bound_from": "working_model_current.md#BLOCK 2|CLAIM 021",
+  "digest": "683caa8e12efa945",
+  "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 021"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 021"
+   ]
+  },
+  "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
+  "origin_id": "CLAIM 021",
+  "origin_line": 0,
+  "origin_title": "WWOX loss destabilizes neocortical network physiology via combined synaptic and intrinsic mechanisms — 🔴 **the gap-junction half of the burst dependence is WITHDRAWN as not attributable** (2026-09-27): NMDAR blockade alone abolishes the burst; carbenoxolone's effect does not reverse on washout and the authors name NMDA-receptor block among its possible actions. Not «uninvolved» — untested. ⚠️ The ",
+  "pmids": [
+   "34634460"
+  ],
+  "pmids_via_records": {
+   "34634460": [
+    "CLAIM 021"
+   ]
+  },
+  "query_id": "Q-PG-8037558a5e61",
+  "relation_type": "CAUSAL",
+  "review_state": "AWAITING_SCIENTIST_REVIEW",
+  "terms": [
    "WWOX",
-   "SDR"
+   "NMDAR",
+   "NMDA"
   ]
  },
  {
@@ -37306,120 +37138,131 @@
  {
   "axis": "all",
   "bound_claims": [
-   "CLAIM 011"
+   "CLAIM 016"
   ],
-  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID33195192.json|entries[8]",
-  "digest": "f7bfdd4c07ecbfa4",
+  "bound_from": "claim_registry_current.md#CLAIM 016|Title",
+  "digest": "5bd7948f192de06b",
   "kind": "mechanism_line",
   "linkage": {
    "ids_in_registry_without_pmid": [],
    "ids_named": [
-    "CLAIM 011"
+    "CLAIM 016"
    ],
    "ids_not_found_in_registry": [],
    "ids_reaching_a_pmid": [
-    "CLAIM 011"
+    "CLAIM 016"
    ]
   },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
-  "origin_id": "CLAIM 011",
+  "origin_id": "CLAIM 016",
   "origin_line": 0,
-  "origin_title": "THE PAPER STATES A CAUSAL CHAIN (LOSS OF SUBCUTANEOUS FAT CAUSES HYPOTHERMIA) THAT IT DOES NOT TEST. It reports two co-occurring findings in a whole-body null at about P21; no intervention, ambient-temperature control, brown fat, core temperature, body weight, feeding or glycaemia is reported.",
+  "origin_title": "GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency",
   "pmids": [
-   "16223882",
-   "33195192",
-   "37781246",
-   "42395553",
-   "42422765"
+   "22193544",
+   "32000863",
+   "34831305"
   ],
   "pmids_via_records": {
-   "16223882": [
-    "CLAIM 011"
+   "22193544": [
+    "CLAIM 016"
    ],
-   "37781246": [
-    "CLAIM 011"
+   "32000863": [
+    "CLAIM 016"
    ],
-   "42395553": [
-    "CLAIM 011"
-   ],
-   "42422765": [
-    "CLAIM 011"
+   "34831305": [
+    "CLAIM 016"
    ]
   },
-  "query_id": "Q-PG-b0e0c1f52a3c",
+  "query_id": "Q-PG-95534dc229cd",
   "relation_type": "CAUSAL",
   "review_state": "AWAITING_SCIENTIST_REVIEW",
   "terms": [
-   "STATES",
-   "CAUSAL",
-   "CHAIN",
-   "LOSS",
-   "FAT",
-   "THAT"
+   "WWOX"
   ]
  },
  {
   "axis": "all",
   "bound_claims": [
-   "CLAIM 002",
-   "CLAIM 004"
+   "CLAIM 018"
   ],
-  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID16223882.json|entries[16]",
-  "digest": "798f9dcb9901313e",
+  "bound_from": "claim_registry_current.md#CLAIM 018|Title",
+  "digest": "c9babe72c43774db",
   "kind": "mechanism_line",
   "linkage": {
    "ids_in_registry_without_pmid": [],
    "ids_named": [
-    "CLAIM 002",
-    "CLAIM 004"
+    "CLAIM 018"
    ],
    "ids_not_found_in_registry": [],
    "ids_reaching_a_pmid": [
-    "CLAIM 002",
-    "CLAIM 004"
+    "CLAIM 018"
    ]
   },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
-  "origin_id": "CLAIM 002",
+  "origin_id": "CLAIM 018",
   "origin_line": 0,
-  "origin_title": "VISUAL ATTESTATION - in Figure 5B the UNINDUCED transfectant control (- Pon A, H1299/I-) produces the LARGEST tumours in the panel, above both parental H1299 and the Ad-GFP control. The paper does not comment on this.",
+  "origin_title": "The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans",
   "pmids": [
-   "16223882",
-   "34268881",
-   "34634460",
-   "34747138",
-   "34831305",
-   "42128308",
-   "42397075"
+   "30356099",
+   "30853297"
   ],
   "pmids_via_records": {
-   "34268881": [
-    "CLAIM 002"
+   "30356099": [
+    "CLAIM 018"
    ],
-   "34634460": [
-    "CLAIM 002"
-   ],
-   "34747138": [
-    "CLAIM 004"
-   ],
-   "34831305": [
-    "CLAIM 004"
-   ],
-   "42128308": [
-    "CLAIM 002"
-   ],
-   "42397075": [
-    "CLAIM 002"
+   "30853297": [
+    "CLAIM 018"
    ]
   },
-  "query_id": "Q-PG-b778799512dd",
+  "query_id": "Q-PG-968617a3bf17",
+  "relation_type": "CAUSAL",
+  "review_state": "AWAITING_SCIENTIST_REVIEW",
+  "terms": []
+ },
+ {
+  "axis": "all",
+  "bound_claims": [
+   "CLAIM 023"
+  ],
+  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID21115974.json|entries[19]",
+  "digest": "8250b059c0f0f1ba",
+  "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 023"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 023"
+   ]
+  },
+  "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
+  "origin_id": "CLAIM 023",
+  "origin_line": 0,
+  "origin_title": "The specificity control for the whole NF-kB argument: WWOX does not inhibit TNFa-induced NF-kB, so its effect is Tax-selective rather than a general suppression of the reporter. A genuine and well-placed negative.",
+  "pmids": [
+   "12514174",
+   "15070730",
+   "21115974",
+   "32185845"
+  ],
+  "pmids_via_records": {
+   "12514174": [
+    "CLAIM 023"
+   ],
+   "15070730": [
+    "CLAIM 023"
+   ],
+   "32185845": [
+    "CLAIM 023"
+   ]
+  },
+  "query_id": "Q-PG-ae602f8ddf65",
   "relation_type": "CAUSAL",
   "review_state": "AWAITING_SCIENTIST_REVIEW",
   "terms": [
-   "VISUAL",
-   "H1299",
-   "LARGEST",
-   "GFP"
+   "WWOX"
   ]
  },
  {
@@ -37748,152 +37591,6 @@
  {
   "axis": "all",
   "bound_claims": [
-   "CLAIM 009",
-   "CLAIM 034"
-  ],
-  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID37897534.json|entries[11]",
-  "digest": "373c69f944d2b0fb",
-  "kind": "mechanism_line",
-  "linkage": {
-   "ids_in_registry_without_pmid": [],
-   "ids_named": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ],
-   "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ]
-  },
-  "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
-  "origin_id": "CLAIM 009",
-  "origin_line": 0,
-  "origin_title": "Figure 6c, 6g (hand readings, panel g enlarged 3x): SA-beta-gal-positive cells in late passage are about 35% (+/+), 17% (+/-), 1.5% (-/-) and 35% (-/- with 1 mM NAC). In panel g, p16 and p21 are absent or faint in late -/- and restored with NAC, p53 is reduced and restored, and WWOX stays absent in the NAC lane. The comparator of panel g is the heterozygote; no +/+ lane. NAC restores the CDK-inhib",
-  "pmids": [
-   "17567906",
-   "21075834",
-   "21901168",
-   "27339895",
-   "30755385",
-   "34214506",
-   "35328751",
-   "36537114",
-   "37897534"
-  ],
-  "pmids_via_records": {
-   "17567906": [
-    "CLAIM 009"
-   ],
-   "21075834": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ],
-   "21901168": [
-    "CLAIM 009"
-   ],
-   "27339895": [
-    "CLAIM 009"
-   ],
-   "30755385": [
-    "CLAIM 009"
-   ],
-   "34214506": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ],
-   "35328751": [
-    "CLAIM 009"
-   ],
-   "36537114": [
-    "CLAIM 009"
-   ]
-  },
-  "query_id": "Q-PG-c6f226384159",
-  "relation_type": "CAUSAL",
-  "review_state": "AWAITING_SCIENTIST_REVIEW",
-  "terms": [
-   "NAC",
-   "WWOX",
-   "CDK",
-   "ROS"
-  ]
- },
- {
-  "axis": "all",
-  "bound_claims": [
-   "CLAIM 009",
-   "CLAIM 034"
-  ],
-  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID37897534.json|entries[9]",
-  "digest": "b6e74a1fe1a70b72",
-  "kind": "mechanism_line",
-  "linkage": {
-   "ids_in_registry_without_pmid": [],
-   "ids_named": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ],
-   "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ]
-  },
-  "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
-  "origin_id": "CLAIM 009",
-  "origin_line": 0,
-  "origin_title": "The model figure's caption states as established that ROS accumulation causes p53 mutations in WWOX-null MEFs.",
-  "pmids": [
-   "17567906",
-   "21075834",
-   "21901168",
-   "27339895",
-   "30755385",
-   "34214506",
-   "35328751",
-   "36537114",
-   "37897534"
-  ],
-  "pmids_via_records": {
-   "17567906": [
-    "CLAIM 009"
-   ],
-   "21075834": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ],
-   "21901168": [
-    "CLAIM 009"
-   ],
-   "27339895": [
-    "CLAIM 009"
-   ],
-   "30755385": [
-    "CLAIM 009"
-   ],
-   "34214506": [
-    "CLAIM 009",
-    "CLAIM 034"
-   ],
-   "35328751": [
-    "CLAIM 009"
-   ],
-   "36537114": [
-    "CLAIM 009"
-   ]
-  },
-  "query_id": "Q-PG-cb704278c54c",
-  "relation_type": "CAUSAL",
-  "review_state": "AWAITING_SCIENTIST_REVIEW",
-  "terms": [
-   "ROS",
-   "WWOX"
-  ]
- },
- {
-  "axis": "all",
-  "bound_claims": [
    "CLAIM 007"
   ],
   "bound_from": "claim_registry_current.md#CLAIM 007|Title",
@@ -37932,56 +37629,6 @@
    "P47T",
    "WWOX",
    "PPPY"
-  ]
- },
- {
-  "axis": "all",
-  "bound_claims": [
-   "CLAIM 002"
-  ],
-  "bound_from": "claim_registry_current.md#CLAIM 002|Title",
-  "digest": "3bb43c1dae7ee70a",
-  "kind": "mechanism_line",
-  "linkage": {
-   "ids_in_registry_without_pmid": [],
-   "ids_named": [
-    "CLAIM 002"
-   ],
-   "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": [
-    "CLAIM 002"
-   ]
-  },
-  "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
-  "origin_id": "CLAIM 002",
-  "origin_line": 0,
-  "origin_title": "WWOX-LoF causes network hyperexcitability; AAV-WWOX rescues organoid phenotype",
-  "pmids": [
-   "34268881",
-   "34634460",
-   "42128308",
-   "42397075"
-  ],
-  "pmids_via_records": {
-   "34268881": [
-    "CLAIM 002"
-   ],
-   "34634460": [
-    "CLAIM 002"
-   ],
-   "42128308": [
-    "CLAIM 002"
-   ],
-   "42397075": [
-    "CLAIM 002"
-   ]
-  },
-  "query_id": "Q-PG-cd497d953c46",
-  "relation_type": "CAUSAL",
-  "review_state": "AWAITING_SCIENTIST_REVIEW",
-  "terms": [
-   "WWOX",
-   "AAV"
   ]
  },
  {
@@ -38047,6 +37694,99 @@
   "relation_type": "CAUSAL",
   "review_state": "AWAITING_SCIENTIST_REVIEW",
   "terms": []
+ },
+ {
+  "axis": "all",
+  "bound_claims": [
+   "CLAIM 016",
+   "CLAIM 028",
+   "CLAIM 030",
+   "CLAIM 035"
+  ],
+  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID22193544.json|entries[9]",
+  "digest": "09c94cf6aed85bd9",
+  "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 016",
+    "CLAIM 028",
+    "CLAIM 030",
+    "CLAIM 035"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 016",
+    "CLAIM 028",
+    "CLAIM 030",
+    "CLAIM 035"
+   ]
+  },
+  "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
+  "origin_id": "CLAIM 016",
+  "origin_line": 0,
+  "origin_title": "The microtubule-assembly limb of the WWOX/GSK3B/Tau chain IS locatored, and it is cell-free: GSK3B lowers assembly, WT WWOX raises the new equilibrium above GSK3B alone, and the GSK3B-binding-deficient WWOX L404A does not restore it.",
+  "pmids": [
+   "22193544",
+   "24369382",
+   "24456803",
+   "25331887",
+   "25411445",
+   "26499798",
+   "29808465",
+   "32000863",
+   "33916893",
+   "34268881",
+   "34831305",
+   "36779245",
+   "38203337"
+  ],
+  "pmids_via_records": {
+   "24369382": [
+    "CLAIM 030"
+   ],
+   "24456803": [
+    "CLAIM 030"
+   ],
+   "25331887": [
+    "CLAIM 030"
+   ],
+   "25411445": [
+    "CLAIM 030"
+   ],
+   "26499798": [
+    "CLAIM 030"
+   ],
+   "29808465": [
+    "CLAIM 030"
+   ],
+   "32000863": [
+    "CLAIM 016"
+   ],
+   "33916893": [
+    "CLAIM 030"
+   ],
+   "34268881": [
+    "CLAIM 030"
+   ],
+   "34831305": [
+    "CLAIM 016"
+   ],
+   "36779245": [
+    "CLAIM 030"
+   ],
+   "38203337": [
+    "CLAIM 028"
+   ]
+  },
+  "query_id": "Q-PG-dac558aa85c1",
+  "relation_type": "CAUSAL",
+  "review_state": "AWAITING_SCIENTIST_REVIEW",
+  "terms": [
+   "WWOX",
+   "GSK3B",
+   "L404A"
+  ]
  },
  {
   "axis": "all",
@@ -38202,6 +37942,101 @@
    "NOTHING",
    "THIS",
    "THIRD"
+  ]
+ },
+ {
+  "axis": "all",
+  "bound_claims": [
+   "CLAIM 016",
+   "CLAIM 028",
+   "CLAIM 030",
+   "CLAIM 035"
+  ],
+  "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID22193544.json|entries[3]",
+  "digest": "05926ff86c1fafde",
+  "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 016",
+    "CLAIM 028",
+    "CLAIM 030",
+    "CLAIM 035"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 016",
+    "CLAIM 028",
+    "CLAIM 030",
+    "CLAIM 035"
+   ]
+  },
+  "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
+  "origin_id": "CLAIM 016",
+  "origin_line": 0,
+  "origin_title": "WWOX inhibits Tau phosphorylation at S396 and S404 but not at the MKK4 site S422",
+  "pmids": [
+   "22193544",
+   "24369382",
+   "24456803",
+   "25331887",
+   "25411445",
+   "26499798",
+   "29808465",
+   "32000863",
+   "33916893",
+   "34268881",
+   "34831305",
+   "36779245",
+   "38203337"
+  ],
+  "pmids_via_records": {
+   "24369382": [
+    "CLAIM 030"
+   ],
+   "24456803": [
+    "CLAIM 030"
+   ],
+   "25331887": [
+    "CLAIM 030"
+   ],
+   "25411445": [
+    "CLAIM 030"
+   ],
+   "26499798": [
+    "CLAIM 030"
+   ],
+   "29808465": [
+    "CLAIM 030"
+   ],
+   "32000863": [
+    "CLAIM 016"
+   ],
+   "33916893": [
+    "CLAIM 030"
+   ],
+   "34268881": [
+    "CLAIM 030"
+   ],
+   "34831305": [
+    "CLAIM 016"
+   ],
+   "36779245": [
+    "CLAIM 030"
+   ],
+   "38203337": [
+    "CLAIM 028"
+   ]
+  },
+  "query_id": "Q-PG-fe00a95d5f8b",
+  "relation_type": "CAUSAL",
+  "review_state": "AWAITING_SCIENTIST_REVIEW",
+  "terms": [
+   "WWOX",
+   "S396",
+   "S404",
+   "MKK4",
+   "S422"
   ]
  },
  {
