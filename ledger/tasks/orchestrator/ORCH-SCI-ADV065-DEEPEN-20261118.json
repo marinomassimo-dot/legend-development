@@ -82,10 +82,12 @@
     },
     {
      "step": "Reconcile the queue after delivery and continue the next useful deepening; update open questions through the existing path; use DREAM if associations can change a search",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 4",
-     "accepted_at": "2026-11-18T23:33:44Z"
+     "accepted_at": "2026-11-18T23:33:44Z",
+     "evidence": "queue reconciled 2026-11-19: ADV-066/067/068/069 and the census delivered and accepted by ADV; consumers updated (outreach package, brief Addendum 19, 065c note, census); IT mapped the ADV-068 hooks (ee570667b) and needs no ADV-069 mapping; DREAM pass written (adv068_pv_per_animal_sci_20261119/DREAM_ADV068_ADV069_SCI_20261119.md, cd84dde81); ADV instructed no further new dossier tonight, the next deepening is assigned at the 05:24Z meeting and will be registered as a new step",
+     "updated_at": "2026-11-19T02:16:19Z"
     },
     {
      "step": "Onset age and EEG of Wwox seizures beyond Cheng 2020: one reading round of the Wwox mouse and rat reports; a one-line answer if nothing exists",
