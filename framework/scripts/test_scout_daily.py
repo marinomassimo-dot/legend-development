@@ -129,6 +129,55 @@ class RelevantResource(unittest.TestCase):
         self.assertEqual([], report["selected"])
 
 
+class Bridge(unittest.TestCase):
+    """2026-11-19 radar sample (briefing of 05:20 UTC): hits that shared a method, format or homonym word with a derived question and nothing of its biology."""
+    NP3A1 = {"id": "reopen:x/NP3A1", "origin": {"priority": "Nucleus-resolved parvalbumin composition in the Wwox-deletion mouse (snRNA matrices of GSE158684 or PV immunostaining in the neuron-targeted line)"},
+             "gap": "Nucleus-resolved parvalbumin composition in the Wwox-deletion mouse (snRNA matrices of GSE158684 or PV immunostaining in the neuron-targeted"}
+    NP4G1 = {"id": "reopen:y/NP4G1", "origin": {"priority": "Peer review (with source data) of the same-laboratory preprint on a primary oligodendroglial role of WWOX under challenge"},
+             "gap": "Peer review (with source data) of the same-laboratory preprint on a primary oligodendroglial role of WWOX under challenge"}
+    OFF = [(NP3A1, "snRNA-seq of acral melanoma reveals heterogeneity and identifies novel progression marker and cancer-associated fibroblasts subpopulation"),
+           (NP3A1, "The U1 snRNP protein U1C and Helix H of U1 snRNA are critical for small molecule splicing modulator function"),
+           (NP4G1, "RETRACTED: Pre-ictal signature-guided individualized closed-loop tTIS suppresses seizures onset in pediatric epilepsy"),
+           (NP4G1, "WITHDRAWN: Development of the correlation between mitophagy-related genes and epilepsy"),
+           (NP4G1, "Accuracy of epilepsy screening tools in community and primary care settings across countries in Sub-Saharan Africa: systematic review and meta-analysis"),
+           (NP4G1, "elifepathways/sciencebeam-dataset-scielo-preprints")]
+    ON = [(NP3A1, "Single-nucleus transcriptomics of parvalbumin interneurons in a mouse model of Wwox deficiency", "parvalbumin"),
+          (NP4G1, "Oligodendrocyte maturation defects in Wwox-null mice", "oligodendroglial")]      # designed counterexamples: adjacent wording that a real bridge keeps
+
+    def test_hits_that_share_only_method_format_or_homonym_words_have_no_bridge(self):
+        for theme, title in self.OFF:
+            self.assertEqual(sd.shared_bridge(theme, title), [], title)
+
+    def test_a_hit_that_shares_a_content_word_keeps_its_bridge_and_names_it(self):
+        for theme, title, term in self.ON:
+            self.assertIn(term, sd.shared_bridge(theme, title), title)
+
+    def test_method_format_and_accession_words_are_never_bridge_terms(self):
+        for theme in (self.NP3A1, self.NP4G1):
+            terms = sd.bridge_terms(theme)
+            self.assertTrue(terms)
+            for bad in ("snrna", "immunostaining", "gse158684", "preprint", "review", "source", "data", "wwox"):
+                self.assertNotIn(bad, terms)
+
+    def test_fallback_themes_and_the_open_slot_need_no_bridge(self):
+        self.assertEqual(sd.bridge_terms({"id": "open-slot", "gap": "unplanned find: no gap assumed"}), [])
+        self.assertEqual(sd.bridge_terms({"id": "t1", "gap": "gap one"}), [])
+
+    def test_discover_theme_counts_and_names_the_adjacent_hit_and_shows_the_bridge_of_the_kept_one(self):
+        theme = dict(self.NP3A1, epmc="WWOX", gh=None, kw="x", objects=[])
+
+        def opener(url, method="GET", body=None, etag=None):
+            recs = [{"source": "MED", "id": "1", "title": self.OFF[0][1], "firstPublicationDate": "2026-07-17"},
+                    {"source": "MED", "id": "2", "title": self.ON[0][1], "firstPublicationDate": "2026-07-18"}]
+            return 200, {}, json.dumps({"resultList": {"result": recs}}).encode()
+        res = sd.discover_theme(theme, {}, opener, sd.dt.datetime(2026, 11, 19, tzinfo=sd.dt.timezone.utc))
+        shown = [i["title"] for i in res["items"] if i["channel"] == "europepmc"]
+        self.assertEqual(shown, [self.ON[0][1]])
+        self.assertIn("parvalbumin", res["items"][0]["bridge"])
+        self.assertEqual(res["channels"]["europepmc"]["no_bridge"], 1)
+        self.assertEqual(res["channels"]["europepmc"]["no_bridge_names"], [self.OFF[0][1]])          # counted and named, never silently dropped
+
+
 class Discovery(unittest.TestCase):
     THEMES = [{"id": "t1", "gap": "gap one", "epmc": "WWOX", "gh": "q"},
               {"id": "t2", "gap": "gap two", "epmc": None, "gh": "q2"}]
