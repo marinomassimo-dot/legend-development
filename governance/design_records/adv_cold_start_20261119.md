@@ -37,4 +37,4 @@ Reading: from the router row alone a fresh session reaches the contract, then th
 
 1. The router row works as the single entry; no extra pointer was needed to reach the contract, charter and practice rules.
 2. If the standing guidance is meant to be read at a cold start, neither run followed the EMPATHY link in the charter's first bullet; a short sentence in the charter naming `mandate_continuity.py guidance` as the first command of a recall would be the smallest change to test (not made here; the charter is ADV's file).
-3. A cold host takes assignment identifiers from the log: a "next free identifier" line in the practice file or the tick would stop it reusing numbers from a stale reading (N proposed ADV-086 and ADV-087 while the tree already held later ones).
+3. A cold host takes assignment identifiers from the log: a "next free identifier" line in the practice file or the tick would stop it reusing numbers from a stale reading (N read the log as ending at ADV-085 and proposed ADV-086 and ADV-087, while ADV-086 already existed on main).
