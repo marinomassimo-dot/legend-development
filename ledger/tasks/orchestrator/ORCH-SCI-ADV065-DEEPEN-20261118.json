@@ -345,6 +345,15 @@
      "accepted_at": "2026-11-19T15:38:36Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/experiment_brief_presidio013_sci_20261116/v2_consolidated_sci_20261119/ORDERING_PAGE.md: dated refinement of row 6 (lineage reporter, per-animal PV fraction P14/P17/P21, firing and evoked IPSC at physiological chloride); decision page item 14: Hussain 2019 figures, Breton supplement, Steinberg 2026 Supp Fig 8B, clean Repudi 2021 PDF added (ADV had not added them); nothing else changed",
      "updated_at": "2026-11-19T15:39:15Z"
+    },
+    {
+     "step": "ADV-086 unread-corpus pass: rank the obtainable unread WWOX full texts (open access by plain routes, or held without a receipt) from the source-base note by the decision each could change and by mechanisms the module does not use; read the top two completely with a receipt (dry-run first) with the usual extraction; stop rule: if none could change a decision, deliver the ranking and the access list and stop; effort high, one delegate at a time, plain clients, nothing applied, findings to IT",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-086 (assignments/ADV-086.md) and ADV message 2026-11-19",
+     "accepted_at": "2026-11-19T15:53:30Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/unread_corpus_adv086_sci_20261119/UNREAD_CORPUS_RANKING_ADV086_SCI_20261119.md: ranking and access list; stop rule applied (obtainable texts cannot change a decision; clinical open copies refused to plain clients, a challenge is a stop); no text read, no receipt, no delegate",
+     "updated_at": "2026-11-19T15:57:01Z"
     }
    ]
   }
@@ -606,6 +615,13 @@
    "at": "2026-11-19T15:38:36Z",
    "source": "ADV message 2026-11-19, ADV-085 acceptance (verdict on B; claims 031, 011, 019 stay unstarted)",
    "step_sha256": "f2a600068e03",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T15:53:30Z",
+   "source": "ADV-086 (assignments/ADV-086.md) and ADV message 2026-11-19",
+   "step_sha256": "acb80cac474a",
    "reopened_block": false,
    "authorised_by": null
   }
