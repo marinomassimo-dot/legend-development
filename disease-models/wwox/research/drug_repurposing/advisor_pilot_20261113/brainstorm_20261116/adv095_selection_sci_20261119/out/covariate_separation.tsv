@@ -1,0 +1,6 @@
+dataset	covariate	contrast	value	per_sample	extra
+D1_organoid	maturity_NEU_minus_PROG	KO_mean_minus_WT_mean	-0.905	per library: cwt1=0.37;cwt2=0.55;cko1=-0.69;cko2=-0.11;cko3=-0.78;cko4=-0.20	PROLIF per library: cwt1=5.37;cwt2=5.17;cko1=5.59;cko2=5.52;cko3=5.10;cko4=5.16
+D2_cortex_S	stage_score_late_minus_reference	KO_mean_minus_control_mean	-0.334	per sample: CRTX_S_KO_1=-0.51;CRTX_S_KO_2=-0.30;CRTX_S_KO_3=-0.19;CRTX_S_Ctrl_1=0.12;CRTX_S_Ctrl_2=-0.21;CRTX_S_Ctrl_3=-0.02;CRTX_S_Ctrl_4=0.11	n_KO=3 n_ctrl=4
+D3_hippo_S	stage_score_late_minus_reference	KO_mean_minus_control_mean	-0.586	per sample: S_KO_1=-0.50;S_KO_2=-0.76;S_KO_3=-0.50;S_Ctrl_1=0.11;S_Ctrl_2=-0.11	n_KO=3 n_ctrl=2
+D3_hippo_N	stage_score_late_minus_reference	KO_mean_minus_control_mean	-0.114	per sample: N_KO_1=-0.26;N_KO_2=0.03;N_Ctrl_1=0.02;N_Ctrl_2=-0.02	n_KO=2 n_ctrl=2
+D3_hippo_null	stage_score_late_minus_reference	KO_mean_minus_control_mean	-0.246	per sample: KO_1=-0.30;KO_2=-0.19;WT_1=-0.08;WT_2=-0.01;WT_3=0.09	n_KO=2 n_ctrl=3

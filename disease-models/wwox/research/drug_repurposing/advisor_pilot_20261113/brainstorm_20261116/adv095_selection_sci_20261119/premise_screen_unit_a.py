@@ -44,11 +44,11 @@ PANELS_D1 = {"PROLIF": "MKI67 TOP2A CCNB1 CCNA2 CDK1 UBE2C CENPF PCNA MCM2 MCM6 
 LATE = "Grin2a Slc12a5 Nrgn Camk2a Scn8a".split()
 REF = "Snap25 Rbfox3 Syt1 Stmn2 Tubb3 Map2".split()
 OL_GUARD = "Mbp Plp1 Mog Mobp".split()
-MOUSE_ALIAS = {"SERPINA3": "Serpina3n"}
+MOUSE_ALIAS = {"SERPINA3": "Serpina3n", "FTL": "Ftl1", "G6PD": "G6pdx", "NKX2-2": "Nkx2-2"}
 
 
 def mouse(sym):
-    return MOUSE_ALIAS.get(sym, sym.title() if sym != "NKX2-2" else "Nkx2-2")
+    return MOUSE_ALIAS.get(sym, sym[0] + sym[1:].lower())
 
 
 def pct_band(a):
@@ -403,7 +403,10 @@ with open(OUT / "unbiased_replicated_genes.tsv", "w", newline="") as f:
 prot = {}
 with open(FILES / "i18_proteome/zeng2024_table_s1_parsed.tsv") as f:
     for r in csv.DictReader(f, delimiter="\t"):
-        prot[r["symbol"].upper()] = (float(r["log2fc"]), float(r["bh_adj_p"]))
+        try:
+            prot[r["symbol"].upper()] = (float(r["log2fc"]), float(r["bh_adj_p"]))
+        except ValueError:  # rows with NA fold change or p are skipped (counted as not detected)
+            continue
 echo = []
 for name, (gl, dr) in SETS.items():
     det = [(g, prot[g]) for g in gl if g in prot]
@@ -421,7 +424,7 @@ def w(name, header, rws):
     with open(OUT / name, "w", newline="") as f:
         wr = csv.writer(f, delimiter="\t")
         wr.writerow(header)
-        wr.writerows(rws)
+        wr.writerows([list(r) + [""] * (len(header) - len(r)) for r in rws])  # rectangular output (pads short rows)
 
 
 w("set_results.tsv", ["dataset", "set", "contrast_or_cluster", "n_genes_detected", "R_raw_shift", "A1_adjusted_shift_or_c", "c_genotype_term", "c_leave_one_out_range",
@@ -432,6 +435,7 @@ w("covariate_separation.tsv", ["dataset", "covariate", "contrast", "value", "per
 w("gene_values.tsv", ["dataset", "set", "gene"] + [f"v{i}" for i in range(1, 8)], out_gene)
 w("protein_echo_D4.tsv", ["set", "n_registered", "n_detected", "mean_log2fc_silenced_vs_control", "n_BH_below_0.05", "detail"], echo)
 with open(OUT / "missing_genes.txt", "w") as f:
+    f.write("dataset\tset\tregistered_genes_not_found\n")
     for k, v in missing.items():
         f.write(f"{k[0]}\t{k[1]}\t{','.join(v)}\n")
 print("done", len(out_sets), "set rows;", len(labels), "labels")
