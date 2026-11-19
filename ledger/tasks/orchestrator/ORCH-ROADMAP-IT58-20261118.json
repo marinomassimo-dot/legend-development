@@ -4,7 +4,7 @@
  "STANDING": "mandate that holds the work this actor has accepted; the owner writes `MANDATE_BOUND: ORCH-ROADMAP-IT58-20261118` in its session",
  "SESSION_NAME": "IT Orchestrator",
  "AUTHORISED_QUEUE_ACCEPTED": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_ACCEPTED": {
    "order": 1,
    "steps": [
