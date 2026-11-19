@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Read-only ORDINAL funding view: which costly study could change which decision (ADV-092).
+"""Read-only study-preparation diagnostic (legacy funding_view command, ADV-092).
+
+Scientific candidate selection follows roadmap_current.md, Scientific selection before
+laboratory work. This diagnostic's keys describe preparation, not benefit, safety,
+candidate superiority or a funding choice. Quotes are optional, not a prerequisite.
 
 It renders one self-contained HTML page from two tables in a package folder:
 
@@ -7,7 +11,7 @@ It renders one self-contained HTML page from two tables in a package folder:
                       L3 phenotype relevance, L4 transfer to variant and age) each with an evidence
                       class, the decision the study would change, the null-control status, the shared
                       assay, the blind-check status and what was read.
-  cost_ranges.tsv     OPERATOR-SUPPLIED ranges (item, low, high, currency, source, date); header only
+  cost_ranges.tsv     optional OPERATOR-SUPPLIED ranges (item, low, high, currency, source, date); header only
                       by default, so every cost prints "not supplied".
 
 What it deliberately does not do:
@@ -17,8 +21,8 @@ What it deliberately does not do:
     shown as ties;
   * cost is a separate column and a flag, never a sort key, never inside any ordering, and an agent
     never writes it: this tool has no write path to cost_ranges.tsv;
-  * it reads no ranking and changes no ranking digest (the repository's next_priority stays
-    cost-blind); funding order is not research order, and the page says so first.
+  * it reads no scientific ranking and changes no ranking digest. Cost invariance applies
+    only to these preparation keys, not to a universal scientific or funding rule.
 
 Usage:
   python3 framework/scripts/funding_view.py run   [--dir DIR] [--out FILE]
@@ -81,7 +85,8 @@ def load(d: Path) -> tuple[list[dict], dict[str, dict]]:
         if o["null_control"] not in ("named", "partly", "none", "unknown"):
             raise ViewError(f"{o['opp_id']}: null_control")
     costs: dict[str, dict] = {}
-    for r in read_tsv(d / "cost_ranges.tsv", COST_COLS):
+    cost_rows = read_tsv(d / "cost_ranges.tsv", COST_COLS) if (d / "cost_ranges.tsv").exists() else []
+    for r in cost_rows:
         try:
             lo, hi = float(r["low"]), float(r["high"])
         except ValueError:
@@ -196,18 +201,22 @@ def render(d: Path) -> str:
     K = keys(opps)
     R = {n: dense_rank(K[n]) for n in K}
     info = info_ranks(opps)
-    digest = hashlib.sha256((d / "opportunities.tsv").read_bytes() + (d / "cost_ranges.tsv").read_bytes()).hexdigest()[:16]
+    cost_path = d / "cost_ranges.tsv"
+    digest = hashlib.sha256((d / "opportunities.tsv").read_bytes() +
+                            (cost_path.read_bytes() if cost_path.exists() else b"")).hexdigest()[:16]
     p: list[str] = []
-    p.append("<h1>Which study could change which decision: an ordinal view</h1>")
-    p.append('<p class="first">Funding order is not research order. Nothing on this page is a score, a probability of benefit '
-             'or a recommendation; the orderings below are declared, ordinal, and shown beside the evidence they rest on.</p>')
-    p.append('<p class="first">The case for funding a study rests on its dossier: the decisive uncertainty and the outcome-to-decision table, not on any score or on the orderings below. '
-             'A blind hindcast of the four components (ADV-094, 2026-11-19) showed no separation of known successes from known failures, in a run the scorer recognised ten of twelve pairs of; the components are labels of what is known, never a sort key.</p>')
-    p.append('<p class="note">Hypothesis level. Reference genotype class only. Not medical advice. Costs appear only as ranges the '
-             f'operator supplies ({sum(1 for _ in costs)} supplied; default "{NS}"). Input digest {digest}.</p>')
+    p.append("<h1>Study-preparation diagnostic</h1>")
+    p.append('<p class="first">This diagnostic does not select candidates. Scientific selection compares a preferred intervention '
+             'with its strongest rival after pertinent in-silico analyses, for one candidate and priority experiment per objective '
+             'when justified. Quotes are not required. See roadmap_current.md: Scientific selection before laboratory work.</p>')
+    p.append('<p class="note">The ADV-094 hindcast showed no separation in a small, recognition-prone evaluation; '
+             'a separate recognition probe identified ten of twelve pairs. It establishes neither a validated predictor '
+             'nor a general ban on scores. The preparation keys below are not a prediction of benefit.</p>')
+    p.append('<p class="note">Hypothesis level. Reference genotype class only. Not medical advice. Optional supplied planning costs: '
+             f'{sum(1 for _ in costs)}; default "{NS}". No quote is required. Input digest {digest}.</p>')
     # Table A
     head = ["Candidate", "Portfolio", "Study class", *[f"{k} {LINK_NAMES[k]}" for k in LINKS],
-            "Weakest link(s)", "Study resolves the weakest link(s)? (yes = all of them, partly = some)", "Decision named", "Null control", "Safety (per agent and age; never in an ordering)", "Shared assay",
+            "Least documented link(s)", "Study addresses these gaps? (yes = all, partly = some)", "Decision named", "Null control", "Safety (per agent and age; not assessed by preparation keys)", "Shared assay",
             "Blind check", "Cost range", "Cost flag"]
     rows = []
     for o in opps:
@@ -216,13 +225,15 @@ def render(d: Path) -> str:
         rows.append([f"{o['opp_id']} {o['name']}", o["portfolio"], o["study_class"], *[o[k] for k in LINKS],
                      ", ".join(wk[o["opp_id"]]) or "n/a", resolved(o), f"{o['decision_named']}: {o['decision_text']}",
                      o["null_control"], o["safety_cell"], share, o["blind_check"], fmt_cost(c), "supplied" if c else NS])
-    p.append("<h2>1. Candidates: components as separate columns</h2>")
+    p.append("<h2>1. Opportunities: evidence and preparation gaps</h2>")
     p.append('<p class="note">Evidence classes, low to high: unknown, ESPANSIONE, IPOTESI, INFERENZA, DATO-adjacent (a datum in another '
              'system, stage or only at abstract level), DATO-matching (a datum in the system the study would use). The weakest link is '
-             'the lowest class; unknown is the lowest and is printed as unknown. A mid-chain study resolves L1 and L2, not L3 or L4.</p>')
+             'the lowest documented class in this diagnostic, not the lowest potential benefit. Unknown is printed as unknown. '
+             'What a study can test depends on its model, intervention and endpoint; in-vitro or ex-vivo work can address '
+             'functional phenotypes or variant-specific responses without establishing clinical efficacy.</p>')
     p.append(table(head, rows, "components"))
     # strip
-    p.append("<h2>2. Sensitivity strip: rank under three declared orderings</h2>")
+    p.append("<h2>2. Preparation sensitivity: three declared orderings</h2>")
     p.append('<p class="note">Each ordering is a lexicographic key (no weights, no sums): '
              'A = decision named, null control, weakest link resolved, assay sharing; '
              'B = weakest link resolved, decision named, null control, assay sharing; '
@@ -239,12 +250,12 @@ def render(d: Path) -> str:
     if info:
         irows = [[f"{o['opp_id']} {o['name']}", str(info.get(o["opp_id"], "unknown")),
                   o["rows_that_change_decision"] or "unknown"] for o in opps]
-        p.append('<p class="note">Information-value sensitivity (not an ordering of merit; counts the outcome rows of a dossier that '
-                 'would change a decision and claims no probability):</p>')
+        p.append('<p class="note">Outcome-branch inventory: counts dossier rows that change a decision. '
+                 'This count is not expected information value or scientific merit and claims no probability:</p>')
         p.append(table(["Candidate", "Rank", "Outcome rows that change a decision (of 3)"], irows, "info"))
     else:
         n = sum(1 for o in opps if o["rows_that_change_decision"].isdigit())
-        p.append(f'<p class="note">Information-value sensitivity: not available; {n} of {len(opps)} candidates have a dossier '
+        p.append(f'<p class="note">Outcome-branch inventory: not available; {n} of {len(opps)} candidates have a dossier '
                  "stating which outcome rows change a decision.</p>")
     # assays
     p.append("<h2>3. Shared assays</h2>")
@@ -254,7 +265,7 @@ def render(d: Path) -> str:
     p.append(table(["Assay or preparation", "Candidates it serves", "Count"],
                    [[a, ", ".join(v), str(len(v))] for a, v in sorted(by.items())], "assays"))
     # pairs
-    p.append("<h2>4. Pairs: one ambitious and one conservative candidate (listed by id, not ordered)</h2>")
+    p.append("<h2>4. Pairs by recorded objective labels (listed by id, not selected)</h2>")
     p.append('<p class="note">The pair, not the top two names. "Shares an assay" is a design fact, not a merit. A pair cost is shown only '
              "when both ranges are supplied in one currency, and is never a sort key.</p>")
     amb = [o for o in opps if o["portfolio"] == "ambitious"]
@@ -275,7 +286,7 @@ def render(d: Path) -> str:
     p.append('<p class="note">Limits: the classes are the row author\'s reading of the cited sources, not a re-audit; a blank or unread '
              "link is printed as unknown. Source tables: opportunities.tsv and cost_ranges.tsv (operator-supplied only).</p>")
     return ("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">"
-            f"<title>Funding view</title><style>{CSS}</style></head><body><main>{''.join(p)}</main></body></html>\n")
+            f"<title>Study-preparation diagnostic</title><style>{CSS}</style></head><body><main>{''.join(p)}</main></body></html>\n")
 
 
 def main(argv: list[str] | None = None) -> int:

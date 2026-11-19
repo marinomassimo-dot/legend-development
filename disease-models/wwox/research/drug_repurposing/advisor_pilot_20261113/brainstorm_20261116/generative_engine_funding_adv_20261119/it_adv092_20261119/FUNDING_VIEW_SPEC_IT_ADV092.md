@@ -2,6 +2,8 @@
 
 Hypothesis level. Reference genotype class only. No dose, schedule or recommendation for any agent in any person. Not medical advice. No personal or individual-level information is used or recorded.
 
+**Current scope, operator clarification of 2026-11-19.** This is a study-preparation diagnostic, not a scientific candidate ranking or funding decision. The legacy file and command names are retained for compatibility. Apply [Scientific selection before laboratory work](../../../../roadmap_current.md#scientific-selection-before-laboratory-work) and the [team continuation brief](../SCIENTIFIC_SELECTION_BRIEF_ADV_20261119.md). Costs are optional context, never an input required to select a candidate. Earlier sections below record the original implementation; their stronger funding claims, universal L1/L2-only assay limit and operator dependencies are superseded within this scope. The display now makes these limits explicit. No research order or scientific source row is changed by this correction.
+
 **First line of the view: funding order is not research order.** The view orders nothing by cost, probability or score.
 
 ## 1. What was built (small, read-only, tested)

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Tests for funding_view.py: ordinal, no sums, cost only from the operator's file, unknown stays unknown."""
+"""Tests for the legacy funding_view preparation diagnostic, not candidate selection."""
 from __future__ import annotations
 
 import shutil
@@ -37,7 +37,7 @@ class FundingView(unittest.TestCase):
     def test_first_line_and_default_cost_not_supplied(self) -> None:
         write(self.tmp, [row("O1", "ambitious"), row("O2", "conservative")])
         t = fv.render(self.tmp)
-        self.assertLess(t.index("Funding order is not research order"), t.index("data-table"))
+        self.assertLess(t.index("This diagnostic does not select candidates"), t.index("data-table"))
         self.assertIn("not supplied", t)
         self.assertNotIn("supplied</td>", t.replace("not supplied</td>", ""))
 
@@ -66,7 +66,7 @@ class FundingView(unittest.TestCase):
         r = fv.dense_rank(fv.keys(fv.load(self.tmp)[0])["A"])
         self.assertEqual(r["O1"], r["O2"], "identical keys must share one rank, not be broken by id")
 
-    def test_cost_never_changes_any_ordering(self) -> None:
+    def test_optional_cost_does_not_change_preparation_keys(self) -> None:
         rows = [row("O1", "ambitious"), row("O2", "conservative", assay_id="A2", decision_named="unknown")]
         write(self.tmp, rows)
         before = {n: fv.dense_rank(k) for n, k in fv.keys(fv.load(self.tmp)[0]).items()}
@@ -75,6 +75,19 @@ class FundingView(unittest.TestCase):
         self.assertEqual(before, after)
         t = fv.render(self.tmp)
         self.assertIn("1 to 2 EUR", t)
+
+    def test_missing_quote_file_keeps_opportunities_and_diagnostic_available(self) -> None:
+        rows = [row("O1", "ambitious"), row("O2", "conservative")]
+        write(self.tmp, rows)
+        with_file = fv.keys(fv.load(self.tmp)[0])
+        (self.tmp / "cost_ranges.tsv").unlink()
+        opps, costs = fv.load(self.tmp)
+        self.assertEqual(len(opps), 2)
+        self.assertEqual(costs, {})
+        self.assertEqual(fv.keys(opps), with_file)
+        rendered = fv.render(self.tmp)
+        self.assertIn('data-table="components"', rendered)
+        self.assertIn("No quote is required", rendered)
 
     def test_bad_cost_row_is_refused(self) -> None:
         write(self.tmp, [row("O1", "ambitious")], [["item1", "5", "2", "EUR", "q", "d"]])

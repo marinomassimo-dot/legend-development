@@ -1,0 +1,79 @@
+{
+  "TASK_ID": "PLAN-SCIENTIFIC-SELECTION-20261119",
+  "ACTOR_ID": "plan",
+  "OWNER": "plan",
+  "SESSION_NAME": "Codex scientific selection alignment",
+  "OBJECTIVE": "Implement the operator-authorised durable direction: comparative in-silico candidate selection, one candidate and priority experiment per objective when justified; quotes are not a dependency. Reconcile active brainstorm tools and supply a team continuation brief without deciding scientific meaning.",
+  "CONTEXT_POLICY": "SYNTHESIS",
+  "RUNTIME": "Codex",
+  "AUTHORISED_QUEUE_SELECTION": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_1": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Record the standing scientific-selection direction and team continuation",
+          "status": "DONE",
+          "evidence": "roadmap_current.md operator seat and SCIENTIFIC_SELECTION_BRIEF_ADV_20261119.md in the existing brainstorm package"
+        },
+        {
+          "step": "Align the existing dossier and diagnostic without changing scientific evidence",
+          "status": "DONE",
+          "evidence": "Dossier template and existing funding_view diagnostic corrected; optional missing cost file supported; preview regenerated; 12 tests pass including missing-file execution"
+        },
+        {
+          "step": "Verify retrieval, focused regressions and publication; preserve handoff truth",
+          "status": "IN_PROGRESS"
+        }
+      ]
+    }
+  },
+  "DEFAULTS_TAKEN": [
+    {
+      "condition": "The operator asks how to proceed and authorises direct repository work through the assigned Harness role",
+      "default_taken": "Record the standing direction and a bounded team brief; repair misleading diagnostic scope, not choose compounds",
+      "why_safe": "No scientific current file, source row, candidate priority or clinical decision is changed",
+      "what_would_have_differed": "A chat-only prompt would not survive later sessions"
+    },
+    {
+      "condition": "The portfolio CLI refuses every operation from a linked worktree because its campaign is primary-checkout-owned",
+      "default_taken": "Do not mutate the primary checkout, bypass the refusal or create a campaign; publish the directive through the existing operator roadmap and guidance reader instead",
+      "why_safe": "The same reader already reaches ADV startup, recall and revival; live acceptance is not claimed",
+      "what_would_have_differed": "A portfolio row would have provided another opportunity pointer but is not required to receive current operator guidance"
+    }
+  ],
+  "STOP_LOG": [],
+  "DECISIONS_TAKEN": [
+    {
+      "what": "Reuse the roadmap, its existing guidance reader, the living portfolio and the current diagnostic; keep legacy command and data names",
+      "alternatives_rejected": "New ranking framework, monetary scoring, mandatory validation gate, rewritten historical science reports",
+      "reversibility": "Revert this task diff; no original source material deleted"
+    }
+  ],
+  "VERIFICATION": {
+    "log_directory": "/tmp/legend-scientific-selection-checks-20261119-sfuhe52a",
+    "status": "FOCUSED_CHECKS_PASSED",
+    "funding_view_tests": 12,
+    "routing_tests": 7,
+    "section_reference_tests": 13,
+    "current_guidance_retrieved": true,
+    "fulltext_receipts": "OK: 2201 chained events",
+    "lint": "WARN, no BLOCK",
+    "self_eval": "PASS with existing declared gaps",
+    "scientific_delta": "No source row, candidate ranking or canonical scientific current file changed",
+    "publication": "Pending candidate commit and exact-SHA gate",
+    "live_delivery": "No native Claude SendMessage in this runtime; roadmap integration and full brief are durable inputs, not a claimed send or take-in-charge",
+    "advisor_route": "RESOLVED to the one live ADV session (route checked 2026-11-19); routing is not delivery",
+    "precheck": "PASS, zero per-file blocks; not the full release gate"
+  },
+  "SESSION_LEARNING_REVIEW": {
+    "observation": "The original brainstorm turned limited scientific evidence and illustrative prices into preparation-oriented ranking and operator cost dependencies",
+    "correction": "The current operator clarification is retrieved through the existing guidance route; readiness labels are distinguished from comparative scientific support",
+    "limit": "Instruction retrieval and diagnostic tests do not demonstrate improved prediction or a selected candidate; live ADV take-in-charge and the scientific comparison remain to be verified",
+    "dream": "Material method correction connects existing dossiers to the comparative scientific objective in the current guidance; no new scientific association or ledger entry claimed",
+    "evaluation": "Science-specific reading and source-discovery questions are not applicable: this task analyses existing method artifacts, not new studies. Machine checks above are technical evidence; later scientific output is still required.",
+    "capability_scout": "CHANGE = NONE beyond the observed method/diagnostic correction; no new service, model, actor, scheduler or evidence gate",
+    "remaining": "ADV/team must take in the full brief and execute the comparisons. This Harness task completes when the durable change is published and its technical scope verified, not when scientific efficacy is established.",
+    "technical_incidents": "Two CLI assumptions were corrected without fallback mutations: portfolio commands are primary-only; mandate_watch route prints JSON without a --json option. The pre-commit freshness call examined HEAD, not pending edits; a committed-candidate check follows."
+  }
+}

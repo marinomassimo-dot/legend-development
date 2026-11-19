@@ -1,10 +1,10 @@
-# Decision dossier: one page per fundable candidate (template v1, IT, 2026-11-19, ADV-092 item 1)
+# Comparative decision dossier (ADV-092 template, updated for the operator clarification of 2026-11-19)
 
-Hypothesis level. Reference genotype class only. No dose, schedule or recommendation for any agent in any person. Not medical advice. No personal or individual-level information is used or recorded. Costs appear only as ranges the operator supplies (see `cost_ranges.tsv`); an agent never writes a cost.
+Hypothesis level. Reference genotype class only. No dose, schedule or recommendation for any agent in any person. Not medical advice. No personal or individual-level information is used or recorded. Any quote is optional study-planning information, not a prerequisite for scientific selection.
 
-**What the page is for.** A reader who must choose which costly study to fund needs, per candidate, the one result that would change one named decision, and what is done after each possible result. Funding order is not research order: this page does not rank anything; the ordinal view (`FUNDING_VIEW_SPEC_IT_ADV092.md`) reads its fields.
+**What the page is for.** Explain why an intervention is preferable to its strongest rival after relevant in-silico analyses, then name the priority experiment and what each outcome would change. Current direction: [Scientific selection before laboratory work](../../../../roadmap_current.md#scientific-selection-before-laboratory-work). The existing view reads study-preparation fields only; neither a complete dossier nor its diagnostic orderings establish candidate superiority. Adapt the template to the question; it is not a release or research gate.
 
-**Length.** One page. A field that cannot be filled says `unknown` (never a guess) and the dossier says in field 4 what was tried to fill it.
+**Length.** Aim for a short decision page with pointers to complete analysis outputs. A field that cannot be filled says `unknown` (never a guess) and field 4 identifies useful remaining work. Unknown is not evidence of no benefit.
 
 **Wording rule.** Every sentence of fields 1 to 3 that states what a source shows follows `framework/protocols/prompt_batch_commit.md` section 4.2.1: the verbatim anchor sentence with its locator or the word `INFERENCE`; a vector, preparation, species or causal verb only if it occurs in the held anchor text; the authors' own limit sentence beside any "so what"; a quantifier carries its unit; a value read from a figure says "by eye".
 
@@ -24,6 +24,9 @@ Evidence classes are the repository's, stated per link; `unknown` is a valid val
 
 ## 2. What we know (three lines at most, each with its limit)
 
+## 2a. Preferred intervention against its strongest rival
+Name the intended functional benefit and relevant context, the currently preferred intervention and rival (or why no preference is justified), the analyses actually executed with result pointers, and the before/after consequence for that preference. State the assumptions or counterevidence that could reverse it. Do not substitute literature volume, dossier completeness or a named assay for this comparison.
+
 ## 2b. Safety cell: one line per agent and age (its own cell, never merged into the chain or an ordering)
 For each agent the study would use and each age that matters: the label limit (minimum age, warnings), the harm signal from held sources, and the source class. `unknown` is printed as unknown. Example of the kind of entry (from held labels, not advice): an agent whose label states safety not established below a given age. A conservative-cluster candidate whose safety cell is unknown or states a limit above the target age is not assumed safe because the cluster is called conservative.
 
@@ -35,13 +38,13 @@ One sentence: the uncertainty. Then the **outcome-to-decision table** (rows are 
 | Negative, with the control passed | | | | |
 | Ambiguous or null, with the control failed | | | | |
 **Interpretable-null control (SCI's addition).** Name the engagement or assay-sensitivity control that must pass for a null to count as a negative (for example: the assay detects the effect of a known active agent, or the target is shown reached in this preparation). If no such control exists, a null is `UNRESOLVED` by construction and the dossier says so in this line, because then a null cannot change the decision.
-**The "would we do anything different" check.** If this field names no decision that any row changes, or the decision is the same in every row, the dossier goes to **a person who can say "we would not do anything different"**: that person is asked one question, "which row would make you act differently?", and the answer is recorded here. A candidate that fails the check is not a fundable study (it may still be a held question).
+**The "would we do anything different" check.** If no result would change a named decision, the authors and ADV reconsider the question, analysis or experiment autonomously. A second reader can help when useful; an operator reply is not required for ordinary research design. Keep the question open or choose a better one rather than declare a completed template sufficient for selection.
 
-## 4. Why no cheaper analysis reduces it (with the perimeter of "tried")
-What was tried in silico or in held literature, by which route, over which sources (counts), and what it returned. A claim of absence ("no source reports X") is stated with its perimeter and a second route (see the repository's absence-claim rule). If a cheaper route exists and was not tried, it is listed and the dossier is not ready.
+## 4. Analyses capable of changing the comparison (with the perimeter of "tried")
+What was executed in silico or in held literature, by which route and over which sources, with its outputs, limits and effect on the candidate comparison. Name useful remaining analyses, or why further available analysis is unlikely to change the choice. A claim of absence states its actual search perimeter under the existing source rules. Availability of another tool or free source does not require an exhaustive sweep; no monetary quote or proof that no cheaper route exists is required.
 
 ## 5. What a study of this class can and cannot resolve
-A mid-chain study (cost class of a laboratory measurement) can resolve L1 and L2; it cannot resolve L3 or L4. Say which link(s) the proposed study resolves and which stay open after the best outcome. If the study resolves no weakest link, say that.
+State the particular model, intervention and endpoint, which propositions they can test and which stay open after the best outcome. In-vitro or ex-vivo work can test a functional phenotype or a variant-specific response in that model; it does not itself establish clinical efficacy or unrestricted transfer. Price is not a biological limit. The least documented link is not automatically the next useful question, and a functionally informative experiment need not resolve every causal detail.
 
 ## 6. Shared assay
 Which other candidates or controls the same readout serves (candidate ids), the preparation or measurement named once, and whether sharing changes the design (for example, an extra arm, an extra age).
@@ -54,7 +57,7 @@ Which other candidates or controls the same readout serves (candidate ids), the 
 ## Consumers (who reads which field)
 | Consumer | Reads |
 |---|---|
-| The ordinal funding view (`FUNDING_VIEW_SPEC_IT_ADV092.md`) | header, field 1, field 2b (own column) (classes, weakest link), field 3 (decision named: yes/no; the outcome table), field 6 (assay id), field 7, `cost_ranges_item` |
+| The study-preparation diagnostic (`FUNDING_VIEW_SPEC_IT_ADV092.md`; legacy command `funding_view.py`) | header, field 1, field 2b (classes and gaps), field 3 (decision named and outcome table), field 6 (assay id), field 7; optional planning costs |
 | The cards' "decisive experiment" field | field 3 |
 | `research_portfolio.tsv` | header, field 3 |
 | ADV's meeting page and the Foundation reader | the whole page |
@@ -62,7 +65,7 @@ Which other candidates or controls the same readout serves (candidate ids), the 
 ## Filling checklist (what a reviewer checks first)
 1. Four links present, each with a class; `unknown` printed as unknown.
 2. Field 3 has three rows and a named control; or the line says the null is `UNRESOLVED` by construction.
-3. Field 3 names a decision, or the "would we do anything different" question is answered by the named `check_reader`.
+3. Field 2a compares a preferred intervention with its strongest rival, or states why no preference is justified; field 3 explains what the experiment changes. An ordinary design question is for the authors and ADV, not a mandatory operator handoff.
 3b. Field 2b has a line per agent and age (or `unknown`).
 4. Field 4 gives a perimeter, not only "none found".
 5. Field 5 says which link stays open after the best outcome.
