@@ -1,0 +1,3 @@
+2026-11-19
+SCI resumed in a fresh window (ADV-078 trial): session f630dd25-a894-445c-85fa-ee15a01b9ec9, bound to ORCH-SCI-ADV065-DEEPEN-20261118 after the old session 9400b253-25a0-4b03-8822-96361325fc16 wrote MANDATE_RELEASED (2026-11-19T11:01:18Z).
+Checkpoint read completely: CHECKPOINT_SCI_CONTINUATION_20261119.md, sha256 first 12 hex ee33de58e09a.
