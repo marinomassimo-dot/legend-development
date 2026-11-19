@@ -228,15 +228,12 @@
     },
     {
      "step": "K: audit items 5 to 7 (peripheral nerve, P47T organ findings, S-HT panel text against legend) if ADV ranks them after IT's confirmations (ADV-075)",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "SCI remaining items 2026-11-19 (audit items 5 to 7)",
      "accepted_at": "2026-11-19T10:15:43Z",
-     "blocker": "waits for ADV's ranking after IT's row confirmations and for the fresh window",
-     "unblock_when": {
-      "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/checkpoint_sci_20261119/WINDOW_RESUMED.txt"
-     },
-     "updated_at": "2026-11-19T10:16:02Z"
+     "updated_at": "2026-11-19T11:21:09Z",
+     "evidence": "ranked by ADV 2026-11-19: item 6 resolved by IT, items 5 and 7 replaced by ADV-079; delivered in disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/harm_against_phenotype_adv079_sci_20261119/HARM_AGAINST_PHENOTYPE_ADV079_SCI_20261119.md"
     },
     {
      "step": "L: supply-path papers when they arrive (WWOX clinical series, Sardi 2006, 2005 and 2007 WWOX-ERBB4 reports, Suzuki 2009, Aqeilan 2008, Hussain 2023 supplement): read completely, receipt, close R3 and the rat-serum and Mbp questions",
@@ -244,11 +241,20 @@
      "owner": "orchestrator",
      "source": "SCI remaining items 2026-11-19 (supply-path papers)",
      "accepted_at": "2026-11-19T10:15:43Z",
-     "blocker": "waits for the operator's supply of the listed texts and for the fresh window",
+     "blocker": "waits for the operator's supply of the listed texts (decision page item 14, owner: operator through ADV); not held: Aqeilan 2008, Suzuki 2009 full text, the 2005 and 2007 WWOX-ERBB4 reports, Sardi 2006, the clinical series. The Hussain 2023 supplement is NOT owed: it is held on disk (files/supplement/PMID36828035/, found 2026-11-19) and its S2 and S6 panels are an executable reading for ADV to assign",
      "unblock_when": {
-      "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/checkpoint_sci_20261119/WINDOW_RESUMED.txt"
+      "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/checkpoint_sci_20261119/L_TEXT_ARRIVED.txt"
      },
-     "updated_at": "2026-11-19T10:16:03Z"
+     "updated_at": "2026-11-19T11:22:11Z"
+    },
+    {
+     "step": "ADV-079: per-candidate harm-against-phenotype table from held originals (audit items 5 and 7; item 6 resolved by IT): lithium, ethosuximide, pore blockers, vigabatrin, ketogenic diet, AAV9 comparator; stop rule: fewer than three intersections with a held primary source gives 'mostly unknown'",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-079 (assignments/ADV-079.md) and ADV message 2026-11-19 ranking K",
+     "accepted_at": "2026-11-19T11:21:03Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/harm_against_phenotype_adv079_sci_20261119/HARM_AGAINST_PHENOTYPE_ADV079_SCI_20261119.md",
+     "updated_at": "2026-11-19T11:21:09Z"
     }
    ]
   }
@@ -435,6 +441,13 @@
    "step_sha256": "54347cf12774",
    "reopened_block": false,
    "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T11:21:03Z",
+   "source": "ADV-079 (assignments/ADV-079.md) and ADV message 2026-11-19 ranking K",
+   "step_sha256": "16b49a5ae00e",
+   "reopened_block": false,
+   "authorised_by": null
   }
  ],
  "DELEGATIONS": [
@@ -455,6 +468,7 @@
   "G producer (legend-delegate, agent ae2b9c0f, 2026-11-19, read-but-not-carried audit of 20 held papers): asked sonnet/medium; read back sonnet x31, medium x31; birth 21,486; 31 turns; output 46,064; cache read 2,660,468; peak 173,559; about 31 tool calls (cap 90); 6.0 min; 78 results: 30 carried, 16 partly, 30 not carried, 2 unclear; blind spot-check of five rows (seed 20261119) by me: one route miss, one possible over-credit.",
   "R4 producer (legend-delegate, agent abcc975b, 2026-11-19, ADV-074 glucose and metabolic first pass from held originals, figures viewed where held): asked sonnet/medium; read back sonnet x50, medium x50; birth 21,440; 50 turns; output 29,912; cache read 6,158,342; peak 204,026; 54 tool calls (cap 90); 4.8 min; one figure independently viewed by me; absence in the Brain 2021 paper re-checked by concept words.",
   "R5 producer (legend-delegate, agent a2241a17, 2026-11-19, ADV-076 part b, Hussain 2023 Olig2 and Mbp): asked sonnet/medium; read-back in the census at completion; 8 tool calls; 50 s; main figures viewed, supplement not held.",
-  "ADV-077 consolidation producer (legend-delegate, agent a55a0f95, 2026-11-19): asked sonnet/medium; read-back in the census at completion; 27 tool calls (cap 90); 7.2 minutes; four files; the delegate did not read the originals back against v2 line by line; my checks: corrections grep-checked, priors sha unchanged, five coverage rows verified, numeric tokens of the pup body compared (only citation years and identifiers absent)."
+  "ADV-077 consolidation producer (legend-delegate, agent a55a0f95, 2026-11-19): asked sonnet/medium; read-back in the census at completion; 27 tool calls (cap 90); 7.2 minutes; four files; the delegate did not read the originals back against v2 line by line; my checks: corrections grep-checked, priors sha unchanged, five coverage rows verified, numeric tokens of the pup body compared (only citation years and identifiers absent).",
+  "ADV-079 harm-against-phenotype producer (legend-delegate, 2026-11-19, dispatched by the fresh-window SCI): asked sonnet/medium; read back in the census: claude-sonnet-5-5 x39 turns, effort medium x39; 39 turns, 44,568 output tokens, 4,439,877 cache-read tokens, birth context 24,759, peak 182,053; held originals only, no repository writes (report parsed from its SubagentHandback message). My checks: blind spot-check of five rows by random draw (seed 20261119 over 41 rows; rows 2, 14, 31, 34, 40; two routes each; 4 confirmed, 1 incomplete), three headline claims verified (P47T Supplementary Table 4 on disk, vigabatrin label sentences, ST4 percentages); two corrections recorded (P47T 'age-typical' nephropathy over-credited; lithium label 'hepatic' mention missed); headline count 12 corrected to 13. No blind verifier run: every NO cell is a label keyword absence, not an exclusion."
  ]
 }
