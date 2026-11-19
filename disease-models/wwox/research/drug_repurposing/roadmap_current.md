@@ -38,7 +38,7 @@ The SCI51 and EBP references above are dated examples to reconcile with the curr
 ### Standing guidance by situation
 
 <!-- OPERATOR_GUIDANCE:BEGIN -->
-Current operator intent, consolidated 2026-11-19. These are decision aids inside the existing authority, mission and controls, not an approval or a checklist. Read the relevant original when the decision needs more context. Method: cross-session transport section 12, EMPATHY. A later documented instruction takes precedence within its scope.
+Current operator intent, consolidated 2026-11-19. These are decision aids inside the existing authority, mission and controls, not an approval or a checklist. Read the relevant original when the decision needs more context. Any inferred interpretation is labelled as tentative and linked separately; it carries no operator authority. Method: cross-session transport section 12, EMPATHY. A later documented instruction takes precedence within its scope.
 
 **At a handoff, closed increment or quiet recall — choose the next useful investment.** Compare the roadmap, other questions, candidates, source coverage, radar and DREAM leads; a laboratory dependency or an exhausted thread parks that path, not the portfolio. Prepare or assign a source-backed question and follow actual acceptance and consumption. Check real activity and resources before claiming work is in flight or capacity is unavailable. **Why:** useful research on a severe early-onset disease should not depend on the operator repeating operational prompts. Scope: each actor's authorised work; ADV owns programme direction. Source: operator continuity instructions, 2026-11-14 to 2026-11-18; canonical rule: cross-session transport section 12, Continuity and Laboratory ownership.
 

@@ -16,7 +16,7 @@ The active criteria are faithful paraphrases of documented operator directions: 
 
 ## Design choices and limits
 
-This implements Phase 1 O1/O4 and a narrow part of O3: existing decision-time channels read the same live section instead of embedding a stale copy or selecting fixed top-three lessons. It adds no memory store, schema for each prompt, new agent, service, scheduler, gate, scientific-field mutation or model-mediated capture. An inferred preference is revisable interpretation in an existing design note; it is not silently promoted into operator authority. The hot section contains current guidance; superseded interpretations and dated instructions remain consultable as history.
+This implements Phase 1 O1/O4 and a narrow part of O3: existing decision-time channels read the same live section instead of embedding a stale copy or selecting fixed top-three lessons. It adds no memory store, schema for each prompt, new agent, service, scheduler, gate, scientific-field mutation or model-mediated capture. An inferred preference is revisable interpretation in an existing design note; a clearly tentative pointer can make it retrievable when useful without promoting it into operator authority. The hot section contains current guidance; superseded interpretations and dated instructions remain consultable as history.
 
 The complete original operator block had 46,100 UTF-8 bytes and SHA-256 `4a108dce4bcce213369a765a989c1f8377f041bb5a23c26e2cd3b3ed88ef4c5d`; preservation was checked after the edit. The new situation section is about 4.3 KB. These are source sizes, not token prices or demonstrated behavioural gains. The old block's complete originals are available when a decision needs their detail; a current guide does not substitute for a full scientific input.
 
@@ -33,3 +33,15 @@ EMPATHY is technically connected after landing; improved autonomy is not yet dem
 ## Removal
 
 Remove the `guidance` reader and its calls in the tick/revival, the added router/start pointers and the method if this pattern adds no value. The original dated operator block remains in the same roadmap history. Preserve operator controls and canonical scientific/authority rules. No database, private-memory migration or background process needs undoing.
+
+## Session Learning Review
+
+Session: Codex EMPATHY Phase 2, 2026-11-19; ACTOR_ID `plan`, Harness Engineering; task `PLAN-EMPATHY-PHASE2-20261119`. Classification: `MICRO_UPGRADE`, local technical observation, not a promoted best practice or a replication of the Phase 1 model probes. Scope: operator-intent retrieval and its existing consumers, not scientific inference.
+
+**Work, problem and solution.** Phase 1's missing provenance and warm-host application failure are different problems. The change records selective rationale in the existing current seat and carries it into existing startup, tick and revival paths; it does not claim that another saved instruction cures an application failure. The operator's original block remains lossless. Concurrent HE routing corrections were reconciled in the implementation worktree, leaving the standalone battery clone unchanged. One post-merge test command named `test_tool_routing.py` under the wrong directory and failed to import it; the actual `scripts/test_tool_routing.py` was then run and passed. This was an invocation error, not a product regression.
+
+**Learning and impact.** A source can be durable yet hard to recover, and easy recovery can still fail to influence a choice. The measured micro-upgrade is current, scoped retrieval without a private index or an additional model invocation. The behavioural question remains whether a later different situation produces a better choice and follow-through. No new scientific candidate or therapeutic conclusion is asserted. Evidence: the Phase 1 artifacts, the source-history equality check and the focused subprocess/tick/revival regressions listed above; no new `LEARNING_ID` or learning index is invented.
+
+**DEFAULTS_TAKEN / DECISIONS_TAKEN.** Reuse the shared roadmap and existing readers rather than introduce a new memory store; retain history while shortening the active input; run no further paid model probe; integrate concurrent changes only in this task's worktree. No local worktree holds `main`, so publication uses the existing serialized author-push path rather than switching or stashing a peer's primary checkout. These choices are reversible through the removal steps above. No independent scientific adjudication was needed for this harness-only change.
+
+**STOP_LOG.** No operator confirmation or external decision was requested. Waiting on the existing isolated battery is verification in progress, not a new assignment left for the operator. The task record preserves the tested revision and distinguishes it from later integration/publication revisions.
