@@ -545,7 +545,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2150,
-   "sha256": "b120773acb7a5698960a27d36b72d667e8adee0c3bf0831f471e519a94461422"
+   "sha256": "87e75a3d3e1789b86ed9d536089c146c5b060196547d42e247df3c0f28aed1a7"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -560,16 +560,16 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5270225,
-   "sha256": "97391f92b5ead70598b4f6eeef34f32b89b0c34781bf0dd1147f73d02cdf74d3"
+   "bytes": 5274786,
+   "sha256": "b3e469f03166cc80aa7b450350b2546a27e9fe58ed7a6c52d14eb155058afcaf"
   },
   "es.html": {
-   "bytes": 5255368,
-   "sha256": "f391619acfc95e35d4faa7e9757364cfe94a07b57bc821bd487460ee2f141eed"
+   "bytes": 5260232,
+   "sha256": "498637e666ae92595fda21835b53ef581868f86fe8ce242b20037c4e864083e8"
   },
   "fr.html": {
-   "bytes": 5287373,
-   "sha256": "570a5048504e7883f2590a803d7abf4a3b73213388b81e7109bd8c559957c772"
+   "bytes": 5295542,
+   "sha256": "85f7ae66e05ed1a2dbdbba0f41db5cc4d7148c533f665674117c8f72e07b28b2"
   },
   "index.html": {
    "bytes": 5168355,
