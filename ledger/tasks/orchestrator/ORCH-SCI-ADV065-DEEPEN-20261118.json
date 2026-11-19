@@ -255,6 +255,22 @@
      "accepted_at": "2026-11-19T11:21:03Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/harm_against_phenotype_adv079_sci_20261119/HARM_AGAINST_PHENOTYPE_ADV079_SCI_20261119.md",
      "updated_at": "2026-11-19T11:21:09Z"
+    },
+    {
+     "step": "ADV-080: Baryla 2021 full text for the CLAIM 025 correction candidate (plain routes, receipt after dry-run, blind locator audit) and triage of radar item PMID 43048821 by the decision it could change",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-080 (assignments/ADV-080.md)",
+     "accepted_at": "2026-11-19T12:10:49Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/claim025_gdm_anchor_sci_20261119/CLAIM025_GDM_ANCHOR_CHECK_SCI_20261119.md; receipt FTR-20261119-33520443-01; radar item PMID 43048821 triaged in the same ADV reply, closed and accepted by ADV 2026-11-19",
+     "updated_at": "2026-11-19T12:10:56Z"
+    },
+    {
+     "step": "Materials-contribution test 2 (ADV suggestion 2026-11-19, SCI's choice): one real decision whose answer lives in the held data (which single optional measurement of the ordering page rows 6 to 11 a laboratory that can take only one should take first), criteria hashed first, co-designed with IT, loop-materials arm against a lean held-originals arm, same model, effort and tool cap, blind verifier, costs read back; not the PPxY case",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-19 (operator's request for one small comparison)",
+     "accepted_at": "2026-11-19T12:10:56Z"
     }
    ]
   }
@@ -446,6 +462,20 @@
    "at": "2026-11-19T11:21:03Z",
    "source": "ADV-079 (assignments/ADV-079.md) and ADV message 2026-11-19 ranking K",
    "step_sha256": "16b49a5ae00e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T12:10:49Z",
+   "source": "ADV-080 (assignments/ADV-080.md)",
+   "step_sha256": "0daa51b0ee90",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T12:10:56Z",
+   "source": "ADV message 2026-11-19 (operator's request for one small comparison)",
+   "step_sha256": "b324126a0b13",
    "reopened_block": false,
    "authorised_by": null
   }
