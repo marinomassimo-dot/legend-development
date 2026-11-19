@@ -1580,7 +1580,10 @@ def _events(campaign: Path) -> list[dict[str, Any]]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()] if path.exists() else []
 
 
-def delivery_refusal(campaign: Path, ident: str, state: str, to: list[str]) -> str:
+RECEIPT_ID = re.compile(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}", re.I)
+
+
+def delivery_refusal(campaign: Path, ident: str, state: str, to: list[str], evidence: str = "", receipt: list[str] | None = None) -> str:
     """SENT is a claim about a transport receipt, and the receipt names a recipient. An assignment's recipient role maps to a session in the campaign budget; a SENT whose receipts do not
     include that session is refused (2026-11-14: a message headed 'to ADV and HE' was received by HE alone and ADV waited). UNREACHABLE needs no receipt."""
     if state != "SENT":
@@ -1589,6 +1592,10 @@ def delivery_refusal(campaign: Path, ident: str, state: str, to: list[str]) -> s
     if row is None:
         return f"{ident} is not a drafted assignment of this campaign"
     session = (_budget(campaign).get("recipients") or {}).get(row.get("recipient", ""))
+    if not any(RECEIPT_ID.fullmatch(r.strip()) for r in (receipt or [])) and not RECEIPT_ID.search(evidence or ""):
+        # 2026-11-19 (ADV, three times in two days): a SENT recorded before the send happened. The send's own receipt id (the msg_id that SendMessage returns, a UUID) is the proof that it did.
+        return (f"SENT needs the send's own receipt id (the msg_id SendMessage returned, a UUID) in --receipt or inside --evidence: {ident} may not be recorded as sent before the send has happened. "
+                "UNREACHABLE needs none")
     if not to:
         return (f"SENT needs --to <session> for the real send(s): the receipt, not the text of the message, says who received it. {ident} is for {row.get('recipient')}"
                 + (f" = session {session!r}" if session else ""))
@@ -2161,6 +2168,7 @@ def main(argv: list[str] | None = None) -> int:
     mt.add_argument("--actor", choices=MEETING_ROLES, default="", help="requesting participant role, not a new actor identity")
     dl = sub.add_parser("deliver", help="record what the channel did with an assignment (SENT with the message id, or UNREACHABLE with the reason)"); dl.add_argument("--campaign", required=True)
     dl.add_argument("--id", required=True); dl.add_argument("--state", choices=["SENT", "UNREACHABLE"], required=True); dl.add_argument("--evidence", required=True)
+    dl.add_argument("--receipt", action="append", default=[], help="SENT only: the send's own receipt id (the msg_id SendMessage returned, a UUID), one per real send; or put it inside --evidence")
     dl.add_argument("--to", action="append", default=[], help="SENT only: the session the transport receipt names, one per real send (an assignment's own recipient must be among them)")
     ac = sub.add_parser("activate", help="write the campaign budget (24 h by default, no renewal)"); ac.add_argument("--campaign", required=True)
     ac.add_argument("--hours", type=int, default=24); ac.add_argument("--max-invocations", type=int, default=3); ac.add_argument("--max-assignments", type=int, default=3)
@@ -2254,10 +2262,10 @@ def main(argv: list[str] | None = None) -> int:
     if args.cmd == "status":
         print(status(campaign)); return 0
     if args.cmd == "deliver":
-        refusal = delivery_refusal(campaign, args.id, args.state, args.to)
+        refusal = delivery_refusal(campaign, args.id, args.state, args.to, args.evidence, args.receipt)
         if refusal:
             print("REFUSED: " + refusal, file=sys.stderr); return 2
-        _log_assignment(campaign, {"id": args.id, "state": args.state, "evidence": args.evidence, **({"to": args.to} if args.to else {})}); print(f"{args.id}: {args.state} recorded"); return 0
+        _log_assignment(campaign, {"id": args.id, "state": args.state, "evidence": args.evidence, **({"to": args.to} if args.to else {}), **({"receipt": args.receipt} if args.receipt else {})}); print(f"{args.id}: {args.state} recorded"); return 0
     if args.cmd == "activate":
         now = _now()
         campaign.mkdir(parents=True, exist_ok=True)

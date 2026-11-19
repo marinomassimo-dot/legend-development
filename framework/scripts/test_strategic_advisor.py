@@ -702,7 +702,7 @@ class Proactive(ProactiveFixture):
     def test_the_evidence_levels_of_an_assignment_stay_apart(self) -> None:
         os.environ["FAKE_MODE"] = "assign"; sa.evaluate(self.campaign)
         self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "DRAFTED")           # saved is not sent
-        sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "SENT", "--evidence", "msg 123", "--to", "SCI"])
+        sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "SENT", "--evidence", "msg 5361f893-5cdd-41aa-9bc3-0123456789ab", "--to", "SCI"])
         self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "SENT")              # sent is not taken in charge
         rec = self.repo / "ledger/tasks/orchestrator/ORCH-A.json"
         rec.write_text(json.dumps(_record("ORCH-A", "OPEN", {"Q": {"s": {"step": "ADV-001 taken", "status": "TODO"}}})), encoding="utf-8")
@@ -714,7 +714,7 @@ class Proactive(ProactiveFixture):
         os.environ["FAKE_MODE"] = "assign"; sa.evaluate(self.campaign)
         row = [e for e in sa._events(self.campaign) if e["id"] == "ADV-001"][0]
         self.assertEqual(row["recipient"], "Science")                                                       # the budget maps Science to the session SCI
-        base = ["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "SENT", "--evidence", "msg 1"]
+        base = ["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "SENT", "--evidence", "msg 5361f893-5cdd-41aa-9bc3-0123456789ab"]
         self.assertEqual(sa.main(base + ["--to", "HE"]), 2)                                                 # the receipt names HE: not a delivery to SCI
         self.assertEqual(sa.main(base), 2)                                                                  # no receipt at all: the text of a message is not one
         self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "DRAFTED")
@@ -722,7 +722,20 @@ class Proactive(ProactiveFixture):
         self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "SENT")
         self.assertIn('"to": ["HE", "sci"]', (self.campaign / "assignments.jsonl").read_text(encoding="utf-8"))
         self.assertEqual(sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "UNREACHABLE", "--evidence", "no live session"]), 0)   # no receipt exists for that
-        self.assertEqual(sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-099", "--state", "SENT", "--evidence", "x", "--to", "SCI"]), 2)   # not a drafted assignment
+        self.assertEqual(sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-099", "--state", "SENT", "--evidence", "msg 5361f893-5cdd-41aa-9bc3-0123456789ab", "--to", "SCI"]), 2)   # not a drafted assignment
+
+    def test_a_sent_needs_the_sends_own_receipt_id(self) -> None:
+        """2026-11-19 (ADV, three times in two days): a SENT recorded before the send happened. The msg_id SendMessage returns (a UUID) is required in --receipt or inside --evidence."""
+        os.environ["FAKE_MODE"] = "assign"; sa.evaluate(self.campaign)
+        base = ["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "SENT", "--to", "SCI"]
+        self.assertEqual(sa.main(base + ["--evidence", "msg 1"]), 2)                                      # no receipt id: refused
+        self.assertEqual(sa.main(base + ["--evidence", "sent it", "--receipt", "not-a-uuid"]), 2)          # something that is not a receipt id: refused
+        self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "DRAFTED")             # nothing was recorded
+        rid = "6e1f2a9c-0b3d-4c5e-8f70-a1b2c3d4e5f6"
+        self.assertEqual(sa.main(base + ["--evidence", "sent to SCI", "--receipt", rid]), 0)
+        self.assertEqual(sa.assignment_states(self.campaign)["ADV-001"]["highest"], "SENT")
+        self.assertIn(rid, (self.campaign / "assignments.jsonl").read_text(encoding="utf-8"))               # the receipt id is kept in the log
+        self.assertEqual(sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "UNREACHABLE", "--evidence", "no live session"]), 0)   # UNREACHABLE needs none
 
     def test_a_recipient_revived_under_another_name_is_still_the_recipient_and_a_dead_listed_one_is_not(self) -> None:
         """2026-11-18: the Science session came back as 'orch-adv004-mandate-reconciliation'; the budget said 'SCI', so a real send could not be recorded. Identity is the session id, resolved against LIVE sessions."""
@@ -733,7 +746,7 @@ class Proactive(ProactiveFixture):
                 {"sessionId": dead, "name": "SCI", "state": "working"}]                      # a killed session still listed: no pid, no status
         budget = json.loads((self.campaign / "budget.json").read_text()); budget["recipients"]["Science"] = "9400b253"       # the budget names the session by its id prefix
         (self.campaign / "budget.json").write_text(json.dumps(budget), encoding="utf-8")
-        base = ["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "SENT", "--evidence", "msg 1"]
+        base = ["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "SENT", "--evidence", "msg 5361f893-5cdd-41aa-9bc3-0123456789ab"]
         with patch.object(sa, "_agents", lambda: live):
             self.assertEqual(sa.main(base + ["--to", "HE"]), 2)                                              # another live session: not a delivery to Science
             self.assertEqual(sa.main(base + ["--to", "SCI"]), 2)                                             # the name SCI now belongs to a dead entry: it does not resolve to the live session
@@ -746,13 +759,13 @@ class Proactive(ProactiveFixture):
         (self.campaign / "budget.json").write_text(json.dumps(budget), encoding="utf-8")
         live = [{"sessionId": "11111111-0000-0000-0000-000000000009", "name": "HE", "pid": os.getpid(), "status": "idle"}]
         with patch.object(sa, "_agents", lambda: live):
-            msg = sa.delivery_refusal(self.campaign, "ADV-001", "SENT", ["HE"])
+            msg = sa.delivery_refusal(self.campaign, "ADV-001", "SENT", ["HE"], "msg 5361f893-5cdd-41aa-9bc3-0123456789ab")
         self.assertIn("does not resolve to exactly one live session", msg)
         self.assertIn("UNREACHABLE", msg)
 
     def test_the_senders_own_records_never_count_as_a_recipient_taking_or_executing_an_assignment(self) -> None:
         os.environ["FAKE_MODE"] = "assign"; sa.evaluate(self.campaign)
-        sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "SENT", "--evidence", "msg 123", "--to", "SCI"])
+        sa.main(["deliver", "--campaign", str(self.campaign), "--id", "ADV-001", "--state", "SENT", "--evidence", "msg 5361f893-5cdd-41aa-9bc3-0123456789ab", "--to", "SCI"])
         for name in ("ORCH-ADV-PRESIDIO-X", "PLAN-PROACTIVE-ADVISOR-X"):
             (self.repo / f"ledger/tasks/orchestrator/{name}.json").write_text(
                 json.dumps(_record(name, "OPEN", {"Q": {"s": {"step": "ADV-001 delivered by message", "status": "DONE"}}})), encoding="utf-8")   # the delivery step of the sender: DONE, naming the id
