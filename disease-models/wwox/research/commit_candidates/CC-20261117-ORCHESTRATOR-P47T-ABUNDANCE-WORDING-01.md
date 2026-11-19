@@ -95,3 +95,9 @@ Line-level scan; the phrase list is incomplete by construction (a second pass ad
 **Repeat the grep:** the phrase list is incomplete by construction; a later grep for "normal" next to P47T protein should be repeated after the next batch of reads.
 
 **Applied line:** applied in commit 37a0531e101c (published 2026-11-17, gate PASS); the report commit a37969cd5ea8 carried the CC itself, R4 and annex updates.
+
+## BATCH DISPOSITION — `BATCH_20261119_001` (2026-11-19, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** CLOSED
+
+Already applied outside a batch, as the candidate's own status line says: one dated update line at the foot of each of 19 dated analyses on 2026-11-17 (on ADV's decision), with no registry edit and no BATCH_COMMIT needed; the live canonical surfaces already read 'present, similar by eye, not quantified'. Nothing to propagate. Closed here so that the commit-candidate backlog counter, which derives a candidate's state from a disposition block and not from its header, stops listing it.

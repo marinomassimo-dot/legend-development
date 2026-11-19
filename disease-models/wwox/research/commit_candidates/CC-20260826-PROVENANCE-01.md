@@ -321,3 +321,9 @@ Re-measured 2026-10-04 with `evidence_presence.py --disease wwox --pmid 42397075
 **Review trigger: 2026-10-11** (moved from 2026-10-06 by `BATCH_20261004_007`, 2026-10-04, after re-measuring the blocker: `evidence_presence.py` still reports 16 of 35 artefacts of that PMID absent with 0 digest mismatch, and a SHA-256 search over every worktree and the shared `files/` tree on this host recovered **none** of them — so the blocker is unchanged, not merely unexamined). **This candidate is named in no scope of this batch**, deliberately, so `growth_anchors.py` keeps counting it as pending.
 
 **Not medical advice.**
+
+## BATCH DISPOSITION — `BATCH_20261119_001` (2026-11-19, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** DEFERRED
+
+Not propagated and left queued: this candidate's own append-only supersession (2026-08-26) says four of its cells are stale and withdraws its MAJOR item (suspending `CLAIM 006` and `CLAIM 007`); `PAPER 007` now carries partial receipts `FTR-20260826-36828035-01` and `-02`. An item-by-item check of what remains open against the current registries is owed before this candidate is propagated, closed or superseded; it is not done in this batch.

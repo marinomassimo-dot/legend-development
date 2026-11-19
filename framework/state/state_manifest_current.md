@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_032
-last_batch_commit_date: 2026-10-31
+last_batch_commit_id: BATCH_20261119_001
+last_batch_commit_date: 2026-11-19
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 1
 target_wm_version: WM_v7.29
-trigger: MANUAL (ACTOR_ID orchestrator, mandate IT13). MINOR, registry registration of one complete read; WM_v7.29 preserved, no bump, no claim created or promoted: one paper-registry record PAPER 569 (PMID 16288044, Mahajan 2005) appended by record_scoped_edit.py append, closing the READ_NOT_REGISTERED identity check; no other registry or ledger touched.
+trigger: MANUAL (ACTOR_ID orchestrator, mandate IT59; the weekly trigger overdue since 2026-10-31, backlog 3 below the threshold of 5; composition approved by ADV). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: one candidate propagated (CC-20261119-ORCHESTRATOR-CLAIM025-GDM-ANCHOR-01, revision 2 after two blind locator audits): CLAIM 025 Summary sentences 1 and 2, the model-relevance clause, Source and Wikilinks (anchor PAPER 262, placeholder CORPUS P191 kept as origin), PAPER 262 short title, Claim links and one Role inference label, LIT-0560 short title and Claim links, all by batch_commit.py propagate (record-scoped, 9 ops in 3 files); Status in observation and Transferability of CLAIM 025 unchanged. One candidate closed without edit (CC-20261117-ORCHESTRATOR-P47T-ABUNDANCE-WORDING-01, applied by dated lines on 2026-11-17) and one deferred (CC-20260826-PROVENANCE-01, item-by-item check owed); no other registry or ledger touched.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,8 +126,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261029_BATCH_20261019_029
-last_lint_date: 2026-10-29
+last_lint_id: LINT_20261119_BATCH_20261119_001
+last_lint_date: 2026-11-19
 last_lint_result: WARN
 ```
 
