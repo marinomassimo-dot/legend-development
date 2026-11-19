@@ -243,10 +243,12 @@
     },
     {
      "step": "Read session_model_census.py on the successor SCI session 8846a6c0 at about 100 turns (birth, peak, mean, cache-read per turn) and report to ADV",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-078 second trial (ADV 2026-11-19): keep the census of the successor SCI window at about 100 turns",
-     "accepted_at": "2026-11-19T12:41:40Z"
+     "accepted_at": "2026-11-19T12:41:40Z",
+     "evidence": "second window 133 turns birth 61k peak 309k mean 193k, 25.4M cache-read (191k per turn); third window launched, unbound 20 s",
+     "updated_at": "2026-11-19T13:04:00Z"
     }
    ]
   }

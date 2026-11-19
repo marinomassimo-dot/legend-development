@@ -321,3 +321,23 @@ Re-measured 2026-10-04 with `evidence_presence.py --disease wwox --pmid 42397075
 **Review trigger: 2026-10-11** (moved from 2026-10-06 by `BATCH_20261004_007`, 2026-10-04, after re-measuring the blocker: `evidence_presence.py` still reports 16 of 35 artefacts of that PMID absent with 0 digest mismatch, and a SHA-256 search over every worktree and the shared `files/` tree on this host recovered **none** of them — so the blocker is unchanged, not merely unexamined). **This candidate is named in no scope of this batch**, deliberately, so `growth_anchors.py` keeps counting it as pending.
 
 **Not medical advice.**
+
+## BATCH DISPOSITION — `BATCH_20261119_001` (2026-11-19, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** DEFERRED
+
+Not propagated and left queued: this candidate's own append-only supersession (2026-08-26) says four of its cells are stale and withdraws its MAJOR item (suspending `CLAIM 006` and `CLAIM 007`); `PAPER 007` now carries partial receipts `FTR-20260826-36828035-01` and `-02`. An item-by-item check of what remains open against the current registries is owed before this candidate is propagated, closed or superseded; it is not done in this batch.
+
+## BATCH DISPOSITION — `BATCH_20261119_002` (2026-11-19, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only — item-by-item check
+
+**Status:** DEFERRED
+
+Item-by-item check against the current registries and the evidence host, as the previous block owed. Items A, B, D and E are spent (applied, superseded or satisfied independently, as the WAVE-2 READINESS table of this candidate states). Only the second half of item C remains: repointing the `Source` of `CLAIM 002` to `PAPER 094` (Steinberg et al. 2026, *Brain*, PMID 42397075) and carrying the two qualifications into that claim. The first half (`PAPER 001` marked superseded) is already in the registry.
+
+**What changed since the 2026-10-04 blocker.** The blocker was "the artefact is absent or unread". Re-measured today: `PAPER 094` carries a complete read (`FTR-20260810-42397075-04`), the ledger holds 11 receipts for that PMID, and a SHA-256 search over the real `files/` tree recovers the refereed full text, its text extraction and the figures, plus the bioRxiv v2 PDF. So the blocker is now "recoverable and read once, but `CLAIM 002` is a consolidated baseline and no blind locator audit of the two qualifications has been run". The recovery was measured in the shared `files/` tree; a clone has no `files/` tree and shows everything absent, which is a property of the clone.
+
+**Why it stays deferred.** Rewriting the `Source` of a consolidated baseline is a MAJOR-class change and is audit-gated (locator-audit rule). The candidate already contains the locator triples (section "LOCATOR TRIPLES FOR BLIND AUDIT"), so the next step is cheap and concrete: send those triples with the recovered artefact to a blind auditor, then propagate only the triples that come back SUPPORTED. `PAPER 094`'s `Claim links` must be updated to `002` in the same batch (UNLINKED_SUPPORT).
+
+**Next step, with recipient:** a blind locator audit of the triples in this candidate against the recovered refereed text (recipient: the auditing session named by ADV; no reader's conclusions in the packet). No propagation before it.
+
+**Not medical advice.**

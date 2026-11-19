@@ -15592,7 +15592,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 ---
 
 ## LIT-0560
-**Short title:** Baryla 2021 PeerJ — blood-leukocyte WWOX and HIF1A transcripts in 98 gestational-diabetes women against 37 controls; the axis shift is carried by HIF1A, WWOX is a marginal tendency
+**Short title:** Baryla 2021 PeerJ — blood-leukocyte WWOX and HIF1A transcripts in 98 gestational-diabetes women against 37 controls; HIF1A transcript 3.8-fold higher and WWOX 1.4-fold lower (p = 0.0406 uncorrected: a tendency in the Results, a significant downregulation in the Abstract); the paper does not apportion the ratio change
 **Authors:** Baryla I, Pluciennik E, Kośla K, Wojcik M, Zieleniak A, Zurawska-Klis M, et al.
 **Year:** 2021
 **Source type:** primary research — human blood-leukocyte mRNA, case-control (gestational diabetes)
@@ -15607,7 +15607,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Transferability:** T3
 **clinical relevance:** BACKGROUND — non-neural, non-DEE context
-**Claim links:** none
+**Claim links:** 025 (see PAPER 262)
 **Working Model impact:** none
 **Report mentions:** `research/metabolic_wave_20261019_scientist-b.md`
 **Next action:** none
