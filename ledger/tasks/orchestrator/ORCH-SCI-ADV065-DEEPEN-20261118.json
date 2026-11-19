@@ -411,10 +411,11 @@
     },
     {
      "step": "ADV-095: scientific selection before laboratory work: (A) premise screen of broad mechanisms on held WWOX-deficient data, (B) target and exposure comparison for the bridge shortlist, (C) one compact comparative case per objective with one priority experiment",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "source": "ADV-095 (assignments/ADV-095.md) and ADV message 2026-11-19 (roadmap_current.md#scientific-selection-before-laboratory-work)",
-     "accepted_at": "2026-11-19T22:06:52Z"
+     "accepted_at": "2026-11-19T22:06:52Z",
+     "updated_at": "2026-11-19T23:42:29Z"
     }
    ]
   }
