@@ -1067,7 +1067,8 @@ PROJECTS_DIR = Path.home() / ".claude" / "projects"   # where each session's tra
 
 def _agents() -> list[dict[str, Any]] | None:
     try:
-        done = subprocess.run([os.environ.get("LEGEND_ADVISOR_CLAUDE", "claude"), "agents", "--json"], capture_output=True, text=True, timeout=25)
+        import mandate_watch as mw     # claude_bin(): PATH first, then ~/.local/bin/claude: an in-session shell may not have it on PATH (2026-11-19: the whole activity block was silently absent at every in-session tick)
+        done = subprocess.run([os.environ.get("LEGEND_ADVISOR_CLAUDE") or mw.claude_bin(), "agents", "--json"], capture_output=True, text=True, timeout=25)
         data = json.loads(done.stdout) if done.returncode == 0 else None
         return data if isinstance(data, list) else None
     except (OSError, subprocess.SubprocessError, json.JSONDecodeError):
@@ -1523,6 +1524,8 @@ def tick(campaign: Path) -> dict[str, Any]:
         why += "; this says nothing about opportunities, ready portfolio rows: " + ", ".join(obs["portfolio"]["actionable"][:6])
     activity = session_activity(now, recipients=_budget(campaign).get("recipients"))
     named = idle_without_blocker((activity.get("recipients") or {}), obs["waits"]) if activity.get("available") else []
+    if not activity.get("available"):
+        why += "; ACTIVITY UNAVAILABLE: the runtime's session listing could not be read (claude not found or `claude agents --json` failed), so the idle rule cannot be applied from this tick"
     if named:
         why += "; IDLE WITHOUT A BLOCKER THAT NAMES IT: " + "; ".join(named)         # facts about the recipients, not a verdict on useful work
     state["last_tick_utc"] = _utc(now)
