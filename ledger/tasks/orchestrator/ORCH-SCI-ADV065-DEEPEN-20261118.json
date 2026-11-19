@@ -137,46 +137,67 @@
     },
     {
      "step": "A: targeted premise checks that can change a decision (GEO sample=animal verified from the deposit; independent blind recompute of the ADV-068 and ADV-069 primary quantities; frozen criteria untouched; primary and sensitivity kept apart; proportionate verification of the negative conclusions)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator continuation 2026-11-19 step 1",
      "accepted_at": "2026-11-19T08:29:43Z",
-     "authorised_by": "operator message 2026-11-19 SCIENTIFIC CONTINUATION (Broaden the search and generate useful, testable alternatives), sections A to F; SESSION SCI"
+     "authorised_by": "operator message 2026-11-19 SCIENTIFIC CONTINUATION (Broaden the search and generate useful, testable alternatives), sections A to F; SESSION SCI",
+     "evidence": "premise_checks_sci_20261119/PREMISE_CHECKS_A_SCI_20261119.md and A2 blind recompute report: A1 unit supported for the cortex deposit (n=4 and n=3 mice stated), A2 all primary numbers reproduced, ADV-068 R-B rule-reading correction (three single-gene omissions flip under the stricter reading, decision unchanged), conduction premise error found (source held) and corrected; landed 9c802627f",
+     "updated_at": "2026-11-19T09:29:44Z"
     },
     {
      "step": "B: WW1-PPxY first pass with complete originals (six questions: direct vs proposed, neural systems, functional consequences, interpretable lever, unsupported transfers, can it improve a comparison or generate a distinct experiment); close with a reason or hand to D; no endless branch",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator continuation 2026-11-19 step 2",
-     "accepted_at": "2026-11-19T08:29:44Z"
+     "accepted_at": "2026-11-19T08:29:44Z",
+     "evidence": "first pass with complete originals (R2), second-route absence check, R3 sign check frozen first; lever branch closed with reason; one open-question row; deliverables and notes landed 9c802627f: premise_checks_sci_20261119, b_ww1_ppxy_first_pass_sci_20261119, source_base_c_sci_20261119, r1_conduction_endpoint_sci_20261119, r3_erbb4_sign_check_sci_20261119, e_materials_test_sci_20261119, census update lines; messages sent to ADV and IT",
+     "updated_at": "2026-11-19T09:29:28Z"
     },
     {
      "step": "C: source base against the corpus (effective readings, partial readings, open questions, mechanisms the module does not use, accessible sources that could change a choice); PubMed 43048821 triage (identity, relevance, prior reading, possible contribution)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator continuation 2026-11-19 step 3",
-     "accepted_at": "2026-11-19T08:29:44Z"
+     "accepted_at": "2026-11-19T08:29:44Z",
+     "evidence": "receipts-based join (211/42/453 of 706 PMIDs), registry debt overstated, PubMed 43048821 triaged, R1 conduction/myelination extraction with figures; deliverables and notes landed 9c802627f: premise_checks_sci_20261119, b_ww1_ppxy_first_pass_sci_20261119, source_base_c_sci_20261119, r1_conduction_endpoint_sci_20261119, r3_erbb4_sign_check_sci_20261119, e_materials_test_sci_20261119, census update lines; messages sent to ADV and IT",
+     "updated_at": "2026-11-19T09:29:28Z"
     },
     {
      "step": "D: pharmacological reasoning chains (observation, relation, hypothesised action, context, pharmacological comparison, prediction, rejecting result) separating WWOX specificity, general anticonvulsant activity, target function, alternative compound actions, symptomatic vs development, repurposing drug vs probe; a comparison may conclude that no compound is justified yet if it names a decisive measure",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator continuation 2026-11-19 step 4",
-     "accepted_at": "2026-11-19T08:29:44Z"
+     "accepted_at": "2026-11-19T08:29:44Z",
+     "evidence": "chain written in the B note (no compound justified, decisive measure named; WWOX specificity, generic anticonvulsant, target function, alternative actions, symptomatic vs development, drug vs probe separated); deliverables and notes landed 9c802627f: premise_checks_sci_20261119, b_ww1_ppxy_first_pass_sci_20261119, source_base_c_sci_20261119, r1_conduction_endpoint_sci_20261119, r3_erbb4_sign_check_sci_20261119, e_materials_test_sci_20261119, census update lines; messages sent to ADV and IT",
+     "updated_at": "2026-11-19T09:29:28Z"
     },
     {
      "step": "E: materials-contribution test with IT on a real decision; improvement criteria fixed before; equal search budget; targeted contexts; observed cost; delegation_budget.md respected",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator continuation 2026-11-19 step 5",
-     "accepted_at": "2026-11-19T08:29:44Z"
+     "accepted_at": "2026-11-19T08:29:44Z",
+     "evidence": "criteria frozen sha256 390d3a4b before dispatch, two arms plus blind verifier, costs read back, attribution stated, no credit to the structure; deliverables and notes landed 9c802627f: premise_checks_sci_20261119, b_ww1_ppxy_first_pass_sci_20261119, source_base_c_sci_20261119, r1_conduction_endpoint_sci_20261119, r3_erbb4_sign_check_sci_20261119, e_materials_test_sci_20261119, census update lines; messages sent to ADV and IT",
+     "updated_at": "2026-11-19T09:29:28Z"
     },
     {
      "step": "F: delivery to IT and ADV (question and decision, evidence and depth, competing explanations, hypothesis or comparison, discriminating experiment, consumer delta, executable work, laboratory limit, cost and diagnosis) and proposal and uptake of the useful continuation inside the authorised mandate",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator continuation 2026-11-19 step 6",
-     "accepted_at": "2026-11-19T08:29:44Z"
+     "accepted_at": "2026-11-19T08:29:44Z",
+     "evidence": "delivery messages sent with question/decision, evidence and depth, competing explanations, experiment, consumer delta, executable work, laboratory limits, cost and diagnosis; continuation named; deliverables and notes landed 9c802627f: premise_checks_sci_20261119, b_ww1_ppxy_first_pass_sci_20261119, source_base_c_sci_20261119, r1_conduction_endpoint_sci_20261119, r3_erbb4_sign_check_sci_20261119, e_materials_test_sci_20261119, census update lines; messages sent to ADV and IT",
+     "updated_at": "2026-11-19T09:29:28Z"
+    },
+    {
+     "step": "G: read-but-not-carried audit of about 20 complete-receipt neural and pharmacology WWOX papers (endpoints measured against needs, cards, open questions, arm cells); named to ADV and IT in the F delivery",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "SCI continuation 2026-11-19 named follow-up G (read-but-not-carried audit)",
+     "accepted_at": "2026-11-19T09:29:28Z",
+     "evidence": "g_read_not_carried_audit_sci_20261119/G_AUDIT_AS_DELIVERED.md and G_SPOT_CHECK_AND_SUMMARY_SCI_20261119.md: 78 results, 30 carried, 16 partly, 30 not carried, 2 unclear; ranked ten; blind spot-check of five rows; delivered to ADV and IT",
+     "updated_at": "2026-11-19T09:41:45Z"
     }
    ]
   }
@@ -321,6 +342,13 @@
    "step_sha256": "777dfc62a2bf",
    "reopened_block": false,
    "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T09:29:28Z",
+   "source": "SCI continuation 2026-11-19 named follow-up G (read-but-not-carried audit)",
+   "step_sha256": "ce37fb66b8f7",
+   "reopened_block": false,
+   "authorised_by": null
   }
  ],
  "DELEGATIONS": [
@@ -337,6 +365,7 @@
   "E blind verifier (legend-delegate, agent a2de3024): asked sonnet/high; read back sonnet x11, high x11; birth 21,757; 11 turns; output 12,612; cache read 603,818; 18 tool calls; 103.4 s; primary EXPERIMENT_SEPARATES_ALTERNATIVES_BETTER favouring X (structured), secondary MORE_DEFENSIBLE_CONDITIONAL_HYPOTHESIS favouring Y (lean), no HARM; one verifier claim (peptides without PPPY) corrected against the held PDF and XML. Coordinator slice 07:55Z to this point: 71 turns, birth context 330,996, cache read 31,388,265, output 119,888 (session census --since).",
   "R2 producer (legend-delegate, agent aad72c85, 2026-11-19, complete reading of the PPxY partner originals): asked sonnet/medium; read back sonnet x31, medium x31; birth 21,540; 31 turns; output 20,678; cache read 2,022,414; peak 129,220; 44 tool calls (cap 100); 383 s; report 2464 words as delivered; three new full texts acquired by efetch, receipted -71.",
   "R1 producer (legend-delegate, agent af313fa4, 2026-11-19, conduction and myelination extraction from held originals, figures viewed): asked sonnet/medium; read back sonnet x22, medium x22; birth 21,323; 22 turns; output 17,240; cache read 1,124,389; peak 84,935; 24 tool calls (cap 80); 151 s; legend check of the conduction n done against the held text by me.",
-  "R3 producer (legend-delegate, agent a200d7aa, 2026-11-19, sign-compatibility reading with frozen rules): asked sonnet/medium; read-back in the census at completion; 16 to 20 tool calls (cap 50); 87 s; abstract-level only (full texts not obtainable)."
+  "R3 producer (legend-delegate, agent a200d7aa, 2026-11-19, sign-compatibility reading with frozen rules): asked sonnet/medium; read-back in the census at completion; 16 to 20 tool calls (cap 50); 87 s; abstract-level only (full texts not obtainable).",
+  "G producer (legend-delegate, agent ae2b9c0f, 2026-11-19, read-but-not-carried audit of 20 held papers): asked sonnet/medium; read back sonnet x31, medium x31; birth 21,486; 31 turns; output 46,064; cache read 2,660,468; peak 173,559; about 31 tool calls (cap 90); 6.0 min; 78 results: 30 carried, 16 partly, 30 not carried, 2 unclear; blind spot-check of five rows (seed 20261119) by me: one route miss, one possible over-credit."
  ]
 }
