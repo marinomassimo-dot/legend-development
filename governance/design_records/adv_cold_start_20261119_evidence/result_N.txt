@@ -1,0 +1,52 @@
+## DECISION
+
+**Assign now. Do not wait.** Both recipients have been idle for about 1.7 hours (since about 05:38). I found no blocker in the files I read that names an awaited event. Under practice rule 3 and the charter's "Engine" clause, a plateau of one strand is never a reason to wait.
+
+I could not run `tick()["activity"]`, so I took idle time and "no commit since 06:20" from the facts I was given. Before sending, I would check that no assignment already sits in take-in-charge for either recipient. The last logged assignment I saw is ADV-085 (SCI, first pass on PV-population maturation, RP019). The log ends at 15:12Z on 2026-11-19 and my clock says 07:18 UTC on that date, so the two clocks disagree. I did not read ADV-085's outcome or the portfolio, so the first line of each message below reads it. Each assignment is recorded as `DRAFTED`, and `SENT` only after the send receipt names the recipient (rule 20).
+
+**Message 1, to SCI (ADV-086):**
+- First, state where ADV-085 stands: delivered, in progress, or not taken. Do not restart it if it is in progress.
+- Priority work is the item IT flagged G8 URGENT. The held CLAIM 005 sentence names Il6 only, but IT's measured Tnf-a significance chain says otherwise.
+- Do a source-sentence audit of that sentence against the anchor's own text, in the same form as the CLAIM 002/005 audits. Grep with context and give verbatim locators. Mark anything not re-read as "per IT, not re-checked".
+- Return a verdict on the Tnf-a point and on G1–G9 of the CLAIM 005 candidate. Your note on the two claims already audited is welcome.
+- Model and effort: high, one delegate at a time, as in rule 17.
+
+**Message 2, to IT / Orchestrator (ADV-087):**
+- Take the repaired CLAIM 021 sentences, the CLAIM 002 candidate and the CLAIM 005 candidate to a `BATCH_COMMIT` candidate. Include only the items whose audit verdict is final. Leave CLAIM 005 out until SCI's G8 verdict arrives.
+- Add a write-time lint WARN for interpretive-layer overshoot. Rule 16 says the audits found four overshoots in four claims, and that the lint is the cheap prevention.
+- Feed any gaps you find into the Living Research Portfolio. Then name the next candidate-to-candidate comparison, with the endpoint, model and evidence level that make it more promising.
+- The four current files change only through `BATCH_COMMIT`.
+- Before editing a shared axis, read IT's latest README, as rule 7 says.
+
+Both messages go through the supported channel, with the durable source pointers and the reason each matters. No operator approval is needed. Nothing I am assigning is in the reserved list (laboratory or clinical channel, gate cache, registry query, engine budget, sponsor question).
+
+**Afterwards:**
+- Verify take-in-charge in each recipient's own record, not in the message.
+- Add one closure line to the ADV record: the criterion that changed the choice, or "no effect".
+- Do not hold work for the 11:25 MEETING.
+- Resume condition for the next tick: either recipient's delivery, or still idle more than an hour after take-in-charge.
+
+## RELIED_ON (in reading order)
+1. `roles/advisor.md`
+2. `framework/state/state_manifest_current.md`, first 60 lines. I did not see the `current_state: READY` line, so I did not confirm it.
+3. `framework/protocols/cross_session_transport.md`: a grep of the section headings, then lines 591–614 ("Continuity is a choice of what comes next"). I did not read the full §12 or §21c–e.
+4. `roles/advisor_practice.md`, rules 1–23
+5. The Glob listing of the `advisor_pilot_20261113/` campaign directory
+6. `holds.jsonl`: the grep output was omitted, so I got nothing from it.
+7. `assignments.jsonl`: the ADV-080 to ADV-085 entries.
+
+I did not read the portfolio TSV, `CONTINUOUS.json`, the ADV-084 result, or the task record. The current-state claims above rest on your facts plus the assignment log, not on a full read. A Bash call failed because Bash is disabled here, and I made no other failed calls.
+
+## CHARTER_PRACTICE_GUIDANCE_FOUND
+- **Charter:** yes. `roles/advisor.md` carries the "host's charter" section dated 2026-11-19.
+- **Practice rules:** yes. `roles/advisor_practice.md` has 23 rules. The ones applied are 3 (read activity, assign when idle), 1 and 2, 4, 5, 7, 16 and 20.
+- **Operator's standing guidance:**
+  - Found in the repository: the EMPATHY and continuity sections of `cross_session_transport.md`, which cover "continuity is a choice of what comes next" and "route useful signals" (operator corrections of 2026-11-14 and 2026-11-15).
+  - Not run: `mandate_continuity.py guidance`, because I cannot execute commands.
+  - Not consulted: the EMPATHY section itself.
+
+## TURNS
+5 turns that returned results: three parallel read batches, a failed Bash call, and a parallel pair of greps. That is 11 tool calls in total.
+
+## MEMORY_CANARY
+No. I see no private memory notes or auto-memory index from an earlier session. The one place the repository mentions the host's private working notes is `roles/advisor_practice.md`, which says it migrated them, and those notes are not in my context.
