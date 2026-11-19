@@ -190,10 +190,11 @@
     },
     {
      "step": "Day P2: completion-to-continuation gap: which mandate continues, how closure reaches the recipient, when direction is chosen, acceptance, records reflect current work; real passage to new authorised work",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
      "source": "operator mandate 2026-11-19 harness continuation (ACTOR_ID plan) P2",
-     "accepted_at": "2026-11-19T08:28:36Z"
+     "accepted_at": "2026-11-19T08:28:36Z",
+     "updated_at": "2026-11-19T10:51:48Z"
     },
     {
      "step": "Day P3: radar relevance: small sample diagnosis, bridge required, before/after if a small change is justified, else diagnosis to ADV",
@@ -228,6 +229,13 @@
      "owner": "plan",
      "source": "ADV GO 2026-11-19: SCI fresh-window trial at the delivery of ADV-077",
      "accepted_at": "2026-11-19T10:41:07Z"
+    },
+    {
+     "step": "EMPATHY Phase 1: technical reconnaissance of the operator-intent learning path (surfaces map, real-case traces, recoverability probes, failure analysis, options) and a handoff for the Codex Phase 2 session, in one design record; no implementation of EMPATHY itself",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-19 EMPATHY Phase 1 (ACTOR_ID plan)",
+     "accepted_at": "2026-11-19T10:51:48Z"
     }
    ]
   }
@@ -405,6 +413,13 @@
    "at": "2026-11-19T10:41:07Z",
    "source": "ADV GO 2026-11-19: SCI fresh-window trial at the delivery of ADV-077",
    "step_sha256": "9fc4cfbe7e64",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T10:51:48Z",
+   "source": "operator mandate 2026-11-19 EMPATHY Phase 1 (ACTOR_ID plan)",
+   "step_sha256": "118cd1387848",
    "reopened_block": false,
    "authorised_by": null
   }

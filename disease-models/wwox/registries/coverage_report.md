@@ -27,6 +27,7 @@ the whole known corpus, not the part already processed.
 | Catalogued only | 310 | 33% | known, deduplicated, never analytically processed — **the debt** |
 | Filtered / superseded | 10 | 1% | explicitly set aside, with the reason preserved |
 
+- Of the **310** catalogued-only records, **115** carry a receipt owned by another registry entry (87 complete, 28 partial: the placeholder duplicates a processed record) and **195** have no receipt (the headline count is unchanged)
 - **559** promoted `PAPER` records · **381** `CORPUS` placeholders
 - **825** lifecycle entries in the literature tracking log
 - **825** unique PMIDs known across the registries

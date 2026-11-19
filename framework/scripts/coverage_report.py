@@ -248,7 +248,27 @@ def build(root: Path, disease: str) -> dict:
         if effective_depth(entry, owners.get(entry["_id"])) == "catalogued"
     ]
 
+    # Reading debt split by what the ledger says (IT59 reconciliation, 2026-11-19; the headline count is unchanged on purpose: ratchets and growth anchors read it). A CORPUS placeholder
+    # counted as debt while its paper has a receipt owned by ANOTHER registry entry duplicates a processed record; the receipt event id carries the PMID.
+    events_by_pmid: dict[str, list] = {}
+    for event in receipt_events:
+        m = re.match(r"FTR-\d{8}-(\d+)-", event.get("event_id", ""))
+        if m and event.get("record_kind") in ("contemporaneous_receipt", "legacy_reconstruction"):
+            events_by_pmid.setdefault(m.group(1), []).append(event)
+    debt_by_id = {d["id"]: d for d in debt}
+    receipted = Counter()
+    for entry in entries:
+        if entry["_id"] not in debt_by_id:
+            continue
+        found = [ev for p in PMID.findall(entry.get("identifier", "")) for ev in events_by_pmid.get(p, [])]
+        if found:
+            best = max((ev["evidence_depth"] for ev in found), key=lambda d: receipts.DEPTHS[d])
+            receipted["complete" if best == "complete_fulltext_read" else "partial"] += 1
+    debt_split = {"receipted_elsewhere": sum(receipted.values()), "complete": receipted["complete"], "partial": receipted["partial"],
+                  "no_receipt": len(debt) - sum(receipted.values())}
+
     return {
+        "reading_debt_split": debt_split,
         "disease": disease,
         "entries_total": len(entries),
         "paper_records": kinds.get("PAPER", 0),
@@ -320,6 +340,9 @@ def render(report: dict) -> str:
         row("Catalogued only", "catalogued", "known, deduplicated, never analytically processed — **the debt**"),
         row("Filtered / superseded", "filtered", "explicitly set aside, with the reason preserved"),
         "",
+        *([f"- Of the **{report['reading_debt_count']}** catalogued-only records, **{report['reading_debt_split']['receipted_elsewhere']}** carry a receipt owned by another registry entry "
+           f"({report['reading_debt_split']['complete']} complete, {report['reading_debt_split']['partial']} partial: the placeholder duplicates a processed record) and "
+           f"**{report['reading_debt_split']['no_receipt']}** have no receipt (the headline count is unchanged)"] if "reading_debt_split" in report else []),
         f"- **{report['paper_records']}** promoted `PAPER` records · **{report['corpus_placeholders']}** `CORPUS` placeholders",
         f"- **{report['tracking_entries']}** lifecycle entries in the literature tracking log",
         f"- **{report['unique_pmids']}** unique PMIDs known across the registries",
