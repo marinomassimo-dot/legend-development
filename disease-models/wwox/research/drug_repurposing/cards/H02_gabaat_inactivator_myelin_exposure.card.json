@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "6171e07741728528d6d2e630104fea533044bb0b42fd668c829849faa3a7bafb",
+  "input_sha256": "ee16845691dcb425a8fce6a76f42b16e9bd6048ef4391c036a84ad56c62a2ccc",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -1208,7 +1208,8 @@
       "Whether the vigabatrin brain lesion is a class effect of GABA-aminotransferase inactivation or specific to vigabatrin; any brain histology or MRI with CPP-115 or OV329 in any species.",
       "Whether hormonal co-therapy was concurrent in the two WWOX MRI reports (full text closed access, no receipt).",
       "ABAT activity and GABA concentration in Wwox-deficient brain.",
-      "Whether the OV329 toxicology package, stated to be described in an earlier conference report, holds any white-matter endpoint: it exists and is unread."
+      "Whether the OV329 toxicology package, stated to be described in an earlier conference report, holds any white-matter endpoint: it exists and is unread.",
+      "SCI 2026-11-19 (R1, advisor_pilot_20261113/brainstorm_20261116/r1_conduction_endpoint_sci_20261119/R1_CONDUCTION_ENDPOINT_NOTE_SCI_20261119.md; mapped by IT): for any readout of a myelin effect of a GABA-AT inactivator in a Wwox-deficient brain, the structural endpoints with demonstrated neuronal rescue (EM myelinated axons, CNP, MBP, CC1; g-ratio with a residual difference) are the usable ones; conduction was measured once in the Wwox-null brain (acute slices P13 to P17, inconsistent n, no rescue, no velocity) and is a candidate readout that needs re-measurement, not an endpoint yet."
     ],
     "evidence_against": [
       "Two children selected for having the finding, with no denominator, cannot be shown to exceed (or fall below) the label's figures: 22 percent MRI changes in vigabatrin-treated non-WWOX infants with infantile spasms against 4 percent on other therapies (retrospective, N=205, arm sizes not stated). The denominator of vigabatrin-exposed WWOX children is not in any source read, so 'enriched in WWOX' is not supported and 'documented in WWOX' is all that holds.",
