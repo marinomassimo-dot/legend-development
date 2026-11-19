@@ -294,10 +294,12 @@
     },
     {
      "step": "ANCHOR-INTEGRITY scan of the canonical claims (first slice about 20 consumed claims): for each claim, which papers anchor it and at what receipt depth (complete, partial, abstract, none, placeholder); which claims rest only on placeholders, abstract-level or partial readings while their wording is stronger; ranked by how many cards, needs or arm cells consume the claim; use IT's reading-debt script and the receipts-based join, do not rebuild; ranked list for IT and ADV; nothing edited, nothing applied",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV assignment by message to SCI, 2026-11-19 (reply to the L-state note): the claim 025 defect was a claim anchored to a placeholder and stronger than its source",
-     "accepted_at": "2026-11-19T13:30:11Z"
+     "accepted_at": "2026-11-19T13:30:11Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/anchor_integrity_scan_sci_20261119/ANCHOR_INTEGRITY_SCAN_SCI_20261119.md: first slice of 20 consumed claims, all 47 scanned; nothing edited or applied; ranked list and audit candidates in sections 3 and 5; trace_claim_foundation negated-link defect (14 records, 21 edges) for HE; seeded independent spot-check 10 of 10; no delegate used",
+     "updated_at": "2026-11-19T14:07:46Z"
     }
    ]
   }

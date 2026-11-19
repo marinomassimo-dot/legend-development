@@ -1,0 +1,38 @@
+claims 47 | with consumption key > 0: 26 | slice20: 20
+anchor rows by class: {'A1': 150, 'A3': 20, 'A4': 21, 'A2': 14}
+A1+A2 rows by own attested level: {'abstract_only': 1, 'complete_strict': 101, 'partial': 46, 'no_identifier': 3, 'complete_loose': 4, 'placeholder': 7, 'none': 2}
+partial rows: 46 | of which Results read in at least one surviving receipt: 42 | without Results read: [('CLAIM 028', 'CORPUS-STUB-127'), ('CLAIM 028', 'PAPER 028'), ('CLAIM 043', 'PAPER 141'), ('CLAIM 044', 'PAPER 141')]
+A1+A2 rows below partial after effective level: [('CLAIM 001', 'PAPER 003', 'abstract_only'), ('CLAIM 008', 'PAPER 008', 'no_identifier'), ('CLAIM 009', 'PAPER 009', 'no_identifier'), ('CLAIM 022', 'CORPUS P216', 'placeholder'), ('CLAIM 024', 'CORPUS P204', 'placeholder'), ('CLAIM 025', 'CORPUS P191', 'placeholder'), ('CLAIM 027', 'CORPUS P214', 'placeholder'), ('CLAIM 028', 'CORPUS P207', 'placeholder'), ('CLAIM 028', 'CORPUS P214', 'placeholder'), ('CLAIM 028', 'CORPUS P218', 'placeholder'), ('CLAIM 028', 'CORPUS-STUB-058', 'none'), ('CLAIM 028', 'PAPER 026', 'none')]
+declared depth above attested (rows): 12 | below attested: 27 | equal: 125
+DECLARED_NOT_ATTESTED rows: [('CLAIM 013', 'PAPER 014', 'full_text', 'partial'), ('CLAIM 028', 'PAPER 028', 'full_text', 'partial')]
+A4 negated-link rows: 21 | by claim: {'CLAIM 002': 2, 'CLAIM 003': 2, 'CLAIM 004': 2, 'CLAIM 006': 1, 'CLAIM 007': 1, 'CLAIM 009': 1, 'CLAIM 010': 1, 'CLAIM 011': 1, 'CLAIM 022': 2, 'CLAIM 026': 1, 'CLAIM 030': 2, 'CLAIM 032': 2, 'CLAIM 034': 1, 'CLAIM 037': 2}
+A4 rows by depth: {'complete_strict': 13, 'partial': 7, 'complete_loose': 1}
+superseded anchors: [('CLAIM 002', 'PAPER 001', 'PAPER 094', 'complete_strict'), ('CLAIM 023', 'CORPUS P206', 'PAPER 081', 'complete_strict'), ('CLAIM 028', 'CORPUS P206', 'PAPER 081', 'complete_strict'), ('CLAIM 041', 'PAPER 112', 'PAPER 007', 'complete_strict')]
+
+SLICE (rank, claim, status, needs/cards/cells = key, anchors A1/A2/dup, strict/loose/partial/other, flags)
+ 1 CLAIM 021 consolidated 2/4/132=138  A1 1 A2 0 dup 1  cS 1 cL 0 par 0 oth 0  
+ 2 CLAIM 002 consolidated 1/4/22= 27  A1 3 A2 0 dup 0  cS 1 cL 0 par 1 oth 1  F6
+ 3 CLAIM 005 consolidated 2/1/22= 25  A1 6 A2 0 dup 0  cS 4 cL 0 par 2 oth 0  F6
+ 4 CLAIM 031 in observati 2/16/0= 18  A1 3 A2 0 dup 0  cS 3 cL 0 par 0 oth 0  
+ 5 CLAIM 011 flagged for  3/13/0= 16  A1 1 A2 0 dup 0  cS 1 cL 0 par 0 oth 0  
+ 6 CLAIM 019 consolidated 2/10/0= 12  A1 4 A2 0 dup 0  cS 3 cL 0 par 1 oth 0  F6
+ 7 CLAIM 046 in observati 0/10/0= 10  A1 1 A2 0 dup 0  cS 1 cL 0 par 0 oth 0  
+ 8 CLAIM 001 conflicting  3/5/0=  8  A1 9 A2 0 dup 0  cS 4 cL 0 par 4 oth 1  F6 F8
+ 9 CLAIM 016 in observati 2/4/0=  6  A1 2 A2 0 dup 0  cS 2 cL 0 par 0 oth 0  
+10 CLAIM 036 in observati 4/2/0=  6  A1 4 A2 0 dup 0  cS 4 cL 0 par 0 oth 0  
+11 CLAIM 003 consolidated 2/3/0=  5  A1 1 A2 0 dup 0  cS 0 cL 0 par 1 oth 0  F1 F6 F3:strong
+12 CLAIM 004 consolidated 2/3/0=  5  A1 1 A2 0 dup 0  cS 1 cL 0 par 0 oth 0  
+13 CLAIM 030 in observati 1/4/0=  5  A1 6 A2 0 dup 0  cS 4 cL 1 par 1 oth 0  F6
+14 CLAIM 035 in observati 1/4/0=  5  A1 1 A2 0 dup 0  cS 1 cL 0 par 0 oth 0  
+15 CLAIM 042 in observati 1/4/0=  5  A1 3 A2 0 dup 0  cS 0 cL 1 par 2 oth 0  F1 F6
+16 CLAIM 025 in observati 0/4/0=  4  A1 4 A2 1 dup 0  cS 2 cL 0 par 2 oth 1  F2 F6
+17 CLAIM 032 in observati 1/2/0=  3  A1 21 A2 0 dup 0  cS 16 cL 0 par 5 oth 0  F6
+18 CLAIM 040 in observati 0/3/0=  3  A1 1 A2 0 dup 0  cS 1 cL 0 par 0 oth 0  
+19 CLAIM 006 consolidated 1/1/0=  2  A1 1 A2 0 dup 0  cS 1 cL 0 par 0 oth 0  
+20 CLAIM 009 in observati 2/0/0=  2  A1 12 A2 0 dup 0  cS 5 cL 2 par 4 oth 1  F6
+
+slice claims with F6: ['CLAIM 002', 'CLAIM 005', 'CLAIM 019', 'CLAIM 001', 'CLAIM 003', 'CLAIM 030', 'CLAIM 042', 'CLAIM 025', 'CLAIM 032', 'CLAIM 009'] | with F1: ['CLAIM 003', 'CLAIM 042'] | F2: ['CLAIM 025'] | F4: [] | F7: [] | F8: ['CLAIM 001']
+slice claims with a single A1/A2 anchor: [('CLAIM 021', '138'), ('CLAIM 011', '16'), ('CLAIM 046', '10'), ('CLAIM 003', '5'), ('CLAIM 004', '5'), ('CLAIM 035', '5'), ('CLAIM 040', '3'), ('CLAIM 006', '2')]
+OUTSIDE THE SLICE with F1/F2/F4/F7/F8 (claim, status, key): [('CLAIM 018', 'cons', '1'), ('CLAIM 028', 'flag', '1'), ('CLAIM 010', 'back', '0'), ('CLAIM 013', 'in o', '0'), ('CLAIM 017', 'cons', '0'), ('CLAIM 020', 'cons', '0'), ('CLAIM 022', 'cons', '0'), ('CLAIM 024', 'cons', '0'), ('CLAIM 027', 'in o', '0'), ('CLAIM 043', 'in o', '0'), ('CLAIM 044', 'in o', '0'), ('CLAIM 045', 'in o', '0'), ('CLAIM 047', 'in o', '0')]
+claims by status: {'consolidated baseline': 18, 'in observation': 25, 'flagged for review': 2, 'conflicting evidence': 1, 'background only': 1}
+consolidated baseline claims: 18 | with consumption: 10 | with F6: 9 | F1: 5 | F7: 2

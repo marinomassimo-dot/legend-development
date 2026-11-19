@@ -1,0 +1,48 @@
+rank	slice20	claim	status	type	n_anchor	n_A1	n_A2	n_A2_dup	complete_strict	complete_loose	partial	abstract_only	not_read	none	placeholder	no_identifier	deepest	weakest	F1_THIN	F2_PLACEHOLDER	F2a_ONLY_PLACEHOLDER_OR_NONE	F3_WORDING_VS_DEPTH	F4_DECLARED_NOT_ATTESTED	F5_SOURCE_PMID_UNANCHORED	F6_HAS_WEAK_ANCHOR	F8_PARTIAL_NO_RESULTS	F7_WIKILINK_ONLY_ANCHOR	n_A4_negated	n_A3	A3_deepest	A3_weakest	needs	cards	cells	key	queries_context
+1	Y	CLAIM 021	consolidated baseline	DATO	1	1	0	1	1	0	0	0	0	0	0	0	complete_strict	complete_strict										0	0			2	4	132	138	1
+2	Y	CLAIM 002	consolidated baseline	DATO + INFERENZA prudente	3	3	0	0	1	0	1	0	0	0	0	1	complete_strict	no_identifier							Y			2	1	complete_strict	complete_strict	1	4	22	27	1
+3	Y	CLAIM 005	consolidated baseline	DATO	6	6	0	0	4	0	2	0	0	0	0	0	complete_strict	partial							Y			0	2	complete_strict	complete_strict	2	1	22	25	1
+4	Y	CLAIM 031	in observation	DATO (osservazione clinica) + INFERENZA 	3	3	0	0	3	0	0	0	0	0	0	0	complete_strict	complete_strict										0	1	complete_strict	complete_strict	2	16	0	18	1
+5	Y	CLAIM 011	flagged for review	DATO preclinico (full text reviewed)	1	1	0	0	1	0	0	0	0	0	0	0	complete_strict	complete_strict										1	0			3	13	0	16	1
+6	Y	CLAIM 019	consolidated baseline	DATO (endpoint funzionale: mRNA normale 	4	4	0	0	3	0	1	0	0	0	0	0	complete_strict	partial							Y			0	1	complete_strict	complete_strict	2	10	0	12	1
+7	Y	CLAIM 046	in observation	DATO (le proprietà di misura) + INFERENZ	1	1	0	0	1	0	0	0	0	0	0	0	complete_strict	complete_strict										0	0			0	10	0	10	1
+8	Y	CLAIM 001	conflicting evidence	DATO	9	9	0	0	4	0	4	1	0	0	0	0	complete_strict	abstract_only							Y	Y		0	1	partial	partial	3	5	0	8	1
+9	Y	CLAIM 016	in observation	DATO densitometrico NOT_TESTED (murino) 	2	2	0	0	2	0	0	0	0	0	0	0	complete_strict	complete_strict										0	0			2	4	0	6	1
+10	Y	CLAIM 036	in observation	DATO (le misure) + INFERENZA (la portata	4	4	0	0	4	0	0	0	0	0	0	0	complete_strict	complete_strict										0	0			4	2	0	6	1
+11	Y	CLAIM 003	consolidated baseline	DATO	1	1	0	0	0	0	1	0	0	0	0	0	partial	partial	Y			strong			Y			2	2	complete_strict	complete_strict	2	3	0	5	1
+12	Y	CLAIM 004	consolidated baseline	DATO	1	1	0	0	1	0	0	0	0	0	0	0	complete_strict	complete_strict										2	1	complete_strict	complete_strict	2	3	0	5	1
+13	Y	CLAIM 030	in observation	DATO (serie allelica su cellule di pazie	6	6	0	0	4	1	1	0	0	0	0	0	complete_strict	partial							Y			2	1	complete_strict	complete_strict	1	4	0	5	1
+14	Y	CLAIM 035	in observation	DATO (biochimica, cinque saggi ortogonal	1	1	0	0	1	0	0	0	0	0	0	0	complete_strict	complete_strict										0	0			1	4	0	5	1
+15	Y	CLAIM 042	in observation	DATO (uncontrolled case series, clinical	3	3	0	0	0	1	2	0	0	0	0	0	complete_loose	partial	Y						Y			0	0			1	4	0	5	1
+16	Y	CLAIM 025	in observation	DATO + INFERENZA	5	4	1	0	2	0	2	0	0	0	1	0	complete_strict	placeholder		Y					Y			0	0			0	4	0	4	1
+17	Y	CLAIM 032	in observation	DATO (endpoint specifici in topo, ratto 	21	21	0	0	16	0	5	0	0	0	0	0	complete_strict	partial							Y			2	3	complete_strict	complete_strict	1	2	0	3	1
+18	Y	CLAIM 040	in observation	DATO	1	1	0	0	1	0	0	0	0	0	0	0	complete_strict	complete_strict										0	0			0	3	0	3	1
+19	Y	CLAIM 006	consolidated baseline	DATO + INFERENZA prudente	1	1	0	0	1	0	0	0	0	0	0	0	complete_strict	complete_strict										1	0			1	1	0	2	1
+20	Y	CLAIM 009	in observation	INFERENZA	12	12	0	0	5	2	4	0	0	0	0	1	complete_strict	no_identifier							Y			1	0			2	0	0	2	1
+21		CLAIM 014	consolidated baseline	DATO	3	3	0	0	2	0	1	0	0	0	0	0	complete_strict	partial							Y			0	0			2	0	0	2	1
+22		CLAIM 015	consolidated baseline	INFERENZA strongly supported	3	3	0	0	3	0	0	0	0	0	0	0	complete_strict	complete_strict										0	1	partial	partial	1	0	0	1	1
+23		CLAIM 018	consolidated baseline	DATO	2	2	0	0	0	0	2	0	0	0	0	0	partial	partial	Y			strong			Y			0	0			1	0	0	1	1
+24		CLAIM 028	flagged for review	INFERENZA — principio interpretativo tra	10	6	4	2	5	0	1	0	0	1	3	0	complete_strict	placeholder		Y			Y		Y	Y		0	0			0	1	0	1	1
+25		CLAIM 033	in observation	DATO (statistica di coorte) + IPOTESI (l	7	7	0	0	4	0	3	0	0	0	0	0	complete_strict	partial							Y			0	1	complete_strict	complete_strict	0	1	0	1	1
+26		CLAIM 034	in observation	DATO (sistema fotorecettoriale) + ESPANS	2	2	0	0	2	0	0	0	0	0	0	0	complete_strict	complete_strict										1	0			1	0	0	1	1
+27		CLAIM 007	consolidated baseline	DATO	3	3	0	0	3	0	0	0	0	0	0	0	complete_strict	complete_strict										1	0			0	0	0	0	1
+28		CLAIM 008	consolidated baseline	DATO	3	3	0	0	2	0	0	0	0	0	0	1	complete_strict	no_identifier							Y			0	0			0	0	0	0	1
+29		CLAIM 010	background only	IPOTESI	0	0	0	0	0	0	0	0	0	0	0	0	none	none	Y		Y							1	0			0	0	0	0	1
+30		CLAIM 012	consolidated baseline	DATO descrittivo (full text reviewed)	1	1	0	0	1	0	0	0	0	0	0	0	complete_strict	complete_strict										0	0			0	0	0	0	1
+31		CLAIM 013	in observation	DATO con limiti metodologici dichiarati	2	2	0	0	0	0	2	0	0	0	0	0	partial	partial	Y				Y		Y			0	0			0	0	0	0	1
+32		CLAIM 017	consolidated baseline	DATO	0	0	0	0	0	0	0	0	0	0	0	0	none	none	Y		Y	strong					Y	0	4	complete_strict	partial	0	0	0	0	1
+33		CLAIM 020	consolidated baseline	DATO	0	0	0	0	0	0	0	0	0	0	0	0	none	none	Y		Y	strong					Y	0	1	complete_strict	complete_strict	0	0	0	0	1
+34		CLAIM 022	consolidated baseline	DATO	1	0	1	0	0	0	0	0	0	0	1	0	placeholder	placeholder	Y	Y	Y	strong			Y			2	0			0	0	0	0	1
+35		CLAIM 023	consolidated baseline	DATO	2	2	0	1	2	0	0	0	0	0	0	0	complete_strict	complete_strict										0	0			0	0	0	0	1
+36		CLAIM 024	consolidated baseline	DATO	2	1	1	0	1	0	0	0	0	0	1	0	complete_strict	placeholder		Y					Y			0	0			0	0	0	0	1
+37		CLAIM 026	in observation	DATO (co-association and pathway annotat	2	2	0	1	2	0	0	0	0	0	0	0	complete_strict	complete_strict										1	0			0	0	0	0	1
+38		CLAIM 027	in observation	INFERENZA	3	2	1	0	1	0	1	0	0	0	1	0	complete_strict	placeholder		Y					Y			0	0			0	0	0	0	1
+39		CLAIM 029	in observation	DATO + INFERENZA prudente	4	4	0	1	2	0	2	0	0	0	0	0	complete_strict	partial							Y			0	0			0	0	0	0	1
+40		CLAIM 037	in observation	DATO	3	3	0	0	3	0	0	0	0	0	0	0	complete_strict	complete_strict										2	0			0	0	0	0	1
+41		CLAIM 038	in observation	DATO (le misure) + IPOTESI (entrambe le 	3	3	0	0	3	0	0	0	0	0	0	0	complete_strict	complete_strict										0	0			0	0	0	0	1
+42		CLAIM 039	in observation	DATO	1	1	0	0	1	0	0	0	0	0	0	0	complete_strict	complete_strict										0	0			0	0	0	0	1
+43		CLAIM 041	in observation	DATO (mouse histology) + INFERENZA (rela	2	2	0	0	2	0	0	0	0	0	0	0	complete_strict	complete_strict										0	0			0	0	0	0	1
+44		CLAIM 043	in observation	DATO (what each cited link measures, rea	5	5	0	0	3	0	2	0	0	0	0	0	complete_strict	partial							Y	Y		0	0			0	0	0	0	1
+45		CLAIM 044	in observation	DATO (the injury time course and its bou	2	2	0	0	1	0	1	0	0	0	0	0	complete_strict	partial							Y	Y		0	0			0	0	0	0	1
+46		CLAIM 045	in observation	DATO (la proporzione) + INFERENZA (la le	2	2	0	0	0	0	2	0	0	0	0	0	partial	partial	Y						Y			0	0			0	0	0	0	1
+47		CLAIM 047	in observation	DATO (ogni numero misurato) + INFERENZA 	4	4	0	0	0	0	4	0	0	0	0	0	partial	partial	Y						Y			0	0			0	0	0	0	1
