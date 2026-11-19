@@ -168,3 +168,5 @@
 {"evidence": "SendMessage to SCI [b572dc] at 15:12Z 2026-11-19 after the CLAIM 005 verdict", "id": "ADV-085", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T15:12:52Z"}
 {"assessment": "HOST", "id": "ADV-086", "key": "unread-corpus-top-two-obtainable-neural-mechanism-texts", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T15:53:15Z"}
 {"evidence": "SendMessage to SCI [b572dc] at 15:53Z 2026-11-19 after its row-6 delivery", "id": "ADV-086", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T15:53:15Z"}
+{"assessment": "HOST", "id": "ADV-087", "key": "supply-sheet-for-the-human-visit-item-14", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T16:16:43Z"}
+{"evidence": "SendMessage receipt msg_id 484dbc35-8bb1-48f6-b757-40b1b72b188a at 16:16Z 2026-11-19, receipt names SCI, after ADV-086 delivery", "id": "ADV-087", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T16:16:52Z"}
