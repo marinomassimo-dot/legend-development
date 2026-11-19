@@ -87,7 +87,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | whether a deep-dive work manifest satisfies the gate, or which waiver it owes | `framework/scripts/deepdive_manifest.py` |
 | do the bytes a manifest fingerprints exist in **this** checkout — and, with `--search DIR`, is an "absent" one merely misplaced under another name (found by SHA-256; `--restore` copies exact matches only) (a manifest that declares no artefact answers `NO ARTEFACT DECLARED`, not COMPLETE: 3 of 594 manifests, 2026-11-19; declared-but-absent keeps NO LOCAL EVIDENCE) | `framework/scripts/evidence_presence.py` |
 | whether a gene or protein symbol appears in **any supplementary workbook, document or table already on disk** (sheet and row shown) — the question a full-text index cannot answer; a zero is a statement about these files, never about the literature | `framework/scripts/supplement_symbol_search.py CACNA1G CACNA1H [--workspace <shared root>]` |
-| a resumable work queue from a dated bibliography snapshot | `framework/scripts/batch_queue.py` |
+| a resumable work queue from a dated bibliography snapshot (a registry placeholder whose paper already has a receipt-based read depth is class `CORPUS_RECEIPTED` and leaves the 'start here' list, 53 rows at 2026-11-19: IT59) | `framework/scripts/batch_queue.py` |
 | what the papers in a lot are to each other, resolved before the reading rather than after | `framework/scripts/lot_internal_edges.py` |
 
 ## 3 · Is this quotation real

@@ -252,6 +252,19 @@ class JoinTests(unittest.TestCase):
             bq.registry_index(registries)
 
 
+class ReceiptedPlaceholderTests(unittest.TestCase):
+    """IT59 2026-11-19: 53 'start here' rows already had a receipt-based read depth; they now carry their own class and leave the start-here list."""
+
+    def test_no_start_here_row_has_a_read_depth_beyond_catalogued(self):
+        report = bq.build(ROOT, "wwox")
+        beyond = [r for r in report["queue"] if r["action"].startswith("start here") and r["depth"] not in ("catalogued only", "screened", "unmatched")]
+        self.assertEqual([r["pmid"] for r in beyond if r["triage_class"] == "CORPUS_CATALOGUED"], [])
+        receipted = [r for r in report["queue"] if r["triage_class"] == "CORPUS_RECEIPTED"]
+        self.assertTrue(receipted, "IT59 found 53; none means the join is lost")
+        self.assertTrue(all(r["depth"] in ("full text", "partial full text", "abstract only") for r in receipted))
+        self.assertEqual(report["actions"].get("CORPUS_RECEIPTED", 0), len(receipted))          # kept in the queue, counted, not hidden
+
+
 class QueueIntegrityTests(unittest.TestCase):
     def test_repeated_paper_across_snapshots_is_counted_once(self) -> None:
         with TemporaryDirectory() as temporary:
