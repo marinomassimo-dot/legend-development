@@ -1,0 +1,152 @@
+{
+ "adapter": "parametric_sensitivity_model.py",
+ "base_seed": 1000,
+ "calls": 126,
+ "files": {
+  "parametric_sensitivity_model.py": "9c587ab5ae4047587544243643450851b0b3d3d482f56905732113a052e474bf",
+  "pilot_bisect_harness_model.py": "2871a5dbfdf153097258effeec04a3a67fb7c798c71a6a38c10398d0def014df",
+  "rebound_oscillator.py": "c050b8ff0a1ba8fe5ef340f2a57168ecf578f161be12392c42fec98851b89419"
+ },
+ "harness_sha256": "15c0d27fbf5972bb1ed81ffc8c09b06eee534c993f8ffe2bd2c81b66fcd8a9fe",
+ "harness_version": "1",
+ "params": {
+  "arm": [
+   1,
+   1,
+   9,
+   "pilot arm code 1 to 9 (see module doc)"
+  ],
+  "cl_tau_mult": [
+   1.0,
+   0.5,
+   2.0,
+   "multiplier on tau_c (chloride extrusion time constant)"
+  ],
+  "geno": [
+   0,
+   0,
+   2,
+   "0 S-KO, 1 S-HT, 2 S-WT"
+  ],
+  "ji_mult": [
+   1.0,
+   0.5,
+   1.5,
+   "multiplier on J_I (phasic inhibition: interneuron share)"
+  ],
+  "kv7_offset": [
+   0.0,
+   -0.05,
+   0.05,
+   "ASSUMED stand-in for intrinsic Kv7 depolarisation: additive offset on the drive b0 (Kv7 is NOT in the model)"
+  ],
+  "nmda_mult": [
+   1.0,
+   0.8,
+   1.25,
+   "multiplier on J_N (NMDAR gain)"
+  ],
+  "strength": [
+   1.0,
+   0.0,
+   3.0,
+   "arm strength s (multiplier ** s)"
+  ]
+ },
+ "points": 7,
+ "points_outside_declared_bounds": [],
+ "scan": {
+  "bisect": {
+   "bracket": [
+    0.0,
+    3.0
+   ],
+   "cells": [
+    {
+     "direction": "crosses below",
+     "fixed": {
+      "arm": 1,
+      "geno": 0
+     },
+     "label": "base__arm1",
+     "note": "d-APV-type, S-KO, variant base",
+     "observable": "rel_bursts",
+     "threshold": 0.5
+    },
+    {
+     "direction": "crosses below",
+     "fixed": {
+      "arm": 2,
+      "geno": 0
+     },
+     "label": "base__arm2",
+     "note": "NMDAR pore, S-KO, variant base",
+     "observable": "rel_bursts",
+     "threshold": 0.5
+    },
+    {
+     "direction": "crosses below",
+     "fixed": {
+      "arm": 4,
+      "geno": 0
+     },
+     "label": "base__arm4",
+     "note": "AMPA, S-KO, variant base",
+     "observable": "rel_bursts",
+     "threshold": 0.5
+    },
+    {
+     "direction": "crosses below",
+     "fixed": {
+      "arm": 5,
+      "geno": 0
+     },
+     "label": "base__arm5",
+     "note": "T-type, S-KO, variant base",
+     "observable": "rel_bursts",
+     "threshold": 0.5
+    },
+    {
+     "direction": "crosses below",
+     "fixed": {
+      "arm": 6,
+      "geno": 0
+     },
+     "label": "base__arm6",
+     "note": "synaptic GABA-A, S-KO, variant base",
+     "observable": "rel_bursts",
+     "threshold": 0.5
+    },
+    {
+     "direction": "crosses below",
+     "fixed": {
+      "arm": 7,
+      "geno": 0
+     },
+     "label": "base__arm7",
+     "note": "neurosteroid-type, S-KO, variant base",
+     "observable": "rel_bursts",
+     "threshold": 0.5
+    },
+    {
+     "direction": "crosses below",
+     "fixed": {
+      "arm": 8,
+      "geno": 0
+     },
+     "label": "base__arm8",
+     "note": "sodium (pyramidal), S-KO, variant base",
+     "observable": "rel_bursts",
+     "threshold": 0.5
+    }
+   ],
+   "iterations": 5,
+   "parameter": "strength"
+  },
+  "caveats": "Kv7 is NOT in the model: kv7_offset is an ASSUMED stand-in. Parameter changes of one structure, not structural alternatives. A class that keeps its rank is robust to these parameters only, not shown correct. A crossing is a model step, not a dose.",
+  "design": "bisect",
+  "predictions": []
+ },
+ "scan_sha256": "f660b6b6a8cd4aafd81be203b789e7ad2044928afc0c01f08588eecad8728e63",
+ "seeds": 3
+}

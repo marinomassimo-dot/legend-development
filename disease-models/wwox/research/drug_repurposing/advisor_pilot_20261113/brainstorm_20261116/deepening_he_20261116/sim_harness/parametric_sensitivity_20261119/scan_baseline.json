@@ -1,0 +1,92 @@
+{
+ "bisect": {
+  "bracket": [
+   0.0,
+   3.0
+  ],
+  "cells": [
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 1,
+     "geno": 0
+    },
+    "label": "base__arm1",
+    "note": "d-APV-type, S-KO, variant base",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 2,
+     "geno": 0
+    },
+    "label": "base__arm2",
+    "note": "NMDAR pore, S-KO, variant base",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 4,
+     "geno": 0
+    },
+    "label": "base__arm4",
+    "note": "AMPA, S-KO, variant base",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 5,
+     "geno": 0
+    },
+    "label": "base__arm5",
+    "note": "T-type, S-KO, variant base",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 6,
+     "geno": 0
+    },
+    "label": "base__arm6",
+    "note": "synaptic GABA-A, S-KO, variant base",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 7,
+     "geno": 0
+    },
+    "label": "base__arm7",
+    "note": "neurosteroid-type, S-KO, variant base",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 8,
+     "geno": 0
+    },
+    "label": "base__arm8",
+    "note": "sodium (pyramidal), S-KO, variant base",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   }
+  ],
+  "iterations": 5,
+  "parameter": "strength"
+ },
+ "caveats": "Kv7 is NOT in the model: kv7_offset is an ASSUMED stand-in. Parameter changes of one structure, not structural alternatives. A class that keeps its rank is robust to these parameters only, not shown correct. A crossing is a model step, not a dose.",
+ "design": "bisect",
+ "predictions": []
+}
