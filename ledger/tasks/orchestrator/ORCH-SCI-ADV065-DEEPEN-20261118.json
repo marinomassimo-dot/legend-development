@@ -273,6 +273,13 @@
      "accepted_at": "2026-11-19T12:10:56Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/materials_test2_sci_20261119/MATERIALS_TEST2_RESULT_SCI_20261119.md",
      "updated_at": "2026-11-19T12:41:47Z"
+    },
+    {
+     "step": "ADV-081 second blind locator audit of the REVISED CLAIM 025 candidate (CC-20261119-ORCHESTRATOR-CLAIM025-GDM-ANCHOR-01, on main 2471a7039813): triples proposition, quote and anchor plus the saved Baryla text (FTR-20261119-33520443-01); a fresh delegate that did not see the first audit, model and effort stated and read back, report verbatim; list any sentence that says more or less than the paper; check that the candidate states the Results 'tendency' against the Abstract and Discussion 'significant downregulation' inconsistency and the queried-not-full-read depth; verdict to IT and ADV; nothing applied",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-081 (assignments/ADV-081.md; ADV message 2026-11-19)",
+     "accepted_at": "2026-11-19T12:48:37Z"
     }
    ]
   }
@@ -478,6 +485,13 @@
    "at": "2026-11-19T12:10:56Z",
    "source": "ADV message 2026-11-19 (operator's request for one small comparison)",
    "step_sha256": "b324126a0b13",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T12:48:37Z",
+   "source": "ADV-081 (assignments/ADV-081.md; ADV message 2026-11-19)",
+   "step_sha256": "d3908225c63a",
    "reopened_block": false,
    "authorised_by": null
   }
