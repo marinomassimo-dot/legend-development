@@ -1088,7 +1088,52 @@ def unpublished_main(now: dt.datetime) -> dict[str, Any]:
             "ref_checked_min_ago": round((now.timestamp() - fetch.stat().st_mtime) / 60) if fetch.exists() else None}
 
 
-def session_activity(now: dt.datetime, agents: list[dict[str, Any]] | None = None) -> dict[str, Any]:
+IDLE_NAMED_MIN = 60      # a recipient idle longer than this, with no blocker that names it, is reported on the tick line
+
+
+def recipients_view(agents: list[dict[str, Any]], recipients: dict[str, str] | None, now: dt.datetime) -> dict[str, Any]:
+    """The pilot's recipients (budget `recipients`: role -> session name) read as LIVE sessions, not as names. 2026-11-19 (ADV): the share above counts every session of the repository, so dormant
+    operator chats made 'over half idle' true while every actual recipient was busy, and two sessions named SCI during a restart overlap collapsed into one row. Here each role resolves through
+    `mandate_watch.route`: the marker-host is the recipient and the other same-name sessions are listed as surplus, never chosen. `idle_min` is the minutes a recipient has been idle (its transcript's
+    last write), None when it is busy; `recipients_all_idle_min` is the shortest of them, None unless every reachable recipient is idle. Facts, not a verdict."""
+    import mandate_watch as mw
+    live = [a for a in agents if isinstance(a, dict) and mw.session_is_live(a)]
+    out: dict[str, Any] = {}
+    for role, name in sorted((recipients or {}).items()):
+        res = mw.route(name, live, ROOT)
+        row: dict[str, Any] = {"name": name, "state": res["status"]}
+        if res["status"] == "RESOLVED":
+            sid = res["session_id"]
+            agent = next((a for a in live if a.get("sessionId") == sid), {})
+            found = sorted(PROJECTS_DIR.glob(f"*/{sid}.jsonl"))
+            quiet = round((now.timestamp() - found[-1].stat().st_mtime) / 60) if found else None
+            status = str(agent.get("status"))
+            row.update(session=str(sid)[:8], status=status, quiet_min=quiet, idle_min=quiet if status == "idle" else None)
+            if res.get("surplus_name_matches"):
+                row["surplus"] = [str(x["session_id"])[:8] for x in res["surplus_name_matches"]]
+        elif res["status"] == "AMBIGUOUS":
+            row["candidates"] = [str(c["session_id"])[:8] for c in res.get("candidates", [])]
+        out[role] = row
+    reach = [r for r in out.values() if r["state"] == "RESOLVED"]
+    idle = [r["idle_min"] for r in reach if r["idle_min"] is not None]
+    return {"roles": out, "recipients_all_idle_min": min(idle) if reach and len(idle) == len(reach) else None}
+
+
+def idle_without_blocker(view: dict[str, Any], waits: list[dict[str, str]]) -> list[str]:
+    """Roles idle for more than IDLE_NAMED_MIN with no BLOCKED step in an open mandate that names them (the role, or its session name as a whole word). 'No blocker names it' is what is
+    known, not 'no reason': a reason may sit in a message."""
+    lines = []
+    for role, row in (view.get("roles") or {}).items():
+        idle = row.get("idle_min")
+        if idle is None or idle <= IDLE_NAMED_MIN:
+            continue
+        rx = re.compile(r"(?<!\w)(?:" + "|".join(re.escape(x) for x in {role, str(row.get("name", ""))} if x) + r")(?!\w)", re.I)
+        if not any(rx.search(f"{w.get('task', '')} {w.get('step', '')} {w.get('blocker', '')}") for w in waits):
+            lines.append(f"{role} ({row.get('name')}) idle {idle} min")
+    return lines
+
+
+def session_activity(now: dt.datetime, agents: list[dict[str, Any]] | None = None, recipients: dict[str, str] | None = None) -> dict[str, Any]:
     """HE60: who is working and who has been quiet, since when, so the operator's durable check (an idle share above half without a written reason is a prompt to send) is read, not rebuilt. Git cannot say it: every
     actor commits under one author. The runtime says each session's status and its transcript's last write; only that modification time is read, never the content. `quiet_min` is minutes since the transcript was
     last written (None when it is not found), `idle_share` counts this repository's sessions written within the last day (older ones are listed, not counted). Facts, not a verdict: a written reason is still read by the presidio."""
@@ -1106,7 +1151,8 @@ def session_activity(now: dt.datetime, agents: list[dict[str, Any]] | None = Non
         rows[str(a.get("name"))] = {"status": str(a.get("status")), "quiet_min": round((now.timestamp() - found[-1].stat().st_mtime) / 60) if found else None}
     live = [r for r in rows.values() if r["quiet_min"] is not None and r["quiet_min"] < STALE_SESSION_MIN]
     idle = sum(1 for r in live if r["status"] == "idle")
-    return {"available": True, "main_quiet_min": main_quiet, "main_unpublished": published, "sessions": rows, "idle_share": f"{idle}/{len(live)}", "idle_over_half": bool(live) and idle * 2 > len(live)}
+    return {"available": True, "main_quiet_min": main_quiet, "main_unpublished": published, "sessions": rows, "idle_share": f"{idle}/{len(live)}", "idle_over_half": bool(live) and idle * 2 > len(live),
+            "recipients": recipients_view(agents, recipients, now)}
 
 
 def _waits() -> list[dict[str, str]]:
@@ -1475,6 +1521,10 @@ def tick(campaign: Path) -> dict[str, Any]:
     if verdict == "NONE" and not first and obs["portfolio"].get("actionable"):
         # ADV-047: NONE answers "did an event, a roadmap change or a met resume condition arrive", not "is there work"; the tick line itself names the ready rows so a quiet hour is not read as an empty portfolio
         why += "; this says nothing about opportunities, ready portfolio rows: " + ", ".join(obs["portfolio"]["actionable"][:6])
+    activity = session_activity(now, recipients=_budget(campaign).get("recipients"))
+    named = idle_without_blocker((activity.get("recipients") or {}), obs["waits"]) if activity.get("available") else []
+    if named:
+        why += "; IDLE WITHOUT A BLOCKER THAT NAMES IT: " + "; ".join(named)         # facts about the recipients, not a verdict on useful work
     state["last_tick_utc"] = _utc(now)
     if verdict != "RUNNING":
         state.update(main_sha=obs["main_sha"], main_ref=(obs.get("main_ref") or {}).get("ref", "main"), mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"],
@@ -1500,7 +1550,7 @@ def tick(campaign: Path) -> dict[str, Any]:
             "operator_controls": [f"{c['kind']}: {c['text']}" for c in (active_suspensions(ctl) + [c for c in ctl if c["kind"] in ("URGENT", "INTEGRATION")])[-6:]],
             "events": obs["events"][:12], "open_mandates": obs["open_mandates"], "waiting_on": [f"{w['task']}: {w['blocker'][:70]}" for w in obs["waits"]][:4] + ([f"... {len(obs['waits'])} in all"] if len(obs["waits"]) > 4 else []),
              "portfolio": {k: obs["portfolio"][k] for k in ("path", "available", "actionable", "errors")},
-            "sessions": obs["sessions"], "activity": session_activity(now), "digest": digest,
+            "sessions": obs["sessions"], "activity": activity, "digest": digest,
             "recall": recall,
             "reference": {k: ref[k] for k in ("ref", "sha", "state", "note", "fetch", "fetch_age_min", "local_main", "checkout")},
             "evaluation_clock": {"utc": _utc(last_eval) if last_eval else None, "source": clock_source},

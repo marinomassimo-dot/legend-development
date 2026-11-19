@@ -201,6 +201,61 @@ class StageBReadsStageA(Base):
         self.assertTrue(any(sa.SEALED in rule for rule in sa.DENIED))
 
 
+class RecipientsView(unittest.TestCase):
+    """2026-11-19 (ADV): the recipients are read as live sessions through route, a restart overlap does not collapse two sessions named SCI, dormant chats are outside the view, and the tick line says
+    'no blocker names it'."""
+    NOW = dt.datetime(2026, 11, 19, 16, 0, tzinfo=dt.timezone.utc)
+    SID = {"HE": "11111111-0000-0000-0000-00000000000a", "IT": "22222222-0000-0000-0000-00000000000b",
+           "SCI_OLD": "33333333-0000-0000-0000-00000000000c", "SCI_NEW": "44444444-0000-0000-0000-00000000000d", "CHAT": "55555555-0000-0000-0000-00000000000e"}
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)
+        t = Path(self.tmp.name)
+        (t / "ledger" / "tasks").mkdir(parents=True)
+        self.proj = t / "projects" / "p"; self.proj.mkdir(parents=True)
+        for sid, minutes in ((self.SID["HE"], 0), (self.SID["IT"], 75), (self.SID["SCI_OLD"], 90), (self.SID["SCI_NEW"], 80), (self.SID["CHAT"], 1200)):
+            f = self.proj / f"{sid}.jsonl"; f.write_text("{}\n")
+            ts = self.NOW.timestamp() - minutes * 60
+            os.utime(f, (ts, ts))
+        self.patches = [patch.object(sa, "ROOT", t), patch.object(sa, "PROJECTS_DIR", t / "projects")]
+        for q in self.patches:
+            q.start(); self.addCleanup(q.stop)
+
+    def agents(self, sci_both=True):
+        a = lambda key, name, status: {"sessionId": self.SID[key], "name": name, "pid": os.getpid(), "status": status, "kind": "background", "cwd": str(sa.ROOT)}
+        out = [a("HE", "HE", "busy"), a("IT", "IT Orchestrator", "idle"), a("SCI_NEW", "SCI", "idle"), a("CHAT", "legend-development-6f", "idle")]
+        return out + [a("SCI_OLD", "SCI", "idle")] if sci_both else out
+
+    RECIP = {"Harness": "HE", "Orchestrator": "IT Orchestrator", "Science": "SCI"}
+
+    def test_a_restart_overlap_resolves_to_the_marker_host_and_lists_the_other_as_surplus(self):
+        host = lambda task, sessions, projects_dir=None: [{"session_id": self.SID["SCI_NEW"]}] if task == "ORCH-SCI-X" else []
+        rec = {"TASK_ID": "ORCH-SCI-X", "ACTOR_ID": "orchestrator", "AUTHORISED_QUEUE_A": {"MANDATE_STATE": "OPEN", "OBJ": {"order": 1, "steps": [{"step": "s", "status": "TODO", "owner": "o"}]}}}
+        (sa.ROOT / "ledger" / "tasks" / "x").mkdir(exist_ok=True)
+        (sa.ROOT / "ledger" / "tasks" / "x" / "ORCH-SCI-X.json").write_text(json.dumps(rec))
+        with patch("mandate_watch.live_bound_sessions", side_effect=host):
+            view = sa.recipients_view(self.agents(), self.RECIP, self.NOW)
+        sci = view["roles"]["Science"]
+        self.assertEqual((sci["state"], sci["session"], sci["surplus"]), ("RESOLVED", self.SID["SCI_NEW"][:8], [self.SID["SCI_OLD"][:8]]))
+        self.assertEqual(set(view["roles"]), {"Harness", "Orchestrator", "Science"})                  # the dormant operator chat is not a recipient
+
+    def test_idle_minutes_and_the_all_idle_figure(self):
+        view = sa.recipients_view(self.agents(sci_both=False), self.RECIP, self.NOW)
+        self.assertEqual((view["roles"]["Harness"]["idle_min"], view["roles"]["Orchestrator"]["idle_min"], view["roles"]["Science"]["idle_min"]), (None, 75, 80))
+        self.assertIsNone(view["recipients_all_idle_min"])                                           # HE is busy: not all idle
+        agents = [dict(a, status="idle") for a in self.agents(sci_both=False)]
+        self.assertEqual(sa.recipients_view(agents, self.RECIP, self.NOW)["recipients_all_idle_min"], 0)   # HE written 0 minutes ago: the shortest idle time
+
+    def test_the_tick_line_says_no_blocker_names_it_and_a_blocker_that_names_the_role_silences_it(self):
+        view = sa.recipients_view(self.agents(sci_both=False), self.RECIP, self.NOW)
+        self.assertEqual(sa.idle_without_blocker(view, []), ["Orchestrator (IT Orchestrator) idle 75 min", "Science (SCI) idle 80 min"])
+        waits = [{"task": "ORCH-SCI-9", "step": "L", "blocker": "SCI waits for the supply of texts"}]
+        self.assertEqual(sa.idle_without_blocker(view, waits), ["Orchestrator (IT Orchestrator) idle 75 min"])
+        self.assertEqual(sa.idle_without_blocker(view, [{"task": "T", "step": "ITEM two", "blocker": "WITHIN reach"}]), ["Orchestrator (IT Orchestrator) idle 75 min", "Science (SCI) idle 80 min"])   # whole words only
+        view["roles"]["Orchestrator"]["idle_min"] = 59
+        self.assertEqual(sa.idle_without_blocker(view, waits), [])                                   # at or below the threshold nothing is said
+
+
 class Profile(unittest.TestCase):
     def test_launch_flags_are_read_only_and_never_bare(self) -> None:
         cmd = sa.claude_command("opus", "high")
