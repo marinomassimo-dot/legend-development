@@ -267,10 +267,19 @@
     },
     {
      "step": "Materials-contribution test 2 (ADV suggestion 2026-11-19, SCI's choice): one real decision whose answer lives in the held data (which single optional measurement of the ordering page rows 6 to 11 a laboratory that can take only one should take first), criteria hashed first, co-designed with IT, loop-materials arm against a lean held-originals arm, same model, effort and tool cap, blind verifier, costs read back; not the PPxY case",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message 2026-11-19 (operator's request for one small comparison)",
-     "accepted_at": "2026-11-19T12:10:56Z"
+     "accepted_at": "2026-11-19T12:10:56Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/materials_test2_sci_20261119/MATERIALS_TEST2_RESULT_SCI_20261119.md",
+     "updated_at": "2026-11-19T12:41:47Z"
+    },
+    {
+     "step": "ADV-081 second blind locator audit of the REVISED CLAIM 025 candidate (CC-20261119-ORCHESTRATOR-CLAIM025-GDM-ANCHOR-01, on main 2471a7039813): triples proposition, quote and anchor plus the saved Baryla text (FTR-20261119-33520443-01); a fresh delegate that did not see the first audit, model and effort stated and read back, report verbatim; list any sentence that says more or less than the paper; check that the candidate states the Results 'tendency' against the Abstract and Discussion 'significant downregulation' inconsistency and the queried-not-full-read depth; verdict to IT and ADV; nothing applied",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-081 (assignments/ADV-081.md; ADV message 2026-11-19)",
+     "accepted_at": "2026-11-19T12:48:37Z"
     }
    ]
   }
@@ -478,6 +487,13 @@
    "step_sha256": "b324126a0b13",
    "reopened_block": false,
    "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T12:48:37Z",
+   "source": "ADV-081 (assignments/ADV-081.md; ADV message 2026-11-19)",
+   "step_sha256": "d3908225c63a",
+   "reopened_block": false,
+   "authorised_by": null
   }
  ],
  "DELEGATIONS": [
@@ -502,6 +518,9 @@
   "ADV-079 harm-against-phenotype producer (legend-delegate, 2026-11-19, dispatched by the fresh-window SCI): asked sonnet/medium; read back in the census: claude-sonnet-5-5 x39 turns, effort medium x39; 39 turns, 44,568 output tokens, 4,439,877 cache-read tokens, birth context 24,759, peak 182,053; held originals only, no repository writes (report parsed from its SubagentHandback message). My checks: blind spot-check of five rows by random draw (seed 20261119 over 41 rows; rows 2, 14, 31, 34, 40; two routes each; 4 confirmed, 1 incomplete), three headline claims verified (P47T Supplementary Table 4 on disk, vigabatrin label sentences, ST4 percentages); two corrections recorded (P47T 'age-typical' nephropathy over-credited; lithium label 'hepatic' mention missed); headline count 12 corrected to 13. No blind verifier run: every NO cell is a label keyword absence, not an exclusion.",
   "ADV-079 blind verifier on the vigabatrin retina and optic cell (legend-delegate, 2026-11-19, ADV's ruling): asked sonnet/high; read back in the census: claude-sonnet-5-5 x14 turns, effort high x14; 14 turns, 20,583 output tokens, 854,044 cache-read tokens, birth context 24,182, peak 101,211; blind (11 proposition/quote/anchor triples and five held source names; no producer, verdict or dossier); no repository writes (report parsed from its SubagentHandback message). Result: cell rated PARTIAL (producer said YES); label never names optic atrophy; retinal-dysplasia anchor is 8.1 not 8.4; four held primary child reports, 14 children, 8 with optic atrophy. My checks: label 'atroph' 0 hits, 'optic' 2 hits; 'permanent bilateral concentric visual field constriction' present; Shaukat 2018 names vigabatrin in both children and the optic atrophy sentence.",
   "Heterozygote phenotype register producer (legend-delegate, 2026-11-19, ADV-approved unit): asked sonnet/medium; read back in the census: claude-sonnet-5-5 x31 turns, effort medium x31; 24,649 output tokens, 1,884,580 cache-read tokens, birth context 24,304, peak 109,670; held originals only, no repository writes (report parsed from its SubagentHandback message). My checks: five rows by random draw (seed 20261119 over 30 rows; rows 16, 17, 23, 25, 26; two or three routes each; 5 of 5 confirmed). No blind verifier (a register of observations, no ranking that excludes a thread; 'normal' cells that rest on 'data not shown' are labelled as no data).",
-  "ADV-080 blind locator audit of the Baryla 2021 triples for CLAIM 025 (legend-delegate, 2026-11-19): asked sonnet/high; read back in the census: claude-sonnet-5-5 x10 turns, effort high x10; 10 turns, 16,780 output tokens, 380,919 cache-read tokens, birth context 24,204, peak 67,219; blind (14 proposition/quote/anchor triples and the re-fetched text; no dossier, manifest or candidate); no repository writes (report parsed from its SubagentHandback message). Result: all six supplied quotes verbatim; T6 (ratio due to HIF1A) not a statement of the source; three proposed sentences of the candidate say more or less than the paper. My checks against the held text: WWOX-PFK R -0.23 p<0.05; ratio correlations with NFKB1, DVL2, CTNNB1; Abstract 'significant downregulation of WWOX' and HK2 overexpressed against Results unchanged; 'markedly' and 'denominator' absent. Route that obtained the text: plain E-utilities efetch (PMC7811782), first route, no contact parameter."
+  "ADV-080 blind locator audit of the Baryla 2021 triples for CLAIM 025 (legend-delegate, 2026-11-19): asked sonnet/high; read back in the census: claude-sonnet-5-5 x10 turns, effort high x10; 10 turns, 16,780 output tokens, 380,919 cache-read tokens, birth context 24,204, peak 67,219; blind (14 proposition/quote/anchor triples and the re-fetched text; no dossier, manifest or candidate); no repository writes (report parsed from its SubagentHandback message). Result: all six supplied quotes verbatim; T6 (ratio due to HIF1A) not a statement of the source; three proposed sentences of the candidate say more or less than the paper. My checks against the held text: WWOX-PFK R -0.23 p<0.05; ratio correlations with NFKB1, DVL2, CTNNB1; Abstract 'significant downregulation of WWOX' and HK2 overexpressed against Results unchanged; 'markedly' and 'denominator' absent. Route that obtained the text: plain E-utilities efetch (PMC7811782), first route, no contact parameter.",
+  "Materials-contribution test 2, arm L (lean; legend-delegate, 2026-11-19; IT's hashed pre-registration 525c9266...): asked sonnet/medium; read back in the census: claude-sonnet-5-5 x2 turns, effort medium x2; 2 tool calls, 2,862 output tokens, 23,309 cache-read tokens, birth context 23,311, peak 32,367, 23.6 s; held originals only (greps of the Repudi Brain text and the Cheng, Hussain and Abu-Remaileh texts), no PubMed; report 950 words against a cap of 800, parsed from its SubagentHandback message; prompt equals the saved brief (digest de1addbb19fe); audit: no path outside the allowed set, no leak token. First choice: callosal conduction with a rescue arm. Record: advisor_pilot_20261113/brainstorm_20261116/materials_test2_sci_20261119/",
+  "Materials-contribution test 2, arm M (loop materials; legend-delegate, 2026-11-19): asked sonnet/medium; read back: claude-sonnet-5-5 x5 turns, effort medium x5 (balanced with L); 5 tool calls, 4,798 output tokens, 127,746 cache-read tokens, birth context 24,314, peak 41,479, 43.1 s; opened no held original (notes and two verbatim extracts only); report 1,199 words against a cap of 800; prompt equals the saved brief (digest 337352ba6775); audit: ordering page not opened though two pointers to it sat in its material. First choice: glucose tied to seizure timing. Record: advisor_pilot_20261113/brainstorm_20261116/materials_test2_sci_20261119/",
+  "Materials-contribution test 2, blind verifier (legend-delegate, 2026-11-19; reports presented L first, last hex digit f): asked sonnet/high; read back: claude-sonnet-5-5 x10 turns, effort high x10; 10 tool calls (originals, 3 PubMed searches, 1 metadata call), 9,350 output tokens, 364,647 cache-read tokens, birth context 21,954, peak 52,756, 77.7 s; report 1,156 words against a cap of 900. Result: B (arm M) better by (i) to (iv), no NO DIFFERENCE, borderline HARM in A (arm L). My checks against the held bytes: Repudi Brain seizure onset P9 and the 68.5 s duration, the Fig 5D legend n, glucose hits are solution compositions, Hussain wildtype spikes 0-68 per hour, Cheng latency 2.44 against 1.39 ms, and the held AAV9 paper (neuronal rescue restores glucose with seizures and survival; I read the full text, the verifier only the abstract). Limit found: the originals list I gave both arms omitted that paper and the other glucose originals. Record: advisor_pilot_20261113/brainstorm_20261116/materials_test2_sci_20261119/MATERIALS_TEST2_RESULT_SCI_20261119.md"
  ]
 }
