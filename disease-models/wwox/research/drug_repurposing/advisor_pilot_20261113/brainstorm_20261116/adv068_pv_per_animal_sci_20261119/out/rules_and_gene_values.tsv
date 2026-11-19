@@ -1,0 +1,45 @@
+contrast	kind	item	value	detail
+cortex_S	gene_log2FC	Pvalb	-0.602	CRTX_S_KO_1:-0.89; CRTX_S_KO_2:-0.74; CRTX_S_KO_3:-0.17
+cortex_S	gene_log2FC	Syt2	-0.95	CRTX_S_KO_1:-0.51; CRTX_S_KO_2:-1.96; CRTX_S_KO_3:-0.38
+cortex_S	gene_log2FC	Kcnc1	-0.67	CRTX_S_KO_1:-0.60; CRTX_S_KO_2:-1.04; CRTX_S_KO_3:-0.36
+cortex_S	gene_log2FC	Kcnc2	-0.193	CRTX_S_KO_1:-0.02; CRTX_S_KO_2:-0.59; CRTX_S_KO_3:0.03
+cortex_S	gene_log2FC	Grin2a	-0.107	CRTX_S_KO_1:-0.20; CRTX_S_KO_2:-0.30; CRTX_S_KO_3:0.19
+cortex_S	gene_log2FC	Slc12a5	-0.677	CRTX_S_KO_1:-0.64; CRTX_S_KO_2:-1.09; CRTX_S_KO_3:-0.30
+cortex_S	gene_log2FC	Nrgn	0.241	CRTX_S_KO_1:0.19; CRTX_S_KO_2:0.57; CRTX_S_KO_3:-0.05
+cortex_S	gene_log2FC	Camk2a	-0.471	CRTX_S_KO_1:-0.53; CRTX_S_KO_2:-0.64; CRTX_S_KO_3:-0.24
+cortex_S	gene_log2FC	Scn8a	-0.406	CRTX_S_KO_1:-0.27; CRTX_S_KO_2:-0.74; CRTX_S_KO_3:-0.20
+cortex_S	gene_log2FC	Wwox	-1.451	CRTX_S_KO_1:-1.59; CRTX_S_KO_2:-1.91; CRTX_S_KO_3:-0.85
+cortex_S	verdict	primary	R-B falls together: PRE-REGISTERED STOP (no PV-specific lever follows)	n_ctrl=4; n_ko=3; composition_caveat=True; PV_norm=-0.653; LATE_norm=-0.334; INT_norm=-0.054; OL_raw=-1.023; REF_raw=0.050; every_KO_PV_below_lowest_ctrl=False; KO_PV_norm_values=[-0.724, -0.946, -0.291]; ctrl_loo_PV_norm_values=[0.183, 0.15, -0.295, -0.038]
+hippo_S	gene_log2FC	Pvalb	-1.676	S_KO_1:-1.23; S_KO_2:-2.13; S_KO_3:-1.67
+hippo_S	gene_log2FC	Syt2	-0.511	S_KO_1:-0.51; S_KO_2:-1.05; S_KO_3:0.03
+hippo_S	gene_log2FC	Kcnc1	-1.064	S_KO_1:-0.81; S_KO_2:-1.82; S_KO_3:-0.57
+hippo_S	gene_log2FC	Kcnc2	-1.296	S_KO_1:-0.97; S_KO_2:-1.69; S_KO_3:-1.22
+hippo_S	gene_log2FC	Grin2a	-0.859	S_KO_1:-0.47; S_KO_2:-1.12; S_KO_3:-0.98
+hippo_S	gene_log2FC	Slc12a5	-0.571	S_KO_1:-0.32; S_KO_2:-1.01; S_KO_3:-0.38
+hippo_S	gene_log2FC	Nrgn	-0.26	S_KO_1:0.27; S_KO_2:-1.06; S_KO_3:0.01
+hippo_S	gene_log2FC	Camk2a	-0.659	S_KO_1:-0.30; S_KO_2:-1.09; S_KO_3:-0.59
+hippo_S	gene_log2FC	Scn8a	-0.79	S_KO_1:-0.67; S_KO_2:-1.09; S_KO_3:-0.61
+hippo_S	gene_log2FC	Wwox	-1.562	S_KO_1:-1.67; S_KO_2:-1.70; S_KO_3:-1.31
+hippo_S	verdict	descriptive	STOP_S (fewer than three animals per arm): descriptive only, no rule verdict	n_ctrl=2; n_ko=3; composition_caveat=True; PV_norm=-1.094; LATE_norm=-0.586; INT_norm=0.065; OL_raw=-2.455; REF_raw=-0.042; every_KO_PV_below_lowest_ctrl=True; KO_PV_norm_values=[-1.08, -1.35, -0.853]; ctrl_loo_PV_norm_values=[0.132, -0.132]
+hippo_N	gene_log2FC	Pvalb	-0.833	N_KO_1:-0.94; N_KO_2:-0.72
+hippo_N	gene_log2FC	Syt2	-0.002	N_KO_1:-0.09; N_KO_2:0.09
+hippo_N	gene_log2FC	Kcnc1	-0.232	N_KO_1:-0.45; N_KO_2:-0.01
+hippo_N	gene_log2FC	Kcnc2	-0.26	N_KO_1:-0.37; N_KO_2:-0.15
+hippo_N	gene_log2FC	Grin2a	-0.101	N_KO_1:-0.11; N_KO_2:-0.09
+hippo_N	gene_log2FC	Slc12a5	0.252	N_KO_1:-0.05; N_KO_2:0.55
+hippo_N	gene_log2FC	Nrgn	0.539	N_KO_1:0.55; N_KO_2:0.53
+hippo_N	gene_log2FC	Camk2a	-0.022	N_KO_1:-0.13; N_KO_2:0.09
+hippo_N	gene_log2FC	Scn8a	-0.459	N_KO_1:-0.65; N_KO_2:-0.27
+hippo_N	gene_log2FC	Wwox	-1.918	N_KO_1:-2.10; N_KO_2:-1.73
+hippo_N	verdict	descriptive	STOP_S (fewer than three animals per arm): descriptive only, no rule verdict	n_ctrl=2; n_ko=2; composition_caveat=True; PV_norm=-0.488; LATE_norm=-0.114; INT_norm=-0.234; OL_raw=-1.479; REF_raw=0.156; every_KO_PV_below_lowest_ctrl=True; KO_PV_norm_values=[-0.641, -0.335]; ctrl_loo_PV_norm_values=[-0.02, 0.02]
+hippo_null	gene_log2FC	Pvalb	-1.105	KO_1:-1.39; KO_2:-0.82
+hippo_null	gene_log2FC	Syt2	-0.622	KO_1:-0.68; KO_2:-0.57
+hippo_null	gene_log2FC	Kcnc1	-0.606	KO_1:-0.69; KO_2:-0.53
+hippo_null	gene_log2FC	Kcnc2	-0.392	KO_1:-0.37; KO_2:-0.42
+hippo_null	gene_log2FC	Grin2a	-0.513	KO_1:-0.60; KO_2:-0.42
+hippo_null	gene_log2FC	Slc12a5	-0.403	KO_1:-0.40; KO_2:-0.41
+hippo_null	gene_log2FC	Nrgn	-0.248	KO_1:-0.48; KO_2:-0.02
+hippo_null	gene_log2FC	Camk2a	-0.11	KO_1:-0.25; KO_2:0.03
+hippo_null	gene_log2FC	Scn8a	-0.177	KO_1:-0.22; KO_2:-0.13
+hippo_null	gene_log2FC	Wwox	-1.875	KO_1:-1.93; KO_2:-1.82
+hippo_null	verdict	descriptive	STOP_S (fewer than three animals per arm): descriptive only, no rule verdict	n_ctrl=3; n_ko=2; composition_caveat=True; PV_norm=-0.637; LATE_norm=-0.246; INT_norm=-0.068; OL_raw=-2.014; REF_raw=-0.045; every_KO_PV_below_lowest_ctrl=True; KO_PV_norm_values=[-0.688, -0.586]; ctrl_loo_PV_norm_values=[-0.421, 0.309, 0.112]

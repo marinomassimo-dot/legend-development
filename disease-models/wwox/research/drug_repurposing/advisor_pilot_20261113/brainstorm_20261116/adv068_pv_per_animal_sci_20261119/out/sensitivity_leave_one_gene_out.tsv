@@ -1,0 +1,65 @@
+contrast	omitted	verdict_if_n_allowed(STOP_S means fewer than 3 animals per arm)	PV_refnorm	LATE_refnorm	INT_refnorm	every_KO_PV_below_lowest_ctrl
+cortex_S	none (pre-registered sets)	R-B	-0.653	-0.334	-0.054	False
+cortex_S	omit Pvalb from PV_SET	R-B	-0.654	-0.334	-0.054	False
+cortex_S	omit Syt2 from PV_SET	R-B	-0.538	-0.334	-0.054	True
+cortex_S	omit Kcnc1 from PV_SET	R-B	-0.631	-0.334	-0.054	True
+cortex_S	omit Kcnc2 from PV_SET	R-B	-0.79	-0.334	-0.054	True
+cortex_S	omit Grin2a from LATE_NONPV	R-B	-0.653	-0.378	-0.054	False
+cortex_S	omit Slc12a5 from LATE_NONPV	R-D	-0.653	-0.235	-0.054	False
+cortex_S	omit Nrgn from LATE_NONPV	R-B	-0.653	-0.465	-0.054	False
+cortex_S	omit Camk2a from LATE_NONPV	R-B	-0.653	-0.287	-0.054	False
+cortex_S	omit Scn8a from LATE_NONPV	R-B	-0.653	-0.303	-0.054	False
+cortex_S	omit Snap25 from REF_STABLE	R-B	-0.631	-0.311	-0.031	True
+cortex_S	omit Rbfox3 from REF_STABLE	R-B	-0.632	-0.312	-0.032	True
+cortex_S	omit Syt1 from REF_STABLE	R-B	-0.698	-0.379	-0.099	True
+cortex_S	omit Stmn2 from REF_STABLE	R-B	-0.582	-0.262	0.018	False
+cortex_S	omit Tubb3 from REF_STABLE	R-B	-0.648	-0.329	-0.049	False
+cortex_S	omit Map2 from REF_STABLE	R-B	-0.729	-0.409	-0.129	False
+hippo_S	none (pre-registered sets)	STOP_S	-1.094	-0.586	0.065	True
+hippo_S	omit Pvalb from PV_SET	STOP_S	-0.914	-0.586	0.065	True
+hippo_S	omit Syt2 from PV_SET	STOP_S	-1.303	-0.586	0.065	True
+hippo_S	omit Kcnc1 from PV_SET	STOP_S	-1.118	-0.586	0.065	True
+hippo_S	omit Kcnc2 from PV_SET	STOP_S	-1.041	-0.586	0.065	True
+hippo_S	omit Grin2a from LATE_NONPV	STOP_S	-1.094	-0.528	0.065	True
+hippo_S	omit Slc12a5 from LATE_NONPV	STOP_S	-1.094	-0.6	0.065	True
+hippo_S	omit Nrgn from LATE_NONPV	STOP_S	-1.094	-0.677	0.065	True
+hippo_S	omit Camk2a from LATE_NONPV	STOP_S	-1.094	-0.578	0.065	True
+hippo_S	omit Scn8a from LATE_NONPV	STOP_S	-1.094	-0.545	0.065	True
+hippo_S	omit Snap25 from REF_STABLE	STOP_S	-1.126	-0.617	0.033	True
+hippo_S	omit Rbfox3 from REF_STABLE	STOP_S	-1.028	-0.519	0.131	True
+hippo_S	omit Syt1 from REF_STABLE	STOP_S	-1.235	-0.726	-0.076	True
+hippo_S	omit Stmn2 from REF_STABLE	STOP_S	-1.104	-0.596	0.055	True
+hippo_S	omit Tubb3 from REF_STABLE	STOP_S	-1.105	-0.597	0.054	True
+hippo_S	omit Map2 from REF_STABLE	STOP_S	-0.967	-0.458	0.192	True
+hippo_N	none (pre-registered sets)	STOP_S	-0.488	-0.114	-0.234	True
+hippo_N	omit Pvalb from PV_SET	STOP_S	-0.321	-0.114	-0.234	True
+hippo_N	omit Syt2 from PV_SET	STOP_S	-0.598	-0.114	-0.234	True
+hippo_N	omit Kcnc1 from PV_SET	STOP_S	-0.521	-0.114	-0.234	True
+hippo_N	omit Kcnc2 from PV_SET	STOP_S	-0.512	-0.114	-0.234	True
+hippo_N	omit Grin2a from LATE_NONPV	STOP_S	-0.488	-0.079	-0.234	True
+hippo_N	omit Slc12a5 from LATE_NONPV	STOP_S	-0.488	-0.167	-0.234	True
+hippo_N	omit Nrgn from LATE_NONPV	STOP_S	-0.488	-0.239	-0.234	True
+hippo_N	omit Camk2a from LATE_NONPV	STOP_S	-0.488	-0.098	-0.234	True
+hippo_N	omit Scn8a from LATE_NONPV	STOP_S	-0.488	0.011	-0.234	True
+hippo_N	omit Snap25 from REF_STABLE	STOP_S	-0.466	-0.092	-0.212	True
+hippo_N	omit Rbfox3 from REF_STABLE	STOP_S	-0.35	0.023	-0.096	True
+hippo_N	omit Syt1 from REF_STABLE	STOP_S	-0.485	-0.112	-0.231	True
+hippo_N	omit Stmn2 from REF_STABLE	STOP_S	-0.56	-0.187	-0.306	True
+hippo_N	omit Tubb3 from REF_STABLE	STOP_S	-0.692	-0.318	-0.437	True
+hippo_N	omit Map2 from REF_STABLE	STOP_S	-0.374	-0.001	-0.12	True
+hippo_null	none (pre-registered sets)	STOP_S	-0.637	-0.246	-0.068	True
+hippo_null	omit Pvalb from PV_SET	STOP_S	-0.496	-0.246	-0.068	True
+hippo_null	omit Syt2 from PV_SET	STOP_S	-0.656	-0.246	-0.068	True
+hippo_null	omit Kcnc1 from PV_SET	STOP_S	-0.662	-0.246	-0.068	True
+hippo_null	omit Kcnc2 from PV_SET	STOP_S	-0.733	-0.246	-0.068	True
+hippo_null	omit Grin2a from LATE_NONPV	STOP_S	-0.637	-0.19	-0.068	True
+hippo_null	omit Slc12a5 from LATE_NONPV	STOP_S	-0.637	-0.217	-0.068	True
+hippo_null	omit Nrgn from LATE_NONPV	STOP_S	-0.637	-0.256	-0.068	True
+hippo_null	omit Camk2a from LATE_NONPV	STOP_S	-0.637	-0.291	-0.068	True
+hippo_null	omit Scn8a from LATE_NONPV	STOP_S	-0.637	-0.274	-0.068	True
+hippo_null	omit Snap25 from REF_STABLE	STOP_S	-0.67	-0.279	-0.102	True
+hippo_null	omit Rbfox3 from REF_STABLE	STOP_S	-0.606	-0.215	-0.038	True
+hippo_null	omit Syt1 from REF_STABLE	STOP_S	-0.694	-0.303	-0.126	True
+hippo_null	omit Stmn2 from REF_STABLE	STOP_S	-0.597	-0.206	-0.029	True
+hippo_null	omit Tubb3 from REF_STABLE	STOP_S	-0.616	-0.225	-0.047	True
+hippo_null	omit Map2 from REF_STABLE	STOP_S	-0.636	-0.245	-0.068	True

@@ -1,0 +1,9 @@
+exact label permutation, cortex S (3 of 7 animals labelled KO, 35 labelings); observed KO-minus-rest value, labelings at least as low (including the observed one), total
+PV_SET	-0.653	1	35
+LATE_NONPV	-0.334	2	35
+INT_NONPV	-0.054	14	35
+
+per KO animal: Wwox log2 change vs control mean, PV_SET refnorm (minus control mean), LATE_NONPV refnorm (minus control mean); label-free centring
+CRTX_S_KO_1	-1.59	-0.724	-0.507
+CRTX_S_KO_2	-1.91	-0.946	-0.302
+CRTX_S_KO_3	-0.85	-0.291	-0.192
