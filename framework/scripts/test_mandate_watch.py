@@ -731,6 +731,8 @@ class MemoryContainment(unittest.TestCase):
             (d / "cgroup").write_text(f"0::{cg}\n")
             (d / "status").write_text(f"Name:\t{comm}\nVmRSS:\t{rss} kB\n")
             (d / "comm").write_text(comm + "\n")
+            if pid != 12:                                              # pid 12 has no smaps_rollup: PSS falls back to RSS, never to zero
+                (d / "smaps_rollup").write_text(f"Rss: {rss} kB\nPss: {rss // 2} kB\n")
         (proc / "self").mkdir()                                     # non-numeric entries are ignored
         return proc
 
@@ -741,6 +743,7 @@ class MemoryContainment(unittest.TestCase):
         self.assertEqual((out["mem_total_mb"], out["mem_available_mb"], out["swap_total_mb"]), (15625, 7812, 0))
         self.assertEqual(out["pressure"]["some"]["avg10"], "1.50")
         self.assertEqual(out["load1"], "2.50")
+        self.assertEqual(out["groups"][0]["pss_mb"], 1)                               # (2048 + 1024) / 2 kB, shared pages split
         top = out["groups"][0]
         self.assertEqual((top["cgroup"], top["rss_mb"], top["procs"], top["largest"]["comm"]), ("/system.slice/a.service", 3, 2, "big"))
         self.assertEqual([s["cgroup"] for s in out["sessions"]], ["b.scope", "?"])   # a vanished pid is "?", not an error

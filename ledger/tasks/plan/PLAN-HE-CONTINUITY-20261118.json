@@ -124,17 +124,21 @@
     },
     {
      "step": "Night B: verify the advisor passage by observation of the watcher (one host, aliases advisor/orchestrator/SCI, record path, history, one recall) without provoking anything",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) B",
-     "accepted_at": "2026-11-18T23:32:13Z"
+     "accepted_at": "2026-11-18T23:32:13Z",
+     "evidence": "observed: route advisor/ADV -> e6526331, orchestrator/IT -> 4325d70d, SCI -> 9400b253, HE -> 29e50812; watcher runs 22:37Z and 23:37Z classified ORCH-ADV-FOLLOWTHROUGH-20261114 once (RUNNING) at ledger/tasks/advisor; 0 DUPLICATE_HOST events ever; ACTOR_HISTORY kept",
+     "updated_at": "2026-11-18T23:50:52Z"
     },
     {
      "step": "Night C: dashboard FR/ES/DE translation defect: verify the audit chain /tmp/legend-dashboard-audit-20261118/RAPPORTO.md on current state, fix identity/order of transformations, regression on rendered content, hand to IT",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) C",
-     "accepted_at": "2026-11-18T23:32:13Z"
+     "accepted_at": "2026-11-18T23:32:13Z",
+     "evidence": "fix landed 9ddf02ae8: FR/ES/DE orig markers 22 -> 0 on rendered pages, 3 regression tests, audit-shareable PASS; IT regenerates views",
+     "updated_at": "2026-11-18T23:50:52Z"
     },
     {
      "step": "Night D: resources with the new 4 GiB swap (PSS not RSS), ordinary cleanup of clean integrated worktrees and recreatable temporaries, measured recovery",
@@ -145,10 +149,12 @@
     },
     {
      "step": "Night E: generation support only where a real gap is shown: ask IT and SCI which step limited INV-04/INV-09/K2 (retrieval, selection, context exposure, interpretation, consumption, evaluation)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) E",
-     "accepted_at": "2026-11-18T23:32:13Z"
+     "accepted_at": "2026-11-18T23:32:13Z",
+     "evidence": "IT answered: limiting step is evaluation (no-material condition), no generator step demonstrated: keep current behaviour; SCI asked",
+     "updated_at": "2026-11-18T23:50:52Z"
     },
     {
      "step": "Night F: delivery to IT, SCI, ADV; follow the first real use of any important change",

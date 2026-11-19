@@ -569,7 +569,7 @@ def _kv_kb(path: Path, keys: tuple[str, ...]) -> dict:
 def resource_state(proc: str = "/proc", top: int = 8, jobs_base: Path | None = None, sessions: list[dict] | None = None) -> dict:
     """Observed memory facts for coordinating heavy work. READ-ONLY and threshold-free: it states
     what is loaded and who holds it, and the caller decides. RSS counts a shared page once per
-    process, so a group's figure is an upper bound. `groups` are cgroups (the unit that an OOM
+    process (a group's RSS is an upper bound); `pss_mb` splits it and is the figure to size a limit on (measured 2026-11-18: desktop service 4.4 GB RSS, 3.3 GB PSS). `groups` are cgroups (the unit that an OOM
     event would stop or kill together), not processes: that is the blast radius."""
     root = Path(proc)
     mem = _kv_kb(root / "meminfo", ("MemTotal", "MemAvailable", "SwapTotal", "SwapFree"))
@@ -590,12 +590,14 @@ def resource_state(proc: str = "/proc", top: int = 8, jobs_base: Path | None = N
             comm = (d / "comm").read_text().strip()
         except (OSError, IndexError):
             continue
-        g = groups.setdefault(cg, {"cgroup": cg, "rss_mb": 0, "procs": 0, "largest": ("", 0)})
+        pss = _kv_kb(d / "smaps_rollup", ("Pss",)).get("Pss")      # proportional: a shared page is split among its users (absent for another user's process)
+        g = groups.setdefault(cg, {"cgroup": cg, "rss_mb": 0, "pss_mb": 0, "procs": 0, "largest": ("", 0)})
         g["rss_mb"] += rss // 1024
+        g["pss_mb"] += (pss if pss is not None else rss) // 1024
         g["procs"] += 1
         if rss // 1024 > g["largest"][1]:
             g["largest"] = (comm, rss // 1024)
-    ranked = sorted(groups.values(), key=lambda g: -g["rss_mb"])[:top]
+    ranked = sorted(groups.values(), key=lambda g: -g["pss_mb"])[:top]
     for g in ranked:
         g["largest"] = {"comm": g["largest"][0], "rss_mb": g["largest"][1]}
     alive = []
