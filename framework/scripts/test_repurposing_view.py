@@ -1510,6 +1510,18 @@ class RealViewports(unittest.TestCase):
                         self.skipTest("viewport emulation unavailable: " + str(e)[:120])
                     self.assertLess(b, h, f"{lang} {w}x{h}: the start-here row must end, and the general note begin, above the fold")
 
+    def test_no_edition_overflows_the_a4_print_width_in_any_scenario(self):
+        # 2026-11-19, real Chromium on the five served editions: German print_first_screen was 19 px over A4 (794 px) because the kind chips of the compound lists could not wrap
+        if not rv.find_chromium():
+            self.skipTest("no Chromium binary: print layout was NOT measured")
+        for lang in ("en", "it", "fr", "es", "de"):
+            with tempfile.TemporaryDirectory() as td:
+                f = Path(td) / "v.html"
+                f.write_text(rv.build(DR, "shareable", lang), encoding="utf-8")
+                res = rv.measure_viewports(f, None, [360])
+            self.assertTrue(res, f"{lang}: no measurement")
+            self.assertEqual([(m["scenario"], m["scrollWidth"]) for m in res if str(m["scenario"]).startswith("print") and m["overflow"]], [], lang)
+
     def test_the_kind_filter_hides_rows_across_the_queue_and_a_stable_id_link_reopens_the_row(self):
         """IT35 P9, in the browser: the kind-of-row filter hides rows in every list; #INV-nn then shows a hidden row again; the lists stay complete without a click."""
         if not rv.find_chromium():
