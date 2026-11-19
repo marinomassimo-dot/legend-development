@@ -1,0 +1,138 @@
+{
+ "identity": {
+  "query": "memantine",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL807",
+    "record_name": "MEMANTINE",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL807",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL807",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:d87959cfb914",
+    "record_name": "Memantine Hydrochloride",
+    "match_kind": "SYNONYM_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1699",
+    "record_name": "MEMANTINE HYDROCHLORIDE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL807",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1699",
+      "basis": "record"
+     }
+    ]
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "GRIN1",
+   "GRIN2A",
+   "GRIN2B",
+   "GRIN2C",
+   "GRIN2D"
+  ],
+  "per_gene": {
+   "GRIN1": {
+    "level": "MEASURED_ACTIVITY_HUMAN",
+    "n_rows": 36,
+    "rows": [
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL807 Ki Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL807 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL807 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus"
+    ]
+   },
+   "GRIN2A": {
+    "level": "MEASURED_ACTIVITY_HUMAN",
+    "n_rows": 24,
+    "rows": [
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL807 Ki Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL807 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus"
+    ]
+   },
+   "GRIN2B": {
+    "level": "MEASURED_ACTIVITY_HUMAN",
+    "n_rows": 23,
+    "rows": [
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL807 Ki Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL807 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL807 IC50 Homo sapiens"
+    ]
+   },
+   "GRIN2C": {
+    "level": "MEASURED_ACTIVITY_HUMAN",
+    "n_rows": 15,
+    "rows": [
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 Ki Rattus norvegicus",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL807 Ki Homo sapiens",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus"
+    ]
+   },
+   "GRIN2D": {
+    "level": "MEASURED_ACTIVITY_HUMAN",
+    "n_rows": 14,
+    "rows": [
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL807 Ki Homo sapiens",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL807 IC50 Rattus norvegicus"
+    ]
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL807",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 84
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "ACHE": 6,
+   "BCHE": 4,
+   "SLC22A1": 1,
+   "MAOA": 1,
+   "MAOB": 1,
+   "ABCB11": 1,
+   "CHRNA3": 1,
+   "CHRNB4": 1
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}

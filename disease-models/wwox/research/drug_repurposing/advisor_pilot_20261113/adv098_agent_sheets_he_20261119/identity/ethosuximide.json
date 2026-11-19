@@ -1,0 +1,93 @@
+{
+ "identity": {
+  "query": "ethosuximide",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL696",
+    "record_name": "ETHOSUXIMIDE",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL696",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL696",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:6998a1a2d947",
+    "record_name": "Ethosuximide",
+    "match_kind": "NAME_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "CACNA1G",
+   "CACNA1H",
+   "CACNA1I"
+  ],
+  "per_gene": {
+   "CACNA1G": {
+    "level": "CURATED_MECHANISM",
+    "n_rows": 5,
+    "rows": [
+     "CURATED_MECHANISM: CAT:CHEMBL696",
+     "SOURCE_INTERACTION: CAT:DGIDB:6998a1a2d947",
+     "SOURCE_INTERACTION: CAT:DGIDB:6998a1a2d947",
+     "SOURCE_INTERACTION: CAT:DGIDB:6998a1a2d947",
+     "SOURCE_INTERACTION: CAT:DGIDB:6998a1a2d947"
+    ]
+   },
+   "CACNA1H": {
+    "level": "CURATED_MECHANISM",
+    "n_rows": 3,
+    "rows": [
+     "CURATED_MECHANISM: CAT:CHEMBL696",
+     "SOURCE_INTERACTION: CAT:DGIDB:6998a1a2d947",
+     "SOURCE_INTERACTION: CAT:DGIDB:6998a1a2d947"
+    ]
+   },
+   "CACNA1I": {
+    "level": "CURATED_MECHANISM",
+    "n_rows": 4,
+    "rows": [
+     "CURATED_MECHANISM: CAT:CHEMBL696",
+     "SOURCE_INTERACTION: CAT:DGIDB:6998a1a2d947",
+     "SOURCE_INTERACTION: CAT:DGIDB:6998a1a2d947",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL696 IC50 Homo sapiens"
+    ]
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL696",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 292
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "CYP3A4": 3,
+   "ACHE": 2,
+   "ADORA1": 2,
+   "ADORA2A": 2,
+   "ADORA3": 2,
+   "ADRA1A": 2,
+   "ADRA1B": 2,
+   "ADRA1D": 2
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}

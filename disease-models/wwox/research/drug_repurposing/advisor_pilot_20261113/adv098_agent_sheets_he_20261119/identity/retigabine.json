@@ -1,0 +1,98 @@
+{
+ "identity": {
+  "query": "retigabine",
+  "identity_state": "SYNONYM_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL41355",
+    "record_name": "EZOGABINE",
+    "match_kind": "SYNONYM_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL41355",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL41355",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:0986d2506c1a",
+    "record_name": "Ezogabine",
+    "match_kind": "SYNONYM_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:45c82cc94b86",
+    "record_name": "Retigabine Derivative 10G",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL4588394",
+      "basis": "gtopdb_ligand_reconciliation",
+      "in_catalogue": "no",
+      "decision": "out_of_selection",
+      "gtopdb_inchikey": "FWQHRZXEQNUCSY-UHFFFAOYSA-N"
+     }
+    ]
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "KCNQ2",
+   "KCNQ3"
+  ],
+  "per_gene": {
+   "KCNQ2": {
+    "level": "CURATED_MECHANISM",
+    "n_rows": 23,
+    "rows": [
+     "CURATED_MECHANISM: CAT:CHEMBL41355",
+     "SOURCE_INTERACTION: CAT:DGIDB:0986d2506c1a",
+     "SOURCE_INTERACTION: CAT:DGIDB:0986d2506c1a",
+     "SOURCE_INTERACTION: CAT:DGIDB:0986d2506c1a",
+     "SOURCE_INTERACTION: CAT:DGIDB:0986d2506c1a",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL41355 EC50 Mus musculus"
+    ]
+   },
+   "KCNQ3": {
+    "level": "CURATED_MECHANISM",
+    "n_rows": 13,
+    "rows": [
+     "CURATED_MECHANISM: CAT:CHEMBL41355",
+     "SOURCE_INTERACTION: CAT:DGIDB:0986d2506c1a",
+     "SOURCE_INTERACTION: CAT:DGIDB:0986d2506c1a",
+     "SOURCE_INTERACTION: CAT:DGIDB:0986d2506c1a",
+     "SOURCE_INTERACTION: CAT:DGIDB:0986d2506c1a",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL41355 EC50 Homo sapiens"
+    ]
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL41355",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 32
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "KCNQ5": 5,
+   "KCNQ4": 5,
+   "KCNQ1": 2,
+   "CISD1": 2
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}

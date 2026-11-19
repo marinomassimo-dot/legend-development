@@ -1,0 +1,180 @@
+{
+ "identity": {
+  "query": "ketamine",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL742",
+    "record_name": "KETAMINE",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL742",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL742",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL395091",
+    "record_name": "ESKETAMINE",
+    "match_kind": "SYNONYM_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL395091",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL395091",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:80196c332448",
+    "record_name": "Ketamine Hydrochloride",
+    "match_kind": "SYNONYM_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1714",
+    "record_name": "KETAMINE HYDROCHLORIDE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL742",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1714",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2364609",
+    "record_name": "ESKETAMINE HYDROCHLORIDE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL395091",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2364609",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL4650353",
+    "record_name": "HYDROXYNORKETAMINE, (2R,6R)-, HYDROCHLORIDE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL4650718",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL4650353",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL4650718",
+    "record_name": "HYDROXYNORKETAMINE, (2R,6R)",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL4650718",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL4650718",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:80f00139fe06",
+    "record_name": "S-Deschloroketamine",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:9c85048f5868",
+    "record_name": "Esketamine",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "GRIN1",
+   "GRIN2A",
+   "GRIN2B"
+  ],
+  "per_gene": {
+   "GRIN1": {
+    "level": "MEASURED_ACTIVITY_HUMAN",
+    "n_rows": 40,
+    "rows": [
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL742 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL742 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL742 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL742 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL742 Ki Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL742 IC50 Homo sapiens"
+    ]
+   },
+   "GRIN2A": {
+    "level": "MEASURED_ACTIVITY_HUMAN",
+    "n_rows": 32,
+    "rows": [
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL742 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL742 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL742 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL742 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL742 Ki Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL742 IC50 Homo sapiens"
+    ]
+   },
+   "GRIN2B": {
+    "level": "MEASURED_ACTIVITY_HUMAN",
+    "n_rows": 29,
+    "rows": [
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL742 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL742 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL742 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL742 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL742 Ki Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL742 IC50 Homo sapiens"
+    ]
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL742",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 342
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "SLC6A4": 3,
+   "ACHE": 3,
+   "CHRNA1": 3,
+   "SCN4A": 2,
+   "ADORA1": 2,
+   "ADORA2A": 2,
+   "ADORA3": 2,
+   "ADRA1A": 2
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
