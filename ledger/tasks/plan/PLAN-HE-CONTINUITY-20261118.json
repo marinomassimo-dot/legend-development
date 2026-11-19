@@ -109,18 +109,21 @@
     },
     {
      "step": "Targeted rerun of test_repurposing_view and test_public_release_gate_cache on the tip after IT's view regeneration (no second full battery); report to IT and ADV",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
      "source": "HE proposal to IT and ADV 2026-11-18 after the battery FAIL",
      "accepted_at": "2026-11-18T23:23:08Z",
-     "updated_at": "2026-11-18T23:43:22Z"
+     "updated_at": "2026-11-19T00:19:39Z",
+     "evidence": "run 20261118-234318-cbad7a9a on d69f4de0c: test_repurposing_view 225 OK (1576 s), test_public_release_gate_cache 12 OK, 1 skipped (full-tree comparison needs GATE_CACHE_FULL_TREE=1); targeted, not a full battery; FAIL of 6320348db5 stays"
     },
     {
      "step": "Night A: reconcile the battery on 6320348db5 (verdict, SHA, failures, skips, limits, what may proceed), real technical dependency of shared waits on a clone battery, targeted rerun after IT's regeneration",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) A",
-     "accepted_at": "2026-11-18T23:32:13Z"
+     "accepted_at": "2026-11-18T23:32:13Z",
+     "evidence": "battery reconciled and communicated; clone battery shares only files/ (hard-linked read) and CPU/RAM, README 13 row; targeted rerun PASS on d69f4de0c",
+     "updated_at": "2026-11-19T00:19:39Z"
     },
     {
      "step": "Night B: verify the advisor passage by observation of the watcher (one host, aliases advisor/orchestrator/SCI, record path, history, one recall) without provoking anything",
@@ -142,10 +145,12 @@
     },
     {
      "step": "Night D: resources with the new 4 GiB swap (PSS not RSS), ordinary cleanup of clean integrated worktrees and recreatable temporaries, measured recovery",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) D",
-     "accepted_at": "2026-11-18T23:32:13Z"
+     "accepted_at": "2026-11-18T23:32:13Z",
+     "evidence": "PSS in resources view (desktop 3.3 GB PSS vs 4.4 GB RSS), swap 4 GiB active (2 GB used), he86 removed 496 MB measured; other worktrees kept (adv*: ADV's, p010c: baseline of IN_PROGRESS record, p022*: unique logs/unmerged, adv_verify_hewd and it56_iso: others' environments)",
+     "updated_at": "2026-11-19T00:19:40Z"
     },
     {
      "step": "Night E: generation support only where a real gap is shown: ask IT and SCI which step limited INV-04/INV-09/K2 (retrieval, selection, context exposure, interpretation, consumption, evaluation)",
