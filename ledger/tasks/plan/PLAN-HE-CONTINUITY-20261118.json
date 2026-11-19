@@ -232,10 +232,11 @@
     },
     {
      "step": "EMPATHY Phase 1: technical reconnaissance of the operator-intent learning path (surfaces map, real-case traces, recoverability probes, failure analysis, options) and a handoff for the Codex Phase 2 session, in one design record; no implementation of EMPATHY itself",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
      "source": "operator mandate 2026-11-19 EMPATHY Phase 1 (ACTOR_ID plan)",
-     "accepted_at": "2026-11-19T10:51:48Z"
+     "accepted_at": "2026-11-19T10:51:48Z",
+     "updated_at": "2026-11-19T11:17:34Z"
     }
    ]
   }

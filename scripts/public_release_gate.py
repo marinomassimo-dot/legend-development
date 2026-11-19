@@ -1661,7 +1661,7 @@ def main() -> int:
               "`python3 framework/scripts/candidate_tree_freshness.py --paths <the files you changed>`.")
         if any(str(rel).endswith("fulltext_read_receipts.jsonl") for rel in (ONLY_PATHS or ())):
             # 2026-11-19 (ADV, twice in a day): a receipts landing leaves coverage_report.md and reading_state.md behind the ledger, and CI fails test_coverage_report and test_reading_state.
-            print("REMINDER (receipts ledger in this change): coverage_report.md and reading_state.md are derived from it; regenerate both on the tip before the queue "
+            print("REMINDER (receipts ledger in this change): coverage_report.md, reading_state.md and batch_queue.md are derived from it; regenerate both on the tip before the queue "
                   "(the freshness command above prints the exact lines), or land with `safe_push.py ... --serialize --regenerate-derived`, which regenerates what is stale under the landing lock; then run `python3 framework/scripts/test_coverage_report.py` and `python3 framework/scripts/test_reading_state.py`.")
     for finding in findings:
         print(
