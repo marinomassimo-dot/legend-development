@@ -54,6 +54,8 @@ context savings do not come from replacing a report being compared with its summ
 Reuse a verified artefact rather than rebuilding it, and verify a narrow correction narrowly
 (the changed rows), unless a wider effect is argued in the record.
 
+**Measured 2026-11-19 (SCI, ADV-067 case E; `session_model_census.py` on the main transcript with `--since/--until` around the commit, and on the delegate's own transcript).** The simple path run in the long-context main session took 5 turns and 5,401 output tokens and cost 3,824,984 cache-read tokens, because the session's context of about 762,000 tokens is re-read on every turn; the fresh structured-path producer (`legend-delegate`, sonnet, medium, read back on all 28 turns, born with 21,223 tokens) took 28 turns, 37,502 output tokens and 1,871,922 cache-read. So a small reading task is cheaper in cache-read terms in a fresh delegate than in a long-context coordinator, and dearer in output terms. One case, two paths that were not the same task shape; it moves the default for small reads, not the rule that a delegate is stated per delegation (section 1).
+
 ## 5 · Small packages to the end
 
 One package at a time: production, verification, correction, delivery, before the queue is widened. Near
