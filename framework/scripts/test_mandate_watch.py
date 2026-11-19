@@ -677,6 +677,20 @@ class Continuity20261118(unittest.TestCase):
         self.assertIn("before day 6", text)
         self.assertEqual(mw.recall_clause(None), "")                                  # a mandate without a recall field gets no recall sentence
 
+    def test_revival_gets_the_current_repo_guidance_not_the_previous_chat(self):
+        e = self.env(record())
+        path = e.root / mw.mc.GUIDANCE_PATH
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("<!-- OPERATOR_ROADMAP:BEGIN -->\n" + mw.mc.GUIDANCE_BEGIN
+                        + "\nClosed increment: select the next useful question. Why: research continuity.\n"
+                        + mw.mc.GUIDANCE_END + "\n<!-- OPERATOR_ROADMAP:END -->\nSuperseded: wait for the operator.")
+        calls = []
+        runner = lambda c, cwd=None: (calls.append(c), SimpleNamespace(returncode=0, stdout="ok", stderr=""))[1]
+        e.check([], deliver="resume", runner=runner)
+        self.assertEqual(len(calls), 1)
+        self.assertIn("Why: research continuity", calls[0][-1])
+        self.assertNotIn("Superseded: wait", calls[0][-1])
+
     def test_a_session_that_died_again_after_its_revival_is_revived_again_but_not_while_it_may_still_be_starting(self):
         e = self.env(record())
         calls = []

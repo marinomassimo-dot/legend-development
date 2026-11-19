@@ -28,6 +28,12 @@ Paths are relative to the repo root.
    including completion of the authorised objective and partial-delivery semantics. Reconcile
    an existing mandate with `mandate_continuity.py status --task <TASK_ID>`; a bounded delegate
    follows its dispatch scope rather than inventing a second parent mandate.
+   Persistent actors also run `python3 framework/scripts/mandate_continuity.py guidance`
+   for the short current operator-intent section. Apply the pertinent situation and rationale
+   under [EMPATHY](../../../framework/protocols/cross_session_transport.md#empathy--learning-operator-intent);
+   retrieve it again at a relevant choice after compaction. No old chat or private memory index
+   is required, and a temporary task is not a standing preference. A bounded delegate uses
+   its dispatch's relevant criterion and original pointer, not a second global mandate.
    Persistent participants also follow [MEETING](../../../framework/protocols/cross_session_transport.md#13--meeting):
    contribute a priority-ordered delta when asked, or request alignment after a material
    cross-role event through the existing message channel. Keep current work running.

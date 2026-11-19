@@ -16,6 +16,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -23,6 +24,54 @@ sys.path.insert(0, str(HERE))
 import mandate_continuity as mc  # noqa: E402
 
 ROOT = HERE.parents[1]
+
+
+class OperatorGuidance(unittest.TestCase):
+    """A replacement session gets the current reason, not the old chat or a task's priority."""
+
+    def seat(self, root: Path, current: str, history: str = "") -> Path:
+        path = root / mc.GUIDANCE_PATH
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("<!-- OPERATOR_ROADMAP:BEGIN -->\n" + mc.GUIDANCE_BEGIN + "\n" + current
+                        + "\n" + mc.GUIDANCE_END + "\n<!-- OPERATOR_ROADMAP:END -->\n" + history, encoding="utf-8")
+        return path
+
+    def test_replacement_reads_current_reason_without_private_memory_or_history(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.seat(root, "Closed increment: compare other branches. Why: useful continuity.",
+                      mc.GUIDANCE_BEGIN + "\nSuperseded: wait for next meeting.\n" + mc.GUIDANCE_END)
+            rec = root / "ledger/tasks/plan/one.json"
+            rec.parent.mkdir(parents=True)
+            rec.write_text(json.dumps({"step": "Examine compound X today"}))
+            result = subprocess.run([sys.executable, str(HERE / "mandate_continuity.py"), "guidance", "--root", str(root), "--json"],
+                                    cwd=directory, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            guidance = json.loads(result.stdout)
+            self.assertTrue(guidance["available"])
+            self.assertIn("Why: useful continuity", guidance["text"])
+            self.assertNotIn("Superseded", guidance["text"])
+            self.assertNotIn("compound X", guidance["text"])
+
+    def test_changed_guidance_is_read_again_without_a_cache_or_rebind(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.seat(root, "First criterion")
+            self.assertEqual(mc.operator_guidance(root)["text"], "First criterion")
+            self.seat(root, "Revised criterion, documented source and reason")
+            self.assertEqual(mc.operator_guidance(root)["text"], "Revised criterion, documented source and reason")
+
+    def test_missing_or_ambiguous_guidance_reports_uncertainty_without_a_gate(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.assertFalse(mc.operator_guidance(root)["available"])
+            path = self.seat(root, "old " + mc.GUIDANCE_BEGIN + " duplicate")
+            self.assertFalse(mc.operator_guidance(root)["available"])
+            path.write_text("<!-- OPERATOR_ROADMAP:BEGIN -->\n" + mc.GUIDANCE_END + mc.GUIDANCE_BEGIN
+                            + "\n<!-- OPERATOR_ROADMAP:END -->")
+            self.assertFalse(mc.operator_guidance(root)["available"])
+            with mock.patch("builtins.print"):
+                self.assertEqual(mc.main(["guidance", "--root", str(root)]), 0)
 
 
 def queue(steps_by_obj: dict[str, list], state: str | None = None) -> dict:

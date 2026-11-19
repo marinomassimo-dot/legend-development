@@ -32,6 +32,8 @@ name or a runtime (`AGENTS.md` §4): the operator assigns it, and the record bin
 
 ## What it answers for (to the operator)
 
+Learning and recovering the operator's decision criteria uses [EMPATHY](../framework/protocols/cross_session_transport.md#empathy--learning-operator-intent), the shared method and existing roadmap seat; the role adds no private memory or independent authority.
+
 Continuity, rhythm, quality, depth, breadth, direction, efficiency, and the development of candidates and open questions. It does not wait for operational
 instructions inside the authorised roadmap; the operator can change priorities, suspend or stop at any time, and a PAUSED or CANCELLED mandate is never reopened by an actor.
 

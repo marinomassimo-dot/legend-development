@@ -746,7 +746,7 @@ def recall_clause(recall) -> str:
             f"created and renew it (CronDelete, then CronCreate) before day {recall.get('renew_days', 6)}.")
 
 
-def request_text(task: str, status: dict, record_path: str = "", recall=None) -> str:
+def request_text(task: str, status: dict, record_path: str = "", recall=None, *, root: Path | None = None) -> str:
     where = f" The record is {record_path}." if record_path else ""
     return (f"Mandate {task} is open with authorised work remaining ({status.get('message', '')[:200]}).{where} "
             "Hourly watch: the session had stopped. Resume from the checkpoint in the mandate record, "
@@ -754,7 +754,8 @@ def request_text(task: str, status: dict, record_path: str = "", recall=None) ->
             "the mandate. Before starting any job check `mandate_watch.py job list --task <id>` and the worktree list: "
             "never start a second execution of work that is already running or a second integrator. "
             "If only closure evidence is missing, supply the verified pointers; do not repeat completed science. "
-            "Do not ask the operator for anything the mandate already authorises." + recall_clause(recall))
+            "Do not ask the operator for anything the mandate already authorises." + recall_clause(recall)
+            + "\n\n" + mc.guidance_text(root if root is not None else ROOT))
 
 
 # ---------------------------------------------------------------- command
@@ -823,7 +824,7 @@ def check(task: str, *, root: Path = ROOT, deliver: str = "none", quiet_minutes:
         else:
             chosen = None if has_saved_options(sid) else last_session_name(transcript)
             cmd = [claude_bin(), "--bg", *resume_args, *(["--name", chosen] if chosen else []), "--resume", sid,
-                   request_text(task, status, str(root / rec_rel) if rec_rel else "", rec.get("RECALL") if isinstance(rec, dict) else None)]
+                   request_text(task, status, str(root / rec_rel) if rec_rel else "", rec.get("RECALL") if isinstance(rec, dict) else None, root=root)]
             try:
                 cwd = transcript_cwd(transcript)
                 res = (runner or (lambda c, cwd=None: subprocess.run(c, capture_output=True, text=True, timeout=120, cwd=cwd)))(cmd, cwd=cwd)

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Reconcile an Orchestrator mandate from its durable record, and keep the session on it.
 
-Four commands, one source of truth — the `AUTHORISED_QUEUE*` block of an Annex A task record
+Mandate commands share one source of truth — the `AUTHORISED_QUEUE*` block of an Annex A task record
 under `ledger/tasks/<actor>/<TASK_ID>.json` (schema: Annex A.1c):
 
     python3 framework/scripts/mandate_continuity.py status --task ALDAZ-EXEC-20260913
+    python3 framework/scripts/mandate_continuity.py guidance       # current operator intent, read-only
     python3 framework/scripts/mandate_continuity.py normalise --task <TASK_ID> [--write]
     python3 framework/scripts/mandate_continuity.py stop-hook      # Claude Code Stop hook
     python3 framework/scripts/mandate_continuity.py events [--last N]   # what the hook did
@@ -78,6 +79,41 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+GUIDANCE_PATH = "disease-models/wwox/research/drug_repurposing/roadmap_current.md"
+GUIDANCE_BEGIN = "<!-- OPERATOR_GUIDANCE:BEGIN -->"
+GUIDANCE_END = "<!-- OPERATOR_GUIDANCE:END -->"
+
+
+def operator_guidance(root: Path) -> dict:
+    """Read the short current seat, never chat history or private auto-memory.
+
+    EMPATHY's selection and interpretation belong to the actor (transport section 12).
+    This reader neither learns by keyword nor writes instructions or scientific state.
+    Absence is reported, not a new gate and not evidence that no guidance applies.
+    """
+    out = {"source": GUIDANCE_PATH + "#standing-guidance-by-situation", "available": False}
+    try:
+        text = (root / GUIDANCE_PATH).read_text(encoding="utf-8")
+    except (OSError, UnicodeError):
+        return {**out, "note": "Current guidance unavailable here; consult the operator roadmap and canonical rules. Absence is not permission or a reason to stop."}
+    begin, end = "<!-- OPERATOR_ROADMAP:BEGIN -->", "<!-- OPERATOR_ROADMAP:END -->"
+    if text.count(begin) != 1 or text.count(end) != 1 or text.index(end) < text.index(begin):
+        return {**out, "note": "Operator roadmap markers missing or ambiguous; read the source and canonical rules."}
+    text = text.split(begin, 1)[1].split(end, 1)[0]
+    if text.count(GUIDANCE_BEGIN) != 1 or text.count(GUIDANCE_END) != 1:
+        return {**out, "note": "Current guidance markers missing or ambiguous; read the source. Do not reconstruct intent from private memory."}
+    start, end = text.index(GUIDANCE_BEGIN) + len(GUIDANCE_BEGIN), text.index(GUIDANCE_END)
+    if end < start or not text[start:end].strip():
+        return {**out, "note": "Current guidance section is empty or reversed; read the source and canonical rules."}
+    return {**out, "available": True, "text": text[start:end].strip()}
+
+
+def guidance_text(root: Path) -> str:
+    guidance = operator_guidance(root)
+    return ("EMPATHY — current operator intent (read-only; reconcile with current scope, controls and evidence).\n"
+            + "Source: " + guidance["source"] + "\n" + guidance.get("text", guidance.get("note", "")))
+
+
 QUEUE_PREFIX = "AUTHORISED_QUEUE"
 OBJECTIVE_PREFIX = "OBJ_"
 STEP_STATUSES = ("TODO", "IN_PROGRESS", "DONE", "BLOCKED")
@@ -820,6 +856,9 @@ def stop_hook(stdin_text: str, root: Path = ROOT) -> tuple[int, str, str]:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = parser.add_subparsers(dest="command", required=True)
+    gd = sub.add_parser("guidance", help="read current operator intent from the existing roadmap; no model, writes or gate")
+    gd.add_argument("--root", type=Path, default=ROOT)
+    gd.add_argument("--json", action="store_true")
     st = sub.add_parser("status", help="verdict for one mandate record")
     st.add_argument("--task", help="TASK_ID under ledger/tasks/*/")
     st.add_argument("--record", type=Path, help="explicit path to a task record")
@@ -883,6 +922,9 @@ def main(argv: list[str] | None = None) -> int:
         return code
 
     root = args.root.resolve()
+    if args.command == "guidance":
+        print(json.dumps(operator_guidance(root), indent=2, ensure_ascii=False) if args.json else guidance_text(root))
+        return 0
     if args.command in ("accept", "step"):
         try:
             if args.command == "accept":

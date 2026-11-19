@@ -8,6 +8,64 @@ the parts where they conflict, and the Advisor re-evaluates when this section ch
 
 <!-- OPERATOR_ROADMAP:BEGIN -->
 
+**Current mode and supersession — 2026-11-19.** The ADV host is ACTOR_ID `advisor` (roles/advisor.md); IT remains `orchestrator`. The same authorised campaign continues through its existing CONTINUOUS.json, subject to operator controls and actual resource limits. The bounded pilot's expiry and total ceilings below are historical in continuous mode, not a reason to stop or remove the recall. No counter or authorisation is reset here. The optional read-only analyst is distinct from the accountable ADV host.
+
+**Mission.** Improve LEGEND's ability to turn verifiable scientific knowledge into more useful pharmacological hypotheses, comparisons and experiments for WWOX loss of function, keeping the
+return from open questions to research active.
+
+**Current priorities** (revisable; a reasoned proposal to change them is allowed, a silent change is not):
+1. Finish consuming the scientific and Harness deliveries already available, including the SCI51 corrections, keeping results, limits and work actually done apart.
+2. Find where knowledge already held can produce a better pharmacological comparison, conditional hypothesis or experiment.
+3. Compare going deeper on the current thread with the other prioritised questions of the module, by marginal benefit, cost and concrete chance of progress. The newest thread earns no priority by being newest; the EBP connections from SCI51 are an opportunity to compare, not a direction already imposed.
+4. Assess Harness micro-upgrades when they unblock a scientific capability, remove useless work or improve the use of the tools already available.
+5. Keep the dashboard as the map of research opportunities, correct and readable.
+
+**Exploration allowed.** Anything inside the mission that uses material already in the repository or public, free sources: reading, extraction, comparison, conditional hypotheses, experiment designs, tool and identity work.
+
+**Exclusions.** Clinical recommendations, doses, gene-therapy development, individual or private data, external contacts, new paid services, infrastructure growth without a concrete need.
+
+**Strategic direction** (operator, 2026-11-13, given with the ADV session mandate; it supplements the priorities above and changes none of them; the operator may be absent for the whole campaign and new instructions simply update the direction when given):
+- A. *Raise generative capacity.* Find knowledge LEGEND holds but does not combine or use; find pharmacological levers, competing explanations, comparisons and experiments the current path misses. Keep apart novelty for LEGEND, novelty against the literature, and predictive capacity actually demonstrated.
+- B. *Carry science through to drug repurposing.* Assess every substantial result for what it implies: does it strengthen, weaken or leave unchanged the candidates, comparisons, premises and open questions? A conditional proposal is useful when it states the conditions to verify; no favourable candidates and no quantity of hypotheses are imposed.
+- C. *Return questions to research.* Promising, contrary and inconclusive results alike orient further work. A question says which decision a given answer would change and separates in silico work from measurements that are indispensable in vitro or in vivo.
+- D. *Compare depth with a change of direction.* Weigh the marginal benefit of one more batch on the current thread against the other prioritised opportunities. Keep suspended branches, with the conditions that would make them interesting again. The most recent thread is not automatically the most important.
+- E. *Look beyond the WWOX keyword when pertinent.* Use adjacent systems and literatures for transferable methods, perturbations and explanations; keep species, cell type, development, genotype, endpoint and the limits of the transfer.
+- F. *Improve the Harness in the service of the science.* Prefer small interventions that unblock a capability, improve the use of the tools already available, remove duplication or make a change of direction easier. Assess scouting and mining by licence, cost, real availability and ease of removal; the reputation of a repository does not show that its pattern is useful.
+- G. *Measure the benefit.* Look for observable differences: a better comparison, a more discriminating experiment, a useful connection, a recovered proposal, a resolved question, or useless work avoided. The number of prompts, agents, nodes or open activities is not progress by itself.
+
+The SCI51 and EBP references above are dated examples to reconcile with the current portfolio, not declarations of unfinished work or a compulsory next thread.
+
+### Standing guidance by situation
+
+<!-- OPERATOR_GUIDANCE:BEGIN -->
+Current operator intent, consolidated 2026-11-19. These are decision aids inside the existing authority, mission and controls, not an approval or a checklist. Read the relevant original when the decision needs more context. Any inferred interpretation is labelled as tentative and linked separately; it carries no operator authority. Method: cross-session transport section 12, EMPATHY. A later documented instruction takes precedence within its scope.
+
+**At a handoff, closed increment or quiet recall — choose the next useful investment.** Compare the roadmap, other questions, candidates, source coverage, radar and DREAM leads; a laboratory dependency or an exhausted thread parks that path, not the portfolio. Prepare or assign a source-backed question and follow actual acceptance and consumption. Check real activity and resources before claiming work is in flight or capacity is unavailable. **Why:** useful research on a severe early-onset disease should not depend on the operator repeating operational prompts. Scope: each actor's authorised work; ADV owns programme direction. Source: operator continuity instructions, 2026-11-14 to 2026-11-18; canonical rule: cross-session transport section 12, Continuity and Laboratory ownership.
+
+**When a finding or alternative emerges — connect discovery to the next decision.** Consider whether it strengthens, weakens or leaves unchanged a pharmacological comparison, hypothesis, experiment or open question. Pursue a better-supported alternative when worthwhile, with a rejecting observation and a reasoned stop; no favourable result or new-compound quota. **Why:** knowledge must produce useful scientific possibilities and return questions to research, rather than only accumulate corrections. Scope: research and coordination. Source: operator strategic direction A-G (2026-11-13) and candidate-to-candidate instruction (2026-11-18); boundaries: epistemic discipline and the source-reading principles.
+
+**When evidence is scarce — explore boldly and represent it precisely.** Conditional hypotheses and adjacent literature may justify investigation; uncertainty does not justify either exclusion by default or promotion as fact. Read complete pertinent originals and retain source, context, alternatives and access limits. **Why:** sparse rare-disease evidence calls for more discovery, with traceable grounds for what is claimed. Scope: scientific reasoning, never clinical advice. Source: operator rationale restated in the EMPATHY design conversation, 2026-11-19; canonical homes: gold_is_in_the_details.md and harness_development_principles.md principles 20-25.
+
+**When choosing an implementation or tool — preserve freedom to change it.** Prefer the smallest useful, modular, easy-to-remove intervention; inspect existing capabilities before adding one. Respect licences, and evaluate actual benefit and maintenance cost. **Why:** bureaucracy and rigid procedures previously obstructed change, while methods and tools keep evolving. Scope: every design choice. Source: operator EMPATHY design conversation, 2026-11-19, reinforcing harness_development_principles.md; no new gate, service or authority follows from a lesson.
+
+**When checking an output — verify the result its consumer actually receives.** A complete catalogue or successful producer does not establish a translated, fresh or functioning page; check the relevant rendered output and actual consumer path. **Why:** the translation incident had complete catalogues but untranslated passages on the published pages. Scope: outputs and integration. Source: operator dashboard follow-up of 2026-11-18/19, audited in empathy_phase1_20261119.md case 4 and browser_validation_20261119.md; this records provenance, not a second technical rule.
+
+**When choosing context and effort — spend on useful progress.** Use pertinent originals, focused retrieval and the existing delegation budget; distinguish cache-read, output and wall time rather than assuming one is total cost. Avoid idle capacity without cause and avoid duplicate work or token consumption as a target. **Why:** urgency requires efficient research that the shared account and VPS can sustain. Scope: all actors. Source: operator EMPATHY rationale, 2026-11-19; method and measurements: delegation_budget.md.
+
+<!-- OPERATOR_GUIDANCE:END -->
+
+### New operator directions and controls
+
+2026-11-19 — EMPATHY Phase 2 authorised by the operator in chat after the Harness reconnaissance. Implement selective learning, rationale and repository-visible retrieval through existing paths; preserve independence of judgement and avoid accumulation or rigidity. The receiving actor applies cross-session transport section 12, EMPATHY. This is a paraphrase, not a verbatim transcript; no private information is retained.
+
+<!-- OPERATOR_ROADMAP:END -->
+
+## Historical operator directions — provenance, not the current reading path
+
+The following original block is preserved unchanged from before the EMPATHY consolidation (2026-11-19). It records temporary assignments and successive amendments. Use the current operator section above for the current mission and decision aids; consult this history for provenance and limits. References to pilot expiry, old actor identity and dated next steps are superseded where the current section says so. New directions belong above the OPERATOR_ROADMAP end marker, not in this archive.
+
+<!-- OPERATOR_HISTORY:BEGIN -->
+
 **2026-11-17 — Operational continuation, same programme.** At the next active boundary,
 apply the dated continuation in `governance/design_records/adv_lab_ownership_20261117.md`:
 reconcile SCI's ADV-024 delivery, its consumer and the next investment choice; actually route
@@ -107,7 +165,8 @@ return from open questions to research active.
 - 2026-11-13 (later): the operator assigned the session "ADV — Strategic Advisor" (ACTOR_ID `orchestrator`) as the standing strategic presidio of this pilot, with no new budget and no renewal: it talks with the operator, keeps this section, hosts the recall and forwards assignments to IT, SCI and HE. The strategic direction A-G above was added from that mandate; priorities 1-5 are unchanged. No instruction to stop or pause.
 - 2026-11-13: the roadmap above; the Advisor may act without being asked, the Orchestrator keeps operational coordination; the operator can intervene at any time by editing this section.
 - 2026-11-15 (operator instruction in the Harness PLAN session): implement MEETING as the standing six-hour or significant-event asynchronous alignment of ADV, Orchestrator, Science, Harness and Mirror, through the existing Advisor recall and message channels. ADV compares strategic priorities; Orchestrator reports upward and coordinates operational follow-through. Participants bring priority-ordered pending work, blockers and promising prospects, preserving methodological autonomy. Apply cross-session transport section 13: no quorum, approval step, second scheduler, interrupted research or waiting for the operator; actual decisions reach existing recipients/consumers.
-<!-- OPERATOR_ROADMAP:END -->
+<!-- OPERATOR_HISTORY:END -->
+
 
 Updated 2026-11-01 by `orchestrator`, runtime Codex, following the operator's requests to
 consolidate the Unravel/BioNAV/rareSHIFT and ALS discussion, state the guiding principle

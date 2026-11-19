@@ -12,3 +12,12 @@ Scope: the five shareable editions (en, it, fr, es, de) as built in the working 
 | Evidence | `browser_validation_20261119_evidence/` | interaction table, two screenshots (fr 390 px, de 1280 px), the German viewport table before the print fix |
 
 Limits: emulated device metrics, not a physical phone; one engine (Chromium); the interaction pass is a scripted selection of controls, not exhaustive; the live online pages were checked for byte identity by IT, not re-driven here; the print fix needs the views and package to be regenerated before it is online.
+
+
+## Additional execution-context check — EMPATHY Phase 2 (2026-11-19)
+
+The earlier five-edition measurements above remain scoped to the direct executable and shell stated there. In the Codex verification shell, `find_chromium()` instead selected the installed Snap launcher: version and DevTools startup succeeded, but the generated host HTML in `/tmp` did not exist in that browser's mount namespace. The host file was 5,178,704 bytes with the expected WWOX title; the browser target showed its file URL as the title. Read-only `/proc/<browser>/root/tmp/...` checks confirmed that the HTML was missing there while the profile directory was present. This is file visibility, not evidence of a dashboard regression.
+
+A small HTML probe under the repository's already ignored, non-hidden `tmp/` directory loaded with its expected title when that directory was supplied as `TMPDIR`; the browser sandbox stayed enabled. That probe establishes file visibility only, not page layout. Phase 2 reruns the browser targets in that environment and keeps the interrupted original run separate; the complete verification scope is in its task record and [Phase 2 report](empathy_phase2_20261119.md). Other regression targets retain their original temporary-directory environment.
+
+Technical lesson: executable/version/CDP availability is not the same as access to the actual input. Check the consuming route in the execution context that will use it; do not pin this day's Snap revision or assume one shell's result transfers to another. The existing scripts README carries this specific habit; no new gate or service is introduced.

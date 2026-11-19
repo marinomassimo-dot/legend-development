@@ -13,3 +13,5 @@ Non-normative note for ADV and the operator. **Nothing here edits the operator's
 | 7 | roadmap order | the section says "newest first" | 2026-11-16 entries sit under 2026-11-17 ones; the top block has 11-17 above 11-15 | reorder or drop the claim |
 
 Not proposed: any change of meaning. Items 1 to 5 add a dated line and keep the old text, which is the repository's rule for history.
+
+**Disposition, EMPATHY Phase 2 (2026-11-19, `plan`, operator-authorised implementation).** The current roadmap seat now reconciles identity, continuous mode and the distinction between current guidance and historical pilot instructions; its entire earlier operator block is preserved verbatim in the same file's historical section. The router and ADV skill distinguish the accountable host from the optional analyst. The historical ordering wording is preserved as part of the original, not adopted as a claim about the current section. See [Phase 2](empathy_phase2_20261119.md); this is a reconciliation of documented directions, not a new operator decision or a claim that a recall was rearmed here.
