@@ -291,6 +291,18 @@ Modify `claim_registry_current.md`. Verify:
 - at least 1 supporting paper
 - a change-log entry for every modification
 
+#### 4.2.1 Writing or rewording the interpretive layer of a claim (2026-11-19; WARN-only, never a gate)
+Evidence: four blind wording audits on 2026-11-19 (`CLAIM 025`, `021`, `002`, `005`) found the data layer holding and the interpretive layer (Title, closing sentence, Clinical meaning, quantifiers, correction notes) overshooting in every one. The rule is applied **when the sentence is written**, not by auditing every claim:
+1. Each interpretive sentence of a Summary, Clinical meaning or Title carries the **verbatim anchor sentence with its locator**, or says `INFERENZA`.
+2. A Title word that names a **vector, preparation, species, system or causal verb** must occur in the anchor's held text; otherwise drop or qualify it. Token list for the lint: directly, causes, proves, strongly, primary, rescues, restores, normalises, normalizes, AAV, lentivir, knock-in, independent, concordance, modifier.
+3. A **measurement word** names the paper and the preparation that measured it («altered Ca²⁺ dynamics» says which paper and which readout).
+4. A Clinical meaning or Title sits **beside the authors' own limit sentence** (partial rescue, proof of concept, further study required, cause or consequence open), copied, not paraphrased.
+5. A **quantifier** (only, lowest, all, both, two of three) carries the unit it ranges over (table, region, gene, panel) in the same sentence.
+6. A sentence in quotation marks is **pasted by script from the held bytes**, with the check recorded; a value read from a figure says «by eye».
+Enforcement: a diff-scoped lint WARN on only the claims a batch changes (token list against the anchor's manifest locators); never BLOCK. An interpretive rewrite of a `consolidated baseline` claim triggers the locator audit (`.claude/skills/legend-locator-audit/SKILL.md`, «When it is mandatory»).
+
+**Locator-audit trigger (2026-11-19).** An interpretive rewrite of a `consolidated baseline` claim (Title, closing sentence, Clinical meaning, a quantifier or a correction note) is a narrowing that triggers the blind locator audit before propagation, like the triggers listed in `.claude/skills/legend-locator-audit/SKILL.md`; the skill carries only a pointer to this section once a write there is authorised. Applied four times on 2026-11-19: the audit of the original sentences, then a second check of every repaired sentence, found overshoots in each of the four claims and some of the repairs themselves.
+
 #### 4.3 Meta updates
 Modify `meta_*_current.md`. Update `meta_index_current.md` if a new meta.
 
