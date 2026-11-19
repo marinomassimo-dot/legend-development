@@ -67,3 +67,9 @@ Check: `research/locator_audits/2026-11-19_claim021_wording_it59/AUDIT2_REPORT_A
 * **3.7 (T4).** «against S-CTL n = 18» is loose: the separate arms are compared with S-KO, and the source's own n's do not reconcile (S-CTL is WT plus HT, yet 14 + 17 = 31, not 18; s-HET N = 17 equals the S-KO n of 17). Write: «the legend gives s-WT N = 14 and s-HET N = 17 cells beside S-CTL n = 18 and S-KO n = 17; these n's are not reconciled in the source».
 * The delegate's other flags are carried as limits, not as changes: S-HT is also starred against S-WT (the source itself says 'S-KO and S-HTs were also more depolarized'); the T5 bath reading rests on drug dilution and electrode fill, not on a sentence.
 These two edits only remove or relabel an unprinted claim, so I do not ask for a third check; the sentence set is considered audited as revised. **Change class (restated):** MINOR.
+
+## BATCH DISPOSITION — `BATCH_20261119_004` (2026-11-19, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** PROPAGATED
+
+Propagated with the sections 3 (as revised in 6 and 7) wording: `CLAIM 021` 7 record-scoped ops, `PAPER 031` 4 ops, `working_model_current` 1 op (a dated scoped qualification under 'Network hyperexcitability'; the sentence with 'primary' is left as written and read with it, as ADV set), dated lines on six consumer notes, no cell edited and no tier moved. **Change class restated: MINOR** (Status, Type and the data layer untouched; ADV accepted). Ranking digest to be re-checked after the derived pages are regenerated; it must not move.

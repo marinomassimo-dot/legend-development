@@ -70,7 +70,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 018 | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans | consolidated baseline | DATO | genotype / splicing / pathogenicity | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 019 | Q230P is pathogenic in severe human compound context and must not be treated as a benign or weak | consolidated baseline | DATO (endpoint funzionale: mRNA normale  | genotype / compound-context interpretati | NOT_ANNOTATED | 8 | 4 |
 | CLAIM 020 | Selected WWOX-related trajectories may include survival into adulthood with severe disability an | consolidated baseline | DATO | natural history / clinical spectrum | NOT_ANNOTATED | 1 | 0 |
-| CLAIM 021 | WWOX loss directly destabilizes neocortical network physiology through combined synaptic and int | consolidated baseline | DATO | P1 — network hyperexcitability / cortica | NOT_ANNOTATED | 0 | 1 |
+| CLAIM 021 | Neuron-specific WWOX loss induces neocortical network hyperexcitability in slices, with synaptic | consolidated baseline | DATO | P1 — network hyperexcitability / cortica | NOT_ANNOTATED | 0 | 1 |
 | CLAIM 022 | Severe WWOX-null phenotypes can begin prenatally and may include detectable fetal brain abnormal | consolidated baseline | DATO | prenatal developmental architecture / se | NOT_ANNOTATED | 0 | 0 |
 | CLAIM 023 | WWOX controls partner-protein function not only by binding, but by subcellular rerouting that ch | consolidated baseline | DATO | signaling organization / routing / scaff | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 024 | WWOX WW-domain function depends on WW1–WW2 tandem cooperativity, not only on isolated domain int | consolidated baseline | DATO | domain architecture / variant interpreta | NOT_ANNOTATED | 0 | 1 |
@@ -193,7 +193,7 @@ assembler lists the titles and stops there.
 | CLAIM 014 | `perturbs` | CAUSAL | finite or multiword | WWOX loss perturbs prenatal cortical development, neuronal migration and cortical maturati |
 | CLAIM 016 | `contribute to` | CAUSAL | finite or multiword | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | `causes` | CAUSAL | finite or multiword | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in huma |
-| CLAIM 021 | `destabilizes` | CAUSAL | finite or multiword | WWOX loss directly destabilizes neocortical network physiology through combined synaptic a |
+| CLAIM 021 | `induces` | CAUSAL | finite or multiword | Neuron-specific WWOX loss induces neocortical network hyperexcitability in slices, with sy |
 | CLAIM 023 | `regulates` | CAUSAL | finite or multiword | WWOX controls partner-protein function not only by binding, but by subcellular rerouting t |
 | CLAIM 024 | `depends on` | DEPENDENCY | finite or multiword | WWOX WW-domain function depends on WW1–WW2 tandem cooperativity, not only on isolated doma |
 | CLAIM 031 | `control` | AMBIGUOUS_LEXICAL_FORM | ambiguous bare form | WWOX-DEE is a developmental AND epileptic encephalopathy: seizure control does not rescue  |
@@ -377,6 +377,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 597 input files; digest
-`fc8bc3af2984e8e0`. Sources: the claim, paper and
+`349cc4c1f78f147e`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
