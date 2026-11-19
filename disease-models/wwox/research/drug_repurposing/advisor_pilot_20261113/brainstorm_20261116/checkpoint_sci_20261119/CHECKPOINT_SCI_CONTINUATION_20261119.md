@@ -1,0 +1,12 @@
+# Checkpoint: SCI continuation of 2026-11-19 (resume from here in a fresh window; originals are opened by pointer; hypothesis level; no dose; not medical advice)
+
+Mandate: `ledger/tasks/orchestrator/ORCH-SCI-ADV065-DEEPEN-20261118.json` (state OPEN after reopening; steps A to F DONE with evidence; G open). Authority: the operator's "SCIENTIFIC CONTINUATION" message of 2026-11-19 (sections A to F) and ADV's assignments ADV-070 and ADV-072 (the latter at advisor_pilot_20261113/assignments/). Last landing: 9c802627f.
+## Delivered (notes under advisor_pilot_20261113/brainstorm_20261116/)
+`premise_checks_sci_20261119/` (A1, A2 blind recompute and report, A3), `b_ww1_ppxy_first_pass_sci_20261119/` (B, R2 report as delivered, receipts -71), `r3_erbb4_sign_check_sci_20261119/` (frozen prediction, result), `r1_conduction_endpoint_sci_20261119/` (R1 report and endpoint note), `source_base_c_sci_20261119/` (receipts-based join; PubMed 43048821 triage), `e_materials_test_sci_20261119/` (criteria sha256 390d3a4b..., briefs, outputs as delivered, result), dated corrections on the census, ADV-068 and the 065c notes.
+## Open
+1. **G audit (running at the time of writing):** delegate sonnet/medium, output expected as text; deliver the table to ADV and IT after a blind spot-check of five rows (pick five rows by random draw with a recorded seed, verify each carried or absent label against the repository with two routes), send the table path and the ranked ten.
+2. Supply list sent to ADV (clinical WWOX series, Sardi 2006, the 2005 and 2007 WWOX-ERBB4 reports): ADV adds to the decision page; nothing for me to do until papers arrive; when they do, read completely, receipt, then close R3 (firm or reversed).
+3. Laboratory limits recorded: binding and localisation test in neural tissue with an Erbb4 manipulation (not motivated under the release sign, provisional); conduction re-measurement with rescue arm and animal-level statistics; EM raw data for g-ratio.
+4. HE has the registry-against-ledger defect (form is HE's decision). IT maps the open-question rows (ERBB4 binding in neurons; conduction re-measurement) and the F02/H02 dated lines.
+## Cost record (measured; tokens as logged)
+Delegates this continuation: A2, arm S, arm L, verifier, R2, R1, R3 = 129 turns, about 124 thousand output tokens, 7.2 million cache-read tokens; G to be added. Coordinator slice from 07:55Z: 71 turns, birth context 330,996, 31.4 million cache-read by about 09:20Z (75 percent start context re-read). Lesson: coordinate from a fresh window and open originals by pointer.

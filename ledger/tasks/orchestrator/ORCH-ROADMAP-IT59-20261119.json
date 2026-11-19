@@ -47,7 +47,7 @@
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-19 (NEXT ITERATION - Restore verified publication and carry new science into useful decisions), section 5",
      "accepted_at": "2026-11-19T08:31:06Z",
-     "updated_at": "2026-11-19T08:31:16Z"
+     "updated_at": "2026-11-19T08:44:13Z"
     },
     {
      "step": "6 OPERATIONAL CONTINUATION: verify recipient receipt, record consumption or refusal, make the next executable step visible to the advisor; independent work during long verifications",
@@ -56,6 +56,47 @@
      "source": "operator mandate 2026-11-19 (NEXT ITERATION - Restore verified publication and carry new science into useful decisions), section 6",
      "accepted_at": "2026-11-19T08:31:06Z",
      "updated_at": "2026-11-19T08:31:16Z"
+    },
+    {
+     "step": "7 MAP SCI's R1 conduction extraction (PMID 33914858 figures and supplement): one open-question row and, if the table supports it, a dated line on F02 and H02 stating whether a myelin card gets a measurable readout; consumers citing the census sentence get the correction",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "messages 2026-11-19 (SCI R1 request, ADV-072/073, HE browser, HE CI fix), item 7",
+     "accepted_at": "2026-11-19T08:53:58Z",
+     "evidence": "Mapped in one pass with the PPxY outcome: open-question rows IT59-Q02 (conduction endpoint) and IT59-Q01; not_known item on F02 and H02 packets (cards rebuilt by the bridge); arm-table dated line (structural endpoints usable, conduction a re-measurement candidate; F02/H02 get structural endpoints as measurable readouts, conduction not yet).",
+     "updated_at": "2026-11-19T09:49:28Z"
+    },
+    {
+     "step": "8 MAP the outcome of the one PPxY materials comparison and first pass (ADV-072, ADV-073): open question, package under INV-05 or refusal row, with ADV-068 and ADV-070 counter-evidence",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "messages 2026-11-19 (SCI R1 request, ADV-072/073, HE browser, HE CI fix), item 8",
+     "accepted_at": "2026-11-19T08:53:58Z",
+     "evidence": "Outcome path (a): one open-question row IT59-Q01, no package, no comparison row, no dossier; E case statement (structure not credited) in the arm-table line; ADV-068 and ADV-070 carried.",
+     "updated_at": "2026-11-19T09:49:28Z"
+    },
+    {
+     "step": "9 RECORD HE's real-browser validation table (viewports five editions, interaction pass) with the SHA it covers",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "messages 2026-11-19 (SCI R1 request, ADV-072/073, HE browser, HE CI fix), item 9",
+     "accepted_at": "2026-11-19T08:53:58Z"
+    },
+    {
+     "step": "10 READ CI on the exact SHAs d13a1c5829c2 and 4082a19e5f3c and on every later landing; report only causes not already closed",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "messages 2026-11-19 (SCI R1 request, ADV-072/073, HE browser, HE CI fix), item 10",
+     "accepted_at": "2026-11-19T08:53:58Z"
+    },
+    {
+     "step": "11 CONFIRM the top four NOT_CARRIED endpoints of audit G against the originals and consumers, map the confirmed ones in dated lines, report false rows; then choose the next investment and make it visible",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-075 (assignments/ADV-075.md) and SCI audit G message, 2026-11-19",
+     "accepted_at": "2026-11-19T09:49:28Z",
+     "evidence": "Reader (sonnet) checked Cheng 2020 and Repudi 2021 originals; IT checked consumers with other concept words: row 1 corrected (latency not equal to the null; amplitude carried in IT56-Q02 table), row 2 narrower (only E16.5 thinning precedes seizure), row 3 supported but qualitative, row 4 partly; mapped: IT59-Q03 and arm-table dated line.",
+     "updated_at": "2026-11-19T09:49:28Z"
     }
    ]
   }
@@ -100,6 +141,41 @@
    "at": "2026-11-19T08:31:06Z",
    "source": "operator mandate 2026-11-19 (NEXT ITERATION - Restore verified publication and carry new science into useful decisions), section 6",
    "step_sha256": "a90688a33489",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T08:53:58Z",
+   "source": "messages 2026-11-19 (SCI R1 request, ADV-072/073, HE browser, HE CI fix), item 7",
+   "step_sha256": "23d0c94d5ba7",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T08:53:58Z",
+   "source": "messages 2026-11-19 (SCI R1 request, ADV-072/073, HE browser, HE CI fix), item 8",
+   "step_sha256": "23971daa007c",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T08:53:58Z",
+   "source": "messages 2026-11-19 (SCI R1 request, ADV-072/073, HE browser, HE CI fix), item 9",
+   "step_sha256": "12f9eb6e76df",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T08:53:58Z",
+   "source": "messages 2026-11-19 (SCI R1 request, ADV-072/073, HE browser, HE CI fix), item 10",
+   "step_sha256": "b1a8d8487b34",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T09:49:28Z",
+   "source": "ADV-075 (assignments/ADV-075.md) and SCI audit G message, 2026-11-19",
+   "step_sha256": "5fe860aa0679",
    "reopened_block": false,
    "authorised_by": null
   }

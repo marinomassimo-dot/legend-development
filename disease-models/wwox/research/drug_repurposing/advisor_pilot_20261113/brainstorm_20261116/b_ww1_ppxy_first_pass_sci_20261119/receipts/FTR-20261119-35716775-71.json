@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-19T08:32:33Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "tables": "read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-19T09:12:33Z",
+ "event_id": "FTR-20261119-35716775-71",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"affinity to a dual-motif peptide increases 10-fold\"",
+  "verbatim_locator [full text]: \"PY1 1032–1035, PY2 1053–1056, and PY3 1298–1301\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/b_ww1_ppxy_first_pass_sci_20261119/B_WW1_PPXY_FIRST_PASS_SCI_20261119.md"
+ ],
+ "prior_receipt": "FTR-20260804-35716775-05",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "a3187706ccdd4eba98fc0f32eea5ce704c034360c622087d04d8c7b892ec33cc",
+ "source_kind": "fulltext_remote",
+ "source_locator": "files/fulltext/b_ww1_ppxy_20261119/Rotem-Bamberger2022_PMC9293652.xml",
+ "study_id": {
+  "pmid": "35716775"
+ },
+ "workflow": "SCI B first pass: complete text read by a producer delegate (R2, sonnet medium) with figures not viewed; this receipt records only the sections in which the quoted sentences were located in the saved bytes by me; the rest of the reading is the delegate's and is not receipted here"
+}

@@ -1,0 +1,2 @@
+# Arm L addendum (lean arm)
+Work **only from the question, the PubMed tools and the open web**. Do not open, read, search or list any file under `/home/desktop/legend-development` (the project repository), and use no project notes. You will still carry the standing instructions and memory index that every delegate of this project loads; that is declared and read back, so do not try to compensate for it. Say in `Limits` that you used no project files.
