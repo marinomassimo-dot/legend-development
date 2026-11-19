@@ -158,3 +158,9 @@
 {"evidence": "SendMessage at 11:58Z 2026-11-19, receipt names SCI; after the vigabatrin verifier and heterozygote register delivery", "id": "ADV-080", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T11:58:47Z"}
 {"assessment": "HOST", "id": "ADV-081", "key": "second-locator-audit-of-revised-claim025-candidate", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T12:43:08Z"}
 {"evidence": "SendMessage at 12:43Z 2026-11-19, receipt names SCI, after IT's revised candidate", "id": "ADV-081", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T12:43:08Z"}
+{"assessment": "HOST", "id": "ADV-082", "key": "wording-audit-claim021-then-002-005-against-anchors", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T14:09:25Z"}
+{"evidence": "SendMessage at 14:09Z 2026-11-19, receipt names SCI, after the anchor-integrity scan delivery", "id": "ADV-082", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T14:09:26Z"}
+{"assessment": "HOST", "id": "ADV-083", "key": "claim-002-wording-audit-with-provenance-01-triples", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T14:31:57Z"}
+{"evidence": "SendMessage at 14:31Z 2026-11-19, receipt names SCI (b5892cd0), after its bind at checkpoint E", "id": "ADV-083", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T14:31:58Z"}
+{"assessment": "HOST", "id": "ADV-084", "key": "claim-005-wording-audit-npy-pv-sentences", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T14:58:34Z"}
+{"evidence": "SendMessage to SCI [b572dc] at 14:58Z 2026-11-19 after the CLAIM 002 verdict", "id": "ADV-084", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T14:58:34Z"}
