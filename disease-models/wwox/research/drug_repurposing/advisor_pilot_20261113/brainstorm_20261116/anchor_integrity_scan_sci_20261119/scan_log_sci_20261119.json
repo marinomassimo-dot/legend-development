@@ -1,0 +1,34 @@
+{
+ "anchors_by_class": {
+  "A1": 150,
+  "A2": 14,
+  "A3": 20,
+  "A4": 21
+ },
+ "anchors_by_level_A1_A2": {
+  "abstract_only": 1,
+  "complete_loose": 4,
+  "complete_strict": 101,
+  "no_identifier": 3,
+  "none": 2,
+  "partial": 46,
+  "placeholder": 7
+ },
+ "anchors_by_level_A3": {
+  "complete_strict": 17,
+  "partial": 3
+ },
+ "anchors_total_A1_A2": 164,
+ "cells_rows": 469,
+ "claims_F6": 24,
+ "claims_F7": 2,
+ "claims_foundation": 47,
+ "claims_with_key_gt0": 26,
+ "entries": {
+  "CORPUS": 381,
+  "PAPER": 559
+ },
+ "event_pmid_mismatch": [],
+ "ledger_events": 2201,
+ "needs": 24
+}
