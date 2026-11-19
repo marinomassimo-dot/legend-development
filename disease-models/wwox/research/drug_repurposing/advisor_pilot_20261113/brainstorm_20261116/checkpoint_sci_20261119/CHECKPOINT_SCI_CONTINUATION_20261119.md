@@ -10,3 +10,9 @@ Mandate: `ledger/tasks/orchestrator/ORCH-SCI-ADV065-DEEPEN-20261118.json` (state
 4. HE has the registry-against-ledger defect (form is HE's decision). IT maps the open-question rows (ERBB4 binding in neurons; conduction re-measurement) and the F02/H02 dated lines.
 ## Cost record (measured; tokens as logged)
 Delegates this continuation: A2, arm S, arm L, verifier, R2, R1, R3 = 129 turns, about 124 thousand output tokens, 7.2 million cache-read tokens; G to be added. Coordinator slice from 07:55Z: 71 turns, birth context 330,996, 31.4 million cache-read by about 09:20Z (75 percent start context re-read). Lesson: coordinate from a fresh window and open originals by pointer.
+
+## Update (2026-11-19, after G and ADV-074)
+* G audit delivered (31 turns, 46,064 output, 2,660,468 cache read) with a blind spot-check; the audit is a candidate list (IT confirms rows under ADV-075).
+* Consumer lines added to the pup brief (9.11) and the experiment brief (Addendum 20); ADV-074 first pass delivered (`h_glucose_axis_adv074_sci_20261119/`; R4: 50 turns, 29,912 output, 6,158,342 cache read): drive against accompaniment not decidable from the held originals; the measurements that separate them named; ketogenic-diet comparison neither gains nor loses decisively; the stop rule's conjunction not met, the axis stays open; the lde/lde rat original is not held and not recoverable (supply).
+* Cumulative delegate cost of the continuation: 10 runs, about 210 turns, about 200 thousand output tokens, about 16 million cache-read tokens; the coordinator slice is a multiple of that. Resume any further work from this note in a fresh window.
+* Next ranked audit items if ADV assigns: peripheral-nerve involvement, the structural timing limit as a card-level line (IT), P47T cholestasis and nephropathy, the Olig2 count against Mbp area, residual Wwox transcript by region.
