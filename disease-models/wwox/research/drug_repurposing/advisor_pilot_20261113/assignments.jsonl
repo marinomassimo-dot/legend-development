@@ -170,3 +170,7 @@
 {"evidence": "SendMessage to SCI [b572dc] at 15:53Z 2026-11-19 after its row-6 delivery", "id": "ADV-086", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T15:53:15Z"}
 {"assessment": "HOST", "id": "ADV-087", "key": "supply-sheet-for-the-human-visit-item-14", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T16:16:43Z"}
 {"evidence": "SendMessage receipt msg_id 484dbc35-8bb1-48f6-b757-40b1b72b188a at 16:16Z 2026-11-19, receipt names SCI, after ADV-086 delivery", "id": "ADV-087", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T16:16:52Z"}
+{"assessment": "HOST", "id": "ADV-088", "key": "public-developmental-expression-time-course-assay-ages", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T17:28:51Z"}
+{"assessment": "HOST", "id": "ADV-089", "key": "scripted-quote-and-number-scan-of-consumed-claims", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-19T17:28:51Z"}
+{"evidence": "SendMessage receipt msg_id 125c5381-af46-4cf1-8ce2-e597e10728fb at 17:29Z 2026-11-19, receipt names SCI, MEETING 17:27Z", "id": "ADV-088", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T17:29:06Z"}
+{"evidence": "SendMessage receipt msg_id 30f8f280-754f-4b2e-bc12-de87c41dc1db at 17:29Z 2026-11-19, receipt names IT Orchestrator, MEETING 17:27Z", "id": "ADV-089", "state": "SENT", "to": ["IT Orchestrator"], "utc": "2026-11-19T17:29:06Z"}
