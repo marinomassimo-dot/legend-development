@@ -241,11 +241,11 @@
      "owner": "orchestrator",
      "source": "SCI remaining items 2026-11-19 (supply-path papers)",
      "accepted_at": "2026-11-19T10:15:43Z",
-     "blocker": "waits for the operator's supply (decision page item 14, owner: operator through ADV), narrowed by the ledger check of 2026-11-19 (l_supply_state_sci_20261119/): full texts never held: Sardi 2006 (PMID 17018285), Aqeilan 2007 WWOX-ERBB4 (PMID 17909041, abstract only), the WWOX clinical series (not identified: name it first); bytes missing for papers already read: Aqeilan 2008 (complete read 2026-08-11), Suzuki 2009 (complete read 2026-08-06), Aqeilan 2005 (partial read 2026-08-11); no lawful machine route restores any of them (PMC XML refused by the publisher, PMC page and Europe PMC PDF behind challenges, no PMC id for the other five, SHA search of local folders 0). The Hussain 2023 supplement is NOT owed: it is held on disk (files/supplement/PMID36828035/) and its S2 and S6 panels were read",
+     "blocker": "waits for the operator's supply (decision page item 14, owner: operator through ADV), narrowed by the ledger check of 2026-11-19 (l_supply_state_sci_20261119/, section 6): full texts never held: Sardi 2006 (PMID 17018285), Aqeilan 2007 WWOX-ERBB4 (PMID 17909041, abstract only; first author Aqeilan, not Guler), the five clinical-series papers (PMIDs 30094525 [a single-patient report], 34034642, 25411445, 31669195, 32037574; no PMC id, no receipt); bytes missing for papers already read: Aqeilan 2008 (complete read 2026-08-11), Suzuki 2009 (complete read 2026-08-06), Aqeilan 2005 (partial read 2026-08-11); no lawful machine route restores any of them (PMC XML and the open-data bucket return a restricted stub, PMC page and Europe PMC PDF behind challenges, no PMC id for the other papers, SHA search of local folders 0). The Hussain 2023 supplement is NOT owed: it is held on disk (files/supplement/PMID36828035/) and its S2 and S6 panels were read",
      "unblock_when": {
       "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/checkpoint_sci_20261119/L_TEXT_ARRIVED.txt"
      },
-     "updated_at": "2026-11-19T13:23:46Z"
+     "updated_at": "2026-11-19T13:30:11Z"
     },
     {
      "step": "ADV-079: per-candidate harm-against-phenotype table from held originals (audit items 5 and 7; item 6 resolved by IT): lithium, ethosuximide, pore blockers, vigabatrin, ketogenic diet, AAV9 comparator; stop rule: fewer than three intersections with a held primary source gives 'mostly unknown'",
@@ -285,10 +285,19 @@
     },
     {
      "step": "Audit-gap census (bounded first slice): list the QUEUED commit candidates and any candidate that names a consolidated-baseline claim, with status, target claim and whether a blind locator audit is recorded; deliver the list to IT and ADV; apply nothing (comparison and reasons in l_supply_state_sci_20261119/L_SUPPLY_STATE_AND_NEXT_INVESTMENT_SCI_20261119.md)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV standing line relayed in checkpoint B section 4 (2026-11-19): next investments are SCI's from the whole roadmap, made visible, no approval needed; HE57 choice-of-next rule (cross_session_transport section 12)",
-     "accepted_at": "2026-11-19T13:23:46Z"
+     "accepted_at": "2026-11-19T13:23:46Z",
+     "evidence": "WITHDRAWN, NOT RUN: replaced by ADV's assignment of 2026-11-19 (anchor-integrity scan of the canonical claims, next step); the header-status counts the census would have used are stale (real backlog 3). Reasons in l_supply_state_sci_20261119/ section 6",
+     "updated_at": "2026-11-19T13:30:11Z"
+    },
+    {
+     "step": "ANCHOR-INTEGRITY scan of the canonical claims (first slice about 20 consumed claims): for each claim, which papers anchor it and at what receipt depth (complete, partial, abstract, none, placeholder); which claims rest only on placeholders, abstract-level or partial readings while their wording is stronger; ranked by how many cards, needs or arm cells consume the claim; use IT's reading-debt script and the receipts-based join, do not rebuild; ranked list for IT and ADV; nothing edited, nothing applied",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV assignment by message to SCI, 2026-11-19 (reply to the L-state note): the claim 025 defect was a claim anchored to a placeholder and stronger than its source",
+     "accepted_at": "2026-11-19T13:30:11Z"
     }
    ]
   }
@@ -508,6 +517,13 @@
    "at": "2026-11-19T13:23:46Z",
    "source": "ADV standing line relayed in checkpoint B section 4 (2026-11-19): next investments are SCI's from the whole roadmap, made visible, no approval needed; HE57 choice-of-next rule (cross_session_transport section 12)",
    "step_sha256": "621f7274d03d",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T13:30:11Z",
+   "source": "ADV assignment by message to SCI, 2026-11-19 (reply to the L-state note): the claim 025 defect was a claim anchored to a placeholder and stronger than its source",
+   "step_sha256": "73708af6461c",
    "reopened_block": false,
    "authorised_by": null
   }
