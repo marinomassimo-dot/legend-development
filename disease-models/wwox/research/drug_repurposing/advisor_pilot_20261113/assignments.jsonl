@@ -142,3 +142,11 @@
 {"evidence": "SendMessage at 08:31Z 2026-11-19 after the operator continuation; full text in the message", "id": "ADV-071", "state": "SENT", "to": ["HE"], "utc": "2026-11-19T08:31:43Z"}
 {"evidence": "SendMessage at 08:31Z 2026-11-19 after the operator continuation; full text in the message", "id": "ADV-072", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T08:31:43Z"}
 {"evidence": "SendMessage at 08:32Z 2026-11-19 after the operator continuation; full text in the message", "id": "ADV-073", "state": "SENT", "to": ["IT Orchestrator"], "utc": "2026-11-19T08:32:05Z"}
+{"assessment": "HOST", "id": "ADV-074", "key": "glucose-axis-first-pass-null-mouse-muscle-lde-rat", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T09:41:55Z"}
+{"assessment": "HOST", "id": "ADV-075", "key": "confirm-top-uncarried-endpoints-and-choose-next", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-19T09:41:55Z"}
+{"evidence": "SendMessage at 09:42Z 2026-11-19 after audit G delivery", "id": "ADV-074", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T09:42:04Z"}
+{"evidence": "SendMessage at 09:42Z 2026-11-19 after audit G delivery", "id": "ADV-075", "state": "SENT", "to": ["IT Orchestrator"], "utc": "2026-11-19T09:42:04Z"}
+{"assessment": "HOST", "id": "ADV-076", "key": "deletion-completeness-and-olig2-mbp-from-held-originals", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T10:02:26Z"}
+{"evidence": "SendMessage at 10:02Z 2026-11-19 after ADV-074 delivery", "id": "ADV-076", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T10:02:34Z"}
+{"assessment": "HOST", "id": "ADV-077", "key": "consolidated-v2-of-slice-package-and-in-vivo-brief", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T10:10:09Z"}
+{"evidence": "SendMessage at 10:10Z 2026-11-19 after ADV-076 delivery", "id": "ADV-077", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T10:10:18Z"}
