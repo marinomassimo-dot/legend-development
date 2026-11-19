@@ -240,6 +240,13 @@
      "accepted_at": "2026-11-19T10:51:48Z",
      "updated_at": "2026-11-19T11:24:51Z",
      "evidence": "report landed d007fab5e (design record + evidence folder); delivered to ADV; operator summary in chat; Phase 2 not started by me"
+    },
+    {
+     "step": "Read session_model_census.py on the successor SCI session 8846a6c0 at about 100 turns (birth, peak, mean, cache-read per turn) and report to ADV",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV-078 second trial (ADV 2026-11-19): keep the census of the successor SCI window at about 100 turns",
+     "accepted_at": "2026-11-19T12:41:40Z"
     }
    ]
   }
@@ -424,6 +431,13 @@
    "at": "2026-11-19T10:51:48Z",
    "source": "operator mandate 2026-11-19 EMPATHY Phase 1 (ACTOR_ID plan)",
    "step_sha256": "118cd1387848",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T12:41:40Z",
+   "source": "ADV-078 second trial (ADV 2026-11-19): keep the census of the successor SCI window at about 100 turns",
+   "step_sha256": "d47583b8ea5b",
    "reopened_block": false,
    "authorised_by": null
   }
