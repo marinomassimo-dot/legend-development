@@ -5,7 +5,7 @@
   "SESSION_NAME": "Codex EMPATHY implementation",
   "OBJECTIVE": "Implement selective, durable learning of operator intent through existing repository guidance and decision-time readers, without a new memory store, gate or actor. Operator authorised Phase 2 in chat on 2026-11-19 after the Harness Phase 1 report.",
   "AUTHORISED_QUEUE_EMPATHY": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_1": {
       "order": 1,
       "steps": [
@@ -31,9 +31,175 @@
         },
         {
           "step": "Integrate, verify and publish the change under the existing release procedure",
-          "status": "IN_PROGRESS"
+          "status": "DONE",
+          "evidence": "Frozen candidate 72a8858c37ecdf668ecd75cbd769904c47f86870: all 266 inventory targets completed across the preserved 237-target prefix, a 2-target browser PASS, and a 27-target PASS WITH SKIPS; 44 cases skipped, zero failing completed targets and zero guard writes. The original attempt remains INTERRUPTED (-15). Integrated current main; scoped post-merge checks passed. This closure takes effect on publication through safe_push --serialize --regenerate-derived, with exact-SHA gate and ls-remote verification."
         }
       ]
+    }
+  },
+  "VERIFICATION": {
+    "frozen_candidate": "72a8858c37ecdf668ecd75cbd769904c47f86870",
+    "inventory_count": 266,
+    "all_targets_completed": true,
+    "failed_completed_targets": [],
+    "segments": [
+      {
+        "segment": "interrupted_prefix",
+        "completed": 237,
+        "runner_verdict": "INTERRUPTED",
+        "skips": 41
+      },
+      {
+        "segment": "browser",
+        "completed": 2,
+        "runner_verdict": "REGRESSION VERDICT: PASS (2 targets)",
+        "skips": 0
+      },
+      {
+        "segment": "remaining",
+        "completed": 27,
+        "runner_verdict": "REGRESSION VERDICT: PASS WITH SKIPS (27 targets, 3 skipped)",
+        "skips": 3
+      }
+    ],
+    "original_run_exit": -15,
+    "note": "Segmented coverage; the interrupted attempt has no completed battery verdict and is never relabelled PASS.",
+    "skipped_cases": 44,
+    "skip_reasons": [
+      {
+        "reason": "case-sensitive filesystem: `.GIT` cannot impersonate `.git`",
+        "count": 1
+      },
+      {
+        "reason": "PMID 38499540 supplement absent from this checkout",
+        "count": 1
+      },
+      {
+        "reason": "no .pptx deposits in this checkout",
+        "count": 2
+      },
+      {
+        "reason": "PMID 21731849 article text absent from this checkout",
+        "count": 1
+      },
+      {
+        "reason": "Retraction Watch snapshot unusable: snapshot retractionwatch_20261021.csv absent under files/retraction_watch/ (run: dependency_integrity.py fetch)",
+        "count": 1
+      },
+      {
+        "reason": "local corpus artefact absent for PMID 18460020: files/fulltext/PMID18460020_Nakayama2008_PMC.pdf (+13 more)",
+        "count": 3
+      },
+      {
+        "reason": "local corpus artefact absent for PMID 42157447: files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml (+8 more)",
+        "count": 1
+      },
+      {
+        "reason": "no declared artefact is present in this checkout (e.g. files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml, files/fulltext/PMID29724996_AbuRemaileh2018_supplement.pdf, files/fulltext/PMID29724996_AbuRemaileh2018_supplement.txt) — `files/` is gitignored, so this case does not run in a fresh clone. It is skipped, never passed.",
+        "count": 1
+      },
+      {
+        "reason": "local corpus artefact absent for PMID 29724996: files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml (+14 more)",
+        "count": 5
+      },
+      {
+        "reason": "local corpus artefact absent for PMID 34268881: files/fulltext/PMID34268881_Steinberg2021_PMC.xml (+22 more)",
+        "count": 1
+      },
+      {
+        "reason": "local corpus artefact absent for PMID 16223882: files/fulltext/PMID16223882_Fabbri2005_PMC.pdf (+20 more)",
+        "count": 2
+      },
+      {
+        "reason": "local corpus artefact absent for PMID 38499540: files/fulltext/PMID38499540_BidanyMizrahi2024_PMC.xml (+13 more)",
+        "count": 1
+      },
+      {
+        "reason": "local corpus artefact absent for PMID 42422765: files/fulltext/PMID42422765_Obeid2026_assets/mmc1.pdf (+23 more)",
+        "count": 4
+      },
+      {
+        "reason": "local corpus artefact absent for PMID 20146584: files/fulltext/PMID20146584_Salah2010_PMC.xml",
+        "count": 1
+      },
+      {
+        "reason": "local corpus artefact absent for PMID 28373548: files/fulltext/PMID28373548_EoC_PNAS2017.pdf (+6 more)",
+        "count": 1
+      },
+      {
+        "reason": "local figure corpus holds no png/jpg under files/figures",
+        "count": 1
+      },
+      {
+        "reason": "snapshot unusable: snapshot retractionwatch_20261021.csv absent under files/retraction_watch/ (run: dependency_integrity.py fetch)",
+        "count": 2
+      },
+      {
+        "reason": "skipped: no recipe's source PDF is on this host (files/ is gitignored; 8 recipes looked at)",
+        "count": 1
+      },
+      {
+        "reason": "local full-text corpus is gitignored and absent from this checkout",
+        "count": 4
+      },
+      {
+        "reason": "skipped: no PDF under files/fulltext on this host (files/ is gitignored)",
+        "count": 1
+      },
+      {
+        "reason": "skipped: no real manifest has its declared text artifact on this host (files/ is gitignored; 594 manifests looked at)",
+        "count": 1
+      },
+      {
+        "reason": "local full-text corpus not present in this checkout",
+        "count": 1
+      },
+      {
+        "reason": "catalogue cache absent",
+        "count": 1
+      },
+      {
+        "reason": "saved text is under the gitignored files/ tree of the checkout that fetched it",
+        "count": 1
+      },
+      {
+        "reason": "Stop hook not installed in .claude/settings.json on this checkout",
+        "count": 1
+      },
+      {
+        "reason": "needs the local catalogue cache (not distributed)",
+        "count": 1
+      },
+      {
+        "reason": "public inputs not given (RNA_REPRO_RAW, RNA_REPRO_CSV)",
+        "count": 1
+      },
+      {
+        "reason": "needs the local catalogue cache and the built editions",
+        "count": 1
+      },
+      {
+        "reason": "exact-tree comparison: set GATE_CACHE_FULL_TREE=1 (about ten minutes)",
+        "count": 1
+      }
+    ],
+    "guarded_writes": 0,
+    "zero_test_or_startup_error_flags": 0,
+    "post_merge_checks": {
+      "integration": "d943d95ad873971c7c682dd714579e362e48cd42",
+      "continuity_tests": 81,
+      "continuity_skipped": 1,
+      "watch_tests": 60,
+      "advisor_tests": 189,
+      "method_and_reference_tests": 17,
+      "document_routing_tests": 24,
+      "receipt_chain_verified": 2201,
+      "growth_anchors": "PASS"
+    },
+    "publication": {
+      "target": "development/main",
+      "command": "python3 framework/scripts/safe_push.py development main --expect-sha <closing-commit> --serialize --regenerate-derived",
+      "scope": "Publication of this closure is conditional on the exact-SHA gate and ls-remote verification performed by the publisher; it is not a claim that the merged final tree had a second complete uninterrupted local battery. CI is separate."
     }
   }
 }
