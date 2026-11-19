@@ -201,10 +201,12 @@
     },
     {
      "step": "H (ADV-074): glucose and metabolic axis first pass with COMPLETE originals: skeletal-muscle conditional knockout, the null mouse metabolic crisis, the lde/lde rat serum; does hypoglycaemia or a metabolic state drive excitability and death in the null pup or only accompany it; which measurement separates them; does the ketogenic-diet comparison (U15) gain or lose its rationale; decision it changes: whether a glucose and ketone series enters the in vivo pup brief and whether the metabolic lever becomes a comparison; stop rule: no age-resolved glucose datum beyond P10 and no link to seizure timing -> close with the reason and take the next ranked audit item",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "advisor message 2026-11-19 (ADV-074: glucose and metabolic axis first pass with complete originals; consumer lines first)",
-     "accepted_at": "2026-11-19T09:46:24Z"
+     "accepted_at": "2026-11-19T09:46:24Z",
+     "evidence": "h_glucose_axis_adv074_sci_20261119/GLUCOSE_METABOLIC_AXIS_FIRST_PASS_ADV074_SCI_20261119.md and R4_READING_REPORT_AS_DELIVERED.md: drive vs accompaniment not decidable from the held originals; measurements that separate them; U15 neither gains nor loses; stop rule conjunction not met; delivered to ADV and IT",
+     "updated_at": "2026-11-19T10:02:01Z"
     }
    ]
   }
@@ -380,6 +382,7 @@
   "R2 producer (legend-delegate, agent aad72c85, 2026-11-19, complete reading of the PPxY partner originals): asked sonnet/medium; read back sonnet x31, medium x31; birth 21,540; 31 turns; output 20,678; cache read 2,022,414; peak 129,220; 44 tool calls (cap 100); 383 s; report 2464 words as delivered; three new full texts acquired by efetch, receipted -71.",
   "R1 producer (legend-delegate, agent af313fa4, 2026-11-19, conduction and myelination extraction from held originals, figures viewed): asked sonnet/medium; read back sonnet x22, medium x22; birth 21,323; 22 turns; output 17,240; cache read 1,124,389; peak 84,935; 24 tool calls (cap 80); 151 s; legend check of the conduction n done against the held text by me.",
   "R3 producer (legend-delegate, agent a200d7aa, 2026-11-19, sign-compatibility reading with frozen rules): asked sonnet/medium; read-back in the census at completion; 16 to 20 tool calls (cap 50); 87 s; abstract-level only (full texts not obtainable).",
-  "G producer (legend-delegate, agent ae2b9c0f, 2026-11-19, read-but-not-carried audit of 20 held papers): asked sonnet/medium; read back sonnet x31, medium x31; birth 21,486; 31 turns; output 46,064; cache read 2,660,468; peak 173,559; about 31 tool calls (cap 90); 6.0 min; 78 results: 30 carried, 16 partly, 30 not carried, 2 unclear; blind spot-check of five rows (seed 20261119) by me: one route miss, one possible over-credit."
+  "G producer (legend-delegate, agent ae2b9c0f, 2026-11-19, read-but-not-carried audit of 20 held papers): asked sonnet/medium; read back sonnet x31, medium x31; birth 21,486; 31 turns; output 46,064; cache read 2,660,468; peak 173,559; about 31 tool calls (cap 90); 6.0 min; 78 results: 30 carried, 16 partly, 30 not carried, 2 unclear; blind spot-check of five rows (seed 20261119) by me: one route miss, one possible over-credit.",
+  "R4 producer (legend-delegate, agent abcc975b, 2026-11-19, ADV-074 glucose and metabolic first pass from held originals, figures viewed where held): asked sonnet/medium; read back sonnet x50, medium x50; birth 21,440; 50 turns; output 29,912; cache read 6,158,342; peak 204,026; 54 tool calls (cap 90); 4.8 min; one figure independently viewed by me; absence in the Brain 2021 paper re-checked by concept words."
  ]
 }
