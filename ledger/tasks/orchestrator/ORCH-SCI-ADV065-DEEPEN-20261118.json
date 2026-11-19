@@ -402,10 +402,12 @@
     },
     {
      "step": "ADV-091: pilot decision dossier on the shared slice assay, frozen hashed hindcast set (source sentences read first), cluster-2 clinical-data note",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-091 (assignments/ADV-091.md) and ADV message 2026-11-19",
-     "accepted_at": "2026-11-19T18:51:30Z"
+     "accepted_at": "2026-11-19T18:51:30Z",
+     "evidence": "Landed on main 132b7bd3f (safe_push PUBLISHED, gate PASS 0 blocks): advisor_pilot_20261113/brainstorm_20261116/adv091_pilot_dossier_hindcast_sci_20261119/ (dossier, 12-pair hindcast freeze with manifest 2026-11-19T19:05Z, cluster-2 note, README). Delivered by message to ADV, IT, HE.",
+     "updated_at": "2026-11-19T19:21:15Z"
     }
    ]
   }
