@@ -4,7 +4,7 @@
  "STANDING": "mandate that holds the work this actor has accepted; the owner writes `MANDATE_BOUND: ORCH-SCI-ADV065-DEEPEN-20261118` in its session",
  "SESSION_NAME": "orch-adv004-mandate-reconciliation",
  "AUTHORISED_QUEUE_ACCEPTED": {
-  "MANDATE_STATE": "COMPLETE",
+  "MANDATE_STATE": "OPEN",
   "OBJ_ACCEPTED": {
    "order": 1,
    "steps": [
@@ -124,6 +124,16 @@
      "accepted_at": "2026-11-19T01:50:58Z",
      "evidence": "dated lines in OPERATOR_OUTREACH_PACKAGE_SCI_20261118.md and EXPERIMENT_BRIEF_V1_1.md (Addendum 19): optional PV/late-marker/myelin tissue measurement, not a drug arm, with the three leanings",
      "updated_at": "2026-11-19T02:01:50Z"
+    },
+    {
+     "step": "ADV-070: stage-adjusted re-read of IT13 P3a channel and activity seeds on the held P17 deposits (pre-register covariate = ADV-068 late set unchanged, per-animal unit, labelling rule in a hashed file; deliver seeds that stand, those that become descriptive, effect on arm cells and the Kv7 probe without tier change, remaining alternatives, reasoned stop)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "advisor message 2026-11-19 (ADV-070 assigned: stage-adjusted re-read of P3a channel and activity seeds)",
+     "accepted_at": "2026-11-19T05:27:37Z",
+     "authorised_by": "operator night mandate section G (continue the next useful deepening in the authorised programme; the operator is a contribution, not the dependency) and the advisor assignment ADV-070 (advisor_pilot_20261113/assignments/ADV-070.md, host decision at MEETING-20261119T052503Z-935k_dpu)",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv070_stage_adjusted_p3a_sci_20261119/STAGE_ADJUSTED_REREAD_RESULT_ADV070_SCI_20261119.md: pre-registration hashed first (bf529dae2); covariate has low leverage in the only qualifying contrast, stage adjustment not decisive; IEG lower and Npy higher stable to the covariate; no tier change; reasoned stop",
+     "updated_at": "2026-11-19T05:30:49Z"
     }
    ]
   }
@@ -219,6 +229,13 @@
    "step_sha256": "2ca81a758c1c",
    "reopened_block": false,
    "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T05:27:37Z",
+   "source": "advisor message 2026-11-19 (ADV-070 assigned: stage-adjusted re-read of P3a channel and activity seeds)",
+   "step_sha256": "52cae561f875",
+   "reopened_block": true,
+   "authorised_by": "operator night mandate section G (continue the next useful deepening in the authorised programme; the operator is a contribution, not the dependency) and the advisor assignment ADV-070 (advisor_pilot_20261113/assignments/ADV-070.md, host decision at MEETING-20261119T052503Z-935k_dpu)"
   }
  ],
  "DELEGATIONS": [

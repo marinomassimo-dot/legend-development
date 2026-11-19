@@ -1,0 +1,8 @@
+contrast	case_mean	control_mean	separation_case_minus_control	n_case	n_control
+H_S	-0.586	0.000	-0.586	3	2
+H_N	-0.114	0.000	-0.114	2	2
+H_null	-0.245	-0.000	-0.245	2	3
+C_S	-0.334	0.000	-0.334	3	4
+CC_SW	0.326	-0.000	0.326	2	3
+CC_NW	0.327	-0.000	0.327	2	3
+CC_SN	-0.001	0.000	-0.001	2	2
