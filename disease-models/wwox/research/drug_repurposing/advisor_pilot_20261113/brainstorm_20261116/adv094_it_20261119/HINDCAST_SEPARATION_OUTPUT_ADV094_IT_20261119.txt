@@ -1,0 +1,7 @@
+C1: AUC 0.583 (6 POS, 6 NEG); exact one-sided permutation p 0.5000; bootstrap interval [0.333, 0.833] (too narrow at this n); leave-one-pair-out range [0.533, 0.650]
+C2: AUC 0.542 (6 POS, 6 NEG); exact one-sided permutation p 0.5000; bootstrap interval [0.236, 0.833] (too narrow at this n); leave-one-pair-out range [0.467, 0.617]
+C3: AUC 0.444 (6 POS, 6 NEG); exact one-sided permutation p 0.6364; bootstrap interval [0.167, 0.708] (too narrow at this n); leave-one-pair-out range [0.333, 0.500]
+C4: AUC 0.625 (6 POS, 6 NEG); exact one-sided permutation p 0.3377; bootstrap interval [0.333, 0.875] (too narrow at this n); leave-one-pair-out range [0.550, 0.700]
+SUM (unweighted): AUC 0.569 (6 POS, 6 NEG); exact one-sided permutation p 0.3636; bootstrap interval [0.236, 0.889] (too narrow at this n); leave-one-pair-out range [0.483, 0.667]
+identification probe: 10 identified, 2 partly, of 12; AT LEAST HALF IDENTIFIED: contaminated, read the separation as recall
+No pass or fail. 'No separation shown' is not 'does not separate'. A convenience set with skew and a model scorer that may remember outcomes; a component added after the freeze is post hoc.

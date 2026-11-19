@@ -1,0 +1,5 @@
+C1: AUC 0.675 (5 POS, 4 NEG); exact one-sided permutation p 0.3571; bootstrap interval [0.350, 0.900] (too narrow at this n); leave-one-pair-out range
+C2: AUC 0.475 (5 POS, 4 NEG); exact one-sided permutation p 0.5635; bootstrap interval [0.100, 0.825] (too narrow at this n); leave-one-pair-out range
+C3: AUC 0.400 (5 POS, 4 NEG); exact one-sided permutation p 1.0000; bootstrap interval [0.200, 0.500] (too narrow at this n); leave-one-pair-out range
+C4: AUC 0.675 (5 POS, 4 NEG); exact one-sided permutation p 0.3571; bootstrap interval [0.350, 1.000] (too narrow at this n); leave-one-pair-out range
+SUM (unweighted): AUC 0.625 (5 POS, 4 NEG); exact one-sided permutation p 0.2857; bootstrap interval [0.225, 1.000] (too narrow at this n); leave-one-
