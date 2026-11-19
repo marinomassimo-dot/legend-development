@@ -107,7 +107,9 @@ def resolved(o: dict) -> str:
     res = {x.strip() for x in o["resolves_links"].split(",")}
     if res <= {"unknown", ""}:
         return "unknown"
-    return "yes" if set(wk) & res else "no"
+    if set(wk) <= res:
+        return "yes"
+    return "partly" if set(wk) & res else "no"
 
 
 def sharers(opps: list[dict]) -> dict[str, list[str]]:
@@ -121,7 +123,7 @@ def keys(opps: list[dict]) -> dict[str, dict[str, tuple]]:
     sh = sharers(opps)
     dec = {"yes": 2, "unknown": 1, "no": 0}
     nul = {"named": 2, "partly": 1, "unknown": 0, "none": 0}
-    res = {"yes": 2, "unknown": 1, "n/a": 1, "no": 0}
+    res = {"yes": 3, "partly": 2, "unknown": 1, "n/a": 1, "no": 0}
     out: dict[str, dict[str, tuple]] = {"A": {}, "B": {}, "C": {}}
     for o in opps:
         d, n, r, s = dec[o["decision_named"]], nul[o["null_control"]], res[resolved(o)], len(sh[o["opp_id"]])
@@ -205,7 +207,7 @@ def render(d: Path) -> str:
              f'operator supplies ({sum(1 for _ in costs)} supplied; default "{NS}"). Input digest {digest}.</p>')
     # Table A
     head = ["Candidate", "Portfolio", "Study class", *[f"{k} {LINK_NAMES[k]}" for k in LINKS],
-            "Weakest link(s)", "Study resolves the weakest?", "Decision named", "Null control", "Safety (per agent and age; never in an ordering)", "Shared assay",
+            "Weakest link(s)", "Study resolves the weakest link(s)? (yes = all of them, partly = some)", "Decision named", "Null control", "Safety (per agent and age; never in an ordering)", "Shared assay",
             "Blind check", "Cost range", "Cost flag"]
     rows = []
     for o in opps:

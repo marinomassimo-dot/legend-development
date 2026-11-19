@@ -50,6 +50,14 @@ class FundingView(unittest.TestCase):
         write(self.tmp, rows)
         return fv.render(self.tmp)
 
+    def test_resolved_is_yes_only_when_every_tied_weakest_link_is_resolved(self) -> None:
+        o = row("O1", "ambitious", L1="unknown", L2="unknown", L3="IPOTESI", L4="IPOTESI", resolves_links="L1,L2")
+        self.assertEqual(fv.resolved(o), "yes")
+        o = row("O1", "ambitious", L1="unknown", L2="unknown", L3="unknown", L4="IPOTESI", resolves_links="L1,L2")
+        self.assertEqual(fv.resolved(o), "partly")
+        o = row("O1", "ambitious", L1="DATO-matching", L2="DATO-matching", L3="unknown", L4="IPOTESI", resolves_links="L1,L2")
+        self.assertEqual(fv.resolved(o), "no")
+
     def test_ties_stay_ties_and_weakest_marks_all_ties(self) -> None:
         o = row("O1", "ambitious", L1="unknown", L2="unknown")
         self.assertEqual(fv.weakest(o), ["L1", "L2", "L4"])
