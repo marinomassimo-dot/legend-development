@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261119_004
+last_batch_commit_id: BATCH_20261119_005
 last_batch_commit_date: 2026-11-19
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 1
+commit_candidates_propagated: 2
 target_wm_version: WM_v7.29
-trigger: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV-082/ADV accepted the route and the class). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: one candidate propagated (CC-20261119-ORCHESTRATOR-CLAIM021-WORDING-01, audited twice against Breton 2021 alone): CLAIM 021 title, Summary closing sentence with dated qualifications, three caveat clauses, Clinical meaning and wave note; PAPER 031 Note and wave note; one scoped dated qualification in working_model_current (Network hyperexcitability); dated lines on six consumer notes; derived pathograph export regenerated. Status, Type and the data layer of CLAIM 021 unchanged.
+trigger: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV accepted the route and the class). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: two candidates propagated (CC-20261119-ORCHESTRATOR-CLAIM002-WORDING-01, 15 ops on CLAIM 002; CC-20261119-ORCHESTRATOR-CLAIM005-WORDING-01, 8 ops on CLAIM 005 incl. the correction of the 2026-10-30 Il6 quotation), each audited twice against the held texts; dated lines on the IT9 verifier file and the IT22 README; derived pathograph export regenerated. The previous batch text follows only as history in state_history.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261119_BATCH_20261119_004
+last_lint_id: LINT_20261119_BATCH_20261119_005
 last_lint_date: 2026-11-19
 last_lint_result: WARN
 ```

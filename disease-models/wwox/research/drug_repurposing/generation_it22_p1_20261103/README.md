@@ -41,3 +41,5 @@ The test's CLI run (cap 600 s) is **CPU-bound and deterministic**, not an enviro
 folded every paper of the corpus again for every unmatched quotation (264 quotations, 945 surfaces). Fix at the source, the control untouched and the cap unchanged: each surface is normalised once (`deepdive_manifest._PreparedText`,
 `_quote_matches_prepared`; `_quote_matches` delegates, decision rule identical). After: 25 s user on the same inputs, **byte-identical report** (264 quotations; 119 verbatim, 9 stitched, 0 elsewhere, 105 not found, 31 undecidable). Regression: `PreparedSurface` (2 tests) in
 `test_dossier_quote_audit.py`; the existing 18 tests and the 208 of `test_deepdive_manifest.py` pass.
+
+Update 2026-11-19 (IT59, `BATCH_20261119_005`): `inputs_it22/seeds.tsv` row S085 states p<0.05 for the Wwox-null hippocampus Tnf-a increase and calls the registry reading 'Il6, not Tnf-a' wrong. The held sentence says '(Il6 significant at p < .05)'; Tnf-a significance is not stated. The input file is not edited; the IT10 origin override for S085 already removes that origin. See `research/drug_repurposing/generation_it59_20261119/TNF_SIGNIFICANCE_CHAIN_IT59.md`.
