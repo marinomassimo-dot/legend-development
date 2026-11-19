@@ -782,6 +782,10 @@ class MemoryContainment(unittest.TestCase):
         j = mw.job_run("T", "plain", ["true"])
         self.assertNotIn("memory_max", j)
         self.assertFalse((Path(self.tmp.name) / "args").exists())
+        for _ in range(100):                                          # the detached job writes its exit file after this body returns:
+            if Path(j["exit_file"]).exists():                         # wait for it, or the temp-dir teardown races it ('Directory not empty', CI 2026-11-19)
+                break
+            time.sleep(0.05)
 
     def _fake_proc(self):
         proc = Path(self.tmp.name) / "proc"
