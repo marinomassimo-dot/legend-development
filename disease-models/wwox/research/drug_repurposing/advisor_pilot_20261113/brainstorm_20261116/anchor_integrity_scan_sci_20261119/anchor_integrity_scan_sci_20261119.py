@@ -131,7 +131,7 @@ for cid in claims:
         lvl, rc = attested(e)
         declared = C.classify_depth(e)
         # AMENDMENT 8: a record whose Status is 'superseded' by a named PAPER is levelled at the better of its own level and the superseding record's
-        # AMENDMENT 9: also a record whose Status is 'promoted — see [[PAPER nnn]]' (a CORPUS audit-trail record kept after promotion)
+        # AMENDMENT 9: also a record whose Status is 'promoted — see <wikilink to a PAPER record>' (a CORPUS audit-trail record kept after promotion)
         st = e.get("status", "")
         sup = re.search(r"(?:promoted|superseded)[^\[]{0,240}\[\[paper_registry_current#(PAPER \d{3})\]\]", st, re.I)
         if not sup and re.search(r"superseded", st, re.I):

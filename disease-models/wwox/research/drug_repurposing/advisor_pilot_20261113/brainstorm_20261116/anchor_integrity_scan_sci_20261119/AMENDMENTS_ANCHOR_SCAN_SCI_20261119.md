@@ -44,7 +44,7 @@ Ranks 19 to 21 (CLAIM 006, CLAIM 009, CLAIM 014) all have key 2; the frozen rule
 
 ## Amendment 9 (2026-11-19, after the fifth run): "promoted" records follow their successor; PENDING means a literal PENDING identifier
 **Seen:** CORPUS P206 (named in the Wikilinks of CLAIM 023 and CLAIM 028) has Status "promoted — see PAPER 081" and an Identifier that names PMID 15070730 and quotes the old literal `PENDING` in its history. My script read the word `PENDING` anywhere in the identifier and called it a placeholder, although its study has two receipts, one `complete_fulltext_read` (`FTR-20260909-15070730-02`), and PAPER 081 carries it.
-**Change:** (a) a record is a placeholder only when its whole Identifier is `PENDING` or it carries no PMID and no DOI; (b) the successor rule of Amendment 8 also applies to a Status of the form "promoted — see [[PAPER nnn]]". Four rows now carry a successor (PAPER 001 and CORPUS P206 twice and PAPER 112).
+**Change:** (a) a record is a placeholder only when its whole Identifier is `PENDING` or it carries no PMID and no DOI; (b) the successor rule of Amendment 8 also applies to a Status of the form "promoted — see" followed by a wikilink to a PAPER record. Four rows now carry a successor (PAPER 001 and CORPUS P206 twice and PAPER 112).
 **Numbers moved** (fifth run against fourth run): placeholders among the A1 and A2 rows 9 to 7; `complete_strict` 99 to 101; declared above attested 14 to 12 rows, below attested 25 to 27. No slice row, flag or rank moved (the change touches CLAIM 023 and CLAIM 028, outside the slice).
 
 ## Note on Amendment 3 after Amendment 6
