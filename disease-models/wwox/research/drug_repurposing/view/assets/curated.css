@@ -241,3 +241,5 @@ nav .navmain>a:hover{background:var(--accbg)}
 .cv-id{font-size:.72rem;border:1px dashed currentColor;border-radius:8px;padding:0 6px;white-space:nowrap}.cv-id-conflict{color:var(--bad)}.cv-id-unverified,.cv-id-partial{color:var(--warn)}.cv-id-checked{color:var(--ok)}
 
 .inv-cv-links{list-style:none;margin:0;padding:0}.inv-cv-links li{margin:.2em 0;font-size:.92em}.inv-cv-links a{text-decoration:none;color:inherit}.inv-cv-links a:hover,.inv-cv-links a:focus{text-decoration:underline}
+/* print: the kind chips of the compound lists may wrap (a long German label overflowed A4 by 19 px, 2026-11-19); after the base rule on purpose */
+@media print{.cv-kind{white-space:normal;overflow-wrap:anywhere}}
