@@ -119,6 +119,33 @@
      "accepted_at": "2026-11-19T11:52:34Z",
      "evidence": "v2 re-check: all six corrections fixed (V2_RECHECK_IT59.md); six placeholders: no receipt recoverable (DEEP_DIVED_PLACEHOLDERS_IT59.md); CC-20261119-ORCHESTRATOR-CLAIM025-GDM-ANCHOR-01 queued at 474c1950e6c3 and its id sent to the advisor.",
      "updated_at": "2026-11-19T11:52:34Z"
+    },
+    {
+     "step": "ADV-092 decision-dossier template, ordinal funding view and first opportunity map",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-092",
+     "accepted_at": "2026-11-19T20:10:23Z",
+     "evidence": "landed e0af18023, 0ceb91986, f9e90fa38 on development/main; ADV accepted 2026-11-19",
+     "updated_at": "2026-11-19T20:10:23Z"
+    },
+    {
+     "step": "ADV-089 scripted quote-and-number scan of the 26 consumed claims",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-089",
+     "accepted_at": "2026-11-19T20:10:23Z",
+     "evidence": "landed 0ceb91986; ADV accepted 2026-11-19",
+     "updated_at": "2026-11-19T20:10:23Z"
+    },
+    {
+     "step": "ADV-094 blind check of the pilot dossier and the hindcast scored blind",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-094",
+     "accepted_at": "2026-11-19T20:10:23Z",
+     "evidence": "landed 61e77cd71, 2962de440, f9e90fa38; ADV accepted 2026-11-19 (hindcast closed as diagnostic)",
+     "updated_at": "2026-11-19T20:10:23Z"
     }
    ]
   }
@@ -212,6 +239,27 @@
    "at": "2026-11-19T11:52:34Z",
    "source": "ADV message 2026-11-19 11:3x (ADV-077 re-check, six placeholders, CLAIM 025 CC)",
    "step_sha256": "ccba2996d4e5",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T20:10:23Z",
+   "source": "ADV-092",
+   "step_sha256": "82fb80f57911",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T20:10:23Z",
+   "source": "ADV-089",
+   "step_sha256": "257e5438610e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T20:10:23Z",
+   "source": "ADV-094",
+   "step_sha256": "f45ef217760a",
    "reopened_block": false,
    "authorised_by": null
   }
