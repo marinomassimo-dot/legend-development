@@ -4,6 +4,7 @@
     python3 framework/scripts/prediction_ledger.py sweep [--under PATH] [--out FILE]
     python3 framework/scripts/prediction_ledger.py check LEDGER.tsv [--receipts FILE] [--strict]
     python3 framework/scripts/prediction_ledger.py guard LEDGER.tsv --outcome PATH [--require PATH[=SHA256]]...
+    python3 framework/scripts/prediction_ledger.py summary LEDGER.tsv [LEDGER.tsv ...]
 
 WHY
 ---
@@ -62,6 +63,7 @@ COLUMNS = ["pred_id", "package", "statement_ref", "freeze_commit", "freeze_blob_
 OPTIONAL_COLUMNS = ["blindness", "outcome_sha256", "freeze_utc_declared"]   # `declared` says the outcome table is public and in the tree at the freeze: blindness is then a declaration, not shown by git
 BLINDNESS = {"", "shown", "declared"}   # `outcome_sha256` is the digest of the sealed outcome table (required once outcome_commit is set)
 KINDS = {"", "paper_content", "generative"}
+SMALL_N = 30    # below this many scored rows a hit rate is a count, never a weight on a new prediction (ADV-093, 2026-11-19)
 STATUSES = {"", "unclassified", "open", "held", "failed", "mixed", "unscorable"}
 CANDIDATE_COLUMNS = ["path", "via", "first_add_commit", "first_add_utc", "blob_sha256_at_add",
                      "commits_touching"]
@@ -349,6 +351,22 @@ def run_check(root: Path, ledger: Path, receipts: Path, strict: bool) -> int:
     return 1 if violations else 0
 
 
+def summarise(ledger: Path) -> list[str]:
+    """Counts by status per `kind` (a paper-content row and a generative row are different things and are never pooled); the rate is held / (held + mixed + failed) with its n beside it.
+    A count, not a calibration: below SMALL_N scored rows the line says so. Reads the ledger's own `status` cells only; it checks nothing against git (use `check`)."""
+    rows = read_ledger(ledger)
+    out = [f"{ledger}: rows {len(rows)}"]
+    for kind in sorted({r["kind"] for r in rows}):
+        part = [r for r in rows if r["kind"] == kind]
+        by = {s: sum(r["status"] == s for r in part) for s in ("held", "mixed", "failed", "open", "unscorable", "unclassified", "")}
+        n = by["held"] + by["mixed"] + by["failed"]
+        rate = f"held {by['held']} of {n} scored ({by['held'] / n:.0%})" if n else "no scored row"
+        note = f"; n {n} is below {SMALL_N}: a count, not a calibration" if n < SMALL_N else ""
+        rest = ", ".join(f"{k or 'blank'} {v}" for k, v in by.items() if v and k not in ("held", "mixed", "failed"))
+        out.append(f"  kind={kind or 'blank'}: rows {len(part)}; held {by['held']}, mixed {by['mixed']}, failed {by['failed']}; {rate}{note}" + (f"; {rest}" if rest else ""))
+    return out
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0],
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -367,8 +385,18 @@ def main(argv: list[str] | None = None) -> int:
     gd.add_argument("--require", action="append", default=[], metavar="PATH[=SHA256]",
                     help="a file that must be committed and unmodified (rule, freezes, baselines); repeatable")
     gd.add_argument("--receipts", default=DEFAULT_RECEIPTS)
+    sm = sub.add_parser("summary", help="counts of held, mixed (failed in part) and failed per ledger and kind, with n beside each rate")
+    sm.add_argument("ledgers", nargs="+")
     args = parser.parse_args(argv)
     root = Path(args.root).resolve()
+    if args.cmd == "summary":
+        try:
+            for ledger in args.ledgers:
+                print("\n".join(summarise(Path(ledger))))
+        except (OSError, ValueError, csv.Error) as exc:
+            print(f"invalid ledger: {exc}", file=sys.stderr)
+            return 2
+        return 0
     if args.cmd == "guard":
         receipts = Path(args.receipts)
         ok, lines = guard(root, Path(args.ledger), args.outcome, args.require, receipts if receipts.is_absolute() else root / receipts)

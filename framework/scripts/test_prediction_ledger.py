@@ -317,6 +317,30 @@ class CliExitCodes(Fixture):
         self.assertIn("candidates 1", err)
         self.assertTrue(out.read_text().startswith("\t".join(pl.CANDIDATE_COLUMNS)))
 
+    def test_summary_counts_per_kind_and_never_pools_kinds(self):
+        head = "\t".join(pl.COLUMNS) + "\n"
+
+        def row(i, kind, status):
+            cells = {c: "" for c in pl.COLUMNS}
+            cells.update(pred_id=i, kind=kind, status=status)
+            return "\t".join(cells[c] for c in pl.COLUMNS) + "\n"
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "l.tsv"
+            path.write_text(head + row("a", "generative", "held") + row("b", "generative", "failed") + row("c", "generative", "mixed")
+                            + row("d", "generative", "open") + row("e", "paper_content", "held"))
+            out = io.StringIO()
+            with contextlib.redirect_stdout(out):
+                self.assertEqual(pl.main(["summary", str(path)]), 0)
+        text = out.getvalue()
+        self.assertIn("kind=generative: rows 4; held 1, mixed 1, failed 1; held 1 of 3 scored (33%)", text)
+        self.assertIn("is below 30: a count, not a calibration", text)
+        self.assertIn("kind=paper_content: rows 1; held 1, mixed 0, failed 0; held 1 of 1 scored (100%)", text)
+
+    def test_summary_of_a_missing_ledger_exits_two(self):
+        err = io.StringIO()
+        with contextlib.redirect_stderr(err):
+            self.assertEqual(pl.main(["summary", "/nonexistent/ledger.tsv"]), 2)
+
     def test_help_is_safe_and_writes_nothing(self):
         before = run(self.root, "status", "--porcelain")
         with contextlib.redirect_stdout(io.StringIO()), self.assertRaises(SystemExit) as stop:
