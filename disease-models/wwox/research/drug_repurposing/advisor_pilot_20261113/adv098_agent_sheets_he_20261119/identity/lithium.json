@@ -1,0 +1,162 @@
+{
+ "identity": {
+  "query": "lithium",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL1201333",
+    "record_name": "LITHIUM",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1201333",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1201333",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:be65bb20ae7f",
+    "record_name": "Lithium",
+    "match_kind": "NAME_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1200826",
+    "record_name": "LITHIUM CARBONATE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1200826",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1200826",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1201170",
+    "record_name": "LITHIUM CITRATE ANHYDROUS",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": null,
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1201170",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2103738",
+    "record_name": "LITHIUM CITRATE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1201170",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2103738",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL3707288",
+    "record_name": "LITHIUM SUCCINATE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL3707288",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL3707288",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:0408436e6031",
+    "record_name": "Lithium Cation",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:50ccc7b5c33e",
+    "record_name": "Lithium Carbonate",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:bc9225cea0c7",
+    "record_name": "Lithium Succinate",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:cfa5bd0a6c8c",
+    "record_name": "Lithium Citrate",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "GSK3B",
+   "IMPA1",
+   "IMPA2"
+  ],
+  "per_gene": {
+   "GSK3B": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "IMPA1": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "IMPA2": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL1201333",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "NO_MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 0
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "FAM178B": 1,
+   "CACNG2": 1,
+   "ASIC2": 1,
+   "SH2B1": 1,
+   "RABEP1": 1,
+   "SCN5A": 1,
+   "CREB1": 1,
+   "ADCY1": 1
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}

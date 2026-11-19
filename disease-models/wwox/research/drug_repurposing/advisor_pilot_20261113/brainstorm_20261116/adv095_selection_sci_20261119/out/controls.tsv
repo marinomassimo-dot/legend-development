@@ -1,0 +1,5 @@
+dataset	control	value	expectation
+D2_cortex_S	REF_STABLE shift (R)	0.05	negative control: expected |shift| < 0.3
+D2_cortex_S	WWOX shift (R)	-1.451	positive control: expected negative
+D1_organoid	NEU panel shift KO minus WT (R)	-0.425	negative control reference; maturity covariate itself
+D1_organoid	WWOX shift (R)	0.427	positive control: expected negative

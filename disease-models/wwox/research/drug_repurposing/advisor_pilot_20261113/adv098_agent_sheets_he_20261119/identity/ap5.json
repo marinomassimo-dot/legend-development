@@ -1,0 +1,72 @@
+{
+ "identity": {
+  "query": "AP5",
+  "identity_state": "NAME_PARTIAL",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:DGIDB:9f8eaf3991d6",
+    "record_name": "Snap5089",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:b0ca5cf2303c",
+    "record_name": "D-Ap5",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL84612",
+      "basis": "gtopdb_ligand_reconciliation",
+      "in_catalogue": "no",
+      "decision": "out_of_selection",
+      "gtopdb_inchikey": "VOROEQBFPPIACJ-SCSAIBSYSA-M"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:b504808a0792",
+    "record_name": "Ap5A",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "GRIN1",
+   "GRIN2A",
+   "GRIN2B"
+  ],
+  "per_gene": {
+   "GRIN1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "GRIN2A": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "GRIN2B": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {},
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}

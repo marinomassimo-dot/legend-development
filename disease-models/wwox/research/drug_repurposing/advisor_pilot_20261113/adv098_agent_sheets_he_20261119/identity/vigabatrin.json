@@ -1,0 +1,84 @@
+{
+ "identity": {
+  "query": "vigabatrin",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL89598",
+    "record_name": "VIGABATRIN",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL89598",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL89598",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:358b8a817686",
+    "record_name": "Vigabatrin",
+    "match_kind": "NAME_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL96",
+    "record_name": "GAMMA-AMINOBUTYRIC ACID",
+    "match_kind": "SYNONYM_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL96",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL96",
+      "basis": "record"
+     }
+    ]
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "ABAT"
+  ],
+  "per_gene": {
+   "ABAT": {
+    "level": "CURATED_MECHANISM",
+    "n_rows": 15,
+    "rows": [
+     "CURATED_MECHANISM: CAT:CHEMBL89598",
+     "SOURCE_INTERACTION: CAT:DGIDB:358b8a817686",
+     "SOURCE_INTERACTION: CAT:DGIDB:358b8a817686",
+     "SOURCE_INTERACTION: CAT:DGIDB:358b8a817686",
+     "SOURCE_INTERACTION: CAT:DGIDB:358b8a817686",
+     "SOURCE_INTERACTION: CAT:DGIDB:358b8a817686"
+    ]
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL89598",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 15
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "SLC32A1": 1,
+   "GABBR1": 1,
+   "ABCB11": 1,
+   "ABCC2": 1,
+   "ABCC3": 1,
+   "ABCC4": 1
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
