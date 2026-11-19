@@ -198,6 +198,13 @@
      "accepted_at": "2026-11-19T09:29:28Z",
      "evidence": "g_read_not_carried_audit_sci_20261119/G_AUDIT_AS_DELIVERED.md and G_SPOT_CHECK_AND_SUMMARY_SCI_20261119.md: 78 results, 30 carried, 16 partly, 30 not carried, 2 unclear; ranked ten; blind spot-check of five rows; delivered to ADV and IT",
      "updated_at": "2026-11-19T09:41:45Z"
+    },
+    {
+     "step": "H (ADV-074): glucose and metabolic axis first pass with COMPLETE originals: skeletal-muscle conditional knockout, the null mouse metabolic crisis, the lde/lde rat serum; does hypoglycaemia or a metabolic state drive excitability and death in the null pup or only accompany it; which measurement separates them; does the ketogenic-diet comparison (U15) gain or lose its rationale; decision it changes: whether a glucose and ketone series enters the in vivo pup brief and whether the metabolic lever becomes a comparison; stop rule: no age-resolved glucose datum beyond P10 and no link to seizure timing -> close with the reason and take the next ranked audit item",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "advisor message 2026-11-19 (ADV-074: glucose and metabolic axis first pass with complete originals; consumer lines first)",
+     "accepted_at": "2026-11-19T09:46:24Z"
     }
    ]
   }
@@ -347,6 +354,13 @@
    "at": "2026-11-19T09:29:28Z",
    "source": "SCI continuation 2026-11-19 named follow-up G (read-but-not-carried audit)",
    "step_sha256": "ce37fb66b8f7",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T09:46:24Z",
+   "source": "advisor message 2026-11-19 (ADV-074: glucose and metabolic axis first pass with complete originals; consumer lines first)",
+   "step_sha256": "d9db16bfb9cf",
    "reopened_block": false,
    "authorised_by": null
   }
