@@ -1,0 +1,70 @@
+{
+ "identity": {
+  "query": "XE991",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:DGIDB:6067b4b58fc4",
+    "record_name": "Xe991",
+    "match_kind": "NAME_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL342375",
+      "basis": "gtopdb_ligand_reconciliation",
+      "in_catalogue": "no",
+      "decision": "out_of_selection",
+      "gtopdb_inchikey": "KHJFBUUFMUBONL-UHFFFAOYSA-N"
+     }
+    ]
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "KCNQ2",
+   "KCNQ3"
+  ],
+  "per_gene": {
+   "KCNQ2": {
+    "level": "SOURCE_INTERACTION",
+    "n_rows": 2,
+    "rows": [
+     "SOURCE_INTERACTION: CAT:DGIDB:6067b4b58fc4",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL342375 IC50 Homo sapiens"
+    ]
+   },
+   "KCNQ3": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL342375",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 7
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "ADRA1A": 2,
+   "KCNQ1": 1,
+   "KCNQ5": 1,
+   "KCNQ4": 1,
+   "DRD3": 1,
+   "PBRM1": 1,
+   "ADRA1B": 1,
+   "ADRA1D": 1
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
