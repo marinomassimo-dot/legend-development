@@ -4,6 +4,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 import scout_daily as sd
 
@@ -127,6 +128,40 @@ class RelevantResource(unittest.TestCase):
         report, _ = sd.run(state, self.WATCH[:1], [], self.opener(), pm([]))
         self.assertEqual("BASELINE", report["watch"][0]["result"])
         self.assertEqual([], report["selected"])
+
+
+class PmidMention(unittest.TestCase):
+    """2026-11-19: a TO_TRIAGE item already triaged by a held note cost a round trip; the radar now names the file that mentions the PMID, and only that."""
+
+    def test_a_pmid_is_found_as_a_whole_word_in_tracked_notes_and_a_substring_is_not(self):
+        import subprocess, tempfile
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            ident = "fixture" + "@" + "invalid"
+            for cmd in (["init", "-q"], ["config", "user.email", ident], ["config", "user.name", "t"]):
+                subprocess.run(["git", "-C", td, *cmd], check=True)
+            (root / "notes").mkdir()
+            (root / "notes" / "a.md").write_text("triaged PMID 43048821 at abstract level\n")
+            (root / "notes" / "b.md").write_text("accession 1430488210 is not a PMID\n")
+            (root / "table.csv").write_text("43048821,x\n")
+            subprocess.run(["git", "-C", td, "add", "-A"], check=True)
+            subprocess.run(["git", "-C", td, "commit", "-qm", "x"], check=True)
+            self.assertEqual(sd.mentions("43048821", root), ["notes/a.md"])                # whole word, not the longer number, not the bulk table
+            self.assertEqual(sd.mentions("11111111", root), [])
+
+    def test_the_pubmed_entry_names_the_file_and_keeps_the_item(self):
+        with mock.patch.object(sd, "mentions", side_effect=lambda pmid, *a, **k: ["notes/a.md"] if pmid == "2" else []):
+            sel = self._pubmed_selected(["1", "2"])
+        self.assertIn("2 title 2 [already mentioned in notes/a.md]", sel["detail"])
+        self.assertNotIn("1 title 1 [already", sel["detail"])
+        self.assertIn("2 already mentioned in notes/a.md", sel["contribution_vs_existing"])
+        self.assertTrue(sel["outcome"].startswith("TO_TRIAGE"))                           # kept, not dropped
+
+    @staticmethod
+    def _pubmed_selected(ids):
+        _, state = go({}, ids=["0"])                                                         # a baseline exists, so the new ids are reported
+        report, _ = sd.run(state, WATCH, QUERIES, make_opener(), pm(["0", *ids]))
+        return next(x for x in report["selected"] if x["id"].startswith("PubMed:"))
 
 
 class Bridge(unittest.TestCase):

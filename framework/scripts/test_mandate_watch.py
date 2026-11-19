@@ -466,6 +466,29 @@ class Routing(unittest.TestCase):
         self.assertEqual(mw.check_recipients("no addressing line here", ["HE"], self.live, self.root)["verdict"], "NO_DECLARED_RECIPIENT")
 
 
+class ReleasedCheck(unittest.TestCase):
+    """The successor's check that the old session released the task: exit 0 only for RELEASED; a wrong id or folder is MISSING (exit 2), never a release."""
+
+    def run_cli(self, path):
+        buf = io.StringIO()
+        with mock.patch.object(mw, "transcript_for_session", return_value=path), contextlib.redirect_stdout(buf):
+            rc = mw.main(["released", "--session", "11111111-2222-3333-4444-555555555555", "--task", "T-1"])
+        return rc, buf.getvalue()
+
+    def test_states_and_exit_codes(self):
+        with tempfile.TemporaryDirectory() as td:
+            f = Path(td) / "t.jsonl"
+            text = lambda t: json.dumps({"type": "assistant", "message": {"content": [{"type": "text", "text": t}]}}) + "\n"
+            self.assertEqual(self.run_cli(None)[0], 2)                                                  # no transcript found for that id
+            self.assertEqual(self.run_cli(Path(td) / "absent.jsonl")[0], 2)
+            f.write_text(text("MANDATE_BOUND: T-1"), encoding="utf-8")
+            rc, out = self.run_cli(f)
+            self.assertEqual((rc, out.split()[0]), (1, "BOUND"))
+            f.write_text(f.read_text() + text("MANDATE_RELEASED: T-1"), encoding="utf-8")
+            rc, out = self.run_cli(f)
+            self.assertEqual((rc, out.split()[0]), (0, "RELEASED"))
+
+
 class FreshWindowRoute(unittest.TestCase):
     """ADV-078 trial, measured 2026-11-19: a fresh window of a record with NO SESSION_NAME left two live sessions named SCI; route said AMBIGUOUS although the old one had written MANDATE_RELEASED."""
     OLD = "9400b253-25a0-4b03-8822-96361325fc16"

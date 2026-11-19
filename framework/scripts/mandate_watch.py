@@ -1011,6 +1011,9 @@ def main(argv: list[str] | None = None) -> int:
     rb.add_argument("--to", required=True, help="the substitute: a session id, its name, or a role alias")
     rb.add_argument("--authorised-by", default="", help="where the operator authorised the substitute (message, roadmap entry, record line)")
     rb.add_argument("--root", default=str(ROOT))
+    rl = sub.add_parser("released", help="has the OLD session released this task? (a successor's check, by session id: MISSING, NEVER_BOUND, BOUND or RELEASED; exit 0 only for RELEASED)")
+    rl.add_argument("--session", required=True, help="the old session's id (the transcript is found by id, in whichever project folder it lives)")
+    rl.add_argument("--task", required=True)
     rs = sub.add_parser("resources", help="observed memory, pressure, swap, the cgroups holding most RSS and the live jobs (read-only, no thresholds)")
     rs.add_argument("--top", type=int, default=8)
     e = sub.add_parser("events", help="what the watch decided on this machine")
@@ -1033,6 +1036,11 @@ def main(argv: list[str] | None = None) -> int:
         else:
             print("collected" if job_collect(a.task, a.id) else "not found")
         return 0
+    if a.cmd == "released":
+        path = transcript_for_session(a.session)
+        state = mc.marker_state(path, a.task) if path else "MISSING"
+        print(f"{state} (session {a.session[:8]}, task {a.task}" + (f", {path}" if path else ", no transcript found for that id") + ")")
+        return 0 if state == "RELEASED" else (2 if state == "MISSING" else 1)
     if a.cmd == "resources":
         print(json.dumps(resource_state(top=a.top, sessions=list_sessions()), indent=1, sort_keys=True))
         return 0

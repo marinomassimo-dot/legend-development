@@ -543,9 +543,32 @@ def scan_transcript(path: Path) -> tuple[str | None, int, int]:
     return bound, lines, entries
 
 
-def binding_from_transcript(path: Path) -> str | None:
-    """The last marker LINE in this session's own text wins; RELEASED clears BOUND."""
-    return scan_transcript(path)[0]
+def binding_from_transcript(path: Path | str) -> str | None:
+    """The last marker LINE in this session's own text wins; RELEASED clears BOUND. A missing file is unbound (the Stop hook must not block on it); use `marker_state` when the
+    difference between 'released' and 'wrong folder' matters. Accepts a str or a Path."""
+    return scan_transcript(Path(path))[0]
+
+
+def marker_state(path: Path | str, task: str) -> str:
+    """For ONE task: MISSING (no such transcript: a wrong folder is not a release), NEVER_BOUND, BOUND or RELEASED, from the last marker line of that task in the session's own text.
+    ADV-078, 2026-11-19: a successor checked the old session's transcript under the wrong project folder, got None and read it as a release."""
+    p = Path(path)
+    if not p.is_file():
+        return "MISSING"
+    state = "NEVER_BOUND"
+    with p.open(encoding="utf-8", errors="replace") as fh:
+        for line in fh:
+            try:
+                entry = json.loads(line)
+            except ValueError:
+                continue
+            if not isinstance(entry, dict):
+                continue
+            for text in _text_blocks(entry):
+                for kind, t in MARKER_RE.findall(_outside_fences(text)):
+                    if t == task:
+                        state = "BOUND" if kind == "BOUND" else "RELEASED"
+    return state
 
 
 def launcher_binding() -> str | None:
