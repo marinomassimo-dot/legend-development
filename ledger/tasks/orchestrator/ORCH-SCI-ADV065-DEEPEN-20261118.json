@@ -354,6 +354,15 @@
      "accepted_at": "2026-11-19T15:53:30Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/unread_corpus_adv086_sci_20261119/UNREAD_CORPUS_RANKING_ADV086_SCI_20261119.md: ranking and access list; stop rule applied (obtainable texts cannot change a decision; clinical open copies refused to plain clients, a challenge is a stop); no text read, no receipt, no delegate",
      "updated_at": "2026-11-19T15:57:01Z"
+    },
+    {
+     "step": "ADV-087 supply sheet: ONE two-page sheet for a person with a browser (identifier, title, year, decision, legal source, file name, folder, pickup by evidence_presence and receipt dry-run, nothing sent), replacing the scattered lists of item 14; writing only, fetch nothing; then idle with the reason written if no unit remains",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-087 (assignments/ADV-087.md) and ADV message 2026-11-19",
+     "accepted_at": "2026-11-19T16:17:05Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/supply_sheet_adv087_sci_20261119/SUPPLY_SHEET_FOR_THE_HUMAN_VISIT_SCI_20261119.md: one sheet, 22 rows in decision order, nothing fetched, nothing sent",
+     "updated_at": "2026-11-19T16:18:55Z"
     }
    ]
   }
@@ -622,6 +631,13 @@
    "at": "2026-11-19T15:53:30Z",
    "source": "ADV-086 (assignments/ADV-086.md) and ADV message 2026-11-19",
    "step_sha256": "acb80cac474a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T16:17:05Z",
+   "source": "ADV-087 (assignments/ADV-087.md) and ADV message 2026-11-19",
+   "step_sha256": "0fdb31bd6e04",
    "reopened_block": false,
    "authorised_by": null
   }
