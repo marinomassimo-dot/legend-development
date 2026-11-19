@@ -1045,6 +1045,17 @@ class DocumentedCommandsPrecheckTests(unittest.TestCase):
         self.assertIn("candidate_tree_freshness.py --paths", done.stdout)
         self.assertIn("PRECHECK_VERDICT: PASS", done.stdout)
 
+    def test_a_receipts_ledger_in_the_change_adds_the_two_pages_to_the_reminder(self) -> None:
+        root = self.make_repo(doc="Run `python3 scripts/public_release_gate.py --help`.\n")
+        ledger = root / "disease-models/wwox/registries/fulltext_read_receipts.jsonl"
+        ledger.parent.mkdir(parents=True)
+        ledger.write_text('{"event_id": "x"}\n', encoding="utf-8")
+        subprocess.run(["git", "-C", str(root), "add", "."], check=True, capture_output=True)
+        with_ledger = self.run_gate(root, "--paths", "ok.md", "disease-models/wwox/registries/fulltext_read_receipts.jsonl")
+        self.assertIn("REMINDER (receipts ledger in this change)", with_ledger.stdout)
+        self.assertIn("coverage_report.md and reading_state.md", with_ledger.stdout)
+        self.assertNotIn("receipts ledger", self.run_gate(root, "--paths", "ok.md").stdout)             # only when the ledger is in the change
+
     def test_the_full_gate_does_not_print_the_reminder(self) -> None:
         root = self.make_repo(doc="Run `python3 scripts/public_release_gate.py --help`.\n")
         done = self.run_gate(root, "--skip-clean-clone")

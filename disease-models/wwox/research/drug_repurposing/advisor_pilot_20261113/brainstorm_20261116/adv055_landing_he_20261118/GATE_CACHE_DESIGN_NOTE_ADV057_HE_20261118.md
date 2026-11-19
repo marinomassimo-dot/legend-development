@@ -57,3 +57,6 @@ The saving section above says the lock hold would fall to about 0.9 min "if the 
 
 ## Update 2026-11-18 (HE, battery on 6320348db5): the differential proof's base-suite size
 The release battery on 6320348db5 failed `scripts/test_public_release_gate_cache.py` (`DifferentialSuite`): the proof pins the size of the base gate suite (`result.testsRun`, 70), and my pre-check REMINDER change (16e1468bb) added two tests to `scripts/test_public_release_gate.py`, so the base suite ran 72. The proof itself (identical findings cold, warm, verify and uncached for every fixture) was not what failed; the pinned count is now 72. The two new tests are fixtures of the pre-check output and use no cache. I ran `test_public_release_gate.py` after that change but not this suite, which is why the count was found by the battery and not before it.
+
+## Update 2026-11-19 (HE): the pinned base-suite size is now 73
+A third test in `scripts/test_public_release_gate.py` (the receipts-ledger reminder) raised the base gate suite from 72 to 73; the pinned count in `test_public_release_gate_cache.py` was updated in the same change, found by the lookup of suites that name the changed test file (README section 13), this time before the push.

@@ -1659,6 +1659,10 @@ def main() -> int:
         # refused later, at the exact tree, by the freshness check; naming it here moves that discovery before the queue.
         print("REMINDER (not run here, no verdict): derived surfaces are not checked by this pre-check; before the queue run "
               "`python3 framework/scripts/candidate_tree_freshness.py --paths <the files you changed>`.")
+        if any(str(rel).endswith("fulltext_read_receipts.jsonl") for rel in (ONLY_PATHS or ())):
+            # 2026-11-19 (ADV, twice in a day): a receipts landing leaves coverage_report.md and reading_state.md behind the ledger, and CI fails test_coverage_report and test_reading_state.
+            print("REMINDER (receipts ledger in this change): coverage_report.md and reading_state.md are derived from it; regenerate both on the tip before the queue "
+                  "(the freshness command above prints the exact lines) and run `python3 framework/scripts/test_coverage_report.py` and `python3 framework/scripts/test_reading_state.py`.")
     for finding in findings:
         print(
             f"[{finding.severity}] {finding.code} "
