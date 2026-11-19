@@ -55,6 +55,7 @@ import growth_anchors  # noqa: E402 - the single definition of a canonical recor
 ACTION = {
     "NEW": "start here — never seen by the system",
     "CORPUS_CATALOGUED": "start here — catalogued, never processed",
+    "CORPUS_RECEIPTED": "see read depth — the registry placeholder lags a receipt (not a start-here row)",
     "OUT_OF_SCOPE_LIKELY": "later in the queue — no scope signal in the title",
     "AMBIGUOUS": "resolve identifiers first",
     "AGGREGATE_LINE": "split the row first",
@@ -64,6 +65,7 @@ ACTION = {
 ACTION_RANK = {
     "NEW": 0,
     "CORPUS_CATALOGUED": 1,
+    "CORPUS_RECEIPTED": 1.5,
     "AMBIGUOUS": 2,
     "AGGREGATE_LINE": 3,
     "OUT_OF_SCOPE_LIKELY": 4,
@@ -508,6 +510,11 @@ def _build_uncached(root: Path, disease: str) -> dict:
             {"line": line, "raw": "", "aggregate": "no"}, records, identifier_index
         )
         triage_class = verdict["class"]
+        # IT59 (2026-11-19): 53 'start here — catalogued, never processed' rows had a read depth beyond catalogued (23 full text, 21 partial, 9 abstract only): the intake gate classifies by the
+        # registry record (a CORPUS placeholder), the depth comes from the receipt ledger, and a batch started on the first column began on papers already read. The row is kept, with its
+        # own class and its depth, and leaves the start-here list; nothing is hidden and no depth changes.
+        if triage_class == "CORPUS_CATALOGUED" and depth in ("full text", "partial full text", "abstract only"):
+            triage_class = "CORPUS_RECEIPTED"
         actions[triage_class] = actions.get(triage_class, 0) + 1
 
         queue.append(

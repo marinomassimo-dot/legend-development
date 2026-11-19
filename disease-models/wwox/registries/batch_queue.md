@@ -8,12 +8,12 @@
 
 ## ▶ Start here
 
-**294 records have not been processed.** **137** of them have a free full text and can be worked immediately.
+**241 records have not been processed.** **117** of them have a free full text and can be worked immediately.
 
 | Verdict | Records | What it means |
 |---|---:|---|
 | 🟢 **`NEW`** | 52 | never seen by the system — **the front of the queue** |
-| 🟢 **`CORPUS_CATALOGUED`** | 242 | catalogued and deduplicated, never analytically processed |
+| 🟢 **`CORPUS_CATALOGUED`** | 189 | catalogued and deduplicated, never analytically processed |
 | 🟡 `OUT_OF_SCOPE_LIKELY` | 176 | no scope signal in the title — later in the queue, **never discarded** |
 | 🟡 `AMBIGUOUS` | 4 | identifiers must be resolved before ingest |
 | ⏳ `IN_PIPELINE` | 35 | already in flight |
