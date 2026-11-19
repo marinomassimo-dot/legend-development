@@ -164,3 +164,7 @@
 {"evidence": "SendMessage at 14:31Z 2026-11-19, receipt names SCI (b5892cd0), after its bind at checkpoint E", "id": "ADV-083", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T14:31:58Z"}
 {"assessment": "HOST", "id": "ADV-084", "key": "claim-005-wording-audit-npy-pv-sentences", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T14:58:34Z"}
 {"evidence": "SendMessage to SCI [b572dc] at 14:58Z 2026-11-19 after the CLAIM 002 verdict", "id": "ADV-084", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T14:58:34Z"}
+{"assessment": "HOST", "id": "ADV-085", "key": "pv-population-maturation-first-pass-rp019", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T15:12:51Z"}
+{"evidence": "SendMessage to SCI [b572dc] at 15:12Z 2026-11-19 after the CLAIM 005 verdict", "id": "ADV-085", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T15:12:52Z"}
+{"assessment": "HOST", "id": "ADV-086", "key": "unread-corpus-top-two-obtainable-neural-mechanism-texts", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T15:53:15Z"}
+{"evidence": "SendMessage to SCI [b572dc] at 15:53Z 2026-11-19 after its row-6 delivery", "id": "ADV-086", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T15:53:15Z"}
