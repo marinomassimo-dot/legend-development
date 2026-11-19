@@ -210,10 +210,12 @@
     },
     {
      "step": "I (ADV-076): (a) residual Wwox transcript and deletion completeness by region, age and line in the neuronal knockouts, and what it does to the reading of ADV-068 to ADV-070 and to the slice pilot; (b) Hussain 2023 Olig2 counts fall while Mbp area is unchanged: original read and consequence for the myelin cards and the composition caveat",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "advisor message 2026-11-19 (ADV-076: residual Wwox transcript and deletion completeness; Olig2 counts against Mbp area)",
-     "accepted_at": "2026-11-19T10:08:47Z"
+     "accepted_at": "2026-11-19T10:08:47Z",
+     "evidence": "i_deletion_completeness_olig2_adv076_sci_20261119/DELETION_COMPLETENESS_AND_OLIG2_ADV076_SCI_20261119.md: (a) residual Wwox per animal, KO3 inside the control range, stage and deletion depth not separable; (b) Olig2 vs Mbp is a cross-region contrast with the Mbp side in an unheld supplement; delivered to ADV and IT",
+     "updated_at": "2026-11-19T10:09:28Z"
     }
    ]
   }
@@ -397,6 +399,7 @@
   "R1 producer (legend-delegate, agent af313fa4, 2026-11-19, conduction and myelination extraction from held originals, figures viewed): asked sonnet/medium; read back sonnet x22, medium x22; birth 21,323; 22 turns; output 17,240; cache read 1,124,389; peak 84,935; 24 tool calls (cap 80); 151 s; legend check of the conduction n done against the held text by me.",
   "R3 producer (legend-delegate, agent a200d7aa, 2026-11-19, sign-compatibility reading with frozen rules): asked sonnet/medium; read-back in the census at completion; 16 to 20 tool calls (cap 50); 87 s; abstract-level only (full texts not obtainable).",
   "G producer (legend-delegate, agent ae2b9c0f, 2026-11-19, read-but-not-carried audit of 20 held papers): asked sonnet/medium; read back sonnet x31, medium x31; birth 21,486; 31 turns; output 46,064; cache read 2,660,468; peak 173,559; about 31 tool calls (cap 90); 6.0 min; 78 results: 30 carried, 16 partly, 30 not carried, 2 unclear; blind spot-check of five rows (seed 20261119) by me: one route miss, one possible over-credit.",
-  "R4 producer (legend-delegate, agent abcc975b, 2026-11-19, ADV-074 glucose and metabolic first pass from held originals, figures viewed where held): asked sonnet/medium; read back sonnet x50, medium x50; birth 21,440; 50 turns; output 29,912; cache read 6,158,342; peak 204,026; 54 tool calls (cap 90); 4.8 min; one figure independently viewed by me; absence in the Brain 2021 paper re-checked by concept words."
+  "R4 producer (legend-delegate, agent abcc975b, 2026-11-19, ADV-074 glucose and metabolic first pass from held originals, figures viewed where held): asked sonnet/medium; read back sonnet x50, medium x50; birth 21,440; 50 turns; output 29,912; cache read 6,158,342; peak 204,026; 54 tool calls (cap 90); 4.8 min; one figure independently viewed by me; absence in the Brain 2021 paper re-checked by concept words.",
+  "R5 producer (legend-delegate, agent a2241a17, 2026-11-19, ADV-076 part b, Hussain 2023 Olig2 and Mbp): asked sonnet/medium; read-back in the census at completion; 8 tool calls; 50 s; main figures viewed, supplement not held."
  ]
 }
