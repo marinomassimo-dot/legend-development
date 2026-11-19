@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-19T08:32:33Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-19T09:12:33Z",
+ "event_id": "FTR-20261119-30214895-71",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"TMEM207, and its relatives are aberrantly expressed in various cancer cells and hinder the tumor suppressor function of WWOX through inhibiting its WW domain\"",
+  "verbatim_locator [Introduction]: \"Note the PPxY motif, which binds WW-domain, at the C-terminus\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/b_ww1_ppxy_first_pass_sci_20261119/B_WW1_PPXY_FIRST_PASS_SCI_20261119.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "8c77769fb8809d77d0ec97c965561bace643168c1a83de55cda287e43a7882d4",
+ "source_kind": "fulltext_remote",
+ "source_locator": "files/fulltext/b_ww1_ppxy_20261119/Saigo2018_review_PMC6125347.xml",
+ "study_id": {
+  "pmid": "30214895"
+ },
+ "workflow": "SCI B first pass: complete text read by a producer delegate (R2, sonnet medium) with figures not viewed; this receipt records only the sections in which the quoted sentences were located in the saved bytes by me; the rest of the reading is the delegate's and is not receipted here"
+}
