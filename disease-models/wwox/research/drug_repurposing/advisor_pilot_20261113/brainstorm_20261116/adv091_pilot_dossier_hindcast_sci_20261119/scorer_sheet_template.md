@@ -1,0 +1,48 @@
+# Hindcast freeze, SCORER SHEET: disguised pairs, components, rubric, scoring protocol and analysis plan (SCI, ADV-091 item 2, 2026-11-19; hashed before any scoring)
+
+Hypothesis level. This is a **diagnostic** of whether fixed scoring components separate drug-outcome pairs that ended well from pairs that did not, on known outcomes. It is never a licence for any use of any agent in any person, and no score computed from it is a probability of benefit. No dose, schedule or recommendation. Not medical advice. No individual-level information is used or recorded.
+
+**Who sees what.** Part A (sections 1 to 5 and the pair table) is all a scorer receives. Part B (sections 6 to 9) is for the analyst and is not given to the scorer. The identities, sentences and labels are in the KEY file, which a scorer never receives; the sha256 of both files is in `HINDCAST_FREEZE_MANIFEST_ADV091_SCI_20261119.md`, written after this file was final and before any score exists.
+
+## PART A (given to the scorer)
+
+### 1. The pairs
+Twelve pairs, each a class-level description of a drug action in a genotype or disease class, with the age group and the endpoint. Names of genes and drugs are not given. The scorer may use only literature dated up to and including the date-cut printed for that pair.
+
+@@PAIR_TABLE@@
+
+### 2. Components, fixed before any scoring
+Score each pair on four components, each 0, 1 or 2, from information dated up to the date-cut only. Components are never summed by the scorer and carry no weight. One sentence of justification per component, naming the kind of evidence used (not a citation the scorer cannot check).
+* **C1 Target engaged** (the agent reaches and acts on its target in a tissue relevant to the endpoint). 0 = no evidence, or evidence against; 1 = evidence in an adjacent system (another species, cell type, tissue or age); 2 = evidence in the matching system.
+* **C2 Direction** (the action moves the pathway the opposite way to the genotype class's effect). 0 = the same way, or the direction is unknown; 1 = indirect or mixed; 2 = directly opposite.
+* **C3 Phenotype relevance** (the pathway bears on the endpoint). 0 = no evidence it does; 1 = it does in another condition; 2 = it does in this genotype class (a model or humans).
+* **C4 Transfer** (human evidence for this genotype class and age group). 0 = none; 1 = a related class or age group; 2 = the same class and age group.
+A component the scorer cannot place is scored 0 and flagged `unknown`; unknown is never rounded up.
+
+### 3. Date-cut rule
+The cut is 31 December of the year two years before the year of the paper that fixed the pair's outcome. Why two: a result can be announced, presented or posted a year or more before its paper. What it does not do: earlier reports of the same drug in the same class that fall inside the cut stay available to the scorer (a pair whose outcome had a precedent is scored with that precedent), and a press release or congress abstract before the cut was not searched for.
+
+### 4. Scoring protocol
+One fresh context per pair; the scorer receives this Part A and one pair row only, plus the instruction to use only literature up to the date-cut; no tool access to the web; no other pair is visible, so pairs cannot be scored by contrast. The same scorer model, effort and prompt for all twelve pairs, stated in the run record. After all twelve scores are saved, a separate fresh call shows each pair row alone and asks, in one question, "do you recognise this pair, and if so what is the drug, the gene or disease and the outcome you remember?"; the answer is recorded as identified, partly identified or not identified.
+
+### 5. What a score is not
+A score is not a prediction of an outcome, not a probability, and not a ranking of any candidate in the Wwox programme. It exists only to test whether the same four components separate known successes from known failures in this set.
+
+## PART B (analyst only; not given to the scorer)
+
+### 6. The set, and how it was chosen
+Twelve pairs: six with a positive outcome and six with a negative one, labelled by the rule in section 7. **The set is a convenience set chosen by its author from memory of outcomes and then read in sources; it is not a sample of any population, and it is not the Wwox candidate space, where no outcome exists.** Rule for the positives: one pair per distinct disease, taken in the order of the author's pre-reading list (stiripentol, fenfluramine, cannabidiol, everolimus, ganaxolone, ketogenic diet, pyridoxine, sodium-channel blockers); fenfluramine and cannabidiol were skipped because they share a disease with stiripentol, and sodium-channel blockers in KCNQ2 took the sixth place. Four read positive pairs stay in the KEY file as a reserve and are not scored. The negatives are every readable negative the author found; they were searched for by name of failure, so the negative arm was built by a more directed search than the positive arm. **One pair of the original list of thirteen was dropped for lack of a readable source (the number dropped is 1, see the KEY file)**; three negatives were added after reading.
+
+### 7. Outcome rule (fixed before scoring; labels were assigned with the sources in view)
+**POS** = a randomised trial met its primary seizure endpoint; or at least half of the genotype-class patients in an observational series reached seizure freedom or a 50 percent reduction; or the authors state the drug class was the most effective one in a cohort where no proportion is given (one pair, flagged in the KEY). **NEG** = a randomised trial missed its primary endpoint; or aggravation in a majority; or fewer than one third of patients reached a 50 percent reduction; or a trial stopped for harm or lack of efficacy. **Endpoint class: seizure control** (frequency, burden, response or freedom). Designs differ across pairs (randomised trials, an open trial, cohorts, case series) and are listed in the KEY. One negative (a randomised trial with a primary p of .061 and a numerical benefit) is borderline: the analysis is reported with and without it.
+
+### 8. Analysis plan
+* **Statistic.** For each component and for the unweighted sum of the four, the area under the ROC curve (AUC) of the score for POS against NEG (Mann-Whitney U over 36 pairings of a positive with a negative, ties counted one half). The sum is reported once, as the only composite, and is not a weighted score.
+* **Exact probabilities (6 against 6, one-sided permutation, 924 arrangements).** AUC 1.000: p = 0.0011; 0.944: 0.0043; 0.917: 0.0076; 0.889: 0.0130; 0.861: 0.0206; 0.833: 0.0325; 0.806: 0.0465; 0.778: 0.0660. So the set can show separation only from an AUC of about 0.81 up, and the interval at that size is wide.
+* **Interval.** A percentile bootstrap over pairs (10,000 resamples within each label, seed 20261119) and, beside it, the leave-one-pair-out range of the AUC. At six against six the bootstrap interval is known to be too narrow; both are reported and neither is read as a calibrated confidence interval.
+* **Reading rules, fixed now.** An AUC whose bootstrap interval lies wholly above 0.5 **and** whose exact one-sided p is at most 0.05 is read as "the component separated these twelve pairs", with no claim beyond this set. Anything else is read as "no separation was shown in this set", **never** as "the component does not separate"; the set cannot show the second. Components that separate are not combined into a rule for ranking Wwox candidates by this diagnostic; they only become candidates for a screening column in the ordinal view, still with no weight.
+* **Skew and contamination, reported beside every result.** (1) Positive skew: the positives are drugs that reached a trial and a publication; the engine's candidates have not, so a score that separates here may only encode "a drug that already looks like a success". (2) Contamination: a language-model scorer has been trained on these outcomes; the date-cut reduces what it may use and cannot remove what it remembers. The identification probe of section 4 splits the result: if at least half of the pairs are identified, the run is reported as contaminated and its separation is not read as evidence of anything beyond recall. (3) Dependence: the pairs are not independent (three of the twelve concern one disease, two a second disease, and three share a drug class), so the exact probabilities overstate the information. (4) Precedent: a pair with human precedent inside its cut scores 2 on C4 by rule, so C4 partly measures precedent.
+* **Not part of the analysis.** No weighting, no threshold search, no post hoc component. A component added after the freeze, for example by the scoring function of ADV-093, is labelled post hoc and reported on its own.
+
+### 9. Limits that bind the reading
+The descriptors in the pair table were written by an author who knows every outcome; a blind rewrite by a person who does not know them would be better and is recommended before the first score. Every source sentence is from an abstract; no full text was read. The label of a pair rests on that sentence only. The endpoint class is shared in name, but seizure frequency, seizure freedom and neonatal electrographic burden differ in how they are measured.

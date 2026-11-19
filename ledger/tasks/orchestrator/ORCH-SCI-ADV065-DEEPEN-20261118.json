@@ -399,6 +399,13 @@
      "accepted_at": "2026-11-19T18:11:31Z",
      "evidence": "parts a, b, d sent to ADV 2026-11-19 (message); part c: delegate sonnet/high read three Anthropic primary sources, 16 quotes checked, relayed to ADV; nothing applied",
      "updated_at": "2026-11-19T18:15:02Z"
+    },
+    {
+     "step": "ADV-091: pilot decision dossier on the shared slice assay, frozen hashed hindcast set (source sentences read first), cluster-2 clinical-data note",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-091 (assignments/ADV-091.md) and ADV message 2026-11-19",
+     "accepted_at": "2026-11-19T18:51:30Z"
     }
    ]
   }
@@ -702,6 +709,13 @@
    "at": "2026-11-19T18:11:31Z",
    "source": "ADV brainstorm message 2026-11-19 (BRIEF_FOR_THE_TEAM_ADV_20261119.md)",
    "step_sha256": "396cd295f541",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T18:51:30Z",
+   "source": "ADV-091 (assignments/ADV-091.md) and ADV message 2026-11-19",
+   "step_sha256": "9b1f3107fc4a",
    "reopened_block": false,
    "authorised_by": null
   }

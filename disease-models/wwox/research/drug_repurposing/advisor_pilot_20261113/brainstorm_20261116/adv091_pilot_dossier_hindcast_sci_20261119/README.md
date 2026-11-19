@@ -1,0 +1,21 @@
+# ADV-091 delivery (SCI, 2026-11-19): pilot dossier on the shared slice assay, frozen hindcast set, cluster-2 note
+
+Hypothesis level. Reference genotype class only. No dose, schedule or recommendation for any agent in any person. Not medical advice. No personal or individual-level information is used or recorded. Nothing here was applied to any consumer file: findings go to IT and HE, who decide.
+
+| File | What it is |
+|---|---|
+| `PILOT_DECISION_DOSSIER_SHARED_SLICE_ASSAY_ADV091_SCI_20261119.md` | Item 1. One dossier, three readout blocks on one preparation (pore blocker against d-APV; E_GABA; Kv7 opener with a mediation arm), in IT's template: chain with class and weakest link, outcome-to-decision table with a named interpretable-null control, what the study can and cannot resolve. Ethosuximide is not on the slice preparation (ADV's correction, checked in the held files); the Kv7 readout is an addition to the slice package, not an arm of it. |
+| `dossier_rows_for_opportunities_adv091.tsv` | The three rows (OPP-01, OPP-02, OPP-05) in IT's column layout, ready to replace IT's rows. Tested by running `framework/scripts/funding_view.py run` on a scratch copy of IT's folder with the three rows swapped: accepted. IT's own file was not edited. |
+| `HINDCAST_FREEZE_KEY_ADV091_SCI_20261119.md` | Item 2, the KEY: twelve pairs (6 positive, 6 negative), identities, the source sentence that fixed each label, digests of the abstract copies, the four read-and-reserved pairs, the number dropped (1). Never shown to a scorer. |
+| `HINDCAST_FREEZE_SCORER_SHEET_ADV091_SCI_20261119.md` | Item 2, the sheet: Part A for a scorer (disguised class-level descriptors, date-cut, four components with a rubric, protocol); Part B for the analyst (set rule, outcome rule, analysis plan with exact 6-against-6 probabilities, skew, contamination, dependence, limits). |
+| `HINDCAST_FREEZE_MANIFEST_ADV091_SCI_20261119.md` | The digests of the two files and the builder, written at 19:05Z on 2026-11-19, before any score exists. |
+| `build_hindcast_freeze.py`, `scorer_sheet_template.md` | The pair table with the verbatim-quote check (`--check`), and the sheet before the table is filled. |
+| `CLUSTER2_CLINICAL_DATA_NOTE_ADV091_SCI_20261119.md` | Item 3, one paragraph: the clinical-data project as the default first step of cluster 2, its zero-money first step, what it waits on (access), and safety as its own cell per agent and age (ADV's correction of "pediatric safety already known"). |
+
+## DECISIONS_TAKEN (21d) and DEFAULTS_TAKEN (21c)
+* **Hindcast set shape.** Balanced 6 against 6 (the checkpoint's AUC reading assumed it) by a pre-stated rule (one positive per disease, in the order of my list); four read positives kept as a reserve in the KEY. Alternative rejected: all nine positives against five negatives (skew in the count itself). Reversible: a new freeze file with a new date.
+* **Source level.** Each pair's sentence was read from its abstract in Europe PMC (plain GET, 2026-11-19), verified by script as a verbatim substring; full texts were not read. A sentence not readable would have dropped its pair: one pair of the original thirteen was dropped (trofinetide on seizures in Rett syndrome: no source sentence on a seizure outcome found by one title search, and the endpoint class does not match). Absence there is one route only.
+* **Three negatives added after reading** (soticlestat, triheptanoin, quinidine) to give the negatives a count equal to the positives; one is borderline (primary p of .061) and is analysed with and without.
+* **No delegate was used** (the delegation budget allows one at most; the reading was a short, checkable list). Effort high, model sonnet, throughout.
+* **Abstract copies** are in `files/hindcast_abstracts_adv091/` of the root checkout (a new folder under the ignored `files/`; no tracked or uncommitted file there was touched); digests are in the KEY.
+* **Blind checks not run:** the dossier (fields 1 to 3) and the hindcast key sentences have had no independent check. Recommended before use: IT's blind check of the dossier, and a blind rewrite of the scorer descriptors by a person who does not know the outcomes.
