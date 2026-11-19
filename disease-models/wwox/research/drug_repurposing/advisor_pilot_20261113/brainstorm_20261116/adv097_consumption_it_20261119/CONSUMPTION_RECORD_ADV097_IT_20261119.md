@@ -37,3 +37,23 @@ SCI's premise screen of the broad mechanisms and SCI's target and exposure compa
 
 ## 5. Open questions touched (no row added)
 IT56-Q01 and IT56-Q14, dated lines (`apply_adv097_open_questions_it_20261119.py`). The map's other rows were not changed: a row that only says "needs a recording" is touched only when an executed analysis answers or reopens it; none did yet.
+
+## 6. Consumption slots prepared for the next deliveries (dated 2026-11-19, ADV GO; nothing is edited until a result lands, no empty rows are made)
+**First check when SCI's premise screen (unit A) lands:** did the eight motivated alternatives of `catalogue_side_adv097_it_20261119/CATALOGUE_SIDE_ADV097_IT_20261119.md` section 5 (ISR: PERK tools, trazodone, guanabenz, ISRIB-class; OPC differentiation: clemastine, benztropine, miconazole, clobetasol, bexarotene; thyroid-receptor agonists; PDH: dichloroacetate, AZD7545 and the cofactors; NRF2: omaveloxolone, fumarates, sulforaphane, bardoxolone; missense proteostasis; EZH2; class IIa HDAC; Ih) enter its screen? Report which did, which were dropped with SCI's reason, which were not considered. SCI was sent the pointer on 2026-11-19 (message to SCI [31951c]); receipt by SCI is not yet confirmed.
+**Where a premise-screen result for each thread has a consumer today (existing paths only):**
+| Thread | Open-question rows | Card | Ranking unit | Investigation row |
+|---|---|---|---|---|
+| INV-02 ISR | WO-04 (open), IT52-Q01 (open); WO-05, WO-06 concluded | E01 | U12 | INV-02 |
+| INV-06 pro-myelinating | WO-27, IT50-Q10, IT55-Q01, RS-NP4G1, RS-NP4G4 (all open) | F02 | U22 | INV-06 |
+| INV-07 PDH | WO-07 (open) | E03, I01 | U14 | INV-07 |
+| INV-08 NRF2 | WO-36 (open) | L01 | U59 | INV-08 |
+| INV-17 MYC | **none** | M01 | U63 | INV-17 |
+| INV-12 thyroid-receptor agonists | **none** | **none** | **none** | INV-12 |
+| INV-13 Q230P-class clearance | **none** | A03, A05 (chaperone and HSP70) | U03, U05 | INV-13 |
+| INV-14 EZH2 | **none** | J01 (glial reactivity) | U26 | INV-14 |
+| INV-16 class IIa HDAC | **none** | **none** | **none** | INV-16 |
+| INV-18 Ih | IT45-Q01, IT45-Q04, IT48-Q01, IT49-Q07, IT49-Q09 (open) | **none** | **none** | INV-18 |
+Gaps: five threads (INV-12, 13, 14, 16, 17) have no open-question row in the map, and INV-12, 16 and 18 have no card or unit. A premise-screen result for them has only the investigation row and the dossier files as consumers. Rule: when a result for such a thread lands, ONE row (or one dated line on the nearest existing row) is added with the split "in-silico uncertainty that can still change the comparison / measurement only an experiment supplies"; no row is made before a result exists.
+**Routes and what each fires.** Cards, the investigation table and the needs file are inputs of the ranking: an edit there fires its triggers (T1 cards, T4 needs) and changes the snapshot comparison, so it goes through the existing scientific route with the trigger readout, never silently; open-question rows and arm-table notes are not ranking inputs. After each landing I run `ranking_it8.py check` and report whether a trigger fired, and I name the one consumer that did not read the result.
+**HE's 77-cell parametric stage and the exposure mapping**: same table as section 2; the consumers to check are the arm-table notes paragraph, IT56-Q01, the tonic-inhibition and NMDAR cards (F04, F01) and ADV's selection note.
+**ADV-098 (HE's data sheet)**: the catalogue figures of section 3 are its argument: 65 names, 51 catalogue records, 27 with a target annotation on a named need, 2 with a verified pharmacology record, none for ISR, pro-myelinating, NRF2 or MYC.

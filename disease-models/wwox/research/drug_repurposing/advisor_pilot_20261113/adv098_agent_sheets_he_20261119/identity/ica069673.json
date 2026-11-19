@@ -1,0 +1,33 @@
+{
+ "identity": {
+  "query": "ICA-069673",
+  "identity_state": "NOT_FOUND_BY_NAME",
+  "candidates": [],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "KCNQ2",
+   "KCNQ3"
+  ],
+  "per_gene": {
+   "KCNQ2": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "KCNQ3": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {},
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
