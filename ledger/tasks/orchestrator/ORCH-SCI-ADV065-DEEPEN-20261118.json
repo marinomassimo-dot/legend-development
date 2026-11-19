@@ -219,15 +219,12 @@
     },
     {
      "step": "J (ADV-077): consolidated v2 of the slice outreach package and the in vivo pup brief with the dated addenda folded into the body, plus one page ordering the measurements by the decision each could change; nothing new read; no tier, size or arm change; first task of the fresh window (resume from checkpoint_sci_20261119)",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "advisor message 2026-11-19 (ADV-077 consolidated v2, first task of the fresh window)",
      "accepted_at": "2026-11-19T10:15:43Z",
-     "blocker": "handoff to a fresh window from the checkpoint (context cost; approved by ADV 2026-11-19); first task of that window",
-     "unblock_when": {
-      "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/checkpoint_sci_20261119/WINDOW_RESUMED.txt"
-     },
-     "updated_at": "2026-11-19T10:16:02Z"
+     "updated_at": "2026-11-19T10:50:45Z",
+     "evidence": "experiment_brief_presidio013_sci_20261116/v2_consolidated_sci_20261119/: SLICE_PACKAGE_V2_CONSOLIDATED.md (4,171 words), PUP_BRIEF_V2_CONSOLIDATED.md (5,832 words), ORDERING_PAGE.md, COVERAGE_TABLE.md; corrections (a) to (g) carried (grep-checked), frozen priors file sha256 unchanged, five coverage rows spot-checked (seed 20261119), word targets exceeded and flagged"
     },
     {
      "step": "K: audit items 5 to 7 (peripheral nerve, P47T organ findings, S-HT panel text against legend) if ADV ranks them after IT's confirmations (ADV-075)",
@@ -457,6 +454,7 @@
   "R3 producer (legend-delegate, agent a200d7aa, 2026-11-19, sign-compatibility reading with frozen rules): asked sonnet/medium; read-back in the census at completion; 16 to 20 tool calls (cap 50); 87 s; abstract-level only (full texts not obtainable).",
   "G producer (legend-delegate, agent ae2b9c0f, 2026-11-19, read-but-not-carried audit of 20 held papers): asked sonnet/medium; read back sonnet x31, medium x31; birth 21,486; 31 turns; output 46,064; cache read 2,660,468; peak 173,559; about 31 tool calls (cap 90); 6.0 min; 78 results: 30 carried, 16 partly, 30 not carried, 2 unclear; blind spot-check of five rows (seed 20261119) by me: one route miss, one possible over-credit.",
   "R4 producer (legend-delegate, agent abcc975b, 2026-11-19, ADV-074 glucose and metabolic first pass from held originals, figures viewed where held): asked sonnet/medium; read back sonnet x50, medium x50; birth 21,440; 50 turns; output 29,912; cache read 6,158,342; peak 204,026; 54 tool calls (cap 90); 4.8 min; one figure independently viewed by me; absence in the Brain 2021 paper re-checked by concept words.",
-  "R5 producer (legend-delegate, agent a2241a17, 2026-11-19, ADV-076 part b, Hussain 2023 Olig2 and Mbp): asked sonnet/medium; read-back in the census at completion; 8 tool calls; 50 s; main figures viewed, supplement not held."
+  "R5 producer (legend-delegate, agent a2241a17, 2026-11-19, ADV-076 part b, Hussain 2023 Olig2 and Mbp): asked sonnet/medium; read-back in the census at completion; 8 tool calls; 50 s; main figures viewed, supplement not held.",
+  "ADV-077 consolidation producer (legend-delegate, agent a55a0f95, 2026-11-19): asked sonnet/medium; read-back in the census at completion; 27 tool calls (cap 90); 7.2 minutes; four files; the delegate did not read the originals back against v2 line by line; my checks: corrections grep-checked, priors sha unchanged, five coverage rows verified, numeric tokens of the pup body compared (only citation years and identifiers absent)."
  ]
 }

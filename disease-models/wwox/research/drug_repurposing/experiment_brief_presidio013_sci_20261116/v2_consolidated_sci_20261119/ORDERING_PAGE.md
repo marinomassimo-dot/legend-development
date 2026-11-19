@@ -1,0 +1,31 @@
+# One page: the measurements, ordered by the decision each could change (SCI, 2026-11-19; hypothesis level; no dose, schedule or recommendation for any agent in any person; reference genotype class only; not medical advice)
+
+Read with `SLICE_PACKAGE_V2_CONSOLIDATED.md` (S2) and `PUP_BRIEF_V2_CONSOLIDATED.md` (P2). Nothing new was read. **The order is my judgement** (decision value, with the measurement that conditions all others first); the sources give the content of each row, not the ranking. "Laboratory" = one holding the relevant mouse line. No measurement here needs a clinical channel as the sources name one; the clinical WWOX series is a text to obtain. Source folders are under `advisor_pilot_20261113/brainstorm_20261116/` unless a package is named.
+
+| # | Measurement | Decision it could change | Needs | Status | Source |
+|---|---|---|---|---|---|
+| 1 | Deletion completeness per animal and region, protein level | Whether a "knockout" animal is one; how every effect is read (judgement: first) | Laboratory (tissue already used) | Not done; transcript residuals are not a substitute | `i_deletion_completeness_olig2_adv076_sci_20261119` |
+| 2 | Matched-block slice experiment: pore blocker against d-APV, post-washout reads | Which of five tied classes leads; sag, trapping or disinhibition route | Laboratory with the Breton preparation | Not done | S2; `EXPERIMENT_BRIEF_V1_1.md` 13.11 |
+| 3 | Ethosuximide with wild-type age series and panel (pup stage 2) | Knockout-selective, age-limited or general | Laboratory with the null line and ethics approval | Not done | P2 section 3 |
+| 4 | E_GABA (perforated patch), null against age-matched control, factorial chloride layout | Whether a chloride lever deserves an arm, and its direction | Laboratory | Not done; no Wwox E_GABA exists | S2 3.1; `adv065c_transfer_sci_20261118` |
+| 5 | Lithium-alone arm and a second GSK-3 class | GSK-3-specific, general, or regimen and sedation effect | Laboratory (pup stage 3) | Not done | `adv067_lithium_regimen_sci_20261118` |
+| 6 | PV count and signal per cell, late-maturing marker, myelin marker at two ages | Whether any PV-directed arm is justified (now: none) | Laboratory (slice-animal tissue) | Optional; not done | S2 3.3 |
+| 7 | Glucose tied to seizure timing (seizure-and-death lines, at seizure time, ketone and lactate by age, milk intake) | Whether hypoglycaemia drives or accompanies seizures; ketogenic comparison unchanged | Laboratory (same-animal video-EEG or ECoG pairs) | Optional; not done | `h_glucose_axis_adv074_sci_20261119` |
+| 8 | Structural myelin endpoints (EM counts, g-ratio, MBP, CC1) | Which myelin readout a design can use | Laboratory; raw EM data for animal-level g-ratio | Rescue evidence held; animal-level re-extraction not done | `r1_conduction_endpoint_sci_20261119` |
+| 9 | Callosal conduction re-measurement, rescue arm, animal-level statistics | Whether conduction can be an endpoint (once: 8 slices from 5 animals, 8 from 6) | Laboratory | Not done | same |
+| 10 | Heterozygote carrier latency | Whether heterozygotes have a carrier endpoint (partial prolongation, normal amplitude; no heterozygote-against-null test) | Laboratory | Candidate, one source | `g_read_not_carried_audit_sci_20261119` (with correction) |
+| 11 | EEG or ECoG before P14 | Onset age, hence assay age (behavioural seizures after P12; neuron-targeted line from P9 by text) | Laboratory | Not done | `adv067_lithium_regimen_sci_20261118` (onset note); `h_glucose_axis_adv074_sci_20261119` |
+| 12 | WWOX-ERBB4 binding in neural tissue with an Erbb4 manipulation | Whether the ERBB4 branch merits any experiment (not motivated under the release sign; provisional) | Laboratory, after text 13a | Not done | `r3_erbb4_sign_check_sci_20261119`; `b_ww1_ppxy_first_pass_sci_20261119` |
+| 13 | Texts: (a) 2006 Cell paper (ERBB4, astrogenesis), 2005 and 2007 WWOX-ERBB4 reports; (b) WWOX clinical series; (c) 2009 rat paper; (d) a 2008 null-mouse report; (e) P47T paper supplement | (a) firm or reverse the ERBB4 drop; (b) clinical context; (c) rat serum and glucose; (d) null-mouse metabolism; (e) Olig2 against Mbp | Text to obtain (operator's supply path) | Not obtained; the rat original is not held | `checkpoint_sci_20261119`; row 7 and row 1 notes |
+| 14 | Sex, litter, cage recorded | Whether per-animal results are confounded (public deposits record none) | Nothing (design constraint on all rows) | Absent in public data | `premise_checks_sci_20261119` |
+
+Judgement notes: rows 2 and 3 are the experiments whose outcome changes an arm choice; rows 6 to 11 are optional and change no arm, size or tier; row 13 costs only access and can reorder rows 12 and 7.
+
+## Conflicts to resolve (both statements kept; none chosen)
+1. **Pup sizing:** the sizing flag says the interaction needs four equal cells at 44 per cell (about 176 animals, 75 litters); the ADV-061 addendum says twice, not four times, the simple-effect number per cell, about 180 to 320 per cell (700 to 1,300 animals, 200 to 360 litters). Both kept in P2.
+2. **Conduction n:** the earlier slice-brief line said only "inconsistent n"; pup 9.11 and the 2026-11-19 note give 8 slices from 5 and 8 from 6; whether the control n is a copy of the S-HT n is not decided by the originals.
+3. **Time to death:** pup 9.1 has untreated knockouts dying by about day 17 in the AAV9 comparator's panel; other sources give three to four weeks for the germline null. Different lines; not reconciled.
+4. **Rat paper year (resolved by SCI, not a conflict):** the lde/lde rat paper requested is Suzuki 2009; Suzuki 2007 is a different, earlier report that the 2009 paper cites for its serum data and that is not held either.
+5. **Washout reads and sag wording:** brief 13.11 reads at 30, 60, 120 minutes, later addenda add 5, 15 (optional 45); the hashed slice priors cover only 30 to 60 minutes and say "sag ratio", the paired readout is in mV. Stated in S2; priors not edited.
+6. **Cheng 2020 blot age:** Methods say day 14, the Fig. 7 legend day 20; the PTZ test age is not stated.
+7. **Breton S-HT panels:** text gives 4 of 23 slices (17 percent) and 86 percent of 42; the legend gives 20 and 84 percent (IT's row check). S2 uses the text values.
