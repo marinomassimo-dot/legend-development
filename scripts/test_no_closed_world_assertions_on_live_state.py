@@ -70,6 +70,13 @@ ALLOWED = {
         "the assertion runs against a ledger deliberately stripped in a temporary directory, "
         "not against the live one. The absence is created by the fixture, so it is a property "
         "of the experiment rather than of today's data.",
+    "test_public_release_gate.py::test_a_receipts_ledger_in_the_change_adds_the_two_pages_to_the_"
+    "reminder::negative-on-append-only":
+        "the test builds its own repository in a temporary directory (`make_repo`), writes a one-line synthetic "
+        "`fulltext_read_receipts.jsonl` into it and runs the gate there with and without that path in `--paths`. The "
+        "assertion is that the reminder text is ABSENT when the ledger path is not among the paths: the absence is "
+        "created by the fixture and by the arguments of the call, a property of the experiment and of the reminder's "
+        "condition, not of the live ledger, which the test never reads (the file name only triggers this detector).",
     "test_derive_dismech_sidecar.py::test_no_record_carries_a_measured_artefact_state"
     "::negative-on-append-only":
         "asserts the absence of a KEY, not of a value: no record may ever carry "

@@ -169,6 +169,34 @@
      "accepted_at": "2026-11-18T23:32:14Z",
      "evidence": "first real use: IT58 741ca6b4b regenerated views and package with the fixes; landed package has 0 orig markers in fr/es/de/it/index (technote excluded), repurposing_view check current; online pages are IT's check",
      "updated_at": "2026-11-19T00:34:16Z"
+    },
+    {
+     "step": "Day P0: repair CI failure scripts/test_no_closed_world_assertions_on_live_state.py (negative-on-append-only on my receipts-ledger reminder test), minimal semantically correct fix, one candidate with IT, CI actually green",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-19 harness continuation (ACTOR_ID plan) P0",
+     "accepted_at": "2026-11-19T08:28:36Z"
+    },
+    {
+     "step": "Day P1: dashboard validation in a real browser (phone and desktop) with the existing resolver, temporary profiles, evidence",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-19 harness continuation (ACTOR_ID plan) P1",
+     "accepted_at": "2026-11-19T08:28:36Z"
+    },
+    {
+     "step": "Day P2: completion-to-continuation gap: which mandate continues, how closure reaches the recipient, when direction is chosen, acceptance, records reflect current work; real passage to new authorised work",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-19 harness continuation (ACTOR_ID plan) P2",
+     "accepted_at": "2026-11-19T08:28:36Z"
+    },
+    {
+     "step": "Day P3: radar relevance: small sample diagnosis, bridge required, before/after if a small change is justified, else diagnosis to ADV",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "operator mandate 2026-11-19 harness continuation (ACTOR_ID plan) P3",
+     "accepted_at": "2026-11-19T08:28:36Z"
     }
    ]
   }
@@ -297,6 +325,34 @@
    "at": "2026-11-18T23:32:14Z",
    "source": "operator mandate 2026-11-18 night continuation (ACTOR_ID plan) F",
    "step_sha256": "599eddf04dd7",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T08:28:36Z",
+   "source": "operator mandate 2026-11-19 harness continuation (ACTOR_ID plan) P0",
+   "step_sha256": "3727a9fdb2d8",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T08:28:36Z",
+   "source": "operator mandate 2026-11-19 harness continuation (ACTOR_ID plan) P1",
+   "step_sha256": "2db084cccb68",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T08:28:36Z",
+   "source": "operator mandate 2026-11-19 harness continuation (ACTOR_ID plan) P2",
+   "step_sha256": "891b3ea3097d",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T08:28:36Z",
+   "source": "operator mandate 2026-11-19 harness continuation (ACTOR_ID plan) P3",
+   "step_sha256": "9f2509ffad09",
    "reopened_block": false,
    "authorised_by": null
   }
