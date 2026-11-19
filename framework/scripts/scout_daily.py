@@ -1360,6 +1360,39 @@ def term_hit(terms: list[str], *texts: str) -> bool:
     return any(t == term or (t.startswith(term) and t[len(term):] in TERM_SUFFIXES) for term in terms for t in toks)
 
 
+# 2026-11-19 (radar diagnosis, HE for ADV-071): the question "nucleus-resolved parvalbumin ... Wwox-deletion mouse (snRNA of GSE158684 ...)" was searched as `gse158684 snrna
+# immunostaining` and returned a melanoma snRNA-seq paper and a splicing paper on U1 snRNA; "peer review of a preprint on oligodendroglial WWOX" was searched as `epilepsy preprint
+# source data` and returned a retracted tTIS epilepsy preprint and datasets of "preprints". The hits shared a METHOD word, a FORMAT word or a homonym with the question and nothing
+# of its biology. A hit of a derived priority question must share a CONTENT word with it (stated in the briefing as the bridge); otherwise it is counted and named, not shown as a discovery.
+FORMAT_WORDS = frozenset("""preprint preprints review reviews reviewed peer published publication study studies paper papers article articles retracted withdrawn systematic
+meta results result role roles effect effects laboratory challenge primary same under with source sources data eight leave disagreement targeted resolved composition""".split())
+METHOD_WORDS = frozenset("""snrna rna seq sequencing immunostaining immunostain immunohistochemistry immunofluorescence western blot proteomic proteomics transcriptomic
+transcriptomics sequence matrices matrix library libraries barcode experiment experiments""".split())
+
+
+def bridge_terms(theme: dict) -> list[str]:
+    """The content words a hit must share with a derived question: its own words (gap and priority text) minus stop, generic, format and method words, accession-like ids
+    and the question's local labels. [] for a fallback theme, the open slot or a question with no content word: no bridge is required there."""
+    if not theme.get("origin"):
+        return []
+    text = f"{theme.get('gap', '')} {(theme.get('origin') or {}).get('priority', '')}"
+    out: list[str] = []
+    for w in [part for word in _words(text) for part in (word.split("-") if "-" in word else [word])]:
+        if (w in GENERIC or w in FORMAT_WORDS or w in METHOD_WORDS or len(w) < 5 or re.fullmatch(r"(gse|srp|prj|ppr|pmc|pmid)\d*\w*", w)
+                or METHODS.fullmatch(w) or w in {"wwox", "woree", "deletion", "knockout"}):
+            continue
+        if w not in out:
+            out.append(w)
+    return out[:14]
+
+
+def shared_bridge(theme: dict, *texts: str) -> list[str]:
+    terms = bridge_terms(theme)
+    toks = set().union(*(_tokens(t) for t in texts)) if texts else set()
+    # a long word also matches on its 7-letter stem (oligodendroglial / oligodendrocyte); a short one only as a whole word or with a plain suffix
+    return [t for t in terms if any(k == t or (k.startswith(t) and k[len(t):] in TERM_SUFFIXES) or (len(t) >= 9 and len(k) >= 7 and k.startswith(t[:7])) for k in toks)]
+
+
 def discover_theme(theme: dict, seen: dict, opener=http, now: dt.datetime | None = None,
                    known=frozenset(), budget: dict | None = None) -> dict:
     """One question across the channels: GitHub, Hugging Face (models, datasets, Spaces), Nature portfolio (Crossref
@@ -1392,6 +1425,8 @@ def discover_theme(theme: dict, seen: dict, opener=http, now: dt.datetime | None
 
     own_terms = [t.lower() for t in (theme.get("objects") or [])]   # the technical objects a priority names (symbols, drugs); a question without any, the fallback themes and the open slot are not filtered
 
+    bridge = bridge_terms(theme)
+
     def take(chan: str, fresh: list[dict]) -> None:
         keep, local = [], {}
         for it in fresh:
@@ -1404,6 +1439,12 @@ def discover_theme(theme: dict, seen: dict, opener=http, now: dt.datetime | None
                 chans[chan]["off_term"] = chans[chan].get("off_term", 0) + 1       # a search hit that does not contain the question's own words: counted and named, never shown as a discovery
                 chans[chan].setdefault("off_term_names", []).append(it.get("title", ""))
                 continue
+            if bridge and not shared_bridge(theme, it.get("title", ""), it.get("description", "")):
+                chans[chan]["no_bridge"] = chans[chan].get("no_bridge", 0) + 1     # shares only a method, format or homonym word with the question: counted and named, not shown as its discovery
+                chans[chan].setdefault("no_bridge_names", []).append(it.get("title", ""))
+                continue
+            if bridge:
+                it["bridge"] = shared_bridge(theme, it.get("title", ""), it.get("description", ""))[:3]
             if it.get("ident") and it["ident"] in known:
                 chans[chan]["known"] += 1
                 chans[chan]["known_names"].append(it["ident"])
@@ -1645,7 +1686,9 @@ def channel_summary(results: list[dict], duplicates: dict | None = None) -> dict
                          "duplicates": (duplicates or {}).get(chan, 0),
                          "owner_capped": sum(r["channels"][chan].get("capped", 0) for r in results),
                          "off_term": sum(r["channels"][chan].get("off_term", 0) for r in results),
-                         "off_term_names": [n for r in results for n in r["channels"][chan].get("off_term_names", [])][:6]}
+                         "off_term_names": [n for r in results for n in r["channels"][chan].get("off_term_names", [])][:6],
+                         "no_bridge": sum(r["channels"][chan].get("no_bridge", 0) for r in results),
+                         "no_bridge_names": [n for r in results for n in r["channels"][chan].get("no_bridge_names", [])][:6]}
     return summary
 
 
@@ -1663,7 +1706,8 @@ def item_line(i: dict) -> str:
     if i["kind"] in ("paper", "preprint") and v.get("editorial_status"):
         bits.append(str(v["editorial_status"]))
     mirrors = f" [+{len(i['mirrors'])} mirror(s) merged]" if i.get("mirrors") else ""
-    return f"[{i['kind']}/{i['channel']}] {i['title']} ({', '.join(bits)}){mirrors} {i['url']}"
+    bridge = f" [bridge to the question: {', '.join(i['bridge'])}]" if i.get("bridge") else ""
+    return f"[{i['kind']}/{i['channel']}] {i['title']} ({', '.join(bits)}){mirrors}{bridge} {i['url']}"
 
 
 def discovery_entries(result: dict, when: str) -> list[dict]:
@@ -1820,6 +1864,7 @@ def briefing(report: dict, persisted: dict | None = None) -> str:
             f"{c} {v['outcome']}" + (f" ({v['new']} new)" if v["outcome"] == "delta" else "")
             + (f" [{len(v['errors'])} error(s)]" if v["errors"] and v["outcome"] != "error" else "")
             + (f" [{v['off_term']} hit(s) dropped, no whole-word match with the question's terms, e.g. {', '.join(v.get('off_term_names') or [])[:90]}]" if v.get("off_term") else "")
+            + (f" [{v['no_bridge']} adjacent hit(s) not shown as discoveries: only a method, format or homonym word in common with the question, e.g. {'; '.join(v.get('no_bridge_names') or [])[:120]}]" if v.get("no_bridge") else "")
             for c, v in channels.items()))
         for q in (report.get("discovery") or {}).get("questions", []):
             lines.append(f"  question [{q['category']}] {q['question']} -> if confirmed: {q['decision']}")
