@@ -1,0 +1,7 @@
+One-off recipe (not a tool), run from the repository root with the shipped adapter framework/adapters/chembl.py (key-less REST, cached responses):
+  from framework.adapters import chembl, _http
+  fetch = _http.make_fetch("<cache dir>")
+  out = chembl.query({"molecule": "<CHEMBL id>", "types": ["IC50", "Ki", "Kd", "EC50"], "max_rows": 3000}, fetch=fetch)
+Raw answers are stored in activities/<agent>.json. Salt, parent, stereoisomer and metabolite rows are never merged by the adapter; the ids below are the ids read.
+Agent -> ChEMBL id read: ethosuximide CHEMBL696; lithium CHEMBL1201333; memantine CHEMBL807; ketamine CHEMBL742 (esketamine CHEMBL395091 is a separate record, not merged); D-AP5 CHEMBL84612 (declared: DGIdb source link, structure C5H12NO5P with the D configuration read from the SMILES; ChEMBL stores it without a name or synonym); ezogabine CHEMBL41355; azetukalner CHEMBL5095264; ganaxolone CHEMBL1568698; vigabatrin CHEMBL89598; bumetanide CHEMBL1072.
+Raw adapter answers are third-party data and are NOT in git: they are in the root checkout files/adv098_agent_sheets_raw_he_20261119/ (ignored folder); their sha256 digests are in SHA256SUMS_raw_activities.txt. Re-running the recipe recreates them (ChEMBL release moves; compare dates).

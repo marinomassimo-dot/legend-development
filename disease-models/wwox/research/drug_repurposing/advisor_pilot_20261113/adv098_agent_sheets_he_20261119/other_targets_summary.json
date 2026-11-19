@@ -1,0 +1,124 @@
+{
+ "ethosuximide": {
+  "rows_total": 292,
+  "rows_on_expected_targets": 1,
+  "other_targets": 127,
+  "top_other": [
+   "Unchecked (None) n=57",
+   "Mus musculus (Mus musculus) n=3",
+   "Acetylcholinesterase (Homo sapiens) n=2",
+   "Adenosine receptor A1 (Homo sapiens) n=2",
+   "Adenosine receptor A2a (Homo sapiens) n=2",
+   "Adenosine receptor A3 (Homo sapiens) n=2",
+   "Alpha-1A adrenergic receptor (Rattus norvegicus) n=2",
+   "Alpha-1B adrenergic receptor (Rattus norvegicus) n=2"
+  ]
+ },
+ "lithium": {
+  "rows_total": 0,
+  "rows_on_expected_targets": 0,
+  "other_targets": 0,
+  "top_other": []
+ },
+ "memantine": {
+  "rows_total": 84,
+  "rows_on_expected_targets": 22,
+  "other_targets": 24,
+  "top_other": [
+   "Unchecked (None) n=21",
+   "Glutamate NMDA receptor (Rattus norvegicus) n=10",
+   "Acetylcholinesterase (Homo sapiens) n=4",
+   "Trypanosoma brucei (Trypanosoma brucei) n=2",
+   "Acetylcholinesterase (Electrophorus electricus) n=2",
+   "Cholinesterase (Equus caballus) n=2",
+   "Cholinesterase (Homo sapiens) n=2",
+   "SARS-CoV-2 (Severe acute respiratory syndrome coronavirus 2) n=2"
+  ]
+ },
+ "ketamine": {
+  "rows_total": 342,
+  "rows_on_expected_targets": 18,
+  "other_targets": 135,
+  "top_other": [
+   "Unchecked (None) n=62",
+   "Glutamate NMDA receptor (Rattus norvegicus) n=19",
+   "Acetylcholine receptor subunit alpha (Torpedo californica) n=3",
+   "Sodium channel protein type 4 subunit alpha (Homo sapiens) n=2",
+   "Acetylcholinesterase (Homo sapiens) n=2",
+   "Adenosine receptor A1 (Homo sapiens) n=2",
+   "Adenosine receptor A2a (Homo sapiens) n=2",
+   "Adenosine receptor A3 (Homo sapiens) n=2"
+  ]
+ },
+ "d-ap5": {
+  "rows_total": 21,
+  "rows_on_expected_targets": 2,
+  "other_targets": 6,
+  "top_other": [
+   "Unchecked (None) n=10",
+   "Glutamate NMDA receptor (Rattus norvegicus) n=2",
+   "Glutamate NMDA receptor; Grin1/Grin2a (Rattus norvegicus) n=2",
+   "Glutamate NMDA receptor; Grin1/Grin2b (Rattus norvegicus) n=2",
+   "Glutamate NMDA receptor; Grin1/Grin2c (Rattus norvegicus) n=2",
+   "Ionotropic glutamate receptor NMDA 1/2D (Rattus norvegicus) n=1"
+  ]
+ },
+ "ezogabine": {
+  "rows_total": 32,
+  "rows_on_expected_targets": 13,
+  "other_targets": 11,
+  "top_other": [
+   "Potassium voltage-gated channel subfamily KQT member 2 (Mus musculus) n=3",
+   "CDGSH iron-sulfur domain-containing protein 1 (Homo sapiens) n=2",
+   "Potassium voltage-gated channel subfamily KQT member 4 (Homo sapiens) n=2",
+   "Potassium voltage-gated channel subfamily KQT member 5 (Homo sapiens) n=2",
+   "Potassium voltage-gated channel subfamily KQT member 2 (Rattus norvegicus) n=2",
+   "Brain (Mus musculus) n=2",
+   "Mus musculus (Mus musculus) n=2",
+   "HEK293 (Homo sapiens) n=1"
+  ]
+ },
+ "azetukalner": {
+  "rows_total": 1,
+  "rows_on_expected_targets": 1,
+  "other_targets": 0,
+  "top_other": []
+ },
+ "ganaxolone": {
+  "rows_total": 8,
+  "rows_on_expected_targets": 7,
+  "other_targets": 1,
+  "top_other": [
+   "GABA-A receptor; anion channel (Rattus norvegicus) n=1"
+  ]
+ },
+ "vigabatrin": {
+  "rows_total": 15,
+  "rows_on_expected_targets": 5,
+  "other_targets": 7,
+  "top_other": [
+   "4-aminobutyrate aminotransferase, mitochondrial (Rattus norvegicus) n=3",
+   "SARS-CoV-2 (Severe acute respiratory syndrome coronavirus 2) n=2",
+   "Bile salt export pump (Homo sapiens) n=1",
+   "ATP-binding cassette sub-family C member 2 (Homo sapiens) n=1",
+   "ATP-binding cassette sub-family C member 3 (Homo sapiens) n=1",
+   "ATP-binding cassette sub-family C member 4 (Homo sapiens) n=1",
+   "4-aminobutyrate aminotransferase, mitochondrial (Mus musculus) n=1"
+  ]
+ },
+ "bumetanide": {
+  "rows_total": 28,
+  "rows_on_expected_targets": 1,
+  "other_targets": 24,
+  "top_other": [
+   "Bile salt export pump (Homo sapiens) n=3",
+   "SARS-CoV-2 (Severe acute respiratory syndrome coronavirus 2) n=2",
+   "Trypanosoma cruzi (Trypanosoma cruzi) n=1",
+   "Trypanosoma brucei rhodesiense (Trypanosoma brucei rhodesiense) n=1",
+   "Trypanosoma brucei brucei (Trypanosoma brucei brucei) n=1",
+   "Trypanosoma brucei (Trypanosoma brucei) n=1",
+   "Trichomonas vaginalis (Trichomonas vaginalis) n=1",
+   "Toxoplasma gondii (Toxoplasma gondii) n=1"
+  ]
+ }
+}

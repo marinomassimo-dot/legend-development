@@ -1,0 +1,19 @@
+# One-off recipe (text, not a tool). Reads <raw dir>/<agent>.json (adapter answers) and writes activities_expected_targets.tsv and an other-targets summary.
+RAW = "/home/desktop/legend-development/files/adv098_agent_sheets_raw_he_20261119"
+import json, csv, collections
+EXPECTED = {"ethosuximide": "CACNA1G CACNA1H CACNA1I", "lithium": "GSK3B IMPA1 IMPA2", "memantine": "GRIN1 GRIN2A GRIN2B GRIN2C GRIN2D", "ketamine": "GRIN1 GRIN2A GRIN2B",
+            "d-ap5": "GRIN1 GRIN2A GRIN2B", "ezogabine": "KCNQ2 KCNQ3", "azetukalner": "KCNQ2 KCNQ3", "ganaxolone": "GABRA1 GABRA2 GABRD GABRG2", "vigabatrin": "ABAT", "bumetanide": "SLC12A2 SLC12A1"}
+rows_out = []; other = {}
+for agent, genes in EXPECTED.items():
+    exp = set(genes.split()); d = json.load(open(f"{RAW}/{agent}.json")); hits = [h for h in d.get("hits", []) if h.get("kind") == "activity"]
+    mine = [h for h in hits if exp & set(h.get("target_gene_symbols") or [])]
+    for h in mine:
+        ctx = h.get("assay_context") or {}
+        rows_out.append([agent, ",".join(h.get("target_gene_symbols") or []), h.get("target_organism"), h.get("target_type"), h["standard_type"], h.get("standard_relation") or "", h.get("standard_value") or "", h.get("standard_units") or "",
+                         (h.get("assay_description") or "")[:200], ctx.get("assay_organism") or "", ctx.get("assay_cell_type") or "", ctx.get("assay_tissue") or "", ctx.get("assay_type") or "", h.get("document_chembl_id"), h.get("document_year"),
+                         h.get("data_validity_comment") or "", h.get("potential_duplicate")])
+    c = collections.Counter((h.get("target_pref_name"), h.get("target_organism")) for h in hits if h not in mine)
+    other[agent] = {"rows_total": len(hits), "rows_on_expected_targets": len(mine), "other_targets": len(c), "top_other": [f"{k[0]} ({k[1]}) n={v}" for k, v in c.most_common(8)]}
+w = csv.writer(open("activities_expected_targets.tsv", "w", newline=""), delimiter="\t", lineterminator="\n")
+w.writerow(["agent", "target_genes", "target_organism", "target_type", "type", "relation", "value", "units", "assay_description", "assay_organism", "assay_cell_type", "assay_tissue", "assay_type", "document", "year", "validity_comment", "potential_duplicate"])
+w.writerows(rows_out); json.dump(other, open("other_targets_summary.json", "w"), indent=1)

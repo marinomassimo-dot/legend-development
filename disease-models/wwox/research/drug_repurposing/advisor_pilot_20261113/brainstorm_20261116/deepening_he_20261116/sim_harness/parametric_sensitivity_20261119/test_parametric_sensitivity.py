@@ -34,58 +34,53 @@ class Scan(unittest.TestCase):
             self.assertEqual(params, frozen.ARM[arm])
 
 
-class MultiplierScale(unittest.TestCase):
-    def test_same_parameter_classes_tie_when_their_brackets_overlap(self):
-        r = ps.mult_ranks(PUBLISHED)
-        self.assertEqual(r[1], r[2])                          # d-APV and the pore blocker: both J_N, about -18%: the published order between them is imposed by 0.3 against 0.8
-        self.assertEqual(ps.ranks({a: x[0] for a, x in PUBLISHED.items()})[1], 1.0)   # in s, d-APV is first on its own coefficient
-
-    def test_published_order_on_the_multiplier_scale(self):
-        r = ps.mult_ranks(PUBLISHED)
-        self.assertEqual([a for a in sorted(r, key=r.get)], [7, 8, 1, 2, 6, 4, 5])      # neurosteroid composite, sodium, the J_N pair tied, GABA-A, AMPA, T-type last
-        self.assertEqual(r[5], 7.0)
-
-    def test_tau_and_ranks(self):
-        self.assertEqual(ps.ranks({1: 0.5, 2: 0.5, 3: 2.0}), {1: 1.5, 2: 1.5, 3: 3.0})
-        a = {1: 1.0, 2: 2.0, 3: 3.0}
-        self.assertAlmostEqual(ps.tau(a, a), 1.0)
-        self.assertAlmostEqual(ps.tau(a, {1: 3.0, 2: 2.0, 3: 1.0}), -1.0)
-
-
-def write_run(root: Path, per_variant: dict[str, dict[int, tuple[float, float, float]]]) -> Path:
+def write_run(root: Path, per_variant: dict[str, dict[int, tuple[float, float, float]]], seeds_below: bool = True) -> Path:
     with open(root / "summary.tsv", "w", newline="") as fh, open(root / "results.tsv", "w", newline="") as rh:
         w = csv.writer(fh, delimiter="\t", lineterminator="\n"); w.writerow(["point", "status", "bracket_lo", "bracket_hi", "estimate"])
-        r = csv.writer(rh, delimiter="\t", lineterminator="\n"); r.writerow(["point", "evaluation", "n_bursts_baseline"])
+        r = csv.writer(rh, delimiter="\t", lineterminator="\n"); r.writerow(["point", "evaluation", "strength", "seed", "rel_bursts"])
         for v, e in per_variant.items():
             for a, (s, lo, hi) in e.items():
                 w.writerow([f"{v}__arm{a}", "not_in_bracket" if math.isinf(s) else "crossed", lo, hi, s])
-                r.writerow([f"{v}__arm{a}", 0, 800])
+                for seed in (1000, 1001, 1002):
+                    r.writerow([f"{v}__arm{a}", 5, hi, seed, 0.3 if seeds_below else 0.7])
+                    r.writerow([f"{v}__arm{a}", 5, lo, seed, 0.8])
     return root
 
 
 class Report(unittest.TestCase):
-    def test_report_on_a_toy_run_keeps_the_labels_and_flags_a_winner_change(self):
-        flipped = dict(PUBLISHED); flipped[8] = (0.05, 0.04, 0.06)                       # sodium becomes the most sensitive class in one variant
+    def run_text(self, per_variant, **kw) -> str:
         with tempfile.TemporaryDirectory() as tmp:
-            text = ps.report(write_run(Path(tmp), {"base": PUBLISHED, "ji_mult_hi": PUBLISHED, "joint_inhibited": flipped}))
-        self.assertIn("Kv7 is NOT in the model", text)
-        self.assertIn("MULTIPLIER scale (primary)", text)
-        self.assertIn("partly imposed by the listed coefficients", text)
-        self.assertIn("joint_inhibited", text)                                            # the variant that changes the winner is named
-        self.assertIn("d-APV-type against NMDAR pore", text)                              # an order in s that the multiplier scale ties
-        self.assertNotIn("PASS", text)
-        self.assertNotIn("is superior", text.lower())
-        self.assertIn("beyond x0.42", text)                                                # a class outside the bracket is shown as a bound, not as a multiplier of 0
+            return ps.report([write_run(Path(tmp), per_variant, **kw)])
 
-    def test_an_incomplete_baseline_is_refused_not_guessed(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            text = ps.report(write_run(Path(tmp), {"ji_mult_hi": PUBLISHED}))
-        self.assertIn("nothing to compare", text)
+    def test_the_labels_and_limits_are_always_printed(self):
+        text = self.run_text({"base": PUBLISHED})
+        for needle in ("Kv7 is NOT in the model", "not a confidence interval", "not a validation on alternative biological structures", "No ranks, no rank correlation, no winner",
+                       "Not identifiable here", "an explored-range result, not an impossibility of effect", "numerical resolution"):
+            self.assertIn(needle, text)
 
-    def test_a_baseline_only_run_reports_the_baseline_order_without_comparing(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            text = ps.report(write_run(Path(tmp), {"base": PUBLISHED}))
-        self.assertIn("baseline only, order: neurosteroid-type (1) < sodium (pyramidal) (2) < d-APV-type (3.5)", text)
+    def test_nothing_is_ranked_and_no_correlation_or_winner_is_computed(self):
+        text = self.run_text({"base": PUBLISHED, "ji_mult_hi": PUBLISHED})
+        for banned in ("tau ", "Kendall", "winner (rank", "superior to", "PASS", "FAIL"):
+            self.assertNotIn(banned, text)
+
+    def test_the_same_parameter_pair_is_indistinguishable_on_the_multiplier_scale(self):
+        self.assertIn("same-parameter pair (J_N): d-APV-type", self.run_text({"base": PUBLISHED}))
+        self.assertIn("indistinguishable on the multiplier scale", self.run_text({"base": PUBLISHED}))
+
+    def test_a_shift_beyond_the_bracket_is_named_and_an_overlap_is_not(self):
+        moved = dict(PUBLISHED); moved[8] = (2.0, 1.95, 2.05); same = dict(PUBLISHED)
+        text = self.run_text({"base": PUBLISHED, "nmda_mult_hi": moved, "ji_mult_lo": same})
+        self.assertIn("sodium (pyramidal): s 2.000", text)
+        self.assertIn("needs a larger parameter change", text)
+        self.assertIn("indistinguishable at this resolution", text)
+
+    def test_missing_cells_are_listed_not_guessed(self):
+        partial = {a: x for a, x in PUBLISHED.items() if a != 5}
+        text = self.run_text({"base": PUBLISHED, "kv7_offset_hi": partial})
+        self.assertIn("missing: kv7_offset_hi__arm5", text)
+
+    def test_seed_agreement_is_shown_separately_from_the_bracket(self):
+        self.assertIn("seeds below 0.5 at the crossed end 0/3", self.run_text({"base": PUBLISHED}, seeds_below=False))
 
     def test_help_is_safe(self):
         self.assertEqual(ps.main(["--help"]), 0)
