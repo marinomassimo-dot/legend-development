@@ -184,6 +184,15 @@ class FiveLanguages(unittest.TestCase):
             rv.TRANS.clear()
             rv.TRANS.update(saved)
 
+    def test_every_freshly_built_page_passes_the_shareable_audit(self):
+        # 2026-11-19: once a passage was correctly translated, the Spanish "de 105" (2 of 105 probe sets) matched the catalogue name 'DE 105' in the forbidden-name scan and refused the
+        # package. The audit is not loosened; the translation avoids the adjacency. Pinned on freshly built pages (the committed editions can be stale), so the next collision of this kind
+        # fails here, with the page and the name, before it blocks a package.
+        import repurposing_shareable_audit as au
+        for lg, page in self.pages.items():
+            rep, _ = au.audit_html(page, DR)
+            self.assertEqual([(v["kind"], str(v.get("value"))[:80]) for v in rep.violations], [], lg)
+
     def test_an_untranslated_passage_is_flagged_not_passed_off_as_translated(self):
         saved = {k: dict(v) for k, v in rv.TRANS.items()}
         try:
