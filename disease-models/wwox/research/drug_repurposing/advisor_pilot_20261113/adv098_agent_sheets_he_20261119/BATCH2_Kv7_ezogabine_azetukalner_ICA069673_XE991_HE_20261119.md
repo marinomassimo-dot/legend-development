@@ -34,3 +34,6 @@ Written for: SCI (unit B), ADV, IT. Same rules and routes as batch 1 (see its he
 1. Ezogabine is the only Kv7 agent with both an in vitro potency spread and a published mouse brain concentration-response in MES (and a juvenile-rat total brain exposure with an apoptosis signal). Its in vitro potency must be chosen by readout first: a 26-fold spread.
 2. Azetukalner and ICA-069673 have one or three rows and no found rodent exposure: a class mapping to them rests on inference.
 3. No openers can be ranked from these rows: same-document comparisons only.
+
+## Dated line 2026-11-19 (late): ICA-069673 identity verified by structure (ADV rule 9)
+PubChem name lookup for "ICA-069673" returns CID 10149311, IUPAC name N-(2-chloropyrimidin-5-yl)-3,4-difluorobenzamide, InChIKey IIBSHMFXVWTQSJ-UHFFFAOYSA-N, and its synonym list includes CHEMBL2047521 (and "ICA 069673", "ICA-69673", GTPL14111). The ChEMBL record CHEMBL2047521 carries the same InChIKey and the structure O=C(Nc1cnc(Cl)nc1)c1ccc(F)c(F)c1 (C11H6ClF2N3O). The identity therefore no longer rests on the chemical name from memory: it rests on a name-to-structure resolution by a second public source whose synonym list names the ChEMBL id and an equal InChIKey. Batch 2's potency rows for this compound stand as read.
