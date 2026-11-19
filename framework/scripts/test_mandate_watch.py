@@ -489,6 +489,22 @@ class ReleasedCheck(unittest.TestCase):
             self.assertEqual((rc, out.split()[0]), (0, "RELEASED"))
 
 
+class TranscriptPrefix(unittest.TestCase):
+    """2026-11-19: `released --session <short id>` answered MISSING, and a wait loop on it could never turn true. A unique prefix of at least 8 characters now finds the transcript; an ambiguous or too short one does not."""
+
+    def test_unique_prefix_finds_the_transcript_and_ambiguity_or_shortness_does_not(self):
+        with tempfile.TemporaryDirectory() as td:
+            base = Path(td)
+            for folder, sid in (("proj-a", "aaaaaaaa-1111-2222-3333-444444444444"), ("proj-b", "aaaaaaaa-9999-8888-7777-666666666666"), ("proj-b", "bbbbbbbb-1111-2222-3333-444444444444")):
+                (base / folder).mkdir(exist_ok=True); (base / folder / f"{sid}.jsonl").write_text("{}\n")
+            find = lambda x: mw.transcript_for_session(x, base)
+            self.assertEqual(find("bbbbbbbb-1111-2222-3333-444444444444").name, "bbbbbbbb-1111-2222-3333-444444444444.jsonl")
+            self.assertEqual(find("bbbbbbbb").name, "bbbbbbbb-1111-2222-3333-444444444444.jsonl")      # unique prefix of 8
+            self.assertIsNone(find("aaaaaaaa"))                                                       # two sessions share it: never a guess
+            self.assertIsNone(find("bbbbbb"))                                                         # shorter than 8
+            self.assertIsNone(find("../bbbbbbbb"))                                                    # no path tricks
+
+
 class FreshWindowRoute(unittest.TestCase):
     """ADV-078 trial, measured 2026-11-19: a fresh window of a record with NO SESSION_NAME left two live sessions named SCI; route said AMBIGUOUS although the old one had written MANDATE_RELEASED."""
     OLD = "9400b253-25a0-4b03-8822-96361325fc16"

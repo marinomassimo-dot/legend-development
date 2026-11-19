@@ -297,7 +297,11 @@ def transcript_for_session(session_id: str, projects_dir: Path | None = None) ->
     """The transcript file of a session id (one file per id under ~/.claude/projects/<cwd>/), or None."""
     base = projects_dir or Path(os.path.expanduser("~/.claude/projects"))
     try:
-        return next(iter(base.glob(f"*/{session_id}.jsonl")), None)
+        exact = next(iter(base.glob(f"*/{session_id}.jsonl")), None)
+        if exact or len(session_id) < 8 or "/" in session_id:
+            return exact
+        found = {f.stem: f for f in base.glob(f"*/{session_id}*.jsonl")}     # a unique prefix of at least 8 characters (2026-11-19: a short id answered MISSING for 10 minutes of waiting)
+        return next(iter(found.values())) if len(found) == 1 else None
     except OSError:
         return None
 
@@ -1039,7 +1043,7 @@ def main(argv: list[str] | None = None) -> int:
     if a.cmd == "released":
         path = transcript_for_session(a.session)
         state = mc.marker_state(path, a.task) if path else "MISSING"
-        print(f"{state} (session {a.session[:8]}, task {a.task}" + (f", {path}" if path else ", no transcript found for that id") + ")")
+        print(f"{state} (session {a.session[:8]}, task {a.task}" + (f", {path}" if path else ", no transcript found for that id (a short id works only as a unique prefix of at least 8 characters)") + ")")
         return 0 if state == "RELEASED" else (2 if state == "MISSING" else 1)
     if a.cmd == "resources":
         print(json.dumps(resource_state(top=a.top, sessions=list_sessions()), indent=1, sort_keys=True))
