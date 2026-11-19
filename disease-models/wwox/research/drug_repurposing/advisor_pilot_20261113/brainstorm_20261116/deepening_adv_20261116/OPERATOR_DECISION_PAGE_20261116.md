@@ -41,3 +41,7 @@ All have no PMC copy found; Europe PMC timed out and was not retried in a loop. 
 * Sardi et al., Presenilin-dependent ErbB4 nuclear signaling regulates the timing of astrogenesis in the developing brain, Cell (2006): decides whether the provisional incompatibility of the 'release' sign with the knockout-organoid astrogenesis becomes firm.
 * Aqeilan et al., WWOX and YAP compete for interaction with ErbB-4, Cancer Res (2005), and Guler et al., Association of Wwox with ErbB4 in breast cancer (2007): replace the abstract-level rows of the WWOX-ERBB4 cell evidence with sizes, n and methods.
 Context: the PPxY partner branch closed on 2026-11-19 (direct but weak WW1-ERBB4 binding; no neural observation; no lever; one open-question row). The WW1 affinity figures (383, 362 and 144 uM for PY1 to PY3) were checked by ADV against the held Schuchardt 2013 XML (383 +/- 30, 362 +/- 45, 144 +/- 16). No personal or individual-level information is used or recorded.
+
+
+## Update 10:18Z on 2026-11-19 (host clock): item 14 additions
+Also to obtain (not held): the rat lde/lde paper (Suzuki 2009: serum constituents and glucose by age; decides whether hypoglycaemia is the metabolic driver in a second species), Aqeilan 2008 (same question), and the supplement of Hussain 2023 (Mbp panels and tables; decides whether the Olig2 and Mbp readings come from the same region). Nothing is sent. No personal or individual-level information is used or recorded.
