@@ -32,3 +32,13 @@ Written for: ADV, HE, IT. Pre-registration `PREREGISTRATION_UNIT_A2_FROZEN_BEFOR
 
 ## Files (this folder)
 `PREREGISTRATION_UNIT_A2_FROZEN_BEFORE_ANY_LINEAGE_VALUE_SCI_20261119.md`, `lineage_state_unit_a2.py`, `out_a2/` (stage_set_results, readings, delay_expected_vs_observed, delay_gene_inputs, other_explanations_per_animal, nuclei_descriptive, missing_genes), `BLIND_RECOMPUTE_BRIEF_UNIT_A_SCI_20261119.md`.
+
+## Addendum, 2026-11-19: the delay-equivalent check asked by IT and ADV (post hoc, not part of the registered tokens; straight-line interpolation between P14 and P28 in wild-type whole brain, E-MTAB-6798; four samples per age)
+How large a shift would one, two or three days of delay produce on the unaffected trajectory, against the P17 raw deficit of -1.06 log2 in the mature-oligodendrocyte set (M3a)? Per-day change = (mean log2 RPKM plus 1 at P28 minus at P14) divided by 14; a delay of d days shifts the set by minus d times that rate.
+| Set | Rise P14 to P28 (log2) | Shift for 1, 2, 3 days of delay | Days needed for -1.06 |
+|---|---|---|---|
+| M3a mature oligodendrocyte (7 genes) | 0.48 | -0.03, -0.07, -0.10 | 31 |
+| MFOL (5) | 0.90 | -0.06, -0.13, -0.19 | 16 |
+| MOL (6) | 1.22 | -0.09, -0.17, -0.26 | 12 |
+| Structural myelin (Mbp, Plp1, Mobp, Cnp) | 0.78 | -0.06, -0.11, -0.17 | 19 |
+**Delay alone explains only a small part:** three days of delay account for about 10 percent of the raw M3a shift (up to about 25 percent for the late-stage MOL set), and the days needed (12 to 31) lie far outside the P14 to P28 interval where the straight line is defined (an extrapolation, so even the days-needed column is a lower-confidence figure). The M3a figure is reduced because Enpp6 falls with age in this trajectory and offsets the rise of the myelin genes. This agrees with the registered result (explained fraction 0.03, early-stage sets lower rather than higher) and with unit A's reading that the 45 percent carried by the stage covariate is mostly neuronal-stage covariance, not oligodendrocyte-specific delay; what the covariate carries is not explained by delay of this size. Assumptions: wild-type whole brain stands for the cortex and hippocampus; a straight line in log2 between two ages; transcript level stands for cell maturity.
