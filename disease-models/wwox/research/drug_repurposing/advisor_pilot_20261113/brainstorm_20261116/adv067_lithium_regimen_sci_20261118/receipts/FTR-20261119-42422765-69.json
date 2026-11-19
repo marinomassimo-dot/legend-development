@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-19T00:22:04Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-19T00:47:04Z",
+ "event_id": "FTR-20261119-42422765-69",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Results]: \"Continuous ECoG monitoring was performed in WT and Wwox-null pups beginning at approximately P14\"",
+  "verbatim_locator [Materials And Methods]: \"Recordings were maintained for 7 consecutive days\"",
+  "verbatim_locator [Discussion]: \"Wwox-null pups display early-onset neuronal hyperexcitability, characterized by frequent interictal-like spikes and SWDs\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv067_lithium_regimen_sci_20261118/ONSET_AGE_WWOX_SEIZURES_ONE_ROUND_SCI_20261119.md"
+ ],
+ "prior_receipt": "FTR-20261108-42422765-99",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2",
+ "source_kind": "fulltext_remote",
+ "source_locator": "files/fulltext/adv067_20261119/PMID42422765_PMC13343157_efetch_pmc.xml",
+ "study_id": {
+  "pmid": "42422765"
+ },
+ "workflow": "SCI onset-age round: open-access full text via NCBI E-utilities (plain client, one request); scanned in code for onset, EEG and hyperexcitability sentences and the ECoG methods read; figures (including figure 7 images) not viewed; not read in full"
+}

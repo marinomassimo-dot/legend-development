@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-19T00:22:04Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-19T00:47:04Z",
+ "event_id": "FTR-20261119-19500159-69",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"Electroencephalogram (EEG) analysis showed interictal spikes, fast waves during WR and burst of spikes during clonic phases.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv067_lithium_regimen_sci_20261118/ONSET_AGE_WWOX_SEIZURES_ONE_ROUND_SCI_20261119.md"
+ ],
+ "prior_receipt": "FTR-20260806-19500159-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "a3d77e0c6ab2d7e04f11f2afafd0bd32b2783e4001c920bdf5dcc7a54cce035a",
+ "source_kind": "abstract",
+ "source_locator": "files/fulltext/adv067_20261119/abs_19500159.txt",
+ "study_id": {
+  "pmid": "19500159"
+ },
+ "workflow": "SCI onset-age round; PubMed esearch and efetch (Wwox with seizure, epilepsy, EEG or audiogenic terms in rodents); abstract text saved and the quoted sentence matched in code"
+}
