@@ -372,6 +372,15 @@
      "accepted_at": "2026-11-19T17:29:09Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/expression_timecourse_adv088_sci_20261119/EXPRESSION_TIMECOURSE_RESULT_ADV088_SCI_20261119.md: prereg hashed 17:31Z before any value; rejecting observation not met (Pvalb 0.47 of plateau at P14, 0.89 at P28; whole-brain transcript, no P7/P17/P21); predictions 2, 3, 4 partly or wholly failed; no delegate; ordering page dated update",
      "updated_at": "2026-11-19T17:35:45Z"
+    },
+    {
+     "step": "ADV-090 assay ages from the ADV-088 time course: dated lines on ordering-page rows 4 and 6 and the pup brief (ethosuximide age series, glucose-at-seizure-time series); no arm or tier change; state what rests on one whole-brain bulk dataset; decision on any new age belongs to the laboratory; findings to IT",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-090 (assignments/ADV-090.md) and ADV message 2026-11-19",
+     "accepted_at": "2026-11-19T17:45:20Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/experiment_brief_presidio013_sci_20261116/v2_consolidated_sci_20261119/ORDERING_PAGE.md: dated lines for rows 4 and 6, the pup brief age series and glucose add-on; one-line pointers in the pup brief and slice package appendices; no arm or tier change; basis one whole-brain bulk dataset stated",
+     "updated_at": "2026-11-19T17:46:38Z"
     }
    ]
   }
@@ -654,6 +663,13 @@
    "at": "2026-11-19T17:29:09Z",
    "source": "ADV-088 (assignments/ADV-088.md) and ADV message 2026-11-19",
    "step_sha256": "599a693fc76e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T17:45:20Z",
+   "source": "ADV-090 (assignments/ADV-090.md) and ADV message 2026-11-19",
+   "step_sha256": "cfd2dfac1e8f",
    "reopened_block": false,
    "authorised_by": null
   }
