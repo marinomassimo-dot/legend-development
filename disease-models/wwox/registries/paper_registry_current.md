@@ -11049,7 +11049,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 ---
 
 ## PAPER 262
-**Short title:** Baryla 2021 PeerJ — blood-leukocyte WWOX and HIF1A transcripts in 98 gestational-diabetes women against 37 controls; the axis shift is carried by HIF1A, WWOX is a marginal tendency
+**Short title:** Baryla 2021 PeerJ — blood-leukocyte WWOX and HIF1A transcripts in 98 gestational-diabetes women against 37 controls; HIF1A transcript 3.8-fold higher and WWOX 1.4-fold lower (p = 0.0406 uncorrected: a tendency in the Results, a significant downregulation in the Abstract); the paper does not apportion the ratio change
 **Full title:** Identification of a novel association for the WWOX/HIF1A axis with gestational diabetes mellitus (GDM)
 **Authors:** Baryla I, Pluciennik E, Kośla K, Wojcik M, Zieleniak A, Zurawska-Klis M, et al.
 **Year:** 2021
@@ -11064,8 +11064,8 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Genotype/model:** no WWOX loss-of-function allele; transcript levels only
 **Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-neural, non-DEE context. Not medical advice.
-**Claim links:** none
-**Role:** WWOX is lower in GDM only at P about 0.04 (the paper calls it a *«tendency»*; fold change 1.4 against 3.8 for HIF1A); WWOX and HIF1A transcripts are uncorrelated within GDM (rho -0.05) and within controls (-0.12); WWOX shows no correlation with HK2, PKM2 or SLC2A1; the WWOX/HIF1A ratio correlates with HIF1A-induced genes by arithmetic coupling (ratio against HIF1A rho -0.79), i.e. HIF1A carries the headline. Two printed statistics in Figure 6 differ from the text (HK2 P 0.0003 against 0.004; LDHA R -0.22, P 0.036 against R -0.27, P 0.010 in the text and Table S1); no multiple-testing correction is stated. Supplementary Table S1 lists an additional SLC2A4 correlation (R 0.20, P 0.053) absent from the text.
+**Claim links:** 025 (the GDM sentence of CLAIM 025 is anchored here since BATCH_20261119_001; before it, only the placeholder CORPUS P191)
+**Role:** WWOX is lower in GDM only at P about 0.04 (the paper calls it a *«tendency»*; fold change 1.4 against 3.8 for HIF1A); WWOX and HIF1A transcripts are uncorrelated within GDM (rho -0.05) and within controls (-0.12); WWOX shows no correlation with HK2, PKM2 or SLC2A1; the WWOX/HIF1A ratio correlates with HIF1A-induced genes by arithmetic coupling (ratio against HIF1A rho -0.79), i.e. HIF1A carries the headline (an inference: the paper does not apportion the ratio change; the Abstract calls the WWOX decrease 'a significant downregulation', the Results a 'tendency', p = 0.0406 uncorrected; Fig 2 panels I and K are swapped against the caption and the Fig 5 caption says 'GDM group' for the normal-glucose plot, per SCI's blind audit 2026-11-19). Two printed statistics in Figure 6 differ from the text (HK2 P 0.0003 against 0.004; LDHA R -0.22, P 0.036 against R -0.27, P 0.010 in the text and Table S1); no multiple-testing correction is stated. Supplementary Table S1 lists an additional SLC2A4 correlation (R 0.20, P 0.053) absent from the text.
 **LIT link:** [[literature_tracking_log_current#LIT-0560]]
 **Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
 
