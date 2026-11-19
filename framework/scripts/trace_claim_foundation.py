@@ -56,6 +56,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import growth_anchors  # noqa: E402 - the single definition of a canonical record heading
+from claim_links import declared_claim_links  # noqa: E402 - the repository's parser of a Claim links declaration
 
 # Only these fields may inform a finding. The narrative fields of a record are excluded by
 # construction: the claim under test had its own prose rewritten to describe the answer,
@@ -252,8 +253,9 @@ class Foundation:
             edges[paper_number] = "wikilink_only"
         for pid, fields in self.papers.items():
             paper_number = pid.split()[-1]
-            declared = re.findall(r"\b(\d{3})\b", fields.get("Claim links", ""))
-            if number in declared:
+            # 2026-11-19 (SCI anchor-integrity scan): the naive `\b\d{3}\b` read "none — `CLAIM 002` and `CLAIM 004` must NOT be linked" as two evidential edges (14 PAPER records,
+            # 21 false edges of 167). `claim_links.declared_claim_links` is the repository's parser of the declaration: a none/pending prefix declares no edge, annotations add none.
+            if f"CLAIM {number}" in declared_claim_links(fields.get("Claim links", "")):
                 edges[paper_number] = "claim_links"
         source = claim.get("Source", "")
         for pmid in PMID.findall(source):

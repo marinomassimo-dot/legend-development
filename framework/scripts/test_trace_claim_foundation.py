@@ -82,6 +82,34 @@ def build(tmp: Path, *, claim_model="mouse", species=None, narrative="",
     return tmp
 
 
+
+class DeclaredLinksNotMentions(unittest.TestCase):
+    """2026-11-19, SCI's anchor-integrity scan: a Claim links field that says 'none' and names claims to refuse them was counted as evidential edges."""
+
+    def foundation(self, papers):
+        f = tcf.Foundation.__new__(tcf.Foundation)
+        f.claims = {"CLAIM 002": {}, "CLAIM 004": {}}
+        f.papers = papers
+        return f
+
+    def test_a_none_declaration_that_names_claims_is_no_edge(self):
+        f = self.foundation({"PAPER 082": {"Claim links": "none — 🔴 **deliberately none.** `CLAIM 002` and `CLAIM 004` must NOT be linked"},
+                             "PAPER 090": {"Claim links": "CLAIM 002 and CLAIM 004"},
+                             "PAPER 091": {"Claim links": "pending (see 002)"}})
+        edges = {p: kind for p, kind in f.supporting_papers("CLAIM 002")}
+        self.assertEqual(edges, {"PAPER 090": "claim_links"})
+
+    def test_on_the_real_registry_no_none_declaration_is_an_edge(self):
+        root = Path(__file__).resolve().parents[2]
+        f = tcf.Foundation(root, "wwox")
+        refusals = {pid.split()[-1] for pid, fl in f.papers.items() if re.match(r"(?i)^(none|pending)\b", fl.get("Claim links", "").strip())}
+        self.assertTrue(refusals)                                                            # 14 of them named a claim on 2026-11-19; none at all would mean the parse changed
+        for claim in f.claims:
+            for paper, kind in f.supporting_papers(claim):
+                if kind == "claim_links":
+                    self.assertNotIn(paper, refusals, f"{claim}: a 'none' record counted as support")
+
+
 class MutationBattery(unittest.TestCase):
     def setUp(self) -> None:
         self.tmp = Path(tempfile.mkdtemp(prefix="trace-foundation-"))
