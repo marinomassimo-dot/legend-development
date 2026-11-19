@@ -1,0 +1,5 @@
+rule	value	detail
+neuron_specific_in_nuclei	False	excitatory dACT=-0.051; mean glia dACT=-0.001; excitatory dNEURON_CTRL=0.153
+global_not_neuron_specific	False	glial dACT at most -0.3 or depth control moved
+replicated_second_deposit_after_adjustment	True	cortex A1=-1.262 all LOO negative=True; organoid pooled A1=-0.325
+branch_per_registered_stop_rule	STOP	stop if not neuron-specific or not replicated
