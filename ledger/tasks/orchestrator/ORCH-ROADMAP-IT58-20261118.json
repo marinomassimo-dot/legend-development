@@ -10,24 +10,29 @@
    "steps": [
     {
      "step": "1 CLOSE THE CURRENT INCREMENT: F03 counter-evidence, KCC2/NKCC1 development withdrawal, dated lines, SCI ADV-065c landing and receipts order, HE's battery and the pertinent CI; no second battery",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-18 (NEXT ITERATION - Scientific consumption, useful generation and trustworthy public view; ACTOR_ID orchestrator)",
-     "accepted_at": "2026-11-18T23:37:48Z"
+     "accepted_at": "2026-11-18T23:37:48Z",
+     "evidence": "F03 counter-evidence, KCC2 withdrawal, dated lines, SCI landing 1cec871c2, join+views+package 741ca6b4bef4 landed; HE's battery on 6320348db5 FAIL recorded as that tree's verdict, two causes closed (d69f4de0c, 1aaea7445), targeted rerun on d69f4de0c OK; no second battery by IT; CI run #1273 on 6320348d failed at Regression tests (same causes, logs not readable), #1290 on 741ca6b4 in progress.",
+     "updated_at": "2026-11-19T00:35:07Z"
     },
     {
      "step": "2 COMPLETE THE CONSUMER CHAIN: trace deltas, classify join differences",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-18 NEXT ITERATION",
-     "accepted_at": "2026-11-18T23:37:53Z"
+     "accepted_at": "2026-11-18T23:37:53Z",
+     "evidence": "Trace in generation_it58_20261118/AUDIT_AND_DIAGNOSIS_IT58.md s5 and JOIN_STALENESS_CLASSIFIED_IT58.md; join regenerated with caches on the tip (741ca6b4bef4); ranking digest ff38fcaa61295a5a unchanged; no limit lost.",
+     "updated_at": "2026-11-19T00:35:07Z"
     },
     {
      "step": "3 DIAGNOSE THE GENERATIVE NULL RESULT: six-class diagnosis, audit of unelicited criteria, next informative bifurcation with pre-specified rule",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-18 NEXT ITERATION, section 3",
-     "accepted_at": "2026-11-18T23:38:06Z"
+     "accepted_at": "2026-11-18T23:38:06Z",
+     "updated_at": "2026-11-19T00:35:07Z"
     },
     {
      "step": "4 TURN NEW SCIENCE INTO RESEARCH: per result what it strengthens, weakens, modifies or leaves; assignments with real recipient and full originals",
@@ -38,17 +43,20 @@
     },
     {
      "step": "5 PUBLIC DASHBOARD: language defect with HE, produced then published pages, five languages, filters, links, phone and desktop, no ranking change",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-18 NEXT ITERATION, section 5",
-     "accepted_at": "2026-11-18T23:38:06Z"
+     "accepted_at": "2026-11-18T23:38:06Z",
+     "evidence": "HE fixed the translation defect (9ddf02ae8, 19e1ef66c); regenerated on 741ca6b4bef4; five online pages byte-identical to the package; one orig marker per language (technical note only), F03 item present, withdrawn wording absent; audit-shareable 10/10; phone/desktop browser layout not re-measured here (Chromium unavailable), viewport meta present.",
+     "updated_at": "2026-11-19T00:35:07Z"
     },
     {
      "step": "6 VERIFICATION, PUBLICATION AND WAITS: SHA attribution, CI and dashboard workflow, real site, independent work during batteries",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-18 NEXT ITERATION, section 6",
-     "accepted_at": "2026-11-18T23:38:06Z"
+     "accepted_at": "2026-11-18T23:38:06Z",
+     "updated_at": "2026-11-19T00:35:07Z"
     },
     {
      "step": "7 HANDOFF AND CONTINUATION: deliver to the advisor consumed, decision, limits, next work, costs; continue",
