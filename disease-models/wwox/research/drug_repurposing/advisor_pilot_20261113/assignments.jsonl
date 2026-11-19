@@ -130,3 +130,7 @@
 {"evidence": "SendMessage msg_id f7c7bfbc-930b-4a83-a153-bfbd50636189 to IT Orchestrator (another Claude session on this machine, in its inbox), 21:18Z 2026-11-18; full brief in the message", "id": "ADV-066", "state": "SENT", "to": ["IT Orchestrator"], "utc": "2026-11-18T21:18:46Z"}
 {"assessment": "HOST", "id": "ADV-067", "key": "lithium-regimen-bifurcation-for-the-in-vivo-design", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-18T23:32:22Z"}
 {"evidence": "SendMessage msg_id bfc1b84b-7033-47cf-856b-e2b7d51c4c25 to SCI (session 9400b253), 23:32Z 2026-11-18; full brief in the message", "id": "ADV-067", "state": "SENT", "to": ["SCI"], "utc": "2026-11-18T23:32:39Z"}
+{"assessment": "HOST", "id": "ADV-068", "key": "pv-deficit-per-animal-in-silico-step", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T01:25:37Z"}
+{"evidence": "SendMessage to SCI (session 9400b253) at 01:25Z 2026-11-19, in reply to its census delivery; message text carries the full conditions", "id": "ADV-068", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T01:25:37Z"}
+{"assessment": "HOST", "id": "ADV-069", "key": "dna-damage-signature-in-silico-step", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T01:42:45Z"}
+{"evidence": "SendMessage to SCI (session 9400b253) at 01:42Z 2026-11-19, in reply to its ADV-068 delivery", "id": "ADV-069", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T01:42:45Z"}
