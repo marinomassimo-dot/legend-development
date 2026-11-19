@@ -104,6 +104,24 @@
      "accepted_at": "2026-11-19T01:25:58Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv068_pv_per_animal_sci_20261119/PV_PER_ANIMAL_RESULT_ADV068_SCI_20261119.md: pre-registration hashed first (c50422d0e); pre-registered stop R-B met at its boundary; delivered to ADV and IT",
      "updated_at": "2026-11-19T01:38:42Z"
+    },
+    {
+     "step": "ADV-069: DNA-damage-response signature on GSE156243 (panel, normalisation, stop rules hashed before the first count; one parental line and two knockout clusters = one origin; deliver decision it changes and a reasoned stop)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "advisor message 2026-11-19 (ADV-069 approved, DNA-damage signature on GSE156243)",
+     "accepted_at": "2026-11-19T01:50:58Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv069_ddr_signature_sci_20261119/DDR_SIGNATURE_RESULT_ADV069_SCI_20261119.md: pre-registration hashed first (58df6cbec); bounded null, no DNA-damage or p53-response signature in either knockout cluster; reasoned stop",
+     "updated_at": "2026-11-19T02:01:50Z"
+    },
+    {
+     "step": "ADV-068 consumer: one dated line in the slice outreach package and the brief pilot list adding the optional PV/late-marker/myelin tissue measurement (not a drug arm) with the three leanings",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "advisor message 2026-11-19 (consumer line, slice outreach package and brief pilot list)",
+     "accepted_at": "2026-11-19T01:50:58Z",
+     "evidence": "dated lines in OPERATOR_OUTREACH_PACKAGE_SCI_20261118.md and EXPERIMENT_BRIEF_V1_1.md (Addendum 19): optional PV/late-marker/myelin tissue measurement, not a drug arm, with the three leanings",
+     "updated_at": "2026-11-19T02:01:50Z"
     }
    ]
   }
@@ -183,6 +201,20 @@
    "at": "2026-11-19T01:25:58Z",
    "source": "advisor message 2026-11-19 (ADV-068, choice A of the census)",
    "step_sha256": "f0688692fc85",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T01:50:58Z",
+   "source": "advisor message 2026-11-19 (ADV-069 approved, DNA-damage signature on GSE156243)",
+   "step_sha256": "e63514835722",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T01:50:58Z",
+   "source": "advisor message 2026-11-19 (consumer line, slice outreach package and brief pilot list)",
+   "step_sha256": "2ca81a758c1c",
    "reopened_block": false,
    "authorised_by": null
   }
