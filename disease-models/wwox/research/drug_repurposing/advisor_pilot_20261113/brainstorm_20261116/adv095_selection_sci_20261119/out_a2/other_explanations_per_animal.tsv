@@ -1,0 +1,23 @@
+contrast	animal	arm	mature_score	regional_panel	IEG_panel	stage_score
+D2_cortex_S	CRTX_S_KO_1	KO	5.568	1.615	4.577	-0.507
+D2_cortex_S	CRTX_S_KO_2	KO	5.204	2.085	4.546	-0.302
+D2_cortex_S	CRTX_S_KO_3	KO	5.936	3.192	4.611	-0.192
+D2_cortex_S	CRTX_S_Ctrl_1	ctrl	6.75	3.513	6.306	0.123
+D2_cortex_S	CRTX_S_Ctrl_2	ctrl	6.496	2.017	6.187	-0.205
+D2_cortex_S	CRTX_S_Ctrl_3	ctrl	6.071	2.345	6.034	-0.023
+D2_cortex_S	CRTX_S_Ctrl_4	ctrl	6.54	1.803	6.013	0.106
+D2_cortex_S	SPEARMAN_across_animals		mature_vs_regional=0.29	mature_vs_IEG=0.89	mature_vs_stage=0.86	genotype confounds all three; descriptive
+D3_hippo_S	S_KO_1	KO	4.501	2.872	5.716	-0.497
+D3_hippo_S	S_KO_2	KO	3.811	5.566	2.099	-0.755
+D3_hippo_S	S_KO_3	KO	4.453	6.59	2.814	-0.505
+D3_hippo_S	S_Ctrl_1	ctrl	5.901	2.469	4.164	0.106
+D3_hippo_S	S_Ctrl_2	ctrl	5.803	8.028	3.816	-0.106
+D3_hippo_N	N_KO_1	KO	4.516	2.14	3.027	-0.255
+D3_hippo_N	N_KO_2	KO	5.149	5.385	3.613	0.027
+D3_hippo_N	N_Ctrl_1	ctrl	5.948	7.182	3.836	0.025
+D3_hippo_N	N_Ctrl_2	ctrl	5.472	3.098	4.302	-0.025
+D3_hippo_null	KO_1	KO	4.211	5.358	2.715	-0.299
+D3_hippo_null	KO_2	KO	4.598	5.631	2.873	-0.192
+D3_hippo_null	WT_1	ctrl	5.635	6.61	3.668	-0.082
+D3_hippo_null	WT_2	ctrl	5.903	5.76	4.139	-0.013
+D3_hippo_null	WT_3	ctrl	5.821	6.474	3.72	0.095
