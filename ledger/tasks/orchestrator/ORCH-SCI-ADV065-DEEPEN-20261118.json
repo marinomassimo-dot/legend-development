@@ -89,10 +89,12 @@
     },
     {
      "step": "Onset age and EEG of Wwox seizures beyond Cheng 2020: one reading round of the Wwox mouse and rat reports; a one-line answer if nothing exists",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "advisor message 2026-11-18 (order of executable items, item 2)",
-     "accepted_at": "2026-11-19T00:45:20Z"
+     "accepted_at": "2026-11-19T00:45:20Z",
+     "evidence": "landed 985a6cd7e: adv067_lithium_regimen_sci_20261118/ONSET_AGE_WWOX_SEIZURES_ONE_ROUND_SCI_20261119.md; brief 9.10; 4 receipts -69 recorded",
+     "updated_at": "2026-11-19T01:00:03Z"
     }
    ]
   }
