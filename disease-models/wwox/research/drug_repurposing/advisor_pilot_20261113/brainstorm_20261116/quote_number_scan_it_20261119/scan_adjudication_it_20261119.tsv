@@ -1,0 +1,44 @@
+claim	kind	item	scope	category	reason
+CLAIM 002	number	2.267	headline	DERIVED_COUNT_OR_ARITHMETIC	row count of a deposited table ('zero rows of 2,267'), not a cell value
+CLAIM 002	string	GABA depolarizzante / firma GABAergica immatura	headline	REGISTRY_OWN_WORDS	Italian label of an IPOTESI
+CLAIM 002	string	Rescues organoid phenotype	headline	REGISTRY_OWN_WORDS	the claim's own Title
+CLAIM 002	string	This is a source-availability outcome, not a judgement on the triples.	headline	OTHER_DOCUMENT_QUOTE	quoted from the locator audit
+CLAIM 002	string	untested	headline	REGISTRY_OWN_WORDS	the record's own first wording, quoted in the correction note
+CLAIM 003	string	journal page 3071 (PDF page 11)	boundary	OTHER_DOCUMENT_QUOTE	a manifest locator string
+CLAIM 003	string	sits on journal page 3072 (not 3071, as this batch's own first draft had it)	boundary	OTHER_DOCUMENT_QUOTE	a manifest locator string
+CLAIM 004	number	0.8	boundary	FIGURE_READ_BY_EYE_OR_PIXELS	the record labels it read from a figure (pixels or by eye, with '~')
+CLAIM 004	number	0.95	boundary	FIGURE_READ_BY_EYE_OR_PIXELS	the record labels it read from a figure (pixels or by eye, with '~')
+CLAIM 004	number	105	boundary	FIGURE_READ_BY_EYE_OR_PIXELS	the record labels it read from a figure (pixels or by eye, with '~')
+CLAIM 004	number	135	boundary	FIGURE_READ_BY_EYE_OR_PIXELS	the record labels it read from a figure (pixels or by eye, with '~')
+CLAIM 004	number	2.1	headline	LOCATOR_OR_ID_NUMBER	section number of a repository note
+CLAIM 004	number	68	boundary	FIGURE_READ_BY_EYE_OR_PIXELS	the record labels it read from a figure (pixels or by eye, with '~')
+CLAIM 004	number	77	boundary	FIGURE_READ_BY_EYE_OR_PIXELS	the record labels it read from a figure (pixels or by eye, with '~')
+CLAIM 004	number	87	boundary	FIGURE_READ_BY_EYE_OR_PIXELS	the record labels it read from a figure (pixels or by eye, with '~')
+CLAIM 004	string	artifact bytes absent from this checkout, attestation carried forward, re-acquisition owed	headline	OTHER_DOCUMENT_QUOTE	an earlier annotation string of the record
+CLAIM 006	string	not progressive	headline	REGISTRY_OWN_WORDS	wording of backlog candidates, quoted to reject
+CLAIM 014	string	the knockdown and the comparability of the arms are not demonstrated there	boundary	REGISTRY_OWN_WORDS	the record's earlier wording in a 'corrected from' note
+CLAIM 015	string	developmentally pre-wired	boundary	REGISTRY_OWN_WORDS	a wording the record says must not be read as demonstrated
+CLAIM 015	string	prenatally demonstrated	boundary	REGISTRY_OWN_WORDS	same
+CLAIM 025	number	009	headline	LOCATOR_OR_ID_NUMBER	queue pointer FT-009
+CLAIM 025	string	a Drosophila model shows a WWOX metabolic effect that is HIF1α-INDEPENDENT (via ATF4/UPR; neuroprotection via methionine suppression, not lactate)	headline	REGISTRY_OWN_WORDS	the record's own earlier wording kept per prompt_batch_commit 7.2
+CLAIM 025	string	neuroprotection via methionine suppression, not lactate	headline	REGISTRY_OWN_WORDS	fragment of that earlier wording
+CLAIM 025	string	rapporto più basso = peggio	headline	REGISTRY_OWN_WORDS	a form of inference the record says is not authorised
+CLAIM 025	string	via ATF4/UPR	headline	REGISTRY_OWN_WORDS	fragment of that earlier wording
+CLAIM 040	number	2.2	boundary	LOCATOR_OR_ID_NUMBER	section number of a repository note
+CLAIM 040	number	4.1	boundary	LOCATOR_OR_ID_NUMBER	section number of a repository note
+CLAIM 040	number	5,2	boundary	DERIVED_COUNT_OR_ARITHMETIC	binomial coefficient C(5,2) in the exact-test arithmetic
+CLAIM 040	string	crisi	boundary	REGISTRY_OWN_WORDS	Italian word under discussion
+CLAIM 040	string	nessun effetto	boundary	REGISTRY_OWN_WORDS	Italian reading the record warns against
+CLAIM 040	string	p > 0.05 significa nessun effetto	boundary	REGISTRY_OWN_WORDS	a premise tag, Italian
+CLAIM 046	number	0.11	headline	FIGURE_READ_BY_EYE_OR_PIXELS	the record labels it read from a figure (pixels or by eye, with '~')
+CLAIM 046	number	0.21	headline	FIGURE_READ_BY_EYE_OR_PIXELS	the record labels it read from a figure (pixels or by eye, with '~')
+CLAIM 046	number	0.25	headline	FIGURE_READ_BY_EYE_OR_PIXELS	the record labels it read from a figure (pixels or by eye, with '~')
+CLAIM 046	number	0.30	headline	FIGURE_READ_BY_EYE_OR_PIXELS	the record labels it read from a figure (pixels or by eye, with '~')
+CLAIM 046	number	0.58	headline	FIGURE_READ_BY_EYE_OR_PIXELS	the record labels it read from a figure (pixels or by eye, with '~')
+CLAIM 046	number	18.7	headline	FIGURE_READ_BY_EYE_OR_PIXELS	the record labels it read from a figure (pixels or by eye, with '~')
+CLAIM 046	number	2.3	headline	FIGURE_READ_BY_EYE_OR_PIXELS	the record labels it read from a figure (pixels or by eye, with '~')
+CLAIM 046	string	a homology argument rather than a validation	headline	REGISTRY_OWN_WORDS	a wording the record calls false
+CLAIM 046	string	about elevenfold overexpression	headline	REGISTRY_OWN_WORDS	a bare wording the record warns would overstate
+CLAIM 046	string	calibrat	headline	SEARCH_TERM_ASSERTED_ABSENT	same
+CLAIM 046	string	limit of detection	headline	SEARCH_TERM_ASSERTED_ABSENT	same
+CLAIM 046	string	standard curve	headline	SEARCH_TERM_ASSERTED_ABSENT	the record states no panel carries it
