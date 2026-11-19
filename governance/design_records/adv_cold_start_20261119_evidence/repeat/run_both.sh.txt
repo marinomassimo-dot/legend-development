@@ -1,0 +1,5 @@
+#!/bin/sh
+cd /home/desktop/legend-development/.claude/worktrees/he_probe_adv2
+for p in neutral with_prior_conclusion; do
+CLAUDE_CODE_DISABLE_AUTO_MEMORY=1 claude -p --model sonnet --effort medium --tools Read,Grep,Glob --max-turns 30 --output-format json --no-session-persistence "$(cat <scratch>/prompt_$p.txt)" > <scratch>/res_$p.json 2> <scratch>/res_$p.err
+done

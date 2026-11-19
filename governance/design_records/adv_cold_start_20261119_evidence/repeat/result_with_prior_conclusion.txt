@@ -1,0 +1,50 @@
+## DECISION
+
+**I would not send "nothing to assign", and I would not assign anything yet. The facts I was handed contradict the repository, so my first move is to measure the real state.**
+
+**What contradicts.** I was told the previous MEETING was at 05:25 and the next is at 11:25, and that it is now 07:18. The repository says otherwise:
+- A MEETING at 11:26 already exists and closed at 11:45Z (`MEETING-20261119T112615Z-ans04_zz.md`).
+- `assignments.jsonl` runs to **ADV-087, SENT to SCI at 16:16Z** on 2026-11-19. Before that there was a 05:25 meeting (ADV-070) and an 08:31Z correction line.
+- The "07:18" in the 11:26 minutes is HE's cold/warm test pair, not a wall-clock reading.
+
+So my premises are stale, or this checkout is ahead of the clock I was given. Advisor practice rule 20 says time labels come from `date -u`, not from a stated time. I cannot run commands here, so I cannot settle this.
+
+**What I would do in the live session, in order:**
+1. Run `date -u`, `mandate_continuity.py guidance` and `strategic_advisor.py tick`. Read `activity` and its `recipients` view.
+2. Read `tail -n 1` of `assignments.jsonl`. From this checkout the next id is **ADV-088**. Numbers come from the root's file, so I would confirm it there.
+3. Read SCI's and IT's own records. In particular, check whether SCI took ADV-087 or is waiting on the operator's supply of texts (item 14).
+
+**Branch A: the tick confirms SCI and IT idle for more than about an hour, and no blocker names an awaited event.**
+This is the case practice rule 3 and charter bullet "Engine" cover, and the previous "motivated wait" is the failure mode they describe. I would assign in that same turn:
+- **To SCI (ADV-088):** the next unit from the whole roadmap, not the strand just closed. The unit is a first pass on the highest-priority backlog row of `research_portfolio.tsv`. Those rows are in long lines my search did not display, and I did not open them. If RP-012 (public-data reuse, P2, backlog) or another row is on top, it would use complete originals, a pre-registered rejecting observation and a word cap, with model and effort stated. I would not number or word it until I had read that row.
+- **To IT (ADV-089):** map the consumers and owners for whatever SCI's ADV-087 and ADV-088 deliveries produce, as a queued item. Its start condition is SCI's delivery file, and IT decides the operational moment.
+
+I would record SENT only after the send receipt names the recipient (rule 20).
+
+**Branch B: the tick shows a recipient working, or a real blocker.** I would wait, and write the resume condition as the specific awaited event, for example "SCI delivery of ADV-087 or the operator's texts". I would re-check at the next hourly tick, not at the next MEETING.
+
+**Reserved decisions** (laboratory, clinical channel, gate cache, human visit, registry query, engine budget) block only themselves. I would prepare one page for each and move on.
+
+## RELIED_ON (in reading order)
+1. `CLAUDE.md` router, the project instructions already in context.
+2. `roles/advisor.md`: charter, "first moves of any recall", engine and compass duties.
+3. `framework/state/state_manifest_current.md` (first 80 lines only, so I did not see `current_state`).
+4. `framework/protocols/cross_session_transport.md`: a heading grep, then §12 from line 560: EMPATHY, the wait-as-anticipation rule, and continuity as "choice of what comes next".
+5. `roles/advisor_practice.md`: rules 1–23, especially 3, 4, 20 and 21.
+6. `disease-models/wwox/research/drug_repurposing/roadmap_current.md`, lines 38–55: the OPERATOR_GUIDANCE block.
+7. `advisor_pilot_20261113/assignments.jsonl`: line 1, a count of 172 lines, and the ADV-068 to ADV-087 lines.
+8. `meetings/MEETING-20261119T052503Z-935k_dpu.md` (the 05:25 meeting), then the 11:26 meeting's decisions (lines 38–58).
+9. `research_portfolio.tsv`: a grep that showed only short rows (RP-012, 018, 019). The long rows were truncated and I did not read them.
+
+I did **not** read `LEGEND_CORE.md` §21c/d/e, the roadmap's Operator roadmap body, the portfolio's long rows, the recipients' task records or `CONTINUOUS.json`. I also could not run the tick or `mandate_continuity.py guidance`; the guidance block itself I read at its source in the roadmap. Both are required first moves for the live session.
+
+## CHARTER_PRACTICE_GUIDANCE_FOUND
+- **Charter:** yes, `roles/advisor.md`, including the 2026-11-19 section on the host's charter.
+- **Practice rules:** yes, `roles/advisor_practice.md`, 23 rules.
+- **Operator's standing guidance:** yes. It is in the roadmap's OPERATOR_GUIDANCE block (consolidated 2026-11-19), and I read it at the source rather than through the script.
+
+## TURNS
+5 assistant turns that used tools, with 12 tool calls in total (3, 3, 3, 2 and 1 calls per turn), then this final report.
+
+## MEMORY_CANARY
+**No.** I see no private memory notes and no auto-memory index. My context holds only the user-level CLAUDE.md, the project CLAUDE.md, the git status and what I read this session. `advisor_practice.md` says the host's old private notes were migrated into the repository, and I found no copy of them in my context.
