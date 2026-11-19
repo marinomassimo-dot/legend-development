@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-18T23:04:09Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-19T00:04:09Z",
+ "event_id": "FTR-20261119-3028380-68",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"In contrast to kindled rats, in non-kindled animals lithium had very weak anticonvulsive potency.\"",
+  "verbatim_locator [Abstract]: \"Lithium significantly suppressed the development of PTZ-kindling.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv067_lithium_regimen_sci_20261118/LITHIUM_REGIMEN_DECISION_ADV067_SCI_20261119.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "0d7a1411c7414fb49e52aba973d5f3e10225857fe5c9fa27ece31418137a53cc",
+ "source_kind": "abstract",
+ "source_locator": "files/fulltext/adv067_20261119/abs_3028380.txt",
+ "study_id": {
+  "pmid": "3028380"
+ },
+ "workflow": "SCI ADV-067; abstract parsed from PubMed efetch XML saved by a legend-delegate producer (sonnet, medium) and written to the saved file by SCI after re-matching the quotation(s) in code"
+}

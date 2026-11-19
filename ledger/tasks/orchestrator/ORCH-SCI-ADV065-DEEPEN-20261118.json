@@ -10,31 +10,39 @@
    "steps": [
     {
      "step": "Reconcile accepted work (ADV-064, ADV-065, ADV-065b, IT57 and ADV consumption) and state the delta of this mandate over ADV-065b; read delegation_budget.md",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator instruction 2026-11-18 (SESSION_FUNCTION SCI: follow-up of ADV-064/065, in Italian, sections A-G); ADV-065b already delivered the KCC2/OV350 first pass",
-     "accepted_at": "2026-11-18T21:35:48Z"
+     "accepted_at": "2026-11-18T21:35:48Z",
+     "evidence": "reconciliation table in section 1 of disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065c_transfer_sci_20261118/TRANSFER_LEDGER_CHLORIDE_LEVERS_ADV065C_SCI_20261118.md; main 1cec871c2",
+     "updated_at": "2026-11-18T23:52:09Z"
     },
     {
      "step": "Targeted recheck of the ADV-065 premises that change the decision and examine the Arshad 2026 figures and supplement",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator instruction 2026-11-18, section D",
-     "accepted_at": "2026-11-18T21:35:54Z"
+     "accepted_at": "2026-11-18T21:35:54Z",
+     "evidence": "section 5 of the same note; independent verifier phase 2 and recheck sections 10 and 12; landed 1cec871c2",
+     "updated_at": "2026-11-18T23:52:10Z"
     },
     {
      "step": "Survey the repository for SLC12A5/SLC12A2/chloride-regulator data and run a proportionate reproducible reanalysis with correct biological units, or document that none is usable",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator instruction 2026-11-18, sections E-G",
-     "accepted_at": "2026-11-18T21:36:01Z"
+     "accepted_at": "2026-11-18T21:36:01Z",
+     "evidence": "reanalysis/ folder (frozen plan sha 7752e036, script, outputs, rerun byte-identical by the verifier); section 3 of the note; landed 1cec871c2",
+     "updated_at": "2026-11-18T23:52:10Z"
     },
     {
      "step": "Land and deliver the ADV-065c follow-up (receipts recorded with the tools, regenerate views after rebase, push), deliver originals, qualified synthesis, corrections, consumer delta, residual questions and executable work to ADV (advisor) and IT, and verify take-in-charge",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18 (A to G)",
-     "accepted_at": "2026-11-18T23:33:35Z"
+     "accepted_at": "2026-11-18T23:33:35Z",
+     "updated_at": "2026-11-18T23:52:17Z",
+     "evidence": "landed 1cec871c2; delivery to advisor and IT; take-in-charge confirmed by advisor message 'ADV-065c delivery accepted and consumed' (decision page item 13 and E_GABA line)"
     },
     {
      "step": "ADV-067 lithium regimen bifurcation table and decision",
@@ -45,17 +53,21 @@
     },
     {
      "step": "Select the next question with ADV by marginal benefit (same axis again, another open question, an unused connection, a documented Wwox mechanism not yet turned into a pharmacological comparison, an unread relevant source); propose a reasoned choice visibly if ADV is busy",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 1",
-     "accepted_at": "2026-11-18T23:33:44Z"
+     "accepted_at": "2026-11-18T23:33:44Z",
+     "evidence": "advisor message: order ADV-067 first, then Wwox seizure onset age and EEG (one reading round), glial NKCC1 parked; my marginal-benefit comparison sent in the reply to the 23:24Z meeting",
+     "updated_at": "2026-11-18T23:52:17Z"
     },
     {
      "step": "Answer ADV's diagnosis question on the two generator comparisons that showed no detectable benefit",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 2",
-     "accepted_at": "2026-11-18T23:33:44Z"
+     "accepted_at": "2026-11-18T23:33:44Z",
+     "evidence": "message to advisor 2026-11-18 after landing 1cec871c2 (diagnosis block)",
+     "updated_at": "2026-11-18T23:52:10Z"
     },
     {
      "step": "With IT, fix before the outcome the question, alternatives, utility criterion, error to avoid and no-difference outcome of one real case that tests whether the new relations improve a comparison against the simple path; record the result and the cost",
@@ -145,6 +157,7 @@
   "ADV-065b verifier (legend-delegate, agent a0740363): asked sonnet, effort NOT stated in the dispatch (same deviation); read back claude-sonnet-5-5 x64, effort xhigh x64; birth 21,574; 64 turns; output 182,970; cache read 16,626,495; peak 485,955; 42 claims: 29 supported, 11 partly, 2 absences confirmed; found Kasahara Tables 1-2 mortality. Remedy for this mandate: every dispatch states model and effort (producer medium, verifier high) and the read-back is recorded.",
   "ADV-065c P1 producer (legend-delegate, agent aa059df2): asked sonnet/medium; read back claude-sonnet-5-5 x31, medium x31; birth 20,859; 31 turns; output 48,783; cache read 2,675,790; peak 166,400; completed lever genetics and engagement table (L1-L3, N1, N2); 8 new full texts by keyword-sentence scans, 75 quotations matched, no STOP.",
   "ADV-065c verifier V (legend-delegate, agent a8d6cc32): asked sonnet/high; read back claude-sonnet-5-5 x73, high x73; birth 20,878; 73 turns; output 140,360; cache read 13,690,481; peak 434,873; two phases; phase 1 32 statements (29 supported, 3 partly, reanalysis rerun byte-identical), phase 2 45 inference items (15 sound, 19 overstated, 9 missing rival, 1 unsupported, 1 transfer error); all replacement wordings applied; the KCC2-above-NKCC1 development ranking withdrawn.",
-  "ADV-065c recheck verifier (legend-delegate, agent a2c66295): asked sonnet/high; read back claude-sonnet-5-5 x72, high x72; birth 20,869; 72 turns; output 70,743; cache read 10,434,740; peak 302,141; 19 statements (18 supported, 1 partly), 6 overstatements reworded, 1 new rival added, 3 consistency defects fixed."
+  "ADV-065c recheck verifier (legend-delegate, agent a2c66295): asked sonnet/high; read back claude-sonnet-5-5 x72, high x72; birth 20,869; 72 turns; output 70,743; cache read 10,434,740; peak 302,141; 19 statements (18 supported, 1 partly), 6 overstatements reworded, 1 new rival added, 3 consistency defects fixed.",
+  "ADV-067 producer (legend-delegate, agent ae15fa0e): asked sonnet/medium; read back claude-sonnet-5-5 x28, medium x28; birth 21,223; 28 turns; output 37,502; cache read 1,871,922; peak 127,832; completed the lithium regimen table (T1 to T5), 41 quotations matched, 0 new full texts (Cheng 2020 the only full text), no STOP. Case E simple path (main session slice): 5 turns, output 5,401, cache read 3,824,984."
  ]
 }

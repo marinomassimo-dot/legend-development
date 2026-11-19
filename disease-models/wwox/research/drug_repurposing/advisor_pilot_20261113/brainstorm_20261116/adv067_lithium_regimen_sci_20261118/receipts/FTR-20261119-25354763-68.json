@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-18T23:04:09Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-19T00:04:09Z",
+ "event_id": "FTR-20261119-25354763-68",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"Brain lithium distribution was rapid (as early as 15 min), inhomogeneous and with delayed elimination (over 78 h).\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv067_lithium_regimen_sci_20261118/LITHIUM_REGIMEN_DECISION_ADV067_SCI_20261119.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "b401ff5a1e15084dd87ab4d9682aa2525d1ec634f5b1dc46f85e8b81e041d363",
+ "source_kind": "abstract",
+ "source_locator": "files/fulltext/adv067_20261119/abs_25354763.txt",
+ "study_id": {
+  "pmid": "25354763"
+ },
+ "workflow": "SCI ADV-067; abstract parsed from PubMed efetch XML saved by the producer; the quoted sentence re-matched in code"
+}

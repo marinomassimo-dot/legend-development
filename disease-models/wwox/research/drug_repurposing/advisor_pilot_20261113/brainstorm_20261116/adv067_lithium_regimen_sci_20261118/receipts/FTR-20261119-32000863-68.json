@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-18T23:04:09Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "not_read",
+  "figures": "read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-19T00:04:09Z",
+ "event_id": "FTR-20261119-32000863-68",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator [Abstract]: \"increased susceptibility to pilocarpine- and pentylenetetrazol (PTZ)-induced seizures in preweaning mice\"",
+  "verbatim_locator [Materials And Methods]: \"were pretreated three times within 1 h before PTZ injection\"",
+  "verbatim_locator [Results]: \"Injection of a potent GSK3β inhibitor lithium chloride significantly suppressed PTZ-induced epileptic seizure in Wwox−/− mice\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv067_lithium_regimen_sci_20261118/LITHIUM_REGIMEN_DECISION_ADV067_SCI_20261119.md"
+ ],
+ "prior_receipt": "FTR-20261118-32000863-67",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "792b5b296863674d0295a7dba918ee7c59ade8cdff64ee8ec9d8f01bd12f00f5",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+ "study_id": {
+  "pmid": "32000863"
+ },
+ "workflow": "SCI ADV-067: saved open-access full text (files/fulltext); the Fig. 7 image viewed (copy in the Cheng 2020 assets folder under files/fulltext); the supplement text read by the ADV-067 producer, not by SCI; Methods, the seizure Results subsection and the abstract read; not read in full"
+}
