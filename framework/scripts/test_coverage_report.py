@@ -191,6 +191,16 @@ class ReportIntegrityTests(unittest.TestCase):
         self.assertGreater(report["entries_total"], 0)
         self.assertEqual(report["reading_debt_count"], report["depth"].get("catalogued", 0))
 
+    def test_the_reading_debt_split_adds_up_and_leaves_the_headline_alone(self) -> None:
+        report = cov.build(ROOT, "wwox")
+        split = report["reading_debt_split"]
+        self.assertEqual(split["receipted_elsewhere"] + split["no_receipt"], report["reading_debt_count"])
+        self.assertEqual(split["complete"] + split["partial"], split["receipted_elsewhere"])
+        self.assertGreater(split["receipted_elsewhere"], 0, "IT59 2026-11-19 found 115: a split that finds none has lost the receipt join")
+        text = cov.render(report)
+        self.assertIn("carry a receipt owned by another registry entry", text)
+        self.assertIn("the headline count is unchanged", text)
+
     def test_coverage_is_not_overstated(self) -> None:
         """The read share must never exceed the number of records claiming a full text."""
         registry = (

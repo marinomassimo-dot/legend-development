@@ -83,9 +83,9 @@ time; it does not redistribute or license the article text.
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 259 | 37% |
 | **Catalogued, never processed** — the reading debt | 116 | 16% |
-| Known to the tracking log only | 78 | 11% |
+| Known to the tracking log only | 77 | 11% |
 | Processed from the abstract | 13 | 2% |
-| Partial full text read | 74 | 10% |
+| Partial full text read | 75 | 11% |
 | Full text read | 166 | 24% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
@@ -287,7 +287,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [33455117](https://pubmed.ncbi.nlm.nih.gov/33455117/) | 2020 | ✅ | Journal Article | screened | Methylation of WWOX gene promotes proliferation of osteosarcoma cells. |
 | [32931356](https://pubmed.ncbi.nlm.nih.gov/32931356/) | 2020 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | LncRNA WWOX-AS1 sponges miR-20b-5p in hepatocellular carcinoma and represses its progression by upregulating WWOX. |
 | [32096174](https://pubmed.ncbi.nlm.nih.gov/32096174/) | 2020 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | WWOX regulates the Elf5/Snail1 pathway to affect epithelial-mesenchymal transition of ovarian carcinoma cells in vitro. |
-| [30214895](https://pubmed.ncbi.nlm.nih.gov/30214895/) | 2018 | ✅ | Journal Article; Review | screened | Cancerous Protein Network That Inhibits the Tumor Suppressor Function of WW Domain-Containing Oxidoreductase (WWOX) by Aberrantly Expressed Molecules. |
 | [30211123](https://pubmed.ncbi.nlm.nih.gov/30211123/) | 2018 | ✅ | Journal Article; Review | screened | WWOX Tumor Suppressor Gene in Breast Cancer, a Historical Perspective and Future Directions. |
 | [30154439](https://pubmed.ncbi.nlm.nih.gov/30154439/) | 2018 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | Loss of Wwox drives metastasis in triple-negative breast cancer by JAK2/STAT3 axis. |
 | [29845204](https://pubmed.ncbi.nlm.nih.gov/29845204/) | 2018 | ✅ | Journal Article | screened | LncRNA WWOX‑AS1 inhibits the proliferation, migration and invasion of osteosarcoma cells. |
@@ -558,7 +557,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 453 outstanding records)*
+*(showing all 452 outstanding records)*
 
 ## Already processed from this seed
 
@@ -587,6 +586,7 @@ for an entirely unprocessed record.
 | [33195192](https://pubmed.ncbi.nlm.nih.gov/33195192/) | 2020 | ✅ | partial full text | PAPER 129 | Wwox Deficiency Causes Downregulation of Prosurvival ERK Signaling and Abnormal Homeostatic Responses in Mouse Skin. |
 | [32764489](https://pubmed.ncbi.nlm.nih.gov/32764489/) | 2020 | ✅ | partial full text | receipt FTR-20260920-32764489-01 | Therapeutic Zfra4-10 or WWOX7-21 Peptide Induces Complex Formation of WWOX with Selective Protein Targets in Organs that Leads to Cancer Suppression and Spleen Cytotoxic Memory Z Cell Activation In Vivo. |
 | [30335523](https://pubmed.ncbi.nlm.nih.gov/30335523/) | 2018 | ✅ | partial full text | receipt FTR-20261117-30335523-01 | The downregulation of WWOX induces epithelial-mesenchymal transition and enhances stemness and chemoresistance in breast cancer. |
+| [30214895](https://pubmed.ncbi.nlm.nih.gov/30214895/) | 2018 | ✅ | partial full text | receipt FTR-20261119-30214895-71 | Cancerous Protein Network That Inhibits the Tumor Suppressor Function of WW Domain-Containing Oxidoreductase (WWOX) by Aberrantly Expressed Molecules. |
 | [28749468](https://pubmed.ncbi.nlm.nih.gov/28749468/) | 2017 | ✅ | partial full text | CORPUS-STUB-126 | WWOX sensitises ovarian cancer cells to paclitaxel via modulation of the ER stress response. |
 | [25891642](https://pubmed.ncbi.nlm.nih.gov/25891642/) | 2015 | ✅ | partial full text | receipt FTR-20261117-25891642-01 | Effect of the WWOX gene on the regulation of the cell cycle and apoptosis in human ovarian cancer stem cells. |
 | [25789010](https://pubmed.ncbi.nlm.nih.gov/25789010/) | 2015 | ✅ | partial full text | receipt FTR-20261117-25789010-01 | Ectopic expression of the WWOX gene suppresses stemness of human ovarian cancer stem cells. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | full text | PAPER 244 | WWOX oxidoreductase--substrate and enzymatic characterization. |
 | [16288044](https://pubmed.ncbi.nlm.nih.gov/16288044/) | 2005 | — | full text | PAPER 569 | Activated tyrosine kinase Ack1 promotes prostate tumorigenesis: role of Ack1 in polyubiquitination of tumor suppressor Wwox. |
 
-*(showing all 253 processed records from the seed)*
+*(showing all 254 processed records from the seed)*
 
 ## How to work one
 
