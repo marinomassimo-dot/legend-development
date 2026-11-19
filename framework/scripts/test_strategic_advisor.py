@@ -23,6 +23,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import strategic_advisor as sa  # noqa: E402
+_REAL_AGENTS = sa._agents
 sa._agents = lambda: None   # no test reads the real runtime's session list; the activity tests pass their own
 
 FAKE = '''#!/usr/bin/env python3
@@ -254,6 +255,24 @@ class RecipientsView(unittest.TestCase):
         self.assertEqual(sa.idle_without_blocker(view, [{"task": "T", "step": "ITEM two", "blocker": "WITHIN reach"}]), ["Orchestrator (IT Orchestrator) idle 75 min", "Science (SCI) idle 80 min"])   # whole words only
         view["roles"]["Orchestrator"]["idle_min"] = 59
         self.assertEqual(sa.idle_without_blocker(view, waits), [])                                   # at or below the threshold nothing is said
+
+
+class ClaudeBinary(unittest.TestCase):
+    """2026-11-19 (ADV): in the session's own shell `claude` is not on PATH; the activity block was silently omitted at every in-session tick."""
+
+    def test_the_listing_uses_the_known_install_path_when_path_lacks_claude(self):
+        calls = []
+
+        def fake_run(cmd, **kw):
+            calls.append(cmd[0])
+            class R: returncode = 0; stdout = "[]"
+            return R()
+        with patch.dict(os.environ, {"LEGEND_ADVISOR_CLAUDE": ""}), patch("mandate_watch.shutil.which", return_value=None), patch.object(sa.subprocess, "run", fake_run):
+            self.assertEqual(_REAL_AGENTS(), [])
+        self.assertTrue(calls[0].endswith("/.local/bin/claude"))                                    # the fallback of mandate_watch.claude_bin, not a bare 'claude'
+        with patch.dict(os.environ, {"LEGEND_ADVISOR_CLAUDE": "/opt/x/claude"}), patch.object(sa.subprocess, "run", fake_run):
+            _REAL_AGENTS()
+        self.assertEqual(calls[1], "/opt/x/claude")                                                  # the explicit override still wins
 
 
 class Profile(unittest.TestCase):
@@ -792,7 +811,8 @@ class Proactive(ProactiveFixture):
         road = sa.ROADMAP; road.write_text(road.read_text().replace("Mission v1", "Mission v1\nOperator 2026-11-13: pause the EBP thread"), encoding="utf-8")
         self.at("2026-11-13T11:30:00Z")
         t = sa.tick(self.campaign)
-        self.assertEqual((t["verdict"], t["why"]), ("EVALUATE", "roadmap changed"))     # an operator update anticipates the four-hour rhythm
+        self.assertEqual(t["verdict"], "EVALUATE")
+        self.assertTrue(t["why"].startswith("roadmap changed"), t["why"])     # an operator update anticipates the four-hour rhythm (the stubbed listing adds the ACTIVITY UNAVAILABLE line after it)
         self.assertIn("pause the EBP thread", sa.build_brief_p(self.campaign, sa.observe(self.campaign, sa._load_state(self.campaign))))
 
     def test_the_budget_stops_further_invocations_and_the_expiry_does_not_renew(self) -> None:
@@ -1362,6 +1382,21 @@ class ValueContinuity(Continuous):
         finally:
             sa.session_activity = sa.session_activity_saved
         self.assertEqual(out["activity"]["main_quiet_min"], 5)
+
+    def test_an_unavailable_activity_block_is_said_on_the_tick_line_not_omitted(self) -> None:
+        """2026-11-19 (ADV): the block was silently absent when the listing failed; the tick now names it."""
+        saved = sa.session_activity
+        sa.session_activity = lambda now, agents=None, recipients=None: {"available": False}
+        try:
+            out = sa.tick(self.campaign)
+        finally:
+            sa.session_activity = saved
+        self.assertIn("ACTIVITY UNAVAILABLE", out["why"])
+        sa.session_activity = lambda now, agents=None, recipients=None: {"available": True, "idle_share": "0/0", "idle_over_half": False, "main_quiet_min": 5}
+        try:
+            self.assertNotIn("ACTIVITY UNAVAILABLE", sa.tick(self.campaign)["why"])
+        finally:
+            sa.session_activity = saved
 
     def test_a_run_cut_short_by_a_fallback_is_not_acted_on(self) -> None:
         """HE59: P11 was stopped by a classifier after 4 calls and its portfolio updates and wait were applied. A short run with a recorded fallback takes nothing; a long one with the same fallback is used."""
