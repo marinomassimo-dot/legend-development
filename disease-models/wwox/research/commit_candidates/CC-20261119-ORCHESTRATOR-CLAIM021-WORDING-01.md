@@ -60,3 +60,10 @@ Audit: `research/locator_audits/2026-11-19_claim021_wording_it59/` (15 triples w
 * **Where Repudi appears:** the Results sentence with the burst counts (0 of 11 S-WT, 4 of 23 S-HT, 36 of 42 S-KO) ends «(Fig. 1A; Repudi et al., 2021)», a citation of the authors' own earlier paper inside that sentence; no S-HT value is printed for Repudi. Reported to SCI, who asked.
 
 **Change class (restated):** MINOR. **Next:** a second blind check of the section 6 sentences (T4, T5, T13, T15 as rewritten, plus the sentences changed in 3.4 and 3.7), then the `BATCH_COMMIT` MINOR with ops through `batch_commit.py propagate` on the claim and paper registries.
+
+## 7 · REVISION 2 (2026-11-19, after the second blind check of the section 6 sentences)
+Check: `research/locator_audits/2026-11-19_claim021_wording_it59/AUDIT2_REPORT_AS_DELIVERED.md` (6 triples, one fresh `legend-delegate`, sonnet/high read back sonnet x6, effort high x6): 5 SUPPORTED, 1 narrow OVERSHOOT. I checked the finding against the delegate's quoted source words; it holds.
+* **3.3 (T2).** Table 1 never says what «±» is (the only «SEM» in the article is Fig 6B, sag). Replace «SEMs 15.49 and 8.88» by «the printed ± values 15.49 and 8.88 (the table does not label ±)».
+* **3.7 (T4).** «against S-CTL n = 18» is loose: the separate arms are compared with S-KO, and the source's own n's do not reconcile (S-CTL is WT plus HT, yet 14 + 17 = 31, not 18; s-HET N = 17 equals the S-KO n of 17). Write: «the legend gives s-WT N = 14 and s-HET N = 17 cells beside S-CTL n = 18 and S-KO n = 17; these n's are not reconciled in the source».
+* The delegate's other flags are carried as limits, not as changes: S-HT is also starred against S-WT (the source itself says 'S-KO and S-HTs were also more depolarized'); the T5 bath reading rests on drug dilution and electrode fill, not on a sentence.
+These two edits only remove or relabel an unprinted claim, so I do not ask for a third check; the sentence set is considered audited as revised. **Change class (restated):** MINOR.
