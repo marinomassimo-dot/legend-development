@@ -46,10 +46,12 @@
     },
     {
      "step": "ADV-067 lithium regimen bifurcation table and decision",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-067 assignment message 2026-11-18 (advisor)",
-     "accepted_at": "2026-11-18T23:33:35Z"
+     "accepted_at": "2026-11-18T23:33:35Z",
+     "evidence": "landed ba236be5b: adv067_lithium_regimen_sci_20261118/LITHIUM_REGIMEN_DECISION_ADV067_SCI_20261119.md (table, predictions, decision, case E result), brief 9.9, 11 receipts -68 recorded",
+     "updated_at": "2026-11-19T00:44:47Z"
     },
     {
      "step": "Select the next question with ADV by marginal benefit (same axis again, another open question, an unused connection, a documented Wwox mechanism not yet turned into a pharmacological comparison, an unread relevant source); propose a reasoned choice visibly if ADV is busy",
@@ -71,10 +73,12 @@
     },
     {
      "step": "With IT, fix before the outcome the question, alternatives, utility criterion, error to avoid and no-difference outcome of one real case that tests whether the new relations improve a comparison against the simple path; record the result and the cost",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 3",
-     "accepted_at": "2026-11-18T23:33:44Z"
+     "accepted_at": "2026-11-18T23:33:44Z",
+     "evidence": "case E declaration (sha 76aac377) and simple-path decision (sha 306a08aa) committed before the structured outcome; result in section 7 of the ADV-067 note, landed ba236be5b",
+     "updated_at": "2026-11-19T00:44:47Z"
     },
     {
      "step": "Reconcile the queue after delivery and continue the next useful deepening; update open questions through the existing path; use DREAM if associations can change a search",
@@ -82,6 +86,13 @@
      "owner": "orchestrator",
      "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 4",
      "accepted_at": "2026-11-18T23:33:44Z"
+    },
+    {
+     "step": "Onset age and EEG of Wwox seizures beyond Cheng 2020: one reading round of the Wwox mouse and rat reports; a one-line answer if nothing exists",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "advisor message 2026-11-18 (order of executable items, item 2)",
+     "accepted_at": "2026-11-19T00:45:20Z"
     }
    ]
   }
@@ -147,6 +158,13 @@
    "at": "2026-11-18T23:33:44Z",
    "source": "operator NIGHT SCIENTIFIC BATCH mandate 2026-11-18, section 4",
    "step_sha256": "4d0eca8e6432",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T00:45:20Z",
+   "source": "advisor message 2026-11-18 (order of executable items, item 2)",
+   "step_sha256": "1ca8b0f23002",
    "reopened_block": false,
    "authorised_by": null
   }
