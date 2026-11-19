@@ -35801,7 +35801,8 @@
     "not_known": [
      "Whether a WWOX-deficient human neural cell has a measurable bioenergetic defect that a ketone substrate would bypass.",
      "Whether lactate is raised, normal or low in WWOX-deficient human brain across ages and contexts.",
-     "A ketogenic-diet response is reported in 3 of 5 WOREE individuals (lactate 2.4 to 3.3 mmol/L in one individual); the Pdk1 transcript and serum-lactate datum in the Wwox-null MEF and mouse paper is non-neural and measures no PDH."
+     "A ketogenic-diet response is reported in 3 of 5 WOREE individuals (lactate 2.4 to 3.3 mmol/L in one individual); the Pdk1 transcript and serum-lactate datum in the Wwox-null MEF and mouse paper is non-neural and measures no PDH.",
+     "SCI 2026-11-19 (ADV-074, advisor_pilot_20261113/brainstorm_20261116/h_glucose_axis_adv074_sci_20261119/GLUCOSE_METABOLIC_AXIS_FIRST_PASS_ADV074_SCI_20261119.md; mapped by IT): the card's evidence is clinical and tiny with no metabolic readout in any WWOX-deficient neural system; on the held originals its rationale neither gains nor loses decisively: it would gain plausibility (an alternative brain fuel) only if hypoglycaemia or glucose use contributes to excitability, which nothing shows, and it would reduce to a generic anticonvulsant action if seizures occur with normal glucose (the P47T adults and the neuron-targeted line suggest they may). A diet that lowers blood glucose would act on pups that are already hypoglycaemic from about P10 and die: whether it helps or harms is unknown (a hypothesis-level caution, not advice). No change of tier."
     ],
     "p4_card": {
      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card.",
@@ -35988,7 +35989,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "feae3ef55f88af6f639f92f8b29ffc1e2aefcb65b95a64f8390f7b569d27dc0d",
+   "input_sha256": "006a8a9f9ffd5f45b6bf009d97420ae675c12f7750b5ef824280e19a8ec52e00",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
