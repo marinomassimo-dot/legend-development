@@ -836,6 +836,27 @@ class SecondBlindReview(unittest.TestCase):
             self.assertEqual(mc.binding_from_transcript(p), "T-1")
 
 
+class MissingTranscript(unittest.TestCase):
+    """ADV-078 second trial: a successor checked the wrong folder, got None and read it as 'released'. `binding_from_transcript` keeps its documented meaning for the hook (missing = unbound);
+    `marker_state` tells the four cases apart."""
+
+    def test_a_wrong_folder_is_not_a_release_and_a_str_path_is_accepted(self):
+        with tempfile.TemporaryDirectory() as td:
+            missing = Path(td) / "nope.jsonl"
+            self.assertEqual(mc.marker_state(missing, "T-1"), "MISSING")
+            self.assertEqual(mc.marker_state(str(missing), "T-1"), "MISSING")
+            self.assertIsNone(mc.binding_from_transcript(str(missing)))                       # the hook's meaning is unchanged, and a str no longer breaks it
+            f = Path(td) / "t.jsonl"
+            text = lambda t: json.dumps({"type": "assistant", "message": {"content": [{"type": "text", "text": t}]}}) + "\n"
+            f.write_text(text("hello"), encoding="utf-8")
+            self.assertEqual(mc.marker_state(f, "T-1"), "NEVER_BOUND")
+            f.write_text(f.read_text() + text("MANDATE_BOUND: T-1"), encoding="utf-8")
+            self.assertEqual(mc.marker_state(str(f), "T-1"), "BOUND")
+            f.write_text(f.read_text() + text("MANDATE_BOUND: T-2") + text("MANDATE_RELEASED: T-1"), encoding="utf-8")
+            self.assertEqual(mc.marker_state(f, "T-1"), "RELEASED")
+            self.assertEqual(mc.marker_state(f, "T-2"), "BOUND")                               # per task, not the last marker of the file
+
+
 class AcceptedWork(unittest.TestCase):
     """2026-11-18: work accepted by message was in no record, so after a total host loss nothing revived the actors that held it; and an old COMPLETE record hid the new work. `accept` makes the actor's
     own record say it; it never reopens an operator stop and never reopens a closed block without an explicit authorisation pointer."""
