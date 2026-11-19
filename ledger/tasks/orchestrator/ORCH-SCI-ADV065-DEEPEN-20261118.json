@@ -225,10 +225,9 @@
      "accepted_at": "2026-11-19T10:15:43Z",
      "blocker": "handoff to a fresh window from the checkpoint (context cost; approved by ADV 2026-11-19); first task of that window",
      "unblock_when": {
-      "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/checkpoint_sci_20261119/CHECKPOINT_SCI_CONTINUATION_20261119.md",
-      "contains": "Window resumed"
+      "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/checkpoint_sci_20261119/WINDOW_RESUMED.txt"
      },
-     "updated_at": "2026-11-19T10:15:43Z"
+     "updated_at": "2026-11-19T10:16:02Z"
     },
     {
      "step": "K: audit items 5 to 7 (peripheral nerve, P47T organ findings, S-HT panel text against legend) if ADV ranks them after IT's confirmations (ADV-075)",
@@ -236,12 +235,11 @@
      "owner": "orchestrator",
      "source": "SCI remaining items 2026-11-19 (audit items 5 to 7)",
      "accepted_at": "2026-11-19T10:15:43Z",
-     "blocker": "waits for ADV's ranking after IT's row confirmations",
+     "blocker": "waits for ADV's ranking after IT's row confirmations and for the fresh window",
      "unblock_when": {
-      "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/checkpoint_sci_20261119/CHECKPOINT_SCI_CONTINUATION_20261119.md",
-      "contains": "Window resumed"
+      "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/checkpoint_sci_20261119/WINDOW_RESUMED.txt"
      },
-     "updated_at": "2026-11-19T10:15:43Z"
+     "updated_at": "2026-11-19T10:16:02Z"
     },
     {
      "step": "L: supply-path papers when they arrive (WWOX clinical series, Sardi 2006, 2005 and 2007 WWOX-ERBB4 reports, Suzuki 2009, Aqeilan 2008, Hussain 2023 supplement): read completely, receipt, close R3 and the rat-serum and Mbp questions",
@@ -249,12 +247,11 @@
      "owner": "orchestrator",
      "source": "SCI remaining items 2026-11-19 (supply-path papers)",
      "accepted_at": "2026-11-19T10:15:43Z",
-     "blocker": "waits for the operator's supply of the listed texts (decision page item list)",
+     "blocker": "waits for the operator's supply of the listed texts and for the fresh window",
      "unblock_when": {
-      "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/checkpoint_sci_20261119/CHECKPOINT_SCI_CONTINUATION_20261119.md",
-      "contains": "Window resumed"
+      "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/checkpoint_sci_20261119/WINDOW_RESUMED.txt"
      },
-     "updated_at": "2026-11-19T10:15:43Z"
+     "updated_at": "2026-11-19T10:16:03Z"
     }
    ]
   }
