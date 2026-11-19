@@ -1,6 +1,6 @@
 # IT checkpoint 1 (2026-11-19, ACTOR_ID `orchestrator`, mandate IT59 / ORCH-ROADMAP-IT59-20261119; non-canonical working note; not medical advice)
 
-Written at a sub-step boundary (a landing just closed) so a successor can take over. State: main at a0c20dec8 or later. Nothing is mid-flight in the shared tree; `/tmp/it56_iso` is my landing worktree (detached, clean); `/tmp/it56_push5.sh` is the landing loop (stops on BLOCK/FAIL/REFUSED; run `legend_lint.py .` before the first push; wikilinks need `[[paper_registry_current#PAPER nnn]]`).
+Written at a sub-step boundary (a landing just closed) so a successor can take over. State: main at a0c20dec8 or later. Nothing is mid-flight in the shared tree; `/tmp/it56_iso` is my landing worktree (detached, clean); `/tmp/it56_push5.sh` is the landing loop (stops on BLOCK/FAIL/REFUSED; run `legend_lint.py .` before the first push; a wikilink to a paper record needs the registry prefix, a hash and the exact heading, for example the prefix paper_registry_current, then hash PAPER and a three-digit number, inside double square brackets).
 
 ## Landed today (do not redo)
 * CLAIM 025 (BATCH_20261119_001), CLAIM 021 (BATCH_20261119_004), CLAIM 002 and CLAIM 005 (BATCH_20261119_005), all MINOR, each audited twice by blind legend-delegates (sonnet/high read back). CLAIM 021 status: 'audited twice; the one flagged word removed afterwards without a third look'; CLAIM 002: 'audited twice; repairs after the second check unaudited' (Wnt correction wording, supraphysiological scope, wave-note amplitude).
@@ -24,3 +24,5 @@ Written at a sub-step boundary (a landing just closed) so a successor can take o
 * Pre-register and hash before any delegate; effort read back from the subagent jsonl (`session_model_census.py`).
 * One landing at a time; never touch `/tmp/it56_iso` while a gate runs; never `git checkout` there with unpushed commits.
 * Memory files saved today: browser-probe-read-line-2, retry-loop-must-stop-on-block.
+
+(Dated 2026-11-19 by the successor window: line 3 was reworded because its literal example of a wikilink fragment with the placeholder 'nnn' made `scripts/test_link_targets.py` red in CI at e0af18023 and later heads; sha256 of the file before this edit f9d6527b085847b07de694c69743ab942ab61d91ade851f9d2455d05b3be70ab. Nothing else changed.)
