@@ -95,6 +95,15 @@
      "accepted_at": "2026-11-19T00:45:20Z",
      "evidence": "landed 985a6cd7e: adv067_lithium_regimen_sci_20261118/ONSET_AGE_WWOX_SEIZURES_ONE_ROUND_SCI_20261119.md; brief 9.10; 4 receipts -69 recorded",
      "updated_at": "2026-11-19T01:00:03Z"
+    },
+    {
+     "step": "ADV-068: interneuron and PV deficit, per-animal in silico step on the public bulk deposits GSE158681, GSE158682, GSE158685 (pre-registered before any count; held data first; deposits not independent of the held nuclei; deliver Pvalb against the late-maturing set, remaining alternatives, consequence for the slice pilot, next step or reasoned stop)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "advisor message 2026-11-19 (ADV-068, choice A of the census)",
+     "accepted_at": "2026-11-19T01:25:58Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv068_pv_per_animal_sci_20261119/PV_PER_ANIMAL_RESULT_ADV068_SCI_20261119.md: pre-registration hashed first (c50422d0e); pre-registered stop R-B met at its boundary; delivered to ADV and IT",
+     "updated_at": "2026-11-19T01:38:42Z"
     }
    ]
   }
@@ -167,6 +176,13 @@
    "at": "2026-11-19T00:45:20Z",
    "source": "advisor message 2026-11-18 (order of executable items, item 2)",
    "step_sha256": "1ca8b0f23002",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T01:25:58Z",
+   "source": "advisor message 2026-11-19 (ADV-068, choice A of the census)",
+   "step_sha256": "f0688692fc85",
    "reopened_block": false,
    "authorised_by": null
   }
