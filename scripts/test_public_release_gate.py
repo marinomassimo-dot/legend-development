@@ -1053,7 +1053,7 @@ class DocumentedCommandsPrecheckTests(unittest.TestCase):
         subprocess.run(["git", "-C", str(root), "add", "."], check=True, capture_output=True)
         with_ledger = self.run_gate(root, "--paths", "ok.md", "disease-models/wwox/registries/fulltext_read_receipts.jsonl")
         self.assertIn("REMINDER (receipts ledger in this change)", with_ledger.stdout)
-        self.assertIn("coverage_report.md and reading_state.md", with_ledger.stdout)
+        self.assertIn("coverage_report.md, reading_state.md and batch_queue.md", with_ledger.stdout)
         self.assertNotIn("receipts ledger", self.run_gate(root, "--paths", "ok.md").stdout)             # only when the ledger is in the change
 
     def test_the_full_gate_does_not_print_the_reminder(self) -> None:

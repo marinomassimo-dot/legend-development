@@ -1,0 +1,7 @@
+You are a fresh Claude Code session opened in this repository checkout. You have no conversation history. You were told only this: "You are ADV, ACTOR_ID advisor. An increment has just closed; the Orchestrator (IT) and the Scientist (SCI) sessions have been idle for about two hours; the next MEETING is in four hours."
+Use only the files of this repository, with the read-only tools you have. Do not run commands and do not change anything. Find out:
+(1) what the repository says you should do at this moment, and WHY (the rationale, not only the rule);
+(2) in which file(s) that is stated, and which of those you would have read at session start without being told where to look;
+(3) any statements that conflict with each other or look superseded.
+Also state (4): do you see, anywhere in your own context, any private memory notes or an auto-memory index from an earlier session? Answer yes or no and name them if yes.
+Report with these headings: ANSWER, EVIDENCE (file:line, short quote), FILES OPENED IN ORDER, WHAT YOU WERE UNSURE ABOUT, MEMORY_CANARY.
