@@ -154,3 +154,7 @@
 {"evidence": "SendMessage at 10:33Z 2026-11-19 after HE's ADV-071 close", "id": "ADV-078", "state": "SENT", "to": ["HE"], "utc": "2026-11-19T10:33:14Z"}
 {"assessment": "HOST", "id": "ADV-079", "key": "harm-against-phenotype-table-from-uncarried-organ-findings", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T11:04:25Z"}
 {"evidence": "SendMessage by session id f630dd25 at 11:04Z 2026-11-19, after its proof of reading in the restart trial", "id": "ADV-079", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T11:04:34Z"}
+{"assessment": "HOST", "id": "ADV-080", "key": "baryla-2021-fulltext-for-claim025-and-radar-delta1-triage", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T11:58:35Z"}
+{"evidence": "SendMessage at 11:58Z 2026-11-19, receipt names SCI; after the vigabatrin verifier and heterozygote register delivery", "id": "ADV-080", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T11:58:47Z"}
+{"assessment": "HOST", "id": "ADV-081", "key": "second-locator-audit-of-revised-claim025-candidate", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T12:43:08Z"}
+{"evidence": "SendMessage at 12:43Z 2026-11-19, receipt names SCI, after IT's revised candidate", "id": "ADV-081", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T12:43:08Z"}
