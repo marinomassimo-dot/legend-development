@@ -1,0 +1,35 @@
+arm	quantity	n	value	note
+ctrl	nuclei_total	3182		
+ctrl	count_excitatory	1596	0.5016	
+ctrl	count_inhibitory	246	0.0773	
+ctrl	count_astrocyte	417	0.131	
+ctrl	count_microglia	167	0.0525	
+ctrl	count_OPC	242	0.0761	
+ctrl	count_COP	63	0.0198	
+ctrl	count_NFOL	121	0.038	
+ctrl	count_MFOL	186	0.0585	
+ctrl	count_MOL	119	0.0374	
+ctrl	count_unassigned	25	0.0079	
+ctrl	lineage_share_of_assigned	731	0.2315	
+ctrl	OPC_share_of_lineage	242	0.3311	
+ctrl	mature_MFOL_MOL_share_of_lineage	305	0.4172	
+ctrl	mean_log2cpm_Mbp_in_mature_nuclei	305	11.106	
+ctrl	mean_log2cpm_Plp1_in_mature_nuclei	305	10.158	
+ctrl	mean_log2cpm_Mog_in_mature_nuclei	305	8.193	
+ko	nuclei_total	2920		
+ko	count_excitatory	1262	0.4322	
+ko	count_inhibitory	293	0.1003	
+ko	count_astrocyte	479	0.164	
+ko	count_microglia	171	0.0586	
+ko	count_OPC	352	0.1205	
+ko	count_COP	78	0.0267	
+ko	count_NFOL	95	0.0325	
+ko	count_MFOL	49	0.0168	
+ko	count_MOL	94	0.0322	
+ko	count_unassigned	47	0.0161	
+ko	lineage_share_of_assigned	668	0.2325	
+ko	OPC_share_of_lineage	352	0.5269	
+ko	mature_MFOL_MOL_share_of_lineage	143	0.2141	
+ko	mean_log2cpm_Mbp_in_mature_nuclei	143	5.153	
+ko	mean_log2cpm_Plp1_in_mature_nuclei	143	4.401	
+ko	mean_log2cpm_Mog_in_mature_nuclei	143	2.992	
