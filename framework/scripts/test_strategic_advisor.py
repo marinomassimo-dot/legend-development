@@ -1343,7 +1343,7 @@ class ValueContinuity(Continuous):
 
     def test_the_tick_carries_the_activity_block(self) -> None:
         sa.session_activity_saved = sa.session_activity
-        sa.session_activity = lambda now, agents=None: {"available": True, "idle_share": "0/0", "idle_over_half": False, "main_quiet_min": 5}
+        sa.session_activity = lambda now, agents=None, recipients=None: {"available": True, "idle_share": "0/0", "idle_over_half": False, "main_quiet_min": 5}
         try:
             out = sa.tick(self.campaign)
         finally:
