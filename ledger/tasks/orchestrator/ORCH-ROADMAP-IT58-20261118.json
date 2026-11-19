@@ -28,18 +28,21 @@
     },
     {
      "step": "3 DIAGNOSE THE GENERATIVE NULL RESULT: six-class diagnosis, audit of unelicited criteria, next informative bifurcation with pre-specified rule",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-18 NEXT ITERATION, section 3",
      "accepted_at": "2026-11-18T23:38:06Z",
-     "updated_at": "2026-11-19T00:35:07Z"
+     "updated_at": "2026-11-19T01:16:15Z",
+     "evidence": "Audit and diagnosis (b131370d1) accepted by the advisor; case E = ADV-067 run by SCI (retrospective): same main decision, one sub-decision differs, two contradictable extras; decision mapped in one pass at dd0b59697586 (INV-09 L2, L3 and C-GS1 changed, the rest byte-identical); no repetition of a comparison."
     },
     {
      "step": "4 TURN NEW SCIENCE INTO RESEARCH: per result what it strengthens, weakens, modifies or leaves; assignments with real recipient and full originals",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-18 NEXT ITERATION, section 4",
-     "accepted_at": "2026-11-18T23:38:06Z"
+     "accepted_at": "2026-11-18T23:38:06Z",
+     "evidence": "KCC2 withdrawal, F03 counter-evidence and ADV-067 regimen decision each traced to a consumer (package cells, INV-09 next test, arm-table line, dashboard); SCI onset-age finding (earliest seizures about P12 behaviour, P14 ECoG) noted, no cell change needed; executable follow-ups are SCI's/advisor's, none open for IT.",
+     "updated_at": "2026-11-19T01:16:15Z"
     },
     {
      "step": "5 PUBLIC DASHBOARD: language defect with HE, produced then published pages, five languages, filters, links, phone and desktop, no ranking change",
@@ -56,14 +59,15 @@
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-18 NEXT ITERATION, section 6",
      "accepted_at": "2026-11-18T23:38:06Z",
-     "updated_at": "2026-11-19T00:35:07Z"
+     "updated_at": "2026-11-19T01:16:16Z"
     },
     {
      "step": "7 HANDOFF AND CONTINUATION: deliver to the advisor consumed, decision, limits, next work, costs; continue",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-18 NEXT ITERATION, section 7",
-     "accepted_at": "2026-11-18T23:38:06Z"
+     "accepted_at": "2026-11-18T23:38:06Z",
+     "updated_at": "2026-11-19T01:16:22Z"
     }
    ]
   }
