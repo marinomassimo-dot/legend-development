@@ -363,6 +363,15 @@
      "accepted_at": "2026-11-19T16:17:05Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/supply_sheet_adv087_sci_20261119/SUPPLY_SHEET_FOR_THE_HUMAN_VISIT_SCI_20261119.md: one sheet, 22 rows in decision order, nothing fetched, nothing sent",
      "updated_at": "2026-11-19T16:18:55Z"
+    },
+    {
+     "step": "ADV-088 public developmental expression time course: from a public deposit (mouse neocortex P7 to P21, wild type; BrainSpan 8 to 37 weeks) measure when Wwox, Pvalb, Gad1, Sst, Vip, Lhx6, Slc12a5 against Slc12a2, a late-maturing set and a myelin set switch on, to set the assay ages of ordering-page rows 4 and 6; pre-register markers, unit and the rejecting observation in a hashed file before any count; check held files first; plain clients; findings to IT; nothing applied",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-088 (assignments/ADV-088.md) and ADV message 2026-11-19",
+     "accepted_at": "2026-11-19T17:29:09Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/expression_timecourse_adv088_sci_20261119/EXPRESSION_TIMECOURSE_RESULT_ADV088_SCI_20261119.md: prereg hashed 17:31Z before any value; rejecting observation not met (Pvalb 0.47 of plateau at P14, 0.89 at P28; whole-brain transcript, no P7/P17/P21); predictions 2, 3, 4 partly or wholly failed; no delegate; ordering page dated update",
+     "updated_at": "2026-11-19T17:35:45Z"
     }
    ]
   }
@@ -638,6 +647,13 @@
    "at": "2026-11-19T16:17:05Z",
    "source": "ADV-087 (assignments/ADV-087.md) and ADV message 2026-11-19",
    "step_sha256": "0fdb31bd6e04",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T17:29:09Z",
+   "source": "ADV-088 (assignments/ADV-088.md) and ADV message 2026-11-19",
+   "step_sha256": "599a693fc76e",
    "reopened_block": false,
    "authorised_by": null
   }

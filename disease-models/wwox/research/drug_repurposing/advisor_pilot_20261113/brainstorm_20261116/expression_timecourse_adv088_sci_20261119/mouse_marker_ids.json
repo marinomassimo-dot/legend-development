@@ -1,0 +1,86 @@
+{
+ "Wwox": {
+  "id": "ENSMUSG00000004637",
+  "display_name": "Wwox"
+ },
+ "Pvalb": {
+  "id": "ENSMUSG00000005716",
+  "display_name": "Pvalb"
+ },
+ "Gad1": {
+  "id": "ENSMUSG00000070880",
+  "display_name": "Gad1"
+ },
+ "Gad2": {
+  "id": "ENSMUSG00000026787",
+  "display_name": "Gad2"
+ },
+ "Sst": {
+  "id": "ENSMUSG00000004366",
+  "display_name": "Sst"
+ },
+ "Vip": {
+  "id": "ENSMUSG00000019772",
+  "display_name": "Vip"
+ },
+ "Lhx6": {
+  "id": "ENSMUSG00000026890",
+  "display_name": "Lhx6"
+ },
+ "Nkx2-1": {
+  "id": "ENSMUSG00000001496",
+  "display_name": "Nkx2-1"
+ },
+ "Slc12a5": {
+  "id": "ENSMUSG00000017740",
+  "display_name": "Slc12a5"
+ },
+ "Slc12a2": {
+  "id": "ENSMUSG00000024597",
+  "display_name": "Slc12a2"
+ },
+ "Kcnc1": {
+  "id": "ENSMUSG00000058975",
+  "display_name": "Kcnc1"
+ },
+ "Syt2": {
+  "id": "ENSMUSG00000026452",
+  "display_name": "Syt2"
+ },
+ "Acan": {
+  "id": "ENSMUSG00000030607",
+  "display_name": "Acan"
+ },
+ "Gabra1": {
+  "id": "ENSMUSG00000010803",
+  "display_name": "Gabra1"
+ },
+ "Gabra2": {
+  "id": "ENSMUSG00000000560",
+  "display_name": "Gabra2"
+ },
+ "Mbp": {
+  "id": "ENSMUSG00000041607",
+  "display_name": "Mbp"
+ },
+ "Plp1": {
+  "id": "ENSMUSG00000031425",
+  "display_name": "Plp1"
+ },
+ "Mog": {
+  "id": "ENSMUSG00000076439",
+  "display_name": "Mog"
+ },
+ "Mobp": {
+  "id": "ENSMUSG00000032517",
+  "display_name": "Mobp"
+ },
+ "Mag": {
+  "id": "ENSMUSG00000036634",
+  "display_name": "Mag"
+ },
+ "Cnp": {
+  "id": "ENSMUSG00000006782",
+  "display_name": "Cnp"
+ }
+}
