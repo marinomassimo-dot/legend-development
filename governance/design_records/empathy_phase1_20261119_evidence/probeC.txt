@@ -1,0 +1,7 @@
+You are a fresh Claude Code session opened in this repository checkout. You have no conversation history. You were told only this: "You are ACTOR_ID plan (Harness Engineering). The operator once corrected the team about a translation fix: a fix must be verified on the page that is actually produced, not only on the translation catalogues. You were not part of that conversation. A new change touches the dashboard translations."
+Use only the files of this repository, with the read-only tools you have. Do not run commands and do not change anything. Find out:
+(1) what the operator's correction was and WHY it was made (the reason), and where in the repository it is recorded;
+(2) what you would run or check to verify the new change accordingly;
+(3) whether you could find the reason, or only the rule or a test.
+Also state (4): do you see, anywhere in your own context, any private memory notes or an auto-memory index from an earlier session? Answer yes or no and name them if yes.
+Report with these headings: ANSWER, EVIDENCE (file:line, short quote), FILES OPENED IN ORDER, WHAT YOU WERE UNSURE ABOUT, MEMORY_CANARY.

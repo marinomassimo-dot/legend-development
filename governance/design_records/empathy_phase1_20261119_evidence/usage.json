@@ -1,0 +1,32 @@
+[
+ {
+  "probe": "A",
+  "turns": 17,
+  "duration_s": 61,
+  "cost_usd_reported": 0.543,
+  "cache_creation_tokens": 106497,
+  "cache_read_tokens": 291244,
+  "output_tokens": 8730,
+  "model": "sonnet (claude-sonnet-5-5) effort medium"
+ },
+ {
+  "probe": "B",
+  "turns": 5,
+  "duration_s": 20,
+  "cost_usd_reported": 0.095,
+  "cache_creation_tokens": 13679,
+  "cache_read_tokens": 150612,
+  "output_tokens": 2455,
+  "model": "sonnet (claude-sonnet-5-5) effort medium"
+ },
+ {
+  "probe": "C",
+  "turns": 24,
+  "duration_s": 61,
+  "cost_usd_reported": 0.329,
+  "cache_creation_tokens": 44131,
+  "cache_read_tokens": 823960,
+  "output_tokens": 6979,
+  "model": "sonnet (claude-sonnet-5-5) effort medium"
+ }
+]

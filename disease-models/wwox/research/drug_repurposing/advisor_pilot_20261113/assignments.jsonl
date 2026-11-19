@@ -150,3 +150,7 @@
 {"evidence": "SendMessage at 10:02Z 2026-11-19 after ADV-074 delivery", "id": "ADV-076", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T10:02:34Z"}
 {"assessment": "HOST", "id": "ADV-077", "key": "consolidated-v2-of-slice-package-and-in-vivo-brief", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T10:10:09Z"}
 {"evidence": "SendMessage at 10:10Z 2026-11-19 after ADV-076 delivery", "id": "ADV-077", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T10:10:18Z"}
+{"assessment": "HOST", "id": "ADV-078", "key": "coordinator-reread-cost-and-fresh-window-recipe", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-19T10:33:13Z"}
+{"evidence": "SendMessage at 10:33Z 2026-11-19 after HE's ADV-071 close", "id": "ADV-078", "state": "SENT", "to": ["HE"], "utc": "2026-11-19T10:33:14Z"}
+{"assessment": "HOST", "id": "ADV-079", "key": "harm-against-phenotype-table-from-uncarried-organ-findings", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T11:04:25Z"}
+{"evidence": "SendMessage by session id f630dd25 at 11:04Z 2026-11-19, after its proof of reading in the restart trial", "id": "ADV-079", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T11:04:34Z"}
