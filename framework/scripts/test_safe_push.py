@@ -211,6 +211,53 @@ class SafePushSerialize(unittest.TestCase):
         subprocess.run(["git", "-C", str(other), "config", "user.name", "t"], check=True)
         return other
 
+    REGEN_OK = ("import subprocess, sys\nsubprocess.run(['git', 'config', 'user.name', 't'])\n"
+                "open('derived.txt', 'a').write('regenerated\\n')\nsubprocess.run(['git', 'add', '-A'])\n"
+                "subprocess.run(['git', 'commit', '-qm', 'regenerate derived'])\nprint('REGENERATED and committed: derived.txt')\n")
+    REGEN_FAIL = "import sys\nprint('boom')\nsys.exit(3)\n"
+
+    def _with_regen(self, root: Path, src: str) -> dict:
+        script = root.parent / "regen.py"                                           # outside the repository: a file inside would make the tree unclean
+        script.write_text(src, encoding="utf-8")
+        return {"LEGEND_SAFE_PUSH_REGEN": str(script)}
+
+    def test_regenerate_derived_needs_serialize_and_changes_nothing_without_the_flag(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self._slow_remote(td)
+            mine = self._commit(root, "mine.txt")
+            r = self._run(root, "origin", "main", "--regenerate-derived", **self._with_regen(root, self.REGEN_OK))
+            self.assertEqual(r.returncode, 1)
+            self.assertIn("--regenerate-derived needs --serialize", r.stderr)
+            self.assertEqual(subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip(), mine)
+            r2 = self._run(root, "origin", "main", "--serialize", "--expect-sha", mine, LEGEND_TEST_LOG=str(Path(td) / "g.log"), LEGEND_TEST_SLEEP="0", **self._with_regen(root, self.REGEN_OK))
+            self.assertEqual(r2.returncode, 0, r2.stderr)
+            self.assertNotIn("REGENERATED", r2.stdout)                               # no flag, no regeneration
+            self.assertFalse((root / "derived.txt").exists())
+            self.assertEqual(self._remote_main(bare), mine)
+
+    def test_regenerate_derived_commits_under_the_lock_and_the_gated_commit_is_the_pushed_one(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self._slow_remote(td)
+            log = Path(td) / "gate.log"
+            mine = self._commit(root, "mine.txt")
+            r = self._run(root, "origin", "main", "--serialize", "--regenerate-derived", "--expect-sha", mine, LEGEND_TEST_LOG=str(log), LEGEND_TEST_SLEEP="0", **self._with_regen(root, self.REGEN_OK))
+            self.assertEqual(r.returncode, 0, r.stderr)
+            head = subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
+            self.assertNotEqual(head, mine)
+            self.assertIn(f"REGENERATED derived surfaces under the landing lock: {mine[:12]} -> {head[:12]}", r.stdout)
+            self.assertEqual(self._remote_main(bare), head, "the regenerated commit, the one gated, is the one published")
+            self.assertEqual(len(log.read_text().splitlines()), 2, "one gate run, on the regenerated commit")
+
+    def test_a_failing_regeneration_gates_and_pushes_nothing(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self._slow_remote(td)
+            before = self._remote_main(bare)
+            mine = self._commit(root, "mine.txt")
+            r = self._run(root, "origin", "main", "--serialize", "--regenerate-derived", "--expect-sha", mine, LEGEND_TEST_SLEEP="0", **self._with_regen(root, self.REGEN_FAIL))
+            self.assertEqual(r.returncode, 1)
+            self.assertIn("Nothing was gated or pushed", r.stderr)
+            self.assertEqual(self._remote_main(bare), before)
+
     def test_a_moved_remote_is_merged_under_the_lock_and_the_merged_commit_is_gated_and_pushed(self) -> None:
         with TemporaryDirectory() as td:
             root, bare = self._slow_remote(td)
