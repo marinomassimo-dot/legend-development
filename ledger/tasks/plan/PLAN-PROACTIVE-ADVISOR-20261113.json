@@ -16,16 +16,17 @@
   "first_incomplete_work": "OBJ_1_INSPECT"
  },
  "AUTHORISED_QUEUE_20261113B": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_1_INSPECT": {
    "order": 1,
    "title": "Read the canonical instructions and the existing advisor chain; separate implemented, executed and useful in the earlier campaigns; verify which schedulers and intersession channels really exist on this host",
    "steps": [
     {
      "step": "Read the canonical instructions and the existing advisor chain; separate implemented, executed and useful in the earlier campaigns; verify which schedulers and intersession channels really exist on this host",
-     "status": "PENDING",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "the pilot ran 2026-11-13 onward on that reading (invocations P1..P27 in advisor_pilot_20261113); later mandates HE52-HE57 and DEC-20261118-ADVISOR-ACTOR extended it (reconciled 2026-11-19 by HE: the work was done by later increments, this record was left open)",
+     "updated_at": "2026-11-19T08:52:59Z"
     }
    ]
   },
@@ -35,9 +36,10 @@
    "steps": [
     {
      "step": "Place the operator roadmap in one existing home (mission, priorities, permitted exploration, exclusions, budget and duration, recent operator instructions); operator updates override automatic plans",
-     "status": "PENDING",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "disease-models/wwox/research/drug_repurposing/roadmap_current.md carries the OPERATOR_ROADMAP section (present on development/main) (reconciled 2026-11-19 by HE: the work was done by later increments, this record was left open)",
+     "updated_at": "2026-11-19T08:52:59Z"
     }
    ]
   },
@@ -47,9 +49,10 @@
    "steps": [
     {
      "step": "Update the agent definition, the procedure and the linked texts from consulted-only to proactive within the pilot limits; read-only analysis kept; no recommendation changes scientific conclusions, rankings or qualifications",
-     "status": "PENDING",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": ".claude/skills/legend-strategic-advisor/SKILL.md sections Proactive pilot (Stage P) and Continuous operation; roles/advisor.md; agent definition states consultant-not-host (reconciled 2026-11-19 by HE: the work was done by later increments, this record was left open)",
+     "updated_at": "2026-11-19T08:52:59Z"
     }
    ]
   },
@@ -85,9 +88,10 @@
    "steps": [
     {
      "step": "Targeted verification of the nine behaviours; code-guaranteed vs procedural; fixtures do not prove the runtime",
-     "status": "PENDING",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "framework/scripts/test_strategic_advisor.py (187 tests OK at the 2026-11-18 battery) plus the real-runtime demonstrations in governance/design_records/wakeup_continuity_20261118.md (reconciled 2026-11-19 by HE: the work was done by later increments, this record was left open)",
+     "updated_at": "2026-11-19T08:52:59Z"
     }
    ]
   },
@@ -110,9 +114,10 @@
    "steps": [
     {
      "step": "Integrate, publish, CI; simple deactivation; Italian report separating implemented, scheduled-and-verified, delivered, consumed, benefit",
-     "status": "PENDING",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "landed on development/main in the 2026-11-13..19 commits; the battery and CI verdicts are recorded per SHA in the IT and HE records (reconciled 2026-11-19 by HE: the work was done by later increments, this record was left open)",
+     "updated_at": "2026-11-19T08:52:59Z"
     }
    ]
   },
