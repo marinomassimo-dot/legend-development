@@ -637,3 +637,5 @@ Register of active research lines that emerged from LEGEND after the bootstrap o
 **Revival trigger:** the supplementary figure showing the control-vector arm for ATF3 and the glial markers.
 **Open question carried at:** `RL-C-20261004w11c1`
 **Not medical advice.**
+
+Update 2026-11-19 (IT59, `BATCH_20261119_004`, `CC-20261119-ORCHESTRATOR-CLAIM021-WORDING-01`; class MINOR; history above is not edited): after a blind wording audit of CLAIM 021 against Breton 2021 alone, the registry now reads «a network-level hyperexcitability phenotype in neuron-specific knockout slices at P13–P17»; whether it is PRIMARY (rather than secondary to seizures or to a generalized effect such as hypomyelination) and whether the Wwox-null mouse or the reference genotype's EEG shows it is NOT tested in that paper. Read the 'primary' / 'directly destabilizes' wording above in that light. Perimeter of the sweep: exact phrases plus the paraphrases 'primary level' and 'at least partly primary'; other paraphrases may exist.
