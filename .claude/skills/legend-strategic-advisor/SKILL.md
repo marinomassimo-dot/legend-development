@@ -158,13 +158,13 @@ existing retry). `status --campaign <DIR>` keeps four things apart: **drafted** 
 **executed** (a DONE step carries its id). None of them says the result was useful; that is judged against the continuation that would have happened anyway. Never write into a transcript to
 simulate a message and never start a copy of a live session to make it resume.
 
-**Budget, and what enforces it.** `activate` writes `<DIR>/budget.json` (24 hours, no renewal, at most three real strategic invocations in total, failed attempts and dialogue included, at most
+**Budget, and what enforces it.** *(2026-11-19: the ceilings of this pilot paragraph are history; continuous mode has none, see "Continuous operation".)* `activate` writes `<DIR>/budget.json` (24 hours, no renewal, at most three real strategic invocations in total, failed attempts and dialogue included, at most
 three assignments, a turn limit of 20). *Code-enforced for runs launched through this tool:* the invocation total, the expiry, the assignment count, the disable flag, the turn limit (`claude -p` has
 no turn-limit flag on this host, so the launcher stops the child it started and the attempt counts). *Procedural:* that the cron keeps running (it is session-only, fires only while the session is idle,
 and expires after seven days) and that deliveries are made; the account's total consumption is not controlled by any of this. Exhausting this budget stops the Advisor's evaluations only; the
 sessions' already authorised work continues.
 
-**Who holds the presidio, and what survives.** The operator may host the recall in a dedicated session (`ADV`, ACTOR_ID `orchestrator`, a mandate of its own distinct from the IT Orchestrator's);
+**Who holds the presidio, and what survives.** *(2026-11-19: since `DEC-20261118-ADVISOR-ACTOR` the host's ACTOR_ID is `advisor`; the text below keeps its earlier wording as history.)* The operator may host the recall in a dedicated session (`ADV`, ACTOR_ID `orchestrator`, a mandate of its own distinct from the IT Orchestrator's);
 the evaluations are still run by `legend-strategic-advisor` in a separate read-only context, and the hosting session runs `tick`, starts `evaluate`, critically judges incoming signals and decisive premises, delivers scoped work and follows its result. Operational execution remains with the recipients; ADV is not an approval step. One campaign, one
 state: run every command from the **primary checkout** (the campaign folder, `budget.json` and the counters are files there; the state directory is keyed by the campaign name; a linked worktree
 holds its own copy, so `tick`, `evaluate`, `deliver`, `activate`, `disable` and `recall` refuse to run from one). Transfer = the new host reads the campaign and the state, the old host

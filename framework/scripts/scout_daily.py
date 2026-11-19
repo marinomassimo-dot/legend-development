@@ -348,12 +348,14 @@ def run(state: dict, watch=WATCH, queries=PUBMED, opener=http, pm_opener=None, n
         if fresh:
             tt = titles(fresh, pm_opener)
             papers[name]["titles"] = tt
+            held = {i: mentions(i) for i in fresh}
             selected.append({"id": f"PubMed:{name}", "wwox_question": "New WWOX paper or external precedent that could "
-                             "reopen a research question", "contribution_vs_existing": "not checked against the registry "
-                             "(never grepped); intake triage decides new vs already read",
+                             "reopen a research question", "contribution_vs_existing": "a grep of the tracked files by PMID, not intake triage "
+                             "(which decides new vs already read): " + ("; ".join(f"{i} already mentioned in {', '.join(f)}" for i, f in held.items() if f)
+                                                                          or "no PMID is mentioned in the repository's tracked notes"),
                              "estimated_cost": "abstract screen: minutes; a full read needs its receipt",
                              "licence": "PubMed metadata; full text per paper", "detail": "; ".join(
-                                 f"{i} {tt.get(i, '')[:90]}" for i in fresh),
+                                 f"{i} {tt.get(i, '')[:90]}" + (f" [already mentioned in {held[i][0]}]" if held.get(i) else "") for i in fresh),
                              "proof": "https://pubmed.ncbi.nlm.nih.gov/?term=" + "+".join(fresh[:5]),
                              "outcome": "TO_TRIAGE (abstract = discovery, not a reading)"})
     report = {"run_at": now.isoformat(timespec="seconds"), "baseline": baseline,
@@ -1391,6 +1393,17 @@ def shared_bridge(theme: dict, *texts: str) -> list[str]:
     toks = set().union(*(_tokens(t) for t in texts)) if texts else set()
     # a long word also matches on its 7-letter stem (oligodendroglial / oligodendrocyte); a short one only as a whole word or with a plain suffix
     return [t for t in terms if any(k == t or (k.startswith(t) and k[len(t):] in TERM_SUFFIXES) or (len(t) >= 9 and len(k) >= 7 and k.startswith(t[:7])) for k in toks)]
+
+
+def mentions(pmid: str, root: Path | None = None, limit: int = 2) -> list[str]:
+    """Tracked files (outside the ledger and the bulk tables) that already name this PMID: a cheap filter, not a verdict. 2026-11-19: a 'TO_TRIAGE' item that a held note had already triaged cost
+    SCI a round trip (PMID 43048821, evaluated at abstract level the same day). The item stays in the briefing, with the file named, so nobody re-triages it blind."""
+    import subprocess
+    try:
+        out = subprocess.run(["git", "grep", "-l", "-F", "-w", "-I", pmid, "--", ".", ":!ledger", ":!*.jsonl", ":!*.tsv", ":!*.csv", ":!*.py"], cwd=str(root or ROOT), capture_output=True, text=True, timeout=30)
+    except (OSError, subprocess.SubprocessError):
+        return []
+    return [f for f in out.stdout.splitlines() if f][:limit] if out.returncode == 0 else []
 
 
 def discover_theme(theme: dict, seen: dict, opener=http, now: dt.datetime | None = None,

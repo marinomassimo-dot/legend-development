@@ -10,11 +10,12 @@
    "steps": [
     {
      "step": "1 CORRECT THE CURRENT VERIFICATION STATUS: tip 2e7e0c293 is RED (run 44467034206, scripts/test_no_closed_world_assertions_on_live_state.py, a finding on HE's reminder test); green cited only for 65367c768; coordinate fix with HE, targeted checks, candidate SHA, publication, CI on the exact SHA; no identical full battery before reading the failure",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-19 (NEXT ITERATION - Restore verified publication and carry new science into useful decisions), section 1",
      "accepted_at": "2026-11-19T08:31:05Z",
-     "updated_at": "2026-11-19T08:31:15Z"
+     "updated_at": "2026-11-19T11:52:45Z",
+     "evidence": "Tip 2e7e0c293 was RED on scripts/test_no_closed_world_assertions_on_live_state.py (HE's reminder test); HE's fix d13a1c582: CI Public release gate SUCCESS on that exact SHA; later CI reads attributed: f0b638eab and 4082a19e5 success; failures c3eb33041 and 173788983 (test_batch_queue drift, closed: passes on later tips; HE's CORPUS_RECEIPTED change af34bac9e), e5bb6a2bb (test_documented_commands: my script --help, fixed 1737889832c6). IT58 verdicts not rewritten; the 6320348db5 FAIL stays that tree's verdict."
     },
     {
      "step": "2 RECONCILE THE SCIENTIFIC CONSEQUENCES: limits kept where the reader decides (lithium, PV, DDR, stage adjustment); absence statements carry their perimeter",
@@ -43,11 +44,12 @@
     },
     {
      "step": "5 DASHBOARD: keep the fix, complete browser validation on phone and desktop with HE; regenerate only involved derivatives incl. coverage_report and reading_state when receipts change",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-19 (NEXT ITERATION - Restore verified publication and carry new science into useful decisions), section 5",
      "accepted_at": "2026-11-19T08:31:06Z",
-     "updated_at": "2026-11-19T08:44:13Z"
+     "updated_at": "2026-11-19T11:52:34Z",
+     "evidence": "Language defect fixed (HE 9ddf02ae8, 19e1ef66c); real-browser validation recorded (step 9); five online pages byte-identical to the package at 741ca6b4bef4 and after later regenerations checked by the publish workflow; limits as recorded by HE."
     },
     {
      "step": "6 OPERATIONAL CONTINUATION: verify recipient receipt, record consumption or refusal, make the next executable step visible to the advisor; independent work during long verifications",
@@ -63,8 +65,8 @@
      "owner": "orchestrator",
      "source": "messages 2026-11-19 (SCI R1 request, ADV-072/073, HE browser, HE CI fix), item 7",
      "accepted_at": "2026-11-19T08:53:58Z",
-     "evidence": "Mapped in one pass with the PPxY outcome: open-question rows IT59-Q02 (conduction endpoint) and IT59-Q01; not_known item on F02 and H02 packets (cards rebuilt by the bridge); arm-table dated line (structural endpoints usable, conduction a re-measurement candidate; F02/H02 get structural endpoints as measurable readouts, conduction not yet).",
-     "updated_at": "2026-11-19T09:49:28Z"
+     "evidence": "see earlier evidence; plus ADV-079/076/077 mappings under later items",
+     "updated_at": "2026-11-19T11:52:34Z"
     },
     {
      "step": "8 MAP the outcome of the one PPxY materials comparison and first pass (ADV-072, ADV-073): open question, package under INV-05 or refusal row, with ADV-068 and ADV-070 counter-evidence",
@@ -77,10 +79,12 @@
     },
     {
      "step": "9 RECORD HE's real-browser validation table (viewports five editions, interaction pass) with the SHA it covers",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "messages 2026-11-19 (SCI R1 request, ADV-072/073, HE browser, HE CI fix), item 9",
-     "accepted_at": "2026-11-19T08:53:58Z"
+     "accepted_at": "2026-11-19T08:53:58Z",
+     "evidence": "HE's record governance/design_records/browser_validation_20261119.md (interaction table, screenshots fr 390 px and de 1280 px, German viewport table before the print fix, SHA sums): 129 measurements per edition, 0 overflow in en, it, fr, es; de had one print overflow (813 vs 794 px), fixed in curated.css (2f9ed5269), re-measured on freshly built pages and, after my regeneration, on the five committed editions at 360 px (49 measurements each incl. print): 0 overflow in all five; interaction pass at 390 and 1280 px: language selector, filter 39-11-39, search, comparison, details, F03/INV-09/INV-04 present in every edition, 1 intentional orig marker on non-English pages. Limits: emulated metrics, one engine, scripted controls.",
+     "updated_at": "2026-11-19T11:52:34Z"
     },
     {
      "step": "10 READ CI on the exact SHAs d13a1c5829c2 and 4082a19e5f3c and on every later landing; report only causes not already closed",
@@ -106,6 +110,15 @@
      "accepted_at": "2026-11-19T10:24:15Z",
      "evidence": "Mapped in one pass: IT59-Q04, need counter-evidence (2009 table, 2021 text-only, dissociations, CMV P14-only correction, muscle-KO opposite sign), E04 packet not_known + card rebuilt by the bridge, arm-table dated line; ranking digest ff38fcaa61295a5a unchanged; audit 10/10; ranking 74, join 91 OK.",
      "updated_at": "2026-11-19T10:24:15Z"
+    },
+    {
+     "step": "13 REPORT the v2 re-check and the six deep-dived placeholders; queue ONE correction candidate for CLAIM 025 (done: CC-20261119-ORCHESTRATOR-CLAIM025-GDM-ANCHOR-01, 474c1950e6c3)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-19 11:3x (ADV-077 re-check, six placeholders, CLAIM 025 CC)",
+     "accepted_at": "2026-11-19T11:52:34Z",
+     "evidence": "v2 re-check: all six corrections fixed (V2_RECHECK_IT59.md); six placeholders: no receipt recoverable (DEEP_DIVED_PLACEHOLDERS_IT59.md); CC-20261119-ORCHESTRATOR-CLAIM025-GDM-ANCHOR-01 queued at 474c1950e6c3 and its id sent to the advisor.",
+     "updated_at": "2026-11-19T11:52:34Z"
     }
    ]
   }
@@ -192,6 +205,13 @@
    "at": "2026-11-19T10:24:15Z",
    "source": "SCI ADV-074 delivery message 2026-11-19 (glucose and metabolic axis consumer delta)",
    "step_sha256": "07f1d28c3fe3",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-19T11:52:34Z",
+   "source": "ADV message 2026-11-19 11:3x (ADV-077 re-check, six placeholders, CLAIM 025 CC)",
+   "step_sha256": "ccba2996d4e5",
    "reopened_block": false,
    "authorised_by": null
   }
