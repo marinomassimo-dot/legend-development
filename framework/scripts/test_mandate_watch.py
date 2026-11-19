@@ -466,6 +466,34 @@ class Routing(unittest.TestCase):
         self.assertEqual(mw.check_recipients("no addressing line here", ["HE"], self.live, self.root)["verdict"], "NO_DECLARED_RECIPIENT")
 
 
+class FreshWindowRoute(unittest.TestCase):
+    """ADV-078 trial, measured 2026-11-19: a fresh window of a record with NO SESSION_NAME left two live sessions named SCI; route said AMBIGUOUS although the old one had written MANDATE_RELEASED."""
+    OLD = "9400b253-25a0-4b03-8822-96361325fc16"
+    NEW = "f630dd25-a894-445c-85fa-ee15a01b9ec9"
+
+    def make(self):
+        t = tempfile.TemporaryDirectory(); self.addCleanup(t.cleanup)
+        root = Path(t.name)
+        rec = record(state="OPEN", steps=("TODO",)); rec.update({"TASK_ID": "ORCH-SCI-X", "ACTOR_ID": "orchestrator"})
+        d = root / "ledger" / "tasks" / "orchestrator"; d.mkdir(parents=True)
+        (d / "ORCH-SCI-X.json").write_text(json.dumps(rec), encoding="utf-8")
+        return root, [listed(self.OLD, "SCI"), listed(self.NEW, "SCI")]
+
+    def test_the_live_marker_host_of_an_open_record_is_the_target_and_the_released_one_is_listed(self):
+        root, live = self.make()
+        with mock.patch.object(mw, "live_bound_sessions", side_effect=lambda task, sessions, projects_dir=None: [{"session_id": self.NEW}] if task == "ORCH-SCI-X" else []):
+            r = mw.route("SCI", live, root)
+        self.assertEqual((r["status"], r["session_id"]), ("RESOLVED", self.NEW))
+        self.assertEqual([x["session_id"] for x in r["surplus_name_matches"]], [self.OLD])          # listed, never silently dropped
+
+    def test_with_no_marker_host_or_two_the_answer_stays_ambiguous(self):
+        root, live = self.make()
+        with mock.patch.object(mw, "live_bound_sessions", return_value=[]):
+            self.assertEqual(mw.route("SCI", live, root)["status"], "AMBIGUOUS")
+        with mock.patch.object(mw, "live_bound_sessions", return_value=[{"session_id": self.OLD}, {"session_id": self.NEW}]):
+            self.assertEqual(mw.route("SCI", live, root)["status"], "AMBIGUOUS")                    # two hosts: DUPLICATE_HOST territory, nothing is chosen
+
+
 class ActorAlias(unittest.TestCase):
     """DEC-20261118-ADVISOR-ACTOR: an ACTOR_ID as recipient resolves to the live session bound to an OPEN record of that actor, and to nothing when two sessions answer."""
     ADV = "e6526331-6b7c-4631-8c9b-9e9d79867e90"
