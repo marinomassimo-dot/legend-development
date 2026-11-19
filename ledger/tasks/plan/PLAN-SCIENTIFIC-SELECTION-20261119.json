@@ -7,7 +7,7 @@
   "CONTEXT_POLICY": "SYNTHESIS",
   "RUNTIME": "Codex",
   "AUTHORISED_QUEUE_SELECTION": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_1": {
       "order": 1,
       "steps": [
@@ -23,7 +23,8 @@
         },
         {
           "step": "Verify retrieval, focused regressions and publication; preserve handoff truth",
-          "status": "IN_PROGRESS"
+          "status": "DONE",
+          "evidence": "Fresh clone of 9617ad30eecd4e4c1ce24e13350f311bf869f940: release-runner PASS WITH SKIPS, seven selected targets, one retired-Stop-hook environment skip; actual guidance retrieval also passed. This closure becomes effective when safe_push publishes the closing tree after its exact-SHA gate and ls-remote verification."
         }
       ]
     }
@@ -52,7 +53,7 @@
   ],
   "VERIFICATION": {
     "log_directory": "/tmp/legend-scientific-selection-checks-20261119-sfuhe52a",
-    "status": "FOCUSED_CHECKS_PASSED",
+    "status": "SCOPED_CHECKS_PASSED",
     "funding_view_tests": 12,
     "routing_tests": 7,
     "section_reference_tests": 13,
@@ -61,10 +62,22 @@
     "lint": "WARN, no BLOCK",
     "self_eval": "PASS with existing declared gaps",
     "scientific_delta": "No source row, candidate ranking or canonical scientific current file changed",
-    "publication": "Pending candidate commit and exact-SHA gate",
+    "publication": "Closing metadata is prepared for development/main; becomes effective only with the exact-SHA gate and ls-remote verification in the publisher log; CI is separate",
     "live_delivery": "No native Claude SendMessage in this runtime; roadmap integration and full brief are durable inputs, not a claimed send or take-in-charge",
     "advisor_route": "RESOLVED to the one live ADV session (route checked 2026-11-19); routing is not delivery",
-    "precheck": "PASS, zero per-file blocks; not the full release gate"
+    "precheck": "PASS, zero per-file blocks; not the full release gate",
+    "tested_candidate": "9617ad30eecd4e4c1ce24e13350f311bf869f940",
+    "fresh_clone_release_runner": {
+      "verdict": "PASS WITH SKIPS",
+      "targets": 7,
+      "skipped_cases": 1,
+      "skip_reason": "Stop hook not installed in the clean clone",
+      "scope": "funding_view, mandate_continuity, tool routing, section references, documented commands, link targets, skill packages",
+      "tracked_guarded_writes": 0
+    },
+    "derived_surfaces": "FRESH on the committed candidate; not the earlier no-change HEAD check",
+    "cold_retrieval": "Current selection criterion and rationale read from a clean clone without old chat or private memory",
+    "full_battery": "Not rerun; no full-inventory verdict claimed"
   },
   "SESSION_LEARNING_REVIEW": {
     "observation": "The original brainstorm turned limited scientific evidence and illustrative prices into preparation-oriented ranking and operator cost dependencies",
