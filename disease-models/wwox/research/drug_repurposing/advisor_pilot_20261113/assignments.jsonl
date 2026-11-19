@@ -136,3 +136,9 @@
 {"evidence": "SendMessage to SCI (session 9400b253) at 01:42Z 2026-11-19, in reply to its ADV-068 delivery", "id": "ADV-069", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T01:42:45Z"}
 {"assessment": "HOST", "id": "ADV-070", "key": "stage-adjusted-reread-of-p3a-channel-and-activity-seeds", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T05:25:58Z"}
 {"evidence": "SendMessage to SCI at 05:25Z 2026-11-19 in reply to its meeting reply; full conditions in the message", "id": "ADV-070", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T05:25:58Z"}
+{"assessment": "HOST", "id": "ADV-071", "key": "ci-red-on-tip-reminder-test-and-radar-pertinence-check", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-19T08:31:17Z"}
+{"assessment": "HOST", "id": "ADV-072", "key": "ww1-ppxy-partner-branch-first-pass-complete-originals", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-19T08:31:17Z"}
+{"assessment": "HOST", "id": "ADV-073", "key": "ppxy-consumption-path-and-one-materials-comparison", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-19T08:31:17Z"}
+{"evidence": "SendMessage at 08:31Z 2026-11-19 after the operator continuation; full text in the message", "id": "ADV-071", "state": "SENT", "to": ["HE"], "utc": "2026-11-19T08:31:43Z"}
+{"evidence": "SendMessage at 08:31Z 2026-11-19 after the operator continuation; full text in the message", "id": "ADV-072", "state": "SENT", "to": ["SCI"], "utc": "2026-11-19T08:31:43Z"}
+{"evidence": "SendMessage at 08:32Z 2026-11-19 after the operator continuation; full text in the message", "id": "ADV-073", "state": "SENT", "to": ["IT Orchestrator"], "utc": "2026-11-19T08:32:05Z"}
