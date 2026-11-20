@@ -235,3 +235,7 @@
 {"basis": "HE reconstruction 2026-11-20 from the assignment key and its SCI/IT delivery", "id": "ADV-094", "state": "STRAND", "strand": "pilot-decision-dossier", "utc": "2026-11-20T12:35:36Z"}
 {"basis": "HE reconstruction 2026-11-20 from the assignment key and its SCI/IT delivery", "id": "ADV-095", "state": "STRAND", "strand": "selection-analyses", "utc": "2026-11-20T12:35:37Z"}
 {"basis": "HE reconstruction 2026-11-20 from the assignment key and its SCI/IT delivery", "id": "ADV-097", "state": "STRAND", "strand": "selection-analyses", "utc": "2026-11-20T12:35:37Z"}
+{"assessment": "HOST", "id": "ADV-108", "key": "ci-red-on-main-since-e4275e32c-diagnose-and-route", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-20T13:09:34Z"}
+{"assessment": "HOST", "id": "ADV-109", "key": "rp005-revised-prospective-test-three-texts", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-20T13:09:36Z"}
+{"evidence": "SendMessage receipt msg_id c8cff84c-bc94-4fbf-a4f6-720b6472e159 to HE", "id": "ADV-108", "state": "SENT", "to": ["HE"], "utc": "2026-11-20T13:09:58Z"}
+{"evidence": "SendMessage receipt msg_id 01ca82ff-f663-4f0c-ab38-54d70712b9a6 to IT Orchestrator [7dbcca]", "id": "ADV-109", "state": "SENT", "to": ["IT Orchestrator"], "utc": "2026-11-20T13:09:58Z"}
