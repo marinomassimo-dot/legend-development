@@ -1,0 +1,6 @@
+dataset	ACT_R	ACT_A1	M3a_R	M3a_A1
+D2_cortex_S	-1.284	-1.262	-1.059	-0.578
+D3_hippo_S	-0.344	2.856	-2.112	-0.81
+D3_hippo_N	-0.658	-0.501	-1.599	-1.242
+D3_hippo_null	-0.8	-0.662	-1.796	-1.363
+D1_organoid_pooled	-0.079	-0.325		(no oligodendrocyte lineage)
