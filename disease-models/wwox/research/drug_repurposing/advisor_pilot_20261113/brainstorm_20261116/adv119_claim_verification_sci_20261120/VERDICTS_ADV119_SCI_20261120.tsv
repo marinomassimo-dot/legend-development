@@ -1,0 +1,13 @@
+claim	verifier_verdict	sci_adjudicated	change_to_owner_line
+C1	SUPPORTED_WITH_LIMIT	SUPPORTED_WITH_LIMIT	yes: one-tailed a priori tests declared; repeated-dose exposure not measured; window stated three ways (4 h spacing, 12 h period, abstract 24 with the unit lost)
+C2	SUPPORTED_WITH_LIMIT	SUPPORTED_WITH_LIMIT	minor: total not stated by the paper (inferred from extraction); time point of the three values not in the text; ml of tissue taken as g; half-life only at 15 and 30 mg/kg
+C3	SUPPORTED_WITH_LIMIT	SUPPORTED_WITH_LIMIT	yes: 35.5 percent is 27 of 76 (raw 31 of 80 = 38.8); 13.5 percent is 7 of 52 mixed controls; RR 3.57 is multivariable; abnormalities in controls also resolved
+C4	ABSTRACT_ONLY_NOT_VERIFIABLE	ABSTRACT_ONLY_NOT_VERIFIABLE	none (wording matches the abstract; dose, route, n unread)
+C5	SUPPORTED	SUPPORTED	none (registry read through a summarising reader; events non-serious; 1 of 8 completed the extension)
+C6	ABSTRACT_ONLY_NOT_VERIFIABLE	ABSTRACT_ONLY_NOT_VERIFIABLE	none (frontal cortex layers II and III only; subcutaneous in Zou, intraperitoneal in Soriano)
+C7	ABSTRACT_ONLY_NOT_VERIFIABLE	ABSTRACT_ONLY_NOT_VERIFIABLE	none
+C8	ABSTRACT_ONLY_NOT_VERIFIABLE	ABSTRACT_ONLY_NOT_VERIFIABLE	none (males, 2.5 mg/kg s.c.; the abstract also reports benefits)
+C9	ABSTRACT_ONLY_NOT_VERIFIABLE	ABSTRACT_ONLY_NOT_VERIFIABLE	none (raw group means 3.3 and 3.2; zero is the least-squares difference)
+C10	SUPPORTED	SUPPORTED	none (0.3 uM no effect read from an absent mark in a summarised table; frequency not reduced at 1 and 3 uM)
+C11	ABSTRACT_ONLY_NOT_VERIFIABLE	ABSTRACT_ONLY_NOT_VERIFIABLE	none (SCI's own reading of the PMC page stays one reader; no blind route reached the text)
+C12	SUPPORTED_WITH_LIMIT	SUPPORTED_WITH_LIMIT	minor: paired t tests, n 9 and 11, crossover against own vehicle
