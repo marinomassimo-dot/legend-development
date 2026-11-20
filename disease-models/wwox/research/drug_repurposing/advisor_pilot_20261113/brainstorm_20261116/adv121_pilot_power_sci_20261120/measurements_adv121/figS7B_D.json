@@ -1,0 +1,54 @@
+{
+ "source": "Obeid 2026 supplement Fig S7B (Iba1) and S7D (GFAP), P20 knockout against wild type, percent area; mmc2.pdf page 26 at 200 ppi; crops 300x340+1200+100 (B) and 300x340+1200+430 (D); ADV-120 measure_bars.py with crop B (288, 50) and crop D (281, 57), minh 12, small mode",
+ "legend": "percentage of area in KO compared to WT; error bars mean +/- SD; n not printed",
+ "S7B_Iba1": {
+  "ticks_px": [
+   34.5,
+   85.5,
+   136.0,
+   187.0,
+   238.0,
+   288.5
+  ],
+  "bars": [
+   {
+    "colour": "navy",
+    "value_A": 4.47,
+    "value_B2_endpoint_scale": 4.47,
+    "cap_minus_top_A": 0.43,
+    "cap_minus_top_B2": 0.43
+   },
+   {
+    "colour": "purple",
+    "value_A": 7.54,
+    "value_B2_endpoint_scale": 7.54,
+    "cap_minus_top_A": 1.03,
+    "cap_minus_top_B2": 1.03
+   }
+  ]
+ },
+ "S7D_GFAP": {
+  "ticks_px": [
+   26.5,
+   111.5,
+   196.0,
+   281.0
+  ],
+  "bars": [
+   {
+    "colour": "navy",
+    "value_A": 3.53,
+    "value_B2_endpoint_scale": 3.54,
+    "cap_minus_top_A": 1.65,
+    "cap_minus_top_B2": 1.65
+   },
+   {
+    "colour": "purple",
+    "value_A": 23.58,
+    "value_B2_endpoint_scale": 23.58,
+    "cap_minus_top_A": 2.36,
+    "cap_minus_top_B2": 2.36
+   }
+  ]
+ }
+}

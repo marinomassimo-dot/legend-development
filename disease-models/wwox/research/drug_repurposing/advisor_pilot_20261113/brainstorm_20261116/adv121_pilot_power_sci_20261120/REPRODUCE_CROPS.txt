@@ -1,0 +1,16 @@
+ADV-121: how the new measurements were produced (ImageMagick and poppler only; Python with -I). Work in an empty scratch directory, never inside the repository.
+Held inputs (root checkout files/, read only): supplement/PMID42422765_r2/mmc2.pdf (sha256 523b09e47b52620cacda9826bce88ac77dd8de65626f5148e2c8630383869cb4),
+fulltext/PMID42422765_Obeid2026_PMC_r2.xml. The PDF text for the quote check: pdftotext -layout mmc2.pdf mmc2.txt
+
+Fig 3C error bars (500 ppi):
+  pdfimages -f 6 -l 6 -png mmc2.pdf p6 ; convert p6-000.png +repage -crop 1450x830+0+940 +repage c3C.png
+  python3 -I measure_bars_3C.py c3C.png 625 250 0,10,20,30 0,5,10,15,20 5,10,15,25 > measurements_adv121/fig3C_bars.json
+Fig S7B and S7D (200 ppi page render):
+  pdftoppm -f 26 -l 26 -r 200 -png mmc2.pdf s26
+  convert s26-26.png +repage -crop 300x340+1200+100 +repage cB.png   (S7B)
+  convert s26-26.png +repage -crop 300x340+1200+430 +repage cD.png   (S7D)
+  python3 -I <ADV-120 folder>/measure_bars.py cB.png 288 50 0,2,4,6,8,10 12 small > measurements_adv121/figS7B.json
+  python3 -I <ADV-120 folder>/measure_bars.py cD.png 281 57 0,10,20,30 12 small > measurements_adv121/figS7D.json
+  python3 -I make_s7bd_json.py
+Numbers:  python3 -I compute_power_table.py --tsv      (writes OUTPUT_power_table.tsv)
+Quotes:   python3 -I quote_check.py <obeid xml> mmc2.txt > OUTPUT_quote_check.txt

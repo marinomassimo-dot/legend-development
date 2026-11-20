@@ -1,0 +1,4 @@
+# sensitivity (weight P10, bar vs LD, SD pooled 0.573, Holm alpha 0.0125): n per arm at delta x1, x0.5, x0.25 (observed SD / 5-df upper bound)
+delta x1.00 = 0.830 g: 12.6 / 48.4
+delta x0.50 = 0.415 g: 44.5 / 187.7
+delta x0.25 = 0.208 g: 172.2 / 744.9

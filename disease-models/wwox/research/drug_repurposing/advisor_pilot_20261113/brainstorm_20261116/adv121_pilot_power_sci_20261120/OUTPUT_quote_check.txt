@@ -1,0 +1,8 @@
+FOUND xml | Statistical analysis was performed using Student's t test (* p < 0.05; ** p < 0.01; ns, no
+FOUND xml | (C) A graph representing body weight during the first postnatal month in KO + LD and KO + 
+FOUND sup | Error bars represent mean ± SD
+FOUND sup | Graph represents percentage of Iba1 area in KO compared to WT shown in A
+FOUND sup | Graph represents percentage of GFAP area in KO compared to WT shown in C
+FOUND sup | Differential quantification of microglia (F) and astrocytes (H) in each treatment
+FOUND sup | A graph representing quantification of hindlimb clasping in wild-type (WT), Wwox-null (KO)
+quotes 7, found 7

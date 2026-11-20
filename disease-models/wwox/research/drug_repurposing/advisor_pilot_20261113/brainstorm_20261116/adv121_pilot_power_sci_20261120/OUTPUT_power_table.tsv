@@ -1,0 +1,22 @@
+family	age	delta_kind	delta	sd_pool	sd_flag	d	n_obs_a0125	n_ub_a0125	n_obs_a05	n_ub_a05	cls_obs_holm	cls_ub_holm	pixel_rel_change	note
+weight g	P5	HD	0.33	NA	LD bar unresolved (marker occluded by HD marker at P5)	NA	NA	NA	NA	NA	NA	NA	NA	LD SD None (unresolved), HD SD 0.331 (ceiling)
+weight g	P10	bar	0.83	0.57	ceiling (<=)	1.45	12.64	48.43	9.49	34.68	fits	exceeds	0.000	LD SD 0.74 (value), HD SD 0.331 (ceiling)
+weight g	P10	HD	1.60	0.57	ceiling (<=)	2.79	4.86	14.49	4.01	10.79	fits	exceeds	0.000	LD SD 0.74 (value), HD SD 0.331 (ceiling)
+weight g	P15	bar	0.44	0.39	ceiling (<=)	1.12	19.87	80.01	14.58	56.91	exceeds	beyond	0.000	LD SD 0.448 (value), HD SD 0.331 (ceiling)
+weight g	P15	HD	0.72	0.39	ceiling (<=)	1.83	8.67	31.13	6.70	22.50	fits	exceeds	0.000	LD SD 0.448 (value), HD SD 0.331 (ceiling)
+clasping score	P18	bar	1.00	0.80	value	1.25	16.29	64.39	12.06	45.91	exceeds	beyond	0.003	whisker half-lengths LD 1.03 (larger of upper 0.12 and lower 1.03), HD 0.47; n and scale not printed
+clasping score	P18	HD	1.50	0.80	value	1.87	8.35	29.73	6.47	21.52	fits	exceeds	0.000	whisker half-lengths LD 1.03 (larger of upper 0.12 and lower 1.03), HD 0.47; n and scale not printed
+glucose mg/dL	P10	HD	7.23	24.39	value	0.30	255.73	1109.53	180.59	781.55	beyond	beyond	0.000	dots LD 7 (SD 18.65), HD 11 (SD 29.01); df of the benchmark SD 16, own factor 1.42; no bar in gap units at this age
+glucose mg/dL	P20	bar	5.47	11.30	value	0.48	97.20	417.57	69.01	294.50	beyond	beyond	0.000	dots LD 7 (SD 9.26), HD 12 (SD 13.02); df of the benchmark SD 17, own factor 1.40
+glucose mg/dL	P20	HD	19.27	11.30	value	1.71	9.67	35.46	7.40	25.55	fits	exceeds	0.000	dots LD 7 (SD 9.26), HD 12 (SD 13.02); df of the benchmark SD 17, own factor 1.40
+glucose mg/dL	P30	HD	7.78	20.58	value	0.38	158.05	683.17	111.84	481.46	beyond	beyond	0.000	dots LD 8 (SD 18.40), HD 13 (SD 22.55); df of the benchmark SD 19, own factor 1.37; no bar in gap units at this age
+Iba1 percent area	age not printed	bar	5.07	1.40	value	3.61	3.71	9.48	3.21	7.26	fits	fits	0.002	cap minus top LD 1.78, HD 0.88; n and age not printed; unit of analysis (animal or section) not stated
+Iba1 percent area	age not printed	HD	5.40	1.40	value	3.85	3.51	8.58	3.06	6.63	fits	fits	0.002	cap minus top LD 1.78, HD 0.88; n and age not printed; unit of analysis (animal or section) not stated
+GFAP percent area	age not printed	bar	0.98	0.098	value	9.96	2.23	2.98	2.16	2.69	fits	fits	0.000	cap minus top LD 0.07, HD 0.12; n and age not printed; unit of analysis (animal or section) not stated
+GFAP percent area	age not printed	HD	1.16	0.098	value	11.81	2.16	2.70	2.11	2.49	fits	fits	0.001	cap minus top LD 0.07, HD 0.12; n and age not printed; unit of analysis (animal or section) not stated
+spike-wave per hour	P14 to P21 pooled	vehicle (bar level)	0.38	0.15	value	2.61	5.27	16.26	4.30	12.04	fits	exceeds	NA	KO SD 0.182, HD SD 0.094 (5 pups each); no LD arm: contrast is candidate against the knockout vehicle arm, not partial against broad
+spike-wave per hour	P14 to P21 pooled	vehicle (as HD)	0.51	0.15	value	3.49	3.84	10.01	3.29	7.64	fits	fits	NA	KO SD 0.182, HD SD 0.094 (5 pups each); no LD arm: contrast is candidate against the knockout vehicle arm, not partial against broad
+Iba1 (WT-ratio)	KO at P20; arms age not printed	vehicle (bar level)	0.49	0.18	value	2.76	4.93	14.78	4.06	10.99	fits	exceeds	NA	S7B/S7D (P20, n not printed) KO/WT 1.69 (SD 0.23 of WT); S7F/H arms in their own WT units (LD 1.75, HD 1.16); different experiments and WT baselines (Iba1 WT 4.47 in S7B/D against 9.22 in S7F/H), indicative only
+Iba1 (WT-ratio)	KO at P20; arms age not printed	vehicle (as HD)	0.52	0.18	value	2.97	4.54	13.07	3.78	9.79	fits	fits	NA	S7B/S7D (P20, n not printed) KO/WT 1.69 (SD 0.23 of WT); S7F/H arms in their own WT units (LD 1.75, HD 1.16); different experiments and WT baselines (Iba1 WT 4.47 in S7B/D against 9.22 in S7F/H), indicative only
+GFAP (WT-ratio)	KO at P20; arms age not printed	vehicle (bar level)	5.48	0.48	value	11.53	2.17	2.73	2.12	2.52	fits	fits	NA	S7B/S7D (P20, n not printed) KO/WT 6.68 (SD 0.67 of WT); S7F/H arms in their own WT units (LD 1.77, HD 1.09); different experiments and WT baselines (GFAP WT 3.53 in S7B/D against 1.71 in S7F/H), indicative only
+GFAP (WT-ratio)	KO at P20; arms age not printed	vehicle (as HD)	5.59	0.48	value	11.75	2.16	2.70	2.11	2.50	fits	fits	NA	S7B/S7D (P20, n not printed) KO/WT 6.68 (SD 0.67 of WT); S7F/H arms in their own WT units (LD 1.77, HD 1.09); different experiments and WT baselines (GFAP WT 3.53 in S7B/D against 1.71 in S7F/H), indicative only
