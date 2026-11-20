@@ -37,3 +37,6 @@ Written for: SCI (unit B), ADV, IT. Same rules and routes as batch 1 (see its he
 
 ## Dated line 2026-11-19 (late): ICA-069673 identity verified by structure (ADV rule 9)
 PubChem name lookup for "ICA-069673" returns CID 10149311, IUPAC name N-(2-chloropyrimidin-5-yl)-3,4-difluorobenzamide, InChIKey IIBSHMFXVWTQSJ-UHFFFAOYSA-N, and its synonym list includes CHEMBL2047521 (and "ICA 069673", "ICA-69673", GTPL14111). The ChEMBL record CHEMBL2047521 carries the same InChIKey and the structure O=C(Nc1cnc(Cl)nc1)c1ccc(F)c(F)c1 (C11H6ClF2N3O). The identity therefore no longer rests on the chemical name from memory: it rests on a name-to-structure resolution by a second public source whose synonym list names the ChEMBL id and an equal InChIKey. Batch 2's potency rows for this compound stand as read.
+
+## Dated line 2026-11-20: ezogabine brain EC50 2.23 against 3.58 microM settled by SCI (origin: SCI, not re-read by HE)
+SCI's verified reading reports the two figures as **different experiments** (Kunming mice, HN37 paper, against CF-1 mice, the Xenon PK/PD paper), with plasma EC50 values 9-fold apart. They are two origins and are not averaged or ranked.
