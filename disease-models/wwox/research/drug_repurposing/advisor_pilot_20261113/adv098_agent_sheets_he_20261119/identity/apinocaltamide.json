@@ -1,0 +1,11 @@
+{
+ "query": "apinocaltamide",
+ "identity_by_structure": {
+  "pubchem_cid": 118560618,
+  "inchikey": "LSYANGLAZUZYFX-UHFFFAOYSA-N",
+  "formula": "C22H18F3N5O",
+  "chembl_by_inchikey": "CHEMBL4217292",
+  "note": "APINOCALTAMIDE (max phase 2 in the molecule record); alias ACT-709478 resolves to the same CID and ChEMBL id"
+ },
+ "method": "PubChem name lookup to structure, then the ChEMBL molecule with the same InChIKey; compound_identity.py by name gave NAME_EXACT for apinocaltamide, ACT-709478 and ulixacaltamide (a ChEMBL and a DGIdb record agree) and was not run to completion for the others (a request timed out)"
+}

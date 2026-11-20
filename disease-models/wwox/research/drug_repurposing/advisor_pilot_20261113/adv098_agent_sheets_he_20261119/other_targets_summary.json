@@ -161,5 +161,49 @@
    "MDA-MB-468 (Homo sapiens) n=1",
    "MCF7 (Homo sapiens) n=1"
   ]
+ },
+ "apinocaltamide": {
+  "rows_total": 24,
+  "rows_on_expected_targets": 4,
+  "other_targets": 16,
+  "top_other": [
+   "Unchecked (None) n=4",
+   "Cytochrome P450 3A4 (Homo sapiens) n=2",
+   "Voltage-dependent L-type calcium channel subunit alpha-1C (Homo sapiens) n=1",
+   "Voltage-dependent T-type calcium channel subunit alpha-1G (Rattus norvegicus) n=1",
+   "Voltage-dependent T-type calcium channel subunit alpha-1H (Rattus norvegicus) n=1",
+   "Voltage-dependent T-type calcium channel subunit alpha-1I (Rattus norvegicus) n=1",
+   "T-type calcium channel alpha 1G subunit (Mus musculus) n=1",
+   "Voltage-dependent T-type calcium channel subunit alpha-1H (Mus musculus) n=1"
+  ]
+ },
+ "ulixacaltamide": {
+  "rows_total": 9,
+  "rows_on_expected_targets": 9,
+  "other_targets": 0,
+  "top_other": []
+ },
+ "tta-a2": {
+  "rows_total": 17,
+  "rows_on_expected_targets": 6,
+  "other_targets": 6,
+  "top_other": [
+   "Unchecked (None) n=5",
+   "Voltage-gated inwardly rectifying potassium channel KCNH2 (Homo sapiens) n=2",
+   "Voltage-dependent L-type calcium channel subunit alpha-1C (Homo sapiens) n=1",
+   "Voltage-dependent P/Q-type calcium channel subunit alpha-1A (Homo sapiens) n=1",
+   "Voltage-dependent N-type calcium channel subunit alpha-1B (Homo sapiens) n=1",
+   "Voltage-dependent R-type calcium channel subunit alpha-1E (Homo sapiens) n=1"
+  ]
+ },
+ "tta-p2": {
+  "rows_total": 8,
+  "rows_on_expected_targets": 1,
+  "other_targets": 3,
+  "top_other": [
+   "Unchecked (None) n=4",
+   "Voltage-gated inwardly rectifying potassium channel KCNH2 (Homo sapiens) n=2",
+   "Sodium channel protein type 5 subunit alpha (Homo sapiens) n=1"
+  ]
  }
 }
