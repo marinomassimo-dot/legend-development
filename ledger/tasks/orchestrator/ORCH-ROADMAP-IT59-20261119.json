@@ -28,11 +28,12 @@
     },
     {
      "step": "3 RECEIVE THE NEXT SCIENTIFIC QUESTION: WW1-PPxY branch (ERBB4, NETO2) chosen with ADV and SCI; consumption path prepared before delivery",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-19 (NEXT ITERATION - Restore verified publication and carry new science into useful decisions), section 3",
      "accepted_at": "2026-11-19T08:31:06Z",
-     "updated_at": "2026-11-19T08:31:15Z"
+     "updated_at": "2026-11-20T18:45:54Z",
+     "evidence": "Nothing pending: ADV-100 (assignments/ADV-100.md line 16) records that the PPxY first pass closed ERBB4 and NETO2; the consumption path is the IT59-Q01 refusal row in batch_sci_20261105/map/open_questions_map.tsv (question stays OPEN), landed c3eb33041; ADV confirmed on 2026-11-20 that no delivery is to come"
     },
     {
      "step": "4 ONE INFORMATIVE GENERATION COMPARISON WHEN JUSTIFIED: criteria fixed before any run, comparable conditions, quality judged by a blind verifier; deferred if no decision rides on it",
