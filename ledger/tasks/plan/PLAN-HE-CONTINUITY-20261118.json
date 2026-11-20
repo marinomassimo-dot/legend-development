@@ -434,6 +434,13 @@
      "accepted_at": "2026-11-20T20:32:32Z",
      "evidence": "Dated addition 2026-11-20 (evening) appended to BATCH1_ethosuximide_lithium_memantine_HE_20261119.md (anchor Methods 1:2 w:v homogenate, per g wet tissue, no back-correction; 72.3 mg/kg is the sildenafil-combination ED50, row = saline arm; no juvenile level; SCI mass-balance inference labelled origin SCI; open routes); sheet_query finds it; test_sheet_query, test_structured_data_integrity, public_release_gate exit 0",
      "updated_at": "2026-11-20T20:38:31Z"
+    },
+    {
+     "step": "Read the job steps of the latest completed GitHub run and one older red run to settle whether the three Chromium reds are host-only (ADV request) and say it in one line to ADV and in the CI README row",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV message 2026-11-20 to HE successor d4b1a0 after the CI table: job-steps check of run 1649 and one older red run",
+     "accepted_at": "2026-11-20T22:18:54Z"
     }
    ]
   }
@@ -765,6 +772,13 @@
    "at": "2026-11-20T20:32:32Z",
    "source": "SCI [c76ec7] information message to HE 2026-11-20 on ADV-122 (RESULT_ADV122_SCI_20261120.md, merge 13efa8e80), relayed by the old HE window",
    "step_sha256": "0d615ba0882e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T22:18:54Z",
+   "source": "ADV message 2026-11-20 to HE successor d4b1a0 after the CI table: job-steps check of run 1649 and one older red run",
+   "step_sha256": "0f781f4cfef3",
    "reopened_block": false,
    "authorised_by": null
   }
