@@ -925,6 +925,9 @@ def _meeting_saved(campaign: Path) -> dict[str, Any]:
             "recovered_from_minutes": True}
 
 
+MEETING_LEAD_MIN = 45
+
+
 def meeting_status(campaign: Path, saved: dict[str, Any] | None = None) -> dict[str, Any]:
     """Read-only six-hour/event alignment status; no model, message or task launch."""
     saved = _meeting_saved(campaign) if saved is None else saved
@@ -942,8 +945,14 @@ def meeting_status(campaign: Path, saved: dict[str, Any] | None = None) -> dict[
     if not held and _running(_load_state(campaign)):
         held = "a strategic evaluation is running; align at its next safe boundary"
     ready = bool(active or requests or _now() >= due_at)
-    return {"state": "HELD" if held else "OPEN" if active else "DUE" if ready else "IDLE",
-            "actionable": ready and not held, "why": held or ("resume the existing round table" if active else "meaningful event request" if requests else "six-hour alignment" if ready else "not due"),
+    # 2026-11-20 (ADV, 'Reliable autonomy'): the six-hourly times fall at :18:14 and the hourly recall fires at about :17 to :18, so a meeting due at 12:18:14 was a coin flip that cost a full hour when missed (the 05:36Z one
+    # was opened 41 minutes late). A meeting due within the next `meeting_lead_minutes` (default 45) is actionable as DUE_SOON, so the check just before the due time opens it; no second timer. Opening early moves the next
+    # due time earlier by at most that lead (a reasoned shift, recorded in the new minutes' Started UTC).
+    lead = float(mode.get("meeting_lead_minutes", MEETING_LEAD_MIN))
+    soon = (not ready) and lead > 0 and _now() >= due_at - dt.timedelta(minutes=lead)
+    return {"state": "HELD" if held else "OPEN" if active else "DUE" if ready else "DUE_SOON" if soon else "IDLE",
+            "actionable": (ready or soon) and not held, "why": held or ("resume the existing round table" if active else "meaningful event request" if requests else "six-hour alignment" if ready
+                                                                          else f"six-hour alignment due at {_utc(due_at)}, within {round(lead)} minutes: open it at this check, the next one would be up to an hour late" if soon else "not due"),
             "next_due_utc": _utc(due_at), "interval_hours": interval,
             "record": str(campaign / "meetings" / active) if active else "",
             "requests": requests, "recovery": saved.get("recovered_from_minutes", False)}
@@ -1210,7 +1219,7 @@ def _waits() -> list[dict[str, str]]:
             for _, queue in mc.load_active_queues(rec):
                 for st in mc.iter_steps(queue):
                     if st["status"] == "BLOCKED":
-                        out.append({"task": rec["TASK_ID"], "step": st["step"][:80], "blocker": str(st.get("blocker") or "")[:160]})
+                        out.append({"task": rec["TASK_ID"], "step": st["step"][:80], "blocker": str(st.get("blocker") or "")[:160], "checkable": bool(st.get("unblock_when"))})
         except Exception:  # noqa: BLE001 — a record the continuity module cannot read is not a wait
             continue
     return out
@@ -1257,6 +1266,25 @@ def radar_news(state: dict[str, Any], briefing: Path | None = None) -> str:
         return ""
     return (f"NEW RADAR BRIEFING {stamp} ({len(deltas)} item(s) to examine: " + "; ".join(d[:70] for d in deltas[:4]) + f"): file {path}; judge each (deepen, assign, reuse, defer or discard, one reason) and forward the useful ones "
             "by name; the harness and tool items are HE's to triage, the scientific ones go to SCI or IT")
+
+
+def unchecked_waits(waits: list[dict[str, str]], state: dict[str, Any]) -> str:
+    """2026-11-20 (ADV 'Reliable autonomy', item 3): IT listed SCI's GSK-3 reading as awaited for two hours after it had landed, because the awaited event was prose in a blocker and nothing evaluated it. SIZED: matching the
+    prose against commit subjects was measured on the eight live waits and is too fuzzy (3 to 84 hits per wait, the matches carried generic words such as batch, table, decision, page, item), so it is NOT built. The existing precise
+    mechanism is `unblock_when` on a BLOCKED step (a file, a commit subject, a commit sha or a record state: `mandate_continuity.unblock_met`); only 2 of 11 BLOCKED steps carried it. This line names, per task, the BLOCKED steps
+    that carry none, only when the set changes, so the recipient types the condition when it writes the wait. Returns '' when nothing changed."""
+    counts: dict[str, int] = {}
+    for w in waits:
+        if not w.get("checkable"):
+            counts[w["task"]] = counts.get(w["task"], 0) + 1
+    signature = sha256_text(json.dumps(sorted(counts.items())))[:12]
+    if signature == state.get("unchecked_waits_sig"):
+        return ""
+    state["unchecked_waits_sig"] = signature
+    if not counts:
+        return ""
+    return ("WAITS NO CHECK CAN EVALUATE (BLOCKED steps without `unblock_when`; an event that already happened stays a dependency until someone reads it): "
+            + ", ".join(f"{t} x{n}" for t, n in sorted(counts.items(), key=lambda kv: -kv[1])[:6]) + "; type the awaited fact when writing the wait (README section 13, 'a BLOCKED step')")
 
 
 def _own_updates(campaign: Path) -> list[str]:
@@ -1616,6 +1644,9 @@ def tick(campaign: Path) -> dict[str, Any]:
     due = due_waits(obs["waits"], now)
     if due:
         why += "; WAIT NAMES A TIME THAT HAS PASSED: " + "; ".join(due[:4])
+    unchecked = unchecked_waits(obs["waits"], state)
+    if unchecked:
+        why += "; " + unchecked
     news = radar_news(state)
     if news:
         why += "; " + news
