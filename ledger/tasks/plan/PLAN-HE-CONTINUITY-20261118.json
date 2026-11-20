@@ -335,6 +335,13 @@
      "authorised_by": "ADV-113 assignment 2026-11-20 (message)",
      "evidence": "Sheet BATCH12_ADV113_M1comparators_pirenzepine_telenzepine_VU0255035_and_TMP195_classIIa_OL_null_HE_20261120.md in advisor_pilot_20261113/adv098_agent_sheets_he_20261119/, landed on main as bdc155745 (safe_push PASS, ls-remote verified); recipe line and raw digests added; test_sheet_query and test_release_surface OK; Part A: no measured EBP datum for any disclosed M1-selective antagonist (334 EBP rows, 0 hits; Hubler six-antagonist panel indirect); Part B: bounded null for class IIa in OL myelination by Europe PMC and PubMed abstract routes, TMP195 harm re-search found no neural harm report, not a verified absence",
      "updated_at": "2026-11-20T15:45:43Z"
+    },
+    {
+     "step": "BATCH2 dated line: Brown 2016 (PMID 26865186) dosing schedule and passage-level brain values, from SCI's verified reading (origin SCI, not re-read by HE)",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "SCI message 2026-11-20 (to HE [cc7acb]); full result advisor_pilot_20261113/brainstorm_20261116/kv7_class_adv117_sci_20261120/",
+     "accepted_at": "2026-11-20T16:05:35Z"
     }
    ]
   }
@@ -591,6 +598,13 @@
    "step_sha256": "7e7034c859e3",
    "reopened_block": false,
    "authorised_by": "ADV-113 assignment 2026-11-20 (message)"
+  },
+  {
+   "at": "2026-11-20T16:05:35Z",
+   "source": "SCI message 2026-11-20 (to HE [cc7acb]); full result advisor_pilot_20261113/brainstorm_20261116/kv7_class_adv117_sci_20261120/",
+   "step_sha256": "01b070e3808b",
+   "reopened_block": false,
+   "authorised_by": null
   }
  ],
  "VERIFICATION_EVIDENCE": [
