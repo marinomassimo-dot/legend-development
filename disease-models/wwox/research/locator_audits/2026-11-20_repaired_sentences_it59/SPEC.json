@@ -1,0 +1,127 @@
+{
+ "repo": ".",
+ "title": "Blind audit packet: the nine statements that contain the eleven narrowing repairs made after the earlier audits (G01/D02 packet change and unit B packet change), IT59, 2026-11-20",
+ "preamble": "Each statement carries one or more small narrowing repairs made after an earlier audit. Judge each ONE AT A TIME on the repaired text. For each: (1) supported by its anchor as worded? (2) does the anchor say MORE or LESS (species, age, system, route, n and unit, total vs free, quantifier, causal or vector words, units, jurisdiction)? (3) verdict SUPPORTED / SUPPORTED_WITH_LIMIT / OVERSHOOT / UNDERSHOOT / UNSUPPORTED / UNVERIFIABLE; quote with locator; every quoted string a substring of the anchor you read. A limit stated beside a claim counts for it. Where an anchor is a repository file that carries a primary paper's statement, judge the wording against that file and say so. Repository paths are relative to /home/desktop/legend-development/.claude/worktrees/it_successor_20261119/ .",
+ "items": [
+  {
+   "id": "S1 (G01 not-known, Ser9 and kinase assays)",
+   "statement": "Whether GSK3beta abundance or Ser9 state tracks activity here: the sources are in tension and no kinase-activity assay exists in WWOX-deficient cells or tissue (the kinase assays of the cell-line paper are cell-free, with purified recombinant proteins, and show WWOX protein lowering GSK3beta-driven Tau phosphorylation in vitro). The cell-line paper reports phospho-Ser9 unchanged along a retinoic-acid time course while WWOX rises; no experiment in it manipulates WWOX and reads Ser9, and the phrase 'S9-independent' occurs nowhere in its text; the only tissue datum (Wwox-null brain, cerebellum, hippocampus and cortex; the legend says postnatal day 20 and the Methods say 14) reports LOWER phospho-Ser9, as a ratio to beta-actin, with representative results of four independent experiments and the number of animals not stated (registry CLAIM 035 Evidence boundary, BATCH_20261120_001; the earlier wording of this item, 'S9-independent inhibition', is withdrawn)",
+   "anchors": [
+    {
+     "label": "Wang 2012 PMC XML /home/desktop/legend-development/files/fulltext/PMID22193544_Wang2012_PMC.xml"
+    },
+    {
+     "label": "Cheng 2020 PMC XML /home/desktop/legend-development/files/fulltext/PMID32000863_Cheng2020_PMC.xml"
+    }
+   ]
+  },
+  {
+   "id": "S2 (D02 premise status)",
+   "statement": "GSK-3 premise status after the 2026-11 comparison work (class level; hypothesis): the GSK-3 and Wnt transcript premise was not supported in the organoid and not distinguishable from random gene sets in the held postnatal day 17 mouse cortex (bulk, three against four animals; the Wnt sign agrees with the premise, inside the null band in the primary run and borderline in the blind recompute), and one interactome partner, GSK3beta, meets the registered criteria with narrowings (directness not shown by the assays; the pharmacology of the criterion is partial, lithium at abstract level and no GSK3beta-specific non-lithium constant read in a primary source; the cell readout is a retinoic-acid-differentiated neuroblastoma line; the only tissue datum, lower phospho-Ser9 in Wwox-null brain, is the direction of more active kinase, whereas the cell-line paper reports phospho-Ser9 unchanged and attributes its effect to binding: the sources are in tension on the role of Ser9); no GSK-3 substrate measurement exists in a Wwox-deficient neuron (the cell-line paper reads Tau phospho-sites after WWOX knockdown and overexpression in a neuroblastoma line)",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv095_selection_sci_20261119/PREMISE_SCREEN_RESULT_UNIT_A_ADV095_SCI_20261119.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv100_interactome_second_system_sci_20261120/INTERACTOME_AND_SECOND_SYSTEM_RESULT_SCI_20261120.md"
+    },
+    {
+     "label": "Wang 2012 PMC XML /home/desktop/legend-development/files/fulltext/PMID22193544_Wang2012_PMC.xml"
+    },
+    {
+     "label": "Cheng 2020 PMC XML /home/desktop/legend-development/files/fulltext/PMID32000863_Cheng2020_PMC.xml"
+    }
+   ]
+  },
+  {
+   "id": "S3 (D02 exposure of non-lithium agents)",
+   "statement": "Brain or plasma concentration of any non-lithium GSK-3 inhibitor, free or total, adult or juvenile: not found in rodents by public-database and literature-title routes (PubMed titles only) for five agents (tideglusib, SB-216763, CHIR-99021, LY2090314, AR-A014418); selectivity was not assessed",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH9_GSK3_nonlithium_tideglusib_SB216763_CHIR99021_LY2090314_ARA014418_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "S4 (D02 embryonic progenitors, harm cell)",
+   "statement": "embryonic cortical progenitors, genetic and not pharmacological: siRNA knockdown in one study, gene deletion in the other (blind verifier, full text, 2026-11-20): in utero knockdown of either GSK-3 isoform at embryonic day 14.5 in a subset of cells (ICR mice, three brains) raised the proliferating fraction of electroporated cells; GSK3beta knockdown lowered the intermediate-progenitor and upper-layer-neuron fractions while GSK3alpha knockdown raised the intermediate-progenitor fraction and left the upper-layer fraction unchanged, and the authors say off-target effects of the knockdown reagents are not excluded (Ma 2017); conditional deletion of GSK3beta on a germline GSK3alpha-null background in neural progenitors gave progenitor over-proliferation and death at birth, which the authors attribute to loss of both isoforms (Kim 2009)",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/gsk3_shared_premise_sci_20261120/VERIFIER_REPORT_HARM_CELL_AS_DELIVERED_20261120.md"
+    },
+    {
+     "label": "Ma 2017 PMC5712306 and Kim 2009 PMC5328673 via the PubMed full-text tool; Kim genotype string via NCBI efetch db=pmc id 5328673"
+    }
+   ]
+  },
+  {
+   "id": "S5 (EB-ETX-01 exposure and potency)",
+   "statement": "Class-level exposure and potency facts, no dose, no score, NOT WWOX EVIDENCE: in male Swiss mice of 24 to 30 grams (no age given), total brain ethosuximide was 134.9 micrograms per gram of wet tissue (about 0.96 millimolar as total tissue, not a free concentration; the brain was homogenised 1 to 2 in water and no dilution correction is stated) at the time scheduled for a seizure test, 45 minutes after an intraperitoneal dose that was about half the dose of the one Wwox experiment (arithmetic; the value is the saline co-treated arm of a mouse interaction study of another question, PMID 22315091); in the mouse, serum and brain concentrations equilibrate within minutes and the half-life is about one hour (an old abstract-level report). Potency at T-type channels is reported inconsistently in the sources read, by different assays that are not comparable: about six-tenths of a millimolar in a ChEMBL row without a mapped gene (SCI's reading of the primary paper reports a persistent current in recombinant human channels) against above five millimolar in one FLIPR assay at one channel subtype (one ChEMBL transcription). PUP EXPOSURE IS UNKNOWN: no juvenile exposure of any kind was found by the routes read, and the age of the one Wwox drug experiment is not stated; the first measurement an exposure-controlled test needs is the brain exposure at the regimen of that experiment. Label (openFDA record, newest 2026-05-25): indicated for absence seizures; safety and effectiveness below the age of three years not established.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv095_selection_sci_20261119/VERIFIER_PASS_READING_SCI_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH1_ethosuximide_lithium_memantine_HE_20261119.md"
+    },
+    {
+     "label": "PMID 22315091 (PMC3401299) Table 3 and Methods via Europe PMC fullTextXML; PMID 708147 abstract"
+    }
+   ]
+  },
+  {
+   "id": "S6 (EB-ETX-01 not-known)",
+   "statement": "exposure and CNS exposure in a pup or in WOREE (a total brain value exists in male Swiss mice of 24 to 30 grams, no age given; potency at T-type channels is reported inconsistently; nothing was found for a pup or for WOREE by the routes read)",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv095_selection_sci_20261119/VERIFIER_PASS_READING_SCI_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH1_ethosuximide_lithium_memantine_HE_20261119.md"
+    }
+   ]
+  },
+  {
+   "id": "S7 (F02 clemastine)",
+   "statement": "NOT WWOX EVIDENCE, class level, no dose, no score, no compound carded CLEMASTINE (public-database rows of HE ADV-098 batch 6 and SCI's verified reading of primary papers): strong histamine H1 and muscarinic binding; within one document muscarinic M1 is the most potent of five subtypes with a six-fold range, an indication of M1 preference and not an identified selectivity; no measured myelination or oligodendrocyte-precursor differentiation row exists in those rows (the link from M1 antagonism to differentiation is mechanism from the literature). Exposure: a total plasma Cmax of 44.0 ng/mL in the neonatal mouse at steady state of one daily oral regimen, dosed on the fumarate salt basis, that was not the lowest dose tested (Odell 2024, read at source by a blind verifier); no unbound and no brain value in that paper; juvenile rat brain detection is qualitative only (one paper, inconsistent about the age). Harm: in the healthy developing mouse, at the single higher dose described, slower conduction with fewer nodes, more differentiated cells and thinner myelin in thin axons (one dose only, so no margin can be read). Label (US label record, public database): clemastine fumarate syrup for allergic rhinitis, paediatric use confirmed from 6 to 12 years for that indication (labels in other countries differ).",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv095_selection_sci_20261119/VERIFIER_PASS_READING_SCI_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH6_broad_clemastine_sobetirome_tiratricol_HE_20261119.md"
+    },
+    {
+     "label": "Odell 2024 PMID 38942888 (PMC11502491) via the PubMed tool and Europe PMC"
+    }
+   ]
+  },
+  {
+   "id": "S8 (F02 thyromimetics)",
+   "statement": "THYROMIMETICS: thyroid-hormone-receptor beta preference depends on the readout (sobetirome: seven of eight same-document pairs beta-preferring by 3.4- to 26-fold, one reversed; tiratricol: beta-preferring by about three-fold in binding and alpha-preferring in one reporter assay); the natural hormone is about equipotent on both receptors in nearly every same-document pair; no measured myelination row in those rows; papers exist on brain delivery of sobetirome prodrugs after systemic dosing in mice (the abstract gives no age) and on tiratricol brain content after intracerebroventricular delivery in Mct8-deficient mice (titles and abstracts read, numbers not read; a different disease context); a late start gave no myelination gain in one small mouse study of thyroid-hormone transporter deficiency, so the window may matter; label: tiratricol is authorised for peripheral thyrotoxicosis in MCT8 deficiency (a different disorder; nothing about myelination); none found for sobetirome.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH6_broad_clemastine_sobetirome_tiratricol_HE_20261119.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv095_selection_sci_20261119/VERIFIER_PASS_READING_SCI_20261120.md"
+    },
+    {
+     "label": "abstracts of PMIDs 28385597 and 31809508"
+    }
+   ]
+  },
+  {
+   "id": "S9 (F02 not-known)",
+   "statement": "Brain exposure of clemastine or of a thyromimetic in a Wwox-deficient pup, or in any neonatal or juvenile mouse: unknown (a total plasma value in the neonatal mouse was found for clemastine; none was found for the thyromimetics by the routes read, where papers on juvenile tiratricol dosing in Mct8-deficient mice exist with numbers not read; no neonatal brain concentration was found for either class)",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH6_broad_clemastine_sobetirome_tiratricol_HE_20261119.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv095_selection_sci_20261119/VERIFIER_PASS_READING_SCI_20261120.md"
+    }
+   ]
+  }
+ ]
+}
