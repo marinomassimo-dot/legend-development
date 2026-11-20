@@ -606,6 +606,13 @@
      "accepted_at": "2026-11-20T14:08:38Z",
      "evidence": "tonic_class_adv110_sci_20261120/ADV110_TONIC_CLASS_COMPOUND_COMPARISON_SCI_20261120.md landed on main e7fdedd07 gate=PASS; pre-registration cd01299e8 before searches",
      "updated_at": "2026-11-20T14:22:27Z"
+    },
+    {
+     "step": "ADV-112: (1) WO-23 same-system Tau-phospho plus beta-catenin readout under GSK-3 inhibitor classes (design of the GSK-3 block of the shared Stage-1 panel); (2) WO-12 primary conditions of the ifenprodil and Ro 25-6981 GluN2B ratios, open-access check of Hess 1996 and Fischer 1997 first; pre-registered",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV 2026-11-20 message to SCI (ADV-112; assignments/ADV-112.md)",
+     "accepted_at": "2026-11-20T14:43:19Z"
     }
    ]
   }
@@ -1070,6 +1077,13 @@
    "at": "2026-11-20T14:08:38Z",
    "source": "ADV 2026-11-20 message to SCI (ADV-110; assignments/ADV-110.md landing within the hour)",
    "step_sha256": "c535a14c6aae",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T14:43:19Z",
+   "source": "ADV 2026-11-20 message to SCI (ADV-112; assignments/ADV-112.md)",
+   "step_sha256": "acff20433854",
    "reopened_block": false,
    "authorised_by": null
   }
