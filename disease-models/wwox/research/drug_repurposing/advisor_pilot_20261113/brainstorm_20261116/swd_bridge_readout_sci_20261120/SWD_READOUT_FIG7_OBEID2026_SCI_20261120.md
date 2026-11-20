@@ -1,6 +1,6 @@
 # Obeid 2026 Figure 7: spike-wave burden in Wwox-null pups as a candidate primary readout for the bridge experiment (SCI, 2026-11-20; hypothesis level; no dose; reference genotype class; not medical advice; n = 5 pups per group in one panel, a "limited cohort" by the authors' own words)
 
-Pre-registration (committed before any value was read from the figure): `PREREGISTRATION_SWD_READOUT_SCI_20261120.md`, in this folder. ADV's three conditions (survivorship per age; vector first then raster with resolution stated; a count outcome does not inherit the PTZ n) are adopted in it. The legend and Results sentences were read first (held JATS text of PMC13343157).
+Pre-registration (the file was written before the figure image was opened; it is committed together with this result, so the order rests on my statement and the file's creation time in the job scratch folder, not on a commit order): `PREREGISTRATION_SWD_READOUT_SCI_20261120.md`, in this folder. ADV's three conditions (survivorship per age; vector first then raster with resolution stated; a count outcome does not inherit the PTZ n) are adopted in it. The legend and Results sentences were read first (held JATS text of PMC13343157).
 
 ## Answer first
 1. **Verdict by the pre-registered rule: PLAUSIBLE, not adopted.** Panel 7E has per-animal values with no overlap between knockout and wild type, but the readout is pooled across a seven-day recording, the survivors per age are not stated, and panels 7B and 7C carry fewer animals than the legend says and a p value that the Results sentence contradicts.
