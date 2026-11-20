@@ -1397,6 +1397,18 @@ class RulesUntouched(unittest.TestCase):
         self.assertEqual(h, "56e4bfd5f4023311", "the F/C/P rules changed: this view only displays them (IT5 P11 verified revision; re-pinned by IT6 P2 twice: engagement nulls are counter rows, C3 and F3 share one support, reading-limit and design-limit split, partial benefit never carries F1; the pin now also covers the constants that decide positions)")
 
 
+class SnapTmpHint(unittest.TestCase):
+    """2026-11-20: a snap-confined browser starts but cannot read file:// pages under /tmp; the probe says so instead of leaving a skipped or failing browser class unexplained."""
+
+    def test_hint_only_for_a_snap_browser_with_a_tmp_directory(self):
+        self.assertIn("TMPDIR", rv.snap_tmp_hint("Chromium 157.0 snap", "/tmp"))
+        self.assertIn("TMPDIR", rv.snap_tmp_hint("Chromium 157.0 snap", "/tmp/pytest-1"))
+        self.assertIsNone(rv.snap_tmp_hint("Chromium 157.0 snap", "/home/someone/legend_browser_tmp"))
+        self.assertIsNone(rv.snap_tmp_hint("Google Chrome 150.0.1", "/tmp"))
+        self.assertIsNone(rv.snap_tmp_hint("", "/tmp"))
+        self.assertIsNone(rv.snap_tmp_hint("Chromium 157.0 snap", "/tmpfs/x"))
+
+
 class CdpStartup(unittest.TestCase):
     """Exercise failed browser starts with real child processes, without needing Chromium."""
 
