@@ -455,31 +455,39 @@
     },
     {
      "step": "Night continuation 1: complete automatic retirement of released predecessors (retire_released reachable for every successor state that is safe), with regressions and checkpoint wording fixed",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "Operator message NIGHT CONTINUATION Reliable session lifecycle, efficient context and durable learning, 2026-11-20 (to plan)",
-     "accepted_at": "2026-11-20T22:39:36Z"
+     "accepted_at": "2026-11-20T22:39:36Z",
+     "evidence": "fix landed b8215fa3b (RETIRE_STATES: RUNNING, STOPPED_RESUMABLE, BLOCKED, COMPLETE); 83 tests incl. states that retire/stay protected; transport text + addendum B2; root checkout carries the fix (RETIRE_STATES present); observed: old HE c28ce40b, old SCI 53cd1e96 and old ADV e6526331 each RETIRED with the process verified gone; the BLOCKED/COMPLETE path itself has regressions, no live positive yet",
+     "updated_at": "2026-11-20T23:21:57Z"
     },
     {
      "step": "Night continuation 2: help ADV move to a fresh context (compact checkpoint, launch, release, bind, first action, predecessor retirement)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "Operator NIGHT CONTINUATION 2026-11-20, point 2 (ADV fresh context)",
-     "accepted_at": "2026-11-20T22:39:41Z"
+     "accepted_at": "2026-11-20T22:39:41Z",
+     "evidence": "ADV checkpoint A digest verified; successor a5e6f2ad launched 23:01:25Z, release 23:02:08.9Z, bind 23:02:23.6Z, last tool 23:02:30.5Z (3 calls), effort high; recall re-armed by ADV; old window retired 23:21:4xZ via handoff --retire-old after it released PRESIDIO and went idle; process 1280467 gone",
+     "updated_at": "2026-11-20T23:21:58Z"
     },
     {
      "step": "Night continuation 3: close the browser diagnosis (re-run per SHA, separate repository defects from browser start failures and unrun checks, remove stale waiters after verification)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "Operator NIGHT CONTINUATION 2026-11-20, point 3 (browser diagnosis)",
-     "accepted_at": "2026-11-20T22:39:41Z"
+     "accepted_at": "2026-11-20T22:39:41Z",
+     "evidence": "all eight browser classes pass on main b2ee49ce9 with TMPDIR under HOME; cause: snap private /tmp; three repository-side reds separate (item 17 and package-current, operator's/known); probe WARNING + README row landed 20e8bac76; own stale waiters stopped (bm0igvof0, b1oaayryg), others' waiters untouched; result file adv125_local_browser_he_20261120",
+     "updated_at": "2026-11-20T23:21:58Z"
     },
     {
      "step": "Launch the SCI successor from checkpoint T (window S to window T): digest, worktree, launch, handoff times",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "SCI [2e686b] message 2026-11-20 about checkpoint T (dcb416bafef3, sha 7f691612)",
-     "accepted_at": "2026-11-20T23:04:41Z"
+     "accepted_at": "2026-11-20T23:04:41Z",
+     "evidence": "launch 23:04:56Z session 3330ba92; release 23:05:18.1Z; bind 23:15:00.3Z (late: marker missing until HE read the transcript at 23:14); first action 23:15:00.9Z; handoff RUNNING; effort high read back by the successor; retirement of window S left to the catch-up",
+     "updated_at": "2026-11-20T23:15:37Z"
     }
    ]
   }
