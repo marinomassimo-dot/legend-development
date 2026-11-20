@@ -25,3 +25,11 @@ Two things were behind most entries: a **shortcut taken in the same step as an i
 1. HE: `deliver --state SENT` requires the send's receipt id (reversible, small; entry 2).
 2. HE: the `recipients` view and the idle line in the tick (entry 1; go given).
 3. The host: one line per closure in its record (criterion used and follow-through, or "no effect"); starts with the entries written after this note.
+
+## Entries added 2026-11-20 (host clock 06:41Z)
+| # | What happened | Rational cause | Correction | Micro-upgrade (or none, because) | Recurrence |
+|---|---|---|---|---|---|
+| 12 | Told the team an organoid deposit held "neuron clusters" (ADV-099); the deposit is bulk, clones. | I carried a peer's wording instead of the deposit's own description (rule 9 applied to a dataset, not a paper). | Corrected after SCI's report; ADV-099 premise restated. | Rule 9 extends to datasets: read the deposit's own description (unit of observation) before naming a cell-resolved test. | One occurrence. |
+| 13 | Accepted "N-KO is the neuronal-deletion line" from a peer's KM summary; N-KO is Nestin-Cre, S-KO (Synapsin-Cre) is the broad line. | A line name arrived in a summary of a measured result and the result looked solid; the label was not the measured part. IT caught it from the held Methods. | Own report to the operator corrected; both pages state line beside age. | Rule 9 covers line and genotype names: before a line name carries a decision (age, ethics, model), read its Cre driver in the Methods. | One occurrence. |
+| 14 | Untracked ADV files and a modified jsonl in the root checkout blocked every actor's fast-forward; the `ff-only` error was hidden by `tail -1`. | I published from the root and restored it in a later step; the output filter hid the failure. | Verified identity with main, removed with the `${R:?}/${C:?}` form, fast-forwarded. | Rule 21 stands; add: read the full output of `merge --ff-only`; do the restore in the same step as the publication check. | Not recurred since. |
+| 15 | A bridge-null direction was sent only as a message to a window that was then replaced; the successor wrote its page without it. | I treated the message as durable. | Written as a dated section on main and the successor told to read it. | What must survive a restart goes in a file on main, not only in a message. | One occurrence. |
