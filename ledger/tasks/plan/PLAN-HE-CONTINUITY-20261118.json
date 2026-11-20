@@ -380,6 +380,15 @@
      "accepted_at": "2026-11-20T17:23:29Z",
      "evidence": "SCI successor session 378f29a6 launched 17:23:45Z from checkpoint Q (sha256 0623aab5... verified by me on main at 24be85452); old 207dd20c released 17:23:59.043Z, successor bound 17:24:14.398Z (15.4 s), first tool call 17:24:16.210Z (1.8 s after bind), handoff RUNNING; predecessor not stopped (earlier claude stop denied by the classifier, left to the operator)",
      "updated_at": "2026-11-20T17:24:35Z"
+    },
+    {
+     "step": "Launch SCI's successor from checkpoint R (verify digest 7a8000ce... on main, effort high, autocompact 400000, handoff check) and report times to ADV",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "SCI message 2026-11-20 about checkpoint R restart (to HE [cc7acb])",
+     "accepted_at": "2026-11-20T17:56:39Z",
+     "evidence": "SCI successor session 7381c135 launched 17:56:58Z from checkpoint R (sha256 7a8000ce... and old session id 378f29a6-... verified by me on main and the agent list, dd306d293); old released 17:57:07.445Z, successor bound 17:57:16.757Z (9.3 s), first tool call 17:57:18.067Z (1.3 s after bind), handoff RUNNING with 7 calls; predecessor not stopped (claude stop denied earlier by the classifier, left to the operator)",
+     "updated_at": "2026-11-20T17:57:49Z"
     }
    ]
   }
@@ -669,6 +678,13 @@
    "at": "2026-11-20T17:23:29Z",
    "source": "ADV message 2026-11-20 about SCI checkpoint Q restart (to HE [cc7acb])",
    "step_sha256": "3115ce1ff340",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T17:56:39Z",
+   "source": "SCI message 2026-11-20 about checkpoint R restart (to HE [cc7acb])",
+   "step_sha256": "aa6fb9d8a0f8",
    "reopened_block": false,
    "authorised_by": null
   }
