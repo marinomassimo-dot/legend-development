@@ -564,10 +564,12 @@
     },
     {
      "step": "ADV-105: targeted external reading: (A) energy supply or glial state corrected AFTER onset in neonatal/paediatric epilepsy (GLUT1-DS, PDH deficiency, ketone-based, DCA, hypoglycaemia seizure models) and maintenance/recovery; (B) juvenile or paediatric exposure per agent; coherence check with ADV-101 null-pup facts; pre-registered stop rule; one paragraph on an energy readout or post-onset arm",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV 2026-11-20 message to SCI (ADV-105 registered; RP-033; assignments/ADV-105.md landing within the hour)",
-     "accepted_at": "2026-11-20T12:09:26Z"
+     "accepted_at": "2026-11-20T12:09:26Z",
+     "evidence": "energy_axis_adv105_sci_20261120/ADV105_ENERGY_SUPPLY_AFTER_ONSET_SCI_20261120.md (12 of 12 searches, abstract level)",
+     "updated_at": "2026-11-20T12:13:33Z"
     }
    ]
   }
