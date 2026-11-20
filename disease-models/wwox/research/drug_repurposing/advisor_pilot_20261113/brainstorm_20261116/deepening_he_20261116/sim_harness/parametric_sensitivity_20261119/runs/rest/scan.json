@@ -1,0 +1,967 @@
+{
+ "bisect": {
+  "bracket": [
+   0.0,
+   3.0
+  ],
+  "cells": [
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 1,
+     "geno": 0,
+     "ji_mult": 0.5
+    },
+    "label": "ji_mult_lo__arm1",
+    "note": "d-APV-type, S-KO, variant ji_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 2,
+     "geno": 0,
+     "ji_mult": 0.5
+    },
+    "label": "ji_mult_lo__arm2",
+    "note": "NMDAR pore, S-KO, variant ji_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 4,
+     "geno": 0,
+     "ji_mult": 0.5
+    },
+    "label": "ji_mult_lo__arm4",
+    "note": "AMPA, S-KO, variant ji_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 5,
+     "geno": 0,
+     "ji_mult": 0.5
+    },
+    "label": "ji_mult_lo__arm5",
+    "note": "T-type, S-KO, variant ji_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 6,
+     "geno": 0,
+     "ji_mult": 0.5
+    },
+    "label": "ji_mult_lo__arm6",
+    "note": "synaptic GABA-A, S-KO, variant ji_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 7,
+     "geno": 0,
+     "ji_mult": 0.5
+    },
+    "label": "ji_mult_lo__arm7",
+    "note": "neurosteroid-type, S-KO, variant ji_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 8,
+     "geno": 0,
+     "ji_mult": 0.5
+    },
+    "label": "ji_mult_lo__arm8",
+    "note": "sodium (pyramidal), S-KO, variant ji_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 1,
+     "geno": 0,
+     "ji_mult": 1.5
+    },
+    "label": "ji_mult_hi__arm1",
+    "note": "d-APV-type, S-KO, variant ji_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 2,
+     "geno": 0,
+     "ji_mult": 1.5
+    },
+    "label": "ji_mult_hi__arm2",
+    "note": "NMDAR pore, S-KO, variant ji_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 4,
+     "geno": 0,
+     "ji_mult": 1.5
+    },
+    "label": "ji_mult_hi__arm4",
+    "note": "AMPA, S-KO, variant ji_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 5,
+     "geno": 0,
+     "ji_mult": 1.5
+    },
+    "label": "ji_mult_hi__arm5",
+    "note": "T-type, S-KO, variant ji_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 6,
+     "geno": 0,
+     "ji_mult": 1.5
+    },
+    "label": "ji_mult_hi__arm6",
+    "note": "synaptic GABA-A, S-KO, variant ji_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 7,
+     "geno": 0,
+     "ji_mult": 1.5
+    },
+    "label": "ji_mult_hi__arm7",
+    "note": "neurosteroid-type, S-KO, variant ji_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 8,
+     "geno": 0,
+     "ji_mult": 1.5
+    },
+    "label": "ji_mult_hi__arm8",
+    "note": "sodium (pyramidal), S-KO, variant ji_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 1,
+     "cl_tau_mult": 0.5,
+     "geno": 0
+    },
+    "label": "cl_tau_mult_lo__arm1",
+    "note": "d-APV-type, S-KO, variant cl_tau_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 2,
+     "cl_tau_mult": 0.5,
+     "geno": 0
+    },
+    "label": "cl_tau_mult_lo__arm2",
+    "note": "NMDAR pore, S-KO, variant cl_tau_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 4,
+     "cl_tau_mult": 0.5,
+     "geno": 0
+    },
+    "label": "cl_tau_mult_lo__arm4",
+    "note": "AMPA, S-KO, variant cl_tau_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 5,
+     "cl_tau_mult": 0.5,
+     "geno": 0
+    },
+    "label": "cl_tau_mult_lo__arm5",
+    "note": "T-type, S-KO, variant cl_tau_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 6,
+     "cl_tau_mult": 0.5,
+     "geno": 0
+    },
+    "label": "cl_tau_mult_lo__arm6",
+    "note": "synaptic GABA-A, S-KO, variant cl_tau_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 7,
+     "cl_tau_mult": 0.5,
+     "geno": 0
+    },
+    "label": "cl_tau_mult_lo__arm7",
+    "note": "neurosteroid-type, S-KO, variant cl_tau_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 8,
+     "cl_tau_mult": 0.5,
+     "geno": 0
+    },
+    "label": "cl_tau_mult_lo__arm8",
+    "note": "sodium (pyramidal), S-KO, variant cl_tau_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 1,
+     "cl_tau_mult": 2.0,
+     "geno": 0
+    },
+    "label": "cl_tau_mult_hi__arm1",
+    "note": "d-APV-type, S-KO, variant cl_tau_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 2,
+     "cl_tau_mult": 2.0,
+     "geno": 0
+    },
+    "label": "cl_tau_mult_hi__arm2",
+    "note": "NMDAR pore, S-KO, variant cl_tau_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 4,
+     "cl_tau_mult": 2.0,
+     "geno": 0
+    },
+    "label": "cl_tau_mult_hi__arm4",
+    "note": "AMPA, S-KO, variant cl_tau_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 5,
+     "cl_tau_mult": 2.0,
+     "geno": 0
+    },
+    "label": "cl_tau_mult_hi__arm5",
+    "note": "T-type, S-KO, variant cl_tau_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 6,
+     "cl_tau_mult": 2.0,
+     "geno": 0
+    },
+    "label": "cl_tau_mult_hi__arm6",
+    "note": "synaptic GABA-A, S-KO, variant cl_tau_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 7,
+     "cl_tau_mult": 2.0,
+     "geno": 0
+    },
+    "label": "cl_tau_mult_hi__arm7",
+    "note": "neurosteroid-type, S-KO, variant cl_tau_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 8,
+     "cl_tau_mult": 2.0,
+     "geno": 0
+    },
+    "label": "cl_tau_mult_hi__arm8",
+    "note": "sodium (pyramidal), S-KO, variant cl_tau_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 1,
+     "geno": 0,
+     "nmda_mult": 0.8
+    },
+    "label": "nmda_mult_lo__arm1",
+    "note": "d-APV-type, S-KO, variant nmda_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 2,
+     "geno": 0,
+     "nmda_mult": 0.8
+    },
+    "label": "nmda_mult_lo__arm2",
+    "note": "NMDAR pore, S-KO, variant nmda_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 4,
+     "geno": 0,
+     "nmda_mult": 0.8
+    },
+    "label": "nmda_mult_lo__arm4",
+    "note": "AMPA, S-KO, variant nmda_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 5,
+     "geno": 0,
+     "nmda_mult": 0.8
+    },
+    "label": "nmda_mult_lo__arm5",
+    "note": "T-type, S-KO, variant nmda_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 6,
+     "geno": 0,
+     "nmda_mult": 0.8
+    },
+    "label": "nmda_mult_lo__arm6",
+    "note": "synaptic GABA-A, S-KO, variant nmda_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 7,
+     "geno": 0,
+     "nmda_mult": 0.8
+    },
+    "label": "nmda_mult_lo__arm7",
+    "note": "neurosteroid-type, S-KO, variant nmda_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 8,
+     "geno": 0,
+     "nmda_mult": 0.8
+    },
+    "label": "nmda_mult_lo__arm8",
+    "note": "sodium (pyramidal), S-KO, variant nmda_mult_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 1,
+     "geno": 0,
+     "nmda_mult": 1.25
+    },
+    "label": "nmda_mult_hi__arm1",
+    "note": "d-APV-type, S-KO, variant nmda_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 2,
+     "geno": 0,
+     "nmda_mult": 1.25
+    },
+    "label": "nmda_mult_hi__arm2",
+    "note": "NMDAR pore, S-KO, variant nmda_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 4,
+     "geno": 0,
+     "nmda_mult": 1.25
+    },
+    "label": "nmda_mult_hi__arm4",
+    "note": "AMPA, S-KO, variant nmda_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 5,
+     "geno": 0,
+     "nmda_mult": 1.25
+    },
+    "label": "nmda_mult_hi__arm5",
+    "note": "T-type, S-KO, variant nmda_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 6,
+     "geno": 0,
+     "nmda_mult": 1.25
+    },
+    "label": "nmda_mult_hi__arm6",
+    "note": "synaptic GABA-A, S-KO, variant nmda_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 7,
+     "geno": 0,
+     "nmda_mult": 1.25
+    },
+    "label": "nmda_mult_hi__arm7",
+    "note": "neurosteroid-type, S-KO, variant nmda_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 8,
+     "geno": 0,
+     "nmda_mult": 1.25
+    },
+    "label": "nmda_mult_hi__arm8",
+    "note": "sodium (pyramidal), S-KO, variant nmda_mult_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 1,
+     "geno": 0,
+     "kv7_offset": -0.05
+    },
+    "label": "kv7_offset_lo__arm1",
+    "note": "d-APV-type, S-KO, variant kv7_offset_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 2,
+     "geno": 0,
+     "kv7_offset": -0.05
+    },
+    "label": "kv7_offset_lo__arm2",
+    "note": "NMDAR pore, S-KO, variant kv7_offset_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 4,
+     "geno": 0,
+     "kv7_offset": -0.05
+    },
+    "label": "kv7_offset_lo__arm4",
+    "note": "AMPA, S-KO, variant kv7_offset_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 5,
+     "geno": 0,
+     "kv7_offset": -0.05
+    },
+    "label": "kv7_offset_lo__arm5",
+    "note": "T-type, S-KO, variant kv7_offset_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 6,
+     "geno": 0,
+     "kv7_offset": -0.05
+    },
+    "label": "kv7_offset_lo__arm6",
+    "note": "synaptic GABA-A, S-KO, variant kv7_offset_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 7,
+     "geno": 0,
+     "kv7_offset": -0.05
+    },
+    "label": "kv7_offset_lo__arm7",
+    "note": "neurosteroid-type, S-KO, variant kv7_offset_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 8,
+     "geno": 0,
+     "kv7_offset": -0.05
+    },
+    "label": "kv7_offset_lo__arm8",
+    "note": "sodium (pyramidal), S-KO, variant kv7_offset_lo",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 1,
+     "geno": 0,
+     "kv7_offset": 0.05
+    },
+    "label": "kv7_offset_hi__arm1",
+    "note": "d-APV-type, S-KO, variant kv7_offset_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 2,
+     "geno": 0,
+     "kv7_offset": 0.05
+    },
+    "label": "kv7_offset_hi__arm2",
+    "note": "NMDAR pore, S-KO, variant kv7_offset_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 4,
+     "geno": 0,
+     "kv7_offset": 0.05
+    },
+    "label": "kv7_offset_hi__arm4",
+    "note": "AMPA, S-KO, variant kv7_offset_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 5,
+     "geno": 0,
+     "kv7_offset": 0.05
+    },
+    "label": "kv7_offset_hi__arm5",
+    "note": "T-type, S-KO, variant kv7_offset_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 6,
+     "geno": 0,
+     "kv7_offset": 0.05
+    },
+    "label": "kv7_offset_hi__arm6",
+    "note": "synaptic GABA-A, S-KO, variant kv7_offset_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 7,
+     "geno": 0,
+     "kv7_offset": 0.05
+    },
+    "label": "kv7_offset_hi__arm7",
+    "note": "neurosteroid-type, S-KO, variant kv7_offset_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 8,
+     "geno": 0,
+     "kv7_offset": 0.05
+    },
+    "label": "kv7_offset_hi__arm8",
+    "note": "sodium (pyramidal), S-KO, variant kv7_offset_hi",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 1,
+     "cl_tau_mult": 2.0,
+     "geno": 0,
+     "ji_mult": 0.5
+    },
+    "label": "joint_highCl_lowInh__arm1",
+    "note": "d-APV-type, S-KO, variant joint_highCl_lowInh",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 2,
+     "cl_tau_mult": 2.0,
+     "geno": 0,
+     "ji_mult": 0.5
+    },
+    "label": "joint_highCl_lowInh__arm2",
+    "note": "NMDAR pore, S-KO, variant joint_highCl_lowInh",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 4,
+     "cl_tau_mult": 2.0,
+     "geno": 0,
+     "ji_mult": 0.5
+    },
+    "label": "joint_highCl_lowInh__arm4",
+    "note": "AMPA, S-KO, variant joint_highCl_lowInh",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 5,
+     "cl_tau_mult": 2.0,
+     "geno": 0,
+     "ji_mult": 0.5
+    },
+    "label": "joint_highCl_lowInh__arm5",
+    "note": "T-type, S-KO, variant joint_highCl_lowInh",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 6,
+     "cl_tau_mult": 2.0,
+     "geno": 0,
+     "ji_mult": 0.5
+    },
+    "label": "joint_highCl_lowInh__arm6",
+    "note": "synaptic GABA-A, S-KO, variant joint_highCl_lowInh",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 7,
+     "cl_tau_mult": 2.0,
+     "geno": 0,
+     "ji_mult": 0.5
+    },
+    "label": "joint_highCl_lowInh__arm7",
+    "note": "neurosteroid-type, S-KO, variant joint_highCl_lowInh",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 8,
+     "cl_tau_mult": 2.0,
+     "geno": 0,
+     "ji_mult": 0.5
+    },
+    "label": "joint_highCl_lowInh__arm8",
+    "note": "sodium (pyramidal), S-KO, variant joint_highCl_lowInh",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 1,
+     "geno": 0,
+     "kv7_offset": 0.05,
+     "nmda_mult": 1.25
+    },
+    "label": "joint_hyperexcitable__arm1",
+    "note": "d-APV-type, S-KO, variant joint_hyperexcitable",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 2,
+     "geno": 0,
+     "kv7_offset": 0.05,
+     "nmda_mult": 1.25
+    },
+    "label": "joint_hyperexcitable__arm2",
+    "note": "NMDAR pore, S-KO, variant joint_hyperexcitable",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 4,
+     "geno": 0,
+     "kv7_offset": 0.05,
+     "nmda_mult": 1.25
+    },
+    "label": "joint_hyperexcitable__arm4",
+    "note": "AMPA, S-KO, variant joint_hyperexcitable",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 5,
+     "geno": 0,
+     "kv7_offset": 0.05,
+     "nmda_mult": 1.25
+    },
+    "label": "joint_hyperexcitable__arm5",
+    "note": "T-type, S-KO, variant joint_hyperexcitable",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 6,
+     "geno": 0,
+     "kv7_offset": 0.05,
+     "nmda_mult": 1.25
+    },
+    "label": "joint_hyperexcitable__arm6",
+    "note": "synaptic GABA-A, S-KO, variant joint_hyperexcitable",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 7,
+     "geno": 0,
+     "kv7_offset": 0.05,
+     "nmda_mult": 1.25
+    },
+    "label": "joint_hyperexcitable__arm7",
+    "note": "neurosteroid-type, S-KO, variant joint_hyperexcitable",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 8,
+     "geno": 0,
+     "kv7_offset": 0.05,
+     "nmda_mult": 1.25
+    },
+    "label": "joint_hyperexcitable__arm8",
+    "note": "sodium (pyramidal), S-KO, variant joint_hyperexcitable",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 1,
+     "cl_tau_mult": 0.5,
+     "geno": 0,
+     "kv7_offset": -0.05,
+     "nmda_mult": 0.8
+    },
+    "label": "joint_inhibited__arm1",
+    "note": "d-APV-type, S-KO, variant joint_inhibited",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 2,
+     "cl_tau_mult": 0.5,
+     "geno": 0,
+     "kv7_offset": -0.05,
+     "nmda_mult": 0.8
+    },
+    "label": "joint_inhibited__arm2",
+    "note": "NMDAR pore, S-KO, variant joint_inhibited",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 4,
+     "cl_tau_mult": 0.5,
+     "geno": 0,
+     "kv7_offset": -0.05,
+     "nmda_mult": 0.8
+    },
+    "label": "joint_inhibited__arm4",
+    "note": "AMPA, S-KO, variant joint_inhibited",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 5,
+     "cl_tau_mult": 0.5,
+     "geno": 0,
+     "kv7_offset": -0.05,
+     "nmda_mult": 0.8
+    },
+    "label": "joint_inhibited__arm5",
+    "note": "T-type, S-KO, variant joint_inhibited",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 6,
+     "cl_tau_mult": 0.5,
+     "geno": 0,
+     "kv7_offset": -0.05,
+     "nmda_mult": 0.8
+    },
+    "label": "joint_inhibited__arm6",
+    "note": "synaptic GABA-A, S-KO, variant joint_inhibited",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 7,
+     "cl_tau_mult": 0.5,
+     "geno": 0,
+     "kv7_offset": -0.05,
+     "nmda_mult": 0.8
+    },
+    "label": "joint_inhibited__arm7",
+    "note": "neurosteroid-type, S-KO, variant joint_inhibited",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   },
+   {
+    "direction": "crosses below",
+    "fixed": {
+     "arm": 8,
+     "cl_tau_mult": 0.5,
+     "geno": 0,
+     "kv7_offset": -0.05,
+     "nmda_mult": 0.8
+    },
+    "label": "joint_inhibited__arm8",
+    "note": "sodium (pyramidal), S-KO, variant joint_inhibited",
+    "observable": "rel_bursts",
+    "threshold": 0.5
+   }
+  ],
+  "iterations": 5,
+  "parameter": "strength"
+ },
+ "caveats": "Kv7 is NOT in the model: kv7_offset is an ASSUMED stand-in. Parameter changes of one structure, not structural alternatives. A class that keeps its rank is robust to these parameters only, not shown correct. A crossing is a model step, not a dose.",
+ "design": "bisect",
+ "predictions": []
+}

@@ -92,6 +92,15 @@ def report(runs: list[Path], published: Path | None = None) -> str:
             (s1, l1, h1), (s2, l2, h2) = cells[(v, 1)], cells[(v, 2)]
             m1, m2 = sorted(sorted(ARM[1]["J_N"] ** x for x in (l1, h1))), sorted(ARM[2]["J_N"] ** x for x in (l2, h2))
             lines.append(f"- same-parameter pair (J_N): {CLASSES[1]} {m1[0]:.3f} to {m1[1]:.3f} and {CLASSES[2]} {m2[0]:.3f} to {m2[1]:.3f}: " + ("indistinguishable on the multiplier scale" if m1[0] <= m2[1] and m2[0] <= m1[1] else "distinguishable on the multiplier scale at this resolution"))
+    n0: dict[str, list[float]] = {}
+    for r in runs:
+        for row in csv.DictReader(open(r / "results.tsv"), delimiter="\t"):
+            if row["evaluation"] == "0":
+                n0.setdefault(row["point"].split("__")[0], []).append(float(row["n_bursts_baseline"]))
+    med = lambda v: sorted(n0[v])[len(n0[v]) // 2]
+    if "base" in n0 and med("base") > 0:
+        lines.append("Baseline burst count of each variant (median over the cells' first evaluation, 40 slices of 600 s), as a multiple of the baseline variant: " + "; ".join(f"{v} {med(v) / med('base'):.2f}x" for v in vs if v in n0)
+                     + ". A variant is not re-fitted to the held baseline numbers: where this multiple is far from 1 the variant's own baseline is a different circuit state, and a near-silent one (few bursts) gives little to cross.")
     lines.append("Not identifiable here: any order or superiority between classes that act on different parameters (J_N, J_A, J_T, J_I, sigma): the multipliers above describe the model's sensitivity to each parameter, not pharmacological potency, and are not compared.")
     lines.append("What this does not show: biological validity, the effect at any exposure, or that a class absent from a crossing cannot act. Three seeds cannot separate seed variability from numerical resolution below the bracket width; read the seed counts beside the bracket.")
     return "\n".join(lines)
