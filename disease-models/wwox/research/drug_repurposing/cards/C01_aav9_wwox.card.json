@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "054782b0b59eba8d0db3d049d56dfcb179566f4b426c857d48ab0a116a0ff4dd",
+  "input_sha256": "847f6828e06c926b4a43e862dac5998d3334c947d2e68dadb3cd86b26bd9ac9d",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "DIRECTIONAL_COMPARISON_ONLY",
@@ -180,7 +180,8 @@
       "The upper bound of safe expression and any tumour risk.",
       "Whether treatment after the earliest postnatal ages helps less, equally or more.",
       "The shape of the dose relation between the two tested vector levels.",
-      "Whether the source's result is reproduced by an independent laboratory."
+      "Whether the source's result is reproduced by an independent laboratory.",
+      "LIMIT on the electrographic readout of Obeid 2026 Figure 7, from SCI's measurement of the figure (PLAUSIBLE, not adopted) [IT59 2026-11-20 fourth packet change]: panel 7C shows two wild-type and three knockout points with p = 0.2000 on SCI's reading of the panel (the smallest exact two-sided value for 2 against 3), whereas the legend says n = 5 per group and the Results call the elevation significant: text and panel disagree and the disagreement is unresolved; panel 7E has 5 per group with per-animal values that do not overlap between knockout and wild type, pooled over a seven-day recording from about postnatal day 14, with the survivors per day not stated; whether panels 7B and 7C and panel 7E are the same animals is not stated."
     ],
     "evidence_against": [
       "Survival: a step and a steep continuum are indistinguishable; threshold not located.",
