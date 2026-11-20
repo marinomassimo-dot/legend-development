@@ -268,6 +268,31 @@
      "accepted_at": "2026-11-19T14:21:45Z",
      "evidence": "radar briefing 2026-11-20T05:20Z read at about 06:25Z (late: the ADV meeting prompted it); judgement entry in capability_scout_log.md; form-word fix in scout_daily.py with a test; nothing further beyond the bridge justified on one briefing",
      "updated_at": "2026-11-20T06:30:00Z"
+    },
+    {
+     "step": "ADV-102: BATCH 11 bridge T-type compound sheets (apinocaltamide first, ulixacaltamide, TTA-A2 with TTA-P2 comparator rows)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-102 (ADV message 2026-11-20 06:3xZ; assignment sent 07:25:26Z)",
+     "accepted_at": "2026-11-20T08:35:40Z",
+     "evidence": "BATCH 11 landed on main 0db02f821 (adv098_agent_sheets_he_20261119/BATCH11_*.md); SCI and IT told by name; SCI read it in full",
+     "updated_at": "2026-11-20T08:35:40Z"
+    },
+    {
+     "step": "Operator MORNING CONTINUATION 2026-11-20: handoff executable fix, event wake-up and radar delivery, radar query quality, context lines on the tick",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "operator message 'MORNING CONTINUATION - HE' 2026-11-20 (landed fed4aa9cf, 1af34a96d; governance/design_records/morning_continuation_20261120.md)",
+     "accepted_at": "2026-11-20T08:35:41Z",
+     "evidence": "handoff proven on three real restarts (0.9 s, 2.2 s, 0.8 s against 41.4 min); tick lines: context, radar, past-time waits; scout query by subject; design record landed",
+     "updated_at": "2026-11-20T08:35:41Z"
+    },
+    {
+     "step": "Operator INTEGRATION 'Reliable autonomy' 2026-11-20 and ADV list: retire predecessors, meeting DUE_SOON, awaited events, assignment flow line (SENT, TAKEN, FIRST OUTPUT) in status and tick",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "operator message 'INTEGRAZIONE - Reliable autonomy' 2026-11-20 and ADV message",
+     "accepted_at": "2026-11-20T08:35:41Z"
     }
    ]
   }
@@ -473,6 +498,27 @@
    "at": "2026-11-19T14:21:45Z",
    "source": "ADV message 2026-11-19 14:17Z (choose your next investment; written reason allowed)",
    "step_sha256": "a8cc3bfe2eff",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T08:35:40Z",
+   "source": "ADV-102 (ADV message 2026-11-20 06:3xZ; assignment sent 07:25:26Z)",
+   "step_sha256": "9335cfc15b47",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T08:35:41Z",
+   "source": "operator message 'MORNING CONTINUATION - HE' 2026-11-20 (landed fed4aa9cf, 1af34a96d; governance/design_records/morning_continuation_20261120.md)",
+   "step_sha256": "2202df511f91",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T08:35:41Z",
+   "source": "operator message 'INTEGRAZIONE - Reliable autonomy' 2026-11-20 and ADV message",
+   "step_sha256": "9a36b0748914",
    "reopened_block": false,
    "authorised_by": null
   }

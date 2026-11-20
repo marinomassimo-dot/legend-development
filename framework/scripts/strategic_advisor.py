@@ -1644,6 +1644,9 @@ def tick(campaign: Path) -> dict[str, Any]:
     due = due_waits(obs["waits"], now)
     if due:
         why += "; WAIT NAMES A TIME THAT HAS PASSED: " + "; ".join(due[:4])
+    stuck = [f"{r['id']} [{r['recipient']}]: {r['flag']}" for r in assignment_flow(campaign, now) if r["flag"]] if campaign else []
+    if stuck:
+        why += "; ASSIGNMENT FLOW (sent is not taken is not started): " + "; ".join(stuck[:4])
     unchecked = unchecked_waits(obs["waits"], state)
     if unchecked:
         why += "; " + unchecked
@@ -2232,6 +2235,121 @@ def hold(campaign: Path, reason: str, resume_when: str, excluded: str = "") -> i
     return 0
 
 
+FLOW_WINDOW_H = 72
+FLOW_FLAG_H = 24
+FLOW_NOT_TAKEN_MIN = 30
+FLOW_NO_OUTPUT_H = 3.0
+
+
+def _flow_rx(ident: str) -> re.Pattern:
+    """The exact token of an assignment id: ADV-101 in text, adv101 or ADV_101 in a file name; never a prefix of a longer number (ADV-10 does not match ADV-101)."""
+    m = re.fullmatch(r"([A-Za-z]+)-(\d+)", ident)
+    if not m:
+        return re.compile(r"(?<![\w-])" + re.escape(ident) + r"(?![\w-])")
+    return re.compile(r"(?<![A-Za-z0-9])" + re.escape(m.group(1)) + r"[-_ ]?" + m.group(2) + r"(?!\d)", re.I)
+
+
+def _stamp(text: Any) -> dt.datetime | None:
+    try:
+        return dt.datetime.fromisoformat(str(text).replace("Z", "+00:00"))
+    except (TypeError, ValueError):
+        return None
+
+
+def assignment_flow(campaign: Path, now: dt.datetime | None = None, ref: str | None = None, window_h: int = FLOW_WINDOW_H) -> list[dict[str, Any]]:
+    """2026-11-20 (ADV, 'Reliable autonomy'): 'message sent' proves neither take-in-charge, start nor consumption. One row per assignment SENT in the last `window_h` hours: SENT (the receipt event) -> TAKEN (a record of a
+    RECIPIENT, not of the presidio, names the exact id in a step, with that step's accepted or updated time) -> FIRST OUTPUT (the earliest commit subject on the observed ref, or file added under the repository, naming the id
+    after the send). Only subjects, file names and record text are read for the exact token; nothing is matched fuzzily. A reply message leaves no durable trace and is not seen. Flags: 'SENT, NOT TAKEN after N min' (30)
+    and 'TAKEN, no output after N h' (3 by default; a DRAFTED row may carry `expect_hours`). The ids are the tokens; an id that appears in a recipient record before the send (a carried-over mention) does not count as TAKEN."""
+    now = now or _now()
+    events = _events(campaign)
+    drafted = {e["id"]: e for e in events if e.get("state") == "DRAFTED"}
+    sent: dict[str, dict[str, Any]] = {}
+    for e in events:
+        if e.get("state") == "SENT" and _stamp(e.get("utc")) and (now - _stamp(e["utc"])).total_seconds() <= window_h * 3600:
+            sent[e["id"]] = e
+    if not sent:
+        return []
+    oldest = min(_stamp(e["utc"]) for e in sent.values()) - dt.timedelta(minutes=5)
+    rows = {i: {"id": i, "recipient": (drafted.get(i) or {}).get("recipient", ""), "sent_utc": e["utc"], "taken_utc": None, "taken_in": None, "output_utc": None, "output": None,
+                "expect_hours": float((drafted.get(i) or {}).get("expect_hours") or FLOW_NO_OUTPUT_H)} for i, e in sent.items()}
+    rx = {i: _flow_rx(i) for i in rows}
+    for path in sorted((ROOT / "ledger" / "tasks").glob("*/*.json")):
+        try:
+            text = path.read_text(encoding="utf-8")
+            hit = [i for i in rows if rx[i].search(text)]
+            if not hit:
+                continue
+            rec = json.loads(text)
+            if not isinstance(rec, dict) or any(m in str(rec.get("TASK_ID", "")) for m in SENDER_RECORDS):
+                continue
+
+            def walk(o):
+                if isinstance(o, dict):
+                    own = json.dumps({k: v for k, v in o.items() if not isinstance(v, (dict, list))}, ensure_ascii=False)
+                    for i in hit:
+                        if rx[i].search(own):
+                            at = _stamp(o.get("accepted_at")) or _stamp(o.get("updated_at"))        # the time the recipient took it: accepted_at when the step has one, never a later update of the same step
+                            if at and at >= _stamp(rows[i]["sent_utc"]) - dt.timedelta(minutes=5) and (rows[i]["taken_utc"] is None or at < _stamp(rows[i]["taken_utc"])):
+                                rows[i]["taken_utc"], rows[i]["taken_in"] = _utc(at), str(rec.get("TASK_ID"))
+                    for v in o.values():
+                        walk(v)
+                elif isinstance(o, list):
+                    for v in o:
+                        walk(v)
+            walk(rec)
+        except (OSError, ValueError):
+            continue
+    ref = ref or observed_ref(fetch=False, now=now)["ref"]
+    log = _git("log", ref, f"--since={oldest.strftime('%Y-%m-%dT%H:%M:%SZ')}", "--name-status", "--format=%x01%cI%x09%h%x09%s")
+    for chunk in (log or "").split("\x01")[1:]:
+        head, _, body = chunk.partition("\n")
+        when, _, rest = head.partition("\t")
+        sha, _, subject = rest.partition("\t")
+        at = _stamp(when)
+        if re.match(r"\s*ADV\b", subject):
+            continue          # the presidio's own commits (registering and sending an assignment) are the SEND, not the recipient's output
+        names = [ln.split("\t", 1)[1] for ln in body.splitlines() if ln.startswith("A\t") and "\t" in ln and "/assignments/" not in ln and "/meetings/" not in ln]
+        for i, row in rows.items():
+            if at is None or at < _stamp(row["sent_utc"]):
+                continue
+            what = subject if rx[i].search(subject) else next((n for n in names if rx[i].search(n)), None)
+            if what and (row["output_utc"] is None or at < _stamp(row["output_utc"])):
+                row["output_utc"], row["output"] = _utc(at), f"{sha} {what[:90]}"
+            # the first one AFTER the recipient's record took it: a checkpoint that merely names the id as next work comes earlier and is not the work (ADV-101: named at +3 min, first work at +18)
+            if what and row["taken_utc"] and at >= _stamp(row["taken_utc"]) and (row.get("output_after_take_utc") is None or at < _stamp(row["output_after_take_utc"])):
+                row["output_after_take_utc"], row["output_after_take"] = _utc(at), f"{sha} {what[:90]}"
+    out = []
+    for i, row in sorted(rows.items()):
+        sent_at = _stamp(row["sent_utc"])
+        age = round((now - sent_at).total_seconds() / 60)
+        row["sent_age_min"] = age
+        flag = ""
+        if age > FLOW_FLAG_H * 60:
+            pass          # older than the flag window: listed by `status`, not raised again (a historical gap is not today's prompt)
+        elif row["taken_utc"] is None and row["output_utc"] is None and age > FLOW_NOT_TAKEN_MIN:
+            flag = f"SENT, NOT TAKEN after {age} min"
+        elif row["output_utc"] is None and row["taken_utc"] is not None:
+            held = (now - _stamp(row["taken_utc"])).total_seconds() / 3600
+            if held > row["expect_hours"]:
+                flag = f"TAKEN, no output after {round(held, 1)} h"
+        row["flag"] = flag
+        out.append(row)
+    return out
+
+
+def flow_line(row: dict[str, Any]) -> str:
+    def age(a, b):
+        x, y = _stamp(a), _stamp(b)
+        return f"{round((y - x).total_seconds() / 60)} min" if x and y else "?"
+    parts = [f"{row['id']} [{row['recipient']}] SENT {row['sent_utc'][11:16]}Z"]
+    parts.append(f"TAKEN {row['taken_utc'][11:16]}Z (+{age(row['sent_utc'], row['taken_utc'])}, {row['taken_in']})" if row["taken_utc"] else "not taken")
+    parts.append(f"FIRST NAMED IN A COMMIT {row['output_utc'][11:16]}Z (+{age(row['sent_utc'], row['output_utc'])}: {row['output']})" if row["output_utc"] else "no output yet")
+    if row.get("output_after_take_utc") and row["output_after_take_utc"] != row["output_utc"]:
+        parts.append(f"FIRST OUTPUT AFTER TAKEN {row['output_after_take_utc'][11:16]}Z (+{age(row['sent_utc'], row['output_after_take_utc'])}: {row['output_after_take']})")
+    return " -> ".join(parts) + (f"  ** {row['flag']}" if row["flag"] else "")
+
+
 def status(campaign: Path) -> str:
     campaign = Path(campaign)
     b = _budget(campaign)
@@ -2254,6 +2372,8 @@ def status(campaign: Path) -> str:
     if held:
         last = held[-1]
         lines.append(f"  holds recorded {len(held)} (not evaluations, not counted above); last {last['utc']}: cleared {len(last['events_cleared'])} event(s) and {last['commits_cleared']} commit(s), resume_when {last['resume_when']}: {last['reason'][:160]}")
+    for row in assignment_flow(campaign):
+        lines.append("  flow " + flow_line(row))
     for ident, v in sorted(assignment_states(campaign).items()):
         lines.append(f"  {ident} [{v['recipient']}] {v['key']}: highest evidence {v['highest'] or 'none'}; origin {v.get('origin', 'assessment')}; levels {','.join(v['levels'])}" + ("; UNREACHABLE (residual stays in the queue)" if v["unreachable"] else ""))
     return "\n".join(lines)

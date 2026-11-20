@@ -339,6 +339,85 @@ class UncheckedWaits(unittest.TestCase):
         self.assertEqual(waits, {"p": True, "q": False})
 
 
+class AssignmentFlow(unittest.TestCase):
+    """2026-11-20 (ADV, 'Reliable autonomy'): SENT -> TAKEN (a recipient record names the exact id) -> FIRST OUTPUT (a commit subject or added file naming it); flags for a send nobody took and a take with no output."""
+    NOW = dt.datetime(2026, 11, 20, 12, 0, tzinfo=dt.timezone.utc)
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.campaign = self.root / "camp"; self.campaign.mkdir()
+        (self.root / "ledger" / "tasks" / "orchestrator").mkdir(parents=True)
+        for cmd in (["init", "-q", "-b", "main"], ["config", "user.email", "t@example.invalid"], ["config", "user.name", "t"]):
+            subprocess.run(["git", *cmd], cwd=self.root, check=True)
+        self.patch = patch.object(sa, "ROOT", self.root); self.patch.start(); self.addCleanup(self.patch.stop)
+
+    def event(self, ident, state, hhmm, **extra):
+        row = {"id": ident, "state": state, "utc": f"2026-11-20T{hhmm}:00Z", **extra}
+        with (self.campaign / "assignments.jsonl").open("a") as fh:
+            fh.write(json.dumps(row) + "\n")
+
+    def commit(self, subject, hhmm, files=()):
+        for f in files:
+            (self.root / f).parent.mkdir(parents=True, exist_ok=True); (self.root / f).write_text("x")
+        (self.root / "n.txt").write_text(subject)
+        env = {**os.environ, "GIT_COMMITTER_DATE": f"2026-11-20T{hhmm}:00Z", "GIT_AUTHOR_DATE": f"2026-11-20T{hhmm}:00Z"}
+        subprocess.run(["git", "add", "-A"], cwd=self.root, check=True)
+        subprocess.run(["git", "commit", "-q", "-m", subject], cwd=self.root, check=True, env=env)
+
+    def record(self, task, step_text, accepted):
+        rec = {"TASK_ID": task, "AUTHORISED_QUEUE_X": {"MANDATE_STATE": "OPEN", "OBJ_1": {"order": 1, "steps": [{"step": step_text, "status": "IN_PROGRESS", "owner": "x", "source": step_text, "accepted_at": f"2026-11-20T{accepted}:00Z"}]}}}
+        (self.root / "ledger" / "tasks" / "orchestrator" / f"{task}.json").write_text(json.dumps(rec))
+
+    def flow(self):
+        return {r["id"]: r for r in sa.assignment_flow(self.campaign, self.NOW, ref="HEAD")}
+
+    def test_taken_and_output_are_found_by_exact_id_and_the_presidios_own_commit_is_not_output(self):
+        self.event("ADV-777", "DRAFTED", "09:00", recipient="Science"); self.event("ADV-777", "SENT", "09:05")
+        self.record("ORCH-SCI-X", "ADV-777 take the reading", "09:20")
+        self.commit("ADV: registered and sent ADV-777", "09:06")                                    # the sender's commit: not output
+        self.commit("SCI: ADV-7770 something else", "09:30")                                        # another id that starts with the digits: not a match
+        self.commit("SCI: ADV-777 increment 1", "09:50")
+        r = self.flow()["ADV-777"]
+        self.assertEqual((r["taken_utc"], r["taken_in"]), ("2026-11-20T09:20:00Z", "ORCH-SCI-X"))
+        self.assertTrue(r["output_utc"].startswith("2026-11-20T09:50")); self.assertIn("increment 1", r["output"])
+        self.assertEqual(r["flag"], "")
+        self.assertIn("TAKEN 09:20Z (+15 min", sa.flow_line(r))
+
+    def test_a_send_nobody_took_is_flagged_after_30_minutes_and_a_take_with_no_output_after_3_hours(self):
+        self.event("ADV-778", "DRAFTED", "11:00", recipient="Harness"); self.event("ADV-778", "SENT", "11:20")      # 40 minutes ago, no record, no commit
+        self.event("ADV-779", "DRAFTED", "07:00", recipient="Science"); self.event("ADV-779", "SENT", "07:05")      # taken at 07:30, silent for 4.5 hours
+        self.record("ORCH-SCI-Y", "ADV-779 do it", "07:30")
+        self.commit("unrelated work", "11:00")
+        flows = self.flow()
+        self.assertEqual(flows["ADV-778"]["flag"], "SENT, NOT TAKEN after 40 min")
+        self.assertEqual(flows["ADV-779"]["flag"], "TAKEN, no output after 4.5 h")
+        self.event("ADV-780", "DRAFTED", "11:50", recipient="Science"); self.event("ADV-780", "SENT", "11:50")
+        self.assertEqual(self.flow()["ADV-780"]["flag"], "")                                         # ten minutes: inside the allowed time
+
+    def test_a_checkpoint_that_names_the_id_before_the_take_is_shown_apart_from_the_first_work_and_the_presidios_record_is_not_a_take(self):
+        self.event("ADV-781", "DRAFTED", "08:00", recipient="Science"); self.event("ADV-781", "SENT", "08:05")
+        self.commit("SCI: checkpoint M, next ADV-781", "08:10")
+        self.record("ORCH-SCI-Z", "ADV-781 accepted", "08:40")
+        rec = {"TASK_ID": "ORCH-ADV-FOLLOWTHROUGH-1", "AUTHORISED_QUEUE_X": {"MANDATE_STATE": "OPEN", "OBJ_1": {"order": 1, "steps": [{"step": "ADV-781 sent", "status": "DONE", "owner": "adv", "accepted_at": "2026-11-20T08:06:00Z", "evidence": "e1 recorded and verified"}]}}}
+        (self.root / "ledger" / "tasks" / "orchestrator" / "ORCH-ADV-FOLLOWTHROUGH-1.json").write_text(json.dumps(rec))
+        self.commit("SCI: ADV-781 first result", "09:00")
+        r = self.flow()["ADV-781"]
+        self.assertEqual(r["taken_in"], "ORCH-SCI-Z")                                                 # the sender's record is excluded
+        self.assertTrue(r["output_utc"].startswith("2026-11-20T08:10")); self.assertTrue(r["output_after_take_utc"].startswith("2026-11-20T09:00"))
+        self.assertIn("FIRST OUTPUT AFTER TAKEN 09:00Z", sa.flow_line(r))
+
+    def test_old_assignments_are_listed_but_not_flagged_and_nothing_sent_gives_nothing(self):
+        self.assertEqual(sa.assignment_flow(self.campaign, self.NOW, ref="HEAD"), [])
+        self.event("ADV-782", "DRAFTED", "10:00", recipient="Science")
+        self.assertEqual(sa.assignment_flow(self.campaign, self.NOW, ref="HEAD"), [])                 # drafted is not sent
+        with (self.campaign / "assignments.jsonl").open("a") as fh:
+            fh.write(json.dumps({"id": "ADV-783", "state": "SENT", "utc": "2026-11-18T10:00:00Z"}) + "\n")
+        self.commit("x", "08:00")
+        r = self.flow()["ADV-783"]
+        self.assertEqual(r["flag"], "")                                                                # 50 hours old: inside the listing window, outside the flag window
+
+
 class ClaudeBinary(unittest.TestCase):
     """2026-11-19 (ADV): in the session's own shell `claude` is not on PATH; the activity block was silently omitted at every in-session tick."""
 
