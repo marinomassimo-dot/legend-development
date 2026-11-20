@@ -880,7 +880,7 @@ reserved act, spending, private-data exposure or a scientific promotion.
 `tick.meeting` independently of the ordinary evaluation verdict. A meeting is due six hours
 after the previous meeting **started** (first anchor: continuous authorisation); an event may
 anticipate it. It is handled at the next supported recall or safe session boundary, not
-guaranteed at an exact wall-clock second. Use one existing recall, never another cron,
+guaranteed at an exact wall-clock second; since 2026-11-20 a meeting due within the next 45 minutes (`meeting_lead_minutes`) reads `DUE_SOON` and is actionable, so the check just before the due time opens it (the six-hourly times fall at :18:14 and the hourly check at about :17 to :18: the 05:36Z meeting was opened 41 minutes late); the next due time moves earlier by at most that lead. Use one existing recall, never another cron,
 supervisor or model call just to hold a meeting. Pause, stop, disabled mode, measured resource
 limits and an evaluation already running defer it; ongoing research is not interrupted.
 
