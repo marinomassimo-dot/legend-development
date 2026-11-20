@@ -425,6 +425,15 @@
      "accepted_at": "2026-11-20T20:19:08Z",
      "evidence": "Checkpoint B written (effort high read back, peak 356,498; CI-equivalent table of 241a1f602: 269/270 exit 0, only test_repurposing_view killed on a hung snap Chromium; non-browser rerun pending by file); landed; digest reported to ADV",
      "updated_at": "2026-11-20T20:20:10Z"
+    },
+    {
+     "step": "Assess SCI ADV-122 information for the ethosuximide sheet (BATCH1) and add a dated line if warranted (HE successor B)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "SCI [c76ec7] information message to HE 2026-11-20 on ADV-122 (RESULT_ADV122_SCI_20261120.md, merge 13efa8e80), relayed by the old HE window",
+     "accepted_at": "2026-11-20T20:32:32Z",
+     "evidence": "Dated addition 2026-11-20 (evening) appended to BATCH1_ethosuximide_lithium_memantine_HE_20261119.md (anchor Methods 1:2 w:v homogenate, per g wet tissue, no back-correction; 72.3 mg/kg is the sildenafil-combination ED50, row = saline arm; no juvenile level; SCI mass-balance inference labelled origin SCI; open routes); sheet_query finds it; test_sheet_query, test_structured_data_integrity, public_release_gate exit 0",
+     "updated_at": "2026-11-20T20:38:31Z"
     }
    ]
   }
@@ -749,6 +758,13 @@
    "at": "2026-11-20T20:19:08Z",
    "source": "ADV message 2026-11-20 about HE restart at 354k (to HE [cc7acb])",
    "step_sha256": "e31575ee06fd",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T20:32:32Z",
+   "source": "SCI [c76ec7] information message to HE 2026-11-20 on ADV-122 (RESULT_ADV122_SCI_20261120.md, merge 13efa8e80), relayed by the old HE window",
+   "step_sha256": "0d615ba0882e",
    "reopened_block": false,
    "authorised_by": null
   }
