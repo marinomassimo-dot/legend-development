@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261120_001
+last_batch_commit_id: BATCH_20261120_002
 last_batch_commit_date: 2026-11-20
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 1
 target_wm_version: WM_v7.29
-trigger: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV decided the split of the candidate and the class of each part). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: ONE candidate, PART 1 ONLY (CC-20261120-ORCHESTRATOR-CLAIM035-S9-WORDING-01): one additive Evidence-boundary field on CLAIM 035 (1 op, record-scoped), after two blind checks against the held bytes; Title, Summary, Clinical meaning and the S9-independence assertion NOT rewritten; PART 2 (class MAJOR under the claim's own D6 ruling) stays PROPOSED and is a reserved item for the operator. The previous batch text follows only as history in state_history.
+trigger: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV's word for part 1 YES, part 2 stays the operator's). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: ONE candidate, PART 1 ONLY (CC-20261120-ORCHESTRATOR-WM103-DOSE-WORDING-01): three dated notes appended after working-model lines 103, 148 and 251 (3 record-scoped replace-within ops, each original sentence kept byte for byte, each new line proved to be the old line plus the note), after two blind checks (16 statements, then 4 with one overshoot repaired in the wording of the verifier); pathograph surface regenerated. Part 2 (class MAJOR: rewording of the three sentences; the coordinated change of the CLAIM 011 Title and flag and of the BLOCK 2 row 011 is a separate candidate) stays PROPOSED and is a reserved item for the operator. The previous batch text follows only as history in state_history.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261120_BATCH_20261120_001
+last_lint_id: LINT_20261120_BATCH_20261120_002
 last_lint_date: 2026-11-20
 last_lint_result: WARN
 ```

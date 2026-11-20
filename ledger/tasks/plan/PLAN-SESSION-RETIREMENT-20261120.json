@@ -1,0 +1,66 @@
+{
+  "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+  "TASK_ID": "PLAN-SESSION-RETIREMENT-20261120",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-11-20",
+  "OBJECTIVE": "Make safe background predecessor retirement part of the existing handoff and hourly watch; preserve history, worktrees and active work; no repeated operator prompt.",
+  "branch": "codex/autonomous-session-retirement",
+  "CURRENT_STATE": "COMPLETE",
+  "AUTHORISED_QUEUE_20261120": {
+    "MANDATE_STATE": "COMPLETE",
+    "OBJ_1": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Diagnose failed retirement and existing capabilities",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "CLI help, runtime inventory and transcript observation; governance/design_records/session_retirement_20261120.md"
+        },
+        {
+          "step": "Implement protected handoff and existing-watch catch-up with canonical procedure",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "framework/scripts/mandate_watch.py; framework/protocols/cross_session_transport.md section 12"
+        },
+        {
+          "step": "Verify refusal cases, fresh-clone regressions and live idempotency",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "Fresh clone: c1a999f1b, 7 targeted regression suites PASS WITH SKIPS (Stop hook absent); final watcher changes 5bc8222ce, fresh-clone watcher suite PASS (82 tests). Continuity 83 tests, one environmental skip. LINT no BLOCK, receipts OK (2201), session_self_eval PASS. Live retirement: two SCI and one IT predecessor; current hosts and files preserved."
+        },
+        {
+          "step": "Publish exact checked SHA and confirm host deployment",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "94fbbfdd82d91f78f369a50e6ac7ab95cb912203 published to development/main with gate PASS on exact SHA, verified by ls-remote. Primary host checkout fast-forwarded only after fresh clean-tree/ancestry/idle-root checks; cron script digest 07bdbcb98ea625d9111a0499940acc37253584fb9c9623f4e9a01a7d190cacb4 matches published blob. Existing minute-37 cron entry present; read-only SCI/IT catch-up returns no remaining predecessors."
+        }
+      ]
+    }
+  },
+  "VALIDATION": {
+    "initial_candidate": "c1a999f1b",
+    "final_code_candidate": "5bc8222ce",
+    "scope": "7 relevant suites, then repeat changed watcher suite; no complete battery claimed",
+    "fresh_clone_log": "/tmp/legend-retirement-fresh-regressions.log (host-local)",
+    "watcher_tests": 82,
+    "continuity_tests": 83,
+    "environmental_skip": "Stop hook absent in fresh clone; no hook installed by this task",
+    "live_smoke": "two SCI predecessors plus one IT stopped with independent exit verification; one SCI and one IT host retained",
+    "self_eval": "PASS with pre-existing declared scientific gaps; no scientific delta",
+    "lint": "WARN, zero BLOCK",
+    "receipts": "OK, 2201 chained receipts on tested candidate"
+  },
+  "CHECKPOINT": {
+    "last_verified_result": "Protected retirement deployed to existing host watcher; three further released background predecessors stopped, history/worktrees retained.",
+    "first_incomplete_work": "none",
+    "publication_sha": "94fbbfdd82d91f78f369a50e6ac7ab95cb912203",
+    "host_watch_sha256": "07bdbcb98ea625d9111a0499940acc37253584fb9c9623f4e9a01a7d190cacb4",
+    "host_schedule": "37 * * * *; existing check --all --deliver resume",
+    "limits": "No atomic idle-and-stop primitive; real runtime denials held without retry; interactive sessions preserved. No full battery or improved model decision-making claimed."
+  }
+}

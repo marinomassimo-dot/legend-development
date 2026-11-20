@@ -827,6 +827,60 @@ A finished wave, a delivered report, a clean tree, a checkpoint, night-time and 
 absence do not end a mandate. Do not invent maintenance, repeat passed tests without cause, or
 exceed an explicit budget to stay busy.
 
+### Retire the released predecessor at a session handoff
+
+A launcher owns the complete handoff: checkpoint, release, successor bind and first
+action, then retirement of the released **background** predecessor. Ordinary retirement
+needs no new operator instruction. Use the existing watcher:
+
+```bash
+python3 framework/scripts/mandate_watch.py handoff --task <ID> --old <full-old-session-id> --new <full-new-session-id> --retire-old
+```
+
+Without `--retire-old`, the command remains read-only and reports eligibility. `RUNNING`
+describes the successor's activity; retirement has its own result. `KEPT`, `STOP_REFUSED`
+or `STOP_UNVERIFIED` is not a completed retirement (exit 5 with the flag). An already
+stopped predecessor is an idempotent success. The existing hourly
+`check --all --deliver resume` also finds released predecessors of unique live bound
+hosts and uses the same checks; `--deliver none` only reports. No second scheduler or
+language-model call is needed for this recovery.
+
+The watcher requires exact session identities, the predecessor's own release of every
+bound mandate, a successor that has acted after release and is the unique live host,
+an idle completed background turn, a known process identity, no live descendants and no
+live task-tagged job. Jobs currently carry task ownership, not session ownership; while
+one is alive retirement is conservatively deferred. It reads fresh observations twice
+before acting and maps `sessionId` to the **runtime `id` actually returned by the live
+inventory**. A display name, ListAgents reference and full session UUID are not
+interchangeable stop addresses. If the successor bound too early, the earlier overlap is
+reported; cleanup can still proceed after the old host releases and the successor actually
+acts after that release. A past overlap is not an eternal block on safe recovery.
+Interactive sessions, incomplete observations, competing
+hosts and changed process identities are kept, never guessed away.
+
+Only the supported `claude stop <runtime-id>` is issued, as a separate argument vector.
+Success requires the predecessor to disappear from the live inventory, its original
+PID/start-time identity to be gone, and the successor still to be the unique live host.
+Conversation files, worktrees, checkpoints and unique material are untouched. `claude rm`
+is **not** a retirement step: its current help includes worktree deletion; an earlier
+probe in the scripts README did not establish safety for all worktrees.
+
+A genuine runtime denial is an exception to resolve for that action, not a permanent
+operator-only rule for all retirement. Do not disguise or repeat a refused command via
+another wrapper, kill signal or permission change. A failed, interrupted or unverified
+stop is retained in the existing watcher's machine-local state and not retried
+automatically; continue independent work and report the concrete runtime limitation.
+After runtime resolution, a supported direct stop can be independently verified by the
+same read-only handoff check. Launcher briefs point here rather than perpetuating a
+blanket prohibition on stopping any session.
+
+**Guarantee and limit:** persisted code, the normal launcher recipe and the existing
+hourly watch provide prevention and catch-up across chat loss on this host once its
+checkout carries this version. The runtime has no atomic idle-check-and-stop primitive:
+a message can arrive between the last observation and the command. The checks reduce
+that race; they do not establish its impossibility, runtime permission, scheduling while
+the host is down, or correct future model behaviour. Missing evidence keeps the session.
+
 ### Context is a continuity boundary, not a stop
 
 On the Claude Code runtime compaction is automatic: the runtime summarises the conversation and
