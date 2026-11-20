@@ -610,6 +610,15 @@ def retire_predecessor(task: str, old_id: str, new_id: str, *, execute: bool = F
     return out
 
 
+# Mandate states in which the catch-up may look for released predecessors of the unique acting host. Retiring an old, already released host is housekeeping about
+# THAT host; it is independent of whether the successor's queue still has work (RUNNING, STOPPED_RESUMABLE), is waiting on the operator or on a dependency (BLOCKED) or
+# is complete with closure pending (COMPLETE). Until 2026-11-20 only RUNNING and STOPPED_RESUMABLE reached it, so a released predecessor stayed alive whenever its
+# successor was BLOCKED or COMPLETE_PENDING (the standing mandates of this laboratory sit in COMPLETE by design). Not here: PAUSED (an operator stop: nothing about the
+# mandate is touched), UNKNOWN (an observation that could not be made) and DUPLICATE_HOST (no unique successor). retire_released and retirement_state still require
+# exactly one live acting host, a released and idle background predecessor with no descendants, no live task job and an exact runtime id and process identity.
+RETIRE_STATES = ("RUNNING", "STOPPED_RESUMABLE", "BLOCKED", "COMPLETE")
+
+
 def retire_released(task: str, sessions: list[dict] | None, *, execute: bool = False) -> list[dict]:
     """Existing watch's catch-up: exact released predecessors of a unique acting task host.
     No name-based sweep, no new scheduler, no revival or deletion of a historical session.
@@ -1310,7 +1319,7 @@ def _check_all(a) -> int:
                 log_event("session_names_pending", **names)
             if not getattr(a, "json", False):
                 print(f"SESSION_NAMES_PENDING {task}: " + json.dumps(names["renames"], ensure_ascii=False))
-        if out.get("state") in ("RUNNING", "STOPPED_RESUMABLE"):
+        if out.get("state") in RETIRE_STATES:
             retirements = retire_released(task, sessions, execute=a.deliver == "resume")
             if retirements:
                 out["predecessor_retirement"] = retirements
