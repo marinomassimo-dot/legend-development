@@ -487,6 +487,13 @@
      "owner": "orchestrator",
      "source": "operator message in chat, 2026-11-20 morning ('MORNING CONTINUATION - SCI'); roadmap_current.md direction",
      "accepted_at": "2026-11-20T07:24:33Z"
+    },
+    {
+     "step": "ADV-101 (broad-consequence-compartment-axis-glycaemia-metabolic): time-boxed pre-registered comparison of the glycaemia/metabolic axis (timing vs seizures and death per held line; evidence of independent effect; pup-compatible interventions, exposure facts only; marginal utility vs the two broad candidates; GSK-3 glycogen paragraph); deliver to ADV, IT, HE",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-20 about 07:30Z; advisor_pilot_20261113/assignments/ADV-101.md",
+     "accepted_at": "2026-11-20T07:42:11Z"
     }
    ]
   }
@@ -860,6 +867,13 @@
    "at": "2026-11-20T07:24:33Z",
    "source": "operator message in chat, 2026-11-20 morning ('MORNING CONTINUATION - SCI'); roadmap_current.md direction",
    "step_sha256": "8280ac00aa51",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T07:42:11Z",
+   "source": "ADV message 2026-11-20 about 07:30Z; advisor_pilot_20261113/assignments/ADV-101.md",
+   "step_sha256": "b5fd55691ca7",
    "reopened_block": false,
    "authorised_by": null
   }
