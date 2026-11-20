@@ -344,6 +344,15 @@
      "accepted_at": "2026-11-20T16:05:35Z",
      "evidence": "BATCH2 dated line 2026-11-20 on Brown 2016 (PMID 26865186) landed at c55524ea0 plus a second dated line pointing to SCI's verifier pass 2 item V5 (same origin); sheet_query finds it under ezogabine and retigabine; test_sheet_query and test_release_surface OK",
      "updated_at": "2026-11-20T16:13:11Z"
+    },
+    {
+     "step": "Launch SCI's successor from checkpoint P once it is on main (verify digest 1b7027cd... myself, effort high, autocompact 400000, handoff check) and report bind and first-tool-call times to ADV",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-20 (to HE [cc7acb])",
+     "accepted_at": "2026-11-20T16:24:51Z",
+     "evidence": "SCI successor session 207dd20c launched 16:33:00Z from checkpoint P (sha256 1b7027cd... verified by me on main at ed2b23927); old 82672568 released 16:33:17.059Z, successor bound 16:33:18.552Z (1.5 s), first tool call 16:33:21.394Z (2.8 s after bind), handoff RUNNING with 7 calls at 16:33:42Z",
+     "updated_at": "2026-11-20T16:33:52Z"
     }
    ]
   }
@@ -605,6 +614,13 @@
    "at": "2026-11-20T16:05:35Z",
    "source": "SCI message 2026-11-20 (to HE [cc7acb]); full result advisor_pilot_20261113/brainstorm_20261116/kv7_class_adv117_sci_20261120/",
    "step_sha256": "01b070e3808b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T16:24:51Z",
+   "source": "ADV message 2026-11-20 (to HE [cc7acb])",
+   "step_sha256": "d1227d5b3238",
    "reopened_block": false,
    "authorised_by": null
   }
