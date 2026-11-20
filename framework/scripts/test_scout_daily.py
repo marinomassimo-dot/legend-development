@@ -206,6 +206,25 @@ class Bridge(unittest.TestCase):
         self.assertEqual(sd.shared_bridge(self.NP4G2, "Declining environmental predictability erodes reproduction in a tropical seabird"), [])
         self.assertIn("differentiation", sd.shared_bridge(self.NP4G2, "Delayed oligodendrocyte precursor differentiation in a Wwox-null co-culture"))
 
+    ROWS = {"NP4G1": "Peer review (with source data) of the same-laboratory preprint on a primary oligodendroglial role of WWOX under challenge (PPR1124524) the peer review is published",
+            "NP4G3": "Oligodendrocyte-lineage census in the Synapsin-Cre deletion before the first spontaneous seizure (about P7 to P8) the census is reported",
+            "OBJ": "Ethosuximide effect on the T-type current in knockout slices a recording is reported"}
+
+    def question(self, key):
+        item = {"surface": "reopen", "lid": key, "text": self.ROWS[key], "decision": "d", "weight": 1, "path": "p", "blob": "b", "sha": "s", "locator": "l", "external": True}
+        questions, _ = sd.build_questions([item])
+        return questions[0]
+
+    def test_a_question_without_an_object_is_searched_by_its_subject_not_its_form(self):
+        """2026-11-20: 'epilepsy AND preprint' and 'epilepsy AND census' returned retracted tTIS preprints and clinic epidemiology; the subject word was over the 14-letter cap or hyphenated."""
+        self.assertIn("oligodendroglial", self.question("NP4G1")["epmc"]); self.assertNotIn("preprint", self.question("NP4G1")["epmc"])
+        self.assertIn("oligodendrocyte", self.question("NP4G3")["epmc"]); self.assertNotIn("census", self.question("NP4G3")["epmc"])
+
+    def test_a_question_that_names_an_object_keeps_the_search_it_had(self):
+        q = self.question("OBJ")
+        self.assertEqual(q["objects"], ["ethosuximide"])
+        self.assertTrue(q["epmc"].startswith("TITLE_ABS:ethosuximide"))                                  # 70 of 77 live questions are byte-identical before and after this change
+
     def test_fallback_themes_and_the_open_slot_need_no_bridge(self):
         self.assertEqual(sd.bridge_terms({"id": "open-slot", "gap": "unplanned find: no gap assumed"}), [])
         self.assertEqual(sd.bridge_terms({"id": "t1", "gap": "gap one"}), [])
