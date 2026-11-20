@@ -1,0 +1,223 @@
+{
+ "repo": ".",
+ "title": "Blind audit packet, check 3: the repairs made after check 2 of the third packet change, and the repaired fourth packet change, IT59, 2026-11-20",
+ "preamble": "Items R1 to R9 are statements of an earlier packet change that were repaired after an earlier blind check (the repairs were never checked); R10 to R18 are the repaired statements of a later change. Judge each ONE AT A TIME. For each: (1) supported by its anchor as worded? (2) does the anchor say MORE or LESS (species, age, system, route, n and unit, quantifier, 'found by these routes' versus 'absent', who read what (HE versus SCI), hedges kept)? (3) verdict SUPPORTED / SUPPORTED_WITH_LIMIT / OVERSHOOT / UNDERSHOOT / UNSUPPORTED / UNVERIFIABLE; quote with locator; every quoted string a substring of the anchor you read. Where the anchor is a repository sheet or note, judge the wording against it and say so (raw database answers are outside git; a number the sheet states is judged as the sheet's statement); where it names a PubMed abstract open it with the PubMed tool; where it names a PMC XML copy outside git open it by its absolute path read-only. In R8 and R9 judge against SCI's v3.1 section 6.10 and the CURRENT READING block. Repository paths are relative to /home/desktop/legend-development/.claude/worktrees/it_fourth_20261120/ .",
+ "items": [
+  {
+   "id": "R1 (third, E01 trazodone)",
+   "statement": "TRAZODONE: the database holds 284 rows, with 5-HT2A, 5-HT1A, D2 and 5-HT2B among the main groups; no row measures PERK, eIF2 alpha phosphorylation or any integrated stress response assay, so the stress-response link is the literature's and not measured here; two papers disagree by title (a 2017 mouse report that repurposed drugs targeting eIF2 alpha phosphorylation prevent neurodegeneration, and a 2025 paper titled as reporting that trazodone, dibenzoylmethane and tauroursodeoxycholic acid do not prevent motor dysfunction and neurodegeneration (the sheet cuts the title; neither read)). The serotonin 5-HT2A potency differs about twelve-fold by assay type on the sheet's figure (a binding IC50 of 20 nanomolar against 243 nanomolar in a cyclic-AMP assay), so the same receptor does not give one number. Label (openFDA record, newest 2026-07-14): adults with major depressive disorder; safety and effectiveness in the paediatric population not established, with the antidepressant boxed warning on suicidality in children.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH8_broad_ISRIB_trazodone_omaveloxolone_dichloroacetate_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "R2 (third, L01 omaveloxolone)",
+   "statement": "Added class-level facts, no dose, no score, NOT WWOX EVIDENCE [IT59 2026-11-20 third packet change] (HE ADV-098 batch 8, database rows): the database holds TWO potency rows for omaveloxolone, both anti-necroptotic cell readouts of one 2021 document (EC50 1.41 micromolar in human HT-29 cells and 5.25 micromolar in mouse L929 cells); no KEAP1 or NRF2 row at all was found by those routes, so the NRF2 mechanism is the literature's and is not measured in these rows. Two searches for a brain concentration (one of them specific to mice) found no record (two query shapes). Label (openFDA record, effective 2026-04-06): Friedreich's ataxia in adults and adolescents of 16 years and older; effectiveness established from age 16 and nothing for younger children.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH8_broad_ISRIB_trazodone_omaveloxolone_dichloroacetate_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "R3 (third, E03 dichloroacetate)",
+   "statement": "Added class-level facts, no dose, no score, NOT WWOX EVIDENCE [IT59 2026-11-20 third packet change] (HE ADV-098 batch 8, database rows): dichloroacetic acid acts at millimolar concentrations in most rows read (the fibroblast EC50 below is sub-millimolar). Within ONE 2017 document (an enzyme-linked assay on full-length PDHA1 as substrate, 30 minutes) the IC50 is 1.03 millimolar for PDK1, 0.50 for PDK2 and 5.56 for PDK3: an eleven-fold range across isozymes in one assay, a comparable contrast; an older row gives more than 2 millimolar against PDK in vitro and an EC50 of 100 micromolar in normal human dermal fibroblasts, a different readout, with no order between the two documents read; Five leukaemia cell-line rows give 8 to 14 millimolar (MTT cytotoxicity, 48 hours, 2016). No brain concentration of dichloroacetate in mice and no juvenile exposure were found (the rat brain PDK distribution paper of 1984 and a rat GSTZ1 paper are by title only; one neonatal query found no record); the openFDA label route returned no match for dichloroacetic acid, a statement about that route and not about development status.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH8_broad_ISRIB_trazodone_omaveloxolone_dichloroacetate_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "R4 (third, I01 metabolic axis)",
+   "statement": "THE METABOLIC AXIS IS NEITHER PROMOTED NOR PARKED ON HELD DATA [IT59 2026-11-20 third packet change]: no glucose measurement in the neuron-targeted deletion line (S-KO) or the progenitor-targeted deletion line (N-KO) was found in the held texts searched; no held text searched manipulates glycaemia or the PDH axis and reads a seizure or a survival endpoint (the appendix glucose panels and some figure values are not held as text, so figures are not covered); the decisive datum is blood glucose from postnatal day 7 with same-animal EEG from postnatal day 9 (the earliest glucose anywhere in the held literature is day 10, a plot reading by the ADV-074 producer not re-read by SCI, and the seizures of the neuronal-deletion line start at day 9); the preregistration and the first reading are SCI's ADV-101 documents, folder advisor_pilot_20261113/brainstorm_20261116/glycaemia_axis_adv101_sci_20261120/. Wild-type glucose differs about two-fold between laboratories, so no absolute hypoglycaemia severity is compared across papers. The dichloroacetate seizure datum already on this card (abstract level, adult mice, negative or slightly proconvulsant) is a PDH-axis manipulation with a seizure readout outside the held full texts searched.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/glycaemia_axis_adv101_sci_20261120/ADV101_INCREMENT1_Q1_Q2_SCI_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/glycaemia_axis_adv101_sci_20261120/PREREGISTRATION_ADV101_SCI_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "R5 (third, M01 10058-F4 and two uncarded agents)",
+   "statement": "Added class-level facts, no compound carded, no dose, no score, NOT WWOX EVIDENCE [IT59 2026-11-20 third packet change] (HE ADV-098 batch 10; identity by structure, not found by name; the geometric form each study used is not resolved): 10058-F4, named in the literature as a MYC-MAX dimerisation inhibitor, has FIVE rows in the database (one without a value), all cell growth after 96 hours in one 2025 document: 35.1 to 59.5 micromolar for the four with a value, with MYC-expressing P493-6 cells 1.7-fold more sensitive than the same cells with MYC repressed (one document, a weak dependence); no row on MYC, MAX or MYC-MAX dimerisation was found by those routes, and none is asserted. In mice with prostate-cancer xenografts (abstract read, intravenous route) the plasma peak was about 300 micromolar at 5 minutes with a terminal half-life of about one hour, tissue values were highest in fat, lung, liver and kidney, the tumour peak was at least ten-fold lower than the plasma peak, and no significant tumour growth inhibition was seen at the two doses tested; the abstract says the lack of activity may have resulted from rapid metabolism and low tumour concentration, brain is not named, and the full text was not read. No label and no clinical trial were found. Two other agents of the same batch, tazemetostat (an EZH2 inhibitor; the abstract of a mouse study says P-glycoprotein limits its brain accumulation, no brain concentration figure found by these routes; the abstract names the compound EPZ-6438 and the identity with tazemetostat is the sheet's; label: epithelioid sarcoma from age 16, follicular lymphoma in adults) and TMP195 (a class IIa HDAC inhibitor, no exposure found by these routes), have no card and are carried as open-question lines only.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH10_broad_tazemetostat_TMP195_10058F4_HE_20261120.md"
+    },
+    {
+     "label": "PMID 18509642 abstract via the PubMed tool"
+    },
+    {
+     "label": "PMID 25868794 abstract via the PubMed tool"
+    }
+   ]
+  },
+  {
+   "id": "R6 (third, F02 benztropine)",
+   "statement": "Added class-level facts, no compound carded, no dose, no score, NOT WWOX EVIDENCE [IT59 2026-11-20 third packet change] (HE ADV-098 batch 7, database rows and label records): four agents with four different mechanisms, so no potency comparison across them. None of the four has a database row that measures an oligodendrocyte-differentiation or myelination effect: the potency rows are the primary-target rows and are not the myelination mechanism (the link is literature; for the agents whose literature the sheet lists it was read at title level only). BENZTROPINE: muscarinic M1 Ki of 0.59 and 0.95 nanomolar in rat brain membranes and 0.13 nanomolar in a human panel (a seven-fold spread between sources); pharmacokinetic and brain-distribution hits found by title for benztropine analogs only, none for benztropine itself by these routes; label: caution in paediatric patients over three years. ",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH7_broad_benztropine_miconazole_clobetasol_bexarotene_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "R7 (third, F02 miconazole and clobetasol)",
+   "statement": "Added class-level facts, no compound carded, no dose, no score, NOT WWOX EVIDENCE [IT59 2026-11-20 third packet change] (HE ADV-098 batch 7, database rows and label records): four agents with four different mechanisms, so no potency comparison across them. None of the four has a database row that measures an oligodendrocyte-differentiation or myelination effect: the potency rows are the primary-target rows and are not the myelination mechanism (the link is literature; for the agents whose literature the sheet lists it was read at title level only). MICONAZOLE: a human CYP51 IC50 of 200 nanomolar (lanosterol demethylase in a cell system, 2007) is among the rows, the largest row groups being other cytochromes and a transporter, and the sterol-pathway mechanism proposed for oligodendrocyte differentiation is not found in the rows; no rodent concentration found; the label is a topical over-the-counter antifungal, which says nothing about CNS exposure. CLOBETASOL PROPIONATE (read separately from the parent record): glucocorticoid receptor IC50 3.17 nanomolar in rat liver cytosol against Ki 0.66 nanomolar in a human panel (different species and sources); no rodent brain concentration of the plain compound found (central delivery is said to be a formulation problem by one paper read at title level only); label: topical, not recommended under 12 years. ",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH7_broad_benztropine_miconazole_clobetasol_bexarotene_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "R8 (third, D02 panel wording)",
+   "statement": "A GSK-3 substrate-phosphorylation panel in the cortex of the Wwox neuronal-deletion line at postnatal day 17 (tau phospho-sites over total tau, Ser9 over total GSK3beta, beta-catenin), designed with a decision per outcome and no data yet (SCI v2.2 and v3.1; a flat panel excludes ONE proposition only (that GSK-3 beta restraint on tau is released in bulk cortex of the neuronal-deletion line at postnatal day 17, at the tested tau sites, above the margin fixed before data) and does not close the candidate or the class, an elevated panel is the condition under which an inhibitor arm exists; the earlier wording 'closes the candidate' is corrected on SCI's v3.1 section 6.10 [IT59 2026-11-20 third packet change]); ",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/v3_one_page_sci_20261120/V3_1_DATED_CHANGES_BROAD_AND_BRIDGE_SCI_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "R9 (third, WO-27 line)",
+   "statement": "[IT 2026-11-20, correction of IT's own earlier line above: 'a flat panel closes GSK-3 for this model' is withdrawn; a flat panel excludes ONE proposition (that GSK-3 beta restraint on tau is released in bulk cortex of the neuronal-deletion line at postnatal day 17, at the tested tau sites, above the margin fixed before data; SCI v3.1 section 6.10) and neither closes the candidate nor the class, so the reading 'S-flat closes GSK-3, therefore the oligodendrocyte class wins' stays forbidden. Compound-level facts added from HE batch 10 for two agents WITHOUT a card, no ranking input, not WWOX evidence: tazemetostat (EZH2 inhibitor; enzyme IC50 ranges about 500-fold across documents, and the Ki of 2.5 nanomolar is one origin quoted in five documents; the abstract of a mouse study says P-glycoprotein limits its brain accumulation, and no brain concentration figure was found by these routes; label: epithelioid sarcoma from age 16, follicular lymphoma in adults, and a juvenile rat finding on the label) and TMP195 (class IIa HDAC inhibitor; two documents agree on the order of potency and differ by about 1.5- to 7-fold in value depending on the isoform; cell activity weaker than enzyme activity; no exposure found by these routes, no label). Record: advisor_pilot_20261113/brainstorm_20261116/adv097_consumption_it_20261119/CONSUMPTION_RECORD_ADV097_IT_20261119.md section 22.]",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/v3_one_page_sci_20261120/V3_1_DATED_CHANGES_BROAD_AND_BRIDGE_SCI_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH10_broad_tazemetostat_TMP195_10058F4_HE_20261120.md"
+    },
+    {
+     "label": "PMID 25868794 abstract via the PubMed tool"
+    }
+   ]
+  },
+  {
+   "id": "R10 (fourth, EB-ETX-01 within-document arm)",
+   "statement": "Added class-level facts from the T-type sheet and the held full texts, no dose, no score, NOT WWOX EVIDENCE, no ranking of the agents [IT59 2026-11-20 fourth packet change]: WITHIN ONE DOCUMENT (Epilepsia Open 2026, adult Gabrb3 D120N knock-in mice, atypical-absence video-EEG, a within-subjects crossover; the full text was read by SCI and the abstract by HE) ethosuximide and ulixacaltamide each reduced seizure incidence against its own vehicle; the authors' printed Results give a 64 percent reduction for both, from separate vehicle sessions with different vehicle means and unequal group sizes, so the two figures are NOT a direct contrast (the abstract gives no percentage, no ethosuximide-against-ulixacaltamide test is reported, and the paper measures no exposure). ",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH11_bridge_Ttype_apinocaltamide_ulixacaltamide_TTA-A2_HE_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ttype_compound_comparison_sci_20261120/TTYPE_COMPOUND_COMPARISON_BATCH11_SCI_20261120.md"
+    },
+    {
+     "label": "Harman 2026 PMC XML (Europe PMC) /home/desktop/legend-development/files/fulltext/adv052_he_20261118/PMID42274296_PMC13395050_europepmc.xml"
+    },
+    {
+     "label": "PMID 42274296 abstract via the PubMed tool"
+    }
+   ]
+  },
+  {
+   "id": "R11 (fourth, EB-ETX-01 kindling)",
+   "statement": "In adult rats kindled in the amygdala (Casillas-Espinosa 2015, open full text) ulixacaltamide at four doses, ethosuximide and carbamazepine were given to the same rats in a randomised crossover (abstract); ulixacaltamide was not effective at suppressing seizures in fully kindled rats (HE read the full text; ethosuximide's own result in that document is SCI's reading) while it delayed the progression of kindling, which the authors describe as no anti-seizure effect in that model. ",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH11_bridge_Ttype_apinocaltamide_ulixacaltamide_TTA-A2_HE_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ttype_compound_comparison_sci_20261120/TTYPE_COMPOUND_COMPARISON_BATCH11_SCI_20261120.md"
+    },
+    {
+     "label": "PMID 26274319 abstract via the PubMed tool"
+    },
+    {
+     "label": "Casillas-Espinosa 2015 PMC XML (Europe PMC) /home/desktop/legend-development/files/fulltext/adv052_he_20261118/PMID26274319_PMC4537250_europepmc.xml"
+    }
+   ]
+  },
+  {
+   "id": "R12 (fourth, EB-ETX-01 harm and TTA-A2)",
+   "statement": "HARM, class level and animal only: in the same document ulixacaltamide produced slight sedation and slow movement at the third of its four doses in fully kindled rats, not statistically different from vehicle, and mild adverse effects (a score of 1) in the first week of kindling progression, a different arm (HE read the full text); at the top dose the animals were sedate with reduced movement and a higher score (the paper's words; 'marked' is SCI's word, from the Results text and Figure 1D, which HE did not re-read); a 2018 abstract reports subtle impairment of a touchscreen learning task at the highest of three doses. A class hypothesis, not a finding about ethosuximide: the T-type blocker TTA-A2 acutely increased sleep, lowered core body temperature and prevented diet-induced weight gain in mice and reduced body weight and fat mass in obese rodents (a 2009 abstract), so a weight or temperature effect in a small pup is a reading to make before any comparison. ",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH11_bridge_Ttype_apinocaltamide_ulixacaltamide_TTA-A2_HE_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ttype_compound_comparison_sci_20261120/TTYPE_COMPOUND_COMPARISON_BATCH11_SCI_20261120.md"
+    },
+    {
+     "label": "PMID 30251162 abstract via the PubMed tool"
+    },
+    {
+     "label": "PMID 19451696 abstract via the PubMed tool"
+    },
+    {
+     "label": "Casillas-Espinosa 2015 PMC XML (Europe PMC) /home/desktop/legend-development/files/fulltext/adv052_he_20261118/PMID26274319_PMC4537250_europepmc.xml"
+    }
+   ]
+  },
+  {
+   "id": "R13 (fourth, EB-ETX-01 ordering)",
+   "statement": "ORDERING: the potency rows of ulixacaltamide (the same three numbers in three records) and of apinocaltamide (one document) are one origin each, and TTA-A2 has its binding and Cav3.2 values quoted again; no document tests two of the three selective agents; they sit at single digits to tens of nanomolar in cell assays, against sub-millimolar to millimolar or above for ethosuximide in different assays and laboratories (the one within-document pair is TTA-P2 against ethosuximide in one plate assay at one channel subtype, a difference of orders of magnitude on potency only); no brain concentration of any selective agent was found by these routes, and the adult mouse total brain value above is the only measured brain figure in the class found by these routes; potency, state dependence and exposure therefore do not order the agents.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH11_bridge_Ttype_apinocaltamide_ulixacaltamide_TTA-A2_HE_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ttype_compound_comparison_sci_20261120/TTYPE_COMPOUND_COMPARISON_BATCH11_SCI_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "R14 (fourth, H01 potency)",
+   "statement": "Added class-level facts from the T-type sheet (HE ADV-098 batch 11 and its dated corrections), no dose, no score, NOT WWOX EVIDENCE [IT59 2026-11-20 fourth packet change]: the database holds 24 potency rows for apinocaltamide, ALL from one document (the 2017 discovery paper), so every figure is that paper's, once: human recombinant Cav3.1, Cav3.2 and Cav3.3 with IC50 values of 6.4, 18 and 7.5 nanomolar in a plate assay with 3 minutes of pre-incubation; values for rat (three channels), mouse (two), dog (three) and monkey (one) within about 3-fold of the human ones except rat Cav3.3 (about 4-fold lower than human); binding to the inactivated state of human Cav3.3 by patch clamp in CHO cells with a Ki of 20 nanomolar (the IC50 values are from HEK293 cells); L-type Cav1.2 IC50 2.41 micromolar and hERG 5.5 micromolar; selectivity beyond those rows is a sentence of a 2025 abstract, not a row. ",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH11_bridge_Ttype_apinocaltamide_ulixacaltamide_TTA-A2_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "R15 (fourth, H01 human data)",
+   "statement": "Human abstract-level data (healthy adults, plasma, total concentration): in the single-dose study (65 men) a half-life of 36 to 43 hours, a 1.6-fold higher peak with food and saliva correlated with plasma; in the multiple-dose study (46 adults of both sexes) a half-life of 45 to 53 hours, steady state after 5 to 7 days and about three-fold accumulation; the most frequent events listed in the abstracts are dizziness, somnolence and headache, with weak induction of intestinal CYP3A4. ",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH11_bridge_Ttype_apinocaltamide_ulixacaltamide_TTA-A2_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "R16 (fourth, H01 not obtainable, comparator)",
+   "statement": "NOT OBTAINABLE by a free route: any animal brain, plasma or CSF concentration (the full texts of the 2017 discovery paper and of the 2025 rodent paper are not open); no juvenile or pup study was found by these routes; the registry holds three studies by name search, all in adults (two phase 1 and one phase 2 in photosensitive epilepsy with 5 participants), with results and any paediatric registration not found by these routes. The 2025 abstract describes efficacy as equivalent to or better than first-line monotherapy without naming the comparator: COMPARATOR UNREAD, so no statement is made about apinocaltamide against ethosuximide; the 2025 abstract is sponsor-affiliated (the earlier note of IT) and the potency is one origin.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH11_bridge_Ttype_apinocaltamide_ulixacaltamide_TTA-A2_HE_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ttype_compound_comparison_sci_20261120/TTYPE_COMPOUND_COMPARISON_BATCH11_SCI_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "R17 (fourth, C01 Obeid Fig 7 limit)",
+   "statement": "LIMIT on the electrographic readout of Obeid 2026 Figure 7, from SCI's measurement of the figure (PLAUSIBLE, not adopted) [IT59 2026-11-20 fourth packet change]: panel 7C shows two wild-type and three knockout points with p = 0.2000 on SCI's reading of the panel (the smallest exact two-sided value for 2 against 3), whereas the legend says n = 5 per group and the Results call the elevation significant: text and panel disagree and the disagreement is unresolved; panel 7E has 5 per group with per-animal values that do not overlap between knockout and wild type, pooled over a seven-day recording from about postnatal day 14, with the survivors per day not stated; whether panels 7B and 7C and panel 7E are the same animals is not stated.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/swd_bridge_readout_sci_20261120/SWD_READOUT_FIG7_OBEID2026_SCI_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "R18 (fourth, WO-24 and WO-20 lines)",
+   "statement": "[IT 2026-11-20, T-type compound-level sheet (HE batch 11 with its two dated corrections) and SCI's comparison consumed at class level, not WWOX evidence: the T-type rows of the three selective agents are one origin each and no two agents are tested in one assay, so potency, state dependence and exposure do not order them and ethosuximide stays the anchor; the one within-document ethosuximide arm of another assay (adult mouse atypical absence, a crossover) gives equal percentage reductions from separate vehicle sessions and is NOT a direct contrast; ulixacaltamide shows sedation at higher doses in adult rats and a kindling-progression delay without suppression in fully kindled rats; apinocaltamide's comparator in the 2025 abstract is unread; no brain concentration of any selective agent was found by these routes. None of this measures a T-type current, a burst or a Cav3 contribution in a Wwox-deficient system: this question stays OPEN. Record: advisor_pilot_20261113/brainstorm_20261116/adv097_consumption_it_20261119/CONSUMPTION_RECORD_ADV097_IT_20261119.md section 24.]\n\n[IT 2026-11-20, a within-document ethosuximide arm of another assay (adult mouse atypical absence, ethosuximide and ulixacaltamide in one crossover) is now held at class level: it shows ethosuximide effective in that model in adult mice and gives no contrast with a selective blocker; it is not a reproduction of the Wwox late-phase result and adds nothing about genotype specificity. Record: advisor_pilot_20261113/brainstorm_20261116/adv097_consumption_it_20261119/CONSUMPTION_RECORD_ADV097_IT_20261119.md section 24.]",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH11_bridge_Ttype_apinocaltamide_ulixacaltamide_TTA-A2_HE_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ttype_compound_comparison_sci_20261120/TTYPE_COMPOUND_COMPARISON_BATCH11_SCI_20261120.md"
+    }
+   ]
+  }
+ ]
+}

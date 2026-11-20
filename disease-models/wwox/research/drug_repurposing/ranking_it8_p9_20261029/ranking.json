@@ -1026,7 +1026,9 @@
    "family_ids": [
     "FAM:CAT:CHEMBL3934636"
    ],
-   "mentioned_in": [],
+   "mentioned_in": [
+    "card:EB-ETX-01"
+   ],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -1035,7 +1037,7 @@
    "needs": [
     "NEED-T-TYPE-CALCIUM"
    ],
-   "reconciliation": "NO_CARD_OR_RECORD_FOUND",
+   "reconciliation": "MENTIONED_ONLY",
    "shares_need_with_units": [
     "U17",
     "U25"
@@ -1045,7 +1047,7 @@
     "no_status_statement"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no card, qualification record or uncarded item names it (module READMEs and reports were not searched)",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; the compound is named in the text of an existing item (mentioned_in) but was not itself assessed",
    "wwox_observations_on_best_need": 1
   },
   {
@@ -10058,7 +10060,7 @@
       "feasibility": "not stated",
       "kind": "",
       "need": "",
-      "question": "A GSK-3 substrate-phosphorylation panel in the cortex of the Wwox neuronal-deletion line at postnatal day 17 (tau phospho-sites over total tau, Ser9 over total GSK3beta, beta-catenin), designed with a decision per outcome and no data yet (SCI v2.2 and v3.1; a flat panel closes the candidate for this model and age, an elevated panel opens an inhibitor arm);",
+      "question": "A GSK-3 substrate-phosphorylation panel in the cortex of the Wwox neuronal-deletion line at postnatal day 17 (tau phospho-sites over total tau, Ser9 over total GSK3beta, beta-catenin), designed with a decision per outcome and no data yet (SCI v2.2 and v3.1;",
       "would_change": ""
      },
      "next_priority": {
@@ -10114,7 +10116,7 @@
       "feasibility": "not stated",
       "kind": "",
       "need": "",
-      "question": "A GSK-3 substrate-phosphorylation panel in the cortex of the Wwox neuronal-deletion line at postnatal day 17 (tau phospho-sites over total tau, Ser9 over total GSK3beta, beta-catenin), designed with a decision per outcome and no data yet (SCI v2.2 and v3.1; a flat panel closes the candidate for this model and age, an elevated panel opens an inhibitor arm);",
+      "question": "A GSK-3 substrate-phosphorylation panel in the cortex of the Wwox neuronal-deletion line at postnatal day 17 (tau phospho-sites over total tau, Ser9 over total GSK3beta, beta-catenin), designed with a decision per outcome and no data yet (SCI v2.2 and v3.1;",
       "would_change": ""
      },
      "next_priority": {

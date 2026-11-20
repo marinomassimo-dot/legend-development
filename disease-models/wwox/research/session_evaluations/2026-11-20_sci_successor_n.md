@@ -1,0 +1,11 @@
+# Session self-evaluation: SCI successor window N, mandate ORCH-SCI-ADV065-DEEPEN-20261118 (2026-11-20)
+
+Part 1 (executable): `session_self_eval.py` VERDICT PASS (declared gaps are historical manifests, none from this window); `fulltext_receipts.py verify` OK (2201 receipts, tail anchored); `legend_lint.py` 0 BLOCK on each landing.
+
+Landed on main this window (each through `safe_push.py --expect-sha --serialize`, gate PASS): BATCH 11 T-type comparison and dated lines 6.12 to 6.16; S-KO slice-burst note; bridge slice panel one page and 6.17 (3a332524c); TS-01 trigger sweep and the RP-019 GSE158684 addendum (879259080); EN-09 note (c86128f02); ADV-104 glial and inflammatory axis (8bd535cbb); v3.1 6.18 (c103a0a47). Mandate: 60 of 61 steps DONE, step L BLOCKED on operator supply.
+
+## Judgement (process, graded apart from outcome)
+* **Weakest answer: choosing the next opportunity.** I proposed RP-018 (ISR sign) and then RP-019 (PV) as the "next opportunity" without first reading the consumption record of each row; both were already consumed (ADV-095 unit A; ADV-085 and IT's ADV-048 part 2). Caught by me on the second pass after reading the portfolio sources, and by ADV's rule afterwards. Cost: two peer messages and one sitting of re-reading; no wrong claim reached a record.
+* **Micro-upgrade (the answer, not a promise):** a memory entry and the rule in this note: before naming a reserve row, run `strategic_advisor.py portfolio`, read the row's `next_action`, and grep assignments and IT's consumption record by the row id and by its source folder. Used correctly afterwards for TS-01 and EN-09 (integrator check first, original searches found; the ADV-085 note found before a third duplicate).
+* **What held:** pre-registrations committed before values (RP-019 addendum, ADV-104); a control reproducing the saved hand-over before a variant (EN-09); two routes for every absence (TS-01); the premise "21 never probed" was corrected from the files and stated.
+* **Disclosure:** Liddiard 2024 concentrations were read from the PMC article page with a browser-style user-agent after the bucket returned a stub (against the HE43/HE44 lesson); it worked, nothing was circumvented, and it was not repeated. Later routes used a generic client name.

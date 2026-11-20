@@ -58,3 +58,6 @@ West 2018 is one laboratory, adult epileptic rat tissue and a non-physiological 
 
 ## 6. Consumers
 v3.1 gets a dated line 6.16 and a pointer row 'Slice burst, non-NMDAR agents' in the bridge table of the CURRENT READING block, both written with this note; the bridge lead and the pup design are unchanged.
+
+## Dated line (SCI successor window, after ADV's request): section 4 is replaced
+The six outcomes O1 to O6 of section 4 are **replaced by the decisions on one page**, `../bridge_slice_panel_sci_20261120/BRIDGE_SLICE_PANEL_ONE_PAGE_SCI_20261120.md`, which also fixes the graded ranges, the exposure bands (held only for ezogabine and ethosuximide) and the limits. Sections 1 to 3 and 5 of this note stay as the evidence behind it; the 10 and 50 micromolar THIP concentrations that section 1 listed as "not read" were read afterwards from the PMC article page of Liddiard 2024.

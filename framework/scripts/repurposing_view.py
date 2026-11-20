@@ -1279,10 +1279,11 @@ def overview_positions(links: dict) -> list[str]:
     return [g["id"] for g in GROUPS if g["id"] in have]
 
 
-# 2026-11-20 (IT, via ADV): the card page clipped a card's pharmacology paragraph at 360 characters; 14 of the 30 cards are longer (8 above 900, the longest 2,351), so the facts a packet change appends to a
-# paragraph (the sentence after the first full stop) were in the card JSON and the join but never on the page. A longer clip, in Python only, changes no script or style of the page (a 'more' marker in
-# assets/curated.js would have changed the bytes of every page, shareable ones included). 2,500 shows every current card in full; a longer one is still cut at a sentence. ONLY the full (local) view gets it: the shareable edition keeps 360, because lengthening what the public pages print is a publication choice, not a repair (it changed every shareable page, +13 KB).
-PHARM_CLIP = 2500
+# 2026-11-20 (IT, via ADV): the card page clipped a card's pharmacology paragraph at 360 characters; 14 of the 30 cards are longer (8 above 900, the longest 2,351), and for 12 of the 14 the cut-off text holds
+# caveat sentences (up to 10 per card), so a page showed a claim without its limits. ADV's decision (2026-11-20): the shareable pages must not show a card with its caveats cut off, so the full AND the shareable
+# edition use the same clip; the release gate and the shareable audit already govern what the public pages may contain. 8,000 shows every current card in full (the longest paragraph, F02, grew from 2,351 to 4,509 characters during 2026-11-20 as packet changes appended facts); a longer one is still cut at a sentence, and the test fails first. The test
+# `CheckAndClip` fails if any card's paragraph is cut on either source. (The clip is in Python only: a 'more' marker in assets/curated.js would have changed the bytes of every page.)
+PHARM_CLIP = 8000
 
 
 def clip(t, n=300):
@@ -2387,7 +2388,7 @@ def build_curated(dr: Path, ctx: dict) -> dict:
             "abstention": bool(absn), "needs": lneeds, "links": lk, "positions": overview_positions(lk), "assessment": card.get("assessment"), "summary": card.get("directional_summary"),
             "why": clip(f.get("indication_and_transfer") or f.get("identity"), 420), "why_full": f.get("indication_and_transfer") or f.get("identity"),
             "identity": clip(f.get("identity"), 360), "mechanism": clip(f.get("mechanism"), 360), "novelty": clip(f.get("novelty_for_woree"), 360),
-            "expected": clip(f.get("expected_contribution"), 200), "access_text": clip(f.get("time_to_access"), 240), "pharm": clip(f.get("pharmacology"), 360 if shareable else PHARM_CLIP),
+            "expected": clip(f.get("expected_contribution"), 200), "access_text": clip(f.get("time_to_access"), 240), "pharm": clip(f.get("pharmacology"), PHARM_CLIP),
             "against": against, "against_note": against_note, "for": for_, "transfer_limits": efa.get("transfer_limits"), "not_known": nk,
             "missing": absd.get("missing_datum") if absd.get("missing_datum") else (nk[0] if nk else None), "reopen": clip(absd.get("search_record"), 260) if absd.get("search_record") else None,
             "next": clip(nxt, 360), "next_full": nxt, "limits": limits_for_page(card), "asserts": asserts, "n_disease_assertions": len(inp.get("disease_assertions") or ([inp["disease_assertion"]] if inp.get("disease_assertion") else [])),

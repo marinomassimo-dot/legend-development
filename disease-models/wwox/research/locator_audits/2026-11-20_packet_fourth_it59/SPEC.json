@@ -1,0 +1,112 @@
+{
+ "repo": ".",
+ "title": "Blind audit packet: the class-level statements added by the FOURTH packet change (EB-ETX-01, H01, C01), IT59, 2026-11-20",
+ "preamble": "Each statement is a class-level pharmacology, exposure or harm fact written from a public-database sheet (HE ADV-098 batch 11 with its two dated corrections), from SCI's comparison note, from held full texts, or from PubMed abstracts. Judge each ONE AT A TIME. For each: (1) supported by its anchor as worded? (2) does the anchor say MORE or LESS (species, age, system, route, n and unit, quantifier, 'found by these routes' versus 'absent', who read what: the statement attributes some readings to HE and some to SCI; check the attribution), and are hedges kept ('abstract', 'reading', 'unread')? (3) verdict SUPPORTED / SUPPORTED_WITH_LIMIT / OVERSHOOT / UNDERSHOOT / UNSUPPORTED / UNVERIFIABLE; quote with locator; every quoted string a substring of the anchor you read. Where the anchor is a repository sheet or note, judge the wording against it and say so; where it names a PubMed abstract open it with the PubMed tool; where it names a PMC XML copy outside git, open it by its absolute path (read-only; do not edit). Numbers must be judged against the source's own: the doses in the sources are animal research values and are deliberately not carried in the statements. Repository paths are relative to /home/desktop/legend-development/.claude/worktrees/it_fourth_20261120/ .",
+ "items": [
+  {
+   "id": "E1 (EB-ETX-01 within-document arm)",
+   "statement": "Added class-level facts from the T-type sheet and the held full texts, no dose, no score, NOT WWOX EVIDENCE, no ranking of the agents [IT59 2026-11-20 fourth packet change]: WITHIN ONE DOCUMENT (Epilepsia Open 2026, adult Gabrb3 D120N knock-in mice, atypical-absence video-EEG, a within-subjects crossover; the full text was read by SCI and the abstract by HE) ethosuximide and ulixacaltamide each reduced seizure incidence against its own vehicle; the authors' printed Results give a 64 percent reduction for both, with different vehicle means, so the two figures are NOT a direct contrast (the abstract gives no percentage, no ethosuximide-against-ulixacaltamide test was run, the groups differed in size and the doses were not matched by exposure). ",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH11_bridge_Ttype_apinocaltamide_ulixacaltamide_TTA-A2_HE_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ttype_compound_comparison_sci_20261120/TTYPE_COMPOUND_COMPARISON_BATCH11_SCI_20261120.md"
+    },
+    {
+     "label": "Harman 2026 PMC XML (Europe PMC) /home/desktop/legend-development/files/fulltext/adv052_he_20261118/PMID42274296_PMC13395050_europepmc.xml"
+    },
+    {
+     "label": "PMID 42274296 abstract via the PubMed tool"
+    }
+   ]
+  },
+  {
+   "id": "E2 (EB-ETX-01 kindling)",
+   "statement": "In adult rats kindled in the amygdala (Casillas-Espinosa 2015, open full text) ulixacaltamide at four doses, ethosuximide and carbamazepine were given to the same rats in a randomised crossover (abstract); ulixacaltamide was not effective in fully kindled rats (HE read the full text; ethosuximide's own result in that document is SCI's reading); the absence-type and provoked-seizure fit of the T-type class does not extend to focal kindled seizures. ",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH11_bridge_Ttype_apinocaltamide_ulixacaltamide_TTA-A2_HE_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ttype_compound_comparison_sci_20261120/TTYPE_COMPOUND_COMPARISON_BATCH11_SCI_20261120.md"
+    },
+    {
+     "label": "PMID 26274319 abstract via the PubMed tool (Casillas-Espinosa 2015)"
+    },
+    {
+     "label": "Casillas-Espinosa 2015 PMC XML (Europe PMC) /home/desktop/legend-development/files/fulltext/adv052_he_20261118/PMID26274319_PMC4537250_europepmc.xml"
+    }
+   ]
+  },
+  {
+   "id": "E3 (EB-ETX-01 harm, TTA-A2 hypothesis)",
+   "statement": "HARM, class level and animal only: ulixacaltamide produced slight sedation and slow movement at its middle dose, not different from vehicle, with 'mild adverse effects (score 1)' (HE read the full text); marked sedation at the top dose is SCI's reading of the dose-by-dose table, which HE did not re-read; a 2018 abstract reports subtle impairment of a touchscreen learning task at the highest of three doses. A class hypothesis, not a finding about ethosuximide: the T-type blocker TTA-A2 acutely increased sleep, lowered core body temperature and reduced weight gain and fat mass in rodents (a 2009 abstract), so a weight or temperature effect in a small pup is a reading to make before any comparison. ",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH11_bridge_Ttype_apinocaltamide_ulixacaltamide_TTA-A2_HE_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ttype_compound_comparison_sci_20261120/TTYPE_COMPOUND_COMPARISON_BATCH11_SCI_20261120.md"
+    },
+    {
+     "label": "PMID 30251162 abstract via the PubMed tool"
+    },
+    {
+     "label": "PMID 19451696 abstract via the PubMed tool"
+    },
+    {
+     "label": "Casillas-Espinosa 2015 PMC XML (Europe PMC) /home/desktop/legend-development/files/fulltext/adv052_he_20261118/PMID26274319_PMC4537250_europepmc.xml"
+    }
+   ]
+  },
+  {
+   "id": "E4 (EB-ETX-01 ordering)",
+   "statement": "ORDERING: the potency rows of the selective T-type agents are one origin each (ulixacaltamide: the same three numbers in three records; apinocaltamide: one document; no two agents tested in one assay), in tens of nanomolar in cell assays against millimolar or above for ethosuximide in different assays and laboratories; no brain concentration of any selective agent is held, and the adult mouse total brain value above remains the only measured brain figure in the class; potency, state dependence and exposure therefore do not order the agents.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH11_bridge_Ttype_apinocaltamide_ulixacaltamide_TTA-A2_HE_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ttype_compound_comparison_sci_20261120/TTYPE_COMPOUND_COMPARISON_BATCH11_SCI_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "H1 (H01 potency, one origin)",
+   "statement": "Added class-level facts from the T-type sheet (HE ADV-098 batch 11 and its dated corrections), no dose, no score, NOT WWOX EVIDENCE [IT59 2026-11-20 fourth packet change]: the database holds 24 potency rows for apinocaltamide, ALL from one document (the 2017 discovery paper), so every figure is that paper's, once: human recombinant Cav3.1, Cav3.2 and Cav3.3 with IC50 values of 6.4, 18 and 7.5 nanomolar in a plate assay with 3 minutes of pre-incubation; the same channels in rat, mouse, dog and monkey within about 2.5-fold of the human values except rat Cav3.3; binding to the inactivated state of human Cav3.3 with a Ki of 20 nanomolar; L-type Cav1.2 IC50 2.41 micromolar and hERG 5.5 micromolar; selectivity beyond those rows is a sentence of a 2025 abstract, not a row. ",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH11_bridge_Ttype_apinocaltamide_ulixacaltamide_TTA-A2_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "H2 (H01 human data)",
+   "statement": "Human abstract-level data (healthy adults, plasma, total concentration): a half-life of 36 to 53 hours, steady state after 5 to 7 days of dosing, about three-fold accumulation, a 1.6-fold higher peak with food, saliva correlated with plasma; most frequent events dizziness, somnolence and headache, weak induction of intestinal CYP3A4. ",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH11_bridge_Ttype_apinocaltamide_ulixacaltamide_TTA-A2_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "H3 (H01 not obtainable, registry, comparator)",
+   "statement": "NOT OBTAINABLE by a free route: any animal brain, plasma or CSF concentration (both the 2017 and 2025 rodent full texts are not open), and any juvenile or pup record; the registry holds three studies by name search, all in adults (two phase 1 and one phase 2 in photosensitive epilepsy with 5 participants), results not read. The 2025 abstract says efficacy was 'equivalent to or better than first-line monotherapy' without naming the comparator: COMPARATOR UNREAD, so no statement is made about apinocaltamide against ethosuximide; the authors are sponsor-affiliated and the potency is one origin.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH11_bridge_Ttype_apinocaltamide_ulixacaltamide_TTA-A2_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "C1 (C01 Obeid Fig 7 limit)",
+   "statement": "LIMIT on the electrographic readout of Obeid 2026 Figure 7, from SCI's measurement of the figure (PLAUSIBLE, not adopted) [IT59 2026-11-20 fourth packet change]: panel 7C shows two wild-type and three knockout points with a p value printed as 0.2000 (the smallest exact two-sided value for 2 against 3), whereas the legend says n = 5 per group and the Results call the elevation significant: text and panel disagree and the disagreement is unresolved; panel 7E has 5 per group with per-animal values that do not overlap between knockout and wild type, pooled over a seven-day recording from about postnatal day 14, with the survivors per day not stated; whether panels 7B and 7C and panel 7E are the same animals is not resolved; limited cohort, a single recording channel.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/swd_bridge_readout_sci_20261120/SWD_READOUT_FIG7_OBEID2026_SCI_20261120.md"
+    }
+   ]
+  }
+ ]
+}

@@ -169,13 +169,47 @@ class CheckAndClip(unittest.TestCase):
         self.assertEqual(rv.check_langs_for("full", "fr"), ["fr"])
         self.assertEqual(rv.check_langs_for("full", "all"), list(rv.LANGS))
 
-    def test_the_full_view_prints_a_cards_pharmacology_paragraph_in_full_and_the_shareable_one_keeps_its_clip(self):
-        long_text = ("A first sentence of the card. " * 12 + "A caveat appended after the clip: nothing here is a statement about exposure in the disease. ").strip()
-        self.assertGreater(len(long_text), 360)
-        self.assertEqual(rv.clip(long_text, rv.PHARM_CLIP), long_text)                       # the full view
-        self.assertLess(len(rv.clip(long_text, 360)), len(long_text))                        # the shareable edition
+    def test_no_card_paragraph_is_cut_on_either_source(self):
+        """ADV, 2026-11-20: a page must not show a card with its caveats cut off. The full and the shareable pages carry the same, whole pharmacology paragraph of every card."""
+        import glob
+        full_text = {}
+        for f in glob.glob(str(DR / "cards" / "*.card.json")):
+            card = json.loads(Path(f).read_text(encoding="utf-8"))
+
+            def find(o):
+                if isinstance(o, dict):
+                    if isinstance(o.get("pharmacology"), str):
+                        return o["pharmacology"]
+                    for v in o.values():
+                        r = find(v)
+                        if r:
+                            return r
+                elif isinstance(o, list):
+                    for v in o:
+                        r = find(v)
+                        if r:
+                            return r
+                return None
+            text = find(card)
+            if text:
+                full_text[Path(f).name.split(".card.json")[0]] = " ".join(text.split())
+        self.assertGreaterEqual(len(full_text), 25)
+        self.assertLessEqual(max(len(t) for t in full_text.values()), rv.PHARM_CLIP, "a card paragraph longer than the clip would be cut again")
+        for src in ("full", "shareable"):
+            payload = rv.build_payload(DR, src)
+            shown = {c["id"]: c["pharm"] for c in payload["cur"]["cands"]}
+            for cid, text in full_text.items():
+                if cid in shown:
+                    # the shareable edition replaces repository file names by a notice (a redaction, not a cut): the check is that the paragraph is whole, i.e. its LAST sentence is on the page
+                    self.assertTrue(shown[cid].rstrip(" …").endswith(text[-60:]), f"{src}: card {cid} is cut ({len(shown[cid])} of {len(text)} characters)")
+                    self.assertGreaterEqual(len(shown[cid]), int(len(text) * 0.9), f"{src}: card {cid} is cut")
+            self.assertTrue(any(len(t) > 360 for t in full_text.values()))                   # the defect was real: some paragraphs are longer than the old clip
+
+    def test_the_clip_helper_cuts_at_a_sentence_and_the_default_clip_is_long_enough(self):
+        long_text = "A first sentence of the card. " * 12 + "A caveat appended after the clip: nothing here is a statement about exposure in the disease."
         self.assertNotIn("caveat appended", rv.clip(long_text, 360))
-        self.assertGreaterEqual(rv.PHARM_CLIP, 2351)                                         # the longest card paragraph on 2026-11-20
+        self.assertEqual(rv.clip(long_text, rv.PHARM_CLIP), long_text.strip())
+        self.assertGreaterEqual(rv.PHARM_CLIP, 4509)
 
 
 class States(unittest.TestCase):
