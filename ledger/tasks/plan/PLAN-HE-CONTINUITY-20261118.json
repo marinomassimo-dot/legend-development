@@ -437,10 +437,12 @@
     },
     {
      "step": "Read the job steps of the latest completed GitHub run and one older red run to settle whether the three Chromium reds are host-only (ADV request) and say it in one line to ADV and in the CI README row",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV message 2026-11-20 to HE successor d4b1a0 after the CI table: job-steps check of run 1649 and one older red run",
-     "accepted_at": "2026-11-20T22:18:54Z"
+     "accepted_at": "2026-11-20T22:18:54Z",
+     "evidence": "run #1649 and #1638 job steps read from the public API: Browser startup and keyboard regression success, Regression tests failure, gate success; annotations name the same three repository-side tests; addendum ADDENDUM_HE_20261120_B1_CI_equivalent_table.md",
+     "updated_at": "2026-11-20T22:19:37Z"
     }
    ]
   }
