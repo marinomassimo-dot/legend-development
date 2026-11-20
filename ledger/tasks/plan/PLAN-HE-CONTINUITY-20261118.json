@@ -315,6 +315,14 @@
      "authorised_by": "ADV-107 and the operator integration 'Scientific Rotation, Daily Portfolio Reconciliation and DREAM Reinforcement' 2026-11-20",
      "evidence": "strategic_advisor.py strand|rotation|reconcile|dream + tick lines; canonical section in cross_session_transport.md section 12; 222 strategic_advisor tests OK; real programme: tick shows ROTATION IN PROGRESS ADV-106, reconciliation attested today, rows RP-021 RP-010 corrected",
      "updated_at": "2026-11-20T12:54:45Z"
+    },
+    {
+     "step": "ADV-108: CI 'Regression tests' red on main since #1513: reproduce the CI step on the exact SHA, list every failing test with owner, cause class and first red SHA, fix what is HE's, route the rest, deliver the table and what a green main needs",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV-108",
+     "accepted_at": "2026-11-20T13:22:43Z",
+     "authorised_by": "ADV-108 assignment 2026-11-20 13:10Z"
     }
    ]
   }
@@ -557,6 +565,13 @@
    "step_sha256": "187308337d33",
    "reopened_block": false,
    "authorised_by": "ADV-107 and the operator integration 'Scientific Rotation, Daily Portfolio Reconciliation and DREAM Reinforcement' 2026-11-20"
+  },
+  {
+   "at": "2026-11-20T13:22:43Z",
+   "source": "ADV-108",
+   "step_sha256": "751c870d9817",
+   "reopened_block": false,
+   "authorised_by": "ADV-108 assignment 2026-11-20 13:10Z"
   }
  ],
  "VERIFICATION_EVIDENCE": [
