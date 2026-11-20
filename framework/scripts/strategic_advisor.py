@@ -2628,7 +2628,7 @@ def record_dream(campaign: Path, ids: list[str], connections: list[tuple[str, st
     assignment_ids = {e.get("id") for e in _events(campaign) if e.get("state") == "DRAFTED"}
     for consumer, _what in connections:
         if consumer not in portfolio_ids and consumer not in assignment_ids and not (ROOT / consumer).exists():
-            warn.append(f"consumer {consumer!r} is not a portfolio row, an assignment or an existing path: a connection nobody reads is not recovered")
+            warn.append(f"consumer {consumer!r} is not an accepted form (a portfolio row id such as RP-005, an assignment id such as ADV-109, or an existing repository path): a connection nobody reads is not recovered")
     if connections and not counter:
         warn.append("no --counter: say whether contrary results, a context mismatch, a reusable control or an avoidable duplicate were considered")
     row = {"state": "DREAM", "ids": ids, "connections": [{"to": c, "what": w} for c, w in connections], "none_reason": none_reason, "counter": counter}
