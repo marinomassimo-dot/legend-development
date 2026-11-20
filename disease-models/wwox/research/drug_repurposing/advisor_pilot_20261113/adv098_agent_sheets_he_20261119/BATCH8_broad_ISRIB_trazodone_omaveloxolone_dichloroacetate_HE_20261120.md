@@ -1,0 +1,33 @@
+# ADV-098 broad batch 8: ISRIB, trazodone, omaveloxolone, dichloroacetate (proteostasis, ISR, NRF2 and metabolic routes) (HE, 2026-11-20)
+
+Written for: SCI (unit C and the proteostasis screen), ADV, IT. Same rules, routes and recipe as batches 1 to 7: public sources only, no dose, hypothesis level, not medical advice, "not found by these routes" is not absence. Raw ChEMBL answers outside git with digests in `SHA256SUMS_raw_activities.txt`. Short sheets: primary rows, COMPARABLE?, one or two exposure searches, label. SCI's premise screen found no transcript premise for ISR, NRF2 or MYC; these sheets give only the measured-compound side.
+
+## COMPARABLE?
+- **No pair is comparable:** four different mechanisms (an integrated-stress-response inhibitor, a serotonin receptor and transporter ligand, an NRF2 activator, a pyruvate dehydrogenase kinase inhibitor) and, for three of them, the ChEMBL rows do not measure the mechanism that makes them a candidate (below).
+- **Dichloroacetate across PDK isozymes: comparable within one document.** One 2017 document (CHEMBL4007440, ELISA with full-length His6-PDHA1 as substrate, 30 minutes) gives IC50 PDK1 1.03 mM, PDK2 0.50 mM, PDK3 5.56 mM: an 11-fold range across isozymes in one assay. Another 1999 row gives IC50 above 2 mM for PDK in vitro and an EC50 of 100 microM in normal human dermal fibroblasts: a different readout; no order between the two documents is read.
+- **Trazodone across sources:** 5-HT2A Ki 5.6 nM and IC50 20 nM (DrugMatrix, [3H]ketanserin) against IC50 243 nM in an HTRF cAMP assay (2020): a 12-fold spread by assay type. 5-HT1A Ki 118 nM (human frontal cortex, 8-OH-DPAT displacement, 2022) against EC50 785 nM (FLIPR agonist assay, 2020): binding and function are different quantities.
+
+## ISRIB (identity by structure: PubChem CID 1011240, InChIKey HJGMCDHQPXTGAV-UHFFFAOYSA-N, ChEMBL CHEMBL4303573; not found by name in compound_identity.py)
+- **Potency (1 row):** IC50 2.7 nM, ATF4 reporter in human H4 cells after 24 hours (2024, document CHEMBL5543116). That is a cell reporter of the ISR output, not a binding or an eIF2B measurement. **Not found by these routes:** an eIF2B activity, any binding or selectivity row, any value in neurons or in a second laboratory.
+- **Exposure (PubMed):** "ISRIB brain pharmacokinetics mice" 1 record (a 2017 ER-stress and Alzheimer-like neuropathology paper, title read, not a pharmacokinetic study); "ISRIB brain penetration plasma concentration" 0 records (a query shape). **Not found by these routes:** a measured brain or plasma concentration of ISRIB.
+- **Label:** none expected (a research compound); not searched.
+
+## Trazodone (CHEMBL621, NAME_EXACT; the hydrochloride CHEMBL1200798 is separate)
+- **Potency (284 rows):** 5-HT2A, 5-HT1A, D2, 5-HT2B among the main groups; histamine H1 Ki 42 nM and IC50 361 nM, SERT Ki 102 nM and IC50 192 nM (DrugMatrix). `NOT_ASSESSED` for selectivity. **The ISR link is not in the rows:** no measured PERK, eIF2alpha-P or ISR assay.
+- **Exposure and the ISR literature (titles only):** "Repurposed drugs targeting eIF2alpha-P-mediated translational repression prevent neurodegeneration in mice" (PMID 28430857, 2017) and the opposite title "Trazodone, dibenzoylmethane and tauroursodeoxycholic acid do not prevent motor dysfunction and neurodegeneration in..." (PMID 39804912, 2025): two titles that disagree, not read. A receptor-occupancy paper (PMID 29332554, 2018, title read) estimates occupancies at different doses. **Not found by these routes (not read):** a brain concentration in mice.
+- **Label (openFDA SPL, 3 labels, newest 2026-07-14):** major depressive disorder in adults; "safety and effectiveness in the pediatric population have not been established" with a boxed suicidality warning for antidepressants in children (text read in part). No dose given here.
+
+## Omaveloxolone (CHEMBL4303525, NAME_EXACT)
+- **Potency (2 rows):** anti-necroptotic EC50 1.41 microM (human HT-29) and 5.25 microM (mouse L929), one 2021 document. **No KEAP1 or NRF2 row at all: not found by these routes**; the NRF2 mechanism is the literature's, not measured here.
+- **Exposure:** "omaveloxolone brain concentration mice" 0 and "omaveloxolone pharmacokinetics brain penetration" 0 records: not found by these routes (two query shapes).
+- **Label (openFDA SPL, 1 label, effective 2026-04-06):** Friedreich's ataxia in adults and adolescents aged 16 years and older; the pediatric section states effectiveness established from age 16. Nothing for younger children. No dose given here.
+
+## Dichloroacetate (dichloroacetic acid CHEMBL13960, SYNONYM_EXACT; the sodium salt CHEMBL306823 is separate)
+- **Potency (43 rows):** PDK isozymes as above (millimolar); 5 cytotoxicity rows in leukemia cell lines at 8 to 14 mM (MTT, 48 hours, 2016); five "non-protein target" rows. The compound acts at millimolar concentrations in these assays.
+- **Exposure (PubMed):** the rat brain pyruvate dehydrogenase kinase distribution paper (PMID 6315889, 1984, title read) and a multi-dose study of GSTZ1 expression and activity in liver and extrahepatic tissues of rats (PMID 32873593, 2020, title read); "dichloroacetate brain concentration mice neonatal" 0 records. **Not found by these routes (not read):** a brain concentration of dichloroacetate in mice or a juvenile exposure.
+- **Label (openFDA):** NO_MATCH_FOUND for "dichloroacetic acid": not found by this route (an investigational compound by name; this is not a statement about development status).
+
+## What changes for SCI's unit C and the proteostasis screen
+1. For the three mechanism-led candidates (ISRIB, omaveloxolone, trazodone-as-ISR) the ChEMBL rows do **not** measure the mechanism that makes them candidates: ISRIB has one cell-reporter row, omaveloxolone none on KEAP1 or NRF2, trazodone none on the ISR. Their place in the broad objective rests on literature, and for trazodone two titles disagree.
+2. Dichloroacetate acts at millimolar concentrations in the rows read: any exposure-to-effect step would need a measured brain concentration near that range, and none was found.
+3. Pediatric label limits are tight: omaveloxolone from 16 years, trazodone not established with a boxed warning, dichloroacetate and ISRIB no label.
