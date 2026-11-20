@@ -438,11 +438,20 @@
     },
     {
      "step": "ADV GSK-3 shared-premise follow-up: (1) dated v2.2 revision of the v2 broad experiment adding the GSK-3 premise panel (tau pS396/pS404 with total, GSK-3 Tyr216 and Ser9 with total, beta-catenin) to the same tissue with prediction, rejecting observation, decision per outcome, interpretable null and exposure control; (2) one short note comparing the GSK-3 inhibition candidate and the oligodendrocyte class on the same comparison unit (action, context, benefit sought, endpoint), naming what each outcome of the shared experiment does to each, with the harm cell of GSK-3 inhibition (embryonic cortical progenitor proliferation in one study; lithium label limits); no ranking; carry Q230P as effect on binding untested",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message 2026-11-20 (increment accepted at 9d14b4441ae6)",
      "accepted_at": "2026-11-20T01:55:54Z",
-     "updated_at": "2026-11-20T01:55:54Z"
+     "updated_at": "2026-11-20T02:29:59Z",
+     "evidence": "Delivered on main 67abc7d7e (v2.2 section A.6, one-unit note, blind verifier report as delivered); ADV accepted by message 2026-11-20; corrections by IT applied in the next landing"
+    },
+    {
+     "step": "ADV v3 consolidation: ONE page per objective (broad = shared-tissue head-to-head with the GSK-3 panel and an explicit tissue allocation; bridge = ethosuximide dose-exposure series with genotype-by-treatment test and gaboxadol rule), v1, v2, v2.1 and v2.2 kept as history, each page stating known, assumed and unknown; after the two quick closures (single-dose lithium brain papers; PMID 42397075 data statement, done); IT reviews v3 as the 'would we do anything different' check before it is called done",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "source": "ADV message to SCI 2026-11-20 after accepting 67abc7d7e",
+     "accepted_at": "2026-11-20T02:30:00Z",
+     "updated_at": "2026-11-20T02:30:08Z"
     }
    ]
   }
@@ -781,6 +790,13 @@
    "at": "2026-11-20T01:55:54Z",
    "source": "ADV message 2026-11-20 (increment accepted at 9d14b4441ae6)",
    "step_sha256": "3b08bbb8e04b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T02:30:00Z",
+   "source": "ADV message to SCI 2026-11-20 after accepting 67abc7d7e",
+   "step_sha256": "d07169de5065",
    "reopened_block": false,
    "authorised_by": null
   }
