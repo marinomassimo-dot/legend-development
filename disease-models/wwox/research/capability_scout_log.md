@@ -3075,3 +3075,15 @@ verify routing and schema behaviour; universal future model obedience is not dem
 **Beyond the lexical bridge.** Nothing more is justified now: one briefing is one measurement, the false hits fell from the 14 Nov kind (homonyms) to the kind a one-word bridge still allows, and the only remedy that would remove them (two shared words) costs a real hit. Re-measure on the next briefing before touching the bridge again.
 
 **Outcome.** TRIAGED (0 leads, 0 adoptions; one dated line forwarded to ADV in the meeting reply).
+
+## 2026-11-20 — IT successor M, session close (ADV-106 to ADV-118 stretch)
+
+**Session learning delta.** Two prospective generator tests (RP-005) ended inconclusive (arms differed on 4 of 28 pooled slots; no advantage of the repository materials over the abstract shown); a reserve was rebuilt from today's results and consumed as dated open-question lines; the eIF2B epsilon reagent search turned "no phosphomimetic found" into "one exists (S540E, preprint, abstract level)".
+
+**Capability gap (new).** To state that a reagent, mutant or compound is absent from the literature we lack a spelling-expansion step: a mutation or residue written in one notation (S540D) missed the paper that used another (S540E; also Ser540Glu, p.Ser540Glu, mouse 536, rat 535). The 2026-11-12 "none found" and my own first string sets both missed it; the correction came from a broader concept query (serine numbers with mutant, mutation or phosphomimetic). Evidence: advisor_pilot_20261113/brainstorm_20261116/adv114_eif2b_reagent_it_20261120/EIF2B_REAGENT_SEARCH_ADV114_IT_20261120.md section 1.
+
+**Candidate (not built).** A small helper that expands a residue or substitution into its notations and numbering variants and prints the query strings to put in the record; or a line in the search-record rule: an absence names its strings and at least one concept-level query. Cost: hours. Not implemented here because the current task was the search, not the tool; the lesson is in memory (it-successor-m-20261120-pitfalls) and in the ADV DREAM line for RP-018. Marked for the next harness task if a second case appears.
+
+**Environment.** Host-specific tool verdicts not used this session (no SKIP or REJECT on tool absence).
+
+**Outcome.** Gap recorded (new); change made: none; no cost, API or privacy risk (plain clients, generic client name, no contact parameter). Strategic Advisor: assess this lead against the standing roadmap and current work; apply cross-session transport section 12 (Route useful signals) and contact the relevant Harness or Science owner when worthwhile.

@@ -651,6 +651,15 @@
      "accepted_at": "2026-11-20T16:09:22Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/neurotox_ledger_adv118_sci_20261120/ADV118_NEUROTOXICITY_LEDGER_SCI_20261120.md (pre-registration PREREGISTRATION_ADV118_SCI_20261120.md, commit 16a9593e8)",
      "updated_at": "2026-11-20T16:16:37Z"
+    },
+    {
+     "step": "ADV-119: blind source verification of at most twelve decision-driving claims that rest on abstract or passage-level numbers (Brown 2016 P7 apoptosis and schedule; vigabatrin infant MRI 35.5 percent of 80 against 13.5 percent; lithium acute toxicity P5 and P15; XEN496 registry rows; ketamine P7 and P5 competitive antagonist; ganaxolone preterm guinea-pig; gaboxadol Angelman Phase 3; West 2018 EC50 rows; Liddiard 2024 THIP; 6.6 uM juvenile brain total; Harman two -64 percent): check-the-integrator first (counted grep, then list); selection test stated; one fresh legend-delegate verifier (sonnet, effort high stated and read back, reading and PubMed full-text only) on (claim, source) triples only; no full text by plain client = abstract only, not verifiable at this depth, never supported; SCI adjudicates every overturned or narrowed claim against the source, corrects by dated lines on the owner file, names IT and HE lines carrying a changed claim, reports counts (supported, with limit, overturned, not verifiable); tell ADV when it starts",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-119 (ADV message 2026-11-20 to SCI 4a4f40; assignments/ADV-119.md landing)",
+     "accepted_at": "2026-11-20T16:34:27Z",
+     "evidence": "adv119_claim_verification_sci_20261120/RESULT_ADV119_SCI_20261120.md: 12 claims, blind verifier sonnet effort high read back; supported 2, with limit 4, overturned 0, not verifiable 6 (script); dated lines on ledger, adv095 bridge case, ADV-117 comparison, v3.1 6.22",
+     "updated_at": "2026-11-20T16:44:59Z"
     }
    ]
   }
@@ -1150,6 +1159,13 @@
    "at": "2026-11-20T16:09:22Z",
    "source": "ADV-118 (ADV message 2026-11-20 to SCI f6eb70; assignments/ADV-118.md landing)",
    "step_sha256": "38c6ab41408d",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T16:34:27Z",
+   "source": "ADV-119 (ADV message 2026-11-20 to SCI 4a4f40; assignments/ADV-119.md landing)",
+   "step_sha256": "a1bf958d34ed",
    "reopened_block": false,
    "authorised_by": null
   }
