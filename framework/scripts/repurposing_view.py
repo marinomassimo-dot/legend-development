@@ -828,7 +828,7 @@ UI_IT = {
     "pos_why_h": "Perché ha questa lettera, bisogno per bisogno",
     "pos_for": "per",
     "tech_sum": "Dettagli tecnici e tabelle complete",
-    "tc_identity": "Identità e meccanismo (come scritti nella scheda)", "tc_mech": "Meccanismo", "tc_novelty": "Novità e strade già note", "tc_pharm": "Farmacologia", "tc_access": "Accesso",
+    "tc_identity": "Identità e meccanismo (come scritti nella scheda)", "tc_mech": "Meccanismo", "tc_novelty": "Novità e strade già note", "tc_pharm": "Farmacologia", "tc_cut": "… accorciato in questa edizione: il paragrafo intero, con i suoi limiti, è nell'edizione completa.", "tc_access": "Accesso",
     "tc_links_h": "Tutti i bisogni collegati e perché la lettera è questa", "tc_need": "Bisogno", "tc_pos": "Lettera", "tc_crit": "Criteri",
     "tc_asserts": "Affermazioni sull'intervento nella scheda", "tc_scope": "Tipo di evidenza", "tc_stmt": "Affermazione", "tc_sys": "Sistema", "tc_depth": "Profondità di lettura", "tc_src": "Fonti",
     "tc_obs": "Osservazioni nei registri dei bisogni collegati", "tc_against": "Tutta l'evidenza contraria della scheda", "tc_for": "Evidenza a favore, come scritte nella scheda", "tc_notknown": "Non noto",
@@ -1297,6 +1297,19 @@ def clip(t, n=300):
     if i > n * 0.5:
         return cut[: i + 1]
     return cut[: cut.rfind(" ")] + " …"
+
+
+def pharm_view(text, shareable: bool) -> dict:
+    """The card's pharmacology paragraph as the page shows it. The full edition shows it whole (PHARM_CLIP). The shareable edition keeps the interim clip, and whenever the paragraph is cut it says so:
+    `pharm_cut` makes the page print a translated notice after the text (2026-11-20, operator INTEGRATION: an unmarked cut left a favourable sentence without the qualifier that narrows it; 16 of the 19
+    cut paragraphs ended at a sentence boundary with no sign that anything was hidden). The key exists only for a cut paragraph, so a paragraph shown whole is unchanged."""
+    whole = " ".join(str(text or "").split())
+    if not shareable:
+        return {"pharm": clip(whole, PHARM_CLIP)}
+    shown = clip(whole, PHARM_CLIP_SHAREABLE)
+    if len(whole) <= PHARM_CLIP_SHAREABLE:
+        return {"pharm": shown}
+    return {"pharm": shown.rstrip(" …"), "pharm_cut": True}
 
 
 PMID_RE = re.compile(r"PMID[\s:_]*(\d{6,8})")
@@ -2390,7 +2403,7 @@ def build_curated(dr: Path, ctx: dict) -> dict:
             "abstention": bool(absn), "needs": lneeds, "links": lk, "positions": overview_positions(lk), "assessment": card.get("assessment"), "summary": card.get("directional_summary"),
             "why": clip(f.get("indication_and_transfer") or f.get("identity"), 420), "why_full": f.get("indication_and_transfer") or f.get("identity"),
             "identity": clip(f.get("identity"), 360), "mechanism": clip(f.get("mechanism"), 360), "novelty": clip(f.get("novelty_for_woree"), 360),
-            "expected": clip(f.get("expected_contribution"), 200), "access_text": clip(f.get("time_to_access"), 240), "pharm": clip(f.get("pharmacology"), PHARM_CLIP_SHAREABLE if shareable else PHARM_CLIP),
+            "expected": clip(f.get("expected_contribution"), 200), "access_text": clip(f.get("time_to_access"), 240), **pharm_view(f.get("pharmacology"), shareable),
             "against": against, "against_note": against_note, "for": for_, "transfer_limits": efa.get("transfer_limits"), "not_known": nk,
             "missing": absd.get("missing_datum") if absd.get("missing_datum") else (nk[0] if nk else None), "reopen": clip(absd.get("search_record"), 260) if absd.get("search_record") else None,
             "next": clip(nxt, 360), "next_full": nxt, "limits": limits_for_page(card), "asserts": asserts, "n_disease_assertions": len(inp.get("disease_assertions") or ([inp["disease_assertion"]] if inp.get("disease_assertion") else [])),

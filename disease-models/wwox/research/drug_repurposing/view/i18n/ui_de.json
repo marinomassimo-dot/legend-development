@@ -1377,6 +1377,7 @@
  "UI_IT.tc_cardfile": "Datei der Karte (Pfad im Repository, nur lokale Verwendung)",
  "UI_IT.tc_compound_id": "Identität der Verbindung",
  "UI_IT.tc_crit": "Kriterien",
+ "UI_IT.tc_cut": "… in dieser Ausgabe gekürzt: der vollständige Absatz mit seinen Einschränkungen steht in der vollständigen Ausgabe.",
  "UI_IT.tc_depth": "Lesetiefe",
  "UI_IT.tc_for": "Befürwortende Evidenz, wie in der Karte geschrieben",
  "UI_IT.tc_identity": "Identität und Mechanismus (wie in der Karte geschrieben)",

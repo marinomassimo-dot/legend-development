@@ -209,6 +209,23 @@ class CheckAndClip(unittest.TestCase):
         shown = [c["pharm"] for c in rv.build_payload(DR, "shareable")["cur"]["cands"]]
         self.assertLessEqual(max(len(x) for x in shown), 360 + 1)                           # a clip ends with one ellipsis character at most
 
+    def test_a_cut_shareable_paragraph_says_so_in_every_language_and_a_whole_one_does_not(self):
+        """Operator INTEGRATION 2026-11-20: a favourable sentence must not stand without a sign that its qualifiers were cut. The marker is a payload flag the page prints as a translated notice."""
+        full = {c["id"]: c["pharm"] for c in rv.build_payload(DR, "full")["cur"]["cands"]}
+        cands = rv.build_payload(DR, "shareable")["cur"]["cands"]
+        cut = [c for c in cands if len(full[c["id"]]) > rv.PHARM_CLIP_SHAREABLE]
+        self.assertTrue(cut)                                                                       # the defect is live: some paragraphs are longer than the shareable clip
+        for c in cands:
+            self.assertEqual(bool(c.get("pharm_cut")), len(full[c["id"]]) > rv.PHARM_CLIP_SHAREABLE, c["id"])
+            self.assertFalse(c["pharm"].endswith("…"), c["id"])                                       # the notice is the marker, one way for both clip branches
+        for c in rv.build_payload(DR, "full")["cur"]["cands"]:
+            self.assertNotIn("pharm_cut", c)                                                          # the full edition shows the paragraph whole
+        for lang in ("it", "en", "fr", "es", "de"):
+            page = rv.build(DR, "shareable", lang)
+            self.assertIn("tc_cut", page, lang)
+            self.assertIn("pharm_cut", page, lang)
+        self.assertIn("pharm_cut", (DR / "view/assets/curated.js").read_text(encoding="utf-8"))
+
     def test_the_clip_helper_cuts_at_a_sentence_and_the_default_clip_is_long_enough(self):
         long_text = "A first sentence of the card. " * 12 + "A caveat appended after the clip: nothing here is a statement about exposure in the disease."
         self.assertNotIn("caveat appended", rv.clip(long_text, 360))

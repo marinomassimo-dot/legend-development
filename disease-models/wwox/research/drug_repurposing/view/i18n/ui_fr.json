@@ -1377,6 +1377,7 @@
  "UI_IT.tc_cardfile": "Fichier de la fiche (chemin dans le dépôt, usage local uniquement)",
  "UI_IT.tc_compound_id": "identité du composé",
  "UI_IT.tc_crit": "Critères",
+ "UI_IT.tc_cut": "… abrégé dans cette édition : le paragraphe complet, avec ses limites, figure dans l'édition complète.",
  "UI_IT.tc_depth": "Profondeur de lecture",
  "UI_IT.tc_for": "Preuves en faveur, telles qu'écrites dans la fiche",
  "UI_IT.tc_identity": "Identité et mécanisme (tels qu'écrits dans la fiche)",
