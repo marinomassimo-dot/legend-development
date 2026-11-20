@@ -37,13 +37,13 @@ class Scan(unittest.TestCase):
 def write_run(root: Path, per_variant: dict[str, dict[int, tuple[float, float, float]]], seeds_below: bool = True) -> Path:
     with open(root / "summary.tsv", "w", newline="") as fh, open(root / "results.tsv", "w", newline="") as rh:
         w = csv.writer(fh, delimiter="\t", lineterminator="\n"); w.writerow(["point", "status", "bracket_lo", "bracket_hi", "estimate"])
-        r = csv.writer(rh, delimiter="\t", lineterminator="\n"); r.writerow(["point", "evaluation", "strength", "seed", "rel_bursts"])
+        r = csv.writer(rh, delimiter="\t", lineterminator="\n"); r.writerow(["point", "evaluation", "strength", "seed", "rel_bursts", "n_bursts_baseline"])
         for v, e in per_variant.items():
             for a, (s, lo, hi) in e.items():
                 w.writerow([f"{v}__arm{a}", "not_in_bracket" if math.isinf(s) else "crossed", lo, hi, s])
                 for seed in (1000, 1001, 1002):
-                    r.writerow([f"{v}__arm{a}", 5, hi, seed, 0.3 if seeds_below else 0.7])
-                    r.writerow([f"{v}__arm{a}", 5, lo, seed, 0.8])
+                    r.writerow([f"{v}__arm{a}", 0, 3.0, seed, 0.1, 800]); r.writerow([f"{v}__arm{a}", 5, hi, seed, 0.3 if seeds_below else 0.7, 800])
+                    r.writerow([f"{v}__arm{a}", 5, lo, seed, 0.8, 800])
     return root
 
 
@@ -73,6 +73,11 @@ class Report(unittest.TestCase):
         self.assertIn("sodium (pyramidal): s 2.000", text)
         self.assertIn("needs a larger parameter change", text)
         self.assertIn("indistinguishable at this resolution", text)
+
+    def test_the_baseline_burst_count_of_each_variant_is_printed_as_a_multiple(self):
+        text = self.run_text({"base": PUBLISHED, "ji_mult_hi": PUBLISHED})
+        self.assertIn("Baseline burst count of each variant", text)
+        self.assertIn("ji_mult_hi 1.00x", text)
 
     def test_missing_cells_are_listed_not_guessed(self):
         partial = {a: x for a, x in PUBLISHED.items() if a != 5}

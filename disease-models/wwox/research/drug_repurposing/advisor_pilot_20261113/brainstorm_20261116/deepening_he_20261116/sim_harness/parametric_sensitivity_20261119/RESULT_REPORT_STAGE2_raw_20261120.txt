@@ -1,0 +1,115 @@
+PARAMETRIC SENSITIVITY, S-KO. Kv7 is NOT in the model: kv7_offset is an ASSUMED stand-in. Parameter changes of the same equations, not alternative biological structures. A crossing is a model step, not a dose; a final bracket is a numerical resolution, not a confidence interval.
+Coverage: 84 cells found in 2 run folder(s) for 12 variants x 7 classes; missing: none.
+Same equations with other parameter values: not a validation on alternative biological structures; a reproduction of the baseline is technical, not biological. No ranks, no rank correlation, no winner.
+Baseline reproduction: 7 of 7 classes agree with the published bisect within the numerical resolution (brackets overlap; the published run used 5 seeds and 6 halvings, this one 3 seeds and 5).
+## variant base
+- d-APV-type: s 0.141 (bracket 0.094 to 0.188, numerical resolution 0.094), J_N x0.844; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3
+- NMDAR pore: s 0.891 (bracket 0.844 to 0.938, numerical resolution 0.094), J_N x0.820; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 3/3
+- AMPA: s 1.453 (bracket 1.406 to 1.500, numerical resolution 0.094), J_A x0.723; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3
+- T-type: no crossing within [0, 3] (J_T x0.422 at the far end): an explored-range result, not an impossibility of effect
+- synaptic GABA-A: s 1.734 (bracket 1.688 to 1.781, numerical resolution 0.094), J_I x1.372; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 2/3
+- neurosteroid-type: s 0.516 (bracket 0.469 to 0.562, numerical resolution 0.094), J_tonic x1.099 and J_I x1.050; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3
+- sodium (pyramidal): s 1.078 (bracket 1.031 to 1.125, numerical resolution 0.094), sigma x0.893; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 3/3
+- same-parameter pair (J_N): d-APV-type 0.798 to 0.893 and NMDAR pore 0.811 to 0.828: indistinguishable on the multiplier scale
+## variant cl_tau_mult_hi
+- d-APV-type: s 0.234 (bracket 0.188 to 0.281, numerical resolution 0.094), J_N x0.754; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: indistinguishable at this resolution
+- NMDAR pore: s 0.984 (bracket 0.938 to 1.031, numerical resolution 0.094), J_N x0.803; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 3/3; vs the baseline of this class: indistinguishable at this resolution
+- AMPA: s 1.828 (bracket 1.781 to 1.875, numerical resolution 0.094), J_A x0.665; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a larger parameter change
+- T-type: no crossing within [0, 3] (J_T x0.422 at the far end): an explored-range result, not an impossibility of effect
+- synaptic GABA-A: s 2.109 (bracket 2.062 to 2.156, numerical resolution 0.094), J_I x1.469; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a larger parameter change
+- neurosteroid-type: s 0.609 (bracket 0.562 to 0.656, numerical resolution 0.094), J_tonic x1.118 and J_I x1.060; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: indistinguishable at this resolution
+- sodium (pyramidal): s 1.266 (bracket 1.219 to 1.312, numerical resolution 0.094), sigma x0.875; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a larger parameter change
+- same-parameter pair (J_N): d-APV-type 0.713 to 0.798 and NMDAR pore 0.794 to 0.811: indistinguishable on the multiplier scale
+## variant cl_tau_mult_lo
+- d-APV-type: s 0.141 (bracket 0.094 to 0.188, numerical resolution 0.094), J_N x0.844; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: indistinguishable at this resolution
+- NMDAR pore: s 0.891 (bracket 0.844 to 0.938, numerical resolution 0.094), J_N x0.820; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 2/3; vs the baseline of this class: indistinguishable at this resolution
+- AMPA: s 1.359 (bracket 1.312 to 1.406, numerical resolution 0.094), J_A x0.738; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 3/3; vs the baseline of this class: indistinguishable at this resolution
+- T-type: no crossing within [0, 3] (J_T x0.422 at the far end): an explored-range result, not an impossibility of effect
+- synaptic GABA-A: s 1.641 (bracket 1.594 to 1.688, numerical resolution 0.094), J_I x1.349; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: indistinguishable at this resolution
+- neurosteroid-type: s 0.516 (bracket 0.469 to 0.562, numerical resolution 0.094), J_tonic x1.099 and J_I x1.050; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 3/3; vs the baseline of this class: indistinguishable at this resolution
+- sodium (pyramidal): s 1.078 (bracket 1.031 to 1.125, numerical resolution 0.094), sigma x0.893; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: indistinguishable at this resolution
+- same-parameter pair (J_N): d-APV-type 0.798 to 0.893 and NMDAR pore 0.811 to 0.828: indistinguishable on the multiplier scale
+## variant ji_mult_hi
+- d-APV-type: s 0.141 (bracket 0.094 to 0.188, numerical resolution 0.094), J_N x0.844; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: indistinguishable at this resolution
+- NMDAR pore: s 0.609 (bracket 0.562 to 0.656, numerical resolution 0.094), J_N x0.873; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a smaller parameter change
+- AMPA: s 0.984 (bracket 0.938 to 1.031, numerical resolution 0.094), J_A x0.803; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a smaller parameter change
+- T-type: s 2.859 (bracket 2.812 to 2.906, numerical resolution 0.094), J_T x0.439; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 2/3; the baseline did not cross within [0, 3]: the shift is not measurable
+- synaptic GABA-A: s 0.891 (bracket 0.844 to 0.938, numerical resolution 0.094), J_I x1.176; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a smaller parameter change
+- neurosteroid-type: s 0.422 (bracket 0.375 to 0.469, numerical resolution 0.094), J_tonic x1.080 and J_I x1.041; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: indistinguishable at this resolution
+- sodium (pyramidal): s 0.797 (bracket 0.750 to 0.844, numerical resolution 0.094), sigma x0.919; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a smaller parameter change
+- same-parameter pair (J_N): d-APV-type 0.798 to 0.893 and NMDAR pore 0.864 to 0.882: indistinguishable on the multiplier scale
+## variant ji_mult_lo
+- d-APV-type: s 0.328 (bracket 0.281 to 0.375, numerical resolution 0.094), J_N x0.674; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a larger parameter change
+- NMDAR pore: s 1.828 (bracket 1.781 to 1.875, numerical resolution 0.094), J_N x0.665; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a larger parameter change
+- AMPA: s 2.672 (bracket 2.625 to 2.719, numerical resolution 0.094), J_A x0.551; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a larger parameter change
+- T-type: no crossing within [0, 3] (J_T x0.422 at the far end): an explored-range result, not an impossibility of effect
+- synaptic GABA-A: no crossing within [0, 3] (J_I x1.728 at the far end): an explored-range result, not an impossibility of effect
+- neurosteroid-type: s 0.797 (bracket 0.750 to 0.844, numerical resolution 0.094), J_tonic x1.156 and J_I x1.079; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a larger parameter change
+- sodium (pyramidal): s 1.547 (bracket 1.500 to 1.594, numerical resolution 0.094), sigma x0.850; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a larger parameter change
+- same-parameter pair (J_N): d-APV-type 0.637 to 0.713 and NMDAR pore 0.658 to 0.672: indistinguishable on the multiplier scale
+## variant joint_highCl_lowInh
+- d-APV-type: s 0.328 (bracket 0.281 to 0.375, numerical resolution 0.094), J_N x0.674; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a larger parameter change
+- NMDAR pore: s 1.922 (bracket 1.875 to 1.969, numerical resolution 0.094), J_N x0.651; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a larger parameter change
+- AMPA: no crossing within [0, 3] (J_A x0.512 at the far end): an explored-range result, not an impossibility of effect
+- T-type: no crossing within [0, 3] (J_T x0.422 at the far end): an explored-range result, not an impossibility of effect
+- synaptic GABA-A: no crossing within [0, 3] (J_I x1.728 at the far end): an explored-range result, not an impossibility of effect
+- neurosteroid-type: s 0.891 (bracket 0.844 to 0.938, numerical resolution 0.094), J_tonic x1.176 and J_I x1.089; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a larger parameter change
+- sodium (pyramidal): s 1.922 (bracket 1.875 to 1.969, numerical resolution 0.094), sigma x0.817; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a larger parameter change
+- same-parameter pair (J_N): d-APV-type 0.637 to 0.713 and NMDAR pore 0.644 to 0.658: indistinguishable on the multiplier scale
+## variant joint_hyperexcitable
+- d-APV-type: s 0.422 (bracket 0.375 to 0.469, numerical resolution 0.094), J_N x0.602; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a larger parameter change
+- NMDAR pore: s 2.203 (bracket 2.156 to 2.250, numerical resolution 0.094), J_N x0.612; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a larger parameter change
+- AMPA: no crossing within [0, 3] (J_A x0.512 at the far end): an explored-range result, not an impossibility of effect
+- T-type: no crossing within [0, 3] (J_T x0.422 at the far end): an explored-range result, not an impossibility of effect
+- synaptic GABA-A: no crossing within [0, 3] (J_I x1.728 at the far end): an explored-range result, not an impossibility of effect
+- neurosteroid-type: s 1.078 (bracket 1.031 to 1.125, numerical resolution 0.094), J_tonic x1.217 and J_I x1.108; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a larger parameter change
+- sodium (pyramidal): s 2.859 (bracket 2.812 to 2.906, numerical resolution 0.094), sigma x0.740; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a larger parameter change
+- same-parameter pair (J_N): d-APV-type 0.569 to 0.637 and NMDAR pore 0.605 to 0.618: indistinguishable on the multiplier scale
+## variant joint_inhibited
+- d-APV-type: s 0.141 (bracket 0.094 to 0.188, numerical resolution 0.094), J_N x0.844; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: indistinguishable at this resolution
+- NMDAR pore: s 0.703 (bracket 0.656 to 0.750, numerical resolution 0.094), J_N x0.855; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a smaller parameter change
+- AMPA: s 0.797 (bracket 0.750 to 0.844, numerical resolution 0.094), J_A x0.837; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a smaller parameter change
+- T-type: s 1.641 (bracket 1.594 to 1.688, numerical resolution 0.094), J_T x0.624; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 2/3; the baseline did not cross within [0, 3]: the shift is not measurable
+- synaptic GABA-A: s 1.078 (bracket 1.031 to 1.125, numerical resolution 0.094), J_I x1.217; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a smaller parameter change
+- neurosteroid-type: s 0.422 (bracket 0.375 to 0.469, numerical resolution 0.094), J_tonic x1.080 and J_I x1.041; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: indistinguishable at this resolution
+- sodium (pyramidal): s 0.516 (bracket 0.469 to 0.562, numerical resolution 0.094), sigma x0.947; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a smaller parameter change
+- same-parameter pair (J_N): d-APV-type 0.798 to 0.893 and NMDAR pore 0.846 to 0.864: indistinguishable on the multiplier scale
+## variant kv7_offset_hi
+- d-APV-type: s 0.234 (bracket 0.188 to 0.281, numerical resolution 0.094), J_N x0.754; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 3/3; vs the baseline of this class: indistinguishable at this resolution
+- NMDAR pore: s 1.453 (bracket 1.406 to 1.500, numerical resolution 0.094), J_N x0.723; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a larger parameter change
+- AMPA: s 2.672 (bracket 2.625 to 2.719, numerical resolution 0.094), J_A x0.551; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a larger parameter change
+- T-type: no crossing within [0, 3] (J_T x0.422 at the far end): an explored-range result, not an impossibility of effect
+- synaptic GABA-A: s 2.484 (bracket 2.438 to 2.531, numerical resolution 0.094), J_I x1.573; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a larger parameter change
+- neurosteroid-type: s 0.797 (bracket 0.750 to 0.844, numerical resolution 0.094), J_tonic x1.156 and J_I x1.079; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a larger parameter change
+- sodium (pyramidal): s 1.922 (bracket 1.875 to 1.969, numerical resolution 0.094), sigma x0.817; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a larger parameter change
+- same-parameter pair (J_N): d-APV-type 0.713 to 0.798 and NMDAR pore 0.716 to 0.731: indistinguishable on the multiplier scale
+## variant kv7_offset_lo
+- d-APV-type: s 0.141 (bracket 0.094 to 0.188, numerical resolution 0.094), J_N x0.844; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: indistinguishable at this resolution
+- NMDAR pore: s 0.703 (bracket 0.656 to 0.750, numerical resolution 0.094), J_N x0.855; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a smaller parameter change
+- AMPA: s 0.984 (bracket 0.938 to 1.031, numerical resolution 0.094), J_A x0.803; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a smaller parameter change
+- T-type: s 2.109 (bracket 2.062 to 2.156, numerical resolution 0.094), J_T x0.545; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 2/3; the baseline did not cross within [0, 3]: the shift is not measurable
+- synaptic GABA-A: s 1.359 (bracket 1.312 to 1.406, numerical resolution 0.094), J_I x1.281; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a smaller parameter change
+- neurosteroid-type: s 0.422 (bracket 0.375 to 0.469, numerical resolution 0.094), J_tonic x1.080 and J_I x1.041; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: indistinguishable at this resolution
+- sodium (pyramidal): s 0.703 (bracket 0.656 to 0.750, numerical resolution 0.094), sigma x0.929; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a smaller parameter change
+- same-parameter pair (J_N): d-APV-type 0.798 to 0.893 and NMDAR pore 0.846 to 0.864: indistinguishable on the multiplier scale
+## variant nmda_mult_hi
+- d-APV-type: s 0.234 (bracket 0.188 to 0.281, numerical resolution 0.094), J_N x0.754; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: indistinguishable at this resolution
+- NMDAR pore: s 1.359 (bracket 1.312 to 1.406, numerical resolution 0.094), J_N x0.738; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a larger parameter change
+- AMPA: s 2.953 (bracket 2.906 to 3.000, numerical resolution 0.094), J_A x0.517; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a larger parameter change
+- T-type: no crossing within [0, 3] (J_T x0.422 at the far end): an explored-range result, not an impossibility of effect
+- synaptic GABA-A: s 2.766 (bracket 2.719 to 2.812, numerical resolution 0.094), J_I x1.656; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a larger parameter change
+- neurosteroid-type: s 0.797 (bracket 0.750 to 0.844, numerical resolution 0.094), J_tonic x1.156 and J_I x1.079; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a larger parameter change
+- sodium (pyramidal): s 1.641 (bracket 1.594 to 1.688, numerical resolution 0.094), sigma x0.841; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a larger parameter change
+- same-parameter pair (J_N): d-APV-type 0.713 to 0.798 and NMDAR pore 0.731 to 0.746: indistinguishable on the multiplier scale
+## variant nmda_mult_lo
+- d-APV-type: s 0.141 (bracket 0.094 to 0.188, numerical resolution 0.094), J_N x0.844; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: indistinguishable at this resolution
+- NMDAR pore: s 0.797 (bracket 0.750 to 0.844, numerical resolution 0.094), J_N x0.837; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 2/3; vs the baseline of this class: indistinguishable at this resolution
+- AMPA: s 0.891 (bracket 0.844 to 0.938, numerical resolution 0.094), J_A x0.820; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 2/3; vs the baseline of this class: needs a smaller parameter change
+- T-type: s 2.859 (bracket 2.812 to 2.906, numerical resolution 0.094), J_T x0.439; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 2/3; the baseline did not cross within [0, 3]: the shift is not measurable
+- synaptic GABA-A: s 1.172 (bracket 1.125 to 1.219, numerical resolution 0.094), J_I x1.238; seeds below 0.5 at the crossed end 2/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a smaller parameter change
+- neurosteroid-type: s 0.422 (bracket 0.375 to 0.469, numerical resolution 0.094), J_tonic x1.080 and J_I x1.041; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: indistinguishable at this resolution
+- sodium (pyramidal): s 0.797 (bracket 0.750 to 0.844, numerical resolution 0.094), sigma x0.919; seeds below 0.5 at the crossed end 3/3, at the uncrossed end above 3/3; vs the baseline of this class: needs a smaller parameter change
+- same-parameter pair (J_N): d-APV-type 0.798 to 0.893 and NMDAR pore 0.828 to 0.846: indistinguishable on the multiplier scale
+Baseline burst count of each variant (median over the cells' first evaluation, 40 slices of 600 s), as a multiple of the baseline variant: base 1.00x; cl_tau_mult_hi 2.10x; cl_tau_mult_lo 0.70x; ji_mult_hi 0.36x; ji_mult_lo 1.68x; joint_highCl_lowInh 2.91x; joint_hyperexcitable 3.05x; joint_inhibited 0.06x; kv7_offset_hi 2.58x; kv7_offset_lo 0.23x; nmda_mult_hi 1.59x; nmda_mult_lo 0.47x. A variant is not re-fitted to the held baseline numbers: where this multiple is far from 1 the variant's own baseline is a different circuit state, and a near-silent one (few bursts) gives little to cross.
+Not identifiable here: any order or superiority between classes that act on different parameters (J_N, J_A, J_T, J_I, sigma): the multipliers above describe the model's sensitivity to each parameter, not pharmacological potency, and are not compared.
+What this does not show: biological validity, the effect at any exposure, or that a class absent from a crossing cannot act. Three seeds cannot separate seed variability from numerical resolution below the bracket width; read the seed counts beside the bracket.
