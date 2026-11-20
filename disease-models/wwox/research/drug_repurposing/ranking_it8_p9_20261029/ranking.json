@@ -10172,7 +10172,7 @@
     "P_pharmacology": {
      "brain_penetration": "UNKNOWN",
      "human_exposure": "UNKNOWN",
-     "potency_with_assay_context": "Per compound in compounds_and_sources.md: no eIF2B activity in ChEMBL for ISRIB or fosigotifator; DGIdb and Open Targets empty for the eIF2B complex; PERK inhibitors have enzyme potency in ChEMBL.",
+     "potency_with_assay_context": "Per compound in compounds_and_sources.md: no eIF2B activity in ChEMBL for ISRIB or fosigotifator; DGIdb and Open Targets empty for the eIF2B complex; PERK inhibitors have enzyme potency in ChEMBL. Added class-level facts, no dose, no score, NOT WWOX EVIDENCE [IT59 2026-11-20 third packet change] (H…",
      "record": "",
      "state": "not in the pharmacological comparison table; card text only (potency, exposure and nervous-system data UNKNOWN unless the card says otherwise)"
     },
@@ -11888,7 +11888,7 @@
     "P_pharmacology": {
      "brain_penetration": "UNKNOWN",
      "human_exposure": "UNKNOWN",
-     "potency_with_assay_context": "UNKNOWN for a Wwox system. The R2 note carries, from papers it read, that ethosuximide's own T-type potency is in the millimolar range and disputed at relevant concentrations; exposure and CNS exposure in WOREE: UNKNOWN.",
+     "potency_with_assay_context": "UNKNOWN for a Wwox system. The R2 note carries, from papers it read, that ethosuximide's own T-type potency is in the millimolar range and disputed at relevant concentrations; exposure and CNS exposure in WOREE: UNKNOWN. Its reported GIRK potency in oocytes is within or below the labelled plasma ra…",
      "qualification": [
       {
        "case": "Q07",
@@ -13848,7 +13848,7 @@
     "P_pharmacology": {
      "brain_penetration": "UNKNOWN",
      "human_exposure": "UNKNOWN",
-     "potency_with_assay_context": "NOT WWOX EVIDENCE, class level, no dose, no score, no compound carded [IT59 2026-11-20 unit B packet change]. CLEMASTINE (public-database rows of HE ADV-098 batch 6 and SCI's verified reading of primary papers): strong histamine H1 and muscarinic binding;",
+     "potency_with_assay_context": "NOT WWOX EVIDENCE, class level, no dose, no score, no compound carded [IT59 2026-11-20 unit B packet change]. CLEMASTINE (public-database rows of HE ADV-098 batch 6 and SCI's verified reading of primary papers): strong histamine H1 and muscarinic binding; within one document muscarinic M1 is the mo…",
      "record": "",
      "state": "not in the pharmacological comparison table; card text only (potency, exposure and nervous-system data UNKNOWN unless the card says otherwise)"
     },
@@ -14089,7 +14089,7 @@
     "P_pharmacology": {
      "brain_penetration": "UNKNOWN",
      "human_exposure": "UNKNOWN",
-     "potency_with_assay_context": "NKCC1 activity: one fitted value and two single-concentration readings in ChEMBL (values in the README). IT8 P3 2026-10-29: GtoPdb (human, one document) gives pIC50 5.60 for NKCC1 and 6.48 for the kidney transporter, so the drug is about 7.6 fold more potent on the renal target;",
+     "potency_with_assay_context": "NKCC1 activity: one fitted value and two single-concentration readings in ChEMBL (values in the README). IT8 P3 2026-10-29: GtoPdb (human, one document) gives pIC50 5.60 for NKCC1 and 6.48 for the kidney transporter, so the drug is about 7.6 fold more potent on the renal target; mouse brain to plas…",
      "qualification": [
       {
        "case": "Q08",
@@ -14414,7 +14414,7 @@
     "P_pharmacology": {
      "brain_penetration": "UNKNOWN",
      "human_exposure": "UNKNOWN",
-     "potency_with_assay_context": "Approved compound (class level, from map record R-04) with a narrow therapeutic index and monitoring needs; CNS exposure is not in doubt. Nothing here is a statement about exposure in WWOX-DEE.",
+     "potency_with_assay_context": "Approved compound (class level, from map record R-04) with a narrow therapeutic index and monitoring needs; CNS exposure is not in doubt. Nothing here is a statement about exposure in WWOX-DEE. Label facts, read at source by a blind verifier on 2026-11-20 (US label record, class level, NOT WWOX EVI…",
      "qualification": [
       {
        "case": "Q09",
@@ -14774,7 +14774,7 @@
     "P_pharmacology": {
      "brain_penetration": "UNKNOWN",
      "human_exposure": "UNKNOWN",
-     "potency_with_assay_context": "Triple T-type blocker; abstract-level human pharmacokinetics in healthy volunteers (slow absorption and a long half-life are reported); multiple-dose tolerability reported with an up-titration scheme. No pup or brain-exposure datum. Doses and concentrations are deliberately not reproduced.",
+     "potency_with_assay_context": "Triple T-type blocker; abstract-level human pharmacokinetics in healthy volunteers (slow absorption and a long half-life are reported); multiple-dose tolerability reported with an up-titration scheme. No pup or brain-exposure datum. Doses and concentrations are deliberately not reproduced. Added cl…",
      "qualification": [
       {
        "case": "Q07",
@@ -17048,7 +17048,7 @@
     "P_pharmacology": {
      "brain_penetration": "UNKNOWN",
      "human_exposure": "UNKNOWN",
-     "potency_with_assay_context": "A51: no catalogue identity, targets and exposure unknown. Sulfopin: research probe, no human exposure (IT9 E-06). Palbociclib and abemaciclib: oral small molecules with nanomolar aggregated potency on CDK4 and CDK6 in the compound database; label, paediatric and neural-progenitor data not searched.",
+     "potency_with_assay_context": "A51: no catalogue identity, targets and exposure unknown. Sulfopin: research probe, no human exposure (IT9 E-06). Palbociclib and abemaciclib: oral small molecules with nanomolar aggregated potency on CDK4 and CDK6 in the compound database; label, paediatric and neural-progenitor data not searched.…",
      "record": "",
      "state": "not in the pharmacological comparison table; card text only (potency, exposure and nervous-system data UNKNOWN unless the card says otherwise)"
     },
