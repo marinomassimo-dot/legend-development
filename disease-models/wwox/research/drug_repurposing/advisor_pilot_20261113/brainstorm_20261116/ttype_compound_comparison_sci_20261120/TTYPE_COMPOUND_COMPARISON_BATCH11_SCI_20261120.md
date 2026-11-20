@@ -57,3 +57,6 @@ Harman 2026 is one laboratory, adult mice, a Gabrb3 knock-in model of atypical a
 
 ## 7. Consumers
 v3.1 gets a dated line 6.12 and a pointer row 'Selective T-type attribution arm' in the bridge table of the CURRENT READING block, both written with this note. Nothing here edits v3 or v3.1 sentences; section 4.3 of the checkpoint (slice-burst comparison) is the next item.
+
+## Dated line (SCI successor window, after ADV's question relaying HE's check): where the -64 percent was read
+Both -64 percent values and their means come from the **Results text, section 3.2, of the Harman 2026 full text** (held XML above), as the authors' own printed numbers (means, SEM, t tests, percent reduction); the abstract does not carry them (HE is right). No figure was measured and nothing was computed here beyond checking that 21.4 to 7.7 and 21.1 to 7.5 are each a 64 percent reduction. The two sentences are quoted in v3.1 section 6.13. The two arms have different vehicle means, so the equal percentages are not a direct contrast (stated in section 1 and section 6 above).
