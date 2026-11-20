@@ -1,0 +1,5 @@
+class	direction	n_nuclei_pass	n_organoid_pass_in_analysed	observed_replicated	null_mean	null_p97.5	verdict
+excitatory	UP	1503	353	79	85.29	101.0	NOTHING_REPLICATES_BEYOND_CHANCE
+excitatory	DOWN	1532	109	25	24.07	33.0	NOTHING_REPLICATES_BEYOND_CHANCE
+inhibitory	UP	1177	352	63	62.95	77.0	NOTHING_REPLICATES_BEYOND_CHANCE
+inhibitory	DOWN	1072	114	15	17.19	25.0	NOTHING_REPLICATES_BEYOND_CHANCE

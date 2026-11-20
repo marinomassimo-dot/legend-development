@@ -1,0 +1,13 @@
+fact	value
+genes_in_table	9427
+analysed_neuron_pair	8434
+analysed_NSC_pair	9367
+neuron_pair_median_shift	-1.2310
+NSC_pair_median_shift	0.1877
+NEU_minus_PROG_native_neurons	0.007
+NEU_minus_PROG_silenced_neurons	-0.225
+NEU_minus_PROG_native_NSC	-2.392
+NEU_minus_PROG_silenced_NSC	-1.913
+maturity_flag_neuron_pair	not flagged
+WWOX_TPM_native_neurons_silenced_neurons	2.54 / 0.52
+WWOX_TPM_native_NSC_silenced_NSC	2.90 / 3.35
