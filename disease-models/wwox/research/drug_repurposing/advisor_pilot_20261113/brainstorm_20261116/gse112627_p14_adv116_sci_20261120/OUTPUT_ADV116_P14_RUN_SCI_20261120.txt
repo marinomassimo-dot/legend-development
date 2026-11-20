@@ -1,0 +1,24 @@
+
+##### CONTRAST PRIMARY: F1_KO vs F1_WT  (n 3 vs 3)
+MICRO_ID: NOT SCORED (present 3; missing [])
+ASTRO_ID(control): NOT SCORED (present 3; missing [])
+ASTRO_REACTIVE: genes 7 (missing []) D=+0.143 log2  p_raw=0.3383 Holm=1.000  |D|>=0.10:True p<=0.05:False LOGO_ok:False (min|x|=0.033) LOSO_ok:True (range +0.019..+0.262)  => NOT DIFFERENT (>=2 criteria fail)
+    per gene d: Gfap=-0.10, Vim=-0.06, C3=+0.80, Lcn2=+0.07, Cd44=+0.17, Serpina3n=+0.08, Stat3=+0.04
+MICRO_ACT: genes 6 (missing []) D=-0.252 log2  p_raw=0.0691 Holm=0.276  |D|>=0.10:True p<=0.05:False LOGO_ok:True (min|x|=0.111) LOSO_ok:True (range -0.324..-0.201)  => BOUNDARY
+    per gene d: Aif1=-0.30, Cd68=+0.03, Trem2=-0.37, Tyrobp=-0.18, Lyz2=+0.25, Itgax=-0.95
+ENERGY_GLYC: genes 10 (missing []) D=+0.014 log2  p_raw=0.6708 Holm=1.000  |D|>=0.10:False p<=0.05:False LOGO_ok:False (min|x|=0.001) LOSO_ok:False (range -0.003..+0.025)  => NOT DIFFERENT
+    per gene d: Pdk1=-0.06, Pdk2=-0.08, Pdk3=+0.03, Pdk4=+0.00, Ldha=+0.12, Slc16a1=+0.08, Hk2=-0.04, Pfkp=+0.11, Pkm=+0.04, Slc2a1=-0.07
+ENERGY_OXPHOS: genes 6 (missing []) D=+0.028 log2  p_raw=0.3761 Holm=1.000  |D|>=0.10:False p<=0.05:False LOGO_ok:False (min|x|=0.015) LOSO_ok:True (range +0.016..+0.039)  => NOT DIFFERENT
+    per gene d: Cox4i1=-0.06, Ndufa4=+0.00, Atp5a1=+0.07, Uqcrc1=+0.08, Sdha=+0.09, Cs=-0.01
+
+##### CONTRAST SECONDARY (descriptive): 129_KO vs 129_WT  (n 3 vs 2)
+MICRO_ID: NOT SCORED (present 3; missing [])
+ASTRO_ID(control): NOT SCORED (present 3; missing [])
+ASTRO_REACTIVE: genes 7 (missing []) D=-0.390 log2  p_raw=0.0089 Holm=0.036  |D|>=0.10:True p<=0.05:True LOGO_ok:False (min|x|=0.011) LOSO_ok:True (range -0.546..-0.234)  => BOUNDARY
+    per gene d: Gfap=-0.01, Vim=-0.08, C3=-0.11, Lcn2=-2.80, Cd44=+0.07, Serpina3n=+0.04, Stat3=+0.16
+MICRO_ACT: genes 6 (missing []) D=-0.119 log2  p_raw=0.3301 Holm=0.608  |D|>=0.10:True p<=0.05:False LOGO_ok:True (min|x|=0.079) LOSO_ok:True (range -0.183..-0.034)  => BOUNDARY
+    per gene d: Aif1=+0.13, Cd68=-0.03, Trem2=-0.11, Tyrobp=-0.31, Lyz2=-0.32, Itgax=-0.07
+ENERGY_GLYC: genes 10 (missing []) D=+0.075 log2  p_raw=0.0136 Holm=0.041  |D|>=0.10:False p<=0.05:True LOGO_ok:False (min|x|=0.034) LOSO_ok:True (range +0.043..+0.101)  => NOT DIFFERENT (>=2 criteria fail)
+    per gene d: Pdk1=-0.00, Pdk2=+0.12, Pdk3=+0.06, Pdk4=-0.07, Ldha=+0.04, Slc16a1=+0.12, Hk2=+0.45, Pfkp=+0.08, Pkm=+0.05, Slc2a1=-0.09
+ENERGY_OXPHOS: genes 6 (missing []) D=-0.030 log2  p_raw=0.3042 Holm=0.608  |D|>=0.10:False p<=0.05:False LOGO_ok:False (min|x|=0.012) LOSO_ok:True (range -0.045..-0.021)  => NOT DIFFERENT
+    per gene d: Cox4i1=-0.06, Ndufa4=-0.12, Atp5a1=+0.03, Uqcrc1=-0.02, Sdha=-0.03, Cs=+0.03
