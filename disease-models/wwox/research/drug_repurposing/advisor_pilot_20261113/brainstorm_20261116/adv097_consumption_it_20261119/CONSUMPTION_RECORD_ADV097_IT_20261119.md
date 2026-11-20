@@ -170,3 +170,8 @@ The first deliverables of the mandate that name a preferred intervention, its st
 | Rows modified (no row added) | IT56-Q01 (in-silico part executed and descriptive; measurement unchanged); the arm-table notes: one dated paragraph |
 | New for LEGEND / new against searched literature / predictive performance | new for LEGEND: the within-class parametric sensitivity and the J_N pair equivalence under 12 variants; new against searched literature: not assessed; predictive performance: none |
 | Not touched, owners asked | SCI's `NOTE_BISECT_P1_NORMALISATION_SCI_20261119.md` row P1b and ADV's `SELECTION_NOTE_V1_ADV_20261119.md` (simulated order text): a dated line each |
+
+## 16. Practice lines (dated 2026-11-20)
+* **Stash.** A bare `git stash` takes the stash stack shared by every worktree of the repository. On 2026-11-20 one took IT's uncommitted candidate edits; they were restored by SHA (`git stash apply <sha>`) and only IT's own entry was dropped. The rule for any session: a temporary WIP commit, or `git stash push -u -m <tag>` with the SHA captured from `git stash list --format='%H %gs'`.
+* **Heredocs.** An unquoted heredoc executes backticks in its text (it ran fragments of a candidate and lost them twice); use a quoted heredoc or write the script to a file.
+* **Landing during a delegate or a gate.** The worktree is not edited while a gate runs; a second commit waits for the push.
