@@ -453,6 +453,15 @@
      "accepted_at": "2026-11-20T02:30:00Z",
      "updated_at": "2026-11-20T03:18:12Z",
      "evidence": "v3.1 (V3_1_DATED_CHANGES_BROAD_AND_BRIDGE_SCI_20261120.md, section 6 dated lines) landed at bdcaa501c; ADV accepted 2026-11-20 subject to IT; IT read and called both pages done after one change (anchor at the Cheng-regimen exposure), made in section 6.2; survival item narrowed at text level in 6.4"
+    },
+    {
+     "step": "GSK-3 inhibition and beta-catenin stabilisation on OPC differentiation and remyelination: time-boxed reading of about 6 papers (held full texts first), whether v3.2 broad adds an oligodendrocyte-stage readout under the GSK-3 arm as a harm or interaction cell, and a dated line on the GSK-3 one-unit note",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV assignment message of 2026-11-20 after bb1f634a7, re-sent to SCI successor f7670fc3 (checkpoint L section 4.1)",
+     "accepted_at": "2026-11-20T04:18:42Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/gsk3_shared_premise_sci_20261120/GSK3_OPC_DIFFERENTIATION_DIRECTION_READING_SCI_20261120.md (answer: sign divided by system and stage; v3.2 broad adds the stage readout under the GSK-3 arm as an interaction cell with no predicted sign) and a dated line on the one-unit note",
+     "updated_at": "2026-11-20T04:23:00Z"
     }
    ]
   }
@@ -798,6 +807,13 @@
    "at": "2026-11-20T02:30:00Z",
    "source": "ADV message to SCI 2026-11-20 after accepting 67abc7d7e",
    "step_sha256": "d07169de5065",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T04:18:42Z",
+   "source": "ADV assignment message of 2026-11-20 after bb1f634a7, re-sent to SCI successor f7670fc3 (checkpoint L section 4.1)",
+   "step_sha256": "da1b7ff6c849",
    "reopened_block": false,
    "authorised_by": null
   }
