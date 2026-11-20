@@ -499,6 +499,35 @@ class RotationReconcileDream(unittest.TestCase):
             self.assertFalse(fresh.reconcile_state(self.campaign, self.NOW)["due"])
 
 
+class CiOnMain(unittest.TestCase):
+    """ADV-108: a red publication gate on main must reach the tick, with the run that began the streak; unreadable or in progress is never read as green or red."""
+    NOW = dt.datetime(2026, 11, 20, 14, 0, tzinfo=dt.timezone.utc)
+
+    def run_(self, n, concl, status="completed", branch="main", name="Public release gate"):
+        return {"run_number": n, "conclusion": concl, "status": status, "head_branch": branch, "head_sha": f"{n:040x}", "name": name}
+
+    def test_the_red_streak_ends_at_the_last_green_run_and_skips_runs_in_progress(self):
+        import ci_runs
+        runs = [self.run_(1512, "success"), self.run_(1513, "failure"), self.run_(1514, "failure"), self.run_(1515, None, "in_progress"), self.run_(1516, "failure"), self.run_(1599, "failure", branch="other")]
+        r = ci_runs.red_streak(runs)
+        self.assertEqual((r["red"], r["latest"], r["first_red"], r["streak"]), (True, 1516, 1513, 3))
+        self.assertFalse(ci_runs.red_streak([self.run_(1, "failure"), self.run_(2, "success")])["red"])
+        self.assertEqual(ci_runs.red_streak([self.run_(1, None, "in_progress")]), {})
+
+    def test_the_tick_line_names_the_first_red_run_is_cached_and_a_failed_read_is_silent(self):
+        import ci_runs
+        runs = [self.run_(1512, "success"), self.run_(1513, "failure"), self.run_(1514, "failure")]
+        state: dict = {}
+        with patch.object(ci_runs, "fetch_recent", return_value=runs) as fetch, patch.object(ci_runs, "slug", return_value="o/r"):
+            line = sa.ci_main_line(state, self.NOW)
+            self.assertIn("CI RED ON MAIN", line); self.assertIn("red since #1513", line); self.assertIn("2 run(s)", line)
+            self.assertEqual(sa.ci_main_line(state, self.NOW + dt.timedelta(minutes=10)), line)
+            self.assertEqual(fetch.call_count, 1)                                                         # one request per half hour at most
+        with patch.object(ci_runs, "fetch_recent", side_effect=OSError("offline")), patch.object(ci_runs, "slug", return_value="o/r"):
+            self.assertEqual(sa.ci_main_line(state, self.NOW + dt.timedelta(minutes=40)), line)           # unreadable keeps the last known line, never claims green
+            self.assertEqual(sa.ci_main_line({}, self.NOW), "")
+
+
 class AssignmentFlow(unittest.TestCase):
     """2026-11-20 (ADV, 'Reliable autonomy'): SENT -> TAKEN (a recipient record names the exact id) -> FIRST OUTPUT (a commit subject or added file naming it); flags for a send nobody took and a take with no output."""
     NOW = dt.datetime(2026, 11, 20, 12, 0, tzinfo=dt.timezone.utc)
