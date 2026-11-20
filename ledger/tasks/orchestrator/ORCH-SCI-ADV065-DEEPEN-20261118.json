@@ -633,6 +633,13 @@
      "accepted_at": "2026-11-20T15:26:13Z",
      "evidence": "gse112627_p14_adv116_sci_20261120/ADV116_GSE112627_P14_SCI_20261120.md landed on main c1c5d6215 gate=PASS; pre-registration f672781f3 before the counts file; no set DIFFERENT at P14 in F1",
      "updated_at": "2026-11-20T15:38:16Z"
+    },
+    {
+     "step": "ADV-117: Kv7 opener class compound-level comparison with ethosuximide (ezogabine/retigabine, azetukalner/XEN1101, ICA-069673, XE991 control): selectivity and held potency origins, efficacy versus motor-impairment window, KCNQ2 DEE evidence at the same age window, juvenile exposure, harm, the one ordering experiment; closing paragraph on conditional pilot arm versus slice panel priority slot",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-117 (ADV message 2026-11-20 to SCI f6eb70; assignments/ADV-117.md landing)",
+     "accepted_at": "2026-11-20T15:57:30Z"
     }
    ]
   }
@@ -1118,6 +1125,13 @@
    "at": "2026-11-20T15:26:13Z",
    "source": "ADV 2026-11-20 message to SCI (ADV-116; assignments/ADV-116.md)",
    "step_sha256": "138b5988a02d",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T15:57:30Z",
+   "source": "ADV-117 (ADV message 2026-11-20 to SCI f6eb70; assignments/ADV-117.md landing)",
+   "step_sha256": "74236132bc89",
    "reopened_block": false,
    "authorised_by": null
   }
