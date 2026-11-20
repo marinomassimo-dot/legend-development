@@ -1,0 +1,82 @@
+{
+ "repo": ".",
+ "title": "Blind audit packet, check 4: the fifth packet change (J01 glial card, I01 metabolic card), IT59, 2026-11-20",
+ "preamble": "Judge each statement ONE AT A TIME against its own anchors. For each: (1) supported by its anchor as worded? (2) does the anchor say MORE or LESS (species, age, system, route, n and unit, quantifier, 'found by these routes' versus 'absent', who read what (HE versus SCI), hedges kept, merged populations)? (3) verdict SUPPORTED / SUPPORTED_WITH_LIMIT / OVERSHOOT / UNDERSHOOT / UNSUPPORTED / UNVERIFIABLE; quote with locator; every quoted string a substring of the anchor you read. Repository paths are relative to /home/desktop/legend-development/.claude/worktrees/it_sixth_20261120/ . Where an anchor is a repository note, judge the wording against it and say so (the primary papers behind the note are outside this packet; a number the note states is judged as the note's statement). Where it names a PubMed abstract open it with the PubMed tool.",
+ "items": [
+  {
+   "id": "F1 (J01 pharmacology)",
+   "statement": "Added from SCI's ADV-104 (class level, no dose, NOT WWOX EVIDENCE for any agent) [IT59 2026-11-20 fifth packet change]: no HE sheet covers an agent directed at microglia or inflammation, so none is carded. Of the two agents in HE's sheets that touch glial state, ganaxolone has adult-rat evidence only (no brain concentration and no juvenile or pup exposure found; in the one adult focal demyelination model SCI read at passage level, microglial clearance of myelin debris and remyelination were enhanced while astrocytosis and cytokines were unaffected, a debris-clearance mechanism with no counterpart in an uninjured knockout cortex), and clemastine has a qualitative detection in juvenile rat brain and a plasma level in neonatal mouse without a brain concentration, with an oligodendrocyte-precursor rationale rather than a glial-inflammation one.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/glia_axis_adv104_sci_20261120/ADV104_GLIAL_INFLAMMATORY_AXIS_SCI_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/gsk3_shared_premise_sci_20261120/GANAXOLONE_REMYELINATION_READING_SCI_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH3_ganaxolone_gaboxadol_HE_20261119.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH6_broad_clemastine_sobetirome_tiratricol_HE_20261119.md"
+    }
+   ]
+  },
+  {
+   "id": "F2 (J01 next measurement)",
+   "statement": "THE GLIAL AXIS IS CARRIED AS A READOUT BESIDE GLUCOSE, NOT AS AN ARM [IT59 2026-11-20 fifth packet change] (SCI's ADV-104, hypothesis level): every glial measurement in the held texts is at postnatal days 14 to 20 (area fractions of GFAP and Iba1, a few cytokine transcripts), while the earliest documented seizures are at day 9 in the neuronal-deletion line and 'within a few days after birth' in the germline null; none of the held texts measures a glial marker before the first seizure in any line, so 'not measured' is the finding, not 'not present'. SCI's condition that would promote the axis: a per-animal glial series in the neuronal-deletion cortex or the germline null at days 5, 7, 9 and 12 showing a rise before the first seizure, AND a replicated glial-state-specific manipulation that moves seizures or survival in a neuronal-primary developmental model; what would park it: gliosis first appearing at or after seizure onset with the manipulation question still empty (the current state). GFAP and Iba1 are already endpoints of the gene-addition benchmark, so scoring them on the same slides of any pilot arm costs no animals.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/glia_axis_adv104_sci_20261120/ADV104_GLIAL_INFLAMMATORY_AXIS_SCI_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/glia_axis_adv104_sci_20261120/PREREGISTRATION_ADV104_SCI_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "F3 (J01 not known)",
+   "statement": "Whether a glial or inflammatory state can be changed independently of neuronal rescue in any Wwox line [IT59 2026-11-20 fifth packet change]: the only manipulation that moves it is neuronal restoration, which moves GFAP, Iba1, survival, growth, glucose and myelination together; deletion of Wwox restricted to astrocytes or to oligodendrocyte-lineage cells gave no phenotype in the held text; in the nearest studied neuronal-primary model (Rett), one microglia-replacement report was not replicated in three models (abstract level), so the independent route is contested there and untested here.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/glia_axis_adv104_sci_20261120/ADV104_GLIAL_INFLAMMATORY_AXIS_SCI_20261120.md"
+    },
+    {
+     "label": "PMID 22425995 abstract via the PubMed tool"
+    },
+    {
+     "label": "PMID 25993969 abstract via the PubMed tool"
+    },
+    {
+     "label": "PMID 27458802 abstract via the PubMed tool"
+    }
+   ]
+  },
+  {
+   "id": "F4 (I01 next measurement)",
+   "statement": "Added from SCI's ADV-101 increment 2 (class level, hypothesis level, no dose, no recommendation) [IT59 2026-11-20 fifth packet change]: only two interventions on the glycaemia axis carry any exposure statement and neither is usable for a pup: dichloroacetate (HE found no brain concentration in mice and no juvenile exposure by its query; a millimolar-range potency in one assay) and a ketogenic diet (no ketone, glucose or intake value in any Wwox-deficient animal or child); no third was found by the sheets and searches used. Digoxin is a probe of the axis, not a candidate. On held data the axis is a COVARIATE TO MEASURE, NOT AN ARM: an intervention that could enter a pup arm does not exist, an independently modifiable glycaemic step is untested in the neuronal-deletion and progenitor-targeted lines, and the deciding test is cheap (a glucose reading with same-animal EEG). What would make it the preferred broad candidate (fixed before data): glucose already low at or before day 9 in those pups AND a glucose or fuel-supply arm that, without restoration of WWOX, changes the spike rate, the seizure score or survival; what would park it: normoglycaemia across days 7 to 14 while the pups seize and die, glucose falling only after the first seizure or spike epoch, or a supply arm that corrects glucose and weight but not the EEG or survival. The unfavourable reading, as it stands: the one correction that exists (neuronal AAV9) normalises glucose, weight, seizures and survival together and is not separable.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/glycaemia_axis_adv101_sci_20261120/ADV101_INCREMENT2_Q3_Q4_SCI_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/glycaemia_axis_adv101_sci_20261120/ADV101_INCREMENT1_Q1_Q2_SCI_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH8_broad_ISRIB_trazodone_omaveloxolone_dichloroacetate_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "F5 (I01 not known)",
+   "statement": "Whether a glucose-lowering or fuel-shifting intervention helps or harms pups that are already hypoglycaemic from about day 10, and the direction of the glucose response of dichloroacetate in a hypoglycaemic pup (unmeasured; the adult response with raised glucose is a fall) [IT59 2026-11-20 fifth packet change].",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/glycaemia_axis_adv101_sci_20261120/ADV101_INCREMENT2_Q3_Q4_SCI_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/glycaemia_axis_adv101_sci_20261120/ADV101_INCREMENT1_Q1_Q2_SCI_20261120.md"
+    }
+   ]
+  }
+ ]
+}
