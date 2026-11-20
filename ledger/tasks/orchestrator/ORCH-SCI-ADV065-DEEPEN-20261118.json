@@ -516,6 +516,15 @@
      "accepted_at": "2026-11-20T08:41:05Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv100_interactome_second_system_sci_20261120/INTERACTOME_AND_SECOND_SYSTEM_RESULT_SCI_20261120.md; advisor_pilot_20261113/assignments/ADV-100.md; delivered 9d14b4441ae6",
      "updated_at": "2026-11-20T08:41:11Z"
+    },
+    {
+     "step": "Bridge slice panel: consolidate the slice work (NMDAR pore blockers, Kv7, tonic GABA, ethosuximide as T-type reference) into one page with ranges tied to exposure bands, controls, decisions per result and limits; then send ADV one line with the next opportunity chosen among at least three real roadmap alternatives",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV message to SCI successor 2026-11-20 (NEXT, one sitting)",
+     "accepted_at": "2026-11-20T08:49:03Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/bridge_slice_panel_sci_20261120/BRIDGE_SLICE_PANEL_ONE_PAGE_SCI_20261120.md; v3.1 line 6.17; one line to ADV with the next opportunity (RP-018) among four roadmap rows",
+     "updated_at": "2026-11-20T08:50:03Z"
     }
    ]
   }
@@ -910,6 +919,13 @@
    "at": "2026-11-20T08:41:05Z",
    "source": "advisor_pilot_20261113/assignments/ADV-100.md (host decision recorded retrospectively); ADV message to SCI successor 2026-11-20 item 3",
    "step_sha256": "c6e54d802a34",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T08:49:03Z",
+   "source": "ADV message to SCI successor 2026-11-20 (NEXT, one sitting)",
+   "step_sha256": "eb01ee88095e",
    "reopened_block": false,
    "authorised_by": null
   }
