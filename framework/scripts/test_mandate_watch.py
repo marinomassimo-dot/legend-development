@@ -120,10 +120,30 @@ class Watch(unittest.TestCase):
             retire.reset_mock(); args.deliver = "none"
             mw._check_all(args)
             retire.assert_called_once_with(TASK, [], execute=False)
-            for state in ("PAUSED", "COMPLETE", "UNKNOWN", "BLOCKED"):
+            # 2026-11-20: a released predecessor is housekeeping about THAT host, independent of the successor's queue: BLOCKED (waiting) and COMPLETE
+            # (complete pending, the standing mandates) are looked at as well; PAUSED, UNKNOWN and DUPLICATE_HOST are not.
+            for state in ("BLOCKED", "COMPLETE", "STOPPED_RESUMABLE"):
+                retire.reset_mock(); checked.return_value = {"state": state, "action": "NONE"}
+                mw._check_all(args)
+                retire.assert_called_once_with(TASK, [], execute=False)
+            for state in ("PAUSED", "UNKNOWN", "DUPLICATE_HOST"):
                 retire.reset_mock(); checked.return_value = {"state": state, "action": "NONE"}
                 mw._check_all(args)
                 retire.assert_not_called()
+
+    def test_the_states_a_real_classification_gives_to_waiting_and_complete_pending_mandates_are_the_ones_that_retire(self):
+        """Tie the set to the real classifier: COMPLETE_PENDING and ALL_BLOCKED must land in a state that reaches the catch-up; a PAUSED or CANCELLED record must not."""
+        kw = dict(session=None, session_list_ok=True, bound=True, idle_seconds=None, pending={}, signature="s", now=0.0)
+        waiting = mw.classify({"verdict": "ALL_BLOCKED", "message": "all steps blocked"}, **kw)
+        pending = mw.classify({"verdict": "COMPLETE_PENDING", "message": "every step is DONE"}, **kw)
+        self.assertEqual((waiting["state"], pending["state"]), ("BLOCKED", "COMPLETE"))
+        self.assertTrue({waiting["state"], pending["state"]} <= set(mw.RETIRE_STATES))
+        for word in ("PAUSED", "CANCELLED"):
+            stopped = mw.classify({"verdict": "COMPLETE_PENDING", "message": "block is " + word}, **kw)
+            self.assertEqual(stopped["state"], "PAUSED")
+            self.assertNotIn(stopped["state"], mw.RETIRE_STATES)
+        self.assertNotIn("UNKNOWN", mw.RETIRE_STATES)
+        self.assertNotIn("DUPLICATE_HOST", mw.RETIRE_STATES)
 
     def test_new_unmerged_task_is_checked_in_its_registered_worktree(self):
         e = self.env(record())
