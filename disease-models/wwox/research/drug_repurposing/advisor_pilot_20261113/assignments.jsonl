@@ -200,3 +200,5 @@
 {"assessment": "HOST", "id": "ADV-102", "key": "bridge-t-type-compound-sheets-batch11", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-20T07:25:09Z"}
 {"evidence": "SendMessage receipt msg_id 77c48262-b9e9-4bf7-b6f4-a9b53f6e4c9c to SCI (f7670fc3)", "id": "ADV-101", "state": "SENT", "to": ["SCI"], "utc": "2026-11-20T07:25:26Z"}
 {"evidence": "SendMessage receipt msg_id dd07db27-e87d-47e2-a343-b2df59356e8c to HE (29e50812)", "id": "ADV-102", "state": "SENT", "to": ["HE"], "utc": "2026-11-20T07:25:26Z"}
+{"assessment": "HOST", "id": "ADV-103", "key": "agent-sheet-quantities-table-for-comparisons", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-20T08:44:14Z"}
+{"evidence": "SendMessage receipt msg_id 7b4d1294-c7ee-4b05-a10b-d6d1fa39fc0d to HE", "id": "ADV-103", "state": "SENT", "to": ["HE"], "utc": "2026-11-20T08:44:23Z"}
