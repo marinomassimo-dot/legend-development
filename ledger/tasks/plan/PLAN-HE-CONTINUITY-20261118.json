@@ -318,11 +318,13 @@
     },
     {
      "step": "ADV-108: CI 'Regression tests' red on main since #1513: reproduce the CI step on the exact SHA, list every failing test with owner, cause class and first red SHA, fix what is HE's, route the rest, deliver the table and what a green main needs",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-108",
      "accepted_at": "2026-11-20T13:22:43Z",
-     "authorised_by": "ADV-108 assignment 2026-11-20 13:10Z"
+     "authorised_by": "ADV-108 assignment 2026-11-20 13:10Z",
+     "evidence": "table delivered to ADV and IT (CI-equivalent run on 173f75da4: 2 suites, 4 tests red, first-red SHAs by bisect); tick line CI RED ON MAIN (ci_runs.red_streak, 2 tests; real repo: red since #1513, 58 runs)",
+     "updated_at": "2026-11-20T15:09:12Z"
     },
     {
      "step": "ADV-113: (1) IT50-Q09 EBP activity of the M1-selective comparator of the benztropine/clemastine reagent pair (by-molecule recipe, sheet_query-compatible line if a number is found); (2) WO-32 literature half: verified bounded null for class IIa HDACs in oligodendrocyte myelination (TMP195); three-pass rule, abstract-only marked, no dose",
