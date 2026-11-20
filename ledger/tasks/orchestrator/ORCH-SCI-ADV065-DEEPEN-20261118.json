@@ -471,6 +471,15 @@
      "accepted_at": "2026-11-20T06:19:11Z",
      "evidence": "dated line on gsk3_shared_premise_sci_20261120/GSK3_VS_OLIGODENDROCYTE_CLASS_ONE_UNIT_NOTE_SCI_20261120.md (evidence bases compared, not merit; no ranking)",
      "updated_at": "2026-11-20T06:20:12Z"
+    },
+    {
+     "step": "Ganaxolone remyelination (PMID 31332963) full-text passage reading: what a pup-compatible exposure, model and endpoint would add; and IT's v3.2 four-arm Holm and n correction carried as a dated line on v3.1",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV MEETING-20261120T061814Z decision (c) and IT message of 2026-11-20 (peer messages, scope inside the accepted ADV assignment)",
+     "accepted_at": "2026-11-20T06:24:41Z",
+     "evidence": "gsk3_shared_premise_sci_20261120/GANAXOLONE_REMYELINATION_READING_SCI_20261120.md and v3.1 section 6.8 (four-arm Holm and n)",
+     "updated_at": "2026-11-20T06:24:41Z"
     }
    ]
   }
@@ -830,6 +839,13 @@
    "at": "2026-11-20T06:19:11Z",
    "source": "MEETING-20261120T061814Z reply: item named in answer (2) to ADV, started by SCI",
    "step_sha256": "c64c55ac524c",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T06:24:41Z",
+   "source": "ADV MEETING-20261120T061814Z decision (c) and IT message of 2026-11-20 (peer messages, scope inside the accepted ADV assignment)",
+   "step_sha256": "fe97f4070b13",
    "reopened_block": false,
    "authorised_by": null
   }
