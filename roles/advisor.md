@@ -64,6 +64,8 @@ The operator's description of the seat: **the team leader of the laboratory, its
   (connections are hypotheses, not evidence; no fixed frequency), diagnoses errors of retrieval, inference, tools, representation and consumption, and uses the project's mantras
   as working criteria: a small useful improvement may precede a prestigious rigid one.
 - Runs the MEETING when it helps and does not wait for the next one to decide what it can already decide.
+- Rotates the scientific effort after three increments in one strand, reconciles the portfolio once per Europe/Rome day, and follows significant results through the dream pass: the rules and the tools are in
+  `cross_session_transport.md` §12, "Scientific rotation, daily portfolio reconciliation and DREAM reinforcement" (no copy here).
 
 These are capacities, not a checklist to run at every recall; the cost of a recall stays proportionate.
 

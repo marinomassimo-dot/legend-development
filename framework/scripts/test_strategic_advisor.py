@@ -339,6 +339,163 @@ class UncheckedWaits(unittest.TestCase):
         self.assertEqual(waits, {"p": True, "q": False})
 
 
+class RotationReconcileDream(unittest.TestCase):
+    """2026-11-20 (operator): scientific rotation after three increments in one strand, daily portfolio reconciliation by Europe/Rome day, and the dream pass after a significant result. Every obligation is derived
+    from the files (the assignment log, the portfolio, the task records), so a new session finds it; none of it blocks work."""
+    NOW = dt.datetime(2026, 11, 20, 12, 0, tzinfo=dt.timezone.utc)
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.campaign = self.root / "camp"; self.campaign.mkdir()
+        (self.root / "ledger" / "tasks" / "orchestrator").mkdir(parents=True)
+        (self.root / sa.PORTFOLIO_REL).parent.mkdir(parents=True)
+        for each in (patch.object(sa, "ROOT", self.root), patch.object(sa, "DREAM_RULE_FROM", "2026-11-20T00:00:00Z"), patch.dict(os.environ, {"LEGEND_ADVISOR_NOW": "2026-11-20T12:00:00Z"})):
+            each.start(); self.addCleanup(each.stop)
+
+    def log(self, **row):
+        with (self.campaign / "assignments.jsonl").open("a") as fh:
+            fh.write(json.dumps({"utc": "2026-11-20T08:00:00Z", **row}) + "\n")
+
+    def inc(self, ident, strand, hhmm, **extra):
+        sa.record_strand(self.campaign, ident, strand, "test basis", at=f"2026-11-20T{hhmm}:00Z", **extra)
+
+    def portfolio(self, rows):
+        head = "\t".join(sa.PORTFOLIO_FIELDS)
+        body = ["\t".join(r.get(k, "") for k in sa.PORTFOLIO_FIELDS) for r in rows]
+        (self.root / sa.PORTFOLIO_REL).write_text("\n".join([head, *body]) + "\n", encoding="utf-8")
+
+    def test_three_increments_in_one_strand_make_the_rotation_due_and_two_do_not(self):
+        self.inc("X1", "agents", "01:00"); self.inc("X2", "agents", "02:00")
+        self.assertEqual(sa.rotation_status(self.campaign)["state"], "OK")
+        self.inc("X3", "agents", "03:00")
+        r = sa.rotation_status(self.campaign)
+        self.assertEqual((r["state"], r["run"]), ("DUE", 3)); self.assertIn("SCIENTIFIC ROTATION DUE", r["line"]); self.assertIn("not another compound in the same question", r["line"])
+        self.assertTrue(any("ROTATION DUE" in ln for ln in sa.discipline_lines(self.campaign)))
+
+    def test_a_different_strand_in_between_breaks_the_run_and_folded_or_harness_work_is_not_counted(self):
+        self.inc("X1", "agents", "01:00"); self.inc("X2", "agents", "02:00"); self.inc("X2b", "agents", "02:30", counts_with="X2")      # producer and verifier of one result: one increment
+        self.inc("H1", "harness", "02:40")                                                                                                  # harness work is not a scientific increment
+        self.assertEqual(sa.rotation_status(self.campaign)["run"], 2)
+        self.inc("Y1", "other", "03:00"); self.inc("X4", "agents", "04:00"); self.inc("X5", "agents", "05:00")
+        self.assertEqual(sa.rotation_status(self.campaign)["run"], 2)                                                                       # the run is the trailing one
+
+    def test_an_open_assignment_in_another_strand_is_the_rotation_under_way_and_none_is_duplicated(self):
+        for i, h in enumerate(("01:00", "02:00", "03:00")):
+            self.inc(f"X{i}", "agents", h)
+        self.log(id="ADV-899", state="DRAFTED", key="old", recipient="Science", strand="myelin", utc="2026-11-19T09:00:00Z"); self.log(id="ADV-899", state="SENT", to=["SCI"])
+        self.assertEqual(sa.rotation_status(self.campaign)["state"], "DUE")                                         # an old assignment still open in another strand is not the rotation
+        self.log(id="ADV-900", state="DRAFTED", key="k", recipient="Science", strand="agents")                       # open work in the dominant strand does not count as a rotation
+        self.assertEqual(sa.rotation_status(self.campaign)["state"], "DUE")
+        self.assertEqual(sa.rotation_status(self.campaign)["open_same"], ["ADV-900"])
+        self.log(id="ADV-901", state="DRAFTED", key="k2", recipient="Science", strand="myelin"); self.log(id="ADV-901", state="SENT", to=["SCI"])
+        r = sa.rotation_status(self.campaign)
+        self.assertEqual((r["state"], r["open_other"]), ("IN_PROGRESS", ["ADV-901"])); self.assertIn("no second rotation", r["line"])
+
+    def test_an_assignment_counts_once_its_recipient_marks_a_step_naming_it_done(self):
+        self.log(id="ADV-910", state="DRAFTED", key="a", recipient="Science", strand="agents"); self.log(id="ADV-910", state="SENT", to=["SCI"])
+        self.assertEqual(sa.increments(self.campaign), [])
+        rec = {"TASK_ID": "ORCH-SCI-T", "ACTOR_ID": "orchestrator", "AUTHORISED_QUEUE_X": {"OBJ_1": {"order": 1, "steps": [{"step": "ADV-910 work", "status": "DONE", "evidence": "commit abc"}]}}}
+        (self.root / "ledger/tasks/orchestrator/ORCH-SCI-T.json").write_text(json.dumps(rec))
+        self.assertEqual([r["id"] for r in sa.increments(self.campaign)], ["ADV-910"])
+        self.assertNotIn("STRAND", sa.assignment_states(self.campaign)["ADV-910"]["levels"])                          # the metadata events are not evidence levels
+
+    def test_a_deferral_is_recorded_stays_visible_and_ends_when_another_strand_concludes(self):
+        for i, h in enumerate(("01:00", "02:00", "03:00")):
+            self.inc(f"X{i}", "agents", h)
+        sa.defer_rotation(self.campaign, "a concrete urgency", "after the pilot brief is signed")
+        r = sa.rotation_status(self.campaign)
+        self.assertEqual(r["state"], "DEFERRED"); self.assertIn("still due", r["line"]); self.assertIn("after the pilot brief is signed", r["line"])
+        self.assertEqual(len(sa.defer_rotation(self.campaign, "", "")["warnings"]), 2)                               # nothing refuses: a deferral without reason or resume point is recorded with two warnings
+        sa.defer_rotation(self.campaign, "a concrete urgency", "after the pilot brief is signed")
+        self.log(state="STRAND", id="Z1", strand="myelin", basis="b", at="2026-11-20T11:00:00Z", utc="2026-11-20T11:00:01Z")
+        self.assertEqual(sa.rotation_status(self.campaign)["state"], "OK")
+
+    def test_unclassified_recent_executed_work_is_listed_not_counted(self):
+        self.log(id="ADV-920", state="DRAFTED", key="u", recipient="Science"); self.log(id="ADV-920", state="SENT", to=["SCI"], utc="2026-11-20T09:00:00Z")
+        rec = {"TASK_ID": "ORCH-SCI-U", "ACTOR_ID": "orchestrator", "AUTHORISED_QUEUE_X": {"OBJ_1": {"order": 1, "steps": [{"step": "ADV-920", "status": "DONE", "evidence": "commit abc"}]}}}
+        (self.root / "ledger/tasks/orchestrator/ORCH-SCI-U.json").write_text(json.dumps(rec))
+        self.inc("X1", "agents", "01:00")
+        r = sa.rotation_status(self.campaign)
+        self.assertEqual(r["unclassified"], ["ADV-920"]); self.assertIn("UNCLASSIFIED", r["line"])
+
+    def test_the_daily_reconciliation_is_due_once_per_europe_rome_day_and_residuals_stay_visible(self):
+        self.portfolio([{"id": "RP-001", "opportunity": "o", "status": "ready", "updated_utc": "2026-11-01T00:00:00Z"}])
+        self.assertTrue(sa.reconcile_state(self.campaign, self.NOW)["due"])
+        row = sa.attest_reconciliation(self.campaign, "NO_CHANGE", ["RP-404"], [], now=self.NOW)                      # an unknown id is a warning, the attestation is still recorded
+        self.assertTrue(any("not portfolio ids" in w for w in row["warnings"]))
+        self.assertFalse(sa.reconcile_state(self.campaign, self.NOW)["due"])
+        self.log(state="RECONCILED", rome_date="2026-11-19", result="NO_CHANGE", changed=[], residual=[])
+        self.assertFalse(sa.reconcile_state(self.campaign, self.NOW)["due"])
+        late = dt.datetime(2026, 11, 20, 23, 30, tzinfo=dt.timezone.utc)                                          # 00:30 on 21 November in Rome: a new day
+        self.assertTrue(sa.reconcile_state(self.campaign, late)["due"])
+        sa.attest_reconciliation(self.campaign, "CHANGED", ["RP-001"], ["RP-002:Science"], now=late)
+        st = sa.reconcile_state(self.campaign, late)
+        self.assertFalse(st["due"]); self.assertIn("RESIDUAL INCOHERENCES: RP-002 (Science)", st["line"])
+        self.assertEqual(st["last"]["result"], "CHANGED+RESIDUAL")
+
+    def test_reconciliation_finds_rows_whose_event_already_happened(self):
+        self.log(id="ADV-930", state="DRAFTED", key="w", recipient="Science"); self.log(id="ADV-930", state="SENT", to=["SCI"])
+        rec = {"TASK_ID": "ORCH-SCI-W", "ACTOR_ID": "orchestrator", "AUTHORISED_QUEUE_X": {"OBJ_1": {"order": 1, "steps": [{"step": "ADV-930", "status": "DONE", "evidence": "commit abc"}]}}}
+        (self.root / "ledger/tasks/orchestrator/ORCH-SCI-W.json").write_text(json.dumps(rec))
+        self.portfolio([{"id": "RP-001", "opportunity": "o", "status": "waiting", "resume_when": "ADV-930 delivers", "updated_utc": "2026-11-01T00:00:00Z"},
+                        {"id": "RP-002", "opportunity": "o", "status": "waiting", "resume_when": "a new paper", "updated_utc": "2026-11-01T00:00:00Z"}])
+        found = {c["id"]: c for c in sa.reconcile_findings(self.campaign, self.NOW)}
+        self.assertEqual(list(found), ["RP-001"]); self.assertIn("already concluded", found["RP-001"]["why"]); self.assertEqual(found["RP-001"]["owner"], "Science")
+
+    def test_reconciliation_also_lists_ready_rows_named_by_a_later_assignment_and_backlog_rows_named_in_a_delivery(self):
+        (self.campaign / "assignments").mkdir()
+        (self.campaign / "assignments" / "ADV-940.md").write_text("roadmap_link: RP-001 and nothing else\n")
+        self.log(id="ADV-940", state="DRAFTED", key="k", recipient="Science", utc="2026-11-20T09:00:00Z")
+        self.portfolio([{"id": "RP-001", "opportunity": "o", "status": "ready", "updated_utc": "2026-11-01T00:00:00Z"},
+                        {"id": "RP-002", "opportunity": "o", "status": "backlog", "updated_utc": "2026-11-01T00:00:00Z"},
+                        {"id": "RP-003", "opportunity": "o", "status": "ready", "updated_utc": "2026-11-20T10:00:00Z"}])
+        with patch.object(sa, "_git", return_value="abc1234 SCI: RP-002 result delivered"):
+            found = {c["id"]: c["why"] for c in sa.reconcile_findings(self.campaign, self.NOW)}
+        self.assertEqual(sorted(found), ["RP-001", "RP-002"])                                                    # RP-003 was updated after the assignment: not listed
+        self.assertIn("ADV-940", found["RP-001"]); self.assertIn("recent delivery", found["RP-002"])
+
+    def test_a_dream_connection_reaches_its_consumer_and_is_listed_until_the_consumer_absorbs_it(self):
+        self.portfolio([{"id": "RP-001", "opportunity": "o", "status": "ready", "updated_utc": "2026-11-20T09:00:00Z"}])
+        self.inc("X1", "agents", "10:00")
+        self.log(state="DREAM", ids=["X1"], connections=[{"to": "RP-001", "what": "a comparator the myelin row lacks"}], none_reason="", counter="contrary result kept", utc="2026-11-20T11:00:00Z")
+        found = {c["id"]: c["why"] for c in sa.reconcile_findings(self.campaign, self.NOW)}
+        self.assertIn("DREAM connection from X1", found["RP-001"])
+        sa.portfolio_update({"id": "RP-001", "next_action": "use the comparator"})                                 # the consumer absorbs it: no longer listed
+        self.assertNotIn("RP-001", {c["id"] for c in sa.reconcile_findings(self.campaign, self.NOW)})
+
+    def test_an_unchanged_portfolio_row_keeps_its_historical_date_and_a_changed_one_moves(self):
+        self.portfolio([{"id": "RP-001", "opportunity": "o", "status": "ready", "next_action": "n", "updated_utc": "2026-11-01T00:00:00Z"}])
+        before = (self.root / sa.PORTFOLIO_REL).read_text()
+        row = sa.portfolio_update({"id": "RP-001", "status": "ready", "next_action": "n"})
+        self.assertEqual(row["updated_utc"], "2026-11-01T00:00:00Z"); self.assertEqual((self.root / sa.PORTFOLIO_REL).read_text(), before)
+        row = sa.portfolio_update({"id": "RP-001", "next_action": "something else"})
+        self.assertEqual(row["updated_utc"], "2026-11-20T12:00:00Z")
+
+    def test_the_dream_pass_is_pending_until_recorded_and_an_unread_consumer_is_a_warning_not_a_refusal(self):
+        self.portfolio([{"id": "RP-001", "opportunity": "o", "status": "ready"}])
+        self.inc("X1", "agents", "10:00")
+        self.assertEqual(sa.dream_pending(self.campaign, self.NOW), ["X1"]); self.assertTrue(any("DREAM PENDING" in ln for ln in sa.discipline_lines(self.campaign)))
+        self.assertTrue(sa.record_dream(self.campaign, [], [], "")["warnings"])                                      # an empty pass is recorded and reported, never refused
+        out = sa.record_dream(self.campaign, ["X1"], [("RP-001", "a comparator for the myelin row"), ("NOWHERE-7", "x")], "")
+        self.assertEqual(len(out["warnings"]), 2)                                                                  # unknown consumer, and no statement on contrary results
+        self.assertEqual(sa.dream_pending(self.campaign, self.NOW), [])
+        self.inc("X2", "agents", "11:00")
+        sa.record_dream(self.campaign, ["X2"], [], "no connection: nothing in the held record bears on it", counter="no contrary result")
+        self.assertEqual(sa.dream_pending(self.campaign, self.NOW), [])
+
+    def test_a_new_session_finds_every_obligation_from_the_files_alone(self):
+        for i, h in enumerate(("01:00", "02:00", "03:00")):
+            self.inc(f"X{i}", "agents", h)
+        sa.defer_rotation(self.campaign, "r", "p")
+        sa.attest_reconciliation(self.campaign, "NO_CHANGE", [], [], now=self.NOW)
+        import importlib
+        fresh = importlib.reload(sa)                                                                                # nothing is kept in memory: reload and read again
+        with patch.object(fresh, "ROOT", self.root):
+            self.assertEqual(fresh.rotation_status(self.campaign)["state"], "DEFERRED")
+            self.assertFalse(fresh.reconcile_state(self.campaign, self.NOW)["due"])
+
+
 class AssignmentFlow(unittest.TestCase):
     """2026-11-20 (ADV, 'Reliable autonomy'): SENT -> TAKEN (a recipient record names the exact id) -> FIRST OUTPUT (a commit subject or added file naming it); flags for a send nobody took and a take with no output."""
     NOW = dt.datetime(2026, 11, 20, 12, 0, tzinfo=dt.timezone.utc)

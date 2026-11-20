@@ -305,6 +305,16 @@
      "authorised_by": "ADV message 2026-11-20 (assignment ADV-103); record kept COMPLETE_PENDING for new assignments",
      "evidence": "sheet_query.py first commit 4645d9e3d (08:47Z); reproduction of the T-type, NMDAR and GSK-3 exposure comparisons run 2026-11-20 11:20Z; spelling-tolerance fix + test (5 tests OK); route: framework/scripts/README.md routing row for sheet_query.py",
      "updated_at": "2026-11-20T11:19:17Z"
+    },
+    {
+     "step": "ADV-107: scientific rotation, daily portfolio reconciliation and DREAM reinforcement in the existing paths (one canonical home, tick lines, commands, tests, reconstruction of the starting point, own portfolio rows)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-107",
+     "accepted_at": "2026-11-20T12:54:45Z",
+     "authorised_by": "ADV-107 and the operator integration 'Scientific Rotation, Daily Portfolio Reconciliation and DREAM Reinforcement' 2026-11-20",
+     "evidence": "strategic_advisor.py strand|rotation|reconcile|dream + tick lines; canonical section in cross_session_transport.md section 12; 222 strategic_advisor tests OK; real programme: tick shows ROTATION IN PROGRESS ADV-106, reconciliation attested today, rows RP-021 RP-010 corrected",
+     "updated_at": "2026-11-20T12:54:45Z"
     }
    ]
   }
@@ -540,6 +550,13 @@
    "step_sha256": "9bb36f54c6ee",
    "reopened_block": false,
    "authorised_by": "ADV message 2026-11-20 (assignment ADV-103); record kept COMPLETE_PENDING for new assignments"
+  },
+  {
+   "at": "2026-11-20T12:54:45Z",
+   "source": "ADV-107",
+   "step_sha256": "187308337d33",
+   "reopened_block": false,
+   "authorised_by": "ADV-107 and the operator integration 'Scientific Rotation, Daily Portfolio Reconciliation and DREAM Reinforcement' 2026-11-20"
   }
  ],
  "VERIFICATION_EVIDENCE": [

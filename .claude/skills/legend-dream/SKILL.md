@@ -13,6 +13,8 @@ A pattern, not a pipeline: consolidate experience, recombine knowledge, re-evalu
 * **On request**, during a session, by name: `legend-dream`, or the helper below.
 * **Not** on every answer. Start with `python3 framework/scripts/dream_pass.py quiet --since <ref or date>`; if it prints `quiet:` and you know of no material change, end with one line and write nothing.
 
+* **After an exploration that closed a significant result** (the ADV host's scientific rotation, `cross_session_transport.md` §12): record the outcome with `strategic_advisor.py dream --id <increment> --to <consumer> --what <connection> --counter <contrary results, context mismatch, reusable control, avoidable duplicate considered>`, or `--none <reason>`. The tick lists `DREAM PENDING` until a line names the increment; it never blocks.
+
 ## Helper (selects inputs; decides nothing)
 
 ```bash

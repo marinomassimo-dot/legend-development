@@ -223,6 +223,10 @@ requests review rather than automatically marking an opportunity complete. New s
 follow-up questions and priority changes keep feeding the same file. The supplied rows are
 operator-requested research opportunities, not findings or proof that work has begun.
 
+## Scientific rotation, daily reconciliation, DREAM (operator, 2026-11-20, permanent)
+
+The rules and the tools live in one place, `framework/protocols/cross_session_transport.md` §12 (subsection of that name); the tick lines `SCIENTIFIC ROTATION DUE / IN PROGRESS / DEFERRED`, `PORTFOLIO RECONCILIATION DUE` and `DREAM PENDING` are the recall, and `strategic_advisor.py strand | rotation | reconcile | dream` are the commands. Nothing refuses and nothing here blocks research.
+
 ## Continuous operation (HE52, 2026-11-14)
 
 A pilot is bounded by its own limits; continuous operation is the operator's persistent, revocable authorisation to continue inside the roadmap. They are two modes of one campaign, never two campaigns.
