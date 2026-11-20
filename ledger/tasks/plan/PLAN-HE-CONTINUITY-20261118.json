@@ -295,6 +295,16 @@
      "accepted_at": "2026-11-20T08:35:41Z",
      "evidence": "landed 0d9c50b24: retire predecessors verified (stop, rm), meeting DUE_SOON, unchecked waits line, assignment flow line with 4 tests, BATCH 11 dated correction; design record section 5; thresholds in README",
      "updated_at": "2026-11-20T08:43:44Z"
+    },
+    {
+     "step": "ADV-103: derived view of the ADV-098 agent sheets (sheet_query.py): bullets verbatim with file:line, COMPARABLE? lines, dated corrections, batch caveats, ChEMBL rows by origin; reproduce the three hand-made comparisons and state what it cannot represent",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-103",
+     "accepted_at": "2026-11-20T11:19:11Z",
+     "authorised_by": "ADV message 2026-11-20 (assignment ADV-103); record kept COMPLETE_PENDING for new assignments",
+     "evidence": "sheet_query.py first commit 4645d9e3d (08:47Z); reproduction of the T-type, NMDAR and GSK-3 exposure comparisons run 2026-11-20 11:20Z; spelling-tolerance fix + test (5 tests OK); route: framework/scripts/README.md routing row for sheet_query.py",
+     "updated_at": "2026-11-20T11:19:17Z"
     }
    ]
   }
@@ -523,6 +533,13 @@
    "step_sha256": "9a36b0748914",
    "reopened_block": false,
    "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T11:19:11Z",
+   "source": "ADV-103",
+   "step_sha256": "9bb36f54c6ee",
+   "reopened_block": false,
+   "authorised_by": "ADV message 2026-11-20 (assignment ADV-103); record kept COMPLETE_PENDING for new assignments"
   }
  ],
  "VERIFICATION_EVIDENCE": [

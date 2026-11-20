@@ -64,9 +64,15 @@ def load(sheets: Path) -> list[dict]:
     return rows
 
 
+def spelling(word: str) -> str:
+    """One name, any hyphenation: SB216763 and SB-216763, TTA-A2 and TTA A2 are the same agent (the sheets use both; a miss on spelling would read as "not named")."""
+    parts = [p for p in re.split(r"[-\s]+|(?<=[A-Za-z])(?=\d)|(?<=\d)(?=[A-Za-z])", word) if p]
+    return r"[-\s]?".join(re.escape(p) for p in parts)
+
+
 def names(agent: str, aliases: list[str]) -> re.Pattern:
     words = [agent, *aliases]
-    return re.compile(r"(?<![\w-])(?:" + "|".join(re.escape(w) for w in words if w) + r")(?![\w])", re.I)
+    return re.compile(r"(?<![\w-])(?:" + "|".join(spelling(w) for w in words if w) + r")(?![\w])", re.I)
 
 
 def tsv_rows(sheets: Path, agent: str, aliases: list[str]) -> list[dict]:

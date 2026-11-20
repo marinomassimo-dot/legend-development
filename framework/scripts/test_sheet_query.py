@@ -64,6 +64,14 @@ class SheetQuery(unittest.TestCase):
         self.assertEqual(sq.query(self.dir, "Alpha", "all")["bullets"], [])                              # a prefix is not the name
         self.assertIn("not named in these sheets", sq.render(sq.query(self.dir, "Gammaxol", "all")))
 
+    def test_a_hyphenation_difference_is_not_an_absence(self):
+        rx = sq.names("SB216763", [])
+        for t in ("SB-216763 beta IC50", "SB216763", "sb 216763"):
+            self.assertTrue(rx.search(t), t)
+        self.assertFalse(rx.search("SB2167631"))                                                      # still a whole word
+        self.assertTrue(sq.names("TTA-A2", []).search("TTA A2") and sq.names("TTA-A2", []).search("TTAA2"))
+        self.assertFalse(sq.names("TTA-A2", []).search("TTA-A21"))
+
     def test_rows_from_one_document_are_one_origin_and_the_same_value_in_two_documents_is_flagged(self):
         o = sq.query(self.dir, "Alphaxol", "potency")["origin"]
         self.assertEqual(o["documents"], {"DOC1 (2011)": 2, "DOC2 (2020)": 1})
