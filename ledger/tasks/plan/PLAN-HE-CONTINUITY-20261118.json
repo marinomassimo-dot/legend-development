@@ -190,11 +190,12 @@
     },
     {
      "step": "Day P2: completion-to-continuation gap: which mandate continues, how closure reaches the recipient, when direction is chosen, acceptance, records reflect current work; real passage to new authorised work",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
      "source": "operator mandate 2026-11-19 harness continuation (ACTOR_ID plan) P2",
      "accepted_at": "2026-11-19T08:28:36Z",
-     "updated_at": "2026-11-19T10:51:48Z"
+     "updated_at": "2026-11-20T02:27:03Z",
+     "evidence": "Two closures observed from the assignments log and commit times (2026-11-20): ADV-095 proteostasis result 01:11:02Z -> ADV-099 SENT 01:13:20Z (2 min 18 s); ADV-099 result 01:37:40Z -> ADV-100 SENT 02:16:16Z (38 min 36 s, SCI meanwhile working its checkpoint and the GSK-3 interactome follow-up; the ADV-100 text was held for IT's carry per the IT59 commit). Reported to ADV; the restart recipe gap (stall after text-only bind, three times) fixed in the README row."
     },
     {
      "step": "Day P3: radar relevance: small sample diagnosis, bridge required, before/after if a small change is justified, else diagnosis to ADV",
@@ -252,10 +253,12 @@
     },
     {
      "step": "Fix trace_claim_foundation.py supporting_papers: a Claim links field that begins 'none' is no link (14 PAPER records, 21 false edges); check support_linkage.py; tests; regenerate derived",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "SCI message 2026-11-19 (anchor-integrity scan defect, handed to HE)",
-     "accepted_at": "2026-11-19T14:09:16Z"
+     "accepted_at": "2026-11-19T14:09:16Z",
+     "evidence": "Already landed in c08dc82f8 (supporting_papers reads declared_claim_links; support_linkage.py already used it); test_a_none_declaration_that_names_claims_is_no_edge; 22 trace_claim_foundation tests OK on main 2026-11-20; no derived file depends on it.",
+     "updated_at": "2026-11-20T02:27:26Z"
     },
     {
      "step": "Read the first radar briefing after the bridge change (2026-11-20T05:20Z) and report whether anything beyond the lexical bridge is justified",
