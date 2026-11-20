@@ -1,0 +1,58 @@
+{
+ "y_ticks_px": [
+  139.5,
+  193.0,
+  246.5,
+  299.5,
+  352.5,
+  406.0,
+  459.5
+ ],
+ "y_px_per_unit": 53.28585790884716,
+ "series": {
+  "WT": [
+   {
+    "x_px": 189.0,
+    "mean_A": 0.1,
+    "mean_B": 0.1,
+    "upper_end_A": 0.41,
+    "lower_end_A": -0.22,
+    "half_range_A": 0.32,
+    "core_px": 17
+   }
+  ],
+  "KO": [
+   {
+    "x_px": 263.0,
+    "mean_A": 3.6,
+    "mean_B": 3.59,
+    "upper_end_A": 4.11,
+    "lower_end_A": 3.08,
+    "half_range_A": 0.52,
+    "core_px": 20
+   }
+  ],
+  "LD": [
+   {
+    "x_px": 337.0,
+    "mean_A": 1.8,
+    "mean_B": 1.8,
+    "upper_end_A": 1.92,
+    "lower_end_A": 0.77,
+    "half_range_A": 0.57,
+    "core_px": 17
+   }
+  ],
+  "HD": [
+   {
+    "x_px": 410.0,
+    "mean_A": 0.3,
+    "mean_B": 0.3,
+    "upper_end_A": 0.77,
+    "lower_end_A": -0.17,
+    "half_range_A": 0.47,
+    "core_px": 20
+   }
+  ]
+ }
+}

@@ -1,0 +1,256 @@
+{
+ "x_ticks_px_found": [
+  250.5,
+  335.5,
+  420.0,
+  422.5,
+  506.5,
+  592.5,
+  677.0,
+  679.0,
+  763.5,
+  849.5,
+  934.0,
+  936.0,
+  1020.5
+ ],
+ "x_ticks_used_px": [
+  250.5,
+  506.5,
+  763.5,
+  1020.5
+ ],
+ "y_ticks_px_found": [
+  111.0,
+  239.5,
+  368.0,
+  496.5,
+  624.5
+ ],
+ "y_label_centres_px": [
+  109.5,
+  237.5,
+  366.0,
+  494.5,
+  623.0
+ ],
+ "y_px_per_unit_A": 25.680015576323996,
+ "y_px_per_unit_B": 25.680015576323992,
+ "series": {
+  "WT": [
+   {
+    "age": 0.0,
+    "status": "no marker core (hidden, absent or outside the colour mask)"
+   },
+   {
+    "age": 5.0,
+    "value_A": 5.44,
+    "value_B": 5.37,
+    "marker_px_wh": [
+     17,
+     16
+    ]
+   },
+   {
+    "age": 10.0,
+    "value_A": 7.11,
+    "value_B": 7.04,
+    "marker_px_wh": [
+     17,
+     16
+    ]
+   },
+   {
+    "age": 15.0,
+    "value_A": 9.1,
+    "value_B": 9.03,
+    "marker_px_wh": [
+     16,
+     16
+    ]
+   },
+   {
+    "age": 20.0,
+    "value_A": 10.0,
+    "value_B": 9.93,
+    "marker_px_wh": [
+     16,
+     16
+    ]
+   },
+   {
+    "age": 25.0,
+    "value_A": 13.23,
+    "value_B": 13.16,
+    "marker_px_wh": [
+     17,
+     16
+    ]
+   },
+   {
+    "age": 30.0,
+    "value_A": 17.51,
+    "value_B": 17.44,
+    "marker_px_wh": [
+     17,
+     16
+    ]
+   }
+  ],
+  "KO": [
+   {
+    "age": 0.0,
+    "status": "no marker core (hidden, absent or outside the colour mask)"
+   },
+   {
+    "age": 5.0,
+    "value_A": 2.34,
+    "value_B": 2.27,
+    "marker_px_wh": [
+     17,
+     17
+    ]
+   },
+   {
+    "age": 10.0,
+    "value_A": 4.41,
+    "value_B": 4.34,
+    "marker_px_wh": [
+     17,
+     17
+    ]
+   },
+   {
+    "age": 15.0,
+    "value_A": 4.68,
+    "value_B": 4.61,
+    "marker_px_wh": [
+     17,
+     17
+    ]
+   },
+   {
+    "age": 20.0,
+    "status": "no marker core (hidden, absent or outside the colour mask)"
+   },
+   {
+    "age": 25.0,
+    "status": "no marker core (hidden, absent or outside the colour mask)"
+   },
+   {
+    "age": 30.0,
+    "status": "no marker core (hidden, absent or outside the colour mask)"
+   }
+  ],
+  "LD": [
+   {
+    "age": 0.0,
+    "status": "no marker core (hidden, absent or outside the colour mask)"
+   },
+   {
+    "age": 5.0,
+    "status": "no marker core (hidden, absent or outside the colour mask)"
+   },
+   {
+    "age": 10.0,
+    "value_A": 4.93,
+    "value_B": 4.86,
+    "marker_px_wh": [
+     16,
+     10
+    ]
+   },
+   {
+    "age": 15.0,
+    "value_A": 6.45,
+    "value_B": 6.38,
+    "marker_px_wh": [
+     16,
+     16
+    ]
+   },
+   {
+    "age": 20.0,
+    "value_A": 7.33,
+    "value_B": 7.26,
+    "marker_px_wh": [
+     16,
+     17
+    ]
+   },
+   {
+    "age": 25.0,
+    "value_A": 9.49,
+    "value_B": 9.42,
+    "marker_px_wh": [
+     17,
+     16
+    ]
+   },
+   {
+    "age": 30.0,
+    "status": "no marker core (hidden, absent or outside the colour mask)"
+   }
+  ],
+  "HD": [
+   {
+    "age": 0.0,
+    "status": "no marker core (hidden, absent or outside the colour mask)"
+   },
+   {
+    "age": 5.0,
+    "value_A": 3.88,
+    "value_B": 3.81,
+    "marker_px_wh": [
+     17,
+     16
+    ]
+   },
+   {
+    "age": 10.0,
+    "value_A": 6.53,
+    "value_B": 6.46,
+    "marker_px_wh": [
+     17,
+     14
+    ]
+   },
+   {
+    "age": 15.0,
+    "value_A": 7.17,
+    "value_B": 7.1,
+    "marker_px_wh": [
+     17,
+     17
+    ]
+   },
+   {
+    "age": 20.0,
+    "value_A": 8.71,
+    "value_B": 8.64,
+    "marker_px_wh": [
+     16,
+     16
+    ]
+   },
+   {
+    "age": 25.0,
+    "value_A": 12.27,
+    "value_B": 12.2,
+    "marker_px_wh": [
+     17,
+     13
+    ]
+   },
+   {
+    "age": 30.0,
+    "value_A": 15.6,
+    "value_B": 15.53,
+    "marker_px_wh": [
+     17,
+     20
+    ]
+   }
+  ]
+ }
+}

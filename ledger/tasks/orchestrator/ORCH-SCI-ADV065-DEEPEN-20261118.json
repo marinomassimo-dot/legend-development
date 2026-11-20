@@ -663,10 +663,12 @@
     },
     {
      "step": "ADV-120: ONE card (one page, no register) defining 'broad functional recovery' against the single benchmark, neuronal AAV9 gene addition (Obeid 2026 assets, Fig 3B and other panels measured by vector then raster; numbers by script; unread numbers 'per <who>, not re-read'): per endpoint (survival median and first death, weight, glucose, GFAP, myelination structure incl. unmyelinated axons per field 52 vs 26, motor, spontaneous spike-wave rate 0.63 vs 0.13 per hour, Fig 7E) wild type, untreated KO, low and high dose arms, n, age, statistic printed, authors' own limit; three outputs: (1) which planned pilot readouts are comparable to the benchmark endpoints, (2) implied BAR in the same units for broad vs partial for a pharmacological candidate (proposal with basis), (3) what the benchmark never measured that a drug arm must (after-onset treatment, durability, harm endpoints); competing explanation and weakening observation per row; stop rule before numbers; two sittings; integrator check first (counted grep: IT cards C01 and U07, working model threshold line, ADV-095, my KM and SWD measurements); tell ADV when it starts",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-120 (ADV message 2026-11-20 to SCI 4a4f40; assignments/ADV-120.md landing)",
-     "accepted_at": "2026-11-20T16:53:30Z"
+     "accepted_at": "2026-11-20T16:53:30Z",
+     "evidence": "RESULT_ADV120_SCI_20261120.md in benchmark_card_adv120_sci_20261120/ (15 panels, two calibrations, numbers by compute_card_numbers.py, 32 of 32 quotes verified; three outputs; v3.1 line 6.24)",
+     "updated_at": "2026-11-20T17:46:31Z"
     }
    ]
   }

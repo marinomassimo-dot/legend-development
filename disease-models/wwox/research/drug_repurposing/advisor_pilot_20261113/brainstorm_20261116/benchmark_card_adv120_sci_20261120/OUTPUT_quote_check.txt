@@ -1,0 +1,33 @@
+FOUND   O LD treatment modestly, though significantly, extended lifespan relative to untreated Wwox-null controls
+FOUND   O HD produced survival comparable to WT animals (p = 0.78), and significantly extended survival relative to the 
+FOUND   O LD also significantly improved survival compared with the KO + RI controls (p < 0.0001)
+FOUND   O Statistical analysis was performed using Student's t test
+FOUND   O Error bars represent mean ± SD
+FOUND   O LD-treated mice did not survive to P90
+FOUND   O By P20, glucose levels in HD-treated mice were fully normalized and comparable to WT controls, whereas LD-trea
+FOUND   O From P30 onward, glucose levels were normalized across all groups
+FOUND   O LD treatment resulted in partial improvement and HD treatment achieved near-complete rescue
+FOUND   O with no significant sex-dependent differences observed
+FOUND   O Percentages (E) indicate relative MBP intensity compared with WT
+FOUND   O demonstrating dose-dependent restoration of myelination across CC, striatum, and cortex
+FOUND   O Although based on a limited cohort
+FOUND   O We also cannot exclude that the optimal dose was not achieved
+FOUND   O WWOX expression levels were not normalized across promoter conditions
+FOUND   O Therapeutic intervention beyond this period was not feasible
+FOUND   O Treated mice exhibited a dramatic extension in survival, from approximately three weeks to nearly one year
+FOUND   O (C) A graph representing body weight during the first postnatal month in KO + LD and KO + HD mice, with weight
+FOUND   O Long-term growth monitoring demonstrated sustained weight gain and normalization in KO + HD mice up to 180 day
+FOUND   O (E-G) Blood glucose levels (mg/dL) measured at postnatal days 10, 20, and 30
+FOUND   O key gaps regarding optimal dosing and safety remained
+FOUND   O Although no overt toxicity was observed in prior studies
+FOUND   O absence of off-target hepatic expression
+FOUND   R we observed some minor differences in the g-ratio and the number of unmyelinated axons
+FOUND   R Graph represents the number of unmyelinated axons (corpus callosum) per FOV
+FOUND   R WT (n = 3), KO (n = 3), or KO mice injected with AAV9-hSynI-mWwox (n = 3) per field of view (FOV)
+FOUND   R Error bars represent ± SD. (** P < 0.01, *** P < 0.001, Student's t-test)
+FOUND   M Differential quantification of microglia (F) and astrocytes (H) in each treatment
+FOUND   M Error bars represent mean ± SD
+FOUND   M Statistical analysis was performed using Student's t-test (***p<0.001, ****p < 0.0001, ns: not significant)
+FOUND   M Kaplan-Meier survival analysis (till P40) of Wwox-null treated with AAV9-hSyn1-hWWOX (2.63x1011 vg) at P1-P5 (
+FOUND   M A graph representing quantification of hindlimb clasping in wild-type (WT), Wwox-null (KO), and AAV9-Syn1-WWOX
+quotes 32, found 32, missing 0

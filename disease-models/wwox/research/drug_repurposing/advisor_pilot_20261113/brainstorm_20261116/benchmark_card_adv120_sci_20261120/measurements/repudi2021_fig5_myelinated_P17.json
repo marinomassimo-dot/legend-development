@@ -1,0 +1,58 @@
+{
+ "y_ticks_px_found": [],
+ "y_label_centres_px_all": [
+  61.5,
+  105.0,
+  148.5,
+  191.5,
+  235.0,
+  278.5,
+  321.5,
+  364.0,
+  407.5
+ ],
+ "y_label_centres_px_used": [
+  61.5,
+  105.0,
+  148.5,
+  191.5,
+  235.0,
+  278.5,
+  321.5,
+  364.0,
+  407.5
+ ],
+ "calibration_note": "A = label centres; B = x-axis row (lowest tick value) and top label (highest)",
+ "bars_left_to_right": [
+  {
+   "colour": "navy",
+   "x_centre_px": 103.0,
+   "width_px": 29,
+   "top_row": 126.0,
+   "value_A": 130.32,
+   "value_B": 130.3,
+   "cap_value_A": 170.1,
+   "cap_minus_top_A": 39.78
+  },
+  {
+   "colour": "red",
+   "x_centre_px": 152.0,
+   "width_px": 31,
+   "top_row": 309.0,
+   "value_A": 45.66,
+   "value_B": 46.04,
+   "cap_value_A": 58.15,
+   "cap_minus_top_A": 12.49
+  },
+  {
+   "colour": "purple",
+   "x_centre_px": 201.0,
+   "width_px": 31,
+   "top_row": 181.0,
+   "value_A": 104.88,
+   "value_B": 104.98,
+   "cap_value_A": 125.23,
+   "cap_minus_top_A": 20.35
+  }
+ ]
+}
