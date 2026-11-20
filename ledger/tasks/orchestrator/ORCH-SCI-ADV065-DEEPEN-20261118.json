@@ -546,10 +546,12 @@
     },
     {
      "step": "ADV-104: second non-neuronal consequence axis for the broad objective: astrocytic gliosis (GFAP) and microglial/inflammatory state: (1) timing vs seizure onset per held line, (2) independent modifiability evidence, (3) pup-compatible exposure facts from HE sheets, (4) marginal utility; stop rule before numbers",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV 2026-11-20 message to SCI (ADV-104 registered; text in assignments/ADV-104.md landing within the hour)",
-     "accepted_at": "2026-11-20T09:23:22Z"
+     "accepted_at": "2026-11-20T09:23:22Z",
+     "evidence": "glia_axis_adv104_sci_20261120/ADV104_GLIAL_INFLAMMATORY_AXIS_SCI_20261120.md: no pre-onset glial measurement in any held line, Q2 rule not met (Rett microglia contested), carried as a readout like glucose",
+     "updated_at": "2026-11-20T09:27:16Z"
     }
    ]
   }
