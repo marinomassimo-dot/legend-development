@@ -392,10 +392,12 @@
     },
     {
      "step": "Meeting MEETING-20261120T181839Z reply (CI line, operational defects since 17:00Z, measured research-time cost, window) and launch IT's successor when its checkpoint is on main",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV message 2026-11-20 about MEETING-20261120T181839Z (to HE [cc7acb])",
-     "accepted_at": "2026-11-20T18:18:47Z"
+     "accepted_at": "2026-11-20T18:18:47Z",
+     "evidence": "Meeting reply sent (CI 85 runs red, defects, locking cost, window); IT successor session d003f364 launched 18:27:45Z from checkpoint 3 (sha256 fd89262c... verified by me, old 16743560-...); old released 18:31:06.977Z, successor bound 18:31:14.770Z (7.8 s), first tool call 18:31:16.452Z (1.7 s after bind), handoff RUNNING with 3 calls; CI-equivalent run on 241a1f602 reported separately when it ends",
+     "updated_at": "2026-11-20T18:31:35Z"
     },
     {
      "step": "Two harness fixes in one landing: accept warns when its source is identical to an existing step (step NOT created), and portfolio --upsert works in a linked worktree on that checkout's own TSV; each with a test",
