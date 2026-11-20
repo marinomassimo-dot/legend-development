@@ -635,7 +635,14 @@ def accept_step(root: Path, task_id: str, text: str, source: str, *, authorised_
     steps = objective.setdefault("steps", [])
     existing = next((st for st in steps if isinstance(st, dict) and st.get("source") == source), None)
     if existing is not None:
-        return {"task": task_id, "record": str(path.relative_to(root)), "registered": False, "why": "this source is already registered", "step": existing, **_summary(rec)}
+        # 2026-11-20 (ADV, HE meeting item): a different step text under an already registered source used to answer `registered: false` while the status line still said every step was DONE, so a step
+        # that silently does not exist went unnoticed until its close was refused. One WARNING line now says so (never a refusal; nothing else is written); the same text again stays the quiet idempotent no-op.
+        number = steps.index(existing) + 1
+        same_text = str(existing.get("step", "")).strip() == text
+        warning = ("" if same_text else
+                   f"WARNING: source identical to step {number} ('{str(existing.get('step', ''))[:60]}'): the new step was NOT created; give it a distinct --source")
+        return {"task": task_id, "record": str(path.relative_to(root)), "registered": False, "why": "this source is already registered", "step": existing,
+                **({"warning": warning} if warning else {}), **_summary(rec)}
     step = {"step": text, "status": "TODO", "owner": owner or str(rec.get("ACTOR_ID") or "?"), "source": source, "accepted_at": _utc(now),
             **({"authorised_by": authorised_by.strip()} if authorised_by.strip() else {})}
     steps.append(step)
