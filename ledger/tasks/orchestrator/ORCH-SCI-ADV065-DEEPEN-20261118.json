@@ -561,6 +561,24 @@
      "accepted_at": "2026-11-20T09:35:09Z",
      "evidence": "v3_one_page_sci_20261120/V3_1_DATED_CHANGES_BROAD_AND_BRIDGE_SCI_20261120.md line 6.18 and its CURRENT READING pointer row",
      "updated_at": "2026-11-20T09:35:10Z"
+    },
+    {
+     "step": "ADV-105: targeted external reading: (A) energy supply or glial state corrected AFTER onset in neonatal/paediatric epilepsy (GLUT1-DS, PDH deficiency, ketone-based, DCA, hypoglycaemia seizure models) and maintenance/recovery; (B) juvenile or paediatric exposure per agent; coherence check with ADV-101 null-pup facts; pre-registered stop rule; one paragraph on an energy readout or post-onset arm",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV 2026-11-20 message to SCI (ADV-105 registered; RP-033; assignments/ADV-105.md landing within the hour)",
+     "accepted_at": "2026-11-20T12:09:26Z",
+     "evidence": "energy_axis_adv105_sci_20261120/ADV105_ENERGY_SUPPLY_AFTER_ONSET_SCI_20261120.md (12 of 12 searches, abstract level)",
+     "updated_at": "2026-11-20T12:13:33Z"
+    },
+    {
+     "step": "v3.1 line 6.19 (lactate, BHB, CSF/tissue readout, four weakeners as decision rules) and the RP-023 / T-type dream paragraph",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV 2026-11-20 message to SCI (ADV-105 accepted, decisions 1 and 2)",
+     "accepted_at": "2026-11-20T12:25:21Z",
+     "evidence": "V3_1 line 6.19 and CURRENT READING row; energy_axis_adv105_sci_20261120/ADDENDUM_DREAM_RP023_TTYPE_SCI_20261120.md",
+     "updated_at": "2026-11-20T12:25:21Z"
     }
    ]
   }
@@ -990,6 +1008,20 @@
    "at": "2026-11-20T09:35:09Z",
    "source": "ADV 2026-11-20 message to SCI",
    "step_sha256": "fbabc1e2db59",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T12:09:26Z",
+   "source": "ADV 2026-11-20 message to SCI (ADV-105 registered; RP-033; assignments/ADV-105.md landing within the hour)",
+   "step_sha256": "b7832e654a1f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T12:25:21Z",
+   "source": "ADV 2026-11-20 message to SCI (ADV-105 accepted, decisions 1 and 2)",
+   "step_sha256": "8f5e273f729f",
    "reopened_block": false,
    "authorised_by": null
   }
