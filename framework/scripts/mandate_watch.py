@@ -311,7 +311,8 @@ def bind_timeline(path: Path, task: str) -> dict:
     """Where a session stands on ONE task, from its own transcript: the state of the last marker line, when the current BOUND was written, and whether any tool call came after it. 2026-11-20 (operator's
     morning continuation): the SCI successor of checkpoint L wrote its bind line as a text-only message, the turn ended, and it sat 41 minutes waiting for a message that went to its predecessor. A bind line
     written in the SAME response as a tool call is found at once and the turn goes on (probe 2026-11-20 07:25Z); this reads the difference from the transcript, not from the recipient's word."""
-    out = {"state": "NEVER_BOUND", "bound_at": None, "released_at": None, "tool_calls_after_bind": 0, "first_action_at": None, "last_write": None}
+    out = {"state": "NEVER_BOUND", "bound_at": None, "released_at": None, "tool_calls_after_bind": 0, "first_action_at": None, "last_action_at": None, "last_write": None}
+    active = set()
     try:
         with path.open(encoding="utf-8", errors="replace") as fh:
             for line in fh:
@@ -326,20 +327,28 @@ def bind_timeline(path: Path, task: str) -> dict:
                     out["last_write"] = stamp
                 for text in mc._text_blocks(entry):
                     for kind, t in mc.MARKER_RE.findall(mc._outside_fences(text)):
+                        if kind == "BOUND":
+                            active.add(t)
+                        else:
+                            active.discard(t)
                         if t == task:
                             out["state"] = "BOUND" if kind == "BOUND" else "RELEASED"
                             out["bound_at" if kind == "BOUND" else "released_at"] = stamp
                             if kind == "BOUND":
                                 out["tool_calls_after_bind"] = 0
                                 out["first_action_at"] = None
+                                out["last_action_at"] = None
                 content = (entry.get("message") or {}).get("content") if entry.get("type") == "assistant" and not entry.get("isSidechain") else None
                 if out["state"] == "BOUND" and isinstance(content, list):
                     calls = sum(1 for b in content if isinstance(b, dict) and b.get("type") == "tool_use")
                     out["tool_calls_after_bind"] += calls
                     if calls and out["first_action_at"] is None:
                         out["first_action_at"] = stamp
+                    if calls:
+                        out["last_action_at"] = stamp
     except OSError:
         return {"state": "MISSING", "bound_at": None, "released_at": None, "tool_calls_after_bind": 0, "last_write": None}
+    out["active_tasks"] = sorted(active)
     return out
 
 
@@ -402,6 +411,170 @@ def _address_hint(sessions: list[dict] | None, new_id: str, now: datetime) -> st
     if same:
         text += "; the other row(s) with that name started " + ", ".join(f"{r[2]} min ago" for r in same) + " and belong to other sessions (the predecessor among them): in ListAgents take the row whose 'started' matches, after re-running it"
     return text
+
+
+def _descendants(pid: int) -> list[int] | None:
+    """Linux observation, not a kill list. Unknown process inventory prevents retirement."""
+    parents = {}
+    try:
+        for path in Path("/proc").iterdir():
+            if path.name.isdigit():
+                try:
+                    fields = (path / "stat").read_text().rsplit(")", 1)[1].split()
+                    if fields[0] != "Z":
+                        parents[int(path.name)] = int(fields[1])
+                except FileNotFoundError:             # exited while enumerating
+                    continue
+    except (OSError, ValueError, IndexError):
+        return None
+    found = {pid}
+    while True:
+        more = {child for child, parent in parents.items() if parent in found} - found
+        if not more:
+            return sorted(found - {pid})
+        found.update(more)
+
+
+def retirement_state(task: str, old_id: str, new_id: str, sessions: list[dict] | None,
+                     projects_dir: Path | None = None) -> dict:
+    """Read-only, exact-identity preconditions for stopping ONE released background host.
+
+    `id` from the runtime listing is the stop address; `sessionId` is the transcript identity.
+    Display names and a guessed UUID prefix never authorise an arrest.
+    """
+    out = {"task": task, "old_session": old_id, "new_session": new_id, "verdict": "KEPT"}
+    def keep(reason):
+        return dict(out, reason=reason)
+    if not UUID_RE.fullmatch(old_id) or not UUID_RE.fullmatch(new_id) or old_id == new_id:
+        return keep("distinct full session UUIDs required")
+    if sessions is None:
+        return keep("runtime inventory unavailable")
+    old_path = transcript_for_session(old_id, projects_dir)
+    new_path = transcript_for_session(new_id, projects_dir)
+    if old_path is None or new_path is None:
+        return keep("transcript missing or ambiguous; absence is not a release")
+    old, new = bind_timeline(old_path, task), bind_timeline(new_path, task)
+    if old.get("state") != "RELEASED" or old.get("active_tasks") != []:
+        return keep("predecessor has not released every bound mandate")
+    if new.get("state") != "BOUND" or not new.get("tool_calls_after_bind"):
+        return keep("successor has not bound and acted")
+    try:
+        release = datetime.fromisoformat(old["released_at"].replace("Z", "+00:00"))
+        bound = datetime.fromisoformat(new["bound_at"].replace("Z", "+00:00"))
+        action = datetime.fromisoformat(new["last_action_at"].replace("Z", "+00:00"))
+        if action < release:
+            return keep("successor has not acted after predecessor release")
+        if bound < release:
+            out["overlap_observed"] = True           # preserve the mistake; do not make it an eternal cleanup block
+    except (AttributeError, KeyError, TypeError, ValueError):
+        return keep("release/bind timestamps unavailable or incompatible")
+    hosts = live_bound_sessions(task, sessions, projects_dir)
+    if [h["session_id"] for h in hosts] != [new_id]:
+        return keep("successor is not the unique live bound host")
+    rows = [s for s in sessions if s.get("sessionId") == old_id]
+    if not rows:
+        return dict(out, verdict="ALREADY_STOPPED", reason="released predecessor absent from live inventory")
+    if len(rows) != 1:
+        return keep("predecessor inventory ambiguous")
+    old_row = rows[0]
+    runtime_id = old_row.get("id")
+    if not isinstance(runtime_id, str) or not re.fullmatch(r"[A-Za-z0-9_-]+", runtime_id) or sum(s.get("id") == runtime_id for s in sessions) != 1:
+        return keep("unique runtime stop address unavailable")
+    if old_row.get("kind") != "background" or old_row.get("status") != "idle" or old_row.get("state") != "done":
+        return keep("predecessor is not an idle, completed background turn")
+    pid = old_row.get("pid")
+    start = _start_ticks(pid) if isinstance(pid, int) and pid > 1 else None
+    if start is None or pid == os.getpid():
+        return keep("predecessor process identity unavailable")
+    children = _descendants(pid)
+    if children is None or children:
+        return keep("predecessor has live descendants or process inventory is unavailable")
+    # Jobs are currently task-tagged, not session-owned: do not infer that they belong
+    # only to the successor. A later recall can retry after completion.
+    try:
+        files = list(jobs_dir(task).glob("*.json"))
+        jobs = load_jobs(task)
+        if any(j.get("state") == "ALIVE" for j in jobs):
+            return keep("task still has a live job; ownership is not session-specific")
+        if len(jobs) != len(files):
+            return keep("task job inventory incomplete")
+    except (OSError, ValueError, KeyError):
+        return keep("task job inventory unavailable")
+    return dict(out, verdict="ELIGIBLE", runtime_id=runtime_id, pid=pid, start_ticks=start,
+                reason="released background predecessor; unique acting successor; no observed work")
+
+
+def retire_predecessor(task: str, old_id: str, new_id: str, *, execute: bool = False,
+                       projects_dir: Path | None = None) -> dict:
+    """Supported stop only, followed by independent liveness verification. Never rm/kill.
+
+    A runtime refusal is returned once, not retried through another command or permission mode.
+    Two fresh observations reduce races; the runtime does not provide atomic compare-and-stop.
+    """
+    plan = retirement_state(task, old_id, new_id, list_sessions(), projects_dir)
+    if execute and plan["verdict"] == "ALREADY_STOPPED" and _load("retirement-" + old_id).get("verdict") in ("STOP_PENDING", "STOP_UNVERIFIED"):
+        _save("retirement-" + old_id, plan)
+        log_event("predecessor_retirement", **plan)
+    if not execute or plan["verdict"] != "ELIGIBLE":
+        return plan
+    held = _load("retirement-" + old_id)
+    if held.get("verdict") in ("STOP_PENDING", "STOP_REFUSED", "STOP_UNVERIFIED"):
+        return dict(plan, verdict="STOP_UNVERIFIED" if held["verdict"] == "STOP_PENDING" else held["verdict"],
+                    retry_suppressed=True, reason="previous stop attempt needs runtime resolution; not retried automatically")
+    fresh = retirement_state(task, old_id, new_id, list_sessions(), projects_dir)
+    identity = ("runtime_id", "pid", "start_ticks")
+    if fresh["verdict"] != "ELIGIBLE" or any(fresh.get(k) != plan.get(k) for k in identity):
+        return dict(fresh, verdict="KEPT", reason="preconditions or process identity changed before stop")
+    key = "retirement-" + old_id
+    pending = dict(fresh, verdict="STOP_PENDING")
+    _save(key, pending)
+    if _load(key) != pending:
+        return dict(fresh, verdict="KEPT", reason="cannot persist the stop attempt; no stop issued")
+    try:
+        result = subprocess.run([claude_bin(), "stop", fresh["runtime_id"]],
+                                capture_output=True, text=True, timeout=30)
+        if result.returncode:
+            out = dict(fresh, verdict="STOP_REFUSED", reason=(result.stderr or result.stdout or "runtime stop failed")[:300])
+        else:
+            out = dict(fresh, verdict="STOP_UNVERIFIED", reason="stop returned success but retirement is not independently verified")
+            # The supported stop acknowledges before process teardown completes (live
+            # probe, 2026-11-20). Observe briefly; never issue a second stop.
+            for attempt in range(11):
+                remaining = list_sessions()
+                alive = _start_ticks(fresh["pid"]) == fresh["start_ticks"] and _proc_state(fresh["pid"]) not in (None, "Z")
+                hosts = live_bound_sessions(task, remaining, projects_dir)
+                if remaining is not None and not alive and not any(s.get("sessionId") == old_id for s in remaining) and [h["session_id"] for h in hosts] == [new_id]:
+                    out = dict(fresh, verdict="RETIRED", reason="predecessor absent from live inventory and original process no longer alive; files untouched")
+                    break
+                if attempt < 10:
+                    time.sleep(0.5)
+    except (OSError, subprocess.SubprocessError) as exc:
+        out = dict(fresh, verdict="STOP_REFUSED", reason=str(exc)[:300])
+    _save(key, out)
+    log_event("predecessor_retirement", **out)
+    return out
+
+
+def retire_released(task: str, sessions: list[dict] | None, *, execute: bool = False) -> list[dict]:
+    """Existing watch's catch-up: exact released predecessors of a unique acting task host.
+    No name-based sweep, no new scheduler, no revival or deletion of a historical session.
+    """
+    hosts = live_bound_sessions(task, sessions)
+    if len(hosts) != 1:
+        return []
+    new_id = hosts[0]["session_id"]
+    out = []
+    for row in sessions or []:
+        old_id = row.get("sessionId", "")
+        if old_id == new_id or row.get("kind") != "background":
+            continue
+        path = transcript_for_session(old_id)
+        if path is not None and cached_binding(path) is None and mc.marker_state(path, task) == "RELEASED":
+            result = retire_predecessor(task, old_id, new_id, execute=execute)
+            out.append(result)
+            if result["verdict"] in ("STOP_REFUSED", "STOP_UNVERIFIED"):
+                break                                      # no alternate wrapper or immediate retry
+    return out
 
 
 def live_bound_sessions(task: str, sessions: list[dict] | None, projects_dir: Path | None = None) -> list[dict]:
@@ -1071,6 +1244,14 @@ def _check_all(a) -> int:
         out = check(task, root=record_root, deliver=a.deliver, quiet_minutes=a.quiet_minutes,
                     sessions=sessions, resume_args=tuple(a.resume_arg))
         out["record_root"] = str(record_root)
+        if out.get("state") in ("RUNNING", "STOPPED_RESUMABLE"):
+            retirements = retire_released(task, sessions, execute=a.deliver == "resume")
+            if retirements:
+                out["predecessor_retirement"] = retirements
+                if not getattr(a, "json", False):
+                    for r in retirements:
+                        if r["verdict"] in ("RETIRED", "STOP_REFUSED", "STOP_UNVERIFIED") and not r.get("retry_suppressed"):
+                            print(f"{r['verdict']} predecessor {r['old_session']}: {r['reason']}")
         results.append(out)
         if not getattr(a, "json", False) and out["action"] == "RESUME":
             print(f"{out['state']} {out['action']} {task}: {out['why']}" + (f" [{out['delivery']}]" if out.get("delivery") else ""))
@@ -1116,12 +1297,13 @@ def main(argv: list[str] | None = None) -> int:
     rl = sub.add_parser("released", help="has the OLD session released this task? (a successor's check, by session id: MISSING, NEVER_BOUND, BOUND or RELEASED; exit 0 only for RELEASED)")
     rl.add_argument("--session", required=True, help="the old session's id (the transcript is found by id, in whichever project folder it lives)")
     rl.add_argument("--task", required=True)
-    ho = sub.add_parser("handoff", help="verify a restart: the predecessor released, the successor bound, and the successor made a tool call after its bind line (RUNNING), or say where it stands; read-only")
+    ho = sub.add_parser("handoff", help="verify a restart; read-only unless --retire-old is explicitly requested")
     ho.add_argument("--task", required=True)
     ho.add_argument("--old", required=True, help="the predecessor's FULL session id")
     ho.add_argument("--new", required=True, help="the successor's session id (a unique prefix of at least 8 characters is enough)")
     ho.add_argument("--within", type=int, default=5, help="minutes a bound successor may take for its first tool call before it is STALLED")
     ho.add_argument("--wait", type=int, default=0, help="seconds to keep checking until RUNNING or STALLED (default: one look)")
+    ho.add_argument("--retire-old", action="store_true", help="after RUNNING, stop only an eligible released background predecessor; preserve conversation and worktree")
     rs = sub.add_parser("resources", help="observed memory, pressure, swap, the cgroups holding most RSS and the live jobs (read-only, no thresholds)")
     rs.add_argument("--top", type=int, default=8)
     e = sub.add_parser("events", help="what the watch decided on this machine")
@@ -1157,6 +1339,13 @@ def main(argv: list[str] | None = None) -> int:
             if res["verdict"] in ("RUNNING", "STALLED", "BOTH_BOUND", "NEW_NOT_FOUND") or time.time() >= deadline:
                 break
             time.sleep(15)
+        if res["verdict"] == "RUNNING":
+            old_path, new_path = transcript_for_session(a.old), transcript_for_session(a.new)
+            old_id, new_id = (old_path.stem if old_path else a.old), (new_path.stem if new_path else a.new)
+            res["predecessor_retirement"] = retire_predecessor(a.task, old_id, new_id, execute=a.retire_old)
+            if a.retire_old and res["predecessor_retirement"]["verdict"] not in ("RETIRED", "ALREADY_STOPPED"):
+                print(json.dumps(res, indent=1, sort_keys=True, ensure_ascii=False))
+                return 5
         print(json.dumps(res, indent=1, sort_keys=True, ensure_ascii=False))
         return {"RUNNING": 0, "STALLED": 4, "BOTH_BOUND": 3, "NEW_NOT_FOUND": 2}.get(res["verdict"], 1)
     if a.cmd == "resources":

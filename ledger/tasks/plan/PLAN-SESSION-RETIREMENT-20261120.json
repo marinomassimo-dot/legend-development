@@ -1,0 +1,43 @@
+{
+  "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+  "TASK_ID": "PLAN-SESSION-RETIREMENT-20261120",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-11-20",
+  "OBJECTIVE": "Make safe background predecessor retirement part of the existing handoff and hourly watch; preserve history, worktrees and active work; no repeated operator prompt.",
+  "branch": "codex/autonomous-session-retirement",
+  "CURRENT_STATE": "IN_PROGRESS",
+  "AUTHORISED_QUEUE_20261120": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_1": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Diagnose failed retirement and existing capabilities",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "CLI help, runtime inventory and transcript observation; governance/design_records/session_retirement_20261120.md"
+        },
+        {
+          "step": "Implement protected handoff and existing-watch catch-up with canonical procedure",
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "framework/scripts/mandate_watch.py; framework/protocols/cross_session_transport.md section 12"
+        },
+        {
+          "step": "Verify refusal cases, fresh-clone regressions and live idempotency",
+          "status": "IN_PROGRESS",
+          "owner": "plan"
+        },
+        {
+          "step": "Publish exact checked SHA and confirm host deployment",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    }
+  }
+}
