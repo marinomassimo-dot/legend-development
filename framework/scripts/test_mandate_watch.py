@@ -558,6 +558,19 @@ class HandoffCheck(unittest.TestCase):
             both = self.write(td, "n1.jsonl", [self.entry(41, "assistant", "MANDATE_BOUND: T-1")])
             self.assertEqual(self.state(old_bound, both)["verdict"], "BOTH_BOUND")
 
+    def test_a_successor_that_works_without_the_marker_is_told_why_it_is_not_bound(self):
+        with tempfile.TemporaryDirectory() as td:
+            old = self.write(td, "o.jsonl", [self.entry(40, "assistant", "MANDATE_RELEASED: T-1")])
+            claims = self.write(td, "n.jsonl", [self.entry(41, "user", "launch brief")] + [self.entry(41 + i, "assistant", "I am bound on T-1", tool=True) for i in range(4)])
+            r = self.state(old, claims)
+            self.assertEqual(r["verdict"], "WAITING_FOR_BIND")
+            self.assertEqual(r["successor_turns_since_release"], 4)
+            self.assertIn("no plain `MANDATE_BOUND: T-1` line", r["next"])
+            quiet = self.write(td, "q.jsonl", [self.entry(41, "user", "launch brief"), self.entry(42, "assistant", "reading")])
+            r = self.state(old, quiet)
+            self.assertNotIn("successor_turns_since_release", r)
+            self.assertIn("send it the follow-up now", r["next"])
+
     def test_a_text_only_bind_is_stalled_after_the_allowed_minutes_and_a_bind_with_a_tool_call_is_running(self):
         with tempfile.TemporaryDirectory() as td:
             old = self.write(td, "o.jsonl", [self.entry(40, "assistant", "MANDATE_RELEASED: T-1")])
