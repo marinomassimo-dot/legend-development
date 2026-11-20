@@ -120,5 +120,46 @@
    "Trichomonas vaginalis (Trichomonas vaginalis) n=1",
    "Toxoplasma gondii (Toxoplasma gondii) n=1"
   ]
+ },
+ "tazemetostat": {
+  "rows_total": 163,
+  "rows_on_expected_targets": 60,
+  "other_targets": 43,
+  "top_other": [
+   "Unchecked (None) n=27",
+   "KARPAS-422 (Homo sapiens) n=5",
+   "MDA-MB-231 (Homo sapiens) n=5",
+   "BT-549 (Homo sapiens) n=5",
+   "Pfeiffer (Homo sapiens) n=4",
+   "MDA-MB-468 (Homo sapiens) n=4",
+   "MCF7 (Homo sapiens) n=4",
+   "MCF-10A (Homo sapiens) n=4"
+  ]
+ },
+ "tmp195": {
+  "rows_total": 35,
+  "rows_on_expected_targets": 8,
+  "other_targets": 9,
+  "top_other": [
+   "Unchecked (None) n=11",
+   "Class 1 histone deacetylase (Homo sapiens) n=6",
+   "Histone deacetylase 1 (Homo sapiens) n=2",
+   "Protein deacetylase HDAC6 (Homo sapiens) n=2",
+   "Histone deacetylase 8 (Homo sapiens) n=2",
+   "Polyamine deacetylase HDAC10 (Homo sapiens) n=1",
+   "Histone deacetylase 11 (Homo sapiens) n=1",
+   "Histone deacetylase 2 (Homo sapiens) n=1"
+  ]
+ },
+ "10058-f4": {
+  "rows_total": 5,
+  "rows_on_expected_targets": 0,
+  "other_targets": 4,
+  "top_other": [
+   "Unchecked (None) n=2",
+   "MDA-MB-231 (Homo sapiens) n=1",
+   "MDA-MB-468 (Homo sapiens) n=1",
+   "MCF7 (Homo sapiens) n=1"
+  ]
  }
 }

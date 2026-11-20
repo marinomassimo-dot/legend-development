@@ -1,0 +1,106 @@
+{
+ "identity": {
+  "query": "tazemetostat",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL3414621",
+    "record_name": "TAZEMETOSTAT",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL3414621",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL3414621",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:f20362268b9d",
+    "record_name": "Tazemetostat",
+    "match_kind": "NAME_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL4594260",
+    "record_name": "TAZEMETOSTAT HYDROBROMIDE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL3414621",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL4594260",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:a3d8ccc77935",
+    "record_name": "Tazemetostat Hydrobromide",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "EZH2",
+   "EZH1"
+  ],
+  "per_gene": {
+   "EZH2": {
+    "level": "SOURCE_INTERACTION",
+    "n_rows": 61,
+    "rows": [
+     "SOURCE_INTERACTION: CAT:DGIDB:f20362268b9d",
+     "SOURCE_INTERACTION: CAT:DGIDB:f20362268b9d",
+     "SOURCE_INTERACTION: CAT:DGIDB:f20362268b9d",
+     "SOURCE_INTERACTION: CAT:DGIDB:f20362268b9d",
+     "SOURCE_INTERACTION: CAT:DGIDB:f20362268b9d",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL3414621 Ki Homo sapiens"
+    ]
+   },
+   "EZH1": {
+    "level": "MEASURED_ACTIVITY_HUMAN",
+    "n_rows": 5,
+    "rows": [
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL3414621 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL3414621 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL3414621 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL3414621 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL3414621 IC50 Homo sapiens"
+    ]
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL3414621",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 163
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "SMARCB1": 2,
+   "EED": 2,
+   "EHMT2": 2,
+   "ARID1A": 1,
+   "KDM6A": 1,
+   "SMARCA4": 1,
+   "FLT3": 1,
+   "IDH1": 1
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}

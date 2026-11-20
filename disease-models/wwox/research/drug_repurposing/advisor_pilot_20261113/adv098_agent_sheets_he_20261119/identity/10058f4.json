@@ -1,0 +1,13 @@
+{
+ "query": "10058-F4",
+ "identity_state": "NOT_FOUND_BY_NAME in compound_identity.py",
+ "identity_by_structure": {
+  "pubchem_cid": 1271002,
+  "inchikey": "SVXDHPADAXBMFB-JXMROGBWSA-N",
+  "formula": "C12H11NOS2",
+  "iupac": "(5E)-5-[(4-ethylphenyl)methylidene]-2-sulfanylidene-1,3-thiazolidin-4-one",
+  "chembl_by_inchikey": "CHEMBL1568415",
+  "chembl_pref_name": null
+ },
+ "note": "The PubChem record is the E isomer; ChEMBL molecule matched by the same InChIKey. The published agent is written [Z,E] in the 2009 mouse paper title; the geometric form actually tested is not resolved here."
+}

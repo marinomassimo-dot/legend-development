@@ -1,0 +1,12 @@
+{
+ "query": "TMP195",
+ "identity_state": "NOT_FOUND_BY_NAME in compound_identity.py",
+ "identity_by_structure": {
+  "pubchem_cid": 67324851,
+  "inchikey": "QTCSXAUJBQZZSN-UHFFFAOYSA-N",
+  "formula": "C23H19F3N4O3",
+  "chembl_by_inchikey": "CHEMBL4751615",
+  "chembl_pref_name": null
+ },
+ "note": "PubChem name lookup gave the structure; the ChEMBL molecule with the same InChIKey is the one read. A name resolved through one source and checked by structure in a second."
+}
