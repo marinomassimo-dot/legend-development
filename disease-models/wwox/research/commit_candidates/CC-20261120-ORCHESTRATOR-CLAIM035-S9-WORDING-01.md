@@ -38,3 +38,10 @@ The Evidence-boundary note of this claim (`D6`, `BATCH_20261004_004`, `MIRROR-RU
 
 ## 4 · BLIND CHECKS (2026-11-20)
 Check 1: `research/locator_audits/2026-11-20_claim035_wording_it59/AUDIT_REPORT_1_AS_DELIVERED.md` (11 statements; one fresh `legend-delegate`, sonnet/high read back): SUPPORTED 3, SUPPORTED_WITH_LIMIT 7, OVERSHOOT 1 (S04: 'homologous' and the motif span): repaired (the authors' word 'similar', the alignment span 388–412 beside the 388–407 region they call required, the Abstract as the locator of the 'bind directly' and 'inhibited' sentences, the cell experiment of Fig 4c without GSK3β stimulation, the non-exhaustive list of binding support, INFERENZA labels on the two inferences, Cheng's legend wording and day 20). Check 2: `AUDIT_REPORT_2_AS_DELIVERED.md` (8 repaired statements; a second fresh delegate): SUPPORTED 5, SUPPORTED_WITH_LIMIT 3, nothing else. Three small repairs after check 2 (R5 'untransfected' to 'no transfection is mentioned' and the text-and-legends perimeter; the R6 general ANOVA sentence): **unaudited**, narrowing only. Quotes verified verbatim by script against the held bytes in both checks.
+
+## BATCH DISPOSITION — `BATCH_20261120_001` (2026-11-20, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** PART 1 PROPAGATED; PART 2 PROPOSED, NOT APPLIED (reserved item for the operator)
+
+1 record-scoped op on `CLAIM 035`: the additive Evidence-boundary field (B1 to B6 and the unchanged D6 use constraint). **Change class restated: MINOR** (additive; Status, Type, Source, Title, Summary, Clinical meaning and the S9-independence assertion untouched; 'in observation'; no baseline reversal). Part 2 (G1 Title, G4 S9 sentence, G6 Clinical-meaning warning) is **class MAJOR under the D6 ruling of the claim** and stays PROPOSED; the three small repairs of section 4 after check 2 are unaudited and narrowing only. LINT after propagation: no BLOCK (WARN as before). Ranking digest `ff38fcaa61295a5a` to be re-checked after the derived pages are regenerated.
+
