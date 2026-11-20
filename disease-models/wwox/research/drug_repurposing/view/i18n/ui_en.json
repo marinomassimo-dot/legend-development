@@ -1377,6 +1377,7 @@
  "UI_IT.tc_cardfile": "Card file (path in the repository, local use only)",
  "UI_IT.tc_compound_id": "compound identity",
  "UI_IT.tc_crit": "Criteria",
+ "UI_IT.tc_cut": "… shortened in this edition: the full paragraph, with its limits, is in the full edition.",
  "UI_IT.tc_depth": "Depth of reading",
  "UI_IT.tc_for": "Evidence in favour, as written in the card",
  "UI_IT.tc_identity": "Identity and mechanism (as written in the card)",
