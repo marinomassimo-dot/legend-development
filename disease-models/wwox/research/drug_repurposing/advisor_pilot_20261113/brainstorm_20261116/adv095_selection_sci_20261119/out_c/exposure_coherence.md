@@ -11,16 +11,16 @@ Tissue density taken as 1 g/mL; every concentration is TOTAL unless the label sa
 | ethosuximide | brain, same, if the printed value is per g of 1:2 homogenate (tissue = 3 x) | 404.7 ug/g | 2867 | CACNA1I IC50, FLIPR (value reported above 5 mM) | 5000 | 0.573 |
 | memantine | brain total Cmax, 10 mg eq./kg s.c., Tmax 1 h, adult male C57Bl/6 | 72520 nM | 72.52 | IC50 GluN1/2A, -60 mV, HEK293, glutamate-induced (one 2024 document) | 0.84 | 86.3 |
 | memantine | brain total Cmax, 10 mg eq./kg s.c., Tmax 1 h, adult male C57Bl/6 | 72520 nM | 72.52 | IC50 GluN1/2A, -40 mV, same document | 28.1 | 2.58 |
-| memantine | brain total Cmax, 10 mg eq./kg s.c., Tmax 1 h, adult male C57Bl/6 | 72520 nM | 72.52 | IC50 range with 1 mM Mg2+, -66 mV, GluN2A..2D (low) | 1.61 | 45 |
-| memantine | brain total Cmax, 10 mg eq./kg s.c., Tmax 1 h, adult male C57Bl/6 | 72520 nM | 72.52 | IC50 range with 1 mM Mg2+, -66 mV (high) | 13.4 | 5.41 |
+| memantine | brain total Cmax, 10 mg eq./kg s.c., Tmax 1 h, adult male C57Bl/6 | 72520 nM | 72.52 | IC50 range with 1 mM Mg2+, GluN2A..2D, holding potential not stated in the producer text (low) | 1.61 | 45 |
+| memantine | brain total Cmax, 10 mg eq./kg s.c., Tmax 1 h, adult male C57Bl/6 | 72520 nM | 72.52 | IC50 range with 1 mM Mg2+, holding potential not stated in the producer text (high) | 13.4 | 5.41 |
 | memantine | plasma total Cmax, same | 7983 nM | 7.983 | IC50 GluN1/2A, -60 mV, HEK293, glutamate-induced (one 2024 document) | 0.84 | 9.5 |
 | memantine | plasma total Cmax, same | 7983 nM | 7.983 | IC50 GluN1/2A, -40 mV, same document | 28.1 | 0.284 |
-| memantine | plasma total Cmax, same | 7983 nM | 7.983 | IC50 range with 1 mM Mg2+, -66 mV, GluN2A..2D (low) | 1.61 | 4.96 |
-| memantine | plasma total Cmax, same | 7983 nM | 7.983 | IC50 range with 1 mM Mg2+, -66 mV (high) | 13.4 | 0.596 |
+| memantine | plasma total Cmax, same | 7983 nM | 7.983 | IC50 range with 1 mM Mg2+, GluN2A..2D, holding potential not stated in the producer text (low) | 1.61 | 4.96 |
+| memantine | plasma total Cmax, same | 7983 nM | 7.983 | IC50 range with 1 mM Mg2+, holding potential not stated in the producer text (high) | 13.4 | 0.596 |
 | memantine | brain total Cmax, 1 mg eq./kg s.c. | 5360 nM | 5.36 | IC50 GluN1/2A, -60 mV, HEK293, glutamate-induced (one 2024 document) | 0.84 | 6.38 |
 | memantine | brain total Cmax, 1 mg eq./kg s.c. | 5360 nM | 5.36 | IC50 GluN1/2A, -40 mV, same document | 28.1 | 0.191 |
-| memantine | brain total Cmax, 1 mg eq./kg s.c. | 5360 nM | 5.36 | IC50 range with 1 mM Mg2+, -66 mV, GluN2A..2D (low) | 1.61 | 3.33 |
-| memantine | brain total Cmax, 1 mg eq./kg s.c. | 5360 nM | 5.36 | IC50 range with 1 mM Mg2+, -66 mV (high) | 13.4 | 0.4 |
+| memantine | brain total Cmax, 1 mg eq./kg s.c. | 5360 nM | 5.36 | IC50 range with 1 mM Mg2+, GluN2A..2D, holding potential not stated in the producer text (low) | 1.61 | 3.33 |
+| memantine | brain total Cmax, 1 mg eq./kg s.c. | 5360 nM | 5.36 | IC50 range with 1 mM Mg2+, holding potential not stated in the producer text (high) | 13.4 | 0.4 |
 | ketamine | brain total, 10 mg/kg i.p., 1 h, adult male C57BL/6 under chronic restraint stress | 0.23 uM | 0.23 | IC50 GluN1/2A, -60 mV, HEK293 (one 2024 document) | 0.5 | 0.46 |
 | ketamine | brain total, 10 mg/kg i.p., 1 h, adult male C57BL/6 under chronic restraint stress | 0.23 uM | 0.23 | IC50 GluN1/2A, -40 mV, same document | 53.3 | 0.00432 |
 | ketamine | brain total, 10 mg/kg i.p., 1 h, adult male C57BL/6 under chronic restraint stress | 0.23 uM | 0.23 | IC50 range with 1 mM Mg2+ (low) | 1.18 | 0.195 |
