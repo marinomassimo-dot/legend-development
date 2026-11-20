@@ -615,6 +615,13 @@
      "accepted_at": "2026-11-20T14:43:19Z",
      "evidence": "wo23_wo12_adv112_sci_20261120/ADV112_WO23_WO12_SCI_20261120.md landed on main daf4685af gate=PASS; pre-registration e60f0c081",
      "updated_at": "2026-11-20T14:56:28Z"
+    },
+    {
+     "step": "ADV-115: public-dataset reuse (RP-012): do astrocyte, microglial and energy-metabolism transcripts change before the first seizures in a developmental epilepsy mouse model with a time course spanning onset; GEO/ArrayExpress metadata first; usable and NOT usable datasets; pre-registered gene sets; implication for the satellite draws P5/P7/P9/P12",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV 2026-11-20 message to SCI (ADV-115; assignments/ADV-115.md)",
+     "accepted_at": "2026-11-20T15:02:03Z"
     }
    ]
   }
@@ -1086,6 +1093,13 @@
    "at": "2026-11-20T14:43:19Z",
    "source": "ADV 2026-11-20 message to SCI (ADV-112; assignments/ADV-112.md)",
    "step_sha256": "acff20433854",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T15:02:03Z",
+   "source": "ADV 2026-11-20 message to SCI (ADV-115; assignments/ADV-115.md)",
+   "step_sha256": "8d81a34b2281",
    "reopened_block": false,
    "authorised_by": null
   }
