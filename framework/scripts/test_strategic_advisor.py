@@ -350,7 +350,7 @@ class RotationReconcileDream(unittest.TestCase):
         self.campaign = self.root / "camp"; self.campaign.mkdir()
         (self.root / "ledger" / "tasks" / "orchestrator").mkdir(parents=True)
         (self.root / sa.PORTFOLIO_REL).parent.mkdir(parents=True)
-        for each in (patch.object(sa, "ROOT", self.root), patch.dict(os.environ, {"LEGEND_ADVISOR_NOW": "2026-11-20T12:00:00Z"})):
+        for each in (patch.object(sa, "ROOT", self.root), patch.object(sa, "DREAM_RULE_FROM", "2026-11-20T00:00:00Z"), patch.dict(os.environ, {"LEGEND_ADVISOR_NOW": "2026-11-20T12:00:00Z"})):
             each.start(); self.addCleanup(each.stop)
 
     def log(self, **row):
@@ -383,6 +383,8 @@ class RotationReconcileDream(unittest.TestCase):
     def test_an_open_assignment_in_another_strand_is_the_rotation_under_way_and_none_is_duplicated(self):
         for i, h in enumerate(("01:00", "02:00", "03:00")):
             self.inc(f"X{i}", "agents", h)
+        self.log(id="ADV-899", state="DRAFTED", key="old", recipient="Science", strand="myelin", utc="2026-11-19T09:00:00Z"); self.log(id="ADV-899", state="SENT", to=["SCI"])
+        self.assertEqual(sa.rotation_status(self.campaign)["state"], "DUE")                                         # an old assignment still open in another strand is not the rotation
         self.log(id="ADV-900", state="DRAFTED", key="k", recipient="Science", strand="agents")                       # open work in the dominant strand does not count as a rotation
         self.assertEqual(sa.rotation_status(self.campaign)["state"], "DUE")
         self.assertEqual(sa.rotation_status(self.campaign)["open_same"], ["ADV-900"])
@@ -452,6 +454,15 @@ class RotationReconcileDream(unittest.TestCase):
             found = {c["id"]: c["why"] for c in sa.reconcile_findings(self.campaign, self.NOW)}
         self.assertEqual(sorted(found), ["RP-001", "RP-002"])                                                    # RP-003 was updated after the assignment: not listed
         self.assertIn("ADV-940", found["RP-001"]); self.assertIn("recent delivery", found["RP-002"])
+
+    def test_a_dream_connection_reaches_its_consumer_and_is_listed_until_the_consumer_absorbs_it(self):
+        self.portfolio([{"id": "RP-001", "opportunity": "o", "status": "ready", "updated_utc": "2026-11-20T09:00:00Z"}])
+        self.inc("X1", "agents", "10:00")
+        self.log(state="DREAM", ids=["X1"], connections=[{"to": "RP-001", "what": "a comparator the myelin row lacks"}], none_reason="", counter="contrary result kept", utc="2026-11-20T11:00:00Z")
+        found = {c["id"]: c["why"] for c in sa.reconcile_findings(self.campaign, self.NOW)}
+        self.assertIn("DREAM connection from X1", found["RP-001"])
+        sa.portfolio_update({"id": "RP-001", "next_action": "use the comparator"})                                 # the consumer absorbs it: no longer listed
+        self.assertNotIn("RP-001", {c["id"] for c in sa.reconcile_findings(self.campaign, self.NOW)})
 
     def test_an_unchanged_portfolio_row_keeps_its_historical_date_and_a_changed_one_moves(self):
         self.portfolio([{"id": "RP-001", "opportunity": "o", "status": "ready", "next_action": "n", "updated_utc": "2026-11-01T00:00:00Z"}])

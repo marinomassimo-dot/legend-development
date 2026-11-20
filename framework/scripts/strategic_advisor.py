@@ -2364,6 +2364,7 @@ META_STATES = ("STRAND", "RECONCILED", "DREAM", "ROTATION_DEFERRED")   # events 
 ROTATION_RUN = 3                  # the operator's initial cadence: three substantial scientific increments in one strand make a rotation due (2026-11-20); a constant, not a limit on activity
 DREAM_WINDOW_H = 72
 UNCLASSIFIED_WINDOW_H = 24
+DREAM_RULE_FROM = "2026-11-20T12:30:00Z"          # a dream pass is owed by increments concluded after the rule exists; the older ones, reconstructed for the count, are not a debt
 ROME = ZoneInfo("Europe/Rome")
 NOT_SCIENTIFIC = ("harness", "none", "editorial")
 
@@ -2414,13 +2415,18 @@ def rotation_status(campaign: Path) -> dict[str, Any]:
     if not incs:
         return {"state": "NO_DATA", "run": 0, "strand": "", "ids": [], "open_other": [], "deferred": None, "unclassified": [], "line": "SCIENTIFIC ROTATION: no classified increment yet (record `strand` for the recent ones)"}
     strand = incs[-1]["strand"]
-    run = []
+    full = []
     for r in reversed(incs):
         if r["strand"] != strand:
             break
-        run.append(r["id"])
-    run.reverse()
-    open_all = [i for i, m in smap.items() if not m["outside"] and m["strand"] and m["strand"].lower() not in NOT_SCIENTIFIC and "EXECUTED" not in states.get(i, {}).get("levels", []) and i in states]
+        full.append(r)
+    full.reverse()
+    run = [r["id"] for r in full]
+    # a rotation is an assignment drafted once the threshold was reached (at the conclusion of the ROTATION_RUN-th increment of the run), not an old assignment still open in another strand
+    threshold = full[ROTATION_RUN - 1]["at"] if len(full) >= ROTATION_RUN else ""
+    drafted_at = {e["id"]: e.get("utc", "") for e in _events(campaign) if e.get("state") == "DRAFTED"}
+    open_all = [i for i, m in smap.items() if not m["outside"] and m["strand"] and m["strand"].lower() not in NOT_SCIENTIFIC and "EXECUTED" not in states.get(i, {}).get("levels", []) and i in states
+                and (not threshold or drafted_at.get(i, "") >= threshold)]
     open_other = [i for i in open_all if smap[i]["strand"] != strand]
     open_same = [i for i in open_all if smap[i]["strand"] == strand]
     deferred = next((e for e in reversed(_events(campaign)) if e.get("state") == "ROTATION_DEFERRED"), None)
@@ -2442,7 +2448,7 @@ def rotation_status(campaign: Path) -> dict[str, Any]:
     else:
         state, line = "OK", f"scientific rotation: {len(run)}/{ROTATION_RUN} consecutive increments in strand '{strand}'" + (f"; open in another strand: {', '.join(open_other)}" if open_other else "")
     if unclassified:
-        line += f"; UNCLASSIFIED executed assignments of the last {UNCLASSIFIED_WINDOW_H} h (not counted: record `strand`): {', '.join(unclassified[:8])}"
+        line += f"; UNCLASSIFIED executed assignments of the last {UNCLASSIFIED_WINDOW_H} h (not counted: record `strand`): {', '.join(unclassified[:4])}" + (f" and {len(unclassified) - 4} more" if len(unclassified) > 4 else "")
     return {"state": state, "run": len(run), "strand": strand, "ids": run, "open_other": open_other, "open_same": open_same, "deferred": deferred, "unclassified": unclassified, "line": line}
 
 
@@ -2451,7 +2457,15 @@ def dream_pending(campaign: Path, now: dt.datetime | None = None) -> list[str]:
     explained absence, is recorded with `dream`. Visible, never a block; whether the result was significant is the host's reading (`dream --none` says so)."""
     now = now or _now()
     done = {i for e in _events(campaign) if e.get("state") == "DREAM" for i in (e.get("ids") or [])}
-    return [r["id"] for r in increments(campaign) if r["id"] not in done and _stamp(r["at"]) and (now - _stamp(r["at"])).total_seconds() <= DREAM_WINDOW_H * 3600]
+    for path in sorted((ROOT / "ledger" / "tasks").glob("advisor/*.json")):           # a dated `dream` line of the host's standing record that names the delivery counts too (the host attested one on 2026-11-20)
+        try:
+            rec = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        for e in (rec.get("DAILY_RECONCILIATION") or []) if isinstance(rec, dict) else []:
+            if isinstance(e, dict) and e.get("dream"):
+                done |= set(re.findall(r"\b[A-Z][A-Za-z0-9]*-[A-Za-z0-9-]+\b", str(e["dream"])))
+    return [r["id"] for r in increments(campaign) if r["id"] not in done and r["at"] >= DREAM_RULE_FROM and _stamp(r["at"]) and (now - _stamp(r["at"])).total_seconds() <= DREAM_WINDOW_H * 3600]
 
 
 def rome_day(now: dt.datetime) -> str:
@@ -2495,18 +2509,45 @@ def reconcile_findings(campaign: Path, now: dt.datetime | None = None) -> list[d
             hit = [ln for ln in recent.splitlines() if re.search(rf"\b{re.escape(r['id'])}\b", ln)]
             if hit:
                 out.append({"id": r["id"], "why": f"backlog row named in a recent delivery ({hit[0][:70]}): does the result change it?", "owner": "ADV"})
+    # a DREAM connection carried to a portfolio row that the row has not absorbed yet (the row was last updated before the connection was recorded): the association must reach its consumer to count
+    rows = {r["id"]: r for r in snap["items"]}
+    seen = {c["id"] for c in out}
+    for e in _events(campaign):
+        if e.get("state") != "DREAM":
+            continue
+        for c in e.get("connections") or []:
+            row = rows.get(c.get("to", ""))
+            if row and row["id"] not in seen and row.get("updated_utc", "") < e.get("utc", ""):
+                out.append({"id": row["id"], "why": f"DREAM connection from {', '.join(e.get('ids') or [])} not yet absorbed by this row (last updated before it): {c.get('what', '')[:90]}", "owner": "ADV"})
+                seen.add(row["id"])
     return out
+
+
+def attestations(campaign: Path) -> list[dict[str, Any]]:
+    """Every daily reconciliation attestation, from the two places it may be written, in one shape: a `RECONCILED` line of the assignment log (`reconcile --attest`) and an entry of `DAILY_RECONCILIATION` in
+    the host's standing record (`ledger/tasks/advisor/*.json`, where the ADV host attested on 2026-11-20). Reading both means whichever the host used counts; nothing is copied from one to the other."""
+    out = [{"rome_date": e.get("rome_date", ""), "result": e.get("result", ""), "residual": e.get("residual") or [], "source": "assignment log"} for e in _events(campaign) if e.get("state") == "RECONCILED"]
+    for path in sorted((ROOT / "ledger" / "tasks").glob("advisor/*.json")):
+        try:
+            rec = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        for e in (rec.get("DAILY_RECONCILIATION") or []) if isinstance(rec, dict) else []:
+            if isinstance(e, dict) and e.get("day_europe_rome"):
+                out.append({"rome_date": e["day_europe_rome"], "result": str(e.get("kind", "")),
+                            "residual": [{"id": x.get("row", x.get("id", "")), "owner": x.get("owner", "")} for x in (e.get("residual_inconsistencies") or []) if isinstance(x, dict)], "source": "standing record"})
+    return sorted(out, key=lambda a: a["rome_date"])
 
 
 def reconcile_state(campaign: Path, now: dt.datetime | None = None) -> dict[str, Any]:
     now = now or _now()
     today = rome_day(now)
-    done = [e for e in _events(campaign) if e.get("state") == "RECONCILED"]
+    done = attestations(campaign)
     last = done[-1] if done else None
     due = not any(e.get("rome_date") == today for e in done)
     residual = (last or {}).get("residual") or []
     line = (f"PORTFOLIO RECONCILIATION DUE (Europe/Rome {today}): none attested today; `strategic_advisor.py reconcile --campaign ...` lists candidate incoherences, correct what is yours, then `--attest`" if due else
-            f"portfolio reconciled {today} ({last['result']})") + (f"; RESIDUAL INCOHERENCES: " + "; ".join(f"{x.get('id')} ({x.get('owner')})" for x in residual[:6]) if residual else "")
+            f"portfolio reconciled {today} ({last['result']}, in the {last['source']})") + (f"; RESIDUAL INCOHERENCES: " + "; ".join(f"{x.get('id')} ({x.get('owner')})" for x in residual[:6]) if residual else "")
     return {"due": due, "today": today, "last": last, "line": line}
 
 
