@@ -407,6 +407,24 @@
      "accepted_at": "2026-11-20T18:20:04Z",
      "evidence": "mandate_continuity.accept: a different step text under an already registered source now returns/prints 'WARNING: source identical to step N (...): the new step was NOT created' (never a refusal; same text stays quiet); strategic_advisor portfolio --upsert no longer refuses a linked worktree (patches that checkout's own TSV; tick/meeting etc still refuse); tests added in test_mandate_continuity and test_strategic_advisor; suites OK: strategic_advisor rc0, mandate_continuity 83, tool_routing 7, release_surface 11, structured_data_integrity 5",
      "updated_at": "2026-11-20T18:22:33Z"
+    },
+    {
+     "step": "Launch SCI's successor from checkpoint S (verify digest 6cc5c0bb... on main, effort high, autocompact 400000, handoff check) and report times to ADV",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "SCI message 2026-11-20 about checkpoint S restart, advisor_practice item 18 (to HE [cc7acb])",
+     "accepted_at": "2026-11-20T19:24:08Z",
+     "evidence": "SCI successor session 53cd1e96 (ref c76ec7) launched 19:24:27Z from checkpoint S (sha256 6cc5c0bb... and old session id 7381c135-... verified by me on main 1ce83035b and the agent list); old released 19:24:36.828Z, successor bound 19:24:50.694Z (13.9 s), first tool call 19:24:52.045Z (1.4 s after bind), handoff RUNNING with 7 calls; predecessor not stopped (claude stop denied earlier by the classifier, operator's list)",
+     "updated_at": "2026-11-20T19:25:17Z"
+    },
+    {
+     "step": "Write HE checkpoint B at a boundary (CI-equivalent suite table, effort, launch command and brief), land it, report SHA and digest to ADV for ADV's launch of the successor",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-20 about HE restart at 354k (to HE [cc7acb])",
+     "accepted_at": "2026-11-20T20:19:08Z",
+     "evidence": "Checkpoint B written (effort high read back, peak 356,498; CI-equivalent table of 241a1f602: 269/270 exit 0, only test_repurposing_view killed on a hung snap Chromium; non-browser rerun pending by file); landed; digest reported to ADV",
+     "updated_at": "2026-11-20T20:20:10Z"
     }
    ]
   }
@@ -717,6 +735,20 @@
    "at": "2026-11-20T18:20:04Z",
    "source": "ADV message 2026-11-20 meeting line accepted, small items (a) and (b) (to HE [cc7acb])",
    "step_sha256": "08b44376471f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T19:24:08Z",
+   "source": "SCI message 2026-11-20 about checkpoint S restart, advisor_practice item 18 (to HE [cc7acb])",
+   "step_sha256": "29f996445f64",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T20:19:08Z",
+   "source": "ADV message 2026-11-20 about HE restart at 354k (to HE [cc7acb])",
+   "step_sha256": "e31575ee06fd",
    "reopened_block": false,
    "authorised_by": null
   }
