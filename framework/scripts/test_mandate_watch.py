@@ -107,6 +107,24 @@ class Watch(unittest.TestCase):
         self.assertEqual(len(rows), 2)
         self.assertTrue(all(r["state"] == "UNKNOWN" for r in rows))
 
+    def test_existing_hourly_watch_catches_up_only_executable_mandates_and_readonly_stays_readonly(self):
+        e = self.env(record())
+        args = SimpleNamespace(root=str(e.root), deliver="resume", quiet_minutes=25, resume_arg=[], json=True)
+        with mock.patch.object(mw, "registered_worktrees", return_value=[e.root]), \
+                mock.patch.object(mw, "list_sessions", return_value=[]), \
+                mock.patch.object(mw, "check", return_value={"state": "RUNNING", "action": "NONE"}) as checked, \
+                mock.patch.object(mw, "retire_released", return_value=[{"verdict": "RETIRED"}]) as retire, \
+                contextlib.redirect_stdout(io.StringIO()):
+            mw._check_all(args)
+            retire.assert_called_once_with(TASK, [], execute=True)
+            retire.reset_mock(); args.deliver = "none"
+            mw._check_all(args)
+            retire.assert_called_once_with(TASK, [], execute=False)
+            for state in ("PAUSED", "COMPLETE", "UNKNOWN", "BLOCKED"):
+                retire.reset_mock(); checked.return_value = {"state": state, "action": "NONE"}
+                mw._check_all(args)
+                retire.assert_not_called()
+
     def test_new_unmerged_task_is_checked_in_its_registered_worktree(self):
         e = self.env(record())
         tree = Path(e.tmp.name) / "science-worktree"
@@ -543,6 +561,196 @@ class HandoffCheck(unittest.TestCase):
             self.assertIn("180 min ago", text)
             self.assertIn("take the row whose 'started' matches", text)
             self.assertIn("not in the live listing", self.state(old, new, sessions=[])["next"])
+
+
+class PredecessorRetirement(unittest.TestCase):
+    entry = HandoffCheck.entry
+    write = HandoffCheck.write
+    OLD = "aaaaaaaa-1111-2222-3333-444444444444"
+    NEW = "bbbbbbbb-1111-2222-3333-444444444444"
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.base = Path(self.tmp.name)
+        (self.base / "project").mkdir()
+        self.old = self.write(self.base / "project", self.OLD + ".jsonl", [self.entry(1, "assistant", "MANDATE_BOUND: T-1"), self.entry(40, "assistant", "MANDATE_RELEASED: T-1")])
+        self.new = self.write(self.base / "project", self.NEW + ".jsonl", [self.entry(41, "assistant", "MANDATE_BOUND: T-1"), self.entry(42, "assistant", tool=True)])
+        self.rows = [{"sessionId": self.OLD, "id": "old-runtime-id", "pid": 12345, "kind": "background", "status": "idle", "state": "done"},
+                     {"sessionId": self.NEW, "id": "new-runtime-id", "pid": 12346, "kind": "background", "status": "busy", "state": "working"}]
+        self.stopped = False
+        self.listing = self.patch("list_sessions", side_effect=lambda: self.rows[1:] if self.stopped else self.rows)
+        self.ticks = self.patch("_start_ticks", side_effect=lambda pid: None if self.stopped and pid == 12345 else 100)
+        self.patch("_proc_state", return_value="S")
+        self.children = self.patch("_descendants", return_value=[])
+        self.jobs = self.patch("load_jobs", return_value=[])
+        self.patch("claude_bin", return_value="/supported/claude")
+        sleeper = mock.patch.object(mw.time, "sleep")
+        sleeper.start(); self.addCleanup(sleeper.stop)
+        env = mock.patch.dict(os.environ, {"LEGEND_MANDATE_WATCH_STATE": str(self.base / "state")})
+        env.start(); self.addCleanup(env.stop)
+        self.runner = mock.patch.object(mw.subprocess, "run", side_effect=self.stop)
+        self.command = self.runner.start(); self.addCleanup(self.runner.stop)
+
+    def patch(self, name, **kwargs):
+        p = mock.patch.object(mw, name, **kwargs)
+        value = p.start(); self.addCleanup(p.stop)
+        return value
+
+    def stop(self, cmd, **kwargs):
+        self.assertEqual(cmd, ["/supported/claude", "stop", "old-runtime-id"])
+        self.assertNotIn("shell", kwargs)
+        self.stopped = True
+        return SimpleNamespace(returncode=0, stdout="stopped", stderr="")
+
+    def retire(self, execute=True):
+        return mw.retire_predecessor("T-1", self.OLD, self.NEW, execute=execute, projects_dir=self.base)
+
+    def test_dry_run_and_repeated_verified_stop_preserve_both_transcripts_and_worktree(self):
+        tree = self.base / "worktree"; tree.mkdir()
+        (tree / "unique.txt").write_text("keep")
+        before = (self.old.read_bytes(), self.new.read_bytes())
+        self.assertEqual(self.retire(False)["verdict"], "ELIGIBLE")
+        self.command.assert_not_called()
+        self.assertEqual(self.retire()["verdict"], "RETIRED")
+        self.assertEqual(self.retire()["verdict"], "ALREADY_STOPPED")
+        self.assertEqual(self.command.call_count, 1)
+        self.assertEqual(before, (self.old.read_bytes(), self.new.read_bytes()))
+        self.assertEqual((tree / "unique.txt").read_text(), "keep")
+
+    def test_active_interactive_unknown_or_ambiguous_predecessors_are_never_stopped(self):
+        original = dict(self.rows[0])
+        for change in ({"kind": "interactive"}, {"status": "busy"}, {"state": "working"}, {"id": None}, {"pid": None}, {"id": "new-runtime-id"}):
+            with self.subTest(change=change):
+                self.rows[0] = dict(original, **change)
+                self.assertEqual(self.retire()["verdict"], "KEPT")
+        self.rows[0] = original
+        self.rows.append(dict(original))
+        self.assertEqual(self.retire()["verdict"], "KEPT")
+        self.command.assert_not_called()
+
+    def test_missing_release_other_mandate_and_nonacting_successor_are_kept(self):
+        old, new = self.old.read_text(), self.new.read_text()
+        cases = [
+            (old.replace("MANDATE_RELEASED: T-1", "not a release"), new),
+            (self.entry(40, "assistant", "MANDATE_RELEASED: T-1"), new),
+            (old + self.entry(43, "assistant", "MANDATE_BOUND: OTHER-TASK"), new),
+            (old, self.entry(41, "assistant", "MANDATE_BOUND: T-1")),
+            (old, self.entry(38, "assistant", "MANDATE_BOUND: T-1") + self.entry(39, "assistant", tool=True)),
+        ]
+        for a, b in cases:
+            self.old.write_text(a); self.new.write_text(b)
+            self.assertEqual(self.retire()["verdict"], "KEPT")
+        self.old.unlink()
+        self.assertEqual(self.retire()["verdict"], "KEPT")
+        self.command.assert_not_called()
+
+    def test_past_overlap_is_reported_but_recoverable_after_release_and_actual_successor_work(self):
+        self.new.write_text(self.entry(38, "assistant", "MANDATE_BOUND: T-1") + self.entry(39, "assistant", tool=True) + self.entry(42, "assistant", tool=True))
+        result = self.retire()
+        self.assertEqual(result["verdict"], "RETIRED")
+        self.assertTrue(result["overlap_observed"])
+
+    def test_same_name_is_not_a_host_identity_and_duplicate_hosts_block_retirement(self):
+        self.rows[0]["name"] = self.rows[1]["name"] = "SCI"
+        third = "cccccccc-1111-2222-3333-444444444444"
+        self.write(self.base / "project", third + ".jsonl", [self.entry(41, "assistant", "MANDATE_BOUND: T-1")])
+        self.rows.append({"sessionId": third, "name": "SCI"})
+        self.assertEqual(self.retire()["verdict"], "KEPT")
+        self.command.assert_not_called()
+
+    def test_live_jobs_descendants_and_unknown_process_inventory_are_kept(self):
+        self.jobs.return_value = [{"state": "ALIVE"}]
+        self.assertEqual(self.retire()["verdict"], "KEPT")
+        self.jobs.return_value = []
+        for children in ([321], None):
+            self.children.return_value = children
+            self.assertEqual(self.retire()["verdict"], "KEPT")
+        self.command.assert_not_called()
+
+    def test_corrupt_job_metadata_is_unknown_instead_of_no_live_work(self):
+        d = mw.jobs_dir("T-1"); d.mkdir(parents=True)
+        (d / "unreadable.json").write_text("not JSON")
+        self.assertEqual(self.retire()["verdict"], "KEPT")
+        self.command.assert_not_called()
+
+    def test_pending_stop_after_a_crash_is_not_reissued(self):
+        mw._save("retirement-" + self.OLD, {"verdict": "STOP_PENDING"})
+        self.assertEqual(self.retire()["verdict"], "STOP_UNVERIFIED")
+        self.command.assert_not_called()
+
+    def test_changed_pid_or_new_turn_before_stop_aborts(self):
+        calls = 0
+        def change():
+            nonlocal calls
+            calls += 1
+            if calls > 1:
+                self.rows[0]["pid"] = 54321
+            return self.rows
+        self.listing.side_effect = change
+        self.assertEqual(self.retire()["verdict"], "KEPT")
+        self.command.assert_not_called()
+
+    def test_reused_pid_with_same_runtime_row_aborts(self):
+        self.ticks.side_effect = [100, 200]
+        self.assertEqual(self.retire()["verdict"], "KEPT")
+        self.command.assert_not_called()
+
+    def test_refusal_or_false_success_is_persisted_and_never_retried(self):
+        self.command.side_effect = None
+        self.command.return_value = SimpleNamespace(returncode=1, stdout="", stderr="permission denied")
+        self.assertEqual(self.retire()["verdict"], "STOP_REFUSED")
+        self.assertTrue(self.retire()["retry_suppressed"])
+        self.assertEqual(self.command.call_count, 1)
+
+    def test_exit_zero_without_process_exit_is_not_success(self):
+        self.command.side_effect = None
+        self.command.return_value = SimpleNamespace(returncode=0, stdout="stopped", stderr="")
+        self.assertEqual(self.retire()["verdict"], "STOP_UNVERIFIED")
+        self.assertTrue(self.retire()["retry_suppressed"])
+        self.assertEqual(self.command.call_count, 1)
+
+    def test_delayed_teardown_is_observed_without_a_second_stop(self):
+        def listing():
+            if self.stopped and self.listing.call_count >= 5:
+                return self.rows[1:]
+            return self.rows
+        self.listing.side_effect = listing
+        self.assertEqual(self.retire()["verdict"], "RETIRED")
+        self.assertEqual(self.command.call_count, 1)
+
+    def test_runtime_failure_and_unwritable_attempt_state_issue_no_stop(self):
+        self.listing.side_effect = None; self.listing.return_value = None
+        self.assertEqual(self.retire()["verdict"], "KEPT")
+        self.listing.return_value = self.rows
+        with mock.patch.object(mw, "_save"):
+            self.assertEqual(self.retire()["verdict"], "KEPT")
+        self.command.assert_not_called()
+
+    def test_catchup_discovers_released_predecessors_without_a_prompt_or_display_name(self):
+        find = mw.transcript_for_session
+        with mock.patch.object(mw, "transcript_for_session", side_effect=lambda sid, projects_dir=None: find(sid, self.base)):
+            self.assertEqual(mw.retire_released("T-1", self.rows, execute=True)[0]["verdict"], "RETIRED")
+        self.command.assert_called_once()
+
+    def test_catchup_does_not_pick_interactive_or_still_bound_sessions_by_name(self):
+        self.rows[0]["kind"] = "interactive"
+        self.rows[0]["name"] = self.rows[1]["name"] = "SCI"
+        find = mw.transcript_for_session
+        with mock.patch.object(mw, "transcript_for_session", side_effect=lambda sid, projects_dir=None: find(sid, self.base)):
+            self.assertEqual(mw.retire_released("T-1", self.rows, execute=True), [])
+        self.command.assert_not_called()
+
+    def test_cli_keeps_running_successor_distinct_from_unretired_predecessor(self):
+        running = {"verdict": "RUNNING"}
+        with mock.patch.object(mw, "handoff_state", return_value=running), \
+                mock.patch.object(mw, "retire_predecessor", return_value={"verdict": "KEPT"}) as retire, \
+                contextlib.redirect_stdout(io.StringIO()):
+            args = ["handoff", "--task", "T-1", "--old", self.OLD, "--new", self.NEW]
+            self.assertEqual(mw.main(args), 0)
+            self.assertFalse(retire.call_args.kwargs["execute"])
+            self.assertEqual(mw.main(args + ["--retire-old"]), 5)
+            self.assertTrue(retire.call_args.kwargs["execute"])
 
 
 class TranscriptPrefix(unittest.TestCase):
