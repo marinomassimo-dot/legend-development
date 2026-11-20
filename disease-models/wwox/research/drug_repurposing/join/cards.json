@@ -31318,7 +31318,8 @@
      "The upper bound of safe expression and any tumour risk.",
      "Whether treatment after the earliest postnatal ages helps less, equally or more.",
      "The shape of the dose relation between the two tested vector levels.",
-     "Whether the source's result is reproduced by an independent laboratory."
+     "Whether the source's result is reproduced by an independent laboratory.",
+     "LIMIT on the electrographic readout of Obeid 2026 Figure 7, from SCI's measurement of the figure (PLAUSIBLE, not adopted) [IT59 2026-11-20 fourth packet change]: panel 7C shows two wild-type and three knockout points with p = 0.2000 on SCI's reading of the panel (the smallest exact two-sided value for 2 against 3), whereas the legend says n = 5 per group and the Results call the elevation significant: text and panel disagree and the disagreement is unresolved; panel 7E has 5 per group with per-animal values that do not overlap between knockout and wild type, pooled over a seven-day recording from about postnatal day 14, with the survivors per day not stated; whether panels 7B and 7C and panel 7E are the same animals is not stated."
     ],
     "p4_card": {
      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md): seven separate queries returned no registered WOREE interventional study; the only synonym-driven record is one observational natural-history registry. Carried with the census's own caution: \"A missing hit does not prove that no study exists.\" It answers seven queries against one registry on one date; unregistered, differently worded, non-NLM or later-registered studies are not excluded.",
@@ -31402,7 +31403,7 @@
      "time_to_benefit": "UNKNOWN in humans. In the null mouse the discharge effect was recorded over one week starting about two weeks after birth."
     }
    },
-   "input_sha256": "4783463d0e6ba0c9bd03a75419ec587dd8d429f5b33239c3a5f955d57e0157cc",
+   "input_sha256": "f0176b8b97145de3355aa4a1af0c954666308475169573a689a19c8a0d5483b8",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -33129,7 +33130,7 @@
      "identity": "Wnt-lowering (tankyrase-type) agents and GSK3 modulation as a downstream lever (TX-004)",
      "indication_and_transfer": "WOREE as target; no candidate molecule is carded because the datum below is missing.",
      "mechanism": "UNKNOWN",
-     "next_measurement": "A GSK-3 substrate-phosphorylation panel in the cortex of the Wwox neuronal-deletion line at postnatal day 17 (tau phospho-sites over total tau, Ser9 over total GSK3beta, beta-catenin), designed with a decision per outcome and no data yet (SCI v2.2 and v3.1; a flat panel excludes ONE proposition only (that GSK-3 beta restraint on tau is released in bulk cortex of the neuronal-deletion line at postnatal day 17, at the tested tau sites, above the margin fixed before data) and does not close the candidate or the class, an elevated panel is the condition under which an inhibitor arm exists; the earlier wording 'closes the candidate' is corrected on SCI's v3.1 section 6.10 [IT59 2026-11-20 third packet change]); then an activation-step measurement (reporter, nuclear beta-catenin) in a WWOX-deficient neural system, then the dose-by-timing series [IT59 2026-11-20 packet change].",
+     "next_measurement": "A GSK-3 substrate-phosphorylation panel in the cortex of the Wwox neuronal-deletion line at postnatal day 17 (tau phospho-sites over total tau, Ser9 over total GSK3beta, beta-catenin), designed with a decision per outcome and no data yet (SCI v2.2 and v3.1; a flat panel excludes ONE proposition only (that GSK-3 beta restraint on tau is released in bulk cortex of the neuronal-deletion line at postnatal day 17, at the tested tau sites, above the margin fixed before data) and does not close the candidate or the class, an elevated panel is the condition under which an inhibitor arm exists; an earlier wording on this card, that a flat panel closes the candidate, is corrected on SCI's v3.1 section 6.10 (the v3 table row 'Panel S-flat: closed for this model and age' is read through it) [IT59 2026-11-20 third packet change]); then an activation-step measurement (reporter, nuclear beta-catenin) in a WWOX-deficient neural system, then the dose-by-timing series [IT59 2026-11-20 packet change].",
      "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA as a test (known-roads § 2.4c, 2026-10-20); R3 adjacent query on tankyrase inhibition with neuro and development returned 2 records, one read.",
      "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
      "pathway_and_objective": "RECUPERO_PROFONDO.",
@@ -33185,7 +33186,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "59ff65159ec2c4e072fba2b45abf3d075e2ce0ba6a3a85d233b8927ae6df3802",
+   "input_sha256": "8061ae1e28b1f2792507c11ff5f5f08e1864e84a553ff6e329e0e71e6f39ec04",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
