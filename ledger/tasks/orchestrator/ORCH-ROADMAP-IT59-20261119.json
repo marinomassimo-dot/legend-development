@@ -180,17 +180,21 @@
     },
     {
      "step": "N4 CONSUME WITHOUT STRENGTHENING CLAIMS: integrate the SCI audit and the new comparison so that assumptions, limits and alternatives survive in the consumers; update the canonical homes and regenerate derived outputs; verify the output the generator actually reads and, when publishable, the page actually shown (presence in a source file is not integration); separate observation, inference, hypothesis, research priority and intervention preference",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-20 (NIGHT CONTINUATION - Knowledge consumption, useful generation and durable operational judgment), section 4",
-     "accepted_at": "2026-11-20T22:35:06Z"
+     "accepted_at": "2026-11-20T22:35:06Z",
+     "evidence": "SCI part A correction adopted in IT dated notes (wording: coherence check, not conservation law); RP-013 route U07 followed ranking to map WO-02 to card C01 and served page source: generation_it59_20261119/NIGHT_20261120_N4_ROUTE_CHECK_IT.md; limit stated: painted page not read (dump-dom empty twice); no claim strengthened",
+     "updated_at": "2026-11-20T23:28:03Z"
     },
     {
      "step": "N5 DELIVER AND KEEP CONTINUITY: tell ADV before/after, alternative strengthened/weakened/unchanged, reason and limits, the new question already routed; give SCI executable questions complete with references; agree with HE a named owner of publication verification separating verified SHA, local gate, CI and actual publication; keep independent analysis and integration going during waits, frozen candidates preserved",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-20 (NIGHT CONTINUATION - Knowledge consumption, useful generation and durable operational judgment), section DELIVERY",
-     "accepted_at": "2026-11-20T22:35:06Z"
+     "accepted_at": "2026-11-20T22:35:06Z",
+     "evidence": "ADV got before/after, alternative unchanged, limits, routed defect (msg e69e50a9); HE accepted the query-defect item and the publication-verification split (HE owns CI and actual-publication reading; landing actor owns verified SHA and local gate); SCI got the wording adoption and NP4G2 trigger; landed c0de3657d and 3b56f190d",
+     "updated_at": "2026-11-20T23:28:03Z"
     },
     {
      "step": "ADV-124 RE-EXAMINE RESIDUAL ROWS AS LEADS: for each of RP-011, RP-008 (reopen NP4G2), RP-013, RP-029 (item 9, the operator's) and my deferred step 4, one paragraph classed (a) consumed, (b) historical row no longer a wait, (c) valuable opportunity, (d) blocked by an inaccessible source or reserved decision; if (c) holds run ONE (RP-011 natural candidate: declared compound subset, truth source the cascade does not see, decoy and simple baselines written before the run, blind scorer from SCI, margin fixed in advance, contamination stated) with the design on one page sent to ADV BEFORE running and a message when it starts; if none holds, close the rows with dated lines citing delivery and consumption, originals kept",
