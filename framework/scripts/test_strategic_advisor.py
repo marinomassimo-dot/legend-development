@@ -475,6 +475,16 @@ class RotationReconcileDream(unittest.TestCase):
         row = sa.portfolio_update({"id": "RP-001", "next_action": "something else"})
         self.assertEqual(row["updated_utc"], "2026-11-20T12:00:00Z")
 
+    def test_a_portfolio_patch_works_in_a_linked_worktree_on_its_own_tsv_while_the_campaign_commands_still_refuse(self):
+        self.portfolio([{"id": "RP-001", "opportunity": "o", "status": "ready", "next_action": "n", "updated_utc": "2026-11-01T00:00:00Z"}])
+        (self.root / ".git").write_text("gitdir: /elsewhere\n", encoding="utf-8")                   # this checkout is now a linked worktree
+        self.assertTrue(sa.primary_refusal())
+        patch_file = self.root / "patch.json"; patch_file.write_text(json.dumps({"id": "RP-001", "next_action": "patched in the worktree"}), encoding="utf-8")
+        with patch.dict(os.environ, {"LEGEND_ADVISOR_STATE": str(self.root / "state")}), patch.object(sa, "STATE_DIR", self.root / "state"):
+            self.assertEqual(sa.main(["portfolio", "--upsert", str(patch_file)]), 0)                  # the refusal protects the campaign state, not this checkout's own TSV
+        self.assertIn("patched in the worktree", (self.root / sa.PORTFOLIO_REL).read_text(encoding="utf-8"))
+        self.assertEqual(sa.main(["tick", "--campaign", str(self.campaign)]), 2)                      # the campaign commands still refuse a linked worktree
+
     def test_the_dream_pass_is_pending_until_recorded_and_an_unread_consumer_is_a_warning_not_a_refusal(self):
         self.portfolio([{"id": "RP-001", "opportunity": "o", "status": "ready"}])
         self.inc("X1", "agents", "10:00")

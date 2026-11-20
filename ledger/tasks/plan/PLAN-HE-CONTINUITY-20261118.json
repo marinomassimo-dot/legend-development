@@ -389,6 +389,22 @@
      "accepted_at": "2026-11-20T17:56:39Z",
      "evidence": "SCI successor session 7381c135 launched 17:56:58Z from checkpoint R (sha256 7a8000ce... and old session id 378f29a6-... verified by me on main and the agent list, dd306d293); old released 17:57:07.445Z, successor bound 17:57:16.757Z (9.3 s), first tool call 17:57:18.067Z (1.3 s after bind), handoff RUNNING with 7 calls; predecessor not stopped (claude stop denied earlier by the classifier, left to the operator)",
      "updated_at": "2026-11-20T17:57:49Z"
+    },
+    {
+     "step": "Meeting MEETING-20261120T181839Z reply (CI line, operational defects since 17:00Z, measured research-time cost, window) and launch IT's successor when its checkpoint is on main",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV message 2026-11-20 about MEETING-20261120T181839Z (to HE [cc7acb])",
+     "accepted_at": "2026-11-20T18:18:47Z"
+    },
+    {
+     "step": "Two harness fixes in one landing: accept warns when its source is identical to an existing step (step NOT created), and portfolio --upsert works in a linked worktree on that checkout's own TSV; each with a test",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-20 meeting line accepted, small items (a) and (b) (to HE [cc7acb])",
+     "accepted_at": "2026-11-20T18:20:04Z",
+     "evidence": "mandate_continuity.accept: a different step text under an already registered source now returns/prints 'WARNING: source identical to step N (...): the new step was NOT created' (never a refusal; same text stays quiet); strategic_advisor portfolio --upsert no longer refuses a linked worktree (patches that checkout's own TSV; tick/meeting etc still refuse); tests added in test_mandate_continuity and test_strategic_advisor; suites OK: strategic_advisor rc0, mandate_continuity 83, tool_routing 7, release_surface 11, structured_data_integrity 5",
+     "updated_at": "2026-11-20T18:22:33Z"
     }
    ]
   }
@@ -685,6 +701,20 @@
    "at": "2026-11-20T17:56:39Z",
    "source": "SCI message 2026-11-20 about checkpoint R restart (to HE [cc7acb])",
    "step_sha256": "aa6fb9d8a0f8",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T18:18:47Z",
+   "source": "ADV message 2026-11-20 about MEETING-20261120T181839Z (to HE [cc7acb])",
+   "step_sha256": "a3266d6e80a9",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T18:20:04Z",
+   "source": "ADV message 2026-11-20 meeting line accepted, small items (a) and (b) (to HE [cc7acb])",
+   "step_sha256": "08b44376471f",
    "reopened_block": false,
    "authorised_by": null
   }
