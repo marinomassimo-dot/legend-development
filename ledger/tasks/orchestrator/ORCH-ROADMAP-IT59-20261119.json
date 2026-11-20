@@ -37,13 +37,12 @@
     },
     {
      "step": "4 ONE INFORMATIVE GENERATION COMPARISON WHEN JUSTIFIED: criteria fixed before any run, comparable conditions, quality judged by a blind verifier; deferred if no decision rides on it",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-19 (NEXT ITERATION - Restore verified publication and carry new science into useful decisions), section 4",
      "accepted_at": "2026-11-19T08:31:06Z",
-     "updated_at": "2026-11-20T18:51:18Z",
-     "blocker": "Deferred by the step's own rule (no decision rides on it): the two RP-005 prospective tests ended REVISE (ADV-106) and INCONCLUSIVE, parked by ADV (ADV-109); ADV's portfolio carries no assignment that needs a generation comparison (ADV message 2026-11-20: queue is the package after item 17, the CI line, and assignments sent from the portfolio when a result needs consuming; none today)",
-     "no_condition": "revival is an ADV assignment naming a decision that a generation comparison would change; no typed commit or path exists until ADV sends it"
+     "updated_at": "2026-11-20T22:46:28Z",
+     "evidence": "run as a retrieval comparison on NP4G2 with criteria fixed first (scope stated: a component of generation, not hypothesis validity): disease-models/wwox/research/drug_repurposing/np4g2_retrieval_it_20261120/RESULT_NP4G2_RETRIEVAL_IT_20261120.md; INCONCLUSIVE, M not adopted"
     },
     {
      "step": "5 DASHBOARD: keep the fix, complete browser validation on phone and desktop with HE; regenerate only involved derivatives incl. coverage_report and reading_state when receipts change",
@@ -151,6 +150,56 @@
      "accepted_at": "2026-11-19T20:10:23Z",
      "evidence": "landed 61e77cd71, 2962de440, f9e90fa38; ADV accepted 2026-11-19 (hindcast closed as diagnostic)",
      "updated_at": "2026-11-19T20:10:23Z"
+    },
+    {
+     "step": "N1 RECONCILE DELIVERIES AND STATES: what ADV-122 and the EB-ETX-01 packet already consumed (do not repeat), every IN_PROGRESS tied to real work, an identifiable awaited event or a concrete next action; reserved items 17 and 18 stay reserved, dependent operations isolated, independent work continues, no full battery repeated for an unchanged block",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "operator mandate 2026-11-20 (NIGHT CONTINUATION - Knowledge consumption, useful generation and durable operational judgment), section 1",
+     "accepted_at": "2026-11-20T22:35:06Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/generation_it59_20261119/NIGHT_20261120_N1_RECONCILIATION_IT.md: ADV-122 consumed by SCI 7eae5603f, ADV f3b07303d, HE 787d90705, IT 5600101a2 (landed 2d3e72b67); EB-ETX-01 card fold owed with the package after item 17; only step 6 was IN_PROGRESS and step 4 BLOCKED, no other orchestrator record open; CI red is the known three tests (HE addendum B1)",
+     "updated_at": "2026-11-20T22:35:31Z"
+    },
+    {
+     "step": "N2 CARRY A NEW CASE THROUGH THE ENGINE: with ADV and SCI choose one pertinent opportunity outside the just-deepened ethosuximide thread; follow knowledge, generation, comparison, hypothesis, open question, new assignment; look for qualified relations the generator does not read, retrieves without using, or flattens (loses sign, context or competing explanations); a defect goes to HE as the minimal correction reusing existing components, easy to change or remove",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "operator mandate 2026-11-20 (NIGHT CONTINUATION - Knowledge consumption, useful generation and durable operational judgment), section 2",
+     "accepted_at": "2026-11-20T22:35:06Z",
+     "evidence": "NP4G2 carried reopen-row to retrieval to comparison to open question: disease-models/wwox/research/drug_repurposing/np4g2_retrieval_it_20261120/RESULT_NP4G2_RETRIEVAL_IT_20261120.md; defect (query lost the gene) routed to HE; case chosen by IT and sent to ADV before the run (reply pending, ADV-124 message f2a05fb3)",
+     "updated_at": "2026-11-20T22:46:28Z"
+    },
+    {
+     "step": "N3 EVALUATE GENERATIVE GAIN WHEN THE CASE ALLOWS: current path against a simple baseline and the minimal change; question, inputs, expected useful difference and the outcome that would show no benefit or harm fixed BEFORE the comparison; separate new-source contribution from method contribution; a retrospective known case is not prospective validation; keep earlier REVISE verdicts unless new evidence supersedes; restrict or remove a change that does not help",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "operator mandate 2026-11-20 (NIGHT CONTINUATION - Knowledge consumption, useful generation and durable operational judgment), section 3",
+     "accepted_at": "2026-11-20T22:35:06Z",
+     "evidence": "criteria fixed before the run (ADV124 file section 6); result INCONCLUSIVE on method gain, no harm, minimal change not adopted, source separated from method, retrospective and contaminated: disease-models/wwox/research/drug_repurposing/np4g2_retrieval_it_20261120/RESULT_NP4G2_RETRIEVAL_IT_20261120.md; REVISE (ADV-106) and INCONCLUSIVE (ADV-109) stand",
+     "updated_at": "2026-11-20T22:46:28Z"
+    },
+    {
+     "step": "N4 CONSUME WITHOUT STRENGTHENING CLAIMS: integrate the SCI audit and the new comparison so that assumptions, limits and alternatives survive in the consumers; update the canonical homes and regenerate derived outputs; verify the output the generator actually reads and, when publishable, the page actually shown (presence in a source file is not integration); separate observation, inference, hypothesis, research priority and intervention preference",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator mandate 2026-11-20 (NIGHT CONTINUATION - Knowledge consumption, useful generation and durable operational judgment), section 4",
+     "accepted_at": "2026-11-20T22:35:06Z"
+    },
+    {
+     "step": "N5 DELIVER AND KEEP CONTINUITY: tell ADV before/after, alternative strengthened/weakened/unchanged, reason and limits, the new question already routed; give SCI executable questions complete with references; agree with HE a named owner of publication verification separating verified SHA, local gate, CI and actual publication; keep independent analysis and integration going during waits, frozen candidates preserved",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator mandate 2026-11-20 (NIGHT CONTINUATION - Knowledge consumption, useful generation and durable operational judgment), section DELIVERY",
+     "accepted_at": "2026-11-20T22:35:06Z"
+    },
+    {
+     "step": "ADV-124 RE-EXAMINE RESIDUAL ROWS AS LEADS: for each of RP-011, RP-008 (reopen NP4G2), RP-013, RP-029 (item 9, the operator's) and my deferred step 4, one paragraph classed (a) consumed, (b) historical row no longer a wait, (c) valuable opportunity, (d) blocked by an inaccessible source or reserved decision; if (c) holds run ONE (RP-011 natural candidate: declared compound subset, truth source the cascade does not see, decoy and simple baselines written before the run, blind scorer from SCI, margin fixed in advance, contamination stated) with the design on one page sent to ADV BEFORE running and a message when it starts; if none holds, close the rows with dated lines citing delivery and consumption, originals kept",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-124 (ADV message 2026-11-20, the operator's night integration)",
+     "accepted_at": "2026-11-20T22:36:12Z",
+     "evidence": "per-row classes RP-011 d, RP-008 c (run), RP-013 c (verification in N4), RP-029 d, step 4 c: generation_it59_20261119/ADV124_RESIDUAL_ROWS_IT_20261120.md; one run: disease-models/wwox/research/drug_repurposing/np4g2_retrieval_it_20261120/RESULT_NP4G2_RETRIEVAL_IT_20261120.md",
+     "updated_at": "2026-11-20T22:46:28Z"
     }
    ]
   }
@@ -265,6 +314,48 @@
    "at": "2026-11-19T20:10:23Z",
    "source": "ADV-094",
    "step_sha256": "f45ef217760a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T22:35:06Z",
+   "source": "operator mandate 2026-11-20 (NIGHT CONTINUATION - Knowledge consumption, useful generation and durable operational judgment), section 1",
+   "step_sha256": "db73a58e9242",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T22:35:06Z",
+   "source": "operator mandate 2026-11-20 (NIGHT CONTINUATION - Knowledge consumption, useful generation and durable operational judgment), section 2",
+   "step_sha256": "51849bfd868e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T22:35:06Z",
+   "source": "operator mandate 2026-11-20 (NIGHT CONTINUATION - Knowledge consumption, useful generation and durable operational judgment), section 3",
+   "step_sha256": "8fbf71446f71",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T22:35:06Z",
+   "source": "operator mandate 2026-11-20 (NIGHT CONTINUATION - Knowledge consumption, useful generation and durable operational judgment), section 4",
+   "step_sha256": "40f40729f122",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T22:35:06Z",
+   "source": "operator mandate 2026-11-20 (NIGHT CONTINUATION - Knowledge consumption, useful generation and durable operational judgment), section DELIVERY",
+   "step_sha256": "37823e2da447",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T22:36:12Z",
+   "source": "ADV-124 (ADV message 2026-11-20, the operator's night integration)",
+   "step_sha256": "401fc657ef89",
    "reopened_block": false,
    "authorised_by": null
   }
