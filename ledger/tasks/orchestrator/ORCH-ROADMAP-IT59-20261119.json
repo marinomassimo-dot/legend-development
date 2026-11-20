@@ -37,11 +37,13 @@
     },
     {
      "step": "4 ONE INFORMATIVE GENERATION COMPARISON WHEN JUSTIFIED: criteria fixed before any run, comparable conditions, quality judged by a blind verifier; deferred if no decision rides on it",
-     "status": "IN_PROGRESS",
+     "status": "BLOCKED",
      "owner": "orchestrator",
      "source": "operator mandate 2026-11-19 (NEXT ITERATION - Restore verified publication and carry new science into useful decisions), section 4",
      "accepted_at": "2026-11-19T08:31:06Z",
-     "updated_at": "2026-11-19T08:31:16Z"
+     "updated_at": "2026-11-20T18:51:18Z",
+     "blocker": "Deferred by the step's own rule (no decision rides on it): the two RP-005 prospective tests ended REVISE (ADV-106) and INCONCLUSIVE, parked by ADV (ADV-109); ADV's portfolio carries no assignment that needs a generation comparison (ADV message 2026-11-20: queue is the package after item 17, the CI line, and assignments sent from the portfolio when a result needs consuming; none today)",
+     "no_condition": "revival is an ADV assignment naming a decision that a generation comparison would change; no typed commit or path exists until ADV sends it"
     },
     {
      "step": "5 DASHBOARD: keep the fix, complete browser validation on phone and desktop with HE; regenerate only involved derivatives incl. coverage_report and reading_state when receipts change",
