@@ -102,3 +102,14 @@ copy. Consumers: launcher recipe and hourly mandate watch. Counterexample: an id
 interactive actor or active task job must not be swept away to satisfy a session count.
 Scientific full-text evaluation is inapplicable to this code-only task; LINT and receipt
 verification are still run. Exact test/landing evidence is in the task record.
+
+## Deployment confirmation
+
+Code published as `94fbbfdd82d91f78f369a50e6ac7ab95cb912203`, exact-SHA gate PASS
+and remote verified. The shared host checkout was initially rejected by automatic
+approval review for possible peer interference. Fresh read-only checks showed a clean
+tree, an ancestor HEAD, no index lock and idle root sessions; a pinned fast-forward
+was then approved. No rejected action was disguised and no peer changes were reset.
+The installed watcher blob matches the publication (digest in the task record); the
+existing minute-37 cron entry is present. SCI and IT read-only catch-up show no remaining
+released background predecessors. Next scheduled execution was not awaited or claimed.
