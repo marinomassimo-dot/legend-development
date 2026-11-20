@@ -134,6 +134,25 @@ def verdict(runs: list[dict]) -> tuple[int, list[str]]:
     return (0 if all(r["conclusion"] == "success" for r in runs) else 1), lines
 
 
+def red_streak(runs: list[dict], branch: str = "main") -> dict:
+    """What the latest completed runs of the publication gate on one branch say, from ONE list of runs (no extra request): the newest completed run, and when it is red, the oldest run of the unbroken red
+    streak that ends at it. 2026-11-20 (ADV-108): the regression step was red from #1513 (e4275e32) and was found about seven hours and some forty commits later, because the local publication gate does not run
+    the regression suites and nobody read CI. A run still in progress is skipped, never read as green or red. Returns {} when no completed run of that branch is in the list."""
+    done = sorted((r for r in runs if r.get("status") == "completed" and r.get("head_branch") == branch and r.get("name") == "Public release gate"), key=lambda r: r["run_number"], reverse=True)
+    if not done:
+        return {}
+    latest = done[0]
+    out = {"latest": latest["run_number"], "latest_sha": latest["head_sha"][:8], "conclusion": latest.get("conclusion"), "red": latest.get("conclusion") != "success"}
+    if out["red"]:
+        first, n = latest, 1
+        for r in done[1:]:
+            if r.get("conclusion") == "success":
+                break
+            first, n = r, n + 1
+        out.update(first_red=first["run_number"], first_red_sha=first["head_sha"][:8], streak=n)
+    return out
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     sub = ap.add_subparsers(dest="cmd", required=True)

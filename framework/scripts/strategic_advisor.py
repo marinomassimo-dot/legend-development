@@ -1654,6 +1654,9 @@ def tick(campaign: Path) -> dict[str, Any]:
     disc = discipline_lines(campaign) if campaign else []
     if disc:
         why += "; " + "; ".join(disc)
+    ci_line = ci_main_line(state, now)
+    if ci_line:
+        why += "; " + ci_line
     unchecked = unchecked_waits(obs["waits"], state)
     if unchecked:
         why += "; " + unchecked
@@ -2641,6 +2644,32 @@ def defer_rotation(campaign: Path, reason: str, resume: str) -> dict[str, Any]:
     row = {"state": "ROTATION_DEFERRED", "reason": reason, "resume": resume, "strand": rotation_status(campaign).get("strand", "")}
     _log_assignment(campaign, row)
     return {**row, "warnings": [w for w in warn if w]}
+
+
+CI_CHECK_MIN = 30
+
+
+def ci_main_line(state: dict[str, Any], now: dt.datetime | None = None) -> str:
+    """One line when the latest completed publication-gate run on main is red, with the run that began the unbroken red streak (ADV-108, 2026-11-20: red for ~40 commits and ~7 hours, found by a person).
+    One request of the public API at most every CI_CHECK_MIN minutes (the answer is kept in the tick state and repeated meanwhile); a rate limit, a network failure or no GitHub remote is silent, never read as
+    green. The local publication gate does not run the regression suites, so a green `safe_push` says nothing about this line."""
+    now = now or _now()
+    last = _stamp(state.get("ci_main_checked_utc"))
+    if last and (now - last).total_seconds() < CI_CHECK_MIN * 60:
+        return state.get("ci_main_line", "")
+    state["ci_main_checked_utc"] = _utc(now)
+    line = ""
+    try:
+        import ci_runs
+        recent = ci_runs.fetch_recent(ci_runs.slug("development", ROOT))
+        res = ci_runs.red_streak(recent)
+        if res.get("red"):
+            line = (f"CI RED ON MAIN: the latest completed run #{res['latest']} ({res['latest_sha']}) is {res['conclusion']}; red since #{res['first_red']} ({res['first_red_sha']}), {res['streak']} run(s) in a row "
+                    f"(the local gate does not run the regression suites; `ci_runs.py status <sha>`, annotations of the check run list the failing suites)")
+    except (Exception, SystemExit):  # noqa: BLE001 — unreadable is not green and not red: say nothing
+        line = state.get("ci_main_line", "")
+    state["ci_main_line"] = line
+    return line
 
 
 def discipline_lines(campaign: Path) -> list[str]:
