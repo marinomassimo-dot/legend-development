@@ -579,6 +579,15 @@
      "accepted_at": "2026-11-20T12:25:21Z",
      "evidence": "V3_1 line 6.19 and CURRENT READING row; energy_axis_adv105_sci_20261120/ADDENDUM_DREAM_RP023_TTYPE_SCI_20261120.md",
      "updated_at": "2026-11-20T12:25:21Z"
+    },
+    {
+     "step": "ADV-106 blind scoring of RP-005 prospective test (Uebele 2009, PMID 19451696): score S1 to S5 of three anonymous sets against the body, HIT/MISS/NOT DETERMINABLE with quote and locator; do not open GENERATOR_REASONS_AS_DELIVERED before scores are committed",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "IT Orchestrator 2026-11-20 message to SCI (ADV-106 / RP-005; freeze da0b5f907; ADV-approved design)",
+     "accepted_at": "2026-11-20T12:44:59Z",
+     "evidence": "prospective_rp005_adv106_20261120/SCORING_RP005_ADV106_SCI_20261120.md (scored before any key; generator reasons never opened)",
+     "updated_at": "2026-11-20T12:47:05Z"
     }
    ]
   }
@@ -1022,6 +1031,13 @@
    "at": "2026-11-20T12:25:21Z",
    "source": "ADV 2026-11-20 message to SCI (ADV-105 accepted, decisions 1 and 2)",
    "step_sha256": "8f5e273f729f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T12:44:59Z",
+   "source": "IT Orchestrator 2026-11-20 message to SCI (ADV-106 / RP-005; freeze da0b5f907; ADV-approved design)",
+   "step_sha256": "80038f7693d7",
    "reopened_block": false,
    "authorised_by": null
   }
