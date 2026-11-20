@@ -1,0 +1,124 @@
+{
+ "x_ticks_px_found": [
+  250.5,
+  335.5,
+  420.0,
+  422.5,
+  506.5,
+  592.5,
+  677.0,
+  679.0,
+  763.5,
+  849.5,
+  934.0,
+  936.0,
+  1020.5
+ ],
+ "x_ticks_used_px": [
+  250.5,
+  506.5,
+  763.5,
+  1020.5
+ ],
+ "y_ticks_px_found": [
+  111.0,
+  239.5,
+  368.0,
+  496.5,
+  624.5
+ ],
+ "y_label_centres_px": [
+  109.5,
+  237.5,
+  366.0,
+  494.5,
+  623.0
+ ],
+ "y_px_per_unit_A": 25.680015576323996,
+ "y_px_per_unit_B": 25.680015576323992,
+ "series": {
+  "LD": [
+   {
+    "age": 5.0,
+    "status": "partly occluded: edge-derived candidates (upper edge assumed or lower edge assumed)",
+    "visible_rows_px": [
+     535.0,
+     542.0
+    ],
+    "value_if_upper_edge_visible": 3.16,
+    "value_if_lower_edge_visible": 3.55
+   },
+   {
+    "age": 30.0,
+    "status": "partly occluded: edge-derived candidates (upper edge assumed or lower edge assumed)",
+    "visible_rows_px": [
+     235.0,
+     239.0
+    ],
+    "value_if_upper_edge_visible": 14.84,
+    "value_if_lower_edge_visible": 15.35
+   }
+  ],
+  "KO": [
+   {
+    "age": 5.0,
+    "value_A": 2.34,
+    "value_B": 2.27,
+    "marker_px_wh": [
+     17,
+     17
+    ]
+   },
+   {
+    "age": 30.0,
+    "status": "partly occluded: edge-derived candidates (upper edge assumed or lower edge assumed)",
+    "visible_rows_px": [
+     452.0,
+     455.0
+    ],
+    "value_if_upper_edge_visible": 6.39,
+    "value_if_lower_edge_visible": 6.94
+   }
+  ],
+  "HD": [
+   {
+    "age": 5.0,
+    "value_A": 3.88,
+    "value_B": 3.81,
+    "marker_px_wh": [
+     17,
+     16
+    ]
+   },
+   {
+    "age": 30.0,
+    "value_A": 15.6,
+    "value_B": 15.53,
+    "marker_px_wh": [
+     17,
+     20
+    ]
+   }
+  ],
+  "WT": [
+   {
+    "age": 5.0,
+    "value_A": 5.44,
+    "value_B": 5.37,
+    "marker_px_wh": [
+     17,
+     16
+    ]
+   },
+   {
+    "age": 30.0,
+    "value_A": 17.51,
+    "value_B": 17.44,
+    "marker_px_wh": [
+     17,
+     16
+    ]
+   }
+  ]
+ }
+}

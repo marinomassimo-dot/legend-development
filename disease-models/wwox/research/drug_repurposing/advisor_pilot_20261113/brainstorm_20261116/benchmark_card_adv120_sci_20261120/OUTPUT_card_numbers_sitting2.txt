@@ -1,0 +1,72 @@
+== R1 survival (Fig 3B; two calibrations: y labels A, axis row B; passes: squares, segments, profile)
+max calibration A vs B difference over all squares (percentage points): 0.29
+KO legend n=10: squares (day, %) [(8.3, 89.7), (10.2, 69.8), (13.0, 59.7), (14.2, 49.8), (15.2, 19.8), (16.2, 9.7), (17.1, -0.3)]
+LD legend n=20: squares (day, %) [(17.3, 89.6), (22.3, 79.8), (39.2, 69.7), (44.1, 59.8), (47.1, 49.8), (59.6, 39.7), (63.5, 29.6), (68.2, 19.8), (77.2, -0.3)]
+WT legend n=20: squares (day, %) [(49.2, 89.6), (96.6, 89.7), (125.1, 71.8), (180.2, 71.8), (300.1, 71.8)]
+HD legend n=30: squares (day, %) [(67.2, 84.4), (89.2, 76.7), (107.2, 76.8), (181.2, 76.7), (299.0, 76.8)]
+KO first step 10.3 points -> implied at-risk count 9.7
+LD first step 10.4 points -> implied at-risk count 9.6
+WT first step 10.4 points -> implied at-risk count 9.6
+HD first step 7.9 points -> implied at-risk count 12.7
+HD profile levels seen at ages 60..90 d: [76.7, 84.3, 92.1] (steps [7.9])
+first event days: KO 8.3, LD 17.3, WT 49.2; HD between the 45 d profile (no visible HD line: hidden behind the WT line at 100) and the 60 d profile (92.1)
+median (first square at or below 50%): KO 14.2 d, LD 47.1 d; WT and HD never reach 50%
+last event: KO 17.1 d, LD 77.2 d (percent at zero)
+survival %  at age (WT | LD | HD ; KO=0 after 17 d); WT is the reference, and HD = hidden-at-100 means 100 by continuity
+age  20: WT 100.0 LD 89.6 HD 100.0 | closed: LD 0.90 HD 1.00
+age  30: WT 100.0 LD 79.8 HD 100.0 | closed: LD 0.80 HD 1.00
+age  45: WT 100.0 LD 59.8 HD 100.0 | closed: LD 0.60 HD 1.00
+age  60: WT 89.6 LD 39.7 HD 92.1 | closed: LD 0.44 HD 1.03
+age  75: WT 89.6 LD 19.8 HD 84.3 | closed: LD 0.22 HD 0.94
+age  90: WT 89.6 LD 0.0 HD 76.7 | closed: LD 0.00 HD 0.86
+age 100: WT 89.7 LD 0.0 HD 76.8 | closed: LD 0.00 HD 0.86
+age 150: WT 71.8 LD 0.0 HD 76.7 | closed: LD 0.00 HD 1.07
+age 295: WT 71.8 LD 0.0 HD 76.8 | closed: LD 0.00 HD 1.07
+WT final plateau 71.8% (a wild type that is not 100%); HD final 76.8%; HD/WT at 300 d 1.07
+
+== R2 weight (g), Fig 3C; calibrations A ticks, B labels (difference 0.07 g)
+LD at P5 occluded by the HD marker: candidates 3.16 (upper edge) to 3.55 (lower edge); LD at P30 occluded: 14.84 to 15.35
+P5  WT 5.44 KO 2.34 LD 3.55 HD 3.88 | closed: LD 0.39 HD 0.50
+P10 WT 7.11 KO 4.41 LD 4.93 HD 6.53 | closed: LD 0.19 HD 0.79
+P15 WT 9.1 KO 4.68 LD 6.45 HD 7.17 | closed: LD 0.40 HD 0.56
+P20 WT 10.0 KO None LD 7.33 HD 8.71 | no untreated KO after P15; HD/WT 0.87 LD/WT 0.73
+P25 WT 13.23 KO None LD 9.49 HD 12.27 | no untreated KO after P15; HD/WT 0.93 LD/WT 0.72
+P30 WT 17.51 KO None LD 15.35 HD 15.6 | no untreated KO after P15; HD/WT 0.89 LD/WT 0.88
+Fig 3D (to P180): WT readable [(30.0, 19.58), (40.0, 21.28), (60.0, 24.03), (80.0, 25.15), (100.0, 26.08), (160.0, 26.39), (180.0, 26.89)]; the KO, LD and HD marker cores are not separable from the WT markers except LD at P30 (17.11 g)
+Fig 3D WT at the marker nearest P30 (window +/- 2.3 d at 4.3 px/d) = 19.58 g against Fig 3C WT at P30 = 17.51 g; 3C slope near P30 is 0.86 g/day, so a few days of offset would account for it: not claimed as a discrepancy
+
+== R3 glucose (mg/dL), dots per group, mean of the dots, SD of the dots (calibrations A, B listed in the JSON)
+P10 {'WT': (10, 128.87, 25.59), 'KO': (8, 95.85, 36.18), 'LD': (7, 105.86, 18.65), 'HD': (11, 113.09, 29.01)}
+P20 {'WT': (9, 145.65, 13.53), 'LD': (7, 128.53, 9.26), 'HD': (12, 147.8, 13.02)}
+P30 {'WT': (9, 169.83, 31.48), 'LD': (8, 162.1, 18.4), 'HD': (13, 169.88, 22.55)}
+P10 gap closed: LD 0.30 HD 0.52
+P10 closure 5-50-95 percentile from the group SEMs (dots, Monte Carlo): LD [-0.9   0.31  0.84] HD [-0.46  0.53  1.2 ]
+P20: no untreated KO in the panel; LD - WT = -17.1, HD - WT = 2.2 mg/dL; LD/WT 0.88 HD/WT 1.01
+P180 (bars): WT 197.3, HD 187.6 mg/dL, HD/WT 0.95; n not printed
+
+== R5 myelination
+Fig 6C brain weight mg: WT 465 KO 245 (KO/WT 0.53); Fig 6D CC thickness (unit not printed on the axis): WT 321 KO 228 (KO/WT 0.71)
+Fig 6E cc       WT 26.2 KO 13.1: KO/WT 50%, reduction 50%; printed 48%
+Fig 6E cortex   WT 27.1 KO 19.7: KO/WT 72%, reduction 28%; printed 30%
+Fig 6E striatum WT 25.0 KO 12.2: KO/WT 49%, reduction 51%; printed 50%
+Fig 6E AC       WT 21.1 KO 6.3: KO/WT 30%, reduction 70%; printed 70%
+(Fig 6E calibration B, by label centres, is invalid for this panel: the labels merged with annotations; A only)
+2021 Fig 5 CC myelinated axons per FOV at P17 (n=3 each): WT 130.3 KO 45.7 KO+AAV 104.9 (B: 130.3 46.0 105.0); gap closed 0.70
+2021 Fig 5 CC unmyelinated axons per FOV at 6 months (n=3 each): WT 26.4 KO+AAV 51.5 (B: 26.5 51.5); treated/WT 1.95
+
+== R4 glia (percent area, treated-arm panels; no untreated KO in these panels)
+S7F Iba1: WT 9.22 LD 16.13 HD 10.73 (LD/WT 1.75 HD/WT 1.16)
+S7H GFAP: WT 1.71 LD 3.03 HD 1.87 (LD/WT 1.77 HD/WT 1.09)
+
+== R6 hindlimb clasping score (S4A, P18; scale 0 to 5 as drawn; n not printed)
+WT 0.10 KO 3.60 LD 1.80 HD 0.30 (B: [0.1, 3.59, 1.8, 0.3]); gap closed LD 0.51 HD 0.94; SD from the lower whisker: LD 1.03 HD 0.47 KO 0.52 WT 0.32
+
+== R7 spike-wave per hour (typed from the earlier note): KO 0.63 WT 0.03 KO+HD 0.13; gap closed HD 0.83
+
+== sampling spread
+HD at 90 d: fraction alive 0.77, implied at-risk n 13, binomial SE 0.12 points of fraction, SE of the gap closed (divided by WT 0.90) 0.13
+LD at 60 d: fraction alive 0.40, implied at-risk n 10, binomial SE 0.16 points of fraction, SE of the gap closed (divided by WT 0.90) 0.18
+(the legend n would give a smaller SE: HD n=30 -> 0.08; LD n=20 -> 0.11; reported as the lower bound of spread)
+SWD (per-animal ranges typed from the earlier note): KO+HD 0.00 to 0.25 per hour against KO mean 0.63, WT mean 0.03 -> closure 0.63 to 1.05
+clasp HD: one SD of the arm changes the closure by 0.13 (n not printed, so the SE is not computed)
+clasp LD: one SD of the arm changes the closure by 0.29 (n not printed, so the SE is not computed)

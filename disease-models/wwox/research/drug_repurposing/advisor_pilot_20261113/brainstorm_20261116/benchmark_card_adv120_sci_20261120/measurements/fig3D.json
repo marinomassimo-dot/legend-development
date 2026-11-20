@@ -1,0 +1,236 @@
+{
+ "x_ticks_px_found": [
+  432.5,
+  604.5,
+  776.5,
+  949.0,
+  1121.0
+ ],
+ "x_ticks_used_px": [
+  432.5,
+  604.5,
+  776.5,
+  949.0,
+  1121.0
+ ],
+ "y_ticks_px_found": [
+  119.5,
+  249.0,
+  378.0,
+  507.5,
+  636.5
+ ],
+ "y_label_centres_px": [
+  118.5,
+  247.5,
+  376.5,
+  506.0,
+  635.0
+ ],
+ "y_px_per_unit_A": 12.92500580270793,
+ "y_px_per_unit_B": 12.91500580720093,
+ "series": {
+  "WT": [
+   {
+    "age": 30.0,
+    "value_A": 19.58,
+    "value_B": 19.47,
+    "marker_px_wh": [
+     16,
+     17
+    ]
+   },
+   {
+    "age": 40.0,
+    "value_A": 21.28,
+    "value_B": 21.18,
+    "marker_px_wh": [
+     16,
+     17
+    ]
+   },
+   {
+    "age": 60.0,
+    "value_A": 24.03,
+    "value_B": 23.93,
+    "marker_px_wh": [
+     16,
+     16
+    ]
+   },
+   {
+    "age": 80.0,
+    "value_A": 25.15,
+    "value_B": 25.05,
+    "marker_px_wh": [
+     17,
+     17
+    ]
+   },
+   {
+    "age": 100.0,
+    "value_A": 26.08,
+    "value_B": 25.98,
+    "marker_px_wh": [
+     16,
+     17
+    ]
+   },
+   {
+    "age": 160.0,
+    "value_A": 26.39,
+    "value_B": 26.29,
+    "marker_px_wh": [
+     16,
+     17
+    ]
+   },
+   {
+    "age": 180.0,
+    "value_A": 26.89,
+    "value_B": 26.79,
+    "marker_px_wh": [
+     17,
+     16
+    ]
+   }
+  ],
+  "KO": [
+   {
+    "age": 30.0,
+    "status": "no marker (absent, hidden, or clipped by the axis)"
+   },
+   {
+    "age": 40.0,
+    "status": "no marker (absent, hidden, or clipped by the axis)"
+   },
+   {
+    "age": 60.0,
+    "status": "no marker (absent, hidden, or clipped by the axis)"
+   },
+   {
+    "age": 80.0,
+    "status": "no marker (absent, hidden, or clipped by the axis)"
+   },
+   {
+    "age": 100.0,
+    "status": "no marker (absent, hidden, or clipped by the axis)"
+   },
+   {
+    "age": 160.0,
+    "status": "no marker (absent, hidden, or clipped by the axis)"
+   },
+   {
+    "age": 180.0,
+    "status": "no marker (absent, hidden, or clipped by the axis)"
+   }
+  ],
+  "LD": [
+   {
+    "age": 30.0,
+    "value_A": 17.11,
+    "value_B": 17.0,
+    "marker_px_wh": [
+     16,
+     15
+    ]
+   },
+   {
+    "age": 40.0,
+    "status": "partly occluded: edge-derived candidates (upper edge assumed or lower edge assumed)",
+    "visible_rows_px": [
+     374.0,
+     387.0
+    ],
+    "value_if_upper_edge_visible": 19.66,
+    "value_if_lower_edge_visible": 19.97
+   },
+   {
+    "age": 60.0,
+    "status": "partly occluded: edge-derived candidates (upper edge assumed or lower edge assumed)",
+    "visible_rows_px": [
+     357.0,
+     367.0
+    ],
+    "value_if_upper_edge_visible": 20.97,
+    "value_if_lower_edge_visible": 21.52
+   },
+   {
+    "age": 80.0,
+    "status": "no marker (absent, hidden, or clipped by the axis)"
+   },
+   {
+    "age": 100.0,
+    "status": "no marker (absent, hidden, or clipped by the axis)"
+   },
+   {
+    "age": 160.0,
+    "status": "no marker (absent, hidden, or clipped by the axis)"
+   },
+   {
+    "age": 180.0,
+    "status": "no marker (absent, hidden, or clipped by the axis)"
+   }
+  ],
+  "HD": [
+   {
+    "age": 30.0,
+    "status": "no marker (absent, hidden, or clipped by the axis)"
+   },
+   {
+    "age": 40.0,
+    "status": "no marker (absent, hidden, or clipped by the axis)"
+   },
+   {
+    "age": 60.0,
+    "status": "partly occluded: edge-derived candidates (upper edge assumed or lower edge assumed)",
+    "visible_rows_px": [
+     335.0,
+     336.0
+    ],
+    "value_if_upper_edge_visible": 22.68,
+    "value_if_lower_edge_visible": 23.91
+   },
+   {
+    "age": 80.0,
+    "status": "partly occluded: edge-derived candidates (upper edge assumed or lower edge assumed)",
+    "visible_rows_px": [
+     321.0,
+     321.0
+    ],
+    "value_if_upper_edge_visible": 23.76,
+    "value_if_lower_edge_visible": 25.08
+   },
+   {
+    "age": 100.0,
+    "status": "partly occluded: edge-derived candidates (upper edge assumed or lower edge assumed)",
+    "visible_rows_px": [
+     309.0,
+     321.0
+    ],
+    "value_if_upper_edge_visible": 24.69,
+    "value_if_lower_edge_visible": 25.08
+   },
+   {
+    "age": 160.0,
+    "status": "partly occluded: edge-derived candidates (upper edge assumed or lower edge assumed)",
+    "visible_rows_px": [
+     307.0,
+     321.0
+    ],
+    "value_if_upper_edge_visible": 24.84,
+    "value_if_lower_edge_visible": 25.08
+   },
+   {
+    "age": 180.0,
+    "status": "partly occluded: edge-derived candidates (upper edge assumed or lower edge assumed)",
+    "visible_rows_px": [
+     298.0,
+     307.0
+    ],
+    "value_if_upper_edge_visible": 25.54,
+    "value_if_lower_edge_visible": 26.16
+   }
+  ]
+ }
+}
