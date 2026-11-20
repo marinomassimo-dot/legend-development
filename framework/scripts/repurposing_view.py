@@ -5703,7 +5703,7 @@ def snap_tmp_hint(version_text: str, tmpdir: str) -> str | None:
     if tmpdir != "/tmp" and not tmpdir.startswith("/tmp/"):
         return None
     return ("snap-confined browser and a temporary directory under /tmp: file:// pages written there are invisible to it. Run the suite with TMPDIR set to a non-hidden "
-            "directory under the home, for example `TMPDIR=$HOME/legend_browser_tmp python3 -B framework/scripts/test_repurposing_view.py <Class>`")
+            "directory under the home (not a dot-directory such as ~/.cache: it is invisible to the snap too), for example `TMPDIR=$HOME/legend_browser_tmp python3 -B framework/scripts/test_repurposing_view.py <Class>`")
 
 
 def browser_preflight(out=print) -> int:

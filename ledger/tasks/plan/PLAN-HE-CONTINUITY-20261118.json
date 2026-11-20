@@ -488,6 +488,15 @@
      "accepted_at": "2026-11-20T23:04:41Z",
      "evidence": "launch 23:04:56Z session 3330ba92; release 23:05:18.1Z; bind 23:15:00.3Z (late: marker missing until HE read the transcript at 23:14); first action 23:15:00.9Z; handoff RUNNING; effort high read back by the successor; retirement of window S left to the catch-up",
      "updated_at": "2026-11-20T23:15:37Z"
+    },
+    {
+     "step": "ADV lead: find the bracketed Italian fragment in the English view (source, one string or a class, painted-text route)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-20 about IT's painted-page read (IT dated line 766a438e4) of the full English view",
+     "accepted_at": "2026-11-20T23:43:55Z",
+     "evidence": "source repurposing_view.py:5269 (ranking card next-experiment line) and :3504 (work-order chip) print the raw Italian work-order kind enum WO_KINDS (3 strings); 8 visible fragments painted at 1280 px EN, identical counts in en/fr/de/es; route: Cdp with TMPDIR under HOME; no fix made",
+     "updated_at": "2026-11-20T23:45:04Z"
     }
    ]
   }
@@ -861,6 +870,13 @@
    "at": "2026-11-20T23:04:41Z",
    "source": "SCI [2e686b] message 2026-11-20 about checkpoint T (dcb416bafef3, sha 7f691612)",
    "step_sha256": "82737b22597a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T23:43:55Z",
+   "source": "ADV message 2026-11-20 about IT's painted-page read (IT dated line 766a438e4) of the full English view",
+   "step_sha256": "3d6579339a8b",
    "reopened_block": false,
    "authorised_by": null
   }
