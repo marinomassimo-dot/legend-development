@@ -249,6 +249,11 @@ def out_name(src: str, lang: str) -> str:
     return base.replace(".html", f".{lang}.html")
 
 
+def check_langs_for(src: str, lang):
+    """Which languages `check` reads: every language of both sources unless one is named (the full view used to be checked in Italian only)."""
+    return list(LANGS) if lang in (None, "") else langs_for(src, lang)
+
+
 def langs_for(src: str, lang):
     """Which languages a command renders: shareable defaults to all five (one dataset, five renderings); full defaults to Italian."""
     if lang in (None, ""):
@@ -1272,6 +1277,12 @@ def overview_positions(links: dict) -> list[str]:
     """The overview of a card: the SET of its need-level positions, in the fixed display order of GROUPS. Never a single winner."""
     have = {l["group"] for l in links.values()}
     return [g["id"] for g in GROUPS if g["id"] in have]
+
+
+# 2026-11-20 (IT, via ADV): the card page clipped a card's pharmacology paragraph at 360 characters; 14 of the 30 cards are longer (8 above 900, the longest 2,351), so the facts a packet change appends to a
+# paragraph (the sentence after the first full stop) were in the card JSON and the join but never on the page. A longer clip, in Python only, changes no script or style of the page (a 'more' marker in
+# assets/curated.js would have changed the bytes of every page, shareable ones included). 2,500 shows every current card in full; a longer one is still cut at a sentence. ONLY the full (local) view gets it: the shareable edition keeps 360, because lengthening what the public pages print is a publication choice, not a repair (it changed every shareable page, +13 KB).
+PHARM_CLIP = 2500
 
 
 def clip(t, n=300):
@@ -2376,7 +2387,7 @@ def build_curated(dr: Path, ctx: dict) -> dict:
             "abstention": bool(absn), "needs": lneeds, "links": lk, "positions": overview_positions(lk), "assessment": card.get("assessment"), "summary": card.get("directional_summary"),
             "why": clip(f.get("indication_and_transfer") or f.get("identity"), 420), "why_full": f.get("indication_and_transfer") or f.get("identity"),
             "identity": clip(f.get("identity"), 360), "mechanism": clip(f.get("mechanism"), 360), "novelty": clip(f.get("novelty_for_woree"), 360),
-            "expected": clip(f.get("expected_contribution"), 200), "access_text": clip(f.get("time_to_access"), 240), "pharm": clip(f.get("pharmacology"), 360),
+            "expected": clip(f.get("expected_contribution"), 200), "access_text": clip(f.get("time_to_access"), 240), "pharm": clip(f.get("pharmacology"), 360 if shareable else PHARM_CLIP),
             "against": against, "against_note": against_note, "for": for_, "transfer_limits": efa.get("transfer_limits"), "not_known": nk,
             "missing": absd.get("missing_datum") if absd.get("missing_datum") else (nk[0] if nk else None), "reopen": clip(absd.get("search_record"), 260) if absd.get("search_record") else None,
             "next": clip(nxt, 360), "next_full": nxt, "limits": limits_for_page(card), "asserts": asserts, "n_disease_assertions": len(inp.get("disease_assertions") or ([inp["disease_assertion"]] if inp.get("disease_assertion") else [])),
@@ -6104,7 +6115,7 @@ def main(argv=None) -> int:
         import repurposing_shareable_package as _m
         return _m.main(argv[1:])
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0], formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", nargs="?", choices=["run", "check", "positions", "titles", "viewports", "i18n", "browser"], help="(also: audit-shareable, package: see the module docstring) browser: one short probe of the Chromium this shell would use (present, --version, headless + DevTools), to run before a long browser-dependent suite; run: write the view; check: exit 1 if a file is stale; positions: print one TSV line per card x need with the inputs and the position (for re-derivation); titles: report (or with --refresh, fill) the source-title cache; viewports: measure the page at 360/390/768/1280 px with a real device-metrics emulation")
+    ap.add_argument("command", nargs="?", choices=["run", "check", "positions", "titles", "viewports", "i18n", "browser"], help="(also: audit-shareable, package: see the module docstring) browser: one short probe of the Chromium this shell would use (present, --version, headless + DevTools), to run before a long browser-dependent suite; run: write the view; check: exit 1 if a file is stale (every language of both the full and the shareable view); positions: print one TSV line per card x need with the inputs and the position (for re-derivation); titles: report (or with --refresh, fill) the source-title cache; viewports: measure the page at 360/390/768/1280 px with a real device-metrics emulation")
     ap.add_argument("--dr", type=Path, default=DEFAULT_DR, help="drug_repurposing directory (default: the module)")
     ap.add_argument("--source", choices=list(SOURCES), default=None,
                     help="run: full (default) embeds every row, written to view/index.html; shareable embeds only allowlisted rows (view/shareable_sources.json), written to view/index_shareable.html. check: both unless given")
@@ -6178,8 +6189,11 @@ def main(argv=None) -> int:
         return 0
     rc = 0
     for src in ([a.source] if a.source else list(SOURCES)):
-        for lg in langs_for(src, a.lang):
-            out = a.out if (a.out and a.source and len(langs_for(src, a.lang)) == 1) else (a.dr / "view" / out_name(src, lg))
+        # 2026-11-20 (IT, via ADV): `check` rendered the full view in Italian only, so the four full-source language pages (en, fr, es, de) went stale unseen after the first packet change and still showed a
+        # withdrawn phrase until regenerated by hand. `check` now reads every language of both sources; `run` keeps its defaults (a language is regenerated with --lang or --lang all).
+        check_langs = check_langs_for(src, a.lang)
+        for lg in check_langs:
+            out = a.out if (a.out and a.source and len(check_langs) == 1) else (a.dr / "view" / out_name(src, lg))
             text = build(a.dr, src, lg)
             if not out.exists() or out.read_text(encoding="utf-8") != text:
                 print(f"STALE: {out} differs from a fresh {src} build ({lg}); run: python3 -B framework/scripts/repurposing_view.py run" + (" --source shareable" if src == "shareable" else ""))

@@ -160,6 +160,24 @@ class RealData(unittest.TestCase):
         self.assertNotRegex(self.page, r"[\w.+-]+@[\w-]+\.[\w.]+")
 
 
+class CheckAndClip(unittest.TestCase):
+    """2026-11-20 (IT via ADV): `check` read the full view in Italian only and the card page clipped a pharmacology paragraph at 360 characters."""
+
+    def test_check_reads_every_language_of_both_sources_unless_one_is_named(self):
+        self.assertEqual(rv.check_langs_for("full", None), list(rv.LANGS))
+        self.assertEqual(rv.check_langs_for("shareable", ""), list(rv.LANGS))
+        self.assertEqual(rv.check_langs_for("full", "fr"), ["fr"])
+        self.assertEqual(rv.check_langs_for("full", "all"), list(rv.LANGS))
+
+    def test_the_full_view_prints_a_cards_pharmacology_paragraph_in_full_and_the_shareable_one_keeps_its_clip(self):
+        long_text = ("A first sentence of the card. " * 12 + "A caveat appended after the clip: nothing here is a statement about exposure in the disease. ").strip()
+        self.assertGreater(len(long_text), 360)
+        self.assertEqual(rv.clip(long_text, rv.PHARM_CLIP), long_text)                       # the full view
+        self.assertLess(len(rv.clip(long_text, 360)), len(long_text))                        # the shareable edition
+        self.assertNotIn("caveat appended", rv.clip(long_text, 360))
+        self.assertGreaterEqual(rv.PHARM_CLIP, 2351)                                         # the longest card paragraph on 2026-11-20
+
+
 class States(unittest.TestCase):
     def manifest(self, statuses):
         return {"sources": {k: {"name": k.upper(), "last_attempt": {"status": s, "detail": "d-" + k, "utc": "2026-01-01T00:00:00Z"},
