@@ -3087,3 +3087,13 @@ verify routing and schema behaviour; universal future model obedience is not dem
 **Environment.** Host-specific tool verdicts not used this session (no SKIP or REJECT on tool absence).
 
 **Outcome.** Gap recorded (new); change made: none; no cost, API or privacy risk (plain clients, generic client name, no contact parameter). Strategic Advisor: assess this lead against the standing roadmap and current work; apply cross-session transport section 12 (Route useful signals) and contact the relevant Harness or Science owner when worthwhile.
+
+## 2026-11-20 — IT successor N, session close (WM103 part 1 stretch)
+
+**Session learning delta.** The second blind check of a repaired sentence found one overshoot («partly corrects P20 glucose» where the P20 panel has no untreated knockout group); the sentence was rewritten in the verifier's own wording and part 1 of the WM103 candidate landed as three dated notes; the knockout glucose baseline in the source figure exists at P10 only.
+
+**Capability gap.** None new. One near-miss, already covered: three sessions are listed under the name SCI, and the delivery note for the message sent to the one the checkpoint named did not say which inbox received it. The remedy that exists (address by `name [ref]` from the checkpoint, and read «who a message really reached», cross-session transport section 5) was applied; the residual question (did that session read it) stays open and is not counted as a defect.
+
+**Environment.** Host-specific tool verdicts not used this session (no SKIP or REJECT on tool absence).
+
+**Outcome.** `CHANGE = NONE`; no cost, API or privacy risk. Strategic Advisor: assess this note against the standing roadmap and current work; apply cross-session transport section 12 (Route useful signals) and contact the relevant Harness or Science owner when worthwhile.
