@@ -257,6 +257,63 @@ class RecipientsView(unittest.TestCase):
         self.assertEqual(sa.idle_without_blocker(view, waits), [])                                   # at or below the threshold nothing is said
 
 
+class ContextLines(unittest.TestCase):
+    """2026-11-20 (HE): the restart lines of README section 13 are read from the transcript's last usage block and printed on the tick; SCI window 2d2e7085 passed 400k unflagged and ended at 599k."""
+    def usage_line(self, cache_read, cache_creation=10, inp=5, output=900):
+        return json.dumps({"type": "assistant", "message": {"id": "m", "usage": {"input_tokens": inp, "cache_creation_input_tokens": cache_creation, "cache_read_input_tokens": cache_read, "output_tokens": output}}})
+
+    def write(self, lines, pad=0):
+        f = tempfile.NamedTemporaryFile("w", suffix=".jsonl", delete=False); self.addCleanup(os.unlink, f.name)
+        f.write("\n".join(lines) + "\n"); f.close()
+        return Path(f.name)
+
+    def test_the_last_turn_counts_input_and_both_cache_kinds_and_not_output(self):
+        p = self.write([self.usage_line(100_000), '{"type": "user", "message": {"content": "x"}}', self.usage_line(289_985, cache_creation=10, inp=5, output=70_000)])
+        self.assertEqual(sa.last_context_tokens(p), 290_000)
+
+    def test_no_usage_block_gives_none_and_a_huge_tail_entry_is_not_misread(self):
+        self.assertIsNone(sa.last_context_tokens(self.write(['{"type": "user"}'])))
+        self.assertIsNone(sa.last_context_tokens(Path("/nonexistent/x.jsonl")))
+        big = json.dumps({"type": "user", "message": {"content": "y" * (sa.CONTEXT_TAIL_BYTES + 10)}})
+        self.assertIsNone(sa.last_context_tokens(self.write([self.usage_line(500_000), big])))        # the usage line lies beyond the tail: unknown, never a stale guess presented as current
+
+    def test_each_line_names_its_rule_and_a_quiet_recipient_is_not_flagged(self):
+        view = {"roles": {"Science": {"name": "SCI", "context_tokens": 289_000}, "Orchestrator": {"name": "IT Orchestrator", "context_tokens": 407_500},
+                          "Advisor": {"name": "ADV", "context_tokens": 206_000}, "Harness": {"name": "HE", "context_tokens": 360_000}, "Unread": {"name": "X"}}}
+        flags = sa.context_flags(view)
+        self.assertEqual(len(flags), 3)
+        self.assertIn("Science (SCI) context 289k: restart at a closed increment", flags)
+        self.assertIn("Orchestrator (IT Orchestrator) context 408k: past the never-later line", flags)
+        self.assertIn("Harness (HE) context 360k: restart at the next sub-step boundary", flags)
+
+
+class RadarAndDueWaits(unittest.TestCase):
+    """2026-11-20 (HE): the 05:20Z briefing and the BLOCKED step that named 05:20Z both sat until a meeting asked (114 minutes); the tick now says a named time has passed and that a new briefing exists, once."""
+    NOW = dt.datetime(2026, 11, 20, 7, 18, tzinfo=dt.timezone.utc)
+
+    def test_a_blocker_that_names_a_past_time_is_due_and_a_future_or_vague_one_is_not(self):
+        waits = [{"task": "PLAN-X", "step": "Read the first radar briefing", "blocker": "the first briefing is produced at 2026-11-20T05:20Z by the daily scout"},
+                 {"task": "T2", "step": "s", "blocker": "awaits 2026-11-20T09:00Z"}, {"task": "T3", "step": "s", "blocker": "awaits 2026-11-20T07:15Z"},
+                 {"task": "T4", "step": "s", "blocker": "the supply of texts, tomorrow, 2026-11-19"}, {"task": "T5", "step": "s", "blocker": "bad 2026-13-45T25:61Z"}]
+        lines = sa.due_waits(waits, self.NOW)
+        self.assertEqual(len(lines), 1)
+        self.assertIn("PLAN-X", lines[0]); self.assertIn("past by 118 min", lines[0])                   # 3 minutes late (07:15) is inside the grace; 09:00 is the future
+
+    def test_a_new_briefing_is_reported_once_with_its_items_and_nothing_when_it_has_no_item(self):
+        with tempfile.TemporaryDirectory() as td:
+            f = Path(td) / "scout_daily_briefing.md"
+            f.write_text("RADAR BRIEFING x\nDelta 1: Discovery:reopen:glia/NP4G2\n  detail\nDelta 2: Discovery:open-slot\n", encoding="utf-8")
+            state: dict = {}
+            first = sa.radar_news(state, f)
+            self.assertIn("2 item(s) to examine", first); self.assertIn("Discovery:open-slot", first); self.assertIn("forward the useful ones by name", first)
+            self.assertEqual(sa.radar_news(state, f), "")                                               # the same briefing is not reported again
+            os.utime(f, (f.stat().st_mtime + 3600, f.stat().st_mtime + 3600))
+            self.assertIn("NEW RADAR BRIEFING", sa.radar_news(state, f))                               # a later run is new
+            f.write_text("RADAR BRIEFING y\nNEXT STEP: none\n", encoding="utf-8"); os.utime(f, (f.stat().st_mtime + 7200,) * 2)
+            self.assertEqual(sa.radar_news(state, f), "")                                               # a briefing without items is silent
+            self.assertEqual(sa.radar_news({}, Path(td) / "absent.md"), "")
+
+
 class ClaudeBinary(unittest.TestCase):
     """2026-11-19 (ADV): in the session's own shell `claude` is not on PATH; the activity block was silently omitted at every in-session tick."""
 

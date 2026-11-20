@@ -6,6 +6,7 @@ stopped while work remains, ask the bound session to continue.
     python3 framework/scripts/mandate_watch.py check --task <ID> --deliver none --json
     python3 framework/scripts/mandate_watch.py events [--last N]
     python3 framework/scripts/mandate_watch.py route --to ADV [--to HE --first-line "IT to ADV and HE: ..."]
+    python3 framework/scripts/mandate_watch.py handoff --task <ID> --old <old session id> --new <successor id> [--within 5] [--wait 600]   # after a restart: released, bound, first tool call?
 
 One control, two triggers, no new coordinator:
 
@@ -304,6 +305,103 @@ def transcript_for_session(session_id: str, projects_dir: Path | None = None) ->
         return next(iter(found.values())) if len(found) == 1 else None
     except OSError:
         return None
+
+
+def bind_timeline(path: Path, task: str) -> dict:
+    """Where a session stands on ONE task, from its own transcript: the state of the last marker line, when the current BOUND was written, and whether any tool call came after it. 2026-11-20 (operator's
+    morning continuation): the SCI successor of checkpoint L wrote its bind line as a text-only message, the turn ended, and it sat 41 minutes waiting for a message that went to its predecessor. A bind line
+    written in the SAME response as a tool call is found at once and the turn goes on (probe 2026-11-20 07:25Z); this reads the difference from the transcript, not from the recipient's word."""
+    out = {"state": "NEVER_BOUND", "bound_at": None, "released_at": None, "tool_calls_after_bind": 0, "first_action_at": None, "last_write": None}
+    try:
+        with path.open(encoding="utf-8", errors="replace") as fh:
+            for line in fh:
+                try:
+                    entry = json.loads(line)
+                except ValueError:
+                    continue
+                if not isinstance(entry, dict):
+                    continue
+                stamp = entry.get("timestamp")
+                if isinstance(stamp, str):
+                    out["last_write"] = stamp
+                for text in mc._text_blocks(entry):
+                    for kind, t in mc.MARKER_RE.findall(mc._outside_fences(text)):
+                        if t == task:
+                            out["state"] = "BOUND" if kind == "BOUND" else "RELEASED"
+                            out["bound_at" if kind == "BOUND" else "released_at"] = stamp
+                            if kind == "BOUND":
+                                out["tool_calls_after_bind"] = 0
+                                out["first_action_at"] = None
+                content = (entry.get("message") or {}).get("content") if entry.get("type") == "assistant" and not entry.get("isSidechain") else None
+                if out["state"] == "BOUND" and isinstance(content, list):
+                    calls = sum(1 for b in content if isinstance(b, dict) and b.get("type") == "tool_use")
+                    out["tool_calls_after_bind"] += calls
+                    if calls and out["first_action_at"] is None:
+                        out["first_action_at"] = stamp
+    except OSError:
+        return {"state": "MISSING", "bound_at": None, "released_at": None, "tool_calls_after_bind": 0, "last_write": None}
+    return out
+
+
+def _age_min(stamp: str | None, now: datetime) -> int | None:
+    try:
+        return round((now - datetime.fromisoformat(str(stamp).replace("Z", "+00:00"))).total_seconds() / 60)
+    except (TypeError, ValueError):
+        return None
+
+
+def handoff_state(task: str, old_path: Path | None, new_path: Path | None, now: datetime, within_min: int = 5, sessions: list[dict] | None = None, new_id: str = "") -> dict:
+    """The restart's verification, one verdict: RUNNING (the successor is bound and has made a tool call), STALLED (bound and silent for longer than `within_min`), or the step it is still at
+    (WAITING_FOR_RELEASE, WAITING_FOR_BIND, BOUND_WAITING_FIRST_ACTION), BOTH_BOUND (two hosts) or NEW_NOT_FOUND. A READ of two transcripts: it starts, stops and sends nothing. When the successor is stalled it names the
+    row to address: the listing shows the successor and its predecessor under ONE name, told apart only by their start times, and a reference is not derivable from the session id (measured 2026-11-20: ListAgents [90ee47]
+    for session 1ac4ca4b), so the row is described by its age and the sender must take the row whose age matches."""
+    old = bind_timeline(old_path, task) if old_path else {"state": "MISSING"}
+    new = bind_timeline(new_path, task) if new_path else {"state": "MISSING"}
+    out = {"task": task, "old": old, "new": new}
+    if new["state"] == "MISSING":
+        out.update(verdict="NEW_NOT_FOUND", next="no transcript for the successor's id (a short id works only as a unique prefix of at least 8 characters): launch it again or correct the id")
+        return out
+    if old["state"] == "BOUND" and new["state"] == "BOUND":
+        out.update(verdict="BOTH_BOUND", next="two hosts: the predecessor must write the plain line `MANDATE_RELEASED: " + task + "` (or be stopped once idle)")
+        return out
+    if new["state"] != "BOUND":
+        if old["state"] != "RELEASED":
+            out.update(verdict="WAITING_FOR_RELEASE", next="the predecessor has not released the task (its own checkpoint and release come first); the successor must not bind before it")
+        else:
+            waited = _age_min(old.get("released_at"), now)
+            out.update(verdict="WAITING_FOR_BIND", waited_min=waited,
+                       next="the predecessor released; the successor has not bound" + (": send it the follow-up now" if waited is not None and waited >= within_min else " (inside the allowed minutes)"))
+        return out
+    bound_for = _age_min(new.get("bound_at"), now)
+    out["bound_min"] = bound_for
+    if new["tool_calls_after_bind"] > 0:
+        try:
+            lag = round((datetime.fromisoformat(new["first_action_at"].replace("Z", "+00:00")) - datetime.fromisoformat(new["bound_at"].replace("Z", "+00:00"))).total_seconds() / 60, 1)
+        except (AttributeError, TypeError, ValueError):
+            lag = None
+        out.update(verdict="RUNNING", first_action_after_bind_min=lag, next="bound and acting: nothing to do")
+        return out
+    stalled = bound_for is not None and bound_for >= within_min
+    out.update(verdict="STALLED" if stalled else "BOUND_WAITING_FIRST_ACTION",
+               next=("the bind line ended the turn: send the follow-up to THE SUCCESSOR (" + _address_hint(sessions, new_id, now) + "), then check again") if stalled else "bound a moment ago; check again within the allowed minutes")
+    return out
+
+
+def _address_hint(sessions: list[dict] | None, new_id: str, now: datetime) -> str:
+    """How to pick the listing row: by name and start time, never by position or apparent recency alone."""
+    rows = []
+    for x in sessions or []:
+        started = x.get("startedAt")
+        age = round((now.timestamp() - started / 1000) / 60) if isinstance(started, (int, float)) else None
+        rows.append((str(x.get("sessionId") or ""), x.get("name"), age))
+    mine = next((r for r in rows if new_id and r[0].startswith(new_id)), None)
+    if not mine:
+        return "its row is not in the live listing: check that it is alive"
+    same = [r for r in rows if r[1] == mine[1] and r[0] != mine[0]]
+    text = f"name {mine[1]}, started {mine[2]} min ago"
+    if same:
+        text += "; the other row(s) with that name started " + ", ".join(f"{r[2]} min ago" for r in same) + " and belong to other sessions (the predecessor among them): in ListAgents take the row whose 'started' matches, after re-running it"
+    return text
 
 
 def live_bound_sessions(task: str, sessions: list[dict] | None, projects_dir: Path | None = None) -> list[dict]:
@@ -1018,6 +1116,12 @@ def main(argv: list[str] | None = None) -> int:
     rl = sub.add_parser("released", help="has the OLD session released this task? (a successor's check, by session id: MISSING, NEVER_BOUND, BOUND or RELEASED; exit 0 only for RELEASED)")
     rl.add_argument("--session", required=True, help="the old session's id (the transcript is found by id, in whichever project folder it lives)")
     rl.add_argument("--task", required=True)
+    ho = sub.add_parser("handoff", help="verify a restart: the predecessor released, the successor bound, and the successor made a tool call after its bind line (RUNNING), or say where it stands; read-only")
+    ho.add_argument("--task", required=True)
+    ho.add_argument("--old", required=True, help="the predecessor's FULL session id")
+    ho.add_argument("--new", required=True, help="the successor's session id (a unique prefix of at least 8 characters is enough)")
+    ho.add_argument("--within", type=int, default=5, help="minutes a bound successor may take for its first tool call before it is STALLED")
+    ho.add_argument("--wait", type=int, default=0, help="seconds to keep checking until RUNNING or STALLED (default: one look)")
     rs = sub.add_parser("resources", help="observed memory, pressure, swap, the cgroups holding most RSS and the live jobs (read-only, no thresholds)")
     rs.add_argument("--top", type=int, default=8)
     e = sub.add_parser("events", help="what the watch decided on this machine")
@@ -1045,6 +1149,16 @@ def main(argv: list[str] | None = None) -> int:
         state = mc.marker_state(path, a.task) if path else "MISSING"
         print(f"{state} (session {a.session[:8]}, task {a.task}" + (f", {path}" if path else ", no transcript found for that id (a short id works only as a unique prefix of at least 8 characters)") + ")")
         return 0 if state == "RELEASED" else (2 if state == "MISSING" else 1)
+    if a.cmd == "handoff":
+        deadline = time.time() + a.wait
+        while True:
+            now = datetime.now(timezone.utc)
+            res = handoff_state(a.task, transcript_for_session(a.old), transcript_for_session(a.new), now, a.within, list_sessions(), a.new)
+            if res["verdict"] in ("RUNNING", "STALLED", "BOTH_BOUND", "NEW_NOT_FOUND") or time.time() >= deadline:
+                break
+            time.sleep(15)
+        print(json.dumps(res, indent=1, sort_keys=True, ensure_ascii=False))
+        return {"RUNNING": 0, "STALLED": 4, "BOTH_BOUND": 3, "NEW_NOT_FOUND": 2}.get(res["verdict"], 1)
     if a.cmd == "resources":
         print(json.dumps(resource_state(top=a.top, sessions=list_sessions()), indent=1, sort_keys=True))
         return 0
