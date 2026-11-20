@@ -1,0 +1,234 @@
+[
+ {
+  "arm": "B",
+  "source": "epmc",
+  "query": "(TITLE_ABS:opc AND TITLE_ABS:drg) AND FIRST_PDATE:[2024-11-20 TO 2026-11-20]",
+  "hits": 1,
+  "returned": 1,
+  "error": null
+ },
+ {
+  "arm": "S",
+  "source": "pubmed",
+  "query": "Wwox[tiab] AND (oligodendrocyte[tiab] OR myelin*[tiab])",
+  "hits": "9",
+  "returned": 9,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 1,
+  "source": "pubmed",
+  "query": "(Wwox[tiab] OR WWOX[tiab] OR Wox1[tiab] OR WOX1[tiab] OR \"WW domain-containing oxidoreductase\"[tiab] OR FRA16D[tiab]) AND (oligodendrocyte[tiab] OR \"oligodendrocyte precursor\"[tiab] OR OPC[tiab] OR NG2[tiab] OR Olig2[tiab] OR myelin*[tiab] OR hypomyelination[tiab] OR \"myelin basic protein\"[tiab])",
+  "hits": "10",
+  "returned": 10,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 1,
+  "source": "epmc",
+  "query": "(TITLE_ABS:Wwox OR TITLE_ABS:WWOX OR TITLE_ABS:Wox1 OR TITLE_ABS:WOX1 OR TITLE_ABS:\"WW domain-containing oxidoreductase\" OR TITLE_ABS:FRA16D) AND (TITLE_ABS:oligodendrocyte OR TITLE_ABS:\"oligodendrocyte precursor\" OR TITLE_ABS:OPC OR TITLE_ABS:NG2 OR TITLE_ABS:Olig2 OR TITLE_ABS:myelin* OR TITLE_ABS:hypomyelination OR TITLE_ABS:\"myelin basic protein\")",
+  "hits": 13,
+  "returned": 13,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 2,
+  "source": "pubmed",
+  "query": "(Wwox[tiab] OR WWOX[tiab] OR Wox1[tiab] OR WOX1[tiab] OR \"WW domain-containing oxidoreductase\"[tiab] OR FRA16D[tiab]) AND (\"oligodendrocyte precursor\"[tiab] OR OPC[tiab] OR NG2[tiab])",
+  "hits": "0",
+  "returned": 0,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 2,
+  "source": "epmc",
+  "query": "(TITLE_ABS:Wwox OR TITLE_ABS:WWOX OR TITLE_ABS:Wox1 OR TITLE_ABS:WOX1 OR TITLE_ABS:\"WW domain-containing oxidoreductase\" OR TITLE_ABS:FRA16D) AND (TITLE_ABS:\"oligodendrocyte precursor\" OR TITLE_ABS:OPC OR TITLE_ABS:NG2)",
+  "hits": 1,
+  "returned": 1,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 3,
+  "source": "pubmed",
+  "query": "(Wwox[tiab] OR WWOX[tiab] OR Wox1[tiab] OR WOX1[tiab] OR \"WW domain-containing oxidoreductase\"[tiab] OR FRA16D[tiab]) AND (\"oligodendrocyte differentiation\"[tiab] OR \"oligodendrocyte maturation\"[tiab])",
+  "hits": "0",
+  "returned": 0,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 3,
+  "source": "epmc",
+  "query": "(TITLE_ABS:Wwox OR TITLE_ABS:WWOX OR TITLE_ABS:Wox1 OR TITLE_ABS:WOX1 OR TITLE_ABS:\"WW domain-containing oxidoreductase\" OR TITLE_ABS:FRA16D) AND (TITLE_ABS:\"oligodendrocyte differentiation\" OR TITLE_ABS:\"oligodendrocyte maturation\")",
+  "hits": 1,
+  "returned": 1,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 4,
+  "source": "pubmed",
+  "query": "(Wwox[tiab] OR WWOX[tiab] OR Wox1[tiab] OR WOX1[tiab] OR \"WW domain-containing oxidoreductase\"[tiab] OR FRA16D[tiab]) AND (myelination[tiab] OR hypomyelination[tiab] OR demyelination[tiab] OR remyelination[tiab])",
+  "hits": "9",
+  "returned": 9,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 4,
+  "source": "epmc",
+  "query": "(TITLE_ABS:Wwox OR TITLE_ABS:WWOX OR TITLE_ABS:Wox1 OR TITLE_ABS:WOX1 OR TITLE_ABS:\"WW domain-containing oxidoreductase\" OR TITLE_ABS:FRA16D) AND (TITLE_ABS:myelination OR TITLE_ABS:hypomyelination OR TITLE_ABS:demyelination OR TITLE_ABS:remyelination)",
+  "hits": 12,
+  "returned": 12,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 5,
+  "source": "pubmed",
+  "query": "(Wwox[tiab] OR WWOX[tiab] OR Wox1[tiab] OR WOX1[tiab] OR \"WW domain-containing oxidoreductase\"[tiab] OR FRA16D[tiab]) AND (coculture[tiab] OR co-culture[tiab] OR DRG[tiab] OR \"dorsal root ganglion\"[tiab]) AND (oligodendrocyte[tiab] OR \"oligodendrocyte precursor\"[tiab] OR OPC[tiab] OR NG2[tiab] OR Olig2[tiab] OR myelin*[tiab] OR hypomyelination[tiab] OR \"myelin basic protein\"[tiab])",
+  "hits": "0",
+  "returned": 0,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 5,
+  "source": "epmc",
+  "query": "(TITLE_ABS:Wwox OR TITLE_ABS:WWOX OR TITLE_ABS:Wox1 OR TITLE_ABS:WOX1 OR TITLE_ABS:\"WW domain-containing oxidoreductase\" OR TITLE_ABS:FRA16D) AND (TITLE_ABS:coculture OR TITLE_ABS:co-culture OR TITLE_ABS:DRG OR TITLE_ABS:\"dorsal root ganglion\") AND (TITLE_ABS:oligodendrocyte OR TITLE_ABS:\"oligodendrocyte precursor\" OR TITLE_ABS:OPC OR TITLE_ABS:NG2 OR TITLE_ABS:Olig2 OR TITLE_ABS:myelin* OR TITLE_ABS:hypomyelination OR TITLE_ABS:\"myelin basic protein\")",
+  "hits": 0,
+  "returned": 0,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 6,
+  "source": "pubmed",
+  "query": "(Wwox[tiab] OR WWOX[tiab] OR Wox1[tiab] OR WOX1[tiab] OR \"WW domain-containing oxidoreductase\"[tiab] OR FRA16D[tiab]) AND (\"conditional knockout\"[tiab] OR Cre[tiab] OR \"null mice\"[tiab] OR \"knockout mice\"[tiab]) AND (oligodendrocyte[tiab] OR \"oligodendrocyte precursor\"[tiab] OR OPC[tiab] OR NG2[tiab] OR Olig2[tiab] OR myelin*[tiab] OR hypomyelination[tiab] OR \"myelin basic protein\"[tiab])",
+  "hits": "2",
+  "returned": 2,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 6,
+  "source": "epmc",
+  "query": "(TITLE_ABS:Wwox OR TITLE_ABS:WWOX OR TITLE_ABS:Wox1 OR TITLE_ABS:WOX1 OR TITLE_ABS:\"WW domain-containing oxidoreductase\" OR TITLE_ABS:FRA16D) AND (TITLE_ABS:\"conditional knockout\" OR TITLE_ABS:Cre OR TITLE_ABS:\"null mice\" OR TITLE_ABS:\"knockout mice\") AND (TITLE_ABS:oligodendrocyte OR TITLE_ABS:\"oligodendrocyte precursor\" OR TITLE_ABS:OPC OR TITLE_ABS:NG2 OR TITLE_ABS:Olig2 OR TITLE_ABS:myelin* OR TITLE_ABS:hypomyelination OR TITLE_ABS:\"myelin basic protein\")",
+  "hits": 4,
+  "returned": 4,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 7,
+  "source": "pubmed",
+  "query": "(Wwox[tiab] OR WWOX[tiab] OR Wox1[tiab] OR WOX1[tiab] OR \"WW domain-containing oxidoreductase\"[tiab] OR FRA16D[tiab]) AND (organoid*[tiab] OR iPSC[tiab] OR \"stem cell\"[tiab]) AND (oligodendrocyte[tiab] OR \"oligodendrocyte precursor\"[tiab] OR OPC[tiab] OR NG2[tiab] OR Olig2[tiab] OR myelin*[tiab] OR hypomyelination[tiab] OR \"myelin basic protein\"[tiab])",
+  "hits": "2",
+  "returned": 2,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 7,
+  "source": "epmc",
+  "query": "(TITLE_ABS:Wwox OR TITLE_ABS:WWOX OR TITLE_ABS:Wox1 OR TITLE_ABS:WOX1 OR TITLE_ABS:\"WW domain-containing oxidoreductase\" OR TITLE_ABS:FRA16D) AND (TITLE_ABS:organoid* OR TITLE_ABS:iPSC OR TITLE_ABS:\"stem cell\") AND (TITLE_ABS:oligodendrocyte OR TITLE_ABS:\"oligodendrocyte precursor\" OR TITLE_ABS:OPC OR TITLE_ABS:NG2 OR TITLE_ABS:Olig2 OR TITLE_ABS:myelin* OR TITLE_ABS:hypomyelination OR TITLE_ABS:\"myelin basic protein\")",
+  "hits": 2,
+  "returned": 2,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 8,
+  "source": "pubmed",
+  "query": "(Wwox[tiab] OR WWOX[tiab] OR Wox1[tiab] OR WOX1[tiab] OR \"WW domain-containing oxidoreductase\"[tiab] OR FRA16D[tiab]) AND (\"white matter\"[tiab] OR leukodystrophy[tiab] OR \"corpus callosum\"[tiab])",
+  "hits": "9",
+  "returned": 9,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 8,
+  "source": "epmc",
+  "query": "(TITLE_ABS:Wwox OR TITLE_ABS:WWOX OR TITLE_ABS:Wox1 OR TITLE_ABS:WOX1 OR TITLE_ABS:\"WW domain-containing oxidoreductase\" OR TITLE_ABS:FRA16D) AND (TITLE_ABS:\"white matter\" OR TITLE_ABS:leukodystrophy OR TITLE_ABS:\"corpus callosum\")",
+  "hits": 9,
+  "returned": 9,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 9,
+  "source": "pubmed",
+  "query": "(WOREE[tiab] OR \"WWOX-related epileptic encephalopathy\"[tiab] OR \"WWOX related\"[tiab]) AND (oligodendrocyte[tiab] OR \"oligodendrocyte precursor\"[tiab] OR OPC[tiab] OR NG2[tiab] OR Olig2[tiab] OR myelin*[tiab] OR hypomyelination[tiab] OR \"myelin basic protein\"[tiab])",
+  "hits": "6",
+  "returned": 6,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 9,
+  "source": "epmc",
+  "query": "(TITLE_ABS:WOREE OR TITLE_ABS:\"WWOX-related epileptic encephalopathy\" OR TITLE_ABS:\"WWOX related\") AND (TITLE_ABS:oligodendrocyte OR TITLE_ABS:\"oligodendrocyte precursor\" OR TITLE_ABS:OPC OR TITLE_ABS:NG2 OR TITLE_ABS:Olig2 OR TITLE_ABS:myelin* OR TITLE_ABS:hypomyelination OR TITLE_ABS:\"myelin basic protein\")",
+  "hits": 8,
+  "returned": 8,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 10,
+  "source": "pubmed",
+  "query": "(lde/lde[tiab] OR Wwox-null[tiab] OR \"Wwox null\"[tiab]) AND (myelin*[tiab] OR oligodendro*[tiab])",
+  "hits": "4",
+  "returned": 4,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 10,
+  "source": "epmc",
+  "query": "(TITLE_ABS:lde/lde OR TITLE_ABS:Wwox-null OR TITLE_ABS:\"Wwox null\") AND (TITLE_ABS:myelin* OR TITLE_ABS:oligodendro*)",
+  "hits": 6,
+  "returned": 6,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 11,
+  "source": "pubmed",
+  "query": "(Wwox[tiab] OR WWOX[tiab] OR Wox1[tiab] OR WOX1[tiab] OR \"WW domain-containing oxidoreductase\"[tiab] OR FRA16D[tiab]) AND (glia[tiab] OR astrocyte[tiab] OR microglia[tiab]) AND (myelin*[tiab] OR oligodendrocyte[tiab])",
+  "hits": "1",
+  "returned": 1,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 11,
+  "source": "epmc",
+  "query": "(TITLE_ABS:Wwox OR TITLE_ABS:WWOX OR TITLE_ABS:Wox1 OR TITLE_ABS:WOX1 OR TITLE_ABS:\"WW domain-containing oxidoreductase\" OR TITLE_ABS:FRA16D) AND (TITLE_ABS:glia OR TITLE_ABS:astrocyte OR TITLE_ABS:microglia) AND (TITLE_ABS:myelin* OR TITLE_ABS:oligodendrocyte)",
+  "hits": 1,
+  "returned": 1,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 12,
+  "source": "pubmed",
+  "query": "(Wwox[tiab] OR WWOX[tiab] OR Wox1[tiab] OR WOX1[tiab] OR \"WW domain-containing oxidoreductase\"[tiab] OR FRA16D[tiab]) AND (lipid[tiab] OR sphingolipid[tiab] OR ceramide[tiab] OR cholesterol[tiab]) AND (myelin*[tiab] OR oligodendrocyte[tiab])",
+  "hits": "0",
+  "returned": 0,
+  "error": null
+ },
+ {
+  "arm": "M",
+  "q": 12,
+  "source": "epmc",
+  "query": "(TITLE_ABS:Wwox OR TITLE_ABS:WWOX OR TITLE_ABS:Wox1 OR TITLE_ABS:WOX1 OR TITLE_ABS:\"WW domain-containing oxidoreductase\" OR TITLE_ABS:FRA16D) AND (TITLE_ABS:lipid OR TITLE_ABS:sphingolipid OR TITLE_ABS:ceramide OR TITLE_ABS:cholesterol) AND (TITLE_ABS:myelin* OR TITLE_ABS:oligodendrocyte)",
+  "hits": 0,
+  "returned": 0,
+  "error": null
+ }
+]
