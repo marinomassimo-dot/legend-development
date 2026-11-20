@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "6e20d8bef6240e7f4a2f6ebff0ae725bd3e60a0182b0f882557a709cd30ec8e9",
+  "input_sha256": "ffe8e3bc458d902ad7815524aebf619f711f43920e95a4dedb9ad16fa492301d",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -217,7 +217,7 @@
       },
       "time_to_access": "UNKNOWN.",
       "time_to_benefit": "UNKNOWN.",
-      "pharmacology": "Dichloroacetate: weak in the retrieved enzyme and cell assays; no label found; spontaneous-report counts exist but are not rates. Research PDK inhibitors: enzyme tools only.",
+      "pharmacology": "Dichloroacetate: weak in the retrieved enzyme and cell assays; no label found; spontaneous-report counts exist but are not rates. Research PDK inhibitors: enzyme tools only. Added class-level facts, no dose, no score, NOT WWOX EVIDENCE [IT59 2026-11-20 third packet change] (HE ADV-098 batch 8, database rows): dichloroacetic acid acts at millimolar concentrations in most rows read (the fibroblast EC50 below is sub-millimolar). Within ONE 2017 document (an enzyme-linked assay on full-length PDHA1 as substrate, 30 minutes) the IC50 is 1.03 millimolar for PDK1, 0.50 for PDK2 and 5.56 for PDK3: an eleven-fold range across isozymes in one assay, a comparable contrast; an older row gives more than 2 millimolar against PDK in vitro and an EC50 of 100 micromolar in normal human dermal fibroblasts, a different readout, with no order between the two documents read; Five leukaemia cell-line rows give 8 to 14 millimolar (MTT cytotoxicity, 48 hours, 2016). No brain concentration of dichloroacetate in mice and no juvenile exposure were found (the rat brain PDK distribution paper of 1984 and a rat GSTZ1 paper are by title only; one neonatal query found no record); the openFDA label route returned no match for dichloroacetic acid, a statement about that route and not about development status.",
       "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
       "scope_of_checks": {
         "support_and_replication": "No independent replication of any fly row is held; the organoid rows are one laboratory's deposit.",

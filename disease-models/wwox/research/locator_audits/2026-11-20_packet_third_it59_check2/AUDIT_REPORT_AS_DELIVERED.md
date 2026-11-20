@@ -1,0 +1,18 @@
+# Blind audit, check 2, of the repaired third-packet statements (B1 to B9): delegate report (summary table verbatim in substance; notes condensed by IT; full text only in the delegate's transcript, agent aa20edc305b6acabb)
+
+Fresh legend-delegate, model sonnet, effort high as dispatched (it did not read back its runtime setting); packet AUDIT_PACKET.md built by audit_packet_builder_it59.py (9 items, 14 anchors, all present). Result: SUPPORTED_WITH_LIMIT on B1 to B8 and B9a; B9b (the WO-27 line): OVERSHOOT on three clauses, UNVERIFIABLE on one. Persisted by IT; the findings below are the delegate's, condensed.
+
+| Item | Verdict |
+|---|---|
+| B1 trazodone | SUPPORTED_WITH_LIMIT: "any stress-response assay" says more than the sheet's "PERK, eIF2alpha-P or ISR assay" |
+| B2 omaveloxolone | SUPPORTED_WITH_LIMIT (minor): only the first of the two searches is mouse-specific |
+| B3 dichloroacetate | SUPPORTED_WITH_LIMIT: headline "millimolar" is not true of the sub-millimolar fibroblast EC50 quoted in the same statement |
+| B4 metabolic axis | SUPPORTED_WITH_LIMIT: the dichloroacetate seizure datum (abstract level, adult mice) is a PDH-axis manipulation outside the held full texts; the day-10 glucose is a plot reading by the ADV-074 producer, not re-read; 'preregistration is not an increment' wording slip |
+| B5 10058-F4 and two uncarded agents | SUPPORTED_WITH_LIMIT: abstract of 25868794 names EPZ-6438 (identity with tazemetostat is the sheet's); label 'from 16 years' simplified; 'no card' is a repository-status statement not in the sheet |
+| B6 benztropine | SUPPORTED_WITH_LIMIT: 'title level only' applied to all four agents though the sheet quotes titles for three; hits are by title; '0.59 to 0.95' reads as a range |
+| B7 miconazole, clobetasol | SUPPORTED_WITH_LIMIT: 'the measured target is sterol demethylase' is a gloss (the 200 nM value is a cell-system row; the largest row groups are other cytochromes and a transporter); 'formulation problem' correctly carried at title level |
+| B8 D02 wording | SUPPORTED_WITH_LIMIT (core exact against 6.10): 'an elevated panel opens an inhibitor arm' reads as sufficient, the anchor says conditional on S-up; the reference to IT's earlier phrase is not checkable from the anchor |
+| B9a first correction line (WO-21) | SUPPORTED_WITH_LIMIT (core exact); 'section 22' and 'corrected in place' clauses unverifiable from the named anchors |
+| B9b second correction line (WO-27) | OVERSHOOT x3, UNVERIFIABLE x1: (1) 'the forbidden reading stays forbidden in both directions' is not in the anchors; (2) 'Class IIa HDACs and EZH2 are not WWOX premises found by SCI's screen' is not in any named anchor (UNVERIFIABLE); (3) TMP195 'no exposure' drops 'found by these routes'; (4) tazemetostat 'a mechanism for a missing exposure and not a measurement' drops 'of the exposure' while the abstract reports in vivo relative brain accumulation; also the TMP195 '2- to 7-fold' lower end is about 1.5-fold on the sheet's own numbers (HDAC5 216 against 148) |
+
+Repairs made by IT after this check (UNAUDITED, stated in record section 22): 'integrated stress response assay'; 'one of them specific to mice'; 'most rows (the fibroblast EC50 is sub-millimolar)'; plot-reading and abstract-level DCA datum on I01; 'ADV-101 documents'; tazemetostat/TMP195 wording on M01 and WO-27 (abstract-level P-gp statement, no concentration figure found, EPZ-6438 identity is the sheet's, label split, about 1.5- to 7-fold); 'for the agents whose literature the sheet lists'; 'by title'; 'and'; CYP51 gloss narrowed; D02 'the condition under which an inhibitor arm exists', IT's phrase dropped; WO-27 forbidden-reading clause restated as the quoted sentence; the unverifiable EZH2 and HDAC premise sentence dropped.
