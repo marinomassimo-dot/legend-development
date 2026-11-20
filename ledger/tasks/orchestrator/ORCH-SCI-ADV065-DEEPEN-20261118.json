@@ -411,11 +411,20 @@
     },
     {
      "step": "ADV-095: scientific selection before laboratory work: (A) premise screen of broad mechanisms on held WWOX-deficient data, (B) target and exposure comparison for the bridge shortlist, (C) one compact comparative case per objective with one priority experiment",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-095 (assignments/ADV-095.md) and ADV message 2026-11-19 (roadmap_current.md#scientific-selection-before-laboratory-work)",
      "accepted_at": "2026-11-19T22:06:52Z",
-     "updated_at": "2026-11-19T23:42:29Z"
+     "updated_at": "2026-11-20T01:14:57Z",
+     "evidence": "Units A, A2, A3 (landed a8d148c97, 62ff9286a), verifier passes 1 and 2, bridge exposure round 2, supply search, thyroid premise check, unit C broad and bridge landed at 8ca6dfa22 and 5b22f8f00 (gate PASS, ls-remote verified); proteostasis screen in the gate at f82e10ad6a98; ADV accepted unit C and closed ADV-095 as delivered (ADV message 2026-11-20)"
+    },
+    {
+     "step": "ADV-099: unbiased pre-registered discovery of a neuron-internal lesion candidate in the two held neuron-resolved systems (hippocampal nuclei GSE158684, human organoid neuron clusters GSE156243): keep only what replicates across the two after maturity adjustment, map to druggable targets and classes with pharmacology data (HE sheets), check overlap with the programmes the AAV9 neuronal rescue normalised, name the new candidate class and its rejecting observation; stop rule: nothing replicates then say so, name the data that would show it, stop",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-20 (ADV-099, assignments/ADV-099.md, not yet on main when accepted)",
+     "accepted_at": "2026-11-20T01:14:50Z",
+     "updated_at": "2026-11-20T01:14:57Z"
     }
    ]
   }
@@ -733,6 +742,13 @@
    "at": "2026-11-19T22:06:52Z",
    "source": "ADV-095 (assignments/ADV-095.md) and ADV message 2026-11-19 (roadmap_current.md#scientific-selection-before-laboratory-work)",
    "step_sha256": "c5cd52b80af4",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T01:14:50Z",
+   "source": "ADV message 2026-11-20 (ADV-099, assignments/ADV-099.md, not yet on main when accepted)",
+   "step_sha256": "b5fb14e57e43",
    "reopened_block": false,
    "authorised_by": null
   }
