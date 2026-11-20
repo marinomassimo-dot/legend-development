@@ -627,10 +627,12 @@
     },
     {
      "step": "ADV-116: GSE112627 single pre-onset age P14 (Scn1a+/- hippocampus): is any fixed glial or energy set already different between genotypes; verify onset and strain-genotype confounding from PMID 30347190 first; own pre-registration before the counts file is opened",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV 2026-11-20 message to SCI (ADV-116; assignments/ADV-116.md)",
-     "accepted_at": "2026-11-20T15:26:13Z"
+     "accepted_at": "2026-11-20T15:26:13Z",
+     "evidence": "gse112627_p14_adv116_sci_20261120/ADV116_GSE112627_P14_SCI_20261120.md landed on main c1c5d6215 gate=PASS; pre-registration f672781f3 before the counts file; no set DIFFERENT at P14 in F1",
+     "updated_at": "2026-11-20T15:38:16Z"
     }
    ]
   }
