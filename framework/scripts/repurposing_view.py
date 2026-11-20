@@ -5694,6 +5694,18 @@ def find_chromium() -> str | None:
     return next((b for b in found if _browser_starts(b)), found[0] if found else None)
 
 
+def snap_tmp_hint(version_text: str, tmpdir: str) -> str | None:
+    """A snap-packaged browser runs in a confinement with its own private /tmp, so a file:// page the suite writes under /tmp is not found by it ("Page load failed: ERR_FILE_NOT_FOUND" and a page that
+    never becomes ready), although the browser itself starts. Measured 2026-11-20 on this host: with TMPDIR on a non-hidden directory under the home the keyboard test passed in 8 s and every browser class of
+    test_repurposing_view passed. Returns the one-line instruction, or None when it does not apply (a non-snap browser, or a temporary directory outside /tmp)."""
+    if "snap" not in (version_text or "").lower():
+        return None
+    if tmpdir != "/tmp" and not tmpdir.startswith("/tmp/"):
+        return None
+    return ("snap-confined browser and a temporary directory under /tmp: file:// pages written there are invisible to it. Run the suite with TMPDIR set to a non-hidden "
+            "directory under the home, for example `TMPDIR=$HOME/legend_browser_tmp python3 -B framework/scripts/test_repurposing_view.py <Class>`")
+
+
 def browser_preflight(out=print) -> int:
     """One short, honest probe before a long browser-dependent run: five different facts, each stated apart, stopping at the first that fails.
     A pass here proves the browser only; no view has been measured. Run it in the shell that will run the suite (a launcher that works in one shell can fail in the desktop service's)."""
@@ -5733,6 +5745,9 @@ def browser_preflight(out=print) -> int:
             out(f"4. headless start and DevTools endpoint: FAILED. {str(exc)[:400]}")
             return 1
     out(f"4. headless start and DevTools endpoint: OK ({time.monotonic() - started:.1f}s)")
+    hint = snap_tmp_hint(done.stdout, tempfile.gettempdir())
+    if hint:
+        out("   WARNING: " + hint)
     out("5. dashboard tests: not run here. This proves the browser, not any view; the suite's own result is the evidence for a view.")
     return 0
 
