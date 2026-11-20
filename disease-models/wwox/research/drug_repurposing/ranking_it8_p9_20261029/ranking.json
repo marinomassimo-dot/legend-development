@@ -5262,6 +5262,7 @@
    "pathways_needs": "Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F2; effect_observed_in_wwox_system] -- 2 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 2,
    "sources_pmids": [
+    "22315091",
     "24953239",
     "30361190",
     "32000863",
@@ -5662,6 +5663,7 @@
    "pathways_needs": "Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F2; effect_observed_in_wwox_system] -- 2 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 1,
    "sources_pmids": [
+    "22315091",
     "24953239",
     "30361190",
     "32000863",
@@ -11971,7 +11973,7 @@
    "inputs": {
     "T1_cards": "83b2674992cfc4da",
     "T2_pertinence": "8b0a047e9ce40434",
-    "T3_receipts": "786b50cb8ebc8660",
+    "T3_receipts": "3f07fe66a1195d36",
     "T4_needs": "503be10cec75e346",
     "T5_pharmacology": "5da5f03bb1490bdc",
     "T6_identity": "589dd4de63446384"
@@ -12116,6 +12118,7 @@
     }
    ],
    "pmids": [
+    "22315091",
     "24953239",
     "30361190",
     "32000863",
@@ -13843,7 +13846,7 @@
     "P_pharmacology": {
      "brain_penetration": "UNKNOWN",
      "human_exposure": "UNKNOWN",
-     "potency_with_assay_context": "Not assessed: no compound is carded.",
+     "potency_with_assay_context": "NOT WWOX EVIDENCE, class level, no dose, no score, no compound carded [IT59 2026-11-20 unit B packet change]. CLEMASTINE (public-database rows of HE ADV-098 batch 6 and SCI's verified reading of primary papers): strong histamine H1 and muscarinic binding;",
      "record": "",
      "state": "not in the pharmacological comparison table; card text only (potency, exposure and nervous-system data UNKNOWN unless the card says otherwise)"
     },
