@@ -940,6 +940,16 @@ class AcceptedWork(unittest.TestCase):
         self.assertFalse(again["registered"])                                                         # the same source is not registered twice
         self.assertEqual(len(json.loads(path.read_text())[mc.ACCEPT_BLOCK][mc.ACCEPT_OBJECTIVE]["steps"]), 1)
 
+    def test_a_different_step_under_an_already_registered_source_warns_that_it_was_not_created(self) -> None:
+        path = self.write({"TASK_ID": "T-1", "ACTOR_ID": "plan"})
+        mc.accept_step(self.root, "T-1", "first step", "ADV-080")
+        quiet = mc.accept_step(self.root, "T-1", "first step", "ADV-080")
+        self.assertFalse(quiet["registered"]); self.assertNotIn("warning", quiet)                    # the same text again is the quiet idempotent no-op
+        loud = mc.accept_step(self.root, "T-1", "a second, different step", "ADV-080")
+        self.assertFalse(loud["registered"])
+        self.assertIn("WARNING", loud["warning"]); self.assertIn("step 1", loud["warning"]); self.assertIn("NOT created", loud["warning"])
+        self.assertEqual(len(json.loads(path.read_text())[mc.ACCEPT_BLOCK][mc.ACCEPT_OBJECTIVE]["steps"]), 1)   # nothing else was recorded
+
     def test_an_operator_stop_is_never_reopened_and_nothing_is_written(self) -> None:
         rec = {"TASK_ID": "T-1", "ACTOR_ID": "plan", "AUTHORISED_QUEUE_A": {"MANDATE_STATE": "PAUSED", "OBJ_1": {"order": 1, "steps": [{"step": "x", "status": "TODO"}]}}}
         path = self.write(rec)
