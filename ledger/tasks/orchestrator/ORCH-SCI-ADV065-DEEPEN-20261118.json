@@ -588,6 +588,15 @@
      "accepted_at": "2026-11-20T12:44:59Z",
      "evidence": "prospective_rp005_adv106_20261120/SCORING_RP005_ADV106_SCI_20261120.md (scored before any key; generator reasons never opened)",
      "updated_at": "2026-11-20T12:47:05Z"
+    },
+    {
+     "step": "ADV-109 blind truth table for three unread papers (28 slots): true option, verbatim quote and locator, NOT DETERMINABLE reasons, per-text ambiguity list; do not open PREREG_RP005_ADV109 (predictions in sections 5 to 9)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "IT Orchestrator 2026-11-20 message to SCI (ADV-109; freeze 6a087f5fd)",
+     "accepted_at": "2026-11-20T13:47:22Z",
+     "evidence": "prospective_rp005_adv109_20261120/TRUTH_TABLE_RP005_ADV109_SCI_20261120.md (28 slots, no prediction seen)",
+     "updated_at": "2026-11-20T13:51:14Z"
     }
    ]
   }
@@ -1038,6 +1047,13 @@
    "at": "2026-11-20T12:44:59Z",
    "source": "IT Orchestrator 2026-11-20 message to SCI (ADV-106 / RP-005; freeze da0b5f907; ADV-approved design)",
    "step_sha256": "80038f7693d7",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T13:47:22Z",
+   "source": "IT Orchestrator 2026-11-20 message to SCI (ADV-109; freeze 6a087f5fd)",
+   "step_sha256": "2bd901959385",
    "reopened_block": false,
    "authorised_by": null
   }
