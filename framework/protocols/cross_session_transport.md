@@ -829,6 +829,40 @@ exceed an explicit budget to stay busy.
 
 ### Retire the released predecessor at a session handoff
 
+**Visible session names — operator instruction, 2026-11-20.** For each continuing
+role/mandate, exactly its verified current host carries `CURRENT`: use
+`<role> - CURRENT <session-id-prefix>` (at least eight unique characters). A new
+unbound successor starts as `<role> - CANDIDATE <prefix>`. After release, binding
+and the successor's first action are verified, the launcher removes `CURRENT`
+from the predecessor, naming it `<role> - PREVIOUS <prefix>`, and promotes the
+successor. Demote first, then promote: a failed rename may temporarily leave no
+`CURRENT`, never intentionally two. Verify both names in `claude agents --all
+--json`, including stopped predecessors; stopping a process alone does not
+remove its old display name. Repeat this at every later replacement, not just
+the first one. Keep conversation history, worktrees and checkpoints.
+
+`CURRENT` is a visual indication of the existing binding, never a way to elect
+an actor, grant authority or choose the newest chat by its creation time. If the
+handoff is incomplete or ambiguous, keep the established host and investigate;
+do not award `CURRENT` to the newest arrival. A paused current host does not
+become a predecessor merely because it is idle. An unrelated active mandate is
+not renamed to tidy another role's list.
+
+Use the runtime's native rename (`claude agents`, select the exact session and
+`ctrl+r`; `/rename` in an interactive session). Do not resume an old conversation
+or launch a model just to rename it, and do not edit runtime conversation stores.
+The existing handoff/hourly watch reports name discrepancies through
+`mandate_watch.py labels --task <ID>` and the watch's normal output/events; the
+launcher or ADV corrects them with the native rename and verifies again. This is
+non-blocking maintenance: a naming failure does not stop independent science or
+confer permission to kill a process. The runtime has no headless rename CLI here;
+the check detects drift, it does not claim to enforce a rename atomically.
+
+**Why / EMPATHY:** a completed handoff must also be understandable to the operator
+and to later sessions. A new host's existence is insufficient while the old one
+still looks current. Apply this criterion at subsequent handoffs using the
+existing EMPATHY retrieval path, without a second policy or learning register.
+
 A launcher owns the complete handoff: checkpoint, release, successor bind and first
 action, then retirement of the released **background** predecessor. Ordinary retirement
 needs no new operator instruction. Use the existing watcher:

@@ -113,3 +113,35 @@ was then approved. No rejected action was disguised and no peer changes were res
 The installed watcher blob matches the publication (digest in the task record); the
 existing minute-37 cron entry is present. SCI and IT read-only catch-up show no remaining
 released background predecessors. Next scheduled execution was not awaited or claimed.
+
+## Follow-up: visible current host (operator, 2026-11-20)
+
+The operator requested that `CURRENT` move with every subsequent session handoff.
+The single policy home is cross-session transport, "Retire the released predecessor
+at a session handoff". It explains why launch, effective succession and visible
+retirement are different outcomes, and routes this rationale through existing EMPATHY.
+No new memory store, agent, service or approval was added.
+
+The watcher now derives a read-only name reconciliation from the actual unique bound
+host and its first action. It includes stopped runtime rows; release of one mandate
+does not authorise renaming a session still holding another. The handoff and hourly
+watch expose discrepancies, with demotions before promotion, through their normal
+output and events. `labels --task` is also available directly. `CURRENT` never elects
+a host. Missing or ambiguous observations produce UNKNOWN and no rename plan.
+
+Native UI renaming was used for HE `5d9fc467` and SCI `53cd1e96` without model calls;
+the new check reports CURRENT with no pending renames for both. Their predecessors
+were separately stopped by the guarded retirement path; history and worktrees remain.
+Six new regressions cover stopped predecessors, ordering and idempotency, false/newest
+titles, competing hosts, first-action requirement, another active mandate, unavailable
+inventory and read-only CLI. The full watcher suite passes (88 tests).
+
+Limit: this runtime exposes native interactive rename, not a headless rename CLI.
+The launcher/ADV performs that native action; the watcher detects omissions and does
+not claim atomic or automatic renaming. A future supported rename API may replace this
+small procedural step without changing host identity or scientific authority.
+
+DECISIONS_TAKEN: one canonical policy and existing watch, reversible by removing the
+name observation/call sites. DEFAULTS_TAKEN: unknown naming state never blocks independent
+science. STOP_LOG: no operator approval requested. CHANGE: completed handoffs now have
+an explicit, inspectable display-name outcome. No scientific claim or full-text read.
