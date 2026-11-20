@@ -1343,6 +1343,9 @@ def main(argv: list[str] | None = None) -> int:
             old_path, new_path = transcript_for_session(a.old), transcript_for_session(a.new)
             old_id, new_id = (old_path.stem if old_path else a.old), (new_path.stem if new_path else a.new)
             res["predecessor_retirement"] = retire_predecessor(a.task, old_id, new_id, execute=a.retire_old)
+            retired = res["predecessor_retirement"]["verdict"]
+            res["next"] = ("successor running; predecessor retirement " + retired
+                           + (" (use --retire-old to execute the guarded stop)" if retired == "ELIGIBLE" else ""))
             if a.retire_old and res["predecessor_retirement"]["verdict"] not in ("RETIRED", "ALREADY_STOPPED"):
                 print(json.dumps(res, indent=1, sort_keys=True, ensure_ascii=False))
                 return 5
