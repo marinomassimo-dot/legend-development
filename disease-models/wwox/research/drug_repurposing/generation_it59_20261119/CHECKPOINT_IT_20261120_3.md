@@ -46,3 +46,5 @@ Reply to the operator in Italian, write files in English. This file is read by t
 2. Bind the mandate (`MANDATE_BOUND: ORCH-ROADMAP-IT59-20261119` as its own text block, then a tool call).
 3. Tell SCI that the ADV-121 power note reproduces (section 2) and ask for nothing else.
 4. Wait on the named events of section 3; do nothing on the package before item 17.
+
+[IT 2026-11-20, after ADV's acceptance of this checkpoint: ADV's word for WM103 PART 1 is YES (propagate through BATCH_COMMIT after the second blind check of the repaired T11 sentence); PART 2 stays the operator's (item 18). The successor receives three things: (1) the second blind check, then the PART 1 propagation; (2) the package after item 17; (3) the card-text folds. The limit on the 'broad' combination at 13 to 14 animals per arm is on the WO-02 row (dated line); SCI puts the same limit as line 6.27 of the v3.1 file.]
