@@ -1377,6 +1377,7 @@
  "UI_IT.tc_cardfile": "Archivo de la ficha (ruta en el repositorio, solo uso local)",
  "UI_IT.tc_compound_id": "identidad del compuesto",
  "UI_IT.tc_crit": "Criterios",
+ "UI_IT.tc_cut": "… abreviado en esta edición: el párrafo completo, con sus límites, está en la edición completa.",
  "UI_IT.tc_depth": "Profundidad de lectura",
  "UI_IT.tc_for": "Evidencia a favor, tal como está escrita en la ficha",
  "UI_IT.tc_identity": "Identidad y mecanismo (tal como están escritos en la ficha)",
