@@ -501,10 +501,21 @@
     },
     {
      "step": "S-KO slice-burst comparison against non-NMDAR agents (Breton 2021 and Repudi 2021 assay; T-type blockers incl. BATCH 11, Kv7 openers, tonic-GABA agonists): which agents have a published burst or network-level readout in a comparable slice or culture, which concentrations are brain-exposure-compatible, which outcome would reorder the bridge candidates; Kv7 within-class stays blocked by data; deliver to ADV, IT, HE",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message to SCI successor 2026-11-20 (item 2; checkpoint N section 4.3)",
-     "accepted_at": "2026-11-20T08:36:50Z"
+     "accepted_at": "2026-11-20T08:36:50Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/slice_burst_non_nmdar_sci_20261120/SKO_SLICE_BURST_NON_NMDAR_AGENTS_SCI_20261120.md; v3.1 dated lines 6.13 to 6.16 and pointer row",
+     "updated_at": "2026-11-20T08:43:16Z"
+    },
+    {
+     "step": "ADV-100 (WWOX interactome round and second human neural system check; one pre-registered time-boxed round; GSK-3beta the one partner meeting the criteria after a blind verifier; GSE126075 descriptive third system): recorded retrospectively, delivered by SCI as ADV-100 (9d14b4441ae6)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "advisor_pilot_20261113/assignments/ADV-100.md (host decision recorded retrospectively); ADV message to SCI successor 2026-11-20 item 3",
+     "accepted_at": "2026-11-20T08:41:05Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv100_interactome_second_system_sci_20261120/INTERACTOME_AND_SECOND_SYSTEM_RESULT_SCI_20261120.md; advisor_pilot_20261113/assignments/ADV-100.md; delivered 9d14b4441ae6",
+     "updated_at": "2026-11-20T08:41:11Z"
     }
    ]
   }
@@ -892,6 +903,13 @@
    "at": "2026-11-20T08:36:50Z",
    "source": "ADV message to SCI successor 2026-11-20 (item 2; checkpoint N section 4.3)",
    "step_sha256": "23ad69026b9b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T08:41:05Z",
+   "source": "advisor_pilot_20261113/assignments/ADV-100.md (host decision recorded retrospectively); ADV message to SCI successor 2026-11-20 item 3",
+   "step_sha256": "c6e54d802a34",
    "reopened_block": false,
    "authorised_by": null
   }
