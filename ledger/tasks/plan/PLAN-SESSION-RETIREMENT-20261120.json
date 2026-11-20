@@ -29,15 +29,29 @@
         },
         {
           "step": "Verify refusal cases, fresh-clone regressions and live idempotency",
-          "status": "IN_PROGRESS",
-          "owner": "plan"
+          "status": "DONE",
+          "owner": "plan",
+          "evidence": "Fresh clone: c1a999f1b, 7 targeted regression suites PASS WITH SKIPS (Stop hook absent); final watcher changes 5bc8222ce, fresh-clone watcher suite PASS (82 tests). Continuity 83 tests, one environmental skip. LINT no BLOCK, receipts OK (2201), session_self_eval PASS. Live retirement: two SCI and one IT predecessor; current hosts and files preserved."
         },
         {
           "step": "Publish exact checked SHA and confirm host deployment",
-          "status": "TODO",
+          "status": "IN_PROGRESS",
           "owner": "plan"
         }
       ]
     }
+  },
+  "VALIDATION": {
+    "initial_candidate": "c1a999f1b",
+    "final_code_candidate": "5bc8222ce",
+    "scope": "7 relevant suites, then repeat changed watcher suite; no complete battery claimed",
+    "fresh_clone_log": "/tmp/legend-retirement-fresh-regressions.log (host-local)",
+    "watcher_tests": 82,
+    "continuity_tests": 83,
+    "environmental_skip": "Stop hook absent in fresh clone; no hook installed by this task",
+    "live_smoke": "two SCI predecessors plus one IT stopped with independent exit verification; one SCI and one IT host retained",
+    "self_eval": "PASS with pre-existing declared scientific gaps; no scientific delta",
+    "lint": "WARN, zero BLOCK",
+    "receipts": "OK, 2201 chained receipts on tested candidate"
   }
 }
