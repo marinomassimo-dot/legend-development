@@ -1,0 +1,32 @@
+{
+ "y_ticks_px_found": [
+  26.5,
+  111.5,
+  196.0,
+  281.0
+ ],
+ "y_label_centres_px_all": [],
+ "y_label_centres_px_used": [],
+ "bars_left_to_right": [
+  {
+   "colour": "navy",
+   "x_centre_px": 103.5,
+   "width_px": 48,
+   "top_row": 251.0,
+   "value_A": 3.53,
+   "value_B": 3.54,
+   "cap_value_A": 5.18,
+   "cap_minus_top_A": 1.65
+  },
+  {
+   "colour": "purple",
+   "x_centre_px": 176.5,
+   "width_px": 48,
+   "top_row": 81.0,
+   "value_A": 23.58,
+   "value_B": 23.58,
+   "cap_value_A": 25.94,
+   "cap_minus_top_A": 2.36
+  }
+ ]
+}
