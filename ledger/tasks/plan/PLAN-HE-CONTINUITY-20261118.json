@@ -371,6 +371,15 @@
      "accepted_at": "2026-11-20T17:08:53Z",
      "evidence": "RP-029 resume_when rewritten (item 9 still the operator's, no decision found, cache not enabled; ADV-055/057/060 history; parked (a)(b) not started) and RP-013 outcome note (backlog unchanged; shareable-view clip and notice work of 2026-11-20); only those two rows changed against main in research_portfolio.tsv; test_structured_data_integrity OK, test_strategic_advisor rc 0",
      "updated_at": "2026-11-20T17:08:53Z"
+    },
+    {
+     "step": "Launch SCI's successor from checkpoint Q (verify digest 0623aab5... on main, effort high, autocompact 400000, handoff check) and report times to ADV",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-20 about SCI checkpoint Q restart (to HE [cc7acb])",
+     "accepted_at": "2026-11-20T17:23:29Z",
+     "evidence": "SCI successor session 378f29a6 launched 17:23:45Z from checkpoint Q (sha256 0623aab5... verified by me on main at 24be85452); old 207dd20c released 17:23:59.043Z, successor bound 17:24:14.398Z (15.4 s), first tool call 17:24:16.210Z (1.8 s after bind), handoff RUNNING; predecessor not stopped (earlier claude stop denied by the classifier, left to the operator)",
+     "updated_at": "2026-11-20T17:24:35Z"
     }
    ]
   }
@@ -653,6 +662,13 @@
    "at": "2026-11-20T17:08:53Z",
    "source": "ADV message 2026-11-20 about reconciliation residuals RP-029 and RP-013 (to HE [cc7acb])",
    "step_sha256": "85ed24cd8340",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T17:23:29Z",
+   "source": "ADV message 2026-11-20 about SCI checkpoint Q restart (to HE [cc7acb])",
+   "step_sha256": "3115ce1ff340",
    "reopened_block": false,
    "authorised_by": null
   }
