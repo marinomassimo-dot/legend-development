@@ -446,10 +446,12 @@
     },
     {
      "step": "ADV-125: give the local view suite a working browser, run the three keyboard tests and RealViewports and ShareableAuditRendered with time boxes, report, name a stand-in README row if it cannot match CI",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV message 2026-11-20T22:3xZ to HE successor B (session 5d9fc467): assignment ADV-125",
-     "accepted_at": "2026-11-20T22:37:43Z"
+     "accepted_at": "2026-11-20T22:37:43Z",
+     "evidence": "all eight browser classes pass on main b2ee49ce9 with TMPDIR under HOME (RealViewports 712 s); probe WARNING + README stand-in row landed 20e8bac76; result file adv125_local_browser_he_20261120/RESULT_ADV125_HE_20261120.md",
+     "updated_at": "2026-11-20T23:07:28Z"
     },
     {
      "step": "Night continuation 1: complete automatic retirement of released predecessors (retire_released reachable for every successor state that is safe), with regressions and checkpoint wording fixed",
@@ -471,6 +473,13 @@
      "owner": "plan",
      "source": "Operator NIGHT CONTINUATION 2026-11-20, point 3 (browser diagnosis)",
      "accepted_at": "2026-11-20T22:39:41Z"
+    },
+    {
+     "step": "Launch the SCI successor from checkpoint T (window S to window T): digest, worktree, launch, handoff times",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "SCI [2e686b] message 2026-11-20 about checkpoint T (dcb416bafef3, sha 7f691612)",
+     "accepted_at": "2026-11-20T23:04:41Z"
     }
    ]
   }
@@ -837,6 +846,13 @@
    "at": "2026-11-20T22:39:41Z",
    "source": "Operator NIGHT CONTINUATION 2026-11-20, point 3 (browser diagnosis)",
    "step_sha256": "678757365844",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T23:04:41Z",
+   "source": "SCI [2e686b] message 2026-11-20 about checkpoint T (dcb416bafef3, sha 7f691612)",
+   "step_sha256": "82737b22597a",
    "reopened_block": false,
    "authorised_by": null
   }
