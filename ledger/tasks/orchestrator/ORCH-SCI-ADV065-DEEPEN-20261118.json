@@ -636,10 +636,12 @@
     },
     {
      "step": "ADV-117: Kv7 opener class compound-level comparison with ethosuximide (ezogabine/retigabine, azetukalner/XEN1101, ICA-069673, XE991 control): selectivity and held potency origins, efficacy versus motor-impairment window, KCNQ2 DEE evidence at the same age window, juvenile exposure, harm, the one ordering experiment; closing paragraph on conditional pilot arm versus slice panel priority slot",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-117 (ADV message 2026-11-20 to SCI f6eb70; assignments/ADV-117.md landing)",
-     "accepted_at": "2026-11-20T15:57:30Z"
+     "accepted_at": "2026-11-20T15:57:30Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/kv7_class_adv117_sci_20261120/ADV117_KV7_CLASS_COMPOUND_COMPARISON_SCI_20261120.md (pre-registration PREREGISTRATION_ADV117_SCI_20261120.md, commit b831d551b; slice panel dated line)",
+     "updated_at": "2026-11-20T16:05:06Z"
     }
    ]
   }
