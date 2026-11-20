@@ -1,0 +1,45 @@
+contrast	gene	role	control_mean_tpm	ko_mean_tpm	log2_ratio_ko_over_ctrl	note
+cortex_S	Hr	scored	35.419	14.602	-1.273	
+cortex_S	Klf9	scored	29.888	37.941	0.343	
+cortex_S	Nrgn	scored (confounded)	6852.759	8150.581	0.250	
+cortex_S	Pcp4	scored	1008.750	989.100	-0.028	
+cortex_S	Dio3	scored	2.459	1.425	-0.747	
+cortex_S	Slc16a2	context	42.214	35.117	-0.265	
+cortex_S	Slco1c1	context	52.469	27.153	-0.948	
+cortex_S	Dio2	context	4.453	3.321	-0.412	
+cortex_S	Thra	context	762.795	689.409	-0.146	
+cortex_S	Thrb	context	4.722	3.900	-0.270	
+cortex_S	Mbp	context	4000.264	1752.073	-1.191	
+hippo_S	Hr	scored	7.504	6.284	-0.252	
+hippo_S	Klf9	scored	35.647	28.473	-0.323	
+hippo_S	Nrgn	scored (confounded)	2910.119	2566.401	-0.181	
+hippo_S	Pcp4	scored	250.239	363.110	0.537	
+hippo_S	Dio3	scored	3.157	0.448	-2.572	
+hippo_S	Slc16a2	context	50.261	37.340	-0.428	
+hippo_S	Slco1c1	context	25.085	14.032	-0.834	
+hippo_S	Dio2	context	9.460	5.365	-0.807	
+hippo_S	Thra	context	816.827	634.984	-0.363	
+hippo_S	Thrb	context	7.056	3.616	-0.946	
+hippo_S	Mbp	context	3294.141	745.474	-2.144	
+hippo_N	Hr	scored	9.161	3.977	-1.184	
+hippo_N	Klf9	scored	34.888	35.792	0.037	
+hippo_N	Nrgn	scored (confounded)	2366.527	3435.693	0.538	
+hippo_N	Pcp4	scored	267.762	379.378	0.503	
+hippo_N	Dio3	scored	2.354	1.903	-0.293	
+hippo_N	Slc16a2	context	41.450	37.357	-0.150	
+hippo_N	Slco1c1	context	26.395	10.051	-1.384	
+hippo_N	Dio2	context	10.813	3.548	-1.581	
+hippo_N	Thra	context	778.544	1026.556	0.399	
+hippo_N	Thrb	context	5.542	3.884	-0.502	
+hippo_N	Mbp	context	3118.215	1224.816	-1.348	
+hippo_null	Hr	scored	4.125	4.779	0.208	
+hippo_null	Klf9	scored	59.993	49.163	-0.287	
+hippo_null	Nrgn	scored (confounded)	2473.761	2108.889	-0.230	
+hippo_null	Pcp4	scored	289.248	248.441	-0.219	
+hippo_null	Dio3	scored	2.038	0.633	-1.543	
+hippo_null	Slc16a2	context	30.996	25.504	-0.280	
+hippo_null	Slco1c1	context	22.519	19.201	-0.229	
+hippo_null	Dio2	context	21.007	9.760	-1.098	
+hippo_null	Thra	context	507.932	513.277	0.015	
+hippo_null	Thrb	context	9.696	6.392	-0.594	
+hippo_null	Mbp	context	2767.341	684.638	-2.015	

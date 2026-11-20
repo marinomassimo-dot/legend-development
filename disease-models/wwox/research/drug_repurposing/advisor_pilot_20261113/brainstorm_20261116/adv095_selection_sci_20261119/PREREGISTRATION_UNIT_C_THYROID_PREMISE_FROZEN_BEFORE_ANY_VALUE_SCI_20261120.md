@@ -1,0 +1,19 @@
+# ADV-095 unit C: pre-registration of the thyroid-signalling premise check (frozen before any value is read; SCI successor, 2026-11-20; hypothesis level; no dose, no recommendation; not medical advice)
+
+**Why this check.** The thyromimetic class (Triac, Sob-AM2) has positive developmental results only in brains that are thyroid-hormone deprived (Mct8/Oatp1c1 double knockout; Triac paper text, "profound CNS-specific TH deprivation") or have an OPC excess (Tcf4 mouse). Checkpoint I and ADV state that no premise is held that thyroid signalling is reduced in the Wwox-deficient tissue. If it is not reduced, the class has no state match to the Wwox-deficient cortex of unit A2; if it is reduced, the class gains a premise. The check can change the standing of the class in unit C either way. It is a source of evidence, not a gate (ADV integration note, item 2): an RNA-silent premise does not by itself exclude a lever.
+
+**Data (held, not re-downloaded).** Mouse cortex, neuronal Wwox deletion at P17, 3 knockout against 4 control animals (`GSE158682`, TPM, transcripts summed to gene by the held Ensembl 92 cdna symbols); the three hippocampal contrasts of `GSE158681` (S: 3 against 2, N: 2 against 2, null: 2 against 3), used only as direction checks; the organoid counts (`GSE156243`, 2 control, 4 knockout libraries in two clusters) used only as a direction check, with the "reference moved" caveat of unit A.
+
+**Panel, fixed now (from my memory of the literature, not read in this session; the only reading of one member is in the Triac paper, which reports Hairless expression as restored by Triac).** TH-induced genes in brain: `Hr`, `Klf9`, `Nrgn`, `Pcp4`, `Dio3`. Context genes, reported but not scored: `Slc16a2` (MCT8), `Slco1c1` (OATP1C1), `Dio2`, `Thra`, `Thrb`, `Mbp`. `Nrgn` is also a neuronal maturation gene (it is in the maturity panel of unit A): it is scored but flagged as a confounded member, and a variant of the rule with it removed is reported.
+
+**Quantities.** For each gene in each contrast, log2(mean TPM knockout + 0.1) minus log2(mean TPM control + 0.1) (raw, no adjustment). Panel mean over the scored genes. A gene whose control mean TPM is below 1 is reported as "below floor" and left out of the scored panel; if fewer than four genes remain in the cortex contrast, the verdict is UNDECIDED by construction.
+
+**Null.** 5,000 draws of the same number of genes from genes with control mean TPM within +/- 25 percent of each panel gene's control mean (matched draw per panel gene), same contrast; the empirical two-sided band is the 2.5th to 97.5th percentile of the null panel mean.
+
+**Registered rule (cortex contrast decides; hippocampal and organoid contrasts only report direction).**
+- PREMISE_SUPPORTED_TH: panel mean log2 ratio below -0.3 AND below the null band AND at least four scored genes with a negative ratio.
+- PREMISE_ABSENT_TH: panel mean log2 ratio at or above -0.1, or panel mean above the lower null edge, or a majority of scored genes with a positive ratio.
+- Otherwise UNDECIDED.
+- Reading rule: PREMISE_SUPPORTED_TH adds a premise to the thyromimetic class and is reported with its confounders (maturation, composition); PREMISE_ABSENT_TH records "no RNA evidence of reduced thyroid signalling in this tissue" and does not exclude a thyromimetic effect through other routes (protein activity, local deiodination, a state-independent promyelinating action); UNDECIDED is reported as such. No threshold is relaxed after the value is seen; a post hoc reading is labelled.
+
+**Not done by this check.** No exposure, no TR occupancy, no effect on myelination, no claim about benefit. The mouse deposit is bulk P17 cortex with composition differences (unit A, A2): a panel shift can reflect composition (the mature oligodendrocyte loss) rather than signalling.
