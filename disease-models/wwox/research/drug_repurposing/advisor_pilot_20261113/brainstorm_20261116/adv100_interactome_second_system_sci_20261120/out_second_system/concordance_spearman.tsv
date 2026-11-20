@@ -1,0 +1,4 @@
+against	n_genes	spearman_h_neuron_pair	null_p2.5	null_p97.5	spearman_h_NSC_pair
+nuclei_excitatory	4225	-0.058	-0.057	-0.003	-0.009
+nuclei_inhibitory	4197	-0.059	-0.067	-0.012	0.001
+organoid	7149	0.006	-0.004	0.039	-0.027
