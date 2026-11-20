@@ -314,6 +314,31 @@ class RadarAndDueWaits(unittest.TestCase):
             self.assertEqual(sa.radar_news({}, Path(td) / "absent.md"), "")
 
 
+class UncheckedWaits(unittest.TestCase):
+    """2026-11-20: prose blockers were never evaluated against main; the line names the BLOCKED steps with no machine-checkable `unblock_when`, once per change."""
+    WAITS = [{"task": "ORCH-IT-X", "step": "a", "blocker": "SCI's reading lands", "checkable": False}, {"task": "ORCH-IT-X", "step": "b", "blocker": "x", "checkable": False},
+             {"task": "PLAN-Y", "step": "c", "blocker": "file", "checkable": True}]
+
+    def test_counts_per_task_once_per_change_and_silent_when_all_are_checkable(self):
+        state: dict = {}
+        first = sa.unchecked_waits(self.WAITS, state)
+        self.assertIn("ORCH-IT-X x2", first); self.assertNotIn("PLAN-Y", first); self.assertIn("unblock_when", first)
+        self.assertEqual(sa.unchecked_waits(self.WAITS, state), "")                                      # the same set is not repeated every hour
+        self.assertIn("ORCH-IT-X x1", sa.unchecked_waits(self.WAITS[:1] + self.WAITS[2:], state))        # a change is reported
+        self.assertEqual(sa.unchecked_waits([dict(w, checkable=True) for w in self.WAITS], state), "")
+
+    def test_the_waits_reader_marks_a_step_with_unblock_when_as_checkable(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); (root / "ledger" / "tasks" / "orchestrator").mkdir(parents=True)
+            rec = {"TASK_ID": "ORCH-Z", "AUTHORISED_QUEUE_X": {"MANDATE_STATE": "OPEN", "OBJ_1": {"order": 1, "steps": [
+                {"step": "p", "status": "BLOCKED", "owner": "o", "blocker": "b1", "unblock_when": {"path": "no/such/file.txt"}},
+                {"step": "q", "status": "BLOCKED", "owner": "o", "blocker": "b2"}, {"step": "r", "status": "TODO", "owner": "o"}]}}}
+            (root / "ledger" / "tasks" / "orchestrator" / "ORCH-Z.json").write_text(json.dumps(rec))
+            with patch.object(sa, "ROOT", root):
+                waits = {w["step"]: w["checkable"] for w in sa._waits()}
+        self.assertEqual(waits, {"p": True, "q": False})
+
+
 class ClaudeBinary(unittest.TestCase):
     """2026-11-19 (ADV): in the session's own shell `claude` is not on PATH; the activity block was silently omitted at every in-session tick."""
 
@@ -2208,17 +2233,36 @@ class Meeting(unittest.TestCase):
         return sa.meeting(self.campaign, close_file=path)
 
     def test_exact_six_hour_boundary_and_next_cadence_is_from_start_not_close(self) -> None:
-        self.at("2026-11-15T05:59:59Z")
+        self.at("2026-11-15T05:14:59Z")
         self.assertEqual(sa.meeting_status(self.campaign)["state"], "IDLE")
+        self.at("2026-11-15T05:59:59Z")
+        self.assertEqual(sa.meeting_status(self.campaign)["state"], "DUE_SOON")                          # inside the 45-minute lead: actionable now
         self.at("2026-11-15T06:00:00Z")
+        self.assertEqual(sa.meeting_status(self.campaign)["state"], "DUE")
         self.assertTrue(sa.meeting_status(self.campaign)["actionable"])
         sa.meeting(self.campaign, open_round=True)
         self.at("2026-11-15T07:00:00Z")
         self.close()
-        self.at("2026-11-15T11:59:59Z")
+        self.at("2026-11-15T11:14:59Z")
         self.assertEqual(sa.meeting_status(self.campaign)["state"], "IDLE")
         self.at("2026-11-15T12:00:00Z")
         self.assertEqual(sa.meeting_status(self.campaign)["state"], "DUE")
+
+    def test_a_meeting_due_within_the_lead_is_opened_early_once_and_the_cadence_moves_by_at_most_the_lead(self) -> None:
+        """2026-11-20: a meeting due at 12:18:14 met an hourly check that fires at about :17 to :18; DUE_SOON lets the check before it open the round."""
+        self.at("2026-11-15T05:30:00Z")
+        status = sa.meeting_status(self.campaign)
+        self.assertEqual((status["state"], status["actionable"]), ("DUE_SOON", True))
+        self.assertIn("within 45 minutes", status["why"])
+        record = sa.meeting(self.campaign, open_round=True)["record"]
+        self.assertTrue(record)
+        self.assertEqual(sa.meeting(self.campaign, open_round=True)["record"], record)                  # one round, not one per check
+        self.at("2026-11-15T06:00:00Z")
+        self.close()
+        self.at("2026-11-15T10:44:59Z")
+        self.assertEqual(sa.meeting_status(self.campaign)["state"], "IDLE")                              # next due 11:30 (started 05:30) minus the lead is 10:45
+        self.at("2026-11-15T10:45:00Z")
+        self.assertEqual(sa.meeting_status(self.campaign)["state"], "DUE_SOON")
 
     def test_event_anticipates_cadence_and_duplicate_sends_do_not_multiply_rounds(self) -> None:
         first = self.request()
