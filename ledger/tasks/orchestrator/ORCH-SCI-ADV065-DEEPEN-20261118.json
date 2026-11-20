@@ -447,11 +447,12 @@
     },
     {
      "step": "ADV v3 consolidation: ONE page per objective (broad = shared-tissue head-to-head with the GSK-3 panel and an explicit tissue allocation; bridge = ethosuximide dose-exposure series with genotype-by-treatment test and gaboxadol rule), v1, v2, v2.1 and v2.2 kept as history, each page stating known, assumed and unknown; after the two quick closures (single-dose lithium brain papers; PMID 42397075 data statement, done); IT reviews v3 as the 'would we do anything different' check before it is called done",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message to SCI 2026-11-20 after accepting 67abc7d7e",
      "accepted_at": "2026-11-20T02:30:00Z",
-     "updated_at": "2026-11-20T02:30:08Z"
+     "updated_at": "2026-11-20T03:18:12Z",
+     "evidence": "v3.1 (V3_1_DATED_CHANGES_BROAD_AND_BRIDGE_SCI_20261120.md, section 6 dated lines) landed at bdcaa501c; ADV accepted 2026-11-20 subject to IT; IT read and called both pages done after one change (anchor at the Cheng-regimen exposure), made in section 6.2; survival item narrowed at text level in 6.4"
     }
    ]
   }
