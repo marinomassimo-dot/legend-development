@@ -525,6 +525,15 @@
      "accepted_at": "2026-11-20T08:49:03Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/bridge_slice_panel_sci_20261120/BRIDGE_SLICE_PANEL_ONE_PAGE_SCI_20261120.md; v3.1 line 6.17; one line to ADV with the next opportunity (RP-018) among four roadmap rows",
      "updated_at": "2026-11-20T08:50:03Z"
+    },
+    {
+     "step": "TS-01 trigger sweep: re-check the 21 open reopen conditions with open routes; integrator check first; per-trigger record (id, condition, routes, verdict, date); MET ones to IT at once; two sittings",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV 2026-11-20 message to SCI approving A (TS-01) with conditions (1) to (4)",
+     "accepted_at": "2026-11-20T09:06:31Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ts01_trigger_sweep_sci_20261120/TS01_TRIGGER_SWEEP_SCI_20261120.md: 21 conditions, none met by these routes (NP1B3 not probeable); IT confirmed no family probed after 2026-11-01",
+     "updated_at": "2026-11-20T09:12:46Z"
     }
    ]
   }
@@ -926,6 +935,13 @@
    "at": "2026-11-20T08:49:03Z",
    "source": "ADV message to SCI successor 2026-11-20 (NEXT, one sitting)",
    "step_sha256": "eb01ee88095e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T09:06:31Z",
+   "source": "ADV 2026-11-20 message to SCI approving A (TS-01) with conditions (1) to (4)",
+   "step_sha256": "5e0d20dd9a81",
    "reopened_block": false,
    "authorised_by": null
   }
