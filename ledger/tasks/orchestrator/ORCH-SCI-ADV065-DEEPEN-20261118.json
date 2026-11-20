@@ -429,11 +429,20 @@
     },
     {
      "step": "ADV interactome round (time-boxed, one round, pre-registered): a WWOX partner counts only if (i) a direct interaction is documented with assay and domain, (ii) a functional readout exists in a neural WWOX-deficient or WWOX-manipulated system (held full texts first), (iii) its target has pharmacology in HE's sheets or a verified public record; stop rule: none meets (i) and (ii) then record the interactome as exhausted for held literature; plus a check in the 39 WWOX GEO series whether any is a second independent human neural or neuron-like WWOX-perturbed transcriptome (not the organoid libraries); report both in one increment",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message 2026-11-20 (after ADV-099 acceptance)",
      "accepted_at": "2026-11-20T01:43:18Z",
-     "updated_at": "2026-11-20T01:43:22Z"
+     "updated_at": "2026-11-20T01:55:54Z",
+     "evidence": "Result, pre-registration, script, out_second_system, blind verifier report landed at 9d14b4441 (gate PASS, ls-remote verified); ADV accepted the increment (message 2026-11-20)"
+    },
+    {
+     "step": "ADV GSK-3 shared-premise follow-up: (1) dated v2.2 revision of the v2 broad experiment adding the GSK-3 premise panel (tau pS396/pS404 with total, GSK-3 Tyr216 and Ser9 with total, beta-catenin) to the same tissue with prediction, rejecting observation, decision per outcome, interpretable null and exposure control; (2) one short note comparing the GSK-3 inhibition candidate and the oligodendrocyte class on the same comparison unit (action, context, benefit sought, endpoint), naming what each outcome of the shared experiment does to each, with the harm cell of GSK-3 inhibition (embryonic cortical progenitor proliferation in one study; lithium label limits); no ranking; carry Q230P as effect on binding untested",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-20 (increment accepted at 9d14b4441ae6)",
+     "accepted_at": "2026-11-20T01:55:54Z",
+     "updated_at": "2026-11-20T01:55:54Z"
     }
    ]
   }
@@ -765,6 +774,13 @@
    "at": "2026-11-20T01:43:18Z",
    "source": "ADV message 2026-11-20 (after ADV-099 acceptance)",
    "step_sha256": "d1aca496fe0b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T01:55:54Z",
+   "source": "ADV message 2026-11-20 (increment accepted at 9d14b4441ae6)",
+   "step_sha256": "3b08bbb8e04b",
    "reopened_block": false,
    "authorised_by": null
   }
