@@ -539,12 +539,15 @@ def _words(text: str) -> list[str]:
     return out
 
 
-def key_terms(text: str, n: int = 4) -> list[str]:
+def key_terms(text: str, n: int = 4, skip: frozenset = frozenset(), parts: bool = False) -> list[str]:
     """Distinctive words of ONE text: most frequent, then longest, then alphabetical. A pure function of the text
-    (deterministic, no model, no network, and independent of every other priority)."""
+    (deterministic, no model, no network, and independent of every other priority). `skip` leaves out words that name the KIND of evidence, not its subject (QUERY_SKIP);
+    `parts` counts the parts of a hyphenated token too ("oligodendrocyte-lineage" is searched as oligodendrocyte, not as a token no database holds)."""
     counts: dict[str, int] = {}
     for w in _words(text):
-        counts[w] = counts.get(w, 0) + 1
+        for part in ([w] + [x for x in w.split("-") if len(x) >= 4 and x not in STOP] if parts and "-" in w else [w]):
+            if part not in skip:
+                counts[part] = counts.get(part, 0) + 1
     return sorted(counts, key=lambda w: (-counts[w], -len(w), w))[:n]
 
 
@@ -766,12 +769,18 @@ def build_questions(items: list[dict]) -> tuple[list[dict], int]:
             continue
         if category == "scientific inputs":
             anchor = "epilepsy" if NEURO.search(it["text"]) else "biomedical"
-        terms = key_terms(it["text"])  # local to the item: editing one priority never moves another question
+        objs, methods = entities(it["text"])
+        # A question that names an object (a symbol, a drug) keeps its search as it was. One that names none was searched with the words most frequent in its text, which are the words of its FORM ("epilepsy AND census",
+        # "epilepsy AND review") and, for a long subject word, missed it: oligodendrocyte (15 letters) and oligodendroglial (16) fell over the 14-letter cap, and hyphenated terms never reached a search.
+        # 2026-11-20 (HE, operator's morning continuation): for those questions form words are skipped, hyphenated words count by their parts and the cap is 30.
+        if objs or methods:
+            terms = key_terms(it["text"])  # local to the item: editing one priority never moves another question
+        else:
+            terms = key_terms(it["text"], skip=QUERY_SKIP, parts=True)
         if len(terms) < 2 or (it.get("hook_required") and category is None):
             skipped += 1
             continue
-        plain = [t for t in terms if re.fullmatch(r"[a-z]{4,14}", t)]  # no hyphenated or rare tokens in a search string
-        objs, methods = entities(it["text"])
+        plain = [t for t in terms if re.fullmatch(r"[a-z]{4,14}" if (objs or methods) else r"[a-z]{4,30}", t)]  # no hyphenated or rare tokens in a search string
         if objs:
             hf = objs[0]   # the object the priority names, not the hook's category word: "benchmark" and "bioactivity" searched Hugging Face names and returned mortgage and OCR benchmarks (14 Nov feed)
         if objs or methods:  # named objects lead; frequency words only fill what the text did not name
@@ -1372,6 +1381,9 @@ meta results result role roles effect effects laboratory challenge primary same 
 reproduction reproduce reproduced replication replicate replicated report reports reported census independent""".split())
 METHOD_WORDS = frozenset("""snrna rna seq sequencing immunostaining immunostain immunohistochemistry immunofluorescence western blot proteomic proteomics transcriptomic
 transcriptomics sequence matrices matrix library libraries barcode experiment experiments""".split())
+
+
+QUERY_SKIP = FORMAT_WORDS | METHOD_WORDS | frozenset("reproduction reproduce reproduced replication replicate replicated report reports reported census independent preprint wwox woree deletion knockout".split())
 
 
 def bridge_terms(theme: dict) -> list[str]:
