@@ -1,0 +1,200 @@
+{
+ "identity": {
+  "query": "THIP",
+  "identity_state": "NAME_PARTIAL",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL1450486",
+    "record_name": "THIPHENAMIL",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1450486",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1450486",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1867031",
+    "record_name": "AZAMETHIPHOS",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1867031",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1867031",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2107124",
+    "record_name": "PROTHIPENDYL HYDROCHLORIDE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL2111030",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2107124",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2107246",
+    "record_name": "ISOTHIPENDYL HYDROCHLORIDE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL2111066",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2107246",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2107482",
+    "record_name": "THIPHENCILLIN POTASSIUM",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL2111130",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2107482",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2107552",
+    "record_name": "THIPHENAMIL HYDROCHLORIDE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1450486",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2107552",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2111030",
+    "record_name": "PROTHIPENDYL",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL2111030",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2111030",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2111066",
+    "record_name": "ISOTHIPENDYL",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL2111066",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2111066",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2111130",
+    "record_name": "THIPHENCILLIN",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL2111130",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2111130",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:523434863ca0",
+    "record_name": "Isothipendyl",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:b95bdba5b88d",
+    "record_name": "Thiphenamil",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:f743db29ca2d",
+    "record_name": "Aza-Thip",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL33845",
+    "record_name": "DICHLOROPHEN",
+    "match_kind": "SYNONYM_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL33845",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL33845",
+      "basis": "record"
+     }
+    ]
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "GABRD",
+   "GABRA4",
+   "GABRB3",
+   "GABRA1"
+  ],
+  "per_gene": {
+   "GABRD": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "GABRA4": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "GABRB3": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "GABRA1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {},
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}

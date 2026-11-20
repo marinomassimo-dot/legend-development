@@ -1,0 +1,17 @@
+dataset	panel	n_genes	R_raw	A1_adjusted_or_c	c_leave_one_out	status
+D2_cortex_S	ACT	12	-1.284	-1.262	-1.322..-1.087	labelable
+D2_cortex_S	NEURON_CTRL	6	0.05	-0.189	-0.368..-0.084	labelable
+D2_cortex_S	M3a_OL_MATURE	7	-1.059	-0.578	-0.920..-0.295	labelable
+D3_hippo_S	ACT	12	-0.344	2.856		descriptive
+D3_hippo_S	NEURON_CTRL	6	-0.042	0.494		descriptive
+D3_hippo_S	M3a_OL_MATURE	7	-2.112	-0.81		descriptive
+D3_hippo_N	ACT	12	-0.658	-0.501		descriptive
+D3_hippo_N	NEURON_CTRL	6	0.156	0.134		descriptive
+D3_hippo_N	M3a_OL_MATURE	7	-1.599	-1.242		descriptive
+D3_hippo_null	ACT	12	-0.8	-0.662		descriptive
+D3_hippo_null	NEURON_CTRL	6	-0.045	0.025		descriptive
+D3_hippo_null	M3a_OL_MATURE	7	-1.796	-1.363		descriptive
+D1_organoid_cko1+cko2	ACT	12	-0.099	-0.55		descriptive (reference moved: see unit A)
+D1_organoid_cko3+cko4	ACT	12	-0.06	-0.1		descriptive (reference moved: see unit A)
+D1_organoid_cko1+cko2	NEURON_CTRL	6	-0.315	-0.553		descriptive (reference moved: see unit A)
+D1_organoid_cko3+cko4	NEURON_CTRL	6	-0.421	-0.194		descriptive (reference moved: see unit A)

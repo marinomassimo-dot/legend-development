@@ -1,0 +1,112 @@
+{
+ "identity": {
+  "query": "gaboxadol",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL312443",
+    "record_name": "GABOXADOL",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL312443",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL312443",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:fdf3d53f34ea",
+    "record_name": "Gaboxadol",
+    "match_kind": "NAME_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "GABRD",
+   "GABRA4",
+   "GABRB3",
+   "GABRA1"
+  ],
+  "per_gene": {
+   "GABRD": {
+    "level": "CURATED_MECHANISM",
+    "n_rows": 11,
+    "rows": [
+     "CURATED_MECHANISM: CAT:CHEMBL312443",
+     "SOURCE_INTERACTION: CAT:DGIDB:fdf3d53f34ea",
+     "SOURCE_INTERACTION: CAT:DGIDB:fdf3d53f34ea",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL312443 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL312443 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL312443 EC50 Mus musculus"
+    ]
+   },
+   "GABRA4": {
+    "level": "CURATED_MECHANISM",
+    "n_rows": 12,
+    "rows": [
+     "CURATED_MECHANISM: CAT:CHEMBL312443",
+     "SOURCE_INTERACTION: CAT:DGIDB:fdf3d53f34ea",
+     "SOURCE_INTERACTION: CAT:DGIDB:fdf3d53f34ea",
+     "SOURCE_INTERACTION: CAT:DGIDB:fdf3d53f34ea",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL312443 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL312443 IC50 Rattus norvegicus"
+    ]
+   },
+   "GABRB3": {
+    "level": "CURATED_MECHANISM",
+    "n_rows": 11,
+    "rows": [
+     "CURATED_MECHANISM: CAT:CHEMBL312443",
+     "SOURCE_INTERACTION: CAT:DGIDB:fdf3d53f34ea",
+     "SOURCE_INTERACTION: CAT:DGIDB:fdf3d53f34ea",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL312443 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL312443 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL312443 EC50 Mus musculus"
+    ]
+   },
+   "GABRA1": {
+    "level": "SOURCE_INTERACTION",
+    "n_rows": 13,
+    "rows": [
+     "SOURCE_INTERACTION: CAT:DGIDB:fdf3d53f34ea",
+     "SOURCE_INTERACTION: CAT:DGIDB:fdf3d53f34ea",
+     "SOURCE_INTERACTION: CAT:DGIDB:fdf3d53f34ea",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL312443 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL312443 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL312443 EC50 Mus musculus"
+    ]
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL312443",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 19
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "GABRA6": 3,
+   "GABRA2": 3,
+   "GABRA5": 3,
+   "GABRA3": 3,
+   "GABRB2": 2,
+   "GABRB1": 2,
+   "GABRR2": 1,
+   "GABRR1": 1
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
