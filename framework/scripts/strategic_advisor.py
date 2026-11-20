@@ -2791,8 +2791,8 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps(snapshot(), indent=2)); return 0
     if args.cmd == "portfolio":
         if args.upsert:
-            if primary_refusal():
-                print(primary_refusal(), file=sys.stderr); return 2
+            # 2026-11-20 (ADV, HE meeting item): no primary-checkout refusal here. The refusal protects the campaign state (budget, invocations, assignments); `portfolio_update` touches only the portfolio TSV
+            # of THIS checkout (ROOT / PORTFOLIO_REL, a file under git) and a lock keyed by that file's own path, so a linked worktree cannot become a second campaign by patching its own copy.
             try:
                 updated = portfolio_update(json.loads(Path(args.upsert).read_text(encoding="utf-8")))
             except (OSError, ValueError) as exc:
