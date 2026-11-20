@@ -143,6 +143,61 @@ def list_sessions() -> list[dict] | None:
         return None
 
 
+def session_name_inventory() -> list[dict] | None:
+    """Names include stopped sessions: stopping a host does not rename its old row."""
+    try:
+        result = subprocess.run([claude_bin(), "agents", "--all", "--json"],
+                                capture_output=True, text=True, timeout=60)
+        data = json.loads(result.stdout) if result.returncode == 0 else None
+        return [row for row in data if isinstance(row, dict)] if isinstance(data, list) else None
+    except (OSError, ValueError, subprocess.SubprocessError):
+        return None
+
+
+def session_name_state(task: str, sessions: list[dict] | None, inventory: list[dict] | None = None,
+                       projects_dir: Path | None = None) -> dict:
+    """Read-only naming plan. Binding elects the host; CURRENT never elects anything.
+
+    Native rename remains the launcher's action. No transcript/job store writes,
+    model launch, process stop or scientific gate is hidden in this observation.
+    """
+    out = {"task": task, "state": "UNKNOWN", "renames": []}
+    hosts = live_bound_sessions(task, sessions, projects_dir)
+    if sessions is None or len(hosts) != 1:
+        return dict(out, reason="need one verified live bound host; names and timestamps do not choose it")
+    sid = hosts[0]["session_id"]
+    path = transcript_for_session(sid, projects_dir)
+    timeline = bind_timeline(path, task) if path else {}
+    if not timeline.get("tool_calls_after_bind"):
+        return dict(out, reason="bound successor has not acted; do not promote its display name")
+    rows = session_name_inventory() if inventory is None else inventory
+    if rows is None:
+        return dict(out, reason="complete runtime name inventory unavailable")
+    current = [row for row in rows if row.get("sessionId") == sid]
+    if len(current) != 1 or not isinstance(current[0].get("name"), str) or not current[0]["name"].strip():
+        return dict(out, reason="current host name missing or ambiguous")
+    role = re.split(r"\s+-\s+(?:CURRENT|PREVIOUS|CANDIDATE)\b", current[0]["name"],
+                    maxsplit=1, flags=re.I)[0].strip()
+    if not role:
+        return dict(out, reason="no display role; do not invent one")
+    plan = []
+    for row in rows:
+        old_id, name = row.get("sessionId"), row.get("name")
+        if (old_id == sid or not isinstance(old_id, str) or not UUID_RE.fullmatch(old_id)
+                or not isinstance(name, str) or not re.search(r"\bCURRENT\b", name)):
+            continue
+        old = transcript_for_session(old_id, projects_dir)
+        released = bind_timeline(old, task) if old is not None and cached_binding(old) is None else {}
+        if released.get("state") == "RELEASED" and released.get("active_tasks") == []:
+            plan.append({"session_id": old_id, "from": name,
+                         "to": f"{role} - PREVIOUS {old_id[:8]}"})
+    expected = f"{role} - CURRENT {sid[:8]}"
+    if current[0]["name"] != expected:
+        plan.append({"session_id": sid, "from": current[0]["name"], "to": expected})
+    return dict(out, state="PENDING" if plan else "CURRENT", current_session=sid, renames=plan,
+                next="Native rename by exact session id, demotions before promotion; verify --all names. No model launch or history deletion.")
+
+
 # ---------------------------------------------------------------- routing: who a message really goes to
 UUID_RE = re.compile(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}", re.I)
 TO_LINE = re.compile(r"^\s*[\w .-]+?\s+to\s+(?P<who>[^:\n(]+?)\s*(?:\((?P<cc>[^)]*)\))?\s*[:\u2014\n]", re.I)
@@ -1244,6 +1299,17 @@ def _check_all(a) -> int:
         out = check(task, root=record_root, deliver=a.deliver, quiet_minutes=a.quiet_minutes,
                     sessions=sessions, resume_args=tuple(a.resume_arg))
         out["record_root"] = str(record_root)
+        names = session_name_state(task, sessions)
+        out["session_names"] = names
+        name_key = "session-names-" + task
+        changed_names = a.deliver == "resume" and _load(name_key) != names
+        if changed_names:
+            _save(name_key, names)
+        if names["state"] == "PENDING":
+            if changed_names:
+                log_event("session_names_pending", **names)
+            if not getattr(a, "json", False):
+                print(f"SESSION_NAMES_PENDING {task}: " + json.dumps(names["renames"], ensure_ascii=False))
         if out.get("state") in ("RUNNING", "STOPPED_RESUMABLE"):
             retirements = retire_released(task, sessions, execute=a.deliver == "resume")
             if retirements:
@@ -1297,6 +1363,8 @@ def main(argv: list[str] | None = None) -> int:
     rl = sub.add_parser("released", help="has the OLD session released this task? (a successor's check, by session id: MISSING, NEVER_BOUND, BOUND or RELEASED; exit 0 only for RELEASED)")
     rl.add_argument("--session", required=True, help="the old session's id (the transcript is found by id, in whichever project folder it lives)")
     rl.add_argument("--task", required=True)
+    nl = sub.add_parser("labels", help="read-only CURRENT/PREVIOUS name reconciliation; binding determines the host, never the label")
+    nl.add_argument("--task", required=True)
     ho = sub.add_parser("handoff", help="verify a restart; read-only unless --retire-old is explicitly requested")
     ho.add_argument("--task", required=True)
     ho.add_argument("--old", required=True, help="the predecessor's FULL session id")
@@ -1331,6 +1399,9 @@ def main(argv: list[str] | None = None) -> int:
         state = mc.marker_state(path, a.task) if path else "MISSING"
         print(f"{state} (session {a.session[:8]}, task {a.task}" + (f", {path}" if path else ", no transcript found for that id (a short id works only as a unique prefix of at least 8 characters)") + ")")
         return 0 if state == "RELEASED" else (2 if state == "MISSING" else 1)
+    if a.cmd == "labels":
+        print(json.dumps(session_name_state(a.task, list_sessions()), indent=1, ensure_ascii=False))
+        return 0
     if a.cmd == "handoff":
         deadline = time.time() + a.wait
         while True:
@@ -1342,6 +1413,7 @@ def main(argv: list[str] | None = None) -> int:
         if res["verdict"] == "RUNNING":
             old_path, new_path = transcript_for_session(a.old), transcript_for_session(a.new)
             old_id, new_id = (old_path.stem if old_path else a.old), (new_path.stem if new_path else a.new)
+            res["session_names"] = session_name_state(a.task, list_sessions())
             res["predecessor_retirement"] = retire_predecessor(a.task, old_id, new_id, execute=a.retire_old)
             retired = res["predecessor_retirement"]["verdict"]
             res["next"] = ("successor running; predecessor retirement " + retired

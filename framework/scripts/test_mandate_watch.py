@@ -563,6 +563,78 @@ class HandoffCheck(unittest.TestCase):
             self.assertIn("not in the live listing", self.state(old, new, sessions=[])["next"])
 
 
+class SessionNames(unittest.TestCase):
+    """Labels follow a completed handoff, including predecessors already stopped."""
+    entry = HandoffCheck.entry
+    write = HandoffCheck.write
+    OLD = "aaaaaaaa-1111-2222-3333-444444444444"
+    NEW = "bbbbbbbb-1111-2222-3333-444444444444"
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.base = Path(self.tmp.name)
+        (self.base / "project").mkdir()
+        self.old = self.write(self.base / "project", self.OLD + ".jsonl", [
+            self.entry(1, "assistant", "MANDATE_BOUND: T-1"),
+            self.entry(40, "assistant", "MANDATE_RELEASED: T-1")])
+        self.new = self.write(self.base / "project", self.NEW + ".jsonl", [
+            self.entry(41, "assistant", "MANDATE_BOUND: T-1"),
+            self.entry(42, "assistant", tool=True)])
+        self.live = [{"sessionId": self.NEW, "name": "HE - CANDIDATE bbbbbbbb"}]
+        self.inventory = [{"sessionId": self.OLD, "name": "HE - CURRENT aaaaaaaa"}, *self.live]
+
+    def state(self):
+        return mw.session_name_state("T-1", self.live, self.inventory, self.base)
+
+    def test_stopped_predecessor_is_demoted_before_successor_is_promoted_without_writes(self):
+        before = self.old.read_bytes(), self.new.read_bytes()
+        with mock.patch.object(mw.subprocess, "run") as process:
+            result = self.state()
+        self.assertEqual(result["state"], "PENDING")
+        self.assertEqual([(r["session_id"], r["to"]) for r in result["renames"]], [
+            (self.OLD, "HE - PREVIOUS aaaaaaaa"), (self.NEW, "HE - CURRENT bbbbbbbb")])
+        self.assertEqual(before, (self.old.read_bytes(), self.new.read_bytes()))
+        process.assert_not_called()
+
+    def test_repeated_completed_reconciliation_is_empty(self):
+        self.inventory[0]["name"] = "HE - PREVIOUS aaaaaaaa"
+        self.inventory[1]["name"] = "HE - CURRENT bbbbbbbb"
+        self.assertEqual((self.state()["state"], self.state()["renames"]), ("CURRENT", []))
+
+    def test_current_title_on_newest_chat_does_not_elect_it(self):
+        self.live.append({"sessionId": self.OLD, "name": "HE - CURRENT aaaaaaaa", "startedAt": 9999999999999})
+        self.assertEqual(self.state()["current_session"], self.NEW)
+        self.old.write_text(self.old.read_text() + self.entry(43, "assistant", "MANDATE_BOUND: T-1"))
+        self.assertEqual((self.state()["state"], self.state()["renames"]), ("UNKNOWN", []))
+
+    def test_no_promotion_before_first_action_and_no_change_to_other_mandate(self):
+        original = self.new.read_bytes()
+        self.new.write_text(self.entry(41, "assistant", "MANDATE_BOUND: T-1"))
+        self.assertEqual(self.state()["renames"], [])
+        self.new.write_bytes(original)
+        self.old.write_text(self.old.read_text() + self.entry(43, "assistant", "MANDATE_BOUND: OTHER"))
+        self.assertEqual([r["session_id"] for r in self.state()["renames"]], [self.NEW])
+        self.old.write_text(self.entry(0, "assistant", "MANDATE_BOUND: OTHER")
+                           + self.entry(1, "assistant", "MANDATE_BOUND: T-1")
+                           + self.entry(40, "assistant", "MANDATE_RELEASED: T-1"))
+        self.assertEqual([r["session_id"] for r in self.state()["renames"]], [self.NEW])
+
+    def test_missing_inventory_is_unknown_and_cli_never_renames(self):
+        with mock.patch.object(mw, "session_name_inventory", return_value=None):
+            self.assertEqual(mw.session_name_state("T-1", self.live, projects_dir=self.base)["state"], "UNKNOWN")
+        with mock.patch.object(mw, "list_sessions", return_value=[]), contextlib.redirect_stdout(io.StringIO()) as output:
+            self.assertEqual(mw.main(["labels", "--task", "T-1"]), 0)
+        self.assertEqual(json.loads(output.getvalue())["state"], "UNKNOWN")
+
+    def test_runtime_inventory_includes_completed_rows_and_failed_call_is_unknown(self):
+        with mock.patch.object(mw.subprocess, "run", return_value=SimpleNamespace(returncode=0, stdout=json.dumps(self.inventory))) as process:
+            self.assertEqual(mw.session_name_inventory(), self.inventory)
+        self.assertEqual(process.call_args.args[0][-3:], ["agents", "--all", "--json"])
+        with mock.patch.object(mw.subprocess, "run", return_value=SimpleNamespace(returncode=1, stdout="[]")):
+            self.assertIsNone(mw.session_name_inventory())
+
+
 class PredecessorRetirement(unittest.TestCase):
     entry = HandoffCheck.entry
     write = HandoffCheck.write
