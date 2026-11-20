@@ -651,7 +651,7 @@ def _summary(rec: dict) -> dict:
     return {"verdict": v["verdict"], "message": v["message"]}
 
 
-def set_step(root: Path, task_id: str, match: str, status: str, *, evidence: str = "", blocker: str = "", unblock_when: dict | None = None, now: datetime | None = None) -> dict:
+def set_step(root: Path, task_id: str, match: str, status: str, *, evidence: str = "", blocker: str = "", unblock_when: dict | None = None, no_condition: str = "", now: datetime | None = None) -> dict:
     """Move one step of a record to a status by its `source` or by the start of its text, with the rules the verdict reads: DONE needs an evidence pointer; BLOCKED needs a named blocker (and may carry an
     `unblock_when`); a step that stays TODO or IN_PROGRESS carries no blocker (a step that names one waits, and waiting is BLOCKED, or it keeps the queue executable)."""
     status = status.strip().upper()
@@ -676,17 +676,29 @@ def set_step(root: Path, task_id: str, match: str, status: str, *, evidence: str
     st["status"] = status
     if status == "DONE":
         st["evidence"] = evidence.strip()
-        st.pop("blocker", None); st.pop("unblock_when", None)
+        st.pop("blocker", None); st.pop("unblock_when", None); st.pop("no_condition", None)
     elif status == "BLOCKED":
         st["blocker"] = blocker.strip()
         if unblock_when:
             st["unblock_when"] = unblock_when
+            st.pop("no_condition", None)
+        else:
+            # 2026-11-20 (HE, ADV decision): a BLOCKED step with no typed condition is recorded anyway (a refusing command could make a session skip recording a real block); the row says so and the
+            # command prints one WARNING line. `--no-condition "reason"` records why none can be typed and silences the line; the tick keeps listing the step either way.
+            st["no_condition"] = no_condition.strip() or "no typed condition"
     else:
-        st.pop("blocker", None); st.pop("unblock_when", None)
+        st.pop("blocker", None); st.pop("unblock_when", None); st.pop("no_condition", None)
     st["updated_at"] = _utc(now)
     _write_record(path, rec)
     log_event("STEP", task=task_id, step=f"{name}[{i}]", status=status)
-    return {"task": task_id, "record": str(path.relative_to(root)), "step": f"{key}/{name}[{i}]", "status": status, **_summary(rec)}
+    out = {"task": task_id, "record": str(path.relative_to(root)), "step": f"{key}/{name}[{i}]", "status": status, **_summary(rec)}
+    if status == "BLOCKED" and not unblock_when and not no_condition.strip():
+        out["warning"] = NO_CONDITION_WARNING
+    return out
+
+
+NO_CONDITION_WARNING = ("WARNING: BLOCKED recorded with no typed condition, so nothing checks whether the awaited thing arrived. Add --unblock-when with one of "
+                        '{"path": ...}, {"commit": ...}, {"commit_sha": ...}, {"record": ...}, or --no-condition "why none can be typed" to silence this line (the tick still lists the step).')
 
 
 # ---------------------------------------------------------------- bounded stop hook
@@ -888,6 +900,7 @@ def main(argv: list[str] | None = None) -> int:
     sp.add_argument("--evidence", default="")
     sp.add_argument("--blocker", default="")
     sp.add_argument("--unblock-when", default="", help='JSON, for example {"commit": "ADV-064", "ref": "development/main"} or {"path": "x.md", "contains": "text"}')
+    sp.add_argument("--no-condition", default="", help="BLOCKED only: why no typed unblock_when can be given; recorded in the row and silences the warning line")
     sp.add_argument("--root", type=Path, default=ROOT)
     ev = sub.add_parser("events", help="what the stop hook decided on this machine")
     ev.add_argument("--last", type=int, default=20, help="how many recent events to print")
@@ -932,13 +945,15 @@ def main(argv: list[str] | None = None) -> int:
                                   create_for=args.create_for, actor=args.session_name)
             else:
                 out = set_step(root, args.task, args.match, args.status, evidence=args.evidence, blocker=args.blocker,
-                               unblock_when=json.loads(args.unblock_when) if args.unblock_when else None)
+                               unblock_when=json.loads(args.unblock_when) if args.unblock_when else None, no_condition=args.no_condition)
         except PermissionError as exc:
             print(f"REFUSED: {exc}", file=sys.stderr)
             return 3
         except (ValueError, Malformed) as exc:
             print(f"REFUSED: {exc}", file=sys.stderr)
             return 2
+        if out.get("warning"):
+            print(out["warning"], file=sys.stderr)
         print(json.dumps(out, indent=1, ensure_ascii=False))
         return 0
     if args.command == "normalise":

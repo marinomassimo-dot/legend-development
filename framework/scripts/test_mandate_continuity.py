@@ -987,6 +987,22 @@ class AcceptedWork(unittest.TestCase):
         with self.assertRaises(ValueError):
             mc.set_step(self.root, "T-1", "no such step", "TODO")
 
+    def test_blocked_without_a_typed_condition_is_recorded_with_a_warning_never_refused(self) -> None:
+        steps = [{"step": "wait A", "status": "TODO"}, {"step": "wait B", "status": "TODO"}, {"step": "wait C", "status": "TODO"}]
+        self.write({"TASK_ID": "T-2", "ACTOR_ID": "plan", "AUTHORISED_QUEUE_A": {"OBJ_1": {"order": 1, "steps": steps}}}, "T-2")
+        def row(name):
+            rec = json.loads((self.root / "ledger/tasks/plan/T-2.json").read_text())
+            return next(st for st in rec["AUTHORISED_QUEUE_A"]["OBJ_1"]["steps"] if st["step"] == name)
+        out = mc.set_step(self.root, "T-2", "wait A", "BLOCKED", blocker="a reply")
+        self.assertEqual(out["status"], "BLOCKED"); self.assertIn("WARNING", out["warning"]); self.assertIn("commit_sha", out["warning"])
+        self.assertEqual(row("wait A")["no_condition"], "no typed condition")                           # recorded anyway, the row says so
+        out = mc.set_step(self.root, "T-2", "wait B", "BLOCKED", blocker="a reply", no_condition="the answer is a chat message")
+        self.assertNotIn("warning", out); self.assertEqual(row("wait B")["no_condition"], "the answer is a chat message")
+        out = mc.set_step(self.root, "T-2", "wait C", "BLOCKED", blocker="a file", unblock_when={"path": "no/such/file.txt"})
+        self.assertNotIn("warning", out); self.assertNotIn("no_condition", row("wait C"))
+        mc.set_step(self.root, "T-2", "wait A", "TODO")
+        self.assertNotIn("no_condition", row("wait A"))                                                  # leaving BLOCKED clears it
+
     def test_a_blocker_is_recognised_as_overtaken_by_a_landed_commit(self) -> None:
         repo = self.root / "repo"
         repo.mkdir()
