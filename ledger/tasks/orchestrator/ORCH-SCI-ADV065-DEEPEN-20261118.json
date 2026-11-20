@@ -678,6 +678,13 @@
      "accepted_at": "2026-11-20T20:19:08Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv122_ethosuximide_ontogeny_prior_sci_20261120/RESULT_ADV122_SCI_20261120.md",
      "updated_at": "2026-11-20T20:27:26Z"
+    },
+    {
+     "step": "ADV-123: evidence map of rescue and myelin-directed interventions with both functional and myelin readouts (neuronal or thyroid-transport primary lesion); closing paragraph on OL class and thyromimetic weight",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-123",
+     "accepted_at": "2026-11-20T22:37:38Z"
     }
    ]
   }
@@ -1198,6 +1205,13 @@
    "at": "2026-11-20T20:19:08Z",
    "source": "ADV-122",
    "step_sha256": "bef27d3aad5f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T22:37:38Z",
+   "source": "ADV-123",
+   "step_sha256": "0198d022191b",
    "reopened_block": false,
    "authorised_by": null
   }
