@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "266c5554f0752789232585f82c36478e9a72e81272013de20242b8c326b5a479",
+  "input_sha256": "0e902149313c9b6032066327ae17e9a30a8b580c7c4c1c89a7d6adf6177c6ff1",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -244,8 +244,8 @@
       },
       "time_to_access": "UNKNOWN.",
       "time_to_benefit": "UNKNOWN.",
-      "pharmacology": "Approved compound (class level, from map record R-04) with a narrow therapeutic index and monitoring needs; CNS exposure is not in doubt. Nothing here is a statement about exposure in WWOX-DEE.",
-      "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+      "pharmacology": "Approved compound (class level, from map record R-04) with a narrow therapeutic index and monitoring needs; CNS exposure is not in doubt. Nothing here is a statement about exposure in WWOX-DEE. Label facts, read at source by a blind verifier on 2026-11-20 (US label record, class level, NOT WWOX EVIDENCE): a boxed warning that lithium toxicity is closely related to serum concentration and can occur at doses close to therapeutic concentrations; neurological signs of toxicity include ataxia and, among severe manifestations, seizure, and in rare cases neurological sequelae may persist after discontinuation and may be associated with cerebellar atrophy (the label hedges); lithium is concentrated in the thyroid and can lead to hypothyroidism (hyperthyroidism cases are also reported); in pregnancy the label says lithium may cause harm and names a floppy baby syndrome in neonates exposed late in pregnancy [IT59 2026-11-20 packet change].",
+      "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use. The label states paediatric safety and effectiveness as established for monotherapy of bipolar I disorder at ages 7 to 17 and not established below 7; that is a statement for another indication and is not a paediatric suitability for WWOX-DEE [IT59 2026-11-20 packet change].",
       "scope_of_checks": {
         "support_and_replication": "One laboratory, one experiment; no replication.",
         "formal_checks": "The lithium figure panels were read from the image; the 2026-10-21 R2 figure readings (entries 27, 28) carry a blind locator audit (SUPPORTED) and a recorded softening of wording; the null-only wording of the Results text against the three-panel figure is a recorded text-versus-panel finding.",
@@ -256,7 +256,7 @@
         "mandate ORCH-ROADMAP-IT2-20261027 (package W1.1)"
       ],
       "predictions": "None; no engine, no score.",
-      "next_measurement": "A provoked-seizure arm with an explicit, tested null versus wild-type contrast and the interaction reported, or a different GSK3beta inhibitor under the same design; and a kinase-activity or substrate-phosphorylation readout in a Wwox-null system. Until then no genotype-specific claim is available.",
+      "next_measurement": "A provoked-seizure arm with an explicit, tested null versus wild-type contrast and the interaction reported, or a different GSK3beta inhibitor under the same design; and a kinase-activity or substrate-phosphorylation readout in a Wwox-null system. Until then no genotype-specific claim is available. The substrate-phosphorylation readout is now DESIGNED, not measured: tau phospho-sites over total tau, Ser9 over TOTAL GSK3beta (not over actin) and beta-catenin, in the cortex of the neuronal-deletion line at postnatal day 17, with a decision per outcome fixed before data (SCI design v2.2 and v3.1, hypothesis level, no data) [IT59 2026-11-20 packet change].",
       "status": "controversial",
       "status_reason": "The one experiment failed its specificity test and the Wnt-axis direction may be adverse.",
       "value_added": "Keeps the lithium result as what it is (non-specific symptomatic suppression, specificity failed) so it is not read as a WWOX-specific signal, and names the contrast that would change that.",
@@ -265,7 +265,7 @@
     "not_known": [
       "Whether lithium does anything in a Wwox-deficient system that it does not do in a wild-type one (the one experiment that tested it answered no).",
       "Whether lithium moves GSK3beta Ser9 phosphorylation or kinase activity in a Wwox-null brain: lithium's effect on the Ser9 readout was not measured in this system.",
-      "Whether GSK3beta abundance or Ser9 state tracks activity here: abundance and activity are dissociable in this very system (S9-independent inhibition), and no kinase-activity assay exists in a WWOX system.",
+      "Whether GSK3beta abundance or Ser9 state tracks activity here: the sources are in tension and no kinase-activity assay exists in WWOX-deficient cells or tissue (the kinase assays of the cell-line paper are cell-free, with purified recombinant proteins, and show WWOX protein lowering GSK3beta-driven Tau phosphorylation in vitro). The cell-line paper reports phospho-Ser9 unchanged along a retinoic-acid time course while WWOX rises; no experiment in it manipulates WWOX and reads Ser9, and the phrase 'S9-independent' occurs nowhere in its text; the only tissue datum (Wwox-null brain, cerebellum, hippocampus and cortex; the legend says postnatal day 20 and the Methods say 14) reports LOWER phospho-Ser9, as a ratio to beta-actin, with representative results of four independent experiments and the number of animals not stated (registry CLAIM 035 Evidence boundary, BATCH_20261120_001; the earlier wording of this item, 'S9-independent inhibition', is withdrawn) [IT59 2026-11-20 packet change].",
       "Whether the null-genotype hypersusceptibility is a driver of the developmental phenotype or an amplifier on a malformed brain (entry 6).",
       "Whether the wild-type response is floor-limited in a way that hides a genotype difference.",
       "Any allele-specific datum (Q230P class or splice allele): none exists for lithium.",

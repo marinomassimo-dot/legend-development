@@ -3380,7 +3380,7 @@
     "not_known": [
      "Whether lithium does anything in a Wwox-deficient system that it does not do in a wild-type one (the one experiment that tested it answered no).",
      "Whether lithium moves GSK3beta Ser9 phosphorylation or kinase activity in a Wwox-null brain: lithium's effect on the Ser9 readout was not measured in this system.",
-     "Whether GSK3beta abundance or Ser9 state tracks activity here: abundance and activity are dissociable in this very system (S9-independent inhibition), and no kinase-activity assay exists in a WWOX system.",
+     "Whether GSK3beta abundance or Ser9 state tracks activity here: the sources are in tension and no kinase-activity assay exists in WWOX-deficient cells or tissue (the kinase assays of the cell-line paper are cell-free, with purified recombinant proteins, and show WWOX protein lowering GSK3beta-driven Tau phosphorylation in vitro). The cell-line paper reports phospho-Ser9 unchanged along a retinoic-acid time course while WWOX rises; no experiment in it manipulates WWOX and reads Ser9, and the phrase 'S9-independent' occurs nowhere in its text; the only tissue datum (Wwox-null brain, cerebellum, hippocampus and cortex; the legend says postnatal day 20 and the Methods say 14) reports LOWER phospho-Ser9, as a ratio to beta-actin, with representative results of four independent experiments and the number of animals not stated (registry CLAIM 035 Evidence boundary, BATCH_20261120_001; the earlier wording of this item, 'S9-independent inhibition', is withdrawn) [IT59 2026-11-20 packet change].",
      "Whether the null-genotype hypersusceptibility is a driver of the developmental phenotype or an amplifier on a malformed brain (entry 6).",
      "Whether the wild-type response is floor-limited in a way that hides a genotype difference.",
      "Any allele-specific datum (Q230P class or splice allele): none exists for lithium.",
@@ -3406,11 +3406,11 @@
      "identity": "Lithium (the salt used in the mouse experiment: lithium chloride; the clinical compound class is lithium carbonate), used in the one WWOX experiment as a tool inhibitor of GSK3beta. Map records R-04 (repurposing) and N-02 (negative translation) describe the same candidate and are linked to this one card.",
      "indication_and_transfer": "Symptomatic seizure suppression is the only endpoint ever tested in a WWOX system; it is non-specific (wild type responds equally). A WWOX-specific disease-modifying rationale is not supported by the primary data. Transfer to the reference genotype: not established.",
      "mechanism": "Target: GSK3beta (among many); claimed: inhibits a kinase de-repressed by WWOX loss; the de-repression is read from a single Ser9 phosphorylation blot; the attribution of the seizure effect to GSK3beta rests on lithium alone.",
-     "next_measurement": "A provoked-seizure arm with an explicit, tested null versus wild-type contrast and the interaction reported, or a different GSK3beta inhibitor under the same design; and a kinase-activity or substrate-phosphorylation readout in a Wwox-null system. Until then no genotype-specific claim is available.",
+     "next_measurement": "A provoked-seizure arm with an explicit, tested null versus wild-type contrast and the interaction reported, or a different GSK3beta inhibitor under the same design; and a kinase-activity or substrate-phosphorylation readout in a Wwox-null system. Until then no genotype-specific claim is available. The substrate-phosphorylation readout is now DESIGNED, not measured: tau phospho-sites over total tau, Ser9 over TOTAL GSK3beta (not over actin) and beta-catenin, in the cortex of the neuronal-deletion line at postnatal day 17, with a decision per outcome fixed before data (SCI design v2.2 and v3.1, hypothesis level, no data) [IT59 2026-11-20 packet change].",
      "novelty_for_woree": "Already studied once (Cheng 2020, one laboratory, one experiment). Not new; the question is whether the result means what it was read as meaning.",
-     "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+     "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use. The label states paediatric safety and effectiveness as established for monotherapy of bipolar I disorder at ages 7 to 17 and not established below 7; that is a statement for another indication and is not a paediatric suitability for WWOX-DEE [IT59 2026-11-20 packet change].",
      "pathway_and_objective": "BENEFICIO_PRECOCE; Track A (allele-blind); not deep recovery.",
-     "pharmacology": "Approved compound (class level, from map record R-04) with a narrow therapeutic index and monitoring needs; CNS exposure is not in doubt. Nothing here is a statement about exposure in WWOX-DEE.",
+     "pharmacology": "Approved compound (class level, from map record R-04) with a narrow therapeutic index and monitoring needs; CNS exposure is not in doubt. Nothing here is a statement about exposure in WWOX-DEE. Label facts, read at source by a blind verifier on 2026-11-20 (US label record, class level, NOT WWOX EVIDENCE): a boxed warning that lithium toxicity is closely related to serum concentration and can occur at doses close to therapeutic concentrations; neurological signs of toxicity include ataxia and, among severe manifestations, seizure, and in rare cases neurological sequelae may persist after discontinuation and may be associated with cerebellar atrophy (the label hedges); lithium is concentrated in the thyroid and can lead to hypothyroidism (hyperthyroidism cases are also reported); in pregnancy the label says lithium may cause harm and names a floppy baby syndrome in neonates exposed late in pregnancy [IT59 2026-11-20 packet change].",
      "predictions": "None; no engine, no score.",
      "question_history": [
       "map R-04 and N-02",
@@ -3468,7 +3468,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "b64227f5ae7303ce3b2f94086c44c3bb121aca8613a436d8da6917406a04f765",
+   "input_sha256": "6d0fb3737a645d99672b28dbaaa93b02aadd1ce2abfb2db9badcab55e8c7950f",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -33112,7 +33112,9 @@
     "no_new_reading": "No paper was opened for this card; the sources are the repository's own receipted notes and records.",
     "not_known": [
      "A dose-by-timing series of Wnt/GSK3/CK1 modulation in a developing cortex with progenitor, layer-neuron and electrographic endpoints, in any WWOX system; and a measured activation step (reporter or nuclear/cytosolic beta-catenin). Never administered in any WWOX system as a Wnt-lowering or tankyrase-type agent, and never as a dose-by-timing series. Two partial exceptions are in the repository: the CK1-alpha-inhibiting multikinase compound of the D01 card was given to knockout organoids (attribution among Wnt, MYC and CDK ambiguous), and a GSK3 inhibitor was given acutely to Wwox-null mice before a convulsant challenge with a seizure endpoint and a measured GSK3 phospho-state in brain (PMID 32000863, repository reading, text re-inspected); neither measures the activation step by reporter or beta-catenin. The transcript direction in organoids is the only Wnt-output measurement.",
-     "Whether the activation step, as distinct from the transcriptional output, is increased."
+     "Whether the activation step, as distinct from the transcriptional output, is increased.",
+     "GSK-3 premise status after the 2026-11 comparison work (class level; hypothesis): the GSK-3 and Wnt transcript premise was not supported in the organoid and not distinguishable from random gene sets in the held postnatal day 17 mouse cortex (bulk, three against four animals; the Wnt sign agrees with the premise, inside the null band in the primary run and borderline in the blind recompute), and one interactome partner, GSK3beta, meets the registered criteria with narrowings (directness not shown by the assays; the pharmacology of the criterion is partial, lithium at abstract level and no GSK3beta-specific non-lithium constant read in a primary source; the cell readout is a retinoic-acid-differentiated neuroblastoma line; the only tissue datum, lower phospho-Ser9 in Wwox-null brain, is the direction of more active kinase, whereas the cell-line paper reports phospho-Ser9 unchanged and attributes its effect to binding: the sources are in tension on the role of Ser9); no GSK-3 substrate measurement exists in a Wwox-deficient neuron (the cell-line paper reads Tau phospho-sites after WWOX knockdown and overexpression in a neuroblastoma line) [IT59 2026-11-20 packet change].",
+     "Brain or plasma concentration of any non-lithium GSK-3 inhibitor, free or total, adult or juvenile: not found in rodents by public-database and literature-title routes (PubMed titles only) for five agents (tideglusib, SB-216763, CHIR-99021, LY2090314, AR-A014418); selectivity was not assessed [IT59 2026-11-20 packet change]."
     ],
     "p4_card": {
      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md): seven separate queries returned no registered WOREE interventional study; the only synonym-driven record is one observational natural-history registry. Carried with the census's own caution: \"A missing hit does not prove that no study exists.\" It answers seven queries against one registry on one date; unregistered, differently worded, non-NLM or later-registered studies are not excluded.",
@@ -33125,11 +33127,11 @@
      "identity": "Wnt-lowering (tankyrase-type) agents and GSK3 modulation as a downstream lever (TX-004)",
      "indication_and_transfer": "WOREE as target; no candidate molecule is carded because the datum below is missing.",
      "mechanism": "UNKNOWN",
-     "next_measurement": "Activation-step measurement (reporter, nuclear beta-catenin) in a WWOX-deficient neural system, then the dose-by-timing series.",
+     "next_measurement": "A GSK-3 substrate-phosphorylation panel in the cortex of the Wwox neuronal-deletion line at postnatal day 17 (tau phospho-sites over total tau, Ser9 over total GSK3beta, beta-catenin), designed with a decision per outcome and no data yet (SCI v2.2 and v3.1; a flat panel closes the candidate for this model and age, an elevated panel opens an inhibitor arm); then an activation-step measurement (reporter, nuclear beta-catenin) in a WWOX-deficient neural system, then the dose-by-timing series [IT59 2026-11-20 packet change].",
      "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA as a test (known-roads § 2.4c, 2026-10-20); R3 adjacent query on tankyrase inhibition with neuro and development returned 2 records, one read.",
      "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
      "pathway_and_objective": "RECUPERO_PROFONDO.",
-     "pharmacology": "UNKNOWN",
+     "pharmacology": "NOT WWOX EVIDENCE, class level (HE ADV-098 batch 9, public databases, 2026-11-20): five GSK-3 inhibitors of non-lithium chemistry exist, with beta potencies in vitro from sub-nanomolar to micromolar depending on the document and assay (one weak 2011 fluorescence assay of AR-A014418 is set apart by the sheet), alpha about 1.4- to 2.5-fold weaker than beta at most within one document and assay (none shown to separate alpha from beta by an order of magnitude); tideglusib is non-ATP-competitive and time-dependent, so its potency depends on pre-incubation and is not set against the ATP-competitive agents; no ordering of agents is read from these values; no brain or plasma concentration was found for any of the five; selectivity is not assessed; no US label was found for tideglusib; paediatric programmes of tideglusib exist as registry statuses only, results not read [IT59 2026-11-20 packet change].",
      "predictions": "None; no engine, no score.",
      "question_history": [
       "TX-004, DL-MOL-003, DL-MECH-032"
@@ -33142,7 +33144,8 @@
      "sources": {
       "external_not_wwox_evidence": [
        "an esterified tankyrase-inhibitor prodrug in a Shank3b mouse separated toxicity from benefit by formulation, not by dose, from one dose pair (liver and gut toxicity in juveniles)",
-       "a GSK3 inhibitor in adult kainate epilepsy: Wnt activation reduced two of four histological markers in one model (opposite direction, different disease)"
+       "a GSK3 inhibitor in adult kainate epilepsy: Wnt activation reduced two of four histological markers in one model (opposite direction, different disease)",
+       "embryonic cortical progenitors, genetic and not pharmacological: siRNA knockdown in one study, gene deletion in the other (blind verifier, full text, 2026-11-20): in utero knockdown of either GSK-3 isoform at embryonic day 14.5 in a subset of cells (ICR mice, three brains) raised the proliferating fraction of electroporated cells; GSK3beta knockdown lowered the intermediate-progenitor and upper-layer-neuron fractions while GSK3alpha knockdown raised the intermediate-progenitor fraction and left the upper-layer fraction unchanged, and the authors say off-target effects of the knockdown reagents are not excluded (Ma 2017); conditional deletion of GSK3beta on a germline GSK3alpha-null background in neural progenitors gave progenitor over-proliferation and death at birth, which the authors attribute to loss of both isoforms (Kim 2009) [IT59 2026-11-20 packet change]"
       ],
       "internal": [
        "TX-004, DL-MOL-003, DL-MECH-032"
@@ -33180,7 +33183,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "d24f60a2076c182b4c006900803caa0d9b72e52e92cd7164807d5919f777bb54",
+   "input_sha256": "4127ff517b1e6e6430497cdd0c242552ef06a17e4cbb734df3759e853b48b932",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -33861,7 +33864,7 @@
     "not_known": [
      "Whether lithium does anything in a Wwox-deficient system that it does not do in a wild-type one (the one experiment that tested it answered no).",
      "Whether lithium moves GSK3beta Ser9 phosphorylation or kinase activity in a Wwox-null brain: lithium's effect on the Ser9 readout was not measured in this system.",
-     "Whether GSK3beta abundance or Ser9 state tracks activity here: abundance and activity are dissociable in this very system (S9-independent inhibition), and no kinase-activity assay exists in a WWOX system.",
+     "Whether GSK3beta abundance or Ser9 state tracks activity here: the sources are in tension and no kinase-activity assay exists in WWOX-deficient cells or tissue (the kinase assays of the cell-line paper are cell-free, with purified recombinant proteins, and show WWOX protein lowering GSK3beta-driven Tau phosphorylation in vitro). The cell-line paper reports phospho-Ser9 unchanged along a retinoic-acid time course while WWOX rises; no experiment in it manipulates WWOX and reads Ser9, and the phrase 'S9-independent' occurs nowhere in its text; the only tissue datum (Wwox-null brain, cerebellum, hippocampus and cortex; the legend says postnatal day 20 and the Methods say 14) reports LOWER phospho-Ser9, as a ratio to beta-actin, with representative results of four independent experiments and the number of animals not stated (registry CLAIM 035 Evidence boundary, BATCH_20261120_001; the earlier wording of this item, 'S9-independent inhibition', is withdrawn) [IT59 2026-11-20 packet change].",
      "Whether the null-genotype hypersusceptibility is a driver of the developmental phenotype or an amplifier on a malformed brain (entry 6).",
      "Whether the wild-type response is floor-limited in a way that hides a genotype difference.",
      "Any allele-specific datum (Q230P class or splice allele): none exists for lithium.",
@@ -33887,11 +33890,11 @@
      "identity": "Lithium (the salt used in the mouse experiment: lithium chloride; the clinical compound class is lithium carbonate), used in the one WWOX experiment as a tool inhibitor of GSK3beta. Map records R-04 (repurposing) and N-02 (negative translation) describe the same candidate and are linked to this one card.",
      "indication_and_transfer": "Symptomatic seizure suppression is the only endpoint ever tested in a WWOX system; it is non-specific (wild type responds equally). A WWOX-specific disease-modifying rationale is not supported by the primary data. Transfer to the reference genotype: not established.",
      "mechanism": "Target: GSK3beta (among many); claimed: inhibits a kinase de-repressed by WWOX loss; the de-repression is read from a single Ser9 phosphorylation blot; the attribution of the seizure effect to GSK3beta rests on lithium alone.",
-     "next_measurement": "A provoked-seizure arm with an explicit, tested null versus wild-type contrast and the interaction reported, or a different GSK3beta inhibitor under the same design; and a kinase-activity or substrate-phosphorylation readout in a Wwox-null system. Until then no genotype-specific claim is available.",
+     "next_measurement": "A provoked-seizure arm with an explicit, tested null versus wild-type contrast and the interaction reported, or a different GSK3beta inhibitor under the same design; and a kinase-activity or substrate-phosphorylation readout in a Wwox-null system. Until then no genotype-specific claim is available. The substrate-phosphorylation readout is now DESIGNED, not measured: tau phospho-sites over total tau, Ser9 over TOTAL GSK3beta (not over actin) and beta-catenin, in the cortex of the neuronal-deletion line at postnatal day 17, with a decision per outcome fixed before data (SCI design v2.2 and v3.1, hypothesis level, no data) [IT59 2026-11-20 packet change].",
      "novelty_for_woree": "Already studied once (Cheng 2020, one laboratory, one experiment). Not new; the question is whether the result means what it was read as meaning.",
-     "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+     "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use. The label states paediatric safety and effectiveness as established for monotherapy of bipolar I disorder at ages 7 to 17 and not established below 7; that is a statement for another indication and is not a paediatric suitability for WWOX-DEE [IT59 2026-11-20 packet change].",
      "pathway_and_objective": "BENEFICIO_PRECOCE; Track A (allele-blind); not deep recovery.",
-     "pharmacology": "Approved compound (class level, from map record R-04) with a narrow therapeutic index and monitoring needs; CNS exposure is not in doubt. Nothing here is a statement about exposure in WWOX-DEE.",
+     "pharmacology": "Approved compound (class level, from map record R-04) with a narrow therapeutic index and monitoring needs; CNS exposure is not in doubt. Nothing here is a statement about exposure in WWOX-DEE. Label facts, read at source by a blind verifier on 2026-11-20 (US label record, class level, NOT WWOX EVIDENCE): a boxed warning that lithium toxicity is closely related to serum concentration and can occur at doses close to therapeutic concentrations; neurological signs of toxicity include ataxia and, among severe manifestations, seizure, and in rare cases neurological sequelae may persist after discontinuation and may be associated with cerebellar atrophy (the label hedges); lithium is concentrated in the thyroid and can lead to hypothyroidism (hyperthyroidism cases are also reported); in pregnancy the label says lithium may cause harm and names a floppy baby syndrome in neonates exposed late in pregnancy [IT59 2026-11-20 packet change].",
      "predictions": "None; no engine, no score.",
      "question_history": [
       "map R-04 and N-02",
@@ -33949,7 +33952,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "9af4edbdd4e71bfb73e03f9ae523d0a136a1bc7c1b7fbc59df5708d3a64103a0",
+   "input_sha256": "0a49e778278ab23a47453dbfc749bc0fdfa066a6770eafd53c7b29abac374c52",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",

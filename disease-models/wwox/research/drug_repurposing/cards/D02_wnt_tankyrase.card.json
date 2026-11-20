@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "fa7549280ab3094f2ce15b20d76ccdb884e5daeb1f1660aa194863e33f6762c8",
+  "input_sha256": "c346e66c71e255a7d0a1a14c2be7bd235d9cb037629c9a1ffb43f9936d92ff31",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -94,7 +94,8 @@
         ],
         "external_not_wwox_evidence": [
           "an esterified tankyrase-inhibitor prodrug in a Shank3b mouse separated toxicity from benefit by formulation, not by dose, from one dose pair (liver and gut toxicity in juveniles)",
-          "a GSK3 inhibitor in adult kainate epilepsy: Wnt activation reduced two of four histological markers in one model (opposite direction, different disease)"
+          "a GSK3 inhibitor in adult kainate epilepsy: Wnt activation reduced two of four histological markers in one model (opposite direction, different disease)",
+          "embryonic cortical progenitors, genetic and not pharmacological: siRNA knockdown in one study, gene deletion in the other (blind verifier, full text, 2026-11-20): in utero knockdown of either GSK-3 isoform at embryonic day 14.5 in a subset of cells (ICR mice, three brains) raised the proliferating fraction of electroporated cells; GSK3beta knockdown lowered the intermediate-progenitor and upper-layer-neuron fractions while GSK3alpha knockdown raised the intermediate-progenitor fraction and left the upper-layer fraction unchanged, and the authors say off-target effects of the knockdown reagents are not excluded (Ma 2017); conditional deletion of GSK3beta on a germline GSK3alpha-null background in neural progenitors gave progenitor over-proliferation and death at birth, which the authors attribute to loss of both isoforms (Kim 2009) [IT59 2026-11-20 packet change]"
         ]
       },
       "evidence_for_and_against": {
@@ -104,7 +105,7 @@
       },
       "time_to_access": "UNKNOWN",
       "time_to_benefit": "UNKNOWN",
-      "pharmacology": "UNKNOWN",
+      "pharmacology": "NOT WWOX EVIDENCE, class level (HE ADV-098 batch 9, public databases, 2026-11-20): five GSK-3 inhibitors of non-lithium chemistry exist, with beta potencies in vitro from sub-nanomolar to micromolar depending on the document and assay (one weak 2011 fluorescence assay of AR-A014418 is set apart by the sheet), alpha about 1.4- to 2.5-fold weaker than beta at most within one document and assay (none shown to separate alpha from beta by an order of magnitude); tideglusib is non-ATP-competitive and time-dependent, so its potency depends on pre-incubation and is not set against the ATP-competitive agents; no ordering of agents is read from these values; no brain or plasma concentration was found for any of the five; selectivity is not assessed; no US label was found for tideglusib; paediatric programmes of tideglusib exist as registry statuses only, results not read [IT59 2026-11-20 packet change].",
       "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
       "scope_of_checks": {
         "support_and_replication": "None.",
@@ -115,14 +116,16 @@
         "TX-004, DL-MOL-003, DL-MECH-032"
       ],
       "predictions": "None; no engine, no score.",
-      "next_measurement": "Activation-step measurement (reporter, nuclear beta-catenin) in a WWOX-deficient neural system, then the dose-by-timing series.",
+      "next_measurement": "A GSK-3 substrate-phosphorylation panel in the cortex of the Wwox neuronal-deletion line at postnatal day 17 (tau phospho-sites over total tau, Ser9 over total GSK3beta, beta-catenin), designed with a decision per outcome and no data yet (SCI v2.2 and v3.1; a flat panel closes the candidate for this model and age, an elevated panel opens an inhibitor arm); then an activation-step measurement (reporter, nuclear beta-catenin) in a WWOX-deficient neural system, then the dose-by-timing series [IT59 2026-11-20 packet change].",
       "status": "abstention",
       "value_added": "Names the missing datum so that the axis is a recorded gap and not a silence.",
       "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md): seven separate queries returned no registered WOREE interventional study; the only synonym-driven record is one observational natural-history registry. Carried with the census's own caution: \"A missing hit does not prove that no study exists.\" It answers seven queries against one registry on one date; unregistered, differently worded, non-NLM or later-registered studies are not excluded."
     },
     "not_known": [
       "A dose-by-timing series of Wnt/GSK3/CK1 modulation in a developing cortex with progenitor, layer-neuron and electrographic endpoints, in any WWOX system; and a measured activation step (reporter or nuclear/cytosolic beta-catenin). Never administered in any WWOX system as a Wnt-lowering or tankyrase-type agent, and never as a dose-by-timing series. Two partial exceptions are in the repository: the CK1-alpha-inhibiting multikinase compound of the D01 card was given to knockout organoids (attribution among Wnt, MYC and CDK ambiguous), and a GSK3 inhibitor was given acutely to Wwox-null mice before a convulsant challenge with a seizure endpoint and a measured GSK3 phospho-state in brain (PMID 32000863, repository reading, text re-inspected); neither measures the activation step by reporter or beta-catenin. The transcript direction in organoids is the only Wnt-output measurement.",
-      "Whether the activation step, as distinct from the transcriptional output, is increased."
+      "Whether the activation step, as distinct from the transcriptional output, is increased.",
+      "GSK-3 premise status after the 2026-11 comparison work (class level; hypothesis): the GSK-3 and Wnt transcript premise was not supported in the organoid and not distinguishable from random gene sets in the held postnatal day 17 mouse cortex (bulk, three against four animals; the Wnt sign agrees with the premise, inside the null band in the primary run and borderline in the blind recompute), and one interactome partner, GSK3beta, meets the registered criteria with narrowings (directness not shown by the assays; the pharmacology of the criterion is partial, lithium at abstract level and no GSK3beta-specific non-lithium constant read in a primary source; the cell readout is a retinoic-acid-differentiated neuroblastoma line; the only tissue datum, lower phospho-Ser9 in Wwox-null brain, is the direction of more active kinase, whereas the cell-line paper reports phospho-Ser9 unchanged and attributes its effect to binding: the sources are in tension on the role of Ser9); no GSK-3 substrate measurement exists in a Wwox-deficient neuron (the cell-line paper reads Tau phospho-sites after WWOX knockdown and overexpression in a neuroblastoma line) [IT59 2026-11-20 packet change].",
+      "Brain or plasma concentration of any non-lithium GSK-3 inhibitor, free or total, adult or juvenile: not found in rodents by public-database and literature-title routes (PubMed titles only) for five agents (tideglusib, SB-216763, CHIR-99021, LY2090314, AR-A014418); selectivity was not assessed [IT59 2026-11-20 packet change]."
     ],
     "evidence_against": [],
     "bridge_gaps_exposed": [],

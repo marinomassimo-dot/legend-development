@@ -9884,7 +9884,7 @@
     "P_pharmacology": {
      "brain_penetration": "UNKNOWN",
      "human_exposure": "UNKNOWN",
-     "potency_with_assay_context": "UNKNOWN",
+     "potency_with_assay_context": "NOT WWOX EVIDENCE, class level (HE ADV-098 batch 9, public databases, 2026-11-20): five GSK-3 inhibitors of non-lithium chemistry exist, with beta potencies in vitro from sub-nanomolar to micromolar depending on the document and assay (one weak 2011 fluorescence assay of AR-A014418 is set apart by…",
      "record": "",
      "state": "not in the pharmacological comparison table; card text only (potency, exposure and nervous-system data UNKNOWN unless the card says otherwise)"
     },
@@ -10056,7 +10056,7 @@
       "feasibility": "not stated",
       "kind": "",
       "need": "",
-      "question": "Activation-step measurement (reporter, nuclear beta-catenin) in a WWOX-deficient neural system, then the dose-by-timing series.",
+      "question": "A GSK-3 substrate-phosphorylation panel in the cortex of the Wwox neuronal-deletion line at postnatal day 17 (tau phospho-sites over total tau, Ser9 over total GSK3beta, beta-catenin), designed with a decision per outcome and no data yet (SCI v2.2 and v3.1; a flat panel closes the candidate for this model and age, an elevated panel opens an inhibitor arm);",
       "would_change": ""
      },
      "next_priority": {
@@ -10112,7 +10112,7 @@
       "feasibility": "not stated",
       "kind": "",
       "need": "",
-      "question": "Activation-step measurement (reporter, nuclear beta-catenin) in a WWOX-deficient neural system, then the dose-by-timing series.",
+      "question": "A GSK-3 substrate-phosphorylation panel in the cortex of the Wwox neuronal-deletion line at postnatal day 17 (tau phospho-sites over total tau, Ser9 over total GSK3beta, beta-catenin), designed with a decision per outcome and no data yet (SCI v2.2 and v3.1; a flat panel closes the candidate for this model and age, an elevated panel opens an inhibitor arm);",
       "would_change": ""
      },
      "next_priority": {
