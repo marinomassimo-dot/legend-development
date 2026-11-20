@@ -609,10 +609,12 @@
     },
     {
      "step": "ADV-112: (1) WO-23 same-system Tau-phospho plus beta-catenin readout under GSK-3 inhibitor classes (design of the GSK-3 block of the shared Stage-1 panel); (2) WO-12 primary conditions of the ifenprodil and Ro 25-6981 GluN2B ratios, open-access check of Hess 1996 and Fischer 1997 first; pre-registered",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV 2026-11-20 message to SCI (ADV-112; assignments/ADV-112.md)",
-     "accepted_at": "2026-11-20T14:43:19Z"
+     "accepted_at": "2026-11-20T14:43:19Z",
+     "evidence": "wo23_wo12_adv112_sci_20261120/ADV112_WO23_WO12_SCI_20261120.md landed on main daf4685af gate=PASS; pre-registration e60f0c081",
+     "updated_at": "2026-11-20T14:56:28Z"
     }
    ]
   }
