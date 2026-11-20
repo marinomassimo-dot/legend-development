@@ -480,6 +480,13 @@
      "accepted_at": "2026-11-20T06:24:41Z",
      "evidence": "gsk3_shared_premise_sci_20261120/GANAXOLONE_REMYELINATION_READING_SCI_20261120.md and v3.1 section 6.8 (four-arm Holm and n)",
      "updated_at": "2026-11-20T06:24:41Z"
+    },
+    {
+     "step": "Operator morning continuation 2026-11-20: from class-level uncertainty to an informative pharmacological comparison. Choose the most informative of broad (a concrete GSK-3 agent against a concrete rival; deepen the decisive primaries; redefine what S-flat excludes and does not measure) and bridge (relevant agents on the new HE sheets; anticonvulsant utility apart from WWOX specificity); run only analyses that can change the comparison; deliver by increments to ADV, IT and HE",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "operator message in chat, 2026-11-20 morning ('MORNING CONTINUATION - SCI'); roadmap_current.md direction",
+     "accepted_at": "2026-11-20T07:24:33Z"
     }
    ]
   }
@@ -846,6 +853,13 @@
    "at": "2026-11-20T06:24:41Z",
    "source": "ADV MEETING-20261120T061814Z decision (c) and IT message of 2026-11-20 (peer messages, scope inside the accepted ADV assignment)",
    "step_sha256": "fe97f4070b13",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T07:24:33Z",
+   "source": "operator message in chat, 2026-11-20 morning ('MORNING CONTINUATION - SCI'); roadmap_current.md direction",
+   "step_sha256": "8280ac00aa51",
    "reopened_block": false,
    "authorised_by": null
   }
