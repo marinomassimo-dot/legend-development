@@ -624,6 +624,13 @@
      "accepted_at": "2026-11-20T15:02:03Z",
      "evidence": "preonset_timecourse_adv115_sci_20261120/ADV115_PREONSET_TIMECOURSE_UNANSWERABLE_SCI_20261120.md landed on main 03770aac9 gate=PASS; pre-registration f61687edb; unanswerable under U1-U5, 19 series, near-miss GSE112627",
      "updated_at": "2026-11-20T15:22:13Z"
+    },
+    {
+     "step": "ADV-116: GSE112627 single pre-onset age P14 (Scn1a+/- hippocampus): is any fixed glial or energy set already different between genotypes; verify onset and strain-genotype confounding from PMID 30347190 first; own pre-registration before the counts file is opened",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV 2026-11-20 message to SCI (ADV-116; assignments/ADV-116.md)",
+     "accepted_at": "2026-11-20T15:26:13Z"
     }
    ]
   }
@@ -1102,6 +1109,13 @@
    "at": "2026-11-20T15:02:03Z",
    "source": "ADV 2026-11-20 message to SCI (ADV-115; assignments/ADV-115.md)",
    "step_sha256": "8d81a34b2281",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T15:26:13Z",
+   "source": "ADV 2026-11-20 message to SCI (ADV-116; assignments/ADV-116.md)",
+   "step_sha256": "138b5988a02d",
    "reopened_block": false,
    "authorised_by": null
   }
