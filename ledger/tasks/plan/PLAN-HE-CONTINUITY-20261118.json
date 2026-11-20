@@ -416,6 +416,15 @@
      "accepted_at": "2026-11-20T19:24:08Z",
      "evidence": "SCI successor session 53cd1e96 (ref c76ec7) launched 19:24:27Z from checkpoint S (sha256 6cc5c0bb... and old session id 7381c135-... verified by me on main 1ce83035b and the agent list); old released 19:24:36.828Z, successor bound 19:24:50.694Z (13.9 s), first tool call 19:24:52.045Z (1.4 s after bind), handoff RUNNING with 7 calls; predecessor not stopped (claude stop denied earlier by the classifier, operator's list)",
      "updated_at": "2026-11-20T19:25:17Z"
+    },
+    {
+     "step": "Write HE checkpoint B at a boundary (CI-equivalent suite table, effort, launch command and brief), land it, report SHA and digest to ADV for ADV's launch of the successor",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-20 about HE restart at 354k (to HE [cc7acb])",
+     "accepted_at": "2026-11-20T20:19:08Z",
+     "evidence": "Checkpoint B written (effort high read back, peak 356,498; CI-equivalent table of 241a1f602: 269/270 exit 0, only test_repurposing_view killed on a hung snap Chromium; non-browser rerun pending by file); landed; digest reported to ADV",
+     "updated_at": "2026-11-20T20:20:10Z"
     }
    ]
   }
@@ -733,6 +742,13 @@
    "at": "2026-11-20T19:24:08Z",
    "source": "SCI message 2026-11-20 about checkpoint S restart, advisor_practice item 18 (to HE [cc7acb])",
    "step_sha256": "29f996445f64",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T20:19:08Z",
+   "source": "ADV message 2026-11-20 about HE restart at 354k (to HE [cc7acb])",
+   "step_sha256": "e31575ee06fd",
    "reopened_block": false,
    "authorised_by": null
   }
