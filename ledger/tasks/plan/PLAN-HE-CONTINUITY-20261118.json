@@ -323,6 +323,14 @@
      "source": "ADV-108",
      "accepted_at": "2026-11-20T13:22:43Z",
      "authorised_by": "ADV-108 assignment 2026-11-20 13:10Z"
+    },
+    {
+     "step": "ADV-113: (1) IT50-Q09 EBP activity of the M1-selective comparator of the benztropine/clemastine reagent pair (by-molecule recipe, sheet_query-compatible line if a number is found); (2) WO-32 literature half: verified bounded null for class IIa HDACs in oligodendrocyte myelination (TMP195); three-pass rule, abstract-only marked, no dose",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV-113",
+     "accepted_at": "2026-11-20T14:40:37Z",
+     "authorised_by": "ADV-113 assignment 2026-11-20 (message)"
     }
    ]
   }
@@ -572,6 +580,13 @@
    "step_sha256": "751c870d9817",
    "reopened_block": false,
    "authorised_by": "ADV-108 assignment 2026-11-20 13:10Z"
+  },
+  {
+   "at": "2026-11-20T14:40:37Z",
+   "source": "ADV-113",
+   "step_sha256": "7e7034c859e3",
+   "reopened_block": false,
+   "authorised_by": "ADV-113 assignment 2026-11-20 (message)"
   }
  ],
  "VERIFICATION_EVIDENCE": [
