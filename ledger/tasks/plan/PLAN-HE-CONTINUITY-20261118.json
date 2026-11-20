@@ -443,6 +443,34 @@
      "accepted_at": "2026-11-20T22:18:54Z",
      "evidence": "run #1649 and #1638 job steps read from the public API: Browser startup and keyboard regression success, Regression tests failure, gate success; annotations name the same three repository-side tests; addendum ADDENDUM_HE_20261120_B1_CI_equivalent_table.md",
      "updated_at": "2026-11-20T22:19:37Z"
+    },
+    {
+     "step": "ADV-125: give the local view suite a working browser, run the three keyboard tests and RealViewports and ShareableAuditRendered with time boxes, report, name a stand-in README row if it cannot match CI",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV message 2026-11-20T22:3xZ to HE successor B (session 5d9fc467): assignment ADV-125",
+     "accepted_at": "2026-11-20T22:37:43Z"
+    },
+    {
+     "step": "Night continuation 1: complete automatic retirement of released predecessors (retire_released reachable for every successor state that is safe), with regressions and checkpoint wording fixed",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "Operator message NIGHT CONTINUATION Reliable session lifecycle, efficient context and durable learning, 2026-11-20 (to plan)",
+     "accepted_at": "2026-11-20T22:39:36Z"
+    },
+    {
+     "step": "Night continuation 2: help ADV move to a fresh context (compact checkpoint, launch, release, bind, first action, predecessor retirement)",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "Operator NIGHT CONTINUATION 2026-11-20, point 2 (ADV fresh context)",
+     "accepted_at": "2026-11-20T22:39:41Z"
+    },
+    {
+     "step": "Night continuation 3: close the browser diagnosis (re-run per SHA, separate repository defects from browser start failures and unrun checks, remove stale waiters after verification)",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "Operator NIGHT CONTINUATION 2026-11-20, point 3 (browser diagnosis)",
+     "accepted_at": "2026-11-20T22:39:41Z"
     }
    ]
   }
@@ -781,6 +809,34 @@
    "at": "2026-11-20T22:18:54Z",
    "source": "ADV message 2026-11-20 to HE successor d4b1a0 after the CI table: job-steps check of run 1649 and one older red run",
    "step_sha256": "0f781f4cfef3",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T22:37:43Z",
+   "source": "ADV message 2026-11-20T22:3xZ to HE successor B (session 5d9fc467): assignment ADV-125",
+   "step_sha256": "85a9e7cc1344",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T22:39:36Z",
+   "source": "Operator message NIGHT CONTINUATION Reliable session lifecycle, efficient context and durable learning, 2026-11-20 (to plan)",
+   "step_sha256": "68488457e1c3",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T22:39:41Z",
+   "source": "Operator NIGHT CONTINUATION 2026-11-20, point 2 (ADV fresh context)",
+   "step_sha256": "14c3618ea473",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T22:39:41Z",
+   "source": "Operator NIGHT CONTINUATION 2026-11-20, point 3 (browser diagnosis)",
+   "step_sha256": "678757365844",
    "reopened_block": false,
    "authorised_by": null
   }

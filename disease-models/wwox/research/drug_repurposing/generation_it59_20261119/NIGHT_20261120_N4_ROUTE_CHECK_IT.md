@@ -1,0 +1,17 @@
+# N4 / RP-013: one route from the ranking to the question to the evidence (IT window N, 2026-11-20)
+
+Reference-genotype class only; a consumption check of existing files, not a result; no claim is strengthened; nothing is medical advice. Read on the checkout at origin/main of 2026-11-20 (files, not the rendered page: the browser step was not run in this window).
+
+## The route followed (unit U07, position 1 of the selection table)
+1. Ranking (`ranking_it8_p9_20261029/ranking.json`, `selection_table[0]`): intervention 'AAV9-delivered human WWOX (gene addition)', group G1, evidence carrier DR-AAV-SURV-HD (PMID 42422765, plus six favourable assertions), `next_experiment_or_control`: whether an intermediate vector level separates a threshold from a gradient, and whether benefit is only prevented in the first days or also recovered after onset; 'no study has measured the phenotype at the day of injection'.
+2. Question map (`batch_sci_20261105/map/open_questions_map.tsv`, row WO-02, OPEN, wet-lab measurement): the same question with one added condition (restoration given after the first recorded spike-wave discharge, an untreated same-genotype comparator, an intermediate vector level); its stake is 'moves the gene-addition card from prevented/early-window to recovered'; its source references name the work order and this ranking row.
+3. Evidence (`cards/C01_aav9_wwox.card.json`): the card states the result is PREVENTION (every endpoint measured after neonatal treatment in animals never measured before it; phenotype onset never located), 'threshold not located', and carries the next measurement as an intermediate-level arm defined as a fraction of the primary's higher level, carried to 300 days.
+
+## What the check found
+* The three places agree on premise and limit: no recovery claim, onset never located, one level. No sentence in the map or the card is stronger than the ranking's.
+* One drift, not an error: the map's condition 'after the first recorded spike-wave discharge' is a design requirement not stated in the ranking text; it matters because the ranking says nothing has been measured at the day of injection, so a post-onset arm needs its own baseline recording. Left as written; it is a reader note for whoever designs the arm.
+* The word 'gradient' appears in the ranking and the map and not in the card (the card says 'intermediate-level arm'); no information is lost.
+* The route is walkable by hand in about three file opens, which answers RP-013's 'has one real route ever been followed': yes, here, at file level. What is not shown: the page the operator sees (rendered text, phone and desktop) was not opened, so the statement 'the page shows the same limit' is NOT made; HE's browser validation table (B1) covers the layout, not this text.
+
+## Routing
+RP-013 stays open for its second half (the rendered page shows the same limit); nothing goes to HE or SCI from this check.

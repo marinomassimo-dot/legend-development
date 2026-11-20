@@ -843,7 +843,15 @@ or `STOP_UNVERIFIED` is not a completed retirement (exit 5 with the flag). An al
 stopped predecessor is an idempotent success. The existing hourly
 `check --all --deliver resume` also finds released predecessors of unique live bound
 hosts and uses the same checks; `--deliver none` only reports. No second scheduler or
-language-model call is needed for this recovery.
+language-model call is needed for this recovery. The catch-up looks at the successor's mandate
+in the states `RUNNING`, `STOPPED_RESUMABLE`, `BLOCKED` and `COMPLETE` (complete pending): a
+legitimate wait or a standing mandate that is complete-pending does not defer the cleaning of an
+otherwise safe released host (until 2026-11-20 only the first two states reached it, so released
+predecessors of a waiting or complete-pending successor stayed live). `PAUSED` and `CANCELLED`
+mandates are not touched, nor are `UNKNOWN` observations or `DUPLICATE_HOST`; the catch-up never
+reopens a mandate. **Why:** starting a successor does not complete a handoff; completing it means
+verifying the real outcome: the work and the references have moved, the released predecessor is
+no longer a live recipient, and its process has actually exited.
 
 The watcher requires exact session identities, the predecessor's own release of every
 bound mandate, a successor that has acted after release and is the unique live host,
