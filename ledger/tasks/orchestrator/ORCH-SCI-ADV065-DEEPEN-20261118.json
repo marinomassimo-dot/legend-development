@@ -570,6 +570,15 @@
      "accepted_at": "2026-11-20T12:09:26Z",
      "evidence": "energy_axis_adv105_sci_20261120/ADV105_ENERGY_SUPPLY_AFTER_ONSET_SCI_20261120.md (12 of 12 searches, abstract level)",
      "updated_at": "2026-11-20T12:13:33Z"
+    },
+    {
+     "step": "v3.1 line 6.19 (lactate, BHB, CSF/tissue readout, four weakeners as decision rules) and the RP-023 / T-type dream paragraph",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV 2026-11-20 message to SCI (ADV-105 accepted, decisions 1 and 2)",
+     "accepted_at": "2026-11-20T12:25:21Z",
+     "evidence": "V3_1 line 6.19 and CURRENT READING row; energy_axis_adv105_sci_20261120/ADDENDUM_DREAM_RP023_TTYPE_SCI_20261120.md",
+     "updated_at": "2026-11-20T12:25:21Z"
     }
    ]
   }
@@ -1006,6 +1015,13 @@
    "at": "2026-11-20T12:09:26Z",
    "source": "ADV 2026-11-20 message to SCI (ADV-105 registered; RP-033; assignments/ADV-105.md landing within the hour)",
    "step_sha256": "b7832e654a1f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T12:25:21Z",
+   "source": "ADV 2026-11-20 message to SCI (ADV-105 accepted, decisions 1 and 2)",
+   "step_sha256": "8f5e273f729f",
    "reopened_block": false,
    "authorised_by": null
   }
