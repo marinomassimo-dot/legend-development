@@ -1,0 +1,100 @@
+{
+ "repo": ".",
+ "title": "Blind audit packet: the class-level statements added by the THIRD packet change (E01, L01, E03, I01, M01, F02), IT59, 2026-11-20",
+ "preamble": "Each statement is a class-level exposure or pharmacology fact written from a public-database sheet (HE ADV-098 batches 7, 8 and 10) or from a preregistration note. Judge each ONE AT A TIME. For each: (1) supported by its anchor as worded? (2) does the anchor say MORE or LESS (species, age, system, route, n and unit, total vs free, quantifier, causal or vector words, units, jurisdiction, 'found by these routes' versus 'absent')? (3) verdict SUPPORTED / SUPPORTED_WITH_LIMIT / OVERSHOOT / UNDERSHOOT / UNSUPPORTED / UNVERIFIABLE; quote with locator; every quoted string a substring of the anchor you read. Where the anchor is a HE sheet in the repository, judge the wording against that sheet and say so (the raw database answers are outside git; a number the sheet states is judged as the sheet's statement). Where the anchor is a PubMed abstract, open it with the PubMed tool and quote it. Repository paths are relative to /home/desktop/legend-development/.claude/worktrees/it_successor_m_20261120/ .",
+ "items": [
+  {
+   "id": "A1 (E01 ISRIB)",
+   "statement": "Added class-level facts, no dose, no score, NOT WWOX EVIDENCE [IT59 2026-11-20 third packet change] (HE ADV-098 batches 7 and 8, public-database rows, hypothesis level): ISRIB is not found by name in the identity tool and is identified by structure; the database holds ONE row for it, an ATF4 reporter in human H4 cells after 24 hours with an IC50 of 2.7 nanomolar (one document): a cell readout of the stress-response output, not a binding and not an eIF2B measurement. No eIF2B activity row, no binding or selectivity row, no value in neurons and none from a second laboratory were found by those routes (not found by these routes is not absence); no measured brain or plasma concentration of ISRIB was found, and the one PubMed hit for brain pharmacokinetics was an unrelated neuropathology paper by its title. No label is expected (a research compound). ",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH8_broad_ISRIB_trazodone_omaveloxolone_dichloroacetate_HE_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH10_broad_tazemetostat_TMP195_10058F4_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "A2 (E01 trazodone)",
+   "statement": "TRAZODONE: the database holds 284 rows, led by serotonin receptor, histamine H1 and transporter rows; no row measures PERK, eIF2 alpha phosphorylation or any stress-response assay, so the stress-response link is the literature's and not measured here; two papers disagree by title (a 2017 mouse report that repurposed drugs targeting eIF2 alpha phosphorylation prevent neurodegeneration, and a 2025 report that trazodone does not prevent motor dysfunction and neurodegeneration in another model; neither read). The serotonin 5-HT2A potency differs about twelve-fold by assay type (binding against a cyclic-AMP readout), so the same receptor does not give one number. Label (openFDA record, newest 2026-07-14): adults with major depressive disorder; safety and effectiveness in the paediatric population not established, with the antidepressant boxed warning on suicidality in children.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH8_broad_ISRIB_trazodone_omaveloxolone_dichloroacetate_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "A3 (L01 omaveloxolone)",
+   "statement": "Added class-level facts, no dose, no score, NOT WWOX EVIDENCE [IT59 2026-11-20 third packet change] (HE ADV-098 batch 8, database rows): the database holds TWO potency rows for omaveloxolone, both anti-necroptotic cell readouts of one 2021 document (EC50 1.41 micromolar in human HT-29 cells and 5.25 micromolar in mouse L929 cells); no KEAP1 or NRF2 row at all was found by those routes, so the NRF2 mechanism is the literature's (and the database's mechanism row), not a measured potency here, and the low-nanomolar NRF2-linked concentration quoted above comes from a different source and is not the same quantity. Two searches for a mouse brain concentration found no record (two query shapes; the monkey brain content on the label is the exposure fact held). Label (openFDA record, effective 2026-04-06): Friedreich's ataxia in adults and adolescents of 16 years and older; effectiveness established from age 16 and nothing for younger children.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH8_broad_ISRIB_trazodone_omaveloxolone_dichloroacetate_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "A4 (E03 dichloroacetate)",
+   "statement": "Added class-level facts, no dose, no score, NOT WWOX EVIDENCE [IT59 2026-11-20 third packet change] (HE ADV-098 batch 8, database rows): dichloroacetic acid acts at millimolar concentrations in the rows read. Within ONE 2017 document (an enzyme-linked assay on full-length PDHA1 as substrate, 30 minutes) the IC50 is 1.03 millimolar for PDK1, 0.50 for PDK2 and 5.56 for PDK3: an eleven-fold range across isozymes in one assay, a comparable contrast; an older row gives more than 2 millimolar against PDK in vitro and an EC50 of 100 micromolar in normal human dermal fibroblasts, a different readout, with no order between the two documents read; earlier database values read by IT9 for the most sensitive isoform near 0.1 millimolar are not reconciled with this document here. Five leukaemia cell-line rows give 8 to 14 millimolar (viability, 48 hours, one document). No brain concentration of dichloroacetate in mice and no juvenile exposure were found (the rat brain PDK distribution paper of 1984 and a rat GSTZ1 paper are by title only; one neonatal query found no record); the openFDA label route returned no match for dichloroacetic acid, a statement about that route and not about development status.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH8_broad_ISRIB_trazodone_omaveloxolone_dichloroacetate_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "A5 (I01 metabolic axis, next measurement)",
+   "statement": "THE METABOLIC AXIS IS NEITHER PROMOTED NOR PARKED ON HELD DATA [IT59 2026-11-20 third packet change]: no glucose measurement in the neuronal-deletion (Synapsin-Cre) or the neural-progenitor-deletion (Nestin-Cre) line was found in any held text; no held text manipulates glycaemia or the PDH axis and reads a seizure or a survival endpoint; the decisive datum is blood glucose from postnatal day 7 with same-animal EEG from postnatal day 9 (the earliest glucose anywhere in the held literature is day 10, and the seizures of the neuronal-deletion line start at day 9); the preregistration and the first reading are SCI's ADV-101 increments, folder advisor_pilot_20261113/brainstorm_20261116/glycaemia_axis_adv101_sci_20261120/. Wild-type glucose differs about two-fold between laboratories, so no absolute hypoglycaemia severity is compared across papers.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/glycaemia_axis_adv101_sci_20261120/ADV101_INCREMENT1_Q1_Q2_SCI_20261120.md"
+    },
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/glycaemia_axis_adv101_sci_20261120/PREREGISTRATION_ADV101_SCI_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "A6 (M01 10058-F4 and the two uncarded agents)",
+   "statement": "Added class-level facts, no compound carded, no dose, no score, NOT WWOX EVIDENCE [IT59 2026-11-20 third packet change] (HE ADV-098 batch 10; identity by structure, not found by name; the geometric form each study used is not resolved): 10058-F4, named in the literature as a MYC-MAX dimerisation inhibitor, has FIVE rows in the database, all cell growth after 96 hours in one 2025 document: 35.1 to 59.5 micromolar, with MYC-expressing P493-6 cells 1.7-fold more sensitive than the same cells with MYC repressed (one document, a weak dependence); no row on MYC, MAX or MYC-MAX dimerisation was found by those routes, and none is asserted. In mice with prostate-cancer xenografts (abstract read, intravenous route) the plasma peak was about 300 micromolar at 5 minutes with a terminal half-life of about one hour, tissue values were highest in fat, lung, liver and kidney, the tumour peak was at least ten-fold lower than the plasma peak, and no significant tumour growth inhibition was seen at the two doses tested; the abstract gives rapid metabolism and low tumour concentration as the reason, brain is not named, and the full text was not read. No label and no clinical trial were found. Two other agents of the same batch, tazemetostat (an EZH2 inhibitor, P-glycoprotein limits its brain accumulation in mice, label from 16 years) and TMP195 (a class IIa HDAC inhibitor, no exposure found), have no card and are carried as open-question lines only.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH10_broad_tazemetostat_TMP195_10058F4_HE_20261120.md"
+    },
+    {
+     "label": "PMID 18509642 abstract via the PubMed tool (10058-F4 pharmacokinetics in mice)"
+    },
+    {
+     "label": "PMID 25868794 abstract via the PubMed tool (tazemetostat and P-glycoprotein in knockout mice)"
+    }
+   ]
+  },
+  {
+   "id": "A7 (F02 head, benztropine)",
+   "statement": "Added class-level facts, no compound carded, no dose, no score, NOT WWOX EVIDENCE [IT59 2026-11-20 third packet change] (HE ADV-098 batch 7, database rows and label records): four agents with four different mechanisms, so no potency comparison across them. None of the four has a database row that measures an oligodendrocyte-differentiation or myelination effect: the potency rows are the primary-target rows and are not the myelination mechanism (the link is literature, read at title level only). BENZTROPINE: muscarinic M1 Ki of 0.59 to 0.95 nanomolar in rat brain membranes and 0.13 nanomolar in a human panel (a seven-fold spread between sources); exposure found only for benztropine analogs, none for benztropine itself; label: caution in paediatric patients over three years. BENZTROPINE: muscarinic M1 Ki of 0.59 to 0.95 nanomolar in rat brain membranes and 0.13 nanomolar in a human panel (a seven-fold spread between sources); exposure found only for benztropine analogs, none for benztropine itself; label: caution in paediatric patients over three years. ",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH7_broad_benztropine_miconazole_clobetasol_bexarotene_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "A8 (F02 miconazole and clobetasol)",
+   "statement": "Added class-level facts, no compound carded, no dose, no score, NOT WWOX EVIDENCE [IT59 2026-11-20 third packet change] (HE ADV-098 batch 7, database rows and label records): four agents with four different mechanisms, so no potency comparison across them. None of the four has a database row that measures an oligodendrocyte-differentiation or myelination effect: the potency rows are the primary-target rows and are not the myelination mechanism (the link is literature, read at title level only). MICONAZOLE: the measured target is sterol demethylase (human CYP51 IC50 200 nanomolar), and the sterol-pathway mechanism proposed for oligodendrocyte differentiation is not found in the rows; no rodent concentration found; the label is a topical over-the-counter antifungal, which says nothing about CNS exposure. CLOBETASOL PROPIONATE (read separately from the parent record): glucocorticoid receptor IC50 3.17 nanomolar in rat liver cytosol against Ki 0.66 nanomolar in a human panel (different species and sources); no rodent brain concentration of the plain compound found (central delivery is a formulation problem in the one paper read by title); label: topical, not recommended under 12 years. ",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH7_broad_benztropine_miconazole_clobetasol_bexarotene_HE_20261120.md"
+    }
+   ]
+  },
+  {
+   "id": "A9 (F02 bexarotene)",
+   "statement": "Added class-level facts, no compound carded, no dose, no score, NOT WWOX EVIDENCE [IT59 2026-11-20 third packet change] (HE ADV-098 batch 7, database rows and label records): four agents with four different mechanisms, so no potency comparison across them. None of the four has a database row that measures an oligodendrocyte-differentiation or myelination effect: the potency rows are the primary-target rows and are not the myelination mechanism (the link is literature, read at title level only). BEXAROTENE: within one 1997 document the RXR-beta, RXR-gamma and RXR-alpha Ki values (5.9, 8.3 and 16 nanomolar) against 180 nanomolar for RAR-alpha give an eleven- to thirty-fold RXR preference, a comparable contrast; other documents give RXR-alpha EC50 of 28 and 42 nanomolar; a mouse plasma and brain quantification method paper exists (numbers not read); label: cutaneous T-cell lymphoma, paediatric safety and effectiveness not established.",
+   "anchors": [
+    {
+     "path": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/adv098_agent_sheets_he_20261119/BATCH7_broad_benztropine_miconazole_clobetasol_bexarotene_HE_20261120.md"
+    }
+   ]
+  }
+ ]
+}
