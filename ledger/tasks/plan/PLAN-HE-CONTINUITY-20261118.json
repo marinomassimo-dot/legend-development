@@ -328,11 +328,13 @@
     },
     {
      "step": "ADV-113: (1) IT50-Q09 EBP activity of the M1-selective comparator of the benztropine/clemastine reagent pair (by-molecule recipe, sheet_query-compatible line if a number is found); (2) WO-32 literature half: verified bounded null for class IIa HDACs in oligodendrocyte myelination (TMP195); three-pass rule, abstract-only marked, no dose",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV-113",
      "accepted_at": "2026-11-20T14:40:37Z",
-     "authorised_by": "ADV-113 assignment 2026-11-20 (message)"
+     "authorised_by": "ADV-113 assignment 2026-11-20 (message)",
+     "evidence": "Sheet BATCH12_ADV113_M1comparators_pirenzepine_telenzepine_VU0255035_and_TMP195_classIIa_OL_null_HE_20261120.md in advisor_pilot_20261113/adv098_agent_sheets_he_20261119/, landed on main as bdc155745 (safe_push PASS, ls-remote verified); recipe line and raw digests added; test_sheet_query and test_release_surface OK; Part A: no measured EBP datum for any disclosed M1-selective antagonist (334 EBP rows, 0 hits; Hubler six-antagonist panel indirect); Part B: bounded null for class IIa in OL myelination by Europe PMC and PubMed abstract routes, TMP195 harm re-search found no neural harm report, not a verified absence",
+     "updated_at": "2026-11-20T15:45:43Z"
     }
    ]
   }
