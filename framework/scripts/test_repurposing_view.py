@@ -195,15 +195,19 @@ class CheckAndClip(unittest.TestCase):
                 full_text[Path(f).name.split(".card.json")[0]] = " ".join(text.split())
         self.assertGreaterEqual(len(full_text), 25)
         self.assertLessEqual(max(len(t) for t in full_text.values()), rv.PHARM_CLIP, "a card paragraph longer than the clip would be cut again")
-        for src in ("full", "shareable"):
-            payload = rv.build_payload(DR, src)
-            shown = {c["id"]: c["pharm"] for c in payload["cur"]["cands"]}
-            for cid, text in full_text.items():
-                if cid in shown:
-                    # the shareable edition replaces repository file names by a notice (a redaction, not a cut): the check is that the paragraph is whole, i.e. its LAST sentence is on the page
-                    self.assertTrue(shown[cid].rstrip(" …").endswith(text[-60:]), f"{src}: card {cid} is cut ({len(shown[cid])} of {len(text)} characters)")
-                    self.assertGreaterEqual(len(shown[cid]), int(len(text) * 0.9), f"{src}: card {cid} is cut")
-            self.assertTrue(any(len(t) > 360 for t in full_text.values()))                   # the defect was real: some paragraphs are longer than the old clip
+        payload = rv.build_payload(DR, "full")
+        shown = {c["id"]: c["pharm"] for c in payload["cur"]["cands"]}
+        for cid, text in full_text.items():
+            if cid in shown:
+                self.assertTrue(shown[cid].rstrip(" …").endswith(text[-60:]), f"full: card {cid} is cut ({len(shown[cid])} of {len(text)} characters)")
+                self.assertGreaterEqual(len(shown[cid]), int(len(text) * 0.9), f"full: card {cid} is cut")
+        self.assertTrue(any(len(t) > 360 for t in full_text.values()))                       # the defect was real: some paragraphs are longer than the old clip
+
+    def test_the_shareable_clip_is_the_stated_constant_until_the_operator_decides(self):
+        """Interim (ADV, 2026-11-20): the shareable edition keeps 360 so that a name the shareable guard protects cannot reach the public pages through a long card paragraph."""
+        self.assertEqual(rv.PHARM_CLIP_SHAREABLE, 360)
+        shown = [c["pharm"] for c in rv.build_payload(DR, "shareable")["cur"]["cands"]]
+        self.assertLessEqual(max(len(x) for x in shown), 360 + 1)                           # a clip ends with one ellipsis character at most
 
     def test_the_clip_helper_cuts_at_a_sentence_and_the_default_clip_is_long_enough(self):
         long_text = "A first sentence of the card. " * 12 + "A caveat appended after the clip: nothing here is a statement about exposure in the disease."
