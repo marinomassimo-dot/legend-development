@@ -1091,6 +1091,45 @@ def unpublished_main(now: dt.datetime) -> dict[str, Any]:
 
 IDLE_NAMED_MIN = 60      # a recipient idle longer than this, with no blocker that names it, is reported on the tick line
 
+# 2026-11-20 (HE, operator's morning continuation): the restart lines of README section 13 (250k at a closed increment, 350k at the next sub-step, 400k never later) were read by nobody: SCI window
+# 2d2e7085 crossed 250k at 00:44Z, 350k at 01:03Z and 400k at 01:16Z and was replaced at 02:08Z at 599k. The tick now prints each recipient's CURRENT context, so the line is read, not remembered.
+CONTEXT_LINES = ((400_000, "past the never-later line"), (350_000, "restart at the next sub-step boundary"), (250_000, "restart at a closed increment"))
+CONTEXT_TAIL_BYTES = 1 << 20
+
+
+def last_context_tokens(path: Path) -> int | None:
+    """The context of the session's LAST assistant turn: input + cache-creation + cache-read tokens of its usage block (what the next turn re-reads; not output, not cost, not a quota). Only the tail of the
+    transcript is read and only the usage integers are taken; None when the tail holds no usage block (a fresh or unreadable session)."""
+    try:
+        with path.open("rb") as fh:
+            fh.seek(0, 2)
+            size = fh.tell()
+            fh.seek(max(0, size - CONTEXT_TAIL_BYTES))
+            tail = fh.read().decode("utf-8", errors="replace").splitlines()
+    except OSError:
+        return None
+    for line in reversed(tail[1:] if size > CONTEXT_TAIL_BYTES else tail):
+        if '"usage"' not in line:
+            continue
+        try:
+            usage = (json.loads(line).get("message") or {}).get("usage") or {}
+        except (ValueError, AttributeError):
+            continue
+        if usage:
+            return int(usage.get("input_tokens", 0)) + int(usage.get("cache_creation_input_tokens", 0)) + int(usage.get("cache_read_input_tokens", 0))
+    return None
+
+
+def context_flags(view: dict[str, Any]) -> list[str]:
+    """One line per recipient at or above a restart line, from the view's `context_tokens`: a fact and the README rule it falls under, never a command to restart (a closed increment is the actor's to judge)."""
+    out = []
+    for role, row in (view.get("roles") or {}).items():
+        tokens = row.get("context_tokens")
+        line = next((label for limit, label in CONTEXT_LINES if isinstance(tokens, int) and tokens >= limit), None)
+        if line:
+            out.append(f"{role} ({row.get('name')}) context {round(tokens / 1000)}k: {line}")
+    return out
+
 
 def recipients_view(agents: list[dict[str, Any]], recipients: dict[str, str] | None, now: dt.datetime) -> dict[str, Any]:
     """The pilot's recipients (budget `recipients`: role -> session name) read as LIVE sessions, not as names. 2026-11-19 (ADV): the share above counts every session of the repository, so dormant
@@ -1110,6 +1149,9 @@ def recipients_view(agents: list[dict[str, Any]], recipients: dict[str, str] | N
             quiet = round((now.timestamp() - found[-1].stat().st_mtime) / 60) if found else None
             status = str(agent.get("status"))
             row.update(session=str(sid)[:8], status=status, quiet_min=quiet, idle_min=quiet if status == "idle" else None)
+            tokens = last_context_tokens(found[-1]) if found else None
+            if tokens is not None:
+                row["context_tokens"] = tokens
             if res.get("surplus_name_matches"):
                 row["surplus"] = [str(x["session_id"])[:8] for x in res["surplus_name_matches"]]
         elif res["status"] == "AMBIGUOUS":
@@ -1172,6 +1214,49 @@ def _waits() -> list[dict[str, str]]:
         except Exception:  # noqa: BLE001 — a record the continuity module cannot read is not a wait
             continue
     return out
+
+
+WAIT_TIME_RX = re.compile(r"\b(20\d\d-\d\d-\d\dT\d\d:\d\d)(?::\d\d)?Z?\b")
+WAIT_DUE_GRACE_MIN = 10
+
+
+def due_waits(waits: list[dict[str, str]], now: dt.datetime) -> list[str]:
+    """2026-11-20 (HE, operator's morning continuation): the 05:20Z radar step of the HE mandate was BLOCKED with a blocker that NAMED the awaited time, so the idle rule rightly said 'a blocker names it', and nothing
+    looked again when the time had passed: the briefing waited 114 minutes for a recall. A blocker or step that names a UTC time (YYYY-MM-DDTHH:MM) already past by more than a few minutes is reported as due: a fact about the
+    record, one line each, so the recipient (or the recall that reads the tick) goes and looks. Only the explicit T-form counts; a date alone or a word like 'tomorrow' is never parsed."""
+    out = []
+    for w in waits:
+        for stamp in WAIT_TIME_RX.findall(f"{w.get('step', '')} {w.get('blocker', '')}"):
+            try:
+                at = dt.datetime.strptime(stamp, "%Y-%m-%dT%H:%M").replace(tzinfo=dt.timezone.utc)
+            except ValueError:
+                continue
+            late = round((now - at).total_seconds() / 60)
+            if late > WAIT_DUE_GRACE_MIN:
+                out.append(f"{w.get('task')}: '{str(w.get('step', ''))[:60]}' awaits {stamp}Z, past by {late} min")
+                break
+    return out
+
+
+def radar_news(state: dict[str, Any], briefing: Path | None = None) -> str:
+    """A daily-scout briefing newer than the last one this tick reported, once per briefing. 2026-11-20: the briefing is written to a host file by cron and reaches an actor only through a full evaluation, so a briefing of
+    05:20Z was worked at 06:18Z after a meeting asked. The tick line names the file's time, how many deltas it holds and which, and the rule that routes it (README section 13 and cross_session_transport.md section 12: judge each
+    signal, forward the useful ones by name). Sets `radar_seen_utc` in the state it is given; returns '' when there is nothing new."""
+    path = briefing or (STATE_HOME / "scout_daily_briefing.md")
+    try:
+        mtime = path.stat().st_mtime
+        text = path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return ""
+    stamp = dt.datetime.fromtimestamp(mtime, dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    if stamp <= str(state.get("radar_seen_utc") or ""):
+        return ""
+    state["radar_seen_utc"] = stamp
+    deltas = re.findall(r"^Delta \d+: (.+)$", text, re.M)
+    if not deltas:
+        return ""
+    return (f"NEW RADAR BRIEFING {stamp} ({len(deltas)} item(s) to examine: " + "; ".join(d[:70] for d in deltas[:4]) + f"): file {path}; judge each (deepen, assign, reuse, defer or discard, one reason) and forward the useful ones "
+            "by name; the harness and tool items are HE's to triage, the scientific ones go to SCI or IT")
 
 
 def _own_updates(campaign: Path) -> list[str]:
@@ -1528,6 +1613,15 @@ def tick(campaign: Path) -> dict[str, Any]:
         why += "; ACTIVITY UNAVAILABLE: the runtime's session listing could not be read (claude not found or `claude agents --json` failed), so the idle rule cannot be applied from this tick"
     if named:
         why += "; IDLE WITHOUT A BLOCKER THAT NAMES IT: " + "; ".join(named)         # facts about the recipients, not a verdict on useful work
+    due = due_waits(obs["waits"], now)
+    if due:
+        why += "; WAIT NAMES A TIME THAT HAS PASSED: " + "; ".join(due[:4])
+    news = radar_news(state)
+    if news:
+        why += "; " + news
+    flagged = context_flags(activity.get("recipients") or {}) if activity.get("available") else []
+    if flagged:
+        why += "; CONTEXT AT A RESTART LINE (README section 13; last turn's input and cache tokens, not cost): " + "; ".join(flagged)
     state["last_tick_utc"] = _utc(now)
     if verdict != "RUNNING":
         state.update(main_sha=obs["main_sha"], main_ref=(obs.get("main_ref") or {}).get("ref", "main"), mandates=obs["mandates"], roadmap_sha256=obs["roadmap_sha256"],

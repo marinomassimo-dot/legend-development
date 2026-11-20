@@ -4,6 +4,7 @@ Run: python3 -B framework/scripts/test_mandate_watch.py -v"""
 from __future__ import annotations
 
 import json
+from datetime import datetime, timezone
 import os
 import subprocess
 import sys
@@ -487,6 +488,61 @@ class ReleasedCheck(unittest.TestCase):
             f.write_text(f.read_text() + text("MANDATE_RELEASED: T-1"), encoding="utf-8")
             rc, out = self.run_cli(f)
             self.assertEqual((rc, out.split()[0]), (0, "RELEASED"))
+
+
+class HandoffCheck(unittest.TestCase):
+    """2026-11-20: the successor of SCI checkpoint L bound with a text-only message and sat 41 minutes; the check reads the transcripts: RUNNING only after a tool call that follows the bind line."""
+    NOW = datetime(2026, 11, 20, 8, 0, tzinfo=timezone.utc)
+
+    def entry(self, minute, kind, text=None, tool=False):
+        stamp = f"2026-11-20T07:{minute:02d}:00.000Z"
+        content = ([{"type": "text", "text": text}] if text else []) + ([{"type": "tool_use", "name": "Bash"}] if tool else [])
+        return json.dumps({"type": kind, "timestamp": stamp, "message": {"content": content}}) + "\n"
+
+    def write(self, td, name, lines):
+        f = Path(td) / name
+        f.write_text("".join(lines), encoding="utf-8")
+        return f
+
+    def state(self, old, new, within=5, sessions=None):
+        return mw.handoff_state("T-1", old, new, self.NOW, within, sessions, "bbbbbbbb")
+
+    def test_every_step_has_its_own_verdict(self):
+        with tempfile.TemporaryDirectory() as td:
+            old_bound = self.write(td, "o1.jsonl", [self.entry(1, "assistant", "MANDATE_BOUND: T-1")])
+            old_rel = self.write(td, "o2.jsonl", [self.entry(1, "assistant", "MANDATE_BOUND: T-1"), self.entry(40, "assistant", "MANDATE_RELEASED: T-1")])
+            fresh = self.write(td, "n0.jsonl", [self.entry(41, "user", "launch brief")])
+            self.assertEqual(self.state(old_rel, None)["verdict"], "NEW_NOT_FOUND")
+            self.assertEqual(self.state(old_bound, fresh)["verdict"], "WAITING_FOR_RELEASE")
+            r = self.state(old_rel, fresh)                                                               # released 20 minutes ago, successor silent
+            self.assertEqual((r["verdict"], r["waited_min"]), ("WAITING_FOR_BIND", 20))
+            self.assertIn("send it the follow-up now", r["next"])
+            both = self.write(td, "n1.jsonl", [self.entry(41, "assistant", "MANDATE_BOUND: T-1")])
+            self.assertEqual(self.state(old_bound, both)["verdict"], "BOTH_BOUND")
+
+    def test_a_text_only_bind_is_stalled_after_the_allowed_minutes_and_a_bind_with_a_tool_call_is_running(self):
+        with tempfile.TemporaryDirectory() as td:
+            old = self.write(td, "o.jsonl", [self.entry(40, "assistant", "MANDATE_RELEASED: T-1")])
+            text_only = self.write(td, "n1.jsonl", [self.entry(41, "assistant", "MANDATE_BOUND: T-1")])
+            r = self.state(old, text_only)
+            self.assertEqual((r["verdict"], r["bound_min"]), ("STALLED", 19))
+            self.assertEqual(self.state(old, text_only, within=30)["verdict"], "BOUND_WAITING_FIRST_ACTION")
+            same_response = self.write(td, "n2.jsonl", [self.entry(41, "assistant", "MANDATE_BOUND: T-1"), self.entry(41, "assistant", tool=True)])   # the marker entry, then a tool call of the same response
+            self.assertEqual(self.state(old, same_response)["verdict"], "RUNNING")
+            before = self.write(td, "n3.jsonl", [self.entry(38, "assistant", tool=True), self.entry(41, "assistant", "MANDATE_BOUND: T-1")])
+            self.assertEqual(self.state(old, before)["verdict"], "STALLED")                              # a tool call BEFORE the bind does not count
+
+    def test_the_stalled_answer_names_the_row_by_its_age_when_two_sessions_share_a_name(self):
+        with tempfile.TemporaryDirectory() as td:
+            old = self.write(td, "o.jsonl", [self.entry(40, "assistant", "MANDATE_RELEASED: T-1")])
+            new = self.write(td, "n.jsonl", [self.entry(41, "assistant", "MANDATE_BOUND: T-1")])
+            now_ms = self.NOW.timestamp() * 1000
+            rows = [{"sessionId": "aaaaaaaa-1", "name": "SCI", "startedAt": now_ms - 3 * 3600_000}, {"sessionId": "bbbbbbbb-2", "name": "SCI", "startedAt": now_ms - 25 * 60_000}]
+            text = self.state(old, new, sessions=rows)["next"]
+            self.assertIn("name SCI, started 25 min ago", text)
+            self.assertIn("180 min ago", text)
+            self.assertIn("take the row whose 'started' matches", text)
+            self.assertIn("not in the live listing", self.state(old, new, sessions=[])["next"])
 
 
 class TranscriptPrefix(unittest.TestCase):
