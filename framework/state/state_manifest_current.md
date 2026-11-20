@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261119_005
-last_batch_commit_date: 2026-11-19
+last_batch_commit_id: BATCH_20261120_001
+last_batch_commit_date: 2026-11-20
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 2
+commit_candidates_propagated: 1
 target_wm_version: WM_v7.29
-trigger: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV accepted the route and the class). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: two candidates propagated (CC-20261119-ORCHESTRATOR-CLAIM002-WORDING-01, 15 ops on CLAIM 002; CC-20261119-ORCHESTRATOR-CLAIM005-WORDING-01, 8 ops on CLAIM 005 incl. the correction of the 2026-10-30 Il6 quotation), each audited twice against the held texts; dated lines on the IT9 verifier file and the IT22 README; derived pathograph export regenerated. The previous batch text follows only as history in state_history.
+trigger: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV decided the split of the candidate and the class of each part). MINOR, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: ONE candidate, PART 1 ONLY (CC-20261120-ORCHESTRATOR-CLAIM035-S9-WORDING-01): one additive Evidence-boundary field on CLAIM 035 (1 op, record-scoped), after two blind checks against the held bytes; Title, Summary, Clinical meaning and the S9-independence assertion NOT rewritten; PART 2 (class MAJOR under the claim's own D6 ruling) stays PROPOSED and is a reserved item for the operator. The previous batch text follows only as history in state_history.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,8 +126,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261119_BATCH_20261119_005
-last_lint_date: 2026-11-19
+last_lint_id: LINT_20261120_BATCH_20261120_001
+last_lint_date: 2026-11-20
 last_lint_result: WARN
 ```
 
