@@ -202,3 +202,5 @@
 {"evidence": "SendMessage receipt msg_id dd07db27-e87d-47e2-a343-b2df59356e8c to HE (29e50812)", "id": "ADV-102", "state": "SENT", "to": ["HE"], "utc": "2026-11-20T07:25:26Z"}
 {"assessment": "HOST", "id": "ADV-103", "key": "agent-sheet-quantities-table-for-comparisons", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-20T08:44:14Z"}
 {"evidence": "SendMessage receipt msg_id 7b4d1294-c7ee-4b05-a10b-d6d1fa39fc0d to HE", "id": "ADV-103", "state": "SENT", "to": ["HE"], "utc": "2026-11-20T08:44:23Z"}
+{"assessment": "HOST", "id": "ADV-104", "key": "broad-consequence-compartment-axis-gliosis-neuroinflammation", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-20T09:19:32Z"}
+{"evidence": "SendMessage receipt msg_id 1162ad7f-1b5d-4e69-900d-cc679df429d2 to SCI [588861]", "id": "ADV-104", "state": "SENT", "to": ["SCI"], "utc": "2026-11-20T09:19:43Z"}
