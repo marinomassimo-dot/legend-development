@@ -871,7 +871,7 @@ needs no new operator instruction. Use the existing watcher:
 python3 framework/scripts/mandate_watch.py handoff --task <ID> --old <full-old-session-id> --new <full-new-session-id> --retire-old
 ```
 
-Without `--retire-old`, the command remains read-only and reports eligibility. `RUNNING`
+Without `--retire-old`, the command remains read-only and reports eligibility. A `WAITING_FOR_BIND` that names `successor_turns_since_release` means the successor is working but its transcript has no plain `MANDATE_BOUND` line: a message saying it is bound is not the bind (2026-11-20: a successor was 9 m 42 s late for exactly this); tell it to write the line alone in its own text block with its next tool call. `RUNNING`
 describes the successor's activity; retirement has its own result. `KEPT`, `STOP_REFUSED`
 or `STOP_UNVERIFIED` is not a completed retirement (exit 5 with the flag). An already
 stopped predecessor is an idempotent success. The existing hourly

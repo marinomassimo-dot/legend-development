@@ -414,6 +414,25 @@ def _age_min(stamp: str | None, now: datetime) -> int | None:
         return None
 
 
+def _assistant_turns_after(path: Path | None, stamp: str | None) -> int:
+    """Assistant entries of the session itself (not its sub-agents) written after `stamp`: how much a successor has done since the predecessor's release, whatever it said about its own state."""
+    if path is None or not stamp:
+        return 0
+    n = 0
+    try:
+        with path.open(encoding="utf-8", errors="replace") as fh:
+            for line in fh:
+                try:
+                    entry = json.loads(line)
+                except ValueError:
+                    continue
+                if isinstance(entry, dict) and entry.get("type") == "assistant" and not entry.get("isSidechain") and str(entry.get("timestamp") or "") > stamp:
+                    n += 1
+    except OSError:
+        return 0
+    return n
+
+
 def handoff_state(task: str, old_path: Path | None, new_path: Path | None, now: datetime, within_min: int = 5, sessions: list[dict] | None = None, new_id: str = "") -> dict:
     """The restart's verification, one verdict: RUNNING (the successor is bound and has made a tool call), STALLED (bound and silent for longer than `within_min`), or the step it is still at
     (WAITING_FOR_RELEASE, WAITING_FOR_BIND, BOUND_WAITING_FIRST_ACTION), BOTH_BOUND (two hosts) or NEW_NOT_FOUND. A READ of two transcripts: it starts, stops and sends nothing. When the successor is stalled it names the
@@ -435,6 +454,13 @@ def handoff_state(task: str, old_path: Path | None, new_path: Path | None, now: 
             waited = _age_min(old.get("released_at"), now)
             out.update(verdict="WAITING_FOR_BIND", waited_min=waited,
                        next="the predecessor released; the successor has not bound" + (": send it the follow-up now" if waited is not None and waited >= within_min else " (inside the allowed minutes)"))
+            # 2026-11-20 (SCI successor T): it reported itself BOUND and worked for 9 m 42 s with no plain marker line in its transcript, so the verdict stayed WAITING_FOR_BIND with the advice "send the
+            # follow-up", which did not say WHY. When the successor has been writing since the release, say it: a claim of being bound in a message is not the marker.
+            active = _assistant_turns_after(new_path, old.get("released_at"))
+            if active >= 3 and waited is not None and waited >= within_min:
+                out.update(successor_turns_since_release=active,
+                           next=f"the successor has written {active} assistant entries since the release but its transcript holds no plain `MANDATE_BOUND: {task}` line (a message saying it is bound does not count): "
+                                "tell it to write that line ALONE in its own text block, in the same response as its next tool call")
         return out
     bound_for = _age_min(new.get("bound_at"), now)
     out["bound_min"] = bound_for
