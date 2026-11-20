@@ -353,6 +353,15 @@
      "accepted_at": "2026-11-20T16:24:51Z",
      "evidence": "SCI successor session 207dd20c launched 16:33:00Z from checkpoint P (sha256 1b7027cd... verified by me on main at ed2b23927); old 82672568 released 16:33:17.059Z, successor bound 16:33:18.552Z (1.5 s), first tool call 16:33:21.394Z (2.8 s after bind), handoff RUNNING with 7 calls at 16:33:42Z",
      "updated_at": "2026-11-20T16:33:52Z"
+    },
+    {
+     "step": "BATCH2 third dated line: Brown 2016 caveats from SCI ADV-119 (one-tailed a priori tests without correction, repeated-dose exposure not measured, total-tissue and time point not in text), after reading the result",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "SCI message 2026-11-20 (to HE [cc7acb]); advisor_pilot_20261113/brainstorm_20261116/adv119_claim_verification_sci_20261120/RESULT_ADV119_SCI_20261120.md",
+     "accepted_at": "2026-11-20T16:45:48Z",
+     "evidence": "Third dated line added to BATCH2 (Brown 2016 limits C1/C2 from SCI ADV-119 result read on main: one-tailed a priori tests, no correction, repeated-dose exposure unmeasured, total/time point not in text, males, striatum); origin SCI not re-read by HE; sheet_query finds it; test_sheet_query and test_release_surface OK",
+     "updated_at": "2026-11-20T16:49:15Z"
     }
    ]
   }
@@ -621,6 +630,13 @@
    "at": "2026-11-20T16:24:51Z",
    "source": "ADV message 2026-11-20 (to HE [cc7acb])",
    "step_sha256": "d1227d5b3238",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T16:45:48Z",
+   "source": "SCI message 2026-11-20 (to HE [cc7acb]); advisor_pilot_20261113/brainstorm_20261116/adv119_claim_verification_sci_20261120/RESULT_ADV119_SCI_20261120.md",
+   "step_sha256": "33178adc7095",
    "reopened_block": false,
    "authorised_by": null
   }
