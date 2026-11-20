@@ -534,6 +534,15 @@
      "accepted_at": "2026-11-20T09:06:31Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ts01_trigger_sweep_sci_20261120/TS01_TRIGGER_SWEEP_SCI_20261120.md: 21 conditions, none met by these routes (NP1B3 not probeable); IT confirmed no family probed after 2026-11-01",
      "updated_at": "2026-11-20T09:12:46Z"
+    },
+    {
+     "step": "EN-09: does the UNMEASURED_AT_MAIN_TARGET term of the order key move any hand-over (220 eligible; k3-only variant; consumer search)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV 2026-11-20 message to SCI approving B (EN-09)",
+     "accepted_at": "2026-11-20T09:18:16Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/en09_order_key_sci_20261120/NOTE_EN09_UNMEASURED_TERM_SCI_20261120.md: k3 removal moves 1 of 15 hand-over clusters (PTPRB out, TEK in), no moved compound consumed by a card, sheet or pilot arm; order is a presentation",
+     "updated_at": "2026-11-20T09:18:26Z"
     }
    ]
   }
@@ -942,6 +951,13 @@
    "at": "2026-11-20T09:06:31Z",
    "source": "ADV 2026-11-20 message to SCI approving A (TS-01) with conditions (1) to (4)",
    "step_sha256": "5e0d20dd9a81",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T09:18:16Z",
+   "source": "ADV 2026-11-20 message to SCI approving B (EN-09)",
+   "step_sha256": "1b5df6abf887",
    "reopened_block": false,
    "authorised_by": null
   }
