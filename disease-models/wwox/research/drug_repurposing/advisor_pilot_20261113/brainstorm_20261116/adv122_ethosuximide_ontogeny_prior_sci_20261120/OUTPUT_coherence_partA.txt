@@ -1,0 +1,120 @@
+Required Kp (total brain / total plasma) so that the model reproduces the value at 45 min; F = 1 and 0.9; ka = 6 per h
+Reference Kp for an unbound, passively distributed small polar drug = brain water fraction / plasma water fraction = about 0.79/0.93 = 0.85 (inputs: brain water 76.6 to 85.6 percent in rat by age, producer D; plasma water 0.93 is a textbook assumption, not sourced here); rat steady-state ethosuximide brain/plasma 0.90 to 0.94 (abstract, PMID 590227); early rat cortex 2.04 at 5 min falling to 0.14 at 2 h (abstract, PMID 2047576).
+
+anchor A (printed ug/g read as per g tissue): 134.9 ug/g -> 0.956 mM  (dose 72.3 mg/kg = 0.512 mmol/kg)
+  V (L/kg)   t1/2 none   t1/2 4 h    t1/2 2 h    t1/2 1 h 
+  F = 1.0
+   0.40          0.75       0.84       0.93       1.13
+   0.45          0.85       0.94       1.04       1.27
+   0.55          1.04       1.15       1.27       1.56
+   0.65          1.23       1.36       1.50       1.84
+   0.75          1.42       1.57       1.73       2.12
+  F = 0.9
+   0.40          0.84       0.93       1.03       1.26
+   0.45          0.94       1.04       1.16       1.41
+   0.55          1.15       1.28       1.41       1.73
+   0.65          1.36       1.51       1.67       2.04
+   0.75          1.57       1.74       1.93       2.36
+
+anchor B (printed ug/g read as per g of 1:2 homogenate, x3): 2.867 mM  (dose 72.3 mg/kg = 0.512 mmol/kg)
+  V (L/kg)   t1/2 none   t1/2 4 h    t1/2 2 h    t1/2 1 h 
+  F = 1.0
+   0.40          2.26       2.51       2.78       3.39
+   0.45          2.55       2.82       3.12       3.82
+   0.55          3.11       3.45       3.82       4.67
+   0.65          3.68       4.08       4.51       5.52
+   0.75          4.25       4.70       5.20       6.36
+  F = 0.9
+   0.40          2.52       2.79       3.08       3.77
+   0.45          2.83       3.13       3.47       4.24
+   0.55          3.46       3.83       4.24       5.19
+   0.65          4.09       4.53       5.01       6.13
+   0.75          4.72       5.22       5.78       7.07
+
+scaled to 150 mg/kg, branch A (x2.0747): 1.983 mM  (dose 150.0 mg/kg = 1.063 mmol/kg)
+  V (L/kg)   t1/2 none   t1/2 4 h    t1/2 2 h    t1/2 1 h 
+  F = 1.0
+   0.40          0.75       0.84       0.93       1.13
+   0.45          0.85       0.94       1.04       1.27
+   0.55          1.04       1.15       1.27       1.56
+   0.65          1.23       1.36       1.50       1.84
+   0.75          1.42       1.57       1.73       2.12
+  F = 0.9
+   0.40          0.84       0.93       1.03       1.26
+   0.45          0.94       1.04       1.16       1.41
+   0.55          1.15       1.28       1.41       1.73
+   0.65          1.36       1.51       1.67       2.04
+   0.75          1.57       1.74       1.93       2.36
+
+scaled to 150 mg/kg, branch B: 5.948 mM  (dose 150.0 mg/kg = 1.063 mmol/kg)
+  V (L/kg)   t1/2 none   t1/2 4 h    t1/2 2 h    t1/2 1 h 
+  F = 1.0
+   0.40          2.26       2.51       2.78       3.39
+   0.45          2.55       2.82       3.12       3.82
+   0.55          3.11       3.45       3.82       4.67
+   0.65          3.68       4.08       4.51       5.52
+   0.75          4.25       4.70       5.20       6.36
+  F = 0.9
+   0.40          2.52       2.79       3.08       3.77
+   0.45          2.83       3.13       3.47       4.24
+   0.55          3.46       3.83       4.24       5.19
+   0.65          4.09       4.53       5.01       6.13
+   0.75          4.72       5.22       5.78       7.07
+
+the unsourced 'band' lower end 2 mM at 150 mg/kg  (dose 150.0 mg/kg = 1.063 mmol/kg)
+  V (L/kg)   t1/2 none   t1/2 4 h    t1/2 2 h    t1/2 1 h 
+  F = 1.0
+   0.40          0.76       0.84       0.93       1.14
+   0.45          0.86       0.95       1.05       1.28
+   0.55          1.05       1.16       1.28       1.57
+   0.65          1.24       1.37       1.52       1.85
+   0.75          1.43       1.58       1.75       2.14
+  F = 0.9
+   0.40          0.85       0.94       1.04       1.27
+   0.45          0.95       1.05       1.17       1.43
+   0.55          1.16       1.29       1.43       1.74
+   0.65          1.37       1.52       1.69       2.06
+   0.75          1.59       1.76       1.94       2.38
+
+the unsourced 'band' 4 mM at 150 mg/kg  (dose 150.0 mg/kg = 1.063 mmol/kg)
+  V (L/kg)   t1/2 none   t1/2 4 h    t1/2 2 h    t1/2 1 h 
+  F = 1.0
+   0.40          1.52       1.69       1.87       2.28
+   0.45          1.71       1.90       2.10       2.57
+   0.55          2.09       2.32       2.57       3.14
+   0.65          2.47       2.74       3.03       3.71
+   0.75          2.86       3.16       3.50       4.28
+  F = 0.9
+   0.40          1.69       1.87       2.07       2.54
+   0.45          1.90       2.11       2.33       2.85
+   0.55          2.33       2.58       2.85       3.49
+   0.65          2.75       3.05       3.37       4.12
+   0.75          3.17       3.51       3.89       4.76
+
+the unsourced 'band' upper end 6 mM at 150 mg/kg  (dose 150.0 mg/kg = 1.063 mmol/kg)
+  V (L/kg)   t1/2 none   t1/2 4 h    t1/2 2 h    t1/2 1 h 
+  F = 1.0
+   0.40          2.28       2.53       2.80       3.42
+   0.45          2.57       2.85       3.15       3.85
+   0.55          3.14       3.48       3.85       4.71
+   0.65          3.71       4.11       4.55       5.56
+   0.75          4.28       4.74       5.25       6.42
+  F = 0.9
+   0.40          2.54       2.81       3.11       3.80
+   0.45          2.86       3.16       3.50       4.28
+   0.55          3.49       3.87       4.28       5.23
+   0.65          4.12       4.57       5.06       6.18
+   0.75          4.76       5.27       5.83       7.13
+
+Lowest required Kp (V = 0.40, F = 1, no elimination) and at the labelled central settings (V = 0.65, F = 0.9, t1/2 = 1 h):
+  anchor A (printed ug/g read as per g tissue): 134.9 ug/g -> 0.956 mM           best corner 0.75 (V 0.55: 1.04)   central 2.04
+  anchor B (printed ug/g read as per g of 1:2 homogenate, x3): 2.867 mM          best corner 2.26 (V 0.55: 3.11)   central 6.13
+  scaled to 150 mg/kg, branch A (x2.0747): 1.983 mM                              best corner 0.75 (V 0.55: 1.04)   central 2.04
+  scaled to 150 mg/kg, branch B: 5.948 mM                                        best corner 2.26 (V 0.55: 3.11)   central 6.13
+  the unsourced 'band' lower end 2 mM at 150 mg/kg                               best corner 0.76 (V 0.55: 1.05)   central 2.06
+  the unsourced 'band' 4 mM at 150 mg/kg                                         best corner 1.52 (V 0.55: 2.09)   central 4.12
+  the unsourced 'band' upper end 6 mM at 150 mg/kg                               best corner 2.28 (V 0.55: 3.14)   central 6.18
+
+Settings (V, t1/2, F; ka = 6 per h) for which anchor A needs Kp <= 1.0 / <= 0.85 (grid):
+  Kp <= 1.00: V 0.30, t1/2 none, F 1.0; V 0.30, t1/2 none, F 0.9; V 0.30, t1/2 4 h, F 1.0; V 0.30, t1/2 4 h, F 0.9; V 0.30, t1/2 2 h, F 1.0; V 0.30, t1/2 2 h, F 0.9; V 0.30, t1/2 1 h, F 1.0; V 0.30, t1/2 1 h, F 0.9; V 0.35, t1/2 none, F 1.0; V 0.35, t1/2 none, F 0.9; V 0.35, t1/2 4 h, F 1.0; V 0.35, t1/2 4 h, F 0.9; V 0.35, t1/2 2 h, F 1.0; V 0.35, t1/2 2 h, F 0.9; V 0.35, t1/2 1 h, F 1.0; V 0.40, t1/2 none, F 1.0; V 0.40, t1/2 none, F 0.9; V 0.40, t1/2 4 h, F 1.0; V 0.40, t1/2 4 h, F 0.9; V 0.40, t1/2 2 h, F 1.0; V 0.45, t1/2 none, F 1.0; V 0.45, t1/2 none, F 0.9; V 0.45, t1/2 4 h, F 1.0; V 0.50, t1/2 none, F 1.0
+  Kp <= 0.85: V 0.30, t1/2 none, F 1.0; V 0.30, t1/2 none, F 0.9; V 0.30, t1/2 4 h, F 1.0; V 0.30, t1/2 4 h, F 0.9; V 0.30, t1/2 2 h, F 1.0; V 0.30, t1/2 2 h, F 0.9; V 0.30, t1/2 1 h, F 1.0; V 0.35, t1/2 none, F 1.0; V 0.35, t1/2 none, F 0.9; V 0.35, t1/2 4 h, F 1.0; V 0.35, t1/2 4 h, F 0.9; V 0.35, t1/2 2 h, F 1.0; V 0.40, t1/2 none, F 1.0; V 0.40, t1/2 none, F 0.9; V 0.40, t1/2 4 h, F 1.0; V 0.45, t1/2 none, F 1.0
