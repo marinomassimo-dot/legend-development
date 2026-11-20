@@ -1,0 +1,19 @@
+branch A_per_g_tissue: one-at-a-time swing of C_pup (mM), others at central, sorted
+  r_BP       inference   low-end 1.4524  high-end 2.1785  swing 0.7262
+  r_CL       inference (size), data (direction) low-end 2.0905  high-end 1.4730  swing 0.6175
+  r_A        assumption  low-end 1.4120  high-end 2.0172  swing 0.6051
+  r_V        inference (size), data (direction) low-end 2.0123  high-end 1.5582  swing 0.4541
+  lin        assumption (linearity 72 to 150 mg/kg) low-end 1.6877  high-end 2.0255  swing 0.3378
+  t_half_ad  data for the central value; assumption for the width low-end 1.9375  high-end 1.6798  swing 0.2577
+  ka_pup     assumption  low-end 1.7060  high-end 1.7761  swing 0.0701
+  ka_ad      assumption  low-end 1.8825  high-end 1.8983  swing 0.0157
+branch B_per_g_homogenate_1to2: one-at-a-time swing of C_pup (mM), others at central, sorted
+  r_BP       inference   low-end 4.3571  high-end 6.5356  swing 2.1785
+  r_CL       inference (size), data (direction) low-end 6.2715  high-end 4.4190  swing 1.8525
+  r_A        assumption  low-end 4.2360  high-end 6.0515  swing 1.8154
+  r_V        inference (size), data (direction) low-end 6.0370  high-end 4.6747  swing 1.3622
+  lin        assumption (linearity 72 to 150 mg/kg) low-end 5.0630  high-end 6.0764  swing 1.0134
+  t_half_ad  data for the central value; assumption for the width low-end 5.8124  high-end 5.0394  swing 0.7730
+  ka_pup     assumption  low-end 5.1179  high-end 5.3282  swing 0.2104
+  ka_ad      assumption  low-end 5.6476  high-end 5.6948  swing 0.0472
+thresholds: 0.6 mM (persistent T-current IC50) = 0.6; 2 mM (linear scaling of the anchor, as held) = 2.0; 5 mM (CACNA1I FLIPR, reported above) = 5.0

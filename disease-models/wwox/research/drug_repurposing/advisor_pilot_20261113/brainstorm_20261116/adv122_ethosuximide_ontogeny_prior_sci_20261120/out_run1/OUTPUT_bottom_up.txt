@@ -1,0 +1,7 @@
+bottom-up pup at the Cheng regimen (mM, total brain, no anchor used): low 0.216 central 0.889 high 2.163; position: straddles 0.6 mM
+bottom-up adult at 72.3 mg/kg, central: 0.468 mM; at 150 mg/kg central: 0.971 mM
+anchor A_per_g_tissue = 0.956 mM; measured over bottom-up adult central = 2.04
+anchor B_per_g_homogenate_1to2 = 2.867 mM; measured over bottom-up adult central = 6.13
+no-elimination ceiling at the anchor dose: F=1, dose/V = 0.683 mM (V 0.75 L/kg) to 0.931 mM (V 0.55 L/kg); a brain-to-plasma ratio of 1 assumed
+anchor A_per_g_tissue needs brain-to-plasma ratio at least 1.03 at V=0.55 L/kg, F=1, zero elimination
+anchor B_per_g_homogenate_1to2 needs brain-to-plasma ratio at least 3.08 at V=0.55 L/kg, F=1, zero elimination
