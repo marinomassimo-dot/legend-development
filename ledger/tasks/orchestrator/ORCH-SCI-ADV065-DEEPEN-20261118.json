@@ -597,6 +597,15 @@
      "accepted_at": "2026-11-20T13:47:22Z",
      "evidence": "prospective_rp005_adv109_20261120/TRUTH_TABLE_RP005_ADV109_SCI_20261120.md (28 slots, no prediction seen)",
      "updated_at": "2026-11-20T13:51:14Z"
+    },
+    {
+     "step": "ADV-110: compare the tonic-inhibition class (gaboxadol, ganaxolone, allopregnanolone, brexanolone, zuranolone) on what a bridge candidate must show at P13 to P17: chloride-gradient dependence, delta vs synaptic selectivity, juvenile exposure, harm and trial failures, seizure-model readout, the one ordering experiment vs ethosuximide; pre-registered stop rule; one paragraph on a conditional pilot arm or slice-panel priority",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV 2026-11-20 message to SCI (ADV-110; assignments/ADV-110.md landing within the hour)",
+     "accepted_at": "2026-11-20T14:08:38Z",
+     "evidence": "tonic_class_adv110_sci_20261120/ADV110_TONIC_CLASS_COMPOUND_COMPARISON_SCI_20261120.md landed on main e7fdedd07 gate=PASS; pre-registration cd01299e8 before searches",
+     "updated_at": "2026-11-20T14:22:27Z"
     }
    ]
   }
@@ -1054,6 +1063,13 @@
    "at": "2026-11-20T13:47:22Z",
    "source": "IT Orchestrator 2026-11-20 message to SCI (ADV-109; freeze 6a087f5fd)",
    "step_sha256": "2bd901959385",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T14:08:38Z",
+   "source": "ADV 2026-11-20 message to SCI (ADV-110; assignments/ADV-110.md landing within the hour)",
+   "step_sha256": "c535a14c6aae",
    "reopened_block": false,
    "authorised_by": null
   }
