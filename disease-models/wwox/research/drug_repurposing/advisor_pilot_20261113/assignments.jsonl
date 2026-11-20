@@ -289,3 +289,6 @@
 {"assessment": "HOST", "id": "ADV-121", "key": "pilot-power-note-from-the-benchmark-spreads-rp034", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-20T17:56:53Z"}
 {"evidence": "SendMessage receipt msg_id 74698e85-221c-4009-b574-32751e1a87ae to SCI [86edd5]", "id": "ADV-121", "state": "SENT", "to": ["SCI"], "utc": "2026-11-20T17:57:50Z"}
 {"basis": "power note from the benchmark spreads: the same result family as the bar card (producer and integration of one result do not count twice)", "counts_with": "ADV-120", "id": "ADV-121", "state": "STRAND", "strand": "aav9-benchmark-bar", "utc": "2026-11-20T17:57:50Z"}
+{"assessment": "HOST", "id": "ADV-122", "key": "ethosuximide-pup-exposure-prior-bound-before-the-exposure-step", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-20T19:18:51Z"}
+{"evidence": "SendMessage receipt msg_id 59ba2946-3bdd-45c1-9a91-d33d278ceca3 to SCI [86edd5]", "id": "ADV-122", "state": "SENT", "to": ["SCI"], "utc": "2026-11-20T19:18:56Z"}
+{"basis": "ethosuximide pup exposure prior: the bridge lead's own exposure, not a class comparison; after the benchmark card (aav9-benchmark-bar) the trailing run is one increment; 19:25Z", "id": "ADV-122", "state": "STRAND", "strand": "bridge-lead-pharmacokinetics", "utc": "2026-11-20T19:18:57Z"}
