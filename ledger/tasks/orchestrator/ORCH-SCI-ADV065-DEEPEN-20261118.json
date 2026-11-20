@@ -420,11 +420,20 @@
     },
     {
      "step": "ADV-099: unbiased pre-registered discovery of a neuron-internal lesion candidate in the two held neuron-resolved systems (hippocampal nuclei GSE158684, human organoid neuron clusters GSE156243): keep only what replicates across the two after maturity adjustment, map to druggable targets and classes with pharmacology data (HE sheets), check overlap with the programmes the AAV9 neuronal rescue normalised, name the new candidate class and its rejecting observation; stop rule: nothing replicates then say so, name the data that would show it, stop",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message 2026-11-20 (ADV-099, assignments/ADV-099.md, not yet on main when accepted)",
      "accepted_at": "2026-11-20T01:14:50Z",
-     "updated_at": "2026-11-20T01:14:57Z"
+     "updated_at": "2026-11-20T01:43:18Z",
+     "evidence": "Result, pre-registration, script, out/, blind recompute (same verdict) landed at bb3686821 (gate PASS, ls-remote verified); stop rule applied; ADV accepted (message 2026-11-20)"
+    },
+    {
+     "step": "ADV interactome round (time-boxed, one round, pre-registered): a WWOX partner counts only if (i) a direct interaction is documented with assay and domain, (ii) a functional readout exists in a neural WWOX-deficient or WWOX-manipulated system (held full texts first), (iii) its target has pharmacology in HE's sheets or a verified public record; stop rule: none meets (i) and (ii) then record the interactome as exhausted for held literature; plus a check in the 39 WWOX GEO series whether any is a second independent human neural or neuron-like WWOX-perturbed transcriptome (not the organoid libraries); report both in one increment",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-20 (after ADV-099 acceptance)",
+     "accepted_at": "2026-11-20T01:43:18Z",
+     "updated_at": "2026-11-20T01:43:22Z"
     }
    ]
   }
@@ -751,6 +760,13 @@
    "step_sha256": "b5fb14e57e43",
    "reopened_block": false,
    "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T01:43:18Z",
+   "source": "ADV message 2026-11-20 (after ADV-099 acceptance)",
+   "step_sha256": "d1aca496fe0b",
+   "reopened_block": false,
+   "authorised_by": null
   }
  ],
  "DELEGATIONS": [
@@ -788,6 +804,7 @@
   "ADV-095 verifier pass 1 on the two producer reports (oligodendrocyte-class agents, unit B exposure) (legend-delegate, 2026-11-20): asked sonnet/high; read back in the census: claude-sonnet-5-5 x82 turns, effort high x82; 84 tool uses, 39,311 output tokens, 9,726,130 cache-read tokens, peak context 198,623; blind (statement, source, locator triples only; no producer reasoning, no conclusions); no repository writes (report persisted verbatim by SCI from the SubagentHandback message: VERIFIER_PASS_REPORT_AS_DELIVERED_20261120.md). Result: no quote or pivotal number wrong; corrections are qualifiers (harm at one dose only, Sob-AM2 not sobetirome in vivo, late Triac start no myelination gain, Odell lowest dose tested 0.5, one qualitative juvenile rat brain detection of clemastine, mouse total brain ethosuximide with a number exists).",
   "ADV-095 bridge exposure round 2 from full text (legend-delegate, 2026-11-20): asked sonnet/medium; read back in the census: claude-sonnet-5-5 x57 turns, effort medium x57; 60 tool uses, 33,332 output tokens, 5,111,252 cache-read tokens, peak context 147,410; not blind (brief and round-1 report); no repository writes (report persisted verbatim: BRIDGE_EXPOSURE_ROUND2_PRODUCER_REPORT_AS_DELIVERED_20261120.md). PARTIAL as stated by the producer: ethosuximide at 72.3 mg/kg only at full text; memantine, ketamine, ganaxolone mouse brain values; lithium single-dose and d-APV not found; retigabine 2.23 against 3.58 uM different experiments.",
   "ADV-095 verifier pass 2 on the exposure round numbers (legend-delegate, 2026-11-20): asked sonnet/high; read back in the census: claude-sonnet-5-5 x48 turns, effort high x48; 58 tool uses, 32,685 output tokens, 3,852,512 cache-read tokens, peak context 163,553; blind; no repository writes (report persisted verbatim: VERIFIER_PASS_2_REPORT_AS_DELIVERED_20261120.md). Result: values verified; qualifiers: ethosuximide 72.3 mg/kg is a dose given in both groups (ED50 with sildenafil) and the 1:2 homogenate correction is not stated; memantine mouse half-life 2.2 to 3.1 h not 3.8; ketamine value from chronic restraint stress mice; ganaxolone plasma Cmax is the first sample; both absence claims (lithium, d-AP5) not supported as absolute.",
-  "ADV-099 blind recompute of the neuron-internal discovery (legend-delegate, 2026-11-20): asked sonnet/high; read back in the census: claude-sonnet-5-5 x8 turns, effort high x8; 9 tool uses, 14,004 output tokens, 250,167 cache-read tokens, peak context 49,052; blind (pre-registration text and held data only; no result, script or out/ table); no repository writes (report persisted verbatim: BLIND_RECOMPUTE_REPORT_AS_DELIVERED_ADV099_20261120.md). Result: same registered verdict in all four cells (NOTHING_REPLICATES_BEYOND_CHANCE), organoid pass counts agree to one gene, nuclei counts differ by open choices, Spearman about -0.05 to -0.03."
+  "ADV-099 blind recompute of the neuron-internal discovery (legend-delegate, 2026-11-20): asked sonnet/high; read back in the census: claude-sonnet-5-5 x8 turns, effort high x8; 9 tool uses, 14,004 output tokens, 250,167 cache-read tokens, peak context 49,052; blind (pre-registration text and held data only; no result, script or out/ table); no repository writes (report persisted verbatim: BLIND_RECOMPUTE_REPORT_AS_DELIVERED_ADV099_20261120.md). Result: same registered verdict in all four cells (NOTHING_REPLICATES_BEYOND_CHANCE), organoid pass counts agree to one gene, nuclei counts differ by open choices, Spearman about -0.05 to -0.03.",
+  "Interactome round: blind verification of the GSK3B partner row (Wang 2012, Cheng 2020, GSK-3 pharmacology) (legend-delegate, 2026-11-20): asked sonnet/high; read back in the census: claude-sonnet-5-5 x17 turns, effort high x17; 22 tool uses, 11,978 output tokens, 864,048 cache-read tokens, peak context 83,058; blind (triples and primary sources only; no registry claim, no producer reasoning); no repository writes (report persisted verbatim: VERIFIER_REPORT_GSK3B_AS_DELIVERED_20261120.md). Result: row meets (i) to (iii) at the registered levels with narrowings: directness not shown (no purified-to-purified binding), S9-independence not supported as worded (a correlative retinoic-acid time course; Cheng reports lower pS9 in the null brain), neuronal readout is SH-SY5Y with retinoic acid, no beta-specific constant for a non-lithium class read."
  ]
 }
