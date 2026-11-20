@@ -362,6 +362,15 @@
      "accepted_at": "2026-11-20T16:45:48Z",
      "evidence": "Third dated line added to BATCH2 (Brown 2016 limits C1/C2 from SCI ADV-119 result read on main: one-tailed a priori tests, no correction, repeated-dose exposure unmeasured, total/time point not in text, males, striatum); origin SCI not re-read by HE; sheet_query finds it; test_sheet_query and test_release_surface OK",
      "updated_at": "2026-11-20T16:49:15Z"
+    },
+    {
+     "step": "Portfolio reconciliation residuals: RP-029 (resume condition after ADV-055/057/060 concluded; operator item 9) and RP-013 (backlog dashboard unchanged or shareable-view note)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-20 about reconciliation residuals RP-029 and RP-013 (to HE [cc7acb])",
+     "accepted_at": "2026-11-20T17:08:53Z",
+     "evidence": "RP-029 resume_when rewritten (item 9 still the operator's, no decision found, cache not enabled; ADV-055/057/060 history; parked (a)(b) not started) and RP-013 outcome note (backlog unchanged; shareable-view clip and notice work of 2026-11-20); only those two rows changed against main in research_portfolio.tsv; test_structured_data_integrity OK, test_strategic_advisor rc 0",
+     "updated_at": "2026-11-20T17:08:53Z"
     }
    ]
   }
@@ -637,6 +646,13 @@
    "at": "2026-11-20T16:45:48Z",
    "source": "SCI message 2026-11-20 (to HE [cc7acb]); advisor_pilot_20261113/brainstorm_20261116/adv119_claim_verification_sci_20261120/RESULT_ADV119_SCI_20261120.md",
    "step_sha256": "33178adc7095",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T17:08:53Z",
+   "source": "ADV message 2026-11-20 about reconciliation residuals RP-029 and RP-013 (to HE [cc7acb])",
+   "step_sha256": "85ed24cd8340",
    "reopened_block": false,
    "authorised_by": null
   }
