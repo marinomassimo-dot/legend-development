@@ -2385,6 +2385,35 @@ def _strands(campaign: Path) -> dict[str, dict[str, Any]]:
     return out
 
 
+def done_times(ids: set[str]) -> dict[str, str]:
+    """When a recipient marked a step naming each id DONE (that step's `updated_at`): the time the assignment concluded, which is later than the time it was sent. One read of the task records."""
+    out: dict[str, str] = {}
+    if not ids:
+        return out
+    for path in sorted((ROOT / "ledger" / "tasks").glob("*/*.json")):
+        if any(tag in path.name for tag in SENDER_RECORDS):
+            continue
+        try:
+            rec = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+
+        def walk(o):
+            if isinstance(o, dict):
+                if str(o.get("status", "")).upper() == "DONE" and o.get("updated_at"):
+                    own = json.dumps({k: v for k, v in o.items() if not isinstance(v, (dict, list))}, ensure_ascii=False)
+                    for i in ids:
+                        if i in own and (i not in out or str(o["updated_at"]) < out[i]):
+                            out[i] = str(o["updated_at"])
+                for v in o.values():
+                    walk(v)
+            elif isinstance(o, list):
+                for v in o:
+                    walk(v)
+        walk(rec)
+    return out
+
+
 def increments(campaign: Path) -> list[dict[str, Any]]:
     """The substantial scientific increments, in the order they concluded. Counted: an assignment that carries a strand and whose recipient took it to DONE (the tick's EXECUTED level), or an outside increment
     recorded with its time. Not counted: harness, editorial and unclassified work, commits, messages, and an increment folded into another by `counts_with`. A negative or inconclusive result that narrowed a
@@ -2394,6 +2423,7 @@ def increments(campaign: Path) -> list[dict[str, Any]]:
     for e in _events(campaign):
         if e.get("state") == "SENT" and e.get("id") and e["id"] not in sent:
             sent[e["id"]] = e.get("utc", "")
+    done = done_times({i for i, m in smap.items() if not m["outside"] and not m["at"]})
     out = []
     for ident, m in smap.items():
         if not m["strand"] or m["strand"].lower() in NOT_SCIENTIFIC or m["counts_with"]:
@@ -2401,7 +2431,7 @@ def increments(campaign: Path) -> list[dict[str, Any]]:
         if m["outside"]:
             at = m["at"]
         else:
-            at = (m["at"] or sent.get(ident, "")) if "EXECUTED" in states.get(ident, {}).get("levels", []) else ""      # the time the recipient concluded when the host recorded it, else the send time
+            at = (m["at"] or done.get(ident) or sent.get(ident, "")) if "EXECUTED" in states.get(ident, {}).get("levels", []) else ""   # when the host recorded it, else when the recipient marked it DONE, else the send time
         if at:
             out.append({"id": ident, "strand": m["strand"], "at": at, "basis": m["basis"]})
     return sorted(out, key=lambda r: r["at"])

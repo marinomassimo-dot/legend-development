@@ -398,6 +398,9 @@ class RotationReconcileDream(unittest.TestCase):
         rec = {"TASK_ID": "ORCH-SCI-T", "ACTOR_ID": "orchestrator", "AUTHORISED_QUEUE_X": {"OBJ_1": {"order": 1, "steps": [{"step": "ADV-910 work", "status": "DONE", "evidence": "commit abc"}]}}}
         (self.root / "ledger/tasks/orchestrator/ORCH-SCI-T.json").write_text(json.dumps(rec))
         self.assertEqual([r["id"] for r in sa.increments(self.campaign)], ["ADV-910"])
+        rec["AUTHORISED_QUEUE_X"]["OBJ_1"]["steps"][0]["updated_at"] = "2026-11-20T11:30:00Z"
+        (self.root / "ledger/tasks/orchestrator/ORCH-SCI-T.json").write_text(json.dumps(rec))
+        self.assertEqual(sa.increments(self.campaign)[0]["at"], "2026-11-20T11:30:00Z")                            # concluded when the recipient marked it DONE, not when it was sent
         self.assertNotIn("STRAND", sa.assignment_states(self.campaign)["ADV-910"]["levels"])                          # the metadata events are not evidence levels
 
     def test_a_deferral_is_recorded_stays_visible_and_ends_when_another_strand_concludes(self):
