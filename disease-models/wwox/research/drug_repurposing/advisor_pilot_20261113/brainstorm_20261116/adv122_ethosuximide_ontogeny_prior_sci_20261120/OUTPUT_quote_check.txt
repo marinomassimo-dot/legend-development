@@ -1,0 +1,8 @@
+FOUND | anchor.xml | homogenized in distilled water (1:2, w:v)
+FOUND | anchor.xml | of wet tissue as mean ± SEM of eight (VPA, PB and ETS)
+FOUND | anchor.xml | ETS (72.3) + saline 134.9 ± 7.73 µg/g
+FOUND | anchor.xml | Male albino Swiss mice weighing 24–30 g
+FOUND | pg3362787.html | reached adult levels at 5 days of age
+FOUND | pg3362787.html | peaked between 20 and 45 days of age
+FOUND | pgPMC2683655.txt | then it remains constant until day 15, when it increases again to another steady
+FOUND | pgPMC2683655.txt | reached maximal expression levels by day 5

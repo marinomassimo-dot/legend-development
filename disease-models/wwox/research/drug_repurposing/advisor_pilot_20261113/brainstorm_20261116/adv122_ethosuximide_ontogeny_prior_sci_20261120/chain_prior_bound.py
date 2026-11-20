@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """ADV-122 chain: adult anchor to a P12-P17 range at the Cheng regimen (arithmetic only).
 
 Usage: python3 -I chain_prior_bound.py FACTORS.tsv OUTDIR

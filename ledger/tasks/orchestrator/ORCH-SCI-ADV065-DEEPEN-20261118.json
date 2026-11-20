@@ -669,6 +669,15 @@
      "accepted_at": "2026-11-20T16:53:30Z",
      "evidence": "RESULT_ADV120_SCI_20261120.md in benchmark_card_adv120_sci_20261120/ (15 panels, two calibrations, numbers by compute_card_numbers.py, 32 of 32 quotes verified; three outputs; v3.1 line 6.24)",
      "updated_at": "2026-11-20T17:46:31Z"
+    },
+    {
+     "step": "ADV-122: ethosuximide P12 to P17 brain-exposure prior bound before the exposure step (pre-registered, four producers, one blind verifier, one result page)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-122",
+     "accepted_at": "2026-11-20T20:19:08Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv122_ethosuximide_ontogeny_prior_sci_20261120/RESULT_ADV122_SCI_20261120.md",
+     "updated_at": "2026-11-20T20:27:26Z"
     }
    ]
   }
@@ -1182,6 +1191,13 @@
    "at": "2026-11-20T16:53:30Z",
    "source": "ADV-120 (ADV message 2026-11-20 to SCI 4a4f40; assignments/ADV-120.md landing)",
    "step_sha256": "c860a675ff04",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T20:19:08Z",
+   "source": "ADV-122",
+   "step_sha256": "bef27d3aad5f",
    "reopened_block": false,
    "authorised_by": null
   }
