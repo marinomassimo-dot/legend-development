@@ -194,6 +194,18 @@ class Bridge(unittest.TestCase):
             for bad in ("snrna", "immunostaining", "gse158684", "preprint", "review", "source", "data", "wwox"):
                 self.assertNotIn(bad, terms)
 
+    NP4G2 = {"id": "NP4G2", "origin": {"priority": "a report from an independent laboratory"},
+             "gap": "Independent reproduction of the OPC differentiation delay (DRG-OPC co-culture or null-OPC monoculture)"}
+
+    def test_the_form_words_of_a_reopen_question_are_not_its_bridge(self):
+        """2026-11-20: 'reproduction' bridged a seabird paper and a traffic-sign paper to the OPC question; what kind of evidence would reopen a row is not its biology."""
+        terms = sd.bridge_terms(self.NP4G2)
+        for bad in ("reproduction", "report", "independent"):
+            self.assertNotIn(bad, terms)
+        self.assertIn("differentiation", terms)
+        self.assertEqual(sd.shared_bridge(self.NP4G2, "Declining environmental predictability erodes reproduction in a tropical seabird"), [])
+        self.assertIn("differentiation", sd.shared_bridge(self.NP4G2, "Delayed oligodendrocyte precursor differentiation in a Wwox-null co-culture"))
+
     def test_fallback_themes_and_the_open_slot_need_no_bridge(self):
         self.assertEqual(sd.bridge_terms({"id": "open-slot", "gap": "unplanned find: no gap assumed"}), [])
         self.assertEqual(sd.bridge_terms({"id": "t1", "gap": "gap one"}), [])
