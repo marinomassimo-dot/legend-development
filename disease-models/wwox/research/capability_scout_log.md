@@ -2925,3 +2925,153 @@ verify routing and schema behaviour; universal future model obedience is not dem
 **Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
 
 **Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-19 · scout_daily · PubMed:wwox_any
+
+**WWOX question.** New WWOX paper or external precedent that could reopen a research question
+
+**Contribution vs existing.** not checked against the registry (never grepped); intake triage decides new vs already read
+
+**Detected.** 43048821 Multi-omic Insight into the Causal Relationship Between Programmed Cell Death and Cognitiv
+
+**Cost / licence.** abstract screen: minutes; a full read needs its receipt; PubMed metadata; full text per paper.
+
+**Proof.** https://pubmed.ncbi.nlm.nih.gov/?term=43048821
+
+**Outcome.** TO_TRIAGE (abstract = discovery, not a reading)
+
+## 2026-11-19 · scout_daily · Discovery:reopen:functional_it13_p3a_20261031/NP3A1
+
+**WWOX question.** Nucleus-resolved parvalbumin composition in the Wwox-deletion mouse (snRNA matrices of GSE158684 or PV immunostaining in the neuron-targeted
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/nature] snRNA-seq of acral melanoma reveals heterogeneity and identifies novel progression marker and cancer-associated fibroblasts subpopulation (2026-07-17, journal-article) https://doi.org/10.1038/s41698-026-01618-4; [paper/nature] The U1 snRNP protein U1C and Helix H of U1 snRNA are critical for small molecule splicing modulator function (2026-07-16, journal-article) https://doi.org/10.1038/s41467-026-74765-8
+
+**Why asked.** reopen functional_it13_p3a_20261031 table row NP3A1 [PARTIAL (nucleus-level d] [disease-models/wwox/research/drug_repurposing/functional_it13_p3a_20261031/reopen_searches_it13_p3a.tsv @ blob 1906f5bd43, main 7c63688e748e]: "Nucleus-resolved parvalbumin composition in the Wwox-deletion mouse (snRNA matrices of GSE158684 or PV immunos"
+
+**If confirmed (decision).** reopen condition met? any of: (a) the eight snRNA SRA experiments leave hup and at least 3 independent libraries per arm are shown by barcode overlap with at leas Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-19 · scout_daily · Discovery:reopen:glia_maturation_it14_p4_20261101/NP4G1
+
+**WWOX question.** Peer review (with source data) of the same-laboratory preprint on a primary oligodendroglial role of WWOX under challenge (PPR1124524) the p
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [preprint/europepmc] RETRACTED: Pre-ictal signature-guided individualized closed-loop tTIS suppresses seizures onset in pediatric epilepsy (2026-04-03, preprint (not peer reviewed)) https://europepmc.org/article/PPR/PPR1173610; [preprint/europepmc] WITHDRAWN: Development of the correlation between mitophagy-related genes and epilepsy (2024-12-09, preprint (not peer reviewed)) https://europepmc.org/article/PPR/PPR952107; [paper/europepmc] Accuracy of epilepsy screening tools in community and primary care settings across countries in Sub-Saharan Africa: systematic review and me (2026-05-07, published record) https://europepmc.org/article/MED/42097643; [dataset/huggingface] elifepathways/sciencebeam-dataset-scielo-preprints (2026-11-16, cc-by-4.0, revision 0d627c13d522, 55 files) https://huggingface.co/datasets/elifepathways/sciencebeam-dataset-scielo-preprints; [dataset/huggingface] SZLHOLDINGS/ouroboros-arxiv-preprint (2026-11-02, apache-2.0, revision 34a2d9381066, 9 files) https://huggingface.co/datasets/SZLHOLDINGS/ouroboros-arxiv-preprint; [dataset/huggingface] jasonfan/preprint-improve-202610 (2026-10-29, none stated, revision 3cce7f2c46bb, 1784 files) https://huggingface.co/datasets/jasonfan/preprint-improve-202610
+
+**Why asked.** reopen glia_maturation_it14_p4_20261101 table row NP4G1 [NEEDS-DATUM] [disease-models/wwox/research/drug_repurposing/glia_maturation_it14_p4_20261101/reopen_searches_it14_p4.tsv @ blob 53be97d5b9, main 7c63688e748e]: "Peer review (with source data) of the same-laboratory preprint on a primary oligodendroglial role of WWOX unde"
+
+**If confirmed (decision).** reopen condition met? the preprint is published with source data and the disagreement is resolved Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-19 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] inoue0426/OncoGraph (2026-11-18, MIT) https://github.com/inoue0426/OncoGraph; [repository/github] ahsitab/DrugInsight-RAG (2026-11-17, none stated) https://github.com/ahsitab/DrugInsight-RAG; [repository/github] K-Dense-AI/drug-discovery-agent-skills (2026-11-16, MIT) https://github.com/K-Dense-AI/drug-discovery-agent-skills; [dataset/huggingface] SalahALHaismawi/Arabic-OCR-benchmark-predictions (2026-11-19, other) https://huggingface.co/datasets/SalahALHaismawi/Arabic-OCR-benchmark-predictions; [space/huggingface] Sangvinor/Rotor-sail-prediction (2026-11-19, none stated) https://huggingface.co/spaces/Sangvinor/Rotor-sail-prediction; [space/huggingface] Aidanam/credit-risk-prediction (2026-11-19, none stated) https://huggingface.co/spaces/Aidanam/credit-risk-prediction
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-20 · scout_daily · Discovery:reopen:glia_maturation_it14_p4_20261101/NP4G2
+
+**WWOX question.** Independent reproduction of the OPC differentiation delay (DRG-OPC co-culture or null-OPC monoculture) a report from an independent laborato
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/nature] Declining environmental predictability erodes reproduction in a tropical seabird (2026-11-13, journal-article) [bridge to the question: reproduction] https://doi.org/10.1038/s41558-026-02795-7; [paper/nature] A two-stage cascade framework for traffic sign detection: reproduction and boundary analysis (2026-11-10, journal-article) [bridge to the question: reproduction] https://doi.org/10.1038/s41598-026-80390-8
+
+**Why asked.** reopen glia_maturation_it14_p4_20261101 table row NP4G2 [NEEDS-DATUM] [disease-models/wwox/research/drug_repurposing/glia_maturation_it14_p4_20261101/reopen_searches_it14_p4.tsv @ blob 53be97d5b9, main 98235a07dfd6]: "Independent reproduction of the OPC differentiation delay (DRG-OPC co-culture or null-OPC monoculture) a repor"
+
+**If confirmed (decision).** reopen condition met? a report from an independent laboratory Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-20 · scout_daily · Discovery:reopen:glia_maturation_it14_p4_20261101/NP4G3
+
+**WWOX question.** Oligodendrocyte-lineage census in the Synapsin-Cre deletion before the first spontaneous seizure (about P7 to P8) the census is reported
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Ethnic Representation, Deprivation and Seizure Outcomes in a UK Tertiary Epilepsy Clinic. (2026-01-23, published record) [bridge to the question: seizure] https://europepmc.org/article/MED/41619632; [paper/europepmc] Modelling seizure-related predictors of epilepsy diagnostic gap in two urban informal settlements of Nairobi using machine learning. (2025-12-29, published record) [bridge to the question: seizure] https://europepmc.org/article/MED/41584324; [dataset/huggingface] Nexdata-kr/396-Hours-Korean-Spontaneous-Speech-Data (2026-11-19, none stated, revision 25a8a65bc0a8, 20 files) [bridge to the question: spontaneous] https://huggingface.co/datasets/Nexdata-kr/396-Hours-Korean-Spontaneous-Speech-Data; [dataset/huggingface] Nexdata-kr/215-Hours-Korean-Financial-Domain-Entity-Annotated-Spontaneous-Speech-Data (2026-11-19, none stated, revision 6e191b109052, 10 files) [bridge to the question: spontaneous] https://huggingface.co/datasets/Nexdata-kr/215-Hours-Korean-Financial-Domain-Entity-Annotated-Spontaneous-Speech-Data; [dataset/huggingface] MediaCatch/mc_da_spontaneous (2026-11-06, none stated, revision cb47fb23c048, 58 files) [bridge to the question: spontaneous] https://huggingface.co/datasets/MediaCatch/mc_da_spontaneous
+
+**Why asked.** reopen glia_maturation_it14_p4_20261101 table row NP4G3 [NEEDS-DATUM] [disease-models/wwox/research/drug_repurposing/glia_maturation_it14_p4_20261101/reopen_searches_it14_p4.tsv @ blob 53be97d5b9, main 98235a07dfd6]: "Oligodendrocyte-lineage census in the Synapsin-Cre deletion before the first spontaneous seizure (about P7 to "
+
+**If confirmed (decision).** reopen condition met? the census is reported Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-20 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] Hkweb3/drug-graveyard (2026-11-20, none stated) https://github.com/Hkweb3/drug-graveyard; [repository/github] CarterPry/RareDiseaseArb (2026-11-19, none stated) https://github.com/CarterPry/RareDiseaseArb; [repository/github] tttongwang/tttongwang.github.io (2026-11-18, none stated) https://github.com/tttongwang/tttongwang.github.io; [space/huggingface] DPruddh7556/drug-repurposing-ai (2025-11-07, none stated) https://huggingface.co/spaces/DPruddh7556/drug-repurposing-ai
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-20 · HE judgement of the 05:20Z briefing (the first after the lexical bridge, e0d935bb5)
+
+**What the bridge did on this run.** It dropped 32 hits that shared no whole word with the OPC question (opcua, Opciones, DRG payment design: the 14 Nov homonyms) and counted 48 more as adjacent. Seven items were still shown under NP4G2 and NP4G3. None is a lead.
+
+**Signals, one reason each.**
+- NP4G2 (independent reproduction of the OPC delay), two Nature-portfolio items: DISCARD. A tropical-seabird paper and a traffic-sign paper, bridged only by the word "reproduction", which names the kind of evidence the row waits for, not its biology. Fix landed with this entry: question-form words (reproduction, report, census, independent) leave the bridge terms; two tests.
+- NP4G3 (OPC census before the first seizure), two Europe PMC items and a Korean speech dataset: DISCARD. Shared word "seizure" only; both are epidemiology of clinic populations. The weak spot that remains is a single generic biology word; a rule of two shared words would drop the designed counterexample (Oligodendrocyte maturation defects in Wwox-null mice), so it is not applied.
+- Open slot, Hkweb3/drug-graveyard (created 2026-11-20, no licence, 0 stars): DEFER, no adoption. Shelved Phase 2/3 drugs matched to rare-disease genetics; its own README says the automated direction labels failed validation and direction must be settled by reading. That is the same lesson as our class-level direction problem (the sign of a drug's action against the target), found independently; it is a precedent for the method, not a source for WWOX. Its top lead (rapastinel, a NMDAR positive modulator, for GRIN loss-of-function) points the opposite way to our NMDAR-hyperfunction question and is not a candidate for it.
+- Open slot, CarterPry/RareDiseaseArb (already a followed team): DEFER to the ADV sponsor question, which is reserved to the operator. It maps the pediatric priority review voucher statute and one 2025 court ruling on pre-1962 "deemed approved" applications; it says nothing about the science. Nothing was checked against the statute here.
+- Open slot, tttongwang.github.io and DPruddh7556/drug-repurposing-ai: DISCARD (a personal site; a generic repurposing space with no stated method).
+- europepmc "HTTP 0" on NP4G2: one transient probe error; the next run is the test, nothing changed.
+
+**Beyond the lexical bridge.** Nothing more is justified now: one briefing is one measurement, the false hits fell from the 14 Nov kind (homonyms) to the kind a one-word bridge still allows, and the only remedy that would remove them (two shared words) costs a real hit. Re-measure on the next briefing before touching the bridge again.
+
+**Outcome.** TRIAGED (0 leads, 0 adoptions; one dated line forwarded to ADV in the meeting reply).

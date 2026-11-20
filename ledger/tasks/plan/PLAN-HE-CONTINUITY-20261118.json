@@ -262,12 +262,12 @@
     },
     {
      "step": "Read the first radar briefing after the bridge change (2026-11-20T05:20Z) and report whether anything beyond the lexical bridge is justified",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV message 2026-11-19 14:17Z (choose your next investment; written reason allowed)",
      "accepted_at": "2026-11-19T14:21:45Z",
-     "blocker": "the first radar briefing after the bridge change is produced at 2026-11-20T05:20Z by the daily scout",
-     "updated_at": "2026-11-19T14:21:45Z"
+     "evidence": "radar briefing 2026-11-20T05:20Z read at about 06:25Z (late: the ADV meeting prompted it); judgement entry in capability_scout_log.md; form-word fix in scout_daily.py with a test; nothing further beyond the bridge justified on one briefing",
+     "updated_at": "2026-11-20T06:30:00Z"
     }
    ]
   }

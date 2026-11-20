@@ -1367,7 +1367,9 @@ def term_hit(terms: list[str], *texts: str) -> bool:
 # source data` and returned a retracted tTIS epilepsy preprint and datasets of "preprints". The hits shared a METHOD word, a FORMAT word or a homonym with the question and nothing
 # of its biology. A hit of a derived priority question must share a CONTENT word with it (stated in the briefing as the bridge); otherwise it is counted and named, not shown as a discovery.
 FORMAT_WORDS = frozenset("""preprint preprints review reviews reviewed peer published publication study studies paper papers article articles retracted withdrawn systematic
-meta results result role roles effect effects laboratory challenge primary same under with source sources data eight leave disagreement targeted resolved composition""".split())
+meta results result role roles effect effects laboratory challenge primary same under with source sources data eight leave disagreement targeted resolved composition
+# 2026-11-20 (first briefing after the bridge, HE): the question's own FORM words - what kind of evidence would reopen the row - bridged a seabird paper and a traffic-sign paper to an OPC question (reproduction)
+reproduction reproduce reproduced replication replicate replicated report reports reported census independent""".split())
 METHOD_WORDS = frozenset("""snrna rna seq sequencing immunostaining immunostain immunohistochemistry immunofluorescence western blot proteomic proteomics transcriptomic
 transcriptomics sequence matrices matrix library libraries barcode experiment experiments""".split())
 
