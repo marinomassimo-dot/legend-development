@@ -1,0 +1,107 @@
+{
+ "identity": {
+  "query": "bexarotene",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL1023",
+    "record_name": "BEXAROTENE",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1023",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1023",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:2263cd266b29",
+    "record_name": "Bexarotene",
+    "match_kind": "NAME_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:af4fdb745275",
+    "record_name": "Fluorobexarotene",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "RXRA",
+   "RXRB",
+   "RXRG"
+  ],
+  "per_gene": {
+   "RXRA": {
+    "level": "CURATED_MECHANISM",
+    "n_rows": 27,
+    "rows": [
+     "CURATED_MECHANISM: CAT:CHEMBL1023",
+     "SOURCE_INTERACTION: CAT:DGIDB:2263cd266b29",
+     "SOURCE_INTERACTION: CAT:DGIDB:2263cd266b29",
+     "SOURCE_INTERACTION: CAT:DGIDB:2263cd266b29",
+     "SOURCE_INTERACTION: CAT:DGIDB:2263cd266b29",
+     "SOURCE_INTERACTION: CAT:DGIDB:2263cd266b29"
+    ]
+   },
+   "RXRB": {
+    "level": "CURATED_MECHANISM",
+    "n_rows": 18,
+    "rows": [
+     "CURATED_MECHANISM: CAT:CHEMBL1023",
+     "SOURCE_INTERACTION: CAT:DGIDB:2263cd266b29",
+     "SOURCE_INTERACTION: CAT:DGIDB:2263cd266b29",
+     "SOURCE_INTERACTION: CAT:DGIDB:2263cd266b29",
+     "SOURCE_INTERACTION: CAT:DGIDB:2263cd266b29",
+     "SOURCE_INTERACTION: CAT:DGIDB:2263cd266b29"
+    ]
+   },
+   "RXRG": {
+    "level": "CURATED_MECHANISM",
+    "n_rows": 19,
+    "rows": [
+     "CURATED_MECHANISM: CAT:CHEMBL1023",
+     "SOURCE_INTERACTION: CAT:DGIDB:2263cd266b29",
+     "SOURCE_INTERACTION: CAT:DGIDB:2263cd266b29",
+     "SOURCE_INTERACTION: CAT:DGIDB:2263cd266b29",
+     "SOURCE_INTERACTION: CAT:DGIDB:2263cd266b29",
+     "SOURCE_INTERACTION: CAT:DGIDB:2263cd266b29"
+    ]
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL1023",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "TRUNCATED",
+    "activity_rows": 811
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "RARB": 11,
+   "RARA": 9,
+   "RARG": 9,
+   "BLM": 1,
+   "USP1": 1,
+   "KAT2A": 1,
+   "NR1H3": 1,
+   "MAPK8": 1
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}

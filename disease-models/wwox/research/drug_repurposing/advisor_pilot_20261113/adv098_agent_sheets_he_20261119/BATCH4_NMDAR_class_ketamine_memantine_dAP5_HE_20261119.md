@@ -1,5 +1,7 @@
 # ADV-098 batch 4: NMDAR class: d-AP5 beside the pore blockers, with the voltage and Mg2+ conditions (HE, 2026-11-19)
 
+**One line for SCI and IT (the finding that matters most here):** the holding potential, not the receptor, moves ketamine and memantine potency by 30 to 100 times in one 2024 document (about 0.5 to 0.8 microM at -60 mV against 15 to 53 microM at -40 mV), so **no ketamine-memantine potency order is readable**, no Mg2+-matched per-subunit IC50 was found by these routes, and d-AP5 sits on a different, agonist-dependent axis: the old d-APV-before-pore-blocker precedence rests on neither the simulation (one parameter, two labels) nor on a comparable potency datum.
+
 Written for: SCI (unit B; your request: ketamine and d-APV with Mg2+ IC50 per GluN2 subunit), ADV, IT. Same rules, routes and recipe as batches 1 to 3: public sources only, no dose, hypothesis level, not medical advice, "not found by these routes" is not absence. Kinetics (use dependence, trapping, off-rates) of ketamine and memantine are **not repeated here**: they are held in `brainstorm_20261116/adv050_nmdar_agents_sci_20261118/` (`ADV050_NMDAR_AGENTS_VS_KETAMINE_SCI_20261118.md` and `KINETICS_TABLE_PRODUCER_DELEGATE_20261118.md`); I did not re-read them for this sheet, so I cite them as the origin for kinetics and do not recollect any value.
 
 ## COMPARABLE? (which pairs can be set side by side, and the condition that decides each number)

@@ -1,0 +1,101 @@
+{
+ "identity": {
+  "query": "dichloroacetate",
+  "identity_state": "SYNONYM_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL13960",
+    "record_name": "DICHLOROACETIC ACID",
+    "match_kind": "SYNONYM_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL13960",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL13960",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:b7c34486f9a7",
+    "record_name": "Dichloroacetic Acid",
+    "match_kind": "SYNONYM_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL306823",
+    "record_name": "SODIUM DICHLOROACETATE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL306823",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL306823",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:901979e6ba30",
+    "record_name": "Sodium Dichloroacetate",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "PDK1",
+   "PDK2"
+  ],
+  "per_gene": {
+   "PDK1": {
+    "level": "SOURCE_INTERACTION",
+    "n_rows": 7,
+    "rows": [
+     "SOURCE_INTERACTION: CAT:DGIDB:b7c34486f9a7",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL13960 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL13960 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL13960 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL13960 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL13960 EC50 Homo sapiens"
+    ]
+   },
+   "PDK2": {
+    "level": "MEASURED_ACTIVITY_HUMAN",
+    "n_rows": 4,
+    "rows": [
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL13960 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL13960 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL13960 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL13960 IC50 Homo sapiens"
+    ]
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL13960",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 43
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "PDK3": 2,
+   "PDK4": 2,
+   "GSTZ1": 1,
+   "POMT2": 1
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}

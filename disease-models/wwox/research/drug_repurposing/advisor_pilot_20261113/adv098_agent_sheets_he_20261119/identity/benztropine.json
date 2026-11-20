@@ -1,0 +1,142 @@
+{
+ "identity": {
+  "query": "benztropine",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL1201203",
+    "record_name": "BENZTROPINE",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1201203",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1201203",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:7655157bdba7",
+    "record_name": "Benztropine",
+    "match_kind": "NAME_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1200383",
+    "record_name": "BENZTROPINE MESYLATE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1201203",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1200383",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2104273",
+    "record_name": "ETHYBENZTROPINE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL2104273",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2104273",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2146132",
+    "record_name": "CLOBENZTROPINE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL2146132",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2146132",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:f420257d2fca",
+    "record_name": "Benztropine Mesylate",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "CHRM1",
+   "SLC6A3",
+   "HRH1"
+  ],
+  "per_gene": {
+   "CHRM1": {
+    "level": "SOURCE_INTERACTION",
+    "n_rows": 8,
+    "rows": [
+     "SOURCE_INTERACTION: CAT:DGIDB:7655157bdba7",
+     "SOURCE_INTERACTION: CAT:DGIDB:7655157bdba7",
+     "SOURCE_INTERACTION: CAT:DGIDB:7655157bdba7",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL1201203 Ki Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL1201203 Ki Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL1201203 Ki Rattus norvegicus"
+    ]
+   },
+   "SLC6A3": {
+    "level": "SOURCE_INTERACTION",
+    "n_rows": 19,
+    "rows": [
+     "SOURCE_INTERACTION: CAT:DGIDB:7655157bdba7",
+     "SOURCE_INTERACTION: CAT:DGIDB:7655157bdba7",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL1201203 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL1201203 Ki Rattus norvegicus",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL1201203 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL1201203 IC50 Homo sapiens"
+    ]
+   },
+   "HRH1": {
+    "level": "MEASURED_ACTIVITY_HUMAN",
+    "n_rows": 2,
+    "rows": [
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL1201203 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL1201203 Ki Homo sapiens"
+    ]
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL1201203",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 299
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "SLC6A4": 5,
+   "CHRM2": 4,
+   "CHRM3": 3,
+   "CHRM4": 3,
+   "ACHE": 2,
+   "ADORA1": 2,
+   "ADORA2A": 2,
+   "ADORA3": 2
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}

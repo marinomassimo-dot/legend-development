@@ -1,0 +1,99 @@
+{
+ "identity": {
+  "query": "trazodone",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL621",
+    "record_name": "TRAZODONE",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL621",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL621",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:5e60f97bf31f",
+    "record_name": "Trazodone",
+    "match_kind": "NAME_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1200798",
+    "record_name": "TRAZODONE HYDROCHLORIDE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL621",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1200798",
+      "basis": "record"
+     }
+    ]
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "HTR2A",
+   "SLC6A4"
+  ],
+  "per_gene": {
+   "HTR2A": {
+    "level": "SOURCE_INTERACTION",
+    "n_rows": 8,
+    "rows": [
+     "SOURCE_INTERACTION: CAT:DGIDB:5e60f97bf31f",
+     "SOURCE_INTERACTION: CAT:DGIDB:5e60f97bf31f",
+     "SOURCE_INTERACTION: CAT:DGIDB:5e60f97bf31f",
+     "SOURCE_INTERACTION: CAT:DGIDB:5e60f97bf31f",
+     "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL621 IC50 Rattus norvegicus",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL621 IC50 Homo sapiens"
+    ]
+   },
+   "SLC6A4": {
+    "level": "SOURCE_INTERACTION",
+    "n_rows": 6,
+    "rows": [
+     "SOURCE_INTERACTION: CAT:DGIDB:5e60f97bf31f",
+     "SOURCE_INTERACTION: CAT:DGIDB:5e60f97bf31f",
+     "SOURCE_INTERACTION: CAT:DGIDB:5e60f97bf31f",
+     "SOURCE_INTERACTION: CAT:DGIDB:5e60f97bf31f",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL621 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL621 Ki Homo sapiens"
+    ]
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL621",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 284
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "HTR1A": 8,
+   "HTR2C": 5,
+   "ADRA1A": 5,
+   "ADRA1B": 5,
+   "HTR2B": 4,
+   "ADRA1D": 4,
+   "DRD2": 4,
+   "DRD1": 3
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}

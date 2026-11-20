@@ -1,0 +1,115 @@
+{
+ "identity": {
+  "query": "miconazole",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL91",
+    "record_name": "MICONAZOLE",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL91",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL91",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:3de9ae213935",
+    "record_name": "Miconazole Nitrate",
+    "match_kind": "SYNONYM_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1559",
+    "record_name": "MICONAZOLE NITRATE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL91",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1559",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL175633",
+    "record_name": "PRAMICONAZOLE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL175633",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL175633",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:0629d35b2603",
+    "record_name": "Pramiconazole",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1571863",
+    "record_name": "ISOCONAZOLE",
+    "match_kind": "SYNONYM_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1571863",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1571863",
+      "basis": "record"
+     }
+    ]
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "CYP51A1"
+  ],
+  "per_gene": {
+   "CYP51A1": {
+    "level": "MEASURED_ACTIVITY_HUMAN",
+    "n_rows": 1,
+    "rows": [
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL91 IC50 Homo sapiens"
+    ]
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL91",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 400
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "CYP3A4": 12,
+   "CYP1A2": 6,
+   "CYP2C19": 6,
+   "IDO1": 6,
+   "ABCB1": 5,
+   "AMPC": 4,
+   "ACHE": 4,
+   "CYP2C9": 4
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}

@@ -1,0 +1,146 @@
+{
+ "identity": {
+  "query": "liothyronine",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL1544",
+    "record_name": "LIOTHYRONINE",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1544",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1544",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:c75b1381e749",
+    "record_name": "Liothyronine",
+    "match_kind": "NAME_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1201119",
+    "record_name": "LIOTHYRONINE SODIUM",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1544",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1201119",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2106622",
+    "record_name": "LIOTHYRONINE I 131",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1544",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2106622",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2107398",
+    "record_name": "LIOTHYRONINE I 125",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1544",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2107398",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:d194aebee6eb",
+    "record_name": "Liothyronine Sodium",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL789",
+    "record_name": "RATHYRONINE",
+    "match_kind": "SYNONYM_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL789",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL789",
+      "basis": "record"
+     }
+    ]
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "THRB",
+   "THRA"
+  ],
+  "per_gene": {
+   "THRB": {
+    "level": "CURATED_MECHANISM",
+    "n_rows": 33,
+    "rows": [
+     "CURATED_MECHANISM: CAT:CHEMBL1544",
+     "SOURCE_INTERACTION: CAT:DGIDB:c75b1381e749",
+     "SOURCE_INTERACTION: CAT:DGIDB:c75b1381e749",
+     "SOURCE_INTERACTION: CAT:DGIDB:c75b1381e749",
+     "SOURCE_INTERACTION: CAT:DGIDB:c75b1381e749",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL1544 Kd Homo sapiens"
+    ]
+   },
+   "THRA": {
+    "level": "CURATED_MECHANISM",
+    "n_rows": 31,
+    "rows": [
+     "CURATED_MECHANISM: CAT:CHEMBL1544",
+     "SOURCE_INTERACTION: CAT:DGIDB:c75b1381e749",
+     "SOURCE_INTERACTION: CAT:DGIDB:c75b1381e749",
+     "SOURCE_INTERACTION: CAT:DGIDB:c75b1381e749",
+     "SOURCE_INTERACTION: CAT:DGIDB:c75b1381e749",
+     "SOURCE_INTERACTION: CAT:DGIDB:c75b1381e749"
+    ]
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL1544",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 344
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "CYP3A4": 3,
+   "NOS1": 3,
+   "CYP2D6": 3,
+   "CYP1A2": 3,
+   "HTR1B": 3,
+   "CYP2C9": 3,
+   "CYP2C19": 3,
+   "AR": 3
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}

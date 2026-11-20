@@ -1,0 +1,114 @@
+{
+ "identity": {
+  "query": "clemastine",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL1626",
+    "record_name": "CLEMASTINE",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1626",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1626",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:f15abd66f8d5",
+    "record_name": "Clemastine",
+    "match_kind": "NAME_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1200795",
+    "record_name": "CLEMASTINE FUMARATE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1626",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1200795",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:5e4e85d5b2c8",
+    "record_name": "Clemastine Fumarate",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "HRH1",
+   "CHRM1",
+   "CHRM3"
+  ],
+  "per_gene": {
+   "HRH1": {
+    "level": "SOURCE_INTERACTION",
+    "n_rows": 6,
+    "rows": [
+     "SOURCE_INTERACTION: CAT:DGIDB:f15abd66f8d5",
+     "SOURCE_INTERACTION: CAT:DGIDB:f15abd66f8d5",
+     "SOURCE_INTERACTION: CAT:DGIDB:f15abd66f8d5",
+     "SOURCE_INTERACTION: CAT:DGIDB:f15abd66f8d5",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL1626 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL1626 Ki Homo sapiens"
+    ]
+   },
+   "CHRM1": {
+    "level": "MEASURED_ACTIVITY_HUMAN",
+    "n_rows": 3,
+    "rows": [
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL1626 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL1626 Ki Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL1626 Ki Homo sapiens"
+    ]
+   },
+   "CHRM3": {
+    "level": "MEASURED_ACTIVITY_HUMAN",
+    "n_rows": 3,
+    "rows": [
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL1626 IC50 Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL1626 Ki Homo sapiens",
+     "MEASURED_ACTIVITY_HUMAN: CHEMBL1626 Ki Homo sapiens"
+    ]
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL1626",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 280
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "CYP2C19": 3,
+   "CYP1A2": 3,
+   "CYP2C9": 3,
+   "CYP3A4": 3,
+   "CYP2D6": 3,
+   "CHRM2": 3,
+   "CHRM4": 3,
+   "CHRM5": 3
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
