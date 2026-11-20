@@ -462,6 +462,15 @@
      "accepted_at": "2026-11-20T04:18:42Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/gsk3_shared_premise_sci_20261120/GSK3_OPC_DIFFERENTIATION_DIRECTION_READING_SCI_20261120.md (answer: sign divided by system and stage; v3.2 broad adds the stage readout under the GSK-3 arm as an interaction cell with no predicted sign) and a dated line on the one-unit note",
      "updated_at": "2026-11-20T04:23:00Z"
+    },
+    {
+     "step": "Juvenile or neonatal rodent dosing and tolerability evidence for the five non-lithium GSK-3 agents (tideglusib, SB216763, CHIR99021, LY2090314, AR-A014418), abstract-level PubMed, with a dated line on the GSK-3 one-unit note",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "MEETING-20261120T061814Z reply: item named in answer (2) to ADV, started by SCI",
+     "accepted_at": "2026-11-20T06:19:11Z",
+     "evidence": "dated line on gsk3_shared_premise_sci_20261120/GSK3_VS_OLIGODENDROCYTE_CLASS_ONE_UNIT_NOTE_SCI_20261120.md (evidence bases compared, not merit; no ranking)",
+     "updated_at": "2026-11-20T06:20:12Z"
     }
    ]
   }
@@ -814,6 +823,13 @@
    "at": "2026-11-20T04:18:42Z",
    "source": "ADV assignment message of 2026-11-20 after bb1f634a7, re-sent to SCI successor f7670fc3 (checkpoint L section 4.1)",
    "step_sha256": "da1b7ff6c849",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T06:19:11Z",
+   "source": "MEETING-20261120T061814Z reply: item named in answer (2) to ADV, started by SCI",
+   "step_sha256": "c64c55ac524c",
    "reopened_block": false,
    "authorised_by": null
   }
