@@ -52,6 +52,7 @@ import sys
 import tempfile
 from pathlib import Path
 from typing import Any
+from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import mandate_continuity as mc  # noqa: E402  the existing reader of task-record queues
@@ -134,9 +135,12 @@ def portfolio_update(patch: dict[str, Any]) -> dict[str, str]:
             row = dict.fromkeys(PORTFOLIO_FIELDS, "")
             row.update(status="backlog")
             rows.append(row)
-        row.update({k: v.strip() for k, v in patch.items()})
+        before = dict(row)
+        row.update({k: v.strip() for k, v in patch.items() if k != "updated_utc"})
         if not row.get("opportunity"):
             raise ValueError("an opportunity needs a question or result sought")
+        if before and {k: v for k, v in row.items() if k != "updated_utc"} == {k: v for k, v in before.items() if k != "updated_utc"}:
+            return row                      # nothing changed: the row keeps its historical date and the file is not rewritten (2026-11-20: a date moved only to look recent hides which rows are stale)
         row["updated_utc"] = _utc(_now())
         # Preserve additional columns from a future/manual extension instead of dropping them.
         fields = list(dict.fromkeys([*PORTFOLIO_FIELDS, *(k for r in rows for k in r)]))
@@ -741,7 +745,7 @@ ROADMAP_BEGIN, ROADMAP_END = "<!-- OPERATOR_ROADMAP:BEGIN -->", "<!-- OPERATOR_R
 STATE_DIR = Path(os.environ.get("LEGEND_ADVISOR_STATE", str(Path.home() / ".local/state/legend/advisor_pilot")))
 ASSIGNMENT_FIELDS = ("key", "recipient", "question", "why_now", "roadmap_link", "related_work", "sources", "decision_changed_by_result", "perimeter_and_budget",
                      "method_autonomy", "deliver_to", "duplicate_check")
-OPTIONAL_FIELDS = ("mode", "start_condition", "interferes_with", "obsolete_if")   # HE54: what a recipient needs to place a follow-through: independent | queued | conditional, when it can start, what it may disturb, what makes it useless
+OPTIONAL_FIELDS = ("mode", "start_condition", "interferes_with", "obsolete_if", "strand")   # HE54: what a recipient needs to place a follow-through: independent | queued | conditional, when it can start, what it may disturb, what makes it useless
 OPEN_VERDICTS = ("CONTINUE", "ALL_BLOCKED", "COMPLETE_PENDING")
 EVENT_SUBJECT = re.compile(r"COMPLETE|closed|closure|integrate task|delivered|consumed|landed", re.I)
 OUTCOMES = ("continue", "switch", "assign", "queue", "wait")        # HE57: the allowed endings of an evaluation; a wait is one of them, and states what it excluded and when it resumes
@@ -1647,6 +1651,9 @@ def tick(campaign: Path) -> dict[str, Any]:
     stuck = [f"{r['id']} [{r['recipient']}]: {r['flag']}" for r in assignment_flow(campaign, now) if r["flag"]] if campaign else []
     if stuck:
         why += "; ASSIGNMENT FLOW (sent is not taken is not started): " + "; ".join(stuck[:4])
+    disc = discipline_lines(campaign) if campaign else []
+    if disc:
+        why += "; " + "; ".join(disc)
     unchecked = unchecked_waits(obs["waits"], state)
     if unchecked:
         why += "; " + unchecked
@@ -1793,6 +1800,8 @@ def _register_assignments(campaign: Path, label: str, text: str, *, origin: str)
         attribution = "host decision (not an independent assessment)" if origin == "host" else f"assessment {label}"
         (out / f"{ident}.md").write_text(f"# {ident} ({attribution}, campaign {campaign.name})\n\nRecipient: {block['recipient']}\n\n{block['_text']}\n", encoding="utf-8")
         row = {"id": ident, "state": "DRAFTED", "key": key, "recipient": block["recipient"], "assessment": label, "origin": origin}
+        if block.get("strand"):
+            row["strand"] = block["strand"]                      # the thread this increment belongs to (scientific rotation); optional, never a reason to refuse a draft
         _log_assignment(campaign, row); drafted[ident] = row; made.append({"id": ident, **block})
     return made
 
@@ -1853,7 +1862,7 @@ def assignment_states(campaign: Path) -> dict[str, dict[str, Any]]:
     DONE step in a record carries its id) . UNREACHABLE and the other rows are states of their own. None of them says the result was useful."""
     out: dict[str, dict[str, Any]] = {}
     for e in _events(campaign):
-        if e.get("id"):
+        if e.get("id") and e.get("state") not in META_STATES:
             out.setdefault(e["id"], {"recipient": e.get("recipient", ""), "key": e.get("key", ""), "origin": e.get("origin", "assessment"), "levels": []})["levels"].append(e["state"])
     taken, done = set(), set()
     def walk(node: Any, ident: str) -> tuple[bool, bool]:
@@ -2350,6 +2359,235 @@ def flow_line(row: dict[str, Any]) -> str:
     return " -> ".join(parts) + (f"  ** {row['flag']}" if row["flag"] else "")
 
 
+# ---------------------------------------------------------------- scientific rotation, daily reconciliation, DREAM (cross_session_transport.md section 14)
+META_STATES = ("STRAND", "RECONCILED", "DREAM", "ROTATION_DEFERRED")   # events of the assignment log that are not assignments: the log stays the one durable record, no second register
+ROTATION_RUN = 3                  # the operator's initial cadence: three substantial scientific increments in one strand make a rotation due (2026-11-20); a constant, not a limit on activity
+DREAM_WINDOW_H = 72
+UNCLASSIFIED_WINDOW_H = 24
+ROME = ZoneInfo("Europe/Rome")
+NOT_SCIENTIFIC = ("harness", "none", "editorial")
+
+
+def _strands(campaign: Path) -> dict[str, dict[str, Any]]:
+    """Per id, the strand an increment belongs to: the optional `strand:` line of its assignment, overridden by a later STRAND event. A STRAND event for an id that is not an assignment records a concluded increment
+    done outside the assignment channel (a self-directed comparison), with the time `at` it concluded and its `basis` (a commit or record). `counts_with` folds an increment into another one (producer, verifier and
+    integration of one result are one increment)."""
+    out: dict[str, dict[str, Any]] = {}
+    for e in _events(campaign):
+        if e.get("state") == "DRAFTED" and e.get("strand"):
+            out[e["id"]] = {"strand": e["strand"], "outside": False, "at": "", "counts_with": "", "basis": "assignment"}
+        elif e.get("state") == "STRAND" and e.get("id"):
+            prev = out.get(e["id"], {})
+            drafted = prev.get("outside") is False or any(x.get("id") == e["id"] and x.get("state") == "DRAFTED" for x in _events(campaign))
+            out[e["id"]] = {"strand": e.get("strand", prev.get("strand", "")), "outside": not drafted, "at": e.get("at", prev.get("at", "")), "counts_with": e.get("counts_with", prev.get("counts_with", "")),
+                            "basis": e.get("basis", prev.get("basis", ""))}
+    return out
+
+
+def increments(campaign: Path) -> list[dict[str, Any]]:
+    """The substantial scientific increments, in the order they concluded. Counted: an assignment that carries a strand and whose recipient took it to DONE (the tick's EXECUTED level), or an outside increment
+    recorded with its time. Not counted: harness, editorial and unclassified work, commits, messages, and an increment folded into another by `counts_with`. A negative or inconclusive result that narrowed a
+    question counts; classifying that is the host's reading, recorded with its basis."""
+    smap, states = _strands(campaign), assignment_states(campaign)
+    sent = {}
+    for e in _events(campaign):
+        if e.get("state") == "SENT" and e.get("id") and e["id"] not in sent:
+            sent[e["id"]] = e.get("utc", "")
+    out = []
+    for ident, m in smap.items():
+        if not m["strand"] or m["strand"].lower() in NOT_SCIENTIFIC or m["counts_with"]:
+            continue
+        if m["outside"]:
+            at = m["at"]
+        else:
+            at = (m["at"] or sent.get(ident, "")) if "EXECUTED" in states.get(ident, {}).get("levels", []) else ""      # the time the recipient concluded when the host recorded it, else the send time
+        if at:
+            out.append({"id": ident, "strand": m["strand"], "at": at, "basis": m["basis"]})
+    return sorted(out, key=lambda r: r["at"])
+
+
+def rotation_status(campaign: Path) -> dict[str, Any]:
+    """Scientific rotation: after ROTATION_RUN consecutive concluded increments in the same strand, the next scientific assignment goes to another strand. Derived from the assignment log, never stored; work already
+    in flight keeps its priority, and an open assignment in another strand is the rotation already under way (no second one is drafted). A deferral is recorded with its reason and resume point and stays visible."""
+    incs = increments(campaign)
+    smap, states = _strands(campaign), assignment_states(campaign)
+    if not incs:
+        return {"state": "NO_DATA", "run": 0, "strand": "", "ids": [], "open_other": [], "deferred": None, "unclassified": [], "line": "SCIENTIFIC ROTATION: no classified increment yet (record `strand` for the recent ones)"}
+    strand = incs[-1]["strand"]
+    run = []
+    for r in reversed(incs):
+        if r["strand"] != strand:
+            break
+        run.append(r["id"])
+    run.reverse()
+    open_all = [i for i, m in smap.items() if not m["outside"] and m["strand"] and m["strand"].lower() not in NOT_SCIENTIFIC and "EXECUTED" not in states.get(i, {}).get("levels", []) and i in states]
+    open_other = [i for i in open_all if smap[i]["strand"] != strand]
+    open_same = [i for i in open_all if smap[i]["strand"] == strand]
+    deferred = next((e for e in reversed(_events(campaign)) if e.get("state") == "ROTATION_DEFERRED"), None)
+    if deferred and incs and (deferred.get("utc", "") < incs[-1]["at"] and incs[-1]["strand"] != deferred.get("strand")):
+        deferred = None                      # a later increment in another strand ended the deferral
+    cutoff = _now() - dt.timedelta(hours=UNCLASSIFIED_WINDOW_H)
+    sent = {e["id"]: e.get("utc", "") for e in _events(campaign) if e.get("state") == "SENT" and e.get("id")}
+    unclassified = sorted(i for i, v in states.items() if "EXECUTED" in v["levels"] and i not in smap and (v.get("recipient") or "").lower() != "harness" and _stamp(sent.get(i)) and _stamp(sent[i]) >= cutoff)
+    if len(run) >= ROTATION_RUN and open_other:
+        state, line = "IN_PROGRESS", f"SCIENTIFIC ROTATION IN PROGRESS: {', '.join(open_other)} open in another strand than '{strand}' ({len(run)} consecutive increments there); draft no second rotation assignment"
+    elif len(run) >= ROTATION_RUN and deferred:
+        state, line = "DEFERRED", f"SCIENTIFIC ROTATION DEFERRED ({deferred.get('utc', '')[:16]}Z): {deferred.get('reason', '')}; resume {deferred.get('resume', '')}; still due: {len(run)} consecutive increments in '{strand}'"
+    elif len(run) >= ROTATION_RUN:
+        state = "DUE"
+        line = (f"SCIENTIFIC ROTATION DUE: the last {len(run)} concluded scientific increments are all in strand '{strand}' ({', '.join(run[-5:])}); the next scientific assignment available goes to another "
+                f"opportunity of the roadmap (a different strand or group of candidates, a neglected row, a candidate reopened for a documented reason, or a question that widens the comparison; not another compound in the same "
+                f"question). Work already in flight keeps priority; a concrete urgency may defer it with `rotation --defer --reason ... --resume ...` (no approval)"
+                + (f". Open in the same strand: {', '.join(open_same)}" if open_same else ""))
+    else:
+        state, line = "OK", f"scientific rotation: {len(run)}/{ROTATION_RUN} consecutive increments in strand '{strand}'" + (f"; open in another strand: {', '.join(open_other)}" if open_other else "")
+    if unclassified:
+        line += f"; UNCLASSIFIED executed assignments of the last {UNCLASSIFIED_WINDOW_H} h (not counted: record `strand`): {', '.join(unclassified[:8])}"
+    return {"state": state, "run": len(run), "strand": strand, "ids": run, "open_other": open_other, "open_same": open_same, "deferred": deferred, "unclassified": unclassified, "line": line}
+
+
+def dream_pending(campaign: Path, now: dt.datetime | None = None) -> list[str]:
+    """Concluded scientific increments of the last DREAM_WINDOW_H hours with no DREAM line: the existing dream pass (legend-dream) runs after a significant result and its outcome, connections or an
+    explained absence, is recorded with `dream`. Visible, never a block; whether the result was significant is the host's reading (`dream --none` says so)."""
+    now = now or _now()
+    done = {i for e in _events(campaign) if e.get("state") == "DREAM" for i in (e.get("ids") or [])}
+    return [r["id"] for r in increments(campaign) if r["id"] not in done and _stamp(r["at"]) and (now - _stamp(r["at"])).total_seconds() <= DREAM_WINDOW_H * 3600]
+
+
+def rome_day(now: dt.datetime) -> str:
+    return now.astimezone(ROME).date().isoformat()
+
+
+def reconcile_findings(campaign: Path, now: dt.datetime | None = None) -> list[dict[str, str]]:
+    """Candidate incoherences between the portfolio and what happened, for the daily reconciliation. A candidate is a place to look, not a verdict: the owner of the row decides. Read only; never rewrites a row."""
+    now = now or _now()
+    snap, states = portfolio_snapshot(), assignment_states(campaign)
+    out = []
+    for r in snap["items"]:
+        status, text = r.get("status", "").lower(), " ".join(r.get(k, "") for k in ("next_action", "mandate_id", "resume_when"))
+        named = sorted(set(re.findall(r"\bADV-\d{3}\b", text)))
+        concluded = [i for i in named if "EXECUTED" in states.get(i, {}).get("levels", [])]
+        if r["review_due"]:
+            out.append({"id": r["id"], "why": f"{status} row whose linked mandate {r.get('mandate_id')} is RELEASED: the result is to be reviewed", "owner": "ADV"})
+        if status in ("assigned", "ready") and named and len(concluded) == len(named):
+            out.append({"id": r["id"], "why": f"{status} row names {', '.join(named)}, all concluded (a DONE step carries each id): close, supersede or update it", "owner": states[named[0]].get("recipient", "ADV")})
+        elif status in ("waiting", "parked") and r.get("dependency_met"):
+            out.append({"id": r["id"], "why": f"{status} row whose typed resume condition is met ({r['dependency_met'][:80]}): reopen or update it", "owner": "ADV"})
+        elif status in ("waiting", "parked") and named and len(concluded) == len(named):
+            out.append({"id": r["id"], "why": f"{status} row waits on {', '.join(named)}, already concluded: the event happened", "owner": states[named[0]].get("recipient", "ADV")})
+    # ready rows named by an assignment drafted after the row's last update, and backlog rows named in a recent delivery (commit subject): the two places where a row goes stale without anyone editing it
+    named_by: dict[str, list[tuple[str, str]]] = {}
+    for e in _events(campaign):
+        if e.get("state") == "DRAFTED" and e.get("id"):
+            f = Path(campaign) / "assignments" / f"{e['id']}.md"
+            for rid in set(re.findall(r"\bRP-\d{3}\b", f.read_text(encoding="utf-8", errors="replace") if f.exists() else "")):
+                named_by.setdefault(rid, []).append((e["id"], e.get("utc", "")))
+    recent = _git("log", "HEAD", f"--since={_utc(now - dt.timedelta(hours=DREAM_WINDOW_H))}", "--format=%h %s")
+    seen = {c["id"] for c in out}
+    for r in snap["items"]:
+        status = r.get("status", "").lower()
+        if r["id"] in seen:
+            continue
+        later = [a for a, at in named_by.get(r["id"], []) if at > r.get("updated_utc", "")]
+        if status == "ready" and later:
+            out.append({"id": r["id"], "why": f"ready row named by {', '.join(later[:3])}, drafted after the row's last update: consumed, superseded or still ready?", "owner": "ADV"})
+        elif status == "backlog":
+            hit = [ln for ln in recent.splitlines() if re.search(rf"\b{re.escape(r['id'])}\b", ln)]
+            if hit:
+                out.append({"id": r["id"], "why": f"backlog row named in a recent delivery ({hit[0][:70]}): does the result change it?", "owner": "ADV"})
+    return out
+
+
+def reconcile_state(campaign: Path, now: dt.datetime | None = None) -> dict[str, Any]:
+    now = now or _now()
+    today = rome_day(now)
+    done = [e for e in _events(campaign) if e.get("state") == "RECONCILED"]
+    last = done[-1] if done else None
+    due = not any(e.get("rome_date") == today for e in done)
+    residual = (last or {}).get("residual") or []
+    line = (f"PORTFOLIO RECONCILIATION DUE (Europe/Rome {today}): none attested today; `strategic_advisor.py reconcile --campaign ...` lists candidate incoherences, correct what is yours, then `--attest`" if due else
+            f"portfolio reconciled {today} ({last['result']})") + (f"; RESIDUAL INCOHERENCES: " + "; ".join(f"{x.get('id')} ({x.get('owner')})" for x in residual[:6]) if residual else "")
+    return {"due": due, "today": today, "last": last, "line": line}
+
+
+def attest_reconciliation(campaign: Path, result: str, changed: list[str], residual: list[str], note: str = "", now: dt.datetime | None = None) -> dict[str, Any]:
+    """Nothing here refuses: an incomplete attestation is recorded with its warnings, visible and recoverable."""
+    now = now or _now()
+    warn = []
+    if result not in ("NO_CHANGE", "CHANGED"):
+        warn.append(f"result {result!r} is not NO_CHANGE or CHANGED: recorded as given")
+    ids = {r["id"] for r in portfolio_rows()[0]}
+    bad = [c for c in changed if c not in ids]
+    if bad:
+        warn.append("not portfolio ids (recorded as given): " + ", ".join(bad))
+    if result == "CHANGED" and not changed:
+        warn.append("CHANGED names no corrected row")
+    res = []
+    for x in residual:
+        rid, _, owner = x.partition(":")
+        res.append({"id": rid.strip(), "owner": owner.strip() or "ADV"})
+    row = {"state": "RECONCILED", "rome_date": rome_day(now), "result": result if not res else result + "+RESIDUAL", "changed": changed, "residual": res, "note": note}
+    _log_assignment(campaign, row)
+    return {**row, "warnings": warn}
+
+
+def record_strand(campaign: Path, ident: str, strand: str, basis: str, at: str = "", counts_with: str = "") -> dict[str, Any]:
+    """Nothing here refuses: a missing basis or time is recorded as such and reported."""
+    warn = []
+    if not basis:
+        warn.append("no --basis (the commit or record showing it concluded): recorded without one")
+    known = {e.get("id") for e in _events(campaign) if e.get("state") == "DRAFTED"}
+    if ident not in known and not at:
+        at = _utc(_now())
+        warn.append(f"{ident} is not an assignment and no --at was given: the time recorded is now ({at}); correct it with a later STRAND line if it concluded earlier")
+    row = {"state": "STRAND", "id": ident, "strand": strand, "basis": basis, **({"at": at} if at else {}), **({"counts_with": counts_with} if counts_with else {})}
+    _log_assignment(campaign, row)
+    return {**row, "warnings": warn}
+
+
+def record_dream(campaign: Path, ids: list[str], connections: list[tuple[str, str]], none_reason: str, counter: str = "") -> dict[str, Any]:
+    """The outcome of the dream pass after a significant result: where each useful connection was carried (a consumer that exists: a portfolio row, an assignment, a file), whether contrary results, a context
+    mismatch, a reusable control or an avoidable duplicate were considered, or why there is no connection. Warnings are returned, nothing is refused: an incomplete line is visible, not a block."""
+    warn = []
+    if not ids:
+        warn.append("no --id: the line names no increment, so it closes nothing")
+    if not connections and not none_reason:
+        warn.append("neither a connection (--to, --what) nor --none REASON: recorded as an unexplained empty pass")
+    portfolio_ids = {r["id"] for r in portfolio_rows()[0]}
+    assignment_ids = {e.get("id") for e in _events(campaign) if e.get("state") == "DRAFTED"}
+    for consumer, _what in connections:
+        if consumer not in portfolio_ids and consumer not in assignment_ids and not (ROOT / consumer).exists():
+            warn.append(f"consumer {consumer!r} is not a portfolio row, an assignment or an existing path: a connection nobody reads is not recovered")
+    if connections and not counter:
+        warn.append("no --counter: say whether contrary results, a context mismatch, a reusable control or an avoidable duplicate were considered")
+    row = {"state": "DREAM", "ids": ids, "connections": [{"to": c, "what": w} for c, w in connections], "none_reason": none_reason, "counter": counter}
+    _log_assignment(campaign, row)
+    return {**row, "warnings": warn}
+
+
+def defer_rotation(campaign: Path, reason: str, resume: str) -> dict[str, Any]:
+    warn = ["no --reason" if not reason else "", "no --resume point" if not resume else ""]
+    row = {"state": "ROTATION_DEFERRED", "reason": reason, "resume": resume, "strand": rotation_status(campaign).get("strand", "")}
+    _log_assignment(campaign, row)
+    return {**row, "warnings": [w for w in warn if w]}
+
+
+def discipline_lines(campaign: Path) -> list[str]:
+    """The three recall lines of the standing method (rotation, daily reconciliation, DREAM), for the tick and `status`."""
+    lines = []
+    rot = rotation_status(campaign)
+    if rot["state"] != "OK" or rot["unclassified"]:
+        lines.append(rot["line"])
+    rec = reconcile_state(campaign)
+    if rec["due"] or (rec["last"] or {}).get("residual"):
+        lines.append(rec["line"])
+    dp = dream_pending(campaign)
+    if dp:
+        lines.append(f"DREAM PENDING for concluded increment(s) of the last {DREAM_WINDOW_H} h: {', '.join(dp[:8])} (legend-dream pass, then `dream --id ... --to CONSUMER --what ... --counter ...` or `--none REASON`)")
+    return lines
+
+
+
 def status(campaign: Path) -> str:
     campaign = Path(campaign)
     b = _budget(campaign)
@@ -2374,6 +2612,8 @@ def status(campaign: Path) -> str:
         lines.append(f"  holds recorded {len(held)} (not evaluations, not counted above); last {last['utc']}: cleared {len(last['events_cleared'])} event(s) and {last['commits_cleared']} commit(s), resume_when {last['resume_when']}: {last['reason'][:160]}")
     for row in assignment_flow(campaign):
         lines.append("  flow " + flow_line(row))
+    for ln in discipline_lines(campaign):
+        lines.append("  " + ln)
     for ident, v in sorted(assignment_states(campaign).items()):
         lines.append(f"  {ident} [{v['recipient']}] {v['key']}: highest evidence {v['highest'] or 'none'}; origin {v.get('origin', 'assessment')}; levels {','.join(v['levels'])}" + ("; UNREACHABLE (residual stays in the queue)" if v["unreachable"] else ""))
     return "\n".join(lines)
@@ -2406,6 +2646,18 @@ def main(argv: list[str] | None = None) -> int:
     hd = sub.add_parser("hold", help="record a hold without a model run: consumes the pending digest, lists what it clears in holds.jsonl, is not an evaluation"); hd.add_argument("--campaign", required=True); hd.add_argument("--reason", required=True); hd.add_argument("--resume-when", required=True, help="record:<TASK>=<STATE> or path:<file>[~<text>]"); hd.add_argument("--excluded", required=True, help="the paths the hold leaves out (record ids, portfolio rows, files) with the actual cause of each; a hold lapses at min_hours_between")
     ev.add_argument("--model", default="opus"); ev.add_argument("--effort", default="high", choices=["low", "medium", "high"]); ev.add_argument("--timeout", type=int, default=3600)
     st = sub.add_parser("status", help="budget and the evidence level of every assignment"); st.add_argument("--campaign", required=True)
+    sd = sub.add_parser("strand", help="record which strand a concluded scientific increment belongs to (scientific rotation): an assignment id, or an outside increment with --at")
+    sd.add_argument("--campaign", required=True); sd.add_argument("--id", required=True); sd.add_argument("--strand", required=True); sd.add_argument("--basis", required=True, help="the commit or record showing it concluded")
+    sd.add_argument("--at", default="", help="UTC time it concluded (needed for an increment that is not an assignment)"); sd.add_argument("--counts-with", default="", help="fold this increment into another id (one result, not two increments)")
+    ro = sub.add_parser("rotation", help="scientific rotation status, or record a deferral with its reason and resume point")
+    ro.add_argument("--campaign", required=True); ro.add_argument("--defer", action="store_true"); ro.add_argument("--reason", default=""); ro.add_argument("--resume", default="")
+    rc2 = sub.add_parser("reconcile", help="daily portfolio reconciliation: list candidate incoherences (read only), or attest the day's check")
+    rc2.add_argument("--campaign", required=True); rc2.add_argument("--attest", choices=["NO_CHANGE", "CHANGED"]); rc2.add_argument("--changed", action="append", default=[], help="portfolio id corrected (repeat)")
+    rc2.add_argument("--residual", action="append", default=[], help="ID:OWNER of an incoherence left open (repeat)"); rc2.add_argument("--note", default="")
+    dm = sub.add_parser("dream", help="record the outcome of the dream pass after a significant result: connections carried to a consumer, or why there is none")
+    dm.add_argument("--campaign", required=True); dm.add_argument("--id", action="append", default=[], help="the increment(s) followed (repeat)")
+    dm.add_argument("--to", action="append", default=[], help="consumer: a portfolio row, an assignment id or a repository path (repeat; pair with --what)"); dm.add_argument("--what", action="append", default=[])
+    dm.add_argument("--none", default="", help="no useful connection: the reason"); dm.add_argument("--counter", default="", help="contrary results, context mismatch, reusable control or avoidable duplicate considered")
     mt = sub.add_parser("meeting", help="six-hour/event alignment through the existing host; status unless one action is supplied")
     mt.add_argument("--campaign", required=True)
     action = mt.add_mutually_exclusive_group()
@@ -2507,6 +2759,33 @@ def main(argv: list[str] | None = None) -> int:
             print(f"Host assignment not registered: {exc}", file=sys.stderr); return 2
     if args.cmd == "hold":
         return hold(campaign, args.reason, args.resume_when, args.excluded)
+    if args.cmd in ("strand", "rotation", "reconcile", "dream"):
+        campaign = Path(args.campaign)
+        try:
+            def show(row):
+                for w in row.pop("warnings", []):
+                    print("WARNING: " + w, file=sys.stderr)
+                print(json.dumps(row, ensure_ascii=False))
+            if args.cmd == "strand":
+                show(record_strand(campaign, args.id, args.strand, args.basis, args.at, args.counts_with))
+            elif args.cmd == "rotation":
+                show(defer_rotation(campaign, args.reason, args.resume)) if args.defer else print(rotation_status(campaign)["line"])
+            elif args.cmd == "reconcile":
+                if args.attest:
+                    show(attest_reconciliation(campaign, args.attest, args.changed, args.residual, args.note))
+                else:
+                    print(reconcile_state(campaign)["line"])
+                    cands = reconcile_findings(campaign)
+                    for c in cands:
+                        print(f"  candidate {c['id']} (owner {c['owner']}): {c['why']}")
+                    print(f"  {len(cands)} candidate(s); a candidate is a place to look, not a verdict. Also check by reading: ready rows consumed or superseded, backlog rows touched by later results, parked rows whose reopening condition is met in prose, questions that live only in reports.")
+            else:
+                pairs = [(t, args.what[i] if i < len(args.what) else "") for i, t in enumerate(args.to)]
+                show(record_dream(campaign, args.id, pairs, args.none, args.counter))
+        except (OSError, ValueError) as exc:
+            print(f"NOT RECORDED: {exc}", file=sys.stderr)
+            return 1
+        return 0
     if args.cmd == "status":
         print(status(campaign)); return 0
     if args.cmd == "deliver":

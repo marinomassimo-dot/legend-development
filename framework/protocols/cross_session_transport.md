@@ -730,6 +730,50 @@ restate it. A session that lost the conversation reads that entry first.
   pauses and reserved acts keep their meaning; data, inference, hypothesis and model result stay
   distinct.
 
+### Scientific rotation, daily portfolio reconciliation and DREAM reinforcement (operator, 2026-11-20, PERMANENT)
+
+The one canonical home of the three rules; the role file, the skill, the roadmap and the tool table point here and restate nothing. The cycle sought: exploration -> qualified alternatives ->
+broader choice -> more useful rotation -> new connections. It widens the range of action; methodological autonomy, epistemic independence and simplicity stay. Nothing here is a gate, a service,
+an ordinary operator approval, an external spend or a personal-data use, and **no command refuses**: an incomplete line is recorded with a warning, visible and recoverable while the authorised work continues.
+
+**1 · Scientific rotation (the host, ADV).** After **three** substantial scientific increments in a row in the same strand (the operator's initial cadence; a constant, `ROTATION_RUN`, not a cap on
+activity), the next scientific assignment available goes to **another opportunity of the roadmap**: a different strand or group of candidates, a neglected row, a candidate that became interesting again
+for a documented reason, or a question or approach that widens the comparison beyond the dominant group. Changing compound inside the same question already repeated is not a rotation.
+* *Counts:* a completed analysis, comparison or deepening with a usable result, **including a negative or inconclusive one that correctly narrows a question**. *Does not count:* commits, messages,
+  editorial corrections, regenerations, producer / verifier / integration of one result as three increments, renaming one deepening to look like a new direction, harness work.
+* *The assignment states* question, initial sources, the discriminating result and the criterion to conclude or park. Rotation obliges to **investigate**, not to find a favourable result, a new drug
+  or a winner. Work already in flight keeps priority and rotation takes the first available assignment, it does not raise concurrency. A concrete urgency may defer it: the host records reason and
+  resume point (`rotation --defer`), the due rotation stays visible, no approval is needed. Before declaring the useful opportunities of the whole programme exhausted the host still compares
+  opportunities outside the current strand, even below the threshold (see "A general wait" above).
+* *Metadata, the smallest:* an assignment may carry one optional `strand:` line; an increment done outside the assignment channel, or a correction of a strand, is a `STRAND` line of the existing
+  assignment log (`strategic_advisor.py strand --id ... --strand ... --basis ... [--at UTC] [--counts-with ID]`). Unclassified work is **listed, never blocking**. The starting point of the count is
+  rebuilt from the recent deliveries and is never reset to postpone the first rotation.
+* *Recall:* the tick prints `SCIENTIFIC ROTATION DUE` (n consecutive increments in strand S), `... IN PROGRESS` (an assignment is open in another strand: it is the rotation, do not draft a second one),
+  `... DEFERRED` (reason and resume point), and `UNCLASSIFIED executed assignments`. The recall is not the fulfilment: a due rotation must produce an assignment actually delivered and started
+  (the assignment-flow line shows sent, taken, first output).
+
+**2 · Daily portfolio reconciliation.** At every significant delivery the owner updates the opportunities concerned in the existing path (`strategic_advisor.py portfolio`). **Once per day, by
+Europe/Rome,** ADV reconciles the portfolio against assignments really sent and taken, deliveries available, results really consumed, dependencies and resume conditions, and new opportunities; the
+other actors correct the rows of their own competence (no four duplicate reviews). It runs at the first recall or operational boundary of the day, **not** at the next MEETING if that would prolong an
+incoherence. It checks the operational state, it does not re-read the papers or rerun concluded analyses.
+* *Lists (candidates to look at, not verdicts):* `strategic_advisor.py reconcile` prints rows assigned whose mandate is released, ready or waiting rows naming assignments already concluded, waiting or
+  parked rows whose typed resume condition is met, ready rows named by a later assignment, backlog rows named in a recent delivery. Questions that live only in reports are found by reading.
+* *Dates:* a row whose content did not change keeps its historical date (`portfolio_update` does not touch it); a date is never moved to make a row look recent.
+* *Attestation:* `reconcile --attest NO_CHANGE|CHANGED [--changed ID ...] [--residual ID:OWNER ...]` writes one `RECONCILED` line in the existing assignment log, telling apart check made with no
+  change, substantial changes, and residual incoherences with their owner. The tick prints `PORTFOLIO RECONCILIATION DUE (Europe/Rome <date>)` until the day has a line and keeps the residuals visible.
+
+**3 · DREAM reinforcement.** An exploration leaves in the existing holdings: result and source; the candidate, mechanism, comparison or question concerned; context and limits; the conditions for
+deepening or reopening. When a result is significant, run the existing dream pass (`.claude/skills/legend-dream/SKILL.md`, helper `dream_pass.py`): connect with the living scientific memory,
+**counter-results, context incompatibilities, reusable controls and avoidable duplicated work included**, not only what strengthens the current hypotheses. A connection is a question to check, never a
+therapeutic benefit, and promotes nothing in the ranking; no association is forced and there is no new archive. Carry the useful connection to a consumer that exists (a comparison, an open
+question, a hypothesis, a next assignment): an association filed and never retrieved shows no benefit. The outcome is one `DREAM` line of the assignment log (`strategic_advisor.py dream --id ...
+--to CONSUMER --what ... --counter ...`, or `--none REASON`); the tick prints `DREAM PENDING` for concluded increments of the last 72 h with no line. Whether a result is significant is the host's reading.
+
+**Durability and limits.** Everything above is derived from files (assignment log, portfolio, task records): a new session finds the obligations without any chat. Automated: the counting, the three
+recall lines, the candidate lists, the unchanged-date rule. Procedural: classifying a strand, choosing and starting the rotation, correcting rows, and judging significance and connections. The
+strand of a recorded increment is the host's reading, written with its basis; a wrong classification is corrected by a later `STRAND` line. A rotation or a DREAM line whose assignment never starts or whose
+consumer never reads it is not fulfilment: that is checked by the same flow line and by reading the consumer.
+
 ### Wake-up durability: the presidio belongs to the ADV campaign, not to a chat (operator, 2026-11-18, PERMANENT)
 
 **The property.** Scheduling and responsibility for the presidio belong to the ADV campaign. The termination or replacement of a chat never requires a new operator prompt to restore the programme that is
