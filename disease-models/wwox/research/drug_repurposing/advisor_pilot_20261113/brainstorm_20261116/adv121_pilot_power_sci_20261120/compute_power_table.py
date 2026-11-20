@@ -254,8 +254,16 @@ def main():
         rr = [r for r in rows if r['family'] == fam and r['delta_kind'] == 'HD']
         for r in sorted(rr, key=lambda r: -(r['d'] if r['d'] is not None else -1)):
             print('%s %s d=%s (%s)' % (fam, r['age'], fmt(r['d']), r['sd_flag']))
+    # sensitivity: a smaller separation than the bar-versus-LD delta (n minus 2 scales with 1 / delta^2); weight P10 as the worked case
+    wb = [r for r in rows if r['family'] == 'weight g' and r['age'] == 'P10' and r['delta_kind'] == 'bar'][0]
+    sens = ['# sensitivity (weight P10, bar vs LD, SD pooled %.3f, Holm alpha 0.0125): n per arm at delta x1, x0.5, x0.25 (observed SD / 5-df upper bound)' % wb['sd_pool']]
+    for mult in (1.0, 0.5, 0.25):
+        sens.append('delta x%.2f = %.3f g: %.1f / %.1f' % (mult, wb['delta'] * mult, n_per_arm(wb['delta'] * mult, wb['sd_pool'], 0.0125),
+                                                      n_per_arm(wb['delta'] * mult, wb['sd_pool'] * F5, 0.0125)))
+    print('\n' + '\n'.join(sens))
     if tsv:
         open(os.path.join(HERE, 'OUTPUT_power_table.tsv'), 'w').write(out + '\n')
+        open(os.path.join(HERE, 'OUTPUT_sensitivity.txt'), 'w').write('\n'.join(sens) + '\n')
     for nm, kor, cl, ch, why in closures:
         print('\n# glia closure in WT-ratio units (%s): %s KO/WT %.2f; LD closes %.2f, HD closes %.2f' % (why, nm, kor, cl, ch))
 
