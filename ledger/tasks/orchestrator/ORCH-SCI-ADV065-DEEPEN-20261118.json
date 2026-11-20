@@ -420,11 +420,20 @@
     },
     {
      "step": "ADV-099: unbiased pre-registered discovery of a neuron-internal lesion candidate in the two held neuron-resolved systems (hippocampal nuclei GSE158684, human organoid neuron clusters GSE156243): keep only what replicates across the two after maturity adjustment, map to druggable targets and classes with pharmacology data (HE sheets), check overlap with the programmes the AAV9 neuronal rescue normalised, name the new candidate class and its rejecting observation; stop rule: nothing replicates then say so, name the data that would show it, stop",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message 2026-11-20 (ADV-099, assignments/ADV-099.md, not yet on main when accepted)",
      "accepted_at": "2026-11-20T01:14:50Z",
-     "updated_at": "2026-11-20T01:14:57Z"
+     "updated_at": "2026-11-20T01:43:18Z",
+     "evidence": "Result, pre-registration, script, out/, blind recompute (same verdict) landed at bb3686821 (gate PASS, ls-remote verified); stop rule applied; ADV accepted (message 2026-11-20)"
+    },
+    {
+     "step": "ADV interactome round (time-boxed, one round, pre-registered): a WWOX partner counts only if (i) a direct interaction is documented with assay and domain, (ii) a functional readout exists in a neural WWOX-deficient or WWOX-manipulated system (held full texts first), (iii) its target has pharmacology in HE's sheets or a verified public record; stop rule: none meets (i) and (ii) then record the interactome as exhausted for held literature; plus a check in the 39 WWOX GEO series whether any is a second independent human neural or neuron-like WWOX-perturbed transcriptome (not the organoid libraries); report both in one increment",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-20 (after ADV-099 acceptance)",
+     "accepted_at": "2026-11-20T01:43:18Z",
+     "updated_at": "2026-11-20T01:43:22Z"
     }
    ]
   }
@@ -749,6 +758,13 @@
    "at": "2026-11-20T01:14:50Z",
    "source": "ADV message 2026-11-20 (ADV-099, assignments/ADV-099.md, not yet on main when accepted)",
    "step_sha256": "b5fb14e57e43",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T01:43:18Z",
+   "source": "ADV message 2026-11-20 (after ADV-099 acceptance)",
+   "step_sha256": "d1aca496fe0b",
    "reopened_block": false,
    "authorised_by": null
   }
