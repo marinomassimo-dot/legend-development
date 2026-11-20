@@ -642,6 +642,15 @@
      "accepted_at": "2026-11-20T15:57:30Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/kv7_class_adv117_sci_20261120/ADV117_KV7_CLASS_COMPOUND_COMPARISON_SCI_20261120.md (pre-registration PREREGISTRATION_ADV117_SCI_20261120.md, commit b831d551b; slice panel dated line)",
      "updated_at": "2026-11-20T16:05:06Z"
+    },
+    {
+     "step": "ADV-118: one ledger (one table, no new register) of neonatal and juvenile neurotoxicity for every candidate of the two objectives (ethosuximide, ulixacaltamide and TTA-A2, NMDAR pore blockers and d-APV, gaboxadol and ganaxolone, ezogabine and ICA-069673, vigabatrin, lithium, tideglusib and SB216763, clemastine, the thyromimetics): species and age window, exposure as reported (no dose), endpoint, effect or not found by these routes, source id and depth, one-origin flag, weakening observation; sheet_query first, stop rule before numbers; closing paragraph on signals inside the pilot windows, whether the bridge preference or broad arm list changes, and the one settling measurement",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-118 (ADV message 2026-11-20 to SCI f6eb70; assignments/ADV-118.md landing)",
+     "accepted_at": "2026-11-20T16:09:22Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/neurotox_ledger_adv118_sci_20261120/ADV118_NEUROTOXICITY_LEDGER_SCI_20261120.md (pre-registration PREREGISTRATION_ADV118_SCI_20261120.md, commit 16a9593e8)",
+     "updated_at": "2026-11-20T16:16:37Z"
     }
    ]
   }
@@ -1134,6 +1143,13 @@
    "at": "2026-11-20T15:57:30Z",
    "source": "ADV-117 (ADV message 2026-11-20 to SCI f6eb70; assignments/ADV-117.md landing)",
    "step_sha256": "74236132bc89",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T16:09:22Z",
+   "source": "ADV-118 (ADV message 2026-11-20 to SCI f6eb70; assignments/ADV-118.md landing)",
+   "step_sha256": "38c6ab41408d",
    "reopened_block": false,
    "authorised_by": null
   }
