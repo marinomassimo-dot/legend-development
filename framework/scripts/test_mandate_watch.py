@@ -633,6 +633,7 @@ class PredecessorRetirement(unittest.TestCase):
         old, new = self.old.read_text(), self.new.read_text()
         cases = [
             (old.replace("MANDATE_RELEASED: T-1", "not a release"), new),
+            (self.entry(40, "assistant", "MANDATE_RELEASED: T-1"), new),
             (old + self.entry(43, "assistant", "MANDATE_BOUND: OTHER-TASK"), new),
             (old, self.entry(41, "assistant", "MANDATE_BOUND: T-1")),
             (old, self.entry(38, "assistant", "MANDATE_BOUND: T-1") + self.entry(39, "assistant", tool=True)),

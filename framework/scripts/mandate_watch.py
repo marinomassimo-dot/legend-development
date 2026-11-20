@@ -454,7 +454,7 @@ def retirement_state(task: str, old_id: str, new_id: str, sessions: list[dict] |
     if old_path is None or new_path is None:
         return keep("transcript missing or ambiguous; absence is not a release")
     old, new = bind_timeline(old_path, task), bind_timeline(new_path, task)
-    if old.get("state") != "RELEASED" or old.get("active_tasks") != []:
+    if old.get("state") != "RELEASED" or not old.get("bound_at") or old.get("active_tasks") != []:
         return keep("predecessor has not released every bound mandate")
     if new.get("state") != "BOUND" or not new.get("tool_calls_after_bind"):
         return keep("successor has not bound and acted")
