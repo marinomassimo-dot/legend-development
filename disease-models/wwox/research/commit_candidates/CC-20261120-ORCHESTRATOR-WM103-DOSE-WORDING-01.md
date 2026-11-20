@@ -52,3 +52,9 @@ Check 1: `research/locator_audits/2026-11-20_wm103_dose_wording_it59/AUDIT_REPOR
 (1) blind check of sections 2 and 4 against the held text and figures (fresh `legend-delegate`, sonnet, high; statements and anchors only); (2) after SUPPORTED (and a second check of any repaired sentence), PART 1 only: `batch_commit.py propagate` of the three dated notes in one MINOR `BATCH_COMMIT`; (3) PART 2 stays PROPOSED until the operator decides; (4) regenerate derived pages in the documented sequence; ranking digest must not move.
 
 **Not medical advice.**
+
+## BATCH DISPOSITION — `BATCH_20261120_002` (2026-11-20, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** PART 1 PROPAGATED; PART 2 PROPOSED, NOT APPLIED (reserved item for the operator, item 18)
+
+3 record-scoped `replace-within` ops on `working_model_current.md` (lines 103, 148 and 251 of the pre-batch file): a dated note appended to each sentence. **Change class restated: MINOR** (additive; the original wording is kept byte for byte and proved by script: each new line equals the old line plus the note; no Status, Type, Source or claim record changes; no block redefined; `WM_v7.29` preserved). Part 2 is **class MAJOR** and stays PROPOSED. Blind check 2 (section 5) found one overshoot in the repaired T11 sentence; the sentence written into the line 103 note uses the verifier's own wording, whose components are the two statements it found SUPPORTED, and was not separately re-checked. LINT after propagation: no BLOCK (WARN as before); `fulltext_receipts.py verify` OK; `growth_anchors.py check` PASS. Derived surface regenerated: pathograph inventory and export (the other surfaces fresh). Ranking digest `ff38fcaa61295a5a` re-checked after the propagation: unchanged (`ranking.json` FRESH under `candidate_tree_freshness.py`).
