@@ -1,3 +1,5 @@
+> Superseded in part: read the CURRENT READING block at the top of V3_1_DATED_CHANGES_BROAD_AND_BRIDGE_SCI_20261120.md first; the text below is history for the points that block lists.
+
 # Broad objective, priority experiment v3: one page (SCI successor, 2026-11-20; consolidates v1 (`UNIT_C_BROAD_COMPARATIVE_CASE_...`), v2 (`UNIT_C_PRIORITY_EXPERIMENTS_V2_REVISION_...`), v2.1 and v2.2 (`gsk3_shared_premise_sci_20261120/`), which stay as history and are not edited; where this page differs it supersedes them; hypothesis level; doses are source research values, not recommendations; no dose, no schedule, no recommendation for or against any use of any agent in any person; reference genotype class only; not medical advice)
 
 **Read this page in one sitting.** It is a design for a laboratory, not a result; nothing here is started. Section 1 says what is known, assumed and unknown; section 2 is the experiment; section 3 is the outcome table per candidate; section 4 is what it cannot show.

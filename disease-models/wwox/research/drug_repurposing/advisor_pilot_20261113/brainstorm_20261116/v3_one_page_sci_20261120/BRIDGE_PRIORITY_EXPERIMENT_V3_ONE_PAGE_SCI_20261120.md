@@ -1,3 +1,5 @@
+> Superseded in part: read the CURRENT READING block at the top of V3_1_DATED_CHANGES_BROAD_AND_BRIDGE_SCI_20261120.md first; the text below is history for the points that block lists.
+
 # Bridge objective, priority experiment v3: one page (SCI successor, 2026-11-20; consolidates v1 (`UNIT_C_BRIDGE_COMPARATIVE_CASE_...`), v2 section B, v2.1 point 2 and the pup brief `PUP_BRIEF_V2_CONSOLIDATED.md` sections 2 and 3 (stages 1 and 2), which stay as history and are not edited; where this page differs it supersedes them; hypothesis level; doses and concentrations are source research values, not recommendations; no dose, no schedule, no recommendation for or against any use of any agent in any person; reference genotype class only; not medical advice)
 
 **Read this page in one sitting.** It is a design for a laboratory, not a result; nothing here is started. The aim is the bridge objective: seizure burden with a conservative benefit and risk aim. The experiment is a **provoked-seizure** test; it says what a drug does to a pentylenetetrazol seizure at an age, not what it would do to the spontaneous-seizure phenotype.
