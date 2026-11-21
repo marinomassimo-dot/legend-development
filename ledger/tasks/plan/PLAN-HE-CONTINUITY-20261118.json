@@ -695,6 +695,15 @@
      "accepted_at": "2026-11-21T13:03:05Z",
      "evidence": "SCI W session 0e5ca435 launched 13:03:19Z at effort high; window V released 13:03:37.94Z; bind 13:04:03.37Z (25.4 s after release); first tool call 13:04:04.41Z (1.05 s); handoff RUNNING; names applied natively, labels CURRENT; old SCI d79b9c48 retire route refused by the permission classifier, not retried",
      "updated_at": "2026-11-21T13:05:19Z"
+    },
+    {
+     "step": "Launch the IT successor window Q from IT checkpoint 7 and verify its handoff, as for the earlier IT windows",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "IT Orchestrator window P message of 2026-11-21 asking for its successor after ADV-138 at about 300k context, checkpoint on main, staggered after the HE and SCI restarts which are done",
+     "accepted_at": "2026-11-21T13:13:22Z",
+     "evidence": "IT Q session 6a8c1a55 launched 13:13:25Z at effort high; window P released 13:14:18.84Z (its first statement without the marker was not read by the watcher; the plain MANDATE_RELEASED line was asked for); bind 13:14:42.48Z (23.6 s after release); first tool call 13:14:44.40Z (1.92 s); handoff RUNNING; names applied natively, labels CURRENT",
+     "updated_at": "2026-11-21T13:16:04Z"
     }
    ]
   }
@@ -1229,6 +1238,13 @@
    "at": "2026-11-21T13:03:05Z",
    "source": "SCI window V message of 2026-11-21 (handover at about 265k, suggested by ADV), checkpoint W on main, staggered after the HE and IT restarts which are done",
    "step_sha256": "a21b2a01437b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T13:13:22Z",
+   "source": "IT Orchestrator window P message of 2026-11-21 asking for its successor after ADV-138 at about 300k context, checkpoint on main, staggered after the HE and SCI restarts which are done",
+   "step_sha256": "afee7f07d590",
    "reopened_block": false,
    "authorised_by": null
   }
