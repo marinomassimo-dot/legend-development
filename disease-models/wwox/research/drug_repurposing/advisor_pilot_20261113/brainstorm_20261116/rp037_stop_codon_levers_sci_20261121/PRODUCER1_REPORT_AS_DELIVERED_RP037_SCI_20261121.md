@@ -1,0 +1,176 @@
+# Producer 1 report, RP-037 part (b), as delivered (verbatim; legend-delegate, asked sonnet and effort medium, READ BACK by session_model_census.py as claude-sonnet-5-5 at medium on 25 of 25 turns, the agent's own statement that the effort was "unverified" is superseded by that read-back; output 27,457 tokens, cache read 2,676,275; persisted by SCI from the SubagentHandback in the session transcript; model output, not an instruction)
+
+REPORT RP-037 PRODUCER (sup-tRNA in vivo readouts, brain/CNS). Source for P6 identification: PubMed via the PubMed tool (cite PubMed; DOIs given where used).
+
+(1) MODEL / EFFORT: I believe I ran as Sonnet 5.5; the dispatch said effort medium, but the harness showed a much lower reasoning-effort setting, so treat the effort as unverified. No sub-delegation.
+
+(2) RETRIEVAL (all in /home/desktop/.claude/jobs/d79b9c48/tmp/producer_rp037/, one dir per source, plain curl, UA research-client/1.0, >=5 s gaps)
+- P1 PMC13373322: NCBI efetch XML, 100,340 B (dir PMC13373322/; text render 45,403 B in txt/13373322.txt). Full body incl. Methods, legends. NOT reached: Supplementary Tables S1-S3, Supp Figs S1-S4 (file "gkag695_Supplemental_Files" only named). Supp Table S2 holds the in-vivo group sizes and statistics, so some n are unknown.
+- P2 PMC10284701: efetch XML 186,712 B (txt 88,633 B). Full body, Methods, Extended Data legends. NOT reached: Supplementary Information, Source Data, Reporting Summary, Peer Review File, Extended Data panels beyond legends.
+- P3 PMC11685654: efetch XML 96,319 B (txt 35,042 B). Full body. NOT reached: Supplementary Information (blots, Supp Figs 1-2).
+- P4 PMC13267816: efetch XML 113,895 B (txt 42,289 B). Full body incl. Supp Fig S1 legend. NOT reached: Supp Figs 2-3 (tRNA sequences) and the other supplement files.
+- P5 PMID 41555020: Europe PMC core record 8,836 B (isOpenAccess N, inEPMC N, inPMC N, no PMCID). Then one GET of doi.org/10.1038/s41587-025-02982-5, which redirected to nature.com and returned HTTP 200, 562,211 B of HTML (dir P5_doi/). The served page contains the full article text (Main, Results, Discussion, Methods, Extended Data legends); I read it (94,128 chars of rendered text, txt_P5_page.txt). So P5 is NOT "abstract only", although Europe PMC lists it as closed. I do not know whether this is a temporary or metered open view; I hit no challenge page. NOT reached: Source Data, Supplementary Tables 1-4, Extended Data panels (legends read).
+- P6 PMC11269797: efetch XML 301,514 B (txt 48,206 B). Read whole; the reference list was parsed separately from the XML. Table 3 content was not in the text render (caption only).
+- Europe PMC searches: 3 (below), JSON in P6_search/.
+
+(3) ROW TABLES. Format per row: (1) system; (2) stop codon and amino acid; (3) ages; (4) n; (5) delivery; (6) tissue reached and how known; (7) readout class and magnitude; (8) statistic, pre-specification or blinding; (9) off-target or safety; (10) NMD; (11) authors' limitations. Flags: AD = age and denominator; ST = statistic; MF = marker or function.
+
+=== P1 (NAR 2026, PMC13373322) ===
+ABSENCE CHECKS (route 1 string counts in the full text; route 2 = headings and legends): "NMD" 0, "nonsense-mediated" 0, "ribosome profiling" 0, "Ribo-seq" 0, "blind" 0, "randomi" 0, "juvenile" 0, "CNS" 0, "neonat" 7, "P0" 4, "behavio" 2, "body weight" 1 (only luciferin dosing "150 mg/kg body weight"). Route 2: Results headings are PTC burden/agnostic rescue; payload tests in vitro; scAAV in brain; durability; tRNA-seq. None is a NMD, ribosome profiling, behaviour or seizure section. The only behaviour sentence is the Discussion one quoted in row 1e. Supp Fig S2/S3 and Supp Table S2 could not be read.
+
+Row 1a (in vitro, patient-derived Arg-UGA sites):
+(1) HEK293T, transient transfection of cDNA (SYNGAP1 or CDKL5 cDNA-P2A-NanoLuc, 19 Arg-TGA variants) plus plasmid ArgUCA sup-tRNA (tRNA-Arg-TCA-1-1, "ArgUCA"). Not endogenous locus.
+(2) UGA; Arg.
+(3) n/a (cells, 24 h post-transfection).
+(4) "n = 4 per construct"; Methods: "n = 4 independent measurements per condition".
+(5) PolyJet; "0.5 µg ... along with 0.5 µg of sup-tRNA-expressing plasmid".
+(6) n/a.
+(7) REPORTER (NanoLuc fusion). Locator Results: "all SYNGAP1-TGA mutants showed markedly reduced signal without sup-tRNA (0.7%-3.7% of WT), co-expression of ArgUCA tRNA increased luminescence for every mutant (37%-104% of WT)... 28- to 82-fold"; CDKL5 "(0.6%-14% of WT)"; "Rescue was weakest at R134X (8.2% of WT)". Denominator: the WT construct's own luminescence.
+(8) Legend Fig 1: "multiple unpaired t-tests with Holm-Sidak correction (P < .00001, n = 4 per construct)". Blinding/pre-specification not stated.
+(9) none here. (10) not mentioned; the cDNA constructs carry no introns, which is my observation (the paper does not say it). (11) authors: R134X "possibly owing to the position of this residue within a particularly complex protein fold".
+Flags: AD n/a, denominator = WT reporter signal. ST = multiple t-tests, n = wells/measurements. MF = reporter only.
+
+Row 1b (HT1080 AAV transduction):
+(1) HT1080 cells transduced with AAV/scAAV sup-tRNA then transfected NLuc-TGA plasmid.
+(2) UGA; Arg.
+(3) n/a.
+(4) "n = 3 technical replicate wells per group/time point".
+(5) AAV/scAAV, U6 or 100-bp genomic context, with or without tRNA intron; no dose stated in text.
+(6) n/a.
+(7) REPORTER (NanoLuc luminescence at 24 and 48 h); only ranking given ("scAAV-G and scAAV-G(I) remained the most potent"), no percent figures in the text.
+(8) Welch ANOVA + Dunnett T3 (Methods); exact p not given.
+(9) none. (10) none. (11) none specific.
+Flags: AD n/a. ST = technical wells, not independent. MF = reporter.
+
+Row 1c (core in vivo; mouse brain, neonatal dosing):
+(1) Mouse. LumA = heterozygous Rosa26 firefly luciferase R387X (c.A1159T) knock-in transgene reporter, C57BL/6J (JAX 038165 x JAX 000664). It is a reporter at a Rosa26 locus, not an endogenous disease gene.
+(2) UGA (TGA); Arg (ArgUCA).
+(3) Dosed "postnatal day 0-1 (P0-P1)" ICV; in vivo IVIS at "postnatal day 30 (P30)"; longitudinal "P30 and P80"; ex vivo and tRNA-seq brains harvested "at P30". Genotyping "at postnatal day 21 (P21)" (stated in Methods).
+(4) Longitudinal in vivo "n = 3-4 per condition" (Methods); ex vivo "n = 4 per condition"; Fig 3E,F "n = 3 per condition"; tRNA-seq "n = 3 per group"; other in vivo group sizes only in Supp Table S2 (not reached). n counts animals ("individual biological replicates").
+(5) AAV2/9 and self-complementary scAAV2/9; promoter U6 or a 100-bp genomic tRNA context (G), with/without tRNA intron (I), 1x or 4x tRNA; ICV into the lateral ventricle, 32-gauge needle, Kopf neonatal frame. Doses stated: "7 × 10^8 vg per mouse" (Fig 3A,B), "1 × 10^10 vg" (Fig 3C,D). No dose stated in the text for the Fig 2F ex vivo experiment.
+(6) Whole-brain luminescence by transcranial IVIS ROI over the brain, and ex vivo brain luminescence (200 µl D-luciferin per brain). No region or cell-type resolution for the luciferase readout. Methods: "A 20-min interval was allowed to ensure sufficient penetration of luciferin across the blood-brain barrier".
+(7) REPORTER (luciferase bioluminescence), fold over background. Locators:
+ - Results "scAAV-G(I) brains exhibited a 7.7-fold increase in signal" (ex vivo, injected vs uninjected).
+ - "ROI luminescence and normalized to background luminescence in the LumA mouse line" (in vivo at P30).
+ - At 7 × 10^8 vg: "the mO2-TGA negative control vector showed no increase above baseline luminescence ... five out of the six tRNA-expressing vectors produced significant reporter rescue... scAAV-G and scAAV-U6, each producing ~3.3-fold increase above background... scAAV-G(I) and scAAV-U6(I) ... two-fold ... single-stranded AAV vectors ... ~2.8-folds".
+ - At 1 × 10^10 vg: "scAAV-G produced the largest increase (12-fold over background), followed by scAAV-G(I) (seven-fold)... scAAV-U6 and AAV-U6 showed no significant differences than the negative control... 4.5-fold and 2.9-fold"; "scAAV-4×G(I) yielded over 16-fold over background".
+ - Durability: "Luminescence in injected mice remained consistently elevated, showing a 17.25-24.17-fold difference between groups across time points" (P30-P80, vs age-matched uninjected).
+ - Supp Fig S3 (fluorescence): "native mOrange signal was undetectable [mO2-TGA alone] ... co-expression of mO2-TGA and ArgUCA tRNA produced widespread mOrange-positive neurons across the injected brain region" (qualitative; no n, no quantification stated; a vector-delivered TGA reporter, not an endogenous gene).
+ - No endogenous protein, enzyme activity, or phenotype in brain.
+(8) Methods: "mean ± SEM unless otherwise indicated"; Fig 3 legend says "mean ± SD". Ex vivo: "unpaired two-tailed t-test with Welch's correction (n = 4 per condition)", Fig 2F "P < .05". Longitudinal: "two-way ANOVA followed by Šídák's multiple-comparisons test (n = 3-4 per condition)". Multi-group: Brown-Forsythe/Welch ANOVA + Dunnett T3. Exact p not given in text. Pre-specification or blinding: not stated ("blind" and "randomi" 0 hits). Note SEM vs SD inconsistency between Methods and legend.
+(9) Safety/off-target as measured: (a) brain tRNA-seq (P30, n = 3 per group): "cytosolic tRNAs comprised 95.6% and 94.1% of the total tRNA, respectively [injected, uninjected]"; the sup-tRNA is "only 1.2% of the ArgUCU tRNA anticodon family" (the Introduction says "roughly ~2% of the native parental Arg-TCT-1-1 tRNA", so a text inconsistency); "no apparent changes across endogenous Arg-tRNAs"; charging "not different"; sup-tRNA processed (mature predominant) and lacks an m3C32 signature. (b) cleaved caspase-3 IHC on "scAAV-G-injected mice": "Cleaved caspase-3 staining was not detectable" (n not stated). (c) Discussion: "we observed no obvious changes to mouse behavior or physiology" (not a measured behaviour battery). No ribosome profiling and no proteomics of native stop codons (0 hits); the Discussion's "methods to quantify off-target interactions" refers to tRNA-seq only. Native-stop-codon statements are literature citations ("appear to have minimal interactions with native stops [18, 24, 31]").
+(10) NMD not mentioned (0 hits); the Rosa26 luciferase R387X reporter's NMD sensitivity is neither stated nor measured.
+(11) Authors' own limitations, quoted: "future studies will be needed to better understand the tRNA expression threshold of these observations"; "additional studies will be needed to expand this analysis to subregions of the brain and to perform more detailed behavioral assessments"; "more data are needed to parse the mechanistic basis for this phenomena"; "There are likely many unresolved details in this mechanism".
+Flags: AD = dosed P0-P1, read P30 (to P80); denominator = background luminescence of the LumA line / uninjected age-matched, fold not percent of WT. ST = n 3-4 animals, Welch/ANOVA, SD/SEM inconsistent, no exact p, no blinding stated. MF = marker (reporter luciferase and fluorescence); no measured brain function.
+
+=== P2 (Nature 2023, PMC10284701) ===
+ABSENCE CHECKS: whole-text counts: "brain" 0, "CNS" 0, "neonat" 0, "P0" 0, "juvenile" 0, "behavio" 0, "neuron" 1 (the CLN2 name context: "late infantile neuronal ceroid lipofuscinosis", TPP1 only as a reporter sequence). Route 2: Results headings are Engineering sup-tRNAs; efficacy at different PTCs; In vivo efficacy of LNP-sup-tRNA; Safety of LNP-sup-tRNA in mice; efficacy on protein expression; sup-tRNA antagonizes NMD; efficacy in hNE cells. No CNS tissue appears under another name. Mice: Balb/C (liver, IV), flox-tdTomato (lung, IT). Not read: Supplementary Information/Source Data.
+
+Row 2a (cell lines, reporter):
+(1) Hep3B, Hepa1-6, CFBE41o-, HEK293 TLR cells; plasmid or mRNA PTC-FLuc reporters (15 codons of TPP1 R208X; CFTR S466X) with IVT sup-tRNA (Lipofectamine/MessengerMax).
+(2) UGA, UAG, UAA tested for tSA1T5 (UGA and UAG > UAA); tSA1T5 inserts Ser (MS in Hepa1-6: "incorporation of Ser at the UGA stop codon", "No tryptophan or selenocysteine was detected"); tR variants insert Arg; tG Gly.
+(3) n/a.
+(4) e.g. Fig 1c "n = 4 independent replicates"; Fig 1d "n = 6".
+(5) IVT tRNA by lipid transfection; no vector.
+(6) n/a.
+(7) REPORTER; magnitudes normalised to WT FLuc (values in figures, not text).
+(8) "One-sided t-test", mean ± s.e.m.; blinding not stated.
+(9) TLR7/8: sup-tRNA "did not activate TLR7 and only marginally activated TLR8"; viability measured.
+(10) not applicable to cDNA reporters; see 2c.
+(11) "the PTC sequence context also modulates sup-tRNA efficacy".
+
+Row 2b (in vivo, liver and lung; the only mouse work):
+(1) Balb/C female mice: co-delivered exogenous aLucR208X mRNA reporter (NMD-irrelevant exogenous mRNA) with IVT sup-tRNA; flox-tdTomato transgenic (B6.Cg-Gt(ROSA)26Sortm14(CAG-tdTomato)Hze/J) with PTC-cre mRNA (two UGA PTCs, S69X/S82X). Not an endogenous disease locus.
+(2) UGA; Ser (tSA1T5, tS).
+(3) Liver: "8-10 week old, female Balb/C"; lung: "six- to ten-week-old, female" mice. Adults, not neonates. Readout 6 h and 24 h (IVIS), and 48 h after the last IT dose (lung).
+(4) IV: "n = 3 per group" (animals; 33 mice total); lung "n = 4 mice in each group" (24 mice); ribosome profiling "2 female wild-type mice" IV and 2 IT, each as "an independent library"; microarray stability "Four female Balb/C mice", "n = 2 independent replicates" in legend.
+(5) LUNAR LNP (LUNAR1 lipid:RNA 25:1 IV; LUNAR2 15:1 IT microsprayer); sup-tRNA and reporter mRNA co-encapsulated. Doses stated: "0.6 and 1.2 mg sup-tRNA per kg" with "0.3 mg mRNA per kg"; IT "0.35 mg kg-1 of each tRNA and mRNA on day 0 and day 2". No vector, no promoter (RNA).
+(6) Whole-body IVIS (liver assumed by route; Methods call it "liver haemophilia B"-like earlier work), lung IHC: tdTomato in ciliated (FOXJ1) and secretory (MUC5B) cells.
+(7) REPORTER. "Six hours after intravenous administration, we detected a readthrough of up to 66% for tSA1T5 and 13% for tS... Twenty-four hours after ... 40%". Denominator: Fig 2b legend, "mean value of the corresponding aLuc(R208S) plus sup-tRNA group is set to 100%". Lung: qualitative IHC images, no percent, no statistic.
+(8) Fig 2b "One-sided t-test", mean ± s.e.m. Methods: "Mice were chosen randomly for treatment with either control or experimental conditions without blinding"; "No statistical tests were used to predetermine the sample size". (Blinded: only the µOCT ASL measurement in cells.)
+(9) Ribosome profiling in lung and liver (n = 2 mice each): "readthrough events at canonical UGA stop codons of a small number of transcripts (that is, 23 in the lung ... and 15 in the liver)... a similar number ... in the untreated control mice and at the other two stop codons... tSA1T5 did not enhance the readthrough at native stop codons beyond the stochastic background". Sampling 6 h after a single treatment. tRNA stability in liver: "remained stable for at least 72 h". No brain tissue. No body weight or toxicity readout for mice in the text.
+(10) NMD discussed and measured in cells only (CFTR R1162X in 16HBEge and hNE; "tR and tRT5 alone markedly stabilized the expression of full-length CFTR mRNA"); not measured in mouse tissue (in vivo reporter is exogenous mRNA).
+(11) quoted: "Considering the intrinsically low transfection efficiency of hNE cells (approximately 20% in these studies), we acknowledge that much higher efficacy of restoration of CFTR function might be achieved in vivo" (a cell-culture limit); "the treatment and dose to block NMD must be carefully tuned".
+Flags: AD = adults 6-10 weeks, readout hours; denominator = R208S sup-tRNA group set to 100%. ST = one-sided t-test, n = 3-4 animals, no blinding. MF = reporter in lung/liver; no brain.
+
+Row 2c (CFTR, endogenous-locus cells and primary epithelia):
+(1) CFBE41o- cDNA; FRT stable PTC-CFTR cDNA; 16HBEge gene-edited endogenous CFTR R1162X/-; hNE patient cells R1162X/R1162X.
+(2) UGA; tR/tRT5 Arg.
+(3) n/a. (4) 3-8 independent replicates (e.g. hNE n = 8 and 4). (5) IVT tRNA by Lipofectamine.
+(6) n/a.
+(7) ENDOGENOUS PROTEIN and FUNCTION in cells: "tS variants resulting in up to 75% and tR variants resulting in up to 27% of the expression level of cells transfected with wild-type CFTR"; Isc "up to 9% and 3%" (FRT cDNA); hNE "up to 14% of the wild-type activity" (tRT5 alone); ribosome profiling of CFTR R553X 22% of WT; ASL height restored "after 35 h".
+(8) one-sided t-tests, two-way ANOVA with Sidak for ASL (ASL measured "by an investigator blinded to treatment"). (9) ribosome profiling in CFBE41o- R553X: "uniform ribosome coverage ... no substantial ribosomal drop-off". (10) see above. (11) as above.
+
+=== P3 (Sci Rep 2024, PMC11685654) ===
+ABSENCE CHECKS: "in vivo" 0, "animal" 0, "neonat" 0, "postnatal" 0, "NMD" 0 as the string (the phrase "non-sense mediated mRNA decay" appears once in the Discussion), "mouse" 7 / "mice" 1 (all in the text as prior-work, genetic-model or future-plan references), "blind" 0, "randomi" 0. Route 2: Results headings are "ACE-tRNAs efficiently suppress premature UGA termination codons" and "ACE-tRNAs overcome the limitations ... drug-mediated readthrough"; all figure legends are HEK293T. Future-plan quote: "by administering ACE-tRNAs in a Cdkl5 mouse model featuring a nonsense mutation, we will establish the safety of this approach". No animal experiment.
+
+Row 3 (only system):
+(1) HEK293T cells; transfected cDNA GFP-CDKL5_1 (107 kDa, N-terminal GFP) WT or R59X, R134X, R550X, plus plasmids of 1X or 4X ACE-tRNA-Arg-UGA (parent tRNA-Arg-TCT-3-1 → UCA). Not endogenous CDKL5 locus (endogenous proteins VSNL1, MeCP2, EB2, MAP1S measured as targets/probes in the same cells).
+(2) UGA; Arg.
+(3) n/a (24 h post-transfection).
+(4) Not stated for the readthrough blots (legend); "The average of four independent experiments" for Mecp2/Vsnl1 off-target; IF "at least 3 coverslips per group". n counts independent experiments/coverslips (cells for violin plots).
+(5) calcium phosphate, 1.2 µg DNA at 1:1; no animals.
+(6) n/a.
+(7) ENDOGENOUS PROTEIN/ENZYME ACTIVITY readouts are cellular: readthrough ratio "94% ± 6.2%" (R134X, 1X), "93% ± 8,51%" (R59X), "68% ± 18.36%" (R550X), 4X "up to 82% ± 3,86%" (denominator = full-length / sum of all GFP-CDKL5 bands, i.e. truncated + full length, not WT); catalytic activity by pTyr171 and endogenous EB2 pSer222 / MAP1S p-Ser900, normalised to untreated WT GFP-CDKL5 (values only in figures, text says "highly effective in restoring CDKL5 catalytic activity" and for EB2 "significantly increased with 4X ACE-tRNA in R59X-transfected cells"); localisation nuclear/cytosolic restored (R59X) or "slightly ameliorated" (R550X).
+(8) mean ± SEM; Kruskal-Wallis/Dunn; two-way ANOVA/Sidak (mRNA); exact p not given (*p<0.05 etc.); ROUT/Grubbs outliers removed; blinding not stated.
+(9) Native stop codon proxy: Mecp2 and Vsnl1 (both end in UGA) "Mecp2 levels corresponded to 113,81 ± 18,9 and 113,61 ± 9,3 [1X, 4X] compared with control cells, and Vsnl1 levels to 97,85 ± 7,9 and 116,44 ± 22,6", no change in electrophoretic mobility. No Ribo-seq. Toxicity not measured (the 2 "toxic" hits are intro/discussion).
+(10) NMD mentioned only as a possible difference between cDNA and genome: "half-life of PTC-bearing transcripts could be affected by parameters or mechanisms that might be not present or might be altered in a cDNA context, such as non-sense mediated mRNA decay"; mRNA measured by qRT-PCR (Fig 2): "levels of the mutated CDKL5 mRNAs are comparable with those of the WT transcripts, with the R134X mRNA showing the lowest levels"; R134X mRNA upregulated by ACE-tRNA.
+(11) quoted: "the safety of this approach will be further investigated in the future by performing Ribo-seq analyses"; "conclusions in this regard will be drawn only after repeating the study in an endogenous genomic context"; "proteins extended to the carboxy-terminus can be degraded by cellular surveillance mechanisms".
+Flags: AD n/a, denominator = total GFP-CDKL5 bands (readthrough fraction) or untreated WT (phosphorylation). ST = SEM, nonparametric tests, small n not stated. MF = molecular function (kinase phosphorylation) in HEK293T, not a brain or animal function.
+
+=== P4 (Front Neurol 2026, PMC13267816) ===
+ABSENCE CHECKS: "in vivo" 4 (all "further in vivo validation"/future; Abstract: "further in vivo validation and delivery optimization is required"; Discussion: "our future studies will be conducted in a genomic context, ideally in human cells and in vivo"), "mice" 0, "animal" 0, "neonat" 0, "NMD" 0, "nonsense-mediated" 0, "Ribo" 1 (literature citation: "Lueck et al., performed ribosomal profiling"), "blind" 0, "randomi" 0. Ethics statement: "only commercially available established cell lines were used". Route 2: Results headings cover HEK293T readthrough, dose optimisation, NIH3T3 localisation, TBL1 recruitment; no animal section.
+
+Rows:
+Row 4a (HEK293T): (1) HEK293T, cDNA GFP-hMeCP2 WT, R168X, R255X, R270X + plasmid 1X/4X ACE-tRNA-Arg-UGA (tRNA-Arg-TCT-3-1→UCA) or scrambled (SCR). (2) UGA; Arg. (3) n/a. (4) "each dot corresponds to an independent biological replicate", n not given in text. (5) calcium phosphate, 0.8 µg DNA, ratios 1:1 to 1:7. (6) n/a. (7) ENDOGENOUS-style PROTEIN (cDNA fusion) quantified by western: 1X "R168X and R270X exhibited ~50% recoding, whereas R255X reached only ~32%"; 4X "R168X 64.1%, R255X 47.8% R270X 56.5%" (denominator = full-length / sum of all GFP-MeCP2 bands); vs average WT signal: 1X 46.1%, 22.9%, 68.3%; 4X "76.6% for R168X, 57.4% for R255X, and 85.3% for R270X". (8) mean ± SEM; unpaired t test (Fig 1), one-way ANOVA/Tukey (Fig 2), exact p not given. (9) None measured; off-target statement is a citation: "an event we previously showed to be undetectable by western blot in these conditions (26)". (10) not mentioned. (11) "the GFP tag might stabilize truncated products, potentially leading to an underestimation"; "Although these findings require validation in a genomic context".
+Row 4b (NIH3T3 localisation and TBL1): (1) NIH3T3 mouse fibroblasts, Lipofectamine 2000 co-transfection of GFP-MeCP2 variants, 4X ACE-tRNA, TBL1-mCherry. (2) UGA; Arg. (3) n/a. (4) "biological n = 3", cells analysed: 113, 81, 121 (localisation); 104, 98, 81, 75, 186, 87, 95 (TBL1); n counts coverslip means ("each dot represents the mean value obtained from one coverslip"). (7) FUNCTION in cells (surrogate marker): R168X heterochromatin foci "9%" with SCR vs "98%" with 4X (as % of WT+SCR set to 100%); TBL1 recruitment WT 89%; "0% of R168X-, 1% of R255X- and 5% of R270X-expressing cells" (SCR) vs rescue "59% for R168X-, 66% for R255X, and 75% for R270X". (8) one-way ANOVA/Tukey, "****p < 0.0001"; no blinding stated. (9) none. (10) not mentioned. (11) "TBL1 remained cytoplasmic in some cells, likely reflecting limiting MeCP2 expression"; "residual truncated protein persisting in a subset of cells"; "the long-term off-target and tissue-specific safety of ACE-tRNAs, particularly under chronic administration, remains to be fully established"; "These results represent an initial step ... whether the levels of recoded MeCP2 achieved are sufficient to exceed the therapeutic threshold".
+Flags: AD n/a; denominators = total GFP-MeCP2 bands, average WT signal, or % of WT+SCR. ST = SEM, t test/ANOVA, n of cell experiments. MF = cell-level marker of function (foci, TBL1), no animal or brain tissue.
+
+=== P5 (Nat Biotechnol 2026, PMID 41555020; publisher page text read, NOT abstract only) ===
+Whole-text counts: "brain/Brain/cerebell/hippocamp" 0, "neonat" 0, "postnatal" 0, "juvenile" 0, "CNS" 1 (a reference title only: "CNS-specific tRNA"), "intracerebroventricular" 0, "blind" 0, "randomi" 0. Route 2: Results headings: UGA-sup-tRNA candidates; silencing for rAAV production; yield/purity; efficacy in a native nonsense mouse; tissue preference; second mouse model and fibroblasts. Tissues named are liver, heart, quadriceps/skeletal muscle (and serum). Not read: Supplementary Tables 1-4 and source data. The Europe PMC abstract (verbatim fields): "A single administration in mouse models of two distinct lysosomal storage disorders restores enzymatic activity to approximately 10% of normal levels."
+
+Row 5a (cells): (1) HEK293 (dual-luciferase and digenic GLuc/EGFP-FLAG TGA reporters); patient CLN2 fibroblasts (R127X/R208X) with lentivirus. (2) UGA; Arg (R8 = tRNA-Arg-TCA-based; MS in Idua cells: "predominantly installs an arginine residue ... (91.7%) but also incorporates glutamine and aspartate"). (3) n/a. (4) n = 3 biological repeats typical; Fig 3a n = 2. (5) plasmid co-transfection; lentiviral CuO-hNFS-R8. (7) REPORTER (GLuc, EGFP) in HEK293; ENDOGENOUS ENZYME ACTIVITY in patient fibroblasts: "restored TPP1 enzyme activity to 11% of the normal level" (vs normal fibroblasts). (8) two-sided unpaired t-test / one-way ANOVA with Dunnett; mean ± SD. (9) n/a (10) n/a (11) "As rAAV-mediated transduction of in vitro cell culture is inefficient".
+Row 5b (liver hydrodynamic reporter, adult mice): (1) WT mice, tail-vein hydrodynamic injection of reporter + sup-tRNA plasmids (digenic TGA GLuc/EGFP-FLAG). (3) age not stated; killed 24 h after injection. (4) "n = 2 or 3" per group (individual animals). (5) "2.5 ml of saline containing 25 µg of reporter plasmid and 25 µg of sup-tRNA plasmid". (6) liver. (7) REPORTER (serum GLuc, liver EGFP-FLAG by western, IHC); WT reporter set to 100%. (8) one-way ANOVA + Dunnett, mean ± SD.
+Row 5c (endogenous locus, systemic AAV, enzyme activity): (1) Idua W401X(TGA) KI/KI (C57BL/6J, CRISPR) knock-in at the endogenous locus; Cln2 R207X (JAX 030696) KI/KI. (2) UGA; Arg (mostly). (3) Age at dosing NOT STATED for Idua KI/KI or Cln2 mice (route 1: "weeks of age" appears once, for the normal-mouse tRNA experiment; route 2: Fig 4/ED 10 legends and Methods give only "killed at 4 or 20 weeks after treatment"). Readout 4 weeks (Fig 4, ED10) and 20 weeks (ED8) after treatment. The safety group: "male normal mice at 5-6 weeks of age ... killed 10 weeks later" (n = 3), so that group was juvenile at dosing, but tRNA/histology there was in heart, quads and liver only. (4) "n = 5 or 6" animals (Fig 4b-d); ED8 n = 6; ED10 n = 5 or 6; vector genomes n = 3 or 4. (5) rAAV9 or MyoAAV, 2xCuO-hNFS-R8 (VG4), tail-vein IV, "3.5 × 10^12 vector genomes per mouse". (6) liver, heart, quadriceps/skeletal muscle; vector genomes measured per tissue (Fig 4e). No brain. (7) ENDOGENOUS ENZYME ACTIVITY (IDUA) as % of WT: "restored 1.4% of IDUA enzyme activity in the liver ... at 4 weeks ... (≤0.5%) in the heart and skeletal muscles"; MyoAAV "7% to 17% of WT IDUA activity levels in the heart and skeletal muscles"; Cln2 "7-12% of TPP1 enzyme activity in the heart and skeletal muscles"; also mRNA ratio (NMD measured). (8) two-sided unpaired t-test or one-way ANOVA + Dunnett, mean ± SD; blinding/randomisation not stated (0 hits). (9) Sup-tRNA level and charging in tissues by tRNA sequencing (n = 3), "Expressing the sup-tRNA had little to no impact on the charging efficiency or expression levels of its parental isodecoder"; "We observed no signs of toxicity in histological analyses of various tissues"; "body weight gain and normal clinical blood chemistry". No Ribo-seq performed here: the Discussion cites earlier Ribo-seq ("Ribo-seq studies showed that sup-tRNAs generally induced undetectable or low levels of NTC readthrough 10, 37"; "despite the detection of NTC readthrough using Ribo-seq 10"). (10) NMD IS measured: "PTC readthrough antagonized NMD and markedly restored the Idua W401X(UGA) mRNA levels"; "triggered NMD of the Idua W401X(UGA) mRNA". (11) quoted: "safety will need to be carefully evaluated in future translational studies"; "Future studies may involve high-sensitivity proteomics analysis"; "clinical deployment may require tailored agents for different tissues"; "the lack of a positive correlation between gene delivery efficiency and PTC readthrough across tissues".
+Flags: AD = age at dosing not stated for the efficacy mice; denominator = % of WT enzyme activity. ST = n 5-6 animals, SD, Dunnett. MF = enzyme activity marker; no function or brain.
+
+(4) P6 LIST (PMC11269797, Neurotherapeutics 2024 review; second-hand, identification only)
+The review's primary in vivo sup-tRNA studies, with brain/CNS flag and age as the review states (the review states no dosing age for any):
+- Wang et al. 2022, Nature, "AAV-delivered suppressor tRNA overcomes a nonsense mutation in mice" (PMID 35322228, PMC9446716; ref 46 in the review): Idua W401X (TAG) Hurler mouse, systemic rAAV9 sup-tRNA-Tyr; review states "The sup-tRNA could function in various tissues including the liver, heart, muscle, and brain, through optimization of AAV capsid and the route of administration"; age at dosing not stated in the review. The only cited primary with a brain claim.
+- Albers et al. 2023, Nature (PMID 37258671; ref 47; this is P2): liver and lung LNP; no brain.
+- Kiselev et al. 2002, Mol Biol (Mosk) (ref 68; PMID not given in my parse): UAA sup-tRNA plasmid into mdx muscle; not CNS.
+- Katrekar and Mali 2017, bioRxiv (ref 69): AAV8 UAA-sup-tRNA-Ser intramuscular in mdx; not CNS.
+- Kuchino et al. 1987, PNAS (ref 57): natural UAG suppressor Gln tRNA in mouse cells; not therapy.
+- The review says of CNS mouse models only: "only a limited number of nonsense-mediated mouse models are available" and "testing sup-tRNAs ... in these available mouse models may inform"; it proposes (not reports) Aspa nur7 for UAA-sup-tRNA ("may provide a useful tool to test UAA-sup-tRNA function in oligodendrocytes"); Table 3 caption "Representative disease mouse models harboring nonsense mutations" (table content not in the text I rendered). The review's own concluding statement: "Developing sup-tRNA therapeutics is still at the early stage, awaiting more studies that demonstrate sufficient in vivo PTC readthrough and meaningful therapeutic efficacy in disease animal models".
+So the review lists no sup-tRNA neonatal or juvenile mouse brain study other than Wang 2022.
+
+THREE EUROPE PMC SEARCHES (MED source, 2019-2026, lite, 50 per page; query strings in my scratch only as run):
+S1 = (suppressor/sup/ACE/anticodon-engineered/edited tRNA) AND (brain OR neonatal OR intracerebroventricular OR "central nervous system") AND (mouse OR mice): hitCount 104.
+S2 = (suppressor tRNA / sup-tRNA / ACE-tRNA / "nonsense suppressor") AND (AAV OR adeno-associated) AND (neuron(s) OR cortex OR hippocampus OR cerebellum OR "spinal cord" OR retina): hitCount 48.
+S3 = tRNA AND (PTC / nonsense / readthrough) AND (neurodevelopmental / epilepsy / ID / Rett / Angelman / Dravet / SYNGAP1 / CDKL5) AND (in vivo OR mouse): hitCount 272.
+Candidates not already in my list (title/abstract only; none read in full; I used the PubMed tool for abstracts of these five):
+- 41261131, 2025, Nature, Pierce et al., "Prime editing-installed suppressor tRNAs for disease-agnostic genome editing": abstract says in vivo prime editor in a Hurler mouse model "extensively rescued disease pathology"; abstract does not name brain or age.
+- 41407712, 2025, Nat Commun, Ren et al., "AAV-delivered engineered suppressor tRNA rescues visual function in mice with an inherited retinal disease": RPE65-R44X mouse, scAAV8, retinal (a CNS tissue; RPE) protein and function (ERG); age not in abstract.
+- 42265079, 2026, Signal Transduct Target Ther, Shahi et al., "Engineered tRNA reduces vision loss in a mouse model of Leber congenital amaurosis": subretinal HDAd ACE-tRNA in KCNJ13 W53X mouse, ERG; age not in abstract.
+- 41641696, 2026, Nucleic Acids Res, Porter et al., "ACE-tRNAs encoded as therapeutic nonviral minimal DNA vectors": CFTR and REP1, cell or ex vivo; no in vivo brain in abstract.
+- 42460447, 2026, NAR, P1 itself (appears in S1 and S2; not new).
+Also surfaced and not tRNA primaries: reviews (e.g. 42941401, 41683838, 38801719). I found no other hit whose title or abstract (where seen) reports a sup-tRNA in vivo brain readout in a neonatal or juvenile mouse. Limit of this negative: three queries, title/abstract screen mostly by title (only five abstracts opened), preprints and non-MED sources not searched.
+
+(5) ONE SENTENCE PER PRIMARY: "In vivo brain readout of protein or function from a sup-tRNA in a neonatal or juvenile animal, endogenous locus or reporter?"
+- P1: YES for a reporter only: P0-P1 ICV scAAV9 ArgUCA gave transcranial and ex vivo luciferase signals at P30 (and P30-P80) in the Rosa26 firefly-luciferase R387X reporter mouse (Results "scAAV9 ... Fig 3"; "scAAV-G(I) brains exhibited a 7.7-fold increase in signal"; "scAAV-4×G(I) yielded over 16-fold over background"; "17.25-24.17-fold difference"), plus qualitative mOrange2 fluorescence from an AAV-delivered mO2-TGA reporter (Supp Fig S3, not reached); no endogenous-gene protein, no enzyme activity, no behavioural, seizure, survival or electrophysiology readout in brain.
+- P2: NO: no brain, CNS or neonatal tissue or animal (counts "brain" 0, "neonat" 0); in vivo work is adult liver (aLuc reporter, IVIS) and adult lung (flox-tdTomato Cre reporter) after LNP delivery (Results "In vivo efficacy of LNP-sup-tRNA"; Methods "8-10 week old, female Balb/C mice").
+- P3: NO: no animal experiment at all (counts "in vivo" 0, "animal" 0); HEK293T cDNA only (Results; Discussion "we will assess efficacy ... in a native human and mouse genomic context").
+- P4: NO: no animal experiment (Abstract: "further in vivo validation and delivery optimization is required"; Ethics statement: only cell lines); HEK293T and NIH3T3 cells only.
+- P5: NO: no brain or neonatal readout (counts "brain" 0, "neonat" 0, "postnatal" 0); in vivo = adult liver hydrodynamic reporter, and endogenous-locus enzyme activity in liver, heart and skeletal muscle of Idua and Cln2 knock-in mice after IV rAAV9/MyoAAV, with dosing age not stated for those mice (the 5-6 week old group is the normal-mouse tRNA/safety group).
+
+(6) NOT CHECKED / LIMITS
+- All supplements, source data and extended data panels for P1-P5 (P1 Supp Table S2 holds per-experiment n, statistics and the dose of the Fig 2F ex vivo experiment; Supp Figs S2-S4 hold the per-animal ex vivo data, mOrange images, tRNA-seq); P1 text claims were taken from the main text only.
+- No figure images were opened; magnitudes are those quoted in text/legends. Values shown only as bars (CDKL5 pTyr171, EB2, MAP1S; P2 Extended Data) are not given.
+- P2 ribosome profiling n = 2 mice per tissue; I did not examine Extended Data Fig 8 panels.
+- The P5 publisher-page full text may not be stable open access (Europe PMC says closed); I did not test repeat access. I did not attempt a PMC or Europe PMC full-text route for it (no PMCID exists).
+- P6: Table 3 content (nonsense mouse models) not captured by my text render; ages at dosing in the cited primaries are not given in the review and I did not read the primaries (instruction).
+- P6 searches: 3 only, as instructed, with mostly title-level screening; Wang 2022 age at dosing, brain readout type and magnitude were not read (second-hand).
+- No operational claims about WWOX or any drug made.
+
+Files: scratch dir /home/desktop/.claude/jobs/d79b9c48/tmp/producer_rp037/ (PMC*/efetch.xml, txt/*.txt, P5_epmc/core.json, P5_doi/page.html, txt_P5_page.txt, P6_search/s1-3.json, scripts/tx.py).
+
