@@ -551,6 +551,13 @@
      "accepted_at": "2026-11-21T02:14:58Z",
      "evidence": "IT successor bf7d7d3b RUNNING (handoff): launched 02:20:22Z, old IT released 02:24:10Z, bound 02:24:20Z (10 s after release), first tool call 02:24:21Z (1 s after bind); full-page leads counted and not fixed (landed 44dc90e57)",
      "updated_at": "2026-11-21T02:24:44Z"
+    },
+    {
+     "step": "ADV-130: section-level 'Section text in English (source language)' notice (en/fr/de/es, blind check) on full-edition sections whose authored passages are English on a non-English page; fix the two '4-PBA / acido fenilbutirrico' occurrences on the full EN page; repeat the painted scan on full fr/de/es; extend the static guard",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV message with ADV-130 decision (assignments/ADV-130.md) of 2026-11-21, after the leads count",
+     "accepted_at": "2026-11-21T02:32:05Z"
     }
    ]
   }
@@ -973,6 +980,13 @@
    "at": "2026-11-21T02:14:58Z",
    "source": "ADV message (launch the IT successor now) and IT message (checkpoint 1 ready, nothing in flight) of 2026-11-21",
    "step_sha256": "c2d87b210431",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T02:32:05Z",
+   "source": "ADV message with ADV-130 decision (assignments/ADV-130.md) of 2026-11-21, after the leads count",
+   "step_sha256": "06f42648b0e7",
    "reopened_block": false,
    "authorised_by": null
   }

@@ -83,6 +83,48 @@ def data_fields_in_italian(page: str, it_page: str) -> list:
     return [v[:60] for (k, v), (k2, v2) in zip(here, original) if k == k2 and v and v == v2] + ([] if len(here) == len(original) else ["field count differs"])
 
 
+CLEAR_EN = frozenset("the of and with that which from this these those are was were not is to for by as on or be has have been it its their than into only when where".split())
+CLEAR_OWN = {"it": "di che il la le sono una del della dei nel nella è può più gli dal alla nei anche ogni questo questa degli delle dello nelle nello tra fra non per con".split(),
+             "fr": "le la les des du de un une et en pour avec par dans sur est sont pas ce cette ces au aux ou qui que dont non".split(),
+             "de": "der die das den dem des ein eine und in für mit von nicht ist sind war zu auf oder wird bei aus nur keine kein".split(),
+             "es": "el la los las del de un una y en para con por no es son este esta estos al o que se sin solo".split()}
+
+
+def english_sections_without_notice(page: str, lang: str, minimum: int = 3) -> dict:
+    """Sections of a non-English page whose OWN text (nested sections and marked passages left out) holds at least `minimum` clearly English sentences (40 characters or more, four or more English
+    function words, none of the page language's own) and carry no `sec-en-note`. ADV-130 (2026-11-21): the authored English passages of the pages are not translated; the page must say so.
+    Written apart from the generator's detector (a stricter one: longer text, more words) so that a miss in one is not a miss in both. Returns {section id: count}."""
+    body = re.sub(r"<script\b.*?</script>|<style\b.*?</style>", lambda m: " " * len(m.group(0)), page, flags=re.S)
+    spans, stack = [], []
+    for m in re.finditer(r"<section\b[^>]*>|</section>", body):
+        if m.group(0).startswith("</"):
+            a, b = stack.pop()
+            spans.append((a, b, m.start()))
+        else:
+            stack.append((m.start(), m.end()))
+    out = {}
+    for start, open_end, close in spans:
+        inner = body[open_end:close]
+        cut, last = [], 0
+        for a, b, c in sorted((x for x in spans if start < x[0] < close), key=lambda x: x[0]):
+            if a - open_end >= last:
+                cut.append(inner[last:a - open_end]); last = c + len("</section>") - open_end
+        cut.append(inner[last:])
+        own = "".join(cut)
+        if "sec-en-note" in own:
+            continue
+        own = re.sub(r"<(\w+)\b[^>]*(?:class=\"orig\"|lang=\"(?:it|en)\")[^>]*>.*?</\1>", "", own, flags=re.S)
+        n = 0
+        for t in set(re.findall(r">([^<>]+)<", own)):
+            t = re.sub(r"\s+", " ", html.unescape(t)).strip()
+            w = re.findall(r"[a-zà-ü]+", t.lower())
+            if len(t) >= 40 and sum(x in CLEAR_EN for x in w) >= 4 and not any(x in CLEAR_OWN[lang] for x in w):
+                n += 1
+        if n >= minimum:
+            out[re.search(r'id="([^"]+)"', body[start:open_end]).group(1)] = n
+    return out
+
+
 @unittest.skipUnless(HAVE, "module data or translation files absent")
 class InventoryIsCheckedWhereTheActorRunsIt(unittest.TestCase):
     """2026-11-12: a curated passage was edited, `i18n --what check` passed, and only the suite found the stale inventory in the battery."""
@@ -131,6 +173,40 @@ class FullViewEnumsAreTranslated(unittest.TestCase):
             page = rv.build(DR, "full", lg)
             self.assertEqual(raw_kinds_left(page), [], lg)
             self.assertEqual(italian_ui_strings_left(page, lg), [], lg)
+
+
+@unittest.skipUnless(HAVE, "module data or translation files absent")
+class EnglishAuthoredSectionsSayTheyAreEnglish(unittest.TestCase):
+    """ADV-130 (2026-11-21): the English-authored passages of the evidence, method and ranking sections are team working text and are not translated on the fr/de/es pages (nor on the Italian one).
+    Each such section carries a one-line notice (`sec-en-note`, translated), and the English page carries none. The pages are read from the files `check` keeps current."""
+
+    @classmethod
+    def setUpClass(cls):
+        def name(src, lg):
+            return ("index" if src == "full" else "index_shareable") + (".html" if (src, lg) in (("full", "it"), ("shareable", "en")) else f".{lg}.html")
+        cls.files = {(src, lg): (DR / "view" / name(src, lg)).read_text(encoding="utf-8") for src in ("full", "shareable") for lg in rv.LANGS}
+
+    def test_a_section_with_english_authored_text_on_a_non_english_page_carries_the_notice(self):
+        for (src, lg), page in self.files.items():
+            if lg != "en":
+                self.assertEqual(english_sections_without_notice(page, lg), {}, (src, lg))
+
+    def test_the_detector_sees_english_where_it_is_and_the_notice_is_in_every_language_and_absent_from_english(self):
+        bare = self.files[("full", "fr")].replace('<p class="mini mut sec-en-note">', '<p class="removed">')
+        self.assertGreater(len(english_sections_without_notice(bare, "fr")), 5)               # positive control: without the notices the English sections are found
+        for src in ("full", "shareable"):
+            self.assertNotIn("sec-en-note", self.files[(src, "en")], src)
+            for lg in ("it", "fr", "de", "es"):
+                self.assertIn("sec-en-note", self.files[(src, lg)], (src, lg))
+        tr = {lg: json.loads((DR / "view/i18n" / f"ui_{lg}.json").read_text(encoding="utf-8"))["UI_IT.sec_en_src"] for lg in ("en", "fr", "de", "es")}
+        self.assertEqual(len(set(tr.values())), 4)
+
+    def test_a_pilot_compound_name_is_shown_in_the_page_language(self):
+        """The data file pairs an Italian and an English name ('4-PBA / acido fenilbutirrico'); the pilot table printed it as it stands on every page."""
+        for lg, name in (("en", "4-PBA / phenylbutyric acid"), ("fr", "4-PBA / acide phénylbutyrique"), ("de", "4-PBA / Phenylbuttersäure"), ("es", "4-PBA / ácido fenilbutírico")):
+            body = html.unescape(re.sub(r"<script\b.*?</script>", "", self.files[("full", lg)], flags=re.S))
+            self.assertIn(name, body, lg)
+            self.assertNotIn("acido fenilbutirrico", body, lg)
 
 
 class FiveLanguages(unittest.TestCase):

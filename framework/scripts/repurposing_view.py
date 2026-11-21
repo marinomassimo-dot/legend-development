@@ -228,6 +228,62 @@ def localize_authored_nodes(page: str) -> str:
     return "".join(x if x.startswith(("<script", "<style")) else TEXT_NODE.sub(swap, x) for x in parts)
 
 
+# ADV-130 (2026-11-21): the authored English passages of the full edition (evidence, method and ranking text) are team working text and are not translated on the fr/de/es pages (nor on the
+# Italian one). The language state is made honest instead: a one-line notice at the head of each section whose OWN text (not that of a nested section) holds English-authored text.
+SEC_EN_MIN = 3   # English-looking text nodes of a section's own text that make it an English-authored section
+OWN_WORDS = {
+    "it": frozenset("di che il la le sono una del della dei nel nella è può più gli dal alla nei anche ogni questo questa degli delle dello nelle nello tra fra non per con e in un".split()),
+    "fr": frozenset("le la les des du de un une et en pour avec par dans sur est sont pas ce cette ces au aux ou qui que dont non aucun donnée données".split()),
+    "de": frozenset("der die das den dem des ein eine und in für mit von nicht ist sind war zu auf oder wird bei aus nur keine kein daten".split()),
+    "es": frozenset("el la los las del de un una y en para con por no es son este esta estos al o que se sin datos solo".split()),
+}
+EN_SRC_WORDS = frozenset("the of and to in for with by from not no is are was were that this these those as at on or be has have had its their which when than into only data record time access fatty acids acid none radial glia".split())
+SECTION_TAG = re.compile(r"<section\b[^>]*>|</section>")
+
+
+def english_authored_node(text: str, lang: str) -> bool:
+    t = re.sub(r"\s+", " ", html.unescape(text)).strip()
+    w = re.findall(r"[a-zà-ü]+", t.lower())
+    return len(t) >= 8 and len(w) >= 2 and sum(x in EN_SRC_WORDS for x in w) >= 2 and not any(x in OWN_WORDS[lang] for x in w)
+
+
+def mark_english_sections(page: str) -> str:
+    """Insert the `sec_en_src` notice after the heading of every section that carries English-authored text of its own, on a page that is not English. Marked passages (`orig`, `lang`), script,
+    style and the text of a nested section are not counted; a section that already carries a notice (the technical-data one) is left alone."""
+    lang = CUR["lang"]
+    if lang == "en" or lang not in OWN_WORDS:
+        return page
+    masked = re.sub(r"<script\b.*?</script>|<style\b.*?</style>", lambda m: " " * len(m.group(0)), page, flags=re.S)
+    spans, stack = [], []
+    for m in SECTION_TAG.finditer(masked):
+        if m.group(0).startswith("</"):
+            if stack:
+                spans.append((*stack.pop(), m.end()))
+        else:
+            stack.append((m.start(), m.end()))
+    inserts = []
+    for start, open_end, end in spans:
+        inner = masked[open_end:end - len("</section>")]
+        nested = [(a - open_end, b - open_end) for a, _, b in spans if start < a and b < end]
+        own, last = [], 0
+        for a, b in sorted(nested):
+            own.append(inner[last:a]); last = max(last, b)
+        own.append(inner[last:])
+        text = "".join(own)
+        if "technote" in text or "sec-en-note" in text:
+            continue
+        text = re.sub(r"<(\w+)\b[^>]*(?:class=\"orig\"|lang=\"(?:it|en)\")[^>]*>.*?</\1>", "", text, flags=re.S)
+        if sum(english_authored_node(t, lang) for t in set(TEXT_NODE.findall(text))) < SEC_EN_MIN:
+            continue
+        head = re.search(r"</h[1-6]>", inner)
+        first_nested = min((a for a, _ in nested), default=len(inner))
+        at = open_end + (head.end() if head and head.end() <= first_nested else 0)
+        inserts.append((at, '<p class="mini mut sec-en-note">' + E(UI_IT["sec_en_src"]) + '</p>'))
+    for at, frag in sorted(inserts, reverse=True):
+        page = page[:at] + frag + page[at:]
+    return page
+
+
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_DR = ROOT / "disease-models/wwox/research/drug_repurposing"
 REGEN_CMD = "python3 -B framework/scripts/repurposing_coverage.py run && python3 -B framework/scripts/repurposing_view.py run"
@@ -929,7 +985,7 @@ UI_IT = {
     "wo_h": "Piano di verifiche per bisogno",
     "wo_note": "Un elenco per bisogno, nell'ordine del registro dei bisogni: non è una sequenza di lavoro, non è una graduatoria di bisogni né di trattamenti e non ha punteggio. Per ogni bisogno: il motivo del prossimo studio (verificare un'ipotesi, chiarire una controevidenza o risolvere una premessa, coerente con le posizioni F, C, P del bisogno), una riga in italiano, la domanda, i dati che potrebbero risolverla, che cosa cambierebbe e la fattibilità realmente nota («non nota» quando non lo è).",
     "wo_update": "Aggiornamento della ricerca", "wo_catalogue": "Catalogo costruito il", "wo_dates_note": "due date diverse: la prima è l'ultimo aggiornamento di questo ordine di lavoro, la seconda la costruzione del catalogo dei composti",
-    "wo_kind": "Motivo del prossimo studio", "wo_kind_v": "verificare un'ipotesi", "wo_kind_c": "chiarire una controevidenza", "wo_kind_p": "risolvere una premessa", "sec_funnel": "Imbuto dal catalogo ai valutati: che cosa è contato, in quale unità", "sec_access": "Distribuzione per categoria di accesso", "sec_filters": "Filtri per la matrice completa", "sec_filters_note": "sezioni seguenti", "sec_needs": "Bisogni: direzione, Track, obiettivo, prove, livelli, lacune", "sec_matrix": "Matrice: interventi e famiglie di composti x bisogni", "sec_prio": "Disposizioni: una per coppia, con motivi per criterio", "sec_leads": "Piste derivate dal catalogo e loro disposizioni", "sec_limits": "Limiti dichiarati", "sec_tech": "Versioni, fonti, impronte digitali e rigenerazione", "sec_footer": "Fonti e licenze", "dc_sum": "Casi approfonditi a confronto", "dc_sum_short": "Casi approfonditi", "dc_n_note": "casi approfonditi sono consultabili nell'edizione completa locale; questa edizione non riporta i nomi dei composti.", "dc_intro": "Ogni caso risponde alle stesse domande. Il livello dice che tipo di sostegno esiste, non quanto il composto sia promettente: nessun livello è un punteggio di efficacia e la copertura di un percorso descrive collegamenti, non una quota di malattia trattata. Una misura funzionale può essere non specifica (per esempio ridurre le crisi anche nel tipo selvatico). Sconosciuto non significa negativo.", "dc_note_short": "In questa edizione i casi riportano la classe di composti e non i singoli nomi. Il precedente esterno e le misure farmacologiche (valori e testi derivati da ChEMBL, CC BY-SA 3.0, e da lavori di terzi) restano nell'edizione completa locale: nessun valore di potenza è riportato qui.", "dc_h_q": "Domanda biologica e livello", "dc_h_cls": "Classe di composti e azione", "dc_h_cmp": "Composto e azione", "dc_h_ev": "Evidenza WWOX", "dc_h_pharm": "Misura farmacologica e suoi limiti", "dc_limits": "Limiti:", "pl_sum": "Matching v3: composto, azione, contesto e beneficio — pilota", "pl_working_note": "Nota di lavoro, solo in italiano: i campi dei sette casi pilota non vengono tradotti e restano nella lingua in cui sono stati scritti.", "pl_intro": "Interpretazioni delle schede esistenti. Priorità di ricerca e requisiti di sviluppo restano separati. Sconosciuto non significa negativo; un risultato di classe non è una prova sulla singola molecola. Nessun punteggio di efficacia.", "pl_h_ctx": "Contesto e beneficio", "pl_h_next": "Prossima ricerca", "pl_h_req": "Requisiti per lo sviluppo", "pl_benefit": "Beneficio ipotizzato:", "pl_why": "Perché è emerso", "pl_support": "Evidenza a sostegno", "pl_refute": "Che cosa potrebbe confutarlo", "pl_sources": "Fonti e logica", "pl_despite": "Perché merita ricerca nonostante i requisiti irrisolti:", "pl_none": "nessun risultato WWOX attribuito a questa molecola", "wo_q": "Domanda", "wo_data": "Dati che potrebbero risolverla", "wo_change": "Che cosa cambierebbe", "wo_feas": "Fattibilità (solo ciò che è noto)",
+    "wo_kind": "Motivo del prossimo studio", "wo_kind_v": "verificare un'ipotesi", "wo_kind_c": "chiarire una controevidenza", "wo_kind_p": "risolvere una premessa", "sec_funnel": "Imbuto dal catalogo ai valutati: che cosa è contato, in quale unità", "sec_access": "Distribuzione per categoria di accesso", "sec_filters": "Filtri per la matrice completa", "sec_filters_note": "sezioni seguenti", "sec_needs": "Bisogni: direzione, Track, obiettivo, prove, livelli, lacune", "sec_matrix": "Matrice: interventi e famiglie di composti x bisogni", "sec_prio": "Disposizioni: una per coppia, con motivi per criterio", "sec_leads": "Piste derivate dal catalogo e loro disposizioni", "sec_limits": "Limiti dichiarati", "sec_tech": "Versioni, fonti, impronte digitali e rigenerazione", "sec_footer": "Fonti e licenze", "dc_sum": "Casi approfonditi a confronto", "dc_sum_short": "Casi approfonditi", "dc_n_note": "casi approfonditi sono consultabili nell'edizione completa locale; questa edizione non riporta i nomi dei composti.", "dc_intro": "Ogni caso risponde alle stesse domande. Il livello dice che tipo di sostegno esiste, non quanto il composto sia promettente: nessun livello è un punteggio di efficacia e la copertura di un percorso descrive collegamenti, non una quota di malattia trattata. Una misura funzionale può essere non specifica (per esempio ridurre le crisi anche nel tipo selvatico). Sconosciuto non significa negativo.", "dc_note_short": "In questa edizione i casi riportano la classe di composti e non i singoli nomi. Il precedente esterno e le misure farmacologiche (valori e testi derivati da ChEMBL, CC BY-SA 3.0, e da lavori di terzi) restano nell'edizione completa locale: nessun valore di potenza è riportato qui.", "dc_h_q": "Domanda biologica e livello", "dc_h_cls": "Classe di composti e azione", "dc_h_cmp": "Composto e azione", "dc_h_ev": "Evidenza WWOX", "dc_h_pharm": "Misura farmacologica e suoi limiti", "dc_limits": "Limiti:", "pl_sum": "Matching v3: composto, azione, contesto e beneficio — pilota", "sec_en_src": "Il testo di questa sezione è scritto in inglese, la lingua originale in cui è stato redatto dal gruppo: non è tradotto.", "pl_working_note": "Nota di lavoro, solo in italiano: i campi dei sette casi pilota non vengono tradotti e restano nella lingua in cui sono stati scritti.", "pl_intro": "Interpretazioni delle schede esistenti. Priorità di ricerca e requisiti di sviluppo restano separati. Sconosciuto non significa negativo; un risultato di classe non è una prova sulla singola molecola. Nessun punteggio di efficacia.", "pl_h_ctx": "Contesto e beneficio", "pl_h_next": "Prossima ricerca", "pl_h_req": "Requisiti per lo sviluppo", "pl_benefit": "Beneficio ipotizzato:", "pl_why": "Perché è emerso", "pl_support": "Evidenza a sostegno", "pl_refute": "Che cosa potrebbe confutarlo", "pl_sources": "Fonti e logica", "pl_despite": "Perché merita ricerca nonostante i requisiti irrisolti:", "pl_none": "nessun risultato WWOX attribuito a questa molecola", "wo_q": "Domanda", "wo_data": "Dati che potrebbero risolverla", "wo_change": "Che cosa cambierebbe", "wo_feas": "Fattibilità (solo ciò che è noto)",
     "wo_date": "Data", "wo_upd": "Aggiornato da", "wo_cards": "Schede coinvolte", "wo_pos": "Posizioni del bisogno", "wo_no_pos": "nessuna scheda collegata",
     "ws_prevented_early_window": "prevenzione (finestra precoce)", "ws_recovered_post_onset_model": "recupero dopo l'esordio (solo in un modello)",
     "ws_symptom_suppression_reversible": "soppressione sintomatica reversibile", "ws_unmeasured": "non misurato",
@@ -5336,6 +5392,11 @@ def rk_unit_detail(R: dict, u: dict, full: bool) -> str:
 OBJ_IT = {"broad": "Recupero ampio e duraturo", "partial": "Beneficio parziale o ponte"}
 
 
+# ADV-130 (2026-11-21): a compound name written in the data file as an Italian/English pair ("4-PBA / acido fenilbutirrico") was printed as it stands on every page; the data file is authored and
+# is not edited here, the generator shows the name in the page language. A name not listed is printed as it is.
+PILOT_COMPOUND_L10N = {"4-PBA / acido fenilbutirrico": {"en": "4-PBA / phenylbutyric acid", "fr": "4-PBA / acide phénylbutyrique", "de": "4-PBA / Phenylbuttersäure", "es": "4-PBA / ácido fenilbutírico"}}
+
+
 def render_matching_pilot(cases: list[dict]) -> str:
     U = UI_IT
     if not cases:
@@ -5347,7 +5408,7 @@ def render_matching_pilot(cases: list[dict]) -> str:
         direct = ", ".join(ev["assertion_ids"]) or U["pl_none"]
         requirements = "".join(f'<li><b>{E(states[r["state"]])}</b>: {lxi(r["question"])} — {lxi(r["reason"])}</li>' for r in c["development_requirements"])
         sources = "; ".join(c["source_pointers"])
-        rows.append(f'<tr><th scope="row">{E(c["compound"])}<br><span class="mini">{lxi(c["action"])}</span></th>'
+        rows.append(f'<tr><th scope="row">{E(PILOT_COMPOUND_L10N.get(c["compound"], {}).get(CUR["lang"], c["compound"]))}<br><span class="mini">{lxi(c["action"])}</span></th>'
                     f'<td>{lxi(c["context"])}<br><b>{E(U["pl_benefit"])}</b> {lxi(c["benefit_hypothesis"])}'
                     f'<br><span class="mini">{E(direct)}. {lxi(c["evidence_limit"])}</span>'
                     f'<dl class="mini pilot-why"><dt>{E(U["pl_why"])}</dt><dd>{lxi(c["generating_path"])}</dd>'
@@ -5669,6 +5730,7 @@ def render(P: dict, dr: Path = DEFAULT_DR) -> str:
         parts = re.split(r"(<script\b[^>]*>.*?</script>|<style\b[^>]*>.*?</style>)", page, flags=re.S)
         page = "".join(scrub_file_tokens(x, allow) if x.startswith("<script") else (x if x.startswith("<style") else re.sub(r">([^<]+)<", lambda m: ">" + scrub_file_tokens(m.group(1), allow) + "<", x)) for x in parts)
     page = localize_authored_nodes(page)
+    page = mark_english_sections(page)
     page = page.replace("__DATA__", data)  # last: the data may contain placeholder-like text
     return page
 

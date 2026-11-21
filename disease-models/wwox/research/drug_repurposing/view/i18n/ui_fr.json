@@ -1286,6 +1286,7 @@
  "UI_IT.rk_x_w": "assertions nulles, nocives ou mixtes dans des systèmes WWOX",
  "UI_IT.rk_yes": "oui",
  "UI_IT.sec_access": "Répartition par catégorie d'accès",
+ "UI_IT.sec_en_src": "Le texte de cette section est rédigé en anglais, la langue d'origine dans laquelle le groupe l'a écrit : il n'est pas traduit.",
  "UI_IT.sec_filters": "Filtres pour la matrice complète",
  "UI_IT.sec_filters_note": "sections suivantes",
  "UI_IT.sec_footer": "Sources et licences",
