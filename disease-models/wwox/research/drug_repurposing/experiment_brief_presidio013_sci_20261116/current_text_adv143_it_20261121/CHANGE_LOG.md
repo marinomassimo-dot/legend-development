@@ -114,3 +114,7 @@ Two limits of the checker, handled by hand. (1) It treats everything after the l
 
 ## Addendum 2026-11-21 (ADV-145 repair)
 After the round-2 cold read two fold-in errors were repaired (litter totals; SD values wording) and ten markers added (R2C01, R2C05, R2C09, R2C10, R2Q16, R2Q81, R2Q43, R2Q80, R2Q79, R2Q82) plus two notes in the History introduction. See `verify_adv145/COMPARISON_ADV145_IT_20261121.md` and `repair_adv145_it_20261121.py`. The status-box counts above (74 OPEN-GAP lines and 18 CONFLICT-OPEN lines) are those of the first version; the text now carries 80 and 22 lines containing those words.
+
+Second correction 2026-11-21: marker R2C09 first said that the confidence level of the primary comparison is not stated; the text states 95%, so the marker now names only the primary-versus-descriptive tension.
+
+Third correction 2026-11-21 (round-3 reader): see verify_adv146/COMPARISON_ADV146_IT_20261121.md and repair_adv146_it_20261121.py; the ADV-144 integration is integrate_adv144_it_20261121.py (markers replaced are kept in the History under "Markers replaced on 2026-11-21 (design-team group B)").
