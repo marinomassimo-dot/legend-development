@@ -1,0 +1,86 @@
+q_id	category	question
+Q01	document_structure	Which of the two documents is the current text where they differ, and does A replace B in full or only up to B line 9.11?
+Q02	document_structure	Are B lines 9.12 to 9.17 (dated after A) part of what the laboratory is asked to do, or background?
+Q03	document_structure	Which line 9.12 is meant: A's dated correction counted as 9.12, or B's calcium line 9.12 dated 2026-11-21?
+Q04	document_structure	For each dated line, which sentence of the body does it change, and does the body text above it already carry the change?
+Q05	document_structure	What do the dated lines on ORDERING_PAGE.md (rows 4 and 6, the age series, the glucose add-on) say, and do they alter the age series of section 2 item 3?
+Q06	document_structure	Will the laboratory receive the frozen priors file, and which definitions in the briefs does it override?
+Q07	document_structure	Which of the files named in the documents does the laboratory need (EXPERIMENT_BRIEF_V1_1.md section 13.11, the slice package, the age-window table, dossiers)?
+Q08	document_structure	Who are 'I' and 'me' in the text, and is the laboratory meant to act on these first-person remarks?
+Q09	document_structure	"Is the section ""For the operator"" (including who decides whether to approach a laboratory) meant for the laboratory's eyes?"
+Q10	document_structure	The laboratory is told some statements must be read in the source before being quoted; is it expected to verify them, and how, without the sources?
+Q11	document_structure	Is there one list of everything the laboratory must decide and state before data?
+Q12	design	Is pentylenetetrazol (PTZ) the provoking stimulus of THIS experiment, and by what route and schedule, or may the laboratory use another provoked-seizure assay?
+Q13	exposure_and_delivery	"What PTZ dose, route and volume did Cheng 2020 use for the ""low-dose PTZ challenge"" the lithium replication is anchored to?"
+Q14	exposure_and_delivery	What is the ethosuximide regimen (dose, route, pretreatment interval, number of injections) for the main contrast?
+Q15	exposure_and_delivery	Should vehicle pups receive the same number, volume and timing of injections as the lithium arm, and is one shared vehicle valid across agents that may need different vehicles, routes and schedules?
+Q16	exposure_and_delivery	"What does ""two exposures per agent"" mean (two doses, two pretreatment intervals, two measured levels), and how are the two chosen when ""no pup exposure measurement was found for any agent""?"
+Q17	exposure_and_delivery	What is the interval from the last pretreatment injection to PTZ for arms other than lithium, and is it to be recorded for all arms?
+Q18	design	Which seizure-scale stages are 0, 1, 2 and 6, and is stage 6 death?
+Q19	design	Does the pilot include the panel agent and older ages, and which candidate assay ages are tested?
+Q20	design	"What is a ""stage-matched wild-type response"" in the pilot stop rule, and may the stimulus differ by genotype to reach it?"
+Q21	design	Is the same stimulus used at every age of the wild-type age series, or re-fixed per age, and who fixes it for the older ages when the pilot is at candidate assay ages?
+Q22	design	Which outcome is primary if the pilot shows the area summary S is too variable: S or an incidence such as generalised seizures, and who decides, when?
+Q23	design	Which cells and arms make up the first run (genotype x arm x age x exposure), as one table?
+Q24	design	Is the T-type blocker arm inside stage 2 (required) or optional?
+Q25	design	Does the lithium-alone arm receive PTZ, in which genotypes, and is it counted among the arms sharing a vehicle?
+Q26	design	"What are the ""nine genotype-by-arm cells"" in the statement that not all can come from the same litters?"
+Q27	design	Is the stage 0 slice experiment to be run by this laboratory, by another, or by nobody, and is stage 4 gated on it?
+Q28	design	"Which decision does the ethosuximide arm ""change"", and for whom?"
+Q29	design	What is the role of heterozygotes: which arms, and are they in the interaction contrast?
+Q30	design	"What is ""vehicle"": vehicle plus PTZ only, or is a no-PTZ control (vehicle only, no provocation) also needed?"
+Q31	n_and_power	What n per cell should the laboratory plan for the first run: 11, 22, 31, 36 to 109, 44, 50 or 180 to 320?
+Q32	n_and_power	Is the vehicle group made about twice a test arm (as stated), and is that counted in the 27-cell, about 300 animal total?
+Q33	n_and_power	"Do ""75 litters"", ""25 litters"", ""19 litters"", ""53 litters"" refer to one drug against vehicle or to three knockout arms, and which is current?"
+Q34	n_and_power	"How many pups and litters does the pilot alone need, given ""n of 6 to 8 per cell"" and unspecified candidate ages and cells?"
+Q35	n_and_power	If the laboratory can obtain only a fixed number of knockouts, what is the smallest stage 2 that remains informative?
+Q36	n_and_power	What is the total animal burden if add-ons (a) to (i) and lines 9.12 and 9.13 are included?
+Q37	ages	"Which ages are the candidate assay ages and what is the age at which knockouts can still be tested, given death ""by about 4 weeks"" in one place and ""by about day 17"" in another?"
+Q38	ages	At what age did Cheng 2020 test, and should the lithium replication match it?
+Q39	ages	"Are the ""at least two older ages"" the only ages in the wild-type series, or must P11 and P14 both be covered as ""straddling P11 and P14""?"
+Q40	ages	"What is ""the window"" in ""inside the window to about P28""?"
+Q41	ages	"What postnatal-day convention (day of birth P0 or P1) and tolerance for ""the same postnatal age"" in a session?"
+Q42	genotype_and_controls	Which Wwox-null allele, background strain, source or repository does the laboratory need, and is it Cheng's global knockout?
+Q43	genotype_and_controls	How, and at what age and turnaround, is genotype determined before the test and before allocation?
+Q44	genotype_and_controls	Who holds which code: the person who reads genotype, the person who codes syringes and the injector; may they be the same person?
+Q45	genotype_and_controls	Where do the wild-type pups of the age series and the panel come from (heterozygote crosses or wild-type breeders), and how many litters does that need?
+Q46	genotype_and_controls	"How are knockouts allocated ""within genotype and litter"" when a litter yields about 1.75 knockouts?"
+Q47	genotype_and_controls	Is sex to be balanced or stratified, or only recorded?
+Q48	genotype_and_controls	Are pups used once only, and are litters standardised or cross-fostered?
+Q49	readouts	Is S the area, the sum, or the mean stage over 60 minutes, and in what units?
+Q50	readouts	"In ""(primary)"", what is primary: S, or the with-and-without-deaths reporting?"
+Q51	readouts	How are latencies defined for each seizure type (from which injection, first bin reaching which stage)?
+Q52	readouts	"How are ""three or more tonic-clonic seizures within the window"" counted (what separates events; is stage 5 the same as tonic-clonic)?"
+Q53	readouts	When is the motor and ataxia pre-test done relative to drug and PTZ, what cut-off excludes a pup, and are excluded pups replaced?
+Q54	readouts	For the p-Ser9 and GSK-3beta add-on, when is tissue taken relative to the last injection and to PTZ, at which age, in which regions?
+Q55	readouts	"What is the ""heterozygote bursting incidence"" that the brief says it carries?"
+Q56	readouts	How does add-on (d), deletion completeness, apply to a germline null, and what is the laboratory to measure?
+Q57	readouts	Are the glucose and related measures of A add-on (e) and of B line 9.12 one add-on or two, and are they taken serially in the same pups at P7, P9, P11 and P14 or in separate cohorts?
+Q58	readouts	"Can serum chemistry, GFAP and Iba1 scoring, sIPSC recording and phospho-ErbB4 staining all come from ""one group of pups""?"
+Q59	readouts	What does the laboratory do with the heterozygote motor-evoked-potential latency (3-week-old mice, chloral hydrate) and the conduction endpoint (acute slices P13 to P17): measure, or ignore?
+Q60	readouts	"For video-EEG on ""a subset of knockout pups"": which subset size, age and electrode plan?"
+Q61	welfare_and_stopping	What triggers a rescue, what is the rescue procedure, and may a rescue drug be used given it could confound the arm effect?
+Q62	welfare_and_stopping	Is death an accepted outcome in vehicle and treated groups, and what death or status rate is expected per arm?
+Q63	welfare_and_stopping	What are the conditions of the 60-minute observation (dam present or isolated, heat support, handling) for fragile pups?
+Q64	welfare_and_stopping	Which pups are excluded for illness or failure to thrive before the test, apart from the motor pre-test?
+Q65	welfare_and_stopping	What experiment-level stopping rules exist (for example cumulative knockout deaths), beyond the pilot and stage stop rules?
+Q66	welfare_and_stopping	What is the total procedural burden on one pup in the lithium arm (three injections, pre-test, PTZ, observation, possible tissue)?
+Q67	statistics	What numerical rule declares the panel valid at an age?
+Q68	statistics	"What numerical value of vehicle S counts as ""at the floor""?"
+Q69	statistics	"How is an increase (aggravation, R above 1) classified, since ""effect"" is defined only as R at most 0.7?"
+Q70	statistics	"How many comparisons enter the ""Bonferroni for five"" once the lithium-alone arm, a second regimen, two or three panel agents and two exposures each exist?"
+Q71	statistics	"To whom and in what form is the analysis plan ""stated before data"" delivered (registry, collaborator, time stamp)?"
+Q72	statistics	Does the primary interval use ratio of means with litter bootstrap only, and with how few litters is a permutation or mixed model required?
+Q73	statistics	"How is an interval that ""contains 1 and excludes 0.7"" worded and counted in the E1 to E4 table when the interaction cannot be sized?"
+Q74	logistics	Who funds the work, who owns the data, what credit or authorship is offered, and is there any agreement?
+Q75	logistics	Whom does the laboratory ask questions, since no agent contacts anyone and no laboratory is named?
+Q76	logistics	What deliverables are expected (per-animal data, litter and sex, coded videos, analysis code) and who runs the analysis?
+Q77	logistics	What is the timeline, and does the laboratory wait for the slice experiment?
+Q78	logistics	How many people, cameras and test sessions does the plan assume (60-minute trials of fragile pups with a blinded scorer not present)?
+Q79	logistics	Who supplies the T-type blocker, second GSK-3 inhibitor and panel agents, and are specific compounds expected?
+Q80	logistics	How must breeding be scheduled to give same-age pups across litters of one session?
+Q81	terminology	"What is outcome E5 (""not interpretable"") and how does it differ from E4 (""no effect"")?"
+Q82	terminology	Where are L1 and L2 (lithium general or GSK-3-specific) in the outcome table?
+Q83	terminology	Stage means both a seizure grade (0 to 6) and an experimental stage (0 to 4); which is meant in stage 6 versus stage 2?
+Q84	terminology	P5 and P8 appear as set labels in the priors file and as postnatal days elsewhere; which is meant?
+Q85	terminology	"What are ""arm"", ""cell"", ""panel"", ""comparator"" and ""exposure"" in the laboratory's terms?"
