@@ -443,7 +443,10 @@ def evaluate(repo: Path, *, mode: str = "merge", tip: str = "HEAD", base: str | 
                 results.append(SurfaceResult(
                     surface, ", ".join(sorted(scripts)), CHECK_ERROR,
                     "undeclared generator: add its inputs and check to GENERATORS in "
-                    "framework/scripts/candidate_tree_freshness.py"))
+                    "framework/scripts/candidate_tree_freshness.py; if the file is hand-written "
+                    "(a checkpoint, a note), it counts only because its first 15 lines contain "
+                    "the word `generated` AND a `python3 .../scripts/<tool>.py` command: reword one "
+                    "of the two (2026-11-21: checkpoint Y, which refused every landing)"))
                 continue
             for script in declared:
                 generator = expanded[script]

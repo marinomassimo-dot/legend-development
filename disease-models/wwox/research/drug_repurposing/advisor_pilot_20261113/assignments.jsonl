@@ -393,3 +393,5 @@
 {"evidence": "SendMessage receipt msg_id 38192569-11e2-4d87-989f-ca453c6d9f73 to HE - CURRENT e052ca19", "id": "ADV-159", "state": "SENT", "to": ["HE - CURRENT e052ca19"], "utc": "2026-11-21T18:59:40Z"}
 {"assessment": "HOST", "id": "ADV-160", "key": "adv-codex-loop-round-03-sci-jci-insight-188459-sterol-response-and-tissue-cholesterol", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-21T20:14:33Z"}
 {"evidence": "SendMessage receipt msg_id 3259cce1-dc54-47d8-bdf2-bae65ec871df, 2026-11-21 host clock about 20:20Z", "id": "ADV-160", "state": "SENT", "to": ["SCI - CURRENT b3e65c69"], "utc": "2026-11-21T20:14:46Z"}
+{"assessment": "HOST", "id": "ADV-161", "key": "adv-codex-loop-round-04-sci-sterol-signal-specificity-thyroid-contrast-gse271421", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-21T20:52:04Z"}
+{"evidence": "SendMessage receipt msg_id 1b799f19-e0e9-4e29-af74-0f50d852f3e9, 2026-11-21; first delivered by HE in the successor launch brief (bound 21:04:20Z)", "id": "ADV-161", "state": "SENT", "to": ["SCI - CURRENT 7f742680"], "utc": "2026-11-21T21:05:42Z"}
