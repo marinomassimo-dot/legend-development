@@ -722,6 +722,15 @@
      "accepted_at": "2026-11-21T15:54:48Z",
      "evidence": "runs not stuck (independent hosted jobs, 56-115 min wall clock each, 20 concurrent); runs 1792 onward fail 7 tests, cause = the word somatostatin added to the INV-15 question in ranking.json by commit 1a1addbfd (forbidden-name in the shareable audit); five tests green with a temporary local reword; ADV and IT told, IT owns the fix",
      "updated_at": "2026-11-21T16:01:52Z"
+    },
+    {
+     "step": "Add one line to the README pre-freeze row: run the three shareable suites before any push that edits ranking, investigation or question text",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message of 2026-11-21 agreeing to the line proposed in the meeting reply, landing left to HE",
+     "accepted_at": "2026-11-21T17:02:43Z",
+     "evidence": "framework/scripts/README.md: a row next to the pre-freeze row (three shareable suites before an edit of ranking, investigation or question text); test_documented_commands, reader journey, tool routing OK; pre-check PASS",
+     "updated_at": "2026-11-21T17:03:35Z"
     }
    ]
   }
@@ -1277,6 +1286,13 @@
    "at": "2026-11-21T15:54:48Z",
    "source": "ADV message of 2026-11-21 about CI runs 1806, 1810 and 1813 and the question of main's CI state",
    "step_sha256": "3df1deee9bb0",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T17:02:43Z",
+   "source": "ADV message of 2026-11-21 agreeing to the line proposed in the meeting reply, landing left to HE",
+   "step_sha256": "9cbc5523934a",
    "reopened_block": false,
    "authorised_by": null
   }
