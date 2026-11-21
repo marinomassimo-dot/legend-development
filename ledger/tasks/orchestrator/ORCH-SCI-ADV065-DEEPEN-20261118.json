@@ -705,6 +705,13 @@
      "accepted_at": "2026-11-21T21:46:52Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv162_neurodev_resource_sci_20261121/RESULT_ADV162_NEURODEV_SCI_20261121.md",
      "updated_at": "2026-11-21T21:55:46Z"
+    },
+    {
+     "step": "ADV-165: Cyfip2 recurrence chronology (Ma et al. 2025, PMID 41066510): can a published microglial or astrocytic marker in ONE named region be shown to precede documented behavioural recurrence; pre-register first; result file plus path to ADV",
+     "status": "TODO",
+     "owner": "science",
+     "source": "ADV-165 (assignment file, commit 2846d7051; ADV receipt 1221d29e)",
+     "accepted_at": "2026-11-21T22:40:33Z"
     }
    ]
   }
@@ -1246,6 +1253,13 @@
    "at": "2026-11-21T21:46:52Z",
    "source": "ADV-162 (assignments/ADV-162.md; ADV message 2026-11-21)",
    "step_sha256": "a25cde933424",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T22:40:33Z",
+   "source": "ADV-165 (assignment file, commit 2846d7051; ADV receipt 1221d29e)",
+   "step_sha256": "372bd6001b64",
    "reopened_block": false,
    "authorised_by": null
   }
