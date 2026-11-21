@@ -231,6 +231,29 @@ class EnglishAuthoredSectionsSayTheyAreEnglish(unittest.TestCase):
         tr = {lg: json.loads((DR / "view/i18n" / f"ui_{lg}.json").read_text(encoding="utf-8"))["UI_IT.sec_en_src"] for lg in ("en", "fr", "de", "es")}
         self.assertEqual(len(set(tr.values())), 4)
 
+    def test_sections_painted_by_the_page_script_carry_the_partial_notice(self):
+        """HE-E (2026-11-21): explore, navigate and candidates paint English-authored passages from the embedded data with the page script, which the static scan masks. Each carries the partial
+        notice (`sec_en_part`: some passages, not the whole text) right after its heading on every non-English page; the English page carries none; the four translations differ from each other
+        and from `sec_en_src`; a positive control strips the notice and the section must then be found without it."""
+        seen = 0
+        for (src, lg), page in self.files.items():
+            for sid in rv.SCRIPT_PAINTED_ENGLISH_SECTIONS:
+                m = re.search(r'<section id="%s"[^>]*>.*?</h[1-6]>(.{0,160})' % sid, page, flags=re.S)
+                if not m:
+                    continue
+                seen += 1
+                if lg == "en":
+                    self.assertNotIn("sec-en-note", m.group(1), (src, lg, sid))
+                else:
+                    self.assertTrue(m.group(1).startswith('<p class="mini mut sec-en-note">'), (src, lg, sid))
+                    stripped = page.replace('<p class="mini mut sec-en-note">', '<p class="removed">')
+                    self.assertFalse(re.search(r'<section id="%s"[^>]*>.*?</h[1-6]><p class="mini mut sec-en-note">' % sid, stripped, flags=re.S), (src, lg, sid))
+        self.assertGreaterEqual(seen, 6)
+        part = {lg: json.loads((DR / "view/i18n" / f"ui_{lg}.json").read_text(encoding="utf-8"))["UI_IT.sec_en_part"] for lg in ("en", "fr", "de", "es")}
+        whole = {lg: json.loads((DR / "view/i18n" / f"ui_{lg}.json").read_text(encoding="utf-8"))["UI_IT.sec_en_src"] for lg in ("en", "fr", "de", "es")}
+        self.assertEqual(len(set(part.values())), 4)
+        self.assertTrue(all(part[lg] != whole[lg] for lg in part))
+
     def test_a_pilot_compound_name_is_shown_in_the_page_language(self):
         """The data file pairs an Italian and an English name ('4-PBA / acido fenilbutirrico'); the pilot table printed it as it stands on every page."""
         for lg, name in (("en", "4-PBA / phenylbutyric acid"), ("fr", "4-PBA / acide phénylbutyrique"), ("de", "4-PBA / Phenylbuttersäure"), ("es", "4-PBA / ácido fenilbutírico")):

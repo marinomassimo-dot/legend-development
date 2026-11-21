@@ -1286,6 +1286,7 @@
  "UI_IT.rk_x_w": "neutral, harmful or mixed claims in WWOX systems",
  "UI_IT.rk_yes": "yes",
  "UI_IT.sec_access": "Distribution by access category",
+ "UI_IT.sec_en_part": "Some passages of this section are in English, the original language in which the group wrote them: they are not translated.",
  "UI_IT.sec_en_src": "The text of this section is written in English, the original language in which the group wrote it: it is not translated.",
  "UI_IT.sec_filters": "Filters for the full matrix",
  "UI_IT.sec_filters_note": "following sections",
