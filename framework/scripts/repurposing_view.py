@@ -336,10 +336,11 @@ def mark_english_sections(page: str) -> str:
         if "technote" in text or "sec-en-note" in text:
             continue
         text = re.sub(r"<(\w+)\b[^>]*(?:class=\"orig\"|lang=\"(?:it|en)\")[^>]*>.*?</\1>", "", text, flags=re.S)
-        key = "sec_en_src"
+        sid = re.search(r'\bid="([^"]+)"', masked[start:open_end])
+        sid = sid.group(1) if sid else ""
+        key = "sec_en_part" if sid in EN_SCOPE_SECTIONS else "sec_en_src"   # a section whose measured passages are translated says "some passages", not "the text"
         if sum(english_authored_node(t, lang) for t in set(TEXT_NODE.findall(text))) < SEC_EN_MIN:
-            sid = re.search(r'\bid="([^"]+)"', masked[start:open_end])
-            if not (sid and sid.group(1) in SCRIPT_PAINTED_ENGLISH_SECTIONS):
+            if sid not in SCRIPT_PAINTED_ENGLISH_SECTIONS:
                 continue
             key = "sec_en_part"
         head = re.search(r"</h[1-6]>", inner)
