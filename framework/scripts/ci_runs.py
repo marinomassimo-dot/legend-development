@@ -6,6 +6,7 @@ the run ever ended. The supported way to hold such a wait is a BLOCKED step whos
 (cross_session_transport.md section 12); this tool reads the conclusion so that the step can be closed with evidence (run number, workflow, SHA, conclusion).
 
     python3 framework/scripts/ci_runs.py status <sha>                 # one line per workflow run on that commit
+    python3 framework/scripts/ci_runs.py status <sha>                 # a red gate run also lists its failing suites and tests, read from the public annotations (no login)
     python3 framework/scripts/ci_runs.py wait <sha> --timeout 1800    # progressive polling (2, 4, then 8 minutes), ONE shared read of the latest runs serves every commit and every waiter on the machine; exit 0 all runs concluded success
 
 Exit codes: 0 every run on the commit concluded success · 1 a run concluded with anything else · 3 no run seen for the commit · 124 the deadline passed with a run
@@ -59,6 +60,40 @@ def fetch_recent(repo: str) -> list[dict]:
     url = f"https://api.github.com/repos/{repo}/actions/runs?per_page=100"
     with urllib.request.urlopen(urllib.request.Request(url, headers={"Accept": "application/vnd.github+json"}), timeout=30) as r:
         return json.load(r)["workflow_runs"]
+
+
+def fetch_json(url: str):
+    with urllib.request.urlopen(urllib.request.Request(url, headers={"Accept": "application/vnd.github+json"}), timeout=30) as r:
+        return json.load(r)
+
+
+def failing_tests(run_id: int, repo: str, fetch=fetch_json) -> list[str]:
+    """2026-11-21 (HE): the names of the failing suites and tests of one red run, WITHOUT a login. The log needs one (403) and the artifact needs one, but the Regression-tests step of the workflow repeats its failing
+    suites and assertion lines as annotations titled `release regression`, and the check-runs API serves annotations to anyone (IT30). Two requests, read-only: the jobs of the run, then the annotations of each failed job.
+    Each line is cut at 170 characters (an assertion line can carry a whole page). The workflow caps the list at 40 lines, so a list that long may be incomplete."""
+    out: list[str] = []
+    for job in fetch(f"https://api.github.com/repos/{repo}/actions/runs/{run_id}/jobs").get("jobs", []):
+        if job.get("conclusion") != "failure":
+            continue
+        for note in fetch(f"https://api.github.com/repos/{repo}/check-runs/{job['id']}/annotations?per_page=100"):
+            if note.get("title") == "release regression":
+                out.append(" ".join(str(note.get("message", "")).split())[:170])
+    return out
+
+
+def failure_lines(runs: list[dict], repo: str, fetch=fetch_json) -> list[str]:
+    """Lines to print under the status of a commit whose gate run failed. Never changes a verdict: when the annotations cannot be read the line says so."""
+    lines: list[str] = []
+    for r in runs:
+        if r.get("name") != "Public release gate" or r.get("status") != "completed" or r.get("conclusion") != "failure" or not r.get("id"):
+            continue
+        try:
+            names = failing_tests(r["id"], repo, fetch)
+        except Exception as exc:  # network or rate limit: a missing detail is not a verdict
+            lines.append(f"  #{r['run_number']}: failing tests not read ({exc.__class__.__name__}: {exc})")
+            continue
+        lines += [f"  #{r['run_number']} {n}" for n in names] or [f"  #{r['run_number']}: no 'release regression' annotation (the failing step may not be the regression step)"]
+    return lines
 
 
 def interval(waited: float) -> float:
@@ -209,6 +244,8 @@ def main(argv=None) -> int:
             return 2
         code, lines = verdict(runs)
         if a.cmd == "status" or code in (0, 1) or time.time() >= end:
+            if code == 1:
+                lines = lines + failure_lines(runs, repo)
             print("\n".join(lines))
             return code if not (a.cmd == "wait" and code == 3) else 124
         time.sleep(min(interval(time.time() - started), max(1.0, end - time.time())))

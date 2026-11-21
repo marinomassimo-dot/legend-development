@@ -653,10 +653,12 @@
     },
     {
      "step": "Launch the SCI successor from checkpoint V by the usual recipe, apply pending display names natively, retire the old window by the watcher route, and tell SCI and ADV",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "SCI window U message after ADV ordered the handover at about 211k context, checkpoint V landed on main",
-     "accepted_at": "2026-11-21T11:07:08Z"
+     "accepted_at": "2026-11-21T11:07:08Z",
+     "evidence": "SCI e3903da5 launched 11:07:25Z, old release 11:27:17.89Z, bind 11:27:28.81Z (10.9 s), first tool call 11:27:30.10Z (1.3 s); addendum ADV-136 digest verified and sent; names CURRENT/PREVIOUS verified by id; old window kept while busy",
+     "updated_at": "2026-11-21T11:28:41Z"
     },
     {
      "step": "DREAM on the working-material to reusable-delivery boundary: the verbatim scratch path read as a public command and the extractor addresses; smallest intervention tested on both cases",
