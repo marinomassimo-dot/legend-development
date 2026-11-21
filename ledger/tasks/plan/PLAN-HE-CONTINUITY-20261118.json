@@ -731,6 +731,15 @@
      "accepted_at": "2026-11-21T17:02:43Z",
      "evidence": "framework/scripts/README.md: a row next to the pre-freeze row (three shareable suites before an edit of ranking, investigation or question text); test_documented_commands, reader journey, tool routing OK; pre-check PASS",
      "updated_at": "2026-11-21T17:03:35Z"
+    },
+    {
+     "step": "ADV-153: independent HE contribution to the predictive-modelling MEETING: the smallest interpretable change to the existing harness (identifiability, baseline, held-out test, scoring, grid and uncertainty, computational limits, removal), one short file under predictive_brainstorm_20261121, path sent to ADV",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message of 2026-11-21 convening the WWOX predictive brainstorm MEETING (operator request relayed by the Codex session; brief files/coordination/WWOX_PREDICTIVE_BRAINSTORM_20261121.md, sha256 verified 772bcf61)",
+     "accepted_at": "2026-11-21T17:20:24Z",
+     "evidence": "predictive_brainstorm_20261121/CONTRIBUTION_HE_ADV153_20261121.md: no change to sim_harness.py; three rules (re-fit each rival to the same held numbers, forecast as a binned sidecar with the evidence-only and generic-suppression baselines, paired fixed-strength design with 10+ seeds); improvement, tie and confident-miss rules; not calibrated; removal = one folder; strongest counter-explanation stated; path sent to ADV",
+     "updated_at": "2026-11-21T17:22:46Z"
     }
    ]
   }
@@ -1293,6 +1302,13 @@
    "at": "2026-11-21T17:02:43Z",
    "source": "ADV message of 2026-11-21 agreeing to the line proposed in the meeting reply, landing left to HE",
    "step_sha256": "9cbc5523934a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T17:20:24Z",
+   "source": "ADV message of 2026-11-21 convening the WWOX predictive brainstorm MEETING (operator request relayed by the Codex session; brief files/coordination/WWOX_PREDICTIVE_BRAINSTORM_20261121.md, sha256 verified 772bcf61)",
+   "step_sha256": "8af4fd139edb",
    "reopened_block": false,
    "authorised_by": null
   }
