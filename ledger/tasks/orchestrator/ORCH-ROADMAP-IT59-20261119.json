@@ -231,6 +231,13 @@
      "accepted_at": "2026-11-21T07:56:52Z",
      "evidence": "adv132_dense_batch_it_20261121/RESULT_ADV132_IT_20261121.md: parity on 150 rows 0 number flags, batch 3 blind check 12 CHANGED of 75 (stop rule fired, batch not applied), repairs rechecked, pages measured",
      "updated_at": "2026-11-21T08:24:58Z"
+    },
+    {
+     "step": "ADV-134: glossary of terms of art with in-programme senses and fr/de/es renderings (plainer English alternatives proposed to HE, no English string edited), then the same 25 passages repeated with the glossary fixed first, grammar pass, parity, same stop rule, different blind delegate; report CHANGED with and without glossary and the notice/section-wise/stop choice",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-134 (ADV message 2026-11-21, assignments/ADV-134.md)",
+     "accepted_at": "2026-11-21T08:31:00Z"
     }
    ]
   }
@@ -408,6 +415,13 @@
    "at": "2026-11-21T07:56:52Z",
    "source": "advisor assignment ADV-132 (message from the Advisor session to the IT successor, 2026-11-21)",
    "step_sha256": "206f9de49c03",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T08:31:00Z",
+   "source": "ADV-134 (ADV message 2026-11-21, assignments/ADV-134.md)",
+   "step_sha256": "0b3797e524d4",
    "reopened_block": false,
    "authorised_by": null
   }
