@@ -33,6 +33,14 @@ REPO_PREFIXES = (
     "scripts/",
 )
 IGNORED_PARTS = frozenset({".git", ".venv", "node_modules", "__pycache__"})
+# 2026-11-21 (HE, PLAN/Codex follow-up): a verbatim copy of a delegate's hand-back (the repository's name
+# for it is `..._AS_DELIVERED_...`, 75 tracked files) quotes the delegate's own scratch scripts, such as
+# `scripts/tx.py` in a producer workspace. That line is evidence of what was delivered, not a promise that
+# an executable exists in this repository, and the record is not edited to make a checker pass (see the
+# comment on the CLI half below). Only the MISSING-PATH half skips such a copy: every other document still
+# fails on a missing script, an existing script named in a copy is still checked by the CLI half, and the
+# privacy scans of the publication gate are untouched.
+VERBATIM_DELIVERY_MARKER = "_AS_DELIVERED"
 # `reviews/` joined this tuple at the 2026-09-07 consolidation: the Mirror review corpus names the
 # retired guard scripts it reviewed, and a review record is a dated record like a learning
 # record, not a promise that the executable still exists.
@@ -101,6 +109,8 @@ def missing_documented_commands() -> list[str]:
     missing: list[str] = []
     for document in markdown_files():
         relative_document = document.relative_to(ROOT)
+        if VERBATIM_DELIVERY_MARKER in document.name:
+            continue
         for line_number, line in enumerate(
             document.read_text(encoding="utf-8", errors="replace").splitlines(), 1
         ):
@@ -176,6 +186,35 @@ class DocumentedCommandIntegrityTests(unittest.TestCase):
             (peer / "README.md").write_text("peer")
             with patch.dict(markdown_files.__globals__, ROOT=root):
                 self.assertEqual([local], markdown_files())
+
+    def test_a_verbatim_delivery_copy_may_name_a_scratch_script_and_nothing_else_may(self) -> None:
+        """The boundary of the exemption, in both directions, on a real throw-away repository: the same line naming a
+        missing script FAILS in an ordinary document (positive control) and passes in a `_AS_DELIVERED` copy; a
+        document that only looks like one (the marker not in the file name) still fails; an existing script named in a
+        copy is still seen by the CLI half."""
+        line = "The producer ran scripts/tx.py on its scratch table.\n"
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary).resolve()
+            git = ["git", "-c", "user.name=t", "-c", "user.email=t@example.invalid"]
+            subprocess.run(git + ["init", "-q", str(root)], check=True)
+            (root / "scripts").mkdir()
+            (root / "scripts" / "real.py").write_text("print('x')\n")
+            files = {
+                "NOTES.md": line,                                                    # ordinary document: must fail
+                "REPORT_AS_DELIVERED_X.md": line,                                    # verbatim copy: must pass
+                "AS_DELIVERED_NOTES.md": line,                                       # marker without the leading underscore: must fail
+                "COPY_AS_DELIVERED_Y.md": "Run python3 scripts/real.py --flag\n",   # existing script in a copy: CLI half still sees it
+            }
+            for name, text in files.items():
+                (root / name).write_text(text)
+            subprocess.run(git + ["-C", str(root), "add", "."], check=True)
+            subprocess.run(git + ["-C", str(root), "commit", "-q", "-m", "fixture"], check=True)
+            with patch.dict(markdown_files.__globals__, ROOT=root):
+                missing = missing_documented_commands()
+                invocations = documented_cli_invocations()
+        flagged = sorted({entry.split(":")[0] for entry in missing})
+        self.assertEqual(["AS_DELIVERED_NOTES.md", "NOTES.md"], flagged)
+        self.assertEqual(["COPY_AS_DELIVERED_Y.md"], sorted(document.name for document, *_ in invocations))
 
     def test_repository_local_python_commands_exist(self) -> None:
         missing = missing_documented_commands()
