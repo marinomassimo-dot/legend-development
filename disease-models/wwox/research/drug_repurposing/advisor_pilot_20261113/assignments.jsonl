@@ -361,3 +361,5 @@
 {"assessment": "HOST", "id": "ADV-144", "key": "pup-brief-design-numbers-group-b-with-a-preregistered-rule", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-21T14:34:56Z"}
 {"evidence": "SendMessage receipt msg_id 2d87dc7b-7839-439e-a9ea-42f3b4a697d2 to IT Orchestrator - CURRENT 6a8c1a55", "id": "ADV-143", "state": "SENT", "to": ["IT Orchestrator - CURRENT 6a8c1a55"], "utc": "2026-11-21T14:35:18Z"}
 {"evidence": "SendMessage receipt msg_id a9ae9669-44d4-4140-a875-f534f0821f4f to SCI - CURRENT b3e65c69", "id": "ADV-144", "state": "SENT", "to": ["SCI - CURRENT b3e65c69"], "utc": "2026-11-21T14:35:18Z"}
+{"assessment": "HOST", "id": "ADV-145", "key": "blind-read-of-the-new-current-pup-brief-text-gap-coverage", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-21T14:57:54Z"}
+{"evidence": "SendMessage receipt msg_id e628f08f-57d7-4cc2-9c6a-133701068d87 to IT Orchestrator - CURRENT 6a8c1a55", "id": "ADV-145", "state": "SENT", "to": ["IT Orchestrator - CURRENT 6a8c1a55"], "utc": "2026-11-21T14:58:11Z"}
