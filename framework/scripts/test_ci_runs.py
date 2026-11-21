@@ -56,6 +56,56 @@ class Verdict(unittest.TestCase):
         self.assertIsNone(ci_runs.reset_wait({}, 940.0))
 
 
+class FailingTests(unittest.TestCase):
+    """2026-11-21 (HE): a red gate run names its failing tests through the public annotations; recorded from run 1713 (nine annotations, two of them the item-17 tests)."""
+
+    JOBS = {"jobs": [{"id": 11, "conclusion": "failure"}, {"id": 12, "conclusion": "success"}]}
+    NOTES = [
+        {"title": "", "message": "Node.js 20 is deprecated."},
+        {"title": "", "message": "Process completed with exit code 1."},
+        {"title": "release regression", "message": "- framework/scripts/test_repurposing_view.py: exit 1 (FAILED)"},
+        {"title": "release regression", "message": "FAIL: test_prose_policy_pairs_names_status_and_paths_are_gone (__main__.ShareableAudit.x)"},
+        {"title": "release regression", "message": "AssertionError: 'x' unexpectedly found in '" + "<p>" * 400 + "'"},
+    ]
+
+    def fetch(self, calls):
+        def f(url):
+            calls.append(url)
+            return self.JOBS if url.endswith("/jobs") else self.NOTES
+        return f
+
+    def test_only_the_release_regression_annotations_of_the_failed_job_are_listed_and_long_lines_are_cut(self):
+        calls = []
+        names = ci_runs.failing_tests(7, "o/r", self.fetch(calls))
+        self.assertEqual(len(names), 3)
+        self.assertTrue(all(len(n) <= 170 for n in names))
+        self.assertIn("test_prose_policy_pairs", names[1])
+        self.assertEqual(len(calls), 2)                                    # one request for the jobs, one for the single failed job: the success job is not asked
+        self.assertTrue(calls[1].endswith("/check-runs/11/annotations?per_page=100"))
+
+    def test_a_green_or_unfinished_run_asks_nothing(self):
+        calls = []
+        runs = [dict(run(1), id=1), dict(run(2, status="in_progress", conclusion=None), id=2), dict(run(3, conclusion="failure", name="Publish the shareable view"), id=3)]
+        self.assertEqual(ci_runs.failure_lines(runs, "o/r", self.fetch(calls)), [])
+        self.assertEqual(calls, [])
+
+    def test_a_red_gate_run_prints_its_tests_and_an_unreadable_answer_is_said_not_hidden(self):
+        red = dict(run(1713, conclusion="failure"), id=99)
+        lines = ci_runs.failure_lines([red], "o/r", self.fetch([]))
+        self.assertTrue(lines[0].startswith("  #1713 - framework/scripts/test_repurposing_view.py"))
+
+        def broken(url):
+            raise OSError("rate limit")
+        said = ci_runs.failure_lines([red], "o/r", broken)
+        self.assertEqual(len(said), 1)
+        self.assertIn("failing tests not read (OSError: rate limit)", said[0])                  # the verdict was already printed and is not touched
+
+    def test_a_red_run_without_a_regression_annotation_says_so(self):
+        red = dict(run(5, conclusion="failure"), id=5)
+        empty = lambda url: self.JOBS if url.endswith("/jobs") else [{"title": "", "message": "x"}]  # noqa: E731
+        self.assertIn("no 'release regression' annotation", ci_runs.failure_lines([red], "o/r", empty)[0])
+
+
 class SharedRead(unittest.TestCase):
     """HE47 H6: waiters on one machine share a single API read per commit and one declared rate-limit pause."""
     def setUp(self):
