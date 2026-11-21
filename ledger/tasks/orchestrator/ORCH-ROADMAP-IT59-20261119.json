@@ -252,10 +252,11 @@
     },
     {
      "step": "ADV-135 / RP-035 (AFTER the ADV-134 report and the three consumer edits): human cross-check of the pup axis in published WOREE and SCAR12 reports, held material first, discriminating observation fixed before reading; full brief in generation_it59_20261119/CHECKPOINT_IT_20261121_3_ADDENDUM.md and assignments/ADV-135.md",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "source": "ADV-135 (ADV message 2026-11-21)",
-     "accepted_at": "2026-11-21T09:40:09Z"
+     "accepted_at": "2026-11-21T09:40:09Z",
+     "updated_at": "2026-11-21T10:30:05Z"
     }
    ]
   }
