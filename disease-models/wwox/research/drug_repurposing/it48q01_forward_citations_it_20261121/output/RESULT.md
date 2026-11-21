@@ -1,0 +1,57 @@
+# RESULT - IT48-Q01 juvenile half, forward-citation route (2026-11-21)
+
+Mechanism-level literature package; reference genotype class only; no dose, no recommendation. Producer: model sonnet, effort high (stated at dispatch). Pre-registration: `SO_before_search.md`. Files in this folder: `candidates.tsv`, `SEARCH_RECORD.md`, `kir2_subunit_leads.tsv`, `receipts/` (one staged receipt, checked OK with `staged_receipt_check.py`; not recorded). Full text: `/home/desktop/legend-development/files/fulltext/it48q01_fwd_it_20261121/`.
+
+## 1. Answer first
+
+**FOUND, one candidate, at the target age, in a source the earlier string searches could not reach.** A PhD thesis (T. Fucke, Heidelberg University / MPI for Medical Research, accepted 2007-10-17, open repository DOI 10.11588/heidok.00008349) measured the effect of 50 uM bath BaCl2 on the input resistance of **rat (Wistar) neocortical layer 2/3 pyramidal neurons in the "p14" age group** (acute slices, whole-cell current clamp, 35 C, K-gluconate pipette):
+
+| Age group | Rin before Ba2+ | Rin with 50 uM Ba2+ | n | Derived share of input conductance blocked |
+|---|---|---|---|---|
+| p14 (target window, by group label) | 161 +/- 7 Mohm | 206 +/- 10 Mohm (p < 0.001) | 16 cells, 5 animals | **1 - 161/206 = 0.22 (about 22%; +/- 0.05, unpaired SEM propagation)** |
+| p28 (adjacent age, same study) | 50 +/- 4 Mohm | 93 +/- 6 Mohm (p < 0.005) | 10 cells, 3 animals | 1 - 50/93 = 0.46 (about 46%; +/- 0.06) |
+
+- The denominator is **input conductance** (Rin = slope of the V-I relationship at resting Vrest, from a second-order fit), group means, same cells before and after Ba2+. The shares are **this package's arithmetic on printed means**, not the author's statistic and not per-cell values.
+- The concentration is in the low, Kir2-selective range (50 uM). The authors conclude that the rectification in these cells is "predominantly mediated by KIR channels which are blocked by low concentrations of BaCl2", but the Ba2+-sensitive part of the input conductance at p14 is a minority (about a fifth), and in their own two-conductance fit the "leak" component also fell with Ba2+ (8 to 5, units as printed), so the Ba2+-sensitive conductance is not only the rectifying component in that model (row C03; model-dependent).
+- Read depth: **partial_fulltext_read** of a 140-page thesis (Methods, Results on Ba2+ and its controls, discussion of Kir, abstract; receipt staged as `FTR-20261121-00008349-48`). The Ba2+ numbers are in the text, not in a figure; no figure value was estimated.
+
+**What this does to the pre-registered decision (stated, not decided here).** The rejecting observation in `SO_before_search.md` for "no juvenile share exists" is not met: a share does exist at about P14 at a low Ba2+ concentration. It is about 22% of input conductance and rises to about 46% by p28 in the same study. A juvenile Ba2+(50 uM)-insensitive fraction of about 78% of input conductance is more consistent with keeping the K2P / high-Ba2+ step (ladder step 2b) in the first INV-18 arm than with reducing it to the Kv7 spiking-range arm; this is one lab, one thesis, 16 cells in 5 animals, and a derived number, so it supports the decision only provisionally and needs the blind re-derivation before anyone relies on it.
+
+## 2. Caveats that bear on the value (what the number is and is not)
+
+1. **Age is the group label "p14".** The Methods say animals were p8-p45; the text read gives no age spread inside the p14 group (searched the full text for p13, p15-p17 and "days old": no hit). Overlap with P13-P17 is by label only.
+2. **Not peer reviewed and not replicated.** No journal version was found (Europe PMC author search returned 0; OpenAlex lists 0 citing works). The p28 share (46%) in this thesis is about twice the Fmr1-WT mouse A1 value at P28-42 and 60 uM in the earlier package (about 23%, derived, preprint), and the mouse mPFC value at P26-51 with 200 uM (about 68%, figure-read); species, area, concentration and method all differ, so the three are not a gradient.
+3. **Rin is a slope at rest from a polynomial fit of a current-clamp V-I curve**, with a K-gluconate pipette and a bridge-balanced access resistance (15-20 Mohm); it is not a voltage-clamp Ba2+-sensitive current and is not "resting conductance" in a strict leak sense. Ih, Na+ and other conductances are in the number; TTX alone did not change Rin at p14 (153 to 147 Mohm, n = 7), and Ba2+ was not applied in TTX.
+4. **Spermine control (C04).** With 100 uM spermine in the pipette (p14, n = 5 cells, 2 animals) Ba2+ still abolished the rectification but the Rin increase was not significant (values not stated); read as a caution on C01.
+5. **Model fit units (C03).** The fitted G_KIR and G_leak values are printed in "uS"; with Rin = 161 Mohm (6 nS) these cannot be absolute whole-cell conductances (about a factor 10^3), so only their direction (both fall with Ba2+) is used.
+6. **Area is not stated** in the Methods read ("parasagittal slices of the rat cortex"); the Introduction discusses barrel cortex, but this package did not establish the recorded area.
+7. **Single reader, no second reading.** The verbatim quotes were machine-matched against the extracted text, but the extraction (pdftotext of the repository PDF) is the only copy read; a blind verifier should re-derive C01 from the PDF pages (printed p. 52, Results 2.2.4; p. 28 Methods, Drugs; p. 24-26 Methods; p. 38-39 age groups and Table 2.1).
+
+## 3. The citation route in numbers (full detail in `SEARCH_RECORD.md`)
+
+- 13 seeds (brief list plus R01-R16 papers). OpenAlex forward citations pulled: 1,533 records across seeds (Xue 774 of 801 listed, Day 196, Sceniak 176, Goldberg 146, Goodfellow 105, Nguyen 46, others small); backward references resolved: 665 unique works cited by at least one seed. Union 2,170 unique works (1,519 citing, 665 cited); Europe PMC citations/references gave 145 further records not in the OpenAlex union (139 preprints), not opened.
+- Second route for the graph: Europe PMC REST `/citations` and `/references` for 12 seeds with PMIDs. Selection: full-text regex screen of PMC bodies (400 of 1,155 PMC-id works done before the stop; 10 with a Ba2+ mention in the body, none a match by title and hit lines) and a title/abstract screen of the 1,015 works without PMC (123 strict-filter titles), which produced the candidate.
+- The candidate was reached through the citation graph (OpenAlex lists the thesis as citing Hwa and Avoli 1991, seed R12), which is the route this package exists to test. The 2026-11-17 string route (28 PubMed + 43 Europe PMC strings, 210 PMC ids) did not find it because it is an open-repository thesis with no PMID and no PMC id.
+
+## 4. Limits and what was not done
+
+- **Stopped at the first candidate**, as the brief instructs. The remaining 755 PMC-id works, 892 non-PMC title-screened-out works and the 145 Europe PMC-only records were not read. Nothing here says no further juvenile measurement exists, and nothing says the thesis value is the best one.
+- Seeds' own papers were not re-read (the earlier package's rows R01-R23 stand with their stated depth); no Extended Data figure was measured (Xue 2014 row R01 remains figure-only, unread).
+- Route results, none bypassed: OpenAlex cursor paging 401 after page 1 (Xue; year-sliced instead, 774 of 801), two OpenAlex search calls 429 (not retried, no key because a key needs an e-mail address), 59 of 400 efetch records without a body. No captcha, 403 or 500 occurred. No e-mail address or personal detail was sent anywhere.
+- The thesis is a secondary-quality source for a decision; the next step the orchestrator may want is a blind verifier on C01 plus an author-level search for a journal version (author name only, no contact address).
+
+## 5. IT49-Q09 side output (Kir2 subunits)
+
+Only one statement fell out and it is secondary: the thesis (Discussion 2.3.2, printed p. 59) says, citing Pruess 2005 and Day 2005, that all Kir2 family members are present in neocortex "with KIR2.3 showing the highest expression in L2/3 and L5 pyramidal cell somata and neuropil", and that hetero-tetramers make the exact channel behind the rectification impossible to assign. The primary source (Pruess et al. 2005, Mol Brain Res 139:63-79) was not opened. Details and five further unread leads: `kir2_subunit_leads.tsv`. Abundance by immunohistochemistry does not say which subunit carries the Ba2+-sensitive current.
+
+## 6. Blind verification and dated corrections (IT, 2026-11-21; sections 1 to 5 kept as written)
+
+Blind verifier (sonnet, effort high; the model and effort read back from its transcript: sonnet x35, effort high x35): it received only the thesis PDF and eight questions without the producer's values, extracted the text itself and did not open this folder. Its files: `../verify/VERDICTS.md`, `../verify/answers.tsv`, `../verify/SEARCH_NOTES.md`.
+
+* **Agreement.** Preparation, cell type, 50 uM bath BaCl2, Rin 161 +/- 7 to 206 +/- 10 MOhm (paired, p < 0.001, n 16 cells from 5 animals) at "p14" and 50 +/- 4 to 93 +/- 6 MOhm (p < 0.005, n 10 from 3) at "p28" all agree with section 1; the verifier's derived shares are 21.8 +/- 5.1 and 46.2 +/- 5.5 percentage points (same ratio arithmetic, independence assumed). The page locators agree (printed p. 52, PDF = printed + 8).
+* **Correction to section 2, caveat 6 (area).** The producer wrote that the area is not stated. The thesis states in its Introduction (printed p. 4) that the somatosensory cortex was chosen and that all following chapters refer to it; a finer area (barrel or not) is NOT STATED. The caveat is withdrawn and replaced by this sentence.
+* **Added by the verifier, bearing on the value.** (a) Pre-drug Rin differs between cohorts with the same label (Table 2.1 "p14" mean 150; the Ba2+ cohort 161; other drug cohorts 137 to 157), so the fraction depends on the cohort baseline (150 in place of 161 would give 27 percent, a cohort mismatch, not recommended). (b) A sag remains after Ba2+ and ZD7288 also raises Rin (157 to 213 MOhm), so Ih sits in the resting number and the Ba2+-sensitive share is not a Kir-only share. (c) No Ba2+ experiment at p8, p21 or p45; one concentration only; no application time, washout or Vrest after Ba2+. (d) TTX is not stated for the Ba2+ recordings and action potentials are visible in the traces (INFERENCE: absent).
+* **Units (caveat 5) refined.** The printed "uS" are probably nS of a 50 um by 50 um model compartment (INFERENCE: 67 uS/cm2 x 7.85e-5 cm2 = 5.3 nS matches a printed p8 "5"), but even read as nS the p14 leak (8) exceeds 1/Rin (6.2 nS), so the fitted conductances are not used; only the Rin pair is.
+* **Journal version.** The verifier, by author-plus-title strings on PubMed, Europe PMC and Crossref, found none; OpenAlex anonymous search was paused (route failed, not a negative). Absence by these routes is not proof.
+* **Receipt note.** The staged receipt records `discussion: not_read` conservatively although the Discussion passage on Kir subunits (printed p. 59) was read; the closed vocabulary has no "partial" value, so the receipt is left as staged (an under-claim). The verifier wrote no receipt (section 3.1.3 and the reference list not read completely).
+* **What stands.** One provisional one-lab, one-thesis value at a group label "p14": about 22 percent of input conductance is Ba2+ (50 uM) sensitive, 46 percent at "p28". It answers the existence half of IT48-Q01 provisionally and decides nothing about the first INV-18 arm by itself.
