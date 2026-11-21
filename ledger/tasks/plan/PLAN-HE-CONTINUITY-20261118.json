@@ -713,6 +713,15 @@
      "accepted_at": "2026-11-21T13:29:17Z",
      "evidence": "SCI X session b3e65c69 launched 13:29:28Z at effort high; window W released 13:29:35.63Z; bind 13:29:45.11Z (9.5 s after release); first tool call 13:29:46.14Z (1.03 s); handoff RUNNING; names applied natively, labels CURRENT",
      "updated_at": "2026-11-21T13:31:10Z"
+    },
+    {
+     "step": "Read the state of main's CI for ADV: whether runs 1806, 1810 and 1813 are stuck, and what the last completed runs fail; find the landing that introduced forbidden-name findings in the shareable page",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message of 2026-11-21 about CI runs 1806, 1810 and 1813 and the question of main's CI state",
+     "accepted_at": "2026-11-21T15:54:48Z",
+     "evidence": "runs not stuck (independent hosted jobs, 56-115 min wall clock each, 20 concurrent); runs 1792 onward fail 7 tests, cause = the word somatostatin added to the INV-15 question in ranking.json by commit 1a1addbfd (forbidden-name in the shareable audit); five tests green with a temporary local reword; ADV and IT told, IT owns the fix",
+     "updated_at": "2026-11-21T16:01:52Z"
     }
    ]
   }
@@ -1261,6 +1270,13 @@
    "at": "2026-11-21T13:29:17Z",
    "source": "ADV message of 2026-11-21 asking for the SCI successor from checkpoint X (window W at about 246k, nothing in flight), checkpoint landed on main",
    "step_sha256": "4ffb36fa862c",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T15:54:48Z",
+   "source": "ADV message of 2026-11-21 about CI runs 1806, 1810 and 1813 and the question of main's CI state",
+   "step_sha256": "3df1deee9bb0",
    "reopened_block": false,
    "authorised_by": null
   }

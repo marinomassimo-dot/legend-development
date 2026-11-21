@@ -93,6 +93,8 @@ There is now ONE governing text of the pup brief (the older two texts are kept u
 
 **Dated line 2026-11-21 (IT, ADV-149; the text above is kept as written):** item 5, page IT45-Q07 (Tanaka 2025, PMC12067145): no longer a blocked page. The text was read on 2026-11-11 through the PMC open-data bucket and re-fetched once today (identical bytes); 15 nM is a printed human manual-patch-clamp value, the three potency values differ by method, and the true value is for the authors to say. The other two pages of item 5 (IT49-Q11, IT55-Q02) stay with the operator. See `../../../trek_pointer_q07_it_20261121/README.md`.
 
+**Dated line 2026-11-21 (IT, ADV-149 step 2; the text above is kept as written):** item 5 is closed for all three pages: IT49-Q11 (the SI was reachable through the PMC open-data bucket and is read; no counter-screen in it) and IT55-Q02 part 2 (the supplement was reachable; the differentiation values are in Extended Data Fig. 2a, now read, not in the xlsx tables). No human check of blocked pages is needed for these three. See `../../../item5_pages_scan_it_20261121/README.md`.
+
 _Note on time labels (ADV host, 2026-11-21): the four headings now lettered (a) to (e) originally carried clock times (15:20Z, 15:50Z, 16:25Z, 17:10Z, 17:45Z) that I wrote without reading the host clock; the host clock read 15:49Z when I noticed. The entries are in the order they were written; the times were wrong and are removed. The earlier 14:10Z heading (item 17, run #1760) is also unverified in the same way and is left as the order marker only._
 
 ## Update (f) on 2026-11-21: item 17, main's red is wider than the item-17 pair since run #1792 (nothing asked of you; the team is finding the cause)
