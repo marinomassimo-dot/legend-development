@@ -650,6 +650,13 @@
      "accepted_at": "2026-11-21T10:57:11Z",
      "evidence": "main 339f1fd13; adv134_glossary_repeat_it_20261121/RESULT_HE_SCRIPT_PAINTED_NOTICE_20261121.md; i18n suite 32 OK; view suite 237 run, only the two item-17 reds",
      "updated_at": "2026-11-21T10:57:12Z"
+    },
+    {
+     "step": "Launch the SCI successor from checkpoint V by the usual recipe, apply pending display names natively, retire the old window by the watcher route, and tell SCI and ADV",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "SCI window U message after ADV ordered the handover at about 211k context, checkpoint V landed on main",
+     "accepted_at": "2026-11-21T11:07:08Z"
     }
    ]
   }
@@ -1149,6 +1156,13 @@
    "at": "2026-11-21T10:57:11Z",
    "source": "open commitments of the HE checkpoint E: the passages standing with no notice, then the ranking notice after the glossary repeat",
    "step_sha256": "4738f3711394",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T11:07:08Z",
+   "source": "SCI window U message after ADV ordered the handover at about 211k context, checkpoint V landed on main",
+   "step_sha256": "adc9974c13bb",
    "reopened_block": false,
    "authorised_by": null
   }
