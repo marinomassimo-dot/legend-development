@@ -118,3 +118,6 @@ After the round-2 cold read two fold-in errors were repaired (litter totals; SD 
 Second correction 2026-11-21: marker R2C09 first said that the confidence level of the primary comparison is not stated; the text states 95%, so the marker now names only the primary-versus-descriptive tension.
 
 Third correction 2026-11-21 (round-3 reader): see verify_adv146/COMPARISON_ADV146_IT_20261121.md and repair_adv146_it_20261121.py; the ADV-144 integration is integrate_adv144_it_20261121.py (markers replaced are kept in the History under "Markers replaced on 2026-11-21 (design-team group B)").
+
+## Addendum 2026-11-21 (ADV-148 integration)
+The design team's residual-conflict replacements S01 to S14 were applied by `integrate_adv148_it_20261121.py` (see `verify_adv148/RECONCILIATION_ADV148_IT_20261121.md`): six conflict markers resolved, six new laboratory questions, the pilot ages corrected (two laboratory-chosen ages inside P12 to P17), the straddle of P11 and P14 made optional, the E2 row corrected, "75 litters" replaced by the planning-table figures, and one source statement added where the sizing basis is stated (single origin). The superseded markers, notes and sentences are kept in the History. QCHECK rows Q19, Q51 and Q84 updated.
