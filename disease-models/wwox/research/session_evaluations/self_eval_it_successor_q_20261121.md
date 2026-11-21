@@ -23,4 +23,11 @@ Scope: IT48-Q01 third route (forward citations) and the Ih-blocker Rin strand; i
 
 Dream pass: material changes this session (premise corrected: Fig. 6 is a rescue arm; "equal at week 7, divergent at week 16" is not a time course; the thesis stays one lead) are already carried by dated lines in their consumers; nothing further to connect by IT.
 
+## Addendum 2026-11-21 (after ADV-144, round 3 and the two ADV dossier steps; landed 93be1d6fb)
+- Integration by script (integrate_adv144_it_20261121.py): 39 answers, no old marker lost (kept in the History), history quotes verbatim (checker part 2: 0 differences). Ten numbers in the answers are in no `numeric_tokens` column of SCI's table: traced only to SCI's replacement text, handed back to SCI (RECONCILIATION_ADV144_IT_20261121.md); this is a limit of the trace, not a verified error.
+- Round 3 (new sonnet reader, effort read back high): criteria 1 and 2 not met, 3 met, blocking 16 of 86. The integration itself introduced conflicts beside older sentences (answer against rule sentence); my first dry run printed leftover programme words and stale tokens, which the sanitizer fixed, but the cross-answer conflicts (pilot ages, series age) were only found by the reader. Weakest answer: I did not run a conflict scan between answers and the sentence they sit beside before dispatch. Micro-upgrade: that is now the repair's own first step (status box states that a note governs over the sentence beside it, and each such tension carries a CONFLICT-OPEN marker); a scripted scan of answer-versus-neighbour tension is NOT built (debt, named).
+- Same-family limit unchanged: the reader is the same model family; a further round was not proposed because each round found a new layer.
+- ADV's two dossier steps: INV-15 correction is a dated line (a per-animal association is not L3); my own earlier resume wording had read an association as L3, so the error was mine, caught by ADV. CIRM line: sponsor-reported, not a registry record; generated cards are not edited.
+
+
 Not medical advice.
