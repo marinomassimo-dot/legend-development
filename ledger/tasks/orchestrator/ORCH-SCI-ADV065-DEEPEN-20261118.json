@@ -687,6 +687,15 @@
      "accepted_at": "2026-11-20T22:37:38Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv123_myelin_function_map_sci_20261120/RESULT_ADV123_SCI_20261120.md",
      "updated_at": "2026-11-20T23:32:02Z"
+    },
+    {
+     "step": "ADV-161 (ADV-Codex loop round 4): one short feasibility pass on the specificity of the sterol transcript signal against the thyroid-dependent maturation programme (Hochbaum 2024, GSE271421); deliver to ADV",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-161 (assignments/ADV-161.md; REPLY_04_CODEX.md SCI paragraph)",
+     "accepted_at": "2026-11-21T21:04:40Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv161_sterol_specificity_sci_20261121/RESULT_ADV161_STEROL_SPECIFICITY_SCI_20261121.md; receipt FTR-20261121-39178853-01",
+     "updated_at": "2026-11-21T21:13:26Z"
     }
    ]
   }
@@ -1214,6 +1223,13 @@
    "at": "2026-11-20T22:37:38Z",
    "source": "ADV-123",
    "step_sha256": "0198d022191b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T21:04:40Z",
+   "source": "ADV-161 (assignments/ADV-161.md; REPLY_04_CODEX.md SCI paragraph)",
+   "step_sha256": "393ddff4edde",
    "reopened_block": false,
    "authorised_by": null
   }

@@ -1,0 +1,85 @@
+rows 1873 states 21
+
+== per state: number of rows, TRG rows (adjP<0.05 and |rob|>=0.5), and set hits (all listed / TRG) ==
+inferred_Astro.Aqp4_Gfap         listed   40 TRG   40 | A 2/2 | B 0/0 | C 0/0 | T 1/1
+inferred_Astro.Aqp4_Slc7a10      listed  370 TRG  370 | A 0/0 | B 0/0 | C 0/0 | T 2/2
+inferred_Endo                    listed   10 TRG   10 | A 0/0 | B 0/0 | C 0/0 | T 1/1
+inferred_L2.3.IT                 listed  221 TRG  221 | A 0/0 | B 0/0 | C 0/0 | T 2/2
+inferred_L4.5.IT                 listed  124 TRG  124 | A 0/0 | B 0/0 | C 0/0 | T 3/3
+inferred_L5.6.NP                 listed   44 TRG   44 | A 0/0 | B 0/0 | C 0/0 | T 1/1
+inferred_L5.IT                   listed  190 TRG  190 | A 0/0 | B 0/0 | C 0/0 | T 2/2
+inferred_L5.PT                   listed  171 TRG  171 | A 0/0 | B 0/0 | C 1/1 | T 2/2
+inferred_L6.CT                   listed   94 TRG   94 | A 0/0 | B 0/0 | C 0/0 | T 2/2
+inferred_L6.IT                   listed   54 TRG   54 | A 0/0 | B 0/0 | C 0/0 | T 1/1
+inferred_Lamp5                   listed   52 TRG   52 | A 0/0 | B 0/0 | C 0/0 | T 1/1
+inferred_Micro                   listed   15 TRG   15 | A 0/0 | B 0/0 | C 0/0 | T 0/0
+inferred_OPC                     listed   49 TRG   49 | A 0/0 | B 0/0 | C 2/2 | T 2/2
+inferred_Oligo.Enpp6_2           listed  157 TRG  157 | A 0/0 | B 0/0 | C 2/2 | T 0/0
+inferred_Oligo.Opalin_1          listed    2 TRG    2 | A 0/0 | B 0/0 | C 0/0 | T 0/0
+inferred_Oligo.Opalin_2          listed   63 TRG   63 | A 0/0 | B 0/0 | C 1/1 | T 2/2
+inferred_Oligo.Opalin_4          listed    6 TRG    6 | A 0/0 | B 0/0 | C 0/0 | T 0/0
+inferred_Pvalb                   listed   72 TRG   72 | A 0/0 | B 0/0 | C 0/0 | T 2/2
+inferred_Sst                     listed   33 TRG   33 | A 0/0 | B 0/0 | C 0/0 | T 2/2
+inferred_VLMC_2                  listed   13 TRG   13 | A 0/0 | B 0/0 | C 0/0 | T 0/0
+inferred_Vip                     listed   93 TRG   93 | A 0/0 | B 0/0 | C 0/0 | T 3/3
+
+== set rows in named and comparison glial states (gene, logFC, adjP, robScore_logFC, pctExpr ctrl->T3, numCells) ==
+-- inferred_OPC
+   T Klf9     logFC +0.626 adjP 3.40e-06 rob +0.750 pct 0.269->0.400 cells 3370 TRG True
+   C Bcas1    logFC +0.326 adjP 4.08e-05 rob +0.625 pct 0.727->0.778 cells 3370 TRG True
+   C Ugt8a    logFC +0.464 adjP 1.33e-04 rob +0.750 pct 0.423->0.507 cells 3370 TRG True
+   T Ier5     logFC +0.704 adjP 2.87e-02 rob +0.750 pct 0.077->0.135 cells 3370 TRG True
+-- inferred_Oligo.Enpp6_2
+   C Mbp      logFC -1.689 adjP 7.56e-04 rob -1.000 pct 0.779->0.575 cells 428 TRG True
+   C Enpp6    logFC -0.740 adjP 1.57e-02 rob -0.625 pct 0.772->0.637 cells 428 TRG True
+-- inferred_Oligo.Opalin_2
+   T Klf9     logFC +0.664 adjP 5.92e-15 rob +0.750 pct 0.328->0.453 cells 5274 TRG True
+   C Bcas1    logFC +0.240 adjP 4.67e-05 rob +0.625 pct 0.726->0.781 cells 5274 TRG True
+   T Hr       logFC +0.548 adjP 1.85e-02 rob +0.750 pct 0.035->0.068 cells 5274 TRG True
+-- inferred_Oligo.Opalin_1
+-- inferred_Oligo.Opalin_4
+-- inferred_Astro.Aqp4_Slc7a10
+   T Klf9     logFC +0.480 adjP 7.66e-17 rob +0.875 pct 0.619->0.748 cells 10771 TRG True
+   T Hr       logFC +1.187 adjP 7.31e-15 rob +0.500 pct 0.023->0.097 cells 10771 TRG True
+-- inferred_Astro.Aqp4_Gfap
+   T Klf9     logFC +0.811 adjP 4.44e-06 rob +1.000 pct 0.569->0.777 cells 970 TRG True
+   A Hmgcr    logFC -0.591 adjP 1.81e-03 rob -0.875 pct 0.711->0.648 cells 970 TRG True
+   A Hmgcs1   logFC -0.355 adjP 4.01e-02 rob -0.625 pct 0.907->0.918 cells 970 TRG True
+
+== sets A and B across ALL states (gene: states listed) ==
+  Hmgcs1   [('Astro.Aqp4_Gfap', -0.35)]
+  Hmgcr    [('Astro.Aqp4_Gfap', -0.59)]
+  Mvk      []
+  Pmvk     []
+  Mvd      []
+  Idi1     []
+  Fdps     []
+  Fdft1    []
+  Sqle     []
+  Lss      []
+  Cyp51    []
+  Tm7sf2   []
+  Msmo1    []
+  Nsdhl    []
+  Hsd17b7  []
+  Dhcr24   []
+  Ebp      []
+  Sc5d     []
+  Dhcr7    []
+  Srebf2   []
+  Scap     []
+  Insig1   []
+  Ldlr     []
+  Pcsk9    []
+  Stard4   []
+  Acat2    []
+
+== Table S2 terms matching sterol|cholesterol|lipid|steroid|myelin|oligodendro (state, term, padj, NES) ==
+   Astro.Aqp4_Slc7a10 | Glial Cell Differentiation (GO:0010001) | padj 1.53e-02 NES 1.73
+   Astro.Aqp4_Slc7a10 | Myelination (GO:0042552) | padj 2.30e-02 NES 1.59
+   Astro.Aqp4_Slc7a10 | Regulation Of Myelination (GO:0031641) | padj 4.96e-02 NES 1.66
+   L4.5.IT | Myelination (GO:0042552) | padj 1.88e-02 NES 1.54
+   L5.PT | Myelination (GO:0042552) | padj 1.46e-02 NES 1.54
+   Lamp5 | Inositol Lipid-Mediated Signaling (GO:0048017) | padj 2.27e-02 NES 1.73
+
+S2 terms per state: Counter({'L2.3.IT': 167, 'L5.PT': 157, 'L4.5.IT': 152, 'L5.IT': 136, 'L6.CT': 115, 'Astro.Aqp4_Slc7a10': 71, 'Pvalb': 62, 'L5.6.NP': 54, 'Vip': 49, 'Lamp5': 43, 'Sst': 41, 'L6.IT': 32, 'OPC': 18, 'Micro': 9, 'Oligo.Opalin_2': 8, 'Sncg': 7, 'Oligo.Enpp6_2': 2, 'Endo': 1})
