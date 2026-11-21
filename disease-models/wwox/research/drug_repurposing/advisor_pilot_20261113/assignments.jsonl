@@ -399,3 +399,5 @@
 {"assessment": "HOST", "id": "ADV-163", "key": "operator-neurodev-resource-he-method-tool-licence-and-discipline-assessment", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-21T21:46:28Z"}
 {"evidence": "SendMessage receipt msg_id 15515bb1-bc27-40b9-8d50-3b0cc1d33671, 2026-11-21 host clock about 22:00Z", "id": "ADV-162", "state": "SENT", "to": ["SCI - CURRENT 7f742680"], "utc": "2026-11-21T21:46:45Z"}
 {"evidence": "SendMessage receipt msg_id f0c9c912-d4c9-45a8-a1f2-027105530ad7, 2026-11-21 host clock about 22:00Z", "id": "ADV-163", "state": "SENT", "to": ["HE - CURRENT e052ca19"], "utc": "2026-11-21T21:46:46Z"}
+{"assessment": "HOST", "id": "ADV-164", "key": "gene-anchor-transfer-check-two-other-reopen-rows-he-owner-it-consumer", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-21T21:54:19Z"}
+{"evidence": "SendMessage receipt msg_id 447c02e2-8167-4ee0-83f7-b89a5ac8fcfa, 2026-11-21 host clock 21:54Z; consumer note to IT msg c2ad10a5", "id": "ADV-164", "state": "SENT", "to": ["HE - CURRENT e052ca19"], "utc": "2026-11-21T21:54:39Z"}

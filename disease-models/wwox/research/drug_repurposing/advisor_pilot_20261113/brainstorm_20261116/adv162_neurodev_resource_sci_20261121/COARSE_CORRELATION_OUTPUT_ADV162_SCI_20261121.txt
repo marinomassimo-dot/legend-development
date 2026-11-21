@@ -1,0 +1,63 @@
+samples ['cko1', 'cko2', 'cko3', 'cko4', 'cwt1', 'cwt2'] genes in query 35337
+
+## stage / corticogenesis: reference columns 13, genes used 10466 (of 14110 shared)
+  cko1  top3 2A-early_prenatal 0.277, 1-embryonic 0.218, 2B-early_prenatal 0.211 | spread best-10th 0.423
+  cko2  top3 2A-early_prenatal 0.288, 2B-early_prenatal 0.231, 1-embryonic 0.211 | spread best-10th 0.450
+  cko3  top3 2A-early_prenatal 0.231, 1-embryonic 0.199, 2B-early_prenatal 0.157 | spread best-10th 0.382
+  cko4  top3 2A-early_prenatal 0.254, 1-embryonic 0.197, 2B-early_prenatal 0.187 | spread best-10th 0.394
+  cwt1  top3 2A-early_prenatal 0.291, 2B-early_prenatal 0.234, 1-embryonic 0.204 | spread best-10th 0.451
+  cwt2  top3 2A-early_prenatal 0.287, 2B-early_prenatal 0.237, 1-embryonic 0.187 | spread best-10th 0.452
+  WT mean top3 2A-early_prenatal 0.289, 2B-early_prenatal 0.235, 1-embryonic 0.195
+  KO mean top3 2A-early_prenatal 0.262, 1-embryonic 0.206, 2B-early_prenatal 0.197
+  KO-minus-WT correlation difference (descriptive): 3A-early_mid-prenatal -0.047, 2B-early_prenatal -0.039, 3B-early_mid-prenatal -0.029, 5-late_prenatal +0.029, 10-adolescence +0.028, 8-early_childhood +0.027
+
+## stage / neurogenesis: reference columns 13, genes used 10466 (of 14110 shared)
+  cko1  top3 2A-early_prenatal 0.276, 1-embryonic 0.257, 2B-early_prenatal 0.211 | spread best-10th 0.464
+  cko2  top3 2A-early_prenatal 0.282, 1-embryonic 0.238, 2B-early_prenatal 0.225 | spread best-10th 0.477
+  cko3  top3 1-embryonic 0.236, 2A-early_prenatal 0.233, 2B-early_prenatal 0.163 | spread best-10th 0.381
+  cko4  top3 2A-early_prenatal 0.249, 1-embryonic 0.228, 2B-early_prenatal 0.185 | spread best-10th 0.413
+  cwt1  top3 2A-early_prenatal 0.284, 1-embryonic 0.230, 2B-early_prenatal 0.225 | spread best-10th 0.474
+  cwt2  top3 2A-early_prenatal 0.276, 2B-early_prenatal 0.222, 1-embryonic 0.208 | spread best-10th 0.464
+  WT mean top3 2A-early_prenatal 0.280, 2B-early_prenatal 0.224, 1-embryonic 0.219
+  KO mean top3 2A-early_prenatal 0.260, 1-embryonic 0.240, 2B-early_prenatal 0.196
+
+## stage / gliogenesis: reference columns 13, genes used 10466 (of 14109 shared)
+  cko1  top3 2A-early_prenatal 0.256, 1-embryonic 0.206, 2B-early_prenatal 0.190 | spread best-10th 0.417
+  cko2  top3 2A-early_prenatal 0.265, 2B-early_prenatal 0.207, 1-embryonic 0.191 | spread best-10th 0.437
+  cko3  top3 2A-early_prenatal 0.212, 1-embryonic 0.180, 2B-early_prenatal 0.144 | spread best-10th 0.335
+  cko4  top3 2A-early_prenatal 0.237, 1-embryonic 0.185, 2B-early_prenatal 0.170 | spread best-10th 0.379
+  cwt1  top3 2A-early_prenatal 0.272, 2B-early_prenatal 0.215, 1-embryonic 0.184 | spread best-10th 0.436
+  cwt2  top3 2A-early_prenatal 0.274, 2B-early_prenatal 0.221, 1-embryonic 0.176 | spread best-10th 0.440
+  WT mean top3 2A-early_prenatal 0.273, 2B-early_prenatal 0.218, 1-embryonic 0.180
+  KO mean top3 2A-early_prenatal 0.243, 1-embryonic 0.191, 2B-early_prenatal 0.178
+
+## subclass / corticogenesis: reference columns 21, genes used 10466 (of 14110 shared)
+  cko1  top3 RG 0.278, cRG 0.234, eIN 0.158 | spread best-10th 0.362
+  cko2  top3 RG 0.267, cRG 0.229, eIN 0.168 | spread best-10th 0.323
+  cko3  top3 RG 0.249, cRG 0.194, eIN 0.156 | spread best-10th 0.313
+  cko4  top3 RG 0.249, cRG 0.201, eIN 0.158 | spread best-10th 0.330
+  cwt1  top3 RG 0.265, cRG 0.224, eIN 0.158 | spread best-10th 0.326
+  cwt2  top3 RG 0.249, cRG 0.211, miEN 0.151 | spread best-10th 0.290
+  WT mean top3 RG 0.257, cRG 0.217, eIN 0.151
+  KO mean top3 RG 0.261, cRG 0.215, eIN 0.160
+  KO-minus-WT correlation difference (descriptive): miEN -0.050, eEN -0.047, imNIT -0.047, IPC -0.040, Astro +0.035, Opc +0.032
+
+## subclass / neurogenesis: reference columns 25, genes used 10466 (of 14110 shared)
+  cko1  top3 vRG 0.291, cRG 0.289, eIPC 0.282 | spread best-10th 0.361
+  cko2  top3 eIPC 0.290, vRG 0.278, cRG 0.275 | spread best-10th 0.369
+  cko3  top3 vRG 0.266, cRG 0.254, eIPC 0.240 | spread best-10th 0.315
+  cko4  top3 vRG 0.263, cRG 0.256, eIPC 0.254 | spread best-10th 0.314
+  cwt1  top3 eIPC 0.292, vRG 0.275, cRG 0.273 | spread best-10th 0.363
+  cwt2  top3 eIPC 0.287, cRG 0.256, vRG 0.256 | spread best-10th 0.352
+  WT mean top3 eIPC 0.289, vRG 0.265, cRG 0.264
+  KO mean top3 vRG 0.274, cRG 0.268, eIPC 0.267
+
+## subclass / gliogenesis: reference columns 18, genes used 10466 (of 14109 shared)
+  cko1  top3 eRG 0.244, vRG 0.217, NPC 0.209 | spread best-10th 0.286
+  cko2  top3 eRG 0.231, NPC 0.229, vRG 0.208 | spread best-10th 0.263
+  cko3  top3 eRG 0.221, NPC 0.173, vRG 0.173 | spread best-10th 0.244
+  cko4  top3 eRG 0.226, NPC 0.208, vRG 0.188 | spread best-10th 0.248
+  cwt1  top3 eRG 0.230, NPC 0.216, vRG 0.202 | spread best-10th 0.266
+  cwt2  top3 NPC 0.229, eRG 0.220, vRG 0.198 | spread best-10th 0.270
+  WT mean top3 eRG 0.225, NPC 0.223, vRG 0.200
+  KO mean top3 eRG 0.231, NPC 0.205, vRG 0.197
