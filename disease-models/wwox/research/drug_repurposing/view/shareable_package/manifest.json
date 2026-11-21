@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3699,
+    "forbidden-name": 3700,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -465,7 +465,7 @@
  ],
  "data": {
   "catalogue_generated": "2026-10-31T07:28:37Z",
-  "data_date": "2026-11-19",
+  "data_date": "2026-11-21",
   "dgidb_export": "2024-06-10",
   "view_schema": "legend.wwox.repurposing_view/2"
  },
@@ -543,11 +543,11 @@
   },
   "README.md": {
    "bytes": 5072,
-   "sha256": "99a6436da188c47f90fd4778e25dcab89b31009e471b5be4a4806f4faf6a29ec"
+   "sha256": "f279faf2abc66a9b3dad21e223d8bf247b1621bd02c5c613e74aa108a46159c5"
   },
   "TEXT_PROVENANCE.json": {
-   "bytes": 2150,
-   "sha256": "631964fc7a73f07212cf2f0ce641f8a3f5d78f1ec65a3dc6bfbb3c753e8d5444"
+   "bytes": 2161,
+   "sha256": "c591bce9fc75a3f0f23b6e4f1972ffb74bb1c0f53269a70482ea23b7de3662b1"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -562,24 +562,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5308473,
-   "sha256": "dfe8121c7b985b62ecaa99d85c4bc1ff6147f92f31cabbc5123f5ca96612bdce"
+   "bytes": 5314035,
+   "sha256": "c24cd6525bfea2a19918c13dad92be20fc53d83654439fb753e752ea5da6a847"
   },
   "es.html": {
-   "bytes": 5293670,
-   "sha256": "53bef33510618441ee8f0c982c965bb47ca78ffaeac6bbd015ac69b4d8769d3b"
+   "bytes": 5298919,
+   "sha256": "6e291b4a1ab3b0c04c3bb8340a3e87b18e49600922fb2cb039d1d3ee5c1cba25"
   },
   "fr.html": {
-   "bytes": 5330484,
-   "sha256": "34847812bf37ca3c3bec22923ddb3108fdf695ca5711dced4b78a0197f46fab0"
+   "bytes": 5335396,
+   "sha256": "a1bfe49e39e434d5c36a2ff3f6d122fa2ed527b6cb1a72232d28ffb2892b96ee"
   },
   "index.html": {
-   "bytes": 5197292,
-   "sha256": "1229a0215d3700bac3e9a76f06d8c1f56f00f7c0a61148df702b85f3f16e85c3"
+   "bytes": 5203231,
+   "sha256": "cb17a9a544ac817b50d6267690a871cee017d842bbf6b41c5f02bdf6c3db48e1"
   },
   "it.html": {
-   "bytes": 5265556,
-   "sha256": "69ef2faac4ec026bb5346cb0f6a03aac47f04781876fa2697f637fc6707ccbe2"
+   "bytes": 5271017,
+   "sha256": "fc01047dd6fb7b95b38841569a23b560b27cbb8b7c4426f6dd45346984fea311"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
