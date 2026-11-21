@@ -38,7 +38,8 @@ for start, open_end, end in sorted(spans):
             if h in scope or h in seen or len(t) < 40 or not rv.english_authored_node(t, "fr"):
                 continue
             seen.add(h)
-            sc = sum(pc.numeric_tokens(t).values()) + sum(pc.symbol_tokens(t).values())
+            t2 = re.sub(r"\b[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+\b", " ", t)   # rule v2: copied hyphenated capital identifiers are not scored
+            sc = sum(pc.numeric_tokens(t2).values()) + sum(pc.symbol_tokens(t2).values())
             cands.append({"sec": sid, "pos": m.start(1), "hash": h, "len": len(t), "score": sc, "text": t})
 cands.sort(key=lambda o: (-o["score"], o["pos"], -o["len"]))
 top = cands[:25]
