@@ -243,7 +243,7 @@ def localize_authored_nodes(page: str) -> str:
     return "".join(x if x.startswith(("<script", "<style")) else TEXT_NODE.sub(swap, x) for x in parts)
 
 
-EN_SCOPE_SECTIONS = ("overview", "ranking", "hypotheses", "priorities-cur")   # ADV-131: overview and ranking (the measured first batch); ADV-132 adds the two sections its dense batch lands in; the same English text elsewhere stays English (and labelled) until a batch covers that section
+EN_SCOPE_SECTIONS = ("overview", "ranking")   # ADV-131: the two sections of the measured first batch; the same English text elsewhere stays English (and labelled) until a batch covers that section
 
 
 def localize_english_scope(page: str) -> str:
