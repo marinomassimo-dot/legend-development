@@ -1,0 +1,524 @@
+{
+ "cap": 25,
+ "rows": {
+  "A recovery_it10_p23 R1 (Q230P protein fate; RP-015)": {
+   "positives_n": 10,
+   "arms": {
+    "default/epmc": {
+     "query": "TITLE_ABS:q230p AND TITLE_ABS:protein",
+     "hitCount": 1,
+     "returned_all": 1,
+     "positives_in_all": [],
+     "positives_in_top": [],
+     "top_ids": [
+      "41957021"
+     ],
+     "top_titles": {
+      "41957021": "Molecular pathogenesis and gene therapy-based intervention of GTPBP3-related mitochondrial disease. (2026)"
+     },
+     "hurt_in_all": []
+    },
+    "default/pubmed": {
+     "query": "q230p[tiab] AND protein[tiab]",
+     "hitCount": "1",
+     "returned_all": 1,
+     "positives_in_all": [],
+     "positives_in_top": [],
+     "top_ids": [
+      "41957021"
+     ],
+     "top_titles": {
+      "41957021": "Molecular pathogenesis and gene therapy-based intervention of GTPBP3-related mitochondrial disease. (2026)"
+     },
+     "hurt_in_all": []
+    },
+    "flag/epmc": {
+     "query": "TITLE_ABS:WWOX AND TITLE_ABS:protein",
+     "hitCount": 314,
+     "returned_all": 314,
+     "positives_in_all": [
+      "24369382",
+      "29808465",
+      "36828035"
+     ],
+     "positives_in_top": [],
+     "top_ids": [
+      "42790938",
+      "43048821",
+      "EPMC:PPR1260670",
+      "42082822",
+      "41984841",
+      "41677633",
+      "42193054",
+      "EPMC:PPR1220099",
+      "EPMC:PPR1168148",
+      "42275215",
+      "41124647",
+      "EPMC:PPR1124524",
+      "41966396",
+      "EPMC:PPR1015434",
+      "41254692",
+      "40198927",
+      "39473747",
+      "38542478",
+      "38563965",
+      "38902482",
+      "39101447",
+      "38161429",
+      "38203337",
+      "37897534",
+      "EPMC:PPR1254036"
+     ],
+     "top_titles": {
+      "42790938": "WWOX Suppresses Gastric Cancer Cell Proliferation, Migration, and EMT by Negatively Regulating the Wnt/\u03b2-Catenin Signaling Pathway. (2026)",
+      "43048821": "Multi-omic Insight into the Causal Relationship Between Programmed Cell Death and Cognitive Function. (2026)",
+      "EPMC:PPR1260670": "WWOX contributes to DNA damage, but not somatic instability in Huntington\u2019s disease (2026)",
+      "42082822": "The Role of WWOX Gene Variant in Hypospadias and 46,XY Disorders of Sexual Development. (2026)",
+      "41984841": "WWOX maintains epidermal identity and suppresses EMT to prevent aggressive cutaneous squamous cell carcinoma. (2026)",
+      "41677633": "WWOX Induction Promotes Bcl-X&lt;sub&gt;L&lt;/sub&gt; and Mcl-1 Degradation Through a Lysosomal Pathway upon Stress Responses. (2026)",
+      "42193054": "WWOX-Related Epileptic Encephalopathy (WOREE Syndrome): Clinical Case Study and Literature Review. (2026)",
+      "EPMC:PPR1220099": "Neuron-Specific WWOX Gene Therapy Produces Dose-Dependent, Durable Rescue in a Model of WWOX-Related Epileptic Encephalopathy (2026)",
+      "EPMC:PPR1168148": "<em>WWOX </em>Gene Disease as Infantile Catastrophic Epileptic Encephalopathy (WOREE Syndrome Plus): A Comprehensive Case Study with Brief Literature Update (2026)",
+      "42275215": "RNF138 promotes cisplatin resistance and PD-L1-mediated immune evasion via JAK2/STAT3 activation in nasopharyngeal carcinoma. (2026)",
+      "41124647": "Genetic and Functional Evidence Links Germline Biallelic Inactivating Variants in WWOX to Histological Mixed-Type Thyroid Cancer. (2026)",
+      "EPMC:PPR1124524": "WWOX deficiency uncovers a cell-autonomous mechanism impairing myelin repair (2025)",
+      "41966396": "Comprehensive multi-omics analyses reveal small intestinal genetic mechanisms regulating milk protein traits in yak. (2026)",
+      "EPMC:PPR1015434": "Alzheimer\u2019s disease risk gene  <i>Wwox</i>  protects against amyloid pathology through metabolic reprogramming (2025)",
+      "41254692": "Integrative multi-omics and Mendelian randomization identify WWOX and THBS2 as potential therapeutic targets in mature T/NK-cell lymphoma. (2025)",
+      "40198927": "WWOX attenuates the progression of gallbladder cancer by suppressing cellular glycolysis through the modulation of the P73/HIF-1\u03b1 signaling pathway. (2025)",
+      "39473747": "Loss of WWOX contributes to cisplatin resistance in triple-negative breast cancer cells by modulating miR-182 and miR-214. (2024)",
+      "38542478": "Zfra Overrides WWOX in Suppressing the Progression of Neurodegeneration. (2024)",
+      "38563965": "Endothelial knockdown of the tumor suppressor, &lt;i&gt;WWOX&lt;/i&gt;, increases inflammation in ventilator-induced lung injury. (2024)",
+      "38902482": "Molecular Mechanism of WWOX Inhibiting the Development of Esophageal Cancer by Inhibiting Hippo Signaling Pathway. (2025)",
+      "39101447": "Developmental epileptic encephalopathy caused by homozygosity of a c.172+1G&gt;C variant in the WWOX gene. (2024)",
+      "38161429": "Neuroimaging features of WOREE syndrome: a mini-review of the literature. (2023)",
+      "38203337": "Mechanistic Investigation of WWOX Function in NF-kB-Induced Skin Inflammation in Psoriasis. (2023)",
+      "37897534": "Loss of fragile WWOX gene leads to senescence escape and genome instability. (2023)",
+      "EPMC:PPR1254036": "Golgi-endosomal CATCHR complexes function as organizing hubs for vesicle tethering and fusion (2026)"
+     },
+     "hurt_in_all": []
+    },
+    "flag/pubmed": {
+     "query": "wwox[tiab] AND protein[tiab]",
+     "hitCount": "302",
+     "returned_all": 302,
+     "positives_in_all": [
+      "24369382",
+      "29808465",
+      "36828035"
+     ],
+     "positives_in_top": [],
+     "top_ids": [
+      "30820047",
+      "34109992",
+      "31618474",
+      "32314321",
+      "25538133",
+      "20146584",
+      "34359949",
+      "33565365",
+      "27773744",
+      "15070730",
+      "30158849",
+      "37248434",
+      "37897534",
+      "32185845",
+      "38203337",
+      "38542478",
+      "19896763",
+      "24330824",
+      "38161429",
+      "33255508",
+      "18047428",
+      "25802472",
+      "41254692",
+      "38182577",
+      "18437686"
+     ],
+     "top_titles": {
+      "30820047": "Genetic meta-analysis of diagnosed Alzheimer's disease identifies new risk loci and implicates A\u03b2, tau, immunity and lipid processing. (2019)",
+      "34109992": "RHBDD2\u2011WWOX protein interaction during proliferative and differentiated stages in normal and breast cancer cells. (2021)",
+      "31618474": "The Genetic Landscape of Epilepsy of Infancy with Migrating Focal Seizures. (2019)",
+      "32314321": "Analysis of WWOX gene expression and protein levels in pterygium. (2020)",
+      "25538133": "WWOX: a fragile tumor suppressor. (2015)",
+      "20146584": "WWOX gene and gene product: tumor suppression through specific protein interactions. (2010)",
+      "34359949": "WWOX and Its Binding Proteins in Neurodegeneration. (2021)",
+      "33565365": "Cellular Expression and Subcellular Localization of Wwox Protein During Testicular Development and Spermatogenesis in Rats. (2021)",
+      "27773744": "Fhit and Wwox loss-associated genome instability: A genome caretaker one-two punch. (2017)",
+      "15070730": "Functional association between Wwox tumor suppressor protein and p73, a p53 homolog. (2004)",
+      "30158849": "WWOX Phosphorylation, Signaling, and Role in Neurodegeneration. (2018)",
+      "37248434": "WWOX binds MERIT40 and modulates its function in homologous recombination, implications in breast cancer. (2023)",
+      "37897534": "Loss of fragile WWOX gene leads to senescence escape and genome instability. (2023)",
+      "32185845": "Phosphorylation of the WWOX Protein Regulates Its Interaction with p73. (2020)",
+      "38203337": "Mechanistic Investigation of WWOX Function in NF-kB-Induced Skin Inflammation in Psoriasis. (2023)",
+      "38542478": "Zfra Overrides WWOX in Suppressing the Progression of Neurodegeneration. (2024)",
+      "19896763": "Deletion of the WWOX gene and frequent loss of its protein expression in human osteosarcoma. (2010)",
+      "24330824": "Correlation of WWOX, RUNX2 and VEGFA protein expression in human osteosarcoma. (2013)",
+      "38161429": "Neuroimaging features of WOREE syndrome: a mini-review of the literature. (2023)",
+      "33255508": "WWOX Loss of Function in Neurodevelopmental and Neurodegenerative Disorders. (2020)",
+      "18047428": "Association between decreased WWOX protein expression and thyroid cancer development. (2007)",
+      "25802472": "Introduction to a thematic issue for WWOX. (2015)",
+      "41254692": "Integrative multi-omics and Mendelian randomization identify WWOX and THBS2 as potential therapeutic targets in mature T/NK-cell lymphoma. (2025)",
+      "38182577": "WWOX promotes osteosarcoma development via upregulation of Myc. (2024)",
+      "18437686": "WWOX tumor suppressor gene. (2008)"
+     },
+     "hurt_in_all": []
+    },
+    "simple/epmc": {
+     "query": "TITLE_ABS:WWOX AND TITLE_ABS:variant",
+     "hitCount": 60,
+     "returned_all": 60,
+     "positives_in_all": [
+      "29808465",
+      "30853297",
+      "36828035",
+      "39416860",
+      "40875931"
+     ],
+     "positives_in_top": [
+      "36828035",
+      "39416860",
+      "40875931"
+     ],
+     "top_ids": [
+      "42082822",
+      "42721537",
+      "42193054",
+      "EPMC:PPR1168148",
+      "40875931",
+      "42991897",
+      "42443585",
+      "39416860",
+      "42327583",
+      "39507621",
+      "39101447",
+      "38407561",
+      "37615513",
+      "41153369",
+      "37974179",
+      "41776383",
+      "40191585",
+      "39933386",
+      "35712340",
+      "36828035",
+      "EPMC:PPR635922",
+      "36779245",
+      "EPMC:PPR554801",
+      "34852950",
+      "33916893"
+     ],
+     "top_titles": {
+      "42082822": "The Role of WWOX Gene Variant in Hypospadias and 46,XY Disorders of Sexual Development. (2026)",
+      "42721537": "WWOX-related developmental and epileptic encephalopathy (WOREE): A case series of seven patients from Argentina. (2026)",
+      "42193054": "WWOX-Related Epileptic Encephalopathy (WOREE Syndrome): Clinical Case Study and Literature Review. (2026)",
+      "EPMC:PPR1168148": "<em>WWOX </em>Gene Disease as Infantile Catastrophic Epileptic Encephalopathy (WOREE Syndrome Plus): A Comprehensive Case Study with Brief Literature Update (2026)",
+      "40875931": "&lt;i&gt;WWOX&lt;/i&gt;-Related Developmental and Epileptic Encephalopathy: Expanding the Clinical Spectrum and Deciphering the Genotype-Phenotype. (2025)",
+      "42991897": "Population-specific differences in ClinVar pathogenic and likely pathogenic variants of epilepsy-associated genes between East Asian and non-finnish European po (2026)",
+      "42443585": "Genetic architecture of lung cancer revealed by common and rare variant analyses across population-scale biobanks. (2026)",
+      "39416860": "<i>WWOX</i>-related epileptic encephalopathy caused by a novel mutation in the <i>WWOX</i> gene: a case report. (2024)",
+      "42327583": "&lt;i&gt;GALNT14&lt;/i&gt;-rs9679162 Genotypes Predict Post-immunotherapy Side Effect and Survival in Patients with Hepatitis B Virus-related Hepatocellular Car (2026)",
+      "39507621": "Case report: Adult patient with <i>WWOX</i> developmental and epileptic encephalopathy: 40\u00a0years of observation. (2024)",
+      "39101447": "Developmental epileptic encephalopathy caused by homozygosity of a c.172+1G&gt;C variant in the WWOX gene. (2024)",
+      "38407561": "Identification of a novel splice-site WWOX variant with paternal uniparental isodisomy in a patient with infantile epileptic encephalopathy. (2024)",
+      "37615513": "Remote modulation of WWOX by an intronic variant associated with survival of Chinese gastric cancer patients. (2024)",
+      "41153369": "Genetic Etiology of Developmental and Epileptic Encephalopathy in a Turkish Cohort: A Single-Center Study with Targeted Gene Panel and Whole Exome Sequencing. (2025)",
+      "37974179": "Identification of compound heterozygous deletion of the WWOX gene in WOREE syndrome. (2023)",
+      "41776383": "Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. (2026)",
+      "40191585": "Identifying individuals with rare disease variants by inferring shared ancestral haplotypes from SNP array data. (2025)",
+      "39933386": "Infantile Epileptic Spasms Syndrome: Unveiling clinical and genetic variability in a case series from Argentina. (2025)",
+      "35712340": "Novel Mutation With Literature Review WW Domain-Containing Oxidoreductase (WWOX) Gene. (2022)",
+      "36828035": "WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice phenocopying human SCAR12. (2023)",
+      "EPMC:PPR635922": "Identification of compound heterozygous deletions in the WWOX gene caused WOREE syndrome by whole exome sequencing (2023)",
+      "36779245": "WWOX developmental and epileptic encephalopathy: Understanding the epileptology and the mortality risk. (2023)",
+      "EPMC:PPR554801": "WWOX P47T loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice phenocopying human SCAR12 (2022)",
+      "34852950": "Association between WWOX/MAF variants and dementia-related neuropathologic endophenotypes. (2022)",
+      "33916893": "Neurological Disorders Associated with WWOX Germline Mutations-A Comprehensive Overview. (2021)"
+     },
+     "hurt_in_all": []
+    },
+    "simple/pubmed": {
+     "query": "wwox[tiab] AND variant[tiab]",
+     "hitCount": "56",
+     "returned_all": 56,
+     "positives_in_all": [
+      "29808465",
+      "30853297",
+      "36828035",
+      "39416860",
+      "40875931"
+     ],
+     "positives_in_top": [
+      "29808465",
+      "30853297",
+      "36828035",
+      "40875931"
+     ],
+     "top_ids": [
+      "34852950",
+      "40875931",
+      "36779245",
+      "33916893",
+      "35573960",
+      "38384455",
+      "29361163",
+      "30529582",
+      "30385613",
+      "28742274",
+      "35655316",
+      "35571988",
+      "37686047",
+      "39507621",
+      "37615513",
+      "40191585",
+      "18674750",
+      "29808465",
+      "27121845",
+      "38407561",
+      "36828035",
+      "41124647",
+      "42193054",
+      "30853297",
+      "42443585"
+     ],
+     "top_titles": {
+      "34852950": "Association between WWOX/MAF variants and dementia-related neuropathologic endophenotypes. (2022)",
+      "40875931": "WWOX-Related Developmental and Epileptic Encephalopathy: Expanding the Clinical Spectrum and Deciphering the Genotype-Phenotype. (2025)",
+      "36779245": "WWOX developmental and epileptic encephalopathy: Understanding the epileptology and the mortality risk. (2023)",
+      "33916893": "Neurological Disorders Associated with WWOX Germline Mutations-A Comprehensive Overview. (2021)",
+      "35573960": "A Phenotypic-Driven Approach for the Diagnosis of WOREE Syndrome. (2022)",
+      "38384455": "A genome-wide association study on hematopoietic stem cell transplantation reveals novel genomic loci associated with transplant outcomes. (2024)",
+      "29361163": "Genomic and Expression Analyses Identify a Disease-Modifying Variant for Fibrostenotic Crohn's Disease. (2018)",
+      "30529582": "Large-Scale Genome-Wide Association Study of East Asians Identifies Loci Associated With Risk for Colorectal Cancer. (2019)",
+      "30385613": "Genetic Variants of VEGFA and FLT4 Are Determinants of Survival in Renal Cell Carcinoma Patients Treated with Sorafenib. (2019)",
+      "28742274": "Whole exome sequencing identified genetic variations in Chinese hemangioblastoma patients. (2017)",
+      "35655316": "Genome-wide linkage search for cancer susceptibility loci in a cohort of non BRCA1/2 families in Sri Lanka. (2022)",
+      "35571988": "Mitochondrial 1555 G>A variant as a potential risk factor for childhood glioblastoma. (2022)",
+      "37686047": "Multi-Omics Analysis of NCI-60 Cell Line Data Reveals Novel Metabolic Processes Linked with Resistance to Alkylating Anti-Cancer Agents. (2023)",
+      "39507621": "Case report: Adult patient with WWOX developmental and epileptic encephalopathy: 40\u00a0years of observation. (2024)",
+      "37615513": "Remote modulation of WWOX by an intronic variant associated with survival of Chinese gastric cancer patients. (2024)",
+      "40191585": "Identifying individuals with rare disease variants by inferring shared ancestral haplotypes from SNP array data. (2025)",
+      "18674750": "WW-domain-containing oxidoreductase is associated with low plasma HDL-C levels. (2008)",
+      "29808465": "A novel missense variant in the SDR domain of the WWOX gene leads to complete loss of WWOX protein with early-onset epileptic encephalopathy and severe developm (2018)",
+      "27121845": "Novel mutations in WWOX, RARS2, and C10orf2 genes in consanguineous Arab families with intellectual disability. (2016)",
+      "38407561": "Identification of a novel splice-site WWOX variant with paternal uniparental isodisomy in a patient with infantile epileptic encephalopathy. (2024)",
+      "36828035": "WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice phenocopying human SCAR12. (2023)",
+      "41124647": "Genetic and Functional Evidence Links Germline Biallelic Inactivating Variants in WWOX to Histological Mixed-Type Thyroid Cancer. (2026)",
+      "42193054": "WWOX-Related Epileptic Encephalopathy (WOREE Syndrome): Clinical Case Study and Literature Review. (2026)",
+      "30853297": "Novel WWOX deleterious variants cause early infantile epileptic encephalopathy, severe developmental delay and dysmorphism among Yemenite Jews. (2019)",
+      "42443585": "Genetic architecture of lung cancer revealed by common and rare variant analyses across population-scale biobanks. (2026)"
+     },
+     "hurt_in_all": []
+    }
+   }
+  },
+  "B functional_it13_p3a NP3A3 (resting potential and M-current, neuron-deleted slices; RP-019)": {
+   "positives_n": 11,
+   "arms": {
+    "default/epmc": {
+     "query": "TITLE_ABS:nmdar AND TITLE_ABS:sipsc",
+     "hitCount": 6,
+     "returned_all": 6,
+     "positives_in_all": [],
+     "positives_in_top": [],
+     "top_ids": [
+      "34003466",
+      "22218089",
+      "24184417",
+      "21471392",
+      "15659527",
+      "15215288"
+     ],
+     "top_titles": {
+      "34003466": "CCL2/CCR2 Contributes to the Altered Excitatory-inhibitory Synaptic Balance in the Nucleus Accumbens Shell Following Peripheral Nerve Injury-induced Neuropathic (2021)",
+      "22218089": "Increased Kv1 channel expression may contribute to decreased sIPSC frequency following chronic inhibition of NR2B-containing NMDAR. (2012)",
+      "24184417": "Synaptic plasticity in glutamatergic and GABAergic neurotransmission following chronic memantine treatment in an in vitro model of limbic epileptogenesis. (2014)",
+      "21471392": "NMDA receptor activation enhances inhibitory GABAergic transmission onto hippocampal pyramidal neurons via presynaptic and postsynaptic mechanisms. (2011)",
+      "15659527": "beta-Amyloid peptides impair PKC-dependent functions of metabotropic glutamate receptors in prefrontal cortical neurons. (2005)",
+      "15215288": "Glial glutamate transporters limit spillover activation of presynaptic NMDA receptors and influence synaptic inhibition of Purkinje neurons. (2004)"
+     },
+     "hurt_in_all": []
+    },
+    "default/pubmed": {
+     "query": "nmdar[tiab] AND sipsc[tiab]",
+     "hitCount": "6",
+     "returned_all": 6,
+     "positives_in_all": [],
+     "positives_in_top": [],
+     "top_ids": [
+      "15215288",
+      "15659527",
+      "24184417",
+      "34003466",
+      "22218089",
+      "21471392"
+     ],
+     "top_titles": {
+      "15215288": "Glial glutamate transporters limit spillover activation of presynaptic NMDA receptors and influence synaptic inhibition of Purkinje neurons. (2004)",
+      "15659527": "beta-Amyloid peptides impair PKC-dependent functions of metabotropic glutamate receptors in prefrontal cortical neurons. (2005)",
+      "24184417": "Synaptic plasticity in glutamatergic and GABAergic neurotransmission following chronic memantine treatment in an in vitro model of limbic epileptogenesis. (2014)",
+      "34003466": "CCL2/CCR2 Contributes to the Altered Excitatory-inhibitory Synaptic Balance in the Nucleus Accumbens Shell Following Peripheral Nerve Injury-induced Neuropathic (2021)",
+      "22218089": "Increased Kv1 channel expression may contribute to decreased sIPSC frequency following chronic inhibition of NR2B-containing NMDAR. (2012)",
+      "21471392": "NMDA receptor activation enhances inhibitory GABAergic transmission onto hippocampal pyramidal neurons via presynaptic and postsynaptic mechanisms. (2011)"
+     },
+     "hurt_in_all": []
+    },
+    "flag/epmc": {
+     "query": "TITLE_ABS:WWOX AND TITLE_ABS:deleted",
+     "hitCount": 23,
+     "returned_all": 23,
+     "positives_in_all": [],
+     "positives_in_top": [],
+     "top_ids": [
+      "41677633",
+      "38407561",
+      "41562193",
+      "35573960",
+      "33688485",
+      "31275852",
+      "31353122",
+      "25476151",
+      "24393846",
+      "21731849",
+      "21347750",
+      "20530675",
+      "21685375",
+      "28199992",
+      "18273838",
+      "14638866",
+      "EPMC:651669",
+      "16061658",
+      "11572989",
+      "15168591",
+      "18253029",
+      "15814586",
+      "19075917"
+     ],
+     "top_titles": {
+      "41677633": "WWOX Induction Promotes Bcl-X&lt;sub&gt;L&lt;/sub&gt; and Mcl-1 Degradation Through a Lysosomal Pathway upon Stress Responses. (2026)",
+      "38407561": "Identification of a novel splice-site WWOX variant with paternal uniparental isodisomy in a patient with infantile epileptic encephalopathy. (2024)",
+      "41562193": "Endogenous Processes Underlying Clock-Like Mutational Signatures. (2026)",
+      "35573960": "A Phenotypic-Driven Approach for the Diagnosis of WOREE Syndrome. (2022)",
+      "33688485": "Downregulated Expression of WWOX in Cervical Carcinoma: A Case-Control Study. (2020)",
+      "31275852": "<i>Wwox</i> Deletion in Mouse B Cells Leads to Genomic Instability, Neoplastic Transformation, and Monoclonal Gammopathies. (2019)",
+      "31353122": "A 16q22.2-q23.1 deletion identified in a male infant with West syndrome. (2019)",
+      "25476151": "Roles of the WWOX in pathogenesis and endocrine therapy of breast cancer. (2015)",
+      "24393846": "Wwox suppresses breast cancer cell growth through modulation of the hedgehog-GLI1 signaling pathway. (2014)",
+      "21731849": "Role of the WWOX tumor suppressor gene in bone homeostasis and the pathogenesis of osteosarcoma. (2011)",
+      "21347750": "WWOX expression in colorectal cancer--a real-time quantitative RT-PCR study. (2011)",
+      "20530675": "Frequent attenuation of the WWOX tumor suppressor in osteosarcoma is associated with increased tumorigenicity and aberrant RUNX2 expression. (2010)",
+      "21685375": "Tumor suppressor genes FHIT and WWOX are deleted in primary effusion lymphoma (PEL) cell lines. (2011)",
+      "28199992": "Fragile Genes That Are Frequently Altered in Cancer: Players Not Passengers. (2016)",
+      "18273838": "Homozygous deletions may be markers of nearby heterozygous mutations: The complex deletion at FRA16D in the HCT116 colon cancer cell line removes exons of WWOX. (2008)",
+      "14638866": "Expression of FRA16D/WWOX and FRA3B/FHIT genes in hematopoietic malignancies. (2003)",
+      "EPMC:651669": "The WWOX gene : investigation of its function and its role in ovarian tumourigenesis (2005)",
+      "16061658": "WW domain-containing proteins, WWOX and YAP, compete for interaction with ErbB-4 and modulate its transcriptional function. (2005)",
+      "11572989": "WWOX: a candidate tumor suppressor gene involved in multiple tumor types. (2001)",
+      "15168591": "Alterations of common chromosome fragile sites in hematopoietic malignancies. (2004)",
+      "18253029": "DMD and IL1RAPL1: two large adjacent genes localized within a common fragile site (FRAXC) have reduced expression in cultured brain tumors. (2007)",
+      "15814586": "Common chromosomal fragile site FRA16D mutation in cancer cells. (2005)",
+      "19075917": "Recent patents relating to tumor suppressor genes. (2007)"
+     },
+     "hurt_in_all": []
+    },
+    "flag/pubmed": {
+     "query": "wwox[tiab] AND deleted[tiab]",
+     "hitCount": "22",
+     "returned_all": 22,
+     "positives_in_all": [],
+     "positives_in_top": [],
+     "top_ids": [
+      "35573960",
+      "41562193",
+      "28199992",
+      "25476151",
+      "21685375",
+      "21731849",
+      "19075917",
+      "11572989",
+      "24393846",
+      "31353122",
+      "33688485",
+      "15168591",
+      "38407561",
+      "18253029",
+      "31275852",
+      "41677633",
+      "15814586",
+      "14638866",
+      "16061658",
+      "21347750",
+      "20530675",
+      "18273838"
+     ],
+     "top_titles": {
+      "35573960": "A Phenotypic-Driven Approach for the Diagnosis of WOREE Syndrome. (2022)",
+      "41562193": "Endogenous Processes Underlying Clock-Like Mutational Signatures. (2026)",
+      "28199992": "Fragile Genes That Are Frequently Altered in Cancer: Players Not Passengers. (2016)",
+      "25476151": "Roles of the WWOX in pathogenesis and endocrine therapy of breast cancer. (2015)",
+      "21685375": "Tumor suppressor genes FHIT and WWOX are deleted in primary effusion lymphoma (PEL) cell lines. (2011)",
+      "21731849": "Role of the WWOX tumor suppressor gene in bone homeostasis and the pathogenesis of osteosarcoma. (2011)",
+      "19075917": "Recent patents relating to tumor suppressor genes. (2007)",
+      "11572989": "WWOX: a candidate tumor suppressor gene involved in multiple tumor types. (2001)",
+      "24393846": "Wwox suppresses breast cancer cell growth through modulation of the hedgehog-GLI1 signaling pathway. (2014)",
+      "31353122": "A 16q22.2-q23.1 deletion identified in a male infant with West syndrome. (2019)",
+      "33688485": "Downregulated Expression of WWOX in Cervical Carcinoma: A Case-Control Study. (2020)",
+      "15168591": "Alterations of common chromosome fragile sites in hematopoietic malignancies. (2004)",
+      "38407561": "Identification of a novel splice-site WWOX variant with paternal uniparental isodisomy in a patient with infantile epileptic encephalopathy. (2024)",
+      "18253029": "DMD and IL1RAPL1: two large adjacent genes localized within a common fragile site (FRAXC) have reduced expression in cultured brain tumors. (2007)",
+      "31275852": "Wwox Deletion in Mouse B Cells Leads to Genomic Instability, Neoplastic Transformation, and Monoclonal Gammopathies. (2019)",
+      "41677633": "WWOX Induction Promotes Bcl-X(L) and Mcl-1 Degradation Through a Lysosomal Pathway upon Stress Responses. (2026)",
+      "15814586": "Common chromosomal fragile site FRA16D mutation in cancer cells. (2005)",
+      "14638866": "Expression of FRA16D/WWOX and FRA3B/FHIT genes in hematopoietic malignancies. (2003)",
+      "16061658": "WW domain-containing proteins, WWOX and YAP, compete for interaction with ErbB-4 and modulate its transcriptional function. (2005)",
+      "21347750": "WWOX expression in colorectal cancer--a real-time quantitative RT-PCR study. (2011)",
+      "20530675": "Frequent attenuation of the WWOX tumor suppressor in osteosarcoma is associated with increased tumorigenicity and aberrant RUNX2 expression. (2010)",
+      "18273838": "Homozygous deletions may be markers of nearby heterozygous mutations: The complex deletion at FRA16D in the HCT116 colon cancer cell line removes exons of WWOX. (2008)"
+     },
+     "hurt_in_all": []
+    },
+    "simple/epmc": {
+     "query": "TITLE_ABS:WWOX AND TITLE_ABS:excitability",
+     "hitCount": 3,
+     "returned_all": 3,
+     "positives_in_all": [
+      "34634460"
+     ],
+     "positives_in_top": [
+      "34634460"
+     ],
+     "top_ids": [
+      "EPMC:PPR554801",
+      "34634460",
+      "19500159"
+     ],
+     "top_titles": {
+      "EPMC:PPR554801": "WWOX P47T loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice phenocopying human SCAR12 (2022)",
+      "34634460": "Altered neocortical oscillations and cellular excitability in an in vitro Wwox knockout mouse model of epileptic encephalopathy. (2021)",
+      "19500159": "A spontaneous mutation of the Wwox gene and audiogenic seizures in rats with lethal dwarfism and epilepsy. (2009)"
+     },
+     "hurt_in_all": []
+    },
+    "simple/pubmed": {
+     "query": "wwox[tiab] AND excitability[tiab]",
+     "hitCount": "2",
+     "returned_all": 2,
+     "positives_in_all": [
+      "34634460"
+     ],
+     "positives_in_top": [
+      "34634460"
+     ],
+     "top_ids": [
+      "34634460",
+      "19500159"
+     ],
+     "top_titles": {
+      "34634460": "Altered neocortical oscillations and cellular excitability in an in vitro Wwox knockout mouse model of epileptic encephalopathy. (2021)",
+      "19500159": "A spontaneous mutation of the Wwox gene and audiogenic seizures in rats with lethal dwarfism and epilepsy. (2009)"
+     },
+     "hurt_in_all": []
+    }
+   }
+  }
+ }
+}
