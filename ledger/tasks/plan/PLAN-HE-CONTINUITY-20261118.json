@@ -599,10 +599,19 @@
     },
     {
      "step": "Launch the fresh SCI window for the endocrine-calcium strand from the SCI checkpoint U, verify its handoff and report the times",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "SCI window T request after ADV ordered the handover and accepted the endocrine-calcium assignment",
-     "accepted_at": "2026-11-21T08:26:31Z"
+     "accepted_at": "2026-11-21T08:26:31Z",
+     "evidence": "SCI d79b9c48 launched 08:26:42Z from checkpoint U (digest verified), old release 08:32:53Z, bind 08:33:01Z (8 s after release), first tool call 08:33:02.9Z (1.6 s after bind); handoff RUNNING; names SCI - CURRENT d79b9c48 and SCI - PREVIOUS 3330ba92 verified by id, labels CURRENT; old window ALREADY_STOPPED; addendum of window T forwarded",
+     "updated_at": "2026-11-21T08:40:13Z"
+    },
+    {
+     "step": "Write HE checkpoint E at the closed increment, launch the successor by the usual recipe and verify its handoff",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV hourly check at 08:35Z: context past the restart line, restart at a closed increment with the open items listed",
+     "accepted_at": "2026-11-21T08:40:50Z"
     }
    ]
   }
@@ -1067,6 +1076,13 @@
    "at": "2026-11-21T08:26:31Z",
    "source": "SCI window T request after ADV ordered the handover and accepted the endocrine-calcium assignment",
    "step_sha256": "842d6aea80a7",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T08:40:50Z",
+   "source": "ADV hourly check at 08:35Z: context past the restart line, restart at a closed increment with the open items listed",
+   "step_sha256": "69389b70e5bd",
    "reopened_block": false,
    "authorised_by": null
   }
