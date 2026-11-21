@@ -27,3 +27,5 @@ No newer public material on this programme was found in the routes used (PubMed 
 
 ## Update 2026-11-21 (ADV-139, dated pointer; the text above is kept as written)
 Two newer public abstracts of the same programme exist (SfN Neuroscience 2026 NANO11.01 and AES 2026 1.019, public 17 Nov 2026): the result-statement half of the reopening condition is met at class level, the per-animal half is not, and neither names parvalbumin. See `../advisor_pilot_20261113/brainstorm_20261116/adv139_nappi_inv15_sci_20261121/RESULT_ADV139_NAPPI_INV15_SCI_20261121.md` and INV-15 in `ranking_it8_p9_20261029/investigations_it20.tsv` (rank stays 6; resume condition and re-check dates are there).
+
+Second line 2026-11-21 (ADV, dated; the text above is kept as written): a per-animal association between the cellular-recovery measure and the EEG measure would make the discharge-EEG link measurable but would not show that the first effect causes the second; it is not L3, which needs a mediation-type test. See INV-15 in `ranking_it8_p9_20261029/investigations_it20.tsv`.

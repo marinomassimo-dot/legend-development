@@ -42,7 +42,7 @@ after_line("| no genotype specificity (interaction ratio) | 0.7 to 1.43",
 after_line("generalised seizures (**grades 4 to 5 with a tonic phase",
            "**CONFLICT-OPEN R2C05 (owner SCI): Grade 4 is described without a tonic phase while generalised seizures are grades 4 to 5 with a tonic phase; which grade 4 counts as generalised is not stated.**")
 after_line("as descriptive ratios with their intervals",
-           "**CONFLICT-OPEN R2C09 (owner SCI): The ethosuximide comparison is listed as primary in one place and as descriptive ratios with intervals in another; whether it is tested at the stated confidence level is not stated.**")
+           "**CONFLICT-OPEN R2C09 (owner SCI): The ethosuximide comparison is the pre-specified primary, judged at 95%, in one place and is listed as descriptive ratios with intervals in another.**")
 after_line("interaction outside 0.7 to 1.43, and the second GSK-3 inhibitor",
            "**CONFLICT-OPEN R2C10 (owner SCI): The condition for the optional cohort, an interaction outside 0.7 to 1.43, also admits a smaller knockout effect, which the outcomes table does not call knockout-enhanced.**")
 
