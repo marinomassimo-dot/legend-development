@@ -821,6 +821,15 @@
      "accepted_at": "2026-11-21T21:35:19Z",
      "evidence": "README battery row: PASS WITH SKIPS means unknown; the two failing tests named with the assertion and the cache date; routing, documented-commands, reader-journey OK",
      "updated_at": "2026-11-21T21:36:10Z"
+    },
+    {
+     "step": "Battery note: replace my cache-refresh guess by IT's traced cause for the byte-identity failure",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message of 2026-11-21 relaying IT's trace",
+     "accepted_at": "2026-11-21T21:44:41Z",
+     "evidence": "README battery row carries IT's traced cause (live corpus text, 8431fd387, 10 rows) instead of my cache guess",
+     "updated_at": "2026-11-21T21:45:09Z"
     }
    ]
   }
@@ -1453,6 +1462,13 @@
    "at": "2026-11-21T21:35:19Z",
    "source": "ADV message of 2026-11-21 consuming the skip check",
    "step_sha256": "cf6fd6c2f31e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T21:44:41Z",
+   "source": "ADV message of 2026-11-21 relaying IT's trace",
+   "step_sha256": "4612292e98ed",
    "reopened_block": false,
    "authorised_by": null
   }
