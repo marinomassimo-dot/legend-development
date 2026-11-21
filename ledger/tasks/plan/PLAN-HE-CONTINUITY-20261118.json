@@ -630,6 +630,13 @@
      "owner": "plan",
      "source": "relay from the old HE window of IT restart request: checkpoint three of the IT orchestrator on main, old IT window bf7d7d3b",
      "accepted_at": "2026-11-21T09:15:12Z"
+    },
+    {
+     "step": "Decide whether plainer English for lead, restated and need is worth landing in new text and in the 25 batch-3 passages (ADV conditional ask), and the German head noun for need versus lever",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV and IT messages after the stop rule fired again on the glossary repeat result, 8 of 75 changed rows, six on the word lead",
+     "accepted_at": "2026-11-21T10:19:20Z"
     }
    ]
   }
@@ -1115,6 +1122,13 @@
    "at": "2026-11-21T09:15:12Z",
    "source": "relay from the old HE window of IT restart request: checkpoint three of the IT orchestrator on main, old IT window bf7d7d3b",
    "step_sha256": "14c232f5b123",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T10:19:20Z",
+   "source": "ADV and IT messages after the stop rule fired again on the glossary repeat result, 8 of 75 changed rows, six on the word lead",
+   "step_sha256": "c3366af2a548",
    "reopened_block": false,
    "authorised_by": null
   }
