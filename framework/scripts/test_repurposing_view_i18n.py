@@ -254,6 +254,25 @@ class EnglishAuthoredSectionsSayTheyAreEnglish(unittest.TestCase):
         self.assertEqual(len(set(part.values())), 4)
         self.assertTrue(all(part[lg] != whole[lg] for lg in part))
 
+    def test_sections_with_translated_passages_say_some_passages_not_the_whole_text(self):
+        """HE-E (2026-11-21): the sections of the measured translated scope (`EN_SCOPE_SECTIONS`) carry the partial notice (`sec_en_part`), never the whole-text one (`sec_en_src`: "not translated"),
+        on every non-English page; the other English-authored sections keep the whole-text notice. A positive control: the whole-text notice text is found in a section outside the scope."""
+        part = {lg: json.loads((DR / "view/i18n" / f"ui_{lg}.json").read_text(encoding="utf-8"))["UI_IT.sec_en_part"] for lg in ("fr", "de", "es")}
+        whole = {lg: json.loads((DR / "view/i18n" / f"ui_{lg}.json").read_text(encoding="utf-8"))["UI_IT.sec_en_src"] for lg in ("fr", "de", "es")}
+        seen_notes = 0
+        for src in ("full", "shareable"):
+            for lg in ("fr", "de", "es"):
+                page = self.files[(src, lg)]
+                for sid in rv.EN_SCOPE_SECTIONS:
+                    m = re.search(r'<section id="%s"[^>]*>.*?</h[1-6]>(<p class="mini mut sec-en-note">.*?</p>)?' % sid, page, flags=re.S)
+                    note = (m.group(1) or "") if m else ""
+                    if note:   # a scoped section whose English-authored remainder is below the detector's floor carries no notice (overview): nothing to say; when there is one it is the partial one
+                        self.assertIn(html.escape(part[lg], quote=True), note, (src, lg, sid))
+                        self.assertNotIn(html.escape(whole[lg], quote=True), note, (src, lg, sid))
+                    seen_notes += bool(note) and sid == "ranking"
+                self.assertIn(html.escape(whole[lg], quote=True), page, (src, lg))   # positive control: sections outside the scope still say the whole text is English
+        self.assertEqual(seen_notes, 6)   # the ranking section carries the partial notice on all six fr/de/es pages (full and shareable)
+
     def test_a_pilot_compound_name_is_shown_in_the_page_language(self):
         """The data file pairs an Italian and an English name ('4-PBA / acido fenilbutirrico'); the pilot table printed it as it stands on every page."""
         for lg, name in (("en", "4-PBA / phenylbutyric acid"), ("fr", "4-PBA / acide phénylbutyrique"), ("de", "4-PBA / Phenylbuttersäure"), ("es", "4-PBA / ácido fenilbutírico")):
