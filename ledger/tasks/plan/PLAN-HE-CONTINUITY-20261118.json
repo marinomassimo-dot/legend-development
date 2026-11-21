@@ -545,10 +545,12 @@
     },
     {
      "step": "Launch the IT successor by the handoff recipe (checkpoint generation_it59_20261119/CHECKPOINT_IT_20261121_1.md), report row and session id to ADV; then count the full-page leads (English fragments on fr/de/es, Italian compound name on EN)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV message (launch the IT successor now) and IT message (checkpoint 1 ready, nothing in flight) of 2026-11-21",
-     "accepted_at": "2026-11-21T02:14:58Z"
+     "accepted_at": "2026-11-21T02:14:58Z",
+     "evidence": "IT successor bf7d7d3b RUNNING (handoff): launched 02:20:22Z, old IT released 02:24:10Z, bound 02:24:20Z (10 s after release), first tool call 02:24:21Z (1 s after bind); full-page leads counted and not fixed (landed 44dc90e57)",
+     "updated_at": "2026-11-21T02:24:44Z"
     }
    ]
   }
