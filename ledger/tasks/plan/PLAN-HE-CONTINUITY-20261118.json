@@ -497,6 +497,15 @@
      "accepted_at": "2026-11-20T23:43:55Z",
      "evidence": "source repurposing_view.py:5269 (ranking card next-experiment line) and :3504 (work-order chip) print the raw Italian work-order kind enum WO_KINDS (3 strings); 8 visible fragments painted at 1280 px EN, identical counts in en/fr/de/es; route: Cdp with TMPDIR under HOME; no fix made",
      "updated_at": "2026-11-20T23:45:04Z"
+    },
+    {
+     "step": "ADV-127: map the three work-order kind values to UI strings per language at the two render sites, test, regenerate pages, painted before/after counts, grep for other raw enums",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-20 assigning ADV-127 after the Italian-fragment report",
+     "accepted_at": "2026-11-20T23:45:14Z",
+     "evidence": "landed 5ffedd622 (gate PASS, ls-remote); painted EN/DE at 1280 and 390 px: raw kind 26/16/4 -> 0/0/0; 4 render sites (card chip, ranking next-experiment, work-order chip, curated.js x2); ten view pages + package regenerated; i18n 21 OK; view suite non-browser 176 tests, 2 red = item-17 tests only; 7 browser classes OK",
+     "updated_at": "2026-11-21T00:24:14Z"
     }
    ]
   }
@@ -877,6 +886,13 @@
    "at": "2026-11-20T23:43:55Z",
    "source": "ADV message 2026-11-20 about IT's painted-page read (IT dated line 766a438e4) of the full English view",
    "step_sha256": "3d6579339a8b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-20T23:45:14Z",
+   "source": "ADV message 2026-11-20 assigning ADV-127 after the Italian-fragment report",
+   "step_sha256": "bc71c35c717f",
    "reopened_block": false,
    "authorised_by": null
   }
