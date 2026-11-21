@@ -18,8 +18,8 @@ Extending `EN_SCOPE_SECTIONS` to these sections would change pages wherever the 
 - After: on fr, de and es shareable pages no painted ADV-131 passage stands in an id-bearing section without a notice; the 16 cards sit under the `priorities-cur` notice.
 
 ## Not done, still open (mine)
-- The ranking-section notice wording: `sec_en_part` is now available for it, and the decision waits for the ADV-134 repeat.
-- The section notice above the 16 cards still says the whole text is English ("not translated"); `sec_en_part` would be truer there too.
+- The ranking-section notice wording was open when this section was first written; it is decided below (same day, after the ADV-134 repeat).
+- The section notice above the 16 cards (`priorities-cur`, outside the translated scope) still says the whole text is English ("not translated"); `sec_en_part` would be truer there too, but that section holds no translated passage, so the whole-text wording is not false there. Left as it is.
 
 ## Ranking-section notice wording (decided after the ADV-134 repeat, same day)
 The ADV-134 repeat is complete: the stop rule fired, the notice stays the default, nothing about the translated scope changes. The ranking section keeps its 28 translated passages and still holds English-authored text, so its notice now uses the partial wording (`sec_en_part`, already blind-checked 4 of 4) instead of "the text of this section is ... not translated". Sections of the translated scope (`EN_SCOPE_SECTIONS`) take the partial wording whenever they carry a notice; the overview carries none (its English remainder is below the detector's floor); every other English-authored section keeps the whole-text notice. Guard `test_sections_with_translated_passages_say_some_passages_not_the_whole_text` (the ranking section carries the partial notice on all six fr/de/es pages; the whole-text notice is still found outside the scope as a positive control); `test_repurposing_view_i18n` 32 OK; pages (full x 5, shareable x 5) and the package regenerated, `check` current.

@@ -641,6 +641,15 @@
      "accepted_at": "2026-11-21T10:19:20Z",
      "evidence": "adv134_glossary_repeat_it_20261121/DECISIONS_ADV134_HE_20261121.md addendum; roadmap_current.md Standing method pointer; main 6b7a1f2de",
      "updated_at": "2026-11-21T10:37:55Z"
+    },
+    {
+     "step": "Label the three script-painted sections and give the translated-scope sections the partial notice wording, with guards and regenerated pages",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "open commitments of the HE checkpoint E: the passages standing with no notice, then the ranking notice after the glossary repeat",
+     "accepted_at": "2026-11-21T10:57:11Z",
+     "evidence": "main 339f1fd13; adv134_glossary_repeat_it_20261121/RESULT_HE_SCRIPT_PAINTED_NOTICE_20261121.md; i18n suite 32 OK; view suite 237 run, only the two item-17 reds",
+     "updated_at": "2026-11-21T10:57:12Z"
     }
    ]
   }
@@ -1133,6 +1142,13 @@
    "at": "2026-11-21T10:19:20Z",
    "source": "ADV and IT messages after the stop rule fired again on the glossary repeat result, 8 of 75 changed rows, six on the word lead",
    "step_sha256": "c3366af2a548",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T10:57:11Z",
+   "source": "open commitments of the HE checkpoint E: the passages standing with no notice, then the ranking notice after the glossary repeat",
+   "step_sha256": "4738f3711394",
    "reopened_block": false,
    "authorised_by": null
   }
