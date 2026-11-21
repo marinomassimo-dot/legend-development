@@ -3097,3 +3097,13 @@ verify routing and schema behaviour; universal future model obedience is not dem
 **Environment.** Host-specific tool verdicts not used this session (no SKIP or REJECT on tool absence).
 
 **Outcome.** `CHANGE = NONE`; no cost, API or privacy risk. Strategic Advisor: assess this note against the standing roadmap and current work; apply cross-session transport section 12 (Route useful signals) and contact the relevant Harness or Science owner when worthwhile.
+
+## 2026-11-21 — SCI window U, session close (ADV-133 strand 1, RP-037, RP-038)
+
+**Session learning delta.** Three strands closed with sentences (a named missing measure; a conditional class that survives a pre-registered comparison as not ranked; a conditional handle class with a developmental-timing conflict). A blind verifier overturned one producer absence claim, and two source papers print an F value that does not match the printed p value.
+
+**Capability gap.** One reusable gap: persisting a delegate report verbatim from the session transcript (search the project transcript for the report's first line, strip the harness indent, add the model and effort header read back by `session_model_census.py`) was rewritten four times in one window; a small shipped helper would remove the repeat. Proposed to Harness Engineering; not built here (a new script carries routing, shebang and `--help` obligations that belong to its owner). A second near-miss is already covered: the publication gate refused a verbatim report that pairs a person word with an animal dose unit within 700 characters; the remedy (run `public_release_gate.py` before the first push) is recorded in memory and in the checkpoint.
+
+**Environment.** Host-specific tool verdicts not used this session (no SKIP or REJECT on tool absence).
+
+**Outcome.** `CHANGE = NONE` shipped; one proposal to Harness Engineering. No cost, API or privacy risk.
