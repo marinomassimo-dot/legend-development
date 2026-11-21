@@ -1,0 +1,22 @@
+EXPLORATORY, not pre-registered, descriptive: NeuRoDev gliogenesis subclass pseudobulk (human, pooled across studies and stages; log-normalised, unit = subclass aggregate)
+set A present: 19 of 19 ; missing: []
+state  setA_mean  MBP_etc     WWOX
+vRG        6.41     1.90     9.48
+tRG        6.69     2.21     9.18
+oRG        6.89     1.75     9.24
+eRG        6.52     2.38     9.40
+g2mRG      6.04     1.89     9.23
+sRG        6.52     1.54     9.33
+NPC        6.27     2.64     8.74
+IPC        5.85     3.02     9.31
+MPC        6.00     2.16     9.53
+cOPC       6.25     8.88     9.11
+eOPC       5.61     4.77     9.61
+OPC        4.84     6.39    10.07
+lOli       5.22    10.63     9.86
+Oli        5.45    10.78     9.96
+eAst       6.39     3.11     9.70
+imAst      5.90     3.70     9.98
+Ast        5.64     5.45    10.55
+lAst       5.80     4.81    10.58
+HMGCR/MSMO1/SQLE by state: {'NPC': (7.1, 8.1, 8.0), 'cOPC': (7.6, 7.8, 7.2), 'eOPC': (6.8, 7.3, 7.0), 'OPC': (5.8, 6.0, 5.5), 'MPC': (7.2, 8.3, 7.5), 'lOli': (5.1, 5.7, 6.4), 'Oli': (5.1, 6.2, 7.0), 'Ast': (6.0, 7.4, 6.1)}
