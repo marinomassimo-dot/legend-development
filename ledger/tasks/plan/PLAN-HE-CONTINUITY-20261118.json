@@ -1215,6 +1215,16 @@
    "evidence_dir": "/tmp/legend-verify-keep/20261119-003733-5eec19f3",
    "log_sha256": "f76a6d85df3be3807c28877e938de8d50ccd07058f01343d6b62a7a3f68c7d33",
    "clone": "REMOVED"
+  },
+  {
+   "run_id": "20261121-104158-a6a8d181",
+   "label": "he_e_ci_red",
+   "sha": "47a475571436d7060fc83e1bb2dc52eeb9c72ec9",
+   "state": "CONCLUDED",
+   "exit_code": 1,
+   "evidence_dir": "/tmp/legend-verify-keep/20261121-104158-a6a8d181",
+   "log_sha256": "3bf380fc3618c8061f25c579bb63757792836497943bcd283856e6eff31e2c96",
+   "clone": "REMOVED"
   }
  ]
 }
