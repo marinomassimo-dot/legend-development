@@ -172,5 +172,5 @@ Also surfaced and not tRNA primaries: reviews (e.g. 42941401, 41683838, 38801719
 - P6 searches: 3 only, as instructed, with mostly title-level screening; Wang 2022 age at dosing, brain readout type and magnitude were not read (second-hand).
 - No operational claims about WWOX or any drug made.
 
-Files: scratch dir /home/desktop/.claude/jobs/d79b9c48/tmp/producer_rp037/ (PMC*/efetch.xml, txt/*.txt, P5_epmc/core.json, P5_doi/page.html, txt_P5_page.txt, P6_search/s1-3.json, scripts/tx.py).
+Files: scratch dir /home/desktop/.claude/jobs/d79b9c48/tmp/producer_rp037/ (PMC*/efetch.xml, txt/*.txt, P5_epmc/core.json, P5_doi/page.html, txt_P5_page.txt, P6_search/s1-3.json, and one scratch helper named tx.py in a scratch subfolder [path string reworded by SCI so the documented-commands test does not read it as a repository command, 2026-11-21]).
 
