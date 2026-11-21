@@ -1,0 +1,41 @@
+{
+ "analysis_time_precision": "minute",
+ "record_kind": "contemporaneous_receipt",
+ "source_kind": "fulltext_remote",
+ "evidence_depth": "partial_fulltext_read",
+ "analysis_at": "2026-11-21T15:57Z",
+ "event_at": "2026-11-21T15:57Z",
+ "event_id": "FTR-20261121-40959251-01",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "read",
+  "tables": "read"
+ },
+ "evidence_basis": [
+  "Supplementary information of Gormley-line paper on VU6080824 (ACS Med Chem Lett 2025, PMC12434521): ml5c00297_si_001.pdf from the PMC open-data bucket (one plain request, HTTP 200, 776,129 bytes, 25 pages), text extracted with pdftotext; Tables S1 and S2, the thallium-flux and manual-patch-clamp experimental sections and the PK sections read; the synthetic chemistry characterisation not read.",
+  "verbatim_locator | proposition: 5s Kir2.1 potency and within-family selectivity by manual patch clamp | SI Table S2 (p. S21) | \"5s 5.9 (101) 0.35 (100) 2.1 fold 2.5 fold\"",
+  "verbatim_locator | proposition: manual patch clamp temperature and pH | SI Manual Patch Clamp experimental conditions (p. S23) | \"Kir2.1 currents were recorded at room temperature\"; \"(pH 7.35, adjusted with NaOH)\"",
+  "verbatim_locator | proposition: Kir1.1 and Kir4.1 thallium flux not given as data in the SI | SI Thallium Flux experimental conditions (p. S22) | \"The Tl+ flux assays for Kir1.1 and Kir4.1 were conducted as previously described.\"",
+  "absence | proposition: no counter-screen of 5s against hERG, Kir6.2, Kir7.1, Kir2.4 or K2P in the SI | search of the extracted SI text for hERG, Kir7.1, Kir2.4, K2P, TREK, TASK: no hit (the Kir6.1 mention is a reference title); a second route is the main-text reading of 2026-11-15",
+  "Mechanical check: item5_pages_scan_it_20261121/verify_held_bytes.py (SHA-256 1c6b39d36eb7ea62af8b04e372b8d2c30b77e4a644b4674e15db0f97e645e1e4 and quotation checks)."
+ ],
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/item5_pages_scan_it_20261121/README.md"
+ ],
+ "prior_receipt": "FTR-20261115-40959251-01",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "1c6b39d36eb7ea62af8b04e372b8d2c30b77e4a644b4674e15db0f97e645e1e4",
+ "source_locator": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12434521.1/ml5c00297_si_001.pdf (one plain request on 2026-11-21, no contact parameter; the file is kept in scratch and is not in git)",
+ "study_id": {
+  "doi": "10.1021/acsmedchemlett.5c00297",
+  "pmid": "40959251"
+ },
+ "workflow": "IT ADV-149 step 2 (scan of the other two item-5 pages with three identifiers): the SI that the 2026-11-15 reading could not reach was read from the PMC open-data bucket."
+}

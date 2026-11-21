@@ -63,3 +63,6 @@ Operator items and which is cheapest: the tool authorisation (IT, HE and SCI nam
 
 ## Update 2026-11-18 (IT, ADV-048 part 2, `it_adv048_20261118/RESULT_ADV048_PART2_RP019_IT_20261118.md`)
 A2 and the sentence on the 'independent origin on the inhibition axis (Aldaz 2019, hippocampal PV+ loss)': that origin measures a marker-positive count (44% lower, 7 v 7 animals, hippocampus, global knockout, 2 weeks); it is not an inhibitory-function measurement and not a replicate of the neocortical sIPSC result (Breton 2021, a different region, age and allele). Text above unchanged.
+
+
+Dated pointer 2026-11-21 (IT, ADV-149; the text above is kept as written): PMC12067145 (Tanaka 2025, PMID 40365404) is no longer a blocked source: it was read on 2026-11-11 (receipts FTR-20261111-40365404-85 and -86) and the text was re-fetched on 2026-11-21 from the PMC open-data bucket with identical bytes; see `../../trek_pointer_q07_it_20261121/README.md`.

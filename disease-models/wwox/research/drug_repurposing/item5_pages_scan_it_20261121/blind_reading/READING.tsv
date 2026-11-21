@@ -1,0 +1,62 @@
+name	column_header	printed_value	confidence
+clobetasol	Single Dose Rank (in vitro)	7	certain
+clobetasol	EC50 (µM) (in vitro)	0.4	certain
+clobetasol	50% Tox (µM) (in vitro)	>6.7	certain
+clobetasol	Primary Screen Tier (in vitro)	A	certain
+clobetasol	External Validation (in vitro)	Yes	certain
+clobetasol	Brain Slice Percent MBP of Control (ex vivo)	169	certain
+clobetasol	Brain Slice Group (ex vivo)	High	certain
+clobetasol	cell colours	cells: rank white; EC50, Tox, Tier, ExtVal, MBP, Group all green	probable
+miconazole	Single Dose Rank (in vitro)	5	certain
+miconazole	EC50 (µM) (in vitro)	0.5	certain
+miconazole	50% Tox (µM) (in vitro)	>6.7	certain
+miconazole	Primary Screen Tier (in vitro)	A	certain
+miconazole	External Validation (in vitro)	NT	certain
+miconazole	Brain Slice Percent MBP of Control (ex vivo)	148	certain
+miconazole	Brain Slice Group (ex vivo)	High	certain
+miconazole	cell colours	cells: rank white; EC50, Tox, Tier, MBP, Group green; ExtVal white	probable
+ketoconazole	Single Dose Rank (in vitro)	4	certain
+ketoconazole	EC50 (µM) (in vitro)	0.5	certain
+ketoconazole	50% Tox (µM) (in vitro)	2.4	certain
+ketoconazole	Primary Screen Tier (in vitro)	C	certain
+ketoconazole	External Validation (in vitro)	NT	certain
+ketoconazole	Brain Slice Percent MBP of Control (ex vivo)	117	certain
+ketoconazole	Brain Slice Group (ex vivo)	Medium	certain
+ketoconazole	cell colours	cells: rank white; EC50, Tox, Tier peach; ExtVal white; MBP and Group grey	probable
+benztropine	Single Dose Rank (in vitro)	22	certain
+benztropine	EC50 (µM) (in vitro)	0.6	certain
+benztropine	50% Tox (µM) (in vitro)	4.2	certain
+benztropine	Primary Screen Tier (in vitro)	B	certain
+benztropine	External Validation (in vitro)	Yes	certain
+benztropine	Brain Slice Percent MBP of Control (ex vivo)	96	certain
+benztropine	Brain Slice Group (ex vivo)	Low	certain
+benztropine	cell colours	cells: rank white; EC50, Tox, Tier grey; ExtVal green; MBP and Group peach	probable
+tamoxifen	Single Dose Rank (in vitro)	12	certain
+tamoxifen	EC50 (µM) (in vitro)	0.4	certain
+tamoxifen	50% Tox (µM) (in vitro)	2	certain
+tamoxifen	Primary Screen Tier (in vitro)	C	certain
+tamoxifen	External Validation (in vitro)	Yes	certain
+tamoxifen	Brain Slice Percent MBP of Control (ex vivo)	NT	certain
+tamoxifen	Brain Slice Group (ex vivo)	NT	certain
+tamoxifen	cell colours	cells: rank white; EC50, Tox, Tier peach; ExtVal green; MBP, Group white	probable
+oxybutynin (printed 'oxybutinin')	Single Dose Rank (in vitro)	1	certain
+oxybutynin (printed 'oxybutinin')	EC50 (µM) (in vitro)	FAIL	certain
+oxybutynin (printed 'oxybutinin')	50% Tox (µM) (in vitro)	>6.7	certain
+oxybutynin (printed 'oxybutinin')	Primary Screen Tier (in vitro)	D	certain
+oxybutynin (printed 'oxybutinin')	External Validation (in vitro)	NT	certain
+oxybutynin (printed 'oxybutinin')	Brain Slice Percent MBP of Control (ex vivo)	NT	certain
+oxybutynin (printed 'oxybutinin')	Brain Slice Group (ex vivo)	NT	certain
+oxybutynin (printed 'oxybutinin')	cell colours	cells: rank white; EC50, Tox, Tier(merged D block) red/salmon; ExtVal white; MBP, Group white (merged NT block)	probable
+ifenprodil	Single Dose Rank (in vitro)	16	certain
+ifenprodil	EC50 (µM) (in vitro)	>6.7	certain
+ifenprodil	50% Tox (µM) (in vitro)	>6.7	certain
+ifenprodil	Primary Screen Tier (in vitro)	D	certain
+ifenprodil	External Validation (in vitro)	Yes	certain
+ifenprodil	Brain Slice Percent MBP of Control (ex vivo)	NT	certain
+ifenprodil	Brain Slice Group (ex vivo)	NT	certain
+ifenprodil	cell colours	cells: rank white; EC50, Tox, Tier(merged D block) red/salmon; ExtVal green; MBP, Group white (merged NT block)	probable
+quetiapine	all panel a columns	ABSENT	certain
+ipratropium	all panel a columns	ABSENT	certain
+mevastatin	all panel a columns	ABSENT	certain
+liothyronine / triiodothyronine	all panel a columns	ABSENT (not as a row)	certain
+thyroid hormone	panel b column label	panel b top label of first image column (MBP/DAPI image and HCA image below); no value in panel a	certain
