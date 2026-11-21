@@ -36,3 +36,14 @@ the table below is the PubMed analogue of its query terms, and the preprint is o
 ## Verdict
 KEEP as an opt-in flag with the GD form (not G); NOT proposed as a default; the default stays until a second row or a live Europe PMC rerun shows the same direction. Re-run
 `python3 -I measure_gene_anchor.py <out.json>` when Europe PMC answers again (the PubMed arms run by default and the Europe PMC arms follow; `--no-epmc` skips them).
+
+## Addendum (HE, 2026-11-21, ADV's bounded question): is there a held-out row, and what would change the default
+Searched the repository for another recall set (`*record_ids*`, known-positive, recall-set and gold-set names; the retrieval packages; the reopen tables of all packages): the only
+known-positive sets are IT's three for NP4G2 (`K_record_ids.tsv`, `K_core_record_ids.tsv`, `K_title_record_ids.tsv`), which are the set the flag was fitted on. The other glia rows (NP4G1,
+NP4G3) share its topic and would be drawn from the same K, so they are not held out; no other reopen row has a frozen list of known positives, and building one would be a package of its own
+(a judgement of what each row's positives are), not a count I can run once. **Not run; recorded as the typed condition.**
+
+Condition for ever changing the default of `--gene-anchor` (all four, written before the first query): (1) at least two reopen rows other than NP4G2, in different disease themes, each with a known-positive
+set of at least 10 PubMed records frozen from held material (receipt ledger, census or an earlier briefing's items that were later read) before any query; (2) Europe PMC answering, so the
+scout's own query is measured, with the PubMed analogue as a second route; (3) on each row the anchored query finds at least as many positives as the current one and a higher share of positives
+among the records it returns; (4) the number of records the anchored query returns stays readable (the cap of the scout's briefing). Until then the flag stays opt-in.
