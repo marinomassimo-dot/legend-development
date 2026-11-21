@@ -49,3 +49,19 @@ Decision for this batch: not used for senses 3a to 3c; the glossary renderings s
 ## Not decided here (open, mine)
 
 The ranking-section notice wording, after the ADV-134 repeat result; the 11 English passages with no notice; the renderer string above. None is touched by this record.
+
+## Addendum after the ADV-134 result (HE, 2026-11-21): is plainer English worth landing for the 25 passages?
+
+Answer in one line: **not in the existing text; yes in all new text.** The translation lane stays closed at the covered sections (overview, ranking), as ADV decided; the resume condition (a named reader or the operator needs the full edition in fr, de or es) is unchanged.
+
+Why not rewrite the existing English:
+- The six CHANGED rows on 'the lead' come from two passages (56, 57). Their text lives in `ranking_it8_p9_20261029/ranking.json`, `selections.tsv` and `unit_caveats.tsv` (about fourteen occurrences of "the lead's" across the programme) and in a frozen evaluation copy (`evaluation_it17_p3_20261101/freeze_20261101/frozen/`), which must not be edited. `ranking.json` is also a stamped surface (it carries the receipt-ledger length; two suites guard it). Editing authored data with a frozen twin to move a count in a lane nobody has asked for is not proportionate.
+- The remaining CHANGED rows are the translator's own slips (washout, 'corte', the 57-DE limit), which plainer English does not remove; the stop rule would need a third blind pass either way.
+
+What is decided instead (new programme text, effective now; a one-line pointer is in the roadmap's Standing method):
+- 'lead' -> "governing position" for a position and "the reference intervention with a WWOX-system result" for lithium, d-APV and the like; never 'lead' for a rank or a candidate.
+- 'restated' -> "re-derived and restated"; 're-scoped' -> "narrowed in scope, still open".
+- 'need' -> gloss at first use ("need: a biological target area where an intervention could be aimed, not an unmet clinical need").
+- the other accepted proposals of the table above.
+
+German head nouns (IT's note): accepted as IT rendered them: lever = "Hebel (Eingriffspunkt)"; need keeps "biologischer Ansatzpunkt (Bedarf)" with the first-use gloss, and 'Bedarf' alone is NOT the head noun for need, because it reads as an unmet clinical need, which the programme says it is not. No collision remains once lever is "Hebel".
