@@ -1,0 +1,76 @@
+t_id	kept_or_replaced	wording_used_in_new_text	section
+T01	kept with a gloss	E1 knockout-selective; E2 age-limited with a wild-type floor; E3 general anticonvulsant effect; E4 no effect; E5 not interpretable (E5 not defined: OPEN-GAP Q81)	The question; What each outcome would favour
+T02	kept with a gloss	L1 general; L2 specific to GSK-3 in the knockout	The question
+T03	kept with a gloss	'C1 and C2 are labels of the two T-type rows (the blocker matches ethosuximide, or does not)'	What each outcome would favour
+T04	replaced	'grade' for the 0 to 6 seizure scale; 'stage' for the experimental plan; one sentence under the contents list	Status line under the contents list; throughout
+T05	kept with a gloss	S = area under the grade against time over the window; clarification of the two descriptions (area, mean); units OPEN-GAP Q49	Stimulus, seizure grades and observation
+T06	kept with a gloss	R(genotype) = mean S of the treated group over mean S of the same-genotype, same-session vehicle group, on the log scale; interaction ratio = R(-/-) over R(+/+)	Analysis plan
+T07	kept	'on the log scale'; 'SD of log S among animals with S above zero' (standard statistics)	Analysis plan; Groups to run
+T08	kept with a gloss	'CV of S (coefficient of variation)'	Groups to run (stage 1 row)
+T09	kept	'the square-root rule, for five arms' (a statistics term; the sentence gives the effect: about twice the size of a test arm)	Analysis plan
+T10	kept	'reported at 95% and at 99% (Bonferroni for five)'; count of five is CONFLICT-OPEN C35	Analysis plan
+T11	kept	'bootstrap over litters' (standard; stated as the primary interval)	Analysis plan
+T12	replaced	first use glossed: 'the floor, that is, so low that a reduction cannot be seen'; the numeric value is OPEN-GAP Q68	The question; Analysis plan
+T13	kept	'stage-matched wild-type response'; a plain wording needs a new fact: OPEN-GAP Q20	Groups to run
+T14	kept	'non-floor' (floor is glossed at its first use)	Stimulus, seizure grades and observation
+T15	kept with a gloss	effect, null, unresolved are given by the quantitative rules in the threshold table	Analysis plan
+T16	kept	'an effect of 0.7 or larger is excluded' kept in quotation marks; a rewording could change meaning	Analysis plan
+T17	kept with a gloss	'genotype specificity (interaction ratio)' defined by its numeric rule	Analysis plan
+T18	kept with a gloss	session = one assay day at one assay age	Animals
+T19	kept with a gloss	cell = one genotype-by-treatment (by age) combination	Animals
+T20	kept with a gloss	arm = one treatment group: an agent, the vehicle, or a comparator	Animals
+T21	replaced	'assay-validation panel' (called 'the panel')	Groups to run
+T22	kept with a gloss	flat-profile (efficacy does not change with age), rising-profile, falling-profile agents, each with the examples of the older text	Groups to run
+T23	replaced	'general non-GSK-3 anticonvulsant comparator drug'; the AAV9 gene-addition study is called 'the AAV9 comparator study'	Groups to run; Optional, conditional cohort
+T24	kept with a gloss	'one second GSK-3 inhibitor of a different class (chemically unrelated to lithium ...)'	Groups to run
+T25	kept with a gloss	'selective Cav3 (T-type calcium channel) blocker'	Groups to run
+T26	replaced	first use: 'no evidence that the drug reaches and acts on its target in the pup brain (an engagement control)'; later uses keep the term	Groups to run; What each outcome would favour
+T27	kept	'exposure' kept (dose or tissue level is not said); OPEN-GAP Q16	Regimens and dose checks
+T28	kept with a gloss	'a non-effect at an exposure that was not checked at that age is a dose null, reported as unresolved'	Regimens and dose checks
+T29	kept with a gloss	'replication condition' with the regimen written out as in the older text (the values are OPEN-GAP Q13)	Regimens and dose checks
+T30	kept	'regimen' kept (dose, route, interval, number are OPEN-GAP Q13, Q14)	Regimens and dose checks
+T31	replaced	'share one vehicle group per genotype'	Animals
+T32	replaced	'predictions file' with its checksum; supply is OPEN-GAP Q06	Scope and limits
+T33	kept	'P5', 'P8' kept as labels of the predictions file (set P5 of the predictions file); OPEN-GAP Q84	Stimulus, seizure grades and observation; Optional, conditional cohort
+T34	kept with a gloss	E16.5 kept; 'E_GABA is the GABA reversal potential'	Ages
+T35	replaced	'chloride-gradient window (the developmental period over which the neuronal chloride gradient matures; E_GABA is the GABA reversal potential)'	Ages
+T36	kept with a gloss	'bumetanide (a blocker of the chloride importer NKCC1)'	Ages
+T37	replaced	'the inhibitory phosphorylation of GSK-3beta at serine 9 (p-Ser9)'	The question
+T38	kept with a gloss	'GSK-3 (glycogen synthase kinase 3)' spelled out once	The question
+T39	kept with a gloss	'transcranial motor-evoked-potential (Tc-MEP)'	Optional add-ons (f)
+T40	kept with a gloss	'ECoG (electrocorticography)', 'LFP (local field potential)'	Ages
+T41	kept with a gloss	'a WWOX-related developmental and epileptic encephalopathy genotype class' (spelled out in the older text; 'DEE' kept in 'WWOX-DEE')	Scope and limits
+T42	kept with a gloss	'SCAR12 (a human WWOX-related disorder)'	Optional add-ons (e4)
+T43	kept	'germline null', 'global knockout', 'knockout', 'null' kept as in the older texts (not unified; the older texts do not say they are always the same animal); the neuron-targeted line is named apart	throughout
+T44	kept with a gloss	'neuron-targeted line (called S-KO in the sources)'; 'S-HT' kept; naming the line, allele and cross is OPEN-GAP T44	Ages; Optional add-ons
+T45	replaced	'the AAV9 comparator study', 'the gene-addition benchmark paper'; citation is OPEN-GAP T45	Optional, conditional cohort; Out of scope
+T46	removed	programme names (ADV, IT, HE, RP, dossier, the loop, file paths) removed from the laboratory text; SCI, operator and laboratory remain only as marker owners and are defined in the status box	throughout
+T47	replaced	'the coordinator of this collaboration' in the text; 'operator' remains only as a marker owner	Logistics, terms and contact; status box
+T48	replaced	'the design team holds', 'full text read', 'abstract only', 'second-hand', 'read by eye'	Scope and limits; Sources and their levels
+T49	replaced	a plain list of evidence levels; 'hypothesis level' kept where the older text gave it	Scope and limits; Sources and their levels
+T50	removed	'no change of tier' and 'tier' removed (a programme category)	Optional add-ons
+T51	replaced	the ranking itself (glucose tied to seizure timing first, then the PV count and signal) with its level; page and row references removed	Optional add-ons (i)
+T52	replaced	'the corrected forms in this text are the ones to use'	Sources and their levels
+T53	replaced	'secondary checks of the source papers'	Sources and their levels
+T54	kept	'Hypothesis level. NOT a WWOX result' said once at the top; 'hypothesis level' repeated only on lines that carry their own level	Scope and limits
+T55	kept	'a 2026 report', 'the report called P47T' kept because no citation exists in the older texts; OPEN-GAP T55	Ages; Optional add-ons (g)
+T56	kept with a gloss	'abstracts from one Prague laboratory family'; citation is OPEN-GAP T55	The question; Sources and their levels
+T57	replaced	the seizure-grade table (grade, what the older text says, class)	Stimulus, seizure grades and observation
+T58	kept with a gloss	'carried forward to the end of the window; both are flagged'	Stimulus, seizure grades and observation
+T59	replaced	'motor and ataxia pre-test' (righting, gait or equivalent)	Stimulus, seizure grades and observation
+T60	replaced	'window' kept only for the 60-minute observation; age ranges are named as ages ('up to about P28'; 'chloride-gradient window' is glossed)	Stimulus, seizure grades and observation; Ages
+T61	replaced	'at least two older ages up to about P28'	Ages
+T62	replaced	'a second search route'; 'a blind re-search (a search repeated without sight of the earlier result)'	Sources and their levels
+T63	kept with a gloss	'seizure-and-death lines (mouse lines in which pups seize and die early)'	Optional add-ons (e)
+T64	kept with a gloss	kept because it carries a caveat: a published contrast of different regions that supports only a composition caveat	Optional add-ons (g)
+T65	kept with a gloss	'NMDA-receptor pore-blocker arm (class label; channel-blocking antagonists such as ketamine and MK-801)'	Groups to run
+T66	kept	'expected 1:2:1' (standard genetics)	Animals
+T67	moved	gene-addition terms moved to the out-of-scope section with a gloss ('a gene-therapy reference')	Out of scope for this laboratory
+T68	kept with a gloss	'NRG1-ErbB4 question', 'sIPSC, spontaneous inhibitory postsynaptic current', 'PV (parvalbumin) interneurons'	Optional add-ons (e3)
+T69	kept with a gloss	'milk-spot (stomach-content visibility) score'	Optional add-ons (e2)
+T70	kept with a gloss	GFAP (glial fibrillary acidic protein), Iba1 (microglial marker), MBP (myelin basic protein), CC1 (an oligodendrocyte marker) glossed; doublecortin spelled out; g-ratio kept (standard)	Optional add-ons
+T71	kept	citations kept as in the older texts; Breton 2021 and Kasahara 2019 have no PMID there: OPEN-GAP T55	Sources and their levels
+T72	kept	'the one genetic-DEE pup dataset' kept; OPEN-GAP T72	Ages
+T73	replaced	'a quantification of the means and upward SEM bars of Fig. 7b and 7d'; 'an independent reading of the same curves'; record labels removed, numbers and method kept	Sample size and animals needed
+T74	kept with a gloss	'The weights ... are subjective, not validated probabilities, and are scored literally when data exist'; whether the laboratory needs them is not stated	Scope and limits; What each outcome would favour
+T75	replaced	'the predictions file governs any conflict'; which definitions it fixes is OPEN-GAP Q06	Scope and limits
