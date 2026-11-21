@@ -20,7 +20,7 @@ asserted by no receipt. `prior_receipt` means the reading this one builds on, an
 sharing a parent are the normal case under parallel branches.
 
 
-**1556 paper(s)** with at least one receipt · **2200 receipt(s)** · **35 paper(s) read in parallel** by two receipts sharing a parent.
+**1557 paper(s)** with at least one receipt · **2202 receipt(s)** · **36 paper(s) read in parallel** by two receipts sharing a parent.
 
 ## Papers read in parallel
 
@@ -28,6 +28,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 
 | paper | shared parent | siblings |
 |---|---|---|
+| DOI 10.64898/2026.02.03.703439 | `FTR-20261110-PPR1225217-94` | `FTR-20261110-PPR1225217-95`, `FTR-20261121-IHRIN-02` |
 | PMID 17241159 | `FTR-20261110-17241159-96` | `FTR-20261110-17241159-97`, `FTR-20261110-17241159-98` |
 | PMID 22728824 | `FTR-20261111-22728824-88` | `FTR-20261111-22728824-85`, `FTR-20261111-22728824-87` |
 | PMID 23741617 | `FTR-20261105-23741617-04` | `FTR-20261108-23741617-97`, `FTR-20261108-23741617-81` |
@@ -78,6 +79,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | paper | deepest receipt | abstract | introduction | methods | results | figures | tables | discussion | limitations | supplementary | references | receipts |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | DOI 10.1038/npp.2017.266 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
+| DOI 10.1101/2023.09.25.559198 | `partial_fulltext_read` | read | not_read | read | read | captions_only | not_present | read | not_present | not_present | not_read | 1 |
 | DOI 10.1101/2025.05.01.651195 | `partial_fulltext_read` | read | read | read | read | captions_only | not_present | read | not_present | captions_only | read | 1 |
 | DOI 10.1101/2025.11.22.689900 | `partial_fulltext_read` | read | read | read | read | read | not_present | read | not_present | captions_only | read | 2 |
 | DOI 10.11588/heidok.00008349 | `partial_fulltext_read` | read | not_read | read | read | captions_only | read | not_read | not_present | not_present | read | 1 |
@@ -86,7 +88,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | DOI 10.21203/rs.3.rs-9950101/v1 | `partial_fulltext_read` | read | not_read | read | read | captions_only | read | read | read | unavailable | not_read | 1 |
 | DOI 10.48550/arxiv.2512.13724 | `partial_fulltext_read` | read | read | not_read | not_read | not_read | not_read | read | read | not_read | — | 1 |
 | DOI 10.64898/2026.01.16.26344264 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | read | read | not_read | 1 |
-| DOI 10.64898/2026.02.03.703439 | `partial_fulltext_read` | read | read | read | read | captions_only | not_present | read | not_present | unavailable | not_read | 2 |
+| DOI 10.64898/2026.02.03.703439 | `partial_fulltext_read` | read | read | read | read | captions_only | not_present | read | not_present | not_present | not_read | 3 |
 | PMID 10196581 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 10482914 | `abstract_only` | read | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | 1 |
 | PMID 10627592 | `partial_fulltext_read` | read | not_read | read | read | not_read | not_read | not_read | not_read | not_present | not_read | 1 |
