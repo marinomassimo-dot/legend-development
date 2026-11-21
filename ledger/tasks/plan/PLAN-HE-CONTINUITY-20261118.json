@@ -572,10 +572,12 @@
     },
     {
      "step": "Review the IT renderer diff for the first translated batch of the shareable pages (scope file, section-scoped node pass), add a guard that a scoped passage is never painted as English inside the overview and ranking sections, decide the wording of the ranking section notice once its top passages are translated",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "IT Orchestrator message after its local commit of the first measured batch: nothing needed from HE first, review when pushed, guard and notice wording are HE's",
-     "accepted_at": "2026-11-21T05:38:21Z"
+     "accepted_at": "2026-11-21T05:38:21Z",
+     "evidence": "renderer diff reviewed, guard landed dfdf8d228; ranking notice wording left to after the ADV-132 dense batch by ADV's instruction",
+     "updated_at": "2026-11-21T08:28:09Z"
     },
     {
      "step": "Add the question-form words onset and prevented, and similar, to the scout bridge stoplist, with a test on the three hits of the 05:20 radar briefing",
@@ -588,10 +590,19 @@
     },
     {
      "step": "Operator integration: make the browser temporary-directory cure run where every browser path passes, reconcile the two legacy mandates of the old interactive chat with ADV, complete the native display names, and carry the handoff results (names pending, legacy bound lines) to the launcher",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "operator integration message 2026-11-21 (browser cure, IT review, session labels) and the identity correction forwarded by PLAN",
-     "accepted_at": "2026-11-21T08:18:38Z"
+     "accepted_at": "2026-11-21T08:18:38Z",
+     "evidence": "landed 212a62275: prepare_browser_tmp at find_chromium (before skipped in 6 s, after OK in 16 s on the real Browser test, default TMPDIR); native names ADV, IT, HE CURRENT and the three predecessors PREVIOUS verified by id; handoff next line and legacy_bound_tasks (93 mandate_watch tests OK); addendum D1; RADAR queue block set COMPLETE with ADV's no-objection; interactive trial not runnable (VS Code terminals, no multiplexer), reported to ADV as our item",
+     "updated_at": "2026-11-21T08:28:09Z"
+    },
+    {
+     "step": "Launch the fresh SCI window for the endocrine-calcium strand from the SCI checkpoint U, verify its handoff and report the times",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "SCI window T request after ADV ordered the handover and accepted the endocrine-calcium assignment",
+     "accepted_at": "2026-11-21T08:26:31Z"
     }
    ]
   }
@@ -1049,6 +1060,13 @@
    "at": "2026-11-21T08:18:38Z",
    "source": "operator integration message 2026-11-21 (browser cure, IT review, session labels) and the identity correction forwarded by PLAN",
    "step_sha256": "831c14e20626",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T08:26:31Z",
+   "source": "SCI window T request after ADV ordered the handover and accepted the endocrine-calcium assignment",
+   "step_sha256": "842d6aea80a7",
    "reopened_block": false,
    "authorised_by": null
   }
