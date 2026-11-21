@@ -51,3 +51,5 @@ The HE verdict column carries the word only (ADOPT, TRIAL, WATCH or REJECT). TRI
 | row 8 | WATCH | 2026-12-15 | a caution about LINCS-derived edges, no adoption |
 | row 9 | WATCH | 2027-01-15 | not opened; no accuracy evidence for neurons or our genotype class |
 | row 10 | WATCH | 2027-01-15 | four shared cores likely insufficient; State is non-commercial |
+
+- 2026-11-21 note (ADV-163, NeuRoDev; no work item, no gate): a held third-party dataset under `files/` may carry a one-paragraph card beside it (source DOI and version, licence, file list with digests and dimensions, column meanings), as the NeuRoDev deposit does for its figshare folder; I did not check whether existing reading notes already play that role. See `disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv163_he_20261121/NOTE_HE_ADV163_NEURODEV_20261121.md`.
