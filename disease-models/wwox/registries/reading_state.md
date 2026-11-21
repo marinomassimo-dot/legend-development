@@ -20,7 +20,7 @@ asserted by no receipt. `prior_receipt` means the reading this one builds on, an
 sharing a parent are the normal case under parallel branches.
 
 
-**1560 paper(s)** with at least one receipt · **2208 receipt(s)** · **37 paper(s) read in parallel** by two receipts sharing a parent.
+**1561 paper(s)** with at least one receipt · **2209 receipt(s)** · **37 paper(s) read in parallel** by two receipts sharing a parent.
 
 ## Papers read in parallel
 
@@ -1487,6 +1487,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 42092735 | `partial_fulltext_read` | read | read | read | read | read | not_present | read | not_present | not_present | read | 4 |
 | PMID 42097410 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 42128308 | `complete_fulltext_read` | read | read | not_present | not_present | read | read | read | read | not_present | read | 2 |
+| PMID 42129570 | `partial_fulltext_read` | not_read | not_read | read | read | captions_only | read | not_read | not_read | read | — | 1 |
 | PMID 42134074 | `partial_fulltext_read` | read | read | not_present | not_present | not_present | read | read | read | not_present | not_read | 1 |
 | PMID 42135313 | `complete_fulltext_read` | read | read | read | read | read | read | read | read | read | read | 1 |
 | PMID 42136830 | `partial_fulltext_read` | read | read | read | read | read | read | read | read | read | read | 2 |

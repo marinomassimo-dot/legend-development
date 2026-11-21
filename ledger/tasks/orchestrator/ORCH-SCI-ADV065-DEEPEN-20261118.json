@@ -717,10 +717,12 @@
     },
     {
      "step": "ADV-166: Javed et al. 2026 (PMID 42129570): does the paper hold a matched comparison where an early neuron-to-progenitor ratio and later absolute neuronal output carry different signs; named decision INV-17 (MYC role); pre-register first; result file plus path to ADV; time-box 45 to 60 minutes",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "science",
      "source": "ADV-166 (assignment file in the root checkout; ADV message to SCI 052bf24b, Codex return 07)",
-     "accepted_at": "2026-11-21T22:58:11Z"
+     "accepted_at": "2026-11-21T22:58:11Z",
+     "evidence": "result disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv166_javed_early_ratio_vs_yield_sci_20261121/RESULT_ADV166_JAVED_EARLY_RATIO_VS_YIELD_SCI_20261121.md; pre-registration commit 36c9266ef; receipt FTR-20261121-42129570-01; self-evaluation addendum",
+     "updated_at": "2026-11-21T23:03:51Z"
     }
    ]
   }
