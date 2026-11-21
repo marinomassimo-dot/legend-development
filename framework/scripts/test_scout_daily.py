@@ -206,6 +206,23 @@ class Bridge(unittest.TestCase):
         self.assertEqual(sd.shared_bridge(self.NP4G2, "Declining environmental predictability erodes reproduction in a tropical seabird"), [])
         self.assertIn("differentiation", sd.shared_bridge(self.NP4G2, "Delayed oligodendrocyte precursor differentiation in a Wwox-null co-culture"))
 
+    GENE_ADD = {"id": "reopen:z/GENEADD", "origin": {"priority": "Gene addition started before the onset of seizures in the Wwox-null mouse: is the phenotype prevented or only delayed (AAV9 WWOX, glycaemia and spike-wave discharges)"},
+                "gap": "Gene addition started before the onset of seizures in the Wwox-null mouse: is the phenotype prevented or only delayed"}
+
+    def test_the_timing_and_outcome_words_of_a_gene_addition_question_are_not_its_bridge(self):
+        """2026-11-21 radar briefing: 'onset' and 'prevented' bridged a cavitation-in-agar paper, a muscle-activation onset-detection paper and an AI-in-medicine framework to a gene-addition
+        question. The titles below are written from ADV's description of the three hits (the briefing itself is not in the tree), the theme text is a designed question of the same form."""
+        terms = sd.bridge_terms(self.GENE_ADD)
+        for bad in ("onset", "prevented", "prevent"):
+            self.assertNotIn(bad, terms)
+        for keep in ("seizures", "phenotype", "delayed"):
+            self.assertIn(keep, terms)
+        for title in ("Cavitation dynamics in agar phantoms under focused ultrasound: onset threshold and bubble growth",
+                      "Muscle activation onset detection from surface electromyography with an adaptive threshold",
+                      "A framework for artificial intelligence in medicine: harms to be prevented"):
+            self.assertEqual(sd.shared_bridge(self.GENE_ADD, title), [], title)
+        self.assertIn("seizures", sd.shared_bridge(self.GENE_ADD, "Gene addition before seizures in a Wwox-null mouse"))
+
     ROWS = {"NP4G1": "Peer review (with source data) of the same-laboratory preprint on a primary oligodendroglial role of WWOX under challenge (PPR1124524) the peer review is published",
             "NP4G3": "Oligodendrocyte-lineage census in the Synapsin-Cre deletion before the first spontaneous seizure (about P7 to P8) the census is reported",
             "OBJ": "Ethosuximide effect on the T-type current in knockout slices a recording is reported"}
