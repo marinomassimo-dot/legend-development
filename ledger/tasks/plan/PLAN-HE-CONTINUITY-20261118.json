@@ -668,6 +668,13 @@
      "accepted_at": "2026-11-21T11:13:01Z",
      "evidence": "scripts/test_documented_commands.py verbatim-copy exemption (missing-path half only) with two-direction controls; README rows 311-312; both cases verified with the gate --paths pre-check (case 1 PASS, case 2 still BLOCK on the two addresses)",
      "updated_at": "2026-11-21T11:13:01Z"
+    },
+    {
+     "step": "Write HE checkpoint F at the closed increment, launch the successor by the usual recipe and verify its handoff",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV agreement that checkpoint F at 295k is right and the restart comes at the closed increment after the battery, which ended",
+     "accepted_at": "2026-11-21T12:25:45Z"
     }
    ]
   }
@@ -1181,6 +1188,13 @@
    "at": "2026-11-21T11:13:01Z",
    "source": "PLAN and Codex formative follow-up message to the HE window, after the SCI handover step",
    "step_sha256": "ed15de965ec4",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T12:25:45Z",
+   "source": "ADV agreement that checkpoint F at 295k is right and the restart comes at the closed increment after the battery, which ended",
+   "step_sha256": "605a4ba76007",
    "reopened_block": false,
    "authorised_by": null
   }
