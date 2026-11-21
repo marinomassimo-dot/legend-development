@@ -172,6 +172,9 @@ somebody, at an age overlapping the intervention windows**.
 §1.2 are not empty because the measurement is impossible. They are empty because **nobody ran the panel
 on a treated animal.**
 
+[Update 2026-11-21, ADV-133 strand 1 (IT; wording from `research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv133_endocrine_calcium_sci_20261121/RESULT_ADV133_STRAND1_SCI_20261121.md`, corrected result, and ADV's independent recomputation; the old text above is kept): where the C4 row and the calcium row of section 4 carry `Ca 10.18 vs 11.13 mg/dL, p=0.000385` as a green, "statistically strong" row, the paper's own Table 3 (germline null, postnatal day 18; WT 3, HET 3, KO 4; calcium WT 11.13±0.120, HET 10.87±0.120, KO 10.18±0.295, ±SEM by the table footnote; a pooled WT+HET against KO comparison chosen by the authors) does not reproduce the printed value. Recomputed from the printed means, SEMs and group sizes: equal-variance t-test, WT+HET against KO, 8 degrees of freedom, p about 0.014; Welch test, WT alone against KO, p about 0.04. The finding is therefore **smaller and weaker than printed, and still below 0.05** (not "not significant"); the size of the fall (minus 8.5 percent) and its direction stand. The printed 0.000385 is reproduced only if the ± values were SD (p about 0.0005), so a SEM/SD labelling slip is a candidate explanation for the calcium row (a reading, not a source statement; it does not explain the BUN and total CO2 mismatches). This is one P18 value after onset in a post-hoc pooled comparison with n 3, 3 and 4; it says nothing about P7 to P14, and the "statistically strong, biologically small" wording of the calcium row should be read with it.]
+
+
 ### 1.6 · The three classes of empty cell, kept separate
 
 🔴 **A denominator audit is worthless if "not measured", "not reported" and "not readable here" are
@@ -290,6 +293,9 @@ sentence nobody can source to a single animal.
 | **Growth failure / body weight** | 🔻 growth **arrest** from day 10 | 🔻 ~56 % of normal at 21 d | 🟢 **MODEL-INVARIANT** — and it is the denominator of every "relative" measure in both papers |
 | **Glucose** | 🔻 `p=0.000131` | ⚪ **not significant, both sexes** | 🔴 **MODEL-SPECIFIC — discordant** |
 | **Calcium** | 🔻 `p=0.000385` ⚠️ but the effect is **−8.5 %**: statistically strong, biologically small | ⚪ **not significant** | 🔴 **MODEL-SPECIFIC — discordant** |
+
+
+[Update 2026-11-21, ADV-133 strand 1 (IT): the calcium row above (`p=0.000385`, "statistically strong, biologically small") is superseded by the dated update line placed after the table of the C-family rows earlier in this file: recomputed from the paper's own Table 3, the fall (minus 8.5 percent, P18, n 3/3/4, pooled WT+HET comparison) is smaller and weaker than printed (p about 0.014 or 0.04) and still below 0.05; the old text is kept.]
 
 **Adjudicable: 4 of the brief's 10 families** (C1, C3, C4-calcium, C10). **Six are undetermined** — and
 undetermined **because of a missing assay, not because of a disagreement**:

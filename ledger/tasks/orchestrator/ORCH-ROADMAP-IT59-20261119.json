@@ -234,10 +234,28 @@
     },
     {
      "step": "ADV-134: glossary of terms of art with in-programme senses and fr/de/es renderings (plainer English alternatives proposed to HE, no English string edited), then the same 25 passages repeated with the glossary fixed first, grammar pass, parity, same stop rule, different blind delegate; report CHANGED with and without glossary and the notice/section-wise/stop choice",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-134 (ADV message 2026-11-21, assignments/ADV-134.md)",
-     "accepted_at": "2026-11-21T08:31:00Z"
+     "accepted_at": "2026-11-21T08:31:00Z",
+     "evidence": "ADV-134 reported to ADV; RESULT_ADV134_IT_20261121.md on development/main c3bb25e49 (gate PASS, ls-remote verified); stop rule fired, nothing applied",
+     "updated_at": "2026-11-21T10:16:57Z"
+    },
+    {
+     "step": "AFTER ADV-134 is reported: the three integrator edits owed to ADV-133 and RP-037 (C4 dated update line for the calcium p; one add-on measurement line in the in vivo design brief; the class E R4/tier-3 row after SCI's rival-comparison sentence), exact wording in generation_it59_20261119/CHECKPOINT_IT_20261121_3_ADDENDUM.md",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV messages 2026-11-21 (after ADV-134)",
+     "accepted_at": "2026-11-21T09:29:20Z",
+     "evidence": "three consumer edits written: dated update lines in peripheral_phenotype_denominator_audit_20260922.md (C4 and calcium row), brief section 9.12 add-on measurement line, R4 class-E dated update with ADV's wording (annex pointer); landing by safe_push",
+     "updated_at": "2026-11-21T10:18:35Z"
+    },
+    {
+     "step": "ADV-135 / RP-035 (AFTER the ADV-134 report and the three consumer edits): human cross-check of the pup axis in published WOREE and SCAR12 reports, held material first, discriminating observation fixed before reading; full brief in generation_it59_20261119/CHECKPOINT_IT_20261121_3_ADDENDUM.md and assignments/ADV-135.md",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-135 (ADV message 2026-11-21)",
+     "accepted_at": "2026-11-21T09:40:09Z"
     }
    ]
   }
@@ -422,6 +440,20 @@
    "at": "2026-11-21T08:31:00Z",
    "source": "ADV-134 (ADV message 2026-11-21, assignments/ADV-134.md)",
    "step_sha256": "0b3797e524d4",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T09:29:20Z",
+   "source": "ADV messages 2026-11-21 (after ADV-134)",
+   "step_sha256": "8b8b227313b4",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T09:40:09Z",
+   "source": "ADV-135 (ADV message 2026-11-21)",
+   "step_sha256": "b91b1fb9e86a",
    "reopened_block": false,
    "authorised_by": null
   }

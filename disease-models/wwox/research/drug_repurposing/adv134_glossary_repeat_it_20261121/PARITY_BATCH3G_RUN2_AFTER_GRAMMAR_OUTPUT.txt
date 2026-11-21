@@ -1,0 +1,60 @@
+51-FR | NEGATION source 11 / rendering 13 | HEDGE source 5 / rendering 6
+51-DE | NEGATION source 11 / rendering 14
+51-ES | NEGATION source 11 / rendering 14 | HEDGE source 5 / rendering 6
+52-FR | NEGATION source 6 / rendering 8 | HEDGE source 1 / rendering 3
+52-DE | NAME missing Fig | NEGATION source 6 / rendering 7 | HEDGE source 1 / rendering 2
+52-ES | NAME missing ROIs | NEGATION source 6 / rendering 9 | HEDGE source 1 / rendering 2
+53-FR | SYMBOL ARN: source 0 / rendering 1; FDA: source 0 / rendering 1; RNA: source 1 / rendering 0; US: source 1 / rendering 0 | NEGATION source 9 / rendering 10
+53-DE | SYMBOL FDA: source 0 / rendering 1
+53-ES | SYMBOL ARN: source 0 / rendering 1; FDA: source 0 / rendering 1; LDH: source 5 / rendering 6; RNA: source 1 / rendering 0; US: source 1 / rendering 0 | NEGATION source 9 / rendering 12
+54-FR | NEGATION source 3 / rendering 2 | HEDGE source 0 / rendering 1
+54-DE | HEDGE source 0 / rendering 1
+54-ES | HEDGE source 0 / rendering 1
+55-FR | SYMBOL IRM: source 0 / rendering 2; MRI: source 2 / rendering 0
+55-DE | SYMBOL MRI: source 2 / rendering 0; MRT: source 0 / rendering 2
+55-ES | SYMBOL MRI: source 2 / rendering 0; RM: source 0 / rendering 2 | NEGATION source 4 / rendering 5
+56-FR | SYMBOL EST: source 0 / rendering 1; IS: source 1 / rendering 0; WWOX: source 0 / rendering 1 | NEGATION source 3 / rendering 6 | HEDGE source 2 / rendering 0
+56-DE | SYMBOL IS: source 1 / rendering 0; IST: source 0 / rendering 1; WWOX: source 0 / rendering 1 | NEGATION source 3 / rendering 4 | HEDGE source 2 / rendering 0
+56-ES | SYMBOL IS: source 1 / rendering 0; WWOX: source 0 / rendering 1 | NEGATION source 3 / rendering 6 | HEDGE source 2 / rendering 0
+57-FR | NEGATION source 6 / rendering 8
+57-DE | NEGATION source 6 / rendering 7
+57-ES | NEGATION source 6 / rendering 8
+59-DE | NEGATION source 5 / rendering 6
+59-ES | NEGATION source 5 / rendering 6 | HEDGE source 1 / rendering 0
+60-ES | NEGATION source 4 / rendering 5
+61-FR | NEGATION source 2 / rendering 1
+61-ES | NEGATION source 2 / rendering 1
+62-FR | SYMBOL NOT: source 1 / rendering 0; PAS: source 0 / rendering 1 | NEGATION source 4 / rendering 3
+62-DE | SYMBOL NICHT: source 0 / rendering 1; NOT: source 1 / rendering 0 | NEGATION source 4 / rendering 3
+62-ES | SYMBOL NO: source 0 / rendering 1; NOT: source 1 / rendering 0 | NEGATION source 4 / rendering 3
+63-FR | NEGATION source 7 / rendering 8
+63-DE | NEGATION source 7 / rendering 8 | HEDGE source 4 / rendering 3
+63-ES | NEGATION source 7 / rendering 10
+64-DE | NEGATION source 5 / rendering 4
+64-ES | NEGATION source 5 / rendering 7
+66-FR | NEGATION source 7 / rendering 8 | HEDGE source 1 / rendering 2
+66-DE | HEDGE source 1 / rendering 2
+66-ES | NEGATION source 7 / rendering 9 | HEDGE source 1 / rendering 2
+68-FR | NEGATION source 1 / rendering 2
+68-DE | NEGATION source 1 / rendering 3
+68-ES | NEGATION source 1 / rendering 2
+69-FR | NEGATION source 5 / rendering 6
+69-DE | NEGATION source 5 / rendering 6
+69-ES | NEGATION source 5 / rendering 6
+70-FR | NEGATION source 5 / rendering 4
+70-DE | HEDGE source 1 / rendering 0
+70-ES | HEDGE source 1 / rendering 2
+71-FR | NEGATION source 0 / rendering 1
+71-DE | NEGATION source 0 / rendering 1
+71-ES | NEGATION source 0 / rendering 1
+72-FR | NEGATION source 2 / rendering 1
+72-DE | NEGATION source 2 / rendering 1
+72-ES | NEGATION source 2 / rendering 1
+73-DE | NEGATION source 1 / rendering 2
+74-FR | NEGATION source 1 / rendering 2
+74-DE | NEGATION source 1 / rendering 2
+74-ES | NEGATION source 1 / rendering 2
+75-FR | NEGATION source 5 / rendering 6
+75-DE | NEGATION source 5 / rendering 6
+75-ES | NEGATION source 5 / rendering 6
+ROWS 75 FLAGGED 59
