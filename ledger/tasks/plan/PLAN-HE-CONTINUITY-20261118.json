@@ -671,10 +671,12 @@
     },
     {
      "step": "Write HE checkpoint F at the closed increment, launch the successor by the usual recipe and verify its handoff",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV agreement that checkpoint F at 295k is right and the restart comes at the closed increment after the battery, which ended",
-     "accepted_at": "2026-11-21T12:25:45Z"
+     "accepted_at": "2026-11-21T12:25:45Z",
+     "evidence": "checkpoint F on main a3da8ccc7 (digest a83383307be8...); successor e052ca19 launched 12:34:18Z; release, bind and first-call times are measured and recorded by the successor from the handoff",
+     "updated_at": "2026-11-21T12:34:30Z"
     }
    ]
   }
