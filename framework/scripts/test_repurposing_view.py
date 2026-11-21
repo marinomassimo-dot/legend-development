@@ -1409,6 +1409,83 @@ class SnapTmpHint(unittest.TestCase):
         self.assertIsNone(rv.snap_tmp_hint("Chromium 157.0 snap", "/tmpfs/x"))
 
 
+class BrowserTmpPreparation(unittest.TestCase):
+    """2026-11-21: IT's ADV-131 battery lost hours because a snap-confined browser cannot read pages under /tmp, although the cure (TMPDIR on a non-hidden directory under the home) was documented. The cure is applied
+    where every browser path passes (`find_chromium` -> `prepare_browser_tmp`) and the browser is proved to read a page there; otherwise a recognisable error is raised at once, never a skip. Fake browsers, no real one."""
+    SNAP = "import sys\nif '--version' in sys.argv:\n    print('Chromium 157.0 snap')\n    raise SystemExit(0)\n"
+    READS = SNAP + "print(open(sys.argv[-1][len('file://'):], encoding='utf-8').read())\n"      # a browser that can read the page it is given
+    BLIND = SNAP + "sys.stderr.write('Page load failed: ERR_FILE_NOT_FOUND')\n"                  # the snap's private /tmp: the page is not found, nothing is printed
+
+    def setUp(self):
+        import os
+        import tempfile as tf
+        from unittest.mock import patch
+        self.home = Path.home() / f"legend_test_tmp_{os.getpid()}_{id(self)}"
+        self.home.mkdir()
+        self.addCleanup(lambda: __import__("shutil").rmtree(self.home, ignore_errors=True))
+        env = patch.dict(os.environ, {"TMPDIR": "/tmp", "LEGEND_BROWSER_TMP": str(self.home / "t")})
+        env.start(); self.addCleanup(env.stop)
+        tmp = patch.object(tf, "tempdir", "/tmp")
+        tmp.start(); self.addCleanup(tmp.stop)
+        reads = patch.dict(rv._BROWSER_READS, clear=True)
+        reads.start(); self.addCleanup(reads.stop)
+        self.tf = tf
+
+    def browser(self, body):
+        script = self.home / f"browser_{abs(hash(body))}"
+        script.write_text("#!" + sys.executable + "\n" + body, encoding="utf-8")
+        script.chmod(0o700)
+        return str(script)
+
+    def test_a_snap_browser_with_a_temporary_directory_under_tmp_gets_a_home_directory_and_is_proved_to_read_a_page_there(self):
+        import os
+        got = rv.prepare_browser_tmp(self.browser(self.READS))
+        self.assertEqual(got, str((self.home / "t").resolve()))
+        self.assertEqual(os.environ["TMPDIR"], got)
+        self.assertEqual(self.tf.gettempdir(), got)
+        self.assertEqual([x.name for x in Path(got).iterdir()], [], "the probe leaves nothing behind")
+
+    def test_a_snap_browser_that_cannot_read_the_page_raises_a_recognisable_error_at_once_and_find_chromium_does_not_return_it(self):
+        from unittest.mock import patch
+        blind = self.browser(self.BLIND)
+        with self.assertRaises(rv.BrowserCannotReadLocalPages) as cm:
+            rv.prepare_browser_tmp(blind)
+        self.assertIn("ERR_FILE_NOT_FOUND", str(cm.exception))
+        self.assertIn(blind, str(cm.exception))
+        with patch.object(rv, "CHROMIUM_CANDIDATES", [blind]), patch.dict("os.environ", {}, clear=False):
+            __import__("os").environ.pop("CHROME_BIN", None)
+            with self.assertRaises(rv.BrowserCannotReadLocalPages):
+                rv.find_chromium()
+
+    def test_a_browser_that_is_not_snap_confined_is_left_exactly_as_it_was(self):
+        import os
+        plain = self.browser("import sys\nif '--version' in sys.argv:\n    print('Google Chrome 150.0')\n    raise SystemExit(0)\nraise SystemExit(7)\n")
+        self.assertEqual(rv.prepare_browser_tmp(plain), "/tmp")
+        self.assertEqual(os.environ["TMPDIR"], "/tmp")
+        self.assertEqual(self.tf.gettempdir(), "/tmp")
+        self.assertEqual(rv._BROWSER_READS, {})
+
+    def test_a_dot_directory_or_a_directory_outside_the_home_is_refused_not_used(self):
+        import os
+        from unittest.mock import patch
+        for bad in (str(Path.home() / ".cache" / "legend_x"), "/var/tmp/legend_x"):
+            with patch.dict(os.environ, {"LEGEND_BROWSER_TMP": bad}):
+                with self.assertRaises(rv.BrowserCannotReadLocalPages) as cm:
+                    rv.prepare_browser_tmp(self.browser(self.READS))
+                self.assertIn("non-hidden", str(cm.exception), bad)
+
+    def test_the_viewports_command_reports_the_error_and_does_not_say_skip(self):
+        import contextlib
+        import io
+        from unittest.mock import patch
+        out = io.StringIO()
+        with patch.object(rv, "find_chromium", side_effect=rv.BrowserCannotReadLocalPages("fixture: cannot read")), contextlib.redirect_stdout(out):
+            code = rv.main(["viewports"])
+        self.assertEqual(code, 2)
+        self.assertIn("ERROR: fixture: cannot read", out.getvalue())
+        self.assertNotIn("SKIP", out.getvalue())
+
+
 class CdpStartup(unittest.TestCase):
     """Exercise failed browser starts with real child processes, without needing Chromium."""
 

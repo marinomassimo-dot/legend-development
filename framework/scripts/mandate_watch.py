@@ -585,6 +585,36 @@ def retirement_state(task: str, old_id: str, new_id: str, sessions: list[dict] |
                 reason="released background predecessor; unique acting successor; no observed work")
 
 
+def legacy_bound_tasks(task: str, old_path: Path | None, root: Path = ROOT) -> list[dict]:
+    """Mandates other than `task` that the released predecessor's own transcript still carries as bound (a bind line with no release line in that chat), with what each RECORD says now. 2026-11-21: the handoff
+    to this window said KEPT for the old interactive HE chat because two mandates bound there (a mandate record closed on 2026-11-14 and one released by its record) had no release line in a chat that
+    went idle two days earlier; nothing said which actor owned them or that the records already closed them, so the verdict read as an open item for the operator. A release line is written only by the chat
+    that holds the bind and is never written for it from another session: these mandates are reconciled by their record and its owner, and the list below is what that owner reads."""
+    if old_path is None:
+        return []
+    out = []
+    for other in bind_timeline(old_path, task).get("active_tasks", []):
+        if other != task:
+            st = mc.status_for(ROOT if root is None else root, other)
+            out.append({"task": other, "record_verdict": st.get("verdict"), "record": st.get("record"), "steps": st.get("counts")})
+    return out
+
+
+def handoff_next(retired: str, names: dict, legacy: list[dict], old_in_inventory: bool) -> str:
+    """The one line the launcher reads after a handoff: the predecessor's retirement, the display names still to be corrected, and the legacy bound lines. A printed rename list does not complete a handoff: the
+    launcher applies each rename natively and reads `labels` again until it says CURRENT (operator, 2026-11-21). A released chat is not a recipient of new work and its closure is never an operator item."""
+    text = "successor running; predecessor retirement " + retired + (" (use --retire-old to execute the guarded stop)" if retired == "ELIGIBLE" else "")
+    if names.get("state") == "PENDING":
+        text += (f"; SESSION NAMES PENDING ({len(names.get('renames') or [])}): the launcher applies each rename natively now (claude agents, the exact row, ctrl+r; demotions first) and reads "
+                 f"`labels --task {names.get('task')}` again until it says CURRENT; the printed list is not the end of the handoff")
+    if retired == "KEPT" and legacy:
+        text += ("; the old chat still carries bound lines for " + ", ".join(f"{x['task']} (record {x['record_verdict']})" for x in legacy)
+                 + ": reconcile them by their records and owners, never by a release line written for that chat from another session")
+    if retired == "KEPT" and not old_in_inventory:
+        text += "; the old session is absent from the live inventory, so no window is left to close"
+    return text
+
+
 def retire_predecessor(task: str, old_id: str, new_id: str, *, execute: bool = False,
                        projects_dir: Path | None = None) -> dict:
     """Supported stop only, followed by independent liveness verification. Never rm/kill.
@@ -1448,11 +1478,12 @@ def main(argv: list[str] | None = None) -> int:
         if res["verdict"] == "RUNNING":
             old_path, new_path = transcript_for_session(a.old), transcript_for_session(a.new)
             old_id, new_id = (old_path.stem if old_path else a.old), (new_path.stem if new_path else a.new)
-            res["session_names"] = session_name_state(a.task, list_sessions())
+            inventory = list_sessions()
+            res["session_names"] = session_name_state(a.task, inventory)
             res["predecessor_retirement"] = retire_predecessor(a.task, old_id, new_id, execute=a.retire_old)
             retired = res["predecessor_retirement"]["verdict"]
-            res["next"] = ("successor running; predecessor retirement " + retired
-                           + (" (use --retire-old to execute the guarded stop)" if retired == "ELIGIBLE" else ""))
+            res["legacy_bound_tasks"] = legacy_bound_tasks(a.task, old_path)
+            res["next"] = handoff_next(retired, res["session_names"], res["legacy_bound_tasks"], any(r.get("sessionId") == old_id for r in (inventory or [])))
             if a.retire_old and res["predecessor_retirement"]["verdict"] not in ("RETIRED", "ALREADY_STOPPED"):
                 print(json.dumps(res, indent=1, sort_keys=True, ensure_ascii=False))
                 return 5
