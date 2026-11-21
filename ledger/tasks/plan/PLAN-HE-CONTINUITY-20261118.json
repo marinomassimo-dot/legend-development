@@ -839,6 +839,13 @@
      "accepted_at": "2026-11-21T21:48:18Z",
      "evidence": "note under brainstorm_20261116/adv163_he_20261121: MIT code, CC BY 4.0 data, 7,124 MB deposit (6,248 MB counts), R absent, verdicts TRIAL (xlsx tables), WATCH (package), REJECT (counts); nothing downloaded",
      "updated_at": "2026-11-21T21:50:22Z"
+    },
+    {
+     "step": "ADV-164: transfer check of scout_daily.py --gene-anchor on two reopen rows (frozen sources first, three arms, fixed rule)",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV message of 2026-11-21 assigning ADV-164 (Codex strategic review 01)",
+     "accepted_at": "2026-11-21T21:54:39Z"
     }
    ]
   }
@@ -1485,6 +1492,13 @@
    "at": "2026-11-21T21:48:18Z",
    "source": "ADV message of 2026-11-21 assigning ADV-163 (operator priority, harness side)",
    "step_sha256": "4a22bd967c89",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T21:54:39Z",
+   "source": "ADV message of 2026-11-21 assigning ADV-164 (Codex strategic review 01)",
+   "step_sha256": "8a070f85698d",
    "reopened_block": false,
    "authorised_by": null
   }
