@@ -749,6 +749,15 @@
      "accepted_at": "2026-11-21T17:32:46Z",
      "evidence": "ledger row P-SCI-1 (freeze commit a2d6504e5, SCI file blob e56f4bdf), sidecar sha256 c6962ff3 (3 forecasters, 4 ids), forecast_freeze_p_sci_1_he_20261121/P_SCI_1_FORECAST_FREEZE_HE_20261121.md with ADV's binding reading rule, 1-in-6 floor, unscorable rule, shared provenance, weight zero and low prior; prediction_ledger check: row ok, violations unchanged at 84 (pre-existing); guard OUTCOME_MAY_OPEN (table absent); no code changed",
      "updated_at": "2026-11-21T17:35:45Z"
+    },
+    {
+     "step": "ADV-155 follow-up: label the P-SCI-1 sidecar bins as an HE assumption and add a flatter sensitivity forecaster in a second sidecar, leaving the frozen sidecar byte-identical",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "SCI window X message of 2026-11-21 on the sidecar bins, after the freeze",
+     "accepted_at": "2026-11-21T17:40:45Z",
+     "evidence": "dated addendum and a second sidecar (sha256 cbf6469c, adds genotype_effect_flat_sensitivity 0.15/0.25/0.50/0.10); the frozen sidecar c6962ff3 byte-identical; ledger notes cell updated; ledger violations unchanged at 84",
+     "updated_at": "2026-11-21T17:41:21Z"
     }
    ]
   }
@@ -1325,6 +1334,13 @@
    "at": "2026-11-21T17:32:46Z",
    "source": "ADV message of 2026-11-21 after the predictive-modelling brainstorm synthesis, assignment ADV-155",
    "step_sha256": "056983e3bcff",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T17:40:45Z",
+   "source": "SCI window X message of 2026-11-21 on the sidecar bins, after the freeze",
+   "step_sha256": "af5338d00735",
    "reopened_block": false,
    "authorised_by": null
   }
