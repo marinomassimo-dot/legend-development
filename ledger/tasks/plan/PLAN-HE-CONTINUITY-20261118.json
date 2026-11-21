@@ -626,10 +626,12 @@
     },
     {
      "step": "Launch the IT successor from its checkpoint 3 by the usual recipe, apply pending display names natively, and tell IT and ADV",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "relay from the old HE window of IT restart request: checkpoint three of the IT orchestrator on main, old IT window bf7d7d3b",
-     "accepted_at": "2026-11-21T09:15:12Z"
+     "accepted_at": "2026-11-21T09:15:12Z",
+     "evidence": "launched 09:23:55Z, old release 09:58:10.97Z, bind 09:58:18.72Z (7.8 s), first tool call 09:58:20.86Z (2.1 s); names native CURRENT/PREVIOUS verified by id; old HE window already stopped; old IT window kept while busy",
+     "updated_at": "2026-11-21T10:19:27Z"
     },
     {
      "step": "Decide whether plainer English for lead, restated and need is worth landing in new text and in the 25 batch-3 passages (ADV conditional ask), and the German head noun for need versus lever",
