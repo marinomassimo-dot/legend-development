@@ -245,6 +245,13 @@
      "owner": "orchestrator",
      "source": "ADV messages 2026-11-21 (after ADV-134)",
      "accepted_at": "2026-11-21T09:29:20Z"
+    },
+    {
+     "step": "ADV-135 / RP-035 (AFTER the ADV-134 report and the three consumer edits): human cross-check of the pup axis in published WOREE and SCAR12 reports, held material first, discriminating observation fixed before reading; full brief in generation_it59_20261119/CHECKPOINT_IT_20261121_3_ADDENDUM.md and assignments/ADV-135.md",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-135 (ADV message 2026-11-21)",
+     "accepted_at": "2026-11-21T09:40:09Z"
     }
    ]
   }
@@ -436,6 +443,13 @@
    "at": "2026-11-21T09:29:20Z",
    "source": "ADV messages 2026-11-21 (after ADV-134)",
    "step_sha256": "8b8b227313b4",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T09:40:09Z",
+   "source": "ADV-135 (ADV message 2026-11-21)",
+   "step_sha256": "b91b1fb9e86a",
    "reopened_block": false,
    "authorised_by": null
   }
