@@ -536,10 +536,19 @@
     },
     {
      "step": "ADV-129 generator review for IT (diff adv129_generator.diff, 26 lines in repurposing_view.py): answer A or B, then extend the static guard (Italian authored passage in the embedded data of a non-Italian page) and fix the raw 'un solo sistema' table cells",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "IT message (ADV-129 generator diff review) with ADV routing note (assignments/ADV-129.md)",
-     "accepted_at": "2026-11-21T01:17:09Z"
+     "accepted_at": "2026-11-21T01:17:09Z",
+     "evidence": "IT landed the generator diff (1bd92a5ab); un solo sistema lead withdrawn (Spanish translation); static guard test_an_italian_authored_data_field_is_never_left_in_italian_in_the_embedded_data_of_another_page added, test_repurposing_view_i18n 23 OK",
+     "updated_at": "2026-11-21T02:14:57Z"
+    },
+    {
+     "step": "Launch the IT successor by the handoff recipe (checkpoint generation_it59_20261119/CHECKPOINT_IT_20261121_1.md), report row and session id to ADV; then count the full-page leads (English fragments on fr/de/es, Italian compound name on EN)",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV message (launch the IT successor now) and IT message (checkpoint 1 ready, nothing in flight) of 2026-11-21",
+     "accepted_at": "2026-11-21T02:14:58Z"
     }
    ]
   }
@@ -955,6 +964,13 @@
    "at": "2026-11-21T01:17:09Z",
    "source": "IT message (ADV-129 generator diff review) with ADV routing note (assignments/ADV-129.md)",
    "step_sha256": "7df2df19b709",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T02:14:58Z",
+   "source": "ADV message (launch the IT successor now) and IT message (checkpoint 1 ready, nothing in flight) of 2026-11-21",
+   "step_sha256": "c2d87b210431",
    "reopened_block": false,
    "authorised_by": null
   }

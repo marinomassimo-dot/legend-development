@@ -59,6 +59,30 @@ def italian_ui_strings_left(page: str, lang: str) -> list:
     return sorted(v for k, v in ui.items() if k.startswith("UI_IT.") and len(v) >= 14 and tr.get(k) != v and v in nodes)
 
 
+def data_fields_in_italian(page: str, it_page: str) -> list:
+    """Values of the Italian-authored embedded-data fields (`rv.IT_DATA_FIELDS`) that a non-Italian page still carries in their Italian original. ADV-129 (2026-11-21): the client script prints
+    `summary_it` and `feasibility_it` of the work order on the 'next test' card as they are, so the English page painted Italian prose from the data object while the server-side text was translated;
+    a text scan of the rendered body cannot see it, and the script block is exactly what that scan removes. The comparison is with the same field of the Italian page, so a translation that
+    happens to be missing is found, and a field that is empty in both is not."""
+    def fields(doc):
+        blob = re.search(r'<script id="data" type="application/json">(.*?)</script>', doc, re.S).group(1)
+        out = []
+        def walk(o):
+            if isinstance(o, dict):
+                for k, v in o.items():
+                    if k in rv.IT_DATA_FIELDS and isinstance(v, str):
+                        out.append((k, v))
+                    else:
+                        walk(v)
+            elif isinstance(o, list):
+                for x in o:
+                    walk(x)
+        walk(json.loads(blob.replace("<\\/", "</").replace("<\\!--", "<!--")))
+        return out
+    original, here = fields(it_page), fields(page)
+    return [v[:60] for (k, v), (k2, v2) in zip(here, original) if k == k2 and v and v == v2] + ([] if len(here) == len(original) else ["field count differs"])
+
+
 @unittest.skipUnless(HAVE, "module data or translation files absent")
 class InventoryIsCheckedWhereTheActorRunsIt(unittest.TestCase):
     """2026-11-12: a curated passage was edited, `i18n --what check` passed, and only the suite found the stale inventory in the battery."""
@@ -184,6 +208,13 @@ class FiveLanguages(unittest.TestCase):
             self.assertIn(key, rv.UI_IT)
             for lg in ("en", "fr", "es", "de"):
                 self.assertNotEqual(json.loads((DR / "view/i18n" / f"ui_{lg}.json").read_text(encoding="utf-8"))["UI_IT." + key], rv.UI_IT[key], (lg, key))
+
+    def test_an_italian_authored_data_field_is_never_left_in_italian_in_the_embedded_data_of_another_page(self):
+        """ADV-129: localise_it_fields() translates `summary_it` and `feasibility_it` in the data object a script prints; without it the English page painted them in Italian from the script."""
+        self.assertTrue(rv.IT_DATA_FIELDS)
+        self.assertGreater(len(data_fields_in_italian(self.pages["it"], self.pages["it"])), 0)          # the detector sees Italian when it is there (the Italian page is where it belongs)
+        for lg in ("en", "fr", "es", "de"):
+            self.assertEqual(data_fields_in_italian(self.pages[lg], self.pages["it"]), [], lg)
 
     def test_no_italian_interface_text_is_left_outside_marked_passages(self):
         ui = json.loads((DR / "view/i18n/ui_source.json").read_text(encoding="utf-8"))
