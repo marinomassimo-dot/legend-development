@@ -543,6 +543,10 @@ into a record that later closes describes the moment it was written: replace it 
 not leave it as the last word. Wait for the event with `ci_runs.py wait <sha> --timeout N` or a process identity
 (`process_wait.py`), never by polling a name, and add no second monitor.
 
+Who owns which verification is split, so that two actors do not each wait for the other's answer (IT, 2026-11-21): the actor whose work is on the commit owns the reading of the CI run and of
+the actual publication (the Pages deployment and the pages as they are served); the actor that lands owns the verified SHA and the result of the local gate on it. Each states, in its own
+record, which of the two it holds; neither re-reads the other's half, and a report of a landing names the SHA and the gate result, never a conclusion about a CI run it did not read.
+
 ### Who receives a next step
 
 A report to the operator is informative. Its being read or answered is not a dependency for work already authorised, and the operator's silence neither blocks nor approves

@@ -1,0 +1,169 @@
+{
+ "PubMed B / all years": {
+  "query": "opc[tiab] AND drg[tiab]",
+  "hitCount": "17",
+  "K_core_found": [],
+  "n_found": 0,
+  "of": 28,
+  "K_core_in_window": 12
+ },
+ "PubMed B / scout window": {
+  "query": "opc[tiab] AND drg[tiab]",
+  "hitCount": "1",
+  "K_core_found": [],
+  "n_found": 0,
+  "of": 28,
+  "K_core_in_window": 12
+ },
+ "PubMed G / all years": {
+  "query": "wwox[tiab] AND opc[tiab] AND drg[tiab]",
+  "hitCount": "0",
+  "K_core_found": [],
+  "n_found": 0,
+  "of": 28,
+  "K_core_in_window": 12
+ },
+ "PubMed G / scout window": {
+  "query": "wwox[tiab] AND opc[tiab] AND drg[tiab]",
+  "hitCount": "0",
+  "K_core_found": [],
+  "n_found": 0,
+  "of": 28,
+  "K_core_in_window": 12
+ },
+ "PubMed G1 / all years": {
+  "query": "wwox[tiab] AND opc[tiab]",
+  "hitCount": "0",
+  "K_core_found": [],
+  "n_found": 0,
+  "of": 28,
+  "K_core_in_window": 12
+ },
+ "PubMed G1 / scout window": {
+  "query": "wwox[tiab] AND opc[tiab]",
+  "hitCount": "0",
+  "K_core_found": [],
+  "n_found": 0,
+  "of": 28,
+  "K_core_in_window": 12
+ },
+ "PubMed G1b / all years": {
+  "query": "wwox[tiab] AND drg[tiab]",
+  "hitCount": "1",
+  "K_core_found": [
+   "PAPER 140"
+  ],
+  "n_found": 1,
+  "of": 28,
+  "K_core_in_window": 12
+ },
+ "PubMed G1b / scout window": {
+  "query": "wwox[tiab] AND drg[tiab]",
+  "hitCount": "0",
+  "K_core_found": [],
+  "n_found": 0,
+  "of": 28,
+  "K_core_in_window": 12
+ },
+ "PubMed GA / all years": {
+  "query": "wwox[tiab] AND (opc[tiab] OR drg[tiab])",
+  "hitCount": "1",
+  "K_core_found": [
+   "PAPER 140"
+  ],
+  "n_found": 1,
+  "of": 28,
+  "K_core_in_window": 12
+ },
+ "PubMed GA / scout window": {
+  "query": "wwox[tiab] AND (opc[tiab] OR drg[tiab])",
+  "hitCount": "0",
+  "K_core_found": [],
+  "n_found": 0,
+  "of": 28,
+  "K_core_in_window": 12
+ },
+ "PubMed S / all years": {
+  "query": "oligodendrocyte[tiab] AND differentiation[tiab]",
+  "hitCount": "4690",
+  "K_core_found": [
+   "PAPER 029",
+   "PAPER 252"
+  ],
+  "n_found": 2,
+  "of": 28,
+  "K_core_in_window": 12
+ },
+ "PubMed S / scout window": {
+  "query": "oligodendrocyte[tiab] AND differentiation[tiab]",
+  "hitCount": "631",
+  "K_core_found": [
+   "PAPER 029",
+   "PAPER 252"
+  ],
+  "n_found": 2,
+  "of": 28,
+  "K_core_in_window": 12
+ },
+ "PubMed SG / all years": {
+  "query": "wwox[tiab] AND oligodendrocyte[tiab]",
+  "hitCount": "3",
+  "K_core_found": [
+   "PAPER 011",
+   "PAPER 021",
+   "PAPER 029"
+  ],
+  "n_found": 3,
+  "of": 28,
+  "K_core_in_window": 12
+ },
+ "PubMed SG / scout window": {
+  "query": "wwox[tiab] AND oligodendrocyte[tiab]",
+  "hitCount": "2",
+  "K_core_found": [
+   "PAPER 011",
+   "PAPER 029"
+  ],
+  "n_found": 2,
+  "of": 28,
+  "K_core_in_window": 12
+ },
+ "PubMed GD / all years": {
+  "query": "wwox[tiab] AND differentiation[tiab]",
+  "hitCount": "45",
+  "K_core_found": [
+   "PAPER 029",
+   "PAPER 094"
+  ],
+  "n_found": 2,
+  "of": 28,
+  "K_core_in_window": 12
+ },
+ "PubMed GD / scout window": {
+  "query": "wwox[tiab] AND differentiation[tiab]",
+  "hitCount": "7",
+  "K_core_found": [
+   "PAPER 029",
+   "PAPER 094"
+  ],
+  "n_found": 2,
+  "of": 28,
+  "K_core_in_window": 12
+ },
+ "PubMed D / all years": {
+  "query": "differentiation[tiab]",
+  "hitCount": "646253",
+  "K_core_found": [],
+  "n_found": 0,
+  "of": 28,
+  "K_core_in_window": 12
+ },
+ "PubMed D / scout window": {
+  "query": "differentiation[tiab]",
+  "hitCount": "65359",
+  "K_core_found": [],
+  "n_found": 0,
+  "of": 28,
+  "K_core_in_window": 12
+ }
+}
