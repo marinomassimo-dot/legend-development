@@ -1,0 +1,54 @@
+cells in hdr 4261 meta rows 4261 genes 21
+labels: [('', 132), ('Astrocyte', 46), ('Choroid', 14), ('EN-PFC1', 93), ('EN-PFC2', 96), ('EN-PFC3', 53), ('EN-V1-1', 166), ('EN-V1-2', 182), ('EN-V1-3', 76), ('Endothelial', 30), ('Glyc', 77), ('IN-CTX-CGE1', 148), ('IN-CTX-CGE2', 153), ('IN-CTX-MGE1', 192), ('IN-CTX-MGE2', 95), ('IN-STR', 83), ('IPC-div1', 36), ('IPC-div2', 51), ('IPC-nEN1', 68), ('IPC-nEN2', 76), ('IPC-nEN3', 39), ('MGE-IPC1', 44), ('MGE-IPC2', 62), ('MGE-IPC3', 40), ('MGE-RG1', 44), ('MGE-RG2', 70), ('MGE-div', 57), ('Microglia', 77), ('Mural', 19), ('OPC', 37), ('RG-div1', 133), ('RG-div2', 124), ('RG-early', 53), ('U1', 80), ('U2', 27), ('U3', 28), ('U4', 56), ('nEN-early1', 52), ('nEN-early2', 455), ('nEN-late', 321), ('nIN1', 72), ('nIN2', 96), ('nIN3', 54), ('nIN4', 28), ('nIN5', 64), ('oRG', 65), ('tRG', 100), ('vRG', 97)]
+excluded labels: ['', 'U1', 'U2', 'U3', 'U4']
+hdr cells missing in meta 0 assigned 3938
+
+WWOX dataset-wide 0.1417 (558/3938)
+  excitatory               162/1494 = 0.1084  [0.0937, 0.1252]
+  inhibitory_neurons       93/985 = 0.0944  [0.0777, 0.1143]
+  inhibitory_progenitors   68/317 = 0.2145  [0.1729, 0.2630]
+  radial_glia              150/649 = 0.2311  [0.2003, 0.2651]
+  cortical_IPC             37/270 = 0.1370  [0.1011, 0.1832]
+  glia_other               48/223 = 0.2152  [0.1664, 0.2738]
+
+Controls (dataset-wide fraction, ratio to WWOX):
+  SDHA         0.2062 ratio 1.455 
+  PSMB4        0.5422 ratio 3.826 
+  VCP          0.3172 ratio 2.238 
+  RAB7A        0.3197 ratio 2.256 
+  NACA         0.7956 ratio 5.615 
+  TFRC         0.2961 ratio 2.090 
+  POLR2A       0.3156 ratio 2.228 
+  ARF1         0.5008 ratio 3.534 
+  SNRPD1       0.5493 ratio 3.876 
+  HMBS         0.0912 ratio 0.643 
+  EEF2         0.8108 ratio 5.722 
+  UBE2D3       0.5909 ratio 4.170 
+  GUSB         0.1067 ratio 0.753 QUAL
+  TBP          0.2235 ratio 1.577 
+  CSNK2B       0.4134 ratio 2.918 
+  TMEM59       0.4977 ratio 3.513 
+  YWHAZ        0.9406 ratio 6.638 
+  HPRT1        0.1326 ratio 0.935 QUAL
+  PGK1         0.3903 ratio 2.754 
+  PPIA         0.8466 ratio 5.975 
+qualifying: ['GUSB', 'HPRT1'] n= 2
+per-group median detection fraction of qualifying controls:
+  excitatory               median 0.1252  (WWOX 0.1084)
+  inhibitory_neurons       median 0.0563  (WWOX 0.0944)
+  inhibitory_progenitors   median 0.1388  (WWOX 0.2145)
+  radial_glia              median 0.1826  (WWOX 0.2311)
+  cortical_IPC             median 0.1315  (WWOX 0.1370)
+  glia_other               median 0.1368  (WWOX 0.2152)
+
+assigned cells without depth 0
+cuts 2262.0 3160.0 n 3938
+  excitatory               T0: 13/255  T1: 59/656  T2: 90/583
+  inhibitory_neurons       T0: 63/759  T1: 26/209  T2: 4/17
+  inhibitory_progenitors   T0: 12/86  T1: 35/151  T2: 21/80
+  radial_glia              T0: 4/66  T1: 21/140  T2: 125/443
+  cortical_IPC             T0: 5/77  T1: 13/98  T2: 19/95
+  glia_other               T0: 5/71  T1: 14/58  T2: 29/94
+MH RR inhibitory_neurons vs excitatory: 1.486561413523941
+  95% CI (Greenland-Robins): 1.0710280980172395 2.0633117284871894
+crude RR 0.8707275803722504
