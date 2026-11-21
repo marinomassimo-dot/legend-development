@@ -885,6 +885,7 @@
  "UI_IT.pl_sum": "Matching v3 : composé, action, contexte et bénéfice — pilote",
  "UI_IT.pl_support": "Preuves à l'appui",
  "UI_IT.pl_why": "Pourquoi il est apparu",
+ "UI_IT.pl_working_note": "Note de travail, en italien seulement : les champs des sept cas pilotes ne sont pas traduits et restent dans la langue dans laquelle ils ont été rédigés.",
  "UI_IT.pos_for": "pour",
  "UI_IT.pos_why_h": "Pourquoi cette lettre, besoin par besoin",
  "UI_IT.pr_axis_h": "Fiches d'axe sans besoin associé",

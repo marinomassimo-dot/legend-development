@@ -204,6 +204,15 @@
      "accepted_at": "2026-11-20T22:36:12Z",
      "evidence": "per-row classes RP-011 d, RP-008 c (run), RP-013 c (verification in N4), RP-029 d, step 4 c: generation_it59_20261119/ADV124_RESIDUAL_ROWS_IT_20261120.md; one run: disease-models/wwox/research/drug_repurposing/np4g2_retrieval_it_20261120/RESULT_NP4G2_RETRIEVAL_IT_20261120.md",
      "updated_at": "2026-11-20T22:46:28Z"
+    },
+    {
+     "step": "ADV-129 PAINTED ITALIAN CONTENT: (1) wrap the 4 authored shareable items in the content catalogue (lxi), translate en/fr/de/es keeping numbers names hedges limits, blind check by a different reader; (2) ranking evidence sentences (about 12 patterns); (3) count matching_pilot_cases and table fields and TELL ADV before translating (translate or label working note Italian only); repeat HE's painted scan, before and after per page; raw value 'un solo sistema'; item 17 names off public pages; one delegate at a time",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-21 (assignments/ADV-129.md lands with ADV's next push)",
+     "accepted_at": "2026-11-21T01:07:13Z",
+     "evidence": "adv129_painted_italian_it_20261121/RESULT_ADV129_IT_20261121.md: 4 authored shareable items no longer painted Italian; pilot cases labelled working note (ADV decision), requirement and compound sentences are part of the pilot table; two blind-check batches (13 pairs: 46 faithful, 5 minor, 1 changed; batch 2: 5 faithful, 5 minor), repairs applied; i18n suite 22 OK; non-browser view tests 188 run, 2 known item-17 reds",
+     "updated_at": "2026-11-21T02:07:44Z"
     }
    ]
   }
@@ -360,6 +369,13 @@
    "at": "2026-11-20T22:36:12Z",
    "source": "ADV-124 (ADV message 2026-11-20, the operator's night integration)",
    "step_sha256": "401fc657ef89",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T01:07:13Z",
+   "source": "ADV message 2026-11-21 (assignments/ADV-129.md lands with ADV's next push)",
+   "step_sha256": "ad2f17d24b7b",
    "reopened_block": false,
    "authorised_by": null
   }

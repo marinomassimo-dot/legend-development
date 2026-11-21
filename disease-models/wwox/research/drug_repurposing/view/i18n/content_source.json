@@ -19,6 +19,10 @@
   "src": "en",
   "text": "A peptide inhibitor of the chaperone HSC70 (HSPA8) used as a cell-level probe, with lysosomal and genetic controls (identified by its ChEMBL record below)"
  },
+ "02afd28c3467": {
+  "src": "it",
+  "text": "intervallo di confidenza al 90% di SIG, estremo superiore"
+ },
  "03f48d9b64a8": {
   "src": "it",
   "text": "Capire se l'aumento di MYC nella glia radiale e' una causa, un marcatore dello stato progenitore o una conseguenza del ciclo cellulare, e se il deficit dei marcatori di strato corretto dal gene nei neuroni indica un compartimento raggiungibile dopo la nascita."
@@ -351,6 +355,10 @@
   "src": "en",
   "text": "It separates a deficit of GABA supply from a postsynaptic or chloride-gradient deficit: only the first is helped by more GABA."
  },
+ "2def981c1485": {
+  "src": "it",
+  "text": "95° percentile della distribuzione nulla appaiata, circa 0,39 (estrazione del produttore)"
+ },
  "2e055fd6bb53": {
   "src": "it",
   "text": "Rami della risposta UPR, trascritti"
@@ -571,6 +579,10 @@
   "src": "it",
   "text": "Il modulo si trasferisce a un contrasto indipendente di perdita di WWOX (topo P47T, ippocampo)"
  },
+ "443854d281b9": {
+  "src": "it",
+  "text": "rho REF-1"
+ },
  "444e8904b150": {
   "src": "it",
   "text": "non nota (composto di uno sponsor, nessuna evidenza di accesso ottenuta qui)."
@@ -635,6 +647,10 @@
   "src": "en",
   "text": "E3 - card reviewed with assertions; no WWOX-side result read beyond abstract"
  },
+ "4b09904d7fdc": {
+  "src": "it",
+  "text": "stesso percentile, estrazione del verificatore"
+ },
  "4b5e3ba1a71e": {
   "src": "en",
   "text": "A compound benefit can be independent of NRF2 (the readout was raised by compounds that do not bind KEAP1); the only catalogued NRF2-lowering row lowers many proteins and is not a control; no neuron or astrocyte data exist for any of these compounds; a binding assay at the Kelch domain cannot see covalent modifiers. [IT46 SCI46] No source has the binder in primary neurons or astrocytes with an NRF2-loss arm. Where a loss was verified (primary rat microglia, shRNA and knockout) the binder's induction and protection were lost and KEAP1 knockout occluded them; in a human neuronal line a partial NRF2 loss left the effect unchanged, which is uninterpretable; one human neuronal use on a KEAP1-overexpressing, already NRF2-high background moved ferroptosis markers in the harmful direction (no loss arm). The Davies source's own siRNA arms are categorical labels in the database copy, with no numbers and no knockdown efficiency, and the covalent bardoxolone methyl sits in the same design. [IT47 correction] The sentence above that no neuron or astrocyte data exist for any of these compounds is too strong for the covalent class: the SCI46 value table holds abstract-level data in primary mixed neuron-astrocyte cortical cultures with an Nrf2-knockout arm for one electrophile (the knockout result of a second electrophile is not stated in the abstract), data in neurons and astrocytes without a loss arm for the two fumarates, and a neurotoxicity series for a covalent triterpenoid in a human neuronal line. For the non-covalent binder the statement stands: no primary neuron or astrocyte datum, and the one neuronal line has a partial or inadequate loss. Source: un registro del repository (non incluso in questo pacchetto) (rows A36, A47-A53), counted by un registro del repository (non incluso in questo pacchetto). [SCI48] The second non-covalent Kelch binder (Winkel 2015; text and nine figures read, supplement unreachable) is a second non-covalent Kelch binder with myeloid-cell data only: in germline Nrf2-knockout bone-marrow macrophages 2 of 105 probe sets persisted, but no check of the knockout is printed and the covalent triterpenoid comparator is in no knockout arm, so the paper does not meet the loss criterion as printed; it is a comparator for a survivor set, not a probe. The earlier statement that it reaches the first two comparisons at abstract depth is replaced. The commonest covalent electrophile has germline-null neural designs in at least four independent groups (benefit lost in the nulls; one partial persistence at 50 mg/kg): a comparator, not a probe (loss germline or unverified, no KEAP1-loss arm, no binder partner); that line is at mixed depth (three texts, abstracts). No reagent is a probe in a neuron or astrocyte; the one probe row is the catalogued binder in rat microglia. No acute NFE2L2 loss verified at the endpoint time exists in any neural source read. The comparison engine now gives these two reagents the role comparator, as their package states it (germline or unverified loss; the binder in myeloid cells only): it reads the package's own role table and can only lower a derived role."
@@ -682,6 +698,10 @@
  "50b28c98d057": {
   "src": "en",
   "text": "position unchanged from IT20 (rank 3): No IT21 input changes the position."
+ },
+ "5191ef559189": {
+  "src": "it",
+  "text": "p esatto a una coda"
  },
  "51ab244c307d": {
   "src": "en",
@@ -963,6 +983,10 @@
   "src": "en",
   "text": "The Methods drug list contains no synaptic blocker, so the intrinsic recordings were probably made with synapses intact, while most knockout slices burst."
  },
+ "6f7064c2d342": {
+  "src": "it",
+  "text": "rho NET-WWOX meno rho NET-EXT"
+ },
  "6fabb5546b60": {
   "src": "en",
   "text": "BTK is barely detected in the WWOX-deficient organoid and is not in the human progenitor table (a table-membership fact, not a measured zero), NPY is near zero where it was measured, both edges come from other cell types, and the compound has documented actions on unrelated proteins. A proposal can be unreadable where it was generated."
@@ -1062,10 +1086,6 @@
  "7aa113b5a1cd": {
   "src": "en",
   "text": "That a lower affinity number means a weaker compound: for irreversible inactivators the number does not measure it."
- },
- "7ad35f135a41": {
-  "src": "it",
-  "text": "; 95° percentile della distribuzione nulla appaiata, circa 0,39 (estrazione del produttore)"
  },
  "7c63d75ce699": {
   "src": "it",
@@ -1447,6 +1467,10 @@
   "src": "en",
   "text": "Per-animal parvalbumin cell counts by immunostaining in neuron-targeted Wwox deletion against Cre-only controls, at least 3 animals per arm (reopening condition (c) of NP3A1), read together with a maturation and identity marker panel in the same animals, and, where the data holders allow, intrinsic-property and inhibitory-input recordings from labelled parvalbumin cells and a circuit-level read. Alternatives that also reopen it: a deposited library or animal index for GSE158684, or an independent neuron-targeted deletion dataset with at least 3 animals per arm and a parvalbumin-enriched capture. The result is read as six separate rows (number, identity and maturation, marker expression, intrinsic properties, synaptic input, circuit function); a change in one is not carried to another. In every animal used (P14 to P17, matching the phenotype window), on the same sections: a parvalbumin marker, the Rosa26 tdTomato reporter and a Wwox read-out, reporting per animal the fraction of parvalbumin cells reporter-positive, the fraction Wwox-negative and their concordance, beside cell number, identity and marker expression; transcript, protein, activity, cell number and circuit function stay separate results. [SCI42] Order of the inhibitory minimum experiment: M03 (re-record sIPSC with glutamate block, fixed threshold, per-animal summary), then M01 (E_GABA by gramicidin perforated patch, knockout, heterozygote and wild-type littermates), then M02 (age series with a survivor-selection control); M05 and M06 if M03 confirms the amplitude loss."
  },
+ "a279c69ad340": {
+  "src": "it",
+  "text": "rho SIG"
+ },
  "a396eedef330": {
   "src": "en",
   "text": "For the four needs on which the catalogue returns nothing at all, what would have to exist before any compound question could be asked?"
@@ -1635,6 +1659,10 @@
   "src": "it",
   "text": "una misura di risposta del composto in un sistema neurale umano privo di WWOX, con replica; potenza dal dato ChEMBL di attività; fase II delle firme; un modulo più grande e replicato"
  },
+ "b6492a90982b": {
+  "src": "it",
+  "text": "intervallo di confidenza al 90% di SIG, estremo inferiore"
+ },
  "b719c7c10191": {
   "src": "en",
   "text": "A verified AMPA/kainate block that abolishes the bursts at less total charge removed than the NMDA-receptor antagonist needs would put AMPA receptors first in the next question."
@@ -1662,6 +1690,10 @@
  "bb296bd12eb2": {
   "src": "it",
   "text": "Cellule neurali selvatiche, non cellule prive di WWOX; livello del trascritto, non dell'attività."
+ },
+ "bb8d21a85cc6": {
+  "src": "it",
+  "text": "rete con segno costruita solo da risorse esterne (propagazione, nessun dato WWOX dentro)"
  },
  "bbd6d2457960": {
   "src": "en",
@@ -1811,17 +1843,9 @@
   "src": "en",
   "text": "Carried in from another condition by a stated mechanistic analogy (a hormone-uptake defect with myelin and interneuron rescue) and reached through the compound-to-WWOX path (IT21 P3b, proposal G03, partial-benefit path; a related receptor arm, G10, was left inconclusive)."
  },
- "cc0a7dd62915": {
-  "src": "it",
-  "text": "; p esatto a una coda"
- },
  "cc805c25b5f7": {
   "src": "en",
   "text": "Two sponsor-authored clinical papers read at partial full text; the only potency is one patent calcium-flux IC50 (8.3 nM) on NR1/NR2B cells without Mg2+, with no stated Zn2+ chelator or pH."
- },
- "ccdfb67baae8": {
-  "src": "it",
-  "text": "; intervallo di confidenza al 90% di SIG, estremo inferiore"
  },
  "cd2f4c459d6b": {
   "src": "en",
@@ -1995,6 +2019,10 @@
   "src": "en",
   "text": "A burst effect at a smaller removed fraction than the control needs would make a GluN2B-directed comparison the better question."
  },
+ "df5b96bc55b9": {
+  "src": "it",
+  "text": "rho NET-EXT"
+ },
  "e0839859cc57": {
   "src": "en",
   "text": "The fall may come from effects on synaptic currents and excitability rather than from coupling. No datum in the sources read supports the gap-junction half. Exploratory."
@@ -2114,10 +2142,6 @@
  "e9d2ada2a64c": {
   "src": "en",
   "text": "Carded chain: Dichloroacetate (see its card) and inhibition of the pyruvate dehydrogenase kinases on the pyruvate axis."
- },
- "ea55b666039e": {
-  "src": "it",
-  "text": "; intervallo di confidenza al 90% di SIG, estremo superiore"
  },
  "eaaec5adb8f1": {
   "src": "en",

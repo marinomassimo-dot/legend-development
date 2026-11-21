@@ -929,7 +929,7 @@ UI_IT = {
     "wo_h": "Piano di verifiche per bisogno",
     "wo_note": "Un elenco per bisogno, nell'ordine del registro dei bisogni: non è una sequenza di lavoro, non è una graduatoria di bisogni né di trattamenti e non ha punteggio. Per ogni bisogno: il motivo del prossimo studio (verificare un'ipotesi, chiarire una controevidenza o risolvere una premessa, coerente con le posizioni F, C, P del bisogno), una riga in italiano, la domanda, i dati che potrebbero risolverla, che cosa cambierebbe e la fattibilità realmente nota («non nota» quando non lo è).",
     "wo_update": "Aggiornamento della ricerca", "wo_catalogue": "Catalogo costruito il", "wo_dates_note": "due date diverse: la prima è l'ultimo aggiornamento di questo ordine di lavoro, la seconda la costruzione del catalogo dei composti",
-    "wo_kind": "Motivo del prossimo studio", "wo_kind_v": "verificare un'ipotesi", "wo_kind_c": "chiarire una controevidenza", "wo_kind_p": "risolvere una premessa", "sec_funnel": "Imbuto dal catalogo ai valutati: che cosa è contato, in quale unità", "sec_access": "Distribuzione per categoria di accesso", "sec_filters": "Filtri per la matrice completa", "sec_filters_note": "sezioni seguenti", "sec_needs": "Bisogni: direzione, Track, obiettivo, prove, livelli, lacune", "sec_matrix": "Matrice: interventi e famiglie di composti x bisogni", "sec_prio": "Disposizioni: una per coppia, con motivi per criterio", "sec_leads": "Piste derivate dal catalogo e loro disposizioni", "sec_limits": "Limiti dichiarati", "sec_tech": "Versioni, fonti, impronte digitali e rigenerazione", "sec_footer": "Fonti e licenze", "dc_sum": "Casi approfonditi a confronto", "dc_sum_short": "Casi approfonditi", "dc_n_note": "casi approfonditi sono consultabili nell'edizione completa locale; questa edizione non riporta i nomi dei composti.", "dc_intro": "Ogni caso risponde alle stesse domande. Il livello dice che tipo di sostegno esiste, non quanto il composto sia promettente: nessun livello è un punteggio di efficacia e la copertura di un percorso descrive collegamenti, non una quota di malattia trattata. Una misura funzionale può essere non specifica (per esempio ridurre le crisi anche nel tipo selvatico). Sconosciuto non significa negativo.", "dc_note_short": "In questa edizione i casi riportano la classe di composti e non i singoli nomi. Il precedente esterno e le misure farmacologiche (valori e testi derivati da ChEMBL, CC BY-SA 3.0, e da lavori di terzi) restano nell'edizione completa locale: nessun valore di potenza è riportato qui.", "dc_h_q": "Domanda biologica e livello", "dc_h_cls": "Classe di composti e azione", "dc_h_cmp": "Composto e azione", "dc_h_ev": "Evidenza WWOX", "dc_h_pharm": "Misura farmacologica e suoi limiti", "dc_limits": "Limiti:", "pl_sum": "Matching v3: composto, azione, contesto e beneficio — pilota", "pl_intro": "Interpretazioni delle schede esistenti. Priorità di ricerca e requisiti di sviluppo restano separati. Sconosciuto non significa negativo; un risultato di classe non è una prova sulla singola molecola. Nessun punteggio di efficacia.", "pl_h_ctx": "Contesto e beneficio", "pl_h_next": "Prossima ricerca", "pl_h_req": "Requisiti per lo sviluppo", "pl_benefit": "Beneficio ipotizzato:", "pl_why": "Perché è emerso", "pl_support": "Evidenza a sostegno", "pl_refute": "Che cosa potrebbe confutarlo", "pl_sources": "Fonti e logica", "pl_despite": "Perché merita ricerca nonostante i requisiti irrisolti:", "pl_none": "nessun risultato WWOX attribuito a questa molecola", "wo_q": "Domanda", "wo_data": "Dati che potrebbero risolverla", "wo_change": "Che cosa cambierebbe", "wo_feas": "Fattibilità (solo ciò che è noto)",
+    "wo_kind": "Motivo del prossimo studio", "wo_kind_v": "verificare un'ipotesi", "wo_kind_c": "chiarire una controevidenza", "wo_kind_p": "risolvere una premessa", "sec_funnel": "Imbuto dal catalogo ai valutati: che cosa è contato, in quale unità", "sec_access": "Distribuzione per categoria di accesso", "sec_filters": "Filtri per la matrice completa", "sec_filters_note": "sezioni seguenti", "sec_needs": "Bisogni: direzione, Track, obiettivo, prove, livelli, lacune", "sec_matrix": "Matrice: interventi e famiglie di composti x bisogni", "sec_prio": "Disposizioni: una per coppia, con motivi per criterio", "sec_leads": "Piste derivate dal catalogo e loro disposizioni", "sec_limits": "Limiti dichiarati", "sec_tech": "Versioni, fonti, impronte digitali e rigenerazione", "sec_footer": "Fonti e licenze", "dc_sum": "Casi approfonditi a confronto", "dc_sum_short": "Casi approfonditi", "dc_n_note": "casi approfonditi sono consultabili nell'edizione completa locale; questa edizione non riporta i nomi dei composti.", "dc_intro": "Ogni caso risponde alle stesse domande. Il livello dice che tipo di sostegno esiste, non quanto il composto sia promettente: nessun livello è un punteggio di efficacia e la copertura di un percorso descrive collegamenti, non una quota di malattia trattata. Una misura funzionale può essere non specifica (per esempio ridurre le crisi anche nel tipo selvatico). Sconosciuto non significa negativo.", "dc_note_short": "In questa edizione i casi riportano la classe di composti e non i singoli nomi. Il precedente esterno e le misure farmacologiche (valori e testi derivati da ChEMBL, CC BY-SA 3.0, e da lavori di terzi) restano nell'edizione completa locale: nessun valore di potenza è riportato qui.", "dc_h_q": "Domanda biologica e livello", "dc_h_cls": "Classe di composti e azione", "dc_h_cmp": "Composto e azione", "dc_h_ev": "Evidenza WWOX", "dc_h_pharm": "Misura farmacologica e suoi limiti", "dc_limits": "Limiti:", "pl_sum": "Matching v3: composto, azione, contesto e beneficio — pilota", "pl_working_note": "Nota di lavoro, solo in italiano: i campi dei sette casi pilota non vengono tradotti e restano nella lingua in cui sono stati scritti.", "pl_intro": "Interpretazioni delle schede esistenti. Priorità di ricerca e requisiti di sviluppo restano separati. Sconosciuto non significa negativo; un risultato di classe non è una prova sulla singola molecola. Nessun punteggio di efficacia.", "pl_h_ctx": "Contesto e beneficio", "pl_h_next": "Prossima ricerca", "pl_h_req": "Requisiti per lo sviluppo", "pl_benefit": "Beneficio ipotizzato:", "pl_why": "Perché è emerso", "pl_support": "Evidenza a sostegno", "pl_refute": "Che cosa potrebbe confutarlo", "pl_sources": "Fonti e logica", "pl_despite": "Perché merita ricerca nonostante i requisiti irrisolti:", "pl_none": "nessun risultato WWOX attribuito a questa molecola", "wo_q": "Domanda", "wo_data": "Dati che potrebbero risolverla", "wo_change": "Che cosa cambierebbe", "wo_feas": "Fattibilità (solo ciò che è noto)",
     "wo_date": "Data", "wo_upd": "Aggiornato da", "wo_cards": "Schede coinvolte", "wo_pos": "Posizioni del bisogno", "wo_no_pos": "nessuna scheda collegata",
     "ws_prevented_early_window": "prevenzione (finestra precoce)", "ws_recovered_post_onset_model": "recupero dopo l'esordio (solo in un modello)",
     "ws_symptom_suppression_reversible": "soppressione sintomatica reversibile", "ws_unmeasured": "non misurato",
@@ -3032,7 +3032,7 @@ details{margin-top:6px}summary{cursor:pointer;color:var(--acc)}.crit{display:gri
 .cnt{font-weight:600}
 .langsel{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;align-items:center}.langsel a{display:inline-block;min-width:44px;min-height:44px;line-height:44px;text-align:center;border:1px solid var(--line);border-radius:8px;padding:0 10px;text-decoration:none;font-weight:600;background:var(--card);color:var(--fg)}
 .langsel a[aria-current=true]{background:var(--accbg);border-color:var(--acc);color:var(--fg)}.langsel .lbl{font-size:.8rem;color:var(--mut)}
-.orig::after{content:" EN";font-size:.68em;border:1px solid var(--line);border-radius:3px;padding:0 3px;margin-left:3px;color:var(--mut);font-weight:600}.langnote{margin:6px auto;max-width:1100px;padding:0 14px}
+.orig::after{content:" EN";font-size:.68em;border:1px solid var(--line);border-radius:3px;padding:0 3px;margin-left:3px;color:var(--mut);font-weight:600}.orig[lang="it"]::after{content:" IT"}.langnote{margin:6px auto;max-width:1100px;padding:0 14px}
 @media (max-width:560px){body{font-size:14px}section{padding:10px 10px;margin:14px 0}#filters{position:static}.tbl{font-size:.82rem}}
 """
 
@@ -3505,7 +3505,7 @@ def render_work_order(P: dict) -> str:
         items.append(
             f'<article class="wo-item" id="wo-{E(e["need"])}" data-need="{E(e["need"])}" data-kind="{E(e["kind"])}"><h4>{E(NEED_IT.get(e["need"], n["short"]))} <span class="mut">{E(e["need"])}</span></h4>'
             f'<div class="wo-meta"><span class="chip wo-k wo-k-{kcls[e["kind"]]}" title="{E(U["wo_kind"])}">{E(U["wo_kind"])}: <b>{E(U[KIND_KEY[e["kind"]]])}</b></span> <span class="mini mut">{E(U["wo_pos"])}:</span> {pos}</div>'
-            f'<p class="wo-sum"><b>{E(U["wo_brief"])}.</b> {E(e["summary_it"])}</p><p class="wo-q"><b>{E(U["wo_q"])}.</b> {E(e["question"])}</p>{fig}{win}'
+            f'<p class="wo-sum"><b>{E(U["wo_brief"])}.</b> {lxi(e["summary_it"])}</p><p class="wo-q"><b>{E(U["wo_q"])}.</b> {E(e["question"])}</p>{fig}{win}'
             f'<details class="inl"><summary>{E(U["wo_more"])}</summary><dl class="wo-dl"><dt>{E(U["wo_data"])}</dt><dd>{E(e["data"])}</dd><dt>{E(U["wo_change"])}</dt><dd>{E(e["would_change"])}</dd>'
             f'<dt>{E(U["wo_feas"])}</dt><dd class="wo-feas"><b>{lxi(e["feasibility_it"])}</b><br>{E(e["feasibility"])}</dd><dt>{E(U["wo_date"])}</dt><dd>{E(e["date"])}</dd>{upd}<dt>{E(U["wo_cards"])}</dt><dd>{cards}</dd></dl>'
             f'<p class="mini mut">{E(U["wo_text_en"])}</p></details></article>')
@@ -3623,9 +3623,9 @@ def render_predictive(P: dict) -> str:
     pr, cx = cur["predictive"], cur["contexts"]
     vrows = []
     for vi, v in enumerate(pr["verdicts"]):
-        nums = "; ".join(f'{E(n["id"])} <b data-k="pred.v{vi}.{ni}" data-v="{n["value"]}">{E(dec_it(n["value"], n["digits"]))}</b>' for ni, n in enumerate(v["numbers"]))
+        nums = "; ".join(f'{lxi(n["id"])} <b data-k="pred.v{vi}.{ni}" data-v="{n["value"]}">{E(dec_it(n["value"], n["digits"]))}</b>' for ni, n in enumerate(v["numbers"]))
         vrows.append(f'<tr data-verdict="{E(v["verdict"])}"><td data-label="{E(U["pred_c_cmp"])}">{lxi(v["comparison_it"])}</td><td data-label="{E(U["pred_c_verdict"])}"><span class="chip vd vd-{E(v["verdict"])}">{E(U["pred_v_" + v["verdict"]])}</span></td><td data-label="{E(U["pred_c_num"])}">{nums}</td><td class="mini" data-label="{E(U["pred_c_reopen"])}">{E(v["reopen_it"])}</td></tr>')
-    meths = "".join(f'<li><b>{E(m["id"])}</b> {E(m["it"])}</li>' for m in pr["methods"])
+    meths = "".join(f'<li><b>{E(m["id"])}</b> {lxi(m["it"])}</li>' for m in pr["methods"])
     uni = pr["universe"]
     uni_txt = (f'<b data-k="pred.universe" data-v="{uni["families"]}">{E(fmt_it(uni["families"]))}</b> ' + E(U["pred_universe_txt"].format(s=fmt_it(uni["signatures"]), p=fmt_it(uni["pilot_families"]), c=fmt_it(uni["catalogue_families"]))))
     thr = E(U["pred_threshold_txt"].format(t=dec_it(pr["threshold"], 2), n=uni["families"], m=dec_it(pr["minimum_detectable_effect"], 3)))
@@ -5345,21 +5345,22 @@ def render_matching_pilot(cases: list[dict]) -> str:
     for c in cases:
         ev = c["evidence_of_this_member"]
         direct = ", ".join(ev["assertion_ids"]) or U["pl_none"]
-        requirements = "".join(f'<li><b>{E(states[r["state"]])}</b>: {E(r["question"])} — {E(r["reason"])}</li>' for r in c["development_requirements"])
+        requirements = "".join(f'<li><b>{E(states[r["state"]])}</b>: {lxi(r["question"])} — {lxi(r["reason"])}</li>' for r in c["development_requirements"])
         sources = "; ".join(c["source_pointers"])
-        rows.append(f'<tr><th scope="row">{E(c["compound"])}<br><span class="mini">{E(c["action"])}</span></th>'
-                    f'<td>{E(c["context"])}<br><b>{E(U["pl_benefit"])}</b> {E(c["benefit_hypothesis"])}'
-                    f'<br><span class="mini">{E(direct)}. {E(c["evidence_limit"])}</span>'
-                    f'<dl class="mini pilot-why"><dt>{E(U["pl_why"])}</dt><dd>{E(c["generating_path"])}</dd>'
-                    f'<dt>{E(U["pl_support"])}</dt><dd>{E(c["supporting_evidence"])}</dd>'
-                    f'<dt>{E(U["pl_refute"])}</dt><dd>{E(c["refutation"])}</dd></dl>'
+        rows.append(f'<tr><th scope="row">{E(c["compound"])}<br><span class="mini">{lxi(c["action"])}</span></th>'
+                    f'<td>{lxi(c["context"])}<br><b>{E(U["pl_benefit"])}</b> {lxi(c["benefit_hypothesis"])}'
+                    f'<br><span class="mini">{E(direct)}. {lxi(c["evidence_limit"])}</span>'
+                    f'<dl class="mini pilot-why"><dt>{E(U["pl_why"])}</dt><dd>{lxi(c["generating_path"])}</dd>'
+                    f'<dt>{E(U["pl_support"])}</dt><dd>{lxi(c["supporting_evidence"])}</dd>'
+                    f'<dt>{E(U["pl_refute"])}</dt><dd>{lxi(c["refutation"])}</dd></dl>'
                     f'<details><summary>{E(U["pl_sources"])}</summary><p class="mini">{E(sources)}</p>'
                     f'<p class="mini">{E(", ".join(c["discovery_logic"]))}</p></details></td>'
-                    f'<td>{E(c["research_priority"])}<br>{E(c["research_question"])}</td>'
-                    f'<td>{E(c["development_scope"])}<ul class="mini">{requirements}</ul>'
-                    f'<p class="mini"><b>{E(U["pl_despite"])}</b> {E(c["research_despite_requirements"])}</p></td></tr>')
+                    f'<td>{lxi(c["research_priority"])}<br>{lxi(c["research_question"])}</td>'
+                    f'<td>{lxi(c["development_scope"])}<ul class="mini">{requirements}</ul>'
+                    f'<p class="mini"><b>{E(U["pl_despite"])}</b> {lxi(c["research_despite_requirements"])}</p></td></tr>')
     return ('<details class="inl" id="matching-v3"><summary>' + E(U["pl_sum"]) + '</summary>'
             '<p class="mini">' + E(U["pl_intro"]) + '</p>'
+            + ('' if CUR["lang"] == "it" else '<p class="mini mut pilot-note">' + E(U["pl_working_note"]) + '</p>') +
             '<table class="tbl"><thead><tr><th>' + E(U["dc_h_cmp"]) + '</th><th>' + E(U["pl_h_ctx"]) + '</th>'
             '<th>' + E(U["pl_h_next"]) + '</th><th>' + E(U["pl_h_req"]) + '</th></tr></thead><tbody>' + "".join(rows) + '</tbody></table></details>')
 
@@ -5608,13 +5609,37 @@ def render_lang_nav(P: dict) -> str:
     return f'<nav class="langsel" aria-label="{E(UI_IT["lang_label"])}" title="{E(UI_IT["lang_switch_title"])}"><span class="lbl">{E(UI_IT["lang_label"])}</span>{links}</nav><script>{script}</script>'
 
 
+def lxt(text) -> str:
+    """Plain-text analogue of lxi() for strings that a script prints (the embedded data object): the translation looked up by hash, else the Italian original unchanged. Registers the passage
+    in the inventory like lxi()."""
+    text = str(text)
+    if CUR["collect"] is not None:
+        CUR["collect"][text_hash(text)] = {"text": text, "src": "it"}
+    lang = CUR["lang"]
+    if lang == "it":
+        return text
+    tr = TRANS.get(lang, {}).get("content", {})
+    return tr.get(text_hash(text)) or tr.get(text_hash(source_identity(text))) or text
+
+
+IT_DATA_FIELDS = ("summary_it", "feasibility_it")   # Italian-authored work-order fields that curated.js prints as they are: ADV-129 (a plain E() or a script bypasses the content catalogue)
+
+
+def localise_it_fields(obj):
+    if isinstance(obj, dict):
+        return {k: (lxt(v) if k in IT_DATA_FIELDS and isinstance(v, str) else localise_it_fields(v)) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [localise_it_fields(x) for x in obj]
+    return obj
+
+
 def render(P: dict, dr: Path = DEFAULT_DR) -> str:
     st = render_static(P)
     P = dict(P, ui=ui_payload())
     if P["source"] == "shareable":
         _allow = load_allowlist(dr)
         P["ui"] = _map_strings(P["ui"], lambda x: scrub_file_tokens(x, _allow))
-    data = json.dumps(P, ensure_ascii=False, sort_keys=True, separators=(",", ":")).replace("</", "<\\/").replace("<!--", "<\\!--")
+    data = json.dumps(P if CUR["lang"] == "it" else localise_it_fields(P), ensure_ascii=False, sort_keys=True, separators=(",", ":")).replace("</", "<\\/").replace("<!--", "<\\!--")
     U = UI_IT
     page = TEMPLATE
     cur_html = fill_tokens(read_asset(dr, "curated.html"))
