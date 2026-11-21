@@ -1,0 +1,2 @@
+event_id	doi	evidence_depth	prior_receipt	validated_ok
+FTR-20261121-00008349-48	10.11588/heidok.00008349	partial_fulltext_read	null	yes (staged_receipt_check OK with --artifact-root /home/desktop/legend-development, 2026-11-21)

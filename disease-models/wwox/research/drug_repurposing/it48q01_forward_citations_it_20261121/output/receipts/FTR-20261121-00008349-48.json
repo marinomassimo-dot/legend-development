@@ -1,0 +1,52 @@
+{
+ "analysis_at": "2026-11-21T13:27:54Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-21T13:27:54Z",
+ "event_id": "FTR-20261121-00008349-48",
+ "evidence_basis": [
+  "Fucke 2008 thesis (Heidelberg, MPIMF; accepted 2007-10-17): read in full text from the repository PDF, converted with pdftotext -layout. Read: abstract; Methods 2.1.1 (slice preparation, patch-clamp setup, solutions, drugs) and 2.1.2 data analysis; Results 2.2.2 (Rin and cAR definitions, age table), 2.2.4 (all pharmacology: phenytoin, TTX, ZD7288, BaCl2, spermine) and the BaCl2 / HH-fit conductance section; Discussion 2.3.2 (KIR channels); Chapter 3 simulated-pharmacology paragraph; Introduction lines about Hwa and Avoli 1991. Not read: Introduction otherwise, Results 2.2.1 (morphology) and 2.2.3 (suprathreshold), Discussion 2.3.1 and later, Chapter 3 modelling methods, chapters 4 onward, figures as images (captions only; the Ba2+ numbers used are in the text).",
+  "The age label p14 is a group label; the spread of ages inside the group is not stated in the text read (full text searched for p13, p15, p16, p17 and 'days old' without a hit).",
+  "verbatim_locator | proposition: Ba2+ effect on input resistance at p14 and p28 (L2/3 pyramidal, rat, 50 uM BaCl2, bath) | Results 2.2.4, printed p. 52 | \"Rin increased for both ages: p14: from 161 ± 7 MΩ to 206 ± 10 MΩ (p < 0.001, n = 16(5)); p28: from 50 ± 4 MΩ to 93 ± 6 MΩ\"",
+  "verbatim_locator | proposition: Ba2+ concentration and route of application | Methods 2.1.1 Drugs, printed p. 28 | \"Inward rectifier potassium channels were suppressed with 50 μM BaCl2.\"",
+  "verbatim_locator | proposition: Species, age range of animals, slice type | Methods 2.1.1 Brain slice preparation, printed p. 24 | \"Parasagittal slices of the rat cortex were prepared from 8 to 45 days old (p8-p45) Wistar rats\"",
+  "verbatim_locator | proposition: Recording temperature | Methods 2.1.1 Patch-clamp setup, printed p. 25-26 | \"which was heated to 35°C by a flow heater\"",
+  "verbatim_locator | proposition: Internal solution | Methods 2.1.1 Solutions, printed p. 26 | \"The intracellular solution contained (in mM): 135 K-gluconate\"",
+  "verbatim_locator | proposition: Current-clamp configuration | Methods 2.1.1 Patch-clamp technique, printed p. 25 | \"All data presented in this thesis were measured using the CC mode.\"",
+  "verbatim_locator | proposition: Definition of Rin (slope of V-I at rest) | Results 2.2.2, printed p. 37 | \"We analyzed the cell’s input resistance Rin, which is the slope of the V-I relationship at resting membrane potential Vrest\"",
+  "verbatim_locator | proposition: Age groups and n | Results 2.2.2, printed p. 38 | \"we performed the experiments described above for rats at ages postnatal day 8 (p8) (n = 27(from 5 animals)), p14 (n = 57(16))\"",
+  "verbatim_locator | proposition: Pharmacology done at p14 and p28 | Results 2.2.4, printed p. 46 | \"Pharmacological experiments were performed at two postnatal ages, p14 and p28\"",
+  "verbatim_locator | proposition: Model-fit G_KIR and G_leak before/after Ba2+ at p14 (units as printed) | Results, section BaCl2 shows clear effect on KIR conductance, printed p. 64 | \"GKIR was reduced from 14 ± 1 μS to 1 ± 0 μS in p14 cells (p < 0.01, n = 16(5))\"",
+  "verbatim_locator | proposition: Model-fit G_leak before/after Ba2+ at p14 (units as printed) | same, printed p. 64 | \"Gleak was reduced from 8 ± 1 μS to 5 ± 0 μS in p14 cells (p < 0.05, n = 16(5))\"",
+  "verbatim_locator | proposition: Kir2 subunit statement (secondary, citing Pruess 2005 and Day 2005) | Discussion 2.3.2, printed p. 59 | \"with KIR2.3 showing the highest expression in L2/3 and L5 pyramidal cell somata and neuropil\"",
+  "verbatim_locator | proposition: Spermine control at p14 changed the Ba2+ effect on Rin | Results 2.2.4, printed p. 53 | \"application of BaCl2 did not lead to a significant increase in Rin\"",
+  "verbatim_locator | proposition: TTX did not change Rin at p14 (Ba2+ experiments were not in TTX) | Results 2.2.4, printed p. 47 | \"Rin decreased from 153 ± 10 MΩ to 147 ± 12 MΩ (p > 0.05, n = 7(3)) at p14\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/it48q01_forward_citations_it_20261121/output/RESULT.md",
+  "disease-models/wwox/research/drug_repurposing/it48q01_forward_citations_it_20261121/output/candidates.tsv",
+  "disease-models/wwox/research/drug_repurposing/it48q01_forward_citations_it_20261121/output/kir2_subunit_leads.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "4a8895d12848ad1f93ec7845c88367dbc51340c0111edfcfd233d13e29eabe38",
+ "source_kind": "fulltext_remote",
+ "source_locator": "http://archiv.ub.uni-heidelberg.de/volltextserver/8349/1/Dissertation_ThomasFucke.pdf fetched 2026-11-21 (heiDOK open-access PhD thesis, 140 pages; local copy files/fulltext/it48q01_fwd_it_20261121/Fucke2008_thesis_heiDOK8349.pdf, text layer Fucke2008_thesis.txt)",
+ "study_id": {
+  "doi": "10.11588/heidok.00008349"
+ },
+ "workflow": "IT48-Q01 juvenile half, forward-citation route (it48q01_forward_citations_it_20261121), producer on model sonnet, effort high. The thesis was reached as a work citing Hwa and Avoli 1991 in OpenAlex. Question-driven reading for a Ba2+ experiment in rat layer 2/3 pyramidal neurons at about P14. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
