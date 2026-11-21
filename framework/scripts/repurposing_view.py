@@ -929,7 +929,7 @@ UI_IT = {
     "wo_h": "Piano di verifiche per bisogno",
     "wo_note": "Un elenco per bisogno, nell'ordine del registro dei bisogni: non è una sequenza di lavoro, non è una graduatoria di bisogni né di trattamenti e non ha punteggio. Per ogni bisogno: il motivo del prossimo studio (verificare un'ipotesi, chiarire una controevidenza o risolvere una premessa, coerente con le posizioni F, C, P del bisogno), una riga in italiano, la domanda, i dati che potrebbero risolverla, che cosa cambierebbe e la fattibilità realmente nota («non nota» quando non lo è).",
     "wo_update": "Aggiornamento della ricerca", "wo_catalogue": "Catalogo costruito il", "wo_dates_note": "due date diverse: la prima è l'ultimo aggiornamento di questo ordine di lavoro, la seconda la costruzione del catalogo dei composti",
-    "wo_kind": "Motivo del prossimo studio", "wo_q": "Domanda", "wo_data": "Dati che potrebbero risolverla", "wo_change": "Che cosa cambierebbe", "wo_feas": "Fattibilità (solo ciò che è noto)",
+    "wo_kind": "Motivo del prossimo studio", "wo_kind_v": "verificare un'ipotesi", "wo_kind_c": "chiarire una controevidenza", "wo_kind_p": "risolvere una premessa", "wo_q": "Domanda", "wo_data": "Dati che potrebbero risolverla", "wo_change": "Che cosa cambierebbe", "wo_feas": "Fattibilità (solo ciò che è noto)",
     "wo_date": "Data", "wo_upd": "Aggiornato da", "wo_cards": "Schede coinvolte", "wo_pos": "Posizioni del bisogno", "wo_no_pos": "nessuna scheda collegata",
     "ws_prevented_early_window": "prevenzione (finestra precoce)", "ws_recovered_post_onset_model": "recupero dopo l'esordio (solo in un modello)",
     "ws_symptom_suppression_reversible": "soppressione sintomatica reversibile", "ws_unmeasured": "non misurato",
@@ -1382,6 +1382,9 @@ NODE_SCOPES = ("wwox", "wwox_other", "non_wwox", "computational", "proposed", "n
 CHAIN_STATES = ("astensione", "ipotesi", "non risolto")
 WO_KINDS = ["verificare un'ipotesi", "chiarire una controevidenza", "risolvere una premessa"]
 KIND_OF_FAMILY = {"F": WO_KINDS[0], "C": WO_KINDS[1], "P": WO_KINDS[2]}
+# The work-order `kind` is a data enum written in Italian (validated against WO_KINDS). It is never printed raw: each value has an interface string per page language
+# (UI_IT wo_kind_v/c/p; 2026-11-20: the raw value reached the English, French, Spanish and German pages in 28 places).
+KIND_KEY = {WO_KINDS[0]: "wo_kind_v", WO_KINDS[1]: "wo_kind_c", WO_KINDS[2]: "wo_kind_p"}
 WO_KEYS = {"need", "kind", "question", "data", "would_change", "feasibility", "date", "updated_by", "cards", "docs", "window_state", "summary_it", "feasibility_it", "figure"}
 FIG_KINDS = ("incidence", "values")
 FIG_KEYS = {"title", "kind", "unit", "caption", "source", "rows", "value_unit", "spread_label"}
@@ -3501,7 +3504,7 @@ def render_work_order(P: dict) -> str:
         fig = "".join(render_figure(f, re.sub(r"[^A-Za-z0-9]+", "-", e["need"]) + f"-{i + 1}") for i, f in enumerate(e.get("figure") or []))
         items.append(
             f'<article class="wo-item" id="wo-{E(e["need"])}" data-need="{E(e["need"])}" data-kind="{E(e["kind"])}"><h4>{E(NEED_IT.get(e["need"], n["short"]))} <span class="mut">{E(e["need"])}</span></h4>'
-            f'<div class="wo-meta"><span class="chip wo-k wo-k-{kcls[e["kind"]]}" title="{E(U["wo_kind"])}">{E(U["wo_kind"])}: <b>{E(e["kind"])}</b></span> <span class="mini mut">{E(U["wo_pos"])}:</span> {pos}</div>'
+            f'<div class="wo-meta"><span class="chip wo-k wo-k-{kcls[e["kind"]]}" title="{E(U["wo_kind"])}">{E(U["wo_kind"])}: <b>{E(U[KIND_KEY[e["kind"]]])}</b></span> <span class="mini mut">{E(U["wo_pos"])}:</span> {pos}</div>'
             f'<p class="wo-sum"><b>{E(U["wo_brief"])}.</b> {E(e["summary_it"])}</p><p class="wo-q"><b>{E(U["wo_q"])}.</b> {E(e["question"])}</p>{fig}{win}'
             f'<details class="inl"><summary>{E(U["wo_more"])}</summary><dl class="wo-dl"><dt>{E(U["wo_data"])}</dt><dd>{E(e["data"])}</dd><dt>{E(U["wo_change"])}</dt><dd>{E(e["would_change"])}</dd>'
             f'<dt>{E(U["wo_feas"])}</dt><dd class="wo-feas"><b>{lxi(e["feasibility_it"])}</b><br>{E(e["feasibility"])}</dd><dt>{E(U["wo_date"])}</dt><dd>{E(e["date"])}</dd>{upd}<dt>{E(U["wo_cards"])}</dt><dd>{cards}</dd></dl>'
@@ -3597,7 +3600,7 @@ def render_hypotheses(P: dict) -> str:
         prio = "".join(
             f'<div class="hyp-card"><b>{E(cm[c]["short"])}</b> <span class="mut">{E(c)}</span> ' + (" ".join(f'{pos_chip(x["group"])} <span class="mini mut">{E(U["hyp_prio_on"])} {E(NEED_IT.get(x["need"], x["need"]))}</span>' for x in h["positions"][c]) or f'<span class="mut">{E(U["cd_no_need"])}</span>') + "</div>"
             for c in h["cards"])
-        plan = "".join(f'<div class="mini"><b>{E(U["hyp_plan"])}:</b> <span class="chip wo-k">{E(w["kind"])}</span> <span class="mut">{E(NEED_IT.get(w["need"], w["need"]))}</span></div>' for w in h["work_order"]) or f'<div class="mini mut">{E(U["hyp_none_plan"])}</div>'
+        plan = "".join(f'<div class="mini"><b>{E(U["hyp_plan"])}:</b> <span class="chip wo-k">{E(U[KIND_KEY[w["kind"]]] if w["kind"] in KIND_KEY else w["kind"])}</span> <span class="mut">{E(NEED_IT.get(w["need"], w["need"]))}</span></div>' for w in h["work_order"]) or f'<div class="mini mut">{E(U["hyp_none_plan"])}</div>'
         reasons = "".join(f'<li>{E(U["hyp_r_" + r])}</li>' for r in h["model_reasons"])
         axis = f'<p class="mini"><span class="chip model-ok">{E(U["hyp_axis"])}</span> {E(U["hyp_axis_note"])}</p>' if h["model_axis"] else ""
         usable = f'<p class="mini">{E(U["hyp_usable"])}</p>' if h["model_usable"] else ""
@@ -5266,7 +5269,7 @@ def rk_item(R: dict, view: str, uid: str, full: bool) -> str:
             + (f'<dt>{E(U["rk_i_notes"])}</dt><dd>{E(" ".join(va["notes"]))}</dd>' if va.get("notes") else "")
             + oth
             + f'<dt>{E(U["rk_i_paths"])}</dt><dd>{E(paths)} <span class="mini mut">{E(U["rk_p_den"].format(n=len(u["pathways"]), m=R["meta"]["needs_total"]))}</span></dd>'
-            f'<dt>{E(U["rk_i_next"])}</dt><dd>{E(nx["question"])} <span class="mini mut">[{E(nx.get("kind") or "—")}]</span></dd>'
+            f'<dt>{E(U["rk_i_next"])}</dt><dd>{E(nx["question"])} <span class="mini mut">[{E(U[KIND_KEY[nx["kind"]]] if nx.get("kind") in KIND_KEY else (nx.get("kind") or "—"))}]</span></dd>'
             f'<dt>{E(U["rk_i_feas"])}</dt><dd>{E(nx.get("feasibility") or "—")}</dd>'
             f'<dt>{E(U["rk_i_rise"])}</dt><dd>{E(va["triggers"]["rise"])}' + (f' <span class="mini">{E(nx["would_change"])}</span>' if nx.get("would_change") else "") + '</dd>'
             f'<dt>{E(U["rk_i_fall"])}</dt><dd>{E(va["triggers"]["fall"])}</dd>'
