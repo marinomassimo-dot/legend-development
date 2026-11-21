@@ -1,0 +1,302 @@
+[
+ {
+  "n": 1,
+  "sec": "overview",
+  "hash": "3931e68d6c91",
+  "text": "4-phenylbutyrate class and bile-acid chemical chaperones"
+ },
+ {
+  "n": 2,
+  "sec": "overview",
+  "hash": "1d058584e1d4",
+  "text": "4-phenylbutyrate class and bile-acid chemical chaperones:"
+ },
+ {
+  "n": 3,
+  "sec": "overview",
+  "hash": "6f469c9e6753",
+  "text": "Where the Q230P protein is lost: never made, made and cleared, made and insoluble, made and epitope-invisible, or truncated."
+ },
+ {
+  "n": 4,
+  "sec": "overview",
+  "hash": "13e2f5065662",
+  "text": "Whether a missense or compound context with partial residual function would respond more, less or differently."
+ },
+ {
+  "n": 5,
+  "sec": "overview",
+  "hash": "4c3712efa60b",
+  "text": "HIF-1alpha and HIF-2alpha protein in any WWOX-deficient neural cell."
+ },
+ {
+  "n": 6,
+  "sec": "overview",
+  "hash": "31330089b4e3",
+  "text": "Whether any WWOX-deficient human neural system has raised eIF2 alpha phosphorylation or ATF4 protein, with or without a proteotoxic load."
+ },
+ {
+  "n": 7,
+  "sec": "overview",
+  "hash": "7053e6049516",
+  "text": "A bioenergetic flux measurement (oxygen consumption and extracellular acidification) in WWOX-deficient versus isogenic human neural or donor-derived cells;"
+ },
+ {
+  "n": 8,
+  "sec": "overview",
+  "hash": "a8cdffe04c05",
+  "text": "Bumetanide and the chloride gradient"
+ },
+ {
+  "n": 9,
+  "sec": "overview",
+  "hash": "7f0381043474",
+  "text": "Extracellular magnesium as the physiological voltage-dependent NMDAR gate"
+ },
+ {
+  "n": 10,
+  "sec": "overview",
+  "hash": "1959053c4500",
+  "text": "Glutamate-receptor node of the neuron-specific Wwox bursting phenotype"
+ },
+ {
+  "n": 11,
+  "sec": "overview",
+  "hash": "e3b28aead3ae",
+  "text": "Whether the ethosuximide late-phase effect in the null is mediated by T-type channels."
+ },
+ {
+  "n": 12,
+  "sec": "overview",
+  "hash": "0b93998e617a",
+  "text": "Bumetanide and the chloride gradient:"
+ },
+ {
+  "n": 13,
+  "sec": "overview",
+  "hash": "111b069299f5",
+  "text": "E_GABA, NKCC1 and KCC2 protein in any Wwox system; never measured."
+ },
+ {
+  "n": 14,
+  "sec": "overview",
+  "hash": "b01ddcc9981a",
+  "text": "definition of 'Yes' in the supplement"
+ },
+ {
+  "n": 15,
+  "sec": "overview",
+  "hash": "57bed26e9162",
+  "text": "Glial-reactivity modulators and the unresolved sign and order of gliosis in …"
+ },
+ {
+  "n": 16,
+  "sec": "overview",
+  "hash": "0a5666ca3f0a",
+  "text": "Pro-myelinating agents and the activity-dependent myelination sign problem"
+ },
+ {
+  "n": 17,
+  "sec": "overview",
+  "hash": "63b1bbbaa151",
+  "text": "Brain exposure of the compound class."
+ },
+ {
+  "n": 18,
+  "sec": "overview",
+  "hash": "9734501996ae",
+  "text": "How many WWOX-DEE children have received vigabatrin and how many of them had follow-up MRI (the denominator behind the two reported cases)."
+ },
+ {
+  "n": 19,
+  "sec": "overview",
+  "hash": "b009a6c10347",
+  "text": "Glial-reactivity modulators and the unresolved sign and order of gliosis in …:"
+ },
+ {
+  "n": 20,
+  "sec": "overview",
+  "hash": "920e7d9f43c3",
+  "text": "Glial density and area fraction measured over the days before and after the first recorded spike in the same Wwox-deficient animals, and any glial endpoint after any …"
+ },
+ {
+  "n": 21,
+  "sec": "overview",
+  "hash": "ea75f5a688ef",
+  "text": "Whether lithium does anything in a Wwox-deficient system that it does not do in a wild-type one (the one experiment that tested it answered no)."
+ },
+ {
+  "n": 22,
+  "sec": "overview",
+  "hash": "f9209902aeba",
+  "text": "direction of mTOR activity in a WWOX-deficient system"
+ },
+ {
+  "n": 23,
+  "sec": "ranking",
+  "hash": "2f1a0b1d0055",
+  "text": "Observed: bursts in 36 of 42 knockout slices vanish with the NMDAR antagonist (51 bursts, 5 slices, 3 animals; Breton 2021). Not observed: that the NMDAR current is raised."
+ },
+ {
+  "n": 24,
+  "sec": "ranking",
+  "hash": "82d80b1a24b4",
+  "text": "Cannot separate raised gain from permissive necessity; wild-type matched-trigger slices may lose bursts equally (then the block is generic)."
+ },
+ {
+  "n": 25,
+  "sec": "ranking",
+  "hash": "6c127cb7e87c",
+  "text": "Run as the last step in every slice (positive control and ceiling)."
+ },
+ {
+  "n": 26,
+  "sec": "ranking",
+  "hash": "9c153d4d92eb",
+  "text": "Which share of the slice NMDAR current is carried by GluN2B-containing receptors, and do bursts follow it?"
+ },
+ {
+  "n": 27,
+  "sec": "ranking",
+  "hash": "35e5cf9772ec",
+  "text": "GluN2B-selective negative allosteric modulators (a class acting at the receptor N-terminal domain): two research tools and one clinical-stage comparator"
+ },
+ {
+  "n": 28,
+  "sec": "ranking",
+  "hash": "22c67446bc2d",
+  "text": "Same slice preparation; the pharmacology behind the plan is withheld from this edition"
+ },
+ {
+  "n": 29,
+  "sec": "ranking",
+  "hash": "bcf4e6dc281e",
+  "text": "Bursts are d-APV-sensitive; NMDAR current not measured (so the GluN2B share f at this age is unknown)."
+ },
+ {
+  "n": 30,
+  "sec": "ranking",
+  "hash": "ec895f6aade0",
+  "text": "A steeper-than-linear burst fall is not a valid discriminator alone (burst generation is threshold-like)."
+ },
+ {
+  "n": 31,
+  "sec": "ranking",
+  "hash": "a18bbfdccd5f",
+  "text": "Measure f with a saturating GluN2B NAM; then titrate the NAM, an equal-current NMDAR antagonist and a low-trapping pore blocker, with a GluN2A NAM and two unrelated GluN2B NAMs as controls."
+ },
+ {
+  "n": 32,
+  "sec": "ranking",
+  "hash": "2cc35a93ce40",
+  "text": "Is subunit selectivity needed at all to reduce NMDAR-dependent bursting?"
+ },
+ {
+  "n": 33,
+  "sec": "ranking",
+  "hash": "6dfd52160765",
+  "text": "Recombinant receptors in cell lines and oocytes (details withheld from this edition)"
+ },
+ {
+  "n": 34,
+  "sec": "ranking",
+  "hash": "10669b93cd97",
+  "text": "No result of these compounds in a WWOX system; the class is carded as an NMDAR intervention class."
+ },
+ {
+  "n": 35,
+  "sec": "ranking",
+  "hash": "4fc2d793f7d7",
+  "text": "Subunit selectivity of this class is not resolved between documents."
+ },
+ {
+  "n": 36,
+  "sec": "ranking",
+  "hash": "0e44be018eaf",
+  "text": "Use as the subunit-indifferent comparator at matched fractional current."
+ },
+ {
+  "n": 37,
+  "sec": "ranking",
+  "hash": "7137f235bf47",
+  "text": "NMDAR co-agonist or positive-modulator direction, with a GluN2A-selective negative modulator as subunit-assignment control"
+ },
+ {
+  "n": 38,
+  "sec": "ranking",
+  "hash": "5cbc9ebc04b0",
+  "text": "None; excitatory-gain readings are one of several live rivals."
+ },
+ {
+  "n": 39,
+  "sec": "ranking",
+  "hash": "1741f471b431",
+  "text": "If bursts do not increase, permissive necessity is favoured over raised gain."
+ },
+ {
+  "n": 40,
+  "sec": "ranking",
+  "hash": "b4225fa6065e",
+  "text": "Apply a positive modulator to heterozygous and wild-type slices and score bursts."
+ },
+ {
+  "n": 41,
+  "sec": "ranking",
+  "hash": "5bce1aa06bae",
+  "text": "Human infants (case reports); no WWOX slice or mouse arm"
+ },
+ {
+  "n": 42,
+  "sec": "ranking",
+  "hash": "a4e121bfc5cd",
+  "text": "Case reports of WWOX-related epilepsy: 2 benefit, 3 null, 1 partial, 1 unresolved (queried, not read in full)."
+ },
+ {
+  "n": 43,
+  "sec": "ranking",
+  "hash": "ac1b5f7dfc78",
+  "text": "Cannot be read as a test of the phasic IPSC deficit."
+ },
+ {
+  "n": 44,
+  "sec": "ranking",
+  "hash": "6219bca8e7ac",
+  "text": "Tonic holding current and phasic IPSC charge in the same cells; a chronic mouse arm would be needed."
+ },
+ {
+  "n": 45,
+  "sec": "ranking",
+  "hash": "2c1676a02c93",
+  "text": "Does a positive modulator at the high-affinity GABA-A modulatory site compensate the lost fast GABA-A inhibition during exposure?"
+ },
+ {
+  "n": 46,
+  "sec": "ranking",
+  "hash": "b6cab15c9b15",
+  "text": "positive modulators of GABA-A receptors at the high-affinity modulatory site, with two further agents to attribute the subunit"
+ },
+ {
+  "n": 47,
+  "sec": "ranking",
+  "hash": "9976b3b6740f",
+  "text": "sIPSC amplitude 57.3 to 27.5 pA (about -52 percent; KCl internal solution, pooled events); heterozygote against wild type not reported."
+ },
+ {
+  "n": 48,
+  "sec": "ranking",
+  "hash": "e961610cf137",
+  "text": "Burst reduction equal in wild-type matched-trigger slices would show network state, not knockout specificity."
+ },
+ {
+  "n": 49,
+  "sec": "ranking",
+  "hash": "b40ad32cf7e1",
+  "text": "Same-cell triad (with miniature IPSCs in TTX), then graded potentiator with measured IPSC charge."
+ },
+ {
+  "n": 50,
+  "sec": "ranking",
+  "hash": "29cbb3573621",
+  "text": "Is the inhibitory loss release- or clearance-limited rather than receptor-limited?"
+ }
+]
