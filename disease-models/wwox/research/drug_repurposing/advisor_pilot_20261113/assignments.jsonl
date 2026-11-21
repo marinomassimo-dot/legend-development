@@ -367,3 +367,5 @@
 {"evidence": "SendMessage receipt msg_id 544cdf30-930f-44de-ac98-16e6632f43e7 to SCI - CURRENT b3e65c69", "id": "ADV-146", "state": "SENT", "to": ["SCI - CURRENT b3e65c69"], "utc": "2026-11-21T15:18:30Z"}
 {"assessment": "HOST", "id": "ADV-147", "key": "wwox-expression-by-lineage-in-human-fetal-cortex-atlases-inhibitory-lineage", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-21T15:27:41Z"}
 {"evidence": "SendMessage receipt msg_id ceeb9361-0180-4f69-b25b-4afd8cbd26bd to SCI - CURRENT b3e65c69", "id": "ADV-147", "state": "SENT", "to": ["SCI - CURRENT b3e65c69"], "utc": "2026-11-21T15:27:52Z"}
+{"assessment": "HOST", "id": "ADV-148", "key": "pup-brief-remaining-science-owned-gaps-and-numeric-tokens", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-21T15:30:15Z"}
+{"evidence": "SendMessage receipt msg_id f222dd17-d5c9-4c21-9d10-e2c375fd57b7 to SCI - CURRENT b3e65c69", "id": "ADV-148", "state": "SENT", "to": ["SCI - CURRENT b3e65c69"], "utc": "2026-11-21T15:33:12Z"}
