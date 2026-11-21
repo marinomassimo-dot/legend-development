@@ -758,6 +758,15 @@
      "accepted_at": "2026-11-21T17:40:45Z",
      "evidence": "dated addendum and a second sidecar (sha256 cbf6469c, adds genotype_effect_flat_sensitivity 0.15/0.25/0.50/0.10); the frozen sidecar c6962ff3 byte-identical; ledger notes cell updated; ledger violations unchanged at 84",
      "updated_at": "2026-11-21T17:41:21Z"
+    },
+    {
+     "step": "Amend the README row on shareable suites: add test_repurposing_view_i18n.py and the package rebuild step",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message of 2026-11-21 after IT's i18n fix, asking the README line to name the i18n suite and the package rebuild",
+     "accepted_at": "2026-11-21T18:29:42Z",
+     "evidence": "framework/scripts/README.md row amended: It21P7 added to the shareable suites, the i18n suite named, package rebuild and package --check, translation of an edited English passage; test_documented_commands, reader journey OK; package --check prints 'package is current'",
+     "updated_at": "2026-11-21T18:31:46Z"
     }
    ]
   }
@@ -1341,6 +1350,13 @@
    "at": "2026-11-21T17:40:45Z",
    "source": "SCI window X message of 2026-11-21 on the sidecar bins, after the freeze",
    "step_sha256": "af5338d00735",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T18:29:42Z",
+   "source": "ADV message of 2026-11-21 after IT's i18n fix, asking the README line to name the i18n suite and the package rebuild",
+   "step_sha256": "fbb1f6492476",
    "reopened_block": false,
    "authorised_by": null
   }
