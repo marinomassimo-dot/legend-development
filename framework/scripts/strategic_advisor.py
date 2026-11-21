@@ -1552,6 +1552,25 @@ def evaluation_clock(campaign: Path, state: dict[str, Any]) -> tuple[dt.datetime
     return end, "legacy completion (start unavailable)"
 
 
+def waiting_work(campaign: Path, now: dt.datetime | None = None) -> dict[str, Any]:
+    """2026-11-21 (ADV): read-only facts for the tick, no verdict and no rule. `minutes_since_host_edit` is the age of the newest of the host's last DREAM line (assignments.jsonl) and the newest `updated_utc`
+    of a portfolio row; `waiting_without_resume` lists the rows whose status is waiting and whose resume_when is empty or the bare word `event`, i.e. waits that name nothing to wait for."""
+    now = now or _now()
+    stamps: list[tuple[dt.datetime, str]] = []
+    try:
+        stamps += [(t, "DREAM") for e in _events(campaign) if e.get("state") == "DREAM" for t in [_stamp(e.get("utc"))] if t]
+    except (OSError, ValueError):
+        pass
+    rows, _errors = portfolio_rows()
+    stamps += [(t, "portfolio edit " + r["id"]) for r in rows for t in [_stamp(r.get("updated_utc"))] if t]
+    bare = [r["id"] for r in rows if r.get("status", "").lower() == "waiting" and r.get("resume_when", "").strip().strip("`").lower() in ("", "event")]
+    last, kind = max(stamps) if stamps else (None, "")
+    minutes = None if last is None else max(0, int((now - last).total_seconds() // 60))
+    line = ("waiting_work: " + ("no DREAM or portfolio edit on record" if minutes is None else f"{minutes} min since the last {kind} ({_utc(last)})")
+            + "; waiting rows with no stated resume_when (empty or bare 'event'): " + (", ".join(bare) or "none"))
+    return {"minutes_since_host_edit": minutes, "last_host_edit": {"utc": _utc(last) if last else None, "kind": kind}, "waiting_without_resume": bare, "line": line}
+
+
 def tick(campaign: Path) -> dict[str, Any]:
     """The hourly check: mostly mechanical, no model. Verdicts: NONE (nothing new: reuse the previous assessment), EVALUATE (one strategic evaluation is due), and the reasons it is not
     (RUNNING, DISABLED, EXPIRED, BUDGET, DEFERRED). A stalled mandate is reported, not restarted: recovery stays with the mandate watch."""
@@ -1695,6 +1714,7 @@ def tick(campaign: Path) -> dict[str, Any]:
             "recall": recall,
             "reference": {k: ref[k] for k in ("ref", "sha", "state", "note", "fetch", "fetch_age_min", "local_main", "checkout")},
             "evaluation_clock": {"utc": _utc(last_eval) if last_eval else None, "source": clock_source},
+            "waiting_work": waiting_work(campaign, now),
             "hours_since_last_evaluation": None if hours is None else round(hours, 1)}
 
 

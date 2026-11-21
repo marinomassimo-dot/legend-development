@@ -782,6 +782,52 @@ class DirectionBeforeStatus(Base):
         self.assertEqual(sa._attempts(self.campaign), [])
 
 
+class WaitingWork(Base):
+    """2026-11-21 (ADV): the tick states, read-only, how long ago the host last edited the portfolio or recorded a DREAM, and which waiting rows name nothing to wait for."""
+    NOW = dt.datetime(2026, 11, 21, 13, 0, tzinfo=dt.timezone.utc)
+
+    def rows(self, *specs):
+        return [{"id": i, "status": st, "resume_when": rw, "updated_utc": up} for i, st, rw, up in specs]
+
+    def test_bare_or_empty_resume_when_of_a_waiting_row_is_listed_and_nothing_else(self) -> None:
+        self.campaign.mkdir()
+        rows = self.rows(("RP-015", "waiting", "", "2026-11-17T13:28:30Z"), ("RP-017", "waiting", "event", "2026-11-15T07:29:20Z"),
+                         ("RP-018", "waiting", "An eIF2-alpha datum", "2026-11-20T14:53:20Z"), ("RP-040", "ready", "", "2026-11-21T12:10:00Z"),
+                         ("RP-041", "waiting", "after:2026-12-01T00:00:00Z", "2026-11-21T11:00:00Z"))
+        with patch.object(sa, "portfolio_rows", return_value=(rows, [])):
+            out = sa.waiting_work(self.campaign, self.NOW)
+        self.assertEqual(out["waiting_without_resume"], ["RP-015", "RP-017"])
+        self.assertEqual(out["minutes_since_host_edit"], 50)                         # newest row edit 12:10Z, now 13:00Z
+        self.assertTrue(out["line"].startswith("waiting_work: 50 min since the last portfolio edit RP-040"))
+        self.assertIn("RP-015, RP-017", out["line"])
+
+    def test_a_later_dream_line_is_the_last_host_edit_and_no_record_is_stated_not_guessed(self) -> None:
+        self.campaign.mkdir()
+        rows = self.rows(("RP-017", "waiting", "event", "2026-11-21T12:10:00Z"))
+        (self.campaign / "assignments.jsonl").write_text(json.dumps({"state": "DREAM", "ids": ["ADV-1"], "utc": "2026-11-21T12:40:00Z"}) + "\n"
+                                                        + json.dumps({"state": "DRAFTED", "id": "ADV-2", "utc": "2026-11-21T12:55:00Z"}) + "\n", encoding="utf-8")
+        with patch.object(sa, "portfolio_rows", return_value=(rows, [])):
+            out = sa.waiting_work(self.campaign, self.NOW)
+        self.assertEqual((out["minutes_since_host_edit"], out["last_host_edit"]["kind"]), (20, "DREAM"))          # a DRAFTED line is not a DREAM
+        with patch.object(sa, "portfolio_rows", return_value=([], [])):
+            empty = sa.waiting_work(self.tmp / "no_campaign", self.NOW)
+        self.assertIsNone(empty["minutes_since_host_edit"])
+        self.assertEqual(empty["waiting_without_resume"], [])
+        self.assertIn("no DREAM or portfolio edit on record", empty["line"])
+
+    def test_the_tick_carries_the_field_and_its_verdict_does_not_depend_on_it(self) -> None:
+        repo = _repo_with_records(self.tmp, {"ORCH-CLOSED": "COMPLETE"})
+        with patch.object(sa, "ROOT", repo), patch.object(sa, "STATE_DIR", self.tmp / "state"), patch.object(sa, "_sessions", return_value={}), \
+                patch.dict(os.environ, {"LEGEND_ADVISOR_NOW": "2026-11-21T13:00:00Z"}):
+            self.campaign.mkdir()
+            plain = sa.tick(self.campaign)
+            self.assertIn("waiting_work", plain)
+            with patch.object(sa, "waiting_work", return_value={"line": "x"}):
+                other = sa.tick(self.campaign)
+        self.assertEqual({"minutes_since_host_edit", "last_host_edit", "waiting_without_resume", "line"}, set(plain["waiting_work"]))
+        self.assertEqual(plain["verdict"], other["verdict"])
+
+
 class HostDecisions(Base):
     """Exercise the real host path, not model obedience or scientific judgment."""
 
