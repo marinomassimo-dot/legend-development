@@ -1,0 +1,36 @@
+# Pre-registration, ADV-136: lowest per-animal WWOX fraction of wild type in a surviving gene-addition mouse (Obeid 2026, supplement Figure S5) (SCI window V, 2026-11-21; hypothesis level; no dose, no recommendation for or against any use of any agent in any person; reference genotype class only; not medical advice)
+
+Committed before the blind transcription and before any region verdict or table was written. The order of exposure is disclosed first because it limits what "pre-registered" means here.
+
+## 0. Order of exposure (disclosure)
+1. Assignment `assignments/ADV-136.md` and the checkpoint V addendum read (sha256 of the addendum checked: `fe405feef9729f8d1fe98056c750fa326ae048a26896fd7b07d0316c8ec45868`). ADV fixed the discriminating observation in the assignment, before any measurement: see section 3, rules R1 and R2.
+2. Source checked: `files/fulltext/PMID42422765_Obeid2026_assets/mmc1.pdf` in the root `files/` tree, sha256 `dd4919a80af937037309eddd2939db4f11af230e00849bf4b362832bcb5572e9` (matches the assignment). Page 7 is Figure S5.
+3. Doing step 1 of the assignment ("read the legend and the page text; list per panel what is quantified"), I rendered page 7 and extracted the embedded blot images. **That is when I first saw the printed numbers.** Two structural facts came out of that check, before this file:
+   * The quantification in panels A to G and J is **printed numbers under each blot lane** (WWOX intensity relative to wild type, HSP90 loading control above), inside raster images, with no text layer; only panel K is a bar chart (the text layer of the page holds none of the numbers). There is no per-animal bar geometry to measure for A to G.
+   * **The lanes marked "Dead" carry a blot and a printed value in each of panels A to D.** ADV's reading ("non-survivors have no blot") is not what the figure shows, and the main text says the opposite too: "mice from either treatment group that failed to survive exhibited reduced WWOX expression" (Figures S5 A to D). The survivor-only framing therefore has a partial contrast available (survivors against non-survivors, same blot), with the age of tissue collection of the non-survivors unstated.
+4. Consequence: rules R1 and R2 are ADV's, fixed before measurement. Rules R3 to R7 below were added **after** I had seen the printed values and are marked as such; they carry no pre-registration weight against the values already seen, only against the verifier's transcription and against my own densitometry cross-check, which have not been run.
+5. No prediction is registered: the values were seen before this file existed, so a prediction would be after the fact. The weakening observation is the rule R1 and R2 inversion (section 3).
+
+## 1. Question
+Per panel and region: what is the lowest per-animal WWOX intensity, relative to wild type, observed in a **surviving** gene-addition mouse (cortex, midbrain, hippocampus, cerebellum; low dose LD and high dose HD; P90 and P180; P240 and P300, n = 3), and does about 6 percent restoration (the engineered suppressor tRNA's single in vivo number, RP-037) fall inside or outside the range this source shows compatible with survival?
+
+## 2. Definitions fixed here
+* **Value** = the number printed under a lane, "WWOX intensity relative to WT" (HSP90 loading control, legend of Figure S5). No molecule count is implied.
+* **Survivor lane** = a lane of panels A to D that lies outside the "Dead" bar; every HD lane of E to G and J and K (P180, P300, P240) is a survivor by construction (the mice were alive at the sampling age). **Non-survivor lane** = a lane under the "Dead" bar (the last four lanes: one HD, three LD), sampling age not stated.
+* **Reference** (second way): the printed values are normalised by the authors to a wild-type lane; the lane marked 1 (first WT lane in A to D, the bold 1 in E) is the author's reference. The wild-type lanes on one blot differ (for example 1 and 2.2 in B, 0.7 to 1.7 in E), so each fraction is also recomputed against the **mean of the wild-type lanes of the same blot**.
+* The main text says "LD-treated mice did not survive to P90" (behavioural cohort sentence), while Figure S5 shows two LD lanes outside the Dead bar at P90. **This tension is not resolved by the source I hold**; any LD "survivor" statement carries it, and the HD lanes are the cleaner survivors.
+
+## 3. Discriminating observations (R1, R2: ADV's, fixed before measurement)
+* **R1.** A surviving mouse at or below about 10 percent of wild type in a region at P90 or later: roughly 6 percent restoration is **not excluded** by this source as incompatible with survival (an upper bound, not sufficiency, not function).
+* **R2.** No surviving mouse below about 50 percent in cortex and midbrain: 6 percent sits far below anything this source shows compatible with survival.
+* **Added (R3, after first view): the two rules are applied region by region and are not exclusive.** A source can meet R1 in one region and R2 in another; the sentence that carries each is region-labelled, and "the survival-relevant region" is not assumed (that is the open premise, not a result).
+* **R4 (added): a lane at the level of the knockout lane on the same blot is not a fraction.** Where the knockout lane reads at or above the survivor value, R1 is reported as "not resolved from the knockout lane", not as a fraction.
+* **R5 (added): the survivor-against-non-survivor contrast** (section 2) is reported per region as a descriptive overlap statement (do the ranges separate: yes or no), with n = 4 against 4 for P90, one blot, tissue age of non-survivors unstated, and no test.
+
+## 4. Verification
+* **Second way (mine, not blind):** lane densitometry of the embedded raster against the HSP90 lane, to check that the printed value and the band are broadly consistent (saturated bands, JPEG, and a loading ratio all limit it; it is a consistency check, not a replacement for the printed numbers). Reported with its failures.
+* **Blind transcription (a different delegate):** receives only cropped images of the blot panels (numbers, lane labels, "Dead" bars visible; no legend, no values, no conclusions, no thresholds) and returns, per panel, each lane's label, printed number and whether it lies under a Dead bar, plus any number it cannot read. Model and effort stated in the dispatch and read back by `session_model_census.py`. Disagreement is adjudicated against the 5-times crop, not by majority. The thresholds and the question are not given to it.
+* The deciding rows (the lowest survivor values per region and the lanes of R4 and R5) are the ones that must agree.
+
+## 5. What this source cannot say (carried into the result)
+Survivors are a selected set (alive at sampling); one blot per region and age, no replicates for A to G; band intensity relative to WT is a western-blot ratio, not molecules per cell; WT lanes vary two to three times on one blot; regions are averages of mixed cell types (cerebellum includes the granule layer, where the neuronal promoter's reach is the question the figure's panel I touches); ages of non-survivor sampling are not stated; one laboratory; the suppressor-tRNA's roughly 6 percent is an enzyme-activity percentage in another disease, so the comparison is of two numbers on different scales and stays a bracket, not a match.
