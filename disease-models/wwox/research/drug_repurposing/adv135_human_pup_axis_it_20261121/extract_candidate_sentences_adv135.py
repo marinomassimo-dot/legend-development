@@ -23,4 +23,4 @@ with open(out, "w", newline="", encoding="utf-8") as f:
                     k = s[:100]
                     if k in seen: continue
                     seen.add(k)
-                    w.writerow([p, r["kind"] + ":" + r["path"], "", s.strip()[:900]])
+                    w.writerow([p, r["kind"] + ":" + r["path"], "", sc.redact(s.strip()[:900])])

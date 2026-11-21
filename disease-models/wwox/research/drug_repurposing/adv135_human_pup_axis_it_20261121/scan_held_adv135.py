@@ -36,6 +36,16 @@ def read_text(path):
         return ""
     return ""
 
+EMAIL_RX = re.compile(r"[\w.+-]+@[\w-]+(\.[\w-]+)+")
+
+def redact(s):
+    """Public-release hygiene: author contact addresses are removed from listed sentences; a sentence naming both parental
+    sides is withheld (the listing is a prompt to read the source, never a finding)."""
+    s = EMAIL_RX.sub("[address removed]", s)
+    if re.search(r"\bmaternal\b", s, re.I) and re.search(r"\bpaternal\b", s, re.I):
+        return "[sentence withheld in the listing: see the source]"
+    return s
+
 def pmid_of(path):
     m = re.search(r"PMID[_-]?(\d{6,9})", path, re.I)
     return m.group(1) if m else ""
@@ -78,7 +88,7 @@ def main():
                         if k in ("lab_general",):
                             continue
                         if re.search(rx, s, re.I) and re.search(CASE_WORDS + "|" + HUMAN_SPEC, s, re.I):
-                            sw.writerow([os.path.relpath(p, root), pmid_of(p), k, s.strip()])
+                            sw.writerow([os.path.relpath(p, root), pmid_of(p), k, redact(s.strip())])
                             break
 if __name__ == "__main__":
     main()
