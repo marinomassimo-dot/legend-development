@@ -657,6 +657,15 @@
      "owner": "plan",
      "source": "SCI window U message after ADV ordered the handover at about 211k context, checkpoint V landed on main",
      "accepted_at": "2026-11-21T11:07:08Z"
+    },
+    {
+     "step": "DREAM on the working-material to reusable-delivery boundary: the verbatim scratch path read as a public command and the extractor addresses; smallest intervention tested on both cases",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "PLAN and Codex formative follow-up message to the HE window, after the SCI handover step",
+     "accepted_at": "2026-11-21T11:13:01Z",
+     "evidence": "scripts/test_documented_commands.py verbatim-copy exemption (missing-path half only) with two-direction controls; README rows 311-312; both cases verified with the gate --paths pre-check (case 1 PASS, case 2 still BLOCK on the two addresses)",
+     "updated_at": "2026-11-21T11:13:01Z"
     }
    ]
   }
@@ -1163,6 +1172,13 @@
    "at": "2026-11-21T11:07:08Z",
    "source": "SCI window U message after ADV ordered the handover at about 211k context, checkpoint V landed on main",
    "step_sha256": "adc9974c13bb",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T11:13:01Z",
+   "source": "PLAN and Codex formative follow-up message to the HE window, after the SCI handover step",
+   "step_sha256": "ed15de965ec4",
    "reopened_block": false,
    "authorised_by": null
   }
