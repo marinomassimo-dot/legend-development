@@ -770,10 +770,21 @@
     },
     {
      "step": "ADV-159 (ADV-CODEX LOOP round 1): CI read of #1847, trace of orphan translations and stale package, read-only review of relay.py",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV message of 2026-11-21 assigning ADV-159 (operator-authorised ADV-Codex loop, round 1)",
-     "accepted_at": "2026-11-21T18:59:47Z"
+     "accepted_at": "2026-11-21T18:59:47Z",
+     "evidence": "results landed under advisor_pilot_20261113/brainstorm_20261116/adv159_he_20261121: RESULT_HE_ADV159_20261121.md and RESULT_HE_STALE_PACKAGE_SEQUENCE_20261121.md; CI #1847 concluded with the item-17 pair only; i18n exit code 4102e4d3d; stale package caught by package --check, no code change",
+     "updated_at": "2026-11-21T20:06:20Z"
+    },
+    {
+     "step": "ADV-CODEX loop return 02: clean-scratch check of the stale shareable package sequence (source edit, regeneration by someone else, old package, pre-freeze commands, CI assertion)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message of 2026-11-21 relaying Codex return 02, choice B for HE",
+     "accepted_at": "2026-11-21T19:33:42Z",
+     "evidence": "results landed under advisor_pilot_20261113/brainstorm_20261116/adv159_he_20261121: RESULT_HE_ADV159_20261121.md and RESULT_HE_STALE_PACKAGE_SEQUENCE_20261121.md; CI #1847 concluded with the item-17 pair only; i18n exit code 4102e4d3d; stale package caught by package --check, no code change",
+     "updated_at": "2026-11-21T20:06:20Z"
     }
    ]
   }
@@ -1371,6 +1382,13 @@
    "at": "2026-11-21T18:59:47Z",
    "source": "ADV message of 2026-11-21 assigning ADV-159 (operator-authorised ADV-Codex loop, round 1)",
    "step_sha256": "817229da45f9",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T19:33:42Z",
+   "source": "ADV message of 2026-11-21 relaying Codex return 02, choice B for HE",
+   "step_sha256": "e681d3e81a7b",
    "reopened_block": false,
    "authorised_by": null
   }
