@@ -20,7 +20,7 @@ Q_PREFIX = ("2026-11-21: a public conference abstract (AES 2026, 1.019; same pro
             "inhibitory neurons was sufficient to produce spontaneous seizures and premature mortality (no Cre line, subtype, recombination check, age or n stated; "
             "reported, unverifiable; not a parvalbumin result), and that a pharmacological treatment improved neuronal firing ex vivo and reduced seizure burden in vivo "
             "(no treated model, cell, comparator, EEG measure, n or molecule; L1 and L2 unanchored, L3 not met). Before the six layers below: which inhibitory class "
-            "(parvalbumin, somatostatin, VIP or another) carries the effect, and how was it identified? Then: ")
+            "(parvalbumin or another) carries the effect, and how was it identified? Then: ")
 
 PV_OLD = "and names parvalbumin interneurons as the population of interest; it reports no quantitative result"
 PV_NEW = ("and, in a background sentence only, states that parvalbumin-expressing interneurons regulate network excitability and synchronisation "

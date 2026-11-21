@@ -983,10 +983,6 @@
   "src": "en",
   "text": "Whether the absence is a catalogue coverage limit, a target-listing limit, or a genuine absence of pharmacology. This package did not separate those three."
  },
- "6453e671155d": {
-  "src": "en",
-  "text": "2026-11-21: a public conference abstract (AES 2026, 1.019; same programme as SfN NANO11.01) reports, at class level only, that Wwox deletion in inhibitory neurons was sufficient to produce spontaneous seizures and premature mortality (no Cre line, subtype, recombination check, age or n stated; reported, unverifiable; not a parvalbumin result), and that a pharmacological treatment improved neuronal firing ex vivo and reduced seizure burden in vivo (no treated model, cell, comparator, EEG measure, n or molecule; L1 and L2 unanchored, L3 not met). Before the six layers below: which inhibitory class (parvalbumin, somatostatin, VIP or another) carries the effect, and how was it identified? Then: In the neuron-targeted Wwox-deletion mouse, is the lower Pvalb transcript due to fewer parvalbumin interneurons, to immature or altered identity, to lower marker expression in a normal number of cells, to changed intrinsic properties, to less synaptic input onto or from them, or to a circuit-level change, and which of these is measured per animal?"
- },
  "64c806f2ad2b": {
   "src": "en",
   "text": "Repeat the slice burst assay with the magnesium concentration reported, a d-APV arm and a GluN2B NAM arm, each at matched measured NMDAR-current reduction (one ifenprodil-site GluN2B NAM; a second NAM of the same site controls chemotype only, and only if its own maximum on triheteromers is known (ifenprodil 32 percent, radiprodil 45 percent in rat: each molecule has its own); compare with d-APV only up to the NAM's measured removable share; measure the d-APV abolition threshold x and the NAM removable fraction first), vehicle time-matched, animal as the unit; memantine only afterwards, with the magnesium concentration and holding voltage stated, beside the tool compound, and the untreated same-genotype comparator. [IT40] B6 Report bath magnesium, K+, temperature and blockers actually present as measured values; use a within-slice paired design; add an AMPA/kainate block arm verified by the fast EPSC (abolition alone is not informative, because loss of magnesium relief would abolish an NMDAR-regenerative burst too); add a matched-effect control read on at least two metrics with a receptor-agnostic release-reducing control; add a GABA-A arm because the sIPSC amplitude is halved; state the order of application and washout as part of the design. [SCI42] Report bath pH (and the buffer system) as a measured value with magnesium and potassium; read the percent of evoked synaptic charge removed for every drug so the matched drive-reduction control can be matched; a pH-dependent GluN2B tool is considered only after the tissue pH is measured, with the ifenprodil-site tool and d-APV at the same two pH values."
@@ -1790,6 +1786,10 @@
  "b1e450d2e658": {
   "src": "en",
   "text": "In vitro after step 0"
+ },
+ "b2bea003b27a": {
+  "src": "en",
+  "text": "2026-11-21: a public conference abstract (AES 2026, 1.019; same programme as SfN NANO11.01) reports, at class level only, that Wwox deletion in inhibitory neurons was sufficient to produce spontaneous seizures and premature mortality (no Cre line, subtype, recombination check, age or n stated; reported, unverifiable; not a parvalbumin result), and that a pharmacological treatment improved neuronal firing ex vivo and reduced seizure burden in vivo (no treated model, cell, comparator, EEG measure, n or molecule; L1 and L2 unanchored, L3 not met). Before the six layers below: which inhibitory class (parvalbumin or another) carries the effect, and how was it identified? Then: In the neuron-targeted Wwox-deletion mouse, is the lower Pvalb transcript due to fewer parvalbumin interneurons, to immature or altered identity, to lower marker expression in a normal number of cells, to changed intrinsic properties, to less synaptic input onto or from them, or to a circuit-level change, and which of these is measured per animal?"
  },
  "b2cb97cdf4a9": {
   "src": "en",
