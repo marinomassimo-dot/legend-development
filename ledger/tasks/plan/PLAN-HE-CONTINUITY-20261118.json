@@ -686,6 +686,15 @@
      "accepted_at": "2026-11-21T12:50:40Z",
      "evidence": "framework/scripts/strategic_advisor.py waiting_work() and the tick field waiting_work; WaitingWork tests (3) in test_strategic_advisor.py; full suite 228 OK; real portfolio lists RP-015 and RP-017",
      "updated_at": "2026-11-21T12:50:44Z"
+    },
+    {
+     "step": "Launch the SCI successor window W from SCI checkpoint W and verify its handoff, as for windows U and V",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "SCI window V message of 2026-11-21 (handover at about 265k, suggested by ADV), checkpoint W on main, staggered after the HE and IT restarts which are done",
+     "accepted_at": "2026-11-21T13:03:05Z",
+     "evidence": "SCI W session 0e5ca435 launched 13:03:19Z at effort high; window V released 13:03:37.94Z; bind 13:04:03.37Z (25.4 s after release); first tool call 13:04:04.41Z (1.05 s); handoff RUNNING; names applied natively, labels CURRENT; old SCI d79b9c48 retire route refused by the permission classifier, not retried",
+     "updated_at": "2026-11-21T13:05:19Z"
     }
    ]
   }
@@ -1213,6 +1222,13 @@
    "at": "2026-11-21T12:50:40Z",
    "source": "ADV request relayed in the successor launch brief of 2026-11-21, read at a closed increment; checked: the tick carries neither field today",
    "step_sha256": "2dcd8e9e5f47",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T13:03:05Z",
+   "source": "SCI window V message of 2026-11-21 (handover at about 265k, suggested by ADV), checkpoint W on main, staggered after the HE and IT restarts which are done",
+   "step_sha256": "a21b2a01437b",
    "reopened_block": false,
    "authorised_by": null
   }
