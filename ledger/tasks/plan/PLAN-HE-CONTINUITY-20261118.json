@@ -740,6 +740,15 @@
      "accepted_at": "2026-11-21T17:20:24Z",
      "evidence": "predictive_brainstorm_20261121/CONTRIBUTION_HE_ADV153_20261121.md: no change to sim_harness.py; three rules (re-fit each rival to the same held numbers, forecast as a binned sidecar with the evidence-only and generic-suppression baselines, paired fixed-strength design with 10+ seeds); improvement, tie and confident-miss rules; not calibrated; removal = one folder; strongest counter-explanation stated; path sent to ADV",
      "updated_at": "2026-11-21T17:22:46Z"
+    },
+    {
+     "step": "ADV-155: freeze SCI's P-SCI-1 (week-16 untreated event rate, four pairings) in the existing prediction ledger in sidecar format, no code change, run prediction_ledger guard, write the binding reading rule and the 1-in-6 floor",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message of 2026-11-21 after the predictive-modelling brainstorm synthesis, assignment ADV-155",
+     "accepted_at": "2026-11-21T17:32:46Z",
+     "evidence": "ledger row P-SCI-1 (freeze commit a2d6504e5, SCI file blob e56f4bdf), sidecar sha256 c6962ff3 (3 forecasters, 4 ids), forecast_freeze_p_sci_1_he_20261121/P_SCI_1_FORECAST_FREEZE_HE_20261121.md with ADV's binding reading rule, 1-in-6 floor, unscorable rule, shared provenance, weight zero and low prior; prediction_ledger check: row ok, violations unchanged at 84 (pre-existing); guard OUTCOME_MAY_OPEN (table absent); no code changed",
+     "updated_at": "2026-11-21T17:35:45Z"
     }
    ]
   }
@@ -1309,6 +1318,13 @@
    "at": "2026-11-21T17:20:24Z",
    "source": "ADV message of 2026-11-21 convening the WWOX predictive brainstorm MEETING (operator request relayed by the Codex session; brief files/coordination/WWOX_PREDICTIVE_BRAINSTORM_20261121.md, sha256 verified 772bcf61)",
    "step_sha256": "8af4fd139edb",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T17:32:46Z",
+   "source": "ADV message of 2026-11-21 after the predictive-modelling brainstorm synthesis, assignment ADV-155",
+   "step_sha256": "056983e3bcff",
    "reopened_block": false,
    "authorised_by": null
   }
