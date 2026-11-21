@@ -858,6 +858,35 @@ class PredecessorRetirement(unittest.TestCase):
             self.assertTrue(retire.call_args.kwargs["execute"])
 
 
+class HandoffNextLine(unittest.TestCase):
+    """2026-11-21: the handoff to the HE successor printed `session_names` in the log and `KEPT` for an old interactive chat with two bound lines left; nobody was told to apply the renames or which records already
+    closed those mandates. The `next` line and `legacy_bound_tasks` now carry both to the launcher."""
+
+    def test_pending_names_and_legacy_bound_lines_reach_the_launcher_and_no_window_is_left_to_close(self):
+        names = {"task": "T-1", "state": "PENDING", "renames": [{"session_id": "x", "from": "A", "to": "A - CURRENT x"}]}
+        legacy = [{"task": "OLD-1", "record_verdict": "COMPLETE_PENDING"}, {"task": "OLD-2", "record_verdict": "RELEASED"}]
+        text = mw.handoff_next("KEPT", names, legacy, False)
+        for part in ("SESSION NAMES PENDING (1)", "labels --task T-1", "OLD-1 (record COMPLETE_PENDING)", "OLD-2 (record RELEASED)", "never by a release line", "no window is left to close"):
+            self.assertIn(part, text)
+        self.assertNotIn("operator", text.lower())
+
+    def test_a_clean_handoff_says_only_what_is_true(self):
+        text = mw.handoff_next("RETIRED", {"task": "T-1", "state": "CURRENT", "renames": []}, [], True)
+        self.assertEqual(text, "successor running; predecessor retirement RETIRED")
+
+    def test_legacy_bound_tasks_reads_the_records_not_the_chat(self):
+        with tempfile.TemporaryDirectory() as td:
+            base = Path(td)
+            old = base / "old.jsonl"
+            lines = [{"timestamp": "2026-11-20T10:00:00Z", "type": "assistant", "message": {"content": [{"type": "text", "text": f"MANDATE_BOUND: {t}"}]}} for t in ("T-1", "OLD-1")]
+            old.write_text("\n".join(json.dumps(x) for x in lines) + "\n", encoding="utf-8")
+            (base / "ledger" / "tasks" / "plan").mkdir(parents=True)
+            (base / "ledger" / "tasks" / "plan" / "OLD-1.json").write_text(json.dumps({"TASK_ID": "OLD-1", "ACTOR_ID": "plan", "MANDATE_STATE": "COMPLETE"}), encoding="utf-8")
+            got = mw.legacy_bound_tasks("T-1", old, base)
+        self.assertEqual([x["task"] for x in got], ["OLD-1"])
+        self.assertIsNotNone(got[0]["record_verdict"])
+
+
 class TranscriptPrefix(unittest.TestCase):
     """2026-11-19: `released --session <short id>` answered MISSING, and a wait loop on it could never turn true. A unique prefix of at least 8 characters now finds the transcript; an ambiguous or too short one does not."""
 

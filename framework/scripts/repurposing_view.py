@@ -5837,7 +5837,67 @@ def find_chromium() -> str | None:
     # A candidate that exists but cannot start (a Snap revision needing a newer GLIBC) is skipped; older installed revisions come last.
     older = sorted(glob.glob("/snap/chromium/[0-9]*/usr/lib/chromium-browser/chrome"), key=lambda p: int(p.split("/")[3]), reverse=True)
     found = [b for b in [*CHROMIUM_CANDIDATES, *older] if shutil.which(b) or Path(b).exists()]
-    return next((b for b in found if _browser_starts(b)), found[0] if found else None)
+    chosen = next((b for b in found if _browser_starts(b)), found[0] if found else None)
+    if chosen:
+        prepare_browser_tmp(chosen)    # every browser path (suite, viewports, audit, preflight) passes here before it creates its temporary directory
+    return chosen
+
+
+class BrowserCannotReadLocalPages(RuntimeError):
+    """The chosen browser starts but does not read a page written to the temporary directory the caller will use. Raised at once, never turned into a skip: a skipped browser class measured nothing."""
+
+
+_BROWSER_READS: dict = {}   # (binary, temporary directory) -> True: one probe per process and pair
+
+
+def prepare_browser_tmp(binary: str) -> str:
+    """A snap-confined browser has its own private /tmp and cannot read a file:// page the caller writes under it (found twice: 2026-11-20 on a keyboard test, and 2026-11-21 when IT's battery of ADV-131 lost hours to
+    browser classes that skipped or hung, although `snap_tmp_hint` and the scripts README already named the cure: TMPDIR on a non-hidden directory under the home). This applies the cure where every browser path
+    passes (`find_chromium`): for a snap browser and a temporary directory under /tmp it points `tempfile` and `TMPDIR` at `$LEGEND_BROWSER_TMP` or `~/legend_browser_tmp` (created when missing; a dot-directory is
+    refused, the snap cannot see it either), then PROVES the browser reads a page there with one `--dump-dom` of a tiny file carrying a unique title. When it cannot, it raises `BrowserCannotReadLocalPages` within
+    seconds with the binary, the directory, the exit code and the browser's own stderr. A browser that is not snap-confined is left exactly as it was (no probe, no change). Returns the temporary directory in force."""
+    import os
+    import shutil
+    import subprocess
+    import tempfile
+    import uuid
+    try:
+        version = subprocess.run([binary, "--version"], capture_output=True, text=True, timeout=30).stdout
+    except (OSError, subprocess.SubprocessError):
+        return tempfile.gettempdir()           # a browser that cannot report its version is reported by the caller's own start, not here
+    if "snap" not in version.lower() and not binary.startswith("/snap/"):
+        return tempfile.gettempdir()
+    here = tempfile.gettempdir()
+    if here == "/tmp" or here.startswith("/tmp/"):
+        target = Path(os.environ.get("LEGEND_BROWSER_TMP") or (Path.home() / "legend_browser_tmp")).expanduser().resolve()
+        home = Path.home().resolve()
+        rel = target.relative_to(home).parts if target.is_relative_to(home) else ()
+        if not target.is_relative_to(home) or any(part.startswith(".") for part in rel):
+            raise BrowserCannotReadLocalPages(f"{binary} is snap-confined and the temporary directory {here} is under /tmp, but the directory chosen for it ({target}) is not a non-hidden directory under the home ({home}); "
+                                              "set LEGEND_BROWSER_TMP to one (a dot-directory such as ~/.cache is invisible to the snap too)")
+        target.mkdir(parents=True, exist_ok=True)
+        os.environ["TMPDIR"] = str(target)
+        tempfile.tempdir = str(target)
+        here = str(target)
+    if _BROWSER_READS.get((binary, here)):
+        return here
+    token = "legend-probe-" + uuid.uuid4().hex
+    work = tempfile.mkdtemp(prefix="browser_probe_", dir=here)
+    try:
+        page = Path(work) / "probe.html"
+        page.write_text(f"<!doctype html><html><head><meta charset=\"utf-8\"><title>{token}</title></head><body data-ready=\"1\">{token}</body></html>", encoding="utf-8")
+        try:
+            done = subprocess.run([binary, "--headless=new", "--disable-gpu", f"--user-data-dir={work}/p", "--virtual-time-budget=2000", "--dump-dom", f"file://{page}"], capture_output=True, text=True, timeout=45)
+            out, err, code = done.stdout, done.stderr, done.returncode
+        except subprocess.TimeoutExpired:
+            out, err, code = "", "no answer within 45 s", "timeout"
+        if token not in out:
+            raise BrowserCannotReadLocalPages(f"{binary} (exit {code}) did not read a local page written under {here}: its own report was {(err or '(empty)').strip()[-300:]!r}. "
+                                              + (snap_tmp_hint(version, here) or "Set LEGEND_BROWSER_TMP (or TMPDIR) to a non-hidden directory under the home and check the browser can open files there."))
+    finally:
+        shutil.rmtree(work, ignore_errors=True)
+    _BROWSER_READS[(binary, here)] = True
+    return here
 
 
 def snap_tmp_hint(version_text: str, tmpdir: str) -> str | None:
@@ -5861,11 +5921,15 @@ def browser_preflight(out=print) -> int:
     import time
     import shutil
     out(f"1. CHROME_BIN: {os.environ.get('CHROME_BIN') or 'unset'}")
-    binary = find_chromium()
+    try:
+        binary = find_chromium()
+    except BrowserCannotReadLocalPages as exc:
+        out(f"2. executable present, but it cannot read a local page: {exc}")
+        return 1
     if not binary:
         out("2. executable present: NO. No candidate exists; browser-dependent tests SKIP and measure nothing (a skip is not a verification)")
         return 1
-    out(f"2. executable present: {binary}")
+    out(f"2. executable present: {binary}; temporary directory in force: {tempfile.gettempdir()}{' (set for the snap-confined browser; a local page was read there)' if os.environ.get('TMPDIR') == tempfile.gettempdir() and (binary, tempfile.gettempdir()) in _BROWSER_READS else ''}")
     for cand in [*CHROMIUM_CANDIDATES, *sorted(__import__("glob").glob("/snap/chromium/[0-9]*/usr/lib/chromium-browser/chrome"), reverse=True)]:
         if cand != binary and (shutil.which(cand) or Path(cand).exists()):
             try:
@@ -6326,7 +6390,12 @@ def main(argv=None) -> int:
     if a.command == "viewports":
         src = a.source or "shareable"
         out = a.out or (a.dr / "view" / OUT_NAME[src])
-        if not find_chromium():
+        try:
+            binary = find_chromium()
+        except BrowserCannotReadLocalPages as exc:
+            print(f"ERROR: {exc}")                 # not a SKIP: the browser exists and cannot read the page, so nothing was measured and the run is not clean
+            return 2
+        if not binary:
             print("SKIP: no Chromium binary found; no viewport was measured")
             return 0
         res = measure_viewports(out.resolve(), a.shots)

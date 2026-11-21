@@ -585,6 +585,13 @@
      "accepted_at": "2026-11-21T05:38:22Z",
      "evidence": "landed 4c492a565 (gate PASS, ls-remote verified): onset, prevented and forms added to FORMAT_WORDS (default, not opt-in); test_the_timing_and_outcome_words_of_a_gene_addition_question_are_not_its_bridge; test_scout_daily 102 OK; the three titles in the test are written from ADV's description, the briefing is not in the tree",
      "updated_at": "2026-11-21T05:41:49Z"
+    },
+    {
+     "step": "Operator integration: make the browser temporary-directory cure run where every browser path passes, reconcile the two legacy mandates of the old interactive chat with ADV, complete the native display names, and carry the handoff results (names pending, legacy bound lines) to the launcher",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "operator integration message 2026-11-21 (browser cure, IT review, session labels) and the identity correction forwarded by PLAN",
+     "accepted_at": "2026-11-21T08:18:38Z"
     }
    ]
   }
@@ -1035,6 +1042,13 @@
    "at": "2026-11-21T05:38:22Z",
    "source": "ADV meeting message 2026-11-21 morning: a bounded lead for HE, in HE's pace, opt-in or default as judged",
    "step_sha256": "acfe519044f8",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T08:18:38Z",
+   "source": "operator integration message 2026-11-21 (browser cure, IT review, session labels) and the identity correction forwarded by PLAN",
+   "step_sha256": "831c14e20626",
    "reopened_block": false,
    "authorised_by": null
   }
