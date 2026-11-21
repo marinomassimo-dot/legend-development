@@ -213,6 +213,13 @@
      "accepted_at": "2026-11-21T01:07:13Z",
      "evidence": "adv129_painted_italian_it_20261121/RESULT_ADV129_IT_20261121.md: 4 authored shareable items no longer painted Italian; pilot cases labelled working note (ADV decision), requirement and compound sentences are part of the pilot table; two blind-check batches (13 pairs: 46 faithful, 5 minor, 1 changed; batch 2: 5 faithful, 5 minor), repairs applied; i18n suite 22 OK; non-browser view tests 188 run, 2 known item-17 reds",
      "updated_at": "2026-11-21T02:07:44Z"
+    },
+    {
+     "step": "ADV-131 measured first batch: at most 50 English-authored passages from the two most visible shareable sections translated to fr, de and es in the catalogue, blind check per batch of 25, stop rule written before the first translation, then one projection paragraph (notice versus translation)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "advisor assignment ADV-131 (message from the Advisor session to the IT successor, 2026-11-21)",
+     "accepted_at": "2026-11-21T03:17:06Z"
     }
    ]
   }
@@ -376,6 +383,13 @@
    "at": "2026-11-21T01:07:13Z",
    "source": "ADV message 2026-11-21 (assignments/ADV-129.md lands with ADV's next push)",
    "step_sha256": "ad2f17d24b7b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T03:17:06Z",
+   "source": "advisor assignment ADV-131 (message from the Advisor session to the IT successor, 2026-11-21)",
+   "step_sha256": "fe328a7c5c57",
    "reopened_block": false,
    "authorised_by": null
   }
