@@ -373,3 +373,5 @@
 {"evidence": "SendMessage receipt msg_id cf2384b9-ede8-4a63-994c-9a406a7672b7 to IT Orchestrator - CURRENT 6a8c1a55", "id": "ADV-149", "state": "SENT", "to": ["IT Orchestrator - CURRENT 6a8c1a55"], "utc": "2026-11-21T15:44:42Z"}
 {"assessment": "HOST", "id": "ADV-150", "key": "pup-brief-remaining-13-open-conflicts-classification", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-21T16:32:09Z"}
 {"evidence": "SendMessage receipt msg_id 8f81aba4-897f-43c2-bc7b-c2aa4575218e to IT Orchestrator - CURRENT 6a8c1a55", "id": "ADV-150", "state": "SENT", "to": ["IT Orchestrator - CURRENT 6a8c1a55"], "utc": "2026-11-21T16:32:23Z"}
+{"assessment": "HOST", "id": "ADV-151", "key": "pup-brief-seven-named-design-decisions-then-stop-until-a-laboratory", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-21T16:41:51Z"}
+{"evidence": "SendMessage receipt msg_id a5b86a14-082b-4a08-9297-468008af175b to SCI - CURRENT b3e65c69", "id": "ADV-151", "state": "SENT", "to": ["SCI - CURRENT b3e65c69"], "utc": "2026-11-21T16:42:07Z"}
