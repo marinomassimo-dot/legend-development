@@ -1395,7 +1395,10 @@ def term_hit(terms: list[str], *texts: str) -> bool:
 FORMAT_WORDS = frozenset("""preprint preprints review reviews reviewed peer published publication study studies paper papers article articles retracted withdrawn systematic
 meta results result role roles effect effects laboratory challenge primary same under with source sources data eight leave disagreement targeted resolved composition
 # 2026-11-20 (first briefing after the bridge, HE): the question's own FORM words - what kind of evidence would reopen the row - bridged a seabird paper and a traffic-sign paper to an OPC question (reproduction)
-reproduction reproduce reproduced replication replicate replicated report reports reported census independent""".split())
+reproduction reproduce reproduced replication replicate replicated report reports reported census independent
+# 2026-11-21 (radar briefing of 05:20 UTC, ADV): the same defect class on a gene-addition question - 'onset' and 'prevented' (when a treatment must start and what it must achieve, not what disease it is about)
+# bridged a cavitation-in-agar paper, a muscle-activation onset-detection paper and an AI-in-medicine framework to it
+onset onsets prevented prevent prevents prevention preventing""".split())
 METHOD_WORDS = frozenset("""snrna rna seq sequencing immunostaining immunostain immunohistochemistry immunofluorescence western blot proteomic proteomics transcriptomic
 transcriptomics sequence matrices matrix library libraries barcode experiment experiments""".split())
 

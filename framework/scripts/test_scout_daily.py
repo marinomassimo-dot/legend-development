@@ -206,6 +206,24 @@ class Bridge(unittest.TestCase):
         self.assertEqual(sd.shared_bridge(self.NP4G2, "Declining environmental predictability erodes reproduction in a tropical seabird"), [])
         self.assertIn("differentiation", sd.shared_bridge(self.NP4G2, "Delayed oligodendrocyte precursor differentiation in a Wwox-null co-culture"))
 
+    Q_GENE_ADD = ("Does an intermediate vector level separate a threshold from a gradient, and is the benefit only prevented inside the first days of life or also recovered when treatment follows onset? "
+                  "No study has measured the phenotype at the day of injection.")        # the question of work_order.json entry NEED-WWOX-GENE-ADDITION, verbatim (blob 153e14f097 at main 07b3e76fb)
+    GENE_ADD = {"id": "reopen:work_order/NEED-WWOX-GENE-ADDITION", "origin": {"priority": Q_GENE_ADD[:200]}, "gap": Q_GENE_ADD[:140]}
+
+    def test_the_timing_and_outcome_words_of_a_gene_addition_question_are_not_its_bridge(self):
+        """2026-11-21 radar briefing of 05:20 UTC (ADV, Delta 2): 'onset' and 'prevented' bridged three papers that have nothing to do with the disease to this question - cavitation in agar, muscle
+        activation onset detection, AI in preventive medicine (titles verbatim from the briefing). Before the change the bridges were ['onset'], ['onset'] and ['prevented']."""
+        terms = sd.bridge_terms(self.GENE_ADD)
+        for bad in ("onset", "prevented", "prevent"):
+            self.assertNotIn(bad, terms)
+        for keep in ("threshold", "gradient", "vector", "recovered"):
+            self.assertIn(keep, terms)
+        for title in ("The delayed-onset of inertial cavitation in tissue-mimicking agar phantom.",
+                      "A Multimodal Biomedical Sensing Approach for Muscle Activation Onset Detection.",
+                      "Predicting health and disease: a conceptual framework for AI in preventive and precision medicine."):
+            self.assertEqual(sd.shared_bridge(self.GENE_ADD, title), [], title)
+        self.assertIn("threshold", sd.shared_bridge(self.GENE_ADD, "A vector dose threshold separates rescue from no rescue in a Wwox-null mouse"))
+
     ROWS = {"NP4G1": "Peer review (with source data) of the same-laboratory preprint on a primary oligodendroglial role of WWOX under challenge (PPR1124524) the peer review is published",
             "NP4G3": "Oligodendrocyte-lineage census in the Synapsin-Cre deletion before the first spontaneous seizure (about P7 to P8) the census is reported",
             "OBJ": "Ethosuximide effect on the T-type current in knockout slices a recording is reported"}
