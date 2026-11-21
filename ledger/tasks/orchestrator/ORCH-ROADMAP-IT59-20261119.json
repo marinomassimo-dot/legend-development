@@ -216,10 +216,19 @@
     },
     {
      "step": "ADV-131 measured first batch: at most 50 English-authored passages from the two most visible shareable sections translated to fr, de and es in the catalogue, blind check per batch of 25, stop rule written before the first translation, then one projection paragraph (notice versus translation)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "advisor assignment ADV-131 (message from the Advisor session to the IT successor, 2026-11-21)",
-     "accepted_at": "2026-11-21T03:17:06Z"
+     "accepted_at": "2026-11-21T03:17:06Z",
+     "evidence": "Landed on main (gate PASS, ls-remote verified); result adv131_english_batch_it_20261121/RESULT_ADV131_IT_20261121.md; blind checks 135 FAITHFUL, 15 MINOR, 0 CHANGED in 150 fresh rows; stop rule not triggered; report read and accepted by the Advisor",
+     "updated_at": "2026-11-21T07:56:52Z"
+    },
+    {
+     "step": "ADV-132: mechanical number-and-name parity check on the 150 ADV-131 rows (rule written before running), then one further batch of 25 of the densest number-bearing shareable passages translated to fr, de, es with the same stop rule, blind check and parity check on every row, report with rates, cost and an updated projection",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "advisor assignment ADV-132 (message from the Advisor session to the IT successor, 2026-11-21)",
+     "accepted_at": "2026-11-21T07:56:52Z"
     }
    ]
   }
@@ -390,6 +399,13 @@
    "at": "2026-11-21T03:17:06Z",
    "source": "advisor assignment ADV-131 (message from the Advisor session to the IT successor, 2026-11-21)",
    "step_sha256": "fe328a7c5c57",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T07:56:52Z",
+   "source": "advisor assignment ADV-132 (message from the Advisor session to the IT successor, 2026-11-21)",
+   "step_sha256": "206f9de49c03",
    "reopened_block": false,
    "authorised_by": null
   }
