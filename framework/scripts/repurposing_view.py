@@ -6358,6 +6358,10 @@ def i18n_check(dr: Path) -> int:
         bad = [h for h in have if i18n_tokens(mine[h]["text"]) != i18n_tokens(t[h])]
         print(f"content_{lang}: {len(have)}/{len(mine)} passages translated; {len(mine) - len(have)} stay in the original language (marker); {len(stale)} stale; {len(bad)} with changed identifiers or numbers")
         rc |= bool(bad)
+        if lang in ("fr", "es", "de") and len(have) < len(mine):   # 2026-11-21 (ADV-159): the suite pins "no original-language marker on a fr, es or de page" (FiveLanguages); a reworded passage whose new hash has no translation passed this command (exit 0) and failed only in CI, run 1820
+            gone = [h for h in mine if h not in t]
+            print(f"   untranslated for {lang}: {len(gone)} passage(s), e.g. {gone[0]} ({mine[gone[0]]['src']}, {len(mine[gone[0]]['text'])} chars); translate them into view/{I18N_SUBDIR}/content_{lang}.json, then rebuild the pages and the package")
+            rc = 1
     return rc
 
 

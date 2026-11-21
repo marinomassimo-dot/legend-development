@@ -173,6 +173,31 @@ class InventoryIsCheckedWhereTheActorRunsIt(unittest.TestCase):
         self.assertIn("i18n --what collect", out.getvalue())
         self.assertNotIn("ui_source.json differs", out.getvalue())  # the part that is current is not blamed
 
+    def test_a_passage_without_a_fr_es_or_de_translation_fails_the_check_in_seconds_not_in_ci(self):
+        """2026-11-21 (ADV-159): a reworded passage left three English texts untranslated; `i18n` printed it and exited 0, and the suite found it only in CI run 1820."""
+        import contextlib
+        import copy
+        import io
+        from unittest import mock
+        ui = json.loads((DR / "view/i18n/ui_source.json").read_text(encoding="utf-8"))
+        content = json.loads((DR / "view/i18n/content_source.json").read_text(encoding="utf-8"))
+        saved = copy.deepcopy(rv.TRANS)
+        try:
+            for lang in ("fr", "es", "de"):
+                h = next(k for k, v in content.items() if v["src"] != lang and k in rv.TRANS[lang]["content"])
+                trans = copy.deepcopy(saved)
+                del trans[lang]["content"][h]
+                rv.TRANS.clear()
+                rv.TRANS.update(trans)
+                out = io.StringIO()
+                with mock.patch.object(rv, "i18n_collect", return_value=(ui, content)), mock.patch.object(rv, "load_translations"), contextlib.redirect_stdout(out):
+                    self.assertEqual(rv.i18n_check(DR), 1, lang)
+                self.assertIn(f"untranslated for {lang}: 1 passage(s), e.g. {h}", out.getvalue())
+                self.assertNotIn("inventory STALE", out.getvalue())
+        finally:
+            rv.TRANS.clear()
+            rv.TRANS.update(saved)
+
     def test_a_current_inventory_adds_nothing_to_the_check(self):
         import contextlib
         import io
