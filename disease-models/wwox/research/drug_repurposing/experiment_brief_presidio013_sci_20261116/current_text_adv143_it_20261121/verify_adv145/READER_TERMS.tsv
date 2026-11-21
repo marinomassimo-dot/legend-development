@@ -1,0 +1,41 @@
+t_id	term_as_written	where	what_i_took_it_to_mean	proposed_plain_wording
+t01	S	Stimulus, seizure grades and observation	the primary seizure summary per animal; also a name of the neuron-targeted line "S-KO" and "S-HT"	Call the summary "seizure burden score" and spell out S-KO and S-HT; note S is not a stage
+t02	Stage versus grade	STATUS-BOX	defined in the box: grade = step of 0 to 6 scale; stage = step of plan	Keep; but marker C23 writes "wild-type stage is about 1 on 0 to 6" and History writes "maximum stage" where grade is meant; write "grade"
+t03	OPEN-GAP / CONFLICT-OPEN	STATUS-BOX	defined: missing value or decision; two statements disagree	Use "MISSING INFORMATION" and "TWO STATEMENTS DISAGREE"
+t04	SCI, operator, ADV, IT	STATUS-BOX; History	SCI and operator defined; ADV, IT unknown	Define or remove ADV and IT
+t05	text work; "Clarification by text work"	STATUS-BOX	unknown, probably an editorial reading	"Editor's reading, to be confirmed by the design team"
+t06	the predictions file; P5; P8	Scope; Analysis plan	a frozen file of weighted predictions identified by checksum; P5 and P8 sets of predictions	Supply the file or its relevant rules; call the sets "prediction set 5 and 8"
+t07	E1 to E5, L1, L2, C1, C2	Title; What each outcome would favour	numbered readings; C1 and C2 labels of two T-type rows	Rename C1/C2 (they look like conflict ids C02); give E5 a row
+t08	Cheng 2020; "the comparator's panel"; "AAV9 comparator"	Ages; Optional, conditional cohort	a gene-therapy study with its own knockout panel	Cite once with first author and year
+t09	floor, "at the floor"	The question; Analysis plan	score so low a reduction cannot be seen	"too low to show a reduction"
+t10	wild-type age series	Ages	wild-type pups tested at the assay age and two or more older ages	"older-age wild-type series"
+t11	stage-matched wild-type response	Groups to run	unknown	Define the target wild-type response
+t12	panel; flat-, rising-, falling-profile agent	Groups to run	validation agents whose effect is known not to vary / rise / fall with age	"assay-check drug whose effect is age-independent / rises / falls with age"
+t13	dose null; dose check per age	Regimens and dose checks	a non-effect at an unchecked exposure	"no-effect at an untested exposure, reported as unresolved"
+t14	engagement control	Groups to run	evidence the drug reaches and acts on its target in the pup brain	Say "target-reach measurement"
+t15	class label	Scope; Groups to run	a drug class name rather than a compound	"drug class, not a specific compound"
+t16	pore-blocker	Groups to run	channel-blocking NMDA-receptor antagonist	Spell out
+t17	R, interaction ratio	Analysis plan	treated mean over vehicle mean; ratio of ratios	"effect ratio" and "knockout-over-wild-type ratio of effect ratios"
+t18	"an effect of 0.7 or larger is excluded"	Analysis plan	probably "a reduction to 0.7 or less is excluded"	Rewrite as "a ratio of 0.7 or lower is ruled out"
+t19	ratio of means with a bootstrap over litters	Groups to run; Analysis plan	resampling litters to get an interval	Spell out steps
+t20	square-root rule; Bonferroni for five	Analysis plan	vehicle group about 2.2 times a test arm; 99% intervals	State the factor and the number
+t21	carried forward; keeps grade 6	Stimulus, seizure grades and observation	dead or rescued pup keeps its last or maximum grade for the rest of the window	Spell out for each case
+t22	minimal / intermediate / generalised seizures	Stimulus, seizure grades and observation	grades 1 to 2 / 3 / 4 to 5 with a tonic phase	Put the grade ranges in one line
+t23	motor pre-test; ketamine-class	Stimulus, seizure grades and observation	a righting or gait check before the stimulus	"pre-stimulus motor check"
+t24	status	Stimulus, seizure grades and observation	three or more tonic-clonic seizures in the window	Say "status epilepticus (three or more tonic-clonic seizures)"
+t25	cell, arm, session	Animals	defined in the document	Keep
+t26	cluster	Animals	litter treated as a clustering unit	"litter (analysed as a cluster)"
+t27	S-KO; S-HT; "neuron-targeted line"	Ages; Optional add-ons	a conditional neuron-specific knockout; S-HT unknown	Define both
+t28	P47T	Optional add-ons (g)	a published report called by a code; unknown	Give a citation
+t29	SCAR12	Optional add-ons (e4)	a human WWOX-related disorder	Use "a human WWOX-related disorder (SCAR12)"
+t30	Tc-MEP; ECoG; LFP; E_GABA; NKCC1; sIPSC; PV; GFAP; Iba1	Ages; Optional add-ons	most defined inline; E_GABA, NKCC1, sIPSC, PV defined	Fine
+t31	NRG1-ErbB4	Optional add-ons (e3)	a signalling pair	Define once
+t32	d-APV; vigabatrin; TPM; g-ratio; Olig2; Mbp	Optional add-ons; cohort	d-APV, vigabatrin named once without use; others standard	Define or drop d-APV and vigabatrin
+t33	gene-addition benchmark; partial-restoration; platform effect	Out of scope	a gene-therapy reference paper; out of scope	Mark the whole section "ignore"
+t34	"more necessary, not less"	Stage 3 row; Regimens and dose checks	the second GSK-3 inhibitor is more needed than before; compared with what is not said	"is needed even more because lithium also acts on other targets"
+t35	"composition caveat"; "sign premise"	Optional add-ons (g), (e3)	unknown	Explain
+t36	"design frame"; "one-slot order"; "arm table"	Analysis plan; Optional add-ons; History	unknown	Define
+t37	"A preventive or early arm cannot be read as a reversal in respect of the E16.5 finding only"	Ages (Timing limit)	unclear	Rewrite
+t38	"hypothesis level"; "evidence level"	Scope	strength of evidence labels listed in Sources	Keep with the list
+t39	heterozygote bursting incidence	Optional add-ons (f)	unknown	Give the source value
+t40	dated line 9.x; "section 2.9"; "ADV-051 rows L05 to L09"; "RP-037"	History	internal numbering of older texts	Remove or state "not available to the laboratory"

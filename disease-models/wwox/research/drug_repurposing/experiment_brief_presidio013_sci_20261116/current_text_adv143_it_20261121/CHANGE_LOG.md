@@ -111,3 +111,6 @@ Two limits of the checker, handled by hand. (1) It treats everything after the l
 - Added OPEN-GAP markers beyond the 85 questions: T44 (name the neuron-targeted line), T45 (cite the AAV9 comparator study), T55 (citations), T72 (dataset name), as term-based gaps.
 - Owner rule used where the documents are silent: `laboratory` only where the older text assigns the matter to the laboratory or where it concerns the laboratory's own colony, ethics or costing (Q41, Q44, Q53, Q56, Q63 to Q66, Q78, Q80); otherwise `SCI`. The reasons are in QCHECK.tsv.
 - An unsolved difficulty: the claim in the status box that "no number in this text is new" is a statement about the checker's token test and about my text work, not a verification of the old texts' own arithmetic (see C06).
+
+## Addendum 2026-11-21 (ADV-145 repair)
+After the round-2 cold read two fold-in errors were repaired (litter totals; SD values wording) and ten markers added (R2C01, R2C05, R2C09, R2C10, R2Q16, R2Q81, R2Q43, R2Q80, R2Q79, R2Q82) plus two notes in the History introduction. See `verify_adv145/COMPARISON_ADV145_IT_20261121.md` and `repair_adv145_it_20261121.py`. The status-box counts above (74 OPEN-GAP lines and 18 CONFLICT-OPEN lines) are those of the first version; the text now carries 80 and 22 lines containing those words.

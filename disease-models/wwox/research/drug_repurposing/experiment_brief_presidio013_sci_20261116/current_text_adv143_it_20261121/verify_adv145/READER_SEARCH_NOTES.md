@@ -1,0 +1,11 @@
+# Search notes
+
+**How I read.** I opened only the brief and DOCUMENT_CURRENT_pup_brief.md (581 lines). The file reader showed 389 lines, then lines 390 to 581 in a second read; I read both in full. Pass 1: top to bottom, noting every marker (OPEN-GAP, CONFLICT-OPEN, Clarification by text work). Pass 2: a section-by-section check of numbers (I recomputed the sample-size table, the 21 plus 6 cell count and the litter figures), definitions (S, grades, stages, ages) and "who decides" statements. Pass 3: the status box and History against the question of where each dated line went. Marker counts were checked with a text count of the document (72 OPEN-GAP ids, 14 CONFLICT-OPEN ids; every OPEN-GAP id is mapped to a row in QUESTIONS.tsv).
+
+**Not read or not possible.** Nothing in the file was unread. I did not open the older texts, repository, predictions file, operator note or any source paper; they are "reference not available to the laboratory". I did not judge the science.
+
+**Definition of "blocks a start".** I took "start" as beginning the stage 1 pilot and being able to commit (animals, ethics, terms). A gap that blocks only stage 2 or 3, or only an optional add-on, is marked "no" with the reason. Another reader might count the stage 2 items (Q14, Q15, Q16, Q13, QA1) as blocking; I kept them out of the count and ranked them 8 in RESULT.md.
+
+**Confidence.** QUESTIONS.tsv: high that nothing material is missing from the markers (every marker mapped), medium for the 11 questions marked "none", which are my own and may overlap an existing marker in a way I did not see. Blocking marks: medium (a judgement). CONFLICTS.tsv: high for c01, c02, c05, c06, c10 to c12, c14, c15; medium for c03, c04, c07 to c09, c13 (readable as intended wording); low importance for c17. TERMS.tsv: medium; "unknown" rows are genuine. I may have missed an unmarked conflict in the long add-on and History sections, which I read faster than the body.
+
+**Limits of the arithmetic check.** I recomputed from the stated inputs only (SD, ratio 0.7, power 0.80); the sizing figures that come from the Cheng 2020 figures (the quantified CVs) I could not check, and c14 notes that the SD figures of the "independent reading" are not in the table.
