@@ -1,6 +1,8 @@
 """ADV-143 checks for the governing current text (IT, 2026-11-21).
 
-Usage: python3 check_current_text.py NEW.md OLD_A.md OLD_B.md
+Usage: python3 check_current_text.py NEW.md OLD_A.md OLD_B.md [REPLACEMENTS.tsv]
+  Optional 4th argument: the design team's replacements file; its numeric_tokens columns (all rows) are then also allowed in the
+  body, and numbers that occur in an inserted answer but in no numeric_tokens column are listed as [4] for reconciliation.
   1. numeric tokens: every number in the laboratory body of NEW (outside headings, the status box, OPEN-GAP markers
      and the history section) must also occur as a token in OLD_A or OLD_B; prints the ones that do not.
   2. history: every blockquote line of the history section (lines starting with '> ') must occur verbatim, after
@@ -47,6 +49,16 @@ def main(argv):
     new, a, b = (open(p, encoding="utf-8").read() for p in (new_p, a_p, b_p))
     old = a + "\n" + b
     old_tok, old_norm = tokens(old), norm(old)
+    extra, own = set(), set()
+    if len(argv) > 4:
+        import csv
+        for r in csv.DictReader(open(argv[4], encoding="utf-8", newline=""), delimiter="\t"):
+            extra |= set(x.strip() for x in r["numeric_tokens"].split(";") if re.fullmatch(r"\d+(?:[.,]\d+)?", x.strip()))
+            for x in r["numeric_tokens"].split(";"):
+                if x.strip() and not x.strip().startswith(("see text", "every number traces")) and not re.fullmatch(r"\d+(?:[.,]\d+)?", x.strip()):
+                    print(f"[note] {r['repl_no']}: numeric_tokens entry is not a number: {x.strip()[:80]!r}")
+            own |= tokens(r["replacement_text"])
+        old_tok = old_tok | extra
     body, hist = split_new(new)
     bad = []
     for n, ln in enumerate(body, 1):
@@ -69,6 +81,14 @@ def main(argv):
     dropped = sorted(old_tok - new_tok, key=lambda x: float(x.replace(",", ".")))
     print(f"[3] (information) numeric tokens of the old texts absent from the new text: {len(dropped)}")
     print("    ", dropped[:80])
+    if len(argv) > 4:
+        unl = sorted((own - extra) - tokens(old), key=lambda x: float(x.replace(",", ".")))
+        print(f"[4] numbers that occur in an inserted answer but in no numeric_tokens column and not in the older texts: {len(unl)}")
+        print("    ", unl)
+        inbody = sorted(tokens("\n".join(body)) - tokens(old) - extra)
+        print(f"[5] numbers in the body that are in neither the older texts nor any numeric_tokens column: {len(inbody)}")
+        print("    ", inbody)
+        bad = [x for x in bad if sorted(tokens(x[2]) - old_tok)] if False else bad
     return 1 if (bad or bad2) else 0
 
 

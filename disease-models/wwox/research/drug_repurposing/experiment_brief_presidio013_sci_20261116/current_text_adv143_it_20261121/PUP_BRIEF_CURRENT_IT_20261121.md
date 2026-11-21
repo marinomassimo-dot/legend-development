@@ -7,13 +7,14 @@
 - Where this text and an older text differ, this text is the one to follow. Where two older statements disagreed and one was later or more specific, this text follows that one, and the other is kept in the History.
 - The older texts are kept unchanged in the repository. Every statement that this text supersedes is kept, word for word, in the section "History (old text kept)" at the end, with its date and the statement that replaced it. The History also names apart the two different things that the older texts both called "9.12": the dated correction of line 9.11, and the calcium add-on line of 2026-11-21. The body of this text does not use that number.
 - Markers in the text. **OPEN-GAP** marks a question that cannot be answered by text work: a value or a decision is missing, no value has been invented, and the owner is named (SCI is the design team that wrote this brief; operator is the coordinator of this collaboration; laboratory is the collaborating laboratory). **CONFLICT-OPEN** marks a sentence where two statements of the older texts disagree and the design team has not decided between them; both statements stay in place. **[Clarification by text work, for SCI to confirm: ...]** marks a reading that this text supplies and the design team must confirm.
-- No number in this text is new. Each number appears as in the older texts; where the older texts gave different figures for the same thing, both stay, each with its basis. Sections are named, not numbered, so that a reference cannot be confused with the numbering of the older texts.
+- Design-team notes. The bracketed notes "[Design-team answer ...; status: ...]" are the design team's answers of 2026-11-21 to the open questions of the earlier readings. The status after the semicolon says what a note is: computed from stated inputs; stated in a source text; confirmed or corrected; INFERENCE (a rule proposed by the design team, not a source value); or partly closed (the rest is a marked open item). A note is later and more specific than the sentence beside it: where they differ, follow the note; the sentence stays, and where both cannot hold a CONFLICT-OPEN marker says so.
+- Apart from the design-team notes (each figure in a note carries the status that its note states), no number in this text is new. Each number appears as in the older texts; where the older texts gave different figures for the same thing, both stay, each with its basis. Sections are named, not numbered, so that a reference cannot be confused with the numbering of the older texts.
 - The contact route for questions to the design team and the terms of the collaboration are not named in this text: see "Logistics, terms and contact".
 <!-- STATUS-BOX -->
 
 Sections, in order: Scope and limits; The question; What this experiment cannot show; What is fixed here and what the laboratory decides; Animals; Stimulus, seizure grades and observation; Ages; Groups to run (stages and the assay-validation panel); Regimens and dose checks; Analysis plan; Sample size and animals needed; Welfare and stopping; What each outcome would favour; Optional add-ons; Optional, conditional cohort; Logistics, terms and contact; Sources and their levels; History (old text kept); Out of scope for this laboratory.
 
-In this text "grade" always means a step of the 0 to 6 seizure scale, and "stage" always means a step of the experimental plan (stages 0 to 4).
+In this text "grade" always means a step of the 0 to 6 seizure scale, and "stage" always means a step of the experimental plan (stages 0 to 4). The design-team notes quote source papers that also say "stage" for a step of the seizure scale ("stage 6 is death"); in a note, a "stage" with a seizure meaning is a grade, and "stage units" are grade units. A reference in the body to a numbered line of an older text (for example "line 9.14") or to a set of the predictions file points to a text kept in the repository, not to a section of this one.
 
 ## Scope and limits
 
@@ -27,7 +28,9 @@ Predictions for the outcome classes were fixed in a predictions file before the 
 
 **OPEN-GAP R2Q82 (owner operator): Does the laboratory receive the older texts, the operator note and the predictions file, and where are they kept?**
 
-**OPEN-GAP Q06 (owner SCI): Is the predictions file supplied to the laboratory, and which definitions of this text does it override, given that it is said to govern any conflict?**
+[Design-team answer Q06, 2026-11-21; status: partly closed. (a) Which definitions govern: the hashed priors file governs any conflict, the brief only adds detail. (b) Whether the laboratory receives the priors file at all is a send decision the brief leaves to the operator; no value is proposed.]
+
+**OPEN-GAP Q06 (owner operator): send the hashed priors file with the brief, or keep it back until data exist? Note for the choice: the file holds our predictions written before data; it is meant to be scored literally afterwards.**
 
 ## The question
 
@@ -87,13 +90,17 @@ Anything not in this list and not in the section concerned is either an OPEN-GAP
 **OPEN-GAP R2Q16 (owner laboratory): Is sex balanced or stratified across arms, and are both sexes used?**
 - **Heterozygotes.** Heterozygotes are in the vehicle and ethosuximide cells at the assay age and in "all genotypes" for lithium; they are not in the interaction ratio, which is knockout over wild type only (see "Analysis plan").
 
-**OPEN-GAP Q42 (owner SCI): Which Wwox-null allele, background strain and source or repository does the laboratory need, and is it the global knockout of Cheng 2020?**
+[Design-team answer Q42, 2026-11-21; status: source statements only; the value is the laboratory's or the operator's. Source statement: Cheng 2020 describes two knockout lines (exon 1 deleted; exons 2 to 4 deleted) and does not state in the seizure Methods or Fig. 7 legend which line the PTZ pups were. The brief does not require Cheng's line.]
 
-**OPEN-GAP Q43 (owner SCI): How, at what age and with what turnaround is genotype determined before the test and before allocation?**
+**OPEN-GAP Q42 (owner laboratory): which Wwox-null allele and background strain do you hold, how is it maintained, and is it a global knockout (Cheng 2020 used global lines)?**
+
+[Design-team answer Q43, 2026-11-21; status: source statements only; the value is the laboratory's or the operator's. Source statement: nothing on genotyping in Cheng 2020; the brief requires genotype read before the test by a person who does not score. Rule (INFERENCE): genotype must be known before allocation, since allocation is blocked within genotype; so tissue must be taken at least one turnaround time before the assay age.]
+
+**OPEN-GAP Q43 (owner laboratory): at what age is tissue taken, what is the turnaround, and can the person who genotypes be separate from the scorer?**
 
 **OPEN-GAP Q44 (owner laboratory): Who holds which code (genotype reader, syringe coder, injector), and may one person hold more than one?**
 
-**OPEN-GAP Q45 (owner SCI): Where do the wild-type pups of the age series and the panel come from (heterozygote crosses or wild-type breeders), and how many litters does that need?**
+(see the design-team answer C25/Q45 above)
 
 **OPEN-GAP Q46 (owner SCI): How are knockouts allocated within genotype and litter when a litter yields about 1.75 knockouts?**
 
@@ -107,11 +114,15 @@ Anything not in this list and not in the section concerned is either an OPEN-GAP
 
 **Stimulus.** A stimulus that gives wild-type pups a measurable non-floor response, fixed in a pilot (otherwise a wild-type null cannot be told from a floor). The stimulus is the laboratory's own published standard assay; no number is proposed. In the one published experiment the provoking agent was PTZ.
 
-**OPEN-GAP Q12 (owner SCI): Is PTZ the provoking stimulus of this experiment, and by what route and schedule, or may the laboratory use another provoked-seizure assay (the lithium replication condition is defined against PTZ)?**
+[Design-team answer Q12, 2026-11-21; status: INFERENCE: a rule proposed by the design team, not a source value; one input is the laboratory's. Rule (INFERENCE): the replication arms (ethosuximide and lithium) use PTZ given i.p. in one injection, because the replication condition is Cheng 2020. All other arms may use the laboratory's own published PTZ protocol provided the SAME stimulus is given to every genotype and arm of a session and gives wild-type pups a non-floor response. A different provoked-seizure assay is a different experiment, not a variant.]
 
-**OPEN-GAP QA3 (owner SCI): Must the laboratory adopt the 0 to 6 scale as defined here, or may it use its own validated scale and map it to this one?**
+**OPEN-GAP Q12 (owner laboratory): do you run PTZ-provoked seizures in pups as a published standard assay, by which route and schedule, and could you give the single i.p. injection used in Cheng 2020 for the replication arms?**
 
-**OPEN-GAP QA2 (owner SCI): What feeding and thermal state, and what time of day, should pups be in during the 60-minute observation (blood glucose is low in null pups by about P14)?**
+[Design-team answer QA3, 2026-11-21; status: INFERENCE: a rule proposed by the design team, not a source value. Rule (INFERENCE): the laboratory's own validated scale is allowed only with a written mapping to the Cheng 0 to 6 scale for stages 1 to 2, 3, 4 to 5 and 6, fixed before data, so S and the seizure-type categories can be computed and compared with Cheng 2020; otherwise S is not comparable with the replication.]
+
+[Design-team answer QA2, 2026-11-21; status: source statements only; the value is the laboratory's or the operator's. Not in the brief or Cheng 2020. Reason it may matter: null pups show falling glucose by P14 and the brief offers a glucose series as an optional add-on. Rule (INFERENCE): record, do not set: time since last feeding or dam separation, body temperature and ambient temperature at the test, identically across arms within a session.]
+
+**OPEN-GAP QA2 (owner laboratory): what is your standard for dam separation, feeding and warming of pups before and during the assay?**
 
 **Seizure grades.**
 
@@ -125,7 +136,7 @@ Anything not in this list and not in the section concerned is either an OPEN-GAP
 | 6 | a pup that dies keeps grade 6 for the rest of the window; whether grade 6 is death is not stated |
 | status | three or more tonic-clonic seizures within the window (the Cheng 2020 definition) |
 
-**OPEN-GAP Q18 (owner SCI): What are grades 0, 1, 2 and 6 of the scale, and is grade 6 death?**
+[Design-team answer Q18, 2026-11-21; status: stated in a source text. Source statement: the modified Racine scale of Cheng 2020 is printed in the Methods: stage 0 no response; 1 behavioural arrest then vibrissae twitching; 2 head nodding; 3 unilateral forelimb clonus with a myoclonic jerk; 4 bilateral forelimb clonus with rearing; 5 generalised tonic-clonic seizure with loss of righting; 6 dead. The brief's definitions are consistent with it; stage 6 IS death.]
 
 **OPEN-GAP Q84 (owner SCI): Are "P5" and "P8", used in the predictions file and in the table above and in the cohort condition below, labels of sets of predictions and not postnatal days?**
 
@@ -138,7 +149,7 @@ Anything not in this list and not in the section concerned is either an OPEN-GAP
 **CONFLICT-OPEN R2C05 (owner SCI): Grade 4 is described without a tonic phase while generalised seizures are grades 4 to 5 with a tonic phase; which grade 4 counts as generalised is not stated.**
 - Reason: in rat pups several agents suppress generalised seizures while **raising minimal seizures** (MK-801 at P12, memantine, phenobarbital at P7 and P12, carbamazepine at P7 and P12), and wild-type pups sit at minimal-seizure level, so a mean grade can cancel two opposite effects.
 
-[Clarification by text work, for SCI to confirm: S is described once as the area under the grade against time over the window and once as the mean grade over 60 minutes; if both use the same per-minute grade series they differ only by a division by the length of the window, which the older texts do not say.]
+[Design-team answer CLAR-S, 2026-11-21; status: confirmed by the design team. S is the area under the stage against time over the 60-minute window; the mean grade over 60 minutes is S divided by 60 for the same per-minute series. The floor bracket mean S 0.27 to 0.41 is in mean-grade units. The division cancels in every ratio R and in the CV, so no sizing figure changes; state the unit with every S value.]
 
 **OPEN-GAP Q49 (owner SCI): In what units is S, and is the area, the sum or the mean grade the primary summary?**
 
@@ -146,7 +157,9 @@ Anything not in this list and not in the section concerned is either an OPEN-GAP
 
 **OPEN-GAP Q51 (owner SCI): How is latency defined for each seizure type (from which injection, first minute reaching which grade)?**
 
-**OPEN-GAP Q22 (owner SCI): Which outcome is primary if the pilot shows that S is too variable (S or an incidence such as generalised seizures), who decides, and when?**
+[Design-team answer Q22, 2026-11-21; status: partly closed. Rule (INFERENCE): decide on pilot VEHICLE animals only, before any treated-arm data, in a dated note signed before stage 2. Switch the primary outcome from S to generalised-seizure incidence if the pilot SD of log S in the knockout vehicle group gives n per arm for ratio 0.7 above the number of knockouts the laboratory can supply: n per arm = 2 x 7.85 x sigma^2 / 0.1272 (two-sided 0.05, power 0.80). At the brief's binary example (fall from 50 to 10 percent) about 20 per arm. Who decides: the design team with the laboratory, in writing, before stage 2; the brief already says S is primary unless the pilot finds a far less variable summary.]
+
+**OPEN-GAP Q22 (owner laboratory): how many knockout pups per genotype-by-arm cell can you realistically supply in one session and in total?**
 
 **Motor and ataxia pre-test.** A motor and ataxia control (the laboratory's own standard: righting, gait or equivalent) is applied to every arm as a pre-test before the provoked seizure and reported per animal as a covariate; **it is mandatory for ketamine-class and other NMDA-receptor and sedating agents** (ketamine causes ataxia at the lowest exposure in rat pups, more in younger ones, abstract level, which would confound a grade score). A pup is excluded only if it fails the laboratory's own pre-specified criterion before the stimulus (stated before data), and exclusions are listed.
 
@@ -174,13 +187,21 @@ No EEG before P14 exists in the sources read. Any assay age beyond those documen
 
 **Assay age.** Defined by the laboratory (Cheng 2020 does not state it) as the age at which knockout vehicle pups reliably show provoked seizures and can still be tested.
 
-**OPEN-GAP Q37 (owner SCI): Which ages are the candidate assay ages, and up to what age can knockouts still be tested, given death at about three to four weeks for knockouts in general and by about day 17 in the comparator's panel?**
+[Design-team answer Q37, 2026-11-21; status: partly closed. The two death statements do not conflict: 'by about 4 weeks' is Cheng 2020 (two knockout lines survived less than a month; Results); 'about day 17' is the AAV9 comparator panel's untreated knockouts. Documented ages: spontaneous seizures after P12 (Cheng 2020), ECoG spikes from about P14, slice bursting P13 to P17, death at 3 to 4 weeks. Working window (INFERENCE from those documented ages): provoked-seizure testing at P12 to P17; P11 only as the chloride-window probe. The brief leaves the assay age to the laboratory.]
 
 **Wild-type age series** (no null animal needed): wild-type pups, same stimulus and scale, at the assay age and at **at least two older ages up to about P28**, spaced by the laboratory, vehicle against each test agent; knockouts are tested at the assay age only (they cannot be matched at older ages). Purpose: to see whether a wild-type non-response is age. Which ages the series contains is fixed by this rule (the assay age and at least two older ages); the earlier remark that the series "straddles P11 and P14" is not a further requirement (it is in the History).
 
-[Clarification by text work, for SCI to confirm: the series contains ages on both sides of P11 and P14 only if the laboratory's assay age is low enough to allow it.]
+[Design-team answer CLAR-SERIES, 2026-11-21; status: corrected by the design team. Not only 'if the assay age is low enough': the series (assay age plus at least two older ages to about P28) straddles P11 and P14 when the assay age is at or below P11; when the assay age is P14 or later P11 is not an older age and is added as a further age (seven more wild-type cells). Minimum three ages if the assay age is at or below P11, four if above.]
 
-**OPEN-GAP Q21 (owner SCI): Is the same stimulus used at every age of the series, or re-fixed per age, and who fixes it for the older ages when the pilot is run at candidate assay ages?**
+**CONFLICT-OPEN R3C02 (owner SCI): The note above adds P11 as a further series age when the assay age is P14 or later, while the rule sentence in Ages says the straddle of P11 and P14 is not a further requirement; the rule sentence was not changed.**
+
+**OPEN-GAP CLAR-SERIES (owner laboratory): assay age**
+
+[Design-team answer Q39, 2026-11-21; status: INFERENCE: a rule proposed by the design team, not a source value. Rule (INFERENCE): the series is the assay age plus at least two older ages up to about P28; when the assay age is P11, P14 is one of the older ages, which covers 'straddling P11 and P14' with a third age at P17 or later; when the assay age is P14, P11 is NOT an older age and is added as a fourth age (7 more cells). The brief's 21 wild-type cells assume 3 ages.]
+
+[Design-team answer Q21, 2026-11-21; status: INFERENCE: a rule proposed by the design team, not a source value; one input is the laboratory's. Rule (INFERENCE): the same stimulus at every age of the wild-type series, because the series is meant to show whether a wild-type non-response is age; the pilot therefore must include wild-type vehicle pups at the older ages too (cheap: no knockout needed) so that the stimulus is fixed knowing the older-age response. Re-fixing the stimulus per age would turn age and stimulus into one variable; if an older age is at the floor or ceiling the series records it and a second stimulus level is an extra cell, not a replacement.]
+
+**OPEN-GAP Q21 (owner laboratory): does the same stimulus remain tolerable and informative at the older ages of the series?**
 
 **Timing limit: state the age and the structural state beside every effect.** In the germline null report, of the structural findings **only the E16.5 cortical thinning precedes seizure onset** (seizures "commonly observed after postnatal day 12"). The doublecortin increase is at P14 (n = 5), brain-size and weight reduction at P20, and the apoptosis ratio (about five times control) and the cerebellar vermis fusion are at about P19 to P20 (one reading of the source, not re-checked), so these are concurrent with or after seizure onset. The paper states no causal sequence, and "brain-wide" is not its word. A preventive or early arm cannot be read as a reversal in respect of the E16.5 finding only.
 
@@ -203,19 +224,23 @@ No EEG before P14 exists in the sources read. Any assay age beyond those documen
 | 2 ethosuximide (the arm whose outcome decides between the three readings of ethosuximide: selective, age-limited or general) | ethosuximide against vehicle in all genotypes **with the wild-type age series and the panel** | the only arm whose outcome decides between selective, age-limited and general | if the panel is not valid at the assay age, move the assay age, do not read the null |
 | 2, optional | a selective Cav3 (T-type calcium channel) blocker arm beside ethosuximide (class label; it asks whether a T-type route is the reason; "selective" = the laboratory states its criterion, at least published selectivity for Cav3 over other voltage-gated calcium, sodium and potassium channels at the exposure used and published rodent brain exposure; illustrative examples from the abstract-level literature: TTA-A2, Z944; no evidence that the drug reaches and acts on its target in the pup brain (an engagement control) exists in pups and no rodent pup datum for the selective blockers was found, so a null is not interpretable unless the laboratory adds one) | the only way to ask whether a T-type route is the reason | none |
 | 3 lithium (optional) | lithium against vehicle in all genotypes **in the same session**, with the lithium-alone arm (see "Regimens and dose checks"), **one second GSK-3 inhibitor of a different class** (chemically unrelated to lithium, published selective GSK-3 inhibition at the exposure used and published rodent brain exposure; illustrative examples: SB216763, CHIR99021, TCS2002) and **one general non-GSK-3 anticonvulsant comparator drug** effective across ages (valproate in the rat literature) | separates "GSK-3 route" from "general property"; lithium alone cannot (it also acts on other targets); **the second GSK-3 inhibitor of another class becomes more necessary, not less** | none |
+| 4 last (optional) | the NMDA-receptor pore-blocker arm (class label; channel-blocking antagonists such as ketamine and MK-801), **only with harms and stopping rules written first** (provoked-seizure aggravation, ataxia, status) and its predictions written then | aggravation is the class's best-documented harm; the slice arm should come first | predictions not fixed here |
 
 **OPEN-GAP R2Q43 (owner SCI): For stage 3, in the same session as what, and at the assay age only or across the whole age series?**
-| 4 last (optional) | the NMDA-receptor pore-blocker arm (class label; channel-blocking antagonists such as ketamine and MK-801), **only with harms and stopping rules written first** (provoked-seizure aggravation, ataxia, status) and its predictions written then | aggravation is the class's best-documented harm; the slice arm should come first | predictions not fixed here |
 
 **CONFLICT-OPEN C09 (owner SCI): The stage 1 row lists knockout and wild-type vehicle pups only, while its stop rule ("if the panel agent has no effect at any age") and the dose-check decision ("if the lower exposure is effective in the panel agent at an age") need pups given the panel agent.**
 
-**OPEN-GAP Q19 (owner SCI): Does the pilot include the panel agent and older ages, and which candidate assay ages are tested?**
+[Design-team answer Q19, 2026-11-21; status: partly closed. Inconsistency in the brief: the pilot row lists vehicle pups only, while its stop rule refers to the panel agent. Rule (INFERENCE): the pilot includes the flat-profile panel agent in wild-type pups at each candidate age (otherwise the stop rule cannot fire) and uses the ages the brief already names: P11 and P14; knockout feasible ages are bounded above by the earlier of the two documented death statements. A third later age depends on the laboratory's colony survival.]
 
-**OPEN-GAP Q20 (owner SCI): What is a "stage-matched wild-type response" in the stage 1 stop rule, and may the stimulus differ by genotype to reach it?**
+**CONFLICT-OPEN R3C04 (owner SCI): The note above takes the pilot ages to be P11 and P14, while another note takes the working window to be P12 to P17 with P11 only as the chloride-window probe; the pilot ages are not fixed.**
 
-**OPEN-GAP Q34 (owner SCI): How many pups and litters does the pilot alone need, given "n of 6 to 8 per cell" and unspecified candidate ages and cells?**
+**OPEN-GAP Q19 (owner laboratory): up to what postnatal day can knockout pups in your colony be tested with a provoked-seizure assay without losing more than a stated fraction before the test?**
 
-**OPEN-GAP Q23 (owner SCI): Which cells make up the first run (genotype by arm by age by exposure), as one list?**
+[Design-team answer Q20, 2026-11-21; status: INFERENCE: a rule proposed by the design team, not a source value. Rule (INFERENCE): 'stage-matched wild-type response' = under ONE stimulus given identically to both genotypes, wild-type vehicle pups are not at the floor by the floor rule (Q68) and the wild-type and knockout vehicle S distributions overlap at the stage level. The stimulus may NOT differ by genotype for a comparison that feeds the interaction ratio (two stimuli would confound the ratio). If no single stimulus meets both conditions, that is the pilot's stop rule firing.]
+
+[Design-team answer Q34, 2026-11-21; status: INFERENCE: a rule proposed by the design team, not a source value. Rule (INFERENCE): pilot = 2 ages x [knockout vehicle; wild-type vehicle; wild-type flat-profile agent at one exposure], n 6 to 8 per cell. That is 36 to 48 animals; knockouts 12 to 16 (7 to 9 litters at 1.75 per litter); wild-type 24 to 32 taken from the same heterozygote crosses would need 14 to 18 litters, so the pilot size in litters is set by the wild-type need unless wild-type breeders supply them (Q45). Adding older ages for the wild-type series (Q21) adds wild-type vehicle cells only.]
+
+[Design-team answer Q23, 2026-11-21; status: stated in a source text. Restated from the brief's own arithmetic, no new value: 27 cells = wild-type age series 3 ages x [vehicle; ethosuximide at 2 exposures; flat-profile panel agent at 2 exposures; rising-profile panel agent at 2 exposures] = 3 x 7 = 21 cells, plus knockout and heterozygote at the assay age x [vehicle; ethosuximide at 2 exposures] = 2 x 3 = 6 cells. NOT in the 27: lithium and lithium-alone, the second GSK-3 inhibitor, the general comparator, the T-type blocker (optional or stage 3), the falling-profile agent, any older-age knockout or heterozygote cell. Wild-type cells at the assay age sit inside the 21.]
 
 **OPEN-GAP Q25 (owner SCI): Does the lithium-alone arm receive PTZ, in which genotypes, and is it counted among the arms that share a vehicle group?**
 
@@ -223,13 +248,15 @@ No EEG before P14 exists in the sources read. Any assay age beyond those documen
 
 **OPEN-GAP Q30 (owner SCI): Is "vehicle" vehicle plus PTZ only, or is a no-PTZ control (vehicle only, no provocation) also needed?**
 
-**Order if resources are limited.** If resources allow only one step: the pilot (stage 1), then the ethosuximide arm with the age series and panel (stage 2). **Required:** stages 1 and 2 with the panel and the age series. **Optional:** the T-type arm (it needs an engagement control to be readable), stage 3, stage 4, and the add-ons. The laboratory costs the number of arms, agents and ages from these lists; the animal counts are illustrative until the pilot gives the SD. [Clarification by text work, for SCI to confirm: this order is the order for the provoked-seizure design; the one-slot order of the optional measurements under "Optional add-ons" applies to the add-ons only.]
+**Order if resources are limited.** If resources allow only one step: the pilot (stage 1), then the ethosuximide arm with the age series and panel (stage 2). **Required:** stages 1 and 2 with the panel and the age series. **Optional:** the T-type arm (it needs an engagement control to be readable), stage 3, stage 4, and the add-ons. The laboratory costs the number of arms, agents and ages from these lists; the animal counts are illustrative until the pilot gives the SD. [Design-team answer CLAR-ORDER, 2026-11-21; status: confirmed by the design team. The stage order (pilot, then ethosuximide with age series and panel; required: stages 1 and 2) is the order for the provoked-seizure design; the one-slot order of the optional measurements (add-on (i)) applies to the add-ons only.]
 
 **OPEN-GAP Q35 (owner SCI): If the laboratory can obtain only a fixed number of knockouts, what is the smallest stage 2 that remains informative?**
 
 **Assay-validation panel** (called "the panel"). Separate wild-type pups at every age, sharing that age's vehicle group, so that a null is read only at an age where the assay can show a drug effect. The valproate effect in mouse pups is unknown, so the panel's validity is established empirically at each age, and **a failed panel is reported as an assay failure, not as a negative**. The panel has: a **flat-profile** agent (an agent whose efficacy does not change with age in the cited literature: valproate protects against PTZ at every rat age tested; mouse unknown, so it is itself a check); one **rising-profile** agent (efficacy rising with age in rat PTZ abstracts: carbamazepine, or cannabidiol); and, if an NMDA-receptor arm is included, one **falling-profile** agent (efficacy falling with age: ifenprodil or Ro 25-6981; ifenprodil effective in mouse at P7 and P10 and not at P14 or P21, in rat up to P18 on one assay and proconvulsant on afterdischarges at P18 and P25; Ro 25-6981 effective at P12 and failing at P25 in rat). **All agent names are examples from the rodent literature only, not proposed for any use; the laboratory chooses** (abstract level; one laboratory family is the origin of many rat rows).
 
-**OPEN-GAP Q67 (owner SCI): What numerical rule declares the panel valid at an age?**
+[Design-team answer Q67, 2026-11-21; status: INFERENCE: a rule proposed by the design team, not a source value. Rule: the panel is valid at an age if (i) vehicle S in that age's wild-type group is not at the floor (Q68) and (ii) the flat-profile agent gives R at most 0.7 with a bootstrap interval over litters excluding 1; a panel that fails is an assay failure, not a negative. The sample size at which the interval can exclude 1 depends on sigma (Q31); with n of 6 to 8 only a large effect is detectable. Null and unresolved bands are the brief's own: a null = interval inside 0.85 to 1.15; otherwise unresolved; an age is declared invalid when the flat-profile agent gives a null, unresolved otherwise.]
+
+**CONFLICT-OPEN R3C10 (owner SCI): A panel that fails is an assay failure, but the rule above also leaves an age unresolved when the flat-profile agent gives neither a null nor an effect; what is done with an unresolved panel age is not stated.**
 
 ## Regimens and dose checks
 
@@ -246,13 +273,21 @@ No EEG before P14 exists in the sources read. Any assay age beyond those documen
 - **Second GSK-3 inhibitor.** The second GSK-3 inhibitor of another class becomes more necessary, not less.
 - **Dose check per age.** Because potency shifts with age and **no pup exposure measurement was found for any agent**, "an effect of the drug" is defined only together with a **dose check per age: two exposures per agent (or a published pup exposure) at each age of the series, or a measured exposure if the laboratory has the means (not required)**. A non-effect at an exposure that was not checked at that age is a **dose null, reported as unresolved**, not as no effect.
 
-**OPEN-GAP Q13 (owner SCI): What PTZ dose, route and volume, and what intervals between the three injections, did Cheng 2020 use for the low-dose PTZ challenge that the lithium replication condition is anchored to?**
+[Design-team answer Q13, 2026-11-21; status: partly closed. Dose and route of PTZ used by Cheng 2020 are printed in the full text (Methods paragraph on seizure induction; repeated in the Fig. 7b legend). It is one single PTZ dose given to all three genotypes (the Results call it 'a low dose of PTZ'). The injected volume is NOT printed (only 'dissolved in 0.9% sodium chloride'). The brief deliberately does not copy numbers (no-dose perimeter); the text should point to the Cheng 2020 Methods instead of copying them.]
 
-**OPEN-GAP QA1 (owner SCI): Which lithium salt, vehicle and route are used in the replication condition, and are the three injections evenly spaced within the hour?**
+**OPEN-GAP Q13 (owner laboratory): what volume per body weight and what vehicle do you use for the PTZ injection?**
 
-**OPEN-GAP Q14 (owner SCI): What is the ethosuximide regimen (dose, route, pretreatment interval, number of injections) for the main contrast?**
+[Design-team answer QA1, 2026-11-21; status: partly closed. Lithium salt, vehicle and route: stated in Cheng 2020 (lithium chloride i.p. in 0.9% sodium chloride, three injections within one hour before PTZ). Spacing within the hour is not printed. Rule (INFERENCE): equal spacing, recorded interval from the last injection to PTZ.]
 
-**OPEN-GAP Q15 (owner SCI): Should vehicle pups receive the same number, volume and timing of injections as the lithium arm, and is one shared vehicle valid across agents that may need different vehicles, routes and schedules?**
+**OPEN-GAP QA1 (owner laboratory): what spacing do you use for the three injections within the hour?**
+
+[Design-team answer Q14, 2026-11-21; status: partly closed. Source fact: Cheng 2020 printed the ethosuximide dose, route (i.p.), a single injection and the interval before PTZ (Methods). Rule: the Cheng regimen is the replication condition and the main ethosuximide contrast; the brief's dose check then adds ONE further exposure per agent per age; that second value is not derivable from documented numbers.]
+
+**OPEN-GAP Q14 (owner laboratory): what second exposure of ethosuximide would you add per age, and do you have a published or measured pup exposure for either?**
+
+[Design-team answer Q15, 2026-11-21; status: INFERENCE: a rule proposed by the design team, not a source value; one input is the laboratory's. Rule (INFERENCE, double-dummy): every pup in a session gets the same number, volume and timing of injections, with the agent present or replaced by saline. The two Cheng regimens differ in schedule (lithium three injections within one hour; ethosuximide one injection 45 minutes before PTZ, both in saline, Methods), so a single vehicle group is valid only if it receives the SAME schedule as the arm with the most injections and every other arm receives saline for the injections it does not need. Without that, an earlier statement ('one vehicle group per genotype shared by all arms') cannot hold for arms with different schedules.]
+
+**OPEN-GAP Q15 (owner laboratory): can every pup receive the same number of injections (drug or saline) so that one vehicle group serves all arms?**
 
 **OPEN-GAP Q16 (owner SCI): What does "two exposures per agent" mean (two doses, two pretreatment intervals or two measured levels), and how are the two chosen when no pup exposure measurement exists?**
 
@@ -281,19 +316,21 @@ Fixed before data.
 - **Why a ratio.** A bounded scale (0 to 6, floor at 0) makes a proportional effect look smaller in absolute grade where the baseline is low; that is why the ratio scale is primary and the floor rule exists.
 - **Order of hypotheses (fixed before data).** (i) panel validity at each age; (ii) the ethosuximide effect ratios in the knockout and in the wild type at the assay age and at the older ages, as descriptive ratios with their intervals; (iii) the interaction ratio with its interval, **exploratory unless the pilot SD makes it sized**. Where the interaction cannot be sized, the answer comes through (i) and (ii).
 
-**CONFLICT-OPEN R2C09 (owner SCI): The ethosuximide comparison is listed as primary in one place and as descriptive ratios with intervals in another; whether it is tested at the stated confidence level is not stated.**
+**CONFLICT-OPEN R2C09 (owner SCI): The ethosuximide comparison is the pre-specified primary, judged at 95%, in one place and is listed as descriptive ratios with intervals in another.**
 
 **CONFLICT-OPEN C35 (owner SCI): The multiplicity statement counts five comparisons (95% and 99%, Bonferroni for five), which matches the arm list of the design frame but not the later additions (a lithium-alone arm, an optional second regimen, panel agents at two exposures each).**
 
 **OPEN-GAP Q70 (owner SCI): How many comparisons enter the Bonferroni correction once the lithium-alone arm, a second regimen and the panel agents at two exposures each exist?**
 
-**OPEN-GAP Q68 (owner SCI): What numerical value of vehicle S counts as "at the floor"?**
+[Design-team answer Q68, 2026-11-21; status: INFERENCE: a rule proposed by the design team, not a source value. Rule (INFERENCE from documented numbers): vehicle S in a genotype is 'at the floor' when its mean S is at most 0.41 (stage units, the highest of the documented wild-type and heterozygote means that the addendum calls floor-bound, 0.27 to 0.41) or its CV is at least 1.4 (the addendum's floor-bound CV); either condition makes a ratio of 0.7 need about 140 to 210 per arm. To be replaced by the pilot's own distribution. Unit caveat: S in the earlier text is an area over 60 minutes while 0.27 to 0.41 are mean stage values, so the threshold must be restated in the units the pilot reports; an additional criterion is more than half of the animals with S = 0.]
 
 **OPEN-GAP Q69 (owner SCI): How is an increase of seizure burden (aggravation, R above 1) classified, since "effect" is defined only as R at most 0.7?**
 
 **OPEN-GAP Q71 (owner SCI): To whom and in what form is the analysis plan "stated before data" delivered (registry, collaborator, time stamp)?**
 
-**OPEN-GAP Q73 (owner SCI): The outcomes table separates E1 from E3 through the interaction, which cannot be sized with the full-hour area summary; what descriptive pattern separates them when the interaction cannot be sized?**
+[Design-team answer Q73/C37, 2026-11-21; status: INFERENCE: a rule proposed by the design team, not a source value. Descriptive pattern when the interaction cannot be sized (INFERENCE, a rule the design team defines; no new number): classify from the two simple-effect ratios of the same session with their litter-bootstrap intervals, panel valid and wild type above the floor. E1: knockout R at most 0.7 with the interval excluding 1, wild-type interval inside 0.85 to 1.15. E3: both genotypes show an effect (R at most 0.7, interval excluding 1) and the point estimate of the interaction ratio lies in 0.7 to 1.43. Anything else (wild type at the floor, wide intervals, only one genotype with an effect and the wild-type interval not inside 0.85 to 1.15): not separable, report both simple ratios and the interaction ratio as exploratory. The interaction interval is reported but not used to separate E1 from E3 unless the pilot makes it sized.]
+
+**OPEN-GAP Q73 (owner laboratory): pilot data**
 
 ## Sample size and animals needed
 
@@ -311,9 +348,15 @@ All figures here are ASSUMED values, hypothesis level, not a forecast, and illus
 | three knockout arms, simple effect only | at 11 per arm about 19 litters; at 31 per arm about 53; at 36 to 109 per arm, 108 to 327 knockouts, about 62 to 187 litters | the figures at 11 and 31 are the optimistic scale; the figures at 36 to 109 follow the bracket |
 | planning total for the required stages with the dose check (two exposures per agent per age, panel included; for planning, not a promise) | about 27 cells (the wild-type age series: 3 ages times vehicle, ethosuximide at two exposures, one flat-profile and one rising-profile panel agent at two exposures each = 21 cells; knockout and heterozygote at the assay age: vehicle and ethosuximide at two exposures = 6 cells), i.e. about 300 animals at 11 per cell or about 1,350 at 50 per cell, of which 33 to 150 knockouts (19 to 86 litters) | optimistic scale (the basis of the per-cell figure of 50 is not stated); the pilot decides the dose check first: if the lower exposure is effective in the panel agent at an age, one exposure per agent at that age is enough and the totals fall accordingly |
 
+**OPEN-GAP R3Q37 (owner SCI): Which single figure of animals and litters is to go into an application, given the planning totals of this section?**
+
+**CONFLICT-OPEN R3C01 (owner SCI): The replication condition is the published low-dose stimulus, at which wild type sat near the floor, while a stimulus with a non-floor wild-type response is required for the contrast; the text does not say which wins.**
+
 Note on the number 44. The older texts used it for two different quantities: (i) a simple-effect number of 44 to 79 animals per arm at log SD 0.6 to 0.8 (the eye reading above); (ii) an interaction number of 44 per cell at SD 0.3 in the original arithmetic, which is superseded (see the History). Only the first is current.
 
 **Planning scale.** The 36 to 109 animals per arm for the knockout is the scale for planning. The litter and animal totals of the sections above (19 and 53 litters; 75 litters; the dose-check totals) are the optimistic scale and should be read with the 36 to 109 bracket.
+
+**CONFLICT-OPEN R3C09 (owner SCI): The sentence above cites 75 litters as a figure of the sections above, but the sample-size table carries 75 only as a derived figure (3 x 44) and, in the History, as a superseded one.**
 
 **An independent reading** of the same curves agrees within about 20 percent (per-minute means within 0.05 and 0.15 grade; SD of the summed grade 9.5 to 62 and 10.9 to 69 against 11.4 to 71.5 and 9.2 to 56.9 for the first reading, whose values are given only here) and concludes that the sizing flag stands.
 
@@ -325,25 +368,43 @@ Note on the number 44. The older texts used it for two different quantities: (i)
 
 Wild-type and heterozygous animals are not limiting.
 
-**CONFLICT-OPEN C25 (owner SCI): The sentence above says wild-type and heterozygous animals are not limiting, while the age series and the panel call for 21 wild-type cells, and the wild-type pups are taken to come from heterozygote crosses (expected 1:2:1) that give about 1.75 knockouts per litter; where the wild-type pups come from is not stated.**
+[Design-team answer C25/Q45, 2026-11-21; status: computed from stated inputs; one input is the laboratory's. 'Wild-type and heterozygous animals are not limiting' holds only if wild types come from wild-type breeding pairs. From heterozygote crosses wild types are 1.75 per litter like knockouts: 21 wild-type cells at 11 are 231 animals = about 132 litters, against about 33 litters from wild-type pairs at 7 pups, and 33 knockouts need about 19 litters.]
 
-**CONFLICT-OPEN C06 (owner SCI): The rule that an interaction contrast needs twice the simple-effect number per cell, applied to the stated per-arm bracket of 36 to 109 animals, does not appear to give the stated per-cell bracket of 180 to 320 animals; the inputs of the per-cell figure are not given.**
+**OPEN-GAP C25 (owner laboratory): wild-type source**
 
-**CONFLICT-OPEN C08 (owner SCI): The vehicle group shared by the test arms is to be about twice the size of a test arm, while the planning totals give every cell the same n (about 300 animals at 11 per cell); the vehicle group of an age is also shared by the panel agents, not only by the test arms.**
+[Design-team answer Q45, 2026-11-21; status: partly closed. The brief's 'wild-type and heterozygous animals are not limiting' holds only if wild types come from wild-type breeders. From heterozygote crosses wild types yield 1.75 per litter like knockouts. Computed (INFERENCE): 21 wild-type cells at 11 = 231 animals = 132 heterozygote-cross litters, against 33 litters from wild-type pairs at 7 pups; 33 knockouts need 19 litters.]
 
-**OPEN-GAP Q31 (owner SCI): Which n per cell should the laboratory plan for the first run, given that the figures 11, 22, 31, 36 to 109, 44, 50 and 180 to 320 are all stated with different bases?**
+**OPEN-GAP Q45 (owner laboratory): can wild-type pups for the age series and the panel come from wild-type pairs of the same background, and is littermate control needed for the knockout contrast?**
 
-**OPEN-GAP Q32 (owner SCI): Is the vehicle group made about twice a test arm in the 27-cell total of about 300 animals?**
+[Design-team answer C06, 2026-11-21; status: computed from stated inputs. Both brackets are right and answer different contrasts. 36 to 109 animals per arm is the simple effect in the knockout (knockout variability only). 180 to 320 animals per cell is the interaction contrast, whose variance holds the knockout and the wild-type variability; the per-cell number is the SUM of the two simple-effect numbers (knockout plus wild type), not twice the knockout number. 'Twice' holds only when the variability is equal in the two genotypes. Inputs of the per-cell figure: ratio 0.7, two-sided alpha 0.05, power 0.80, log SD 0.54 to 0.94 in the knockout and 1.06 to 1.30 in wild type and heterozygous pups (floor-bound arms, mean S 0.27 to 0.41, CV above 1.4).]
 
-**OPEN-GAP Q33 (owner SCI): Do the litter figures (19, 25, 53, 75 and the bracket figures) refer to one drug against vehicle or to three knockout arms, and which single figure is the one for a breeding plan?**
+[Design-team answer C04, 2026-11-21; status: computed from stated inputs. The addendum is current. The standing figures from the superseded four-times rule (176 animals, 88 knockouts, 75 litters, 132 knockouts) are replaced as below and kept in History only. At the optimistic scale (log SD 0.3, which the addendum calls not credible): interaction 22 per cell, 4 cells 88 animals, 44 knockouts, 25 litters, for one drug against vehicle. The credible planning scale is the two-scale table in the planning table (C07). C04 resolves with C06: 'later wins' holds because the later statement corrects the per-cell factor; its own range (180 to 320) is right for floor-bound wild-type variability.]
+
+[Design-team answer C07, 2026-11-21; status: computed from stated inputs. Planning table at three variability scales, animals per cell, litters at 1.75 knockouts per litter (all ASSUMED values; ratio 0.7; alpha 0.05 two-sided; power 0.80): (a) log SD 0.3, optimistic and not credible: simple effect 11 per arm, three knockout arms 33 knockouts = 19 litters; interaction 22 per cell, 88 animals, 44 knockouts, 25 litters. (b) log SD 0.5: simple effect 31 per arm, three knockout arms 93 knockouts = 53 litters; interaction 62 per cell, about 250 animals, 124 knockouts, 71 litters. (c) credible scale from the published curves: simple effect 36 to 109 per arm, three knockout arms 108 to 327 knockouts = 62 to 187 litters; interaction 72 to 218 per cell at equal variability (about 290 to 870 animals, 145 to 435 knockouts, 82 to 249 litters) and 180 to 320 per cell with floor-bound wild-type variability (about 700 to 1,300 animals, 350 to 630 knockouts, 200 to 360 litters). The planning scale is (c); 11 per cell is a lower bound only.]
+
+**OPEN-GAP C07 (owner laboratory): pilot SD**
+
+[Design-team answer C08/Q32, 2026-11-21; status: computed from stated inputs. The 27-cell total of about 300 animals gives every cell the same n (27 x 11 = 297). With the shared vehicle at about twice a test arm (square-root rule, n x sqrt(k)) and 11 per test arm, the total is about 354: wild type per age 6 test arms 66 plus vehicle 26.9 = 92.9, times 3 ages; knockout and heterozygote at the assay age 2 test arms 22 plus vehicle 15.6 = 37.6, times 2 genotypes. The vehicle of an age is also shared by the panel agents, which the square-root rule counts as test arms. State 'about 300 at equal cells, about 350 with the doubled vehicle'.]
+
+[Design-team answer Q32, 2026-11-21; status: partly closed. Statements disagree: an earlier statement says one shared vehicle group per genotype of about twice a test arm (square-root rule); an earlier statement totals 27 cells at 11 per cell = 297 animals, i.e. vehicle cells at 11 (not doubled). Computed (INFERENCE, square-root rule n_vehicle = n x sqrt(k) per age and genotype): at 11 per arm the total is about 354, not about 300 (WT per age 6 arms: 66 + 26.9 = 92.9; knockout and heterozygote 2 arms each: 22 + 15.6 = 37.6). The 'about 300' does not count the doubled vehicle.]
+
+[Design-team answer Q31, 2026-11-21; status: INFERENCE: a rule proposed by the design team, not a source value. Mapping of the figures in the briefs (INFERENCE where noted, from the inputs of the addendum): 11 and 31 and 79 per arm = simple effect at sigma_log 0.3, 0.5, 0.8; 22 = interaction at sigma 0.3 with equal sigma (twice 11); 44 = the superseded 'four times' error; 50 = an illustration; 36 to 109 = simple effect in knockouts at sigma 0.54 to 0.94 (addendum); 180 to 320 = interaction per cell with wild-type sigma 1.07 to 1.30 (see C06). For the first run (pilot) the brief already states 6 to 8 per cell. For stage 2, rule: n per arm = n_simple(sigma-hat from the pilot) with sigma-hat inflated by one relative standard error of an SD (1/sqrt(2(n-1)): 0.29 at n = 7), which at the addendum's range moves 36 to 60 and 109 to 181 per arm.]
+
+(see the design-team answer C08/Q32 above)
+
+[Design-team answer Q33, 2026-11-21; status: stated in a source text. All four litter figures are reproducible from stated inputs at 1.75 knockouts per litter: 19 = 3 knockout arms x 11 (sigma 0.3, simple); 53 = 3 x 31 (sigma 0.5, simple); 25 = interaction 22 per cell, 2 knockout cells = 44 knockouts (sigma 0.3; one drug against vehicle; the CURRENT optimistic figure after the correction in the addendum); 75 = 3 x 44. The addendum's credible range: 62 to 187 litters for three knockout arms at 36 to 109 (simple); 200 to 360 for one drug interaction at 180 to 320 per cell. Note that the addendum itself calls sigma 0.3 not credible.]
 
 ## Welfare and stopping
 
 **Humane endpoints and approvals are the laboratory's.** About half of PTZ-injected knockouts reached status epilepticus in Cheng 2020. A stopping rule for status (when to rescue, by the laboratory's own approved procedure; the pup then stays in the analysis with its last grade carried forward, flagged), written before the first animal, is a design requirement, not an option. The laboratory's own ethics approval for PTZ-provoked status epilepticus in fragile knockout pups is needed, and the laboratory decides whether stage 2 is possible at all. Stage stop rules are in the stage table.
 
-**OPEN-GAP Q61 (owner SCI): What triggers a rescue, what is the rescue procedure, and may a rescue drug be used given that it could confound the arm effect?**
+[Design-team answer Q61, 2026-11-21; status: partly closed. Source statement: the definition of status = three or more tonic-clonic seizures within the hour (Cheng 2020), reached by about half of PTZ-injected knockouts; the brief requires a status stopping rule, written before the first animal, using the laboratory's approved rescue procedure, with the pup kept in the analysis at its last stage, flagged, and results reported with and without. The trigger, the rescue procedure and whether the rescue agent is given identically to all arms are not in any source read; no value is proposed (welfare).]
 
-**OPEN-GAP Q62 (owner SCI): Is death an accepted outcome in vehicle and treated groups, and what death or status rate is expected per arm (only "about half of PTZ-injected knockouts reached status" is given)?**
+**OPEN-GAP Q61 (owner laboratory): what trigger and procedure does your approved protocol use for status, who decides blind to arm, and does the rescue agent confound the arm contrast (given identically to all arms or not)?**
+
+[Design-team answer Q62, 2026-11-21; status: partly closed. Source statement: death is a scored outcome and about half of PTZ-injected knockouts reached status. Not stated: the death or status rate per arm, or whether the laboratory's approval accepts death as an outcome rather than a humane endpoint.]
+
+**OPEN-GAP Q62 (owner laboratory): does your approval accept death as an outcome or require a humane endpoint, and what death and status rates have you seen in vehicle and treated knockouts at your stimulus?**
 
 **OPEN-GAP Q63 (owner laboratory): What are the conditions of the 60-minute observation of fragile pups (dam present or isolated, heat support, handling)?**
 
@@ -351,9 +412,11 @@ Wild-type and heterozygous animals are not limiting.
 
 **OPEN-GAP Q66 (owner laboratory): What is the total procedural burden on one pup in the lithium arm (three injections, pre-test, PTZ, observation, possible tissue)?**
 
-**OPEN-GAP QA5 (owner SCI): Does a stop rule (the pilot, or a panel that is invalid at the assay age) end only that stage or the whole experiment, and who is informed?**
+[Design-team answer QA5, 2026-11-21; status: partly closed. Source statement: stage 1 stop = knockout vehicle pups cannot be tested at a stage-matched wild-type response, or the panel agent has no effect at any age; stage 2 'if the panel is not valid at the assay age, move the assay age, do not read the null'; stage 4 waits for the slice arm. Rule (INFERENCE from the stage dependencies): a stage-1 stop ends stages 2 to 4 (they take the assay age, stimulus and sample size from it); the stage-2 branch ends only that reading (move age, repeat), not stage 3.]
 
-**OPEN-GAP QA4 (owner SCI): Are pilot animals and pilot data reused in the main analysis, and who signs off the pilot's choice of age, stimulus and summary before the main run starts?**
+[Design-team answer QA4, 2026-11-21; status: source statements only; the value is the laboratory's or the operator's. Each pup is tested once; pilot pups are therefore not reused in treated arms. Pilot data may enter the main analysis only if the pilot arm is identical to a main arm and declared so in writing before it is run. The sign-off (who accepts the pilot and releases stage 2) is not stated in the brief.]
+
+**OPEN-GAP QA4 (owner laboratory): who signs off the pilot and releases stage 2?**
 
 ## What each outcome would favour
 
@@ -371,13 +434,15 @@ Hypothesis; each row is one stated reading.
 | Lithium | knockout-larger effect, **reproduced by the second GSK-3 inhibitor and not by the comparator** | GSK-3 route, knockout-enhanced | p-Ser9 change or kinase activity (needs the add-on) |
 | Any arm | minimal-seizure incidence up while generalised incidence down | seizure-type-specific action | benefit or harm in the null phenotype |
 
+**CONFLICT-OPEN R3C05 (owner SCI): Outcome E2 is defined by a wild-type floor, while the floor rule says R is not computed and the arm is not interpretable at the floor.**
+
 The weights for these classes are in the predictions file; they are scored literally when data exist and are not calibrated probabilities.
 
 C1 and C2 are labels of the two T-type rows (the blocker matches ethosuximide, or does not).
 
 [Clarification by text work, for SCI to confirm: the first lithium row appears to correspond to reading L1 and the second to reading L2; the older table carries no L1 or L2 labels.]
 
-**OPEN-GAP Q82 (owner SCI): Which rows of this table carry the lithium readings L1 and L2 (the older table does not label them)?**
+[Design-team answer Q82, 2026-11-21; status: confirmed by the design team. Reading L1 (general) = the row 'lithium effect in all genotypes (interaction 0.7 to 1.43); second GSK-3 inhibitor effect; comparator effect'. Reading L2 (GSK-3-specific) = the row 'knockout-larger effect, reproduced by the second GSK-3 inhibitor and not by the comparator'. The title names L1 as general and L2 as GSK-3-specific.]
 
 ## Optional add-ons
 
@@ -590,6 +655,48 @@ This section keeps, word for word, every statement of the two older texts that t
 - 2026-11-21, line 9.13: folded into add-on (e3).
 - 2026-11-21, lines 9.14, 9.15 and 9.16: see "Out of scope for this laboratory" and the entry above.
 - 2026-11-21, line 9.17: folded into add-on (e4).
+
+
+### Markers replaced on 2026-11-21 (design-team group B)
+
+The lines below were the open markers of this text before the design team's answers were integrated; they are kept as they stood.
+
+- Marker C06: **CONFLICT-OPEN C06 (owner SCI): The rule that an interaction contrast needs twice the simple-effect number per cell, applied to the stated per-arm bracket of 36 to 109 animals, does not appear to give the stated per-cell bracket of 180 to 320 animals; the inputs of the per-cell figure are not given.**
+- Marker C08: **CONFLICT-OPEN C08 (owner SCI): The vehicle group shared by the test arms is to be about twice the size of a test arm, while the planning totals give every cell the same n (about 300 animals at 11 per cell); the vehicle group of an age is also shared by the panel agents, not only by the test arms.**
+- Marker Q32: **OPEN-GAP Q32 (owner SCI): Is the vehicle group made about twice a test arm in the 27-cell total of about 300 animals?**
+- Marker C25: **CONFLICT-OPEN C25 (owner SCI): The sentence above says wild-type and heterozygous animals are not limiting, while the age series and the panel call for 21 wild-type cells, and the wild-type pups are taken to come from heterozygote crosses (expected 1:2:1) that give about 1.75 knockouts per litter; where the wild-type pups come from is not stated.**
+- Marker Q45: **OPEN-GAP Q45 (owner SCI): Where do the wild-type pups of the age series and the panel come from (heterozygote crosses or wild-type breeders), and how many litters does that need?**
+- Marker Q73: **OPEN-GAP Q73 (owner SCI): The outcomes table separates E1 from E3 through the interaction, which cannot be sized with the full-hour area summary; what descriptive pattern separates them when the interaction cannot be sized?**
+- Marker Q82: **OPEN-GAP Q82 (owner SCI): Which rows of this table carry the lithium readings L1 and L2 (the older table does not label them)?**
+- Marker CLAR-S: [Clarification by text work, for SCI to confirm: S is described once as the area under the grade against time over the window and once as the mean grade over 60 minutes; if both use the same per-minute grade series they differ only by a division by the length of the window, which the older texts do not say.]
+- Marker CLAR-SERIES: [Clarification by text work, for SCI to confirm: the series contains ages on both sides of P11 and P14 only if the laboratory's assay age is low enough to allow it.]
+- Marker CLAR-ORDER: [Clarification by text work, for SCI to confirm: this order is the order for the provoked-seizure design; the one-slot order of the optional measurements under "Optional add-ons" applies to the add-ons only.]
+- Marker Q06: **OPEN-GAP Q06 (owner SCI): Is the predictions file supplied to the laboratory, and which definitions of this text does it override, given that it is said to govern any conflict?**
+- Marker Q12: **OPEN-GAP Q12 (owner SCI): Is PTZ the provoking stimulus of this experiment, and by what route and schedule, or may the laboratory use another provoked-seizure assay (the lithium replication condition is defined against PTZ)?**
+- Marker Q13: **OPEN-GAP Q13 (owner SCI): What PTZ dose, route and volume, and what intervals between the three injections, did Cheng 2020 use for the low-dose PTZ challenge that the lithium replication condition is anchored to?**
+- Marker Q14: **OPEN-GAP Q14 (owner SCI): What is the ethosuximide regimen (dose, route, pretreatment interval, number of injections) for the main contrast?**
+- Marker Q15: **OPEN-GAP Q15 (owner SCI): Should vehicle pups receive the same number, volume and timing of injections as the lithium arm, and is one shared vehicle valid across agents that may need different vehicles, routes and schedules?**
+- Marker Q18: **OPEN-GAP Q18 (owner SCI): What are grades 0, 1, 2 and 6 of the scale, and is grade 6 death?**
+- Marker Q19: **OPEN-GAP Q19 (owner SCI): Does the pilot include the panel agent and older ages, and which candidate assay ages are tested?**
+- Marker Q20: **OPEN-GAP Q20 (owner SCI): What is a "stage-matched wild-type response" in the stage 1 stop rule, and may the stimulus differ by genotype to reach it?**
+- Marker Q21: **OPEN-GAP Q21 (owner SCI): Is the same stimulus used at every age of the series, or re-fixed per age, and who fixes it for the older ages when the pilot is run at candidate assay ages?**
+- Marker Q22: **OPEN-GAP Q22 (owner SCI): Which outcome is primary if the pilot shows that S is too variable (S or an incidence such as generalised seizures), who decides, and when?**
+- Marker Q23: **OPEN-GAP Q23 (owner SCI): Which cells make up the first run (genotype by arm by age by exposure), as one list?**
+- Marker Q31: **OPEN-GAP Q31 (owner SCI): Which n per cell should the laboratory plan for the first run, given that the figures 11, 22, 31, 36 to 109, 44, 50 and 180 to 320 are all stated with different bases?**
+- Marker Q33: **OPEN-GAP Q33 (owner SCI): Do the litter figures (19, 25, 53, 75 and the bracket figures) refer to one drug against vehicle or to three knockout arms, and which single figure is the one for a breeding plan?**
+- Marker Q34: **OPEN-GAP Q34 (owner SCI): How many pups and litters does the pilot alone need, given "n of 6 to 8 per cell" and unspecified candidate ages and cells?**
+- Marker Q37: **OPEN-GAP Q37 (owner SCI): Which ages are the candidate assay ages, and up to what age can knockouts still be tested, given death at about three to four weeks for knockouts in general and by about day 17 in the comparator's panel?**
+- Marker Q42: **OPEN-GAP Q42 (owner SCI): Which Wwox-null allele, background strain and source or repository does the laboratory need, and is it the global knockout of Cheng 2020?**
+- Marker Q43: **OPEN-GAP Q43 (owner SCI): How, at what age and with what turnaround is genotype determined before the test and before allocation?**
+- Marker Q61: **OPEN-GAP Q61 (owner SCI): What triggers a rescue, what is the rescue procedure, and may a rescue drug be used given that it could confound the arm effect?**
+- Marker Q62: **OPEN-GAP Q62 (owner SCI): Is death an accepted outcome in vehicle and treated groups, and what death or status rate is expected per arm (only "about half of PTZ-injected knockouts reached status" is given)?**
+- Marker Q67: **OPEN-GAP Q67 (owner SCI): What numerical rule declares the panel valid at an age?**
+- Marker Q68: **OPEN-GAP Q68 (owner SCI): What numerical value of vehicle S counts as "at the floor"?**
+- Marker QA1: **OPEN-GAP QA1 (owner SCI): Which lithium salt, vehicle and route are used in the replication condition, and are the three injections evenly spaced within the hour?**
+- Marker QA2: **OPEN-GAP QA2 (owner SCI): What feeding and thermal state, and what time of day, should pups be in during the 60-minute observation (blood glucose is low in null pups by about P14)?**
+- Marker QA3: **OPEN-GAP QA3 (owner SCI): Must the laboratory adopt the 0 to 6 scale as defined here, or may it use its own validated scale and map it to this one?**
+- Marker QA4: **OPEN-GAP QA4 (owner SCI): Are pilot animals and pilot data reused in the main analysis, and who signs off the pilot's choice of age, stimulus and summary before the main run starts?**
+- Marker QA5: **OPEN-GAP QA5 (owner SCI): Does a stop rule (the pilot, or a panel that is invalid at the assay age) end only that stage or the whole experiment, and who is informed?**
 
 ## Out of scope for this laboratory
 

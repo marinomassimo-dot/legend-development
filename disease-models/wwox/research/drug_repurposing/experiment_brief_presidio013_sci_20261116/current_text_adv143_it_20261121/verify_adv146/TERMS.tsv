@@ -1,0 +1,32 @@
+t_id	term_as_written	where	what_i_took_it_to_mean	proposed_plain_wording
+T001	S	Stimulus, seizure grades and observation	a per-animal seizure burden: area under the grade-versus-time curve over 60 minutes (notes also say 'mean grade')	'seizure burden score S (sum of the per-minute maximum grades over 60 minutes; divide by 60 for the mean grade); always state which'
+T002	R(genotype), interaction ratio	Analysis plan	ratio of mean S treated to mean S vehicle, per genotype; interaction = knockout ratio over wild-type ratio	'treatment ratio' and 'ratio of treatment ratios (knockout over wild type)'
+T003	floor / 'at the floor'	The question; Analysis plan	so low that a reduction cannot be seen	'baseline too low to show a reduction'; give the numerical criterion in the units of S
+T004	the panel; flat-profile, rising-profile, falling-profile agent	Groups to run (assay-validation panel)	wild-type pups given a reference drug to prove the assay can show a drug effect at that age	'assay-validation group'; 'reference drug whose effect is expected not to change / to rise / to fall with age'
+T005	E1 to E5, L1, L2, C1, C2	The question; What each outcome would favour	outcome labels (knockout-selective; age-limited; general; no effect; not interpretable; lithium general; lithium GSK-3-specific; T-type blocker matches/does not match)	spell out each label in words wherever used; add an E5 row
+T006	P5 and P8	Stimulus (Q84)	sets of predictions in a file I do not hold (not ages)	'prediction sets 5 and 8 of the predictions file'; never write P with a number unless it is a postnatal day
+T007	double-dummy	Regimens (Q15 note)	every pup gets the same number, volume and timing of injections, drug or saline	'every pup receives the same injection schedule; saline replaces the drug where needed'
+T008	S-KO, S-HT	Ages table; Optional add-ons (g)	S-KO = neuron-targeted knockout line; S-HT = unknown	define both with allele and cross, or drop the abbreviations
+T009	P47T	Optional add-ons (g)	a published report, unknown	'the 2026 report (full citation needed)'
+T010	predictions file / priors file / hashed file	Scope and limits	a pre-registered file of predictions fixed before the brief	'pre-registered predictions file (checksum ...), and whether it is supplied to you'
+T011	INFERENCE; 'partly closed'; 'source statements only'; 'stated in a source text'; 'computed from stated inputs'	Design-team answer notes	status tags of notes; meaning not explained	define each tag in the status box and say which tags bind the laboratory
+T012	square-root rule	Animals; Analysis plan	shared vehicle group sized as n times the square root of the number of arms	'a shared vehicle group is made sqrt(k) times as large as a test arm, k = number of comparisons'
+T013	no-dose perimeter	Regimens (Q13 note)	an internal rule that the brief prints no dose	'this document gives no doses; see the source paper'
+T014	sized / 'cannot be sized'	Analysis plan; Sample size	an interaction test for which the pilot gives enough animals	'adequately powered'
+T015	dose null	Regimens and dose checks	no effect at an exposure not checked at that age, reported as unresolved	'inconclusive because the exposure was not verified at that age'
+T016	engagement control	Groups to run (T-type row)	a control showing the drug reaches and acts on its target in the pup brain	'target-engagement control'
+T017	composition caveat	Optional add-ons (g)	a warning that different regions or cell mixes were compared	'the two measures come from different brain regions'
+T018	ADV, IT, HE, SCI, operator, owner	Status box; History	roles in the design team; SCI = design team; operator = coordinator; owner = who should answer	state in the status box and drop ADV, IT and HE from the current text
+T019	R2Q81, R2C05, C09, CLAR-S, CLAR-SERIES, CLAR-ORDER, QA1 to QA5, T44, T55 ...	All sections	marker ids; the R2 prefix marks a second-round marker; some ids are repeated without it (Q81/R2Q81, Q43/R2Q43, Q79/R2Q79, Q80/R2Q80)	use one numbering and a short list of the unanswered questions with the owner
+T020	the addendum	Analysis plan (Q68 note); Sample size notes	a dated later quantification of Cheng Fig. 7b and 7d	'the later quantification of Fig. 7b and 7d in this document'
+T021	planning scale / optimistic scale	Sample size	(c) credible planning scale 36 to 109 per arm, versus (a) SD 0.3 optimistic scale	'credible scale (SD 0.54 to 0.94)' and 'optimistic scale (SD 0.3, not credible)'
+T022	comparator (comparator drug; AAV9 comparator; comparator arm)	Groups to run; Optional cohort	three different uses: a non-GSK-3 anticonvulsant drug, a gene-therapy study, an arm	'general anticonvulsant control drug'; 'the AAV9 gene-therapy study'
+T023	one-slot order	Optional add-ons (i); Groups to run	ranking of optional measurements if only one can be done	'priority order for optional measurements'
+T024	carrier readout / Tc-MEP	Optional add-ons (f)	heterozygote readout by transcranial motor-evoked potential	'heterozygote motor-evoked-potential latency'
+T025	weights ... scored literally	Scope; What each outcome would favour	predictions carry stated probabilities scored exactly against the data	'pre-stated probabilities, scored as written'
+T026	stage-matched wild-type response	Groups to run (stage 1 stop rule)	a wild-type response at a comparable seizure level; the Q20 note defines it	use the Q20 definition in the table itself
+T027	TPM; DCX; g-ratio; CC1; NRG1-ErbB4; PV; sIPSC	Optional add-ons	transcripts per million; doublecortin; myelin thickness ratio; oligodendrocyte marker; a signalling pair; parvalbumin; spontaneous inhibitory currents	expand on first use (several are partly expanded)
+T028	spontaneous-seizure burden / pretreatment / acute rescue	What this experiment cannot show	seizures that occur without provocation; drug given before the seizure; treatment after onset	already plain; keep
+T029	'brain-wide', 'seizure-and-death lines', 'null' (used for knockout)	Ages; Optional add-ons	knockout lines with early death; null = knockout, also 'null' for no effect in the thresholds table	use 'knockout' for the animal and 'no effect' for the result
+T030	hypothesis level / class label	Scope	statements are hypotheses; agents named by class	'hypothesis, not a result'
+T031	reading by eye / 'by eye from a figure'	Sources; Sample size	numbers estimated from a published figure	'estimated from the figure'

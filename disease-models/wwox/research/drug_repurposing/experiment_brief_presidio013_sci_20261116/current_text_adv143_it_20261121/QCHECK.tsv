@@ -4,24 +4,24 @@ Q02	Optional add-ons; Out of scope for this laboratory	ANSWERED_IN_TEXT	lines on
 Q03	History (old text kept), entry 'The text itself'	ANSWERED_IN_TEXT	the two things called 9.12 are named apart; CONFLICT-OPEN C17 also marked
 Q04	History (old text kept), every entry	ANSWERED_IN_TEXT	each dated line and what replaced which statement
 Q05	Ages (after the table); History last entries	ANSWERED_IN_TEXT	the pointer lines changed nothing; any new age is the laboratory's to decide
-Q06	OPEN-GAP Q06 (Scope and limits)	OPEN_GAP_SCI	whether the predictions file is supplied; which definitions it overrides
+Q06	OPEN-GAP Q06 (Scope and limits)	OPEN_GAP_OPERATOR	whether the predictions file is supplied; which definitions it overrides; design-team answer integrated 2026-11-21 (partly closed); the remaining question is open
 Q07	Scope and limits; Groups to run (stage 0)	ANSWERED_IN_TEXT	no other file is referenced; the one file the laboratory needs is the predictions file (Q06)
 Q08	Whole text; Ages (withdrawal sentence)	ANSWERED_IN_TEXT	first-person remarks removed; the one inference is stated as an inference of the design team
 Q09	Status box; OPERATOR_NOTES_CURRENT_IT_20261121.md	ANSWERED_IN_TEXT	operator-facing content moved out of the laboratory text
 Q10	Sources and their levels (Second-hand statements)	ANSWERED_IN_TEXT	rule: not to be quoted as source fact before the sentence is read in the source; full citations are OPEN-GAP T55
 Q11	What is fixed here and what the laboratory decides	ANSWERED_IN_TEXT	one list of what the laboratory decides, built from the older texts; other items are marked OPEN-GAP in their sections
-Q12	OPEN-GAP Q12 (Stimulus, seizure grades and observation)	OPEN_GAP_SCI	
-Q13	OPEN-GAP Q13 (Regimens and dose checks)	OPEN_GAP_SCI	
-Q14	OPEN-GAP Q14 (Regimens and dose checks)	OPEN_GAP_SCI	
-Q15	OPEN-GAP Q15 (Regimens and dose checks)	OPEN_GAP_SCI	
+Q12	OPEN-GAP Q12 (Stimulus, seizure grades and observation)	OPEN_GAP_LABORATORY	; design-team answer integrated 2026-11-21 (INFERENCE: a rule proposed by the design team, not a source value; one input is the laboratory's); the remaining question is open
+Q13	OPEN-GAP Q13 (Regimens and dose checks)	OPEN_GAP_LABORATORY	; design-team answer integrated 2026-11-21 (partly closed); the remaining question is open
+Q14	OPEN-GAP Q14 (Regimens and dose checks)	OPEN_GAP_LABORATORY	; design-team answer integrated 2026-11-21 (partly closed); the remaining question is open
+Q15	OPEN-GAP Q15 (Regimens and dose checks)	OPEN_GAP_LABORATORY	; design-team answer integrated 2026-11-21 (INFERENCE: a rule proposed by the design team, not a source value; one input is the laboratory's); the remaining question is open
 Q16	OPEN-GAP Q16 (Regimens and dose checks)	OPEN_GAP_SCI	the term 'exposure' is kept; a plain wording would need a new fact
 Q17	OPEN-GAP Q17 (Regimens and dose checks)	OPEN_GAP_SCI	
-Q18	OPEN-GAP Q18 (Stimulus, seizure grades and observation)	OPEN_GAP_SCI	grades 3, 4, 5 and the status definition are in the grade table
-Q19	OPEN-GAP Q19 and CONFLICT-OPEN C09 (Groups to run)	OPEN_GAP_SCI	
-Q20	OPEN-GAP Q20 (Groups to run)	OPEN_GAP_SCI	
-Q21	OPEN-GAP Q21 (Ages)	OPEN_GAP_SCI	
-Q22	OPEN-GAP Q22 (Stimulus, seizure grades and observation)	OPEN_GAP_SCI	
-Q23	OPEN-GAP Q23 (Groups to run)	OPEN_GAP_SCI	the composition of the 27 cells is in the planning-total row of the sample-size table
+Q18	OPEN-GAP Q18 (Stimulus, seizure grades and observation)	ANSWERED_IN_TEXT	grades 3, 4, 5 and the status definition are in the grade table; design-team answer integrated 2026-11-21 (stated in a source text)
+Q19	OPEN-GAP Q19 and CONFLICT-OPEN C09 (Groups to run)	OPEN_GAP_LABORATORY	; design-team answer integrated 2026-11-21 (partly closed); the remaining question is open
+Q20	OPEN-GAP Q20 (Groups to run)	ANSWERED_BY_RULE_INFERENCE	; design-team answer integrated 2026-11-21 (INFERENCE: a rule proposed by the design team, not a source value)
+Q21	OPEN-GAP Q21 (Ages)	OPEN_GAP_LABORATORY	; design-team answer integrated 2026-11-21 (INFERENCE: a rule proposed by the design team, not a source value; one input is the laboratory's); the remaining question is open
+Q22	OPEN-GAP Q22 (Stimulus, seizure grades and observation)	OPEN_GAP_LABORATORY	; design-team answer integrated 2026-11-21 (partly closed); the remaining question is open
+Q23	OPEN-GAP Q23 (Groups to run)	ANSWERED_IN_TEXT	the composition of the 27 cells is in the planning-total row of the sample-size table; design-team answer integrated 2026-11-21 (stated in a source text)
 Q24	Groups to run (stage table: separate optional T-type row; Order if resources are limited)	ANSWERED_IN_TEXT	the T-type arm is optional
 Q25	OPEN-GAP Q25 (Groups to run)	OPEN_GAP_SCI	
 Q26	OPEN-GAP Q26 (Animals)	OPEN_GAP_SCI	
@@ -29,21 +29,21 @@ Q27	OPEN-GAP Q27 (Groups to run)	OPEN_GAP_OPERATOR	the slice experiment is a sep
 Q28	Groups to run (stage 2 row)	ANSWERED_IN_TEXT	the decision is which of selective, age-limited or general; 'for whom' is not stated
 Q29	Animals (Heterozygotes)	ANSWERED_IN_TEXT	heterozygotes: vehicle and ethosuximide cells and 'all genotypes' for lithium; not in the interaction ratio
 Q30	OPEN-GAP Q30 (Groups to run)	OPEN_GAP_SCI	
-Q31	OPEN-GAP Q31 and CONFLICT-OPEN C06 (Sample size and animals needed)	OPEN_GAP_SCI	all figures are in one table, each with its basis; the text does not choose one
-Q32	OPEN-GAP Q32 and CONFLICT-OPEN C08 (Sample size and animals needed)	OPEN_GAP_SCI	
-Q33	OPEN-GAP Q33 (Sample size and animals needed)	OPEN_GAP_SCI	
-Q34	OPEN-GAP Q34 (Groups to run)	OPEN_GAP_SCI	
+Q31	OPEN-GAP Q31 and CONFLICT-OPEN C06 (Sample size and animals needed)	ANSWERED_BY_RULE_INFERENCE	all figures are in one table, each with its basis; the text does not choose one; design-team answer integrated 2026-11-21 (INFERENCE: a rule proposed by the design team, not a source value)
+Q32	OPEN-GAP Q32 and CONFLICT-OPEN C08 (Sample size and animals needed)	ANSWERED_IN_TEXT	; design-team answer integrated 2026-11-21 (computed from stated inputs)
+Q33	OPEN-GAP Q33 (Sample size and animals needed)	ANSWERED_IN_TEXT	; design-team answer integrated 2026-11-21 (stated in a source text)
+Q34	OPEN-GAP Q34 (Groups to run)	ANSWERED_BY_RULE_INFERENCE	; design-team answer integrated 2026-11-21 (INFERENCE: a rule proposed by the design team, not a source value)
 Q35	OPEN-GAP Q35 (Groups to run)	OPEN_GAP_SCI	
 Q36	OPEN-GAP Q36 (Optional add-ons)	OPEN_GAP_SCI	
-Q37	OPEN-GAP Q37 (Ages)	OPEN_GAP_SCI	documented ages and the scope of the two death ages are in the ages table
+Q37	OPEN-GAP Q37 (Ages)	PARTLY_ANSWERED_REMAINDER_UNDER_ANOTHER_ID	documented ages and the scope of the two death ages are in the ages table; design-team answer integrated 2026-11-21 (partly closed)
 Q38	Ages (table, first row)	ANSWERED_IN_TEXT	the Cheng 2020 test age is not stated; the assay age is the laboratory's
-Q39	Ages (Wild-type age series)	ANSWERED_IN_TEXT	the series is the assay age plus at least two older ages; straddling P11 and P14 is not a further requirement (History)
+Q39	Ages (Wild-type age series)	ANSWERED_BY_RULE_INFERENCE	the series is the assay age plus at least two older ages; straddling P11 and P14 is not a further requirement (History); design-team answer integrated 2026-11-21 (INFERENCE: a rule proposed by the design team, not a source value)
 Q40	Ages (Wild-type age series)	ANSWERED_IN_TEXT	'the window' replaced by 'up to about P28'
 Q41	OPEN-GAP Q41 (Animals)	OPEN_GAP_LABORATORY	the documents are silent; counting convention is colony practice
-Q42	OPEN-GAP Q42 (Animals)	OPEN_GAP_SCI	
-Q43	OPEN-GAP Q43 (Animals)	OPEN_GAP_SCI	
+Q42	OPEN-GAP Q42 (Animals)	OPEN_GAP_LABORATORY	; design-team answer integrated 2026-11-21 (source statements only; the value is the laboratory's or the operator's); the remaining question is open
+Q43	OPEN-GAP Q43 (Animals)	OPEN_GAP_LABORATORY	; design-team answer integrated 2026-11-21 (source statements only; the value is the laboratory's or the operator's); the remaining question is open
 Q44	OPEN-GAP Q44 (Animals)	OPEN_GAP_LABORATORY	the documents are silent; an arrangement inside the laboratory
-Q45	OPEN-GAP Q45 (Animals) and CONFLICT-OPEN C25 (Sample size)	OPEN_GAP_SCI	
+Q45	OPEN-GAP Q45 (Animals) and CONFLICT-OPEN C25 (Sample size)	OPEN_GAP_LABORATORY	; design-team answer integrated 2026-11-21 (computed from stated inputs; one input is the laboratory's); the remaining question is open
 Q46	OPEN-GAP Q46 (Animals)	OPEN_GAP_SCI	
 Q47	Animals (Cluster and sex)	ANSWERED_IN_TEXT	sex is recorded; no balancing or stratification is specified
 Q48	OPEN-GAP Q48 (Animals)	OPEN_GAP_SCI	
@@ -59,19 +59,19 @@ Q57	OPEN-GAP Q57 and CONFLICT-OPEN C31 (Optional add-ons)	OPEN_GAP_SCI
 Q58	Optional add-ons (e3)	ANSWERED_IN_TEXT	one animal cohort can carry all of it, as stated in the dated line
 Q59	Optional add-ons (f), (g) and the line after them	ANSWERED_IN_TEXT	both optional; conduction is not yet an endpoint
 Q60	OPEN-GAP Q60 (Optional add-ons)	OPEN_GAP_SCI	
-Q61	OPEN-GAP Q61 (Welfare and stopping)	OPEN_GAP_SCI	
-Q62	OPEN-GAP Q62 (Welfare and stopping)	OPEN_GAP_SCI	
+Q61	OPEN-GAP Q61 (Welfare and stopping)	OPEN_GAP_LABORATORY	; design-team answer integrated 2026-11-21 (partly closed); the remaining question is open
+Q62	OPEN-GAP Q62 (Welfare and stopping)	OPEN_GAP_LABORATORY	; design-team answer integrated 2026-11-21 (partly closed); the remaining question is open
 Q63	OPEN-GAP Q63 (Welfare and stopping)	OPEN_GAP_LABORATORY	falls under the humane endpoints and approvals that the text assigns to the laboratory
 Q64	OPEN-GAP Q64 (Stimulus, seizure grades and observation)	OPEN_GAP_LABORATORY	the exclusion criterion is stated to be the laboratory's own
 Q65	OPEN-GAP Q65 (Welfare and stopping)	OPEN_GAP_LABORATORY	falls under the humane endpoints and approvals that the text assigns to the laboratory
 Q66	OPEN-GAP Q66 (Welfare and stopping)	OPEN_GAP_LABORATORY	falls under the ethics assessment that the text assigns to the laboratory
-Q67	OPEN-GAP Q67 (Groups to run, assay-validation panel)	OPEN_GAP_SCI	
-Q68	OPEN-GAP Q68 (Analysis plan)	OPEN_GAP_SCI	
+Q67	OPEN-GAP Q67 (Groups to run, assay-validation panel)	ANSWERED_BY_RULE_INFERENCE	; design-team answer integrated 2026-11-21 (INFERENCE: a rule proposed by the design team, not a source value)
+Q68	OPEN-GAP Q68 (Analysis plan)	ANSWERED_BY_RULE_INFERENCE	; design-team answer integrated 2026-11-21 (INFERENCE: a rule proposed by the design team, not a source value)
 Q69	OPEN-GAP Q69 (Analysis plan)	OPEN_GAP_SCI	
 Q70	OPEN-GAP Q70 and CONFLICT-OPEN C35 (Analysis plan)	OPEN_GAP_SCI	
 Q71	OPEN-GAP Q71 (Analysis plan)	OPEN_GAP_SCI	
 Q72	Analysis plan (Interval method)	ANSWERED_IN_TEXT	litter bootstrap primary; fewer than 10 litters in a cell: permutation test or mixed model with litter random effect
-Q73	OPEN-GAP Q73 (Analysis plan)	OPEN_GAP_SCI	classified 'later or more specific wins' by the conflict table, but text work cannot supply a descriptive pattern; see CHANGE_LOG
+Q73	OPEN-GAP Q73 (Analysis plan)	OPEN_GAP_LABORATORY	classified 'later or more specific wins' by the conflict table, but text work cannot supply a descriptive pattern; see CHANGE_LOG; design-team answer integrated 2026-11-21 (INFERENCE: a rule proposed by the design team, not a source value); the remaining question is open
 Q74	OPEN-GAP Q74 (Logistics, terms and contact)	OPEN_GAP_OPERATOR	
 Q75	OPEN-GAP Q75 (Logistics, terms and contact)	OPEN_GAP_OPERATOR	
 Q76	OPEN-GAP Q76 (Logistics, terms and contact)	OPEN_GAP_OPERATOR	
@@ -80,12 +80,19 @@ Q78	OPEN-GAP Q78 (Logistics, terms and contact)	OPEN_GAP_LABORATORY	the older te
 Q79	OPEN-GAP Q79 (Logistics, terms and contact)	OPEN_GAP_OPERATOR	supply terms; the text says only that the arms are optional
 Q80	OPEN-GAP Q80 (Logistics, terms and contact)	OPEN_GAP_LABORATORY	colony practice; the documents are silent
 Q81	OPEN-GAP Q81 (The question)	OPEN_GAP_SCI	
-Q82	OPEN-GAP Q82 and clarification (What each outcome would favour)	OPEN_GAP_SCI	
+Q82	OPEN-GAP Q82 and clarification (What each outcome would favour)	ANSWERED_IN_TEXT	; design-team answer integrated 2026-11-21 (confirmed by the design team)
 Q83	Status line under the contents list	ANSWERED_IN_TEXT	'grade' for the 0 to 6 seizure scale; 'stage' for the experimental plan
 Q84	OPEN-GAP Q84 (Stimulus, seizure grades and observation)	OPEN_GAP_SCI	
 Q85	Animals (definitions of session, cell, arm); Groups to run (panel, comparator drug)	ANSWERED_IN_TEXT	'exposure' is the one term not defined: see OPEN-GAP Q16
-QA1	OPEN-GAP QA1 (Regimens and dose checks)	OPEN_GAP_SCI	lithium salt, vehicle, route, spacing of the three injections
-QA2	OPEN-GAP QA2 (Stimulus, seizure grades and observation)	OPEN_GAP_SCI	feeding and thermal state during the observation
-QA3	OPEN-GAP QA3 (Stimulus, seizure grades and observation)	OPEN_GAP_SCI	own validated scale and mapping
-QA4	OPEN-GAP QA4 (Welfare and stopping)	OPEN_GAP_SCI	pilot animals reused; sign-off of the pilot
-QA5	OPEN-GAP QA5 (Welfare and stopping)	OPEN_GAP_SCI	scope of a stop rule
+QA1	OPEN-GAP QA1 (Regimens and dose checks)	OPEN_GAP_LABORATORY	lithium salt, vehicle, route, spacing of the three injections; design-team answer integrated 2026-11-21 (partly closed); the remaining question is open
+QA2	OPEN-GAP QA2 (Stimulus, seizure grades and observation)	OPEN_GAP_LABORATORY	feeding and thermal state during the observation; design-team answer integrated 2026-11-21 (source statements only; the value is the laboratory's or the operator's); the remaining question is open
+QA3	OPEN-GAP QA3 (Stimulus, seizure grades and observation)	ANSWERED_BY_RULE_INFERENCE	own validated scale and mapping; design-team answer integrated 2026-11-21 (INFERENCE: a rule proposed by the design team, not a source value)
+QA4	OPEN-GAP QA4 (Welfare and stopping)	OPEN_GAP_LABORATORY	pilot animals reused; sign-off of the pilot; design-team answer integrated 2026-11-21 (source statements only; the value is the laboratory's or the operator's); the remaining question is open
+QA5	OPEN-GAP QA5 (Welfare and stopping)	PARTLY_ANSWERED_REMAINDER_UNDER_ANOTHER_ID	scope of a stop rule; design-team answer integrated 2026-11-21 (partly closed)
+R2Q82	marker added after the second cold read	OPEN_GAP_OPERATOR	second-reader gap
+R2Q81	marker added after the second cold read	OPEN_GAP_LABORATORY	second-reader gap
+R2Q16	marker added after the second cold read	OPEN_GAP_LABORATORY	second-reader gap
+R2Q43	marker added after the second cold read	OPEN_GAP_SCI	second-reader gap
+R2Q80	marker added after the second cold read	OPEN_GAP_SCI	second-reader gap
+R2Q79	marker added after the second cold read	OPEN_GAP_SCI	second-reader gap
+R3Q37	marker added after the second or third cold read	OPEN_GAP_SCI	reader gap
