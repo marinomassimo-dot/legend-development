@@ -121,3 +121,6 @@ Third correction 2026-11-21 (round-3 reader): see verify_adv146/COMPARISON_ADV14
 
 ## Addendum 2026-11-21 (ADV-148 integration)
 The design team's residual-conflict replacements S01 to S14 were applied by `integrate_adv148_it_20261121.py` (see `verify_adv148/RECONCILIATION_ADV148_IT_20261121.md`): six conflict markers resolved, six new laboratory questions, the pilot ages corrected (two laboratory-chosen ages inside P12 to P17), the straddle of P11 and P14 made optional, the E2 row corrected, "75 litters" replaced by the planning-table figures, and one source statement added where the sizing basis is stated (single origin). The superseded markers, notes and sentences are kept in the History. QCHECK rows Q19, Q51 and Q84 updated.
+
+## Addendum 2026-11-21 (classification of the 13 open conflicts)
+The 13 conflicts left after the design team's second set of answers were classified (`CLASSIFICATION_ADV150_IT_20261121.md`): six repaired in the text by `resolve_adv150_it_20261121.py` (C02, C03, C16, C23, R2C05, C32), seven turned into named decisions for design science with their options (C09, C30, C31, C35, R2C01, R2C09, R2C10), none for the laboratory or the operator. No CONFLICT-OPEN marker remains in the text before the History. Two dangling pointers to removed markers were reworded. Old sentences and markers are kept in the History.
