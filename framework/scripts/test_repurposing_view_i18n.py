@@ -47,6 +47,18 @@ def raw_kinds_left(page: str) -> list:
     return [k for k in rv.WO_KINDS if re.sub(r"'" + re.escape(k) + r"'", "", body).count(k)]
 
 
+def italian_ui_strings_left(page: str, lang: str) -> list:
+    """Italian interface strings (UI_IT values of 14 or more characters whose translation in `lang` differs) found in the visible text of a non-Italian page, outside the passages marked as
+    original-language-only. ADV-128 (2026-11-21): ten section headings, the deepened-case and pilot tables and their notes were typed in Italian in the generator, outside the catalogue, and
+    only a painted-text scan saw them; a string that is in UI_IT is a string the catalogue translates, so any Italian value found on a translated page is a site that bypasses U[...]."""
+    ui = json.loads((DR / "view/i18n/ui_source.json").read_text(encoding="utf-8"))
+    tr = json.loads((DR / "view/i18n" / f"ui_{lang}.json").read_text(encoding="utf-8"))
+    body = re.sub(r"<script\b.*?</script>|<style\b.*?</style>", "", page, flags=re.S)
+    body = re.sub(r"<(\w+)\b[^>]*(?:class=\"orig\"|lang=\"it\")[^>]*>.*?</\1>", "", body, flags=re.S)
+    nodes = {re.sub(r"\s+", " ", html.unescape(t)).strip() for t in re.findall(r">([^<>]+)<", body)}      # whole text nodes: a label printed raw is a node of its own; a value quoted inside an authored sentence is not
+    return sorted(v for k, v in ui.items() if k.startswith("UI_IT.") and len(v) >= 14 and tr.get(k) != v and v in nodes)
+
+
 @unittest.skipUnless(HAVE, "module data or translation files absent")
 class InventoryIsCheckedWhereTheActorRunsIt(unittest.TestCase):
     """2026-11-12: a curated passage was edited, `i18n --what check` passed, and only the suite found the stale inventory in the battery."""
@@ -90,9 +102,11 @@ class FullViewEnumsAreTranslated(unittest.TestCase):
             self.assertIn(key, js)
 
     @unittest.skipUnless(HAVE, "module data or translation files absent")
-    def test_no_work_order_kind_in_a_non_italian_full_build(self):
+    def test_no_work_order_kind_and_no_italian_interface_string_in_a_non_italian_full_build(self):
         for lg in ("en", "de"):
-            self.assertEqual(raw_kinds_left(rv.build(DR, "full", lg)), [], lg)
+            page = rv.build(DR, "full", lg)
+            self.assertEqual(raw_kinds_left(page), [], lg)
+            self.assertEqual(italian_ui_strings_left(page, lg), [], lg)
 
 
 class FiveLanguages(unittest.TestCase):
@@ -155,6 +169,10 @@ class FiveLanguages(unittest.TestCase):
             self.assertIn('id="langnote"', self.pages[lg], lg)
             self.assertIn('class="mini mut technote"><span class="orig"', self.pages[lg], lg)
         self.assertNotIn('id="langnote"', self.pages["en"])
+
+    def test_no_italian_interface_string_is_printed_outside_the_catalogue_on_another_page(self):
+        for lg in ("en", "fr", "es", "de"):
+            self.assertEqual(italian_ui_strings_left(self.pages[lg], lg), [], lg)
 
     def test_a_data_enum_written_in_italian_is_never_printed_raw_on_another_page(self):
         """2026-11-20 (ADV-127): the work-order kind (WO_KINDS) reached every non-Italian page as '[verificare un'ipotesi]' in 28 places, because the renderers printed the enum value and the
