@@ -225,10 +225,12 @@
     },
     {
      "step": "ADV-132: mechanical number-and-name parity check on the 150 ADV-131 rows (rule written before running), then one further batch of 25 of the densest number-bearing shareable passages translated to fr, de, es with the same stop rule, blind check and parity check on every row, report with rates, cost and an updated projection",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "advisor assignment ADV-132 (message from the Advisor session to the IT successor, 2026-11-21)",
-     "accepted_at": "2026-11-21T07:56:52Z"
+     "accepted_at": "2026-11-21T07:56:52Z",
+     "evidence": "adv132_dense_batch_it_20261121/RESULT_ADV132_IT_20261121.md: parity on 150 rows 0 number flags, batch 3 blind check 12 CHANGED of 75 (stop rule fired, batch not applied), repairs rechecked, pages measured",
+     "updated_at": "2026-11-21T08:24:58Z"
     }
    ]
   }
