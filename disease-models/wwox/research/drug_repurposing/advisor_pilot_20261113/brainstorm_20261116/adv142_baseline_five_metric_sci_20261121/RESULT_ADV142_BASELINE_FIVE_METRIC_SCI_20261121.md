@@ -79,3 +79,5 @@ Values are pixel readings of crops of held low-resolution pages. Table EV1, the 
 
 ## Note on the pre-registration file
 After its commit (`b5c2adbf6`) the only change to the pre-registration is the relative path of the assignment reference (`../assignments/` to `../../assignments/`, found by the reader-journey test); no prediction, rule or disclosure was touched.
+
+**Dated correction (2026-11-21, SCI window X, ADV-146):** rows B in the table and in point 7 above said "weakened" from the equal early share alone. Restated at the level the data support: equal early share (two categories, one scRNA sample per genotype) means that, with the same cell-type profiles, composition at that resolution cannot by itself account for the WOREE-SCAR12 rate gap; it does not test subtype-level composition or within-type variation, and the assays differ. **Row B: open, neither weakened nor supported beyond that narrow point.** Detail: `../adv146_fig5g_ionchannel_sci_20261121/RESULT_FIG5G_IONCHANNEL_SCI_20261121.md`.
