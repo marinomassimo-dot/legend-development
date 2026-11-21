@@ -569,6 +569,22 @@
      "accepted_at": "2026-11-21T03:36:14Z",
      "evidence": "CHECKPOINT_HE_20261121_D.md landed (7b7e16403); successor e5d84418 RUNNING: launched 03:39:29Z, released 03:39:32Z, bound 03:39:50Z (18 s after release), first tool call 03:39:51Z (1.5 s after bind); ADV told",
      "updated_at": "2026-11-21T03:40:19Z"
+    },
+    {
+     "step": "Review the IT renderer diff for the first translated batch of the shareable pages (scope file, section-scoped node pass), add a guard that a scoped passage is never painted as English inside the overview and ranking sections, decide the wording of the ranking section notice once its top passages are translated",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "IT Orchestrator message after its local commit of the first measured batch: nothing needed from HE first, review when pushed, guard and notice wording are HE's",
+     "accepted_at": "2026-11-21T05:38:21Z"
+    },
+    {
+     "step": "Add the question-form words onset and prevented, and similar, to the scout bridge stoplist, with a test on the three hits of the 05:20 radar briefing",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV meeting message 2026-11-21 morning: a bounded lead for HE, in HE's pace, opt-in or default as judged",
+     "accepted_at": "2026-11-21T05:38:22Z",
+     "evidence": "landed 4c492a565 (gate PASS, ls-remote verified): onset, prevented and forms added to FORMAT_WORDS (default, not opt-in); test_the_timing_and_outcome_words_of_a_gene_addition_question_are_not_its_bridge; test_scout_daily 102 OK; the three titles in the test are written from ADV's description, the briefing is not in the tree",
+     "updated_at": "2026-11-21T05:41:49Z"
     }
    ]
   }
@@ -1005,6 +1021,20 @@
    "at": "2026-11-21T03:36:14Z",
    "source": "ADV message 2026-11-21 (clean restart point after ADV-130; checkpoint D with pointers to ADV-127 to ADV-131)",
    "step_sha256": "07db7071606e",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T05:38:21Z",
+   "source": "IT Orchestrator message after its local commit of the first measured batch: nothing needed from HE first, review when pushed, guard and notice wording are HE's",
+   "step_sha256": "5bf9c71daca9",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T05:38:22Z",
+   "source": "ADV meeting message 2026-11-21 morning: a bounded lead for HE, in HE's pace, opt-in or default as judged",
+   "step_sha256": "acfe519044f8",
    "reopened_block": false,
    "authorised_by": null
   }

@@ -125,6 +125,36 @@ def english_sections_without_notice(page: str, lang: str, minimum: int = 3) -> d
     return out
 
 
+def section_own_text_nodes(page: str, section_ids) -> list:
+    """The text nodes of the OWN text (nested sections, script and style left out) of the sections named in `section_ids`, whitespace-collapsed. Written apart from the renderer's `localize_english_scope`."""
+    body = re.sub(r"<script\b.*?</script>|<style\b.*?</style>", lambda m: " " * len(m.group(0)), page, flags=re.S)
+    spans, stack = [], []
+    for m in re.finditer(r"<section\b[^>]*>|</section>", body):
+        if m.group(0).startswith("</"):
+            a, b = stack.pop()
+            spans.append((a, b, m.start()))
+        else:
+            stack.append((m.start(), m.end()))
+    out = []
+    for start, open_end, close in spans:
+        if not re.search(r'\bid="(?:%s)"' % "|".join(section_ids), body[start:open_end]):
+            continue
+        inner, last, cut = body[open_end:close], 0, []
+        for a, b, c in sorted((x for x in spans if start < x[0] < close), key=lambda x: x[0]):
+            if a - open_end >= last:
+                cut.append(inner[last:a - open_end]); last = c + len("</section>") - open_end
+        cut.append(inner[last:])
+        out += [re.sub(r"\s+", " ", html.unescape(t)).strip() for t in re.findall(r">([^<>]+)<", "".join(cut))]
+    return out
+
+
+def scoped_passages_still_english(page: str, passages) -> list:
+    """ADV-131 (2026-11-21): the English passages of the measured scope (`en_scope.json`) that a page still paints, as English, in the own text of the sections the scope covers.
+    On a fr, de or es page the list must be empty; on the English page it is the whole scope (the positive control)."""
+    nodes = set(section_own_text_nodes(page, rv.EN_SCOPE_SECTIONS))
+    return [p[:60] for p in passages if re.sub(r"\s+", " ", p).strip() in nodes]
+
+
 @unittest.skipUnless(HAVE, "module data or translation files absent")
 class InventoryIsCheckedWhereTheActorRunsIt(unittest.TestCase):
     """2026-11-12: a curated passage was edited, `i18n --what check` passed, and only the suite found the stale inventory in the battery."""
@@ -207,6 +237,48 @@ class EnglishAuthoredSectionsSayTheyAreEnglish(unittest.TestCase):
             body = html.unescape(re.sub(r"<script\b.*?</script>", "", self.files[("full", lg)], flags=re.S))
             self.assertIn(name, body, lg)
             self.assertNotIn("acido fenilbutirrico", body, lg)
+
+
+@unittest.skipUnless(HAVE, "module data or translation files absent")
+class TranslatedScopeIsNeverPaintedAsEnglish(unittest.TestCase):
+    """ADV-131 (2026-11-21): 50 English-authored passages of the shareable pages are translated (overview and ranking). The guard reads the scope file and the source inventory, then the pages `check` keeps
+    current: none of those passages may remain as English text in the own text of a covered section of the fr, de or es page, and the English page keeps all of them (positive control)."""
+
+    @classmethod
+    def setUpClass(cls):
+        i18n = DR / "view" / "i18n"
+        scope = json.loads((i18n / "en_scope.json").read_text(encoding="utf-8"))
+        inventory = json.loads((i18n / "content_source.json").read_text(encoding="utf-8"))
+        cls.passages = [inventory[h]["text"] for h in scope]
+        cls.page = {lg: (DR / "view" / ("index_shareable.html" if lg == "en" else f"index_shareable.{lg}.html")).read_text(encoding="utf-8") for lg in ("en", "fr", "de", "es")}
+
+    def test_the_scope_names_the_two_sections_of_the_first_batch_and_every_scoped_passage_is_in_the_inventory(self):
+        self.assertTrue({"overview", "ranking"} <= set(rv.EN_SCOPE_SECTIONS))
+        self.assertGreaterEqual(len(self.passages), 50)
+        self.assertEqual(len(set(self.passages)), len(self.passages))
+
+    def test_the_english_page_keeps_every_scoped_passage_in_the_covered_sections(self):
+        self.assertEqual(len(scoped_passages_still_english(self.page["en"], self.passages)), len(self.passages))
+
+    def test_no_scoped_passage_is_painted_as_english_on_a_french_german_or_spanish_page(self):
+        for lg in ("fr", "de", "es"):
+            self.assertEqual(scoped_passages_still_english(self.page[lg], self.passages), [], lg)
+
+    def test_a_scoped_passage_put_back_in_english_is_found(self):
+        """Mutation control: the first scoped passage of the covered sections is swapped for its English original on each translated page."""
+        tr = {lg: json.loads((DR / "view/i18n" / f"content_{lg}.json").read_text(encoding="utf-8")) for lg in ("fr", "de", "es")}
+        inventory = json.loads((DR / "view/i18n/content_source.json").read_text(encoding="utf-8"))
+        scope = json.loads((DR / "view/i18n/en_scope.json").read_text(encoding="utf-8"))
+        for lg in ("fr", "de", "es"):
+            done = False
+            for h in scope:
+                pat = re.compile(r">(\s*)" + re.escape(rv.E(tr[lg][h])) + r"(\s*)<")
+                if pat.search(self.page[lg]):
+                    mutated = pat.sub(lambda m: ">" + m.group(1) + rv.E(inventory[h]["text"]) + m.group(2) + "<", self.page[lg], count=1)
+                    self.assertEqual(scoped_passages_still_english(mutated, self.passages), [inventory[h]["text"][:60]], lg)
+                    done = True
+                    break
+            self.assertTrue(done, lg)
 
 
 class FiveLanguages(unittest.TestCase):

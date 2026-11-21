@@ -197,11 +197,26 @@ TEXT_NODE = re.compile(r">([^<>]+)<")
 AUTH_IT: dict = {}                                   # hash -> Italian authored passage (loaded from content_source.json), localised by the node pass
 
 
+AUTH_EN: dict = {}                                   # hash -> English-authored passage of the ADV-131 scope (en_scope.json), localised by the node pass when a translation exists
+EN_SCOPE: set = set()                               # hashes of the English-authored raw text nodes that ADV-131 translates, batch by batch (a measured scope, not the whole edition)
+
+
+def load_en_scope(dr: Path) -> None:
+    EN_SCOPE.clear()
+    f = dr / "view" / I18N_SUBDIR / "en_scope.json"
+    if f.exists():
+        EN_SCOPE.update(json.loads(f.read_text(encoding="utf-8")))
+
+
 def load_authored_inventory(dr: Path) -> None:
     AUTH_IT.clear()
+    AUTH_EN.clear()
+    load_en_scope(dr)
     f = dr / "view" / I18N_SUBDIR / "content_source.json"
     if f.exists():
-        AUTH_IT.update({h: v["text"] for h, v in json.loads(f.read_text(encoding="utf-8")).items() if v.get("src") == "it"})
+        inv = json.loads(f.read_text(encoding="utf-8"))
+        AUTH_IT.update({h: v["text"] for h, v in inv.items() if v.get("src") == "it"})
+        AUTH_EN.update({h: v["text"] for h, v in inv.items() if v.get("src") == "en" and h in EN_SCOPE})
 
 
 def localize_authored_nodes(page: str) -> str:
@@ -226,6 +241,50 @@ def localize_authored_nodes(page: str) -> str:
 
     parts = re.split(r"(<script\b[^>]*>.*?</script>|<style\b[^>]*>.*?</style>)", page, flags=re.S)
     return "".join(x if x.startswith(("<script", "<style")) else TEXT_NODE.sub(swap, x) for x in parts)
+
+
+EN_SCOPE_SECTIONS = ("overview", "ranking")   # ADV-131: the two sections of the measured first batch; the same English text elsewhere stays English (and labelled) until a batch covers that section
+
+
+def localize_english_scope(page: str) -> str:
+    """ADV-131 (2026-11-21): swap an English-authored raw text node of the scope (`en_scope.json`) for its catalogue translation, only inside the OWN text of the sections in `EN_SCOPE_SECTIONS`
+    (nested sections and script/style are left alone). A node with no translation is left as it is; the section notice labels it. Not applied to the English and Italian pages."""
+    lang = CUR["lang"]
+    if lang in ("it", "en") or not AUTH_EN:
+        return page
+    tr = TRANS.get(lang, {}).get("content", {})
+    masked = re.sub(r"<script\b.*?</script>|<style\b.*?</style>", lambda m: " " * len(m.group(0)), page, flags=re.S)
+    spans, stack = [], []
+    for m in SECTION_TAG.finditer(masked):
+        if m.group(0).startswith("</"):
+            if stack:
+                spans.append((*stack.pop(), m.end()))
+        else:
+            stack.append((m.start(), m.end()))
+    own = []
+    for start, open_end, end in spans:
+        if not re.search(r'\bid="(?:%s)"' % "|".join(EN_SCOPE_SECTIONS), masked[start:open_end]):
+            continue
+        last = open_end
+        for a, b in sorted((a, b) for a, _, b in spans if start < a and b < end):
+            if a > last:
+                own.append((last, a))
+            last = max(last, b)
+        own.append((last, end - len("</section>")))
+    edits = []
+    for a, b in own:
+        for m in TEXT_NODE.finditer(masked, max(a - 1, 0), b):
+            if m.start(1) < a:
+                continue
+            raw = page[m.start(1):m.end(1)]
+            t = html.unescape(raw).strip()
+            h = text_hash(t)
+            if AUTH_EN.get(h) == t and h in tr:
+                lead, trail = raw[: len(raw) - len(raw.lstrip())], raw[len(raw.rstrip()):]
+                edits.append((m.start(1), m.end(1), lead + E(localise_formulas(tr[h])) + trail))
+    for a, b, rep in sorted(edits, reverse=True):
+        page = page[:a] + rep + page[b:]
+    return page
 
 
 # ADV-130 (2026-11-21): the authored English passages of the full edition (evidence, method and ranking text) are team working text and are not translated on the fr/de/es pages (nor on the
@@ -5730,6 +5789,7 @@ def render(P: dict, dr: Path = DEFAULT_DR) -> str:
         parts = re.split(r"(<script\b[^>]*>.*?</script>|<style\b[^>]*>.*?</style>)", page, flags=re.S)
         page = "".join(scrub_file_tokens(x, allow) if x.startswith("<script") else (x if x.startswith("<style") else re.sub(r">([^<]+)<", lambda m: ">" + scrub_file_tokens(m.group(1), allow) + "<", x)) for x in parts)
     page = localize_authored_nodes(page)
+    page = localize_english_scope(page)
     page = mark_english_sections(page)
     page = page.replace("__DATA__", data)  # last: the data may contain placeholder-like text
     return page
@@ -6151,6 +6211,8 @@ def i18n_collect(dr: Path) -> tuple[dict, dict]:
     ui.update(allow_leaves(jload(dr / "view/shareable_sources.json") if (dr / "view/shareable_sources.json").exists() else {}))
     load_translations(dr)
     AUTH_IT.clear()                                   # collect from scratch: the inventory being rebuilt must not filter itself
+    AUTH_EN.clear()
+    load_en_scope(dr)
     CUR["collect"] = {}
     try:
         build(dr, "shareable", "it")
@@ -6169,6 +6231,9 @@ def i18n_collect(dr: Path) -> tuple[dict, dict]:
     for raw in TEXT_NODE.findall(body):
         t = html.unescape(raw).strip()
         low = t.lower()
+        if text_hash(t) in EN_SCOPE:                  # ADV-131: a listed English-authored raw node is inventoried as English source
+            content.setdefault(text_hash(t), {"text": t, "src": "en"})
+            continue
         if "\u00a7" in t or len(t) < 6 or len(EN_WORDS.findall(low)) >= (3 if len(t) >= 25 else 1):
             continue
         if not ((len(t) >= 25 and len(IT_WORDS.findall(low)) >= 2) or (len(t) < 25 and (IT_WORDS.findall(low) or re.search(r"[àèéìòù]", low) or re.search(r"\\b\\w+(zione|mente|ività|ità)\\b|\\b\\w{7,}(are|ere|ire)\\b|\\b(ruoli|dei|bersagli|risultato|catalogo|artefatti|statistiche|premessa|ipotesi|osservazione|contrasto|quantità)\\b", low)))):

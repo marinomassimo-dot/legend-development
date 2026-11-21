@@ -91,6 +91,10 @@
   "src": "en",
   "text": "Cell probe now; systemic use limited"
  },
+ "0a5666ca3f0a": {
+  "src": "en",
+  "text": "Pro-myelinating agents and the activity-dependent myelination sign problem"
+ },
  "0b7d6ffd8755": {
   "src": "en",
   "text": "Glial inflammatory tone"
@@ -98,6 +102,10 @@
  "0b81342e079e": {
   "src": "en",
   "text": "Blockade of the T-type calcium current by a proposed pair of approved agents, to verify isoform reach against the carded T-type agents"
+ },
+ "0b93998e617a": {
+  "src": "en",
+  "text": "Bumetanide and the chloride gradient:"
  },
  "0be03bbf61e9": {
   "src": "it",
@@ -127,9 +135,21 @@
   "src": "en",
   "text": "Potency is compared only between measures of the same type; unlike measures are kept side by side and never turned into an exclusion. 20 proposals blocked on weak target attribution became 5 (the verifier's lower-bound rule restored one); the cautious case (a pan-HDAC inhibitor 2,769-fold weaker at the listed target, same measure type) stays blocked."
  },
+ "0e44be018eaf": {
+  "src": "en",
+  "text": "Use as the subunit-indifferent comparator at matched fractional current."
+ },
  "0fc1e5c79db3": {
   "src": "en",
   "text": "Before any ISR-attenuating compound can be ordered: in a WWOX-deficient HUMAN neural system, does the ISR run high or low?"
+ },
+ "10669b93cd97": {
+  "src": "en",
+  "text": "No result of these compounds in a WWOX system; the class is carded as an NMDAR intervention class."
+ },
+ "111b069299f5": {
+  "src": "en",
+  "text": "E_GABA, NKCC1 and KCC2 protein in any Wwox system; never measured."
  },
  "11260e3b1080": {
   "src": "it",
@@ -163,6 +183,10 @@
   "src": "en",
   "text": "Existing organoid systems; wet-lab measurement, not executable from this module."
  },
+ "13e2f5065662": {
+  "src": "en",
+  "text": "Whether a missense or compound context with partial residual function would respond more, less or differently."
+ },
  "1432bb0534ad": {
   "src": "it",
   "text": "Linee cellulari e stock di mosca: non nota; nessuna richiesta o contatto eseguiti da qui."
@@ -183,6 +207,10 @@
   "src": "en",
   "text": "One added arm of the published design with injection after the first recorded spike-wave discharge, same endpoints, untreated same-genotype comparator kept. Worded per endpoint class: measure the restoration actually achieved at the age of treatment and its regional distribution, because the one comparable later-age failure in a short-lived null was left uninterpretable by that missing measurement; carry a within-animal pre-treatment recording, a treated wild-type or heterozygote arm, growth and glycaemia as primary endpoints (growth failed even with pre-onset treatment in the closest analogue), and follow-up long enough to see decay. Quantified myelin sheath structure (g-ratio or electron microscopy, not marker intensity) is the discriminating endpoint for a neuron-driven lesion: white-matter abnormality has been reversed after a documented onset only in glial or metabolic lesions, and sheath structure after onset has been reported only in a metabolic oligodendrocyte-enzyme lesion (G-ratio by electron microscopy, one source) and not in any neuron-driven lesion. Spike-wave rate is the confirmatory endpoint and its external precedent (not WWOX evidence) is split, so pair it with a rhythm or power-spectrum measure; interneuron number as well as excitability, because no source measured number."
  },
+ "1741f471b431": {
+  "src": "en",
+  "text": "If bursts do not increase, permissive necessity is favoured over raised gain."
+ },
  "176dea8b576c": {
   "src": "en",
   "text": "Naming these keeps them visible as gaps rather than as silently empty rows. Three of the four have no catalogue association on their targets and one is an endpoint rather than an intervention; none of this is evidence that the biology is unpromising."
@@ -202,6 +230,10 @@
  "1903592fd41e": {
   "src": "en",
   "text": "No change at step 0 (axis not engaged), or AhR-dependent harm in precursors."
+ },
+ "1959053c4500": {
+  "src": "en",
+  "text": "Glutamate-receptor node of the neuron-specific Wwox bursting phenotype"
  },
  "19df3deb1317": {
   "src": "en",
@@ -226,6 +258,10 @@
  "1ce3795a7d2b": {
   "src": "en",
   "text": "INV-14"
+ },
+ "1d058584e1d4": {
+  "src": "en",
+  "text": "4-phenylbutyrate class and bile-acid chemical chaperones:"
  },
  "1db9251bd119": {
   "src": "en",
@@ -262,6 +298,10 @@
  "2266079d3554": {
   "src": "en",
   "text": "The documented consequence of inhibiting this enzyme in rodents is a pro-convulsant effect that inositol reverses, which predicts aggravation, not the protection seen; the protection also appears in wild-type littermates, so it is not specific to WWOX loss. The precedent is an analogy from another model (the drug together with low-dose pilocarpine), not a measurement in the Wwox assay, so it disfavours the route and does not close the assay question; the same mouse paper also ran a pilocarpine model in Wwox mice, so the objection that the provocations differ is testable in the same system."
+ },
+ "22c67446bc2d": {
+  "src": "en",
+  "text": "Same slice preparation; the pharmacology behind the plan is withheld from this edition"
  },
  "23463f05b854": {
   "src": "en",
@@ -319,6 +359,10 @@
   "src": "en",
   "text": "None for the GluN2B comparison."
  },
+ "29cbb3573621": {
+  "src": "en",
+  "text": "Is the inhibitory loss release- or clearance-limited rather than receptor-limited?"
+ },
  "29f84ab5a3a6": {
   "src": "en",
   "text": "Lowering the kinases that restrain the pyruvate dehydrogenase step: a carded lever with typed, per-isoform rows, conditional on an unmeasured premise; the first probe depends on the dominant kinase of the cell class and on the assay scaffold"
@@ -335,6 +379,10 @@
   "src": "it",
   "text": "Capire se vigabatrin o CPP-115 aggiungono danno alla mielina in un modello giovanile privo di Wwox."
  },
+ "2c1676a02c93": {
+  "src": "en",
+  "text": "Does a positive modulator at the high-affinity GABA-A modulatory site compensate the lost fast GABA-A inhibition during exposure?"
+ },
  "2c352964be29": {
   "src": "en",
   "text": "Human-exposure GluN2B negative modulator; site, maximum effect and triheteromer behaviour not measured in any source reached"
@@ -342,6 +390,10 @@
  "2c958656b721": {
   "src": "en",
   "text": "Capacitance and time constant measured in the same cells, or a Ba2+- or Kv7-blocker-sensitive difference current in Wwox neurons, would decide whether any pharmacological arm is needed."
+ },
+ "2cc35a93ce40": {
+  "src": "en",
+  "text": "Is subunit selectivity needed at all to reduce NMDAR-dependent bursting?"
  },
  "2d0bcfbcaf77": {
   "src": "en",
@@ -375,6 +427,10 @@
   "src": "en",
   "text": "The repository already records that the older drug resolved spasms in one child and carries a brain-imaging safety signal; the newer one is clinical-stage only (catalogue maximum phase 1)."
  },
+ "2f1a0b1d0055": {
+  "src": "en",
+  "text": "Observed: bursts in 36 of 42 knockout slices vanish with the NMDAR antagonist (51 bursts, 5 slices, 3 animals; Breton 2021). Not observed: that the NMDAR current is raised."
+ },
  "2f60e5178da3": {
   "src": "en",
   "text": "Is the NMDA-receptor dependence total receptor gain or GluN2B-weighted?"
@@ -394,6 +450,10 @@
  "312381e7bb11": {
   "src": "en",
   "text": "Negative allosteric modulation of GluN2B-containing receptors at the ifenprodil site."
+ },
+ "31330089b4e3": {
+  "src": "en",
+  "text": "Whether any WWOX-deficient human neural system has raised eIF2 alpha phosphorylation or ATF4 protein, with or without a proteotoxic load."
  },
  "3168a29cd7dc": {
   "src": "it",
@@ -439,6 +499,10 @@
   "src": "en",
   "text": "555 of the 994 generated proposals end in a change of MYC, 314 in a harm arm and 241 in a protect arm (123 eligible for hand-over); whether any change of MYC is wanted depends on this role, so one measurement stands behind all of them and no MYC-directed lever is assumed beneficial."
  },
+ "35e5cf9772ec": {
+  "src": "en",
+  "text": "GluN2B-selective negative allosteric modulators (a class acting at the receptor N-terminal domain): two research tools and one clinical-stage comparator"
+ },
  "364bcad629f4": {
   "src": "en",
   "text": "Does a clinically used NMDAR antagonist reproduce the burst suppression obtained with the tool compound, at a stated extracellular magnesium concentration?"
@@ -478,6 +542,10 @@
  "38eda86f16db": {
   "src": "en",
   "text": "Up: a current blocked at low micromolar Ba2+ and smaller per pF in the mutant (the opener route is then narrow). Down: a Ba2+-sensitive share only at millimolar concentrations, equal per pF, or a lower capacitance with flat time constant."
+ },
+ "3931e68d6c91": {
+  "src": "en",
+  "text": "4-phenylbutyrate class and bile-acid chemical chaperones"
  },
  "394bb627ccbb": {
   "src": "en",
@@ -655,6 +723,10 @@
   "src": "en",
   "text": "A compound benefit can be independent of NRF2 (the readout was raised by compounds that do not bind KEAP1); the only catalogued NRF2-lowering row lowers many proteins and is not a control; no neuron or astrocyte data exist for any of these compounds; a binding assay at the Kelch domain cannot see covalent modifiers. [IT46 SCI46] No source has the binder in primary neurons or astrocytes with an NRF2-loss arm. Where a loss was verified (primary rat microglia, shRNA and knockout) the binder's induction and protection were lost and KEAP1 knockout occluded them; in a human neuronal line a partial NRF2 loss left the effect unchanged, which is uninterpretable; one human neuronal use on a KEAP1-overexpressing, already NRF2-high background moved ferroptosis markers in the harmful direction (no loss arm). The Davies source's own siRNA arms are categorical labels in the database copy, with no numbers and no knockdown efficiency, and the covalent bardoxolone methyl sits in the same design. [IT47 correction] The sentence above that no neuron or astrocyte data exist for any of these compounds is too strong for the covalent class: the SCI46 value table holds abstract-level data in primary mixed neuron-astrocyte cortical cultures with an Nrf2-knockout arm for one electrophile (the knockout result of a second electrophile is not stated in the abstract), data in neurons and astrocytes without a loss arm for the two fumarates, and a neurotoxicity series for a covalent triterpenoid in a human neuronal line. For the non-covalent binder the statement stands: no primary neuron or astrocyte datum, and the one neuronal line has a partial or inadequate loss. Source: un registro del repository (non incluso in questo pacchetto) (rows A36, A47-A53), counted by un registro del repository (non incluso in questo pacchetto). [SCI48] The second non-covalent Kelch binder (Winkel 2015; text and nine figures read, supplement unreachable) is a second non-covalent Kelch binder with myeloid-cell data only: in germline Nrf2-knockout bone-marrow macrophages 2 of 105 probe sets persisted, but no check of the knockout is printed and the covalent triterpenoid comparator is in no knockout arm, so the paper does not meet the loss criterion as printed; it is a comparator for a survivor set, not a probe. The earlier statement that it reaches the first two comparisons at abstract depth is replaced. The commonest covalent electrophile has germline-null neural designs in at least four independent groups (benefit lost in the nulls; one partial persistence at 50 mg/kg): a comparator, not a probe (loss germline or unverified, no KEAP1-loss arm, no binder partner); that line is at mixed depth (three texts, abstracts). No reagent is a probe in a neuron or astrocyte; the one probe row is the catalogued binder in rat microglia. No acute NFE2L2 loss verified at the endpoint time exists in any neural source read. The comparison engine now gives these two reagents the role comparator, as their package states it (germline or unverified loss; the binder in myeloid cells only): it reads the package's own role table and can only lower a derived role."
  },
+ "4c3712efa60b": {
+  "src": "en",
+  "text": "HIF-1alpha and HIF-2alpha protein in any WWOX-deficient neural cell."
+ },
  "4cedce94df8a": {
   "src": "en",
   "text": "Response insufficient for the stress (low NRF2 tone or reserve). Exploratory: the package states no therapeutic direction."
@@ -678,6 +750,10 @@
  "4f83df16e380": {
   "src": "en",
   "text": "Can the gap-junction tool's burst fall be read as a gap-junction result?"
+ },
+ "4fc2d793f7d7": {
+  "src": "en",
+  "text": "Subunit selectivity of this class is not resolved between documents."
  },
  "4fe2ea17e59f": {
   "src": "en",
@@ -747,6 +823,10 @@
   "src": "en",
   "text": "Queried: the ethosuximide and apinocaltamide units, their assertion rows and caveat rows, and the per-need position table. The missing interaction test is recorded in this module's own caveats, not inferred from absence."
  },
+ "57bed26e9162": {
+  "src": "en",
+  "text": "Glial-reactivity modulators and the unresolved sign and order of gliosis in …"
+ },
  "5811a3491991": {
   "src": "en",
   "text": "Generated by LEGEND (proposal IT21P2-0006 and the HDAC5 to SLC2A1 chain, harm arm Q2); challenge CH-IT28-HDAC5-LEVER concluded NARROWED, not refuted, not confirmed; the vorinostat row is an earlier internal case of the same chain, reached before this premise was examined."
@@ -771,9 +851,17 @@
   "src": "en",
   "text": "Oligodendrocyte maturation and myelination"
  },
+ "5bce1aa06bae": {
+  "src": "en",
+  "text": "Human infants (case reports); no WWOX slice or mouse arm"
+ },
  "5c6f503de5d0": {
   "src": "en",
   "text": "Raising synaptic GABA by blocking its reuptake (GAT-1) or its breakdown (GABA transaminase)."
+ },
+ "5cbc9ebc04b0": {
+  "src": "en",
+  "text": "None; excitatory-gain readings are one of several live rivals."
  },
  "5cd356f84317": {
   "src": "en",
@@ -863,6 +951,10 @@
   "src": "en",
   "text": "An inhibitor of iron-dependent demethylases and hydroxylases proposed to lower HIF activity through KDM4C"
  },
+ "6219bca8e7ac": {
+  "src": "en",
+  "text": "Tonic holding current and phasic IPSC charge in the same cells; a chronic mouse arm would be needed."
+ },
  "6229c8fbf0f4": {
   "src": "en",
   "text": "Queried: this need's three observation rows; the inactivator unit, its caveats and the safety flag; the chloride-gradient and inhibitory-hypofunction needs for the mechanism argument that contradicts the reports. Extended on 2026-11-05/06: the non-WWOX DEE baseline queried (UKISS, ICISS, the National Infantile Spasms Consortium records with no developmental outcome endpoint, lead-time cohorts, EPISTOP and PREVeNT, STXBP1, Dravet and KCNQ2 cohorts, and an early-infantile DEE cohort with burst suppression; un registro del repository (non incluso in questo pacchetto)); 14 WWOX-DEE reports queried for exposure and both endpoints (a1_wwox_reports). Bounded queries, not a statement that nothing else exists."
@@ -878,6 +970,10 @@
  "63a54671a54d": {
   "src": "en",
   "text": "The chain that motivates this lever predicts a PDH block, and the two available data point the other way: the kinase transcript is down and the one human activity measurement shows no difference. Ordering the compound before the premise is measured is how a plausible chain becomes a wasted experiment."
+ },
+ "63b1bbbaa151": {
+  "src": "en",
+  "text": "Brain exposure of the compound class."
  },
  "63eefa8357cd": {
   "src": "en",
@@ -951,6 +1047,10 @@
   "src": "en",
   "text": "Recorded as a negative modulator under a GluN2B entry."
  },
+ "6c127cb7e87c": {
+  "src": "en",
+  "text": "Run as the last step in every slice (positive control and ceiling)."
+ },
  "6cfea8d609e4": {
   "src": "it",
   "text": "Trascritti di mielina e oligodendrociti"
@@ -966,6 +1066,10 @@
  "6dd37210ca39": {
   "src": "en",
   "text": "Queried on 2026-11-07: the needs table (no HCN target in any need before this one), the IT14 P3 package, the investigations table, the stage proposals S12 and S13 (no HCN main target or chain) and the catalogue by target and by id; a search of this module, not a statement about the literature."
+ },
+ "6dfd52160765": {
+  "src": "en",
+  "text": "Recombinant receptors in cell lines and oocytes (details withheld from this edition)"
  },
  "6e3b73bb3129": {
   "src": "en",
@@ -983,6 +1087,10 @@
   "src": "en",
   "text": "The Methods drug list contains no synaptic blocker, so the intrinsic recordings were probably made with synapses intact, while most knockout slices burst."
  },
+ "6f469c9e6753": {
+  "src": "en",
+  "text": "Where the Q230P protein is lost: never made, made and cleared, made and insoluble, made and epitope-invisible, or truncated."
+ },
  "6f7064c2d342": {
   "src": "it",
   "text": "rho NET-WWOX meno rho NET-EXT"
@@ -995,9 +1103,17 @@
   "src": "en",
   "text": "That the burst needs NMDA-receptor activity does not show a gain of receptor function."
  },
+ "7053e6049516": {
+  "src": "en",
+  "text": "A bioenergetic flux measurement (oxygen consumption and extracellular acidification) in WWOX-deficient versus isogenic human neural or donor-derived cells;"
+ },
  "70727009821c": {
   "src": "en",
   "text": "That the lost current, if any, is Ba2+-sensitive and of a family an opener reaches: TREK and TRAAK are blocked only at millimolar Ba2+, and the one Kir2 opener reached is Kir2.1-only with no neuronal data; capacitance by genotype is unmeasured. [SCI49] Direct-mechanism Kir2.1 activators acting through a channel cysteine (Cys311) exist in recombinant cells (three marketed drugs, named in the package) and none is tested in neurons; one of them spares the Kir2.1+2.2 and 2.1+2.3 heteromers and is also a Na+ channel blocker; two are at abstract depth; the claimed opener listed here rests on one laboratory in hypoxic CHO cells; direction of benefit unresolved. [IT 2026-11-15] Ba2+ step: no primary Ba2+ concentration-response in the 50-200 micromolar window was found for TASK-1, TASK-3 or THIK-1 (TASK-1 was tested only from 0.3 to 10 millimolar); the family-level statement above is unchanged; the nearest concentration-response is a native TASK-like current in rat dorsal vagal neurones (IC50 465 micromolar, abstract only)."
+ },
+ "7137f235bf47": {
+  "src": "en",
+  "text": "NMDAR co-agonist or positive-modulator direction, with a GluN2A-selective negative modulator as subunit-assignment control"
  },
  "714571f82c43": {
   "src": "it",
@@ -1115,6 +1231,10 @@
   "src": "en",
   "text": "IT21 P4a (IT21P2-0006)"
  },
+ "7f0381043474": {
+  "src": "en",
+  "text": "Extracellular magnesium as the physiological voltage-dependent NMDAR gate"
+ },
  "7f3b48fad94a": {
   "src": "en",
   "text": "E4 - card reviewed, 1 WWOX-side assertion(s) read beyond abstract"
@@ -1150,6 +1270,10 @@
  "825be1bb0bc3": {
   "src": "en",
   "text": "Measure the tissue pH; if this compound is used, run the ifenprodil-site tool and the full competitive antagonist at the same two controlled pH values, with its recombinant maximum at each pH known first."
+ },
+ "82d80b1a24b4": {
+  "src": "en",
+  "text": "Cannot separate raised gain from permissive necessity; wild-type matched-trigger slices may lose bursts equally (then the block is generic)."
  },
  "834e9fb3fb43": {
   "src": "en",
@@ -1303,6 +1427,10 @@
   "src": "it",
   "text": "Più basso nella linea shRNA (resazurina grezza), più alto nella mosca con amiloide; nessuna misura di flusso in cellule neurali."
  },
+ "920e7d9f43c3": {
+  "src": "en",
+  "text": "Glial density and area fraction measured over the days before and after the first recorded spike in the same Wwox-deficient animals, and any glial endpoint after any …"
+ },
  "921f63aa0165": {
   "src": "en",
   "text": "Adding a resting K+ conductance with an opener: the openers that exist act on the weakly Ba2+-sensitive channel family"
@@ -1351,6 +1479,10 @@
   "src": "en",
   "text": "A catalogue query, no new data."
  },
+ "9734501996ae": {
+  "src": "en",
+  "text": "How many WWOX-DEE children have received vigabatrin and how many of them had follow-up MRI (the denominator behind the two reported cases)."
+ },
  "9771a0390514": {
   "src": "en",
   "text": "WWOX-system, read beyond the abstract: the high-dose arm reaches a survival plateau to day 300 and lowers spike-wave discharges to a wild-type-indistinguishable level; weight is ordered against wild type and the untreated knockout (equal to the high dose at P30 only), and glycaemia is NOT shown to be prevented: at P10 the treated arms are not significantly different from the untreated knockout (high dose about 113, low dose about 105, untreated knockout about 95; Figure 3E, card C04 DR-AAV-GLU10-HD and DR-AAV-GLU10-LD), at P20 the untreated-knockout comparator is absent because those animals are dead (Figure 3F, DR-AAV-GLU20-LD and DR-AAV-GLU20-HD, direction UNKNOWN) and the P20 result is dose-graded against wild type only, and by P30 the dose separation has closed (Figure 3G); the paper's own text states that both doses partially corrected hypoglycaemia, while the panel does not support it (card C04 records this: the treated arms are not significantly different from the untreated knockout at P10); the glucose result depends on age, dose and comparison, and a non-significant difference at P10 is not evidence of no benefit. Every treated arm was injected in the stated neonatal window."
@@ -1391,6 +1523,10 @@
   "src": "en",
   "text": "Clinical reports only. Children counted once across 14 reports: 36 to 38 exposed to at least one of vigabatrin, hormonal therapy, ketogenic diet or cannabidiol (partial full-text depth in 11 reports, one source at abstract level). Both a symptomatic and a developmental outcome are recorded for 6. In 4 of them, a partial or transient improvement came with no developmental progress recorded; in 2, neither moved. No sustained, instrumented response is recorded, and no developmental gain follows any of the four classes. Vigabatrin: 5 children with both endpoints in 4 reports (4 discordant, 1 concordant non-response); these are not independent of the other classes, since three of the five also supply them and all five were on co-therapy. Children with both endpoints, by class, of those exposed: hormonal 3 of 11; ketogenic diet 2 of 12; cannabidiol 1 of 7. Counts only, no percentage (n below 10). Developmental statements are clinical narratives without a scale. A brain-imaging safety signal is recorded beside them in two children (abstract level, a report selected for the finding), so it is not a frequency. No WWOX child is recorded with a developmental gain after a symptomatic improvement. Four children in three reports (two of them in one report) had a partial, transient or clinically-defined improvement with development not progressing; two had neither. That is what the baseline in other genetic and structural early-onset encephalopathies predicts (a responder with poor development is the majority outcome in infantile spasms and near-universal in genetic strata), so it is not by itself a WWOX-specific feature. The comparison holds only as a binary: the baseline uses standardised scores with a cut, every WWOX developmental statement is a clinician narrative, and no WWOX child had a sustained, instrumented response. Non-WWOX DEE baseline (batch_sci_20261105 a2_baseline; not WWOX evidence): in a prospective IESS cohort read at partial full-text depth, 72 percent of responders (126 of 175, computed from its Table 1) were below the developmental cut at 3 years, and no genetic-aetiology child reached a favourable outcome (0 of 49, a count over all genetic-aetiology children, not a responder rate). In two randomised IESS trials (abstract level), arms that raised early spasm cessation by 15 to 19 points showed no demonstrated developmental difference, with about one chance in four of detecting the difference that full mediation would predict. In TSC, two randomised trials of pre-onset prevention changed seizure endpoints without changing development to 36 months; they test prevention before onset, not response after onset. The person-level association (ICISS, abstract level: 15.9 VABS points higher with early cessation) is carried by unknown aetiology and a normal first neurological examination. [IT36] the 2024 vigabatrin case: developmental statements uninstrumented, stall from spasm onset before drug; seizure-free at home while video-EEG still showed events. [IT39] The transfer from KCNQ2 and TSC is analogy; genotype stratification is established for mortality only; lithium is not the only existing-drug node (ethosuximide was also tested)."
  },
+ "9976b3b6740f": {
+  "src": "en",
+  "text": "sIPSC amplitude 57.3 to 27.5 pA (about -52 percent; KCl internal solution, pooled events); heterozygote against wild type not reported."
+ },
  "998e6b4ee869": {
   "src": "en",
   "text": "A second ifenprodil-site tool: primary potency and site are read, no maximum inhibition and no triheteromer figure"
@@ -1426,6 +1562,10 @@
  "9bc3d7f67697": {
   "src": "en",
   "text": "Development feasibility: a cell-level probe is feasible now, and an approved thyroid-hormone molecule and a clinical-stage analogue exist; systemic hormone action, the early treatment window and the lack of a brain-exposure datum for the analogue limit any later use."
+ },
+ "9c153d4d92eb": {
+  "src": "en",
+  "text": "Which share of the slice NMDAR current is carried by GluN2B-containing receptors, and do bursts follow it?"
  },
  "9c25ba9441fa": {
   "src": "en",
@@ -1467,6 +1607,10 @@
   "src": "en",
   "text": "Per-animal parvalbumin cell counts by immunostaining in neuron-targeted Wwox deletion against Cre-only controls, at least 3 animals per arm (reopening condition (c) of NP3A1), read together with a maturation and identity marker panel in the same animals, and, where the data holders allow, intrinsic-property and inhibitory-input recordings from labelled parvalbumin cells and a circuit-level read. Alternatives that also reopen it: a deposited library or animal index for GSE158684, or an independent neuron-targeted deletion dataset with at least 3 animals per arm and a parvalbumin-enriched capture. The result is read as six separate rows (number, identity and maturation, marker expression, intrinsic properties, synaptic input, circuit function); a change in one is not carried to another. In every animal used (P14 to P17, matching the phenotype window), on the same sections: a parvalbumin marker, the Rosa26 tdTomato reporter and a Wwox read-out, reporting per animal the fraction of parvalbumin cells reporter-positive, the fraction Wwox-negative and their concordance, beside cell number, identity and marker expression; transcript, protein, activity, cell number and circuit function stay separate results. [SCI42] Order of the inhibitory minimum experiment: M03 (re-record sIPSC with glutamate block, fixed threshold, per-animal summary), then M01 (E_GABA by gramicidin perforated patch, knockout, heterozygote and wild-type littermates), then M02 (age series with a survivor-selection control); M05 and M06 if M03 confirms the amplitude loss."
  },
+ "a18bbfdccd5f": {
+  "src": "en",
+  "text": "Measure f with a saturating GluN2B NAM; then titrate the NAM, an equal-current NMDAR antagonist and a low-trapping pore blocker, with a GluN2A NAM and two unrelated GluN2B NAMs as controls."
+ },
  "a279c69ad340": {
   "src": "it",
   "text": "rho SIG"
@@ -1474,6 +1618,10 @@
  "a396eedef330": {
   "src": "en",
   "text": "For the four needs on which the catalogue returns nothing at all, what would have to exist before any compound question could be asked?"
+ },
+ "a4e121bfc5cd": {
+  "src": "en",
+  "text": "Case reports of WWOX-related epilepsy: 2 benefit, 3 null, 1 partial, 1 unresolved (queried, not read in full)."
  },
  "a4f994f57698": {
   "src": "it",
@@ -1535,6 +1683,10 @@
   "src": "it",
   "text": "Drosophila (mosca)"
  },
+ "a8cdffe04c05": {
+  "src": "en",
+  "text": "Bumetanide and the chloride gradient"
+ },
  "a8db6cde1c2c": {
   "src": "it",
   "text": "Più bassi in cinque contesti ma non specifici (controlli non correlati si muovono quanto): non letti come segnale respiratorio."
@@ -1570,6 +1722,10 @@
  "abc5aea19788": {
   "src": "it",
   "text": "Lattato, flusso o ATP (funzionale)"
+ },
+ "ac1b5f7dfc78": {
+  "src": "en",
+  "text": "Cannot be read as a test of the phasic IPSC deficit."
  },
  "ac21398659f9": {
   "src": "en",
@@ -1615,6 +1771,14 @@
   "src": "en",
   "text": "Seizure-free neuron plus precursor co-culture with wild-type and WWOX-deficient neurons: first measure T3 and T4 in the complete co-culture and spheroid media (B27 and N2 are present and the B27 formulation can carry T3), then the agonist against vehicle, with the native hormone as the primary receptor comparator and a transport-independent agonist as the second comparator; a depleted-medium arm only when a defined medium exists and its effect on the neurons is checked; a null agonist result in complete medium may be a ceiling effect, with a receptor-isoform-selective control; read precursor and mature-cell counts. Correction in both genotypes means non-specific maturation; correction only in the deficient condition opens a pre-onset in vivo question; no change closes the route. [IT36] Before the agonist arms, measure the hormone content of the co-culture medium: the defined medium names B27 and N2 and declares no hormone; not declared is not absent, so a hormone-depleted arm cannot be read without a measured baseline."
  },
+ "b009a6c10347": {
+  "src": "en",
+  "text": "Glial-reactivity modulators and the unresolved sign and order of gliosis in …:"
+ },
+ "b01ddcc9981a": {
+  "src": "en",
+  "text": "definition of 'Yes' in the supplement"
+ },
  "b0a41fac4624": {
   "src": "en",
   "text": "INV-17"
@@ -1634,6 +1798,14 @@
  "b3a38e83ad32": {
   "src": "it",
   "text": "Calo robusto nei progenitori shRNA ma segni opposti altrove; la composizione del tessuto può spiegarlo. Il documento P4 lo legge come non risolto."
+ },
+ "b40ad32cf7e1": {
+  "src": "en",
+  "text": "Same-cell triad (with miniature IPSCs in TTX), then graded potentiator with measured IPSC charge."
+ },
+ "b4225fa6065e": {
+  "src": "en",
+  "text": "Apply a positive modulator to heterozygous and wild-type slices and score bursts."
  },
  "b422ec117b63": {
   "src": "en",
@@ -1662,6 +1834,10 @@
  "b6492a90982b": {
   "src": "it",
   "text": "intervallo di confidenza al 90% di SIG, estremo inferiore"
+ },
+ "b6cab15c9b15": {
+  "src": "en",
+  "text": "positive modulators of GABA-A receptors at the high-affinity modulatory site, with two further agents to attribute the subunit"
  },
  "b719c7c10191": {
   "src": "en",
@@ -1718,6 +1894,10 @@
  "bccb9591cef8": {
   "src": "en",
   "text": "Queried on 2026-11-09 to 2026-11-10 in the package hif1a_bnip3_it41_20261109 (search of this module and open sources, not a statement about the literature)."
+ },
+ "bcf4e6dc281e": {
+  "src": "en",
+  "text": "Bursts are d-APV-sensitive; NMDAR current not measured (so the GluN2B share f at this age is unknown)."
  },
  "bd6266199402": {
   "src": "en",
@@ -2059,6 +2239,10 @@
   "src": "en",
   "text": "Neuron-driven developmental myelin deficit with precursors up and mature cells down; maturation block favoured over loss but not demonstrated (IT14)."
  },
+ "e3b28aead3ae": {
+  "src": "en",
+  "text": "Whether the ethosuximide late-phase effect in the null is mediated by T-type channels."
+ },
  "e3d5181822f1": {
   "src": "en",
   "text": "WWOX-system: the cytokine seeds are mouse transcript changes in two Wwox-deficient preparations; the human neural datasets carry no IL6 or TNF reads. Compound side: a selective, cell-active inhibitor of EZH2 with reported lowering of cytokines in a mouse brain model (abstract-level reading); a reference of the chain reports raised cytokines after EZH2 inhibition in glioma and microglia. IT22 P6 correction: the reference that carried the opposite sign used a different EZH2-blocking agent and siRNA, not the probe; in microglia the cytokines did not change and the rise came through medium from EZH2-suppressed tumour cells. Separate hazard: Ezh2 loss delays oligodendrocyte differentiation and Ezh1 compensates (mouse), so dual EZH1/EZH2 blockers are the highest-risk members. The arm is now reached from two different WWOX observations (glial cytokines and NRF2 tone), but through shared network edges, so it is not independent support."
@@ -2135,6 +2319,10 @@
   "src": "en",
   "text": "Development feasibility: a tool compound for in vitro and mouse work only; brain entry is restricted by efflux in vitro and there is no human exposure statement."
  },
+ "e961610cf137": {
+  "src": "en",
+  "text": "Burst reduction equal in wild-type matched-trigger slices would show network state, not knockout specificity."
+ },
  "e983db57ab72": {
   "src": "en",
   "text": "Standard genetic perturbation; the readout is the constraint, not the reagent. [IT45] Decision: whether the genetic NRF2 arm precedes any compound, and which KEAP1 pair separates an NRF2-dependent from an independent benefit. Possible in silico: done for the catalogue (a dose-response activity read reaches catalogued covalent modifiers and a non-covalent binder, each with a primary document, five of eight read only as abstract or database copy). New measure: NRF2 protein, nuclear NRF2 and target-gene activity per compartment in a WWOX-deficient neural system, then each compound with and without NFE2L2 knockdown. Reopen if: the primary text of the abstract-only documents or neural-cell data change a premise."
@@ -2142,6 +2330,10 @@
  "e9d2ada2a64c": {
   "src": "en",
   "text": "Carded chain: Dichloroacetate (see its card) and inhibition of the pyruvate dehydrogenase kinases on the pyruvate axis."
+ },
+ "ea75f5a688ef": {
+  "src": "en",
+  "text": "Whether lithium does anything in a Wwox-deficient system that it does not do in a wild-type one (the one experiment that tested it answered no)."
  },
  "eaaec5adb8f1": {
   "src": "en",
@@ -2170,6 +2362,10 @@
  "ec4b8778780d": {
   "src": "en",
   "text": "A modulator amplifies only the GABA that is released: with little GABA it adds little, and where GABA is depolarising beyond threshold it can worsen excitation (animal studies disagree on the age). Benzodiazepine-type drugs reduce seizures in several encephalopathies whatever the cause, which would make any effect generic; tolerance is documented. In the WWOX reports held, two single children are described as responding and three groups as not responding to a benzodiazepine, with no instrument and no cohort."
+ },
+ "ec895f6aade0": {
+  "src": "en",
+  "text": "A steeper-than-linear burst fall is not a valid discriminator alone (burst generation is threshold-like)."
  },
  "ed04c567319d": {
   "src": "en",
@@ -2270,6 +2466,10 @@
  "f8c40246e1de": {
   "src": "en",
   "text": "A protein measurement on material the module already reasons about; no new model and no compound needed."
+ },
+ "f9209902aeba": {
+  "src": "en",
+  "text": "direction of mTOR activity in a WWOX-deficient system"
  },
  "f92adb789e1f": {
   "src": "en",

@@ -1,0 +1,127 @@
+{
+ "26": {
+  "fr": "Quelle part du courant NMDAR de la tranche est portée par les récepteurs contenant GluN2B, et les salves la suivent-elles ?",
+  "de": "Welcher Anteil des NMDAR-Stroms im Schnitt wird von GluN2B-haltigen Rezeptoren getragen, und folgen die Bursts diesem Anteil?",
+  "es": "¿Qué proporción de la corriente NMDAR del corte es transportada por receptores que contienen GluN2B, y las ráfagas la siguen?"
+ },
+ "27": {
+  "fr": "Modulateurs allostériques négatifs sélectifs de GluN2B (une classe agissant sur le domaine N-terminal du récepteur) : deux outils de recherche et un comparateur au stade clinique",
+  "de": "GluN2B-selektive negative allosterische Modulatoren (eine Klasse, die an der N-terminalen Domäne des Rezeptors wirkt): zwei Forschungswerkzeuge und ein Vergleichspräparat im klinischen Stadium",
+  "es": "Moduladores alostéricos negativos selectivos de GluN2B (una clase que actúa en el dominio N-terminal del receptor): dos herramientas de investigación y un comparador en fase clínica"
+ },
+ "28": {
+  "fr": "Même préparation de tranches ; la pharmacologie qui sous-tend le plan n'est pas publiée dans cette édition",
+  "de": "Gleiche Schnittpräparation; die dem Plan zugrunde liegende Pharmakologie wird in dieser Ausgabe zurückgehalten",
+  "es": "La misma preparación de cortes; la farmacología que sustenta el plan se retiene en esta edición"
+ },
+ "29": {
+  "fr": "Les salves sont sensibles au d-APV ; courant NMDAR non mesuré (la part f de GluN2B à cet âge est donc inconnue).",
+  "de": "Bursts sind d-APV-sensitiv; NMDAR-Strom nicht gemessen (der GluN2B-Anteil f in diesem Alter ist daher unbekannt).",
+  "es": "Las ráfagas son sensibles al d-APV; corriente NMDAR no medida (por lo que la proporción f de GluN2B a esta edad se desconoce)."
+ },
+ "30": {
+  "fr": "Une chute des salves plus raide que linéaire n'est pas, à elle seule, un discriminant valable (la génération des salves est de type à seuil).",
+  "de": "Ein steilerer als linearer Burst-Abfall ist allein kein gültiger Diskriminator (die Burst-Entstehung ist schwellenartig).",
+  "es": "Una caída de las ráfagas más pronunciada que la lineal no es por sí sola un discriminador válido (la generación de ráfagas es de tipo umbral)."
+ },
+ "31": {
+  "fr": "Mesurer f avec un NAM de GluN2B saturant ; puis titrer le NAM, un antagoniste du NMDAR à courant égal et un bloqueur de pore à faible piégeage, avec un NAM de GluN2A et deux NAM de GluN2B non apparentés comme contrôles.",
+  "de": "f mit einem sättigenden GluN2B-NAM messen; dann den NAM, einen NMDAR-Antagonisten mit gleichem Strom und einen Porenblocker mit geringem Trapping titrieren, mit einem GluN2A-NAM und zwei nicht verwandten GluN2B-NAMs als Kontrollen.",
+  "es": "Medir f con un NAM de GluN2B saturante; después titular el NAM, un antagonista del NMDAR de igual corriente y un bloqueador de poro de bajo atrapamiento, con un NAM de GluN2A y dos NAM de GluN2B no relacionados como controles."
+ },
+ "32": {
+  "fr": "La sélectivité de sous-unité est-elle seulement nécessaire pour réduire les salves dépendantes du NMDAR ?",
+  "de": "Ist Untereinheiten-Selektivität überhaupt nötig, um NMDAR-abhängiges Bursting zu verringern?",
+  "es": "¿Es siquiera necesaria la selectividad de subunidad para reducir las ráfagas dependientes del NMDAR?"
+ },
+ "33": {
+  "fr": "Récepteurs recombinants dans des lignées cellulaires et des ovocytes (détails non publiés dans cette édition)",
+  "de": "Rekombinante Rezeptoren in Zelllinien und Oozyten (Details in dieser Ausgabe zurückgehalten)",
+  "es": "Receptores recombinantes en líneas celulares y ovocitos (detalles retenidos en esta edición)"
+ },
+ "34": {
+  "fr": "Aucun résultat de ces composés dans un système WWOX ; la classe fait l'objet d'une fiche comme classe d'intervention sur le NMDAR.",
+  "de": "Kein Ergebnis dieser Verbindungen in einem WWOX-System; die Klasse ist als NMDAR-Interventionsklasse auf einer Karteikarte erfasst.",
+  "es": "Ningún resultado de estos compuestos en un sistema WWOX; la clase tiene una ficha como clase de intervención sobre el NMDAR."
+ },
+ "35": {
+  "fr": "La sélectivité de sous-unité de cette classe n'est pas tranchée entre les documents.",
+  "de": "Die Untereinheiten-Selektivität dieser Klasse ist zwischen den Dokumenten nicht geklärt.",
+  "es": "La selectividad de subunidad de esta clase no está resuelta entre los documentos."
+ },
+ "36": {
+  "fr": "À utiliser comme comparateur indifférent à la sous-unité, à courant fractionnaire égal.",
+  "de": "Als untereinheitenindifferenten Komparator bei angeglichenem fraktionalem Strom einsetzen.",
+  "es": "Usar como comparador indiferente a la subunidad, a corriente fraccional igualada."
+ },
+ "37": {
+  "fr": "Direction co-agoniste ou modulateur positif du NMDAR, avec un modulateur négatif sélectif de GluN2A comme contrôle d'attribution de sous-unité",
+  "de": "Richtung NMDAR-Koagonist oder positiver Modulator, mit einem GluN2A-selektiven negativen Modulator als Kontrolle der Untereinheiten-Zuordnung",
+  "es": "Dirección de coagonista o modulador positivo del NMDAR, con un modulador negativo selectivo de GluN2A como control de asignación de subunidad"
+ },
+ "38": {
+  "fr": "Aucun ; les lectures de gain excitateur sont l'un de plusieurs rivaux encore en lice.",
+  "de": "Keine; Lesarten einer erregenden Verstärkung sind eine von mehreren weiterhin offenen konkurrierenden Erklärungen.",
+  "es": "Ninguno; las lecturas de ganancia excitadora son una de varias rivales aún vigentes."
+ },
+ "39": {
+  "fr": "Si les salves n'augmentent pas, la nécessité permissive est favorisée par rapport au gain accru.",
+  "de": "Nehmen die Bursts nicht zu, wird die permissive Notwendigkeit gegenüber erhöhter Verstärkung favorisiert.",
+  "es": "Si las ráfagas no aumentan, se favorece la necesidad permisiva frente a una ganancia aumentada."
+ },
+ "40": {
+  "fr": "Appliquer un modulateur positif à des tranches hétérozygotes et sauvages et évaluer les salves.",
+  "de": "Einen positiven Modulator auf heterozygote und Wildtyp-Schnitte anwenden und die Bursts bewerten.",
+  "es": "Aplicar un modulador positivo a cortes heterocigotos y silvestres y puntuar las ráfagas."
+ },
+ "41": {
+  "fr": "Nourrissons humains (cas rapportés) ; aucune tranche WWOX ni bras souris",
+  "de": "Menschliche Säuglinge (Fallberichte); weder WWOX-Schnitt noch Mausarm",
+  "es": "Lactantes humanos (informes de casos); sin corte WWOX ni brazo de ratón"
+ },
+ "42": {
+  "fr": "Cas rapportés d'épilepsie liée à WWOX : 2 bénéfices, 3 nuls, 1 partiel, 1 non tranché (recherchés, non lus en entier).",
+  "de": "Fallberichte zu WWOX-assoziierter Epilepsie: 2 Nutzen, 3 ohne Effekt, 1 partiell, 1 ungeklärt (abgefragt, nicht vollständig gelesen).",
+  "es": "Informes de casos de epilepsia relacionada con WWOX: 2 con beneficio, 3 nulos, 1 parcial, 1 sin resolver (consultados, no leídos íntegramente)."
+ },
+ "43": {
+  "fr": "Ne peut pas être lu comme un test du déficit phasique des IPSC.",
+  "de": "Kann nicht als Test des phasischen IPSC-Defizits gelesen werden.",
+  "es": "No puede leerse como una prueba del déficit de IPSC fásicos."
+ },
+ "44": {
+  "fr": "Courant de maintien tonique et charge phasique des IPSC dans les mêmes cellules ; un bras souris chronique serait nécessaire.",
+  "de": "Tonischer Haltestrom und phasische IPSC-Ladung in denselben Zellen; ein chronischer Mausarm wäre nötig.",
+  "es": "Corriente de mantenimiento tónica y carga fásica de IPSC en las mismas células; haría falta un brazo de ratón crónico."
+ },
+ "45": {
+  "fr": "Un modulateur positif du site modulateur de haute affinité du GABA-A compense-t-il l'inhibition rapide du GABA-A perdue pendant l'exposition ?",
+  "de": "Kompensiert ein positiver Modulator an der hochaffinen modulatorischen Stelle des GABA-A die verlorene schnelle GABA-A-Hemmung während der Exposition?",
+  "es": "¿Compensa un modulador positivo en el sitio modulador de alta afinidad del GABA-A la inhibición rápida del GABA-A perdida durante la exposición?"
+ },
+ "46": {
+  "fr": "modulateurs positifs des récepteurs GABA-A au site modulateur de haute affinité, avec deux autres agents pour attribuer la sous-unité",
+  "de": "positive Modulatoren von GABA-A-Rezeptoren an der hochaffinen modulatorischen Stelle, mit zwei weiteren Substanzen zur Zuordnung der Untereinheit",
+  "es": "moduladores positivos de los receptores GABA-A en el sitio modulador de alta afinidad, con dos agentes más para atribuir la subunidad"
+ },
+ "47": {
+  "fr": "amplitude des sIPSC de 57,3 à 27,5 pA (environ -52 pour cent ; solution interne KCl, événements groupés) ; hétérozygote par rapport au sauvage non rapporté.",
+  "de": "sIPSC-Amplitude 57,3 auf 27,5 pA (etwa -52 Prozent; KCl-Innenlösung, gepoolte Ereignisse); Heterozygote gegenüber Wildtyp nicht berichtet.",
+  "es": "amplitud de los sIPSC de 57,3 a 27,5 pA (aproximadamente -52 por ciento; solución interna de KCl, eventos agrupados); heterocigoto frente a silvestre no notificado."
+ },
+ "48": {
+  "fr": "Une réduction égale des salves dans des tranches sauvages appariées sur le déclencheur montrerait l'état du réseau, et non la spécificité du knockout.",
+  "de": "Eine gleich große Burst-Reduktion in Wildtyp-Schnitten mit angepasstem Auslöser würde den Netzwerkzustand zeigen, nicht die Knockout-Spezifität.",
+  "es": "Una reducción igual de las ráfagas en cortes silvestres con desencadenante equiparado mostraría el estado de la red, no la especificidad del knockout."
+ },
+ "49": {
+  "fr": "Triade dans la même cellule (avec des IPSC miniatures en présence de TTX), puis potentialisateur gradué avec mesure de la charge des IPSC.",
+  "de": "Triade in derselben Zelle (mit Miniatur-IPSCs in TTX), dann abgestufter Potentiator mit gemessener IPSC-Ladung.",
+  "es": "Tríada en la misma célula (con IPSC miniatura en TTX), luego potenciador graduado con carga de IPSC medida."
+ },
+ "50": {
+  "fr": "La perte inhibitrice est-elle limitée par la libération ou la clairance plutôt que par les récepteurs ?",
+  "de": "Ist der inhibitorische Verlust eher durch Freisetzung oder Clearance als durch Rezeptoren begrenzt?",
+  "es": "¿Está la pérdida inhibitoria limitada por la liberación o el aclaramiento más que por los receptores?"
+ }
+}
