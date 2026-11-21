@@ -25,3 +25,5 @@ Dated line added (old text kept): `context_differences_it7_p4_20261029/README.md
 
 ## Limits
 One search pass per agent at abstract level; the PubMed route finds titles and abstracts, not tables; a value in an image or supplement would be missed (the item-5 lesson). States marked "sheet taken, not re-read" come from HE's data sheets and the selection note as they stand. The vitamin and cofactor group was searched only with epilepsy and supplement terms and a WWOX-linked query, not per vitamin.
+
+Dated correction (IT, 2026-11-21, ADV-158; the text above is unchanged): the harm cell 'overlap' for the Kv7 openers and the three demotion lines are qualified in advisor_pilot_20261113/brainstorm_20261116/it_adv158_20261121/ADV158_TWO_COMPARISONS_AND_CONSUMER_CHECK_IT_20261121.md: overlap is an inference (repeated-dose exposure not measured), and the funding view's safety cells for OPP-01 and OPP-05 now carry the state table's content.
