@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-21T14:02:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-21T14:02:00Z",
+ "event_id": "FTR-20261121-IHRIN-02",
+ "evidence_basis": [
+  "bioRxiv preprint 10.64898/2026.02.03.703439v1 (Ba2+-sensitive Kir conductance in L2/3 pyramidal neurons of primary auditory cortex of Fmr1 knockout mice), PDF from the open bioRxiv URL, pdftotext (layout and raw). Read: abstract, Methods (animals, slice preparation, current-clamp and voltage-clamp solutions), Results 3.1 and 3.4 (ZD7288 section), figure captions of Figs 1 and 5. Not read: Introduction, Discussion, references. The wild-type mice were 28-42 days old: outside the P13-P17 window, a near-miss. The mean Rin before ZD7288 is not printed for the ZD7288 cohort in the text read (figure-only).",
+  "verbatim_locator | proposition: age of the mice | Methods 2.2.1, line 169 of the raw extraction | \"mice, between 28 and 42 days old.\"",
+  "verbatim_locator | proposition: recording temperature | Methods, line 136 | \"(1-3 mL/min) at 34 ± 2 °C.\"",
+  "verbatim_locator | proposition: ZD7288 effect on input resistance in wild type (10 uM) | Results 3.4, lines 463-466 | \"and increased Rin (ΔWT: 8.0 MΩ, p = 0.0349; ΔFmr1-KO: 12.1\"",
+  "verbatim_locator | proposition: control wild-type input resistance in this preparation (separate Fig 1C cohort) | Results 3.1, line 305 | \"and lower input resistance (Rin; WT: 172.7 ± 34.7 MΩ; Fmr1KO: 124.5 ± 33.2 MΩ, p < 0.001; Fig. 1C)\"",
+  "verbatim_locator | proposition: sag was reduced, not zero, after ZD7288 | Results 3.4, lines 466-468 | \"while abolishing sag (pre-ZD7288: WT\"",
+  "TTX appears only in the voltage-clamp external solution in the Methods read; no TTX is stated for the current-clamp Rin experiments."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ih_rin_juvenile_l23_it_20261121/output/RESULT.md",
+  "disease-models/wwox/research/drug_repurposing/ih_rin_juvenile_l23_it_20261121/output/candidates.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-PPR1225217-94",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "276475aff95abeec683d3e760580408f1ad2050edcae9d192c7bd94d108ee707",
+ "source_kind": "fulltext_remote",
+ "source_locator": "https://www.biorxiv.org/content/10.64898/2026.02.03.703439v1.full.pdf fetched 2026-11-21 (local copy files/fulltext/ih_rin_it_20261121/p2/biorxiv_2026.02.03.703439v1.pdf, text layers fmr1_a1.txt and fmr1_a1_raw.txt)",
+ "study_id": {
+  "doi": "10.64898/2026.02.03.703439"
+ },
+ "workflow": "Ih-blocker effect on resting Rin in juvenile rodent L2/3 pyramidal neurons (ih_rin_juvenile_l23_it_20261121), producer on model sonnet, effort high. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
