@@ -17,7 +17,7 @@ Q15	OPEN-GAP Q15 (Regimens and dose checks)	OPEN_GAP_LABORATORY	; design-team an
 Q16	OPEN-GAP Q16 (Regimens and dose checks)	OPEN_GAP_SCI	the term 'exposure' is kept; a plain wording would need a new fact
 Q17	OPEN-GAP Q17 (Regimens and dose checks)	OPEN_GAP_SCI	
 Q18	OPEN-GAP Q18 (Stimulus, seizure grades and observation)	ANSWERED_IN_TEXT	grades 3, 4, 5 and the status definition are in the grade table; design-team answer integrated 2026-11-21 (stated in a source text)
-Q19	OPEN-GAP Q19 and CONFLICT-OPEN C09 (Groups to run)	OPEN_GAP_LABORATORY	; design-team answer integrated 2026-11-21 (partly closed); the remaining question is open
+Q19	OPEN-GAP Q19 and CONFLICT-OPEN C09 (Groups to run)	OPEN_GAP_LABORATORY	; design-team answer integrated 2026-11-21 (partly closed); the remaining question is open; corrected 2026-11-21: the pilot ages are two laboratory-chosen ages inside P12 to P17
 Q20	OPEN-GAP Q20 (Groups to run)	ANSWERED_BY_RULE_INFERENCE	; design-team answer integrated 2026-11-21 (INFERENCE: a rule proposed by the design team, not a source value)
 Q21	OPEN-GAP Q21 (Ages)	OPEN_GAP_LABORATORY	; design-team answer integrated 2026-11-21 (INFERENCE: a rule proposed by the design team, not a source value; one input is the laboratory's); the remaining question is open
 Q22	OPEN-GAP Q22 (Stimulus, seizure grades and observation)	OPEN_GAP_LABORATORY	; design-team answer integrated 2026-11-21 (partly closed); the remaining question is open
@@ -49,7 +49,7 @@ Q47	Animals (Cluster and sex)	ANSWERED_IN_TEXT	sex is recorded; no balancing or 
 Q48	OPEN-GAP Q48 (Animals)	OPEN_GAP_SCI	
 Q49	OPEN-GAP Q49 and the clarification on S (Stimulus, seizure grades and observation)	OPEN_GAP_SCI	clarification by text work, no number
 Q50	OPEN-GAP Q50 (Stimulus, seizure grades and observation)	OPEN_GAP_SCI	
-Q51	OPEN-GAP Q51 (Stimulus, seizure grades and observation)	OPEN_GAP_SCI	
+Q51	Design-team answer Q51 (Stimulus, seizure grades and observation)	ANSWERED_BY_RULE_INFERENCE	; design-team answer integrated 2026-11-21 (stated in a source text; the latency rule is an INFERENCE); one laboratory question remains (scoring bin)
 Q52	OPEN-GAP Q52 (Stimulus, seizure grades and observation)	OPEN_GAP_SCI	
 Q53	OPEN-GAP Q53 (Stimulus, seizure grades and observation)	OPEN_GAP_LABORATORY	the criterion is stated to be the laboratory's own; timing relative to the drug is not stated
 Q54	OPEN-GAP Q54 (Optional add-ons)	OPEN_GAP_SCI	
@@ -82,7 +82,7 @@ Q80	OPEN-GAP Q80 (Logistics, terms and contact)	OPEN_GAP_LABORATORY	colony pract
 Q81	OPEN-GAP Q81 (The question)	OPEN_GAP_SCI	
 Q82	OPEN-GAP Q82 and clarification (What each outcome would favour)	ANSWERED_IN_TEXT	; design-team answer integrated 2026-11-21 (confirmed by the design team)
 Q83	Status line under the contents list	ANSWERED_IN_TEXT	'grade' for the 0 to 6 seizure scale; 'stage' for the experimental plan
-Q84	OPEN-GAP Q84 (Stimulus, seizure grades and observation)	OPEN_GAP_SCI	
+Q84	Design-team answer Q84 (Stimulus, seizure grades and observation)	ANSWERED_IN_TEXT	; design-team answer integrated 2026-11-21 (stated in a source text): P5 and P8 are prediction labels of the in vivo priors file
 Q85	Animals (definitions of session, cell, arm); Groups to run (panel, comparator drug)	ANSWERED_IN_TEXT	'exposure' is the one term not defined: see OPEN-GAP Q16
 QA1	OPEN-GAP QA1 (Regimens and dose checks)	OPEN_GAP_LABORATORY	lithium salt, vehicle, route, spacing of the three injections; design-team answer integrated 2026-11-21 (partly closed); the remaining question is open
 QA2	OPEN-GAP QA2 (Stimulus, seizure grades and observation)	OPEN_GAP_LABORATORY	feeding and thermal state during the observation; design-team answer integrated 2026-11-21 (source statements only; the value is the laboratory's or the operator's); the remaining question is open
