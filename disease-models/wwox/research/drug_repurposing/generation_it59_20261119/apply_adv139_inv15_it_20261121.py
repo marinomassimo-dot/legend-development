@@ -30,7 +30,7 @@ EV_ADD = (" [Update 2026-11-21, ADV-139 (" + RES + "): two newer public abstract
           "supply result statements, not per-animal data: " + QUAL + " The treatment statements (reduced seizure burden in vivo; partly restored or improved firing) are L1-unanchored and L2-unanchored; L3 (recovery explains the EEG effect) is not met; "
           "neither abstract names parvalbumin, so the PV question does not move and the RP-019 trigger is not met.]")
 
-NOV_ADD = (" [Update 2026-11-21: AES 2026 1.019 and SfN NANO11.01 were read at abstract level (" + RES + "); a result statement exists at class level, not per-animal data; "
+NOV_ADD = (" [Update 2026-11-21, ADV-139: AES 2026 1.019 and SfN NANO11.01 were read at abstract level (" + RES + "); a result statement exists at class level, not per-animal data; "
            "no PV is named. A search of this module and of the routes listed there, not a statement about the literature.]")
 
 MV_OLD = ("names parvalbumin interneurons and slice and in vivo recordings as approaches and supplies no result, so the position is unchanged; per-animal data from that programme would reopen it.")
@@ -110,10 +110,13 @@ def m24():
     ])
 
 
-def step31():
-    p = DR / "generation_it40_20261109/conditional_design_steps_it50.tsv"
-    return edit_rows(p, "design_row_id", "measurement_reconciliation_adv006_20261114::measurements.tsv::M24", [
-        ("scope_and_what_the_result_is_not", add_once(" [Update 2026-11-21, ADV-139: the interneuron-class arm is now reported at abstract level without a reporter (" + QUAL + "); the pyramidal-specific arm is reported in neither abstract.]")),
+def m24_scope():
+    """Column not_decided_by_it of M24 is the one the design-step generator maps into the scope cell of design row 31
+    (generation_it40_20261109/conditional_design_steps_it50.tsv); that table is GENERATED (run conditional_proposals.py
+    there after this script) and must never be edited by hand: test_design_rows_he50 compares it with the generator."""
+    p = DR / "measurement_reconciliation_adv006_20261114/output/measurements.tsv"
+    return edit_rows(p, "m_id", "M24", [
+        ("not_decided_by_it", add_once(" [Update 2026-11-21, ADV-139: the interneuron-class arm is now reported at abstract level without a reporter (AES 2026 1.019; class only, no Cre line, subtype, recombination check, age or n; not a PV result; unverifiable); the pyramidal-specific arm is reported in neither abstract; the pre- versus postsynaptic question stays open.]")),
     ])
 
 
@@ -131,5 +134,5 @@ def readme():
 
 
 if __name__ == "__main__":
-    for fn in (inv15, c08, m24, step31, readme):
+    for fn in (inv15, c08, m24, m24_scope, readme):
         print(fn.__name__, fn())
