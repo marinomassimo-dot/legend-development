@@ -567,8 +567,8 @@
      "owner": "plan",
      "source": "ADV message 2026-11-21 (clean restart point after ADV-130; checkpoint D with pointers to ADV-127 to ADV-131)",
      "accepted_at": "2026-11-21T03:36:14Z",
-     "evidence": "CHECKPOINT_HE_20261121_D.md written and landed; successor launch and bind times in the next step record",
-     "updated_at": "2026-11-21T03:36:14Z"
+     "evidence": "CHECKPOINT_HE_20261121_D.md landed (7b7e16403); successor e5d84418 RUNNING: launched 03:39:29Z, released 03:39:32Z, bound 03:39:50Z (18 s after release), first tool call 03:39:51Z (1.5 s after bind); ADV told",
+     "updated_at": "2026-11-21T03:40:19Z"
     }
    ]
   }
