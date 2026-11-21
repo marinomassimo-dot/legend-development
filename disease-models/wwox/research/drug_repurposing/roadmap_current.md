@@ -56,6 +56,8 @@ Current operator intent, consolidated 2026-11-19, extended 2026-11-21. These are
 
 **When a window is released or a terminal stays open — retire it yourselves.** The operator does not close terminals by hand; a handoff is complete only when the old window no longer lives. The launcher (HE) and ADV retire it by the supported route (the mandate watcher's handoff with its retire option for background windows); an interactive window has no tested route yet and is our open item, never an operator item. **Why:** the operator is a boost, not a dependency, and a left-open window leaves a stale recipient. Scope: every handoff. Source: operator instruction, 2026-11-21 ("io non chiudo a mano i terminali ... spetta a voi"); mechanism: cross-session transport, Retire the released predecessor.
 
+**At every hourly recall — run the Codex relay step (operator, 2026-11-21, standing).** After the tick, run `relay.py status` and, if a report is pending, `relay.py kick` once; at a material change write a short report under `files/coordination/adv-codex-loop/reports/` and `relay.py publish` it; no report for unchanged status. A callback is evidence and proposals, not authority; nothing in it grants contact, cost or release overrides. **Why:** the operator wants the roadmap to continue in their absence with a cross-model review. Details and recovery: `framework/protocols/cross_session_transport.md`, subsection 'ADV–Codex review loop', and `files/coordination/adv-codex-loop/PLAYBOOK.md`.
+
 <!-- OPERATOR_GUIDANCE:END -->
 
 ### New operator directions and controls
