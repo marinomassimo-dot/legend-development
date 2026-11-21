@@ -225,6 +225,46 @@ class Bridge(unittest.TestCase):
         self.assertEqual(q["objects"], ["ethosuximide"])
         self.assertTrue(q["epmc"].startswith("TITLE_ABS:ethosuximide"))                                  # 70 of 77 live questions are byte-identical before and after this change
 
+    NP4G2_ROW = ("Independent reproduction of the OPC differentiation delay (DRG-OPC co-culture or null-OPC monoculture) "
+                 "whether a Wwox-null neuron or OPC alone, with no seizures or illness in the dish, shifts OPC differentiation")
+
+    def anchored(self, text, surface="reopen", gene_anchor="WWOX"):
+        item = {"surface": surface, "lid": "X", "text": text, "decision": "d", "weight": 1, "path": "p", "blob": "b", "sha": "s", "locator": "l", "external": True}
+        return sd.build_questions([item], gene_anchor)[0][0]
+
+    def test_the_gene_anchor_is_off_by_default_and_the_default_search_is_unchanged(self):
+        """2026-11-21 (IT, NP4G2): the reopen query read `TITLE_ABS:opc AND TITLE_ABS:drg`; the default must stay so, because the flag changes the plan digest."""
+        q = self.anchored(self.NP4G2_ROW, gene_anchor="")
+        self.assertEqual(q["epmc"], "TITLE_ABS:opc AND TITLE_ABS:drg")
+        self.assertNotIn("gene_anchor", q)
+        self.assertEqual(self.anchored(self.NP4G2_ROW, gene_anchor="")["kw"], sd.build_questions([dict(surface="reopen", lid="X", text=self.NP4G2_ROW, decision="d", weight=1, path="p", blob="b",
+                                                                                                    sha="s", locator="l", external=True)])[0][0]["kw"])
+
+    def test_a_reopen_row_with_no_subject_word_keeps_its_search_under_the_gene_anchor(self):
+        base, got = self.anchored("OPC DRG null axon", gene_anchor=""), self.anchored("OPC DRG null axon", gene_anchor="WWOX")
+        self.assertEqual((got["epmc"], got["kw"]), (base["epmc"], base["kw"]))
+
+    def test_the_opt_in_gene_anchor_leads_a_reopen_question_that_names_no_drug(self):
+        q = self.anchored(self.NP4G2_ROW)
+        self.assertEqual(q["epmc"], "TITLE_ABS:WWOX AND TITLE_ABS:differentiation")   # gene AND the subject word: gene AND opc AND drg returned 0 records (HE trial)
+        self.assertEqual(q["kw"], "wwox differentiation")
+        self.assertEqual(q["gene_anchor"], "WWOX")
+
+    def test_the_gene_anchor_leaves_a_drug_question_and_every_other_surface_alone(self):
+        for surface in ("reopen", "roadmap"):
+            base = self.anchored(self.ROWS["OBJ"], surface, "")
+            got = self.anchored(self.ROWS["OBJ"], surface, "WWOX")
+            self.assertEqual((got["epmc"], got["kw"]), (base["epmc"], base["kw"]), surface)   # a drug named: drug AND gene would be nearly empty
+        base, got = self.anchored(self.NP4G2_ROW, "roadmap", ""), self.anchored(self.NP4G2_ROW, "roadmap", "WWOX")
+        self.assertEqual((got["epmc"], got["kw"]), (base["epmc"], base["kw"]))
+
+    def test_the_recall_set_of_the_np4g2_trial_is_present_for_the_measured_comparison(self):
+        """The gene-anchor's trial criteria are IT's K_core set (29 records): a missing or shortened file would make a recall figure meaningless."""
+        path = Path(__file__).resolve().parents[2] / "disease-models/wwox/research/drug_repurposing/np4g2_retrieval_it_20261120/K_core_record_ids.tsv"
+        rows = path.read_text().splitlines()
+        self.assertEqual(len(rows) - 1, 29)
+        self.assertEqual(sum(r.split("\t")[1].isdigit() for r in rows[1:]), 28)   # the 29th is a bioRxiv preprint (no PMID), matched by title
+
     def test_fallback_themes_and_the_open_slot_need_no_bridge(self):
         self.assertEqual(sd.bridge_terms({"id": "open-slot", "gap": "unplanned find: no gap assumed"}), [])
         self.assertEqual(sd.bridge_terms({"id": "t1", "gap": "gap one"}), [])

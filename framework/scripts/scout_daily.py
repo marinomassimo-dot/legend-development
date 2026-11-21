@@ -758,8 +758,19 @@ def entities(text: str, n: int = 3) -> tuple[list[str], list[str]]:
     return list(seen)[:n], list(methods)[:1]
 
 
-def build_questions(items: list[dict]) -> tuple[list[dict], int]:
-    """Items -> search questions in the shape of THEMES, each with its origin. Returns (questions, skipped)."""
+GENE_ANCHOR_DEFAULT = MODULE.split("/")[1].upper()   # the disease folder's gene (WWOX), for the opt-in `gene_anchor` of build_questions
+
+
+def build_questions(items: list[dict], gene_anchor: str = "") -> tuple[list[dict], int]:
+    """Items -> search questions in the shape of THEMES, each with its origin. Returns (questions, skipped).
+
+    `gene_anchor` (HE, 2026-11-21, IT's NP4G2 finding; OFF by default, so the plan digest does not move): a reopen-table row sits in a disease folder and usually never states the gene
+    ("OPC differentiation ... DRG-OPC co-culture"), `wwox` is excluded from the bridge terms by design, and the objects it does name are abbreviations common outside the disease, so the
+    Europe PMC query was `TITLE_ABS:opc AND TITLE_ABS:drg` and returned one methods paper. With the flag set, a question from a reopen surface that names no drug is searched as the gene AND the row's
+    top subject word (`key_terms` with the form words skipped, a plain word of 5 to 30 letters), in both the Europe PMC and the keyword query. Measured on IT's K_core recall set
+    (np4g2_retrieval_it_20261120/gene_anchor_trial_he_20261121): the gene added to the two abbreviations returns 0 records (three-way AND), the gene plus the subject word returns 7 records in the
+    scout's window, two of them K_core, against 1 record and 0 K_core before. A row whose text yields no such word keeps its search, as does a question that names a drug (drug AND gene
+    would be nearly empty) and every other surface."""
     best: dict[str, dict] = {}
     skipped = 0
     for it in items:
@@ -797,6 +808,12 @@ def build_questions(items: list[dict]) -> tuple[list[dict], int]:
              "terms": terms, "plain": plain, "anchor": anchor,
              "domain": [t for t in plain if t not in GENERIC][:3],
              "origin": {k: it[k] for k in ("surface", "locator", "path", "blob", "sha")} | {"priority": it["text"][:200]}}
+        if gene_anchor and it["surface"] == "reopen" and not DRUG.search(" ".join(objs)):
+            subject = next((t for t in key_terms(it["text"], skip=QUERY_SKIP, parts=True) if re.fullmatch(r"[a-z]{5,30}", t) and t not in GENERIC), None)
+            if subject:
+                q["kw"] = kw = f"{gene_anchor.lower()} {subject}"
+                q["epmc"] = f"TITLE_ABS:{gene_anchor} AND TITLE_ABS:{subject}"
+                q["gene_anchor"] = gene_anchor
         if kw not in best or q["weight"] > best[kw]["weight"]:
             best[kw] = q
     return sorted(best.values(), key=lambda q: (-q["weight"], q["id"])), skipped
@@ -922,7 +939,7 @@ def resolve_plan(cached: dict | None, extracts: dict | None, ctx: dict, runner=g
             items.append(dict(it, path=path, blob=blob, sha=sha))
         todo += [("reopen", link) for link in old.get("links", [])]
     extracts = {p: v for p, v in extracts.items() if p in inputs}
-    questions, skipped = build_questions(items)
+    questions, skipped = build_questions(items, ctx.get("gene_anchor") or "")
     plan = {"sha": sha, "derived_at": now.isoformat(timespec="seconds"), "inputs": inputs, "questions": questions,
             "skipped": skipped, "provisional": reasons, "reread": reread,
             "cache": "hit" if reread == 0 else "re-derived"}
@@ -2089,6 +2106,9 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--dry-run", action="store_true", help="with --discover-only: print, write nothing")
     parser.add_argument("--briefing", action="store_true", help="always print the briefing (default: only if non-empty)")
     parser.add_argument("--plan", action="store_true", help="print today's derived plan (questions with origin) and exit")
+    parser.add_argument("--gene-anchor", nargs="?", const=GENE_ANCHOR_DEFAULT, default="", metavar="GENE",
+                        help="opt-in: the disease folder's gene (default WWOX when given bare) leads the Europe PMC and keyword query of every reopen-row question that names no drug; "
+                             "off by default because it changes the plan digest")
     parser.add_argument("--follow-list", action="store_true", help="print the followed teams/repos and exit")
     parser.add_argument("--follow-add", metavar="TEAM/REPO", help="follow a public repo (needs --source --reason --reopen)")
     parser.add_argument("--source"), parser.add_argument("--reason"), parser.add_argument("--reopen")
@@ -2142,6 +2162,7 @@ def main(argv: list[str] | None = None) -> int:
     state = read_state(state_path)
     follow = state.get("follow") or follow_seed()
     ctx = resolve_context(state.get("context"), now=now)
+    ctx["gene_anchor"] = args.gene_anchor
     known = known_idents(WATCH, follow, ctx)
     counter = CountingOpener(http)
     plan, extracts, themes, din, per_run = plan_step(state, ctx, cfg, now)

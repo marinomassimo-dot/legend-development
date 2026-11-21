@@ -506,6 +506,40 @@
      "accepted_at": "2026-11-20T23:45:14Z",
      "evidence": "landed 5ffedd622 (gate PASS, ls-remote); painted EN/DE at 1280 and 390 px: raw kind 26/16/4 -> 0/0/0; 4 render sites (card chip, ranking next-experiment, work-order chip, curated.js x2); ten view pages + package regenerated; i18n 21 OK; view suite non-browser 176 tests, 2 red = item-17 tests only; 7 browser classes OK",
      "updated_at": "2026-11-21T00:24:14Z"
+    },
+    {
+     "step": "ADV-128: painted-text scan of Italian labels on non-Italian pages (detector first, counts before/after per page and language, UI labels vs authored content, fix UI labels)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-21 assigning ADV-128 after ADV-127 consumption",
+     "accepted_at": "2026-11-21T00:24:59Z",
+     "evidence": "first landing aebf394dc (gate PASS, ls-remote): painted before/after 16 pages, 34 UI keys x4 languages, ten pages + package regenerated, static guard italian_ui_strings_left, result + detector scripts in adv128_painted_italian_he_20261121; group 2 (authored Italian content, ~155 nodes) counted and routed to owners, not translated",
+     "updated_at": "2026-11-21T01:05:29Z"
+    },
+    {
+     "step": "Write HE checkpoint C (restart of the HE window at a closed increment, ADV-128 first landing)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-21: restart line README section 13 at closed increment; HE agreed to restart after ADV-128's first landing",
+     "accepted_at": "2026-11-21T01:05:29Z",
+     "evidence": "checkpoint disease-models/wwox/research/drug_repurposing/checkpoint_he_20261120/CHECKPOINT_HE_20261121_C.md sha256 c9fd25a5d01aabc4534da56bc009d02fb31bc8595a7ef7d4fe4f2079a1420090; written at a closed increment (ADV-128 first landing aebf394dc)",
+     "updated_at": "2026-11-21T01:06:03Z"
+    },
+    {
+     "step": "scout_daily.py: add an opt-in gene-anchor flag to build_questions for reopen-row queries (default unchanged), test it against IT's recall set K_core_record_ids.tsv, and put IT's ownership split into the transport section",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "checkpoint HE-C section 2 (IT queued item, IT request 2026-11-21 after NP4G2 retrieval)",
+     "accepted_at": "2026-11-21T01:13:50Z",
+     "evidence": "scout_daily.py --gene-anchor (opt-in, default unchanged), 5 new tests, test_scout_daily 101 OK; trial on IT's K_core via PubMed route (Europe PMC 500): literal gene-first form returned 0, revised gene+subject form 7 records / 2 K_core vs 1 / 0; result in np4g2_retrieval_it_20261120/gene_anchor_trial_he_20261121/RESULT_GENE_ANCHOR_HE_20261121.md; IT ownership split in cross_session_transport section 12; branch he_scout_gene_anchor_20261121",
+     "updated_at": "2026-11-21T01:31:44Z"
+    },
+    {
+     "step": "ADV-129 generator review for IT (diff adv129_generator.diff, 26 lines in repurposing_view.py): answer A or B, then extend the static guard (Italian authored passage in the embedded data of a non-Italian page) and fix the raw 'un solo sistema' table cells",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "IT message (ADV-129 generator diff review) with ADV routing note (assignments/ADV-129.md)",
+     "accepted_at": "2026-11-21T01:17:09Z"
     }
    ]
   }
@@ -893,6 +927,34 @@
    "at": "2026-11-20T23:45:14Z",
    "source": "ADV message 2026-11-20 assigning ADV-127 after the Italian-fragment report",
    "step_sha256": "bc71c35c717f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T00:24:59Z",
+   "source": "ADV message 2026-11-21 assigning ADV-128 after ADV-127 consumption",
+   "step_sha256": "caafe32f94c8",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T01:05:29Z",
+   "source": "ADV message 2026-11-21: restart line README section 13 at closed increment; HE agreed to restart after ADV-128's first landing",
+   "step_sha256": "6cb715aced00",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T01:13:50Z",
+   "source": "checkpoint HE-C section 2 (IT queued item, IT request 2026-11-21 after NP4G2 retrieval)",
+   "step_sha256": "8d030d422d0c",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T01:17:09Z",
+   "source": "IT message (ADV-129 generator diff review) with ADV routing note (assignments/ADV-129.md)",
+   "step_sha256": "7df2df19b709",
    "reopened_block": false,
    "authorised_by": null
   }
