@@ -714,6 +714,13 @@
      "accepted_at": "2026-11-21T22:40:33Z",
      "evidence": "result disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv165_cyfip2_chronology_sci_20261121/RESULT_ADV165_CYFIP2_CHRONOLOGY_SCI_20261121.md; pre-registration commit 5ebcb997c; receipt FTR-20261121-41066510-01; self-evaluation 2026-11-21_sci-z_adv165.md",
      "updated_at": "2026-11-21T22:49:20Z"
+    },
+    {
+     "step": "ADV-166: Javed et al. 2026 (PMID 42129570): does the paper hold a matched comparison where an early neuron-to-progenitor ratio and later absolute neuronal output carry different signs; named decision INV-17 (MYC role); pre-register first; result file plus path to ADV; time-box 45 to 60 minutes",
+     "status": "TODO",
+     "owner": "science",
+     "source": "ADV-166 (assignment file in the root checkout; ADV message to SCI 052bf24b, Codex return 07)",
+     "accepted_at": "2026-11-21T22:58:11Z"
     }
    ]
   }
@@ -1262,6 +1269,13 @@
    "at": "2026-11-21T22:40:33Z",
    "source": "ADV-165 (assignment file, commit 2846d7051; ADV receipt 1221d29e)",
    "step_sha256": "372bd6001b64",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T22:58:11Z",
+   "source": "ADV-166 (assignment file in the root checkout; ADV message to SCI 052bf24b, Codex return 07)",
+   "step_sha256": "2a46551caffc",
    "reopened_block": false,
    "authorised_by": null
   }
