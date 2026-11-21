@@ -554,10 +554,12 @@
     },
     {
      "step": "ADV-130: section-level 'Section text in English (source language)' notice (en/fr/de/es, blind check) on full-edition sections whose authored passages are English on a non-English page; fix the two '4-PBA / acido fenilbutirrico' occurrences on the full EN page; repeat the painted scan on full fr/de/es; extend the static guard",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV message with ADV-130 decision (assignments/ADV-130.md) of 2026-11-21, after the leads count",
-     "accepted_at": "2026-11-21T02:32:05Z"
+     "accepted_at": "2026-11-21T02:32:05Z",
+     "evidence": "section notice (sec_en_src, en/fr/de/es, blind check 8/8 OK), pilot compound name per language, guard EnglishAuthoredSectionsSayTheyAreEnglish, painted scan full pages (RESULT_ADV130_HE_20261121.md); i18n suite 26 OK; view suite 232 run, 2 known item-17 reds",
+     "updated_at": "2026-11-21T03:12:49Z"
     }
    ]
   }
