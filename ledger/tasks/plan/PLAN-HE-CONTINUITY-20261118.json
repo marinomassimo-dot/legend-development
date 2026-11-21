@@ -579,10 +579,12 @@
     },
     {
      "step": "Add the question-form words onset and prevented, and similar, to the scout bridge stoplist, with a test on the three hits of the 05:20 radar briefing",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV meeting message 2026-11-21 morning: a bounded lead for HE, in HE's pace, opt-in or default as judged",
-     "accepted_at": "2026-11-21T05:38:22Z"
+     "accepted_at": "2026-11-21T05:38:22Z",
+     "evidence": "landed 4c492a565 (gate PASS, ls-remote verified): onset, prevented and forms added to FORMAT_WORDS (default, not opt-in); test_the_timing_and_outcome_words_of_a_gene_addition_question_are_not_its_bridge; test_scout_daily 102 OK; the three titles in the test are written from ADV's description, the briefing is not in the tree",
+     "updated_at": "2026-11-21T05:41:49Z"
     }
    ]
   }
