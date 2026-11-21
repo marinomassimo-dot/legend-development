@@ -274,6 +274,13 @@
      "owner": "orchestrator",
      "source": "ADV message 2026-11-21 (SCI X priority strands ADV-139 then ADV-140; RP-041 queued)",
      "accepted_at": "2026-11-21T13:52:12Z"
+    },
+    {
+     "step": "ADV-143: one governing current text of the pup brief (which text governs, dated lines 9.1 to 9.17 folded, old text kept in a history section, OPEN-GAP markers for group (b), the 19 cannot-tell conflicts marked, plain wording for the new text only; text edit, never a number)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-21 (ADV-143, from the RP-041 delivery table); assignment file registered by ADV",
+     "accepted_at": "2026-11-21T14:37:34Z"
     }
    ]
   }
@@ -486,6 +493,13 @@
    "at": "2026-11-21T13:52:12Z",
    "source": "ADV message 2026-11-21 (SCI X priority strands ADV-139 then ADV-140; RP-041 queued)",
    "step_sha256": "ba540457ec26",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T14:37:34Z",
+   "source": "ADV message 2026-11-21 (ADV-143, from the RP-041 delivery table); assignment file registered by ADV",
+   "step_sha256": "d54da05c659d",
    "reopened_block": false,
    "authorised_by": null
   }
