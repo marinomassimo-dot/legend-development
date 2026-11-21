@@ -357,3 +357,7 @@
 {"evidence": "SendMessage receipt msg_id 1efc16a2-1dac-4c2f-976a-9807da7fd5e8 to IT Orchestrator - CURRENT 6a8c1a55", "id": "ADV-141", "state": "SENT", "to": ["IT Orchestrator - CURRENT 6a8c1a55"], "utc": "2026-11-21T14:06:38Z"}
 {"assessment": "HOST", "id": "ADV-142", "key": "brain-2026-baseline-five-metric-reading-fig1-and-expansion-view-at-full-resolution", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-21T14:19:26Z"}
 {"evidence": "SendMessage receipt msg_id 2c057e29-9140-44ac-bae7-2834fd2722dc to SCI - CURRENT b3e65c69", "id": "ADV-142", "state": "SENT", "to": ["SCI - CURRENT b3e65c69"], "utc": "2026-11-21T14:19:38Z"}
+{"assessment": "HOST", "id": "ADV-143", "key": "pup-brief-text-governance-one-current-text-with-history", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-21T14:34:54Z"}
+{"assessment": "HOST", "id": "ADV-144", "key": "pup-brief-design-numbers-group-b-with-a-preregistered-rule", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-21T14:34:56Z"}
+{"evidence": "SendMessage receipt msg_id 2d87dc7b-7839-439e-a9ea-42f3b4a697d2 to IT Orchestrator - CURRENT 6a8c1a55", "id": "ADV-143", "state": "SENT", "to": ["IT Orchestrator - CURRENT 6a8c1a55"], "utc": "2026-11-21T14:35:18Z"}
+{"evidence": "SendMessage receipt msg_id a9ae9669-44d4-4140-a875-f534f0821f4f to SCI - CURRENT b3e65c69", "id": "ADV-144", "state": "SENT", "to": ["SCI - CURRENT b3e65c69"], "utc": "2026-11-21T14:35:18Z"}
