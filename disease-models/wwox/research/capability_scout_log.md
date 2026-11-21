@@ -3107,3 +3107,71 @@ verify routing and schema behaviour; universal future model obedience is not dem
 **Environment.** Host-specific tool verdicts not used this session (no SKIP or REJECT on tool absence).
 
 **Outcome.** `CHANGE = NONE` shipped; one proposal to Harness Engineering. No cost, API or privacy risk.
+
+## 2026-11-21 · scout_daily · Discovery:work_order:NEED-NEUROINFLAMMATION-GLIA
+
+**WWOX question.** Is glial density in a Wwox-deficient brain below, equal to or above wild type before the first spike? The sign conflicts between species, so
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Multi-glial inhibitory plasticity in epilepsy and sleep: implications for post-traumatic epileptogenesis. (2026-08-19, published record) [bridge to the question: glial] https://europepmc.org/article/MED/42617910; [paper/europepmc] Dual Notch-1 pathway regulation mitigates glial activation and preserves myelin integrity: neuroprotective and anticonvulsant actions of pen (2026-10-01, published record) [bridge to the question: glial] https://europepmc.org/article/MED/42820746; [paper/europepmc] The Neuroprotective Role of a Caspase-1 Inhibitor Against Apoptosis via Inhibition of Glial Hyperactivation in a Mouse Model of Epilepsy. (2026-05-01, published record) [bridge to the question: glial] https://europepmc.org/article/MED/42216646; [paper/nature] An AAV vector for glial cells (2026-07-08, journal-article) [bridge to the question: glial] https://doi.org/10.1038/s41587-026-03193-2; [paper/nature] Evaluation of autophagy in neonatal rat glial cells in an in vitro model of hypoxic–ischemic injury (2026-07-04, journal-article) [bridge to the question: glial] https://doi.org/10.1038/s41598-026-60076-x
+
+**Why asked.** work_order entry NEED-NEUROINFLAMMATION-GLIA [disease-models/wwox/research/drug_repurposing/view/work_order.json @ blob 153e14f097, main 07b3e76fb4a6]: "Is glial density in a Wwox-deficient brain below, equal to or above wild type before the first spike? The sign"
+
+**If confirmed (decision).** It decides whether this need is a readout, a seizure consequence or a seizure-independent lever. Until then no glial modulator is proposed, and no position move Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-21 · scout_daily · Discovery:work_order:NEED-WWOX-GENE-ADDITION
+
+**WWOX question.** Does an intermediate vector level separate a threshold from a gradient, and is the benefit only prevented inside the first days of life or a
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] The delayed-onset of inertial cavitation in tissue-mimicking agar phantom. (2026-04-10, published record) [bridge to the question: onset] https://europepmc.org/article/MED/41916333; [paper/europepmc] A Multimodal Biomedical Sensing Approach for Muscle Activation Onset Detection. (2026-03-18, published record) [bridge to the question: onset] https://europepmc.org/article/MED/41902075; [paper/europepmc] Predicting health and disease: a conceptual framework for AI in preventive and precision medicine. (2026-07-02, published record) [bridge to the question: prevented] https://europepmc.org/article/MED/42392670
+
+**Why asked.** work_order entry NEED-WWOX-GENE-ADDITION [disease-models/wwox/research/drug_repurposing/view/work_order.json @ blob 153e14f097, main 07b3e76fb4a6]: "Does an intermediate vector level separate a threshold from a gradient, and is the benefit only prevented insi"
+
+**If confirmed (decision).** Quantified myelination would add a controlled row on the same need; a failure would move the card to C2 by rule; a treated-after-onset arm would show whether th Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-21 · scout_daily · Team:mims-harvard
+
+**WWOX question.** Does an intermediate vector level separate a threshold from a gradient, and is the benefit only prevented inside the first days of life or a
+
+**Contribution vs existing.** one-level exploration of mims-harvard's public listing (30 scanned, 28 without a shared term); not recursive
+
+**Detected.** followed team (repo mims-harvard/ToolUniverse); other public work matching ['structure']: [github] mims-harvard/SPECTRA (2026-05-28, MIT, matched ['structure']) https://github.com/mims-harvard/SPECTRA
+
+**Why asked.** work_order entry NEED-WWOX-GENE-ADDITION [disease-models/wwox/research/drug_repurposing/view/work_order.json @ blob 153e14f097, main 07b3e76fb4a6]: "Does an intermediate vector level separate a threshold from a gradient, and is the benefit only prevented insi"
+
+**If confirmed (decision).** Quantified myelination would add a controlled row on the same need; a failure would move the card to C2 by rule; a treated-after-onset arm would show whether th Roadmap: R9.
+
+**Minimal test.** read the repository's README and latest default-branch commit; record the SHA and release apart
+
+**Cost / licence.** reading the listing entries: minutes; per item, shown where stated.
+
+**Proof.** public github listing of mims-harvard, no key
+
+**Outcome.** TO_TRIAGE (a listing match is a lead, not a reading)
+
+## 2026-11-21 — HE successor F, triage of the three pending radar entries above
+
+- NEED-NEUROINFLAMMATION-GLIA (3 hits, glial bridge): TRIAGED, no lead. The three titles (glial inhibitory plasticity in epilepsy and sleep, Notch-1 regulation of glial activation in a seizure model, a caspase-1 inhibitor) are matched by the word "glial" only; none measures glial density in a Wwox-deficient brain, which is the question of the need. Not read at full text; a title is not a reading.
+- NEED-WWOX-GENE-ADDITION (3 hits, "onset" and "prevent" bridges): TRIAGED, no lead. The hits are an ultrasound cavitation phantom, a muscle-activation sensor and a general AI-in-medicine framework: one-word lexical bridges that the briefing already names as its remaining false-hit kind (see the entry above on the lexical bridge). Nothing about vector level or treatment timing.
+- Team mims-harvard (SPECTRA, MIT, matched on "structure"): TRIAGED, no lead. A protein-structure repository; no stated link to a WWOX question, no adoption.
+
+**Outcome.** TRIAGED (0 leads, 0 adoptions). The remedy for one-word bridges stays as recorded above; this is one more measurement of the same false-hit kind, not a new problem.
