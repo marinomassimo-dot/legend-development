@@ -608,10 +608,12 @@
     },
     {
      "step": "Write HE checkpoint E at the closed increment, launch the successor by the usual recipe and verify its handoff",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV hourly check at 08:35Z: context past the restart line, restart at a closed increment with the open items listed",
-     "accepted_at": "2026-11-21T08:40:50Z"
+     "accepted_at": "2026-11-21T08:40:50Z",
+     "evidence": "checkpoint E landed eb90469ec (sha256 69d03dd0c2961e5c4a0615a9d26a3a7f691cded62dba86a4ed0cf7bc69d62592); successor session 7a4965de launched 08:50:27Z in he_successor_e_20261121 at effort high; launch prompt was an unexpanded substitution (my error), the real brief sent by message; release and handoff read follow",
+     "updated_at": "2026-11-21T08:51:00Z"
     }
    ]
   }
