@@ -812,6 +812,15 @@
      "accepted_at": "2026-11-21T21:31:33Z",
      "evidence": "with LEGEND_CATALOG_CACHE at the root cache: test_repurposing_search_bridges 12 OK (skips 1 -> 0); test_shareable_audit_languages 1 FAIL of 9 (RealEditions.test_each_edition_passes_and_a_visible_insertion_is_refused_in_each, en: tiratricol insertion not refused); test_attribution_it21 1 FAIL of 48 (CommittedV1Tables.test_propose_without_v1_is_byte_identical_to_the_committed_p2_tables, proposals_it21.tsv differs by a flag column); no repair, reported to ADV",
      "updated_at": "2026-11-21T21:34:47Z"
+    },
+    {
+     "step": "One dated line in the battery notes: skipped tests are unknowns; name the two tests that fail with the cache",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message of 2026-11-21 consuming the skip check",
+     "accepted_at": "2026-11-21T21:35:19Z",
+     "evidence": "README battery row: PASS WITH SKIPS means unknown; the two failing tests named with the assertion and the cache date; routing, documented-commands, reader-journey OK",
+     "updated_at": "2026-11-21T21:36:10Z"
     }
    ]
   }
@@ -1437,6 +1446,13 @@
    "at": "2026-11-21T21:31:33Z",
    "source": "ADV message of 2026-11-21 after the cache test",
    "step_sha256": "b689de58dec9",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T21:35:19Z",
+   "source": "ADV message of 2026-11-21 consuming the skip check",
+   "step_sha256": "cf6fd6c2f31e",
    "reopened_block": false,
    "authorised_by": null
   }
