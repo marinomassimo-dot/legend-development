@@ -785,6 +785,13 @@
      "accepted_at": "2026-11-21T19:33:42Z",
      "evidence": "results landed under advisor_pilot_20261113/brainstorm_20261116/adv159_he_20261121: RESULT_HE_ADV159_20261121.md and RESULT_HE_STALE_PACKAGE_SEQUENCE_20261121.md; CI #1847 concluded with the item-17 pair only; i18n exit code 4102e4d3d; stale package caught by package --check, no code change",
      "updated_at": "2026-11-21T20:06:20Z"
+    },
+    {
+     "step": "Landing gap: candidate_tree_freshness CHECK_ERROR on SCI's checkpoint Y (undeclared generator) blocks every --regenerate-derived landing; find the trigger, smallest reversible fix, regenerate stale derived surfaces",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV message of 2026-11-21 after its refused landing of 9695cad9b",
+     "accepted_at": "2026-11-21T20:51:37Z"
     }
    ]
   }
@@ -1389,6 +1396,13 @@
    "at": "2026-11-21T19:33:42Z",
    "source": "ADV message of 2026-11-21 relaying Codex return 02, choice B for HE",
    "step_sha256": "e681d3e81a7b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T20:51:37Z",
+   "source": "ADV message of 2026-11-21 after its refused landing of 9695cad9b",
+   "step_sha256": "73e93bd2e8d1",
    "reopened_block": false,
    "authorised_by": null
   }

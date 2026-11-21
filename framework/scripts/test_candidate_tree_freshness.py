@@ -250,6 +250,7 @@ class UnknownIsNeverAPass(ToyRepo):
                               capture_output=True, text=True, timeout=120)
         self.assertEqual(2, done.returncode, done.stdout + done.stderr)
         self.assertIn("undeclared generator", done.stdout)
+        self.assertIn("first 15 lines contain the word `generated`", done.stdout)   # the trigger is named, so a hand-written file is not a 20-minute search
 
 
 class NoLeftovers(ToyRepo):

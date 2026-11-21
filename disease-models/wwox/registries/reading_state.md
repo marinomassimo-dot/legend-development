@@ -20,7 +20,7 @@ asserted by no receipt. `prior_receipt` means the reading this one builds on, an
 sharing a parent are the normal case under parallel branches.
 
 
-**1557 paper(s)** with at least one receipt · **2204 receipt(s)** · **36 paper(s) read in parallel** by two receipts sharing a parent.
+**1557 paper(s)** with at least one receipt · **2205 receipt(s)** · **37 paper(s) read in parallel** by two receipts sharing a parent.
 
 ## Papers read in parallel
 
@@ -65,6 +65,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 38851593 | `FTR-20261110-38851593-96` | `FTR-20261110-38851593-97`, `FTR-20261110-38851593-98` |
 | PMID 39177920 | `FTR-20261110-39177920-96` | `FTR-20261110-39177920-97`, `FTR-20261110-39177920-98` |
 | PMID 40595546 | `FTR-20261110-40595546-95` | `FTR-20261111-40595546-93`, `FTR-20261111-40595546-96` |
+| PMID 40674686 | `FTR-20261113-40674686-69` | `FTR-20261113-40674686-68`, `FTR-20261121-40674686-01` |
 | PMID 41104520 | `FTR-20261111-41104520-86` | `FTR-20261111-41104520-85`, `FTR-20261115-41104520-01` |
 | PMID 41233736 | `FTR-20261110-41233736-95` | `FTR-20261111-41233736-93`, `FTR-20261111-41233736-96` |
 | PMID 42274296 | `FTR-20261021-42274296-01` | `FTR-20261105-42274296-05`, `FTR-20261118-42274296-52` |
@@ -1342,7 +1343,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 40665325 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | read | — | 1 |
 | PMID 40670421 | `partial_fulltext_read` | read | read | not_read | read | captions_only | read | read | not_read | not_read | not_read | 1 |
 | PMID 40673958 | `partial_fulltext_read` | read | read | not_read | not_read | not_read | not_read | not_read | not_read | unavailable | not_read | 1 |
-| PMID 40674686 | `abstract_only` | read | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | 2 |
+| PMID 40674686 | `partial_fulltext_read` | read | unavailable | read | unavailable | read | read | unavailable | unavailable | read | unavailable | 3 |
 | PMID 40692288 | `partial_fulltext_read` | read | not_read | read | read | captions_only | not_read | not_read | not_read | unavailable | not_read | 1 |
 | PMID 40741980 | `partial_fulltext_read` | read | read | not_read | read | captions_only | read | read | not_present | not_read | not_read | 1 |
 | PMID 40767837 | `partial_fulltext_read` | read | read | read | read | not_read | not_read | read | read | not_read | not_read | 1 |
