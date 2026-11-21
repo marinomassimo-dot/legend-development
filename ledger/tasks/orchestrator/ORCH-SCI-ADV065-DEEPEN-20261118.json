@@ -696,6 +696,15 @@
      "accepted_at": "2026-11-21T21:04:40Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv161_sterol_specificity_sci_20261121/RESULT_ADV161_STEROL_SPECIFICITY_SCI_20261121.md; receipt FTR-20261121-39178853-01",
      "updated_at": "2026-11-21T21:13:26Z"
+    },
+    {
+     "step": "ADV-162 (operator priority): NeuRoDev resource (Davila-Velderrain, Cell Reports 2026): what it holds, where it touches LEGEND decisions (cell-class premise, RP-043 organoid identities, mapping on public data), operator premise check; deliver to ADV",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-162 (assignments/ADV-162.md; ADV message 2026-11-21)",
+     "accepted_at": "2026-11-21T21:46:52Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv162_neurodev_resource_sci_20261121/RESULT_ADV162_NEURODEV_SCI_20261121.md",
+     "updated_at": "2026-11-21T21:55:46Z"
     }
    ]
   }
@@ -1230,6 +1239,13 @@
    "at": "2026-11-21T21:04:40Z",
    "source": "ADV-161 (assignments/ADV-161.md; REPLY_04_CODEX.md SCI paragraph)",
    "step_sha256": "393ddff4edde",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T21:46:52Z",
+   "source": "ADV-162 (assignments/ADV-162.md; ADV message 2026-11-21)",
+   "step_sha256": "a25cde933424",
    "reopened_block": false,
    "authorised_by": null
   }
