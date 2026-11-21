@@ -830,6 +830,15 @@
      "accepted_at": "2026-11-21T21:44:41Z",
      "evidence": "README battery row carries IT's traced cause (live corpus text, 8431fd387, 10 rows) instead of my cache guess",
      "updated_at": "2026-11-21T21:45:09Z"
+    },
+    {
+     "step": "ADV-163: NeuRoDev assessment of tool, method and discipline (licence, footprint, borrowable practice, independence), scout format",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message of 2026-11-21 assigning ADV-163 (operator priority, harness side)",
+     "accepted_at": "2026-11-21T21:48:18Z",
+     "evidence": "note under brainstorm_20261116/adv163_he_20261121: MIT code, CC BY 4.0 data, 7,124 MB deposit (6,248 MB counts), R absent, verdicts TRIAL (xlsx tables), WATCH (package), REJECT (counts); nothing downloaded",
+     "updated_at": "2026-11-21T21:50:22Z"
     }
    ]
   }
@@ -1469,6 +1478,13 @@
    "at": "2026-11-21T21:44:41Z",
    "source": "ADV message of 2026-11-21 relaying IT's trace",
    "step_sha256": "4612292e98ed",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T21:48:18Z",
+   "source": "ADV message of 2026-11-21 assigning ADV-163 (operator priority, harness side)",
+   "step_sha256": "4a22bd967c89",
    "reopened_block": false,
    "authorised_by": null
   }
