@@ -55,7 +55,7 @@ Q53	OPEN-GAP Q53 (Stimulus, seizure grades and observation)	OPEN_GAP_LABORATORY	
 Q54	OPEN-GAP Q54 (Optional add-ons)	OPEN_GAP_SCI	
 Q55	OPEN-GAP Q55 and CONFLICT-OPEN C16 (Optional add-ons)	OPEN_GAP_SCI	
 Q56	OPEN-GAP Q56 (Optional add-ons)	OPEN_GAP_LABORATORY	the older text says how it applies to a germline null is the laboratory's
-Q57	OPEN-GAP Q57 and CONFLICT-OPEN C31 (Optional add-ons)	OPEN_GAP_SCI	
+Q57	Design-team answer D03 (Add-ons)	ANSWERED_BY_RULE_INFERENCE	; default one combined add-on, serial in the same pups; split only if the blood volume forces it (a laboratory question remains)
 Q58	Optional add-ons (e3)	ANSWERED_IN_TEXT	one animal cohort can carry all of it, as stated in the dated line
 Q59	Optional add-ons (f), (g) and the line after them	ANSWERED_IN_TEXT	both optional; conduction is not yet an endpoint
 Q60	OPEN-GAP Q60 (Optional add-ons)	OPEN_GAP_SCI	
@@ -68,7 +68,7 @@ Q66	OPEN-GAP Q66 (Welfare and stopping)	OPEN_GAP_LABORATORY	falls under the ethi
 Q67	OPEN-GAP Q67 (Groups to run, assay-validation panel)	ANSWERED_BY_RULE_INFERENCE	; design-team answer integrated 2026-11-21 (INFERENCE: a rule proposed by the design team, not a source value)
 Q68	OPEN-GAP Q68 (Analysis plan)	ANSWERED_BY_RULE_INFERENCE	; design-team answer integrated 2026-11-21 (INFERENCE: a rule proposed by the design team, not a source value)
 Q69	OPEN-GAP Q69 (Analysis plan)	OPEN_GAP_SCI	
-Q70	OPEN-GAP Q70 and CONFLICT-OPEN C35 (Analysis plan)	OPEN_GAP_SCI	
+Q70	Design-team answer D04 (Analysis plan)	ANSWERED_BY_RULE_INFERENCE	; the family is counted per session and genotype from the final arm list (6 in wild type per age, 2 in knockout and heterozygote in the required session)
 Q71	OPEN-GAP Q71 (Analysis plan)	OPEN_GAP_SCI	
 Q72	Analysis plan (Interval method)	ANSWERED_IN_TEXT	litter bootstrap primary; fewer than 10 litters in a cell: permutation test or mixed model with litter random effect
 Q73	OPEN-GAP Q73 (Analysis plan)	OPEN_GAP_LABORATORY	classified 'later or more specific wins' by the conflict table, but text work cannot supply a descriptive pattern; see CHANGE_LOG; design-team answer integrated 2026-11-21 (INFERENCE: a rule proposed by the design team, not a source value); the remaining question is open

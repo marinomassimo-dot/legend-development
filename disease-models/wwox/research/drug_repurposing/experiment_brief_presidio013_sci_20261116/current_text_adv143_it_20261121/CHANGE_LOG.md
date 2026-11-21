@@ -124,3 +124,6 @@ The design team's residual-conflict replacements S01 to S14 were applied by `int
 
 ## Addendum 2026-11-21 (classification of the 13 open conflicts)
 The 13 conflicts left after the design team's second set of answers were classified (`CLASSIFICATION_ADV150_IT_20261121.md`): six repaired in the text by `resolve_adv150_it_20261121.py` (C02, C03, C16, C23, R2C05, C32), seven turned into named decisions for design science with their options (C09, C30, C31, C35, R2C01, R2C09, R2C10), none for the laboratory or the operator. No CONFLICT-OPEN marker remains in the text before the History. Two dangling pointers to removed markers were reworded. Old sentences and markers are kept in the History.
+
+## Addendum 2026-11-21 (integration of the seven decisions)
+The design team's decisions D01 to D07 for the seven named decisions were applied by `integrate_adv151_it_20261121.py` (see `verify_adv151/RECONCILIATION_ADV151_IT_20261121.md`). Two notes of D05 (the rounded reciprocal of 0.7 and point-ratio versus interval scoring) are carried as OPEN-GAP markers with their options; no deviation from the frozen priors file. The multiplicity bullet now counts per genotype and session. The open questions Q57 and Q70 are closed by the answers. Old text is in the History.
