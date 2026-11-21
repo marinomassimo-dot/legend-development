@@ -1,0 +1,95 @@
+scope	label	cell_type	total_cells	n_expressing	pc_fraction_above_0
+POOLED	all mouse brain datasets	Pvalb	47108	25018	0.5311
+POOLED	all mouse brain datasets	Sst	63284	21100	0.3334
+POOLED	all mouse brain datasets	Lamp5	52821	14340	0.2715
+POOLED	all mouse brain datasets	Vip	55568	12579	0.2264
+POOLED	all mouse brain datasets	L2/3 IT	69786	18495	0.265
+POOLED	all mouse brain datasets	L5 IT	32230	11453	0.3554
+POOLED	all mouse brain datasets	L4/5 IT	390667	49208	0.126
+POOLED	all mouse brain datasets	L5 ET	40816	11385	0.2789
+POOLED	all mouse brain datasets	L5/6 NP	48336	13266	0.2745
+POOLED	all mouse brain datasets	L6 CT	176717	23849	0.135
+POOLED	all mouse brain datasets	L6 IT	91775	9182	0.1
+POOLED	all mouse brain datasets	L6b	37962	3524	0.0928
+POOLED	all mouse brain datasets	Oligodendrocyte	142198	39451	0.2774
+POOLED	all mouse brain datasets	OPC	85419	12513	0.1465
+POOLED	all mouse brain datasets	Astrocyte	164667	55928	0.3396
+6347cc90-f284-41d8-a131-db4a37bd796f	Single-cell transcriptomics characterization of oligodendroc | Single-cell of aged oligodendrocytes	Oligodendrocyte	6040	14	0.0023
+1229ecc2-b067-4664-91da-0251aec31574	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: WT-THR vs DN-THR	Pvalb	8754	7133	0.8148
+1229ecc2-b067-4664-91da-0251aec31574	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: WT-THR vs DN-THR	Sst	6921	4638	0.6701
+1229ecc2-b067-4664-91da-0251aec31574	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: WT-THR vs DN-THR	Lamp5	4044	2373	0.5868
+1229ecc2-b067-4664-91da-0251aec31574	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: WT-THR vs DN-THR	Vip	4022	1794	0.446
+1229ecc2-b067-4664-91da-0251aec31574	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: WT-THR vs DN-THR	L2/3 IT	33781	10268	0.304
+1229ecc2-b067-4664-91da-0251aec31574	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: WT-THR vs DN-THR	L5 IT	21331	7684	0.3602
+1229ecc2-b067-4664-91da-0251aec31574	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: WT-THR vs DN-THR	L4/5 IT	27628	8490	0.3073
+1229ecc2-b067-4664-91da-0251aec31574	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: WT-THR vs DN-THR	L5 ET	9698	4936	0.509
+1229ecc2-b067-4664-91da-0251aec31574	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: WT-THR vs DN-THR	L5/6 NP	6524	2788	0.4273
+1229ecc2-b067-4664-91da-0251aec31574	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: WT-THR vs DN-THR	L6 CT	18130	4575	0.2523
+1229ecc2-b067-4664-91da-0251aec31574	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: WT-THR vs DN-THR	L6 IT	6445	1787	0.2773
+1229ecc2-b067-4664-91da-0251aec31574	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: WT-THR vs DN-THR	L6b	290	59	0.2034
+1229ecc2-b067-4664-91da-0251aec31574	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: WT-THR vs DN-THR	Oligodendrocyte	15047	6770	0.4499
+1229ecc2-b067-4664-91da-0251aec31574	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: WT-THR vs DN-THR	OPC	5490	2830	0.5155
+1229ecc2-b067-4664-91da-0251aec31574	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: WT-THR vs DN-THR	Astrocyte	21875	10744	0.4912
+98e5ea9f-16d6-47ec-a529-686e76515e39	Tabula Muris Senis | All - A single-cell transcriptomic atlas characterizes agein	Oligodendrocyte	2093	27	0.0129
+98e5ea9f-16d6-47ec-a529-686e76515e39	Tabula Muris Senis | All - A single-cell transcriptomic atlas characterizes agein	OPC	312	6	0.0192
+98e5ea9f-16d6-47ec-a529-686e76515e39	Tabula Muris Senis | All - A single-cell transcriptomic atlas characterizes agein	Astrocyte	641	11	0.0187
+e0ed3c55-aff6-4bb7-b6ff-98a2d90b890c	A transcriptomic atlas of the mouse cerebellum reveals regio | A transcriptomic atlas of the mouse cerebellum	Oligodendrocyte	13315	6372	0.4786
+e0ed3c55-aff6-4bb7-b6ff-98a2d90b890c	A transcriptomic atlas of the mouse cerebellum reveals regio | A transcriptomic atlas of the mouse cerebellum	OPC	2121	943	0.4446
+e0ed3c55-aff6-4bb7-b6ff-98a2d90b890c	A transcriptomic atlas of the mouse cerebellum reveals regio | A transcriptomic atlas of the mouse cerebellum	Astrocyte	34143	19686	0.5766
+3bbb6cf9-72b9-41be-b568-656de6eb18b5	Molecular and spatial signatures of mouse brain aging at sin | BrainAgingSpatialAtlas_snRNAseq	Oligodendrocyte	18254	7456	0.4085
+3bbb6cf9-72b9-41be-b568-656de6eb18b5	Molecular and spatial signatures of mouse brain aging at sin | BrainAgingSpatialAtlas_snRNAseq	OPC	3291	1896	0.5761
+3bbb6cf9-72b9-41be-b568-656de6eb18b5	Molecular and spatial signatures of mouse brain aging at sin | BrainAgingSpatialAtlas_snRNAseq	Astrocyte	6771	2534	0.3742
+28c696bb-9549-434b-9340-dc745a846f9a	Shared and distinct transcriptomic cell types across neocort | Shared and distinct transcriptomic cell types across neocort	NO_GENE_ROWS			
+79a2344d-eddd-45b1-b376-39eddfab1899	Developmental trajectories of thalamic nuclei revealed by si | Atlas of the developing mouse thalamus	OPC	4586	88	0.0192
+812fa7bd-db15-4357-b2c9-efc8e1eb0450	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	Pvalb	3581	49	0.0137
+812fa7bd-db15-4357-b2c9-efc8e1eb0450	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	Sst	5366	55	0.0108
+812fa7bd-db15-4357-b2c9-efc8e1eb0450	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	Lamp5	4430	17	0.0038
+812fa7bd-db15-4357-b2c9-efc8e1eb0450	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	Vip	5735	75	0.0131
+812fa7bd-db15-4357-b2c9-efc8e1eb0450	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	L4/5 IT		54	0.0042
+812fa7bd-db15-4357-b2c9-efc8e1eb0450	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	L5 ET	2139	4	0.0019
+812fa7bd-db15-4357-b2c9-efc8e1eb0450	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	L5/6 NP		8	0.0033
+812fa7bd-db15-4357-b2c9-efc8e1eb0450	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	L6 CT	5343	13	0.0024
+812fa7bd-db15-4357-b2c9-efc8e1eb0450	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	L6 IT		1	0.0002
+812fa7bd-db15-4357-b2c9-efc8e1eb0450	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	L6b	2348	9	0.0038
+812fa7bd-db15-4357-b2c9-efc8e1eb0450	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	Oligodendrocyte	229	6	0.0262
+812fa7bd-db15-4357-b2c9-efc8e1eb0450	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	Astrocyte	963	60	0.0623
+12990215-ad1a-4106-8536-7388327a616f	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: T3 vs control	Pvalb	4312	3637	0.8435
+12990215-ad1a-4106-8536-7388327a616f	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: T3 vs control	Sst	3569	2443	0.6845
+12990215-ad1a-4106-8536-7388327a616f	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: T3 vs control	Lamp5	2203	1350	0.6128
+12990215-ad1a-4106-8536-7388327a616f	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: T3 vs control	Vip	2127	1028	0.4833
+12990215-ad1a-4106-8536-7388327a616f	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: T3 vs control	L2/3 IT	22050	6484	0.2941
+12990215-ad1a-4106-8536-7388327a616f	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: T3 vs control	L5 IT	10899	3769	0.3458
+12990215-ad1a-4106-8536-7388327a616f	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: T3 vs control	L4/5 IT	15930	4858	0.305
+12990215-ad1a-4106-8536-7388327a616f	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: T3 vs control	L5 ET	4787	2365	0.494
+12990215-ad1a-4106-8536-7388327a616f	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: T3 vs control	L5/6 NP	3203	1309	0.4087
+12990215-ad1a-4106-8536-7388327a616f	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: T3 vs control	L6 CT	4492	1050	0.2337
+12990215-ad1a-4106-8536-7388327a616f	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: T3 vs control	L6 IT	1428	364	0.2549
+12990215-ad1a-4106-8536-7388327a616f	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: T3 vs control	Oligodendrocyte	6985	3438	0.4922
+12990215-ad1a-4106-8536-7388327a616f	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: T3 vs control	OPC	3358	1860	0.5539
+12990215-ad1a-4106-8536-7388327a616f	Thyroid hormone remodels cortex to coordinate body-wide meta | Single-nucleus RNA sequencing of M2: T3 vs control	Astrocyte	11757	6619	0.563
+e056b20b-bb29-40c8-afd4-03124cf828a8	Single-cell census of murine glioblastoma subtypes | Single-cell census of murine glioblastoma subtypes	OPC	2472	17	0.0069
+e056b20b-bb29-40c8-afd4-03124cf828a8	Single-cell census of murine glioblastoma subtypes | Single-cell census of murine glioblastoma subtypes	Astrocyte	2783	21	0.0075
+0e1c7067-8833-4f54-8847-ad7d33d09c10	Transcriptional profiling of murine oligodendrocyte precurso | Transcriptional profiling of murine oligodendrocyte precurso	OPC	38803	380	0.0098
+3a15ab1c-c36c-4842-9a3e-47e6ffd0ba6f	Adult mouse cortical cell taxonomy revealed by single cell t | Adult mouse cortical cell taxonomy revealed by single cell t	Oligodendrocyte	42	1	0.0238
+3a15ab1c-c36c-4842-9a3e-47e6ffd0ba6f	Adult mouse cortical cell taxonomy revealed by single cell t | Adult mouse cortical cell taxonomy revealed by single cell t	OPC	24	1	0.0417
+dbb4e1ed-d820-4e83-981f-88ef7eb55a35	HypoMap – a unified single cell gene expression atlas of the | HypoMap – a unified single cell gene expression atlas of the	Oligodendrocyte	48804	2764	0.0566
+dbb4e1ed-d820-4e83-981f-88ef7eb55a35	HypoMap – a unified single cell gene expression atlas of the | HypoMap – a unified single cell gene expression atlas of the	OPC	19865	1768	0.089
+dbb4e1ed-d820-4e83-981f-88ef7eb55a35	HypoMap – a unified single cell gene expression atlas of the | HypoMap – a unified single cell gene expression atlas of the	Astrocyte	61922	5215	0.0842
+d7291f04-fbbb-4d65-990a-f01fa44e915b	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	Pvalb	30461	14199	0.4661
+d7291f04-fbbb-4d65-990a-f01fa44e915b	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	Sst	47428	13964	0.2944
+d7291f04-fbbb-4d65-990a-f01fa44e915b	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	Lamp5	42144	10600	0.2515
+d7291f04-fbbb-4d65-990a-f01fa44e915b	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	Vip	43684	9682	0.2216
+d7291f04-fbbb-4d65-990a-f01fa44e915b	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	L2/3 IT		1743	0.1304
+d7291f04-fbbb-4d65-990a-f01fa44e915b	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	L4/5 IT		35806	0.1072
+d7291f04-fbbb-4d65-990a-f01fa44e915b	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	L5 ET	24192	4080	0.1687
+d7291f04-fbbb-4d65-990a-f01fa44e915b	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	L5/6 NP		9161	0.2532
+d7291f04-fbbb-4d65-990a-f01fa44e915b	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	L6 CT	148752	18211	0.1224
+d7291f04-fbbb-4d65-990a-f01fa44e915b	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	L6 IT		7030	0.0884
+d7291f04-fbbb-4d65-990a-f01fa44e915b	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	L6b	35319	3456	0.0979
+d7291f04-fbbb-4d65-990a-f01fa44e915b	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	Oligodendrocyte	8987	2886	0.3211
+d7291f04-fbbb-4d65-990a-f01fa44e915b	A taxonomy of transcriptomic cell types across the isocortex | Single-cell RNA-seq for all cortical & hippocampal regions (	Astrocyte	3899	1314	0.337
+35081d47-99bf-4507-9541-735428df9a9f	An integrated transcriptomic and epigenomic atlas of mouse p | An integrated transcriptomic and epigenomic atlas of mouse p	Oligodendrocyte	21549	9393	0.4359
+35081d47-99bf-4507-9541-735428df9a9f	An integrated transcriptomic and epigenomic atlas of mouse p | An integrated transcriptomic and epigenomic atlas of mouse p	OPC	5097	2724	0.5344
+35081d47-99bf-4507-9541-735428df9a9f	An integrated transcriptomic and epigenomic atlas of mouse p | An integrated transcriptomic and epigenomic atlas of mouse p	Astrocyte	18905	9316	0.4928
+72eb2332-b308-4014-8d25-95233a9aff1e	Cellular development and evolution of the mammalian cerebell | snRNA-seq data for mouse cerebella from 9-12 developmental s	Oligodendrocyte	853	324	0.3798
+72eb2332-b308-4014-8d25-95233a9aff1e	Cellular development and evolution of the mammalian cerebell | snRNA-seq data for mouse cerebella from 9-12 developmental s	Astrocyte	958	408	0.4259
