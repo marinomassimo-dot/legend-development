@@ -1,0 +1,59 @@
+--- 7B free cholesterol, spinal cord {'WTm': 7, 'WTw': 7, 'Nm': 7, 'Nw': 7}
+genotype (maintained): N208Y vs WT                   n=7 vs 7  mean 100.2 vs 81.63  ratio(b/a)=0.814 diff=-18.6  exact perm p=0.017
+withdrawn vs maintained within N208Y                 n=7 vs 7  mean 81.63 vs 75.32  ratio(b/a)=0.923 diff=-6.312  exact perm p=0.439
+withdrawn vs maintained within WT                    n=7 vs 7  mean 100.2 vs 102.8  ratio(b/a)=1.026 diff=2.579  exact perm p=0.359
+N208Y withdrawn vs WT withdrawn                      n=7 vs 7  mean 102.8 vs 75.32  ratio(b/a)=0.733 diff=-27.49  exact perm p=0.001
+--- 7B free cholesterol, cerebellum {'WTm': 7, 'WTw': 7, 'Nm': 7, 'Nw': 7}
+genotype (maintained): N208Y vs WT                   n=7 vs 7  mean 42.98 vs 33.06  ratio(b/a)=0.769 diff=-9.927  exact perm p=0.003
+withdrawn vs maintained within N208Y                 n=7 vs 7  mean 33.06 vs 33.88  ratio(b/a)=1.025 diff=0.8206  exact perm p=0.739
+withdrawn vs maintained within WT                    n=7 vs 7  mean 42.98 vs 40.21  ratio(b/a)=0.935 diff=-2.777  exact perm p=0.109
+N208Y withdrawn vs WT withdrawn                      n=7 vs 7  mean 40.21 vs 33.88  ratio(b/a)=0.843 diff=-6.33  exact perm p=0.001
+--- 7F D2O-labelled cholesterol, spinal cord {'WTm': 4, 'WTw': 3, 'Nm': 4, 'Nw': 3}
+genotype (maintained): N208Y vs WT                   n=4 vs 4  mean 0.01305 vs 0.009925  ratio(b/a)=n/a diff=-0.003125  exact perm p=0.029
+withdrawn vs maintained within N208Y                 n=4 vs 3  mean 0.009925 vs 0.009883  ratio(b/a)=n/a diff=-4.167e-05  exact perm p=1.000
+withdrawn vs maintained within WT                    n=4 vs 3  mean 0.01305 vs 0.01373  ratio(b/a)=n/a diff=0.0006833  exact perm p=0.429
+--- 7F D2O-labelled cholesterol, cerebellum {'WTm': 4, 'WTw': 3, 'Nm': 4, 'Nw': 3}
+genotype (maintained): N208Y vs WT                   n=4 vs 4  mean 0.01305 vs 0.01009  ratio(b/a)=n/a diff=-0.002957  exact perm p=0.029
+withdrawn vs maintained within N208Y                 n=4 vs 3  mean 0.01009 vs 0.009923  ratio(b/a)=n/a diff=-0.0001692  exact perm p=0.829
+withdrawn vs maintained within WT                    n=4 vs 3  mean 0.01305 vs 0.01327  ratio(b/a)=n/a diff=0.0002167  exact perm p=0.771
+--- 7G cholesterol-synthesis gene z-score, cerebellum {'WTm': 3, 'WTw': 4, 'Nm': 3, 'Nw': 4}
+genotype (maintained): N208Y vs WT                   n=3 vs 3  mean 0.002086 vs -0.8324  ratio(b/a)=n/a diff=-0.8345  exact perm p=0.100
+withdrawn vs maintained within N208Y                 n=3 vs 4  mean -0.8324 vs -0.9669  ratio(b/a)=1.162 diff=-0.1345  exact perm p=0.086
+withdrawn vs maintained within WT                    n=3 vs 4  mean 0.002086 vs -0.2507  ratio(b/a)=n/a diff=-0.2527  exact perm p=0.114
+--- 7G cholesterol-synthesis gene z-score, spinal cord {'WTm': 3, 'WTw': 3, 'Nm': 2, 'Nw': 4}
+genotype (maintained): N208Y vs WT                   n=3 vs 2  mean -0.03389 vs -1.102  ratio(b/a)=n/a diff=-1.068  exact perm p=0.100
+withdrawn vs maintained within N208Y                 n=2 vs 4  mean -1.102 vs -1.524  ratio(b/a)=1.383 diff=-0.4217  exact perm p=0.067
+withdrawn vs maintained within WT                    n=3 vs 3  mean -0.03389 vs -0.3365  ratio(b/a)=n/a diff=-0.3026  exact perm p=0.100
+--- 7G cholesterol-synthesis gene z-score, kidney {'WTm': 3, 'WTw': 4, 'Nm': 3, 'Nw': 4}
+genotype (maintained): N208Y vs WT                   n=3 vs 3  mean 4.626e-18 vs -0.375  ratio(b/a)=n/a diff=-0.375  exact perm p=0.100
+withdrawn vs maintained within N208Y                 n=3 vs 4  mean -0.375 vs -1.414  ratio(b/a)=3.772 diff=-1.04  exact perm p=0.029
+withdrawn vs maintained within WT                    n=3 vs 4  mean 4.626e-18 vs -0.2936  ratio(b/a)=n/a diff=-0.2936  exact perm p=0.086
+--- 7G cholesterol-synthesis gene z-score, lung {'WTm': 3, 'WTw': 4, 'Nm': 3, 'Nw': 4}
+genotype (maintained): N208Y vs WT                   n=3 vs 3  mean 0 vs 0.1297  ratio(b/a)=n/a diff=0.1297  exact perm p=0.700
+withdrawn vs maintained within N208Y                 n=3 vs 4  mean 0.1297 vs 0.2957  ratio(b/a)=n/a diff=0.1661  exact perm p=0.457
+withdrawn vs maintained within WT                    n=3 vs 4  mean 0 vs 0.6063  ratio(b/a)=n/a diff=0.6063  exact perm p=0.086
+--- 7G cholesterol-synthesis gene z-score, muscle {'WTm': 3, 'WTw': 4, 'Nm': 3, 'Nw': 4}
+genotype (maintained): N208Y vs WT                   n=3 vs 3  mean 9.252e-18 vs -0.7484  ratio(b/a)=n/a diff=-0.7484  exact perm p=0.200
+withdrawn vs maintained within N208Y                 n=3 vs 4  mean -0.7484 vs -0.7274  ratio(b/a)=0.972 diff=0.02098  exact perm p=0.914
+withdrawn vs maintained within WT                    n=3 vs 4  mean 9.252e-18 vs -0.5864  ratio(b/a)=n/a diff=-0.5864  exact perm p=0.143
+--- 7G cholesterol-synthesis gene z-score, liver {'WTm': 3, 'WTw': 4, 'Nm': 3, 'Nw': 4}
+genotype (maintained): N208Y vs WT                   n=3 vs 3  mean -3.469e-18 vs -0.1076  ratio(b/a)=n/a diff=-0.1076  exact perm p=0.600
+withdrawn vs maintained within N208Y                 n=3 vs 4  mean -0.1076 vs -1.494  ratio(b/a)=n/a diff=-1.387  exact perm p=0.029
+withdrawn vs maintained within WT                    n=3 vs 4  mean -3.469e-18 vs 0.01254  ratio(b/a)=n/a diff=0.01254  exact perm p=0.971
+--- 7G cholesterol-synthesis gene z-score, spleen {'WTm': 3, 'WTw': 4, 'Nm': 3, 'Nw': 4}
+genotype (maintained): N208Y vs WT                   n=3 vs 3  mean -2.313e-18 vs -0.5763  ratio(b/a)=n/a diff=-0.5763  exact perm p=0.100
+withdrawn vs maintained within N208Y                 n=3 vs 4  mean -0.5763 vs -1.6  ratio(b/a)=2.777 diff=-1.024  exact perm p=0.029
+withdrawn vs maintained within WT                    n=3 vs 4  mean -2.313e-18 vs -0.8509  ratio(b/a)=n/a diff=-0.8509  exact perm p=0.086
+--- 7D MEF cholesterol-synthesis z {'WTm': 2, 'WTw': 2, 'Nm': 2, 'Nw': 2}
+genotype (maintained)                                n=2 vs 2  mean 0.008464 vs -0.3713  ratio(b/a)=n/a diff=-0.3798  exact perm p=0.333
+withdrawn vs maintained within N208Y                 n=2 vs 2  mean -0.3713 vs -1.944  ratio(b/a)=5.234 diff=-1.572  exact perm p=0.333
+withdrawn vs maintained within WT                    n=2 vs 2  mean 0.008464 vs -0.4171  ratio(b/a)=n/a diff=-0.4256  exact perm p=0.333
+--- 7E MEF D2O-labelled cholesterol {'WTm': 3, 'Nm': 3, 'WTw': 3, 'Nw': 3}
+genotype (maintained)                                n=3 vs 3  mean 0.2181 vs 0.1712  ratio(b/a)=0.785 diff=-0.04691  exact perm p=0.100
+withdrawn vs maintained within N208Y                 n=3 vs 3  mean 0.1712 vs 0.1268  ratio(b/a)=n/a diff=-0.04439  exact perm p=0.100
+withdrawn vs maintained within WT                    n=3 vs 3  mean 0.2181 vs 0.1864  ratio(b/a)=0.854 diff=-0.03175  exact perm p=0.100
+
+# Reproduce: put the publisher workbook (JCI Insight 188459 supporting data values, SHA-256 20ee5a519c3e... , 155,136 bytes) in scratch and run
+#   python3 -I lin2025_fig7_calc.py PATH_TO_WORKBOOK.xls
+# The workbook itself is third-party material and is not stored in git; only its digest is. 7B absolute values in the workbook differ from the
+# published axis (nmol/mg) by a constant per tissue (about 1.38 spinal cord, 1.26 cerebellum); only ratios are used. 7G spinal cord reference group has n=3 with mean -0.034.
