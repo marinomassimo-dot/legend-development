@@ -929,7 +929,7 @@ UI_IT = {
     "wo_h": "Piano di verifiche per bisogno",
     "wo_note": "Un elenco per bisogno, nell'ordine del registro dei bisogni: non è una sequenza di lavoro, non è una graduatoria di bisogni né di trattamenti e non ha punteggio. Per ogni bisogno: il motivo del prossimo studio (verificare un'ipotesi, chiarire una controevidenza o risolvere una premessa, coerente con le posizioni F, C, P del bisogno), una riga in italiano, la domanda, i dati che potrebbero risolverla, che cosa cambierebbe e la fattibilità realmente nota («non nota» quando non lo è).",
     "wo_update": "Aggiornamento della ricerca", "wo_catalogue": "Catalogo costruito il", "wo_dates_note": "due date diverse: la prima è l'ultimo aggiornamento di questo ordine di lavoro, la seconda la costruzione del catalogo dei composti",
-    "wo_kind": "Motivo del prossimo studio", "wo_kind_v": "verificare un'ipotesi", "wo_kind_c": "chiarire una controevidenza", "wo_kind_p": "risolvere una premessa", "wo_q": "Domanda", "wo_data": "Dati che potrebbero risolverla", "wo_change": "Che cosa cambierebbe", "wo_feas": "Fattibilità (solo ciò che è noto)",
+    "wo_kind": "Motivo del prossimo studio", "wo_kind_v": "verificare un'ipotesi", "wo_kind_c": "chiarire una controevidenza", "wo_kind_p": "risolvere una premessa", "sec_funnel": "Imbuto dal catalogo ai valutati: che cosa è contato, in quale unità", "sec_access": "Distribuzione per categoria di accesso", "sec_filters": "Filtri per la matrice completa", "sec_filters_note": "sezioni seguenti", "sec_needs": "Bisogni: direzione, Track, obiettivo, prove, livelli, lacune", "sec_matrix": "Matrice: interventi e famiglie di composti x bisogni", "sec_prio": "Disposizioni: una per coppia, con motivi per criterio", "sec_leads": "Piste derivate dal catalogo e loro disposizioni", "sec_limits": "Limiti dichiarati", "sec_tech": "Versioni, fonti, impronte digitali e rigenerazione", "sec_footer": "Fonti e licenze", "dc_sum": "Casi approfonditi a confronto", "dc_sum_short": "Casi approfonditi", "dc_n_note": "casi approfonditi sono consultabili nell'edizione completa locale; questa edizione non riporta i nomi dei composti.", "dc_intro": "Ogni caso risponde alle stesse domande. Il livello dice che tipo di sostegno esiste, non quanto il composto sia promettente: nessun livello è un punteggio di efficacia e la copertura di un percorso descrive collegamenti, non una quota di malattia trattata. Una misura funzionale può essere non specifica (per esempio ridurre le crisi anche nel tipo selvatico). Sconosciuto non significa negativo.", "dc_note_short": "In questa edizione i casi riportano la classe di composti e non i singoli nomi. Il precedente esterno e le misure farmacologiche (valori e testi derivati da ChEMBL, CC BY-SA 3.0, e da lavori di terzi) restano nell'edizione completa locale: nessun valore di potenza è riportato qui.", "dc_h_q": "Domanda biologica e livello", "dc_h_cls": "Classe di composti e azione", "dc_h_cmp": "Composto e azione", "dc_h_ev": "Evidenza WWOX", "dc_h_pharm": "Misura farmacologica e suoi limiti", "dc_limits": "Limiti:", "pl_sum": "Matching v3: composto, azione, contesto e beneficio — pilota", "pl_intro": "Interpretazioni delle schede esistenti. Priorità di ricerca e requisiti di sviluppo restano separati. Sconosciuto non significa negativo; un risultato di classe non è una prova sulla singola molecola. Nessun punteggio di efficacia.", "pl_h_ctx": "Contesto e beneficio", "pl_h_next": "Prossima ricerca", "pl_h_req": "Requisiti per lo sviluppo", "pl_benefit": "Beneficio ipotizzato:", "pl_why": "Perché è emerso", "pl_support": "Evidenza a sostegno", "pl_refute": "Che cosa potrebbe confutarlo", "pl_sources": "Fonti e logica", "pl_despite": "Perché merita ricerca nonostante i requisiti irrisolti:", "pl_none": "nessun risultato WWOX attribuito a questa molecola", "wo_q": "Domanda", "wo_data": "Dati che potrebbero risolverla", "wo_change": "Che cosa cambierebbe", "wo_feas": "Fattibilità (solo ciò che è noto)",
     "wo_date": "Data", "wo_upd": "Aggiornato da", "wo_cards": "Schede coinvolte", "wo_pos": "Posizioni del bisogno", "wo_no_pos": "nessuna scheda collegata",
     "ws_prevented_early_window": "prevenzione (finestra precoce)", "ws_recovered_post_onset_model": "recupero dopo l'esordio (solo in un modello)",
     "ws_symptom_suppression_reversible": "soppressione sintomatica reversibile", "ws_unmeasured": "non misurato",
@@ -3179,9 +3179,9 @@ __BANNER__<nav aria-label="__NAVLABEL__"><div class="in navmain"><a href="#inves
 __CURATED__
 <details id="technical" class="techwrap"><summary class="techsum">__TD_SUM__</summary>
 <p class="mut technote">__TD_NOTE__</p>__TDLANG__
-<section id="funnel"><h2>Imbuto dal catalogo ai valutati: che cosa è contato, in quale unità</h2>__FUNNEL__</section>
-<section id="access"><h2>Distribuzione per categoria di accesso</h2>__ACCESS__</section>
-<section id="filters"><h2>Filtri per la matrice completa <span class="mut">(sezioni seguenti; shareable through the URL hash, for example <code>#f=disp:exploration_candidate&amp;need:NEED-ISR-ATTENUATION</code>)</span></h2>
+<section id="funnel"><h2>__SEC_FUNNEL__</h2>__FUNNEL__</section>
+<section id="access"><h2>__SEC_ACCESS__</h2>__ACCESS__</section>
+<section id="filters"><h2>__SEC_FILTERS__ <span class="mut">(__SEC_FILTERS_NOTE__; shareable through the URL hash, for example <code>#f=disp:exploration_candidate&amp;need:NEED-ISR-ATTENUATION</code>)</span></h2>
 <div class="filters">
 <label>Access category<select id="f-access"></select></label><label>Need<select id="f-need"></select></label>
 <label>Need evidence scope<select id="f-scope"></select></label><label>Observation scope (L3/L4)<select id="f-oscope"></select></label>
@@ -3189,23 +3189,23 @@ __CURATED__
 <label>Disposition<select id="f-disp"></select></label><label>Text search<input type="search" id="f-q" placeholder="name, id, target, card, hypothesis"></label></div>
 <div class="bar-actions"><button id="f-reset">reset filters</button><span><span class="cnt" id="cnt-pairs">0</span> of <span id="cnt-pairs-of">0</span> pairs match; <span class="cnt" id="cnt-prio">0</span> of <span id="cnt-prio-of">0</span> prioritised; <span class="cnt" id="cnt-needs">0</span> needs shown</span></div>
 <div class="chips" id="lvl-now" aria-live="polite"></div><div class="chips" id="disp-now"></div></section>
-<section id="needs"><h2>Bisogni: direzione, Track, obiettivo, prove, livelli, lacune</h2>
+<section id="needs"><h2>__SEC_NEEDS__</h2>
 <p class="mut">A need is a place where the record observed something and an intervention could be aimed. Needs whose direction is <i>uncertain</i> are exploration only: L2 is not evaluable there. Level counts are cells (family, need) and are never summed across levels or needs.</p>
 <div class="needs" id="needs-list"></div></section>
-<section id="matrix"><h2>Matrice: interventi e famiglie di composti x bisogni</h2>
+<section id="matrix"><h2>__SEC_MATRIX__</h2>
 <p class="mut">Pair unit: __PAIRUNIT__. Four levels are shown side by side and never summed or scored. Scope is shown on L3 and L4.</p>
 __LEVELS__
 <div class="pager" id="pg-m"></div><div id="matrix-list"></div></section>
-<section id="priorities"><h2>Disposizioni: una per coppia, con motivi per criterio</h2>
+<section id="priorities"><h2>__SEC_PRIO__</h2>
 __DISPOSITIONS__
 <div class="note">Dispositions are distinct: <b>source queried without result</b> (the sources were asked and returned no row for the record), <b>incomplete or failed query</b> (a source was not in state OK; this is never a negative) and <b>not relevant / no catalogue link found</b> and <b>insufficient data</b> (a decision from the data that exist) are different statements and are not merged.</div>
 <div class="pager" id="pg-p"></div><div id="prio-list"></div></section>
-<section id="leads"><h2>Piste derivate dal catalogo e loro disposizioni</h2>__LEADS__</section>
-<section id="limits"><h2>Limiti dichiarati</h2>__LIMITS__</section>
-<section id="tech-versions"><h2>Versioni, fonti, impronte digitali e rigenerazione</h2>__TECH__</section>
+<section id="leads"><h2>__SEC_LEADS__</h2>__LEADS__</section>
+<section id="limits"><h2>__SEC_LIMITS__</h2>__LIMITS__</section>
+<section id="tech-versions"><h2>__SEC_TECH__</h2>__TECH__</section>
 </details>
 </main>
-<footer id="attribution" aria-label="Fonti e licenze">__FOOTER__</footer>
+<footer id="attribution" aria-label="__SEC_FOOTER__">__FOOTER__</footer>
 <div id="export-area" aria-live="polite"></div>
 <script id="data" type="application/json">__DATA__</script>
 <script>__JS__</script>
@@ -5337,31 +5337,31 @@ OBJ_IT = {"broad": "Recupero ampio e duraturo", "partial": "Beneficio parziale o
 
 
 def render_matching_pilot(cases: list[dict]) -> str:
+    U = UI_IT
     if not cases:
         return ""
     rows = []
-    states = {"favorable": "favorevole", "unfavorable": "sfavorevole", "unknown": "sconosciuto"}
+    states = {"favorable": U["res_favourable"], "unfavorable": U["res_unfavourable"], "unknown": U["rk_unknown"]}
     for c in cases:
         ev = c["evidence_of_this_member"]
-        direct = ", ".join(ev["assertion_ids"]) or "nessun risultato WWOX attribuito a questa molecola"
+        direct = ", ".join(ev["assertion_ids"]) or U["pl_none"]
         requirements = "".join(f'<li><b>{E(states[r["state"]])}</b>: {E(r["question"])} — {E(r["reason"])}</li>' for r in c["development_requirements"])
         sources = "; ".join(c["source_pointers"])
         rows.append(f'<tr><th scope="row">{E(c["compound"])}<br><span class="mini">{E(c["action"])}</span></th>'
-                    f'<td>{E(c["context"])}<br><b>Beneficio ipotizzato:</b> {E(c["benefit_hypothesis"])}'
+                    f'<td>{E(c["context"])}<br><b>{E(U["pl_benefit"])}</b> {E(c["benefit_hypothesis"])}'
                     f'<br><span class="mini">{E(direct)}. {E(c["evidence_limit"])}</span>'
-                    f'<dl class="mini pilot-why"><dt>Perché è emerso</dt><dd>{E(c["generating_path"])}</dd>'
-                    f'<dt>Evidenza a sostegno</dt><dd>{E(c["supporting_evidence"])}</dd>'
-                    f'<dt>Che cosa potrebbe confutarlo</dt><dd>{E(c["refutation"])}</dd></dl>'
-                    f'<details><summary>Fonti e logica</summary><p class="mini">{E(sources)}</p>'
+                    f'<dl class="mini pilot-why"><dt>{E(U["pl_why"])}</dt><dd>{E(c["generating_path"])}</dd>'
+                    f'<dt>{E(U["pl_support"])}</dt><dd>{E(c["supporting_evidence"])}</dd>'
+                    f'<dt>{E(U["pl_refute"])}</dt><dd>{E(c["refutation"])}</dd></dl>'
+                    f'<details><summary>{E(U["pl_sources"])}</summary><p class="mini">{E(sources)}</p>'
                     f'<p class="mini">{E(", ".join(c["discovery_logic"]))}</p></details></td>'
                     f'<td>{E(c["research_priority"])}<br>{E(c["research_question"])}</td>'
                     f'<td>{E(c["development_scope"])}<ul class="mini">{requirements}</ul>'
-                    f'<p class="mini"><b>Perché merita ricerca nonostante i requisiti irrisolti:</b> {E(c["research_despite_requirements"])}</p></td></tr>')
-    return ('<details class="inl" id="matching-v3"><summary>Matching v3: composto, azione, contesto e beneficio — pilota</summary>'
-            '<p class="mini">Interpretazioni delle schede esistenti. Priorità di ricerca e requisiti di sviluppo restano separati. '
-            'Sconosciuto non significa negativo; un risultato di classe non è una prova sulla singola molecola. Nessun punteggio di efficacia.</p>'
-            '<table class="tbl"><thead><tr><th>Composto e azione</th><th>Contesto e beneficio</th>'
-            '<th>Prossima ricerca</th><th>Requisiti per lo sviluppo</th></tr></thead><tbody>' + "".join(rows) + '</tbody></table></details>')
+                    f'<p class="mini"><b>{E(U["pl_despite"])}</b> {E(c["research_despite_requirements"])}</p></td></tr>')
+    return ('<details class="inl" id="matching-v3"><summary>' + E(U["pl_sum"]) + '</summary>'
+            '<p class="mini">' + E(U["pl_intro"]) + '</p>'
+            '<table class="tbl"><thead><tr><th>' + E(U["dc_h_cmp"]) + '</th><th>' + E(U["pl_h_ctx"]) + '</th>'
+            '<th>' + E(U["pl_h_next"]) + '</th><th>' + E(U["pl_h_req"]) + '</th></tr></thead><tbody>' + "".join(rows) + '</tbody></table></details>')
 
 
 DEEPENED_LEVEL_IT = {
@@ -5376,10 +5376,10 @@ DEEPENED_LEVEL_IT = {
 def render_deepened_cases(cases: list[dict], n_shareable: int = 0) -> str:
     """Deepened cases side by side (IT15 P7, shareable projection IT16 P7). The level is shown as text and a symbol, never by colour alone.
     A case without external_precedent is the shareable projection: those two columns are replaced by one note and no source path is printed."""
+    U = UI_IT
     if not cases:
         if n_shareable:
-            return (f'<details class="inl" id="deepened-cases"><summary>Casi approfonditi</summary><p class="mini">{n_shareable} casi approfonditi sono consultabili '
-                    'nell\'edizione completa locale; questa edizione non riporta i nomi dei composti.</p></details>')
+            return (f'<details class="inl" id="deepened-cases"><summary>{E(U["dc_sum_short"])}</summary><p class="mini">{n_shareable} {E(U["dc_n_note"])}</p></details>')
         return ""
     short = all("external_precedent" not in c for c in cases)
     legend = "".join(f'<li><span class="lvl lvl-{k}">{v[1]} {E(v[0])}</span> {E(v[2])}</li>' for k, v in DEEPENED_LEVEL_IT.items())
@@ -5392,20 +5392,16 @@ def render_deepened_cases(cases: list[dict], n_shareable: int = 0) -> str:
             continue
         src = "; ".join(c["sources"])
         rows.append(head + f'<td>{E(c["compound_action"])}</td><td>{E(c["system"])}</td><td>{E(c["wwox_evidence"])}</td><td>{E(c["external_precedent"])}</td>'
-                    f'<td>{E(c["pharmacology"])}<br><span class="mini"><b>Limiti:</b> {E(c["pharmacology_limits"])}</span></td><td>{E(c["counter_evidence"])}</td>'
-                    f'<td>{E(c["next_experiment"])}<details><summary class="mini">Fonti</summary><p class="mini">{E(src)}</p></details></td></tr>')
+                    f'<td>{E(c["pharmacology"])}<br><span class="mini"><b>{E(U["dc_limits"])}</b> {E(c["pharmacology_limits"])}</span></td><td>{E(c["counter_evidence"])}</td>'
+                    f'<td>{E(c["next_experiment"])}<details><summary class="mini">{E(U["rk_i_src"])}</summary><p class="mini">{E(src)}</p></details></td></tr>')
     if short:
-        th = '<th>Domanda biologica e livello</th><th>Classe di composti e azione</th><th>Sistema</th><th>Evidenza WWOX</th><th>Controevidenza</th><th>Prossimo esperimento</th>'
-        note = ('<p class="mini">In questa edizione i casi riportano la classe di composti e non i singoli nomi. Il precedente esterno e le misure farmacologiche (valori e testi derivati '
-                'da ChEMBL, CC BY-SA 3.0, e da lavori di terzi) restano nell\'edizione completa locale: nessun valore di potenza è riportato qui.</p>')
+        th = "".join(f"<th>{E(U[k])}</th>" for k in ("dc_h_q", "dc_h_cls", "tc_sys", "dc_h_ev", "rk_t_ctr", "hyp_next"))
+        note = f'<p class="mini">{E(U["dc_note_short"])}</p>'
     else:
-        th = ('<th>Domanda biologica e livello</th><th>Composto e azione</th><th>Sistema</th><th>Evidenza WWOX</th>'
-              '<th>Precedente esterno</th><th>Misura farmacologica e suoi limiti</th><th>Controevidenza</th><th>Prossimo esperimento</th>')
+        th = "".join(f"<th>{E(U[k])}</th>" for k in ("dc_h_q", "dc_h_cmp", "tc_sys", "dc_h_ev", "bf_f4", "dc_h_pharm", "rk_t_ctr", "hyp_next"))
         note = ""
-    return ('<details class="inl" id="deepened-cases"><summary>Casi approfonditi a confronto</summary>'
-            '<p class="mini">Ogni caso risponde alle stesse domande. Il livello dice che tipo di sostegno esiste, non quanto il composto sia promettente: '
-            'nessun livello è un punteggio di efficacia e la copertura di un percorso descrive collegamenti, non una quota di malattia trattata. '
-            'Una misura funzionale può essere non specifica (per esempio ridurre le crisi anche nel tipo selvatico). Sconosciuto non significa negativo.</p>' + note
+    return ('<details class="inl" id="deepened-cases"><summary>' + E(U["dc_sum"]) + '</summary>'
+            '<p class="mini">' + E(U["dc_intro"]) + '</p>' + note
             + '<ul class="lvl-legend mini">' + legend + '</ul>'
             '<div class="tblwrap"><table class="tbl"><thead><tr>' + th + '</tr></thead><tbody>'
             + "".join(rows) + '</tbody></table></div></details>')
@@ -5626,7 +5622,7 @@ def render(P: dict, dr: Path = DEFAULT_DR) -> str:
     page = page.replace("__CSS__", CSS + read_asset(dr, "curated.css") + read_asset(dr, "editorial.css")).replace("__JS__", JS).replace("__CJS__", read_asset(dr, "curated.js"))
     page = page.replace("__CURATED__", cur_html).replace("__FOOTER__", render_footer(P))
     for k, key in (("TITLE", "page_title"), ("SKIP", "skip"), ("H1", "h1"), ("SUB", "sub"), ("BRAND", "brand"), ("BRAND_CTX", "brand_ctx"), ("BRAND_STATE", "brand_state"), ("BRAND_STATE_T", "brand_state_title"), ("NP_PRI", "np_pri"), ("NP_BIO", "np_bio"), ("NP_CMP", "np_cmp"), ("NP_EVI", "np_evi"), ("NP_ALL", "np_all"), ("NAVLABEL", "nav_label"), ("N_OV", "nav_overview"), ("N_QK", "nav_start"), ("N_XP", "nav_explore"), ("N_FU", "nav_funnel"), ("N_RK", "nav_ranking"), ("N_TH", "nav_threads"), ("N_EG", "nav_chains"), ("N_CH", "nav_charts"), ("N_SE", "nav_selection"), ("N_HY", "nav_hyp"), ("N_PR2", "nav_pred"), ("N_NAV", "nav_navigate"),
-                   ("N_CA", "nav_cards"), ("N_PR", "nav_priority"), ("N_CP", "nav_compare"), ("N_TD", "nav_tech"), ("TD_SUM", "td_sum"), ("TD_NOTE", "td_note")):
+                   ("N_CA", "nav_cards"), ("N_PR", "nav_priority"), ("N_CP", "nav_compare"), ("N_TD", "nav_tech"), ("TD_SUM", "td_sum"), ("TD_NOTE", "td_note"), ("SEC_FUNNEL", "sec_funnel"), ("SEC_ACCESS", "sec_access"), ("SEC_FILTERS", "sec_filters"), ("SEC_FILTERS_NOTE", "sec_filters_note"), ("SEC_NEEDS", "sec_needs"), ("SEC_MATRIX", "sec_matrix"), ("SEC_PRIO", "sec_prio"), ("SEC_LEADS", "sec_leads"), ("SEC_LIMITS", "sec_limits"), ("SEC_TECH", "sec_tech"), ("SEC_FOOTER", "sec_footer")):
         page = page.replace(f"__{k}__", E(U[key]))
     page = page.replace("__LEAD__", E(U["ov_lead"]))
     page = page.replace("__ENTRY__", " ".join(f'<a href="#{a}">{E(U[k])}</a>' for a, k in (("investigations", "np_pri"), ("chains", "nav_chains"), ("compound-view", "np_cmp"))))
