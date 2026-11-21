@@ -677,6 +677,15 @@
      "accepted_at": "2026-11-21T12:25:45Z",
      "evidence": "checkpoint F on main a3da8ccc7 (digest a83383307be8...); successor e052ca19 launched 12:34:18Z; release, bind and first-call times are measured and recorded by the successor from the handoff",
      "updated_at": "2026-11-21T12:34:30Z"
+    },
+    {
+     "step": "Add to strategic_advisor.py tick a read-only waiting_work line: minutes since the last DREAM or portfolio edit by the host, and the portfolio rows with status waiting whose resume_when is empty or the bare word event, with a test; no new register or rule",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV request relayed in the successor launch brief of 2026-11-21, read at a closed increment; checked: the tick carries neither field today",
+     "accepted_at": "2026-11-21T12:50:40Z",
+     "evidence": "framework/scripts/strategic_advisor.py waiting_work() and the tick field waiting_work; WaitingWork tests (3) in test_strategic_advisor.py; full suite 228 OK; real portfolio lists RP-015 and RP-017",
+     "updated_at": "2026-11-21T12:50:44Z"
     }
    ]
   }
@@ -1197,6 +1206,13 @@
    "at": "2026-11-21T12:25:45Z",
    "source": "ADV agreement that checkpoint F at 295k is right and the restart comes at the closed increment after the battery, which ended",
    "step_sha256": "605a4ba76007",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T12:50:40Z",
+   "source": "ADV request relayed in the successor launch brief of 2026-11-21, read at a closed increment; checked: the tick carries neither field today",
+   "step_sha256": "2dcd8e9e5f47",
    "reopened_block": false,
    "authorised_by": null
   }
