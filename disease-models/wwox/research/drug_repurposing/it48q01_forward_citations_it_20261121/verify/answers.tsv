@@ -1,0 +1,38 @@
+question	item	value	verbatim_quote	printed_page	pdf_page	label
+Q1	species_strain	Wistar rat	Parasagittal slices of the rat cortex were prepared from 8 to 45 days old (p8-p45) Wistar rats	24	32	QUOTED
+Q1	slice_thickness	300 um parasagittal	Then 300 μm thick slices were cut using a custom-built vibratome	24	32	QUOTED
+Q1	temperature	35 C	which was heated to 35°C by a flow heater	26	34	QUOTED
+Q1	recording_mode	current clamp whole-cell	All data presented in this thesis were measured using the CC mode	25	33	QUOTED
+Q1	internal_solution	K-gluconate based	135 K-gluconate, 10 Hepes, 10 Phosphocreatin-Na, 4 KCl, 4 ATP-Mg, 0.3 GTP; pH was adjusted to 7.2 with KOH	26	34	QUOTED
+Q1	Rin_definition	slope of V-I at Vrest; linear coefficient of quadratic fit	the cell's input resistance Rin, which is the slope of the V-I relationship at resting membrane potential Vrest; DeltaV(I) = Rin I + cAR I^2	37-38	45-46	QUOTED
+Q1	steady_state_window	last 100 ms of 500 ms pulses, -800 to +800 pA	average of the last 100 ms (last 20%) of each trace during the current injection pulsed	29	37	QUOTED
+Q1	sex	NOT STATED				NOT STATED
+Q2	cell_type_layer	layer 2/3 pyramidal, IR-DIC identified; L2 vs L3 by apical shape and depth	Individual neurons were visualized using infrared (IR) differential interference contrast (DIC) microscopy	25	33	QUOTED
+Q2	cortical_area	somatosensory cortex (no finer area)	As the somato-sensory cortex is one of the best understood cortical areas, it was chosen for this study. All following chapters refer to this cortical area.	4	12	QUOTED
+Q2	barrel_cortex	NOT STATED for own slices (named only in literature overview)		14	22	NOT STATED
+Q3	group_labels_and_n	p8 27(5); p14 57(16); p21 16(3); p28 33(13); p45 9(3)	p8 (n = 27(from 5 animals)), p14 (n = 57(16)), p21 (n = 16(3)), p28 (n = 33(13)) and p45 (n = 9(3))	38	46	QUOTED
+Q3	age_range_inside_group	NOT STATED (only overall p8-p45)		24	32	NOT STATED
+Q3	Rin_table_means	217+/-15; 150+/-4; 89+/-8; 55+/-4; 60+/-7 MOhm for p8,p14,p21,p28,p45	Table 2.1 Rin / MOhm	39	47	QUOTED
+Q3	Ba_ages_tested	p14 and p28 only	Pharmacological experiments were performed at two postnatal ages, p14 and p28	46	54	QUOTED
+Q4	Ba_Rin_p14	161+/-7 to 206+/-10 MOhm; n=16(5); p<0.001; 50 uM; TTX not stated (APs present, INFERENCE absent)	p14: from 161 ± 7 MΩ to 206 ± 10 MΩ (p < 0.001, n = 16(5))	52	60	QUOTED
+Q4	Ba_Rin_p28	50+/-4 to 93+/-6 MOhm; n=10(3); p<0.005; 50 uM	p28: from 50 ± 4 MΩ to 93 ± 6 MΩ (p < 0.005, n = 10(3))	52	60	QUOTED
+Q4	Ba_cAR_p14	243+/-13 to 17+/-22 MOhm/nA; n=16(5); p<0.001	cAR was significantly reduced for p14 from 243 ± 13 MΩ/nA to 17 ± 22 MΩ/nA (p < 0.001, n = 16(5))	52	60	QUOTED
+Q4	Ba_cAR_p28	43+/-5 to 31+/-6 MOhm/nA; n=10(3); p=0.21	from 43 ± 5 MΩ/nA to 31 ± 6 MΩ/nA (p = 0.21, n = 10(3))	52	60	QUOTED
+Q4	spermine_control_cAR	189+/-8 (n=57(16)) vs 160+/-7 (n=8(2)) p>0.05 unpaired; with Ba -5+/-16 p<0.001 n=5(2)	additional extracellular application of 50 μM BaCl2 reduced cAR completely down to -5 ± 16 MΩ/nA (p < 0.001, n = 5(2))	53	61	QUOTED
+Q4	spermine_control_Rin	text: no significant increase, no numbers or p; figure bar-read about 152 to 163 MOhm	application of BaCl2 did not lead to a significant increase in Rin	53	61	QUOTED_PLUS_FIGURE_READ_APPROX
+Q4	Ba_GKIR	p14 14+/-1 to 1+/-0 (p<0.01, n=16(5)); p28 63+/-7 to 1+/-0 (p<0.01, n=10(3)); printed unit uS	GKIR was reduced from 14 ± 1 μS to 1 ± 0 μS in p14 cells (p < 0.01, n = 16(5)) and from 63 ± 7 μS to 1 ± 0 μS in p28 cells (p < 0.01, n = 10(3))	64	72	QUOTED
+Q4	Ba_Gleak	p14 8+/-1 to 5+/-0 (p<0.05, n=16(5)); p28 16+/-1 to 10+/-1 (no p); printed unit uS	Gleak was reduced from 8 ± 1 μS to 5 ± 0 μS in p14 cells (p < 0.05, n = 16(5)) and from 16 ± 1 μS to 10 ± 1 μS in p28 cells	64	72	QUOTED
+Q4	TTX_alone_control_no_Ba	p14 153+/-10 to 147+/-12 n=7(3); p28 40+/-3 to 38+/-2 n=7(2); p>0.05	Rin decreased from 153 ± 10 MΩ to 147 ± 12 MΩ (p > 0.05, n = 7(3)) at p14 and from 40 ± 3 MΩ to 38 ± 2 MΩ (p > 0.05, n = 7(2)) at p28	47	55	QUOTED
+Q5	fraction_p14	21.8% +/- 5.1 points (1-161/206; ratio error propagation, independent SEMs)		52	60	DERIVED
+Q5	fraction_p28	46.2% +/- 5.5 points (1-50/93)		52	60	DERIVED
+Q5	fraction_p14_spermine	about 6.7% (152 to 163 MOhm, figure-read, +/- about 3 MOhm; cohorts not shown paired)		53	61	DERIVED_FROM_FIGURE
+Q6	K2P_statement	NOT STATED; no K2P/TASK/TREK/two-pore term anywhere				NOT STATED
+Q6	Ba_lowers_Gleak	Ba lowers fitted leak and KIR terms; leak identified only as K+-reversal-like	Gleak was reduced from 8 ± 1 μS to 5 ± 0 μS in p14 cells ... explaining the increase in Rin by application of BaCl2	64	72	QUOTED
+Q6	leak_K_channels	K+ channels contribute to leak (model reversal potentials)	suggesting a major contribution of K+ channels to leak conductance	85	93	QUOTED
+Q6	units_check	printed uS not absolute whole-cell: 8 uS would give Rin below 0.13 MOhm vs 161 MOhm; likely nS for 50x50 um compartment (67 uS/cm2 x 7.85e-5 cm2 = 5.3 nS); even as nS G_leak 8 exceeds 1/Rin 6.2 nS	a single isopotential compartment (arbitrary length of 50 μm and diameter 50 μm)	84	92	INFERENCE
+Q7	journal_version	none found (PubMed, Europe PMC, Crossref; OpenAlex search unavailable)				NOT FOUND
+Q8	other_concentration	only 50 uM tested; 3 mM Ba cited as literature (Hwa and Avoli 1991)	high concentrations of 3 mM Ba2+ and the intracellular blocker QX 314 abolished AR	13	21	QUOTED
+Q8	residual_sag_after_Ba	Ba-insensitive voltage-dependent conductance remains	the transient onset of voltage deflections was not reduced to a simple exponential curve (Fig. 2.22). Rather, an exponential transient seemed to be superimposed by the typical sag of Ih activation	59	67	QUOTED
+Q8	model_assumes_full_block	50 uM BaCl2 modelled as gKIR = 0	For 50 μM BaCl2, gKIR was set to zero	90	98	QUOTED
+Q8	baseline_Rin_varies_by_cohort_p14	150 (Table 2.1), 161 (Ba), 137 (phenytoin), 153 (TTX), 157 (ZD7288)		39-52	47-60	DERIVED
+Q8	not_stated	Ba application duration; washout; Vrest after Ba; Ba at p8/p21/p45				NOT STATED

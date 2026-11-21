@@ -258,6 +258,13 @@
      "accepted_at": "2026-11-21T09:40:09Z",
      "updated_at": "2026-11-21T10:46:05Z",
      "evidence": "ADV-135 result: calcium and lipids neither threshold met (named missing measure); 15 reports access-limited; RESULT_ADV135_IT_20261121.md"
+    },
+    {
+     "step": "IT48-Q01 juvenile half (P13-P17 L2/3 pyramidal Ba2+ share), third route: forward and backward citations of the Ba2+ seed papers, producer plus blind verifier",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV standing instruction after ADV-138 (checkpoint IT_20261121_4 section 4 item 2); RP-003 IT selection row 3",
+     "accepted_at": "2026-11-21T13:15:03Z"
     }
    ]
   }
@@ -456,6 +463,13 @@
    "at": "2026-11-21T09:40:09Z",
    "source": "ADV-135 (ADV message 2026-11-21)",
    "step_sha256": "b91b1fb9e86a",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T13:15:03Z",
+   "source": "ADV standing instruction after ADV-138 (checkpoint IT_20261121_4 section 4 item 2); RP-003 IT selection row 3",
+   "step_sha256": "15e0fbd5629f",
    "reopened_block": false,
    "authorised_by": null
   }
