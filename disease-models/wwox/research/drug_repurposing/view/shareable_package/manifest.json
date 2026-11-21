@@ -193,7 +193,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 1526,
+    "values": 1527,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -477,7 +477,7 @@
   "ROWNAME": 2408,
   "SRC_A": 189,
   "SRC_META": 261,
-  "UI": 1526
+  "UI": 1527
  },
  "embedded_sources": [
   {
@@ -562,24 +562,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5307806,
-   "sha256": "dfeca8bf427db15987c273469e6d3ffb2e2edc9cba2b472cf600ed35b79e98a5"
+   "bytes": 5308475,
+   "sha256": "672ad9bc931f53ebffceb676b38eb972c40045d9133765b7daa3a03fcd97af3f"
   },
   "es.html": {
-   "bytes": 5293054,
-   "sha256": "0d1aafe1706d54753520a44c0ed5804a4be1008c084f31426fe2d2dc589bb6c0"
+   "bytes": 5293667,
+   "sha256": "ddd720b58faf2cd27334d9f93e83ce25db1647790fe414784cfbc53aab025c52"
   },
   "fr.html": {
-   "bytes": 5329788,
-   "sha256": "fc87db5e61114745ffa87c571a6f27c3f925b7a95e1c49d064a422b80fd7c3c1"
+   "bytes": 5330484,
+   "sha256": "6049ea1d21627b4ad056caa0b06d672c1b20ce84b89f00e6d4e911fc20b0a093"
   },
   "index.html": {
-   "bytes": 5197152,
-   "sha256": "467a83b1ff336c29b972440fcbe87574832ef8705470bbb4a921d3d424dfad37"
+   "bytes": 5197292,
+   "sha256": "1229a0215d3700bac3e9a76f06d8c1f56f00f7c0a61148df702b85f3f16e85c3"
   },
   "it.html": {
-   "bytes": 5264967,
-   "sha256": "f3294c4d905a9368ee6c923e951b0e0de4d8964321b4e80343d28cd0b4c67436"
+   "bytes": 5265564,
+   "sha256": "6bd6208d0be037b24d74de289d8c632943bdb91d4fb8e3211c281a6e4ba68c45"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

@@ -1286,6 +1286,7 @@
  "UI_IT.rk_x_w": "Null-, schädliche oder gemischte Aussagen in WWOX-Systemen",
  "UI_IT.rk_yes": "ja",
  "UI_IT.sec_access": "Verteilung nach Zugangskategorie",
+ "UI_IT.sec_en_part": "Einige Passagen dieses Abschnitts sind auf Englisch, der Originalsprache, in der die Gruppe sie verfasst hat: Sie sind nicht übersetzt.",
  "UI_IT.sec_en_src": "Der Text dieses Abschnitts ist auf Englisch verfasst, der Originalsprache, in der die Gruppe ihn geschrieben hat: Er ist nicht übersetzt.",
  "UI_IT.sec_filters": "Filter für die vollständige Matrix",
  "UI_IT.sec_filters_note": "folgende Abschnitte",
