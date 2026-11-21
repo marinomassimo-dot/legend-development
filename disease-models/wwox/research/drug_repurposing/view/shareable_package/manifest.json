@@ -23,12 +23,12 @@
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 6940,
+    "values": 6972,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 573,
+    "values": 575,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -53,7 +53,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 852,
+    "values": 855,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
@@ -88,7 +88,7 @@
    },
    "^\\.cur\\.ranking\\.units\\[\\]\\.(pmids\\[\\]|views\\.(broad|partial)\\.evidence\\.pmids\\[\\])$": {
     "class": "BIBLIO",
-    "values": 264,
+    "values": 265,
     "why": "PMID of a cited work (ranking)"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -193,7 +193,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 1486,
+    "values": 1490,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -203,11 +203,11 @@
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
-   "PMID": 154
+   "PMID": 155
   },
   "links": {
-   "distinct_hrefs": 222,
-   "external_public": 103,
+   "distinct_hrefs": 223,
+   "external_public": 104,
    "hosts": [
     "civicdb.org",
     "open.fda.gov",
@@ -225,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3657,
+    "forbidden-name": 3686,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -250,7 +250,7 @@
    "forbidden_names": 126040,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 163,
+    "count": 164,
     "names": [
      "act 709478",
      "apinocaltamide",
@@ -265,7 +265,7 @@
      "px 478",
      "sulfopin"
     ],
-    "unchecked_without_corpus": 163
+    "unchecked_without_corpus": 164
    },
    "suppressed_by_exemption": {
     "bibliographic journal name (validated against the journals of the cache)": 4,
@@ -339,7 +339,8 @@
    "next_full": 2,
    "not_known": 3,
    "novelty": 2,
-   "pharm": 2,
+   "pharm": 19,
+   "pharm_cut": 19,
    "reopen": 1
   },
   "cards": 39,
@@ -469,14 +470,14 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 2696,
+  "BIBLIO": 2702,
   "COUNT": 12405,
   "ID": 4861,
-  "OWN": 90210,
+  "OWN": 90242,
   "ROWNAME": 2408,
   "SRC_A": 189,
   "SRC_META": 261,
-  "UI": 1486
+  "UI": 1490
  },
  "embedded_sources": [
   {
@@ -517,8 +518,8 @@
  ],
  "files": {
   "COMPARISON.md": {
-   "bytes": 7439,
-   "sha256": "6b89a05d3cb882b726661e8b91d2f8fee9f1f4f8d62e8ffb72cd1f05641b8ee3"
+   "bytes": 7457,
+   "sha256": "137e4507604ebb764842ad1362af889643648d33776d65ba967d81ac159c438d"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -538,7 +539,7 @@
   },
   "NOTICE.md": {
    "bytes": 13731,
-   "sha256": "3aea92070fef02a79bc043eba58ce1df95dc8c386a3c65f17f7ad265e1e80e20"
+   "sha256": "be6b56b85db201ca8fafef28c196a5f7533554f819dadf68dc7e7876557c9095"
   },
   "README.md": {
    "bytes": 5072,
@@ -561,24 +562,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5285414,
-   "sha256": "88f74c6cc9175902393f61eafc03cb5b1bfdf110c7b7f7f2b729405273b2dc4c"
+   "bytes": 5301102,
+   "sha256": "a33eceb99b9ee2088b40aa8f7483894426699e28a1958a48f7dbebc7fd190b4f"
   },
   "es.html": {
-   "bytes": 5270793,
-   "sha256": "da54038fa515fc31712599c5629f87ae43b269258ebd8e78becebc93ff4ab282"
+   "bytes": 5286646,
+   "sha256": "c24f6d16b426a53b3dc9db6b20668ad323f30ff6c239c2e08d9ed618f1b12438"
   },
   "fr.html": {
-   "bytes": 5306176,
-   "sha256": "0be0d3704c6f8964d8026e4b24c4cf4aa346dfae6d35b067a4ef327b001f40d8"
+   "bytes": 5322093,
+   "sha256": "6a9599c85acf7b25b568103d03b7665b1b64a1782b3a4513b5b3ecdfcd61965c"
   },
   "index.html": {
-   "bytes": 5178704,
-   "sha256": "46a3c74725c66be0faac2eb2b1a3d2ba32aacbaa9595ee6aeb0da734b7decaa7"
+   "bytes": 5194328,
+   "sha256": "166379aea5ceaa8aaa604085324ea9e73da710fabb568eeebf4c5b240dd743e3"
   },
   "it.html": {
-   "bytes": 5244196,
-   "sha256": "ddb47c7e6b41274bb639e48e9a1e21efa3ecfa1a64feb32651afa15b229f175f"
+   "bytes": 5260091,
+   "sha256": "fc3135dfe939cea426e69a2d309c9eb95af4660a7e6efc6e8535103a5ac4af14"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

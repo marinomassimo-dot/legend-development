@@ -33,6 +33,8 @@ function needName(n) { return T.need[n.id] || n.short; }
 function threadName(t) { return (T.thread[t.id] || { name: t.name }).name; }
 function statusTxt(s) { return T.statusL[s] || s; }
 function dirTxt(d) { return T['dir_' + d] || d; }
+// The work-order kind is an Italian data enum: the page shows its interface string in the page language (T.wo_kind_v/c/p), never the raw value (2026-11-20, ADV-127).
+function woKind(k) { var key = { "verificare un'ipotesi": 'wo_kind_v', 'chiarire una controevidenza': 'wo_kind_c', 'risolvere una premessa': 'wo_kind_p' }[k]; return key && T[key] ? T[key] : k; }
 function more(shortT, fullT) { shortT = shortT || ''; fullT = fullT || ''; if (!fullT || fullT.replace(/\s+/g, ' ') === shortT.replace(/\s+/g, ' ') || fullT.length <= shortT.length + 3) return esc(shortT); return esc(shortT) + ' <details class="inl"><summary>' + esc(T.full_text) + '</summary>' + esc(fullT) + '</details>'; }
 function critTxt(t) { var base = String(t).replace(/ \(found:.*\)$/, ''), tail = String(t).slice(base.length); return esc((T.crit[base] || base) + tail); }
 function moreN(n) { return '<p class="mini">' + esc(fill(n === 1 ? T.more_in_tech1 : T.more_in_tech, { n: n })) + '</p>'; }
@@ -227,7 +229,7 @@ function renderRank() {
   if (RK.mode === 'need') {
     NEEDS.filter(needOk).forEach(function (n) {
       var it = links.filter(function (x) { return x.n === n.id; });
-      h += '<section class="rk-need" data-need="' + esc(n.id) + '"><h3>' + esc(needName(n)) + ' <span class="mut">' + esc(goalTxt(n.goal)) + '</span></h3>' + (WO[n.id] ? '<p class="mini"><a href="#wo-' + esc(n.id) + '" data-wo="' + esc(n.id) + '">' + esc(T.wo_see) + '</a> <span class="chip wo-k">' + esc(WO[n.id].kind) + '</span></p>' : '') + (it.length ? groupBlock(it, false) : '<p class="mini mut">' + esc(fill(T.pr_need_nocard, { n: n.fam_link })) + '</p>') + '</section>';
+      h += '<section class="rk-need" data-need="' + esc(n.id) + '"><h3>' + esc(needName(n)) + ' <span class="mut">' + esc(goalTxt(n.goal)) + '</span></h3>' + (WO[n.id] ? '<p class="mini"><a href="#wo-' + esc(n.id) + '" data-wo="' + esc(n.id) + '">' + esc(T.wo_see) + '</a> <span class="chip wo-k">' + esc(woKind(WO[n.id].kind)) + '</span></p>' : '') + (it.length ? groupBlock(it, false) : '<p class="mini mut">' + esc(fill(T.pr_need_nocard, { n: n.fam_link })) + '</p>') + '</section>';
     });
     var orphan = CANDS.filter(function (c) { return candOk(c) && !c.needs.length && !CF.need && !CF.thread; });
     if (orphan.length) h += '<section class="rk-need"><h3>' + esc(T.pr_axis_h) + '</h3><p class="mini mut">' + esc(T.pr_axis_note) + '</p>' + orphan.sort(function (a, b) { return a.short.localeCompare(b.short); }).map(function (c) { return '<div class="rk-item"><b>' + esc(c.short) + '</b> ' + chip(T.cd_no_need) + ' ' + esc(first(c.missing || '', 200)) + ' <button type="button" class="chip" data-open="' + esc(c.id) + '">' + esc(T.pr_open) + '</button></div>'; }).join('') + '</section>';
@@ -572,7 +574,7 @@ document.addEventListener('click', function (e) { var a = e.target.closest ? e.t
     h += '<div class="xp-cols"><div class="xp-box"><h4>' + esc(T.xp_cards_for_need) + '</h4>' + (linked.length ? ['F', 'C', 'P'].map(function (f) { return fams[f].length ? '<ul>' + fams[f].join('') + '</ul>' : ''; }).join('') : '<p class="mut">' + esc(T.xp_no_cards) + '</p>') + '</div>';
     h += '<div class="xp-box"><h4>' + esc(T.xp_obs) + '</h4><p>' + (n.n_wwox_obs || 0) + ' ' + (n.scopes || []).map(function (s) { return sc(s); }).join(' ') + '</p>' +
       '<h4>' + esc(T.xp_need_counter) + '</h4>' + ((n.counter || []).length ? '<ul class="mini">' + n.counter.slice(0, 3).map(function (x) { return '<li>' + esc(first(x, 260)) + '</li>'; }).join('') + '</ul>' + plusN(n.counter.length - 3) : '<p class="mini mut">' + esc(T.qk_iv_none) + '</p>') +
-      (wo ? '<h4>' + esc(T.xp_next) + '</h4><p class="mini">' + esc(wo.kind) + ': ' + esc(wo.summary_it || first(wo.question, 240)) + '</p><p class="mini mut">' + esc(wo.feasibility_it || '') + '</p>' : '') + '</div></div>';
+      (wo ? '<h4>' + esc(T.xp_next) + '</h4><p class="mini">' + esc(woKind(wo.kind)) + ': ' + esc(wo.summary_it || first(wo.question, 240)) + '</p><p class="mini mut">' + esc(wo.feasibility_it || '') + '</p>' : '') + '</div></div>';
     return h;
   }
   function showCand(cid) {

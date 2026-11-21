@@ -39,6 +39,14 @@ def mask(x, key=""):
     return x
 
 
+def raw_kinds_left(page: str) -> list:
+    """Work-order kind values (Italian enum) still in the visible text of a page. Not counted: the `data-kind` attributes (machine keys, the same in every language, like the filter ids) and the
+    two authored sentences that QUOTE a value between single quotes (work-order prose of the gene-addition and premise entries: a lead for the content catalogue, not this mapping)."""
+    body = re.sub(r"<script\b.*?</script>|<style\b.*?</style>", "", page, flags=re.S)
+    body = html.unescape(re.sub(r'data-kind="[^"]*"', "", body))
+    return [k for k in rv.WO_KINDS if re.sub(r"'" + re.escape(k) + r"'", "", body).count(k)]
+
+
 @unittest.skipUnless(HAVE, "module data or translation files absent")
 class InventoryIsCheckedWhereTheActorRunsIt(unittest.TestCase):
     """2026-11-12: a curated passage was edited, `i18n --what check` passed, and only the suite found the stale inventory in the battery."""
@@ -67,6 +75,24 @@ class InventoryIsCheckedWhereTheActorRunsIt(unittest.TestCase):
         with mock.patch.object(rv, "i18n_collect", return_value=(ui, content)), contextlib.redirect_stdout(out):
             self.assertEqual(rv.i18n_check(DR), 0)
         self.assertNotIn("inventory STALE", out.getvalue())
+
+
+class FullViewEnumsAreTranslated(unittest.TestCase):
+    """The local full view is built per language too (`--source full --lang en`): the same enum must not leak there (ADV-127)."""
+
+    def test_the_page_script_maps_the_work_order_kind_before_printing_it(self):
+        """The static HTML test cannot see what the page script paints: the kind chip of the ranking and the 'next named test' paragraph are written by assets/curated.js (ADV-127 painted check:
+        16 raw values at 1280 px after the Python sites were fixed). Every print of a work-order kind goes through woKind(), which reads T.wo_kind_v/c/p."""
+        js = (DR / "view/assets/curated.js").read_text(encoding="utf-8")
+        self.assertIn("function woKind(", js)
+        self.assertEqual(re.findall(r"esc\((?:WO\[[^\]]+\]|wo)\.kind\)", js), [])
+        for key in rv.KIND_KEY.values():
+            self.assertIn(key, js)
+
+    @unittest.skipUnless(HAVE, "module data or translation files absent")
+    def test_no_work_order_kind_in_a_non_italian_full_build(self):
+        for lg in ("en", "de"):
+            self.assertEqual(raw_kinds_left(rv.build(DR, "full", lg)), [], lg)
 
 
 class FiveLanguages(unittest.TestCase):
@@ -129,6 +155,17 @@ class FiveLanguages(unittest.TestCase):
             self.assertIn('id="langnote"', self.pages[lg], lg)
             self.assertIn('class="mini mut technote"><span class="orig"', self.pages[lg], lg)
         self.assertNotIn('id="langnote"', self.pages["en"])
+
+    def test_a_data_enum_written_in_italian_is_never_printed_raw_on_another_page(self):
+        """2026-11-20 (ADV-127): the work-order kind (WO_KINDS) reached every non-Italian page as '[verificare un'ipotesi]' in 28 places, because the renderers printed the enum value and the
+        catalogue check only sees interface strings. Each value has a UI key per language now; no value may appear in a non-Italian shareable build, and the Italian build still shows them."""
+        for lg in ("en", "fr", "es", "de"):
+            self.assertEqual(raw_kinds_left(self.pages[lg]), [], lg)
+        self.assertEqual(raw_kinds_left(self.pages["it"]), list(rv.WO_KINDS))                  # the Italian page is where the values belong
+        for key in rv.KIND_KEY.values():
+            self.assertIn(key, rv.UI_IT)
+            for lg in ("en", "fr", "es", "de"):
+                self.assertNotEqual(json.loads((DR / "view/i18n" / f"ui_{lg}.json").read_text(encoding="utf-8"))["UI_IT." + key], rv.UI_IT[key], (lg, key))
 
     def test_no_italian_interface_text_is_left_outside_marked_passages(self):
         ui = json.loads((DR / "view/i18n/ui_source.json").read_text(encoding="utf-8"))
