@@ -1,0 +1,76 @@
+t_id	term_as_written	where	what_i_took_it_to_mean	proposed_plain_wording
+T01	E1, E2, E3, E4, E5	A and B title, section 1, 4	Outcome labels for ethosuximide: knockout-selective, age-limited, general, no effect, not interpretable (E5 only in the title)	Use the descriptive names (knockout-selective, age-limited with wild-type floor, general, no effect, not interpretable) and define E5 in the body
+T02	L1, L2	A and B title, section 1	Lithium acts generally or through GSK-3 specifically in the knockout	Lithium effect is general (L1) or specific to the knockout via GSK-3 (L2)
+T03	C1, C2	A section 4 table	T-type blocker reproduces or fails to reproduce ethosuximide's effect	T-type blocker matches ethosuximide (C1) or not (C2)
+T04	stage (0 to 6) and Stage (0 to 4)	A sections 2.6 and 3	Two meanings: seizure severity grade and experimental stage	Seizure grade for the 0 to 6 scale; experimental step for 0 to 4
+T05	S	A section 2.6, 3	Summary of seizure severity per pup over 60 minutes (area, sum or mean; unclear)	Seizure burden score over 60 minutes; define once as area (grade-minutes) or mean grade, not both
+T06	R(genotype), interaction ratio	A section 2.7	R is mean S treated divided by mean S vehicle; interaction is R knockout over R wild type	Treated-to-vehicle ratio of mean burden per genotype; knockout ratio divided by wild-type ratio
+T07	log scale, log SD	A section 2.7, 3	Natural log of S; its between-animal SD	Standard deviation of ln(S)
+T08	CV of S	A section 3 stage 1	Coefficient of variation (SD over mean) of S	Coefficient of variation of S
+T09	square-root rule	A section 2.7	Control group sized sqrt(k) times a treated group when k arms share it	Shared control group sized about the square root of the number of arms times a treated arm
+T10	Bonferroni for five	A section 2.7	99% intervals for five comparisons (0.05/5 = 0.01)	Multiplicity-adjusted 99% intervals for five comparisons
+T11	bootstrap over litters	A section 2.7	Resample litters with their pups to get an interval	Cluster bootstrap resampling litters
+T12	floor, at the floor	A section 1, 2.5, 2.7	Baseline score near zero so a reduction cannot be seen	Score so near zero that a drug-induced reduction cannot be detected; give a number
+T13	stage-matched wild-type response	A section 3 stage 1	Unknown	Define (for example knockout and wild-type vehicle pups at the same mean grade)
+T14	non-floor	A section 2.5	Measurable response above floor	Response clearly above baseline
+T15	effect; null; unresolved	A section 2.7	Effect = R at most 0.7 with interval excluding 1; null = interval inside 0.85 to 1.15	Use the quantitative definitions in the text and name them reduction, no change, undetermined
+T16	an effect of 0.7 or larger is excluded	A section 2.7	The data rule out a reduction to a ratio of 0.7 or lower	A reduction as large as ratio 0.7 is ruled out
+T17	genotype specificity	A section 2.7	Interaction ratio at most 0.7 or at least 1.43	Different treatment ratio between knockout and wild type
+T18	session	A section 2.1	One test day at one age	One test day at one pup age (defined in the text)
+T19	cell	A section 2.1, 3	One genotype by treatment (by age) combination	Group
+T20	arm	throughout	A treatment group (agent or comparator)	Treatment group
+T21	panel, assay-sensitivity panel	A section 2.4	Extra wild-type groups on reference drugs to show the assay can detect a drug effect at each age	Assay-validation groups of wild-type pups given reference anticonvulsants
+T22	flat-profile, rising-profile, falling-profile agent	A section 2.4	Drug whose efficacy is constant, increasing or decreasing with pup age in the cited literature	Reference drug with age-constant, age-increasing or age-decreasing efficacy
+T23	comparator, general non-GSK-3 anticonvulsant comparator	A section 3 stage 3	A broad anticonvulsant used to show a non-specific effect	Non-specific anticonvulsant control drug
+T24	second GSK-3 inhibitor of a different class	A stage 3	A chemically unrelated GSK-3 inhibitor	Second, structurally unrelated GSK-3 inhibitor
+T25	selective Cav3 (T-type) blocker	A stage 2	A T-type calcium channel blocker with published selectivity	Selective T-type calcium channel blocker
+T26	engagement control	A section 2.4, 3, 5	A measurement showing the drug reached and acted on its target in the pup brain	Evidence that the drug reaches and acts on its target in the pup brain
+T27	exposure, two exposures per agent	A section 2.9	Dose or tissue level; unclear	Two doses (or two measured brain levels) per agent
+T28	dose check, dose null	A section 2.9	Testing two dose levels per age; no effect at an unchecked dose	Two-dose check per age; non-effect at an untested dose, reported as undetermined
+T29	replication condition	A section 2.9	Reproduce the lithium regimen reported in the cited paper	Lithium schedule copied from the cited paper
+T30	regimen	A section 2.9	Dose schedule	Dosing schedule (dose, route, interval, number)
+T31	shared vehicle	A section 2.1	One control group serving several drug groups	One vehicle control group serving several treatment groups
+T32	hashed priors file, frozen priors	A paragraph 2 of header	Predictions file fixed by a checksum	Pre-registered predictions file (checksum), and supply it
+T33	P5, P8 (priors sets) versus P5 to P9 (ages)	A 2.6, 2.7, 7; B 9.12	Two meanings	Name priors sets differently from postnatal days
+T34	E16.5, E_GABA	A section 1, 2.2	Embryonic day 16.5; GABA reversal potential	Embryonic day 16.5; GABA reversal potential (chloride gradient)
+T35	chloride-gradient window	A section 2.2	Postnatal period when GABA changes from depolarising to hyperpolarising	Developmental period of the GABA reversal shift
+T36	NKCC1, bumetanide	A section 2.2	Chloride co-transporter and its blocker	Define in one clause or drop
+T37	p-Ser9, total GSK-3beta	A section 1, 5(b)	Phosphorylation of GSK-3beta at serine 9 and total protein	Inhibitory phosphorylation of GSK-3beta at serine 9
+T38	GSK-3	throughout	Glycogen synthase kinase 3	Spell out once
+T39	Tc-MEP	A section 5(f)	Transcranial motor-evoked potential	Transcranial motor-evoked potential
+T40	ECoG, LFP	A section 2.2, 2.4	Electrocorticography; local field potential	Spell out
+T41	DEE, WWOX-related DEE genotype class	A header	Developmental and epileptic encephalopathy	Spell out; one sentence on what class means here
+T42	SCAR12	B 9.17	Unknown (a human WWOX disorder label)	Spell out
+T43	germline null, global knockout, Wwox-null, knockout, null	throughout	Same animal in most places; neuron-targeted line is different	One name (germline Wwox knockout) and one for the neuron-targeted line
+T44	neuron-targeted line, S-KO, S-HT, Synapsin-Cre deletion	A 5(d), 5(g); B 9.12	A conditional neuron-specific knockout; S-HT unknown	Name the line, allele and cross; define S-KO and S-HT
+T45	comparator's panel, AAV9 comparator, benchmark paper	A section 7; B 9.1, 9.14 to 9.16	A gene-therapy paper used as a reference; unknown details	Cite the paper and say what is taken from it
+T46	the audit, dossier, ADV-nnn, RP-nnn, IT, HE, SCI, ADV, the loop	throughout	Programme-internal actors and records	Delete or give the plain content; do not cite by label
+T47	operator	A section 0	The person deciding on outreach	The coordinator of this collaboration
+T48	repository, held, held on disk, relayed	A section 1, 5(g), 8	Programme's own file store; held means the programme has the file; relayed means second-hand	State plainly: read in full, abstract only, or second-hand
+T49	abstract level, hypothesis level, class labels, one origin	A header, 2.4, 8	Evidence strength classes	State in plain words how strong each statement is
+T50	tier, no change of tier	A section 5	Programme priority category; unknown	Delete
+T51	ORDERING_PAGE, the loop's judgement, one slot	A section 5(i)	Programme internal ranking of add-ons	Give the ranking and its reason, or delete
+T52	binding	A appendix, B correction	The correction overrides earlier text	This replaces the earlier statement
+T53	read-but-not-carried audit, dossier	B 9.11, A 6.7	Internal check of papers; unknown	Delete
+T54	hypothesis level, Not a WWOX result	A header	Statements are hypotheses	Say once, at the top
+T55	germline null report, a 2026 report, P47T report	A 2.2, 5(f), 5(g)	Source papers; the 2026 report and P47T have no citation	Give the citation
+T56	Prague abstracts	A section 1, 8	Rat abstracts from one laboratory family	Cite
+T57	minimal, intermediate, generalised seizure; status	A section 2.6	Grades 1 to 2; grade 3; grades 4 to 5 with a tonic phase; three or more tonic-clonic seizures	Use a table of grade, behaviour, class
+T58	carried forward, flagged	A section 2.6	The last grade is held to the end of the window and marked	Held at last observed grade through the window and marked in the data
+T59	pre-test, motor and ataxia control	A section 2.8	A motor test before the stimulus	Motor screen before the seizure stimulus
+T60	session, window, assay age, observation window	throughout	Window is the 60-minute observation and also the age window	Separate observation period from age range
+T61	the window to about P28	A section 2.3	Age range for the series	Age range from the assay age to P28
+T62	blind re-search, blind verifier, independent route	A 6.3, 2.4	Programme's checking steps	Delete or state the check done
+T63	seizure-and-death lines	A section 5(e)	Mouse lines in which pups seize and die early (neuron- or progenitor-targeted)	Name the lines
+T64	Olig2 against Mbp, composition caveat	A section 5(g)	Marker comparison across regions; unknown relevance	Delete from the laboratory brief
+T65	NMDA-receptor pore blocker	A stage 4	Channel-blocking NMDA antagonist (ketamine, MK-801 class)	Name the class and give examples
+T66	expected 1:2:1	A 2.1	Mendelian ratio from a heterozygote cross	Plain
+T67	partial-restoration, gene-addition, regional reach, vector DNA	B 9.14 to 9.16	Gene-therapy terms; no such arm here	Remove from the laboratory text
+T68	NRG1-ErbB4, PV interneurons, sIPSC	B 9.13	Signalling pathway, parvalbumin interneurons, spontaneous inhibitory synaptic currents	Spell out; say what is to be recorded
+T69	milk-spot score	B 9.12	Visible stomach milk score	Stomach-milk visibility score
+T70	GFAP, Iba1, DCX, MBP, CC1, g-ratio	A 5(g); B 9.11, 9.12	Glial, immature neuron and myelin markers	Spell out when kept
+T71	(Cheng 2020; Breton 2021; Kasahara 2019; Cortez 2004)	throughout	Cited papers; only Cheng and Cortez have a PMID	Full reference for each
+T72	the one genetic-DEE pup dataset	B 9.8	Unknown dataset	Name it
+T73	ADV-061 addendum, ADV-063	A section 3	A sizing recalculation and a second reading by another group	Present the numbers and the method; drop the label
+T74	weights	A 4	Prior probabilities in the hidden file	Say the weights are not needed by the laboratory, or supply
+T75	hashed text governs	A header	The priors file wins on conflict	Say which definitions the file fixes
