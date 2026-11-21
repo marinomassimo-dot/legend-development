@@ -635,10 +635,12 @@
     },
     {
      "step": "Decide whether plainer English for lead, restated and need is worth landing in new text and in the 25 batch-3 passages (ADV conditional ask), and the German head noun for need versus lever",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV and IT messages after the stop rule fired again on the glossary repeat result, 8 of 75 changed rows, six on the word lead",
-     "accepted_at": "2026-11-21T10:19:20Z"
+     "accepted_at": "2026-11-21T10:19:20Z",
+     "evidence": "adv134_glossary_repeat_it_20261121/DECISIONS_ADV134_HE_20261121.md addendum; roadmap_current.md Standing method pointer; main 6b7a1f2de",
+     "updated_at": "2026-11-21T10:37:55Z"
     }
    ]
   }
