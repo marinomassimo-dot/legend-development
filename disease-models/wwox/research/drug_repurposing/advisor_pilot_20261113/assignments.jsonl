@@ -375,3 +375,9 @@
 {"evidence": "SendMessage receipt msg_id 8f81aba4-897f-43c2-bc7b-c2aa4575218e to IT Orchestrator - CURRENT 6a8c1a55", "id": "ADV-150", "state": "SENT", "to": ["IT Orchestrator - CURRENT 6a8c1a55"], "utc": "2026-11-21T16:32:23Z"}
 {"assessment": "HOST", "id": "ADV-151", "key": "pup-brief-seven-named-design-decisions-then-stop-until-a-laboratory", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-21T16:41:51Z"}
 {"evidence": "SendMessage receipt msg_id a5b86a14-082b-4a08-9297-468008af175b to SCI - CURRENT b3e65c69", "id": "ADV-151", "state": "SENT", "to": ["SCI - CURRENT b3e65c69"], "utc": "2026-11-21T16:42:07Z"}
+{"assessment": "HOST", "id": "ADV-152", "key": "predictive-brainstorm-sci-contribution-rival-explanations-and-holdout", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-21T17:19:47Z"}
+{"assessment": "HOST", "id": "ADV-153", "key": "predictive-brainstorm-he-contribution-smallest-harness-change", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-21T17:19:47Z"}
+{"assessment": "HOST", "id": "ADV-154", "key": "predictive-brainstorm-it-contribution-what-the-prediction-would-change", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-21T17:19:47Z"}
+{"evidence": "SendMessage receipt msg_id c5bea481-d647-4d5a-8b69-5fb2d956c7a8 to SCI - CURRENT b3e65c69", "id": "ADV-152", "state": "SENT", "to": ["SCI - CURRENT b3e65c69"], "utc": "2026-11-21T17:20:17Z"}
+{"evidence": "SendMessage receipt msg_id 3cd81572-f6c4-4e00-bfdd-bddfd955e94a to HE - CURRENT e052ca19", "id": "ADV-153", "state": "SENT", "to": ["HE - CURRENT e052ca19"], "utc": "2026-11-21T17:20:18Z"}
+{"evidence": "SendMessage receipt msg_id 5d7f4958-eed9-4543-8ea7-af41ac518689 to IT Orchestrator - CURRENT 6a8c1a55", "id": "ADV-154", "state": "SENT", "to": ["IT Orchestrator - CURRENT 6a8c1a55"], "utc": "2026-11-21T17:20:18Z"}
