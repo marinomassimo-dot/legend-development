@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-21T23:02Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "read"
+ },
+ "event_at": "2026-11-21T23:02:00Z",
+ "event_id": "FTR-20261121-42129570-01",
+ "evidence_basis": [
+  "Javed et al. 2026 Nature 655 (PMID 42129570, DOI 10.1038/s41586-026-10491-x): publisher PDF (41 pages) text-extracted; the JUNB Results section, the Fig. 4 legend, the Extended Data Fig. 12 to 14 legends, the Methods on organoid and in utero electroporation, birth-dating, scRNA-seq collection and statistics, and the Data availability statement were read; the landscape, ordinal-model, IRF1 and other Results and the Discussion were not read for this task; figure images not viewed. Source Data Fig. 4 (four sheets: 4c, 4d, 4e, 4g) read in full by script; no source-data sheet exists for Fig. 4f. Peer Review File searched by keyword and the organoid-replicate passages read. GEO GSE324846 by record page only.",
+  "verbatim_locator | proposition: human JUNB knockdown raises the neuron-to-progenitor ratio at a single early time | Results (Function and targets of JUNB in RG) | \"in neuron-to-progenitor ratio, consistent with accelerated neurogenesis\"",
+  "verbatim_locator | proposition: the authors describe the early mouse composition change as RG rising at the expense of IP and N numbers | Results (Function and targets of JUNB in RG) | \"increased RG numbers at the expense of IP and N numbers\"",
+  "verbatim_locator | proposition: the later neuronal output claim rests on clonal analysis | Results (Function and targets of JUNB in RG) | \"led to an increase in neuronal production, as shown by clonal analysis using Tracker-seq\"",
+  "verbatim_locator | proposition: Tracker-seq compared unequal sorted cell numbers between conditions | Methods (Collection and snRNA-seq and scRNA-seq of electroporated cells, P0 dataset) | \"16,000 control and 50,000 JUNB electroporated RFP+ cells were sorted\"",
+  "verbatim_locator | proposition: organoid quantification unit is the ventricle, with the organoid as a grouping factor | Methods (Statistics) | \"All quantifications were performed at the ventricle level.\"",
+  "verbatim_locator | proposition: the human knockdown has 3 control and 4 knockdown organoids | Extended Data Fig. 12 legend | \"Each dot represents an independent organoid (n = 3 Ctl; n = 4 knockdown (KD))\"",
+  "verbatim_locator | proposition: the early mouse composition experiment comes from one litter, the later ones from several | Fig. 4 legend | \"Data in d were generated from one mouse litter, whereas data in e\u2013g were generated from multiple litters.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv166_javed_early_ratio_vs_yield_sci_20261121/RESULT_ADV166_JAVED_EARLY_RATIO_VS_YIELD_SCI_20261121.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "5e048b0873138a122e69bf9a8894075db3bb1c02f25d06268dfcbb70c0e3625c",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Publisher PDF https://www.nature.com/articles/s41586-026-10491-x.pdf (copy at a scratch path on this host, SHA-256 as fingerprint, verified 2026-11-21); Source Data Fig. 4 from https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-026-10491-x/MediaObjects/41586_2026_10491_MOESM12_ESM.xlsx (SHA-256 07c4597dc11381940c66e7f2318d669752261c526c8db8a12b39cb4f327633d4); Peer Review File MOESM11 PDF",
+ "study_id": {
+  "doi": "10.1038/s41586-026-10491-x",
+  "pmid": "42129570"
+ },
+ "workflow": "SCI successor Z ADV-166 (early neuron-to-progenitor ratio against later neuronal output; INV-17 decision): partial read of the article text, Source Data Fig. 4 in full, after a committed pre-registration."
+}
