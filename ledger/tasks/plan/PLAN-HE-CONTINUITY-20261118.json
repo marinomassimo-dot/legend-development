@@ -767,6 +767,13 @@
      "accepted_at": "2026-11-21T18:29:42Z",
      "evidence": "framework/scripts/README.md row amended: It21P7 added to the shareable suites, the i18n suite named, package rebuild and package --check, translation of an edited English passage; test_documented_commands, reader journey OK; package --check prints 'package is current'",
      "updated_at": "2026-11-21T18:31:46Z"
+    },
+    {
+     "step": "ADV-159 (ADV-CODEX LOOP round 1): CI read of #1847, trace of orphan translations and stale package, read-only review of relay.py",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV message of 2026-11-21 assigning ADV-159 (operator-authorised ADV-Codex loop, round 1)",
+     "accepted_at": "2026-11-21T18:59:47Z"
     }
    ]
   }
@@ -1357,6 +1364,13 @@
    "at": "2026-11-21T18:29:42Z",
    "source": "ADV message of 2026-11-21 after IT's i18n fix, asking the README line to name the i18n suite and the package rebuild",
    "step_sha256": "fbb1f6492476",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T18:59:47Z",
+   "source": "ADV message of 2026-11-21 assigning ADV-159 (operator-authorised ADV-Codex loop, round 1)",
+   "step_sha256": "817229da45f9",
    "reopened_block": false,
    "authorised_by": null
   }
