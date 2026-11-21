@@ -1,0 +1,28 @@
+14-FR | NAME missing Yes
+14-DE | NAME missing Yes
+14-ES | NAME missing Yes
+15-FR | NEGATION source 0 / rendering 1
+15-ES | NEGATION source 0 / rendering 1
+18-FR | SYMBOL IRM: source 0 / rendering 1; MRI: source 1 / rendering 0
+18-DE | SYMBOL MRI: source 1 / rendering 0; MRT: source 0 / rendering 1
+18-ES | SYMBOL MRI: source 1 / rendering 0; RM: source 0 / rendering 1
+19-FR | NEGATION source 0 / rendering 1
+19-ES | NEGATION source 0 / rendering 1
+21-DE | NEGATION source 2 / rendering 1
+28-FR | NEGATION source 0 / rendering 1
+31-FR | NAME missing NAMs | NEGATION source 0 / rendering 1
+31-DE | NEGATION source 0 / rendering 1
+31-ES | NAME missing NAMs | NEGATION source 0 / rendering 1
+33-FR | NEGATION source 0 / rendering 1
+41-FR | NEGATION source 1 / rendering 2
+41-ES | NEGATION source 1 / rendering 2
+42-FR | NEGATION source 1 / rendering 2
+42-DE | NEGATION source 1 / rendering 2
+42-ES | NEGATION source 1 / rendering 2
+43-FR | HEDGE source 0 / rendering 1
+43-DE | HEDGE source 0 / rendering 1
+43-ES | HEDGE source 0 / rendering 1
+44-DE | HEDGE source 1 / rendering 0
+49-FR | NAME missing IPSCs
+49-ES | NAME missing IPSCs
+ROWS 150 FLAGGED 27
