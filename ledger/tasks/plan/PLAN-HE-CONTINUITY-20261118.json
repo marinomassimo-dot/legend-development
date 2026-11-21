@@ -560,6 +560,15 @@
      "accepted_at": "2026-11-21T02:32:05Z",
      "evidence": "section notice (sec_en_src, en/fr/de/es, blind check 8/8 OK), pilot compound name per language, guard EnglishAuthoredSectionsSayTheyAreEnglish, painted scan full pages (RESULT_ADV130_HE_20261121.md); i18n suite 26 OK; view suite 232 run, 2 known item-17 reds",
      "updated_at": "2026-11-21T03:12:49Z"
+    },
+    {
+     "step": "Write HE checkpoint D, launch the successor by the recipe, report row and bind times to ADV",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-21 (clean restart point after ADV-130; checkpoint D with pointers to ADV-127 to ADV-131)",
+     "accepted_at": "2026-11-21T03:36:14Z",
+     "evidence": "CHECKPOINT_HE_20261121_D.md written and landed; successor launch and bind times in the next step record",
+     "updated_at": "2026-11-21T03:36:14Z"
     }
    ]
   }
@@ -989,6 +998,13 @@
    "at": "2026-11-21T02:32:05Z",
    "source": "ADV message with ADV-130 decision (assignments/ADV-130.md) of 2026-11-21, after the leads count",
    "step_sha256": "06f42648b0e7",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T03:36:14Z",
+   "source": "ADV message 2026-11-21 (clean restart point after ADV-130; checkpoint D with pointers to ADV-127 to ADV-131)",
+   "step_sha256": "07db7071606e",
    "reopened_block": false,
    "authorised_by": null
   }
