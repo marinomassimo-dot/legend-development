@@ -1,0 +1,41 @@
+{
+ "analysis_time_precision": "minute",
+ "record_kind": "contemporaneous_receipt",
+ "source_kind": "fulltext_remote",
+ "evidence_depth": "partial_fulltext_read",
+ "analysis_at": "2026-11-21T15:57Z",
+ "event_at": "2026-11-21T15:57Z",
+ "event_id": "FTR-20261121-25896324-01",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "read",
+  "tables": "read"
+ },
+ "evidence_basis": [
+  "Najm 2015 Nature (PMC4528969): supplement files from the PMC open-data bucket (one plain request each, HTTP 200): the supplement docx index, Table S1 pdf, Supplementary Tables 2 and 3 (xlsx, parsed with the standard library), and the figure image nihms665856f6.jpg (identified as Extended Data Fig. 2a by content; read with the image viewer and independently by a blind reader, sonnet effort high, all values agreeing). The main text was re-fetched only to check the passages on the supplementary tables and on the slice-culture drug list. Extended data figures other than 2a not viewed; the figure is recorded as captions_only because the vocabulary has no 'one figure read' value (an under-claim).",
+  "verbatim_locator | proposition: Table 2 is kinase profiling and Table 3 phosphoproteomics, not differentiation readouts | supplement docx | \"Supplementary Table 2 (kinase assay results)\"",
+  "verbatim_locator | proposition: ketoconazole appears once in the text, in the slice-culture drug list | Methods, ex vivo cerebellar slice cultures | \"miconazole (1 µM), ketoconazole (1 µM)\"",
+  "verbatim_locator | proposition: Extended Data Fig. 2a is the slice ranking | Results | \"Fig. 1d and Extended Data Fig. 2a\"",
+  "figure_reading | proposition: printed slice values | Extended Data Fig. 2a table, column Brain Slice Percent MBP of Control | clobetasol 169 (High); miconazole 148 (High); ketoconazole 117 (Medium); benztropine 96 (Low); EC50 uM 0.4, 0.5, 0.5, 0.6",
+  "Mechanical check: item5_pages_scan_it_20261121/verify_held_bytes.py (SHA-256 of each file and quotation checks); blind_reading/READING.tsv."
+ ],
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/item5_pages_scan_it_20261121/README.md"
+ ],
+ "prior_receipt": "FTR-20261105-25896324-06",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "e89ba3a9095673fd5032e827d0a04cb70754d9dd0c733ed35154d38df2e0f132",
+ "source_locator": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4528969.1/ (supplement files and nihms665856f6.jpg; one plain request each on 2026-11-21, no contact parameter; the files are kept in scratch and are not in git); the fingerprint is that of the main-text copy PMC4528969.1.txt",
+ "study_id": {
+  "doi": "10.1038/nature14335",
+  "pmid": "25896324"
+ },
+ "workflow": "IT ADV-149 step 2 (scan of the other two item-5 pages with three identifiers): the supplement and the Extended Data Fig. 2a table that the 2026-11-05 and 2026-11-15 readings did not see."
+}

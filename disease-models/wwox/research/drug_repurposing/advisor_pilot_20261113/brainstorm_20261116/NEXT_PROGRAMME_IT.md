@@ -40,3 +40,6 @@ Baseline arm of the matrix 40,573; blind extractor 73,560; second read of 25 cel
 * **Stale rows:** five rows read OPEN while packages on main answered them (IT56-Q05, IT56-Q09, WO-06, TS-02, IT46-Q03 in part), plus IT46-Q11; applied. SCI's ADV-027 sweep of the zero-spend OPEN rows will give the real reachable list; I apply it and run no sweep of my own.
 * **Panel 6 (SCI, RNA level):** the organoid GAD1-up and GABRB2/GABRB3-down direction is not reproduced per class in the S-line neuron-specific deletion; scaffold transcripts do not fall; H1 is neither supported nor refuted, and an RNA row does not test the protein-level lever (arm table v9, M103 to M105).
 * **Engine path:** still stopped until the operator gives a budget; this is the one older whole-programme stop that stays whole.
+
+
+Dated pointer 2026-11-21 (IT, ADV-149; the text above is kept as written): PMC12067145 (Tanaka 2025, PMID 40365404) is no longer a blocked source: it was read on 2026-11-11 (receipts FTR-20261111-40365404-85 and -86) and the text was re-fetched on 2026-11-21 from the PMC open-data bucket with identical bytes; see `../../trek_pointer_q07_it_20261121/README.md`.
