@@ -803,6 +803,15 @@
      "accepted_at": "2026-11-21T21:25:50Z",
      "evidence": "cache works from a worktree with LEGEND_CATALOG_CACHE; EIF2B1-5 UNRESOLVED_SYMBOL (target file holds 1518 selected targets, none eIF2B); ISRIB and fosigotifator have molecule records, no rows via the tool; live API by molecule: ISRIB 9 rows none on eIF2B, fosigotifator 0; README row amended with the boundary",
      "updated_at": "2026-11-21T21:27:48Z"
+    },
+    {
+     "step": "Skip check: three test files that skip without LEGEND_CATALOG_CACHE, run with it pointed at the root cache, skip counts before and after",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message of 2026-11-21 after the cache test",
+     "accepted_at": "2026-11-21T21:31:33Z",
+     "evidence": "with LEGEND_CATALOG_CACHE at the root cache: test_repurposing_search_bridges 12 OK (skips 1 -> 0); test_shareable_audit_languages 1 FAIL of 9 (RealEditions.test_each_edition_passes_and_a_visible_insertion_is_refused_in_each, en: tiratricol insertion not refused); test_attribution_it21 1 FAIL of 48 (CommittedV1Tables.test_propose_without_v1_is_byte_identical_to_the_committed_p2_tables, proposals_it21.tsv differs by a flag column); no repair, reported to ADV",
+     "updated_at": "2026-11-21T21:34:47Z"
     }
    ]
   }
@@ -1421,6 +1430,13 @@
    "at": "2026-11-21T21:25:50Z",
    "source": "ADV message of 2026-11-21 questioning the 'cache absent' premise of IT52-Q01",
    "step_sha256": "9855c5639fe9",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-21T21:31:33Z",
+   "source": "ADV message of 2026-11-21 after the cache test",
+   "step_sha256": "b689de58dec9",
    "reopened_block": false,
    "authorised_by": null
   }
