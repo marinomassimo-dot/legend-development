@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-21T22:47Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "event_at": "2026-11-21T22:47:00Z",
+ "event_id": "FTR-20261121-41066510-01",
+ "evidence_basis": [
+  "Ma et al. 2025 PLOS Biology (PMID 41066510, DOI 10.1371/journal.pbio.3003192, open access): the complete article as the publisher JATS XML (abstract, introduction, Results, Discussion, Methods, all figure legends and supporting-information legends); figure images not viewed. Supporting information: the S1 Data workbook (34 sheets), of which six sheets were read in full by script (Fig1A, Fig1B, Fig1C, Fig4C, Fig5D, FigS8); the other 28 sheets (morphology, synapse, lipid, proteome and others) were not read for this task. GEO series GSE292221 and GSE292102 by record page and file listing only.",
+  "verbatim_locator | proposition: behavioural seizures were documented only at PWK 14 and PWK 28, in separate video cohorts | Results (Spontaneous recurrent seizures) | \"we conducted long-term video recordings with different cohorts and found that these mice indeed experienced spontaneous recurrent seizures at both PWK 14 and 28\"",
+  "verbatim_locator | proposition: electrographic evidence exists at PWK 20 only | Results (Spontaneous recurrent seizures) | \"we focused our video-EEG recordings on an intermediate time point (PWK 20)\"",
+  "verbatim_locator | proposition: marker values are mean fluorescence intensities, not cell counts | Methods (Fluorescence immunohistochemistry) | \"we measured intensities instead of performing cell counting\"",
+  "verbatim_locator | proposition: the authors report the glial sequence as Olig2 at PWK 7, IBA1 at PWK 14, GFAP at PWK 14 and 28 | Results (Gliosis) | \"Olig2 mean intensity increased at PWK 7, followed by IBA1 at PWK 14, and GFAP at both PWK 14 and 28\"",
+  "verbatim_locator | proposition: the authors state the sampling intervals are too broad to order microglial against astrocytic activation | Discussion | \"the relatively broad intervals leave uncertainty regarding the precise temporal order of microglial versus astrocytic activation\"",
+  "verbatim_locator | proposition: the authors read the PWK 7 Olig2 rise as a possible response to the neonatal spasms | Discussion | \"the spasm-like seizures experienced during the neonatal stage may have triggered this early glial response\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv165_cyfip2_chronology_sci_20261121/RESULT_ADV165_CYFIP2_CHRONOLOGY_SCI_20261121.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "978bba907fda01fe93b4bc38575d0308707ca7c49c2d15da65eb7cce3c8db531",
+ "source_kind": "fulltext_remote",
+ "source_locator": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.3003192&type=manuscript (plain request, 2026-11-21; scratch copy, SHA-256 as fingerprint); S1 Data workbook from https://journals.plos.org/plosbiology/article/file?type=supplementary&id=10.1371/journal.pbio.3003192.s038 (SHA-256 906de7531b54d47770f4e36319ad1f49b2b3ca24bef6e8bb063933924e1d9c6d)",
+ "study_id": {
+  "doi": "10.1371/journal.pbio.3003192",
+  "pmid": "41066510"
+ },
+ "workflow": "SCI successor Z ADV-165 (Cyfip2 R87C chronology of glial markers against documented seizure recurrence): the complete article text and six per-animal sheets of the S1 Data workbook, read after a committed pre-registration."
+}
