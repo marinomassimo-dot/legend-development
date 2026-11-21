@@ -1,0 +1,246 @@
+{
+ "fr|1280": {
+  "notice_sections": [
+   "chains",
+   "charts",
+   "funnel",
+   "hypotheses",
+   "leads",
+   "limits",
+   "matrix",
+   "priorities",
+   "priorities-cur",
+   "ranking",
+   "rankingprint",
+   "start",
+   "tech-versions"
+  ],
+  "batch50": {
+   "english_painted": 19,
+   "translated_painted": 50,
+   "english_sections": [
+    "",
+    "candidates",
+    "charts",
+    "explore",
+    "hypotheses",
+    "navigate",
+    "start"
+   ],
+   "english_in_section_with_notice": 8
+  },
+  "batch25": {
+   "english_painted": 25,
+   "translated_painted": 0,
+   "english_sections": [
+    "hypotheses",
+    "priorities-cur",
+    "ranking"
+   ],
+   "english_in_section_with_notice": 25
+  }
+ },
+ "fr|390": {
+  "notice_sections": [
+   "chains",
+   "charts",
+   "funnel",
+   "hypotheses",
+   "leads",
+   "limits",
+   "matrix",
+   "priorities",
+   "priorities-cur",
+   "ranking",
+   "rankingprint",
+   "start",
+   "tech-versions"
+  ],
+  "batch50": {
+   "english_painted": 19,
+   "translated_painted": 50,
+   "english_sections": [
+    "",
+    "candidates",
+    "charts",
+    "explore",
+    "hypotheses",
+    "navigate",
+    "start"
+   ],
+   "english_in_section_with_notice": 8
+  },
+  "batch25": {
+   "english_painted": 25,
+   "translated_painted": 0,
+   "english_sections": [
+    "hypotheses",
+    "priorities-cur",
+    "ranking"
+   ],
+   "english_in_section_with_notice": 25
+  }
+ },
+ "de|1280": {
+  "notice_sections": [
+   "chains",
+   "charts",
+   "funnel",
+   "hypotheses",
+   "leads",
+   "limits",
+   "priorities",
+   "priorities-cur",
+   "ranking",
+   "rankingprint",
+   "start",
+   "tech-versions"
+  ],
+  "batch50": {
+   "english_painted": 19,
+   "translated_painted": 50,
+   "english_sections": [
+    "",
+    "candidates",
+    "charts",
+    "explore",
+    "hypotheses",
+    "navigate",
+    "start"
+   ],
+   "english_in_section_with_notice": 8
+  },
+  "batch25": {
+   "english_painted": 25,
+   "translated_painted": 0,
+   "english_sections": [
+    "hypotheses",
+    "priorities-cur",
+    "ranking"
+   ],
+   "english_in_section_with_notice": 25
+  }
+ },
+ "de|390": {
+  "notice_sections": [
+   "chains",
+   "charts",
+   "funnel",
+   "hypotheses",
+   "leads",
+   "limits",
+   "priorities",
+   "priorities-cur",
+   "ranking",
+   "rankingprint",
+   "start",
+   "tech-versions"
+  ],
+  "batch50": {
+   "english_painted": 19,
+   "translated_painted": 50,
+   "english_sections": [
+    "",
+    "candidates",
+    "charts",
+    "explore",
+    "hypotheses",
+    "navigate",
+    "start"
+   ],
+   "english_in_section_with_notice": 8
+  },
+  "batch25": {
+   "english_painted": 25,
+   "translated_painted": 0,
+   "english_sections": [
+    "hypotheses",
+    "priorities-cur",
+    "ranking"
+   ],
+   "english_in_section_with_notice": 25
+  }
+ },
+ "es|1280": {
+  "notice_sections": [
+   "chains",
+   "charts",
+   "funnel",
+   "hypotheses",
+   "leads",
+   "limits",
+   "matrix",
+   "priorities",
+   "priorities-cur",
+   "ranking",
+   "rankingprint",
+   "start",
+   "tech-versions"
+  ],
+  "batch50": {
+   "english_painted": 19,
+   "translated_painted": 50,
+   "english_sections": [
+    "",
+    "candidates",
+    "charts",
+    "explore",
+    "hypotheses",
+    "navigate",
+    "start"
+   ],
+   "english_in_section_with_notice": 8
+  },
+  "batch25": {
+   "english_painted": 25,
+   "translated_painted": 0,
+   "english_sections": [
+    "hypotheses",
+    "priorities-cur",
+    "ranking"
+   ],
+   "english_in_section_with_notice": 25
+  }
+ },
+ "es|390": {
+  "notice_sections": [
+   "chains",
+   "charts",
+   "funnel",
+   "hypotheses",
+   "leads",
+   "limits",
+   "matrix",
+   "priorities",
+   "priorities-cur",
+   "ranking",
+   "rankingprint",
+   "start",
+   "tech-versions"
+  ],
+  "batch50": {
+   "english_painted": 19,
+   "translated_painted": 50,
+   "english_sections": [
+    "",
+    "candidates",
+    "charts",
+    "explore",
+    "hypotheses",
+    "navigate",
+    "start"
+   ],
+   "english_in_section_with_notice": 8
+  },
+  "batch25": {
+   "english_painted": 25,
+   "translated_painted": 0,
+   "english_sections": [
+    "hypotheses",
+    "priorities-cur",
+    "ranking"
+   ],
+   "english_in_section_with_notice": 25
+  }
+ }
+}
