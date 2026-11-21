@@ -3175,3 +3175,11 @@ verify routing and schema behaviour; universal future model obedience is not dem
 - Team mims-harvard (SPECTRA, MIT, matched on "structure"): TRIAGED, no lead. A protein-structure repository; no stated link to a WWOX question, no adoption.
 
 **Outcome.** TRIAGED (0 leads, 0 adoptions). The remedy for one-word bridges stays as recorded above; this is one more measurement of the same false-hit kind, not a new problem.
+
+## 2026-11-21 — IT successor Q, session close
+
+- **Gap (new, small).** To fold a design team's answers into a governing text by script we lack a scripted check for tension between an inserted answer and the sentence it sits next to. The numeric checker (`current_text_adv143_it_20261121/check_current_text.py`: new tokens, History verbatim, dropped tokens) caught none of the conflicts the round-3 reader found (pilot ages, series age, E2 against the floor rule, "stage" against "grade"); a same-family reader found them, a new layer each round.
+- **Evidence.** `verify_adv146/COMPARISON_ADV146_IT_20261121.md` (criteria 1 and 2 not met; six CONFLICT-OPEN and one OPEN-GAP added by repair).
+- **Outcome.** GAP-NEW, no change made: a proportionate candidate is a term-collision scan (the same defined term or number used in an answer and in a neighbouring rule sentence with different values), proposed for the next text-work task, not built now. No external search was run (the gap is internal); no cost or privacy risk.
+- **Next micro-step.** If ADV-148 returns answers to integrate, run the integration script, then a collision scan on the touched sentences before any reader is dispatched.
+- Strategic Advisor: assess against the standing roadmap and the ADV-148 queue; route to Harness if worthwhile.
