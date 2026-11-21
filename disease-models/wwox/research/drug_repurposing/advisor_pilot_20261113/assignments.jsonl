@@ -353,3 +353,7 @@
 {"assessment": "HOST", "id": "ADV-140", "key": "brain-2026-fig6-human-benchmark-woree-scar12-usable-comparison", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-21T13:51:42Z"}
 {"evidence": "SendMessage receipt msg_id 7a71d755-a024-48b5-b9bb-a0c9c11d1798 to SCI - CURRENT b3e65c69", "id": "ADV-139", "state": "SENT", "to": ["SCI - CURRENT b3e65c69"], "utc": "2026-11-21T13:52:01Z"}
 {"evidence": "SendMessage receipt msg_id 7a71d755-a024-48b5-b9bb-a0c9c11d1798 to SCI - CURRENT b3e65c69", "id": "ADV-140", "state": "SENT", "to": ["SCI - CURRENT b3e65c69"], "utc": "2026-11-21T13:52:02Z"}
+{"assessment": "HOST", "id": "ADV-141", "key": "cold-read-of-the-pup-brief-as-a-collaborating-laboratory", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-21T14:06:30Z"}
+{"evidence": "SendMessage receipt msg_id 1efc16a2-1dac-4c2f-976a-9807da7fd5e8 to IT Orchestrator - CURRENT 6a8c1a55", "id": "ADV-141", "state": "SENT", "to": ["IT Orchestrator - CURRENT 6a8c1a55"], "utc": "2026-11-21T14:06:38Z"}
+{"assessment": "HOST", "id": "ADV-142", "key": "brain-2026-baseline-five-metric-reading-fig1-and-expansion-view-at-full-resolution", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-21T14:19:26Z"}
+{"evidence": "SendMessage receipt msg_id 2c057e29-9140-44ac-bae7-2834fd2722dc to SCI - CURRENT b3e65c69", "id": "ADV-142", "state": "SENT", "to": ["SCI - CURRENT b3e65c69"], "utc": "2026-11-21T14:19:38Z"}

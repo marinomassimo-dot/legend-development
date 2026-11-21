@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-21T14:02:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-21T14:02:00Z",
+ "event_id": "FTR-20261121-IHRIN-01",
+ "evidence_basis": [
+  "bioRxiv preprint 2023.09.25.559198v1 (input-specific gating of NMDA amplification via HCN channels, mouse L2/3 pyramidal neurons), PDF from the open bioRxiv URL, pdftotext -layout. Read: abstract, Results (all), Discussion, Methods (slice preparation, electrophysiology), figure legends of Figs 2, 3, 6, 7. Not read: Introduction, references, supplementary figures, modelling methods. The Ih blocker used for input resistance was Cs+ (CsMeSO4 bath); ZD7288 (50 uM) was used only for EPSP half-width. The mice were 6-10 weeks old: this source does not meet the P13-P17 window and is a near-miss.",
+  "verbatim_locator | proposition: age of mice used for the recordings | Methods, Acute slice preparation, manuscript line 366 | \"prepared from mature C57Bl/6J mice (6–10 weeks old)\"",
+  "verbatim_locator | proposition: recording temperature | Methods, Acute slice preparation, line 374 | \"maintained at 30.0°C ± 0.5°C.\"",
+  "verbatim_locator | proposition: how input resistance was measured | Methods, Electrophysiology, line 397 | \"measured by averaging voltage responses to a 20 pA prepulse current step\"",
+  "verbatim_locator | proposition: Cs+ effect on input resistance in mature L2/3 PCs (legend of Fig 2f) | Fig 2 legend, line 516 | \"resistance is altered by Ih (74.78 ± 42.34 mV vs. 104.99 ± 52.91 mV for control vs CsMeSO4 bath\"",
+  "verbatim_locator | proposition: input resistance of L2/3 PCs at one, two and six weeks (no blocker) | Fig 6 legend, line 645 | \"old cells, Student’s two-sample t-test), input resistance (450.6 ± 57.91 MΩ, 175.66 ± 13.66 MΩ and\"",
+  "The unit printed for Rin in the Fig 2f legend is mV (a typesetting slip; the context is input resistance); n = 7 paired cells; no TTX stated for these current-clamp recordings in the text read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ih_rin_juvenile_l23_it_20261121/output/RESULT.md",
+  "disease-models/wwox/research/drug_repurposing/ih_rin_juvenile_l23_it_20261121/output/candidates.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "0256c0d68135d4a0165893f67e51767068a962f75a9ce97563f3eb4df8009405",
+ "source_kind": "fulltext_remote",
+ "source_locator": "https://www.biorxiv.org/content/10.1101/2023.09.25.559198v1.full.pdf fetched 2026-11-21 (local copy files/fulltext/ih_rin_it_20261121/p1/biorxiv_2023.09.25.559198v1.pdf, text layer biorxiv_559198.txt)",
+ "study_id": {
+  "doi": "10.1101/2023.09.25.559198"
+ },
+ "workflow": "Ih-blocker effect on resting Rin in juvenile rodent L2/3 pyramidal neurons (ih_rin_juvenile_l23_it_20261121), producer on model sonnet, effort high. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
