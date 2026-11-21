@@ -1,0 +1,156 @@
+{
+ "frozen_utc": "2026-11-21T22:10Z (before any query of this check; the only queries run earlier today were a bare WWOX health probe and the NP4G2 trial)",
+ "source_sets": {
+  "file": "it_adv164_frozen_sets_20261121/FROZEN_SETS_ADV164_IT_20261121.md",
+  "commit_in_IT_worktree": "dbb336e33",
+  "blob": "4daf9ef59dcf1773f6014fc36fd251434c72c3db",
+  "sha256": "4368f8a0ee505ddc07f82d5ba0ab9e6780b04e6d256f11f1fa9f3d835aeac944",
+  "note": "Named by IT (consumer); frozen from receipt ledger and registry short titles; IT looked at no query or flag output. Row B replaced NP3A1 (its text names the gene) by NP3A3 at IT's reasoning."
+ },
+ "cap": 25,
+ "rule": {
+  "earns": "the flag earns another use ONLY IF, on at least one frozen row, it returns at least one CLEAN frozen positive (not diagnostic) inside the top-25 page that is in neither the default's nor the simple arm's top-25 page, on the same route, AND review burden does not rise materially.",
+  "burden": "review burden = records in the top-25 page that are not frozen positives; a MATERIAL rise = the flag arm's burden exceeds BOTH other arms' by more than 10 records.",
+  "keep_narrow_and_stop_if": "tie; duplicates only; off-topic leads only; only already-known (diagnostic) cases reproduced; or no valid common comparison (a route down, an arm erroring, an arm returning zero for all)",
+  "routes": "Europe PMC first, PubMed analogue second; a result on PubMed only is a FORMULATION test, not a scout replay. All years (the scout's two-year window leaves almost no frozen positive).",
+  "unfrozen_leads": "a record outside the frozen sets that the flag surfaces and both others miss is listed as a lead, labelled, and does NOT count toward the rule (the boundary is frozen).",
+  "separate_records": [
+   "clean positives surfaced",
+   "extra manual review (burden)",
+   "legitimate absences (frozen positives no arm can reach by a short query)",
+   "access failures"
+  ],
+  "hurt_arm": "row B only: the 4 held non-WWOX Kv7 records; absence under the flag is by construction and is reported, not scored"
+ },
+ "rows": [
+  {
+   "id": "A recovery_it10_p23 R1 (Q230P protein fate; RP-015)",
+   "boundary": "a held record reporting a WWOX missense, nonsense or splice variant together with a WWOX protein, expression, stability or translation observation (or its absence)",
+   "positives": [
+    {
+     "pmid": "29808465"
+    },
+    {
+     "pmid": "36537114"
+    },
+    {
+     "pmid": "30853297"
+    },
+    {
+     "pmid": "36828035"
+    },
+    {
+     "pmid": "24369382"
+    },
+    {
+     "pmid": "35792847"
+    },
+    {
+     "pmid": "40875931"
+    },
+    {
+     "pmid": "39416860"
+    },
+    {
+     "pmid": "36926521"
+    },
+    {
+     "pmid": "30746283"
+    }
+   ],
+   "diagnostic": [
+    "29808465",
+    "36537114",
+    "30853297"
+   ],
+   "arms": {
+    "default": {
+     "epmc": "TITLE_ABS:q230p AND TITLE_ABS:protein",
+     "pubmed": "q230p[tiab] AND protein[tiab]"
+    },
+    "flag": {
+     "epmc": "TITLE_ABS:WWOX AND TITLE_ABS:protein",
+     "pubmed": "wwox[tiab] AND protein[tiab]"
+    },
+    "simple": {
+     "epmc": "TITLE_ABS:WWOX AND TITLE_ABS:variant",
+     "pubmed": "wwox[tiab] AND variant[tiab]"
+    }
+   }
+  },
+  {
+   "id": "B functional_it13_p3a NP3A3 (resting potential and M-current, neuron-deleted slices; RP-019)",
+   "boundary": "a held record reporting excitability, network or interneuron electrophysiology (resting potential, burst, seizure, E/I or PV readout) in a Wwox-deficient neuron-targeted, null or organoid preparation; WWOX-named",
+   "positives": [
+    {
+     "pmid": "34634460"
+    },
+    {
+     "pmid": "32000863"
+    },
+    {
+     "pmid": "30290271"
+    },
+    {
+     "pmid": "34268881"
+    },
+    {
+     "pmid": "34831305"
+    },
+    {
+     "pmid": "42397075"
+    },
+    {
+     "pmid": "36828035"
+    },
+    {
+     "pmid": "42422765"
+    },
+    {
+     "pmid": "42558002"
+    },
+    {
+     "pmid": "41477840"
+    },
+    {
+     "pmid": "41712282"
+    }
+   ],
+   "diagnostic": [
+    "34634460",
+    "32000863"
+   ],
+   "direct_only": [
+    "34634460",
+    "32000863",
+    "30290271",
+    "34268881",
+    "34831305",
+    "42397075",
+    "36828035",
+    "42422765"
+   ],
+   "hurt": [
+    "26865186",
+    "30328622",
+    "38176909",
+    "32652600"
+   ],
+   "arms": {
+    "default": {
+     "epmc": "TITLE_ABS:nmdar AND TITLE_ABS:sipsc",
+     "pubmed": "nmdar[tiab] AND sipsc[tiab]"
+    },
+    "flag": {
+     "epmc": "TITLE_ABS:WWOX AND TITLE_ABS:deleted",
+     "pubmed": "wwox[tiab] AND deleted[tiab]"
+    },
+    "simple": {
+     "epmc": "TITLE_ABS:WWOX AND TITLE_ABS:excitability",
+     "pubmed": "wwox[tiab] AND excitability[tiab]"
+    }
+   }
+  }
+ ],
+ "arm_origin": "default and flag queries are the exact strings `scout_daily.py` (main 8f4d0c0ae) builds for the row without and with --gene-anchor (printed from the derived plan, no search run); the simple arm's topic word was chosen by HE here, before any query, from the row's boundary."
+}
