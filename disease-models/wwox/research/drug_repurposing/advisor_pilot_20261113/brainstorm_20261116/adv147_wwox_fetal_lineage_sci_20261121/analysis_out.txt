@@ -1,0 +1,57 @@
+assigned cells 3938 WWOX dataset-wide detection 0.142
+pool detection: {'HPRT1': 0.133, 'TBP': 0.223, 'POLR2A': 0.316, 'YWHAZ': 0.941, 'PPIA': 0.847, 'UBE2D3': 0.591, 'CSNK2B': 0.413, 'PSMB4': 0.542, 'ARF1': 0.501, 'TMEM59': 0.498, 'SDHA': 0.206, 'GUSB': 0.107, 'TFRC': 0.296, 'HMBS': 0.091, 'PGK1': 0.39, 'RAB7A': 0.32, 'VCP': 0.317, 'EEF2': 0.811, 'NACA': 0.796, 'SNRPD1': 0.549}
+matched controls: ['HPRT1', 'GUSB'] 2
+radial_glia              n=  649 WWOX 150/649=0.231 [0.200,0.265] control median 0.183 ratio 1.27
+excitatory               n= 1494 WWOX 162/1494=0.108 [0.094,0.125] control median 0.125 ratio 0.87
+inhibitory_neurons       n=  985 WWOX 93/985=0.094 [0.078,0.114] control median 0.056 ratio 1.68
+cortical_IPC             n=  270 WWOX 37/270=0.137 [0.101,0.183] control median 0.131 ratio 1.04
+glia_other               n=  223 WWOX 48/223=0.215 [0.166,0.274] control median 0.137 ratio 1.57
+inhibitory_progenitors   n=  317 WWOX 68/317=0.215 [0.173,0.263] control median 0.139 ratio 1.55
+V2 inhibitory neurons / excitatory ratio: 1.93
+V3 inhibitory_progenitors / excitatory: 1.78
+V3 radial_glia / excitatory: 1.46
+V3 cortical_IPC / excitatory: 1.2
+--- cluster level (WWOX detection fraction)
+cortical_IPC             IPC-div1     n=  36 0.139
+cortical_IPC             IPC-div2     n=  51 0.235
+cortical_IPC             IPC-nEN1     n=  68 0.132
+cortical_IPC             IPC-nEN2     n=  76 0.079
+cortical_IPC             IPC-nEN3     n=  39 0.128
+excitatory               EN-PFC1      n=  93 0.204
+excitatory               EN-PFC2      n=  96 0.188
+excitatory               EN-PFC3      n=  53 0.113
+excitatory               EN-V1-1      n= 166 0.181
+excitatory               EN-V1-2      n= 182 0.104
+excitatory               EN-V1-3      n=  76 0.053
+excitatory               nEN-early1   n=  52 0.154
+excitatory               nEN-early2   n= 455 0.097
+excitatory               nEN-late     n= 321 0.044
+glia_other               Astrocyte    n=  46 0.239
+glia_other               Choroid      n=  14 0.571
+glia_other               Endothelial  n=  30 0.367
+glia_other               Microglia    n=  77 0.052
+glia_other               Mural        n=  19 0.263
+glia_other               OPC          n=  37 0.243
+inhibitory_neurons       IN-CTX-CGE1  n= 148 0.074
+inhibitory_neurons       IN-CTX-CGE2  n= 153 0.124
+inhibitory_neurons       IN-CTX-MGE1  n= 192 0.125
+inhibitory_neurons       IN-CTX-MGE2  n=  95 0.137
+inhibitory_neurons       IN-STR       n=  83 0.133
+inhibitory_neurons       nIN1         n=  72 0.042
+inhibitory_neurons       nIN2         n=  96 0.031
+inhibitory_neurons       nIN3         n=  54 0.056
+inhibitory_neurons       nIN4         n=  28 0.000
+inhibitory_neurons       nIN5         n=  64 0.094
+inhibitory_progenitors   MGE-IPC1     n=  44 0.227
+inhibitory_progenitors   MGE-IPC2     n=  62 0.097
+inhibitory_progenitors   MGE-IPC3     n=  40 0.025
+inhibitory_progenitors   MGE-RG1      n=  44 0.205
+inhibitory_progenitors   MGE-RG2      n=  70 0.229
+inhibitory_progenitors   MGE-div      n=  57 0.456
+radial_glia              Glyc         n=  77 0.169
+radial_glia              RG-div1      n= 133 0.346
+radial_glia              RG-div2      n= 124 0.250
+radial_glia              RG-early     n=  53 0.170
+radial_glia              oRG          n=  65 0.200
+radial_glia              tRG          n= 100 0.250
+radial_glia              vRG          n=  97 0.134

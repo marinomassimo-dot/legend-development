@@ -1,0 +1,8 @@
+terciles of genes detected: <= 2262 <= 3160
+excitatory               T0:13/255=0.051 T1:59/656=0.090 T2:90/583=0.154  median genes 2955.5
+inhibitory_neurons       T0:63/759=0.083 T1:26/209=0.124 T2:4/17=0.235  median genes 1907
+inhibitory_progenitors   T0:12/86=0.140 T1:35/151=0.232 T2:21/80=0.263  median genes 2674
+radial_glia              T0:4/66=0.061 T1:21/140=0.150 T2:125/443=0.282  median genes 3744
+cortical_IPC             T0:5/77=0.065 T1:13/98=0.133 T2:19/95=0.200  median genes 2752.5
+glia_other               T0:5/71=0.070 T1:14/58=0.241 T2:29/94=0.309  median genes 2866
+Mantel-Haenszel risk ratio inhibitory neurons vs excitatory (strata = genes-detected terciles): 1.49

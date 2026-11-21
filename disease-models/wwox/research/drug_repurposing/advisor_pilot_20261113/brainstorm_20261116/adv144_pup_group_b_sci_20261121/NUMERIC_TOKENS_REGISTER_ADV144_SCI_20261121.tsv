@@ -1,0 +1,11 @@
+token	used_in	status	derivation_or_source	locator
+0.1272	R-Q22	COMPUTED_RULE_VALUE	(ln 0.7)^2 = 0.12722; the squared effect size of the sizing formula n = 2 x 7.85 x sigma^2 / 0.1272	numbers_adv144 output; RESULT_ADV144 Part 1
+7.85	R-Q22	COMPUTED_RULE_VALUE	(z(0.975) + z(0.80))^2 = 7.849 for two-sided alpha 0.05 and power 0.80; the setting that reproduces the addendum's 36, 55, 77 and 109 exactly	blind recompute (7.848880); sizing_adv144 output
+16	R-Q34	INFERENCE_RULE_VALUE	knockouts in the pilot at 8 per cell: 2 ages x 8 = 16 (upper end of the brief's 6 to 8 per cell); 12 at 6 per cell	V2 line 41; V2 line 26
+18	R-Q34	INFERENCE_RULE_VALUE	heterozygote-cross litters for the 32 wild types of the pilot at 1.75 wild types per litter: 32 / 1.75 = 18.3 (13.7 for 24)	V2 line 25 (1:2:1, about 7 pups per litter)
+24	R-Q34	INFERENCE_RULE_VALUE	wild types in the pilot at 6 per cell: 2 ages x (vehicle, flat-profile agent) x 6 = 24 (32 at 8 per cell)	V2 lines 26, 41
+48	R-Q34	INFERENCE_RULE_VALUE	total pilot animals at 8 per cell: 16 knockouts + 32 wild types = 48 (36 at 6 per cell)	V2 line 41
+45	R-Q15	HELD_FACT_NOT_A_DESIGN_VALUE	the interval, in minutes, between the ethosuximide injection and PTZ in the Cheng 2020 Methods (a printed fact used only to show that the two regimens differ in schedule); no dose is stated or proposed	Cheng 2020 Methods, held full text r2
+0.29	R-Q31	COMPUTED_RULE_VALUE	relative standard error of an SD from n = 7 animals: 1 / sqrt(2 x (7 - 1)) = 0.289	standard result; numbers_adv144 output
+1.07	R-Q31	RECORD_VALUE	sigma_log of the 7d heterozygote group at rho 0.6 as printed in the addendum table (CV 1.45; my recompute from the CV gives 1.064, which rounds to 1.06); lower end of the wild-type and heterozygote bracket 1.06 to 1.30 in the C06 text	fig7_quant README line 57
+181	R-Q31	INFERENCE_RULE_VALUE	simple-effect n per arm at the upper end of the knockout bracket with sigma inflated by one relative standard error: 108.9 x (1 + 0.289)^2 = 181 (the lower end gives 59.5, written 60)	numbers_adv144 output
