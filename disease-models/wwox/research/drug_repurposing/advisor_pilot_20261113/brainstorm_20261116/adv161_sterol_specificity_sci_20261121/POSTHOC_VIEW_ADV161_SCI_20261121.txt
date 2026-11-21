@@ -1,0 +1,44 @@
+POST-HOC (not pre-registered; descriptive): all listed genes of Astro.Aqp4_Gfap, sorted by logFC, with pctExpr ctrl->T3 and robScore
+  Dpysl3     logFC -1.17 adjP 4.5e-02 rob -1.000 pct 0.09->0.03
+  Nog        logFC -1.12 adjP 4.3e-02 rob -1.000 pct 0.15->0.07
+  S100a16    logFC -0.77 adjP 1.6e-03 rob -0.750 pct 0.48->0.36
+  Fjx1       logFC -0.65 adjP 1.8e-03 rob -0.875 pct 0.60->0.49
+  Hmgcr      logFC -0.59 adjP 1.8e-03 rob -0.875 pct 0.71->0.65
+  Car2       logFC -0.45 adjP 1.8e-02 rob -1.000 pct 0.78->0.67
+  Myoc       logFC -0.38 adjP 1.5e-03 rob -1.000 pct 0.98->0.94
+  Hmgcs1     logFC -0.35 adjP 4.0e-02 rob -0.625 pct 0.91->0.92
+  Ptn        logFC -0.33 adjP 1.9e-02 rob -0.750 pct 0.99->1.00
+  Zbtb20     logFC +0.26 adjP 2.6e-02 rob +0.500 pct 1.00->1.00
+  Auts2      logFC +0.33 adjP 4.6e-02 rob +0.500 pct 0.91->0.95
+  Magi2      logFC +0.40 adjP 2.5e-03 rob +0.750 pct 0.95->0.98
+  Acsl6      logFC +0.41 adjP 9.0e-03 rob +0.625 pct 0.91->0.96
+  Thrb       logFC +0.43 adjP 4.3e-02 rob +0.625 pct 0.73->0.80
+  Abr        logFC +0.43 adjP 8.9e-03 rob +1.000 pct 0.85->0.92
+  Rgs6       logFC +0.44 adjP 2.2e-03 rob +0.750 pct 0.92->0.96
+  Kcnq3      logFC +0.46 adjP 2.3e-03 rob +0.750 pct 0.84->0.91
+  Ralgps2    logFC +0.48 adjP 1.7e-02 rob +1.000 pct 0.68->0.78
+  Rora       logFC +0.50 adjP 4.4e-06 rob +0.750 pct 0.97->0.98
+  Grk3       logFC +0.50 adjP 9.0e-03 rob +1.000 pct 0.62->0.71
+  Pdgfd      logFC +0.54 adjP 2.3e-03 rob +0.500 pct 0.70->0.83
+  Aldh1a1    logFC +0.59 adjP 9.0e-03 rob +0.625 pct 0.73->0.81
+  Prex2      logFC +0.60 adjP 4.6e-07 rob +0.750 pct 0.95->0.99
+  Cnnm2      logFC +0.63 adjP 4.0e-02 rob +0.750 pct 0.32->0.46
+  Pcx        logFC +0.63 adjP 1.3e-03 rob +0.875 pct 0.59->0.74
+  Lgi1       logFC +0.65 adjP 2.3e-03 rob +0.750 pct 0.63->0.77
+  Rgs7       logFC +0.66 adjP 1.9e-03 rob +1.000 pct 0.70->0.83
+  AC149090.1 logFC +0.77 adjP 7.3e-03 rob +0.750 pct 0.31->0.54
+  Gli2       logFC +0.78 adjP 1.7e-02 rob +0.750 pct 0.42->0.59
+  Bcl6       logFC +0.78 adjP 4.1e-02 rob +0.750 pct 0.21->0.36
+  Pde8b      logFC +0.78 adjP 2.3e-03 rob +0.875 pct 0.41->0.57
+  Klf9       logFC +0.81 adjP 4.4e-06 rob +1.000 pct 0.57->0.78
+  Bcar3      logFC +0.82 adjP 9.8e-04 rob +0.750 pct 0.47->0.68
+  Tesk2      logFC +0.84 adjP 1.8e-03 rob +1.000 pct 0.30->0.48
+  Emid1      logFC +0.89 adjP 9.0e-03 rob +0.500 pct 0.43->0.65
+  Pde7b      logFC +0.90 adjP 1.3e-03 rob +1.000 pct 0.34->0.54
+  Pcsk6      logFC +0.92 adjP 2.5e-03 rob +0.875 pct 0.26->0.43
+  Slc25a33   logFC +0.94 adjP 4.4e-06 rob +1.000 pct 0.46->0.66
+  Elmo2      logFC +0.99 adjP 2.5e-03 rob +0.875 pct 0.34->0.57
+  Gria1      logFC +1.00 adjP 1.8e-03 rob +1.000 pct 0.72->0.86
+
+POST-HOC lipid-related genes listed in any glial state:
+  Cyp27a1  inferred_Astro.Aqp4_Slc7a10 logFC +0.54 adjP 5.7e-03 rob +0.750
