@@ -10,3 +10,12 @@ Frozen **before any score file exists and before any outcome is read against a s
 | Outcome key (sealed) | `accaaceba49ae862e134204b53e6b3ce27d943c1c553054e06ad4524af9e8214` |
 
 What the spec fixes, in one line each, without the composition of the file: two distinct label rules (the paper's 60 percent recovery rule; a separate viability screen of undefined sign and unit); primary endpoint AUC(engine) minus AUC(declared baseline) on the same eligible rows with a paired, stratified cluster bootstrap by exact or alias compound identity (10,000 draws, fixed seed, percentile interval, leave-one-positive-group-out range beside it); the recognition stratum apart; sensitivities (stricter viability, tighter nulls, without the named leads' classes, a descriptive rank check); ADV's reading rule; validity (every id scored, under 5 percent missing); the scope disclosure that follows IT's freeze. Dry run on random scores: the pipeline runs end to end (about 80 seconds) and returns an interval of roughly plus or minus 0.2 around zero, which is the resolving power of this diagnostic.
+
+## Addendum 1 (2026-11-22, written before IT's score file was opened)
+Sealed like the spec; digests only. Reason: IT's frozen method names two baselines (B1 class prior, B2 lipophilicity) and its own metric; ADV's return 16 asks for both the original and the addendum metric and fixes the title. Nothing in it uses a score or an outcome. It reads the spec's "declared baseline" as B1 (B2 descriptive), adds the original metric of the frozen method (engine AUC with the same bootstrap, a label-permutation p, the gap to B1) and the addendum metric computed from IT's addendum text as written, scores unchanged, and fixes the title "LLM generic-perturbation rubric against class prior".
+
+| Item | sha256 |
+|---|---|
+| Addendum 1 text (sealed) | `370b080c8d5a54a4b9e62d9c0bcd85ae9d7a6c23669d1c60d20ec5930b5ddf2b` |
+| Scoring script v2 (sealed; reads IT's column names; on a common synthetic file its primary and three sensitivity lines are identical to the frozen v1) | `02b8f4e49da75daa138438df6211825505da37a418d61cee717c38ea99b090cb` |
+| Scoring script v1 as frozen above (kept) | `b4baa89ea7d212dfe2ceff18dda6131c0f2c7e47b8d0a3cedb7d71dfa9e0ef7c` |
