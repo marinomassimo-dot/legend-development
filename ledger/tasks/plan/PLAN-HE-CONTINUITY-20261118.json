@@ -857,6 +857,15 @@
      "accepted_at": "2026-11-22T06:50:49Z",
      "evidence": "recall text in strategic_advisor.py and the transport route rule now name the campaign recipient map; route --to Orchestrator AMBIGUOUS before and after (strict check unchanged), route --to 'IT Orchestrator' RESOLVED; test_strategic_advisor 228 OK",
      "updated_at": "2026-11-22T07:12:05Z"
+    },
+    {
+     "step": "ADV-174: outcome custodian, feasibility of a masked retrospective engine test on Negraes 2021 (PMID 33888873); inventory, KEEP/NARROW/DROP, reversible split if supported",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-22 (Codex review 05)",
+     "accepted_at": "2026-11-22T12:10:41Z",
+     "evidence": "result under brainstorm_20261116/adv174_he_20261121: verdict NARROW; PR 48 distinct levels, duplicate-pair PR concordance about 0.2; split sealed in files/ outside git; no per-compound value recorded",
+     "updated_at": "2026-11-22T12:15:48Z"
     }
    ]
   }
@@ -1517,6 +1526,13 @@
    "at": "2026-11-22T06:50:49Z",
    "source": "ADV message 2026-11-22 (Codex return 13, RP-020)",
    "step_sha256": "8a834b30a3a0",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-22T12:10:41Z",
+   "source": "ADV message 2026-11-22 (Codex review 05)",
+   "step_sha256": "2ce258e106cd",
    "reopened_block": false,
    "authorised_by": null
   }
