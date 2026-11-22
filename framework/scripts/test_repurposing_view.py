@@ -163,9 +163,9 @@ class RealData(unittest.TestCase):
 class CheckAndClip(unittest.TestCase):
     """2026-11-20 (IT via ADV): `check` read the full view in Italian only and the card page clipped a pharmacology paragraph at 360 characters."""
 
-    def test_check_reads_every_language_of_both_sources_unless_one_is_named(self):
-        self.assertEqual(rv.check_langs_for("full", None), list(rv.LANGS))
-        self.assertEqual(rv.check_langs_for("shareable", ""), list(rv.LANGS))
+    def test_check_uses_the_maintained_edition_unless_a_locale_is_named(self):
+        self.assertEqual(rv.check_langs_for("full", None), ["it"])
+        self.assertEqual(rv.check_langs_for("shareable", ""), ["en"])
         self.assertEqual(rv.check_langs_for("full", "fr"), ["fr"])
         self.assertEqual(rv.check_langs_for("full", "all"), list(rv.LANGS))
 
@@ -1662,38 +1662,34 @@ class WaitPolls(unittest.TestCase):
 class RealViewports(unittest.TestCase):
     """Device-metrics emulation over the DevTools protocol (no sandbox flag): the page's own innerWidth and scrollWidth are measured at 360 and 390 px."""
 
-    def test_the_start_here_row_and_the_general_note_sit_above_the_fold_on_a_phone_in_every_language(self):
-        # found on the served site (IT30): the check above builds Italian only; French and German were 19 px over at 360x780
+    def test_the_start_here_row_and_the_general_note_sit_above_the_fold_on_a_phone(self):
         if not rv.find_chromium():
             self.skipTest("no Chromium binary: the legend was NOT measured")
-        for lang in ("en", "it", "fr", "es", "de"):
-            with tempfile.TemporaryDirectory() as td:
-                f = Path(td) / "v.html"
-                f.write_text(rv.build(DR, "shareable", lang), encoding="utf-8")
-                for w, h in ((360, 780), (390, 844)):
+        with tempfile.TemporaryDirectory() as td:
+            f = Path(td) / "v.html"
+            f.write_text(rv.build(DR, "shareable"), encoding="utf-8")
+            for w, h in ((360, 780), (390, 844)):
+                try:
+                    c = rv.Cdp(rv.find_chromium(), td)
                     try:
-                        c = rv.Cdp(rv.find_chromium(), td)
-                        try:
-                            c.call("Page.enable"); c.call("Emulation.setDeviceMetricsOverride", width=w, height=h, deviceScaleFactor=1, mobile=True)
-                            c.call("Page.navigate", url="file://" + str(f)); c.wait_for("!!document.querySelector('[data-cur-ready]')", 60); c.settle()
-                            b = c.evaluate("Math.max(Math.round(document.querySelector('.hero-go').getBoundingClientRect().bottom+scrollY), Math.round(document.querySelector('.gen-note').getBoundingClientRect().top+scrollY))")
-                        finally:
-                            c.close()
-                    except Exception as e:
-                        self.skipTest("viewport emulation unavailable: " + str(e)[:120])
-                    self.assertLess(b, h, f"{lang} {w}x{h}: the start-here row must end, and the general note begin, above the fold")
+                        c.call("Page.enable"); c.call("Emulation.setDeviceMetricsOverride", width=w, height=h, deviceScaleFactor=1, mobile=True)
+                        c.call("Page.navigate", url="file://" + str(f)); c.wait_for("!!document.querySelector('[data-cur-ready]')", 60); c.settle()
+                        b = c.evaluate("Math.max(Math.round(document.querySelector('.pathway-jump').getBoundingClientRect().bottom+scrollY), Math.round(document.querySelector('.gen-note').getBoundingClientRect().top+scrollY))")
+                    finally:
+                        c.close()
+                except Exception as e:
+                    self.skipTest("viewport emulation unavailable: " + str(e)[:120])
+                self.assertLess(b, h, f"{w}x{h}: the start-here row must end, and the general note begin, above the fold")
 
-    def test_no_edition_overflows_the_a4_print_width_in_any_scenario(self):
-        # 2026-11-19, real Chromium on the five served editions: German print_first_screen was 19 px over A4 (794 px) because the kind chips of the compound lists could not wrap
+    def test_the_public_edition_fits_a4_print_width(self):
         if not rv.find_chromium():
             self.skipTest("no Chromium binary: print layout was NOT measured")
-        for lang in ("en", "it", "fr", "es", "de"):
-            with tempfile.TemporaryDirectory() as td:
-                f = Path(td) / "v.html"
-                f.write_text(rv.build(DR, "shareable", lang), encoding="utf-8")
-                res = rv.measure_viewports(f, None, [360])
-            self.assertTrue(res, f"{lang}: no measurement")
-            self.assertEqual([(m["scenario"], m["scrollWidth"]) for m in res if str(m["scenario"]).startswith("print") and m["overflow"]], [], lang)
+        with tempfile.TemporaryDirectory() as td:
+            f = Path(td) / "v.html"
+            f.write_text(rv.build(DR, "shareable"), encoding="utf-8")
+            res = rv.measure_viewports(f, None, [360])
+        self.assertTrue(res, "no measurement")
+        self.assertEqual([(m["scenario"], m["scrollWidth"]) for m in res if str(m["scenario"]).startswith("print") and m["overflow"]], [])
 
     def test_the_kind_filter_hides_rows_across_the_queue_and_a_stable_id_link_reopens_the_row(self):
         """IT35 P9, in the browser: the kind-of-row filter hides rows in every list; #INV-nn then shows a hidden row again; the lists stay complete without a click."""

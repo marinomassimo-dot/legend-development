@@ -6211,33 +6211,42 @@ class Cdp:
         self.evaluate("new Promise(function(r){requestAnimationFrame(function(){requestAnimationFrame(function(){r(1)})})})")
 
     def close(self):
-        """End the browser AND its helper processes (renderer, GPU, zygote) before the profile directory is removed. Terminating only the main
-        process left the helpers writing into the profile, so the caller's TemporaryDirectory cleanup raced them (OSError 39 'Directory not
-        empty', IT30). The group is signalled, awaited, and killed if it does not leave; nothing is ignored."""
+        """Close Chromium gracefully, with process-group cleanup if startup or shutdown fails."""
         import os
         import signal
+        import subprocess
         import time
+
+        closed_cleanly = False
+        if hasattr(self, "events") and self.proc.poll() is None:
+            try:
+                self.sock.settimeout(3)
+                self.call("Browser.close")
+                closed_cleanly = self.proc.wait(timeout=8) == 0
+            except (OSError, RuntimeError, subprocess.TimeoutExpired):
+                pass
         try:
             self.sock.close()
         except Exception:
             pass
-        pgid = self.proc.pid                      # start_new_session=True made the browser its own group leader
-        for sig, grace in ((signal.SIGTERM, 8.0), (signal.SIGKILL, 5.0)):
-            try:
-                os.killpg(pgid, sig)
-            except ProcessLookupError:
-                break
-            end = time.time() + grace
-            while time.time() < end:
-                self.proc.poll()                  # reap the leader; its zombie must not keep its own group alive
+        if not closed_cleanly:
+            pgid = self.proc.pid                  # start_new_session=True makes the browser its own group leader
+            for sig, grace in ((signal.SIGTERM, 8.0), (signal.SIGKILL, 5.0)):
                 try:
-                    os.killpg(pgid, 0)            # still has a live member?
+                    os.killpg(pgid, sig)
                 except ProcessLookupError:
                     break
-                time.sleep(0.05)
-            else:
-                continue
-            break
+                end = time.time() + grace
+                while time.time() < end:
+                    self.proc.poll()                # reap the leader before checking for live helpers
+                    try:
+                        os.killpg(pgid, 0)
+                    except ProcessLookupError:
+                        break
+                    time.sleep(0.05)
+                else:
+                    continue
+                break
         try:
             self.proc.wait(timeout=5)
         except Exception:
@@ -6261,7 +6270,7 @@ class Cdp:
 MEASURE_JS = r"""(function(){var iw=__REQ__,de=document.documentElement,off=[];
 function scrolls(e){for(var p=e.parentElement;p&&p!==document.body;p=p.parentElement){var o=getComputedStyle(p).overflowX;if(o==='auto'||o==='scroll'||o==='hidden')return true}return false}
 var all=document.body.getElementsByTagName('*');for(var i=0;i<all.length&&off.length<6;i++){var e=all[i],r=e.getBoundingClientRect();if(r.width&&r.right>iw+1&&getComputedStyle(e).position!=='fixed'&&!scrolls(e)&&e.offsetParent!==null)off.push(e.tagName.toLowerCase()+(e.id?'#'+e.id:'')+(e.className&&e.className.baseVal===undefined?'.'+String(e.className).split(' ')[0]:'')+' right='+Math.round(r.right))}
-return {entryBottom:(function(){var e=document.querySelector('.hero-go');return e?Math.round(e.getBoundingClientRect().bottom+window.scrollY):null})(),noteTop:(function(){var e=document.querySelector('.gen-note');return e?Math.round(e.getBoundingClientRect().top+window.scrollY):null})(),innerWidth:window.innerWidth,scrollWidth:de.scrollWidth,bodyScrollWidth:document.body.scrollWidth,clientWidth:de.clientWidth,visualViewportWidth:window.visualViewport?Math.round(window.visualViewport.width):null,ready:document.body.getAttribute('data-cur-ready'),offenders:off}})()"""
+return {entryBottom:(function(){var e=document.querySelector('.pathway-jump,.hero-go');return e?Math.round(e.getBoundingClientRect().bottom+window.scrollY):null})(),noteTop:(function(){var e=document.querySelector('.gen-note');return e?Math.round(e.getBoundingClientRect().top+window.scrollY):null})(),innerWidth:window.innerWidth,scrollWidth:de.scrollWidth,bodyScrollWidth:document.body.scrollWidth,clientWidth:de.clientWidth,visualViewportWidth:window.visualViewport?Math.round(window.visualViewport.width):null,ready:document.body.getAttribute('data-cur-ready'),offenders:off}})()"""
 
 
 def brief_chars(c: dict) -> int:
