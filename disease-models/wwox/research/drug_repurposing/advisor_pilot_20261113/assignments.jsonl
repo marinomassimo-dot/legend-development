@@ -430,3 +430,5 @@
 {"evidence": "SendMessage receipt msg_id 6b97b815-fa5a-4098-bbcd-9382747d9b1d, host clock 12:10Z", "id": "ADV-174", "state": "SENT", "to": ["HE - CURRENT e052ca19"], "utc": "2026-11-22T12:10:38Z"}
 {"assessment": "HOST", "id": "ADV-175", "key": "one-frozen-blind-engine-evaluation-on-the-cdkl5-spheroid-screen-predictor-file-orchestrator", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-22T12:19:57Z"}
 {"evidence": "SendMessage receipt msg_id a2f058bd-a5ee-4c87-89f5-49b0ccc03b5d, host clock 12:20Z", "id": "ADV-175", "state": "SENT", "to": ["IT Orchestrator - CURRENT 6a8c1a55"], "utc": "2026-11-22T12:20:12Z"}
+{"assessment": "HOST", "id": "ADV-176", "key": "wwox-native-direction-aware-functional-eval-of-the-real-generation-path-orchestrator", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-22T13:01:39Z"}
+{"evidence": "SendMessage receipt msg_id 14171dc1-b0df-4d61-968e-075a10895fba, host clock 13:03Z", "id": "ADV-176", "state": "SENT", "to": ["IT Orchestrator - CURRENT 6a8c1a55"], "utc": "2026-11-22T13:01:50Z"}
