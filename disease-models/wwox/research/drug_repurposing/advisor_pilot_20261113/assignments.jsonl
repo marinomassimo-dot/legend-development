@@ -428,3 +428,5 @@
 {"evidence": "SendMessage receipt msg_id ea77cf5b-50e0-40fb-8c95-6d61b1cf5c1f, host clock 08:09Z", "id": "ADV-173", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-22T08:09:47Z"}
 {"assessment": "HOST", "id": "ADV-174", "key": "negraes-2021-cdkl5-1112-compound-screen-masked-engine-eval-feasibility-outcome-custodian-he", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-22T12:10:22Z"}
 {"evidence": "SendMessage receipt msg_id 6b97b815-fa5a-4098-bbcd-9382747d9b1d, host clock 12:10Z", "id": "ADV-174", "state": "SENT", "to": ["HE - CURRENT e052ca19"], "utc": "2026-11-22T12:10:38Z"}
+{"assessment": "HOST", "id": "ADV-175", "key": "one-frozen-blind-engine-evaluation-on-the-cdkl5-spheroid-screen-predictor-file-orchestrator", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-22T12:19:57Z"}
+{"evidence": "SendMessage receipt msg_id a2f058bd-a5ee-4c87-89f5-49b0ccc03b5d, host clock 12:20Z", "id": "ADV-175", "state": "SENT", "to": ["IT Orchestrator - CURRENT 6a8c1a55"], "utc": "2026-11-22T12:20:12Z"}
