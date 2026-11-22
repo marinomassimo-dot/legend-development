@@ -440,3 +440,5 @@
 {"evidence": "SendMessage receipt msg_id d8839211-28ea-424d-b14f-ea78160130fb, host clock 16:44Z", "id": "ADV-179", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-22T16:42:56Z"}
 {"assessment": "HOST", "id": "ADV-180", "key": "strategic-advisor-observe-exclude-own-holds-jsonl-false-wake-harness", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-22T16:54:39Z"}
 {"evidence": "SendMessage receipt msg_id 8532a390-d0f5-4724-8270-b7f821834381, host clock 16:56Z", "id": "ADV-180", "state": "SENT", "to": ["HE - CURRENT e052ca19"], "utc": "2026-11-22T16:54:51Z"}
+{"assessment": "HOST", "id": "ADV-181", "key": "peiro-moreno-2026-lineage-expansion-versus-new-sheath-myelin-readouts-science", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-22T18:41:06Z"}
+{"evidence": "SendMessage receipt msg_id b0cc18f4-3371-4f32-92d5-3ad5ff99f40f, host clock 18:44Z", "id": "ADV-181", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-22T18:41:32Z"}
