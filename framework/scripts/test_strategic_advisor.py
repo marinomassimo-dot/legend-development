@@ -1711,6 +1711,14 @@ class ValueContinuity(Continuous):
         self.assertEqual(len([e for e in sa.observe(inside, state)["events"] if e.startswith("delivery:")]), 1)
         commit(f"{base}/ADV-003_brief.md", "ADV: evaluation P10 recorded (delivered); brief file touched")
         self.assertEqual(len([e for e in sa.observe(inside, state)["events"] if e.startswith("delivery:")]), 2)   # a commit that also touches a file outside the advisor's own still counts
+        # ADV-180 (2026-11-22): the advisor's own hold log is not a delivery either; a hold beside a recipient's result in one commit still is
+        self.assertTrue(any(x.endswith("/holds.jsonl") and x.startswith(":(exclude)") for x in specs))
+        commit(f"{base}/holds.jsonl", "ADV: EVALUATE closed by a recorded hold; delivered nothing")
+        self.assertEqual(len([e for e in sa.observe(inside, state)["events"] if e.startswith("delivery:")]), 2)   # a hold-only commit adds no delivery
+        (self.repo / f"{base}/holds.jsonl").write_text("second hold", encoding="utf-8"); (self.repo / f"{base}/ADV-004_result.md").write_text("SCI result", encoding="utf-8")
+        for cmd in (["git", "add", "."], ["git", "commit", "-q", "-m", "ADV: hold recorded; SCI result delivered"]):
+            subprocess.run(cmd, cwd=self.repo, check=True, capture_output=True, env=env)
+        self.assertEqual(len([e for e in sa.observe(inside, state)["events"] if e.startswith("delivery:")]), 3)   # the mixed commit stays actionable
 
     def test_the_assignment_render_names_each_mandate_once_and_loses_no_field(self) -> None:
         """HE95: the compact render keeps every assignment's recipient, key, origin, evidence level and mandates, and each mandate's verdict and path once."""
