@@ -18,17 +18,17 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 13360,
+    "values": 12682,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 6972,
+    "values": 6304,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 575,
+    "values": 523,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -38,12 +38,12 @@
    },
    "^\\.cur\\.cands\\[\\]\\.brief\\.sources\\[\\]\\.(kind|id)$": {
     "class": "BIBLIO",
-    "values": 248,
+    "values": 224,
     "why": "PMID / ChEMBL identifier of an essential source of the one-page synthesis"
    },
    "^\\.cur\\.cands\\[\\]\\.brief\\.sources\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 372,
+    "values": 336,
     "why": "title, journal, year of an essential source (bibliographic facts)"
    },
    "^\\.cur\\.cands\\[\\]\\.chembl\\[\\]$": {
@@ -53,17 +53,17 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 855,
+    "values": 777,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
     "class": "BIBLIO",
-    "values": 96,
+    "values": 79,
     "why": "PMID cited by the hand-authored evidence graph"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.edges\\[\\]\\.src\\.title$": {
     "class": "BIBLIO",
-    "values": 69,
+    "values": 57,
     "why": "title of a cited work (bibliographic fact, from the title cache)"
    },
    "^\\.cur\\.footer\\.": {
@@ -83,12 +83,12 @@
    },
    "^\\.cur\\.ranking\\.units\\[\\]\\.(access|access_cats\\[\\])$": {
     "class": "SRC_A",
-    "values": 79,
+    "values": 76,
     "why": "access statement of a ranked intervention: class-A sources (openFDA NDC, MATRIX) only in the shareable edition; other categories are withheld"
    },
    "^\\.cur\\.ranking\\.units\\[\\]\\.(pmids\\[\\]|views\\.(broad|partial)\\.evidence\\.pmids\\[\\])$": {
     "class": "BIBLIO",
-    "values": 265,
+    "values": 247,
     "why": "PMID of a cited work (ranking)"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -203,11 +203,11 @@
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
-   "PMID": 155
+   "PMID": 143
   },
   "links": {
-   "distinct_hrefs": 223,
-   "external_public": 104,
+   "distinct_hrefs": 235,
+   "external_public": 95,
    "hosts": [
     "civicdb.org",
     "open.fda.gov",
@@ -220,12 +220,12 @@
     "www.wikidata.org",
     "www.wwox.org"
    ],
-   "internal_anchors": 114
+   "internal_anchors": 138
   },
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3710,
+    "forbidden-name": 3519,
     "forbidden-wording": 24
    },
    "co_attested_wording": [
@@ -250,7 +250,7 @@
    "forbidden_names": 126040,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 164,
+    "count": 158,
     "names": [
      "act 709478",
      "apinocaltamide",
@@ -265,10 +265,9 @@
      "px 478",
      "sulfopin"
     ],
-    "unchecked_without_corpus": 164
+    "unchecked_without_corpus": 158
    },
    "suppressed_by_exemption": {
-    "bibliographic journal name (validated against the journals of the cache)": 4,
     "category labels of catalogue-wide counts": 1,
     "inside a bibliographic title (line-broken text layer)": 5
    }
@@ -330,39 +329,39 @@
    "actions": 9,
    "asserts": 2,
    "brief": 3,
-   "card_path": 39,
+   "card_path": 35,
    "country": 5,
    "for": 2,
    "identity": 7,
    "links": 10,
    "mechanism": 2,
    "next_full": 2,
-   "not_known": 3,
+   "not_known": 4,
    "novelty": 2,
    "pharm": 19,
    "pharm_cut": 19,
    "reopen": 1
   },
-  "cards": 39,
+  "cards": 35,
   "curated_sections": {
    "cands": "differs",
    "contexts": "identical",
-   "evidence_graph": "identical",
+   "evidence_graph": "differs",
    "footer": "differs",
    "gaps": "identical",
    "goals": "identical",
    "group_note": "identical",
    "groups": "identical",
-   "hypotheses": "identical",
+   "hypotheses": "differs",
    "meta": "differs",
    "needs": "differs",
    "predictive": "identical",
    "ranking": "differs",
    "scopes": "identical",
    "selection": "identical",
-   "threads": "identical",
+   "threads": "differs",
    "tracks": "identical",
-   "work_order": "identical"
+   "work_order": "differs"
   },
   "excluded_rows_with_names_full": 3,
   "excluded_rows_with_names_shareable": 0,
@@ -470,12 +469,12 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 2702,
+  "BIBLIO": 2465,
   "COUNT": 12405,
   "ID": 4861,
-  "OWN": 90242,
+  "OWN": 88896,
   "ROWNAME": 2408,
-  "SRC_A": 189,
+  "SRC_A": 186,
   "SRC_META": 261,
   "UI": 1527
  },
@@ -518,8 +517,8 @@
  ],
  "files": {
   "COMPARISON.md": {
-   "bytes": 7457,
-   "sha256": "137e4507604ebb764842ad1362af889643648d33776d65ba967d81ac159c438d"
+   "bytes": 7408,
+   "sha256": "82e02c76079721af686392feb5ebd6ac7603edab09f523b84866192a16ce8479"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -539,15 +538,15 @@
   },
   "NOTICE.md": {
    "bytes": 13731,
-   "sha256": "be6b56b85db201ca8fafef28c196a5f7533554f819dadf68dc7e7876557c9095"
+   "sha256": "26d8274dfaf245904ac384b96e3a101af8a420ad6a86e8571ea50e6a5436b4a2"
   },
   "README.md": {
-   "bytes": 5072,
-   "sha256": "540c0973fff90817e4892112498296e6134e21e2133b474bda8c097ccd9d52ba"
+   "bytes": 4730,
+   "sha256": "2f4e3dad27fe2fbf61f1e5b1bdc29c673a18f3e8a5343453f7974930c255d6cd"
   },
   "TEXT_PROVENANCE.json": {
-   "bytes": 2161,
-   "sha256": "c591bce9fc75a3f0f23b6e4f1972ffb74bb1c0f53269a70482ea23b7de3662b1"
+   "bytes": 664,
+   "sha256": "5b45f95646c6e6cb5a3d2bf3aa7efda956fca43e72b06401bb227662202014b5"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -561,25 +560,17 @@
    "bytes": 14377,
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
-  "de.html": {
-   "bytes": 5324481,
-   "sha256": "3dcb1d58405ca2eaeb7d4be7d9360ad30e9503404bc0713743d0e79993da4a15"
-  },
-  "es.html": {
-   "bytes": 5309418,
-   "sha256": "2dce883b39a25690b3cc1e54713c53fddf41aac0e5d36054104a3ff35b3cf771"
-  },
-  "fr.html": {
-   "bytes": 5346916,
-   "sha256": "8d453959c66b6c912284e2d953dd725cd07e8bc6c56b25ed2a2eb9cd3c00207c"
-  },
   "index.html": {
-   "bytes": 5211998,
-   "sha256": "950bab0332a52ed91a68469cc427335c7af4a15ab0efebb2571a84cd8bae966f"
+   "bytes": 5016538,
+   "sha256": "c278530ace631aabd0fab5c9800327ca381c3b691aec4851ad9fbea3fc8e6fd6"
   },
-  "it.html": {
-   "bytes": 5278996,
-   "sha256": "86194be909d6f0bfd8e0e25c6dbb3cc4639743db5cb838641a3ceccde9d46c06"
+  "reports/ethosuximide.pdf": {
+   "bytes": 119059,
+   "sha256": "accab9302a2aa67136894c3712c297068bbb139f42fa35a9d2cfaa866242f75e"
+  },
+  "reports/ketamine.pdf": {
+   "bytes": 112386,
+   "sha256": "cb8bd0d8e2f9ffccb99d6d074f524175515d7d4310130d8973ebcd4d646f311e"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -635,13 +626,9 @@
  },
  "perimeter": "distributable edition; publication on any external surface needs the operator's decision; the page carries a noindex,nofollow robots meta tag",
  "prose_policy": {
-  "card_sentence_redactions": 12,
+  "card_sentence_redactions": 14,
   "languages": [
-   "en",
-   "it",
-   "fr",
-   "es",
-   "de"
+   "en"
   ],
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",

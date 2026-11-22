@@ -6,7 +6,7 @@ Research material at disease and reference-genotype level: what to study for WWO
 
 ## Open it
 
-Open `index.html` (English, the initial language) by double-click or from `file://`; the language selector at the top switches to `it.html`, `fr.html`, `es.html` or `de.html`, which must stay in the same folder. Each page is one self-contained file (inline CSS and JavaScript, data embedded as JSON); it needs no server, loads nothing from the network and opens identically from any folder or from the unzipped archive. Links inside it go to the same page (`#...` anchors) or to public identifiers (PubMed, DOI, ChEMBL, source licence pages); none is a repository-relative path.
+Open `index.html` for the English dashboard. Pathway shortcuts lead to maps and evidence within the page. Downloadable research briefs sit in `reports/` beside the page. The page works offline and links to public references.
 
 Card export (print / PDF, standalone HTML download) and the comparison view work offline: use the buttons on a card profile, or the URL fragments `#export=<card id>`, `#brief=<card id>` (one A4 page per card) and `#compare=<id>,<id>`; the sections on selection, hypotheses and predictive test print on their own through `#section=selection`, `#section=hypotheses` and `#section=predictive`.
 
@@ -18,7 +18,7 @@ Build a zip with the documented command (deterministic: fixed timestamps, sorted
 python3 -B framework/scripts/repurposing_view.py package --zip /path/to/wwox_repurposing_shareable_package.zip
 ```
 
-The zip holds exactly the folder: `index.html`, `NOTICE.md` (sources, terms, credit lines), `COMPARISON.md` (what the full version holds and this one withholds), `manifest.json` (machine-readable inventory with digests), `LICENSES/` and `class_b/chembl_cc-by-sa-3.0/`. Hand over the whole zip, not `index.html` alone: the NOTICE and the credit lines must travel with the page, and the ChEMBL file must travel with its own licence text.
+The zip holds exactly the folder: `index.html`, `NOTICE.md` (sources, terms, credit lines), `COMPARISON.md` (what the full version holds and this one withholds), `manifest.json` (machine-readable inventory with digests), `reports/`, `LICENSES/` and `class_b/chembl_cc-by-sa-3.0/`. Hand over the whole zip, not `index.html` alone: the NOTICE and the credit lines must travel with the page, and the ChEMBL file must travel with its own licence text.
 
 ## Regenerate and verify
 

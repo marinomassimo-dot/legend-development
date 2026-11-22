@@ -1,0 +1,21 @@
+{
+  "investigation": "INV-05",
+  "title": "Ketamine in WWOX-related epilepsy",
+  "date": "22 November 2026",
+  "summary": "Ketamine remains a research hypothesis for WWOX-related epilepsy. The reviewed sources do not establish benefit in WWOX-DEE, either for an acute episode or for ongoing seizure control.",
+  "evidence": [
+    "In cortical slices from a mouse with neuron-specific Wwox loss, the experimental NMDA receptor antagonist d-APV stopped spontaneous bursts. The study did not measure ketamine's effect on those bursts. Ketamine and d-APV act differently at the receptor.",
+    "Published paediatric studies of ketamine in status epilepticus concern other or mixed causes. They inform a separate emergency-care question and cannot establish benefit in WWOX-DEE."
+  ],
+  "limits": [
+    "The review found no controlled test of ketamine's effect in a WWOX-deficient system. The findings do not establish a role for ongoing use, developmental benefit or safety in infants with WWOX-DEE.",
+    "Receptor action and the state of the neural circuit can alter the result. Acute burst suppression in a slice would not establish a durable effect or a clinical benefit."
+  ],
+  "research_question": [
+    "Can a pore blocker reproduce the d-APV result in the same WWOX model when receptor inhibition is comparable? A time-matched control and activity after washout would help distinguish a receptor effect from transient suppression. This is a preclinical comparison."
+  ],
+  "sources": [
+    {"label": "Breton et al. Wwox-deficient cortical physiology. PMID 34634460.", "url": "https://pubmed.ncbi.nlm.nih.gov/34634460/"},
+    {"label": "LEGEND ketamine review and evidence limits (November 2026).", "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ketamine_deep_adv_20261117/KDS_SYNTHESIS_FOR_OPERATOR_ADV_20261117.md"}
+  ]
+}

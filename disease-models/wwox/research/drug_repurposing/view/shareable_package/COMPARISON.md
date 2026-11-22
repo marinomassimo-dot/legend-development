@@ -4,10 +4,10 @@ The full version (`view/index.html` in the repository, local use) and this packa
 
 ## Same in both
 
-- 39 candidate cards with their six answers, evidence by scope, counter-evidence, next step, public identifiers and F/C/P positions: card text and positions are identical (the only card fields that differ are listed under 'Different').
+- 35 candidate cards with their six answers, evidence by scope, counter-evidence, next step, public identifiers and F/C/P positions: card text and positions are identical (the only card fields that differ are listed under 'Different').
 - 24 needs and their observations, the threads, groups, goals, funnel, access chart (catalogue-wide counts), matrix summary, dispositions, observations, lead dispositions and the Italian orientation texts.
 - Sections of the data object that are byte-identical: access, dispositions, exploration_flagged, has_distinct, matrix_summary, no_probability, observations, orphan_priorities, pair_unit, ranking_note, schema, strings.
-- Curated sections identical: contexts, evidence_graph, gaps, goals, group_note, groups, hypotheses, predictive, scopes, selection, threads, tracks, work_order.
+- Curated sections identical: contexts, gaps, goals, group_note, groups, predictive, scopes, selection, tracks.
 
 ## Different (withheld here, present in the full version)
 
@@ -21,13 +21,13 @@ The full version (`view/index.html` in the repository, local use) and this packa
 | Card actions on targets listed | 45 | 0 |
 | Pair objects carrying a status class | 1034 | 0 |
 | Excluded rows listed with compound name and gene | 3 | 0 |
-| Card fields that differ (count of cards) | n/a | {"access": 10, "access_text": 7, "actions": 9, "asserts": 2, "brief": 3, "card_path": 39, "country": 5, "for": 2, "identity": 7, "links": 10, "mechanism": 2, "next_full": 2, "not_known": 3, "novelty": 2, "pharm": 19, "pharm_cut": 19, "reopen": 1} |
+| Card fields that differ (count of cards) | n/a | {"access": 10, "access_text": 7, "actions": 9, "asserts": 2, "brief": 3, "card_path": 35, "country": 5, "for": 2, "identity": 7, "links": 10, "mechanism": 2, "next_full": 2, "not_known": 4, "novelty": 2, "pharm": 19, "pharm_cut": 19, "reopen": 1} |
 | Deepened cases (question, level, system, WWOX evidence, counter-evidence, next experiment) | all fields, with compound names | the same own-text fields with a class label instead of compound names; precedent, pharmacology, its limits and source paths withheld (ChEMBL-graded values are CC BY-SA 3.0, third-party text is not copied) |
 | Matching direction (IT19 P6, EXPERIMENTAL): need direction, compound action, target level, compatible / opposed / indeterminable, abstention reason, reference label and independence, missing datum, next check | every field, with compound names, ChEMBL actions, ChEMBL record ids, reference locators and the free-text missing-datum notes | the same pairs as class labels, codes and counts (target level with component counts, abstention class, reference state and kind, independence class, next-check code); compound names, ChEMBL action wording, record ids, locators and notes withheld; the intervention-to-needs search is in the full version only |
 
 ## Prose redactions (shareable only)
 
-12 card sentences and 11 lead fields that stated a compound-target pair, a catalogue-only compound or a per-compound status from a class-B/C source are rewritten at the level of the need or class and name the withheld source class (`dato di una fonte non inclusa in questa versione`); 0 repository file names are described instead of printed. The conclusion of each lead and card is kept. The rule is in `view/shareable_sources.json` (`prose_policy`) and the audit enforces it.
+14 card sentences and 11 lead fields that stated a compound-target pair, a catalogue-only compound or a per-compound status from a class-B/C source are rewritten at the level of the need or class and name the withheld source class (`dato di una fonte non inclusa in questa versione`); 0 repository file names are described instead of printed. The conclusion of each lead and card is kept. The rule is in `view/shareable_sources.json` (`prose_policy`) and the audit enforces it.
 
 ## Why: counts of catalogue target rows by class
 

@@ -275,6 +275,14 @@
     },
     "card_substrings": [
       {
+        "find": "none is held for ulixacaltamide, apinocaltamide or TTA-A2",
+        "replace": "none is held for the selective blockers considered"
+      },
+      {
+        "find": "juvenile tiratricol dosing",
+        "replace": "juvenile dosing of a thyroid hormone analogue"
+      },
+      {
         "find": "PDK2 inhibition by AZD7545 or VER-246608: decrease",
         "replace": "PDK2 inhibition by research PDK inhibitors: decrease"
       },

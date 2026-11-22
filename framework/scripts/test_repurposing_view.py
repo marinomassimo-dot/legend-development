@@ -1055,6 +1055,17 @@ class ShareableAudit(unittest.TestCase):
         for need in ("index.html", "NOTICE.md", "COMPARISON.md", "README.md", "manifest.json", "LICENSES/CC-BY-SA-3.0.txt", "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl",
                      "class_b/chembl_cc-by-sa-3.0/LICENSE_CC-BY-SA-3.0.txt", "class_b/chembl_cc-by-sa-3.0/CREDIT.txt"):
             self.assertIn(need, files)
+        self.assertEqual({name for name in files if name.endswith(".html")}, {"index.html"})
+        page = files["index.html"].decode()
+        for slug, inv_id in (("ethosuximide", "INV-04"), ("ketamine", "INV-05")):
+            report = f"reports/{slug}.pdf"
+            self.assertTrue(files[report].startswith(b"%PDF-"))
+            self.assertRegex(page, rf'id="{inv_id}"[^>]*>(?:(?!</li>).)*href="{report}"')
+        public = embedded(page)["cur"]
+        self.assertFalse(any(unit["unit_type"] == "gene_therapy" for unit in public["ranking"]["units"]))
+        public_cards = {card["id"] for card in public["cands"]}
+        self.assertTrue({cid for need in public["needs"] for cid in need["cards"]} <= public_cards)
+        self.assertIn('id="gene-therapy"', page)
         self.assertEqual(man["audit"]["violations"], 0)
         self.assertEqual(set(man["files"]), set(files) - {"manifest.json"})
         for rel, spec in man["files"].items():
@@ -1104,10 +1115,10 @@ class ShareableAudit(unittest.TestCase):
         self.assertEqual(man_b, ["chembl"])
 
     def test_package_links_work_outside_the_repository(self):
-        page = rv.build(DR, "shareable", "it")
+        page = rv.build(DR, "shareable")
         body = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", page, flags=re.S)
         for h in re.findall(r'href="([^"]*)"', body):
-            self.assertTrue(h.startswith(("#", "https://", "http://")) or h.split("#")[0] in rv.LANG_FILE.values(), h)
+            self.assertTrue(h.startswith(("#", "https://", "http://")) or re.fullmatch(r"reports/[a-z0-9-]+\.pdf", h), h)
         P = embedded(page)
         for c in P["cur"]["cands"]:
             self.assertFalse(c["card_path"].startswith(("../", "cards/")), c["card_path"])
@@ -2117,8 +2128,13 @@ class It6P13Data(unittest.TestCase):
 
     def test_shareable_build_carries_graph_brief_and_work_order(self):
         sh = rv.build_payload(DR, "shareable")["cur"]
-        self.assertEqual(sh["evidence_graph"]["chains"], self.cur["evidence_graph"]["chains"])
-        self.assertEqual(sh["work_order"]["entries"], self.cur["work_order"]["entries"])
+        self.assertEqual(sh["evidence_graph"]["chains"], [
+            chain for chain in self.cur["evidence_graph"]["chains"] if chain["id"] != "rescue-window"
+        ])
+        removed_cards = {card["id"] for card in self.cur["cands"]} - {card["id"] for card in sh["cands"]}
+        self.assertEqual(sh["work_order"]["entries"], [
+            row for row in self.cur["work_order"]["entries"] if not removed_cards.intersection(row["cards"])
+        ])
         for path in ("view/evidence_graph.json", "view/work_order.json", "isr_kinase", ".md"):     # no repository path or file name in the shareable page
             self.assertNotIn(path, self.static_html(rv.build(DR, "shareable", "it")), path)
 

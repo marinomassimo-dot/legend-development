@@ -167,10 +167,6 @@
   "src": "en",
   "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate. [IT40] A4 Report access resistance, bridge balance and capacitance by genotype; add a Ba2+- or Kv7-blocker-sensitive difference current with its zero-crossing against E_K (about -97 to -98 mV from the declared solutions; the recorded potentials need a junction correction of about -13 mV that 34634460 did not measure, which puts the estimated sag peaks about 16-21 mV below E_K, so the prediction applies to the voltage-clamp difference current, not to the sag peak). [SCI43] Order of arms: (0) capacitance measured directly by genotype and the cell-selection rule stated (pyramidal identity was confirmed from Rin and tau); (1) the same cells with and without synaptic blockers, in bursting and non-bursting slices; (2) Ba2+-sensitive current per pF and Rin share (a low micromolar concentration; a higher concentration and a K2P-blocker group as 2b); (3) XE-991-sensitive current at about −55 to −45 mV, not at rest, with a second Kv7 blocker; (4) current sensitive to an Ih blocker, repeated with a second Ih blocker; (5) dynamic-clamp leak of about 2.7 nS as sufficiency only, with a control leak at the WT rest; (6) an opener only after step 3. An implied reversal near E_K does not separate a K+ loss from a smaller cell with a shunt. [SCI44] Add a KATP arm to step 2b: perforated or cell-attached recording with ATP undisturbed, diazoxide and a sulfonylurea in KO and wild type, lactate or pyruvate add-back; state pipette ATP and glucose. Juvenile barrel-cortex neurons show KATP modulation of Vm, Rin and firing and lactate-driven KATP closure (34766906); this is a conditional metabolic upstream of the K branch (PH4), not a repair. [SCI44-C] The KATP arm of step 2b carries a size expectation: in juvenile barrel cortex the KATP share of resting conductance is about 11-17 percent (INFERENZA, upper bound, ATP-free whole-cell, glutamatergic regular-spiking cells, species and temperature unstated), so a KATP deficit alone would not account for 28 percent; state pipette ATP, record per-cell temperature and cell identity. The Wwox whole-cell internal solution contains 2 mM Na2ATP, so a lactate-closed KATP conductance is weakened for the published values and kept for ATP-undisturbed recordings. [IT45 from SCI45] Add a pHo arm: pHo step (7.4 to 7.1, with 7.7) per cell, whole-cell (pHi clamped by 10 mM HEPES) and sibling perforated-patch cells; pH-sensitive current per pF by genotype; both K2P family-level tools at both pHo. Stop criterion: a genotype difference in interstitial pHo below 0.1 unit stops the pH route; a larger one makes it a partial contributor only (TREK-1 Imin 0.25). Source: un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto). IPOTESI. [IT45 from SCI45-N1] Add burst incidence and the NMDAR-dependent component to the pHo-step arm; a lower pHo in the knock-out may be a protective state against bursts (IPOTESI). Vehicle and d-APV are run at each pH: GluN2B-containing receptors are themselves proton-inhibited (pH IC50 7.3-7.6 in recombinant diheteromers, a further 21-36 percent loss for 7.4 to 7.2; oocytes, magnesium-free), so an apparent drug-by-pH interaction is read against that baseline. Source: nmda_asic_ph_sci45_20261111 (un registro del repository (non incluso in questo pacchetto), un registro del repository (non incluso in questo pacchetto)). [IT46 audit] The IT45 comparison of an opener in the bath with an equal injected current does not hold on burst incidence (a slice-level event that one injected cell cannot change; a direct current also leaves input resistance unchanged while an opener lowers it). Corrected: R5a, the opener lowers the burst rate within each slice against a vehicle time control and the effect is reversed or occluded by a Kv7 blocker (or reproduced by a second opener of another chemotype); R5b, a non-Kv7 hyperpolarising manipulation of the slice is compared at matched shift of the recorded cells' membrane potential and matched input-resistance change, at three or more levels; single-cell comparisons use dynamic clamp on cell-level endpoints only; the animal is the statistical unit. A Kv7-blocker-sensitive current that is not smaller in the knockout does not refute an opener lever (it tests a deficit, not the lever). Useful in general and specific to the Wwox lesion are separate tests: the second needs a genotype-by-drug interaction against a non-Wwox hyperexcitable preparation matched on baseline burst rate. Source: un registro del repository (non incluso in questo pacchetto); un registro del repository (non incluso in questo pacchetto). [IT48 update] The eight SCI43 rows that stood producer-read only were read again against the original full texts by a distinct verifier: 5 supported, 3 partly, none unsupported, 13 files kept with SHA-256 (sci43_reopen_it48_20261112/verify). The 23 percent figure survives as printed arithmetic but is the increment of one 60 uM Ba2+ dose in P28-P42 mouse auditory cortex (the preprint itself calls that age juvenile), not a measured Kir2 share; the cohorts of the Ba2+ and Ih panels are different cells. No row measures a Ba2+-sensitive resting conductance in layer II/III at about P13-P17; the juvenile evidence is Kv7 only (about 20 percent at a rest of -67 mV with synaptic blockers at room temperature, one study; the developmental Kv7 difference is not significant). The size of a resting lever in the juvenile slice therefore stays a transfer from an older age, not a measurement; the Kir2 drug-name search has not been run. No rank, sign or qualification changed. [SCI49 update] A Kir2-directed step is testable at family level with a blocker probe once KATP is blocked pharmacologically, the range is kept subthreshold (hERG block within about 2.7-fold of Kir2.1 on one platform), a positive control is recorded the same day, and pipette versus bath delivery is used if the site of action permits; it cannot separate Kir2 isoforms or exclude K2P, and a bath effect cannot separate neuron from glia. IPOTESI; direction of benefit not assumed."
  },
- "12a627fd20ce": {
-  "src": "it",
-  "text": "Capire se l'aggiunta del gene giova solo se data nei primi giorni di vita (prevenzione) o anche dopo la comparsa del fenotipo, e se la dose intermedia distingue soglia da gradiente."
- },
  "12cbf00d7429": {
   "src": "en",
   "text": "Branch A, compensatory Ih: blocking it worsens or leaves bursts; weakened if bursts fall. Branch B, pro-excitatory Ih through the depolarised resting potential: blocking it lowers bursts at matched membrane potential; weakened if bursts do not fall. Branch C, bystander: no effect on bursts although sag falls; weakened by any burst change. The sag itself must first be shown to be Ih (sensitive to the blocker), and a blocker that shifts the resting potential acts on the premises of A and B at once. Branch D, added from an unguided expansion (IT35): the higher input resistance of the knockout and the heterozygote is the opposite of what a larger Ih alone would give (in a rat cortical dysplasia model reduced Ih came with a higher input resistance, reversed by an Ih blocker, PMID 21795624; there the resting potential is hyperpolarised, so it is not a mirror image), so a second or alternative change, such as loss of a resting potassium conductance (Kir, K2P or Kv7 channels), is a rival explanation; weakened if blocker-sensitive potassium currents do not differ. [IT40] A3 Whether the excess sag and rebound persist at matched potential and matched deflection, whether capacitance differs, and whether the recordings were under synaptic blockade; only then whether a blocker-sensitive current differs. A blocker response shows that the current contributes, not that it is defective in Wwox cells. [SCI43] Measured shares in wild-type neurons of other preparations: a Ba2+-sensitive resting conductance about 23 percent (adult mouse L2/3 auditory cortex, one preprint, verifier could not open it), a KCNQ2-dependent share about 20 percent when the cell rests near −67 mV (P15–P20), Ih about 6 percent (same preprint), Kv7 expected small at the Wwox rest (activation near −70 mV; XE-991 weak at hyperpolarised potentials). The Wwox pair implies a net loss of about 28 percent of the resting conductance (2.7 nS). A blocker effect shows contribution, not alteration. [IT44] Which family carries a lost resting conductance decides whether any opener is relevant: the TREK and TRAAK channels are blocked only at millimolar Ba2+ (a source reports no effect at 0.8 mM), so a current lost at 200 micromolar Ba2+ or less points to Kir-type channels (or TWIK-1), whereas the openers found in the catalogue act on the Ba2+-weak K2P subfamily; the only Kir2 opener reached is Kir2.1-only with no neuronal data; TASK-1, TASK-3 and THIK-1 were not reached. [IT45 from SCI45] A pH-closed TREK-1 pool is weakly Ba2+-sensitive (IC50 0.56 mM), so it would not appear in the 60 uM Ba2+ difference current; the TASK-3 element is refuted as quantitatively sufficient (pH50 6.3-6.5); 'lactate lowers tissue pH' is demoted. No K2P tool has been tested at two pH. A pH effect only in perforated patch points to the KATP route (PH4). Source: un registro del repository (non incluso in questo pacchetto) rows 1,5,6,11. [IT45 from SCI45-N1] The K2P route (partial at best) and the NMDAR proton route have opposite signs on excitability; the net sign across K2P, NMDAR and ASIC is not defined (different axes). ASIC1a does not open for 7.4 to 7.2. [IT47 SCI47] Unit-of-analysis note for the Wwox slice paper: the change in inhibitory-current frequency is shown only by a distribution test on pooled events (no per-cell or per-animal test); the pipette of the excitatory-current recordings holds about 12 mM chloride (E_Cl about -63 mV), so their isolation at -70 mV is not chloride-free; burst frequency differs between the Results (median interval 26.2 s) and the supplementary table (0.84 per minute); animal counts do not sum (4+4 against 7). Source: un registro del repository (non incluso in questo pacchetto)."
@@ -182,10 +178,6 @@
  "13d166a37d18": {
   "src": "en",
   "text": "Existing organoid systems; wet-lab measurement, not executable from this module."
- },
- "13e2f5065662": {
-  "src": "en",
-  "text": "Whether a missense or compound context with partial residual function would respond more, less or differently."
  },
  "1432bb0534ad": {
   "src": "it",
@@ -203,10 +195,6 @@
   "src": "en",
   "text": "Other rows of the package, not classified by it as rivals, complementary or compatible: KP2: A TASK-3 closure by acid explains the pair (the coda's DREAM chain) || KP3: A lactate-driven intracellular acidification acts on these channels in the recorded cell || KP4: A tool-by-pH interaction is the discriminating action: an occlusion test of the closed share || KP5: Metabolic change without relevant acidification acts through a K+ conductance not set by pH (KATP, or a direct lactate action on TREK1)"
  },
- "166039e85da5": {
-  "src": "en",
-  "text": "One added arm of the published design with injection after the first recorded spike-wave discharge, same endpoints, untreated same-genotype comparator kept. Worded per endpoint class: measure the restoration actually achieved at the age of treatment and its regional distribution, because the one comparable later-age failure in a short-lived null was left uninterpretable by that missing measurement; carry a within-animal pre-treatment recording, a treated wild-type or heterozygote arm, growth and glycaemia as primary endpoints (growth failed even with pre-onset treatment in the closest analogue), and follow-up long enough to see decay. Quantified myelin sheath structure (g-ratio or electron microscopy, not marker intensity) is the discriminating endpoint for a neuron-driven lesion: white-matter abnormality has been reversed after a documented onset only in glial or metabolic lesions, and sheath structure after onset has been reported only in a metabolic oligodendrocyte-enzyme lesion (G-ratio by electron microscopy, one source) and not in any neuron-driven lesion. Spike-wave rate is the confirmatory endpoint and its external precedent (not WWOX evidence) is split, so pair it with a rhythm or power-spectrum measure; interneuron number as well as excitability, because no source measured number."
- },
  "1741f471b431": {
   "src": "en",
   "text": "If bursts do not increase, permissive necessity is favoured over raised gain."
@@ -222,10 +210,6 @@
  "17ac70f56535": {
   "src": "it",
   "text": "Più alto in organoide e in mosca con amiloide, nessun segno opposto; nel topo nessun segno risolto. Il verdetto prudente del documento P4 è «non risolto tra specie»."
- },
- "18f5ff936c8e": {
-  "src": "it",
-  "text": "Capire se la differenza di glucosio a P10 è reale e se una dose del vettore la corregge."
  },
  "1903592fd41e": {
   "src": "en",
@@ -290,10 +274,6 @@
  "20b6ea0788d3": {
   "src": "en",
   "text": "The compound's GluN2B rows are measured activities, not a curated mechanism, and other targets are also measured; selectivity is not assessed."
- },
- "21f40746c911": {
-  "src": "it",
-  "text": "Stesso laboratorio e stesso topo dell'aggiunta del gene; disponibilità non nota."
  },
  "2266079d3554": {
   "src": "en",
@@ -479,10 +459,6 @@
   "src": "en",
   "text": "The passive and leak reading (MH1), a T-type contribution to rebound, off-target sodium-current block of the tool, another HCN isoform or compartment."
  },
- "3477a60374eb": {
-  "src": "en",
-  "text": "position unchanged from IT20 (rank 1): No IT21 input changes the position. The row text was corrected in IT21 P1 (glycaemia is not called prevented)."
- },
  "354174b33207": {
   "src": "en",
   "text": "A concentration window with H3K9me3 up, HIF1alpha unchanged and glycolytic genes down, reproduced by KDM4 knockdown (only if the role of HIF is first shown protective)."
@@ -595,10 +571,6 @@
   "src": "en",
   "text": "What did not change: the number of generated proposals from the old inputs (980, only selection changed), the absence of any qualified hypothesis, and the earlier retrospective result (WWOX seed identity not separable from matched random sets on the measured properties only)."
  },
- "3eebc821a49d": {
-  "src": "en",
-  "text": "E4 - card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)"
- },
  "3f4bbbd62ce7": {
   "src": "it",
   "text": "Via della firma trascrizionale contro riferimento senza segno"
@@ -618,10 +590,6 @@
  "4033a467f20a": {
   "src": "en",
   "text": "Raising NRF2 activity: a covalent KEAP1 modifier and a non-covalent KEAP1 binder, told apart by a knockdown of NRF2, not by binding potency"
- },
- "40da6e5a79b9": {
-  "src": "en",
-  "text": "Every partial-benefit lever in this module is ordered as a bridge to, or a substitute for, restoration; whether restoration works after onset decides which of those two framings is the real one, so one result re-reads the whole list."
  },
  "40fe52ea0d7a": {
   "src": "en",
@@ -802,10 +770,6 @@
  "5503cedd4034": {
   "src": "en",
   "text": "The glutamate-release modulator active on K2P channels also blocks sodium channels and glutamate release at lower concentrations and needs about 100 micromolar for the K2P effect; its activation of one family member is transient; some potencies rest on a review, not a primary paper; selectivity of the research activator against other channels is not fully reached. [IT 2026-11-15] The one primary EC50 reached for that modulator (139.4 micromolar) is a native whole-cell current in mouse sympathetic neurons, carried by TREK-1 and/or TREK-2 (TRAAK not excluded; the single-channel patches point mainly to TREK-2, 12 of 16 TREK-like patches), not a cloned-channel value, and the link from the review row to that paper is an inference; the K2P tool values read are on cloned channels at one pH; one cell-level report (abstract only), in cancer cells adapted to various pH, describes a voltage effect of the modulator that is most likely through pH-sensitive K+ channels such as TREK-1, which is not a channel-resolved pH series."
- },
- "5561cde28ac2": {
-  "src": "en",
-  "text": "AAV9 gene addition of human WWOX (gene therapy; see the gene-addition cards)"
  },
  "556c9a6f6d08": {
   "src": "en",
@@ -1487,10 +1451,6 @@
   "src": "en",
   "text": "How many WWOX-DEE children have received vigabatrin and how many of them had follow-up MRI (the denominator behind the two reported cases)."
  },
- "9771a0390514": {
-  "src": "en",
-  "text": "WWOX-system, read beyond the abstract: the high-dose arm reaches a survival plateau to day 300 and lowers spike-wave discharges to a wild-type-indistinguishable level; weight is ordered against wild type and the untreated knockout (equal to the high dose at P30 only), and glycaemia is NOT shown to be prevented: at P10 the treated arms are not significantly different from the untreated knockout (high dose about 113, low dose about 105, untreated knockout about 95; Figure 3E, card C04 DR-AAV-GLU10-HD and DR-AAV-GLU10-LD), at P20 the untreated-knockout comparator is absent because those animals are dead (Figure 3F, DR-AAV-GLU20-LD and DR-AAV-GLU20-HD, direction UNKNOWN) and the P20 result is dose-graded against wild type only, and by P30 the dose separation has closed (Figure 3G); the paper's own text states that both doses partially corrected hypoglycaemia, while the panel does not support it (card C04 records this: the treated arms are not significantly different from the untreated knockout at P10); the glucose result depends on age, dose and comparison, and a non-significant difference at P10 is not evidence of no benefit. Every treated arm was injected in the stated neonatal window."
- },
  "97c9a0c40034": {
   "src": "it",
   "text": "Linea cellulare con la variante non disponibile; disegno completo ma il righello di funzione non è ancora validato."
@@ -1758,10 +1718,6 @@
  "aedc0c4f5ce9": {
   "src": "en",
   "text": "A gap-junction-blocking tool lowered the burst rate in the knockout slice and did not recover. In culture the same tool lowers AMPA and NMDA currents, broadens spikes and lowers input resistance."
- },
- "af1494d21e0e": {
-  "src": "en",
-  "text": "Named in the WWOX literature and carded: the neonatal AAV9 gene-addition study (cards C01 and C04)."
  },
  "af1905e427d4": {
   "src": "en",
@@ -2175,10 +2131,6 @@
   "src": "en",
   "text": "position unchanged from IT20 (rank 3): No IT21 input changes the position. The thyroid-hormone probe row asks the receptor-responsiveness question on the same axis; the two are not merged because one measures the neuron's signal and the other the precursor cell's response. IT29 (phenotype-first table): position unchanged; the added evidence is transferred from non-WWOX systems and conditional."
  },
- "dd12a8b7fdb5": {
-  "src": "en",
-  "text": "Queried: the two gene-addition cards (C01, C04) and their assertion rows; the deepdive manifest of the source; the work-order statements for this need. Checked for a post-onset arm and found none. Not a statement about the literature beyond the sources this module has read. Extended on 2026-11-05/06 by two bounded external searches (batch_sci_20261105, r1 and r2 query logs, 66 queries in all): conditional, antisense and vector restoration after onset in Mecp2, Ube3a, Fmr1, Tsc1, Pten, Syngap1, Cdkl5, Shank3, Tcf4, Scn1a, Scn1b, Kcnt1, Scn8a and leukodystrophy models. The earlier of the two searches was anchored on gene names and could not reach enzyme, connexin, tubulin or astrocyte-transporter leukodystrophies; an independent review found post-onset white-matter arms there. Bounded searches, not a statement that none exists."
- },
  "dd1eb579e2d6": {
   "src": "en",
   "text": "pH-dependent GluN2B modulator: a pH-linked comparison, subordinate to a measured tissue pH; not a candidate"
@@ -2222,10 +2174,6 @@
  "e22f10004a65": {
   "src": "en",
   "text": "The chain as written: that this inhibitor lowers HIF activity without touching the HIF prolyl hydroxylases."
- },
- "e31a7ba5e00a": {
-  "src": "en",
-  "text": "Established model and established vector; the added arm is a timing change, not a new assay."
  },
  "e35e4c57255e": {
   "src": "en",
@@ -2278,10 +2226,6 @@
  "e590949996c2": {
   "src": "en",
   "text": "Opening of Kv7 channels, or block of connexin and pannexin channels, proposed in earlier readings."
- },
- "e60681463c5a": {
-  "src": "en",
-  "text": "No arm exists in which treatment begins after the phenotype is established; the window is stated, not measured against a later start, and P300 readouts are survivor-selected."
  },
  "e608a22e6da1": {
   "src": "en",
@@ -2487,10 +2431,6 @@
   "src": "en",
   "text": "Chase of the Q230P-class protein with HSPA8 and LAMP2 knockdown and a lysosomal-acidification inhibitor, then a docking-function read (phospho-tau, with the L404A docking mutant as control). No rise with knockdown closes the route; a rise without function closes deep recovery on this route; both rising earns a variant-specific preclinical question, still not qualified. IT22: one cycloheximide-chase design with HSPA8 and LAMP2A knockdown and a lysosomal-acidification inhibitor tests every stability lever; the peptide is one arm, not the lead."
  },
- "fb1711428b97": {
-  "src": "it",
-  "text": "Laboratorio con il vettore e un topo Wwox-nullo; nessuno noto nel repository. Se il vettore sia ottenibile: non nota."
- },
  "fb62c3653914": {
   "src": "en",
   "text": "Clinical-stage GluN2B negative modulator with an assembly-dependent maximum"
@@ -2510,10 +2450,6 @@
  "fdd45467216d": {
   "src": "en",
   "text": "No maximum effect, species or assay context in the catalogue; no approval statement in the catalogue."
- },
- "fe1eff02f6cc": {
-  "src": "en",
-  "text": "Does neuronal WWOX restoration started AFTER symptom onset recover any endpoint, or only prevent one when given in the neonatal window?"
  },
  "fe2c014ac74e": {
   "src": "en",
