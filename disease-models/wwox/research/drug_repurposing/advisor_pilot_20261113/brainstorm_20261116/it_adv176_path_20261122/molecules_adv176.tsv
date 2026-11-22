@@ -1,0 +1,97 @@
+relation_id	molecule	names	sources	n_source_rows	directions	species	sites
+E0	CAT:CHEMBL1173655	AFATINIB DIMALEATE	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+E0	CAT:CHEMBL1645462	AC-480	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+E0	CAT:CHEMBL180022	NERATINIB | NERATINIB MALEATE	ChEMBL curated mechanism	2	down	Homo sapiens	single_protein_record
+E0	CAT:CHEMBL2110732	DACOMITINIB | DACOMITINIB ANHYDROUS	ChEMBL curated mechanism	2	down	Homo sapiens	single_protein_record
+E0	CAT:CHEMBL24828	VANDETANIB	ChEMBL curated mechanism	1	down	Homo sapiens	family_record_subunit_unresolved
+E0	CAT:CHEMBL3109738	JNJ-26483327	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+E0	CAT:CHEMBL31965	CANERTINIB DIHYDROCHLORIDE	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+E0	CAT:CHEMBL3545154	POZIOTINIB | POZIOTINIB HYDROCHLORIDE	ChEMBL curated mechanism	2	down	Homo sapiens	family_record_subunit_unresolved
+E0	CAT:CHEMBL3545396	BMS-690514	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+E0	CAT:CHEMBL4297661	TARLOXOTINIB | TARLOXOTINIB BROMIDE	ChEMBL curated mechanism	2	down	Homo sapiens	family_record_subunit_unresolved
+E0	CAT:CHEMBL4650289	KBP5209	ChEMBL curated mechanism	1	down	Homo sapiens	family_record_subunit_unresolved
+E0	CAT:DGIDB:283de1645cf5	EGFR/ErbB-2/ErbB-4 inhibitor	GtoPdb interaction	1	down	Human	
+E0	CAT:DGIDB:5e7d4947056e	neuregulin-4	GtoPdb interaction	1	unclear	Human	
+E0	CAT:DGIDB:63653c77b175	compound 38 [PMID: 24915291]	GtoPdb interaction	1	down	Human	
+E0	CAT:DGIDB:64337258c96f	neuregulin-2	GtoPdb interaction	1	unclear	Human	
+E0	CAT:DGIDB:670eec3d1d4e	betacellulin	GtoPdb interaction	1	unclear	Human	
+E0	CAT:DGIDB:73e44badd88c	pirotinib	GtoPdb interaction	1	down	Human	
+E0	CAT:DGIDB:c7f51e823de7	HB-EGF	GtoPdb interaction	1	unclear	Human	
+E0	CAT:DGIDB:d9bd36c453d6	compound 9 [PMID: 26006010]	GtoPdb interaction	1	down	Human	
+E0	CAT:DGIDB:e4a7b75ddc0f	neuregulin-3	GtoPdb interaction	1	unclear	Human	
+E0	CAT:DGIDB:f4c2f8773097	epiregulin	GtoPdb interaction	1	unclear	Human	
+E0	GTOPDB:5027	neuregulin-1	GtoPdb interaction	3	unclear	Human	
+E0	GTOPDB:6912	ibrutinib	GtoPdb interaction	1	down	Human	
+E0	GTOPDB:7422	dacomitinib	GtoPdb interaction	1	down	Human	
+E0	GTOPDB:7643	AEE788	GtoPdb interaction	1	down	Human	
+E0	GTOPDB:7647	BMS-599626	GtoPdb interaction	1	down	Human	
+E0	GTOPDB:7903	poziotinib	GtoPdb interaction	1	down	Human	
+E0	GTOPDB:8912	acalabrutinib	GtoPdb interaction	1	down	Human	
+E0	GTOPDB:9176	WZ4002	GtoPdb interaction	1	down	Human	
+E0	GTOPDB:9912	allitinib	GtoPdb interaction	1	down	Human	
+E0	GTOPDB:9922	tucatinib	GtoPdb interaction	1	down	Human	
+E0	GTOPDB:9929	xiliertinib	GtoPdb interaction	1	down	Human	
+E1	CAT:CHEMBL1173655	AFATINIB DIMALEATE	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+E1	CAT:CHEMBL1645462	AC-480	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+E1	CAT:CHEMBL180022	NERATINIB | NERATINIB MALEATE	ChEMBL curated mechanism	2	down	Homo sapiens	single_protein_record
+E1	CAT:CHEMBL2110732	DACOMITINIB | DACOMITINIB ANHYDROUS	ChEMBL curated mechanism	2	down	Homo sapiens	single_protein_record
+E1	CAT:CHEMBL24828	VANDETANIB	ChEMBL curated mechanism	1	down	Homo sapiens	family_record_subunit_unresolved
+E1	CAT:CHEMBL3109738	JNJ-26483327	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+E1	CAT:CHEMBL31965	CANERTINIB DIHYDROCHLORIDE	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+E1	CAT:CHEMBL3545154	POZIOTINIB | POZIOTINIB HYDROCHLORIDE	ChEMBL curated mechanism	2	down	Homo sapiens	family_record_subunit_unresolved
+E1	CAT:CHEMBL3545396	BMS-690514	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+E1	CAT:CHEMBL4297661	TARLOXOTINIB | TARLOXOTINIB BROMIDE	ChEMBL curated mechanism	2	down	Homo sapiens	family_record_subunit_unresolved
+E1	CAT:CHEMBL4650289	KBP5209	ChEMBL curated mechanism	1	down	Homo sapiens	family_record_subunit_unresolved
+E1	CAT:DGIDB:283de1645cf5	EGFR/ErbB-2/ErbB-4 inhibitor	GtoPdb interaction	1	down	Human	
+E1	CAT:DGIDB:5e7d4947056e	neuregulin-4	GtoPdb interaction	1	unclear	Human	
+E1	CAT:DGIDB:63653c77b175	compound 38 [PMID: 24915291]	GtoPdb interaction	1	down	Human	
+E1	CAT:DGIDB:64337258c96f	neuregulin-2	GtoPdb interaction	1	unclear	Human	
+E1	CAT:DGIDB:670eec3d1d4e	betacellulin	GtoPdb interaction	1	unclear	Human	
+E1	CAT:DGIDB:73e44badd88c	pirotinib	GtoPdb interaction	1	down	Human	
+E1	CAT:DGIDB:c7f51e823de7	HB-EGF	GtoPdb interaction	1	unclear	Human	
+E1	CAT:DGIDB:d9bd36c453d6	compound 9 [PMID: 26006010]	GtoPdb interaction	1	down	Human	
+E1	CAT:DGIDB:e4a7b75ddc0f	neuregulin-3	GtoPdb interaction	1	unclear	Human	
+E1	CAT:DGIDB:f4c2f8773097	epiregulin	GtoPdb interaction	1	unclear	Human	
+E1	GTOPDB:5027	neuregulin-1	GtoPdb interaction	3	unclear	Human	
+E1	GTOPDB:6912	ibrutinib	GtoPdb interaction	1	down	Human	
+E1	GTOPDB:7422	dacomitinib	GtoPdb interaction	1	down	Human	
+E1	GTOPDB:7643	AEE788	GtoPdb interaction	1	down	Human	
+E1	GTOPDB:7647	BMS-599626	GtoPdb interaction	1	down	Human	
+E1	GTOPDB:7903	poziotinib	GtoPdb interaction	1	down	Human	
+E1	GTOPDB:8912	acalabrutinib	GtoPdb interaction	1	down	Human	
+E1	GTOPDB:9176	WZ4002	GtoPdb interaction	1	down	Human	
+E1	GTOPDB:9912	allitinib	GtoPdb interaction	1	down	Human	
+E1	GTOPDB:9922	tucatinib	GtoPdb interaction	1	down	Human	
+E1	GTOPDB:9929	xiliertinib	GtoPdb interaction	1	down	Human	
+E2	CAT:CHEMBL1173655	AFATINIB DIMALEATE	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+E2	CAT:CHEMBL1645462	AC-480	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+E2	CAT:CHEMBL180022	NERATINIB | NERATINIB MALEATE	ChEMBL curated mechanism	2	down	Homo sapiens	single_protein_record
+E2	CAT:CHEMBL2110732	DACOMITINIB | DACOMITINIB ANHYDROUS	ChEMBL curated mechanism	2	down	Homo sapiens	single_protein_record
+E2	CAT:CHEMBL24828	VANDETANIB	ChEMBL curated mechanism	1	down	Homo sapiens	family_record_subunit_unresolved
+E2	CAT:CHEMBL3109738	JNJ-26483327	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+E2	CAT:CHEMBL31965	CANERTINIB DIHYDROCHLORIDE	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+E2	CAT:CHEMBL3545154	POZIOTINIB | POZIOTINIB HYDROCHLORIDE	ChEMBL curated mechanism	2	down	Homo sapiens	family_record_subunit_unresolved
+E2	CAT:CHEMBL3545396	BMS-690514	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+E2	CAT:CHEMBL4297661	TARLOXOTINIB | TARLOXOTINIB BROMIDE	ChEMBL curated mechanism	2	down	Homo sapiens	family_record_subunit_unresolved
+E2	CAT:CHEMBL4650289	KBP5209	ChEMBL curated mechanism	1	down	Homo sapiens	family_record_subunit_unresolved
+E2	CAT:DGIDB:283de1645cf5	EGFR/ErbB-2/ErbB-4 inhibitor	GtoPdb interaction	1	down	Human	
+E2	CAT:DGIDB:5e7d4947056e	neuregulin-4	GtoPdb interaction	1	unclear	Human	
+E2	CAT:DGIDB:63653c77b175	compound 38 [PMID: 24915291]	GtoPdb interaction	1	down	Human	
+E2	CAT:DGIDB:64337258c96f	neuregulin-2	GtoPdb interaction	1	unclear	Human	
+E2	CAT:DGIDB:670eec3d1d4e	betacellulin	GtoPdb interaction	1	unclear	Human	
+E2	CAT:DGIDB:73e44badd88c	pirotinib	GtoPdb interaction	1	down	Human	
+E2	CAT:DGIDB:c7f51e823de7	HB-EGF	GtoPdb interaction	1	unclear	Human	
+E2	CAT:DGIDB:d9bd36c453d6	compound 9 [PMID: 26006010]	GtoPdb interaction	1	down	Human	
+E2	CAT:DGIDB:e4a7b75ddc0f	neuregulin-3	GtoPdb interaction	1	unclear	Human	
+E2	CAT:DGIDB:f4c2f8773097	epiregulin	GtoPdb interaction	1	unclear	Human	
+E2	GTOPDB:5027	neuregulin-1	GtoPdb interaction	3	unclear	Human	
+E2	GTOPDB:6912	ibrutinib	GtoPdb interaction	1	down	Human	
+E2	GTOPDB:7422	dacomitinib	GtoPdb interaction	1	down	Human	
+E2	GTOPDB:7643	AEE788	GtoPdb interaction	1	down	Human	
+E2	GTOPDB:7647	BMS-599626	GtoPdb interaction	1	down	Human	
+E2	GTOPDB:7903	poziotinib	GtoPdb interaction	1	down	Human	
+E2	GTOPDB:8912	acalabrutinib	GtoPdb interaction	1	down	Human	
+E2	GTOPDB:9176	WZ4002	GtoPdb interaction	1	down	Human	
+E2	GTOPDB:9912	allitinib	GtoPdb interaction	1	down	Human	
+E2	GTOPDB:9922	tucatinib	GtoPdb interaction	1	down	Human	
+E2	GTOPDB:9929	xiliertinib	GtoPdb interaction	1	down	Human	
