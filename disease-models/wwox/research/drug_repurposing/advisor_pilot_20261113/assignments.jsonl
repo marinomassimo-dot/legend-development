@@ -436,3 +436,5 @@
 {"evidence": "SendMessage receipt msg_id 4ab94196-c2e2-43af-8011-18f843f21e41, host clock 16:11Z", "id": "ADV-177", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-22T16:09:54Z"}
 {"assessment": "HOST", "id": "ADV-178", "key": "adv177-flux-inference-addendum-and-itgb1-fibronectin-feasibility-science", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-22T16:27:37Z"}
 {"evidence": "SendMessage receipt msg_id d3093a27-bce1-4dd1-bda9-a3e9deecf646, host clock 16:29Z", "id": "ADV-178", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-22T16:27:49Z"}
+{"assessment": "HOST", "id": "ADV-179", "key": "stouffer-2026-state-match-versus-lineage-trajectory-rp043-science", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-22T16:42:34Z"}
+{"evidence": "SendMessage receipt msg_id d8839211-28ea-424d-b14f-ea78160130fb, host clock 16:44Z", "id": "ADV-179", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-22T16:42:56Z"}
