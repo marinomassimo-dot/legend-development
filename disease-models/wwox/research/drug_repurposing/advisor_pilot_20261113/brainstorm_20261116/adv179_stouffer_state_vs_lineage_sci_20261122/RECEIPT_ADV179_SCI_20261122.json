@@ -1,0 +1,49 @@
+{
+ "analysis_at": "2026-11-22T16:45Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-22T16:45:30Z",
+ "event_id": "FTR-20261122-42587153-01",
+ "evidence_basis": [
+  "Stouffer et al. 2026 Nature (PMID 42587153, DOI 10.1038/s41586-026-10916-7), publisher PDF on this host (/tmp/legend-stouffer-42587153-20261122.pdf, 38 pages, 48,513,068 bytes, SHA-256 348e8b26957b7ab4baafddd21bb66365468685a54b199c00cc93bb52a4b114b3, recomputed and equal to ADV's): abstract, introduction, all Results sections, the Discussion, the figure 1 to 5 legends, Extended Data Fig. 1 legend and the Methods paragraphs on age matching, MADM induction and the data and code availability statements read as text; one rendered page (Extended Data Fig. 1) viewed, with a high-magnification crop of panel e; other figures, Extended Data Figs 2 to 15, Supplementary Information and Tables 2 and 3, and source data not read; GEO GSE327470 record page only (a superseries of 292 samples), nothing downloaded; the code repository not opened; no number re-analysed; ED1e best-match ages read from the heatmap image (approximate).",
+  "verbatim_locator | proposition: the abstract contrasts uniform RGP transcription with a unitary trajectory | Abstract | \"despite uniform single-cell transcriptional signatures of RGPs and a unitary lineage trajectory\"",
+  "verbatim_locator | proposition: organoid days are matched to embryonic days | Results (Organoids model in vivo development) | \"D8, D13, D20 and D25 of organoid differentiation matched with embryonic day 10 (E10), E13, E16 and postnatal day 1 (P1) of mouse development, respectively\"",
+  "verbatim_locator | proposition: the age match is a Pearson correlation of pseudobulk | Methods (matching in vivo age) | \"we calculated all pairwise Pearson correlations within one cell type using all genes shared between datasets\"",
+  "verbatim_locator | proposition: correlations are z-scored within each reference time point | Methods (matching in vivo age) | \"We transformed correlations to z-scores within each reference time point\"",
+  "verbatim_locator | proposition: scRNA lines and batches | Fig. 1 legend | \"two independent cell lines and two batches each\"",
+  "verbatim_locator | proposition: the authors link D10 and E10 transcriptionally | Results (clonal analysis) | \"note that E10 and D10 are comparable transcriptionally (Extended Data Fig. 1e)\"",
+  "verbatim_locator | proposition: all three division modes occur at every induction day | Results (clonal analysis) | \"Of note, all three progenitor division modes occurred concurrently at every clone induction time point\"",
+  "verbatim_locator | proposition: lineage restriction is raised tenfold against in vivo | Results (lineage restriction) | \"lineage restriction in the cortical organoid system was increased by an order of magnitude\"",
+  "verbatim_locator | proposition: CloneSeq cell and clone counts | Results (lineage restriction) | \"we collected 287 cells from 68 asymmetric neurogenic and small neurogenic MADM clones induced at D13 from 45 cortical organoids\"",
+  "verbatim_locator | proposition: pseudotime does not separate restricted from translaminar clones | Results (lineage restriction) | \"no significant difference between lineage-restricted and non-restricted (translaminar) small neurogenic clones\"",
+  "verbatim_locator | proposition: organoid and embryo RGPs differ in hundreds of age-specific genes | Results (unitary trajectory) | \"revealed hundreds of differentially expressed genes (DEGs) that were largely specific for a particular developmental age\"",
+  "verbatim_locator | proposition: MADM clones come from several lines and differentiations | Methods (induction of MADM clones) | \"each clone initiation time point included clones from 3 cell lines and 3 differentiations\"",
+  "verbatim_locator | proposition: the in vivo restriction comparator | Fig. 3 legend | \"11 out of 386 clones, 2.85%\"",
+  "verbatim_locator | proposition: clone counts behind the pseudotime test | Fig. 4 legend | \"n = 16 translaminar, n = 11 DL-restricted, n = 7 UL-restricted\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv179_stouffer_state_vs_lineage_sci_20261122/RESULT_ADV179_STOUFFER_STATE_VS_LINEAGE_SCI_20261122.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "348e8b26957b7ab4baafddd21bb66365468685a54b199c00cc93bb52a4b114b3",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Publisher PDF of Stouffer et al. 2026 (Nature, open access) acquired by Codex and verified by ADV on this host (/tmp/legend-stouffer-42587153-20261122.pdf); local scratch only, not copied into git",
+ "study_id": {
+  "doi": "10.1038/s41586-026-10916-7",
+  "pmid": "42587153"
+ },
+ "workflow": "SCI successor Z ADV-179 (transcriptional-state match against radial-glia lineage time course; RP-043 qualification): the Results, Discussion and relevant Methods read after a committed pre-registration that stated what had been seen."
+}
