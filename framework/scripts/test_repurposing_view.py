@@ -1662,6 +1662,46 @@ class WaitPolls(unittest.TestCase):
 class RealViewports(unittest.TestCase):
     """Device-metrics emulation over the DevTools protocol (no sandbox flag): the page's own innerWidth and scrollWidth are measured at 360 and 390 px."""
 
+    def test_public_source_banner_and_ranking_badges_are_readable(self):
+        binary = rv.find_chromium()
+        if not binary:
+            self.skipTest("no Chromium binary: banner and badges were not measured")
+        measure = """(() => {
+          const gutter = selector => {
+            const el = document.querySelector(selector);
+            const box = el.getBoundingClientRect(), css = getComputedStyle(el);
+            return [box.left + parseFloat(css.paddingLeft), box.right - parseFloat(css.paddingRight)].map(Math.round);
+          };
+          const badges = [...document.querySelectorAll('#ranking .rk-cl')]
+            .filter(el => el.getClientRects().length);
+          const lines = badges.map(el => {
+            const range = document.createRange();
+            range.selectNodeContents(el);
+            return new Set([...range.getClientRects()].filter(r => r.width > 0).map(r => Math.round(r.top))).size;
+          });
+          return {banner: gutter('#source-banner'), main: gutter('main'), lines,
+                  pageWidth: document.documentElement.scrollWidth};
+        })()"""
+        with tempfile.TemporaryDirectory() as td:
+            page = Path(td) / "v.html"
+            page.write_text(rv.build(DR, "shareable", "en"), encoding="utf-8")
+            cdp = rv.Cdp(binary, td)
+            try:
+                cdp.call("Page.enable")
+                cdp.call("Page.navigate", url=page.as_uri())
+                cdp.wait_for(rv.CUR_READY_JS)
+                for width in (360, 561, 1280):
+                    with self.subTest(width=width):
+                        cdp.call("Emulation.setDeviceMetricsOverride", width=width, height=900,
+                                 deviceScaleFactor=1, mobile=width == 360)
+                        result = cdp.evaluate(measure)
+                        self.assertEqual(result["banner"], result["main"])
+                        self.assertTrue(result["lines"], "no visible status badge measured")
+                        self.assertLessEqual(max(result["lines"]), 5)
+                        self.assertLessEqual(result["pageWidth"], width)
+            finally:
+                cdp.close()
+
     def test_the_start_here_row_and_the_general_note_sit_above_the_fold_on_a_phone(self):
         if not rv.find_chromium():
             self.skipTest("no Chromium binary: the legend was NOT measured")

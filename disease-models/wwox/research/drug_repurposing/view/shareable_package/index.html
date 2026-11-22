@@ -414,7 +414,7 @@ section#investigations>section#chains{border-top:1px solid var(--line);padding-t
 
 /* Public research edition: common gutters and bounded diagrams. */
 body[data-edition="public"] {overflow-wrap:anywhere}
-body[data-edition="public"] :is(main,header .in,nav .in) {max-width:73rem;padding-inline:clamp(1rem,4vw,2.6rem)}
+body[data-edition="public"] :is(main,header .in,nav .in,#source-banner) {max-width:73rem;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.6rem)}
 body[data-edition="public"] :is(section,article,details,figure) {min-inline-size:0;max-inline-size:100%}
 body[data-edition="public"] :is(.chip,.st,.dp,.lv,.lvl,pre,summary) {max-inline-size:100%;white-space:normal;overflow-wrap:anywhere}
 body[data-edition="public"] :is(.qk-dl,.fbar,.filters,.lvls,.threads,.tiles,.goals,.ncard,.pathway-nodes)>* {min-inline-size:0}
@@ -424,6 +424,17 @@ body[data-edition="public"] :is(img,svg) {max-inline-size:100%;height:auto}
 body[data-edition="public"] header .in {display:block}
 body[data-edition="public"] .hero-lead {max-width:46rem}
 body[data-edition="public"] .gen-note {margin:.85rem 0 1rem}
+@media screen {
+  body[data-edition="public"] .rk-cl {
+    overflow-wrap:normal;
+    word-break:normal;
+    line-height:1.35;
+  }
+}
+@media screen and (min-width:561px) {
+  /* Keep a readable status column in wide tables. Their own wrappers handle horizontal scrolling. */
+  body[data-edition="public"] .tbl.stk td:has(>.rk-cl) {min-inline-size:10rem}
+}
 .pathway-jump {display:flex;flex-wrap:wrap;gap:.45rem;margin:1.1rem 0 .8rem}
 .pathway-jump a,.study-pdf {display:inline-flex;align-items:center;min-height:44px;max-width:100%;padding:.45rem .7rem;border:1px solid var(--line);border-radius:.35rem;background:var(--card);color:var(--acc);text-decoration:none;font-weight:600;font-size:.83rem}
 .pathway-jump a:hover,.study-pdf:hover {background:var(--accbg);border-color:var(--acc)}
