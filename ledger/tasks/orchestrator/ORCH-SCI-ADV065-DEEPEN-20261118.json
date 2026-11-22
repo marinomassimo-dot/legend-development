@@ -753,10 +753,12 @@
     },
     {
      "step": "ADV-171: inventory the 28 unread sheets of the Ma 2025 S1 Data workbook; pre-onset lipid, proteome, synapse or energy sign for RP-036 / RP-039 (step 1 alone is a valid exit)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-171 (cross-session message from ADV a5e6f2ad, assignment file ADV-171.md)",
-     "accepted_at": "2026-11-22T06:36:50Z"
+     "accepted_at": "2026-11-22T06:36:50Z",
+     "evidence": "Result, receipt FTR-20261122-41066510-02, self-evaluation addendum 5: closed, nothing new for RP-036 and RP-039",
+     "updated_at": "2026-11-22T06:42:31Z"
     }
    ]
   }

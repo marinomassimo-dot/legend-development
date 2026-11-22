@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-22T06:41Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "event_at": "2026-11-22T06:41:00Z",
+ "event_id": "FTR-20261122-41066510-02",
+ "evidence_basis": [
+  "Ma et al. 2025 PLOS Biology (PMID 41066510, DOI 10.1371/journal.pbio.3003192): same publisher JATS XML as the first receipt (SHA-256 978bba907fda01fe93b4bc38575d0308707ca7c49c2d15da65eb7cce3c8db531), searched and read only where it bears on this question (the Results passages on synapses, lipid droplets, proteome and lipidome, and the legends of Fig 3, 6 and 8). S1 Data workbook (SHA-256 906de7531b54d47770f4e36319ad1f49b2b3ca24bef6e8bb063933924e1d9c6d, verified): all 34 sheet names and shapes inventoried; Fig3A, Fig3B, FigS13 and Fig6D read in full by script; the remaining 24 of the 28 previously unread sheets inventoried by labels and shapes only, no values. Proteome and lipid species tables (S6 Table) not opened.",
+  "verbatim_locator | proposition: lipid droplets differ at PWK 28 and not at PWK 14 | Results (lipid droplets and crystals) | \"significantly increased in the hippocampus of Cyfip2+/R87C mice compared to WT mice at PWK 28, but not at PWK 14\"",
+  "verbatim_locator | proposition: proteome was measured at two ages only | Results (brain proteomic and lipidomic changes) | \"We performed proteomic analysis on the hippocampus of WT and Cyfip2+/R87C mice at both PWK 14 and 28\"",
+  "verbatim_locator | proposition: the Fig 3A panel is synaptic transcripts, R87C against WT at stated ages | Fig 3 legend | \"Heat maps show qRT-PCR results for DEGs encoding synaptic proteins in the cortex and hippocampus of Cyfip2+/R87C mice compared to WT mice at various ages\"",
+  "verbatim_locator | proposition: crystals were not scored at PWK 14 | Results (lipid droplets and crystals) | \"crystal analysis was not performed at that time point\"",
+  "verbatim_locator | proposition: the authors propose neonatal spasm-like seizures to explain the PWK 7 Olig2 rise | Discussion | \"the spasm-like seizures experienced during the neonatal stage may have triggered this early glial response\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv171_cyfip2_unread_sheets_sci_20261122/RESULT_ADV171_CYFIP2_UNREAD_SHEETS_SCI_20261122.md"
+ ],
+ "prior_receipt": "FTR-20261121-41066510-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "978bba907fda01fe93b4bc38575d0308707ca7c49c2d15da65eb7cce3c8db531",
+ "source_kind": "fulltext_remote",
+ "source_locator": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.3003192&type=manuscript (plain request, 2026-11-21; scratch copy, SHA-256 as fingerprint); S1 Data workbook from the PLOS supplementary file .s038 (scratch copy, SHA-256 906de753...e9d6d); open access, local scratch only",
+ "study_id": {
+  "doi": "10.1371/journal.pbio.3003192",
+  "pmid": "41066510"
+ },
+ "workflow": "SCI successor Z ADV-171 (the 28 unread sheets of the Ma 2025 S1 Data: inventory, then per-animal checks of the synapse and lipid droplet sheets for a pre-onset sign for RP-036 and RP-039), after a committed pre-registration that stated what had been seen."
+}
