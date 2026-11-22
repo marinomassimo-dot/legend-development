@@ -851,10 +851,12 @@
     },
     {
      "step": "ADV-172: raw-role address in recall/handoff text (route --to Orchestrator ambiguous); trace producers, smallest correction or no-change finding",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV message 2026-11-22 (Codex return 13, RP-020)",
-     "accepted_at": "2026-11-22T06:50:49Z"
+     "accepted_at": "2026-11-22T06:50:49Z",
+     "evidence": "recall text in strategic_advisor.py and the transport route rule now name the campaign recipient map; route --to Orchestrator AMBIGUOUS before and after (strict check unchanged), route --to 'IT Orchestrator' RESOLVED; test_strategic_advisor 228 OK",
+     "updated_at": "2026-11-22T07:12:05Z"
     }
    ]
   }
