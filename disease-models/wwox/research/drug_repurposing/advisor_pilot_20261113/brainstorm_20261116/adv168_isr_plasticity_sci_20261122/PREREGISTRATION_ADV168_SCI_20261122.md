@@ -1,0 +1,37 @@
+# ADV-168 pre-registration: does the 2025 Nature paper on the plasticity of the mammalian integrated stress response separate a canonical phospho-eIF2-alpha ISR from a reduced-eIF2B state without a phospho-eIF2-alpha rise, and does that change a named control, readout or wording in INV-02 or the ISRIB comparison (RP-018)? (SCI successor Z, 2026-11-22; hypothesis level; adjacent non-WWOX preparation; no compound, no dose, no simulation; no contact; no e-mail address to any service; reference genotype class only; not medical advice)
+
+## What I had already seen when this was written (stated, so this is NOT "before any value")
+* The assignment text (ADV-168), including the Codex locators (Fig. 4, Extended Data Fig. 8, Fig. 3, Methods) and the paper title.
+* From the PDF (`/tmp/legend-40140574-Nature.pdf`, 34,391,319 bytes, 36 pages, SHA-256 `4f4b0fb5b51392157bb83c2065f40d6508545daf1d4249ee93fb497b34419cd5`, verified before use; CC BY-NC-ND, local only, short quotations only): only a heading search of the extracted text. That showed the four main-figure titles ("Decreased eIF2B activity induces s-ISR", "s-ISR is positively regulated by eIF4E", "VWM-associated EIF2B5 mutation induces s-ISR", "Atf4 uORF1 is required for s-ISR") and the Extended Data title "Decreased eIF2B activity in the absence of stress-induced eIF2alpha-p reprograms the transcriptome in an eIF4E-dependent manner", and a few fragments of Results lines (one mentions GADD34(deltaNT) and CHOP). No abstract, Results text, legend body, figure image, Methods or number was read.
+* From the repository: the RP-018 row of `research_portfolio.tsv` and the INV-02 row of `investigations_it20.tsv` (question, decisive uncertainty, next_test including the IT30 and IT35 clauses). The IT35 clause already says: add phosphorylation of eIF2B epsilon at the GSK3 site, eIF2B exchange activity and per-cell translation beside phospho-eIF2-alpha and ATF4; include a phospho-eIF2-alpha-independent arm; a GSK3 route is not read as equivalent to phospho-eIF2-alpha inhibition.
+* NOT yet reread: the held WWOX glucose history and the S540E timing and source notes (the assignment asks for them before the Fig. 4 glucose link is carried; done after this file is committed and reported there).
+Consequence: the paper's headline (reduced eIF2B activity induces a "sustained" ISR state, eIF4E-dependent, uORF1-dependent, without stress-induced phospho-eIF2-alpha) is visible from the titles. What is open and tested: which measurements actually separate the routes, in which cell model, at which time and against which challenge, what the brain comparison is, and whether INV-02 already enforces the separation.
+
+## The pair of testable interpretations (fixed)
+* **I-1, two routes, separable by measurement (genuine):** a canonical route (stress kinase, phospho-eIF2-alpha up, eIF2B inhibition by sequestration, global translation down, ATF4 up through its upstream open reading frames, GADD34/PPP1R15A feedback) and a distinct state with reduced eIF2B function and unchanged phospho-eIF2-alpha differ in at least two of {ATF4 protein or target pattern, GADD34/CHOP induction, PCK2 and other target genes, translation (polysome or nascent-protein) profile, eIF4E dependence, uORF1 dependence}, measured in the same cell model, at the same time, against a matched challenge, with a perturbation that separates them.
+* **I-2, one readout, two names (confounded):** the apparent separation follows the cell model (an engineered mouse ES cell line), the timing (sustained against acute), the baseline (cells adapted to chronic reduction) or an unmatched challenge (a drug-induced canonical ISR in a different line or at a different intensity), so the paper shows a state, not a route.
+Decision outcomes follow the reading of the evidence; no preferred outcome is assumed.
+
+## Readings (fixed)
+* **R-genuine:** the paper contains a within-model, same-time comparison of the two states with direct contrast on at least two named readouts AND a separating perturbation (genetic or pharmacological) that moves one and not the other.
+* **R-partial:** the readouts differ, but across cell models, times or challenges, or without the separating perturbation.
+* **R-none:** no comparison of the two states under matched conditions.
+* **B-brain:** the paper compares brain tissue of a disease model (VWM mouse) with the cell model: record the animal number per group, ages, region, the readouts available in brain (protein or only RNA), and whether phospho-eIF2-alpha is measured there. Cell-model evidence and brain comparison are reported in separate sections and never merged into one verdict.
+
+## Decision rules for INV-02 and RP-018 (fixed)
+* **X1, CLOSE as redundant:** every readout or control that the paper shows to separate the routes already appears in INV-02 (including the IT30 and IT35 clauses) or in the RP-018 ISRIB comparison text; name the clause that makes the new one redundant.
+* **X2, CARRY one named delta to IT:** only if (a) R-genuine or R-partial holds for a specific readout, control or wording that separates the routes, AND (b) that item is absent from the INV-02 / RP-018 text as written, AND (c) it changes what a result would mean, not merely what is measured. The delta is stated as a one-clause wording or readout, not a test, a dose or a compound.
+* **X3, UNSUPPORTED / CLOSE:** the contrast is confined to one engineered mouse ES cell model, the brain comparison is group-level or RNA-only, and the readouts that separate the routes are cell-model-specific (no transferable contrast to a human neural line); then no delta is carried.
+* **Glucose link (Fig. 4):** carried only with a named consumer and after rereading the held WWOX glucose and S540E notes; "moderate against extreme stress in a published preparation" is not documented pre-onset glucose in Wwox tissue; it neither resolves S540E nor shows a WWOX effect. "Weak" is valid.
+
+## Scoping checks I will make (fixed)
+Cell model and species; how "reduced eIF2B function" is produced (degradation tag, knockdown, point mutation); how eIF2B function is measured (activity assay against inferred from translation); phospho-eIF2-alpha method (western, ratio to total, stress-induced against basal); which readouts are RNA and which protein; time courses (acute against chronic); challenge matching (the canonical-route comparator, its dose and duration); the unit (biological replicates, cell lines or clones, animals); source data and GEO records availability; and the brain comparison as above.
+
+## Limits stated now
+Adjacent, non-WWOX, mouse ES cells and a VWM mouse model; no WWOX measurement; this does not resolve the S540E source; does not show a WWOX effect; no compound, dose, simulation or new mandatory test; no second study opened merely for access; challenge pages and 429 are route results. Reading depth will be stated; the PDF stays out of the repository.
+
+## Rejecting observation (named in advance)
+Matched-condition data in which the reduced-eIF2B state shows the same ATF4, GADD34/CHOP and translation pattern as a canonical phospho-eIF2-alpha challenge, or in which the readouts differ only between cell lines or times, would reject I-1. A within-model, same-time contrast with a separating perturbation would reject I-2.
+
+## Consumer
+ADV (result and path). IT only for one named wording, readout or control delta on INV-02 or the ISRIB comparison, if X2 applies.
