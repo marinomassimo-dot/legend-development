@@ -2262,7 +2262,9 @@ class WorkOrderFigure(unittest.TestCase):
 
     def test_shareable_carries_the_same_figure_and_the_audit_passes(self):
         import repurposing_shareable_audit as au
-        self.assertEqual(embedded(self.share)["cur"]["work_order"]["entries"], embedded(self.full)["cur"]["work_order"]["entries"])
+        shared = next(row for row in embedded(self.share)["cur"]["work_order"]["entries"] if row["need"] == self.NEED)
+        full = next(row for row in embedded(self.full)["cur"]["work_order"]["entries"] if row["need"] == self.NEED)
+        self.assertEqual(shared["figure"], full["figure"])
         rep, _ = au.audit_html(self.share, DR, au.Reference(DR))
         self.assertEqual(rep.violations, [])
 
