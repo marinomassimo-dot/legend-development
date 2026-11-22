@@ -434,3 +434,5 @@
 {"evidence": "SendMessage receipt msg_id 14171dc1-b0df-4d61-968e-075a10895fba, host clock 13:03Z", "id": "ADV-176", "state": "SENT", "to": ["IT Orchestrator - CURRENT 6a8c1a55"], "utc": "2026-11-22T13:01:50Z"}
 {"assessment": "HOST", "id": "ADV-177", "key": "murlanova-2026-astrocyte-lactate-supply-versus-neuronal-use-inv07-science", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-22T16:09:41Z"}
 {"evidence": "SendMessage receipt msg_id 4ab94196-c2e2-43af-8011-18f843f21e41, host clock 16:11Z", "id": "ADV-177", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-22T16:09:54Z"}
+{"assessment": "HOST", "id": "ADV-178", "key": "adv177-flux-inference-addendum-and-itgb1-fibronectin-feasibility-science", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-22T16:27:37Z"}
+{"evidence": "SendMessage receipt msg_id d3093a27-bce1-4dd1-bda9-a3e9deecf646, host clock 16:29Z", "id": "ADV-178", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-22T16:27:49Z"}
