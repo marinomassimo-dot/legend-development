@@ -414,3 +414,5 @@
 {"basis": "42264803e", "id": "ADV-165", "state": "STRAND", "strand": "seizure-chronology-adjacent-model", "utc": "2026-11-22T01:36:34Z"}
 {"basis": "a5bcfd7b3", "id": "ADV-166", "state": "STRAND", "strand": "neurogenesis-rival-inv17", "utc": "2026-11-22T01:36:34Z"}
 {"basis": "275a966c7", "id": "ADV-167", "state": "STRAND", "strand": "erbb4-nrg1-pv-state", "utc": "2026-11-22T01:36:34Z"}
+{"assessment": "HOST", "id": "ADV-168", "key": "isr-canonical-versus-eif2b-branch-with-unchanged-peif2a-for-rp-018-and-inv-02-sci", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-22T04:09:43Z"}
+{"evidence": "SendMessage receipt msg_id c1393907-8511-4380-b903-e44154c56359, host clock 04:10Z", "id": "ADV-168", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-22T04:10:05Z"}
