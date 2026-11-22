@@ -21,6 +21,9 @@ MARKQ = "ADV-186"
 EVQ = (" [IT 2026-11-22, ADV-186 (from the SCI L supply result, section Consumers): the 2006 full text has been read: ICD signalling represses astrogenesis (rat E14.5 precursor cultures, mouse E17.5 cortex); the remaining provisionality is on the WWOX side: "
        "ICD retention is cited from the 2005 report, 2007 tumour data show no WWOX-nuclear-ErbB4 association, and a stabilisation arm (less ErbB4 without WWOX) is untested in neural cells; the attribution caution (P47T disrupts all WW1-PPxY partners) is unchanged. "
        "The question text above replaced 'provisional until the 2006 Cell full text is read'. No candidate, direction or ranking change. Source: advisor_pilot_20261113/brainstorm_20261116/l_supply_sardi_aqeilan07_sci_20261122/RESULT_L_SUPPLY_SARDI2006_AQEILAN2007_SCI_20261122.md]")
+ERB = (" [IT 2026-11-22, ADV-186 with the SCI ADV-185 result: the only held per-gene deposit for a WWOX-deficient neural comparison (GSE126075: one sample per genotype and stage, descriptive TPM only) cannot carry an ERBB4 comparison: the silenced progenitor sample does not show lower WWOX (2.90 against 3.35 TPM) and differs in progenitor markers, and the silenced neuron sample is globally shifted; the protein was never measured. "
+       "A lower RNA value could only nominate a transcriptional alternative; a flat value would not exclude post-translational turnover. The useful contrast is a paired full-length JMa ErbB4 protein and RNA observation in WWOX-deficient neural precursors or organoids against matched control, at least three independent derivations, WWOX depletion shown in the same samples, stage markers matched. "
+       "No per-gene fold, no P value, no genotype-by-stage claim, no candidate or direction. Source: advisor_pilot_20261113/brainstorm_20261116/adv185_kosla_erbb4_transcript_sci_20261122/RESULT_ADV185_KOSLA_ERBB4_TRANSCRIPT_SCI_20261122.md]")
 RP038 = (" [IT 2026-11-22, ADV-186: the sign premise that was provisional until the 2006 full text is read is answered for the Sardi side (ICD signalling represses astrogenesis in rat and mouse cortical precursors); "
          "the binding premise moves to the WWOX side (ICD retention cited from 2005; no WWOX-nuclear-ErbB4 association in 2007 tumour data; stabilisation arm untested in neural cells). Nothing about PV cells; no candidate, direction or ranking change.]")
 
@@ -68,11 +71,11 @@ def main():
         s2 = s.replace(OLDQ, NEWQ) if OLDQ in s else s
         assert len(s2) <= 300, len(s2)
         return s2
-    ev = lambda s: s if MARKQ in s else s + EVQ
+    ev = lambda s: (s if MARKQ in s else s + EVQ) if False else (s + EVQ if MARKQ not in s else s) + (ERB if "ADV-185" not in s else "")
     print("map IT59-Q01", edit_row(DR / "batch_sci_20261105/map/open_questions_map.tsv", "qid", "IT59-Q01",
                                      [("question_text_max300", q), ("status_evidence", ev), ("last_touched", lambda s: "2026-11-22" if s < "2026-11-22" else s)]))
     print("RP-038", edit_row(DR / "research_portfolio.tsv", "id", "RP-038",
-                             [("outcome", lambda s: s if "ADV-186" in s else s + RP038), ("updated_utc", lambda s: "2026-11-22T21:05:00Z" if s < "2026-11-22T21:05:00Z" else s)]))
+                             [("outcome", lambda s: s if "[IT 2026-11-22, ADV-186:" in s else s + RP038 + " [Details of the ErbB4 contrast: see the ADV-186 line on IT59-Q01.]"), ("updated_utc", lambda s: "2026-11-22T21:05:00Z" if s < "2026-11-22T21:05:00Z" else s)]))
 
 
 if __name__ == "__main__":
