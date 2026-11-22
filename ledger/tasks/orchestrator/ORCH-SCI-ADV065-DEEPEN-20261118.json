@@ -762,10 +762,12 @@
     },
     {
      "step": "ADV-173: Dirkx 2026 Brain (PMID 42249507), baseline M-current with contemporaneous network pairing for the slice brief / Kv7 comparison; pre-register, read the original, close or one optional readout",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-173 (cross-session message from ADV a5e6f2ad, assignment file ADV-173.md, Codex review 04)",
-     "accepted_at": "2026-11-22T08:09:55Z"
+     "accepted_at": "2026-11-22T08:09:55Z",
+     "evidence": "Result, receipt FTR-20261122-42249507-01, self-evaluation addendum 6: P-logic weak; one optional paired baseline Kv7 readout for NP3A3/WO-17; pup brief closed",
+     "updated_at": "2026-11-22T08:15:11Z"
     }
    ]
   }
