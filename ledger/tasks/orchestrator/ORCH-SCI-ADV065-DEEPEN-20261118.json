@@ -759,6 +759,13 @@
      "accepted_at": "2026-11-22T06:36:50Z",
      "evidence": "Result, receipt FTR-20261122-41066510-02, self-evaluation addendum 5: closed, nothing new for RP-036 and RP-039",
      "updated_at": "2026-11-22T06:42:31Z"
+    },
+    {
+     "step": "ADV-173: Dirkx 2026 Brain (PMID 42249507), baseline M-current with contemporaneous network pairing for the slice brief / Kv7 comparison; pre-register, read the original, close or one optional readout",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-173 (cross-session message from ADV a5e6f2ad, assignment file ADV-173.md, Codex review 04)",
+     "accepted_at": "2026-11-22T08:09:55Z"
     }
    ]
   }
@@ -1342,6 +1349,13 @@
    "at": "2026-11-22T06:36:50Z",
    "source": "ADV-171 (cross-session message from ADV a5e6f2ad, assignment file ADV-171.md)",
    "step_sha256": "43b200b79a69",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-22T08:09:55Z",
+   "source": "ADV-173 (cross-session message from ADV a5e6f2ad, assignment file ADV-173.md, Codex review 04)",
+   "step_sha256": "6c616a78dbf3",
    "reopened_block": false,
    "authorised_by": null
   }
