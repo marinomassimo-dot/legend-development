@@ -74,8 +74,8 @@ def main():
     ev = lambda s: (s if MARKQ in s else s + EVQ) if False else (s + EVQ if MARKQ not in s else s) + (ERB if "ADV-185" not in s else "")
     print("map IT59-Q01", edit_row(DR / "batch_sci_20261105/map/open_questions_map.tsv", "qid", "IT59-Q01",
                                      [("question_text_max300", q), ("status_evidence", ev), ("last_touched", lambda s: "2026-11-22" if s < "2026-11-22" else s)]))
-    print("RP-038", edit_row(DR / "research_portfolio.tsv", "id", "RP-038",
-                             [("outcome", lambda s: s if "[IT 2026-11-22, ADV-186:" in s else s + RP038 + " [Details of the ErbB4 contrast: see the ADV-186 line on IT59-Q01.]"), ("updated_utc", lambda s: "2026-11-22T21:05:00Z" if s < "2026-11-22T21:05:00Z" else s)]))
+    # RP-038 portfolio line: NOT applied by IT. ADV edits that row in parallel (three landing attempts were refused as merge conflicts on research_portfolio.tsv);
+    # the Sardi-side answer and the ErbB4 contrast are on the IT59-Q01 map row (status_evidence); RP-038 stays with its owner.
 
 
 if __name__ == "__main__":
