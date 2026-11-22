@@ -19,3 +19,6 @@ Sealed like the spec; digests only. Reason: IT's frozen method names two baselin
 | Addendum 1 text (sealed) | `370b080c8d5a54a4b9e62d9c0bcd85ae9d7a6c23669d1c60d20ec5930b5ddf2b` |
 | Scoring script v2 (sealed; reads IT's column names; on a common synthetic file its primary and three sensitivity lines are identical to the frozen v1) | `02b8f4e49da75daa138438df6211825505da37a418d61cee717c38ea99b090cb` |
 | Scoring script v1 as frozen above (kept) | `b4baa89ea7d212dfe2ceff18dda6131c0f2c7e47b8d0a3cedb7d71dfa9e0ef7c` |
+
+## Addendum 2 (2026-11-22, after IT's score file was on main, BEFORE any run of any script against the outcome key)
+IT's score file (sha256 `9491b18d14192517ef84d5ea465f351635af4e542ad7dfcafced4b57945bd9cc`) and addendum are on main. I have not opened the score file for any purpose but the hash, and the key has not been read against any score. Script v3 adds IT's **addendum metric as written** (IT's `alias_group` column, 2,000 cluster resamples, unstratified, 95 and 90 percent intervals, useful gap 0.10) beside my frozen metric and the original metric; nothing else changed (v2 kept). Scoring script v3 (sealed) sha256 `d42b8bb20bdda26b2669969fb20297a300cc5cd2c0133cff4dfad09005206d72`.
