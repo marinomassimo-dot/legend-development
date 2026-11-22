@@ -1,0 +1,45 @@
+{
+ "analysis_at": "2026-11-22T04:29Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "event_at": "2026-11-22T04:29:00Z",
+ "event_id": "FTR-20261122-40140574-02",
+ "evidence_basis": [
+  "Chen et al. 2025 Nature 641 (PMID 40140574, DOI 10.1038/s41586-025-08794-6): same publisher PDF as the first receipt (SHA-256 4f4b0fb5b51392157bb83c2065f40d6508545daf1d4249ee93fb497b34419cd5, verified). This re-read adds the Methods body in full and the legends of Extended Data Figs 3 and 8; page images of Extended Data Fig. 3 (panel e) and Extended Data Fig. 8 (panel e at 260 dpi) were viewed in addition to the first receipt's Fig. 1 and Fig. 4. Figures are not scored read: only these images and legends, not every figure image. Supplementary: Source Data Extended Data Fig. 3 and Source Data Fig. 1 read in full by script, sheet names of Source Data Fig. 4, Supplementary Information (4 pages) and the text layer of Supplementary Fig. 1 (30 pages of uncropped blots); not read: Supplementary Tables 1 to 4, Source Data Fig. 2, 3 and Extended Data 1, 4 to 7, 9, and the image-only Reporting Summary. GEO series GSE268132, GSE268130 and GSE268127 were checked as record pages only (no data file downloaded; no series holds the R132H progenitor cultures). No blot quantified.",
+  "verbatim_locator | proposition: the R132H progenitor cells are iPSC-derived, a different allele from the R191H ES cells | Methods (cell lines) | \"Mouse induced pluripotent stem cells (iPSCs) carrying the eIF2Bε(R132H) alteration\"",
+  "verbatim_locator | proposition: one T3 concentration is applied to both genotypes, with no T3-free arm described | Methods (differentiation and imaging of OPCs) | \"40 ng ml−1 triiodothyronine (thyroid hormone; Sigma T-6397)\"",
+  "verbatim_locator | proposition: outliers were removed and the test run on wells | Methods (statistics) | \"Outliers were statistically identified and removed using ROUT test with Q = 1%\"",
+  "verbatim_locator | proposition: the progenitor endpoint is stated as wells within three experiments | Extended Data Fig. 3 legend | \"(n = 3 independent experiments, ≥16 wells)\"",
+  "verbatim_locator | proposition: the Tg arm in Fig. 1f is untransduced | Fig. 1 legend | \"Tg (0 h) refers to control MEFs, not treated with control shRNAs\"",
+  "verbatim_locator | proposition: eIF2B activity and synthesis were compared at Tg 1 h | Fig. 1 legend | \"or treated with Tg (400 nM, 1 h)\"",
+  "verbatim_locator | proposition: the depleted arm is selected on puromycin | Methods | \"Day 4 denotes 1 day after passage of the cells in the presence of puromycin\"",
+  "verbatim_locator | proposition: the 4EGI-1 and CK2 panels are two experiments | Extended Data Fig. 8 legend | \"Representative western blots are shown (n = 2 independent experiments)\"",
+  "verbatim_locator | proposition: a second eIF2B-reduced preparation keeps a canonical Tg response | Results (mechanistic distinctions) | \"depleting eIF2β triggered the s-ISR, while cells maintained their ability to phosphorylate eIF2α and induce the c-ISR in response to Tg\"",
+  "verbatim_locator | proposition: the canonical-arm eIF4E independence is cited from earlier work | Results | \"We and others have previously shown that during the c-ISR, ATF4 induction is independent of the cap-binding protein eIF4E\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv169_isr_source_completion_sci_20261122/ADDENDUM_ADV169_ISR_SOURCE_COMPLETION_SCI_20261122.md"
+ ],
+ "prior_receipt": "FTR-20261122-40140574-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "4f4b0fb5b51392157bb83c2065f40d6508545daf1d4249ee93fb497b34419cd5",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Publisher PDF of Chen et al. 2025 on this host (34,391,319 bytes, SHA-256 as fingerprint, verified 2026-11-22; PMC12119373); licence CC BY-NC-ND, local only, not copied into git; supplements and source data fetched by plain request to the publisher static host and kept in scratch",
+ "study_id": {
+  "doi": "10.1038/s41586-025-08794-6",
+  "pmid": "40140574"
+ },
+ "workflow": "SCI successor Z ADV-169 (source completion of ADV-168: Methods body, source data, supplement and Extended Data Fig. 3e / 8e images), after a committed pre-registration that stated what had already been seen."
+}
