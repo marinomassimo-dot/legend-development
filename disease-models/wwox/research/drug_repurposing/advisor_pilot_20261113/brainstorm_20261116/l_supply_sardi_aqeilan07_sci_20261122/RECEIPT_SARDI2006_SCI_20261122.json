@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-22T22:43Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-22T22:43:30Z",
+ "event_id": "FTR-20261122-17018285-01",
+ "evidence_basis": [
+  "Sardi et al. 2006 Cell 127:185-197 (PMID 17018285), publisher PDF supplied by the operator in this session (13 pages, 895 KB, SHA-256 89907fb6b63d99301140688159c82e063ccf06f66572a2a508edd82b30ccbd74, recomputed); summary, introduction, all Results, Discussion, Experimental Procedures (main text) and statistics read as text; figure legends read, figure images not viewed (captions_only); Supplemental Data (Figs S1 to S6 and Supplemental Experimental Procedures) not supplied; the paper contains no WWOX or WW-domain wording (searched).",
+  "verbatim_locator | proposition: NRG1 antagonises CNTF-induced astrogenesis of rat E14.5 neural precursors and presenilin inhibition blocks it | Results (ErbB4 nuclear signaling affects precursor differentiation) | \"Surprisingly, NRG1 antagonized the effects of CNTF on astrogenesis (Figure 4A) without altering the ability of PDGF to induce NPs to adopt a neuronal fate (Figure 4B). Furthermore, the presenilin inhibitor DAPT blocked the effect of NRG1 on CNTF-induced astrogenesis\"",
+  "verbatim_locator | proposition: E4ICD associates with the GFAP and S100b promoters only after NRG1 and not under presenilin inhibition | Results (transcriptional repression) | \"E4ICD associates with the GFAP and S100b promoters in NPs, but only after treatment with NRG1 (Figure 5G). Moreover, these associations were blocked by presenilin inhibition\"",
+  "verbatim_locator | proposition: precursors were E14.5 rat telencephalon cultures | Methods (primary neural precursor cultures) | \"NPs were prepared from E14.5 rat telencephalons\"",
+  "verbatim_locator | proposition: expression of kinase-active E4ICD in wild-type cortex lowers GFAP | Results (in vivo) | \"expression of wild-type LexA-E4ICD significantly reduced the levels of GFAP compared to untransfected areas, whereas kinase-dead LexA-E4ICD did not\"",
+  "verbatim_locator | proposition: only the cleavable isoform rescues the knockout phenotype | Results (in vivo) | \"expression of cleavage-sensitive HER4 JMa, but not cleavage-resistant HER4 JMb, significantly reduced the GFAP expression levels (Figures 6D and 6E\"",
+  "verbatim_locator | proposition: differentiation assays use chi-square on cells, more than 300 cells in three experiments | Statistical analysis | \"Statistical significance for neuronal and astroglial differentiation assays was determined by c2. More than 300 cells were analyzed for every condition in each of three independent experiments\"",
+  "verbatim_locator | proposition: embryo number for the in vivo GFAP readouts | Methods (quantification of GFAP) | \"At least three independent embryos were analyzed for each experimental condition\"",
+  "verbatim_locator | proposition: presenilin 1 null cortex showed no GFAP difference (unpublished data) | Discussion | \"in GFAP expression between presenilin 1 / mice and their control littermates (S.P.S. and G.C., unpublished data)\"",
+  "verbatim_locator | proposition: ErbB4-null cortex GFAP mRNA and protein raised at E17.5 | Results (in vivo) | \"the levels of GFAP mRNA and protein were dramatically elevated in the cortical neurogenic layers\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/l_supply_sardi_aqeilan07_sci_20261122/RESULT_L_SUPPLY_SARDI2006_AQEILAN2007_SCI_20261122.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "89907fb6b63d99301140688159c82e063ccf06f66572a2a508edd82b30ccbd74",
+ "source_kind": "fulltext_local",
+ "source_locator": "Publisher PDF supplied by the operator (uploads cache of session 052bf24b), copied to files/fulltext/PMID17018285_Sardi2006_Cell_fulltext.pdf (untracked); not copied into git.",
+ "study_id": {
+  "doi": "10.1016/j.cell.2006.07.037",
+  "pmid": "17018285"
+ },
+ "workflow": "SCI successor Z, operator-supplied L list (read for the R3 P1 sign rule frozen 2026-11-19 and for IT59-Q01); read before this note was written, so no pre-registration beyond the R3 rules."
+}

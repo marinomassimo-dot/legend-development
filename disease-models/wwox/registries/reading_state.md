@@ -20,7 +20,7 @@ asserted by no receipt. `prior_receipt` means the reading this one builds on, an
 sharing a parent are the normal case under parallel branches.
 
 
-**1567 paper(s)** with at least one receipt · **2218 receipt(s)** · **37 paper(s) read in parallel** by two receipts sharing a parent.
+**1568 paper(s)** with at least one receipt · **2220 receipt(s)** · **37 paper(s) read in parallel** by two receipts sharing a parent.
 
 ## Papers read in parallel
 
@@ -174,6 +174,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 16941225 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | not_present | read | 1 |
 | PMID 16959561 | `abstract_only` | read | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | 1 |
 | PMID 16964330 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_present | not_read | not_read | 1 |
+| PMID 17018285 | `partial_fulltext_read` | read | read | read | read | captions_only | not_present | read | not_present | not_present | — | 1 |
 | PMID 17201726 | `abstract_only` | read | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | 1 |
 | PMID 17241159 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 3 |
 | PMID 17257402 | `partial_fulltext_read` | read | read | not_read | read | unavailable | unavailable | read | not_read | unavailable | not_read | 1 |
@@ -193,7 +194,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 17850214 | `partial_fulltext_read` | read | not_read | read | read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 17868033 | `abstract_only` | read | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | 1 |
 | PMID 17904534 | `abstract_only` | read | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | 1 |
-| PMID 17909041 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
+| PMID 17909041 | `partial_fulltext_read` | read | read | read | read | read | not_present | read | not_present | not_present | not_read | 2 |
 | PMID 17910587 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 17956988 | `partial_fulltext_read` | read | read | read | read | unavailable | unavailable | read | unavailable | unavailable | unavailable | 2 |
 | PMID 17962605 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_present | not_read | — | 1 |
