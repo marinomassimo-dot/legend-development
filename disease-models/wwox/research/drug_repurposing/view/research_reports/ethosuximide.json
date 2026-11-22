@@ -2,21 +2,41 @@
   "investigation": "INV-04",
   "title": "Ethosuximide in WWOX-related epilepsy",
   "date": "22 November 2026",
-  "summary": "One mouse study reported an effect on experimentally induced seizures after ethosuximide pretreatment. The result leaves WWOX specificity, spontaneous seizure control and benefit in children with WWOX-DEE unestablished.",
+  "summary": "In one mouse study, ethosuximide pretreatment lowered PTZ-provoked seizure scores. The result leaves WWOX specificity, spontaneous seizure control and benefit in children with WWOX-DEE unestablished.",
   "evidence": [
-    "Cheng and colleagues reported suppression of PTZ-provoked seizure activity in Wwox-null mice in Figure 7B. LEGEND's re-reading of the plotted group means found that the separation was mostly late in the observation period. The graph does not supply the individual trajectories needed to resolve the uncertainty of that time-window comparison.",
-    "Clinical evidence for childhood absence epilepsy concerns a different seizure syndrome. It cannot substitute for a WWOX-DEE study."
+    "Cheng et al. reported lower PTZ-provoked seizure scores in Wwox-null mice (Figure 7B). LEGEND’s re-reading of the group means found that most separation occurred late. Individual trajectories were unavailable.",
+    "Clinical evidence in childhood absence epilepsy concerns a different seizure syndrome."
   ],
   "limits": [
-    "The mouse study did not establish a treatment-by-genotype interaction. A result detected in one genotype and not in another is insufficient to establish specificity. Baseline differences and low seizure scores in the comparator arms also limit interpretation.",
-    "The study does not identify which T-type calcium channel, if any, mediated the result. It does not establish an effect on spontaneous seizures or on development in WWOX-DEE."
-  ],
-  "research_question": [
-    "Would the effect persist in an age-matched comparison with interpretable baseline activity in each genotype, and would it extend to spontaneous events? Measuring a treatment-by-genotype interaction would help distinguish WWOX-specific effects from general seizure suppression."
+    "The mouse result leaves effects on spontaneous seizures, development and benefit in WWOX-DEE unresolved."
   ],
   "sources": [
-    {"label": "Cheng et al. Wwox deficiency and seizure susceptibility in mice, Figure 7B. PMID 32000863.", "url": "https://pubmed.ncbi.nlm.nih.gov/32000863/"},
-    {"label": "Glauser et al. Randomised trial in childhood absence epilepsy. PMID 20164429.", "url": "https://pubmed.ncbi.nlm.nih.gov/20164429/"},
-    {"label": "LEGEND re-reading of Cheng Figure 7, methods and limitations.", "url": "https://github.com/marinomassimo-dot/legend-development/tree/main/disease-models/wwox/research/drug_repurposing/fig7_quant_ethosuximide_lithium_sci_20261115"}
+    {
+      "label": "Cheng et al. Wwox deficiency and seizure susceptibility in mice, Figure 7B. PMID 32000863.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32000863/"
+    },
+    {
+      "label": "Glauser et al. Randomised trial in childhood absence epilepsy. PMID 20164429.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20164429/"
+    },
+    {
+      "label": "LEGEND re-reading of Cheng Figure 7, methods and limitations.",
+      "url": "https://github.com/marinomassimo-dot/legend-development/tree/main/disease-models/wwox/research/drug_repurposing/fig7_quant_ethosuximide_lithium_sci_20261115"
+    }
+  ],
+  "graph": {
+    "evidence": "Lower PTZ seizure scores in Wwox-null mice.",
+    "inference": "Antiseizure signal in this PTZ assay.",
+    "hypothesis": "Wwox loss may modify the drug response.",
+    "experiment": "Test the treatment-by-genotype interaction."
+  },
+  "inference": [
+    "The result supports an effect on induced seizures in this mouse model. Baseline differences and low scores in comparator groups limit interpretation of the apparent genotype specificity."
+  ],
+  "hypothesis": [
+    "Ethosuximide could have a different effect in Wwox-deficient animals. The data leave open both a general antiseizure effect and the identity of any channel mediating the response."
+  ],
+  "experiment": [
+    "Compare treated and untreated groups across genotypes at the same age. Measure the treatment-by-genotype interaction and whether any effect extends to spontaneous seizures."
   ]
 }

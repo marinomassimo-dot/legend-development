@@ -11,21 +11,29 @@ from urllib.parse import urlsplit
 DIRECTORY = "view/research_reports"
 DISCLAIMER = "AI-curated research. Not medical advice."
 BASENAME = r"[a-z0-9]+(?:-[a-z0-9]+)*"
-SECTIONS = (
-    ("What the evidence shows", "evidence"),
-    ("What remains uncertain", "limits"),
-    ("Research question", "research_question"),
+STAGES = (
+    ("Data / Evidence", "evidence", "#246465", "#e6f2ef"),
+    ("Inference", "inference", "#2c5480", "#e9eff7"),
+    ("Hypothesis", "hypothesis", "#694a82", "#f1ebf6"),
+    ("Experiment", "experiment", "#82562a", "#faf0df"),
 )
 
 CSS = """
-body{font-family:sans-serif;color:#20313d;font-size:10.5pt;line-height:1.45}
-h1{font-family:serif;font-size:28pt;line-height:1.12;color:#153e54;margin:7pt 0 10pt}
-h2{font-size:12pt;color:#153e54;margin:14pt 0 4pt}
-p,li{margin:0 0 6pt}
+body{font-family:sans-serif;color:#20313d;font-size:10.3pt;line-height:1.36}
+h1{font-family:serif;font-size:27pt;line-height:1.08;color:#153e54;margin:6pt 0 7pt}
+h2{font-size:11.5pt;color:#153e54;margin:8pt 0 4pt}
+p,li{margin:0 0 4pt}
 a{color:#17587a}
 .meta{color:#345d6d;font-size:9pt}
-.notice{background:#eaf2f3;padding:8pt 10pt;margin:10pt 0}
-.summary{font-size:12pt;color:#163e4b;margin:12pt 0}
+.notice{background:#eaf2f3;padding:5pt 8pt;margin:7pt 0}
+.summary{font-size:11.4pt;color:#163e4b;margin:8pt 0}
+.graph{border-collapse:collapse;width:100%;margin:2pt 0 4pt;page-break-inside:avoid}
+.node{font-size:9.5pt;vertical-align:top;padding:6pt;width:22%}
+.node b{font-size:8.4pt}
+.arrow{text-align:center;vertical-align:middle;width:4%;font-size:15pt;color:#496572}
+.caption{font-size:8.4pt;color:#496572;margin:3pt 0 8pt}
+.stage{border-left:3pt solid;padding:4pt 7pt;margin:5pt 0 0}
+.sources{font-size:8.8pt;margin-top:4pt}
 """
 
 
@@ -35,11 +43,28 @@ def entries(dr: Path):
         data = json.loads(source.read_text(encoding="utf-8"))
         if not re.fullmatch(BASENAME, source.stem) or not re.fullmatch(r"INV-\d{2}", data["investigation"]):
             raise ValueError(f"Invalid report slug or investigation in {source.name}")
+        for label, key, _, _ in STAGES:
+            if not data["graph"].get(key, "").strip() or not any(paragraph.strip() for paragraph in data.get(key, [])):
+                raise ValueError(f"{source.name}: {label} needs a graph node and explanatory text")
         for ref in data["sources"]:
             url = urlsplit(ref["url"])
             if url.scheme != "https" or not url.hostname or url.username or url.password:
                 raise ValueError(f"Expected a public HTTPS source in {source.name}")
         yield source.stem, data
+
+
+def knowledge_graph(data: dict) -> str:
+    nodes = [
+        f'<td class="node" style="background:{tint}"><b style="color:{ink}">{label}</b><br>'
+        f'{escape(data["graph"][key])}</td>'
+        for label, key, ink, tint in STAGES
+    ]
+    arrow = '<td class="arrow">→</td>'
+    return (
+        '<h2>Knowledge graph</h2><table class="graph"><tr>'
+        + arrow.join(nodes)
+        + '</tr></table><p class="caption">Arrows show the reasoning from observations to a proposed test.</p>'
+    )
 
 
 def html_report(data: dict) -> str:
@@ -49,10 +74,13 @@ def html_report(data: dict) -> str:
         f'<div class="notice"><b>{DISCLAIMER}</b> This brief supports discussion with a qualified clinical team.</div>',
         f'<p class="summary">{escape(data["summary"])}</p>',
     ]
-    for heading, key in SECTIONS:
-        content.append(f"<h2>{heading}</h2>")
+    content.append(knowledge_graph(data))
+    for label, key, ink, tint in STAGES:
+        content.append(f'<h2 class="stage" style="color:{ink};background:{tint}">{label}</h2>')
         content.extend(f"<p>{escape(paragraph)}</p>" for paragraph in data[key])
-    content.append("<h2>Sources</h2><ol>")
+    content.append("<h2>Limits for WOREE</h2>")
+    content.extend(f"<p>{escape(paragraph)}</p>" for paragraph in data["limits"])
+    content.append('<h2>Sources</h2><ol class="sources">')
     for ref in data["sources"]:
         content.append(f'<li><a href="{escape(ref["url"], quote=True)}">{escape(ref["label"])}</a></li>')
     return "".join(content) + "</ol>"

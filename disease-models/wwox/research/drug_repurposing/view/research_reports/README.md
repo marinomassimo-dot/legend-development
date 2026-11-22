@@ -1,6 +1,6 @@
 # Printable compound research briefs
 
-When an in-depth study of a compound is ready to share, use the existing briefs here as templates. Add the dated English summary, the matching dashboard investigation ID and the public source links to one JSON file per report. Describe the evidence, the limits of transfer to WOREE and the remaining research question. Use only public evidence and omit individual patient details, dosing instructions and treatment recommendations.
+When an in-depth study of a compound is ready to share, use the existing briefs here as templates. Add the dated English summary, the matching dashboard investigation ID and the public source links to one JSON file per report. Use the four stages **Data / Evidence → Inference → Hypothesis → Experiment** in every brief. Give each stage a short node in the knowledge graph and explain it below. State which observations support the inference, which prediction remains open, what the proposed experiment would compare, and the limits of transfer to WOREE. Use only public evidence and omit individual patient details, dosing instructions and treatment recommendations.
 
 Build the printable PDF and regenerate the dashboard and its publication package from the repository root.
 
