@@ -546,7 +546,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2161,
-   "sha256": "6b27f79597034c5438a33b33c74778fbbbd13e6d1f85bdbbdf3057a402954960"
+   "sha256": "1837a2fbf126427765387984169d7bacb20714e9e956fbf8d4cdf5f12950dbce"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -561,8 +561,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 5021224,
-   "sha256": "d00d0cee8fa8d8a5881d1d07ad979d14252eafd7948b12fd1ac50ab3f6e080be"
+   "bytes": 5023966,
+   "sha256": "3b424feb053c18d8767785471535077c82a01900282c7fe990d441431bc13e39"
   },
   "reports/ethosuximide.pdf": {
    "bytes": 168171,
