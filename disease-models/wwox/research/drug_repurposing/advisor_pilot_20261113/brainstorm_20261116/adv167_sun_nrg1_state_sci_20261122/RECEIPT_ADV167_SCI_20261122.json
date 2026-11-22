@@ -1,0 +1,45 @@
+{
+ "analysis_at": "2026-11-22T00:15Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "read"
+ },
+ "event_at": "2026-11-22T00:15:00Z",
+ "event_id": "FTR-20261122-27641496-01",
+ "evidence_basis": [
+  "Sun et al. 2016 Neuron 92 (PMID 27641496, DOI 10.1016/j.neuron.2016.08.033): authors' institutional PDF (44 pages including the supplement; SHA-256 d7c4c58fdfa362eeca254869c1c34a7b89e1883de03cd8b1bada21a48fdfb50c verified) text-extracted; Summary, Results through the ocular-dominance section, the legends of Figs 2 to 8, the Experimental Procedures, Supplementary Tables S1 and S2, the Supplemental Procedures on ISOI and the animals, and the start of the Discussion were read; page images of Fig 2, 3, 6, 7 and 8 and Supplementary Fig 7 were viewed and bar values read from them are labelled approximate; the Introduction, Supplementary Figs S1 to S6 and S8 (S4 and S5 legends only) and the full Supplemental Procedures were not read. No source-data file exists for this article here, so no test was recomputed.",
+  "verbatim_locator | proposition: control PV cells do not respond to bath NRG1 in the synaptic-input and direct-uncaging readouts | Results (Exogenous NRG1 Restores Excitatory Input to Deprived PV Neurons) | \"does not significantly modulate local excitatory synaptic inputs or direct uncaging responses of control PV neurons\"",
+  "verbatim_locator | proposition: deprived PV cells do respond to bath NRG1 | Results (same section) | \"bath NRG1 rapidly increases the amplitude of excitatory synaptic input to 1\u20132 day deprived PV cells\"",
+  "verbatim_locator | proposition: PV-ErbB4 knockout abolishes the NRG1 effect on excitatory input in deprived PV cells | Results (Downstream NRG1 Signaling Modulates PV Neuron Responses) | \"bath NRG1 has no effect on excitatory synaptic inputs to monocular-deprived PV neurons\"",
+  "verbatim_locator | proposition: the evoked-IPSC response to NRG1 is state-conditional and absent in the PV-ErbB4 knockout | Results (NRG1 Enhances Cortical Inhibition) | \"Bath NRG1 increases evoked inhibitory postsynaptic currents (IPSCs) to monocular-deprived but not normal pyramidal neurons\"",
+  "verbatim_locator | proposition: the printed tests of the state contrast for the evoked-IPSC ratio | Fig. 7 legend | \"***p = 0.003 and ****p = 6.1E-04 (Mann-Whitney U tests)\"",
+  "verbatim_locator | proposition: the replicate unit of the synaptic tests is the cell | Experimental Procedures (Statistical Analyses) | \"Sample size n was defined as cell number, except in the case of quantitative immunochemical analysis and comparing the ocular dominance shift across treatments\"",
+  "verbatim_locator | proposition: intrinsic PV excitability is unchanged by NRG1 in both states | Results (Exogenous NRG1 Restores Excitatory Input to Deprived PV Neurons) | \"does not alter resting membrane potential or intrinsic membrane excitability in PV cells under normal or monocular deprivation conditions\"",
+  "verbatim_locator | proposition: phospho-ErbB4 in intact animals rests on three to four mice per condition at P = 0.05 | Fig. 2 legend | \"PV cell measurements were obtained from sections of three to four different mice for each condition. *p = 0.05\"",
+  "verbatim_locator | proposition: PV-Cre knockout of ErbB4 starts only when PV expression begins, about two weeks after birth | Supplemental Experimental Procedures (Transcranial intrinsic signal optical imaging) | \"Since PV gene expression starts around 2 weeks postnatally\"",
+  "verbatim_locator | proposition: ErbB4 was reduced, not eliminated, during the in vivo window | Supplemental Experimental Procedures (same section) | \"ErbB4 is reduced but not eliminated during the in vivo experimental time\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv167_sun_nrg1_state_sci_20261122/RESULT_ADV167_SUN_NRG1_STATE_SCI_20261122.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "d7c4c58fdfa362eeca254869c1c34a7b89e1883de03cd8b1bada21a48fdfb50c",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Authors' institutional PDF of Sun et al. 2016 on this host (9,530,101 bytes, SHA-256 as fingerprint, verified 2026-11-22; public article at PMC5310354)",
+ "study_id": {
+  "doi": "10.1016/j.neuron.2016.08.033",
+  "pmid": "27641496"
+ },
+ "workflow": "SCI successor Z ADV-167 (Sun 2016 state-by-treatment for RP-038 / INV-15 readout pairing): partial read of the article, legends, tables and supplement, figure images viewed for Fig 2, 3, 6, 7, 8 and S7, after a committed pre-registration."
+}

@@ -723,6 +723,15 @@
      "accepted_at": "2026-11-21T22:58:11Z",
      "evidence": "result disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv166_javed_early_ratio_vs_yield_sci_20261121/RESULT_ADV166_JAVED_EARLY_RATIO_VS_YIELD_SCI_20261121.md; pre-registration commit 36c9266ef; receipt FTR-20261121-42129570-01; self-evaluation addendum",
      "updated_at": "2026-11-21T23:03:51Z"
+    },
+    {
+     "step": "ADV-167: Sun et al. 2016 Neuron (PMID 27641496): is the response to NRG1/ErbB4 manipulation concentrated in the low-input (deprived) state and does it require PV-ErbB4, or is it a generic PV-drive increase; RP-038 'or' branch and INV-15 readout pairing; pre-register first; result file plus path to ADV; time-box 45 minutes",
+     "status": "DONE",
+     "owner": "science",
+     "source": "ADV-167 (assignment file in the root checkout; ADV message to SCI 052bf24b, Codex strategic review 02)",
+     "accepted_at": "2026-11-22T00:10:36Z",
+     "evidence": "result disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv167_sun_nrg1_state_sci_20261122/RESULT_ADV167_SUN_NRG1_STATE_SCI_20261122.md; pre-registration commit 6ab41b3e7; receipt FTR-20261122-27641496-01; self-evaluation addendum 2; D2 (baseline PV excitatory input as labelled state descriptor), row stays parked",
+     "updated_at": "2026-11-22T00:16:45Z"
     }
    ]
   }
@@ -1278,6 +1287,13 @@
    "at": "2026-11-21T22:58:11Z",
    "source": "ADV-166 (assignment file in the root checkout; ADV message to SCI 052bf24b, Codex return 07)",
    "step_sha256": "2a46551caffc",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-22T00:10:36Z",
+   "source": "ADV-167 (assignment file in the root checkout; ADV message to SCI 052bf24b, Codex strategic review 02)",
+   "step_sha256": "7aec9cfeb126",
    "reopened_block": false,
    "authorised_by": null
   }
