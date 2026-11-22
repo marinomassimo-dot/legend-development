@@ -422,3 +422,5 @@
 {"evidence": "SendMessage receipt msg_id 3944edfc-ead2-4cff-a86e-7db2da18a3e6, host clock 04:38Z; recipient busy at send (quiet 25 min), in its inbox", "id": "ADV-170", "state": "SENT", "to": ["IT Orchestrator - CURRENT 6a8c1a55"], "utc": "2026-11-22T04:38:43Z"}
 {"assessment": "HOST", "id": "ADV-171", "key": "ma-2025-s1-data-unread-sheets-pre-onset-lipid-proteome-sign-for-rp-036-and-rp-039-sci", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-22T06:36:30Z"}
 {"evidence": "SendMessage receipt msg_id 438a8e80-2d53-42e7-aec1-2a0935894349, host clock 06:36Z", "id": "ADV-171", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-22T06:36:42Z"}
+{"assessment": "HOST", "id": "ADV-172", "key": "one-send-path-entry-point-that-suggests-the-raw-role-orchestrator-as-an-address-he", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-22T06:50:36Z"}
+{"evidence": "SendMessage receipt msg_id 68cc62c6-fb51-45d9-8d25-4e143d5839b9, host clock 06:50Z", "id": "ADV-172", "state": "SENT", "to": ["HE - CURRENT e052ca19"], "utc": "2026-11-22T06:50:46Z"}
