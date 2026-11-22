@@ -750,6 +750,13 @@
      "accepted_at": "2026-11-22T04:22:53Z",
      "evidence": "Addendum, receipt FTR-20261122-40140574-02, self-evaluation addendum 4: Part 1 REWORD (one narrowed optional INV-02 clause), Part 2 REJECT as new work",
      "updated_at": "2026-11-22T04:30:52Z"
+    },
+    {
+     "step": "ADV-171: inventory the 28 unread sheets of the Ma 2025 S1 Data workbook; pre-onset lipid, proteome, synapse or energy sign for RP-036 / RP-039 (step 1 alone is a valid exit)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-171 (cross-session message from ADV a5e6f2ad, assignment file ADV-171.md)",
+     "accepted_at": "2026-11-22T06:36:50Z"
     }
    ]
   }
@@ -1326,6 +1333,13 @@
    "at": "2026-11-22T04:22:53Z",
    "source": "ADV-169 (assignment file in the root checkout; ADV message to SCI 052bf24b, Codex return 11)",
    "step_sha256": "a9f1884f9e71",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-22T06:36:50Z",
+   "source": "ADV-171 (cross-session message from ADV a5e6f2ad, assignment file ADV-171.md)",
+   "step_sha256": "43b200b79a69",
    "reopened_block": false,
    "authorised_by": null
   }
