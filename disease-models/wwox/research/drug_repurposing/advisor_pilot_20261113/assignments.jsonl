@@ -446,3 +446,5 @@
 {"evidence": "SendMessage receipt msg_id 6b578eca-80fe-4cca-b6b6-edad06fd96a4, host clock 18:55Z", "id": "ADV-182", "state": "SENT", "to": ["IT Orchestrator - CURRENT 6a8c1a55"], "utc": "2026-11-22T18:53:18Z"}
 {"assessment": "HOST", "id": "ADV-183", "key": "routing-row-for-repurposing-research-reports-test-tool-routing", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-22T22:36:05Z"}
 {"evidence": "SendMessage receipt msg_id a6bb3984-eb18-4c91-b0e0-3976c39506bc, host clock 22:42Z", "id": "ADV-183", "state": "SENT", "to": ["HE - CURRENT e052ca19"], "utc": "2026-11-22T22:36:06Z"}
+{"assessment": "HOST", "id": "ADV-184", "key": "lazzari-2026-slc2a1-variants-discriminator-for-inv16-step1-science", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-22T22:42:57Z"}
+{"evidence": "SendMessage receipt msg_id 4300a770-b637-478a-84e9-e615e488792e, host clock 22:44Z", "id": "ADV-184", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-22T22:43:15Z"}
