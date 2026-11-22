@@ -33,7 +33,14 @@ a{color:#17587a}
 .arrow{text-align:center;vertical-align:middle;width:4%;font-size:15pt;color:#496572}
 .caption{font-size:8.4pt;color:#496572;margin:3pt 0 8pt}
 .stage{border-left:3pt solid;padding:4pt 7pt;margin:5pt 0 0}
-.sources{font-size:8.8pt;margin-top:4pt}
+.sources{font-size:9.2pt;margin-top:4pt}
+.chapter{page-break-before:always}
+.chapter h2.title{font-family:serif;font-size:25pt;line-height:1.1;margin:5pt 0 8pt}
+.chapter p{margin-bottom:7pt}
+.comparison{border-collapse:collapse;width:100%;margin:7pt 0 11pt}
+.comparison th{font-size:9.5pt;vertical-align:top;text-align:left;color:#fff;background:#245467;padding:7pt}
+.comparison td{font-size:9.5pt;vertical-align:top;background:#f0f5f5;padding:7pt;border-bottom:1pt solid #fff}
+.contents{padding:6pt 9pt;background:#f1f4f7;color:#294b5d;font-size:9.2pt}
 """
 
 
@@ -46,7 +53,8 @@ def entries(dr: Path):
         for label, key, _, _ in STAGES:
             if not data["graph"].get(key, "").strip() or not any(paragraph.strip() for paragraph in data.get(key, [])):
                 raise ValueError(f"{source.name}: {label} needs a graph node and explanatory text")
-        for ref in data["sources"]:
+        sources = data["sources"] + [ref for chapter in data.get("chapters", []) for ref in chapter["sources"]]
+        for ref in sources:
             url = urlsplit(ref["url"])
             if url.scheme != "https" or not url.hostname or url.username or url.password:
                 raise ValueError(f"Expected a public HTTPS source in {source.name}")
@@ -67,9 +75,38 @@ def knowledge_graph(data: dict) -> str:
     )
 
 
+def source_list(sources: list[dict]) -> str:
+    items = "".join(
+        f'<li><a href="{escape(ref["url"], quote=True)}">{escape(ref["label"])}</a></li>'
+        for ref in sources
+    )
+    return '<h2>Sources</h2><ol class="sources">' + items + "</ol>"
+
+
+def chapter_html(number: int, chapter: dict) -> str:
+    content = [
+        f'<section class="chapter"><p class="meta">LEGEND · EVIDENCE DOSSIER · {number:02d}</p>',
+        f'<h2 class="title">{escape(chapter["title"])}</h2>',
+        f'<p class="summary">{escape(chapter["takeaway"])}</p>',
+    ]
+    if chapter.get("table"):
+        headings = "".join(f"<th>{escape(text)}</th>" for text in chapter["table"]["columns"])
+        rows = [
+            "<tr>" + "".join(f"<td>{escape(text)}</td>" for text in row) + "</tr>"
+            for row in chapter["table"]["rows"]
+        ]
+        content.append(f'<table class="comparison"><tr>{headings}</tr>{"".join(rows)}</table>')
+    for section in chapter["sections"]:
+        content.append(f'<h2>{escape(section["label"])}</h2>')
+        content.extend(f"<p>{escape(paragraph)}</p>" for paragraph in section["paragraphs"])
+    content.append(source_list(chapter["sources"]))
+    content.append("</section>")
+    return "".join(content)
+
+
 def html_report(data: dict) -> str:
     content = [
-        '<p class="meta">LEGEND · WWOX / WOREE · RESEARCH BRIEF</p>',
+        '<p class="meta">LEGEND · WWOX / WOREE · RESEARCH REPORT</p>',
         f'<h1>{escape(data["title"])}</h1><p class="meta">Evidence reviewed through {escape(data["date"])}</p>',
         f'<div class="notice"><b>{DISCLAIMER}</b> This brief supports discussion with a qualified clinical team.</div>',
         f'<p class="summary">{escape(data["summary"])}</p>',
@@ -80,10 +117,13 @@ def html_report(data: dict) -> str:
         content.extend(f"<p>{escape(paragraph)}</p>" for paragraph in data[key])
     content.append("<h2>Limits for WOREE</h2>")
     content.extend(f"<p>{escape(paragraph)}</p>" for paragraph in data["limits"])
-    content.append('<h2>Sources</h2><ol class="sources">')
-    for ref in data["sources"]:
-        content.append(f'<li><a href="{escape(ref["url"], quote=True)}">{escape(ref["label"])}</a></li>')
-    return "".join(content) + "</ol>"
+    content.append(source_list(data["sources"]))
+    chapters = data.get("chapters", [])
+    if chapters:
+        topics = " · ".join(f"{number:02d} {chapter['title']}" for number, chapter in enumerate(chapters, 1))
+        content.append(f'<p class="contents"><b>In this report</b><br>{escape(topics)}</p>')
+        content.extend(chapter_html(number, chapter) for number, chapter in enumerate(chapters, 1))
+    return "".join(content)
 
 
 def render_pdf(data: dict) -> bytes:
@@ -95,6 +135,19 @@ def render_pdf(data: dict) -> bytes:
     document = story.write_with_links(lambda *_: (paper, content, None))
     try:
         document.set_metadata({"title": data["title"], "author": "LEGEND", "subject": DISCLAIMER})
+        chapters = data.get("chapters", [])
+        bookmarks = {f"LEGEND · EVIDENCE DOSSIER · {number:02d}": chapter["title"]
+                     for number, chapter in enumerate(chapters, 1)}
+        outline = [[1, data["title"], 1]]
+        for page in document:
+            first_line = page.get_text().splitlines()[0]
+            if first_line in bookmarks:
+                outline.append([1, bookmarks[first_line], page.number + 1])
+            y = page.rect.height - 29
+            page.draw_line((48, y - 10), (page.rect.width - 48, y - 10), color=(0.75, 0.82, 0.84), width=0.6)
+            page.insert_text((48, y), "LEGEND  /  WWOX RESEARCH", fontsize=8, color=(0.21, 0.36, 0.42))
+            page.insert_text((page.rect.width - 88, y), f"{page.number + 1}  /  {len(document)}", fontsize=8, color=(0.21, 0.36, 0.42))
+        document.set_toc(outline)
         return document.tobytes(garbage=4, deflate=True, no_new_id=True)
     finally:
         document.close()

@@ -33,6 +33,441 @@
     "A pore blocker may suppress Wwox-related bursts when its effect on NMDA receptor activity is comparable to that of d-APV."
   ],
   "experiment": [
-    "Compare ketamine and d-APV in the same model with a time-matched control. Measure receptor inhibition, burst frequency and activity after washout."
+    "Compare Ketamine, memantine and d-APV in the same slice model with a time-matched control. Measure receptor inhibition, burst frequency, sag and activity after washout."
+  ],
+  "chapters": [
+    {
+      "title": "The WWOX finding",
+      "takeaway": "One preparation establishes that NMDA receptor activation matters for these bursts. It leaves open what initiated the bursts and whether a pore blocker reproduces the effect.",
+      "table": {
+        "columns": [
+          "Observation",
+          "What was measured",
+          "Boundary"
+        ],
+        "rows": [
+          [
+            "Spontaneous bursts",
+            "36/42 neuronal Wwox-knockout slices, 4/23 heterozygous slices, 0/11 wild-type slices",
+            "Cortical slices at postnatal days 13–17. Slices and bursts are nested within animals."
+          ],
+          [
+            "d-APV",
+            "Abolished bursts in five slices from three knockout animals",
+            "Competitive antagonist. Ketamine and memantine were not tested."
+          ],
+          [
+            "Carbenoxolone",
+            "Reported 87% lower frequency and no reversal after washout",
+            "Nonselective; a pannexin blocker failed to reproduce the effect. The paper’s duration and amplitude descriptions differ from the figure."
+          ],
+          [
+            "d-APV washout",
+            "Frequency bar about 1.8× baseline by image reading",
+            "The error bar includes baseline. The text describes recovery. Rebound remains unproven."
+          ]
+        ]
+      },
+      "sections": [
+        {
+          "label": "Data / Evidence",
+          "paragraphs": [
+            "The published electrophysiology points to neocortical hyperexcitability, smaller spontaneous inhibitory currents and increased sag. The separate Wwox studies that used ketamine for anaesthesia supplied no controlled seizure endpoint for ketamine."
+          ]
+        },
+        {
+          "label": "Inference",
+          "paragraphs": [
+            "A regenerative burst can depend on NMDA receptors even if a change in inhibition, network drive or intrinsic excitability sets it off. The evidence for pharmacological burst abolition still traces back to one laboratory and one preparation."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Breton et al. · Figure 3 and cortical slice physiology · PMID 34634460",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34634460/"
+        },
+        {
+          "label": "Repudi et al. · Neuronal Wwox model and incidental anaesthesia · PMID 34747138",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34747138/"
+        },
+        {
+          "label": "LEGEND full-text and figure audit · B1 and dated corrections",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ketamine_deep_adv_20261117/KDS_LANE_B1_B4_D_SCI_20261117.md"
+        }
+      ]
+    },
+    {
+      "title": "Targets, kinetics and exposure",
+      "takeaway": "The transfer from d-APV to Ketamine requires two comparisons: receptor action under active conditions and the exposure at which each effect was measured.",
+      "table": {
+        "columns": [
+          "Route",
+          "Evidence from other systems",
+          "Transfer limit"
+        ],
+        "rows": [
+          [
+            "NMDA pore block",
+            "Ketamine and memantine require channel activity for block and unblock. One culture comparison reported 86% vs 71% trapping.",
+            "Assay, Mg²⁺, voltage and subunits affect apparent potency. These fractions were not measured in the Wwox slice."
+          ],
+          [
+            "HCN1 / Ih",
+            "Ketamine reduced Ih in cortical pyramidal neurons at a nearby developmental age. The effect disappeared in HCN1-knockout neurons.",
+            "Plausible rival if sag and burst frequency change together. Wwox-dependent sensitivity is unknown."
+          ],
+          [
+            "PV interneurons",
+            "GluN2A-dependent effects on parvalbumin interneurons were observed in adult visual cortex.",
+            "A clue to disinhibition at shallow block. Cell type, age and preparation differ."
+          ],
+          [
+            "Ex vivo transfer",
+            "S-ketamine suppressed induced events in adult hippocampal slices without magnesium. The reported bath observation started at 100 µM.",
+            "Different preparation. About 11× the highest total human plasma peak in the sources reached, around 8.9 µM."
+          ]
+        ]
+      },
+      "sections": [
+        {
+          "label": "Inference",
+          "paragraphs": [
+            "The pharmacokinetic audit distinguished total plasma, free plasma, CSF, brain and bath exposure. Their relationships were unmeasured in the relevant childhood status epilepticus setting. An observed human peak is neither a clinical target nor a physical ceiling."
+          ]
+        },
+        {
+          "label": "Hypothesis",
+          "paragraphs": [
+            "Matching evoked NMDA inhibition can separate some alternatives. Residual pore occupancy and the effect of recording probes on untrapping could still make two nominally matched arms behave differently."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Chen et al. · HCN1 mechanism · PMID 19158287",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19158287/"
+        },
+        {
+          "label": "Riepe et al. · Ex vivo hippocampal report · PMID 42794650",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42794650/"
+        },
+        {
+          "label": "LEGEND exposure audit and blind check",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ketamine_deep_adv_20261117/KDS_PK_RANGE_SCI_20261117.md"
+        },
+        {
+          "label": "LEGEND primary-source kinetics comparison",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv050_nmdar_agents_sci_20261118/ADV050_NMDAR_AGENTS_VS_KETAMINE_SCI_20261118.md"
+        }
+      ]
+    },
+    {
+      "title": "Clinical evidence by endpoint",
+      "takeaway": "The paediatric literature addresses several different decisions. It cannot be pooled into a WOREE response estimate.",
+      "table": {
+        "columns": [
+          "Setting",
+          "Data / Evidence",
+          "What the result supports"
+        ],
+        "rows": [
+          [
+            "Initial convulsive status epilepticus",
+            "Ket-Mid randomised 144 children. Clinical cessation at five minutes: 76% with ketamine plus midazolam, 21% with placebo plus midazolam.",
+            "A first-line add-on result in mixed causes. The laboratory used the abstract."
+          ],
+          [
+            "Refractory convulsive status epilepticus",
+            "KETASER01 stopped at 10 participants; 2/5 in each arm met the study endpoint. Observational series report responses with co-treatment.",
+            "Too few randomised data for comparative efficacy. Observational timing and background care limit attribution."
+          ],
+          [
+            "Very young infants",
+            "In a three-infant series, seizure resolution and changes in co-infusions were not aligned in a way that isolates ketamine.",
+            "A record of treatment experience. It does not support assigning responders to ketamine alone."
+          ],
+          [
+            "Maintenance and development",
+            "Memantine trial in mixed DEE lists 9/27 vs 2/27 on a composite crossover outcome. The paired overlap is unavailable to the team.",
+            "Trial summaries leave paired significance and harms unresolved. No WOREE developmental benefit established."
+          ]
+        ]
+      },
+      "sections": [
+        {
+          "label": "Inference",
+          "paragraphs": [
+            "The original 24/30 pooled claim and proposed genetically favourable subgroup failed review. An ATP1A2 case supplied concurrent add-on treatment, not a validated ketamine-to-memantine sequence. Other cases used different orders and co-interventions."
+          ]
+        },
+        {
+          "label": "Data / Evidence depth",
+          "paragraphs": [
+            "The team checked the infant series in full. Full-text routes remained blocked for key memantine, Kuki and Rosati papers. No underlying patient records, treatment plan or timings for individual patients are included here."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ket-Mid randomized trial · published abstract",
+          "url": "https://www.sciencedirect.com/science/article/pii/S088789942500075X"
+        },
+        {
+          "label": "KETASER01 · early termination · PMID 35833327",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35833327/"
+        },
+        {
+          "label": "DeVine et al. · infant case series · PMID 37139250",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37139250/"
+        },
+        {
+          "label": "Schiller et al. · memantine crossover · PMID 36256600",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36256600/"
+        },
+        {
+          "label": "LEGEND access and interpretation audit",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ketamine_deep_adv_20261117/ADV040_FULLTEXT_ROUTES_SCI_20261118.md"
+        }
+      ]
+    },
+    {
+      "title": "Comparators and safety",
+      "takeaway": "Evidence changes with the endpoint, age, exposure duration and comparator. The strongest alternative for a clinical syndrome may answer a different question from the best preclinical probe.",
+      "table": {
+        "columns": [
+          "Comparison",
+          "What the team found",
+          "Limit for WOREE"
+        ],
+        "rows": [
+          [
+            "Ketamine and memantine",
+            "Ketamine has more direct acute-status evidence; memantine is a useful pore-blocker comparator. Other NMDA agents offer narrower mechanistic probes.",
+            "None of these comparisons demonstrates a disease-specific benefit."
+          ],
+          [
+            "Lithium and ethosuximide",
+            "Both have one in vivo global-Wwox-null provoked-seizure experiment. Lithium also showed an effect in wild type.",
+            "No treatment-by-genotype test. Different endpoint and preparation from the Ketamine question."
+          ],
+          [
+            "Other syndrome-specific approaches",
+            "Controlled trials exist in other paediatric disorders for established medicines or dietary approaches.",
+            "Direct comparison requires a matched syndrome, seizure type, endpoint and developmental context."
+          ],
+          [
+            "Short vs prolonged exposure",
+            "The safety audit separated procedural sedation, intensive-care series, neonatal animal studies and case reports.",
+            "Prolonged exposure and long-term development in infants with WOREE remain unmeasured."
+          ]
+        ]
+      },
+      "sections": [
+        {
+          "label": "Data / Evidence",
+          "paragraphs": [
+            "Published reports include electrographic seizure provocation, haemodynamic and airway events. Hepatobiliary and urinary events with prolonged or repeated use are mainly case or intensive-care evidence. Incidence from brief procedural sedation cannot be moved to prolonged exposure."
+          ]
+        },
+        {
+          "label": "Limits for WOREE",
+          "paragraphs": [
+            "The laboratory also checked glucose, retinal and optic phenotypes. Ocular effects such as nystagmus and raised intraocular pressure have been recorded outside WOREE. The available literature could not quantify genotype-specific metabolic or optic risk."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cheng et al. · Figure 7 · PMID 32000863",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32000863/"
+        },
+        {
+          "label": "Seizure-provocation reports · review included in the audit · PMID 39918155",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39918155/"
+        },
+        {
+          "label": "LEGEND harms audit by exposure and preparation",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_ketamine_lanes_20261117/p4_harms/REPORT.md"
+        },
+        {
+          "label": "LEGEND metabolic and ocular review",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_ketamine_lanes_20261117/p6_metabolic_ocular/REPORT.md"
+        }
+      ]
+    },
+    {
+      "title": "Follow-up comparisons",
+      "takeaway": "After the Ketamine review, the team explored alternative agents and the measurements that would let their effects be compared fairly.",
+      "table": {
+        "columns": [
+          "Research branch",
+          "What the follow-up added",
+          "What is still needed"
+        ],
+        "rows": [
+          [
+            "Vigabatrin case audit",
+            "Exposure recorded in 22 children across 10 reports. Response stated for 11, of whom eight had qualified reports of response. Co-treatment and missing outcomes limit attribution.",
+            "Syndrome and age-specific measures, with ocular risk and existing optic involvement considered separately."
+          ],
+          [
+            "Age and seizure type",
+            "Young-rodent data showed that a compound can suppress generalised events while increasing smaller events. Much of the evidence came from rat studies and related reports.",
+            "Prespecify age, seizure types and EEG or behavioural endpoints. Track motor impairment separately from seizure scores."
+          ],
+          [
+            "T-type calcium currents",
+            "Lithium and Ethosuximide provided in vivo provocation comparators. The T-type mechanism of Ethosuximide remained unresolved.",
+            "Measure current and exposure in the relevant preparation before assigning a CaV3 mechanism."
+          ],
+          [
+            "Chloride and GABA",
+            "The chloride audit identified a missing Wwox-specific measurement upstream of several proposed agents. NKCC1 and KCC2 evidence transfers from other settings.",
+            "Establish how GABA acts in the selected Wwox model and age range before prioritising chloride-directed interventions."
+          ]
+        ]
+      },
+      "sections": [
+        {
+          "label": "Inference",
+          "paragraphs": [
+            "The more informative comparisons follow the question: acute rescue, spontaneous burden, induced seizure threshold, developmental outcomes or tolerability. The laboratory found no single compound that led on all of them."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "LEGEND comparative evidence by endpoint",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv053_20261118/COMPARISON_BY_ENDPOINT_ADV053_IT_20261118.md"
+        },
+        {
+          "label": "LEGEND vigabatrin case and risk audit",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv056_20261118/RESULT_ADV056_VIGABATRIN_IT_20261118.md"
+        },
+        {
+          "label": "LEGEND age-window review",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv054_age_window_sci_20261118/ADV054_AGE_WINDOW_PER_CANDIDATE_SCI_20261118.md"
+        },
+        {
+          "label": "LEGEND chloride evidence transfer ledger",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv065c_transfer_sci_20261118/TRANSFER_LEDGER_CHLORIDE_LEVERS_ADV065C_SCI_20261118.md"
+        }
+      ]
+    },
+    {
+      "title": "Independent review",
+      "takeaway": "The audit strengthened the case for a narrowly defined mechanistic comparison and removed several claims that had made the drug look more specific than the data justified.",
+      "table": {
+        "columns": [
+          "Claim family",
+          "Audit result",
+          "Why it matters"
+        ],
+        "rows": [
+          [
+            "Unique mechanism match",
+            "Overstated. d-APV was the slice reagent. The relevant experimental evidence has one origin.",
+            "A pore-blocker result is still needed."
+          ],
+          [
+            "Pathway coverage percentages",
+            "Arithmetic reproduced under the source graph; estimates changed when node definitions and the denominator changed.",
+            "A graph-coverage score does not measure drug activity or predicted benefit."
+          ],
+          [
+            "GSK3β duration switch",
+            "Only two of nine initial labels matched the paper in one audit. Stress model, age, exposure and measurement differed.",
+            "The apparent short-versus-long reversal did not survive. A signalling change cannot by itself establish clinical harm or benefit."
+          ],
+          [
+            "Developmental collision and chronic maintenance",
+            "Other-species and other-disorder signals kept as transfers. The memantine crossover and ATP1A2 sequence had unresolved attribution.",
+            "No comparative superiority claim and no patient-treatment sequence follow."
+          ]
+        ]
+      },
+      "sections": [
+        {
+          "label": "Data / Evidence",
+          "paragraphs": [
+            "Checks included the source identifiers and quotations, independent appraisal of the cell and animal work, re-reading figures, verification of the pharmacokinetic arithmetic and comparisons by endpoint. Many citations existed and quotations matched while their original interpretation needed correction.",
+            "The audit found all 25 cited PMIDs and matched 23 of 24 quotations. Those checks were kept separate from judging what each citation actually supported."
+          ]
+        },
+        {
+          "label": "Inference",
+          "paragraphs": [
+            "The model without slow adaptation returned to baseline and missed the reported washout overshoot. A slow-adaptation model can generate rebound by construction. Scenario weights and simulated outcomes are exploratory, with no validated predictive probability."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "LEGEND synthesis · K1–K14 and dated corrections",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ketamine_deep_adv_20261117/KDS_SYNTHESIS_FOR_OPERATOR_ADV_20261117.md"
+        },
+        {
+          "label": "LEGEND corrections after independent clinical and safety review",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_ketamine_lanes_20261117/CORRECTIONS_AFTER_BLIND_VERIFICATION_IT_20261117.md"
+        },
+        {
+          "label": "LEGEND model review · what each rival can generate",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv046_review_sci_20261118/PART_B_RESULT_ADV046_SCI_20261118.md"
+        }
+      ]
+    },
+    {
+      "title": "Decisive experiments",
+      "takeaway": "The team’s most informative follow-up is a comparison in the same cortical preparation, with interpretation specified before observing the outcome.",
+      "table": {
+        "columns": [
+          "Hypothesis",
+          "What would make it more credible",
+          "What would weaken it"
+        ],
+        "rows": [
+          [
+            "A pore-blocker class effect",
+            "Both pore blockers suppress bursts at comparable evoked NMDA block, with recovery tracked beside d-APV and vehicle.",
+            "Both fail at verified depth while d-APV reproduces its effect in the same preparation. One failed agent only weakens that agent."
+          ],
+          [
+            "Ketamine-specific route",
+            "Ketamine differs from memantine at the same evoked depth and the difference tracks sag or another independent readout.",
+            "The agents converge and sag does not distinguish them. Different trapping or effective block must still be considered."
+          ],
+          [
+            "Withdrawal rebound or persistent suppression",
+            "Time course after washout differs from a time-matched control and can be related to recovery of receptor function.",
+            "Apparent persistence disappears as receptor occupancy recovers or falls within time-matched variability."
+          ]
+        ]
+      },
+      "sections": [
+        {
+          "label": "Experiment",
+          "paragraphs": [
+            "The proposed preclinical set uses d-APV as a reference and Ketamine and memantine as pore-blocker comparators, with vehicle. Record burst rate, evoked inhibition, Ih sag and early and later washout in the same preparation. Record the probe schedule because channel opening can release a trapped drug. Animal-level replication and a reproducible baseline are required for interpretation."
+          ]
+        },
+        {
+          "label": "Decision boundary",
+          "paragraphs": [
+            "A reproducible, well-controlled result in that preparation would justify asking whether spontaneous activity in an intact model changes. It would leave efficacy, development and safety in children open. GluN2B-selective modulation is a further mechanistic question with its own comparator."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "LEGEND kinetics comparison and outcome table",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv050_nmdar_agents_sci_20261118/ADV050_NMDAR_AGENTS_VS_KETAMINE_SCI_20261118.md"
+        },
+        {
+          "label": "LEGEND integrated experiment and verification record",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/ketamine_deep_adv_20261117/KDS_SYNTHESIS_FOR_OPERATOR_ADV_20261117.md"
+        }
+      ]
+    }
   ]
 }
