@@ -1,0 +1,221 @@
+{
+  "investigation": "INV-04",
+  "title": "Ethosuximide in WOREE",
+  "date": "22 November 2026",
+  "summary": "In one mouse study, ethosuximide pretreatment lowered PTZ-provoked seizure scores. The result leaves WWOX specificity, spontaneous seizure control and benefit in children with WWOX-DEE unestablished.",
+  "evidence": [
+    "Cheng et al. reported lower PTZ-provoked seizure scores in Wwox-null mice (Figure 7B). LEGEND’s re-reading of the group means found that most separation occurred late. Individual trajectories were unavailable.",
+    "Clinical evidence in childhood absence epilepsy concerns a different seizure syndrome."
+  ],
+  "limits": [
+    "The mouse result leaves effects on spontaneous seizures, development and benefit in WWOX-DEE unresolved."
+  ],
+  "sources": [
+    {
+      "label": "Cheng et al. Wwox deficiency and seizure susceptibility in mice, Figure 7B. PMID 32000863.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32000863/"
+    },
+    {
+      "label": "Glauser et al. Randomised trial in childhood absence epilepsy. PMID 20164429.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20164429/"
+    },
+    {
+      "label": "LEGEND re-reading of Cheng Figure 7, methods and limitations.",
+      "url": "https://github.com/marinomassimo-dot/legend-development/tree/main/disease-models/wwox/research/drug_repurposing/fig7_quant_ethosuximide_lithium_sci_20261115"
+    }
+  ],
+  "graph": {
+    "evidence": "Lower PTZ seizure scores in Wwox-null mice.",
+    "inference": "Antiseizure signal in this PTZ assay.",
+    "hypothesis": "Wwox loss may modify the drug response.",
+    "experiment": "Test the treatment-by-genotype interaction."
+  },
+  "inference": [
+    "The result supports an effect on induced seizures in this mouse model. Baseline differences and low scores in comparator groups limit interpretation of the apparent genotype specificity."
+  ],
+  "hypothesis": [
+    "Ethosuximide could have a different effect in Wwox-deficient animals. The data leave open both a general antiseizure effect and the identity of any channel mediating the response."
+  ],
+  "experiment": [
+    "Compare treated and untreated groups across genotypes at the same age. Measure the treatment-by-genotype interaction and whether any effect extends to spontaneous seizures."
+  ],
+  "chapters": [
+    {
+      "title": "Figure 7 and genotype specificity",
+      "takeaway": "LEGEND re-extracted the curves rather than treating the figure’s significance marks as evidence of a treatment-by-genotype interaction.",
+      "table": {
+        "columns": [
+          "Window in Wwox-null mice",
+          "Difference in mean seizure stage",
+          "Reading"
+        ],
+        "rows": [
+          [
+            "Minutes 1–10",
+            "+0.76",
+            "PTZ alone higher."
+          ],
+          [
+            "Minutes 10–30",
+            "−0.34",
+            "The direction reverses in the middle of the hour."
+          ],
+          [
+            "Minutes 30–60",
+            "+1.08",
+            "PTZ alone about 1.87 vs about 0.80 with pretreatment; six animals per arm."
+          ],
+          [
+            "Whole hour",
+            "+0.62",
+            "Whole-window summary obscures the reversal."
+          ]
+        ]
+      },
+      "sections": [
+        {
+          "label": "Data / Evidence",
+          "paragraphs": [
+            "The values are approximate extractions of group means, expressed as PTZ alone minus PTZ plus ethosuximide. The two raster versions of the same figure agreed on the main pattern. They are two readings of one experiment. Some wild-type and heterozygous markers overlapped."
+          ]
+        },
+        {
+          "label": "Inference",
+          "paragraphs": [
+            "Minutes from a single animal are correlated. Using alternative dependence assumptions, the estimated standard error of the late gap spans about 0.14–0.72 stage. The group curves cannot establish the animal-level uncertainty. Wild-type and heterozygote groups also began nearer the scale floor."
+          ]
+        },
+        {
+          "label": "Comparator",
+          "paragraphs": [
+            "Lithium reduced seizure scores in wild-type mice as well as the two other genotypes in Figure 7D. That comparison illustrates why a larger difference in null animals with higher baseline scores does not establish specificity."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cheng et al. · Figure 7B and 7D · PMID 32000863",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32000863/"
+        },
+        {
+          "label": "LEGEND curve extraction, validation and uncertainty brackets",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/fig7_quant_ethosuximide_lithium_sci_20261115/README.md"
+        }
+      ]
+    },
+    {
+      "title": "Exposure and competing mechanisms",
+      "takeaway": "The lab explored whether concentrations in the young mouse could reach a pharmacologically informative range. Two routes yielded bounds; neither supplied a juvenile measurement.",
+      "table": {
+        "columns": [
+          "Route",
+          "Total brain concentration scenario",
+          "Interpretation"
+        ],
+        "rows": [
+          [
+            "Bottom-up bound",
+            "0.22–2.2 mM",
+            "Straddles the lower T-current benchmark and remains below the higher reading."
+          ],
+          [
+            "Adult anchor, per wet tissue",
+            "0.71–4.2 mM",
+            "Above the lower benchmark in this scenario; the adult anchor is already at or above a simple mass-balance ceiling."
+          ],
+          [
+            "Alternative homogenate reading",
+            "2.1–12.6 mM",
+            "Disfavoured unit interpretation. It dominates the upper tail and should not be read as equally credible."
+          ]
+        ]
+      },
+      "sections": [
+        {
+          "label": "Data / Evidence",
+          "paragraphs": [
+            "The source audit did not recover a juvenile concentration in the required preparation. The reported T-current potency benchmarks around 0.6 and 5 mM differ by about eightfold and come from different assays. Four WWOX-deficient transcript datasets did not supply convergent, direct thalamic current evidence."
+          ]
+        },
+        {
+          "label": "Inference",
+          "paragraphs": [
+            "The numerical ranges are corners of assumption sets using adult anchoring, clearance, brain distribution and volume. They are not confidence intervals, measured exposures or estimates of human exposure. The precise Cheng PTZ test age remained unresolved in the reviewed passages."
+          ]
+        },
+        {
+          "label": "Hypothesis",
+          "paragraphs": [
+            "A T-type current effect may be part of the response. Persistent sodium current and other effects remain competing explanations. An effect in a genotype does not identify CaV3.1, CaV3.2 or CaV3.3."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "LEGEND preregistered age and exposure investigation with independent checks",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv122_ethosuximide_ontogeny_prior_sci_20261120/RESULT_ADV122_SCI_20261120.md"
+        },
+        {
+          "label": "Adult mouse concentration anchor · Table 3 · PMID 22315091",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22315091/"
+        }
+      ]
+    },
+    {
+      "title": "Next experiment and limits",
+      "takeaway": "The discriminating question is whether the effect follows measured exposure, genotype or the seizure assay. The existing figure cannot separate those factors.",
+      "table": {
+        "columns": [
+          "Readout",
+          "What it resolves",
+          "Interpretation"
+        ],
+        "rows": [
+          [
+            "Paired plasma and brain in young animals",
+            "Does exposure reach an interpretable range in each genotype?",
+            "A low-exposure null is inconclusive. A measured result may also reject the assumptions used for the bounds."
+          ],
+          [
+            "Treatment by genotype on per-animal data",
+            "Is the response dependent on Wwox loss?",
+            "Compare baseline conditions and distinguish an interaction from significance in a single arm."
+          ],
+          [
+            "Spontaneous vs evoked events",
+            "Does an effect extend beyond the PTZ challenge?",
+            "A PTZ score can change because seizure threshold or induction dynamics change."
+          ]
+        ]
+      },
+      "sections": [
+        {
+          "label": "Experiment",
+          "paragraphs": [
+            "A research comparison would combine exposure measurement with age-matched genotype controls and an interpretable baseline. Keep score trajectories and animal-level summaries. A separate mechanistic comparator would be needed wherever a specific T-type channel is claimed."
+          ]
+        },
+        {
+          "label": "Limits for WOREE",
+          "paragraphs": [
+            "The clinical trial in childhood absence epilepsy addresses a different syndrome. The reviewed evidence leaves benefit on spontaneous WOREE seizures, development, and safety in the relevant infancy context unestablished."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Glauser et al. · childhood absence epilepsy trial · PMID 20164429",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20164429/"
+        },
+        {
+          "label": "Cheng et al. · global Wwox-null provocation model · PMID 32000863",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32000863/"
+        },
+        {
+          "label": "LEGEND exposure bounds and what different results would change",
+          "url": "https://github.com/marinomassimo-dot/legend-development/blob/main/disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv122_ethosuximide_ontogeny_prior_sci_20261120/RESULT_ADV122_SCI_20261120.md"
+        }
+      ]
+    }
+  ]
+}

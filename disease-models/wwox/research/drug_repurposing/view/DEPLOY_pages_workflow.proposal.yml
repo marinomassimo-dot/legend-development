@@ -114,11 +114,15 @@ jobs:
           [ "$want" = "$have" ]
           grep -c 'name="robots"' live.html || echo "no robots meta tag (indexing accepted)"
           # the other four language pages of the package are served beside index.html and must equal their package files too
-          for lang in it fr es de; do
-            code=$(curl -s -o "live_$lang.html" -w "%{http_code}" "${url}$lang.html" || true)
-            echo "live $lang.html status: $code"
-            [ "$code" = "200" ]
-            want=$(sha256sum "$PACKAGE_DIR/$lang.html" | cut -d' ' -f1)
-            have=$(sha256sum "live_$lang.html" | cut -d' ' -f1)
-            [ "$want" = "$have" ]
-          done
+          # Check PDFs and any other report assets as well as the landing page.
+          DASHBOARD_URL="$url" python3 - <<'PYCODE'
+          import hashlib, json, os, urllib.request
+          from pathlib import Path
+          root = Path(os.environ["PACKAGE_DIR"])
+          url = os.environ["DASHBOARD_URL"]
+          if url:
+              for name, spec in json.loads((root / "manifest.json").read_text())["files"].items():
+                  if name.startswith("reports/"):
+                      with urllib.request.urlopen(url.rstrip("/") + "/" + name, timeout=20) as response:
+                          assert hashlib.sha256(response.read()).hexdigest() == spec["sha256"], name
+          PYCODE

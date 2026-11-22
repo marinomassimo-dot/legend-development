@@ -1,5 +1,11 @@
 # LEGEND — From Evidence to Therapeutic Discovery
 
+## ⚠️ Disclaimer: AI-curated, and not medical advice
+
+**LEGEND uses AI to curate and maintain research material.** It connects scientific literature, public data and computational analyses. Source checks and automated tests help readers trace the evidence. Scientific interpretations can still be incomplete or wrong.
+
+**Use LEGEND for research and discussion with qualified clinicians.** Its findings and research priorities do not establish treatment benefit or safety. Clinical decisions belong to the treating team.
+
 ![LEGEND — AI-assisted therapeutic discovery for rare diseases](assets/legend-banner.png)
 
 **An open-source, AI-assisted research platform connecting scientific evidence, mechanistic inference, computational experiments and drug repurposing for rare diseases.**
@@ -10,15 +16,13 @@ LEGEND turns fragmented knowledge into testable hypotheses, candidate interventi
 
 [https://marinomassimo-dot.github.io/legend-development/](https://marinomassimo-dot.github.io/legend-development/)
 
-[![First screen of the LEGEND dashboard: research priorities for WWOX-related encephalopathy, with the next test for each](disease-models/wwox/research/drug_repurposing/view/preview/dashboard_first_screen_1280px.png)](https://marinomassimo-dot.github.io/legend-development/)
-
-Explore the main research investigations and why they are a priority, the biology and mechanisms behind them, the compounds and interventions involved, and the evidence for and against each hypothesis. Available in English, Italian, French, Spanish and German. Research material, not medical advice.
+The English dashboard brings together pathway maps, evidence, open questions and printable research briefs for clinicians and families.
 
 ## Drug repurposing
 
 LEGEND explores how existing medicines, OTC products, supplements, dietary approaches and other interventions could address disease-specific biological needs.
 
-The research pursues two complementary goals: **broad functional recovery** and **meaningful partial benefit**.
+The public dashboard focuses on possible **bridge interventions** while the separate WWOX gene therapy programme advances toward a clinical trial. The [WWOX Foundation research page](https://www.wwox.org/current-research/) provides updates on gene therapy.
 
 The module:
 

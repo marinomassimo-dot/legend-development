@@ -376,6 +376,8 @@ methods/data, not repeated promotional counts.
 
 ## Standing method
 
+For each completed compound deep dive, prepare an English, printable [research brief](view/research_reports/README.md) and link it from the corresponding public investigation.
+
 Reusable guidance for any drug-repurposing package lives in these places only; roles and briefs point here and do not copy it.
 
 - Generic engine rules (retrieval, cache, coverage states, imported documents, tool kinds, graded comparisons, suite outcomes): [`repurposing_adapter_convention.md`](../../../../framework/protocols/repurposing_adapter_convention.md).
