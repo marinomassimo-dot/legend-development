@@ -866,6 +866,15 @@
      "accepted_at": "2026-11-22T12:10:41Z",
      "evidence": "result under brainstorm_20261116/adv174_he_20261121: verdict NARROW; PR 48 distinct levels, duplicate-pair PR concordance about 0.2; split sealed in files/ outside git; no per-compound value recorded",
      "updated_at": "2026-11-22T12:15:48Z"
+    },
+    {
+     "step": "ADV-180: exclude the campaign's own holds.jsonl in strategic_advisor._own_updates; reproduce before/after, extend own-update fixture",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-22 (Codex return 21)",
+     "accepted_at": "2026-11-22T16:54:53Z",
+     "evidence": "real commits: d066c7902 (hold only) 1 delivery before, 0 after; SCI result 638b3a958 1 before, 1 after; fixture extended, negative control fails without the exclusion; 228 tests OK",
+     "updated_at": "2026-11-22T16:57:31Z"
     }
    ]
   }
@@ -1533,6 +1542,13 @@
    "at": "2026-11-22T12:10:41Z",
    "source": "ADV message 2026-11-22 (Codex review 05)",
    "step_sha256": "2ce258e106cd",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-22T16:54:53Z",
+   "source": "ADV message 2026-11-22 (Codex return 21)",
+   "step_sha256": "98bdf182cf06",
    "reopened_block": false,
    "authorised_by": null
   }

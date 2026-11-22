@@ -1298,7 +1298,7 @@ def _own_updates(campaign: Path) -> list[str]:
         rel = Path(campaign).resolve().relative_to(ROOT.resolve())
     except ValueError:
         return []
-    return [f":(exclude,glob){rel}/P[0-9]*/**", f":(exclude){rel}/assignments", f":(exclude){rel}/assignments.jsonl", f":(exclude){rel}/invocations.jsonl",
+    return [f":(exclude,glob){rel}/P[0-9]*/**", f":(exclude){rel}/assignments", f":(exclude){rel}/assignments.jsonl", f":(exclude){rel}/invocations.jsonl", f":(exclude){rel}/holds.jsonl",   # a hold is the advisor's own reason logged, not a delivery (2026-11-22: commit d066c7902 changed only assignments.jsonl and holds.jsonl and woke the 02:34Z tick); its expiry or typed resume trigger is read elsewhere (resume_when), untouched
             f":(exclude,glob){rel}/meetings/**",
             f":(exclude){PORTFOLIO_REL}",                          # an evaluation records its portfolio updates in the same commit; a changed portfolio is its own event (the digest), not a delivery
             ":(exclude,glob)**/IDEAS_ORDER_DREAM*_ADV.md",         # the Advisor's DREAM pass notes
