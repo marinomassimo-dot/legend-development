@@ -408,3 +408,9 @@
 {"changed": ["RP-016", "RP-013", "RP-008"], "note": "Europe/Rome 2026-11-22: DREAM connections of ADV-123, ADV-127 and ADV-124 absorbed in RP-016, RP-013 and RP-008 (main ead091bd9); RP-005, RP-024 and RP-029 read: they name ADV-109, ADV-110 and ADV-055/057/060 as concluded history with distinct resume conditions, coherent, no change; RP-011 remains the Orchestrator's residual; the portfolio pass of 2026-11-21 (RP-003) found no row with a met resume condition and a reachable input.", "residual": [{"id": "RP-011", "owner": "Orchestrator"}], "result": "CHANGED+RESIDUAL", "rome_date": "2026-11-22", "state": "RECONCILED", "utc": "2026-11-21T23:39:43Z"}
 {"assessment": "HOST", "id": "ADV-167", "key": "sun-2016-juvenile-pv-erbb4-baseline-state-by-response-for-rp-038-and-inv-15-sci", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-22T00:10:16Z"}
 {"evidence": "SendMessage receipt msg_id 25f3dc5e-d2cd-42d1-ab4a-988ea3413d5f, host clock 00:10Z", "id": "ADV-167", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-22T00:10:35Z"}
+{"basis": "a668fe687", "id": "ADV-162", "state": "STRAND", "strand": "developmental-reference-neurodev", "utc": "2026-11-22T01:36:34Z"}
+{"basis": "8f4d0c0ae", "id": "ADV-163", "state": "STRAND", "strand": "harness-neurodev-tool-assessment", "utc": "2026-11-22T01:36:34Z"}
+{"basis": "36aad9249", "id": "ADV-164", "state": "STRAND", "strand": "harness-retrieval-gene-anchor-transfer", "utc": "2026-11-22T01:36:34Z"}
+{"basis": "42264803e", "id": "ADV-165", "state": "STRAND", "strand": "seizure-chronology-adjacent-model", "utc": "2026-11-22T01:36:34Z"}
+{"basis": "a5bcfd7b3", "id": "ADV-166", "state": "STRAND", "strand": "neurogenesis-rival-inv17", "utc": "2026-11-22T01:36:34Z"}
+{"basis": "275a966c7", "id": "ADV-167", "state": "STRAND", "strand": "erbb4-nrg1-pv-state", "utc": "2026-11-22T01:36:34Z"}
