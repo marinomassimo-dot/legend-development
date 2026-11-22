@@ -52,3 +52,5 @@ O5 (neutralisation of a named candidate) only identifies a candidate inside the 
 * The effect of fixing neurons on the substrate is a known unknown (no held source); the transwell cannot exclude cell-contact-dependent factors released only on contact.
 
 Files: `discriminating_observations.tsv` (6 rows, 9 columns), `consumer_delta.md`.
+
+Dated line (IT, 2026-11-22, ADV-182; the text above is unchanged): any X1 readout that counts MBP-positive material is read under the INV-06 qualification of ADV-181 (lineage or material readout; newly formed sheaths need an origin-resolved per-cell structural readout with the field or culture denominator named and retained material controlled; conduction is a separate functional outcome). No new arm.
