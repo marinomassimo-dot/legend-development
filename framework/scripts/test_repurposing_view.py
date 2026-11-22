@@ -1679,7 +1679,8 @@ class RealViewports(unittest.TestCase):
             range.selectNodeContents(el);
             return new Set([...range.getClientRects()].filter(r => r.width > 0).map(r => Math.round(r.top))).size;
           });
-          return {banner: gutter('#source-banner'), main: gutter('main'), lines,
+          const banner = document.querySelector('#source-banner').getBoundingClientRect();
+          return {banner: [banner.left, banner.right].map(Math.round), main: gutter('main'), lines,
                   pageWidth: document.documentElement.scrollWidth};
         })()"""
         with tempfile.TemporaryDirectory() as td:

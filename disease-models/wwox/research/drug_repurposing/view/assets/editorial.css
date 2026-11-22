@@ -123,8 +123,18 @@ section#investigations>section#chains{border-top:1px solid var(--line);padding-t
 @media print{.ed-clamp{max-height:none}.ed-clamp::after,.ed-more{display:none}.hero-go,.langsel,.warnbar{display:none}}
 
 /* Public research edition: common gutters and bounded diagrams. */
-body[data-edition="public"] {overflow-wrap:anywhere}
-body[data-edition="public"] :is(main,header .in,nav .in,#source-banner) {max-width:73rem;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.6rem)}
+body[data-edition="public"] {
+  --public-width:73rem;
+  --public-gutter:clamp(1rem,4vw,2.6rem);
+  overflow-wrap:anywhere;
+}
+body[data-edition="public"] :is(main,header .in,nav .in) {max-width:var(--public-width);padding-inline:var(--public-gutter)}
+body[data-edition="public"] #source-banner {
+  inline-size:calc(min(100%, var(--public-width)) - 2 * var(--public-gutter));
+  margin-inline:auto;
+  padding-inline:0;
+}
+body[data-edition="public"] #source-banner a {white-space:nowrap}
 body[data-edition="public"] :is(section,article,details,figure) {min-inline-size:0;max-inline-size:100%}
 body[data-edition="public"] :is(.chip,.st,.dp,.lv,.lvl,pre,summary) {max-inline-size:100%;white-space:normal;overflow-wrap:anywhere}
 body[data-edition="public"] :is(.qk-dl,.fbar,.filters,.lvls,.threads,.tiles,.goals,.ncard,.pathway-nodes)>* {min-inline-size:0}
