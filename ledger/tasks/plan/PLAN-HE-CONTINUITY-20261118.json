@@ -875,6 +875,15 @@
      "accepted_at": "2026-11-22T16:54:53Z",
      "evidence": "real commits: d066c7902 (hold only) 1 delivery before, 0 after; SCI result 638b3a958 1 before, 1 after; fixture extended, negative control fails without the exclusion; 228 tests OK",
      "updated_at": "2026-11-22T16:57:31Z"
+    },
+    {
+     "step": "README routing row for repurposing_research_reports.py (release gate 1971)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-22",
+     "accepted_at": "2026-11-22T22:35:59Z",
+     "evidence": "one README row; test_tool_routing 7 OK, documented_commands 4 OK, reader_journey 5 OK, section_references OK, gate BLOCKS 0",
+     "updated_at": "2026-11-22T22:36:58Z"
     }
    ]
   }
@@ -1549,6 +1558,13 @@
    "at": "2026-11-22T16:54:53Z",
    "source": "ADV message 2026-11-22 (Codex return 21)",
    "step_sha256": "98bdf182cf06",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-22T22:35:59Z",
+   "source": "ADV message 2026-11-22",
+   "step_sha256": "d9d1ed25e938",
    "reopened_block": false,
    "authorised_by": null
   }
