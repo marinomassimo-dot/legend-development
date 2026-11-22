@@ -448,3 +448,7 @@
 {"evidence": "SendMessage receipt msg_id a6bb3984-eb18-4c91-b0e0-3976c39506bc, host clock 22:42Z", "id": "ADV-183", "state": "SENT", "to": ["HE - CURRENT e052ca19"], "utc": "2026-11-22T22:36:06Z"}
 {"assessment": "HOST", "id": "ADV-184", "key": "lazzari-2026-slc2a1-variants-discriminator-for-inv16-step1-science", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-22T22:42:57Z"}
 {"evidence": "SendMessage receipt msg_id 4300a770-b637-478a-84e9-e615e488792e, host clock 22:44Z", "id": "ADV-184", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-22T22:43:15Z"}
+{"assessment": "HOST", "id": "ADV-185", "key": "erbb4-transcript-in-held-hnpc-shwwox-data-stabilisation-arm-science", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-22T23:02:40Z"}
+{"assessment": "HOST", "id": "ADV-186", "key": "two-conditional-clauses-inv16-step1-surface-and-it59-q01-sardi-read", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-22T23:02:40Z"}
+{"evidence": "SendMessage receipt msg_id e715a954-3e73-4891-b356-5e2cf0bb1a27, host clock 23:05Z", "id": "ADV-185", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-22T23:03:02Z"}
+{"evidence": "SendMessage receipt msg_id 7f8b0c4d-b71a-4128-af46-a9a78a1829e1, host clock 23:05Z", "id": "ADV-186", "state": "SENT", "to": ["IT Orchestrator - CURRENT 6a8c1a55"], "utc": "2026-11-22T23:03:03Z"}
