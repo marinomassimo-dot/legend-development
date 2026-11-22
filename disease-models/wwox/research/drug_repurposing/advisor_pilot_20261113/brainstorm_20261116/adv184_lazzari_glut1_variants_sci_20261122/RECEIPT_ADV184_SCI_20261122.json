@@ -1,0 +1,46 @@
+{
+ "analysis_at": "2026-11-22T22:54Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "read",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "captions_only",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-22T22:54:30Z",
+ "event_id": "FTR-20261122-42928124-01",
+ "evidence_basis": [
+  "Lazzari et al. 2026 Mol Med 32:193 (PMID 42928124, DOI 10.1186/s10020-026-01584-4, PMC13700501), full JATS XML from the PMC open-data bucket route (framework/scripts/pmc_bucket_fetch.py; SHA-256 a361cf58feae59c06c10162301c20cdc9993a457dc737d06bf51e273f8fdd740); abstract, Methods, all Results sections, Discussion with its limitations paragraph and Conclusions read as text; all figure legends read; Fig 1 viewed as a rendered PDF page, other figures not viewed; supplement PDF (25 pages) read as the table of contents and Supplementary Tables S1 and S2 text only, Supplementary Figs S1 to S14 not viewed; no glucose-uptake, surface-labelling, neural, knockdown, HDAC or WWOX content in the paper (searched).",
+  "verbatim_locator | proposition: all experiments use EGFP-tagged overexpression | Discussion (limitations) | \"All experiments were performed using overexpression systems with EGFP-tagged constructs\"",
+  "verbatim_locator | proposition: colocalisation is a Pearson coefficient per cell on 30 cells | Methods (colocalisation quantification) | \"R value (no threshold) reported in the ImageJ Log window was recorded for each cell. Values shown represent mean ± SEM (30 cells)\"",
+  "verbatim_locator | proposition: plasma membrane marker is pan-cadherin on fixed permeabilised cells | Results (hCMEC/D3 localisation) | \"with an antibody that specifically recognizes all the cadherin family members\"",
+  "verbatim_locator | proposition: membrane PCC lower only for P485L and Q283R | Results (hCMEC/D3 localisation) | \"disclosed no statistically significant differences for most mutants compared to the WT protein (mean PCC = 0.67). Conversely, P485L displayed substantially lower PCC values (mean PCC = 0.36), and a small but significant decrease was observed for Q283R (mean PCC = 0.58)\"",
+  "verbatim_locator | proposition: lysosomal overlap values for N34S, Q283R, R126L | Results (trafficking) | \"revealed significantly higher PCC values for N34S (mean PCC = 0.76), Q283R (mean PCC = 0.76) and R126L (mean PCC = 0.64) compared with the WT protein (mean PCC = 0.27)\"",
+  "verbatim_locator | proposition: P485L goes to Golgi and early endosomes | Results (trafficking) | \"PCC values for the P485L mutant were approximately eight-fold higher than those of the WT for the Golgi apparatus marker Golgin-97 (mean PCC of WT = 0.09; P485L = 0.78)\"",
+  "verbatim_locator | proposition: chloroquine raised wild-type and R153C but not N34S, Q283R or P485L protein | Results (autophagy) | \"In contrast, chloroquine treatment did not significantly alter GLUT1-EGFP protein abundance in cells expressing the N34S, Q283R, or P485L mutants\"",
+  "verbatim_locator | proposition: slower degradation for N34S and Q283R, not P485L | Results (degradation kinetics) | \"the N34S and Q283R variants are associated with a significantly slower rate of protein degradation and prolonged half-life compared to WT GLUT1. In contrast, the R153C and P485L variants were comparable to WT GLUT1\"",
+  "verbatim_locator | proposition: western bands summed and normalised to actin, n = 3 | Fig 7 legend | \"The total GLUT1-EGFP protein corresponding to the sum of high (81 kDa) and low (71 kDa) glycosylated bands was normalized on the β-Actin protein level and reported as mean ± SEM ( n = 3 for each experimental group)\"",
+  "verbatim_locator | proposition: functional evidence in the literature is uptake assays in other systems | Discussion | \"Functional evidence available from the literature for the analyzed SLC2A1 variants are predominantly based on glucose uptake assays performed in different experimental systems, including patients’ erythrocytes, Xenopus oocytes and mammalian cell lines\"",
+  "verbatim_locator | proposition: authors state trafficking analysis as a complement to transport assays | Discussion | \"trafficking-based cellular phenotyping assays may complement conventional transport measurements\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv184_lazzari_glut1_variants_sci_20261122/RESULT_ADV184_LAZZARI_GLUT1_VARIANTS_SCI_20261122.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "a361cf58feae59c06c10162301c20cdc9993a457dc737d06bf51e273f8fdd740",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket copy of the open-access article (CC BY-NC-ND 4.0), local scratch only, not copied into git",
+ "study_id": {
+  "doi": "10.1186/s10020-026-01584-4",
+  "pmid": "42928124"
+ },
+ "workflow": "SCI successor Z ADV-184 (GLUT1 variant trafficking; INV-16 Step 1 discriminator comparison): Methods, Results and Discussion read after a committed pre-registration that stated what had been seen."
+}
