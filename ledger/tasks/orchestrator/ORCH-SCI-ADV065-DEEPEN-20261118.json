@@ -768,6 +768,13 @@
      "accepted_at": "2026-11-22T08:09:55Z",
      "evidence": "Result, receipt FTR-20261122-42249507-01, self-evaluation addendum 6: P-logic weak; one optional paired baseline Kv7 readout for NP3A3/WO-17; pup brief closed",
      "updated_at": "2026-11-22T08:15:11Z"
+    },
+    {
+     "step": "ADV-177: Murlanova 2026 (PMID 42308317) astrocyte SLC25A18/GC2 perturbation: ONE INV-07 comparison, KEEP/NARROW/DROP; step 0 reachability first",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-177 (cross-session message from ADV a5e6f2ad, assignment file ADV-177.md, Codex review 06)",
+     "accepted_at": "2026-11-22T16:10:05Z"
     }
    ]
   }
@@ -1358,6 +1365,13 @@
    "at": "2026-11-22T08:09:55Z",
    "source": "ADV-173 (cross-session message from ADV a5e6f2ad, assignment file ADV-173.md, Codex review 04)",
    "step_sha256": "6c616a78dbf3",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-22T16:10:05Z",
+   "source": "ADV-177 (cross-session message from ADV a5e6f2ad, assignment file ADV-177.md, Codex review 06)",
+   "step_sha256": "152b83c67a90",
    "reopened_block": false,
    "authorised_by": null
   }
