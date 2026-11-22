@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-22T16:31Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "captions_only",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-22T16:31:30Z",
+ "event_id": "FTR-20261122-31543760-07",
+ "evidence_basis": [
+  "Kosla et al. 2019 Front Cell Neurosci (PMID 31543760, PMC6730490): full-text XML from the PMC open-data bucket (framework/scripts/pmc_bucket_fetch.py; SHA-256 51dbc475e362a101d3e674993e24bcb5d6cbbc7a1f06023ae84d62400207b250); Introduction, Methods, Results and Discussion read in text for one question (is the ITGB1/CDH2 sentence traceable to a panel, and is surface ITGB1 measured); page images of Fig. 3 and Fig. 10 and a high-magnification crop of the node region of Supplementary Figures 4 and 5 viewed; Supplementary Tables 1 to 3 searched by text for ITGB1 and CDH2 only; GEO GSE126075 record page only (4 samples); no matrix downloaded; Fig. 3B values read from the image, approximate.",
+  "verbatim_locator | proposition: fibronectin adhesion assay design and duration | Methods (adhesion assays) | \"The cells were seeded on 96-well plate coated with Geltrex (Gibco) at a density of 17,500 cells/well. The adhesion to fibronectin was assessed on 48-well fibronectin-coated plate (BD). The cells were seeded at a density of 100,000 cells/well. The cells were incubated for 90 min at 37\u00b0C\"",
+  "verbatim_locator | proposition: Western blot is used to verify the knockdown only | Methods (silencing) | \"The gene silencing efficiency was assessed with Western blot\"",
+  "verbatim_locator | proposition: the ITGB1 sentence | Discussion | \"ITG\u03b21 (expression lowered twice in hNPC/shScrambled in compare to hNPC/sh WWOX )\"",
+  "verbatim_locator | proposition: the expression data are CAGE with a GEO accession | Methods (CAGE) | \"The raw data from CAGE experiment are deposited in NCBI Gene Expression Omnibus (GEO) Database with accession number GSE126075\"",
+  "verbatim_locator | proposition: statistics are unpaired t tests | Methods (statistics) | \"the statistical relevance was evaluated with unpaired t -test\"",
+  "verbatim_locator | proposition: Fig 10 colour rule and threshold | Figure 10 legend | \"Significantly upregulated genes are magenta; significantly downregulated genes are turquoise (Log2 fold change > \u00b11, p < 0.05)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv178_itgb1_fibronectin_feasibility_sci_20261122/RESULT_ADV178_PART_B_ITGB1_FIBRONECTIN_SCI_20261122.md"
+ ],
+ "prior_receipt": "FTR-20261028-31543760-06",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "51dbc475e362a101d3e674993e24bcb5d6cbbc7a1f06023ae84d62400207b250",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket full-text XML of PMC6730490 (open access, local scratch only, not copied into git)",
+ "study_id": {
+  "doi": "10.3389/fncel.2019.00391",
+  "pmid": "31543760"
+ },
+ "workflow": "SCI successor Z ADV-178 Part B (ITGB1 and fibronectin feasibility with a closing rule): one question, the traceability of the ITGB1 sentence and the existence of a surface or activation measurement."
+}
