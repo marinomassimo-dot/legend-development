@@ -732,6 +732,15 @@
      "accepted_at": "2026-11-22T00:10:36Z",
      "evidence": "result disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv167_sun_nrg1_state_sci_20261122/RESULT_ADV167_SUN_NRG1_STATE_SCI_20261122.md; pre-registration commit 6ab41b3e7; receipt FTR-20261122-27641496-01; self-evaluation addendum 2; D2 (baseline PV excitatory input as labelled state descriptor), row stays parked",
      "updated_at": "2026-11-22T00:16:45Z"
+    },
+    {
+     "step": "ADV-168: Plasticity of the mammalian integrated stress response (Nature 2025, PMID 40140574): canonical phospho-eIF2a ISR versus reduced eIF2B function without phospho-eIF2a rise; do ATF4/GADD34/PCK2/translation measures distinguish the routes; INV-02 and RP-018 named control/readout/wording decision; pre-register first; result file plus path to ADV; time-box 45 to 60 minutes",
+     "status": "DONE",
+     "owner": "science",
+     "source": "ADV-168 (assignment file in the root checkout; ADV message to SCI 052bf24b, Codex strategic review 03)",
+     "accepted_at": "2026-11-22T04:09:58Z",
+     "evidence": "result disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv168_isr_plasticity_sci_20261122/RESULT_ADV168_ISR_PLASTICITY_SCI_20261122.md; pre-registration commit bc8467e37; receipt FTR-20261122-40140574-01; self-evaluation addendum 3; R-partial, one INV-02 delta, RP-018 wording note",
+     "updated_at": "2026-11-22T04:15:31Z"
     }
    ]
   }
@@ -1294,6 +1303,13 @@
    "at": "2026-11-22T00:10:36Z",
    "source": "ADV-167 (assignment file in the root checkout; ADV message to SCI 052bf24b, Codex strategic review 02)",
    "step_sha256": "7aec9cfeb126",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-22T04:09:58Z",
+   "source": "ADV-168 (assignment file in the root checkout; ADV message to SCI 052bf24b, Codex strategic review 03)",
+   "step_sha256": "70850208bcf5",
    "reopened_block": false,
    "authorised_by": null
   }

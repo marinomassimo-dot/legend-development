@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-22T04:14Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-22T04:14:00Z",
+ "event_id": "FTR-20261122-40140574-01",
+ "evidence_basis": [
+  "Chen et al. 2025 Nature 641 (PMID 40140574, DOI 10.1038/s41586-025-08794-6): publisher PDF (36 pages; SHA-256 4f4b0fb5b51392157bb83c2065f40d6508545daf1d4249ee93fb497b34419cd5 verified) text-extracted; abstract, the main text with all Results sections and the Discussion, the legends of Figs 1 to 4 and Extended Data Figs 1, 4 and 8 were read; page images of Fig. 1, Fig. 4 and Extended Data Fig. 8 were viewed (other figures by caption only); the Methods body, Supplementary Notes and Tables, source data and the GEO series (GSE268132, GSE268130, GSE268127; accession numbers only) were not read. No blot was quantified.",
+  "verbatim_locator | proposition: eIF2B GEF activity was comparable after Tg 1 h and after eIF2B epsilon depletion, while protein synthesis fell more with Tg | Results (eIF2B suppression induces s-ISR) | \"Although both Tg treatment (1 h) and depletion of eIF2B\u03b5 resulted in a comparable reduction in eIF2B activity\"",
+  "verbatim_locator | proposition: ATF4 induction in the depleted state needs eIF4E | Results (same section) | \"eIF4E was required for ATF4 induction in eIF2B\u03b5-depleted cells\"",
+  "verbatim_locator | proposition: the acute canonical challenge also lacks GADD34 and CHOP induction | Results (Atf4 uORF1 section) | \"During acute c-ISR (Tg; 1 h), ATF4 was also elevated in both WT and \u0394uORF1 mouse ES cells in the absence of GADD34 and CHOP induction\"",
+  "verbatim_locator | proposition: GADD34 and CHOP mRNA rise in the eIF2B-reduced state | Results (s-ISR and c-ISR programs are distinct) | \"the s-ISR consists of an increase in the levels of known c-ISR target mRNAs including those encoding CHOP and GADD34\"",
+  "verbatim_locator | proposition: removing phospho-eIF2-alpha did not change ATF4 in the depleted cells | Results (eIF2B suppression induces s-ISR) | \"led to dephosphorylation of eIF2\u03b1-p but failed to alter ATF4 protein levels in eIF2B\u03b5-depleted cells\"",
+  "verbatim_locator | proposition: the mTOR inhibitor abolishes ATF4 induction in the s-ISR and not the c-ISR | Results (mechanistic distinctions) | \"the mTOR inhibitor Torin 1 abolished ATF4 induction during the s-ISR, but not the c-ISR\"",
+  "verbatim_locator | proposition: the R191H ES cell line has lower, not higher, phospho-eIF2-alpha | Results (VWM allele section) | \"did not cause induction in eIF2\u03b1-p, but rather decreased eIF2\u03b1-p levels\"",
+  "verbatim_locator | proposition: the brain link is a gene-list overlap with a published dataset | Results (metabolic section) | \"We identified 26 common genes, including Pck2 and Atf4\"",
+  "verbatim_locator | proposition: the glucose contrast is read from ATF4 and GADD34 protein in MEFs | Results (physiological conditions) | \"moderate hypoglycaemia (2.5 mM glucose) increased ATF4 but not GADD34 protein levels\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv168_isr_plasticity_sci_20261122/RESULT_ADV168_ISR_PLASTICITY_SCI_20261122.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "4f4b0fb5b51392157bb83c2065f40d6508545daf1d4249ee93fb497b34419cd5",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Publisher PDF of Chen et al. 2025 on this host (34,391,319 bytes, SHA-256 as fingerprint, verified 2026-11-22; PMC12119373); licence CC BY-NC-ND, local only, not copied into git",
+ "study_id": {
+  "doi": "10.1038/s41586-025-08794-6",
+  "pmid": "40140574"
+ },
+ "workflow": "SCI successor Z ADV-168 (canonical ISR against eIF2B-reduced state without a phospho-eIF2-alpha rise; INV-02 and RP-018 delta decision): partial read of the article text, three figure pages viewed, after a committed pre-registration that stated what had already been seen."
+}
