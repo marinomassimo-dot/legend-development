@@ -771,10 +771,12 @@
     },
     {
      "step": "ADV-177: Murlanova 2026 (PMID 42308317) astrocyte SLC25A18/GC2 perturbation: ONE INV-07 comparison, KEEP/NARROW/DROP; step 0 reachability first",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-177 (cross-session message from ADV a5e6f2ad, assignment file ADV-177.md, Codex review 06)",
-     "accepted_at": "2026-11-22T16:10:05Z"
+     "accepted_at": "2026-11-22T16:10:05Z",
+     "evidence": "ADV-177 result NARROW: disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv177_murlanova_astrocyte_lactate_sci_20261122/RESULT_ADV177_MURLANOVA_ASTROCYTE_LACTATE_SCI_20261122.md; receipt FTR-20261122-42308317-01",
+     "updated_at": "2026-11-22T16:17:42Z"
     }
    ]
   }

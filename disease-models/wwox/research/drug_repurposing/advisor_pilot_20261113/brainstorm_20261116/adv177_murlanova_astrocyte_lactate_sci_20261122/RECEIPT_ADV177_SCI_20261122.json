@@ -1,0 +1,47 @@
+{
+ "analysis_at": "2026-11-22T16:16Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "captions_only",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-22T16:16:30Z",
+ "event_id": "FTR-20261122-42308317-01",
+ "evidence_basis": [
+  "Murlanova et al. 2026 Science Advances (PMID 42308317, DOI 10.1126/sciadv.adt2527, PMC13274620): Europe PMC full-text XML on this host (SHA-256 1f0afbba4da256162b3b0192385b97b5a5fa8aca5cc88ad8f8be3a5effdb345f, verified) and the PMC open-data bucket copy (SHA-256 695340dc9fdba020ea01987cd8143783d210fb94bebc2f42b0928fc098f76e3b); abstract, introduction, Results, Discussion, limitations paragraph and Methods read in text; page images of Fig. 2 and Fig. 3 and of supplementary Fig. S3 viewed (numbers read from the images, approximate); Figs 1 and 4 to 10 and supplementary Figs S1, S2, S4 to S10 captions only; Data S1 (DESeq2 table, 16 gene rows looked up) read, Data S2 not opened; GEO GSE274921 record page only (9 samples), nothing downloaded; no source data exist for any metabolic or electrophysiology panel, so no number was recomputed.",
+  "verbatim_locator | proposition: lactate fell in PFC and CSF but not in serum | Results (in vivo) | \"Compared with control mice, Npas3 cKO mice showed decreased lactate levels in the PFC and CSF but not in blood serum\"",
+  "verbatim_locator | proposition: tamoxifen induction at P30 in the cKO | Methods (conditional KO) | \"At P30, Npas3 cKO and control mice were injected intraperitoneally for three consecutive days with tamoxifen\"",
+  "verbatim_locator | proposition: L5 excitability lower in the cKO | Results (excitability) | \"L5 neurons of Npas3 cKO mice exhibited significantly decreased intrinsic excitability compared to L5 neurons of control mice\"",
+  "verbatim_locator | proposition: the AAV excitability change is not significant | Results (AAV arm) | \"moderate decrease in excitability ( P = 0.1029)\"",
+  "verbatim_locator | proposition: glycolysis was not altered by ECAR, PER or metabolites | Discussion | \"was not accompanied by significant alterations in glycolysis, as assessed by ECAR and PER, as well as major glycolysis-related metabolites\"",
+  "verbatim_locator | proposition: the authors allow that lactate oxidation could compensate | Discussion | \"One could suggest that deleting Npas3 in astrocytes might redirect the metabolic pathway of lactate, enhancing its oxidation as a compensatory mechanism\"",
+  "verbatim_locator | proposition: the Cre line also acts in neurogenic astroglia | Results (AAV arm) | \"the GLAST promoter in the Cre line used has been shown to be active in both neurogenic astroglia\"",
+  "verbatim_locator | proposition: lactate dose and route | Methods (lactate administration) | \"were injected intraperitoneally into mice at a dose of 1 mg/kg\"",
+  "verbatim_locator | proposition: astrocyte isolation for OCR at P90 | Methods | \"Brain astrocytes were isolated at P90 from Npas3 cKO\"",
+  "verbatim_locator | proposition: slice age | Methods | \"Npas3 cKO male mice (P34 to P59)\"",
+  "verbatim_locator | proposition: both lactate pools lower in culture | Results (in vitro) | \"We detected significantly lower intracellular and extracellular levels of lactate in Npas3 -deficient astrocytes\"",
+  "verbatim_locator | proposition: the shortage-of-lactate link is an explanation, not a measurement | Discussion | \"can be, at least in part, explained by the chronic shortage of extracellular lactate\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv177_murlanova_astrocyte_lactate_sci_20261122/RESULT_ADV177_MURLANOVA_ASTROCYTE_LACTATE_SCI_20261122.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "695340dc9fdba020ea01987cd8143783d210fb94bebc2f42b0928fc098f76e3b",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket full-text XML of PMC13274620 fetched with framework/scripts/pmc_bucket_fetch.py (no User-Agent, no key); open-access article, local scratch only, not copied into git",
+ "study_id": {
+  "doi": "10.1126/sciadv.adt2527",
+  "pmid": "42308317"
+ },
+ "workflow": "SCI successor Z ADV-177 (one INV-07 comparison, KEEP/NARROW/DROP): article text, Figs 2, 3 and S3 and Data S1 read after a committed pre-registration that stated what had been seen."
+}
