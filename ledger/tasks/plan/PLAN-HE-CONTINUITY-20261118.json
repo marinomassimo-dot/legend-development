@@ -848,6 +848,13 @@
      "accepted_at": "2026-11-21T21:54:39Z",
      "evidence": "result under brainstorm_20261116/adv164_he_20261121: frozen sets by IT (2f3e3b1fa before queries); Europe PMC answered; flag 0 clean positives in the 25-record page on both rows, rule not met, narrow scope",
      "updated_at": "2026-11-21T22:09:39Z"
+    },
+    {
+     "step": "ADV-172: raw-role address in recall/handoff text (route --to Orchestrator ambiguous); trace producers, smallest correction or no-change finding",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV message 2026-11-22 (Codex return 13, RP-020)",
+     "accepted_at": "2026-11-22T06:50:49Z"
     }
    ]
   }
@@ -1501,6 +1508,13 @@
    "at": "2026-11-21T21:54:39Z",
    "source": "ADV message of 2026-11-21 assigning ADV-164 (Codex strategic review 01)",
    "step_sha256": "8a070f85698d",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-22T06:50:49Z",
+   "source": "ADV message 2026-11-22 (Codex return 13, RP-020)",
+   "step_sha256": "8a834b30a3a0",
    "reopened_block": false,
    "authorised_by": null
   }
