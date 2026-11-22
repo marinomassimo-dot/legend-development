@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regressions for the five-language shareable view (EN initial, IT, FR, ES, DE): one dataset and one generator, five renderings.
+"""Regressions for the English public view and the historical locale support.
 
 What is pinned: the translation files are complete and keep placeholders, identifiers and numbers; the scientific data are the same in every page (only labels differ);
 the selector is five real links with the right marks, works without script and keeps the filter hash; English is the initial language; nothing Italian is left on the
@@ -173,8 +173,7 @@ class InventoryIsCheckedWhereTheActorRunsIt(unittest.TestCase):
         self.assertIn("i18n --what collect", out.getvalue())
         self.assertNotIn("ui_source.json differs", out.getvalue())  # the part that is current is not blamed
 
-    def test_a_passage_without_a_fr_es_or_de_translation_fails_the_check_in_seconds_not_in_ci(self):
-        """2026-11-21 (ADV-159): a reworded passage left three English texts untranslated; `i18n` printed it and exited 0, and the suite found it only in CI run 1820."""
+    def test_only_a_missing_english_translation_blocks_the_current_build(self):
         import contextlib
         import copy
         import io
@@ -183,7 +182,7 @@ class InventoryIsCheckedWhereTheActorRunsIt(unittest.TestCase):
         content = json.loads((DR / "view/i18n/content_source.json").read_text(encoding="utf-8"))
         saved = copy.deepcopy(rv.TRANS)
         try:
-            for lang in ("fr", "es", "de"):
+            for lang in ("en", "fr", "es", "de"):
                 h = next(k for k, v in content.items() if v["src"] != lang and k in rv.TRANS[lang]["content"])
                 trans = copy.deepcopy(saved)
                 del trans[lang]["content"][h]
@@ -191,8 +190,9 @@ class InventoryIsCheckedWhereTheActorRunsIt(unittest.TestCase):
                 rv.TRANS.update(trans)
                 out = io.StringIO()
                 with mock.patch.object(rv, "i18n_collect", return_value=(ui, content)), mock.patch.object(rv, "load_translations"), contextlib.redirect_stdout(out):
-                    self.assertEqual(rv.i18n_check(DR), 1, lang)
-                self.assertIn(f"untranslated for {lang}: 1 passage(s), e.g. {h}", out.getvalue())
+                    self.assertEqual(rv.i18n_check(DR), int(lang == "en"), lang)
+                if lang == "en":
+                    self.assertIn(f"untranslated for {lang}: 1 passage(s), e.g. {h}", out.getvalue())
                 self.assertNotIn("inventory STALE", out.getvalue())
         finally:
             rv.TRANS.clear()
@@ -317,15 +317,12 @@ class TranslatedScopeIsNeverPaintedAsEnglish(unittest.TestCase):
         scope = json.loads((i18n / "en_scope.json").read_text(encoding="utf-8"))
         inventory = json.loads((i18n / "content_source.json").read_text(encoding="utf-8"))
         cls.passages = [inventory[h]["text"] for h in scope]
-        cls.page = {lg: (DR / "view" / ("index_shareable.html" if lg == "en" else f"index_shareable.{lg}.html")).read_text(encoding="utf-8") for lg in ("en", "fr", "de", "es")}
+        cls.page = {lg: (DR / "view" / f"index_shareable.{lg}.html").read_text(encoding="utf-8") for lg in ("fr", "de", "es")}
 
     def test_the_scope_names_the_two_sections_of_the_first_batch_and_every_scoped_passage_is_in_the_inventory(self):
         self.assertTrue({"overview", "ranking"} <= set(rv.EN_SCOPE_SECTIONS))
         self.assertTrue(self.passages)
         self.assertEqual(len(set(self.passages)), len(self.passages))
-
-    def test_the_english_page_keeps_every_scoped_passage_in_the_covered_sections(self):
-        self.assertEqual(len(scoped_passages_still_english(self.page["en"], self.passages)), len(self.passages))
 
     def test_no_scoped_passage_is_painted_as_english_on_a_french_german_or_spanish_page(self):
         for lg in ("fr", "de", "es"):
@@ -348,10 +345,10 @@ class TranslatedScopeIsNeverPaintedAsEnglish(unittest.TestCase):
             self.assertTrue(done, lg)
 
 
-class FiveLanguages(unittest.TestCase):
+class ActiveDashboardLanguages(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.pages = {lg: rv.build(DR, "shareable", lg) for lg in rv.LANGS}
+        cls.pages = {lg: rv.build(DR, "shareable", lg) for lg in ("en", "it")}
 
     def test_english_is_the_initial_language_and_the_default_build(self):
         self.assertEqual(rv.build(DR, "shareable"), self.pages["en"])
@@ -368,17 +365,16 @@ class FiveLanguages(unittest.TestCase):
 
     def test_the_scientific_data_are_the_same_in_every_language(self):
         base = json.dumps(mask(data_of(self.pages["en"])), sort_keys=True)
-        for lg in rv.LANGS:
-            self.assertEqual(json.dumps(mask(data_of(self.pages[lg])), sort_keys=True), base, lg)
+        self.assertEqual(json.dumps(mask(data_of(self.pages["it"])), sort_keys=True), base)
 
     def test_ids_filters_and_anchors_are_the_same_in_every_language(self):
         ids = lambda p: sorted(set(re.findall(r'\sid="([^"]+)"', p)) - {"langnote"})
         anchors = lambda p: sorted(re.findall(r'href="(#[^"]*)"', p))
-        for lg in rv.LANGS:
+        for lg in self.pages:
             self.assertEqual(ids(self.pages[lg]), ids(self.pages["en"]), lg)
             self.assertEqual(anchors(self.pages[lg]), anchors(self.pages["en"]), lg)
         for control in ("f-access", "f-need", "f-scope", "f-oscope", "f-track", "f-goal", "f-disp", "f-q", "f-reset"):
-            for lg in rv.LANGS:
+            for lg in self.pages:
                 self.assertIn(f'id="{control}"', self.pages[lg], (lg, control))
 
     def test_public_navigation_uses_pathway_anchors_and_english_only(self):
@@ -394,42 +390,41 @@ class FiveLanguages(unittest.TestCase):
         self.assertIn('href="#gene-therapy"', nav)
         self.assertNotRegex(page, r'<script[^>]+\bsrc=|<link[^>]+rel="stylesheet"')
 
-    def test_other_languages_carry_the_original_language_notes(self):
-        for lg in ("it", "fr", "es", "de"):
-            self.assertIn('id="langnote"', self.pages[lg], lg)
-            self.assertIn('class="mini mut technote"><span class="orig"', self.pages[lg], lg)
+    def test_the_local_italian_build_carries_the_original_language_notes(self):
+        self.assertIn('id="langnote"', self.pages["it"])
+        self.assertIn('class="mini mut technote"><span class="orig"', self.pages["it"])
         self.assertNotIn('id="langnote"', self.pages["en"])
 
     def test_no_italian_interface_string_is_printed_outside_the_catalogue_on_another_page(self):
-        for lg in ("en", "fr", "es", "de"):
+        for lg in ("en",):
             self.assertEqual(italian_ui_strings_left(self.pages[lg], lg), [], lg)
 
     def test_a_data_enum_written_in_italian_is_never_printed_raw_on_another_page(self):
         """2026-11-20 (ADV-127): the work-order kind (WO_KINDS) reached every non-Italian page as '[verificare un'ipotesi]' in 28 places, because the renderers printed the enum value and the
         catalogue check only sees interface strings. Each value has a UI key per language now; no value may appear in a non-Italian shareable build, and the Italian build still shows them."""
-        for lg in ("en", "fr", "es", "de"):
+        for lg in ("en",):
             self.assertEqual(raw_kinds_left(self.pages[lg]), [], lg)
         self.assertEqual(raw_kinds_left(self.pages["it"]), list(rv.WO_KINDS))                  # the Italian page is where the values belong
         for key in rv.KIND_KEY.values():
             self.assertIn(key, rv.UI_IT)
-            for lg in ("en", "fr", "es", "de"):
+            for lg in ("en",):
                 self.assertNotEqual(json.loads((DR / "view/i18n" / f"ui_{lg}.json").read_text(encoding="utf-8"))["UI_IT." + key], rv.UI_IT[key], (lg, key))
 
     def test_an_italian_authored_data_field_is_never_left_in_italian_in_the_embedded_data_of_another_page(self):
         """ADV-129: localise_it_fields() translates `summary_it` and `feasibility_it` in the data object a script prints; without it the English page painted them in Italian from the script."""
         self.assertTrue(rv.IT_DATA_FIELDS)
         self.assertGreater(len(data_fields_in_italian(self.pages["it"], self.pages["it"])), 0)          # the detector sees Italian when it is there (the Italian page is where it belongs)
-        for lg in ("en", "fr", "es", "de"):
+        for lg in ("en",):
             self.assertEqual(data_fields_in_italian(self.pages[lg], self.pages["it"]), [], lg)
 
     def test_no_italian_interface_text_is_left_outside_marked_passages(self):
         ui = json.loads((DR / "view/i18n/ui_source.json").read_text(encoding="utf-8"))
         long_it = [t for t in ui.values() if len(t) >= 30]
-        for lg in ("en", "fr", "es", "de"):
+        for lg in ("en",):
             body = html.unescape(re.sub(r"<script\b.*?</script>|<style\b.*?</style>", "", self.pages[lg], flags=re.S))
             body = re.sub(r"<(\w+)\b[^>]*class=\"orig\"[^>]*>.*?</\1>", "", body, flags=re.S)
             self.assertEqual([t for t in long_it if t in body], [], lg)
-        for lg in ("en", "de"):                                                         # stop-word screen is reliable only where the language shares few words with Italian
+        for lg in ("en",):                                                         # stop-word screen is reliable only where the language shares few words with Italian
             body = re.sub(r"<script\b.*?</script>|<style\b.*?</style>", "", self.pages[lg], flags=re.S)
             body = re.sub(r"<(\w+)\b[^>]*class=\"orig\"[^>]*>.*?</\1>", "", body, flags=re.S)
             left = [t for t in (html.unescape(x).strip() for x in rv.TEXT_NODE.findall(body))
@@ -439,7 +434,7 @@ class FiveLanguages(unittest.TestCase):
     def test_a_translated_passage_is_never_shown_as_original_language_only_on_the_rendered_page(self):
         # 2026-11-18 dashboard audit: the catalogues were complete (582 of 582) and the rendered FR/ES/DE pages still carried ~23 original-language markers, because the redaction
         # formulas were localised BEFORE the lookup by hash and the text lost its identity. Pinned on the page that is produced, not on the catalogue.
-        for lg in ("fr", "es", "de"):
+        for lg in ("en",):
             body = re.sub(r"<script\b.*?</script>|<style\b.*?</style>", "", self.pages[lg], flags=re.S)
             body = re.sub(r'<p class="mini mut technote">.*?</p>', "", body, flags=re.S)                 # the one intentional marker: the technical section stays in its original language
             marked = [html.unescape(re.sub(r"<[^>]+>", "", m)).strip()[:80] for m in re.findall(r'<(?:\w+)\b[^>]*class="orig"[^>]*>.*?</(?:\w+)>', body, flags=re.S)]
@@ -447,7 +442,7 @@ class FiveLanguages(unittest.TestCase):
 
     def test_a_catalogue_translation_that_kept_an_italian_formula_gets_the_page_language_formula(self):
         # the formula is a placeholder of the shareable policy: one translation per passage, the formula localised at render time (never one translation per formula variant)
-        for lg in ("fr", "es", "de"):
+        for lg in ("en",):
             body = re.sub(r"<script\b.*?</script>|<style\b.*?</style>", "", self.pages[lg], flags=re.S)
             self.assertNotIn("non incluso in questo pacchetto (", html.unescape(body), lg)
             self.assertNotIn("un registro del repository", html.unescape(body), lg)

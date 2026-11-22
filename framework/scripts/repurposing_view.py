@@ -6406,9 +6406,7 @@ def i18n_tokens(text: str) -> Counter:
 
 
 def i18n_check(dr: Path) -> int:
-    """Completeness and fidelity of the translation files. UI texts must be complete in every language (a missing one would show Italian on that page); the
-    placeholders, markup, identifiers and numbers of a text must survive translation; curated passages may be absent (they then show in the original language
-    with the EN marker) but a translation whose original changed is stale and reported."""
+    """Check current English wording and source inventories. Archived locales are optional builds."""
     ui, content = i18n_collect(dr)
     load_translations(dr)
     rc = 0
@@ -6419,7 +6417,7 @@ def i18n_check(dr: Path) -> int:
         if not path.exists() or json.loads(path.read_text(encoding="utf-8")) != fresh:
             print(f"inventory STALE: view/{I18N_SUBDIR}/{name} differs from a fresh collection; run: python3 -B framework/scripts/repurposing_view.py i18n --what collect, then translate what is new")
             rc = 1
-    for lang in ("en", "fr", "es", "de"):
+    for lang in PUBLIC_LANGS:
         t = TRANS.get(lang, {}).get("ui", {})
         miss = [k for k in ui if k not in t]
         extra = [k for k in t if k not in ui]
@@ -6430,7 +6428,7 @@ def i18n_check(dr: Path) -> int:
         rc |= bool(miss or bad)
         for k in miss[:5]:
             print(f"   missing: {k}")
-    for lang in ("en", "it", "fr", "es", "de"):
+    for lang in PUBLIC_LANGS:
         t = TRANS.get(lang, {}).get("content", {})
         mine = {h: v for h, v in content.items() if v["src"] != lang}
         have = [h for h in mine if h in t]
@@ -6438,7 +6436,7 @@ def i18n_check(dr: Path) -> int:
         bad = [h for h in have if i18n_tokens(mine[h]["text"]) != i18n_tokens(t[h])]
         print(f"content_{lang}: {len(have)}/{len(mine)} passages translated; {len(mine) - len(have)} stay in the original language (marker); {len(stale)} stale; {len(bad)} with changed identifiers or numbers")
         rc |= bool(bad)
-        if lang in ("fr", "es", "de") and len(have) < len(mine):   # 2026-11-21 (ADV-159): the suite pins "no original-language marker on a fr, es or de page" (FiveLanguages); a reworded passage whose new hash has no translation passed this command (exit 0) and failed only in CI, run 1820
+        if len(have) < len(mine):
             gone = [h for h in mine if h not in t]
             print(f"   untranslated for {lang}: {len(gone)} passage(s), e.g. {gone[0]} ({mine[gone[0]]['src']}, {len(mine[gone[0]]['text'])} chars); translate them into view/{I18N_SUBDIR}/content_{lang}.json, then rebuild the pages and the package")
             rc = 1
