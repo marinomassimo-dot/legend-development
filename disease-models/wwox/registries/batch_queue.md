@@ -84,8 +84,8 @@ time; it does not redistribute or license the article text.
 | **Not found by identifier** — run the intake gate | 259 | 37% |
 | **Catalogued, never processed** — the reading debt | 116 | 16% |
 | Known to the tracking log only | 77 | 11% |
-| Processed from the abstract | 13 | 2% |
-| Partial full text read | 75 | 11% |
+| Processed from the abstract | 12 | 2% |
+| Partial full text read | 76 | 11% |
 | Full text read | 166 | 24% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
@@ -575,7 +575,6 @@ for an entirely unprocessed record.
 | [34998176](https://pubmed.ncbi.nlm.nih.gov/34998176/) | 2022 | — | abstract only | receipt FTR-20261106-34998176-26 | Interaction of Wwox with Brca1 and associated complex proteins prevents premature resection at double-strand breaks and aberrant homologous recombination. |
 | [30622118](https://pubmed.ncbi.nlm.nih.gov/30622118/) | 2019 | — | abstract only | receipt FTR-20261107-30622118-60 | ✎ corrected — WWOX Inhibits Metastasis of Triple-Negative Breast Cancer Cells via Modulation of miRNAs. |
 | [26390919](https://pubmed.ncbi.nlm.nih.gov/26390919/) | 2015 | — | abstract only | receipt FTR-20261110-26390919-83 | Tumor suppressor WWOX moderates the mitochondrial respiratory complex. |
-| [17909041](https://pubmed.ncbi.nlm.nih.gov/17909041/) | 2007 | — | abstract only | receipt FTR-20261108-17909041-99 | Association of Wwox with ErbB4 in breast cancer. |
 | [16007179](https://pubmed.ncbi.nlm.nih.gov/16007179/) | 2005 | — | abstract only | receipt FTR-20261110-16007179-83 | ✎ corrected — FRA16D common chromosomal fragile site oxido-reductase (FOR/WWOX) protects against the effects of ionizing radiation in Drosophila. |
 | [41124647](https://pubmed.ncbi.nlm.nih.gov/41124647/) | 2026 | ✅ | partial full text | receipt FTR-20261004-41124647-03 | Genetic and Functional Evidence Links Germline Biallelic Inactivating Variants in WWOX to Histological Mixed-Type Thyroid Cancer. |
 | [42523332](https://pubmed.ncbi.nlm.nih.gov/42523332/) | 2026 | ✅ | partial full text | PAPER 542 | Golgi CATCHR complexes function as organizing hubs for vesicle tethering and fusion. |
@@ -597,6 +596,7 @@ for an entirely unprocessed record.
 | [18620777](https://pubmed.ncbi.nlm.nih.gov/18620777/) | 2008 | ✅ | partial full text | receipt FTR-20261115-18620777-01 | The JNK inhibitor SP600129 enhances apoptosis of HCC cells induced by the tumor suppressor WWOX. |
 | [11572989](https://pubmed.ncbi.nlm.nih.gov/11572989/) | 2001 | ✅ | partial full text | receipt FTR-20260927-11572989-01 | WWOX: a candidate tumor suppressor gene involved in multiple tumor types. |
 | [25738261](https://pubmed.ncbi.nlm.nih.gov/25738261/) | 2015 | — | partial full text | receipt FTR-20261115-25738261-01 | ACK1 promotes hepatocellular carcinoma progression via downregulating WWOX and activating AKT signaling. |
+| [17909041](https://pubmed.ncbi.nlm.nih.gov/17909041/) | 2007 | — | partial full text | receipt FTR-20261122-17909041-01 | Association of Wwox with ErbB4 in breast cancer. |
 | [16061658](https://pubmed.ncbi.nlm.nih.gov/16061658/) | 2005 | — | partial full text | receipt FTR-20260811-16061658-02 | WW domain-containing proteins, WWOX and YAP, compete for interaction with ErbB-4 and modulate its transcriptional function. |
 | [42082822](https://pubmed.ncbi.nlm.nih.gov/42082822/) | 2026 | ✅ | full text | CORPUS PMID 42082822 | The Role of WWOX Gene Variant in Hypospadias and 46,XY Disorders of Sexual Development. |
 | [39416860](https://pubmed.ncbi.nlm.nih.gov/39416860/) | 2024 | ✅ | full text | PAPER 093 | WWOX-related epileptic encephalopathy caused by a novel mutation in the WWOX gene: a case report. |
