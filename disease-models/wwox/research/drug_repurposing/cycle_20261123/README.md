@@ -33,3 +33,13 @@ At 12:37 UTC the other chat independently reproduced the ethosuximide severity b
 ## White-matter energy supply and memantine
 
 Two hours of 1 µM memantine suppressed oligodendroglial NMDA current by 56–70% depending on the recording solution. In the tested low-concentration nerve protection arm another blocker was also present. Separately, after glial Grin1 deletion, the late conduction deficit measured from published group curves was 16.5 percentage points on glucose. It closed on lactate (mutant 1.4 points above control). The descriptive change in gap was +17.9 points. Fuel and exposure duration can therefore distinguish two opposing white-matter hypotheses. Neither tissue experiment combined memantine with WWOX loss. [Drug, fuel and axonal recovery](../memantine_oligodendroglial_fuel_20261123/README.md)
+
+## Could circulating steroid select ganaxolone responders?
+
+In the randomized PCDH19 trial, the published total and low-Allo-S subgroup quartiles constrain the number of ≥50% seizure responders. The sample drug–placebo advantage was 4.8 points at low Allo-S versus 25 points above the cutoff under all seven compatible quartile conventions. Only four participants per arm were in the higher stratum. In a separate CDKL5 trial, the low stratum also lacked a larger numerical treatment effect. Low plasma allopregnanolone sulfate therefore lacks a basis as a WWOX eligibility criterion. [Subgroup reconstruction and limits](../ganaxolone_steroid_biomarker_20261123/README.md)
+
+## Human exposure context for ethosuximide and perampanel
+
+In Oliver et al.'s 13-person WWOX-DEE series, the medication table lists perampanel for two participants and ethosuximide for one of those two. Both were classified as having drug-resistant epilepsy. Drug-specific changes or isolated treatment effects were unavailable. In a published adult missense case exposed to both agents among several regimens, persistent seizures and no sustained overall improvement were reported. Protein function was unmeasured, and exposure to multiple agents prevents attribution to any one. Together these observations constrain transfer of the acute mouse ethosuximide result and the perampanel myelin hypotheses to people. [Cohort, Table 2](https://onlinelibrary.wiley.com/doi/full/10.1111/epi.17542) · [Adult case](https://pmc.ncbi.nlm.nih.gov/articles/PMC11537890/) · [Existing laboratory assessment](../../fulltext_dossiers/PMID39507621.md)
+
+At 12:57 UTC the independent reviewer confirmed that the ganaxolone biomarker reconstruction uses the same seizure endpoint and reproduced the low-stratum responder counts from the trial summaries. [Details and conventions](../ganaxolone_steroid_biomarker_20261123/README.md)

@@ -1,0 +1,29 @@
+convention	arm	allocations	high_median_min	high_median_max	low_responders
+type2	Placebo	21	-75.000	-56.099	2
+type2	Ganaxolone	13	-97.928	-84.436	2
+# type2: high median drug-minus-placebo [-41.83, -9.44] points; low-minus-high responder-rate interaction [-20.24, -20.24] pp
+type7	Placebo	0	NA	NA	NA
+type7	Ganaxolone	0	NA	NA	NA
+type6	Placebo	21	-75.000	-56.099	2
+type6	Ganaxolone	10	-97.237	-83.743	2
+# type6: high median drug-minus-placebo [-41.14, -8.74] points; low-minus-high responder-rate interaction [-20.24, -20.24] pp
+medians	Placebo	115	-100.000	-23.964	0,1,2,3
+medians	Ganaxolone	95	-100.000	-61.514	1,2,3
+# medians: high median drug-minus-placebo [-76.04, 38.49] points; low-minus-high responder-rate interaction [-101.19, 100.00] pp
+type1	Placebo	21	-75.000	-56.099	2
+type1	Ganaxolone	13	-97.928	-84.436	2
+# type1: high median drug-minus-placebo [-41.83, -9.44] points; low-minus-high responder-rate interaction [-20.24, -20.24] pp
+type3	Placebo	6	-75.000	-56.099	2
+type3	Ganaxolone	0	NA	NA	NA
+type4	Placebo	12	-72.891	-54.138	2
+type4	Ganaxolone	8	-95.856	-84.888	2
+# type4: high median drug-minus-placebo [-41.72, -12.00] points; low-minus-high responder-rate interaction [-20.24, -20.24] pp
+type5	Placebo	9	-56.111	-38.450	2
+type5	Ganaxolone	13	-97.928	-84.436	2
+# type5: high median drug-minus-placebo [-59.48, -28.33] points; low-minus-high responder-rate interaction [-20.24, -20.24] pp
+type8	Placebo	13	-69.123	-36.982	2
+type8	Ganaxolone	24	-97.740	-84.247	2
+# type8: high median drug-minus-placebo [-60.76, -15.12] points; low-minus-high responder-rate interaction [-20.24, -20.24] pp
+type9	Placebo	13	-69.123	-36.982	2
+type9	Ganaxolone	20	-97.790	-84.297	2
+# type9: high median drug-minus-placebo [-60.81, -15.17] points; low-minus-high responder-rate interaction [-20.24, -20.24] pp
