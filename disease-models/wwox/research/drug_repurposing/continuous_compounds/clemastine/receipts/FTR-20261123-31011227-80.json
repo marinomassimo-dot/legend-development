@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-31011227-80",
+  "event_at": "2026-11-23T22:03:47Z",
+  "analysis_at": "2026-11-23T22:03:47Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "31011227",
+    "doi": "10.1038/s41593-019-0380-9"
+  },
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://fenglaboratory.org/wp-content/uploads/2021/07/22.-neuronal-deletion-of-gtf2i-associated-with-williams-syndrome-causes-behavioral-and-myelin-alterations-rescuable-by-a-remyelinating-drug.pdf ; files/deepening_downloads/clemastine_loop_20261123/clemastine-gtf2i.pdf",
+  "source_fingerprint": "6ee3801c7e3591dd645fdffbefc2fc18aa3f269faa76602a862237d67b7d3a02",
+  "workflow": "Disentangle basal ensheathment frequency, treated sheath thickness and intervention-specific conduction rescue.",
+  "evidence_basis": [
+    "Figure 3B legend: “percentage of myelinated axons”. Figure 4 attributes acute latency change to 4-AP.",
+    "Figure 5B legend reports “281 axons from 3 cKO vehicle mice” and gives 419 axons from four treated mice. The measured outcome is g-ratio. Methods distinguish this from counting all axons."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/clemastine/axonal_denominator.md"
+  ],
+  "prior_receipt": null,
+  "reread_reason": "first_read"
+}
