@@ -7,3 +7,5 @@
 **First dataset check, specified before calculation.** Inspect PDXK, PNPO, PLPBP, PDXP, ALPL, GAD1/2, ABAT, ALDH5A1, SLC32A1 and ALDH7A1. Compare juvenile cortex, hippocampus and week-15 organoids separately. Look for replicated changes in cofactor handling relative to inhibitory-neuron abundance. Transcript direction cannot measure PLP occupancy. Separate loss of GABA-producing cells from lower supply within surviving cells. Next inspect cell-specific contrasts and primary GAD cofactor measurements.
 
 **First results.** PDXK and PNPO RNA diverged between juvenile hippocampus and human organoids. The measurements now need to cover GABA synthesis and consumption, which both depend on PLP. [Contrasts, cell classes and refined test](gaba.md)
+
+**Disposition.** Parked for WWOX-specific trial priority after the activity-dependent release and pediatric CSF comparisons. [Quantitative results and reopening condition](release_and_exposure.md)

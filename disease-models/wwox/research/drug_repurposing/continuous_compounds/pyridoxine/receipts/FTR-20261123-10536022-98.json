@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-10536022-98",
+  "event_at": "2026-11-23T23:37:14Z",
+  "analysis_at": "2026-11-23T23:37:14Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "10536022",
+    "doi": "10.1073/pnas.96.22.12911"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/pyridoxine_loop_20261123/tian.html",
+  "source_fingerprint": "1cd27d335b927f92cb423e40a38bc052a53fb34cc35144daa21e18fe58de62fa",
+  "workflow": "Targeted examination of pediatric vitamer distribution or activity-dependent neurotransmitter output for the pyridoxine hypothesis.",
+  "evidence_basis": [
+    "Fig. 4A2: “Average amplitude of the last 100 ms of the envelope”; CA1 mouse currents normalized to prestimulus responses.",
+    "Fig. 4A1–A2 recordings WT 8 and KO 13; Fig. 4B1 uses a separate 10 s stimulation and different sample."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/pyridoxine/release_and_exposure.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/pyridoxine/evoked.tsv"
+  ]
+}

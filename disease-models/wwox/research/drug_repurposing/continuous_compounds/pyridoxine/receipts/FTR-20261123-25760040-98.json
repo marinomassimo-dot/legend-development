@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-25760040-98",
+  "event_at": "2026-11-23T23:37:14Z",
+  "analysis_at": "2026-11-23T23:37:14Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "25760040",
+    "doi": "10.1371/journal.pone.0120972"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/pyridoxine_loop_20261123/albersen.xml",
+  "source_fingerprint": "b1e66d78ba1f8d03ab26266d435ed9608b703cbb1ef78824cb0c80b2fb1391ef",
+  "workflow": "Targeted examination of pediatric vitamer distribution or activity-dependent neurotransmitter output for the pyridoxine hypothesis.",
+  "evidence_basis": [
+    "Table 2: paired CSF/plasma ratios for 35 children. Table 3 has group sizes 35 and 41.",
+    "Results: “Three of these children showed decreased concentrations of both PL and PLP in CSF.” Denominator is 51 pooled treated children."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/pyridoxine/release_and_exposure.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/pyridoxine/csf.tsv"
+  ]
+}

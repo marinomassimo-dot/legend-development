@@ -17,6 +17,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 11 | Riboflavin, cellular uptake and flavin-dependent mitochondrial enzymes | Can new cofactor synthesis and functional recovery reveal a reversible bottleneck despite normal whole-cell FAD? |
 | 12 | Citicoline, phosphatidylcholine supply and developmental myelin | Does precursor availability limit first-sheath formation and evoked conduction in WWOX? |
 | 13 | Pyridoxine, cofactor handling and inhibitory transmitter replenishment | Can increased cofactor availability rescue stimulated GABA production and native inhibition in WWOX? |
+| 14 | Rufinamide, state-dependent sodium-channel gating | Does changing burst duration or interval reveal a selective effect on excitation while preserving inhibitory recruitment? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -27,7 +28,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: pyridoxine.** Does cofactor-dependent GABA replenishment fail during repeated activity in WWOX inhibitory neurons? The WWOX case abstract names vitamin B6 without the vitamer. [Prediction and countertest](pyridoxine/README.md)
+**Active compound: rufinamide.** Can burst duration and recovery distinguish suppression of recurrent excitation from impaired inhibitory recruitment? Parent data show preferential NaV1.1 activation shift and slower recovery across four isoforms. Next compare the human neuronal response and native WWOX firing patterns. [Opening prediction](rufinamide/README.md) · [Channel, exposure and WWOX comparison](rufinamide/channels.md)
+
+**Pyridoxine parked for WWOX trial priority.** The GAD65 comparator confirms a large demand-dependent difference; pediatric B6 forms disagree and no WWOX-specific response has been established. [Circuit and pediatric comparisons, reproducible results and reopen condition](pyridoxine/release_and_exposure.md)
 
 **Citicoline parked for WWOX trial prioritization.** Mouse evidence supports remyelination in defined non-WWOX settings. Precursor proliferation can also raise myelin markers. A fixed cohort of mature WWOX cells with simultaneous flux, new sheaths and conduction would reopen the question. [Mechanism and reanalysis](citicoline/tracer.md) · [Mouse and cell-class results](citicoline/myelin.md) · [Human clinical audit](citicoline/human.md)
 
