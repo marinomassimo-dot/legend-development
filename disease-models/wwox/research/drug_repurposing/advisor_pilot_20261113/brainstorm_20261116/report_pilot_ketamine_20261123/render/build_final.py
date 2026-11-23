@@ -354,7 +354,7 @@ def _matrices(s):
     hdr = t["header"]
     defi = hdr.index("Exposure definition")
     groups = {"Nominal bath concentration (applied to a preparation; no plasma protein)": lambda d: d.startswith("bath"),
-              "Total plasma (measured in blood plasma)": lambda d: d.startswith("plasma"),
+              "Plasma (total or free drug not stated)": lambda d: d.startswith("plasma"),
               "Cerebrospinal fluid (lumbar)": lambda d: d.startswith("CSF")}
     used = set()
     for title, pred in groups.items():
