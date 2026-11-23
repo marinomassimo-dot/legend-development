@@ -1,0 +1,10 @@
+minutes	points_per_curve	Glc_control	Glc_cKO	Lac_control	Lac_cKO	interaction_pp
+230-240	21	0.3385	0.1735	0.3431	0.3568	17.88
+220-230	21	0.3401	0.1651	0.3430	0.3506	18.26
+200-210	21	0.3474	0.1866	0.3502	0.3490	15.96
+130-140	21	0.3177	0.1758	0.3366	0.3118	11.71
+40-50	21	1.0077	0.9970	0.9987	0.9990	1.10
+
+concentration_uM	brief_single_block_pct	brief_mixture_block_pct
+0.36	0.66	3.78
+1.0	1.82	9.33
