@@ -905,10 +905,19 @@
     },
     {
      "step": "checkpoint G and launch of the HE successor (old e052ca19), bind, handoff, rename",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV agreement 2026-11-23 on restart at 248k",
-     "accepted_at": "2026-11-23T11:38:42Z"
+     "accepted_at": "2026-11-23T11:38:42Z",
+     "evidence": "HE fb709c2c bound (released probe BOUND), old e052ca19 RELEASED, roster HE - CURRENT fb709c2c / HE - PREVIOUS e052ca19 read from claude agents --all --json 2026-11-23; checkpoint G digest b75c04f9 verified",
+     "updated_at": "2026-11-23T12:41:33Z"
+    },
+    {
+     "step": "launch SCI successor AC (old ff316249), bind, handoff, rename",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV message 2026-11-23 (SCI successor launch, checkpoint AC digest 28b0c7d3)",
+     "accepted_at": "2026-11-23T12:41:34Z"
     }
    ]
   }
@@ -1611,6 +1620,13 @@
    "at": "2026-11-23T11:38:42Z",
    "source": "ADV agreement 2026-11-23 on restart at 248k",
    "step_sha256": "0c68f23fb253",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-23T12:41:34Z",
+   "source": "ADV message 2026-11-23 (SCI successor launch, checkpoint AC digest 28b0c7d3)",
+   "step_sha256": "4300b3511aee",
    "reopened_block": false,
    "authorised_by": null
   }
