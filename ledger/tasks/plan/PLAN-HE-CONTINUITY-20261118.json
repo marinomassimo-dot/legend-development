@@ -902,6 +902,13 @@
      "accepted_at": "2026-11-23T07:39:37Z",
      "evidence": "governance/candidates/HARNESS-SCOUT-2026-W48.md 8 rows, no ADOPT/TRIAL, status TRIAGED; harness_session_start CURRENT; gate 0 blocks",
      "updated_at": "2026-11-23T07:39:37Z"
+    },
+    {
+     "step": "checkpoint G and launch of the HE successor (old e052ca19), bind, handoff, rename",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV agreement 2026-11-23 on restart at 248k",
+     "accepted_at": "2026-11-23T11:38:42Z"
     }
    ]
   }
@@ -1597,6 +1604,13 @@
    "at": "2026-11-23T07:39:37Z",
    "source": "ADV tick 07:36Z",
    "step_sha256": "02db0446a784",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-23T11:38:42Z",
+   "source": "ADV agreement 2026-11-23 on restart at 248k",
+   "step_sha256": "0c68f23fb253",
    "reopened_block": false,
    "authorised_by": null
   }

@@ -1,0 +1,5 @@
+pool	available_markers	threshold	nuclei	UMIs
+ctrl	Spp1,Gpnmb,Igf1,Lpl,Lgals3,Itgax	1	4	9196
+ctrl	Spp1,Gpnmb,Igf1,Lpl,Lgals3,Itgax	2	0	0
+ko	Spp1,Gpnmb,Igf1,Lpl,Lgals3,Itgax	1	14	19319
+ko	Spp1,Gpnmb,Igf1,Lpl,Lgals3,Itgax	2	1	1689

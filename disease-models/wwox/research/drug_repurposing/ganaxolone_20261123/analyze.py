@@ -96,12 +96,12 @@ def add_contrast(label, samples, expr, case, ctrl, up, down, rows, per_sample):
     per_sample.extend([label, samples[i], "case" if i in a else "control", values[i]] for i in a+b)
 
 
-def microglia(files, up, down):
+def assigned_nuclei(files, up, down, extra=()):
     # The same marker assignment and 500-UMI filter as the LEGEND A2 classifier.
     markers = ["Slc17a7 Camk2a Satb2","Gad1 Gad2 Slc32a1","Aqp4 Aldh1l1 Slc1a2","Cx3cr1 P2ry12 Csf1r",
                "Pdgfra Cspg4 Cspg5 Pcdh15","Gpr17 Neu4 Bmp4 Vcan","Tcf7l2 Itpr2 Enpp6 Bcas1 Tmem2 Fyn Casr",
                "Mal Mog Opalin Serinc5 Mag","Klk6 Apod Pmp22 Slc5a11 Ermn Hapln2"]
-    wanted = set(up + down + " ".join(markers).split())
+    wanted = set(up + down + " ".join(markers).split()) | set(extra)
     arms = []
     for arm in ["ctrl", "ko"]:
         prefix = str(files/f"geo/GSE158684/GSE158684_{arm}_filtered_")
@@ -129,11 +129,16 @@ def microglia(files, up, down):
         for i,name in enumerate(names):
             sel = (norm.argmax(1)==i) & (norm.max(1)>=.2)
             assert sel.any()
-            total = library[sel].sum()
-            summed = {g:int(v[sel].sum()) for g,v in genes.items()}
-            pseudo = {g:np.log2(1+v*1e6/total) for g,v in summed.items()}
-            value, sizes = score(pseudo, up, down)
-            yield arm, name, int(sel.sum()), int(total), sizes, value, summed
+            yield arm, name, library[sel], {g:v[sel] for g,v in genes.items()}
+
+
+def microglia(files, up, down):
+    for arm, name, library, genes in assigned_nuclei(files, up, down):
+        total = library.sum()
+        summed = {g:int(v.sum()) for g,v in genes.items()}
+        pseudo = {g:np.log2(1+v*1e6/total) for g,v in summed.items()}
+        value, sizes = score(pseudo, up, down)
+        yield arm, name, len(library), int(total), sizes, value, summed
 
 
 

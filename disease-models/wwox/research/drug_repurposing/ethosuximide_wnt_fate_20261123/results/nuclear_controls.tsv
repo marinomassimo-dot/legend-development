@@ -1,0 +1,9 @@
+compound	CID	SID	exposure_uM	activity_percent	author_call	n_lower	n_equal	n_substances
+ethosuximide	3291	170464802	2	-0.3	Inactive	563	62	2509
+riluzole	5070	170464928	2	-0.8	Inactive	335	46	2509
+methotrexate	126941	170464688	2	41.0	Active	2465	1	2509
+rotenone	6758	170466816	2	43.8	Active	2467	1	2509
+ethosuximide	3291	170464802	10	0.2	Inactive	910	66	2509
+riluzole	5070	170464928	10	0.7	Inactive	1236	62	2509
+methotrexate	126941	170464688	10	74.0	Active	2486	1	2509
+rotenone	6758	170466816	10	92.8	Active	2502	2	2509
