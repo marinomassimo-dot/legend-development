@@ -927,6 +927,15 @@
      "accepted_at": "2026-11-23T17:36:59Z",
      "evidence": "brainstorm_20261116/report_pilot_ketamine_20261123/render/: build_pilot.py, pilot_stand_in.json, out/ketamine_pilot_20261123.pdf (6 pages A4, fonts embedded, 108 live links, deterministic bytes), page images out/pages; no framework/view/gate change",
      "updated_at": "2026-11-23T17:45:49Z"
+    },
+    {
+     "step": "ADV-202 correct the wrong PMID label in the public ketamine brief",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-202",
+     "accepted_at": "2026-11-23T18:44:35Z",
+     "evidence": "ketamine.json source 2 now PMID 33914858 (Brain 2021, verified in PubMed; 34747138 is the EMBO Mol Med gene-therapy paper); only PDF text change is that line; ethosuximide.json has no 34747138; view run, run --source shareable, package regenerated; audit-shareable 0 violations; view suite 236/238 then 2 targeted tests OK after full-view regen; i18n 31 OK; integrity OK",
+     "updated_at": "2026-11-23T18:44:35Z"
     }
    ]
   }
@@ -1643,6 +1652,13 @@
    "at": "2026-11-23T17:36:59Z",
    "source": "ADV-201",
    "step_sha256": "2119106d0d3b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-23T18:44:35Z",
+   "source": "ADV-202",
+   "step_sha256": "e485ba09da18",
    "reopened_block": false,
    "authorised_by": null
   }
