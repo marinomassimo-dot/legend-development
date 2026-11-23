@@ -240,7 +240,11 @@ def discover_tests(root: Path) -> tuple[str, ...]:
 
 #: An exclusion is a decision with a reason, never a name silently absent from the battery.
 #: Keys are repo-relative paths that exist; `test_release_runner_verdict.py` checks both.
-NOT_RUN_BY_DESIGN: dict[str, str] = {}
+NOT_RUN_BY_DESIGN: dict[str, str] = {
+    "disease-models/wwox/research/drug_repurposing/memantine_20261123/test_wwox.py":
+        "a command-line dossier script (arguments: files, gene_info, pairs, out), not a suite: run without "
+        "arguments it exits 2 (argparse); imported by matching_sensitivity.py in the same folder",
+}
 
 
 def battery(priority: tuple[str, ...], discovered: tuple[str, ...],
