@@ -5,10 +5,10 @@ N3	NMDA-receptor activation contributes to the bursts in this preparation	infere
 N4	Competitive antagonist claim: blocking the agonist site suppresses bursts (shown for d-APV only)	claim	D	[1]
 N5	Pore-blocker claim: a use-dependent open-channel blocker suppresses bursts at matched receptor block	claim	H	research team (unpublished)
 N6	Ketamine reduces the hyperpolarisation-activated current through HCN1 (about 30% in wild-type neurons, about 5% in HCN1 knockout; 20 uM)	observation	D	[4]
-N7	Knockout neurons have larger sag voltage (a marker of the same current)	observation	D	[1]
+N7	Knockout neurons have larger sag voltage (a marker of the same current; average +/- SEM across animals, p values in the evidence table)	observation	D	[1]
 N8	Alternative A: a ketamine effect on bursts in this slice runs through HCN1 and Ih and not through NMDA-receptor block	alternative	H	[4],[1]
-N9	Low-dose ketamine acts through GluN2A on parvalbumin interneurons in adult visual cortex	observation	D	[5]
-N10	Knockout neurons have smaller inhibitory currents (57.3 to 27.5 pA)	observation	D	[1]
+N9	Low-dose ketamine acts through GluN2A on parvalbumin interneurons in adult visual cortex (abstract-level reading)	observation	D	[5]
+N10	Knockout neurons have smaller inhibitory currents (57.3 to 27.5 pA; the +/- statistic is not named in the source)	observation	D	[1]
 N11	Alternative B: partial block disinhibits and raises bursting at shallow block	alternative	H	[5],[1]
 N12	d-APV washout frequency about 1.8 times baseline (error bar includes 1.0); text says returned to normal	observation	D	[1]
 N13	Alternative C: rebound above baseline after washout	alternative	H	[1]
