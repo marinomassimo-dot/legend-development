@@ -884,6 +884,15 @@
      "accepted_at": "2026-11-22T22:35:59Z",
      "evidence": "one README row; test_tool_routing 7 OK, documented_commands 4 OK, reader_journey 5 OK, section_references OK, gate BLOCKS 0",
      "updated_at": "2026-11-22T22:36:58Z"
+    },
+    {
+     "step": "launch SCI successor AA (old 052bf24b), bind, handoff",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV message 2026-11-23",
+     "accepted_at": "2026-11-23T04:40:53Z",
+     "evidence": "SCI 4e2317da launched 04:41:17Z from detached worktree sci_aa_20261123, old 052bf24b RELEASED, new BOUND, checkpoint AA digest 1494a82d verified",
+     "updated_at": "2026-11-23T04:42:27Z"
     }
    ]
   }
@@ -1565,6 +1574,13 @@
    "at": "2026-11-22T22:35:59Z",
    "source": "ADV message 2026-11-22",
    "step_sha256": "d9d1ed25e938",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-23T04:40:53Z",
+   "source": "ADV message 2026-11-23",
+   "step_sha256": "5cd1073e0b11",
    "reopened_block": false,
    "authorised_by": null
   }
