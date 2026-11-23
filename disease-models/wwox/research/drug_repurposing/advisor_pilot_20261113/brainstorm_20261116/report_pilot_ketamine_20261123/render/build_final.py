@@ -156,6 +156,12 @@ def hd(tag: str, text: str, style: str = "") -> str:
     return f'{brk}<{tag} id="{hid}"{f" style={chr(34)}{style}{chr(34)}" if style else ""}>{esc(text)}</{tag}>'
 
 
+def is_abstract_text(text: str) -> bool:
+    """The pack marks a source read at abstract level in plain words (status ABSTRACT-ONLY, '(abstract-only)', '(abstract-level reading)')."""
+    t = text.lower()
+    return "abstract-only" in t or "abstract-level" in t
+
+
 def cell_html(header: str, text: str) -> str:
     if header == "Status":
         if text.startswith("ABSTRACT-ONLY"):
@@ -184,7 +190,7 @@ def table_html(tbl: dict, wide: bool = False, link_pmid: bool = False) -> str:
     for k, row in enumerate(tbl["rows"]):
         row = row + [""] * (n - len(row))
         cells = []
-        is_abs = "Status" in hdr and row[hdr.index("Status")].startswith("ABSTRACT-ONLY")
+        is_abs = ("Status" in hdr and row[hdr.index("Status")].startswith("ABSTRACT-ONLY")) or ("Source" in hdr and is_abstract_text(row[hdr.index("Source")]))
         for h, c in zip(hdr, row):
             if link_pmid and h == "PMID" and c.isdigit():
                 cells.append(f'<td><a href="https://pubmed.ncbi.nlm.nih.gov/{c}/">{c}</a></td>')
@@ -322,7 +328,7 @@ def front_html(A, pagemap):
         '<div class="tag"><b>AI-curated research brief for discussion with a clinical team</b><br>'
         '<span class="small">Hypothesis level. Not medical advice. No dose, schedule or recommendation. Reference genotype class only.</span></div>',
         f'<p class="note"><b>Page order.</b> {esc(order)}<br>'
-        '<b>In the tables, a heavy bar at the left edge of a row and the mark [ABSTRACT-ONLY] mean that the row was reproduced from the PubMed abstract and not from the full text.</b></p>',
+        '<b>In the tables, a heavy bar at the left edge of a row and the mark [ABSTRACT-ONLY] mean that the row was reproduced from the PubMed abstract and not from the full text. Figure 1 uses the same bar on a node or edge tag.</b></p>',
         file_head(A, "17pt", "6pt"),
         sections_html(A),
     ]
@@ -342,7 +348,8 @@ def edge_list_html(edges):
 
 
 def _matrices(s):
-    out = [hd("h2", s["title"]) + paragraphs_html(s["lines"])]
+    after = [l for l in s["lines"] if l.startswith("**Note")]  # the pack prints the note after the table: it follows the matrices here too
+    out = [hd("h2", s["title"]) + paragraphs_html([l for l in s["lines"] if l not in after])]
     t = s["tables"][0]
     hdr = t["header"]
     defi = hdr.index("Exposure definition")
@@ -357,6 +364,8 @@ def _matrices(s):
     rest = [r for r in t["rows"] if id(r) not in used]
     if rest:
         out.append(hd("h3", "Other") + table_html({"header": hdr, "rows": rest}, wide=True))
+    if after:
+        out.append(paragraphs_html(after))
     return "".join(out)
 
 
@@ -459,6 +468,7 @@ def _node_style(kind):
 
 
 def draw_graph_node(page, rect, n):
+    import pymupdf
     kind = n["kind"]
     if kind not in KIND_TEXT:
         raise SystemExit(f"graph node {n['node_id']} has the unknown kind {kind!r}: add it to KIND_TEXT and the drawing")
@@ -476,7 +486,15 @@ def draw_graph_node(page, rect, n):
         pad = 6.0
     ink = "#fff" if kind == "experiment" else "#000"
     head = f"{n['node_id']} · {kind.upper()} ({n['stage'].split()[0]}) {n['ref']}"
-    box = rect + (pad, 2.5, -pad, -4.5 if kind == "claim" else -1.5)  # a claim's inner outline sits 2.8 pt inside the box
+    flagged = is_abstract_text(n["label"])
+    if flagged:  # same heavy bar as a table row: this node rests on an abstract
+        bar = page.new_shape()
+        bar.draw_rect(pymupdf.Rect(rect.x0, rect.y0, rect.x0 + 6, rect.y1))  # a Rect plus a tuple moves every edge, so build the bar from coordinates
+        bar.finish(color=(0, 0, 0), fill=(0, 0, 0), width=0.5)
+        bar.commit()
+        pad += 6
+        head += " · ABSTRACT-ONLY"
+    box = rect + (pad, 2.5, -3.0 if kind != "claim" else -6.0, -4.5 if kind == "claim" else -1.5)  # a claim's inner outline sits 2.8 pt inside the box
 
     def html_at(size):
         return (f"<p style='margin:0;font-size:{size * 0.84:.1f}pt'><b>{esc(head)}</b></p>"
@@ -547,7 +565,8 @@ def draw_key(page, kinds, statuses, y0):
             i2.commit()
         label(x + 26, y0 + 32, 92, 18, f"<b>{kind.upper()}</b>: {esc(KIND_TEXT[kind])}", 6.2)
         x += 120
-    label(40, y0 + 53, 764, 14, "Letters in brackets are the stages: D data, I inference, H hypothesis, E experiment. Status is carried by line style, fill and the words, never by colour. "
+    label(40, y0 + 53, 764, 18, "Letters in brackets are the stages: D data, I inference, H hypothesis, E experiment. Status is carried by line style, fill and the words, never by colour. "
+          "A heavy bar at the left of a node or an edge tag: that item rests on a source read at abstract level only. "
           "No weights, scores or probabilities are drawn; nothing here implies that any drug should or should not be used.", 6.2)
 
 
@@ -564,6 +583,7 @@ def graph_page(doc, nodes, edges):
     if {e["edge_id"] for e in edges} != set(route):
         raise SystemExit(f"graph edges in the pack differ from routes(): new {sorted({e['edge_id'] for e in edges} - set(route))}")
     tags = {}
+    abstract_edges = {e["edge_id"] for e in edges if is_abstract_text(e["source"]) or is_abstract_text(e["label"])}
     for e in sorted(edges, key=lambda e: edge_look(e)["order"]):  # heavy lines last, each with a white halo: they bridge the lighter ones
         sty = edge_look(e)
         ink = sty.get("color", (0, 0, 0))
@@ -604,6 +624,11 @@ def graph_page(doc, nodes, edges):
         sh.draw_rect(r)
         sh.finish(color=sty.get("color", (0, 0, 0)), fill=sty["fill"], width=0.9)
         sh.commit()
+        if eid in abstract_edges:  # heavy bar at the tag's left edge, as on a table row
+            bar = page.new_shape()
+            bar.draw_rect(pymupdf.Rect(r.x0, r.y0, r.x0 + 4.5, r.y1))
+            bar.finish(color=(0, 0, 0), fill=(0, 0, 0), width=0.5)
+            bar.commit()
         page.insert_htmlbox(r + (0, 1.6, 0, 0), f"<p style='margin:0;font-size:8pt;text-align:center'><b>{eid}</b></p>", css=f"body{{font-family:sans-serif;color:{sty['ink']}}}")
     kinds = [k for k in KIND_TEXT if any(n["kind"] == k for n in nodes)]
     looks = {}
