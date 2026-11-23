@@ -31,6 +31,10 @@ def main():
     cp_b=fitted_inhibition(10,.049,1.4,.95)
     cp_bd=fitted_inhibition(10,.077,1.4,.59)
     rows=[]
+    heldout=[]
+    # Yi et al. Table 4, change from control after 100 µM spermine at pH 7.4.
+    spermine_change=(1.11, .50, -.29)
+    spermine_sem=(.06, .02, .004)
     for cyclodextrin in (False,True):
         nab_bd=fitted_inhibition(10,6.8 if cyclodextrin else 3.3,1,.71 if cyclodextrin else .78)
         nab_d=fitted_inhibition(10,3.2 if cyclodextrin else 1.5,1.2 if cyclodextrin else 1,1 if cyclodextrin else 1.03)
@@ -47,6 +51,17 @@ def main():
             if not corners:
                 rows.append([cyclodextrin,tolerance,False]+["NA"]*8)
                 continue
+            # A separate native probe is predicted without using its response to fit the weights.
+            def spermine_range(calibration_shift):
+                values=[sum(weight*(change+calibration_shift*uncertainty)
+                            for weight, change, uncertainty in zip(w, spermine_change, spermine_sem))
+                        for w in corners]
+                return min(values),max(values)
+            estimate_low,estimate_high=spermine_range(0)
+            sensitivity_low,_=spermine_range(-1)
+            _,sensitivity_high=spermine_range(1)
+            heldout.append((cyclodextrin,tolerance,estimate_low,estimate_high,
+                            sensitivity_low,sensitivity_high,.37,.13))
             bd=[w[1] for w in corners]
             d_bearing=[w[1]+w[2] for w in corners]
             fixed=[sum(a*b for a,b in zip(w,block)) for w in corners]
@@ -58,6 +73,10 @@ def main():
         writer=csv.writer(stream,delimiter="\t",lineterminator="\n")
         writer.writerow("NAB_with_cyclodextrin probe_absolute_tolerance feasible BD_min BD_max D_bearing_min D_bearing_max fixed_weight_block_min_pct fixed_weight_block_max_pct Mg_reweighted_block_min_pct Mg_reweighted_block_max_pct".split())
         writer.writerows(rows)
+    with (ROOT/"heldout.tsv").open("w") as stream:
+        writer=csv.writer(stream,delimiter="\t",lineterminator="\n")
+        writer.writerow("NAB_with_cyclodextrin two_probe_tolerance predicted_spermine_change_min predicted_spermine_change_max calibration_minus_SEM_min calibration_plus_SEM_max native_change native_SEM".split())
+        writer.writerows(heldout)
 
 if __name__=="__main__":
     main()
