@@ -831,6 +831,13 @@
      "accepted_at": "2026-11-23T17:13:20Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv199_kcc2_library_card_feasibility_sci_20261123/RESULT_ADV199_KCC2_LIBRARY_CARD_SCI_20261123.md; receipt FTR-20261123-39881966-01; disposition REJECTED (saturated by textbook rule or always-abstain; unmatched preparations)",
      "updated_at": "2026-11-23T17:18:49Z"
+    },
+    {
+     "step": "ADV-200: ketamine report pilot content pack (a-f), re-verified against originals; honesty gate, switch to ethosuximide is valid",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-200",
+     "accepted_at": "2026-11-23T17:36:59Z"
     }
    ]
   }
@@ -1470,6 +1477,13 @@
    "at": "2026-11-23T17:13:20Z",
    "source": "ADV-199",
    "step_sha256": "908eb755130d",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-23T17:36:59Z",
+   "source": "ADV-200",
+   "step_sha256": "81c5a2ed9e69",
    "reopened_block": false,
    "authorised_by": null
   }
