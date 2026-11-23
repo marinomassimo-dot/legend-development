@@ -27,3 +27,7 @@ In the same paper, the mean time constants of chloride-sensitive current recover
 ## Reproduction and scope
 
 The initial [prediction](prediction.md) preceded the flux calculation. The external timing workbook, source-mean audit, bounded histogram readback and bicarbonate sensitivity were exploratory checks. Run `python3 analyze.py <source-workbook.xlsx>` and `python3 histogram.py <high-resolution-figure.jpg>`. The second script uses ImageMagick to inspect the published image. Both scripts check the original file hash. Only new derived tables, code and attribution are distributed. The cited primary papers and the Magloire source workbook are open under CC BY 4.0. [Source workbook](https://pmc-oa-opendata.s3.amazonaws.com/PMC6420604.1/41467_2019_8933_MOESM6_ESM.xlsx) · [Original Wwox figure](https://ars.els-cdn.com/content/image/1-s2.0-S0969996121002783-gr1_lrg.jpg) · [Source reading receipts](receipts/)
+
+## Independent check
+
+At 16:23 UTC on 23 November, the independent laboratory chat returned an ACK and reproduced each animal-level ratio, the 44.67-point interaction, the 23.84–58.37-point omission range and the 49.69-point workbook-summary result. We accept its qualification that long-delay trials select persistent seizures. Only 7–9 of 119 Wwox events could cross two seconds. Interburst chloride recovery in native Wwox neurons therefore remains the primary ganaxolone comparison.

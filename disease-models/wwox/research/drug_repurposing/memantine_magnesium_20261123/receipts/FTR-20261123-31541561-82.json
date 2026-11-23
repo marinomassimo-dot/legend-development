@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-31541561-82",
+  "event_at": "2026-11-23T16:42:00Z",
+  "analysis_at": "2026-11-23T16:42Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "31541561",
+    "doi": "10.1113/JP278168"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6858497.1/PMC6858497.1.xml",
+  "source_fingerprint": "87ee420f6086fb5a93fe88a7fadb5a5462de32bcf213494f9986d422ee5be011",
+  "workflow": "Subunit- and magnesium-specific memantine inhibition and independent subtype probes.",
+  "evidence_basis": [
+    "Subunit- and magnesium-specific memantine inhibition and independent subtype probes. Purpose-specific partial read. Other sections and unlisted figures were outside this pass.",
+    "Tables 2, 3. Memantine IC50 (µM) measured at −60, −40 and −20 mV, with and without 1 mM Mg. Table 2 separates NAB-14 formulations.",
+    "Fig. 6 quantitative Results and caption, CA1 interneurons and principal neurons at +40 mV, two antagonists at 10 µM in separate cell groups. Native cells were not tested with memantine here."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/memantine_magnesium_20261123/README.md"
+  ]
+}
