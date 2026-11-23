@@ -795,6 +795,15 @@
      "accepted_at": "2026-11-23T08:10:05Z",
      "evidence": "ADV-193 result written: RESULT_ADV193_SAHA_IMPA1_INOSITOL_GSK3_SCI_20261123.md, verdict NARROW, receipt FTR-20261123-38056909-01, pre-registration 8dd436a07; result path delivered to ADV 2026-11-23; landing SHA recorded at the landing",
      "updated_at": "2026-11-23T08:15:38Z"
+    },
+    {
+     "step": "ADV-194: McCrimmon 2025 (PMID 40925365) O-LM/SST circuit model: provenance map of every quantity, composition-only and conductance-only alternatives against the combined model, independence of the confirming staining and snRNA; one discriminator or one rule line for RP-045, or CLOSE as covered",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-194",
+     "accepted_at": "2026-11-23T10:09:07Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv194_mccrimmon_scn8a_olm_sst_identifiability_sci_20261123/RESULT_ADV194_MCCRIMMON_SCN8A_OLM_SST_IDENTIFIABILITY_SCI_20261123.md; receipt FTR-20261123-40925365-01; verdict NARROW (one rule line for RP-045, no measure nominated)",
+     "updated_at": "2026-11-23T10:16:15Z"
     }
    ]
   }
@@ -1406,6 +1415,13 @@
    "at": "2026-11-23T08:10:05Z",
    "source": "ADV-193 (assignments/ADV-193.md, ADV message 2026-11-23, Codex review 13)",
    "step_sha256": "a1405b78febd",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-23T10:09:07Z",
+   "source": "ADV-194",
+   "step_sha256": "03b2d155e6bb",
    "reopened_block": false,
    "authorised_by": null
   }
