@@ -798,10 +798,12 @@
     },
     {
      "step": "ADV-194: McCrimmon 2025 (PMID 40925365) O-LM/SST circuit model: provenance map of every quantity, composition-only and conductance-only alternatives against the combined model, independence of the confirming staining and snRNA; one discriminator or one rule line for RP-045, or CLOSE as covered",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-194",
-     "accepted_at": "2026-11-23T10:09:07Z"
+     "accepted_at": "2026-11-23T10:09:07Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv194_mccrimmon_scn8a_olm_sst_identifiability_sci_20261123/RESULT_ADV194_MCCRIMMON_SCN8A_OLM_SST_IDENTIFIABILITY_SCI_20261123.md; receipt FTR-20261123-40925365-01; verdict NARROW (one rule line for RP-045, no measure nominated)",
+     "updated_at": "2026-11-23T10:16:15Z"
     }
    ]
   }

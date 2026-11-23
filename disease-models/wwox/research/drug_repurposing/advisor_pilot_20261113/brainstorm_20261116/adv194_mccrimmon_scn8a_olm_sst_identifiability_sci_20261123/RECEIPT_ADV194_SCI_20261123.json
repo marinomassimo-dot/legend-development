@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-23T10:14Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "captions_only",
+  "tables": "captions_only"
+ },
+ "event_at": "2026-11-23T10:15:03Z",
+ "event_id": "FTR-20261123-40925365-01",
+ "evidence_basis": [
+  "McCrimmon et al. 2025, Cell Reports (PMID 40925365, PMC12674601): the whole text (.txt, 608 lines, summary, introduction, results, discussion, limitations, STAR Methods; the reference list was not read) read from the PMC open-data bucket copy after a committed pre-registration (commit eb12d4ce5) that stated what had been seen. Figures 5, 6 and 7 and Fig S2 and S3 viewed as images; the legends of Figs 1 to 7 from the xml and of Figs S1 to S7 from the supplement PDF read; Figs 1 to 4, 8, S1 and S4 to S7, Tables S2 to S5 and the six videos not opened. Source: PMC open-data bucket, CC BY 4.0; SHA-256 of the xml ea2ee7bcf33a395cbd1c2a2187dcaa64c7d609c180369f847ef8c2109edfc866; txt 7cc137ac8449; pdf b01c22ad5aba; supplement pdf b122cb169b3b (12 hex).",
+  "verbatim_locator | proposition: the model's cell numbers are described as fixed from preliminary immunostaining | Results (in silico modelling) | \"incorporating fixed parameters like cell numbers based on preliminary immunohistochemistry (IHC) data\"",
+  "verbatim_locator | proposition: for the mutant fit the algorithm let cell numbers and persistent sodium strength move while preserving theta power | Methods (hippocampal circuit simulation) | \"optimized the cell numbers and strength of persistent sodium currents to recreate the aberrant theta rhythmicity and theta-gamma coupling, but preserved theta power, of the Mut Hc+GE assembloids\"",
+  "verbatim_locator | proposition: the only rescue run restores sodium and keeps the mutant composition | Supplement (Fig S3 legend, panel D) | \"persistent sodium current levels were restored to iCtrl values while preserving the Mut circuit composition\"",
+  "verbatim_locator | proposition: across the successful alternative fits only the O-LM reduction is invariant | Supplement (Fig S3 legend, panel F) | \"The only consistent feature across all configurations was reduced O-LM cell number, while pyramidal and basket cell numbers varied\"",
+  "verbatim_locator | proposition: the sodium-restoration result is cited to the perturbation panel of the supplement | Results (in silico modelling) | \"monophasic theta-gamma coupling only partially recovered (Figure S3A)\"",
+  "verbatim_locator | proposition: three differentiations were pooled into one tube per condition for the single-nucleus libraries | Methods (sample preparation) | \"three batches of assembloids, each from a different differentiation, were pooled together into a single tube to be dissociated\"",
+  "verbatim_locator | proposition: the second mutant line is compared with an unrelated control that was not blinded to genotype | Methods (immunohistochemistry) | \"Since Ctrl 2 was added subsequent to all other groups, blinding to genotype was not possible\"",
+  "verbatim_locator | proposition: the authors describe the model's O-LM prediction as validated by staining and single-nucleus sequencing | Limitations | \"Although the model predicted O-LM cell loss, validated by IHC and snRNA-seq\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv194_mccrimmon_scn8a_olm_sst_identifiability_sci_20261123/RESULT_ADV194_MCCRIMMON_SCN8A_OLM_SST_IDENTIFIABILITY_SCI_20261123.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "ea2ee7bcf33a395cbd1c2a2187dcaa64c7d609c180369f847ef8c2109edfc866",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket copy of the open-access article (CC BY 4.0), local scratch only, not copied into git",
+ "study_id": {
+  "doi": "10.1016/j.celrep.2025.116217",
+  "pmid": "40925365"
+ },
+ "workflow": "SCI window AB ADV-194 (McCrimmon 2025 SCN8A assembloid circuit model: provenance of the model inputs and the confirming staining, methods control for RP-045): whole text read after a committed pre-registration."
+}
