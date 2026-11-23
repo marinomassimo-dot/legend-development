@@ -1,0 +1,47 @@
+{
+ "analysis_at": "2026-11-23T14:13Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-23T14:13:28Z",
+ "event_id": "FTR-20261123-41579709-01",
+ "evidence_basis": [
+  "Portillo-Carrasquer et al. 2026, Biomed Pharmacother 195:119031 (PMID 41579709, DOI 10.1016/j.biopha.2026.119031), final typeset version from the Universitat de Lleida repository PDF (SHA-256 6f472ab9728b38147b012b920cfbd39d25fd93b010285e8c09e4df6b1c1172a2, 9,143,829 bytes, 18 pages, text extracted with pdftotext); abstract, Introduction, Methods, Results, Discussion and figure captions read in full; Figures 1 and 5 viewed as page images, other figures not viewed; the paper has no separate limitations section; Supplementary Figs S1 to S7 were seen only as citations in the text, the supplement file was not opened.",
+  "verbatim_locator | proposition: omaveloxolone started 6 h after transduction, before frataxin falls | Methods (DRG cultures) | \"replaced 6 h later with new medium containing dimethyl sulfoxide (DMSO, vehicle) or 50 nM omaveloxolone\"",
+  "verbatim_locator | proposition: omaveloxolone also raised frataxin in the first hairpin | Results 3.1 | \"treatment almost fully prevented the reduction in frataxin levels in FXN1 neurons\"",
+  "verbatim_locator | proposition: second-hairpin survival rescue not significant | Results 3.1 | \"the increase in FXN2 was not statistically significant, but it showed a tendency\"",
+  "verbatim_locator | proposition: peroxidation partially, not fully, reduced | Results 3.2 (Fig 5) | \"Lipid peroxidation was partially reduced after treatment with omaveloxolone\"",
+  "verbatim_locator | proposition: reduced glutathione not restored in neurons | Results 3.2 (Fig 5) | \"the drug was not able to reverse such decrease\"",
+  "verbatim_locator | proposition: lipid-peroxidation panel n of three isolations | Fig 5 caption | \"The data are presented as the mean \u00b1 SEM of n = 3 independent isolations.\"",
+  "verbatim_locator | proposition: the NRF2-GPX4-peroxidation path is an inference, not a tested result | Discussion | \"explains the increase in GPX4, as well as the recovery of the redox state and, therefore, the decrease in lipid peroxidation\"",
+  "verbatim_locator | proposition: neuronal nuclear-to-cytosolic NRF2 ratio unchanged | Results 3.4 | \"there were no differences in the nuclear-to-cytosolic ratio\"",
+  "verbatim_locator | proposition: fibroblast NRF2 higher in donors, opposite to neurons | Results 3.4 | \"total, cytosolic and nuclear NRF2 levels were found increased in patients' fibroblasts\"",
+  "verbatim_locator | proposition: abstract wording on lipid peroxidation | Abstract | \"was almost completely rescued by omaveloxolone\"",
+  "verbatim_locator | proposition: synergism with the second compound not established | Discussion | \"Although further studies are needed to confirm synergism between omaveloxolone and honokiol\"",
+  "verbatim_locator | proposition: the downstream-inhibitor precedent is earlier work, not this paper | Discussion | \"ferroptosis inhibitors protected these cells\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv196_20261123/RESULT_ADV196_PORTILLO2026_IT_20261123.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "6f472ab9728b38147b012b920cfbd39d25fd93b010285e8c09e4df6b1c1172a2",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Universitat de Lleida repository PDF of the open-access article (final typeset version), local scratch only, not copied into git",
+ "study_id": {
+  "doi": "10.1016/j.biopha.2026.119031",
+  "pmid": "41579709"
+ },
+ "workflow": "IT ADV-196: does a selective downstream rescue belong beside the upstream NRF2 probes in INV-08 X1; bounded stop, the paper has no downstream or dependency arm."
+}
