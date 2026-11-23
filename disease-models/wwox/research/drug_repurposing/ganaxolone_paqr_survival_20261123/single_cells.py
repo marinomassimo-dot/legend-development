@@ -16,17 +16,13 @@ def write(path, header, rows):
         writer.writerows(rows)
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    for name in ('matrix', 'meta', 'config', 'out'):
-        parser.add_argument(name, type=Path)
-    args = parser.parse_args()
-    assert json.loads(args.config.read_text())['unit'] == 'TPM'
-    with args.meta.open() as stream:
+def load_atlas(matrix, metadata, config):
+    assert json.loads(config.read_text())['unit'] == 'TPM'
+    with metadata.open() as stream:
         meta = {r['Cell']: r for r in csv.DictReader(stream, delimiter='\t')}
     targets = {'PAQR6', 'PAQR7', 'PAQR8', 'SOX2', 'PROM1', 'DCX', 'WWOX'}
     genes = {}
-    with gzip.open(args.matrix, 'rt') as stream:
+    with gzip.open(matrix, 'rt') as stream:
         cells = stream.readline().rstrip().split('\t')[1:]
         assert len(cells) == len(meta) == len(set(cells)) and set(cells) == set(meta)
         for line in stream:
@@ -38,6 +34,15 @@ def main():
                 assert len(values) == len(cells) and np.all(values >= 0)
                 genes[symbol] = values
     assert set(genes) == targets
+    return cells, meta, genes
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    for name in ('matrix', 'meta', 'config', 'out'):
+        parser.add_argument(name, type=Path)
+    args = parser.parse_args()
+    cells, meta, genes = load_atlas(args.matrix, args.meta, args.config)
     groups = defaultdict(list)
     for i, cell in enumerate(cells):
         row = meta[cell]
