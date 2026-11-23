@@ -1,0 +1,2 @@
+n_gene_pool	n_draws	target_delta	q025	median	q975	n_decoys_at_least_target	other_drugs_below	n_other_drugs
+12954	10000	0.3252097297798078	-0.22060684748015216	-0.03331108044728677	0.23289053867648302	51	215	217

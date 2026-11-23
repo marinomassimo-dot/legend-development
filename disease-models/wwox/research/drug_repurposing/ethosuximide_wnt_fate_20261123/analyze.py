@@ -108,11 +108,11 @@ def reference(path,out):
     write(out/"reference_summary.tsv","experiment control line condition telencephalic enriched_regional CNS_neurons directional_match",summary)
 
 
-def disease(markers,counts,out):
+def disease(markers,counts,out,clusters=CLUSTERS,exclude=(),prefix="disease"):
     lookup=defaultdict(list)
     for r in sheet(markers):
         group=r["group"].replace("Cortical Hem / Diencephalic Progenitors","Diencephalic Progenitors")
-        if group in CLUSTERS and float(r["logFC"])>0 and float(r["padj"])<.05 and r["feature"] not in TARGETS:
+        if group in clusters and float(r["logFC"])>0 and float(r["padj"])<.05 and r["feature"] not in TARGETS:
             lookup[group].append((float(r["auc"]),float(r["logFC"]),r["feature"]))
     top={g:sorted(values,key=lambda t:(-t[0],-t[1],t[2]))[:12] for g,values in lookup.items()}
     duplicates=Counter(v[2] for values in top.values() for v in values)
@@ -131,10 +131,10 @@ def disease(markers,counts,out):
     def contrast(x,omit=None):
         return x[[i for i in ko if i!=omit]].mean()-x[[i for i in ctrl if i!=omit]].mean()
     stats,genes=[],[]
-    for grp in CLUSTERS:
+    for grp in clusters:
         panels={"primary":[],"mapped":[]}
         for auc,fc,g in top[grp]:
-            included=g in arr and duplicates[g]==1
+            included=g in arr and duplicates[g]==1 and g not in exclude
             base=delta="NA"
             if included:
                 cpm=arr[g]*1e6/sums
@@ -155,8 +155,8 @@ def disease(markers,counts,out):
             gene_loo=[contrast(np.delete(y,i,axis=0).mean(axis=0)) for i in range(n)]
             stable=n>=4 and all(np.sign(z)==np.sign(d) for z in loo+gene_loo)
             stats.append([grp,typ,n,d,min(loo),max(loo),min(gene_loo),max(gene_loo),stable])
-    write(out/"disease_markers.tsv","lineage gene source_AUC source_logFC panels_with_marker WT_mean_CPM WWOX_delta",genes)
-    write(out/"disease_scores.tsv","lineage filter n delta omit_library_min omit_library_max omit_gene_min omit_gene_max passes_stability",stats)
+    write(out/f"{prefix}_markers.tsv","lineage gene source_AUC source_logFC panels_with_marker WT_mean_CPM WWOX_delta",genes)
+    write(out/f"{prefix}_scores.tsv","lineage filter n delta omit_library_min omit_library_max omit_gene_min omit_gene_max passes_stability",stats)
 
 
 if __name__=="__main__":
