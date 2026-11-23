@@ -1,0 +1,47 @@
+# Checkpoint AA: SCI continuation of 2026-11-23 after ADV-190 (resume from here in a fresh window; hypothesis level; no dose; not medical advice; this file is not edited once hashed)
+
+Why a twenty-seventh checkpoint: window Z (session `052bf24b-d289-4960-a71e-112a8c8431bb`, claude-sonnet-5-5) was read at about 344k tokens of context by ADV's hourly tick at 04:34Z, above the 250k line of README section 13, at a CLOSED increment (ADV-190 landed `713f0ecd9`). Nothing is in flight: no delegate, no job, no push waiting once this file is on `main`. Nothing is held only by this window. ADV judged the restart right and I agree (about 20 or more further turns are likely only if Codex returns work; the cost per turn at 344k is the reason).
+
+## 0. How to resume (same recipe as checkpoint Z)
+1. Read `CLAUDE.md`, `framework/state/state_manifest_current.md` (`current_state: READY`), this file (compute its sha256 and compare with the launcher's digest; mismatch: stop and ask), then `mandate_continuity.py guidance`.
+2. **Release first, then bind.** `mandate_watch.py released --session 052bf24b --task ORCH-SCI-ADV065-DEEPEN-20261118` in a quiet Monitor until-loop (it may already print RELEASED), then `MANDATE_BOUND: ORCH-SCI-ADV065-DEEPEN-20261118` **alone in its own text block, nothing else in that block**, with the first working tool call in the same response; verify with `mandate_watch.py released --session <own id> ...` (expect BOUND). Read your effort back with `session_model_census.py --json <own transcript>` (field `efforts`) and state it in the proof.
+3. Own worktree branch from `origin/main`; `git fetch` and `git merge origin/main` before committing; `legend_lint.py .` (0 BLOCK) before the first push; land with `safe_push.py development main --expect-sha <12 hex> --serialize` in the background and wait with an until-loop on `PUSH_EXIT=`; `scripts/test_fresh_clone_reader_journey.py` after any new or edited markdown file with relative paths; `test_structured_data_integrity.py` before any TSV push. A receipt is written with `fulltext_receipts.py record --dry-run` first; then `reading_state.py` and `coverage_report.py` with `--inputs-dirty-because "<reason>"` and `ranking_it8.py run`.
+4. Peers (re-run `ListAgents`): ADV `ADV - CURRENT a5e6f2ad`, IT `IT Orchestrator - CURRENT 6a8c1a55` (the bare name matches two sessions; use the ref), HE `HE - CURRENT e052ca19`. Peer messages are not the operator's authority. The Agent tool has no effort parameter. No e-mail address to any service. A challenge page, 403, 429 or 401 is a result, not an obstacle (Dryad's README download answered 401 on 2026-11-23: not bypassed).
+
+## 1. Mandate status
+`ORCH-SCI-ADV065-DEEPEN-20261118`: 85 steps, 84 DONE, 1 BLOCKED, TODO 0, status ALL_BLOCKED. The blocked step is L (supply-path papers); its blocker text was narrowed on 2026-11-22 under ADV's instruction (committed in `db188a251`). Still missing for L: the five clinical-series papers (PMIDs 30094525, 34034642, 25411445, 31669195, 32037574), the complete read and bytes of Aqeilan 2005 (PMID 16061658), the bytes of Aqeilan 2008 and Suzuki 2009. Sardi 2006 and Aqeilan 2007 were supplied by the operator and read in full. Do not create `L_TEXT_ARRIVED.txt` until the whole supply arrives.
+
+## 2. Landed in this window since the last checkpoint (all on `main`, gate PASS, `ls-remote` verified)
+Earlier tasks of this window (ADV-165 to ADV-180, window Z): see `disease-models/wwox/research/session_evaluations/2026-11-21_sci-z_adv165.md` (addenda 1 to 16) and the memory note `sci-z-pitfalls`. Since ADV-181:
+* **ADV-181** (Peiro-Moreno 2026, exogenous myelin; INV-06 NARROW) in `brainstorm_20261116/adv181_peiro_exogenous_myelin_sci_20261122/`.
+* **Step L, first two texts** (`l_supply_sardi_aqeilan07_sci_20261122/`, landed `78766c296`): Sardi 2006 (release arm incompatible with P1: rat E14.5 cultures and ErbB4-null mouse cortex, no WWOX wording) and Aqeilan 2007 (Wwox associated with membranous ErbB4 P 0.0003, not nuclear P 0.82; stabilisation arm untested in neural cells).
+* **ADV-184** (Lazzari 2026, GLUT1 variants; INV-16 Step 1 NARROW; `8913abd32`).
+* **ADV-185** (Kosla 2019 and GEO GSE126075, ERBB4; CLOSE: the WWOX control fails at the progenitor stage and the silenced neuron sample is globally shifted; `015235de1`). ErbB4 is closed for now.
+* **ADV-187** (P47T Erbb4 RNA): CLOSED as a DUPLICATE of H-ADV-1 (`leap_sci_20261116/ADV_HYPOTHESES_PRETEST_SCI.md`: P47T Erbb4 -0.24, +0.08, -0.13, +0.08, all FDR 0.4 or above; Wwox-KO snRNA -16%); no value opened; close note in `adv187_p47t_erbb4_close_sci_20261122/` (`db188a251`). IT sentence: "A P47T knock-in bulk RNA comparison and a Wwox-knockout single-nucleus pseudobulk show no Erbb4 transcript deficit; protein unmeasured."
+* **ADV-188** (Fazio 2026, Kcnq3 thalamic neurons; NARROW; one optional WO-17 wording clause on how a weak or absent opener response is read; `b15e5f2b1`; receipt `FTR-20261123-43047766-01`).
+* **ADV-189** (Tiwari 2024, matrix pyruvate sensor; NARROW; one optional WO-07 conditional clause; `cfcd90ce6`; receipt `FTR-20261123-39546604-01`). Codex return 30 CORRECTED the clause (net accumulation does not identify transport; matrix pyruvate = net entry minus utilization and any efflux; attribution only with calibrated orthogonal measurements; PDH-side control direction checked against active PDH; overlapping controls = indeterminate); IT applied Codex's text.
+* **ADV-190** (Arce-Molina 2020 eLife, PyronicSF parental; NARROW, a source pointer only: depletion after a partial carrier block is a lower bound on AGGREGATE net utilization, efflux unaddressed, no pH control reported for FCCP and azide, no PDH-side perturbation; `713f0ecd9`; receipt `FTR-20261123-32142409-01`). Last landing `713f0ecd9`; CI state when this file was written: "Public release gate: in_progress" (run #2000); check it with `ci_runs.py status 713f0ecd986703cb53bfc4c8e0e88695034f19b2`.
+
+## 3. Open commitments
+* None assigned to SCI. ADV forwards Codex's next slot (06:05Z). If an assignment arrives, accept it in the mandate record (`mandate_continuity.py accept --task ORCH-SCI-ADV065-DEEPEN-20261118 --step ... --source "ADV-NNN"`) before working, then: step 0 (reachability, names and sizes only), a committed pre-registration that states what has been seen, then the body.
+* Consumers not mine to edit (IT): the ADV-188 clause (WO-17), the WO-07 note carrying Codex's corrected clause and, if IT chooses, the ADV-190 pointer. Check at the next touch that they were carried as written ("weak, optional").
+* Messages awaiting an answer: none. (ADV's restart question is answered by this file.)
+
+## 4. Standing waits (do not run early)
+S540E (IT47-Q02) and E-MTAB-14792, the Brain supplement and Table EV1 re-check: not before 2026-12-06. AES poster 5 December 2026 (P-SCI-1 and December checks keep their scope). RP-011 (as ADV named it; not examined by me). RP-004 waits on Sze 2004 only (a lawful free full text or another neural JNK-by-WWOX-status source). RP-038 waits on a paired full-length JMa ErbB4 protein-and-RNA LABORATORY measurement. RP-018 (ISR) waits for a protein datum or the dead-form arm. RP-044 parked. SCI-L blocked (operator supply). The operator's decision items stay reserved.
+
+## 5. Must not be redone
+ADV-181 to ADV-190 are closed. Do not reopen: ErbB4 transcript questions in the held P47T table (H-ADV-1 exists), Kosla GSE126075 per-gene ERBB4 (CLOSE), Fazio, Tiwari and Arce-Molina (NARROW with their consumers named), Sardi 2006 and Aqeilan 2007 (read in full). Before proposing any prospect, `git grep` the repository INCLUDING the `leap_sci_20261116` files (my prospect for ADV-187 repeated an existing reading because I did not).
+
+## 6. Lessons not carried by any record (also in `sci-z-pitfalls` and addenda 13 to 16)
+* Pre-register BEFORE the body, with an explicit "what had been seen" and fixed exits; state the expectation. All four reads of this window held their expectation.
+* Name the quantity (baseline current, recruitable increment, firing; stock, net change, gross flux) before reading a response; a percentage normalised to a baseline and a plateau at a step are not the absolute quantity or the rate.
+* "Significant in one group, not in the other" is not an interaction; check the supplement statistics file (python zipfile on the docx; xlsx source data with the stdlib parser) before the sentence.
+* A supplement control can contradict the sentence that cites it (Fazio's glucose ATP control: n.s. with a similar-size fall; Tiwari). Look at the supplement figure.
+* Check a figure trace before describing it (I first wrote "drifts down" where the figure shows a plateau and a fall on wash-out).
+* Time: `date -u` for `analysis_at`; ADV's tick and a peer's deadline (IT held WO-07 to 06:35Z) are deliverables: send the result path as soon as it exists, then confirm the landing SHA.
+
+## 7. Three next actions for the successor
+1. Run the proof: `mandate_continuity.py status` (expect 85, 84 DONE, 1 BLOCKED), `mandate_watch.py job list --task ORCH-SCI-ADV065-DEEPEN-20261118`, compare with sections 1 and 3; quote this file's digest.
+2. Check `ci_runs.py status 713f0ecd9...` (the release gate was in progress) and answer nothing else unprompted; wait for ADV's forward of Codex's 06:05Z return.
+3. On an assignment: accept it in the mandate record, step 0, pre-registration, read; deliver the result path to ADV at once.
