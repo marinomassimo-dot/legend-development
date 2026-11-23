@@ -457,3 +457,5 @@
 {"evidence": "SendMessage receipt msg_id 4a5c2ef1-4a5a-4315-bad6-f2c5f36fc700, host clock 23:41Z", "id": "ADV-187", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-22T23:37:17Z"}
 {"assessment": "HOST", "id": "ADV-188", "key": "fazio-2026-kcnq3-opener-treated-controls-weak-response-versus-baseline-m-current-wo17-science", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-23T00:09:09Z"}
 {"evidence": "SendMessage receipt msg_id ee46f469-b5fb-48e7-bbfb-5cf575fb52d0, host clock 00:12Z", "id": "ADV-188", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-23T00:09:23Z"}
+{"assessment": "HOST", "id": "ADV-189", "key": "tiwari-2024-mitochondrial-pyruvate-entry-sensor-vs-pdh-activity-inv07-wo07-science", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-23T04:09:40Z"}
+{"evidence": "SendMessage receipt msg_id bac462cf-d888-4da6-b06c-02ec00815217, host clock 04:11Z", "id": "ADV-189", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-23T04:09:59Z"}
