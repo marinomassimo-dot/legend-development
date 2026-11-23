@@ -19,6 +19,10 @@ We used two complete multi-residue motifs to identify flip and flop sequences in
 
 In cortex, the effect among classified transcripts ranged from −2.20 to −0.85 percentage points on animal omission. Even assigning all unclassified KO abundance to flip and all unclassified control abundance to flop gave at most +4.53 points, below the prespecified +5-point prioritization floor. This is a fixed-data allocation bound, not a population confidence limit. The alternative assignment permitted a decrease of up to 8.47 points. The sensitivity limited to predicted ORFs of at least 800 residues with a stop codon returned the same two coding forms. The hippocampal allocation bounds span both directions widely. Changes in cell mix or developmental maturation remain possible. Neither area measures subunit assembly, current kinetics or drug responses. [Primary hippocampal deposit](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158681) · [Primary cortical deposit](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158682)
 
+## How large could the kinetic consequence be in a simple receptor mixture?
+
+As an exploratory forward calculation, take the classified cortical RNA shares as if they were fractions of functional receptor populations. Normalize each mixed response to its own peak and integrate the exponential desensitization plus the measured residual current over a 100-ms glutamate step. Using Koike et al.’s GluA2Q values and equal peak contribution per receptor gives a **1.46% smaller** charge for the knockout share. The independently reported Q/R co-expression condition gives a 1.48% decrease. Allowing a fixed 0.25–4 ratio of peak current per flip versus per flop receptor yields decreases between 0.42% and 3.86% across the two configurations. The calculation applies to the plateau and decay following an instantaneous peak. It omits receptor abundance, activation, deactivation between pulses, auxiliary proteins, drug occupancy and firing. A large increase in native sustained current would therefore need a mechanism beyond this simple projection from the measured cortical shares. [Primary kinetic estimates](https://pubmed.ncbi.nlm.nih.gov/10704491/) · [Pulse and peak-weight sensitivity](results/kinetic_projection.tsv)
+
 ## Reproduction
 
 The mouse program takes Ensembl release 92 GRCm38 cDNA, a GenBank file with the six [mouse Gria2 RefSeq mRNAs](https://www.ncbi.nlm.nih.gov/gene/?term=Gria2%5BGene%5D+AND+Mus+musculus%5BOrgn%5D), the two deposited transcript TPM tables, and an output directory. The accession versions and checksums identify the inputs. Targeted review used published functional results, primary data tables and sequence annotations. Only original code and derived summaries are included. [Input hashes](results/sources.tsv)
@@ -26,3 +30,5 @@ The mouse program takes Ensembl release 92 GRCm38 cDNA, a GenBank file with the 
 ```bash
 python3 analyze.py Mus_musculus.GRCm38.cdna.all.fa.gz mouse_refseq.gb hippocampus_TPM.txt.gz cortex_TPM.txt.gz results
 ```
+
+Reproduce the conditional pulse calculation with `python3 kinetic_projection.py` after the mouse analysis.
