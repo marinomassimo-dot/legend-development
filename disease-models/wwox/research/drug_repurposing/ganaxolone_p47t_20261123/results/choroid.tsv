@@ -1,0 +1,7 @@
+score	model	equal_sex_effect	loo_min	loo_max	estimable_loo	residual_df	within_cell_corr_with_marker
+full	base	-0.286057	-0.495346	-0.076768	10	6	-0.577678
+full	with_choroid	-0.035390	-0.664921	0.136772	10	5	-0.577678
+without_Ttr	base	-0.223469	-0.405046	-0.041892	10	6	-0.418369
+without_Ttr	with_choroid	-0.047578	-0.724012	0.126934	10	5	-0.418369
+without_Ttr_Col3a1	base	-0.182307	-0.343465	-0.021148	10	6	-0.406017
+without_Ttr_Col3a1	with_choroid	-0.026800	-0.629065	0.120880	10	5	-0.406017
