@@ -1,0 +1,5 @@
+model	case_n	control_n	valid_pairs	hit_delta	control_delta	difference	loo_library_min	loo_library_max	loo_pair_min	loo_pair_max	negative_pairs
+hippocampus	3	2	20	-0.194742	-0.164046	-0.030696	-0.241824	0.114287	-0.108011	0.026236	12
+cortex	3	4	20	-0.222226	-0.302260	0.080034	0.044337	0.111307	-0.052302	0.150629	10
+kainate_day14	6	6	17	0.058092	0.009783	0.048309	-0.003314	0.152873	-0.033352	0.104798	6
+human_organoid	4	2	17	0.087837	0.138032	-0.050195	-0.093212	-0.004188	-0.161958	0.031822	11

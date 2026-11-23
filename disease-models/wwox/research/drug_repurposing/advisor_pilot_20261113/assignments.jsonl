@@ -465,3 +465,5 @@
 {"evidence": "SendMessage receipt msg_id d55d42a1-8e9d-4c10-92dd-8741ce0d5b18, host clock 06:12Z", "id": "ADV-191", "state": "SENT", "to": ["SCI"], "utc": "2026-11-23T06:11:26Z"}
 {"assessment": "HOST", "id": "ADV-192", "key": "baf155-opc-restricted-perturbation-readouts-vs-wwox-glial-restricted-null-rp017-orchestrator", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-23T07:34:26Z"}
 {"evidence": "SendMessage receipt msg_id 76f7cd78-85bc-41fe-be00-db95c287bea7", "id": "ADV-192", "state": "SENT", "to": ["IT Orchestrator - CURRENT bb99da60"], "utc": "2026-11-23T07:34:42Z"}
+{"assessment": "HOST", "id": "ADV-193", "key": "saha-2024-impa1-inositol-vs-gsk3-proximal-discriminators-wo21-inv09-science", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-23T08:09:18Z"}
+{"evidence": "SendMessage receipt msg_id 58aab074-4a10-4af5-b5db-58cd1532a0c1", "id": "ADV-193", "state": "SENT", "to": ["SCI - CURRENT 4e2317da"], "utc": "2026-11-23T08:09:40Z"}

@@ -1,0 +1,3 @@
+normalization	primary	primary_minus_comparator	n_primary_up	vehicle_gap_min	vehicle_gap_max	n_other_drugs_below_gap	n_other_drugs	n_identifier_block_below_gap	n_identifier_block_others	pass
+CPM	-0.24902676365583554	0.011861539075291305	1	-0.10821851373447386	0.1724327353221897	143	217	2	15	False
+median_ratio	-0.22015924036152923	0.03501633634216855	1	-0.09506486523308896	0.17761609347595128	143	217	2	15	False
