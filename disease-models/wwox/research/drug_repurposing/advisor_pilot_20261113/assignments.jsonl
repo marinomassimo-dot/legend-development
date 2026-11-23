@@ -475,3 +475,5 @@
 {"evidence": "SendMessage receipt msg_id e2d7cafa-9a52-4b62-a3bf-84eea138cc74", "id": "ADV-196", "state": "SENT", "to": ["IT Orchestrator - CURRENT 748d7ec5"], "utc": "2026-11-23T14:10:19Z"}
 {"assessment": "HOST", "id": "ADV-197", "key": "masked-minimal-pair-and-choice-scoring-dry-run-on-adv091-hc07", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-23T16:40:27Z"}
 {"evidence": "SendMessage to IT Orchestrator - CURRENT 748d7ec5, 2026-11-23 about 16:50Z", "id": "ADV-197", "receipt": ["cec92b82-d329-4cf9-a689-96492b9d21cc"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 748d7ec5"], "utc": "2026-11-23T16:40:48Z"}
+{"assessment": "HOST", "id": "ADV-198", "key": "p47t-cerebellar-composition-feasibility-and-sensitivity-rp036", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-23T16:42:35Z"}
+{"evidence": "SendMessage to SCI - CURRENT ff316249, 2026-11-23 about 17:05Z", "id": "ADV-198", "receipt": ["aa08d76a-a3db-4100-a285-46488a1f78c7"], "state": "SENT", "to": ["SCI - CURRENT ff316249"], "utc": "2026-11-23T16:43:03Z"}
