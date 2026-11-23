@@ -1,0 +1,22 @@
+# Continuous WWOX loss-of-function compound programme
+
+This is the SCI_CODEX work queue for the operator's continuous mandate of 23 November 2026. It implements the [laboratory roadmap](../roadmap_current.md). The [ten-hour cycle](../cycle_20261123/README.md) is archived with its independent reviews. One named compound owns the active analysis at a time. New evidence can reorder the queue. A lower-priority class is eligible whenever the WWOX mechanism and a feasible discriminating test justify it.
+
+| Order | Compound and research strand | Question that could change the decision |
+|---|---|---|
+| 1 | Creatine monohydrate, neuronal and glial energy buffering | Could deficient substrate availability limit phosphocreatine recovery after activity? Can we separate this from altered glial composition, transporter limitation or insufficient ATP generation? |
+| 2 | Brivaracetam, presynaptic vesicle release and synchrony | Does reducing release preferentially attenuate recurrent excitation, or also reduce recruitment of inhibitory neurons enough to offset it? Assess spontaneous-network outcomes separately from activity-independent maturation. |
+| 3 | Taurine, inhibitory transmission and cellular volume | At the same osmolarity, can receptor-dependent currents be separated from a volume or chloride effect in immature WWOX neurons? |
+| 4 | N-acetylcysteine, redox balance and glutamate handling | Would recovery of the glutathione pool coincide with altered extracellular glutamate? Which cell type and exposure determine the direction? |
+| 5 | Clemastine, oligodendrocyte differentiation and myelin | Would a shift in lineage markers persist as more functional sheaths and improved conduction when firing is matched? Treat existing results and cholinergic effects as competing explanations. |
+| Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
+
+**Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
+
+**Pediatric feasibility.** For each molecule assess the exact formulation, existing pediatric experience and age range, exposure at the intended site, interactions with background antiseizure medication, tolerability and an interpretable endpoint. Record a gap when evidence is unavailable. Food-supplement status or existing use in epilepsy earns an earlier look, never an assumed exposure, safety conclusion or simplified approval. These are experimental priorities.
+
+**Resume.** Read the latest checkpoint below, the linked dossier and concurrent laboratory assignments. Continue unfinished work. When a further analysis could change the decision, run it. Otherwise record the stop/reopen condition, move to the next justified compound and advance immediately when running. The three-hour recall is a fallback for this same chat, effective around the clock until the operator changes it. Persist results on the shared repository, link the primary data and keep restricted source documents in their permitted location.
+
+## Current checkpoint
+
+**Active compound: creatine monohydrate.** First analysis tested the two synthesis transcripts, brain creatine kinase and transporter across juvenile mouse tissue and human organoids. A pooled single-nucleus check examines whether hippocampal findings can be attributed to the relative abundance of cell types. Next, look for direct evidence on cerebral creatine, phosphocreatine or recovery under load in WWOX deficiency, audit absolute versus ratio-only measurements, and check pediatric brain exposure and product evidence separately. If no data can resolve that question, park the compound for a matched flux measurement and start brivaracetam. [Creatine dossier](creatine/README.md)
