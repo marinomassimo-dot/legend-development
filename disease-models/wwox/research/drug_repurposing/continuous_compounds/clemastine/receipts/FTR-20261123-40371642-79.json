@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-40371642-79",
+  "event_at": "2026-11-23T21:58:19Z",
+  "analysis_at": "2026-11-23T21:58:19Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "40371642",
+    "doi": "10.1172/JCI183941"
+  },
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12077908/ ; CC BY 4.0, Kocot et al. 2025, XML and SD5 in files/deepening_downloads/clemastine_loop_20261123/ ; workbook b6e12b7d63917026150608c58050588cece17aa279e81fb6c81c15e50c0718e4",
+  "source_fingerprint": "aadb05f4959e406060724eba73ca94a4bf9e828424ae185c378df6b3b8687598",
+  "workflow": "Recalculate the clemastine by ATP interaction from original oligodendroglial source values; separate adult clinical, glial lysis and myeloid mechanisms.",
+  "evidence_basis": [
+    "Figure 4A legend: “1 donor with 4 technical replicates”; LDH readout. Methods Reagents identify fumarate SML0445.",
+    "SD5, sheets Figure 3F and Figure 3G, A1 cell type and row 3 arm headers identify final Figure 4A/B. I4 and I8 mark experiments.",
+    "Methods, Subjects: sixteen enrolled, nine completed at least one follow-up. Figure 1C comparator counts patient-specific treatments."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/clemastine/purinergic.md"
+  ],
+  "prior_receipt": null,
+  "reread_reason": "first_read"
+}
