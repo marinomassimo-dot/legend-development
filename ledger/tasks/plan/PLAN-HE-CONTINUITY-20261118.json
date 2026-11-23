@@ -893,6 +893,15 @@
      "accepted_at": "2026-11-23T04:40:53Z",
      "evidence": "SCI 4e2317da launched 04:41:17Z from detached worktree sci_aa_20261123, old 052bf24b RELEASED, new BOUND, checkpoint AA digest 1494a82d verified",
      "updated_at": "2026-11-23T04:42:27Z"
+    },
+    {
+     "step": "weekly harness scout 2026-W48 (SCOUT_DUE), triage, land",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV tick 07:36Z",
+     "accepted_at": "2026-11-23T07:39:37Z",
+     "evidence": "governance/candidates/HARNESS-SCOUT-2026-W48.md 8 rows, no ADOPT/TRIAL, status TRIAGED; harness_session_start CURRENT; gate 0 blocks",
+     "updated_at": "2026-11-23T07:39:37Z"
     }
    ]
   }
@@ -1581,6 +1590,13 @@
    "at": "2026-11-23T04:40:53Z",
    "source": "ADV message 2026-11-23",
    "step_sha256": "5cd1073e0b11",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-23T07:39:37Z",
+   "source": "ADV tick 07:36Z",
+   "step_sha256": "02db0446a784",
    "reopened_block": false,
    "authorised_by": null
   }
