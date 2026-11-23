@@ -341,7 +341,7 @@ def f_html(F):
 
 def edge_list_html(edges):
     hdr = ["Edge", "From to", "Relation", "What the link says", "Status", "Source"]
-    rows = [[e["edge_id"], f"{e['from']} to {e['to']}", e["relation"].replace("_", " "), re.sub(r"\s*\(draw lightly\)", "", e["label"]), e["status"], e["source"]] for e in edges]  # the pack's drawing hint is not reader text
+    rows = [[e["edge_id"], f"{e['from']} to {e['to']}", e["relation"].replace("_", " "), re.sub(r"\s*\(draw lightly\)", "", e["label"]), e["status"].replace("_", " "), e["source"]] for e in edges]  # the pack's drawing hint is not reader text
     return ('<h1 style="font-size:17pt">Figure 1: edge list</h1>'
             '<p class="small">Each line of the graph on the previous page, with its relation, status and source.</p>'
             + table_html({"header": hdr, "rows": rows}, wide=True))
