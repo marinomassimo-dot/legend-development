@@ -479,3 +479,7 @@
 {"evidence": "SendMessage to SCI - CURRENT ff316249, 2026-11-23 about 17:05Z", "id": "ADV-198", "receipt": ["aa08d76a-a3db-4100-a285-46488a1f78c7"], "state": "SENT", "to": ["SCI - CURRENT ff316249"], "utc": "2026-11-23T16:43:03Z"}
 {"assessment": "HOST", "id": "ADV-199", "key": "kcc2-library-matched-card-validity-check-for-route-i", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-23T17:12:55Z"}
 {"evidence": "SendMessage to SCI - CURRENT ff316249, host clock 17:13Z", "id": "ADV-199", "receipt": ["c9cf7823-1b52-4309-9516-61b7b2b1fa30"], "state": "SENT", "to": ["SCI - CURRENT ff316249"], "utc": "2026-11-23T17:13:24Z"}
+{"assessment": "HOST", "id": "ADV-200", "key": "ketamine-report-pilot-content-pack-sci", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-23T17:36:31Z"}
+{"assessment": "HOST", "id": "ADV-201", "key": "ketamine-report-pilot-renderer-he", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-23T17:36:31Z"}
+{"evidence": "SendMessage to SCI - CURRENT ff316249, host clock 17:38Z", "id": "ADV-200", "receipt": ["4013ab8c-ae0f-4c79-953f-c688f9af9468"], "state": "SENT", "to": ["SCI - CURRENT ff316249"], "utc": "2026-11-23T17:37:08Z"}
+{"evidence": "SendMessage to HE - CURRENT fb709c2c, host clock 17:38Z", "id": "ADV-201", "receipt": ["cd709eae-63e7-4f73-9132-e48888a3a34f"], "state": "SENT", "to": ["HE - CURRENT fb709c2c"], "utc": "2026-11-23T17:37:09Z"}
