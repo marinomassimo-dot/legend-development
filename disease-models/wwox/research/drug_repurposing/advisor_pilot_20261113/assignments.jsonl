@@ -471,3 +471,5 @@
 {"evidence": "SendMessage receipt msg_id 3a3b2817-d6e6-4e5d-b53f-8e7c06f6de24", "id": "ADV-194", "state": "SENT", "to": ["SCI - CURRENT ff316249"], "utc": "2026-11-23T10:08:55Z"}
 {"assessment": "HOST", "id": "ADV-195", "key": "e512k-organoid-2025-per-compound-burst-structure-vs-spiking-rp016-rp043-science", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-23T11:38:38Z"}
 {"evidence": "SendMessage receipt msg_id 45e76bde-c2a2-40cf-adbd-5c97fcfb3249", "id": "ADV-195", "state": "SENT", "to": ["SCI - CURRENT ff316249"], "utc": "2026-11-23T11:39:04Z"}
+{"assessment": "HOST", "id": "ADV-196", "key": "portillo-2026-fxn-omaveloxolone-downstream-rescue-vs-nrf2-comparator-inv08-x1-orchestrator", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-23T14:09:18Z"}
+{"evidence": "SendMessage receipt msg_id e2d7cafa-9a52-4b62-a3bf-84eea138cc74", "id": "ADV-196", "state": "SENT", "to": ["IT Orchestrator - CURRENT 748d7ec5"], "utc": "2026-11-23T14:10:19Z"}
