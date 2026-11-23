@@ -840,6 +840,13 @@
      "accepted_at": "2026-11-23T17:36:59Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/report_pilot_ketamine_20261123/content/ (A,B,C,D,E,F + VERIFICATION_LEDGER_ADV200.tsv); gate not triggered: 14 verified, 6 abstract-only, 0 unverified; 3 corrections to the current brief view",
      "updated_at": "2026-11-23T17:47:15Z"
+    },
+    {
+     "step": "ADV-203: bounded version-and-measurement check of Prakash et al. Cell 2026 (XDP myelin, PMID 43057229; preprint PMC12632464) for INV-06/RP-017; PREREG before Fig 5; disposition (a), (b) or (c)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-203 (cross-session message 2026-11-23, assignment text /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv203.txt)",
+     "accepted_at": "2026-11-23T20:47:32Z"
     }
    ]
   }
@@ -1486,6 +1493,13 @@
    "at": "2026-11-23T17:36:59Z",
    "source": "ADV-200",
    "step_sha256": "81c5a2ed9e69",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-23T20:47:32Z",
+   "source": "ADV-203 (cross-session message 2026-11-23, assignment text /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv203.txt)",
+   "step_sha256": "42263b681fa6",
    "reopened_block": false,
    "authorised_by": null
   }
