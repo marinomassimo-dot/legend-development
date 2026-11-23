@@ -16,4 +16,4 @@ N14	Bursting recorded in vivo in neuron-specific knockouts under ketamine and xy
 N15	Alternative D: sedation or co-medication context explains any clinical transient benefit	alternative	H	[9],[10],[11]
 N16	Measured concentrations: human plasma, bath values and tissue values are different quantities and are not matched	observation	D	[4],[8],[14]-[17]
 N17	Discriminating readout: burst rate against evoked-NMDA-response depth for d-APV and a pore blocker, with sag in the same cells	experiment	E	team deep dive
-N18	Ketamine tested in any WWOX system	gap	D (absence)	PubMed 2026-11-23
+N18	Dedicated ketamine or memantine intervention comparison in a WWOX system (not found; d-APV arm N2 and incidental anaesthesia N14 are separate observations)	gap	D (absence)	PubMed 2026-11-23

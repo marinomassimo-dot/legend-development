@@ -4,7 +4,7 @@ AI-curated research brief for discussion with a clinical team. Hypothesis level.
 
 ## Corpus and cutoff
 * **Source of the content:** the team's ketamine deep search (synthesis dated 2026-11-17 with dated updates to 2026-11-19, its lane notes, two pharmacokinetic notes, the kinetics comparison and the verification records listed below). It was assembled by three working sessions and fourteen delegate agents reading primary sources, each lane checked in a separate context.
-* **Verification date of this pack:** 2026-11-23. Every value placed in tables A and D was re-read against the original on that date (verification ledger, 20 rows: 14 reproduced from full text, figure or table; 6 from PubMed abstracts; none left unverified at decision-critical level).
+* **Verification date of this pack:** 2026-11-23. Every value placed in tables A and D was re-read against the original on that date (verification ledger, 20 value rows: 14 reproduced from full text, figure or table; 6 from PubMed abstracts; none left unverified at decision-critical level).
 * **Literature cutoff:** records up to the verification date; the newest source used is dated 2026-09-15 [8]. A PubMed search on 2026-11-23 for ketamine, memantine or NMDA-receptor antagonists together with WWOX or WOREE returned no records.
 
 ## How sources were selected
@@ -26,13 +26,14 @@ AI-curated research brief for discussion with a clinical team. Hypothesis level.
 | Blind verifier on the pharmacokinetic note | 14 claims: 13 supported, 1 partly (an adult-volunteer label corrected), arithmetic correct | ketamine_deep_adv_20261117/verify_pk_20261117/ and KDS_PK_RANGE_SCI_20261117.md |
 | Kinetics comparison (cultures and recombinant cells) | 13 claims: 11 supported, 2 partly, corrected | adv050_nmdar_agents_sci_20261118/VERIFY_CLAIMS_ADV050.md |
 | Two adversarial reviewers (prosecution and defence) | agreed on the shape; one new datum verified at PubMed | ketamine_deep_adv_20261117/stage3_reviews/ |
-| **This pack, 2026-11-23** | 20 ledger rows re-read from originals: 14 full text, figure or table; 6 abstract; 0 unverified. Three corrections to the current brief view (below) | content/VERIFICATION_LEDGER_ADV200.tsv |
+| **This pack, 2026-11-23** | 20 value rows re-read from originals: 14 full text, figure or table; 6 abstract; 0 unverified. Three corrections to the current brief view and three wording corrections to this pack (below) | content/VERIFICATION_LEDGER_ADV200.tsv |
 Totals reported by the deep search: 167 blind claim checks, 139 supported, 28 partly, none contradicted.
 
 ## Corrections found in this pass (the current brief view and its PDF were not edited)
 1. The brief view cites PMID 34747138 for the neuronal Wwox model and incidental anaesthesia; the neuronal-deletion model and in vivo bursting under ketamine and xylazine are in the Brain paper [2] (PMID 33914858); [3] is a gene-therapy paper.
 2. The brief view says the first-line randomised trial covers "mixed causes"; the PubMed abstract read does not state the aetiology mix. The trial has a PubMed record [9] and its abstract gives risk ratios with intervals.
 3. The d-APV result in the brief view is described as "abolished bursts in five slices from three animals" (correct); the Fig 3D legend prints no statistical test for it, which the brief does not say.
+4. **Corrected after peer review, 2026-11-23:** (a) the CSF:plasma value 0.917 in [14] is a ratio of AUC medians (2742.64 / 2990.36 ng.min/mL), not of Cmax; it now sits only on a labelled AUC row, Cmax rows carry no ratio (peaks at different times: CSF 120 min, plasma 40 min); (b) the absence statement was narrowed to "no dedicated ketamine or memantine intervention comparison in a WWOX system" because the d-APV arm and the incidental ketamine-xylazine anaesthesia are real, distinct observations; (c) the Ih row of the deciding-measurement table is labelled INFERENCE and the electrographic-seizure counts are labelled events observed after exposure, not a treatment-attributable incidence. Ledger rows V12d, V18a and V19 record these.
 Earlier corrections already on record: the report's "only drug with a mechanism match" statement (the slice reagent was d-APV); the pooled paediatric "24 of 30" claim; the glycogen-synthase-kinase duration switch; the coverage percentages (they reproduce arithmetically and do not travel); a first reading of the coverage figures corrected within the hour; a receipt that pointed at an error page (replaced by a new receipt); one browser-style User-Agent on two requests by a delegate, stopped at the challenge and nothing used.
 
 ## Carried but not re-verified in this pass (kept out of the tables)
