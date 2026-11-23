@@ -44,7 +44,7 @@ def main(runpath,public,out):
         assert len(wt)==2 and len(ko)==4
         counts=[f+b for _,_,f,b,_ in rows]
         if min(counts)==0:
-            scores.append([*key,min(counts),*["NA"]*7,"not_measured"])
+            scores.append([*key,min(counts),*["NA"]*7,"at_least_one_library_without_junction_reads"])
             continue
         v=np.array([f/(f+b) for _,_,f,b,_ in rows])
         def effect(w,k):
