@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-30362252-91",
+  "event_at": "2026-11-23T20:44:00Z",
+  "analysis_at": "2026-11-23T20:44Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "30362252",
+    "doi": "10.1002/humu.23675"
+  },
+  "prior_receipt": "FTR-20261023-30362252-01",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "Public author manuscript https://pmc.ncbi.nlm.nih.gov/articles/PMC6296882/ ; files/deepening_downloads/creatine_mrs_20261123/PMC6296882.1.xml",
+  "source_fingerprint": "8fd47083fba9e55b26825d58a48170f35b0dbc36e5ed849a05b4565ecb40a73c",
+  "workflow": "Targeted creatine exposure and measurement audit for WWOX LoF.",
+  "evidence_basis": [
+    "Reread the clinical neuroimaging paragraph for the prespecified question of whether an interpretable absolute creatine or PCr value was reported. Figure labels and supplementary item descriptions were checked for a candidate spectrum. No complete supplementary read.",
+    "Clinical narrative, neuroimaging paragraph, “lactate levels were extremely low”. No numerical creatine or phosphocreatine concentration, comparison reference or recovery experiment appears in this passage.",
+    "Figure 1 is the genetic analysis and Figure 2 reports expression. The documented scan cannot establish the value or direction of brain creatine. This is a result about one report."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/creatine/mrs.md"
+  ]
+}

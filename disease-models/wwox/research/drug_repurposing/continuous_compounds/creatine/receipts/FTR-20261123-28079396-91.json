@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-28079396-91",
+  "event_at": "2026-11-23T20:44:00Z",
+  "analysis_at": "2026-11-23T20:44Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "28079396",
+    "doi": "10.1139/apnm-2016-0406"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "Primary author accepted manuscript (personal research reading), files/deepening_downloads/creatine_mrs_20261123/PMID28079396.pdf, https://gwern.net/doc/creatine/2016-meregefilho.pdf. Version of record https://doi.org/10.1139/apnm-2016-0406",
+  "source_fingerprint": "73f97c29d920a9d14aabc1c76431e66ce6fbdc9d9f3febf816277f96ece76fb4",
+  "workflow": "Targeted creatine exposure and measurement audit for WWOX LoF.",
+  "evidence_basis": [
+    "Read MRS acquisition, normalization, selection and outcomes, Table 3 on manuscript page 22 and Fig. 2 on page 25, including marker spread. Other tables, cognitive analyses and discussion were outside the read.",
+    "MRS Methods, page 9: “with the voxel water content used as internal reference”. Fig. 2 legend separately identifies region-specific acquisition failures.",
+    "Table 3, placebo left prefrontal row, post SD printed 0.09 mmol/L. Fig. 2A right, corresponding post endpoints approximately 4.9 and 8.0 mmol/L. Source is the accepted version, which may differ from final typesetting."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/creatine/mrs.md"
+  ]
+}

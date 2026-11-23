@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-26907087-91",
+  "event_at": "2026-11-23T20:46:00Z",
+  "analysis_at": "2026-11-23T20:46Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "26907087",
+    "doi": "10.1007/s00726-016-2194-3"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4974294.1/PMC4974294.1.xml ; files/deepening_downloads/creatine_mrs_20261123/PMC4974294.1.xml",
+  "source_fingerprint": "e3bce149725f2306e493d18839203c84786575894951cac7344f3edd27b508d2",
+  "workflow": "Test whether inference about cerebral phosphocreatine depends on the phosphorus reference.",
+  "evidence_basis": [
+    "Targeted read of eligibility, phosphorus acquisition, Table 2, outcomes and reported trial duration. Other sections and figures outside the read.",
+    "Phosphorus acquisition Methods, ratio denominator: “total phosphate signal acquired from the VOI”. Frontal lobe Table 2, 28 completers, six, seven, eight and seven per group.",
+    "Table 2 distinguishes PCr/TP and β-NTP/TP at baseline and end. Between-group ANOVA of percent PCr change printed p=0.69. Group mean ratios were used to test sensitivity to reference choice."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/creatine/mrs.md"
+  ]
+}
