@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-23T20:51Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-23T20:51:30Z",
+ "event_id": "FTR-20261123-41278988-01",
+ "evidence_basis": [
+  "First read for ADV-203 (INV-06 and RP-017 version-and-measurement check): preprint text read in the sections on the model, the myelin Results (mouse and human) with the Fig 5 legend, the Discussion, and the Methods on animals, human tissue, immunofluorescence, electron microscopy and statistics; the Fig 5 image was opened from the PMC open-data bucket; the behaviour, RNA sequencing and Fig 1 to 4 and 6 images and the supplement were not opened. Source: Europe PMC fullTextXML (plain request), held copy in files/fulltext (not in git).",
+  "verbatim_locator | proposition: model drives the humanised allele in nearly all CNS cells (broad lineage) | Results, model paragraph | \"enabling us to study the role of mutant TAF1 in nearly all CNS cells\"",
+  "verbatim_locator | proposition: n per genotype for the lineage and lipid fractions | Fig 5 legend | \"Data shown as mean +/\u2212 SEM; n = 3 mice/genotype\"",
+  "verbatim_locator | proposition: SOX10+ fraction reduced only in the corpus callosum | Fig 5 legend (d) | \"p = 0.0038 (**), cortex p > 0.05 (ns), striatum p > 0.05 (ns)\"",
+  "verbatim_locator | proposition: PDGFRA+ fraction increased only in the striatum | Fig 5 legend (e) | \"striatum p = 0.0211 (*), cortex and corpus callosum p > 0.05 (ns)\"",
+  "verbatim_locator | proposition: authors leave cause open | Discussion | \"Whether disease progression is primarily driven by the degeneration of existing mature OLs, impaired differentiation of OPCs into OLs, or a combination of both remains to be explored\"",
+  "verbatim_locator | proposition: injury markers in the same animals at P21 | Results, dystrophy and neuroinflammation section | \"these results demonstrate that at P21, Nes Cre hy TAF1 XDP male mice exhibit pronounced striatal atrophy accompanied by increased markers of glial reactivity and neuroinflammation particularly within white matter regions\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv203_prakash_xdp_myelin_sci_20261123/RESULT_ADV203_PRAKASH_XDP_MYELIN_SCI_20261123.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "40daaed987d14d9a6eb69816b596a936a98a5c93d5590257e41d072af719f6f6",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext (held copy, not in git): PMID41278988_PMC12632464_Prakash2025_epmc.xml",
+ "study_id": {
+  "doi": "10.1101/2025.10.07.680990",
+  "pmid": "41278988"
+ },
+ "workflow": "SCI window AB ADV-203 (XDP myelin, INV-06 measurement check)"
+}
