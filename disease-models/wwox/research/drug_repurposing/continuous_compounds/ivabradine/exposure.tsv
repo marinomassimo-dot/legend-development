@@ -1,0 +1,11 @@
+scenario	concentration_nM	channel	reported_curve_block_percent	unit_slope_sensitivity_percent
+rat_parent_alone	4.7	mouse_HCN1	0.173	0.498
+rat_parent_alone	4.7	human_HCN4	0.782	0.234
+rat_combination_comparator	184	mouse_HCN1	12.378	16.37
+rat_combination_comparator	184	human_HCN4	12.912	8.425
+published_trace_concentration	300	mouse_HCN1	20.254	24.194
+published_trace_concentration	300	human_HCN4	17.98	13.043
+one_micromolar	1000	mouse_HCN1	51.855	51.546
+one_micromolar	1000	human_HCN4	36.482	33.333
+positive_curve_crossing	207.646	mouse_HCN1	14.039	18.093
+positive_curve_crossing	207.646	human_HCN4	14.039	9.406

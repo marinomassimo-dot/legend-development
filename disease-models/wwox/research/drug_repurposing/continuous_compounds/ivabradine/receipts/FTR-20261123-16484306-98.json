@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-16484306-98",
+  "event_at": "2026-11-23T23:48:50Z",
+  "analysis_at": "2026-11-23T23:48:50Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "16484306",
+    "doi": "10.1113/jphysiol.2005.100776"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "queried_not_full_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "metadata",
+  "source_locator": "https://pubmed.ncbi.nlm.nih.gov/16484306/#figures",
+  "source_fingerprint": null,
+  "workflow": "Targeted examination of original Figure 1 and 4 captions served by PubMed to compare fitted curves with rat free brain exposure.",
+  "evidence_basis": [
+    "Figure 1C: “Hill factors of 0.8 and 1.2 for HCN4 and HCN1, respectively”; concentration unit µM.",
+    "Figure 4B, mHCN1: 1 µM during pulse trains compared with steady activation at −100 mV."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/ivabradine/state_dependence.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/ivabradine/exposure.tsv"
+  ]
+}

@@ -7,3 +7,5 @@
 **Next step.** Quantify the parent compound's isoform and state effects from the original tables, compare with unbound pediatric exposure and audit which direct WWOX reports identify a drug-specific outcome and seizure type. Only then assess its experimental priority.
 
 **First results.** Parent-drug activation shifts were concentrated in NaV1.1, while recovery slowed in all four isoforms. Next examine the human neuronal comparator and native WWOX firing patterns. [Quantitative comparison and exposure](channels.md)
+
+**Disposition.** Parked for WWOX trial priority. The Dup15q model has a distinct spike-amplitude and sodium-inactivation phenotype, while the WWOX fixed-current result depends on how cells are recruited. [Comparison and conditions for reopening](transfer.md)

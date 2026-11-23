@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-37329181-98",
+  "event_at": "2026-11-23T23:47:25Z",
+  "analysis_at": "2026-11-23T23:47:25Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "37329181",
+    "doi": "10.1111/epi.17687"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/rufinamide_loop_20261123/dup15q.html",
+  "source_fingerprint": "58c41a05e41d0b7a470f4f7f8ef73b5d691617228185ff63f2afbb98cf7df9ca",
+  "workflow": "Measured drug effects in the human positive comparator against its reported isogenic reference.",
+  "evidence_basis": [
+    "Results and Fig. 4A: inactivation midpoint before and after rufinamide in Dup15q; corrected vehicle is a separate group.",
+    "Fig. 4F–G: action-potential amplitude and maximum firing; fourth versus first burst at 10 ms interval."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/rufinamide/transfer.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/rufinamide/transfer.tsv"
+  ]
+}

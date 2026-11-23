@@ -18,6 +18,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 12 | Citicoline, phosphatidylcholine supply and developmental myelin | Does precursor availability limit first-sheath formation and evoked conduction in WWOX? |
 | 13 | Pyridoxine, cofactor handling and inhibitory transmitter replenishment | Can increased cofactor availability rescue stimulated GABA production and native inhibition in WWOX? |
 | 14 | Rufinamide, state-dependent sodium-channel gating | Does changing burst duration or interval reveal a selective effect on excitation while preserving inhibitory recruitment? |
+| 15 | Ivabradine, voltage sag and rebound | Do channel state and free exposure permit a direct central effect in WWOX at comparable voltage excursions? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -28,7 +29,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: rufinamide.** Can burst duration and recovery distinguish suppression of recurrent excitation from impaired inhibitory recruitment? Parent data show preferential NaV1.1 activation shift and slower recovery across four isoforms. Next compare the human neuronal response and native WWOX firing patterns. [Opening prediction](rufinamide/README.md) · [Channel, exposure and WWOX comparison](rufinamide/channels.md)
+**Active compound: ivabradine.** Can a state-dependent HCN effect reach WWOX cortical neurons at plausible unbound exposure? Two recombinant-curve assumptions predict less than 1% at the rat two-hour parent-alone brain concentration. Next examine native neuronal data and the active metabolite. [Mechanism and falsification test](ivabradine/README.md) · [First quantitative test](ivabradine/state_dependence.md)
+
+**Rufinamide parked for WWOX trial priority.** The treated Dup15q cells started with a different intrinsic phenotype. In the WWOX mouse, weaker spikes and higher pyramidal input resistance change the interpretation of a lower firing rate. [Transfer analysis and reopening condition](rufinamide/transfer.md)
 
 **Pyridoxine parked for WWOX trial priority.** The GAD65 comparator confirms a large demand-dependent difference; pediatric B6 forms disagree and no WWOX-specific response has been established. [Circuit and pediatric comparisons, reproducible results and reopen condition](pyridoxine/release_and_exposure.md)
 

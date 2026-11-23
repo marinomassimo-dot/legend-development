@@ -1,0 +1,14 @@
+comparison	measurement	unit	reference	comparison_group	difference
+PY_WT_vs_KO	AP amplitude	mV	76.3	68.67	-7.63
+PY_WT_vs_KO	Resting membrane potential	mV	-79.25	-73.62	5.63
+PY_WT_vs_KO	AP Threshold (mV)	mV	-43.77	-41.32	2.45
+PY_WT_vs_KO	Input resistance (Mohm)	MOhm	102.88	143.03	40.15
+PY_WT_vs_KO	passive_current_proxy_ratio_of_group_means	pA	344.868	225.827	-119.041
+IN_WT_plus_HT_vs_KO	AP amplitude	mV	60.78	45.03	-15.75
+IN_WT_plus_HT_vs_KO	Resting membrane potential	mV	-67.11	-71.52	-4.41
+IN_WT_plus_HT_vs_KO	AP Threshold (mV)	mV	-40.4	-42.97	-2.57
+IN_WT_plus_HT_vs_KO	Input resistance (Mohm)	MOhm	149.97	118.32	-31.65
+IN_WT_plus_HT_vs_KO	passive_current_proxy_ratio_of_group_means	pA	178.102	241.295	63.193
+Dup15q	inactivation midpoint vehicle vs drug	mV	-36.6	-42.5	-5.9
+Dup15q	signed deviation from corrected vehicle	mV	4.1	-1.8	-5.9
+Dup15q	absolute deviation from corrected vehicle	mV	4.1	1.8	-2.3

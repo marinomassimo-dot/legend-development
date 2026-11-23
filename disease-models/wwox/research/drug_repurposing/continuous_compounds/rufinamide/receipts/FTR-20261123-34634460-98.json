@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-34634460-98",
+  "event_at": "2026-11-23T23:47:25Z",
+  "analysis_at": "2026-11-23T23:47:25Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "34634460",
+    "doi": "10.1016/j.nbd.2021.105529"
+  },
+  "prior_receipt": "FTR-20261123-34634460-93",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID34634460_Breton2021_PMC.xml",
+  "source_fingerprint": "934b4e1a42ac19f5cd8912994fb171beabdeb94a6631b23d9a383dab1db906aa",
+  "workflow": "Targeted reread: compare both cell classes with Dup15q and derive a passive recruitment proxy from the held WWOX measurements.",
+  "evidence_basis": [
+    "Table 1: “Input resistance (Mohm)” and “AP Threshold (mV)” in separate pyramidal and interneuron columns.",
+    "Results accompanying Fig. 6: “there was no significant difference in the slope of the curve” after alignment relative to rheobase."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/rufinamide/transfer.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/rufinamide/transfer.tsv"
+  ]
+}
