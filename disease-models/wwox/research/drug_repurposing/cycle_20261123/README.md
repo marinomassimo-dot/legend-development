@@ -61,3 +61,7 @@ At 13:21 UTC independent reconstruction confirmed the timing difference and both
 ## Ethosuximide and the direction of callosal myelin change
 
 In WAG/Rij absence epilepsy, ethosuximide raised callosal g-ratio by 0.0270 more than in control rats, consistent with limiting excess sheath thickness. Untreated strain differences in the percentage of axons myelinated were only 1–2 points. In P17 Wwox-null mice the structural deficit includes many fewer myelinated axons per field (about 46 versus 131 WT), and neuronal Wwox restoration increased the count to about 105. The rat result favors measuring tract-specific thickness, coverage and conduction separately before claiming a WWOX myelin effect. [Animal-level source reanalysis and discriminating prediction](../ethosuximide_callosal_myelin_20261123/README.md)
+
+## Ganaxolone, tonic conductance and native chloride
+
+A 10 nM ganaxolone response in layer II/III neurons of a different genetic epilepsy model corresponds to 6% of the Wwox-null mouse WT–KO input-conductance gap when transferred as whole-cell current; scaling by effective capacitance gives 34%. Wwox heterozygotes and nulls have nearly identical mean input resistance (143 MΩ), yet their slices burst at very different rates. Native GABA reversal, spike threshold, per-cell tonic conductance and matched firing therefore carry more information than input resistance as a selection marker. [Quantitative transfer and sign-changing prediction](../ganaxolone_tonic_conductance_20261123/README.md)
