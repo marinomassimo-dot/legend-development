@@ -780,10 +780,12 @@
     },
     {
      "step": "ADV-191: one bounded retrospective source comparison of Yang 2026 (PMID 42011973, PMC13097342) on whether baseline organoid hyperexcitability should be capped as a reason to choose an antiseizure probe (RP-043, INV-10); KEEP/NARROW/CLOSE; no WWOX drug recommendation",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-191 (assignments/ADV-191.md, ADV message 2026-11-23)",
-     "accepted_at": "2026-11-23T06:11:19Z"
+     "accepted_at": "2026-11-23T06:11:19Z",
+     "evidence": "ADV-191 landed on main 7c4c31a91e4a (gate PASS, ls-remote verified): RESULT_ADV191_YANG_SCN2A_ORGANOID_SCI_20261123.md, verdict NARROW, receipt FTR-20261123-42011973-01, pre-registration cf221b4fe; result path delivered to ADV 2026-11-23",
+     "updated_at": "2026-11-23T06:30:22Z"
     }
    ]
   }
