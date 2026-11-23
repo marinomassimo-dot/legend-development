@@ -1,0 +1,6 @@
+model	baseline_ligand_detected	KO_receiver_detected	ligand_lower_all_omissions	reference_markers	adjusted_ligand_lower_all_omissions	supply_criterion
+human_organoid	False	True	False	ALDH1L1,GLUL,SLC1A3	False	False
+mouse_global_hippocampus	False	True	False	ALDH1L1,GLUL,SLC1A3	False	False
+mouse_neuronal_hippocampus	False	True	False	ALDH1L1,GLUL,SLC1A3	False	False
+mouse_progenitor_hippocampus	False	True	False	ALDH1L1,GLUL,SLC1A3	False	False
+mouse_neuronal_cortex	False	True	True	ALDH1L1,GLUL,SLC1A3	True	False

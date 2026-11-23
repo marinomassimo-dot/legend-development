@@ -1,0 +1,13 @@
+region	GAD1_or_GAD2_detected	gene	n_cells	n_gene_detected	molecules
+pallium	False	GDNF	7028	6	6
+pallium	False	GFRA1	7028	54	58
+pallium	False	RET	7028	2	2
+pallium	True	GDNF	82	1	1
+pallium	True	GFRA1	82	2	2
+pallium	True	RET	82	2	2
+subpallium	False	GDNF	3618	72	99
+subpallium	False	GFRA1	3618	181	254
+subpallium	False	RET	3618	54	62
+subpallium	True	GDNF	1096	4	6
+subpallium	True	GFRA1	1096	54	71
+subpallium	True	RET	1096	25	28
