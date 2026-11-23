@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-30361190-85",
+  "event_at": "2026-11-23T22:30:38Z",
+  "analysis_at": "2026-11-23T22:30:38Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "30361190",
+    "doi": "10.1684/epd.2018.1005"
+  },
+  "prior_receipt": "FTR-20261117-30361190-01",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID30361190_Shaukat2018_JLE.pdf",
+  "source_fingerprint": "12e0930fa60a2c06a9ea3ca867506a24ff7d3a2d5eb5b7abeb686cd18d620958",
+  "workflow": "Separate reported normal WWOX acylcarnitine profiles from numeric C0 and sampling relative to valproate.",
+  "evidence_basis": [
+    "First child clinical investigations, “lactate, ammonia, acylcarnitine”: all listed as normal. No quantitative C0 or individual species reported.",
+    "Second child, clinical investigations adjoining MRI description: acylcarnitine profile reported normal. Valproate treatment mentioned at age 11 months. Lab sampling time is unstated."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/levocarnitine/compartments.md"
+  ]
+}

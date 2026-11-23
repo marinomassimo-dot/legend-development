@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-26608744-89",
+  "event_at": "2026-11-23T22:45:35Z",
+  "analysis_at": "2026-11-23T22:45:35Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "26608744",
+    "doi": "10.1093/brain/awv325"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/triheptanoin_loop_20261123/PMC4805082.xml",
+  "source_fingerprint": "8377133f3bc3de95b48224d21a5cc7260243c8b7b25b4e077ff8deb511212bd4",
+  "workflow": "Reconcile oil composition, tissue and independent replication for interpretation of C7 comparisons.",
+  "evidence_basis": [
+    "Fig. 2C legend: “mean normalized EPSCs”, n=6. Results gives a 38.9% mean decrease at a 300 µM bath exposure.",
+    "Fig. 2D and Results: inhibitory current amplitudes did not decrease significantly."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/triheptanoin/comparators.md"
+  ]
+}

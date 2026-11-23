@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-41104166-85",
+  "event_at": "2026-11-23T22:31:28Z",
+  "analysis_at": "2026-11-23T22:31:28Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "41104166",
+    "doi": "10.3389/fmolb.2025.1643667"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://www.frontiersin.org/journals/molecular-biosciences/articles/10.3389/fmolb.2025.1643667/full",
+  "source_fingerprint": null,
+  "workflow": "Identify age-matched baseline CSF C0 and C2 for interpreting translational concentrations.",
+  "evidence_basis": [
+    "Table 3, “Children (≤1 year old)”: n=15, median C0 4.11 and C2 0.19 micromolar.",
+    "Table 1 and Results: 57 children with diagnostic CSF sampling, without meningitis. Table 2 reports group medians and interquartile ranges."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/levocarnitine/compartments.md"
+  ]
+}

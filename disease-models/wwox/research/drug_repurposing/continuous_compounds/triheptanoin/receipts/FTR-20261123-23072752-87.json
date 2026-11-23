@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-23072752-87",
+  "event_at": "2026-11-23T22:39:26Z",
+  "analysis_at": "2026-11-23T22:39:26Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "23072752",
+    "doi": "10.1038/jcbfm.2012.151"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://journals.sagepub.com/doi/10.1038/jcbfm.2012.151",
+  "source_fingerprint": null,
+  "workflow": "Distinguish labeling and net metabolic replenishment from nonspecific seizure and calorie effects.",
+  "evidence_basis": [
+    "Table 1, “M+3”: glutamine and glutamate enrichment in each genotype measured in mole percent excess.",
+    "Table 2 succinate after heptanoate infusion, 0.15 versus 0.14 µmol/g, comparator is genotype."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/triheptanoin/tracer.md"
+  ]
+}

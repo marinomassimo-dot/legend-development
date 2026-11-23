@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-35441706-87",
+  "event_at": "2026-11-23T22:39:26Z",
+  "analysis_at": "2026-11-23T22:39:26Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "35441706",
+    "doi": "10.1111/epi.17263"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/triheptanoin_loop_20261123/PMC9546029.xml",
+  "source_fingerprint": "bee9a5bdca07ff735ff2c45a43f4b1c02063935897f7e998468e53f0a4464783",
+  "workflow": "Distinguish labeling and net metabolic replenishment from nonspecific seizure and calorie effects.",
+  "evidence_basis": [
+    "Table 2, “Overall [diary and EEG]”: between-arm estimate 13.45 points; 25 and 11 participants.",
+    "Methods, comparator is safflower oil; Table 2 absence-only subgroup has eight versus one participant."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/triheptanoin/tracer.md"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-37268656-90",
+  "event_at": "2026-11-23T22:50:34Z",
+  "analysis_at": "2026-11-23T22:50:34Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "37268656",
+    "doi": "10.1038/s41598-023-36001-x"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/triheptanoin_loop_20261123/PMC10238483.xml",
+  "source_fingerprint": "6cef6f7007c29ea09ded42aebdaefe3535093e9b9d69e2905c9fd510a874b160",
+  "workflow": "Recompute C4 change at matched clock times and compare with electroclinical outcomes, preserving the C5 coverage gap.",
+  "evidence_basis": [
+    "Table 5, “Beta-hydroxybutyrate blood levels (mM)”: day 1 and day 3 morning values by participant with the authors’ classification.",
+    "Results, Fig. 2 legend, the cutoff is less than 50% change. Table 5 subject 3 gives exactly 50% from published rounded values. Fig. 3 reports selected C5 profiles only."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/triheptanoin/decision.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/triheptanoin/ketones.tsv"
+  ]
+}

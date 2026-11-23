@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-28871440-89",
+  "event_at": "2026-11-23T22:45:36Z",
+  "analysis_at": "2026-11-23T22:45:36Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "28871440",
+    "doi": "10.1007/s10545-017-0085-8"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6545116/",
+  "source_fingerprint": null,
+  "workflow": "Reconcile oil composition, tissue and independent replication for interpretation of C7 comparisons.",
+  "evidence_basis": [
+    "Results subsection, “Eight adult subjects in the C7 group and seven adults in the C8 group”: skeletal muscle exercise recovery differed from the echocardiogram readout.",
+    "Fig. 2 legend: all but one had normal cardiac function at baseline and the end."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/triheptanoin/comparators.md"
+  ]
+}

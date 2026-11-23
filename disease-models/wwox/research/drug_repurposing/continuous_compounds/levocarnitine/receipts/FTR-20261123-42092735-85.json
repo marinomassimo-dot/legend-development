@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-42092735-85",
+  "event_at": "2026-11-23T22:30:38Z",
+  "analysis_at": "2026-11-23T22:30:38Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "42092735",
+    "doi": "10.1111/jpc.70401"
+  },
+  "prior_receipt": "FTR-20261117-42092735-01",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID42092735_SercePehlevan2026_PMC.xml",
+  "source_fingerprint": "19d041ace7703e21c54d75c2b27e69da9732603f6a0cab2ab6f0c401c5bf16e7",
+  "workflow": "Separate reported normal WWOX acylcarnitine profiles from numeric C0 and sampling relative to valproate.",
+  "evidence_basis": [
+    "Case presentation, neonatal admission: “acylcarnitine profile” in metabolic workup with no reported abnormality.",
+    "Subsequent paragraph, after discharge: valproic acid was introduced for spasms. No paired quantitative profile reported."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/levocarnitine/compartments.md"
+  ]
+}

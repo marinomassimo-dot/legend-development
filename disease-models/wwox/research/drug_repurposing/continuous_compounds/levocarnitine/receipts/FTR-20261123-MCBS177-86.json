@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-MCBS177-86",
+  "event_at": "2026-11-23T22:33:59Z",
+  "analysis_at": "2026-11-23T22:33:59Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "doi": "10.21705/mcbs.v5i1.177"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://www.cellbiopharm.com/ojs/index.php/MCBS/article/download/177/69",
+  "source_fingerprint": null,
+  "workflow": "Distinguish substrate-specific carbon transfer from an ammonia endpoint associated with medication.",
+  "evidence_basis": [
+    "Methods, “19 subjects in each group”: three in each arm dropped out during the 30-day treatment.",
+    "Table 2: final ammonia means 44.6 and 81.4 µg/dL. Discussion explicitly states that valproate and carnitine were not measured."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/levocarnitine/decision.md"
+  ]
+}
