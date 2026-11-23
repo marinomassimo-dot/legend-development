@@ -1,0 +1,13 @@
+model	gene	delta	loo_min	loo_max
+hippocampus	Inhba	1.378537	0.936170	1.781955
+hippocampus	Bdnf	-0.197890	-0.767131	0.243447
+hippocampus	Homer1	0.013974	-0.344153	0.372101
+cortex	Inhba	0.459701	0.101823	0.800364
+cortex	Bdnf	0.004686	-0.060029	0.053088
+cortex	Homer1	-0.308969	-0.611154	-0.129448
+kainate_day14	Inhba	0.968845	0.656163	1.046498
+kainate_day14	Bdnf	0.888883	0.796031	1.023722
+kainate_day14	Homer1	-0.666964	-0.747580	-0.436668
+human_organoid	Inhba	-0.365205	-0.391641	-0.339118
+human_organoid	Bdnf	-0.128612	-0.197994	-0.059231
+human_organoid	Homer1	-0.373675	-0.431438	-0.315912
