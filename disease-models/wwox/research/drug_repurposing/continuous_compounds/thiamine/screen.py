@@ -9,12 +9,12 @@ from assess import MODELS, load_target, reference, tsv
 
 GENES = 'Slc19a2 Slc19a3 Tpk1 Slc25a19 Pdha1 Pdhb Dlat Dld Pdk1 Pdk2 Pdk3 Pdk4 Ogdh Tkt'.split()
 
-def run(files):
+def run(files, target_genes=GENES, output=HERE / 'screen.tsv', human_symbols=None):
     gene_map, _ = reference(files)
     rows = []
     for model, accession, wt_prefix, ko_prefix in MODELS:
         human = model == 'human_organoid'
-        genes = [g.upper() if human else g for g in GENES]
+        genes = [(human_symbols or {}).get(g, g.upper()) if human else g for g in target_genes]
         source, = (files / 'geo' / accession).glob('*count_table.txt.gz' if human else '*TPM_Table.txt.gz')
         names, measured = load_target(source, genes, None if human else gene_map)
         wt = [i for i, name in enumerate(names) if name.startswith(wt_prefix)]
@@ -33,7 +33,7 @@ def run(files):
             omissions = [delta(i) for i in wt + ko]
             rows.append([model, accession, g.upper(), len(wt), len(ko), 'mapped', expr[wt].mean(),
                          expr[ko].mean(), delta(), min(omissions), max(omissions)])
-    tsv(HERE / 'screen.tsv', 'model accession gene wt_n ko_n mapping wt_mean ko_mean delta omit_min omit_max'.split(), rows)
+    tsv(output, 'model accession gene wt_n ko_n mapping wt_mean ko_mean delta omit_min omit_max'.split(), rows)
 
 if __name__ == '__main__':
     run(Path(sys.argv[1]))

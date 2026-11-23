@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-17035501-81",
+  "event_at": "2026-11-23T22:10:16Z",
+  "analysis_at": "2026-11-23T22:10:16Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "17035501",
+    "doi": "10.1073/pnas.0607661103"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/thiamine_loop_20261123/thiamine-carrier.pdf ; https://pmc.ncbi.nlm.nih.gov/articles/PMC1595310/",
+  "source_fingerprint": "5d776a761cb0900288d7c3bfd42db9d1db4da195857c243a196ef254b8b70255",
+  "workflow": "Distinguish extracellular thiamine, mitochondrial cofactor availability and measurable substrate oxidation in WWOX and positive-control disease models.",
+  "evidence_basis": [
+    "Table 1: “ng/mg of total cellular protein”; matched denominators across fractions, means and standard errors of three independent experiments.",
+    "Results associated with Fig. 7 report rescue of activity by ThPP in isolated enzyme assays."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/thiamine/compartments.md"
+  ]
+}

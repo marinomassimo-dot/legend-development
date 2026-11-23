@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-26657515-81",
+  "event_at": "2026-11-23T22:10:16Z",
+  "analysis_at": "2026-11-23T22:10:16Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "26657515",
+    "doi": "10.1093/brain/awv342"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/thiamine_loop_20261123/thiamine-thesis.pdf ; https://academic.oup.com/brain/article/139/1/31/2468821",
+  "source_fingerprint": "12b2cee3df917aa1eef2686477ec54616c351477e45bfdf29a6628e5e8679e18",
+  "workflow": "Distinguish extracellular thiamine, mitochondrial cofactor availability and measurable substrate oxidation in WWOX and positive-control disease models.",
+  "evidence_basis": [
+    "Table 1 footnote: “Patient 3 was on thiamine treatment”. Five untreated and one exposed CSF sample, no paired before-after estimate.",
+    "Results and Fig. 2 legend give low/replete medium concentrations. University-deposited supplementary table “Substrate oxidation rates in fibroblasts” lists separate substrate values for patient 1 and one parallel control."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/thiamine/compartments.md"
+  ]
+}

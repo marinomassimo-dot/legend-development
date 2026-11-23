@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-40943218-82",
+  "event_at": "2026-11-23T22:13:06Z",
+  "analysis_at": "2026-11-23T22:13:06Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "40943218",
+    "doi": "10.3390/ijms26178296"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12428021/ ; files/deepening_downloads/thiamine_loop_20261123/thiamine-rat.xml and thiamine-rat-002.jpg and thiamine-rat-004.jpg",
+  "source_fingerprint": "a2e1a0819b9eb794121d0212a797a38a160f6e7ae4d6282ef0bc08296f94cb02",
+  "workflow": "Distinguish extracellular thiamine, mitochondrial cofactor availability and measurable substrate oxidation in WWOX and positive-control disease models.",
+  "evidence_basis": [
+    "Figure 2A cortex PDHC on fresh-weight scale; primary text reports “maximal flux capacity” and less than 10% activity on ThDP omission.",
+    "Figure 4B lower cerebral ThDP in evening controls, rise with treatment; original JPGs calibrated from axis ticks and read at bar tops (not individual dots or SEM).",
+    "Methods 4.2 reports 36 purchased versus 38 randomized; each Fig. 2 and Fig. 4 legend specifies 9–10 animals per group."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/thiamine/compartments.md"
+  ]
+}

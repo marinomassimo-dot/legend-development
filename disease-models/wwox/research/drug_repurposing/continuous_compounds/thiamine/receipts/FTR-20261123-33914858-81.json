@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-33914858-81",
+  "event_at": "2026-11-23T22:10:16Z",
+  "analysis_at": "2026-11-23T22:10:16Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "33914858",
+    "doi": "10.1093/brain/awab174"
+  },
+  "prior_receipt": "FTR-20261123-33914858-75",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf ; local source",
+  "source_fingerprint": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+  "workflow": "Distinguish extracellular thiamine, mitochondrial cofactor availability and measurable substrate oxidation in WWOX and positive-control disease models.",
+  "evidence_basis": [
+    "Oligocortical spheroids Methods: “At Days 7–50” and subsequent maturation stage; alternate Neurobasal suppliers given. Distinct from Steinberg cerebral RNA cultures."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/thiamine/compartments.md"
+  ]
+}

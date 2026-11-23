@@ -1,0 +1,9 @@
+figure	panel	quantity	unit	group	time	zero_y	upper_y	upper_value	approx_bar_top_y
+2	A	cortical_PDHC_capacity	umol/min/g_fresh_weight	control	morning	138	22	0.25	73
+2	A	cortical_PDHC_capacity	umol/min/g_fresh_weight	thiamine	morning	138	22	0.25	89
+2	A	cortical_PDHC_capacity	umol/min/g_fresh_weight	control	evening	138	22	0.25	94
+2	A	cortical_PDHC_capacity	umol/min/g_fresh_weight	thiamine	evening	138	22	0.25	108
+4	B	cortical_ThDP	nmol/g_fresh_weight	control	morning	518	391	15	466
+4	B	cortical_ThDP	nmol/g_fresh_weight	thiamine	morning	518	391	15	484
+4	B	cortical_ThDP	nmol/g_fresh_weight	control	evening	518	391	15	491
+4	B	cortical_ThDP	nmol/g_fresh_weight	thiamine	evening	518	391	15	470

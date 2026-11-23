@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-34268881-81",
+  "event_at": "2026-11-23T22:10:16Z",
+  "analysis_at": "2026-11-23T22:10:16Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "34268881"
+  },
+  "prior_receipt": "FTR-20261118-34268881-67",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID34268881_Steinberg2021_PMC_r2.xml ; local source",
+  "source_fingerprint": "de340289bc6704c9b9ec752f81afed64a02211a83d95d675a1d46f40be6304f6",
+  "workflow": "Distinguish extracellular thiamine, mitochondrial cofactor availability and measurable substrate oxidation in WWOX and positive-control disease models.",
+  "evidence_basis": [
+    "Cerebral organoid generation: “1:1 mixture of DMEM/F12 and Neurobasal Medium”; the Gibco identifier is 21103049 and an alternative supplier is listed.",
+    "Cerebral maturation medium retains base composition from day 16. Data availability links week 15 cerebral organoids to GSE156243."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/thiamine/compartments.md"
+  ]
+}

@@ -6091,7 +6091,7 @@
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 2284
+   "receipt_ledger_lines": 2289
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -8733,7 +8733,7 @@
    "inputs": {
     "T1_cards": "7fbc794abf82e087",
     "T2_pertinence": "59d15d3c06233d6c",
-    "T3_receipts": "09a2c674bcc0df4b",
+    "T3_receipts": "dce22d4212d9f5a6",
     "T4_needs": "87e24b6b4eb37de3",
     "T5_pharmacology": "c8ec35a5f404ccca",
     "T6_identity": "186bd57e16d4aa8b"
@@ -8855,7 +8855,7 @@
     "42422765",
     "42587157"
    ],
-   "receipts_on_cited_pmids": 50,
+   "receipts_on_cited_pmids": 51,
    "research_objective": "broad_durable_recovery",
    "tracks": [
     "A"
@@ -9603,7 +9603,7 @@
    "inputs": {
     "T1_cards": "0ba65c1a2e9f1685",
     "T2_pertinence": "8e52657c67b7cf9d",
-    "T3_receipts": "2a9917a1af84d573",
+    "T3_receipts": "42f74021872dc630",
     "T4_needs": "a7a80e55c71b1e22",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "2302f3b36a077aa0"
@@ -9701,7 +9701,7 @@
     "40665325",
     "42397075"
    ],
-   "receipts_on_cited_pmids": 26,
+   "receipts_on_cited_pmids": 27,
    "research_objective": "",
    "tracks": [
     "A"
@@ -9956,7 +9956,7 @@
    "inputs": {
     "T1_cards": "728f99dd6a975dad",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "77b60fc5eb29ce25",
+    "T3_receipts": "90d725a50fd3f609",
     "T4_needs": "55ff62f47762bab4",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "a51c161c63ba11d3"
@@ -10018,7 +10018,7 @@
     "34268881",
     "42397075"
    ],
-   "receipts_on_cited_pmids": 38,
+   "receipts_on_cited_pmids": 39,
    "research_objective": "",
    "tracks": [
     "A"
@@ -10242,7 +10242,7 @@
    "inputs": {
     "T1_cards": "c7e9265c60f481f4",
     "T2_pertinence": "079230f81c69cb2e",
-    "T3_receipts": "e85777333f3d96b9",
+    "T3_receipts": "133abf8ebf95b575",
     "T4_needs": "ac27518af19cc333",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "57198814e915cf0b"
@@ -10312,7 +10312,7 @@
     "42771346",
     "42909904"
    ],
-   "receipts_on_cited_pmids": 32,
+   "receipts_on_cited_pmids": 33,
    "research_objective": "",
    "tracks": [
     "A"
@@ -10534,7 +10534,7 @@
    "inputs": {
     "T1_cards": "3a737e5c38d10eb4",
     "T2_pertinence": "1959a04e90dbf178",
-    "T3_receipts": "bf8516533b1f94c3",
+    "T3_receipts": "3c82b46ec6274ba2",
     "T4_needs": "a3face7aa0d2e275",
     "T5_pharmacology": "07a3719a2976ec86",
     "T6_identity": "b95d3d12430d688c"
@@ -10702,7 +10702,7 @@
     "42035940",
     "42909904"
    ],
-   "receipts_on_cited_pmids": 48,
+   "receipts_on_cited_pmids": 49,
    "research_objective": "useful_partial_benefit",
    "tracks": [
     "A"
@@ -10932,7 +10932,7 @@
    "inputs": {
     "T1_cards": "c75b657a12dda9af",
     "T2_pertinence": "4f588d870d868008",
-    "T3_receipts": "965624cbc2814491",
+    "T3_receipts": "c87ad146672bb369",
     "T4_needs": "364bca1d317075b9",
     "T5_pharmacology": "dd38ed70d7c73b56",
     "T6_identity": "5947102b41b2b474"
@@ -11139,7 +11139,7 @@
     "42909904",
     "625308"
    ],
-   "receipts_on_cited_pmids": 82,
+   "receipts_on_cited_pmids": 83,
    "research_objective": "useful_partial_benefit",
    "tracks": [
     "A"
@@ -12575,7 +12575,7 @@
    "inputs": {
     "T1_cards": "69d51528816aabd4",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "8f40e1a7785d892d",
+    "T3_receipts": "aeaeca12a6917190",
     "T4_needs": "e47c99263fff82cc",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "6bb7feb0f8155010"
@@ -12670,7 +12670,7 @@
    "pmids": [
     "34268881"
    ],
-   "receipts_on_cited_pmids": 14,
+   "receipts_on_cited_pmids": 15,
    "research_objective": "",
    "tracks": [
     "A"
@@ -12900,7 +12900,7 @@
    "inputs": {
     "T1_cards": "e7c4cc4144cc76ec",
     "T2_pertinence": "40d3f822d9a26184",
-    "T3_receipts": "a5f58af7a5595987",
+    "T3_receipts": "e65b4656f814c744",
     "T4_needs": "614b4e0a41c6a227",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "30921a9013e88d22"
@@ -13161,7 +13161,7 @@
     "42735667",
     "9168839"
    ],
-   "receipts_on_cited_pmids": 153,
+   "receipts_on_cited_pmids": 155,
    "research_objective": "",
    "tracks": [
     "A"
@@ -13462,7 +13462,7 @@
    "inputs": {
     "T1_cards": "45e69a3bcee400f5",
     "T2_pertinence": "4744af9e5e721d31",
-    "T3_receipts": "343c6a1d46875009",
+    "T3_receipts": "29097d2a7ec4a86a",
     "T4_needs": "a9f2ecba72fedb1c",
     "T5_pharmacology": "83e16cf80f0d93c6",
     "T6_identity": "d72dab466f7f0934"
@@ -13719,7 +13719,7 @@
     "42837646",
     "9872743"
    ],
-   "receipts_on_cited_pmids": 53,
+   "receipts_on_cited_pmids": 54,
    "research_objective": "useful_partial_benefit",
    "tracks": [
     "A"
@@ -13916,7 +13916,7 @@
    "inputs": {
     "T1_cards": "7c2e0dbb3fec763e",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "17f99f7e80c84f7c",
+    "T3_receipts": "a4bb47fdc467cd70",
     "T4_needs": "c3cb663b4a8f81ca",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "1b6967b150a8ef31"
@@ -13982,7 +13982,7 @@
     "42397075",
     "42422765"
    ],
-   "receipts_on_cited_pmids": 76,
+   "receipts_on_cited_pmids": 78,
    "research_objective": "",
    "tracks": [
     "A"
@@ -14169,7 +14169,7 @@
    "inputs": {
     "T1_cards": "e5f873d116363e69",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "4d8c6a81a22a7694",
+    "T3_receipts": "2cdda6c677d5ab49",
     "T4_needs": "6cb13a89d47f10ac",
     "T5_pharmacology": "4cfc018740c85d41",
     "T6_identity": "c8a9075059e82981"
@@ -14273,7 +14273,7 @@
     "35292925",
     "36828035"
    ],
-   "receipts_on_cited_pmids": 72,
+   "receipts_on_cited_pmids": 73,
    "research_objective": "",
    "tracks": [
     "A"
@@ -15194,7 +15194,7 @@
    "inputs": {
     "T1_cards": "439292e6a92aadb9",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "3571f3cc7d17f398",
+    "T3_receipts": "16b751fc34ae9f07",
     "T4_needs": "34001ad580d89a15",
     "T5_pharmacology": "39d3e6c4d9daea9a",
     "T6_identity": "b9cf666861d789c0"
@@ -15270,7 +15270,7 @@
     "42111266",
     "42422765"
    ],
-   "receipts_on_cited_pmids": 69,
+   "receipts_on_cited_pmids": 71,
    "research_objective": "useful_partial_benefit",
    "tracks": [
     "A"
@@ -15820,7 +15820,7 @@
    "inputs": {
     "T1_cards": "876cf7a0e39f757d",
     "T2_pertinence": "419afd58578b735f",
-    "T3_receipts": "cc72fb0356958da2",
+    "T3_receipts": "a84b22a8f37b8ffd",
     "T4_needs": "bbaa10de8747dfa1",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "8e6731310b854960"
@@ -15959,7 +15959,7 @@
     "42150425",
     "42909904"
    ],
-   "receipts_on_cited_pmids": 41,
+   "receipts_on_cited_pmids": 42,
    "research_objective": "",
    "tracks": [
     "A"
@@ -16664,7 +16664,7 @@
    "inputs": {
     "T1_cards": "78539b81aa4fc4fb",
     "T2_pertinence": "1d8e37b50e10f4e0",
-    "T3_receipts": "eab276c886d66c37",
+    "T3_receipts": "eea67fbe94720214",
     "T4_needs": "04b598094105956f",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "af32521d73bf653e"
@@ -16867,7 +16867,7 @@
     "39684792",
     "42939870"
    ],
-   "receipts_on_cited_pmids": 34,
+   "receipts_on_cited_pmids": 35,
    "research_objective": "",
    "tracks": [
     "A"
@@ -17120,7 +17120,7 @@
    "inputs": {
     "T1_cards": "a6bdc8a8a9890ac0",
     "T2_pertinence": "403956ddfaf8ef49",
-    "T3_receipts": "1b6c4743f76078f6",
+    "T3_receipts": "3777a9b4c8eb82fd",
     "T4_needs": "492f1e05d520cfd1",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "7de12fe35682551b"
@@ -17322,7 +17322,7 @@
     "40092791",
     "42397075"
    ],
-   "receipts_on_cited_pmids": 28,
+   "receipts_on_cited_pmids": 29,
    "research_objective": "",
    "tracks": [
     "A"
