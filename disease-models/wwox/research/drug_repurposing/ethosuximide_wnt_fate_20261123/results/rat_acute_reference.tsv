@@ -1,0 +1,3 @@
+arm	n	n_FDR_lt_005	min_nominal_P	max_nominal_P
+up	20	1	2.176266e-06	0.00568948528205133
+down	20	0	0.01382967	0.04864107
