@@ -27,3 +27,13 @@ Status: pilot, hypothesis level, not medical advice. The brief is a LAYOUT pilot
 * **Accessibility.** No tagged PDF and no alternative text; PyMuPDF does not write structure tags. Only the document language is set. A tagged PDF would need another renderer.
 * **Figure library.** matplotlib 3.10.3 works for a vector figure with embedded TrueType fonts, but it lives in `~/.local/legend-figures-libs`, appended to `sys.path` after the system packages inside the pilot script only. Proposal, one line: a rebuild or a test should read a `LEGEND_FIGURE_LIBS` environment variable that defaults to that folder, and skip the figure test when it is absent.
 * **Panel-level locators and animal denominators** are PLACEHOLDER until the content pack supplies them.
+
+## Increment 2: the final PDF from the content pack (2026-11-23)
+
+* `build_final.py` reads `../content/` (A to F: markdown tables, the two graph TSVs) and writes `out/ketamine_brief_pilot_final.pdf`. Run: `python3 -I build_final.py --landed <main sha>`; the sha is checked with git to contain the content commit. Output is deterministic (two runs compare byte-equal).
+* Built from content commit d2ed139d4 (SCI's three corrections), landed on main as 00b47c935e7c. Both shas and the SHA-256 of all nine input files are printed on the last page, written into the PDF keywords, and the two shas are in every page footer.
+* 16 pages: decision evidence (Blocks 1 to 4), the 18-node, 19-edge evidence graph with its edge list, the one measurement that would change the choice, negative results, the exposure table in three matrices (nominal bath, total plasma, CSF), conversions, methods, references with PMID and DOI links, provenance.
+* Rows read from the abstract only carry a heavy bar at the left edge and the words [ABSTRACT-ONLY]. The one residual from the content team (the sIPSC plus/minus statistic of Breton et al. is not named) is flagged on page 1.
+* Page images used for the check: `out/final_pages/f01.png` to `f16.png` (85 dpi). The blind cold read is not self-certified.
+* What the builder cannot do: the graph layout is fixed per node id (an unknown id or a changed edge set needs new coordinates); no internal links, no tagged PDF, no alternative text.
+* Story trap found on this pack: a heading placed straight after a table made pymupdf's Story loop for ever once the corrected rows moved the page break. Every table is now followed by a 1 pt spacer block, and `story_doc` stops with an error after 25 pages instead of hanging.
