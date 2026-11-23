@@ -21,7 +21,7 @@ To show where the transfer from the published slice finding to ketamine breaks, 
 The break in transfer is edge G4 (N3 to N5), which is a documented fact: no pore-blocker arm exists. The rivals G7, G10, G12 and G14 point into N5 and the discriminating readout N17 (edges G16 to G18) separates the first three. Edge G13 (bursting recorded in vivo with ketamine on board) is CONTEXT_ONLY and should be drawn lightly: its own label says it is not a test.
 
 ## Suggested reading order for a figure
-N1, N2 to N3 (the finding), then N4 against N5 (the two claims), then the three alternatives (N8, N11, N13) each with their motivating observations, then N17 as the readout, then N16 and N18 as the two limits (exposure and the missing direct test).
+N1, N2 to N3 (the finding), then N4 against N5 (the two claims), then the four alternatives (N8, N11, N13 and N15) with the observations that motivate them (N15, the sedation or co-medication context, is motivated by the clinical series rather than by a slice observation), then N17 as the readout, then N16 and N18 as the two limits (exposure and the missing direct test).
 
 ## What the graph does not do
 It does not weight or score the alternatives, does not sum evidence across unlike models, and does not imply that any drug should or should not be used. A graph-coverage percentage is not shown: coverage percentages from an earlier team draft reproduced arithmetically but changed with the node definitions and the denominator, so they do not travel (see the negative-results and quantitative section).
