@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-36779245-95",
+  "event_at": "2026-11-23T21:05:00Z",
+  "analysis_at": "2026-11-23T21:05Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "36779245",
+    "doi": "10.1111/epi.17542"
+  },
+  "prior_receipt": "FTR-20261105-36779245-21",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.1111/epi.17542 ; files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
+  "source_fingerprint": "780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34",
+  "workflow": "Check pediatric exposure and background SV2A occupancy for the WWOX brivaracetam comparison.",
+  "evidence_basis": [
+    "Targeted reading of the named sections only; other analyses, figures and supplements are outside this pass.",
+    "Table 2, row “ASMs trialed (current)”. Underlines in the XML distinguish current treatment. One of 13 columns lists BRV, and LEV appears in that same history without an underline.",
+    "Table 2 resistant status is an overall phenotype. No drug-specific effect sizes or dates of overlap were derived."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/brivaracetam/exposure.md"
+  ]
+}

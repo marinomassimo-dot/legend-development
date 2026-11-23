@@ -1,5 +1,7 @@
 # Brivaracetam and loss of inhibitory restraint in WWOX-deficient cortex
 
+The [pediatric exposure, WWOX medication histories and PET occupancy analysis](exposure.md) adds a separate comparison for patients with prior versus concurrent levetiracetam.
+
 **First result.** A preferential effect on late excitatory responses during a stimulus train could coexist with substantial depression of inhibitory input. What magnitude of excitatory selectivity would be needed to bring a simple spontaneous-input measure in Wwox-deletion cortex back to its control value? We estimated this from the published untreated waveforms before attributing any effect to brivaracetam. [Prospective drug question](prediction.md) · [Breton et al., Fig. 4E/G](https://pmc.ncbi.nlm.nih.gov/articles/PMC8609180/)
 
 ## From a detected event to an input index
@@ -22,3 +24,5 @@ Let the knockout index be R times the control index and let the drug reduce dete
 **Next decision.** Compare these conditional requirements with *direct* brivaracetam drug experiments, specifying whether they measured excitatory transmission, GABAergic transmission, a compound field response or vesicle recycling. Seek an inhibitory comparator under the same drug before projecting any fraction onto this index. The direct train/recycling paper and comparator paper are still source leads in the prediction record. This WWOX experiment did not administer brivaracetam. For eventual pediatric feasibility, the European product information specifies adjunctive therapy for partial-onset seizures from two years of age and includes an oral solution. The relevance to age at onset, seizure type, background treatment and WWOX etiology must be evaluated separately. [EMA product information](https://www.ema.europa.eu/en/documents/product-information/briviact-epar-product-information_en.pdf)
 
 Only original calculations are distributed. To reproduce, run `python3 wave_charge.py wwox-fig4.jpg` on the [original figure](https://ars.els-cdn.com/content/image/1-s2.0-S0969996121002783-gr4_lrg.jpg) using ImageMagick and NumPy. [Targeted reading record](receipts/)
+
+The [astrocyte comparison](astrocytes.md) identifies a conditional, activity-dependent alternative and an unresolved concentration discrepancy in the chronic experiment.
