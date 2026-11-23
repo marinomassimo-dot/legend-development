@@ -1,0 +1,5 @@
+rule	min_Q	minimum_count	WT_mean	KO_mean	delta	omit_min	omit_max	of_15_ge	of_15_le	decision
+any	20	0	NA	NA	NA	NA	NA	NA	NA	at_least_one_library_without_junction_reads
+any	30	0	NA	NA	NA	NA	NA	NA	NA	at_least_one_library_without_junction_reads
+centered	20	0	NA	NA	NA	NA	NA	NA	NA	at_least_one_library_without_junction_reads
+centered	30	0	NA	NA	NA	NA	NA	NA	NA	at_least_one_library_without_junction_reads
