@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-23T16:49Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-23T16:49:44Z",
+ "event_id": "FTR-20261123-36828035-05",
+ "evidence_basis": [
+  "Hussain et al. 2023, Prog Neurobiol (PMID 36828035, PMC10835625), re-read for ADV-198 (cerebellar composition of the P47T sterol signature): Results sections 2.6 to 2.9 and the Fig 5 legend read in the PMC open-data bucket text; Fig 5 viewed as an image (Purkinje and basket counts, layer thickness; values are visual estimates). Other sections, figures and the supplement not read in this pass. Source: PMC open-data bucket, CC BY 4.0; SHA-256 of the txt 1c6335ad129c (12 hex); Fig 5 jpg 4ade833d8d55. The held processed table GSE215425 (cerebellum 4 WT against 3 P47T libraries) was analysed in the same task (result file).",
+  "verbatim_locator | proposition: calbindin Purkinje cell bodies are fewer in the mutant cerebellar cortex | Results 2.7 | \"displayed a striking decrease in the number of calbindin labeled PC bodies with deformed and degenerated dendrites\"",
+  "verbatim_locator | proposition: Purkinje numbers fall while Hcn1 basket cell numbers do not | Results 2.7 | \"while PC numbers were significantly reduced in the cerebellar cortex from WwoxP47T/P47T mice, the number of basket cells in the same regions remained unchanged\"",
+  "verbatim_locator | proposition: the cerebellar bulk RNA-seq contrast has 1059 differentially expressed genes | Results 2.9 | \"EdgeR analysis identified a total of 1059 DEGs (376 genes upregulated, 683 genes downregulated)\"",
+  "verbatim_locator | proposition: cerebellar inflammatory cytokine transcripts are raised at least two-fold by qRT-PCR | Results 2.9 | \"observed a significant \u2265 2-fold upregulation of mRNA of both cytokines\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv198_p47t_cerebellar_composition_sci_20261123/RESULT_ADV198_P47T_CEREBELLAR_COMPOSITION_SCI_20261123.md"
+ ],
+ "prior_receipt": "FTR-20260927-36828035-04",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "1c6335ad129c5e43135493d9eb3caaebdaf215b8d1aec9b7d00f184c3558a5c6",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket copy of the open-access article (CC BY 4.0), local scratch only, not copied into git",
+ "study_id": {
+  "doi": "10.1016/j.pneurobio.2023.102425",
+  "pmid": "36828035"
+ },
+ "workflow": "SCI window AB ADV-198 (P47T cerebellar composition bound, RP-036): targeted re-read of Results 2.6 to 2.9 and Fig 5 after a committed pre-registration."
+}
