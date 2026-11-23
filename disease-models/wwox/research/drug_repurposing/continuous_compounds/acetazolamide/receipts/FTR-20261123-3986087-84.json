@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-3986087-84",
+  "event_at": "2026-11-23T22:26:03Z",
+  "analysis_at": "2026-11-23T22:26:03Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "3986087",
+    "doi": "10.1111/j.1365-2125.1985.tb02655.x"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1365-2125.1985.tb02655.x",
+  "source_fingerprint": null,
+  "workflow": "Reconstruct patient follow-up, WWOX medication context and the limits of free exposure transfer.",
+  "evidence_basis": [
+    "Table 2, column “Plasma free fraction”, younger participants: 0.032, 0.035, 0.035, 0.057.",
+    "Table 2 reports group mean 0.040 for younger adults for the comparison with the pediatric total concentration."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/acetazolamide/exposure.md"
+  ]
+}

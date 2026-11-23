@@ -11,6 +11,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 5 | Clemastine, oligodendrocyte differentiation and myelin | Would a shift in lineage markers persist as more functional sheaths and improved conduction when firing is matched? Treat existing results and cholinergic effects as competing explanations. |
 | 6 | Thiamine, mitochondrial cofactor delivery | Can improved cofactor occupancy restore functional oxidation in WWOX neurons? |
 | 7 | Acetazolamide, carbonic anhydrase and GABA signaling | Does intracellular bicarbonate regeneration sustain late depolarization in the WWOX network at its developmental stage? |
+| 8 | Levocarnitine, mitochondrial long-chain substrate use | Does restoring free carnitine recover substrate-selective flux in untreated WWOX cells, or does improvement track secondary deficiency under valproate or nutritional limitation? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -21,7 +22,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: acetazolamide.** Compare bicarbonate-dependent late GABA excitation with chloride loading and general acidification in WWOX. [Predictions and first check](acetazolamide/README.md)
+**Active compound: levocarnitine.** Separate intrinsic WWOX-dependent substrate limitation from secondary depletion associated with medication or nutrition. [Predictions and initial comparison](levocarnitine/README.md)
+
+**Acetazolamide parked for trial prioritization.** Prolonged discharges remain a mechanistic lead. Pediatric genetic epilepsy series have limited typical treatment duration, and the WWOX phenotype and free central exposure have yet to be bridged. [Clinical denominators and exposure](acetazolamide/exposure.md) · [Genetic and network controls](acetazolamide/burden.md)
 
 **Thiamine parked for trial prioritization.** Juvenile hippocampal nuclei support lower mitochondrial carrier RNA within broad cell classes, but neither the mitochondrial cofactor nor a selective WWOX flux rescue has been measured. Positive-control disorders and rat brain demonstrate why whole-cell vitamin or PDHA phosphorylation can be misleading. [Compartment and flux analysis](thiamine/compartments.md)
 

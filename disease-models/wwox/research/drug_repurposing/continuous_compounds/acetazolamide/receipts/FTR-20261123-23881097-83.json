@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-23881097-83",
+  "event_at": "2026-11-23T22:17:13Z",
+  "analysis_at": "2026-11-23T22:17:13Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "23881097",
+    "doi": "10.1038/emboj.2013.160"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3746197/ ; files/deepening_downloads/acetazolamide_loop_20261123/PMC3746197-az.xml",
+  "source_fingerprint": "520d6f7b24d595a17d9e9e6a6edaf1843a8c186f08beb59873609c07c666ceda",
+  "workflow": "Distinguish event rate, persistence, developmental carbonic anhydrase activity and generalized acidification.",
+  "evidence_basis": [
+    "Results, Fig. 4: “nine out of nine WT mice”; seven KO animals without cortical electrographic seizures and comparable alkalosis. Motor signs separately reported.",
+    "Results Figs. 2 and 3 describe age-dependent intracellular activity and field spikes as a function of duration of GABA application."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/acetazolamide/burden.md"
+  ]
+}

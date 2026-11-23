@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-7182447-84",
+  "event_at": "2026-11-23T22:26:03Z",
+  "analysis_at": "2026-11-23T22:26:03Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "7182447",
+    "doi": "10.1248/yakushi1947.102.11_1067"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://www.jstage.jst.go.jp/article/yakushi1947/102/11/102_11_1067/_pdf",
+  "source_fingerprint": null,
+  "workflow": "Reconstruct patient follow-up, WWOX medication context and the limits of free exposure transfer.",
+  "evidence_basis": [
+    "Table III, “After withdrawal”: phenobarbital CSF/serum 0.522 and 0.524, after two higher on-treatment ratios.",
+    "Table III has paired serum and CSF measurements for two co-medications in one 51-year-old adult."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/acetazolamide/exposure.md"
+  ]
+}

@@ -1,0 +1,3 @@
+region	control_ictal_s	drug_ictal_s	control_interval_s	drug_interval_s	control_window_pct	drug_window_pct	relative_change_pct	reciprocal_interval_ratio
+piriform	465.2	201.1	169.01	53.9	25.844444444444445	11.172222222222222	-56.77128116938951	3.135621521335807
+entorhinal	428.3	143.4	184.16	82.5	23.794444444444444	7.966666666666667	-66.51879523698344	2.232242424242424
