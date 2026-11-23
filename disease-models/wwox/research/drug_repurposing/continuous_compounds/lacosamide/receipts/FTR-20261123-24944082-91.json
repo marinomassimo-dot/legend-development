@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-24944082-91",
+  "event_at": "2026-11-23T22:55:21Z",
+  "analysis_at": "2026-11-23T22:55:21Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "24944082",
+    "doi": "10.1007/s12035-014-8775-9"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://scholarworks.indianapolis.iu.edu/bitstream/1805/10508/1/nihms606762.pdf",
+  "source_fingerprint": null,
+  "workflow": "Examine the R-enantiomer concentration comparison and sign of a proposed developmental mechanism. Figure legend and associated results text examined. No graphical remeasurement.",
+  "evidence_basis": [
+    "Fig. 2B–F, “Binding of lacosamide” concentration series for wild-type and mutant protein, n=3 trials for the wild-type curve.",
+    "Manuscript pp. 6–7, text around Fig. 2 and opening of therapeutic potential section on post-injury sprouting."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/lacosamide/evidence.md"
+  ]
+}

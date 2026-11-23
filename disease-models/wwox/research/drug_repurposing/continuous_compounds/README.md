@@ -13,6 +13,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 7 | Acetazolamide, carbonic anhydrase and GABA signaling | Does intracellular bicarbonate regeneration sustain late depolarization in the WWOX network at its developmental stage? |
 | 8 | Levocarnitine, mitochondrial long-chain substrate use | Does restoring free carnitine recover substrate-selective flux in untreated WWOX cells, or does improvement track secondary deficiency under valproate or nutritional limitation? |
 | 9 | Triheptanoin, anaplerosis and cerebral energy recovery | Does odd-chain carbon replenish a limiting cycle pool and restore WWOX function beyond an energy-matched even-chain comparator? |
+| 10 | Lacosamide, sustained firing and axonal propagation | Is suppression of prolonged discharges selective at attainable exposure, and is there independent evidence for a developmental action through CRMP2? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -23,7 +24,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: triheptanoin.** Test an odd-chain replenishment mechanism against equivalent calories and ketones. [Predictions and initial comparisons](triheptanoin/README.md)
+**Active compound: lacosamide.** Three direct WWOX exposures lack attributable outcomes. Overlapping positive and negative binding assays and discordant DPYSL2 RNA weaken the developmental hypothesis. Next compare the timing of native WWOX discharges with drug action while preserving inhibitory recruitment and evoked conduction. [Evidence and prediction](lacosamide/evidence.md)
+
+**Triheptanoin parked for trial prioritization.** The tissue, even-chain comparator and ketogenic background determine what a biochemical change means. The controlled Glut1DS study did not establish seizure efficacy. [Decision and acute ketogenic comparison](triheptanoin/decision.md) · [Cell classes and reference diet](triheptanoin/comparators.md)
 
 **Levocarnitine parked for trial prioritization.** A randomized pediatric valproate study supports a short-term difference in ammonia. CNS substrate-specific functional rescue in WWOX remains unmeasured. Three reported WWOX profiles and a CNS-specific control constrain how peripheral measures can be interpreted. [Disposition](levocarnitine/decision.md) · [Blood, CSF and neural evidence](levocarnitine/compartments.md)
 

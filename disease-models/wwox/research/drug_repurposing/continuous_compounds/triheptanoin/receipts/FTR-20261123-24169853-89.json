@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-24169853-89",
+  "event_at": "2026-11-23T22:47:45Z",
+  "analysis_at": "2026-11-23T22:47:45Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "24169853",
+    "doi": "10.1038/jcbfm.2013.184"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://journals.sagepub.com/doi/10.1038/jcbfm.2013.184",
+  "source_fingerprint": null,
+  "workflow": "Reconcile oil composition, tissue and independent replication for interpretation of C7 comparisons.",
+  "evidence_basis": [
+    "Table 4, “μmol/g tissue”: standard diet, C8 and C7 groups include 11, 10 and 9 mice.",
+    "Table 4 succinate and malate compared against both the even-chain and standard diet means; discussion notes that metabolite levels cannot determine flux."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/triheptanoin/comparators.md"
+  ]
+}

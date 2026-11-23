@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-36779245-89",
+  "event_at": "2026-11-23T22:46:45Z",
+  "analysis_at": "2026-11-23T22:46:45Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "36779245",
+    "doi": "10.1111/epi.17542"
+  },
+  "prior_receipt": "FTR-20261123-36779245-84",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
+  "source_fingerprint": "780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34",
+  "workflow": "Identify whether a ketogenic dietary background is present in the WWOX cohort when interpreting C7 comparisons.",
+  "evidence_basis": [
+    "Table 2, “ASMs trialed (current)”: KD appears in three of thirteen histories.",
+    "Clinical results report that one of those three continued the diet; individual efficacy of triheptanoin was not studied."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/triheptanoin/comparators.md"
+  ]
+}

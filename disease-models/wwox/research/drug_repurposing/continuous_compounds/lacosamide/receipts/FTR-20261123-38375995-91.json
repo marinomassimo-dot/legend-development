@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-38375995-91",
+  "event_at": "2026-11-23T22:55:21Z",
+  "analysis_at": "2026-11-23T22:55:21Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "38375995",
+    "doi": "10.1002/acn3.52004"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/lacosamide_loop_20261123/PMC10963285.xml",
+  "source_fingerprint": "47d7d3a49ed082a50c63843c5675a79bbaf018a9461c822567078cdda18d5c08",
+  "workflow": "Compare age, efficacy estimand and baseline reader agreement in the pediatric comparator.",
+  "evidence_basis": [
+    "Table 3, “Percentage reduction vs placebo (95% CI)”, and Table 4 treatment-period somnolence.",
+    "Methods, paragraph on regional primary variables, seven end-of-baseline recordings reviewed. Discussion compares the maintenance windows."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/lacosamide/evidence.md"
+  ]
+}

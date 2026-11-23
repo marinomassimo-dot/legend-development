@@ -1,0 +1,11 @@
+study_row	authors_group	C4_day1_am_mM	C4_day3_am_mM	decrease_percent	EEG_on_C7
+1	below_baseline_criterion	0.4	0.1	75.0	unchanged
+2	poor	4.7	1.6	66.0	none
+3	compatible	3.4	1.7	50.0	reduced
+4	compatible	3.2	2.2	31.2	ceased
+5	poor	4.7	1.8	61.7	unchanged
+6	poor	3.3	0.9	72.7	ceased
+7	compatible	6.0	3.7	38.3	unchanged
+8	poor	7.1	2.4	66.2	unchanged
+9	below_baseline_criterion	0.9	0.5	44.4	none
+10	compatible	4.5	3.1	31.1	none

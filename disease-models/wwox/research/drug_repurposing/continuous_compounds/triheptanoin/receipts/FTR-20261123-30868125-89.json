@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-30868125-89",
+  "event_at": "2026-11-23T22:45:35Z",
+  "analysis_at": "2026-11-23T22:45:35Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "30868125",
+    "doi": "10.1002/epi4.12308"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/triheptanoin_loop_20261123/PMC6398112.xml",
+  "source_fingerprint": "a676662956c03ff7f6c104ab30cd994c79433703d3f9b40f770f514e8a82c831",
+  "workflow": "Reconcile oil composition, tissue and independent replication for interpretation of C7 comparisons.",
+  "evidence_basis": [
+    "Methods: MCT arm contained 55% octanoate and 45% decanoate.",
+    "Table 1, “Focal unaware”: 16/17 vs 10/16. Table 2 counts five vs one with >50% seizure reduction."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/triheptanoin/comparators.md"
+  ]
+}
