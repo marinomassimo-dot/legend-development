@@ -485,3 +485,5 @@
 {"evidence": "SendMessage to HE - CURRENT fb709c2c, host clock 17:38Z", "id": "ADV-201", "receipt": ["cd709eae-63e7-4f73-9132-e48888a3a34f"], "state": "SENT", "to": ["HE - CURRENT fb709c2c"], "utc": "2026-11-23T17:37:09Z"}
 {"assessment": "HOST", "id": "ADV-202", "key": "correct-wrong-pmid-label-in-public-ketamine-brief", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-23T17:46:11Z"}
 {"evidence": "SendMessage to HE - CURRENT fb709c2c, host clock 17:47Z", "id": "ADV-202", "receipt": ["d98a0097-59c3-4299-abad-d552e86d8584"], "state": "SENT", "to": ["HE - CURRENT fb709c2c"], "utc": "2026-11-23T17:46:36Z"}
+{"assessment": "HOST", "id": "ADV-203", "key": "xdp-prakash-2026-myelin-measurement-version-check-science", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-23T20:38:25Z"}
+{"evidence": "SendMessage to SCI (idle 8 min) with the assignment pointer and the Codex review 18 source; host clock 20:38Z", "id": "ADV-203", "receipt": ["ce8f480a-532c-4295-b386-57f9a56e0c00"], "state": "SENT", "to": ["SCI - CURRENT ff316249"], "utc": "2026-11-23T20:38:45Z"}
