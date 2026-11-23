@@ -777,6 +777,13 @@
      "accepted_at": "2026-11-22T16:10:05Z",
      "evidence": "ADV-177 result NARROW: disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv177_murlanova_astrocyte_lactate_sci_20261122/RESULT_ADV177_MURLANOVA_ASTROCYTE_LACTATE_SCI_20261122.md; receipt FTR-20261122-42308317-01",
      "updated_at": "2026-11-22T16:17:42Z"
+    },
+    {
+     "step": "ADV-191: one bounded retrospective source comparison of Yang 2026 (PMID 42011973, PMC13097342) on whether baseline organoid hyperexcitability should be capped as a reason to choose an antiseizure probe (RP-043, INV-10); KEEP/NARROW/CLOSE; no WWOX drug recommendation",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-191 (assignments/ADV-191.md, ADV message 2026-11-23)",
+     "accepted_at": "2026-11-23T06:11:19Z"
     }
    ]
   }
@@ -1374,6 +1381,13 @@
    "at": "2026-11-22T16:10:05Z",
    "source": "ADV-177 (cross-session message from ADV a5e6f2ad, assignment file ADV-177.md, Codex review 06)",
    "step_sha256": "152b83c67a90",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-23T06:11:19Z",
+   "source": "ADV-191 (assignments/ADV-191.md, ADV message 2026-11-23)",
+   "step_sha256": "cff5d1e40ee3",
    "reopened_block": false,
    "authorised_by": null
   }
