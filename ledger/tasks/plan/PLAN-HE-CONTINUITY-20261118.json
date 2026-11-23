@@ -918,6 +918,15 @@
      "owner": "plan",
      "source": "ADV message 2026-11-23 (SCI successor launch, checkpoint AC digest 28b0c7d3)",
      "accepted_at": "2026-11-23T12:41:34Z"
+    },
+    {
+     "step": "ADV-201 ketamine report pilot, rendering side (renderer and one pilot PDF in report_pilot_ketamine_20261123/render/)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-201",
+     "accepted_at": "2026-11-23T17:36:59Z",
+     "evidence": "brainstorm_20261116/report_pilot_ketamine_20261123/render/: build_pilot.py, pilot_stand_in.json, out/ketamine_pilot_20261123.pdf (6 pages A4, fonts embedded, 108 live links, deterministic bytes), page images out/pages; no framework/view/gate change",
+     "updated_at": "2026-11-23T17:45:49Z"
     }
    ]
   }
@@ -1627,6 +1636,13 @@
    "at": "2026-11-23T12:41:34Z",
    "source": "ADV message 2026-11-23 (SCI successor launch, checkpoint AC digest 28b0c7d3)",
    "step_sha256": "4300b3511aee",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-23T17:36:59Z",
+   "source": "ADV-201",
+   "step_sha256": "2119106d0d3b",
    "reopened_block": false,
    "authorised_by": null
   }
