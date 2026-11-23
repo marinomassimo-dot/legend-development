@@ -424,3 +424,5 @@ and no sensor is proposed.**
 Not medical advice.*
 
 [Update 2026-11-17, CC-20261117-ORCHESTRATOR-P47T-ABUNDANCE-WORDING-01 (IT; wording from the closure note IT56-Q05 of SCI, held files only): where this file says P47T protein is normal or at wild-type amount (lines 333,390), read "present, similar by the authors' wording, not quantified; folded state and stability untested". P47T as discriminator needs an abundance control; "normal abundance" is not shown, so the abundance control is not optional. The original sentences above are not edited. Nothing else in this file changes.]
+
+[Update 2026-11-23, ADV-205 (SCI): PAPER 542 (see the ADV-205 result folder, brainstorm_20261116/adv205_paper542_golgi_wwox_scope_sci_20261123) is a disposition-(b) instance of this candidate: the loss half only (one siRNA, no rescue); revival condition as in the ADV-205 result. No new batch, no ranking, no compound, no claim that C1 is met. The original sentences above are not edited. Nothing else in this file changes.]
