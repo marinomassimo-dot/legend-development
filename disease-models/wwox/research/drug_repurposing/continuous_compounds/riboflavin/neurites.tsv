@@ -1,0 +1,10 @@
+line	arm	bar_center_x	bar_top_y	approx_um	baseline_gap_closed_percent
+control	untreated	89	843.0	144.6	NA
+P1	untreated	120	915.0	62.3	0.0
+P1	RF	148	892.0	88.6	31.9
+P1	NACA	177	888.0	93.1	37.5
+P1	combined	207	873.0	110.3	58.3
+P2	untreated	236	938.0	36.0	0.0
+P2	RF	265	922.0	54.3	16.8
+P2	NACA	294	922.0	54.3	16.8
+P2	combined	323	908.0	70.3	31.6

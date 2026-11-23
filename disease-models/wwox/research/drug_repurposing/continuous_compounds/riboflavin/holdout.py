@@ -14,7 +14,7 @@ from thiamine.cell_types import run as pooled_nuclei, tsv
 
 GENES = ['Slc52a2', 'Rfk', 'Flad1', 'Slc25a32']
 
-def adult(files):
+def adult(files, genes=GENES, output=HERE / 'adult.tsv'):
     source = files / 'deepening_downloads/gse215425/GSE215425_processed_data.csv.gz'
     assert hashlib.sha256(source.read_bytes()).hexdigest() == 'd654f6bdd2a4ac5b3e24741f16962503a711575c72aa92a2c729a7a0cf04c18c'
     with gzip.open(source, 'rt') as stream:
@@ -28,15 +28,15 @@ def adult(files):
         for _, gene, *row in reader:
             values = np.array([int(row[i]) for i in cols])
             totals += values
-            if gene in GENES:
+            if gene in genes:
                 counts[gene] = counts.get(gene, 0) + values
-    assert set(counts) == set(GENES)
+    assert set(counts) == set(genes)
     groups = [(label.split('_')[1].split('/')[0], label.split('_')[2][0]) for label in names]
     rows = []
-    for gene in GENES:
+    for gene in genes:
         logged = np.log2(1 + 1e6 * counts[gene] / totals)
         rows.append([gene, *contrast(logged, groups)])
-    tsv(HERE / 'adult.tsv', 'gene sex_balanced_delta female_delta male_delta omit_min omit_max'.split(), rows)
+    tsv(output, 'gene sex_balanced_delta female_delta male_delta omit_min omit_max'.split(), rows)
 
 if __name__ == '__main__':
     files = Path(sys.argv[1])

@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-37173784-97",
+  "event_at": "2026-11-23T23:22:25Z",
+  "analysis_at": "2026-11-23T23:22:25Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "37173784",
+    "doi": "10.1186/s13052-023-01452-5"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/citicoline_loop_20261123/PMC10182621.html",
+  "source_fingerprint": "1536644fa81b4480d31305fd935b521d8bb71f7c48c364672ef0cf8e543b2baa",
+  "workflow": "Audit primary outcome definition, attrition and two binary event comparisons against the named registry.",
+  "evidence_basis": [
+    "Methods: “primary outcome was to evaluate the improvement of GMDS”; Table 3 has repeated developmental outcomes.",
+    "Table 4: during-treatment counts eight versus fifteen, after-discharge two versus eleven, initially forty per arm."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/citicoline/human.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/citicoline/neonatal.tsv"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-33317017-95",
+  "event_at": "2026-11-23T23:13:59Z",
+  "analysis_at": "2026-11-23T23:13:59Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "33317017",
+    "doi": "10.3390/antiox9121252"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/riboflavin_loop_20261123/PMC7763948.html",
+  "source_fingerprint": "f05fb29e9b88f0c8b0ce51f8717abb8f83b6c0480b7773391863fd9467d53df1",
+  "workflow": "Check whether the companion mitochondrial endpoint isolates riboflavin-alone action.",
+  "evidence_basis": [
+    "Treatment methods identify 1 µM riboflavin combined with N-acetylcysteine amide overnight.",
+    "Fig. 2e–i legend attributes mitochondrial morphology comparison to combined treatment. No image remeasurement."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/riboflavin/neurons.md"
+  ]
+}

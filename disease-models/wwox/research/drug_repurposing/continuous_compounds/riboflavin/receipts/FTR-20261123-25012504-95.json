@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-25012504-95",
+  "event_at": "2026-11-23T23:13:59Z",
+  "analysis_at": "2026-11-23T23:13:59Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "25012504",
+    "doi": "10.1038/cdd.2014.95"
+  },
+  "prior_receipt": "FTR-20260814-25012504-01",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMC4211377_PMID25012504_pmc_html_fulltext_2026-10-30.txt",
+  "source_fingerprint": "749e71633acc78002c10dea675bb4b72472ff6ff1dcdfae6d2287e4211dc5ea4",
+  "workflow": "Check which direct WWOX metabolite values the reported fibroblast endpoint contains.",
+  "evidence_basis": [
+    "Fig. 2F, “Metabolon study”: four named analytes, five WT and five KO MEF samples; no WWOX flavin quantified in that panel.",
+    "Results paragraph on use of glucose in Wwox-deficient MEFs, quantitation concerns steady pools and oxygen consumption."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/riboflavin/neurons.md"
+  ]
+}

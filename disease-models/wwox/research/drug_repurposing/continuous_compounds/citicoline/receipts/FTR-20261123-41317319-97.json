@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-41317319-97",
+  "event_at": "2026-11-23T23:22:25Z",
+  "analysis_at": "2026-11-23T23:22:25Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "41317319",
+    "doi": "10.1016/j.celrep.2025.116617"
+  },
+  "prior_receipt": "FTR-20261123-41317319-96",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://www.zfin.org/ZDB-FIG-260129-71",
+  "source_fingerprint": null,
+  "workflow": "Inspect the original visible mouse figure, genotype-by-treatment arms, route, timing and structural denominator.",
+  "evidence_basis": [
+    "Fig. 7A, P5 to P21, i.p.; B measures myelin staining, C counts mature oligodendrocytes.",
+    "Fig. 7D, “Myelinated axons(%)”, optic nerve and corpus callosum, three mice."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/citicoline/myelin.md"
+  ]
+}

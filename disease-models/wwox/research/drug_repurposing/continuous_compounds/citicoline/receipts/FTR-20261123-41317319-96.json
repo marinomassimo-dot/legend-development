@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-41317319-96",
+  "event_at": "2026-11-23T23:17:04Z",
+  "analysis_at": "2026-11-23T23:17:04Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "41317319",
+    "doi": "10.1016/j.celrep.2025.116617"
+  },
+  "prior_receipt": "FTR-20261113-41317319-68",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://www.zfin.org/ZDB-FIG-260129-70",
+  "source_fingerprint": null,
+  "workflow": "Inspect published Fig. 6 legend on ZFIN to determine species, denominator and unit of replication. Legend only, no graphical or whole-paper coverage.",
+  "evidence_basis": [
+    "Figure 6D–E compares the four genotype and treatment groups and counts fluorescence-positive area and intensity.",
+    "Figure 6G–H, “myelinated axons per area”, five fish."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/citicoline/README.md"
+  ]
+}

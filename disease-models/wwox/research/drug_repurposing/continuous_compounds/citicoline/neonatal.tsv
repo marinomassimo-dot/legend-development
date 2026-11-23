@@ -1,0 +1,3 @@
+outcome	citicoline_events	citicoline_n	control_events	control_n	published_p	risk_difference_pp	pearson_two_sided_p	fisher_two_sided_p
+during_treatment	8	40	15	40	0.04	-17.5	0.083776	0.13743
+after_discharge	2	40	11	40	0.006	-22.5	0.00638	0.012939

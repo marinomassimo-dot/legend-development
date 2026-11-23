@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-37100056-97",
+  "event_at": "2026-11-23T23:22:25Z",
+  "analysis_at": "2026-11-23T23:22:25Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "37100056",
+    "doi": "10.1016/j.cmet.2023.04.003"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/citicoline_loop_20261123/PMC10367582.html",
+  "source_fingerprint": "71df50d29df83584c991d995451f0cd1db5dc783594722805b6393504dcf349a",
+  "workflow": "Distinguish substrates, cell model and complementation in a primary choline-uptake assay.",
+  "evidence_basis": [
+    "Fig. 3d legend, “21.5μM” labelled choline during thirty minutes in HEK293T cells.",
+    "Fig. 4g and Fig. S4h associated results distinguish phosphocholine restoration from partial restoration of uptake."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/citicoline/myelin.md"
+  ]
+}
