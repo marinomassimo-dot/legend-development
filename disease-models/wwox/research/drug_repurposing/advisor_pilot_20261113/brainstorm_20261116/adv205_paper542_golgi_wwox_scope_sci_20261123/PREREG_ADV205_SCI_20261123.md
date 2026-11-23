@@ -1,4 +1,4 @@
-# PREREG ADV-204 (SCI window AB): PAPER 542 scope under its actual controls
+# PREREG ADV-205 (SCI window AB): PAPER 542 scope under its actual controls
 
 Frozen before the full text, figures or supplement of PMC13405132 are opened by me. What I knew at freezing time: the assignment text only (abstract sentence quoted there; ADV-178 Part B note: global lectin readout after WWOX siRNA in RPE1, microscopy, about 30 cells; Europe PMC fullTextXML answers 200). I downloaded the XML to scratch but have not read it.
 
@@ -27,4 +27,7 @@ A bounded stop or a current duplicate is a valid result.
 Abstract; Methods (cell lines, siRNA identity and number, control, WWOX verification, lectin staining and quantification, unit, statistics); Results that mention WWOX; Fig 5C and Fig S4E as images if the bucket has them; the Discussion on limitations; the reference to any rescue or replication. Record the coverage actually reached in a new receipt (prior receipt FTR-20260921-42523332-01).
 
 ## Output
-`RESULT_ADV204_PAPER542_GOLGI_WWOX_SCOPE_SCI_20261123.md` in this folder: disposition first, the control checklist with locators, one line on what surprised me, limits; then receipt, mandate step, surfaces regenerated before the push, delivery to ADV.
+`RESULT_ADV205_PAPER542_GOLGI_WWOX_SCOPE_SCI_20261123.md` in this folder: disposition first, the control checklist with locators, one line on what surprised me, limits; then receipt, mandate step, surfaces regenerated before the push, delivery to ADV.
+
+## Id note
+At 2026-11-23T23:40Z ADV corrected the assignment id from ADV-204 (superseded record for the Orchestrator) to ADV-205 (recipient Science). Only the id string in this file and the folder name changed; the question, tests and rules are as frozen at 23:37:56Z, before any text of the paper was read.
