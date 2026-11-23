@@ -2,7 +2,7 @@ marker	Control1	TTX	TTX_plus_AMPA	Control2	NBQX	TTX-C1	TTX_AMPA-TTX	NBQX-C2	max_
 PDGFRa	67.01	35.21	27.01	44.44	32.82	-31.79	-8.21	-11.62	0.34
 BCAS1	45.71	53.30	78.38	28.88	29.54	7.59	25.08	0.66	0.33
 PLP	5.17	21.54	5.36	14.01	38.28	16.36	-16.18	24.26	0.00
-S5_marker	Control	Gi	Gi_plus_AMPA	Gi-control	addback-Gi	max_read_spread_pp
-PDGFRa	44.65	42.58	21.09	-2.07	-21.50	0.00
-BCAS1	28.91	19.89	67.90	-9.02	48.01	0.00
-PLP	14.06	37.68	21.88	23.62	-15.80	0.00
+S5_marker	Control	Gi	Gi_plus_AMPA	Gi-control	addback-Gi	max_read_spread_pp			
+PDGFRa	44.65	42.58	21.09	-2.07	-21.50	0.00			
+BCAS1	28.91	19.89	67.90	-9.02	48.01	0.00			
+PLP	14.06	37.68	21.88	23.62	-15.80	0.00			

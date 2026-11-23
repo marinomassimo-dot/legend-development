@@ -53,6 +53,6 @@ period_s	cluster_span_s	pulses	drug_uM	cytosolic_Ca_uM	cluster_first_pct	even_fi
 26.2	0.66	33	0.36	10.0	7.5291	7.47777	0.05132	8.55094	7.9947	0.55624
 26.2	0.66	33	1.0	10.0	18.50097	18.34294	0.15803	20.63021	19.44404	1.18617
 26.2	0.66	33	10.0	10.0	69.79809	69.24993	0.54816	72.30742	70.70718	1.60024
-# steady 1mM glutamate, Ca=0.0 uM: model IC50=2.5341 uM
-# steady 1mM glutamate, Ca=0.1 uM: model IC50=1.7357 uM
-# steady 1mM glutamate, Ca=10.0 uM: model IC50=1.4966 uM
+# steady 1mM glutamate, Ca=0.0 uM: model IC50=2.5341 uM										
+# steady 1mM glutamate, Ca=0.1 uM: model IC50=1.7357 uM										
+# steady 1mM glutamate, Ca=10.0 uM: model IC50=1.4966 uM										
