@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-34268881-94",
+  "event_at": "2026-11-23T23:07:46Z",
+  "analysis_at": "2026-11-23T23:07:46Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "34268881",
+    "doi": "10.15252/emmm.202013610"
+  },
+  "prior_receipt": "FTR-20261123-34268881-81",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID34268881_Steinberg2021_PMC_r2.xml",
+  "source_fingerprint": "de340289bc6704c9b9ec752f81afed64a02211a83d95d675a1d46f40be6304f6",
+  "workflow": "Reconcile sample age and control count with maturation-medium formulations and replacement interval.",
+  "evidence_basis": [
+    "Methods, cerebral organoid generation, “1:1 mixture” in the differentiation medium and changes from day 16.",
+    "Figure 4 legend: week 15 RNA sequencing, WT n=2, KO n=4. No graphical remeasurement."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/riboflavin/medium.md"
+  ]
+}

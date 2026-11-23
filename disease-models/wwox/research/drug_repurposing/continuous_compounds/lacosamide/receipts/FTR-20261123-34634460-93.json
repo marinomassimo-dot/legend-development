@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-34634460-93",
+  "event_at": "2026-11-23T23:06:05Z",
+  "analysis_at": "2026-11-23T23:06:05Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "34634460",
+    "doi": "10.1016/j.nbd.2021.105529"
+  },
+  "prior_receipt": "FTR-20261123-34634460-96",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID34634460_Wwox_osc2021_PMC_r2.xml",
+  "source_fingerprint": "b01bfa4f6a9cb9cc1d39c167b9953e679639913d56ef74b19b4d59cc05399e02",
+  "workflow": "Distinguish native starting-voltage differences in pyramidal neurons and interneurons against their actual control groups.",
+  "evidence_basis": [
+    "Table 1, “Resting membrane potential” and “AP amplitude”; the interneuron reference pools WT and HT.",
+    "Table 1, final counts row separates cells and animals: 5/4 and 6/5 for interneurons."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/lacosamide/timing.md"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-28119481-92",
+  "event_at": "2026-11-23T22:59:38Z",
+  "analysis_at": "2026-11-23T22:59:38Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "28119481",
+    "doi": "10.1124/mol.116.106401"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/lacosamide_loop_20261123/PMC5363714.html",
+  "source_fingerprint": "afa8e4a053c63f3a7a60ce447ba8f468020a4b73080a0096a9d9eb8bd30ed19d",
+  "workflow": "Reconstruct control and drug availability from group-mean conditioning fits and compare durations, voltages and exposure. Figure legends examined without remeasurement.",
+  "evidence_basis": [
+    "Methods: whole-cell human NaV1.7 in HEK293 cells at 21–23 °C. Figure 1B provides four steady-holding potentials.",
+    "Results accompanying Fig. 6A–D, “collected results from six cells”, amplitudes and time constants distinguish the group summary from the example cell."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/lacosamide/timing.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/lacosamide/timing.tsv"
+  ]
+}

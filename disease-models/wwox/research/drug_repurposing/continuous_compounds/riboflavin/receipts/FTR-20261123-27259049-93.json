@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-27259049-93",
+  "event_at": "2026-11-23T23:06:05Z",
+  "analysis_at": "2026-11-23T23:06:05Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "27259049",
+    "doi": "10.1016/j.ajhg.2016.04.006"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/riboflavin_loop_20261123/PMC4908180.xml",
+  "source_fingerprint": "3befcfbefad0aa57e481d3653c620cf2be0175866deb6306cc643004d4db7e8a",
+  "workflow": "Compare synthesis rate and whole-cell and mitochondrial cofactor pools for the same fibroblast line with its reported clinical response.",
+  "evidence_basis": [
+    "Table 2, “Rate of FAD Synthesis”, and Table 3, cell and mitochondrial samples for S4a.",
+    "Table 1, response column, and discussion paragraph reporting only mild improvement of hypotonia in S4a."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/riboflavin/flavins.md"
+  ]
+}

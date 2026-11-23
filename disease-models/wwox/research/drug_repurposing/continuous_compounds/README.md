@@ -14,6 +14,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 8 | Levocarnitine, mitochondrial long-chain substrate use | Does restoring free carnitine recover substrate-selective flux in untreated WWOX cells, or does improvement track secondary deficiency under valproate or nutritional limitation? |
 | 9 | Triheptanoin, anaplerosis and cerebral energy recovery | Does odd-chain carbon replenish a limiting cycle pool and restore WWOX function beyond an energy-matched even-chain comparator? |
 | 10 | Lacosamide, sustained firing and axonal propagation | Is suppression of prolonged discharges selective at attainable exposure, and is there independent evidence for a developmental action through CRMP2? |
+| 11 | Riboflavin, cellular uptake and flavin-dependent mitochondrial enzymes | Can new cofactor synthesis and functional recovery reveal a reversible bottleneck despite normal whole-cell FAD? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -24,7 +25,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: lacosamide.** Three direct WWOX exposures lack attributable outcomes. Overlapping positive and negative binding assays and discordant DPYSL2 RNA weaken the developmental hypothesis. Next compare the timing of native WWOX discharges with drug action while preserving inhibitory recruitment and evoked conduction. [Evidence and prediction](lacosamide/evidence.md)
+**Active compound: riboflavin.** Transport and cofactor-synthesis RNA declines in the discovery samples failed to transfer jointly to adult P47T. Test compartment-specific synthesis and response in vitamin-replete conditions. The original medium already supplied vitamin, and the pediatric positive-control measurements concern blood. Next test functional recovery in a transporter-deficient neural preparation against the actual WWOX readouts. [Medium](riboflavin/medium.md) · [Pediatric exposure](riboflavin/exposure.md) · [Hypothesis](riboflavin/README.md) · [WWOX and primary human comparator](riboflavin/flavins.md)
+
+**Lacosamide parked for WWOX trial prioritization.** Human tissue evidence concerns prolonged firing, with the waveform analysis restricted to persistent spikes under drug. Juvenile WWOX data support measuring distinct cell types at native and matched starting voltage. [Contrasts, exposure and reopening criteria](lacosamide/timing.md)
 
 **Triheptanoin parked for trial prioritization.** The tissue, even-chain comparator and ketogenic background determine what a biochemical change means. The controlled Glut1DS study did not establish seizure efficacy. [Decision and acute ketogenic comparison](triheptanoin/decision.md) · [Cell classes and reference diet](triheptanoin/comparators.md)
 

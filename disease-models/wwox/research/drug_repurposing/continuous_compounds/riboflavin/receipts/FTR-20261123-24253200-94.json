@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-24253200-94",
+  "event_at": "2026-11-23T23:08:30Z",
+  "analysis_at": "2026-11-23T23:08:30Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "24253200",
+    "doi": "10.1093/brain/awt315"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/riboflavin_loop_20261123/PMC3891447.xml",
+  "source_fingerprint": "5c72df0ce5d5940ca9a3aa0f31ad08c385e4e3b4a530aae9513143f79e75ba82",
+  "workflow": "Reconcile oral-therapy and paired peripheral-biomarker denominators for pediatric transfer.",
+  "evidence_basis": [
+    "Biochemical findings paragraph: “Ten of 17 patients tested” had abnormal baseline profiles; nine among those had repeat measurements.",
+    "Treatment results paragraph: 16 received therapy with 1–20 months of reported duration; longitudinal objective clinical descriptions focused on two."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/riboflavin/exposure.md"
+  ]
+}
