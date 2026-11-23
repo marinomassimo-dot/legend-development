@@ -467,3 +467,5 @@
 {"evidence": "SendMessage receipt msg_id 76f7cd78-85bc-41fe-be00-db95c287bea7", "id": "ADV-192", "state": "SENT", "to": ["IT Orchestrator - CURRENT bb99da60"], "utc": "2026-11-23T07:34:42Z"}
 {"assessment": "HOST", "id": "ADV-193", "key": "saha-2024-impa1-inositol-vs-gsk3-proximal-discriminators-wo21-inv09-science", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-23T08:09:18Z"}
 {"evidence": "SendMessage receipt msg_id 58aab074-4a10-4af5-b5db-58cd1532a0c1", "id": "ADV-193", "state": "SENT", "to": ["SCI - CURRENT 4e2317da"], "utc": "2026-11-23T08:09:40Z"}
+{"assessment": "HOST", "id": "ADV-194", "key": "mccrimmon-2025-scn8a-circuit-model-composition-vs-conductance-identifiability-rp045-science", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-23T10:08:32Z"}
+{"evidence": "SendMessage receipt msg_id 3a3b2817-d6e6-4e5d-b53f-8e7c06f6de24", "id": "ADV-194", "state": "SENT", "to": ["SCI - CURRENT ff316249"], "utc": "2026-11-23T10:08:55Z"}

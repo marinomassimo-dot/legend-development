@@ -1,0 +1,13 @@
+assembly	group	threshold_CPM	all_three_detected	libraries
+a1b2g2	WT	0.1	0	2
+a1b2g2	WT	1	0	2
+a1b2g2	WT	5	0	2
+a1b2g2	KO	0.1	0	4
+a1b2g2	KO	1	0	4
+a1b2g2	KO	5	0	4
+a4b3d	WT	0.1	0	2
+a4b3d	WT	1	0	2
+a4b3d	WT	5	0	2
+a4b3d	KO	0.1	1	4
+a4b3d	KO	1	0	4
+a4b3d	KO	5	0	4
