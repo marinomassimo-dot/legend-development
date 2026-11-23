@@ -1,13 +1,13 @@
-"""Stream the original ENA FASTQs, validate their checksums and retain only aggregate counts."""
+"""Validate each original ENA FASTQ and retain aggregate counts, one library at a time."""
 import argparse
 import csv
+from contextlib import nullcontext
 import hashlib
 from io import StringIO
 from pathlib import Path
 import re
 import subprocess
-from tempfile import TemporaryFile
-import urllib.request
+from tempfile import TemporaryDirectory
 
 
 def main(args):
@@ -29,24 +29,31 @@ def main(args):
                                      for z in loaded):
                 continue
         print("Counting",run,flush=True)
-        digest=hashlib.md5()
-        size=0
-        with TemporaryFile() as result:
-            with subprocess.Popen([str(args.counter),"count",str(args.probes),"-"],stdin=subprocess.PIPE,stdout=result) as process:
-                try:
-                    with urllib.request.urlopen("https://"+url,timeout=90) as raw:
-                        while block:=raw.read(1<<20):
-                            digest.update(block)
-                            size+=len(block)
-                            process.stdin.write(block)
-                finally:
-                    process.stdin.close()
-                if process.wait()!=0:
-                    raise RuntimeError(f"Counter failed for {run}")
-            result.seek(0)
-            rows=list(csv.DictReader(StringIO(result.read().decode()),delimiter="\t"))
-        if size!=int(r["fastq_bytes"]) or digest.hexdigest()!=r["fastq_md5"]:
-            raise ValueError(f"{run}: compressed file integrity")
+        # One temporary file permits resuming interruptions and separates network
+        # truncation from a decoder or record-format failure. Old verified runs are reused.
+        if args.resume_dir:
+            args.resume_dir.mkdir(parents=True,exist_ok=True)
+        workspace=nullcontext(args.resume_dir) if args.resume_dir else TemporaryDirectory(prefix="legend-gria2-junction-")
+        with workspace as work:
+            raw=Path(work)/(run+".fastq.gz")
+            for attempt in range(3):
+                get=subprocess.run(["curl","--fail","--silent","--show-error","--location",
+                                    "--connect-timeout","30","--speed-limit","1024","--speed-time","120",
+                                    "--max-time","1800","--continue-at","-","--output",str(raw),"https://"+url])
+                if get.returncode:
+                    print("Transfer retry",run,get.returncode,flush=True)
+                    continue
+                size=raw.stat().st_size
+                with raw.open("rb") as stream:
+                    digest=hashlib.file_digest(stream,"md5")
+                if size==int(r["fastq_bytes"]) and digest.hexdigest()==r["fastq_md5"]:
+                    break
+                print("Integrity retry",run,size,flush=True)
+                raw.unlink()
+            else:
+                raise RuntimeError(f"No verified FASTQ for {run}")
+            result=subprocess.check_output([str(args.counter),"count",str(args.probes),str(raw)],text=True)
+            rows=list(csv.DictReader(StringIO(result),delimiter="\t"))
         if {(x["rule"],x["Q"]) for x in rows}!={(m,q) for m in ("centered","any") for q in ("20","30")}:
             raise ValueError(f"{run}: missing output strata")
         if not all(x["reads"]==r["read_count"] for x in rows):
@@ -66,4 +73,5 @@ def main(args):
 if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)
     for key in ("manifest","counter","probes","out"):p.add_argument(key,type=Path)
+    p.add_argument("--resume-dir",type=Path,help="Reuse partial files from an interrupted run in this directory.")
     main(p.parse_args())
