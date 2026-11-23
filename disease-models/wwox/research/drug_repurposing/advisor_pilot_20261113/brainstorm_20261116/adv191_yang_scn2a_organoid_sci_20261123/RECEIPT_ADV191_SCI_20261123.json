@@ -12,7 +12,7 @@
   "supplementary": "read",
   "tables": "read"
  },
- "event_at": "2026-11-23T06:18:31Z",
+ "event_at": "2026-11-23T06:23:42Z",
  "event_id": "FTR-20261123-42011973-01",
  "evidence_basis": [
   "Yang et al. 2026, Clin Transl Med (PMID 42011973, PMC13097342; a five-page Letter, no abstract, no section headings): the whole text read from the PMC open-data bucket copy, .txt and .xml compared (11 sentence differences, all spacing around italic tags; n values identical), after a committed pre-registration that stated what had been seen. Fig 1, Fig 2 (at 300 ppi extracted from the PDF, panels E to G, I and K cropped and viewed), Fig 3, supplement docx text, Supplementary Figures S1 and S2 (converted from tiff) and Supplementary Table 1 viewed. Per-organoid data are by request and were not requested; the cited earlier same-group paper was not read. Source: PMC open-data bucket, CC BY 4.0; SHA-256 of the xml 5bd8f01137f7f023d1010f4f32a58f3708aa52c32b9c095945acaa5d2f43352b; txt d5dee2b55983; pdf 681a5cd543be; supplement docx 8cbd5452be10 (12 hex).",
@@ -25,7 +25,6 @@
   "verbatim_locator | proposition: the synaptic explanation is a citation, not a test in the organoids | Results (mechanism) | \"CBZ has been reported to promote the excitatory synaptic current.\"",
   "verbatim_locator | proposition: Fig 3 compares GoF with LoF only, unpaired t test | Fig 3 legend | \"Differences between SCN2A‐GoF and SCN2A‐LoF were evaluated with unpaired two‐tailed t‐test (C–E).\"",
   "verbatim_locator | proposition: the authors state the LoF allele models haploinsufficiency only | Discussion | \"Our 17‐bp deletion strategy specifically represents SCN2A haploinsufficiency\"",
-  "verbatim_locator | proposition: clinical observation: oxcarbazepine exacerbated seizures and levetiracetam was effective in the N916S proband | Results (clinical) | \"Treatment of the proband with oxcarbazepine (OXC) exacerbated seizures, whereas levetiracetam (LEV) demonstrated good efficacy.\"",
   "verbatim_locator | proposition: supplementary methods: baseline is a 5-min recording in vehicle, then drug, 10-min equilibration, another 5-min recording (no vehicle-only second recording) | Supplement (separate docx artifact), MEA recordings and drug application | \"organoids were first recorded for 5 min in the culture medium containing vehicle (DMSO) to obtain the baseline measurement\"",
   "verbatim_locator | proposition: supplementary statistics: unpaired tests named for two groups | Supplement (separate docx artifact), Statistical analysis | \"The Mann-Whitney U test, unpaired two-tailed t-test, or Chi-Square test was used to assess the statistical significance of differences in two groups.\"",
   "verbatim_locator | proposition: Fig S2 is a plasmid Sanger validation and one HEK293T current trace | Supplement (separate docx artifact), Supplementary Figure 2 | \"(C) Representative traces from HEK293T cells transiently expressing the 17-bp deletion mutant.\""
