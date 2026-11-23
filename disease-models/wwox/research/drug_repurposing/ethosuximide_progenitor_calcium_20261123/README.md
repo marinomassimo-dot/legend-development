@@ -1,0 +1,29 @@
+# Ethosuximide, CaV3.1 and the direction of cortical progenitor differentiation
+
+context_policy: QUESTION_DRIVEN. SCI_CODEX, 2026-11-23. Targeted results, figure legends and public expression tables. This is a separate analysis from the PTZ and WNT dossiers.
+
+## Decision
+
+An acute anticonvulsant response to ethosuximide in Wwox-null mice gives little information about neuronal production. Even in developing neural tissue, the relationship between T-type channel blockade and neuron production can have the opposite sign from the proposed pro-neurogenic ethosuximide effect. The human expression analysis below reduces the priority of a population-wide cortical radial-glial CaV3.1 mechanism. It retains a functional test in the subset that carries a detectable current.
+
+## Two competing causal routes
+
+At 100 µM, ethosuximide increased inhibitory GSK3β phosphorylation and promoted neuronal differentiation in cultured rat hippocampal neural stem cells. In embryonic rodent cortical progenitors two other T-type channel blockers decreased Akt and GSK3β phosphorylation within minutes. These blockers have additional targets. A separate genetic comparison gives greater subtype resolution. At 24 hours, CaV3.1 knockdown raised the fraction of labeled cortical cells expressing Pax6 from 44.90% to 65.82% (+20.92 points) and lowered the Tbr1-positive fraction from 53.38% to 33.78% (−19.60 points). CaV3.2 knockdown did not show a corresponding shift. These markers and percentages describe early fate or its timing. They do not measure permanent cell loss. The thesis and subsequent article concern the same work. [Direct drug study](https://pmc.ncbi.nlm.nih.gov/articles/PMC4653709/) · [Pharmacological comparator, Fig. 4](https://pmc.ncbi.nlm.nih.gov/articles/PMC6131011/) · [Genetic comparator, chapter 3, Figs. 3.19–20](https://doshisha.repo.nii.ac.jp/record/29597/files/zk1302.pdf) · [Peer-reviewed study](https://www.sciencedirect.com/science/article/pii/S0012160622001099)
+
+Ethosuximide inhibits cloned human T-type channels in a state-dependent manner. The reported IC50 for the persistent current was 0.6 mM. The rat hippocampal drug experiment used one sixth of this concentration. That ratio cannot specify native block in a dividing human progenitor, whose membrane voltage, channel composition and exposure history differ. Whole-cell calcium transients also include pathways unrelated to CaV3.1, as demonstrated by multimodal human cortex recordings. [Direct channel study](https://molpharm.aspetjournals.org/article/S0026-895X%2824%2912522-9/fulltext) · [Human primary tissue physiology](https://pmc.ncbi.nlm.nih.gov/articles/PMC7648658/)
+
+## New human substrate check
+
+| Data | Result for CACNA1G, which encodes CaV3.1 | Interpretation |
+|---|---|---|
+| Fetal cortical progenitors isolated by sorting | Four of four apical radial-glia preparations exceeded 0.1 FPKM. Zero of four reached 1 FPKM (range 0.57–0.82). Basal radial glia reached 1 FPKM in one of four. | Low detectable expression. The prespecified broad-expression threshold failed. [Florio, GSE65000](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE65000) |
+| Healthy cortical single cells, 10–20 weeks, 18 sample groups with ≥5 cells in each matched class | At ≥1 TPM, 2/285 ventricular or dividing radial glia and 5/530 transitional progenitors or early newborn excitatory cells were positive. Median detection per sample was zero in both groups. SOX2 detection fell in 18/18 matched groups while DCX rose in 14/18. | The atlas distinguishes the developmental compartments. Detection of rare transcripts is incomplete. Cells within sample are not independent biological replicates. [Nowakowski atlas](https://cells.ucsc.edu/cortex-dev/summary.html) |
+| Untreated human WWOX-deficient organoids versus controls, four and two libraries | CACNA1G rose by +0.153 in mean log2(1+CPM). Omitting each library yielded +0.010 to +0.297. CACNA1H fell by −0.176 and CACNA1I rose by +0.493. SOX2 rose and DCX fell. | Target transcripts exist in bulk. Changes in cell mix, development and channel subtypes remain possible. There is no uniform T-channel excess or demonstration of excess progenitor current. [GSE156243](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE156243) |
+
+The two expression assays cannot exclude currents in rare cells. Neither RNA concentration nor the proportion of detected transcripts measures the fraction of cells responding to a drug. Differences between normal fetal tissue and organoids preclude turning their expression ratio into a genotype effect. The experiment includes only two control libraries without drug exposure.
+
+## Discriminating prediction
+
+In the same WWOX-deficient and corrected cortical progenitor lineage, match developmental stage and record native low-threshold calcium current, starting membrane voltage, early Akt/GSK3β phosphorylation and later **surviving neuronal yield per starting progenitor**. Compare direct ethosuximide with a CaV3.1-selective loss-of-function comparator. If the selective perturbation retains progenitors but ethosuximide increases neuronal yield with preserved calcium transients and β-catenin dependence, channel blockade alone cannot account for the response. If both perturbations reduce native current and delay exit into neurons, an acute reduction of seizures can coexist with a developmental cost in that model. A change in neurosphere count alone cannot adjudicate these possibilities. The WWOX genotype interaction remains unmeasured.
+
+[Pre-analysis criteria](prediction.md) and [input file fingerprints](results/sources.tsv) accompany the original code. Run `python3 analyze.py GSE65000_hsa_fpkm_matrix.txt.gz exprMatrix.tsv.gz meta.tsv GSE156243_CWT_2_CKO_4_Salmon_gene_count_table.txt.gz results` with NumPy. The script reuses the laboratory's existing RNA-library normalization. Only derived summaries and original code are distributed.

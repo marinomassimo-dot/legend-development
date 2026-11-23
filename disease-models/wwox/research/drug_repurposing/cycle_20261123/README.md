@@ -47,3 +47,7 @@ At 12:57 UTC the independent reviewer confirmed that the ganaxolone biomarker re
 ## Stage and firing control for perampanel
 
 In early healthy cortical slices, two interventions reducing activity increased the PLP-positive fraction of oligodendroglia by 16.4 and 23.6 percentage points. Adding AMPA lowered that fraction by 16.2 and 15.8 points while raising the premyelinating BCAS1 fraction. The receptor antagonist NBQX increased early PLP by 24.3 points against its own control. This closes an interpretive gap in the perampanel dossier: an early myelin-marker increase can arise through activity suppression alone. The actionable endpoint is lasting sheath number and conduction at matched neuronal firing. [Stage-resolved comparison](../perampanel_developmental_activity_20261123/README.md)
+
+## Ethosuximide, calcium and cortical lineage choice
+
+Reducing CaV3.1 expression in embryonic mouse cortical progenitors increased Pax6-positive cells by 20.9 points and lowered Tbr1-positive cells by 19.6 points. In healthy human fetal tissue CACNA1G reached 1 FPKM in zero of four sorted apical radial glia preparations, and 1 TPM in only 2/285 ventricular/dividing radial glia in an independent atlas. The untreated WWOX organoid bulk contrast was +0.153 log2 units. This supports a stage-specific comparison of native current and surviving neuronal yield against the competing hippocampal WNT hypothesis. [Three-source reanalysis](../ethosuximide_progenitor_calcium_20261123/README.md)
