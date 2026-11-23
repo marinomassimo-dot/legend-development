@@ -813,6 +813,13 @@
      "accepted_at": "2026-11-23T11:38:59Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv195_e512k_organoid_route_sci_20261123/RESULT_ADV195_E512K_ORGANOID_ROUTE_SCI_20261123.md; closed as a ROUTE RESULT (no lawful machine route to the body; abstract level only; operator-supply list)",
      "updated_at": "2026-11-23T11:40:30Z"
+    },
+    {
+     "step": "ADV-198: P47T cerebellar composition feasibility (RP-036): step 1 reconcile held cerebellar data and cell-class anchors with a 15-minute exit; step 2 only if anchors present; disposition (a) composition, (b) anchors absent, (c) robust",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-198",
+     "accepted_at": "2026-11-23T16:43:04Z"
     }
    ]
   }
@@ -1438,6 +1445,13 @@
    "at": "2026-11-23T11:38:59Z",
    "source": "ADV-195",
    "step_sha256": "9a8b95cf6800",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-23T16:43:04Z",
+   "source": "ADV-198",
+   "step_sha256": "bd82a032e872",
    "reopened_block": false,
    "authorised_by": null
   }
