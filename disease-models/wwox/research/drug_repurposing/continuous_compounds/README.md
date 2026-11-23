@@ -19,6 +19,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 13 | Pyridoxine, cofactor handling and inhibitory transmitter replenishment | Can increased cofactor availability rescue stimulated GABA production and native inhibition in WWOX? |
 | 14 | Rufinamide, state-dependent sodium-channel gating | Does changing burst duration or interval reveal a selective effect on excitation while preserving inhibitory recruitment? |
 | 15 | Ivabradine, voltage sag and rebound | Do channel state and free exposure permit a direct central effect in WWOX at comparable voltage excursions? |
+| 16 | D-β-hydroxybutyrate, M-current and ketone oxidation | What incremental channel effect remains above baseline, and does it explain WWOX functional recovery independently of fuel oxidation? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -29,7 +30,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: ivabradine.** Can a state-dependent HCN effect reach WWOX cortical neurons at plausible unbound exposure? Two recombinant-curve assumptions predict less than 1% at the rat two-hour parent-alone brain concentration. Next examine native neuronal data and the active metabolite. [Mechanism and falsification test](ivabradine/README.md) · [First quantitative test](ivabradine/state_dependence.md)
+**Active compound: D-β-hydroxybutyrate.** Does raising the endogenous ketone add substantial KCNQ2/3 current above baseline extracellular exposure, or is a metabolic mechanism more plausible? Next seek measured interstitial and pediatric CSF concentrations to constrain the large sensitivity to baseline. [Opening comparison](d_bhb/README.md) · [First calculations](d_bhb/baseline.md)
+
+**Ivabradine parked for systemic WWOX trial priority.** The active metabolite had weaker HCN1 potency and lower barrier-model permeability than parent. Retain Ih as a mechanistic probe. [Decision, independent native and recombinant comparisons](ivabradine/decision.md)
 
 **Rufinamide parked for WWOX trial priority.** The treated Dup15q cells started with a different intrinsic phenotype. In the WWOX mouse, weaker spikes and higher pyramidal input resistance change the interpretation of a lower firing rate. [Transfer analysis and reopening condition](rufinamide/transfer.md)
 

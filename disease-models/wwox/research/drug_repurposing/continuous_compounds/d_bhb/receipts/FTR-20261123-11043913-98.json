@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-11043913-98",
+  "event_at": "2026-11-23T23:58:02Z",
+  "analysis_at": "2026-11-23T23:58:02Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "11043913",
+    "doi": "10.1097/00004647-200010000-00012"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.1097/00004647-200010000-00012",
+  "source_fingerprint": null,
+  "workflow": "Targeted examination of channel potency and the population and compartment in the cited brain exposure reference.",
+  "evidence_basis": [
+    "Methods: healthy adult occipital cortex, edited 4-T proton spectroscopy.",
+    "Results: “0.05 ± 0.05 mmol/L”, nonfasted; 0.98 ± 0.16 mmol/L after three days."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_bhb/baseline.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_bhb/saturation.tsv"
+  ]
+}

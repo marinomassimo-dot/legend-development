@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-39307309-98",
+  "event_at": "2026-11-23T23:56:19Z",
+  "analysis_at": "2026-11-23T23:56:19Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "39307309",
+    "doi": "10.1016/j.jbc.2024.107798"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/ivabradine_loop_20261123/human_hcn1.xml",
+  "source_fingerprint": "6178d8c6c96a76fa6b0455e81d5c51e8e637ebaf14e4d07630f550f3df352bd6",
+  "workflow": "Targeted independent check of human wild-type HCN1 current and the voltage protocol underlying fitted potency.",
+  "evidence_basis": [
+    "Results: “half-maximal inhibitory concentration (IC50) of 2.94 ± 0.61 μM”; assay at −140 mV.",
+    "Figure 1B legend: concentration-response in six independent experiments."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/ivabradine/decision.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/ivabradine/holdout.tsv"
+  ]
+}

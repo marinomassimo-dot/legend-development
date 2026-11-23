@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-31757819-98",
+  "event_at": "2026-11-23T23:58:02Z",
+  "analysis_at": "2026-11-23T23:58:02Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "31757819",
+    "doi": "10.1124/jpet.119.263350"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/d_bhb_loop_20261123/manville.html",
+  "source_fingerprint": "6a56fd19b3ca31900135198686877f8139d7b279cd8705b709dc24d720018525",
+  "workflow": "Targeted examination of channel potency and the population and compartment in the cited brain exposure reference.",
+  "evidence_basis": [
+    "Methods: “480 mM stock in 100% ethanol”; tested in an oocyte bath.",
+    "Fig. 1H–I and results: “maximal 3.5-fold mean increase” at −60 mV, EC50 0.7 µM."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_bhb/baseline.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_bhb/saturation.tsv"
+  ]
+}

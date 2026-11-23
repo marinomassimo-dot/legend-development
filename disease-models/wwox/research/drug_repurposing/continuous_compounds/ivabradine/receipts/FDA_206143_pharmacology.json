@@ -1,0 +1,17 @@
+{
+  "record_kind": "regulatory_document_read_receipt",
+  "source": "FDA, NDA 206-143, Pharmacology Review, Reference ID 3665387",
+  "time_utc": "2026-11-23T23:56:19Z",
+  "persistent_source": "files/deepening_downloads/ivabradine_loop_20261123/fda_pharm.pdf",
+  "sha256": "cea2997f9fa551642411e17be20cf76a5d0433967ed131964f5ce232b5156cdf",
+  "coverage": "Targeted sections, not complete document",
+  "locators": [
+    "NP07905, printed p. 28: recombinant human HCN2 and HCN4 parent/metabolite half-block",
+    "NP08442 and NP15864, printed pp. 53–54: mouse HCN1 parent/metabolite and native rod Ih",
+    "NP15182, printed p. 76: “permeability was low for M3 and S 18982” in bovine brain endothelial cells"
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/ivabradine/decision.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/ivabradine/holdout.tsv"
+  ]
+}
