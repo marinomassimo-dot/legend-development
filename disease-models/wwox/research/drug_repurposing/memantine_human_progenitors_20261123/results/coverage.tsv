@@ -1,0 +1,3 @@
+scheme	landmark_probe_ids	annotated_probes	mapped_WWOX_genes	eligible_genes	discovery_lines	heldout_lines
+primary	978	957	938	938	2607-3-1,3121-2-1,3234-2-4,3651-A-A,553-3-1,BJ-2-A	3113-6-3,3182-2-4,3440-5-A,4506-B-A,690-2-1
+swapped	978	957	938	938	3113-6-3,3182-2-4,3440-5-A,4506-B-A,690-2-1	2607-3-1,3121-2-1,3234-2-4,3651-A-A,553-3-1,BJ-2-A
