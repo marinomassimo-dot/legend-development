@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-28374007-81",
+  "event_at": "2026-11-23T16:12:00Z",
+  "analysis_at": "2026-11-23T16:12Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "28374007",
+    "doi": "10.1523/ENEURO.0019-17.2017"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "CC BY 4.0 original; public article, source figure or tables as linked in dossier. Persistent evidence files/deepening_downloads/ganaxolone_chloride_recovery_20261123/source.xml.",
+  "source_fingerprint": "c9cba6af37acf4aa20e3a8e98862111de5d0e6e18c8e8c4097e6268dbbed92a4",
+  "workflow": "Question-driven independent test of ganaxolone and post-burst chloride recovery; inspected rat medial preoptic neurons, Fig. 7C/E.",
+  "evidence_basis": [
+    "Targeted reading of the preparation, recording solution, loading and recovery protocols and results for Figs. 4 and 7, with Fig. 7 inspected visually. Other figures, full discussion and any supplemental materials were outside this read.",
+    "Fig. 7C Results, steroid versus TTX at 5 min, 20 nM allopregnanolone: “This effect of allopregnanolone was abolished by gabazine”",
+    "Fig. 7C/E actual image, sha256 a2dd51cdcf7b8790dcfb45c22e88259c6f5b65e2a97c1bba6de87f93f427db03. Panel C, TTX 11 cells versus Allo+TTX 16. Panel E, normalized remaining chloride estimated visually, control approximately 0.62, 20 nM Allo approximately 0.48. The KCC2 blocker and bicarbonate-free solution delimit transfer."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/ganaxolone_chloride_recovery_20261123/README.md"
+  ]
+}

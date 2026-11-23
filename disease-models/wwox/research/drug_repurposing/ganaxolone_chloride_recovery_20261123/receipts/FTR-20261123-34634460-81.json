@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-34634460-81",
+  "event_at": "2026-11-23T16:20:00Z",
+  "analysis_at": "2026-11-23T16:20Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "34634460",
+    "doi": "10.1016/j.nbd.2021.105529"
+  },
+  "prior_receipt": "FTR-20261119-34634460-69",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "CC BY 4.0 original; public article, source figure or tables as linked in dossier. Persistent evidence files/deepening_downloads/ganaxolone_chloride_recovery_20261123/mouse-high.jpg.",
+  "source_fingerprint": "1a61590953fb9fff30e7df3198c61f6c5a29ee5608041e4a1814faeba4fddf9d",
+  "workflow": "Question-driven independent test of ganaxolone and post-burst chloride recovery; inspected juvenile Wwox-deletion mouse cortex, Fig. 1D event histogram.",
+  "evidence_basis": [
+    "Specific reread of the Wwox cortical field-burst timings in Results §3.1 and original high-resolution Fig. 1D only. Coverage states refer to this targeted pass, not to earlier complete reads.",
+    "Fig. 1D caption, sampling unit: “119 bursts, 18 slices, 9 animals”",
+    "Visual locator for counts: publisher high-resolution original 2126 by 2079 pixels. Panel D histogram centered at original x 732 to 809 pixels for the first eight bars. Pixel calibration, bar heights, thresholds and hash are preserved in histogram.py and wwox_burst_histogram.tsv."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/ganaxolone_chloride_recovery_20261123/README.md"
+  ]
+}

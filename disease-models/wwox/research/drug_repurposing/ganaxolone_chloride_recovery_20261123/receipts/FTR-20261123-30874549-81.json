@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-30874549-81",
+  "event_at": "2026-11-23T16:17:00Z",
+  "analysis_at": "2026-11-23T16:17Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "30874549",
+    "doi": "10.1038/s41467-019-08933-4"
+  },
+  "prior_receipt": "FTR-20261118-30874549-67",
+  "reread_reason": "inadequate_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "CC BY 4.0 original; public article, source figure or tables as linked in dossier. Persistent evidence files/deepening_downloads/ganaxolone_chloride_recovery_20261123/PMC6420604.1.xml.",
+  "source_fingerprint": "83be09354291cafd49984dbf7202700994b9387674677589c1c94319d5b6bfc8",
+  "workflow": "Question-driven independent test of ganaxolone and post-burst chloride recovery; inspected adult mouse primary visual cortex, Fig. 5f and source workbook.",
+  "evidence_basis": [
+    "Targeted timing, trial selection and return-current results and figure captions; only the Fig. 4i, 5f and Supplementary Fig. 7 worksheet blocks were used in the reported statistics. Other supplement files, full introduction and discussion were outside the read.",
+    "Methods, triggered versus duration-matched control selection: “control discharges were shorter than the delay itself”",
+    "Source data Fig. 5, cells C47:C54, E47:E56, R47:R52, T47:T54 and Supplementary Fig. 7 panels a/d rows giving per-animal Light OFF/ON durations (s); normalized seizure duration (%). Source workbook SHA-256 08efd1603ea3037d0611368463624e32a7470b3a1874e8d14dfd7e657935f49f. Fig. 4i, C120:C126 and E120:E126 are seconds per cell."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/ganaxolone_chloride_recovery_20261123/README.md"
+  ]
+}
