@@ -1,0 +1,3 @@
+mapping	n	n_positive	mean_delta	vehicle_min	vehicle_max	leave_one_gene_best_rank	leave_one_gene_worst_rank
+symbol	12	8	0.11635120294362107	-0.22027642333102718	0.18187149526184798	1	18
+orthology	11	8	0.12911971219436047	-0.2320988173470611	0.20398795802319547	1	15
