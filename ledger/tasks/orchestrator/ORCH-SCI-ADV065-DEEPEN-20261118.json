@@ -789,10 +789,12 @@
     },
     {
      "step": "ADV-193: one bounded source comparison of Saha, Krishnan, Raghu 2024 (PMID 38056909, PMC10700560) on whether it supports a different WO-21 comparison than the generic inositol add-back, i.e. which proximal engagement and functional endpoints make the inositol/IMPA1 route versus GSK3 route interpretable for lithium-related excitability changes, and whether any rescue was measured in neurons; KEEP/NARROW/CLOSE; no ranking change, no drug promotion, no clinical claim",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-193 (assignments/ADV-193.md, ADV message 2026-11-23, Codex review 13)",
-     "accepted_at": "2026-11-23T08:10:05Z"
+     "accepted_at": "2026-11-23T08:10:05Z",
+     "evidence": "ADV-193 result written: RESULT_ADV193_SAHA_IMPA1_INOSITOL_GSK3_SCI_20261123.md, verdict NARROW, receipt FTR-20261123-38056909-01, pre-registration 8dd436a07; result path delivered to ADV 2026-11-23; landing SHA recorded at the landing",
+     "updated_at": "2026-11-23T08:15:38Z"
     }
    ]
   }
