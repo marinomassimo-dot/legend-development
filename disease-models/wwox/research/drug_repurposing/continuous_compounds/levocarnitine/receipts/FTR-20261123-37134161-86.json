@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-37134161-86",
+  "event_at": "2026-11-23T22:33:59Z",
+  "analysis_at": "2026-11-23T22:33:59Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "doi": "10.1126/sciadv.adf0115",
+    "pmid": "37134161"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://www.science.org/doi/pdf/10.1126/sciadv.adf0115?download=true",
+  "source_fingerprint": null,
+  "workflow": "Distinguish substrate-specific carbon transfer from an ammonia endpoint associated with medication.",
+  "evidence_basis": [
+    "Fig. 7C legend, “with or without 10 mM carnitine”: glucose carbon enrichment of fatty acids compared across ACLY and ACLY/CrAT null clones.",
+    "Fig. 7D,F,G and Results distinguish glucose-derived C2, supplied acetylcarnitine and total new palmitate."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/levocarnitine/decision.md"
+  ]
+}
