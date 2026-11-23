@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-23T07:40Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "not_read",
+  "results": "read",
+  "supplementary": "captions_only",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-23T07:40:45Z",
+ "event_id": "FTR-20261123-41423560-01",
+ "evidence_basis": [
+  "Wang et al. 2025 Nat Commun 17:1165 (PMID 41423560, DOI 10.1038/s41467-025-67930-y, PMC12859018), full text as returned by the PMC open-data bucket (PMC12859018.1.txt, SHA-256 f5b5ab268dd64f1742bec83d0759f3e225489faa37f0da2a9f1d664ad687d9a0); abstract, Introduction, Results, Discussion with the limitations paragraph and the animal, tamoxifen and behaviour Methods read; slice, imaging, ChIP and sequencing Methods not read; figure captions read, Fig 3 viewed as an image, other figures not viewed; Supplementary Information legends read (text of the 12-page pdf), Source Data and Supplementary Data workbooks not opened.",
+  "verbatim_locator | proposition: driver and timing: inducible Pdgfra-CreER, tamoxifen P4 to P8 | Methods (Mice) | \"gavage) for 5 consecutive days from postnatal (P)4 to P8\"",
+  "verbatim_locator | proposition: mature-oligodendrocyte deletion with Plp-CreERT gave no change in MBP or CC1 | Results (Fig 3D, E) | \"depleting BAF155 in OLs does not induce obvious defects in oligodendroglial differentiation and myelination\"",
+  "verbatim_locator | proposition: behaviour was done in males only at 6 to 8 weeks | Methods (Behavior tests) | \"Behavioral tests were performed on 6–8-week-old male mice.\"",
+  "verbatim_locator | proposition: miniature synaptic events at the neuron were unchanged | Results (Fig 2C, D) | \"the frequency and amplitude of mEPSCs and mIPSCs remained unchanged in BAF155 knockout mice\"",
+  "verbatim_locator | proposition: open-field total distance did not differ | Results (Fig 2H) | \"although there was no difference in the total distance covered\"",
+  "verbatim_locator | proposition: only the neural-stem-cell Cre with homozygous floxed allele is reported lethal | Results (first section) | \"In this mouse strain, the fl/fl homozygotes were lethal.\"",
+  "verbatim_locator | proposition: OPC patch-clamp: AMPA/NMDA ratio is a potential reduction | Results (Fig S5G) | \"Our result showed a potential reduction in this ratio in Baf155-deficient OPCs\"",
+  "verbatim_locator | proposition: OPC patch-clamp n of three per group | Discussion (limitations) | \"we were able to record three OPCs in each group under identical stimulus conditions\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv192_20261123/RESULT_ADV192_WANG2025_IT_20261123.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "f5b5ab268dd64f1742bec83d0759f3e225489faa37f0da2a9f1d664ad687d9a0",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket copy of the open-access article (PMC12859018.1.txt), local scratch only, not copied into git",
+ "study_id": {
+  "doi": "10.1038/s41467-025-67930-y",
+  "pmid": "41423560"
+ },
+ "workflow": "IT ADV-192: which readouts the OPC-restricted BAF155 phenotype needed, against the Wwox glial-restricted null (RP-017). Methods recorded as not_read because only the animal, tamoxifen and behaviour parts were read."
+}
