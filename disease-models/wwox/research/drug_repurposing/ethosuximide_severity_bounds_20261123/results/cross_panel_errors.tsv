@@ -1,0 +1,5 @@
+arm	scenario	readable	mean_covered	sem_covered	both_covered	median_abs_mean_err	median_sem_interval_err	max_abs_mean_err	max_sem_interval_err
+PTZ	primary	46	15	13	13	0.32999999999999996	0.2855	1.075	0.6719999999999999
+PTZ	wider	46	18	20	18	0.32999999999999996	0.2855	1.075	0.6719999999999999
+PTZ+LiCl	primary	93	81	59	58	0.044000000000000004	0.0	0.32899999999999996	0.339
+PTZ+LiCl	wider	93	81	89	79	0.044000000000000004	0.0	0.32899999999999996	0.339

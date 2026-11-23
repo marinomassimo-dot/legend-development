@@ -1,0 +1,3 @@
+arm	constraint	points
+PTZ	joint	121
+PTZ+LiCl	joint	121
