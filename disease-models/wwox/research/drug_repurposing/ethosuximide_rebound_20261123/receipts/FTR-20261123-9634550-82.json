@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-9634550-82",
+  "event_at": "2026-11-23T16:42:00Z",
+  "analysis_at": "2026-11-23T16:42Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "9634550",
+    "doi": "10.1523/JNEUROSCI.18-13-04842.1998"
+  },
+  "prior_receipt": "FTR-20261118-9634550-53",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://publications.aston.ac.uk/id/document/57122",
+  "source_fingerprint": "45d9289d70c16332f5bcbc9a15a3c249265e017161912d58d4f1840ec6a5b4c7",
+  "workflow": "Native thalamocortical ethosuximide responses and rebound-versus-tonic direction.",
+  "evidence_basis": [
+    "Native thalamocortical ethosuximide responses and rebound-versus-tonic direction. Purpose-specific partial read. Other sections and unlisted figures were outside this pass.",
+    "Results and Fig. 3, six rat thalamic cells, steady-state inactivation midpoint −84.5 mV with 4 mV slope magnitude.",
+    "Fig. 5A/C, tonic firing and current injection, −60 mV. Results on burst timing compare 29 and 53 ms. Three cells per reported comparison. Fig. 5B direction disagrees between caption and text."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/ethosuximide_rebound_20261123/README.md"
+  ]
+}

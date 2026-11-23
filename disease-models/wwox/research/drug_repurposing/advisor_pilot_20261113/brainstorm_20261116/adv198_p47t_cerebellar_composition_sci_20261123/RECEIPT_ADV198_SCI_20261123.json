@@ -12,7 +12,7 @@
   "supplementary": "not_read",
   "tables": "not_read"
  },
- "event_at": "2026-11-23T16:49:44Z",
+ "event_at": "2026-11-23T16:59:03Z",
  "event_id": "FTR-20261123-36828035-05",
  "evidence_basis": [
   "Hussain et al. 2023, Prog Neurobiol (PMID 36828035, PMC10835625), re-read for ADV-198 (cerebellar composition of the P47T sterol signature): Results sections 2.6 to 2.9 and the Fig 5 legend read in the PMC open-data bucket text; Fig 5 viewed as an image (Purkinje and basket counts, layer thickness; values are visual estimates). Other sections, figures and the supplement not read in this pass. Source: PMC open-data bucket, CC BY 4.0; SHA-256 of the txt 1c6335ad129c (12 hex); Fig 5 jpg 4ade833d8d55. The held processed table GSE215425 (cerebellum 4 WT against 3 P47T libraries) was analysed in the same task (result file).",
