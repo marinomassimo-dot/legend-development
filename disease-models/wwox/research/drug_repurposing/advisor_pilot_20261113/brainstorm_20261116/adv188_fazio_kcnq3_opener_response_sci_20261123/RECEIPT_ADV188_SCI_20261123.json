@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-23T00:13Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-23T00:13:30Z",
+ "event_id": "FTR-20261123-43047766-01",
+ "evidence_basis": [
+  "Fazio et al. 2026 Front Mol Neurosci (PMID 43047766), full-text XML (PMC open-data bucket copy, SHA-256 e465e4524c9c7af61f2046b709edc1294d88084e4c5310d413cbcc7b68463cbb): Methods, Results and Discussion read after a committed pre-registration that stated what had been seen; Fig 4 viewed as an image from the article PDF (page render); the other figures through legends only; Supplementary_file_1.docx (SHA-256 ea79914c197d1eb3e2e0f77cd36ed40e90768eb8bf317ea0cfa36f3d92d69a3e, the supplementary statistical analysis with per-panel n, animals and tests) read for Figs 1 to 5 and S1 to S3; the Introduction read only in part; no source data and no per-cell values exist; no Kv7 blocker or concentration series in the paper.",
+  "verbatim_locator | proposition: IM is measured under control and with retigabine 30 uM; no Kv7 blocker defines a drug-free baseline | Methods (voltage clamp) | \"Recordings were performed and analyzed under control conditions and following bath application of retigabine (RTG, 30\"",
+  "verbatim_locator | proposition: RTG-sensitive current is modest at p10 and larger at p30 in WT while Kcnq2 and Kcnq3 transcripts do not change | Results (age) | \"no significant developmental changes in Kcnq2 and Kcnq3 expression were detected. Hence\"",
+  "verbatim_locator | proposition: mutants show only a modest increase of RTG-sensitive current (a statement about significance within group) | Results (Fig 4) | \"Conversely, only a modest increase of RTG-sensitive current was detected in mutants, indicating that the compound failed to mediate a significant IM potentiation when functional M-channels with alternative subunit stoichiometry assemble in the absence of Kv7.3\"",
+  "verbatim_locator | proposition: RTG only partly attenuates tonic firing in mutants compared with WT | Results (Fig 4) | \"RTG exerted only a partial effect in attenuating tonic firing in Kcnq3+/− and Kcnq3−/− neurons compared to WT\"",
+  "verbatim_locator | proposition: rheobase is raised in WT and Kcnq3+/- but not significantly in Kcnq3-/- | Results (Fig 4) | \"it failed to significantly raise the current threshold for AP discharge in Kcnq3−/− neurons\"",
+  "verbatim_locator | proposition: controls are C57BL/6J mice, not stated as littermates | Methods (animals) | \"C57BL/6 J mice were used as controls (termed wild-type, WT, hereinafter\"",
+  "verbatim_locator | proposition: mutants are hyperexcitable: lower rheobase in both Kcnq3+/- and Kcnq3-/- | Results (Fig 2) | \"we detected a lower rheobase in both Kcnq3+/− and Kcnq3−/− neurons, confirming an intrinsic hyperexcitability in mutants compared to controls\"",
+  "verbatim_locator | proposition: the authors state RTG elicited a reduced IM increase in mutants with partial suppression of firing | Discussion | \"RTG elicited a reduced IM increase in mutants, resulting in a partial suppression of AP firing compared to WT\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv188_fazio_kcnq3_opener_response_sci_20261123/RESULT_ADV188_FAZIO_KCNQ3_OPENER_RESPONSE_SCI_20261123.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "e465e4524c9c7af61f2046b709edc1294d88084e4c5310d413cbcc7b68463cbb",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket copy of the open-access article (CC BY 4.0) and its supplementary statistics file, local scratch only, not copied into git",
+ "study_id": {
+  "doi": "10.3389/fnmol.2026.1944560",
+  "pmid": "43047766"
+ },
+ "workflow": "SCI successor Z ADV-188 (Kcnq3 thalamic neurons: weak opener response against baseline and recruitable M-current; WO-17 wording): Methods, Results, Discussion and supplementary statistics read after a committed pre-registration."
+}
