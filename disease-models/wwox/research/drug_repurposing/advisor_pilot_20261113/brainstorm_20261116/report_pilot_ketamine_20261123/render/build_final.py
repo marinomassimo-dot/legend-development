@@ -114,7 +114,8 @@ def find(sections, start: str):
 
 
 def paragraphs_html(lines: list[str]) -> str:
-    _STATE["pending"] = None  # text between a heading and a table: the heading is not "straight before" the table
+    if lines:  # text between a heading and a table: the heading is not "straight before" the table (an empty section is not text)
+        _STATE["pending"] = []
     out, bullets = [], []
 
     def flush():
@@ -139,20 +140,20 @@ def paragraphs_html(lines: list[str]) -> str:
 WIDTH_HINT = {"#": 4, "Stage": 4, "Status": 10, "Ref": 6, "Locator": 14, "No.": 3, "PMID": 7, "DOI": 12, "Unit": 6,
               "Assay or source": 20, "Value as printed": 19, "Spread as the source gives it": 13,
               "Exposure definition": 12, "Edge": 6, "From to": 9, "Relation": 12, "Source": 20}
-_STATE = {"n": 0, "h": 0, "copies": set(), "pads": {}, "pending": None, "pairs": []}  # table counter within one layout pass; header copies chosen by the last pass
+_STATE = {"n": 0, "h": 0, "copies": set(), "pads": {}, "pending": [], "pairs": []}  # table counter within one layout pass; header copies chosen by the last pass
 
 
 HEAD_MARGIN = {"h1": 3, "h2": 9, "h3": 7}
 
 
-def hd(tag: str, text: str) -> str:
+def hd(tag: str, text: str, style: str = "") -> str:
     """A heading that stays with the table that follows it: if Story strands it at a page foot, the next pass puts a spacer before it."""
     _STATE["h"] += 1
     hid = f"h{_STATE['h']}"
-    _STATE["pending"] = hid
+    _STATE["pending"].append(hid)
     pad = _STATE["pads"].get(f"p_{hid}")
     brk = f'<div id="p_{hid}" style="height:{pad:.1f}pt"></div>' if pad else ""
-    return f'{brk}<{tag} id="{hid}">{esc(text)}</{tag}>'
+    return f'{brk}<{tag} id="{hid}"{f" style={chr(34)}{style}{chr(34)}" if style else ""}>{esc(text)}</{tag}>'
 
 
 def cell_html(header: str, text: str) -> str:
@@ -166,9 +167,9 @@ def cell_html(header: str, text: str) -> str:
 def table_html(tbl: dict, wide: bool = False, link_pmid: bool = False) -> str:
     _STATE["n"] += 1
     tid = f"t{_STATE['n']}"
-    if _STATE["pending"]:
-        _STATE["pairs"].append((_STATE["pending"], tid))
-        _STATE["pending"] = None
+    for hid in _STATE["pending"]:  # every heading since the last text belongs with this table
+        _STATE["pairs"].append((hid, tid))
+    _STATE["pending"] = []
     hdr = tbl["header"]
     n = len(hdr)
     fixed = {k: WIDTH_HINT.get(h) for k, h in enumerate(hdr) if WIDTH_HINT.get(h)}
@@ -241,7 +242,7 @@ def story_doc(builder, landscape: bool):
     copies: set[str] = set()
     pads: dict[str, float] = {}
     for _ in range(12):
-        _STATE.update(n=0, h=0, copies=copies, pads=pads, pending=None, pairs=[])
+        _STATE.update(n=0, h=0, copies=copies, pads=pads, pending=[], pairs=[])
         html = builder()
         info = _positions(html, landscape)
         pages = {k: v[0] for k, v in info.items()}
@@ -270,6 +271,8 @@ def story_doc(builder, landscape: bool):
         raise SystemExit("table header copies and spacers did not settle in 12 passes")
     story = pymupdf.Story(html=html, user_css=CSS_FINAL)
     doc = story.write_with_links(_guarded(paper, rect))
+    while len(doc) > 1 and not doc[len(doc) - 1].get_text().strip():  # a spacer after a table that ends at the page foot spills onto an empty last page
+        doc.delete_page(len(doc) - 1)
     # completeness: the end of the text that went in must be in the document that came out (Story can drop content silently)
     plain = _norm(unescape(re.sub(r"<[^>]+>", " ", html))).strip()
     words = [w for w in plain[-300:].split() if len(w) > 4][-12:]  # table cells come out in column order, so test words, not a phrase
@@ -287,9 +290,10 @@ def display_title(t: str) -> str:
 
 
 def file_head(secs, size="19pt", margin="0"):
-    """Level-1 title and the intro lines of one pack file (the lines between the title and the first section)."""
+    """Level-1 title and the intro lines of one pack file (the lines between the title and the first section).
+    The title joins the heading chain kept with the next table; the intro lines do not break the chain."""
     top = next(s for s in secs if s["level"] == 1 and s["title"])
-    return (f'<h1 style="font-size:{size};margin-top:{margin}">{esc(display_title(top["title"]))}</h1>'
+    return (hd("h1", display_title(top["title"]), f"font-size:{size};margin-top:{margin}")
             + "".join(f'<p class="small">{inline(l)}</p>' for l in top["lines"]))
 
 
@@ -306,8 +310,8 @@ def sections_html(secs, wide=False, skip=(), special=None):
     return "".join(out)
 
 
-ORDER_TEXT = ("Decision evidence, from p. {A}. Figure 1 (evidence graph), p. {G}. Edge list, from p. {E}. The deciding measurement, from p. {F}. "
-              "Negative and ambiguous results and the quantitative details, from p. {D}. Methods and coverage and References, from p. {M}.")
+ORDER_TEXT = ("Decision evidence, from p. {A}. The deciding measurement, from p. {F}. Figure 1 (evidence graph), p. {G}, and its edge list, p. {E}. "
+              "Negative and ambiguous results and the quantitative details, from p. {D}. Methods and coverage, then References and build provenance, from p. {M}.")
 
 
 def front_html(A, pagemap):
@@ -367,7 +371,7 @@ def back_html(B, C, provenance_rows, commit, landed=""):
                + table_html(refs["tables"][0], wide=True, link_pmid=True)
                + sections_html(B, skip=(refs["title"],)))
     prow = [[n, h] for n, h in provenance_rows]
-    out.append(hd("h2", "Provenance: which input this PDF was built from")
+    out.append(hd("h2", "Build provenance (for the project team)")
                + f"<p class='small'>Content commit: <b>{esc(commit)}</b> (last commit touching the content folder)." + (f" Landed on main as <b>{esc(landed)}</b>." if landed else "")
                + " Input files and the SHA-256 of each:</p>"
                + table_html({"header": ["File", "SHA-256"], "rows": prow}, wide=False).replace('class="tbl"', 'class="tbl prov"'))
@@ -387,19 +391,21 @@ KIND_TEXT = {"observation": "data read in a source", "inference": "reasoned from
              "alternative": "a rival reading, not measured", "experiment": "a proposed measurement", "gap": "a documented absence"}
 EDGE_STYLE = {  # status -> look; distinct in greyscale by width, dash pattern and tag fill (OBSERVED solid, INFERRED dashed, HYPOTHESISED dotted)
     "OBSERVED": dict(w=2.6, dash=None, cap=0, fill=(0, 0, 0), ink="#fff", order=3, text="stated by the source, or a documented absence"),
-    "INFERRED": dict(w=1.8, dash="[7 3] 0", cap=0, fill=(0.78, 0.78, 0.78), ink="#000", order=2, text="a reasoning step from observations"),
+    "INFERRED": dict(w=1.8, dash="[4 2.4] 0", cap=0, fill=(0.78, 0.78, 0.78), ink="#000", order=2, text="a reasoning step from observations"),
     "HYPOTHESISED": dict(w=1.7, dash="[0.1 3.6] 0", cap=1, fill=(1, 1, 1), ink="#000", order=1, text="predicted or competing; none tested"),
 }
-CONTEXT_ONLY = dict(w=1.0, dash="[7 3] 0", cap=0, fill=(1, 1, 1), ink="#555", order=0, color=(0.55, 0.55, 0.55), text="not a test (drawn lightly)")
+CONTEXT_ONLY = dict(w=1.0, dash="[4 2.4] 0", cap=0, fill=(1, 1, 1), ink="#555", order=0, color=(0.55, 0.55, 0.55), text="not a test (drawn lightly)")
 
 
 def edge_look(e):
+    if e["relation"] == "context_only" or e["status"] == "CONTEXT ONLY":
+        return CONTEXT_ONLY
     if e["status"] not in EDGE_STYLE:
         raise SystemExit(f"edge {e['edge_id']} has the unknown status {e['status']!r}: add it to EDGE_STYLE")
-    return CONTEXT_ONLY if e["relation"] == "context_only" else EDGE_STYLE[e["status"]]
+    return EDGE_STYLE[e["status"]]
 
 
-TAG_FRAC = {"G7": 0.80, "G17": 0.58, "G18": 0.705}
+TAG_FRAC = {"G7": 0.82, "G10": 0.82, "G12": 0.82, "G14": 0.82, "G17": 0.60, "G18": 0.70}  # the horizontals carry their tag next to the hub, clear of the two bus lanes
 
 
 def box_rect(nid):
@@ -430,8 +436,8 @@ def routes():
         "G14": [L("N15", 341), R("N5", 341)],
         "G15": [R("N16", 450), L("N5", 450)],
         "G16": [R("N17", 90), L("N8", 90)],
-        "G17": [R("N17", 106), (404, 106 + DY), (404, 215 + DY), L("N11", 215)],
-        "G18": [R("N17", 98), (432, 98 + DY), (432, 388 + DY), L("N13", 388)],
+        "G17": [R("N17", 106), (428, 106 + DY), (428, 215 + DY), L("N11", 215)],
+        "G18": [R("N17", 98), (440, 98 + DY), (440, 388 + DY), L("N13", 388)],
         "G19": [R("N18", 376), L("N5", 376)],
     }
 
@@ -470,12 +476,33 @@ def draw_graph_node(page, rect, n):
         pad = 6.0
     ink = "#fff" if kind == "experiment" else "#000"
     head = f"{n['node_id']} · {kind.upper()} ({n['stage'].split()[0]}) {n['ref']}"
-    html = (f"<p style='margin:0;font-size:6.8pt'><b>{esc(head)}</b></p>"
-            f"<p style='margin:1pt 0 0;font-size:8.2pt;line-height:1.1'>{esc(n['label'])}</p>")
-    spare, scale = page.insert_htmlbox(rect + (pad, 2.5, -pad, -1.5), html, css=f"body{{font-family:sans-serif;color:{ink}}}", scale_low=0.8)
+    box = rect + (pad, 2.5, -pad, -4.5 if kind == "claim" else -1.5)  # a claim's inner outline sits 2.8 pt inside the box
+
+    def html_at(size):
+        return (f"<p style='margin:0;font-size:{size * 0.84:.1f}pt'><b>{esc(head)}</b></p>"
+                f"<p style='margin:1pt 0 0;font-size:{size:.1f}pt;line-height:1.1'>{esc(n['label'])}</p>")
+    css = f"body{{font-family:sans-serif;color:{ink}}}"
+    size = next((z for z in NODE_SIZES if _probe(box, html_at(z), css)), None)  # the largest type that fits this box without shrinking
+    if size is None:
+        raise SystemExit(f"graph node {n['node_id']} does not fit at {NODE_SIZES[-1]} pt: shorten the label in the pack or enlarge BOX")
+    spare, _ = page.insert_htmlbox(box, html_at(size), css=css, scale_low=1)
     if spare < 0:
-        raise SystemExit(f"graph node {n['node_id']} overflows even shrunk to 80%: shorten the label in the pack or enlarge BOX")
-    return scale
+        raise SystemExit(f"graph node {n['node_id']} overflowed at {size} pt after fitting; check _probe")
+    return size
+
+
+NODE_SIZES = [10.0, 9.6, 9.2, 8.8, 8.4, 8.0, 7.6, 7.2]
+_SCRATCH = {}
+
+
+def _probe(box, html, css):
+    """True when html fits in box at its own size (tried on a scratch page, nothing is drawn on the real one)."""
+    import pymupdf
+    if "page" not in _SCRATCH:
+        _SCRATCH["doc"] = pymupdf.open()
+        _SCRATCH["page"] = _SCRATCH["doc"].new_page(width=842, height=595)
+    spare, _ = _SCRATCH["page"].insert_htmlbox(box, html, css=css, scale_low=1)
+    return spare >= 0
 
 
 def draw_key(page, kinds, statuses, y0):
@@ -484,31 +511,31 @@ def draw_key(page, kinds, statuses, y0):
 
     def label(x, y, w, h, t, sz=6.4):
         page.insert_htmlbox(pymupdf.Rect(x, y, x + w, y + h), f"<p style='margin:0;font-size:{sz}pt;line-height:1.1'>{t}</p>", css="body{font-family:sans-serif;color:#000}")
-    label(42, y0 + 8, 36, 12, "<b>Edges</b>", 7.2)
-    x = 80
+    label(40, y0 + 10, 38, 12, "<b>Edges</b>", 7.2)
+    x = 78
     for st, sty in statuses:
         ink = sty.get("color", (0, 0, 0))
         s = page.new_shape()
-        s.draw_line(pymupdf.Point(x, y0 + 13), pymupdf.Point(x + 46, y0 + 13))
+        s.draw_line(pymupdf.Point(x, y0 + 15), pymupdf.Point(x + 62, y0 + 15))  # long enough that the pattern shows on both sides of the tag
         s.finish(color=ink, width=sty["w"], dashes=sty["dash"], lineCap=sty["cap"])
         s.commit()
         t = page.new_shape()
-        t.draw_rect(pymupdf.Rect(x + 12, y0 + 7, x + 34, y0 + 19))
+        t.draw_rect(pymupdf.Rect(x + 20, y0 + 9, x + 42, y0 + 21))
         t.finish(color=ink, fill=sty["fill"], width=0.8)
         t.commit()
-        label(x + 50, y0 + 4, 92, 18, f"<b>{st}</b>: {esc(sty['text'])}")
-        x += 146
+        label(x + 66, y0 + 5, 76, 24, f"<b>{st}</b>: {esc(sty['text'])}", 6.2)
+        x += 144
     s = page.new_shape()
     for off in (0, 5):
-        s.draw_line(pymupdf.Point(x + 8 + off, y0 + 5), pymupdf.Point(x + 8 + off, y0 + 21))
+        s.draw_line(pymupdf.Point(x + 6 + off, y0 + 6), pymupdf.Point(x + 6 + off, y0 + 24))
     s.finish(color=(0, 0, 0), width=2.2)
     s.commit()
-    label(x + 24, y0 + 4, 82, 18, "<b>Double bar</b>: the transfer breaks here")
-    label(42, y0 + 30, 36, 12, "<b>Nodes</b>", 7.2)
-    x = 80
+    label(x + 22, y0 + 5, 66, 24, "<b>Double bar</b>: the transfer breaks here", 6.2)
+    label(40, y0 + 36, 38, 12, "<b>Nodes</b>", 7.2)
+    x = 78
     for kind in kinds:
         st = _node_style(kind)
-        r = pymupdf.Rect(x, y0 + 28, x + 22, y0 + 40)
+        r = pymupdf.Rect(x, y0 + 34, x + 22, y0 + 46)
         s = page.new_shape()
         s.draw_rect(r)
         s.finish(color=(0, 0, 0), fill=st["fill"], width=st["width"], dashes=st["dashes"])
@@ -518,10 +545,10 @@ def draw_key(page, kinds, statuses, y0):
             i2.draw_rect(r + (2.2, 2.2, -2.2, -2.2))
             i2.finish(color=(0, 0, 0), width=0.7)
             i2.commit()
-        label(x + 26, y0 + 26, 94, 18, f"<b>{kind.upper()}</b>: {esc(KIND_TEXT[kind])}")
-        x += 121
-    label(42, y0 + 47, 760, 18, "Letters in brackets are the stages: D data, I inference, H hypothesis, E experiment. Status is carried by line style, fill and the words, never by colour. "
-          "No weights, scores or probabilities are drawn; nothing here implies that any drug should or should not be used.", 6.4)
+        label(x + 26, y0 + 32, 92, 18, f"<b>{kind.upper()}</b>: {esc(KIND_TEXT[kind])}", 6.2)
+        x += 120
+    label(40, y0 + 53, 764, 14, "Letters in brackets are the stages: D data, I inference, H hypothesis, E experiment. Status is carried by line style, fill and the words, never by colour. "
+          "No weights, scores or probabilities are drawn; nothing here implies that any drug should or should not be used.", 6.2)
 
 
 def graph_page(doc, nodes, edges):
@@ -581,10 +608,10 @@ def graph_page(doc, nodes, edges):
     kinds = [k for k in KIND_TEXT if any(n["kind"] == k for n in nodes)]
     looks = {}
     for e in edges:
-        st = "CONTEXT ONLY" if e["relation"] == "context_only" else e["status"]
+        st = "CONTEXT ONLY" if (e["relation"] == "context_only" or e["status"] == "CONTEXT ONLY") else e["status"]
         looks[st] = edge_look(e)
-    draw_key(page, kinds, sorted(looks.items(), key=lambda kv: -kv[1]["order"]), 488)
-    return min(scales)
+    draw_key(page, kinds, sorted(looks.items(), key=lambda kv: -kv[1]["order"]), 486)
+    return min(scales)  # smallest node type size in pt
 
 
 # ---------------------------------------------------------------------------- assembly
@@ -618,10 +645,9 @@ def assemble(pack, commit, landed, pagemap):
     import pymupdf
     A, B, C, D, F, nodes, edges, prov = pack
     doc = pymupdf.open()
-    doc.insert_pdf(story_doc(lambda: front_html(A, pagemap), False))
+    doc.insert_pdf(story_doc(lambda: front_html(A, pagemap) + f_html(F), False))
     min_scale = graph_page(doc, nodes, edges)
-    doc.insert_pdf(story_doc(lambda: edge_list_html(edges) + f_html(F), False))
-    doc.insert_pdf(story_doc(lambda: d_html(D), True))
+    doc.insert_pdf(story_doc(lambda: edge_list_html(edges) + d_html(D), True))
     doc.insert_pdf(story_doc(lambda: back_html(B, C, prov, commit, landed), False))
     return doc, min_scale
 
@@ -639,12 +665,12 @@ def build(out: Path, landed: str = "") -> Path:
             raise SystemExit(f"--landed {landed} does not contain content commit {commit[:12]}")
         landed = full
     pack.append(prov)
-    titles = ["Ketamine in WWOX-related epilepsy", "Figure 1. Where the transfer", "Figure 1: edge list", "The deciding measurement",
+    titles = ["Ketamine in WWOX-related epilepsy", "The deciding measurement", "Figure 1. Where the transfer", "Figure 1: edge list",
               "Negative and ambiguous results, and the quantitative details", "Methods and coverage"]
     pagemap = None
     for _ in range(4):  # the page-order line on page 1 needs the page numbers of the later sections: lay out until they stop moving
         doc, min_scale = assemble(pack, commit, landed, pagemap)
-        new = dict(zip("AGEFDM", find_pages(doc, titles)))
+        new = dict(zip("AFGEDM", find_pages(doc, titles)))
         if new == pagemap:
             break
         pagemap = new
@@ -656,8 +682,8 @@ def build(out: Path, landed: str = "") -> Path:
         w, h = page.rect.width, page.rect.height
         page.insert_htmlbox(pymupdf.Rect(bp.MARGIN_X, h - 36, w - 110, h - 14), f"<p style='margin:0;font-size:7.2pt'>{escape(footer)}</p>", css="body{font-family:sans-serif;color:#222}")
         page.insert_htmlbox(pymupdf.Rect(w - 110, h - 36, w - bp.MARGIN_X, h - 14), f"<p style='margin:0;font-size:7.2pt;text-align:right'>{page.number + 1} / {total}</p>", css="body{font-family:sans-serif;color:#222}")
-    marks = [("Decision evidence", pagemap["A"]), ("Figure 1. Evidence graph", pagemap["G"]), ("Figure 1: edge list", pagemap["E"]),
-             ("The deciding measurement", pagemap["F"]), ("Negative results and quantitative details", pagemap["D"]),
+    marks = [("Decision evidence", pagemap["A"]), ("The deciding measurement", pagemap["F"]), ("Figure 1. Evidence graph", pagemap["G"]),
+             ("Figure 1: edge list", pagemap["E"]), ("Negative results and quantitative details", pagemap["D"]),
              ("Methods, references and provenance", pagemap["M"])]
     doc.set_toc([[1, n, p] for n, p in marks])
     keywords = "pilot; not medical advice; content-commit " + commit + ("; main " + landed if landed else "") + "; " + "; ".join(f"{n}={h[:12]}" for n, h in prov)
@@ -671,7 +697,7 @@ def build(out: Path, landed: str = "") -> Path:
         print("font subsetting skipped:", exc)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_bytes(doc.tobytes(garbage=4, deflate=True, no_new_id=True))
-    print(f"{total} pages; smallest graph text scale {min_scale:.2f}; page order {pagemap}")
+    print(f"{total} pages; smallest graph node text {min_scale:.1f} pt; page order {pagemap}")
     return out
 
 
