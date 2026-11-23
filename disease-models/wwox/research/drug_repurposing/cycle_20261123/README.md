@@ -1,6 +1,6 @@
 # WWOX drug-repurposing decision register, 23 November 2026
 
-**12:08 UTC checkpoint.** The authorized window ends at 17:05 UTC. The six-library human GRIA2 splice-junction count is complete. This register records the laboratory's research decisions. None of the four compounds was directly tested in a WWOX-deficient preparation by the new analyses.
+**Mid-cycle checkpoint after the 12:03 UTC independent review.** The authorized window ends at 17:05 UTC. The six-library human GRIA2 splice-junction count is complete. This register records the laboratory's research decisions. None of the four compounds was directly tested in a WWOX-deficient preparation by the new analyses.
 
 | Compound | Decision from the current evidence | Observation that could change it |
 |---|---|---|
@@ -17,6 +17,8 @@
 - **Memantine and human radial glia.** Healthy human tissue links α7 nicotinic receptor signaling to progenitor–neuron balance. In WWOX organoids the combined CHRNA7 and CHRFAM7A contrast is +0.015 log2 units and changes sign on library omission. At the adult CSF reference of 0.36 µM, a unit-slope curve for the recombinant human α7 receptor predicts 6.7% block; a slope of 0.5 gives 21.2%. Native rat potency cannot settle the human question. Direct α7 current and surviving neuronal yield in the same human lineage would change the decision. [Independent human developmental test](../memantine_nicotinic_fate_20261123/README.md)
 
 - **Memantine and calcium-permeable AMPA currents.** Relative GluA1 supply fell in both neuronal-deletion mouse regions and rose in human organoids. The fraction of calcium-permeable current is unknown. A submicromolar block depends strongly on receptor composition and dose–response slope. At 0.36 µM, the most sensitive ordinary TARP-associated configuration gives 3.5% modeled block at unit slope and 15.9% at slope 0.5. Current in matched WWOX-deficient human neurons is the discriminating measurement. [Channel, exposure and RNA analysis](../memantine_permeable_ampa_20261123/README.md)
+
+- **Ganaxolone and survival of damaged progenitors.** In WWOX-deficient organoids the ventricular cleaved-caspase-3/SOX2 median is about 9%, versus 25% in controls. A putative additional anti-apoptotic drug mechanism therefore requires measuring repair and healthy neuronal yield. The receptor PAQR6 exceeds 1 CPM in 6/6 whole organoid libraries and 5 FPKM in 6/6 fetal ventricular-zone samples, but reaches 1 FPKM in 0/4 profiles of sorted cycling apical radial glia. PAQR7 and PAQR8 were detected above that floor in all four. An anatomical signal cannot assign the pharmacological response to the damaged lineage. [PAQR and progenitor fate](../ganaxolone_paqr_survival_20261123/README.md)
 
 ## Independent review
 
