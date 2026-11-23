@@ -461,3 +461,5 @@
 {"evidence": "SendMessage receipt msg_id bac462cf-d888-4da6-b06c-02ec00815217, host clock 04:11Z", "id": "ADV-189", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-23T04:09:59Z"}
 {"assessment": "HOST", "id": "ADV-190", "key": "arce-molina-2020-pyronicsf-astrocyte-import-vs-utilization-for-wo07-note-science", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-23T04:22:33Z"}
 {"evidence": "SendMessage receipt msg_id 2e24d990-d6a2-43ea-a567-6fbcc984ffcc, host clock 04:24Z", "id": "ADV-190", "state": "SENT", "to": ["SCI - CURRENT 052bf24b"], "utc": "2026-11-23T04:22:53Z"}
+{"assessment": "HOST", "id": "ADV-191", "key": "yang-2026-scn2a-isogenic-organoids-shared-phenotype-vs-drug-response-rp043-inv10-science", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-23T06:10:50Z"}
+{"evidence": "SendMessage receipt msg_id d55d42a1-8e9d-4c10-92dd-8741ce0d5b18, host clock 06:12Z", "id": "ADV-191", "state": "SENT", "to": ["SCI"], "utc": "2026-11-23T06:11:26Z"}
