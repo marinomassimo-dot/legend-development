@@ -16,6 +16,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 10 | Lacosamide, sustained firing and axonal propagation | Is suppression of prolonged discharges selective at attainable exposure, and is there independent evidence for a developmental action through CRMP2? |
 | 11 | Riboflavin, cellular uptake and flavin-dependent mitochondrial enzymes | Can new cofactor synthesis and functional recovery reveal a reversible bottleneck despite normal whole-cell FAD? |
 | 12 | Citicoline, phosphatidylcholine supply and developmental myelin | Does precursor availability limit first-sheath formation and evoked conduction in WWOX? |
+| 13 | Pyridoxine, cofactor handling and inhibitory transmitter replenishment | Can increased cofactor availability rescue stimulated GABA production and native inhibition in WWOX? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -26,7 +27,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: citicoline.** The mouse treatment improved the proportion of myelinated axons in a glial choline-transporter knockout; WWOX nuclei show mixed transporter directions across maturation stages. Next distinguish precursor proliferation from lipid supply and determine what a labelled head group establishes about new neural phosphatidylcholine. [Myelin and cell classes](citicoline/myelin.md) · [Oral metabolites and neonatal trial audit](citicoline/human.md)
+**Active compound: pyridoxine.** Does cofactor-dependent GABA replenishment fail during repeated activity in WWOX inhibitory neurons? The WWOX case abstract names vitamin B6 without the vitamer. [Prediction and countertest](pyridoxine/README.md)
+
+**Citicoline parked for WWOX trial prioritization.** Mouse evidence supports remyelination in defined non-WWOX settings. Precursor proliferation can also raise myelin markers. A fixed cohort of mature WWOX cells with simultaneous flux, new sheaths and conduction would reopen the question. [Mechanism and reanalysis](citicoline/tracer.md) · [Mouse and cell-class results](citicoline/myelin.md) · [Human clinical audit](citicoline/human.md)
 
 **Riboflavin parked for WWOX trial prioritization.** The RNA signal failed independent adult transfer; compound-specific neural rescue was limited even in the positive-control disorder. Direct WWOX cofactor formation and neural recovery remain open. [WWOX and primary metabolic comparison](riboflavin/flavins.md) · [Culture-medium audit](riboflavin/medium.md) · [Pediatric exposure](riboflavin/exposure.md) · [Neural comparison and decision](riboflavin/neurons.md)
 

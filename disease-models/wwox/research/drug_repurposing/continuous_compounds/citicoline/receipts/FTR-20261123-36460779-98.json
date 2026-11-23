@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-36460779-98",
+  "event_at": "2026-11-23T23:30:27Z",
+  "analysis_at": "2026-11-23T23:30:27Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "36460779",
+    "doi": "10.1007/s00394-022-03059-8"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/citicoline_loop_20261123/choline-supp.docx",
+  "source_fingerprint": "27cf86fa7103e652eebe513ef44a85d997d982ac75ad027bde8862bce1766d48",
+  "workflow": "Targeted assessment of precursor fate and comparison against a cell-number explanation for apparent myelin rescue.",
+  "evidence_basis": [
+    "Fig. 3A reports peak group concentrations at 12 h.",
+    "Supplement 1, rows for both sampling schedules: D9-choline, native PC and D9-PC in plasma."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/citicoline/tracer.md"
+  ]
+}

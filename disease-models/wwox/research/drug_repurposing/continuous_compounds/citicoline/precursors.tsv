@@ -1,0 +1,5 @@
+supplement	infants	D9_free_1h_uM	D9_PC_12h_uM	D9_PC_60h_uM	D9_PC_AUC_uM_h	D9_to_native_PC_AUC_pct_h	D9_to_total_PC_AUC_pct_h	D9_to_native_AUC_1_24h_group	D9_to_native_AUC_12_60h_group	D9_PC_AUC_alternate_60h_uM_h
+D9-Choline chloride	8	1.825	8.085	3.495	234.3	15.734	15.65	14.194	19.415	293.305
+D9-GPC	8	1.27	8.43	4.635	317.567	19.987	19.852	19.987	22.902	352.825
+D9-Phosphorylcholine	8	1.165	9.755	4.54	284.3	17.87	17.781	13.389	21.852	325.16
+D9-POPC	8	0.0	14.42	4.47	359.457	20.958	20.835	18.266	28.439	425.897
