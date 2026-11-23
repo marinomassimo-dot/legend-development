@@ -1,0 +1,550 @@
+{
+ "_note": "STAND-IN content for the ADV-201 rendering pilot. Every sentence is taken or condensed from view/research_reports/ketamine.json (evidence reviewed through 22 November 2026). Anything that file does not state is the literal token PLACEHOLDER. SCI's content pack (ADV-200, ../content/) replaces this file; the renderer reads only the keys below.",
+ "compound": "Ketamine",
+ "context": "WWOX-related epilepsy (WWOX-DEE, WOREE class)",
+ "evidence_through": "22 November 2026",
+ "status_line": "PILOT LAYOUT. Content is a stand-in condensed from the existing ketamine report; fields marked PLACEHOLDER await the content pack.",
+ "cover_tag": "AI-curated research brief for discussion with a clinical team",
+ "bottom_line": "Ketamine remains a research hypothesis for WWOX-related epilepsy. The reviewed sources do not establish benefit in WWOX-DEE, either for an acute episode or for ongoing seizure control.",
+ "reading_guide": [
+  [
+   "Primary anchor",
+   "Row W2: d-APV abolished spontaneous bursts in Wwox-deleted cortical slices (ref 1)."
+  ],
+  [
+   "Compound measured in Wwox tissue",
+   "d-APV, a competitive NMDA antagonist. Ketamine and memantine were not tested there."
+  ],
+  [
+   "Strongest weakening evidence",
+   "Rows W3, W4, W5, X5 and the rival in row P2."
+  ],
+  [
+   "Measurement that would change the choice",
+   "Row P5: both pore blockers fail at verified depth while d-APV reproduces its effect in the same preparation."
+  ]
+ ],
+ "references": [
+  {
+   "id": 1,
+   "match": "Breton et al. · Figure 3",
+   "kind": "primary",
+   "short": "Breton et al., Wwox-deficient cortical slice physiology",
+   "pmid_label": "PMID 34634460",
+   "access": "Full text and figure read by the laboratory (per the full-text and figure audit)."
+  },
+  {
+   "id": 2,
+   "match": "Repudi et al.",
+   "kind": "primary",
+   "short": "Repudi et al., neuronal Wwox model and incidental anaesthesia",
+   "pmid_label": "PMID 34747138",
+   "access": "PLACEHOLDER"
+  },
+  {
+   "id": 3,
+   "match": "Chen et al.",
+   "kind": "primary",
+   "short": "Chen et al., HCN1 mechanism",
+   "pmid_label": "PMID 19158287",
+   "access": "PLACEHOLDER"
+  },
+  {
+   "id": 4,
+   "match": "Riepe et al.",
+   "kind": "primary",
+   "short": "Riepe et al., ex vivo hippocampal report",
+   "pmid_label": "PMID 42794650",
+   "access": "PLACEHOLDER"
+  },
+  {
+   "id": 5,
+   "match": "Ket-Mid randomized trial",
+   "kind": "primary",
+   "short": "Ket-Mid randomised trial, published abstract",
+   "pmid_label": "PMID not given",
+   "access": "Abstract only (the laboratory used the abstract)."
+  },
+  {
+   "id": 6,
+   "match": "KETASER01",
+   "kind": "primary",
+   "short": "KETASER01, early termination",
+   "pmid_label": "PMID 35833327",
+   "access": "PLACEHOLDER"
+  },
+  {
+   "id": 7,
+   "match": "DeVine et al.",
+   "kind": "primary",
+   "short": "DeVine et al., infant case series",
+   "pmid_label": "PMID 37139250",
+   "access": "Read in full by the laboratory (infant series)."
+  },
+  {
+   "id": 8,
+   "match": "Schiller et al.",
+   "kind": "primary",
+   "short": "Schiller et al., memantine crossover",
+   "pmid_label": "PMID 36256600",
+   "access": "Full-text route blocked; paired overlap unavailable."
+  },
+  {
+   "id": 9,
+   "match": "LEGEND full-text and figure audit",
+   "kind": "legend",
+   "short": "LEGEND full-text and figure audit (B1 and dated corrections)"
+  },
+  {
+   "id": 10,
+   "match": "LEGEND exposure audit",
+   "kind": "legend",
+   "short": "LEGEND exposure audit and blind check"
+  },
+  {
+   "id": 11,
+   "match": "LEGEND corrections after independent",
+   "kind": "legend",
+   "short": "LEGEND corrections after independent clinical and safety review"
+  },
+  {
+   "id": 12,
+   "match": "LEGEND kinetics comparison and outcome",
+   "kind": "legend",
+   "short": "LEGEND kinetics comparison and outcome table"
+  },
+  {
+   "id": 13,
+   "match": "LEGEND access and interpretation",
+   "kind": "legend",
+   "short": "LEGEND access and interpretation audit"
+  }
+ ],
+ "groups": [
+  {
+   "key": "W",
+   "title": "A. WWOX preclinical evidence",
+   "rows": [
+    {
+     "id": "W1",
+     "type": "DATA",
+     "statement": "Spontaneous bursts occurred in 36 of 42 neuronal Wwox-knockout slices, 4 of 23 heterozygous slices and 0 of 11 wild-type slices (cortical slices, postnatal days 13 to 17; slices are nested within animals).",
+     "model": "Mouse cortical slice; spontaneous burst occurrence. Animal denominators: PLACEHOLDER",
+     "refs": [
+      [
+       1,
+       "Fig. 3 (panel PLACEHOLDER)"
+      ]
+     ]
+    },
+    {
+     "id": "W2",
+     "type": "DATA",
+     "anchor": true,
+     "statement": "d-APV, a competitive NMDA receptor antagonist, abolished bursts in five knockout slices from three knockout animals. Ketamine and memantine were not tested.",
+     "model": "Mouse cortical slice, neuronal Wwox loss; burst abolition. 5 slices, 3 animals",
+     "refs": [
+      [
+       1,
+       "Fig. 3 (panel PLACEHOLDER)"
+      ]
+     ]
+    },
+    {
+     "id": "W3",
+     "type": "DATA",
+     "statement": "Carbenoxolone was reported to lower burst frequency by 87% without reversal after washout. It is nonselective, and a pannexin blocker failed to reproduce the effect. The paper's duration and amplitude descriptions differ from its figure.",
+     "model": "Same slice model; burst frequency",
+     "refs": [
+      [
+       1,
+       "Fig. PLACEHOLDER"
+      ],
+      [
+       9,
+       "dated corrections"
+      ]
+     ]
+    },
+    {
+     "id": "W4",
+     "type": "DATA",
+     "statement": "After d-APV washout the frequency bar was about 1.8 times baseline by image reading. The error bar includes baseline and the text describes recovery, so rebound is unproven.",
+     "model": "Same slice model; burst frequency after washout (image reading)",
+     "refs": [
+      [
+       1,
+       "Fig. PLACEHOLDER"
+      ],
+      [
+       9,
+       "B1 correction"
+      ]
+     ]
+    },
+    {
+     "id": "W5",
+     "type": "INFERENCE",
+     "statement": "The result supports a contribution of NMDA receptor signalling to bursts in that preparation. A change in inhibition, network drive or intrinsic excitability could still set the bursts off, and the pharmacological evidence traces to one laboratory and one preparation.",
+     "model": "Inference from W1 to W4; not a separate measurement",
+     "refs": [
+      [
+       1,
+       "cortical slice physiology"
+      ],
+      [
+       9,
+       "B1"
+      ]
+     ]
+    },
+    {
+     "id": "W6",
+     "type": "DATA",
+     "statement": "The separate Wwox studies that used ketamine for anaesthesia supplied no controlled seizure endpoint for ketamine.",
+     "model": "Mouse Wwox model; incidental anaesthesia",
+     "refs": [
+      [
+       2,
+       "locator PLACEHOLDER"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "key": "X",
+   "title": "B. Clinical data from other indications (not WWOX)",
+   "rows": [
+    {
+     "id": "X1",
+     "type": "DATA",
+     "statement": "Ket-Mid randomised 144 children. Clinical cessation at five minutes was 76% with ketamine plus midazolam and 21% with placebo plus midazolam: a first-line add-on result in mixed causes.",
+     "model": "Initial convulsive status epilepticus, children; cessation at 5 min",
+     "refs": [
+      [
+       5,
+       "abstract"
+      ]
+     ]
+    },
+    {
+     "id": "X2",
+     "type": "DATA",
+     "statement": "KETASER01 stopped at 10 participants; 2 of 5 in each arm met the study endpoint. There are too few randomised data for comparative efficacy.",
+     "model": "Refractory convulsive status epilepticus, children; study endpoint",
+     "refs": [
+      [
+       6,
+       "locator PLACEHOLDER"
+      ]
+     ]
+    },
+    {
+     "id": "X3",
+     "type": "DATA",
+     "statement": "In a three-infant series, seizure resolution and changes in co-infusions were not aligned in a way that isolates ketamine.",
+     "model": "Very young infants; case series",
+     "refs": [
+      [
+       7,
+       "locator PLACEHOLDER"
+      ]
+     ]
+    },
+    {
+     "id": "X4",
+     "type": "DATA",
+     "statement": "A memantine trial in mixed developmental and epileptic encephalopathy lists 9 of 27 versus 2 of 27 on a composite crossover outcome. The paired overlap is unavailable to the laboratory; paired significance and harms are unresolved.",
+     "model": "Mixed DEE; composite crossover outcome",
+     "refs": [
+      [
+       8,
+       "locator PLACEHOLDER"
+      ],
+      [
+       13,
+       "access limits"
+      ]
+     ]
+    },
+    {
+     "id": "X5",
+     "type": "INFERENCE",
+     "statement": "The original 24 of 30 pooled claim and the proposed genetically favourable subgroup failed review. An ATP1A2 case supplied concurrent add-on treatment, not a validated ketamine-to-memantine sequence.",
+     "model": "Review of earlier pooled claim",
+     "refs": [
+      [
+       11,
+       "dated corrections"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "key": "P",
+   "title": "C. The proposed comparison (not yet performed)",
+   "rows": [
+    {
+     "id": "P1",
+     "type": "INFERENCE",
+     "statement": "Transfer from d-APV to ketamine requires two comparisons: receptor action under active conditions, and the exposure at which each effect was measured. Total plasma, free plasma, CSF, brain and bath concentrations were not related to one another in the relevant setting.",
+     "model": "Pharmacokinetic audit; exposure definitions PLACEHOLDER",
+     "refs": [
+      [
+       10,
+       "exposure audit"
+      ]
+     ]
+    },
+    {
+     "id": "P2",
+     "type": "DATA",
+     "rival": true,
+     "statement": "Ketamine reduced the hyperpolarisation-activated current Ih in cortical pyramidal neurons at a nearby developmental age, and the effect disappeared in HCN1-knockout neurons. This is a plausible rival if sag and burst frequency change together; Wwox-dependent sensitivity is unknown.",
+     "model": "Cortical pyramidal neurons, other preparation; Ih",
+     "refs": [
+      [
+       3,
+       "locator PLACEHOLDER"
+      ]
+     ]
+    },
+    {
+     "id": "P3",
+     "type": "DATA",
+     "statement": "S-ketamine suppressed induced events in adult hippocampal slices without magnesium. The reported bath observation started at 100 µM, about 11 times the highest total human plasma peak in the sources, around 8.9 µM.",
+     "model": "Adult hippocampal slice, no Mg2+; nominal bath concentration vs total plasma (not unbound)",
+     "refs": [
+      [
+       4,
+       "locator PLACEHOLDER"
+      ],
+      [
+       10,
+       "exposure audit"
+      ]
+     ]
+    },
+    {
+     "id": "P4",
+     "type": "HYPOTHESIS",
+     "statement": "A pore blocker may suppress Wwox-related bursts when its effect on NMDA receptor activity is comparable to that of d-APV.",
+     "model": "Not tested; needs the P5 design",
+     "refs": [
+      [
+       12,
+       "outcome table"
+      ]
+     ]
+    },
+    {
+     "id": "P5",
+     "type": "EXPERIMENT",
+     "statement": "Compare ketamine, memantine and d-APV with vehicle in the same slice model. Record burst rate, evoked inhibition, Ih sag, and early and later washout, with the probe schedule. Supports the class hypothesis if both pore blockers suppress bursts at comparable evoked block; weakens it if both fail at verified depth while d-APV reproduces its effect. One failed agent weakens only that agent.",
+     "model": "Mouse cortical slice, neuronal Wwox loss. Thresholds and replication numbers: PLACEHOLDER",
+     "refs": [
+      [
+       12,
+       "outcome table"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "graph": {
+  "n1": [
+   "DATA",
+   "OBSERVATION",
+   "d-APV abolished spontaneous bursts in 5 Wwox-knockout slices from 3 animals (bursts in 36 of 42 knockout slices).",
+   "[1]"
+  ],
+  "n2": [
+   "INFERENCE",
+   "RECEPTOR MECHANISM",
+   "NMDA receptor activation contributes to the bursts, in this preparation only.",
+   "[1] [9]"
+  ],
+  "n3a": [
+   "DATA",
+   "CLAIM A: COMPETITIVE ANTAGONIST",
+   "d-APV abolishes bursts. Tested in the Wwox slice.",
+   "[1]"
+  ],
+  "n3b": [
+   "HYPOTHESIS",
+   "CLAIM B: PORE BLOCKER",
+   "Ketamine or memantine suppress bursts at matched evoked NMDA block. Not tested in Wwox tissue.",
+   "[12]"
+  ],
+  "n4": [
+   "HYPOTHESIS",
+   "ALTERNATIVE",
+   "Ih (HCN1) sag change or interneuron disinhibition produces the ketamine effect instead.",
+   "[3] other preparation"
+  ],
+  "n5": [
+   "EXPERIMENT",
+   "DISCRIMINATING READOUT",
+   "Same slice: ketamine, memantine, d-APV, vehicle. Burst rate, evoked inhibition, Ih sag, washout.",
+   "[12]"
+  ]
+ },
+ "methods": {
+  "corpus": [
+   [
+    "Evidence reviewed through",
+    "22 November 2026."
+   ],
+   [
+    "Corpus and selection",
+    "Peer-reviewed sources named in the reference list and LEGEND's own audits of them. Search strategy, inclusion rules and the number of records screened: PLACEHOLDER"
+   ],
+   [
+    "Verification",
+    "The audit found all 25 cited PMIDs and matched 23 of 24 quotations. Those checks were kept separate from judging what each citation supports. Figures were re-read and the pharmacokinetic arithmetic was reproduced."
+   ],
+   [
+    "Access limits",
+    "Full-text routes remained blocked for key memantine, Kuki and Rosati papers. Ket-Mid was read as a published abstract. Underlying patient records, treatment plans and individual timings are not included."
+   ],
+   [
+    "Key corrections",
+    "The 24 of 30 pooled claim and genetic subgroup failed review. The claim of a unique mechanism match was overstated. Only two of nine initial labels of the GSK3 duration-switch comparison matched the paper in one audit, and the apparent short-versus-long reversal did not survive."
+   ],
+   [
+    "Model scenario weights",
+    "Exploratory. No validated predictive probability is given and none should be read from this brief."
+   ]
+  ],
+  "figure2_reserved": "Figure 2 (quantitative comparison) is not drawn. A figure is added only when the content pack states, for every plotted value, the assay, the unit, the exposure definition (nominal solution, total or unbound), the setting (clinical or animal) and, where the source gives them, an interval. Mixed settings are never pooled and no dose is shown."
+ },
+ "appendix_a": {
+  "title": "Appendix A. Negative, weakening and ambiguous results",
+  "rows": [
+   [
+    1,
+    2,
+    "W3"
+   ],
+   [
+    1,
+    3,
+    "W4"
+   ],
+   [
+    2,
+    1,
+    "P2"
+   ],
+   [
+    2,
+    3,
+    "P3"
+   ],
+   [
+    3,
+    1,
+    "X2"
+   ],
+   [
+    3,
+    2,
+    "X3"
+   ],
+   [
+    3,
+    3,
+    "X4"
+   ],
+   [
+    6,
+    0,
+    "—"
+   ],
+   [
+    6,
+    1,
+    "—"
+   ],
+   [
+    6,
+    2,
+    "—"
+   ],
+   [
+    6,
+    3,
+    "X5"
+   ]
+  ],
+  "_note": "[chapter (1-based), row (0-based), linked decision-table row]; text is copied from view/research_reports/ketamine.json"
+ },
+ "appendix_b": {
+  "title": "Appendix B. Quantitative details and how each number was measured",
+  "columns": [
+   "Quantity",
+   "Value as reported",
+   "Setting and definition",
+   "Ref"
+  ],
+  "rows": [
+   [
+    "Burst occurrence by genotype",
+    "36/42 knockout, 4/23 heterozygous, 0/11 wild-type slices",
+    "Cortical slices, postnatal days 13 to 17; slices nested within animals; animal counts PLACEHOLDER",
+    "[1]"
+   ],
+   [
+    "d-APV abolition",
+    "5 slices, 3 knockout animals",
+    "Competitive antagonist; concentration and unit PLACEHOLDER",
+    "[1]"
+   ],
+   [
+    "Carbenoxolone",
+    "87% lower frequency",
+    "Nonselective; no reversal after washout; unit and n PLACEHOLDER",
+    "[1]"
+   ],
+   [
+    "d-APV washout",
+    "about 1.8 times baseline",
+    "Read from the image; error bar includes baseline; no interval stated in the text",
+    "[1] [9]"
+   ],
+   [
+    "Channel trapping, one culture comparison",
+    "86% versus 71%",
+    "Culture; not measured in the Wwox slice; agents and conditions PLACEHOLDER",
+    "[10]"
+   ],
+   [
+    "Bath versus plasma",
+    "100 µM bath; about 8.9 µM",
+    "Nominal bath concentration, adult hippocampal slice, no magnesium, versus the highest total human plasma peak in the sources (total, not unbound); ratio about 11",
+    "[4] [10]"
+   ],
+   [
+    "Ket-Mid",
+    "76% versus 21% at five minutes; 144 children",
+    "Clinical cessation, ketamine plus midazolam versus placebo plus midazolam; abstract only",
+    "[5]"
+   ],
+   [
+    "KETASER01",
+    "2/5 in each arm; stopped at 10",
+    "Study endpoint, refractory status epilepticus; early termination",
+    "[6]"
+   ],
+   [
+    "Memantine crossover",
+    "9/27 versus 2/27",
+    "Composite crossover outcome, mixed DEE; paired overlap unavailable",
+    "[8]"
+   ]
+  ]
+ }
+}
