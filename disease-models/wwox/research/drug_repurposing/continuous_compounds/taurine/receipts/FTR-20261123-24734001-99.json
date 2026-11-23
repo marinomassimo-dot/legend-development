@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-24734001-99",
+  "event_at": "2026-11-23T21:33:00Z",
+  "analysis_at": "2026-11-23T21:33Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "24734001",
+    "doi": "10.3389/fncel.2014.00088"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.3389/fncel.2014.00088 ; files/deepening_downloads/taurine_loop_20261123/Furukawa2014_F9.jpg ; files/deepening_downloads/taurine_loop_20261123/PMC3975117.1.xml SHA256 a46de05b4ac218247b83de9f147be09308736e4c7384edb3e0e30e30828dab0c",
+  "source_fingerprint": "ba10246f1a6cb7ed745cd2ab7a017bad7c1acb97df279e751739954e9cfc5ba7",
+  "workflow": "Distinguish time of cortical-plate arrival, final position and cell-cycle exit in taurine-sensitive and WWOX developmental models.",
+  "evidence_basis": [
+    "Figure 9C–D labelled “Percent distribution of RFP-positive cells”. Read CP bars in five age/genotype cohorts, actual image (784 by 779), no inference from the trace images.",
+    "Results for figure 8: the HPLC taurine comparison is in wild-type fetal slices. Figure 9 caption reports fetuses, intervention delivered to mothers; snapshot by cortex region."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/taurine/migration.md"
+  ]
+}

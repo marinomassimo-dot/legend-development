@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-22544747-99",
+  "event_at": "2026-11-23T21:33:00Z",
+  "analysis_at": "2026-11-23T21:33Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "22544747",
+    "doi": "10.1074/jbc.M111.319418"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.1074/jbc.M111.319418 ; files/deepening_downloads/taurine_loop_20261123/PMC3375508.html",
+  "source_fingerprint": "a66b326d67e75365aadfcb3d6c66138807d03d5b433b9ff9ecf6b4df3ab83469",
+  "workflow": "Distinguish time of cortical-plate arrival, final position and cell-cycle exit in taurine-sensitive and WWOX developmental models.",
+  "evidence_basis": [
+    "Targeted Results for figures 2, 3 and 6, including durations, wild-type versus mutant whole-cell recordings and the gramicidin comparison.",
+    "Figure 6 caption: “a greater proportion of KCC2T906A/T1007A-positive cells remained around the VZ/SVZ”. Rat cortical migration after manipulating KCC2 is a distinct experiment from administering taurine in culture."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/taurine/migration.md"
+  ]
+}

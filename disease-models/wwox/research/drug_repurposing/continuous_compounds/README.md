@@ -19,7 +19,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: taurine.** The [prediction and initial conductance scenarios](taurine/README.md) distinguish depolarization at rest, shunting during a drive, recruitment of interneurons and an osmotic response. Next extract native-chloride and firing data before inferring any benefit in WWOX.
+**Active compound: N-acetylcysteine.** The [first exposure comparison and prediction](acetylcysteine/README.md) identify a 1,000-fold discrepancy in the two published descriptions of the co-culture medium relative to a 1 mM fibroblast condition. Next compare central exposure and direction of glutathione synthesis versus glutamate exchange. No NAC response is identifiable from a common background without a matched comparison.
+
+**Taurine parked.** [Native-chloride firing](taurine/native_chloride.md), [transient fetal arrival and discordant WWOX transcript contrasts](taurine/migration.md), and a [quantitative human CSF upper bound](taurine/exposure.md) leave a developmental trial unsupported. Reopen for a matched drug-by-WWOX functional response at measured attainable central exposure.
 
 **Brivaracetam parked.** The WWOX series, target-occupancy comparison and astrocyte schedules did not identify selective absolute suppression of excitatory input. An independent direct-firing comparison lowers priority for an intrinsic firing correction inferred from simulation. Reopen for matched absolute excitatory/inhibitory drug responses on relevant patterns or an interpretable WWOX-specific response. [Dossier and disposition](brivaracetam/README.md) · [Exposure](brivaracetam/exposure.md) · [Astrocytes](brivaracetam/astrocytes.md) · [Ion currents and firing](brivaracetam/intrinsic.md)
 

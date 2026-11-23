@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-24550782-98",
+  "event_at": "2026-11-23T21:23:00Z",
+  "analysis_at": "2026-11-23T21:23Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "24550782",
+    "doi": "10.3389/fncel.2014.00026"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.3389/fncel.2014.00026 ; files/deepening_downloads/taurine_loop_20261123/PMC3912439.1.xml",
+  "source_fingerprint": "525d7be1a4e338cf9c80ca7bd440016e3162339b95dbe0e291ed7a57ab2e92e1",
+  "workflow": "Distinguish native-chloride firing from imposed-chloride current in a developmental comparator for WWOX.",
+  "evidence_basis": [
+    "Methods: cell-attached and whole-cell solutions, responder definition and comparison interval.",
+    "Results accompanying Figure 7: “20 (corresponding to 57%)” pyramidal responders; 3/15 assessable for inhibition. The separate basal subgroup description is arithmetically inconsistent.",
+    "Results accompanying Figure 8: “17 out of 30” interneurons responded. The 12 pyramidal neurons in the low-gabazine test were selected responders."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/taurine/native_chloride.md"
+  ]
+}

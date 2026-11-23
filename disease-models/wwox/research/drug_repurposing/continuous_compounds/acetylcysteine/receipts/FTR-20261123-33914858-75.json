@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-33914858-75",
+  "event_at": "2026-11-23T21:39:00Z",
+  "analysis_at": "2026-11-23T21:39Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "33914858",
+    "doi": "10.1093/brain/awab174"
+  },
+  "prior_receipt": "FTR-20261123-33914858-92",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.1093/brain/awab174 ; files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+  "source_fingerprint": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+  "workflow": "Compare nominal NAC in WWOX neural media, the source protocol, and directly treated fibroblasts.",
+  "evidence_basis": [
+    "Methods, DRG–OPC co-culture, published page 3063: “5 mg/ml N-acetyl-cysteine, 5 mM forskolin”. Rendered the PDF line and checked the units visually.",
+    "Common medium across the genotype comparison; this reread addresses the actual printed formulation only."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/acetylcysteine/README.md"
+  ]
+}

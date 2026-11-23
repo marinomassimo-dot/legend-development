@@ -1,0 +1,31 @@
+# Does taurine correct the cortical migration phenotype in WWOX loss?
+
+**Decision.** Lower priority for taurine as a developmental rescue. The direction depends on the compartment and developmental window. A fixed-time distribution of labelled cells can change through proliferation, exit from the cell cycle, movement, or time spent below the cortical plate. These studies measure different combinations of those events. None gave taurine to a WWOX model.
+
+## Reconstructed timing of cortical-plate arrival
+
+Furukawa et al. reduced endogenous taurine via maternal D-CSA administration. In wild-type fetal slices their extracellular tissue-normalized taurine readout fell by 41.4% (50.21 to 29.42 in the paper's units), and subplate tonic current fell by 80.3% (2.39 to 0.47 pA). The response to *supplementing* an already replete fetus was not tested by this comparison. We read the cortical-plate (CP) bars in Figure 9, using the original image, explicit axis scales and four scan lines through each bar. Values below are approximate group percentages of labelled cells. [Furukawa et al., Results and figures 8–9](https://pmc.ncbi.nlm.nih.gov/articles/PMC3975117/) · [Data and numbers of fetuses](cortical_plate.tsv) · [Image extraction](figure9.py)
+
+| Mouse fetal age | GAD67 genotype | Control CP | Depleted CP | Difference |
+|---|---|---:|---:|---:|
+| E17.5 | Wild type | 37.2% | 44.4% | +7.2 points |
+| E17.5 | Heterozygous | 34.2% | 45.2% | +11.0 points |
+| E17.5 | Homozygous GAD67-GFP | 37.2% | 51.0% | +13.8 points |
+| E16.5 | Homozygous GAD67-GFP | 9.0% | 6.1% | −2.9 points |
+| E18.5 | Homozygous GAD67-GFP | 92.2% | 89.4% | −2.9 points |
+
+The intermediate-day result is compatible with a transient change in passage through the subplate. The wild-type overall distribution at E17.5 did not meet the study's significance criterion (p=0.169). The two adjacent ages used separate, small cohorts, with only three control fetuses at each age. Maternal exposure makes litter another relevant unit. These observations cannot establish an interaction by genotype, a lasting architectural benefit, or a velocity for an individual cell. The maximal scan-line discrepancy was 0.3 percentage points; that describes digitization only.
+
+## Chloride extrusion and the WWOX counterexample
+
+Inoue et al. measured a slower intracellular effect. In embryonic rat cortical cultures expressing wild-type KCC2, taurine shifted mean GABA reversal by **+9.1 mV** using gramicidin (−66.9 to −57.8 mV). In the whole-cell comparison the shift was **+4.2 mV** (−49.5 to −45.3). With the double phosphosite-alanine KCC2 variant, the corresponding whole-cell shift was **−9.5 mV** (−56.3 to −65.8). The difference between the two whole-cell shifts is 13.7 mV; it is descriptive, without a reported interaction test. The perturbation therefore cannot be treated as a simple null control for every action of taurine. Their radial migration experiment compared KCC2 constructs in embryonic rats, without a WWOX intervention. The intracellular and ambient taurine studies share investigators. [Inoue et al., Figures 2, 3 and 6](https://pmc.ncbi.nlm.nih.gov/articles/PMC3375508/)
+
+Cheng et al. labelled dividing cells at E16.5 and inspected Wwox-deficient mouse cortex at birth. More labelled cells remained deep, but proliferative activity also changed: Ki-67 was reduced at E16.5 and increased at birth in the reported regions. Supplementary Figure S6a displays representative BrdU staining. The quantified subplot in S6b counts Ki-67-positive cells per area, not travel distance or speed. The temporal pattern could reflect later cell-cycle exit, impaired movement, or both. The WWOX phenotype cannot be inverted by simply copying the sign of the E17.5 taurine-depletion bar. [Cheng et al., Results and supplementary figures S5–S6](https://pmc.ncbi.nlm.nih.gov/articles/PMC6990504/)
+
+## WWOX-specific check using archived expression matrices
+
+Bulk KO-minus-control changes in mean log2(expression + 1) contradicted a common GAD67-low background. GAD1 decreased by 0.45 in mouse cortex and increased by 3.03 in human cerebral organoids, with both signs stable to each single-library omission. GAD2 increased in both (+0.44 and +1.41). The within-library KCC2-minus-NKCC1 expression contrast fell by 0.28 in mouse cortex and rose by 0.61 in organoids and 0.47 in mouse hippocampus. SLC6A6 in mouse cortex was close to unchanged (+0.003), while organoids showed +0.44. The two-model direction criterion failed. Bulk tissue mixture, age and the two human control libraries constrain interpretation. The small-library sensitivity cannot account for shared lineage. These results identify neither synaptic GABA levels nor transporter activity, phosphorylation or uptake.
+
+The screen reuses the laboratory's transcript mapping and CPM conversion for human counts; mouse data use summed transcript TPM. All comparisons are within model. The same source checksums are listed in the creatine input manifest. [Prespecified question](transcript_question.md) · [Per-library data](transcript_libraries.tsv) · [All contrasts](transcripts.tsv) · [Code](transcript_screen.py) · [Source checksums](../creatine/inputs.tsv) · [Mouse cortex](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158682) · [Human organoids](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE156243) · [Mouse hippocampus](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158681)
+
+**Discriminating prediction.** At matched cell-cycle exit, a reduction in subplate dwell time following taurine depletion should alter intermediate-day arrival even if final layer allocation is similar. Separate entry time, dwell time and final position in WWOX and matched controls. If the WWOX delay vanishes after matching birth date and exit, prioritize delayed differentiation as the explanation. If it persists, compare ambient receptor-dependent responses against slower, uptake-dependent changes in native chloride reversal. Measure final layer identity and function at matched activity. For pediatric feasibility, a prenatal migration effect cannot establish a modifiable postnatal endpoint; the remaining question is whether documented child exposures reach a compartment relevant to ongoing circuit maturation.

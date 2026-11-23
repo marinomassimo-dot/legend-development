@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-29666206-74",
+  "event_at": "2026-11-23T21:36:00Z",
+  "analysis_at": "2026-11-23T21:36Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "29666206",
+    "doi": "10.1136/jnnp-2018-317964"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.1136/jnnp-2018-317964 ; files/deepening_downloads/taurine_loop_20261123/PMC6581075.1.xml",
+  "source_fingerprint": "9765fead3d3447a2928cc47e6aeff3a9d94d0d3d85a8645a3269920cee9524b1",
+  "workflow": "Compare observed central taurine exposure with effective nominal bath ranges, preserving age, units and dispersion.",
+  "evidence_basis": [
+    "Table 2: “Data are expressed as mean±SD”. Different denominators for plasma (10) and CSF (7), with CSF in nmol/mL. Table 1 lists ages and the two adolescents; Table 3 distinguishes treatment-related events.",
+    "Methods on oral trial preparation and eligibility. CSF values and ages are not individually linked in Table 2."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/taurine/exposure.md"
+  ]
+}

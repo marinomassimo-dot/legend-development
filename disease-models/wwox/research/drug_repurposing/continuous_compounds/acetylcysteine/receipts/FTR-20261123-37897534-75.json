@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-37897534-75",
+  "event_at": "2026-11-23T21:39:00Z",
+  "analysis_at": "2026-11-23T21:39Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "37897534",
+    "doi": "10.1007/s00018-023-04950-1"
+  },
+  "prior_receipt": "FTR-20261106-37897534-26",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.1007/s00018-023-04950-1 ; files/fulltext/PMID37897534_Cheng2023_PMC.xml",
+  "source_fingerprint": "e75eb12decfb3dddafda9b469101e416bd5130734dc8d86dfdf0d8b8cc273946",
+  "workflow": "Compare nominal NAC in WWOX neural media, the source protocol, and directly treated fibroblasts.",
+  "evidence_basis": [
+    "Results on continuously maintained serial-passage cultures and Figure 6 caption: “1 mM NAC-treated Wwox−/− MEFs”.",
+    "These fibroblast endpoints concern senescence and genomic instability. The nominal compound amount is extracted only as a cross-model comparator."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/acetylcysteine/README.md"
+  ]
+}

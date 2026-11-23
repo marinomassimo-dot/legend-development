@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-30551998-75",
+  "event_at": "2026-11-23T21:39:00Z",
+  "analysis_at": "2026-11-23T21:39Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "30551998",
+    "doi": "10.1016/j.neuron.2018.11.032"
+  },
+  "prior_receipt": "FTR-20261108-30551998-82",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.1016/j.neuron.2018.11.032 ; files/deepening_downloads/acetylcysteine_loop_20261123/PMC6371057.html",
+  "source_fingerprint": "c9dbe140e9340e6fa189068a3d8eec833d13037842ffccd7ebc8567f3972feef",
+  "workflow": "Compare nominal NAC in WWOX neural media, the source protocol, and directly treated fibroblasts.",
+  "evidence_basis": [
+    "Primary cultures, co-culture medium in the cited reference: “5μg/ml N-Acetyl-Cysteine, 5μM forskolin”. Verified the original PMC HTML.",
+    "The formulation is evidence about the cited protocol, not the lot or amount used in a separate study."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/acetylcysteine/README.md"
+  ]
+}

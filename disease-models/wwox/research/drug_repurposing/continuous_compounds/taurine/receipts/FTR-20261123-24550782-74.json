@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-24550782-74",
+  "event_at": "2026-11-23T21:36:00Z",
+  "analysis_at": "2026-11-23T21:36Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "24550782",
+    "doi": "10.3389/fncel.2014.00026"
+  },
+  "prior_receipt": "FTR-20261123-24550782-98",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.3389/fncel.2014.00026 ; files/deepening_downloads/taurine_loop_20261123/PMC3912439.1.xml",
+  "source_fingerprint": "525d7be1a4e338cf9c80ca7bd440016e3162339b95dbe0e291ed7a57ab2e92e1",
+  "workflow": "Compare observed central taurine exposure with effective nominal bath ranges, preserving age, units and dispersion.",
+  "evidence_basis": [
+    "Results associated with Figure 3 contrast bath concentrations ≤100 μM, 300 μM, 1 mM and 3 mM. The outcome at lower concentrations was postsynaptic currents.",
+    "Methods: “at higher taurine doses”. The low-concentration nonresponder rule selected cells responsive at a higher concentration; a nonsignificant group outcome is not a universal biological threshold."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/taurine/exposure.md"
+  ]
+}

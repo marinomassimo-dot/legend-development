@@ -1,0 +1,6 @@
+age	GAD67	n_control_fetuses	n_depleted_fetuses	control_pct	depleted_pct	delta_pp	readback_span_pp
+E17.5	+/+	7	4	37.2	44.4	7.2	0.0
+E17.5	+/GFP	6	3	34.2	45.2	11.0	0.3
+E17.5	GFP/GFP	5	5	37.2	51.0	13.8	0.3
+E16.5	GFP/GFP	3	6	9.0	6.1	-2.9	0.0
+E18.5	GFP/GFP	3	3	92.2	89.4	-2.9	0.0

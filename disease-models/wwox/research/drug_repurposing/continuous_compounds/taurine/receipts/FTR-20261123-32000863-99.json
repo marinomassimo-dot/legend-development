@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-32000863-99",
+  "event_at": "2026-11-23T21:33:00Z",
+  "analysis_at": "2026-11-23T21:33Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "32000863",
+    "doi": "10.1186/s40478-020-0883-3"
+  },
+  "prior_receipt": "FTR-20261123-32000863-96",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.1186/s40478-020-0883-3 ; files/supplement/PMID32000863_r2/40478_2020_883_MOESM1_ESM.pdf ; files/fulltext/origin_it_20261117/PMC6990504_epmc.xml SHA256 a4a0f3eb1388174044d1d453c1899cc01448dfecd7de26cce79fd2b5b9948bae",
+  "source_fingerprint": "0acb771cfe3a4c3644b41c10451504047adb715e69727c1889f72774151f8b7f",
+  "workflow": "Distinguish time of cortical-plate arrival, final position and cell-cycle exit in taurine-sensitive and WWOX developmental models.",
+  "evidence_basis": [
+    "Targeted Results about E16.5 birthdating and supplemental text S5–S6. S6b quantified “five representative subareas”; its y-axis labels Ki67-positive cell number per area. S6a is BrdU localization at birth.",
+    "The S5 caption identifies an embryonic reduction of Ki67 compared to increased proliferative staining at birth; different ages and a static migration comparison."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/taurine/migration.md"
+  ]
+}
