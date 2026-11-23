@@ -1,0 +1,31 @@
+measure	contrast	animals	value
+seizures/h	WAG ETX	7	0.27518866047048335
+seizures/h	WAG H20	7	22.046710411905046
+seizures/h	WIS ETX	9	0
+seizures/h	WIS H20	8	0
+seizures/h	treatment x strain		-21.771521751434562
+seizures/h	omit one per arm: min		-24.26377578887202
+seizures/h	omit one per arm: max		-15.01186107097236
+g-ratio	WAG ETX	3	0.7547106777705593
+g-ratio	WAG H20	3	0.716365004508536
+g-ratio	WIS ETX	3	0.7565312488324977
+g-ratio	WIS H20	4	0.7452153046242188
+g-ratio	treatment x strain		0.027029729053744456
+g-ratio	omit one per arm: min		0.010275615432077112
+g-ratio	omit one per arm: max		0.03899933274110057
+untreated g-ratio	body 1.5m: WAG - WIS	3/4	0.00750677265642008
+untreated g-ratio	body 6m: WAG - WIS	4/4	-0.050605754393421964
+untreated g-ratio	splenium 6m: WAG - WIS	3/3	-0.014229730864139811
+matched g-ratio	WAG body - splenium	3	-0.03961958167626145
+matched g-ratio	WIS body - splenium	3	-0.008817940068369482
+matched g-ratio	region x strain		-0.030802
+myelinated fraction (points)	1.5m: WAG - WIS	3/3	1.604179909017514
+myelinated fraction (points)	6m: WAG - WIS	3/3	1.1998878416269996
+WWOX myelinated axons/field	corpus callosum WT	3	130.56
+WWOX myelinated axons/field	corpus callosum KO	3	46.4
+WWOX myelinated axons/field	corpus callosum KO + neuronal Wwox	3	105.28
+fraction of WT-KO gap recovered	corpus callosum		0.699619771863118
+WWOX myelinated axons/field	optic nerve WT	3	140.1769911504425
+WWOX myelinated axons/field	optic nerve KO	3	68.49557522123894
+WWOX myelinated axons/field	optic nerve KO + neuronal Wwox	3	125.04424778761062
+fraction of WT-KO gap recovered	optic nerve		0.7888888888888888
