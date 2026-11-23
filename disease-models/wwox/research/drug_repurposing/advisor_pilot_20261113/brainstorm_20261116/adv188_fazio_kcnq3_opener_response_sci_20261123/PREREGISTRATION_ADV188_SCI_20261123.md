@@ -1,0 +1,33 @@
+# ADV-188 pre-registration: would a WEAK opener response in the Wwox slice exclude a baseline M-current deficit, or coexist with a reduced recruitable current? (Fazio et al. 2026, Front Mol Neurosci, PMID 43047766; SCI successor Z, 2026-11-23; written and committed BEFORE the paper body, figures or supplement were opened; hypothesis level; adjacent mouse Kcnq3 preparation; no transfer of thalamic age, firing direction, Kcnq3 mechanism or drug preference to cortical WWOX; no compound branch, ranking or promotion; not medical advice)
+
+## What had been seen (stated, so the readings cannot drift)
+* The assignment text ADV-188 (including Codex's screen of the source and figure legends, second-hand: "Figure 4 reportedly has opener-treated controls beside two Kcnq3 genotypes").
+* My ADV-173 result and the WO-17 clause as landed (1e6c096fb): baseline Kv7 readout from the same animals and age window as the burst ladder, control cells beside; "a suppression of null-slice bursts is read as an effect of the opener, and as a correction only if the baseline differs and the control does not respond alike; otherwise a brake".
+* Step 0 only for the paper: the bucket returned full XML (139,404 bytes), the article PDF and Supplementary_file_1.docx; file names and sizes, nothing else. I have not read the title, abstract, any sentence, figure or table of Fazio.
+
+## The quantities, fixed before any value (EMPATHY: name the quantity the decision needs)
+1. **Baseline current:** a drug-free, blocker-defined Kv7 current (XE991 or linopirdine sensitive) in a cell. An opener-defined current (measured with the opener on board) is a ceiling of recruitable current, not a baseline (the Dirkx lesson).
+2. **Opener-induced change:** the shift produced by the opener in one cell (current or voltage-dependence shift), on its own scale.
+3. **Starting excitability:** the untreated firing rate or rheobase of the same cells, which sets the headroom for any firing change.
+4. **Treated firing readout:** the change in firing after the opener, expressed as a within-cell change.
+The decision (WO-17 reading) needs the first, second and fourth from the same cells or animals; a response in the fourth alone is not a measure of the first.
+
+## Logic stated in advance (independent of the paper)
+A firing response to an opener depends on (a) the channel pool the opener can recruit (a baseline deficit may or may not shrink it: lower expression, altered subunit assembly or gating, or a smaller AIS pool each change it differently), (b) starting excitability (a cell already quiet or already firing at a ceiling has little room), and (c) assay headroom (a ladder concentration that saturates or does not reach the pool). Hence a weak response can coexist with a reduced recruitable current; it can also coexist with a normal one; and a strong response does not by itself show a deficit. The only reading a weak response supports without further data is "no firing change was detected at this concentration in this readout".
+
+## Readings and what each predicts in the paper
+* **E (weak response excludes a baseline deficit):** requires, in the same cells, a measured baseline (item 1) that is normal AND an opener change (item 2) that scales with it across groups at matched starting excitability (item 3). Predicted if E holds: groups with a deficit show a smaller opener-induced current change AND a smaller firing change, and the cross-group comparison is an interaction test, not separate within-group tests.
+* **C (weak response coexists with reduced recruitable current):** predicted if the paper shows a dissociation: groups differ in baseline or opener-induced current while the firing response is similar or reversed, or the firing response differs while current does not, or the response depends on starting excitability or ceiling.
+* **Rival explanations of a smaller response (each to be checked in the paper):** different starting excitability; different baseline current; assay headroom or ceiling; different cell populations or ages; recording conditions.
+
+## Items checked, in this order, in the paper (Methods, Figs 1, 2 and 4, supplementary tables)
+Age, brain region and sex; independent animals per group; cells per animal; whether the unit of the test is the cell or the animal; whether baseline, opener change and firing are measured in the same cells (matched recordings); drug-free or opener-defined baseline; whether the groups are COMPARED on the drug-induced change by an interaction (genotype by drug) or by separate within-group tests ("significant in one, not in the other" is not an interaction); the treated control arm and whether it is comparable (same age, region, concentration, vehicle); starting excitability by group.
+
+## Exits (fixed)
+* **KEEP:** the same cells carry baseline current, opener-induced change and firing, with a genotype-by-drug interaction test or per-animal values that let me compute one, and the data separate C from E (a dissociation or a scaling shown at matched starting excitability). A wording amendment is then offered.
+* **NARROW to a methods analogy:** opener-treated controls exist and the groups are comparable, but baseline and response are in different cells or animals, or the comparison is separate within-group tests, or the preparation (region, age, genotype) is too far from the Wwox slice for more than design logic.
+* **CLOSE:** no paired baseline and no interpretable cross-group response; or the control arms are not comparable; or ADV-173's clause already covers the distinction (I would name the sentence) — noting that the ADV-173 clause reads a SUPPRESSION of bursts and does not say how a WEAK or absent response is read, so "covered" applies only if the paper adds nothing beyond that.
+* At most ONE wording-level amendment to WO-17, only if it changes how a weak or absent opener response is read. Draft fixed now (to be kept, changed or dropped after reading): "A weak or absent opener response is read as 'no change detected at this concentration in this readout', not as evidence that the baseline Kv7 current is normal: a reduced recruitable current, a different starting excitability or an assay ceiling can each produce it; it counts against a baseline deficit only if the baseline current was measured drug-free in the same cells and the control response is shown at matched starting excitability."
+
+## Expectation (recorded before reading)
+NARROW (mouse thalamic Kcnq3 preparation, a methods analogy; likely baseline and drug effects in overlapping but not identical samples, and within-group tests). I would be surprised by KEEP. Not-reachable items will be named, not guessed.
