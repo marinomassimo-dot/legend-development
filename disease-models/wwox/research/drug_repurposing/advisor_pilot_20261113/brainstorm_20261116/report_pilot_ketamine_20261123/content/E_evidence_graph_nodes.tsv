@@ -3,7 +3,7 @@ N1	Spontaneous bursts in neuron-specific Wwox-knockout neocortical slices (36 of
 N2	d-APV 50 uM, a competitive NMDA-receptor antagonist, eliminated the bursts (5 slices, 3 animals)	observation	D	[1]
 N3	NMDA-receptor activation contributes to the bursts in this preparation	inference	I	[1]
 N4	Competitive antagonist claim: blocking the agonist site suppresses bursts (shown for d-APV only)	claim	D	[1]
-N5	Pore-blocker claim: a use-dependent open-channel blocker suppresses bursts at matched receptor block	claim	H	team deep dive
+N5	Pore-blocker claim: a use-dependent open-channel blocker suppresses bursts at matched receptor block	claim	H	research team (unpublished)
 N6	Ketamine reduces the hyperpolarisation-activated current through HCN1 (about 30% in wild-type neurons, about 5% in HCN1 knockout; 20 uM)	observation	D	[4]
 N7	Knockout neurons have larger sag voltage (a marker of the same current)	observation	D	[1]
 N8	Alternative A: a ketamine effect on bursts in this slice runs through HCN1 and Ih and not through NMDA-receptor block	alternative	H	[4],[1]
@@ -15,5 +15,5 @@ N13	Alternative C: rebound above baseline after washout	alternative	H	[1]
 N14	Bursting recorded in vivo in neuron-specific knockouts under ketamine and xylazine anaesthesia (no ketamine-free arm)	observation	D	[2]
 N15	Alternative D: sedation or co-medication context explains any clinical transient benefit	alternative	H	[9],[10],[11]
 N16	Measured concentrations: human plasma, bath values and tissue values are different quantities and are not matched	observation	D	[4],[8],[14]-[17]
-N17	Discriminating readout: burst rate against evoked-NMDA-response depth for d-APV and a pore blocker, with sag in the same cells	experiment	E	team deep dive
+N17	Discriminating readout: burst rate against evoked-NMDA-response depth for d-APV and a pore blocker, with sag in the same cells	experiment	E	research team (unpublished)
 N18	Dedicated ketamine or memantine intervention comparison in a WWOX system (not found; d-APV arm N2 and incidental anaesthesia N14 are separate observations)	gap	D (absence)	PubMed 2026-11-23

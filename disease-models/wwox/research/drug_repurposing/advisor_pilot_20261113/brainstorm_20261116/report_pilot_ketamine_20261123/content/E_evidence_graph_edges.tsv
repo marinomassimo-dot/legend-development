@@ -1,20 +1,20 @@
 edge_id	from	to	relation	label	status	source
-G1	N2	N3	supports	d-APV result supports a contribution of NMDA-receptor activation	OBSERVED	[1] Results 2.2, Fig 3
+G1	N2	N3	supports	d-APV result supports a contribution of NMDA-receptor activation (this edge is the inference itself)	INFERRED	[1] Results 2.2; Discussion 3.4 (authors: NMDA signaling "contributes")
 G2	N1	N2	observed_with	same preparation, same slices	OBSERVED	[1] Fig 1A, Fig 3
-G3	N3	N4	narrows_to	the observation concerns the competitive-antagonist site only	OBSERVED	[1] Fig 3 legend (d-APV only)
-G4	N3	N5	transfer_break	pore-blocker claim does not follow from the d-APV result; ketamine was never tested	HYPOTHESISED	PubMed 2026-11-23 (0 records); team deep dive
-G5	N6	N8	motivates	ketamine lowers Ih in neurons of the same age window	OBSERVED	[4] Fig 2, Methods (14 to 22 day old mice)
-G6	N7	N8	motivates	sag is larger in the knockout	OBSERVED	[1] Fig 6B
-G7	N8	N5	competes_with	an Ih route gives the same burst readout as pore block	HYPOTHESISED	[4],[1] Discussion 3.5
-G8	N9	N11	motivates	GluN2A on parvalbumin cells is a low-dose target in adult cortex	OBSERVED	[5] Abstract
-G9	N10	N11	motivates	inhibition is already reduced in the knockout slice	OBSERVED	[1] Results 2.5
-G10	N11	N5	competes_with	disinhibition raises bursting at shallow block	HYPOTHESISED	[5],[1]
-G11	N12	N13	motivates	one figure reading, one untested point	OBSERVED	[1] Fig 3D d1
+G3	N3	N4	narrows_to	the source tested only d-APV, a competitive antagonist, so the observation concerns the agonist-site route	OBSERVED	[1] Fig 3 legend (d-APV only)
+G4	N3	N5	transfer_break	no ketamine or other pore-blocker arm exists in the source or in the search, so the pore-blocker claim has no direct test	OBSERVED	[1]; PubMed search 2026-11-23 (0 records)
+G5	N6	N8	motivates	ketamine lowers Ih in neurons of the same age window, so an Ih route is a candidate alternative	INFERRED	[4] Fig 2; Methods (14 to 22 day old mice)
+G6	N7	N8	motivates	sag, a readout of Ih, is larger in the knockout, which makes an Ih route relevant to this preparation	INFERRED	[1] Fig 6B
+G7	N8	N5	competes_with	an Ih route would give the same burst readout as pore block	HYPOTHESISED	[4],[1] Discussion 3.5
+G8	N9	N11	motivates	GluN2A on parvalbumin cells is a low-dose target in adult cortex, which makes a disinhibition route a candidate	INFERRED	[5] Abstract
+G9	N10	N11	motivates	inhibition is already reduced in the knockout slice, which makes a disinhibition route relevant here	INFERRED	[1] Results 2.5
+G10	N11	N5	competes_with	disinhibition would raise bursting at shallow block	HYPOTHESISED	[5],[1]
+G11	N12	N13	motivates	one figure reading above baseline makes a rebound a candidate alternative	INFERRED	[1] Fig 3D, frequency panel
 G12	N13	N5	competes_with	rebound would make a transient benefit unclean	HYPOTHESISED	[1]
-G13	N14	N5	weakly_contradicts	bursting persisted with ketamine on board; exposure unmeasured, second sedative, no control arm	OBSERVED	[2] Fig 2A legend
+G13	N14	N5	context_only	bursting persisted in vivo with ketamine on board; NOT a test: no ketamine-free arm, exposure unmeasured, second sedative (draw lightly)	INFERRED	[2] Fig 2A legend
 G14	N15	N5	competes_with	clinical transients may come from the context, out of reach of any slice	HYPOTHESISED	[9],[10],[11]
-G15	N16	N5	limits	the concentration at which an effect was seen is not the concentration reached in any tissue	OBSERVED	[4],[8],[14]-[17]
-G16	N17	N8	discriminates	sag falls with the drug and tracks burst rate if Ih; not if NMDA-receptor block	HYPOTHESISED	team deep dive
-G17	N17	N11	discriminates	burst rate rises at shallow depth if disinhibition	HYPOTHESISED	team deep dive
-G18	N17	N13	discriminates	time course after washout against time-matched vehicle	HYPOTHESISED	team deep dive
-G19	N18	N5	gap	no direct test exists	OBSERVED	PubMed 2026-11-23 (0 records)
+G15	N16	N5	limits	the concentration at which an effect was seen is a different quantity from any concentration reached in tissue (a comparison across preparations)	INFERRED	[4],[8],[14]-[17]
+G16	N17	N8	discriminates	sag falls with the drug and tracks burst rate if Ih; not if NMDA-receptor block	HYPOTHESISED	research team (unpublished)
+G17	N17	N11	discriminates	burst rate rises at shallow depth if disinhibition	HYPOTHESISED	research team (unpublished)
+G18	N17	N13	discriminates	time course after washout against time-matched vehicle	HYPOTHESISED	research team (unpublished)
+G19	N18	N5	gap	no direct test exists in a WWOX system	OBSERVED	PubMed search 2026-11-23 (0 records)
