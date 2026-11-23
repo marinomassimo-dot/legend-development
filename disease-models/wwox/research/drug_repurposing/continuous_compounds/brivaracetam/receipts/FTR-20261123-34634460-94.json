@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-34634460-94",
+  "event_at": "2026-11-23T20:55:00Z",
+  "analysis_at": "2026-11-23T20:55Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "34634460",
+    "doi": "10.1016/j.nbd.2021.105529"
+  },
+  "prior_receipt": "FTR-20261123-34634460-91",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "CC BY original https://ars.els-cdn.com/content/image/1-s2.0-S0969996121002783-gr4_lrg.jpg ; files/deepening_downloads/brivaracetam_loop_20261123/wwox-fig4.jpg; PMC article files/fulltext/PMID34634460_Breton2021_PMC.xml, SHA256 934b4e1a42ac19f5cd8912994fb171beabdeb94a6631b23d9a383dab1db906aa.",
+  "source_fingerprint": "526b8122a3dc301d2c30757f7b3c6f7a081497e90675e011052ccd856e6b3de0",
+  "workflow": "Estimate relative spontaneous input burden from the two actual population mean waveforms and reported event rates. Use a graphical envelope to bound a discriminating comparison for presynaptic modulation.",
+  "evidence_basis": [
+    "Reread only the spontaneous synaptic recording method, associated Results paragraph, and Fig. 4E/G including the original high-resolution image. No full-article or supplemental reading claim.",
+    "Methods, sIPSC recordings: “a high-chloride intracellular solution was used”. Different recording solutions and cells prevent inference of an in-vivo E/I current ratio.",
+    "Fig. 4E/G right-hand axes, 0 to 24 ms and current in pA. Mean and SEM overlap in the excitatory curves. Results for pooled controls and knockout supply event frequencies. Detector/analysis subparagraph gives the threshold as four times the filtered-signal SD."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/brivaracetam/README.md"
+  ]
+}
