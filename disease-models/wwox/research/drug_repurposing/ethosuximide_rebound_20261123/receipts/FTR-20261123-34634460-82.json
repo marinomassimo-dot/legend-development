@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-34634460-82",
+  "event_at": "2026-11-23T16:42:00Z",
+  "analysis_at": "2026-11-23T16:42Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "34634460",
+    "doi": "10.1016/j.nbd.2021.105529"
+  },
+  "prior_receipt": "FTR-20261123-34634460-81",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8609180/ ; original Supplementary Fig. S4A, files/supplement/PMID34634460_r2/image4.tiff",
+  "source_fingerprint": "282295d1eb8efccc8cae74a93660d099e7343a063ea920dc09f0a5469674bbd7",
+  "workflow": "Wwox cortical rebound and rheobase alignment.",
+  "evidence_basis": [
+    "Wwox cortical rebound and rheobase alignment. Purpose-specific partial read. Other sections and unlisted figures were outside this pass.",
+    "Table 1 and Fig. 6, post-inhibitory rebound at −200 pA and population mean resting and spike threshold voltages.",
+    "Supplementary Fig. S4A, left and right panels, population frequency (Hz) versus current (pA), original and individual rheobase-aligned coordinates. WT 13 cells/5 animals and KO 40/15. Original image read visually."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/ethosuximide_rebound_20261123/README.md"
+  ]
+}

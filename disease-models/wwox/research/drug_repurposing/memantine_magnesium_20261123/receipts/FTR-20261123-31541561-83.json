@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-31541561-83",
+  "event_at": "2026-11-23T16:48:00Z",
+  "analysis_at": "2026-11-23T16:48Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "31541561",
+    "doi": "10.1113/JP278168"
+  },
+  "prior_receipt": "FTR-20261123-31541561-82",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6858497.1/PMC6858497.1.xml",
+  "source_fingerprint": "87ee420f6086fb5a93fe88a7fadb5a5462de32bcf213494f9986d422ee5be011",
+  "workflow": "Check the independently measured response to a third subtype probe after fitting the two antagonists. Inspect pH, voltage, cell class and separate kinetic outcome.",
+  "evidence_basis": [
+    "Targeted same-study read of Table 4, Fig. 6 results and caption and the specified methods. Molecular percentages refer to the −20 mV oocyte assay, native percentages to +40 mV currents. Other sections and any supplements were outside this read.",
+    "Table 4, pH 7.4, 100 µM spermine, GluN1–1a/2B, /2BC1/2DC2, /2D responses relative to baseline (%), 13, 12 and 14 oocytes respectively.",
+    "Fig. 6G–K, 100 µM spermine and 10 µM MPX-004, seven CA1 interneurons per treatment, separate groups. Native spermine response 137 ± 13% of baseline. Decay was examined separately."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/memantine_magnesium_20261123/README.md"
+  ]
+}
