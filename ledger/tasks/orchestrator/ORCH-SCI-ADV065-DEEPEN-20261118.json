@@ -825,10 +825,12 @@
     },
     {
      "step": "ADV-199: KCC2 transposon mutant library (Uvarov 2024, PMID 39881966): can one non-tautological matched card be assembled for route (i) of the engine-evaluation line, or reject; feasibility only, no engine run",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-199",
-     "accepted_at": "2026-11-23T17:13:20Z"
+     "accepted_at": "2026-11-23T17:13:20Z",
+     "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv199_kcc2_library_card_feasibility_sci_20261123/RESULT_ADV199_KCC2_LIBRARY_CARD_SCI_20261123.md; receipt FTR-20261123-39881966-01; disposition REJECTED (saturated by textbook rule or always-abstain; unmatched preparations)",
+     "updated_at": "2026-11-23T17:18:49Z"
     }
    ]
   }

@@ -20,7 +20,7 @@ asserted by no receipt. `prior_receipt` means the reading this one builds on, an
 sharing a parent are the normal case under parallel branches.
 
 
-**1580 paper(s)** with at least one receipt · **2239 receipt(s)** · **38 paper(s) read in parallel** by two receipts sharing a parent.
+**1581 paper(s)** with at least one receipt · **2240 receipt(s)** · **38 paper(s) read in parallel** by two receipts sharing a parent.
 
 ## Papers read in parallel
 
@@ -1269,6 +1269,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 39868255 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | read | read | read | 2 |
 | PMID 39871710 | `partial_fulltext_read` | read | read | read | read | read | read | read | read | read | not_read | 1 |
 | PMID 39876842 | `partial_fulltext_read` | read | read | not_present | not_present | captions_only | read | read | not_present | not_present | — | 1 |
+| PMID 39881966 | `partial_fulltext_read` | not_read | not_read | read | read | read | read | read | not_present | not_read | — | 1 |
 | PMID 39892986 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 39894307 | `abstract_only` | read | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | 1 |
 | PMID 39894310 | `abstract_only` | read | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | 1 |

@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-23T17:17Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-23T17:17:44Z",
+ "event_id": "FTR-20261123-39881966-01",
+ "evidence_basis": [
+  "Uvarov et al. 2025, Front Mol Neurosci 17:1505722 (PMID 39881966, PMC11774852), read for ADV-199 (feasibility of a matched card): Methods 2.1 to 2.8, Results 3.1 to 3.6, Discussion, Tables 1 and 2, Figures 1 to 6 (3 to 6 viewed as images; counts are visual estimates) and the erratum (Figure 4 legend). Not read: abstract, Introduction, Supplementary Figures. Source: Frontiers HTML full text (CC BY) by plain request; PMC page not requested; SHA-256 of the saved HTML is the fingerprint; erratum HTML 969ea620b7a2 (12 hex).",
+  "verbatim_locator | proposition: the surface measure is a ratio of surface to total signal | Results 3.5 | \"The ratio of the two signals serves as a measure of the KCC2 plasmalemmal abundance\"",
+  "verbatim_locator | proposition: C1 shows no difference in membrane abundance against the wild type | Results 3.5 | \"C1 and C11 mutants showed no difference in either the membrane abundance ( Figure 5C ) or glycosylation patterns ( Figure 4 ) compared to WT KCC2\"",
+  "verbatim_locator | proposition: the neuronal gradient assay is described as hippocampal in Methods | Methods 2.6 | \"Somatic recordings in immature cultured hippocampal neurons (DIV 3)\"",
+  "verbatim_locator | proposition: the same assay is described as cortical in Results | Results 3.6 | \"we measured their \u0394E GABA in immature DIV 3 dissociated cortical cultures\"",
+  "verbatim_locator | proposition: the surface assay transfection time differs from the gradient assay | Methods 2.4 | \"The cultures were transfected on DIV 6 with a mixture of mGFP and either wild-type or mutant KCC2_FLAG-out constructs\"",
+  "verbatim_locator | proposition: the authors infer enhanced kinetics from the paired result | Results 3.6 | \"suggests that the C1 mutation induces a CTD conformation that promotes enhanced kinetics of Cl \u2212 extrusion\"",
+  "verbatim_locator | proposition: the wild-type gradient value used by the card | Results 3.6 | \"Transient transfection (24 h) of WT KCC2 resulted in a robust \u0394E GABA of 8.0 \u00b1 1.4 mV\"",
+  "verbatim_locator | proposition: dendritic expression of C1 is among the highest | Results 3.2 | \"Dendritic levels of FLAG-ir varied significantly, being highest for B8 and C1\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv199_kcc2_library_card_feasibility_sci_20261123/RESULT_ADV199_KCC2_LIBRARY_CARD_SCI_20261123.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "756eeb71999a9b13194cf54375d318b7486b67dd1ed100a9bcf1862c264b4b78",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Frontiers HTML full text (CC BY), local scratch only, not copied into git",
+ "study_id": {
+  "doi": "10.3389/fnmol.2024.1505722",
+  "pmid": "39881966"
+ },
+ "workflow": "SCI window AB ADV-199 (feasibility of a matched card for route (i); no engine run)"
+}
