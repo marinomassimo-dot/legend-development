@@ -1,0 +1,14 @@
+published_number	BRV_ever	BRV_current	LEV_ever	LEV_current	PHB_ever	PHB_current	CBZ_ever	CBZ_current	VPA_ever	VPA_current
+1	0	0	0	0	1	1	0	0	1	1
+2	0	0	1	1	0	0	1	0	1	1
+3	0	0	1	0	0	0	0	0	1	1
+4	0	0	1	1	1	1	1	0	0	0
+5	0	0	1	0	0	0	0	0	1	1
+6	0	0	1	0	1	0	0	0	0	0
+7	0	0	1	0	1	0	0	0	1	0
+8	0	0	0	0	1	1	0	0	0	0
+9	0	0	1	1	0	0	0	0	0	0
+10	0	0	1	1	0	0	0	0	0	0
+11	0	0	1	0	0	0	1	0	1	0
+12	0	0	1	0	1	0	0	0	1	1
+13	1	1	1	0	0	0	0	0	1	1

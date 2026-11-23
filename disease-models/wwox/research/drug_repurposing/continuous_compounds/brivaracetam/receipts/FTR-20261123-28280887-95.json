@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-28280887-95",
+  "event_at": "2026-11-23T21:05:00Z",
+  "analysis_at": "2026-11-23T21:05Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "28280887",
+    "doi": "10.1007/s00228-017-2230-6"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.1007/s00228-017-2230-6 ; files/deepening_downloads/brivaracetam_loop_20261123/PMC5423986.1.xml",
+  "source_fingerprint": "5de7558f617f93d7b1abae10e0f698ddcec7b43e441ed4113ee03711a4c3a5e0",
+  "workflow": "Check pediatric exposure and background SV2A occupancy for the WWOX brivaracetam comparison.",
+  "evidence_basis": [
+    "Targeted reading of the named sections only; other analyses, figures and supplements are outside this pass.",
+    "Data section, “except levetiracetam which was not allowed”. Open-label oral-solution population PK design. Results, predicted mean average parent concentration, 2.10 (0.51) mg/L in the subgroup described in the metabolite comparison.",
+    "Table 1, covariate effects on apparent clearance with phenobarbital, carbamazepine and valproate. The concentration is model-predicted total plasma, not measured brain concentration."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/brivaracetam/exposure.md"
+  ]
+}

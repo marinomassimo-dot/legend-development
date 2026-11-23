@@ -1,5 +1,7 @@
 # Brivaracetam and loss of inhibitory restraint in WWOX-deficient cortex
 
+The [pediatric exposure, WWOX medication histories and PET occupancy analysis](exposure.md) adds a separate comparison for patients with prior versus concurrent levetiracetam.
+
 **First result.** A preferential effect on late excitatory responses during a stimulus train could coexist with substantial depression of inhibitory input. What magnitude of excitatory selectivity would be needed to bring a simple spontaneous-input measure in Wwox-deletion cortex back to its control value? We estimated this from the published untreated waveforms before attributing any effect to brivaracetam. [Prospective drug question](prediction.md) · [Breton et al., Fig. 4E/G](https://pmc.ncbi.nlm.nih.gov/articles/PMC8609180/)
 
 ## From a detected event to an input index

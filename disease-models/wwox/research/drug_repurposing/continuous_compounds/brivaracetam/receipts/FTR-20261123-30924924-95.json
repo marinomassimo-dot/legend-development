@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-30924924-95",
+  "event_at": "2026-11-23T21:05:00Z",
+  "analysis_at": "2026-11-23T21:05Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "30924924",
+    "doi": "10.1111/epi.14701"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.1111/epi.14701 ; files/deepening_downloads/brivaracetam_loop_20261123/PMC6532410.1.xml",
+  "source_fingerprint": "30b8ede5307587db509d1d9ff4dcfe524a1ddd7ca8affb69ab084e34f531b09c",
+  "workflow": "Check pediatric exposure and background SV2A occupancy for the WWOX brivaracetam comparison.",
+  "evidence_basis": [
+    "Targeted reading of the named sections only; other analyses, figures and supplements are outside this pass.",
+    "Table 2, “Plasma concentration, SV2A occupancy”, cohorts 2 and 3. Post-dose, steady-state peak and trough rows retain subject identity; separate LEV and BRV conditions.",
+    "Methods and results for the one-site Emax model fixed at 100%, global IC50 in µg/mL and individual fits. No simultaneous occupancy experiment in these rows."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/brivaracetam/exposure.md"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-36346513-95",
+  "event_at": "2026-11-23T21:05:00Z",
+  "analysis_at": "2026-11-23T21:05Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "36346513",
+    "doi": "10.1186/s13550-022-00944-5"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.1186/s13550-022-00944-5 ; files/deepening_downloads/brivaracetam_loop_20261123/PMC9643320.1.xml",
+  "source_fingerprint": "7affd6c95ad1e9cd0ceeff72c09f4a68892ca73199b93e9dc1c0771b892a43f0",
+  "workflow": "Check pediatric exposure and background SV2A occupancy for the WWOX brivaracetam comparison.",
+  "evidence_basis": [
+    "Targeted reading of the named sections only; other analyses, figures and supplements are outside this pass.",
+    "Subjects and data paragraph, “Five healthy subjects participated”. Reanalysis of displacement and post-dose data, with only one or two volunteers per BRV condition.",
+    "Table 4, minutes to half and maximum occupancy. Table 2, 5- and 7-parameter models and imprecise estimated rate constants. These are aggregate PET kinetics, not the rate of synaptic release."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/brivaracetam/exposure.md"
+  ]
+}
