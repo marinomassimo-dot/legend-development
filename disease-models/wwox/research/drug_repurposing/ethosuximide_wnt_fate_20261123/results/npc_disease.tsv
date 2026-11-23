@@ -1,0 +1,2 @@
+n_up	n_down	up_delta	down_delta	score	omit_min	omit_max	assignments_ge	assignments_le	total_assignments	coverage
+5	12	0.055557742179229486	0.12538204211683723	-0.03491214996880432	-0.10673078190059926	0.03690648196299062	12	4	15	False
