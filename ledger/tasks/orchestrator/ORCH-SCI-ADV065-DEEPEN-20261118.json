@@ -852,10 +852,12 @@
     },
     {
      "step": "ADV-204: PAPER 542 (Aragon-Ramirez, PMID 42523332) WWOX perturbation scope check under its actual controls; prereg first",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV-204 (assignments/ADV-204.md; ADV message 2026-11-23 23:3xZ)",
-     "accepted_at": "2026-11-23T23:37:27Z"
+     "accepted_at": "2026-11-23T23:37:27Z",
+     "evidence": "ADV-205 (id corrected from ADV-204): RESULT_ADV205_PAPER542_GOLGI_WWOX_SCOPE_SCI_20261123.md; disposition b; receipt FTR-20261123-42523332-01; landed a7a1fa75b",
+     "updated_at": "2026-11-23T23:49:52Z"
     }
    ]
   }
