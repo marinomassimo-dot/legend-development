@@ -1,0 +1,19 @@
+--- junction_counter.cpp
++++ junction_counter_r1.cpp
+@@ -121 +121,2 @@
+-    long long n=0;
++    long long n=0, second=0;
++    std::string first_id;
+@@ -126,0 +128,10 @@
++        if (header.size()<3) throw std::runtime_error("Missing read id");
++        const auto suffix=header.substr(header.size()-2);
++        const auto id=header.substr(0,header.size()-2);
++        if (suffix=="/2") {
++            if (n!=second+1 || id!=first_id) throw std::runtime_error("Mismatch in paired spot id");
++            ++second;
++            continue;
++        }
++        if (suffix!="/1" || n!=second) throw std::runtime_error("Unexpected paired read order");
++        first_id=id;
+@@ -139,0 +151 @@
++    if (n!=second) throw std::runtime_error("Unpaired final read");

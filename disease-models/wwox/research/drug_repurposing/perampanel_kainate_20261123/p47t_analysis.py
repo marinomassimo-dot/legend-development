@@ -3,6 +3,7 @@ import argparse
 import csv
 from collections import defaultdict
 import gzip
+from itertools import combinations, product
 import hashlib
 from pathlib import Path
 from statistics import mean
@@ -35,6 +36,35 @@ def contrast(y,groups):
         omissions.append(mean(delta))
     return [mean(by_sex),*by_sex,min(omissions),max(omissions)]
 
+
+def read_sensitivity(block):
+    """Bounds after reclassifying at most one observed fragment in each animal."""
+    val=[]
+    for direction in (-1,1):
+        frac=[]
+        groups=[]
+        for _,_,_,group,sex,ins,skip,_,_ in block:
+            n=ins+skip
+            change=direction if group=="P47T" else -direction
+            frac.append(min(n,max(0,ins+change))/n)
+            groups.append((group,sex))
+        val.append(contrast(frac,groups)[0])
+    return val
+
+
+def permutation(y,groups):
+    """Enumerate all animal-label assignments preserving the numbers of each sex."""
+    by_sex=[[i for i,(_,s) in enumerate(groups) if s==sex] for sex in ("F","M")]
+    n_mut=[sum(groups[i][0]=="P47T" for i in indices) for indices in by_sex]
+    observed=abs(contrast(y,groups)[0])
+    count=greater=0
+    for arms in product(*(combinations(ix,n) for ix,n in zip(by_sex,n_mut))):
+        means=[]
+        for ix,chosen in zip(by_sex,arms):
+            means.append(mean(y[i] for i in chosen)-mean(y[i] for i in ix if i not in chosen))
+        count+=1
+        greater+=abs(mean(means))>=observed-1e-12
+    return greater,count
 
 def gene_effects(path,out):
     expected="d654f6bdd2a4ac5b3e24741f16962503a711575c72aa92a2c729a7a0cf04c18c"
@@ -69,22 +99,42 @@ def gene_effects(path,out):
         "measure sex_balanced_delta female_delta male_delta omit_min omit_max choroid_adjusted".split(),rows)
 
 
-def junction_effects(path,out):
+def junction_effects(path,out,alternate=None):
     source=read(out/"p47t_sources.tsv")
-    files={p.stem:p for p in path.glob("SRR*.tsv")}
-    assert set(files)=={r["run"] for r in source}, "A complete 20-lane series is required."
-    animals=defaultdict(lambda:np.zeros(4,dtype=np.int64))
     probe_sha=hashlib.sha256((out/"junction_probes.tsv").read_bytes()).hexdigest()
+    animals=defaultdict(lambda:np.zeros(4,dtype=np.int64))
+    receipts,crosschecks=[],[]
     for r in source:
-        rows=read(files[r["run"]])
+        ena=path/(r["run"]+".tsv")
+        ncbi=alternate/(r["run"]+".tsv") if alternate else None
+        have_ncbi=ncbi is not None and ncbi.exists()
+        if not ena.exists() and not have_ncbi:
+            raise ValueError(f"{r['run']} is missing; a complete 20-lane series is required.")
+        if ena.exists() and have_ncbi:
+            from p47t_sra import verify_anchor
+            verify_anchor(ena,ncbi)
+            crosschecks.append([r["run"],r["animal"],r["fragments"]])
+        using_ena=ena.exists()
+        rows=read(ena if using_ena else ncbi)
         assert len(rows)==4 and {(x["rule"],x["Q"]) for x in rows}=={
             (rule,q) for rule in ("any","centered") for q in ("20","30")}
         for x in rows:
-            assert x["animal"]==r["animal"] and x["compressed_md5"]==r["md5"]
-            assert x["arm"]==r["arm"] and x["sex"]==r["sex"] and x["probe_sha256"]==probe_sha
-            assert x["bytes"]==r["bytes"] and x["reads"]==r["fragments"]
+            assert x["animal"]==r["animal"] and x["arm"]==r["arm"] and x["sex"]==r["sex"]
+            assert x["probe_sha256"]==probe_sha and x["reads"]==r["fragments"]
+            if using_ena:
+                assert x["compressed_md5"]==r["md5"] and x["bytes"]==r["bytes"]
+            else:
+                assert x["source"]=="NCBI_full_quality" and len(x["archive_sha256"])==64 and "-" in x["archive_etag"]
             key=(x["rule"],x["Q"],r["animal"],r["arm"],r["sex"])
             animals[key]+=np.array([int(x[s]) for s in ("insert","skip","conflict","reads")])
+            receipts.append([r["run"],r["animal"],r["arm"],r["sex"],
+                             "ENA" if using_ena else "NCBI",x["bytes"],x.get("compressed_md5",""),
+                             x.get("archive_etag",""),x.get("archive_sha256",""),probe_sha,
+                             x["rule"],x["Q"],x["reads"],x["insert"],x["skip"],x["conflict"]])
+    tsv(out/"p47t_lane_receipts.tsv",
+        "run animal arm sex archive bytes ENA_MD5 NCBI_ETag NCBI_SHA256 probe_SHA256 rule Q reads insert skip conflict".split(),
+        receipts)
+    tsv(out/"p47t_crossarchive.tsv",["run","animal","fragments_matched_all_four_strata"],crosschecks)
     data=[[rule,q,a,g,s,*vals] for (rule,q,a,g,s),vals in sorted(animals.items())]
     tsv(out/"p47t_animals.tsv","rule Q animal genotype sex insert skip conflict fragments".split(),data)
     res=[]
@@ -97,15 +147,19 @@ def junction_effects(path,out):
             groups=[(v[3],v[4]) for v in block]
             totals=[sum(d for d,(g,s) in zip(denominators,groups) if g==arm) for arm in ("WT","P47T")]
             passed=min(denominators)>=12 and min(totals)>=75
-            res.append([rule,q,min(denominators),*totals,passed,*contrast(fracs,groups)])
+            animal_means = [mean(f for f,(g,_) in zip(fracs,groups) if g==arm) for arm in ("WT","P47T")]
+            res.append([rule,q,min(denominators),*totals,passed,*animal_means,
+                        animal_means[1]-animal_means[0],*contrast(fracs,groups),
+                        *read_sensitivity(block),*permutation(fracs,groups)])
     tsv(out/"p47t_contrasts.tsv",
-        "rule Q least_reads_in_one_animal WT_reads KO_reads coverage_pass sex_balanced_delta female_delta male_delta omit_min omit_max".split(),res)
+        "rule Q least_reads_in_one_animal WT_reads P47T_reads coverage_pass unweighted_WT_mean unweighted_P47T_mean unweighted_delta sex_balanced_delta female_delta male_delta omit_min omit_max one_reclassification_min one_reclassification_max two_sided_permutations_at_least_as_extreme all_permutations".split(),res)
 
 
 if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("counts",type=Path)
     p.add_argument("--junctions",type=Path)
+    p.add_argument("--ncbi-counts",type=Path)
     a=p.parse_args()
     gene_effects(a.counts,ROOT/"results")
-    if a.junctions: junction_effects(a.junctions,ROOT/"results")
+    if a.junctions: junction_effects(a.junctions,ROOT/"results",a.ncbi_counts)

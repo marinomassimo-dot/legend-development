@@ -1,0 +1,74 @@
+--- junction_counter.cpp
++++ junction_counter_paired.cpp
+@@ -118,0 +119,14 @@
++std::array<int,4> flags(const std::string& seq,const std::string& quality,Matcher& matcher) {
++    Word word=0;
++    int length=0;
++    std::array<int,4> found{};
++    matcher.scan(seq,word,length,[&](int i,size_t j){
++        const auto& p=matcher.probes[i];
++        int q=*std::min_element(quality.begin()+j-30,quality.begin()+j+1)-33;
++        int bit=p.kind=="flip"?1:2;
++        if(q>=20) {found[1]|=bit; if(p.offset==15) found[0]|=bit;}
++        if(q>=30) {found[3]|=bit; if(p.offset==15) found[2]|=bit;}
++    });
++    return found;
++}
++
+@@ -120 +134 @@
+-    std::array<std::array<long long,4>,4> counts{};
++    std::array<std::array<std::array<long long,4>,4>,3> counts{};
+@@ -122 +136,3 @@
+-    std::string header,seq,plus,quality;
++    std::array<int,4> first{};
++    std::string header,seq,plus,quality,spot;
++    bool awaiting_mate=false;
+@@ -124,2 +140,2 @@
+-        if(!in.line(seq)||!in.line(plus)||!in.line(quality)||header.empty()||header[0]!='@'||
+-                plus.empty()||plus[0]!='+'||seq.size()!=quality.size())
++        if(!in.line(seq)||!in.line(plus)||!in.line(quality)||header.size()<4||header[0]!='@'||
++           plus.empty()||plus[0]!='+'||seq.size()!=quality.size())
+@@ -127,12 +143,26 @@
+-        ++n;
+-        Word word=0;
+-        int length=0;
+-        std::array<int,4> found{};
+-        matcher.scan(seq,word,length,[&](int i,size_t j){
+-            const auto& p=matcher.probes[i];
+-            int q=*std::min_element(quality.begin()+j-30,quality.begin()+j+1)-33;
+-            int bit=p.kind=="flip"?1:2;
+-            if(q>=20) {found[1]|=bit; if(p.offset==15) found[0]|=bit;}
+-            if(q>=30) {found[3]|=bit; if(p.offset==15) found[2]|=bit;}
+-        });
+-        for(int i=0;i<4;i++) counts[i][found[i]]++;
++        const auto kind=header.substr(header.size()-2);
++        const auto id=header.substr(0,header.size()-2);
++        if (!awaiting_mate) {
++            if (kind!="/1") throw std::runtime_error("Missing read one");
++            first=flags(seq,quality,matcher);
++            awaiting_mate=true;
++            spot=id;
++        } else {
++            if (kind!="/2" || id!=spot) throw std::runtime_error("Mismatched paired spot");
++            const auto second=flags(seq,quality,matcher);
++            for (int i=0;i<4;i++) {
++                ++counts[0][i][first[i]];
++                ++counts[1][i][second[i]];
++                ++counts[2][i][first[i]|second[i]];
++            }
++            awaiting_mate=false;
++            ++n;
++        }
++    }
++    if (awaiting_mate) throw std::runtime_error("Missing last mate");
++    std::cout<<"rule\tQ\tfragments\tR1_insert\tR1_skip\tR1_conflict"
++               "\tR2_insert\tR2_skip\tR2_conflict\teither_insert\teither_skip\teither_conflict\n";
++    for(int i=0;i<4;i++) {
++        std::cout<<(i%2?"any":"centered")<<'\t'<<(i>=2?30:20)<<'\t'<<n;
++        for(int mode=0;mode<3;mode++) for(int val=1;val<=3;val++) std::cout<<'\t'<<counts[mode][i][val];
++        std::cout<<'\n';
+@@ -140,4 +169,0 @@
+-    std::cout<<"rule\tQ\treads\tflip\tflop\tconflict\n";
+-    for(int i=0;i<4;i++)
+-        std::cout<<(i%2?"any":"centered")<<'\t'<<(i>=2?30:20)<<'\t'<<n<<'\t'
+-                 <<counts[i][1]<<'\t'<<counts[i][2]<<'\t'<<counts[i][3]<<'\n';
