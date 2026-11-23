@@ -1,0 +1,6 @@
+run	group	category	read_total	A	G	C	T	N	A_distinct_offset	G_distinct_offset
+SRR12453541	WT	primary	34397207	0	4	0	0	0	0	4
+SRR12453541	WT	flank18	34397207	0	4	0	0	0	0	4
+SRR12453541	WT	interior20	34397207	0	4	0	0	0	0	4
+SRR12453541	WT	splice8	34397207	0	2	0	0	0	0	2
+SRR12453541	WT	low_quality	34397207	0	1	0	0	0	0	0

@@ -1,0 +1,5 @@
+category	KO_libraries	WT_libraries	min_informative_reads	KO_mean_pct	WT_mean_pct	KO_minus_WT_pp	loo_min_pp	loo_max_pp
+primary	4	2	4	0.00000	12.50000	-12.50000	-25.00000	0.00000
+flank18	4	2	4	0.00000	12.50000	-12.50000	-25.00000	0.00000
+interior20	4	2	4	0.00000	12.50000	-12.50000	-25.00000	0.00000
+splice8	4	2	1	0.00000	0.00000	0.00000	0.00000	0.00000

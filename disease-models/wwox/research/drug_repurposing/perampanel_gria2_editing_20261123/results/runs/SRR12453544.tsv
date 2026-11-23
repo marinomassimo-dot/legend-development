@@ -1,0 +1,6 @@
+run	group	category	read_total	A	G	C	T	N	A_distinct_offset	G_distinct_offset
+SRR12453544	KO	primary	44324506	0	4	0	0	0	0	3
+SRR12453544	KO	flank18	44324506	0	4	0	0	0	0	3
+SRR12453544	KO	interior20	44324506	0	4	0	0	0	0	3
+SRR12453544	KO	splice8	44324506	0	4	0	0	0	0	3
+SRR12453544	KO	low_quality	44324506	0	2	0	0	0	0	0
