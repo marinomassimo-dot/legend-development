@@ -1,0 +1,16 @@
+libraries: ['CB_WT/WT_M3', 'CB_WT/WT_M2', 'CB_WT/WT_F5', 'CB_WT/WT_F4', 'CB_P47T/P47T_M6', 'CB_P47T/P47T_F8', 'CB_P47T/P47T_F10']; genes kept 14791; TMM factors [0.979, 0.998, 1.004, 0.998, 1.017, 1.007, 0.998]; global median log2FC G = 0.008
+S1_sterol_core: used 20/20 d=0.234 frac_up=0.90 LOO [0.212,0.257]
+S2_hallmark_cholesterol_mouse: used 65/74 d=0.162 frac_up=0.72 LOO [0.132,0.204]
+class Astrocyte: used 14/15 L=0.225 frac_up=0.86 LOO [0.178777293958342,0.26278494497523236] kept=True
+class Bergmann: used 14/15 L=-0.059 frac_up=0.50 LOO [-0.11182073947673274,0.010165032854502019] kept=True
+class Granule: used 12/13 L=-0.020 frac_up=0.42 LOO [-0.06416842958626484,0.028848083821966592] kept=True
+class MLI: used 14/15 L=-0.272 frac_up=0.07 LOO [-0.3225746531667411,-0.19716570485885068] kept=True
+class Microglia: used 14/15 L=0.217 frac_up=0.71 LOO [0.19478784021867965,0.23909571345417843] kept=True
+class ODC: used 13/15 L=0.288 frac_up=0.85 LOO [0.17227038825376248,0.3816153780715376] kept=True
+class OPC: used 12/15 L=0.008 frac_up=0.67 LOO [-0.020220524033350246,0.040051671072191986] kept=True
+class Purkinje: used 14/15 L=-0.154 frac_up=0.36 LOO [-0.2762823687824559,-0.06295147682423889] kept=True
+class Purkinje_canonical: used 8/8 L=-0.010 frac_up=0.50 LOO [-0.1255612391613643,0.06522512276331227] kept=True
+kept classes: 9
+B = max L(c) = 0.288 (ODC); B_hi (max over classes of LOO max) = 0.382
+S1_sterol_core: d - B = -0.054; LOO min d - B_hi = -0.170
+S2_hallmark_cholesterol_mouse: d - B = -0.127; LOO min d - B_hi = -0.250

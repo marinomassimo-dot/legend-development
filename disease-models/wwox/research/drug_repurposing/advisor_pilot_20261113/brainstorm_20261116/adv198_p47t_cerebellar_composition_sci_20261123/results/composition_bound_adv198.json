@@ -1,0 +1,104 @@
+{
+ "G": 0.008215839295398375,
+ "classes": {
+  "Astrocyte": {
+   "frac_up": 0.8571428571428571,
+   "kept": true,
+   "loo_max": 0.26278494497523236,
+   "loo_min": 0.178777293958342,
+   "mean_log2FC": 0.22502874098927922,
+   "n_declared": 15,
+   "n_used": 14
+  },
+  "Bergmann": {
+   "frac_up": 0.5,
+   "kept": true,
+   "loo_max": 0.010165032854502019,
+   "loo_min": -0.11182073947673274,
+   "mean_log2FC": -0.058900087871865923,
+   "n_declared": 15,
+   "n_used": 14
+  },
+  "Granule": {
+   "frac_up": 0.4166666666666667,
+   "kept": true,
+   "loo_max": 0.028848083821966592,
+   "loo_min": -0.06416842958626484,
+   "mean_log2FC": -0.01966306038693739,
+   "n_declared": 13,
+   "n_used": 12
+  },
+  "MLI": {
+   "frac_up": 0.07142857142857142,
+   "kept": true,
+   "loo_max": -0.19716570485885068,
+   "loo_min": -0.3225746531667411,
+   "mean_log2FC": -0.27157427220421043,
+   "n_declared": 15,
+   "n_used": 14
+  },
+  "Microglia": {
+   "frac_up": 0.7142857142857143,
+   "kept": true,
+   "loo_max": 0.23909571345417843,
+   "loo_min": 0.19478784021867965,
+   "mean_log2FC": 0.21736086696783263,
+   "n_declared": 15,
+   "n_used": 14
+  },
+  "ODC": {
+   "frac_up": 0.8461538461538461,
+   "kept": true,
+   "loo_max": 0.3816153780715376,
+   "loo_min": 0.17227038825376248,
+   "mean_log2FC": 0.28824313534271934,
+   "n_declared": 15,
+   "n_used": 13
+  },
+  "OPC": {
+   "frac_up": 0.6666666666666666,
+   "kept": true,
+   "loo_max": 0.040051671072191986,
+   "loo_min": -0.020220524033350246,
+   "mean_log2FC": 0.008186300954906725,
+   "n_declared": 15,
+   "n_used": 12
+  },
+  "Purkinje": {
+   "frac_up": 0.35714285714285715,
+   "kept": true,
+   "loo_max": -0.06295147682423889,
+   "loo_min": -0.2762823687824559,
+   "mean_log2FC": -0.15391562511159065,
+   "n_declared": 15,
+   "n_used": 14
+  },
+  "Purkinje_canonical": {
+   "frac_up": 0.5,
+   "kept": true,
+   "loo_max": 0.06522512276331227,
+   "loo_min": -0.1255612391613643,
+   "mean_log2FC": -0.00971626323210828,
+   "n_declared": 8,
+   "n_used": 8
+  }
+ },
+ "sterol": {
+  "S1_sterol_core": {
+   "frac_up": 0.9,
+   "loo_max": 0.2566881534408288,
+   "loo_min": 0.21167640617711148,
+   "mean_log2FC": 0.23448333618877198,
+   "n_declared": 20,
+   "n_used": 20
+  },
+  "S2_hallmark_cholesterol_mouse": {
+   "frac_up": 0.7230769230769231,
+   "loo_max": 0.20377406339229623,
+   "loo_min": 0.13182558079672985,
+   "mean_log2FC": 0.16169689378991897,
+   "n_declared": 74,
+   "n_used": 65
+  }
+ }
+}
