@@ -8,6 +8,9 @@ the parts where they conflict, and the Advisor re-evaluates when this section ch
 
 <!-- OPERATOR_ROADMAP:BEGIN -->
 
+**SCI_CODEX continuous compound programme, operator mandate of 23 November 2026.** Explore one named molecule at a time across WWOX loss-of-function pathways, prioritizing justified supplements and antiseizure medicines while retaining other pharmacological classes. The [live queue and checkpoint](continuous_compounds/README.md) carry the sequential work and three-hour recall for this chat. The laboratory-wide priorities and parallel roles continue.
+
+
 **Current mode and supersession — 2026-11-19.** The ADV host is ACTOR_ID `advisor` (roles/advisor.md); IT remains `orchestrator`. The same authorised campaign continues through its existing CONTINUOUS.json, subject to operator controls and actual resource limits. The bounded pilot's expiry and total ceilings below are historical in continuous mode, not a reason to stop or remove the recall. No counter or authorisation is reset here. The optional read-only analyst is distinct from the accountable ADV host.
 
 **Mission.** Improve LEGEND's ability to turn verifiable scientific knowledge into more useful pharmacological hypotheses, comparisons and experiments for WWOX loss of function, keeping the
