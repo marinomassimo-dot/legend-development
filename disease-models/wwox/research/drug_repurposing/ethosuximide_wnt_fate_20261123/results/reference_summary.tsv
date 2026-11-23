@@ -1,0 +1,25 @@
+experiment	control	line	condition	telencephalic	enriched_regional	CNS_neurons	directional_match
+OG1	Control_OG1	HES3	CHIR_E	down	none	down	False
+OG1	Control_OG1	HES3	RA_E	down	none	down	False
+OG1	Control_OG1	HES3	XAV939_A	down	Diencephalic Progenitors	uncertain	True
+OG1	Control_OG1	HES3	XAV939_E	down	Diencephalic Progenitors	down	True
+OG1	Control_OG1	WTC	CHIR_E	down	none	absent	False
+OG1	Control_OG1	WTC	RA_E	down	Hindbrain Progenitors	uncertain	True
+OG1	Control_OG1	WTC	XAV939_A	uncertain	none	uncertain	False
+OG1	Control_OG1	WTC	XAV939_E	uncertain	none	uncertain	False
+SMG1	Control_SMG1	HES3	RA_A	up	Hindbrain Progenitors	up	False
+SMG1	Control_SMG1	HES3	RA_B	uncertain	Hindbrain Progenitors	uncertain	False
+SMG1	Control_SMG1	HES3	RA_C	uncertain	Hindbrain Progenitors	up	False
+SMG1	Control_SMG1	HES3	RA_D	uncertain	Hindbrain Progenitors	up	False
+SMG1	Control_SMG1	HES3	RA_E	down	Hindbrain Progenitors	up	True
+SMG2	Control_SMG2	HES3	CHIR_A	uncertain	none	uncertain	False
+SMG2	Control_SMG2	HES3	CHIR_B	down	none	uncertain	False
+SMG2	Control_SMG2	HES3	CHIR_C	down	none	uncertain	False
+SMG2	Control_SMG2	HES3	CHIR_D	uncertain	none	uncertain	False
+SMG2	Control_SMG2	HES3	CHIR_E	up	none	uncertain	False
+SMOG1	Control_SMOG1	H9	CHIR_A	down	Diencephalic Progenitors	uncertain	True
+SMOG1	Control_SMOG1	H9	CHIR_E	down	Hindbrain Progenitors,Spinal Cord Progenitors	up	True
+SMOG1	Control_SMOG1	H9	RA_A	down	Hindbrain Progenitors	uncertain	True
+SMOG1	Control_SMOG1	H9	RA_E	down	Hindbrain Progenitors	up	True
+SMOG1	Control_SMOG1	WTC	CHIR_A	down	Diencephalic Progenitors	uncertain	True
+SMOG1	Control_SMOG1	WTC	RA_A	down	Hindbrain Progenitors	uncertain	True

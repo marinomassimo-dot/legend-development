@@ -1,0 +1,3 @@
+normalization	n_eligible	n_up	delta	min_vehicle	max_vehicle	n_block_below	block_size	passes
+CPM	3	3	0.3252097297798078	-0.21854457024114535	0.21187032446655354	14	15	True
+median_ratio	3	3	0.33727244004334683	-0.28242424634253815	0.25679049934865583	14	15	True
