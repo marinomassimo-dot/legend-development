@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-25765302-76",
+  "event_at": "2026-11-23T21:44:00Z",
+  "analysis_at": "2026-11-23T21:44Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "25765302",
+    "doi": "10.1016/j.parkreldis.2015.02.020"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://escholarship.org/content/qt57d8b6sp/qt57d8b6sp.pdf?v=lg ; https://doi.org/10.1016/j.parkreldis.2015.02.020",
+  "source_fingerprint": null,
+  "workflow": "Align route and measurement compartment in pediatric GSH and adult NAC studies.",
+  "evidence_basis": [
+    "Targeted university-deposited PDF text pages 2–3 of the article: Table 1, Methods, Results and Figure 1 caption, compared with publisher Results for unit typography.",
+    "Figure 1 caption: “mean results obtained in 3 patients”. Paired 90-minute lumbar CSF values and number of formulations are distinct from an individual peak or brain GSH change."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/acetylcysteine/exposure.md"
+  ]
+}

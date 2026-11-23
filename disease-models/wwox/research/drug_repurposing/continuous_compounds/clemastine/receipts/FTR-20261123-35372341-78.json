@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-35372341-78",
+  "event_at": "2026-11-23T21:52:00Z",
+  "analysis_at": "2026-11-23T21:52Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "35372341",
+    "doi": "10.3389/fcell.2022.841548"
+  },
+  "prior_receipt": "FTR-20261113-35372341-68",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8970281/ ; files/figures/PMID35372341_r2/fcell-10-841548-g002.jpg ; files/fulltext/PMID35372341_Palma2022_PMC_r2.xml SHA256 3655dee8230fc8de28874769693312fd8b85d3f5d54cd447efe35993d31003aa",
+  "source_fingerprint": "6a9a7e2cd00da754623ed743cb3b0c187187b472f127646948e7b62d72f57f4b",
+  "workflow": "Compare normalized recruitment with absolute recruitment and distance-dependent propagation in development.",
+  "evidence_basis": [
+    "Figure 2C: “Fraction of max stimulation” at 2 mA and shared 100% endpoint. Read both marker centers on the native 699×202 image; unitless calculation.",
+    "The method uses the slope of electrode distance versus latency; sampled populations differ between panels B and C. Original velocity readback already in the shared manifest."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/clemastine/README.md"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-22137594-77",
+  "event_at": "2026-11-23T21:50:00Z",
+  "analysis_at": "2026-11-23T21:50Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "22137594",
+    "doi": "10.1016/j.biopsych.2011.10.024"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.1016/j.biopsych.2011.10.024 ; files/deepening_downloads/acetylcysteine_loop_20261123/PMC3340445.html",
+  "source_fingerprint": "6da17770241664bca265c212683b53d4ef440ed192f2d9c8f22c86d04076666a",
+  "workflow": "Distinguish synthesis-dependent neuronal effects, biphasic currents and human route-specific redox readouts.",
+  "evidence_basis": [
+    "Figure 2 source population: “acute slices from yoked-saline or drug-naïve rats”. The excitatory responses were normalized to baseline.",
+    "Results and captions accompanying figures 2–5: NAC concentration reverses sign of EPSC change; only the lowest dose altered paired-pulse ratio."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/acetylcysteine/mechanism.md"
+  ]
+}

@@ -19,7 +19,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: N-acetylcysteine.** The [first exposure comparison and prediction](acetylcysteine/README.md) identify a 1,000-fold discrepancy in the two published descriptions of the co-culture medium relative to a 1 mM fibroblast condition. Next compare central exposure and direction of glutathione synthesis versus glutamate exchange. No NAC response is identifiable from a common background without a matched comparison.
+**Active compound: clemastine.** In developing control mouse callosum, a larger relative N1 amplitude at 2 mA can coexist with a lower absolute response if peak recruitment falls sufficiently. Next compare the axonal denominator, functional readouts and cellular lesion against WWOX and Tcf4. [First quantitative counterexample](clemastine/README.md)
+
+**N-acetylcysteine parked for trial prioritization, retained as a mechanistic probe.** Across three untreated WWOX bulk datasets, SLC1A1, SLC7A11 and SLC1A2 all declined; the decline in SLC1A2 reversed in a pooled hippocampal astrocyte-enriched subset. The next decisive observation is neuronal GSH synthesis coupled to recovered function without sustained glutamate accumulation at matched exposure. [WWOX contrasts and competing mechanisms](acetylcysteine/mechanism.md) · [Pediatric oral and human central measures](acetylcysteine/exposure.md)
 
 **Taurine parked.** [Native-chloride firing](taurine/native_chloride.md), [transient fetal arrival and discordant WWOX transcript contrasts](taurine/migration.md), and a [quantitative human CSF upper bound](taurine/exposure.md) leave a developmental trial unsupported. Reopen for a matched drug-by-WWOX functional response at measured attainable central exposure.
 

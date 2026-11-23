@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-29561203-76",
+  "event_at": "2026-11-23T21:44:00Z",
+  "analysis_at": "2026-11-23T21:44Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "29561203",
+    "doi": "10.1177/0271678X18765828"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.1177/0271678X18765828 ; files/deepening_downloads/acetylcysteine_loop_20261123/PMC5999009.html",
+  "source_fingerprint": "6be55d183d3ff06df1369695e2b6c8b84c7275afa18705d6689d4437df3a236c",
+  "workflow": "Align route and measurement compartment in pediatric GSH and adult NAC studies.",
+  "evidence_basis": [
+    "Methods and results associated with Figure 4, including infant exclusions, incomplete infusions, pre-infusion timing after several days of treatment and calcitriol subgroups.",
+    "Results: “Mean absolute [GSH] increase was 0.30 ± 0.21 mM”. No measured parent NAC in the spectroscopic voxel."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/acetylcysteine/exposure.md"
+  ]
+}

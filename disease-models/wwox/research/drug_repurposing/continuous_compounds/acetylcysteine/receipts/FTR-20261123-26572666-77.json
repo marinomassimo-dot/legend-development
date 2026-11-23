@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-26572666-77",
+  "event_at": "2026-11-23T21:50:00Z",
+  "analysis_at": "2026-11-23T21:50Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "26572666",
+    "doi": "10.1007/s13311-015-0404-4"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.1007/s13311-015-0404-4 ; files/deepening_downloads/acetylcysteine_loop_20261123/PMC4720670.html",
+  "source_fingerprint": "700d679a9aef32fb0b2203b01e6a103f8d403781155e993dee696f3c7d3c616d",
+  "workflow": "Distinguish synthesis-dependent neuronal effects, biphasic currents and human route-specific redox readouts.",
+  "evidence_basis": [
+    "Figure 6 caption: “Data from human subjects are re-plotted”. Do not count human CSF data as a second cohort.",
+    "Results for synthesis blockade, ex vivo antioxidant assay, CSF time course and 5-hour GSH endpoint; peak measurements used separate groups."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/acetylcysteine/mechanism.md"
+  ]
+}

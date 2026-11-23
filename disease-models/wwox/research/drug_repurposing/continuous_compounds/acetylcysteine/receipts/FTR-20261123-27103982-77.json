@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-27103982-77",
+  "event_at": "2026-11-23T21:50:00Z",
+  "analysis_at": "2026-11-23T21:50Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "27103982",
+    "doi": "10.1186/s13229-016-0088-6"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.1186/s13229-016-0088-6 ; files/deepening_downloads/acetylcysteine_loop_20261123/PMC4839099.1.xml",
+  "source_fingerprint": "ff8fdc68def814f6fe102b4fd562d51404f995a9fab6b59eefbf727485fbe6e4",
+  "workflow": "Distinguish synthesis-dependent neuronal effects, biphasic currents and human route-specific redox readouts.",
+  "evidence_basis": [
+    "Methods: “able to swallow capsules”. Table 4 compares baseline and 12-week means for GSH, GSSG and their ratio; table footnote specifies a one-tailed test.",
+    "Table 1 shows two NAC participants on antiepileptic medication. Tables 3 and 4, primary clinical outcome, biomarker contrast and denominator limitations."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/acetylcysteine/exposure.md"
+  ]
+}
