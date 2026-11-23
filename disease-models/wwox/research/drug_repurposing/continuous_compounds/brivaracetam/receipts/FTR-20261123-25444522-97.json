@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261123-25444522-97",
+  "event_at": "2026-11-23T21:17:00Z",
+  "analysis_at": "2026-11-23T21:17Z",
+  "analysis_time_precision": "minute",
+  "study_id": {
+    "pmid": "25444522",
+    "doi": "10.1111/cns.12347"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://doi.org/10.1111/cns.12347 ; files/deepening_downloads/brivaracetam_loop_20261123/PMC4359682.1.xml",
+  "source_fingerprint": "78ed9a90594174c31bf67194c9b23ab529ec2eaf1da246c58f1d9d4343153a7b",
+  "workflow": "Test whether channel effects transport to neuronal firing in WWOX as predicted in the brivaracetam dossier.",
+  "evidence_basis": [
+    "Results, adult CA1 pyramidal neurons: “from a membrane potential held at −60 mV”. The study tested one hour of BRV at 100 μM against the induced firing response.",
+    "Results, primary rat cortical neurons under separate voltage and current clamps; first AP amplitude unchanged. Figures were located via Results references; raw or graphic measurements were not made."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/brivaracetam/intrinsic.md"
+  ]
+}

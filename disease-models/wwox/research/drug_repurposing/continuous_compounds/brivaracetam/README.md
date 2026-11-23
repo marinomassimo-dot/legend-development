@@ -26,3 +26,7 @@ Let the knockout index be R times the control index and let the drug reduce dete
 Only original calculations are distributed. To reproduce, run `python3 wave_charge.py wwox-fig4.jpg` on the [original figure](https://ars.els-cdn.com/content/image/1-s2.0-S0969996121002783-gr4_lrg.jpg) using ImageMagick and NumPy. [Targeted reading record](receipts/)
 
 The [astrocyte comparison](astrocytes.md) identifies a conditional, activity-dependent alternative and an unresolved concentration discrepancy in the chronic experiment.
+
+The [intrinsic-current counterexample](intrinsic.md) lowers the priority of a direct firing correction. Remaining decision depends on absolute inhibitory and excitatory responses during WWOX-like bursts.
+
+**Disposition: park for a discriminating measurement.** The current evidence supports testing burst-dependent circuit modulation. Neither differential suppression of absolute excitatory versus inhibitory charge nor developmental benefit is established. The direct train/recycling study (PMID 26515103) remained a source lead; a publicly accessible, licensed full text with matched absolute inhibitory values was not verified. Prior LEV exposure, simultaneous target occupancy, direct firing, astrocyte response, and clinical response answer different questions. Reopen for paired absolute inhibitory/excitatory responses in a relevant burst pattern, a drug-by-WWOX functional result, or independently interpretable longitudinal human exposure and outcome data.
