@@ -13,11 +13,12 @@ To show where the transfer from the published slice finding to ketamine breaks, 
 * `experiment` (E): a proposed measurement.
 * `gap`: a documented absence (N18).
 
-## Edge status (every edge carries exactly one of three)
+## Edge status (every edge carries exactly one of four)
 * **OBSERVED:** the link itself is stated by the source, or is a documented absence found by a search. It is not merely that the datum at one end was observed.
 * **INFERRED:** a reasoning step from observations (for example "this observation makes that alternative a candidate", or the inference that d-APV bursts suppression supports an NMDA-receptor contribution). Drawn dashed.
 * **HYPOTHESISED:** a predicted relation or competing prediction; none has been tested. Drawn dotted.
-The break in transfer is edge G4 (N3 to N5), which is a documented fact: no pore-blocker arm exists. The rivals G7, G10, G12 and G14 point into N5 and the discriminating readout N17 (edges G16 to G18) separates the first three. Edge G13 (bursting recorded in vivo with ketamine on board) is marked `context_only` and INFERRED, and should be drawn lightly: its own label says it is not a test.
+* **CONTEXT_ONLY:** shown for completeness, not as evidence for or against the link; its own label says why (edge G13). Drawn lightly.
+The break in transfer is edge G4 (N3 to N5), which is a documented fact: no pore-blocker arm exists. The rivals G7, G10, G12 and G14 point into N5 and the discriminating readout N17 (edges G16 to G18) separates the first three. Edge G13 (bursting recorded in vivo with ketamine on board) is CONTEXT_ONLY and should be drawn lightly: its own label says it is not a test.
 
 ## Suggested reading order for a figure
 N1, N2 to N3 (the finding), then N4 against N5 (the two claims), then the three alternatives (N8, N11, N13) each with their motivating observations, then N17 as the readout, then N16 and N18 as the two limits (exposure and the missing direct test).

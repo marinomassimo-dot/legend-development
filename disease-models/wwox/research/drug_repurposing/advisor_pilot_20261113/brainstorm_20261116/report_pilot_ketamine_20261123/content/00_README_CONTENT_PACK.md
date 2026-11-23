@@ -10,7 +10,7 @@ AI-curated research brief for discussion with a clinical team. Hypothesis level;
 5. `C_methods_and_coverage.md` (title: Methods and coverage)
 6. `B_references.md` (title: References)
 
-Refer to sections by their titles, not by letters. Edge status set for the figure: OBSERVED (solid), INFERRED (dashed), HYPOTHESISED (dotted). Node kinds: observation, inference, claim, alternative, experiment, gap.
+Refer to sections by their titles, not by letters. Edge status set for the figure (four values): OBSERVED (solid), INFERRED (dashed), HYPOTHESISED (dotted), CONTEXT_ONLY (light). Node kinds: observation, inference, claim, alternative, experiment, gap.
 
 ## Not for the printed brief
 `VERIFICATION_LEDGER_ADV200.tsv` (appendix or internal), `INTERNAL_NOTES_NOT_FOR_READERS.md`, this README.
