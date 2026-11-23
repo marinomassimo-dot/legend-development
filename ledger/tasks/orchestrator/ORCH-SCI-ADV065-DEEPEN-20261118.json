@@ -849,6 +849,15 @@
      "accepted_at": "2026-11-23T20:47:32Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv203_prakash_xdp_myelin_sci_20261123/RESULT_ADV203_PRAKASH_XDP_MYELIN_SCI_20261123.md; disposition (a), one lineage-nested readout constraint; receipts FTR-20261123-41278988-01 and FTR-20261123-43057229-01",
      "updated_at": "2026-11-23T20:53:03Z"
+    },
+    {
+     "step": "ADV-204: PAPER 542 (Aragon-Ramirez, PMID 42523332) WWOX perturbation scope check under its actual controls; prereg first",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-204 (assignments/ADV-204.md; ADV message 2026-11-23 23:3xZ)",
+     "accepted_at": "2026-11-23T23:37:27Z",
+     "evidence": "ADV-205 (id corrected from ADV-204): RESULT_ADV205_PAPER542_GOLGI_WWOX_SCOPE_SCI_20261123.md; disposition b; receipt FTR-20261123-42523332-01; landed a7a1fa75b",
+     "updated_at": "2026-11-23T23:49:52Z"
     }
    ]
   }
@@ -1502,6 +1511,13 @@
    "at": "2026-11-23T20:47:32Z",
    "source": "ADV-203 (cross-session message 2026-11-23, assignment text /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv203.txt)",
    "step_sha256": "42263b681fa6",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-23T23:37:27Z",
+   "source": "ADV-204 (assignments/ADV-204.md; ADV message 2026-11-23 23:3xZ)",
+   "step_sha256": "35336a6774ed",
    "reopened_block": false,
    "authorised_by": null
   }

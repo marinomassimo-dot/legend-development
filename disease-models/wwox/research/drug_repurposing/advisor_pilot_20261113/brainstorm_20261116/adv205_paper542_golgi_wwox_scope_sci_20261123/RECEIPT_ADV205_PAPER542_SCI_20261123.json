@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-23T23:40Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-23T23:40:29Z",
+ "event_id": "FTR-20261123-42523332-01",
+ "evidence_basis": [
+  "Re-read for ADV-205 (PAPER 542 scope under its actual controls), preprint version 3 only: abstract; the WWOX section of Results and the passages naming WWOX in the other Results; Fig 1 legend; the Discussion on WWOX; Methods (cell culture, immunofluorescence and localisation quotient, statistics) with absence of siRNA, lectin-staining and non-targeting-control text established by code across the Europe PMC XML and the bucket texts of v2 and v3; Fig 5 image and Supplementary Figure 4 (supplement PDF page 4) opened as images. Not opened: other figures, the two supplement spreadsheets, the proteomics and CCDC186 parts beyond WWOX passages, the reference list beyond reference 58.",
+  "verbatim_locator | proposition: one siRNA is used, cited to earlier work | Results, Fig 5 section | \"we knocked it down using siRNA ( Supplementary Figure 4C ) used in previous studies\"",
+  "verbatim_locator | proposition: knockdown verified at mRNA with two biological repeats | Supplementary Figure 4 legend (C) | \"Two biological repeats of the knockdown (KD) efficiency of WWOX siRNA measured with RT-PCR\"",
+  "verbatim_locator | proposition: the unit of the lectin and COPB2 panel is cells | Fig 5 legend (C) | \"increases plasma membrane HPA binding, consistent with impaired Golgi homeostasis and defects in O-glycosylation (n = 30 cells)\"",
+  "verbatim_locator | proposition: only the Golgi-area panel names a test | Fig 5 legend (B) | \"Wilcoxon rank sum test with continuity correction, W = 25487, p = 0.00159\"",
+  "verbatim_locator | proposition: endogenous WWOX could not be imaged | Results, Fig 5 section | \"Commercial anti-WWOX antibodies did not show any specific signal for IF\"",
+  "verbatim_locator | proposition: the same HPA assay is rescue-validated for other knockouts | Fig 1 legend (C) | \"Reduced HPA binding following rescue indicates restoration of normal glycosylation\"",
+  "verbatim_locator | proposition: abstract claim stronger than the controls | Abstract | \"establishes WWOX as a previously unrecognized regulator of Golgi homeostasis and glycosylation\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv205_paper542_golgi_wwox_scope_sci_20261123/RESULT_ADV205_PAPER542_GOLGI_WWOX_SCOPE_SCI_20261123.md"
+ ],
+ "prior_receipt": "FTR-20260921-42523332-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "3d8d3bd84a97227139251b2720db6ded23f1f26de1ff6a35012ddc07745c17d0",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext (held copy, not in git): PMID42523332_Aragon2026_PMC13405132_v3_epmc.xml",
+ "study_id": {
+  "doi": "10.64898/2026.06.16.732723",
+  "pmid": "42523332"
+ },
+ "workflow": "SCI window AB ADV-205 (PAPER 542 WWOX perturbation scope check)"
+}
