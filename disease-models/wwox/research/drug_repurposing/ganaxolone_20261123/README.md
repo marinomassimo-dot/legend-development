@@ -1,0 +1,36 @@
+# Ganaxolone and the microglial response to myelin in WWOX loss
+
+**Research decision, 23 November 2026.** A myelin-challenge signature was absent at the whole-tissue level in the Wwox models tested. Its direction reversed in the pooled hippocampal microglia. That observation warrants a cell-specific replication. It does not establish debris accumulation, altered clearance, or an effect of ganaxolone. The developmental hypothesis also deserves separate consideration because ganaxolone has been tested after preterm birth without inducing focal demyelination. None of the Wwox datasets used here included the drug.
+
+## Transfer from a controlled myelin challenge
+
+The [prediction](prediction.md) was fixed at commit 5a60aece9 before opening the training matrix. Microglia cultured from APOE3 humanized mice were exposed to myelin for three hours and collected 21 hours later. In this arm alone, we selected the 25 most increased and 25 most decreased eligible genes. The score is mean log2(expression+1) for the increased set minus the corresponding mean for the decreased set. Six structural myelin genes were excluded to reduce potential carryover from the material added. The same genes and signs were used throughout. The public sample fields give treatment and sample identifiers but no sex strata or confirmed biological pairing, so the unit is the sample. No sex or pairing was inferred. The source TPM columns sum to approximately one million. [Primary study](https://pubmed.ncbi.nlm.nih.gov/35031484/) · [Public matrix and sample records](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE171280)
+
+| Contrast | Samples per group | Difference in score | Range after omitting one sample |
+|---|---:|---:|---:|
+| Treated vs untreated APOE3 microglia, training arm | 4 / 4 | +1.80 | +1.62 to +1.91 |
+| Treated vs untreated APOE4 microglia | 5 / 5 | +1.59 | +1.49 to +1.76 |
+| Treated vs untreated mouse wild-type microglia | 5 / 5 | +0.96 | +0.70 to +1.14 |
+| P17 cortex, neuronal Wwox knockout vs control | 3 / 4 | −0.06 | −0.16 to +0.05 |
+| Hippocampus, same type of neuronal Wwox deletion | 3 / 2 | −0.28 | −0.50 to −0.09 |
+| Hippocampus, day 14 after kainate vs vehicle | 6 / 6 | −0.19 | −0.25 to −0.12 |
+
+APOE4 and mouse wild type are held-out arms of the same experiment. An independent laboratory has yet to validate this signature. Cultured microglia, bulk RNA and single nuclei differ in composition and measurement. Cross-study comparisons concern the direction of each within-study effect. The score is not calibrated to the amount of debris. Kainate is an injury and seizure comparison with a different age and etiology. It is not a required positive control for myelin clearance. [Wwox cortex](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158682) · [Wwox hippocampus](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158681) · [Kainate hippocampus](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE319769)
+
+## The observation that changes the interpretation
+
+The pooled hippocampal microglia score was 3.05 in knockout and 2.10 in control, a difference of **+0.96**. There is **one biological pool per group**, with 171 and 167 assigned nuclei respectively. Post hoc, the difference stayed positive when removing individual genes (+0.80 to +1.14) and after matching the two libraries to 287,374 molecular counts over 250 subsamples (+0.86 to +1.08). Other classes ranged from −0.11 to +0.65 before count filtering. For the microglia, requiring at least ten counts in both pools retained only **10 up genes and 2 down genes**, despite mapping 23 and 25 respectively. The positive score therefore survives two technical challenges but cannot establish biological reproducibility or microglial specificity. Changed proportions of microglial states, background RNA, sparse detection or a broader lipid or inflammatory response remain alternatives. [Nuclear data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158684) · [Sensitivity by cell class](results/cell_sensitivity.tsv)
+
+The predicted concordance across cortex, hippocampus and microglia was not observed. Prioritize a localized substrate check over a whole-tissue drug-response prediction. A higher intracellular stock of damaged myelin can follow greater uptake or slower degradation. The signature cannot separate those mechanisms.
+
+## Evidence specific to the drug
+
+- In adult rats with focal demyelination, ganaxolone improved structural measures and was associated with more damaged myelin material within lesion microglia. The experiment leaves the causal contribution of clearance open. [Focal lesion study](https://pubmed.ncbi.nlm.nih.gov/31332963/)
+- In male guinea pigs born preterm, the authors reported a later improvement in myelin basic protein staining without inducing a focal demyelinating lesion. Poor growth, sedation and increased neonatal mortality during treatment complicate interpretation in the survivors. Preterm birth interrupts the fetal neurosteroid environment. An analogous deficiency has not been demonstrated in the Wwox preparations examined here. [Preterm birth study](https://pubmed.ncbi.nlm.nih.gov/30237570/)
+- Another preterm study found no correction of the reported molecular deficits at term-equivalent age. After prenatal stress, the reported restoration of mature myelin and female lineage measures with emapunil was not observed with ganaxolone. Timing, sex and endpoints differ, and these guinea pig studies share investigators. They limit a general claim of developmental rescue. [Term-equivalent study](https://pubmed.ncbi.nlm.nih.gov/35514343/) · [Prenatal stress and pharmacological comparison](https://pubmed.ncbi.nlm.nih.gov/34601389/)
+
+**Next discriminating observation.** A clearance mechanism predicts that a reproducible signal localizes to microglia associated with damaged myelin and tracks its uptake and subsequent degradation. Attribution to ganaxolone requires a drug–vehicle comparison. A developmental mechanism predicts an effect on newly formed oligodendrocyte survival and new sheaths in a developmental preparation without added myelin debris. Matching seizure suppression with a mechanistically different comparator would help distinguish a secondary change in maturation. An increase in total MBP alone would leave both explanations open.
+
+## Reproduction and scope
+
+[Code](analyze.py), [signature](results/signature.tsv), [contrasts](results/contrasts.tsv), [individual samples](results/samples.tsv), [depth matching](results/microglia_depth.tsv), [input hashes](inputs.sha256). Python and NumPy suffice. From this directory run `python3 analyze.py /path/to/files /path/to/GSE171280_gene_merge.tsv.gz results`. The Wwox data use the same local GEO deposits, Ensembl release 92 mapping and marker-based nucleus assignments as LEGEND A2. A second execution reproduced the outputs. The deposited third-party matrices and published text and figures are not redistributed. The source checks were restricted to the reported observations and metadata. No new complete article reading is claimed.
