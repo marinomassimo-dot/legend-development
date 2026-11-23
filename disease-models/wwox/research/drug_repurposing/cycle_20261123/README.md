@@ -51,3 +51,9 @@ In early healthy cortical slices, two interventions reducing activity increased 
 ## Ethosuximide, calcium and cortical lineage choice
 
 Reducing CaV3.1 expression in embryonic mouse cortical progenitors increased Pax6-positive cells by 20.9 points and lowered Tbr1-positive cells by 19.6 points. In healthy human fetal tissue CACNA1G reached 1 FPKM in zero of four sorted apical radial glia preparations, and 1 TPM in only 2/285 ventricular/dividing radial glia in an independent atlas. The untreated WWOX organoid bulk contrast was +0.153 log2 units. This supports a stage-specific comparison of native current and surviving neuronal yield against the competing hippocampal WNT hypothesis. [Three-source reanalysis](../ethosuximide_progenitor_calcium_20261123/README.md)
+
+## Timing-only model of memantine block
+
+A reimplementation of the published 22-state human GluN1/2A receptor model integrated current for five glutamate pulses, clustered over the Wwox field-burst timescale or spread evenly. At 0.36 µM drug, periodic block was 7.27% versus 7.08% under the primary conditions. The 0.19-point difference missed the five-point threshold. The modeled receptor omitted extracellular Mg, and its high-calcium IC50 exceeded the measured value by 2.2-fold. WWOX cellular calcium, free drug and cell-type-specific firing remain discriminating measurements. [Model, external calibration and sensitivity](../memantine_burst_kinetics_20261123/README.md)
+
+At 13:21 UTC independent reconstruction confirmed the timing difference and both modeled IC50 values. Replaying 10–20 s concentration steps kept the high-calcium model IC50 near 1.50 µM. Graphical readback of the published fitted curves matched the simulation within 0.4 points, while the individual-cell experimental potency discrepancy remained. [Checks and limits](../memantine_burst_kinetics_20261123/README.md)

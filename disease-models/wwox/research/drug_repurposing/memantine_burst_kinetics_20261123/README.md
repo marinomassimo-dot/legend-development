@@ -1,0 +1,36 @@
+# Does a WWOX-like field-burst timescale alone confer preferential memantine block?
+
+context_policy: QUESTION_DRIVEN. SCI_CODEX, 2026-11-23. Original simulation and figure verification using the published Phillips et al. GluN1/GluN2A model. This asks a timing question separate from the previous transcriptional stress, AMPA and white-matter analyses.
+
+## Decision
+
+**Temporal clustering alone did little** when the same glutamate pulses were delivered to this modeled receptor with membrane voltage and intracellular calcium held fixed. With the primary settings, clustering increased the percentage of charge blocked by 0.19 percentage points. The prespecified five-point threshold was missed. A credible prediction of preferential suppression of WWOX bursts therefore requires an additional measured difference, such as sustained local agonist exposure, membrane voltage, receptor composition or intracellular calcium. The model omits extracellular magnesium, network feedback and all WWOX-specific cellular parameters.
+
+## From cortical field signal to a conditional receptor test
+
+P13–17 neuronal Wwox-deletion mouse cortex showed spontaneous field bursts in 36/42 slices, compared with 0/11 wild-type and 4/23 heterozygote slices. The reported median duration was 0.66 s (0.53–1.06), with a median interval of 26.2 s. A previously audited supplement reported a different median event rate. We included 71.4 s as an alternative cycle period. These times constrain the length of the hypothetical cluster only. The number of vesicular releases, glutamate waveform, calcium and voltage experienced by any receptor cannot be read from a field electrode. [WWOX primary study, Fig. 1](https://pmc.ncbi.nlm.nih.gov/articles/PMC8609180/) · [Prior laboratory audit](../../fulltext_dossiers/PMID34634460.md)
+
+We implemented the 22-state receptor transitions in a continuous-time probability matrix and used matrix exponentials to integrate conducting-state occupancy. All rates are from the final fit in Table 2, checked against the archived model topology. Five 2-ms, 1 mM pulses were placed over a 0.66-s cluster or evenly through a 26.2-s cycle. Both patterns delivered equal pulse count and glutamate exposure. For each, block is the reduction of integrated conducting charge relative to that pattern's own drug-free charge. Periodic equilibrium includes trapping between cycles. The first cycle starts with no drug bound. No neuronal gain, synaptic release model or tissue drug concentration is fitted. The model voltage is −65 mV throughout. [Phillips et al., Fig. 3A and Table 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC13215171/) · [Archived model, CC BY 4.0](https://doi.org/10.5281/zenodo.18262690)
+
+| Outcome at 0.36 µM modeled memantine, 0.1 µM intracellular calcium | Clustered | Even | Excess block in clustered condition |
+|---|---:|---:|---:|
+| First cycle | 5.49% | 5.43% | +0.054 points |
+| Repeated cycles at equilibrium | 7.27% | 7.08% | +0.192 points |
+
+The 0.36 µM input comes from an adult CSF mean used as an exposure reference elsewhere in this cycle. It is not a measured concentration in the pediatric cortex. Across the specified variations in calcium, field times and pulse counts, the equilibrium timing difference was +0.07 to +0.62 points at this concentration. Even at 10 µM, the greatest difference in this grid was 1.88 points. In a subsequent 90-condition sensitivity scan (2–100 ms pulses, 10–1000 µM pulse glutamate, 0–1 µM background glutamate and two calcium levels), the difference ranged from effectively zero to +1.17 points. Uniform and clustered input can both produce appreciable block. These are deterministic scenario bounds, without population or clinical uncertainty estimates.
+
+## How well did the model calibrate?
+
+1. Against the authors' **fitted curves** in Fig. 3C,E, the reconstructed steady residual currents at five published memantine concentrations differed by at most 0.4 percentage points across both calcium conditions. This tests our implementation of their model. It does not establish biological accuracy for short pulses.
+2. Against **measured potency**, the reconstructed sustained-glutamate IC50 was 2.53 µM at zero calcium and 1.50 µM at 10 µM calcium. The experimental subtype table gives 2.76 ± 0.27 and 0.69 ± 0.05 µM in the respective conditions. At the 0.1 µM calcium anchor the model gives 1.74 versus a measured 1.76 ± 0.12 µM. The high-calcium discrepancy of about 2.2-fold limits physiological interpretation. The experiments summarize fitted individual-cell potencies, while Fig. 3 fitted averaged traces from cells run with the same protocol. The article also identifies transient gating inaccuracies. No error in the original experiment is inferred.
+3. The versioned archive's five memantine concentration-series trace files contain only a two-byte line break. Its two agonist-only recordings contain numerical arrays. Thus the original memantine sample traces could not be re-fitted from that deposit. The figure comparison uses the unaltered published PDF, and redistributes only original derived values. [Paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC13215171/) · [Data and code deposit](https://doi.org/10.5281/zenodo.18262690)
+
+## Which experiment would change the decision?
+
+At matched cumulative synaptic input, measure both native receptor current and intracellular calcium separately in WWOX-deficient pyramidal neurons and fast-spiking interneurons. Determine whether memantine at measured free concentration preferentially reduces current or firing during bursts while preserving inhibitory recruitment. APV and memantine act through different receptor mechanisms. In rat cortical slices, a competitive antagonist and memantine had different cell-type effects on paroxysmal depolarizations despite similar memantine sensitivity of synaptic currents in the two cell types. Transfer to WWOX depends on the network effect and its direction. [Rat primary study](https://pubmed.ncbi.nlm.nih.gov/33345828/) · [Direct cortical memantine study](https://pmc.ncbi.nlm.nih.gov/articles/PMC5102806/)
+
+## Reproduction
+
+The original Python implementation requires NumPy and SciPy. Run `python3 kinetic.py` and `python3 waveform_sensitivity.py` to reproduce the two scenario tables. Run `python3 check_figure.py article.pdf` with PyMuPDF to reproduce the graphical calibration and input-file hash check. For small matrices a single BLAS thread is sufficient. No original experimental traces, figures or investigator code are redistributed. [Pre-analysis criteria](prediction.md) · [Publisher PDF in the open archive](https://pmc-oa-opendata.s3.amazonaws.com/PMC13215171.1/PMC13215171.1.pdf)
+
+Independent review returned an ACK at 13:21:16 UTC. Reconstructing 30 reversible transitions among 22 states and checking analytical balance reproduced both limiting IC50 values. The reviewer obtained 31.6% model block at the experimental 0.69 µM high-calcium IC50. Simulating the original 10–20 s concentration steps gave 1.50–1.51 µM, so finite step duration alone did not account for the difference. It independently reproduced timing contrasts of +0.079, +0.192 and +0.279 percentage points at fixed calcium of 0, 0.1 and 10 µM. The original trace files would be needed for an individual-record refit. Our figure check verifies the plotted fitted curves only.
