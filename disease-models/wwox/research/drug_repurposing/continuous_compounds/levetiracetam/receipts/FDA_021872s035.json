@@ -1,0 +1,15 @@
+{
+  "record_kind": "regulatory_document_read_receipt",
+  "source": "FDA prescribing information, 021872s035, Reference ID 5344664",
+  "time_utc": "2026-11-24T05:06:24Z",
+  "persistent_source": "files/deepening_downloads/levetiracetam_loop_20261124/fda_021872s035.pdf",
+  "sha256": "cdf336925b6d476d43098bfb230108f66d495174ec7e5d7cbe6cdc0043ad6fe8",
+  "coverage": "Targeted text and Table 6 only. Randomized and analyzed denominators, age strata and outcome definition in Study 5. No complete-document or journal full-text coverage.",
+  "locators": [
+    "Table 6, PDF page 13, somnolence and irritability percentages.",
+    "Section 14.1, PDF pages 27\u201328, Study 5 and Figure 5 text."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/levetiracetam/pediatric.md"
+  ]
+}

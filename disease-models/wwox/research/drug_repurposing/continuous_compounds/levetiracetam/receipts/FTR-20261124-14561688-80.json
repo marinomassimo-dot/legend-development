@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-14561688-80",
+  "event_at": "2026-11-24T05:03:44Z",
+  "analysis_at": "2026-11-24T05:03:44Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "14561688",
+    "doi": "10.1152/jn.00755.2003"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://artefacts-discovery.researcher.life/full_text_files/DA-2/83/830061528a8631f3b9ae2719fcd1e537/full_text/NT134gbUKPK5CgDHdJmcImnC1UlB_Mi4QfZNDZENKpU%3D.pdf",
+  "source_fingerprint": null,
+  "workflow": "Compare circuit-specific endogenous zinc effects and local human exposure with a hippocampal levetiracetam challenge.",
+  "evidence_basis": [
+    "Pages 1093–1094, Results around Figures 2 and 3, selective chelation and added zinc in both inputs. Discussion admits tonic inhibition. Short locator: “Comparison between pathways” (case normalized). No panel image was examined."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/levetiracetam/zinc_and_exposure.md"
+  ]
+}

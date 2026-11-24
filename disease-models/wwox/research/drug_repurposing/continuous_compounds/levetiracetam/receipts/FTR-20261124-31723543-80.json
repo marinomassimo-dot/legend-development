@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-31723543-80",
+  "event_at": "2026-11-24T05:03:44Z",
+  "analysis_at": "2026-11-24T05:03:44Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "31723543",
+    "doi": "10.7759/cureus.5784"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/levetiracetam_loop_20261124/zampella.xml",
+  "source_fingerprint": "631b77a00826cf2946646a1a907da46d6ff3ee6b165c5b6f0a8beaf3bc600eec",
+  "workflow": "Compare circuit-specific endogenous zinc effects and local human exposure with a hippocampal levetiracetam challenge.",
+  "evidence_basis": [
+    "Randomization, adult severe traumatic brain injury and sampling times in Methods. Table 2 concentration column and all paired timepoints. Discussion confirms seizure incidence was not examined. Short locator: “six patients received levetiracetam”."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/levetiracetam/zinc_and_exposure.md"
+  ]
+}

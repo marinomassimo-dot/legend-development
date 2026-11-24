@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-11353010-80",
+  "event_at": "2026-11-24T05:03:44Z",
+  "analysis_at": "2026-11-24T05:03:44Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "11353010",
+    "doi": "10.1152/jn.2001.85.5.1932"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "https://pubmed.ncbi.nlm.nih.gov/11353010/",
+  "source_fingerprint": null,
+  "workflow": "Compare circuit-specific endogenous zinc effects and local human exposure with a hippocampal levetiracetam challenge.",
+  "evidence_basis": [
+    "Abstract and limited indexed excerpts at the publisher. Book only abstract coverage. The proximal dendrite photorelease experiment is a lead for assessing spillover. Does not clear full-text debt."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/levetiracetam/zinc_and_exposure.md"
+  ]
+}

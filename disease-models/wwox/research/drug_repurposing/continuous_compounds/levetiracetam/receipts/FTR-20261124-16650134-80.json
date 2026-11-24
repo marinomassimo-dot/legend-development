@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-16650134-80",
+  "event_at": "2026-11-24T05:03:44Z",
+  "analysis_at": "2026-11-24T05:03:44Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "16650134",
+    "doi": "10.1111/j.1528-1167.2006.00504.x"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://www.academia.edu/85592436/Comparison_of_Brain_Extracellular_Fluid_Brain_Tissue_Cerebrospinal_Fluid_and_Serum_Concentrations_of_Antiepileptic_Drugs_Measured_Intraoperatively_in_Patients_with_Intractable_Epilepsy",
+  "source_fingerprint": null,
+  "workflow": "Compare circuit-specific endogenous zinc effects and local human exposure with a hippocampal levetiracetam challenge.",
+  "evidence_basis": [
+    "Tables 1, 2 and 3B for all three levetiracetam cases, Fig. 2 caption, and recovery limitations in Discussion. Original article rendered as text; checked units, nesting, imputed recoveries and detection limit. Short locator: “ECS = IOMD/recovery”."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/levetiracetam/zinc_and_exposure.md"
+  ]
+}

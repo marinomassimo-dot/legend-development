@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-24081159-80",
+  "event_at": "2026-11-24T05:03:44Z",
+  "analysis_at": "2026-11-24T05:03:44Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "24081159",
+    "doi": "10.1113/jphysiol.2013.261420"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/levetiracetam_loop_20261124/grauert.xml",
+  "source_fingerprint": "c5ab45ad209f4bcecac5d5438ba6086fb10feeb11e93868ecb9fc25cacf43214",
+  "workflow": "Compare circuit-specific endogenous zinc effects and local human exposure with a hippocampal levetiracetam challenge.",
+  "evidence_basis": [
+    "Slice age in Methods, Results for Figs. 1E, 2 and 6, and Discussion on baseline and vesicular attribution. Short locator: “fast-spiking interneurones”. Read text, not the figure images."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/levetiracetam/zinc_and_exposure.md"
+  ]
+}
