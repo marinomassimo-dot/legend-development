@@ -13,7 +13,8 @@ What counts as a candidate: a direct child of the temp root (default /tmp) that 
 never removable: `claude-*` (session scratchpads belong to the sessions), anything not a plain directory, anything owned by another user.
 
 A candidate is REMOVABLE only when every check passes; otherwise it is KEEP with the reasons:
-  * the git tree is clean (`git status --porcelain` empty): ignored files are counted and shown but are not a reason, as in the hand check;
+  * the git tree is clean (`git status --porcelain` empty) AND holds no ignored file except regenerable caches (`__pycache__`, `.pytest_cache`, `.mypy_cache`, `.ruff_cache`, `.hypothesis`, `*.pyc`, `*.pyo`):
+    `git status` omits ignored files, and an ignored analysis output can be the only copy (a hand check on 2026-11-24 used plain `git status`), so any other ignored path is KEEP and is named;
   * every local branch, every tag and HEAD is an ancestor of the main ref in THIS repository (`--main-ref`, default development/main), by sha: a commit
     this repository has never seen, or one main does not contain, is unpublished work;
   * no stash (`refs/stash`);
@@ -44,6 +45,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SCRATCH_NAMES = ("legend-public-gate-", "legend-candidate-tree-")
+# The only ignored paths that may be lost with a clone: caches a tool rebuilds by itself. Any other ignored path (an analysis output, a run folder, `files/`) can be the one unique
+# copy of something and BLOCKS removal (Codex review 23, 2026-11-24: a clean repo whose only ignored file was files/unique-analysis.txt was reported REMOVABLE).
+CACHE_DIRS = {"__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache", ".hypothesis"}
+CACHE_SUFFIXES = (".pyc", ".pyo")
+
+
+def is_regenerable(path: str) -> bool:
+    parts = [x for x in path.rstrip("/").split("/") if x]
+    return bool(parts) and (any(x in CACHE_DIRS for x in parts) or parts[-1].endswith(CACHE_SUFFIXES))
 
 
 def git(repo: Path, *args: str, timeout: int = 120) -> subprocess.CompletedProcess:
@@ -184,10 +194,16 @@ def examine(d: Path, repo: Path, main_sha: str, older_days: float, now: float, s
                 elif st.stdout.strip():
                     lines = st.stdout.strip().splitlines()
                     reasons.append(f"dirty tree: {len(lines)} path(s), first `{lines[0][:90]}`")
-                ig = git(d, "status", "--porcelain", "--ignored")
-                n_ign = sum(1 for l in ig.stdout.splitlines() if l.startswith("!!"))
-                if n_ign:
-                    notes.append(f"{n_ign} ignored entr{'y' if n_ign == 1 else 'ies'} (not a reason)")
+                ig = git(d, "ls-files", "--others", "--ignored", "--exclude-standard", "--directory")
+                if ig.returncode != 0:
+                    reasons.append("could not list ignored files: " + (ig.stderr.strip()[:100] or str(ig.returncode)))
+                else:
+                    ignored = [l for l in ig.stdout.splitlines() if l]
+                    kept = [l for l in ignored if not is_regenerable(l)]
+                    if kept:
+                        reasons.append(f"ignored non-cache path(s), possibly the only copy: {len(kept)} (" + ", ".join(f"`{k}`" for k in kept[:4]) + (", ..." if len(kept) > 4 else "") + ")")
+                    if len(ignored) > len(kept):
+                        notes.append(f"{len(ignored) - len(kept)} regenerable cache entr{'y' if len(ignored) - len(kept) == 1 else 'ies'} ignored")
                 if git(d, "rev-parse", "--verify", "--quiet", "refs/stash").returncode == 0:
                     reasons.append("stash present")
                 shas: dict[str, str] = {}
