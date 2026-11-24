@@ -509,3 +509,9 @@
 {"evidence": "SendMessage 19:02Z with brief pointer", "id": "ADV-213", "receipt": ["482c4fa6-1ae0-43ab-a2f5-827913a282d2"], "state": "SENT", "to": ["SCI - CURRENT ff316249"], "utc": "2026-11-24T19:02:17Z"}
 {"assessment": "HOST", "id": "ADV-214", "key": "gsk3b-tau-limb-held-table-search", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-24T19:20:38Z"}
 {"evidence": "SendMessage 19:20Z, brief pointer", "id": "ADV-214", "receipt": ["92d50647-58c7-4bb0-b6f4-d09b1ef4bd58"], "state": "SENT", "to": ["SCI - CURRENT ff316249"], "utc": "2026-11-24T19:21:00Z"}
+{"assessment": "HOST", "id": "ADV-215", "key": "pubmed-wwox-delta-intake-triage", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-24T22:01:59Z"}
+{"assessment": "HOST", "id": "ADV-216", "key": "reading-debt-complete-top-partial-reads-on-open-questions", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-24T22:01:59Z"}
+{"assessment": "HOST", "id": "ADV-217", "key": "pubmed-delta-census-tool-and-weekly-trigger", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-24T22:01:59Z"}
+{"evidence": "SendMessage 22:02Z with brief pointer", "id": "ADV-215", "receipt": ["d57f9c40-fcf4-4d29-a959-9e4e18dfe6af"], "state": "SENT", "to": ["it_12_20261124"], "utc": "2026-11-24T22:02:33Z"}
+{"evidence": "SendMessage 22:02Z with brief pointer", "id": "ADV-216", "receipt": ["95a617bd-d442-4cd9-a65b-6373d4c6c361"], "state": "SENT", "to": ["sci_ad_20261124"], "utc": "2026-11-24T22:02:34Z"}
+{"evidence": "SendMessage 22:02Z with brief pointer", "id": "ADV-217", "receipt": ["4ad764d9-dfbd-4220-9262-ca6d12f7d71d"], "state": "SENT", "to": ["HE - CURRENT 1d88b230"], "utc": "2026-11-24T22:02:34Z"}
