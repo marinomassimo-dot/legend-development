@@ -515,3 +515,7 @@
 {"evidence": "SendMessage 22:02Z with brief pointer", "id": "ADV-215", "receipt": ["d57f9c40-fcf4-4d29-a959-9e4e18dfe6af"], "state": "SENT", "to": ["it_12_20261124"], "utc": "2026-11-24T22:02:33Z"}
 {"evidence": "SendMessage 22:02Z with brief pointer", "id": "ADV-216", "receipt": ["95a617bd-d442-4cd9-a65b-6373d4c6c361"], "state": "SENT", "to": ["sci_ad_20261124"], "utc": "2026-11-24T22:02:34Z"}
 {"evidence": "SendMessage 22:02Z with brief pointer", "id": "ADV-217", "receipt": ["4ad764d9-dfbd-4220-9262-ca6d12f7d71d"], "state": "SENT", "to": ["HE - CURRENT 1d88b230"], "utc": "2026-11-24T22:02:34Z"}
+{"assessment": "HOST", "id": "ADV-218", "key": "reading-debt-catalogued-only-top-reads-and-gnomad-start-loss", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-24T22:18:52Z"}
+{"evidence": "SendMessage 22:19Z with brief pointer", "id": "ADV-218", "receipt": ["3115eaf7-fda6-4495-a162-afef8c3abbba"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 7cf5e85a"], "utc": "2026-11-24T22:19:12Z"}
+{"assessment": "HOST", "id": "ADV-219", "key": "partial-receipt-labelling-audit-against-held-artefacts", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-24T22:27:21Z"}
+{"evidence": "SendMessage 22:27Z with brief pointer", "id": "ADV-219", "receipt": ["d8e5249f-8f2a-4aa4-a81a-62f2ab2ad02b"], "state": "SENT", "to": ["SCI - CURRENT 7fc66b5b"], "utc": "2026-11-24T22:27:30Z"}

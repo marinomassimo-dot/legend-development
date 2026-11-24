@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-24T22:15Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-24T22:16:10Z",
+ "event_id": "FTR-20261124-PPR1124524-01",
+ "evidence_basis": [
+  "coverage_map",
+  "PREPRINT, NOT PEER REVIEWED; nothing here raises the status of any claim. Completing pass on the supplementary surface that the two earlier receipts recorded as captions_only: Supplementary Figures 1 to 6 are inside the held PDF on pages 17 to 22 and were opened as rendered pages (120 dpi; Supplementary Figure 3 panels e and f re-rendered at 300 dpi). Image values are hand readings (READ-OFF). The main-text passages that cite Supplementary Figures 3, 4 and 6 were read, and the Methods text layer was searched for field of view, blinding and randomisation (no definition or statement found); other sections were not re-read in this pass, so they are recorded not_read. No source data deposited. The 59.1 against 36.1 mismatch is not resolved by the supplement."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv216_reading_debt_three_partials_sci_20261124/RESULT_ADV216_READING_DEBT_THREE_PARTIALS_SCI_20261124.md"
+ ],
+ "prior_receipt": "FTR-20261023-PPR1124524-02",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "3f2030acf225da73a4bbe338fa6417597bcaa09f70b04bdd7549928105e409a6",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PPR1124524_Abudiab2025_bioRxiv.pdf",
+ "study_id": {
+  "doi": "10.1101/2025.11.22.689900"
+ },
+ "workflow": "SCI window AC ADV-216 record 2 of 3 (reading debt; partial-depth record chosen from open rows RS-NP4G1 and RS-NP4G2)"
+}
