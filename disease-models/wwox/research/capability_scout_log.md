@@ -3183,3 +3183,199 @@ verify routing and schema behaviour; universal future model obedience is not dem
 - **Outcome.** GAP-NEW, no change made: a proportionate candidate is a term-collision scan (the same defined term or number used in an answer and in a neighbouring rule sentence with different values), proposed for the next text-work task, not built now. No external search was run (the gap is internal); no cost or privacy risk.
 - **Next micro-step.** If ADV-148 returns answers to integrate, run the integration script, then a collision scan on the touched sentences before any reader is dispatched.
 - Strategic Advisor: assess against the standing roadmap and the ADV-148 queue; route to Harness if worthwhile.
+
+## 2026-11-22 · scout_daily · Discovery:task_step:OBJ_ACCEPTED/Integrate
+
+**WWOX question.** Integrate SCI X results when each lands: ADV-139 (INV-15 question wording and resume condition in investigations_it20.tsv via the establishe
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Ultrasound-responsive nanotherapy promotes axonal regeneration after SCI via reactivating CREB/miR-129-5p signaling. (2026-09-22, published record) [bridge to the question: regeneration] https://europepmc.org/article/MED/42828130; [paper/europepmc] Corrigendum to "Investigation of the effects of umbilical cord and adipose-derived mesenchymal stem cells on endoplasmic reticulum stress in (2025-12-16, published record) [bridge to the question: investigations] https://europepmc.org/article/MED/41412325; [paper/nature] Predicting energy consumption in directed energy deposition using incremental learning-integrated transfer learning (2026-02-25, journal-article) [bridge to the question: integrate] https://doi.org/10.1038/s44334-025-00065-6
+
+**Why asked.** task_step ORCH-ROADMAP-IT59-20261119 OBJ_ACCEPTED step Integrate [TODO] [ledger/tasks/orchestrator/ORCH-ROADMAP-IT59-20261119.json @ blob cc2c1e9ca7, main 42e209737714]: "Integrate SCI X results when each lands: ADV-139 (INV-15 question wording and resume condition in investigatio"
+
+**If confirmed (decision).** step Integrate (orchestrator): whether a found method/resource changes how it is done Roadmap: R3.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-22 · scout_daily · Discovery:reopen:glia_maturation_it14_p4_20261101/NP4G1
+
+**WWOX question.** Peer review (with source data) of the same-laboratory preprint on a primary oligodendroglial role of WWOX under challenge (PPR1124524) the p
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Mild malformation of cortical development with oligodendroglial hyperplasia in epilepsy (MOGHE)-like spectrum with a unique NRAS c.182A>G (p (2026-09-30, published record) [bridge to the question: oligodendroglial] https://europepmc.org/article/MED/42996408; [paper/europepmc] Altered oligodendroglial cell development and increased myelination in SCN2A gain-of-function-linked epilepsy. (2026-10-07, published record) [bridge to the question: oligodendroglial] https://europepmc.org/article/MED/42855710; [paper/europepmc] Molecular Heterogeneity of WNT and mTOR Signaling Pathways in Mild Malformation of Cortical Development with Oligodendroglial Hyperplasia an (2026-11-17, published record) [bridge to the question: oligodendroglial] https://europepmc.org/article/MED/43043571; [paper/nature] Embryonic exposure to 3,3’,5-triiodo-L-thyronine affects oligodendroglial lineage during neurodevelopment in zebrafish (2026-07-22, journal-article) [bridge to the question: oligodendroglial] https://doi.org/10.1038/s41598-026-63428-9
+
+**Why asked.** reopen glia_maturation_it14_p4_20261101 table row NP4G1 [NEEDS-DATUM] [disease-models/wwox/research/drug_repurposing/glia_maturation_it14_p4_20261101/reopen_searches_it14_p4.tsv @ blob 53be97d5b9, main 42e209737714]: "Peer review (with source data) of the same-laboratory preprint on a primary oligodendroglial role of WWOX unde"
+
+**If confirmed (decision).** reopen condition met? the preprint is published with source data and the disagreement is resolved Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-22 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [dataset/huggingface] healthcare-biomedical-ai/Ambulatory-Surgery-Medication-and-Allergy-Constraint-Verification-Benchmark (2026-11-20, none stated, revision 969ff8cc3477, 3 files) https://huggingface.co/datasets/healthcare-biomedical-ai/Ambulatory-Surgery-Medication-and-Allergy-Constraint-Verification-Benchmark; [dataset/huggingface] healthcare-biomedical-ai/Behavioral-Medicine-Counseling-Dialogue-Intent-Classification-Dataset (2026-11-20, none stated, revision 24a949225660, 3 files) https://huggingface.co/datasets/healthcare-biomedical-ai/Behavioral-Medicine-Counseling-Dialogue-Intent-Classification-Dataset; [space/huggingface] Biomedical/Degradation_Predict_Copy (2026-11-20, none stated, revision dc94ffa9855f, 4 files) https://huggingface.co/spaces/Biomedical/Degradation_Predict_Copy
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-23 · scout_daily · Discovery:reopen:glia_maturation_it14_p4_20261101/NP4G3
+
+**WWOX question.** Oligodendrocyte-lineage census in the Synapsin-Cre deletion before the first spontaneous seizure (about P7 to P8) the census is reported
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Case Report: Myelin oligodendrocyte glycoprotein antibody-associated cortical encephalitis masked by peri-ictal magnetic resonance imaging a (2026-08-21, published record) [bridge to the question: oligodendrocyte] https://europepmc.org/article/MED/42698690; [paper/europepmc] Integrative genomic and spatial transcriptomic analysis elucidates the oligodendrocyte-mediated etiology of epileptic cortical thinning. (2026-03-26, published record) [bridge to the question: oligodendrocyte] https://europepmc.org/article/MED/41885647; [paper/europepmc] Autoimmune-associated epilepsy or acute symptomatic seizures? A case series of recurrent seizures in patients with myelin oligodendrocyte gl (2026-01-28, published record) [bridge to the question: oligodendrocyte, seizure] https://europepmc.org/article/MED/41616748; [repository/github] Difei1993/TLE-Mature-Oligodendrocyte-P5 (2026-10-13, MIT, default-branch head 946fcfbf8fbc 2026-10-13, release v1.0.0 2026-10-09) [bridge to the question: oligodendrocyte] https://github.com/Difei1993/TLE-Mature-Oligodendrocyte-P5; [paper/nature] Single-cell transcriptomic insights into conserved and divergent oligodendrocyte lineage programs across species (2026-10-25, journal-article) [bridge to the question: oligodendrocyte, lineage] https://doi.org/10.1038/s42003-026-11256-y; [paper/nature] Effects of thioredoxin-1 on oligodendrocyte lineage cells altered by the 1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine (2026-09-24, journal-article) [bridge to the question: oligodendrocyte, lineage] https://doi.org/10.1038/s41531-026-01581-8
+
+**Why asked.** reopen glia_maturation_it14_p4_20261101 table row NP4G3 [NEEDS-DATUM] [disease-models/wwox/research/drug_repurposing/glia_maturation_it14_p4_20261101/reopen_searches_it14_p4.tsv @ blob 53be97d5b9, main 859262b99837]: "Oligodendrocyte-lineage census in the Synapsin-Cre deletion before the first spontaneous seizure (about P7 to "
+
+**If confirmed (decision).** reopen condition met? the census is reported Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-23 · scout_daily · Discovery:reopen:glia_maturation_it14_p4_20261101/NP4G4
+
+**WWOX question.** Human isogenic patient-allele neuron-OPC system with an oligodendrocyte compartment such a system is reported
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Chromatin remodeling factor BAF155 coordinates oligodendroglial-neuronal communications linked to regional myelination and autism-like behav (2025-12-21, published record) [bridge to the question: oligodendrocyte] https://europepmc.org/article/MED/41423560; [preprint/europepmc] A developmental switch to facilitation shapes synaptic plasticity at neuron-OPC synapses in white matter (2026-04-03, preprint (not peer reviewed)) [bridge to the question: neuron] https://europepmc.org/article/PPR/PPR1214614; [paper/europepmc] Spared Nerve Injury Induces Long-Term and Brain Region-Specific Changes in Oligodendrocyte Density in Mice. (2026-04-01, published record) [bridge to the question: oligodendrocyte] https://europepmc.org/article/MED/41964505
+
+**Why asked.** reopen glia_maturation_it14_p4_20261101 table row NP4G4 [NEEDS-DATUM] [disease-models/wwox/research/drug_repurposing/glia_maturation_it14_p4_20261101/reopen_searches_it14_p4.tsv @ blob 53be97d5b9, main 859262b99837]: "Human isogenic patient-allele neuron-OPC system with an oligodendrocyte compartment such a system is reported"
+
+**If confirmed (decision).** reopen condition met? such a system is reported Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-23 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] kongkong-bit/ER-DReKG (2026-11-20, none stated, default-branch head 1ca01d28b522 2026-11-20, release none published) https://github.com/kongkong-bit/ER-DReKG; [repository/github] jdjzq/CPM-DDI-KG (2026-11-16, NOASSERTION, default-branch head 979891d15e27 2026-11-16, release none published) https://github.com/jdjzq/CPM-DDI-KG; [repository/github] zhuhengwei00/target-aware-drug-repurposing (2026-11-15, none stated) https://github.com/zhuhengwei00/target-aware-drug-repurposing; [model/huggingface] telepaties/laptop-price-prediction-model (2026-11-23, none stated) https://huggingface.co/telepaties/laptop-price-prediction-model; [model/huggingface] At1uri/conformal-prediction-vault (2026-11-23, mit) https://huggingface.co/At1uri/conformal-prediction-vault; [dataset/huggingface] At1uri/conformal-prediction-coverage-benchmarks (2026-11-23, mit) https://huggingface.co/datasets/At1uri/conformal-prediction-coverage-benchmarks
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-23 · scout_daily · Follow:mims-harvard/ToolUniverse
+
+**WWOX question.** live-lookup layer tried on a capability the adapters lack
+
+**Contribution vs existing.** followed since 2026-11-01 (WATCH ToolUniverse; tooluniverse_capability_test_20261026.md)
+
+**Detected.** default-branch head 0da8fb3fcae2 -> df5ee941a89c; latest release {"date": "2026-11-14", "tag": "v1.5.10"} -> {"date": "2026-11-14", "tag": "v1.5.10"}
+
+**If confirmed (decision).** reopen condition: a capability the adapters lack becomes available, or terms change Roadmap: R9.
+
+**Cost / licence.** reading the change: minutes; see source.
+
+**Proof.** https://github.com/mims-harvard/ToolUniverse
+
+**Outcome.** TO_TRIAGE (a detected change is not a reading)
+
+## 2026-11-24 · scout_daily · Discovery:reopen:modifiers_it12_p1b_20261031/NP1B1
+
+**WWOX question.** Second WWOX-null clone or WWOX re-expression arm of the HAP1 genetic-interaction screen (N-P1B-1) the data holders report a second clone or 
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/nature] Neuron-specific expression of transmembrane protein 130 (TMEM130) (2026-06-20, journal-article) [bridge to the question: expression] https://doi.org/10.1038/s41598-026-59183-6; [paper/nature] Nonlinear dynamics of seizure suppression via optogenetic modulation of neuron-astrocyte interaction (2026-03-18, journal-article) [bridge to the question: interaction] https://doi.org/10.1038/s41598-026-42663-0
+
+**Why asked.** reopen modifiers_it12_p1b_20261031 table row NP1B1 [NEEDS-DATUM] [disease-models/wwox/research/drug_repurposing/modifiers_it12_p1b_20261031/reopen_searches_it12_p1b.tsv @ blob 98d03e4c5d, main e9a3b7e643f9]: "Second WWOX-null clone or WWOX re-expression arm of the HAP1 genetic-interaction screen (N-P1B-1) the data hol"
+
+**If confirmed (decision).** reopen condition met? the data holders report a second clone or a re-expression screen, or a new deposit appears Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-24 · scout_daily · Discovery:reopen:modifiers_it12_p1b_20261031/NP1B2
+
+**WWOX question.** Genetic-interaction readout in WWOX-null versus corrected human neural cells (N-P1B-2) a neural isogenic line becomes available or a deposit
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [preprint/europepmc] Excitatory Dysfunction and Phenotypic Rescue in a Human Neuronal Model of  SCN2A  -Related Disorders (2026-05-19, preprint (not peer reviewed)) [bridge to the question: human] https://europepmc.org/article/PPR/PPR1233826; [paper/europepmc] Isogenic modeling of 1q21.1 reciprocal CNVs in human ES cells reveals divergent neurodevelopmental trajectories. (2026-02-01, published record) [bridge to the question: human, cells] https://europepmc.org/article/MED/41370233; [paper/europepmc] Human induced pluripotent stem cell-derived cortical neurons from monozygotic twins with the Gαo1 K278del mutation reveal disease mechanisms (2026-11-05, published record) [bridge to the question: human] https://europepmc.org/article/MED/42984270; [dataset/huggingface] noryxxxx/44-set-available (2026-11-18, none stated, revision 48948ae94d6e, 2435 files) [bridge to the question: available] https://huggingface.co/datasets/noryxxxx/44-set-available; [dataset/huggingface] dfgjhdfhjgjdf/35-set-available (2026-11-18, none stated, revision da417be8894e, 2434 files) [bridge to the question: available] https://huggingface.co/datasets/dfgjhdfhjgjdf/35-set-available; [model/huggingface] availablename2/stockrulekeeper-qwen3-8b-fixed6 (2026-11-10, none stated, revision 619fd0c42b49, 3 files) [bridge to the question: available] https://huggingface.co/availablename2/stockrulekeeper-qwen3-8b-fixed6
+
+**Why asked.** reopen modifiers_it12_p1b_20261031 table row NP1B2 [NEEDS-DATUM] [disease-models/wwox/research/drug_repurposing/modifiers_it12_p1b_20261031/reopen_searches_it12_p1b.tsv @ blob 98d03e4c5d, main e9a3b7e643f9]: "Genetic-interaction readout in WWOX-null versus corrected human neural cells (N-P1B-2) a neural isogenic line "
+
+**If confirmed (decision).** reopen condition met? a neural isogenic line becomes available or a deposit of such a screen appears Roadmap: R1/R8.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-24 · scout_daily · Discovery:open-slot
+
+**WWOX question.** unplanned find: no gap assumed
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] URK23CS7048Rohan/Old-Drug-New-Diseases (2026-10-27, NOASSERTION) https://github.com/URK23CS7048Rohan/Old-Drug-New-Diseases; [repository/github] kushagra0526/atlas-discovery-kg-repurposing-prototype (2026-10-26, none stated) https://github.com/kushagra0526/atlas-discovery-kg-repurposing-prototype; [repository/github] nalgirkarh-prog/RareDiseasePipeline (2026-10-25, MIT) https://github.com/nalgirkarh-prog/RareDiseasePipeline
+
+**Why asked.** open slot: no priority assumed
+
+**If confirmed (decision).** whether it reveals a question we did not know to ask Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
