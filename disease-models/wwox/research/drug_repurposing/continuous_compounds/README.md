@@ -30,7 +30,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: D-β-hydroxybutyrate.** Does raising the endogenous ketone add substantial KCNQ2/3 current above baseline extracellular exposure, or is a metabolic mechanism more plausible? Next seek measured interstitial and pediatric CSF concentrations to constrain the large sensitivity to baseline. [Opening comparison](d_bhb/README.md) · [First calculations](d_bhb/baseline.md)
+**Active compound: D-β-hydroxybutyrate.** The SLC16A7 decrease persists against three neuronal markers in mouse cortex and hippocampus. In human organoids the adjusted contrast is close to zero and sensitive to the marker. Next seek matched neuronal states and initial D-BHB uptake, then oxidation and M-current at a measured nonzero baseline. The human single-cell accession presently returns HTTP 403. [Control for neuronal markers](d_bhb/neuronal_reference.md) · [Transport contrasts and human exposure](d_bhb/exposure_transport.md) · [Channel assumptions](d_bhb/baseline.md)
 
 **Ivabradine parked for systemic WWOX trial priority.** The active metabolite had weaker HCN1 potency and lower barrier-model permeability than parent. Retain Ih as a mechanistic probe. [Decision, independent native and recombinant comparisons](ivabradine/decision.md)
 
