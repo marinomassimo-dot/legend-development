@@ -501,6 +501,8 @@ class SafePushSerialize(unittest.TestCase):
 VIEW_STUB_CURRENT = "import sys\nprint('view is current (stub)')\nsys.exit(0)\n"
 VIEW_STUB_STALE_VIEW = ("import sys\nif sys.argv[1:] == ['check']:\n    print('STALE: view/index.html differs from a fresh full build (it); run: python3 -B framework/scripts/repurposing_view.py run')\n    sys.exit(1)\n"
                         "print('inventory current (stub)')\nsys.exit(0)\n")
+VIEW_STUB_STALE_PACKAGE = ("import sys\nif sys.argv[1:] == ['package', '--check']:\n    print('STALE: index.html')\n    print('STALE: manifest.json')\n    print('package differs: run python3 -B framework/scripts/repurposing_view.py package')\n    sys.exit(1)\n"
+                           "print('view is current (stub)')\nsys.exit(0)\n")
 VIEW_STUB_STALE_INVENTORY = ("import sys\nif sys.argv[1:3] == ['i18n', '--what']:\n    print('inventory STALE: view/i18n/content_source.json differs from a fresh collection')\n    sys.exit(0)\n"
                              "print('view is current (stub)')\nsys.exit(0)\n")
 
@@ -536,6 +538,30 @@ class SafePushViewCurrency(unittest.TestCase):
             self.assertIn("Nothing was gated or pushed", r.stderr)
             self.assertNotIn("VERDICT", r.stdout)                       # the gate never ran
             self.assertEqual(self._remote_main(bare), before)
+
+    def test_a_stale_package_refuses_when_the_pages_and_the_inventory_are_current_and_names_the_package_command(self) -> None:
+        """CI #2187/#2188 (2026-11-24): the pages and the inventory were current, view/shareable_package/ was not, and no check before the gate looked at it."""
+        with TemporaryDirectory() as td:
+            root, bare = self._with_view_stub(td, VIEW_STUB_STALE_PACKAGE)
+            before = self._remote_main(bare)
+            r = self._run(root)
+            self.assertEqual(r.returncode, 1, r.stderr)
+            self.assertIn("a committed derived view is behind its sources", r.stderr)
+            self.assertIn("[repurposing_view.py package --check]", r.stderr)
+            self.assertIn("STALE: manifest.json", r.stderr)
+            self.assertIn("python3 -B framework/scripts/repurposing_view.py package", r.stderr)
+            self.assertIn("Nothing was gated or pushed", r.stderr)
+            self.assertNotIn("VERDICT", r.stdout)
+            self.assertEqual(self._remote_main(bare), before)
+
+    def test_the_package_check_is_the_third_call_after_check_and_the_inventory(self) -> None:
+        with TemporaryDirectory() as td:
+            log = Path(td) / "calls.txt"
+            stub = f"import sys\nopen({str(log)!r}, 'a').write(' '.join(sys.argv[1:]) + '\\n')\nprint('view is current (stub)')\nsys.exit(0)\n"
+            root, bare = self._with_view_stub(td, stub)
+            r = self._run(root)
+            self.assertEqual(r.returncode, 0, r.stderr)
+            self.assertEqual(log.read_text().splitlines(), ["check", "i18n --what check", "package --check"])
 
     def test_a_stale_i18n_inventory_refuses_even_though_the_tool_exits_zero(self) -> None:
         with TemporaryDirectory() as td:
