@@ -1,0 +1,101 @@
+study_key	population	latest_depth	section	latest_receipt_label	class	held_artefact	evidence	latest_receipt_event	receipt_digest_equals_artefact
+10.29011/JVM-106.100006	primary	partial_fulltext_read	figures	not_read	B	deepening_downloads/d_pantothenate_loop_20261124/rao.pdf	pdf p4: 'Figure 1: Mean Plasma Pantothe' (images 1, chars 4844)	FTR-20261124-10.29011-JVM-106.100006-80	yes
+10.48550/arXiv.2512.13724	primary	partial_fulltext_read	results	not_read	B	ARXIV2512.13724v1_Noori2025_PROTON.pdf	pdf p3: heading 'Results'	FTR-20261101-ARXIV2512.13724-01	yes
+10.48550/arXiv.2512.13724	primary	partial_fulltext_read	figures	not_read	B	ARXIV2512.13724v1_Noori2025_PROTON.pdf	pdf p17: 'Figure 1: Overview of P ROTON.' (images 2, chars 1273)	FTR-20261101-ARXIV2512.13724-01	yes
+10.82444/warw.33664381	primary	partial_fulltext_read	figures	captions_only	B	deepening_downloads/d_ribose_loop_20261124/Zur_Nedden_thesis.pdf	pdf p29: 'Figure 1.1: Energy consuming p' (images 1, chars 1616)	FTR-20261124-WARW45926-95	yes
+12118259	primary	partial_fulltext_read	figures	not_read	B	deepening_downloads/lamotrigine_loop_20261124/dendritic_primary.pdf	pdf p2: 'Fig. 1. Lamotrigine (LTG) sele' (images 2, chars 10971)	FTR-20261124-12118259-87	yes
+13539215	primary	partial_fulltext_read	figures	not_read	B	deepening_downloads/d_ribose_loop_20261124/JCI103658.pdf	pdf p3: 'Figure 3. From the curve, the ' (images 1, chars 4236)	FTR-20261124-13539215-95	yes
+17018285	primary	partial_fulltext_read	figures	captions_only	B	PMID17018285_Sardi2006_Cell_fulltext.pdf	pdf p2: 'Figure 1. Activated E4ICD Inte' (images 1, chars 4040)	FTR-20261122-17018285-01	yes
+17070687	primary	partial_fulltext_read	figures	captions_only	B	deepening_downloads/l_glutamine_loop_20261124/Tani_2007_author.pdf	pdf p4: 'Fig. 1. Exogenous glutamine le' (images 1, chars 7712)	FTR-20261124-17070687-98	yes
+182198	primary	partial_fulltext_read	figures	not_read	B	deepening_downloads/d_pantothenate_loop_20261124/dastur.pdf	pdf p7: 'Fig. 1. Total vitamin B 6 conc' (images 1, chars 2853)	FTR-20261124-182198-80	yes
+18615011	primary	partial_fulltext_read	results	not_read	B	deepening_downloads/tiagabine_loop_20261124/pet.xml	xml: sec title 'RESULTS'	FTR-20261124-18615011-80	yes
+18690052	primary	partial_fulltext_read	figures	captions_only	B	deepening_downloads/gabapentin_loop_20261124/trafficking_timecourse.pdf	pdf p2: 'Figure 1. Gabapentin does not ' (images 1, chars 5482)	FTR-20261124-18690052-82	yes
+21674654	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/ascorbate_loop_20261124/adult_mrs.xml	xml: table-wrap with rows	FTR-20261124-21674654-01	yes
+21681606	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/sulforaphane_loop_20261124/21681606.xml	xml: table-wrap with rows	FTR-20261124-21681606-84	yes
+22812691	primary	partial_fulltext_read	results	not_read	B	deepening_downloads/oxcarbazepine_loop_20261124/fda.pdf	pdf p345: heading 'Results'	FTR-20261124-22812691-01	yes
+22830360	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/l_glutamine_loop_20261124/PMC3495849.xml	xml: table-wrap with rows	FTR-20261124-22830360-98	yes
+23022402	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/ubiquinol_loop_20261124/PMC3975832.xml	xml: table-wrap with rows	FTR-20261124-23022402-80	yes
+23611579	primary	partial_fulltext_read	tables	not_read	B	PMID23611579_Abdelmalak2013_PMC_r2.xml	xml: table-wrap with rows	FTR-20261023-23611579-01	yes
+24081159	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/levetiracetam_loop_20261124/grauert.xml	xml: table-wrap with rows	FTR-20261124-24081159-80	yes
+24253200	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/riboflavin_loop_20261123/PMC3891447.xml	xml: table-wrap with rows	FTR-20261123-24253200-94	yes
+24341803	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/r_lipoic_loop_20261124/LIPT1.xml	xml: table-wrap with rows	FTR-20261124-24341803-80	yes
+24366103	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/inosine_loop_20261124/PMC3940333.xml	xml: table-wrap with rows	FTR-20261124-24366103-94	yes
+24699222	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/magnesium_chloride_loop_20261124/24699222.xml	xml: table-wrap with rows	FTR-20261124-24699222-86	yes
+24992948	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/l_glutamine_loop_20261124/PMC4227121.xml	xml: table-wrap with rows	FTR-20261124-24992948-99	yes
+25011550	primary	partial_fulltext_read	results	not_read	B	wo32_lit_20261118/PMID25011550_PMC4099093_epmc.xml	xml: sec title 'Results'	FTR-20261118-25011550-01	yes
+25011550	primary	partial_fulltext_read	tables	not_read	B	wo32_lit_20261118/PMID25011550_PMC4099093_epmc.xml	xml: table-wrap with rows	FTR-20261118-25011550-01	yes
+25506250	primary	partial_fulltext_read	results	not_read	B	deepening_downloads/r_lipoic_loop_20261124/hermann.xml	xml: sec title 'Results'	FTR-20261124-25506250-80	yes
+25539952	primary	partial_fulltext_read	results	not_read	B	deepening_downloads/folinic_loop_20261124/KSS.xml	xml: sec title 'Results'	FTR-20261124-25539952-80	yes
+25738457	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/vigabatrin_loop_20261124/abat.xml	xml: table-wrap with rows	FTR-20261124-25738457-82	yes
+25779665	primary	partial_fulltext_read	supplementary	captions_only	B	PMID25779665_Chen2015_supp_pdftotext.txt	separate held file by name	FTR-20261020-25779665-01	no
+25938437	primary	partial_fulltext_read	results	not_read	B	PMID25938437_PMC4418701_Yang2015_epmc.xml	xml: sec title 'Results'	FTR-20261117-25938437-01	yes
+26273099	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/magnesium_chloride_loop_20261124/26273099.xml	xml: table-wrap with rows	FTR-20261124-26273099-86	yes
+27181635	primary	partial_fulltext_read	figures	not_read	B	deepening_downloads/tocopheryl_acetate_loop_20261124/human_infant_brain.pdf	pdf p3: 'Fig. 1. Total α-tocopherol con' (images 1, chars 9430)	FTR-20261124-27181635-80	yes
+27903293	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/vigabatrin_loop_20261124/mild.xml	xml: table-wrap with rows	FTR-20261124-27903293-82	yes
+30029003	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/l_lysine_loop_20261124/PMC6516488_ncbi.xml	xml: table-wrap with rows	FTR-20261124-30029003-95	yes
+30551998	primary	partial_fulltext_read	results	not_read	B	deepening_downloads/acetylcysteine_loop_20261123/PMC6371057.html	html: heading 'RESULTS'	FTR-20261123-30551998-75	yes
+30551998	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/acetylcysteine_loop_20261123/PMC6371057.html	html: table rows	FTR-20261123-30551998-75	yes
+30696941	primary	partial_fulltext_read	results	not_read	B	PMID30696941_PMC6756203_Picard2019_epmc.xml	xml: sec title 'Results'	FTR-20261123-30696941-95	yes
+30874549	primary	partial_fulltext_read	tables	not_read	B	adv065c_20261118/PMID30874549_PMC6420604_efetch_pmc.xml	xml: table-wrap with rows	FTR-20261123-30874549-81	no
+31049885	primary	partial_fulltext_read	results	not_read	B	deepening_downloads/cannabidiol_loop_20261124/pediatric_synthetic.xml	xml: sec title 'Results'	FTR-20261124-31049885-93	yes
+31353122	primary	partial_fulltext_read	figures	not_read	B	PMID31353122_Mori2019_IR.pdf	pdf p14: 'Figure 1. Facial appearance at' (images 0, chars 925)	FTR-20261124-31353122-87	yes
+31411465	primary	partial_fulltext_read	results	not_read	B	rescued_from_scratch_he46/0c3748cb9227__PMID31411465_tran.txt	pdf p1: heading 'RESULTS'	FTR-20261111-31411465-78	no
+31411465	primary	partial_fulltext_read	figures	captions_only	B	rescued_from_scratch_he46/91063ee51ab5__PMID31411465_tran.pdf	pdf p20: 'Figure 4. SPR sensorgrams of c' (images 289, chars 3786)	FTR-20261111-31411465-78	no
+31605637	primary	partial_fulltext_read	results	not_read	B	PMID31605637_NQO1_P187S_PMC7027498_epmc_2026-10-29.xml	xml: sec title 'Results'	FTR-20261029-31605637-01	yes
+31625159	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/clobazam_loop_20261124/PMC6900043.xml	xml: table-wrap with rows	FTR-20261124-31625159-92	yes
+32023956	primary	partial_fulltext_read	tables	not_read	B	PMID32023956_Lukas2020_PMC7037350.xml	xml: table-wrap with rows	FTR-20261021-32023956-01	yes
+32096676	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/betaine_loop_20261124/PMC7518703.html	html: table rows	FTR-20261124-32096676-97	yes
+32278283	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/sodium_selenite_loop_20261124/gpx_assay.xml	xml: table-wrap with rows	FTR-20261124-32278283-80	yes
+32470040	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/d_biotin_loop_20261124/7259710.xml	xml: table-wrap with rows	FTR-20261124-32470040-80	yes
+32546684	primary	partial_fulltext_read	tables	not_read	B	PMID32546684_Shi2020_PMC.xml	xml: table-wrap with rows	FTR-20261019-32546684-01	yes
+32592183	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/cannabidiol_loop_20261124/32592183.xml	xml: table-wrap with rows	FTR-20261124-32592183-93	yes
+32652616	primary	partial_fulltext_read	results	not_read	B	deepening_downloads/clobazam_loop_20261124/32652616.xml	xml: sec title 'Results'	FTR-20261124-32652616-92	yes
+32788298	primary	partial_fulltext_read	tables	not_read	B	b_ww1_ppxy_20261119/Mennesson2020_PMC7470932.xml	xml: table-wrap with rows	FTR-20261119-32788298-71	yes
+33711029	primary	partial_fulltext_read	results	not_read	B	adv065b_20261118/PMID33711029_PMC7954344_efetch_pmc.xml	xml: sec title 'Results'	FTR-20261118-33711029-66	yes
+33733036	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/tocopheryl_acetate_loop_20261124/adult_ttpa.xml	xml: table-wrap with rows	FTR-20261124-33733036-80	yes
+34253921	primary	partial_fulltext_read	results	not_read	B	PMC8410666_PMID34253921_ncbi_efetch_pmc_2026-10-29.xml	xml: sec title 'Results'	FTR-20261029-34253921-01	yes
+34829573	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/sulforaphane_loop_20261124/34829573.xml	xml: table-wrap with rows	FTR-20261124-34829573-83	yes
+34948401	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/lamotrigine_loop_20261124/34948401.xml	xml: table-wrap with rows	FTR-20261124-34948401-87	yes
+35076395	primary	partial_fulltext_read	tables	not_read	B	wo32_lit_20261118/PMID35076395_PMC8853665_epmc.xml	xml: table-wrap with rows	FTR-20261118-35076395-01	yes
+35235774	primary	partial_fulltext_read	figures	not_read	B	deepening_downloads/nr_loop_20261124/nadpark.pdf	pdf p5: 'Figure 1. 31P-MRS analysis rev' (images 1, chars 4705)	FTR-20261124-35235774-80	yes
+35235774	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/nr_loop_20261124/nadpark.pdf	pdf p3: 'Table 1. Demographic and anamn'	FTR-20261124-35235774-80	yes
+35524444	primary	partial_fulltext_read	tables	not_read	B	adv065b_20261118/PMID35524444_PMC9283319_efetch_pmc.xml	xml: table-wrap with rows	FTR-20261118-35524444-66	yes
+36889319	primary	partial_fulltext_read	tables	not_read	B	adv065b_20261118/PMID36889319_PMC10040380_efetch_pmc.xml	xml: table-wrap with rows	FTR-20261118-36889319-66	yes
+36909817	primary	partial_fulltext_read	tables	not_read	B	kds_pk_20261117/PMID36909817_PMC9996394_epmc.xml	xml: table-wrap with rows	FTR-20261117-36909817-01	yes
+36979157	primary	partial_fulltext_read	results	captions_only	B	PMID36979157_Kaluzinska2023_PMC_r2.xml	xml: sec title '3. Results'	FTR-20261019-36979157-01	yes
+36998780	primary	partial_fulltext_read	tables	not_read	B	adv065c_20261118/PMID36998780_PMC10043303_efetch_pmc.xml	xml: table-wrap with rows	FTR-20261118-36998780-67	yes
+37069177	primary	partial_fulltext_read	tables	not_read	B	adv065c_20261118/PMID37069177_PMC10110603_efetch_pmc.xml	xml: table-wrap with rows	FTR-20261118-37069177-67	yes
+37100056	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/citicoline_loop_20261123/PMC10367582.html	html: table rows	FTR-20261123-37100056-97	yes
+37329181	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/rufinamide_loop_20261123/dup15q.html	html: table rows	FTR-20261123-37329181-98	yes
+37804316	primary	partial_fulltext_read	tables	captions_only	B	PMC10907083_PMID37804316_europepmc_fulltext_2026-10-29.xml	xml: table-wrap with rows	FTR-20261029-37804316-01	yes
+38116420	primary	partial_fulltext_read	tables	not_read	B	rescued_from_scratch_he46/2d10b13db0e8__PMID38116420_pmc.html	html: table rows	FTR-20261112-38116420-75	no
+38683369	primary	partial_fulltext_read	tables	not_read	B	PMID38683369_PMC11422472_Li2024_epmc.xml	xml: table-wrap with rows	FTR-20261117-38683369-01	yes
+38950809	primary	partial_fulltext_read	tables	not_read	B	adv065c_20261118/PMID38950809_PMC11825064_efetch_pmc.xml	xml: table-wrap with rows	FTR-20261118-38950809-67	yes
+39771507	primary	partial_fulltext_read	tables	not_read	B	PMID39771507_PopPK2024_PMC_r2.xml	xml: table-wrap with rows	FTR-20261022-39771507-01	yes
+40692288	primary	partial_fulltext_read	tables	not_read	B	kds_pk_20261117/PMID40692288_PMC12280840_epmc.xml	xml: table-wrap with rows	FTR-20261117-40692288-01	yes
+40848165	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/inosine_loop_20261124/PMC12374869.xml	xml: table-wrap with rows	FTR-20261124-40848165-93	yes
+41489401	primary	partial_fulltext_read	tables	not_read	B	PMID41489401_Karnstedt2026_Epilepsia_PMC13075606.xml	xml: table-wrap with rows	FTR-20261117-41489401-01	yes
+41570991	primary	partial_fulltext_read	tables	not_read	B	PMID41570991_Bouchez2026_PMC_r2.xml	xml: table-wrap with rows	FTR-20261027-41570991-01	yes
+41709000	primary	partial_fulltext_read	tables	not_read	B	adv065b_20261118/PMID41709000_PMC12992657_efetch_pmc.xml	xml: table-wrap with rows	FTR-20261118-41709000-67	yes
+41709000	primary	partial_fulltext_read	supplementary	not_read	B	adv065b_20261118/PMID41709000_supplement_MOESM1.pdf	separate held file by name	FTR-20261118-41709000-67	no
+41712149	primary	partial_fulltext_read	tables	captions_only	B	PMID41712149_Balestrini2026_PMC.xml	xml: table-wrap with rows	FTR-20261003-41712149-01	yes
+41774803	primary	partial_fulltext_read	results	not_read	B	adv065b_20261118/PMID41774803_PMC12974483_efetch_pmc.xml	xml: sec title 'Results'	FTR-20261118-41774803-66	yes
+41858901	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/nr_loop_20261124/human_time.xml	xml: table-wrap with rows	FTR-20261124-41858901-80	yes
+41948127	primary	partial_fulltext_read	tables	not_read	B	PMID41948127_Stavrou2026_PMC.xml	xml: table-wrap with rows	FTR-20261003-41948127-01	yes
+41974795	primary	partial_fulltext_read	tables	not_read	B	it48q01_it_20261117/PMC13265741.xml	xml: table-wrap with rows	FTR-20261117-41974795-01	yes
+41977367	primary	partial_fulltext_read	tables	not_read	B	PMID41977367_Dumitrescu2026_PMC.xml	xml: table-wrap with rows	FTR-20261019-41977367-01	yes
+42190665	primary	partial_fulltext_read	results	not_read	B	PMC13293933_PMID42190665_europepmc_fulltext_2026-10-29.xml	xml: sec title 'Results'	FTR-20261029-42190665-01	yes
+42205472	primary	partial_fulltext_read	tables	captions_only	B	PMID42205472_Engelhard2026_PMC.xml	xml: table-wrap with rows	FTR-20261003-42205472-01	yes
+42213372	primary	partial_fulltext_read	tables	not_read	B	kds_pk_20261117/PMID42213372_PMC13275523_epmc.xml	xml: table-wrap with rows	FTR-20261117-42213372-01	yes
+42240040	primary	partial_fulltext_read	tables	not_read	B	ketamine_kds_it_20261117/p4_harms/PMID42240040_Sarkar2026_europepmc-fulltextxml.xml	xml: table-wrap with rows	FTR-20261117-42240040-01	yes
+42395553	primary	partial_fulltext_read	figures	captions_only	B	PMID42395553_Petrozziello2026_bioRxiv.pdf	pdf p26: 'Figure 1. ATM, pATM-S1981, and' (images 1, chars 771)	FTR-20261004-42395553-02	no
+42395553	primary	partial_fulltext_read	supplementary	captions_only	B	PMID42395553_Petrozziello2026_bioRxiv.pdf	pdf p37 after References p19: 'Supplementary Figure 1. HD PFC incr'	FTR-20261004-42395553-02	no
+42601505	primary	partial_fulltext_read	tables	not_read	B	PMID42601505_Puertas2026_PMC.xml	xml: table-wrap with rows	FTR-20261019-42601505-01	yes
+42624371	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/r_lipoic_loop_20261124/partition.xml	xml: table-wrap with rows	FTR-20261124-42624371-80	yes
+42720877	primary	partial_fulltext_read	tables	captions_only	B	PMID42720877_Schatz2026_PMC_r2.xml	xml: table-wrap with rows	FTR-20261019-42720877-01	yes
+42738851	primary	partial_fulltext_read	results	captions_only	B	PMID42738851_Pozhitnova2026_PMC_r2.xml	xml: sec title '3. Results'	FTR-20261019-42738851-01	yes
+42782811	primary	partial_fulltext_read	tables	not_read	B	PMID42782811_Bagyinszky2026_PMC.xml	xml: table-wrap with rows	FTR-20261019-42782811-01	yes
+42794650	primary	partial_fulltext_read	results	not_read	B	PMID42794650_PMC13607510_Riepe2026_epmc.xml	xml: sec title '2. Results'	FTR-20261123-42794650-98	yes
+42807309	primary	partial_fulltext_read	results	not_read	B	PMID42807309_16q231_pancreatitis_2026.txt	pdf p1: heading 'RESULTS'	FTR-20261004-42807309-01	yes
+42807309	primary	partial_fulltext_read	figures	captions_only	B	PMID42807309_16q231_pancreatitis_2026.pdf	pdf p2: 'Figure 1. Analytical workﬂow f' (images 1, chars 14558)	FTR-20261004-42807309-01	no
+42846717	primary	partial_fulltext_read	results	not_read	B	PMID42846717_Samanta2026_PMC_r2.xml	xml: sec title 'Results'	FTR-20261019-42846717-01	yes

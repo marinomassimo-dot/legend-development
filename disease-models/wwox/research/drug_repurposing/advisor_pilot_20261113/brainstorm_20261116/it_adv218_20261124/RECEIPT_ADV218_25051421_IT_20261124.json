@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-24T22:41Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_at": "2026-11-24T22:42:18Z",
+ "event_id": "FTR-20261124-25051421-01",
+ "evidence_basis": [
+  "coverage_map",
+  "files/fulltext/PMID25051421_Kosla2014_PMC4148378_epmc.xml (Europe PMC JATS, structured text, read whole including Tables I and II, locators matched to it)",
+  "files/figures/PMID25051421/OR-32-04-1362-g00.jpg to g03.jpg (all four figures opened as images)",
+  "not covered: GEO series GSE51481 (microarray deposit) not fetched; reference list counted (37), titles not read; the paper has no supplementary file and no limitations section"
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID25051421.json",
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv218_20261124/RESULT_ADV218_IT_20261124.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "cfb5f0b8a46931da9f57cbec9176ad5b2884cc8260c5d57a4194e2767da451f7",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID25051421_Kosla2014_PMC4148378_epmc.xml",
+ "study_id": {
+  "doi": "10.3892/or.2014.3335",
+  "pmid": "25051421"
+ },
+ "workflow": "IT ADV-218, QUESTION_DRIVEN reading by a reader that held the OPEN-row questions and a pre-registered prediction (committed before the text was opened). The open-access Europe PMC text was saved, fingerprinted and read section by section, the figure images were opened, and verbatim locators were recorded in the work manifest. fulltext_receipts.py status returned no event for the PMID before this reading. No contact with any author, no e-mail to any service, no paid route."
+}

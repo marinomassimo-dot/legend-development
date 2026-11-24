@@ -1,0 +1,301 @@
+{
+ "schema_version": 2,
+ "pmid": "25051421",
+ "doi": "10.3892/or.2014.3335",
+ "receipt": "FTR-20261124-25051421-01",
+ "landing": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv218_20261124/RESULT_ADV218_IT_20261124.md",
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv218_20261124/PREREG_ADV218_IT_20261124.md"
+ ],
+ "coverage_status": "complete_fulltext_read",
+ "declared_reading_gap": "GEO series GSE51481 (the microarray data the paper deposits) was not retrieved, so the gene-level direction behind Table I was not inspected; the reference list was not enumerated; the paper has no supplementary file and no limitations section.",
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "ADV-218 reading-debt package: a complete read with verbatim locators and a receipt, no commit candidate and no promotion of the record."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC fullTextXML and the PMC open-data bucket (figures and deposited supplements), both lawful and keyless; nothing refused."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Cell-biology group of a medical university; earlier work on WWOX in glioblastoma samples cited by the paper. Weight for a descriptive transcript-level study."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX[tiab] AND glioblastoma[tiab]",
+    "route": "PubMed esearch rettype=count, 2026-11-24",
+    "count": 16
+   },
+   {
+    "query": "WWOX[tiab] AND (mitochondri*[tiab] OR respirat*[tiab])",
+    "route": "PubMed esearch rettype=count, 2026-11-24",
+    "count": 37
+   }
+  ],
+  "note": "Counts only; the reading question was OPEN-row direction, not field density."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 37,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "note": "References counted from the XML (ref elements), titles not read in this pass; no multi-hop was run."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "fulltext_receipts.py status --pmid 25051421; registry CORPUS-STUB-162 (not_processed, no claim link)",
+  "hits": 1,
+  "finding": "No receipt before this reading; the registry carried a placeholder stub only."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-11-24",
+  "route": "retraction_check.py (PubMed, Europe PMC)",
+  "result": "Checked 2026-11-24 with retraction_check.py (PubMed and Europe PMC): flagged 0; no retraction, expression of concern or correction listed for the PMID.",
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "citation only: reference 18 (Fabbri 2005) is one of eight references (17 to 24) the Discussion cites for the sentence that apoptosis rises with WWOX overexpression in various cell lines; this paper's own data do not depend on it; the same Expression of Concern is already carried by research/2026-09-10_dependency_integrity_screen.md and CC-20260909-16223882-01",
+     "doi": "10.1073/pnas.0505485102",
+     "nature": "Expression of concern",
+     "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;Error in Image;Investigation by Company/Institution;Original Data and/or Images not Provided and/or not Available;",
+     "retraction_date": "4/3/2017 0:00",
+     "retraction_pmid": "28373548",
+     "verdict": "FLAGGED_EXPRESSION_OF_CONCERN"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_EXPRESSION_OF_CONCERN",
+   "reference_source": "network",
+   "references_declared": 37,
+   "references_screened": 32,
+   "references_with_doi": 32,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 34,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID25051421_Kosla2014_PMC4148378_epmc.xml",
+   "sha256": "cfb5f0b8a46931da9f57cbec9176ad5b2884cc8260c5d57a4194e2767da451f7",
+   "kind": "article_text",
+   "note": "Europe PMC full-text XML (JATS) of the CC BY-NC article PMC4148378; body, table, caption and reference text.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4148378/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "cfb5f0b8a46931da9f57cbec9176ad5b2884cc8260c5d57a4194e2767da451f7"
+   }
+  },
+  {
+   "path": "files/figures/PMID25051421/OR-32-04-1362-g00.jpg",
+   "sha256": "3e9c623b8ca9e5013473fcfebe9d0377be9fb0b87b26f20efa82e1c07954f0e2",
+   "kind": "figure",
+   "note": "Figure image from the PMC open-data bucket (g00 is Figure 1, g01 to g03 are Figures 2 to 4), opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4148378.1/OR-32-04-1362-g00.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "3e9c623b8ca9e5013473fcfebe9d0377be9fb0b87b26f20efa82e1c07954f0e2"
+   }
+  },
+  {
+   "path": "files/figures/PMID25051421/OR-32-04-1362-g01.jpg",
+   "sha256": "4ace24a21ed7b2e9772fb939ad00ad91cf44b0bda5b99b645cc2c79e437873bc",
+   "kind": "figure",
+   "note": "Figure image from the PMC open-data bucket (g00 is Figure 1, g01 to g03 are Figures 2 to 4), opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4148378.1/OR-32-04-1362-g01.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "4ace24a21ed7b2e9772fb939ad00ad91cf44b0bda5b99b645cc2c79e437873bc"
+   }
+  },
+  {
+   "path": "files/figures/PMID25051421/OR-32-04-1362-g02.jpg",
+   "sha256": "d2f276dc44371d3f6dca54f4880fbe5dd6bb4d3ea9724000e6a548005d86419a",
+   "kind": "figure",
+   "note": "Figure image from the PMC open-data bucket (g00 is Figure 1, g01 to g03 are Figures 2 to 4), opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4148378.1/OR-32-04-1362-g02.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "d2f276dc44371d3f6dca54f4880fbe5dd6bb4d3ea9724000e6a548005d86419a"
+   }
+  },
+  {
+   "path": "files/figures/PMID25051421/OR-32-04-1362-g03.jpg",
+   "sha256": "fa60c09a9a353c1319aa9370c2bd2d5b2741920f7b63c711dfea6af1b2b005d9",
+   "kind": "figure",
+   "note": "Figure image from the PMC open-data bucket (g00 is Figure 1, g01 to g03 are Figures 2 to 4), opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4148378.1/OR-32-04-1362-g03.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "fa60c09a9a353c1319aa9370c2bd2d5b2741920f7b63c711dfea6af1b2b005d9"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC fullTextXML of PMC4148378 saved and fingerprinted; the four figure images from the PMC open-data bucket saved and fingerprinted and opened as images.",
+  "abstract_anchoring_waived": "Abstract statements are compared with Results text and figures in the entries; the quotes below are anchored in the body, tables or figure images.",
+  "note": "ADV-218 reading, question-driven by the OPEN rows NR-01, WO-22, WO-08 and WO-09. Text, Tables I and II, and all four figure images read; the abstract is compared with the Results.",
+  "entries": [
+   {
+    "proposition": "ONLY MITOCHONDRIAL READOUT OF THE PAPER (T98G glioblastoma line, GAIN of WWOX): a resazurin-type dye conversion that is stated without a number, a p value or a panel, and its direction is HIGHER with WWOX. It is not oxygen consumption or complex I activity; NR-01 and NR-03 stay OPEN.",
+    "snippet": "A test with alamarBlue to assess mitochondrial metabolism revealed that cells overexpressing WWOX had a considerably higher rate of metabolizing the substrate, which may signify an intensification of overall mitochondrial redox potential.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25051421_Kosla2014_PMC4148378_epmc.xml",
+    "anchor": "Results, Phenotype analysis of the WWOX transfectants, Proliferation, redox potential and apoptosis assays",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE AUTHORS' OWN EXPLANATION OF THE REDOX SIGNAL IS A TRANSCRIPT (DLD diaphorase), not respiration: the dye is reduced by dihydrolipoamide dehydrogenase, whose mRNA is more than 3-fold up in the WWOX pool.",
+    "snippet": "The DLD expression in T98G/WWOX was >3-fold higher than that in the T98/vec control cells. This may explain the higher redox potential observed in the T98G/WWOX cells in the alamarBlue assay.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25051421_Kosla2014_PMC4148378_epmc.xml",
+    "anchor": "Discussion, paragraph on the increase in mitochondrial redox activity",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "TRANSCRIPTOME SCALE AND STATISTIC: 2,846 of about 29,000 genes pass an uncorrected t-test at p<0.05 (about 1,450 expected by chance alone at that threshold); the pathway table counts changed genes and gives no direction.",
+    "snippet": "A total of 2,846 genes showed a significant increase or decrease in expression depending on the WWOX level (p<0.05, t-test).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25051421_Kosla2014_PMC4148378_epmc.xml",
+    "anchor": "Results, Transcriptome analysis of the WWOX transfectants",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE ABSTRACT NAMES NOTCH AND HEDGEHOG AMONG THE MAIN PATHWAYS, BUT TABLE I (pathways with 10 or more modulated genes) LISTS ONLY WNT (38 genes) AND TGF-BETA (18 genes) OF THE FOUR; the words Notch and Hedgehog occur only in the abstract and the Discussion, never in a table.",
+    "snippet": "The cellular pathways containing 10 or more genes modulated by WWOX overexpression are presented in Table I.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25051421_Kosla2014_PMC4148378_epmc.xml",
+    "anchor": "Results, Transcriptome analysis of the WWOX transfectants; Table I",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PATHWAY TABLE ROW: Wnt signalling is the largest named pathway with 38 modulated genes (direction not given, no beta-catenin or GSK3 readout in the paper). WO-22 stays OPEN.",
+    "snippet": "Inflammation mediated by chemokine and cytokine signaling pathway 39 Wnt signaling pathway 38",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID25051421_Kosla2014_PMC4148378_epmc.xml",
+    "anchor": "Table I, rows 'Inflammation mediated by chemokine and cytokine signaling pathway' and 'Wnt signaling pathway'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WESTERN BLOT CONFIRMATION IS OVERSTATED IN THE TEXT: the Discussion says the proteins were 'considerably lower'; no blot statistic is reported (the statistics section covers the biological assays) and Figure 4 as drawn shows overlapping error bars for all three.",
+    "snippet": "Western blot analysis confirmed that the level of these proteins was considerably lower in the cells with high WWOX expression (Fig. 4).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25051421_Kosla2014_PMC4148378_epmc.xml",
+    "anchor": "Discussion, paragraph on cell cycle control and proliferation",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIGURE 4 AS DRAWN (JAK1, KLF8, AURKA bars, three lanes per cell variant): JAK1 about 1.15 (vector) against about 0.97 (WWOX) with the error bars touching; KLF8 about 1.0 against about 0.55; AURKA about 0.62 against about 0.38; no asterisks or p values on any panel. Values read from the axes, approximate.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4 bars: JAK1 vec about 1.15 and WWOX about 0.97, KLF8 vec about 1.0 and WWOX about 0.55, AURKA vec about 0.62 and WWOX about 0.38, error bars overlap on all three panels, no significance marks. Values read from the axes, approximate.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25051421/OR-32-04-1362-g03.jpg",
+    "anchor": "Figure 4, image OR-32-04-1362-g03.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "THE 3D-CULTURE CLAIM IS STRONGER THAN THE PANELS: the text says the WWOX cells remained isolated single cells at 12 days; the figure shows only day 4 and day 8.",
+    "snippet": "The cells seeded in a thick Geltrex® layer after 12 days remained as isolated, single cells that did not proliferate.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25051421_Kosla2014_PMC4148378_epmc.xml",
+    "anchor": "Results, 3D culture growth",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIGURE 3 AS DRAWN: panels A and B are day 4 and C and D day 8 (caption), no day-12 panel. At day 8 the WWOX cells (panel D) show scattered clusters and fewer cells than the vector cells (panel C); they are not uniformly isolated single cells. One field per condition, no quantification.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 panels A to D, day 4 and day 8 only; panel D (WWOX, day 8) shows scattered cell clusters and a lower density than panel C (vector, day 8), not isolated single cells; no day-12 image, no count.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25051421/OR-32-04-1362-g02.jpg",
+    "anchor": "Figure 3, image OR-32-04-1362-g02.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "THE ABSTRACT'S 'INCREASED APOPTOSIS' AND 'INCREASED ABILITY FOR CROSSING THE BASEMENT MEMBRANE' ARE NOT SIGNIFICANT IN THE RESULTS (both p>0.05).",
+    "snippet": "T98G/WWOX cells demonstrated a slightly greater ability to cross a membrane coated with basement membrane matrix solution, with 29% more invasive cells. However, the result was not statistically significant (p>0.05).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25051421_Kosla2014_PMC4148378_epmc.xml",
+    "anchor": "Results, Invasion",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "APOPTOSIS ROW OF THE SAME PARAGRAPH: increased 'although without statistical significance (p>0.05)'; the Conclusion nevertheless lists 'the increase in apoptosis' as evidence of lower malignancy.",
+    "snippet": "Simultaneously apoptosis was increased, although without statistical significance (p>0.05).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25051421_Kosla2014_PMC4148378_epmc.xml",
+    "anchor": "Results, Proliferation, redox potential and apoptosis assays",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DESIGN: one WWOX construct, one pool of stable transfectants (not clones) against a vector pool; no clone-level replication, no rescue and no second cell line.",
+    "snippet": "A pool of stable transfectants was used for the microarray study of global gene expression and biological experiments.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25051421_Kosla2014_PMC4148378_epmc.xml",
+    "anchor": "Materials and methods, Stable retroviral transfection",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXPRESSION LEVEL OF THE MANIPULATION: mRNA more than 29-fold, protein about 4.8-fold (Figure 1 bars about 0.17 and 0.81), a strong overexpression far from a physiological dose.",
+    "snippet": "The amount of WWOX mRNA in the T98G/WWOX transfectants was >29-fold greater than that noted in the T98G/vec control cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25051421_Kosla2014_PMC4148378_epmc.xml",
+    "anchor": "Results, Retroviral transfection and multiclonal selection allows for stable overexpression of the WWOX gene in T98G glioblastoma cells",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261124-25051421-01",
+   "reader": "orchestrator (IT successor, session 7cf5e85a), ADV-218",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "First ledger receipt for this paper (registry placeholder only before). Complete read of the text, tables and the four figure images; the figure panels disagree with three Results or Discussion sentences.",
+   "outputs": [
+    "disease-models/wwox/research/deepdive_manifests/PMID25051421.json",
+    "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv218_20261124/RESULT_ADV218_IT_20261124.md"
+   ]
+  }
+ ]
+}
