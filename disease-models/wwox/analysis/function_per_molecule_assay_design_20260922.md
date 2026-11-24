@@ -519,3 +519,5 @@ registry, queue, ledger, receipt chain, canonical file or state manifest was rea
 No `BATCH_COMMIT`, no commit, no stage, no push. According to PubMed, the new literature content
 above derives from the records cited, each with its DOI linked at first use where the PubMed record
 carries one; `PMID 21476439` carries **no DOI in its PubMed record** and none is invented here.
+
+[Update 2026-11-23, ADV-205 (SCI): PAPER 542 (see the ADV-205 result folder, brainstorm_20261116/adv205_paper542_golgi_wwox_scope_sci_20261123) is a disposition-(b) instance of this candidate: the loss half only (one siRNA, no rescue); revival condition as in the ADV-205 result. No new batch, no ranking, no compound, no claim that C1 is met. The original sentences above are not edited. Nothing else in this file changes.]
