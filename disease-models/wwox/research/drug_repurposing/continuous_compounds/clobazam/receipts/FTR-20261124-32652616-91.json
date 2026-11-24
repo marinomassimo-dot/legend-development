@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-32652616-91",
+  "event_at": "2026-11-24T09:13:46Z",
+  "analysis_at": "2026-11-24T09:13:46Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "32652616"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "https://pubmed.ncbi.nlm.nih.gov/32652616/",
+  "source_fingerprint": null,
+  "workflow": "Question-driven exposure comparison for clobazam and its active metabolite.",
+  "evidence_basis": [
+    "Primary abstract on day 33 versus day 1 parent and metabolite AUC and maximum plasma concentration. Geometric mean ratios and confidence intervals extracted for the opening mixture comparison."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/clobazam/README.md"
+  ]
+}

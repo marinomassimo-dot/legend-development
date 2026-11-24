@@ -48,6 +48,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 42 | Lamotrigine, dendritic HCN current and inhibitory recruitment | Does the drug preferentially restrain dendritic excitation or impair recruitment of dendrite-targeting interneurons at matched free exposure? |
 | 43 | Triacetin, acetate supply for myelin | Can acetate bypass impaired neuron-to-glia carbon supply in WWOX while restoring functional sheaths at matched axon and glial maturation? |
 | 44 | Calcium alpha-ketoglutarate, HIF hydroxylation and central carbon metabolism | Can intact co-substrate reach the relevant compartment and alter HIF processing independently of a TCA or calcium effect? |
+| 45 | Clobazam, active metabolite and recruitment of inhibition | Can an exposure-supported change in parent/metabolite mixture alter evoked inhibition in WWOX while preserving physiological transmission? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -58,7 +59,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: calcium alpha-ketoglutarate.** Duodenal sodium alpha-ketoglutarate raised arterial parent by 13.6 µM in young pigs. Next compare neural transport and HIF hydroxylation against measured exposure; calcium-salt pediatric CNS delivery is open. [Opening prediction and source selection](calcium_alpha_ketoglutarate/README.md)
+**Active compound: clobazam.** The first matched-time exposure comparison gives a 2.36-fold relative change in the metabolite-to-parent plasma AUC ratio after cannabidiol add-on. Next compare unbound mixture exposures with receptor curves and native-chloride circuit readouts. [Opening comparison](clobazam/README.md)
+
+**Calcium alpha-ketoglutarate parked for WWOX pediatric trial prioritization.** Mouse CSF supports qualitative tracer detection with an isotope discrepancy. The held neural records lack paired HIF hydroxylation and functional rescue at measured exposure. The laboratory review of tracer identity is pending. [Six isotope contrasts, primary figure audit and reopening criterion](calcium_alpha_ketoglutarate/compartments.md)
 
 **Triacetin parked for WWOX pediatric trial prioritization.** Chronic treatment improved rat motor function and relative galactocerebroside signal. Absolute drug-derived myelin synthesis and functional ensheathment in WWOX remain open. [Flux audit, WWOX spectroscopy and reopening criterion](triacetin/bridge.md)
 

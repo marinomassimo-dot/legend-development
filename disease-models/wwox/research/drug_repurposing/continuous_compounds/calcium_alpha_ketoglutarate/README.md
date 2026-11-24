@@ -17,3 +17,7 @@ In young pigs given duodenal **sodium** alpha-ketoglutarate, mean plasma parent 
 **Reproduction.** Run `python3 portal.py` and compare the four outputs with [portal.tsv](portal.tsv). The input means and units appear in the source table.
 
 **Retrieval leads for the next comparison.** Check the substrate attached to every transport constant, whether it measures uptake, competitor inhibition or current, and whether the system is native neural tissue or an expression system. For hydroxylase kinetics, retain isoform, HIF peptide, iron, oxygen and succinate conditions. Do not equate an arterial increment with a difference in neuronal cytosolic substrate. [Mouse-brain transporter clone](https://pubmed.ncbi.nlm.nih.gov/11287335/) · [Human dicarboxylate transport comparison](https://pubmed.ncbi.nlm.nih.gov/21865262/) · [Human HIF prolyl hydroxylase study](https://pubmed.ncbi.nlm.nih.gov/12788921/)
+
+**Latest checkpoint.** The [compartment comparison](compartments.md) reanalyses six isotope contrasts from original replicates, compares native neural uptake and defines a WWOX-specific HIF protein prediction. A separate mouse study shows labelled AKG in CSF at eight hours, with conflicting tracer identities across methods and figure. Central exposure after the exact calcium salt remains unquantified.
+
+**Disposition.** Parked for pediatric trial prioritization after checking the held WWOX neural record. See the [reopening criterion](compartments.md).

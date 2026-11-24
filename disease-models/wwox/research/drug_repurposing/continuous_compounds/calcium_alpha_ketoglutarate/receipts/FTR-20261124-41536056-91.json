@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-41536056-91",
+  "event_at": "2026-11-24T09:10:41Z",
+  "analysis_at": "2026-11-24T09:10:41Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "41536056"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/calcium_akg_loop_20261124/ja5c19753_si_001.pdf",
+  "source_fingerprint": "595387bf0cbb026b36c96410832c68b1ff34e6dc92d963a73fef0554c55e804b",
+  "workflow": "Question-driven evaluation of transport and enzyme readouts for calcium alpha-ketoglutarate.",
+  "evidence_basis": [
+    "Primary abstract and selected pages from the publisher-deposited supplement. P. 7 exact salt and controls, pp. 14\u201315 isotopologue and LC-MS methods, p. 49 Fig. S30A-C directly viewed. P. 50 S31 caption identified a different analyte. Compared methods and figure tracer identity and denominator. Neither the full supplement nor main article was read end to end."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/calcium_alpha_ketoglutarate/compartments.md"
+  ]
+}

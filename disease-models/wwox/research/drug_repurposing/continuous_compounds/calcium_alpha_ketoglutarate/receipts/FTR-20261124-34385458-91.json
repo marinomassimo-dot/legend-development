@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-34385458-91",
+  "event_at": "2026-11-24T09:07:40Z",
+  "analysis_at": "2026-11-24T09:07:40Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "34385458"
+  },
+  "prior_receipt": "FTR-20261124-34385458-90",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/calcium_akg_loop_20261124/34385458.xml",
+  "source_fingerprint": "8e8df3849bf3d44721c2a63f0507875d586698006d3cca3801203c7992526470",
+  "workflow": "Question-driven evaluation of transport and enzyme readouts for calcium alpha-ketoglutarate.",
+  "evidence_basis": [
+    "Results and captions of Figs. 5 and 6 on oxygen, compartment reporter and extracellular succinate. Source Data sheets for Figs. 5e and 6d independently recalculated at M+0 level. Other supplement sheets and panels not reviewed. Workbook SHA256 32d9908b5e01e5a0e301760043276713286b65ddc1137c83c9006df351047bbf."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/calcium_alpha_ketoglutarate/compartments.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/calcium_alpha_ketoglutarate/compartment.tsv"
+  ]
+}
