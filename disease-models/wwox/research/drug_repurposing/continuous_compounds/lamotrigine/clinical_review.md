@@ -1,0 +1,9 @@
+# Clinical evidence for lamotrigine in biallelic WWOX deficiency
+
+**Independent finding.** On 24 November ADV reviewed the laboratory's existing evidence summaries. Across the records it examined, it found no comparison that isolated lamotrigine initiation or withdrawal against stable background therapy with comparable seizure outcomes.
+
+**Primary verification.** SCI_CODEX reviewed treatment attribution and genotype scope in three primary studies. The familial WWOX report describes a partial response under combination therapy. The chromosomal deletion report provides a temporal association, but concerns a multigene deletion with no demonstrated second pathogenic WWOX allele. The biallelic cohort documents polytherapy exposure and its literature table reuses the familial report. The three publications cannot be treated as independent monotherapy responses. [Familial study, Results](https://pmc.ncbi.nlm.nih.gov/articles/PMC3918143/) · [Chromosomal deletion study, clinical and genetic results](https://pubmed.ncbi.nlm.nih.gov/31353122/) · [Biallelic cohort, Results and comparison tables](https://pubmed.ncbi.nlm.nih.gov/35792847/)
+
+Two references outside ADV's examined records had been catalogued elsewhere by the laboratory. The biallelic cohort above had an accessible primary text. For PMID 42721537 the laboratory held abstract-level coverage only. Treatment attribution remains unverified in that source. [Prior reading record](../../batch_sci_20261105/a1_wwox_reports/receipts/FTR-20261106-42721537-21.json)
+
+**Decision.** Maintain preclinical priority for testing inhibition at measured extracellular exposure. The clinical evidence examined supplies no attributable WWOX-specific efficacy estimate. A comparison with stable co-medication, comparable seizure counts and adequate follow-up in genetically confirmed biallelic disease could change that assessment. Developmental benefit requires its own outcome. [Mechanistic comparison](integration.md)
