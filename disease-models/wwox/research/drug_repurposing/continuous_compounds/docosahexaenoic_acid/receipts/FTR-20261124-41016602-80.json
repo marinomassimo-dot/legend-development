@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-41016602-80",
+  "event_at": "2026-11-24T03:28:57Z",
+  "analysis_at": "2026-11-24T03:28:57Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "41016602",
+    "doi": "10.1016/j.jlr.2025.100913"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://www.jlr.org/article/S0022-2275%2825%2900175-0/fulltext",
+  "source_fingerprint": null,
+  "workflow": "Compare matched adult dietary DHA regimens for reproducible regional brain enrichment.",
+  "evidence_basis": [
+    "Indexed Results, Fig. 2 and Fig. 3 captions and discussion passages about matched design. Six regions, baseline concentrations and terminal plasma control."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/docosahexaenoic_acid/oral.md"
+  ]
+}

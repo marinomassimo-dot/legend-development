@@ -1,0 +1,5 @@
+pool	ctrl_vehicle	ctrl_CdR_GdR	mut_vehicle	mut_CdR_GdR	mut_treated_over_vehicle	mut_treated_over_ctrl_vehicle	mut_treated_over_ctrl_treated
+dCTP	2.9	4.5	1.2	3.8	3.167	1.310	0.844
+dGTP	0.5	1.2	0.2	0.8	4.000	1.600	0.667
+dTTP	2.6	2.9	2.7	3.4	1.259	1.308	1.172
+dATP	2.4	2.0	1.4	1.4	1.000	0.583	0.700

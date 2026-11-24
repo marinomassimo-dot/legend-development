@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-21176029-80",
+  "event_at": "2026-11-24T03:25:18Z",
+  "analysis_at": "2026-11-24T03:25:18Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "21176029",
+    "doi": "10.1111/j.1399-5618.2010.00884.x"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3020593/",
+  "source_fingerprint": null,
+  "workflow": "Test whether restoration of nucleotide or membrane precursor pools predicts downstream functional rescue relevant to WWOX.",
+  "evidence_basis": [
+    "Indexed Results excerpt and Table 2 with post-hoc tests in each arm. Checked interaction reported in Results, metabolite reference and percentage changes. Full table 1 and figures not reviewed."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/uridine_triacetate/decision.md"
+  ]
+}
