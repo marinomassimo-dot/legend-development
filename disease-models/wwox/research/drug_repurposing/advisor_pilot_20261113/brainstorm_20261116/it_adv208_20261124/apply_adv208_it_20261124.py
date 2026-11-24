@@ -28,7 +28,7 @@ L2 = (" [ADV-208 item 2, 2026-11-24, wording only; no ranking change; no post-on
       "because no animal identifiers or event and censor table say whether the two panels describe the same analysis set. P4 appears only as weight and glucose bars, with no P4 survival curve. "
       "The S8 question reopens only on cohort provenance or a time-to-event and censor table. Older notes saying that both P1 and P5 plateau near 75 percent, or that P4 is absent from all of S8, are superseded by the manifest. "
       "The working-model entry TX-007 carries no P5 curve wording (checked) and is not edited here. ADV did not re-read the figure. "
-      "Sources: disease-models/wwox/research/deepdive_manifests/PMID42422765.json; Codex follow-up note on the DEE review (" + COORD + ")]")
+      "Sources: the held deep-dive manifest for PMID 42422765; Codex follow-up note on the DEE review (" + COORD + ")]")
 
 L3 = (" [ADV-208 item 3, 2026-11-24, readout grid and one inference correction for the bridge comparison; wording only; no arm, ranking or priority change. "
       "Grid (consumed 2026-11-23 from the joint review of the 2026 DEE review): separate (i) acute suppression, (ii) function that persists after the acute drug action, and (iii) maturational outcomes; read an evoked response only where baseline state and activity are comparable; where raw or paired data are missing, mark the contrast unidentifiable rather than infer it. "
