@@ -214,6 +214,30 @@ class Remove(unittest.TestCase):
                 self.assertIn("REFUSED", r.stderr)
         self.assertTrue(dirty.is_dir() and outside.is_dir() and (self.f.tmp / "claude-1000").is_dir())
 
+    def test_the_tool_does_not_refuse_itself_through_its_own_command_line_or_its_launching_shell(self):
+        """2026-11-24, ADV: `--remove /tmp/x --dry-run` answered 'in use by process N (cmdline)' with a different N each time: the launcher's argv holds the path."""
+        d = self.f.clone("legend-a")
+        argv = [sys.executable, str(TOOL), "--tmp-root", str(self.f.tmp), "--repo", str(self.f.repo), "--main-ref", "HEAD", "--older-than", "0", "--remove", str(d), "--dry-run"]
+        import shlex
+        r = subprocess.run(["sh", "-c", shlex.join(argv)], capture_output=True, text=True)        # a wrapper shell whose own command line names the folder
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertIn("WOULD REMOVE", r.stdout)
+        self.assertNotIn("in use by process", r.stderr)
+        self.assertEqual(tcr.process_holders(d), [])
+
+    def test_an_unrelated_process_that_names_the_folder_still_keeps_it(self):
+        d = self.f.clone("legend-named")
+        p = subprocess.Popen(["sh", "-c", "sleep 30", "marker", str(d)], start_new_session=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        try:
+            for _ in range(50):                                          # the child shows the parent's command line until its exec is done
+                if any("cmdline" in h for h in tcr.process_holders(d)):
+                    break
+                time.sleep(0.05)
+            self.assertTrue(any("cmdline" in h for h in tcr.process_holders(d)))
+        finally:
+            os.killpg(p.pid, 9)
+            p.wait()
+
     def test_dry_run_deletes_nothing(self):
         d = self.f.clone("legend-a")
         r = self.f.cli("--remove", str(d), "--dry-run")
