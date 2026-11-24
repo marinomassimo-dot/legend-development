@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-20089937-80",
+  "event_at": "2026-11-24T04:35:22Z",
+  "analysis_at": "2026-11-24T04:35:22Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "20089937",
+    "doi": "10.1212/WNL.0b013e3181d1cd4c"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/topiramate_loop_20261124/infant.html",
+  "source_fingerprint": "fd0eeb4b310bf3fbbc35f26c38065e1d8f96661f944467fa49de4e616eb4748d",
+  "workflow": "Assess an age-matched randomized endpoint and acid–base signal relevant to the GluK1 topiramate hypothesis in WWOX.",
+  "evidence_basis": [
+    "Methods: central read and analytic populations. Results: primary efficacy, Fig. 2 caption and safety paragraph reporting total CO2. Short verbatim locator: “worst-rank analysis”. Did not assess the original figure image or table data."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/topiramate/README.md"
+  ]
+}
