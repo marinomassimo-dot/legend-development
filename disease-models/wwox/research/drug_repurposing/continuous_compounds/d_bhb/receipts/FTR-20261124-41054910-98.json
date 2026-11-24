@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-41054910-98",
+  "event_at": "2026-11-24T00:19:54Z",
+  "analysis_at": "2026-11-24T00:19:54Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "41054910",
+    "doi": "10.1111/ejn.70270"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/d_bhb_loop_20261123/adult.pdf",
+  "source_fingerprint": "cc212ef27302ffbdda3e07a1b2e5f1d401995616677a04e528bdae656eadebb9",
+  "workflow": "Targeted examination of human stimulus-dependent cortical gain and pediatric formulation feasibility.",
+  "evidence_basis": [
+    "Page 5, Table 1: blood BHB group means 140 and 3036 µmol/L before and at 60 minutes.",
+    "Page 6, Results §3.2 and Fig. 2B/D: “significant interaction between factors”, F(1,9)=8.36.",
+    "Page 3, §2.1: D-BHB ester; repeated EEG after one hour; spectroscopy later."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_bhb/decision.md"
+  ]
+}

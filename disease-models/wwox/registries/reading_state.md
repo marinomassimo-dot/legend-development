@@ -20,7 +20,7 @@ asserted by no receipt. `prior_receipt` means the reading this one builds on, an
 sharing a parent are the normal case under parallel branches.
 
 
-**1645 paper(s)** with at least one receipt · **2338 receipt(s)** · **38 paper(s) read in parallel** by two receipts sharing a parent.
+**1647 paper(s)** with at least one receipt · **2340 receipt(s)** · **38 paper(s) read in parallel** by two receipts sharing a parent.
 
 ## Papers read in parallel
 
@@ -1262,6 +1262,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 38959712 | `complete_fulltext_read` | read | read | read | read | read | read | read | read | not_present | — | 1 |
 | PMID 38963712 | `partial_fulltext_read` | read | not_read | not_read | not_read | not_read | not_read | read | not_read | unavailable | not_read | 1 |
 | PMID 38978529 | `partial_fulltext_read` | not_read | read | read | read | read | not_present | read | not_present | not_present | not_read | 1 |
+| PMID 38983107 | `partial_fulltext_read` | not_read | not_read | not_read | read | not_read | read | read | not_read | not_read | — | 1 |
 | PMID 39000139 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | not_present | read | — | 1 |
 | PMID 39006838 | `complete_fulltext_read` | read | read | read | read | read | read | read | read | not_present | read | 1 |
 | PMID 39013852 | `partial_fulltext_read` | read | read | read | read | read | not_present | read | not_present | captions_only | — | 1 |
@@ -1452,6 +1453,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 41036104 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | read | not_read | read | 1 |
 | PMID 41039661 | `complete_fulltext_read` | read | read | read | not_present | read | read | read | read | not_present | read | 1 |
 | PMID 41051937 | `abstract_only` | read | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | unavailable | 1 |
+| PMID 41054910 | `partial_fulltext_read` | not_read | not_read | read | read | captions_only | read | not_read | not_read | not_read | — | 1 |
 | PMID 41061327 | `complete_fulltext_read` | read | read | read | read | unavailable | read | read | read | not_present | — | 1 |
 | PMID 41066510 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | not_present | read | — | 2 |
 | PMID 41069084 | `partial_fulltext_read` | read | read | read | read | read | read | read | read | not_read | not_read | 1 |

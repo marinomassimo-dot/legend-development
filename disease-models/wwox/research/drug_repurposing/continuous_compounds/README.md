@@ -20,6 +20,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 14 | Rufinamide, state-dependent sodium-channel gating | Does changing burst duration or interval reveal a selective effect on excitation while preserving inhibitory recruitment? |
 | 15 | Ivabradine, voltage sag and rebound | Do channel state and free exposure permit a direct central effect in WWOX at comparable voltage excursions? |
 | 16 | D-β-hydroxybutyrate, M-current and ketone oxidation | What incremental channel effect remains above baseline, and does it explain WWOX functional recovery independently of fuel oxidation? |
+| 17 | L-serine, lipid synthesis and NMDA co-agonism | Can L-serine restore functional myelin through lipid incorporation while preserving circuit function, and does WWOX actually limit its supply? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -30,7 +31,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: D-β-hydroxybutyrate.** The SLC16A7 decrease persists against three neuronal markers in mouse cortex and hippocampus. In human organoids the adjusted contrast is close to zero and sensitive to the marker. Next seek matched neuronal states and initial D-BHB uptake, then oxidation and M-current at a measured nonzero baseline. The human single-cell accession presently returns HTTP 403. [Control for neuronal markers](d_bhb/neuronal_reference.md) · [Transport contrasts and human exposure](d_bhb/exposure_transport.md) · [Channel assumptions](d_bhb/baseline.md)
+**Active compound: L-serine.** The opening WWOX bulk comparison is inconsistent with a uniform three-enzyme deficiency. In pooled mouse astroglial nuclei PHGDH fell from 67 to 26 CPM while PSAT1 was similar. Next distinguish low endogenous substrate from altered synthesis rate, and track lipid versus D-serine/glycine fates. [Hypothesis, contrasts and next test](l_serine/README.md)
+
+**D-β-hydroxybutyrate parked for pediatric trial priority.** The robust signal in human open data is stimulus-dependent evoked cortical gain on the native amplitude scale. WWOX-specific ketone delivery, oxidation and network stabilization remain unverified. [Reanalysis and pediatric formulation](d_bhb/decision.md) · [Neuronal expression control](d_bhb/neuronal_reference.md)
 
 **Ivabradine parked for systemic WWOX trial priority.** The active metabolite had weaker HCN1 potency and lower barrier-model permeability than parent. Retain Ih as a mechanistic probe. [Decision, independent native and recombinant comparisons](ivabradine/decision.md)
 
