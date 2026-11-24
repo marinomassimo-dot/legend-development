@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-8938727-80",
+  "event_at": "2026-11-24T03:36:55Z",
+  "analysis_at": "2026-11-24T03:36:55Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "8938727",
+    "doi": "10.1016/0028-3908(96)00127-x"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "files/deepening_downloads/dha_loop_20261124/channel_clinical.xml",
+  "source_fingerprint": "b8688e1edea932a5526ee4b40ad7bac13aa2bf8830f895d1cd59a674a268ea6c",
+  "workflow": "Test native acute DHA conductance, unbound exposure and pediatric developmental comparators.",
+  "evidence_basis": [
+    "Native neocortical current direction and cloned constants at +40 mV and reversal by albumin."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/docosahexaenoic_acid/channels.md"
+  ]
+}

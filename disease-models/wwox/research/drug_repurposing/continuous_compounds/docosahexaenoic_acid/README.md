@@ -17,3 +17,5 @@
 Source locator for the uptake comparison: Chen et al., Results preceding Fig. 3, “After correction for plasma exposure”.
 
 **Updated checkpoint.** The chronic oral mouse comparison and its independent replication disagree on large brain enrichment with sn-1 LPC-DHA. Free DHA showed little evidence of increasing total brain DHA in either. Next prioritize native acute conductance at measured free exposure, separated by cell type, and assess developmental formulation evidence before a disposition. [Equal-DHA oral comparisons and limits](oral.md)
+
+**Disposition.** Park free DHA for unselected WWOX trial priority. In the native Fmr1 comparator, suppressing excessive inhibition restored principal-cell firing. Baseline inhibition and paired functional responses under DHA remain unresolved in WWOX. [Native circuit, exposure, pediatric precedent and reopening test](channels.md)

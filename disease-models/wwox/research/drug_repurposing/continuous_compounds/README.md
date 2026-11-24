@@ -32,6 +32,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 26 | D-pantothenate, free and acyl-bound mitochondrial coenzyme A | Does precursor supply limit oxidative flux, or do kinase capacity, compartmentation or acyl trapping explain the defect? |
 | 27 | Uridine triacetate, pyrimidine salvage and membrane phospholipids | Does added uridine correct a limiting pyrimidine pool and function, or does it only label RNA and membrane precursors while a separate bottleneck persists? |
 | 28 | Docosahexaenoic acid, membrane supply and potassium current | Does a defined molecular form rescue WWOX function through acute channel modulation or sustained incorporation into membranes? |
+| 29 | Zonisamide, astrocytic cystine exchange and neuronal redox support | Does the drug improve neuronal glutathione at fixed glial number without worsening glutamate clearance? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -42,7 +43,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: docosahexaenoic acid (DHA).** MFSD2A changes in opposite directions between mouse cortex and hippocampus. Two adult mouse studies disagree on net brain enrichment by dietary sn-1 LPC-DHA. Next test whether acute potassium currents respond at measured unbound exposure and whether the effect preserves inhibitory recruitment. [WWOX and tracer comparisons](docosahexaenoic_acid/README.md) · [Independent oral replication](docosahexaenoic_acid/oral.md)
+**Active compound: zonisamide.** Astroglial GSH and xCT staining rise under selected conditions. A separate release assay used buffer without added cystine. Next resolve neuronal rescue with cystine available, fixed glial numbers and measured exposure. [Astrocyte results and next comparison](zonisamide/README.md) · [Pediatric exposure scenarios](zonisamide/exposure.md)
+
+**Nonesterified DHA parked for unselected pediatric WWOX trial priority.** The oral carrier replication, opposing channel effects, native inhibitory circuit and pediatric formulation limit transfer. [Disposition and reopening condition](docosahexaenoic_acid/channels.md) · [Oral replication](docosahexaenoic_acid/oral.md)
 
 **Uridine triacetate parked for an unselected WWOX trial.** Raising two cellular deoxynucleotide pools failed to restore mtDNA in the RRM2B comparator. The human brain spectroscopy study measured membrane precursors. Reopen for selective WWOX flux and functional rescue at measured exposure. [Decision and comparison data](uridine_triacetate/decision.md)
 

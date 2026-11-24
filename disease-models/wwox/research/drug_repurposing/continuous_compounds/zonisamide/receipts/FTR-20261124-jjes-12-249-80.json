@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-jjes-12-249-80",
+  "event_at": "2026-11-24T03:38:45Z",
+  "analysis_at": "2026-11-24T03:38:45Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": null,
+    "doi": "10.3805/jjes.12.249"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://www.jstage.jst.go.jp/article/jjes1983/12/3/12_3_249/_pdf",
+  "source_fingerprint": null,
+  "workflow": "Compare nominal glial cell experiments to pediatric serum concentration and directly measured protein binding.",
+  "evidence_basis": [
+    "Tables 3–5 and Results, age/time grouped free fractions and selected 31-child total-concentration mean. Discrepancy between age count in English summary and Table 3."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/zonisamide/exposure.md"
+  ]
+}

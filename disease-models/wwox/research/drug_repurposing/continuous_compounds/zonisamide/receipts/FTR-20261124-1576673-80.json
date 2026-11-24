@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-1576673-80",
+  "event_at": "2026-11-24T03:38:45Z",
+  "analysis_at": "2026-11-24T03:38:45Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "1576673",
+    "doi": "10.1248/cpb.40.193"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://www.jstage.jst.go.jp/article/cpb1958/40/1/40_1_193/_pdf",
+  "source_fingerprint": null,
+  "workflow": "Compare nominal glial cell experiments to pediatric serum concentration and directly measured protein binding.",
+  "evidence_basis": [
+    "Results on 68 patients with measured unbound fraction with and without VPA and Fig. 2 caption. Distinguished in vitro binding from patient comparisons."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/zonisamide/exposure.md"
+  ]
+}
