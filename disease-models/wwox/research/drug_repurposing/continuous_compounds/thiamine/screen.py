@@ -9,8 +9,11 @@ from assess import MODELS, load_target, reference, tsv
 
 GENES = 'Slc19a2 Slc19a3 Tpk1 Slc25a19 Pdha1 Pdhb Dlat Dld Pdk1 Pdk2 Pdk3 Pdk4 Ogdh Tkt'.split()
 
-def run(files, target_genes=GENES, output=HERE / 'screen.tsv', human_symbols=None, missing_value=""):
+def run(files, target_genes=GENES, output=HERE / 'screen.tsv', human_symbols=None, missing_value="",
+        mouse_transcript_overrides=None):
     gene_map, _ = reference(files)
+    if mouse_transcript_overrides:
+        gene_map.update(mouse_transcript_overrides)
     rows = []
     for model, accession, wt_prefix, ko_prefix in MODELS:
         human = model == 'human_organoid'

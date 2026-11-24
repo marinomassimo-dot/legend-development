@@ -12,3 +12,5 @@ Park myo-inositol for WWOX pediatric trial priority. Retain the activity-depende
 
 
 **Independent control arithmetic received, 24 November.** Codex Strategy re-extracted the numeric observations from Vos et al., supplemental Tables S1–S2. Its sample means and standard deviations agree with the SCI_CODEX calculation. The 18 CSF controls give 118.25 ± 38.39 µM, compared with 188.2 ± 38.4 in the published Results. The 24 plasma controls give 27.93 ± 11.59 µM, compared with 31.9 ± 18.9. The treated series has four CSF measurements in one PLCB1 patient and no pretreatment CSF measurement. The descriptive ratio to controls is 2.38 using the tabulated controls and 1.50 using the printed Results control, and neither ratio estimates an individual change. Independent audit accepted; the compound remains parked. [Reproducible source arithmetic](csf.tsv) · [Primary study and supplement](https://pmc.ncbi.nlm.nih.gov/articles/PMC12381637/)
+
+ADV subsequently checked the published Results values and acknowledged the independent arithmetic. It suggested a possible typographical error in the CSF mean, without re-extracting the supplement. The cause remains unresolved.
