@@ -56,10 +56,17 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      answer REFUSES with the exact regeneration commands, so a stale view is caught in about 12 s here instead of by an 18-minute CI suite after it landed (CI red since #2129). It
      applies to every publisher, `--serialize` or not; a repository without `framework/scripts/repurposing_view.py` skips it; nothing is loosened and nothing is written.
 
+  12. Free space is checked at the START and again just before the gate (2026-11-24, ADV-207): `/` was 100% full (219 MB free) and a landing died midway with 'No space left on device'. The tool refuses,
+     before any lock, gate or merge, when the directory the gate builds a clone in (tempfile's: TMPDIR, else /tmp) or the repository's own filesystem has less than 2 GB free, names the number and
+     the path, and points at `tmp_clone_report.py` once that tool exists. 2 GB = twice the MEASURED peak of one release-mode gate clone: `public_release_gate.py --mode release` run with TMPDIR set to
+     an empty folder and `du -sk` of it sampled every 2 s: peak 856,524 KB (tar of `git archive HEAD` 425 MB plus its extraction), clean tree, PASS. The staging-mode gate that this tool runs builds NO clone
+     (same sampling: peak 4 KB), and the merge and regeneration write only the changed files, so the 2 GB is headroom for the release-mode run and the object store, not this tool's own need.
+     `LEGEND_SAFE_PUSH_MIN_FREE_GB` overrides the threshold (tests, or an operator who knows better). Read-only; an unreadable filesystem does not refuse.
+
 Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--regenerate-derived]]      (default branch: main)
 """
 from __future__ import annotations
-import atexit, fcntl, os, signal, subprocess, sys, time
+import atexit, fcntl, os, shutil, signal, subprocess, sys, tempfile, time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -143,6 +150,29 @@ def stale_derived_views() -> str:
     return ""
 
 
+# Free space the gate needs where it builds its clean clone (tempfile's directory: TMPDIR, else /tmp). MEASURED 2026-11-24 (ADV-207): see the module docstring, item 12.
+MIN_FREE_GB = float(os.environ.get("LEGEND_SAFE_PUSH_MIN_FREE_GB", "2"))
+CLONE_REPORT = ROOT / "framework" / "scripts" / "tmp_clone_report.py"
+
+
+def free_space_refusal() -> str:
+    """'' when both the directory the gate builds a clone in (tempfile's: TMPDIR, else /tmp) and the repository's own filesystem (the merge, the regeneration and the object store write there)
+    have MIN_FREE_GB free; otherwise the refusal text naming the scarcer one. Read-only."""
+    worst = None
+    for where in (Path(tempfile.gettempdir()), ROOT):
+        try:
+            free = shutil.disk_usage(where).free / 1e9
+        except OSError:
+            continue          # an unreadable filesystem is not a reason to refuse; the gate will say what it finds
+        if free < MIN_FREE_GB and (worst is None or free < worst[0]):
+            worst = (free, where)
+    if worst is None:
+        return ""
+    hint = " List your dead clones with `python3 framework/scripts/tmp_clone_report.py`." if CLONE_REPORT.is_file() else ""
+    return (f"free space {worst[0]:.1f} GB at {worst[1]} is below {MIN_FREE_GB:g} GB (twice the measured peak, 0.86 GB, of one release-mode gate clone): remove a clone or a scratch folder of yours first.{hint} "
+            "Nothing was gated or pushed.")
+
+
 def fail(msg: str) -> int:
     print(f"REFUSED: {msg}", file=sys.stderr)
     return 1
@@ -187,6 +217,10 @@ def main(argv: list[str]) -> int:
     for name, value in (("remote", remote), ("branch", branch)):
         if value.startswith("-"):
             return fail(f"{name} {value!r} is option-shaped; usage: safe_push.py <remote> [<branch>]")
+
+    short = free_space_refusal()
+    if short:
+        return fail(short)
 
     dirty = run("git", "status", "--porcelain").stdout.strip()
     if dirty:
@@ -270,6 +304,10 @@ def main(argv: list[str]) -> int:
         if regenerated != before:
             print(f"REGENERATED derived surfaces under the landing lock: {before[:12]} -> {regenerated[:12]}", flush=True)
             before = regenerated
+
+    short = free_space_refusal()      # a waiter can sit in the queue for many minutes while other clones fill the disk
+    if short:
+        return fail(short)
 
     stale = stale_derived_views()
     if stale:
