@@ -1,0 +1,38 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-41858901-80",
+  "event_at": "2026-11-24T03:58:17Z",
+  "analysis_at": "2026-11-24T03:58:17Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "41858901",
+    "doi": "10.1016/j.isci.2026.114764"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/nr_loop_20261124/human_time.xml",
+  "source_fingerprint": "b73546c06a015654935689ff49334d63942f17f2bf2751c2b2ed0b984e285146",
+  "workflow": "Recalculate oral NR-related cerebral and blood metabolic changes and check robustness to alternative denominators and repeat-scan controls.",
+  "evidence_basis": [
+    "Stage 1 and 2 Results, spectroscopy normalization and precision limits. Independently reanalyzed paired baseline and day-eight/week-four LC-MS and phosphorus MRS in Data S3 and S4, NR arms only.",
+    "human_time.xml: SHA256 b73546c06a015654935689ff49334d63942f17f2bf2751c2b2ed0b984e285146",
+    "human_mrs.xlsx: SHA256 1ee5f5ebc8307ae548052fbd6b3818505ef300c2a4637adf70eba1d0826cf704",
+    "human_blood.xlsx: SHA256 0e0eed8676a0cb97bb9c3ba233d3e879d7eba96a69b41901ad7cdffa01046ad0"
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/nicotinamide_riboside/human_response.md"
+  ]
+}

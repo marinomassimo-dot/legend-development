@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-20225289-80",
+  "event_at": "2026-11-24T03:36:55Z",
+  "analysis_at": "2026-11-24T03:36:55Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "20225289",
+    "doi": "10.1002/ana.21885"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/dha_loop_20261124/zonisamide_primary_excerpt.pdf",
+  "source_fingerprint": "a472177c6ca5d53ec6b295ecfb543b771c38ed3e98092b6829d216ca71161864",
+  "workflow": "Test astrocytic substrate support against proliferation during zonisamide exposure.",
+  "evidence_basis": [
+    "Rendered and examined printed p. 242 and Fig. 1C–H visually; read accompanying paragraph on astrocyte numbers. Means are estimates from bars, regional and drug exposure contexts distinguished."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/zonisamide/README.md"
+  ]
+}

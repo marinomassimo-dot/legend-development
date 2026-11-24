@@ -1,0 +1,5 @@
+form	R_plasma_peak_uM	R_plasma_AUC0t_uM_h	AUC_over_5uM_hours	fraction_of_constant_5uM_24h_area
+OS 600	38.016	18.261	3.652	0.1522
+T 200	16.358	12.681	2.536	0.1057
+T 300	17.409	14.493	2.899	0.1208
+T 600	13.68	11.738	2.348	0.0978

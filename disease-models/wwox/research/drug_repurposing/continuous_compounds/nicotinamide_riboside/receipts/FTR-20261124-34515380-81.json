@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-34515380-81",
+  "event_at": "2026-11-24T03:55:06Z",
+  "analysis_at": "2026-11-24T03:55:06Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "34515380",
+    "doi": "10.1002/mds.28788"
+  },
+  "prior_receipt": "FTR-20261124-34515380-80",
+  "reread_reason": "inadequate_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/nr_loop_20261124/ataxia_supp.docx",
+  "source_fingerprint": "e1537421ec15f41dfa03289479389d17ddb28127b596dd00c30e5742acaa78bc",
+  "workflow": "Test time-dependent axonal salvage hypotheses and pediatric feasibility of nicotinamide riboside in WWOX loss.",
+  "evidence_basis": [
+    "Supplementary File 1, Dosing and Outcome measurements. Examined NR capsule description, regulatory reference and common assessors, without claiming verified lot or manufacturer."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/nicotinamide_riboside/README.md"
+  ]
+}

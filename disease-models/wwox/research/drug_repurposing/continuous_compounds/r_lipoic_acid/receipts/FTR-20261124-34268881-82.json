@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-34268881-82",
+  "event_at": "2026-11-24T01:44:18Z",
+  "analysis_at": "2026-11-24T01:44:18Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "34268881",
+    "doi": "10.15252/emmm.202013610"
+  },
+  "prior_receipt": "FTR-20261123-34268881-94",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+  "source_fingerprint": "de340289bc6704c9b9ec752f81afed64a02211a83d95d675a1d46f40be6304f6",
+  "workflow": "Check adult pure-R pulse exposure and formulation-specific baseline medium against the PKAN comparator.",
+  "evidence_basis": [
+    "Stem cell culture gives Gibco 21331-020 or Biological Industries DMEM/F12. Organoid differentiation medium gives 1:1 DMEM/F12 and Neurobasal. Brand-specific lipoate contribution is conditional."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/r_lipoic_acid/decision.md"
+  ]
+}

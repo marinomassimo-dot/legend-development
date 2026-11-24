@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-32753675-81",
+  "event_at": "2026-11-24T03:50:47Z",
+  "analysis_at": "2026-11-24T03:50:47Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "32753675",
+    "doi": "10.1038/s41598-020-70068-0"
+  },
+  "prior_receipt": "FTR-20261124-32753675-80",
+  "reread_reason": "inadequate_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/zonisamide_loop_20261124/spinal_supp.pdf",
+  "source_fingerprint": "be03d12c52e739d964d20a6e044f5ba89a21052ced41c51d9528a0b90bf25d93",
+  "workflow": "Determine the comparator behind astrocytic xCT and test a neuron-intrinsic alternative.",
+  "evidence_basis": [
+    "Visually inspected original Fig. 5A–C and supplement S2 and S3. Extracted significance-bracket endpoints and checked Fig. 5C for rat-indexed data. Supplement pages 8–9 rendered from the CC BY original.",
+    "files/deepening_downloads/zonisamide_loop_20261124/spinal_supp.pdf SHA256 be03d12c52e739d964d20a6e044f5ba89a21052ced41c51d9528a0b90bf25d93",
+    "files/deepening_downloads/zonisamide_loop_20261124/spinal_fig5.jpg SHA256 7a37c0a5ef89f0ad97c10af736a63a0e03f28d81020c5e33a3acc07da2c75879"
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/zonisamide/panel_review.md"
+  ]
+}

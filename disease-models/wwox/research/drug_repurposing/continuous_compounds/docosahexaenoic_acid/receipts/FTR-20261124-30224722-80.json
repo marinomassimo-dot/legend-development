@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-30224722-80",
+  "event_at": "2026-11-24T03:36:55Z",
+  "analysis_at": "2026-11-24T03:36:55Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "30224722",
+    "doi": "10.1038/s41380-018-0240-0"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/dha_loop_20261124/basket_ncbi.xml",
+  "source_fingerprint": "d66006591ea6f7aa05d3144940daa681a27dd89ce923388bd4a49fa94dbd773e",
+  "workflow": "Test native acute DHA conductance, unbound exposure and pediatric developmental comparators.",
+  "evidence_basis": [
+    "Results and caption of Fig. 5a–f, distinct recombinant and native exposure, direction of IPSCs and Purkinje firing, record counts."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/docosahexaenoic_acid/channels.md"
+  ]
+}

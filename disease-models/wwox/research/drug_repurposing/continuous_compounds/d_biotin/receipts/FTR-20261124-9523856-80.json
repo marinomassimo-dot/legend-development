@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-9523856-80",
+  "event_at": "2026-11-24T02:29:21Z",
+  "analysis_at": "2026-11-24T02:29:21Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "9523856"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "files/deepening_downloads/d_biotin_loop_20261124/antiepileptic_comparators.xml",
+  "source_fingerprint": "b66ae631c266b94da4cef2013e11c57ef9b9cd822033c2203a199dc5d1e2b99a",
+  "workflow": "Test whether D-biotin-dependent carboxylation can account for developmental myelin changes and check clinical exposure against experimental readouts.",
+  "evidence_basis": [
+    "Untimed urine in pediatric groups 7 CBZ and/or PHT, 6 PB, 16 controls. More metabolites but low urinary parent biotin only in one child."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_biotin/decision.md"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-39352636-81",
+  "event_at": "2026-11-24T04:09:07Z",
+  "analysis_at": "2026-11-24T04:09:07Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "39352636",
+    "doi": "10.1007/s12035-024-04480-2"
+  },
+  "prior_receipt": "FTR-20261124-39352636-80",
+  "reread_reason": "inadequate_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/nr_loop_20261124/endogenous_supp.pdf",
+  "source_fingerprint": "c04a0e5b3748490da1ae8b39f0f027dde309e7e9bc62b9655473b266d6eeb58d",
+  "workflow": "Test whether chronic partial NMNAT2 loss changes the sign of a neurite response to NR at endogenous NR kinase expression.",
+  "evidence_basis": [
+    "Supplement p. 1, Fig. S1A–C, actual graphic and caption. Compared day 7 to 8, whole wild-type DRG and PBS comparisons for different precursors. Short locator: “collection of whole DRG cultures”. Other supplement figures not assessed for this receipt."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/nicotinamide_riboside/endogenous.md"
+  ]
+}

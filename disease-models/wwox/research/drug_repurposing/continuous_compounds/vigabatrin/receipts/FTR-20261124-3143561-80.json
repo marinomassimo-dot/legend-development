@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-3143561-80",
+  "event_at": "2026-11-24T02:04:15Z",
+  "analysis_at": "2026-11-24T02:04:15Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "3143561",
+    "doi": "10.1016/0920-1211(88)90025-3"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "files/deepening_downloads/vigabatrin_loop_20261124/time.xml",
+  "source_fingerprint": "b611b88de6fb87d84ec36f55ef132b240add87d961574bc6f7f3cadf6a720d87",
+  "workflow": "Distinguish exposure, functional enzyme recovery, GABA pool versus flux, and alternative causes of a mitochondrial phenotype.",
+  "evidence_basis": [
+    "11 patients; single-dose CSF metabolite response lasted up to 5–7 days, measurable drug disappeared sooner."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/vigabatrin/decision.md"
+  ]
+}

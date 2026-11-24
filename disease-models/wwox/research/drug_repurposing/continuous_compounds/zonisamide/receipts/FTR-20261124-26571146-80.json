@@ -1,0 +1,38 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-26571146-80",
+  "event_at": "2026-11-24T03:50:47Z",
+  "analysis_at": "2026-11-24T03:50:47Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "26571146",
+    "doi": "10.1371/journal.pone.0142786"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/zonisamide_loop_20261124/neurites.xml",
+  "source_fingerprint": "94d091b966cb4a340191a5cf702a5720d99149b1d7ecbca520bbf940268cac0d",
+  "workflow": "Determine the comparator behind astrocytic xCT and test a neuron-intrinsic alternative.",
+  "evidence_basis": [
+    "Checked primary motor neuron methods and read Fig. 1A–D and Fig. 4 pixels/captions. Compared concentrations, MTS denominator, selected neurites, cell threshold and hybrid cell-line alternative.",
+    "files/deepening_downloads/zonisamide_loop_20261124/neurites.xml SHA256 94d091b966cb4a340191a5cf702a5720d99149b1d7ecbca520bbf940268cac0d",
+    "files/deepening_downloads/zonisamide_loop_20261124/neurites_fig1.jpg SHA256 1e45337458705115a5600a66d158c3fb9a92a005f3c166d8a06aea4c63660f13",
+    "files/deepening_downloads/zonisamide_loop_20261124/neurites_fig4.jpg SHA256 35c35c7cab1c66da8ef4038ea16e7f6152b22abe420ef0e270667294c30aacda"
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/zonisamide/panel_review.md"
+  ]
+}

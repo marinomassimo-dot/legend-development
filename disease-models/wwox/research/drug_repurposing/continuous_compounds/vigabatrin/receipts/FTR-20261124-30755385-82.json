@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-30755385-82",
+  "event_at": "2026-11-24T02:08:03Z",
+  "analysis_at": "2026-11-24T02:08:03Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "30755385",
+    "doi": "10.1016/j.molmet.2019.01.010"
+  },
+  "prior_receipt": "FTR-20261019-30755385-01",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/vigabatrin_loop_20261124/wwox_skm.xml",
+  "source_fingerprint": "910367a799f4595ff6b9b68ae20a9e3830d413ec0fd642644ec876712ac552c3",
+  "workflow": "Distinguish cellular and mitochondrial denominators and genetic and pharmacological arms.",
+  "evidence_basis": [
+    "Fig 3 I/J/K, Fig 3J approximately 0.6 of control for skeletal muscle mtDNA; n=4 per group. Supplement last table S2 lists mito and B2m primers."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/vigabatrin/decision.md"
+  ]
+}

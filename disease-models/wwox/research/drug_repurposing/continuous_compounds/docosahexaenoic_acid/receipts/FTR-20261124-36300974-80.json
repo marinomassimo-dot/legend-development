@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-36300974-80",
+  "event_at": "2026-11-24T03:36:55Z",
+  "analysis_at": "2026-11-24T03:36:55Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "36300974",
+    "doi": "10.1056/NEJMoa2206868"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://www.nejm.org/doi/abs/10.1056/NEJMoa2206868",
+  "source_fingerprint": null,
+  "workflow": "Test native acute DHA conductance, unbound exposure and pediatric developmental comparators.",
+  "evidence_basis": [
+    "Indexed Methods describing triglyceride emulsion, background intake and control. Author abstract for cognitive effect, confidence interval and denominators."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/docosahexaenoic_acid/channels.md"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-27903293-80",
+  "event_at": "2026-11-24T01:52:52Z",
+  "analysis_at": "2026-11-24T01:52:52Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "27903293",
+    "doi": "10.1186/s13041-016-0273-8"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/vigabatrin_loop_20261124/mild.xml",
+  "source_fingerprint": "1c2c59861d90aab03a5ccbddb3f7647f05ad2edf882ba339446a627e89ed234a",
+  "workflow": "Compare enantiomer-specific exposure, compartment-specific functional changes and their durations in the WWOX research programme.",
+  "evidence_basis": [
+    "Cell culture and paired results described for Fig 2; 200 µM yielded about 25% GABA-T activity and 50% mtDNA in T98G cells at day 10."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/vigabatrin/README.md"
+  ]
+}

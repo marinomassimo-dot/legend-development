@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-40925986-80",
+  "event_at": "2026-11-24T02:46:18Z",
+  "analysis_at": "2026-11-24T02:46:18Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "40925986",
+    "doi": "10.1038/s42255-025-01358-y"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/d_pantothenate_loop_20261124/liu.xml",
+  "source_fingerprint": "a4a4046a4cc1b5c289dbefb2a4a105747cf6ef44b9c17a745be0a7cbb2311402",
+  "workflow": "Compare quantifiable free and acylated CoA changes in synthesis versus import defects as controls for the D-pantothenate hypothesis.",
+  "evidence_basis": [
+    "Results around Fig. 4, captions to Figs. 3 and 5, and source spreadsheets Fig. 3f, Fig. 5a, Fig. 5c. n=3 values/arm for within-panel LC–MS ratios in K562 whole cells or mitochondrial isolates. Original panel images not reviewed."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_pantothenate/transport.md"
+  ]
+}

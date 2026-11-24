@@ -1,0 +1,5 @@
+panel	system	measure	unit	control_approx	100uM_approx	significance_reported
+1C	CATH.a	GSH	nmol_per_mg_protein	8.3	6.9	no_star
+1D	C6	GSH	nmol_per_mg_protein	3.2	7.0	p_lt_0.01
+1G	C6	xCT_positive_fraction	percent_cells	4.5	13	p_lt_0.01
+1H	primary_astroglia	cell_count	cells_in_reported_field_or_sample	35	48	p_lt_0.01

@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-24802902-80",
+  "event_at": "2026-11-24T01:55:43Z",
+  "analysis_at": "2026-11-24T01:55:43Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "24802902",
+    "doi": "10.1111/bcp.12414"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/vigabatrin_loop_20261124/brain.xml",
+  "source_fingerprint": "63129de34eb07a68c71203846f9b9aa1986b7f16b0006ea8170508b8ce88bb19",
+  "workflow": "Compare enantiomer-specific exposure, compartment-specific functional changes and their durations in the WWOX research programme.",
+  "evidence_basis": [
+    "Methods, concentration recovery, Results, Table 1; supplements S2 and S3. Nine people, eleven catheters, background co-eluting species, two different catheters in each of two patients. Source files S2 and S3 SHA256: 79bf4e5157e0d4ec1910760bbf3caf7d93cec80aac2c24a08e380d8da958e312, 17ef22da1cd2f54a136e6936aa72c5aa442875a42ffe7c0afcb4516cfec40ec4"
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/vigabatrin/README.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/vigabatrin/brain_exposure.tsv",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/vigabatrin/paired_change.tsv"
+  ]
+}

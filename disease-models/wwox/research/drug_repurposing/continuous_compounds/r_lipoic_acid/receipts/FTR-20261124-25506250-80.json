@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-25506250-80",
+  "event_at": "2026-11-24T01:52:52Z",
+  "analysis_at": "2026-11-24T01:52:52Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "25506250",
+    "doi": "10.2147/CPAA.S71574"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/r_lipoic_loop_20261124/hermann.xml",
+  "source_fingerprint": "1fb71c4d18dbbc68c27ec95551c134558ef20e5096681682fedd35f7e9bb3882",
+  "workflow": "Compare enantiomer-specific exposure, compartment-specific functional changes and their durations in the WWOX research programme.",
+  "evidence_basis": [
+    "Study design and sample processing; Tables 1–2, group-specific R peaks and AUC for equal-total-mass racemate formulations; decision uses measured R exposure."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/r_lipoic_acid/decision.md"
+  ]
+}

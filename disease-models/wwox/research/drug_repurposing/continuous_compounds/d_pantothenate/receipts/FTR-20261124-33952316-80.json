@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-33952316-80",
+  "event_at": "2026-11-24T03:00:36Z",
+  "analysis_at": "2026-11-24T03:00:36Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "33952316",
+    "doi": "10.1186/s13023-021-01823-3"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/d_pantothenate_loop_20261124/8101147.xml",
+  "source_fingerprint": "1ee2e5e91bc708a0a2e5d91568e88b870e8f893cec862667a962972b0d891c46",
+  "workflow": "Distinguish substrate-responsive residual kinase from mitochondrial transport and compare published exposures in the WWOX D-pantothenate dossier.",
+  "evidence_basis": [
+    "Results on Figs 6 and 7: selected P1 induced neurons, 500 uM for 20 days. Bulk protein in mixed culture; conversion efficiency vs purity differ."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_pantothenate/decision.md"
+  ]
+}

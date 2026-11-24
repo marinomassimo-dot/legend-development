@@ -1,0 +1,14 @@
+{
+  "document": "FDA cross-discipline team leader review, NDA 208169, 2015",
+  "source": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2015/208169Orig1s000CrossR.pdf",
+  "source_locator": "files/deepening_downloads/uridine_triacetate_loop_20261124/fda_review.pdf",
+  "sha256": "24091831f456b511760fb2e49a86ea291c15a3c2b61e8edb93a64cbcaaa2fe03",
+  "read_at": "2026-11-24T03:11:43.538707+00:00",
+  "coverage": "Selected text only: pharmacokinetics and assay methodology; age and previous treatment from clinical study summary. Tables and redacted patient identifiers not used.",
+  "locators": [
+    "Pharmacokinetic Characteristics: AUC0–8 ratios on equal weight and equimolar bases; three switchers and one treatment-naive participant.",
+    "Assay Methodology: HPLC validated for plasma uridine. No validated parent assay."
+  ],
+  "output": "uridine_triacetate/README.md",
+  "identifier": "FDA NDA 208169; no PMID or DOI assigned to this regulatory review"
+}

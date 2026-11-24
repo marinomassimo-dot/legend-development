@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-18996865-80",
+  "event_at": "2026-11-24T02:16:38Z",
+  "analysis_at": "2026-11-24T02:16:38Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "18996865"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/d_biotin_loop_20261124/3097470.xml",
+  "source_fingerprint": "70c5fc1c730a1d27c30593b88f1f23c867f386be21824aaa5ddba8761bb7f9b0",
+  "workflow": "Test whether D-biotin-dependent carboxylation can account for developmental myelin changes and check clinical exposure against experimental readouts.",
+  "evidence_basis": [
+    "Table 2 HPLC subset selected by available volume, eleven diagnostic samples. Biotin averaged 41.6 mol percent; caution for total binding assays."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_biotin/README.md"
+  ]
+}

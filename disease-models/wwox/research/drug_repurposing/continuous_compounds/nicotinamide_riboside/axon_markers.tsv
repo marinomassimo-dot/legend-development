@@ -1,0 +1,11 @@
+cell	denominator	WT_Nmnat2	KO_Nmnat2	WT_marker	KO_marker	ratio_of_ratios
+exc	Stmn2	2179	1386	1147	1087	0.6712
+exc	Tubb3	2179	1386	0	0	NA
+exc	Nefl	2179	1386	467	508	0.5847
+exc	Gap43	2179	1386	780	614	0.808
+exc	Snap25	2179	1386	11771	11166	0.6705
+inh	Stmn2	373	391	209	249	0.8799
+inh	Tubb3	373	391	0	0	NA
+inh	Nefl	373	391	48	92	0.5469
+inh	Gap43	373	391	119	149	0.8372
+inh	Snap25	373	391	1485	1659	0.9383

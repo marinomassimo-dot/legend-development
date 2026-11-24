@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-33657413-80",
+  "event_at": "2026-11-24T03:53:07Z",
+  "analysis_at": "2026-11-24T03:53:07Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "33657413",
+    "doi": "10.1016/j.neuron.2021.02.009"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/nr_loop_20261124/axon.xml",
+  "source_fingerprint": "6136a451095c26126c5986da16a14240eddf7f9f54495c982a4726c4ea7eacc6",
+  "workflow": "Test time-dependent axonal salvage hypotheses and pediatric feasibility of nicotinamide riboside in WWOX loss.",
+  "evidence_basis": [
+    "Fig. 1A-D text and caption, injury time relative to NR, key resources for salt; no independent visual digitization of the time curves."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/nicotinamide_riboside/README.md"
+  ]
+}

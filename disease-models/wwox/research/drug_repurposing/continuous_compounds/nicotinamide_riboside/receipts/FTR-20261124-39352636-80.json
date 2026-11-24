@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-39352636-80",
+  "event_at": "2026-11-24T04:06:17Z",
+  "analysis_at": "2026-11-24T04:06:17Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "39352636",
+    "doi": "10.1007/s12035-024-04480-2"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/nr_loop_20261124/endogenous.xml",
+  "source_fingerprint": "d075eac0f54d360fa94db6a2ffb3102c6cb1dfec847920a3bd2b9d92045d0243",
+  "workflow": "Test whether chronic partial NMNAT2 loss changes the sign of a neurite response to NR at endogenous NR kinase expression.",
+  "evidence_basis": [
+    "Methods: NR source and vehicle. Results for Fig. 5, including absence of an NMN measurement. Visually inspected original Fig. 5A–J, schedule, whole versus separated ganglia and neurites, SARM1 genetic comparison and growth curves. Figure file files/deepening_downloads/nr_loop_20261124/endogenous_fig5.jpg SHA256 04758a6bbf99e9e10d64695b93f75f6a8875036c907337c01cd171ebb01c8452. Short verbatim Results locator: “separate metabolite measurements were made”."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/nicotinamide_riboside/endogenous.md"
+  ]
+}

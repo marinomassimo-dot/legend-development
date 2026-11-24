@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-18974016-80",
+  "event_at": "2026-11-24T02:16:38Z",
+  "analysis_at": "2026-11-24T02:16:38Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "18974016"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/d_biotin_loop_20261124/2630166.xml",
+  "source_fingerprint": "58a6396e1d4f91a76466d062f19f01b21f00ac95181dc14df51af2b76049a797",
+  "workflow": "Test whether D-biotin-dependent carboxylation can account for developmental myelin changes and check clinical exposure against experimental readouts.",
+  "evidence_basis": [
+    "14-month sampling under treatment: fasting plasma 1800 nM and simultaneous CSF 1000 nM by avidin-binding assay. Case, Methods and Results; no chiral or analyte-specific CSF exposure."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_biotin/README.md"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-25738457-80",
+  "event_at": "2026-11-24T01:52:52Z",
+  "analysis_at": "2026-11-24T01:52:52Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "25738457",
+    "doi": "10.1016/j.cmet.2015.02.008"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/vigabatrin_loop_20261124/abat.xml",
+  "source_fingerprint": "801164b896d0eaa46e15f57b3a5beca95574f51929edec43a860116a92197a68",
+  "workflow": "Compare enantiomer-specific exposure, compartment-specific functional changes and their durations in the WWOX research programme.",
+  "evidence_basis": [
+    "Pharmacological inhibition and 661W methods; 100–300 µM, daily resupply for 10 days, low serum, mtDNA and nucleotide rescue in Fig 6 described in text."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/vigabatrin/README.md"
+  ]
+}

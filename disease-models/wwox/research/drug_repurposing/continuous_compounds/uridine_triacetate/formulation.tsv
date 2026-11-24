@@ -1,0 +1,6 @@
+measure	reference	comparison	reference_mean	comparison_mean	ratio
+peak uridine, uM	pure uridine	TAU-rich supplement day 1	36.1	150.9	4.1801
+baseline-adjusted AUC to infinity	pure uridine	TAU-rich supplement day 1	135.4	599.5	4.4276
+baseline uridine, uM	supplement day 1	supplement day 7	4.7	31.1	6.617
+unadjusted AUC to infinity	supplement day 1	supplement day 7	620.8	843.6	1.3589
+baseline-adjusted AUC to infinity	supplement day 1	supplement day 7	599.5	606.2	1.0112

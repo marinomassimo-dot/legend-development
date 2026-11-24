@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-8971436-80",
+  "event_at": "2026-11-24T01:52:52Z",
+  "analysis_at": "2026-11-24T01:52:52Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "8971436",
+    "doi": "10.1046/j.1365-2125.1996.00495.x"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "files/deepening_downloads/vigabatrin_loop_20261124/pediatric.xml",
+  "source_fingerprint": "c637d251406a0abafb99b1e5e4542cd132055b1c01009479a30a02b6960e3363",
+  "workflow": "Compare enantiomer-specific exposure, compartment-specific functional changes and their durations in the WWOX research programme.",
+  "evidence_basis": [
+    "Six neonatal single-dose mean S peak 14.0 mg/L, R 34.1; four-day observations did not show accumulation."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/vigabatrin/README.md"
+  ]
+}

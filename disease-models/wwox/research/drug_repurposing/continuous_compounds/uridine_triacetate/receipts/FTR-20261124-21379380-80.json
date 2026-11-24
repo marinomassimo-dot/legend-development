@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-21379380-80",
+  "event_at": "2026-11-24T03:10:12Z",
+  "analysis_at": "2026-11-24T03:10:12Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "21379380",
+    "doi": "10.1371/journal.pone.0014709"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/uridine_triacetate_loop_20261124/adult.xml",
+  "source_fingerprint": "89aac4108111d44681510fa3ffea7f8e113b7ae79d8c5fa74aa7d5446741e3e5",
+  "workflow": "Compare oral formulation-dependent systemic uridine exposure against WWOX pyrimidine availability hypotheses.",
+  "evidence_basis": [
+    "Tables 1–2 with separate cohorts and eight people per study; baseline and adjusted AUC after repeated dosing compared. Results/Methods on product composition and assay."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/uridine_triacetate/README.md"
+  ]
+}

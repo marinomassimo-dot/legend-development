@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-32516974-80",
+  "event_at": "2026-11-24T03:40:14Z",
+  "analysis_at": "2026-11-24T03:40:14Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "32516974",
+    "doi": "10.3390/ph13060117"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/zonisamide_loop_20261124/hemichannel.xml",
+  "source_fingerprint": "5365b6876f64e4f80c939f90555679defcaa02b92371ca7c46d9572ad3ac7f7a",
+  "workflow": "Test astrocytic substrate support against proliferation during zonisamide exposure.",
+  "evidence_basis": [
+    "Methods sampling medium and washes, Results and Fig. 4 and 5A,D captions on basal versus evoked release. Reviewed whether exogenous cystine was named in sampling buffer."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/zonisamide/README.md"
+  ]
+}

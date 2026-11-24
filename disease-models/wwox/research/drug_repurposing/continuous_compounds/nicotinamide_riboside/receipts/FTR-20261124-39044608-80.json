@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-39044608-80",
+  "event_at": "2026-11-24T03:58:17Z",
+  "analysis_at": "2026-11-24T03:58:17Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "39044608",
+    "doi": "10.1002/mrm.30227"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/nr_loop_20261124/human_acute.xml",
+  "source_fingerprint": "b9628784787732c6c8755b5e54d6325b33a5162ec28716a5b06ca51b10de7f50",
+  "workflow": "Recalculate oral NR-related cerebral and blood metabolic changes and check robustness to alternative denominators and repeat-scan controls.",
+  "evidence_basis": [
+    "Extracted all nine four-scan series from Table 1. Identified motion exclusion, later test-retest order and oxidized NAD assay.",
+    "human_acute.xml: SHA256 b9628784787732c6c8755b5e54d6325b33a5162ec28716a5b06ca51b10de7f50"
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/nicotinamide_riboside/human_response.md"
+  ]
+}

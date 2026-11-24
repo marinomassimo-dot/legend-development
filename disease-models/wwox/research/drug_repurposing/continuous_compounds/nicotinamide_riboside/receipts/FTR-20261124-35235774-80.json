@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-35235774-80",
+  "event_at": "2026-11-24T04:14:16Z",
+  "analysis_at": "2026-11-24T04:14:16Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "35235774",
+    "doi": "10.1016/j.cmet.2022.02.001"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/nr_loop_20261124/nadpark.pdf",
+  "source_fingerprint": "b58806bd7a2ee213541381ac6782fd70fadb13557ce582626316abfced51ec02",
+  "workflow": "Distinguish parent precursor concentrations from downstream catabolites following oral NR in humans.",
+  "evidence_basis": [
+    "Results paragraph preceding Fig. 3, legend and STAR Methods for CSF metabolomics and sampling at V1 and V2. Locator: “below the detection limit in the CSF”. No graphical point counts or supplementary reads claimed."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/nicotinamide_riboside/oral_exposure.md"
+  ]
+}
