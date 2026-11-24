@@ -8,6 +8,7 @@ the run ever ended. The supported way to hold such a wait is a BLOCKED step whos
     python3 framework/scripts/ci_runs.py status <sha>                 # one line per workflow run on that commit
     python3 framework/scripts/ci_runs.py status <sha>                 # a red gate run also lists its failing suites and tests, read from the public annotations (no login)
     python3 framework/scripts/ci_runs.py wait <sha> --timeout 1800    # progressive polling (2, 4, then 8 minutes), ONE shared read of the latest runs serves every commit and every waiter on the machine; exit 0 all runs concluded success
+    python3 framework/scripts/ci_runs.py queue                        # the open runs of the public release gate (in progress or queued): position, run, sha, branch, age; the count, the age of the oldest and the conclusions of the last 100 runs, so a change to the gate's concurrency can be measured before and after; ONE request, exit 0 whenever the API was read, 2 when it was not (a rate limit is printed with its reset)
 
 Exit codes: 0 every run on the commit concluded success · 1 a run concluded with anything else · 3 no run seen for the commit · 124 the deadline passed with a run
 still in progress (or none yet) · 2 invalid invocation or the API unreadable. No token is used (the repository is public; the unauthenticated limit is 60 requests an
@@ -16,6 +17,7 @@ hour, so `wait` polls every two minutes, shares one answer per commit with every
 from __future__ import annotations
 
 import argparse
+import calendar
 import json
 import os
 import re
@@ -159,6 +161,57 @@ def write_recent(repo: str, recent: list[dict], now: float) -> None:
             write_shared(sha, repo, runs, now)
 
 
+OPEN_STATES = ("in_progress", "queued", "waiting", "pending", "requested")
+GATE = "Public release gate"
+
+
+def parse_time(value: str | None) -> float | None:
+    """An API timestamp (`2026-11-24T22:01:05Z`) as epoch seconds, or None."""
+    if not value:
+        return None
+    try:
+        return float(calendar.timegm(time.strptime(value, "%Y-%m-%dT%H:%M:%SZ")))
+    except ValueError:
+        return None
+
+
+def human_age(seconds: float | None) -> str:
+    if seconds is None:
+        return "unknown"
+    minutes = int(max(seconds, 0) // 60)
+    return f"{minutes // 60}h{minutes % 60:02d}m" if minutes >= 60 else f"{minutes}m"
+
+
+def queue_view(runs: list[dict], now: float, workflow: str = GATE) -> dict:
+    """The open runs of one workflow from ONE list of runs, oldest first (position 1 is the oldest), and what the list says about how runs end.
+    A run is open while it is in progress, queued, waiting or pending; its age runs from `created_at` (the push), because a queued run waits too. `window` counts the
+    conclusions of the completed runs of that workflow in the same list (at most the latest hundred), so a `cancelled` count that appears after a concurrency change can be read."""
+    mine = [r for r in runs if r.get("name") == workflow]
+    opened = sorted((r for r in mine if r.get("status") in OPEN_STATES), key=lambda r: (parse_time(r.get("created_at")) or now, r.get("run_number", 0)))
+    rows = [{"position": n, "run": r.get("run_number"), "sha": str(r.get("head_sha", ""))[:8], "branch": r.get("head_branch"), "event": r.get("event"),
+             "status": r.get("status"), "age_seconds": (now - parse_time(r.get("created_at"))) if parse_time(r.get("created_at")) is not None else None}
+            for n, r in enumerate(opened, 1)]
+    window: dict[str, int] = {}
+    for r in mine:
+        if r.get("status") == "completed":
+            window[r.get("conclusion") or "none"] = window.get(r.get("conclusion") or "none", 0) + 1
+    times = [parse_time(r.get("created_at")) for r in mine]
+    times = [x for x in times if x is not None]
+    return {"workflow": workflow, "open": len(rows), "in_progress": sum(1 for r in rows if r["status"] == "in_progress"),
+            "queued": sum(1 for r in rows if r["status"] != "in_progress"),
+            "oldest_age_seconds": rows[0]["age_seconds"] if rows else None, "rows": rows, "window": window,
+            "window_runs": len(mine), "window_span_seconds": (now - min(times)) if times else None}
+
+
+def render_queue(view: dict) -> list[str]:
+    head = f"QUEUE {view['workflow']}: {view['open']} open ({view['in_progress']} in progress, {view['queued']} queued)"
+    lines = [head + (f", oldest {human_age(view['oldest_age_seconds'])}" if view["rows"] else "")]
+    lines += [f"  {r['position']:>2}. #{r['run']} {r['sha']} {r['branch']} {r['event']} {r['status']} age {human_age(r['age_seconds'])}" for r in view["rows"]]
+    done = ", ".join(f"{k} {v}" for k, v in sorted(view["window"].items())) or "none"
+    lines.append(f"  window: {view['window_runs']} runs of this workflow over {human_age(view['window_span_seconds'])} (one list of at most 100 runs of every workflow); completed: {done}")
+    return lines
+
+
 def verdict(runs: list[dict]) -> tuple[int, list[str]]:
     """(exit code, lines) from the workflow_runs of one commit."""
     if not runs:
@@ -188,6 +241,25 @@ def red_streak(runs: list[dict], branch: str = "main") -> dict:
     return out
 
 
+def queue_command(a) -> int:
+    """`queue`: one request, no cache read (a queue is only worth reading fresh); the answer also feeds the per-commit cache like every other list read."""
+    repo = slug(a.remote)
+    try:
+        recent = fetch_recent(repo)
+    except urllib.error.HTTPError as exc:
+        pause = reset_wait(exc.headers, time.time()) if exc.code in (403, 429) else None
+        print(f"cannot read the API: {exc}" + (f" (rate limit; resets in {pause / 60:.0f} min)" if pause is not None else ""), file=sys.stderr)
+        return 2
+    except Exception as exc:  # network: say so, never read it as an empty queue
+        print(f"cannot read the API: {exc}", file=sys.stderr)
+        return 2
+    now = time.time()
+    write_recent(repo, recent, now)
+    view = queue_view(recent, now, a.workflow)
+    print(json.dumps(view, indent=2) if a.json else "\n".join(render_queue(view)))
+    return 0
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -197,7 +269,13 @@ def main(argv=None) -> int:
         p.add_argument("--remote", default="development")
         if name == "wait":
             p.add_argument("--timeout", type=int, required=True)
+    pq = sub.add_parser("queue", help="the open runs of the public release gate, with position, age and the conclusions of the last 100 runs")
+    pq.add_argument("--remote", default="development")
+    pq.add_argument("--workflow", default=GATE)
+    pq.add_argument("--json", action="store_true")
     a = ap.parse_args(argv)
+    if a.cmd == "queue":
+        return queue_command(a)
     if not re.fullmatch(r"[0-9a-f]{7,40}", a.sha):
         print("a commit SHA (7-40 hex digits) is required", file=sys.stderr)
         return 2
