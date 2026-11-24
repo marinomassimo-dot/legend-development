@@ -894,6 +894,13 @@
      "accepted_at": "2026-11-24T22:02:43Z",
      "evidence": "brainstorm_20261116/adv216_reading_debt_three_partials_sci_20261124/: PREREG, RESULT, three receipts (FTR-20261124-24002024-01, FTR-20261124-29940337-01, FTR-20261124-PPR1124524-01); P1 and P2 confirmed, P3 rejected in part; WO-23, RS-NP4G1, RS-NP4G2 stay OPEN, IT30-CQ5 wording qualified",
      "updated_at": "2026-11-24T22:18:37Z"
+    },
+    {
+     "step": "ADV-219: mechanical audit of partial-depth receipt labels against held artefacts (class A mislabel, class B owed-but-held); PREREG first",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-219 (ADV message 2026-11-24, brief adv219.txt)",
+     "accepted_at": "2026-11-24T22:33:16Z"
     }
    ]
   }
@@ -1582,6 +1589,13 @@
    "at": "2026-11-24T22:02:43Z",
    "source": "ADV-216 (ADV message 2026-11-24, assignment text adv215.txt assignment 2)",
    "step_sha256": "3fb272bce8b1",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T22:33:16Z",
+   "source": "ADV-219 (ADV message 2026-11-24, brief adv219.txt)",
+   "step_sha256": "b50b8f7229ca",
    "reopened_block": false,
    "authorised_by": null
   }
