@@ -1,0 +1,4 @@
+endpoint	enrolled	n_analyzed	method	estimate	ci95_low	ci95_high	p
+McMaster Gross Motor Function (GMFM 88)	24	14	Wilcoxon (Mann-Whitney)	.015	-0.44	0.48	0.95
+Pediatric Quality of Life Scale	24	14	Wilcoxon (Mann-Whitney)	0.30	-0.12	0.72	0.18
+Non-parametric Hotelling T-square Bivariate Analysis of GMGF 88 and OPeds QOL.	24	15	Non-parametric Hotelling T-square	NA	NA	NA	0.42

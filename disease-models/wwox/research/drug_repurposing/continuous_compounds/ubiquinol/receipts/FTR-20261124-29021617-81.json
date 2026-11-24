@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-29021617-81",
+  "event_at": "2026-11-24T00:50:20Z",
+  "analysis_at": "2026-11-24T00:50:20Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "29021617",
+    "doi": "10.1038/s41598-017-13257-8"
+  },
+  "prior_receipt": "FTR-20261124-29021617-80",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/ubiquinol_loop_20261124/imaging_fig2.jpg",
+  "source_fingerprint": "c838cdaf1d9112f16d3223358c779a837c5fec481cd5dc16cbde98131e62289b",
+  "workflow": "Visual check of original Fig. 2 panels a and b for individual animal data, bracket and uncertainty.",
+  "evidence_basis": [
+    "Fig. 2b: the asterisk and bracket are over reduced CoQ10; bars and whiskers but no individual data points."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/ubiquinol/decision.md"
+  ]
+}

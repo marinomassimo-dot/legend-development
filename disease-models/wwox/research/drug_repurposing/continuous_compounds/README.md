@@ -23,6 +23,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 17 | L-serine, lipid synthesis and NMDA co-agonism | Can L-serine restore functional myelin through lipid incorporation while preserving circuit function, and does WWOX actually limit its supply? |
 | 18 | Decanoic acid, cortical AMPA signaling and medium-chain substrate metabolism | Is a direct synaptic effect plausible at measured unbound cortical exposure, while preserving inhibitory recruitment? |
 | 19 | Ubiquinol-10, respiratory electron transfer and membrane lipid protection | Can mitochondrial CoQ delivery and ATP recovery be distinguished from protection of extra-mitochondrial lipids? |
+| 20 | Folinic acid, CNS folate delivery and myelination | Does folate availability limit glial maturation in WWOX, and can a barrier defect be distinguished from changes in cell composition? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -33,7 +34,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: ubiquinol-10.** COQ4 RNA is lower in all three untreated datasets, but the four-gene biosynthesis panel is discordant. A Coq9-deficient positive control supports a mitochondrial assay. Pooled hippocampal nuclei show lower Coq4 in excitatory cells and higher Coq4 in inhibitory cells. Next compare COQ4 protein, mitochondrial quinones, respiratory function and ATP recovery across the two populations. [Results and prediction](ubiquinol/README.md)
+**Active compound: folinic acid.** Transporter signals disagree across untreated models, and compartment markers rise more strongly than FOLR1 in human organoids. Next quantify the CNS-to-blood folate pattern and age reference in primary and secondary transport comparators, then determine whether any WWOX material supports the same lesion. [Prediction, WWOX comparisons and checkpoint](folinic_acid/README.md)
+
+**Ubiquinol-10 parked for WWOX trial priority.** The pediatric crossover establishes use of the reduced formulation and systemic exposure, with imprecise functional outcomes. In the GEMIN5 comparator, restoring the cellular quinone pool did not consistently restore respiration. Reopen for a matched WWOX functional effect and compartment-specific evidence. [Decision and primary controls](ubiquinol/decision.md)
 
 **Decanoic acid parked for WWOX trial priority.** Pediatric nonesterified plasma C10 cannot establish free brain exposure. Astrocyte respiration separates ATP production from proton leak. Reopen for functional recovery or selective network rescue at measured free substrate. [Exposure sensitivity and metabolic disposition](decanoic_acid/decision.md)
 

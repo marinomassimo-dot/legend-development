@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-23022402-80",
+  "event_at": "2026-11-24T00:54:44Z",
+  "analysis_at": "2026-11-24T00:54:44Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "23022402",
+    "doi": "10.1016/j.mito.2012.09.005"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/ubiquinol_loop_20261124/PMC3975832.xml",
+  "source_fingerprint": "ca64846f9aa0b4589eae67c48c50bd0523011ffaa1ec55a3000ff5a893c31d2e",
+  "workflow": "Compare supplementation, exposure and functional recovery, retaining endpoint denominators and redox formulation.",
+  "evidence_basis": [
+    "§1.2.2: “liquid ubiquinol”; §1.2.6: plasma total CoQ10 means 5.44 and 0.64 μg/ml during active and placebo phases in 17 children."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/ubiquinol/decision.md"
+  ]
+}
