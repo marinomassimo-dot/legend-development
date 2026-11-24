@@ -1,0 +1,5 @@
+source_group	compartment	n_values	low_ug_mL	high_ug_mL	low_uM	high_uM	retinal_32uM_over_high	high_over_spinal_0.1uM
+Sweden_single_6h	CSF	5	0.14	0.44	0.818	2.569	12.45	25.69
+Sweden_12_weeks	CSF	19	0.22	0.98	1.285	5.723	5.59	57.23
+Finland_12_weeks_all	CSF	9	0.22	0.78	1.285	4.555	7.03	45.55
+Finland_excluding_two_deferred_CSF	CSF	7	0.22	0.56	1.285	3.270	9.79	32.70
