@@ -1,0 +1,5 @@
+rule	Q	reads	included	skipped	conflict
+centered	20	8	3	1	1
+any	20	8	3	2	1
+centered	30	8	2	1	1
+any	30	8	2	2	1

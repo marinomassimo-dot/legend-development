@@ -68,7 +68,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: glycine.** Hippocampal WWOX transcript estimates favor Grin1 exon 5 inclusion among coding forms. Challenge assignment and cell composition before predicting a sustained response to glycine. [Prediction and initial comparison](glycine/README.md)
+**Active compound: glycine.** Hippocampal WWOX transcript estimates favor Grin1 exon 5 inclusion among coding forms. The first human control has 12 informative junction reads against 20 required per library. Complete the other five descriptively; the planned human genotype contrast fails coverage. [Prediction and initial comparison](glycine/README.md)
 
 **Stiripentol parked for pediatric trial priority.** A monotherapy effect is credible in a young Scn1a heat-challenge model. Bulk and pooled neuronal receptor-subunit ratios disagree in WWOX hippocampus. Reopen on a within-stage WWOX functional response at measured free exposure. [Model comparison and controls](stiripentol/model_comparison.md)
 
