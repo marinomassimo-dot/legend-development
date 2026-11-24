@@ -525,3 +525,5 @@
 {"evidence": "SendMessage 22:41Z with brief pointer", "id": "ADV-221", "receipt": ["c66d7154-af22-4ddd-bed4-19010987110c"], "state": "SENT", "to": ["HE - CURRENT 1d88b230"], "utc": "2026-11-24T22:41:27Z"}
 {"assessment": "HOST", "id": "ADV-222", "key": "held-unread-data-sections-batch-new-open-questions", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-24T22:45:58Z"}
 {"evidence": "SendMessage 22:46Z with brief pointer", "id": "ADV-222", "receipt": ["0fbd01fd-1524-4c37-b4cd-9cb364f7fe05"], "state": "SENT", "to": ["SCI - CURRENT 7fc66b5b"], "utc": "2026-11-24T22:46:19Z"}
+{"assessment": "HOST", "id": "ADV-223", "key": "operator-pdf-request-list-and-pooled-direction-check", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-24T22:48:49Z"}
+{"evidence": "SendMessage 22:49Z with brief pointer", "id": "ADV-223", "receipt": ["64a4bd56-68db-4937-88fb-007db3ec87b0"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 7cf5e85a"], "utc": "2026-11-24T22:49:07Z"}
