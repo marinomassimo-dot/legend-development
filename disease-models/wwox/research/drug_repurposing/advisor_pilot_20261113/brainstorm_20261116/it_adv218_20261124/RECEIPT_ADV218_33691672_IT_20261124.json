@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-24T22:39Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "event_at": "2026-11-24T22:40:54Z",
+ "event_id": "FTR-20261124-33691672-01",
+ "evidence_basis": [
+  "coverage_map",
+  "files/fulltext/PMID33691672_Kaluzinska2021_PMC7944886_epmc.xml (Europe PMC JATS, structured text, read whole including Tables 1 to 5, locators matched to it)",
+  "files/figures/PMID33691672/ (all seven figures opened as images)",
+  "files/fulltext/PMID33691672_supplement/ (Additional file 1 docx read as text; Additional file 2 heat maps opened as an image)",
+  "not covered: reference list counted (53), titles not read; western blot source data not deposited; the paper has no limitations section"
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID33691672.json",
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv218_20261124/RESULT_ADV218_IT_20261124.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "12d42eb84a0f9338e1e7ed796071f27fcbe58d02adda655cdc0a69482c833d8a",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID33691672_Kaluzinska2021_PMC7944886_epmc.xml",
+ "study_id": {
+  "doi": "10.1186/s12894-021-00806-7",
+  "pmid": "33691672"
+ },
+ "workflow": "IT ADV-218, QUESTION_DRIVEN reading by a reader that held the OPEN-row questions and a pre-registered prediction (committed before the text was opened). The open-access Europe PMC text was saved, fingerprinted and read section by section, the figure images were opened, and verbatim locators were recorded in the work manifest. fulltext_receipts.py status returned no event for the PMID before this reading. No contact with any author, no e-mail to any service, no paid route."
+}

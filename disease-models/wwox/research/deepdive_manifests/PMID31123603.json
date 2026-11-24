@@ -1,0 +1,351 @@
+{
+ "schema_version": 2,
+ "pmid": "31123603",
+ "doi": "10.1038/s41420-019-0176-4",
+ "receipt": "FTR-20261124-31123603-01",
+ "landing": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv218_20261124/RESULT_ADV218_IT_20261124.md",
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv218_20261124/PREREG_ADV218_IT_20261124.md"
+ ],
+ "coverage_status": "partial_fulltext_read",
+ "declared_reading_gap": "The sixteen supplemental time-lapse videos (the primary data for the migration and apoptosis claims) were not watched; the reference list was not enumerated; the paper has no formal limitations section; Figure 5 panels e, m (velocity autocorrelation plots) were opened but their numeric axes were not resolved.",
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "ADV-218 reading-debt package: a complete read with verbatim locators and a receipt, no commit candidate and no promotion of the record."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC fullTextXML and the PMC open-data bucket (figures and deposited supplements), both lawful and keyless; nothing refused."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Single laboratory (National Cheng Kung University) that has published most of the WWOX membrane, Hyal-2 and migration literature; claims here rest on time-lapse tracks of ten cells."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX[tiab] AND (Wnt[tiab] OR beta-catenin[tiab])",
+    "route": "PubMed esearch rettype=count, 2026-11-24",
+    "count": 31
+   },
+   {
+    "query": "WWOX[tiab] AND (hyaluronidase[tiab] OR Hyal-2[tiab] OR HYAL2[tiab])",
+    "route": "PubMed esearch rettype=count, 2026-11-24",
+    "count": 15
+   }
+  ],
+  "note": "Counts only."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 43,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "note": "References counted from the XML (ref elements), titles not read in this pass; no multi-hop was run."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "fulltext_receipts.py status --pmid 31123603; registry P239 (screened - corpus placeholder, tier C)",
+  "hits": 1,
+  "finding": "No receipt before this reading; the registry carried a screened placeholder."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-11-24",
+  "route": "retraction_check.py (PubMed, Europe PMC)",
+  "result": "Checked 2026-11-24 with retraction_check.py (PubMed and Europe PMC): flagged 0; no retraction, expression of concern or correction listed for the PMID.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 43,
+   "references_screened": 41,
+   "references_with_doi": 41,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 34,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID31123603_Chou2019_PMC6529460_epmc.xml",
+   "sha256": "98a800d1ef5522f227414747bd08f3f49166ed2c0c2a736d5fa0028ed45ac8c1",
+   "kind": "article_text",
+   "note": "Europe PMC full-text XML (JATS) of the CC BY article PMC6529460; body, table, caption and reference text.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6529460/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "98a800d1ef5522f227414747bd08f3f49166ed2c0c2a736d5fa0028ed45ac8c1"
+   }
+  },
+  {
+   "path": "files/figures/PMID31123603/41420_2019_176_Fig1_HTML.jpg",
+   "sha256": "2f8aadb24dc8ceea88a7da1c36f936be234f339874d3bd297628f89d9025ee0a",
+   "kind": "figure",
+   "note": "Figure 1 image from the PMC open-data bucket, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6529460.1/41420_2019_176_Fig1_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "2f8aadb24dc8ceea88a7da1c36f936be234f339874d3bd297628f89d9025ee0a"
+   }
+  },
+  {
+   "path": "files/figures/PMID31123603/41420_2019_176_Fig2_HTML.jpg",
+   "sha256": "569217635166a97014b7a0e1da9355f8958bf048c06afc725c42ab3b8f270fef",
+   "kind": "figure",
+   "note": "Figure 2 image from the PMC open-data bucket, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6529460.1/41420_2019_176_Fig2_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "569217635166a97014b7a0e1da9355f8958bf048c06afc725c42ab3b8f270fef"
+   }
+  },
+  {
+   "path": "files/figures/PMID31123603/41420_2019_176_Fig3_HTML.jpg",
+   "sha256": "385dec09315ba8419835dc144b9ab937e3198c9078041abac75e27b61584b889",
+   "kind": "figure",
+   "note": "Figure 3 image from the PMC open-data bucket, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6529460.1/41420_2019_176_Fig3_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "385dec09315ba8419835dc144b9ab937e3198c9078041abac75e27b61584b889"
+   }
+  },
+  {
+   "path": "files/figures/PMID31123603/41420_2019_176_Fig4_HTML.jpg",
+   "sha256": "50bdaaf46ae97a1bbd6dc29deeb885338ce04eb139e27e39dd4aee4510d11586",
+   "kind": "figure",
+   "note": "Figure 4 image from the PMC open-data bucket, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6529460.1/41420_2019_176_Fig4_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "50bdaaf46ae97a1bbd6dc29deeb885338ce04eb139e27e39dd4aee4510d11586"
+   }
+  },
+  {
+   "path": "files/figures/PMID31123603/41420_2019_176_Fig5_HTML.jpg",
+   "sha256": "3cfe5439fe3e3fcbfa4cde76e3975b680645089ef038ced15f3542fd3e09617c",
+   "kind": "figure",
+   "note": "Figure 5 image from the PMC open-data bucket, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6529460.1/41420_2019_176_Fig5_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "3cfe5439fe3e3fcbfa4cde76e3975b680645089ef038ced15f3542fd3e09617c"
+   }
+  },
+  {
+   "path": "files/figures/PMID31123603/41420_2019_176_Fig6_HTML.jpg",
+   "sha256": "061a5f9a5bbbab73210d76dbc9f079458332dcd770307cd5c6f9c4563b704305",
+   "kind": "figure",
+   "note": "Figure 6 image from the PMC open-data bucket, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6529460.1/41420_2019_176_Fig6_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "061a5f9a5bbbab73210d76dbc9f079458332dcd770307cd5c6f9c4563b704305"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31123603_supplement/41420_2019_176_MOESM1_ESM.pdf",
+   "sha256": "81655e8b2a0b73ee5b6c39cc45093cb38604f7060d0482910b695e1b9e746bf4",
+   "kind": "supplement_binary",
+   "note": "Supplemental Information PDF (Figures S1 to S10, video legends), read through its text layer and legends.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6529460.1/41420_2019_176_MOESM1_ESM.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "81655e8b2a0b73ee5b6c39cc45093cb38604f7060d0482910b695e1b9e746bf4"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31123603_supplement/41420_2019_176_MOESM18_ESM.pdf",
+   "sha256": "4cdf7fa21f93ec92127cc2edf1588ac159894a8d4ec77968f69bdd1913edeb66",
+   "kind": "supplement_binary",
+   "note": "Supplemental video legends PDF, read through its text layer.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6529460.1/41420_2019_176_MOESM18_ESM.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "4cdf7fa21f93ec92127cc2edf1588ac159894a8d4ec77968f69bdd1913edeb66"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC fullTextXML of PMC6529460, six figure images and two supplemental PDFs saved and fingerprinted; the figures were opened as images and the PDFs read as text.",
+  "abstract_anchoring_waived": "Abstract statements are compared with Results text and figures in the entries; the quotes below are anchored in the body, tables or figure images.",
+  "note": "ADV-218 reading, question-driven by the OPEN row WO-22 (Wnt and GSK3 output). Text, all six figure images and the supplemental PDFs read; the sixteen deposited time-lapse videos were not watched, so this reading is declared partial.",
+  "entries": [
+   {
+    "proposition": "TEXT CLAIM NOT SHOWN BY ITS PANEL: the text says HYAL1 mRNA is increased in WWOX-knockdown cells, but Figure 1c shows Hyal-1 in the siWwox cells at the level of the scramble control and reduced only in the WWOX-overexpressing cells.",
+    "snippet": "In contrast, HYAL1 mRNA transcripts were increased in WWOX-knockdown cells (Fig. 1c).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31123603_Chou2019_PMC6529460_epmc.xml",
+    "anchor": "Results, WWOX downregulation induces hyaluronidase production and increases cell migration in vivo",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIGURE 1C AS DRAWN: Wwox mRNA bars (scramble about 1, siWwox about 0.2, Wwox about 3.7) and Hyal-1 mRNA bars (scramble about 1.0, siWwox about 0.9, Wwox about 0.4); only the Wwox group is marked significant for Hyal-1. Hyal-2 mRNA has no bar chart (only gel bands in 1b). Values read from the axes, approximate.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1c: Hyal-1 mRNA scramble about 1.0, siWwox about 0.9 (no increase), Wwox about 0.4 (marked); no Hyal-2 bar chart; Figure 1b gel bands for Hyal-1 and Hyal-2 look similar across lanes. Values read from the axes, approximate.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID31123603/41420_2019_176_Fig1_HTML.jpg",
+    "anchor": "Figure 1b and 1c, image 41420_2019_176_Fig1_HTML.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "THE HYAL-2 HEADLINE RESTS ON IMMUNOHISTOCHEMISTRY OF TUMOUR SECTIONS, not on mRNA: about 100 percent increase in the knockdown tumours and about 15 percent reduction in the overexpressing ones.",
+    "snippet": "Tumor lesions showed that Hyal-2 was significantly upregulated in the WWOX knockdown BCC cells (Fig. 1d; ~100% increase).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31123603_Chou2019_PMC6529460_epmc.xml",
+    "anchor": "Results, WWOX downregulation induces hyaluronidase production and increases cell migration in vivo",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DESIGN OF THE TUMOUR EXPERIMENT: five animals per clone were implanted but tumour volume is given for three per group; the first growth curve is a single skin carcinoma line.",
+    "snippet": "Tumor volume was measured (3 per group) twice per week",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31123603_Chou2019_PMC6529460_epmc.xml",
+    "anchor": "Materials and methods, Tumorigenicity assay in nude mice",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "BFGF EFFECT IS CONFINED TO 2 PERCENT SERUM: the text says so, and Figure 2g and 2h show the ratio at 4, 6, 8 and 10 percent serum without a marked difference, while the abstract states the secretion as a general consequence of ectopic WWOX.",
+    "snippet": "As low as 2% serum in the medium, EGFP-WWOX-expressing cells secreted greater amounts of bFGF than control cells (Fig. 2g, h).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31123603_Chou2019_PMC6529460_epmc.xml",
+    "anchor": "Results, Apoptotic stress caused by overexpressed WWOX allows BCC cells to secrete bFGF for capillary tube formation",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIGURE 2H AS DRAWN: bFGF ratio (EGFP-WWOX over EGFP) about 1.9 at 2 percent serum (asterisk, n = 4), about 1.1 at 4, about 1.45 at 6, about 0.65 at 8 and about 1.2 at 10 percent, none of the last four marked. Values read from the axes, approximate.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2h: bFGF ratio about 1.9 at 2 percent serum (asterisk, p<0.01, n = 4), about 1.1 at 4, about 1.45 at 6, about 0.65 at 8 and about 1.2 at 10 percent serum, unmarked. Values read from the axes, approximate.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID31123603/41420_2019_176_Fig2_HTML.jpg",
+    "anchor": "Figure 2g and 2h, image 41420_2019_176_Fig2_HTML.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "WNT 'ACTIVATION' IS A REPORTER READ-OUT: a TCF/LEF fluorescent promoter reporter followed by time-lapse microscopy; the figure shows one series without error bars; no beta-catenin level, no GSK3 phosphorylation. The text gives 'within 4 h' where the figure legend says 'in less than 2 h'. WO-22 stays OPEN.",
+    "snippet": "In the MDA-MB-231/L929 coculture, rapid activation of Wnt/β-catenin-dependent TCF/LEF promoter occurred within 4 h and reached a maximal extent in 48 h in MDA-MB-231, but not in L929 (Fig. 4d).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31123603_Chou2019_PMC6529460_epmc.xml",
+    "anchor": "Results, Activation of Wnt-dependent TCF/LEF promoter in MDA-MB-231 allows them to dodge L929",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIGURE 4D AND 4H AS DRAWN: TCF/LEF reporter fluorescence of MDA-MB-231 rises from about 5 to about 20 units over 48 h and stays flat for L929, one series per cell type, no error bars; XAV939 panels show single-cell tracks (letters A, S, C) without a replicate count.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4d: TCF/LEF promoter fluorescence for MDA-MB-231 rising from about 5 to about 20 over 48 h, L929 flat, single series, no error bars; Figure 4h tracks labelled A, S and C, no replicate number.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID31123603/41420_2019_176_Fig4_HTML.jpg",
+    "anchor": "Figure 4d and 4h, image 41420_2019_176_Fig4_HTML.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "THE 'WWOX-POSITIVE KILLED' STORY IS ACCOMPANIED BY THE AUTHORS' OWN REPORT THAT THE WWOX-NEGATIVE CELLS DIE LATER.",
+    "snippet": "Similar results were observed with Wwox knockout MEF cells upon encountering with wild type MEF cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31123603_Chou2019_PMC6529460_epmc.xml",
+    "anchor": "Discussion, paragraph on MIF and redox activity",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIGURE 6C AS DRAWN: in the knockout and wild-type coculture the wild-type side reaches about 129 of 223 cells (about 58 percent) apoptotic at 60 h and the knockout side about 68 of 183 (about 37 percent) against about 20 to 25 percent on each side of the wild-type pair; the text calls the knockout cells low in redox activity but they too die. Counts read from the plotted labels.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6c: wild-type against wild-type about 107 of 466 and 97 of 485 apoptotic at 60 h; knockout against wild-type, wild-type side 129 of 223 and knockout side 68 of 183 at 60 h. Counts read from the plotted labels.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID31123603/41420_2019_176_Fig6_HTML.jpg",
+    "anchor": "Figure 6c, image 41420_2019_176_Fig6_HTML.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "THE 'WWOX RESTORED' EXPERIMENT USES A GENOME-WIDE DEMETHYLATING AGENT with no WWOX-specific control; WWOX is shown in one blot (Figure 6f).",
+    "snippet": "We induced WWOX expression in MDA-MB-231 by treating with 5-aza-2′-deoxycytidine (5-aza) to suppress promoter methylation for 5 days.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31123603_Chou2019_PMC6529460_epmc.xml",
+    "anchor": "Results, Induction of WWOX in MDA-MB-231 cells by a methylation inhibitor allows the cells to fend off parental WWOX-negative cells",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "GENERALISATION FROM UNPUBLISHED PAIRS: the sentence that WWOX-negative cells cannot recognise WWOX-positive cells of any species rests on more than fifteen pairs 'unpublished'.",
+    "snippet": "WWOX- cells can no longer recognize the parental cells or WWOX+ cells of the same or different species (using >15 pairs of cells tested thus far; unpublished).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31123603_Chou2019_PMC6529460_epmc.xml",
+    "anchor": "Discussion, second paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIGURE 3F AS DRAWN: mean velocities with p values (4.6 x 10^-6, 0.0003, 0.0451) from n = 10 randomly selected cells per condition; the cell pair is a human line against a mouse line in the headline case.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3f: mean velocity bars for MDA-MB-231 against L929, knockout against wild-type MEF and knockout against knockout, p = 4.6 x 10^-6, 0.0003 and 0.0451, n = 10 cells.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID31123603/41420_2019_176_Fig3_HTML.jpg",
+    "anchor": "Figure 3f, image 41420_2019_176_Fig3_HTML.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ]
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261124-31123603-01",
+   "reader": "orchestrator (IT successor, session 7cf5e85a), ADV-218",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "First ledger receipt for this paper. Partial read (videos not watched). Figure 1c does not show the text's HYAL1 increase; the bFGF effect is confined to 2 percent serum; Wnt activation is a reporter series without error bars.",
+   "outputs": [
+    "disease-models/wwox/research/deepdive_manifests/PMID31123603.json",
+    "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv218_20261124/RESULT_ADV218_IT_20261124.md"
+   ]
+  }
+ ]
+}
