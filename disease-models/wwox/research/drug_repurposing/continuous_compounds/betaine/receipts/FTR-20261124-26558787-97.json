@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-26558787-97",
+  "event_at": "2026-11-24T10:38:10Z",
+  "analysis_at": "2026-11-24T10:38:10Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "26558787"
+  },
+  "prior_receipt": "FTR-20261124-26558787-96",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/betaine_loop_20261124/PMC6605362.html",
+  "source_fingerprint": "6135de0bb1ca09ee89b81ccffacd3d4f055ff12f48d41937e2c0f1e41dfed9f4",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Tissue collection methods, Results near Figs. 8 and 9 and Fig. 9 caption. Compared H3K4me3 with respiratory reserve in mitochondria isolated from treated cells. These endpoints use distinct assays."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/betaine/central_flux.md"
+  ]
+}

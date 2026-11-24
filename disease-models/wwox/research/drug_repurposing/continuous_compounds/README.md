@@ -53,6 +53,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 47 | Inosine, purine salvage and ATP recovery after activity | Does parent inosine restore the adenylate pool and function in WWOX at physiological glucose, or primarily supply ribose fuel or peripheral urate? |
 | 48 | D-ribose, pentose supply and adenylate regeneration | Does D-ribose improve functional recovery beyond matched glucose when base supply is controlled, or does conversion stall downstream? |
 | 49 | Anhydrous betaine, neural osmolyte replacement and methyl-group availability | At measured exposure, does betaine improve volume and firing recovery or displace endogenous osmolytes with a functional cost? |
+| 50 | Potassium bromide, intracellular halide gradients and inhibitory recruitment | Does an increase in GABA current preserve spike suppression as bromide accumulates during repeated activity? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -63,9 +64,11 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: anhydrous betaine.** Mouse cortex accumulated supplied betaine; slice results flag displacement of other osmolytes. Compare central disposition, osmotic recovery and methyl-group transfer. [Initial evidence and opposing predictions](betaine/README.md)
+**Active compound: potassium bromide.** Contrast transient and steady halide gradients against native spike suppression during repetitive input. [Pediatric observations and reversal-potential sensitivity](potassium_bromide/README.md)
 
-**D-ribose parked for WWOX trial priority.** Direct brain entry under experimental conditions and high-concentration preconditioning have support. A specific benefit after oral exposure in developing WWOX systems remains unestablished. [Exposure, reproducible contrasts and review question](d_ribose/exposure.md)
+**Anhydrous betaine parked for WWOX trial priority.** Two brain enzymology studies disagree about local methyl transfer. Old and new data distinguish downstream histone effects, respiratory reserve, and compound exposure. Reopen for measured neural flux and preferential functional recovery. Independent assay review requested. [Local methyl transfer and central exposure](betaine/central_flux.md)
+
+**D-ribose parked for WWOX trial priority.** Direct brain entry under experimental conditions and high-concentration preconditioning have support. Independent review confirmed the human conversion to circulating glucose and found no measurement of intact oral ribose in a neural compartment. [Exposure, reproducible contrasts and independent review](d_ribose/exposure.md)
 
 **Inosine parked for WWOX trial priority.** Transport blockade separated the response to exogenous inosine from endogenous mobilization. Human evidence leaves the neural exposure and net adenylate response unresolved. [Reanalysis, clinical denominators and reopening criterion](inosine/salvage.md)
 
@@ -73,7 +76,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 **Clobazam parked for WWOX-selective pediatric trial prioritization.** At matched 20% α1 potentiation the predicted α2 shift was +1.12 to +1.37 points under equal partition, with sign reversals in sensitivity analyses. Clinical reports measure different tolerance denominators. Reopen for an attributable WWOX response or a genotype-specific circuit advantage at measured free exposure. [Clinical denominators and mixture analysis](clobazam/exposure_and_subtypes.md)
 
-**Calcium alpha-ketoglutarate parked for WWOX pediatric trial prioritization.** Mouse CSF supports qualitative tracer detection with an isotope discrepancy. The held neural records lack paired HIF hydroxylation and functional rescue at measured exposure. The laboratory review of tracer identity is pending. [Six isotope contrasts, primary figure audit and reopening criterion](calcium_alpha_ketoglutarate/compartments.md)
+**Calcium alpha-ketoglutarate parked for WWOX pediatric trial prioritization.** Mouse CSF supports qualitative tracer detection with an isotope discrepancy. The held neural records lack paired HIF hydroxylation and functional rescue at measured exposure. The independent tracer review confirmed the text/transition discrepancy in the source figure. [Six isotope contrasts, primary figure audit and reopening criterion](calcium_alpha_ketoglutarate/compartments.md)
 
 **Triacetin parked for WWOX pediatric trial prioritization.** Chronic treatment improved rat motor function and relative galactocerebroside signal. Absolute drug-derived myelin synthesis and functional ensheathment in WWOX remain open. [Flux audit, WWOX spectroscopy and reopening criterion](triacetin/bridge.md)
 
