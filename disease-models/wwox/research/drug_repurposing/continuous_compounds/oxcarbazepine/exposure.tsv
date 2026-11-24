@@ -1,0 +1,7 @@
+matrix	n	analyte	auc12_ng_h_ml	cmax_ng_ml	interval_mean_ng_ml	mass_auc_share_pct
+plasma	7	S-licarbazepine	164726	16162	13727.17	78.11
+plasma	7	R-licarbazepine	39034	4039	3252.83	18.51
+plasma	7	oxcarbazepine	7135	1990	594.58	3.38
+CSF	6	S-licarbazepine	86187	7566	7182.25	76.5
+CSF	6	R-licarbazepine	23996	2146	1999.67	21.3
+CSF	6	oxcarbazepine	2485	448	207.08	2.21
