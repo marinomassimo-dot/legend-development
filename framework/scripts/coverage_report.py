@@ -194,6 +194,34 @@ def receipt_matches_registry(receipt: dict, entries: list[dict[str, str]]) -> bo
     return False
 
 
+def sections_best_state(receipt_events: list[dict]) -> dict:
+    """Sections read, best state: the union over the SURVIVING receipts of each study, beside what the latest receipt alone marks (ADV-227, 2026-11-24).
+
+    Depth in this page already is best state (`receipt_depth_index` keeps the deepest surviving receipt per identifier). Sections are another matter: a narrow re-read writes a
+    receipt that marks the other sections `not_read`, so reading only the latest receipt loses what an earlier one read (SCI, ADV-219). A section counts as read when its coverage
+    value is exactly `read` (`captions_only`, `not_read`, `not_present`, `unavailable` and `unknown_legacy` do not). A study is keyed by its PMID, else its DOI, and its receipts are
+    ordered by `event_at` (ledger position breaks a tie). `narrower` follows SCI's rule: the latest receipt marks fewer sections read than some earlier one. A view, never a gate."""
+    studies: dict[str, list[tuple[str, int, set[str]]]] = {}
+    for position, event in enumerate(receipts.active_receipts(receipt_events)):
+        study = event.get("study_id") or {}
+        key = study.get("pmid") or (receipts.normalise_doi(study["doi"]) if study.get("doi") else "")
+        if key and event.get("coverage") is not None and event.get("evidence_depth") in receipts.DEPTHS:
+            read = {name for name, value in event["coverage"].items() if value == "read"}
+            studies.setdefault(key, []).append((str(event.get("event_at") or ""), position, read))
+    union_total = latest_total = narrower = multi = 0
+    for series in studies.values():
+        series.sort(key=lambda item: (item[0], item[1]))
+        sets = [item[2] for item in series]
+        union_total += len(set().union(*sets))
+        latest_total += len(sets[-1])
+        if len(sets) > 1:
+            multi += 1
+            narrower += any(len(sets[-1]) < len(earlier) for earlier in sets[:-1])
+    return {"studies": len(studies), "multi_receipt_studies": multi, "latest_narrower": narrower,
+            "section_reads_best_state": union_total, "section_reads_latest_receipt": latest_total,
+            "section_reads_only_earlier": union_total - latest_total}
+
+
 def build(root: Path, disease: str) -> dict:
     registries = root / "disease-models" / disease / "registries"
     papers_path = registries / "paper_registry_current.md"
@@ -268,6 +296,7 @@ def build(root: Path, disease: str) -> dict:
                   "no_receipt": len(debt) - sum(receipted.values())}
 
     return {
+        "sections_best_state": sections_best_state(receipt_events),
         "reading_debt_split": debt_split,
         "disease": disease,
         "entries_total": len(entries),
@@ -343,6 +372,11 @@ def render(report: dict) -> str:
         *([f"- Of the **{report['reading_debt_count']}** catalogued-only records, **{report['reading_debt_split']['receipted_elsewhere']}** carry a receipt owned by another registry entry "
            f"({report['reading_debt_split']['complete']} complete, {report['reading_debt_split']['partial']} partial: the placeholder duplicates a processed record) and "
            f"**{report['reading_debt_split']['no_receipt']}** have no receipt (the headline count is unchanged)"] if "reading_debt_split" in report else []),
+        *([f"- **Sections read, best state** (union of the surviving receipts of each study): **{report['sections_best_state']['section_reads_best_state']}** section-reads across "
+           f"**{report['sections_best_state']['studies']}** studies; the latest receipt alone marks **{report['sections_best_state']['section_reads_latest_receipt']}**, so "
+           f"**{report['sections_best_state']['section_reads_only_earlier']}** are read only in an earlier receipt "
+           f"(**{report['sections_best_state']['latest_narrower']}** of **{report['sections_best_state']['multi_receipt_studies']}** studies with 2+ receipts have a latest receipt that marks fewer sections read than an earlier one). "
+           "The depth table above already uses the deepest receipt; this line is about sections, not depth, and changes no number above"] if "sections_best_state" in report else []),
         f"- **{report['paper_records']}** promoted `PAPER` records · **{report['corpus_placeholders']}** `CORPUS` placeholders",
         f"- **{report['tracking_entries']}** lifecycle entries in the literature tracking log",
         f"- **{report['unique_pmids']}** unique PMIDs known across the registries",
