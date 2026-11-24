@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-24T23:15Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-24T23:17:30Z",
+ "event_id": "FTR-20261124-31605637-01",
+ "evidence_basis": [
+  "coverage_map",
+  "files/fulltext/PMID31605637_NQO1_P187S_PMC7027498_epmc_2026-10-29.xml (the file the latest earlier receipt names; sha256 equal to that receipt's fingerprint)",
+  "tables read with the WWOX question in mind: Tables 1 and 2: crystallographic data collection and refinement statistics for NQO1 wild type with the small-molecule chaperone (PDB entry 6FY4, resolution 2.76 A) and steady-state kinetics of wild type and the P187S variant with and without it (P187S kcat/KM about 70 rising to about 170 with the compound); no WWOX content; a chaperone-rescue precedent for a destabilised variant.",
+  "scope: only the section(s) named as read were read in this reading; every other section is not_read here and keeps the state of the earlier receipts in the union",
+  "reason: the earlier map marked this section not_present although it is in the held file (ADV-219 class A list, ADV decision of 2026-11-24)"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_tables_read_20261124/RESULT_TABLES_READ_IT_20261124.md"
+ ],
+ "prior_receipt": "FTR-20261029-31605637-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "61b26bc7af69a4a9d73639eb4462e9e89dfe2efc19be7fe16f8d254c1bf289c1",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID31605637_NQO1_P187S_PMC7027498_epmc_2026-10-29.xml",
+ "study_id": {
+  "doi": "10.1002/1873-3468.13636",
+  "pmid": "31605637"
+ },
+ "workflow": "IT reading of the section(s) named read, from the held file, with the open-question rows of the WWOX repurposing module in mind; the held file was read directly (tables and table captions as rendered in the text layer or XML); no contact, no e-mail to any service, no paid route."
+}

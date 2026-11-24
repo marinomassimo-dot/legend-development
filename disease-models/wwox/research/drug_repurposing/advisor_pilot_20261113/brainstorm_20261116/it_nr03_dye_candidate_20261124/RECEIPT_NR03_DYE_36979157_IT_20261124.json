@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-24T23:18Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-24T23:21:12Z",
+ "event_id": "FTR-20261124-36979157-01",
+ "evidence_basis": [
+  "coverage_map",
+  "files/fulltext/PMID36979157_Kaluzinska2023_PMC_r2.xml (the file the latest earlier receipt names; sha256 equal): Methods 2.4 and Results 3.2 read",
+  "files/figures/PMID36979157/biology-12-00465-g002.jpg (Figure 2 panels A to C and the p-value table opened as an image and read off; Figures 1 and 3 to 6 not opened, so figures stays captions_only on purpose)",
+  "question: does the dye fall track the BrdU readout per line (CAND-NR03-DYE-01); result in the RESULT file"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_nr03_dye_candidate_20261124/RESULT_NR03_DYE_ZERO_SPEND_IT_20261124.md"
+ ],
+ "prior_receipt": "FTR-20261019-36979157-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "4864305c68fee89bde8af8118b5bf7bbec9ffb91d41ebdab4e49473cf4444937",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID36979157_Kaluzinska2023_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3390/biology12030465",
+  "pmid": "36979157"
+ },
+ "workflow": "IT question-driven reading of Methods 2.4, Results 3.2 and Figure 2 (image from the PMC open-data bucket) of the held article, to compare the dye readout with the BrdU readout per cell line; no contact, no e-mail to any service, no paid route."
+}
