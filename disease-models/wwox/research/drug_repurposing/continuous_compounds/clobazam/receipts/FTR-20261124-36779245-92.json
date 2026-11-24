@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-36779245-92",
+  "event_at": "2026-11-24T09:27:24Z",
+  "analysis_at": "2026-11-24T09:27:24Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "36779245"
+  },
+  "prior_receipt": "FTR-20261124-36779245-80",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml",
+  "source_fingerprint": "780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34",
+  "workflow": "Question-driven exposure, subtype and clinical comparator analysis for clobazam.",
+  "evidence_basis": [
+    "Table 2 medication row and current-status markup. Aggregated exposure and co-exposure denominators only; the table supplies no attributable longitudinal drug response."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/clobazam/exposure_and_subtypes.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/clobazam/clinical_counts.tsv"
+  ]
+}

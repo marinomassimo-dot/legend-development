@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-23713028-92",
+  "event_at": "2026-11-24T09:32:30Z",
+  "analysis_at": "2026-11-24T09:32:30Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "23713028"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/cannabidiol_loop_20261124/23713028.html",
+  "source_fingerprint": "cef676cb88288c0cea4b49ee0a564126497bd9ac060b05e51ddd18c143a80362",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Results adjoining Fig. 7A\u2013E and caption. Verified joint ENT1/2 blockade, A1 antagonist, direction of stimulated peak, latency and decay, plus the slice-count discrepancy. Captions examined, figure image not assessed."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/cannabidiol/README.md"
+  ]
+}

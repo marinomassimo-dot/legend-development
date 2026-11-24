@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-HU101315-93",
+  "event_at": "2026-11-24T09:45:22Z",
+  "analysis_at": "2026-11-24T09:45:22Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "doi": "10.48683/1926.00101315"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://centaur.reading.ac.uk/101315/2/HU%20Yuhan_Thesis%20THESIS%20BY%20PUBLICATION_Redacted.pdf",
+  "source_fingerprint": null,
+  "workflow": "Question-driven analysis of CBD exposure, purine transfer and neural response.",
+  "evidence_basis": [
+    "Thesis sections 3.5 and 3.6 and text/captions adjoining Figures 3-8 through 3-11 (printed pp. 66\u201376): sensor, paired field recordings, peak, unfit decay traces, interactions and experimental unit. No independent examination of raw traces or whole-thesis read."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/cannabidiol/exposure_and_flux.md"
+  ]
+}

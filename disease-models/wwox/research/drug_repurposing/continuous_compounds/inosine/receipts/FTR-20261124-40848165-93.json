@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-40848165-93",
+  "event_at": "2026-11-24T09:49:46Z",
+  "analysis_at": "2026-11-24T09:49:46Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "40848165"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/inosine_loop_20261124/PMC12374869.xml",
+  "source_fingerprint": "1e9d5f944497f759751ec48ed393ba90efaa6a52f9563d09c2db0d00966aab73",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Results adjoining Figs. 4, 6, 7 and 8; Fig. 8 caption. Checked glucose, added adenine and nucleoside, separate restoration times and effect of PNP inhibition."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/inosine/README.md"
+  ]
+}

@@ -49,6 +49,8 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 43 | Triacetin, acetate supply for myelin | Can acetate bypass impaired neuron-to-glia carbon supply in WWOX while restoring functional sheaths at matched axon and glial maturation? |
 | 44 | Calcium alpha-ketoglutarate, HIF hydroxylation and central carbon metabolism | Can intact co-substrate reach the relevant compartment and alter HIF processing independently of a TCA or calcium effect? |
 | 45 | Clobazam, active metabolite and recruitment of inhibition | Can an exposure-supported change in parent/metabolite mixture alter evoked inhibition in WWOX while preserving physiological transmission? |
+| 46 | Purified cannabidiol, equilibrative adenosine transport and A1-mediated recovery | Does inhibiting nucleoside transport prolong extracellular adenosine after activity or reduce its release under metabolic stress? |
+| 47 | Inosine, purine salvage and ATP recovery after activity | Does parent inosine restore the adenylate pool and function in WWOX at physiological glucose, or primarily supply ribose fuel or peripheral urate? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -59,7 +61,11 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: clobazam.** The first matched-time exposure comparison gives a 2.36-fold relative change in the metabolite-to-parent plasma AUC ratio after cannabidiol add-on. Next compare unbound mixture exposures with receptor curves and native-chloride circuit readouts. [Opening comparison](clobazam/README.md)
+**Active compound: inosine.** In ATP-depleted primary astrocytes, inosine accelerated recovery in the presence of adenine and glucose. Next distinguish oral parent exposure and neural salvage from ribose fuel and peripheral urate. [Opening comparison and discriminating prediction](inosine/README.md)
+
+**Purified cannabidiol parked for a WWOX adenosine-directed trial.** At nominal 10 µM, CBD reduced the stimulated purine peak in epileptic rat slices. A separate genetic comparison implicated both ENT1 and ENT2 in efflux. Reopen for WWOX-specific adenosine and circuit effects at measured free parent exposure. [Exposure, transporter isoforms and outcome](cannabidiol/exposure_and_flux.md)
+
+**Clobazam parked for WWOX-selective pediatric trial prioritization.** At matched 20% α1 potentiation the predicted α2 shift was +1.12 to +1.37 points under equal partition, with sign reversals in sensitivity analyses. Clinical reports measure different tolerance denominators. Reopen for an attributable WWOX response or a genotype-specific circuit advantage at measured free exposure. [Clinical denominators and mixture analysis](clobazam/exposure_and_subtypes.md)
 
 **Calcium alpha-ketoglutarate parked for WWOX pediatric trial prioritization.** Mouse CSF supports qualitative tracer detection with an isotope discrepancy. The held neural records lack paired HIF hydroxylation and functional rescue at measured exposure. The laboratory review of tracer identity is pending. [Six isotope contrasts, primary figure audit and reopening criterion](calcium_alpha_ketoglutarate/compartments.md)
 

@@ -1,0 +1,13 @@
+model	relative_partition	matched_alpha1_pct	corner_count	min_delta_alpha2_pp	max_delta_alpha2_pp
+Hammer	0.2500	20	256	-1.5553	10.7304
+Hammer	0.2500	40	256	-2.5117	16.4777
+Hammer	1	20	256	-0.6087	5.3335
+Hammer	1	40	256	-1.0202	7.5268
+Hammer	4	20	256	-0.1738	1.6668
+Hammer	4	40	256	-0.2951	2.2741
+Ralvenius	0.2500	20	256	-5.2732	18.9009
+Ralvenius	0.2500	40	256	-8.2100	27.4189
+Ralvenius	1	20	256	-1.9143	8.9437
+Ralvenius	1	40	256	-3.0130	12.0101
+Ralvenius	4	20	256	-0.5486	2.7399
+Ralvenius	4	40	256	-0.8566	3.6943
