@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-35573960-80",
+  "event_at": "2026-11-24T01:03:44Z",
+  "analysis_at": "2026-11-24T01:03:44Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "35573960",
+    "doi": "10.3389/fped.2022.847549"
+  },
+  "prior_receipt": "FTR-20261117-35573960-01",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID35573960_Riva2022_PMC.xml",
+  "source_fingerprint": "e74bfe47c66e4ed906d4c61be665cc28e66717dc2dd98868a39094fba51c4ddc",
+  "workflow": "Determine whether the WOREE metabolic work-up identifies a quantitative paired CSF/plasma folate result; search Supplementary Table 1 for an analyte entry.",
+  "evidence_basis": [
+    "Results, Clinical Features: “folate, pterins, amino and organic acids” listed among metabolic tests; specimens grouped; results reported as within normal limits.",
+    "Supplementary Table 1 is a phenotypic comparison; a term search found no folate, MTHF or CSF entry."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/folinic_acid/decision.md"
+  ]
+}

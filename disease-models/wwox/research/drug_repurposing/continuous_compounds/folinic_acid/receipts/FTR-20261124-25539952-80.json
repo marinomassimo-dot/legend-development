@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-25539952-80",
+  "event_at": "2026-11-24T01:00:08Z",
+  "analysis_at": "2026-11-24T01:00:08Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "25539952",
+    "doi": "10.1186/s13023-014-0217-2"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/folinic_loop_20261124/KSS.xml",
+  "source_fingerprint": "83dcc9b9c916f39808c62ac32c15500c348eca1e4a005eccbb287de1a2fb0c42",
+  "workflow": "Compare the direction of CSF folate change under folinic acid in transport and intracellular conversion disorders.",
+  "evidence_basis": [
+    "Table 2 cases 1, 2 and 8: paired CSF 5-MTHF before/after, respectively 7/48, 5.6/60 and 8/82 nmol/L.",
+    "Table 3 cases 1, 2 and 8: Newcastle composite scores before/after 31/40, 7/14 and 20/24."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/folinic_acid/decision.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/folinic_acid/KSS_pairs.tsv"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-30031689-80",
+  "event_at": "2026-11-24T00:58:50Z",
+  "analysis_at": "2026-11-24T00:58:50Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "30031689",
+    "doi": "10.1016/j.ymgme.2018.06.006"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/folinic_loop_20261124/MTHFS.xml",
+  "source_fingerprint": "9dfe79106546538782e825d6f2d5cb3d78f380479be607d6ceadcb6278eaf1a8",
+  "workflow": "Compare the direction of CSF folate change under folinic acid in transport and intracellular conversion disorders.",
+  "evidence_basis": [
+    "Clinical report P1 and results Fig. 5A/B: CSF 5-MTHF 53 then 35 nmol/L and approximately 30-fold accumulation of the MTHFS substrate in fibroblasts."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/folinic_acid/decision.md"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-33758387-80",
+  "event_at": "2026-11-24T01:07:03Z",
+  "analysis_at": "2026-11-24T01:07:03Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "33758387",
+    "doi": "10.1038/s41372-021-01018-5"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "files/deepening_downloads/myoinositol_loop_20261124/pubmed.xml",
+  "source_fingerprint": "24cf06e938cffbc9b79323c2328bd703d6aaad3479785b62b293e6998ce67c8b",
+  "workflow": "Assess myo-inositol mechanism, alternative channel explanation and pediatric transfer using the author abstract.",
+  "evidence_basis": [
+    "Author abstract, Results: neurodevelopmental follow-up or death established for 605/638 from the original cohort."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/myo_inositol/README.md"
+  ]
+}

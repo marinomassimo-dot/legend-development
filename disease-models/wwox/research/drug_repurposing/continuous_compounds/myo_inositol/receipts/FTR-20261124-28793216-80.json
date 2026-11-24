@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-28793216-80",
+  "event_at": "2026-11-24T01:07:03Z",
+  "analysis_at": "2026-11-24T01:07:03Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "28793216",
+    "doi": "10.1016/j.bpj.2017.06.055"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "files/deepening_downloads/myoinositol_loop_20261124/pore_pubmed.xml",
+  "source_fingerprint": "ea0df9c1fc2f7cfe035eb9b24d07761927e9d476facaf61ac25752dbc890c870",
+  "workflow": "Assess myo-inositol mechanism, alternative channel explanation and pediatric transfer using the author abstract.",
+  "evidence_basis": [
+    "Author abstract reports KCNQ2 pore-domain association and changes to gating without extracellular transporter substrates."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/myo_inositol/README.md"
+  ]
+}

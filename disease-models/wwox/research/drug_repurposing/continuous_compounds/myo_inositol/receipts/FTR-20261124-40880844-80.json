@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-40880844-80",
+  "event_at": "2026-11-24T01:09:51Z",
+  "analysis_at": "2026-11-24T01:09:51Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "40880844",
+    "doi": "10.1002/cns3.70029"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/myoinositol_loop_20261124/DEE_supp.docx",
+  "source_fingerprint": "1e0ab421b7c02b1d2ca08778cf5c5e3b1fc56d5fb078f207495150e669d5624c",
+  "workflow": "Compare primary Results and Supplementary Tables S1/S2 against recalculated individual control values and distinguish repeated treated samples from separate controls.",
+  "evidence_basis": [
+    "Supplement Tables S1 and S2: 24 plasma and 18 CSF control rows; S2 control summary 118.2 and four patient CSF values 260.4–300.3 μM.",
+    "Main Results (held companion DEE.xml): “188.2 ± 38.4” μM for the CSF controls."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/myo_inositol/README.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/myo_inositol/csf.tsv"
+  ]
+}

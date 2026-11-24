@@ -1,0 +1,5 @@
+matrix	group	n_observations	mean_uM	sample_sd_uM	min	max
+plasma	control	24	27.929	11.585	10.1	58.8
+plasma	one_treated_child	12	216.692	90.328	100.0	393.8
+CSF	control	18	118.25	38.386	47.7	183.8
+CSF	one_treated_child	4	281.4	19.068	260.4	300.3

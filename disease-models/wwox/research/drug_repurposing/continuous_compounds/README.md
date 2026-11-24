@@ -24,6 +24,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 18 | Decanoic acid, cortical AMPA signaling and medium-chain substrate metabolism | Is a direct synaptic effect plausible at measured unbound cortical exposure, while preserving inhibitory recruitment? |
 | 19 | Ubiquinol-10, respiratory electron transfer and membrane lipid protection | Can mitochondrial CoQ delivery and ATP recovery be distinguished from protection of extra-mitochondrial lipids? |
 | 20 | Folinic acid, CNS folate delivery and myelination | Does folate availability limit glial maturation in WWOX, and can a barrier defect be distinguished from changes in cell composition? |
+| 21 | Myo-inositol, phosphoinositide resynthesis and neuronal M-current | Does substrate availability limit recovery of lipid and current after activity, independently of osmotic changes and physical channel–transporter coupling? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -34,7 +35,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: folinic acid.** Transporter signals disagree across untreated models, and compartment markers rise more strongly than FOLR1 in human organoids. Next quantify the CNS-to-blood folate pattern and age reference in primary and secondary transport comparators, then determine whether any WWOX material supports the same lesion. [Prediction, WWOX comparisons and checkpoint](folinic_acid/README.md)
+**Active compound: myo-inositol.** Five synthesis, recycling and channel transcripts decrease across three bulk datasets, while nuclear channel RNA moves in the other direction. Next separate the substrate-only and transporter-only comparisons, measure lipid and current recovery, and account for the premature-infant mortality signal. [Data and discriminating prediction](myo_inositol/README.md)
+
+**Folinic acid parked for WWOX trial priority.** One direct WOREE report explicitly includes folate in a normal metabolic work-up. Analyte-specific CSF and paired plasma values were unavailable. Correction of the CSF marker in a mitochondrial comparator did not ensure functional recovery. [Direct case and decision](folinic_acid/decision.md)
 
 **Ubiquinol-10 parked for WWOX trial priority.** The pediatric crossover establishes use of the reduced formulation and systemic exposure, with imprecise functional outcomes. In the GEMIN5 comparator, restoring the cellular quinone pool did not consistently restore respiration. Reopen for a matched WWOX functional effect and compartment-specific evidence. [Decision and primary controls](ubiquinol/decision.md)
 
