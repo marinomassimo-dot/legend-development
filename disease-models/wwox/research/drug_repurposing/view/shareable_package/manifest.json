@@ -464,7 +464,7 @@
  ],
  "data": {
   "catalogue_generated": "2026-10-31T07:28:37Z",
-  "data_date": "2026-11-23",
+  "data_date": "2026-11-24",
   "dgidb_export": "2024-06-10",
   "view_schema": "legend.wwox.repurposing_view/2"
  },
@@ -542,11 +542,11 @@
   },
   "README.md": {
    "bytes": 4730,
-   "sha256": "a5da6d64eddc3e9c5411282a6ad7d2742653d129c01c251c108a36dd533e1be9"
+   "sha256": "46a3436cfe66e50e05b8bf38e59bbb8f6b5d1dee4f18a78f79badc1b6c40864b"
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 2161,
-   "sha256": "061fd530dd1e912a2ac6677b73a157997c5a87ec048a3d197397ce17eabb9763"
+   "sha256": "96233508f1e316bcf6719d29986945264426db99e86fe12c157d009b456fc812"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -562,7 +562,7 @@
   },
   "index.html": {
    "bytes": 5025546,
-   "sha256": "ff8a16a68e95464e86435db06c457e2adc2a265d65ddb6621cbd64c6afa840d1"
+   "sha256": "affd11bdd883c09757c15b0462ab579e9558658f5e54fbdfbab07297fea6bd26"
   },
   "reports/ethosuximide.pdf": {
    "bytes": 168171,
