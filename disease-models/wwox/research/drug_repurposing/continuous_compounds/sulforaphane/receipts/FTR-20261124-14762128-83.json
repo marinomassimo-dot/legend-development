@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-14762128-83",
+  "event_at": "2026-11-24T06:54:51Z",
+  "analysis_at": "2026-11-24T06:54:51Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "14762128"
+  },
+  "prior_receipt": "FTR-20261111-14762128-78",
+  "reread_reason": "inadequate_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6793572/",
+  "source_fingerprint": null,
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "Fig. 1B and E show the sulforaphane reporter arm; Fig. 1D total GSH and Fig. 4A–B Nrf2 knockout survival use “10 μm tBHQ”. Reported results and legends examined; staining images not independently scored."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/sulforaphane/README.md"
+  ]
+}

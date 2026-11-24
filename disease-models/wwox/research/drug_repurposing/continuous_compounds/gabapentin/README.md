@@ -17,3 +17,5 @@
 An independent laboratory review (SCI-GABAPENTIN-RECIPIENT, 24 November) was requested on the identity of recorded neurons and the evidence for preserved interneuron recruitment after treatment in cortical injury or genetic epilepsy models. The source question is whether any published experiment measures both arms of the proposed circuit effect. [Cortical injury comparator](https://pubmed.ncbi.nlm.nih.gov/22766033/)
 
 **Exposure checkpoint.** A submicromolar TSP4 comparator changes the exposure decision. THBS4 increases in two bulk WWOX systems; a cell-type-specific functional excess remains unverified. [Concentration, tissue and recipient comparison](exposure.md)
+
+**Disposition.** Park for a broadly enrolled pediatric WWOX developmental trial. The actual WWOX recordings and the gabapentin comparisons leave selective formation of new recurrent contacts unresolved. [Recipient, denominators and reopening criterion](recipient.md)

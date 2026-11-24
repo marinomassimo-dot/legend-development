@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-34634460-83",
+  "event_at": "2026-11-24T06:54:51Z",
+  "analysis_at": "2026-11-24T06:54:51Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "34634460"
+  },
+  "prior_receipt": "FTR-20261124-34634460-80",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8609180/",
+  "source_fingerprint": null,
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "Fig. 4B–D frequency comparison “S-HT vrs S-KO: 0.5963”, cell and animal counts. Prior laboratory extraction SR12–16 reused for the recipient-specific developmental question."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/gabapentin/recipient.md"
+  ]
+}
