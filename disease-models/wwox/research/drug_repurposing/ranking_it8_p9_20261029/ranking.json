@@ -6091,7 +6091,7 @@
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 2465
+   "receipt_ledger_lines": 2471
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -12900,7 +12900,7 @@
    "inputs": {
     "T1_cards": "e7c4cc4144cc76ec",
     "T2_pertinence": "40d3f822d9a26184",
-    "T3_receipts": "d21bd002f0be159d",
+    "T3_receipts": "fd8ed0416a98ed32",
     "T4_needs": "614b4e0a41c6a227",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "30921a9013e88d22"
@@ -13161,7 +13161,7 @@
     "42735667",
     "9168839"
    ],
-   "receipts_on_cited_pmids": 162,
+   "receipts_on_cited_pmids": 163,
    "research_objective": "",
    "tracks": [
     "A"
@@ -13462,7 +13462,7 @@
    "inputs": {
     "T1_cards": "45e69a3bcee400f5",
     "T2_pertinence": "4744af9e5e721d31",
-    "T3_receipts": "84e84475ec284b08",
+    "T3_receipts": "8130e495ca60da4c",
     "T4_needs": "a9f2ecba72fedb1c",
     "T5_pharmacology": "83e16cf80f0d93c6",
     "T6_identity": "d72dab466f7f0934"
@@ -13719,7 +13719,7 @@
     "42837646",
     "9872743"
    ],
-   "receipts_on_cited_pmids": 58,
+   "receipts_on_cited_pmids": 59,
    "research_objective": "useful_partial_benefit",
    "tracks": [
     "A"
@@ -14169,7 +14169,7 @@
    "inputs": {
     "T1_cards": "e5f873d116363e69",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "eba2db171df0df9f",
+    "T3_receipts": "adb15517f75419b2",
     "T4_needs": "6cb13a89d47f10ac",
     "T5_pharmacology": "4cfc018740c85d41",
     "T6_identity": "c8a9075059e82981"
@@ -14273,7 +14273,7 @@
     "35292925",
     "36828035"
    ],
-   "receipts_on_cited_pmids": 78,
+   "receipts_on_cited_pmids": 79,
    "research_objective": "",
    "tracks": [
     "A"
@@ -15491,7 +15491,7 @@
    "inputs": {
     "T1_cards": "3591a7a4f7509a64",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "124c1d42c49e3597",
+    "T3_receipts": "1ae513c30b2e010f",
     "T4_needs": "a9f2ecba72fedb1c",
     "T5_pharmacology": "219331179cc8894b",
     "T6_identity": "bafc117d5dd84908"
@@ -15585,7 +15585,7 @@
     "36967744",
     "41489401"
    ],
-   "receipts_on_cited_pmids": 35,
+   "receipts_on_cited_pmids": 36,
    "research_objective": "useful_partial_benefit",
    "tracks": [
     "A"

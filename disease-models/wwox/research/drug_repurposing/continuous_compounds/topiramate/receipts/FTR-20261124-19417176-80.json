@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-19417176-80",
+  "event_at": "2026-11-24T04:41:30Z",
+  "analysis_at": "2026-11-24T04:41:30Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "19417176",
+    "doi": "10.1124/jpet.109.153908"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://www.researchgate.net/publication/24403386_Topiramate_Reduces_Excitability_in_the_Basolateral_Amygdala_by_Selectively_Inhibiting_GluK1_GluR5_Kainate_Receptors_on_Interneurons_and_Positively_Modulating_GABAA_Receptors_on_Principal_Neurons",
+  "source_fingerprint": null,
+  "workflow": "Distinguish network recruitment from evoked success and compare nominal neuronal concentration with measured exposure.",
+  "evidence_basis": [
+    "Publisher DOI and publicly displayed author-paper Results and captions for Figs. 1, 2 and 4 on ResearchGate, document 24403386. Checked native response versus added ATPA and failure rate versus amplitude. Short locator: “no significant effect on the failure rate”. Offline file not available; figures not separately inspected."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/topiramate/circuit.md"
+  ]
+}
