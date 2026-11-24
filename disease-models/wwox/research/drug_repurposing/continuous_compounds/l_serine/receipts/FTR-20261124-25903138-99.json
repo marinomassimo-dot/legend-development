@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-25903138-99",
+  "event_at": "2026-11-24T00:31:04Z",
+  "analysis_at": "2026-11-24T00:31:04Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "25903138",
+    "doi": "10.1074/jbc.M114.603860"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/l_serine_loop_20261124/4505526_pmc.html",
+  "source_fingerprint": "f2fc65faf5ae6ce994f0cf023913eb45c0f2e258b524561f43b1763e9c82e906",
+  "workflow": "Targeted clinical and mechanistic comparison for L-serine.",
+  "evidence_basis": [
+    "Methods, Brain tissues: 10–12-week-old female mice, floxed n=7 and BKO n=8.",
+    "Table 3, 24-hour KO: “3.7” intracellular alanine/serine and “18.0” normalized deoxysphinganine under deprivation.",
+    "Figs. 6–8: hippocampal atypical sphingoid bases and fibroblast stereoisomer comparison."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/l_serine/decision.md"
+  ]
+}

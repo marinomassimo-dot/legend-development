@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-26608744-99",
+  "event_at": "2026-11-24T00:33:19Z",
+  "analysis_at": "2026-11-24T00:33:19Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "26608744",
+    "doi": "10.1093/brain/awv325"
+  },
+  "prior_receipt": "FTR-20261123-26608744-89",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/triheptanoin_loop_20261123/PMC4805082.xml",
+  "source_fingerprint": "8377133f3bc3de95b48224d21a5cc7260243c8b7b25b4e077ff8deb511212bd4",
+  "workflow": "Targeted examination of the voltage and subunit comparison alongside pediatric fatty acid ascertainment.",
+  "evidence_basis": [
+    "Fig. 6A–B, three AMPAR combinations and first two nominal concentrations 1 and 50 µM.",
+    "Fig. 6G–H, GluA2/3: “more depolarized membrane potential” and 0.43 versus 1.11 mM IC50. Figure image inspected."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/decanoic_acid/receptor_and_diet.md"
+  ]
+}

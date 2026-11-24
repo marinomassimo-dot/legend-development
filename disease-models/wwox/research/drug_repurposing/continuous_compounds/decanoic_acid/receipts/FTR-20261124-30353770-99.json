@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-30353770-99",
+  "event_at": "2026-11-24T00:31:04Z",
+  "analysis_at": "2026-11-24T00:31:04Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "30353770",
+    "doi": "10.1177/0271678X18808947"
+  },
+  "prior_receipt": "FTR-20261124-30353770-98",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/d_bhb_loop_20261123/interstitial.html",
+  "source_fingerprint": "b5b711a09d95aa72f3210e46e211deb486c273bea66436e49dfc7a9b22c371e9",
+  "workflow": "Targeted extension from aggregate ketones to the distinct free C10 analyte in brain dialysate and plasma.",
+  "evidence_basis": [
+    "Study 2 and Fig. 3C: ten patients under MCT-enriched continuous feeding.",
+    "Nutrition results: “Brain C8 and C10 ranged between 1 and 2” µmol/L. Plasma and dialysate distinguished."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/decanoic_acid/README.md"
+  ]
+}

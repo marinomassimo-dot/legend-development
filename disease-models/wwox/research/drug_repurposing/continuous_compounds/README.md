@@ -21,6 +21,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 15 | Ivabradine, voltage sag and rebound | Do channel state and free exposure permit a direct central effect in WWOX at comparable voltage excursions? |
 | 16 | D-β-hydroxybutyrate, M-current and ketone oxidation | What incremental channel effect remains above baseline, and does it explain WWOX functional recovery independently of fuel oxidation? |
 | 17 | L-serine, lipid synthesis and NMDA co-agonism | Can L-serine restore functional myelin through lipid incorporation while preserving circuit function, and does WWOX actually limit its supply? |
+| 18 | Decanoic acid, cortical AMPA signaling and medium-chain substrate metabolism | Is a direct synaptic effect plausible at measured unbound cortical exposure, while preserving inhibitory recruitment? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -31,7 +32,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: L-serine.** The opening WWOX bulk comparison is inconsistent with a uniform three-enzyme deficiency. In pooled mouse astroglial nuclei PHGDH fell from 67 to 26 CPM while PSAT1 was similar. Next distinguish low endogenous substrate from altered synthesis rate, and track lipid versus D-serine/glycine fates. [Hypothesis, contrasts and next test](l_serine/README.md)
+**Active compound: decanoic acid.** Adult brain microdialysate during enteral feeding contained 1–2 µM C8/C10, far below the 300 µM nominal CA1 slice comparison. Depolarization improved apparent receptor potency 2.6-fold. The pediatric 80:20 mixture yielded a plasma C10 median of 165.1 µM. Next test unbound brain exposure and whether C8 changes C10 availability. [Voltage and pediatric controls](decanoic_acid/receptor_and_diet.md) [Opening exposure test and prediction](decanoic_acid/README.md)
+
+**L-serine parked for pediatric WWOX trial priority.** The mouse astroglial PHGDH signal survives depth matching. Atypical sphingoid bases paired with functional rescue could reopen a substrate-competition mechanism in WWOX. [Disposition and pediatric comparators](l_serine/decision.md)
 
 **D-β-hydroxybutyrate parked for pediatric trial priority.** The robust signal in human open data is stimulus-dependent evoked cortical gain on the native amplitude scale. WWOX-specific ketone delivery, oxidation and network stabilization remain unverified. [Reanalysis and pediatric formulation](d_bhb/decision.md) · [Neuronal expression control](d_bhb/neuronal_reference.md)
 
