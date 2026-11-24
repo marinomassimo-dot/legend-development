@@ -299,6 +299,13 @@
      "owner": "orchestrator",
      "source": "ADV message 2026-11-24 22:0xZ; assignment text adv215.txt assignment 1 (ADV-215)",
      "accepted_at": "2026-11-24T22:02:37Z"
+    },
+    {
+     "step": "ADV-223: operator PDF request list (max 8 paywalled records) and pooled-direction sweep of registry sentences",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-24 (ADV-223; /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv223.txt)",
+     "accepted_at": "2026-11-24T22:49:10Z"
     }
    ]
   }
@@ -532,6 +539,13 @@
    "at": "2026-11-24T22:02:37Z",
    "source": "ADV message 2026-11-24 22:0xZ; assignment text adv215.txt assignment 1 (ADV-215)",
    "step_sha256": "f6fd0ece3892",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T22:49:10Z",
+   "source": "ADV message 2026-11-24 (ADV-223; /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv223.txt)",
+   "step_sha256": "f1bc26b1a796",
    "reopened_block": false,
    "authorised_by": null
   }
