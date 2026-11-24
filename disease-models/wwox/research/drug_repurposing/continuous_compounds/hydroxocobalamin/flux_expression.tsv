@@ -1,0 +1,5 @@
+layer	sample	reported_value	measured_controls	control_min	control_median	control_max	controls_below_or_equal
+Source Data transcriptomics	MMA206	0.1125113183	19	0.6636435851	1.394253646	2.066596825	0
+Source Data transcriptomics	MMA209	0	19	0.6636435851	1.394253646	2.066596825	0
+Source Data proteomics	MMA206	unrepresented	0	NA	NA	NA	NA
+Source Data proteomics	MMA209	unrepresented	0	NA	NA	NA	NA

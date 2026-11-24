@@ -1,0 +1,3 @@
+measure	controls_with_pairs_and_RNA	rho	omit_min	omit_max
+gain	9	-0.2	-0.714	-0.048
+treated	9	-0.25	-0.786	-0.119

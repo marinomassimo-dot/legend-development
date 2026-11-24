@@ -1,0 +1,7 @@
+group	total	paired	median_baseline	median_treated	median_paired_gain	median_fold	median_treated_pct_of_unaffected_treated_median	positive_gains
+unaffected	20	9	5500	6367	700	1.142	100.0	6
+MMUT_category_0	120	120	669.0	661.0	-16.0	0.966	10.4	43
+MMUT_category_1	30	30	735.0	2065.5	1001.0	2.044	32.4	30
+all_other_MMA	60	60	7239.0	8754.5	739.0	1.14	137.5	50
+MMA206	1	1	1500	3800	2300	2.533	59.7	1
+MMA209	1	1	670	3250	2580	4.851	51.0	1
