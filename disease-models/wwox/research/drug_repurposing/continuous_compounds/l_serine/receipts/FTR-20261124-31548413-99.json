@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-31548413-99",
+  "event_at": "2026-11-24T00:31:04Z",
+  "analysis_at": "2026-11-24T00:31:04Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "31548413",
+    "doi": "10.1073/pnas.1909458116"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/l_serine_loop_20261124/6789919_pmc.html",
+  "source_fingerprint": "74890e115d737602e719bee089cec4addf7248574a665d024fde42db85224761",
+  "workflow": "Targeted clinical and mechanistic comparison for L-serine.",
+  "evidence_basis": [
+    "Fig. 2 and Results: L-serine depletion “reduced the NMDAR-dependent LTP by about 50%”.",
+    "Figs. 3–4: SR-null hippocampal potentiation and changing co-agonist balance by age."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/l_serine/decision.md"
+  ]
+}

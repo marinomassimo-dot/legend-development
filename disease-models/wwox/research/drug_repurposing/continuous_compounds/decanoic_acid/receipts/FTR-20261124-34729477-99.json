@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-34729477-99",
+  "event_at": "2026-11-24T00:33:19Z",
+  "analysis_at": "2026-11-24T00:33:19Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "34729477",
+    "doi": "10.1093/braincomms/fcab160"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/decanoic_loop_20261124/PMC8557697.xml",
+  "source_fingerprint": "82ece9d8138d5c354376fa01096aa8488a832b7cce06841b586d0504f357b4e6",
+  "workflow": "Targeted examination of the voltage and subunit comparison alongside pediatric fatty acid ascertainment.",
+  "evidence_basis": [
+    "Methods: “80:20 C10:C8 triglyceride” nutritional blend and plasma fatty acid assays.",
+    "Results, biochemical section: 165.1 µM pediatric C10 median at visit C.",
+    "Seizure/event analysis: “9/23” child completers with quantifiable returned diaries."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/decanoic_acid/receptor_and_diet.md"
+  ]
+}
