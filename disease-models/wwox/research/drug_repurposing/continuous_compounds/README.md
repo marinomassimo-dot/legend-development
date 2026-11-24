@@ -72,7 +72,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: L-ascorbic acid.** [Transport and maturation comparison](ascorbic_acid/README.md).
+**Programme paused by the operator on 24 November 2026. No active compound.** The three-hour wake is disabled. On explicit resumption, continue L-ascorbic acid from the [shutdown checkpoint and roadmap](ascorbic_acid/pause_checkpoint.md) and [transport comparison](ascorbic_acid/README.md).
 
 **Oxcarbazepine parked for an unselected trial.** [Pediatric subgroup data and reopening criteria](oxcarbazepine/pediatric.md) and [central exposure and channel comparison](oxcarbazepine/exposure.md).
 
