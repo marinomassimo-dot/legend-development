@@ -1,0 +1,5 @@
+dataset	contrast	n_WT	n_KO	WT_included_fraction	KO_included_fraction	difference_pp	omit_min_pp	omit_max_pp	min_classified_share_all_TPM
+GSE158681	neuronal	2	3	0.2209	0.3223	10.141	8.398	11.883	0.4892
+GSE158681	progenitor	2	2	0.1859	0.2771	9.125	4.628	13.622	0.3786
+GSE158681	constitutive	3	2	0.2233	0.2613	3.796	1.934	5.658	0.3872
+GSE158682	neuronal	4	3	0.2328	0.2690	3.621	-0.574	6.475	0.2631

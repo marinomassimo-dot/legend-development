@@ -1,0 +1,9 @@
+PMID	endpoint	analyte	compartment	unit	CLB_VPA	CLB_VPA_STP	fold
+39212337	acute_total_AUC_0_inf_WT	CLB	plasma	ug*h/mL	0.462	5.64	12.208
+39212337	acute_total_AUC_0_inf_WT	CLB	brain	ug*h/g	0.637	7.69	12.072
+39212337	acute_total_AUC_0_inf_WT	N-CLB	plasma	ug*h/mL	3.61	7.13	1.975
+39212337	acute_total_AUC_0_inf_WT	N-CLB	brain	ug*h/g	5.13	16.3	3.177
+40586768	day14_total_mean_Scn1a_A1783V_WT	CLB	plasma	ug/mL	0.03	0.07	2.333
+40586768	day14_total_mean_Scn1a_A1783V_WT	CLB	brain	ug/g	0.025	0.011	0.440
+40586768	day14_total_mean_Scn1a_A1783V_WT	N-CLB	plasma	ug/mL	0.8	3.2	4.000
+40586768	day14_total_mean_Scn1a_A1783V_WT	N-CLB	brain	ug/g	1.75	7.15	4.086

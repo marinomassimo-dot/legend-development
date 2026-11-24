@@ -1,0 +1,5 @@
+pool	class	nuclei	total_UMI	Gabra3_UMI	Gabra1_UMI	Gabra3_CPM	Gabra1_CPM	Gabra3_over_Gabra1	both_positive_nuclei
+ctrl	exc	1596	12375958	378	1184	30.543	95.669	0.3193	136
+ctrl	inh	246	1651743	120	306	72.651	185.259	0.3922	39
+ko	exc	1262	10347442	388	1379	37.497	133.270	0.2814	172
+ko	inh	293	1875814	123	363	65.572	193.516	0.3388	45

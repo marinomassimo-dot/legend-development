@@ -57,6 +57,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 51 | L-glutamine, inhibitory and excitatory transmitter replenishment | Can the inhibitory circuit recover more than recurrent excitation during repeated activity above an already glutamine-supplying medium? |
 | 52 | L-lysine hydrochloride, neural lysine availability and protein synthesis | Is the fly depletion conserved in mammalian WWOX neural cells and does it limit lysyl-tRNA charging while preserving arginine influx? |
 | 53 | Stiripentol, developmental GABA receptor kinetics and comedication | Does an independent change in evoked inhibitory charge persist after matching clobazam and norclobazam exposure and the initial GABA response? |
+| 54 | Glycine, NMDA co-agonism and activity-dependent removal of surface receptors | Does free glycine immediately facilitate NMDA current yet reduce the response to a later challenge selectively in excitatory WWOX neurons, depending on GluN1 splicing? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -67,7 +68,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: stiripentol.** Test the developmental receptor-kinetics hypothesis at fixed benzodiazepine exposure, separately from the prior LDH assessment. [Selection, evidence and next step](stiripentol/README.md)
+**Active compound: glycine.** Hippocampal WWOX transcript estimates favor Grin1 exon 5 inclusion among coding forms. Challenge assignment and cell composition before predicting a sustained response to glycine. [Prediction and initial comparison](glycine/README.md)
+
+**Stiripentol parked for pediatric trial priority.** A monotherapy effect is credible in a young Scn1a heat-challenge model. Bulk and pooled neuronal receptor-subunit ratios disagree in WWOX hippocampus. Reopen on a within-stage WWOX functional response at measured free exposure. [Model comparison and controls](stiripentol/model_comparison.md)
 
 **L-lysine hydrochloride parked for pediatric trial priority.** The fly depletion survives pool exclusions. The long enzyme isoform shows opposing regional and deletion-model directions, and a mammalian substrate-limited translation defect has yet to be demonstrated. [Isoform analysis and reopening criterion](l_lysine/isoforms.md)
 

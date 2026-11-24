@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-40586768-88",
+  "event_at": "2026-11-24T11:50:06Z",
+  "analysis_at": "2026-11-24T11:50:06Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "40586768"
+  },
+  "prior_receipt": "FTR-20261105-40586768-06",
+  "reread_reason": "inadequate_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/stiripentol_loop_20261124/40586768.xml",
+  "source_fingerprint": "3852109961c00930436b6581de8bb25995de168911564f00391114195c51b2fa",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Table 1, CLB and N-CLB rows and 14-day mean plasma/brain columns. Measured brain parent concentrations fall but metabolite rises, with different parent intake regimens in mutant mice."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/stiripentol/model_comparison.md"
+  ]
+}

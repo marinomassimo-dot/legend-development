@@ -13,3 +13,7 @@
 **Pediatric feasibility and checkpoint.** Capsules and oral suspension have a US pediatric precedent for Dravet syndrome with clobazam, from 6 months and 7 kg. Somnolence, appetite and weight effects and blood count changes matter for interpreting pediatric outcomes. Trial priority in WWOX is pending an attainable unbound exposure and a matched functional comparison. Next check measured parent, norclobazam and unbound stiripentol exposure on the same sampling schedule, then compare that range with the direct receptor measurements and evoked network endpoints. [US label](https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=58304ba8-9779-4658-811e-94ffe08c3f16)
 
 **Exposure checkpoint.** In STICLO France the measured total parent/metabolite mixture differed substantially between arms. The ratio depends on dose normalization and on whether baseline or placebo is used. [Trial table, exposure calculation and remaining test](exposure.md)
+
+**Monotherapy checkpoint.** An age-dependent thermal-threshold signal in a Dravet mouse study makes a direct effect plausible. Independent monotherapy results place an exposure limit on transfer. The next comparison needs age-matched vehicle and exposure in addition to the two benzodiazepine analytes. [Reconstructed age contrast, native currents and animal exposure](model_comparison.md)
+
+**Disposition.** Park for pediatric trial priority. Developmental and cell-class comparisons and the criterion for reopening are recorded in the [model comparison](model_comparison.md).
