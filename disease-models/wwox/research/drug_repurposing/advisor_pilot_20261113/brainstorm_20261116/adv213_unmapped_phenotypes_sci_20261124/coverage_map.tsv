@@ -1,0 +1,17 @@
+class	n_direct	direct_dossiers	adjacent	carried_by_INV_or_RP	verdict
+C1 network hyperexcitability, bursting, rebound	16	acetazolamide brivaracetam lacosamide rufinamide lamotrigine oxcarbazepine potassium_bromide tiagabine topiramate levetiracetam gabapentin magnesium_chloride ivabradine fenfluramine cannabidiol decanoic_acid		INV-03, INV-05, RP-016, RP-024, RP-025	reached
+C2 inhibitory hypofunction and recruitment	12	clobazam stiripentol taurine tiagabine pyridoxine topiramate vigabatrin lamotrigine rufinamide potassium_bromide l_glutamine brivaracetam		INV-05 (GABA-A subtype), RP-019, RP-038, RP-042	reached
+C3 developmental timing, chloride polarity, cell fate	1	taurine		RP-044 (human fetal inhibitory lineage); INV-17 (MYC, progenitor proliferation); the chloride deepening of this mandate	thinly reached
+C4 myelin and oligodendroglial maturation	9	clemastine citicoline squalene triacetin valproate ascorbic_acid d_biotin folinic_acid l_serine		INV-06, INV-12, RP-017	reached
+C5 axonal conduction and intrinsic channels	6	ivabradine d_bhb myo_inositol docosahexaenoic_acid lacosamide nicotinamide_riboside		INV-18 (Ih)	reached
+M1 energy and mitochondrial function	16	creatine thiamine inosine d_ribose triheptanoin levocarnitine riboflavin ubiquinol sodium_pyruvate r_lipoic_acid d_pantothenate calcium_alpha_ketoglutarate uridine_triacetate vigabatrin nicotinamide_riboside decanoic_acid		INV-07, RP-033	reached
+M2 cofactor, one-carbon, amino-acid pools	8	hydroxocobalamin betaine folinic_acid l_lysine l_glutamine pyridoxine glycine l_serine			reached
+M3 lipid, sterol, membrane supply	6	squalene docosahexaenoic_acid citicoline l_serine triacetin d_biotin		RP-036	reached
+M4 redox and glutathione	7	acetylcysteine sulforaphane sodium_selenite tocopheryl_acetate l_carnosine zonisamide ascorbic_acid		INV-08	reached
+S1 WW-partner kinase and growth signalling (GSK3B-Tau, SMAD4, YAP, ErbB4, Wnt)	0		calcium_alpha_ketoglutarate (HIF hydroxylation)	partly: RP-026 and the lithium cards (seizure assay, not the docking or Tau limb); RP-038 (ErbB4 only)	gap, partly carried
+S2 partner routing and relocalisation	0				gap, uncarried
+P1 proteostasis (WWOX turnover, ISR, autophagy)	0			INV-02, INV-13, RP-015, RP-018, RP-037	gap, carried
+P2 Golgi, glycosylation, trafficking	0		uridine_triacetate (membrane precursors)		gap, uncarried
+G1 genome stability (ATM-linked)	0				gap, uncarried
+Y1 systemic and somatic (growth, glucose, calcium, bone, respiration, vision)	0		levocarnitine creatine (peripheral measures only)	RP-035 (laboratory findings only)	gap, carried
+Z1 glia composition and neuroinflammation	0		zonisamide sulforaphane acetylcysteine	INV-14, RP-019, RP-039	gap, carried
