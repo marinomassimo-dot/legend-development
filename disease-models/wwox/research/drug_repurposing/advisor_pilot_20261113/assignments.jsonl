@@ -529,3 +529,11 @@
 {"evidence": "SendMessage 22:49Z with brief pointer", "id": "ADV-223", "receipt": ["64a4bd56-68db-4937-88fb-007db3ec87b0"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 7cf5e85a"], "utc": "2026-11-24T22:49:07Z"}
 {"assessment": "HOST", "id": "ADV-224", "key": "new-questions-b-and-c-held-and-public-tables", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-24T23:15:45Z"}
 {"evidence": "SendMessage 23:16Z with brief pointer", "id": "ADV-224", "receipt": ["7d71b76a-61e8-4638-931e-7d00386f9b59"], "state": "SENT", "to": ["SCI - CURRENT 7fc66b5b"], "utc": "2026-11-24T23:16:02Z"}
+{"assessment": "HOST", "id": "ADV-225", "key": "class-b-data-sections-second-batch-for-new-questions", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-24T23:27:03Z"}
+{"assessment": "HOST", "id": "ADV-226", "key": "disk-pressure-measure-remove-closed-profile-clone", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-24T23:27:21Z"}
+{"assessment": "HOST", "id": "ADV-227", "key": "coverage-report-best-state-sections-line", "origin": "host", "recipient": "Harness", "state": "DRAFTED", "utc": "2026-11-24T23:27:21Z"}
+{"evidence": "SendMessage 23:27Z with brief pointer", "id": "ADV-225", "receipt": ["e1acffa9-5b99-4c3d-90d9-d2db29d4abb9"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 7cf5e85a"], "utc": "2026-11-24T23:27:36Z"}
+{"evidence": "SendMessage 23:27Z with brief pointer (first sent as 43f28fa9-4bed-4ecd-ab05-221882a31b0f)", "id": "ADV-226", "receipt": ["ad569c10-93e3-4988-adf0-652a30dbd1e3"], "state": "SENT", "to": ["HE - CURRENT 1d88b230"], "utc": "2026-11-24T23:27:37Z"}
+{"evidence": "SendMessage 23:27Z with brief pointer (first sent as 43f28fa9-4bed-4ecd-ab05-221882a31b0f)", "id": "ADV-227", "receipt": ["ad569c10-93e3-4988-adf0-652a30dbd1e3"], "state": "SENT", "to": ["HE - CURRENT 1d88b230"], "utc": "2026-11-24T23:27:38Z"}
+{"assessment": "HOST", "id": "ADV-228", "key": "catalogued-only-pmc-open-reads-batch-three", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-24T23:29:35Z"}
+{"evidence": "SendMessage 23:29Z with brief pointer", "id": "ADV-228", "receipt": ["1e75b504-5b72-4051-9a2e-c27cd3a754a4"], "state": "SENT", "to": ["SCI - CURRENT 7fc66b5b"], "utc": "2026-11-24T23:29:59Z"}
