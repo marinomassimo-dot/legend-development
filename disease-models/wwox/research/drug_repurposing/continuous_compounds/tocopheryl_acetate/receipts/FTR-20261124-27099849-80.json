@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-27099849-80",
+  "event_at": "2026-11-24T05:35:51Z",
+  "analysis_at": "2026-11-24T05:35:51Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "27099849",
+    "doi": "10.4103/2277-9175.178780"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/tocopheryl_acetate_loop_20261124/epilepsy_2016.xml",
+  "source_fingerprint": "ef6a8ae43977b67149e403abcedc916558941c6a14bb1ec21bce27f6a4ca8f51",
+  "workflow": "Compare seizure outcomes and lipid-oxidation specificity across formulations and systems.",
+  "evidence_basis": [
+    "Methods and Results, “32 cases and 33 controls”; Table 2 original image ABR-5-36-g003.jpg, entry Malondialdehyde, and Fig. 2D text caption. Read the table image and caption, without inspection of the figure panels. Table image SHA-256 b555b0c0becea399eff06cacdf30e739bc56c26d71b8c1a13ba94820ef4a33f0."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/tocopheryl_acetate/epilepsy.md"
+  ]
+}
