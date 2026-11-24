@@ -339,8 +339,11 @@ def format_timing_summary(durations: list[tuple[str, float]], top: int = 5) -> l
 # contained that literal. The runner had no way to say which suite did it, because it
 # measured exit codes and nothing else. It now hashes every tracked file under these trees
 # before the battery and after each suite; a suite that changes one is named in the output
-# and fails the verdict on its own, whatever its exit code. Cheap: one `git ls-files -s`
-# per suite, index-side, no content read.
+# and fails the verdict on its own, whatever its exit code. Cost, measured 2026-11-24 (HE,
+# ADV-220): about 1.0 s per suite, almost all of it `git hash-object` reading the content of
+# about 14,900 files (398 MB) in the working tree; the file listing is 0.03 s. It reads content
+# because the index blob does not move when the working tree is written. Over 272 calls that is
+# about 283 s of a 94-minute run; see checkpoint_he_20261120/HE_MEASUREMENT_RUNNER_OVERHEAD_20261124.md.
 GUARDED_TREES = ("disease-models", "governance", "roles", "framework/protocols",
                  "framework/instruction", "framework/state", "learning", "ledger")
 
