@@ -60,7 +60,8 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      before any lock, gate or merge, when the directory the gate builds a clone in (tempfile's: TMPDIR, else /tmp) or the repository's own filesystem has less than 2 GB free, names the number and
      the path, and points at `tmp_clone_report.py` once that tool exists. 2 GB = twice the MEASURED peak of one release-mode gate clone: `public_release_gate.py --mode release` run with TMPDIR set to
      an empty folder and `du -sk` of it sampled every 2 s: peak 856,524 KB (tar of `git archive HEAD` 425 MB plus its extraction), clean tree, PASS. The staging-mode gate that this tool runs builds NO clone
-     (same sampling: peak 4 KB), and the merge and regeneration write only the changed files, so the 2 GB is headroom for the release-mode run and the object store, not this tool's own need.
+     (same sampling: peak 4 KB). `--regenerate-derived` builds a candidate tree under `<tmp>/legend-candidate-tree-*` (the path of the 04:50Z incident): sampled the same way its peak is 444,432 KB with the
+     default checks and with `--all`, so the release-mode clone is the larger of the two. The merge writes only the changed files; the 2 GB is headroom for the larger run and the object store.
      `LEGEND_SAFE_PUSH_MIN_FREE_GB` overrides the threshold (tests, or an operator who knows better). Read-only; an unreadable filesystem does not refuse.
 
 Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--regenerate-derived]]      (default branch: main)
