@@ -903,6 +903,13 @@
      "accepted_at": "2026-11-24T22:33:16Z",
      "evidence": "RESULT_ADV219_RECEIPT_LABEL_AUDIT_SCI_20261124.md in disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv219_receipt_label_audit_sci_20261124; class A 24/575 latest-receipt, 19/575 best state; precision 14/15",
      "updated_at": "2026-11-24T22:40:50Z"
+    },
+    {
+     "step": "ADV-222: reading batch of eight owed-and-held data sections (best-state class B), product new open questions; PREREG first",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV-222 (ADV message 2026-11-24, brief adv222.txt)",
+     "accepted_at": "2026-11-24T22:50:10Z"
     }
    ]
   }
@@ -1598,6 +1605,13 @@
    "at": "2026-11-24T22:33:16Z",
    "source": "ADV-219 (ADV message 2026-11-24, brief adv219.txt)",
    "step_sha256": "b50b8f7229ca",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T22:50:10Z",
+   "source": "ADV-222 (ADV message 2026-11-24, brief adv222.txt)",
+   "step_sha256": "51a71a398970",
    "reopened_block": false,
    "authorised_by": null
   }
