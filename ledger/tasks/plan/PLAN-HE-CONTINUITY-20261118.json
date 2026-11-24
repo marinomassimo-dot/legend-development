@@ -939,10 +939,37 @@
     },
     {
      "step": "launch HE successor H (old fb709c2c), bind, handoff, rename",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV message 2026-11-24 02:2xZ: checkpoint and restart as planned",
-     "accepted_at": "2026-11-24T01:55:33Z"
+     "accepted_at": "2026-11-24T01:55:33Z",
+     "evidence": "successor 1eaef37d bound 2026-11-24 about 02:3xZ after fb709c2c released; effort high read back from its transcript",
+     "updated_at": "2026-11-24T08:06:04Z"
+    },
+    {
+     "step": "ADV-206 mandate_watch: metadata-only mtime is not progress (every non-busy session judged by its last real turn)",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-206",
+     "accepted_at": "2026-11-24T08:06:04Z",
+     "evidence": "main 3e2267396 and ccf7c13eb; MetadataIsNotProgress tests; real IT59 case (live idle, last real turn 367 min old) fixed; report-mode result sent to ADV 2026-11-24",
+     "updated_at": "2026-11-24T08:06:04Z"
+    },
+    {
+     "step": "ADV-207 disk: safe_push free-space guard (2 GB, measured), tmp_clone_report.py (report-first, ignored files block, self-match fix), sadv test teardown, package check in safe_push plus package regeneration, authorised sadv fixture cleanup",
+     "status": "DONE",
+     "owner": "plan",
+     "source": "ADV-207",
+     "accepted_at": "2026-11-24T08:06:04Z",
+     "evidence": "main 4c7a64736, 32932b0cc, c15c97d7c, a90b3ab9e, 68455aee3; peaks 856,524 KB (release clone) and 444,432 KB (candidate tree); 20,541 verified sadv fixtures removed, df 98% to 94%; CI for 68455aee3 pending, in checkpoint I",
+     "updated_at": "2026-11-24T08:06:04Z"
+    },
+    {
+     "step": "launch HE successor I (old 1eaef37d), bind, handoff, rename",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV message 2026-11-24 ~07:2xZ: write the checkpoint and restart from the mandate",
+     "accepted_at": "2026-11-24T08:06:04Z"
     }
    ]
   }
@@ -1673,6 +1700,27 @@
    "at": "2026-11-24T01:55:33Z",
    "source": "ADV message 2026-11-24 02:2xZ: checkpoint and restart as planned",
    "step_sha256": "35e808fd939f",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T08:06:04Z",
+   "source": "ADV-206",
+   "step_sha256": "cda68f4f98ed",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T08:06:04Z",
+   "source": "ADV-207",
+   "step_sha256": "500be35d4829",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T08:06:04Z",
+   "source": "ADV message 2026-11-24 ~07:2xZ: write the checkpoint and restart from the mandate",
+   "step_sha256": "7649d8d076ea",
    "reopened_block": false,
    "authorised_by": null
   }
