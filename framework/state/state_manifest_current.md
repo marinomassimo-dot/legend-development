@@ -164,8 +164,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 2338
-fulltext_ledger_head: e78754d7c62d183ede29d70ec342e42d5676e298d3a72dff636c4641bbd133ec
+fulltext_ledger_events: 2340
+fulltext_ledger_head: 68e74f0fb38912cce3a5a449d6c2e586510afd2b486fb945d092a42d9dcb2f6e
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.

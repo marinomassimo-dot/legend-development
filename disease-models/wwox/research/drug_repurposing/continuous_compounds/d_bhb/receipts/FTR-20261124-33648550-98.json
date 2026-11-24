@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-33648550-98",
+  "event_at": "2026-11-24T00:03:02Z",
+  "analysis_at": "2026-11-24T00:03:02Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "33648550",
+    "doi": "10.1186/s12986-020-00524-1"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://link.springer.com/article/10.1186/s12986-020-00524-1",
+  "source_fingerprint": null,
+  "workflow": "Targeted selection of population, chemical identity, compartment and scale of reported human ketone measurements.",
+  "evidence_basis": [
+    "Methods, Metabolomics: ion counts scaled so “the median equaled one”.",
+    "Results, Fig. 1 caption: “β-hydroxybutyrate F = 6.8” for group by time, p=0.031.",
+    "Methods, Study design and Results: paired CSF after breakfast; absolute concentrations reported for serum before breakfast."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_bhb/exposure_transport.md"
+  ]
+}

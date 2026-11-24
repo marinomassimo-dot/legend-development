@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-30353770-98",
+  "event_at": "2026-11-24T00:03:02Z",
+  "analysis_at": "2026-11-24T00:03:02Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "30353770",
+    "doi": "10.1177/0271678X18808947"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6928557/",
+  "source_fingerprint": null,
+  "workflow": "Targeted selection of population, chemical identity, compartment and scale of reported human ketone measurements.",
+  "evidence_basis": [
+    "Methods, Data collection: “main endpoint” was total brain ketones across three nutritional states.",
+    "Results, Table 2: “17.0 (6.1–62.6)” for total ketones in microdialysate, µmol/L.",
+    "Discussion, Cerebral ketone levels: recovery estimate ≈70%."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_bhb/exposure_transport.md"
+  ]
+}
