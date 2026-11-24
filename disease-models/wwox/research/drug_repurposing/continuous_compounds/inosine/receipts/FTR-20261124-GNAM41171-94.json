@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-GNAM41171-94",
+  "event_at": "2026-11-24T09:56:57Z",
+  "analysis_at": "2026-11-24T09:56:57Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "doi": "10.6032/gnam.41.171"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/inosine_loop_20261124/human-purines-gnam-41-171.pdf",
+  "source_fingerprint": "5d3a1e5a8ee2d2c3106977660397ed01d0654a016614d2a8d1ec256269128b22",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Methods pp. 172\u2013173, Group B and measurement method; Results pp. 177\u2013178, Stage 2 blood inosine and ATP, Stage 3 paired ATP; discussion pp. 179\u2013180. Fig. 7 caption, numeric outcomes from the accompanying text. Parent measured in blood. Table 2 is urine."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/inosine/README.md"
+  ]
+}

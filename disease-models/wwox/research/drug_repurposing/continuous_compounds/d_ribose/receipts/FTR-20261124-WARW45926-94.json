@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-WARW45926-94",
+  "event_at": "2026-11-24T10:08:35Z",
+  "analysis_at": "2026-11-24T10:08:35Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "doi": "10.82444/warw.33664381"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/d_ribose_loop_20261124/Zur_Nedden_thesis.pdf",
+  "source_fingerprint": "15344c3c0363030523f86c1ec42c932c6241f9a99e37428595a1e4d0ff1c36fc",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Thesis Results pp. 108\u2013109, Table 5.1 including units, control, conditions, N and comparison footnote. No other chapter or appendix credited."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_ribose/README.md"
+  ]
+}

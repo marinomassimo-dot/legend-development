@@ -51,6 +51,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 45 | Clobazam, active metabolite and recruitment of inhibition | Can an exposure-supported change in parent/metabolite mixture alter evoked inhibition in WWOX while preserving physiological transmission? |
 | 46 | Purified cannabidiol, equilibrative adenosine transport and A1-mediated recovery | Does inhibiting nucleoside transport prolong extracellular adenosine after activity or reduce its release under metabolic stress? |
 | 47 | Inosine, purine salvage and ATP recovery after activity | Does parent inosine restore the adenylate pool and function in WWOX at physiological glucose, or primarily supply ribose fuel or peripheral urate? |
+| 48 | D-ribose, pentose supply and adenylate regeneration | Does D-ribose improve functional recovery beyond matched glucose when base supply is controlled, or does conversion stall downstream? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -61,7 +62,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: inosine.** In ATP-depleted primary astrocytes, inosine accelerated recovery in the presence of adenine and glucose. Next distinguish oral parent exposure and neural salvage from ribose fuel and peripheral urate. [Opening comparison and discriminating prediction](inosine/README.md)
+**Active compound: D-ribose.** The human neuronal pentose comparison distinguishes D-ribose from L-ribose. Next resolve parent CNS exposure, glucose effects and downstream limits. [Opening evidence and prediction](d_ribose/README.md)
+
+**Inosine parked for WWOX trial priority.** Transport blockade separated the response to exogenous inosine from endogenous mobilization. Human evidence leaves the neural exposure and net adenylate response unresolved. [Reanalysis, clinical denominators and reopening criterion](inosine/salvage.md)
 
 **Purified cannabidiol parked for a WWOX adenosine-directed trial.** At nominal 10 µM, CBD reduced the stimulated purine peak in epileptic rat slices. A separate genetic comparison implicated both ENT1 and ENT2 in efflux. Reopen for WWOX-specific adenosine and circuit effects at measured free parent exposure. [Exposure, transporter isoforms and outcome](cannabidiol/exposure_and_flux.md)
 

@@ -1,0 +1,10 @@
+panel	contrast	units	complete_mice	positive	median_difference	min_difference	max_difference
+4a	pentoseP_KCl_minus_baseline	normalized_signal	6	6	0.6397	0.3863	2.2033
+4a	pentoseP_KCl_8MDP_interaction	normalized_signal	6	3	0.0709	-0.5707	0.4489
+ED4b	pentoseP_added_inosine_minus_baseline	normalized_signal	6	6	0.3689	0.1265	1.1373
+ED4b	pentoseP_added_inosine_8MDP_interaction	normalized_signal	6	0	-0.5764	-1.1655	-0.0947
+4e	pentoseP_M+0_KCl_minus_rest	normalized_signal	6	6	1.1357	0.5006	2.3822
+4e	pentoseP_M+5_KCl_minus_rest	normalized_signal	6	6	0.2815	0.1366	1.1103
+4f	pentoseP_KCl_minus_rest	atom_percent_points	6	2	-12.4204	-16.3443	13.2900
+4f	phosphoenolpyruvate_KCl_minus_rest	atom_percent_points	5	0	-9.0000	-15.2000	-4.8000
+5i	phosphocreatine_PNP_inhibitor_minus_vehicle	normalized_signal	9	0	-0.3137	-0.8782	-0.0577

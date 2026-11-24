@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-38960035-94",
+  "event_at": "2026-11-24T10:03:11Z",
+  "analysis_at": "2026-11-24T10:03:11Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "38960035"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/inosine_loop_20261124/PMC11342100.xml",
+  "source_fingerprint": "66b78f9b111dc5cbe30746976fecc323a3af0beec2d6bfa42c515b1e3d9bad00",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Examined Results adjoining Figures 3, 6, 7 and labels/brackets of the original Fig. 7A\u2013C. Source raster held as neurons-fig7.jpg. Selected sections only."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/inosine/salvage.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_ribose/README.md"
+  ]
+}

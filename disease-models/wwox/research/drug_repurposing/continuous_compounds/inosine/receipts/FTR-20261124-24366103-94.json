@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-24366103-94",
+  "event_at": "2026-11-24T09:55:40Z",
+  "analysis_at": "2026-11-24T09:55:40Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "24366103"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/inosine_loop_20261124/PMC3940333.xml",
+  "source_fingerprint": "543c60e6df887920ee95b4c4ef0ec1f5810d33b6aab620d9f60b8e6284fe6e3b",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Methods, Efficacy of urate elevation; Results, URATE ELEVATION, paragraph on Fig. 2C-D. Checked the timed cross-sectional CSF denominator and analyte; did not inspect the original figure or supplement."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/inosine/README.md"
+  ]
+}
