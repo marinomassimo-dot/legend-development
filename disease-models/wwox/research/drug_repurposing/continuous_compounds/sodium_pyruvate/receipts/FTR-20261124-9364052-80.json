@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-9364052-80",
+  "event_at": "2026-11-24T05:35:51Z",
+  "analysis_at": "2026-11-24T05:35:51Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "9364052",
+    "doi": "10.1523/JNEUROSCI.17-23-09060.1997"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6573585/",
+  "source_fingerprint": null,
+  "workflow": "Discriminate extracellular peroxide clearance from cellular pyruvate metabolism.",
+  "evidence_basis": [
+    "Peroxide quantitation Methods, Results and Fig. 3 legend, “in the absence of cells”; two-minute half-disappearance and negligible peroxide at 15 minutes. No figure image inspected."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/sodium_pyruvate/README.md"
+  ]
+}

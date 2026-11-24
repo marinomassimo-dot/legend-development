@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-2643513-80",
+  "event_at": "2026-11-24T05:35:51Z",
+  "analysis_at": "2026-11-24T05:35:51Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "2643513",
+    "doi": "10.1111/j.1528-1157.1989.tb05287.x"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "https://pubmed.ncbi.nlm.nih.gov/2643513/",
+  "source_fingerprint": null,
+  "workflow": "Compare seizure outcomes and lipid-oxidation specificity across formulations and systems.",
+  "evidence_basis": [
+    "Primary abstract, “10 of 12 cases”. Recorded paper-defined responders and age category. Full methods unavailable."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/tocopheryl_acetate/epilepsy.md"
+  ]
+}
