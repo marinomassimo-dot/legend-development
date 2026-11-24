@@ -137,6 +137,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | You want | Run |
 |---|---|
 | harvest a PubMed corpus into a record-level JSONL, a seed TSV and a manifest — **a census, not evidence** | `framework/scripts/pubmed_corpus_harvest.py` |
+| list the PubMed WWOX records **absent from every disease-model file** (one esearch call, PMIDs only, print-only, exit 0 none / 1 new / 3 route failed) — **a census, not evidence**; the weekly scout runs it | `framework/scripts/pubmed_delta_census.py` |
 | turn a PubMed Clipboard export into a de-identified dated seed | `framework/scripts/pubmed_clipboard_to_seed.py` |
 | fetch a public PMC binary behind the cloud-viewer proof-of-work page | `framework/scripts/pmc_pow_fetch.py` |
 | read the text layer of a PDF the operator supplied, and count terms in it **only after positive controls prove the extractor read it** — an unverified zero is a reading of the tool, not of the paper | `framework/scripts/pdf_text_extract.py` |
