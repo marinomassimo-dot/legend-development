@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-20167261-89",
+  "event_at": "2026-11-24T08:31:56Z",
+  "analysis_at": "2026-11-24T08:31:56Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "20167261"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/lamotrigine_loop_20261124/20167261.xml",
+  "source_fingerprint": "e84f21fb4556ed332369732d04d57ac7feba1df8e93e228c780fa7a590ff9f09",
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "VmD methods and Lamotrigine results, inhibitory and excitatory background estimates and spike count. Discussion specifies omitted intrinsic conductances and receptor classes."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/lamotrigine/circuit.md"
+  ]
+}

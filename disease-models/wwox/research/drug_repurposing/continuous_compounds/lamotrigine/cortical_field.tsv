@@ -1,0 +1,6 @@
+bath_uM	total_amplitude_inhibition_pct	mean_detected_sites	total_fraction	site_count_fraction	ratio_of_summaries_per_site
+0	0	34	1.00000	1.00000	1.00000
+3	16.5	28.5	0.83500	0.83824	0.99614
+10	47.5	19.5	0.52500	0.57353	0.91538
+30	65.9	9.5	0.34100	0.27941	1.22042
+100	87.9	5	0.12100	0.14706	0.82280

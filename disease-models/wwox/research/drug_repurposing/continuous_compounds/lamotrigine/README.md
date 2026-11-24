@@ -11,3 +11,5 @@
 The independent reviewer found no attributable lamotrigine initiation or withdrawal contrast in the laboratory records examined. Three primary case records were then checked for genotype, co-treatment and independence. [Clinical evidence and remaining gap](clinical_review.md)
 
 **Current decision.** Test state-dependent sodium-channel availability at exposure anchored to human cortical measurements. The sign of inhibitory recruitment varies across preparations. A matched comparison of native dendritic Ih could reopen that mechanism. [Results, reproducible calculations and next evidence question](integration.md)
+
+**Disposition after the circuit comparison.** Park for WWOX trial priority. The low-concentration juvenile cortical field effect and the higher-concentration hippocampal inhibitory response leave the same-preparation comparison open. [Quantitative comparison and reopening criteria](circuit.md)
