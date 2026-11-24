@@ -52,7 +52,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: L-carnosine.** Only the mouse hippocampus shows both glyoxalase transcripts lower. The paired decline does not recur in hippocampal nuclei; lower Carns1 within mature oligodendrocytes prompted a review of the glial alternative. The adult brain spectroscopy endpoint is uncalibrated. Next compare endogenous methylglyoxal, GABA-A activity and aldehyde-specific chemistry at plausible exposure. [Prediction and opening comparison](l_carnosine/README.md)
+**Active compound: L-carnosine.** Only the mouse hippocampus shows both glyoxalase transcripts lower. The paired decline does not recur in hippocampal nuclei; lower Carns1 within mature oligodendrocytes prompted a review of the glial alternative. The adult brain spectroscopy endpoint is uncalibrated. Independent review found increased callosal carnosine without improvement on the reported myelin outcomes in a mouse injury model. Next compare reaction kinetics for methylglyoxal and lipid aldehydes at attainable exposure, with tonic and evoked inhibition measured separately. [Review and revised prediction](l_carnosine/specificity.md) [Prediction and opening comparison](l_carnosine/README.md)
 
 **Tiagabine hydrochloride parked for an unselected WWOX trial.** Healthy adult short-interval inhibition weakened, long-interval measures strengthened under a different protocol, and post-train suppression in rat CA1 required interpreting exposure and recovery together. [Timing, exposure and decision](tiagabine/timing.md)
 

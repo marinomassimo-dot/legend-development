@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-30089410-80",
+  "event_at": "2026-11-24T06:12:50Z",
+  "analysis_at": "2026-11-24T06:12:50Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "30089410"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://journals.sagepub.com/doi/full/10.1177/0004563218796860",
+  "source_fingerprint": null,
+  "workflow": "Assess carbonyl specificity, competing GABAergic signaling and attainable L-carnosine exposure.",
+  "evidence_basis": [
+    "Participants, “aged 4–14 years”; plasma ELISA methods, Results participant flow and Table 2 MG row “Changes”, including adjustment footnote b. Figure image and supplements not inspected."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/l_carnosine/specificity.md"
+  ]
+}

@@ -20,7 +20,7 @@ asserted by no receipt. `prior_receipt` means the reading this one builds on, an
 sharing a parent are the normal case under parallel branches.
 
 
-**1788 paper(s)** with at least one receipt · **2510 receipt(s)** · **38 paper(s) read in parallel** by two receipts sharing a parent.
+**1790 paper(s)** with at least one receipt · **2512 receipt(s)** · **38 paper(s) read in parallel** by two receipts sharing a parent.
 
 ## Papers read in parallel
 
@@ -420,6 +420,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 22544747 | `partial_fulltext_read` | not_read | not_read | not_read | read | not_read | not_read | not_read | not_read | not_read | — | 1 |
 | PMID 22553026 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | not_present | not_present | not_read | 1 |
 | PMID 22574198 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | not_present | read | read | 1 |
+| PMID 22585572 | `partial_fulltext_read` | read | not_read | not_read | read | captions_only | not_read | not_read | not_read | not_read | — | 1 |
 | PMID 22609537 | `partial_fulltext_read` | read | not_read | read | read | read | read | not_read | not_read | not_read | — | 2 |
 | PMID 22622579 | `partial_fulltext_read` | read | not_read | not_read | read | not_read | not_read | read | not_read | unavailable | not_read | 1 |
 | PMID 22634283 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | not_present | read | 2 |
@@ -836,6 +837,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 30073179 | `partial_fulltext_read` | read | read | read | read | read | read | read | read | captions_only | not_read | 1 |
 | PMID 30082419 | `partial_fulltext_read` | read | read | read | read | not_read | not_read | read | read | not_read | not_read | 1 |
 | PMID 30082886 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | not_present | read | read | 1 |
+| PMID 30089410 | `partial_fulltext_read` | not_read | not_read | read | read | not_read | read | not_read | not_read | not_read | — | 1 |
 | PMID 30136373 | `partial_fulltext_read` | read | not_read | not_read | read | not_read | not_read | read | not_read | not_read | not_read | 2 |
 | PMID 30158849 | `partial_fulltext_read` | read | read | read | read | read | read | read | not_present | read | read | 3 |
 | PMID 30175250 | `partial_fulltext_read` | read | read | read | read | read | not_present | read | not_present | captions_only | — | 2 |

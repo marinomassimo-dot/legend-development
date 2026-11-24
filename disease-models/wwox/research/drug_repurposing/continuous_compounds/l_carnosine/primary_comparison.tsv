@@ -1,0 +1,7 @@
+source	locator	system	condition	endpoint	value	unit	limit
+Distler_2012	6A	cultured hippocampal neurons	MG alone	half-maximal current concentration	9.5	uM	SEM 0.9; Hill coefficient 1.05
+Distler_2012	6A and Results	cultured hippocampal neurons	100 uM MG and 100 uM GABA	current relative to 100 uM GABA alone	60	percent	approximate; peak MG-alone response about one-third of GABA
+Distler_2012	3B-C and Discussion	mouse whole brain	brain MG	approximate concentration	5	uM	tissue HPLC; extracellular concentration unresolved
+Ghodsi_2019	2, MG baseline	plasma ELISA	carnosine and placebo	median before treatment	50.44 / 43.26	ng/mL	18 completers per arm
+Ghodsi_2019	2, MG follow-up	plasma ELISA	carnosine and placebo	median after treatment	45.00 / 43.14	ng/mL	18 completers per arm; drug exposure unmeasured
+Ghodsi_2019	2, MG changes	plasma ELISA	carnosine vs placebo	unadjusted and adjusted P	0.323 / 0.832	P value	between arms; adjustment footnote b; trial powered for pentosidine
