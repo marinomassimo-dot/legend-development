@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-24T22:15Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-24T22:16:10Z",
+ "event_id": "FTR-20261124-24002024-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Re-read for ADV-216 (IT30-CQ5, the vigabatrin label). Read: Results in full, Discussion passages on antiseizure drugs, Table I, the Methods paragraphs on drug exposure and statistics only (methods recorded not_read). Figures 5 and 6 were opened as images from the PMC open-data bucket (author manuscript prefix; figure files nihms513486f5.jpg sha256 c47c60aeaf7eb3911f6120653978aa7d58e00d55c3554b32fe761d6f3004c161 and nihms513486f6.jpg sha256 1051d9a23b005f72f58e39151da602148003f36e1cb4700d9073853b58dcb382); Figures 1 to 4 were not re-opened, so the figures map says captions_only (understating on purpose). Supplementary PDF read in full (sha256 3dccf9f5354d9f9276736cf2e4b990af6b6ad8a26d62b288b15481ae3e45ff23); the supplementary XLS (sha256 917c8fde3fa686a2c5c6c04ebebc63fa8c43a2a4f80b38aa3e48c74ce8a4ca3e) was identified as a 1099-probe microarray list from header strings and not parsed (no spreadsheet reader on the host, no new dependency). Counted: zero occurrences of WWOX in the article and the supplementary PDF. The earlier receipt marked tables not_present; Table I is in the article."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv216_reading_debt_three_partials_sci_20261124/RESULT_ADV216_READING_DEBT_THREE_PARTIALS_SCI_20261124.md"
+ ],
+ "prior_receipt": "FTR-20261021-24002024-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "913cba147822c55277d93611fbfc03e3c33b6aac926583bdba14eab26585a5ca",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext (held copy, not in git): PMID24002024_Baraban2013_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1038/ncomms3410",
+  "pmid": "24002024"
+ },
+ "workflow": "SCI window AC ADV-216 record 3 of 3 (reading debt; partial-depth record chosen from open row IT30-CQ5)"
+}
