@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-42909904-97",
+  "event_at": "2026-11-24T11:16:30Z",
+  "analysis_at": "2026-11-24T11:16:30Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "42909904"
+  },
+  "prior_receipt": "FTR-20261124-42909904-99",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID42909904_PMC13684411.xml",
+  "source_fingerprint": "4e571e24a85342f2a72d92a18df1acdebd9efa89dcdf5754c092078d112a23a4",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Checked metabolite identification method, knockdown pool size, 85 standard-mapped compounds among 2355 peaks; supplement Table 4 peaks 231 and 1665 and public MTBLS12344 MAF cross-check. Two lysine signals reflect the same biological replicates; control-background fold changes remain negative."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/l_lysine/README.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/l_glutamine/identity.md"
+  ]
+}

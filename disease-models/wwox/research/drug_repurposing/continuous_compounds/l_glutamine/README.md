@@ -13,3 +13,5 @@
 **Next comparison.** Check what WWOX datasets can resolve about astrocytic synthesis, neuronal uptake, glutaminase and transmitter production at matched developmental stages. Then test whether published paired excitatory/inhibitory measurements and plausible incremental CNS exposure support an advantage for inhibitory recovery.
 
 **Update from the transporter and exposure comparison.** SLC38A1 and GLS RNA declined in all three untreated bulk comparisons, while the astrocytic synthesis signal differed across models. A separate adult oral study supplies a measured CSF increment and an opposing glutamate change. [New WWOX analysis and decision criterion](uptake.md)
+
+**Disposition.** [Fly identity check, human compartment controls and reopening criterion](identity.md)

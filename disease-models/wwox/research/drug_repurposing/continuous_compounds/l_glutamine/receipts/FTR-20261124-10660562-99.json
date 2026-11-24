@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-10660562-99",
+  "event_at": "2026-11-24T11:04:33Z",
+  "analysis_at": "2026-11-24T11:04:33Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "10660562"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "https://pubmed.ncbi.nlm.nih.gov/10660562/",
+  "source_fingerprint": null,
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Primary abstract: GlnT single-substrate uptake was saturable with Km 489 micromolar at pH 7.4. This is a heterologous measurement."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/l_glutamine/identity.md"
+  ]
+}

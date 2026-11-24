@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-35712340-97",
+  "event_at": "2026-11-24T11:16:30Z",
+  "analysis_at": "2026-11-24T11:16:30Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "35712340"
+  },
+  "prior_receipt": "FTR-20261124-35712340-99",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID35712340_Sukkar2022_PMC.xml",
+  "source_fingerprint": "b199ddb48050738975f1948e1de8d5b6a5aa92e6ba0157cbdd7df016b3050ce5",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Case plasma lysine row 181, reported reference 52\u2013196, units absent, in a homozygous missense case; primary values in Table 2."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/l_lysine/README.md"
+  ]
+}

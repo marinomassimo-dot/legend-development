@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-24992948-99",
+  "event_at": "2026-11-24T11:08:33Z",
+  "analysis_at": "2026-11-24T11:08:33Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "24992948"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/l_glutamine_loop_20261124/PMC4227121.xml",
+  "source_fingerprint": "549bb95c754f27a54704b86e63a98ffcc1093cbdf6bbb75ddabaf76da985fa5a",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Severe TBI, separate 24 h and five-day IV alanyl-glutamine groups (six each) with background enteral nutrition. Results section reports cerebral dialysate glutamine before/during/after short infusion 529/549/532 micromolar (unchanged). Long group: Figure 4 caption and Results describe significant glutamine increase after infusion only; cerebral glutamate fell during and after (Figure 6 caption/Results). Abstract conflates timing/values. Methods selected for catheter placement avoiding frontal contusions. Figure captions read, plots not inspected. No calibration to terminal substrate concentration."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/l_glutamine/identity.md"
+  ]
+}

@@ -1,0 +1,4 @@
+system	Km_uM	baseline_fraction_Vmax	after_fraction_Vmax	gain_pp_Vmax	gain_pct_baseline	required_remaining_capacity_fraction
+isolated_GlnT	489.00	0.4075	0.4700	6.25	15.34	0.8670
+MNTB_cell_current	940.00	0.2635	0.3157	5.22	19.81	0.8347
+analytical_max_gain	381.90	0.4683	0.5317	6.35	13.55	0.8806

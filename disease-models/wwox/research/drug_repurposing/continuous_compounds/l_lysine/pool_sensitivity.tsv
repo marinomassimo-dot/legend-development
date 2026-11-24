@@ -1,0 +1,13 @@
+background	ppm	normalization	control_pools	KD_pools	KD_over_control	omit_one_min	omit_one_max
+LacZ	5	raw	5	5	0.4944	0.4459	0.5736
+LacZ	5	TIC	5	5	0.4990	0.4515	0.5795
+LacZ	5	panel	5	5	0.5041	0.4800	0.5627
+LacZ	10	raw	5	5	0.4944	0.4459	0.5736
+LacZ	10	TIC	5	5	0.4990	0.4515	0.5795
+LacZ	10	panel	5	5	0.5041	0.4800	0.5627
+AB42	5	raw	5	5	0.3261	0.2991	0.3451
+AB42	5	TIC	5	5	0.3275	0.2989	0.3439
+AB42	5	panel	5	5	0.4899	0.4585	0.5190
+AB42	10	raw	5	5	0.3261	0.2991	0.3451
+AB42	10	TIC	5	5	0.3275	0.2989	0.3439
+AB42	10	panel	5	5	0.4899	0.4585	0.5190

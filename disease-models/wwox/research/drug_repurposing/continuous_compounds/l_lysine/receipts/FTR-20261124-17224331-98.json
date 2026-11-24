@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-17224331-98",
+  "event_at": "2026-11-24T11:16:30Z",
+  "analysis_at": "2026-11-24T11:16:30Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "17224331"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "https://pubmed.ncbi.nlm.nih.gov/17224331/",
+  "source_fingerprint": null,
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "In 27 patients with lysinuric protein intolerance, oral mealtime L-lysine hydrochloride improved fasting plasma lysine over 12 months without reported hyperammonemia; no central WWOX measurements. Prior gastrointestinal intolerance reported."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/l_lysine/README.md"
+  ]
+}
