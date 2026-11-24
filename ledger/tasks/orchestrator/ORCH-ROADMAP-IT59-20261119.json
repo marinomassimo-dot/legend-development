@@ -304,10 +304,19 @@
     },
     {
      "step": "ADV-218: read three catalogued-only no-receipt records completely (PREREG first) and complete read plus receipt for 42991897 (gnomAD EAS vs NFE)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
      "source": "ADV message 2026-11-24 (ADV-218; text /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv218.txt)",
-     "accepted_at": "2026-11-24T22:27:02Z"
+     "accepted_at": "2026-11-24T22:27:02Z",
+     "evidence": "landed on main 9cb86fef2146 (gate PASS, ls-remote verified); folder it_adv218_20261124; receipts FTR-20261124-25051421-01, -33691672-01, -31123603-01 (partial), -42991897-01",
+     "updated_at": "2026-11-24T22:58:49Z"
+    },
+    {
+     "step": "ADV-223: operator PDF request list (max 8 paywalled records) and pooled-direction sweep of registry sentences",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-24 (ADV-223; /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv223.txt)",
+     "accepted_at": "2026-11-24T22:58:49Z"
     }
    ]
   }
@@ -548,6 +557,13 @@
    "at": "2026-11-24T22:27:02Z",
    "source": "ADV message 2026-11-24 (ADV-218; text /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv218.txt)",
    "step_sha256": "4afa812aa85d",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T22:58:49Z",
+   "source": "ADV message 2026-11-24 (ADV-223; /home/desktop/.claude/jobs/a5e6f2ad/tmp/adv223.txt)",
+   "step_sha256": "f1bc26b1a796",
    "reopened_block": false,
    "authorised_by": null
   }
