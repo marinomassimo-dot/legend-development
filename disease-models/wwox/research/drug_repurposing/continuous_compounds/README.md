@@ -59,6 +59,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 53 | Stiripentol, developmental GABA receptor kinetics and comedication | Does an independent change in evoked inhibitory charge persist after matching clobazam and norclobazam exposure and the initial GABA response? |
 | 54 | Glycine, NMDA co-agonism and activity-dependent removal of surface receptors | Does free glycine immediately facilitate NMDA current yet reduce the response to a later challenge selectively in excitatory WWOX neurons, depending on GluN1 splicing? |
 | 55 | Valproate, seizure suppression and stage-dependent oligodendrocyte differentiation | At matched activity suppression and free exposure, do sheath formation and axonal conduction recover or diverge by lineage stage? |
+| 56 | Squalene, sterol precursor availability and developmental myelination | Does added substrate support first ensheathment at matched intracellular exposure? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -69,7 +70,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: valproate.** Resolve developmental stage, free exposure and axonal conduction at matched seizure suppression. [Initial comparison](valproate/README.md)
+**Active compound: squalene.** Assess central exposure after the [entry-pathway comparison](squalene/README.md) and [developmental mouse comparison](squalene/plp1.md).
+
+**Valproate parked for developmental trial prioritization.** [Clinical attribution and reopening criterion](valproate/clinical_scope.md).
 
 **Glycine parked.** All six human libraries passed input integrity checks. None reached 20 informative primary reads. [Per-library counts and technical precision](glycine/human_junctions/per_library_precision.tsv) · [Disposition](glycine/disposition.md)
 
