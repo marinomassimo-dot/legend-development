@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-34729477-80",
+  "event_at": "2026-11-24T00:44:22Z",
+  "analysis_at": "2026-11-24T00:44:22Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "34729477",
+    "doi": "10.1093/braincomms/fcab160"
+  },
+  "prior_receipt": "FTR-20261124-34729477-99",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/decanoic_loop_20261124/PMC8557697.xml",
+  "source_fingerprint": "82ece9d8138d5c354376fa01096aa8488a832b7cce06841b586d0504f357b4e6",
+  "workflow": "Assess whether actual exposure and substrate fate can support a functional C10 effect.",
+  "evidence_basis": [
+    "Table 4, children, albumin at visit C: mean 44 g/L, range 39–50."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/decanoic_acid/decision.md"
+  ]
+}

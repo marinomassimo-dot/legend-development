@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-34479615-99",
+  "event_at": "2026-11-24T00:36:39Z",
+  "analysis_at": "2026-11-24T00:36:39Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "34479615",
+    "doi": "10.1186/s13041-021-00842-2"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/decanoic_loop_20261124/astro_tracer.xml",
+  "source_fingerprint": "0b5ad17f35cea73c97335cdec8f633a9ccf5e4e1af737c46c61bd65df139dccd",
+  "workflow": "Targeted examination of tracer dilution, measurement compartment and ATP-linked versus leak respiration.",
+  "evidence_basis": [
+    "Fig. 2 caption: “n = 8 from individual batches of cultures”; ATP-linked and leak components separated.",
+    "Figs. 3 and 5 captions: 200 µM C8/C10 and 5 mM glucose in mixed cortical slices."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/decanoic_acid/decision.md"
+  ]
+}

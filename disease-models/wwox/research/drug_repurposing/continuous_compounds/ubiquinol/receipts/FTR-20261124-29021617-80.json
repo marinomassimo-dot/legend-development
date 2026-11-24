@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-29021617-80",
+  "event_at": "2026-11-24T00:46:37Z",
+  "analysis_at": "2026-11-24T00:46:37Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "29021617",
+    "doi": "10.1038/s41598-017-13257-8"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/ubiquinol_loop_20261124/PMC5636788.xml",
+  "source_fingerprint": "7f915682cfe465565a4480f6ba55addc12fbcfa3391fbce355183194a52c83aa",
+  "workflow": "Compare oral brain exposure by chemical form, statistical unit and assay resolution.",
+  "evidence_basis": [
+    "Fig. 2b, Results: reduced CoQ10 means 2.8 and 6.8 ng/mg and caption “mean + SEM”.",
+    "Fig. 3c,d normalized ion intensities; Methods, four animals per arm, perfusion and separate hemispheres."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/ubiquinol/README.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/ubiquinol/imaging.tsv"
+  ]
+}

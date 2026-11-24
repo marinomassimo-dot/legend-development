@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-3407921-80",
+  "event_at": "2026-11-24T00:44:22Z",
+  "analysis_at": "2026-11-24T00:44:22Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "3407921",
+    "doi": "10.1016/0003-2697(88)90124-8"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "files/deepening_downloads/decanoic_loop_20261124/binding_primary.xml",
+  "source_fingerprint": "1fef8ce7f9959d69954c9eb83bfd00228cc081d007f7d8044710285c29e8eb30",
+  "workflow": "Assess whether actual exposure and substrate fate can support a functional C10 effect.",
+  "evidence_basis": [
+    "Abstract reports high- and low-affinity components and first stoichiometric decanoate binding constants for defatted human albumin."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/decanoic_acid/decision.md"
+  ]
+}
