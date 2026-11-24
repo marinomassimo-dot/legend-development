@@ -13,6 +13,7 @@ import json
 import re
 import ast
 import os
+import shutil
 import stat
 import subprocess
 import sys
@@ -76,6 +77,7 @@ if root:
 class Base(unittest.TestCase):
     def setUp(self) -> None:
         self.tmp = Path(tempfile.mkdtemp(prefix="sadv_test_"))
+        self.addCleanup(shutil.rmtree, self.tmp, ignore_errors=True)       # 2026-11-24: 19,593 of these were left in /tmp, one per test, ever since the suite was written
         fake = self.tmp / "fake_claude.py"
         fake.write_text(FAKE, encoding="utf-8")
         fake.chmod(fake.stat().st_mode | stat.S_IXUSR)
@@ -685,6 +687,7 @@ def mock_entry_points(rows):
 def _git_repo() -> tuple[Path, dict[str, str]]:
     """A repository whose `main` is ahead of the branch the advisor would be run from — the 2026-11-12 SCI48 case."""
     tmp = Path(tempfile.mkdtemp(prefix="sadv_git_"))
+    unittest.addModuleCleanup(shutil.rmtree, tmp, ignore_errors=True)       # a plain function, not a TestCase: the module's teardown removes it
     env = {**os.environ, "GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@example.invalid", "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@example.invalid"}
 
     def git(*args: str) -> str:
@@ -2476,6 +2479,7 @@ class Snapshot(unittest.TestCase):
 
     def test_uncommitted_input_is_listed_with_a_digest(self) -> None:
         tmp = Path(tempfile.mkdtemp(prefix="sadv_git_"))
+        self.addCleanup(shutil.rmtree, tmp, ignore_errors=True)
         for cmd in (["git", "init", "-q"], ["git", "-c", "user.email=t@example.invalid", "-c", "user.name=t", "commit", "-q", "--allow-empty", "-m", "x"]):
             subprocess.run(cmd, cwd=tmp, check=True, capture_output=True)
         (tmp / "new.md").write_text("draft", encoding="utf-8")

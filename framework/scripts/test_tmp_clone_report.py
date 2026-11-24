@@ -34,6 +34,7 @@ class Fixture:
         git(self.repo, "config", "user.email", IDENT)
         git(self.repo, "config", "user.name", "t")
         (self.repo / "a.txt").write_text("a\n")
+        (self.repo / ".gitignore").write_text("files/\n__pycache__/\n.pytest_cache/\n*.pyc\n")
         git(self.repo, "add", "-A")
         git(self.repo, "commit", "-qm", "one")
         self.main = git(self.repo, "rev-parse", "HEAD").stdout.strip()
@@ -67,6 +68,34 @@ class Verdicts(unittest.TestCase):
         r = self.f.examine(self.f.clone("legend-clean"))
         self.assertEqual((r["verdict"], r["reasons"]), ("REMOVABLE", []))
         self.assertGreater(r["freed"], 0)
+
+    def test_a_clean_clone_whose_only_ignored_file_is_a_unique_output_is_kept_and_names_it(self):
+        """Codex review 23: this exact shape was classed REMOVABLE and drove --remove."""
+        d = self.f.clone("legend-unique-output")
+        (d / "files").mkdir()
+        (d / "files" / "unique-analysis.txt").write_text("the only copy\n")
+        self.assertEqual(git(d, "status", "--porcelain").stdout.strip(), "")          # a clean tree, as git sees it
+        r = self.f.examine(d)
+        self.assertEqual(r["verdict"], "KEEP", r)
+        self.assertTrue(any("ignored non-cache" in x and "files/" in x for x in r["reasons"]), r)
+        out = self.f.cli("--remove", str(d))
+        self.assertEqual(out.returncode, 1)
+        self.assertIn("REFUSED", out.stderr)
+        self.assertTrue((d / "files" / "unique-analysis.txt").is_file())
+
+    def test_regenerable_caches_may_be_ignored_and_a_mix_still_blocks(self):
+        d = self.f.clone("legend-caches")
+        (d / "__pycache__").mkdir()
+        (d / "__pycache__" / "x.cpython-312.pyc").write_bytes(b"\0")
+        (d / ".pytest_cache").mkdir()
+        (d / ".pytest_cache" / "v").write_text("1")
+        (d / "stray.pyc").write_bytes(b"\0")
+        r = self.f.examine(d)
+        self.assertEqual((r["verdict"], r["reasons"]), ("REMOVABLE", []), r)
+        self.assertTrue(any("regenerable cache" in n for n in r["notes"]), r)
+        (d / "files").mkdir()
+        (d / "files" / "x.txt").write_text("x")
+        self.assertEqual(self.f.examine(d)["verdict"], "KEEP")
 
     def test_a_dirty_tree_is_kept_and_a_modified_tracked_file_is_named(self):
         d = self.f.clone("it54_land")
