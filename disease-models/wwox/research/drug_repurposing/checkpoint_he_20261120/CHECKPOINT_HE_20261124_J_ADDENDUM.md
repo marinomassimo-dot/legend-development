@@ -1,0 +1,9 @@
+# Addendum to checkpoint HE-J, 2026-11-24 (HE window 1d88b230)
+
+Read after `CHECKPOINT_HE_20261124_J.md`, which stays as written. One dated record of the CI-cost work, accepted by ADV as closed.
+
+- **2026-11-24 evening, CI profile (one unprofiled serial run, main `6dcf2b67d`, battery clone, 4 cores shared with live sessions):** wall 5,633 s (93.9 min); suite time 5,297 s over 271 suites; runner overhead about 336 s (6%). Top five: `test_repurposing_view` 1,177 s, `test_self_test_coverage` 690 s, `test_paper_packet` 681 s, `test_repository_surface_determinism` 634 s, `test_phase_handoff` 395 s, together 67.5% of suite time. Raw log and sorted times: `files/coordination/he_ci_profile_20261124/` (outside git).
+- **Finding, no change made:** one test of `test_self_test_coverage` (`test_survey_returns_the_two_declared_keys_for_every_row`) takes 303 s, of which 300 s is the parent waiting on one child run: the real self-test of `repo_root.py` under the write-guard tracer, about three times its untraced 111 s. It is neither git-history replay nor registry loading, and a cache would skip the very child run the test asserts, so no safe cut exists. The determinism suite spends its 634 s running the whole documented-commands guard on a differently altered tree per scenario; sharing a fixture would remove the isolation it tests.
+- **Two patches handed over, not applied (operator's):** the Pages two-job split and the gate `concurrency` block, both as YAML in section 3 of checkpoint J.
+- **Local relay folder:** the broken link in `files/coordination/adv-codex-loop/PLAYBOOK.md` line 27 (it named a heading that does not exist) was fixed by ADV; the run's only FAIL (`test_link_targets`) came from that untracked file, not from main.
+- Mandate state at this addendum: 106 steps DONE, 2 BLOCKED (launch of the SCI and IT successors, refused by the permission control); nothing else open.
