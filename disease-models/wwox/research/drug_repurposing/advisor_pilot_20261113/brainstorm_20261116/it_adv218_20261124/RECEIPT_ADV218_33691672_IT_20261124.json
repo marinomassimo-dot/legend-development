@@ -1,5 +1,5 @@
 {
- "analysis_at": "2026-11-24T22:39Z",
+ "analysis_at": "2026-11-24T22:41Z",
  "analysis_time_precision": "minute",
  "coverage": {
   "abstract": "read",
@@ -12,7 +12,7 @@
   "limitations": "not_present",
   "supplementary": "read"
  },
- "event_at": "2026-11-24T22:40:54Z",
+ "event_at": "2026-11-24T22:42:18Z",
  "event_id": "FTR-20261124-33691672-01",
  "evidence_basis": [
   "coverage_map",
