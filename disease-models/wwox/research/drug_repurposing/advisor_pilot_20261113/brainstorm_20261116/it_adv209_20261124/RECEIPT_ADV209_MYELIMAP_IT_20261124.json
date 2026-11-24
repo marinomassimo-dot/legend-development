@@ -1,0 +1,48 @@
+{
+ "analysis_at": "2026-11-24T10:38Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-24T10:38:55Z",
+ "event_id": "FTR-20261124-41664646-01",
+ "evidence_basis": [
+  "Ahuja et al. 2026, Lab on a Chip 26:1915-1929 (PMID 41664646, DOI 10.1039/d5lc01062d), open-access PDF by a plain request to the institutional repository (SHA-256 e50d3739975ce742c0e8004beb0dfaf89541f220d038ed38f7fe27eb0bbc3114, 3,082,910 bytes, 15 pages, text extracted with pdftotext); abstract, Results sections 1 to 5, Discussion and Conclusions and all figure captions read; Methods read for the evoked-activity recording, analysis and statistics passages and not for fabrication, cell culture, immunofluorescence and TEM preparation; Fig 5 viewed as a page image (panels c, d and e read at week 8, approximate), other figures not viewed; the introduction was not read beyond its opening; the supplementary information was not opened; the cited analysis pipeline was not read; the paper has no separate limitations section.",
+  "verbatim_locator | proposition: Fig 5 data collection: stimulation artifact exclusion | Methods (electrophysiology) | \"the corresponding PDMS microfluidic networks were excluded from the analysis (two coculture PDMS microfluidic network)\"",
+  "verbatim_locator | proposition: fixed assumed path for every speed value | Methods (analysis) | \"was approximated to be 1960 μm for all data points\"",
+  "verbatim_locator | proposition: latency taken at the start of the stimulation | Methods (analysis) | \"at the beginning of the stimulation\"",
+  "verbatim_locator | proposition: clusters extracted by a cited pipeline | Methods (analysis) | \"each induced response upon nerve stimulation was extracted via a clustering algorithm\"",
+  "verbatim_locator | proposition: monocultures showed more responses | Results 5 | \"Neuron monocultures consistently showed a higher number of responses compared to cocultures\"",
+  "verbatim_locator | proposition: authors' reason for the response difference | Results 5 | \"likely reflecting differences in axon excitability or axonal density\"",
+  "verbatim_locator | proposition: speed difference from week 6 | Results 5 | \"resulting in significantly faster conduction velocities from week 6 onward\"",
+  "verbatim_locator | proposition: replication in Fig 5 | Fig 5 legend | \"N = 5 independent experiments (HD-MEA chips) with n = 15 PDMS microfluidic networks (b–e)\"",
+  "verbatim_locator | proposition: networks per condition | Methods (longitudinal experiment) | \"6–15 PDMS microfluidic networks per condition\"",
+  "verbatim_locator | proposition: TEM only in co-culture, representative | Fig 3 legend | \"Representative images from N = 2 independent experiments on MyeliMAP with neuron-oligodendrocyte coculture with n = 6 PDMS microfluidic networks.\"",
+  "verbatim_locator | proposition: myelination partial | Discussion | \"we observed only partial rather than complete myelination of the neuronal network\"",
+  "verbatim_locator | proposition: data availability | Data availability | \"The data supporting this article have been included as part of the supplementary information (SI).\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv209_20261124/RESULT_ADV209_MYELIMAP_IT_20261124.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "e50d3739975ce742c0e8004beb0dfaf89541f220d038ed38f7fe27eb0bbc3114",
+ "source_kind": "fulltext_remote",
+ "source_locator": "institutional repository PDF of the open-access article (final typeset version), local scratch only, not copied into git",
+ "study_id": {
+  "doi": "10.1039/d5lc01062d",
+  "pmid": "41664646"
+ },
+ "workflow": "IT ADV-209: source check of a human induced-neuron microfluidic myelination platform for the INV-06 estimand wording (responding set versus speed); hypothesis level, no WWOX perturbation in the paper."
+}
