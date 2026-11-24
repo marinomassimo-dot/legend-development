@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-25738457-82",
+  "event_at": "2026-11-24T02:08:03Z",
+  "analysis_at": "2026-11-24T02:08:03Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "25738457",
+    "doi": "10.1016/j.cmet.2015.02.008"
+  },
+  "prior_receipt": "FTR-20261124-25738457-80",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/vigabatrin_loop_20261124/abat.xml",
+  "source_fingerprint": "801164b896d0eaa46e15f57b3a5beca95574f51929edec43a860116a92197a68",
+  "workflow": "Distinguish cellular and mitochondrial denominators and genetic and pharmacological arms.",
+  "evidence_basis": [
+    "Mitochondrial respiratory chain activity assay section and patient muscle result: activity relative to citrate synthase; citrate synthase 240% of mean control. Different specimens from pharmacological retinal exposure."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/vigabatrin/decision.md"
+  ]
+}

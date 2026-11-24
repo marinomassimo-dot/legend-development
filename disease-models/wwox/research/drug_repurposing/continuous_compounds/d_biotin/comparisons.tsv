@@ -1,0 +1,15 @@
+source	measure	reference	exposed	unit	difference	ratio
+27264091 Table 1	hippocampal free biotin pair-fed to deficient	2.7	0.5	nmol/g protein	-2.2	0.185185
+27264091 Table 1	cortical bound biotin pair-fed to deficient	0.4	0.9	nmol/g protein	0.5	2.25
+12214565 Table II Roc-1	PC replete to depleted	5670	252	pmol/min/mg protein	-5418	0.0444444
+12214565 Table II Roc-1	ACC replete to depleted	1392	602	pmol/min/mg protein	-790	0.432471
+12214565 Table II mainly astrocytes	PC replete to depleted	5739	1176	pmol/min/mg protein	-4563	0.204914
+12214565 Table II mainly astrocytes	ACC replete to depleted	1087	724	pmol/min/mg protein	-363	0.666053
+32470040 Fig2A table	O4 cells wrapping at 1.25 ug/mL	18.21	26.82	percent	8.61	1.47282
+32470040 Fig2A table	O4 cells wrapping at 250 ug/mL	18.21	27.58	percent	9.37	1.51455
+32470040 Results	O4 cells wrapping at 250 ug/mL	16.31	27.58	percent	11.27	1.69099
+32470040 Fig2B table	sheaths at 2.5 ug/mL	2.796	4.11	per cell	1.314	1.46996
+32470040 Fig2B table	sheaths at 250 ug/mL	2.796	3.48	per cell	0.684	1.24464
+32470040 Fig3 Results	ATP-linked oxygen consumption at 250 ug/mL	2.7	6	pmol/min/ug protein	3.3	2.22222
+18974016 Results	simultaneous trough plasma to CSF	1800	1000	nM total avidin binding	-800	0.555556
+33222767 author abstract	confirmed improvement placebo to MD1003	9.17722	11.9632	percent	2.78597	1.30358

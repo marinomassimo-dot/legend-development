@@ -1,0 +1,7 @@
+PMID	condition	measure	unit	control	vigabatrin	treated_over_control
+8897466	24h	GABA	umol/g	1.3	2.7	2.0769
+8897466	24h	model_synthesis	umol/g/min	0.14	0.04	0.28571
+8897466	24h	pool_over_synthesis	min	9.2857	67.5	7.2692
+8897466	24h	TCA	umol/g/min	0.52	0.47	0.90385
+16517019	5-6h	glucose_tracer_synthesis	umol/g/min	0.031	0.037	1.1935
+16517019	5-6h	acetate_tracer_synthesis	umol/g/min	0.078	0.084	1.0769

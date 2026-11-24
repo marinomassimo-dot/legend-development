@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-27903293-82",
+  "event_at": "2026-11-24T02:08:03Z",
+  "analysis_at": "2026-11-24T02:08:03Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "27903293",
+    "doi": "10.1186/s13041-016-0273-8"
+  },
+  "prior_receipt": "FTR-20261124-27903293-80",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/vigabatrin_loop_20261124/mild.xml",
+  "source_fingerprint": "1c2c59861d90aab03a5ccbddb3f7647f05ad2edf882ba339446a627e89ed234a",
+  "workflow": "Distinguish cellular and mitochondrial denominators and genetic and pharmacological arms.",
+  "evidence_basis": [
+    "Drug-exposed T98G Fig 2 vs Fig 3 patient fibroblasts; oxygen flux normalized to counted cells, five wells per sample; mtDNA relative to nuclear B2M."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/vigabatrin/decision.md"
+  ]
+}

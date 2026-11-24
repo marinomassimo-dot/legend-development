@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-16517019-80",
+  "event_at": "2026-11-24T02:04:15Z",
+  "analysis_at": "2026-11-24T02:04:15Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "16517019",
+    "doi": "10.1016/j.neuint.2005.12.024"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "files/deepening_downloads/vigabatrin_loop_20261124/flux.xml",
+  "source_fingerprint": "b571de1ee830d14ad7bfc843b76491a6a95204a3f8ff32ce81ac7aaa98ccd9bb",
+  "workflow": "Distinguish exposure, functional enzyme recovery, GABA pool versus flux, and alternative causes of a mitochondrial phenotype.",
+  "evidence_basis": [
+    "5–6 h anesthetized rat cortex: neither glucose- nor acetate-derived synthesis showed a significant decrease during constant GABA levels."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/vigabatrin/decision.md"
+  ]
+}

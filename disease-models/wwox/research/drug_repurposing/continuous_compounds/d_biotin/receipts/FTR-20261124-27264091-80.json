@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-27264091-80",
+  "event_at": "2026-11-24T02:25:31Z",
+  "analysis_at": "2026-11-24T02:25:31Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "27264091",
+    "doi": "10.3177/jnsv.62.81"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "read",
+    "tables": "read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/d_biotin_loop_20261124/rat_diet.pdf",
+  "source_fingerprint": "16f8d8eb5a29e3bb5913dc3511acf7af2630741d0369807271ca390e97b3f18a",
+  "workflow": "Test whether D-biotin-dependent carboxylation can account for developmental myelin changes and check clinical exposure against experimental readouts.",
+  "evidence_basis": [
+    "Table 1 pair-fed hippocampal free 2.7 vs deficient 0.5; cortex bound 0.4 vs 0.9 nmol/g protein. Fig 2 p84 visually checked, no ACC band or activity readout. Table 2 brain RNA and Discussion at pp85–86."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_biotin/README.md"
+  ]
+}
