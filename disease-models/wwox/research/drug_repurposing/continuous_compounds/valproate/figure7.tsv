@@ -1,0 +1,4 @@
+panel	endpoint	axis_zero_y	upper_tick_y	upper_tick_value	PBS_bar_y	VPA_bar_y	PBS_estimate	VPA_estimate	difference
+E	CC1_percent_all_DAPI	135	17	35	36	71	29.36	18.98	-10.38
+H	NG2_percent_all_DAPI	283	157	80	242	180	26.03	65.40	39.37
+M	NG2_BrdU_double_positive_per_area	420	329	16	350	356	12.31	11.25	-1.05
