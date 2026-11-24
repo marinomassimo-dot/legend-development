@@ -499,3 +499,5 @@
 {"evidence": "SendMessage at 07:41Z with the file pointer; IT asked at 07:45Z what it may take while the successor launch is pending", "id": "ADV-208", "receipt": ["da6b676c-306b-4911-9516-e81bdca619ef"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 748d7ec5"], "utc": "2026-11-24T07:41:26Z"}
 {"assessment": "HOST", "id": "ADV-209", "key": "myelimap-estimand-wording-for-inv06-with-source-check", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-24T10:36:27Z"}
 {"evidence": "SendMessage 10:36Z with file pointer", "id": "ADV-209", "receipt": ["f1559e0a-4701-4111-a2d9-b145fa12c549"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 748d7ec5"], "utc": "2026-11-24T10:36:43Z"}
+{"assessment": "HOST", "id": "ADV-210", "key": "ascorbic-acid-resumption-steps-1-2-while-codex-is-out", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-24T18:24:08Z"}
+{"assessment": "HOST", "id": "ADV-211", "key": "take-over-two-orphaned-codex-lane-wording-edits", "origin": "host", "recipient": "Orchestrator", "state": "DRAFTED", "utc": "2026-11-24T18:24:10Z"}
