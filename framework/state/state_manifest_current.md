@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261124_002
+last_batch_commit_id: BATCH_20261124_003
 last_batch_commit_date: 2026-11-24
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 1
+commit_candidates_propagated: 3
 target_wm_version: WM_v7.29
-trigger: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV-212 follow-up, ADV's word to write the repoint without triples 4 and 5). MAJOR by consequence as the candidate declares it (the Source of a consolidated baseline moves), not a baseline reversal, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: ONE candidate, CC-20260826-PROVENANCE-01 (the last open step, item C second half): the Source of CLAIM 002 repointed to PAPER 094 and the Claim links of PAPER 094 set to 002 (2 record-scoped ops), written without the Fig 2F and supplementary-volume triples; identifiers checked against the receipt ledger. The previous batch (BATCH_20261124_001: PAPER 542 and LIT-0814 label, CLAIM 002 and PAPER 094 Fig 6 wording) follows only as history in state_history.
+trigger: MANUAL (ACTOR_ID orchestrator, mandate IT59; ADV-212 candidate backlog at the trigger of five; three candidates, wording and depth lines, no version bump; the earlier same-day batch follows) — prior line: (ADV-212 follow-up, ADV's word to write the repoint without triples 4 and 5). MAJOR by consequence as the candidate declares it (the Source of a consolidated baseline moves), not a baseline reversal, WM_v7.29 preserved, no bump, no claim created, reversed or promoted: ONE candidate, CC-20260826-PROVENANCE-01 (the last open step, item C second half): the Source of CLAIM 002 repointed to PAPER 094 and the Claim links of PAPER 094 set to 002 (2 record-scoped ops), written without the Fig 2F and supplementary-volume triples; identifiers checked against the receipt ledger. The previous batch (BATCH_20261124_001: PAPER 542 and LIT-0814 label, CLAIM 002 and PAPER 094 Fig 6 wording) follows only as history in state_history.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -213,8 +213,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 65
-growth_anchor_head: 7a914ca8f6499aaaeff767103f983ece6833c66bc221d2b3645efec9dc40c339
+growth_anchor_events: 66
+growth_anchor_head: 58941c262cfac137ae4f924eff2631a2355bc3e92fd9de52ba67b3866bd0ca81
 ```
 
 ```bash
@@ -262,7 +262,7 @@ baseline below must equal the live count, never preserve historical padding.
 
 ```yaml
 unread_premise_baseline: 0
-unread_premise_measured_on: 2026-10-31
+unread_premise_measured_on: 2026-11-24
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions
