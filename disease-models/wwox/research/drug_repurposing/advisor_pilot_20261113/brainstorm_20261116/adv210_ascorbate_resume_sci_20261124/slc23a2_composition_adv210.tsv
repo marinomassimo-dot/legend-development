@@ -1,0 +1,73 @@
+model	item	value
+mouse_cortex	libraries_wt_ko	['CRTX_S_Ctrl_1', 'CRTX_S_Ctrl_2', 'CRTX_S_Ctrl_3', 'CRTX_S_Ctrl_4'] | ['CRTX_S_KO_1', 'CRTX_S_KO_2', 'CRTX_S_KO_3']
+mouse_cortex	genes_found	['Aldh1l1', 'Aqp4', 'Cldn5', 'Cspg4', 'Cx3cr1', 'Gad1', 'Gfap', 'Gja1', 'Mag', 'Mbp', 'Mog', 'P2ry12', 'Pdgfra', 'Pecam1', 'Plp1', 'Rbfox3', 'Slc17a7', 'Slc1a3', 'Slc23a2', 'Snap25', 'Syt1', 'Tmem119']
+mouse_cortex	SLC23A2_delta_TPM_log2	-0.6793
+mouse_cortex	SLC23A2_leave_one_out_range	-1.0327 to -0.1734
+mouse_cortex	panel_neuron_genes_used	5
+mouse_cortex	panel_astro_genes_used	5
+mouse_cortex	panel_oligo_genes_used	4
+mouse_cortex	panel_opc_genes_used	2
+mouse_cortex	panel_micro_genes_used	3
+mouse_cortex	panel_endo_genes_used	2
+mouse_cortex	POSTHOC_class_neuron_levels	mean_score_WT=8.70; mean_score_KO=8.63; r_with_genotype=-0.20
+mouse_cortex	class_neuron	score_shift_KO_minus_WT=-0.071; r_with_SLC23A2=0.717; adjusted_genotype_delta=-0.507; ratio_adj_to_unadj=0.75
+mouse_cortex	POSTHOC_class_astro_levels	mean_score_WT=6.65; mean_score_KO=6.76; r_with_genotype=0.61
+mouse_cortex	class_astro	score_shift_KO_minus_WT=0.115; r_with_SLC23A2=-0.455; adjusted_genotype_delta=-0.492; ratio_adj_to_unadj=0.72
+mouse_cortex	POSTHOC_class_oligo_levels	mean_score_WT=9.28; mean_score_KO=8.28; r_with_genotype=-0.81
+mouse_cortex	class_oligo	score_shift_KO_minus_WT=-0.997; r_with_SLC23A2=0.808; adjusted_genotype_delta=0.592; ratio_adj_to_unadj=-0.87
+mouse_cortex	POSTHOC_class_opc_levels	mean_score_WT=3.50; mean_score_KO=3.30; r_with_genotype=-0.36
+mouse_cortex	class_opc	score_shift_KO_minus_WT=-0.200; r_with_SLC23A2=0.787; adjusted_genotype_delta=-0.342; ratio_adj_to_unadj=0.50
+mouse_cortex	POSTHOC_class_micro_levels	mean_score_WT=4.29; mean_score_KO=3.36; r_with_genotype=-0.69
+mouse_cortex	class_micro	score_shift_KO_minus_WT=-0.925; r_with_SLC23A2=0.272; adjusted_genotype_delta=-0.815; ratio_adj_to_unadj=1.20
+mouse_cortex	POSTHOC_class_endo_levels	mean_score_WT=8.08; mean_score_KO=7.94; r_with_genotype=-0.23
+mouse_cortex	class_endo	score_shift_KO_minus_WT=-0.133; r_with_SLC23A2=0.166; adjusted_genotype_delta=-0.663; ratio_adj_to_unadj=0.98
+human_organoid	libraries_wt_ko	['cwt1', 'cwt2'] | ['cko1', 'cko2', 'cko3', 'cko4']
+human_organoid	genes_found	['ALDH1L1', 'AQP4', 'CLDN5', 'CSPG4', 'CX3CR1', 'GAD1', 'GFAP', 'GJA1', 'MAG', 'MBP', 'MOG', 'P2RY12', 'PDGFRA', 'PECAM1', 'PLP1', 'RBFOX3', 'SLC17A7', 'SLC1A3', 'SLC23A2', 'SNAP25', 'SYT1', 'TMEM119']
+human_organoid	library_total_counts	{'cko1': 38725699, 'cko2': 41153292, 'cko3': 38206349, 'cko4': 34206111, 'cwt1': 37256191, 'cwt2': 29979206}
+human_organoid	SLC23A2_delta_rawcount_log2	0.7275
+human_organoid	SLC23A2_delta_log2_commondepth35M_POSTHOC	0.5472
+human_organoid	SLC23A2_log2_ratio_group_mean_commondepth35M_POSTHOC	0.5615
+human_organoid	SLC23A2_log2_ratio_group_mean_rawcount	0.7327
+human_organoid	SLC23A2_commondepth_counts_wt_ko	[35.7, 32.9] | [47.3, 52.4, 48.4, 54.2]
+human_organoid	SLC23A2_delta_CPM_log2	0.3045
+human_organoid	SLC23A2_leave_one_out_range	0.2759 to 0.3331
+human_organoid	panel_neuron_genes_used	5
+human_organoid	panel_astro_genes_used	5
+human_organoid	panel_oligo_genes_used	4
+human_organoid	panel_opc_genes_used	2
+human_organoid	panel_micro_genes_used	3
+human_organoid	panel_endo_genes_used	2
+human_organoid	POSTHOC_class_neuron_levels	mean_score_WT=1.77; mean_score_KO=1.53; r_with_genotype=-0.67
+human_organoid	class_neuron	score_shift_KO_minus_WT=-0.243; r_with_SLC23A2=-0.508; adjusted_genotype_delta=0.359; ratio_adj_to_unadj=1.18
+human_organoid	POSTHOC_class_astro_levels	mean_score_WT=1.06; mean_score_KO=1.01; r_with_genotype=-0.15
+human_organoid	class_astro	score_shift_KO_minus_WT=-0.052; r_with_SLC23A2=-0.201; adjusted_genotype_delta=0.302; ratio_adj_to_unadj=0.99
+human_organoid	POSTHOC_class_oligo_levels	mean_score_WT=0.38; mean_score_KO=0.49; r_with_genotype=0.47
+human_organoid	class_oligo	score_shift_KO_minus_WT=0.115; r_with_SLC23A2=0.398; adjusted_genotype_delta=0.314; ratio_adj_to_unadj=1.03
+human_organoid	POSTHOC_class_opc_levels	mean_score_WT=0.08; mean_score_KO=0.12; r_with_genotype=0.56
+human_organoid	class_opc	score_shift_KO_minus_WT=0.039; r_with_SLC23A2=0.380; adjusted_genotype_delta=0.346; ratio_adj_to_unadj=1.14
+human_organoid	POSTHOC_class_micro_levels	mean_score_WT=0.01; mean_score_KO=0.02; r_with_genotype=0.40
+human_organoid	class_micro	score_shift_KO_minus_WT=0.014; r_with_SLC23A2=0.233; adjusted_genotype_delta=0.328; ratio_adj_to_unadj=1.08
+human_organoid	POSTHOC_class_endo_levels	mean_score_WT=0.07; mean_score_KO=0.13; r_with_genotype=0.49
+human_organoid	class_endo	score_shift_KO_minus_WT=0.065; r_with_SLC23A2=0.320; adjusted_genotype_delta=0.335; ratio_adj_to_unadj=1.10
+mouse_hippocampus	libraries_wt_ko	['S_Ctrl_1', 'S_Ctrl_2'] | ['S_KO_1', 'S_KO_2', 'S_KO_3']
+mouse_hippocampus	genes_found	['Aldh1l1', 'Aqp4', 'Cldn5', 'Cspg4', 'Cx3cr1', 'Gad1', 'Gfap', 'Gja1', 'Mag', 'Mbp', 'Mog', 'P2ry12', 'Pdgfra', 'Pecam1', 'Plp1', 'Rbfox3', 'Slc17a7', 'Slc1a3', 'Slc23a2', 'Snap25', 'Syt1', 'Tmem119']
+mouse_hippocampus	SLC23A2_delta_TPM_log2	-0.3273
+mouse_hippocampus	SLC23A2_leave_one_out_range	-0.6758 to 0.0167
+mouse_hippocampus	panel_neuron_genes_used	5
+mouse_hippocampus	panel_astro_genes_used	5
+mouse_hippocampus	panel_oligo_genes_used	4
+mouse_hippocampus	panel_opc_genes_used	2
+mouse_hippocampus	panel_micro_genes_used	3
+mouse_hippocampus	panel_endo_genes_used	2
+mouse_hippocampus	POSTHOC_class_neuron_levels	mean_score_WT=8.23; mean_score_KO=7.85; r_with_genotype=-0.58
+mouse_hippocampus	class_neuron	score_shift_KO_minus_WT=-0.382; r_with_SLC23A2=0.671; adjusted_genotype_delta=0.070; ratio_adj_to_unadj=-0.21
+mouse_hippocampus	POSTHOC_class_astro_levels	mean_score_WT=7.01; mean_score_KO=7.14; r_with_genotype=0.17
+mouse_hippocampus	class_astro	score_shift_KO_minus_WT=0.128; r_with_SLC23A2=0.427; adjusted_genotype_delta=-0.407; ratio_adj_to_unadj=1.24
+mouse_hippocampus	POSTHOC_class_oligo_levels	mean_score_WT=8.79; mean_score_KO=6.57; r_with_genotype=-0.93
+mouse_hippocampus	class_oligo	score_shift_KO_minus_WT=-2.221; r_with_SLC23A2=0.554; adjusted_genotype_delta=1.247; ratio_adj_to_unadj=-3.81
+mouse_hippocampus	POSTHOC_class_opc_levels	mean_score_WT=3.81; mean_score_KO=3.11; r_with_genotype=-0.83
+mouse_hippocampus	class_opc	score_shift_KO_minus_WT=-0.701; r_with_SLC23A2=0.788; adjusted_genotype_delta=0.976; ratio_adj_to_unadj=-2.98
+mouse_hippocampus	POSTHOC_class_micro_levels	mean_score_WT=3.87; mean_score_KO=3.28; r_with_genotype=-0.68
+mouse_hippocampus	class_micro	score_shift_KO_minus_WT=-0.591; r_with_SLC23A2=0.549; adjusted_genotype_delta=0.058; ratio_adj_to_unadj=-0.18
+mouse_hippocampus	POSTHOC_class_endo_levels	mean_score_WT=5.62; mean_score_KO=5.58; r_with_genotype=-0.07
+mouse_hippocampus	class_endo	score_shift_KO_minus_WT=-0.038; r_with_SLC23A2=0.764; adjusted_genotype_delta=-0.277; ratio_adj_to_unadj=0.85
