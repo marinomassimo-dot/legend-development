@@ -2,6 +2,9 @@
 """ci_runs.py: the verdict over the workflow runs of one commit (no network)."""
 import contextlib
 import io
+import json
+import urllib.error
+from unittest import mock
 import os
 import shutil
 import sys
@@ -192,6 +195,72 @@ class SharedRead(unittest.TestCase):
         with contextlib.redirect_stdout(out):
             self.assertEqual(ci_runs.main(["status", sha]), 124)
         self.assertIn("#9 gate: in_progress", out.getvalue()); self.assertIn("not current", out.getvalue())
+
+
+NOW = ci_runs.parse_time("2026-11-24T22:00:00Z")
+
+
+def gate(n, status, created, conclusion=None, name="Public release gate", branch="main"):
+    return {"run_number": n, "name": name, "status": status, "conclusion": conclusion, "head_sha": f"{n:08x}" + "0" * 32,
+            "head_branch": branch, "event": "push", "created_at": created}
+
+
+class Queue(unittest.TestCase):
+    RUNS = [gate(12, "in_progress", "2026-11-24T21:30:00Z"), gate(10, "in_progress", "2026-11-24T20:00:00Z"),
+            gate(13, "queued", "2026-11-24T21:59:00Z"), gate(9, "completed", "2026-11-24T19:00:00Z", "success"),
+            gate(8, "completed", "2026-11-24T18:00:00Z", "cancelled"), gate(7, "completed", "2026-11-24T17:00:00Z", "failure"),
+            gate(3, "in_progress", "2026-11-24T21:00:00Z", name="Publish the shareable view")]
+
+    def test_timestamps_are_utc_and_not_the_local_zone(self):
+        self.assertEqual(ci_runs.parse_time("1970-01-01T00:00:00Z"), 0.0)
+        self.assertEqual(ci_runs.parse_time("2026-11-24T22:00:00Z") - ci_runs.parse_time("2026-11-24T21:00:00Z"), 3600.0)
+        self.assertIsNone(ci_runs.parse_time("nonsense"))
+
+    def test_open_runs_are_ordered_oldest_first_with_positions_and_ages(self):
+        view = ci_runs.queue_view(self.RUNS, NOW)
+        self.assertEqual([(r["position"], r["run"]) for r in view["rows"]], [(1, 10), (2, 12), (3, 13)])
+        self.assertEqual((view["open"], view["in_progress"], view["queued"]), (3, 2, 1))
+        self.assertEqual(view["oldest_age_seconds"], 7200.0)
+        self.assertEqual(view["rows"][2]["age_seconds"], 60.0)
+
+    def test_another_workflow_is_not_counted_and_can_be_asked_for(self):
+        self.assertEqual(ci_runs.queue_view(self.RUNS, NOW)["open"], 3)
+        other = ci_runs.queue_view(self.RUNS, NOW, "Publish the shareable view")
+        self.assertEqual([r["run"] for r in other["rows"]], [3])
+
+    def test_the_window_counts_conclusions_so_a_cancelled_share_can_be_read(self):
+        view = ci_runs.queue_view(self.RUNS, NOW)
+        self.assertEqual(view["window"], {"success": 1, "cancelled": 1, "failure": 1})
+        self.assertEqual(view["window_runs"], 6)
+        self.assertEqual(view["window_span_seconds"], 5 * 3600.0)
+
+    def test_an_empty_queue_is_a_line_not_an_error(self):
+        view = ci_runs.queue_view([gate(9, "completed", "2026-11-24T19:00:00Z", "success")], NOW)
+        lines = ci_runs.render_queue(view)
+        self.assertTrue(lines[0].startswith("QUEUE Public release gate: 0 open (0 in progress, 0 queued)"))
+        self.assertNotIn("oldest", lines[0])
+
+    def test_render_names_position_run_sha_branch_and_age(self):
+        lines = ci_runs.render_queue(ci_runs.queue_view(self.RUNS, NOW))
+        self.assertIn("oldest 2h00m", lines[0])
+        self.assertIn("1. #10 0000000a main push in_progress age 2h00m", lines[1])
+
+    def test_the_command_reads_one_list_prints_and_exits_zero_without_network(self):
+        out = io.StringIO()
+        with mock.patch.object(ci_runs, "slug", return_value="o/r"), mock.patch.object(ci_runs, "fetch_recent", return_value=self.RUNS) as fetched, \
+                mock.patch.object(ci_runs, "write_recent"), contextlib.redirect_stdout(out):
+            self.assertEqual(ci_runs.main(["queue", "--json"]), 0)
+        self.assertEqual(fetched.call_count, 1)
+        self.assertEqual(json.loads(out.getvalue())["open"], 3)
+
+    def test_an_unreadable_api_is_exit_2_never_an_empty_queue(self):
+        err = io.StringIO()
+        denied = urllib.error.HTTPError("", 403, "rate limit", {"X-RateLimit-Remaining": "0", "X-RateLimit-Reset": str(time.time() + 600)}, None)
+        with mock.patch.object(ci_runs, "slug", return_value="o/r"), mock.patch.object(ci_runs, "fetch_recent", side_effect=denied), contextlib.redirect_stderr(err):
+            self.assertEqual(ci_runs.main(["queue"]), 2)
+        self.assertIn("rate limit", err.getvalue())
+        with mock.patch.object(ci_runs, "slug", return_value="o/r"), mock.patch.object(ci_runs, "fetch_recent", side_effect=OSError("down")), contextlib.redirect_stderr(err):
+            self.assertEqual(ci_runs.main(["queue"]), 2)
 
 
 if __name__ == "__main__":

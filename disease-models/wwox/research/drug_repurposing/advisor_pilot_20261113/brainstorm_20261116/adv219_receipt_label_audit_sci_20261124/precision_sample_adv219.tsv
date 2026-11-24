@@ -1,0 +1,16 @@
+sample_no	study_key	section	latest_receipt_label	class	section_is_real_i	label_contradicted_ii	note
+1	42846717	methods	not_present	A	yes	yes	one-sentence Methods section of a narrative review (271 characters); receipt digest equals the held file
+2	27869163	references	unavailable	A	yes	yes	41 references in the held XML; receipt was made from a different copy (digest differs)
+3	42136830	limitations	not_present	A	yes	yes	"Strengths and limitations" section, 3583 characters; digest equal
+4	17909041	tables	not_present	A	yes	yes	Table 1 with numeric rows on page 4; digest equal
+5	24932569	figures	unavailable	A	yes	yes	Figure 1 image on page 21 of an author-manuscript PDF; receipt from a different copy
+6	42589397	tables	not_present	A	yes	yes	two table-wrap elements, 37 rows; digest equal
+7	27869163	figures	unavailable	A	yes	yes	Figure 1 image on page 4 of the held PDF; receipt from a different copy
+8	40119223	methods	not_present	A	no	no	section title is "Newer approach for monitoring and screening methods": a topic heading, not a Methods section (title-substring false positive)
+9	41977367	references	not_read	B	yes	not_applicable	149 references in the held XML
+10	42422765	abstract	not_read	B	yes	not_applicable	abstract element, 1612 characters
+11	29666206	introduction	not_read	B	yes	not_applicable	Introduction section, 3631 characters
+12	41210171	references	not_read	B	yes	not_applicable	46 references
+13	40586768	introduction	not_read	B	yes	not_applicable	INTRODUCTION section, 6723 characters
+14	32652616	results	not_read	B	yes	not_applicable	Results section, 13408 characters
+15	24456803	abstract	not_read	B	yes	not_applicable	abstract element, 962 characters

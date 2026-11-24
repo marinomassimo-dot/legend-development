@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-24T22:41Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read"
+ },
+ "event_at": "2026-11-24T22:42:18Z",
+ "event_id": "FTR-20261124-42991897-01",
+ "evidence_basis": [
+  "coverage_map",
+  "files/fulltext/PMID42991897_Lai2026_PMC13739471_epmc.xml (Europe PMC JATS, structured text, read whole including Tables 1 to 5, locators matched to it)",
+  "files/figures/PMID42991897/ (Figures 1 to 3 and Supplementary Figure S2 opened as images)",
+  "files/fulltext/PMID42991897_supplement/ (Supplementary Figure S1 opened as an image; the four-sheet workbook S1 to S4 read sheet by sheet)",
+  "not covered: reference list counted (33), titles not read; the analysis code is available on request and was not requested; the gnomAD browser tables were not re-queried"
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42991897.json",
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv218_20261124/RESULT_ADV218_IT_20261124.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "c693a918d1bb3768251c398f5433e8868c2235995175f53869e7397a9822e510",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42991897_Lai2026_PMC13739471_epmc.xml",
+ "study_id": {
+  "doi": "10.3389/fgene.2026.1973684",
+  "pmid": "42991897"
+ },
+ "workflow": "IT ADV-218, QUESTION_DRIVEN reading by a reader that held the OPEN-row questions and a pre-registered prediction (committed before the text was opened). The open-access Europe PMC text was saved, fingerprinted and read section by section, the figure images were opened, and verbatim locators were recorded in the work manifest. fulltext_receipts.py status returned no event for the PMID before this reading. No contact with any author, no e-mail to any service, no paid route."
+}

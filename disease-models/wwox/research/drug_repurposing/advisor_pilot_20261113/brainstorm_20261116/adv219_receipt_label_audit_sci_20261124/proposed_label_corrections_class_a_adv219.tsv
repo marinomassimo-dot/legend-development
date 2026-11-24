@@ -1,0 +1,20 @@
+study_key	population	latest_depth	section	latest_receipt_label	class	held_artefact	evidence	latest_receipt_event	receipt_digest_equals_artefact	rule_risk
+17909041	primary	partial_fulltext_read	tables	not_present	A	PMID17909041_Aqeilan2007_CancerRes_fulltext.pdf	pdf p4: 'Table 1. Association of Wwox i'	FTR-20261122-17909041-01	yes	none
+26419537	primary	partial_fulltext_read	tables	not_present	A	PMID26419537_Chen2015_PMC_r2.xml	xml: table-wrap with rows	FTR-20261021-26419537-01	yes	none
+28919853	primary	partial_fulltext_read	tables	not_present	A	PMID28919853_CDK5astro2017_PMC_r2.xml	xml: table-wrap with rows	FTR-20261022-28919853-01	yes	none
+31331032	primary	partial_fulltext_read	tables	not_present	A	PMID31331032_R3b_PMC_r2.xml	xml: table-wrap with rows	FTR-20261022-31331032-01	yes	none
+31605637	primary	partial_fulltext_read	tables	not_present	A	PMID31605637_NQO1_P187S_PMC7027498_epmc_2026-10-29.xml	xml: table-wrap with rows	FTR-20261029-31605637-01	yes	none
+31781019	primary	partial_fulltext_read	tables	not_present	A	PMID31781019_Kam2019_PMC_r2.xml	xml: table-wrap with rows	FTR-20261021-31781019-01	yes	none
+33704440	primary	partial_fulltext_read	tables	not_present	A	PMID33704440_ElGhaleb2021_PMC_r2.xml	xml: table-wrap with rows	FTR-20261022-33704440-02	yes	none
+34253921	primary	partial_fulltext_read	tables	not_present	A	PMC8410666_PMID34253921_ncbi_efetch_pmc_2026-10-29.xml	xml: table-wrap with rows	FTR-20261029-34253921-01	yes	none
+36278433	primary	partial_fulltext_read	tables	not_present	A	PMID36278433_Guyon2022_PMC_r2.xml	xml: table-wrap with rows	FTR-20261027-36278433-02	no	none
+36282524	primary	partial_fulltext_read	tables	not_present	A	PMID36282524_Barker2023_PMC_r2.xml	xml: table-wrap with rows	FTR-20261021-36282524-01	yes	none
+39337309	primary	partial_fulltext_read	limitations	not_present	A	adv052_he_20261118/PMID39337309_PMC11432152_europepmc.xml	xml: sec title '6.1. Current ASMs for Treating CAE and T'	FTR-20261118-39337309-53	yes	title-substring match, check by hand
+39769031	primary	partial_fulltext_read	discussion	not_present	A	PMID39769031_RicoMolina2024_PMC_r2.xml	xml: sec title '2. Results and Discussion'	FTR-20261026-39769031-01	yes	none
+40119223	primary	partial_fulltext_read	methods	not_present	A	PMID40119223_Garg2025_PMC.xml	xml: sec title 'Newer approach for monitoring and screen'	FTR-20261019-40119223-01	yes	title-substring match, check by hand
+41137852	primary	partial_fulltext_read	tables	not_present	A	PMID41137852_wwoxrows_main.xml	xml: table-wrap with rows	FTR-20261021-41137852-01	no	none
+42190665	primary	partial_fulltext_read	tables	not_present	A	PMC13293933_PMID42190665_europepmc_fulltext_2026-10-29.xml	xml: table-wrap with rows	FTR-20261029-42190665-01	yes	none
+42494992	primary	partial_fulltext_read	methods	not_present	A	PMID42494992_Acosta2026_PMC13393641.xml	xml: sec title 'Use of innovative methodologies'	FTR-20261022-42494992-01	yes	title-substring match, check by hand
+42589397	primary	partial_fulltext_read	tables	not_present	A	PMID42589397_ZZ2026_PMC_2026-09-27.xml	xml: table-wrap with rows	FTR-20261019-42589397-05	yes	none
+42770556	primary	partial_fulltext_read	tables	not_present	A	PMID42770556_Lima2026_PMC.xml	xml: table-wrap with rows	FTR-20261004-42770556-01	yes	none
+42846717	primary	partial_fulltext_read	methods	not_present	A	PMID42846717_Samanta2026_PMC_r2.xml	xml: sec title 'Methods'	FTR-20261019-42846717-01	yes	none

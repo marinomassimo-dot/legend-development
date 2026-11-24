@@ -1,0 +1,41 @@
+#rank	score	paper	key	flagged_sections	linked_rows	title
+1	29	PAPER 444	42268630	discussion,introduction,methods,references,tables	WO-01:tok,WO-02:tok,WO-03:tok,WO-07:tok,WO-14:tok,WO-20:tok,WO-21:tok,WO-23:tok	Virtual Screening and Zebrafish Phenotype-Based Evaluation Argues Against Repurposing 4-Ph
+2	13	PAPER 448	24953239	references	WO-10:tok,WO-17:tok,WO-21:tok,WO-24:tok,IT43-Q03:tok,IT45-Q01:tok,IT47-Q02:tok,IT48-Q01:tok	Thalamocortical neurons display suppressed burst-firing due to an enhanced Ih current in a
+3	10	PAPER 450	29463073	introduction,references,tables	WO-21:tok,WO-24:tok,WO-27:tok,WO-36:tok,RS-NP1B2:tok,IT50-Q10:tok,IT59-Q01:tok,IT59-Q04:tok	T-Type Calcium Channels Are Required to Maintain Viability of Neural Progenitor Cells.
+4	10	PAPER 461	37082241	introduction,references,tables	WO-21:tok,WO-24:tok,WO-25:tok,NR-04:tok,UN-N08:tok,EN-03:tok,IT44-Q02:tok,IT48-Q01:tok	MEPIRAPIM-derived synthetic cannabinoids inhibit T-type calcium channels with divergent ef
+5	10	PAPER 496	31331032	tables	WO-26:tok,WO-27:tok,WO-36:tok,RS-NP3A1:tok,IT43-Q01:tok,IT48-Q01:tok,IT49-Q04:tok,IT49-Q09:tok	Roscovitine Attenuates Microglia Activation and Monocyte Infiltration via p38 MAPK Inhibit
+6	8	PAPER 006	30290271	discussion,introduction,tables	WO-07:tok,WO-27:tok,WO-36:tok,RS-NP3A1:tok,IT45-Q02:tok,IT56-Q02:tok	Wwox deletion leads to reduced GABA-ergic inhibitory interneuron numbers and activation of
+7	8	CORPUS-STUB-085	30290271	discussion,introduction,tables	WO-07:tok,WO-27:tok,WO-36:tok,RS-NP3A1:tok,IT45-Q02:tok,IT56-Q02:tok	Wwox deletion leads to reduced GABA-ergic inhibitory interneuron numbers and activation of
+8	6	PAPER 011	42422765	abstract,discussion,methods,references	WO-20:tok,WO-21:tok,WO-27:tok,RS-R6:tok,IT56-Q08R:tok,IT59-Q01:tok	Neuron-Specific WWOX Gene Therapy Produces Dose-Dependent, Durable Rescue in a Model of WW
+9	6	PAPER 022	31543760	abstract,discussion,introduction,tables	WO-21:tok,WO-22:tok,WO-27:tok,IT59-Q01:tok	The WWOX Gene Influences Cellular Pathways in the Neuronal Differentiation of Human Neural
+10	6	PAPER 213	41751597	references	WO-21:tok,WO-24:tok,WO-27:tok,IT56-Q01:tok,IT56-Q02:tok,IT59-Q01:tok	A Head-to-Head Comparison of AAV9 Biodistribution in Mice: Routes of Administration and Ag
+11	6	PAPER 467	41137852	tables	WO-20:tok,WO-21:tok,RS-R6:tok,IT46-Q04:tok	Clinical and genetic landscape of epilepsies with absence seizures and single-gene etiolog
+12	6	PAPER 535	23583307	introduction,references,tables	WO-21:tok,WO-27:tok,RS-NP3A1:tok,IT55-Q01:tok	Brain development in rodents and humans: Identifying benchmarks of maturation and vulnerab
+13	5	PAPER 007	36828035	abstract,discussion,figures,introduction,methods	WO-26:tok,WO-34:tok,IT59-Q03:tok	WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammatio
+14	5	PAPER 056	22193544	references	WO-21:tok,WO-22:tok,WO-27:tok,IT47-Q01:tok,IT55-Q02:tok	WW domain-containing oxidoreductase promotes neuronal differentiation via negative regulat
+15	5	PAPER 094	42397075	abstract,discussion,introduction,results,tables	RS-R9:id	Disrupted WWOX-MYC interplay impairs neurogenesis in human brain organoids
+16	5	PAPER 112	36828035	abstract,discussion,figures,introduction,methods	WO-26:tok,WO-34:tok,IT59-Q03:tok	WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammatio
+17	5	PAPER 243	42770556	introduction,tables	WO-07:tok,IT40-Q02:tok,IT59-Q01:tok	PRMT1-SFPQ regulates intron retention to control matrix gene expression during craniofacia
+18	5	PAPER 344	40589985	references	WO-21:tok,WO-24:tok,WO-26:tok,IT30-CQ2:tok,IT47-Q01:tok	Effect of visual stimulation on epilepsy susceptibility in neonatal hypoglycemic brain inj
+19	5	PAPER 407	42738851	introduction,methods,results	WO-20:tok,WO-27:tok,RS-R8:tok	The Fragile Site Landscape of Induced Pluripotent Stem Cells: Hierarchy, Variability, Tiss
+20	5	CORPUS P401	40349107	references	WO-27:tok,RS-NP3A5:tok,IT50-Q10:tok,IT59-Q01:tok,IT59-Q04:tok	Neuron-targeted gene therapy rescues multiple phenotypes of STXBP1-related disorders
+21	5	CORPUS-STUB-053	36828035	abstract,discussion,figures,introduction,methods	WO-26:tok,WO-34:tok,IT59-Q03:tok	WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammatio
+22	4	PAPER 031	34634460	abstract,discussion,introduction,tables	IT56-Q02:tok,IT59-Q04:tok	Altered neocortical oscillations and cellular excitability in an in vitro Wwox knockout mo
+23	4	PAPER 109	27869163	figures,references,tables	WO-20:tok,WO-27:tok	Wwox–Brca1 interaction: role in DNA repair pathway choice
+24	4	PAPER 305	41977367	references,tables	WO-24:tok,WO-27:tok	Chloride Homeostasis Failure in Human Disease: KCC2/NKCC1 Microdomain Dysfunction as a Dri
+25	4	PAPER 348	38681648	references	WO-27:tok,TS-01:tok,IT59-Q01:tok,IT59-Q04:tok	Wernicke encephalopathy induced by glucose infusion: A case report and literature review
+26	4	PAPER 463	40068874	discussion,introduction,methods,references,tables	WO-25:tok,IT59-Q04:tok	Maturational Stage-Dependent Contributions of the Cav3.2 T-Type Calcium Channel to Dentate
+27	4	PAPER 475	35372341	abstract,discussion,introduction,tables	WO-27:tok,IT30-CQ3:tok	Clemastine Induces an Impairment in Developmental Myelination.
+28	4	PAPER 562	36432491	abstract,introduction,references	WO-01:tok,WO-02:tok,WO-20:tok,IT59-Q04:tok	Combined Treatment of Dichloroacetic Acid and Pyruvate Increased Neuronal Survival after S
+29	4	CORPUS-STUB-046	27869163	figures,references,tables	WO-20:tok,WO-27:tok	Wwox-Brca1 interaction: role in DNA repair pathway choice
+30	3	PAPER 005	34747138	discussion,introduction,methods,results	IT59-Q04:tok	Neonatal neuronal WWOX gene therapy rescues Wwox null phenotypes
+31	3	PAPER 015	39507621	abstract,discussion,introduction	RS-NP3A1:tok,UN-N08:tok,IT59-Q01:tok	Case report: Adult patient with WWOX developmental and epileptic encephalopathy — 40 years
+32	3	PAPER 145	42092735	abstract,discussion,introduction	UN-N08:tok,IT56-Q01:tok,IT59-Q04:tok	WWOX Mutation as a Rare Cause of Neonatal-Infantile Parkinsonism Mimicking a Neurotransmit
+33	3	PAPER 157	10.1101/2025.11.22.689900	discussion,figures,introduction,methods,references,results	WO-27:tok	WWOX deficiency uncovers a cell-autonomous mechanism impairing myelin repair
+34	3	PAPER 180	41948127	references,tables	WO-27:tok	Safety, efficacy, and distal nerve Schwann cell biodistribution in mice and NHPs to suppor
+35	3	PAPER 188	40301740	references	WO-16:tok,WO-24:tok,WO-27:tok	Preclinical evaluation of AAV9-coSMN1 gene therapy for spinal muscular atrophy: efficacy a
+36	3	PAPER 405	36979157	results	WO-24:tok	Antineoplastic Nature of WWOX in Glioblastoma Is Mainly a Consequence of Reduced Cell Viab
+37	3	PAPER 412	36587184	abstract,references	WO-27:tok,RS-NP3A1:tok,IT50-Q10:tok	Single-cell resolved ploidy and chromosomal aberrations in nonalcoholic steatohepatitis-(N
+38	3	PAPER 449	26419537	tables	WO-20:tok	Ethosuximide ameliorates neurodegenerative disease phenotypes by modulating DAF-16/FOXO ta
+39	3	PAPER 495	29940337	abstract,introduction,methods,references	WO-20:tok,WO-22:tok,WO-27:tok	Glycogen synthase kinase-3β inhibition enhances myelination in preterm newborns with intra
+40	3	PAPER 567	42909904	abstract,discussion,introduction	RS-R6:id	Alzheimer's disease risk gene Wwox controls amyloid pathology through metabolic reprogramm

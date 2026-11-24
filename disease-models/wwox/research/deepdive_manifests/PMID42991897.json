@@ -1,0 +1,298 @@
+{
+ "schema_version": 2,
+ "pmid": "42991897",
+ "doi": "10.3389/fgene.2026.1973684",
+ "receipt": "FTR-20261124-42991897-01",
+ "landing": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv218_20261124/RESULT_ADV218_IT_20261124.md",
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv218_20261124/PREREG_ADV218_IT_20261124.md"
+ ],
+ "coverage_status": "complete_fulltext_read",
+ "declared_reading_gap": "The reference list was not enumerated; the analysis code is 'available on request' and was not requested; the gnomAD browser tables themselves were not re-queried (counts are those printed in the paper and its workbook).",
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "ADV-218 reading-debt package: a complete read with verbatim locators and a receipt, no commit candidate and no promotion of the record."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC fullTextXML and the PMC open-data bucket (figures and deposited supplements), both lawful and keyless; nothing refused."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Neurogenetics group of a Chinese university hospital; population-database analysis, no WWOX-specific work."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX[tiab] AND gnomAD[tiab]",
+    "route": "PubMed esearch rettype=count, 2026-11-24",
+    "count": 3
+   }
+  ],
+  "note": "WWOX is four of 17 reported variants; not a WWOX-directed paper."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 33,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "note": "References counted from the XML, titles not read in this pass; no multi-hop was run."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "fulltext_receipts.py status --pmid 42991897; git grep of the four WWOX alleles and 'gnomAD' under disease-models/wwox/registries",
+  "hits": 1,
+  "finding": "No receipt before this reading (CORPUS-STUB candidate of ADV-215, screening only). No registry sentence quotes a gnomAD frequency for c.2T>C, p.Glu171Ter, c.172+1G>C or p.Arg54Ter."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-11-24",
+  "route": "retraction_check.py (PubMed, Europe PMC)",
+  "result": "Checked 2026-11-24 with retraction_check.py (PubMed and Europe PMC): flagged 0; no retraction, expression of concern or correction listed for the PMID.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 33,
+   "references_screened": 33,
+   "references_with_doi": 33,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 34,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42991897_Lai2026_PMC13739471_epmc.xml",
+   "sha256": "c693a918d1bb3768251c398f5433e8868c2235995175f53869e7397a9822e510",
+   "kind": "article_text",
+   "note": "Europe PMC full-text XML (JATS) of the CC BY article PMC13739471; body, table, caption and reference text.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13739471/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "c693a918d1bb3768251c398f5433e8868c2235995175f53869e7397a9822e510"
+   }
+  },
+  {
+   "path": "files/figures/PMID42991897/fgene-17-1973684-g001.webp",
+   "sha256": "7b69a04eaa8b91ea1f913d16d6361a9e11a17fdc2e2ebca0be4c5a6b514bbd50",
+   "kind": "figure",
+   "note": "Figure 1 image from the PMC open-data bucket, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13739471.1/fgene-17-1973684-g001.webp",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "7b69a04eaa8b91ea1f913d16d6361a9e11a17fdc2e2ebca0be4c5a6b514bbd50"
+   }
+  },
+  {
+   "path": "files/figures/PMID42991897/fgene-17-1973684-g002.webp",
+   "sha256": "8eae515b80de23cf79b843ac608a586c3e7874b008ff147bf3f022f709486833",
+   "kind": "figure",
+   "note": "Figure 2 image from the PMC open-data bucket, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13739471.1/fgene-17-1973684-g002.webp",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "8eae515b80de23cf79b843ac608a586c3e7874b008ff147bf3f022f709486833"
+   }
+  },
+  {
+   "path": "files/figures/PMID42991897/fgene-17-1973684-g003.webp",
+   "sha256": "3139679e15e635aa6c9a3aca24d9e03781ad671a1965820d2cccb36be2d2dc78",
+   "kind": "figure",
+   "note": "Figure 3 image from the PMC open-data bucket, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13739471.1/fgene-17-1973684-g003.webp",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "3139679e15e635aa6c9a3aca24d9e03781ad671a1965820d2cccb36be2d2dc78"
+   }
+  },
+  {
+   "path": "files/figures/PMID42991897/Image2.jpeg",
+   "sha256": "4e4ec79e4e8781f698afa3bc01f34561653e7f720cf7a27758f2b2795749f7e8",
+   "kind": "figure",
+   "note": "Supplementary Figure S2 (detectability) image from the PMC open-data bucket, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13739471.1/Image2.jpeg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "4e4ec79e4e8781f698afa3bc01f34561653e7f720cf7a27758f2b2795749f7e8"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42991897_supplement/Image1.tif",
+   "sha256": "eb347dda66d0019f4ad044d99be2894d43df3cc68aa1848774320acea2bdac0b",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure S1 (matching procedure) image, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13739471.1/Image1.tif",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "eb347dda66d0019f4ad044d99be2894d43df3cc68aa1848774320acea2bdac0b"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42991897_supplement/Table1.xlsx",
+   "sha256": "ff4afef66e1c5d184c18f588f2bd67182bee18e1d04b162fb64e8b05409d7b12",
+   "kind": "supplement_binary",
+   "note": "Supplementary Tables S1 to S4 workbook (gene list with constraint metrics; 17 variants with all populations; the 45 false positives; the workflow comparison), read sheet by sheet.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13739471.1/Table1.xlsx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-24",
+    "result_sha256": "ff4afef66e1c5d184c18f588f2bd67182bee18e1d04b162fb64e8b05409d7b12"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC fullTextXML of PMC13739471, three main figures, Supplementary Figure S2 and the deposited workbook and Figure S1 file saved and fingerprinted; figures opened as images, the workbook read sheet by sheet.",
+  "abstract_anchoring_waived": "Abstract statements are compared with Results text and figures in the entries; the quotes below are anchored in the body, tables or figure images.",
+  "note": "ADV-218 part 2: complete read of the gnomAD v4.1.1 East Asian against non-Finnish European analysis, with the question whether any allele frequency bears on a registry statement about the reference genotype class or penetrance (answer in the result file).",
+  "entries": [
+   {
+    "proposition": "WWOX START-LOSS ALLELE c.2T>C: 4 of 40,686 East Asian alleles against 3 of 1,149,400 non-Finnish European alleles (ClinVar Pathogenic, one star); the reported OR 36.3 (9.0 to 146.9) and the uncorrected Fisher p of about 4.4 x 10^-5 were reproduced by the reader from the printed counts; the paper's q = 3.6 x 10^-3 is the Benjamini-Hochberg value over 805 tests.",
+    "snippet": "WWOX c.2T > C, a start-loss variant (4 of 40,686)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42991897_Lai2026_PMC13739471_epmc.xml",
+    "anchor": "Results 3.3 Nucleotide-resolved EAS-enriched P/LP variants",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE PAPER STATES THE FOLD DIFFERENCE AND THE RANGE: five of the nine significant variants are 38 to 158 times more frequent in East Asians and four are absent from NFE; the WWOX start-loss allele is the 38-fold member.",
+    "snippet": "Four variants were absent from NFE; the other five showed EAS allele frequencies 38- to 158-fold higher than their NFE frequencies.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42991897_Lai2026_PMC13739471_epmc.xml",
+    "anchor": "Results 3.3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "TWO WWOX NONSENSE AND SPLICE ALLELES ARE EXPLORATORY ONLY: p.Glu171Ter (2 of 44,864) and c.172+1G>C (2 of 44,874), both absent from NFE; two alleles is the detection floor, they do not survive correction.",
+    "snippet": "These comprised AARS1 p. Arg330Ter (3 of 44,886), WWOX p. Glu171Ter (2 of 44,864), and WWOX c.172 + 1G > C (2 of 44,874).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42991897_Lai2026_PMC13739471_epmc.xml",
+    "anchor": "Results 3.4 Exploratory low-frequency signals and recessive-gene concentration",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX p.Arg54Ter IS A DENOMINATOR EFFECT, NOT AN EXCESS OF EAST ASIAN CARRIERS: raw East Asian count 3 against 5 in NFE (about 26 times fewer East Asian alleles tested); the paper calls it East and South Asian enriched (SAS 3 of 91,068 in Supplementary Table S2).",
+    "snippet": "Two of the eight, WWOX p. Arg54Ter and KCNC1 p. Arg164Trp, had raw EAS counts that did not exceed their NFE counts.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42991897_Lai2026_PMC13739471_epmc.xml",
+    "anchor": "Results 3.4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE PAPER IS A FREQUENCY ANALYSIS, NOT A DISCOVERY OR PENETRANCE STUDY; WWOX is named among seven established recessive genes ('WWOX (epileptic encephalopathy)').",
+    "snippet": "Our study quantifies the East Asian population frequencies of their P/LP variants rather than claims their discovery.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42991897_Lai2026_PMC13739471_epmc.xml",
+    "anchor": "Discussion, second paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "HOW FREQUENCY ENTERS INTERPRETATION IN THE PAPER: as a filter (a variant common in reference populations cannot cause fully penetrant severe early-onset disease), never as a penetrance estimate; no genotype, phenotype or segregation data are analysed.",
+    "snippet": "Population allele frequency is a cornerstone of this interpretation, because variants common in reference populations cannot cause fully penetrant, severe early-onset disease.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42991897_Lai2026_PMC13739471_epmc.xml",
+    "anchor": "Introduction, first paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE ANALYSIS HAS A DETECTION FLOOR ABOUT 4.5 X 10^-5 IN EAST ASIANS and an asymmetric denominator; a missing East Asian signal below it proves nothing. Counts of two or three are sensitive to artefacts and relatedness.",
+    "snippet": "The EAS-NFE comparison is asymmetric in sample size and insensitive to EAS-specific enrichment below an allele frequency of about 4.5 × 10−5; negative findings below this floor do not imply equal frequencies.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42991897_Lai2026_PMC13739471_epmc.xml",
+    "anchor": "Discussion, limitations paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXPLORATORY SIGNALS DID NOT SURVIVE CORRECTION: the authors state that counts of two or three are sensitive to sequencing artefacts and to relatives in gnomAD.",
+    "snippet": "The exploratory low-frequency signals did not survive multiple-testing correction, and their allele counts of two or three are sensitive to sequencing artifacts and the inclusion of related individuals in gnomAD.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42991897_Lai2026_PMC13739471_epmc.xml",
+    "anchor": "Discussion, limitations paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE ALLELE-IDENTITY CLAIM THAT MATTERS FOR ANY WWOX FREQUENCY QUOTED FROM A RSID LOOKUP: 45 of 60 rsID-level candidates were false (one is WWOX p.Arg310Pro, whose most common allele at that position is p.Arg310His); a WWOX frequency taken from an rsID alone can belong to a different allele.",
+    "snippet": "Nucleotide-resolved matching confirmed only fifteen of these as genuine P/LP signals, corresponding to a false-positive rate of 45 of 60 (75.0%) (Figure 3).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42991897_Lai2026_PMC13739471_epmc.xml",
+    "anchor": "Results 3.5 Methodological comparison",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIGURE 2 AS DRAWN: four WWOX points among the 17 (c.2T>C significant, East Asian allele frequency about 10^-4.0, 38-fold; p.Arg54Ter exploratory, about 10^-4.2, 16-fold; p.Glu171Ter and c.172+1G>C exploratory at the detection floor, NFE absent). Circles mark recessive genes.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2: WWOX c.2T>C red circle at EAS AF about 10^-4.0 with 38x; WWOX p.Arg54Ter orange circle at about 10^-4.2 with 16x; WWOX p.Glu171Ter and c.172+1G>C orange circles on the dashed detection floor with arrows (NFE absent); all WWOX points are circles (recessive).",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42991897/fgene-17-1973684-g002.webp",
+    "anchor": "Figure 2A and 2B, image fgene-17-1973684-g002.webp",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FIGURE 3 AS DRAWN: panel B Venn counts 15 confirmed, 45 false positives, 2 recovered; panel C bars 20, 20, 4, 1; the WWOX points of panel A lie between the 10-fold and 100-fold lines or at the left edge for NFE-absent alleles.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3: Venn 15 confirmed, 45 false positives, 2 recovered; bar chart 20 synonymous, 20 other missense, 4 splice-region, 1 tri-allelic start-loss; scatter of the 17 signals between the 10x and 100x lines.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42991897/fgene-17-1973684-g003.webp",
+    "anchor": "Figure 3, image fgene-17-1973684-g003.webp",
+    "panel_text_relation": "panel_only"
+   }
+  ]
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261124-42991897-01",
+   "reader": "orchestrator (IT successor, session 7cf5e85a), ADV-218",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "First ledger receipt for this paper (ADV-215 had read the WWOX sentences only, nothing saved). Complete read of text, three figures, two supplementary figures and the four-sheet workbook.",
+   "outputs": [
+    "disease-models/wwox/research/deepdive_manifests/PMID42991897.json",
+    "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_adv218_20261124/RESULT_ADV218_IT_20261124.md"
+   ]
+  }
+ ]
+}

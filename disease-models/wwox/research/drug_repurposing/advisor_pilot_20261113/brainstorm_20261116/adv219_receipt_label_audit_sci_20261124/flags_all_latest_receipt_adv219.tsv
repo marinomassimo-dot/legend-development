@@ -1,0 +1,1189 @@
+study_key	population	latest_depth	section	latest_receipt_label	class	held_artefact	evidence	latest_receipt_event	receipt_digest_equals_artefact
+10.1101/2025.11.22.689900	primary	partial_fulltext_read	introduction	not_read	B	PPR1124524_Abudiab2025_bioRxiv.pdf	pdf p2: heading 'Introduction'	FTR-20261124-PPR1124524-01	yes
+10.1101/2025.11.22.689900	primary	partial_fulltext_read	methods	not_read	B	PPR1124524_Abudiab2025_bioRxiv.pdf	pdf p23: heading 'Methods'	FTR-20261124-PPR1124524-01	yes
+10.1101/2025.11.22.689900	primary	partial_fulltext_read	results	not_read	B	PPR1124524_Abudiab2025_bioRxiv.pdf	pdf p3: heading 'Results'	FTR-20261124-PPR1124524-01	yes
+10.1101/2025.11.22.689900	primary	partial_fulltext_read	discussion	not_read	B	PPR1124524_Abudiab2025_bioRxiv.pdf	pdf p8: heading 'Discussion'	FTR-20261124-PPR1124524-01	yes
+10.1101/2025.11.22.689900	primary	partial_fulltext_read	figures	not_read	B	PPR1124524_Abudiab2025_bioRxiv.pdf	pdf p10: 'Figure 1. WWOX is implicated i' (images 6, chars 17568)	FTR-20261124-PPR1124524-01	yes
+10.1101/2025.11.22.689900	primary	partial_fulltext_read	references	not_read	B	PPR1124524_Abudiab2025_bioRxiv.pdf	pdf p35: References heading	FTR-20261124-PPR1124524-01	yes
+10.21203/rs.3.rs-9950101/v1	primary	partial_fulltext_read	references	not_read	B	PPR1316475_Carter2026_ResearchSquare.pdf	pdf p30: References heading	FTR-20261004-PPR1316475-01	yes
+10.29011/JVM-106.100006	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/d_pantothenate_loop_20261124/rao.pdf	pdf p1: heading 'Abstract'	FTR-20261124-10.29011-JVM-106.100006-80	yes
+10.29011/JVM-106.100006	primary	partial_fulltext_read	figures	not_read	B	deepening_downloads/d_pantothenate_loop_20261124/rao.pdf	pdf p4: 'Figure 1: Mean Plasma Pantothe' (images 1, chars 4844)	FTR-20261124-10.29011-JVM-106.100006-80	yes
+10.48550/arXiv.2512.13724	primary	partial_fulltext_read	results	not_read	B	ARXIV2512.13724v1_Noori2025_PROTON.pdf	pdf p3: heading 'Results'	FTR-20261101-ARXIV2512.13724-01	yes
+10.48550/arXiv.2512.13724	primary	partial_fulltext_read	figures	not_read	B	ARXIV2512.13724v1_Noori2025_PROTON.pdf	pdf p17: 'Figure 1: Overview of P ROTON.' (images 2, chars 1273)	FTR-20261101-ARXIV2512.13724-01	yes
+10.64898/2026.01.16.26344264	primary	partial_fulltext_read	references	not_read	B	PPR1269651_vanderSanden2026_medRxiv.xml	xml: ref-list	FTR-20261004-PPR1269651-01	yes
+10.82444/warw.33664381	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/d_ribose_loop_20261124/Zur_Nedden_thesis.pdf	pdf p24: heading '1 Introduction'	FTR-20261124-WARW45926-95	yes
+10.82444/warw.33664381	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/d_ribose_loop_20261124/Zur_Nedden_thesis.pdf	pdf p63: heading 'Methods'	FTR-20261124-WARW45926-95	yes
+10.82444/warw.33664381	primary	partial_fulltext_read	figures	captions_only	B	deepening_downloads/d_ribose_loop_20261124/Zur_Nedden_thesis.pdf	pdf p29: 'Figure 1.1: Energy consuming p' (images 1, chars 1616)	FTR-20261124-WARW45926-95	yes
+10.82444/warw.33664381	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/d_ribose_loop_20261124/Zur_Nedden_thesis.pdf	pdf p91: 'Table 3.1 and shown for AMP in'	FTR-20261124-WARW45926-95	yes
+10407087	secondary	abstract_only	introduction	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: sec title 'Introduction'	FTR-20261124-10407087-80	no
+10407087	secondary	abstract_only	methods	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: sec title 'Methods'	FTR-20261124-10407087-80	no
+10407087	secondary	abstract_only	results	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: sec title 'Results'	FTR-20261124-10407087-80	no
+10407087	secondary	abstract_only	discussion	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: sec title 'Discussion'	FTR-20261124-10407087-80	no
+10407087	secondary	abstract_only	limitations	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: sec title 'Limitations of the study'	FTR-20261124-10407087-80	no
+10407087	secondary	abstract_only	tables	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: table-wrap with rows	FTR-20261124-10407087-80	no
+10536022	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/pyridoxine_loop_20261123/tian.html	html: heading 'Materials and Methods'	FTR-20261123-10536022-98	yes
+10536022	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/pyridoxine_loop_20261123/tian.html	html: heading 'Discussion'	FTR-20261123-10536022-98	yes
+10627592	primary	partial_fulltext_read	discussion	not_read	B	PMID10627592_PMC6774109_Nehring2000_page.html	html: heading 'DISCUSSION'	FTR-20261117-10627592-01	yes
+12086975	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/levetiracetam_loop_20261124/rigo.html	html: heading 'Introduction'	FTR-20261124-12086975-80	yes
+12086975	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/levetiracetam_loop_20261124/rigo.html	html: heading 'Methods'	FTR-20261124-12086975-80	yes
+12086975	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/levetiracetam_loop_20261124/rigo.html	html: heading 'Discussion and conclusions'	FTR-20261124-12086975-80	yes
+12118259	primary	partial_fulltext_read	figures	not_read	B	deepening_downloads/lamotrigine_loop_20261124/dendritic_primary.pdf	pdf p2: 'Fig. 1. Lamotrigine (LTG) sele' (images 2, chars 10971)	FTR-20261124-12118259-87	yes
+12534635	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/betaine_loop_20261124/PMC1884185.html	html: heading 'Introduction'	FTR-20261124-12534635-95	yes
+12534635	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/betaine_loop_20261124/PMC1884185.html	html: heading 'Methods'	FTR-20261124-12534635-95	yes
+12534635	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/betaine_loop_20261124/PMC1884185.html	html: heading 'Discussion'	FTR-20261124-12534635-95	yes
+12904467	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/topiramate_loop_20261124/gluK1_classic.html	html: heading 'Introduction'	FTR-20261124-12904467-80	yes
+12904467	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/topiramate_loop_20261124/gluK1_classic.html	html: heading 'Discussion'	FTR-20261124-12904467-80	yes
+13539215	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/d_ribose_loop_20261124/JCI103658.pdf	pdf p1: heading 'MATERIALS AND METHODS'	FTR-20261124-13539215-95	yes
+13539215	primary	partial_fulltext_read	figures	not_read	B	deepening_downloads/d_ribose_loop_20261124/JCI103658.pdf	pdf p3: 'Figure 3. From the curve, the ' (images 1, chars 4236)	FTR-20261124-13539215-95	yes
+16275822	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/oxcarbazepine_loop_20261124/pediatric_fda.pdf	pdf p6: heading '2.      INTRODUCTION'	FTR-20261124-16275822-01	yes
+16650136	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/stiripentol_loop_20261124/Quilichini_2006.pdf	pdf p9: heading 'DISCUSSION'	FTR-20261124-16650136-88	yes
+17018285	primary	partial_fulltext_read	figures	captions_only	B	PMID17018285_Sardi2006_Cell_fulltext.pdf	pdf p2: 'Figure 1. Activated E4ICD Inte' (images 1, chars 4040)	FTR-20261122-17018285-01	yes
+17070687	primary	partial_fulltext_read	figures	captions_only	B	deepening_downloads/l_glutamine_loop_20261124/Tani_2007_author.pdf	pdf p4: 'Fig. 1. Exogenous glutamine le' (images 1, chars 7712)	FTR-20261124-17070687-98	yes
+17679088	primary	partial_fulltext_read	introduction	not_read	B	PMID17679088_Zhang2007_PMC.html	html: heading 'Introduction'	FTR-20261004-17679088-02	yes
+17679088	primary	partial_fulltext_read	results	not_read	B	PMID17679088_Zhang2007_PMC.html	html: heading 'RESULTS'	FTR-20261004-17679088-02	yes
+17679088	primary	partial_fulltext_read	discussion	not_read	B	PMID17679088_Zhang2007_PMC.html	html: heading 'DISCUSSION'	FTR-20261004-17679088-02	yes
+17909041	primary	partial_fulltext_read	tables	not_present	A	PMID17909041_Aqeilan2007_CancerRes_fulltext.pdf	pdf p4: 'Table 1. Association of Wwox i'	FTR-20261122-17909041-01	yes
+182198	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/d_pantothenate_loop_20261124/dastur.pdf	pdf p13: heading 'DISCUSSION'	FTR-20261124-182198-80	yes
+182198	primary	partial_fulltext_read	figures	not_read	B	deepening_downloads/d_pantothenate_loop_20261124/dastur.pdf	pdf p7: 'Fig. 1. Total vitamin B 6 conc' (images 1, chars 2853)	FTR-20261124-182198-80	yes
+18615011	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/tiagabine_loop_20261124/pet.xml	xml: sec title 'INTRODUCTION'	FTR-20261124-18615011-80	yes
+18615011	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/tiagabine_loop_20261124/pet.xml	xml: sec title 'MATERIALS AND METHODS'	FTR-20261124-18615011-80	yes
+18615011	primary	partial_fulltext_read	results	not_read	B	deepening_downloads/tiagabine_loop_20261124/pet.xml	xml: sec title 'RESULTS'	FTR-20261124-18615011-80	yes
+18615011	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/tiagabine_loop_20261124/pet.xml	xml: sec title 'DISCUSSION'	FTR-20261124-18615011-80	yes
+18690052	primary	partial_fulltext_read	figures	captions_only	B	deepening_downloads/gabapentin_loop_20261124/trafficking_timecourse.pdf	pdf p2: 'Figure 1. Gabapentin does not ' (images 1, chars 5482)	FTR-20261124-18690052-82	yes
+18974016	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/d_biotin_loop_20261124/2630166.xml	xml: sec title 'Introduction'	FTR-20261124-18974016-80	yes
+18996865	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/d_biotin_loop_20261124/3097470.xml	xml: abstract element	FTR-20261124-18996865-80	yes
+18996865	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/d_biotin_loop_20261124/3097470.xml	xml: sec title 'INTRODUCTION'	FTR-20261124-18996865-80	yes
+18996865	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/d_biotin_loop_20261124/3097470.xml	xml: sec title 'SUBJECTS AND METHODS'	FTR-20261124-18996865-80	yes
+18996865	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/d_biotin_loop_20261124/3097470.xml	xml: sec title 'DISCUSSION'	FTR-20261124-18996865-80	yes
+19158287	primary	partial_fulltext_read	introduction	not_read	B	PMID19158287_PMC2744993_Chen2009_page.html	html: heading 'Introduction'	FTR-20261123-19158287-95	yes
+19158287	primary	partial_fulltext_read	discussion	not_read	B	PMID19158287_PMC2744993_Chen2009_page.html	html: heading 'Discussion'	FTR-20261123-19158287-95	yes
+19261873	primary	partial_fulltext_read	introduction	not_read	B	adv050_20261118/PMC2679254.html	html: heading 'Introduction'	FTR-20261118-19261873-01	yes
+19261873	primary	partial_fulltext_read	methods	not_read	B	adv050_20261118/PMC2679254.html	html: heading 'Materials and Methods'	FTR-20261118-19261873-01	yes
+19261873	primary	partial_fulltext_read	discussion	not_read	B	adv050_20261118/PMC2679254.html	html: heading 'Discussion'	FTR-20261118-19261873-01	yes
+19265499	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/sodium_selenite_loop_20261124/sbp2.html	html: heading 'Introduction'	FTR-20261124-19265499-80	yes
+19367790	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/stiripentol_loop_20261124/19367790.xml	xml: abstract element	FTR-20261124-19367790-89	yes
+19367790	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/stiripentol_loop_20261124/19367790.xml	xml: sec title 'Methods'	FTR-20261124-19367790-89	yes
+19367790	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/stiripentol_loop_20261124/19367790.xml	xml: sec title 'Discussion'	FTR-20261124-19367790-89	yes
+19751803	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/l_glutamine_loop_20261124/2789247.xml	xml: abstract element	FTR-20261124-19751803-99	yes
+19936220	primary	partial_fulltext_read	abstract	not_read	B	PMID19936220_LudesMeyers2009_PMC2777388_epmc.xml	xml: abstract element	FTR-20261124-19936220-86	no
+19936220	primary	partial_fulltext_read	introduction	not_read	B	PMID19936220_LudesMeyers2009_PMC2777388_epmc.xml	xml: sec title 'Introduction'	FTR-20261124-19936220-86	no
+19936220	primary	partial_fulltext_read	methods	not_read	B	PMID19936220_LudesMeyers2009_PMC2777388_epmc.xml	xml: sec title 'Materials and Methods'	FTR-20261124-19936220-86	no
+19936220	primary	partial_fulltext_read	discussion	not_read	B	PMID19936220_LudesMeyers2009_PMC2777388_epmc.xml	xml: sec title 'Discussion'	FTR-20261124-19936220-86	no
+20089937	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/topiramate_loop_20261124/infant.html	html: heading 'DISCUSSION'	FTR-20261124-20089937-80	yes
+20167261	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/lamotrigine_loop_20261124/20167261.xml	xml: abstract element	FTR-20261124-20167261-89	yes
+20167261	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/lamotrigine_loop_20261124/20167261.xml	xml: sec title 'Discussion'	FTR-20261124-20167261-89	yes
+20464498	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/triacetin_loop_20261124/20464498.xml	xml: abstract element	FTR-20261124-20464498-90	yes
+20464498	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/triacetin_loop_20261124/20464498.xml	xml: sec title 'Introduction'	FTR-20261124-20464498-90	yes
+20464498	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/triacetin_loop_20261124/20464498.xml	xml: sec title 'Discussion'	FTR-20261124-20464498-90	yes
+20713726	primary	partial_fulltext_read	methods	not_read	B	PMID20713726_PMC2932566_Caballero2010_page.html	html: heading 'Methods'	FTR-20261117-20713726-01	yes
+21075834	primary	partial_fulltext_read	methods	not_read	B	PMID21075834_OKeefe2011_PMC_r2.xml	xml: sec title 'MATERIALS AND METHODS'	FTR-20261110-21075834-83	yes
+21075834	primary	partial_fulltext_read	discussion	not_read	B	PMID21075834_OKeefe2011_PMC_r2.xml	xml: sec title 'DISCUSSION'	FTR-20261110-21075834-83	yes
+21075834	primary	partial_fulltext_read	tables	not_read	B	PMID21075834_OKeefe2011_PMC_r2.xml	xml: table-wrap with rows	FTR-20261110-21075834-83	yes
+21075834	primary	partial_fulltext_read	references	not_read	B	PMID21075834_OKeefe2011_PMC_r2.xml	xml: ref-list	FTR-20261110-21075834-83	yes
+21237147	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/stiripentol_loop_20261124/21237147.xml	xml: abstract element	FTR-20261124-21237147-89	yes
+21237147	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/stiripentol_loop_20261124/21237147.xml	xml: sec title '1. Introduction'	FTR-20261124-21237147-89	yes
+21237147	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/stiripentol_loop_20261124/21237147.xml	xml: sec title '2. Materials and Methods'	FTR-20261124-21237147-89	yes
+21237147	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/stiripentol_loop_20261124/21237147.xml	xml: sec title '4. Discussion'	FTR-20261124-21237147-89	yes
+21379380	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/uridine_triacetate_loop_20261124/adult.xml	xml: abstract element	FTR-20261124-21379380-80	yes
+21379380	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/uridine_triacetate_loop_20261124/adult.xml	xml: sec title 'Introduction'	FTR-20261124-21379380-80	yes
+21379380	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/uridine_triacetate_loop_20261124/adult.xml	xml: sec title 'Discussion'	FTR-20261124-21379380-80	yes
+21459558	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/betaine_loop_20261124/PMC3376448.xml	xml: abstract element	FTR-20261124-21459558-95	yes
+21459558	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/betaine_loop_20261124/PMC3376448.xml	xml: sec title 'Introduction'	FTR-20261124-21459558-95	yes
+21459558	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/betaine_loop_20261124/PMC3376448.xml	xml: sec title 'Discussion'	FTR-20261124-21459558-95	yes
+21508245	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/d_ribose_loop_20261124/PMC6632980.html	html: heading 'Introduction'	FTR-20261124-21508245-94	yes
+21508245	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/d_ribose_loop_20261124/PMC6632980.html	html: heading 'Materials and Methods'	FTR-20261124-21508245-94	yes
+21508245	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/d_ribose_loop_20261124/PMC6632980.html	html: heading 'Discussion'	FTR-20261124-21508245-94	yes
+21674654	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/ascorbate_loop_20261124/adult_mrs.xml	xml: abstract element	FTR-20261124-21674654-01	yes
+21674654	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/ascorbate_loop_20261124/adult_mrs.xml	xml: sec title 'INTRODUCTION'	FTR-20261124-21674654-01	yes
+21674654	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/ascorbate_loop_20261124/adult_mrs.xml	xml: table-wrap with rows	FTR-20261124-21674654-01	yes
+21681606	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/sulforaphane_loop_20261124/21681606.xml	xml: abstract element	FTR-20261124-21681606-84	yes
+21681606	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/sulforaphane_loop_20261124/21681606.xml	xml: sec title 'Introduction'	FTR-20261124-21681606-84	yes
+21681606	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/sulforaphane_loop_20261124/21681606.xml	xml: table-wrap with rows	FTR-20261124-21681606-84	yes
+21964340	primary	partial_fulltext_read	references	not_read	B	rescued_from_scratch_he46/08a575e0c750__PMID21964340_nat.xml	xml: ref-list	FTR-20261112-21964340-75	yes
+21964341	primary	partial_fulltext_read	references	not_read	B	PMID21964341_Sanai2011_PMC.xml	xml: ref-list	FTR-20260927-21964341-01	yes
+22137594	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/acetylcysteine_loop_20261123/PMC3340445.html	html: heading 'Introduction'	FTR-20261123-22137594-77	yes
+22137594	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/acetylcysteine_loop_20261123/PMC3340445.html	html: heading 'Discussion'	FTR-20261123-22137594-77	yes
+22193544	primary	partial_fulltext_read	references	not_read	B	PMID22193544_Wang2012_PMC.xml	xml: ref-list	FTR-20260927-22193544-06	yes
+22544747	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/taurine_loop_20261123/PMC3375508.html	html: heading 'Introduction'	FTR-20261123-22544747-99	yes
+22544747	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/taurine_loop_20261123/PMC3375508.html	html: heading 'DISCUSSION'	FTR-20261123-22544747-99	yes
+22609537	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/r_lipoic_loop_20261124/adult_pk.pdf	pdf p1: heading 'Abstract'	FTR-20261124-22609537-82	yes
+22609537	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/r_lipoic_loop_20261124/adult_pk.pdf	pdf p2: heading '1. Introduction'	FTR-20261124-22609537-82	yes
+22609537	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/r_lipoic_loop_20261124/adult_pk.pdf	pdf p6: heading '4. Discussion'	FTR-20261124-22609537-82	yes
+22766033	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/gabapentin_loop_20261124/cortical_injury.xml	xml: sec title 'Materials and Methods'	FTR-20261124-22766033-82	yes
+22766033	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/gabapentin_loop_20261124/cortical_injury.xml	xml: sec title 'Discussion'	FTR-20261124-22766033-82	yes
+22812691	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/oxcarbazepine_loop_20261124/fda.pdf	pdf p381: heading 'Introduction'	FTR-20261124-22812691-01	yes
+22812691	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/oxcarbazepine_loop_20261124/fda.pdf	pdf p382: heading 'Methods'	FTR-20261124-22812691-01	yes
+22812691	primary	partial_fulltext_read	results	not_read	B	deepening_downloads/oxcarbazepine_loop_20261124/fda.pdf	pdf p345: heading 'Results'	FTR-20261124-22812691-01	yes
+22830360	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/l_glutamine_loop_20261124/PMC3495849.xml	xml: abstract element	FTR-20261124-22830360-98	yes
+22830360	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/l_glutamine_loop_20261124/PMC3495849.xml	xml: sec title 'Introduction'	FTR-20261124-22830360-98	yes
+22830360	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/l_glutamine_loop_20261124/PMC3495849.xml	xml: sec title 'Discussion'	FTR-20261124-22830360-98	yes
+22830360	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/l_glutamine_loop_20261124/PMC3495849.xml	xml: table-wrap with rows	FTR-20261124-22830360-98	yes
+22938201	primary	partial_fulltext_read	references	not_read	B	PMID22938201_GonzalezHilarion2012_PMC_2026-10-20.xml	xml: ref-list	FTR-20261020-22938201-01	yes
+23022402	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/ubiquinol_loop_20261124/PMC3975832.xml	xml: abstract element	FTR-20261124-23022402-80	yes
+23022402	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/ubiquinol_loop_20261124/PMC3975832.xml	xml: sec title '1.1 Introduction'	FTR-20261124-23022402-80	yes
+23022402	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/ubiquinol_loop_20261124/PMC3975832.xml	xml: sec title '1.3 Discussion'	FTR-20261124-23022402-80	yes
+23022402	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/ubiquinol_loop_20261124/PMC3975832.xml	xml: table-wrap with rows	FTR-20261124-23022402-80	yes
+23536761	primary	partial_fulltext_read	abstract	not_read	B	adv065b_20261118/PMID23536761_PMC3594228_efetch_pmc.xml	xml: abstract element	FTR-20261118-23536761-66	yes
+23536761	primary	partial_fulltext_read	methods	not_read	B	adv065b_20261118/PMID23536761_PMC3594228_efetch_pmc.xml	xml: sec title 'Methods'	FTR-20261118-23536761-66	yes
+23536761	primary	partial_fulltext_read	results	not_read	B	adv065b_20261118/PMID23536761_PMC3594228_efetch_pmc.xml	xml: sec title 'Results'	FTR-20261118-23536761-66	yes
+23536761	primary	partial_fulltext_read	references	not_read	B	adv065b_20261118/PMID23536761_PMC3594228_efetch_pmc.xml	xml: ref-list	FTR-20261118-23536761-66	yes
+23559625	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/l_carnosine_loop_20261124/pmid_23559625.xml	xml: abstract element	FTR-20261124-23559625-81	yes
+23559625	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/l_carnosine_loop_20261124/pmid_23559625.xml	xml: sec title 'Methods'	FTR-20261124-23559625-81	yes
+23559625	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/l_carnosine_loop_20261124/pmid_23559625.xml	xml: sec title 'Discussion'	FTR-20261124-23559625-81	yes
+23583307	primary	partial_fulltext_read	introduction	not_read	B	PMID23583307_Semple2013_PMC.xml	xml: sec title '1. Introduction'	FTR-20261105-23583307-06	no
+23583307	primary	partial_fulltext_read	tables	not_read	B	PMID23583307_Semple2013_PMC.xml	xml: table-wrap with rows	FTR-20261105-23583307-06	no
+23583307	primary	partial_fulltext_read	references	not_read	B	PMID23583307_Semple2013_PMC.xml	xml: ref-list	FTR-20261105-23583307-06	no
+23611579	primary	partial_fulltext_read	tables	not_read	B	PMID23611579_Abdelmalak2013_PMC_r2.xml	xml: table-wrap with rows	FTR-20261023-23611579-01	yes
+23713028	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/cannabidiol_loop_20261124/23713028.html	html: heading 'Introduction'	FTR-20261124-23713028-92	yes
+23713028	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/cannabidiol_loop_20261124/23713028.html	html: heading 'Methods'	FTR-20261124-23713028-92	yes
+23713028	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/cannabidiol_loop_20261124/23713028.html	html: heading 'Discussion'	FTR-20261124-23713028-92	yes
+23881097	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/acetazolamide_loop_20261123/PMC3746197-az.xml	xml: abstract element	FTR-20261123-23881097-83	yes
+23881097	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/acetazolamide_loop_20261123/PMC3746197-az.xml	xml: sec title 'Introduction'	FTR-20261123-23881097-83	yes
+23881097	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/acetazolamide_loop_20261123/PMC3746197-az.xml	xml: sec title 'Discussion'	FTR-20261123-23881097-83	yes
+24002024	primary	partial_fulltext_read	abstract	not_read	B	PMID24002024_Baraban2013_PMC_r2.xml	xml: abstract element	FTR-20261124-24002024-01	yes
+24002024	primary	partial_fulltext_read	methods	not_read	B	PMID24002024_Baraban2013_PMC_r2.xml	xml: sec title 'Methods'	FTR-20261124-24002024-01	yes
+24002024	primary	partial_fulltext_read	references	not_read	B	PMID24002024_Baraban2013_PMC_r2.xml	xml: ref-list	FTR-20261124-24002024-01	yes
+24081159	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/levetiracetam_loop_20261124/grauert.xml	xml: abstract element	FTR-20261124-24081159-80	yes
+24081159	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/levetiracetam_loop_20261124/grauert.xml	xml: table-wrap with rows	FTR-20261124-24081159-80	yes
+24101301	primary	partial_fulltext_read	methods	not_read	B	adv050_20261118/PMC3834148.html	html: heading 'Materials and Methods'	FTR-20261118-24101301-01	yes
+24101301	primary	partial_fulltext_read	discussion	not_read	B	adv050_20261118/PMC3834148.html	html: heading 'Discussion'	FTR-20261118-24101301-01	yes
+24253200	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/riboflavin_loop_20261123/PMC3891447.xml	xml: abstract element	FTR-20261123-24253200-94	yes
+24253200	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/riboflavin_loop_20261123/PMC3891447.xml	xml: sec title 'Introduction'	FTR-20261123-24253200-94	yes
+24253200	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/riboflavin_loop_20261123/PMC3891447.xml	xml: sec title 'Materials and methods'	FTR-20261123-24253200-94	yes
+24253200	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/riboflavin_loop_20261123/PMC3891447.xml	xml: sec title 'Discussion'	FTR-20261123-24253200-94	yes
+24253200	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/riboflavin_loop_20261123/PMC3891447.xml	xml: table-wrap with rows	FTR-20261123-24253200-94	yes
+24308844	secondary	abstract_only	introduction	not_read	B	PMID24308844_Schuchardt2013_PMC.xml	xml: sec title 'INTRODUCTION'	FTR-20261108-24308844-99	no
+24308844	secondary	abstract_only	methods	not_read	B	PMID24308844_Schuchardt2013_PMC.xml	xml: sec title 'MATERIALS and METHODS'	FTR-20261108-24308844-99	no
+24308844	secondary	abstract_only	results	not_read	B	PMID24308844_Schuchardt2013_PMC.xml	xml: sec title 'RESULTS and DISCUSSION'	FTR-20261108-24308844-99	no
+24308844	secondary	abstract_only	discussion	not_read	B	PMID24308844_Schuchardt2013_PMC.xml	xml: sec title 'RESULTS and DISCUSSION'	FTR-20261108-24308844-99	no
+24308844	secondary	abstract_only	tables	not_read	B	PMID24308844_Schuchardt2013_PMC.xml	xml: table-wrap with rows	FTR-20261108-24308844-99	no
+24308844	secondary	abstract_only	references	not_read	B	PMID24308844_Schuchardt2013_PMC.xml	xml: ref-list	FTR-20261108-24308844-99	no
+24341803	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/r_lipoic_loop_20261124/LIPT1.xml	xml: abstract element	FTR-20261124-24341803-80	yes
+24341803	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/r_lipoic_loop_20261124/LIPT1.xml	xml: sec title 'Discussion'	FTR-20261124-24341803-80	yes
+24341803	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/r_lipoic_loop_20261124/LIPT1.xml	xml: table-wrap with rows	FTR-20261124-24341803-80	yes
+24366103	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/inosine_loop_20261124/PMC3940333.xml	xml: abstract element	FTR-20261124-24366103-94	yes
+24366103	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/inosine_loop_20261124/PMC3940333.xml	xml: sec title 'DISCUSSION'	FTR-20261124-24366103-94	yes
+24366103	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/inosine_loop_20261124/PMC3940333.xml	xml: table-wrap with rows	FTR-20261124-24366103-94	yes
+24369382	primary	partial_fulltext_read	introduction	not_read	B	PMID24369382_Mallaret2014_PMCreader.html	html: heading 'Introduction'	FTR-20260927-24369382-04	yes
+24369382	primary	partial_fulltext_read	methods	not_read	B	PMID24369382_Mallaret2014_PMCreader.html	html: heading 'Materials and methods'	FTR-20260927-24369382-04	yes
+24369382	primary	partial_fulltext_read	references	not_read	B	PMID24369382_Mallaret2014_PMCreader.txt	pdf p1: References heading	FTR-20260927-24369382-04	no
+24456803	primary	partial_fulltext_read	abstract	not_read	B	PMID24456803_AbdelSalam2014_PMC.xml	xml: abstract element	FTR-20261124-24456803-87	yes
+24456803	primary	partial_fulltext_read	methods	not_read	B	PMID24456803_AbdelSalam2014_PMC.xml	xml: sec title 'Methods and results'	FTR-20261124-24456803-87	yes
+24456803	primary	partial_fulltext_read	discussion	not_read	B	PMID24456803_AbdelSalam2014_PMC.xml	xml: sec title 'Discussion'	FTR-20261124-24456803-87	yes
+24456803	primary	partial_fulltext_read	tables	not_read	B	PMID24456803_AbdelSalam2014_PMC.xml	xml: table-wrap with rows	FTR-20261124-24456803-87	yes
+24550782	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/taurine_loop_20261123/PMC3912439.1.xml	xml: abstract element	FTR-20261123-24550782-74	yes
+24550782	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/taurine_loop_20261123/PMC3912439.1.xml	xml: sec title 'Introduction'	FTR-20261123-24550782-74	yes
+24550782	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/taurine_loop_20261123/PMC3912439.1.xml	xml: sec title 'Discussion'	FTR-20261123-24550782-74	yes
+24559677	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/l_glutamine_loop_20261124/PMC4001919.xml	xml: abstract element	FTR-20261124-24559677-98	yes
+24559677	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/l_glutamine_loop_20261124/PMC4001919.xml	xml: sec title 'Introduction'	FTR-20261124-24559677-98	yes
+24559677	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/l_glutamine_loop_20261124/PMC4001919.xml	xml: sec title 'Discussion'	FTR-20261124-24559677-98	yes
+24635129	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/rufinamide_loop_20261123/channels.html	html: heading 'Methods'	FTR-20261123-24635129-98	yes
+24635129	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/rufinamide_loop_20261123/channels.html	html: heading 'Discussion'	FTR-20261123-24635129-98	yes
+24699222	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/magnesium_chloride_loop_20261124/24699222.xml	xml: abstract element	FTR-20261124-24699222-86	yes
+24699222	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/magnesium_chloride_loop_20261124/24699222.xml	xml: sec title 'Introduction'	FTR-20261124-24699222-86	yes
+24699222	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/magnesium_chloride_loop_20261124/24699222.xml	xml: sec title 'Materials and Methods'	FTR-20261124-24699222-86	yes
+24699222	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/magnesium_chloride_loop_20261124/24699222.xml	xml: table-wrap with rows	FTR-20261124-24699222-86	yes
+24760755	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/sodium_selenite_loop_20261124/burk.html	html: heading 'DISCUSSION'	FTR-20261124-24760755-80	yes
+24802902	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: abstract element	FTR-20261124-24802902-80	yes
+24802902	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: sec title 'Introduction'	FTR-20261124-24802902-80	yes
+24802902	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: sec title 'Discussion'	FTR-20261124-24802902-80	yes
+24841105	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/sodium_pyruvate_loop_20261124/exercise.xml	xml: abstract element	FTR-20261124-24841105-80	yes
+24841105	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/sodium_pyruvate_loop_20261124/exercise.xml	xml: sec title '1. Introduction'	FTR-20261124-24841105-80	yes
+24841105	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/sodium_pyruvate_loop_20261124/exercise.xml	xml: sec title '4. Discussion'	FTR-20261124-24841105-80	yes
+24932569	primary	partial_fulltext_read	figures	unavailable	A	PMID24932569_Aldaz2014.pdf	pdf p21: 'Figure 1.' (images 1, chars 377)	FTR-20260920-24932569-01	no
+24932569	primary	partial_fulltext_read	tables	not_read	B	PMID24932569_Aldaz2014.pdf	pdf p5: 'Table 1. Of these, 8 somatic m'	FTR-20260920-24932569-01	no
+24932569	primary	partial_fulltext_read	references	unavailable	A	PMID24932569_Aldaz2014.pdf	pdf p13: References heading	FTR-20260920-24932569-01	no
+24949445	primary	partial_fulltext_read	abstract	not_read	B	PMID24949445_Szymanska2014_PMC.xml	xml: abstract element	FTR-20261004-24949445-02	yes
+24949445	primary	partial_fulltext_read	introduction	not_read	B	PMID24949445_Szymanska2014_PMC.xml	xml: sec title '1. Introduction'	FTR-20261004-24949445-02	yes
+24949445	primary	partial_fulltext_read	methods	not_read	B	PMID24949445_Szymanska2014_PMC.xml	xml: sec title '2. Patients and Methods'	FTR-20261004-24949445-02	yes
+24949445	primary	partial_fulltext_read	discussion	not_read	B	PMID24949445_Szymanska2014_PMC.xml	xml: sec title '3. Discussion'	FTR-20261004-24949445-02	yes
+24949445	primary	partial_fulltext_read	references	not_read	B	PMID24949445_Szymanska2014_PMC.xml	xml: ref-list	FTR-20261004-24949445-02	yes
+24953239	primary	partial_fulltext_read	references	not_read	B	PMID24953239_Kanyshkova2015_PMC_r2.xml	xml: ref-list	FTR-20261108-24953239-52	yes
+24992948	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/l_glutamine_loop_20261124/PMC4227121.xml	xml: sec title 'Introduction'	FTR-20261124-24992948-99	yes
+24992948	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/l_glutamine_loop_20261124/PMC4227121.xml	xml: sec title 'Methods'	FTR-20261124-24992948-99	yes
+24992948	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/l_glutamine_loop_20261124/PMC4227121.xml	xml: sec title 'Discussion'	FTR-20261124-24992948-99	yes
+24992948	primary	partial_fulltext_read	limitations	not_read	B	deepening_downloads/l_glutamine_loop_20261124/PMC4227121.xml	xml: sec title 'Limitations of the present study'	FTR-20261124-24992948-99	yes
+24992948	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/l_glutamine_loop_20261124/PMC4227121.xml	xml: table-wrap with rows	FTR-20261124-24992948-99	yes
+25011550	primary	partial_fulltext_read	methods	not_read	B	wo32_lit_20261118/PMID25011550_PMC4099093_epmc.xml	xml: sec title 'Methods'	FTR-20261118-25011550-01	yes
+25011550	primary	partial_fulltext_read	results	not_read	B	wo32_lit_20261118/PMID25011550_PMC4099093_epmc.xml	xml: sec title 'Results'	FTR-20261118-25011550-01	yes
+25011550	primary	partial_fulltext_read	tables	not_read	B	wo32_lit_20261118/PMID25011550_PMC4099093_epmc.xml	xml: table-wrap with rows	FTR-20261118-25011550-01	yes
+25011550	primary	partial_fulltext_read	references	not_read	B	wo32_lit_20261118/PMID25011550_PMC4099093_epmc.xml	xml: ref-list	FTR-20261118-25011550-01	yes
+25012504	primary	partial_fulltext_read	abstract	not_read	B	PMID25012504_AbuRemaileh2014_PMC_r2.xml	xml: abstract element	FTR-20261124-25012504-90	no
+25331887	primary	partial_fulltext_read	results	not_read	B	PMID25331887_AbuOdeh2014_PMC_2026-09-09.html	html: heading 'Results'	FTR-20260909-25331887-02	no
+25331887	primary	partial_fulltext_read	discussion	not_read	B	PMID25331887_AbuOdeh2014_PMC_2026-09-09.html	html: heading 'Discussion'	FTR-20260909-25331887-02	no
+25444522	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC4359682.1.xml	xml: abstract element	FTR-20261123-25444522-97	yes
+25444522	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC4359682.1.xml	xml: sec title 'Introduction'	FTR-20261123-25444522-97	yes
+25444522	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC4359682.1.xml	xml: sec title 'Methods'	FTR-20261123-25444522-97	yes
+25444522	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC4359682.1.xml	xml: sec title 'Discussion'	FTR-20261123-25444522-97	yes
+25506250	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/r_lipoic_loop_20261124/hermann.xml	xml: abstract element	FTR-20261124-25506250-80	yes
+25506250	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/r_lipoic_loop_20261124/hermann.xml	xml: sec title 'Introduction'	FTR-20261124-25506250-80	yes
+25506250	primary	partial_fulltext_read	results	not_read	B	deepening_downloads/r_lipoic_loop_20261124/hermann.xml	xml: sec title 'Results'	FTR-20261124-25506250-80	yes
+25506250	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/r_lipoic_loop_20261124/hermann.xml	xml: sec title 'Discussion'	FTR-20261124-25506250-80	yes
+25539952	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/folinic_loop_20261124/KSS.xml	xml: abstract element	FTR-20261124-25539952-80	yes
+25539952	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/folinic_loop_20261124/KSS.xml	xml: sec title 'Methods'	FTR-20261124-25539952-80	yes
+25539952	primary	partial_fulltext_read	results	not_read	B	deepening_downloads/folinic_loop_20261124/KSS.xml	xml: sec title 'Results'	FTR-20261124-25539952-80	yes
+25649963	primary	partial_fulltext_read	introduction	not_read	B	PMID25649963_Tsuruwaka2015_PMC.xml	xml: sec title 'Introduction'	FTR-20261029-25649963-01	yes
+25649963	primary	partial_fulltext_read	discussion	not_read	B	PMID25649963_Tsuruwaka2015_PMC.xml	xml: sec title 'Discussion'	FTR-20261029-25649963-01	yes
+25708809	primary	partial_fulltext_read	references	not_read	B	PMID25708809_Hua2015_PMC_r2.xml	xml: ref-list	FTR-20261023-25708809-01	yes
+25738457	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/vigabatrin_loop_20261124/abat.xml	xml: abstract element	FTR-20261124-25738457-82	yes
+25738457	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/vigabatrin_loop_20261124/abat.xml	xml: sec title 'Introduction'	FTR-20261124-25738457-82	yes
+25738457	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/vigabatrin_loop_20261124/abat.xml	xml: sec title 'Discussion'	FTR-20261124-25738457-82	yes
+25738457	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/vigabatrin_loop_20261124/abat.xml	xml: table-wrap with rows	FTR-20261124-25738457-82	yes
+25760040	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/pyridoxine_loop_20261123/albersen.xml	xml: abstract element	FTR-20261123-25760040-98	yes
+25760040	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/pyridoxine_loop_20261123/albersen.xml	xml: sec title 'Introduction'	FTR-20261123-25760040-98	yes
+25760040	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/pyridoxine_loop_20261123/albersen.xml	xml: sec title 'Discussion'	FTR-20261123-25760040-98	yes
+25779665	primary	partial_fulltext_read	abstract	not_read	B	PMID25779665_Chen2015_PMC.xml	xml: abstract element	FTR-20261020-25779665-01	yes
+25779665	primary	partial_fulltext_read	supplementary	captions_only	B	PMID25779665_Chen2015_supp_pdftotext.txt	separate held file by name	FTR-20261020-25779665-01	no
+25779665	primary	partial_fulltext_read	references	not_read	B	PMID25779665_Chen2015_PMC.xml	xml: ref-list	FTR-20261020-25779665-01	yes
+25903138	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/l_serine_loop_20261124/4505526_pmc.html	html: heading 'Introduction'	FTR-20261124-25903138-99	yes
+25903138	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/l_serine_loop_20261124/4505526_pmc.html	html: heading 'Discussion'	FTR-20261124-25903138-99	yes
+25938437	primary	partial_fulltext_read	abstract	not_read	B	PMID25938437_PMC4418701_Yang2015_epmc.xml	xml: abstract element	FTR-20261117-25938437-01	yes
+25938437	primary	partial_fulltext_read	methods	not_read	B	PMID25938437_PMC4418701_Yang2015_epmc.xml	xml: sec title 'Materials and Methods'	FTR-20261117-25938437-01	yes
+25938437	primary	partial_fulltext_read	results	not_read	B	PMID25938437_PMC4418701_Yang2015_epmc.xml	xml: sec title 'Results'	FTR-20261117-25938437-01	yes
+26029047	primary	partial_fulltext_read	abstract	not_read	B	adv065c_20261118/PMID26029047_PMC4429249_efetch_pmc.xml	xml: abstract element	FTR-20261118-26029047-67	yes
+26029047	primary	partial_fulltext_read	introduction	not_read	B	adv065c_20261118/PMID26029047_PMC4429249_efetch_pmc.xml	xml: sec title 'Introduction'	FTR-20261118-26029047-67	yes
+26029047	primary	partial_fulltext_read	methods	not_read	B	adv065c_20261118/PMID26029047_PMC4429249_efetch_pmc.xml	xml: sec title 'Methods'	FTR-20261118-26029047-67	yes
+26029047	primary	partial_fulltext_read	references	not_read	B	adv065c_20261118/PMID26029047_PMC4429249_efetch_pmc.xml	xml: ref-list	FTR-20261118-26029047-67	yes
+26133962	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/tiagabine_loop_20261124/pet_exposure.xml	xml: abstract element	FTR-20261124-26133962-80	yes
+26133962	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/tiagabine_loop_20261124/pet_exposure.xml	xml: sec title 'DISCUSSION'	FTR-20261124-26133962-80	yes
+26273099	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/magnesium_chloride_loop_20261124/26273099.xml	xml: abstract element	FTR-20261124-26273099-86	yes
+26273099	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/magnesium_chloride_loop_20261124/26273099.xml	xml: sec title 'Introduction'	FTR-20261124-26273099-86	yes
+26273099	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/magnesium_chloride_loop_20261124/26273099.xml	xml: sec title 'Subjects and methods'	FTR-20261124-26273099-86	yes
+26273099	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/magnesium_chloride_loop_20261124/26273099.xml	xml: sec title 'Discussion'	FTR-20261124-26273099-86	yes
+26273099	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/magnesium_chloride_loop_20261124/26273099.xml	xml: table-wrap with rows	FTR-20261124-26273099-86	yes
+26274319	primary	partial_fulltext_read	references	not_read	B	adv052_he_20261118/PMID26274319_PMC4537250_europepmc.xml	xml: ref-list	FTR-20261118-26274319-53	yes
+26302329	primary	partial_fulltext_read	abstract	not_read	B	PMID26302329_OKeefe2015_PMC.xml	xml: abstract element	FTR-20261110-26302329-83	yes
+26302329	primary	partial_fulltext_read	introduction	not_read	B	PMID26302329_OKeefe2015_PMC.xml	xml: sec title 'Introduction'	FTR-20261110-26302329-83	yes
+26302329	primary	partial_fulltext_read	references	not_read	B	PMID26302329_OKeefe2015_PMC.xml	xml: ref-list	FTR-20261110-26302329-83	yes
+26411970	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/tocopheryl_acetate_loop_20261124/sbp2_lipids.xml	xml: abstract element	FTR-20261124-26411970-80	yes
+26411970	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/tocopheryl_acetate_loop_20261124/sbp2_lipids.xml	xml: sec title 'DISCUSSION'	FTR-20261124-26411970-80	yes
+26419537	primary	partial_fulltext_read	tables	not_present	A	PMID26419537_Chen2015_PMC_r2.xml	xml: table-wrap with rows	FTR-20261021-26419537-01	yes
+26452037	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/d_ribose_loop_20261124/PMC4741441.xml	xml: abstract element	FTR-20261124-26452037-95	yes
+26452037	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/d_ribose_loop_20261124/PMC4741441.xml	xml: sec title 'INTRODUCTION'	FTR-20261124-26452037-95	yes
+26452037	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/d_ribose_loop_20261124/PMC4741441.xml	xml: sec title 'DISCUSSION'	FTR-20261124-26452037-95	yes
+26558787	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/betaine_loop_20261124/PMC6605362.html	html: heading 'Introduction'	FTR-20261124-26558787-97	yes
+26558787	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/betaine_loop_20261124/PMC6605362.html	html: heading 'Discussion'	FTR-20261124-26558787-97	yes
+26558787	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/betaine_loop_20261124/PMC6605362.html	html: table rows	FTR-20261124-26558787-97	yes
+26571146	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/zonisamide_loop_20261124/neurites.xml	xml: abstract element	FTR-20261124-26571146-80	yes
+26571146	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/zonisamide_loop_20261124/neurites.xml	xml: sec title 'Introduction'	FTR-20261124-26571146-80	yes
+26571146	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/zonisamide_loop_20261124/neurites.xml	xml: sec title 'Discussion'	FTR-20261124-26571146-80	yes
+26572666	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/acetylcysteine_loop_20261123/PMC4720670.html	html: heading 'Introduction'	FTR-20261123-26572666-77	yes
+26572666	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/acetylcysteine_loop_20261123/PMC4720670.html	html: heading 'Discussion'	FTR-20261123-26572666-77	yes
+26608744	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/triheptanoin_loop_20261123/PMC4805082.xml	xml: abstract element	FTR-20261124-26608744-99	yes
+26608744	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/triheptanoin_loop_20261123/PMC4805082.xml	xml: sec title 'Introduction'	FTR-20261124-26608744-99	yes
+26608744	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/triheptanoin_loop_20261123/PMC4805082.xml	xml: sec title 'Materials and methods'	FTR-20261124-26608744-99	yes
+26608744	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/triheptanoin_loop_20261123/PMC4805082.xml	xml: sec title 'Discussion'	FTR-20261124-26608744-99	yes
+26907087	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/creatine_mrs_20261123/PMC4974294.1.xml	xml: sec title 'Introduction'	FTR-20261123-26907087-91	yes
+26907087	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/creatine_mrs_20261123/PMC4974294.1.xml	xml: sec title 'Discussion'	FTR-20261123-26907087-91	yes
+27099849	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/tocopheryl_acetate_loop_20261124/epilepsy_2016.xml	xml: abstract element	FTR-20261124-27099849-80	yes
+27099849	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/tocopheryl_acetate_loop_20261124/epilepsy_2016.xml	xml: sec title 'INTRODUCTION'	FTR-20261124-27099849-80	yes
+27099849	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/tocopheryl_acetate_loop_20261124/epilepsy_2016.xml	xml: sec title 'DISCUSSION'	FTR-20261124-27099849-80	yes
+27103982	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/acetylcysteine_loop_20261123/PMC4839099.1.xml	xml: abstract element	FTR-20261123-27103982-77	yes
+27103982	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/acetylcysteine_loop_20261123/PMC4839099.1.xml	xml: sec title 'Discussion'	FTR-20261123-27103982-77	yes
+27181635	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/tocopheryl_acetate_loop_20261124/human_infant_brain.pdf	pdf p1: heading 'Abstract'	FTR-20261124-27181635-80	yes
+27181635	primary	partial_fulltext_read	figures	not_read	B	deepening_downloads/tocopheryl_acetate_loop_20261124/human_infant_brain.pdf	pdf p3: 'Fig. 1. Total α-tocopherol con' (images 1, chars 9430)	FTR-20261124-27181635-80	yes
+27188386	primary	partial_fulltext_read	abstract	not_read	B	PMID27188386_Shinde2016_PMC.xml	xml: abstract element	FTR-20261004-27188386-02	yes
+27188386	primary	partial_fulltext_read	introduction	not_read	B	PMID27188386_Shinde2016_PMC.xml	xml: sec title 'Introduction'	FTR-20261004-27188386-02	yes
+27188386	primary	partial_fulltext_read	results	not_read	B	PMID27188386_Shinde2016_PMC.xml	xml: sec title 'Results'	FTR-20261004-27188386-02	yes
+27188386	primary	partial_fulltext_read	discussion	not_read	B	PMID27188386_Shinde2016_PMC.xml	xml: sec title 'Discussion'	FTR-20261004-27188386-02	yes
+27188386	primary	partial_fulltext_read	tables	not_read	B	PMID27188386_Shinde2016_PMC.xml	xml: table-wrap with rows	FTR-20261004-27188386-02	yes
+27188386	primary	partial_fulltext_read	references	not_read	B	PMID27188386_Shinde2016_PMC.xml	xml: ref-list	FTR-20261004-27188386-02	yes
+27259049	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/riboflavin_loop_20261123/PMC4908180.xml	xml: abstract element	FTR-20261123-27259049-93	yes
+27259049	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/riboflavin_loop_20261123/PMC4908180.xml	xml: sec title 'Introduction'	FTR-20261123-27259049-93	yes
+27259049	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/riboflavin_loop_20261123/PMC4908180.xml	xml: sec title 'Subjects and Methods'	FTR-20261123-27259049-93	yes
+27392635	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/clobazam_loop_20261124/27392635.xml	xml: abstract element	FTR-20261124-27392635-92	yes
+27392635	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/clobazam_loop_20261124/27392635.xml	xml: sec title 'Introduction'	FTR-20261124-27392635-92	yes
+27392635	primary	partial_fulltext_read	results	not_read	B	deepening_downloads/clobazam_loop_20261124/27392635.xml	xml: sec title 'Results'	FTR-20261124-27392635-92	yes
+27392635	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/clobazam_loop_20261124/27392635.xml	xml: sec title 'Discussion'	FTR-20261124-27392635-92	yes
+27455251	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/lamotrigine_loop_20261124/27455251.xml	xml: abstract element	FTR-20261124-27455251-87	yes
+27455251	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/lamotrigine_loop_20261124/27455251.xml	xml: sec title '1. Introduction'	FTR-20261124-27455251-87	yes
+27455251	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/lamotrigine_loop_20261124/27455251.xml	xml: sec title '3. Discussion'	FTR-20261124-27455251-87	yes
+27495153	primary	partial_fulltext_read	abstract	not_read	B	PMID27495153_Elsaadany2016_PMC.xml	xml: abstract element	FTR-20261124-27495153-80	yes
+27495153	primary	partial_fulltext_read	discussion	not_read	B	PMID27495153_Elsaadany2016_PMC.xml	xml: sec title 'Discussion'	FTR-20261124-27495153-80	yes
+27495153	primary	partial_fulltext_read	tables	not_read	B	PMID27495153_Elsaadany2016_PMC.xml	xml: table-wrap with rows	FTR-20261124-27495153-80	yes
+27668180	primary	partial_fulltext_read	references	not_read	B	PMID27668180_Doumlele2016_PMC5024311.xml	xml: ref-list	FTR-20261028-27668180-01	yes
+27683846	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/clobazam_loop_20261124/27683846.xml	xml: abstract element	FTR-20261124-27683846-92	yes
+27773744	primary	partial_fulltext_read	methods	captions_only	B	PMID27773744_Schrock2017_PMC_r2.xml	xml: sec title 'Materials and Methods'	FTR-20261019-27773744-01	yes
+27869163	primary	partial_fulltext_read	figures	unavailable	A	PMID27869163_epmc2.pdf	pdf p4: 'Figure 1. Human and mouse Wwox' (images 1, chars 5246)	FTR-20260921-27869163-01	no
+27869163	primary	partial_fulltext_read	tables	unavailable	A	PMID27869163_Schrock2017.xml	xml: table-wrap with rows	FTR-20260921-27869163-01	no
+27869163	primary	partial_fulltext_read	references	unavailable	A	PMID27869163_Schrock2017.xml	xml: ref-list	FTR-20260921-27869163-01	no
+27903293	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/vigabatrin_loop_20261124/mild.xml	xml: abstract element	FTR-20261124-27903293-82	yes
+27903293	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/vigabatrin_loop_20261124/mild.xml	xml: sec title 'Introduction'	FTR-20261124-27903293-82	yes
+27903293	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/vigabatrin_loop_20261124/mild.xml	xml: sec title 'Discussion'	FTR-20261124-27903293-82	yes
+27903293	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/vigabatrin_loop_20261124/mild.xml	xml: table-wrap with rows	FTR-20261124-27903293-82	yes
+28079396	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/creatine_mrs_20261123/PMID28079396.pdf	pdf p2: heading 'ABSTRACT'	FTR-20261123-28079396-91	yes
+28079396	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/creatine_mrs_20261123/PMID28079396.pdf	pdf p3: heading 'Introduction'	FTR-20261123-28079396-91	yes
+28079396	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/creatine_mrs_20261123/PMID28079396.pdf	pdf p11: heading 'Discussion'	FTR-20261123-28079396-91	yes
+28119481	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/lacosamide_loop_20261123/PMC5363714.html	html: heading 'Introduction'	FTR-20261123-28119481-92	yes
+28119481	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/lacosamide_loop_20261123/PMC5363714.html	html: heading 'Discussion'	FTR-20261123-28119481-92	yes
+28280887	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC5423986.1.xml	xml: abstract element	FTR-20261123-28280887-95	yes
+28280887	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC5423986.1.xml	xml: sec title 'Introduction'	FTR-20261123-28280887-95	yes
+28280887	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC5423986.1.xml	xml: sec title 'Discussion and conclusions'	FTR-20261123-28280887-95	yes
+28434841	primary	partial_fulltext_read	methods	not_read	B	PMID28434841_R3b_PMC_r2.xml	xml: sec title 'STAR Methods'	FTR-20261022-28434841-01	yes
+28504693	primary	partial_fulltext_read	methods	not_read	B	PMID28504693_R3b_PMC_r2.xml	xml: sec title 'Materials and methods'	FTR-20261022-28504693-01	yes
+28721938	primary	partial_fulltext_read	discussion	not_read	B	PMID28721938_TartaArsene2017_JLE.txt	pdf p1: heading 'Discussion'	FTR-20261105-28721938-21	no
+28721938	primary	partial_fulltext_read	figures	not_read	B	PMID28721938_TartaArsene2017_JLE.pdf	pdf p2: 'Figure 1. Investigations at ag' (images 1, chars 3909)	FTR-20261105-28721938-21	yes
+28721938	primary	partial_fulltext_read	references	not_read	B	PMID28721938_TartaArsene2017_JLE.txt	pdf p1: References heading	FTR-20261105-28721938-21	no
+28749468	primary	partial_fulltext_read	abstract	not_read	B	PMID28749468_Janczar2017_PMC.xml	xml: abstract element	FTR-20261029-28749468-02	yes
+28749468	primary	partial_fulltext_read	discussion	not_read	B	PMID28749468_Janczar2017_PMC.xml	xml: sec title 'Discussion'	FTR-20261029-28749468-02	yes
+28763065	primary	partial_fulltext_read	abstract	not_read	B	PMID28763065_Xia2017_PMC.xml	xml: abstract element	FTR-20261004-28763065-02	yes
+28763065	primary	partial_fulltext_read	introduction	not_read	B	PMID28763065_Xia2017_PMC.xml	xml: sec title 'Introduction'	FTR-20261004-28763065-02	yes
+28763065	primary	partial_fulltext_read	methods	not_read	B	PMID28763065_Xia2017_PMC.xml	xml: sec title 'Materials and methods'	FTR-20261004-28763065-02	yes
+28763065	primary	partial_fulltext_read	results	not_read	B	PMID28763065_Xia2017_PMC.xml	xml: sec title 'Results'	FTR-20261004-28763065-02	yes
+28763065	primary	partial_fulltext_read	discussion	not_read	B	PMID28763065_Xia2017_PMC.xml	xml: sec title 'Discussion'	FTR-20261004-28763065-02	yes
+28763065	primary	partial_fulltext_read	references	not_read	B	PMID28763065_Xia2017_PMC.xml	xml: ref-list	FTR-20261004-28763065-02	yes
+28919853	primary	partial_fulltext_read	tables	not_present	A	PMID28919853_CDK5astro2017_PMC_r2.xml	xml: table-wrap with rows	FTR-20261022-28919853-01	yes
+28940353	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/acetylcysteine_loop_20261123/PMC5762253.1.xml	xml: abstract element	FTR-20261123-28940353-77	yes
+28940353	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/acetylcysteine_loop_20261123/PMC5762253.1.xml	xml: sec title 'Introduction'	FTR-20261123-28940353-77	yes
+29216042	primary	partial_fulltext_read	methods	not_read	B	adv065b_20261118/PMID29216042_PMC7371006_efetch_pmc.xml	xml: sec title 'METHODS'	FTR-20261118-29216042-66	yes
+29216042	primary	partial_fulltext_read	references	not_read	B	adv065b_20261118/PMID29216042_PMC7371006_efetch_pmc.xml	xml: ref-list	FTR-20261118-29216042-66	yes
+29390993	primary	partial_fulltext_read	abstract	not_read	B	PMID29390993_Rim2018_PMC.xml	xml: abstract element	FTR-20261004-29390993-02	yes
+29390993	primary	partial_fulltext_read	methods	not_read	B	PMID29390993_Rim2018_PMC.xml	xml: sec title 'Methods'	FTR-20261004-29390993-02	yes
+29390993	primary	partial_fulltext_read	results	not_read	B	PMID29390993_Rim2018_PMC.xml	xml: sec title 'Results'	FTR-20261004-29390993-02	yes
+29390993	primary	partial_fulltext_read	discussion	not_read	B	PMID29390993_Rim2018_PMC.xml	xml: sec title 'Phenotype review and consensus discussio'	FTR-20261004-29390993-02	yes
+29390993	primary	partial_fulltext_read	references	not_read	B	PMID29390993_Rim2018_PMC.xml	xml: ref-list	FTR-20261004-29390993-02	yes
+29423921	primary	partial_fulltext_read	introduction	not_read	B	PMID29423921_Guo2018_PMC6001564_bucket.xml	xml: sec title 'INTRODUCTION'	FTR-20261124-29423921-02	yes
+29423921	primary	partial_fulltext_read	discussion	not_read	B	PMID29423921_Guo2018_PMC6001564_bucket.xml	xml: sec title 'DISCUSSION'	FTR-20261124-29423921-02	yes
+29423921	primary	partial_fulltext_read	references	not_read	B	PMID29423921_Guo2018_PMC6001564_bucket.xml	xml: ref-list	FTR-20261124-29423921-02	yes
+29446949	secondary	queried_not_full_read	abstract	not_read	B	PMID29446949_Review2018_JMed_PMC6368479.xml	xml: abstract element	FTR-20261029-29446949-01	yes
+29446949	secondary	queried_not_full_read	introduction	not_read	B	PMID29446949_Review2018_JMed_PMC6368479.xml	xml: sec title 'Introduction'	FTR-20261029-29446949-01	yes
+29446949	secondary	queried_not_full_read	references	not_read	B	PMID29446949_Review2018_JMed_PMC6368479.xml	xml: ref-list	FTR-20261029-29446949-01	yes
+29463073	primary	partial_fulltext_read	introduction	not_read	B	PMID29463073_Kim2018_PMC_r2.xml	xml: sec title 'INTRODUCTION'	FTR-20261105-29463073-05	no
+29463073	primary	partial_fulltext_read	tables	not_read	B	PMID29463073_Kim2018_PMC_r2.xml	xml: table-wrap with rows	FTR-20261105-29463073-05	no
+29463073	primary	partial_fulltext_read	references	not_read	B	PMID29463073_Kim2018_PMC_r2.xml	xml: ref-list	FTR-20261105-29463073-05	no
+29561203	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/acetylcysteine_loop_20261123/PMC5999009.html	html: heading 'Introduction'	FTR-20261123-29561203-76	yes
+29561203	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/acetylcysteine_loop_20261123/PMC5999009.html	html: heading 'Discussion'	FTR-20261123-29561203-76	yes
+29666206	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/taurine_loop_20261123/PMC6581075.1.xml	xml: abstract element	FTR-20261123-29666206-74	yes
+29666206	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/taurine_loop_20261123/PMC6581075.1.xml	xml: sec title 'Introduction'	FTR-20261123-29666206-74	yes
+29666206	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/taurine_loop_20261123/PMC6581075.1.xml	xml: sec title 'Discussion'	FTR-20261123-29666206-74	yes
+29685734	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/nr_loop_20261124/tracer.xml	xml: abstract element	FTR-20261124-29685734-80	yes
+29685734	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/nr_loop_20261124/tracer.xml	xml: sec title 'Introduction'	FTR-20261124-29685734-80	yes
+29685734	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/nr_loop_20261124/tracer.xml	xml: sec title 'STAR Methods'	FTR-20261124-29685734-80	yes
+29685734	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/nr_loop_20261124/tracer.xml	xml: sec title 'Discussion'	FTR-20261124-29685734-80	yes
+29685734	primary	partial_fulltext_read	limitations	not_read	B	deepening_downloads/nr_loop_20261124/tracer.xml	xml: sec title 'Study Limitations'	FTR-20261124-29685734-80	yes
+29724996	secondary	queried_not_full_read	introduction	not_read	B	PMID29724996_AbuRemaileh2018_PMC.xml	xml: sec title 'Introduction'	FTR-20261106-29724996-26	no
+29724996	secondary	queried_not_full_read	methods	not_read	B	PMID29724996_AbuRemaileh2018_PMC.xml	xml: sec title 'Materials and Methods'	FTR-20261106-29724996-26	no
+29724996	secondary	queried_not_full_read	results	not_read	B	PMID29724996_AbuRemaileh2018_PMC.xml	xml: sec title 'Results'	FTR-20261106-29724996-26	no
+29724996	secondary	queried_not_full_read	discussion	not_read	B	PMID29724996_AbuRemaileh2018_PMC.xml	xml: sec title 'Discussion'	FTR-20261106-29724996-26	no
+29724996	secondary	queried_not_full_read	supplementary	not_read	B	PMID29724996_AbuRemaileh2018_supplement.pdf	separate held file by name	FTR-20261106-29724996-26	no
+29724996	secondary	queried_not_full_read	references	not_read	B	PMID29724996_AbuRemaileh2018_PMC.xml	xml: ref-list	FTR-20261106-29724996-26	no
+29793153	primary	partial_fulltext_read	introduction	not_read	B	adv050_20261118/PMC6050087.html	html: heading '1. Introduction'	FTR-20261118-29793153-01	yes
+29793153	primary	partial_fulltext_read	methods	not_read	B	adv050_20261118/PMC6050087.html	html: heading '2. Materials and Methods'	FTR-20261118-29793153-01	yes
+29793153	primary	partial_fulltext_read	discussion	not_read	B	adv050_20261118/PMC6050087.html	html: heading '4. Discussion'	FTR-20261118-29793153-01	yes
+29805740	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/fenfluramine_loop_20261124/nr1.xml	xml: abstract element	FTR-20261124-29805740-81	yes
+29805740	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/fenfluramine_loop_20261124/nr1.xml	xml: sec title 'INTRODUCTION'	FTR-20261124-29805740-81	yes
+29805740	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/fenfluramine_loop_20261124/nr1.xml	xml: sec title 'DISCUSSION'	FTR-20261124-29805740-81	yes
+29808465	primary	partial_fulltext_read	abstract	not_read	B	PMID29808465_Johannsen2018.pdf	pdf p1: heading 'Abstract'	FTR-20261105-29808465-21	yes
+29899766	primary	partial_fulltext_read	abstract	not_read	B	PMID29899766_Mastrangelo2018_PMC.xml	xml: abstract element	FTR-20261020-29899766-01	yes
+29899766	primary	partial_fulltext_read	references	not_read	B	PMID29899766_Mastrangelo2018_PMC.xml	xml: ref-list	FTR-20261020-29899766-01	yes
+29940337	primary	partial_fulltext_read	abstract	not_read	B	PMID29940337_R3b_PMC_r2.xml	xml: abstract element	FTR-20261124-29940337-01	yes
+29940337	primary	partial_fulltext_read	introduction	not_read	B	PMID29940337_R3b_PMC_r2.xml	xml: sec title 'INTRODUCTION'	FTR-20261124-29940337-01	yes
+29940337	primary	partial_fulltext_read	methods	not_read	B	PMID29940337_R3b_PMC_r2.xml	xml: sec title 'MATERIALS AND METHODS'	FTR-20261124-29940337-01	yes
+29940337	primary	partial_fulltext_read	references	not_read	B	PMID29940337_R3b_PMC_r2.xml	xml: ref-list	FTR-20261124-29940337-01	yes
+29964329	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/d_ribose_loop_20261124/PMC6220757.xml	xml: abstract element	FTR-20261124-29964329-95	yes
+29964329	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/d_ribose_loop_20261124/PMC6220757.xml	xml: sec title 'Methods'	FTR-20261124-29964329-95	yes
+29964329	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/d_ribose_loop_20261124/PMC6220757.xml	xml: sec title 'Discussion'	FTR-20261124-29964329-95	yes
+30029003	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/l_lysine_loop_20261124/PMC6516488_ncbi.xml	xml: abstract element	FTR-20261124-30029003-95	yes
+30029003	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/l_lysine_loop_20261124/PMC6516488_ncbi.xml	xml: sec title 'Introduction'	FTR-20261124-30029003-95	yes
+30029003	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/l_lysine_loop_20261124/PMC6516488_ncbi.xml	xml: sec title 'STAR Methods'	FTR-20261124-30029003-95	yes
+30029003	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/l_lysine_loop_20261124/PMC6516488_ncbi.xml	xml: sec title 'Discussion'	FTR-20261124-30029003-95	yes
+30029003	primary	partial_fulltext_read	limitations	not_read	B	deepening_downloads/l_lysine_loop_20261124/PMC6516488_ncbi.xml	xml: sec title 'Ribosomes pause at specific synonymous c'	FTR-20261124-30029003-95	yes
+30029003	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/l_lysine_loop_20261124/PMC6516488_ncbi.xml	xml: table-wrap with rows	FTR-20261124-30029003-95	yes
+30031689	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/folinic_loop_20261124/MTHFS.xml	xml: abstract element	FTR-20261124-30031689-80	yes
+30031689	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/folinic_loop_20261124/MTHFS.xml	xml: sec title 'Introduction:'	FTR-20261124-30031689-80	yes
+30031689	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/folinic_loop_20261124/MTHFS.xml	xml: sec title 'Materials and Methods:'	FTR-20261124-30031689-80	yes
+30031689	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/folinic_loop_20261124/MTHFS.xml	xml: sec title 'Discussion:'	FTR-20261124-30031689-80	yes
+30046109	primary	partial_fulltext_read	abstract	not_read	B	PMC6423962_PMID30046109_europepmc_fulltext_2026-11-13.xml	xml: abstract element	FTR-20261113-30046109-64	no
+30046109	primary	partial_fulltext_read	references	not_read	B	PMC6423962_PMID30046109_europepmc_fulltext_2026-11-13.xml	xml: ref-list	FTR-20261113-30046109-64	no
+30073178	primary	partial_fulltext_read	references	not_read	B	PMID30073178_Hordeaux2018b_PMC.xml	xml: ref-list	FTR-20261004-30073178-01	yes
+30073179	primary	partial_fulltext_read	references	not_read	B	PMID30073179_Hordeaux2018a_PMC.xml	xml: ref-list	FTR-20261004-30073179-01	yes
+30136373	primary	partial_fulltext_read	abstract	not_read	B	adv065c_20261118/PMID30136373_PMC6214781_efetch_pmc.xml	xml: abstract element	FTR-20261118-30136373-67	yes
+30136373	primary	partial_fulltext_read	introduction	not_read	B	adv065c_20261118/PMID30136373_PMC6214781_efetch_pmc.xml	xml: sec title 'Introduction'	FTR-20261118-30136373-67	yes
+30136373	primary	partial_fulltext_read	methods	not_read	B	adv065c_20261118/PMID30136373_PMC6214781_efetch_pmc.xml	xml: sec title 'Methods'	FTR-20261118-30136373-67	yes
+30136373	primary	partial_fulltext_read	references	not_read	B	adv065c_20261118/PMID30136373_PMC6214781_efetch_pmc.xml	xml: ref-list	FTR-20261118-30136373-67	yes
+30158849	primary	partial_fulltext_read	abstract	not_read	B	PMID30158849_Liu2018_PMC.xml	xml: abstract element	FTR-20261004-30158849-03	yes
+30158849	primary	partial_fulltext_read	introduction	not_read	B	PMID30158849_Liu2018_PMC.xml	xml: sec title 'Introduction'	FTR-20261004-30158849-03	yes
+30158849	primary	partial_fulltext_read	references	not_read	B	PMID30158849_Liu2018_PMC.xml	xml: ref-list	FTR-20261004-30158849-03	yes
+30191330	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/l_carnosine_loop_20261124/pmid_30191330.xml	xml: sec title 'Introduction'	FTR-20261124-30191330-81	yes
+30191330	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/l_carnosine_loop_20261124/pmid_30191330.xml	xml: sec title 'Discussion'	FTR-20261124-30191330-81	yes
+30214895	primary	partial_fulltext_read	references	not_read	B	b_ww1_ppxy_20261119/Saigo2018_review_PMC6125347.xml	xml: ref-list	FTR-20261119-30214895-71	yes
+30224722	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/dha_loop_20261124/basket_ncbi.xml	xml: abstract element	FTR-20261124-30224722-80	yes
+30224722	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/dha_loop_20261124/basket_ncbi.xml	xml: sec title 'Introduction'	FTR-20261124-30224722-80	yes
+30224722	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/dha_loop_20261124/basket_ncbi.xml	xml: sec title 'Methods summary'	FTR-20261124-30224722-80	yes
+30224722	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/dha_loop_20261124/basket_ncbi.xml	xml: sec title 'Discussion'	FTR-20261124-30224722-80	yes
+30290271	primary	partial_fulltext_read	introduction	not_read	B	PMID30290271_Hussain2019_PMC_r2.xml	xml: sec title 'Introduction'	FTR-20261123-30290271-97	yes
+30290271	primary	partial_fulltext_read	discussion	not_read	B	PMID30290271_Hussain2019_PMC_r2.xml	xml: sec title 'Discussion'	FTR-20261123-30290271-97	yes
+30290271	primary	partial_fulltext_read	tables	not_read	B	PMID30290271_Hussain2019_PMC_r2.xml	xml: table-wrap with rows	FTR-20261123-30290271-97	yes
+30353770	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/d_bhb_loop_20261123/interstitial.html	html: heading 'Introduction'	FTR-20261124-30353770-99	yes
+30353770	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/d_bhb_loop_20261123/interstitial.html	html: heading 'Discussion'	FTR-20261124-30353770-99	yes
+30353770	primary	partial_fulltext_read	limitations	not_read	B	deepening_downloads/d_bhb_loop_20261123/interstitial.html	html: heading 'Study limitations'	FTR-20261124-30353770-99	yes
+30353770	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/d_bhb_loop_20261123/interstitial.html	html: table rows	FTR-20261124-30353770-99	yes
+30356099	primary	partial_fulltext_read	abstract	not_read	B	PMID30356099_Piard2019_EPMC.xml	xml: abstract element	FTR-20261105-30356099-21	no
+30356099	primary	partial_fulltext_read	introduction	not_read	B	PMID30356099_Piard2019_EPMC.xml	xml: sec title 'Introduction'	FTR-20261105-30356099-21	no
+30356099	primary	partial_fulltext_read	methods	not_read	B	PMID30356099_Piard2019_EPMC.xml	xml: sec title 'Methods'	FTR-20261105-30356099-21	no
+30356099	primary	partial_fulltext_read	results	not_read	B	PMID30356099_Piard2019_EPMC.xml	xml: sec title 'Results'	FTR-20261105-30356099-21	no
+30356099	primary	partial_fulltext_read	discussion	not_read	B	PMID30356099_Piard2019_EPMC.xml	xml: sec title 'Discussion'	FTR-20261105-30356099-21	no
+30356099	primary	partial_fulltext_read	references	not_read	B	PMID30356099_Piard2019_EPMC.xml	xml: ref-list	FTR-20261105-30356099-21	no
+30361190	primary	partial_fulltext_read	figures	not_read	B	PMID30361190_Shaukat2018_JLE.pdf	pdf p4: 'Figure 2. (A) EEG of the ﬁrst ' (images 2, chars 3264)	FTR-20261123-30361190-85	yes
+30361190	primary	partial_fulltext_read	tables	not_read	B	PMID30361190_Shaukat2018_JLE.txt	pdf p1: 'Table 1. Clinical, electrograp'	FTR-20261123-30361190-85	no
+30362252	primary	partial_fulltext_read	abstract	not_read	B	PMID30362252_Davids2019_PMC_2026-09-27.xml	xml: abstract element	FTR-20261124-30362252-80	yes
+30497978	primary	partial_fulltext_read	introduction	not_read	B	PMID30497978_Fog2018_PMC_r2.xml	xml: sec title 'Introduction'	FTR-20261023-30497978-01	yes
+30497978	primary	partial_fulltext_read	methods	not_read	B	PMID30497978_Fog2018_PMC_r2.xml	xml: sec title 'Methods'	FTR-20261023-30497978-01	yes
+30551998	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/acetylcysteine_loop_20261123/PMC6371057.html	html: heading 'INTRODUCTION'	FTR-20261123-30551998-75	yes
+30551998	primary	partial_fulltext_read	results	not_read	B	deepening_downloads/acetylcysteine_loop_20261123/PMC6371057.html	html: heading 'RESULTS'	FTR-20261123-30551998-75	yes
+30551998	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/acetylcysteine_loop_20261123/PMC6371057.html	html: heading 'DISCUSSION'	FTR-20261123-30551998-75	yes
+30551998	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/acetylcysteine_loop_20261123/PMC6371057.html	html: table rows	FTR-20261123-30551998-75	yes
+30696941	primary	partial_fulltext_read	introduction	not_read	B	PMID30696941_PMC6756203_Picard2019_epmc.xml	xml: sec title 'Introduction'	FTR-20261123-30696941-95	yes
+30696941	primary	partial_fulltext_read	methods	not_read	B	PMID30696941_PMC6756203_Picard2019_epmc.xml	xml: sec title 'Materials and methods'	FTR-20261123-30696941-95	yes
+30696941	primary	partial_fulltext_read	results	not_read	B	PMID30696941_PMC6756203_Picard2019_epmc.xml	xml: sec title 'Results'	FTR-20261123-30696941-95	yes
+30696941	primary	partial_fulltext_read	discussion	not_read	B	PMID30696941_PMC6756203_Picard2019_epmc.xml	xml: sec title 'Discussion'	FTR-20261123-30696941-95	yes
+30755385	primary	partial_fulltext_read	abstract	not_read	B	PMID30755385_AbuRemaileh2019_PMC_r2.xml	xml: abstract element	FTR-20261124-30755385-82	yes
+30755385	primary	partial_fulltext_read	introduction	not_read	B	PMID30755385_AbuRemaileh2019_PMC_r2.xml	xml: sec title 'Introduction'	FTR-20261124-30755385-82	yes
+30755385	primary	partial_fulltext_read	discussion	not_read	B	PMID30755385_AbuRemaileh2019_PMC_r2.xml	xml: sec title 'Discussion'	FTR-20261124-30755385-82	yes
+30853297	primary	partial_fulltext_read	introduction	not_read	B	PMID30853297_WeiszHubshman2019_fitz.txt	pdf p1: heading 'Introduction'	FTR-20260928-30853297-03	no
+30853297	primary	partial_fulltext_read	discussion	not_read	B	PMID30853297_WeiszHubshman2019_fitz.txt	pdf p1: heading 'Discussion'	FTR-20260928-30853297-03	no
+30868125	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/triheptanoin_loop_20261123/PMC6398112.xml	xml: abstract element	FTR-20261123-30868125-89	yes
+30868125	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/triheptanoin_loop_20261123/PMC6398112.xml	xml: sec title 'INTRODUCTION'	FTR-20261123-30868125-89	yes
+30868125	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/triheptanoin_loop_20261123/PMC6398112.xml	xml: sec title 'DISCUSSION'	FTR-20261123-30868125-89	yes
+30868125	primary	partial_fulltext_read	limitations	not_read	B	deepening_downloads/triheptanoin_loop_20261123/PMC6398112.xml	xml: sec title 'Limitations, generalizability, interpret'	FTR-20261123-30868125-89	yes
+30874549	primary	partial_fulltext_read	introduction	not_read	B	adv065c_20261118/PMID30874549_PMC6420604_efetch_pmc.xml	xml: sec title 'Introduction'	FTR-20261123-30874549-81	no
+30874549	primary	partial_fulltext_read	discussion	not_read	B	adv065c_20261118/PMID30874549_PMC6420604_efetch_pmc.xml	xml: sec title 'Discussion'	FTR-20261123-30874549-81	no
+30874549	primary	partial_fulltext_read	tables	not_read	B	adv065c_20261118/PMID30874549_PMC6420604_efetch_pmc.xml	xml: table-wrap with rows	FTR-20261123-30874549-81	no
+30924924	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC6532410.1.xml	xml: abstract element	FTR-20261123-30924924-95	yes
+30924924	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC6532410.1.xml	xml: sec title 'INTRODUCTION'	FTR-20261123-30924924-95	yes
+30924924	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC6532410.1.xml	xml: sec title 'DISCUSSION'	FTR-20261123-30924924-95	yes
+30996233	primary	partial_fulltext_read	abstract	not_read	B	adv065c_20261118/PMID30996233_PMC6470170_efetch_pmc.xml	xml: abstract element	FTR-20261118-30996233-67	yes
+30996233	primary	partial_fulltext_read	introduction	not_read	B	adv065c_20261118/PMID30996233_PMC6470170_efetch_pmc.xml	xml: sec title 'Introduction'	FTR-20261118-30996233-67	yes
+30996233	primary	partial_fulltext_read	methods	not_read	B	adv065c_20261118/PMID30996233_PMC6470170_efetch_pmc.xml	xml: sec title 'Methods'	FTR-20261118-30996233-67	yes
+30996233	primary	partial_fulltext_read	references	not_read	B	adv065c_20261118/PMID30996233_PMC6470170_efetch_pmc.xml	xml: ref-list	FTR-20261118-30996233-67	yes
+31049885	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/cannabidiol_loop_20261124/pediatric_synthetic.xml	xml: abstract element	FTR-20261124-31049885-93	yes
+31049885	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/cannabidiol_loop_20261124/pediatric_synthetic.xml	xml: sec title 'Introduction'	FTR-20261124-31049885-93	yes
+31049885	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/cannabidiol_loop_20261124/pediatric_synthetic.xml	xml: sec title 'Methods'	FTR-20261124-31049885-93	yes
+31049885	primary	partial_fulltext_read	results	not_read	B	deepening_downloads/cannabidiol_loop_20261124/pediatric_synthetic.xml	xml: sec title 'Results'	FTR-20261124-31049885-93	yes
+31049885	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/cannabidiol_loop_20261124/pediatric_synthetic.xml	xml: sec title 'Discussion'	FTR-20261124-31049885-93	yes
+31058209	primary	partial_fulltext_read	references	not_read	B	adv065b_20261118/PMID31058209_PMC6498421_efetch_pmc.xml	xml: ref-list	FTR-20261118-31058209-66	yes
+31239460	primary	partial_fulltext_read	abstract	not_read	B	adv065c_20261118/PMID31239460_PMC6592949_efetch_pmc.xml	xml: abstract element	FTR-20261118-31239460-67	yes
+31239460	primary	partial_fulltext_read	introduction	not_read	B	adv065c_20261118/PMID31239460_PMC6592949_efetch_pmc.xml	xml: sec title 'Introduction'	FTR-20261118-31239460-67	yes
+31239460	primary	partial_fulltext_read	methods	not_read	B	adv065c_20261118/PMID31239460_PMC6592949_efetch_pmc.xml	xml: sec title 'Material and Methods'	FTR-20261118-31239460-67	yes
+31239460	primary	partial_fulltext_read	discussion	not_read	B	adv065c_20261118/PMID31239460_PMC6592949_efetch_pmc.xml	xml: sec title 'Discussion'	FTR-20261118-31239460-67	yes
+31239460	primary	partial_fulltext_read	references	not_read	B	adv065c_20261118/PMID31239460_PMC6592949_efetch_pmc.xml	xml: ref-list	FTR-20261118-31239460-67	yes
+31255657	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/betaine_loop_20261124/PMC6642071.xml	xml: abstract element	FTR-20261124-31255657-95	yes
+31255657	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/betaine_loop_20261124/PMC6642071.xml	xml: sec title 'Introduction'	FTR-20261124-31255657-95	yes
+31255657	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/betaine_loop_20261124/PMC6642071.xml	xml: sec title 'Methods'	FTR-20261124-31255657-95	yes
+31255657	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/betaine_loop_20261124/PMC6642071.xml	xml: sec title 'Discussion'	FTR-20261124-31255657-95	yes
+31331032	primary	partial_fulltext_read	tables	not_present	A	PMID31331032_R3b_PMC_r2.xml	xml: table-wrap with rows	FTR-20261022-31331032-01	yes
+31340538	primary	partial_fulltext_read	abstract	not_read	B	PMID31340538_Tochigi2019_PMC_r2.xml	xml: abstract element	FTR-20261029-31340538-01	yes
+31340538	primary	partial_fulltext_read	introduction	not_read	B	PMID31340538_Tochigi2019_PMC_r2.xml	xml: sec title '1. Introduction'	FTR-20261029-31340538-01	yes
+31340538	primary	partial_fulltext_read	methods	not_read	B	PMID31340538_Tochigi2019_PMC_r2.xml	xml: sec title '4. Materials and Methods'	FTR-20261029-31340538-01	yes
+31340538	primary	partial_fulltext_read	references	not_read	B	PMID31340538_Tochigi2019_PMC_r2.xml	xml: ref-list	FTR-20261029-31340538-01	yes
+31353122	primary	partial_fulltext_read	abstract	not_read	B	PMID31353122_Mori2019_IR.pdf	pdf p3: heading 'Abstract'	FTR-20261124-31353122-87	yes
+31353122	primary	partial_fulltext_read	introduction	not_read	B	PMID31353122_Mori2019_IR.pdf	pdf p4: heading 'Introduction'	FTR-20261124-31353122-87	yes
+31353122	primary	partial_fulltext_read	discussion	not_read	B	PMID31353122_Mori2019_IR.pdf	pdf p7: heading 'Discussion'	FTR-20261124-31353122-87	yes
+31353122	primary	partial_fulltext_read	figures	not_read	B	PMID31353122_Mori2019_IR.pdf	pdf p14: 'Figure 1. Facial appearance at' (images 0, chars 925)	FTR-20261124-31353122-87	yes
+31353122	primary	partial_fulltext_read	supplementary	not_read	B	PMID31353122_Mori2019_IR.pdf	pdf p19 after References p12: 'Supplemental Table S1'	FTR-20261124-31353122-87	yes
+31411465	primary	partial_fulltext_read	abstract	not_read	B	rescued_from_scratch_he46/0c3748cb9227__PMID31411465_tran.txt	pdf p1: heading 'ABSTRACT'	FTR-20261111-31411465-78	no
+31411465	primary	partial_fulltext_read	introduction	not_read	B	rescued_from_scratch_he46/0c3748cb9227__PMID31411465_tran.txt	pdf p1: heading 'INTRODUCTION'	FTR-20261111-31411465-78	no
+31411465	primary	partial_fulltext_read	results	not_read	B	rescued_from_scratch_he46/0c3748cb9227__PMID31411465_tran.txt	pdf p1: heading 'RESULTS'	FTR-20261111-31411465-78	no
+31411465	primary	partial_fulltext_read	figures	captions_only	B	rescued_from_scratch_he46/91063ee51ab5__PMID31411465_tran.pdf	pdf p20: 'Figure 4. SPR sensorgrams of c' (images 289, chars 3786)	FTR-20261111-31411465-78	no
+31541561	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/memantine_magnesium_20261123/PMC6858497.1.xml	xml: abstract element	FTR-20261124-31541561-86	yes
+31541561	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/memantine_magnesium_20261123/PMC6858497.1.xml	xml: sec title 'Introduction'	FTR-20261124-31541561-86	yes
+31541561	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/memantine_magnesium_20261123/PMC6858497.1.xml	xml: sec title 'Methods'	FTR-20261124-31541561-86	yes
+31541561	primary	partial_fulltext_read	results	not_read	B	deepening_downloads/memantine_magnesium_20261123/PMC6858497.1.xml	xml: sec title 'Results'	FTR-20261124-31541561-86	yes
+31541561	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/memantine_magnesium_20261123/PMC6858497.1.xml	xml: sec title 'Discussion'	FTR-20261124-31541561-86	yes
+31543760	primary	partial_fulltext_read	abstract	not_read	B	PMID31543760_Kosla2019_EPMC.xml	xml: abstract element	FTR-20261122-31543760-08	no
+31543760	primary	partial_fulltext_read	introduction	not_read	B	PMID31543760_Kosla2019_EPMC.xml	xml: sec title 'Introduction'	FTR-20261122-31543760-08	no
+31543760	primary	partial_fulltext_read	discussion	not_read	B	PMID31543760_Kosla2019_EPMC.xml	xml: sec title 'Discussion'	FTR-20261122-31543760-08	no
+31543760	primary	partial_fulltext_read	tables	not_present	A	PMID31543760_Kosla2019_EPMC.xml	xml: table-wrap with rows	FTR-20261122-31543760-08	no
+31548413	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/l_serine_loop_20261124/6789919_pmc.html	html: heading 'Materials and Methods'	FTR-20261124-31548413-99	yes
+31548413	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/l_serine_loop_20261124/6789919_pmc.html	html: heading 'Discussion'	FTR-20261124-31548413-99	yes
+31605637	primary	partial_fulltext_read	results	not_read	B	PMID31605637_NQO1_P187S_PMC7027498_epmc_2026-10-29.xml	xml: sec title 'Results'	FTR-20261029-31605637-01	yes
+31605637	primary	partial_fulltext_read	discussion	not_read	B	PMID31605637_NQO1_P187S_PMC7027498_epmc_2026-10-29.xml	xml: sec title 'Discussion'	FTR-20261029-31605637-01	yes
+31605637	primary	partial_fulltext_read	tables	not_present	A	PMID31605637_NQO1_P187S_PMC7027498_epmc_2026-10-29.xml	xml: table-wrap with rows	FTR-20261029-31605637-01	yes
+31625159	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/clobazam_loop_20261124/PMC6900043.xml	xml: abstract element	FTR-20261124-31625159-92	yes
+31625159	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/clobazam_loop_20261124/PMC6900043.xml	xml: sec title 'INTRODUCTION'	FTR-20261124-31625159-92	yes
+31625159	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/clobazam_loop_20261124/PMC6900043.xml	xml: sec title 'Methods'	FTR-20261124-31625159-92	yes
+31625159	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/clobazam_loop_20261124/PMC6900043.xml	xml: sec title 'DISCUSSION'	FTR-20261124-31625159-92	yes
+31625159	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/clobazam_loop_20261124/PMC6900043.xml	xml: table-wrap with rows	FTR-20261124-31625159-92	yes
+31723543	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/levetiracetam_loop_20261124/zampella.xml	xml: abstract element	FTR-20261124-31723543-80	yes
+31723543	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/levetiracetam_loop_20261124/zampella.xml	xml: sec title 'Introduction'	FTR-20261124-31723543-80	yes
+31723543	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/levetiracetam_loop_20261124/zampella.xml	xml: sec title 'Discussion'	FTR-20261124-31723543-80	yes
+31757819	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/d_bhb_loop_20261123/manville.html	html: heading 'Introduction'	FTR-20261123-31757819-98	yes
+31757819	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/d_bhb_loop_20261123/manville.html	html: heading 'Discussion'	FTR-20261123-31757819-98	yes
+31781019	primary	partial_fulltext_read	tables	not_present	A	PMID31781019_Kam2019_PMC_r2.xml	xml: table-wrap with rows	FTR-20261021-31781019-01	yes
+31862249	secondary	abstract_only	introduction	not_read	B	deepening_downloads/sulforaphane_loop_20261124/primary.xml	xml: sec title '1. Introduction'	FTR-20261124-31862249-80	no
+31862249	secondary	abstract_only	methods	not_read	B	deepening_downloads/sulforaphane_loop_20261124/primary.xml	xml: sec title 'Methods'	FTR-20261124-31862249-80	no
+31862249	secondary	abstract_only	results	not_read	B	deepening_downloads/sulforaphane_loop_20261124/primary.xml	xml: sec title 'Results'	FTR-20261124-31862249-80	no
+31862249	secondary	abstract_only	discussion	not_read	B	deepening_downloads/sulforaphane_loop_20261124/primary.xml	xml: sec title 'Discussion'	FTR-20261124-31862249-80	no
+31862249	secondary	abstract_only	limitations	not_read	B	deepening_downloads/sulforaphane_loop_20261124/primary.xml	xml: sec title 'Limitations'	FTR-20261124-31862249-80	no
+31862249	secondary	abstract_only	tables	not_read	B	deepening_downloads/sulforaphane_loop_20261124/primary.xml	xml: table-wrap with rows	FTR-20261124-31862249-80	no
+32000863	primary	partial_fulltext_read	abstract	not_read	B	PMID32000863_Cheng2020_PMC.xml	xml: abstract element	FTR-20261123-32000863-99	no
+32000863	primary	partial_fulltext_read	introduction	not_read	B	PMID32000863_Cheng2020_PMC.xml	xml: sec title 'Introduction'	FTR-20261123-32000863-99	no
+32000863	primary	partial_fulltext_read	discussion	not_read	B	PMID32000863_Cheng2020_PMC.xml	xml: sec title 'Discussion'	FTR-20261123-32000863-99	no
+32023956	primary	partial_fulltext_read	tables	not_read	B	PMID32023956_Lukas2020_PMC7037350.xml	xml: table-wrap with rows	FTR-20261021-32023956-01	yes
+32096676	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/betaine_loop_20261124/PMC7518703.html	html: heading 'Introduction'	FTR-20261124-32096676-97	yes
+32096676	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/betaine_loop_20261124/PMC7518703.html	html: heading 'Discussion'	FTR-20261124-32096676-97	yes
+32096676	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/betaine_loop_20261124/PMC7518703.html	html: table rows	FTR-20261124-32096676-97	yes
+32106360	secondary	abstract_only	introduction	not_read	B	PMID32106360_Auvin2020_PMC7085998.xml	xml: sec title 'Introduction'	FTR-20261118-32106360-01	no
+32106360	secondary	abstract_only	methods	not_read	B	PMID32106360_Auvin2020_PMC7085998.xml	xml: sec title 'Methods'	FTR-20261118-32106360-01	no
+32106360	secondary	abstract_only	results	not_read	B	PMID32106360_Auvin2020_PMC7085998.xml	xml: sec title 'Results'	FTR-20261118-32106360-01	no
+32106360	secondary	abstract_only	discussion	not_read	B	PMID32106360_Auvin2020_PMC7085998.xml	xml: sec title 'Discussion'	FTR-20261118-32106360-01	no
+32106360	secondary	abstract_only	tables	not_read	B	PMID32106360_Auvin2020_PMC7085998.xml	xml: table-wrap with rows	FTR-20261118-32106360-01	no
+32106360	secondary	abstract_only	references	not_read	B	PMID32106360_Auvin2020_PMC7085998.xml	xml: ref-list	FTR-20261118-32106360-01	no
+32140650	primary	partial_fulltext_read	references	not_read	B	adv052_he_20261118/PMID32140650_PMC7049796_europepmc.xml	xml: ref-list	FTR-20261118-32140650-53	yes
+32278283	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/sodium_selenite_loop_20261124/gpx_assay.xml	xml: abstract element	FTR-20261124-32278283-80	yes
+32278283	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/sodium_selenite_loop_20261124/gpx_assay.xml	xml: sec title 'Introduction'	FTR-20261124-32278283-80	yes
+32278283	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/sodium_selenite_loop_20261124/gpx_assay.xml	xml: table-wrap with rows	FTR-20261124-32278283-80	yes
+32470040	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/d_biotin_loop_20261124/7259710.xml	xml: abstract element	FTR-20261124-32470040-80	yes
+32470040	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/d_biotin_loop_20261124/7259710.xml	xml: sec title 'Introduction'	FTR-20261124-32470040-80	yes
+32470040	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/d_biotin_loop_20261124/7259710.xml	xml: table-wrap with rows	FTR-20261124-32470040-80	yes
+32516974	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/zonisamide_loop_20261124/hemichannel.xml	xml: abstract element	FTR-20261124-32516974-80	yes
+32516974	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/zonisamide_loop_20261124/hemichannel.xml	xml: sec title '1. Introduction'	FTR-20261124-32516974-80	yes
+32516974	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/zonisamide_loop_20261124/hemichannel.xml	xml: sec title '3. Discussion'	FTR-20261124-32516974-80	yes
+32546684	primary	partial_fulltext_read	tables	not_read	B	PMID32546684_Shi2020_PMC.xml	xml: table-wrap with rows	FTR-20261019-32546684-01	yes
+32546684	primary	partial_fulltext_read	references	not_read	B	PMID32546684_Shi2020_PMC.xml	xml: ref-list	FTR-20261019-32546684-01	yes
+32592183	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/cannabidiol_loop_20261124/32592183.xml	xml: abstract element	FTR-20261124-32592183-93	yes
+32592183	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/cannabidiol_loop_20261124/32592183.xml	xml: sec title 'INTRODUCTION'	FTR-20261124-32592183-93	yes
+32592183	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/cannabidiol_loop_20261124/32592183.xml	xml: sec title 'Methods'	FTR-20261124-32592183-93	yes
+32592183	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/cannabidiol_loop_20261124/32592183.xml	xml: sec title 'DISCUSSION'	FTR-20261124-32592183-93	yes
+32592183	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/cannabidiol_loop_20261124/32592183.xml	xml: table-wrap with rows	FTR-20261124-32592183-93	yes
+32652616	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/clobazam_loop_20261124/32652616.xml	xml: abstract element	FTR-20261124-32652616-92	yes
+32652616	primary	partial_fulltext_read	results	not_read	B	deepening_downloads/clobazam_loop_20261124/32652616.xml	xml: sec title 'Results'	FTR-20261124-32652616-92	yes
+32652616	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/clobazam_loop_20261124/32652616.xml	xml: sec title 'Discussion'	FTR-20261124-32652616-92	yes
+32668809	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/l_glutamine_loop_20261124/7407890.xml	xml: abstract element	FTR-20261124-32668809-98	yes
+32668809	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/l_glutamine_loop_20261124/7407890.xml	xml: sec title '1. Introduction'	FTR-20261124-32668809-98	yes
+32668809	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/l_glutamine_loop_20261124/7407890.xml	xml: sec title '2. Materials and Methods'	FTR-20261124-32668809-98	yes
+32668809	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/l_glutamine_loop_20261124/7407890.xml	xml: sec title '4. Discussion'	FTR-20261124-32668809-98	yes
+32788298	primary	partial_fulltext_read	abstract	not_read	B	b_ww1_ppxy_20261119/Mennesson2020_PMC7470932.xml	xml: abstract element	FTR-20261119-32788298-71	yes
+32788298	primary	partial_fulltext_read	introduction	not_read	B	b_ww1_ppxy_20261119/Mennesson2020_PMC7470932.xml	xml: sec title 'Introduction'	FTR-20261119-32788298-71	yes
+32788298	primary	partial_fulltext_read	methods	not_read	B	b_ww1_ppxy_20261119/Mennesson2020_PMC7470932.xml	xml: sec title 'Materials and Methods'	FTR-20261119-32788298-71	yes
+32788298	primary	partial_fulltext_read	discussion	not_read	B	b_ww1_ppxy_20261119/Mennesson2020_PMC7470932.xml	xml: sec title 'Discussion'	FTR-20261119-32788298-71	yes
+32788298	primary	partial_fulltext_read	tables	not_read	B	b_ww1_ppxy_20261119/Mennesson2020_PMC7470932.xml	xml: table-wrap with rows	FTR-20261119-32788298-71	yes
+32788298	primary	partial_fulltext_read	references	not_read	B	b_ww1_ppxy_20261119/Mennesson2020_PMC7470932.xml	xml: ref-list	FTR-20261119-32788298-71	yes
+32878331	primary	partial_fulltext_read	references	not_read	B	PMID32878331_Berecki2020_PMC_r2.xml	xml: ref-list	FTR-20261118-32878331-53	no
+33053775	primary	partial_fulltext_read	references	not_read	B	PMID33053775_Aquilino2020_EPMC.xml	xml: ref-list	FTR-20261023-33053775-01	yes
+33195192	primary	partial_fulltext_read	references	not_read	B	PMID33195192_Chou2020_PMC.xml	xml: ref-list	FTR-20261019-33195192-03	yes
+33201535	secondary	abstract_only	methods	not_read	B	PMID33201535_Soul2021_PMC_r2.xml	xml: sec title 'Methods:'	FTR-20261118-33201535-65	no
+33201535	secondary	abstract_only	results	not_read	B	PMID33201535_Soul2021_PMC_r2.xml	xml: sec title 'Results:'	FTR-20261118-33201535-65	no
+33201535	secondary	abstract_only	discussion	not_read	B	PMID33201535_Soul2021_PMC_r2.xml	xml: sec title 'Discussion'	FTR-20261118-33201535-65	no
+33201535	secondary	abstract_only	tables	not_read	B	PMID33201535_Soul2021_PMC_r2.xml	xml: table-wrap with rows	FTR-20261118-33201535-65	no
+33201535	secondary	abstract_only	references	not_read	B	PMID33201535_Soul2021_PMC_r2.xml	xml: ref-list	FTR-20261118-33201535-65	no
+33243296	primary	partial_fulltext_read	references	not_read	B	adv052_he_20261118/PMID33243296_PMC7690142_europepmc.xml	xml: ref-list	FTR-20261118-33243296-53	yes
+33255508	primary	partial_fulltext_read	introduction	not_read	B	PMID33255508_Aldaz2020.xml	xml: sec title '1. Introduction'	FTR-20260927-33255508-02	yes
+33255508	primary	partial_fulltext_read	references	not_read	B	PMID33255508_Aldaz2020.xml	xml: ref-list	FTR-20260927-33255508-02	yes
+33317017	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/riboflavin_loop_20261123/PMC7763948.html	html: heading '1. Introduction'	FTR-20261123-33317017-95	yes
+33317017	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/riboflavin_loop_20261123/PMC7763948.html	html: heading '4. Discussion'	FTR-20261123-33317017-95	yes
+33385945	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/vigabatrin_loop_20261124/retina.xml	xml: abstract element	FTR-20261124-33385945-80	yes
+33385945	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/vigabatrin_loop_20261124/retina.xml	xml: sec title 'Introduction'	FTR-20261124-33385945-80	yes
+33385945	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/vigabatrin_loop_20261124/retina.xml	xml: sec title 'Discussion'	FTR-20261124-33385945-80	yes
+33468503	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/riboflavin_loop_20261123/PMC7927654.html	html: heading 'INTRODUCTION'	FTR-20261123-33468503-95	yes
+33468503	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/riboflavin_loop_20261123/PMC7927654.html	html: heading 'DISCUSSION'	FTR-20261123-33468503-95	yes
+33520443	secondary	queried_not_full_read	introduction	not_read	B	PMID33520443_Baryla2021_PMC7811782_refetched_20261119.xml	xml: sec title 'Introduction'	FTR-20261119-33520443-01	yes
+33520443	secondary	queried_not_full_read	methods	not_read	B	PMID33520443_Baryla2021_PMC7811782_refetched_20261119.xml	xml: sec title 'Methods'	FTR-20261119-33520443-01	yes
+33520443	secondary	queried_not_full_read	discussion	not_read	B	PMID33520443_Baryla2021_PMC7811782_refetched_20261119.xml	xml: sec title 'Discussion'	FTR-20261119-33520443-01	yes
+33520443	secondary	queried_not_full_read	tables	not_read	B	PMID33520443_Baryla2021_PMC7811782_refetched_20261119.xml	xml: table-wrap with rows	FTR-20261119-33520443-01	yes
+33520443	secondary	queried_not_full_read	references	not_read	B	PMID33520443_Baryla2021_PMC7811782_refetched_20261119.xml	xml: ref-list	FTR-20261119-33520443-01	yes
+33547201	primary	partial_fulltext_read	methods	not_read	B	PMID33547201_Hanson2021b_PMC_r2.xml	xml: sec title 'Methods'	FTR-20261022-33547201-01	yes
+33612478	primary	partial_fulltext_read	references	not_read	B	PMID33612478_Liu2021_PMC.xml	xml: ref-list	FTR-20261019-33612478-02	yes
+33657413	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/nr_loop_20261124/axon.xml	xml: abstract element	FTR-20261124-33657413-80	yes
+33657413	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/nr_loop_20261124/axon.xml	xml: sec title 'INTRODUCTION'	FTR-20261124-33657413-80	yes
+33657413	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/nr_loop_20261124/axon.xml	xml: sec title 'STAR METHODS'	FTR-20261124-33657413-80	yes
+33657413	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/nr_loop_20261124/axon.xml	xml: sec title 'DISCUSSION'	FTR-20261124-33657413-80	yes
+33704440	primary	partial_fulltext_read	tables	not_present	A	PMID33704440_ElGhaleb2021_PMC_r2.xml	xml: table-wrap with rows	FTR-20261022-33704440-02	yes
+33711029	primary	partial_fulltext_read	introduction	not_read	B	adv065b_20261118/PMID33711029_PMC7954344_efetch_pmc.xml	xml: sec title 'Introduction'	FTR-20261118-33711029-66	yes
+33711029	primary	partial_fulltext_read	results	not_read	B	adv065b_20261118/PMID33711029_PMC7954344_efetch_pmc.xml	xml: sec title 'Results'	FTR-20261118-33711029-66	yes
+33711029	primary	partial_fulltext_read	references	not_read	B	adv065b_20261118/PMID33711029_PMC7954344_efetch_pmc.xml	xml: ref-list	FTR-20261118-33711029-66	yes
+33733036	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/tocopheryl_acetate_loop_20261124/adult_ttpa.xml	xml: abstract element	FTR-20261124-33733036-80	yes
+33733036	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/tocopheryl_acetate_loop_20261124/adult_ttpa.xml	xml: sec title 'Introduction'	FTR-20261124-33733036-80	yes
+33733036	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/tocopheryl_acetate_loop_20261124/adult_ttpa.xml	xml: sec title 'Discussion'	FTR-20261124-33733036-80	yes
+33733036	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/tocopheryl_acetate_loop_20261124/adult_ttpa.xml	xml: table-wrap with rows	FTR-20261124-33733036-80	yes
+33914734	primary	partial_fulltext_read	introduction	not_read	B	PMID33914734_ASPA_C152W_PMC8084241_epmc_2026-10-29.xml	xml: sec title 'Introduction'	FTR-20261029-33914734-02	yes
+33914734	primary	partial_fulltext_read	methods	not_read	B	PMID33914734_ASPA_C152W_PMC8084241_epmc_2026-10-29.xml	xml: sec title 'Materials and methods'	FTR-20261029-33914734-02	yes
+33914734	primary	partial_fulltext_read	results	not_read	B	PMID33914734_ASPA_C152W_PMC8084241_epmc_2026-10-29.xml	xml: sec title 'Results'	FTR-20261029-33914734-02	yes
+33914734	primary	partial_fulltext_read	discussion	not_read	B	PMID33914734_ASPA_C152W_PMC8084241_epmc_2026-10-29.xml	xml: sec title 'Discussion'	FTR-20261029-33914734-02	yes
+33914858	primary	partial_fulltext_read	abstract	not_read	B	PMID33914858_Repudi2021_OUP_browserprint.pdf	pdf p1: heading 'Abstract'	FTR-20261124-33914858-89	no
+33914858	primary	partial_fulltext_read	introduction	not_read	B	PMID33914858_Repudi2021_OUP_browserprint.pdf	pdf p2: heading 'Introduction'	FTR-20261124-33914858-89	no
+33914858	primary	partial_fulltext_read	methods	not_read	B	PMID33914858_Repudi2021_OUP_browserprint.pdf	pdf p3: heading 'Materials and methods'	FTR-20261124-33914858-89	no
+33914858	primary	partial_fulltext_read	discussion	not_read	B	PMID33914858_Repudi2021_OUP_browserprint.pdf	pdf p3: heading 'Discussion'	FTR-20261124-33914858-89	no
+33914858	primary	partial_fulltext_read	supplementary	not_read	B	PMID33914858_Repudi2021_OUP_browserprint.pdf	pdf p9 after References p3: 'Supplementary Table 3.'	FTR-20261124-33914858-89	no
+33916190	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC8067033.1.xml	xml: abstract element	FTR-20261123-33916190-97	yes
+33916190	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC8067033.1.xml	xml: sec title '1. Introduction'	FTR-20261123-33916190-97	yes
+33916190	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC8067033.1.xml	xml: sec title '2. Materials and Methods'	FTR-20261123-33916190-97	yes
+33916190	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC8067033.1.xml	xml: sec title '4. Discussion'	FTR-20261123-33916190-97	yes
+33952316	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/d_pantothenate_loop_20261124/8101147.xml	xml: abstract element	FTR-20261124-33952316-80	yes
+33952316	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/d_pantothenate_loop_20261124/8101147.xml	xml: sec title 'Discussion'	FTR-20261124-33952316-80	yes
+34034808	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/sulforaphane_loop_20261124/34034808.xml	xml: abstract element	FTR-20261124-34034808-83	yes
+34034808	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/sulforaphane_loop_20261124/34034808.xml	xml: sec title 'Discussion'	FTR-20261124-34034808-83	yes
+34034808	primary	partial_fulltext_read	limitations	not_read	B	deepening_downloads/sulforaphane_loop_20261124/34034808.xml	xml: sec title 'Limitations'	FTR-20261124-34034808-83	yes
+34204789	primary	partial_fulltext_read	abstract	not_read	B	PMID34204789_Kaluzinska2021_PMC.xml	xml: abstract element	FTR-20261004-34204789-02	yes
+34204789	primary	partial_fulltext_read	introduction	not_read	B	PMID34204789_Kaluzinska2021_PMC.xml	xml: sec title '1. Introduction'	FTR-20261004-34204789-02	yes
+34204789	primary	partial_fulltext_read	references	not_read	B	PMID34204789_Kaluzinska2021_PMC.xml	xml: ref-list	FTR-20261004-34204789-02	yes
+34253921	primary	partial_fulltext_read	introduction	not_read	B	PMC8410666_PMID34253921_ncbi_efetch_pmc_2026-10-29.xml	xml: sec title 'Introduction'	FTR-20261029-34253921-01	yes
+34253921	primary	partial_fulltext_read	methods	not_read	B	PMC8410666_PMID34253921_ncbi_efetch_pmc_2026-10-29.xml	xml: sec title 'Methods'	FTR-20261029-34253921-01	yes
+34253921	primary	partial_fulltext_read	results	not_read	B	PMC8410666_PMID34253921_ncbi_efetch_pmc_2026-10-29.xml	xml: sec title 'Results'	FTR-20261029-34253921-01	yes
+34253921	primary	partial_fulltext_read	tables	not_present	A	PMC8410666_PMID34253921_ncbi_efetch_pmc_2026-10-29.xml	xml: table-wrap with rows	FTR-20261029-34253921-01	yes
+34261823	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/potassium_bromide_loop_20261124/IndustrialHealth_59_239.pdf	pdf p5: 'Table 1. Pentylenetetrazole (P'	FTR-20261124-34261823-99	yes
+34268881	primary	partial_fulltext_read	abstract	not_read	B	PMID34268881_Steinberg2021_PMC.xml	xml: abstract element	FTR-20261124-34268881-96	yes
+34268881	primary	partial_fulltext_read	introduction	not_read	B	PMID34268881_Steinberg2021_PMC.xml	xml: sec title 'Introduction'	FTR-20261124-34268881-96	yes
+34268881	primary	partial_fulltext_read	results	not_read	B	PMID34268881_Steinberg2021.pdf	pdf p17: heading 'Results'	FTR-20261124-34268881-96	no
+34268881	primary	partial_fulltext_read	discussion	not_read	B	PMID34268881_Steinberg2021_PMC.xml	xml: sec title 'Discussion'	FTR-20261124-34268881-96	yes
+34268881	primary	partial_fulltext_read	limitations	not_read	B	PMID34268881_Steinberg2021_PMC.xml	xml: sec title 'Limitations of study'	FTR-20261124-34268881-96	yes
+34268881	primary	partial_fulltext_read	figures	not_read	B	PMID34268881_Steinberg2021.pdf	pdf p3: 'Figure 1. Generation and chara' (images 1, chars 3458)	FTR-20261124-34268881-96	no
+34358226	secondary	abstract_only	introduction	not_read	B	PMID34358226_Warburg2021_PMC_r2.xml	xml: sec title 'Introduction'	FTR-20261110-34358226-97	no
+34358226	secondary	abstract_only	methods	not_read	B	PMID34358226_Warburg2021_PMC_r2.xml	xml: sec title 'Materials and methods'	FTR-20261110-34358226-97	no
+34358226	secondary	abstract_only	results	not_read	B	PMID34358226_Warburg2021_PMC_r2.xml	xml: sec title 'Results'	FTR-20261110-34358226-97	no
+34358226	secondary	abstract_only	discussion	not_read	B	PMID34358226_Warburg2021_PMC_r2.xml	xml: sec title 'Discussion'	FTR-20261110-34358226-97	no
+34358226	secondary	abstract_only	references	not_read	B	PMID34358226_Warburg2021_PMC_r2.xml	xml: ref-list	FTR-20261110-34358226-97	no
+34385458	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/calcium_akg_loop_20261124/34385458.xml	xml: abstract element	FTR-20261124-34385458-91	yes
+34385458	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/calcium_akg_loop_20261124/34385458.xml	xml: sec title 'Introduction'	FTR-20261124-34385458-91	yes
+34385458	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/calcium_akg_loop_20261124/34385458.xml	xml: sec title 'Methods'	FTR-20261124-34385458-91	yes
+34385458	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/calcium_akg_loop_20261124/34385458.xml	xml: sec title 'Discussion'	FTR-20261124-34385458-91	yes
+34399820	primary	partial_fulltext_read	references	not_read	B	adv052_he_20261118/PMID34399820_PMC8365958_europepmc.xml	xml: ref-list	FTR-20261118-34399820-53	yes
+34479615	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/decanoic_loop_20261124/astro_tracer.xml	xml: abstract element	FTR-20261124-34479615-99	yes
+34479615	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/decanoic_loop_20261124/astro_tracer.xml	xml: sec title 'Introduction'	FTR-20261124-34479615-99	yes
+34479615	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/decanoic_loop_20261124/astro_tracer.xml	xml: sec title 'Methods'	FTR-20261124-34479615-99	yes
+34479615	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/decanoic_loop_20261124/astro_tracer.xml	xml: sec title 'Discussion'	FTR-20261124-34479615-99	yes
+34498224	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/sodium_selenite_loop_20261124/neuronal_comparison.html	html: heading 'Introduction'	FTR-20261124-34498224-80	yes
+34498224	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/sodium_selenite_loop_20261124/neuronal_comparison.html	html: heading 'Discussion'	FTR-20261124-34498224-80	yes
+34634460	primary	partial_fulltext_read	abstract	not_read	B	PMID34634460_Wwox_osc2021_PMC_r2.xml	xml: abstract element	FTR-20261124-34634460-98	no
+34634460	primary	partial_fulltext_read	introduction	not_read	B	PMID34634460_Wwox_osc2021_PMC_r2.xml	xml: sec title 'Introduction'	FTR-20261124-34634460-98	no
+34634460	primary	partial_fulltext_read	discussion	not_read	B	PMID34634460_Wwox_osc2021_PMC_r2.xml	xml: sec title 'Discussion'	FTR-20261124-34634460-98	no
+34634460	primary	partial_fulltext_read	tables	not_read	B	PMID34634460_Wwox_osc2021_PMC_r2.xml	xml: table-wrap with rows	FTR-20261124-34634460-98	no
+34729477	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/decanoic_loop_20261124/PMC8557697.xml	xml: abstract element	FTR-20261124-34729477-80	yes
+34729477	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/decanoic_loop_20261124/PMC8557697.xml	xml: sec title 'Introduction'	FTR-20261124-34729477-80	yes
+34729477	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/decanoic_loop_20261124/PMC8557697.xml	xml: sec title 'Materials and methods'	FTR-20261124-34729477-80	yes
+34729477	primary	partial_fulltext_read	results	not_read	B	deepening_downloads/decanoic_loop_20261124/PMC8557697.xml	xml: sec title 'Results'	FTR-20261124-34729477-80	yes
+34729477	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/decanoic_loop_20261124/PMC8557697.xml	xml: sec title 'Discussion'	FTR-20261124-34729477-80	yes
+34747138	primary	partial_fulltext_read	introduction	not_read	B	PMID34747138_Repudi2021_PMC.xml	xml: sec title 'Introduction'	FTR-20261123-34747138-93	no
+34747138	primary	partial_fulltext_read	methods	not_read	B	PMID34747138_Repudi2021_PMC.xml	xml: sec title 'Materials and Methods'	FTR-20261123-34747138-93	no
+34747138	primary	partial_fulltext_read	results	not_read	B	PMID34747138_Repudi2021_PMC.xml	xml: sec title 'Results'	FTR-20261123-34747138-93	no
+34747138	primary	partial_fulltext_read	discussion	not_read	B	PMID34747138_Repudi2021_PMC.xml	xml: sec title 'Discussion'	FTR-20261123-34747138-93	no
+34752143	primary	partial_fulltext_read	abstract	not_read	B	adv065b_20261118/PMID34752143_PMC8763016_efetch_pmc.xml	xml: abstract element	FTR-20261118-34752143-66	yes
+34752143	primary	partial_fulltext_read	introduction	not_read	B	adv065b_20261118/PMID34752143_PMC8763016_efetch_pmc.xml	xml: sec title 'Introduction'	FTR-20261118-34752143-66	yes
+34752143	primary	partial_fulltext_read	discussion	not_read	B	adv065b_20261118/PMID34752143_PMC8763016_efetch_pmc.xml	xml: sec title 'Discussion'	FTR-20261118-34752143-66	yes
+34752143	primary	partial_fulltext_read	references	not_read	B	adv065b_20261118/PMID34752143_PMC8763016_efetch_pmc.xml	xml: ref-list	FTR-20261118-34752143-66	yes
+34829573	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/sulforaphane_loop_20261124/34829573.xml	xml: abstract element	FTR-20261124-34829573-83	yes
+34829573	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/sulforaphane_loop_20261124/34829573.xml	xml: sec title '1. Introduction'	FTR-20261124-34829573-83	yes
+34829573	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/sulforaphane_loop_20261124/34829573.xml	xml: sec title '2. Materials and Methods'	FTR-20261124-34829573-83	yes
+34829573	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/sulforaphane_loop_20261124/34829573.xml	xml: sec title '4. Discussion'	FTR-20261124-34829573-83	yes
+34829573	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/sulforaphane_loop_20261124/34829573.xml	xml: table-wrap with rows	FTR-20261124-34829573-83	yes
+34948401	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/lamotrigine_loop_20261124/34948401.xml	xml: abstract element	FTR-20261124-34948401-87	yes
+34948401	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/lamotrigine_loop_20261124/34948401.xml	xml: sec title '1. Introduction'	FTR-20261124-34948401-87	yes
+34948401	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/lamotrigine_loop_20261124/34948401.xml	xml: sec title '3. Discussion'	FTR-20261124-34948401-87	yes
+34948401	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/lamotrigine_loop_20261124/34948401.xml	xml: table-wrap with rows	FTR-20261124-34948401-87	yes
+35013551	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/d_pantothenate_loop_20261124/8747999.xml	xml: abstract element	FTR-20261124-35013551-80	yes
+35013551	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/d_pantothenate_loop_20261124/8747999.xml	xml: sec title 'Introduction'	FTR-20261124-35013551-80	yes
+35013551	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/d_pantothenate_loop_20261124/8747999.xml	xml: sec title 'Subjects and methods'	FTR-20261124-35013551-80	yes
+35013551	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/d_pantothenate_loop_20261124/8747999.xml	xml: sec title 'Discussion'	FTR-20261124-35013551-80	yes
+35053314	primary	partial_fulltext_read	references	not_read	B	PMID35053314_Ferraro2022_PMC.xml	xml: ref-list	FTR-20261019-35053314-01	yes
+35076395	primary	partial_fulltext_read	introduction	not_read	B	wo32_lit_20261118/PMID35076395_PMC8853665_epmc.xml	xml: sec title 'Introduction'	FTR-20261118-35076395-01	yes
+35076395	primary	partial_fulltext_read	methods	not_read	B	wo32_lit_20261118/PMID35076395_PMC8853665_epmc.xml	xml: sec title 'Materials and methods'	FTR-20261118-35076395-01	yes
+35076395	primary	partial_fulltext_read	results	not_read	B	wo32_lit_20261118/PMID35076395_PMC8853665_epmc.xml	xml: sec title 'Results'	FTR-20261118-35076395-01	yes
+35076395	primary	partial_fulltext_read	discussion	not_read	B	wo32_lit_20261118/PMID35076395_PMC8853665_epmc.xml	xml: sec title 'Discussion'	FTR-20261118-35076395-01	yes
+35076395	primary	partial_fulltext_read	tables	not_read	B	wo32_lit_20261118/PMID35076395_PMC8853665_epmc.xml	xml: table-wrap with rows	FTR-20261118-35076395-01	yes
+35076395	primary	partial_fulltext_read	references	not_read	B	wo32_lit_20261118/PMID35076395_PMC8853665_epmc.xml	xml: ref-list	FTR-20261118-35076395-01	yes
+35134125	primary	partial_fulltext_read	references	not_read	B	PMID35134125_Salvati2022_PMC.xml	xml: ref-list	FTR-20261019-35134125-01	yes
+35229008	primary	partial_fulltext_read	references	not_read	B	PMID35229008_Buss2022_PMC.xml	xml: ref-list	FTR-20261004-35229008-02	yes
+35235774	primary	partial_fulltext_read	figures	not_read	B	deepening_downloads/nr_loop_20261124/nadpark.pdf	pdf p5: 'Figure 1. 31P-MRS analysis rev' (images 1, chars 4705)	FTR-20261124-35235774-80	yes
+35235774	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/nr_loop_20261124/nadpark.pdf	pdf p3: 'Table 1. Demographic and anamn'	FTR-20261124-35235774-80	yes
+35328751	primary	partial_fulltext_read	abstract	not_read	B	PMID35328751_Baryla2022_PMC.xml	xml: abstract element	FTR-20261026-35328751-05	yes
+35328751	primary	partial_fulltext_read	introduction	not_read	B	PMID35328751_Baryla2022_PMC.xml	xml: sec title '1. Introduction'	FTR-20261026-35328751-05	yes
+35372341	primary	partial_fulltext_read	abstract	not_read	B	PMID35372341_Palma2022_PMC_r2.xml	xml: abstract element	FTR-20261123-35372341-78	no
+35372341	primary	partial_fulltext_read	introduction	not_read	B	PMID35372341_Palma2022_PMC_r2.xml	xml: sec title 'Introduction'	FTR-20261123-35372341-78	no
+35372341	primary	partial_fulltext_read	discussion	not_read	B	PMID35372341_Palma2022_PMC_r2.xml	xml: sec title 'Discussion'	FTR-20261123-35372341-78	no
+35372341	primary	partial_fulltext_read	tables	not_read	B	PMID35372341_Palma2022_PMC_r2.xml	xml: table-wrap with rows	FTR-20261123-35372341-78	no
+35441706	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/triheptanoin_loop_20261123/PMC9546029.xml	xml: abstract element	FTR-20261123-35441706-87	yes
+35441706	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/triheptanoin_loop_20261123/PMC9546029.xml	xml: sec title 'INTRODUCTION'	FTR-20261123-35441706-87	yes
+35441706	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/triheptanoin_loop_20261123/PMC9546029.xml	xml: sec title 'DISCUSSION'	FTR-20261123-35441706-87	yes
+35460704	primary	partial_fulltext_read	references	not_read	B	PMID35460704_Dong2022_PMC.xml	xml: ref-list	FTR-20261019-35460704-03	yes
+35501379	primary	partial_fulltext_read	methods	not_read	B	PMID35501379_R3b_PMC_r2.xml	xml: sec title 'Methods'	FTR-20261105-35501379-06	no
+35501379	primary	partial_fulltext_read	references	not_read	B	PMID35501379_R3b_PMC_r2.xml	xml: ref-list	FTR-20261105-35501379-06	no
+35524444	primary	partial_fulltext_read	tables	not_read	B	adv065b_20261118/PMID35524444_PMC9283319_efetch_pmc.xml	xml: table-wrap with rows	FTR-20261118-35524444-66	yes
+35524444	primary	partial_fulltext_read	references	not_read	B	adv065b_20261118/PMID35524444_PMC9283319_efetch_pmc.xml	xml: ref-list	FTR-20261118-35524444-66	yes
+35524446	primary	partial_fulltext_read	introduction	not_read	B	adv065b_20261118/PMID35524446_PMC9545618_efetch_pmc.xml	xml: sec title 'INTRODUCTION'	FTR-20261118-35524446-66	yes
+35524446	primary	partial_fulltext_read	references	not_read	B	adv065b_20261118/PMID35524446_PMC9545618_efetch_pmc.xml	xml: ref-list	FTR-20261118-35524446-66	yes
+35562864	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC9101419.1.xml	xml: abstract element	FTR-20261123-35562864-96	yes
+35562864	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC9101419.1.xml	xml: sec title '1. Introduction'	FTR-20261123-35562864-96	yes
+35562864	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC9101419.1.xml	xml: sec title '3. Discussion'	FTR-20261123-35562864-96	yes
+35573960	primary	partial_fulltext_read	abstract	not_read	B	PMID35573960_Riva2022_PMC.xml	xml: abstract element	FTR-20261124-35573960-98	yes
+35573960	primary	partial_fulltext_read	introduction	not_read	B	PMID35573960_Riva2022_PMC.xml	xml: sec title 'Introduction'	FTR-20261124-35573960-98	yes
+35573960	primary	partial_fulltext_read	methods	not_read	B	PMID35573960_Riva2022_PMC.xml	xml: sec title 'Methods'	FTR-20261124-35573960-98	yes
+35573960	primary	partial_fulltext_read	discussion	not_read	B	PMID35573960_Riva2022_PMC.xml	xml: sec title 'Discussion'	FTR-20261124-35573960-98	yes
+35712340	primary	partial_fulltext_read	abstract	not_read	B	PMID35712340_Sukkar2022_PMC.xml	xml: abstract element	FTR-20261124-35712340-97	yes
+35712340	primary	partial_fulltext_read	introduction	not_read	B	PMID35712340_Sukkar2022_PMC.xml	xml: sec title 'Introduction'	FTR-20261124-35712340-97	yes
+35712340	primary	partial_fulltext_read	discussion	not_read	B	PMID35712340_Sukkar2022_PMC.xml	xml: sec title 'Discussion'	FTR-20261124-35712340-97	yes
+35716775	primary	partial_fulltext_read	results	not_read	B	b_ww1_ppxy_20261119/Rotem-Bamberger2022_PMC9293652.xml	xml: sec title 'Results'	FTR-20261119-35716775-71	yes
+35716775	primary	partial_fulltext_read	discussion	not_read	B	b_ww1_ppxy_20261119/Rotem-Bamberger2022_PMC9293652.xml	xml: sec title 'Discussion'	FTR-20261119-35716775-71	yes
+35716775	primary	partial_fulltext_read	references	not_read	B	b_ww1_ppxy_20261119/Rotem-Bamberger2022_PMC9293652.xml	xml: ref-list	FTR-20261119-35716775-71	yes
+35792847	primary	partial_fulltext_read	methods	not_read	B	PMID35792847_AlBaradie2022_JLE_abstract.html	html: heading 'Methods'	FTR-20261124-35792847-87	no
+35792847	primary	partial_fulltext_read	discussion	not_read	B	PMID35792847_AlBaradie2022_JLE_fulltext.html	html: heading 'Discussion'	FTR-20261124-35792847-87	yes
+35817569	primary	partial_fulltext_read	methods	not_read	B	ketamine_kds_it_20261117/p2_ketamine_series/PMID35817569_Jacobwitz2022_PMCpage.html	html: heading 'Methods'	FTR-20261117-35817569-01	yes
+35817569	primary	partial_fulltext_read	discussion	not_read	B	ketamine_kds_it_20261117/p2_ketamine_series/PMID35817569_Jacobwitz2022_PMCpage.html	html: heading 'Discussion'	FTR-20261117-35817569-01	yes
+35833327	secondary	abstract_only	introduction	not_read	B	ketamine_kds_it_20261117/p5_alternatives/PMID35833327_Rosati2022_europepmc-fullTextXML.xml	xml: sec title 'INTRODUCTION'	FTR-20261117-35833327-01	no
+35833327	secondary	abstract_only	methods	not_read	B	ketamine_kds_it_20261117/p5_alternatives/PMID35833327_Rosati2022_europepmc-fullTextXML.xml	xml: sec title 'Methods'	FTR-20261117-35833327-01	no
+35833327	secondary	abstract_only	results	not_read	B	ketamine_kds_it_20261117/p5_alternatives/PMID35833327_Rosati2022_europepmc-fullTextXML.xml	xml: sec title 'Results'	FTR-20261117-35833327-01	no
+35833327	secondary	abstract_only	discussion	not_read	B	ketamine_kds_it_20261117/p5_alternatives/PMID35833327_Rosati2022_europepmc-fullTextXML.xml	xml: sec title 'DISCUSSION'	FTR-20261117-35833327-01	no
+35833327	secondary	abstract_only	tables	not_read	B	ketamine_kds_it_20261117/p5_alternatives/PMID35833327_Rosati2022_europepmc-fullTextXML.xml	xml: table-wrap with rows	FTR-20261117-35833327-01	no
+35833327	secondary	abstract_only	references	not_read	B	ketamine_kds_it_20261117/p5_alternatives/PMID35833327_Rosati2022_europepmc-fullTextXML.xml	xml: ref-list	FTR-20261117-35833327-01	no
+35945593	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/d_pantothenate_loop_20261124/9364590.xml	xml: abstract element	FTR-20261124-35945593-80	yes
+35945593	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/d_pantothenate_loop_20261124/9364590.xml	xml: sec title 'Discussion'	FTR-20261124-35945593-80	yes
+36117414	primary	partial_fulltext_read	references	not_read	B	PMID36117414_Dienel2023_PMC.xml	xml: ref-list	FTR-20261019-36117414-01	yes
+36235546	primary	partial_fulltext_read	references	not_read	B	PMID36235546_Morris2022_PMC.xml	xml: ref-list	FTR-20261019-36235546-01	yes
+36244590	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/sulforaphane_loop_20261124/stroke.xml	xml: abstract element	FTR-20261124-36244590-83	yes
+36244590	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/sulforaphane_loop_20261124/stroke.xml	xml: sec title 'Introduction'	FTR-20261124-36244590-83	yes
+36244590	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/sulforaphane_loop_20261124/stroke.xml	xml: sec title 'Discussion'	FTR-20261124-36244590-83	yes
+36278433	primary	partial_fulltext_read	tables	not_present	A	PMID36278433_Guyon2022_PMC_r2.xml	xml: table-wrap with rows	FTR-20261027-36278433-02	no
+36278433	primary	partial_fulltext_read	references	not_read	B	PMID36278433_Guyon2022_PMC_r2.xml	xml: ref-list	FTR-20261027-36278433-02	no
+36282524	primary	partial_fulltext_read	tables	not_present	A	PMID36282524_Barker2023_PMC_r2.xml	xml: table-wrap with rows	FTR-20261021-36282524-01	yes
+36287209	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/nr_loop_20261124/hypomorph.xml	xml: abstract element	FTR-20261124-36287209-80	yes
+36287209	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/nr_loop_20261124/hypomorph.xml	xml: sec title 'Introduction'	FTR-20261124-36287209-80	yes
+36287209	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/nr_loop_20261124/hypomorph.xml	xml: sec title 'Methods'	FTR-20261124-36287209-80	yes
+36287209	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/nr_loop_20261124/hypomorph.xml	xml: sec title 'Discussion'	FTR-20261124-36287209-80	yes
+36300716	primary	partial_fulltext_read	introduction	not_read	B	PMID36300716_Bleakley2023_PMC_r2.xml	xml: sec title 'INTRODUCTION'	FTR-20261105-36300716-05	no
+36300716	primary	partial_fulltext_read	references	not_read	B	PMID36300716_Bleakley2023_PMC_r2.xml	xml: ref-list	FTR-20261105-36300716-05	no
+36346513	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC9643320.1.xml	xml: abstract element	FTR-20261123-36346513-95	yes
+36346513	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/brivaracetam_loop_20261123/PMC9643320.1.xml	xml: sec title 'Discussion'	FTR-20261123-36346513-95	yes
+36432491	primary	partial_fulltext_read	abstract	not_read	B	PMID36432491_Lee2022_PMC_r2.xml	xml: abstract element	FTR-20261110-36432491-98	no
+36432491	primary	partial_fulltext_read	introduction	not_read	B	PMID36432491_Lee2022_PMC_r2.xml	xml: sec title '1. Introduction'	FTR-20261110-36432491-98	no
+36432491	primary	partial_fulltext_read	references	not_read	B	PMID36432491_Lee2022_PMC_r2.xml	xml: ref-list	FTR-20261110-36432491-98	no
+36537292	primary	partial_fulltext_read	references	not_read	B	adv052_he_20261118/PMID36537292_PMC9764106_europepmc.xml	xml: ref-list	FTR-20261118-36537292-53	yes
+36587184	primary	partial_fulltext_read	abstract	not_read	B	PMID36587184_Friemel2022_PMC.xml	xml: abstract element	FTR-20261020-36587184-01	yes
+36587184	primary	partial_fulltext_read	references	not_read	B	PMID36587184_Friemel2022_PMC.xml	xml: ref-list	FTR-20261020-36587184-01	yes
+36717752	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/hydroxocobalamin_loop_20261124/forny.xml	xml: abstract element	FTR-20261124-36717752-80	yes
+36717752	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/hydroxocobalamin_loop_20261124/forny.xml	xml: sec title 'Methods'	FTR-20261124-36717752-80	yes
+36717752	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/hydroxocobalamin_loop_20261124/forny.xml	xml: sec title 'Discussion'	FTR-20261124-36717752-80	yes
+36779245	primary	partial_fulltext_read	abstract	not_read	B	PMID36779245_Oliver2023_PMC_2026-09-27.xml	xml: abstract element	FTR-20261124-36779245-97	yes
+36779245	primary	partial_fulltext_read	introduction	not_read	B	PMID36779245_Oliver2023_PMC_2026-09-27.xml	xml: sec title 'INTRODUCTION'	FTR-20261124-36779245-97	yes
+36779245	primary	partial_fulltext_read	methods	not_read	B	PMID36779245_Oliver2023_PMC_2026-09-27.xml	xml: sec title 'Methods'	FTR-20261124-36779245-97	yes
+36779245	primary	partial_fulltext_read	results	not_read	B	PMID36779245_Oliver2023_PMC_2026-09-27.xml	xml: sec title 'Results'	FTR-20261124-36779245-97	yes
+36779245	primary	partial_fulltext_read	discussion	not_read	B	PMID36779245_Oliver2023_PMC_2026-09-27.xml	xml: sec title 'DISCUSSION'	FTR-20261124-36779245-97	yes
+36828035	primary	partial_fulltext_read	abstract	not_read	B	PMID36828035_Hussain2023.pdf	pdf p1: heading 'Abstract'	FTR-20261123-36828035-05	no
+36828035	primary	partial_fulltext_read	introduction	not_read	B	PMID36828035_Hussain2023.pdf	pdf p2: heading '1.     Introduction'	FTR-20261123-36828035-05	no
+36828035	primary	partial_fulltext_read	methods	not_read	B	PMID36828035_Hussain2023_EPMC.xml	xml: sec title 'Material and methods'	FTR-20261123-36828035-05	no
+36828035	primary	partial_fulltext_read	discussion	not_read	B	PMID36828035_Hussain2023.pdf	pdf p11: heading '3.     Discussion'	FTR-20261123-36828035-05	no
+36828035	primary	partial_fulltext_read	figures	captions_only	B	PMID36828035_Hussain2023.pdf	pdf p26: 'Fig. 1. |.' (images 1, chars 2652)	FTR-20261123-36828035-05	no
+36889319	primary	partial_fulltext_read	abstract	not_read	B	adv065b_20261118/PMID36889319_PMC10040380_efetch_pmc.xml	xml: abstract element	FTR-20261118-36889319-66	yes
+36889319	primary	partial_fulltext_read	introduction	not_read	B	adv065b_20261118/PMID36889319_PMC10040380_efetch_pmc.xml	xml: sec title 'Introduction'	FTR-20261118-36889319-66	yes
+36889319	primary	partial_fulltext_read	methods	not_read	B	adv065b_20261118/PMID36889319_PMC10040380_efetch_pmc.xml	xml: sec title 'STAR★Methods'	FTR-20261118-36889319-66	yes
+36889319	primary	partial_fulltext_read	discussion	not_read	B	adv065b_20261118/PMID36889319_PMC10040380_efetch_pmc.xml	xml: sec title 'Discussion'	FTR-20261118-36889319-66	yes
+36889319	primary	partial_fulltext_read	limitations	not_read	B	adv065b_20261118/PMID36889319_PMC10040380_efetch_pmc.xml	xml: sec title 'Limitations of the study'	FTR-20261118-36889319-66	yes
+36889319	primary	partial_fulltext_read	tables	not_read	B	adv065b_20261118/PMID36889319_PMC10040380_efetch_pmc.xml	xml: table-wrap with rows	FTR-20261118-36889319-66	yes
+36889319	primary	partial_fulltext_read	references	not_read	B	adv065b_20261118/PMID36889319_PMC10040380_efetch_pmc.xml	xml: ref-list	FTR-20261118-36889319-66	yes
+36909817	primary	partial_fulltext_read	limitations	not_read	B	kds_pk_20261117/PMID36909817_PMC9996394_epmc.xml	xml: sec title 'Limitations'	FTR-20261117-36909817-01	yes
+36909817	primary	partial_fulltext_read	tables	not_read	B	kds_pk_20261117/PMID36909817_PMC9996394_epmc.xml	xml: table-wrap with rows	FTR-20261117-36909817-01	yes
+36909817	primary	partial_fulltext_read	references	not_read	B	kds_pk_20261117/PMID36909817_PMC9996394_epmc.xml	xml: ref-list	FTR-20261117-36909817-01	yes
+36951961	primary	partial_fulltext_read	references	not_read	B	PMID36951961_Chen2023_PMC.xml	xml: ref-list	FTR-20261003-36951961-01	yes
+36979157	primary	partial_fulltext_read	results	captions_only	B	PMID36979157_Kaluzinska2023_PMC_r2.xml	xml: sec title '3. Results'	FTR-20261019-36979157-01	yes
+36980111	primary	partial_fulltext_read	abstract	not_read	B	PMID36980111_Mastrangelo2023_PMC.xml	xml: abstract element	FTR-20261020-36980111-01	yes
+36980111	primary	partial_fulltext_read	references	not_read	B	PMID36980111_Mastrangelo2023_PMC.xml	xml: ref-list	FTR-20261020-36980111-01	yes
+36995363	secondary	abstract_only	introduction	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: sec title 'Introduction'	FTR-20261124-36995363-80	no
+36995363	secondary	abstract_only	methods	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: sec title 'Methods'	FTR-20261124-36995363-80	no
+36995363	secondary	abstract_only	results	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: sec title 'Results'	FTR-20261124-36995363-80	no
+36995363	secondary	abstract_only	discussion	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: sec title 'Discussion'	FTR-20261124-36995363-80	no
+36995363	secondary	abstract_only	limitations	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: sec title 'Limitations of the study'	FTR-20261124-36995363-80	no
+36995363	secondary	abstract_only	tables	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: table-wrap with rows	FTR-20261124-36995363-80	no
+36996110	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/cannabidiol_loop_20261124/36996110.xml	xml: abstract element	FTR-20261124-36996110-93	yes
+36996110	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/cannabidiol_loop_20261124/36996110.xml	xml: sec title 'Materials and Methods'	FTR-20261124-36996110-93	yes
+36996110	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/cannabidiol_loop_20261124/36996110.xml	xml: sec title 'Discussion'	FTR-20261124-36996110-93	yes
+36998780	primary	partial_fulltext_read	abstract	not_read	B	adv065c_20261118/PMID36998780_PMC10043303_efetch_pmc.xml	xml: abstract element	FTR-20261118-36998780-67	yes
+36998780	primary	partial_fulltext_read	introduction	not_read	B	adv065c_20261118/PMID36998780_PMC10043303_efetch_pmc.xml	xml: sec title 'Introduction'	FTR-20261118-36998780-67	yes
+36998780	primary	partial_fulltext_read	methods	not_read	B	adv065c_20261118/PMID36998780_PMC10043303_efetch_pmc.xml	xml: sec title 'Methods'	FTR-20261118-36998780-67	yes
+36998780	primary	partial_fulltext_read	tables	not_read	B	adv065c_20261118/PMID36998780_PMC10043303_efetch_pmc.xml	xml: table-wrap with rows	FTR-20261118-36998780-67	yes
+36998780	primary	partial_fulltext_read	references	not_read	B	adv065c_20261118/PMID36998780_PMC10043303_efetch_pmc.xml	xml: ref-list	FTR-20261118-36998780-67	yes
+37046296	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/r_lipoic_loop_20261124/PKAN.xml	xml: abstract element	FTR-20261124-37046296-80	yes
+37046296	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/r_lipoic_loop_20261124/PKAN.xml	xml: sec title 'Discussion'	FTR-20261124-37046296-80	yes
+37069177	primary	partial_fulltext_read	abstract	not_read	B	adv065c_20261118/PMID37069177_PMC10110603_efetch_pmc.xml	xml: abstract element	FTR-20261118-37069177-67	yes
+37069177	primary	partial_fulltext_read	introduction	not_read	B	adv065c_20261118/PMID37069177_PMC10110603_efetch_pmc.xml	xml: sec title 'Introduction'	FTR-20261118-37069177-67	yes
+37069177	primary	partial_fulltext_read	methods	not_read	B	adv065c_20261118/PMID37069177_PMC10110603_efetch_pmc.xml	xml: sec title 'Methods'	FTR-20261118-37069177-67	yes
+37069177	primary	partial_fulltext_read	tables	not_read	B	adv065c_20261118/PMID37069177_PMC10110603_efetch_pmc.xml	xml: table-wrap with rows	FTR-20261118-37069177-67	yes
+37069177	primary	partial_fulltext_read	references	not_read	B	adv065c_20261118/PMID37069177_PMC10110603_efetch_pmc.xml	xml: ref-list	FTR-20261118-37069177-67	yes
+37082241	primary	partial_fulltext_read	introduction	not_read	B	PMID37082241_Harman2023_PMC_r2.xml	xml: sec title '1 Introduction'	FTR-20261105-37082241-05	no
+37082241	primary	partial_fulltext_read	tables	not_read	B	PMID37082241_Harman2023_PMC_r2.xml	xml: table-wrap with rows	FTR-20261105-37082241-05	no
+37082241	primary	partial_fulltext_read	references	not_read	B	PMID37082241_Harman2023_PMC_r2.xml	xml: ref-list	FTR-20261105-37082241-05	no
+37100056	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/citicoline_loop_20261123/PMC10367582.html	html: heading 'INTRODUCTION'	FTR-20261123-37100056-97	yes
+37100056	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/citicoline_loop_20261123/PMC10367582.html	html: heading 'METHOD DETAILS'	FTR-20261123-37100056-97	yes
+37100056	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/citicoline_loop_20261123/PMC10367582.html	html: heading 'DISCUSSION'	FTR-20261123-37100056-97	yes
+37100056	primary	partial_fulltext_read	limitations	not_read	B	deepening_downloads/citicoline_loop_20261123/PMC10367582.html	html: heading 'Limitations of Study'	FTR-20261123-37100056-97	yes
+37100056	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/citicoline_loop_20261123/PMC10367582.html	html: table rows	FTR-20261123-37100056-97	yes
+37173784	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/citicoline_loop_20261123/PMC10182621.html	html: heading 'Discussion'	FTR-20261123-37173784-97	yes
+37268656	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/triheptanoin_loop_20261123/PMC10238483.xml	xml: abstract element	FTR-20261123-37268656-90	yes
+37268656	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/triheptanoin_loop_20261123/PMC10238483.xml	xml: sec title 'Introduction'	FTR-20261123-37268656-90	yes
+37268656	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/triheptanoin_loop_20261123/PMC10238483.xml	xml: sec title 'Discussion'	FTR-20261123-37268656-90	yes
+37268656	primary	partial_fulltext_read	limitations	not_read	B	deepening_downloads/triheptanoin_loop_20261123/PMC10238483.xml	xml: sec title 'Limitations'	FTR-20261123-37268656-90	yes
+37275776	primary	partial_fulltext_read	introduction	not_read	B	PMID37275776_Colombo2023_PMC_r2.xml	xml: sec title 'Introduction'	FTR-20261105-37275776-05	no
+37275776	primary	partial_fulltext_read	discussion	not_read	B	PMID37275776_Colombo2023_PMC_r2.xml	xml: sec title 'Discussion'	FTR-20261105-37275776-05	no
+37275776	primary	partial_fulltext_read	references	not_read	B	PMID37275776_Colombo2023_PMC_r2.xml	xml: ref-list	FTR-20261105-37275776-05	no
+37328865	primary	partial_fulltext_read	references	not_read	B	PMID37328865_Wainberg2023_PMC.xml	xml: ref-list	FTR-20261019-37328865-01	yes
+37329181	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/rufinamide_loop_20261123/dup15q.html	html: heading 'Introduction:'	FTR-20261123-37329181-98	yes
+37329181	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/rufinamide_loop_20261123/dup15q.html	html: heading 'Methods:'	FTR-20261123-37329181-98	yes
+37329181	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/rufinamide_loop_20261123/dup15q.html	html: heading 'Discussion:'	FTR-20261123-37329181-98	yes
+37329181	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/rufinamide_loop_20261123/dup15q.html	html: table rows	FTR-20261123-37329181-98	yes
+37438524	primary	partial_fulltext_read	methods	not_read	B	PMID37438524_Kim2023_PMC_r2.xml	xml: sec title 'Methods'	FTR-20261023-37438524-01	yes
+37443770	primary	partial_fulltext_read	references	not_read	B	PMID37443770_Ng2023_PMC.xml	xml: ref-list	FTR-20261019-37443770-01	yes
+37515322	primary	partial_fulltext_read	references	not_read	B	PMID37515322_Hudry2023_PMC.xml	xml: ref-list	FTR-20261004-37515322-02	yes
+37583270	primary	partial_fulltext_read	abstract	not_read	B	PMID37583270_Nagarajan2023_PMC.xml	xml: abstract element	FTR-20261117-37583270-01	yes
+37583270	primary	partial_fulltext_read	introduction	not_read	B	PMID37583270_Nagarajan2023_PMC.xml	xml: sec title 'INTRODUCTION'	FTR-20261117-37583270-01	yes
+37583270	primary	partial_fulltext_read	discussion	not_read	B	PMID37583270_Nagarajan2023_PMC.xml	xml: sec title 'DISCUSSION'	FTR-20261117-37583270-01	yes
+37583270	primary	partial_fulltext_read	references	not_read	B	PMID37583270_Nagarajan2023_PMC.xml	xml: ref-list	FTR-20261117-37583270-01	yes
+37631333	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/cannabidiol_loop_20261124/PMC10459683.xml	xml: abstract element	FTR-20261124-37631333-93	yes
+37631333	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/cannabidiol_loop_20261124/PMC10459683.xml	xml: sec title '1. Introduction'	FTR-20261124-37631333-93	yes
+37631333	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/cannabidiol_loop_20261124/PMC10459683.xml	xml: sec title '4. Discussion'	FTR-20261124-37631333-93	yes
+37686047	primary	partial_fulltext_read	abstract	not_read	B	PMID37686047_Rushing2023_PMC.xml	xml: abstract element	FTR-20261020-37686047-01	yes
+37686047	primary	partial_fulltext_read	references	not_read	B	PMID37686047_Rushing2023_PMC.xml	xml: ref-list	FTR-20261020-37686047-01	yes
+37781246	primary	partial_fulltext_read	references	not_read	B	PMID37781246_KaluzinskaKolat2023_PMC.xml	xml: ref-list	FTR-20261004-37781246-02	yes
+37798473	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/inosine_loop_20261124/PMC10626993.xml	xml: abstract element	FTR-20261124-37798473-94	yes
+37798473	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/inosine_loop_20261124/PMC10626993.xml	xml: sec title 'INTRODUCTION'	FTR-20261124-37798473-94	yes
+37798473	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/inosine_loop_20261124/PMC10626993.xml	xml: sec title 'DISCUSSION'	FTR-20261124-37798473-94	yes
+37804316	primary	partial_fulltext_read	tables	captions_only	B	PMC10907083_PMID37804316_europepmc_fulltext_2026-10-29.xml	xml: table-wrap with rows	FTR-20261029-37804316-01	yes
+37822150	primary	partial_fulltext_read	references	not_read	B	adv052_he_20261118/PMID37822150_PMC11591408_europepmc.xml	xml: ref-list	FTR-20261118-37822150-53	yes
+37897534	primary	partial_fulltext_read	abstract	not_read	B	PMID37897534_Cheng2023_PMC.xml	xml: abstract element	FTR-20261123-37897534-75	yes
+37897534	primary	partial_fulltext_read	introduction	not_read	B	PMID37897534_Cheng2023_PMC.xml	xml: sec title 'Introduction'	FTR-20261123-37897534-75	yes
+37897534	primary	partial_fulltext_read	discussion	not_read	B	PMID37897534_Cheng2023_PMC.xml	xml: sec title 'Discussion'	FTR-20261123-37897534-75	yes
+37974179	primary	partial_fulltext_read	abstract	not_read	B	PMID37974179_Dong2023_PMC.xml	xml: abstract element	FTR-20261124-37974179-80	yes
+37974179	primary	partial_fulltext_read	introduction	not_read	B	PMID37974179_Dong2023_PMC.xml	xml: sec title 'Introduction'	FTR-20261124-37974179-80	yes
+37974179	primary	partial_fulltext_read	methods	not_read	B	PMID37974179_Dong2023_PMC.xml	xml: sec title 'Methods'	FTR-20261124-37974179-80	yes
+37974179	primary	partial_fulltext_read	discussion	not_read	B	PMID37974179_Dong2023_PMC.xml	xml: sec title 'Discussion'	FTR-20261124-37974179-80	yes
+38106446	secondary	queried_not_full_read	introduction	not_read	B	PMID38106446_Zhang2023_PMC10725694.xml	xml: sec title 'Introduction'	FTR-20261028-38106446-01	yes
+38106446	secondary	queried_not_full_read	tables	not_read	B	PMID38106446_Zhang2023_PMC10725694.xml	xml: table-wrap with rows	FTR-20261028-38106446-01	yes
+38106446	secondary	queried_not_full_read	references	not_read	B	PMID38106446_Zhang2023_PMC10725694.xml	xml: ref-list	FTR-20261028-38106446-01	yes
+38116420	primary	partial_fulltext_read	tables	not_read	B	rescued_from_scratch_he46/2d10b13db0e8__PMID38116420_pmc.html	html: table rows	FTR-20261112-38116420-75	no
+38116420	primary	partial_fulltext_read	references	not_read	B	rescued_from_scratch_he46/b14bd8a1e330__PMID38116420_pmc_html.txt	pdf p1: References heading	FTR-20261112-38116420-75	yes
+38122823	primary	partial_fulltext_read	discussion	not_read	B	PMID38122823_Nascimento2023_PMC.xml	xml: sec title 'Discussion'	FTR-20260927-38122823-01	yes
+38122823	primary	partial_fulltext_read	references	not_read	B	PMID38122823_Nascimento2023_PMC.xml	xml: ref-list	FTR-20260927-38122823-01	yes
+38161429	primary	partial_fulltext_read	references	not_read	B	PMID38161429_Battaglia2023_PMC_2026-09-27.xml	xml: ref-list	FTR-20261105-38161429-06	no
+38162029	primary	partial_fulltext_read	introduction	not_read	B	kds_pk_20261117/PMID38162029_PMC10755719_epmc.xml	xml: sec title 'Introduction'	FTR-20261123-38162029-99	yes
+38162029	primary	partial_fulltext_read	methods	not_read	B	kds_pk_20261117/PMID38162029_PMC10755719_epmc.xml	xml: sec title 'STAR★Methods'	FTR-20261123-38162029-99	yes
+38162029	primary	partial_fulltext_read	results	not_read	B	kds_pk_20261117/PMID38162029_PMC10755719_epmc.xml	xml: sec title 'Results'	FTR-20261123-38162029-99	yes
+38162029	primary	partial_fulltext_read	discussion	not_read	B	kds_pk_20261117/PMID38162029_PMC10755719_epmc.xml	xml: sec title 'Discussion'	FTR-20261123-38162029-99	yes
+38162029	primary	partial_fulltext_read	limitations	not_read	B	kds_pk_20261117/PMID38162029_PMC10755719_epmc.xml	xml: sec title 'Limitations of the study'	FTR-20261123-38162029-99	yes
+38330420	primary	partial_fulltext_read	references	not_read	B	PMID38330420_Bian2024_PMC.xml	xml: ref-list	FTR-20261019-38330420-01	yes
+38366086	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/cannabidiol_loop_20261124/38366086.xml	xml: abstract element	FTR-20261124-38366086-93	yes
+38366086	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/cannabidiol_loop_20261124/38366086.xml	xml: sec title 'Introduction'	FTR-20261124-38366086-93	yes
+38366086	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/cannabidiol_loop_20261124/38366086.xml	xml: sec title 'Methods'	FTR-20261124-38366086-93	yes
+38366086	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/cannabidiol_loop_20261124/38366086.xml	xml: sec title 'Discussion'	FTR-20261124-38366086-93	yes
+38375995	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/lacosamide_loop_20261123/PMC10963285.xml	xml: abstract element	FTR-20261123-38375995-91	yes
+38375995	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/lacosamide_loop_20261123/PMC10963285.xml	xml: sec title 'Introduction'	FTR-20261123-38375995-91	yes
+38443647	primary	partial_fulltext_read	introduction	not_read	B	PMID38443647_Bacq2024_PMC_r2.xml	xml: sec title 'Introduction'	FTR-20261110-38443647-97	no
+38443647	primary	partial_fulltext_read	methods	not_present	A	PMID38443647_Bacq2024_PMC_r2.xml	xml: sec title 'Methods'	FTR-20261110-38443647-97	no
+38443647	primary	partial_fulltext_read	references	not_read	B	PMID38443647_Bacq2024_PMC_r2.xml	xml: ref-list	FTR-20261110-38443647-97	no
+38509072	primary	partial_fulltext_read	abstract	not_read	B	PMID38509072_Mangkalaphiban2024_PMC_r2.xml	xml: abstract element	FTR-20261022-38509072-01	yes
+38509072	primary	partial_fulltext_read	references	not_read	B	PMID38509072_Mangkalaphiban2024_PMC_r2.xml	xml: ref-list	FTR-20261022-38509072-01	yes
+38563965	primary	partial_fulltext_read	introduction	not_read	B	PMID38563965_Zeng2024_PMC.html	html: heading 'INTRODUCTION'	FTR-20261029-38563965-02	yes
+38563965	primary	partial_fulltext_read	discussion	not_read	B	PMID38563965_Zeng2024_PMC.html	html: heading 'DISCUSSION'	FTR-20261029-38563965-02	yes
+38681648	primary	partial_fulltext_read	references	not_read	B	PMID38681648_Tao2024_PMC.xml	xml: ref-list	FTR-20261019-38681648-01	yes
+38683369	primary	partial_fulltext_read	abstract	not_read	B	PMID38683369_PMC11422472_Li2024_epmc.xml	xml: abstract element	FTR-20261117-38683369-01	yes
+38683369	primary	partial_fulltext_read	introduction	not_read	B	PMID38683369_PMC11422472_Li2024_epmc.xml	xml: sec title 'Introduction'	FTR-20261117-38683369-01	yes
+38683369	primary	partial_fulltext_read	tables	not_read	B	PMID38683369_PMC11422472_Li2024_epmc.xml	xml: table-wrap with rows	FTR-20261117-38683369-01	yes
+38683369	primary	partial_fulltext_read	references	not_read	B	PMID38683369_PMC11422472_Li2024_epmc.xml	xml: ref-list	FTR-20261117-38683369-01	yes
+38840775	primary	partial_fulltext_read	introduction	not_read	B	PMID38840775_PMC11150584_europepmc.xml	xml: sec title 'Introduction'	FTR-20261117-38840775-01	yes
+38950809	primary	partial_fulltext_read	abstract	not_read	B	adv065c_20261118/PMID38950809_PMC11825064_efetch_pmc.xml	xml: abstract element	FTR-20261118-38950809-67	yes
+38950809	primary	partial_fulltext_read	methods	not_read	B	adv065c_20261118/PMID38950809_PMC11825064_efetch_pmc.xml	xml: sec title 'METHODS:'	FTR-20261118-38950809-67	yes
+38950809	primary	partial_fulltext_read	tables	not_read	B	adv065c_20261118/PMID38950809_PMC11825064_efetch_pmc.xml	xml: table-wrap with rows	FTR-20261118-38950809-67	yes
+38950809	primary	partial_fulltext_read	references	not_read	B	adv065c_20261118/PMID38950809_PMC11825064_efetch_pmc.xml	xml: ref-list	FTR-20261118-38950809-67	yes
+38960035	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/inosine_loop_20261124/PMC11342100.xml	xml: abstract element	FTR-20261124-38960035-94	yes
+38960035	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/inosine_loop_20261124/PMC11342100.xml	xml: sec title 'Discussion'	FTR-20261124-38960035-94	yes
+38978529	primary	partial_fulltext_read	abstract	not_read	B	PMID38978529_Girgis2024_PMC.xml	xml: abstract element	FTR-20261020-38978529-01	yes
+38978529	primary	partial_fulltext_read	references	not_read	B	PMID38978529_Girgis2024_PMC.xml	xml: ref-list	FTR-20261020-38978529-01	yes
+38983107	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/d_bhb_loop_20261123/PMC11231749.1.xml	xml: abstract element	FTR-20261124-38983107-98	yes
+38983107	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/d_bhb_loop_20261123/PMC11231749.1.xml	xml: sec title 'Introduction'	FTR-20261124-38983107-98	yes
+38983107	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/d_bhb_loop_20261123/PMC11231749.1.xml	xml: sec title 'Materials and methods'	FTR-20261124-38983107-98	yes
+39041895	primary	partial_fulltext_read	introduction	not_read	B	PMID39041895_Mijatovic2024_PMC11264351_epmc_2026-10-29.xml	xml: sec title 'INTRODUCTION'	FTR-20261029-39041895-01	yes
+39041895	primary	partial_fulltext_read	methods	not_read	B	PMID39041895_Mijatovic2024_PMC11264351_epmc_2026-10-29.xml	xml: sec title 'MATERIALS AND METHODS'	FTR-20261029-39041895-01	yes
+39044608	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/nr_loop_20261124/human_acute.xml	xml: abstract element	FTR-20261124-39044608-80	yes
+39044608	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/nr_loop_20261124/human_acute.xml	xml: sec title 'INTRODUCTION'	FTR-20261124-39044608-80	yes
+39044608	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/nr_loop_20261124/human_acute.xml	xml: sec title 'DISCUSSION'	FTR-20261124-39044608-80	yes
+39101447	primary	partial_fulltext_read	abstract	not_read	B	PMID39101447_You2024_PMC.xml	xml: abstract element	FTR-20261124-39101447-80	yes
+39101447	primary	partial_fulltext_read	introduction	not_read	B	PMID39101447_You2024_PMC.xml	xml: sec title 'INTRODUCTION'	FTR-20261124-39101447-80	yes
+39101447	primary	partial_fulltext_read	discussion	not_read	B	PMID39101447_You2024_PMC.xml	xml: sec title 'DISCUSSION'	FTR-20261124-39101447-80	yes
+39101447	primary	partial_fulltext_read	tables	not_read	B	PMID39101447_You2024_PMC.xml	xml: table-wrap with rows	FTR-20261124-39101447-80	yes
+39158787	primary	partial_fulltext_read	introduction	not_read	B	PMID39158787_PMC11387441_europepmc.xml	xml: sec title 'Introduction'	FTR-20261117-39158787-01	yes
+39158787	primary	partial_fulltext_read	discussion	not_read	B	PMID39158787_PMC11387441_europepmc.xml	xml: sec title 'Discussion'	FTR-20261117-39158787-01	yes
+39212337	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/stiripentol_loop_20261124/39212337.xml	xml: abstract element	FTR-20261124-39212337-88	yes
+39212337	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/stiripentol_loop_20261124/39212337.xml	xml: sec title 'Introduction'	FTR-20261124-39212337-88	yes
+39212337	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/stiripentol_loop_20261124/39212337.xml	xml: sec title 'Discussion'	FTR-20261124-39212337-88	yes
+39291745	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/inosine_loop_20261124/PMC11670813.xml	xml: abstract element	FTR-20261124-39291745-94	yes
+39291745	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/inosine_loop_20261124/PMC11670813.xml	xml: sec title 'INTRODUCTION'	FTR-20261124-39291745-94	yes
+39291745	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/inosine_loop_20261124/PMC11670813.xml	xml: sec title 'MATERIALS AND METHODS'	FTR-20261124-39291745-94	yes
+39291745	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/inosine_loop_20261124/PMC11670813.xml	xml: sec title 'RESULTS AND DISCUSSION'	FTR-20261124-39291745-94	yes
+39307309	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/ivabradine_loop_20261123/human_hcn1.xml	xml: abstract element	FTR-20261123-39307309-98	yes
+39307309	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/ivabradine_loop_20261123/human_hcn1.xml	xml: sec title 'Discussion'	FTR-20261123-39307309-98	yes
+39337309	primary	partial_fulltext_read	limitations	not_present	A	adv052_he_20261118/PMID39337309_PMC11432152_europepmc.xml	xml: sec title '6.1. Current ASMs for Treating CAE and T'	FTR-20261118-39337309-53	yes
+39337309	primary	partial_fulltext_read	references	not_read	B	adv052_he_20261118/PMID39337309_PMC11432152_europepmc.xml	xml: ref-list	FTR-20261118-39337309-53	yes
+39358605	primary	partial_fulltext_read	references	not_read	B	PMID39358605_Wiseman2024_PMC.xml	xml: ref-list	FTR-20261004-39358605-02	yes
+39409184	primary	partial_fulltext_read	introduction	not_read	B	PMID39409184_Eckmann2024_PMC_r2.xml	xml: sec title '1. Introduction'	FTR-20261022-39409184-01	yes
+39416860	primary	partial_fulltext_read	abstract	not_read	B	PMID39416860_Feng2024_PMC_r2.xml	xml: abstract element	FTR-20261124-39416860-80	yes
+39416860	primary	partial_fulltext_read	introduction	not_read	B	PMID39416860_Feng2024_PMC_r2.xml	xml: sec title 'Introduction'	FTR-20261124-39416860-80	yes
+39416860	primary	partial_fulltext_read	tables	not_read	B	PMID39416860_Feng2024_PMC_r2.xml	xml: table-wrap with rows	FTR-20261124-39416860-80	yes
+39507621	primary	partial_fulltext_read	abstract	not_read	B	PMID39507621_Teplyshova2024_PMC_r2.xml	xml: abstract element	FTR-20261124-39507621-80	yes
+39507621	primary	partial_fulltext_read	introduction	not_read	B	PMID39507621_Teplyshova2024_PMC_r2.xml	xml: sec title 'Introduction'	FTR-20261124-39507621-80	yes
+39507621	primary	partial_fulltext_read	discussion	not_read	B	PMID39507621_Teplyshova2024_PMC_r2.xml	xml: sec title 'Discussion'	FTR-20261124-39507621-80	yes
+39559284	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/l_glutamine_loop_20261124/PMC11570421.xml	xml: abstract element	FTR-20261124-39559284-98	yes
+39559284	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/l_glutamine_loop_20261124/PMC11570421.xml	xml: sec title 'Introduction'	FTR-20261124-39559284-98	yes
+39570186	primary	partial_fulltext_read	references	not_read	B	PMID39570186_Sathe2025_PMC.xml	xml: ref-list	FTR-20261019-39570186-01	yes
+39641935	primary	partial_fulltext_read	references	not_read	B	PMID39641935_Stevering2025_PMC.xml	xml: ref-list	FTR-20261019-39641935-01	yes
+39769031	primary	partial_fulltext_read	discussion	not_present	A	PMID39769031_RicoMolina2024_PMC_r2.xml	xml: sec title '2. Results and Discussion'	FTR-20261026-39769031-01	yes
+39769031	primary	partial_fulltext_read	references	not_read	B	PMID39769031_RicoMolina2024_PMC_r2.xml	xml: ref-list	FTR-20261026-39769031-01	yes
+39771507	primary	partial_fulltext_read	tables	not_read	B	PMID39771507_PopPK2024_PMC_r2.xml	xml: table-wrap with rows	FTR-20261022-39771507-01	yes
+39847501	primary	partial_fulltext_read	methods	not_read	B	PMID39847501_Chen2025_PMC.xml	xml: sec title 'Methods'	FTR-20261105-39847501-25	no
+39847501	primary	partial_fulltext_read	references	not_read	B	PMID39847501_Chen2025_PMC.xml	xml: ref-list	FTR-20261105-39847501-25	no
+39861362	primary	partial_fulltext_read	references	not_read	B	PMID39861362_Tesser2025_PMC.xml	xml: ref-list	FTR-20261019-39861362-01	yes
+39871710	primary	partial_fulltext_read	references	not_read	B	PMID39871710_Abbas2025_PMC.xml	xml: ref-list	FTR-20261019-39871710-01	yes
+39918155	secondary	abstract_only	introduction	not_read	B	ketamine_kds_it_20261117/p4_harms/PMID39918155_Tunc2025_europepmc-fulltextxml.xml	xml: sec title 'INTRODUCTION'	FTR-20261117-39918155-01	no
+39918155	secondary	abstract_only	methods	not_read	B	ketamine_kds_it_20261117/p4_harms/PMID39918155_Tunc2025_europepmc-fulltextxml.xml	xml: sec title 'Methods'	FTR-20261117-39918155-01	no
+39918155	secondary	abstract_only	results	not_read	B	ketamine_kds_it_20261117/p4_harms/PMID39918155_Tunc2025_europepmc-fulltextxml.xml	xml: sec title 'Results'	FTR-20261117-39918155-01	no
+39918155	secondary	abstract_only	discussion	not_read	B	ketamine_kds_it_20261117/p4_harms/PMID39918155_Tunc2025_europepmc-fulltextxml.xml	xml: sec title 'DISCUSSION'	FTR-20261117-39918155-01	no
+39918155	secondary	abstract_only	limitations	not_read	B	ketamine_kds_it_20261117/p4_harms/PMID39918155_Tunc2025_europepmc-fulltextxml.xml	xml: sec title 'LIMITATIONS'	FTR-20261117-39918155-01	no
+39918155	secondary	abstract_only	tables	not_read	B	ketamine_kds_it_20261117/p4_harms/PMID39918155_Tunc2025_europepmc-fulltextxml.xml	xml: table-wrap with rows	FTR-20261117-39918155-01	no
+39918155	secondary	abstract_only	references	not_read	B	ketamine_kds_it_20261117/p4_harms/PMID39918155_Tunc2025_europepmc-fulltextxml.xml	xml: ref-list	FTR-20261117-39918155-01	no
+39952983	primary	partial_fulltext_read	introduction	not_read	B	PMID39952983_Kim2025_EPMC.xml	xml: sec title 'Introduction'	FTR-20261110-39952983-83	yes
+39952983	primary	partial_fulltext_read	discussion	not_read	B	PMID39952983_Kim2025_EPMC.xml	xml: sec title 'Discussion'	FTR-20261110-39952983-83	yes
+39952983	primary	partial_fulltext_read	tables	not_read	B	PMID39952983_Kim2025_EPMC.xml	xml: table-wrap with rows	FTR-20261110-39952983-83	yes
+39952983	primary	partial_fulltext_read	references	not_read	B	PMID39952983_Kim2025_EPMC.xml	xml: ref-list	FTR-20261110-39952983-83	yes
+39970743	secondary	abstract_only	tables	not_read	B	ketamine_kds_it_20261117/p1_memantine/PMID39970743_Orgun2025_doi.html	html: table rows	FTR-20261117-39970743-01	no
+40068874	primary	partial_fulltext_read	introduction	not_read	B	PMID40068874_Sack2025_PMC_r2.xml	xml: sec title 'Introduction'	FTR-20261105-40068874-05	no
+40068874	primary	partial_fulltext_read	methods	not_read	B	PMID40068874_Sack2025_PMC_r2.xml	xml: sec title 'Materials and Methods'	FTR-20261105-40068874-05	no
+40068874	primary	partial_fulltext_read	discussion	not_read	B	PMID40068874_Sack2025_PMC_r2.xml	xml: sec title 'Discussion'	FTR-20261105-40068874-05	no
+40068874	primary	partial_fulltext_read	tables	not_read	B	PMID40068874_Sack2025_PMC_r2.xml	xml: table-wrap with rows	FTR-20261105-40068874-05	no
+40068874	primary	partial_fulltext_read	references	not_read	B	PMID40068874_Sack2025_PMC_r2.xml	xml: ref-list	FTR-20261105-40068874-05	no
+40119223	primary	partial_fulltext_read	methods	not_present	A	PMID40119223_Garg2025_PMC.xml	xml: sec title 'Newer approach for monitoring and screen'	FTR-20261019-40119223-01	yes
+40119223	primary	partial_fulltext_read	references	not_read	B	PMID40119223_Garg2025_PMC.xml	xml: ref-list	FTR-20261019-40119223-01	yes
+40175519	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/sulforaphane_loop_20261124/vpa_development.xml	xml: abstract element	FTR-20261124-40175519-85	yes
+40175519	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/sulforaphane_loop_20261124/vpa_development.xml	xml: sec title 'Introduction'	FTR-20261124-40175519-85	yes
+40175519	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/sulforaphane_loop_20261124/vpa_development.xml	xml: sec title 'Materials and methods'	FTR-20261124-40175519-85	yes
+40175519	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/sulforaphane_loop_20261124/vpa_development.xml	xml: sec title 'Discussion'	FTR-20261124-40175519-85	yes
+40183601	primary	partial_fulltext_read	supplementary	captions_only	B	PMID40183601_Henry2025_supp_tableS9.txt	separate held file by name	FTR-20261004-40183601-02	no
+40263630	primary	partial_fulltext_read	references	not_read	B	PMID40263630_Wagner2025_PMC.xml	xml: ref-list	FTR-20261003-40263630-01	yes
+40291937	primary	partial_fulltext_read	references	not_read	B	PMID40291937_AlSari2025_PMC.xml	xml: ref-list	FTR-20261019-40291937-01	yes
+40301740	primary	partial_fulltext_read	references	not_read	B	PMID40301740_Ma2025_PMC.xml	xml: ref-list	FTR-20261004-40301740-02	yes
+40349107	primary	partial_fulltext_read	references	not_read	B	PMID40349107_Aeran2025_PMC.xml	xml: ref-list	FTR-20261003-40349107-01	yes
+40524961	primary	partial_fulltext_read	tables	not_read	B	PMID40524961_Sengupta2025_PMC.xml	xml: table-wrap with rows	FTR-20261004-40524961-02	yes
+40544182	primary	partial_fulltext_read	references	not_read	B	PMID40544182_Hristodor2025_PMC_2026-10-20.xml	xml: ref-list	FTR-20261020-40544182-01	yes
+40564020	secondary	queried_not_full_read	abstract	not_read	B	adv052_he_20261118/PMID40564020_PMC12189920_europepmc.xml	xml: abstract element	FTR-20261118-40564020-53	yes
+40564020	secondary	queried_not_full_read	introduction	not_read	B	adv052_he_20261118/PMID40564020_PMC12189920_europepmc.xml	xml: sec title '1. Introduction'	FTR-20261118-40564020-53	yes
+40564020	secondary	queried_not_full_read	discussion	not_read	B	adv052_he_20261118/PMID40564020_PMC12189920_europepmc.xml	xml: sec title '7. Discussion'	FTR-20261118-40564020-53	yes
+40564020	secondary	queried_not_full_read	tables	not_read	B	adv052_he_20261118/PMID40564020_PMC12189920_europepmc.xml	xml: table-wrap with rows	FTR-20261118-40564020-53	yes
+40564020	secondary	queried_not_full_read	references	not_read	B	adv052_he_20261118/PMID40564020_PMC12189920_europepmc.xml	xml: ref-list	FTR-20261118-40564020-53	yes
+40586768	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/stiripentol_loop_20261124/40586768.xml	xml: abstract element	FTR-20261124-40586768-88	yes
+40586768	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/stiripentol_loop_20261124/40586768.xml	xml: sec title 'INTRODUCTION'	FTR-20261124-40586768-88	yes
+40586768	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/stiripentol_loop_20261124/40586768.xml	xml: sec title 'DISCUSSION'	FTR-20261124-40586768-88	yes
+40589985	primary	partial_fulltext_read	references	not_read	B	PMID40589985_Sun2025_PMC.xml	xml: ref-list	FTR-20261019-40589985-01	yes
+40647235	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/l_carnosine_loop_20261124/oral.xml	xml: abstract element	FTR-20261124-40647235-81	yes
+40647235	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/l_carnosine_loop_20261124/oral.xml	xml: sec title '1. Introduction'	FTR-20261124-40647235-81	yes
+40647235	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/l_carnosine_loop_20261124/oral.xml	xml: sec title '4. Discussion'	FTR-20261124-40647235-81	yes
+40647235	primary	partial_fulltext_read	limitations	not_read	B	deepening_downloads/l_carnosine_loop_20261124/oral.xml	xml: sec title '4.4. Limitations'	FTR-20261124-40647235-81	yes
+40692288	primary	partial_fulltext_read	introduction	not_read	B	kds_pk_20261117/PMID40692288_PMC12280840_epmc.xml	xml: sec title 'Introduction'	FTR-20261117-40692288-01	yes
+40692288	primary	partial_fulltext_read	discussion	not_read	B	kds_pk_20261117/PMID40692288_PMC12280840_epmc.xml	xml: sec title 'Results and Discussion'	FTR-20261117-40692288-01	yes
+40692288	primary	partial_fulltext_read	tables	not_read	B	kds_pk_20261117/PMID40692288_PMC12280840_epmc.xml	xml: table-wrap with rows	FTR-20261117-40692288-01	yes
+40692288	primary	partial_fulltext_read	references	not_read	B	kds_pk_20261117/PMID40692288_PMC12280840_epmc.xml	xml: ref-list	FTR-20261117-40692288-01	yes
+40809677	primary	partial_fulltext_read	references	not_read	B	PMID40809677_DubaKiss2025_PMC.xml	xml: ref-list	FTR-20261003-40809677-01	yes
+40848165	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/inosine_loop_20261124/PMC12374869.xml	xml: abstract element	FTR-20261124-40848165-93	yes
+40848165	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/inosine_loop_20261124/PMC12374869.xml	xml: sec title 'Introduction'	FTR-20261124-40848165-93	yes
+40848165	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/inosine_loop_20261124/PMC12374869.xml	xml: sec title 'Materials and methods'	FTR-20261124-40848165-93	yes
+40848165	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/inosine_loop_20261124/PMC12374869.xml	xml: sec title 'Discussion'	FTR-20261124-40848165-93	yes
+40848165	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/inosine_loop_20261124/PMC12374869.xml	xml: table-wrap with rows	FTR-20261124-40848165-93	yes
+40925986	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/d_pantothenate_loop_20261124/liu.xml	xml: abstract element	FTR-20261124-40925986-80	yes
+40925986	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/d_pantothenate_loop_20261124/liu.xml	xml: sec title 'Methods'	FTR-20261124-40925986-80	yes
+40925986	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/d_pantothenate_loop_20261124/liu.xml	xml: sec title 'Discussion'	FTR-20261124-40925986-80	yes
+40944047	primary	partial_fulltext_read	references	not_read	B	PMID40944047_Ziaka2025_PMC.xml	xml: ref-list	FTR-20261019-40944047-01	yes
+40988338	primary	partial_fulltext_read	references	not_read	B	PMID40988338_Quinlan2025_PMC.xml	xml: ref-list	FTR-20261003-40988338-01	yes
+41054910	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/d_bhb_loop_20261123/adult.pdf	pdf p1: heading 'ABSTRACT'	FTR-20261124-41054910-98	yes
+41069084	primary	partial_fulltext_read	references	not_read	B	PMID41069084_Burst2026_PMC.xml	xml: ref-list	FTR-20261019-41069084-01	yes
+41078870	primary	partial_fulltext_read	references	not_read	B	PMID41078870_Okai2025_PMC.xml	xml: ref-list	FTR-20261004-41078870-02	yes
+41111510	primary	partial_fulltext_read	references	not_read	B	adv052_he_20261118/PMID41111510_PMC12528054_europepmc.xml	xml: ref-list	FTR-20261118-41111510-53	yes
+41124647	secondary	queried_not_full_read	introduction	not_read	B	PMID41124647_Zhang2025_PMC.xml	xml: sec title 'Introduction'	FTR-20261103-41124647-01	yes
+41124647	secondary	queried_not_full_read	results	not_read	B	PMID41124647_Zhang2025_PMC.xml	xml: sec title 'Results'	FTR-20261103-41124647-01	yes
+41124647	secondary	queried_not_full_read	discussion	not_read	B	PMID41124647_Zhang2025_PMC.xml	xml: sec title 'Discussion'	FTR-20261103-41124647-01	yes
+41124647	secondary	queried_not_full_read	references	not_read	B	PMID41124647_Zhang2025_PMC.xml	xml: ref-list	FTR-20261103-41124647-01	yes
+41134821	primary	partial_fulltext_read	references	not_read	B	PMID41134821_Zhao2025_PMC.xml	xml: ref-list	FTR-20261004-41134821-01	yes
+41137852	primary	partial_fulltext_read	tables	not_present	A	PMID41137852_wwoxrows_main.xml	xml: table-wrap with rows	FTR-20261021-41137852-01	no
+41141138	primary	partial_fulltext_read	abstract	not_read	B	PMID41141138_Sharma2025_PMC.xml	xml: abstract element	FTR-20261020-41141138-01	yes
+41141138	primary	partial_fulltext_read	references	not_read	B	PMID41141138_Sharma2025_PMC.xml	xml: ref-list	FTR-20261020-41141138-01	yes
+41210171	primary	partial_fulltext_read	references	not_read	B	PMID41210171_Vono2025_PMC.xml	xml: ref-list	FTR-20261003-41210171-01	yes
+41257285	primary	partial_fulltext_read	references	not_read	B	PMID41257285_Aihara2025_PMC.xml	xml: ref-list	FTR-20261004-41257285-02	yes
+41274966	secondary	queried_not_full_read	introduction	not_read	B	PMID41274966_Tubastatin2025_PMC_r2.xml	xml: sec title 'Introduction'	FTR-20261103-41274966-01	yes
+41274966	secondary	queried_not_full_read	methods	not_read	B	PMID41274966_Tubastatin2025_PMC_r2.xml	xml: sec title 'Methods'	FTR-20261103-41274966-01	yes
+41274966	secondary	queried_not_full_read	results	not_read	B	PMID41274966_Tubastatin2025_PMC_r2.xml	xml: sec title 'Result'	FTR-20261103-41274966-01	yes
+41274966	secondary	queried_not_full_read	discussion	not_read	B	PMID41274966_Tubastatin2025_PMC_r2.xml	xml: sec title 'Discussion'	FTR-20261103-41274966-01	yes
+41274966	secondary	queried_not_full_read	tables	not_present	A	PMID41274966_Tubastatin2025_PMC_r2.xml	xml: table-wrap with rows	FTR-20261103-41274966-01	yes
+41274966	secondary	queried_not_full_read	references	not_read	B	PMID41274966_Tubastatin2025_PMC_r2.xml	xml: ref-list	FTR-20261103-41274966-01	yes
+41278988	primary	partial_fulltext_read	introduction	not_read	B	PMID41278988_PMC12632464_Prakash2025_epmc.xml	xml: sec title 'INTRODUCTION'	FTR-20261123-41278988-01	yes
+41278988	primary	partial_fulltext_read	references	not_read	B	PMID41278988_PMC12632464_Prakash2025_epmc.xml	xml: ref-list	FTR-20261123-41278988-01	yes
+41314141	primary	partial_fulltext_read	references	not_read	B	PMID41314141_Greenberg2026_PMC.xml	xml: ref-list	FTR-20261003-41314141-01	yes
+41324728	primary	partial_fulltext_read	introduction	not_read	B	PMID41324728_Kuang2025_PMC.xml	xml: sec title 'Introduction'	FTR-20261109-41324728-82	yes
+41324728	primary	partial_fulltext_read	methods	not_read	B	PMID41324728_Kuang2025_PMC.xml	xml: sec title 'Material and Methods'	FTR-20261109-41324728-82	yes
+41324728	primary	partial_fulltext_read	references	not_read	B	PMID41324728_Kuang2025_PMC.xml	xml: ref-list	FTR-20261109-41324728-82	yes
+41357861	primary	partial_fulltext_read	introduction	not_read	B	kds_pk_20261117/PMID41357861_PMC12678371_epmc.xml	xml: sec title 'Introduction'	FTR-20261117-41357861-01	yes
+41357861	primary	partial_fulltext_read	discussion	not_read	B	kds_pk_20261117/PMID41357861_PMC12678371_epmc.xml	xml: sec title 'Results and discussion'	FTR-20261117-41357861-01	yes
+41357861	primary	partial_fulltext_read	references	not_read	B	kds_pk_20261117/PMID41357861_PMC12678371_epmc.xml	xml: ref-list	FTR-20261117-41357861-01	yes
+41380592	primary	partial_fulltext_read	introduction	not_read	B	PMID41380592_Xu2026_PMC_r2.xml	xml: sec title 'Introduction'	FTR-20261105-41380592-04	no
+41380592	primary	partial_fulltext_read	methods	not_read	B	PMID41380592_Xu2026_PMC_r2.xml	xml: sec title 'Methods'	FTR-20261105-41380592-04	no
+41380592	primary	partial_fulltext_read	tables	not_read	B	PMID41380592_Xu2026_PMC_r2.xml	xml: table-wrap with rows	FTR-20261105-41380592-04	no
+41380592	primary	partial_fulltext_read	references	not_read	B	PMID41380592_Xu2026_PMC_r2.xml	xml: ref-list	FTR-20261105-41380592-04	no
+41438872	primary	partial_fulltext_read	references	not_read	B	PMID41438872_Fortuna2025_PMC.xml	xml: ref-list	FTR-20261004-41438872-01	yes
+41470225	primary	partial_fulltext_read	references	not_read	B	PMID41470225_Abdygalyk2025_PMC.xml	xml: ref-list	FTR-20261019-41470225-01	yes
+41489401	primary	partial_fulltext_read	introduction	not_read	B	PMID41489401_Karnstedt2026_Epilepsia_PMC13075606.xml	xml: sec title 'INTRODUCTION'	FTR-20261117-41489401-01	yes
+41489401	primary	partial_fulltext_read	methods	not_read	B	PMID41489401_Karnstedt2026_Epilepsia_PMC13075606.xml	xml: sec title 'Methods'	FTR-20261117-41489401-01	yes
+41489401	primary	partial_fulltext_read	tables	not_read	B	PMID41489401_Karnstedt2026_Epilepsia_PMC13075606.xml	xml: table-wrap with rows	FTR-20261117-41489401-01	yes
+41489401	primary	partial_fulltext_read	references	not_read	B	PMID41489401_Karnstedt2026_Epilepsia_PMC13075606.xml	xml: ref-list	FTR-20261117-41489401-01	yes
+41559192	primary	partial_fulltext_read	methods	not_read	B	PMC13472943_Hu2026_BioPathNet.xml	xml: sec title 'BioPathNet vs general GNN-based LP metho'	FTR-20261102-41559192-01	yes
+41570991	primary	partial_fulltext_read	tables	not_read	B	PMID41570991_Bouchez2026_PMC_r2.xml	xml: table-wrap with rows	FTR-20261027-41570991-01	yes
+41570991	primary	partial_fulltext_read	references	not_read	B	PMID41570991_Bouchez2026_PMC_r2.xml	xml: ref-list	FTR-20261027-41570991-01	yes
+41573381	primary	partial_fulltext_read	references	not_read	B	PMID41573381_Alammary2026_PMC.xml	xml: ref-list	FTR-20261019-41573381-01	yes
+41709000	primary	partial_fulltext_read	abstract	not_read	B	adv065b_20261118/PMID41709000_PMC12992657_efetch_pmc.xml	xml: abstract element	FTR-20261118-41709000-67	yes
+41709000	primary	partial_fulltext_read	introduction	not_read	B	adv065b_20261118/PMID41709000_PMC12992657_efetch_pmc.xml	xml: sec title 'Introduction'	FTR-20261118-41709000-67	yes
+41709000	primary	partial_fulltext_read	methods	not_read	B	adv065b_20261118/PMID41709000_PMC12992657_efetch_pmc.xml	xml: sec title 'Materials and methods'	FTR-20261118-41709000-67	yes
+41709000	primary	partial_fulltext_read	discussion	not_read	B	adv065b_20261118/PMID41709000_PMC12992657_efetch_pmc.xml	xml: sec title 'Discussion'	FTR-20261118-41709000-67	yes
+41709000	primary	partial_fulltext_read	tables	not_read	B	adv065b_20261118/PMID41709000_PMC12992657_efetch_pmc.xml	xml: table-wrap with rows	FTR-20261118-41709000-67	yes
+41709000	primary	partial_fulltext_read	supplementary	not_read	B	adv065b_20261118/PMID41709000_supplement_MOESM1.pdf	separate held file by name	FTR-20261118-41709000-67	no
+41709000	primary	partial_fulltext_read	references	not_read	B	adv065b_20261118/PMID41709000_PMC12992657_efetch_pmc.xml	xml: ref-list	FTR-20261118-41709000-67	yes
+41712149	primary	partial_fulltext_read	tables	captions_only	B	PMID41712149_Balestrini2026_PMC.xml	xml: table-wrap with rows	FTR-20261003-41712149-01	yes
+41712149	primary	partial_fulltext_read	references	not_read	B	PMID41712149_Balestrini2026_PMC.xml	xml: ref-list	FTR-20261003-41712149-01	yes
+41712282	primary	partial_fulltext_read	references	not_read	B	PMID41712282_Bailey2026_PMC.xml	xml: ref-list	FTR-20261004-41712282-02	yes
+41751597	primary	partial_fulltext_read	references	not_read	B	PMID41751597_Rioux2026_PMC.xml	xml: ref-list	FTR-20261004-41751597-02	no
+41774803	primary	partial_fulltext_read	abstract	not_read	B	adv065b_20261118/PMID41774803_PMC12974483_efetch_pmc.xml	xml: abstract element	FTR-20261118-41774803-66	yes
+41774803	primary	partial_fulltext_read	methods	not_read	B	adv065b_20261118/PMID41774803_PMC12974483_efetch_pmc.xml	xml: sec title 'Materials and Methods'	FTR-20261118-41774803-66	yes
+41774803	primary	partial_fulltext_read	results	not_read	B	adv065b_20261118/PMID41774803_PMC12974483_efetch_pmc.xml	xml: sec title 'Results'	FTR-20261118-41774803-66	yes
+41774803	primary	partial_fulltext_read	references	not_read	B	adv065b_20261118/PMID41774803_PMC12974483_efetch_pmc.xml	xml: ref-list	FTR-20261118-41774803-66	yes
+41858901	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/nr_loop_20261124/human_time.xml	xml: abstract element	FTR-20261124-41858901-80	yes
+41858901	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/nr_loop_20261124/human_time.xml	xml: sec title 'Introduction'	FTR-20261124-41858901-80	yes
+41858901	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/nr_loop_20261124/human_time.xml	xml: sec title 'Discussion'	FTR-20261124-41858901-80	yes
+41858901	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/nr_loop_20261124/human_time.xml	xml: table-wrap with rows	FTR-20261124-41858901-80	yes
+41914335	primary	partial_fulltext_read	references	not_read	B	PMID41914335_Li2026_PMC.xml	xml: ref-list	FTR-20261019-41914335-01	yes
+41933112	primary	partial_fulltext_read	references	not_read	B	kds_pk_20261117/PMID41933112_PMC13221361_epmc.xml	xml: ref-list	FTR-20261117-41933112-01	yes
+41934115	primary	partial_fulltext_read	references	not_read	B	adv052_he_20261118/PMID41934115_PMC13052111_europepmc.xml	xml: ref-list	FTR-20261118-41934115-53	yes
+41948127	primary	partial_fulltext_read	tables	not_read	B	PMID41948127_Stavrou2026_PMC.xml	xml: table-wrap with rows	FTR-20261003-41948127-01	yes
+41948127	primary	partial_fulltext_read	references	not_read	B	PMID41948127_Stavrou2026_PMC.xml	xml: ref-list	FTR-20261003-41948127-01	yes
+41966056	primary	partial_fulltext_read	references	not_read	B	PMID41966056_Wang2026_PMC.xml	xml: ref-list	FTR-20261004-41966056-02	yes
+41974795	primary	partial_fulltext_read	introduction	not_read	B	it48q01_it_20261117/PMC13265741.xml	xml: sec title 'Introduction'	FTR-20261117-41974795-01	yes
+41974795	primary	partial_fulltext_read	methods	not_read	B	it48q01_it_20261117/PMC13265741.xml	xml: sec title 'Methods'	FTR-20261117-41974795-01	yes
+41974795	primary	partial_fulltext_read	discussion	not_read	B	it48q01_it_20261117/PMC13265741.xml	xml: sec title 'Discussion'	FTR-20261117-41974795-01	yes
+41974795	primary	partial_fulltext_read	tables	not_read	B	it48q01_it_20261117/PMC13265741.xml	xml: table-wrap with rows	FTR-20261117-41974795-01	yes
+41974795	primary	partial_fulltext_read	references	not_read	B	it48q01_it_20261117/PMC13265741.xml	xml: ref-list	FTR-20261117-41974795-01	yes
+41977367	primary	partial_fulltext_read	tables	not_read	B	PMID41977367_Dumitrescu2026_PMC.xml	xml: table-wrap with rows	FTR-20261019-41977367-01	yes
+41977367	primary	partial_fulltext_read	references	not_read	B	PMID41977367_Dumitrescu2026_PMC.xml	xml: ref-list	FTR-20261019-41977367-01	yes
+41980417	primary	partial_fulltext_read	references	not_read	B	PMID41980417_Qiao2026_PMC_r2.xml	xml: ref-list	FTR-20261107-41980417-95	no
+42035940	primary	partial_fulltext_read	references	not_read	B	PMID42035940_GBM2026_PMC_r2.xml	xml: ref-list	FTR-20261027-42035940-01	yes
+42051565	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/hydroxocobalamin_loop_20261124/selvanathan.xml	xml: abstract element	FTR-20261124-42051565-80	yes
+42051565	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/hydroxocobalamin_loop_20261124/selvanathan.xml	xml: sec title 'Introduction'	FTR-20261124-42051565-80	yes
+42051565	primary	partial_fulltext_read	methods	not_read	B	deepening_downloads/hydroxocobalamin_loop_20261124/selvanathan.xml	xml: sec title 'Methods'	FTR-20261124-42051565-80	yes
+42051565	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/hydroxocobalamin_loop_20261124/selvanathan.xml	xml: sec title 'Discussion'	FTR-20261124-42051565-80	yes
+42051565	primary	partial_fulltext_read	limitations	not_read	B	deepening_downloads/hydroxocobalamin_loop_20261124/selvanathan.xml	xml: sec title 'Limitations of This Study'	FTR-20261124-42051565-80	yes
+42087252	primary	partial_fulltext_read	references	not_read	B	PMID42087252_Funayama2026_PMC.xml	xml: ref-list	FTR-20261019-42087252-01	yes
+42092735	primary	partial_fulltext_read	abstract	not_read	B	PMID42092735_SercePehlevan2026_PMC.xml	xml: abstract element	FTR-20261123-42092735-85	yes
+42092735	primary	partial_fulltext_read	introduction	not_read	B	PMID42092735_SercePehlevan2026_PMC.xml	xml: sec title 'Introduction'	FTR-20261123-42092735-85	yes
+42092735	primary	partial_fulltext_read	discussion	not_read	B	PMID42092735_SercePehlevan2026_PMC.xml	xml: sec title 'Discussion'	FTR-20261123-42092735-85	yes
+42134074	primary	partial_fulltext_read	references	not_read	B	PMID42134074_Kagiava2026_PMC.xml	xml: ref-list	FTR-20261003-42134074-01	yes
+42136830	primary	partial_fulltext_read	limitations	not_present	A	PMID42136830_Haque2026_PMC.xml	xml: sec title 'Strengths and limitations'	FTR-20261004-42136830-02	yes
+42136830	primary	partial_fulltext_read	references	not_read	B	PMID42136830_Haque2026_PMC.xml	xml: ref-list	FTR-20261004-42136830-02	yes
+42137263	primary	partial_fulltext_read	references	not_read	B	PMID42137263_Moeini2026_PMC.xml	xml: ref-list	FTR-20261004-42137263-01	yes
+42137291	primary	partial_fulltext_read	references	not_read	B	PMID42137291_Thomsen2026_PMC.xml	xml: ref-list	FTR-20261004-42137291-02	yes
+42157962	primary	partial_fulltext_read	references	not_read	B	PMID42157962_DuBreuil2026_PMC.xml	xml: ref-list	FTR-20261003-42157962-01	yes
+42181696	primary	partial_fulltext_read	references	not_read	B	PMID42181696_Diaz2026_PMC.xml	xml: ref-list	FTR-20261003-42181696-01	yes
+42190665	primary	partial_fulltext_read	abstract	not_read	B	PMC13293933_PMID42190665_europepmc_fulltext_2026-10-29.xml	xml: abstract element	FTR-20261029-42190665-01	yes
+42190665	primary	partial_fulltext_read	introduction	not_read	B	PMC13293933_PMID42190665_europepmc_fulltext_2026-10-29.xml	xml: sec title 'Introduction'	FTR-20261029-42190665-01	yes
+42190665	primary	partial_fulltext_read	methods	not_read	B	PMC13293933_PMID42190665_europepmc_fulltext_2026-10-29.xml	xml: sec title 'STAR★METHODS'	FTR-20261029-42190665-01	yes
+42190665	primary	partial_fulltext_read	results	not_read	B	PMC13293933_PMID42190665_europepmc_fulltext_2026-10-29.xml	xml: sec title 'Results'	FTR-20261029-42190665-01	yes
+42190665	primary	partial_fulltext_read	tables	not_present	A	PMC13293933_PMID42190665_europepmc_fulltext_2026-10-29.xml	xml: table-wrap with rows	FTR-20261029-42190665-01	yes
+42193054	primary	partial_fulltext_read	tables	not_read	B	PMID42193054_Sapuppo2026_PMC.xml	xml: table-wrap with rows	FTR-20261107-42193054-93	no
+42193054	primary	partial_fulltext_read	references	not_read	B	PMID42193054_Sapuppo2026_PMC.xml	xml: ref-list	FTR-20261107-42193054-93	no
+42198847	primary	partial_fulltext_read	references	not_read	B	PMID42198847_BoespflugTanguy2026_PMC.xml	xml: ref-list	FTR-20261004-42198847-01	yes
+42201999	secondary	queried_not_full_read	introduction	not_read	B	PMID42201999_Phillips2026_SciAdv_PMC13215171.xml	xml: sec title 'INTRODUCTION'	FTR-20261029-42201999-01	yes
+42201999	secondary	queried_not_full_read	methods	not_read	B	PMID42201999_Phillips2026_SciAdv_PMC13215171.xml	xml: sec title 'MATERIALS AND METHODS'	FTR-20261029-42201999-01	yes
+42201999	secondary	queried_not_full_read	results	not_read	B	PMID42201999_Phillips2026_SciAdv_PMC13215171.xml	xml: sec title 'RESULTS'	FTR-20261029-42201999-01	yes
+42201999	secondary	queried_not_full_read	discussion	not_read	B	PMID42201999_Phillips2026_SciAdv_PMC13215171.xml	xml: sec title 'DISCUSSION'	FTR-20261029-42201999-01	yes
+42201999	secondary	queried_not_full_read	tables	not_read	B	PMID42201999_Phillips2026_SciAdv_PMC13215171.xml	xml: table-wrap with rows	FTR-20261029-42201999-01	yes
+42201999	secondary	queried_not_full_read	references	not_read	B	PMID42201999_Phillips2026_SciAdv_PMC13215171.xml	xml: ref-list	FTR-20261029-42201999-01	yes
+42205472	primary	partial_fulltext_read	tables	captions_only	B	PMID42205472_Engelhard2026_PMC.xml	xml: table-wrap with rows	FTR-20261003-42205472-01	yes
+42205472	primary	partial_fulltext_read	references	not_read	B	PMID42205472_Engelhard2026_PMC.xml	xml: ref-list	FTR-20261003-42205472-01	yes
+42213372	primary	partial_fulltext_read	introduction	not_read	B	kds_pk_20261117/PMID42213372_PMC13275523_epmc.xml	xml: sec title 'Introduction'	FTR-20261117-42213372-01	yes
+42213372	primary	partial_fulltext_read	limitations	not_read	B	kds_pk_20261117/PMID42213372_PMC13275523_epmc.xml	xml: sec title 'Limitations'	FTR-20261117-42213372-01	yes
+42213372	primary	partial_fulltext_read	tables	not_read	B	kds_pk_20261117/PMID42213372_PMC13275523_epmc.xml	xml: table-wrap with rows	FTR-20261117-42213372-01	yes
+42213372	primary	partial_fulltext_read	references	not_read	B	kds_pk_20261117/PMID42213372_PMC13275523_epmc.xml	xml: ref-list	FTR-20261117-42213372-01	yes
+42240040	primary	partial_fulltext_read	tables	not_read	B	ketamine_kds_it_20261117/p4_harms/PMID42240040_Sarkar2026_europepmc-fulltextxml.xml	xml: table-wrap with rows	FTR-20261117-42240040-01	yes
+42240040	primary	partial_fulltext_read	references	not_read	B	ketamine_kds_it_20261117/p4_harms/PMID42240040_Sarkar2026_europepmc-fulltextxml.xml	xml: ref-list	FTR-20261117-42240040-01	yes
+42245405	primary	partial_fulltext_read	references	not_read	B	PMID42245405_Almutair2026_PMC.xml	xml: ref-list	FTR-20261019-42245405-01	yes
+42268630	primary	partial_fulltext_read	introduction	not_read	B	PMID42268630_Frick2026_PMC13251787.xml	xml: sec title 'Introduction'	FTR-20261105-42268630-06	no
+42268630	primary	partial_fulltext_read	methods	not_read	B	PMID42268630_Frick2026_PMC13251787.xml	xml: sec title 'Methods'	FTR-20261105-42268630-06	no
+42268630	primary	partial_fulltext_read	discussion	not_read	B	PMID42268630_Frick2026_PMC13251787.xml	xml: sec title 'Discussion'	FTR-20261105-42268630-06	no
+42268630	primary	partial_fulltext_read	tables	not_read	B	PMID42268630_Frick2026_PMC13251787.xml	xml: table-wrap with rows	FTR-20261105-42268630-06	no
+42268630	primary	partial_fulltext_read	references	not_read	B	PMID42268630_Frick2026_PMC13251787.xml	xml: ref-list	FTR-20261105-42268630-06	no
+42274296	primary	partial_fulltext_read	references	not_read	B	PMID42274296_Harman2026_PMC_r2.xml	xml: ref-list	FTR-20261118-42274296-53	no
+42310739	secondary	queried_not_full_read	introduction	not_read	B	PMID42310739_Hsieh2026_PMC_r2.xml	xml: sec title 'Introduction'	FTR-20261113-42310739-68	no
+42310739	secondary	queried_not_full_read	limitations	not_read	B	PMID42310739_Hsieh2026_PMC_r2.xml	xml: sec title 'Limitations of this present study'	FTR-20261113-42310739-68	no
+42310739	secondary	queried_not_full_read	tables	not_present	A	PMID42310739_Hsieh2026_PMC_r2.xml	xml: table-wrap with rows	FTR-20261113-42310739-68	no
+42310739	secondary	queried_not_full_read	references	not_read	B	PMID42310739_Hsieh2026_PMC_r2.xml	xml: ref-list	FTR-20261113-42310739-68	no
+42360174	primary	partial_fulltext_read	references	not_read	B	PMID42360174_Hahn2026_PMC.xml	xml: ref-list	FTR-20261019-42360174-01	yes
+42384016	primary	partial_fulltext_read	references	not_read	B	PMID42384016_Trico2026_PMC.xml	xml: ref-list	FTR-20261019-42384016-01	yes
+42395553	primary	partial_fulltext_read	figures	captions_only	B	PMID42395553_Petrozziello2026_bioRxiv.pdf	pdf p26: 'Figure 1. ATM, pATM-S1981, and' (images 1, chars 771)	FTR-20261004-42395553-02	no
+42395553	primary	partial_fulltext_read	supplementary	captions_only	B	PMID42395553_Petrozziello2026_bioRxiv.pdf	pdf p37 after References p19: 'Supplementary Figure 1. HD PFC incr'	FTR-20261004-42395553-02	no
+42397075	primary	partial_fulltext_read	abstract	not_read	B	PMID42397075_Steinberg2026_OUP-AM_layout.txt	pdf p1: heading '7   Abstract'	FTR-20261124-42397075-89	no
+42397075	primary	partial_fulltext_read	introduction	not_read	B	PMID42397075_Steinberg2026_OUP-AM_layout.txt	pdf p1: heading 'Introduction'	FTR-20261124-42397075-89	no
+42397075	primary	partial_fulltext_read	results	not_read	B	PMID42397075_Steinberg2026_OUP-AM_layout.txt	pdf p1: heading '19   Results'	FTR-20261124-42397075-89	no
+42397075	primary	partial_fulltext_read	discussion	not_read	B	PMID42397075_Steinberg2026_OUP-AM_layout.txt	pdf p1: heading '26   Discussion'	FTR-20261124-42397075-89	no
+42397075	primary	partial_fulltext_read	tables	not_read	B	PMID42397075_Steinberg2026_OUP-Supplement/brain-2025-03809-File009.txt	pdf p1: 'Table 1.'	FTR-20261124-42397075-89	yes
+42422765	primary	partial_fulltext_read	abstract	not_read	B	PMID42422765_Obeid2026_PMC_2026-09-27.xml	xml: abstract element	FTR-20261119-42422765-70	yes
+42422765	primary	partial_fulltext_read	methods	not_read	B	PMID42422765_Obeid2026_PMC_2026-09-27.xml	xml: sec title 'Materials and methods'	FTR-20261119-42422765-70	yes
+42422765	primary	partial_fulltext_read	discussion	not_read	B	PMID42422765_Obeid2026_PMC_2026-09-27.xml	xml: sec title 'Discussion'	FTR-20261119-42422765-70	yes
+42422765	primary	partial_fulltext_read	references	not_read	B	PMID42422765_Obeid2026_PMC_2026-09-27.xml	xml: ref-list	FTR-20261119-42422765-70	yes
+42422766	primary	partial_fulltext_read	references	not_read	B	PMID42422766_Amaral2026_PMC.xml	xml: ref-list	FTR-20261004-42422766-02	yes
+42436860	primary	partial_fulltext_read	methods	not_read	B	PMID42436860_NaViPA1_2026_PMC.xml	xml: sec title 'Materials and methods'	FTR-20261004-42436860-01	yes
+42436860	primary	partial_fulltext_read	references	not_read	B	PMID42436860_NaViPA1_2026_PMC.xml	xml: ref-list	FTR-20261004-42436860-01	yes
+42483444	primary	partial_fulltext_read	references	not_read	B	PMID42483444_NaranjoLobo2026_PMC.xml	xml: ref-list	FTR-20261019-42483444-01	yes
+42494992	primary	partial_fulltext_read	methods	not_present	A	PMID42494992_Acosta2026_PMC13393641.xml	xml: sec title 'Use of innovative methodologies'	FTR-20261022-42494992-01	yes
+42511902	primary	partial_fulltext_read	references	not_read	B	PMID42511902_Gao2026_PMC.xml	xml: ref-list	FTR-20261004-42511902-02	yes
+42521212	primary	partial_fulltext_read	references	not_read	B	PMID42521212_Saravanan2026_PMC.xml	xml: ref-list	FTR-20261003-42521212-01	yes
+42523332	primary	partial_fulltext_read	introduction	not_read	B	PMID42523332_Aragon2026_PMC13405132_v3_epmc.xml	xml: sec title 'Introduction'	FTR-20261123-42523332-01	yes
+42523332	primary	partial_fulltext_read	tables	not_read	B	PMID42523332_Aragon2026_PMC13405132_v3_epmc.xml	xml: table-wrap with rows	FTR-20261123-42523332-01	yes
+42523332	primary	partial_fulltext_read	references	not_read	B	PMID42523332_Aragon2026_PMC13405132_v3_epmc.xml	xml: ref-list	FTR-20261123-42523332-01	yes
+42536722	primary	partial_fulltext_read	introduction	not_read	B	PMID42536722_Miao2026_PMC_r2.xml	xml: sec title 'INTRODUCTION'	FTR-20261105-42536722-05	no
+42536722	primary	partial_fulltext_read	methods	not_read	B	PMID42536722_Miao2026_PMC_r2.xml	xml: sec title 'MATERTIALS AND METHODS'	FTR-20261105-42536722-05	no
+42536722	primary	partial_fulltext_read	discussion	not_read	B	PMID42536722_Miao2026_PMC_r2.xml	xml: sec title 'DISCUSSION'	FTR-20261105-42536722-05	no
+42536722	primary	partial_fulltext_read	references	not_read	B	PMID42536722_Miao2026_PMC_r2.xml	xml: ref-list	FTR-20261105-42536722-05	no
+42538560	primary	partial_fulltext_read	methods	not_read	B	PMID42538560_ICVchoroid2026_PMC.xml	xml: sec title 'Materials and methods'	FTR-20261004-42538560-01	yes
+42538560	primary	partial_fulltext_read	references	not_read	B	PMID42538560_ICVchoroid2026_PMC.xml	xml: ref-list	FTR-20261004-42538560-01	yes
+42587157	primary	partial_fulltext_read	methods	not_read	B	PMC13531005_PMID42587157_europepmc_fulltext_2026-10-29.xml	xml: sec title 'Methods'	FTR-20261029-42587157-01	yes
+42589397	primary	partial_fulltext_read	tables	not_present	A	PMID42589397_ZZ2026_PMC_2026-09-27.xml	xml: table-wrap with rows	FTR-20261019-42589397-05	yes
+42589397	primary	partial_fulltext_read	references	not_read	B	PMID42589397_ZZ2026_PMC_2026-09-27.xml	xml: ref-list	FTR-20261019-42589397-05	yes
+42601505	primary	partial_fulltext_read	tables	not_read	B	PMID42601505_Puertas2026_PMC.xml	xml: table-wrap with rows	FTR-20261019-42601505-01	yes
+42624371	primary	partial_fulltext_read	abstract	not_read	B	deepening_downloads/r_lipoic_loop_20261124/partition.xml	xml: abstract element	FTR-20261124-42624371-80	yes
+42624371	primary	partial_fulltext_read	discussion	not_read	B	deepening_downloads/r_lipoic_loop_20261124/partition.xml	xml: sec title 'Discussion'	FTR-20261124-42624371-80	yes
+42624371	primary	partial_fulltext_read	tables	not_read	B	deepening_downloads/r_lipoic_loop_20261124/partition.xml	xml: table-wrap with rows	FTR-20261124-42624371-80	yes
+42638834	primary	partial_fulltext_read	references	not_read	B	PMID42638834_Sobrinho2026_PMC.xml	xml: ref-list	FTR-20261019-42638834-01	yes
+42643745	primary	partial_fulltext_read	references	not_read	B	PMID42643745_Nikkhah2026_PMC.xml	xml: ref-list	FTR-20261019-42643745-01	yes
+42650333	primary	partial_fulltext_read	references	not_read	B	adv052_he_20261118/PMID42650333_PMC13510780_europepmc.xml	xml: ref-list	FTR-20261118-42650333-53	yes
+42661025	primary	partial_fulltext_read	references	not_read	B	PMID42661025_Uzay2026_publisher_fitz.txt	pdf p1: References heading	FTR-20261023-42661025-01	no
+42720877	primary	partial_fulltext_read	tables	captions_only	B	PMID42720877_Schatz2026_PMC_r2.xml	xml: table-wrap with rows	FTR-20261019-42720877-01	yes
+42738851	primary	partial_fulltext_read	introduction	captions_only	B	PMID42738851_Pozhitnova2026_PMC_r2.xml	xml: sec title '1. Introduction'	FTR-20261019-42738851-01	yes
+42738851	primary	partial_fulltext_read	methods	captions_only	B	PMID42738851_Pozhitnova2026_PMC_r2.xml	xml: sec title '2. Materials and Methods'	FTR-20261019-42738851-01	yes
+42738851	primary	partial_fulltext_read	results	captions_only	B	PMID42738851_Pozhitnova2026_PMC_r2.xml	xml: sec title '3. Results'	FTR-20261019-42738851-01	yes
+42738875	primary	partial_fulltext_read	introduction	not_read	B	PMID42738875_Tang2026_PMC.xml	xml: sec title '1. Introduction'	FTR-20261004-42738875-01	yes
+42770556	primary	partial_fulltext_read	introduction	not_read	B	PMID42770556_Lima2026_PMC.xml	xml: sec title 'Introduction'	FTR-20261004-42770556-01	yes
+42770556	primary	partial_fulltext_read	tables	not_present	A	PMID42770556_Lima2026_PMC.xml	xml: table-wrap with rows	FTR-20261004-42770556-01	yes
+42771216	primary	partial_fulltext_read	introduction	not_read	B	PMID42771216_Kohler2026_PMC.xml	xml: sec title 'Introduction'	FTR-20261004-42771216-01	yes
+42782811	primary	partial_fulltext_read	tables	not_read	B	PMID42782811_Bagyinszky2026_PMC.xml	xml: table-wrap with rows	FTR-20261019-42782811-01	yes
+42782811	primary	partial_fulltext_read	references	not_read	B	PMID42782811_Bagyinszky2026_PMC.xml	xml: ref-list	FTR-20261019-42782811-01	yes
+42794650	primary	partial_fulltext_read	introduction	not_read	B	PMID42794650_PMC13607510_Riepe2026_epmc.xml	xml: sec title '1. Introduction'	FTR-20261123-42794650-98	yes
+42794650	primary	partial_fulltext_read	methods	not_read	B	PMID42794650_PMC13607510_Riepe2026_epmc.xml	xml: sec title '4. Materials and Methods'	FTR-20261123-42794650-98	yes
+42794650	primary	partial_fulltext_read	results	not_read	B	PMID42794650_PMC13607510_Riepe2026_epmc.xml	xml: sec title '2. Results'	FTR-20261123-42794650-98	yes
+42794650	primary	partial_fulltext_read	discussion	not_read	B	PMID42794650_PMC13607510_Riepe2026_epmc.xml	xml: sec title '3. Discussion'	FTR-20261123-42794650-98	yes
+42794650	primary	partial_fulltext_read	limitations	not_read	B	PMID42794650_PMC13607510_Riepe2026_epmc.xml	xml: sec title '3.8. Limitations'	FTR-20261123-42794650-98	yes
+42807309	primary	partial_fulltext_read	introduction	not_read	B	PMID42807309_16q231_pancreatitis_2026.txt	pdf p1: heading 'INTRODUCTION'	FTR-20261004-42807309-01	yes
+42807309	primary	partial_fulltext_read	methods	not_read	B	PMID42807309_16q231_pancreatitis_2026.txt	pdf p1: heading 'METHODS'	FTR-20261004-42807309-01	yes
+42807309	primary	partial_fulltext_read	results	not_read	B	PMID42807309_16q231_pancreatitis_2026.txt	pdf p1: heading 'RESULTS'	FTR-20261004-42807309-01	yes
+42807309	primary	partial_fulltext_read	figures	captions_only	B	PMID42807309_16q231_pancreatitis_2026.pdf	pdf p2: 'Figure 1. Analytical workﬂow f' (images 1, chars 14558)	FTR-20261004-42807309-01	no
+42807309	primary	partial_fulltext_read	references	not_read	B	PMID42807309_16q231_pancreatitis_2026.txt	pdf p1: References heading	FTR-20261004-42807309-01	yes
+42807679	primary	partial_fulltext_read	references	not_read	B	PMID42807679_Khadija2026_PMC.xml	xml: ref-list	FTR-20261004-42807679-02	yes
+42812991	primary	partial_fulltext_read	introduction	not_read	B	PMID42812991_AAV_AD_review_2026.txt	pdf p1: heading '1 Introduction'	FTR-20261004-42812991-01	yes
+42812991	primary	partial_fulltext_read	references	not_read	B	PMID42812991_AAV_AD_review_2026.txt	pdf p1: References heading	FTR-20261004-42812991-01	yes
+42846717	primary	partial_fulltext_read	methods	not_present	A	PMID42846717_Samanta2026_PMC_r2.xml	xml: sec title 'Methods'	FTR-20261019-42846717-01	yes
+42846717	primary	partial_fulltext_read	results	not_read	B	PMID42846717_Samanta2026_PMC_r2.xml	xml: sec title 'Results'	FTR-20261019-42846717-01	yes
+42909904	primary	partial_fulltext_read	abstract	not_read	B	PMID42909904_PMC13684411.xml	xml: abstract element	FTR-20261124-42909904-97	yes
+42909904	primary	partial_fulltext_read	introduction	not_read	B	PMID42909904_PMC13684411.xml	xml: sec title 'Introduction'	FTR-20261124-42909904-97	yes
+42909904	primary	partial_fulltext_read	discussion	not_read	B	PMID42909904_LucasClarke2026_BrainComms_fcag385.pdf	pdf p15: heading 'Discussion'	FTR-20261124-42909904-97	no
+6500847	primary	partial_fulltext_read	introduction	not_read	B	deepening_downloads/d_biotin_loop_20261124/krause.pdf	pdf p4: heading 'Introduction'	FTR-20261124-6500847-80	yes
+9454806	secondary	abstract_only	introduction	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: sec title 'Introduction'	FTR-20261124-9454806-80	no
+9454806	secondary	abstract_only	methods	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: sec title 'Methods'	FTR-20261124-9454806-80	no
+9454806	secondary	abstract_only	results	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: sec title 'Results'	FTR-20261124-9454806-80	no
+9454806	secondary	abstract_only	discussion	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: sec title 'Discussion'	FTR-20261124-9454806-80	no
+9454806	secondary	abstract_only	limitations	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: sec title 'Limitations of the study'	FTR-20261124-9454806-80	no
+9454806	secondary	abstract_only	tables	not_read	B	deepening_downloads/vigabatrin_loop_20261124/brain.xml	xml: table-wrap with rows	FTR-20261124-9454806-80	no
+9634550	primary	partial_fulltext_read	discussion	not_read	B	adv052_he_20261118/PMID9634550_PMC6792570_pmcpage.html	html: heading 'DISCUSSION'	FTR-20261123-9634550-82	no
