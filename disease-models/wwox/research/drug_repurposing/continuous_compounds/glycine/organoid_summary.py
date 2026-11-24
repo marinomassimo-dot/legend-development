@@ -45,4 +45,7 @@ def summarize(folder, stream):
     return "Genotype contrast withheld under the frozen six-library coverage rule."
 
 if __name__=="__main__":
+    if len(sys.argv)!=2 or {"-h","--help"}&set(sys.argv[1:]):
+        print("usage: organoid_summary.py FOLDER  (FOLDER holds runs.tsv, junction_probes.tsv and organoid_counts/; table to stdout, verdict to stderr)")
+        sys.exit(0 if {"-h","--help"}&set(sys.argv[1:]) else 2)
     print(summarize(Path(sys.argv[1]),sys.stdout),file=sys.stderr)
