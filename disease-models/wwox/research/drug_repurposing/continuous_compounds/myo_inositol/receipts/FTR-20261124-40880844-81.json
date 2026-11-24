@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-40880844-81",
+  "event_at": "2026-11-24T01:19:08Z",
+  "analysis_at": "2026-11-24T01:19:08Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "40880844",
+    "doi": "10.1002/cns3.70029"
+  },
+  "prior_receipt": "FTR-20261124-40880844-80",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/myoinositol_loop_20261124/DEE_supp.docx",
+  "source_fingerprint": "1e0ab421b7c02b1d2ca08778cf5c5e3b1fc56d5fb078f207495150e669d5624c",
+  "workflow": "Distinguish circuit evidence, developmental exposure and the role of myo-inositol in membrane lipid recovery.",
+  "evidence_basis": [
+    "Supplement Tables S3–S5: samples grouped by embryonic day, genotype, and maternal supplementation. Table S5 E18.5 control and supplemented means 137.6 and 266.4 µM."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/myo_inositol/decision.md"
+  ]
+}

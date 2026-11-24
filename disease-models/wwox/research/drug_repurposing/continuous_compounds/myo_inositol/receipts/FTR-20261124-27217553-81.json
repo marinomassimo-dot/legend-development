@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-27217553-81",
+  "event_at": "2026-11-24T01:13:33Z",
+  "analysis_at": "2026-11-24T01:13:33Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "27217553",
+    "doi": "10.1073/pnas.1606348113"
+  },
+  "prior_receipt": "FTR-20261124-27217553-80",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4988571/",
+  "source_fingerprint": null,
+  "workflow": "Separate the substrate-only and transporter-combined results, lipid depletion mechanisms and latency before maximal acceleration.",
+  "evidence_basis": [
+    "Fig. 1C,H caption: receptor-mediated current recovery half-time and phosphatase-mediated recovery time constant are different outcomes.",
+    "Fig. 1I Results: maximal acceleration after about 3 h of supplementation in SMIT1-expressing cells."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/myo_inositol/decision.md"
+  ]
+}

@@ -1,0 +1,10 @@
+genotype	embryonic_day	n_unsupplemented	n_supplemented	control_mean_uM	supplemented_mean_uM	increment_uM	fold
+Wild type (+/+)	10.5	15	6	115.26	362.08	246.82	3.141
+Wild type (+/+)	14.5	9	3	294.02	573.13	279.11	1.949
+Wild type (+/+)	18.5	11	4	557.46	638.27	80.81	1.145
+Carrier (+/-)	10.5	8	9	134.99	450.69	315.7	3.339
+Carrier (+/-)	14.5	8	6	277.45	505.03	227.58	1.82
+Carrier (+/-)	18.5	7	4	430.59	452.75	22.16	1.051
+Knock out (-/-)	10.5	8	8	165.16	479.98	314.81	2.906
+Knock out (-/-)	14.5	5	6	208.6	360.45	151.85	1.728
+Knock out (-/-)	18.5	6	6	137.55	266.4	128.85	1.937

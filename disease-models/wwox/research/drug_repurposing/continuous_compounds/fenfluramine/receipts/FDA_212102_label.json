@@ -1,0 +1,15 @@
+{
+  "record_kind": "regulatory_document_read_receipt",
+  "source": "US FDA prescribing information, 212102s017, 2025",
+  "time_utc": "2026-11-24T01:22:29Z",
+  "persistent_source": "files/deepening_downloads/fenfluramine_loop_20261124/label.pdf",
+  "sha256": "5d7172b598b93e8ffdeef1d9c60b65df849d3e8cb9f73cc4737801697ecf978d",
+  "coverage": "Targeted sections",
+  "locators": [
+    "Secs. 5.1, 11 and 12.3, PDF pp. 18\u201319 for free base and parent Cmax and binding."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/fenfluramine/README.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/fenfluramine/exposure.tsv"
+  ]
+}

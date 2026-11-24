@@ -1,0 +1,15 @@
+{
+  "record_kind": "regulatory_document_read_receipt",
+  "source": "US FDA pharmacology review, NDA 212102, 2020",
+  "time_utc": "2026-11-24T01:22:29Z",
+  "persistent_source": "files/deepening_downloads/fenfluramine_loop_20261124/pharm.pdf",
+  "sha256": "33a59dbe26a2d5359ce2581af1e6bb248183c65ed977637bb3fc367c685cb5aa",
+  "coverage": "Targeted sections",
+  "locators": [
+    "PDF p. 13, AM334/335 and Fig. 1: PRE084-conditioned BiP response; p. 45, enantiomer-specific serotonin release."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/fenfluramine/README.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/fenfluramine/exposure.tsv"
+  ]
+}

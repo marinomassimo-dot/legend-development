@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-31862249-80",
+  "event_at": "2026-11-24T01:22:29Z",
+  "analysis_at": "2026-11-24T01:22:29Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "31862249",
+    "doi": "10.1016/S0140-6736(19)32500-0"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "files/deepening_downloads/fenfluramine_loop_20261124/primary.xml",
+  "source_fingerprint": "3e46b7481e48fbf846ba0e365a5c11a792cf9aa3c3cecee7e30bc3200cb97983",
+  "workflow": "Compare parent/metabolite release, sigma-1 assay context and pediatric efficacy using author abstracts.",
+  "evidence_basis": [
+    "Author abstract: 119 randomized participants with Dravet syndrome; placebo-adjusted primary efficacy estimate 62.3% in higher dose arm."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/fenfluramine/README.md"
+  ]
+}

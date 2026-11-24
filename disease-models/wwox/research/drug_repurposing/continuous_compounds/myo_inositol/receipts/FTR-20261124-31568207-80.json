@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-31568207-80",
+  "event_at": "2026-11-24T01:19:08Z",
+  "analysis_at": "2026-11-24T01:19:08Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "31568207",
+    "doi": "10.1097/WNR.0000000000001341"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "files/deepening_downloads/myoinositol_loop_20261124/hippocampus_pubmed.xml",
+  "source_fingerprint": "dcc80a7de38a44dd56d8d690214baeb0a8caec730f9a0efd12afc8469a9912df",
+  "workflow": "Distinguish circuit evidence, developmental exposure and the role of myo-inositol in membrane lipid recovery.",
+  "evidence_basis": [
+    "Abstract: infusates 1 M and 0.055 M; duration comparison for the latter is 5 versus 40 minutes."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/myo_inositol/decision.md"
+  ]
+}

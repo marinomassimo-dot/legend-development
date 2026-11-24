@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-12649307-80",
+  "event_at": "2026-11-24T01:22:29Z",
+  "analysis_at": "2026-11-24T01:22:29Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "12649307",
+    "doi": "10.1124/jpet.103.049684"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "files/deepening_downloads/fenfluramine_loop_20261124/enantiomers.xml",
+  "source_fingerprint": "7393501413ca619552f46bb9f620f642991cd7f3533b733b537b8c164d8276f3",
+  "workflow": "Compare parent/metabolite release, sigma-1 assay context and pediatric efficacy using author abstracts.",
+  "evidence_basis": [
+    "Author abstract: serotonin release in synaptosomes; separate parent enantiomer EC50 values of 52 and 147 nM."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/fenfluramine/README.md"
+  ]
+}
