@@ -52,7 +52,7 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      so that coverage_report.md and reading_state.md are never behind the ledger on the pushed SHA. About 80 s of lock time. Without the flag nothing changes.
 
   11. Committed derived views are checked on the tip that is about to be gated (2026-11-24, ADV): `repurposing_view.py check` (the committed full and shareable pages equal a fresh build)
-     and `repurposing_view.py i18n --what check` (the committed i18n content inventory equals a fresh collection) run after the merge and any regeneration, before the gate, and a stale
+     `repurposing_view.py i18n --what check` (the committed i18n content inventory equals a fresh collection) and `repurposing_view.py package --check` (the committed `view/shareable_package/` and the DEPLOY.md file table equal a fresh build; about 22 s; added 2026-11-24 after CI #2187/#2188 went red because two page refreshes skipped the package and the first two checks cannot see it) run after the merge and any regeneration, before the gate, and a stale
      answer REFUSES with the exact regeneration commands, so a stale view is caught in about 12 s here instead of by an 18-minute CI suite after it landed (CI red since #2129). It
      applies to every publisher, `--serialize` or not; a repository without `framework/scripts/repurposing_view.py` skips it; nothing is loosened and nothing is written.
 
@@ -143,11 +143,11 @@ def stale_derived_views() -> str:
     """'' when the committed repurposing views and the i18n inventory are current (or the repository has no such tool); otherwise the tool's own words. Read-only: neither check writes."""
     if not VIEWTOOL.is_file():
         return ""
-    for args in (["check"], ["i18n", "--what", "check"]):
+    for args in (["check"], ["i18n", "--what", "check"], ["package", "--check"]):
         r = run(sys.executable, "-B", str(VIEWTOOL), *args)
         words = [l.strip() for l in (r.stdout + r.stderr).splitlines() if "STALE" in l]
         if r.returncode != 0 or words:
-            return (" | ".join(words) or f"`repurposing_view.py {' '.join(args)}` exited {r.returncode}")[:600]
+            return (f"[repurposing_view.py {' '.join(args)}] " + (" | ".join(words) or f"exited {r.returncode}"))[:600]
     return ""
 
 
