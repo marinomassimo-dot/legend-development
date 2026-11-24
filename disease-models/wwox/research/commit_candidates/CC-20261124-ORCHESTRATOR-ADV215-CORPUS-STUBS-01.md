@@ -41,3 +41,10 @@ Also the field `Identifier type` text `DOI / preprint id (no PMID exists)` becom
 1. Each of the nine PMIDs and DOIs in the table matches PubMed (identifier, journal, year, title) — surface: PubMed record.
 2. None of the nine is already a `PAPER`, `CORPUS-STUB` or `LIT` record (PMID, DOI and a 70-character title prefix searched in the paper registry, the literature log and the full-text queue on 2026-11-24).
 3. The LIT-0538 PMID 42818975 belongs to the same Research Square preprint as DOI 10.21203/rs.3.rs-9950101/v1 — surface: PubMed record (preprint) and the PMC record PMC13622852.
+
+
+## BATCH DISPOSITION — `BATCH_20261124_003` (2026-11-24, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** PROPAGATED
+
+1 `insert-after` op (CORPUS-STUB-195 to 203, nine stubs; the gnomAD stub, 196, was created already read, receipt FTR-20261124-42991897-01) on `paper_registry_current.md` and 1 `replace-within` op on `literature_tracking_log_current.md` (LIT-0538, PMID 42818975 added); the stub numbers were assigned at propagation as the candidate says. Change class restated: MINOR.

@@ -15047,8 +15047,8 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Year:** 2026
 **Source type:** preprint — NOT PEER REVIEWED
 **Journal/source:** Research Square, posted 10 September 2026
-**Identifier type:** DOI / preprint id (no PMID exists)
-**Identifier value:** DOI 10.21203/rs.3.rs-9950101/v1 / PPR1316475
+**Identifier type:** DOI / preprint id (PMID assigned later: see Identifier value)
+**Identifier value:** DOI 10.21203/rs.3.rs-9950101/v1 / PPR1316475 / PMID 42818975 (assigned after 2026-10-04; PubMed preprint record, PMC13622852)
 **Date discovered:** 2026-10-04 (intake wave 9 selection record, group C)
 **Date processed:** 2026-10-04 (`FTR-20261004-PPR1316475-01`)
 **Discovery source:** intake wave 9 selection record, group C (2026-10-04)

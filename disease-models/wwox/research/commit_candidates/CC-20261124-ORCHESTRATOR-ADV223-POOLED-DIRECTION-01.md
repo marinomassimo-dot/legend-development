@@ -35,3 +35,10 @@ New: `on a tumour suppressor whose overexpression is pro-apoptotic in cancer cel
 1. The claim record `CLAIM 025` states that directionality is not a property of the marker (low ratio maladaptive in gestational-diabetes leukocytes; cancer-subtype survival association in both directions, described by the authors as descriptive and hypothesis-generating) — surface: claim registry, Summary.
 2. The record `CLAIM 044` states that the direction of WWOX activity in stressed neurons is unresolved and that the measurement is of activated WWOX gain under stress, transferability T3 — surface: claim registry, title and Summary.
 3. The proposed fragment "overexpression is pro-apoptotic in cancer cell lines" is supported by a held record that reports cell-line overexpression with apoptosis readouts (for example the A549 overexpression record) — surface: paper registry, Role field.
+
+
+## BATCH DISPOSITION — `BATCH_20261124_003` (2026-11-24, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** PROPAGATED
+
+3 record-scoped `replace-within` ops on `working_model_current.md` (BLOCK 2 row 025, the Metabolic branch refinement sentence, the TX-007 line), wording as proposed in section 3 A to C, old text verbatim and replaced; change class restated: PATCH, no version bump.
