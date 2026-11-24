@@ -1,0 +1,3 @@
+assay	form	parent_nM	metabolite_nM	metabolite_over_parent	unit_of_observation
+washed_GluN1_complex	positive_enantiomers	0.17	0.05	0.2941	apparent ED50 on remaining sigma-1 band
+guinea_pig_brain_sigma	racemates	266	2920	10.9774	nonselective sigma radioligand Ki

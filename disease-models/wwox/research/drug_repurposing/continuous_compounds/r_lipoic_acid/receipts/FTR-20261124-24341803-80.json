@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-24341803-80",
+  "event_at": "2026-11-24T01:39:18Z",
+  "analysis_at": "2026-11-24T01:39:18Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "24341803",
+    "doi": "10.1186/1750-1172-8-192"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/r_lipoic_loop_20261124/LIPT1.xml",
+  "source_fingerprint": "ccdb274153d964225a1014bbe5d5c43ece8af970a09cbdaefe310b3e58ce2bec",
+  "workflow": "Distinguish cellular free and enzyme-bound lipoate, oxidant response and transfer to pediatric R-formulation exposure.",
+  "evidence_basis": [
+    "Immunoblot methods and lipoic acid administration results, Fig 3B–D caption/text. One patient, 3 weeks. Direction differs between PDH, alpha-KGDH and lactate. No image inspected."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/r_lipoic_acid/README.md"
+  ]
+}

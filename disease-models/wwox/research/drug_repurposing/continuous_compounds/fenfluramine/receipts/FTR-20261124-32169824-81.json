@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-32169824-81",
+  "event_at": "2026-11-24T01:27:04Z",
+  "analysis_at": "2026-11-24T01:27:04Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "32169824",
+    "doi": "10.1016/j.yebeh.2020.106989"
+  },
+  "prior_receipt": "FTR-20261124-32169824-80",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://focusonneurology.com/uploads/media/Fenfluramine-acts-as-a-positive-modulator-of-sigma.pdf",
+  "source_fingerprint": null,
+  "workflow": "Compare parent/metabolite and stereoform identities, assay units, reference ligands and post-wash protein accounting.",
+  "evidence_basis": [
+    "Table 1: nonselective sigma Ki 266 and 2920 nM, parent and metabolite racemates in guinea-pig brain. §3.2 describes divergent agonist-conditioned effects in the tissue assay."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/fenfluramine/decision.md"
+  ]
+}

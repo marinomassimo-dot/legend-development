@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-29805740-81",
+  "event_at": "2026-11-24T01:27:04Z",
+  "analysis_at": "2026-11-24T01:27:04Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "29805740",
+    "doi": "10.18632/oncotarget.25169"
+  },
+  "prior_receipt": "FTR-20261124-29805740-80",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/fenfluramine_loop_20261124/nr1.xml",
+  "source_fingerprint": "7e9b8a96b34d81d6fdfc3feeadcad348c189360bf0cad44992cfd8f281c643e1",
+  "workflow": "Compare parent/metabolite and stereoform identities, assay units, reference ligands and post-wash protein accounting.",
+  "evidence_basis": [
+    "Fig. 1B right: 170 and 50 pM ED50 for the positive parent and metabolite. Methods: 100 nM sigma-1 in 200 µL before washes; ligand incubation in 300 µL."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/fenfluramine/decision.md"
+  ]
+}
