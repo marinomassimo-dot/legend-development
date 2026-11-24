@@ -914,10 +914,13 @@
     },
     {
      "step": "launch SCI successor AC (old ff316249), bind, handoff, rename",
-     "status": "TODO",
+     "status": "BLOCKED",
      "owner": "plan",
      "source": "ADV message 2026-11-23 (SCI successor launch, checkpoint AC digest 28b0c7d3)",
-     "accepted_at": "2026-11-23T12:41:34Z"
+     "accepted_at": "2026-11-23T12:41:34Z",
+     "blocker": "Auto-mode classifier refused the claude --bg launch on 2026-11-24 evening ([Destructive or Unwanted Actions]) although the operator's instruction is on main verbatim (4371d8963); ADV told the operator, no answer yet. SCI continues ADV-210 in its own window by ADV's direction.",
+     "no_condition": "needs an operator permission rule or explicit go for claude --bg launches from this session; no file or commit can unblock it",
+     "updated_at": "2026-11-24T19:36:12Z"
     },
     {
      "step": "ADV-201 ketamine report pilot, rendering side (renderer and one pilot PDF in report_pilot_ketamine_20261123/render/)",
@@ -966,10 +969,22 @@
     },
     {
      "step": "launch HE successor I (old 1eaef37d), bind, handoff, rename",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
      "source": "ADV message 2026-11-24 ~07:2xZ: write the checkpoint and restart from the mandate",
-     "accepted_at": "2026-11-24T08:06:04Z"
+     "accepted_at": "2026-11-24T08:06:04Z",
+     "evidence": "window 1d88b230 bound 2026-11-24 (mandate_watch released --session 1d88b230 = BOUND), predecessor 1eaef37d RELEASED, native rename done by the old window (this session lists as HE - CURRENT 1d88b230)",
+     "updated_at": "2026-11-24T19:36:12Z"
+    },
+    {
+     "step": "launch IT successor (old 748d7ec5, checkpoint 11 plus checkpoint 12), bind, handoff, rename",
+     "status": "BLOCKED",
+     "owner": "plan",
+     "source": "ADV message 2026-11-24 evening (ADV-211 delivery) under the operator instruction recorded verbatim on main, commit 4371d8963",
+     "accepted_at": "2026-11-24T18:42:04Z",
+     "blocker": "Auto-mode classifier refused the claude --bg launch on 2026-11-24 evening ([Destructive or Unwanted Actions]) although the operator's instruction is on main verbatim (4371d8963); ADV told the operator, no answer yet. SCI continues ADV-210 in its own window by ADV's direction.",
+     "no_condition": "needs an operator permission rule or explicit go for claude --bg launches from this session; no file or commit can unblock it",
+     "updated_at": "2026-11-24T19:36:12Z"
     }
    ]
   }
@@ -1721,6 +1736,13 @@
    "at": "2026-11-24T08:06:04Z",
    "source": "ADV message 2026-11-24 ~07:2xZ: write the checkpoint and restart from the mandate",
    "step_sha256": "7649d8d076ea",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T18:42:04Z",
+   "source": "ADV message 2026-11-24 evening (ADV-211 delivery) under the operator instruction recorded verbatim on main, commit 4371d8963",
+   "step_sha256": "abeb88948096",
    "reopened_block": false,
    "authorised_by": null
   }
