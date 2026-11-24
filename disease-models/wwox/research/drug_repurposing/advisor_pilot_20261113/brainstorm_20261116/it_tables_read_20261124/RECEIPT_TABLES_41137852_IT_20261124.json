@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-24T23:15Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-24T23:17:30Z",
+ "event_id": "FTR-20261124-41137852-01",
+ "evidence_basis": [
+  "coverage_map",
+  "files/fulltext/PMID41137852_Balestrini2026_PMC_r2.xml (the file the latest earlier receipt names; sha256 equal to that receipt's fingerprint)",
+  "tables read with the WWOX question in mind: Three tables: clinical and EEG features by epilepsy syndrome, genetic etiology against treatment efficacy by drug, and a multivariable model (drug resistance odds ratio 5.6, p = .002; early absence onset 3.3, p = .022) for unfavourable neurodevelopmental outcome; WWOX is not named in any table.",
+  "scope: only the section(s) named as read were read in this reading; every other section is not_read here and keeps the state of the earlier receipts in the union",
+  "reason: the earlier map marked this section not_present although it is in the held file (ADV-219 class A list, ADV decision of 2026-11-24)"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_tables_read_20261124/RESULT_TABLES_READ_IT_20261124.md"
+ ],
+ "prior_receipt": "FTR-20261021-41137852-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "fbffa1f62649055058ae131c573e42b4da3ea8a2a00da4fdc07d1c3caa186dff",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID41137852_Balestrini2026_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1111/epi.18655",
+  "pmid": "41137852"
+ },
+ "workflow": "IT reading of the section(s) named read, from the held file, with the open-question rows of the WWOX repurposing module in mind; the held file was read directly (tables and table captions as rendered in the text layer or XML); no contact, no e-mail to any service, no paid route."
+}

@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-24T23:15Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-24T23:17:30Z",
+ "event_id": "FTR-20261124-42589397-01",
+ "evidence_basis": [
+  "coverage_map",
+  "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml (the file the latest earlier receipt names; sha256 equal to that receipt's fingerprint)",
+  "tables read with the WWOX question in mind: Table 1 (hormone-associated genes between high and low WWOX/HIF1A ratio groups by subtype) and Table 2 (summary by subtype and group): the metabolic profile of the high-ratio group is oxidative phosphorylation and active mitochondrial function in basal-like breast cancer, hyperactive biosynthesis in luminal A, and mitochondrial dysfunction in luminal B, while the low-ratio group is a glycolytic shift in basal-like: the direction is subtype-dependent, which supports the direction caveat of the ratio claim.",
+  "scope: only the section(s) named as read were read in this reading; every other section is not_read here and keeps the state of the earlier receipts in the union",
+  "reason: the earlier map marked this section not_present although it is in the held file (ADV-219 class A list, ADV decision of 2026-11-24)"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_tables_read_20261124/RESULT_TABLES_READ_IT_20261124.md"
+ ],
+ "prior_receipt": "FTR-20261019-42589397-05",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "ae7f429190e0b48faaf91f9df0c79e66dd7986d23c65c21f5564ef8607f898af",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
+ "study_id": {
+  "doi": "10.3390/ijms27156740",
+  "pmid": "42589397"
+ },
+ "workflow": "IT reading of the section(s) named read, from the held file, with the open-question rows of the WWOX repurposing module in mind; the held file was read directly (tables and table captions as rendered in the text layer or XML); no contact, no e-mail to any service, no paid route."
+}

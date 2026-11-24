@@ -23,7 +23,7 @@ Quote for the blind check: "Vigabatrin raised electrographic burst frequency in 
 **C. `PAPER 157` (Abudiab 2025 preprint, oligodendroglial Wwox; preprint, not peer reviewed), dated update line at the foot of `Evidence depth`.**
 Add (nothing replaced): `**Update 2026-11-24 (`FTR-20261124-PPR1124524-01`, SCI, ADV-216, reason `inadequate_prior_coverage`):** Supplementary Figures 1 to 6 are inside the held PDF (pages 17 to 22) and were read from rendered pages; the earlier map called them `captions_only`. They do not resolve the 59.1 versus 36.1 mismatch; the remyelination readout of Supplementary Figure 4 is qualitative and "per FOV" is undefined. Depth stays partial (introduction and methods not re-read).`
 
-**D. Vigabatrin conditional question (the map row `IT30-CQ5` cites `#CQ-IT30-05`; in `context_it30_20261105/results/conditional_questions_it30.tsv` the vigabatrin row is `CQ-IT30-06` and `CQ-IT30-05` is rapamycin: an identifier mismatch to settle before the edit).**
+**D. Vigabatrin conditional question, identifier corrected (2026-11-24 note, ADV decision 3): the vigabatrin row is `CQ-IT30-06` in `context_it30_20261105/results/conditional_questions_it30.tsv` (`CQ-IT30-05` is rapamycin there); the map row `IT30-CQ5` in `open_questions_map.tsv` cites `#CQ-IT30-05` and its question text names vigabatrin, so the map row's `source_ref` anchor is the one to correct to `#CQ-IT30-06`, in the same pass as the wording below. The row id `IT30-CQ5` itself is left as it is (other records cite it).**
 Old (verbatim fragment of the `question` cell): `adverse: scn1lab larval zebrafish (LoF) | spontaneous seizures | endpoint: epileptiform event frequency, same assay`
 New: `adverse (qualified): scn1lab larval zebrafish (LoF) | spontaneous seizures | endpoint: epileptiform event frequency, same assay; higher burst frequency in 6 of 7 fish at one bath concentration, no group test reported; the same paper's locomotion assay is opposite in sign (about -30 percent, not significant): aggravation untested, not shown`
 Quote: "the scn1Lab cell reads 'adverse' without a qualifier; the paper supports 'higher burst frequency in 6 of 7 fish at one 1 mM bath concentration, no group test reported ...; locomotion assay opposite in sign and not significant'. It does not support a graded or tested aggravation. No WWOX content."
@@ -37,3 +37,10 @@ Not part of this candidate (SCI's map consumers, for the map owner): the WO-23 "
 1. The three receipts exist in the ledger with the event ids, reasons and coverage maps stated above — surface: receipt ledger.
 2. Table 1 and Table 2 are in the Dohare article, and "Tau" occurs zero times in its body — surface: article text (held artefact of the earlier receipt).
 3. The Baraban supplementary PDF does not mention vigabatrin and Figure 6B shows the vigabatrin locomotion bar near -30 percent, not significant — surface: article figure and supplement (open-data bucket).
+
+
+## BATCH DISPOSITION — `BATCH_20261124_003` (2026-11-24, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** PROPAGATED
+
+5 record-scoped `replace-within` ops on `paper_registry_current.md` (PAPER 495 and PAPER 447 Evidence depth, two ops each; PAPER 157 dated update line), items A to C as proposed. Item D (vigabatrin cell of the conditional-question row) is NOT a registry edit: it goes by the ordinary route in the research map, with the identifier corrected to CQ-IT30-06 (the map row IT30-CQ5 cites CQ-IT30-05, which is rapamycin in the TSV).
