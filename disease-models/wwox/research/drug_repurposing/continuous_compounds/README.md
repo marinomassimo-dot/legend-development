@@ -56,7 +56,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: lamotrigine.** Compare dendritic integration and recruitment of inhibitory interneurons at matched membrane voltage and free drug exposure. [Opening prediction and source selection](lamotrigine/README.md)
+**Active compound: lamotrigine.** Five adult surgical participants provide a 2.23–7.03 µM extracellular cortical benchmark. At 100 µM two rat CA1 experiments report opposite changes in inhibitory event frequency. Test sodium-channel availability across voltage histories with inhibitory recruitment measured alongside it. Pediatric trial priority remains on hold. [Comparison, countertest and next evidence question](lamotrigine/integration.md)
 
 **Magnesium chloride parked for unselected pediatric trial priority.** Adult ventricular exposure gives at most 2.66 percentage points additional loss of Mg-free NMDA current across twelve fits. WWOX serum panels omit magnesium, and the two evoked cortical peaks follow one stimulus. A measured deficiency or a selective circuit response could reopen the question. [Exposure, pediatric comparators and endpoint audit](magnesium_chloride/csf.md)
 

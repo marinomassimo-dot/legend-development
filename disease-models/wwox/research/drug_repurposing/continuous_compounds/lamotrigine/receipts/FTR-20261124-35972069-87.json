@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-35972069-87",
+  "event_at": "2026-11-24T08:01:08Z",
+  "analysis_at": "2026-11-24T08:01:08Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "35972069"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://elifesciences.org/articles/70826#fig9",
+  "source_fingerprint": null,
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "Fig. 9A/B and accompanying result on heterologous HCN1, HCN1 with TRIP8b and HCN2. At 100 micromolar neither half-activation voltage nor maximal tail-current density changed significantly. Examined the caption and reported group result."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/lamotrigine/integration.md"
+  ]
+}

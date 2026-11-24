@@ -1,0 +1,9 @@
+PMID	region	readout	LTG_uM	before	after	units	change_pct_of_baseline
+19776733	CA1	sIPSC frequency	100	2.64	4.69	Hz	77.65
+19776733	CA1	mIPSC frequency	100	0.19	0.17	Hz	-10.53
+27455251	CA1	sIPSC frequency	100	6.43	2.58	Hz	-59.88
+27455251	CA1	mIPSC frequency	100	1.95	1.81	Hz	-7.18
+27455251	DG	sIPSC frequency	100	1.2	0.52	Hz	-56.67
+27455251	DG	mIPSC frequency	100	0.32	0.31	Hz	-3.12
+34948401	CA1	sIPSC frequency	50	1.91	1.94	Hz	1.57
+34948401	CA3c	sIPSC frequency	50	7.05	4.05	Hz	-42.55

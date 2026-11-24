@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-16650134-87",
+  "event_at": "2026-11-24T07:58:29Z",
+  "analysis_at": "2026-11-24T07:58:29Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "16650134"
+  },
+  "prior_receipt": "FTR-20261124-16650134-80",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://www.academia.edu/85592436/Comparison_of_Brain_Extracellular_Fluid_Brain_Tissue_Cerebrospinal_Fluid_and_Serum_Concentrations_of_Antiepileptic_Drugs_Measured_Intraoperatively_in_Patients_with_Intractable_Epilepsy",
+  "source_fingerprint": null,
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "Tables 1 and 3B, lamotrigine rows. Extracted the number and extremes of recovery-adjusted cortical extracellular concentrations within each subject and checked the recovery exceptions. Prior receipt covered levetiracetam."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/lamotrigine/integration.md"
+  ]
+}
