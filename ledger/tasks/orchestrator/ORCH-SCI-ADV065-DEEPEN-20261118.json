@@ -885,6 +885,15 @@
      "accepted_at": "2026-11-24T19:24:32Z",
      "evidence": "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv214_gsk3b_tau_held_tables_sci_20261124/RESULT_ADV214_GSK3B_TAU_HELD_TABLES_SCI_20261124.md: disposition (b) with searched-tables list; no held phospho-protein table; Zeng proteome total GSK3B unchanged; shared-anchor note delivered",
      "updated_at": "2026-11-24T19:44:47Z"
+    },
+    {
+     "step": "ADV-216: complete three partial-depth full-text reads chosen from OPEN question rows (reading debt); PREREG first",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-216 (ADV message 2026-11-24, assignment text adv215.txt assignment 2)",
+     "accepted_at": "2026-11-24T22:02:43Z",
+     "evidence": "brainstorm_20261116/adv216_reading_debt_three_partials_sci_20261124/: PREREG, RESULT, three receipts (FTR-20261124-24002024-01, FTR-20261124-29940337-01, FTR-20261124-PPR1124524-01); P1 and P2 confirmed, P3 rejected in part; WO-23, RS-NP4G1, RS-NP4G2 stay OPEN, IT30-CQ5 wording qualified",
+     "updated_at": "2026-11-24T22:18:37Z"
     }
    ]
   }
@@ -1566,6 +1575,13 @@
    "at": "2026-11-24T19:24:32Z",
    "source": "ADV-214 (ADV direction message 2026-11-24; assignments/ADV-214.md; operator verbatim text in meetings/MEETING-20261121T113510Z-83lyojx8.md)",
    "step_sha256": "f9522691388b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T22:02:43Z",
+   "source": "ADV-216 (ADV message 2026-11-24, assignment text adv215.txt assignment 2)",
+   "step_sha256": "3fb272bce8b1",
    "reopened_block": false,
    "authorised_by": null
   }
