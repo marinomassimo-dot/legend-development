@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-40175519-85",
+  "event_at": "2026-11-24T07:22:46Z",
+  "analysis_at": "2026-11-24T07:22:46Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "40175519"
+  },
+  "prior_receipt": "FTR-20261124-40175519-84",
+  "reread_reason": "new_version_or_supplement",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/sulforaphane_loop_20261124/vpa_development.xml",
+  "source_fingerprint": "bf6e55828317ba1a3d19d7199d11462608ec340933403d355049f52a43e109db",
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "Results “0.1 μM SFN” in four-arm human neural progenitor study. Opened Table S2 treatment sheets 1–4, headers external_gene_name, log2FoldChange, padj. Other sheets outside scope. Local supplement files/deepening_downloads/sulforaphane_loop_20261124/vpa_sup_table2.xlsx SHA-256 39e8603db15be12a8b6941bef17c8419a2105e86b8cae19cfa433a8aa388ce99."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/sulforaphane/sulfur_lists.tsv",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/sulforaphane/exposure.md"
+  ]
+}

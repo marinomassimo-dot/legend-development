@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-33914858-85",
+  "event_at": "2026-11-24T07:23:50Z",
+  "analysis_at": "2026-11-24T07:23:50Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "33914858"
+  },
+  "prior_receipt": "FTR-20261123-33914858-81",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.txt",
+  "source_fingerprint": "665f777280b0476f6e5cb69997027c1b0ae0052e738a2b68fce0335ef40e7124",
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "Electrophysiology recordings from oligocortical spheroids “1.5 MgCl2” with 2.5 mM calcium in artificial CSF. Baseline recordings in the same solution. Cutting solution had 7 mM magnesium."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/magnesium_chloride/README.md"
+  ]
+}

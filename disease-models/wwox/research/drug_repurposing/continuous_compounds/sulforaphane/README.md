@@ -21,3 +21,5 @@
 Reproduce the untreated comparison with `python3 compare.py /path/to/files /path/to/output_directory`. The inputs are GEO GSE158682 (mouse cortex), GSE158681 (mouse hippocampus), GSE156243 (human organoids) and GSE158684 (mouse hippocampal nuclei), plus the laboratory's matching Ensembl reference. Mouse bulk contrasts use transcript TPM aggregated by gene and human bulk contrasts use library-normalized counts. Between-model comparisons use contrast direction rather than absolute RNA values. The outputs were independently regenerated from the archived inputs and compared byte for byte.
 
 [Second comparison: human CSF, regional GSH, sulfur supply and the functional prediction](exposure.md)
+
+**Final disposition.** Parked for pediatric WWOX trial priority. The completed [four-arm comparison and reopening criterion](exposure.md) supersede the initial checkpoint above.
