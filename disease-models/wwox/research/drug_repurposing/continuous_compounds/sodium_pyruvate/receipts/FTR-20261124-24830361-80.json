@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-24830361-80",
+  "event_at": "2026-11-24T05:50:40Z",
+  "analysis_at": "2026-11-24T05:50:40Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "24830361"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/sodium_pyruvate_loop_20261124/201415023A0004.pdf",
+  "source_fingerprint": "5dc76a09909a090a05946a841280c11be5032f7e56dab45a146db98b8a09fa9d",
+  "workflow": "Resolve oral exposure, specimen and clinical responder denominators.",
+  "evidence_basis": [
+    "Journal pp. 134 and 136, Table 1, Table 3 and patient 3. Continuation 201415023A0005.pdf, pp. 137–138, §3.4 “reported in detail elsewhere” and ref. 3 identify Saito patient overlap. Continuation SHA-256 57001cce926359a0b1b6cc0ab2f024879bd8e9ff8edef9c16f0f86a8f55dbd09."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/sodium_pyruvate/exposure.md"
+  ]
+}
