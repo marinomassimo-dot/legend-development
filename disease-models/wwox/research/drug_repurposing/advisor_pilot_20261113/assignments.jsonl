@@ -507,3 +507,5 @@
 {"evidence": "SendMessage 18:56Z with brief pointer; growth_anchors CANDIDATE_BACKLOG at trigger 5", "id": "ADV-212", "receipt": ["aaed76df-0eca-467f-b56b-74d5600933ac"], "state": "SENT", "to": ["IT Orchestrator - CURRENT 748d7ec5"], "utc": "2026-11-24T18:56:12Z"}
 {"assessment": "HOST", "id": "ADV-213", "key": "continuous-programme-expansion-step-unmapped-phenotypes", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-24T19:01:49Z"}
 {"evidence": "SendMessage 19:02Z with brief pointer", "id": "ADV-213", "receipt": ["482c4fa6-1ae0-43ab-a2f5-827913a282d2"], "state": "SENT", "to": ["SCI - CURRENT ff316249"], "utc": "2026-11-24T19:02:17Z"}
+{"assessment": "HOST", "id": "ADV-214", "key": "gsk3b-tau-limb-held-table-search", "origin": "host", "recipient": "Science", "state": "DRAFTED", "utc": "2026-11-24T19:20:38Z"}
+{"evidence": "SendMessage 19:20Z, brief pointer", "id": "ADV-214", "receipt": ["92d50647-58c7-4bb0-b6f4-d09b1ef4bd58"], "state": "SENT", "to": ["SCI - CURRENT ff316249"], "utc": "2026-11-24T19:21:00Z"}
