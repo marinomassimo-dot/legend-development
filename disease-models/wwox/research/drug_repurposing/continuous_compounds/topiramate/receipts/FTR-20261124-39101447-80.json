@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-39101447-80",
+  "event_at": "2026-11-24T04:48:03Z",
+  "analysis_at": "2026-11-24T04:48:03Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "39101447",
+    "doi": "10.1002/mgg3.2500"
+  },
+  "prior_receipt": "FTR-20261107-39101447-93",
+  "reread_reason": "inadequate_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID39101447_You2024_PMC.xml",
+  "source_fingerprint": "d077cc45b50e52dea87555d2c5ce0263aa5e4d97ee5b6032a26d9731426f312e",
+  "workflow": "Distinguish timed single-drug response from concurrent treatment and developmental status in the WWOX topiramate dossier.",
+  "evidence_basis": [
+    "Case history before and after tonic episode at five months, later vigabatrin and clinical versus EEG findings at eleven months. Short locator: “did not experience a recurrence for about 3 months”. Checked adjacent prior treatment interval; figures not visually examined."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/topiramate/clinical_timeline.md"
+  ]
+}

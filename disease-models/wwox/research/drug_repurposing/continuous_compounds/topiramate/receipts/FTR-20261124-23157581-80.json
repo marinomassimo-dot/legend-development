@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-23157581-80",
+  "event_at": "2026-11-24T04:41:30Z",
+  "analysis_at": "2026-11-24T04:41:30Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "23157581",
+    "doi": "10.1111/epi.12019"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "files/deepening_downloads/topiramate_loop_20261124/paired_pk.xml",
+  "source_fingerprint": "0aa6c929f51e1cc537ea9d7218f861450ae31f3b35b18882c9b70fda48b3c51d",
+  "workflow": "Distinguish network recruitment from evoked success and compare nominal neuronal concentration with measured exposure.",
+  "evidence_basis": [
+    "Author abstract only: randomized open-label infant PK study, 55 enrolled and 35 with complete profiles. Numerical concentrations separately sourced to FDA Table 4 in output."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/topiramate/circuit.md"
+  ]
+}

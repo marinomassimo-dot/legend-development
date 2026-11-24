@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-12904467-80",
+  "event_at": "2026-11-24T04:41:30Z",
+  "analysis_at": "2026-11-24T04:41:30Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "12904467",
+    "doi": "10.1523/JNEUROSCI.23-18-07069.2003"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/topiramate_loop_20261124/gluK1_classic.html",
+  "source_fingerprint": "2445d2ad812778ca7acea2778cc810d279c6855c98fdce16fbf53b333a72b7aa",
+  "workflow": "Distinguish network recruitment from evoked success and compare nominal neuronal concentration with measured exposure.",
+  "evidence_basis": [
+    "Methods, age; Results for Figs. 1, 3 and 4 and Fig. 4 caption. Paired facilitation, onset and text–caption concentration discrepancy. Short locator: “maximum blockade required 40 to 50 min”. No separate visual inspection claimed."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/topiramate/circuit.md"
+  ]
+}

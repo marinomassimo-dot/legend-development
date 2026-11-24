@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-39507621-80",
+  "event_at": "2026-11-24T04:49:27Z",
+  "analysis_at": "2026-11-24T04:49:27Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "39507621",
+    "doi": "10.3389/fgene.2024.1477466"
+  },
+  "prior_receipt": "FTR-20261019-39507621-01",
+  "reread_reason": "inadequate_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+  "source_fingerprint": "ae7d18a74e0e7ffea3635f6f39fc2108b473770c9d688d0b2d5ebe6210a69692",
+  "workflow": "Distinguish timed single-drug response from concurrent treatment and developmental status in the WWOX topiramate dossier.",
+  "evidence_basis": [
+    "Longitudinal treatment narrative, topiramate in the medication list, no sustained positive effect attributed to the sequence. Locator: “No sustained positive effect”."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/topiramate/clinical_timeline.md"
+  ]
+}

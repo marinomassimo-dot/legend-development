@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-36779245-80",
+  "event_at": "2026-11-24T04:48:03Z",
+  "analysis_at": "2026-11-24T04:48:03Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "36779245",
+    "doi": "10.1111/epi.17542"
+  },
+  "prior_receipt": "FTR-20261123-36779245-91",
+  "reread_reason": "inadequate_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml",
+  "source_fingerprint": "780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34",
+  "workflow": "Distinguish timed single-drug response from concurrent treatment and developmental status in the WWOX topiramate dossier.",
+  "evidence_basis": [
+    "Table 2 ASMs trialed (current) row. Preserved underlining when extracting status; reviewed 13 columns and other currently marked agents in the sole current TPM column."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/topiramate/clinical_timeline.md"
+  ]
+}
