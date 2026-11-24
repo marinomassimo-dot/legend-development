@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-39416860-80",
+  "event_at": "2026-11-24T04:16:43Z",
+  "analysis_at": "2026-11-24T04:16:43Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "39416860",
+    "doi": "10.3389/fped.2024.1453778"
+  },
+  "prior_receipt": "FTR-20261019-39416860-01",
+  "reread_reason": "inadequate_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID39416860_Feng2024_PMC_r2.xml",
+  "source_fingerprint": "8ded55499fc5db1d5a79fa1920f4625a4e4bca2b194e5e3609219c79218de192",
+  "workflow": "Distinguish a measured B12 result in a WWOX patient from a diagnostic alternative and from paired functional metabolites.",
+  "evidence_basis": [
+    "Discussion paragraph with “vitamin B12 deficiency” in a differential diagnosis. No B12 measurement or case-level deficiency conclusion in that passage."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/hydroxocobalamin/README.md"
+  ]
+}

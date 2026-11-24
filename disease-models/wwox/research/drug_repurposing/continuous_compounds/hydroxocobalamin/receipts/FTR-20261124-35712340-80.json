@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-35712340-80",
+  "event_at": "2026-11-24T04:16:43Z",
+  "analysis_at": "2026-11-24T04:16:43Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "35712340",
+    "doi": "10.7759/cureus.25003"
+  },
+  "prior_receipt": "FTR-20261003-35712340-01",
+  "reread_reason": "inadequate_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID35712340_Sukkar2022_PMC.xml",
+  "source_fingerprint": "b199ddb48050738975f1948e1de8d5b6a5aa92e6ba0157cbdd7df016b3050ce5",
+  "workflow": "Distinguish a measured B12 result in a WWOX patient from a diagnostic alternative and from paired functional metabolites.",
+  "evidence_basis": [
+    "Case presentation, metabolic investigations paragraph, and Table 1, Vitamin B12 row: “High”. Checked the qualitative organic acids and vitamin finding against the table; no numerical concentration in that B12 row."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/hydroxocobalamin/README.md"
+  ]
+}
