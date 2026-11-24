@@ -57,7 +57,7 @@ def startup(root: Path, actor: str, today: dt.date | None = None) -> dict:
     result = scout_status(root, today)
     result["actor"] = actor
     result["action"] = {
-        "SCOUT_DUE": "Junior: run legend-harness-scout and write the weekly report; Plan: report missing input.",
+        "SCOUT_DUE": "Junior: run legend-harness-scout and write the weekly report (first run `python3 framework/scripts/pubmed_delta_census.py`: WWOX PMIDs absent from the repository); Plan: report missing input.",
         "INVALID_REPORT": "Repair the weekly report metadata before treating it as completed.",
         "TRIAGE_DUE": "Plan: fill HE verdicts, implement ADOPT/TRIAL, record landed commits.",
         "CURRENT": "Weekly report triaged; follow recorded ADOPT/TRIAL outcomes.",
