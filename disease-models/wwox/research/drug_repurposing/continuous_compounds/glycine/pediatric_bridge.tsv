@@ -1,0 +1,6 @@
+primary_record	population	intervention	endpoint_visible_in_indexed_record	use_for_WWOX_question
+641635	one three-year-old child with isovaleric acidemia	oral glycine	isovalerylglycine formation and excretion	pediatric administration precedent with a disease-specific metabolic sink
+448532	one 15-year-old with late-onset nonketotic hyperglycinemia	oral glycine loading	plasma glycine response and elevated diagnostic CSF glycine	reported CSF abnormality and reported post-load plasma observations are different endpoints
+PMC8150808	pediatric dual metabolic diagnosis	L-serine pretreatment comparison	baseline CSF glycine 8 micromolar	baseline comparator only with different intervention
+10704956	healthy human volunteers	intravenous glycine	dose-dependent serum and lumbar CSF glycine increases	first-test-day lumbar samples allow exposure comparison across assigned conditions
+PMC2713375	healthy adult men	oral glycine	tissue glycine-to-creatine MRS signal	oral central tissue signal only

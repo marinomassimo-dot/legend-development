@@ -20,7 +20,7 @@ asserted by no receipt. `prior_receipt` means the reading this one builds on, an
 sharing a parent are the normal case under parallel branches.
 
 
-**1926 paper(s)** with at least one receipt · **2690 receipt(s)** · **39 paper(s) read in parallel** by two receipts sharing a parent.
+**1928 paper(s)** with at least one receipt · **2693 receipt(s)** · **39 paper(s) read in parallel** by two receipts sharing a parent.
 
 ## Papers read in parallel
 
@@ -1168,6 +1168,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 34089815 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | — | 1 |
 | PMID 34135323 | `partial_fulltext_read` | read | read | not_read | read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 34140629 | `partial_fulltext_read` | read | read | read | read | unavailable | not_read | read | not_present | not_read | unavailable | 1 |
+| PMID 34187890 | `partial_fulltext_read` | not_read | not_read | not_read | read | captions_only | not_read | not_read | not_read | not_read | — | 1 |
 | PMID 34204789 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | not_present | captions_only | read | 2 |
 | PMID 34210081 | `complete_fulltext_read` | read | read | not_present | not_present | read | not_present | read | not_present | not_present | read | 2 |
 | PMID 34214506 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | not_present | — | 3 |
@@ -1218,6 +1219,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 34909297 | `complete_fulltext_read` | read | read | not_present | not_present | read | not_present | read | read | not_present | read | 1 |
 | PMID 34937577 | `complete_fulltext_read` | read | read | not_present | not_present | read | read | read | not_present | not_present | read | 1 |
 | PMID 34948401 | `partial_fulltext_read` | not_read | not_read | read | read | not_read | not_read | not_read | not_read | not_read | — | 1 |
+| PMID 34977503 | `partial_fulltext_read` | not_read | not_read | not_read | read | read | not_read | not_read | not_read | read | — | 2 |
 | PMID 34998176 | `abstract_only` | read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | not_read | 1 |
 | PMID 35013317 | `partial_fulltext_read` | read | read | read | read | captions_only | not_present | read | read | not_read | not_read | 1 |
 | PMID 35013551 | `partial_fulltext_read` | not_read | not_read | not_read | read | not_read | read | not_read | not_read | not_read | — | 1 |
