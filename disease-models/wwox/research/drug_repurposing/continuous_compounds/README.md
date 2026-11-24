@@ -47,6 +47,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 41 | Magnesium chloride, extracellular magnesium and activity-dependent NMDA current | Does a measured change above a physiological baseline improve WWOX firing or recovery beyond correction of generic magnesium deprivation? |
 | 42 | Lamotrigine, dendritic HCN current and inhibitory recruitment | Does the drug preferentially restrain dendritic excitation or impair recruitment of dendrite-targeting interneurons at matched free exposure? |
 | 43 | Triacetin, acetate supply for myelin | Can acetate bypass impaired neuron-to-glia carbon supply in WWOX while restoring functional sheaths at matched axon and glial maturation? |
+| 44 | Calcium alpha-ketoglutarate, HIF hydroxylation and central carbon metabolism | Can intact co-substrate reach the relevant compartment and alter HIF processing independently of a TCA or calcium effect? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -57,7 +58,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: triacetin (glyceryl triacetate).** Mouse WWOX tissue shows lower NAT8L, ASPA and ACSS2; human organoids do not reproduce the pattern. In one pooled mouse myelin-forming class, depth-matched ASPA detection falls more than ACSS2. Next distinguish brain acetate delivery from functional myelin lipid synthesis. [Prediction, reproducible WWOX comparison and counterexample](triacetin/README.md)
+**Active compound: calcium alpha-ketoglutarate.** Duodenal sodium alpha-ketoglutarate raised arterial parent by 13.6 µM in young pigs. Next compare neural transport and HIF hydroxylation against measured exposure; calcium-salt pediatric CNS delivery is open. [Opening prediction and source selection](calcium_alpha_ketoglutarate/README.md)
+
+**Triacetin parked for WWOX pediatric trial prioritization.** Chronic treatment improved rat motor function and relative galactocerebroside signal. Absolute drug-derived myelin synthesis and functional ensheathment in WWOX remain open. [Flux audit, WWOX spectroscopy and reopening criterion](triacetin/bridge.md)
 
 **Lamotrigine parked for WWOX pediatric trial prioritization.** At 3 µM the juvenile cortical field response falls with the number of detectable sites. Direct evidence on recruited inhibition is at 25 µM in adult hippocampus. Reopen for a matched WWOX cortical measurement of propagation and inhibitory charge, or an attributable clinical response. [Final circuit comparison](lamotrigine/circuit.md) · [Independent clinical review](lamotrigine/clinical_review.md)
 

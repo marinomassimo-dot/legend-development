@@ -1,0 +1,12 @@
+comparison	value	unit
+female_GC_mean_difference	3064.00000	reported normalized intensity units
+female_GC_treated_over_untreated	1.20301	ratio
+female_GC_change_over_WT_minus_untreated	0.27163	fraction of group mean gap
+total_spot_signal_if_GC_and_protein_fixed	0.83125	hypothetical treated/control ratio
+unpaired_difference_over_SE	0.72908	SE units
+minimum_correlation_under_4_true_pairs	0.94769	correlation
+minimum_correlation_under_5_true_pairs	0.93121	correlation
+female_motor_treated_over_untreated	2.81481	ratio
+female_motor_change_over_WT_minus_untreated	0.37692	fraction of group mean gap
+ASPA_null_over_WT_new_myelin_lipid_label	0.70478	ratio of cpm/mg myelin protein
+ASPA_null_over_WT_liver_lipid_label	1.00738	ratio of cpm/mg tissue protein

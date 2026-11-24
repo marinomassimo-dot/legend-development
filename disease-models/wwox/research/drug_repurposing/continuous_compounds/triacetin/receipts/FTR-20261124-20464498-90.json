@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-20464498-90",
+  "event_at": "2026-11-24T08:50:47Z",
+  "analysis_at": "2026-11-24T08:50:47Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "20464498"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/triacetin_loop_20261124/20464498.xml",
+  "source_fingerprint": "de73c6a6fd0921ea0d1ebb00a8708bec7a2fd2fd43f285dd7b86dc3367b66251",
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "Myelin preparation and TLC, Lipid analysis, Rotarod treadmill performance and Tables 1–3. Fig. 2 and Fig. 4 captions. Table 3 gives relative spot values normalized to myelin protein and a paired comparison; no matching covariance was available."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/triacetin/bridge.md"
+  ]
+}

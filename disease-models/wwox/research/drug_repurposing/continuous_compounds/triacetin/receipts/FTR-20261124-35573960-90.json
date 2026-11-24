@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-35573960-90",
+  "event_at": "2026-11-24T08:50:47Z",
+  "analysis_at": "2026-11-24T08:50:47Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "35573960"
+  },
+  "prior_receipt": "FTR-20261124-35573960-80",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID35573960_Riva2022_PMC.xml",
+  "source_fingerprint": "e74bfe47c66e4ed906d4c61be665cc28e66717dc2dd98868a39094fba51c4ddc",
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "Spectroscopy discussion in the clinical results and Fig. 3M caption: regional NAA signal described qualitatively. Checked whether an absolute concentration or substrate flux was reported there."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/triacetin/bridge.md"
+  ]
+}
