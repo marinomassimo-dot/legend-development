@@ -1,0 +1,7 @@
+scenario	reads_per_library	control_fraction	KO_fraction	technical_delta_pp_q025	technical_delta_pp_q975	probability_nonpositive
+mouse_sized_shift	20	0.2209	0.3223	-6.25	26.25	0.12906
+mouse_sized_shift	50	0.2209	0.3223	-0.5	20.5	0.03252
+mouse_sized_shift	100	0.2209	0.3223	2.75	17.5	0.00419
+equal_fractions	20	0.2209	0.2209	-16.25	15.0	0.52516
+equal_fractions	50	0.2209	0.2209	-10.0	10.0	0.51595
+equal_fractions	100	0.2209	0.2209	-7.0	7.0	0.51129
