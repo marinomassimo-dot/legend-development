@@ -1,0 +1,47 @@
+# RESULT ADV-210 (SCI window AB): L-ascorbic acid, resume steps 1 and 2
+
+Hypothesis level; reference genotype class; nothing is medical advice; no dose, rank or compound recommendation. Pre-registration frozen at the time in `PREREG_ADV210_TIME_UTC.txt` (SHA-256 in `PREREG_ADV210_SHA256.txt`, committed as ab802f9cc) before any new computation or any original report was opened. No delegate, no model call, no spend, no contact, no operator e-mail sent. Script and numbers: `slc23a2_composition_adv210.py` and `.tsv` (rerun: `python3 -I slc23a2_composition_adv210.py REPO FILES`).
+
+## Answer first
+**Disposition (c): unresolved because one anchor is absent; the hypothesis stays parked.** The anchor is a *measured* extracellular ascorbate time course in the differentiation assay (parent and phosphate derivative) plus the ascorbate content of the control medium. Nothing found closes the hypothesis (no exposure above the pediatric replete range was shown), and nothing found supports it at a verified exposure. Neither (a) nor (b) is reached, for the reasons below.
+
+## Step 2: opposite SLC23A2 directions (held tables, bulk RNA only)
+| model | libraries (WT / KO) | SLC23A2 KO minus WT, mean log2(1+x) | leave-one-library-out |
+|---|---|---|---|
+| mouse cortex (table named "neuronal deletion") | 4 / 3 | -0.679 (TPM) | -1.033 to -0.173 |
+| mouse hippocampus (table named "mutant") | 2 / 3 | -0.327 (TPM) | -0.676 to +0.017 |
+| human organoid, 15 weeks, hESC knockout | 2 / 4 | +0.727 on raw counts; **+0.305 on log2(1+CPM)**; +0.547 at a common 35 M depth (post hoc) | CPM: +0.276 to +0.333 |
+
+* **C1 normalisation.** The dossier's +0.727 was computed on raw Salmon counts. Library totals range 30.0 M to 41.2 M, KO libraries deeper than WT, so about half of the raw delta is depth. After CPM scaling the delta is +0.305 (all leave-one-out values positive, threshold 0.2 met), so the human increase survives normalisation, at a smaller size. Scale note: log2(1+CPM) is damped by the pseudocount at these expression levels, so the common-depth figure (+0.547, group-mean log2 ratio +0.56) is the less compressed one; both are positive. Only two WT libraries (two others failed the authors' quality control) bound everything about this dataset.
+* **C2 composition (marker panels frozen in the pre-registration).** Human organoid: the oligodendroglial panel scores 0.38 (WT) and 0.49 (KO) on a log2(1+CPM) scale against 8.8 to 9.3 in the mouse tissue; the OPC panel is 0.1. Oligodendroglia are essentially absent at this stage, class shifts are at most 0.24, and every single-class adjustment leaves the delta at 0.99 to 1.18 of its unadjusted value. **Composition does not explain the human sign** and the human table cannot say anything about oligodendroglial SLC23A2. Mouse: oligodendroglial score falls by 1.0 (cortex) and 2.2 (hippocampus) log2 units in KO, SLC23A2 tracks that score across libraries (r = 0.81 and 0.55), and adjusting for the oligodendroglial score flips the sign in both (cortex +0.592, ratio -0.87; hippocampus +1.247). The pre-registered rule (a single class moves the delta at least halfway to zero or across it) is met by the oligodendroglial class in both mouse datasets (OPC panel in cortex stops just short, 0.496 of the way). But the oligodendroglial score is nearly collinear with genotype (r = -0.81 cortex, -0.93 hippocampus; post-hoc descriptor in the TSV), so the adjusted estimate is not identifiable from five or seven libraries. Honest reading: a composition account of the mouse negative sign **cannot be excluded and is plausible, it is not demonstrated**. The within-stage single-nucleus table of the dossier (one pooled specimen per genotype) shows lower SLC23A2 CPM in COP, NFOL and MOL as well, which a pure composition account would not give, but one specimen per arm cannot carry that.
+* **C3 perturbation type, read from table names only** (the mouse series descriptions are not held; only the organoid series record is): "neuronal deletion" cortex, "mutant" hippocampus, whole-cell knockout organoid. If the cortex deletion is neuron-restricted, the oligodendroglial change is non-cell-autonomous and any SLC23A2 shift in oligodendroglia is not a cell-intrinsic WWOX effect. Not verified against the series description.
+* **C4 stage.** No stage-matched human oligodendroglial material by genotype is held (one check of files/geo: the human sets are the 15-week organoids and a reference single-nucleus atlas without genotype). No set holds SLC23A2 protein or ascorbate uptake: transcript, protein and uptake are three separate quantities and only the transcript is available, in bulk.
+* **Step 2 disposition: (c).** The opposition is not a like-for-like contrast: the organoid sign is real after normalisation but comes from tissue without oligodendroglia, the mouse sign is composition-sensitive and collinear with genotype. Anchor: SLC23A2 transcript, protein and uptake in stage-matched human oligodendroglial material by genotype (absent), or a within-class mouse measurement with more than one specimen per arm.
+
+## Step 1: pediatric CSF baseline against the assay concentration
+**Access (one try per route, then stop).** Files and receipts ledger: neither report is held, no ledger row. Europe PMC: both are records without full text (not open access, no PMC identifier, plain request 200). The PMC bucket route does not apply (no PMC identifier). So both are **abstract-level (ABSTRACT-ONLY)**; I did not obtain the original reports, so what a report states about age strata beyond its abstract, the assay and the dispersion type in the earlier one is unknown to me.
+
+| source (abstract text) | matrix, who | mg/L as printed | uM (176.12 g/mol) |
+|---|---|---|---|
+| 1985 report, 67 children, 14 with normal CSF as controls | CSF of control children | 30.1 +/- 6.3 | about 171 (+/- 36) |
+| same | CSF of schoolchildren | 28.3 +/- 3.0 | about 161 (+/- 17) |
+| same | CSF of premature babies | 118.2 +/- 65.9 | about 671 (+/- 374) |
+| same | plasma of controls | 12.2 +/- 4.9 | about 69 |
+| same | CSF in acute purulent meningitis | 12.3 +/- 4.8 | about 70 |
+| 1991 report, 13 term and 17 preterm newborns | CSF, first day, preterm | 5.2 +/- 0.8 mg/dl (SE) | about 295 |
+| same | CSF, first day, term | 3.8 +/- 0.3 mg/dl (SE) | about 216 |
+| same | CSF, later neonatal period, both groups | 2.9 +/- 0.2 mg/dl | about 165 |
+
+Printed ratios check: 30.1 / 12.2 = 2.5 (printed 2.5 to 3); 118.2 / 28.3 = 4.2 (printed 4 to 5). Units are mg/L in the earlier report and mg/dl in the later; the dispersion type of the earlier report is not stated in the abstract. The later report adds a saturable-looking CSF-to-plasma relation and a lower ratio in six newborns with a neurological disorder (3.7 against 8.3).
+
+**Assay side (held full text, bucket copy of PMC6001564; receipt FTR-20261124-29423921-02).** The dose-response plateau and the 150 uM are *nominal* additions of the phosphate derivative (and of L-ascorbic acid in Fig 7a-b); the only ascorbate that was measured is *intracellular* (48 h, one inhibitor, n = 4). The authors state the parent oxidises in medium and that the derivative performed "slightly better", and favour an intracellular mechanism. A code search of the whole text finds no medium or extracellular ascorbate concentration and no statement of the control medium's own ascorbate content.
+
+**Comparison.** The nominal 150 uM is at or just below the pediatric replete CSF means (161 to 171 uM in children, 165 to 295 uM in newborns, higher in premature babies) and does not exceed them, so the incompatibility rule (assay above the upper end of the age-matched range by more than 2-fold, with persistence shown) is not met. The compatibility rule is not met either, because the assay exposure is unverified and the comparison is nominal against CSF (CSF is not oligodendroglial extracellular fluid). The bearing on the hypothesis is the converse of support: the replete developing brain already sits near or above the concentration at which the in vitro effect plateaus, so the dish effect is as consistent with correcting a medium-poor condition as with an add-on to a replete brain. That agrees in direction with the filed adult MRS observation (no detectable increase in occipital tissue ascorbate after an intravenous bolus in sufficient adults), which is a different age and a different matrix.
+
+## Combined disposition and the reopening measurement
+**(c), parked.** Reopen with: (1) a measured extracellular ascorbate time course in the differentiation medium for the parent and the derivative at the nominal 150 uM, with the control medium's baseline ascorbate; (2) an ascorbate-poor versus ascorbate-replete comparison at the pediatric CSF concentrations rather than a zero control; (3) a within-class SLC23A2 measurement (protein or uptake) in oligodendroglial cells by genotype. Not touched: the cell-intrinsic against extracellular question (step 3) and the next compound (step 4) are Codex lane steps.
+
+## What surprised me
+The human "increase" is half depth artifact and the rest comes from organoids that hardly express oligodendroglial genes, so the opposing mouse and human directions were never an oligodendroglial contrast; and the differentiation assay never measured the extracellular ascorbate that the whole exposure question depends on.
+
+Limits: bulk RNA only; 2 to 4 libraries per arm; marker panels of 2 to 5 genes; abstract-level CSF reading; mouse series descriptions not held.

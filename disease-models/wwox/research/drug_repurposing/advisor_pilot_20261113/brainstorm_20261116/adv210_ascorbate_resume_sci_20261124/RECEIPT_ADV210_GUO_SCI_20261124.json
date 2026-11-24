@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-24T18:53Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-24T18:53:14Z",
+ "event_id": "FTR-20261124-29423921-02",
+ "evidence_basis": [
+  "Re-read for ADV-210 step 1 (what the assay measured as exposure): abstract; Methods 2.1 reagents and 2.11 intracellular measurement; Results on dose-response and on the parent-versus-derivative comparison; Fig 2 and Fig 7 legends. Figure images not opened; Discussion not read; no extracellular or medium ascorbate measurement was found by code search of the whole text (ascorbate/ascorbic occurs five times, none a medium concentration).",
+  "verbatim_locator | proposition: assay concentration is nominal; dose-response plateau at it | Results, dose-response section | \"As‐2P's effect in inducing OPC to OL differentiation reached a plateau at a concentration of 150 μM\"",
+  "verbatim_locator | proposition: only intracellular ascorbate was measured (48 h, cells) | Methods 2.11 | \"The intracellular Vc level was measured by UPLC/Q‐TOF MS\"",
+  "verbatim_locator | proposition: L-ascorbic acid oxidises in medium; derivative preferred | Results 3.5 | \"it does not oxidize in the media as does L‐AA\"",
+  "verbatim_locator | proposition: derivative slightly better than parent, attributed to stability | Results 3.5 | \"As‐2P displayed slightly better effect than L‐AA, which was consistent with its stability in solution\"",
+  "verbatim_locator | proposition: authors favour an intracellular rather than extracellular mechanism | Abstract | \"And an intracellular rather than an extracellular mechanism might be involved\"",
+  "verbatim_locator | proposition: transporter expression shown by PCR in OPC and OL, single transporter | Results 3.5 | \"PCR analysis demonstrated the expression of Svct2 , but not Svct1 , in both OPCs and OLs\"",
+  "verbatim_locator | proposition: intracellular L-AA measured after 2 days with one inhibitor (n = 4) | Fig 7 legend (g) | \"the intracellular concentrations of L‐AA were measured by UPLC/Q‐TOF MS\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv210_ascorbate_resume_sci_20261124/RESULT_ADV210_ASCORBATE_RESUME_SCI_20261124.md"
+ ],
+ "prior_receipt": "FTR-20261124-29423921-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "f014ec7ff807013b639cfbac0a8f9da8d90cabb412a4b9a232a85d57a54c6e7c",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext (held copy, not in git): PMID29423921_Guo2018_PMC6001564_bucket.xml",
+ "study_id": {
+  "doi": "10.1002/glia.23306",
+  "pmid": "29423921"
+ },
+ "workflow": "SCI window AB ADV-210 step 1 (exposure actually measured in the differentiation assay)"
+}
