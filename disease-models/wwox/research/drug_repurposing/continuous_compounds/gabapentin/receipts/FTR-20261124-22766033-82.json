@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-22766033-82",
+  "event_at": "2026-11-24T06:41:40Z",
+  "analysis_at": "2026-11-24T06:41:40Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "22766033"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/gabapentin_loop_20261124/cortical_injury.xml",
+  "source_fingerprint": "577bff975aad7ac1b6add73c541fe8982793f5793ed2d4d8832c8008317b5063",
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "Fig. 6 caption, “layer V pyramidal neurons”; corresponding Results reporting cell counts, 2.3 and 1.7 Hz in TTX. Images not scored."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/gabapentin/exposure.md"
+  ]
+}

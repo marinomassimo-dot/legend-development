@@ -53,7 +53,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: gabapentin.** All three tissue datasets show lower CACNA2D1. Independent nuclei do not reproduce the pooled decline, and the human and mouse THBS1 signs differ. Next test receptor-site exposure and separate new contacts onto principal neurons and interneurons from α2δ-2 and channel trafficking. [Predictions and data](gabapentin/README.md)
+**Active compound: gabapentin.** Verified human CSF benchmarks and a 0.1 µM sensory–spinal TSP4 result keep a narrow mechanism open. THBS4 RNA rises in organoid and hippocampal bulk but not cortex or the independent hippocampal nuclei. The week-15 organoid increase also survives comparison to six lineage markers across three offsets. Next seek local protein and functional evidence for newly formed contacts on defined recipient cells. [Concentrations, counts and discriminating observation](gabapentin/exposure.md)
 
 **L-carnosine parked.** Its buffer reaction is faster with acrolein than with 4-HNE. Histidine could account for a substantial part of an acrolein response. No functional WWOX response at measured local exposure has been established. [Kinetics and reopening criterion](l_carnosine/kinetics.md)
 
