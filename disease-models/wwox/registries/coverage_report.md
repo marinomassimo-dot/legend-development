@@ -28,6 +28,7 @@ the whole known corpus, not the part already processed.
 | Filtered / superseded | 10 | 1% | explicitly set aside, with the reason preserved |
 
 - Of the **307** catalogued-only records, **115** carry a receipt owned by another registry entry (87 complete, 28 partial: the placeholder duplicates a processed record) and **192** have no receipt (the headline count is unchanged)
+- **Sections read, best state** (union of the surviving receipts of each study): **7717** section-reads across **1940** studies; the latest receipt alone marks **6984**, so **733** are read only in an earlier receipt (**172** of **432** studies with 2+ receipts have a latest receipt that marks fewer sections read than an earlier one). The depth table above already uses the deepest receipt; this line is about sections, not depth, and changes no number above
 - **559** promoted `PAPER` records · **381** `CORPUS` placeholders
 - **825** lifecycle entries in the literature tracking log
 - **825** unique PMIDs known across the registries

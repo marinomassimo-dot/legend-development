@@ -216,5 +216,66 @@ class ReportIntegrityTests(unittest.TestCase):
         )
 
 
+def _receipt(event_id, at, depth, read, pmid=None, doi=None, kind="contemporaneous_receipt"):
+    sections = ("abstract", "introduction", "methods", "results", "discussion", "limitations", "figures", "tables", "supplementary")
+    study = {k: v for k, v in (("pmid", pmid), ("doi", doi)) if v}
+    return {"event_id": event_id, "event_at": at, "record_kind": kind, "evidence_depth": depth, "study_id": study,
+            "coverage": {s: ("read" if s in read else "not_read") for s in sections}}
+
+
+class SectionsBestStateTests(unittest.TestCase):
+    """ADV-227: the union of the surviving receipts next to the latest receipt, sections and not depth."""
+
+    def test_a_narrow_re_read_loses_sections_under_latest_but_not_under_best_state(self) -> None:
+        events = [
+            _receipt("E1", "2026-11-01T10:00:00Z", "complete_fulltext_read", ("methods", "results", "discussion"), pmid="1"),
+            _receipt("E2", "2026-11-02T10:00:00Z", "partial_fulltext_read", ("results",), pmid="1"),
+            _receipt("E3", "2026-11-03T10:00:00Z", "partial_fulltext_read", ("results",), pmid="2"),
+            _receipt("E4", "2026-11-04T10:00:00Z", "complete_fulltext_read", ("results", "methods"), pmid="2"),
+        ]
+        got = cov.sections_best_state(events)
+        self.assertEqual(got["studies"], 2)
+        self.assertEqual(got["multi_receipt_studies"], 2)
+        self.assertEqual(got["latest_narrower"], 1)            # study 1 only: study 2's latest is wider
+        self.assertEqual(got["section_reads_best_state"], 3 + 2)
+        self.assertEqual(got["section_reads_latest_receipt"], 1 + 2)
+        self.assertEqual(got["section_reads_only_earlier"], 2)
+
+    def test_the_order_is_event_at_not_the_ledger_position(self) -> None:
+        later_first_in_file = [
+            _receipt("E2", "2026-11-02T10:00:00Z", "partial_fulltext_read", ("results",), pmid="1"),
+            _receipt("E1", "2026-11-01T10:00:00Z", "complete_fulltext_read", ("methods", "results"), pmid="1"),
+        ]
+        got = cov.sections_best_state(later_first_in_file)
+        self.assertEqual(got["section_reads_latest_receipt"], 1)     # E2 is the latest by time
+        self.assertEqual(got["latest_narrower"], 1)
+
+    def test_an_invalidated_receipt_does_not_survive(self) -> None:
+        events = [
+            _receipt("E1", "2026-11-01T10:00:00Z", "complete_fulltext_read", ("methods", "results"), pmid="1"),
+            _receipt("E2", "2026-11-02T10:00:00Z", "partial_fulltext_read", ("results",), pmid="1"),
+            {"event_id": "E3", "record_kind": "receipt_invalidation", "invalidates_receipt": "E1"},
+        ]
+        got = cov.sections_best_state(events)
+        self.assertEqual(got["multi_receipt_studies"], 0)
+        self.assertEqual(got["section_reads_best_state"], 1)
+
+    def test_only_exactly_read_counts_and_a_doi_keys_a_study_without_a_pmid(self) -> None:
+        first = _receipt("E1", "2026-11-01T10:00:00Z", "partial_fulltext_read", ("results",), doi="10.1/X")
+        first["coverage"]["methods"] = "captions_only"
+        second = _receipt("E2", "2026-11-02T10:00:00Z", "partial_fulltext_read", ("results",), doi="10.1/x")
+        got = cov.sections_best_state([first, second])
+        self.assertEqual((got["studies"], got["multi_receipt_studies"], got["section_reads_best_state"]), (1, 1, 1))
+
+    def test_the_page_prints_the_line_and_no_depth_number_depends_on_it(self) -> None:
+        report = cov.build(ROOT, "wwox")
+        text = cov.render(report)
+        self.assertIn("**Sections read, best state**", text)
+        self.assertIn("this line is about sections, not depth, and changes no number above", text)
+        stripped = {k: v for k, v in report.items() if k != "sections_best_state"}
+        self.assertEqual(cov.render(stripped).replace(
+            [l for l in text.splitlines() if l.startswith("- **Sections read, best state**")][0] + "\n", ""), cov.render(stripped))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
