@@ -466,5 +466,100 @@ class SafePushSerialize(unittest.TestCase):
             self.assertIn("landing lock acquired", free.stdout)
 
 
+VIEW_STUB_CURRENT = "import sys\nprint('view is current (stub)')\nsys.exit(0)\n"
+VIEW_STUB_STALE_VIEW = ("import sys\nif sys.argv[1:] == ['check']:\n    print('STALE: view/index.html differs from a fresh full build (it); run: python3 -B framework/scripts/repurposing_view.py run')\n    sys.exit(1)\n"
+                        "print('inventory current (stub)')\nsys.exit(0)\n")
+VIEW_STUB_STALE_INVENTORY = ("import sys\nif sys.argv[1:3] == ['i18n', '--what']:\n    print('inventory STALE: view/i18n/content_source.json differs from a fresh collection')\n    sys.exit(0)\n"
+                             "print('view is current (stub)')\nsys.exit(0)\n")
+
+
+class SafePushViewCurrency(unittest.TestCase):
+    """2026-11-24 (ADV): a committed derived view that is behind its sources turned CI red for hours because nothing before the landing checked it. `check` and the i18n inventory check
+    (about 12 s together) now run before the gate; a stale answer refuses and names the regeneration commands."""
+    _repo = SafePushRefusals._repo
+    _with_bare_remote = SafePushRefusals._with_bare_remote
+    _remote_main = SafePushRefusals._remote_main
+
+    def _run(self, root: Path, gate: Path | None = None, *args: str):
+        env = dict(os.environ, LEGEND_SAFE_PUSH_ROOT=str(root), LEGEND_SAFE_PUSH_GATE=str(gate or root / "scripts" / "gate.py"))
+        return subprocess.run([sys.executable, str(TOOL), *(args or ("origin", "main"))], capture_output=True, text=True, env=env)
+
+    def _with_view_stub(self, td: str, stub_src: str):
+        root, bare = self._with_bare_remote(td)
+        (root / "framework" / "scripts").mkdir(parents=True)
+        (root / "framework" / "scripts" / "repurposing_view.py").write_text(stub_src, encoding="utf-8")
+        subprocess.run(["git", "-C", str(root), "add", "-A"], check=True)
+        subprocess.run(["git", "-C", str(root), "commit", "-qm", "view stub"], check=True)
+        return root, bare
+
+    def test_a_stale_view_refuses_before_the_gate_and_names_the_regeneration_commands(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self._with_view_stub(td, VIEW_STUB_STALE_VIEW)
+            before = self._remote_main(bare)
+            r = self._run(root)
+            self.assertEqual(r.returncode, 1, r.stderr)
+            self.assertIn("a committed derived view is behind its sources", r.stderr)
+            self.assertIn("python3 -B framework/scripts/repurposing_view.py run --source shareable", r.stderr)
+            self.assertIn("i18n --what collect", r.stderr)
+            self.assertIn("Nothing was gated or pushed", r.stderr)
+            self.assertNotIn("VERDICT", r.stdout)                       # the gate never ran
+            self.assertEqual(self._remote_main(bare), before)
+
+    def test_a_stale_i18n_inventory_refuses_even_though_the_tool_exits_zero(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self._with_view_stub(td, VIEW_STUB_STALE_INVENTORY)
+            r = self._run(root)
+            self.assertEqual(r.returncode, 1, r.stderr)
+            self.assertIn("inventory STALE", r.stderr)
+            self.assertIn("Nothing was gated or pushed", r.stderr)
+
+    def test_current_views_and_a_repository_without_the_tool_reach_the_push(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self._with_view_stub(td, VIEW_STUB_CURRENT)
+            r = self._run(root)
+            self.assertEqual(r.returncode, 0, r.stderr)
+            self.assertIn("PUBLISHED", r.stdout)
+        with TemporaryDirectory() as td:                                # no framework/scripts/repurposing_view.py at all: skipped, not refused
+            root, bare = self._with_bare_remote(td)
+            r = self._run(root)
+            self.assertEqual(r.returncode, 0, r.stderr)
+
+    def test_a_deliberately_stale_view_in_a_scratch_clone_of_this_repository_is_refused(self) -> None:
+        """The real tool on a real clone (never the checkout this test runs from): regenerate, publish to a scratch bare remote (control), then make the shareable page stale and commit it."""
+        repo = TOOL.resolve().parents[2]
+        if not (repo / "framework" / "scripts" / "repurposing_view.py").is_file():
+            self.skipTest("this repository has no repurposing view")
+        with TemporaryDirectory() as td:
+            clone = Path(td) / "clone"
+            made = subprocess.run(["git", "clone", "-q", "--depth", "1", "--no-hardlinks", f"file://{repo}", str(clone)], capture_output=True, text=True)
+            if made.returncode != 0:
+                self.skipTest(f"no shallow clone available: {made.stderr.strip()[:120]}")
+            bare = Path(td) / "scratch_remote.git"
+            subprocess.run(["git", "init", "-q", "--bare", str(bare)], check=True)
+            subprocess.run(["git", "-C", str(bare), "config", "receive.shallowUpdate", "true"], check=True)   # the clone is shallow
+            fixture_identity = "fixture" + "@" + "invalid"                 # assembled: the publication gate screens address-shaped strings
+            for cmd in (["config", "user.email", fixture_identity], ["config", "user.name", "t"], ["remote", "set-url", "origin", str(bare)]):
+                subprocess.run(["git", "-C", str(clone), *cmd], check=True)   # origin is the scratch remote BEFORE anything can be pushed
+            gate = Path(td) / "gate_pass.py"
+            gate.write_text(GATE_PASS, encoding="utf-8")
+            for cmd in (["run"], ["run", "--source", "shareable"], ["package"], ["i18n", "--what", "collect"]):
+                done = subprocess.run([sys.executable, "-B", "framework/scripts/repurposing_view.py", *cmd], cwd=clone, capture_output=True, text=True)
+                self.assertEqual(done.returncode, 0, done.stdout[-300:] + done.stderr[-300:])
+            subprocess.run(["git", "-C", str(clone), "add", "-A"], check=True)
+            subprocess.run(["git", "-C", str(clone), "commit", "-qm", "regenerated", "--allow-empty"], check=True)
+            ok = self._run(clone, gate)
+            self.assertEqual(ok.returncode, 0, ok.stderr)             # control: current views are published
+            self.assertIn("PUBLISHED", ok.stdout)
+            page = clone / "disease-models" / "wwox" / "research" / "drug_repurposing" / "view" / "index_shareable.html"
+            page.write_text(page.read_text(encoding="utf-8") + "<!-- stale -->\n", encoding="utf-8")
+            subprocess.run(["git", "-C", str(clone), "commit", "-qam", "stale shareable page"], check=True)
+            stale_head = subprocess.run(["git", "-C", str(clone), "rev-parse", "HEAD"], check=True, capture_output=True, text=True).stdout.strip()
+            bad = self._run(clone, gate)
+            self.assertEqual(bad.returncode, 1, bad.stderr)
+            self.assertIn("index_shareable.html differs from a fresh shareable build", bad.stderr)
+            self.assertIn("repurposing_view.py run --source shareable", bad.stderr)
+            self.assertNotEqual(self._remote_main(bare), stale_head)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

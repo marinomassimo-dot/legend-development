@@ -51,6 +51,11 @@ remote name and walk the whole push workflow (2026-09-24; nothing was published)
      on the merged tip and commits exactly those files; the gate then judges that commit and it is the one pushed (`REGENERATED ... a -> b` is printed). Used by whoever records receipts,
      so that coverage_report.md and reading_state.md are never behind the ledger on the pushed SHA. About 80 s of lock time. Without the flag nothing changes.
 
+  11. Committed derived views are checked on the tip that is about to be gated (2026-11-24, ADV): `repurposing_view.py check` (the committed full and shareable pages equal a fresh build)
+     and `repurposing_view.py i18n --what check` (the committed i18n content inventory equals a fresh collection) run after the merge and any regeneration, before the gate, and a stale
+     answer REFUSES with the exact regeneration commands, so a stale view is caught in about 12 s here instead of by an 18-minute CI suite after it landed (CI red since #2129). It
+     applies to every publisher, `--serialize` or not; a repository without `framework/scripts/repurposing_view.py` skips it; nothing is loosened and nothing is written.
+
 Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>] [--serialize [--lock-timeout <s>] [--regenerate-derived]]      (default branch: main)
 """
 from __future__ import annotations
@@ -64,6 +69,9 @@ from pathlib import Path
 ROOT = Path(os.environ.get("LEGEND_SAFE_PUSH_ROOT", Path(__file__).resolve().parents[2]))
 GATE = Path(os.environ.get("LEGEND_SAFE_PUSH_GATE", ROOT / "scripts" / "public_release_gate.py"))
 REGEN = Path(os.environ.get("LEGEND_SAFE_PUSH_REGEN", ROOT / "framework" / "scripts" / "candidate_tree_freshness.py"))
+VIEWTOOL = Path(os.environ.get("LEGEND_SAFE_PUSH_VIEWTOOL", ROOT / "framework" / "scripts" / "repurposing_view.py"))
+VIEW_FIX = ("python3 -B framework/scripts/repurposing_view.py run && python3 -B framework/scripts/repurposing_view.py run --source shareable && "
+            "python3 -B framework/scripts/repurposing_view.py package && python3 -B framework/scripts/repurposing_view.py i18n --what collect")
 
 
 def _start_ticks(pid: int) -> str:
@@ -121,6 +129,18 @@ class Queue:
 
 def run(*cmd, **kw):
     return subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, **kw)
+
+
+def stale_derived_views() -> str:
+    """'' when the committed repurposing views and the i18n inventory are current (or the repository has no such tool); otherwise the tool's own words. Read-only: neither check writes."""
+    if not VIEWTOOL.is_file():
+        return ""
+    for args in (["check"], ["i18n", "--what", "check"]):
+        r = run(sys.executable, "-B", str(VIEWTOOL), *args)
+        words = [l.strip() for l in (r.stdout + r.stderr).splitlines() if "STALE" in l]
+        if r.returncode != 0 or words:
+            return (" | ".join(words) or f"`repurposing_view.py {' '.join(args)}` exited {r.returncode}")[:600]
+    return ""
 
 
 def fail(msg: str) -> int:
@@ -250,6 +270,11 @@ def main(argv: list[str]) -> int:
         if regenerated != before:
             print(f"REGENERATED derived surfaces under the landing lock: {before[:12]} -> {regenerated[:12]}", flush=True)
             before = regenerated
+
+    stale = stale_derived_views()
+    if stale:
+        return fail("a committed derived view is behind its sources on the commit that would be gated, so CI would go red on it (2026-11-24: CI red from #2129). " + stale +
+                    "\nRegenerate on the merged tip, commit, and run safe_push again:\n  " + VIEW_FIX + "\nNothing was gated or pushed.")
 
     gate = run(sys.executable, str(GATE))
     verdict = [l for l in gate.stdout.splitlines() if l.startswith("VERDICT")]
