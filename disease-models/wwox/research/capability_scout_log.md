@@ -3338,7 +3338,7 @@ verify routing and schema behaviour; universal future model obedience is not dem
 
 **Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
 
-**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+**Outcome.** TRIAGED 2026-11-24 (plan): no reopen. Reopen condition (a second WWOX-null clone, a re-expression screen, or a new deposit) not met; the two hits are a TMEM130 expression paper and an optogenetic seizure-dynamics model, matched on the words 'expression' and 'interaction' only.
 
 ## 2026-11-24 · scout_daily · Discovery:reopen:modifiers_it12_p1b_20261031/NP1B2
 
@@ -3358,7 +3358,7 @@ verify routing and schema behaviour; universal future model obedience is not dem
 
 **Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
 
-**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+**Outcome.** TRIAGED 2026-11-24 (plan): no reopen. Reopen condition (a WWOX neural isogenic line or a deposit) not met; the hits are isogenic or patient-cell models of other genes (SCN2A, 1q21.1, GNAO1) and an unrelated dataset, matched on 'human' and 'cells'.
 
 ## 2026-11-24 · scout_daily · Discovery:open-slot
 
