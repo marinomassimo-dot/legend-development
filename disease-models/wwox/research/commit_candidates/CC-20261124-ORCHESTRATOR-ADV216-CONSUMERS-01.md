@@ -37,3 +37,10 @@ Not part of this candidate (SCI's map consumers, for the map owner): the WO-23 "
 1. The three receipts exist in the ledger with the event ids, reasons and coverage maps stated above — surface: receipt ledger.
 2. Table 1 and Table 2 are in the Dohare article, and "Tau" occurs zero times in its body — surface: article text (held artefact of the earlier receipt).
 3. The Baraban supplementary PDF does not mention vigabatrin and Figure 6B shows the vigabatrin locomotion bar near -30 percent, not significant — surface: article figure and supplement (open-data bucket).
+
+
+## BATCH DISPOSITION — `BATCH_20261124_003` (2026-11-24, ACTOR_ID `orchestrator`, MANUAL, mandate IT59), append-only
+
+**Status:** PROPAGATED
+
+5 record-scoped `replace-within` ops on `paper_registry_current.md` (PAPER 495 and PAPER 447 Evidence depth, two ops each; PAPER 157 dated update line), items A to C as proposed. Item D (vigabatrin cell of the conditional-question row) is NOT a registry edit: it goes by the ordinary route in the research map, with the identifier corrected to CQ-IT30-06 (the map row IT30-CQ5 cites CQ-IT30-05, which is rapamycin in the TSV).

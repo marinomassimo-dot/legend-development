@@ -2334,8 +2334,9 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 162
 **Full title:** WWOX modulates the gene expression profile in the T98G glioblastoma cell line rendering its phenotype
 **Identifier:** PMID 25051421 / DOI 10.3892/or.2014.3335
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** processed — read (`FTR-20261124-25051421-01`, `complete_fulltext_read`, **full text**)
+**Registry role:** corpus placeholder only; read in full 2026-11-24 (ADV-218): transcript-level profile of WWOX gain in T98G, no protein-level mTORC1, autophagy or Wnt readout, the alamarBlue result carries no number; not WWOX-deficient neural evidence
+**Evidence depth:** `complete_fulltext_read` (**full text**) — receipt `FTR-20261124-25051421-01`; manifest `deepdive_manifests/PMID25051421.json`
 **Claim links:** none
 **Next action:** screening / triage required
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
@@ -2984,7 +2985,8 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Journal/source:** Cell Death Discov
 **Identifier:** PMID 31123603 / PMC6529460 / DOI 10.1038/s41420-019-0176-4
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** processed — read (`FTR-20261124-31123603-01`, `partial_fulltext_read`, **partial full text**)
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261124-31123603-01`; manifest `deepdive_manifests/PMID31123603.json` (read 2026-11-24, ADV-218)
 **LIT link:** LIT-0239
 **Primary pathway:** oncology / tumor suppressor biology
 **Model/species:** not assessed in triage
@@ -2993,7 +2995,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **clinical relevance:** LOW
 **Claim links:** none — triage only
 **Role:** background corpus only
-**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. **Update 2026-11-24:** read on the ADV-218 receipt named above; the triage note predates that reading and the Evidence depth line governs.
 
 ## CORPUS P240
 **Short title:** An opposing view on WWOX protein function as a tumor suppressor
@@ -4020,7 +4022,8 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Journal/source:** BMC Urol
 **Identifier:** PMID 33691672 / PMC7944886 / DOI 10.1186/s12894-021-00806-7
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** processed — read (`FTR-20261124-33691672-01`, `complete_fulltext_read`, **full text**)
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261124-33691672-01`; manifest `deepdive_manifests/PMID33691672.json` (read 2026-11-24, ADV-218)
 **LIT link:** LIT-0291
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Model/species:** human
@@ -4029,7 +4032,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **clinical relevance:** LOW
 **Claim links:** none — triage only
 **Role:** background corpus only
-**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. **Update 2026-11-24:** read on the ADV-218 receipt named above; the triage note predates that reading and the Evidence depth line governs.
 
 ## CORPUS P292
 **Short title:** Expression of FRA16D/WWOX and FRA3B/FHIT genes in hematopoietic malignancies
@@ -8810,7 +8813,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** DOI 10.1101/2025.11.22.689900 / bioRxiv PPR1124524 — **nessun PMID**
 **Status:** processed
 **Registry role:** research layer — a preprint founds no claim (status vocabulary corrected by `BATCH_20261003_003` from «processed (research layer)», which LINT refuses as INVALID_STATUS; nothing else in the record changed)
-**Evidence depth:** `partial_fulltext_read` (**partial full text**) — ricevuta `FTR-20261003-PPR1124524-01`, PDF bioRxiv `files/fulltext/PPR1124524_Abudiab2025_bioRxiv.pdf` con layer di testo derivato, dossier `fulltext_dossiers/PPR1124524.md`. **Nessun deep-dive manifest**: i manifest sono indicizzati per PMID e un file con nome PPR non sarebbe risolvibile dal modulo di provenance; i locator stanno nel dossier e in `CC-20261003W4-B-MYELIN-CELLAUT-01`. **Update 2026-10-23 (`BATCH_20261019_015`):** a completing pass, `FTR-20261023-PPR1124524-02` (reason `inadequate_prior_coverage`, a partial reading, scientist-b, task `MODULE-B-20261023`; sections the receipt marks read: abstract, discussion, figures, introduction, methods, references, results; not read or absent: limitations `not_present`, supplementary `captions_only`, tables `not_present`) read the six main figures as rendered images (hand readings, UNVERIFIED at higher resolution where the receipt says so; the receipt records a disagreement between text and bar heights in one panel, with no source data deposited in the PDF) and leaves Supplementary Figures 1-6 `captions_only`. It ADDS to the covered surface and supersedes nothing; the depth is not raised. There is still no deep-dive manifest, so no locator count applies; the reading is recorded in the receipt and in `research/module_batch_selection_scientist-b_20261023.md`. Preprint, not peer reviewed: nothing here raises the status of any claim.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — ricevuta `FTR-20261003-PPR1124524-01`, PDF bioRxiv `files/fulltext/PPR1124524_Abudiab2025_bioRxiv.pdf` con layer di testo derivato, dossier `fulltext_dossiers/PPR1124524.md`. **Nessun deep-dive manifest**: i manifest sono indicizzati per PMID e un file con nome PPR non sarebbe risolvibile dal modulo di provenance; i locator stanno nel dossier e in `CC-20261003W4-B-MYELIN-CELLAUT-01`. **Update 2026-10-23 (`BATCH_20261019_015`):** a completing pass, `FTR-20261023-PPR1124524-02` (reason `inadequate_prior_coverage`, a partial reading, scientist-b, task `MODULE-B-20261023`; sections the receipt marks read: abstract, discussion, figures, introduction, methods, references, results; not read or absent: limitations `not_present`, supplementary `captions_only`, tables `not_present`) read the six main figures as rendered images (hand readings, UNVERIFIED at higher resolution where the receipt says so; the receipt records a disagreement between text and bar heights in one panel, with no source data deposited in the PDF) and leaves Supplementary Figures 1-6 `captions_only`. It ADDS to the covered surface and supersedes nothing; the depth is not raised. There is still no deep-dive manifest, so no locator count applies; the reading is recorded in the receipt and in `research/module_batch_selection_scientist-b_20261023.md`. Preprint, not peer reviewed: nothing here raises the status of any claim. **Update 2026-11-24 (`FTR-20261124-PPR1124524-01`, SCI, ADV-216, reason `inadequate_prior_coverage`):** Supplementary Figures 1 to 6 are inside the held PDF (pages 17 to 22) and were read from rendered pages; the earlier map called them `captions_only`. They do not resolve the 59.1 versus 36.1 mismatch; the remyelination readout of Supplementary Figure 4 is qualitative and "per FOV" is undefined. Depth stays partial (introduction and methods not re-read).
 **Integrity status:** clean
 **Primary pathway:** P4 — mielinizzazione / sostanza bianca
 **Model/species:** topo (condizionale Olig2-Cre; colture OPC dal null costitutivo), linea Oli-neu, HEK293T, dati umani snRNA-seq di lesioni di sclerosi multipla
@@ -15312,7 +15315,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** PMID 24002024 / PMC3891590 / DOI 10.1038/ncomms3410
 **Status:** processed
 **Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-24002024-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
-**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-24002024-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID24002024.json` (schema v2, **4** persisted verbatim locators; surfaces: 3 body, 1 figure); artefact `files/fulltext/PMID24002024_Baraban2013_PMC_r2.xml` (sha256 `913cba147822c55277d93611fbfc03e3c33b6aac926583bdba14eab26585a5ca`); unread or absent (receipt): figures `captions_only`, supplementary `not_read`, tables `not_present`
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-24002024-01` (the receipt that produced the manifest; later receipts, the latest `FTR-20261124-24002024-01` (SCI, ADV-216, reason `new_question_outside_prior_coverage`), read results, discussion, the table and the supplementary PDF; Figures 5 and 6 were opened as images); manifest `deepdive_manifests/PMID24002024.json` (schema v2, **4** persisted verbatim locators; surfaces: 3 body, 1 figure); artefact `files/fulltext/PMID24002024_Baraban2013_PMC_r2.xml` (sha256 `913cba147822c55277d93611fbfc03e3c33b6aac926583bdba14eab26585a5ca`); unread or absent (latest receipt): figures `captions_only` (Figures 1 to 4 not re-opened, an understatement on purpose), limitations `not_present`; the earlier labels `tables not_present` and `supplementary not_read` were wrong or superseded (Table I is a microarray of thirteen sodium-channel subunit probes; the supplementary spreadsheet was identified, not parsed)
 **Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
 **Model/species:** zebrafish larvae (scn1Lab mutant)
 **Genotype/model:** scn1a loss-of-function zebrafish; no WWOX allele
@@ -16416,7 +16419,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** PMID 29940337 / PMC6673662 / DOI 10.1016/j.nbd.2018.06.015
 **Status:** processed
 **Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261022-29940337-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261022b.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R3_repairs_R3b_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
-**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261022-29940337-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID29940337.json` (schema v2, **10** persisted verbatim locators; surfaces: 10 body); artefact `files/fulltext/PMID29940337_R3b_PMC_r2.xml` (sha256 `b939d730728ce5d30caff6bbe680769b93a5727e1d44ad57e630a63135c5e286`); unread or absent (receipt): figures `captions_only`, limitations `not_present`, supplementary `not_present`, tables `not_present`
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261022-29940337-01` (the receipt that produced the manifest; a later receipt, `FTR-20261124-29940337-01` (SCI, ADV-216, reason `new_question_outside_prior_coverage`), read results, discussion and the two tables; abstract, introduction, methods and references not re-read); manifest `deepdive_manifests/PMID29940337.json` (schema v2, **10** persisted verbatim locators; surfaces: 10 body); artefact `files/fulltext/PMID29940337_R3b_PMC_r2.xml` (sha256 `b939d730728ce5d30caff6bbe680769b93a5727e1d44ad57e630a63135c5e286`); unread or absent (latest receipt): figures `captions_only` (image routes returned HTTP 403 and a challenge page, nothing bypassed), limitations `not_present`, supplementary `not_present`; the earlier label `tables not_present` was wrong (Tables 1 and 2 are in the article)
 **Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
 **Model/species:** preterm rabbit glycerol IVH model and six-versus-six human preterm autopsy brains
 **Genotype/model:** wild type with haemorrhage; no WWOX content
@@ -18359,6 +18362,124 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Next action:** none owed by this record; the lead it feeds is post-onset restoration, endpoint class (`DL-MECH-177`). Transfer to WWOX is UNVERIFIED.
 **LIT link:** [[literature_tracking_log_current#LIT-0844]]
 **Note:** class-level record; other-disease precedent. Not medical advice.
+
+---
+
+## CORPUS-STUB-195
+**Corpus paper no:** 195
+**Full title:** A Window Into WOREE: WWOX, Organoids, and Epilepsy
+**Journal/source:** *Epilepsy Currents* 2026 (commentary on the held Brain 2026 organoid study; secondary source)
+**Identifier:** PMID 43036373 / DOI 10.1177/15357597261496145
+**Status:** not_processed
+**Registry role:** corpus placeholder only
+**Claim links:** none
+**Next action:** none owed; secondary commentary on `PAPER 094`; its WOREE-over-SCAR12 sentence is a review-level compression and is not imported over the pooled-only reading
+**Note:** Added by `CC-20261124-ORCHESTRATOR-ADV215-CORPUS-STUBS-01` (`BATCH_20261124_001`, ADV-215 intake, Orchestrator). Triaged at abstract level; where a free PMC text exists it was retrieved and the WWOX contexts read. Preserve until processed, filtered out, or upgraded to a full PAPER record. Class-level record; not medical advice.
+
+---
+
+## CORPUS-STUB-196
+**Corpus paper no:** 196
+**Full title:** Population-specific differences in ClinVar pathogenic and likely pathogenic variants of epilepsy-associated genes between East Asian and non-Finnish European populations: a nucleotide-resolved gnomAD v4.1.1 analysis
+**Journal/source:** *Frontiers in Genetics* 2026
+**Identifier:** PMID 42991897 / DOI 10.3389/fgene.2026.1973684
+**Status:** processed — read (`FTR-20261124-42991897-01`, `complete_fulltext_read`, **full text**)
+**Registry role:** corpus placeholder only Read in full on 2026-11-24 (ADV-218): four WWOX alleles among 17 enriched variants (reference-population counts, small East Asian denominator, no homozygote counts, no penetrance estimate); transferability T4 for the model (population frequency).
+**Evidence depth:** `complete_fulltext_read` (**full text**) — receipt `FTR-20261124-42991897-01`; manifest `deepdive_manifests/PMID42991897.json`; text, three figures, Supplementary Figures S1 and S2 as images and the four-sheet workbook S1 to S4 read.
+**Claim links:** none
+**Next action:** carrier-frequency and variant-spectrum context only; no row, claim or ranking change (RESULT_ADV218 section 4)
+**Note:** Added by `CC-20261124-ORCHESTRATOR-ADV215-CORPUS-STUBS-01` (`BATCH_20261124_001`, ADV-215 intake, Orchestrator). Triaged at abstract level; where a free PMC text exists it was retrieved and the WWOX contexts read. Preserve until processed, filtered out, or upgraded to a full PAPER record. Class-level record; not medical advice.
+
+---
+
+## CORPUS-STUB-197
+**Corpus paper no:** 197
+**Full title:** Systematic analysis of expression signatures of neuronal subpopulations in the VTA
+**Journal/source:** *Molecular Brain* 2019
+**Identifier:** PMID 31829254 / DOI 10.1186/s13041-019-0530-8
+**Status:** not_processed
+**Registry role:** corpus placeholder only
+**Claim links:** none
+**Next action:** screening only; wild-type mouse expression map (WWOX co-expressed with TH and VGLUT2 in medial VTA); T3
+**Note:** Added by `CC-20261124-ORCHESTRATOR-ADV215-CORPUS-STUBS-01` (`BATCH_20261124_001`, ADV-215 intake, Orchestrator). Triaged at abstract level; where a free PMC text exists it was retrieved and the WWOX contexts read. Preserve until processed, filtered out, or upgraded to a full PAPER record. Class-level record; not medical advice.
+
+---
+
+## CORPUS-STUB-198
+**Corpus paper no:** 198
+**Full title:** WWOX Suppresses Gastric Cancer Cell Proliferation, Migration, and EMT by Negatively Regulating the Wnt/β-Catenin Signaling Pathway
+**Journal/source:** *Annals of Clinical Laboratory Science* 2026
+**Identifier:** PMID 42790938
+**Status:** not_processed
+**Registry role:** corpus placeholder only
+**Claim links:** none
+**Next action:** screening only; abstract level, not open access; cancer cell lines and xenografts; T3
+**Note:** Added by `CC-20261124-ORCHESTRATOR-ADV215-CORPUS-STUBS-01` (`BATCH_20261124_001`, ADV-215 intake, Orchestrator). Triaged at abstract level; where a free PMC text exists it was retrieved and the WWOX contexts read. Preserve until processed, filtered out, or upgraded to a full PAPER record. Class-level record; not medical advice.
+
+---
+
+## CORPUS-STUB-199
+**Corpus paper no:** 199
+**Full title:** Multi-omic Insight into the Causal Relationship Between Programmed Cell Death and Cognitive Function
+**Journal/source:** *Current Neurovascular Research* 2026
+**Identifier:** PMID 43048821 / DOI 10.2174/0115672026523581261106063859
+**Status:** not_processed
+**Registry role:** corpus placeholder only
+**Claim links:** none
+**Next action:** screening only; abstract level, not open access; population Mendelian randomisation; T3
+**Note:** Added by `CC-20261124-ORCHESTRATOR-ADV215-CORPUS-STUBS-01` (`BATCH_20261124_001`, ADV-215 intake, Orchestrator). Triaged at abstract level; where a free PMC text exists it was retrieved and the WWOX contexts read. Preserve until processed, filtered out, or upgraded to a full PAPER record. Class-level record; not medical advice.
+
+---
+
+## CORPUS-STUB-200
+**Corpus paper no:** 200
+**Full title:** Correlation of Long Non-Coding RNAs and Gene Expression in Response to Reverse Development of Turritopsis dohrnii
+**Journal/source:** *Marine Biotechnology* 2026
+**Identifier:** PMID 42635858 / DOI 10.1007/s10126-026-10697-0
+**Status:** not_processed
+**Registry role:** corpus placeholder only
+**Claim links:** none
+**Next action:** none; Wwox only a listed gene; T4
+**Note:** Added by `CC-20261124-ORCHESTRATOR-ADV215-CORPUS-STUBS-01` (`BATCH_20261124_001`, ADV-215 intake, Orchestrator). Triaged at abstract level; where a free PMC text exists it was retrieved and the WWOX contexts read. Preserve until processed, filtered out, or upgraded to a full PAPER record. Class-level record; not medical advice.
+
+---
+
+## CORPUS-STUB-201
+**Corpus paper no:** 201
+**Full title:** Genetic and regulatory architecture of meat yield traits in commercial pig populations
+**Journal/source:** *Genetics Selection Evolution* 2026
+**Identifier:** PMID 43004178 / DOI 10.1186/s12711-026-01104-2
+**Status:** not_processed
+**Registry role:** corpus placeholder only
+**Claim links:** none
+**Next action:** none; WWOX only a GWAS candidate gene in pigs; T4
+**Note:** Added by `CC-20261124-ORCHESTRATOR-ADV215-CORPUS-STUBS-01` (`BATCH_20261124_001`, ADV-215 intake, Orchestrator). Triaged at abstract level; where a free PMC text exists it was retrieved and the WWOX contexts read. Preserve until processed, filtered out, or upgraded to a full PAPER record. Class-level record; not medical advice.
+
+---
+
+## CORPUS-STUB-202
+**Corpus paper no:** 202
+**Full title:** Surface plasmon-enhanced two-photon fluorescence microscopy for live cell membrane imaging
+**Journal/source:** *Optics Express* 2009
+**Identifier:** PMID 19365417 / DOI 10.1364/oe.17.005987
+**Status:** not_processed
+**Registry role:** corpus placeholder only
+**Claim links:** none
+**Next action:** none; `WOX1` (WWOX) only as an EGFP construct used as a membrane label; cited in two held WWOX full texts; T4
+**Note:** Added by `CC-20261124-ORCHESTRATOR-ADV215-CORPUS-STUBS-01` (`BATCH_20261124_001`, ADV-215 intake, Orchestrator). Triaged at abstract level; where a free PMC text exists it was retrieved and the WWOX contexts read. Preserve until processed, filtered out, or upgraded to a full PAPER record. Class-level record; not medical advice.
+
+---
+
+## CORPUS-STUB-203
+**Corpus paper no:** 203
+**Full title:** HYAL1 hyaluronidase in prostate cancer: a tumor promoter and suppressor
+**Journal/source:** *Cancer Research* 2005
+**Identifier:** PMID 16140946 / DOI 10.1158/0008-5472.CAN-05-1022
+**Status:** not_processed
+**Registry role:** corpus placeholder only
+**Claim links:** none
+**Next action:** none; `WOX1` (WWOX) activation read as an apoptosis marker in prostate cancer cells; cited in held WWOX full texts; T3
+**Note:** Added by `CC-20261124-ORCHESTRATOR-ADV215-CORPUS-STUBS-01` (`BATCH_20261124_001`, ADV-215 intake, Orchestrator). Triaged at abstract level; where a free PMC text exists it was retrieved and the WWOX contexts read. Preserve until processed, filtered out, or upgraded to a full PAPER record. Class-level record; not medical advice.
 
 ---
 
