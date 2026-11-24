@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-24T23:15Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-24T23:17:30Z",
+ "event_id": "FTR-20261124-39769031-01",
+ "evidence_basis": [
+  "coverage_map",
+  "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml (the file the latest earlier receipt names; sha256 equal to that receipt's fingerprint)",
+  "tables read with the WWOX question in mind: Section 2.4 of the combined section '2. Results and Discussion' (read in full, 2.1 to 2.3 synthesis not read): stiripentol and iso-stiripentol inhibit human LDHA only weakly (10 to 38 percent at 500 uM; IC50 above 500 uM) against three new analogues with IC50 about 100 to 200 uM; no WWOX content; the combined heading is why the earlier map called discussion not_present.",
+  "scope: only the section(s) named as read were read in this reading; every other section is not_read here and keeps the state of the earlier receipts in the union",
+  "reason: the earlier map marked this section not_present although it is in the held file (ADV-219 class A list, ADV decision of 2026-11-24)"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/it_tables_read_20261124/RESULT_TABLES_READ_IT_20261124.md"
+ ],
+ "prior_receipt": "FTR-20261026-39769031-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "3824c6b26bbb37c6013c70820edc94a85e3a5aa2634c0f3bfb41cafbc7f36395",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3390/ijms252413266",
+  "pmid": "39769031"
+ },
+ "workflow": "IT reading of the section(s) named read, from the held file, with the open-question rows of the WWOX repurposing module in mind; the held file was read directly (tables and table captions as rendered in the text layer or XML); no contact, no e-mail to any service, no paid route."
+}
