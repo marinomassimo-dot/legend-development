@@ -1,0 +1,5 @@
+# Sampling frame for the human descriptive counts
+
+GSE156243 specifies the WiBR3 embryonic stem-cell background, age- and batch-matched controls, and exclusion of two control samples at the source study's quality-control step. The final deposited group sizes are two controls and four WWOX knockout libraries. These exclusions preceded our GRIN1 junction analysis. The deposited untreated sample GSM4727525 specifies a 15-week organoid and homogenized material. Library counts must not be interpreted as six human donors, as single-cell observations, or as an estimate of population variability. The sample names alone do not establish which clone or differentiation batch generated each numbered library. Report the archive run identifier as the unit in the descriptive table. Keep our rule of at least 20 informative reads per library separate from the source study's quality control. The first deposited control passed source QC and subsequently missed our endpoint-specific coverage threshold.
+
+[Series design](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE156243) · [Control sample metadata](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4727525)
