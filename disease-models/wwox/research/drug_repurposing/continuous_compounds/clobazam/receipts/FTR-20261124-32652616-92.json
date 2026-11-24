@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-32652616-92",
+  "event_at": "2026-11-24T09:27:24Z",
+  "analysis_at": "2026-11-24T09:27:24Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "32652616"
+  },
+  "prior_receipt": "FTR-20261124-32652616-91",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/clobazam_loop_20261124/32652616.xml",
+  "source_fingerprint": "d2daf776534c7c6b74658adbdd1f2fe1e8140e489687b400fea04db745b0e6aa",
+  "workflow": "Question-driven exposure, subtype and clinical comparator analysis for clobazam.",
+  "evidence_basis": [
+    "Study population, intervention, exposure analysis and Tables 2, 4 and 5. Adult pharmacokinetic group denominators, absolute geometric means, variability, timing and rounded ratios compared."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/clobazam/exposure_and_subtypes.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/clobazam/exposure.tsv"
+  ]
+}

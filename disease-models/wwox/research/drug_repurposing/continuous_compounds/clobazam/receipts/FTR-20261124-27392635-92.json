@@ -1,0 +1,36 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-27392635-92",
+  "event_at": "2026-11-24T09:27:24Z",
+  "analysis_at": "2026-11-24T09:27:24Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "27392635"
+  },
+  "prior_receipt": "FTR-20261114-27392635-60",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "not_read",
+    "figures": "read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/clobazam_loop_20261124/27392635.xml",
+  "source_fingerprint": "ce10bf3a494685b08d1381c369fc463d62c5df600ef84d9368335c82279248d8",
+  "workflow": "Question-driven exposure, subtype and clinical comparator analysis for clobazam.",
+  "evidence_basis": [
+    "Viewed original Fig. 1C and D graph and vehicle points, retrieved PMC4981430.1/gr1.jpg (SHA256 53bf07ac0ae7e1cd98b9f12d5cff562a5160c0da8e8a7019b5a3acb9c2d7227d). Checked Table 1 and receptor recording methods to identify zero-reference potentiation and the subtype and agonist conditions."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/clobazam/exposure_and_subtypes.md",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/clobazam/mixture.tsv",
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/clobazam/corners.tsv"
+  ]
+}
