@@ -292,6 +292,13 @@
      "accepted_at": "2026-11-21T14:58:37Z",
      "evidence": "ADV-145 landed on main (67750c07b for ADV-143; ADV-145 comparison and repair in the closing landing); ADV informed",
      "updated_at": "2026-11-21T15:07:17Z"
+    },
+    {
+     "step": "ADV-215: PubMed WWOX delta intake (triage of PMIDs absent from the repository, abstract-level sweep, top 5 free full text, count true misses vs false absent)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "source": "ADV message 2026-11-24 22:0xZ; assignment text adv215.txt assignment 1 (ADV-215)",
+     "accepted_at": "2026-11-24T22:02:37Z"
     }
    ]
   }
@@ -518,6 +525,13 @@
    "at": "2026-11-21T14:58:37Z",
    "source": "ADV message 2026-11-21 (ADV-145)",
    "step_sha256": "0748c152ae2b",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T22:02:37Z",
+   "source": "ADV message 2026-11-24 22:0xZ; assignment text adv215.txt assignment 1 (ADV-215)",
+   "step_sha256": "f6fd0ece3892",
    "reopened_block": false,
    "authorised_by": null
   }
