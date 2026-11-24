@@ -936,6 +936,13 @@
      "accepted_at": "2026-11-23T18:44:35Z",
      "evidence": "ketamine.json source 2 now PMID 33914858 (Brain 2021, verified in PubMed; 34747138 is the EMBO Mol Med gene-therapy paper); only PDF text change is that line; ethosuximide.json has no 34747138; view run, run --source shareable, package regenerated; audit-shareable 0 violations; view suite 236/238 then 2 targeted tests OK after full-view regen; i18n 31 OK; integrity OK",
      "updated_at": "2026-11-23T18:44:35Z"
+    },
+    {
+     "step": "launch HE successor H (old fb709c2c), bind, handoff, rename",
+     "status": "TODO",
+     "owner": "plan",
+     "source": "ADV message 2026-11-24 02:2xZ: checkpoint and restart as planned",
+     "accepted_at": "2026-11-24T01:55:33Z"
     }
    ]
   }
@@ -1659,6 +1666,13 @@
    "at": "2026-11-23T18:44:35Z",
    "source": "ADV-202",
    "step_sha256": "e485ba09da18",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T01:55:33Z",
+   "source": "ADV message 2026-11-24 02:2xZ: checkpoint and restart as planned",
+   "step_sha256": "35e808fd939f",
    "reopened_block": false,
    "authorised_by": null
   }
