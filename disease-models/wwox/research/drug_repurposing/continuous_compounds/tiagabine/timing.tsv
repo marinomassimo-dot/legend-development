@@ -1,0 +1,9 @@
+quantity	value	unit
+TMS conditioned response at 3 ms, post minus pre	13.3000	percentage points
+TMS cortical silent period, post minus pre	22.0000	ms
+CA1 conditioned population amplitude at 200 ms, drug minus control	-27.6000	percentage points
+CA1 conditioned population amplitude at 800 ms, drug minus control	-64.4000	percentage points
+adult healthy comparator total plasma mean	0.5938	uM
+adult free plasma mean estimated from label	0.0238	uM
+2 uM slice bath / estimated human free plasma	84.2063	fold
+20 uM slice bath / estimated human free plasma	842.0628	fold

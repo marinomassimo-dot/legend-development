@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-23409935-80",
+  "event_at": "2026-11-24T06:04:10Z",
+  "analysis_at": "2026-11-24T06:04:10Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "23409935"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "https://pubmed.ncbi.nlm.nih.gov/23409935/",
+  "source_fingerprint": null,
+  "workflow": "Assess carbonyl specificity, competing GABAergic signaling and attainable L-carnosine exposure.",
+  "evidence_basis": [
+    "Primary abstract, “increased seizure severity”. Glo1-overexpressing mouse and brain methylglyoxal; used as a pharmacological counterhypothesis, no full-text credit."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/l_carnosine/README.md"
+  ]
+}

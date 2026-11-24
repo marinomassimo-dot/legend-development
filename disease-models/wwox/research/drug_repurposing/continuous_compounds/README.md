@@ -41,6 +41,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 35 | RRR-alpha-tocopheryl acetate, nonenzymatic lipid oxidation | Does membrane delivery of free alpha-tocopherol suppress excess oxidation per unit parent lipid and improve neural function in WWOX? |
 | 36 | Sodium pyruvate, substrate oxidation and cytosolic redox | Can functional recovery be separated from pyruvate acting as an extracellular peroxide scavenger? |
 | 37 | Tiagabine hydrochloride, GABA uptake and recurrent inhibition | Does prolonged GABA action suppress test spikes while preserving normal transmission, and does tonic inhibition instead increase rebound in a thalamic circuit? |
+| 38 | L-carnosine, carbonyl damage and tonic inhibition | Can intact dipeptide reduce excess MG-derived protein damage while preserving inhibitory signaling and evoked neural function? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -51,7 +52,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: tiagabine hydrochloride.** Bulk SLC6A1 falls in mouse cortex and hippocampus but rises in human organoids. The within-library transporter-to-inhibitory-marker ratio falls in all three preparations across both markers and three offsets. Next compare timed test-spike probability and unbound exposure with the spike-wave counterexample. [Prediction and analysis](tiagabine/README.md)
+**Active compound: L-carnosine.** Only the mouse hippocampus shows both glyoxalase transcripts lower. The paired decline does not recur in hippocampal nuclei; lower Carns1 within mature oligodendrocytes prompted a review of the glial alternative. The adult brain spectroscopy endpoint is uncalibrated. Next compare endogenous methylglyoxal, GABA-A activity and aldehyde-specific chemistry at plausible exposure. [Prediction and opening comparison](l_carnosine/README.md)
+
+**Tiagabine hydrochloride parked for an unselected WWOX trial.** Healthy adult short-interval inhibition weakened, long-interval measures strengthened under a different protocol, and post-train suppression in rat CA1 required interpreting exposure and recovery together. [Timing, exposure and decision](tiagabine/timing.md)
 
 **Sodium pyruvate parked for an unselected WWOX trial.** Available pediatric CSF values precede treatment. The organoid medium already supplies pyruvate under the documented Gibco scenario. Reopen for exposure-linked WWOX neural recovery distinguishing oxidation, cytosolic electron acceptance and extracellular peroxide chemistry. [Exposure and deduplicated pediatric comparison](sodium_pyruvate/exposure.md)
 
