@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-42051565-80",
+  "event_at": "2026-11-24T04:20:55Z",
+  "analysis_at": "2026-11-24T04:20:55Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "42051565",
+    "doi": "10.1002/jmd2.70091"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/hydroxocobalamin_loop_20261124/selvanathan.xml",
+  "source_fingerprint": "6af693824c188e523e5662cc57eb5926be700cc0c5775fdff52ec8249608a395",
+  "workflow": "Distinguish paired biomarker improvement from normalisation and function in a pediatric cblC comparator.",
+  "evidence_basis": [
+    "Tables 1 and 2, selected Results and individual patient sheets 1–9 in Data S1. Counted one paired visit per child per window against diagnosis. Data S1 SHA256 9ed81942e9cfadc01d81da04eb1c9dc8d54698a7632c446d699030ffa87eadfa. Short verbatim locator: “Most recent developmental assessment”."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/hydroxocobalamin/cblC.md"
+  ]
+}

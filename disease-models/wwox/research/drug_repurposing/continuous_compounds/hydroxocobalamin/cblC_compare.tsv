@@ -1,0 +1,3 @@
+visit	children_with_paired_data	min_day	max_day	both_lower_than_diagnosis	both_in_reference
+last	9	1658	6530	8	0
+first_180_to_365_days	9	181	303	8	0

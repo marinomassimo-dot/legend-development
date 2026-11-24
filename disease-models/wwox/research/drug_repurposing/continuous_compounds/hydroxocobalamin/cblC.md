@@ -1,0 +1,16 @@
+# Does biochemical improvement predict a functional response to hydroxocobalamin?
+
+**Positive control with a known cellular lesion.** In Selvanathan et al., people with early-onset cblC disease had a confirmed intracellular cobalamin-processing problem. Their treatment included intramuscular hydroxocobalamin, betaine and folinic acid. Table 1 and Data S1 permit a within-child comparison of paired plasma methylmalonic acid (MMA) and total homocysteine (tHcy). For each child with longitudinal data, use the same paired visit for both analytes. Compare diagnosis with (a) the first paired visit from 180 through 365 days of age and (b) the final paired visit. Count the child once per window. Use the paper's local reference intervals (MMA below 1.57 µmol/L and tHcy 3.3–19.2 µmol/L). These thresholds describe the comparator population. [Primary study and supplementary Data S1](https://pmc.ncbi.nlm.nih.gov/articles/PMC13120851/)
+
+| Comparison with diagnosis | Children | Both markers lower | Both within the reported intervals |
+|---|---:|---:|---:|
+| First paired visit aged 180–365 days (actual range 181–303) | 9 | 8 | 0 |
+| Final paired visit (ages 1,658–6,530 days) | 9 | 8 | 0 |
+
+Table 2 reports neurological or ocular outcomes in a cohort of ten, including a child who died at five months. Only nine have longitudinal sheets. Milestones, last evaluations and the biochemical time series have different schedules. The authors report ophthalmological manifestations in all ten. These observations show that dual biochemical improvement can coexist with persistent morbidity despite treatment. They do not measure an untreated counterfactual, independently isolate the hydroxocobalamin effect, or establish that a within-person change in biomarkers predicts the next functional measurement. The last paired visits span markedly different ages; the fixed first-year window tests this source of variability.
+
+**Decision for WWOX.** Preserve hydroxocobalamin as a hypothesis conditional on abnormal flux or functional biomarkers. In WWOX, the paired signature would justify investigating cofactor handling; a successful test would additionally show recovered neural activity or myelin function at measured intracellular cofactor exposure. An already reduced MUT/MMUT or MMAA enzyme capacity could limit benefit even in a substrate-responsive assay. Next compare a direct test of cofactor limitation versus loss of capacity, ideally a measured cellular propionate flux with and without hydroxocobalamin and a reference lesion showing poor response. The second pediatric cohort remains a separate lead for the temporal link between biochemistry and development.
+
+Reproduce with `python3 cblC_compare.py /path/to/files` using Python with openpyxl. [Aggregate counts](cblC_compare.tsv) · [Article](https://doi.org/10.1002/jmd2.70091) · [Original spreadsheet](https://pmc-oa-opendata.s3.amazonaws.com/PMC13120851.1/JMD2-67-e70091-s001.xlsx). Source license CC BY 4.0. This dossier publishes an original aggregate reanalysis.
+
+One starting point for the next cellular comparison is the original [P679 fibroblast series](https://www.gimopen.org/article/S2949-7744%2825%2901087-8/pdf). It is a conference abstract. Seek full primary reports with per-line baselines, treated values and unit definitions before using fold stimulation to rank lesions.
