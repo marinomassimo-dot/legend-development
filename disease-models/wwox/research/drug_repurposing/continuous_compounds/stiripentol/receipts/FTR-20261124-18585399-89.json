@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-18585399-89",
+  "event_at": "2026-11-24T11:40:04Z",
+  "analysis_at": "2026-11-24T11:40:04Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "18585399"
+  },
+  "prior_receipt": "FTR-20261110-18585399-97",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2665930/",
+  "source_fingerprint": null,
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Study text around Figure 9: alpha3 M314I did not alter stiripentol potentiation at the condition tested. Figure caption for transmembrane mutations and Results report submaximal GABA matched to construct; WT alpha3 EC50 for STP 24.6 micromolar. Online primary text excerpt only, image not inspected."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/stiripentol/README.md"
+  ]
+}

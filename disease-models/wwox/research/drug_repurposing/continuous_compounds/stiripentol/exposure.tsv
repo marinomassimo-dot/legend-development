@@ -1,0 +1,8 @@
+measure	comparison	reference	STP	STP_over_reference
+clobazam_mg_L	between_arms	0.2000	0.3100	1.5500
+norclobazam_mg_L	between_arms	0.9500	4.3200	4.5474
+clobazam_dose_normalized	between_arms	0.4500	0.8400	1.8667
+norclobazam_dose_normalized	between_arms	2.1000	11.6000	5.5238
+clobazam_dose_normalized	within_STP_arm_periods	0.3900	0.8400	2.1538
+norclobazam_dose_normalized	within_STP_arm_periods	3.6000	11.6000	3.2222
+norclobazam_over_clobazam_mass_ratio_of_group_values	between_arms	4.7500	13.9355	2.9338

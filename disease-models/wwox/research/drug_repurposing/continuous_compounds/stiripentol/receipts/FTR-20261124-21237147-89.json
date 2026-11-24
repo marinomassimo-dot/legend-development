@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-21237147-89",
+  "event_at": "2026-11-24T11:40:04Z",
+  "analysis_at": "2026-11-24T11:40:04Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "21237147"
+  },
+  "prior_receipt": "FTR-20261114-21237147-60",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/stiripentol_loop_20261124/21237147.xml",
+  "source_fingerprint": "f2c781ec264b6611cc761d7b837ac47c4a40f64b3c76b87ed8c2981357949604",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Re-read Figures 1 and 2 captions and corresponding Results: 100 \u00b5M STP with fixed parent/metabolite; group fits renormalized to STP baseline, modest changes in benzodiazepine EC50, distinct simultaneous clinical pharmacokinetic effect."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/stiripentol/README.md"
+  ]
+}

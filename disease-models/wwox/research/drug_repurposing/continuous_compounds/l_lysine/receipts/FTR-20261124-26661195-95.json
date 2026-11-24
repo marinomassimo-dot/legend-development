@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-26661195-95",
+  "event_at": "2026-11-24T11:27:25Z",
+  "analysis_at": "2026-11-24T11:27:25Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "26661195"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5094305/",
+  "source_fingerprint": null,
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Table 1: lysine/arginine mean \u00b5M in healthy mouse hippocampal ISF 10/3.2, CSF 46/18, plasma 321/103. Baseline reported for freely moving animals using hippocampal microdialysis extrapolated to zero flow. Separate matrix group sizes; unpaired comparisons."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/l_lysine/confronto_compartimenti.md"
+  ]
+}

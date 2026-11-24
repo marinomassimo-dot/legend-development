@@ -1,0 +1,5 @@
+dataset	set	KO_minus_WT_mean_log2_TPM_plus1	omit_min	omit_max
+GSE158681	all	-0.3483	-0.6071	-0.0896
+GSE158681	protein_coding	-0.1407	-0.3765	0.0660
+GSE158682	all	-0.1494	-0.3047	0.0491
+GSE158682	protein_coding	-0.1371	-0.2926	0.0616

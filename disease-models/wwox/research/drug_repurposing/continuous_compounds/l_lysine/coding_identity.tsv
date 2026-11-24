@@ -1,0 +1,7 @@
+transcript	archived_biotype	complete_refseq_CDS_class	cDNA_nt	unique_start_fraction_50nt	unique_start_fraction_75nt	unique_start_fraction_100nt	product_specific_start_fraction_75nt
+ENSMUST00000034426.13	protein_coding	lysine--tRNA ligase isoform 2	2008	0.0383	0.0517	0.0597	0.0517
+ENSMUST00000093120.12	protein_coding	lysine--tRNA ligase isoform 1	2131	0.0231	0.0277	0.0281	0.0423
+ENSMUST00000164470.2	protein_coding	lysine--tRNA ligase isoform 1	2189	0.0224	0.0270	0.0273	0.0411
+ENSMUST00000211978.1	processed_transcript	processed_transcript	349	0.1633	0.2691	0.3520	0.2691
+ENSMUST00000211990.1	protein_coding	unresolved	407	0.2989	0.3754	0.4058	0.3754
+ENSMUST00000212693.1	retained_intron	retained_intron	2419	0.9300	0.9505	0.9707	0.9505

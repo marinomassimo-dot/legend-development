@@ -1,0 +1,29 @@
+dataset	deletion	set	transcript_count	wt_libraries	ko_libraries	delta	omit_min	omit_max
+GSE158681	neuronal	all	6	2	3	-0.3483	-0.6071	-0.0896
+GSE158681	neuronal	protein_coding	4	2	3	-0.1407	-0.3765	0.0660
+GSE158681	neuronal	lysine--tRNA ligase isoform 1	2	2	3	-0.3152	-0.4535	-0.1897
+GSE158681	neuronal	lysine--tRNA ligase isoform 2	1	2	3	-0.0646	-0.3280	0.1613
+GSE158681	neuronal	processed_transcript	1	2	3	-1.5091	-2.9307	-0.0875
+GSE158681	neuronal	retained_intron	1	2	3	-0.0160	-0.0253	-0.0001
+GSE158681	neuronal	unresolved	1	2	3	-0.1489	-0.4172	0.1194
+GSE158681	neural_progenitor	all	6	2	2	-0.5315	-0.7649	-0.2980
+GSE158681	neural_progenitor	protein_coding	4	2	2	-0.0834	-0.3061	0.1392
+GSE158681	neural_progenitor	lysine--tRNA ligase isoform 1	2	2	2	0.2721	0.0041	0.5400
+GSE158681	neural_progenitor	lysine--tRNA ligase isoform 2	1	2	2	-0.2240	-0.5424	0.0944
+GSE158681	neural_progenitor	processed_transcript	1	2	2	-2.1883	-2.4611	-1.9155
+GSE158681	neural_progenitor	retained_intron	1	2	2	0.0518	0.0049	0.0987
+GSE158681	neural_progenitor	unresolved	1	2	2	-0.3760	-0.5798	-0.1722
+GSE158681	constitutive	all	6	3	2	-0.1459	-0.3057	0.0139
+GSE158681	constitutive	protein_coding	4	3	2	-0.1072	-0.2533	0.0388
+GSE158681	constitutive	lysine--tRNA ligase isoform 1	2	3	2	-0.0892	-0.2097	0.0447
+GSE158681	constitutive	lysine--tRNA ligase isoform 2	1	3	2	-0.1130	-0.2594	0.0334
+GSE158681	constitutive	processed_transcript	1	3	2	-0.4278	-0.7849	0.2862
+GSE158681	constitutive	retained_intron	1	3	2	-0.0140	-0.0482	0.0202
+GSE158681	constitutive	unresolved	1	3	2	0.1439	-0.0158	0.2291
+GSE158682	neuronal	all	6	4	3	-0.1494	-0.3047	0.0491
+GSE158682	neuronal	protein_coding	4	4	3	-0.1371	-0.2926	0.0616
+GSE158682	neuronal	lysine--tRNA ligase isoform 1	2	4	3	0.2241	0.0794	0.3944
+GSE158682	neuronal	lysine--tRNA ligase isoform 2	1	4	3	-0.2215	-0.4114	0.0213
+GSE158682	neuronal	processed_transcript	1	4	3	-0.7086	-0.9448	-0.2958
+GSE158682	neuronal	retained_intron	1	4	3	0.0596	0.0495	0.0683
+GSE158682	neuronal	unresolved	1	4	3	-0.3690	-0.5394	-0.0718

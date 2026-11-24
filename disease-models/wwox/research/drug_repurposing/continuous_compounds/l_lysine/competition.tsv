@@ -1,0 +1,4 @@
+input	Lys_uM	Arg_uM	Orn_uM	Lys_multiplier	Lys_flux_ratio_min	Lys_flux_ratio_max	Arg_flux_ratio_min	Arg_flux_ratio_max
+plasma_scenario	321	103	53	1.1	1.0266	1.0538	0.9333	0.9580
+plasma_scenario	321	103	53	1.25	1.0605	1.1267	0.8484	0.9013
+plasma_scenario	321	103	53	1.5	1.1050	1.2306	0.7367	0.8204

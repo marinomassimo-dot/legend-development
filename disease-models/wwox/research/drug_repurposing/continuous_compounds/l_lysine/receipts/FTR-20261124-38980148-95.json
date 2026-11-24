@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-38980148-95",
+  "event_at": "2026-11-24T11:27:25Z",
+  "analysis_at": "2026-11-24T11:27:25Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "38980148"
+  },
+  "prior_receipt": "FTR-20261124-38980148-98",
+  "reread_reason": "inadequate_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://onlinelibrary.wiley.com/doi/full/10.1002/ajmg.a.63811",
+  "source_fingerprint": null,
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Case descriptions \u00a7\u00a72.2\u20132.3. Subject 2 received lysine with fortified protein at 10 months while already severely affected; continued to decline and died at 14 months. Subject 3 started combined regimen at 5 years after seizure control with clobazam, cannabidiol and valproate. Valproate was discontinued after three months; family-reported skills and sleep gains during ongoing therapies, seizures chiefly during illness or missed medication. No evidence that lysine initiated seizure control or that failure/success was causally attributable to supplementation."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/l_lysine/confronto_compartimenti.md"
+  ]
+}

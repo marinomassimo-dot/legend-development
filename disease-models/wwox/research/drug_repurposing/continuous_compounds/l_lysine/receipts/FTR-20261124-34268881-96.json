@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-34268881-96",
+  "event_at": "2026-11-24T11:22:09Z",
+  "analysis_at": "2026-11-24T11:22:09Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "34268881"
+  },
+  "prior_receipt": "FTR-20261124-34268881-98",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+  "source_fingerprint": "de340289bc6704c9b9ec752f81afed64a02211a83d95d675a1d46f40be6304f6",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Selected cerebral differentiation/maturation methods: 1:1 DMEM/F12 and Neurobasal, maturation medium changed every 2\u20134 days. Manufacturers are alternatives in the methods. Basal-medium composition calculation conditional on listed Gibco formulations."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/l_lysine/confronto_compartimenti.md"
+  ]
+}
