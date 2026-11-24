@@ -30,7 +30,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: D-β-hydroxybutyrate.** SLC16A7 is lower across three WWOX bulk contrasts and in pooled hippocampal nuclei. Compare initial neuronal ketone uptake with downstream oxidation and native M-current at matched nonzero exposure. The pediatric CSF and adult interstitial studies examined do not determine baseline extracellular D-BHB in WWOX. Next seek calibrated fed-state extracellular measurements, a WWOX tracer or a membrane-localized MCT2 readout. [Transport contrasts and human evidence](d_bhb/exposure_transport.md) · [Channel assumptions](d_bhb/baseline.md)
+**Active compound: D-β-hydroxybutyrate.** The SLC16A7 decrease persists against three neuronal markers in mouse cortex and hippocampus. In human organoids the adjusted contrast is close to zero and sensitive to the marker. Next seek matched neuronal states and initial D-BHB uptake, then oxidation and M-current at a measured nonzero baseline. The human single-cell accession presently returns HTTP 403. [Control for neuronal markers](d_bhb/neuronal_reference.md) · [Transport contrasts and human exposure](d_bhb/exposure_transport.md) · [Channel assumptions](d_bhb/baseline.md)
 
 **Ivabradine parked for systemic WWOX trial priority.** The active metabolite had weaker HCN1 potency and lower barrier-model permeability than parent. Retain Ih as a mechanistic probe. [Decision, independent native and recombinant comparisons](ivabradine/decision.md)
 
