@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-34261823-99",
+  "event_at": "2026-11-24T10:47:50Z",
+  "analysis_at": "2026-11-24T10:47:50Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "34261823"
+  },
+  "prior_receipt": "FTR-20261124-34261823-98",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/potassium_bromide_loop_20261124/IndustrialHealth_59_239.pdf",
+  "source_fingerprint": "64aa9a8b300de78e95f911f35cb0eaf8f452d7166bfc468287bb914a26a95afd",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Direct PDF inspection pp. 244\u2013245 Figs. 3 and 4: printed calibration 0.545, whole-slice washout graph and split spontaneous/evoked traces. Results text checked for evoked denominator conflict in the separate washout condition."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/potassium_bromide/evoked.md"
+  ]
+}

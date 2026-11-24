@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-34261823-98",
+  "event_at": "2026-11-24T10:46:25Z",
+  "analysis_at": "2026-11-24T10:46:25Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "34261823"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://www.jniosh.johas.go.jp/en/indu_hel/doc/IH_59_4_239.pdf",
+  "source_fingerprint": null,
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Selected Figs. 2\u20134 captions and adjoining methods/results for the bromide-only rat slice comparisons, whole-slice calibration and discordant spontaneous/evoked denominators. No full coverage or confidence intervals for clustered effects."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/potassium_bromide/evoked.md"
+  ]
+}

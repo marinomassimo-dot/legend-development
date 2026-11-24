@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-35573960-98",
+  "event_at": "2026-11-24T11:00:31Z",
+  "analysis_at": "2026-11-24T11:00:31Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "35573960"
+  },
+  "prior_receipt": "FTR-20261124-35573960-90",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID35573960_Riva2022_PMC.xml",
+  "source_fingerprint": "e74bfe47c66e4ed906d4c61be665cc28e66717dc2dd98868a39094fba51c4ddc",
+  "workflow": "Compound-specific comparison of observed mechanisms and denominators.",
+  "evidence_basis": [
+    "Case description and spectroscopy wording for new question about analyte-specific free glutamine in WOREE. Metabolic screening described in aggregate, with no numerical free glutamine or flux result."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/l_glutamine/uptake.md"
+  ]
+}

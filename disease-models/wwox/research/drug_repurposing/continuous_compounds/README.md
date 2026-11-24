@@ -54,6 +54,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 48 | D-ribose, pentose supply and adenylate regeneration | Does D-ribose improve functional recovery beyond matched glucose when base supply is controlled, or does conversion stall downstream? |
 | 49 | Anhydrous betaine, neural osmolyte replacement and methyl-group availability | At measured exposure, does betaine improve volume and firing recovery or displace endogenous osmolytes with a functional cost? |
 | 50 | Potassium bromide, intracellular halide gradients and inhibitory recruitment | Does an increase in GABA current preserve spike suppression as bromide accumulates during repeated activity? |
+| 51 | L-glutamine, inhibitory and excitatory transmitter replenishment | Can the inhibitory circuit recover more than recurrent excitation during repeated activity above an already glutamine-supplying medium? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -64,7 +65,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: potassium bromide.** Contrast transient and steady halide gradients against native spike suppression during repetitive input. [Pediatric observations and reversal-potential sensitivity](potassium_bromide/README.md)
+**Active compound: L-glutamine.** Test whether activity-dependent inhibitory replenishment can exceed simultaneous support of recurrent excitation at a credible increment above the existing precursor supply. [Selection, competing synaptic effects and clinical exposure](l_glutamine/README.md)
+
+**Potassium bromide parked for WWOX trial priority.** Spontaneous discharges disappeared during juvenile slice exposure although 8/10 slices retained an abnormal evoked response. The WWOX cortical delayed response and hippocampal preservation control define a specific reopening comparison. [Slice contrast and WWOX transfer](potassium_bromide/evoked.md)
 
 **Anhydrous betaine parked for WWOX trial priority.** Two brain enzymology studies disagree about local methyl transfer. Old and new data distinguish downstream histone effects, respiratory reserve, and compound exposure. Reopen for measured neural flux and preferential functional recovery. Independent assay review requested. [Local methyl transfer and central exposure](betaine/central_flux.md)
 

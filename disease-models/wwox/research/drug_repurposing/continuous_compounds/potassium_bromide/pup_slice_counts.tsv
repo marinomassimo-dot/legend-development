@@ -1,0 +1,4 @@
+group	pups	slices	bath_bromide_mM	whole_slice_bromide_mM	spontaneous_discharge_n	evoked_epileptic_n	notes
+control_PTZ	9	10	0_added	NA	6	10	independent set of slices
+control_PTZ_plus_Br	7	10	2.4	1.2	0	8	whole-slice concentration from separate calibration
+washout_PTZ	4	8	0_added	NA	4	NA	text says ten for evoked outcome, conflicts with group size
