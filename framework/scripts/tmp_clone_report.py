@@ -71,11 +71,24 @@ def candidates(tmp: Path) -> list[Path]:
     return out
 
 
+def own_chain() -> set[int]:
+    """This process and its ancestors: the shell that launched `--remove /tmp/x` carries /tmp/x in its own command line, and the first version refused itself because of it."""
+    chain, pid = set(), os.getpid()
+    while pid > 1 and pid not in chain:
+        chain.add(pid)
+        try:
+            with open(f"/proc/{pid}/stat") as fh:
+                pid = int(fh.read().rsplit(")", 1)[1].split()[1])      # field 4 (ppid), after the ")" that closes the command name
+        except (OSError, ValueError, IndexError):
+            break
+    return chain
+
+
 def process_holders(d: Path) -> list[str]:
-    """Pids whose cwd is inside d or whose command line names d (own pid excepted)."""
-    me, ds, hits = os.getpid(), str(d), []
+    """Pids whose cwd is inside d or whose command line names d (this process and its ancestors excepted)."""
+    skip, ds, hits = own_chain(), str(d), []
     try:
-        pids = [p for p in os.listdir("/proc") if p.isdigit() and int(p) != me]
+        pids = [p for p in os.listdir("/proc") if p.isdigit() and int(p) not in skip]
     except OSError:
         return hits
     for p in pids:
