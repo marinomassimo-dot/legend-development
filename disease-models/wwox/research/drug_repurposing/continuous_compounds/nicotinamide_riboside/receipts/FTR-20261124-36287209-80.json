@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-36287209-80",
+  "event_at": "2026-11-24T03:59:46Z",
+  "analysis_at": "2026-11-24T03:59:46Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "36287209",
+    "doi": "10.1172/JCI159800"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/nr_loop_20261124/hypomorph.xml",
+  "source_fingerprint": "3eee0938ccd89c1c96d0f8b8b8835301d8f1f9c11ab38cdacc04025073827e66",
+  "workflow": "Test whether an endogenous NMNAT2 hypomorph and nerve-specific cADPR predict downstream deficits relevant to a WWOX precursor hypothesis.",
+  "evidence_basis": [
+    "Results referring to Fig. 1E, 5A, 6G–H. Checked residual purified enzyme activity, two-month sciatic cADPR and femoral versus sural macrophage comparison. Original images not examined."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/nicotinamide_riboside/README.md"
+  ]
+}

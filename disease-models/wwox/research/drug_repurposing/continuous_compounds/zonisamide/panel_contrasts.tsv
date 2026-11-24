@@ -1,0 +1,7 @@
+PMID	panel	measure	control	treated	unit	fold	unit_per_pixel	comparison_annotated
+32753675	5A	Slc7a11_injured	4.0	4.9	relative_RNA	1.24	0.043	no
+32753675	S2B	Slc7a11_stressed_astrocytes	22.8	39.3	relative_RNA	1.73	0.414	no
+32753675	5C	GSH_in_ChAT_cells	1.0	1.6	relative_staining	1.62	0.011	yes_unit_unresolved
+26571146	1B	selected_neurite_length_10uM	113.3	126.6	um	1.12	0.495	yes
+26571146	1D	neurite_bearing_cells_10uM	54.5	52.9	percent	0.97	0.237	no
+26571146	4	oxidant_exposed_MTS_10uM	84.2	92.4	percent_of_unstressed	1.1	0.254	yes

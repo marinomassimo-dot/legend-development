@@ -33,6 +33,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 27 | Uridine triacetate, pyrimidine salvage and membrane phospholipids | Does added uridine correct a limiting pyrimidine pool and function, or does it only label RNA and membrane precursors while a separate bottleneck persists? |
 | 28 | Docosahexaenoic acid, membrane supply and potassium current | Does a defined molecular form rescue WWOX function through acute channel modulation or sustained incorporation into membranes? |
 | 29 | Zonisamide, astrocytic cystine exchange and neuronal redox support | Does the drug improve neuronal glutathione at fixed glial number without worsening glutamate clearance? |
+| 30 | Nicotinamide riboside chloride, axonal NAD salvage | Does additional precursor restore axonal NAD and conduction, or accumulate upstream of NMNAT2? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -43,7 +44,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: zonisamide.** Astroglial GSH and xCT staining rise under selected conditions. A separate release assay used buffer without added cystine. Next resolve neuronal rescue with cystine available, fixed glial numbers and measured exposure. [Astrocyte results and next comparison](zonisamide/README.md) · [Pediatric exposure scenarios](zonisamide/exposure.md)
+**Active compound: nicotinamide riboside chloride.** NMNAT2 decreases in three WWOX bulk profiles. Mouse brain tracer data favor nicotinamide recycling. Matched human blood and brain responses differ by time and reference signal. In a partial NMNAT2-deficiency model, two nerves with SARM1 activation diverge in macrophage responses. WWOX callosal data count myelinated profiles. In pooled hippocampal neurons NMNAT2 declines relative to all four measurable neuronal markers in both classes. Next look for a timed test of endogenous axonal precursor use with partial NMNAT2 activity and paired metabolites and function. [Human data](nicotinamide_riboside/human_response.md) [G09 premise and prespecified comparison](nicotinamide_riboside/README.md)
+
+**Zonisamide parked for unselected pediatric disease modification.** Published brackets in Fig. 5A and S2B leave the drug-specific xCT increment unresolved. Neurite and metabolic responses also occur in neuron-focused preparations. An ADV review of Fig. 5C remains open. [Visual comparison and decision](zonisamide/panel_review.md)
 
 **Nonesterified DHA parked for unselected pediatric WWOX trial priority.** The oral carrier replication, opposing channel effects, native inhibitory circuit and pediatric formulation limit transfer. [Disposition and reopening condition](docosahexaenoic_acid/channels.md) · [Oral replication](docosahexaenoic_acid/oral.md)
 

@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-32753675-80",
+  "event_at": "2026-11-24T03:45:45Z",
+  "analysis_at": "2026-11-24T03:45:45Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "32753675",
+    "doi": "10.1038/s41598-020-70068-0"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/zonisamide_loop_20261124/spinal.xml",
+  "source_fingerprint": "e73a845f82167b0f2de0d6222b9aba2fcea2fd7d44b97359a3e08b4b7256a8d7",
+  "workflow": "Test astrocytic substrate support against proliferation during zonisamide exposure.",
+  "evidence_basis": [
+    "Methods on bilateral quantification and statistics, Results and Fig. 2 and 5 captions. No visual inspection of Fig. 5, no per-rat data and no supplement read."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/zonisamide/motor_neurons.md"
+  ]
+}
