@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-42624371-80",
+  "event_at": "2026-11-24T01:36:21Z",
+  "analysis_at": "2026-11-24T01:36:21Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "42624371",
+    "doi": "10.1016/j.jlr.2026.101126"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/r_lipoic_loop_20261124/partition.xml",
+  "source_fingerprint": "68604cf1a9106feb561bef0bf98d9a07cec0d0eb887fd274b7d89e99650ac0da",
+  "workflow": "Distinguish cellular free and enzyme-bound lipoate, oxidant response and transfer to pediatric R-formulation exposure.",
+  "evidence_basis": [
+    "Methods cell culture and extraction; results/captions Figs 2–4: racemate, no lipoylation rescue at 500 µM, oxidative dye changes at 100 µM. Figures themselves and supplements not read."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/r_lipoic_acid/README.md"
+  ]
+}

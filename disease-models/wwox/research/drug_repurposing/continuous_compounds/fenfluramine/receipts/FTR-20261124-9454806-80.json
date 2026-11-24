@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-9454806-80",
+  "event_at": "2026-11-24T01:32:21Z",
+  "analysis_at": "2026-11-24T01:32:21Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "9454806",
+    "doi": null
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "files/deepening_downloads/fenfluramine_loop_20261124/brain.xml",
+  "source_fingerprint": "75ee754ad2c19f3df605df78b42ddd82180f2bcfceef77beda3c8e76d85eb58f",
+  "workflow": "Check what measured tissue, extracellular exposure and evoked seizure outcomes distinguish across species.",
+  "evidence_basis": [
+    "Abstract: cortical dialysate distinguished from tissue; authors summarize about 2.5 and 50 µM respectively at serotonin-depleting exposures in rats."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/fenfluramine/decision.md"
+  ]
+}

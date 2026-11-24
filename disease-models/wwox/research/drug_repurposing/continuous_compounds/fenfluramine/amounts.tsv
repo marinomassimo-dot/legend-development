@@ -1,0 +1,3 @@
+compound	ED50_pM	ligand_added_pmol	sigma_input_pmol	max_retained_fraction_pct_simple_1to1
+positive_fenfluramine	170	0.051	20.0	0.51
+positive_norfenfluramine	50	0.015	20.0	0.15

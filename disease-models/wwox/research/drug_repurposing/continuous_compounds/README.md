@@ -26,6 +26,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 20 | Folinic acid, CNS folate delivery and myelination | Does folate availability limit glial maturation in WWOX, and can a barrier defect be distinguished from changes in cell composition? |
 | 21 | Myo-inositol, phosphoinositide resynthesis and neuronal M-current | Does substrate availability limit recovery of lipid and current after activity, independently of osmotic changes and physical channel–transporter coupling? |
 | 22 | Fenfluramine, serotonergic release and sigma-1-associated calcium signaling | Is any WWOX-selective functional response independent of serotonin release at attainable parent or metabolite exposure? |
+| 23 | R-alpha-lipoic acid, free uptake and mitochondrial protein lipoylation | Does external R-lipoate restore a deficient covalently bound cofactor and neural oxidative flux, beyond an independent redox response? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -36,7 +37,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: fenfluramine.** Pediatric plasma exposure and sigma-1 assay context constrain a proposed serotonin-independent action. The organoid dataset contains serotonin transporter RNA but lacks a functional release measurement. Next compare parent and metabolite in the two sigma-1 assays and establish whether native serotonergic input is represented. [Data and prediction](fenfluramine/README.md)
+**Active compound: R-alpha-lipoic acid.** In three untreated WWOX datasets, RNA encoding the lipoylated PDH subunit DLAT falls robustly, while the assembly genes differ by tissue. A positive comparator in residual PANK2 deficiency motivates separating direct cofactor uptake from recovery of endogenous synthesis. Next examine the duration of attainable R exposure and the WWOX neural protein evidence. [Prediction and reproducible contrasts](r_lipoic_acid/README.md)
+
+**Fenfluramine parked for WWOX disease-modification trial priority.** The pediatric plasma contrast, adult human brain spectroscopy and conflicting sigma assays establish exposure but leave the active species and WWOX-specific functional response unresolved. [Decision and reopening condition](fenfluramine/decision.md)
 
 **Myo-inositol parked for WWOX trial priority.** The substrate-only channel effect, brief high-concentration hippocampal infusion effect and CSF changes in a PLCB1 case cannot establish WWOX rescue. The developmental safety signal matters. Independent review of the reference values remains open. [Disposition and reopening observation](myo_inositol/decision.md)
 

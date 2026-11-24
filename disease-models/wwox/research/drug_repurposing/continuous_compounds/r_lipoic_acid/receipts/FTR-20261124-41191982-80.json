@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-41191982-80",
+  "event_at": "2026-11-24T01:36:21Z",
+  "analysis_at": "2026-11-24T01:36:21Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "41191982",
+    "doi": "10.1016/j.jdiacomp.2025.109201"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "abstract_only",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "abstract",
+  "source_locator": "files/deepening_downloads/r_lipoic_loop_20261124/human.xml",
+  "source_fingerprint": "6c74028444574d659f3bce71a3c3de4f4a800651dc928ea3b4f5baa41e50f341",
+  "workflow": "Distinguish cellular free and enzyme-bound lipoate, oxidant response and transfer to pediatric R-formulation exposure.",
+  "evidence_basis": [
+    "Abstract: 50 with nephropathy randomized 1:1, further 100 were comparison groups at baseline; changes after supplementation reported."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/r_lipoic_acid/README.md"
+  ]
+}

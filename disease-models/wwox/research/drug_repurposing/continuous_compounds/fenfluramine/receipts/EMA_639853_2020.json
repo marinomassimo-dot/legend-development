@@ -1,0 +1,14 @@
+{
+  "record_kind": "regulatory_document_read_receipt",
+  "source": "EMA/639853/2020",
+  "source_url": "https://www.ema.europa.eu/en/documents/assessment-report/fintepla-epar-public-assessment-report_en.pdf",
+  "time_utc": "2026-11-24T01:32:21Z",
+  "coverage": "Targeted public report text, not a complete PDF reading.",
+  "locators": [
+    "Plasma protein binding and tissue distribution, pp. 28–29: about half of each analyte was bound over 10–100 ng/mL. Rat tissue/plasma ratios and extrapolated human maxima are total concentrations.",
+    "Pharmacokinetics in target population, p. 39: separate peaks, 68.6 and 37.8 ng/mL; respective daily AUCs 1400 and 872."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/fenfluramine/decision.md"
+  ]
+}
