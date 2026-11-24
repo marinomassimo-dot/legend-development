@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-33385945-80",
+  "event_at": "2026-11-24T01:57:39Z",
+  "analysis_at": "2026-11-24T01:57:39Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "33385945",
+    "doi": "10.1016/j.eplepsyres.2020.106536"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/vigabatrin_loop_20261124/retina.xml",
+  "source_fingerprint": "a98c634a67ef35ce1bd9c2cfffe6f97a8cafd2b2bb72287f0e3c39756292b6b8",
+  "workflow": "Compare enantiomer-specific exposure, compartment-specific functional changes and their durations in the WWOX research programme.",
+  "evidence_basis": [
+    "12 days of racemate; eight pools of three per arm. Results for Fig 3 give S versus R tissue/plasma partition separately, higher retinal partition of S. Figure not inspected."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/vigabatrin/README.md"
+  ]
+}

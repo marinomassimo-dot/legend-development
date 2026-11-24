@@ -27,6 +27,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 21 | Myo-inositol, phosphoinositide resynthesis and neuronal M-current | Does substrate availability limit recovery of lipid and current after activity, independently of osmotic changes and physical channel–transporter coupling? |
 | 22 | Fenfluramine, serotonergic release and sigma-1-associated calcium signaling | Is any WWOX-selective functional response independent of serotonin release at attainable parent or metabolite exposure? |
 | 23 | R-alpha-lipoic acid, free uptake and mitochondrial protein lipoylation | Does external R-lipoate restore a deficient covalently bound cofactor and neural oxidative flux, beyond an independent redox response? |
+| 24 | Vigabatrin, GABA transaminase and mitochondrial nucleotide salvage | At matched GABA-T inhibition, does a postmitotic WWOX cell lose nucleotide reserve and respiratory recovery before or independently of a circuit response? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -37,7 +38,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: R-alpha-lipoic acid.** In three untreated WWOX datasets, RNA encoding the lipoylated PDH subunit DLAT falls robustly, while the assembly genes differ by tissue. A positive comparator in residual PANK2 deficiency motivates separating direct cofactor uptake from recovery of endogenous synthesis. Next examine the duration of attainable R exposure and the WWOX neural protein evidence. [Prediction and reproducible contrasts](r_lipoic_acid/README.md)
+**Active compound: vigabatrin.** In all three untreated WWOX neural datasets NME4, DGUOK and RRM2B decline, whereas ABAT changes sign across models. Human brain dialysate, neuronal uptake and mouse retinal partition show that compartment matters. Next distinguish transient inhibition of GABA breakdown from delayed mitochondrial effects after washout at matched ABAT activity. [Dossier and discriminating comparison](vigabatrin/README.md)
+
+**R-alpha-lipoic acid parked for WWOX trial priority.** Young-adult pure-R pharmacokinetics and an independent chiral crossover support a short exposure. Whether a pulse restores endogenous cofactor and neural function in WWOX remains open. [Disposition and quantitative exposure](r_lipoic_acid/decision.md)
 
 **Fenfluramine parked for WWOX disease-modification trial priority.** The pediatric plasma contrast, adult human brain spectroscopy and conflicting sigma assays establish exposure but leave the active species and WWOX-specific functional response unresolved. [Decision and reopening condition](fenfluramine/decision.md)
 

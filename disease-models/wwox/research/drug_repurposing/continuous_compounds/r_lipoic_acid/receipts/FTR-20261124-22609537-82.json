@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-22609537-82",
+  "event_at": "2026-11-24T01:44:18Z",
+  "analysis_at": "2026-11-24T01:44:18Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "22609537",
+    "doi": "10.1016/j.phrs.2012.05.002"
+  },
+  "prior_receipt": "FTR-20261124-22609537-80",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/r_lipoic_loop_20261124/adult_pk.pdf",
+  "source_fingerprint": "099011e30022985e2891fe5304dc7270e3efe078c43326660b7bc2dc11bf3a16",
+  "workflow": "Check adult pure-R pulse exposure and formulation-specific baseline medium against the PKAN comparator.",
+  "evidence_basis": [
+    "Table 1 subgroup n; Table 2 on printed p16 and Fig 3D on p14 disagree for young female AUC. Adult exposure was brief and the PK measurement did not separate enantiomers."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/r_lipoic_acid/decision.md"
+  ]
+}
