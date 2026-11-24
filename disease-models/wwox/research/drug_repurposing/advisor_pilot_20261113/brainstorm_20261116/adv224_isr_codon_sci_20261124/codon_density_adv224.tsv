@@ -17,5 +17,3 @@ HeLa_3h	CGA	1.688	1.740	1.643	1.027	1.059	False
 HeLa_3h	CGG	1.364	1.375	1.284	1.063	1.071	False
 HeLa_3h	AGA	1.013	0.961	1.018	0.996	0.945	False
 HeLa_3h	AGG	1.651	1.753	1.647	1.002	1.064	False
-#time note (arg 6h over rich 3h; not like-for-like)	CGT=1.718,CGC=1.736,CGA=0.970,CGG=1.096,AGA=1.381,AGG=1.252
-#SLOWED arginine codons per cell line	HEK293T_rpC_3h=0,HCT116_3h=0,HeLa_3h=2

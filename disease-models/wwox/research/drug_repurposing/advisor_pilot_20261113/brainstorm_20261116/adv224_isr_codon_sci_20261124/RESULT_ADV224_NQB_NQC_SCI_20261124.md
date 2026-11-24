@@ -62,7 +62,7 @@ Public processed tables only; no raw-read processing; no replicate; thresholds f
 
 ## 7. Files in this folder
 
-`PREREG_ADV224_SCI_20261124.md` (+ digest, time) · `isr_nine_genes_adv224.py` · `isr_nine_genes_adv224.tsv` · `codon_density_adv224.py` · `codon_density_adv224.tsv` · `GSE113751_RAW_SHA256.txt`.
+`PREREG_ADV224_SCI_20261124.md` (+ digest, time) · `isr_nine_genes_adv224.py` · `isr_nine_genes_adv224.tsv` (per contrast and gene) · `isr_nine_genes_verdicts_adv224.tsv` (gene verdicts; both are the script output split at the blank line) · `codon_density_adv224.py` · `codon_density_adv224.tsv` · `codon_density_notes_adv224.txt` (the "#" lines of the script output) · `GSE113751_RAW_SHA256.txt`.
 
 ## 8. DREAM line
 
