@@ -65,7 +65,7 @@ def startup(root: Path, actor: str, today: dt.date | None = None) -> dict:
     result["radar"] = radar()
     if actor == "plan":
         try:
-            report = build_report(root, "main", 1, None, None)
+            report = build_report(root, None, 1, None, None)
             result["branch_hygiene"] = report["totals"]
             result["overdue_branches"] = [r["branch"] for r in report["branches"]
                                          if r["class"] == LAND_OVERDUE]
