@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-18487609-86",
+  "event_at": "2026-11-24T07:40:05Z",
+  "analysis_at": "2026-11-24T07:40:05Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "18487609"
+  },
+  "prior_receipt": "FTR-20260811-18487609-01",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/magnesium_chloride_loop_20261124/wwox_chemistry_supplement.pdf",
+  "source_fingerprint": "d105b7bb2c1b0b4b3bf842689a003af69e8538b137d7f1668c97d6febe093b5d",
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "Supplement p. 2, Table 3 “a representative analysis at 3 weeks”. Read all chemistry rows and pooling statement. No magnesium row."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/magnesium_chloride/csf.md"
+  ]
+}

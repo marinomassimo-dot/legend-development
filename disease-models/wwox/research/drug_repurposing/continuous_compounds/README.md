@@ -43,6 +43,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 37 | Tiagabine hydrochloride, GABA uptake and recurrent inhibition | Does prolonged GABA action suppress test spikes while preserving normal transmission, and does tonic inhibition instead increase rebound in a thalamic circuit? |
 | 38 | L-carnosine, carbonyl damage and tonic inhibition | Can intact dipeptide reduce excess MG-derived protein damage while preserving inhibitory signaling and evoked neural function? |
 | 39 | Gabapentin, thrombospondin and the recipient of new synaptic contacts | Can suppressing new recurrent excitatory contacts spare the recruitment of inhibitory neurons? |
+| 40 | Sulforaphane, glutathione conjugation and astrocyte-dependent recovery | Can delayed endogenous synthesis outweigh early thiol loss and restore neuronal function? |
+| 41 | Magnesium chloride, extracellular magnesium and activity-dependent NMDA current | Does a measured change above a physiological baseline improve WWOX firing or recovery beyond correction of generic magnesium deprivation? |
+| 42 | Lamotrigine, dendritic HCN current and inhibitory recruitment | Does the drug preferentially restrain dendritic excitation or impair recruitment of dendrite-targeting interneurons at matched free exposure? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -53,7 +56,13 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: gabapentin.** Verified human CSF benchmarks and a 0.1 µM sensory–spinal TSP4 result keep a narrow mechanism open. THBS4 RNA rises in organoid and hippocampal bulk but not cortex or the independent hippocampal nuclei. The week-15 organoid increase also survives comparison to six lineage markers across three offsets. Next seek local protein and functional evidence for newly formed contacts on defined recipient cells. [Concentrations, counts and discriminating observation](gabapentin/exposure.md)
+**Active compound: lamotrigine.** Compare dendritic integration and recruitment of inhibitory interneurons at matched membrane voltage and free drug exposure. [Opening prediction and source selection](lamotrigine/README.md)
+
+**Magnesium chloride parked for unselected pediatric trial priority.** Adult ventricular exposure gives at most 2.66 percentage points additional loss of Mg-free NMDA current across twelve fits. WWOX serum panels omit magnesium, and the two evoked cortical peaks follow one stimulus. A measured deficiency or a selective circuit response could reopen the question. [Exposure, pediatric comparators and endpoint audit](magnesium_chloride/csf.md)
+
+**Sulforaphane parked for trial prioritization.** A transferable astrocyte survival effect remains plausible. Adult central exposure was mostly below quantification. The developing human network did not show a significant firing response, and the WWOX sulfur genes did not appear in the sulforaphane add-on list. [Primary evidence, reproducible comparison and reopening criterion](sulforaphane/exposure.md)
+
+**Gabapentin parked for trial prioritization.** WWOX cortical miniature currents, a rat injury model and a sensory–spinal TSP4 comparison do not establish selective reduction of excess new recurrent contacts with interneuron recruitment preserved. [Disposition and reopening criterion](gabapentin/recipient.md)
 
 **L-carnosine parked.** Its buffer reaction is faster with acrolein than with 4-HNE. Histidine could account for a substantial part of an acrolein response. No functional WWOX response at measured local exposure has been established. [Kinetics and reopening criterion](l_carnosine/kinetics.md)
 

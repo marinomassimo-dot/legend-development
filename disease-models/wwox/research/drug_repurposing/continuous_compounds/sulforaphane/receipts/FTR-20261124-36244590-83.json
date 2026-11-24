@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-36244590-83",
+  "event_at": "2026-11-24T06:56:38Z",
+  "analysis_at": "2026-11-24T06:56:38Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "36244590"
+  },
+  "prior_receipt": "FTR-20261112-36244590-73",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/sulforaphane_loop_20261124/stroke.xml",
+  "source_fingerprint": "7903a4bbde3e81bd373f716bba3d9698d709b6536b9e54f5cec5df9475ba849a",
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "Ischemia methods: “16 hours before” cobalt exposure with continued drug through reoxygenation. Fig. 6C–D caption, six independent experiments; results in WT and global KO. The question here is whether the published schedule distinguishes after-washout protection. Earlier SCI48 audit reused for the loss design."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/sulforaphane/README.md"
+  ]
+}

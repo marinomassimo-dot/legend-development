@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-19936220-86",
+  "event_at": "2026-11-24T07:40:05Z",
+  "analysis_at": "2026-11-24T07:40:05Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "19936220"
+  },
+  "prior_receipt": "FTR-20260806-19936220-02",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/multihop/PMID19936220_LudesMeyers2009_EuropePMC.xml",
+  "source_fingerprint": "2b18cb9711e4d3b8582fd20d2f059748a284e1514a35438315039b8acaa3591c",
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "Table 3 “WT+HET vs. KO”. Read Ca, BUN, CO2, genotype denominators and SEM, then compared with the chemistry results paragraph. No magnesium row."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/magnesium_chloride/csf.md"
+  ]
+}

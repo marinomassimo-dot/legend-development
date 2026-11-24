@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-29888232-84",
+  "event_at": "2026-11-24T07:12:03Z",
+  "analysis_at": "2026-11-24T07:12:03Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "29888232"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_remote",
+  "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5981770/",
+  "source_fingerprint": null,
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "7-T methods “spectra were only recorded from the ACC” for two subjects. Checked within-four-hours timing, water reference, CRLB exclusion, regional GSH and thalamic correlation. Only the Fig. 2 caption was inspected."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/sulforaphane/exposure.md"
+  ]
+}

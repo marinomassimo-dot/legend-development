@@ -1,0 +1,34 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-33914858-86",
+  "event_at": "2026-11-24T07:41:52Z",
+  "analysis_at": "2026-11-24T07:41:52Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "33914858"
+  },
+  "prior_receipt": "FTR-20261124-33914858-85",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID33914858_Repudi2021_OUP_browserprint.pdf",
+  "source_fingerprint": "8d1e751dbc31128431b9a4ae0c2cb68af90505fd8e8deaecdc46474df08a9d20",
+  "workflow": "Question-driven comparison of compound-specific mechanism, tissue response and exposure.",
+  "evidence_basis": [
+    "Slice methods “every 30 s” and Fig. 2E–F caption “at 100 µA stimulus strength” indicate two field peaks after the same pulse. Read results, slice and animal denominators. No figure image inspected."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/magnesium_chloride/csf.md"
+  ]
+}
