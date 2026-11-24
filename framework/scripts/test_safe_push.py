@@ -45,6 +45,38 @@ class SafePushRefusals(unittest.TestCase):
             self.assertEqual(r.returncode, 1)
             self.assertIn("working tree is not clean", r.stderr)
 
+    def test_a_short_disk_is_refused_at_the_start_before_the_gate_and_before_any_lock(self) -> None:
+        """2026-11-24: / was 100% full and a landing died midway with 'No space left on device'. Now it is a one-second refusal that names the number."""
+        with TemporaryDirectory() as td:
+            marker = Path(td) / "gate-ran"
+            root = self._repo(td, f"open({str(marker)!r}, 'w').close()\n" + GATE_PASS)
+            env = dict(os.environ, LEGEND_SAFE_PUSH_ROOT=str(root), LEGEND_SAFE_PUSH_GATE=str(root / "scripts" / "gate.py"),
+                       LEGEND_SAFE_PUSH_MIN_FREE_GB="100000000")        # no machine has this much free
+            r = subprocess.run([sys.executable, str(TOOL), "origin", "main", "--serialize"], capture_output=True, text=True, env=env)
+            self.assertEqual(r.returncode, 1)
+            self.assertIn("free space", r.stderr)
+            self.assertIn("below", r.stderr)
+            self.assertIn("Nothing was gated or pushed", r.stderr)
+            self.assertFalse(marker.exists(), "the gate must not run on a short disk")
+            self.assertNotIn("landing lock", r.stdout + r.stderr)
+
+    def test_the_free_space_check_reads_both_filesystems_and_names_the_scarcer_one(self) -> None:
+        import importlib.util
+        from unittest import mock
+        spec = importlib.util.spec_from_file_location("safe_push_under_test", TOOL)
+        sp = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sp)
+        usage = lambda free: mock.Mock(free=free)
+        with mock.patch.object(sp, "MIN_FREE_GB", 2.0):
+            with mock.patch.object(sp.shutil, "disk_usage", return_value=usage(50e9)):
+                self.assertEqual(sp.free_space_refusal(), "")
+            with mock.patch.object(sp.shutil, "disk_usage", side_effect=lambda p: usage(0.5e9 if str(p) == str(sp.ROOT) else 50e9)):
+                msg = sp.free_space_refusal()
+            self.assertIn("0.5 GB", msg)
+            self.assertIn(str(sp.ROOT), msg)
+            with mock.patch.object(sp.shutil, "disk_usage", side_effect=OSError("unreadable")):
+                self.assertEqual(sp.free_space_refusal(), "")
+
     def test_a_blocking_gate_refuses_the_push(self) -> None:
         """The defect of 2026-09-09: the gate said BLOCK and the push went anyway."""
         with TemporaryDirectory() as td:
