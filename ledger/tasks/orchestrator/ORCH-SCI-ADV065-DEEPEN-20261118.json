@@ -912,6 +912,15 @@
      "accepted_at": "2026-11-24T22:50:10Z",
      "evidence": "RESULT_ADV222_HELD_DATA_SECTIONS_SCI_20261124.md in disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv222_held_data_sections_batch_sci_20261124; 8 sections, 8 receipts, 7 new questions ranked, 1 identity-line contradiction",
      "updated_at": "2026-11-24T23:06:54Z"
+    },
+    {
+     "step": "ADV-224: NQ-B nine ISR readout genes in held Wwox tables and NQ-C per-codon pausing in public processed GSE113751; dispositions per question",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "source": "ADV-224 (ADV message 2026-11-24, brief adv224.txt)",
+     "accepted_at": "2026-11-24T23:24:51Z",
+     "evidence": "{\"path\": \"disease-models/wwox/research/drug_repurposing/advisor_pilot_20261113/brainstorm_20261116/adv224_isr_codon_sci_20261124/RESULT_ADV224_NQB_NQC_SCI_20261124.md\", \"contains\": \"Answer first\"}",
+     "updated_at": "2026-11-24T23:25:05Z"
     }
    ]
   }
@@ -1614,6 +1623,13 @@
    "at": "2026-11-24T22:50:10Z",
    "source": "ADV-222 (ADV message 2026-11-24, brief adv222.txt)",
    "step_sha256": "51a71a398970",
+   "reopened_block": false,
+   "authorised_by": null
+  },
+  {
+   "at": "2026-11-24T23:24:51Z",
+   "source": "ADV-224 (ADV message 2026-11-24, brief adv224.txt)",
+   "step_sha256": "b7a8893bcdab",
    "reopened_block": false,
    "authorised_by": null
   }
