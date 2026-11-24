@@ -1,0 +1,35 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261124-35013551-80",
+  "event_at": "2026-11-24T03:00:36Z",
+  "analysis_at": "2026-11-24T03:00:36Z",
+  "analysis_time_precision": "second",
+  "study_id": {
+    "pmid": "35013551",
+    "doi": "10.1038/s41431-021-01033-2"
+  },
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "evidence_depth": "partial_fulltext_read",
+  "coverage": {
+    "abstract": "not_read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "read",
+    "figures": "not_read",
+    "tables": "read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "source_kind": "fulltext_local",
+  "source_locator": "files/deepening_downloads/d_pantothenate_loop_20261124/8747999.xml",
+  "source_fingerprint": "089fd1c2e5403234285e611d4325ee7938612dd327dc9ba4659d6b12717f44a2",
+  "workflow": "Distinguish substrate-responsive residual kinase from mitochondrial transport and compare published exposures in the WWOX D-pantothenate dossier.",
+  "evidence_basis": [
+    "Table 3 patient 2-1 pretreatment B5 44.79 ug/L, no matched cerebrospinal vitamin measurement. Five combination or sequential cases aged 7y10m–15y1m at start."
+  ],
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/continuous_compounds/d_pantothenate/decision.md"
+  ]
+}

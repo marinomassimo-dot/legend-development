@@ -1,0 +1,14 @@
+source	population_and_measure	n	reported_value	reported_unit	uM_or_24h_mean_uM
+Rao Table 3	adult plasma single fasted 500 mg	8	672	ng/mL	3.0653
+Rao Table 3	adult plasma single fasted 1000 mg	8	1749	ng/mL	7.9779
+Rao Table 3	adult plasma single fasted 2000 mg	8	5087	ng/mL	23.2039
+Rao Table 3	adult plasma single fasted 5000 mg	8	3556	ng/mL	16.2204
+Rao Table 3	adult plasma single fed 5000 mg	8	4464	ng/mL	20.3622
+Rao Table 5	adult plasma day 1 peak	8	2423	ng/mL	11.0523
+Rao Table 5	adult plasma day 14 peak	8	5971	ng/mL	27.2362
+Rao Table 5	adult plasma day 1 AUC0-24	8	9185	ng*h/mL	1.7457
+Rao Table 5	adult plasma day 14 AUC0-24	8	27130	ng*h/mL	5.1563
+Dastur Table 1	adult control CSF mean	5	228	ng/mL	1.04
+Dastur Table 1	adult control CSF standard error	5	15	ng/mL	0.0684
+Dastur Table 1	adult control blood mean	64	277	ng/mL	1.2635
+SLC5A6 Table 3	untreated serum case 2-1	1	44.79	ug/L	0.2043

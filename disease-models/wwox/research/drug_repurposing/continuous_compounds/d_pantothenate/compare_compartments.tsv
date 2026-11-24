@@ -1,0 +1,10 @@
+perturbation	panel	compartment	species	ctrl_n	ko_n	KO_over_control
+COASY_KO	3f	whole_cell	CoASH	3	3	0.5634
+COASY_KO	3f	whole_cell	C2:0 acetyl-CoA	3	3	0.5278
+COASY_KO	3f	whole_cell	C3:0 propionyl-CoA	3	3	0.4591
+A16_A42_DKO	5a	mitochondria	CoASH	3	3	0.0641
+A16_A42_DKO	5a	mitochondria	C2:0 acetyl-CoA	3	3	0.3698
+A16_A42_DKO	5a	mitochondria	C3:0 propionyl-CoA	3	3	0.0658
+A16_A42_DKO	5c	whole_cell	CoASH	3	3	0.4234
+A16_A42_DKO	5c	whole_cell	C2:0 acetyl-CoA	3	3	0.8177
+A16_A42_DKO	5c	whole_cell	C3:0 propionyl-CoA	3	3	0.4058

@@ -30,6 +30,7 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 | 24 | Vigabatrin, GABA transaminase and mitochondrial nucleotide salvage | At matched GABA-T inhibition, does a postmitotic WWOX cell lose nucleotide reserve and respiratory recovery before or independently of a circuit response? |
 | 25 | D-biotin, glial carboxylation and myelin | Does cofactor availability constrain lipid incorporation or astrocyte anaplerosis at the stage of new functional sheath formation? |
 | 26 | D-pantothenate, free and acyl-bound mitochondrial coenzyme A | Does precursor supply limit oxidative flux, or do kinase capacity, compartmentation or acyl trapping explain the defect? |
+| 27 | Uridine triacetate, pyrimidine salvage and membrane phospholipids | Does added uridine correct a limiting pyrimidine pool and function, or does it only label RNA and membrane precursors while a separate bottleneck persists? |
 | Expansion | Reconcile unmapped pathways after each set of dossiers | Map remaining reproducible WWOX phenotypes, including metabolism, developmental cell fate and signaling, to a named molecule, an opposing mechanism and an accessible outcome. Include other drug classes and negative results. |
 
 **Research decisions.** Begin with the existing portfolio and active assignments to avoid duplicating a colleague's work. Before looking at the result, write which observation would favor each mechanism and what would lower priority. Prefer raw or processed primary datasets, matched comparisons and an independent system. Record provenance, units, exposure, replication unit and exclusions. Track seizure suppression, developmental change and adverse circuit effects separately. Distinguish tissue abundance, functional target engagement and organism-level response. Request a laboratory review when a contested assumption, denominator or sign could change the next experiment.
@@ -40,7 +41,9 @@ This is the SCI_CODEX work queue for the operator's continuous mandate of 23 Nov
 
 ## Current checkpoint
 
-**Active compound: D-pantothenate.** PANK3, COASY and CRAT decrease in all three untreated datasets after stable-ID disambiguation. The nuclear comparison supports lower neuronal Coasy and Crat, while Pank3 rises in those classes. Next compare precursor supply against mitochondrial import or acyl buffering using primary metabolic controls; increased need for precursor remains unproven. [Prespecified model comparison](d_pantothenate/README.md)
+**Active compound: uridine triacetate.** SLC29A2 and RRM2B fall in all bulk comparisons but their nuclear directions depend on cell type. Adult formulation data establish a plasma contrast. FDA found 5.5-fold higher equimolar systemic availability for the oral prodrug in a small orotic-aciduria comparison. Next check CNS nucleotide utilization against measured exposure. [Prespecified comparison and next step](uridine_triacetate/README.md)
+
+**D-pantothenate parked for an unselected WWOX trial.** A residual-PANK2 fibroblast response was observed at concentrations overlapping adult plasma. The neural experiment used a much higher addition in a selected patient model. Five adult baseline CSF measurements provide a reference for scale. WWOX-specific recovery of mitochondrial free CoA and oxidative function remains untested. [Decision and exposure calculation](d_pantothenate/decision.md)
 
 **D-biotin parked for an unselected WWOX trial.** The stage-specific Acaca RNA contrast and synthetic fiber wrapping result leave cofactor occupancy and functional myelin unresolved. Pediatric drug cohorts suggest altered metabolism in selected exposures but do not establish persistent cerebral deficiency. [Decision and secondary-deficiency comparison](d_biotin/decision.md)
 
